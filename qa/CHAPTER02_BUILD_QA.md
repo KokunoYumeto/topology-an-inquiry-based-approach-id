@@ -96,3 +96,21 @@ complete 20-chapter edition is still in progress.
 
 Continue in source order with Chapter 3, Metric Spaces. Do not pause the
 production lane merely because this bounded reader is publishable.
+
+## Publication
+
+- Public repository:
+  https://github.com/KokunoYumeto/topology-an-inquiry-based-approach-id
+- Initial content commit:
+  `3b5b091846b8ba9aa1ba1dc927bb54db100fcd9e`.
+- Public reader:
+  https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/
+- Public PDF:
+  https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-02-id.pdf
+- GitHub Pages build for the content commit reached `built`.
+- Anonymous raw and Pages reads returned exact index SHA-256
+  `e1335dfb6ae5f07dc263923a080b8d3d940bd6c542b17ad49302b9f65efd4f37`
+  and exact PDF SHA-256
+  `e95490eb7c7bdf2670ac9985342dd70e4e80ff2b64db18cbb283dccdf2d2f98c`.
+- Full transaction evidence:
+  `qa/CHAPTER02_PUBLICATION_RECEIPT.md`.
