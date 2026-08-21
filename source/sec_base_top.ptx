@@ -1,0 +1,352 @@
+<section xml:id="sec_base_top">
+  <title>Bases for Topologies</title>
+  <p>
+    It can be difficult to completely describe the open sets in a topology.
+    Instead, we can describe the topology using a collection of sets that generate the topology.
+    For example,
+    if <m>(X,d)</m> is a metric space then the collection of open sets in <m>X</m> forms a topology on <m>X</m>,
+    called the <term>metric</term> topology.
+    We also saw that in a metric space,
+    every open set in <m>X</m> is a union of open balls.
+    For that reason we called the collection of open balls a <term>basis</term>
+    for the open sets in <m>X</m>.
+    We can do the same thing in any topological space.
+    As a non-trivial example,
+    an interesting topology defined on the positive integers is due to S.W. Golomb.
+    One can use this topology to prove that there are infinitely many primes.
+    This topology also makes the positive integers into a connected Hausdorff space
+    (more on these concepts later).
+    The Golomb topology is defined as follows.
+    If <m>a</m> and <m>b</m> are coprime integers in <m>\Z^+</m>
+    (that is, <m>a</m> and <m>b</m> have no common positive factors other than 1 so that the greatest common divisor of <m>a</m> and <m>b</m> is <m>1</m>),
+    let
+    <me>
+      B_{a,b} = \{a+bn \mid n \geq 0\}
+    </me>.
+  </p>
+  <p>
+    <idx><h>Golomb space</h></idx>
+    The collection of sets <m>B_{a,b}</m> is a basis for the Golomb topology,
+    and the topological space <m>(\Z^+, \tau)</m> is called the <term>Golomb space</term>.
+        
+    It is an exercise in number theory to prove that the sets <m>B_{a,b}</m> form a basis for a topology,
+    so we will not go into the details.
+  </p>
+
+  <activity xml:id="act_top_basis">
+    <p>
+      Let <m>X = \{a,b,c,d\}</m> and let <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{c,d\}, \{a,c,d\}, \{b,c,d\},X)</m>.
+      You may assume that <m>\tau</m> is a topology on <m>X</m>.
+      Explain why any nonempty open set in the topological space
+      <m>(X, \tau)</m> can be written in terms of arbitrary unions and finite intersections of <m>\{a\}</m>,
+      <m>\{b\}</m>, and <m>\{c,d\}</m>.
+    </p>
+  </activity>
+
+  <p>
+    <xref ref="act_top_basis"/> shows that,
+    just like the open balls in a metric space,
+    a topology can have a collection of subsets whose unions make up all of the open sets in the topology.
+    We do need to take a little care, though.
+    A basis will generate the collection of open sets for a topology,
+    so the basis sets we start with should themselves be open sets.
+    In addition,
+    every element in the topological space should be an element of one of the basis sets,
+    and since the basis elements are to produce all of the open sets in the topology,
+    every set in the topology
+    (except the empty set)
+    should be a union of sets in a basis.
+    It also must be the case that we can ensure that any finite intersection of sets in the topology remains a set in the topology when we write the sets in the topology in terms of the sets in a basis.
+    To make the last two conditions happen,
+    we will see that it is enough to insist that for any point in the intersection of basis elements,
+    there is another basis element in that intersection that contains the point.
+    This is summarized in <xref ref="thm_Basis"/>.
+  </p>
+
+  <theorem xml:id="thm_Basis">
+    <statement>
+      <p>
+        Let <m>X</m> be a set and let <m>\B</m> be a collection of subsets of <m>X</m> such that
+        <ol>
+          <li>
+            <p>
+              For each <m>x \in X</m>,
+              there is a set in <m>\B</m> that contains <m>x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x \in X</m> is an element of
+              <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
+              then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Then the set <m>\tau</m> that consists of the empty set and unions of elements of <m>\B</m> is a topology on <m>X</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Before we prove <xref ref="thm_Basis"/>,
+    we will need to know one fact about the set <m>\B</m>.
+  </p>
+
+  <activity xml:id="act_Basis">
+    <introduction>
+    <p>
+      Let <m>X</m> be a set and <m>\B</m> a collection of subsets of <m>X</m> such that
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            For each <m>x \in X</m>,
+            there is a set in <m>\B</m> that contains <m>x</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            If <m>x \in X</m> is an element of
+            <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
+            then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+          </p>
+          <p>
+            Let <m>B_1</m>, <m>B_2</m>, <m>\ldots</m>,
+      <m>B_n</m> be in <m>\B</m>.
+      Our goal in this activity is to extend property 2 and show that if <m>x \in \bigcap_{1 \leq k \leq n} B_k</m>,
+      then there is a set <m>B \in \B</m> such that <m>x \in B</m> and <m>B \subseteq \bigcap_{1 \leq k \leq n} B_k</m>.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Since the statement we want to prove depends on a positive integer <m>n</m>,
+      we will use mathematical induction.
+      Explain why the <m>n=1</m> and <m>n=2</m> cases are true.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              What is the inductive hypothesis and what do we want to prove in the inductive step?
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Use the inductive hypothesis and condition 2 to complete the proof of the following lemma.
+            </p>
+          </statement>
+          <lemma xml:id="lem_Basis">
+      <statement>
+        <p>
+          Let <m>X</m> be a set and <m>\B</m> a collection of subsets of <m>X</m> such that
+          <ol>
+            <li>
+              <p>
+                For each <m>x \in X</m>,
+                there is a set in <m>\B</m> that contains <m>x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x \in X</m> is an element of
+                <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
+                then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          Let <m>B_1</m>, <m>B_2</m>, <m>\ldots</m>,
+          <m>B_n</m> be in <m>\B</m>.
+          If <m>x \in \bigcap_{1 \leq k \leq n} B_k</m>,
+          then there is a set <m>B \in \B</m> such that <m>x \in B</m> and <m>B \subseteq \bigcap_{1 \leq k \leq n} B_k</m>.
+        </p>
+      </statement>
+    </lemma>
+    </task>
+    </task>
+ </activity>
+
+  <p>
+    Now we can prove <xref ref="thm_Basis"/>.
+  </p>
+
+  <proof>
+    <p>
+      Let <m>X</m> be a topological space,
+      and let <m>\B</m> and <m>\tau</m> satisfy the given conditions.
+      By definition, <m>\emptyset \in \tau</m>.
+      For each <m>x \in X</m> there is a set
+      <m>B_x \in \B</m> such that <m>x \in B_x</m>.
+      Then <m>X = \bigcup_{x \in X} B_x</m>, and <m>X \in \tau</m>.
+      To complete our proof that <m>\tau</m> is a topology on <m>X</m>,
+      we need to demonstrate that <m>\tau</m> is closed under arbitrary unions and finite intersections.
+      We first consider unions.
+      Let <m>\{U_{\alpha}\}</m> be a collection of sets in <m>\tau</m> for <m>\alpha</m> in some indexing set <m>I</m>.
+      By definition,
+      each <m>U_{\alpha}</m> is empty or is a union of elements of <m>\B</m>.
+      So either <m>U = \bigcup_{\alpha \in I} U_{\alpha}</m> is empty,
+      or is a union of sets in <m>\B</m>.
+      Thus, <m>U \in \tau</m> and <m>\tau</m> is closed under arbitrary unions.
+    </p>
+    <p>
+      Now we show that <m>\tau</m> is closed under finite intersections.
+      Let <m>n</m> be a positive integer and let
+      <m>\{U_{k}\}</m> a collection of sets in <m>\tau</m> for <m>1 \leq k \leq n</m>.
+      Let <m>U = U_1 \cap U_2 \cap \cdots \cap U_n</m>.
+      If <m>U_k = \emptyset</m> for any <m>k</m>,
+      then <m>U = \emptyset</m> is in <m>\tau</m>.
+      So suppose that <m>U_k \neq \emptyset</m> for each <m>k</m> between <m>1</m> and <m>n</m>.
+      Let <m>x \in U</m>.
+      Then <m>x \in U_k</m> for each <m>k</m>.
+      For every <m>m</m> between <m>1</m> and <m>n</m>,
+      the fact that <m>U_m</m> is a union of elements in <m>\B</m> implies that there exists
+      <m>B_m \subseteq U_m</m> with <m>x \in B_m</m>.
+      Thus, <m>x \in \bigcap_{1 \leq m \leq n} B_m</m>.
+    </p>
+    <p>
+      <xref ref="lem_Basis"/>
+      shows that there is a set <m>B_x \in \B</m> such that
+      <m>x \in B_x</m> and <m>B_x \subseteq \bigcap_{1 \leq m \leq n} B_m \subseteq \bigcap_{1 \leq m \leq n} U_m = U</m>.
+      Since <m>x</m> is an arbitrary element of <m>U</m>,
+      we must have <m>U \subseteq \bigcup_{x \in U} B_x</m>.
+      But each <m>B_x</m> is subset of <m>U</m>,
+      so <m>\bigcup_{x \in U} B_x \subseteq U</m>.
+      It follows that
+      <me>
+        U = \bigcup_{x \in U} B_x
+      </me>
+      and <m>U \in \tau</m>.
+      Therefore, <m>\tau</m> is a topology on <m>X</m>.
+    </p>
+  </proof>
+
+  <p>
+    Any collection <m>\B</m> of sets as given in <xref ref="thm_Basis"/> is given a special name.
+  </p>
+
+  <definition xml:id="def_basis_topology">
+  <idx><h>basis</h><h>for a topology</h></idx>
+    <statement>
+      <p>
+        Let <m>X</m> be a set.
+        A set <m>\B</m> is a <term>basis for a topology</term>
+        (or just a <term>basis</term>)
+        on <m>X</m> if
+        <ol>
+          <li>
+            <p>
+              For each <m>x \in X</m>,
+              there is a set in <m>\B</m> that contains <m>x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x \in X</m> is an element of
+              <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
+              then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <idx><h>basis</h><h>elements</h></idx>
+    <idx><h>basic open set</h></idx>
+    The elements of a basis <m>\B</m> are called <term>basis elements</term>
+        
+    or the <term>basic open sets</term>.
+        
+    A basis for a topology on a set <m>X</m> defines a topology on <m>X</m> as shown in <xref ref="thm_Basis"/>.
+  </p>
+  <p>
+    Note that because of property (1) of <xref ref="def_basis_topology"/>,
+    the union of the sets in the basis must contain <m>X</m>.
+    In other words, the sets in a basis cover the space.
+    The second property ensures that if a point is in the intersection of two basic open sets,
+    then there is a smaller basic open set that contains <m>x</m>.
+  </p>
+
+  <definition>
+  <idx><h>topology generated by a basis</h></idx>
+    <statement>
+      <p>
+        Let <m>\B</m> be a basis for a topology on a set <m>X</m>.
+        The <term>topology <m>\tau</m> generated by <m>\B</m></term> contains the empty set and all arbitrary unions of basis elements.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    When the topology for a space <m>X</m> is clear from the context,
+    we also call a basis for the topology a basis for <m>X</m>.
+  </p>
+
+  <activity>
+    
+      <task>
+        <introduction>
+          <p>
+            Let <m>X=\{a,b,c,d,e,f\}</m> and <m>\tau= \{\emptyset, \{a\}, \{c,d\},\{a,c,d\}, \{b,c,d,e,f\}, X \}</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Is the set
+                  <me>
+                    \mathcal{B}  = \{\{a\},\{a,c,d\} \}
+                  </me>
+                  a basis for <m>\tau</m>?
+                  If not, add the smallest number of sets that you can to
+                  <m>\mathcal{B}</m> to make a basis for this topology.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Is the set
+                  <me>
+                    \mathcal{B}  = \{\{a\},\{c,d\},\{b,c,d,e,f\} \}
+                  </me>
+                  a basis for <m>\tau</m>?
+                  If not, add the smallest number of sets that you can to
+                  <m>\mathcal{B}</m> to make a basis for this topology.
+                </p>
+              </statement>
+            </task>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Let <m>X=\{a,b,c\}</m> and let <m>X</m> have the discrete topology
+            (the topology consisting of all subsets of <m>X</m>).
+            Is <m>\mathcal{B} = \{\{a\},\{c\},\{a,b\},\{b,c\} \}</m> a basis for <m>\tau</m> in the the discrete topology?
+            If not, add the smallest number of sets that you can to
+            <m>\mathcal{B}</m> to make a basis for this topology.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find a basis for the discrete topology on any set <m>X</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

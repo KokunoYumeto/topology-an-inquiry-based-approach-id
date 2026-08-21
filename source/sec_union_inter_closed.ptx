@@ -1,0 +1,101 @@
+<section xml:id="sec_union_inter_closed">
+  <title>Unions and Intersections of Closed Sets</title>
+  <idx><h>clopen set in a topological space</h></idx>
+  <p>
+    Now we have defined open and closed sets in topological spaces.
+    In our preview activity we saw that a set can be both open and closed.
+    As we did in metric spaces,
+    we will call any set that is both open and closed a
+    <term>clopen</term>
+    (for closed-open)
+    set.
+  </p>
+  <p>
+    By definition,
+    any union and any finite intersection of open sets in a topological space is open,
+    so the fact that closed sets are complements of open sets implies the following theorem.
+  </p>
+
+  <theorem xml:id="thm_closed_TS">
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space.
+        <ol>
+          <li>
+            <p>
+              Any intersection of closed sets in <m>X</m> is a closed set in <m>X</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Any finite union of closed sets in <m>X</m> is a closed set in <m>X</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a topological space.
+      To prove part 1, assume that
+      <m>C_{\alpha}</m> is a collection of closed set in <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m>.
+      Then
+      <me>
+        X \setminus \bigcap_{\alpha \in I} C_{\alpha} = \bigcup_{\alpha \in I} X \setminus C_{\alpha}
+      </me>.
+    </p>
+    <p>
+      The latter is an arbitrary union of open sets and so it an open set.
+      By definition, then,
+      <m>\bigcap_{\alpha \in I} C_{\alpha}</m> is a closed set.
+    </p>
+    <p>
+      For part 2, assume that <m>C_1</m>,
+      <m>C_2</m>, <m>\ldots</m>,
+      <m>C_n</m> are closed sets in <m>X</m> for some <m>n \in \Z^+</m>.
+      To show that <m>C = \bigcap_{k=1}^n C_k</m> is a closed set,
+      we will show that <m>X \setminus C</m> is an open set.
+      Now
+      <me>
+        X \setminus \bigcup_{\alpha \in I} C_{\alpha} = \bigcap_{\alpha \in I} X \setminus C_{\alpha}
+      </me>
+      is a finite intersection of open sets, and so is an open set.
+      Therefore, <m>\bigcup_{\alpha \in I} C_{\alpha}</m> is a closed set.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    <xref ref="thm_closed_TS"/>
+    tells us that any intersection of closed sets is closed,
+    but only finite unions of closed sets are closed.
+    How do we know that non-finite unions of closed sets aren't necessarily closed?
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>\Z</m> be a topological space with the finite complement topology <m>\tau_{FC}</m>.
+      That is, a non-empty set <m>O</m> is open in <m>\Z</m> if <m>\Z \setminus O</m> is finite.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            What must be true about the cardinality of the closed sets in <m>(\Z, \tau_{FC})</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>C_n = \{2, 3, \ldots, n\}</m>.
+            Is the set <m>\bigcup_{n \geq 3} C_n</m> a closed set in <m>(\Z, \tau_{FC})</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+  
+  </activity>
+</section>

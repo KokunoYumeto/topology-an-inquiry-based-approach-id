@@ -1,0 +1,319 @@
+<section xml:id="sec_func_intro">
+  <title>Pendahuluan</title>
+  <p>
+    Banyak sifat topologis didefinisikan menggunakan fungsi kontinu.
+    Kontinuitas akan kita pelajari secara khusus nanti <mdash/> untuk saat ini, kita meninjau beberapa konsep penting yang berkaitan dengan fungsi.
+    Sebagian besar konsep ini semestinya sudah tidak asing, tetapi beberapa di antaranya mungkin baru.
+  </p>
+  <p>
+    Pertama-tama kita sajikan definisi-definisi dasarnya.
+    Sebagian besar pembahasan kita sebelumnya mungkin berkaitan dengan fungsi yang memetakan bilangan real ke bilangan real,
+    tetapi di sini kita akan memandang fungsi dari sudut pandang yang lebih umum.
+    Kita mulai dengan definisi formal suatu fungsi.
+  </p>
+  <definition xml:id="def_function">
+  <idx><h>fungsi</h></idx>
+    <statement>
+      <p>
+        Suatu <term>fungsi</term>
+        <m>f</m> dari himpunan tak kosong <m>A</m> ke himpunan <m>B</m> adalah koleksi pasangan terurut <m>(a,b)</m> sedemikian sehingga
+        <ul>
+          <li>
+            <p>
+              untuk setiap <m>a \in A</m>, terdapat pasangan <m>(a,b)</m> di dalam <m>f</m>, dan
+            </p>
+          </li>
+          <li>
+            <p>
+              jika <m>(a,b)</m> dan <m>(a,b')</m> berada di dalam <m>f</m>, maka <m>b=b'</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Perhatikan bahwa sifat pertama adalah sifat eksistensi <mdash/> jika <m>a \in A</m>, maka terdapat unsur <m>b</m> di dalam <m>B</m> yang dipasangkan dengan <m>a</m>.
+    Sifat pertama ini juga menyatakan bahwa setiap unsur di dalam <m>A</m> digunakan,
+    atau bahwa setiap unsur di dalam <m>A</m> dipasangkan dengan suatu unsur di dalam <m>B</m>,
+    dan unsur di dalam <m>B</m> tersebut bergantung pada unsur di dalam <m>A</m> yang dipilih.
+    Sifat kedua adalah sifat ketunggalan <mdash/> hanya ada satu unsur <m>b</m> di dalam <m>B</m> yang dipasangkan dengan suatu unsur <m>a</m> tertentu di dalam <m>A</m>.
+  </p>
+  <p>
+    Umumnya kita menggunakan notasi lain untuk suatu fungsi.
+    Jika <m>(a,b)</m> merupakan anggota fungsi <m>f</m>, kita menulis
+    <me>
+      f(a)=b
+    </me>,
+    dan dengan cara ini kita memandang <m>f</m> sebagai pemetaan dari himpunan <m>A</m> ke himpunan <m>B</m>.
+    Kita menyatakan bahwa <m>f</m> adalah pemetaan dari himpunan <m>A</m> ke himpunan <m>B</m> dengan notasi
+    <me>
+      f : A \to B
+    </me>.
+  </p>
+  <p>
+    Jika <m>f</m> memetakan unsur <m>a \in A</m> ke unsur <m>b \in B</m>, kita juga menggunakan notasi
+    <me>
+      f : a \mapsto b
+    </me>.
+  </p>
+  <p>
+    Ada beberapa istilah dan notasi yang sudah dikenal dan berkaitan dengan fungsi.
+    Misalkan <m>f</m> suatu fungsi dari himpunan <m>A</m> ke himpunan <m>B</m>.
+    <ul>
+      <li>
+        <p>
+          Himpunan <m>A</m> disebut <term>domain</term>
+            <idx><h>fungsi</h><h>domain</h></idx>
+          dari <m>f</m>, dan kita menulis <m>\text{ dom } (f) = A</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Himpunan <m>B</m> disebut <term>kodomain</term>
+            <idx><h>fungsi</h><h>kodomain</h></idx>
+          dari <m>f</m>, dan kita menulis <m>\text{ codom } (f) = B</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Subhimpunan <m>\{f(a) \mid a \in A\}</m> dari <m>B</m> disebut <term>daerah hasil</term>
+            <idx><h>fungsi</h><h>daerah hasil</h></idx>
+          dari <m>f</m>, yang kita nyatakan dengan <m>\text{ range } (f)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Jika <m>a \in A</m>, maka <m>f(a)</m> adalah <term>citra</term>
+            <idx><h>citra suatu unsur</h></idx>
+          dari <m>a</m> oleh <m>f</m>.
+          Karena setiap <m>a</m> di dalam <m>A</m> dipasangkan dengan tepat satu <m>b \in B</m>,
+          citra <m>a</m> oleh <m>f</m> hanya ada satu.
+          Karena itu, kita dapat merujuk tanpa ambiguitas pada
+          <q>citra unsur tersebut</q>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Jika <m>b \in B</m> dan <m>b = f(a)</m> untuk suatu <m>a \in A</m>,
+          maka <m>a</m> disebut suatu <term>prapeta</term>
+            <idx><h>prapeta suatu unsur</h></idx>
+          dari <m>b</m>.
+          Untuk suatu <m>b \in B</m> tertentu, <m>b</m> mungkin memiliki banyak prapeta yang berbeda,
+          <m>b</m> mungkin tidak memiliki prapeta, atau <m>b</m> mungkin memiliki tepat satu prapeta.
+          Menyusun contoh untuk setiap keadaan tersebut dapat membantu pemahaman.
+          Karena prapeta suatu unsur <m>b</m> belum tentu tunggal, kita menyebutnya
+          <q>suatu prapeta</q>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Mengetahui domain dan kodomain sangat penting ketika bekerja dengan fungsi,
+    dan kedua himpunan ini akan banyak kita perhatikan.
+  </p>
+  <p>
+    Dalam pembelajaran matematika sebelumnya, kita mungkin telah menjumpai fungsi satu-ke-satu dan fungsi pada.
+    Fungsi satu-ke-satu
+    (atau injeksi)
+    dan fungsi pada
+    (atau surjeksi)
+    merupakan jenis fungsi khusus; definisinya kita sajikan di sini.
+  </p>
+
+  <definition>
+    <idx><h>fungsi</h><h>injeksi</h></idx>
+    <idx><h>fungsi</h><h>surjeksi</h></idx>
+    <idx><h>fungsi</h><h>bijeksi</h></idx>
+    <statement>
+      <p>
+        Misalkan <m>f</m> suatu fungsi dari himpunan <m>A</m> ke himpunan <m>B</m>.
+        <ol>
+          <li>
+            <p>
+              Fungsi <m>f</m> merupakan <term>injeksi</term> jika
+              setiap kali <m>(a,b)</m> dan <m>(a',b)</m> berada di dalam <m>f</m>,
+              berlaku <m>a=a'</m>.
+              Secara ekuivalen, dengan menggunakan notasi fungsi,
+              <m>f</m> merupakan injeksi jika <m>f(a)=f(a')</m> mengakibatkan <m>a=a'</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Fungsi <m>f</m> merupakan <term>surjeksi</term> jika
+              untuk setiap <m>b \in B</m>,
+              terdapat <m>a \in A</m> sedemikian sehingga <m>(a,b)</m> berada di dalam <m>f</m>.
+              Secara ekuivalen, dengan menggunakan notasi fungsi,
+              <m>f</m> merupakan surjeksi jika untuk setiap <m>b \in B</m> terdapat <m>a \in A</m> sedemikian sehingga <m>f(a)=b</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Fungsi <m>f</m> merupakan <term>bijeksi</term> jika <m>f</m> sekaligus merupakan injeksi dan surjeksi.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <exploration>
+    <introduction>
+    <p>
+      Kita sering mendefinisikan fungsi dengan aturan,
+      tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik.
+      Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan.
+      Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan/atau surjeksi.
+      Sebagai contoh,
+      misalkan <m>f(x) = x^2+1</m>. (Perhatikan bahwa <m>f</m> adalah fungsinya dan <m>f(x)</m> adalah citra <m>x</m> oleh <m>f</m>.) Perhatikan bahwa
+      <me>
+        f(2) = 5 \text{ dan }  f(-2) = 5
+      </me>.
+    </p>
+    <p>
+      Pengamatan ini cukup untuk membuktikan bahwa fungsi <m>f</m> bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.
+    </p>
+    <p>
+      Karena <m>f(x) = x^2 + 1</m>,
+      kita mengetahui bahwa <m>f(x) \geq 1</m> untuk setiap <m>x \in \R</m>.
+      Hal ini menyiratkan bahwa fungsi <m>f</m> bukan surjeksi.
+      Sebagai contoh, <m>-2</m> berada di dalam kodomain <m>f</m>, sedangkan
+      <m>f(x) \neq -2</m> untuk setiap <m>x</m> di dalam domain <m>f</m>.
+    </p>
+    </introduction>
+      <task>
+        <introduction>
+          <p>
+            Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula.
+            Fungsi semacam ini disebut pembatasan.
+          </p>
+            <definition>
+              <idx><h>fungsi</h><h>pembatasan</h></idx>
+              <statement>
+                <p>
+                  Misalkan <m>f</m> suatu fungsi dari himpunan <m>A</m> ke himpunan <m>B</m> dan misalkan <m>C</m> suatu subhimpunan dari <m>A</m>.
+                  <term>Pembatasan</term> <m>f</m> pada <m>C</m> adalah fungsi <m>F: C \to B</m> yang memenuhi
+                  <me>
+                    F(c) = f(c) \text{ untuk setiap }  c \in C
+                  </me>.
+                </p>
+              </statement>
+            </definition>
+            <p>
+            Pembatasan tersebut juga dinyatakan dengan notasi <m>F = f\mid_C</m>.
+            Kita juga menyebut <m>f</m> sebagai suatu <term>perluasan</term> dari <m>F</m>.
+            Misalkan <m>f: \R \to \R</m> didefinisikan oleh <m>f(x) = x^2+1</m>,
+            dan misalkan <m>h = f \mid_{\R^+}</m>,
+            dengan <m>\R^+</m> menyatakan himpunan bilangan real positif.
+            Jadi, <m>h</m> memiliki kodomain yang sama dengan <m>f</m>, tetapi domain yang berbeda.
+          </p>
+          </introduction>
+            <task>
+              <statement>
+                <p>
+                  Buktikan bahwa <m>h</m> merupakan injeksi.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Apakah <m>h</m> merupakan surjeksi?
+                  Berikan alasan untuk kesimpulan Anda.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+        <task>
+        <introduction>
+          <p>
+            Misalkan <m>T = \{y \in \R \mid y \geq 1\}</m>,
+            dan misalkan <m>F: \R \to T</m> didefinisikan oleh <m>F(x) = f(x)</m>.
+            Perhatikan bahwa fungsi <m>F</m> menggunakan rumus yang sama dengan fungsi <m>f</m> dan memiliki domain yang sama dengan <m>f</m>,
+            tetapi kodomainnya berbeda dari kodomain <m>f</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Jelaskan mengapa <m>F</m> bukan injeksi.
+                </p>
+              </statement>
+        </task>
+        <task>
+              <statement>
+                <p>
+                  Apakah <m>F</m> merupakan surjeksi?
+                  Berikan alasan untuk kesimpulan Anda.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+        <task>
+        <introduction>
+          <p>
+            Misalkan <m>\R^*= \{x \in \R \mid x \geq 0\}</m>.
+            Definisikan <m>g : \R^* \to T</m> dengan <m>g(x) = x^2 + 1</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Buktikan atau berikan contoh tandingan: fungsi <m>g</m> merupakan injeksi.
+                </p>
+              </statement>
+        </task>
+        <task>
+              <statement>
+                <p>
+                  Buktikan atau berikan contoh tandingan: fungsi <m>g</m> merupakan surjeksi.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+   
+  </exploration>
+  <p>
+    Dalam aktivitas pendahuluan kita,
+    rumus matematika yang sama digunakan untuk menentukan keluaran fungsi-fungsi tersebut.
+    Namun:
+    <ul>
+      <li>
+        <p>
+          Salah satu fungsi bukan injeksi maupun surjeksi.
+        </p>
+      </li>
+      <li>
+        <p>
+          Salah satu fungsi bukan injeksi, tetapi merupakan surjeksi.
+        </p>
+      </li>
+      <li>
+        <p>
+          Salah satu fungsi merupakan injeksi, tetapi bukan surjeksi.
+        </p>
+      </li>
+      <li>
+        <p>
+          Salah satu fungsi sekaligus merupakan injeksi dan surjeksi.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Hal ini menggambarkan fakta penting bahwa sifat injektif atau surjektif suatu fungsi tidak hanya bergantung pada rumus yang menentukan keluaran fungsi tersebut, tetapi juga pada domain dan kodomainnya.
+  </p>
+  <p>
+    Salah satu fungsi khusus yang penting dan selalu merupakan injeksi sekaligus surjeksi adalah fungsi
+    <term>identitas</term>
+        <idx><h>fungsi</h><h>identitas</h></idx>
+    pada suatu himpunan.
+    Jika <m>A</m> adalah suatu himpunan,
+    fungsi identitas pada <m>A</m> dinyatakan dengan <m>i_A</m>,
+    dan <m>i_A(a) = a</m> untuk setiap <m>a \in A</m>.
+  </p>
+</section>

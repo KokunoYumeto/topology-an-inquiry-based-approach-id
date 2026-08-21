@@ -1,0 +1,382 @@
+<section xml:id="sec_compact_rn">
+  <title>Compact Subsets of <m>\R^n</m></title>
+  <p>
+    The metric space <m>(\R^n,d_E)</m> is not compact since the open cover
+    <m>\{B(0, n)\}_{n \in \Z^+}</m> has no finite sub-cover.
+    Since we have already shown that
+    <m>(\R,d_E)</m> is homeomorphic to the topological subspaces <m>(a,b)</m>,
+    <m>(-\infty, b)</m>, and <m>(a,\infty)</m> for any
+    <m>a,
+    b \in \R</m>, we conclude that no open intervals are compact.
+    Similarly, no half-closed intervals are compact.
+    In fact, we will demonstrate in this section that the compact subsets of
+    <m>(\R^n, d_E)</m> are exactly the subsets that are closed and bounded.
+    The first step is contained in the next activity.
+  </p>
+
+  <activity xml:id="act_metric_compact_closed">
+    <introduction>
+    <p>
+      We have seen that compact sets can be either open or closed.
+      However, in certain situations compact sets must be closed.
+      We investigate that idea in this activity.
+      Let <m>A</m> be a compact subset of a Hausdorff topological space <m>X</m>.
+      We will examine why <m>A</m> must be a closed set.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            To prove that <m>A</m> is a closed set,
+            we consider the set <m>X \setminus A</m>.
+            What property of <m>X \setminus A</m> will ensure that <m>A</m> is closed?
+            How do we prove that <m>X \setminus A</m> has this property?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>x \in X \setminus A</m>.
+            Assume that <m>A</m> is a nonempty set (why can we make this assumption)?
+            For each <m>a \in A</m>,
+            why must there exist disjoint open sets <m>O_{xa}</m> and <m>O_a</m> with
+            <m>x \in O_{xa}</m> and <m>a \in O_a</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Why must there exist a positive integer <m>n</m> and elements <m>a_1</m>,
+            <m>a_2</m>, <m>\ldots</m>,
+            <m>a_n</m> in <m>A</m> such that the sets <m>O_{a_1}</m>,
+            <m>O_{a_2}</m>,
+            <m>\ldots</m>, <m>O_{a_n}</m> form an open cover of <m>A</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now find an open subset of
+            <m>X \setminus A</m> that has <m>x</m> as an element.
+            What does this tell us about <m>A</m>?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    The result of <xref ref="act_metric_compact_closed"/>
+    is summarized in <xref ref="thm_metric_compact_closed"/>.
+  </p>
+
+  <theorem xml:id="thm_metric_compact_closed">
+    <statement>
+      <p>
+        If <m>A</m> is a compact subset of a Hausdorff topological space,
+        then <m>A</m> is closed.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <xref ref="thm_metric_compact_closed"/>
+    tells us something about compact subsets of <m>(\R^n, d_E)</m>.
+    Since every metric space is Hausdorff,
+    we can conclude the following corollary.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        If <m>A</m> is a compact subset of
+        <m>(\R^n, d_E)</m>, then <m>A</m> is closed.
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    To classify the compact subsets of
+    <m>(\R^n, d_E)</m> as closed and bounded,
+    we need to discuss what it means for a set in <m>\R^n</m> to be bounded.
+    The basic idea is straightforward <mdash/> a subset of <m>\R^n</m> is bounded if it doesn't go off to infinity in any direction.
+    In other words,
+    a subset <m>A</m> of <m>\R^n</m> is bounded if we can construct a box in <m>\R^n</m> that is large enough to contain it.
+    Thus, the following definition.
+  </p>
+
+  <definition xml:id="def_n_cube">
+  <idx><h>bounded subset of <m>\R^n</m></h></idx>
+    <statement>
+      <p>
+        A subset <m>A</m> of <m>\R^n</m> is <term>bounded</term> if there exists <m>M \gt 0</m> such that <m>A \subseteq Q^n_M</m>, where
+        <me>
+          Q^n_M = \{(x_1,x_2, \ldots, x_n) \mid -M \leq x_i \leq M \text{ for every }  1 \leq i \leq n\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    The set <m>Q^n_M</m> in <xref ref="def_n_cube"/>
+    is called the <term>standard</term>
+    <m>n</m><term>-dimensional cube of size M</term>.
+    A standard 3-dimensional cube of size <m>M</m> is shown in <xref ref="F_M_cube"/>.
+  </p>
+
+  <figure xml:id="F_M_cube">
+    <caption>A standard 3-cube <m>Q^3_M</m>.</caption>
+    <image width="40%" source="M_cube"/>
+  </figure>
+
+  <p>
+    An important fact about standard <m>n</m>-cubes is that they are compact subsets of <m>\R^n</m>.
+    Compactness is a complicated property <mdash/> it is difficult to prove a result that is true about every open cover.
+    As a result,
+    the proof of <xref ref="thm_Compact_cubes"/> is quite technical,
+    but it is a critical step to classifying the compact subsets of <m>\R^n</m>.
+  </p>
+
+  <theorem xml:id="thm_Compact_cubes">
+    <statement>
+      <p>
+        Let <m>n \in \Z^+</m>.
+        The standard <m>n</m>-dimensional cube of size <m>M</m> is a compact subset of <m>\R^n</m> for any <m>M \gt 0</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      We proceed by contradiction and assume that there is an
+      <m>n \in \Z^+</m> and a positive real number <m>M</m> such that <m>Q^n_M</m> is not compact.
+      So there exists an open cover
+      <m>\{O_{\alpha}\}</m> with <m>\alpha</m> in some indexing set <m>I</m> of <m>Q^n_M</m> that has no finite sub-cover.
+      Let <m>Q_0 = Q^n_M</m> so that <m>Q_0</m> is an <m>n</m>-cube with side length <m>2M</m>.
+      Partition <m>Q_0</m> into <m>2^n</m> uniform sub-cubes of side length
+      <m>M = \frac{2M}{2}</m> (a picture for <m>n=2</m> is shown at left in <xref ref="F_Cubes"/>).
+    </p>
+    <figure xml:id="F_Cubes">
+      <caption>Left : <m>Q_1</m>. Middle: <m>Q_2</m>. Right: Labeling the corners.</caption>
+      <sidebyside>
+      <image width="50%" source="HB_cube"/>
+      <image width="50%" source="HB_cube_2"/>
+      <image width="50%" source="HB_cube_3"/>
+      </sidebyside>
+    </figure>
+
+    <p>
+      Let <m>Q'_0</m> be one of these sub-cubes.
+      The collection <m>\{O_{\alpha} \cap Q'_0\}_{\alpha \in I}</m> is an open cover of <m>Q'_0</m> in the subspace topology.
+      If each of these open covers has a finite sub-cover,
+      then we can take the union of all of the
+      <m>O_{\alpha}</m>s over all of the finite sub-covers to obtain a finite sub-cover of <m>\{O_{\alpha}\}_{\alpha \in I}</m> for <m>Q_0</m>.
+      Since our cover <m>\{O_{\alpha}\}_{\alpha \in I}</m> for <m>Q_0</m> has no finite sub-cover,
+      we conclude that there is one sub-cube, <m>Q_1</m>,
+      for which the open cover <m>\{O_{\alpha} \cap Q_1\}_{\alpha \in I}</m> has no finite sub-cover.
+      Now we repeat the process and partition <m>Q_1</m> into <m>2^n</m> uniform sub-cubes of side length <m>\frac{M}{2}= \frac{2M}{2^2}</m>.
+      The same argument we just made tells us that there is a sub-cube <m>Q_2</m> of <m>Q_1</m> for which the open cover
+      <m>\{O_{\alpha} \cap Q_2\}_{\alpha \in I}</m> has no finite sub-cover
+      (an illustration for the <m>n=2</m> case is shown at middle in <xref ref="F_Cubes"/>).
+      We proceed inductively to obtain an infinite nested sequence
+      <me>
+        Q_0 \supset Q_1 \supset Q_2 \supset Q_3 \supset \cdots \supset Q_k \supset \cdots
+      </me>
+      of cubes such that for each <m>k \in \Z</m>,
+      the lengths of the sides of cube <m>Q_k</m> are <m>\frac{M}{2^{k-1}} = \frac{2M}{2^{k}}</m> and the open cover
+      <m>\{O_{\alpha} \cap Q_k\}_{\alpha \in I}</m> of <m>Q_k</m> has no finite sub-cover.
+      Now we show that <m>\bigcap_{k=1}^{\infty} Q_k \neq \emptyset</m>.
+    </p>
+    <p>
+      For <m>i \in \Z^+</m>,
+      let <m>Q_i = [a_{i,1}, b_{i,1}] \times [a_{i,2}, b_{i,2}] \times \cdots [a_{i,n}, b_{i,n}]</m>.
+      That is, think of the point
+      <m>(a_{i,1}, a_{i,2}, \ldots,
+      a_{i,n})</m> as a lower corner of the cube and the point
+      <m>(b_{i,1}, b_{i,2}, \ldots,
+      b_{i,n})</m> as an upper corner of the <m>n</m>-cube <m>Q_i</m> (a labeling for <m>n=2</m> and <m>i</m> from 1 to 3 is shown at right in <xref ref="F_Cubes"/>).
+      Let <m>q = (\sup\{a_{i,1}\}, \sup\{a_{i,2}\}, \ldots, \sup\{a_{i,n}\})</m>.
+      We will show that <m>q \in \bigcap_{k=1}^{\infty} Q_k</m>.
+      Fix <m>r \in \Z^+</m>.
+      We need to demonstrate that
+      <me>
+        q \in Q_r = \{(x_1, x_2, \ldots, x_n) \mid a_{r,s} \leq x_s \leq b_{r,s} \text{ for each }  1 \leq s \leq n\}
+      </me>.
+    </p>
+    <p>
+      For each <m>s</m> between 1 and <m>n</m> we have
+      <men xml:id="eq_cube_a">
+        a_{r,s} \leq \sup\{a_{i,s}\}
+      </men>
+      because <m>\sup\{a_{i,s}\}</m> is an upper bound for all of the <m>a_{i,s}</m>.
+      The fact that our cubes are nested means that
+      <md>
+        <mrow>a_{1,s} \amp \leq a_{2,s} \leq \cdots,</mrow>
+        <mrow>b_{1,s} \amp \geq b_{2,s} \geq \cdots,</mrow>
+        <mrow xml:id="eq_cube_b" number="yes">a_{i,s} \amp \leq b_{i,s}</mrow>
+      </md>
+      for every <m>i</m> and <m>s</m>.
+      Since <m>\sup\{a_{i,s}\}</m> is the least upper bound of all of the <m>a_{i,s}</m>,
+      property <xref ref="eq_cube_b"/> shows that <m>\sup\{a_{i,s}\} \leq b_{i,s}</m> for every <m>i</m>.
+      Thus, <m>\sup\{a_{i,s}\} \leq b_{r,s}</m> and so <m>a_{r,s} \leq \sup\{a_{i,s}\} \leq b_{r,s}</m>.
+      This shows that <m>q \in Q_k</m> for every <m>k</m>.
+      Consequently,
+      <m>q \in \bigcap_{k=1}^{\infty} Q_k</m> and <m>\bigcap_{k=1}^{\infty} Q_k</m> is not empty.
+      (The fact that the side lengths of our cubes are converging to 0 implies that <m>\bigcap_{k=1}^{\infty} Q_k = \{q\}</m>,
+      but we only need to know that
+      <m>\bigcap_{k=1}^{\infty} Q_k</m> is not empty for our proof.)
+    </p>
+    <p>
+      Since <m>\{O_{\alpha}\}_{\alpha \in I}</m> is a cover for <m>Q_0</m>,
+      there must exist an <m>\alpha_q \in I</m> such that <m>q \in O_{\alpha_q}</m>.
+      The set <m>O_{\alpha_q}</m> is open,
+      so there exists <m>\epsilon_q \gt 0</m> such that <m>B(q, \epsilon_q) \subseteq O_{\alpha_q}</m>.
+      The maximum distance between points in <m>Q_k</m> is the distance between the corner points
+      <m>(a_{k,1}, a_{k,2}, \ldots,
+      a_{k,n})</m> and <m>(b_{k,1}, b_{k,2}, \ldots, b_{k,n})</m>,
+      where each length <m>b_{k,s} - a_{k,s}</m> is <m>\frac{M}{2^{k-1}}</m>.
+      The distance formula tells us that this maximum distance between points in <m>Q_k</m> is
+      <me>
+        D_k = \sqrt{ \sum_{s=1}^n \left(\frac{M}{2^{k-1}}\right)^2} =  \sqrt{ n \left(\frac{M}{2^{k-1}}\right)^2} = \frac{M}{2^{k-1}} \sqrt{n}
+      </me>.
+    </p>
+    <p>
+      Now choose <m>K \in \Z^+</m> such that <m>D_K \lt \epsilon_q</m>.
+      Then if <m>x \in Q_K</m> we have
+      <m>d_E(q,x)\lt D_K</m> and <m>x \in B(q, \epsilon_q)</m>.
+      So <m>Q_K \subseteq B(q, \epsilon_q)</m>.
+      But <m>B(q, \epsilon_q) \subseteq O_{\alpha_q}</m>.
+      So the collection <m>\{O_{\alpha_q} \cap Q_K\}</m> is a sub-cover of <m>\{O_{\alpha} \cap Q_K\}_{\alpha \in I}</m> for <m>Q_K</m>.
+      But this contradicts the fact this open cover has no finite sub-cover.
+      The assumption that led us to this contradiction was that <m>Q_0</m> was not compact,
+      so we conclude that the standard <m>n</m>-dimensional cube of size <m>M</m> is a compact subset of <m>\R^n</m> for any <m>M \gt 0</m>.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    One consequence of <xref ref="thm_Compact_cubes"/>
+    is that any closed interval <m>[a,b]</m> in <m>\R</m> is a compact set.
+    But we can say even more <mdash/> that the compact subsets of <m>\R^n</m> are the closed and bounded subsets.
+    This will require one more intermediate result about closed subsets of compact topological spaces.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X</m> be a compact topological space and <m>C</m> a closed subset of <m>X</m>.
+      In this activity we will prove that <m>C</m> is compact.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            What does it take to prove that <m>C</m> is compact?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use an open cover for <m>C</m> and the fact that <m>C</m> is closed to make an open cover for <m>X</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the fact that <m>X</m> is compact to complete the proof of the following theorem.
+          </p>
+            <theorem xml:id="thm_closed_compact">
+              <statement>
+                <p>
+                  Let <m>X</m> be a compact topological space.
+                  Then any closed subset of <m>X</m> is compact.
+                </p>
+              </statement>
+            </theorem>
+          
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Now we can prove a major result,
+    that the compact subsets of
+    <m>(\R^n, d_E)</m> are the closed and bounded subsets.
+    This result is important enough that it is given a name.
+  </p>
+
+  <theorem>
+    <title>The Heine-Borel Theorem</title>
+    <statement>
+      <p>
+        A subset <m>A</m> of <m>(\R^n, d_E)</m> is compact if and only if <m>A</m> is closed and bounded.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>A</m> be a subset of <m>(\R^n, d_E)</m>.
+      Assume that <m>A</m> is closed and bounded.
+      Since <m>A</m> is bounded,
+      there is a positive number <m>M</m> such that <m>A \subseteq Q^n_M</m>.
+      <xref ref="thm_Compact_cubes"/>
+      shows that <m>Q^n_M</m> is compact,
+      and then <xref ref="thm_closed_compact"/>
+      shows that <m>A</m> is compact.
+    </p>
+    <p>
+      For the converse,
+      assume that <m>A</m> is a compact subset of <m>\R^n</m>.
+      We must show that <m>A</m> is closed and bounded.
+      Now <m>(\R^n, d_E)</m> is a metric space, and so Hausdorff.
+      <xref ref="thm_metric_compact_closed"/>
+      then shows that <m>A</m> is closed.
+      To conclude our proof, we need to demonstrate that <m>A</m> is bounded.
+      For each <m>k \gt 0</m>, let
+      <me>
+        O_k = \{ (x_1,x_2, \ldots, x_n) \mid -k \lt  x_i \lt  k \text{ for every }  1 \leq i \leq n\}
+      </me>.
+    </p>
+    <p>
+      That is, <m>O_k</m> is the open <m>k</m>-cube in <m>\R^n</m>.
+      Next let
+      <me>
+        U_k = O_k \cap A
+      </me>
+      for each <m>k</m>.
+      Since <m>\bigcup_{k \gt 0} O_k = \R^n</m>,
+      it follows that <m>\{U_k\}_{k \gt 0}</m> is an open cover of <m>A</m>.
+      The fact that <m>A</m> is compact means that there is a finite collection <m>U_{k_1}</m>,
+      <m>U_{k_2}</m>, <m>\ldots</m>,
+      <m>U_{k_m}</m> of sets in <m>\{U_k\}_{k \gt 0}</m> that cover <m>A</m>.
+      Let <m>K = \max\{k_i \mid 1 \leq i \leq m\}</m>.
+      Then <m>U_{k_i} \subseteq U_K</m> for each <m>i</m>,
+      and so <m>A \subseteq U_K \subset Q^m_K</m>.
+      Thus, <m>A</m> is bounded.
+      This completes the proof that if <m>A</m> is compact in <m>\R^n</m>,
+      then <m>A</m> is closed and bounded.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    You might wonder whether the Heine-Borel Theorem is true in any metric space.
+  </p>
+
+  <activity>
+    <p>
+      A subset <m>A</m> of a metric space <m>(X, d)</m> is bounded if there exists a real number <m>M</m> such that
+      <m>d(a_1,a_2) \leq M</m> for all <m>a_1, a_2 \in A</m>.
+      (This is equivalent to our definition of a bounded subset of <m>\R^n</m> given earlier,
+      but works in any metric space.)
+      Explain why <m>\Z</m> as a subset of <m>(\R,d)</m>,
+      where <m>d</m> is the discrete metric,
+      is closed and bounded but not compact.
+    </p>
+  </activity>
+</section>

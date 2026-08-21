@@ -1,0 +1,152 @@
+<section xml:id="sec_top_space_intro">
+  <title>Introduction</title>
+  <p>
+    Many of the properties that we introduced in metric spaces (continuity,
+    limit points,
+    boundary) could be phrased in terms of the open sets in the space.
+    With that in mind,
+    we can broaden our concept of space by eliminating the metric and just defining the opens sets in the space.
+    This produces what are called <term>topological spaces</term>.
+  </p>
+  <p>
+    Recall that the open sets in a metric space satisfied certain properties,
+    including that the arbitrary union of open sets is open and any finite intersection of opens sets is open.
+    We will now take these properties as our axioms in defining topological spaces.
+  </p>
+
+  <definition>
+  <idx><h>topology</h></idx>
+    <statement>
+      <p>
+        Let <m>X</m> be a nonempty set.
+        A set <m>\tau</m><fn>
+        The symbol <m>\tau</m> is the Greek lowercase letter tau.
+        </fn> of subsets of <m>X</m> is said to be a <term>topology</term>
+        on <m>X</m> if
+        <ol>
+          <li>
+            <p>
+              <m>X</m> and <m>\emptyset</m> belong to <m>\tau</m>,
+            </p>
+          </li>
+          <li>
+            <p>
+              any union of sets in <m>\tau</m> is a set in <m>\tau</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              any finite intersection of sets in <m>\tau</m> is a set in <m>\tau</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <idx><h>topological space</h></idx>
+    <idx><h>open sets in a topological space</h></idx>
+    A <term>topological space</term>
+        
+    is then any set on which a topology is defined.
+    If <m>X</m> is the space and <m>\tau</m> a topology on <m>X</m>,
+    we denote the topological space as <m>(X, \tau)</m>.
+    The elements of <m>\tau</m> are called the
+    <term>open sets</term> in the topological space.
+    When the topology is clear from the context,
+    we simple refer to <m>X</m> as the topological space.
+    Some examples are in order.
+  </p>
+
+  <exploration>
+   
+      <task>
+        <statement>
+          <p>
+            Suppose <m>X = \{ a, b, c\}</m>.
+            Is the set <m>\tau = \{a,b\}</m> a topology on <m>X</m>?
+            Justify your response.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose <m>X= \{a,b,c,d\}</m>.
+            Is the collection of subsets consisting of
+            <m>\tau = \{ \{a\}, \{b\}, \{a,b\} \}</m> a topology on <m>X</m>?
+            Justify your response.
+            If not, what is the smallest collection of subsets of <m>X</m> that need to be added to <m>\tau</m> to make <m>\tau</m> a topology on <m>X</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose <m>X= \{a,b,c,d\}</m>.
+            Is the collection of subsets consisting of
+            <me>
+              \tau = \{\emptyset, \{a\}, \{b\}, \{d\}, \{a,b\}, \{a,d\}, X \}
+            </me>
+            a topology on <m>X</m>?
+            Justify your response.
+            If not, what is the smallest collection of subsets of <m>X</m> that need to be added to <m>\tau</m> to make <m>\tau</m> a topology on <m>X</m>?.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose <m>X= \{a,b,c,d\}</m>.
+            Is the collection of subsets consisting of
+            <me>
+              \tau = \{\emptyset, \{a\}, \{b\}, \{c\}, \{d\}, \{a,b\}, \{a,c\}, \{a,d\}, \{b, d\}, \{c,d\}, X \}
+            </me>
+            a topology on <m>X</m>?
+            Justify your response.
+            If not, what is the smallest collection of subsets of <m>X</m> that need to be added to <m>\tau</m> to make <m>\tau</m> a topology on <m>X</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>F</m> be the collection of finite subsets of <m>\R</m>.
+            Let <m>\tau = \{\emptyset, \R\} \cup F</m>.
+            First, list three members of <m>F</m> and three sets that are not in <m>F</m>.
+            Next, is <m>\tau</m> a topology on <m>\R</m>?
+            Justify your response.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>\tau = \{\emptyset, \R, \{0\} \}</m>.
+            Is <m>\tau</m> a topology on <m>\R</m>?
+            Justify your response.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>X</m> be a set and let <m>\tau = \{\emptyset, X\}</m>.
+            Is <m>\tau</m> a topology on <m>X</m>?
+            Justify your response.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>X</m> be a set and let <m>\tau</m> be the collection of all subsets of <m>X</m>.
+            Is <m>\tau</m> a topology on <m>X</m>?
+            Justify your response.
+          </p>
+        </statement>
+      </task>
+    
+  </exploration>
+</section>

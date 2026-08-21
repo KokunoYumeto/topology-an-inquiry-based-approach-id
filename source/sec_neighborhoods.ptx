@@ -1,0 +1,105 @@
+<section xml:id="sec_neighborhoods">
+  <title>Neighborhoods</title>
+  <idx><h><m>\delta</m>-neighborhood of a point in a metric space</h></idx>
+  <p>
+    We are familiar with the idea of open intervals in <m>\R</m>.
+    We next introduce the idea of an open neighborhood of a point and characterize continuity in terms of neighborhoods.
+    This is the next step in developing the notation of continuity in topological spaces.
+  </p>
+  <p>
+    The open ball <m>B(a, \delta)</m> in a metric space <m>(X,d)</m> is also called the
+    <term><m>\delta</m>-neighborhood</term> around <m>a</m>.
+    A neighborhood of a point can be thought of as any set that envelops that point.
+  </p>
+
+  <definition>
+    <idx><h>neighborhood in a metric space</h></idx>
+    <statement>
+      <p>
+        Let <m>(X, d_X)</m> be a metric space, and let <m>a \in X</m>.
+        A subset <m>N</m> of <m>X</m> is a <term>neighborhood</term> of <m>a</m> if there exists a
+        <m>\delta \gt 0</m> such that <m>B(a, \delta) \subseteq N</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="exp_neighborhood_MS">
+    <statement>
+      <p>
+       
+        <ul>
+          <li>
+            <p>
+              In <m>\R</m> with the Euclidean metric, the set <m>\R^+</m>
+              (the positive real numbers)
+              is a neighborhood of <m>a=1</m> because the open ball
+              <m>B(1,0.5)</m> is completely contained in <m>\R^+</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              In <m>\R</m> with the Euclidean metric,
+              the set <m>\Z</m> is not a neighborhood of <m>a=1</m> because any open ball centered at <m>a=1</m> will contain some non-integers.
+            </p>
+          </li>
+          <li>
+            <p>
+              In <m>\R</m> with the discrete metric,
+              the set <m>\Z</m> is a neighborhood of <m>a=1</m> because the open ball <m>B(a,1) = \{a\}</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    As another example, the open ball
+    <m>B(a, \delta)</m> is a neighborhood of <m>a</m>.
+    We can say even more about open balls.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X, d)</m> be a metric space,
+      let <m>a \in X</m>, and let <m>\delta \gt 0</m>.
+      In this activity we ask the question,
+      is <m>B(a, \delta)</m> a neighborhood of each of its points?
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>b \in B(a, \delta)</m>.
+            What do we have to do to show that
+            <m>B(a, \delta)</m> is a neighborhood of <m>b</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use <xref ref="F_Open_ball_neighborhood"/>
+            to help show that <m>B(a, \delta)</m> is a neighborhood of <m>b</m>.
+          </p>
+            <figure xml:id="F_Open_ball_neighborhood">
+              <caption><m>B(a, \delta)</m> as a neighborhood of <m>b</m>.</caption>
+              <image width="50%" source="Open_ball_neighborhood"/>
+            </figure>
+          
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is the converse true?
+            That is, if a set is a neighborhood of each of its points,
+            is the set an open ball?
+            No proof is necessary, but a convincing argument is in order.
+          </p>
+        </statement>
+      </task>
+   
+  </activity>
+</section>

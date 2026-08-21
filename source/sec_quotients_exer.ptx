@@ -1,0 +1,510 @@
+<exercises xml:id="sec_quotients_exer">
+  <title>Exercises</title>
+
+  <exercise xml:id="ex_sim_p_relation">
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space, <m>Y</m> a set, and <m>p: X \to Y</m> a surjection. Define the relation <m>\sim_p</m> on <m>X</m> by <m>x \sim_p y</m> if and only if <m>p(x)=p(y)</m>. Prove that <m>\sim_p</m> is an equivalence relation. 
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>X</m> be the real numbers with the standard topology and let <m>p: X \to \{a,b,c\}</m> be defined by
+        <me>
+          p(x) = \begin{cases}a \amp \text{ if }  x \lt  0 \\ b \amp \text{ if }  x = 0 \\ c \amp \text{ if }  x \gt 0. \end{cases}
+        </me>
+        What is the quotient topology?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Define an equivalence relation <m>\sim</m> on <m>\R^2</m> by <m>(x_1,y_1) \sim (x_2,y_2)</m> whenever
+        <m>x_2 - x_1 \in \Z</m> and <m>y_2 - y_1 \in \Z</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>\sim</m> is an equivalence relation on <m>\R^2</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              The quotient space is a familiar space.
+              Find that space and explain why it is the quotient space.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Find an example of a continuous surjection that is not a quotient map.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a topological space and let <m>A</m> be a subspace of <m>X</m>.
+        Define a relation <m>\sim</m> on <m>X</m> whose equivalence classes are <m>A</m> and <m>\{x\}</m> if <m>x \notin A</m>.
+        In this case the quotient space is denoted as <m>X/A</m>
+        (think of this space as obtained by crushing <m>A</m> to a point and leaving everything else alone).
+        Describe each of the following quotient spaces.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>X</m> is the closed interval <m>[0,1]</m> in <m>\R</m> and <m>A = \{0,1\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>X = \{(x,y) \mid x^2+y^2 = 1\}</m>,
+              <m>A = \{(-1,0), (1,0)\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X= \{(x,y) \mid x^2+y^2 \leq 1\}</m> and <m>A = \{(x,y) \mid x^2+y^2 = 1\}</m>
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X, \tau)</m> be the topological space where <m>X = \{1, 2, 3, 4\}</m> and
+        <me>
+          \tau = \{\emptyset, \{1\}, \{2\}, \{1, 2\}, \{3, 4\}, \{2, 3, 4\}, \{1, 3, 4\}, \{1, 2, 3, 4\}\}
+        </me>.
+        Let <m>Y = \{a, b, c\}</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>p: X \to Y</m> be defined by <m>p(1)=a</m>,
+              <m>p(2) = a</m>, <m>p(3)=b</m>, and <m>p(4) = c</m>.
+              Find the quotient topology <m>\tau_p</m> on <m>Y</m> defined by the function <m>p</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>q : X \to Y</m> be defined by <m>q(1)=c</m>,
+              <m>q(2) = c</m>, <m>q(3) = b</m>, and <m>q(4) = a</m>.
+              Find the quotient topology <m>\tau_q</m> on <m>Y</m> defined by the function <m>q</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Are the spaces <m>(Y, \tau_p)</m> and <m>(Y, \tau_q)</m> homeomorphic?
+              If yes, write down a specific homeomorphism and explain why your mapping is a homeomorphism.
+              If not, explain why not.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>D^2 = \{(x,y) \in \R^2 \mid x^2+y^2 \leq 1\}</m> be the unit disk in <m>\R^2</m> with the standard topology,
+        and let <m>S^1 = \{(x,y) \mid x^2+y^2 = 1\}</m> be the boundary of <m>D^2</m>.
+        Describe the quotient spaces
+        <m>D^2/\ssim</m> for each equivalence relation
+        (assume that points are similar to themselves).
+        Let <m>x = (s_1,t_1)</m> and <m>y = (s_2,t_2)</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>x \sim y</m> if <m>s_1=s_2</m> for <m>x, y</m> in <m>D^2</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>x \sim y</m> if <m>s_1=s_2</m> for <m>x, y</m> in <m>S^1</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>x \sim y</m> if <m>x</m> and <m>y</m> are diagonally opposite each other for <m>x,
+              y</m> in <m>D^2</m>
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X = I \times I</m> where <m>I</m> is the interval <m>[0,1]</m> with the standard metric topology,
+        and define an equivalence relation on <m>X</m> by
+        <m>(s_1, t_1) \sim (s_2,t_2)</m> when <m>t_1 = t_2 \gt 0</m> and
+        <m>x \sim x</m> for all other <m>x \in X</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Describe the quotient space <m>X/\ssim</m>,
+              and describe the quotient topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that <m>X/\ssim</m> is not Hausdorff.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a nonempty set and let <m>p</m> be a fixed element in <m>X</m>.
+        Let <m>\tau_p</m> be the particular point topology and
+        <m>\tau_{\overline{p}}</m> the excluded point topology on <m>X</m>.
+        That is
+        <ul>
+          <li>
+            <p>
+              <m>\tau_{p}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that contain <m>p</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tau_{\overline{p}}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that do not contain <m>p</m>.
+            </p>
+          </li>
+        </ul>
+      
+      That the particular point and excluded point topologies are topologies is the subject of <xref ref="ex_particular_point_topology"/> and <xref ref="ex_excluded_point_topology"/>.
+      Let <m>\sim</m> be the equivalence relation on <m>\Z</m> defined by
+      <m>x \sim y</m> if <m>x \equiv y \pmod{3}</m>.
+      Describe the quotient space <m>\Z/\ssim</m> and then determine,
+      with justification, the quotient topology on <m>\Z/\ssim</m> when
+      </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\Z</m> has the topology <m>\tau_{p}</m> with <m>p = 1</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\Z</m> has the topology <m>\tau_{\tau_{\overline{p}}}</m> with <m>p = 1</m>.
+          </p>
+        </statement>
+      </task>
+  </exercise>
+
+  <exercise>
+  <idx><h>real projective plane</h></idx>
+    <introduction>
+      <p>
+        In the process of developing techniques of drawing in perspective,
+        renaissance artists found it necessary to consider a point at infinity where all lines intersect.
+        This creates a geometry that extends the concept of the real plane.
+        This new geometry is the real projective plane <m>\mathbb{R}P^2</m>,
+        which can be thought of as the quotient space of
+        <m>\R^3 \setminus \{(0,0,0)\}</m> with the relation <m>\sim_P</m> such that <m>(x_1,x_2,x_3) \sim_P (y_1,y_2,y_3)</m> in
+        <m>\R^3 \setminus \{(0,0,0)\}</m> if and only if there is a nonzero real number <m>k</m> such that <m>y_1 = kx_1</m>,
+        <m>y_2 = kx_2</m>, and <m>y_3 = kx_3</m>.
+        In the projective plane,
+        parallel lines intersect at a point at infinity,
+        just as they seem to with our human vision.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\sim_P</m> is an equivalence relation.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Give a geometric description of the elements in the quotient space <m>\mathbb{R}P^2</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              There are other ways to visualize <m>\mathbb{R}P^2</m>.
+              For example, explain why the real projective plane
+              <m>\mathbb{R}P^2</m> is homeomorphic to the quotient space
+              <m>S^2/\ssim</m> of <m>S^2 = \{(x,y,z) \in \R^3 \mid x^2+y^2+z^2 = 1\}</m>,
+              where <m>\sim</m> identifies antipodal points on <m>S^2</m>.
+              No formal proofs are necessary,
+              but a convincing explanation is in order.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Since we identify antipodal points on <m>S^2</m> in the space <m>S^2/\sim</m>,
+              we can think of this space in another way.
+              If <m>P</m> is a point on <m>S^2</m> not on the equator,
+              then its antipodal point is also not on the equator.
+              So we can think of <m>S^2/\ssim</m> as the top hemisphere,
+              along with the equator on which antipodal points are identified,
+              as illustrated at left in <xref ref="F_projective_1"/>.
+            </p>
+              <figure xml:id="F_projective_1">
+                <caption>Three perspectives of <m>\mathbb{R}P^2</m>.</caption>
+                <sidebyside widths = "40% 30% 30%">
+                <image source="projective_1"/>
+                <image source="Projective_disk"/>
+                <image source="Projective_square"/>
+                </sidebyside>
+              </figure>
+            <p>
+              By projecting the points on the hemisphere down to the <m>xy</m>-plane,
+              we can represent <m>S^2/\ssim</m> as a disk whose antipodal points are identified,
+              as seen in the middle in <xref ref="F_projective_1"/>.
+              Use this last perspective to explain why
+              <m>\mathbb{R}P^2</m> can be realized as a square where opposite sides are identified in opposite directions as shown at right in <xref ref="F_projective_1"/>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <introduction>
+            <p>
+              The projective plane <m>\mathbb{R}P^2</m> is a complicated object <mdash/> it cannot be embedded in <m>\R^3</m> and so it is not something that can be easily visualized.
+              The projective plane is a non-orientable surface and is also important in classifying surfaces <mdash/> basically,
+              every closed surface is made up of spheres,
+              tori, and/or projective planes.
+              In this part of the exercise we see how the projective plane itself is made by adjoining a M&#xf6;bius strip to a disk
+              (think of sewing the boundary of M&#xf6;bius strip to the perimeter of a disk).
+            </p>
+          </introduction>
+              <task>
+                <statement>
+                  <p>
+                    Start with the model of <m>\mathbb{R}P^2</m> shown at left in <xref ref="F_projective_2"/>.
+                    Partition this object into three pieces as shown at right in <xref ref="F_projective_2"/>.
+                    Explain why the shaded region in the middle figure,
+                    separated out at right in <xref ref="F_projective_2"/>,
+                    is a M&#xf6;bius strip.
+                  </p>
+                    <figure xml:id="F_projective_2">
+                      <caption>Splitting the real projective plane.</caption>
+                      <sidebyside valign="middle">
+                        <image width="50%" source="Projective_square"/>
+                        <image width="50%" source="Projective_Mobius"/>
+                        <image width="50%" source="Projective_Mobius_split"/>
+                      </sidebyside>
+                    </figure>
+                  
+                </statement>
+              </task>
+              <task>
+                <statement>
+                  <p>
+                    The space <m>S</m> that remains after we remove the M&#xf6;bius strip from
+                    <m>\mathbb{R}P^2</m> is shown at left in <xref ref="F_projective_3"/>.
+                    The two spaces that follow are homeomorphic to <m>S</m>.
+                    Describe the homeomorphisms that produce the spaces from <m>S</m>.
+                    Then explain how <m>\mathbf{R}P^2</m> is obtained by attaching a M&#xf6;bius strip to a disk along its boundary.
+                  </p>
+                    <figure xml:id="F_projective_3">
+                      <caption>Recognizing the space <m>S</m>.</caption>
+                      <sidebyside valign="middle">
+                      <image width="50%" source="Projective_Disk_split"/>
+                      
+                        <p><me>\xrightarrow{f}</me></p>
+                      
+                      <image width="50%" source="Projective_Disk_hom_1"/>
+                      
+                        <p><me>\xrightarrow{g}</me></p>
+                      
+                      <image width="50%" source="Projective_Disk_hom_2"/>
+                      </sidebyside>
+                    </figure>
+                  
+                </statement>
+              </task>
+            
+          </task>
+       
+    </exercise>
+
+    <exercise>
+    <introduction>
+      <p>
+        Let <m>X = \R^2</m> with the standard topology,
+        and let <m>Y = \{x \in \R \mid x \geq 0\}</m> with the standard topology.
+        Let <m>f: X \to Y</m> be defined by <m>f((x,y)) = x^2+y^2</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>f</m> is a continuous surjective function.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that the quotient space <m>X^{*}</m> of <m>X</m> defined by <m>f</m> is homeomorphic to <m>Y</m>.
+            </p>
+          </statement>
+        </task>
+    </exercise>
+
+  <exercise>
+  <idx><h>retract</h></idx>
+<idx><h>retraction</h></idx>
+    <introduction>
+      <p>
+        Let <m>(X,\tau)</m> be a topological space.
+        A subspace <m>A</m> of <m>X</m> is a <term>retract</term>
+        of <m>X</m>
+        (or that <m>X</m> retracts onto <m>A</m>)
+        if there is a continuous function <m>r : X \to A</m> such that
+        <m>r(a) = a</m> for all <m>a \in A</m>.
+        Such a map <m>r</m> is called a <term>retraction</term>.
+      Intuitively,
+        a subspace <m>A</m> of <m>X</m> is a retract of <m>X</m> if we can continually collapse
+        (or retract)
+        <m>X</m> onto <m>A</m> without moving any of the points in <m>A</m>.
+        Certain types of retracts,
+        namely deformation retracts, are important in algebraic topology.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that every nonempty space can retract to a point.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\{-1,1\}</m> is a retract of <m>\R \setminus \{0\}</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that every retraction is a quotient map.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that if <m>X</m> is Hausdorff and <m>A</m> is a retract of <m>X</m>,
+              then <m>A</m> must be a closed subset of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+  
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>p</m> be a surjection from a topological space <m>X</m> to a nonempty set <m>Y</m>.
+              The quotient topology on <m>Y</m> is the largest topology on <m>Y</m> such that <m>p</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>X = [0,1]</m> with the Euclidean metric topology and define the relation <m>\sim</m> on <m>X</m> as
+              <m>x \sim y</m> if <m>x</m> and <m>y</m> are either both rational or both irrational.
+              Then the quotient space <m>X/\ssim</m> is a two point space with the indiscrete topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>p</m> be a surjection from a topological space <m>X</m> to a nonempty set <m>Y</m>.
+              The quotient topology on <m>Y</m> is the largest topology on <m>Y</m> such that <m>p</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>X = [0,1]</m> with the Euclidean metric topology and define the relation <m>\sim</m> on <m>X</m> as
+              <m>x \sim y</m> if <m>x</m> and <m>y</m> are either both rational or both irrational.
+              Then the quotient space <m>X/\ssim</m> is a two point space with the indiscrete topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a topological space,
+              <m>Y</m> is a set, and <m>p: X \to Y</m> is a surjection,
+              then <m>p(U)</m> is open in the quotient topology whenever <m>U</m> is open in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>\sim</m> is an equivalence relation on a topological space <m>X</m>,
+              then the quotient space <m>X/\ssim</m> is the set of all equivalence classes of <m>X</m> with the quotient topology.
+            </p>
+          </statement>
+        </task>
+     
+    </exercise>
+
+</exercises>

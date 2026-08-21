@@ -1,0 +1,111 @@
+<section xml:id="sec_fun_set">
+  <title>Fungsi dan Himpunan</title>
+  <p>
+    Kita menutup bagian ini dengan menghubungkan subhimpunan dan fungsi.
+    Pertama, kita perkenalkan sedikit notasi.
+    Jika <m>f</m> adalah fungsi dari himpunan <m>X</m> ke himpunan <m>Y</m>,
+    dan jika <m>A</m> adalah subhimpunan dari <m>X</m> serta <m>B</m> adalah subhimpunan dari <m>Y</m>,
+    kita mendefinisikan <m>f(A)</m> dan <m>f^{-1}(B)</m> sebagai
+    <me>
+      f(A) = \{f(a) \mid a \in A\}
+    </me>,
+    dan
+    <me>
+      f^{-1}(B) = \{a \in X \mid f(a) \in B\}
+    </me>.
+  </p>
+  <p>
+    Kita menyebut <m>f(A)</m> sebagai citra himpunan <m>A</m> di bawah <m>f</m>, sedangkan
+    <m>f^{-1}(B)</m> adalah prapeta himpunan <m>B</m> di bawah <m>f</m>.
+    Perhatikan bahwa <m>f^{-1}(B)</m> didefinisikan untuk setiap fungsi,
+    bukan hanya untuk fungsi yang mempunyai invers.
+    Jadi, penting untuk dipahami bahwa penggunaan notasi
+    <m>f^{-1}(B)</m> tidak berarti bahwa <m>f</m> mempunyai invers.
+  </p>
+  <p>
+    Ketika nanti kita membahas fungsi kontinu,
+    kita perlu memahami perilaku suatu fungsi terhadap subhimpunan.
+    Salah satu hasilnya diberikan dalam lema berikut.
+  </p>
+
+  <lemma xml:id="lem_functions_subsets">
+    <statement>
+      <p>
+        Misalkan <m>f : X \to Y</m> suatu fungsi,
+        <m>\{A_{\alpha}\}</m> suatu koleksi subhimpunan dari <m>X</m> yang diindeks oleh <m>\alpha</m> dalam himpunan indeks <m>I</m>,
+        dan <m>\{B_{\beta}\}</m> suatu koleksi subhimpunan dari <m>Y</m> yang diindeks oleh <m>\beta</m> dalam himpunan indeks <m>J</m>.
+        Maka
+        <ol>
+          <li>
+            <p>
+              <m>f\left(\bigcup_{\alpha \in I} A_{\alpha}\right) = \bigcup_{\alpha \in I} f(A_{\alpha})</m>, dan
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f^{-1}\left(\bigcup_{\beta \in J} B_{\beta}\right) = \bigcup_{\beta \in J} f^{-1}(B_{\beta})</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Misalkan <m>f : X \to Y</m> suatu fungsi dan
+      <m>\{A_{\alpha}\}</m> suatu koleksi subhimpunan dari <m>X</m> yang diindeks oleh <m>\alpha</m> dalam himpunan indeks <m>I</m>.
+      Untuk membuktikan bagian 1, kita tunjukkan inklusi pada kedua arah.
+    </p>
+    <p>
+      Misalkan <m>b \in f\left(\bigcup_{\alpha \in I} A_{\alpha}\right)</m>.
+      Maka <m>b = f(a)</m> untuk suatu <m>a \in \bigcup_{\alpha \in I} A_{\alpha}</m>.
+      Akibatnya, <m>a \in A_{\rho}</m> untuk suatu <m>\rho \in I</m>.
+      Jadi, <m>b \in f(A_{\rho}) \subseteq \bigcup_{\alpha \in I} f(A_{\alpha})</m>.
+      Kita menyimpulkan bahwa <m>f\left(\bigcup_{\alpha \in I} A_{\alpha}\right) \subseteq \bigcup_{\alpha \in I} f(A_{\alpha})</m>.
+    </p>
+    <p>
+      Sekarang, misalkan <m>b \in \bigcup_{\alpha \in I} f(A_{\alpha})</m>.
+      Maka <m>b \in f(A_{\rho})</m> untuk suatu <m>\rho \in I</m>.
+      Karena <m>A_{\rho} \subseteq \bigcup_{\alpha \in I} A_{\alpha}</m>,
+      diperoleh <m>b \in f\left(\bigcup_{\alpha \in I} A_{\alpha}\right)</m>.
+      Jadi, <m>\bigcup_{\alpha \in I} f(A_{\alpha}) \subseteq f\left(\bigcup_{\alpha \in I} A_{\alpha}\right)</m>.
+      Kedua inklusi tersebut membuktikan bagian 1.
+    </p>
+    <p>
+      Untuk bagian 2, kita kembali menunjukkan inklusi pada kedua arah.
+      Misalkan <m>a \in f^{-1}\left(\bigcup_{\beta \in J} B_{\beta}\right)</m>.
+      Maka <m>f(a) \in \bigcup_{\beta \in J} B_{\beta}</m>.
+      Jadi, terdapat <m>\mu \in J</m> sedemikian sehingga <m>f(a) \in B_{\mu}</m>.
+      Ini berarti <m>a \in f^{-1}(B_{\mu}) \subseteq \bigcup_{\beta \in J} f^{-1}(B_{\beta})</m>.
+      Kita menyimpulkan bahwa <m>f^{-1}\left(\bigcup_{\beta \in J} B_{\beta}\right) \subseteq \bigcup_{\beta \in J} f^{-1}(B_{\beta})</m>.
+    </p>
+    <p>
+      Untuk inklusi sebaliknya,
+      misalkan <m>a \in \bigcup_{\beta \in J} f^{-1}(B_{\beta})</m>.
+      Maka <m>a \in f^{-1}(B_{\mu})</m> untuk suatu <m>\mu \in J</m>.
+      Jadi, <m>f(a) \in B_{\mu} \subseteq \bigcup_{\beta \in J} B_{\beta}</m>.
+      Dengan demikian, <m>a \in f^{-1}\left(\bigcup_{\beta \in J} B_{\beta}\right)</m>.
+      Jadi, <m>\bigcup_{\beta \in J} f^{-1}(B_{\beta}) \subseteq f^{-1}\left(\bigcup_{\beta \in J} B_{\beta}\right)</m>.
+      Kedua inklusi tersebut membuktikan bagian 2.
+    </p>
+  </proof>
+  </lemma>
+  <p>
+    Pada tahap ini, wajar untuk bertanya apakah <xref ref="lem_functions_subsets"/>
+    masih berlaku jika gabungan kita ganti dengan irisan.
+    Pertanyaan itu kita serahkan kepada <xref ref="ex_intersection_image"/>.
+  </p>
+  <p>
+    Hasil lainnya dibahas dalam kegiatan berikut.
+  </p>
+  <activity>
+    <p>
+      Misalkan <m>X</m>, <m>Y</m>, dan <m>Z</m> adalah himpunan,
+      serta <m>f: X \to Y</m> dan <m>g: Y \to Z</m> adalah fungsi.
+      Misalkan <m>C</m> suatu subhimpunan dari <m>Z</m>.
+      Terdapat hubungan antara
+      <m>(g \circ f)^{-1}(C)</m> dan <m>f^{-1}(g^{-1}(C))</m>.
+      Temukan dan buktikan hubungan tersebut.
+    </p>
+  </activity>
+</section>

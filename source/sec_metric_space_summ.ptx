@@ -1,0 +1,92 @@
+<section xml:id="sec_metric_space_summ">
+  <title>Summary</title>
+  <p>
+    Important ideas that we discussed in this section include the following.
+  
+  <ul>
+    <li>
+      <p>
+        A metric on a space <m>X</m> is a function that measures distance between elements in the space.
+        More formally,
+        a metric on a space <m>X</m> is a function <m>d: X \times X \to \R^+ \cup \{0\}</m> such that
+      
+      <ol>
+        <li>
+          <p>
+            <m>d(x,y) \geq 0</m> for all <m>x,y \in X</m>,
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>d(x,y) = 0</m> if and only if <m>x = y</m> in <m>X</m>,
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>d(x,y) = d(y,x)</m> for all <m>x, y \in X</m>, and
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>d(x,y) \leq d(x,z) + d(z,y)</m> for all <m>x,y,z \in X</m>.
+          </p>
+        </li>
+      </ol>
+      A metric space is any space combined with a metric defined on that space.
+      </p>
+    </li>
+    <li>
+      <p>
+        The Euclidean,
+        taxicab, and max metric are all metrics on <m>\R^n</m>,
+        so they all provide ways to measure distances between points in <m>\R^n</m>.
+        These metric are different in how they define the distances.
+      
+      <ul>
+        <li>
+          <p>
+            The Euclidean metric is the standard metric that we have used through our mathematical careers.
+            For elements <m>x = (x_1, x_2, \ldots,
+            x_n)</m> and <m>y = (y_1, y_2, \ldots,
+            y_n)</m> in <m>\R^n</m>, the Euclidean metric <m>d_E</m> is defined as
+            <md>
+              <mrow>d_E(x,y) \amp =  \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + \cdots (x_n-y_n)^2}</mrow> 
+              <mrow> \amp = \sqrt{\sum_{i=1}^n (x_i-y_i)^2}</mrow>
+            </md>.
+            With this metric, the unit circle in <m>\R^2</m>
+            (the set of points a distance <m>1</m> from the origin)
+            is the standard unit circle we know from Euclidean geometry.
+          </p>
+        </li>
+        <li>
+          <p>
+            The taxicab metric <m>d_T</m> is defined as
+            <md>
+              <mrow>d_T(x,y) \amp = |x_1-y_1| + |x_2-y_2| + \cdots + |x_n-y_n|</mrow> 
+              <mrow> \amp = \sum_{i=1}^n |x_i-y_i|</mrow>
+            </md>.
+            The unit circle in <m>\R^2</m> using the taxicab metric is the square with vertices <m>(1,0)</m>,
+            <m>(0,1)</m>, <m>(-1,0)</m>,
+            and <m>(0,-1)</m> when viewed in Euclidean geometry.
+          </p>
+        </li>
+        <li>
+          <p>
+            The max metric <m>d_M</m> is defined by
+            <md>
+              <mrow>d_M(x,y) \amp = \max\{| x_1-y_1 |, | x_2-y_2 |, |x_3-y_3|, \ldots, |x_n-y_n| \}</mrow>
+              <mrow> \amp = \max_{1 \leq i \leq n} \{|x_i-y_i|\}</mrow>
+            </md>.
+            Under the max metric,
+            the unit circle in <m>\R^2</m> is the square with vertices <m>(1,1)</m>,
+            <m>(-1,1)</m>, <m>(-1,-1)</m>,
+            and <m>(1,-1)</m> when viewed in Euclidean geometry.
+          </p>
+        </li>
+      
+      </ul>
+      </p>
+    </li>
+  </ul>
+  </p>
+</section>

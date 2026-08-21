@@ -1,0 +1,541 @@
+<exercises xml:id="sec_compact_top_exer">
+  <title>Exercises</title>
+  <exercise>
+    <task>
+      
+        <statement>
+          <p>
+            Determine the compact subsets of a topological space <m>X</m> with the indiscrete topology.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Determine the compact subsets of a topological space <m>X</m> with the indiscrete topology.
+          </p>
+        </statement>
+      </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Recall from <xref ref="def_weaker_topologies"/>
+        that if <m>\tau_1</m> and <m>\tau_2</m> are two topologies on a set <m>X</m> such that <m>\tau_1 \subseteq \tau_2</m>,
+        then <m>\tau_1</m> is said to be a <term>coarser</term>
+        (or <term>weaker</term>)
+        topology than <m>\tau_2</m>, or <m>\tau_2</m> is a <term>finer</term>
+        (or <term>stronger</term>)
+        topology than <m>\tau_1</m>.
+        In this exercise we explore the question of whether compactness is a property that is passed from weaker to stronger topologies or from stronger to weaker.
+        Let <m>\tau_1</m> and <m>\tau_2</m> be two topologies on a set <m>X</m>.
+        If <m>\tau_1 \subseteq \tau_2</m>,
+        what does compactness under <m>\tau_1</m> or <m>\tau_2</m> imply,
+        if anything, about compactness under the other topology?
+        Justify your answers.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex_intersection_not_compact">
+    <introduction>
+      <p>
+        Let <m>\E</m> be the set of even integers,
+        and let <m>\tau = \{\Z\} \cup \{O \subseteq \E\}</m>.
+        That is, <m>\tau</m> is the collection of all subsets of <m>\E</m> along with <m>\Z</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>\tau</m> is a topology on <m>\Z</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Find all compact subsets of <m>(\Z, \tau)</m>.
+              Verify your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove or disprove: If <m>A</m> and <m>B</m> are compact subsets of a topological space <m>X</m>,
+              then <m>A \cap B</m> is also a compact subset of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X,\tau)</m> be a topological space
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that the union of any finite number of compact subsets of <m>X</m> is a compact subset of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              In <xref ref="ex_intersection_not_compact"/> we should have seen that the intersection of compact sets is not necessarily compact.
+              If <m>X</m> is Hausdorff,
+              prove that the intersection of any finite number of compact subsets of <m>X</m> is a compact subset of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider <m>\Z</m> with the digital line topology
+        (see <xref ref="ex_digital_line_topology"/>).
+        Determine the compact subsets of <m>\Z</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each <m>n \in \Z^+</m>,
+        let <m>(-n,n)</m> be the set of integers in the interval <m>(-n,n)</m> (see <xref ref="ex_coarse_topology_example"/>.)
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\B = \{(-n,n)\}_{n \in \Z^+}</m> is a basis for a topology <m>\tau</m> on <m>\Z</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is the subset <m>(-2,2)</m> compact in this topology?
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Determine all of the compact subsets of <m>\Z</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> and <m>Y</m> be topological spaces,
+        and let <m>f: X \to Y</m> be a function.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Suppose that <m>f</m> is a continuous function,
+              and that <m>X</m> is compact and <m>Y</m> is Hausdorff.
+              Prove that if <m>C</m> is a closed subset of <m>X</m>,
+              then <m>f(C)</m> is a closed subset of <m>Y</m>.
+              (Thus, <m>f</m> is a <term>closed</term> function.)
+              
+            </p>
+          </statement>
+          <hint>
+                <p>
+                  Use Activity 17.3, Activity 17.4, and Theorem 17.6.
+                </p>
+              </hint>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Suppose that <m>f</m> is a continuous bijection.
+              Prove that if <m>X</m> is compact and <m>Y</m> is Hausdorff,
+              then <m>f</m> is a homeomorphism.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Give an example where <m>f</m> is a continuous bijection and <m>X</m> is compact,
+              but <m>f</m> is not a homeomorphism.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Give an example where <m>f</m> is a continuous bijection and <m>Y</m> is Hausdorff,
+              but <m>f</m> is not a homeomorphism.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        The Either-Or topology on the interval
+        <m>X = [-1,1]</m> has as its open sets all subsets of <m>X</m> that contain <m>(-1,1)</m> and any subset of <m>X</m> that doesn't contain <m>0</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Describe the non-trivial closed subsets of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>X</m> a Hausdorff topological space?
+              Explain.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>X</m> compact?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Are there any subsets of <m>\Z</m> that are not compact?
+              Justify your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_K_topology_compact">
+    <introduction>
+      <p>
+        Let <m>K = \left\{\frac{1}{k} \mid k \text{ is a positive integer} \right\}</m>. Let <m>\B</m> be the collection of all open intervals of the form <m>(a,b)</m> and all sets of the form <m>(a,b) \setminus K</m>, where <m>a \lt b</m> are real numbers as in <xref ref="exp_K_topology"/>. Let <m>\tau_K</m> be the topology generated by <m>\B</m>. 
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Show that <m>(\R, \tau_K)</m> is not compact.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          How is the <m>K</m>-topology related to the Euclidean topology?
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that any subset of <m>\R</m> that contains <m>K</m> is not a compact subset of <m>(\R, \tau_K)</m>. In particular, even though <m>[0,1]</m> is a closed and bounded subset of <m>\R</m> in <m>(\R, \tau_K)</m>, we note that <m>[0,1]</m> is not compact.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Consider the sets <m>O_k = \left(\frac{1}{k},2\right) \cup (-1,1) \setminus K</m> for <m>k \in \Z^+</m>.
+        </p>
+      </hint>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex_Compact_normal">
+    <introduction>
+      <p>
+        Let <m>X</m> be a topological space.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that if <m>X</m> is Hausdorff and <m>C</m> is a compact subset of <m>X</m>,
+              then for each <m>x \in X \setminus C</m> there exist disjoint open sets <m>U</m> and <m>V</m> such that <m>x \in U</m> and <m>C \subseteq V</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that if <m>X</m> is a compact Hausdorff space, then <m>X</m> is normal.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a nonempty set and let <m>p</m> be a fixed element in <m>X</m>.
+        Let <m>\tau_p</m> be the particular point topology and
+        <m>\tau_{\overline{p}}</m> the excluded point topology on <m>X</m>.
+        That is
+        <ul>
+          <li>
+            <p>
+              <m>\tau_{p}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that contain <m>p</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tau_{\overline{p}}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that do not contain <m>p</m>.
+            </p>
+          </li>
+        </ul>
+      
+      That the particular point and excluded point topologies are topologies is the subject of <xref ref="ex_particular_point_topology"/> and <xref ref="ex_excluded_point_topology"/>.
+      Determine, with proof, the compact subsets of <m>X</m> when
+      </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>X</m> has the particular point topology <m>\tau_p</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>X</m> has the excluded point topology <m>\tau_{\overline{p}}</m>.
+          </p>
+        </statement>
+      </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        In this exercise we encounter a non-Hausdorff topological space in which single points sets are closed,
+        and in which compact subsets need not be closed.
+        Consider the set <m>\Z</m> with the finite complement topology <m>\tau_{FC}</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that every single point set is closed.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Explain why <m>(\Z, \tau_{FC})</m> is not a Hausdorff space.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>U</m> be an open set in
+              <m>(\Z, \tau_{FC})</m> that contains <m>0</m> and <m>V</m> an open set in
+              <m>(\Z, \tau_{FC})</m> that contains <m>1</m>.
+              Explain why it cannot be the case that <m>U</m> and <m>V</m> are disjoint <mdash/> that is,
+              <m>U \cap V</m> must be non-empty.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that the subset <m>\E</m> of even integers is a compact subset of <m>(\Z, \tau_{FC})</m> that is not closed.
+              Verify your result.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X, \tau)</m> be a Hausdorff topological space.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>x \in X</m> and let <m>A</m> be a compact subset of <m>X</m>.
+              Prove that there exist disjoint open subsets <m>U</m> and <m>V</m> of <m>X</m> such that <m>x \in U</m> and <m>A \subseteq V</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>A</m> and <m>B</m> be disjoint compact subsets of <m>X</m>.
+              Prove that there exist disjoint open sets <m>U</m> and <m>V</m> such that
+              <m>A \subseteq U</m> and <m>B \subseteq V</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_subspace_compact">
+    <statement>
+      <p>
+        Let <m>(X,\tau_X)</m> be a topological space and let <m>A</m> be a subset of <m>X</m>.
+        Let <m>\tau_A</m> be the subspace topology on <m>A</m>.
+        Prove that <m>A</m> is a compact subset of <m>X</m> if and only if
+        <m>(A, \tau_A)</m> is a compact topological space.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space.
+        A family <m>\{F_{\alpha}\}_{\alpha \in I}</m> of subsets of <m>X</m> is said to have the
+        <term>finite intersection property</term>
+        if for each finite subset <m>J</m> of <m>I</m>,
+        <m>\bigcap_{\alpha \in J} F_{\alpha} \neq \emptyset</m>.
+        Prove that <m>X</m> is compact if and only if for each family
+        <m>\{F_{\alpha}\}_{\alpha \in I}</m> of closed subsets of <m>X</m> that has the finite intersection property,
+        we have <m>\bigcap_{\alpha \in I} F_{\alpha} \neq \emptyset</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Even though <m>\R</m> is not a compact space, if <m>x \in \R</m>,
+        then <m>x \in [x-1, x+1]</m> and so every point in <m>\R</m> is contained in a compact subset of <m>\R</m>.
+        So if we view <m>\R</m> from the perspective of a point in <m>\R</m>,
+        the space <m>\R</m> looks compact around that point.
+        This is the idea of local compactness.
+        Locally compact spaces are important in the general topology of function spaces.
+      </p>
+    
+        <definition>
+        <idx><h>locally compact</h></idx>
+          <statement>
+            <p>
+              A topological space <m>X</m> is <term>locally compact</term>
+              if for each <m>x \in X</m> there is an open set <m>O</m> such that <m>p \in O</m> and <m>\overline{O}</m> is compact.
+            </p>
+          </statement>
+        </definition>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Explain why <m>\R^n</m> is locally compact for each <m>n \in \Z^+</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that any compact space is locally compact.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Consider the Sorgenfrey line from <xref ref="ex_Closed_Sets_Sorgenfrey"/>.
+              Recall that the Sorgenfrey line is the space <m>\R</m> with a basis <m>\B = \{[a,b) \mid a \lt b \text{ in } \R\}</m> for its topology.
+              Show that the Sorgenfrey line is Hausdorff but not locally compact.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> and <m>Y</m> are compact topological spaces and
+              <m>f: X \to Y</m> is a continuous bijection,
+              then <m>f</m> is a homeomorphism.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a compact topological space,
+              then any closed subspace of <m>X</m> is compact.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a Hausdorff space,
+              <m>Y</m> is a compact space,
+              and <m>f : X \to Y</m> is a continuous and bijective function,
+              then <m>f</m> is a homeomorphism.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a compact space,
+              <m>Y</m> is a Hausdorff space,
+              and <m>f : X \to Y</m> is a continuous bijection,
+              then <m>f</m> is a homeomorphism.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>C</m> be a closed subset of a metric space <m>(X, d)</m> with the metric topology.
+              Then <m>C</m> is compact.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> is a compact subset of a topological space <m>X</m>,
+              then <m>A</m> is a closed subset of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>(X,\tau)</m> be a topological space with <m>\tau</m> the discrete topology.
+              Then <m>X</m> is compact if and only if <m>X</m> is finite.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+  
+</exercises>

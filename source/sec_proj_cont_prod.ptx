@@ -1,0 +1,211 @@
+<section xml:id="sec_proj_cont_prod">
+  <title>Projections and Continuous Functions on Products</title>
+  <p>
+    Given topological spaces <m>(X_1, \tau_1)</m> and <m>(X_2, \tau_2)</m>,
+    we define <m>\pi_1: X_1 \times X_2 \to X_1</m> and <m>\pi_2: X_1 \times X_2 \to X_2</m> by
+    <m>\pi_1((x,y)) = x</m> and <m>\pi_2((x,y)) = y</m>.
+    These functions <m>\pi_1</m> and <m>\pi_2</m> are the <term>projections</term>
+        <idx><h>projection functions</h></idx>
+    of <m>X_1 \times X_2</m> onto <m>X_1</m> and <m>X_2</m>,
+    respectively.
+    These projection functions can help us determine when a function <m>f</m> from a topological space <m>Y</m> to <m>X_1 \times X_2</m> is continuous.
+  </p>
+
+  <activity xml:id="act_projection_continuous">
+  <introduction>
+    <p>
+      Let <m>(X_1, \tau_1)</m> and
+      <m>(X_2, \tau_2)</m> be topological spaces and let <m>O_1</m> be an open set in <m>X_1</m>.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            Determine which set is <m>\pi_1^{-1}(O_1)</m>.
+            Verify your conjecture.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Explain why <m>\pi_1</m> is continuous.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    The same argument as in <xref ref="act_projection_continuous"/>
+    shows that <m>\pi_2</m> is also a continuous function.
+    In general, if <m>X = \Pi_{i=1}^n X_{i}</m> is a finite product of topological spaces,
+    then the projection <m>\pi_{k}: X \to X_{k}</m> is a continuous function for each <m>k</m>,
+    where <m>\pi_k((x_1,x_2, \ldots, x_n)) = x_k</m>.
+  </p>
+  <p>
+    Let <m>O = \Pi_{i=1}^n O_i</m> be a basic open set in <m>X = \Pi_{i=1}^n X_i</m>,
+    where <m>X_i</m> is a topological space for each <m>i</m>.
+    We can extend the result of <xref ref="act_projection_continuous"/> to see that
+    <me>
+      \pi_i^{-1}(O_i) = X_1 \times X_2 \times \cdots \times X_{i-1} \times O_i \times X_{i+1} \times \cdots \times X_n
+    </me>.
+  </p>
+  <p>
+    So
+    <me>
+      \Pi_{i=1}^n O_i = \bigcap_{i=1}^n \pi_i^{-1}(O_i)
+    </me>.
+  </p>
+  <p>
+    So each basic open set is a finite intersection of sets of the form
+    <m>\pi_i^{-1}(O_i)</m> where <m>O_i</m> is open in <m>X_i</m>.
+    When this happens,
+    we call the collection of sets of the form <m>\pi_i^{-1}(O_i)</m> a
+    <term>subbasis</term> of the topology.
+  </p>
+
+  <definition xml:id="def_subbasis">
+  <idx><h>subbasis</h></idx>
+<idx><h>subbase</h></idx>
+    <statement>
+      <p>
+        Let <m>(X, \tau)</m> be a topological space.
+        A subset <m>\CS</m> of <m>\tau</m> is a <term>subbasis</term>
+        or <term>subbase</term>
+        for <m>\tau</m> if the set of all finite intersections of elements of <m>\CS</m> is a basis for <m>\tau</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    As an example,
+    since finite intersections of intervals of the form <m>(-\infty,b)</m> and
+    <m>(a, \infty)</m> give all intervals of the form <m>(a,b)</m>,
+    the collection <m>\CS = \{(-\infty,b), (a, \infty) \mid a, b \in \R\}</m> is a subbasis for the standard topology on <m>\R</m>.
+    Note that this collection itself is not a basis for the standard topology on <m>\R</m>.
+    If <m>X = \Pi_{i=1}^n X_i</m> is a product of topological space,
+    then another example of a subbasis is the collection
+    <me>
+      \CS = \bigcup_{i=1}^n \{\pi_i^{-1}(O_i) \mid O_i \text{ is open in }  X_i\}
+    </me>.
+  </p>
+  <p>
+    This set is a subbasis for the product topology on <m>X</m>
+    (the verification of this is left to <xref ref="ex_subbasis"/>).
+  </p>
+  <p>
+    <idx><h>product topology</h></idx>
+    We note here that there is another topology, called the <term>product topology</term>, on <m>X</m> with subbasis <m>S = \bigcup_{\alpha \in I} S_{\alpha}</m>, where
+    <me>
+      S_{\alpha} = \{\pi_{\alpha}^{-1}(U_{\alpha}) \mid U_{\alpha} \text{ is open in } X_{\alpha}\}
+    </me>.
+  </p>
+  <p>
+    For reasons we won't go into,
+    the product topology is preferred to the box topology for infinite products
+    (many important theorems that hold for finite products will not hold for infinite products using the box topology,
+    but will hold using the product topology).
+    However, the product topology and the box topology are the same for finite products,
+    and since we won't consider infinite products here we will not worry about the distinction.
+    For our purposes we will use the terms
+    <q>box topology</q>
+    and
+    <q>product topology</q>
+    interchangeably.
+  </p>
+  <p>
+    As we have discussed before,
+    it can often be easier to define a topology using a basis or subbasis than it is to describe all of the sets in the topology.
+    As we might expect,
+    since the continuity of a function can be determined by the inverse image of basis elements,
+    the continuity of a function can also be determined by the inverse image of subbasis elements.
+  </p>
+
+  <activity>
+  <statement>
+    <p>
+      Prove <xref ref="thm_subbasis_continuous"/>.
+    </p>
+    <theorem xml:id="thm_subbasis_continuous">
+      <statement>
+        <p>
+          Let <m>(X, \tau_X)</m> and
+          <m>(Y, \tau_Y)</m> be topological spaces,
+          let <m>\CS</m> be a subbasis for <m>\tau_Y</m>,
+          and let <m>f: X \to Y</m> be a function.
+          If <m>f^{-1}(S)</m> is open in <m>X</m> for each <m>S \in \CS</m>,
+          then <m>f</m> is continuous.
+        </p>
+      </statement>
+    </theorem>
+  </statement>
+  <hint>
+    <p>
+      Recall that <m>f</m> is continuous if
+      <m>f^{-1}(B)</m> is open in <m>X</m> for each basic open set <m>B</m>.
+    </p>
+  </hint>
+  </activity>
+
+  <p>
+    Now suppose that <m>X_1</m>, <m>X_2</m>,
+    and <m>Y</m> are topological spaces,
+    and that <m>f: Y \to X_1 \times X_2</m> is a function.
+    Then <m>\pi_1 \circ f</m> maps <m>Y</m> to <m>X_1</m> and
+    <m>\pi_2 \circ f</m> maps <m>Y</m> to <m>X_2</m>.
+    Since the composition of continuous functions is continuous,
+    we can see that if <m>f</m> is continuous so are
+    <m>\pi_1\circ f</m> and <m>\pi_2 \circ f</m>.
+    To determine if <m>f</m> is a continuous function,
+    it would be useful to know if the converse is true.
+    A key idea in the proof is the result of <xref ref="ex_inverse_composite_sets"/> that if <m>R</m>,
+    <m>S</m>,
+    and <m>T</m> are sets, and
+    <m>g: R \to S</m> and <m>h : S \to T</m> are functions,
+    then <m>(h \circ g)^{-1}(O) = g^{-1}(h^{-1}(O)</m> for any subset <m>O</m> of <m>T</m>.
+  </p>
+  <p>
+    Now we can use projections to determine when functions to product spaces are continuous.
+  </p>
+
+  <theorem xml:id="thm_prod_continuity">
+    <statement>
+      <p>
+        Let <m>X_i</m> for <m>i</m> from <m>1</m> to <m>n</m> and <m>Y</m> be topological spaces,
+        and let <m>f: Y \to \Pi_{i=1}^n X_i</m> be a function.
+        Then <m>f</m> is continuous if and only if
+        <m>\pi_i \circ f</m> is continuous for each <m>i</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X_i</m> for <m>i</m> from <m>1</m> to <m>n</m> and <m>Y</m> be topological spaces,
+      and let <m>f: Y \to \Pi X_i</m> be a function.
+      If <m>f</m> is continuous,
+      the facts that each <m>\pi_i</m> is continuous and that composites of continuous functions are continuous show that
+      <m>\pi_i \circ f</m> is continuous for each <m>i</m>.
+    </p>
+    <p>
+      Now suppose that <m>\pi_i \circ f</m> is continuous for each <m>i</m>.
+      Recall that
+      <me>
+        \CS = \{\pi_i^{-1}(O_i) \mid O_i \text{ is open in }  X_i\}
+      </me>
+      is a subbasis for the product topology on <m>\Pi_{i=1}^n X_i</m>.
+      To prove that <m>f</m> is continuous,
+      <xref ref="thm_subbasis_continuous"/>
+      tells us that it is enough to show that
+      <m>f^{-1}(S)</m> is open for each <m>S</m> in <m>\CS</m>.
+      Let <m>O_i</m> be an open set in <m>X_i</m>.
+      <xref ref="ex_inverse_composite_sets"/> tells us that
+      <me>
+        f^{-1}(\pi_i^{-1}(O_i)) = (\pi_i \circ f)^{-1}(O_i)
+      </me>,
+      which is open in <m>Y</m> because <m>\pi_i \circ f</m> is continuous.
+      Therefore, <m>f</m> is continuous.
+    </p>
+  </proof>
+  </theorem>
+</section>

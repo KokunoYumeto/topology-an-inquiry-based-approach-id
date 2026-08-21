@@ -1,0 +1,255 @@
+<section xml:id="sec_seq_cont_metric">
+  <title>Sequences and Continuity in Metric Spaces</title>
+  <p>
+    We have seen that there are different ways to characterize. For example, there is
+the <m>\epsilon - \delta</m> definition and a characterization in terms of neighborhoods. In this
+section we investigate sequences and limits of sequences in metric spaces, and then
+provide a characterization of continuous functions in terms of sequences.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      A reasonable question to ask is if a limit of a sequence is unique.
+      We will answer that question in this activity.
+      Let <m>(X,d)</m> be a metric space and <m>(a_n)</m> a sequence in <m>X</m>.
+      Assume the sequence <m>(a_n)</m> has a limit in <m>X</m>.
+      To show that a limit of the sequence <m>(a_n)</m> is unique,
+      we need to show that if <m>\lim a_n = a</m> and <m>\lim a_n = a'</m> for some <m>a,
+      a' \in X</m>, then <m>a=a'</m>.
+    </p>
+    <p>
+      Suppose <m>\lim a_n = a</m> and
+      <m>\lim a_n = a'</m> for some <m>a, a' \in X</m>.
+      Without much to go on it might appear that proving <m>a=a'</m> is a difficult task.
+      However, if <m>d(a,a') \lt \epsilon</m> for any <m>\epsilon \gt 0</m>,
+      then it will have to be the case that <m>a=a'</m>.
+      So let <m>\epsilon \gt 0</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Why must there exist a positive integer <m>N</m> so that
+            <m>d(a_n, a) \lt \frac{\epsilon}{2}</m> for all <m>n \geq N</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Why must there exist a positive integer <m>N'</m> so that
+            <m>d(a_n, a') \lt \frac{\epsilon}{2}</m> for all <m>n \geq N'</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now let <m>m = \max\{N, N'\}</m>.
+            What can we say about <m>d(a_m,a)</m> and <m>d(a_m,a')</m>?
+            Why?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the triangle inequality to conclude that <m>d(a,a') \lt \epsilon</m>.
+            What else can we conclude?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Now we will examine how continuity can be described in terms of sequences.
+    The basic idea is this.
+    Suppose that <m>f : \R \to \R</m> is continuous at a point <m>a</m>.
+    This means that <m>f</m> has a limit
+    (as a continuous function)
+    at <m>a</m>.
+    So if we were to take any sequence <m>(a_n)</m> that converges to <m>a</m>,
+    then the continuity of <m>f</m> implies that <m>f(a) = f(\lim a_n) = \lim f(a_n)</m>.
+    That this is both a necessary condition and a sufficient condition for continuity is given in the next theorem.
+  </p>
+
+  <theorem xml:id="thm_seq_continuity">
+    <statement>
+      <p>
+        Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
+        and let <m>a \in X</m>.
+        A function <m>f:X \to Y</m> is continuous at <m>a</m> if and only if
+        <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
+      let <m>a \in X</m>, and let <m>f: X \to Y</m> be a function.
+      Assume that <m>f</m> is continuous at <m>a</m>.
+      We will show that <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>.
+      Let <m>(a_n)</m> be a sequence in <m>X</m> that converges to <m>a</m> (we know such a sequence exists,
+      namely the sequence <m>(a)</m>).
+      To verify that <m>\lim f(a_n) = a</m>, let <m>\epsilon \gt 0</m>.
+      The fact that <m>f</m> is continuous at <m>a</m> means that there is a <m>\delta \gt 0</m> so that
+      <m>d_Y(f(x),
+      f(a)) \lt  \epsilon</m> whenever <m>d_X(x,a) \lt  \delta</m>.
+      Since <m>(a_n)</m> converges to <m>a</m>,
+      we know that there exists a positive integer <m>N</m> such that
+      <m>d_X(a_n, a) \lt  \delta</m> whenever <m>n \geq N</m>.
+      This implies that
+      <me>
+        d_Y(f(a_n), f(a)) \lt  \epsilon \ \text{ whenever }  \ n \geq N
+      </me>.
+    </p>
+    <p>
+      We conclude that if <m>f</m> is continuous at <m>a</m>,
+      then <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>.
+    </p>
+    <p>
+      The proof of the reverse implication is contained in the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
+      let <m>a \in X</m>, and let <m>f: X \to Y</m> be a function.
+      We prove the remaining implication of <xref ref="thm_seq_continuity"/>,
+      that <m>f</m> is continuous at <m>a</m> if
+      <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>,
+      in this activity.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            To have an additional assumption with which to work,
+            let us proceed by contradiction and assume that <m>f</m> is not continuous at <m>a</m>.
+            Why can we then say that there is an <m>\epsilon \gt 0</m> so that there is no
+            <m>\delta \gt 0</m> with the property that
+            <m>d_X(x,a) \lt \delta</m> implies <m>d_Y(f(x), f(a)) \lt \epsilon</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            To create a contradiction,
+            we will construct a sequence <m>(a_n)</m> that converges to <m>a</m> while
+            <m>(f(a_n))</m> does not converge to <m>f(a)</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Explain why we can find a positive integer <m>K</m> such that <m>\frac{1}{K} \lt \epsilon</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  If <m>k \gt K</m>, explain why there is an element
+                  <m>a_k \in B\left(a, \frac{1}{k}\right)</m> so that <m>d_Y(f(a_k),
+                  f(a)) \geq \epsilon</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  For <m>k \leq K</m>,
+                  let <m>a_k</m> be any element in <m>B\left(a, \frac{1}{k}\right)</m>.
+                  Explain why <m>a</m> is a limit of <m>(a_n)</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Explain why <m>f(a)</m> is not a limit of the sequence <m>(f(a_n))</m>.
+                  What conclusion can we draw, and why?
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+    
+  </activity>
+
+  <p>
+    One way that <xref ref="thm_seq_continuity"/>
+    is often used is illustrated in the next activity.
+  </p>
+
+  <activity xml:id="act_sequence_continuity">
+    <introduction>
+    <p>
+      Let <m>f</m> be the function from <m>\R</m> to <m>\R</m>,
+      both with the Euclidean metric, defined by
+      <me>
+        f(x) = \begin{cases}\sin\left(\frac{1}{x}\right) \amp \text{ if }  x \neq 0 \\ 0 \amp \text{ if }  x = 0. \end{cases}
+      </me>
+    </p>
+    <p>
+      We consider the <m>f</m> continuity of <m>f</m> at <m>0</m> in this activity.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Draw a graph of <m>f</m> on some small interval centered at <m>0</m>.
+            Based on the graph, do you think <m>f</m> has a limit at <m>0</m>?
+            Explain.
+            (There is no right answer here,
+            just your intuition based on the graph.)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            At which inputs is <m>f(x)=1</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the result of (b) to find a sequence <m>(a_n)</m> that converges to <m>0</m> for which <m>f(a_n) = 1</m> for every <m>n</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What does the result of (c) tell us about the continuity of <m>f</m> at <m>0</m>?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    While it can sometimes be difficult to prove a fact about all sequences that converge to a point,
+    <xref ref="act_sequence_continuity"/>
+    shows that we can use <xref ref="thm_seq_continuity"/>
+    to prove that a function <m>f</m> is not continuous at an input <m>a</m> be finding just one sequence <m>(a_n)</m> that converges to <m>a</m> for which <m>\lim f(a_n) \neq f(a)</m>.
+    We conclude this section with one final note.
+  </p>
+  <p>
+    <alert>IMPORTANT NOTE:</alert> <xref ref="thm_seq_continuity"/>
+    tells us that if <m>f : X \to Y</m> is a continuous function,
+    then <m>f</m> commutes with limits.
+    That is, if <m>(a_n)</m> is a sequence in <m>X</m> that converges to <m>a \in X</m>, then
+    <me>
+      f(a) = f(\lim a_n) = \lim f(a_n)
+    </me>.
+  </p>
+</section>

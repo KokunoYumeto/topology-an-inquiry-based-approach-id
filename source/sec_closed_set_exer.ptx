@@ -1,0 +1,401 @@
+<exercises xml:id="sec_closed_set_exer">
+  
+  <exercise>
+    <introduction>
+      <p>
+        Informal, but convincing, arguments suffice for this problem.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>D = \{(x,y) \in \R^2 \mid x^2+y^2 \leq 1\}</m> as a subset of <m>(\R^2,d_E)</m>.
+              Note that <m>D</m> is the unit disk in the plane.
+              Determine all of the interior points, boundary points,
+              accumulation points, and isolated points of <m>D</m>.
+              Give reasons for your conclusions.
+              Is <m>D</m> an open set?
+              Is <m>D</m> a closed set?
+              Explain.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>A = \Q</m>, the set of rational numbers,
+              as a subset of <m>(\R,d_E)</m>.
+              Determine all of the interior points, boundary points,
+              accumulation points, and isolated points of <m>A</m>.
+              Give reasons for your conclusions.
+              Is <m>A</m> an open set?
+              Is <m>A</m> a closed set?
+              Explain.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>A = \left\{\frac{1}{n} \ \left| \right. \in \Z^+\right\}</m> as a subset of <m>(\R,d_E)</m>.
+              Determine all of the interior points, boundary points,
+              accumulation points, and isolated points of <m>A</m>.
+              Give reasons for your conclusions.
+              Is <m>A</m> an open set?
+              Is <m>A</m> a closed set?
+              Explain.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space.
+        Let <m>a \in X</m>, and let <m>r \gt 0</m>.
+        We know that the open ball <m>B(a,r) = \{x \in X \mid d(a,x) \lt  r\}</m> is an open set.
+        Let
+        <me>
+          B[a,r] = \{x \in X \mid d(a,x) \leq r\}
+        </me>.
+        Prove or disprove: <m>B[a,r]</m> is a closed set in <m>X</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space.
+        We have seen that it is possible for a subset of <m>X</m> to be both open and closed.
+        There is a characterization of sets that are both open and closed in terms of their boundaries.
+        Find and prove such a characterization.
+        (Your statement should have the form: A subset <m>A</m> of a metric space <m>X</m> is both open and closed if and only if the boundary of <m>A</m> is <m>\underline{}</m>.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>A</m> be a subset of a metric space.
+        Let <m>A'</m> be the set of limit points of <m>A</m> and <m>A^i</m> the set of isolated points of <m>A</m>.
+        Prove the following.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>A \cup A^i = A \cup A'</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>A' \cap A^i = \emptyset</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>A \subseteq A' \cup A^i</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>x \in \overline{A}</m> if and only if there is a sequence of points of <m>A</m> which converges to <m>x</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\overline{A}</m> is the intersection of all closed sets that contain <m>A</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\Int(A)</m> is the union of all open sets contained in <m>A</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\overline{A}</m> is the disjoint union of <m>\Int(A)</m> and <m>\Bdry(A)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\overline{X \setminus A} = X \setminus \Int(A)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\Int(X \setminus A) = X \setminus \overline{A}</m>
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+        Prove that a point <m>x \in X</m> is a limit point of <m>A</m> if and only if every open ball centered at <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>A</m> be a subset of a metric space.
+        Let <m>A'</m> be the set of limit points of <m>A</m> and <m>A^i</m> the set of isolated points of <m>A</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>A' \cap A^i = \emptyset</m> and <m>A \subseteq A' \cup A^i</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>x \in \overline{A}</m> if and only if there is a sequence of points of <m>A</m> which converges to <m>x</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that if <m>F</m> is a closed set such that <m>A \subseteq F</m>,
+              then <m>\overline{A} \subseteq F</m>.
+              Then prove that <m>\overline{A}</m> is the intersection of all such closed sets <m>F</m> and hence is closed.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_CS_2">
+    <statement>
+      <p>
+        Prove <xref ref="thm_CS_2"/> that if <m>A</m> is a subset of a metric space <m>X</m> and <m>b</m> is a boundary point of <m>A</m>, then there are sequences <m>(x_n)</m> in <m>X \setminus A</m> and <m>(a_n)</m> in <m>A</m> that converge to <m>b</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex_distance_pt_to_set">
+    <statement>
+      <p>
+        Recall that the distance from a point <m>x</m> in a metric space <m>X</m> to a nonempty subset <m>A</m> of <m>X</m> is
+        <me>
+          d(a,X) = \inf\{d(x,a) \mid a \in A\}
+        </me>.
+        Prove that a subset <m>C</m> of a metric space <m>X</m> is closed if and only if whenever <m>x \in X</m> and
+        <m>d(x,C) = 0</m>, then <m>x \in C</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space.
+        In this exercise we show that some subsets of <m>X</m>,
+        other than <m>\emptyset</m> and <m>X</m> must be closed.
+        Show that any finite subset of <m>X</m> is closed.
+        
+      </p>
+    </statement>
+    <hint>
+          <p>
+            What are the limits points of a finite subset?
+          </p>
+        </hint>
+  </exercise>
+
+  <exercise xml:id="ex_closed_bounded">
+    <statement>
+      <p>
+        Prove that a subset <m>C</m> of a metric space <m>X</m> is closed if and only if <m>C</m> contains its boundary.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric space and let <m>f: X \to Y</m> be a function.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>f</m> is continuous if and only if
+              <m>f^{-1}(\Int(B)) \subseteq \Int(f^{-1}(B))</m> for any subset <m>B</m> of <m>Y</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Give an example where the containment,
+              and not the equality, in (a) is the best we can do.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Give an example to show that the equality in (a) can actually be achieved.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_MS_boundary_limit_isolated">
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space and let <m>A</m> be a subset of <m>X</m>.
+        Prove that every boundary point of <m>A</m> is either a limit point or an isolated point of <m>A</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X,d)</m> be a metric space,
+        and let <m>A</m> and <m>B</m> be subsets of <m>X</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Is it the case that <m>\overline{A \cup B} = \overline{A} \cup \overline{B}</m>?
+              If true, prove it.
+              If false, show why and prove any containment that is true.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is it the case that <m>\overline{A \cap B} = \overline{A} \cap \overline{B}</m>?
+              If true, prove it.
+              If false, show why and prove any containment that is true.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Recall that an infinite union of closed sets in a metric space may not be closed,
+        and that an infinite intersection of open sets in a metric space may not be open.
+        In this exercise we explore situations in which we can conclude that an infinite union of closed sets is closed and an infinite intersection of open sets is open.
+        Let <m>(X,d)</m> be a metric space.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              We first establish a preliminary result.
+              Let <m>C</m> be a closed subset of <m>X</m> and <m>x \in X</m>.
+              Prove that if <m>x \notin C</m>, then <m>d(x,C) \gt 0</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>\{C_{\alpha}\}</m> be a collection of closed subsets of <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m> with the property that given any <m>x \in X</m>,
+              there exists an <m>\epsilon_x \gt 0</m> such that
+              <m>B(x, \epsilon_x)</m> intersects at most finitely many of the sets <m>C_{\alpha}</m>.
+              Prove that <m>\bigcup_{\alpha \in I} C_{\alpha}</m> is closed.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Determine and prove an analogous statement for open sets in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>x</m> is a point in a metric space <m>X</m>,
+              then the singleton set <m>\{x\}</m> is closed.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              The only subsets of <m>\R</m> that are both open and closed under the standard metric are <m>\emptyset</m> and <m>\R</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>(X,d)</m> is the metric space with
+              <m>X = \{1,3,5\}</m> and <m>d(x,y) = xy - 1 \pmod{8}</m>,
+              then the set <m>\{1,3\}</m> is both open and closed in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a metric space and <m>A \subseteq X</m>,
+              then <m>\Int(\overline{A}) = A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              The boundary of any subset of a metric space <m>X</m> is a closed set.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> is a subset of a metric space <m>X</m>,
+              then <m>A \subseteq A' \cup A^i</m> where <m>A'</m> is the set of limit points of <m>A</m> and <m>A^i</m> is the set of isolated points of <m>A</m>
+            </p>
+          </statement>
+        </task>
+    
+  </exercise>
+</exercises>

@@ -1,0 +1,619 @@
+<exercises xml:id="sec_closed_sets_top_exer">
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine exactly which finite topological spaces are Hausdorff.
+        Prove your result.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X, \tau)</m> be a topological space and let <m>A</m> be a subset of <m>X</m>.
+        Prove that <m>\overline{A} = A \cup \Bdry(A)</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>A</m> a subset of a topological space.
+        Prove that <m>\Bdry(A) = \emptyset</m> if and only if <m>A</m> is open and closed.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a nonempty set with at least two elements and let <m>p</m> be a fixed element in <m>X</m>.
+        Let <m>\tau_p</m> be the particular point topology and
+        <m>\tau_{\overline{p}}</m> the excluded point topology on <m>X</m>.
+        That is
+        <ul>
+          <li>
+            <p>
+              <m>\tau_{p}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that contain <m>p</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tau_{\overline{p}}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that do not contain <m>p</m>.
+            </p>
+          </li>
+        </ul>
+      
+      That the particular point and excluded point topologies are topologies is the subject of <xref ref="ex_particular_point_topology"/> and <xref ref="ex_excluded_point_topology"/>.
+      Let <m>A = (0,1]</m> be a subset of <m>\R</m>.
+      Find, with proof, <m>\overline{A}</m>,
+      <m>\Int(A)</m>, and <m>\Bdry(A)</m> when
+      </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\R</m> has the topology <m>\tau_{p}</m> with <m>p = 0</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\R</m> has the topology <m>\tau_{\overline{p}}</m> with <m>p = 0</m>.
+          </p>
+        </statement>
+      </task>
+  </exercise>
+
+  <exercise xml:id="ex_Closed_Sets_Sorgenfrey">
+  <idx><h>topology</h><h>lower limit</h></idx>
+  <idx><h>Sorgenfrey line</h></idx>
+    <introduction>
+      <p>
+        Let <m>\B = \{[a,b) \mid a \lt b \text{ in } \R\}</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\B</m> is a basis for a topology <m>\tau_{\ell \ell}</m> on <m>\R</m>.
+              This topology is called the <term>lower limit</term> topology on <m>\R</m>.
+              The line <m>\R</m> with the topology
+              <m>\tau_{\ell \ell}</m> is sometimes called the
+              <term>Sorgenfrey line</term>
+    
+              (after the mathematician Robert Sorgenfrey).
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that every open interval <m>(a,b)</m> is also an open set in the lower limit topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>\tau_1</m> and <m>\tau_2</m> are topologies on a set <m>X</m> such that <m>\tau_1 \subseteq \tau_2</m>,
+              then <m>\tau_1</m> is said to be a <term>coarser</term>
+              topology that <m>\tau_2</m>,
+              or <m>\tau_2</m> is a <term>finer</term>
+              topology that <m>\tau_1</m>.
+              Part (b) shows that the lower limit topology may be a finer topology than the Euclidean metric topology.
+              Determine if this is true,
+              that the lower limit topology is actually a finer topology than the Euclidean metric topology on <m>\R</m>.
+              Justify your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>a \lt b</m> be in <m>\R</m>.
+              Is the set <m>[a,b)</m> clopen in <m>(\R, \tau_{\ell \ell})</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        A subset <m>A</m> of a topological space <m>X</m> is said to be <term>dense</term>
+        in <m>X</m> if <m>\overline{A} = X</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\Q</m> is dense in <m>\R</m> using the Euclidean metric topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>\Z</m> dense in <m>\R</m> using the Euclidean metric topology?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>A</m> be a subset of a topological space <m>A</m>.
+              Prove that <m>A</m> is dense in <m>X</m> if and only if
+              <m>A \cap O \neq \emptyset</m> for every open set <m>O</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a topological space and let <m>A</m> be a subset of <m>X</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that the sets <m>\Int(A)</m>,
+              <m>\Bdry(A)</m>, and <m>\Int(A^c)</m> are mutually disjoint
+              (that is, the intersection of any two of these sets is empty).
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>X = \Int(A) \cup \Bdry(A) \cup \Int(A^c)</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_Closed_sets_Hausdorff_subspace">
+    <statement>
+      <p>
+        Prove that a subspace of a Hausdorff space is a Hausdorff space.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a nonempty set with at least two elements and let <m>p</m> be a fixed element in <m>X</m>.
+        Let <m>\tau_p</m> be the particular point topology and
+        <m>\tau_{\overline{p}}</m> the excluded point topology on <m>X</m>.
+        That is
+        <ul>
+          <li>
+            <p>
+              <m>\tau_{p}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that contain <m>p</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tau_{\overline{p}}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that do not contain <m>p</m>.
+            </p>
+          </li>
+        </ul>
+      
+      That the particular point and excluded point topologies are topologies is the subject of <xref ref="ex_particular_point_topology"/> and <xref ref="ex_excluded_point_topology"/>.
+      Determine, with proof, if <m>X</m> is a Hausdorff space when
+      </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>X</m> has the topology <m>\tau_{p}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>X</m> has the topology <m>\tau_{\overline{p}}</m>.
+          </p>
+        </statement>
+      </task>
+  </exercise>
+
+  <exercise xml:id="ex_TS_Closed_boundary">
+    <statement>
+      <p>
+        Prove that a subset <m>C</m> of a topological space <m>X</m> is closed if and only if <m>C</m> contains its boundary.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Recall that a point <m>a</m> in a subset <m>A</m> of a metric space <m>X</m> is an isolated point of <m>A</m> if there is a neighborhood <m>N</m> of <m>a</m> in <m>X</m> such that <m>N \cap A = \{a\}</m>.
+        We can make the same definition in any topological space.
+      </p>
+        <definition>
+          <statement>
+            <p>
+              A point <m>a</m> in a subset <m>A</m> of a topological space <m>X</m> is an isolated point of <m>A</m>
+          <idx><h>isolated point</h></idx>
+              if there is a neighborhood <m>N</m> of <m>a</m> such that <m>N \cap A = \{a\}</m>.
+            </p>
+          </statement>
+        </definition>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> is a subset of a topological space <m>X</m>,
+              prove that a point <m>a \in A</m> is an isolated point of <m>A</m> if and only if <m>\{a\}</m> is an open set in <m>A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              We proved that in a metric space every boundary point of a set <m>A</m> is either a limit point or an isolated point of <m>A</m>.
+              (See <xref ref="ex_MS_boundary_limit_isolated"/>.)
+              Is the same statement true in a topological space?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each integer <m>a</m>, let <m>a\Z = \{ka \mid k \in \Z\}</m>.
+        That is, <m>a\Z</m> is the set of all integer multiples of <m>a</m>.
+        That <m>\{a\Z \mid a \in \Z\}</m> is a basis for a topology <m>\tau</m> on <m>\Z</m> is the topic of Exercise (ex_aZ_top).
+        In this exercise work in the topological space <m>(\Z, \tau)</m>
+      </p>
+    </introduction>
+        <task>
+          <introduction>
+            <p>
+              Let <m>A = \mathbb{E}</m>, the set of even integers.
+            </p>
+          </introduction>
+              <task>
+                <statement>
+                  <p>
+                    Find, with justification, <m>\Int(A)</m>.
+                  </p>
+                </statement>
+              </task>
+              <task>
+                <statement>
+                  <p>
+                    Find, with justification, <m>\overline{A}</m>.
+                  </p>
+                </statement>
+              </task>
+        </task>
+        <task>
+          <introduction>
+            <p>
+              Let <m>B = \mathbb{N} = \{n \in \Z \mid n \geq 1\}</m>.
+              That is, <m>\mathbb{N}</m> is the set of natural numbers.
+            </p>
+          </introduction>
+              <task>
+                <statement>
+                  <p>
+                    Find, with justification, <m>\Int(B)</m>.
+                  </p>
+                </statement>
+              </task>
+              <task>
+                <statement>
+                  <p>
+                    Find, with justification, <m>\overline{B}</m>.
+                  </p>
+                </statement>
+              </task>
+            
+          </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Consider the Double Origin topology<idx><h>topology</h><h>Double Origin</h></idx> defined as follows.
+        Let <m>X = \R^2 \cup \{0^*\}</m>,
+        where <m>0^*</m> is considered as a point that is not in <m>\R^2</m>
+        (<m>0^*</m> is our double origin).
+        As a basis for the open sets,
+        we use the standard open balls for every point except <m>0</m> and <m>0^*</m>.
+        For the point <m>0</m>, we define open sets to be
+        <me>
+          N(0,r) = \left\{(x,y) \in \R^2 \mid x^2+y^2 \lt  \frac{1}{r^2}, y \gt 0\right\}  \cup \{0\}
+        </me>
+        and for <m>0^*</m> we define open sets to be
+        <me>
+          N(0^*, r) =  \left\{(x,y) \in \R^2 \mid x^2+y^2 \lt  \frac{1}{r^2}, y \lt  0\right\}  \cup \{0^*\}
+        </me>.
+        So <m>N(0,r)</m> is the top half of a disk of radius
+        <m>\frac{1}{r}</m> centered at the origin,
+        excluding the <m>y</m>-axis but including the origin,
+        and <m>N(0^*,r)</m> is the bottom half of a disk of radius
+        <m>\frac{1}{r}</m> centered at the origin,
+        excluding the <m>y</m>-axis and including the point <m>0^*</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that the collection of sets described as a basis for the Double Origin topology is actually a basis for a topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>X</m> with the Double Origin topology Hausdorff?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    
+      <task>
+        <statement>
+          <p>
+            Show that finite sets are closed in <m>\R^n</m> with the Zariski topology.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that <m>\R^n</m> with the Zariski topology is not Hausdorff. (<xref ref="ex_TS_Zariski"/>
+            shows that a basis for the Zariski topology on <m>\R^n</m> is the collection of sets of the form <m>\R^n \setminus Z(f)</m>,
+            where <m>Z(f)</m> is the set of zeros of the polynomial <m>f</m> in <m>n</m> variables.)
+          </p>
+        </statement>
+      </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Consider the digital line topology
+        <m>\tau_{dl}</m> on <m>\Z</m> with basis <m>\{B(n)\}</m>, where
+        <me>
+          B(n) = \begin{cases}\{n\}  \amp \text{ if \(n\) is an odd integer } , \\ \{n-1,n,n+1\}  \amp \text{ if \(n\) is an even integer } . \end{cases}
+        </me>
+      </p>
+    </introduction>
+        <task>
+          <introduction>
+            <p>
+              Let <m>A = \{-1,0,1\}</m> of <m>(\Z, \tau_{dl})</m>.
+            </p>
+          </introduction>
+              <task>
+                <statement>
+                  <p>
+                    Find the limit points and boundary points of <m>A</m>.
+                    Prove your conjectures.
+                    Is every limit point of <m>A</m> a boundary point of <m>A</m>?
+                    Is every boundary point of <m>A</m> a limit point of <m>A</m>?
+                  </p>
+                </statement>
+              </task>
+              <task>
+                <statement>
+                  <p>
+                    Find <m>\overline{A}</m> and write
+                    <m>X \setminus \overline{A}</m> as a union of open sets.
+                  </p>
+                </statement>
+              </task>
+        </task>
+        <task>
+          <introduction>
+            <p>
+              Now consider the subset <m>B = \{0\}</m> of <m>(\Z, \tau_{dl})</m>.
+            </p>
+          </introduction>
+              <task>
+                <statement>
+                  <p>
+                    Find the limit points and boundary points of <m>B</m>.
+                    Prove your conjectures.
+                    Is every limit point of <m>B</m> a boundary point of <m>B</m>?
+                    Is every boundary point of <m>B</m> a limit point of <m>B</m>?
+                  </p>
+                </statement>
+              </task>
+              <task>
+                <statement>
+                  <p>
+                    Find <m>\overline{B}</m> and write
+                    <m>X \setminus \overline{B}</m> as a union of open sets.
+                  </p>
+                </statement>
+              </task>
+            
+          </task>
+  </exercise>
+
+  <exercise xml:id="ex_Metric_space_regular">
+    <introduction>
+      <p>
+        Let <m>(X,d)</m> be a metric space. Recall from <xref ref="ex_distance_pt_to_set"/> in <xref ref="chap_closed_sets"/>, that if <m>C</m> is a closed subset of a metric space <m>X</m> and <m>x</m> is an element of <m>X \setminus C</m>, then <m>d(x,C) = 0</m> if and only if <m>x \in C</m>. Use this idea to do the following.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Prove that every metric space is regular.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Prove that every metric space is a normal space.
+        </p>
+      </statement>
+    </task>
+    
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let  <m>K = \left\{\frac{1}{k} \mid k \text{ is a positive integer} \right\}</m>. Let <m>\B</m> be the collection of all open intervals of the form <m>(a,b)</m> and all sets of the form <m>(a,b) \setminus K</m>, where <m>a \lt b</m> are real numbers as in <xref ref="exp_K_topology"/>.  That <m>\B</m> generates a topology <m>\tau_K</m> on <m>\R</m> follows from the fact that <m>\tau_K</m> is finer than the Euclidean topology.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Show that <m>(\R, \tau_K)</m> is a Hausdorff space.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <xref ref="ex_Metric_space_regular"/> shows that every metric space is regular. In this part of the exercise, show that <m>(R, \tau_K)</m> is not a regular space. We can conclude that <m>(\R, \tau_K)</m> is not metrizable.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Consider <m>0</m> and <m>K</m>.
+        </p>
+      </hint>
+    </task>
+    
+  </exercise>
+
+  <exercise xml:id="ex_T_1_2_3">
+    
+      <task>
+        <statement>
+          <p>
+            Prove that a topological space <m>X</m> is <m>T_1</m> if and only if each singleton set is closed.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that every <m>T_2</m>-space is <m>T_1</m>,
+            that every <m>T_3</m>-space is <m>T_2</m>,
+            and that every <m>T_4</m>-space is <m>T_3</m>.
+          </p>
+        </statement>
+      </task>
+  </exercise>
+
+  <exercise xml:id="ex_not_T_1_2_3">
+    <introduction>
+      <p>
+        In this exercise we illustrate spaces that are <m>T_1</m> but not <m>T_2</m> and <m>T_2</m> but not <m>T_3</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\R</m> with the finite complement topology is <m>T_1</m> but not <m>T_2</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Define the space <m>\R_K</m> as in <xref ref="exp_K_topology"/>
+              to be the set of reals with topology <m>\tau</m> with a basis that consists of the standard open intervals in <m>\R</m> along with all sets of the form <m>(a,b) \setminus K</m>,
+              where <m>(a,b)</m> is any open interval and <m>K = \left\{\frac{1}{k} \mid k \in \Z^+\right\}</m>.
+              Show that <m>\R_K</m> is <m>T_2</m> but not <m>T_3</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Every limit point of a subset <m>A</m> of a topological space <m>X</m> is also a boundary point of <m>A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Every boundary point of a subset <m>A</m> of a topological space <m>X</m> is also a limit point of <m>A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a topological space and
+              <m>A \subseteq X</m> such that <m>\Int(A)=\overline{A}</m>,
+              then <m>A</m> is both open and closed.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a topological space and <m>A</m> and <m>B</m> are subsets of <m>X</m> with
+              <m>\overline{A}=\overline{B}</m> and <m>\Int(A) = \Int(B)</m>,
+              then <m>A = B</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> and <m>B</m> are subsets of a topological space <m>X</m>,
+              then <m>\overline{A \cap B} = \overline{A} \cap \overline{B}</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> and <m>B</m> are subsets of a topological space <m>X</m>,
+              then <m>\overline{A \cup B} = \overline{A} \cup \overline{B}</m>.
+            </p>
+          </statement>
+        </task>
+      
+    
+  </exercise>
+</exercises>

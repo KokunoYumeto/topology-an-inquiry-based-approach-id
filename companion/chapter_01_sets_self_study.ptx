@@ -1,0 +1,578 @@
+<appendix xml:id="o003-c90-ch01-companion" xml:lang="id-ID">
+  <title>Pendamping Mandiri Bab 1: Himpunan</title>
+
+  <introduction>
+    <p>
+      Komponen ini mendampingi Bab 1, bukan menggantikannya. Kerjakan setiap aktivitas
+      dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan di sini.
+      Dalam keluaran HTML PreTeXt, unsur <term>petunjuk</term>, <term>jawaban</term>,
+      dan <term>pembahasan</term> dapat dibuka sesudah percobaan mandiri.
+      Komplemen selalu diambil relatif terhadap himpunan semesta yang sedang dinyatakan.
+    </p>
+    <p>
+      Teks pendamping ini ditulis baru untuk edisi ini dan bukan karya Steven
+      Schlicker atau Grand Valley State University. Komponen pendamping orisinal
+      ini tersedia di bawah CC BY 4.0; bab sumber yang diterjemahkan tetap tunduk
+      pada ketentuan CC BY-NC-SA 3.0 yang dicatat untuk komponen tersebut.
+    </p>
+  </introduction>
+
+  <section xml:id="o003-c90-ch01-activity-checkpoints">
+    <title>Pemeriksaan aktivitas</title>
+
+    <exercise xml:id="o003-c90-ch01-checkpoint-pa-sets">
+      <title>Pemeriksaan 1: himpunan, paradoks, dan subhimpunan</title>
+      <statement>
+        <p>
+          Setelah mengerjakan aktivitas berjangkar <c>pa_sets</c>, periksa apakah
+          alasan Anda menjelaskan kontradiksi pada <m>S=\{A : A\text{ himpunan dan }A\notin A\}</m>,
+          lalu merumuskan <m>A\subseteq X</m> dan kedudukan <m>\emptyset</m> dengan kuantor yang tepat.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch01-checkpoint-pa-sets-hint">
+        <p><em>Petunjuk 1.</em> Ganti <m>A</m> dengan <m>S</m> dalam syarat pembentuk <m>S</m>.</p>
+        <p><em>Petunjuk 2.</em> Untuk subhimpunan, mulailah dengan <m>x\in A</m>; untuk himpunan kosong, tanyakan apakah ada contoh yang melanggar implikasi.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-checkpoint-pa-sets-answer">
+        <p>
+          Definisi naif menghasilkan <m>S\in S\iff S\notin S</m>. Definisi yang dapat
+          dipakai pada bab ini adalah <m>A\subseteq X</m> bila setiap anggota <m>A</m>
+          merupakan anggota <m>X</m>. Karena implikasi tersebut benar secara vakum untuk
+          <m>\emptyset</m>, berlaku <m>\emptyset\subseteq X</m> untuk setiap <m>X</m>, dan selalu <m>A\subseteq A</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-checkpoint-pa-sets-solution">
+        <p>
+          Jika <m>S\in S</m>, syarat pembentuknya mengatakan <m>S\notin S</m>. Jika
+          <m>S\notin S</m>, syarat yang sama justru menempatkan <m>S</m> di dalam <m>S</m>.
+          Jadi pemahaman <q>setiap koleksi yang dapat dideskripsikan adalah himpunan</q>
+          tidak aman; inilah paradoks Russell. Untuk bagian subhimpunan, rumusan yang
+          dapat diuji adalah <m>\forall x(x\in A\Rightarrow x\in X)</m>. Rumusan ini
+          langsung memberi refleksivitas <m>A\subseteq A</m> dan fakta bahwa himpunan
+          kosong adalah subhimpunan setiap himpunan.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-checkpoint-rubber-sheet">
+      <title>Pemeriksaan 2: deformasi tanpa memotong atau menempel</title>
+      <statement>
+        <p>
+          Bandingkan jawaban Anda pada aktivitas <c>act_rubber_sheet</c> dengan invarian
+          sederhana: apakah objek tetap berupa lengkung tertutup, dan berapa banyak
+          terowongan tembus yang dimilikinya?
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch01-checkpoint-rubber-sheet-hint">
+        <p><em>Petunjuk 1.</em> Sebuah simpul karet tertutup tidak dapat berubah menjadi lengkung dengan dua ujung tanpa diputus.</p>
+        <p><em>Petunjuk 2.</em> Pada benda tiga dimensi, bedakan lekukan biasa dari lubang yang menembus seluruh benda.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-checkpoint-rubber-sheet-answer">
+        <p>
+          Dengan model standar berupa lengkung sederhana tertutup di bidang, persegi
+          dapat dideformasi menjadi lingkaran, garis tepi huruf <c>D</c>, dan bintang
+          berujung lima yang tidak berpotongan sendiri, tetapi bukan huruf <c>S</c>
+          sebagai lengkung terbuka. Dengan model benda padat, persegi padat dan mangkuk
+          tanpa lubang tembus berada dalam kelas tanpa terowongan; donat dan cangkir
+          bergagang masing-masing mempunyai satu terowongan.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-checkpoint-rubber-sheet-solution">
+        <p>
+          Jawaban bergantung pada pemodelan gambar. Pernyataan di atas memakai dua asumsi:
+          <c>S</c> adalah goresan terbuka, sedangkan bintang adalah garis tepi sederhana;
+          <q>mangkuk</q> adalah gumpalan padat dengan cekungan, bukan permukaan tipis.
+          Deformasi kontinu tidak membuat atau menghilangkan ujung maupun terowongan.
+          Karena itu dua kelompok tersebut dapat dibedakan tanpa memakai ukuran atau sudut.
+          Bila guru bermaksud model lain, nyatakan model itu sebelum memberi klasifikasi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-checkpoint-set-equality">
+      <title>Pemeriksaan 3: kesamaan himpunan</title>
+      <statement>
+        <p>
+          Periksa empat keputusan pada aktivitas <c>act_set_equality</c> dengan uji dua inklusi.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch01-checkpoint-set-equality-hint">
+        <p><em>Petunjuk 1.</em> Sederhanakan <m>x-1\lt1</m> dan tulis syarat keterbagian sebagai kongruensi modulo <m>4</m>.</p>
+        <p><em>Petunjuk 2.</em> Bilangan genap mempunyai residu <m>0</m> atau <m>2</m> modulo <m>4</m>; bilangan ganjil mempunyai residu <m>1</m> atau <m>3</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-checkpoint-set-equality-answer">
+        <p>
+          Kesamaan berarti <m>A\subseteq B</m> dan <m>B\subseteq A</m>. Pada contoh riil,
+          kedua himpunan sama-sama <m>\{x:x\lt2\}</m>. Pada contoh genap, himpunan
+          <m>B</m> adalah bilangan yang kongruen <m>2</m> modulo <m>4</m>, sehingga
+          <m>B\subsetneq A</m>; misalnya <m>0\in A\setminus B</m>. Pada contoh ganjil,
+          residu <m>1</m> atau <m>3</m> modulo <m>4</m> tepat mencakup semua bilangan ganjil,
+          jadi <m>A=B</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-checkpoint-set-equality-solution">
+        <p>
+          Bukti yang dapat diperiksa selalu dimulai dengan anggota sembarang. Untuk contoh
+          terakhir, jika <m>n</m> ganjil maka algoritma pembagian memberi
+          <m>n=4q+1</m> atau <m>n=4q+3</m>; arah sebaliknya segera memberi
+          <m>n=2(2q)+1</m> atau <m>n=2(2q+1)+1</m>. Jadi kedua inklusi terbukti.
+          Satu contoh <m>0</m> cukup menggugurkan arah <m>A\subseteq B</m> pada contoh genap.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-checkpoint-set-operations">
+      <title>Pemeriksaan 4: operasi himpunan dan hukum De Morgan</title>
+      <statement>
+        <p>
+          Untuk aktivitas <c>act_sets_1</c>, hitung semua himpunan yang diminta dan cocokkan
+          dua pasangan komplemen dengan hukum De Morgan.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch01-checkpoint-set-operations-hint">
+        <p><em>Petunjuk 1.</em> Buat tabel keanggotaan untuk setiap unsur <m>1</m> sampai <m>10</m>.</p>
+        <p><em>Petunjuk 2.</em> Negasi kata <q>atau</q> menjadi <q>dan tidak</q>, sedangkan negasi kata <q>dan</q> menjadi <q>atau tidak</q>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-checkpoint-set-operations-answer">
+        <p>
+          <m>A\cup B=\{1,2,3,4,5,6,8,10\}</m> dan
+          <m>A\cap B=\{2,4,6\}</m>. Relatif terhadap <m>U</m>,
+          <m>(A\cup B)^c=\{7,9\}=A^c\cap B^c</m>, sedangkan
+          <m>(A\cap B)^c=\{1,3,5,7,8,9,10\}=A^c\cup B^c</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-checkpoint-set-operations-solution">
+        <p>
+          Di sini <m>A^c=\{7,8,9,10\}</m> dan
+          <m>B^c=\{1,3,5,7,9\}</m>. Mengambil irisan dan gabungannya menghasilkan
+          dua himpunan pada jawaban. Untuk bukti umum, misalnya,
+          <m>x\in(A\cup B)^c</m> ekuivalen dengan <m>x\notin A</m> dan
+          <m>x\notin B</m>, yang ekuivalen dengan <m>x\in A^c\cap B^c</m>.
+          Argumen serupa membuktikan hukum kedua.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-checkpoint-indexed-family">
+      <title>Pemeriksaan 5: keluarga terindeks</title>
+      <statement>
+        <p>
+          Periksa contoh hingga dan tak hingga pada aktivitas keluarga terindeks tanpa
+          ID sumber, lalu tulis definisi gabungan dan irisan dengan kuantor.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch01-checkpoint-indexed-family-hint">
+        <p><em>Petunjuk 1.</em> Untuk <m>A_\alpha=[0,|\alpha|)</m>, indeks <m>\alpha=0</m> menentukan irisan.</p>
+        <p><em>Petunjuk 2.</em> Untuk gabungan, setelah memilih <m>y\geq0</m>, pilih indeks dengan <m>|\alpha|\gt y</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-checkpoint-indexed-family-answer">
+        <p>
+          Pada keluarga hingga, <m>A_5=\{1,2,3,4,5\}</m>,
+          <m>A_8=\{1,2,3,4,5,6,7,8\}</m>, dan terdapat sepuluh himpunan.
+          Pada keluarga berindeks riil, <m>A_5=[0,5)</m>, <m>A_\pi=[0,\pi)</m>, serta
+          <m>A_{-2/3}=[0,2/3)</m>. Selanjutnya
+          <m>\bigcap_{\alpha\in\R}A_\alpha=\emptyset</m> dan
+          <m>\bigcup_{\alpha\in\R}A_\alpha=[0,\infty)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-checkpoint-indexed-family-solution">
+        <p>
+          Definisi umumnya adalah
+          <m>x\in\bigcap_{\alpha\in I}A_\alpha</m> bila dan hanya bila
+          <m>\forall\alpha\in I,,x\in A_\alpha</m>, sedangkan
+          <m>x\in\bigcup_{\alpha\in I}A_\alpha</m> bila dan hanya bila
+          <m>\exists\alpha\in I,,x\in A_\alpha</m>. Karena
+          <m>A_0=[0,0)=\emptyset</m>, irisannya kosong. Setiap anggota setiap
+          <m>A_\alpha</m> tidak negatif; sebaliknya, untuk <m>y\geq0</m> pilih
+          <m>\alpha=y+1</m>, sehingga <m>y\in[0,|\alpha|)</m>. Ini membuktikan hasil gabungan.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-checkpoint-demorgan">
+      <title>Pemeriksaan 6: hukum De Morgan untuk keluarga tak hingga</title>
+      <statement>
+        <p>
+          Untuk aktivitas tanpa ID sesudah teorema De Morgan, verifikasi kedua hukum pada
+          <m>A_n=\{1,\ldots,n\}</m>, <m>n\in\Z^+</m>, dengan semesta <m>\Z</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch01-checkpoint-demorgan-hint">
+        <p><em>Petunjuk 1.</em> Tentukan dahulu <m>\bigcup_{n\geq1}A_n</m> dan <m>\bigcap_{n\geq1}A_n</m>.</p>
+        <p><em>Petunjuk 2.</em> Keluarga <m>A_n</m> membesar, sehingga keluarga komplemennya mengecil.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-checkpoint-demorgan-answer">
+        <p>
+          <m>\bigcup_{n\geq1}A_n=\Z^+</m> dan <m>\bigcap_{n\geq1}A_n=\{1\}</m>.
+          Maka
+          <m>(\bigcup A_n)^c=\Z\setminus\Z^+=\bigcap A_n^c</m>, serta
+          <m>(\bigcap A_n)^c=\Z\setminus\{1\}=\bigcup A_n^c</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-checkpoint-demorgan-solution">
+        <p>
+          Setiap bilangan bulat positif muncul dalam <m>A_n</m> setelah <m>n</m> cukup besar,
+          sementara hanya <m>1</m> yang terdapat dalam semua <m>A_n</m>. Selain itu,
+          <m>\bigcup A_n^c=A_1^c</m> karena komplemennya mengecil. Secara logika,
+          <q>tidak berada di sedikitnya satu gabungan</q> berarti <q>tidak berada di setiap
+          komponennya</q>; perubahan kuantor inilah yang menukar gabungan dengan irisan.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-checkpoint-cartesian-product">
+      <title>Pemeriksaan 7: produk Kartesius</title>
+      <statement>
+        <p>
+          Periksa daftar pasangan dan argumen pencacahan pada aktivitas produk Kartesius tanpa ID sumber.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch01-checkpoint-cartesian-product-hint">
+        <p><em>Petunjuk 1.</em> Koordinat pertama mempunyai dua pilihan dan koordinat kedua tiga pilihan.</p>
+        <p><em>Petunjuk 2.</em> Untuk tiap satu dari <m>m</m> pilihan pertama, ada <m>n</m> pilihan kedua.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-checkpoint-cartesian-product-answer">
+        <p>
+          Hasilnya ialah
+          <m>\{(\text{merah},\text{mobil}),(\text{merah},\text{truk}),(\text{merah},\text{van}),
+          (\text{biru},\text{mobil}),(\text{biru},\text{truk}),(\text{biru},\text{van})\}</m>.
+          Jika <m>|A|=m</m> dan <m>|B|=n</m>, maka <m>|A\times B|=mn</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-checkpoint-cartesian-product-solution">
+        <p>
+          Kelompokkan pasangan menurut koordinat pertamanya. Ada <m>m</m> kelompok yang
+          saling lepas, dan masing-masing berisi tepat <m>n</m> pasangan. Karena urutan
+          koordinat bermakna, <m>(a,b)</m> tidak boleh diam-diam diperlakukan sama dengan <m>(b,a)</m>.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch01-exercise-guides">
+    <title>Jawaban dan panduan sepuluh latihan</title>
+
+    <exercise xml:id="o003-c90-ch01-exercise-01">
+      <title>Latihan 1: menerjemahkan kalimat menjadi notasi</title>
+      <statement><p>Bandingkan keenam ekspresi Anda dengan syarat keanggotaan pada latihan pertama.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-01-hint">
+        <p><em>Petunjuk 1.</em> Terjemahkan <q>setidaknya dua</q> dan <q>paling banyak satu</q> dengan menghitung banyaknya himpunan yang memuat sebuah unsur.</p>
+        <p><em>Petunjuk 2.</em> Gunakan komplemen relatif terhadap <m>X</m>; gabungkan tiga kemungkinan pasangan.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-01-answer">
+        <p>
+          Berturut-turut:
+          <m>(A\cap B)\setminus C</m>;
+          <m>C\cap(A\cup B)</m>;
+          <m>A\setminus(B\cap C)</m>;
+          <m>X\setminus(A\cup B\cup C)</m>;
+          <m>(A^c\cap B^c)\cup(A^c\cap C^c)\cup(B^c\cap C^c)</m>;
+          dan <m>(A\cap B)\cup(A\cap C)\cup(B\cap C)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-01-solution">
+        <p>
+          Pada butir ketiga, <q>berada di <m>A</m> tetapi tidak sekaligus di <m>B</m> dan
+          <m>C</m></q> berarti meniadakan <m>B\cap C</m>, bukan meniadakan kedua himpunan
+          secara terpisah. Pada butir kelima, gagal berada di sedikitnya dua himpunan berarti
+          sedikitnya satu dari tiga pasangan komplemen berlaku. Pada butir keenam, gagal
+          berada di paling banyak satu himpunan berarti berada di sedikitnya dua himpunan.
+          Uji tabel delapan pola keanggotaan memberi pemeriksaan langsung.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-02">
+      <title>Latihan 2: komplemen pada semesta bersarang</title>
+      <statement><p>Untuk <m>X\subset Y\subset Z</m>, periksa kedua klaim dengan argumen unsur.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-02-hint">
+        <p><em>Petunjuk 1.</em> Tulis <m>C_Y(X)=Y\setminus X</m> dan <m>C_Z(X)=Z\setminus X</m>.</p>
+        <p><em>Petunjuk 2.</em> Pisahkan anggota <m>Z\setminus(Y\setminus X)</m> menurut apakah ia berada di <m>Y</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-02-answer">
+        <p>
+          Keduanya benar:
+          <m>Y\setminus X\subseteq Z\setminus X</m> dan
+          <m>Z\setminus(Y\setminus X)=X\cup(Z\setminus Y)</m>.
+          Jika simbol <m>\subset</m> pada sumber dimaksudkan ketat dan kedua inklusi awal
+          ketat, inklusi pertama juga ketat karena <m>Z\setminus Y</m> tidak kosong.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-02-solution">
+        <p>
+          Jika <m>u\in Y\setminus X</m>, maka <m>u\in Z</m> dan <m>u\notin X</m>, jadi
+          <m>u\in Z\setminus X</m>. Untuk identitas kedua, anggota ruas kiri berada di
+          <m>Z</m> tetapi tidak di <m>Y\setminus X</m>. Jika ia tidak di <m>Y</m>, ia berada
+          di <m>Z\setminus Y</m>; jika ia di <m>Y</m>, kegagalan berada di <m>Y\setminus X</m>
+          memaksanya berada di <m>X</m>. Arah sebaliknya diperiksa langsung dari dua kasus itu.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-03">
+      <title>Latihan 3: hukum asosiatif dan distributif</title>
+      <statement><p>Buktikan semua empat identitas yang tercantum pada latihan berjangkar <c>ex_set_props</c>.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-03-hint">
+        <p><em>Petunjuk 1.</em> Ambil unsur sembarang <m>x</m> dan terjemahkan irisan sebagai <q>dan</q>, gabungan sebagai <q>atau</q>.</p>
+        <p><em>Petunjuk 2.</em> Gunakan asosiativitas serta distributivitas logika proposisional, lalu terjemahkan kembali.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-03-answer">
+        <p>
+          Keempat identitas benar:
+          <m>(A\cap B)\cap C=A\cap(B\cap C)</m>,
+          <m>(A\cup B)\cup C=A\cup(B\cup C)</m>,
+          <m>A\cap(B\cup C)=(A\cap B)\cup(A\cap C)</m>, dan
+          <m>A\cup(B\cap C)=(A\cup B)\cap(A\cup C)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-03-solution">
+        <p>
+          Sebagai pola, <m>x\in A\cap(B\cup C)</m> ekuivalen dengan
+          <m>x\in A</m> dan (<m>x\in B</m> atau <m>x\in C</m>). Distribusikan kata
+          <q>dan</q> untuk memperoleh (<m>x\in A\cap B</m>) atau
+          (<m>x\in A\cap C</m>), tepat syarat ruas kanan. Tiga identitas lain dibuktikan
+          dengan rantai ekuivalensi yang sama. Sumber menempatkan dua hukum distributif
+          dalam satu <c>task</c> melalui token <c>\item</c>; keduanya tetap harus dibuktikan.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-04">
+      <title>Latihan 4: hukum De Morgan untuk keluarga terindeks</title>
+      <statement><p>Lengkapi dua bukti pada latihan berjangkar <c>ex_DeMorgan</c>.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-04-hint">
+        <p><em>Petunjuk 1.</em> Mulai dari keanggotaan sebuah unsur <m>x</m> pada komplemen ruas kiri.</p>
+        <p><em>Petunjuk 2.</em> Gunakan negasi kuantor: <m>\neg\exists</m> menjadi <m>\forall\neg</m>, dan <m>\neg\forall</m> menjadi <m>\exists\neg</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-04-answer">
+        <p>
+          <m>(\bigcup_{\alpha\in I}A_\alpha)^c=\bigcap_{\alpha\in I}A_\alpha^c</m>
+          dan <m>(\bigcap_{\alpha\in I}A_\alpha)^c=\bigcup_{\alpha\in I}A_\alpha^c</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-04-solution">
+        <p>
+          Untuk hukum pertama,
+          <m>x\in(\bigcup A_\alpha)^c</m> jika dan hanya jika tidak ada <m>\alpha</m> dengan
+          <m>x\in A_\alpha</m>; ini jika dan hanya jika untuk setiap <m>\alpha</m>,
+          <m>x\in A_\alpha^c</m>; dan ini jika dan hanya jika <m>x\in\bigcap A_\alpha^c</m>.
+          Untuk hukum kedua,
+          <m>x\notin\bigcap A_\alpha</m> jika dan hanya jika ada <m>\alpha</m> dengan
+          <m>x\notin A_\alpha</m>; ini jika dan hanya jika <m>x\in\bigcup A_\alpha^c</m>.
+          Dengan konvensi gabungan kosong <m>\emptyset</m> dan irisan kosong <m>U</m>, bukti juga mencakup <m>I=\emptyset</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-05">
+      <title>Latihan 5: produk dengan himpunan kosong</title>
+      <statement><p>Tentukan <m>\emptyset\times A</m> dan jelaskan dari definisi pasangan berurutan.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-05-hint">
+        <p><em>Petunjuk 1.</em> Anda memerlukan koordinat pertama yang merupakan anggota <m>\emptyset</m>.</p>
+        <p><em>Petunjuk 2.</em> Apakah pasangan seperti itu dapat ada?</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-05-answer"><p><m>\emptyset\times A=\emptyset</m>.</p></answer>
+      <solution xml:id="o003-c90-ch01-exercise-05-solution">
+        <p>
+          Andaikan <m>(x,a)\in\emptyset\times A</m>. Definisi produk mengharuskan
+          <m>x\in\emptyset</m>, yang mustahil. Jadi produk itu tidak mempunyai anggota.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-06">
+      <title>Latihan 6: himpunan kuasa</title>
+      <statement><p>Periksa daftar, pencacahan, dan bukti umum pada latihan berjangkar <c>ex_power_set</c>.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-06-hint">
+        <p><em>Petunjuk 1.</em> Untuk setiap unsur, ada dua pilihan independen: dimasukkan atau tidak dimasukkan ke subhimpunan.</p>
+        <p><em>Petunjuk 2.</em> Untuk bukti induksi, tambahkan satu unsur baru dan pasangkan subhimpunan yang memuatnya dengan yang tidak.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-06-answer">
+        <p>
+          <m>2^{\{1,2\}}=\{\emptyset,\{1\},\{2\},\{1,2\}\}</m>.
+          Himpunan beranggota tiga mempunyai <m>8</m> subhimpunan; secara umum,
+          jika <m>|A|=n</m>, maka <m>|2^A|=2^n</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-06-solution">
+        <p>
+          Kodekan setiap subhimpunan dengan deret biner sepanjang <m>n</m>: digit ke-<m>i</m>
+          bernilai <m>1</m> bila unsur ke-<m>i</m> dipilih. Korespondensi ini bijektif dengan
+          semua <m>2^n</m> deret biner. Secara induktif, menambahkan satu unsur menggandakan
+          jumlah subhimpunan, sebab setiap subhimpunan lama menghasilkan satu versi tanpa
+          dan satu versi dengan unsur baru.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-07">
+      <title>Latihan 7: membedakan keanggotaan dan inklusi</title>
+      <statement><p>Nilai keenam pernyataan tentang <m>2^A</m> dan berikan koreksi bila perlu.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-07-hint">
+        <p><em>Petunjuk 1.</em> <m>B\in2^A</m> tepat ketika <m>B\subseteq A</m>.</p>
+        <p><em>Petunjuk 2.</em> Uji klaim inklusi ketat pada kasus tepi <m>A=\emptyset</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-07-answer">
+        <p>
+          (a) benar; (b) tidak benar secara umum; (c) inklusi tak-ketat selalu benar,
+          tetapi inklusi ketat gagal saat <m>A=\emptyset</m>; (d) benar; (e) benar sebagai
+          inklusi ketat karena <m>2^A</m> tidak pernah kosong; (f) benar.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-07-solution">
+        <p>
+          (a) Karena <m>A\subseteq A</m>, maka <m>A\in2^A</m>.
+          (b) Anggota <m>A</m> tidak harus berupa subhimpunan <m>A</m>; misalnya
+          <m>A=\{1\}</m>. Koreksi universalnya adalah <m>A\in2^A</m>.
+          (c) Selalu <m>\{A\}\subseteq2^A</m>; inklusi itu ketat bila <m>A\neq\emptyset</m>,
+          tetapi sama saat <m>A=\emptyset</m>. (d) Karena <m>\emptyset\subseteq A</m>,
+          berlaku <m>\emptyset\in2^A</m>. (e) Himpunan kosong merupakan subhimpunan
+          ketat dari <m>2^A</m> sebab <m>2^A</m> memuat sedikitnya <m>\emptyset</m>.
+          (f) Jika <m>C\in2^A</m>, maka <m>C\subseteq A\subseteq B</m>, sehingga
+          <m>C\in2^B</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-08">
+      <title>Latihan 8: subhimpunan produk yang bukan persegi panjang</title>
+      <statement><p>Bangun <m>W\subset A\times B</m> yang tidak berbentuk <m>C\times D</m>.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-08-hint">
+        <p><em>Petunjuk 1.</em> Pilih <m>a_1\neq a_2</m> dan <m>b_1\neq b_2</m>.</p>
+        <p><em>Petunjuk 2.</em> Ambil dua sudut diagonal; sebuah produk yang memuat keduanya harus memuat dua sudut silang.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-08-answer">
+        <p><m>W=\{(a_1,b_1),(a_2,b_2)\}</m> adalah contoh yang diminta.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-08-solution">
+        <p>
+          Andaikan <m>W=C\times D</m>. Karena dua pasangan diagonal berada di <m>W</m>,
+          kita harus mempunyai <m>a_1,a_2\in C</m> dan <m>b_1,b_2\in D</m>. Maka
+          <m>(a_1,b_2)</m> dan <m>(a_2,b_1)</m> juga harus berada di <m>C\times D</m>,
+          bertentangan dengan definisi <m>W</m>. Karena <m>A</m> dan <m>B</m> masing-masing
+          mempunyai sedikitnya dua anggota, pilihan tersebut selalu tersedia.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-09">
+      <title>Latihan 9: gabungan dan irisan interval terindeks</title>
+      <statement><p>Buktikan keempat identitas untuk <m>A_x=(0,x)</m> dan <m>B_x=[0,x]</m>, <m>x\gt0</m>.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-09-hint">
+        <p><em>Petunjuk 1.</em> Untuk menyingkirkan <m>y\gt0</m> dari irisan, pilih <m>x\lt y</m>.</p>
+        <p><em>Petunjuk 2.</em> Untuk memasukkan <m>y\gt0</m> ke gabungan, pilih <m>x\gt y</m>; periksa <m>0</m> secara terpisah.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-09-answer">
+        <p>
+          <m>\bigcap_{x\gt0}(0,x)=\emptyset</m>,
+          <m>\bigcup_{x\gt0}(0,x)=(0,\infty)</m>,
+          <m>\bigcap_{x\gt0}[0,x]=\{0\}</m>, dan
+          <m>\bigcup_{x\gt0}[0,x]=[0,\infty)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-09-solution">
+        <p>
+          Tidak ada <m>y</m> dalam semua <m>(0,x)</m>: jika <m>y\leq0</m>, ia tidak berada
+          dalam interval mana pun; jika <m>y\gt0</m>, pilih <m>x=y/2</m>. Sebaliknya,
+          setiap <m>y\gt0</m> berada dalam <m>(0,y+1)</m>, sehingga gabungannya tepat
+          <m>(0,\infty)</m>. Untuk interval tertutup, <m>0</m> berada dalam semuanya.
+          Argumen <m>x=y/2</m> menyingkirkan setiap <m>y\gt0</m> dari irisan dan bilangan
+          negatif tidak pernah masuk; jadi irisannya <m>\{0\}</m>. Setiap <m>y\geq0</m>
+          berada dalam <m>[0,y+1]</m>, yang membuktikan hasil gabungan.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-exercise-10">
+      <title>Latihan 10: benar, salah, bukti, dan contoh tandingan</title>
+      <statement><p>Periksa sepuluh keputusan Anda dan pastikan setiap klaim salah mempunyai contoh tandingan konkret.</p></statement>
+      <hint xml:id="o003-c90-ch01-exercise-10-hint">
+        <p><em>Petunjuk 1.</em> Inklusi berbalik saat mengambil komplemen.</p>
+        <p><em>Petunjuk 2.</em> Untuk identitas selisih, ubah <m>P\setminus Q</m> menjadi <m>P\cap Q^c</m>; bedakan <m>\emptyset</m> dari <m>\{\emptyset\}</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch01-exercise-10-answer">
+        <p>
+          Urutannya adalah: benar, benar, salah, benar, salah, salah, benar, benar,
+          salah, benar.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch01-exercise-10-solution">
+        <p>
+          (a) Anggota <m>A</m> berada di <m>B</m> dan <m>C</m>, jadi di irisannya.
+          (b) Anggota <m>A\cup B</m> berasal dari salah satu subhimpunan <m>C</m>.
+          (c) Salah: ambil <m>X=\{1,2\}</m>, <m>A=\{1\}</m>, dan <m>B=X</m>;
+          arah yang benar adalah <m>X\setminus B\subseteq X\setminus A</m>.
+          (d) Benar oleh pembalikan komplemen.
+          (e) Salah: <m>A=\{1,2\}</m>, <m>B=\{2\}</m>; ruas kiri <m>\{1\}</m>.
+          Identitas yang benar ialah <m>(A\cup B)\setminus B=A\setminus B</m>.
+          (f) Salah: <m>A=\{1\}</m>, <m>B=\{1,2\}</m>; ruas kiri <m>\{1\}</m>, bukan
+          <m>B</m>. Identitas umumnya <m>A\setminus(A\setminus B)=A\cap B</m>.
+          (g) Benar, karena kedua ruas berarti <m>x\in A\cap B</m> dan <m>x\notin C</m>.
+          (h) Benar relatif terhadap <m>X</m>.
+          (i) Salah: <m>\{\emptyset\}</m> mempunyai tepat satu anggota, yaitu <m>\emptyset</m>.
+          (j) Benar: <m>\emptyset</m> dan <m>\{\emptyset\}</m> adalah dua objek berbeda.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch01-mastery">
+    <title>Uji penguasaan</title>
+    <p>Kerjakan tanpa melihat bab atau pembahasan. Buka petunjuk hanya setelah menulis percobaan pertama.</p>
+
+    <exercise xml:id="o003-c90-ch01-mastery-01">
+      <statement><p>Untuk <m>A=\{0,\{0\}\}</m>, tentukan benar atau salah: <m>0\in A</m>, <m>\{0\}\in A</m>, <m>\{0\}\subseteq A</m>, dan <m>A\in2^A</m>.</p></statement>
+      <hint xml:id="o003-c90-ch01-mastery-01-hint"><p>Bandingkan anggota yang tertulis dengan subhimpunan yang seluruh anggotanya berada di <m>A</m>.</p></hint>
+      <answer xml:id="o003-c90-ch01-mastery-01-answer"><p>Keempatnya benar.</p></answer>
+      <solution xml:id="o003-c90-ch01-mastery-01-solution"><p>Dua objek yang tercantum adalah <m>0</m> dan <m>\{0\}</m>. Satu-satunya anggota <m>\{0\}</m> ialah <m>0\in A</m>, sehingga <m>\{0\}\subseteq A</m>. Akhirnya <m>A\subseteq A</m>, jadi <m>A\in2^A</m>.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-mastery-02">
+      <statement><p>Buktikan <m>A\setminus(B\cup C)=(A\setminus B)\cap(A\setminus C)</m>.</p></statement>
+      <hint xml:id="o003-c90-ch01-mastery-02-hint"><p>Ikuti satu unsur dan negasikan syarat <q>di <m>B</m> atau di <m>C</m></q>.</p></hint>
+      <answer xml:id="o003-c90-ch01-mastery-02-answer"><p>Identitas benar.</p></answer>
+      <solution xml:id="o003-c90-ch01-mastery-02-solution"><p><m>x</m> berada di ruas kiri jika dan hanya jika <m>x\in A</m>, <m>x\notin B</m>, dan <m>x\notin C</m>; ini setara dengan <m>x\in A\setminus B</m> dan <m>x\in A\setminus C</m>, tepat syarat ruas kanan.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-mastery-03">
+      <statement><p>Untuk <m>A_n=(-1/n,1/n)</m>, <m>n\in\Z^+</m>, tentukan gabungan dan irisannya.</p></statement>
+      <hint xml:id="o003-c90-ch01-mastery-03-hint"><p>Keluarga ini mengecil; interval terbesar terjadi saat <m>n=1</m>. Untuk <m>x\neq0</m>, pilih <m>n\gt1/|x|</m>.</p></hint>
+      <answer xml:id="o003-c90-ch01-mastery-03-answer"><p><m>\bigcup_{n\geq1}A_n=(-1,1)</m> dan <m>\bigcap_{n\geq1}A_n=\{0\}</m>.</p></answer>
+      <solution xml:id="o003-c90-ch01-mastery-03-solution"><p>Karena <m>A_n\subseteq A_1</m> dan <m>A_1</m> sendiri ikut dalam keluarga, gabungannya <m>A_1</m>. Nol berada di semua interval. Jika <m>x\neq0</m>, ambil <m>n\gt1/|x|</m>; maka <m>|x|\gt1/n</m>, sehingga <m>x\notin A_n</m>.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-mastery-04">
+      <statement><p>Dalam semesta <m>U</m>, sederhanakan <m>(A^c\cap(B\cup C))^c</m>.</p></statement>
+      <hint xml:id="o003-c90-ch01-mastery-04-hint"><p>Terapkan De Morgan dua kali dan ingat <m>(A^c)^c=A</m>.</p></hint>
+      <answer xml:id="o003-c90-ch01-mastery-04-answer"><p><m>A\cup(B^c\cap C^c)</m>.</p></answer>
+      <solution xml:id="o003-c90-ch01-mastery-04-solution"><p><m>(A^c\cap(B\cup C))^c=(A^c)^c\cup(B\cup C)^c=A\cup(B^c\cap C^c)</m>.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-mastery-05">
+      <statement><p>Jika <m>|A|=4</m> dan <m>|B|=3</m>, hitung <m>|2^A\times B|</m> dan jelaskan.</p></statement>
+      <hint xml:id="o003-c90-ch01-mastery-05-hint"><p>Hitung dahulu banyaknya subhimpunan <m>A</m>, lalu gunakan aturan produk.</p></hint>
+      <answer xml:id="o003-c90-ch01-mastery-05-answer"><p><m>|2^A\times B|=2^4\cdot3=48</m>.</p></answer>
+      <solution xml:id="o003-c90-ch01-mastery-05-solution"><p>Ada <m>16</m> pilihan untuk koordinat pertama dan, untuk masing-masing, <m>3</m> pilihan koordinat kedua.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch01-mastery-06">
+      <statement><p>Nilai klaim: jika <m>A\times B=C\times D</m> dan semua empat himpunan tidak kosong, maka <m>A=C</m> dan <m>B=D</m>.</p></statement>
+      <hint xml:id="o003-c90-ch01-mastery-06-hint"><p>Untuk membuktikan <m>A\subseteq C</m>, ambil <m>a\in A</m> dan gunakan satu anggota tetap <m>b\in B</m>.</p></hint>
+      <answer xml:id="o003-c90-ch01-mastery-06-answer"><p>Klaim benar dengan asumsi ketakosongan; tanpa asumsi itu klaim salah.</p></answer>
+      <solution xml:id="o003-c90-ch01-mastery-06-solution"><p>Pilih <m>b\in B</m>. Untuk setiap <m>a\in A</m>, pasangan <m>(a,b)</m> berada di <m>C\times D</m>, sehingga <m>a\in C</m>. Jadi <m>A\subseteq C</m>; simetri memberi <m>C\subseteq A</m>. Argumen yang sama pada koordinat kedua memberi <m>B=D</m>. Ketakosongan perlu karena <m>\emptyset\times B=\emptyset\times D</m> untuk sembarang <m>B,D</m>.</p></solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch01-error-diagnostics">
+    <title>Diagnostik kesalahan ringkas</title>
+    <p><dl>
+      <li><title>Menukar <m>\in</m> dan <m>\subseteq</m></title><p>Ucapkan jenis objeknya: ruas kiri <m>\in</m> adalah satu anggota; ruas kiri <m>\subseteq</m> adalah sebuah himpunan yang semua anggotanya harus diuji.</p></li>
+      <li><title>Membuktikan kesamaan hanya satu arah</title><p>Tulis dua sasaran terpisah, <m>A\subseteq B</m> dan <m>B\subseteq A</m>, sebelum memulai bukti.</p></li>
+      <li><title>Komplemen tanpa semesta</title><p>Catat semesta <m>U</m>; nilai <m>A^c</m> berubah ketika <m>U</m> berubah.</p></li>
+      <li><title>Menukar <q>untuk semua</q> dan <q>ada</q></title><p>Irisan memakai <m>\forall</m>; gabungan memakai <m>\exists</m>. Negasi menukar keduanya.</p></li>
+      <li><title>Contoh tandingan tidak memenuhi hipotesis</title><p>Periksa semua asumsi terlebih dahulu, baru tunjukkan bahwa kesimpulannya gagal.</p></li>
+      <li><title>Menganggap semua subhimpunan produk berbentuk produk</title><p>Produk <m>C\times D</m> harus memuat seluruh kombinasi silang, bukan hanya pasangan yang dipilih.</p></li>
+      <li><title>Mengabaikan kasus kosong</title><p>Uji <m>A=\emptyset</m>, keluarga indeks kosong, atau faktor produk kosong sebelum menyatakan inklusi ketat atau pembatalan.</p></li>
+    </dl></p>
+  </section>
+</appendix>

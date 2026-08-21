@@ -1,0 +1,460 @@
+<section xml:id="sec_union_int_comp">
+  <title>Gabungan, Irisan, dan Komplemen Himpunan</title>
+  <p>
+    Dalam matematika,
+    kumpulan titik yang membentuk seutas tali atau segumpal plastisin seperti dalam <xref ref="act_rubber_sheet"/> direpresentasikan sebagai suatu himpunan.
+    Topologi kemudian mempelajari himpunan-himpunan tersebut serta sifat-sifat yang tidak berubah ketika suatu transformasi diterapkan padanya.
+    Untuk mempelajari topologi, kita memerlukan pemahaman yang kuat tentang himpunan dan berbagai operasi pada himpunan.
+  </p>
+  <p>
+    <idx><h>himpunan</h></idx>
+    Apa yang kita jumpai dalam <xref ref="pa_sets"/>
+    disebut <term>paradoks</term>.
+    Upaya awal kita untuk mendefinisikan himpunan menghasilkan keadaan yang mustahil, karena baik <m>S \in S</m> maupun
+    <m>S \notin S</m> menimbulkan kontradiksi.
+    Paradoks ini disebut <term>paradoks Russell</term>, mengambil nama Bertrand Russell,
+    meskipun tampaknya paradoks tersebut telah diketahui sebelum Russell.
+    Pelajaran yang dapat kita ambil adalah bahwa kita harus berhati-hati ketika membuat definisi.
+    Himpunan mungkin tampak sebagai objek yang sederhana,
+    dan dalam pengalaman kita biasanya memang demikian,
+    tetapi mendefinisikan himpunan secara formal dapat menimbulkan masalah.
+    Oleh karena itu,
+    kita tidak akan memberikan definisi formal, melainkan menganggap himpunan
+    sebagai kumpulan objek yang tidak menimbulkan paradoks.
+    Objek-objek tersebut disebut anggota himpunan.
+    (Dalam teori himpunan aksiomatik,
+    himpunan dipandang sebagai konsep primitif yang tidak didefinisikan <mdash/> sebagaimana titik tidak didefinisikan dalam geometri Euklides.)
+  </p>
+  <p>
+    Agar dapat bekerja dengan himpunan secara efektif,
+    kita perlu memahami apa artinya dua himpunan sama.
+  </p>
+  <activity xml:id="act_set_equality">
+    
+      <task>
+        <statement>
+          <p>
+            Apa yang dimaksud dengan dua himpunan yang sama?
+            Jika <m>A</m> dan <m>B</m> adalah himpunan,
+            bagaimana kita membuktikan bahwa <m>A = B</m>? (Pertanyaan ini memerlukan pembahasan,
+            berbeda dengan pertanyaan yang hanya meminta perhitungan atau contoh.
+            Aktivitas di sepanjang buku ini akan memuat kedua jenis pertanyaan tersebut.)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Misalkan <m>A = \{x \in \R \mid x \lt 2\}</m> dan <m>B = \{x \in \R \mid x-1 \lt 1\}</m>.
+            Apakah <m>A=B</m>?
+            Jika ya, buktikan jawaban Anda.
+            Jika tidak, buktikan setiap inklusi yang berlaku.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Misalkan <m>A = \{n \in \Z \mid 2 \text{ membagi } n\}</m> dan <m>B = \{n \in \Z \mid 4 \text{ membagi } (n-2)\}</m>.
+            Apakah <m>A=B</m>?
+            Jika ya, buktikan jawaban Anda.
+            Jika tidak, buktikan setiap inklusi yang berlaku.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Misalkan <m>A = \{n \in \Z \mid n \text{ ganjil } \}</m> dan <m>B = \{n \in \Z \mid 4 \text{ membagi } (n-1) \text{ atau } 4 \text{ membagi } (n-3)\}</m>.
+            Apakah <m>A=B</m>?
+            Jika ya, buktikan jawaban Anda.
+            Jika tidak, buktikan setiap inklusi yang berlaku.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Setelah memiliki gagasan tentang himpunan,
+    kita dapat membentuk himpunan baru dari himpunan yang sudah ada.
+    Sebagai contoh, kita mendefinisikan gabungan, irisan,
+    selisih himpunan, dan komplemen sebagai berikut.
+    <ul>
+      <li>
+        <idx><h>himpunan</h><h>gabungan</h></idx>
+        <p>
+          <term>Gabungan</term>
+          himpunan <m>A</m> dan <m>B</m> adalah himpunan <m>A \cup B</m> yang didefinisikan sebagai
+          <me>
+            A \cup B = \{x \mid x \in A \text{ atau }  x \in B\}
+          </me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <term>Irisan</term>
+            <idx><h>himpunan</h><h>irisan</h></idx>
+          himpunan <m>A</m> dan <m>B</m> adalah himpunan <m>A \cap B</m> yang didefinisikan sebagai
+          <me>
+            A \cap B = \{x \mid x \in A \text{ dan }  x \in B\}
+          </me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Misalkan <m>A</m> dan <m>B</m> adalah himpunan.
+          <term>Selisih himpunan</term>
+            <idx><h>selisih himpunan</h></idx>
+          <m>A \setminus B</m> adalah himpunan
+          <me>
+            A \setminus B = \{a \in A \mid a \notin B\}
+          </me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Misalkan <m>A</m> merupakan himpunan bagian dari suatu himpunan <m>U</m>.
+          <term>Komplemen</term>
+            <idx><h>himpunan</h><h>komplemen</h></idx>
+          <m>A</m> di dalam <m>U</m> adalah himpunan
+          <me>
+            U \setminus A = \{x \in U \mid x \notin A\}
+          </me>.
+          Komplemen himpunan <m>A</m> di dalam himpunan <m>U</m> juga dinyatakan dengan <m>C_U(A)</m>,
+          <m>C(A)</m>
+          (jika himpunan <m>U</m> sudah dipahami dari konteks),
+          <m>A^c</m>, atau bahkan <m>U-A</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Kita dapat memvisualisasikan himpunan-himpunan ini dengan diagram Venn.
+    Diagram Venn menggambarkan himpunan menggunakan bangun-bangun geometri.
+    Sebagai contoh,
+    jika <m>U</m> adalah himpunan yang memuat semua himpunan lain yang sedang diperhatikan
+    (kita menyebut <m>U</m> sebagai himpunan <term>semesta</term>),
+    kita dapat merepresentasikan <m>U</m> sebagai wadah besar
+    (misalnya persegi panjang),
+    dengan himpunan bagian <m>A</m> dan <m>B</m> sebagai wadah yang lebih kecil
+    (misalnya lingkaran),
+    lalu mengarsir anggota-anggota suatu himpunan tertentu.
+    Diagram Venn dalam <xref ref="F_Venn"/>
+    menggambarkan himpunan <m>A</m>, <m>B</m>,
+    <m>A \cup B</m>, <m>A \cap B</m>,
+    <m>A^c</m>, dan <m>B^c</m>.
+  </p>
+  <figure xml:id="F_Venn">
+    <caption>Diagram Venn</caption>
+    <sbsgroup widths="">
+    
+    <sidebyside>
+      <image xml:id="venn-a" source="Venn_Diagram_A" width="50%"><description>Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A di kiri dan B di kanan. Seluruh lingkaran A, termasuk daerah irisannya dengan B, diarsir.</description></image>
+      <image xml:id="venn-b" source="Venn_Diagram_B" width="50%"><description>Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A di kiri dan B di kanan. Seluruh lingkaran B, termasuk daerah irisannya dengan A, diarsir.</description></image>
+      <image xml:id="venn-c" source="Venn_Diagram_union" width="50%"><description>Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Kedua lingkaran, termasuk daerah irisannya, diarsir untuk menunjukkan gabungan A dan B.</description></image>
+      </sidebyside>
+
+      <sidebyside valign="top">
+        <p><me>A</me></p>
+        <p><me>B</me></p>
+        <p><me>A \cup B</me></p>
+      </sidebyside>
+
+      <sidebyside>
+        <image xml:id="venn-d" source="Venn_Diagram_intersection" width="50%"><description>Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Hanya daerah berbentuk lensa tempat A dan B beririsan yang diarsir.</description></image>
+        <image xml:id="venn-e" source="Venn_Diagram_A_complement" width="50%"><description>Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Seluruh daerah di luar lingkaran A diarsir untuk menunjukkan komplemen A.</description></image>
+        <image xml:id="venn-f" source="Venn_Diagram_B_complement" width="50%"><description>Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Seluruh daerah di luar lingkaran B diarsir untuk menunjukkan komplemen B.</description></image>
+      </sidebyside>
+
+      <sidebyside valign="top">
+        <p><me>A \cap B</me></p>
+        <p><me>A^{c}</me></p>
+        <p><me>B^{c}</me></p>
+      </sidebyside>
+    </sbsgroup>
+  </figure>
+
+
+  <p>
+    Seperti yang telah kita bahas,
+    untuk membuktikan bahwa dua himpunan <m>X</m> dan <m>Y</m> sama, kita membuktikan bahwa masing-masing merupakan himpunan bagian dari yang lain.
+    Contoh berikut memberikan ilustrasi lain dari gagasan tersebut.
+  </p>
+  <example xml:id="ex_set_eq">
+    <statement>
+      <p>
+        Misalkan <m>A</m>, <m>B</m>, dan <m>C</m> adalah himpunan.
+        Kita akan membuktikan bahwa <m>A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)</m>.
+      </p>
+      <p>
+        Untuk membuktikan kesamaan himpunan ini, kita harus membuktikan bahwa
+        <m>A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)</m> dan <m>(A \cap B) \setminus (A \cap C) \subseteq A \cap (B \setminus C)</m>.
+        Kita mulai dengan <m>A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)</m>.
+      </p>
+      <p>
+        Untuk membuktikan bahwa <m>A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)</m>,
+        kita perlu menunjukkan bahwa setiap anggota
+        <m>A \cap (B \setminus C)</m> juga merupakan anggota <m>(A \cap B) \setminus (A \cap C)</m>.
+        Untuk itu, kita pilih sembarang anggota dari
+        <m>A \cap (B \setminus C)</m> dan menunjukkan bahwa anggota tersebut berada dalam <m>(A \cap B) \setminus (A \cap C)</m>.
+        Misalkan <m>x \in A \cap (B \setminus C)</m>.
+        Maka <m>x \in A</m> dan <m>x \in B \setminus C</m>.
+        Fakta bahwa <m>x \in B \setminus C</m> berarti bahwa <m>x \in B</m>, tetapi <m>x \notin C</m>.
+        Oleh karena itu, <m>x \in A</m> dan <m>x \in B</m>, tetapi <m>x \notin C</m>.
+        Ini berarti bahwa <m>x \in A</m> dan <m>x \in B</m>,
+        sedangkan <m>x \in A</m> dan <m>x \notin C</m>.
+        Jadi, <m>x \in A</m> dan <m>x \in B</m>,
+        tetapi <m>x \notin A \cap C</m>.
+        Kita menyimpulkan bahwa <m>x \in (A \cap B) \setminus (A \cap C)</m>.
+        Hal ini membuktikan bahwa <m>A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)</m>.
+      </p>
+      <p>
+        Untuk inklusi sebaliknya,
+        misalkan <m>y \in (A \cap B) \setminus (A \cap C)</m>.
+        Jadi, <m>y \in A \cap B</m>, tetapi <m>y \notin A \cap C</m>.
+        Karena <m>y \in A \cap B</m>, kita mengetahui bahwa <m>y \in A</m> dan <m>y \in B</m>.
+        Fakta bahwa <m>y \notin A \cap C</m>, bersama dengan keanggotaan yang telah disebutkan, berarti bahwa <m>y \notin C</m>.
+        Jadi, <m>y \in A</m>, <m>y \in B</m>, dan <m>y \notin C</m>.
+        Dengan demikian, <m>y \in A</m> dan <m>y \in B \setminus C</m>.
+        Kita menyimpulkan bahwa <m>y \in A \cap (B \setminus C)</m>,
+        yang menunjukkan bahwa <m>(A \cap B) \setminus (A \cap C) \subseteq A \cap (B \setminus C)</m>.
+        Kedua inklusi,
+        <m>A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)</m> dan
+        <m>(A \cap B) \setminus (A \cap C) \subseteq A \cap (B \setminus C)</m>, menunjukkan bahwa <m>A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Kita akan menggunakan gagasan dalam <xref ref="act_set_equality"/>
+    dan <xref ref="ex_set_eq"/>
+    untuk membuktikan kesamaan himpunan di sepanjang buku ini.
+    Aktivitas berikut memberikan latihan tambahan.
+  </p>
+  
+  <activity xml:id="act_sets_1">
+    <introduction>
+    <p>
+      Dalam aktivitas ini, kita bekerja dengan gabungan,
+      irisan, dan komplemen himpunan.
+      Misalkan <m>A</m> dan <m>B</m> adalah himpunan.
+    </p>
+    </introduction>
+      <task>
+        <introduction>
+          <p>
+            Misalkan <m>A = \{1,2,3,4,5,6\}</m> dan <m>B = \{2,4,6,8,10\}</m>,
+            dengan <m>U = \{1,2,3,4,5,6,7,8,9,10\}</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Tentukan anggota <m>A \cup B</m> dan <m>A \cap B</m>.
+                  Apa saja anggota <m>(A \cup B)^c</m> dan <m>(A \cap B)^c</m>?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Tentukan anggota <m>A^{c} \cup B^{c}</m> dan <m>A^{c} \cap B^{c}</m>.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+        <task>
+        <introduction>
+          <p>
+            Misalkan <m>A</m> dan <m>B</m> merupakan sembarang himpunan bagian dari suatu himpunan semesta <m>U</m>.
+            Terdapat hubungan antara <m>A</m>,
+            <m>B</m>, komplemen keduanya,
+            gabungan, dan irisan.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Gunakan diagram Venn untuk menggambar <m>(A \cup B)^c</m> dan <m>(A \cap B)^c</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Gunakan diagram Venn dan hasil pada bagian (a) untuk menemukan serta membuktikan hubungan antara <m>A^c</m>,
+                  <m>B^c</m>, dan <m>(A \cup B)^c</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Gunakan diagram Venn dan hasil pada bagian (a) untuk menemukan serta membuktikan hubungan antara <m>A^c</m>,
+                  <m>B^c</m>, dan <m>(A \cap B)^c</m>.
+                </p>
+              </statement>
+            </task>
+         
+        </task>
+    
+  </activity>
+  <p>
+    Dalam <xref ref="act_sets_1"/>
+    kita bekerja dengan gabungan dan irisan dua himpunan.
+    Tidak ada alasan untuk membatasi definisi ini hanya pada dua himpunan,
+    seperti yang ditunjukkan oleh aktivitas berikut.
+  </p>
+  <activity>
+  <idx><h>keluarga himpunan berindeks</h></idx>
+    <introduction>
+    <p>
+      Untuk mendefinisikan kumpulan himpunan tak hingga, kita sering menggunakan apa yang disebut <term>himpunan indeks</term>.
+      Himpunan indeks memungkinkan kita mempertimbangkan kumpulan objek yang berkorespondensi satu-satu dengan himpunan seperti bilangan bulat positif,
+      atau bahkan bilangan real.
+      Ketika menggunakan himpunan indeks,
+      biasanya kita membuat pernyataan seperti “misalkan <m>\{A_{\alpha}\}</m>, untuk
+      <m>\alpha \in I</m>, adalah kumpulan himpunan yang diindeks oleh suatu himpunan <m>I</m>”. Kumpulan <m>\{A_{\alpha}\}_{\alpha \in I}</m> disebut
+      <term>keluarga himpunan berindeks</term>.
+    </p>
+    </introduction>
+      <task>
+        <introduction>
+          <p>
+            Himpunan <m>I</m> dapat berhingga.
+            Sebagai contoh,
+            misalkan <m>A_{n} = \{1, 2, 3, \ldots n\}</m> untuk <m>n</m> dalam himpunan <m>I = \{1,2,3, \ldots, 10\}</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Tentukan <m>A_5</m>.
+                  Tentukan <m>A_{8}</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Ada berapa himpunan dalam keluarga berindeks <m>\{A_n\}_{n \in I}</m>?
+                </p>
+              </statement>
+            </task>
+        
+        </task>
+        <task>
+        <statement>
+          <p>
+            Himpunan indeks juga dapat tak hingga.
+            Sebagai contoh,
+            misalkan <m>A_{\alpha} = [0, |\alpha|)</m> untuk <m>\alpha</m> dalam himpunan <m>\R</m> (dengan <m>[a,b)</m> menyatakan interval yang terdiri atas bilangan real <m>x</m> sedemikian sehingga <m>a \leq x \lt b</m>).
+            Dalam hal ini, tentukan <m>A_5</m>.
+            Tentukan <m>A_{\pi}</m>.
+            Tentukan <m>A_{-\frac{2}{3}}</m>.
+          </p>
+        </statement>
+        </task>
+        <task>
+          <introduction>
+          <p>
+            Kita telah mendefinisikan gabungan dan irisan dua himpunan.
+            Gagasan yang sama dapat diperluas untuk mendefinisikan gabungan dan irisan suatu kumpulan himpunan berindeks.
+          </p>
+          </introduction>
+            <task>
+             <idx><h>himpunan</h><h>irisan sembarang</h></idx>
+              <statement>
+                <p>
+                  Ingat bahwa jika <m>A</m> dan <m>B</m> adalah himpunan,
+                  irisan <m>A \cap B</m> adalah himpunan <m>\{x \mid x \in A \text{ dan }  x \in B\}</m>.
+                  Bagaimana kita dapat memperluas definisi ini dari dua himpunan menjadi sebarang kumpulan himpunan?
+                  Dengan kata lain, bagaimana kita <em>mendefinisikan</em>
+                  <me>
+                    \bigcap_{\alpha \in I} A_{\alpha}?
+                  </me>
+                  Dalam contoh pada bagian (b),
+                  himpunan apakah <m>\ds \bigcap_{\alpha \in \R} A_{\alpha}</m> itu?
+                </p>
+              </statement>
+        </task>
+        <task>
+        <idx><h>himpunan</h><h>gabungan sembarang</h></idx>
+              <statement>
+                <p>
+                  Ingat bahwa jika <m>A</m> dan <m>B</m> adalah himpunan,
+                  gabungan <m>A \cup B</m> adalah himpunan <m>\{x \mid x \in A \text{ atau }  x \in B\}</m>.
+                  Bagaimana kita dapat memperluas definisi ini dari dua himpunan menjadi sebarang kumpulan himpunan?
+                  Dengan kata lain, bagaimana kita <em>mendefinisikan</em>
+                  <me>
+                    \bigcup_{\alpha \in I} A_{\alpha}?
+                  </me>
+                  Dalam contoh pada bagian (b),
+                  himpunan apakah <m>\ds \bigcup_{\alpha \in \R} A_{\alpha}</m> itu?
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+  
+  </activity>
+
+  <p>
+    Sifat <m>(A \cap B)^c = A^c \cup B^c</m> dan
+    <m>(A \cup B)^c = A^c \cap B^c</m> yang kita pelajari dalam <xref ref="act_sets_1"/> disebut Hukum De Morgan.
+    Hukum ini berlaku untuk sebarang gabungan atau irisan himpunan,
+    baik berhingga maupun tak hingga.
+    Pembuktiannya diserahkan kepada <xref ref="ex_DeMorgan"/>.
+  </p>
+
+  <theorem>
+    <title>Hukum De Morgan</title>
+    <statement>
+      <p>
+        Misalkan <m>\{A_{\alpha}\}</m> adalah kumpulan himpunan yang diindeks oleh suatu himpunan <m>I</m> di dalam himpunan semesta <m>U</m>.
+        Maka
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \left(\bigcup_{\alpha \in I} A_{\alpha}\right)^c = \bigcap_{\alpha \in I} A_{\alpha}^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \left(\bigcap_{\alpha \in I} A_{\alpha}\right)^c = \bigcup_{\alpha \in I} A_{\alpha}^c</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+
+  <activity>
+
+      <task>
+        <statement>
+          <p>
+            Verifikasikan Hukum De Morgan untuk kasus khusus <m>A_{\alpha} = \{1, 2, 3, \ldots \alpha\}</m> di dalam <m>U = \Z</m>,
+            dengan <m>\alpha</m> sebarang anggota himpunan indeks <m>I = \Z^+</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Mengapa komplemen suatu gabungan seharusnya berupa irisan, dan mengapa komplemen suatu irisan seharusnya berupa gabungan?
+            
+          </p>
+        </statement>
+        <hint>
+              <p>
+                Perhatikan definisi gabungan dan irisan.
+              </p>
+            </hint>
+      </task>
+  
+  </activity>
+</section>

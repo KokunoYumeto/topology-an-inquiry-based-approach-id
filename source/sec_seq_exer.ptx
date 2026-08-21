@@ -1,0 +1,380 @@
+<exercises xml:id="sec_seq_exer">
+  
+  <exercise>
+    <introduction>
+      <p>
+        Determine, with proof,
+        the convergence or divergence of each of the following sequences in the indicated metric spaces.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>a_n = 1+\frac{1}{n}</m> in <m>(\R, d_E)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>a_n = (2,n)</m> in <m>(\R^2, d_M)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>a_n</m> is the function defined by
+              <me>
+                a_n(x) = \frac{1}{n}x
+              </me>
+              where <m>X</m> is the set of real valued functions on the interval <m>[0,1]</m> and the metric <m>d</m> is defined by
+              <me>
+                d(f,g) = \sup\{|f(x)-g(x)| \mid x \in [0,1]\}
+              </me>.
+              (See <xref ref="ex_GLB_function_sup_metric"/>.)
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>A</m> be a subset of <m>\R</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that if <m>A</m> is bounded above,
+              then there is a sequence <m>(a_n)</m> in <m>A</m> such that <m>\lim a_n = \sup(A)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that if <m>A</m> is bounded below,
+              then there is a sequence <m>(a_n)</m> in <m>A</m> such that <m>\lim a_n = \inf(A)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Are the limits from (a) or (b) necessarily in <m>A</m>?
+              Explain.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X,d)</m> be a metric space,
+        let <m>x \in X</m>, and let <m>A</m> be a nonempty subset of <m>X</m>.
+        Recall that the distance from <m>x</m> to <m>A</m> is
+        <me>
+          d(x,A) = \inf \{d(x,a) \mid a \in A
+        </me>.
+        In this exercise we see how we can view the distance between a point and a set in terms of sequences.
+        Let <m>m = d(x,A)</m>.
+        We will show that there must be a sequence <m>(a_n)</m> in <m>A</m> so that <m>d(x,A) = \lim d(x,a_n)</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              For each <m>n \in \Z^+</m>, let <m>B_n = B\left(x;m+\frac{1}{n}\right)</m>.
+              Why must <m>B_n \cap A \neq \emptyset</m> for each <m>n \in \Z^+</m>?
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>a_n \in B_n \cap A</m> for each <m>n</m>.
+              What property does this sequence have?
+              Explain how we have just proved the following theorem.
+            </p>
+              <theorem>
+                <statement>
+                  <p>
+                    Let <m>(X,d)</m> be a metric space,
+                    let <m>x \in X</m>, and let <m>A</m> be a nonempty subset of <m>X</m>.
+                    Then there exists a sequence <m>(a_n)</m> in <m>A</m> such that
+                    <me>
+                      \lim d(x,a_n) = d(x,A)
+                    </me>.
+                  </p>
+                </statement>
+              </theorem>
+            
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <task>
+ 
+          <statement>
+            <p>
+              Let <m>(Y,d')</m> be a subspace of <m>(X,d)</m>.
+              Let <m>a_1</m>, <m>a_2</m>,
+              <m>\ldots</m> be a sequence of points in <m>Y</m> and let <m>a \in Y</m>.
+              Prove that if <m>\lim_n a_n = a</m> in <m>(Y,d')</m>,
+              then <m>\lim_n a_n = a</m> in <m>(X,d)</m>.
+            </p>
+          </statement>
+    </task>
+    <task>
+          <statement>
+            <p>
+              Show that the converse of part (a) is false by considering the subspace <m>(\Q, d_{\Q})</m>
+              (the rational numbers)
+              of <m>(R,d)</m>.
+              Let <m>a_1</m>, <m>a_2</m>,
+              <m>\ldots</m> be a sequence of rational numbers such that <m>\lim_n a_n = \sqrt{2}</m>.
+              Prove that , given <m>\epsilon \gt 0</m>,
+              there is a positive integer <m>N</m> such that for <m>n,
+              m \gt N</m>,
+              <m>|a_n - a_m | \lt \epsilon</m>.
+              Does the sequence <m>a_1</m>, <m>a_2</m>,
+              <m>\ldots</m> converge when considered to be a sequence of points in <m>\Q</m>?
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_limit_properties">
+    <introduction>
+      <p>
+        In this exercise we prove some standard results about limits of sequences from calculus.
+        Let <m>(a_n)</m> and <m>(b_n)</m> be convergent sequences in a metric space <m>(\R,d_E)</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\lim ka_n = k \lim a_n</m> for any real number <m>k</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\lim (a_n + b_n) = \lim a_n + \lim b_n</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that the sequence <m>(a_n)</m> is bounded.
+              That is, show that there is a positive real number <m>M</m> such that
+              <m>|a_n| \leq M</m> for all <m>n \in \Z^+</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that <m>\lim a_nb_n = \lim a_n \ \lim b_n</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>b_n \neq 0</m> for every <m>n</m> and <m>\lim b_n \neq 0</m>,
+              show that <m>\lim \frac{a_n}{b_n} = \frac{\lim a_n}{\lim b_n}</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>f</m> and <m>g</m> be continuous functions from <m>\R</m> to <m>\R</m>,
+        both with the standard Euclidean metric.
+        Define the function <m>fg</m> from <m>\R</m> to <m>\R</m> by
+        <me>
+          (fg)(x) = f(x)g(x) \text{ for every }  x \in \R
+        </me>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>fg</m> is a continuous function.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Assume that <m>g(x) \neq 0</m> for every <m>x \in \R</m>.
+              Define the function <m>\frac{f}{g}</m> from <m>\R</m> to <m>\R</m> by
+              <m>\frac{f}{g}(x) = \frac{f(x)}{g(x)}</m> for every <m>x \in \R</m>.
+              Use the definition of continuity to prove that
+              <m>\frac{f}{g}</m> is a continuous function.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(c_n) = (a_n,b_n)</m> be a sequence in <m>(\R^2, d_E)</m>.
+        Show that the sequence <m>(c_n)</m> converges to a point <m>(a,b)</m> if and only if <m>(a_n)</m> converges to <m>a</m> and <m>(b_n)</m> converges to <m>b</m> in <m>(\R, d_E)</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Define <m>f : (\R,d_E) \to (\R,d_E)</m> by
+        <me>
+          f(x) = \begin{cases}0 \amp \text{ if }  x \text{ is irrational }  \\ x \amp \text{ if }  x \text{ is rational. } \end{cases}
+        </me>
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that <m>f</m> is continuous at exactly one point.
+              Assume that both copies of <m>\R</m> are given the Euclidean topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Modify the function <m>f</m> to construct a new function
+              <m>g: \R \to \R</m> such that <m>g</m> is continuous at exactly the numbers <m>0</m> and <m>1</m>.
+              Prove your result.
+              Can you see how to extend this to construct a function
+              <m>h: \R \to \R</m> that is continuous at any given finite number of points?
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be the set of real valued functions on the interval <m>[0,1]</m> and let <m>d</m> be the metric on <m>X</m> defined by
+        <me>
+          d(f,g) = \sup\{|f(x)-g(x)| \mid x \in [0,1]\}
+        </me>.
+        (See <xref ref="ex_GLB_function_sup_metric"/>.)  There is a difference between the point-wise convergence of a sequence of functions and convergence in the metric space <m>(X,d)</m> that we explore in this exercise.
+        For each <m>n \in \Z^+</m>,
+        define <m>f_n :[0,1] \to \R</m> by <m>f_n(x) = x^n</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>0 \leq a \lt 1</m>.
+              Show that the sequence <m>(a_n)</m> where
+              <m>a_n = a^n</m> converges to <m>0</m> in <m>(\R, d_E)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Since the sequence <m>(1)</m> converges to <m>1</m>,
+              if we look at the behavior at each point,
+              we might think that the sequence <m>(f_n)</m> converges to the function <m>f</m> defined by
+              <men xml:id="eq_0_1_function">
+                f(x) = \begin{cases} 0 \amp \text{ if }  x \neq 1 \\ 1 \amp \text{ if }  x=1. \end{cases}
+              </men>
+              Determine if the sequence <m>(f_n)</m> converges to <m>(f)</m> in the metric space <m>(X,d)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Suppose now we consider the sequence <m>(f_n)</m> as a sequence of functions in <m>C[0,1]</m>,
+              the space of continuous functions from <m>\R</m> to <m>\R</m>,
+              using the metric
+              <me>
+                d(f,g) = \int_0^1 |f(x) - g(x)| \,dx
+              </me>.
+              (Refer to <xref ref="act_MS_metrics"/>.) The function in <xref ref="eq_0_1_function"/> is not a continuous function,
+              so can't be a limit of the sequence <m>(f_n)</m> in <m>C[01]</m>.
+              Determine if the sequence <m>(f_n)</m> has a limit in <m>C[0,1]</m>.
+              If so, what is the limit?
+              If not, verify that the sequence has no limit.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>(a_n)</m> is a sequence in
+              <m>(\R, d_E)</m> with <m>a_{n+1} \lt a_n</m> for each
+              <m>n \in \Z^+</m> and the set <m>\{a_n\}</m> is bounded below,
+              then <m>\inf \{a_n \mid n \in \Z^+\}</m> is the limit of the sequence <m>(a_n)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>X</m> be a metric space and <m>A</m> a nonempty subset of <m>X</m>.
+              If <m>a \in X</m> and if <m>B(a,r)</m> in <m>X</m> contains a point of <m>A</m> for every <m>r \gt 0</m>,
+              then there is a sequence in <m>A</m> that converges to <m>a</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>R</m> be a nonempty subset of <m>\R</m> that is bounded above and below.
+              If <m>S</m> is a nonempty subset of <m>\R</m> and
+              <m>x \leq y</m> for all <m>x \in S</m> and for all <m>y \in R</m>,
+              then <m>\sup(S) \leq \inf(R)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              The sequence <m>\left(\frac{1}{n}\right)</m> converges to <m>0</m> in the metric space <m>Q</m> of all rational numbers in reduced form with metric <m>d</m> defined by
+              <me>
+                d\left(\frac{a}{b}, \frac{r}{s}\right) = \max\{| a-r |, | b-s |\}
+              </me>.
+              (See <xref ref="ex_MS_Q_metric"/>.)
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              The only convergent sequences in a metric space <m>(X,d)</m> with discrete metric <m>d</m> are the sequences that are eventually constant. (A sequence <m>(a_n)</m> in a metric space <m>X</m> is eventually constant if there is an element <m>a \in X</m> and an
+              <m>N \in \Z^+</m> such that <m>a_n = a</m> for all <m>n \geq N</m>.)
+            </p>
+          </statement>
+        </task>
+   
+  </exercise>
+</exercises>

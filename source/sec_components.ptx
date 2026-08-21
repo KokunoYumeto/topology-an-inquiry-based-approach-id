@@ -1,0 +1,144 @@
+<section xml:id="sec_components">
+  <title>Components</title>
+  <p>
+    As <xref ref="act_connected_subsets_R"/> demonstrates,
+    spaces like <m>A = (1,2) \cup (3,4)</m> are not connected.
+    Even so, <m>A</m> is made of two connected subsets <m>(1,2)</m> and <m>(3,4)</m>.
+    These connected subsets are called <term>components</term>.
+  </p>
+
+  <definition>
+  <idx><h>component</h></idx>
+    <statement>
+      <p>
+        A subspace <m>C</m> of a topological space <m>X</m> is a <term>component</term>
+        (or <term>connected component</term>) of <m>X</m> if <m>C</m> is connected and there is no larger connected subspace of <m>X</m> that contains <m>C</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    As an example, if <m>X = (1,2) \cup [4,10) \cup \{-1,15\}</m>,
+    then the components of <m>X</m> are <m>(1,2)</m>, <m>[4,10)</m>,
+    <m>\{-1\}</m> and <m>\{15\}</m>.
+    As the next activity shows,
+    we can always partition a topological space into a disjoint union of compenents.
+  </p>
+
+  <activity xml:id="act_connected_compenent">
+  <introduction>
+    <p>
+      Let <m>(X, \tau)</m> be a nonempty topological space.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            Show that if <m>x \in X</m>, then <m>\{x\}</m> is connected.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that <m>X</m> is a topological space and
+            <m>\{A_{\alpha}\}</m> for <m>\alpha</m> in some indexing set <m>I</m> is a collection of connected subsets of <m>X</m>.
+            Let <m>A = \bigcup_{\alpha \in I} A_{\alpha}</m>.
+            Suppose that <m>\bigcap_{\alpha \in I} A_{\alpha} \neq \emptyset</m>.
+            Show that <m>A</m> is a connected subset of <m>X</m>.
+            
+          </p>
+        </statement>
+        <hint>
+              <p>
+                Assume a separation and use <xref ref="lem_separation_subset"/>.
+              </p>
+            </hint>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            Part (a) shows that every element in <m>x</m> belongs to some connected subset of <m>X</m>.
+            So we can write <m>X</m> as a union of connected subsets.
+            But there is probably overlap.
+            To remove the overlap,
+            we define the following relation <m>\sim</m> on <m>X</m>: For <m>x</m> and <m>y</m> in <m>X</m>,
+            <m>x \sim y</m> if <m>x</m> and <m>y</m> are contained in the same connected subset of <m>X</m>.
+            As with any relation, we ask if <m>\sim</m> is an equivalence relation.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Is <m>\sim</m> a reflexive relation?
+                  Why or why not?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Is <m>\sim</m> a symmetric relation?
+                  Why or why not?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Is <m>\sim</m> a transitive relation?
+                  Why or why not?
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+     
+  </activity>
+  
+  <p>
+    <xref ref="act_connected_compenent"/>
+    shows that the relation <m>\sim</m> is an equivalence relation,
+    and so partitions the underlying topological space <m>X</m> into disjoint sets.
+    If <m>x \in X</m>,
+    then the equivalence class of <m>x</m> is a connected subset of <m>X</m>.
+    There can be no larger connected subset of <m>X</m> that contains <m>x</m>,
+    since equivalence classes are disjoint or the same.
+    So the equivalence classes are exactly the connected components of <m>X</m>.
+    The components of a topological space <m>X</m> satisfy several properties.
+    <ul>
+      <li>
+        <p>
+          Each <m>a \in X</m> is an element of exactly one connected component <m>C_a</m> of <m>X</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A component <m>C_a</m> contains all connected subsets of <m>X</m> that contain <m>a</m>.
+          Thus, <m>C_a</m> is the union of all connected subsets of <m>X</m> that contain <m>a</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>a</m> and <m>b</m> are in <m>X</m>,
+          then either <m>C_a = C_b</m> or <m>C_a \cap C_b = \emptyset</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Every connected subset of <m>X</m> is a subset of a connected component.
+        </p>
+      </li>
+      <li>
+        <p>
+          Every connected component of <m>X</m> is a closed subset of <m>X</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The space <m>X</m> is connected if and only if <m>X</m> has exactly one connected component.
+        </p>
+      </li>
+    </ul>
+  </p>
+</section>

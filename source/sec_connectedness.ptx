@@ -1,0 +1,41 @@
+<section xml:id="sec_connectedness">
+  <title>Path Connectedness and Connectedness</title>
+  <p>
+    Path connectedness and connectedness are different concepts,
+    but they are related.
+    In this section we will show that any path connected space must also be connected.
+    We will see later that the converse is not true except in finite topological spaces.
+  </p>
+
+  <theorem xml:id="thm_pctoc">
+    <statement>
+      <p>
+        If a topological space <m>X</m> is path connected,
+        then <m>X</m> is connected.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Suppose that <m>X</m> is path connected.
+      Let <m>a \in X</m> and for any <m>x \in X</m> let <m>p_x</m> be a path from <m>a</m> to <m>x</m>.
+      Let <m>C_x = p_x([0,1])</m>.
+      Now <m>C_x</m> is the continuous image of the connected set <m>[0,1]</m> in <m>\R</m>,
+      so <m>C_x</m> is connected.
+      Also, <m>p_x(0) = a \in C_x</m> and <m>p_x(1) = x \in C_x</m>.
+      Thus, every set <m>C_x</m> contains <m>a</m> and so <m>\bigcap_{x \in X} C_x</m> is not empty.
+      Therefore,
+      <me>
+        C = \bigcup_{x \in X} C_x
+      </me>
+      is a connected subset of <m>X</m>.
+      But every <m>x \in X</m> is in a <m>C_x</m>, so <m>C = X</m>.
+      We conclude that <m>X</m> is connected.
+    </p>
+  </proof>
+  </theorem>
+  <p>
+    In the following sections we explore the reverse implication in <xref ref="thm_pctoc"/> <mdash/> that is,
+    does connectedness imply path connectedness.
+  </p>
+</section>

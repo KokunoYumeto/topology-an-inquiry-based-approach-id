@@ -1,0 +1,315 @@
+<exercises xml:id="sec_open_balls_exer">
+  
+  <exercise>
+    <introduction>
+      <p>
+        Determine, with proof,
+        which of the following sets <m>A</m> is a neighborhood of <m>a</m> in the indicated metric space.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>A = \{(x,y) \in \R^2 \mid x^2+y^2 \lt 1\}</m> in
+              <m>(\R^2,d_E)</m> with <m>a = (0.5,0.5)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>A</m> is the <m>x</m>-axis in
+              <m>(\R^2,d_T)</m> with <m>a =(0,0)</m>,
+              where <m>d_T</m> is the taxicab metric
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>A</m> is the set of rational numbers in <m>(\R, d_E)</m> with <m>a = 0</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>A</m> is the set of positive integers in <m>(Q,d)</m> and <m>a = 1</m>,
+              where <m>Q</m> is the set of all rational numbers in reduced form with metric <m>d : Q \times Q \to \R</m> defined by
+              <me>
+                d\left(\frac{a}{b}, \frac{c}{d}\right) = \max\{| a-c |, | b-d |\}
+              </me>
+              (The fact that <m>d</m> is a metric is the topic of <xref ref="ex_MS_Q_metric"/>.)
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>X = \{1,3,5\}</m> and define
+        <m>d_X: X \times X \to \R</m> by <m>d_X(x,y) = xy - 1 \pmod{8}</m>.
+        That is, <m>d_X(x,y)</m> is the remainder when <m>xy - 1</m> is divided by <m>8</m>.
+        That <m>d_X</m> is a metric on <m>X</m> is examined in <xref ref="ex_MS_mod_metric"/>.
+        Let <m>(Y,d_Y)</m> be a metric space.
+        Is it possible to define a function
+        <m>f: X \to Y</m> that is not continuous?
+        Explain.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>x = (x_1, x_2, \ldots, x_n)</m>,
+        we let <m>|x| = \sqrt{x_1^2+x_2^2+ \cdots + x_n^2}</m>.
+        For <m>x = (x_1, x_2, \ldots,
+        x_n)</m> and <m>y = (y_1, y_2, \ldots y_n)</m>,
+        define <m>d_H: \R^n \times \R^n \to \R</m> by
+        <me>
+          d_H(x,y) = \begin{cases}0 \amp \text{ if }  x=y \\ |x|+|y| \amp \text{ otherwise } . \end{cases}
+        </me>
+        The fact that <m>d_H</m> is a metric is examined in <xref ref="ex_MS_hub"/>.
+        Let <m>(X,d_X) = (\R^2, d_H)</m> and let <m>(Y,d_Y) = (\R, d_E)</m>.
+        Define <m>f: X \to Y</m> and <m>g: X \to Y</m> by
+        <me>
+          f(x) = \begin{cases}0 \amp \text{ if }  x = (0,0) \\ 1 \amp \text{ otherwise } \end{cases}  \  \text{ and }  \ g(x) = \begin{cases}0 \amp \text{ if }  |x|\lt 1 \\ 1 \amp \text{ otherwise } \end{cases}
+        </me>.
+        One of <m>f</m>, <m>g</m> is continuous and the other is not.
+        Determine which is which, with proof for each.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Recall from <xref ref="chap_metric_spaces"/>
+        that we can construct a finite metric space by starting with a finite set of points and making a graph with the points as vertices.
+        We construct edges so that the graph is connected
+        (that is, there is a path from any one vertex to any other)
+        and give weights to the edges.
+        We then define a metric <m>d</m> on <m>S</m> by letting <m>d(x,y)</m> be the length of a shortest path between vertices <m>x</m> and <m>y</m> in the graph.
+        Consider the metric space <m>(X,d)</m> corresponding to the graph in <xref ref="F_Graph_metric_ex"/>.
+      </p>
+        <figure xml:id="F_Graph_metric_ex">
+          <caption>A graph to define a metric.</caption>
+          <image width="35%" source="Graph_metric"/>
+        </figure>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Determine all of the open balls
+              <m>B(a,\delta)</m> for every positive real number <m>\delta</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Find all of the neighborhoods of <m>a</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_linear_continuous1">
+    
+      <task>
+        <statement>
+          <p>
+            Let <m>f: (\R,d_E) \to (\R,d_E)</m> be defined by
+            <m>f(x) = ax+b</m> for some real numbers <m>a</m> and <m>b</m> with <m>a \neq 0</m>.
+            Let <m>p \in \R</m> and let <m>r \gt 0</m>.
+            Show that <m>f^{-1}(B(f(p),r))</m> contains an open ball centered at <m>p</m>.
+            Conclude that every linear function from
+            <m>(\R,d_E)</m> to <m>(\R,d_E)</m> is continuous.
+            
+          </p>
+        </statement>
+        <hint>
+              <p>
+                By <xref ref="ex_sum_continuous"/>
+                we can assume <m>a \gt 0</m> to simplify the problem.
+              </p>
+            </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>f: (\R,d_E) \to (\R,d_E)</m> be defined by
+            <m>f(x) = ax^2+bx+c</m> for some real numbers <m>a</m>,
+            <m>b</m>,
+            and <m>c</m> with <m>a \neq 0</m>.
+            Let <m>p \in \R</m> and let <m>r \gt 0</m>.
+            <m>f^{-1}(B(f(p),r))</m> contains an open ball centered at <m>p</m>.
+            Conclude that every quadratic function from
+            <m>(\R,d_E)</m> to <m>(\R,d_E)</m> is continuous.
+            
+          </p>
+        </statement>
+        <hint>
+              <p>
+                Consider cases.
+              </p>
+            </hint>
+      </task>
+    </exercise>
+  
+  <exercise xml:id="ex_metric_continuous">
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space,
+        and let <m>A</m> be a nonempty subset of <m>X</m>.
+        <xref ref="ex_GLB_triangle"/> tells us that
+        <me>
+          d(b,A) \leq d(b,c) + d(c,A)
+        </me>
+        for all <m>b, c \in X</m>.
+        Define <m>f: X \to \R</m> by <m>f(x) = d(x,A)</m>.
+        Let <m>b \in X</m>.
+        Given <m>\epsilon \gt 0</m>,
+        show that there is a neighborhood <m>N</m> of <m>b</m> such that <m>x \in N</m> implies <m>f(x) \in B(f(b),\epsilon)</m>.
+        Conclude that <m>f</m> is a continuous function.
+        (Assume the metric on <m>\R</m> is the Euclidean metric.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>a</m> and <m>b</m> be distinct points of a metric space <m>X</m>.
+        Prove that there are neighborhoods <m>N_a</m> and <m>N_b</m> of <m>a</m> and <m>b</m> respectively such that <m>N_a \cap N_b = \emptyset</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex_Nghb_properties">
+    <introduction>
+      <p>
+        Let <m>(X,d)</m> be a metric space and let <m>a \in X</m>.
+        Prove each of the following.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              There is a neighborhood that contains <m>a</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>N</m> is a neighborhood of <m>a</m> and <m>N \subseteq M</m>,
+              then <m>M</m> is a neighborhood of <m>a</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>M</m> and <m>N</m> are neighborhoods of <m>a</m>,
+              then so is <m>M \cap N</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f: (\R,d_E) \to (\R,d_E)</m> be a continuous function.
+        Show that if <m>f(a) \gt 0</m> for some <m>a \in \R</m>,
+        then there is a neighborhood <m>N</m> of <m>a</m> such that
+        <m>f(x) \gt 0</m> for all <m>x \in N</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space where <m>d</m> is the discrete metric.
+        Show that every subset of <m>X</m> is a neighborhood of each of its points.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>N</m> is a neighborhood of a point <m>a</m> in a metric space <m>X</m>,
+              then any open ball contained in <m>N</m> is also a neighborhood of <m>a</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>N</m> is a neighborhood of a point <m>a</m> in a metric space <m>X</m>,
+              then <m>N</m> is a neighborhood of each of its points.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> and <m>Y</m> are metric spaces and
+              <m>f : X \to Y</m> is a continuous function,
+              then <m>f(N)</m> is a neighborhood of <m>f(a)</m> in <m>Y</m> whenever <m>N</m> is a neighborhood of <m>a</m> in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> and <m>Y</m> are metric spaces and
+              <m>f : X \to Y</m> is continuous at <m>a \in X</m>,
+              and <m>N</m> is a neighborhood of <m>f(a)</m> in <m>Y</m>,
+              then <m>f^{-1}(N)</m> is a neighborhood of <m>a</m> in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>a</m> is a point in a metric space <m>X</m> and if <m>\delta</m> is a positive real number,
+              then the open ball <m>B(a,\delta)</m> contains infinitely many points of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>N_1</m>, <m>N_2</m>, <m>\ldots</m>,
+              <m>N_k</m> are neighborhoods of a point <m>a</m> in a metric space <m>X</m> for some positive integer <m>k</m>,
+              then <m>\bigcap_{i=1}^k N_i</m> is a neighborhood of <m>a</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>N_{\alpha}</m> is a neighborhood of a point <m>a</m> in a metric space <m>X</m> for all <m>\alpha</m> in some indexing set <m>I</m>,
+              then <m>\bigcap_{\alpha \in I} N_{\alpha}</m> is a neighborhood of <m>a</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+  
+</exercises>

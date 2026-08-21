@@ -1,0 +1,60 @@
+<section xml:id="sec_quotient_top">
+  <title>The Quotient Topology</title>
+  <p>
+    Given a topological space <m>X</m> and a surjection <m>p</m> from <m>X</m> to a set <m>Y</m>, we can use the topology on <m>X</m> to define a topology on <m>Y</m>. This topology on <m>Y</m> identifies points in <m>X</m> through the function <m>p</m>. The resulting function on <m>Y</m> is called a <term>quotient</term> topology.
+    The quotient topology gives us a way of creating a topological space which models gluing and collapsing parts of a topological space.
+  </p>
+
+  <exploration>
+    <introduction>
+    <p>
+      Let <m>X = \{1,2,3,4,5,6\}</m> and let <m>\tau = \{\emptyset, \{1,2\},\{4,6\}, \{1,2,4,6\},X\}</m>.
+      Let <m>Y = \{a,b,c,d\}</m> and define <m>p: X \to Y</m> by
+      <me>
+        p(1) = b, \ p(2) = a, \ p(3) = c, \ p(4) = d, \ p(5) = c, \ \text{ and }  \ p(6) = a
+      </me>.
+    </p>
+    <p>
+      Our goal in this activity is to define a topology on <m>Y</m> that is related to the topology on <m>X</m> via <m>p</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            We know the sets in <m>X</m> that are open.
+            So let us consider the sets <m>U</m> in <m>Y</m> such that <m>p^{-1}(U)</m> is open in <m>X</m>.
+            Define <m>\sigma</m> to be this set.
+            That is
+            <me>
+              \sigma = \{U \subseteq Y \mid p^{-1}(U) \in \tau\}
+            </me>.
+            Find all of the sets in <m>\sigma</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that <m>\sigma</m> is a topology on <m>Y</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Explain why <m>p : (X, \tau) \to (Y, \sigma)</m> is continuous.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that <m>\sigma</m> is the largest topology on <m>Y</m> for which <m>p</m> is continuous.
+            That is, if <m>\sigma'</m> is a topology on <m>Y</m> with <m>\sigma \subsetneqq \sigma'</m>,
+            then <m>p: (X,\tau) \to (Y, \sigma')</m> is not continuous.
+          </p>
+        </statement>
+      </task>
+    
+  </exploration>
+</section>

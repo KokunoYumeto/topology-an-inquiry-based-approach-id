@@ -1,0 +1,174 @@
+<section xml:id="sec_connect_infinite">
+  <title>Path Connectedness and Connectedness in Infinite Topological Spaces</title>
+  <idx><h>topologist's sine curve</h></idx>
+  <p>
+    Given that connectedness and path connectedness are equivalent in finite topological spaces,
+    a reasonable question now is whether the converse of <xref ref="thm_pctoc"/>
+    is true in arbitrary topological spaces.
+    As we will see, the answer is no.
+    To find a counterexample, we need to look in an infinite topological space.
+    There are many examples,
+    but a standard example to consider is the
+    <term>topologist's sine curve</term>.
+    This curve <m>S</m> is defined as the union of the sets
+    <me>
+      S_1 = \{(0,y) \mid -1 \leq y \leq 1\}  \ \text{ and }  \ S_2 = \left\{ \left(x,\sin\left(\frac{1}{x}\right)\right) \Big| \ 0 \lt  x \leq 1\right\}
+    </me>.
+  </p>
+  <p>
+    A picture of <m>S</m> is shown in <xref ref="F_T_sin"/>.
+  </p>
+
+  <figure xml:id="F_T_sin">
+    <caption>The topologist's sine curve.</caption>
+    <image width="50%" source="T_sin"/>
+  </figure>
+
+  <p>
+    To understand if <m>S</m> is connected,
+    let us consider the relationship between <m>S</m> and <m>S_2</m>.
+    <xref ref="F_T_sin"/>
+    seems to indicate that <m>S = \overline{S_2}</m>.
+    To see if this is true, let <m>q=(0,y) \in S_1</m>,
+    and let <m>N</m> be a neighborhood of <m>q</m>.
+    Then there is an <m>\epsilon \gt 0</m> such that <m>B = B(q, \epsilon) \subseteq N</m>.
+    Choose <m>K \in \Z^+</m> such that <m>\frac{1}{\arcsin(y)+2 \pi K} \lt  \epsilon</m>,
+    and let <m>z = \frac{1}{\arcsin(y)+2 \pi K}</m>.
+    Then
+    <md>
+      <mrow>d_E\left(q,\left(z, \sin\left(\frac{1}{z}\right)\right)\right) \amp =  d_E\left((0,y),(z, \sin(\arcsin(y)+2 \pi K)\right)</mrow>
+      <mrow>\amp = d_E((0,y), (z,\sin(\arcsin(y))))</mrow>
+      <mrow>\amp = d_E((0,y), (z,y))</mrow>
+      <mrow>\amp = \la z \ra</mrow>
+      <mrow>\amp \lt  \epsilon</mrow>
+    </md>,
+    and so <m>\left(z, \arcsin(z)\right) \in B(q, \epsilon)</m> and every neighborhood of <m>q</m> contains a point in <m>S_2</m>.
+    Therefore, <m>S_1 \subseteq S_2' \subseteq \overline{S_2}</m> and <m>\overline{S_2} = S</m> in <m>S</m>.
+    The fact that <m>S</m> is connected follows from <xref ref="thm_connected_limitpoints"/>.
+  </p>
+  <p>
+    Now that we know that <m>S</m> is connected,
+    the following theorem demonstrates that <m>S</m> is a connected space that is not path connected.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        The topologist's sine curve is connected but not path connected.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      We know that <m>S</m> is connected,
+      so it remains to show that <m>S</m> is not path connected.
+      The sets <m>S_1</m> and <m>S_2</m> are connected (as continuous images of the interval <m>[0,1]</m> and <m>(0,1]</m>,
+      respectively).
+      We will prove that there is no path <m>p</m> in <m>S</m> from <m>p(0) = (0,0)</m> to
+      <m>p(1) =  b</m> for any point <m>b \in S_2</m> by contradiction.
+      Assume the existence of such a path <m>p</m>.
+      Let <m>U = p^{-1}(S_1)</m> and <m>V = p^{-1}(S_2)</m>.
+      Then
+      <men xml:id="eq_TSC_1">
+        [0,1] = p^{-1}(S) = p^{-1}(S_1 \cup S_2) = p^{-1}(S_1) \cup p^{-1}(S_2) = U \cup V
+      </men>.
+    </p>
+    <p>
+      Note that <m>S_2</m> is an open subset of <m>S</m>,
+      since <m>S_2 = \left( \bigcup_{z = (x,y) \in S_2} B\left(z, \frac{x}{2}\right)\right) \cap S</m>.
+      So the continuity of <m>p</m> implies that <m>V</m> is an open subset of <m>[0,1]</m>.
+      Also, the fact that <m>p(0) \in S_1</m> means that <m>U \neq \emptyset</m>,
+      and the fact that <m>p(1) \in S_2</m> means that <m>V \neq \emptyset</m>.
+      If we demonstrate that <m>U</m> is an open subset of <m>[0,1]</m>,
+      then Equation <xref ref="eq_TSC_1"/> will imply that <m>[0,1]</m> is not connected,
+      a contradiction.
+      So we proceed to prove that <m>U</m> is open in <m>[0,1]</m>.
+    </p>
+    <p>
+      Let <m>x \in U</m>, and so <m>p(x)</m> in <m>S_1</m>.
+      The set <m>O = B_S\left(p(x), \frac{1}{2}\right) \cap S</m> is open in <m>S</m>.
+      The continuity of <m>p</m> then tells us that
+      <m>p^{-1}(O)</m> is open in <m>[0,1]</m>.
+      So there is a <m>\delta \gt 0</m> such that the open ball
+      <m>B=B_{[0,1]}(x, \delta)</m> is a subset of <m>p^{-1}(O)</m>.
+      We will prove that <m>p(B) \subseteq S_1</m>.
+      This will imply that <m>B \subseteq U</m> and so <m>U</m> is a neighborhood of each of its points,
+      and <m>U</m> is therefore an open set.
+    </p>
+
+    <figure xml:id="F_TSC_O">
+      <caption>The set <m>O</m>.</caption>
+      <image width="50%" source="O_set"/>
+    </figure>
+
+    <p>
+      Every element in <m>B</m> is mapped into <m>O</m> by the path <m>p</m>.
+      The set <m>O</m> is complicated,
+      consisting of infinitely many sub-curves of the curve <m>S_2</m>,
+      along with points in <m>S_1</m>,
+      as illustrated in <xref ref="F_TSC_O"/>.
+      To simplify our analysis,
+      let us consider the projection onto the <m>x</m>-axis.
+      The function <m>P_x : \R^2 \to \R</m> defined by
+      <m>P_x(x,y) = x</m> is a continuous function.
+      Let <m>I = P_x(p(B))</m>.
+      Since <m>p(B) \subseteq O</m>,
+      we know that <m>I \subseteq P_x(O)</m>.
+      Let <m>Z = P_x(O)</m>.
+      So <m>I \subseteq Z</m>.
+      Since <m>B</m> is a connected set (<m>B</m> is an interval),
+      we know that <m>p(B)</m> is a connected set.
+      The fact that <m>P_x</m> is continuous means that
+      <m>I = P_x(p(B))</m> is connected as well.
+      Now <m>I</m> is a bounded subset of <m>\R</m>,
+      so <m>I</m> must be a bounded interval.
+      Recall that <m>x \in B</m> and so <m>p(x) \in p(B)</m>.
+      The fact that <m>p(x) \in S_1</m> tells us that <m>0 = P_x(p(x)) \in P_x(p(B)) = I</m>.
+      So <m>I \neq \emptyset</m>.
+      There are two possibilities for <m>I</m>:
+      either <m>I = \{0\}</m>, or <m>I</m> is an interval of positive length.
+      We consider the cases.
+    </p>
+    <p>
+      Suppose <m>I = \{0\}</m>.
+      Then the projection of <m>p(B)</m> onto the <m>x</m>-axis is the single point <m>0</m> and <m>p(B) \subseteq S_1</m> as desired.
+      Suppose that <m>I</m> is an interval of the form <m>[0,d]</m> or <m>[0,d)</m> for some positive number <m>d</m>.
+      The structure of <m>O</m> would indicate that there must be some gaps in the set <m>Z</m>,
+      the projection of <m>O</m> onto the <m>x</m>-axis.
+      This implies that <m>I</m> cannot be a connected interval.
+      We proceed to show this.
+      In other words,
+      we will prove that <m>I \setminus Z \neq \emptyset</m>
+      (which is impossible since <m>I \subseteq Z</m>).
+      Remember that <m>p(x) \in S_1</m>,
+      so let <m>p(x) = (0, q)</m>.
+      We consider what happens if
+      <m>q \lt \frac{1}{2}</m> and when <m>q \geq \frac{1}{2}</m>.
+    </p>
+    <p>
+      Suppose <m>q \lt \frac{1}{2}</m>.
+      Then the ball <m>B_S\left(p(x), \frac{1}{2}\right)</m> contains only points with <m>y</m> value less than 1.
+      Let <m>N \in \Z^+</m> so that <m>t=\frac{1}{\pi/2+2N\pi} \lt d</m>.
+      Then <m>t \in I</m>.
+      But <m>\sin\left(\frac{1}{t}\right) = \sin(\pi/2 + 2N\pi) = \sin(\pi/2) = 1</m>,
+      and so <m>\left(t,\sin\left(\frac{1}{t}\right)\right)</m> is not in <m>O</m>.
+      Thus, <m>t \notin Z</m>.
+      Thus we have found a point in <m>I \setminus Z</m>.
+    </p>
+    <p>
+      Finally, suppose <m>q \geq \frac{1}{2}</m>.
+      Then the ball <m>B_S\left(p(x), \frac{1}{2}\right)</m> contains only points with <m>y</m> value greater than <m>-1</m>.
+      Let <m>N \in \Z^+</m> so that <m>t=\frac{1}{3\pi/2+2N\pi} \lt d</m>.
+      Then <m>t \in I</m>.
+      But <m>\sin\left(\frac{1}{t}\right) = \sin(3\pi/2 + 2N\pi) = \sin(3\pi/2) = -1</m>,
+      and so <m>t \notin Z</m>.
+      Thus we have found a point in <m>I \setminus Z</m>.
+    </p>
+    <p>
+      We conclude that there can be no path in <m>S</m> from <m>(0,0)</m> to any point in <m>S_2</m>,
+      completing our proof that <m>S</m> is not path connected. (In fact,
+      the argument given shows that there is no path in <m>S</m> from any point in <m>S_1</m> to any point in <m>S_2</m>.
+    </p>
+  </proof>
+  </theorem>
+</section>

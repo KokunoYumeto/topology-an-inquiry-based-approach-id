@@ -1,0 +1,366 @@
+<section xml:id="sec_connect_sets">
+  <title>Connected Sets</title>
+  <p>
+    As we learned in our preview activity,
+    connected sets are those sets that cannot be separated into a union of disjoint open sets.
+    Another characterization of connectedness is established in the next activity.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X, \tau)</m> be a topological space.
+      </p>
+
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Assume that <m>X</m> is a connected space,
+            and let <m>A</m> be a subset of <m>X</m> that is both open and closed.
+            What happens if we combine <m>A</m> and <m>X \setminus A</m>?
+            What does the fact that <m>X</m> is connected tell us about <m>A</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now assume that the only subsets of <m>X</m> that are both open and closed are <m>\emptyset</m> and <m>X</m>.
+            Must it follow that <m>X</m> is connected?
+            Prove your assertion.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Summarize the result of this activity into a theorem of the form <q>A topological space
+            <m>(X, \tau)</m> is connected if and only if ...</q>.
+          </p>
+        </statement>
+      </task>
+   
+  </activity>
+
+  <p>
+    A standard example of a connected topological space is the metric space <m>(\R, d_E)</m>.
+  </p>
+
+  <theorem xml:id="thm_R_connected">
+    <statement>
+      <p>
+        The metric space <m>(\R, d_E)</m> is a connected topological space.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      We proceed by contradiction and assume that there are nonempty open sets <m>U</m> and <m>V</m> such that
+      <m>\R = U \cup V</m> and <m>U \cap V = \emptyset</m>.
+      Let <m>a \in U</m> and <m>b \in V</m>.
+      Since <m>U \cap V = \emptyset</m>,
+      we know that <m>a \neq b</m>.
+      Without loss of generality we can assume <m>a \lt b</m>.
+      Let <m>U' = U \cap [a,b]</m> and let <m>V' = V \cap [a,b]</m>.
+      The set <m>V'</m> is bounded below by <m>a</m>,
+      so <m>x = \inf\{v \mid v \in V'\}</m> exists.
+      Since <m>\R = U \cup V</m> it must be the case that <m>x \in U</m> or <m>x \in V</m>.
+    </p>
+    <p>
+      Suppose <m>x \in U</m>.
+      The fact that <m>U</m> is an open set implies that there exists
+      <m>\epsilon \gt 0</m> such that <m>B(x, \epsilon) \subseteq U</m>.
+      But then <m>B(x, \epsilon) \cap V = \emptyset</m> and so
+      <m>d(x,v) \geq \epsilon</m> for every <m>v \in V</m>.
+      This means that <m>x+\epsilon \lt v</m> for every <m>v \in V'</m>,
+      contradicting the fact that <m>x</m> is the greatest lower bound.
+      We conclude that <m>x \notin U</m>.
+    </p>
+    <p>
+      It follows that <m>x \in V</m>.
+      Since <m>a \in U</m>, we know that <m>x \neq a</m>.
+      The fact that <m>V</m> is an open set tells us that there exists
+      <m>\delta \gt 0</m> such that <m>B(x, \delta) \subseteq V</m>.
+      We can choose <m>\delta</m> to ensure that <m>\delta \lt x-a</m>.
+      Since <m>x > a</m>, the interval
+      <m>(x-\delta,
+      x)</m> is a subset of <m>V'</m>,
+      and so <m>x</m> is not a lower bound for <m>V</m>.
+    </p>
+    <p>
+      Each possibility leads to a contradiction,
+      so we conclude that the sets <m>U</m> and <m>V</m> cannot exist.
+      Therefore, <m>(\R, d_E)</m> is a connected topological space.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    As you might expect, connectedness is a topological property.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X, \tau_X)</m> and
+      <m>(Y, \tau_Y)</m> be topological spaces,
+      and let <m>f : X \to Y</m> be a continuous function.
+      Assume that <m>X</m> is a connected subset of <m>X</m>.
+      Our goal is to prove that <m>f(X)</m> is a connected subspace of <m>Y</m>.
+    </p>
+    <p>
+      Let <m>Z = f(X)</m> and define
+      <m>g: X \to Z</m> by <m>g(x) = f(x)</m>.
+      Then <m>g</m> is a continuous function that maps <m>X</m> onto <m>Z</m>.
+      So we consider <m>g</m> instead of <m>f</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Assume to the contrary that <m>Z</m> is not connected.
+            What do we then assume about <m>Z</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            Suppose that <m>U</m> and <m>V</m> are disjoint nonempty open sets in <m>Z</m> such that <m>U \cup V = Z</m>.
+            Let <m>R = g^{-1}(U)</m> and <m>S = g^{-1}(V)</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Explain why <m>R</m> and <m>S</m> are open sets in <m>X</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Show that <m>R \cup S = X</m>. (Hint:
+                  <m>X = g^{-1}(Z)</m>.)
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Show <m>R</m> and <m>S</m> are nonempty sets.
+                  
+                </p>
+              </statement>
+              <hint>
+                    <p>
+                      Use the fact that <m>g</m> is a surjection.
+                    </p>
+                  </hint>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Now show that <m>R \cap S = \emptyset</m>. (Hint:
+                  <m>R \cap S = g^{-1}(U) \cap g^{-1}(V)</m>.)
+                </p>
+              </statement>
+            </task>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Explain how we have proved the following.
+          </p>
+            <theorem xml:id="thm_connected_invariant">
+              <statement>
+                <p>
+                  Let <m>(X, \tau_X)</m> and
+                  <m>(Y, \tau_Y)</m> be topological spaces,
+                  and let <m>f : X \to Y</m> be a continuous function.
+                  If <m>X</m> is connected, then <m>f(X)</m> is connected.
+                </p>
+              </statement>
+            </theorem>
+          
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    The fact that connectedness is preserved by continuous functions means that connectedness is a property that is shared by any homeomorphic topological spaces,
+    as the next corollary indicates.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        Let <m>(X, \tau_X)</m> and
+        <m>(Y, \tau_Y)</m> be homeomorphic topological spaces.
+        Then <m>X</m> is connected if and only if <m>Y</m> is connected.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>(X, \tau_X)</m> and
+      <m>(Y, \tau_Y)</m> be topological spaces and let <m>f: X \to Y</m> be a homeomorphism.
+      Assume that <m>X</m> is connected.
+      Since <m>f</m> is continuous,
+      <xref ref="thm_connected_invariant"/>
+      shows that <m>f(X) = Y</m> is connected.
+      The reverse implication follows from the fact that <m>f^{-1}</m> is a homeomorphism.
+    </p>
+  </proof>
+  </corollary>
+
+  <p>
+    Recall that <m>(\R,d_E)</m> is homeomorphic to the topological subspaces <m>(a,b)</m>,
+    <m>(-\infty,
+    b)</m>, and <m>(a,\infty)</m> for any <m>a, b \in \R</m>.
+    The fact that <m>(\R, d_E)</m> is connected
+    (<xref ref="thm_R_connected"/>)
+    allows us to conclude that all open intervals are connected.
+    It would seem natural that all closed
+    (or half-closed)
+    intervals should also be connected.
+    We address this question next.
+    Before we get to this result,
+    we consider an alternate formulation of connected subsets.
+  </p>
+  <p>
+    Consider the set <m>A = (-1,0) \cup (4,5)</m> in <m>\R</m>.
+    Let <m>U = (-2,3)</m> and <m>V=(2,6)</m> in <m>\R</m>.
+    Note that <m>U' = U \cap A = (-1,0)</m> and <m>V' = V \cap A = (4,5)</m>,
+    and so <m>U</m> and <m>V</m> are open sets in <m>\R</m> that separate the set <m>A</m> into two disjoint pieces.
+    We know that <m>U'</m> and <m>V'</m> are open in <m>A</m> and
+    <m>A = U' \cup V'</m> with <m>U' \cap V' = \emptyset</m>.
+    So to show that a subset of a topological space <m>X</m> is not connected,
+    this example suggests that it suffices to find nonempty open sets <m>U</m> and <m>V</m> in <m>X</m> with
+    <m>U \cap V \cap A = \emptyset</m> and <m>A \subseteq (U \cup V)</m>.
+    Note that it is not necessary to have <m>U \cap V = \emptyset</m>.
+    That this works in general is the result of the next theorem.
+  </p>
+
+  <theorem xml:id="thm_conn_subset">
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space.
+        A subset <m>A</m> of <m>X</m> is disconnected if and only if there exist open sets <m>U</m> and <m>V</m> in <m>X</m> with
+        <ul>
+          <li>
+            <p>
+              <m>A \subseteq (U \cup V)</m>,
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>U \cap A \neq \emptyset</m>,
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>V \cap A \neq \emptyset</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>U \cap V \cap A = \emptyset</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a topological space,
+      and let <m>A</m> be a subset of <m>X</m>.
+      We first assume that <m>A</m> is disconnected and show that there are open sets <m>U</m> and <m>V</m> in <m>X</m> that satisfy the given conditions.
+      Since <m>A</m> is disconnected,
+      there are nonempty open sets <m>U'</m> and <m>V'</m> in <m>A</m> such that
+      <m>U' \cup V' = A</m> and <m>U' \cap V' = \emptyset</m>.
+      Since <m>U'</m> and <m>V'</m> are open in <m>A</m>,
+      there exist open sets <m>U</m> and <m>V</m> in <m>X</m> so that
+      <m>U' = U \cap A</m> and <m>V' = V \cap A</m>.
+      Now
+      <me>
+        A = U' \cup V' = (U \cap A) \cup (V \cap A) = (U \cup V) \cap A
+      </me>,
+      and so <m>A \subseteq U \cup V</m>.
+      By construction,
+      <m>U \cap A = U'</m> and <m>V \cap A = V'</m> are not empty.
+      Finally,
+      <me>
+        U \cap V \cap A = (U \cap A) \cap (V \cap A) = U' \cap V' = \emptyset
+      </me>.
+    </p>
+    <p>
+      So we have found sets <m>U</m> and <m>V</m> that satisfy the conditions of our theorem.
+    </p>
+    <p>
+      The proof of the reverse implication is left to the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <p>
+      Let <m>X</m> be a topological space,
+      and let <m>A</m> be a subset of <m>X</m>.
+      Assume that there exist open sets <m>U</m> and <m>V</m> in <m>X</m> with <m>A \subseteq U \cup V</m>,
+      <m>U \cap A \neq \emptyset</m>,
+      <m>V \cap A \neq \emptyset</m>,
+      and <m>U \cap V \cap A = \emptyset</m>.
+      Prove that <m>A</m> is disconnected.
+    </p>
+  </activity>
+
+  <p>
+    The conditions in <xref ref="thm_conn_subset"/>
+    provide a convenient way to show that a set is disconnected,
+    and so any pair of sets <m>U</m> and <m>V</m> that satisfy the conditions of <xref ref="thm_conn_subset"/> is given a special name.
+  </p>
+
+  <definition>
+    <idx><h>separation</h></idx>
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space,
+        and let <m>A</m> be a subset of <m>X</m>.
+        A <term>separation</term>
+        of <m>A</m> is a pair of nonempty open subsets <m>U</m> and <m>V</m> of <m>X</m> such that
+        <ul>
+          <li>
+            <p>
+              <m>A \subseteq (U \cup V)</m>,
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>U \cap A \neq \emptyset</m>,
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>V \cap A \neq \emptyset</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>U \cap V \cap A = \emptyset</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    If <m>X</m> is a disconnected topological space,
+    then a separation of <m>X</m> is a pair <m>U</m>,
+    <m>V</m> of disjoint nonempty open sets such that <m>U \cup V = X</m>.
+  </p>
+</section>

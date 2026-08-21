@@ -1,0 +1,131 @@
+<section xml:id="sec_closed_sets_metric">
+  <title>Closed Sets in Metric Spaces</title>
+  <p>
+    Recall that <xref ref="def_closed_metric_space"/>
+    defines a closed set in a metric space to be a set whose complement is open.
+    We have seen that both <m>\emptyset</m> and <m>X</m> are open subsets of <m>X</m>.
+    We now ask the same question,
+    this time in terms of closed sets.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X</m> be a metric space.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Is <m>\emptyset</m> closed in <m>X</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>X</m> closed in <m>X</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Note that a subset of a metric space can be both open and closed.
+    We call such sets <term>clopen</term>
+    (for closed-open).
+    When we discussed open sets,
+    we saw that an arbitrary union of open sets is open,
+    but that an arbitrary intersection of open sets may not be open
+    (although a finite intersection of open sets is open).
+    Since closed sets are complements of open sets,
+    we should expect a similar result for closed sets.
+  </p>
+
+  <activity xml:id="act_Closed_union">
+    <introduction>
+    <p>
+      Let <m>X = \R</m> with the Euclidean metric.
+      Let <m>A_n = \left[\frac{1}{n}, 1-\frac{1}{n}\right]</m> for each <m>n \in \Z^+</m>,
+      <m>n \geq 2</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            What is <m>\bigcup_{n \geq 2} A_n</m>?
+            A proof is not necessary.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>\bigcup_{n \geq 2} A_n</m> closed in <m>\R</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    <xref ref="act_Closed_union"/>
+    shows that an arbitrary union of closed sets is not necessarily closed.
+    However, the following theorem tells us what we can say about unions and intersections of closed sets.
+    The results should not be surprising given the relationship between open and closed sets.
+  </p>
+  
+  <theorem>
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space.
+        <ol>
+          <li>
+            <p>
+              Any intersection of closed sets in <m>X</m> is a closed set in <m>X</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Any finite union of closed sets in <m>X</m> is a closed set in <m>X</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a metric space.
+      To prove part 1, assume that
+      <m>\{C_{\alpha}\}</m> is a collection of closed sets in <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m>.
+      DeMoivre's Theorem shows that
+      <me>
+        X \setminus \bigcap_{\alpha \in I} C_{\alpha} = \bigcup_{\alpha \in I} X \setminus C_{\alpha}
+      </me>.
+    </p>
+    <p>
+      The latter is an arbitrary union of open sets and so it an open set.
+      By definition, then,
+      <m>\bigcap_{\alpha \in I} C_{\alpha}</m> is a closed set.
+    </p>
+    <p>
+      For part 2, assume that <m>C_1</m>,
+      <m>C_2</m>, <m>\ldots</m>,
+      <m>C_n</m> are closed sets in <m>X</m> for some <m>n \in \Z^+</m>.
+      To show that <m>C = \bigcup_{k=1}^n C_k</m> is a closed set,
+      we will show that <m>X \setminus C</m> is an open set.
+      Now
+      <me>
+        X \setminus \bigcup_{i=1}^n C_{i} = \bigcap_{i=1}^n X \setminus C_{i}
+      </me>
+      is a finite intersection of open sets, and so is an open set.
+      Therefore, <m>\bigcup_{i=1}^n C_{i}</m> is a closed set.
+    </p>
+  </proof>
+  </theorem>
+</section>

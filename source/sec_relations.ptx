@@ -1,0 +1,102 @@
+<section xml:id="sec_relations">
+  <title>Relations</title>
+  <p>
+    We use the word
+    <q>equivalent</q>
+    deliberately when talking about metric or topological equivalence.
+    Recall that equivalence is a word used with relations,
+    and that a relation is a way to compare two elements from a set.
+    We are familiar with many relations on sets,
+    <q><m>\lt</m></q>,
+    <q><m>=</m></q>,
+    <q><m>\geq</m></q>
+    on the integers, for example.
+  </p>
+
+  <definition>
+  <idx><h>relation</h></idx>
+    <statement>
+      <p>
+        A <term>relation</term>
+        on a set <m>S</m> is a subset <m>R</m> of <m>S \times S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    For example, the subset <m>R = \{(a,a) \mid a \in \Z \}</m> of
+    <m>\Z \times \Z</m> is the relation we call equals.
+    If <m>R</m> is a relation on a set <m>S</m>,
+    we usually suppress the set notation and write <m>a \sim b</m> if
+    <m>(a,b) \in R</m> and say that <m>a</m> is related to <m>b</m>.
+    In this case we often refer to <m>\sim</m> as the relation instead of the set <m>R</m>.
+    Sometimes we use familiar symbols for special relations.
+    For example,
+    we write <m>a = b</m> if <m>(a,b) \in R = \{(a,a) \mid a \in \Z \}</m>.
+  </p>
+  <p>
+    When discussing relations,
+    there are three specific properties that we consider.
+    <ul>
+      <li>
+        <p>
+          A relation <m>\sim</m> on a set <m>S</m> is <term>reflexive</term>
+          if <m>a \sim a</m> for all <m>a \in S</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A relation <m>\sim</m> on a set <m>S</m> is <term>symmetric</term>
+          if whenever <m>a \sim b</m> in <m>S</m> we also have <m>b \sim a</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A relation <m>\sim</m> on a set <m>S</m> is <term>transitive</term>
+          if whenever <m>a \sim b</m> and
+          <m>b \sim c</m> in <m>S</m> we also have <m>a \sim c</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    When we use the word
+    <q>equivalence</q>, we are referring to an equivalence relation.
+  </p>
+
+  <definition>
+  <idx><h>equivalence relation</h></idx>
+    <statement>
+      <p>
+        An <term>equivalence relation</term>
+        is a relation on a set that is reflexive,
+        symmetric, and transitive.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+      <task>
+        <statement>
+          <p>
+            Explain why metric equivalence is an equivalence relation.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Explain why topological equivalence is an equivalence relation.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+  <p>
+    Equivalence relations are important because an equivalence relation on a set <m>S</m> partitions the set into a disjoint union of equivalence classes.
+    Since topological equivalence is an equivalence relation,
+    we can treat the spaces that are topologically equivalent to each other as being essentially the same space from a topological perspective.
+    Under the relation of homeomorphism we call the equivalence classes
+    <term>homeomorphism</term> classes.
+  </p>
+</section>

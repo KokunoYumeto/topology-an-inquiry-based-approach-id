@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--********************************************--><!--*       Generated from PreTeXt source      *--><!--*                                          *--><!--*         https://pretextbook.org          *--><!--*                                          *--><!--********************************************--><html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Komposisi Fungsi</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Topologi: Pendekatan Berbasis Inkuiri">
+<meta property="book:author" content="Steven Schlicker">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="o003-c90-chapters-01-02-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–2 — Himpunan, Fungsi, dan Pendamping Belajar Mandiri</span></a></h1>
+<p class="byline">Steven Schlicker</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Hasil Pencarian: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Tidak ada hasil.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Tampilkan atau sembunyikan daftar isi"><span class="icon">☰</span><span class="name">Daftar Isi</span></button><a class="index-button button" href="index-1.html" title="Indeks"><span class="name">Indeks</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Ubah preferensi pengguna"><span id="avatarbutton" class="avatarbutton name">Anda!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Pilih avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>Anda!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Keluarga font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Sesuaikan font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Ukuran</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Lebih kecil</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Lebih besar</li>
+<li>Lebar</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">lebih sempit</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">lebih lebar</li>
+<li>Ketebalan</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">lebih tipis</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">lebih tebal</li>
+<li>Jarak huruf</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">lebih rapat</li>
+<li data-val="lspace" data-change="1" tabindex="-1">lebih renggang</li>
+<li>Jarak kata</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">celah lebih kecil </li>
+<li data-val="wspace" data-change="1" tabindex="-1">celah lebih besar</li>
+<li>Jarak baris</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">lebih rapat<br>merapat</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">lebih renggang<br>merenggang</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Mode terang/gelap<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>bawaan</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>senja</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>gelap</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>tengah malam</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Penggaris baca<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>tanpa penggaris</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>garis bawah</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>garis bawah-L</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>bilah abu-abu</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>kotak terang</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>fajar</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>garis bawah fajar</li>
+<li class="moveQ">Gerakkan dengan:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>ikuti tetikus</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>panah atas/bawah — belum tersedia</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>pelacakan mata — belum tersedia</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec_func_intro.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="up-button button" href="chap_functions.html" title="Naik"><span class="icon">^</span><span class="name">Naik</span></a><a class="next-button button" href="sec_inv_func.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Cari" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch02-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-sets-functions.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan dan Fungsi</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basic_top.html" class="internal"><span class="title">Gagasan Dasar Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_intervals.html" class="internal"><span class="title">Interval</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_comp.html" class="internal"><span class="title">Gabungan, Irisan, dan Komplemen Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cart_prod.html" class="internal"><span class="title">Hasil Kali Kartesius Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_functions.html" class="internal"><span class="codenumber">2</span> <span class="title">Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="sec_comp_func.html" class="internal"><span class="title">Komposisi Fungsi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_inv_func.html" class="internal"><span class="title">Fungsi Invers</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fun_set.html" class="internal"><span class="title">Fungsi dan Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_card_set.html" class="internal"><span class="title">Kardinalitas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Bagian Akhir</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="o003-c90-ch01-companion.html" class="internal"><span class="codenumber">A</span> <span class="title">Pendamping Mandiri Bab 1: Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch01-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-exercise-guides.html" class="internal"><span class="title">Jawaban dan panduan sepuluh latihan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch02-companion.html" class="internal"><span class="codenumber">B</span> <span class="title">Pendamping Mandiri Bab 2: Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch02-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan tujuh belas latihan</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_comp_func"><h2 class="heading hide-type">
+<span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Komposisi Fungsi</span>
+</h2>
+<div class="para" id="p-228">Dalam pembelajaran matematika sebelumnya, kita sering menjumlahkan dan mengalikan fungsi (misalnya, jika <span class="process-math">\(f(x) = x^2\)</span> dan <span class="process-math">\(g(x) = x+1\)</span> memetakan <span class="process-math">\(\R\)</span> ke <span class="process-math">\(\R\text{,}\)</span> maka <span class="process-math">\((fg)(x) = x^2(x+1)\)</span> dan <span class="process-math">\((f+g)(x) = x^2+(x+1)\)</span>). Dalam topologi, pada umumnya kita tidak memperhatikan struktur aljabar apa pun yang mungkin dimiliki suatu himpunan. Karena itu, kita akan beralih dari penjumlahan dan perkalian, lalu memusatkan perhatian pada komposisi fungsi.</div>
+<div class="para logical" id="p-229">
+<div class="para">Gagasan dasar komposisi fungsi adalah bahwa, jika memungkinkan, keluaran suatu fungsi <span class="process-math">\(f\)</span> digunakan sebagai masukan suatu fungsi <span class="process-math">\(g\text{.}\)</span> Fungsi yang dihasilkan dapat disebut “<span class="process-math">\(f\)</span> kemudian <span class="process-math">\(g\)</span>” dan dinamakan komposit <span class="process-math">\(f\)</span> dengan <span class="process-math">\(g\text{.}\)</span> Notasi yang kita gunakan adalah <span class="process-math">\(g \circ f\)</span> (perhatikan urutannya — <span class="process-math">\(f\)</span> diterapkan lebih dahulu). Sebagai contoh, jika</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = 3x^2 + 2 \text{ dan }  g(x) = \sin(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">keduanya memetakan <span class="process-math">\(\R\)</span> ke <span class="process-math">\(\R\text{,}\)</span> maka kita dapat menghitung <span class="process-math">\((g \circ f)(x)\)</span> sebagai berikut:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(g \circ f)(x) = g(f(x)) = g(3x^2 + 2) = \sin\left(3x^2 + 2\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-230">Dalam hal ini, <span class="process-math">\(f(x)\text{,}\)</span> yaitu keluaran fungsi <span class="process-math">\(f\text{,}\)</span> digunakan sebagai masukan bagi fungsi <span class="process-math">\(g\text{.}\)</span> Gagasan ini melandasi definisi formal komposisi dua fungsi.</div>
+<article class="definition definition-like" id="definition-6"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
+</h3> <div class="para logical" id="p-231">
+<div class="para">Misalkan <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> dan <span class="process-math">\(C\)</span> himpunan tak kosong, serta misalkan <span class="process-math">\(f : A \to B\)</span> dan <span class="process-math">\(g : B \to C\)</span> fungsi. <dfn class="terminology">Komposit</dfn> <span class="process-math">\(f\)</span> dan <span class="process-math">\(g\)</span> adalah fungsi <span class="process-math">\(g \circ f : A \to C\)</span> yang didefinisikan oleh</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(g \circ f)(x) = g(f(x))
+\end{equation*}
+</div>
+<div class="para">untuk setiap <span class="process-math">\(x \in A\)</span>
+</div>
+</div></article><div class="para" id="p-232">Fungsi <span class="process-math">\(g \circ f\)</span> kita sebut fungsi komposit, dan <span class="process-math">\((g \circ f)(x)\)</span> kita baca sebagai “<span class="process-math">\(g\)</span> komposisi <span class="process-math">\(f\)</span> dari <span class="process-math">\(x\)</span>”.</div>
+<article class="activity project-like" id="act_functions_1"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="introduction-23"><div class="para logical" id="p-233">
+<div class="para">Misalkan <span class="process-math">\(A = \{1, 2, 3\}\text{,}\)</span> <span class="process-math">\(B = \{a, b, c, d\}\text{,}\)</span> dan <span class="process-math">\(C = \{\alpha, \beta, \gamma\}\text{.}\)</span> Definisikan <span class="process-math">\(f : A \to B\text{,}\)</span> <span class="process-math">\(g : A \to B\text{,}\)</span> dan <span class="process-math">\(h : B \to C\)</span> dengan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(1) = b, \ f(2) = c, \  f(3) = a\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(1) = d, \ g(2) = c, \  g(3) = d, \text{ dan }
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(a) = \gamma, \ h(b) = \alpha, \ h(c) = \beta,  \ h(d) = \alpha\text{.}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="task-83"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-234">Tentukan citra unsur-unsur di dalam <span class="process-math">\(A\)</span> oleh fungsi <span class="process-math">\(h \circ f\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-84"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-235">Tentukan citra unsur-unsur di dalam <span class="process-math">\(A\)</span> oleh fungsi <span class="process-math">\(h \circ g\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-85"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-236">Apakah di antara <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(g\text{,}\)</span> dan <span class="process-math">\(h\)</span> ada yang merupakan injeksi? Apakah di antara <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(g\text{,}\)</span> dan <span class="process-math">\(h\)</span> ada yang merupakan surjeksi?</div></article><article class="task exercise-like" id="task-86"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-237">Apakah <span class="process-math">\(h \circ f\)</span> merupakan injeksi? Apakah <span class="process-math">\(h \circ f\)</span> merupakan surjeksi? Jelaskan.</div></article><article class="task exercise-like" id="task-87"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-238">Apakah <span class="process-math">\(h \circ g\)</span> merupakan injeksi? Apakah <span class="process-math">\(h \circ g\)</span> merupakan surjeksi? Jelaskan.</div></article></article><div class="para" id="p-239">Dalam <a href="" class="xref" data-knowl="./knowl/act_functions_1.html" title="Kegiatan 2.2">Kegiatan 2.2</a>, kita menanyakan apakah fungsi-fungsi komposit tertentu merupakan injeksi atau surjeksi, atau keduanya. Dalam matematika, lazim untuk menyelidiki apakah sifat tertentu suatu objek juga dimiliki oleh objek yang berkaitan dengannya. Secara khusus, kita mungkin ingin mengetahui apakah komposit dua fungsi injektif juga merupakan injeksi. (Tentu saja, kita dapat mengajukan pertanyaan serupa untuk surjeksi.) Pertanyaan-pertanyaan ini diselidiki dalam aktivitas berikutnya.</div>
+<article class="activity project-like" id="act_composition2"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="introduction-24"><div class="para logical" id="p-240">
+<div class="para">Diberikan himpunan <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(C\text{,}\)</span> dan <span class="process-math">\(D\)</span> berikut:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \{ a, b, c \},  B = \{p, q, r\},  C = \{u, v, w, x \},  \text{ dan }   D = \{u, v \}\text{.}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="task-88"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-241">Susun suatu fungsi <span class="process-math">\(f : A \to B\)</span> yang merupakan injeksi dan suatu fungsi <span class="process-math">\(g : B \to C\)</span> yang merupakan injeksi. Dalam hal ini, apakah fungsi komposit <span class="process-math">\(g \circ f : A \to C\)</span> merupakan injeksi? Jelaskan.</div></article><article class="task exercise-like" id="task-89"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-242">Susun suatu fungsi <span class="process-math">\(f : A \to B\)</span> yang merupakan surjeksi dan suatu fungsi <span class="process-math">\(g : B \to D\)</span> yang merupakan surjeksi. Dalam hal ini, apakah fungsi komposit <span class="process-math">\(g \circ f : A \to D\)</span> merupakan surjeksi? Jelaskan.</div></article><article class="task exercise-like" id="task-90"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-243">Susun suatu fungsi <span class="process-math">\(f : A \to B\)</span> yang merupakan bijeksi dan suatu fungsi <span class="process-math">\(g : B \to A\)</span> yang merupakan bijeksi. Dalam hal ini, apakah fungsi komposit <span class="process-math">\(g \circ f : A \to A\)</span> merupakan bijeksi? Jelaskan.</div></article></article><div class="para" id="p-244">Dalam <a href="" class="xref" data-knowl="./knowl/act_composition2.html" title="Kegiatan 2.3">Kegiatan 2.3</a>, kita menyelidiki beberapa sifat fungsi komposit yang berkaitan dengan injeksi, surjeksi, dan bijeksi. Teorema berikut merangkum hasil yang hendak diilustrasikan oleh penyelidikan tersebut.</div>
+<article class="theorem theorem-like" id="thm_compositefunctions"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-245">
+<div class="para">Misalkan <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> dan <span class="process-math">\(C\)</span> himpunan tak kosong, serta misalkan <span class="process-math">\(f : A \to B\)</span> dan <span class="process-math">\(g : B \to C\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="thm_compositefunctions1"><div class="para" id="p-246">Jika <span class="process-math">\(f\)</span> dan <span class="process-math">\(g\)</span> keduanya merupakan injeksi, maka <span class="process-math">\((g \circ f) : A \to C\)</span> merupakan injeksi.</div></li>
+<li id="thm_compositefunctions2"><div class="para" id="p-247">Jika <span class="process-math">\(f\)</span> dan <span class="process-math">\(g\)</span> keduanya merupakan surjeksi, maka <span class="process-math">\((g \circ f) : A \to C\)</span> merupakan surjeksi.</div></li>
+<li id="thm_compositefunctions3"><div class="para" id="p-248">Jika <span class="process-math">\(f\)</span> dan <span class="process-math">\(g\)</span> keduanya merupakan bijeksi, maka <span class="process-math">\((g \circ f) : A \to C\)</span> merupakan bijeksi.</div></li>
+</ol>
+</div></article><article class="activity project-like" id="activity-9"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-91"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-249">Buktikan bagian (1) dari <a href="" class="xref" data-knowl="./knowl/thm_compositefunctions.html" title="Teorema 2.5">Teorema 2.5</a>.</div></article><article class="task exercise-like" id="task-92"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-250">Buktikan bagian (2) dari <a href="" class="xref" data-knowl="./knowl/thm_compositefunctions.html" title="Teorema 2.5">Teorema 2.5</a>.</div></article><article class="task exercise-like" id="task-93"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-251">Mengapa bukti bagian (3) dari <a href="" class="xref" data-knowl="./knowl/thm_compositefunctions.html" title="Teorema 2.5">Teorema 2.5</a> merupakan akibat langsung dari bagian (1) dan (2)?</div></article></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_func_intro.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="sec_inv_func.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runestone Academy"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax"></a>
+</div>
+</body>
+</html>

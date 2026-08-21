@@ -1,0 +1,402 @@
+<exercises xml:id="sec_sets_exer">
+
+  <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>A</m>,
+        <m>B</m>, dan <m>C</m> merupakan himpunan bagian dari suatu himpunan <m>X</m>.
+        Nyatakan setiap himpunan berikut dalam notasi matematika dengan menggunakan simbol <m>\cup</m>,
+        <m>\cap</m>, dan <m>\setminus</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Anggota <m>X</m> yang merupakan anggota <m>A</m> dan <m>B</m>,
+              tetapi bukan anggota <m>C</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Anggota <m>X</m> yang merupakan anggota <m>C</m> dan setidaknya salah satu dari <m>A</m> atau <m>B</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Anggota <m>X</m> yang merupakan anggota <m>A</m>, tetapi tidak sekaligus menjadi anggota <m>B</m> dan <m>C</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Anggota <m>X</m> yang bukan merupakan anggota satu pun dari himpunan <m>A</m>,
+              <m>B</m>,
+              dan <m>C</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Anggota <m>X</m> yang bukan merupakan anggota setidaknya dua dari himpunan <m>A</m>,
+              <m>B</m>,
+              dan <m>C</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Anggota <m>X</m> yang bukan merupakan anggota paling banyak satu dari himpunan <m>A</m>,
+              <m>B</m>,
+              dan <m>C</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+    <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>X \subset Y \subset Z</m>.
+        Buktikan atau berikan contoh tandingan.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>C_Y(X) \subset C_Z(X)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>Z \setminus (Y \setminus X) = X \cup (Z \setminus Y)</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+    <exercise xml:id="ex_set_props">
+      <introduction>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> merupakan himpunan bagian dari suatu himpunan semesta <m>U</m>, dan anggap pula setiap himpunan lain yang muncul di bawah merupakan himpunan bagian dari himpunan semesta yang sama.
+        Buktikan hukum asosiatif dan distributif.
+        Dengan kata lain, buktikan setiap pernyataan berikut.
+      </p>
+      </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>(A \cap B) \cap C = A \cap (B \cap C)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>(A \cup B) \cup C = A \cup (B \cup C)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
+            </p>
+          </statement>
+        </task>
+        </exercise>
+      
+   <exercise xml:id="ex_DeMorgan">
+    <introduction>
+      <p>
+        Buktikan Hukum De Morgan.
+        Dengan kata lain, misalkan <m>\{A_{\alpha}\}</m> adalah kumpulan himpunan yang diindeks oleh suatu himpunan <m>I</m> di dalam himpunan semesta <m>U</m>.
+        Buktikan bahwa
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>\displaystyle \left(\bigcup_{\alpha \in I} A_{\alpha}\right)^c = \bigcap_{\alpha \in I} A_{\alpha}^c</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\displaystyle \left(\bigcap_{\alpha \in I} A_{\alpha}\right)^c = \bigcup_{\alpha \in I} A_{\alpha}^c</m>
+            </p>
+          </statement>
+        </task>
+    
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Tentukan himpunan yang sama dengan <m>\emptyset \times A</m> untuk sebarang himpunan <m>A</m>.
+        Jelaskan.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex_power_set">
+  <idx><h>himpunan kuasa</h></idx>
+    <introduction>
+      <p>
+        Jika <m>A</m> adalah suatu himpunan, himpunan kuasa
+        dari <m>A</m>,
+        yang dinyatakan dengan <m>2^A</m>, adalah kumpulan semua himpunan bagian dari <m>A</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Tuliskan anggota <m>\ds 2^{\{1,2\}}</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> adalah himpunan yang memiliki tiga anggota,
+              berapa banyak anggota dalam <m>2^A</m>?
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> adalah himpunan yang memiliki <m>n</m> anggota,
+              buatlah dugaan mengenai banyaknya anggota dalam <m>2^A</m>.
+              Buktikan dugaan Anda.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Jika <m>A</m> adalah suatu himpunan, himpunan kuasa dari <m>A</m>,
+        yang dinyatakan dengan <m>2^A</m>, adalah kumpulan semua himpunan bagian dari <m>A</m>.
+        (Lihat <xref ref="ex_power_set"/>.)
+        Telaahlah setiap pernyataan berikut.
+        Apakah pernyataan tersebut bermakna atau tidak?
+        Jika tidak, jelaskan alasannya, lalu perbaikilah menjadi pernyataan yang benar
+        (dan tidak sepele).
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> adalah suatu himpunan, maka <m>A \in 2^A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> adalah suatu himpunan, maka <m>A \subset 2^A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> adalah suatu himpunan, maka <m>\{A\} \subset 2^A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> adalah suatu himpunan, maka <m>\emptyset \in 2^A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> adalah suatu himpunan, maka <m>\emptyset \subset 2^A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> dan <m>B</m> adalah himpunan dan <m>A \subseteq B</m>,
+              maka <m>2^A \subseteq 2^B</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> adalah himpunan,
+        yang masing-masing memiliki sekurang-kurangnya dua anggota berbeda.
+        Buktikan bahwa terdapat suatu himpunan bagian
+        <m>W \subset A \times B</m> yang bukan merupakan hasil kali Kartesius antara suatu himpunan bagian dari <m>A</m> dan suatu himpunan bagian dari <m>B</m>. [Jadi,
+        tidak setiap himpunan bagian dari suatu hasil kali Kartesius merupakan hasil kali Kartesius dari sepasang himpunan bagian.]
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Misalkan <m>I</m> adalah himpunan bilangan real yang lebih besar daripada <m>0</m>.
+        Untuk setiap <m>x \in I</m>, misalkan <m>A_x</m> adalah interval terbuka <m>(0,x)</m>.
+        Buktikan bahwa <m>\bigcap_{x \in I} A_x = \emptyset</m>,
+        <m>\bigcup_{x \in I} A_x = I</m>.
+        Untuk setiap <m>x \in I</m>,
+        misalkan <m>B_x</m> adalah interval tertutup <m>[0,x]</m>.
+        Buktikan bahwa <m>\bigcap_{x \in I} B_x = \{0\}</m>,
+        <m>\bigcup_{x \in I} B_x = I \cup \{0\}</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar.
+        Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar,
+        jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan itu salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
+        Sebagai contoh pernyataan yang benar,
+        perhatikan pernyataan berikut.
+        </p>
+        <blockquote>
+        <p>Misalkan <m>A</m>, <m>B</m>,
+        dan <m>C</m> adalah himpunan sedemikian sehingga
+        <m>A \cap B = A \cap C</m> dan <m>A \cap B \neq \emptyset</m>.</p>
+        </blockquote>
+        <p>
+        Maka <m>B \cap C \neq \emptyset</m>.
+        Kita dapat membenarkan pernyataan ini dengan argumen singkat.
+        Karena <m>A \cap B \neq \emptyset</m>,
+        terdapat anggota <m>x \in A \cap B</m>.
+        Dengan demikian, <m>x \in B</m>.
+        Karena <m>A \cap B = A \cap C</m>,
+        juga harus berlaku <m>x \in A \cap C</m>,
+        yang berarti bahwa <m>x \in C</m>.
+        Jadi, <m>x \in B \cap C</m> dan <m>B \cap C \neq \emptyset</m>.
+        Sebagai contoh pernyataan yang salah,
+        perhatikan pernyataan berikut.
+        </p>
+        <blockquote>
+        <p>Misalkan <m>A</m>, <m>B</m>,
+        dan <m>C</m> adalah himpunan sedemikian sehingga <m>A \cap B = A \cap C</m>.
+        </p></blockquote>
+        <p>
+        Maka <m>B = C</m>.
+        Kita dapat menunjukkan bahwa pernyataan ini salah dengan memberikan contoh tandingan.
+        Sebagai contoh, misalkan <m>A = \{0,1\}</m>,
+        <m>B=\{1\}</m>, dan <m>C = \{1,2\}</m>.
+        Maka <m>A \cap B = \{1\} = A \cap C</m>, tetapi <m>B \neq C</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m>, <m>B</m>, dan <m>C</m> adalah himpunan serta
+              <m>A \subseteq B</m> dan <m>A \subseteq C</m>,
+              maka <m>A \subseteq (B \cap C)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m>, <m>B</m>, dan <m>C</m> adalah himpunan serta
+              <m>A \subseteq C</m> dan <m>B \subseteq C</m>,
+              maka <m>(A \cup B) \subseteq C</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> dan <m>B</m> merupakan himpunan bagian dari suatu himpunan <m>X</m> serta <m>A \subseteq B</m>,
+              maka <m>(X \setminus A) \subseteq (X \setminus B)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> dan <m>B</m> merupakan himpunan bagian dari suatu himpunan <m>X</m> serta <m>A \subseteq B</m>,
+              maka <m>(X \setminus B) \subseteq (X \setminus A)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> dan <m>B</m> adalah himpunan,
+              maka <m>(A \cup B) \setminus B = A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> dan <m>B</m> adalah himpunan,
+              maka <m>A \setminus (A \setminus B) = B</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m>, <m>B</m>, dan <m>C</m> adalah himpunan,
+              maka <m>A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> dan <m>C</m> merupakan himpunan bagian dari suatu himpunan <m>X</m>,
+              maka <m>(A \setminus C) = A \cap (X \setminus C)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Himpunan <m>\{\emptyset\}</m> tidak memiliki anggota.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Terdapat dua objek berbeda yang merupakan anggota himpunan <m>\{\emptyset, \{\emptyset\}\}</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+  
+</exercises>

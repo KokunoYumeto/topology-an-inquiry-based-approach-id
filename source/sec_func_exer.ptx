@@ -1,0 +1,742 @@
+<exercises xml:id="sec_func_exer">
+  
+  <exercise>
+    <task>
+      
+        <statement>
+          <p>
+            Carilah fungsi <m>f: \R \to \R</m> sedemikian sehingga setiap unsur kodomain memiliki tepat satu prapeta.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Carilah fungsi <m>f: \R \to \R</m> sedemikian sehingga setiap unsur kodomain memiliki setidaknya dua prapeta.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Carilah fungsi <m>f: \R \to \R</m> sedemikian sehingga setiap unsur memiliki tepat dua prapeta.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Carilah fungsi <m>f: \R \to \R</m> sedemikian sehingga terdapat sebuah unsur kodomain yang memiliki tepat tiga prapeta dan sebuah unsur kodomain lain yang memiliki tepat dua prapeta.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Carilah fungsi <m>f: \R \to \R</m> sedemikian sehingga terdapat sebuah unsur kodomain yang memiliki tak berhingga banyak prapeta.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_forexample">
+      <introduction>
+      <p>
+        Untuk setiap fungsi berikut,
+        tentukan apakah fungsi tersebut merupakan injeksi,
+        surjeksi, bijeksi, atau bukan salah satu di antaranya.
+        Ingatlah untuk memperhatikan dengan cermat domain dan kodomain dalam setiap kasus.
+        Berikan alasan untuk semua kesimpulan Anda.
+      </p>
+      </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>F:\mathbb{R} \to \mathbb{R}</m> didefinisikan oleh <m>F( x ) = 5x + 3</m>,
+              untuk setiap <m>x \in \mathbb{R}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>G:\Z \to \Z</m> didefinisikan oleh
+              <m>G( x ) = 5x + 3</m>, untuk setiap <m>x \in \Z</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>f: ( \R \setminus \left\{ 4 \right\} ) \to \R</m> didefinisikan oleh <m>f ( x ) = \dfrac{3x}{x - 4}</m>,
+              untuk setiap <m>x \in \left( \R \setminus\{ 4 \} \right)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>g: ( \R \setminus \left\{ 4 \right\} ) \to ( \R \setminus \left\{ 3 \right\} )</m> didefinisikan oleh <m>g ( x ) = \dfrac{3x}{x - 4}</m>,
+              untuk setiap <m>x \in \left( \R \setminus \{ 4 \} \right)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>h: \R \to \R_{\geq 0}</m> didefinisikan oleh
+              <m>h(x) = x^2</m> untuk setiap <m>x \in \R</m>,
+              dengan <m>\R_{\geq 0} = \{x \in \R \mid x \geq 0\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>k: \R_{\geq 0} \to \R_{\geq 0}</m> didefinisikan oleh
+              <m>k(x) = x^2</m> untuk setiap <m>x \in \R_{\geq 0}</m>
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+    <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>A = \{1,2,3,4,5,6,7,8,9,10\}</m> dan <m>B = \{a,b,c,d,e,g\}</m>,
+        lalu definisikan <m>f:A \to B</m> sebagaimana diberikan dalam <xref ref="T_Sec_2_fn_example">Tabel</xref>.
+      </p>
+        <table xml:id="T_Sec_2_fn_example">
+          <title>Fungsi dari <m>A</m> ke <m>B</m></title>
+          <tabular>
+            <row>
+              <cell right="minor"><m>x</m></cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+              <cell>5</cell>
+              <cell>6</cell>
+              <cell>7</cell>
+              <cell>8</cell>
+              <cell>9</cell>
+              <cell>10</cell>
+            </row>
+            <row>
+              <cell right="minor"><m>f(x)</m></cell>
+              <cell><m>c</m></cell>
+              <cell><m>d</m></cell>
+              <cell><m>a</m></cell>
+              <cell><m>g</m></cell>
+              <cell><m>a</m></cell>
+              <cell><m>c</m></cell>
+              <cell><m>e</m></cell>
+              <cell><m>d</m></cell>
+              <cell><m>c</m></cell>
+              <cell><m>a</m></cell>
+            </row>
+          </tabular>
+        </table>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Apakah <m>f</m> merupakan injeksi?
+              Apakah <m>f</m> merupakan surjeksi?
+              Jelaskan.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Carilah subhimpunan terbesar <m>C</m> dari <m>A</m>
+              (terbesar dalam hal banyaknya unsur <m>C</m>)
+              sedemikian sehingga <m>f|_C</m> merupakan injeksi.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Carilah subhimpunan <m>D</m> dari <m>B</m> sedemikian sehingga fungsi dengan aturan yang sama, dipandang sebagai <m>f:A \to D</m>, merupakan surjeksi.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Carilah subhimpunan <m>X</m> dari <m>A</m> dan <m>Y</m> dari <m>B</m> sedemikian sehingga <m>f|_X : X \to Y</m> merupakan bijeksi.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+    <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> merupakan himpunan
+        yang masing-masing memiliki setidaknya dua unsur berbeda.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Gambarkan suatu subhimpunan <m>X \subset A \times B</m> yang merupakan hasil kali Kartesius antara suatu subhimpunan dari <m>A</m> dan suatu subhimpunan dari <m>B</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Tunjukkan bahwa terdapat suatu subhimpunan
+              <m>W \subset A \times B</m> yang bukan merupakan hasil kali Kartesius antara suatu subhimpunan dari <m>A</m> dan suatu subhimpunan dari <m>B</m>. [Dengan demikian,
+              tidak setiap subhimpunan dari suatu hasil kali Kartesius merupakan hasil kali Kartesius dari sepasang subhimpunan.]
+            </p>
+          </statement>
+        </task>
+    </exercise>
+    <exercise>
+    <statement>
+      <p>
+        Kardinalitas suatu himpunan berhingga didefinisikan sebagai banyaknya unsur himpunan tersebut.
+        Kita menyatakan kardinalitas himpunan <m>A</m> dengan <m>|A|</m>.
+        Misalkan <m>A</m> dan <m>B</m> merupakan himpunan dengan <m>|A| = n</m> dan <m>|B| = m</m> untuk bilangan bulat positif <m>m</m> dan <m>n</m>.
+        Buktikan bahwa terdapat bijeksi
+        <m>f: A \to B</m> jika dan hanya jika <m>n = m</m>.
+      </p>
+    </statement>
+    </exercise>
+
+    <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>X</m> dan <m>Y</m> merupakan himpunan dan <m>f: X \to Y</m> merupakan fungsi.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Misalkan <m>A</m> merupakan subhimpunan dari <m>X</m>.
+              Tunjukkan bahwa <m>A \subseteq f^{-1}(f(A))</m>.
+              Buatlah contoh untuk menunjukkan bahwa secara umum,
+              <m>A \neq f^{-1}(f(A))</m>.
+              
+            </p>
+          </statement>
+          <hint>
+                <p>
+                  Untuk menunjukkan bahwa kedua himpunan tersebut tidak sama,
+                  pertimbangkan himpunan <m>X</m> dan <m>Y</m> yang masing-masing memiliki dua unsur.
+                </p>
+              </hint>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Misalkan <m>B</m> merupakan subhimpunan dari <m>Y</m>.
+              Tunjukkan bahwa <m>f(f^{-1}(B)) \subseteq B</m>.
+              Buatlah contoh untuk menunjukkan bahwa secara umum,
+              <m>f(f^{-1}(B)) \neq B</m>.
+              
+            </p>
+          </statement>
+          <hint>
+                <p>
+                  Untuk menunjukkan bahwa kedua himpunan tersebut tidak sama,
+                  pertimbangkan himpunan <m>X</m> dan <m>Y</m> yang masing-masing memiliki dua unsur.
+                </p>
+              </hint>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Buktikan bahwa <m>f</m> merupakan surjeksi jika dan hanya jika
+              <m>f(f^{-1}(B)) = B</m> untuk setiap subhimpunan <m>B</m> dari <m>Y</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Buktikan bahwa <m>f</m> merupakan injeksi jika dan hanya jika
+              <m>f^{-1}(f(A)) = A</m> untuk setiap subhimpunan <m>A</m> dari <m>X</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+    <exercise xml:id="ex_intersection_image">
+      <introduction>
+      <p>
+        Misalkan <m>f : X \to Y</m> merupakan fungsi dan
+        <m>\{A_{\alpha}\}</m> merupakan koleksi subhimpunan dari <m>X</m> yang diindeks oleh <m>\alpha</m> dalam himpunan indeks <m>I</m>,
+        serta <m>\{B_{\beta}\}</m> merupakan koleksi subhimpunan dari <m>Y</m> yang diindeks oleh <m>\beta</m> dalam himpunan indeks <m>J</m>.
+        Buktikan atau sangkal setiap pernyataan berikut.
+        Jika suatu pernyataan tidak benar, apakah salah satu arah inklusi berlaku?
+        Buktikan jawaban Anda.
+      </p>
+      </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>f\left(\bigcap_{\alpha \in I} A_{\alpha}\right) = \bigcap_{\alpha \in I} f(A_{\alpha})</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>f^{-1}\left(\bigcap_{\beta \in J} B_{\beta}\right) = \bigcap_{\beta \in J} f^{-1}(B_{\beta})</m>
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+    <exercise xml:id="ex_inverse_composite">
+    <introduction>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> merupakan himpunan tak kosong,
+        dan <m>f: A \to B</m> merupakan bijeksi.
+        Buktikan bahwa
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Untuk setiap <m>x</m> dalam <m>A</m>,
+              <m>\left( f^{-1} \circ f \right)(x) = x</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Untuk setiap <m>y</m> dalam <m>B</m>,
+              <m>\left( f \circ f^{-1}\right)(y) = y</m>.
+            </p>
+          </statement>
+        </task>
+    
+    </exercise>
+    <exercise xml:id="ex_inverse_composite_sets">
+    <statement>
+      <p>
+        Misalkan <m>R</m>, <m>S</m>, dan <m>T</m> merupakan himpunan,
+        serta <m>g: R \to S</m> dan <m>h : S \to T</m> merupakan fungsi.
+        Misalkan <m>O</m> merupakan subhimpunan dari <m>T</m>.
+        Tunjukkan bahwa <m>(h \circ g)^{-1}(O) = g^{-1}(h^{-1}(O))</m>.
+      </p>
+    </statement>
+    </exercise>
+
+    <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>X_1</m> dan <m>X_2</m> merupakan himpunan tak kosong,
+        dan misalkan <m>X = X_1 \times X_2</m>.
+        Definisikan <m>\pi_i :X  \to X_i</m> dengan <m>\pi_i(x) = x_i</m>,
+        dengan <m>x = (x_1,x_2)</m>.
+        Kita menyebut <m>\pi_i</m> sebagai <term>proyeksi</term>
+        dari <m>X</m> ke <m>X_i</m>.
+        Misalkan <m>Y_1</m> dan <m>Y_2</m> merupakan himpunan tak kosong,
+        dan misalkan <m>Y = Y_1 \times Y_2</m>.
+        Andaikan bahwa untuk setiap <m>i</m> terdapat fungsi <m>f_i : X_i \to Y_i</m>.
+        Sebagai contoh,
+        misalkan <m>X_i = \{i,i+1\}</m> dan <m>Y_i = \{-i, -i-1\}</m>.
+        Kita kemudian dapat mendefinisikan <m>f_i</m> dengan
+        <m>f_i(x) = -x</m> untuk <m>i</m> yang bernilai <m>1</m> ataupun <m>2</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Buktikan bahwa <m>\pi_i</m> merupakan surjeksi untuk setiap <m>i</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Buktikan bahwa terdapat tepat satu fungsi
+              <m>f: X \to Y</m> sedemikian sehingga <m>\pi_i \circ f = f_i \circ \pi_i</m> untuk setiap <m>i</m>.
+              (Perhatikan bahwa salah satu <m>\pi_i</m> memetakan <m>X</m> ke <m>X_i</m>, sedangkan yang lain memetakan <m>Y</m> ke <m>Y_i</m>.)
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Fungsi <m>f</m> dari bagian (b) dinyatakan dengan <m>f = f_1 \times f_2</m>.
+              Misalkan <m>Z_1</m> dan <m>Z_2</m> merupakan dua himpunan tak kosong,
+              dan misalkan <m>Z = Z_1 \times Z_2</m>.
+              Andaikan bahwa terdapat fungsi <m>g_i : Y_i \to Z_i</m> untuk setiap <m>i</m>.
+              Tunjukkan bahwa
+              <me>
+                \left(g_1 \times g_2\right) \circ \left(f_1 \times f_2\right) = (g_1 \circ f_1) \times (g_2 \circ f_2)
+              </me>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Andaikan setiap <m>f_i</m> memiliki invers <m>h_i</m>.
+              Tunjukkan bahwa <m>\left(f_1 \times f_2\right)^{-1} = h_1 \times h_2</m>.
+            </p>
+          </statement>
+        </task>
+    
+    </exercise>
+
+    <exercise>
+    <statement>
+      <p>
+        Misalkan <m>\N</m> merupakan himpunan bilangan bulat positif.
+        Definisikan <m>f:\N \to \Z</m> sebagai berikut: Untuk setiap <m>n \in \N</m>, tetapkan
+        <me>
+          f(n) = \frac{1 + (-1)^n (2n - 1)}{4}
+        </me>.
+        Apakah fungsi <m>f</m> merupakan injeksi?
+        Apakah fungsi <m>f</m> merupakan surjeksi?
+        Berikan alasan untuk kesimpulan Anda.
+        
+      </p>
+    </statement>
+    <hint>
+          <p>
+            Mulailah dengan menghitung beberapa keluaran fungsi sebelum mencoba menulis bukti.
+            Saat menyelidiki apakah fungsi tersebut merupakan injeksi,
+            ada baiknya Anda membagi kasus menurut apakah masukannya genap atau ganjil.
+            Saat menyelidiki apakah <m>f</m> merupakan surjeksi,
+            pertimbangkan pembagian kasus menurut apakah keluarannya positif atau kurang dari atau sama dengan nol.
+          </p>
+        </hint>
+    </exercise>
+
+    <exercise>
+    <introduction>
+      <p>
+        Operasi <m>*</m> pada himpunan <m>S</m> adalah fungsi dari
+        <m>S \times S</m> ke <m>S</m> yang, untuk pasangan
+        <m>(x,y) \in S \times S</m>, menetapkan unsur <m>x*y</m> dalam <m>S</m>.
+        Sebagai contoh,
+        penjumlahan bilangan bulat dapat didefinisikan sebagai fungsi <m>f : \Z \times \Z \to \Z</m> yang memetakan pasangan
+        <m>(a,b)\in \Z \times \Z</m> ke bilangan bulat <m>f(a,b) = a+b</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Apakah fungsi <m>f</m> merupakan injeksi?
+              Berikan alasan untuk kesimpulan Anda.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Apakah fungsi <m>f</m> merupakan surjeksi?
+              Berikan alasan untuk kesimpulan Anda.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+
+    <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>A</m>, <m>B</m>, dan <m>C</m> merupakan himpunan dan
+        <m>f : A \to B</m> serta <m>g : B \to C</m> merupakan fungsi.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Benarkah bahwa jika <m>g \circ f</m> merupakan injeksi,
+              maka <m>f</m> dan <m>g</m> keduanya merupakan injeksi?
+              Jika jawabannya tidak,
+              adakah syarat yang harus dipenuhi oleh <m>f</m> atau <m>g</m> jika <m>g \circ f</m> merupakan injeksi?
+              Buktikan jawaban Anda.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Benarkah bahwa jika <m>g \circ f</m> merupakan surjeksi,
+              maka <m>f</m> dan <m>g</m> keduanya merupakan surjeksi?
+              Jika jawabannya tidak,
+              adakah syarat yang harus dipenuhi oleh <m>f</m> atau <m>g</m> jika <m>g \circ f</m> merupakan surjeksi?
+              Buktikan jawaban Anda.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+
+    <exercise>
+    <task>
+      
+        <statement>
+          <p>
+            Apakah komposisi fungsi merupakan operasi komutatif?
+            Buktikan jawaban Anda.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+          Apakah komposisi fungsi merupakan operasi asosiatif?
+          Buktikan jawaban Anda.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+    <task>
+      
+        <statement>
+          <p>
+            Definisikan <m>f: \Z_5 \to \Z_5</m> dengan
+            <m>f\left( [x] \right) = \left[x^2 + 4 \right]</m> untuk setiap <m>[x] \in \Z_5</m>.
+            Tuliskan invers dari <m>f</m> sebagai himpunan pasangan terurut,
+            dan jelaskan mengapa <m>f^{-1}</m> bukan fungsi.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Definisikan <m>g: \Z_5 \to \Z_5</m> dengan
+            <m>g\left( [x] \right) = \left[x^3 + 4 \right]</m> untuk setiap <m>[x] \in \Z_5</m>.
+            Tuliskan invers dari <m>g</m> sebagai himpunan pasangan terurut,
+            dan jelaskan mengapa <m>g^{-1}</m> merupakan fungsi.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Mungkinkah kita menuliskan rumus untuk <m>g^{-1}\left( [y] \right)</m>,
+            dengan <m>[y] \in \Z_5</m>?
+            Jawaban atas pertanyaan ini bergantung pada apakah akar pangkat tiga dari unsur-unsur <m>\Z_5</m> dapat didefinisikan.
+            Ingatlah bahwa untuk bilangan real <m>x</m>,
+            kita mendefinisikan akar pangkat tiga dari <m>x</m> sebagai bilangan real <m>y</m> sedemikian sehingga <m>y^3 = x</m>.
+            Dengan kata lain, <m>y = \sqrt[3]{x}</m> jika dan hanya jika <m>y^3 = x</m>.
+            Dengan menggunakan gagasan ini,
+            mungkinkah kita mendefinisikan akar pangkat tiga dari setiap unsur <m>\Z_5</m>?
+            Jika ya, tentukan <m>\sqrt[3]{[0]}</m>, <m>\sqrt[3]{[1]}</m>,
+            <m>\sqrt[3]{[2]}</m>, <m>\sqrt[3]{[3]}</m>, dan <m>\sqrt[3]{[4]}</m>.
+          </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+          <p>
+            Sekarang jawablah pertanyaan yang diajukan pada awal bagian<nbsp/>(c).
+            Jika memungkinkan, tentukan rumus untuk
+            <m>g^{-1}\left([y] \right)</m> dengan <m>g^{-1}: \Z_5 \to \Z_5</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>A</m> merupakan himpunan semua fungsi
+        <m>f:[a,b] \to \R</m> yang kontinu pada <m>[a,b]</m>
+        (gunakan kembali pengetahuan Anda tentang fungsi kontinu dari kalkulus untuk soal ini).
+        Misalkan <m>B</m> merupakan subhimpunan dari <m>A</m> yang terdiri atas semua fungsi dengan turunan yang kontinu pada <m>[a,b]</m>.
+        Misalkan <m>C</m> merupakan subhimpunan dari <m>B</m> yang terdiri atas semua fungsi yang bernilai 0 di <m>a</m>.
+      </p>
+    </introduction>
+        <task>
+          
+            <task>
+              <statement>
+                <p>
+                  Berikan contoh fungsi yang berada dalam <m>A</m>, tetapi tidak dalam <m>B</m>, dengan <m>[a,b] = [-1,1]</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Berikan contoh fungsi yang berada dalam <m>B</m>, tetapi tidak dalam <m>C</m>, dengan <m>[a,b] = [-1,1]</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Berikan contoh fungsi yang berada dalam <m>C</m> dengan <m>[a,b] = [-1,1]</m>.
+                </p>
+              </statement>
+            </task>
+          </task>
+
+          <task>
+          <statement>
+            <p>
+              Misalkan <m>d:B \to A</m> didefinisikan oleh
+              <me>
+                d(f) = f'
+              </me>.
+              Apakah fungsi <m>d</m> invertibel?
+              Berikan alasan untuk jawaban Anda.
+            </p>
+          </statement>
+          </task>
+
+          <task>
+          <introduction>
+            <p>
+              Untuk setiap fungsi <m>f \in A</m>,
+              misalkan <m>h(f)</m> merupakan fungsi yang didefinisikan oleh
+              <me>
+                (h(f))(x) = \int_a^x f(t) \, dt
+              </me>
+              untuk <m>x \in [a,b]</m>.
+            </p>
+          </introduction>
+              <task>
+                <statement>
+                  <p>
+                    Tunjukkan bahwa <m>h</m> memetakan <m>A</m> ke <m>C</m>.
+                  </p>
+                </statement>
+              </task>
+              <task>
+                <statement>
+                  <p>
+                    Tunjukkan bahwa <m>h</m> invertibel dengan mencari fungsi
+                    <m>g : C \to A</m> sedemikian sehingga <m>g</m> dan <m>h</m> merupakan fungsi invers satu sama lain.
+                  </p>
+                </statement>
+              </task>
+            
+          </task>
+        </exercise>
+  <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>f:X \to Y</m> suatu fungsi.
+        Untuk setiap pernyataan berikut, nyatakan “benar” jika pernyataan tersebut selalu benar.
+        Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar,
+        nyatakan “salah” dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> merupakan subhimpunan dari <m>X</m>,
+              maka <m>A \subseteq f^{-1}(f(A))</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A</m> merupakan subhimpunan dari <m>X</m>,
+              maka <m>f^{-1}(f(A)) \subseteq A</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>B</m> merupakan subhimpunan dari <m>Y</m>,
+              maka <m>B \subseteq f(f^{-1}(B))</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>B</m> merupakan subhimpunan dari <m>Y</m>,
+              maka <m>f(f^{-1}(B)) \subseteq B</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A_1</m> dan <m>A_2</m> merupakan subhimpunan dari <m>X</m> dengan <m>A_1 \subseteq A_2</m>,
+              maka <m>f(A_1) \subseteq f(A_2)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>B_1</m> dan <m>B_2</m> merupakan subhimpunan dari <m>Y</m> dengan <m>B_1 \subseteq B_2</m>,
+              maka <m>f^{-1}(B_1) \subseteq f^{-1}(B_2)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>B_1</m> dan <m>B_2</m> merupakan subhimpunan dari <m>Y</m> dengan <m>B_1 \subseteq B_2</m>,
+              maka <m>f^{-1}(B_2) \subseteq f^{-1}(B_1)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A_1</m> dan <m>A_2</m> merupakan subhimpunan dari <m>X</m>,
+              maka <m>f(A_1 \cup A_2) = f(A_1) \cup f(A_2)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>B_1</m> dan <m>B_2</m> merupakan subhimpunan dari <m>Y</m>,
+              maka <m>f^{-1}(B_1 \cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A_1</m> dan <m>A_2</m> merupakan subhimpunan dari <m>X</m>,
+              maka <m>f(A_1 \cap A_2) = f(A_1) \cap f(A_2)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>B_1</m> dan <m>B_2</m> merupakan subhimpunan dari <m>Y</m>,
+              maka <m>f^{-1}(B_1 \cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>A_1</m> dan <m>A_2</m> merupakan subhimpunan dari <m>X</m>,
+              maka <m>f(A_1 \setminus A_2) = f(A_1) \setminus f(A_2)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jika <m>B_1</m> dan <m>B_2</m> merupakan subhimpunan dari <m>Y</m>,
+              maka <m>f^{-1}(B_1 \setminus B_2) = f^{-1}(B_1) \setminus f^{-1}(B_2)</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+ 
+</exercises>

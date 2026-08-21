@@ -1,0 +1,233 @@
+<section xml:id="sec_seq_intro">
+  <title>Introduction</title>
+  <p>
+    We were introduced to sequences in calculus,
+    and we can extend the notion of the limit of a sequence to metric spaces.
+    Sequences provide an alternate way to describe many ideas in metric space.
+    For example,
+    we will see that we can characterize continuity in terms of sequences,
+    and we can use sequences to determine open and closed sets.
+  </p>
+  <p>
+    Recall from calculus that a sequence of real numbers is a list of numbers in a specified order.
+    We write a sequence <m>a_1</m>,
+    <m>a_2</m>, <m>\ldots</m>, <m>a_n</m>,
+    <m>\ldots</m> as <m>(a_n)_{n \in \Z^+}</m> or just <m>(a_n)</m>.
+    If we think of each <m>a_n</m> as the output of a function,
+    we can give a more formal definition of a sequence as a function <m>f: \Z^+ \to \R</m>,
+    where <m>a_n = f(n)</m> for each <m>n</m>.
+  </p>
+  <p>
+    A sequence <m>(a_n)</m> of real numbers converges to a number <m>L</m> if we can make all of the numbers in the sequence as close to <m>L</m> as we like by choosing <m>n</m> to be large enough.
+    Once again, this is an informal description that we need to make more rigorous.
+    As we saw with continuous functions,
+    we can make more rigorous the idea of
+    <q>closeness</q>
+    by introducing a symbol for a number that can be arbitrarily small.
+    So we can say that the numbers <m>a_n</m> can get as close to a number <m>L</m> as we want if we can make
+    <m>| a_n - L | \lt \epsilon</m> for any positive number <m>\epsilon</m>.
+    The idea of choosing <m>n</m> large enough is just finding a large enough fixed integer <m>N</m> so that
+    <m>| a_n - L | \lt \epsilon</m> whenever <m>n \geq N</m>.
+    This leads to the definition.
+  </p>
+
+  <definition xml:id="def_sequence_limit_real">
+  <idx><h>limit of a sequence of real numbers</h></idx>
+    <statement>
+      <p>
+        A sequence <m>(a_n)</m> of real numbers has a <term>limit</term> <m>L</m> if,
+        given any <m>\epsilon \gt 0</m> there exists a positive integer <m>N</m> (depending only on <m>\epsilon</m>) such that
+        <me>
+          | a_n - L | \lt  \epsilon \ \text{ whenever }  \ n \geq N
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    When a sequence <m>(a_n)</m> has a limit <m>L</m>, we write
+    <me>
+      \lim_{n \to \infty} a_n = L
+    </me>,
+    or just <m>\lim a_n = L</m>
+    (since we assume the limit for a sequence occurs as <m>n</m> goes to infinity)
+    and we say that the sequence <m>(a_n)</m>
+    <term>converges</term> to <m>L</m>.
+  </p>
+  
+  <example>
+    <statement>
+      <p>
+        We can draw a graph of a sequence <m>(a_n)</m> of real numbers as the set of points <m>(n,a_n)</m>.
+        In this way we can visualize a sequence and its limit.
+        By definition,
+        <m>L</m> is a limit of the sequence <m>(a_n)</m> if,
+        given any <m>\epsilon \gt 0</m>,
+        we can go far enough out in the sequence so that the numbers in the sequence all lie in the horizontal band between <m>y = L -\epsilon</m> and
+        <m>L+ \epsilon</m> as illustrated in <xref ref="F_sequence_limit"/>
+        for the sequence <m>\left(\frac{n}{1+n}\right)</m>.
+      </p>
+      <figure xml:id="F_sequence_limit">
+        <caption>The limit of the sequence <m>\left(\frac{n}{1+n}\right)</m>.</caption>
+        <image width="90%" source="Sequence_limit"/>
+      </figure>
+      <p>
+        To verify that the limit of the sequence <m>\left(\frac{n}{1+n}\right)</m> is <m>1</m>,
+        we start with <m>\epsilon \gt 0</m>.
+      </p>
+      <blockquote>
+        <p>
+        <em>Scratch work.</em> Now we need to find <m>N</m> so that <m>n \geq N</m> implies <m>\left| \frac{n}{1+n} - 1 \right| \lt  \epsilon</m>. Just as with our continuity example, this work is not part of the proof, but shows how we go about finding the <m>N</m> we need. To make <m>\left| \frac{n}{1+n} - 1 \right| \lt  \epsilon</m> we need
+        <md>
+          <mrow>\left| \frac{n}{1+n} - 1 \right| \amp \lt  \epsilon</mrow>
+          <mrow>\left| \frac{n}{1+n} - \frac{1+n}{1+n}  \right| \amp \lt  \epsilon</mrow>
+          <mrow>\left| \frac{-1}{1+n} \right| \amp \lt  \epsilon</mrow>
+          <mrow>1+n \amp \gt \frac{1}{\epsilon}</mrow>
+          <mrow>n \amp \gt \frac{1}{\epsilon} -1</mrow>
+        </md>.
+        Now we use this scratch work to design our proof.
+        </p>
+      </blockquote>
+
+      <p>
+        Let <m>N \gt \frac{1}{\epsilon} -1</m>
+        (so that <m>N</m> depends on <m>\epsilon</m>).
+        Then for <m>n \geq N</m> we have
+        <md>
+          <mrow>n \amp \gt N \gt \frac{1}{\epsilon} -1</mrow>
+          <mrow>1+n \amp \gt \frac{1}{\epsilon}</mrow>
+          <mrow>|-1| \left| \frac{1}{1+n} \right| \amp \lt  \epsilon</mrow>
+          <mrow>\left| \frac{-1}{1+n} \right| \amp \lt  \epsilon</mrow>
+          <mrow>\left| \frac{n}{1+n} - 1 \right| \amp \lt  \epsilon</mrow>
+          <mrow>\left| \frac{n}{1+n} - \frac{1+n}{1+n}  \right| \amp \lt  \epsilon</mrow>
+        </md>.
+      </p>
+
+      <p>
+        So the sequence <m>\left(\frac{n}{1+n}\right)</m> has a limit of <m>1</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    <xref ref="def_sequence_limit_real"/>
+    only applies to sequences of real numbers.
+    Ultimately, we want to phrase the definition in a way that allows us to define limits of sequences in metric spaces and topological spaces.
+    So we have to reformulate the definition in such a way that it does not depend on distances.
+  </p>
+  <p>
+    Recall that <m>| x-y |</m> defined a metric <m>d_E</m> on <m>\R</m>, that is
+    <me>
+      d_E(x,y) = | x-y |
+    </me>.
+  </p>
+  <p>
+    So we can rephrase the definition of a limit of a sequence of real numbers as follows.
+  </p>
+
+  <definition>
+    <title>Alternate Definition</title>
+    <statement>
+      <p>
+        A sequence <m>(a_n)</m> of real numbers has a <term>limit</term> <m>L</m> if,
+        given any <m>\epsilon \gt 0</m> there exists a positive integer <m>N</m> (depending only on <m>\epsilon</m>) such that
+        <me>
+          d_E(a_n, L) \lt  \epsilon \ \text{ whenever }  \ n \geq N
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Once we have described a limit of a sequence in terms of a metric,
+    then we can extend the idea into any metric space.
+  </p>
+
+  <definition>
+  <idx><h>sequence in a metric space</h></idx>
+    <statement>
+      <p>
+        A <term>sequence</term> in a metric space <m>(X,d)</m> is a function <m>f: \Z^+ \to X</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    If <m>f</m> is a sequence in <m>X</m>,
+    we write the sequence defined by <m>f</m> as <m>(f(n))</m>,
+    where <m>n \in \Z^+</m>.
+    We also use the notation <m>(a_n)</m>, when <m>a_n = f(n)</m>.
+    As long as <m>X</m> has a metric defined on it,
+    we can then describe the limit of a sequence.
+  </p>
+
+  <definition>
+  <idx><h>limit of a sequence in a metric space</h></idx>
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space.
+        A sequence <m>(a_n)</m> in <m>X</m> has a <term>limit</term> <m>L \in X</m> if,
+        given any <m>\epsilon \gt 0</m> there exists a positive integer <m>N</m> (depending only on <m>\epsilon</m>) such that
+        <me>
+          d(a_n, L) \lt  \epsilon \ \text{ whenever }  \ n \geq N
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    In other words,
+    a sequence <m>(a_n)</m> in a metric space <m>(X,d)</m> has a limit <m>L \in X</m> if
+    <m>\lim d(a_n,L) = 0</m> <mdash/> or that the sequence
+    <m>d(a_n,L)</m> of real numbers has a limit of <m>0</m>.
+    Just as with sequences of real numbers,
+    when a sequence <m>(a_n)</m> has a limit <m>L</m>,
+    we say that the sequence <m>(a_n)</m>
+    <term>converges</term> to <m>L</m>,
+    or that <m>L</m> is a limit of the sequence <m>(a_n)</m>.
+  </p>
+
+  <exploration>
+
+      <task>
+        <statement>
+          <p>
+            Explain why the sequence <m>\left(\frac{1}{n}\right)</m> converges to 0 in <m>\R</m> using the Euclidean metric <m>d_E</m>, where
+            <me>
+              d_E(a,y) = | x-y |
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Consider the sequence <m>(a_n) = \left(\left(\frac{1}{n}, \frac{1}{n+1} \right)\right)</m> in <m>(\R^2, d_T)</m>,
+            where <m>d_T</m> is the taxicab metric
+            <me>
+              d_T((x_1, x_2), (y_1, y_1)) = | x_1-y_1| + | x_2-y_2 |
+            </me>.
+            Does the sequence <m>(a_n)</m> converge?
+            If so, find its limit and prove that your candidate is the limit.
+            If not, explain why.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>(b_n) = \left((2n,
+            n^2)\right)</m> in the metric space <m>(\R^2, d)</m>,
+            where <m>d</m> is the discrete metric defined by
+            <me>
+              d(x,y) = \begin{cases}0 \amp \text{ if }  x=y \\ 1 \amp \text{ if }  x \neq y. \end{cases}
+            </me>
+            Does the sequence <m>(b_n)</m> converge?
+            If so, find its limit and prove that your candidate is the limit.
+            If not, explain why.
+          </p>
+        </statement>
+      </task>
+    
+  </exploration>
+</section>

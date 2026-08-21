@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file provides the overall configuration for your PreTeXt
+    project. To edit the content of your document, open `source/main.ptx`
+    (default location).
+-->
+<project>
+  <targets>
+    <!-- To build this target, run `pretext build web` -->
+    <target name="html">
+      <format>html</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/web</output-dir>
+    </target>
+    <target name="pdf" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/print</output-dir>
+      <xsl>xsl/custom-latex.xsl</xsl>
+    </target>
+    <target name="latex">
+      <format>latex</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/latex</output-dir>
+      <xsl>xsl/custom-latex.xsl</xsl>
+    </target>
+    <target name="subset">
+      <!-- Usage: to build starting at XMLID, -->
+      <!-- pretext build subset -x XMLID      -->
+      <!-- or use <xml-root>XMLID</xml-root>  -->
+      <format>html</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/subset</output-dir>
+      <stringparam key="debug.skip-knowls" value="yes"/>
+    </target>
+    <target name="chapter01-html">
+      <format>html</format>
+      <source>source/chapter_01_reader.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/chapter01-html</output-dir>
+      <stringparam key="html.css.extra" value="external/o003-readable-layout.css"/>
+    </target>
+    <target name="chapter01-pdf" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/chapter_01_reader.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/chapter01-pdf</output-dir>
+      <xsl>xsl/custom-latex.xsl</xsl>
+    </target>
+    <target name="chapters01-02-html">
+      <format>html</format>
+      <source>source/chapters_01_02_reader.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/chapters01-02-html</output-dir>
+      <stringparam key="html.css.extra" value="external/o003-readable-layout.css"/>
+    </target>
+    <target name="chapters01-02-pdf" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/chapters_01_02_reader.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/chapters01-02-pdf</output-dir>
+      <xsl>xsl/custom-latex.xsl</xsl>
+    </target>
+  </targets>
+  <executables>
+    <latex>latex</latex>
+    <pdflatex>pdflatex</pdflatex>
+    <xelatex>xelatex</xelatex>
+    <pdfsvg>pdf2svg</pdfsvg>
+    <asy>asy</asy>
+    <sage>sage</sage>
+    <pdfpng>convert</pdfpng>
+    <pdfeps>pdftops</pdfeps>
+    <node>node</node>
+    <liblouis>file2brl</liblouis>
+  </executables>
+</project>

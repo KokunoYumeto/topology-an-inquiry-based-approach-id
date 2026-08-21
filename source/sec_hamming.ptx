@@ -1,0 +1,129 @@
+<section xml:id="sec_hamming">
+  <title>The Hamming Metric</title>
+  <p>
+    In our society,
+    a great deal of information is communicated electronically.
+    Bank transactions, television programs,
+    military communications, cell phone calls, digital images,
+    and almost any interchange one can think of either can be or is digitized and transmitted electronically.
+    In many situations we need to compare one set of data to another (e.g., Internet searches for text strings or image matches, DNA strands),
+    and metrics are often used for this purpose.
+    Computers work in a binary system,
+    that is they recognize only zeros and ones.
+    So a digital text message is a string of zeros and ones.
+    That is, a digital message is a collection of elements in the space <m>X^n</m> for some positive integer <m>n</m>,
+    where <m>X = \{0,1\}</m>.
+    Each element in <m>X^n</m> is called a
+    <term>word</term> - that is,
+    a word is an element in <m>X^n</m> denoted in the form <m>(x_1, x_1, \ldots,
+    x_n)</m>.
+    Just like in the English language,
+    where not every combination of letters corresponds to words that make sense,
+    not every word is recognizable as part of an intelligible message.
+    We might, for example,
+    code the letters of the alphabet by assigning numbers 1-26 to the letters,
+    then make them elements of <m>X^n</m> by converting to binary.
+    The collection of all intelligible words is called a <term>code</term>.
+    So a code is just some subset of <m>X^n</m> that all parties agree are sensible words.
+    The words in a code are called <term>code words</term>.
+    To deal with problems that occur in transmitting digital messages,
+    like scrambling (<term>encoding</term>) messages,
+    unscrambling (<term>decoding</term>) messages,
+    and detecting and correcting errors in messages,
+    it is useful to have a way to measure distance between words.
+    One way is to use the Hamming metric.
+  </p>
+
+  <definition>
+    <idx><h>metric</h><h>Hamming</h></idx>
+    <statement>
+      <p>
+        Let <m>x = (x_1, x_2, \ldots,
+        x_n)</m> and <m>y = (y_1, y_2, \ldots,
+        y_n)</m> be words in <m>X^n</m>.
+        The <term>Hamming distance</term>
+        <m>d_H</m> between <m>x</m> and <m>y</m> is
+        <me>
+          d_H(x,y) = \sum_{i=1}^n | x_i-y_i |
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Recall that for each <m>i</m> both <m>x_i</m> and <m>y_i</m> are either 0 or 1.
+    So
+    <me>
+      | x_i-y_i | = \begin{cases}0 \amp \text{ if }  x_i=y_i \\ 1 \amp \text{ if }  x_i \neq y_i. \end{cases}
+    </me>
+  </p>
+  <p>
+    In other words,
+    <m>d_H(x,y)</m> counts the number of components at which <m>x</m> and <m>y</m> are different.
+  </p>
+
+  <activity>
+  
+      <task>
+        <statement>
+          <p>
+            Explain why <m>d_H</m> is a metric.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Suppose we create a code
+            <me>
+              C = \{c_1,c_2,c_3,c_4,c_5,c_6,c_7,c_8\}
+            </me>
+            in <m>X^6</m>, where
+            <md>
+              <mrow>c_1 \amp = (0,0,0,0,0,0) \amp c_2 \amp =( 0,0,0,0,1,1) \amp c_3 \amp = (0,0,0,1,0,1)</mrow>
+              <mrow>c_4 \amp = (0,0,1,0,0,1) \amp c_5 \amp = (0,0,0,1,1,0) \amp c_6 \amp = (0,0,1,0,1,0)</mrow>
+              <mrow>c_7 \amp = (0,0,1,1,0,0) \amp c_8 \amp = (0,0,1,1,1,1) \amp \amp </mrow>
+            </md>
+            
+            That is, the words <m>c_1</m>,
+            <m>c_2</m>, <m>c_3</m>, <m>c_4</m>,
+            <m>c_5</m>, <m>c_6</m>, <m>c_7</m>,
+            <m>c_8</m> are the only words that can comprise a message.
+            Find <m>d_H(c_2, c_8)</m>.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <introduction>
+          <p>
+            Suppose we are on the receiving end of the message
+            <men xml:id="eq_message">
+              (0,0,0,1,1,1) \ (0,0,1,1,0,0) \ (1,0,0,0,0,0) \ (0,0,0,0,1,1) \ (0,0,1,0,0,1)
+            </men>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  How do we know that an error has occurred in transmission of the message we received?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  To correct the errors in this received message,
+                  we replace the incorrect words with the code word(s) in <m>C</m> closest to them.
+                  Correct this message.
+                  (Note that there may be more than one possible substitution.
+                  Find all of the possibilities.)
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+     
+  </activity>
+</section>

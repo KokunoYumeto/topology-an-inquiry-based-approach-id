@@ -1,0 +1,64 @@
+<section xml:id="sec_path_connect">
+  <title>Path Connectedness</title>
+  <p>
+    As with every new property we define,
+    it is natural to ask if path connectedness is a topological property.
+  </p>
+
+  <activity>
+  <introduction>
+    <p>
+      In this activity we prove <xref ref="thm_path_connected"/>.
+    </p>
+    <theorem xml:id="thm_path_connected">
+      <statement>
+        <p>
+          Let <m>X</m> and <m>Y</m> be topological spaces and let
+          <m>f : X \to Y</m> be a continuous function.
+          If <m>A</m> is a path connected subspace of <m>X</m>,
+          then <m>f(A)</m> is a path connected subspace of <m>Y</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Assume that <m>X</m> and <m>Y</m> are topological spaces,
+      <m>f : X \to Y</m> is a continuous function,
+      and <m>A \subseteq X</m> is path connected.
+      To prove that <m>f(A)</m> is path connected,
+      we choose two elements <m>u</m> and <m>v</m> in <m>f(A)</m>.
+      It follows that there exist elements <m>a</m> and <m>b</m> in <m>A</m> such that <m>f(a) = u</m> and <m>f(b) = v</m>.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            Explain why there is a continuous function
+            <m>p: [0,1] \to A</m> such that <m>p(0) = a</m> and <m>p(1) = b</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Determine how <m>p</m> and <m>f</m> can be used to define a path
+            <m>q: [0,1] \to f(A)</m> from <m>u</m> to <m>v</m>.
+            Be sure to explain why <m>q</m> is a path.
+            Conclude that <m>f(A)</m> is path connected.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    A consequence of <xref ref="thm_path_connected"/> is the following.
+  </p>
+  
+  <corollary>
+    <statement>
+      <p>
+        Path connectedness is a topological property.
+      </p>
+    </statement>
+  </corollary>
+</section>

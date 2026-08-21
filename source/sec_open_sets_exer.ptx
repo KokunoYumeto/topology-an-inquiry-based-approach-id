@@ -1,0 +1,266 @@
+<exercises xml:id="sec_open_sets_exer">
+  
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>d</m> be the discrete metric.
+        Let <m>(X,d)</m> be a metric space.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that every subset of <m>X</m> is open.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>(Y, d_Y)</m> be a metric space.
+              Prove that every function <m>f: X \to Y</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is it also true that every function <m>f: Y \to X</m> is continuous?
+              If yes, prove your answer.
+              If no, find a counterexample.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_O_int_O">
+    <statement>
+      <p>
+        Prove that a subset <m>O</m> of a metric space <m>X</m> is open if and only if <m>O = \Int(O)</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>A</m> and <m>B</m> be subsets of a metric space <m>X</m> with <m>A \subseteq B</m>.
+        Prove or disprove the following.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>\Int(A) \subseteq \Int(B)</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\Int(\Int(A)) = \Int(A)</m>
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>a, b \in \R</m> with <m>a \lt b</m>.
+        Show that the set <m>(a,b]</m> in <m>(\R, d_E)</m> is not an open set.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>A = \{(x,y) \in \R^2 \mid 1 \lt x \lt 3, 0 \lt y \lt 1\}</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Is <m>A</m> an open set in <m>(\R^2, d_E)</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>A</m> an open set in <m>(\R^2, d_T)</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>A</m> an open set in <m>(\R^2, d_M)</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>S</m> be a finite set of points in <m>\R^2</m>.
+        Is the set <m>\R^2 \setminus A</m> an open set in <m>(\R^2, d_E)</m>?
+        Prove your answer.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X, d_X)</m> and <m>(Y, d_Y)</m> be metric spaces and let <m>f: X \to Y</m> be a function.
+        Prove that <m>f</m> is continuous if and only if
+        <m>f^{-1}(\Int(B)) \subseteq \Int(f^{-1}(B))</m> for every subset <m>B</m> of <m>Y</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the metric space <m>(Q,d)</m>,
+        where <m>d : Q \times Q \to \R</m> is defined by
+        <me>
+          d\left(\frac{a}{b}, \frac{u}{v}\right) = \max\{| a-u |, | b-v |\}
+        </me>
+        (The fact that <m>d</m> is a metric is the topic of <xref ref="ex_MS_Q_metric"/>.) Describe the open ball <m>B(q,2)</m> in <m>Q</m> if <m>q = \frac{2}{5}</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space and let <m>x_1</m> and <m>x_2</m> be distinct points in <m>X</m>.
+        Prove that there are open sets <m>O_1</m> containing <m>x_1</m> and <m>O_2</m> containing <m>x_2</m> such that <m>O_1 \cap O_2 = \emptyset</m>.
+        (This shows that we can separate points in metric spaces with open sets.
+        Separation properties are important in topology.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex_linear_continuous2">
+    <introduction>
+      <p>
+        Let <m>X = \R</m> with the Euclidean metric <m>d_E</m>,
+        and let <m>Y = \R</m> with the metric <m>d</m> defined by <m>d(x,y) = \frac{|x-y|}{|x-y|+1}</m>
+        (that <m>d</m> is a metric is the subject of <xref ref="ex_1_over_1_plus_t_metric"/>).
+        Let <m>a</m> and <m>b</m> be real numbers and let
+        <m>f:\R \to \R</m> be defined by <m>f(x) = ax+b</m>.
+        That is, <m>f</m> is an arbitrary linear function from <m>\R</m> to <m>\R</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Describe the open balls in <m>(Y, d)</m>.
+              That is, if <m>a</m> is a real number and <m>\delta</m> is a positive real number,
+              what is the specific set of points in <m>B(a, \delta)</m> in <m>Y</m>?
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>f</m> from <m>X</m> to <m>Y</m> continuous for any real numbers <m>a</m> and <m>b</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is <m>f</m> from <m>Y</m> to <m>X</m> continuous for any real numbers <m>a</m> and <m>b</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f: \R^2 \to \R</m> be defined by <m>f((x,y)) = x</m>.
+        Assume that we use the max metric <m>d_M</m> on <m>\R^2</m> and the Euclidean metric <m>d_E</m> on <m>\R</m>.
+        Use Theorem to determine if <m>f</m> a continuous function.
+        Prove your conjecture.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> and <m>B</m> are nonempty subsets of a metric space <m>X</m>,
+              then <m>\Int(A \cup B) \subseteq \Int(A) \cup \Int(B)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> and <m>B</m> are nonempty subsets of a metric space <m>X</m>,
+              then <m>\Int(A) \cup \Int(B) \subseteq \Int(A \cup B)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> and <m>B</m> are nonempty subsets of a metric space <m>X</m>,
+              then <m>\Int(A \cap B) \subseteq \Int(A) \cap \Int(B)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> and <m>B</m> are nonempty subsets of a metric space <m>X</m>,
+              then <m>\Int(A) \cap \Int(B) \subseteq \Int(A \cap B)</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Every subset of an open set in a metric space <m>(X,d)</m> is open in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              A subset <m>O</m> of <m>\R^2</m> is open under the Euclidean metric <m>d_E</m> if and only if <m>O</m> is open under the taxicab metric <m>d_T</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let X = <m>[0,1] \cup [2,3]</m> endowed with the Euclidean metric.
+              Then <m>[0, 1]</m> is an open subset of <m>X</m>.
+            </p>
+          </statement>
+        </task>
+    
+  </exercise>
+</exercises>

@@ -1,0 +1,582 @@
+<exercises xml:id="sec_cont_top_exer">
+  
+  <exercise xml:id="ex_isometry_reverse">
+    <statement>
+      <p>
+        Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metrically equivalent metric spaces,
+        and let <m>f:X \to Y</m> be a bijection such that
+        <me>
+          d_X(x,y) = d_Y(f(x),f(y))
+        </me>
+        for all <m>x,y \in X</m>.
+        Prove that
+        <me>
+          d_Y(u,v) = d_X(f^{-1}(u), f^{-1}(v))
+        </me>
+        for all <m>u</m> and <m>v</m> in <m>Y</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X, \tau_X)</m> and
+        <m>(Y, \tau_Y)</m> be topological spaces,
+        and let <m>f : X \to Y</m> be a homeomorphism.
+        Let <m>A</m> be a subset of <m>X</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>x</m> is a limit point of <m>A</m>,
+              must <m>f(x)</m> be a limit point of <m>f(A)</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>x</m> is an interior point of <m>A</m>,
+              must <m>f(x)</m> be an interior point of <m>f(A)</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>x</m> is a boundary point of <m>A</m>,
+              must <m>f(x)</m> be a boundary point of <m>f(A)</m>?
+              Prove your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_me_implies_te">
+    <statement>
+      <p>
+        Let <m>(X, d_X)</m> and <m>(Y, d_Y)</m> be metrically equivalent metric spaces.
+        Show that <m>X</m> and <m>Y</m> are topologically equivalent using the metric topologies.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex_closed_sets_continuity_TS">
+    <statement>
+      <p>
+        Prove <xref ref="thm_closed_sets_continuity_TS"/>
+        that if <m>(X,\tau_X)</m> and
+        <m>(Y, \tau_Y)</m> are topological spaces,
+        and <m>f: X \to Y</m> is a function,
+        then <m>f</m> is continuous if and only if
+        <m>f^{-1}(C)</m> is a closed set in <m>X</m> whenever <m>C</m> is a closed set in <m>Y</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(X, \tau_X)</m>, <m>(Y, \tau_Y)</m>,
+        and <m>(Z, \tau_Z)</m> be topological spaces.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>f: X \to Y</m> and <m>g : Y \to Z</m> be continuous functions.
+              Prove that <m>g \circ f : X \to Z</m> is a continuous function.
+              
+            </p>
+          </statement>
+          <hint>
+                <p>
+                  <xref ref="ex_inverse_composite_sets"/> could be helpful here.
+                </p>
+              </hint>
+        </task>
+        <task>
+          <introduction>
+            <p>
+              Let <m>f: (X, \tau_X) \to (Y, \tau_Y)</m> be a homeomorphism.
+              Let <m>h</m> be a function from <m>(Y, \tau_Y)</m> to
+              <m>(Z, \tau_Z)</m> and let <m>k</m> be a function from
+              <m>(Z, \tau_Z)</m> to <m>(X, \tau_X)</m>.
+            </p>
+          </introduction>
+              <task>
+                <statement>
+                  <p>
+                    Prove that <m>h</m> is continuous if and only if <m>h \circ f</m> is continuous.
+                  </p>
+                </statement>
+              </task>
+              <task>
+                <statement>
+                  <p>
+                    Prove that <m>k</m> is continuous if and only if <m>f \circ k</m> is continuous.
+                  </p>
+                </statement>
+              </task>
+            
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X = \{a,b,c,d\}</m> with topology <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{b,d\}, \{a,b,d\}, X\}</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Find a function <m>f: X \to X</m> that is continuous at exactly one point,
+              or show that no such function exists.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Find a function <m>f: X \to X</m> that is continuous at exactly two points,
+              or show that no such function exists.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Find a function <m>f: X \to X</m> that is continuous at exactly three points,
+              or show that no such function exists.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Consider <m>\R</m> and <m>\R^2</m> equipped with the Euclidean topology.
+        Let <m>f : \R \to \R</m> be a function and let
+        <me>
+          \Gamma_f = \{(x,f(x)) \mid x \in \R\}
+        </me>
+        be the graph of <m>f</m>.
+        Note that <m>\Gamma_f</m> is a subspace of <m>\R^2</m> and is a topological space using the subspace topology.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that if <m>f</m> is a continuous function,
+              then <m>\Gamma_f</m> is homeomorphic to <m>\R</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If we remove the condition that <m>f</m> is continuous,
+              must it still be the case that
+              <m>\Gamma_f</m> is homeomorphic to <m>\R</m>?
+              Prove your conjecture.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a nonempty set and let <m>p</m> be a fixed element in <m>X</m>.
+        Let <m>\tau_p</m> be the particular point topology and
+        <m>\tau_{\overline{p}}</m> the excluded point topology on <m>X</m>.
+        That is
+        <ul>
+          <li>
+            <p>
+              <m>\tau_{p}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that contain <m>p</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tau_{\overline{p}}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>X</m>,
+              and all of the subsets of <m>X</m> that do not contain <m>p</m>.
+            </p>
+          </li>
+        </ul>
+      
+      That the particular point and excluded point topologies are topologies is the subject of <xref ref="ex_particular_point_topology"/> and <xref ref="ex_excluded_point_topology"/>.
+      </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>p</m> be a fixed point in <m>\R</m>.
+            Is the identity function <m>i: \R \to \R</m> defined by
+            <m>i(x) = x</m> for all <m>x \in \R</m> a homeomorphism from
+            <m>(\R, \tau_p)</m> to <m>(\R, \tau_{\overline{p}})</m>?
+            Prove your answer.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>(\R, \tau_{p})</m> homeomorphic to
+            <m>(\R, \tau_{\overline{p}})</m> with the specific point <m>p=0</m>?
+            Prove your answer.
+          </p>
+        </statement>
+      </task>
+   
+
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        A topological space <m>X</m> is <term>embedded</term>
+        in a topological space <m>Y</m> if there is a homeomorphism from <m>X</m> to some subspace of <m>Y</m>.
+        The homeomorphism is called an <term>embedding</term>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Show that if <m>X</m> is the open interval <m>(0,1)</m> with the Euclidean metric topology,
+              then <m>X</m> can be embedded in the topological space <m>\R</m> with the Euclidean metric topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Show that there exist non-homeomorphic topological spaces <m>A</m> and <m>B</m> for which <m>A</m> can be embedded in <m>B</m> and <m>B</m> can be embedded in <m>A</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X = \{a,b\}</m> be a two element set.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Find all of the distinct topologies on <m>X</m>.
+              Be sure to explain how you know you have identified all of the topologies.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Determine the distinct homeomorphism classes of topological spaces on two elements.
+              Justify your response.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X = \{a,b,c\}</m>.
+        There are 29 distinct topologies on <m>X</m>, shown below.
+        Determine the number of distinct homeomorphism classes for these 29 topologies and identify the elements of each homeomorphism class.
+        Justify your answers.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a,b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{a,b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, \{a,b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{c\}, \{a,b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{c\}, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{c\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{a,b\}, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, \{a,b\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{c\}, \{a,c\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{b\}, \{a,b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{c\}, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, \{c\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{b\}, \{a,b\}, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{b\}, \{a,b\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{c\}, \{a,c\}, \{a,b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{a\}, \{c\}, \{a,c\}, \{b,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, \{c\}, \{b,c\}, \{a,b\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\{\emptyset, \{b\}, \{c\}, \{b,c\}, \{a,c\}, X\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              the discrete topology
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Show that property <m>T_i</m> is a topological property for each <m>i</m>.
+        (See <xref ref="chap_Closed_sets_topology"/>
+        for definitions of the separation axioms.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>f : X \to Y</m> is a continuous function between topological spaces <m>X</m> and <m>Y</m>,
+              then for every open subset <m>U</m> of <m>X</m>,
+              <m>f(U)</m> is open in <m>Y</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>\tau_{FC}</m> is the finite complement topology,
+              then <m>f(x) = x^2</m> mapping
+              <m>(\R, \tau_{FC})</m> to <m>(\R, \tau_{FC})</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>f : X \to Y</m> is a bijective function between topological spaces <m>X</m> and <m>Y</m>,
+              and for every open subset <m>U</m> of <m>X</m>,
+              <m>f(U)</m> is open in <m>Y</m>,
+              then <m>f</m> is a homeomorphism.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> and <m>Y</m> are topological space with the discrete topologies,
+              and if <m>f: X \to Y</m> is a bijection,
+              then the spaces <m>X</m> and <m>Y</m> are homeomorphic.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>S</m> be a set and let <m>R_1</m> and <m>R_2</m> be equivalence relations on <m>S</m>.
+              Then <m>R = R_1 \cap R_2</m> is also an equivalence relation on <m>S</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>S</m> be a set and let <m>R_1</m> and <m>R_2</m> be equivalence relations on <m>S</m>.
+              Then <m>R = R_1 \cup R_2</m> is also an equivalence relation on <m>S</m>.
+            </p>
+          </statement>
+        </task>
+  
+    </exercise>
+
+</exercises>

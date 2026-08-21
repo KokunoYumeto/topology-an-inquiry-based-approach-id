@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--********************************************--><!--*       Generated from PreTeXt source      *--><!--*                                          *--><!--*         https://pretextbook.org          *--><!--*                                          *--><!--********************************************--><html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gabungan, Irisan, dan Komplemen Himpunan</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Topologi: Pendekatan Berbasis Inkuiri">
+<meta property="book:author" content="Steven Schlicker">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="o003-c90-chapters-01-02-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–2 — Himpunan, Fungsi, dan Pendamping Belajar Mandiri</span></a></h1>
+<p class="byline">Steven Schlicker</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Hasil Pencarian: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Tidak ada hasil.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Tampilkan atau sembunyikan daftar isi"><span class="icon">☰</span><span class="name">Daftar Isi</span></button><a class="index-button button" href="index-1.html" title="Indeks"><span class="name">Indeks</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Ubah preferensi pengguna"><span id="avatarbutton" class="avatarbutton name">Anda!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Pilih avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>Anda!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Keluarga font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Sesuaikan font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Ukuran</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Lebih kecil</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Lebih besar</li>
+<li>Lebar</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">lebih sempit</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">lebih lebar</li>
+<li>Ketebalan</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">lebih tipis</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">lebih tebal</li>
+<li>Jarak huruf</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">lebih rapat</li>
+<li data-val="lspace" data-change="1" tabindex="-1">lebih renggang</li>
+<li>Jarak kata</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">celah lebih kecil </li>
+<li data-val="wspace" data-change="1" tabindex="-1">celah lebih besar</li>
+<li>Jarak baris</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">lebih rapat<br>merapat</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">lebih renggang<br>merenggang</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Mode terang/gelap<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>bawaan</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>senja</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>gelap</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>tengah malam</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Penggaris baca<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>tanpa penggaris</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>garis bawah</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>garis bawah-L</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>bilah abu-abu</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>kotak terang</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>fajar</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>garis bawah fajar</li>
+<li class="moveQ">Gerakkan dengan:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>ikuti tetikus</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>panah atas/bawah — belum tersedia</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>pelacakan mata — belum tersedia</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec_intervals.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="up-button button" href="chap_sets.html" title="Naik"><span class="icon">^</span><span class="name">Naik</span></a><a class="next-button button" href="sec_cart_prod.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Cari" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch02-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-sets-functions.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan dan Fungsi</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basic_top.html" class="internal"><span class="title">Gagasan Dasar Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_intervals.html" class="internal"><span class="title">Interval</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="sec_union_int_comp.html" class="internal"><span class="title">Gabungan, Irisan, dan Komplemen Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cart_prod.html" class="internal"><span class="title">Hasil Kali Kartesius Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_functions.html" class="internal"><span class="codenumber">2</span> <span class="title">Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_func.html" class="internal"><span class="title">Komposisi Fungsi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_inv_func.html" class="internal"><span class="title">Fungsi Invers</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fun_set.html" class="internal"><span class="title">Fungsi dan Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_card_set.html" class="internal"><span class="title">Kardinalitas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Bagian Akhir</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="o003-c90-ch01-companion.html" class="internal"><span class="codenumber">A</span> <span class="title">Pendamping Mandiri Bab 1: Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch01-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-exercise-guides.html" class="internal"><span class="title">Jawaban dan panduan sepuluh latihan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch02-companion.html" class="internal"><span class="codenumber">B</span> <span class="title">Pendamping Mandiri Bab 2: Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch02-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan tujuh belas latihan</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_union_int_comp"><h2 class="heading hide-type">
+<span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Gabungan, Irisan, dan Komplemen Himpunan</span>
+</h2>
+<div class="para" id="p-41">Dalam matematika, kumpulan titik yang membentuk seutas tali atau segumpal plastisin seperti dalam <a href="" class="xref" data-knowl="./knowl/act_rubber_sheet.html" title="Kegiatan 1.2">Kegiatan 1.2</a> direpresentasikan sebagai suatu himpunan. Topologi kemudian mempelajari himpunan-himpunan tersebut serta sifat-sifat yang tidak berubah ketika suatu transformasi diterapkan padanya. Untuk mempelajari topologi, kita memerlukan pemahaman yang kuat tentang himpunan dan berbagai operasi pada himpunan.</div>
+<div class="para" id="p-42"> Apa yang kita jumpai dalam <a href="" class="xref" data-knowl="./knowl/pa_sets.html" title="Aktivitas Persiapan 1.1">Aktivitas Persiapan 1.1</a> disebut <dfn class="terminology">paradoks</dfn>. Upaya awal kita untuk mendefinisikan himpunan menghasilkan keadaan yang mustahil, karena baik <span class="process-math">\(S \in S\)</span> maupun <span class="process-math">\(S \notin S\)</span> menimbulkan kontradiksi. Paradoks ini disebut <dfn class="terminology">paradoks Russell</dfn>, mengambil nama Bertrand Russell, meskipun tampaknya paradoks tersebut telah diketahui sebelum Russell. Pelajaran yang dapat kita ambil adalah bahwa kita harus berhati-hati ketika membuat definisi. Himpunan mungkin tampak sebagai objek yang sederhana, dan dalam pengalaman kita biasanya memang demikian, tetapi mendefinisikan himpunan secara formal dapat menimbulkan masalah. Oleh karena itu, kita tidak akan memberikan definisi formal, melainkan menganggap himpunan sebagai kumpulan objek yang tidak menimbulkan paradoks. Objek-objek tersebut disebut anggota himpunan. (Dalam teori himpunan aksiomatik, himpunan dipandang sebagai konsep primitif yang tidak didefinisikan — sebagaimana titik tidak didefinisikan dalam geometri Euklides.)</div>
+<div class="para" id="p-43">Agar dapat bekerja dengan himpunan secara efektif, kita perlu memahami apa artinya dua himpunan sama.</div>
+<article class="activity project-like" id="act_set_equality"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-19"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-44">Apa yang dimaksud dengan dua himpunan yang sama? Jika <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> adalah himpunan, bagaimana kita membuktikan bahwa <span class="process-math">\(A = B\text{?}\)</span> (Pertanyaan ini memerlukan pembahasan, berbeda dengan pertanyaan yang hanya meminta perhitungan atau contoh. Aktivitas di sepanjang buku ini akan memuat kedua jenis pertanyaan tersebut.)</div></article><article class="task exercise-like" id="task-20"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-45">Misalkan <span class="process-math">\(A = \{x \in \R \mid x \lt 2\}\)</span> dan <span class="process-math">\(B = \{x \in \R \mid x-1 \lt 1\}\text{.}\)</span> Apakah <span class="process-math">\(A=B\text{?}\)</span> Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.</div></article><article class="task exercise-like" id="task-21"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-46">Misalkan <span class="process-math">\(A = \{n \in \Z \mid 2 \text{ membagi } n\}\)</span> dan <span class="process-math">\(B = \{n \in \Z \mid 4 \text{ membagi } (n-2)\}\text{.}\)</span> Apakah <span class="process-math">\(A=B\text{?}\)</span> Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.</div></article><article class="task exercise-like" id="task-22"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-47">Misalkan <span class="process-math">\(A = \{n \in \Z \mid n \text{ ganjil } \}\)</span> dan <span class="process-math">\(B = \{n \in \Z \mid 4 \text{ membagi } (n-1) \text{ atau } 4 \text{ membagi } (n-3)\}\text{.}\)</span> Apakah <span class="process-math">\(A=B\text{?}\)</span> Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.</div></article></article><div class="para logical" id="p-48">
+<div class="para">Setelah memiliki gagasan tentang himpunan, kita dapat membentuk himpunan baru dari himpunan yang sudah ada. Sebagai contoh, kita mendefinisikan gabungan, irisan, selisih himpunan, dan komplemen sebagai berikut.</div>
+<ul class="disc">
+<li id="li-11"><div class="para logical" id="p-49">
+<div class="para">
+<dfn class="terminology">Gabungan</dfn> himpunan <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> adalah himpunan <span class="process-math">\(A \cup B\)</span> yang didefinisikan sebagai</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \cup B = \{x \mid x \in A \text{ atau }  x \in B\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="li-12"><div class="para logical" id="p-50">
+<div class="para">
+<dfn class="terminology">Irisan</dfn>  himpunan <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> adalah himpunan <span class="process-math">\(A \cap B\)</span> yang didefinisikan sebagai</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \cap B = \{x \mid x \in A \text{ dan }  x \in B\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="li-13"><div class="para logical" id="p-51">
+<div class="para">Misalkan <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> adalah himpunan. <dfn class="terminology">Selisih himpunan</dfn>  <span class="process-math">\(A \setminus B\)</span> adalah himpunan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \setminus B = \{a \in A \mid a \notin B\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="li-14"><div class="para logical" id="p-52">
+<div class="para">Misalkan <span class="process-math">\(A\)</span> merupakan himpunan bagian dari suatu himpunan <span class="process-math">\(U\text{.}\)</span> <dfn class="terminology">Komplemen</dfn>  <span class="process-math">\(A\)</span> di dalam <span class="process-math">\(U\)</span> adalah himpunan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U \setminus A = \{x \in U \mid x \notin A\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Komplemen himpunan <span class="process-math">\(A\)</span> di dalam himpunan <span class="process-math">\(U\)</span> juga dinyatakan dengan <span class="process-math">\(C_U(A)\text{,}\)</span> <span class="process-math">\(C(A)\)</span> (jika himpunan <span class="process-math">\(U\)</span> sudah dipahami dari konteks), <span class="process-math">\(A^c\text{,}\)</span> atau bahkan <span class="process-math">\(U-A\text{.}\)</span>
+</div>
+</div></li>
+</ul>
+</div>
+<div class="para" id="p-53">Kita dapat memvisualisasikan himpunan-himpunan ini dengan diagram Venn. Diagram Venn menggambarkan himpunan menggunakan bangun-bangun geometri. Sebagai contoh, jika <span class="process-math">\(U\)</span> adalah himpunan yang memuat semua himpunan lain yang sedang diperhatikan (kita menyebut <span class="process-math">\(U\)</span> sebagai himpunan <dfn class="terminology">semesta</dfn>), kita dapat merepresentasikan <span class="process-math">\(U\)</span> sebagai wadah besar (misalnya persegi panjang), dengan himpunan bagian <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> sebagai wadah yang lebih kecil (misalnya lingkaran), lalu mengarsir anggota-anggota suatu himpunan tertentu. Diagram Venn dalam <a href="" class="xref" data-knowl="./knowl/F_Venn.html" title="Gambar 1.2">Gambar 1.2</a> menggambarkan himpunan <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(A \cup B\text{,}\)</span> <span class="process-math">\(A \cap B\text{,}\)</span> <span class="process-math">\(A^c\text{,}\)</span> dan <span class="process-math">\(B^c\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="F_Venn"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:33.3333333333333%;"><img src="external/Venn_Diagram_A.svg" role="img" class="contained" alt="Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A di kiri dan B di kanan. Seluruh lingkaran A, termasuk daerah irisannya dengan B, diarsir."></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><img src="external/Venn_Diagram_B.svg" role="img" class="contained" alt="Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A di kiri dan B di kanan. Seluruh lingkaran B, termasuk daerah irisannya dengan A, diarsir."></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><img src="external/Venn_Diagram_union.svg" role="img" class="contained" alt="Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Kedua lingkaran, termasuk daerah irisannya, diarsir untuk menunjukkan gabungan A dan B."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:33.3333333333333%;"><div class="para logical" id="p-54"><div class="displaymath process-math">
+\begin{equation*}
+A
+\end{equation*}
+</div></div></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><div class="para logical" id="p-55"><div class="displaymath process-math">
+\begin{equation*}
+B
+\end{equation*}
+</div></div></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><div class="para logical" id="p-56"><div class="displaymath process-math">
+\begin{equation*}
+A \cup B
+\end{equation*}
+</div></div></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:33.3333333333333%;"><img src="external/Venn_Diagram_intersection.svg" role="img" class="contained" alt="Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Hanya daerah berbentuk lensa tempat A dan B beririsan yang diarsir."></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><img src="external/Venn_Diagram_A_complement.svg" role="img" class="contained" alt="Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Seluruh daerah di luar lingkaran A diarsir untuk menunjukkan komplemen A."></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><img src="external/Venn_Diagram_B_complement.svg" role="img" class="contained" alt="Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Seluruh daerah di luar lingkaran B diarsir untuk menunjukkan komplemen B."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:33.3333333333333%;"><div class="para logical" id="p-57"><div class="displaymath process-math">
+\begin{equation*}
+A \cap B
+\end{equation*}
+</div></div></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><div class="para logical" id="p-58"><div class="displaymath process-math">
+\begin{equation*}
+A^{c}
+\end{equation*}
+</div></div></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><div class="para logical" id="p-59"><div class="displaymath process-math">
+\begin{equation*}
+B^{c}
+\end{equation*}
+</div></div></div>
+</div></div>
+<figcaption><span class="type">Gambar</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span>Diagram Venn</figcaption></figure><div class="para" id="p-60">Seperti yang telah kita bahas, untuk membuktikan bahwa dua himpunan <span class="process-math">\(X\)</span> dan <span class="process-math">\(Y\)</span> sama, kita membuktikan bahwa masing-masing merupakan himpunan bagian dari yang lain. Contoh berikut memberikan ilustrasi lain dari gagasan tersebut.</div>
+<article class="example example-like" id="ex_set_eq"><h3 class="heading">
+<span class="type">Contoh</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-61">Misalkan <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> dan <span class="process-math">\(C\)</span> adalah himpunan. Kita akan membuktikan bahwa <span class="process-math">\(A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)\text{.}\)</span>
+</div> <div class="para" id="p-62">Untuk membuktikan kesamaan himpunan ini, kita harus membuktikan bahwa <span class="process-math">\(A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)\)</span> dan <span class="process-math">\((A \cap B) \setminus (A \cap C) \subseteq A \cap (B \setminus C)\text{.}\)</span> Kita mulai dengan <span class="process-math">\(A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)\text{.}\)</span>
+</div> <div class="para" id="p-63">Untuk membuktikan bahwa <span class="process-math">\(A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)\text{,}\)</span> kita perlu menunjukkan bahwa setiap anggota <span class="process-math">\(A \cap (B \setminus C)\)</span> juga merupakan anggota <span class="process-math">\((A \cap B) \setminus (A \cap C)\text{.}\)</span> Untuk itu, kita pilih sembarang anggota dari <span class="process-math">\(A \cap (B \setminus C)\)</span> dan menunjukkan bahwa anggota tersebut berada dalam <span class="process-math">\((A \cap B) \setminus (A \cap C)\text{.}\)</span> Misalkan <span class="process-math">\(x \in A \cap (B \setminus C)\text{.}\)</span> Maka <span class="process-math">\(x \in A\)</span> dan <span class="process-math">\(x \in B \setminus C\text{.}\)</span> Fakta bahwa <span class="process-math">\(x \in B \setminus C\)</span> berarti bahwa <span class="process-math">\(x \in B\text{,}\)</span> tetapi <span class="process-math">\(x \notin C\text{.}\)</span> Oleh karena itu, <span class="process-math">\(x \in A\)</span> dan <span class="process-math">\(x \in B\text{,}\)</span> tetapi <span class="process-math">\(x \notin C\text{.}\)</span> Ini berarti bahwa <span class="process-math">\(x \in A\)</span> dan <span class="process-math">\(x \in B\text{,}\)</span> sedangkan <span class="process-math">\(x \in A\)</span> dan <span class="process-math">\(x \notin C\text{.}\)</span> Jadi, <span class="process-math">\(x \in A\)</span> dan <span class="process-math">\(x \in B\text{,}\)</span> tetapi <span class="process-math">\(x \notin A \cap C\text{.}\)</span> Kita menyimpulkan bahwa <span class="process-math">\(x \in (A \cap B) \setminus (A \cap C)\text{.}\)</span> Hal ini membuktikan bahwa <span class="process-math">\(A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)\text{.}\)</span>
+</div> <div class="para" id="p-64">Untuk inklusi sebaliknya, misalkan <span class="process-math">\(y \in (A \cap B) \setminus (A \cap C)\text{.}\)</span> Jadi, <span class="process-math">\(y \in A \cap B\text{,}\)</span> tetapi <span class="process-math">\(y \notin A \cap C\text{.}\)</span> Karena <span class="process-math">\(y \in A \cap B\text{,}\)</span> kita mengetahui bahwa <span class="process-math">\(y \in A\)</span> dan <span class="process-math">\(y \in B\text{.}\)</span> Fakta bahwa <span class="process-math">\(y \notin A \cap C\text{,}\)</span> bersama dengan keanggotaan yang telah disebutkan, berarti bahwa <span class="process-math">\(y \notin C\text{.}\)</span> Jadi, <span class="process-math">\(y \in A\text{,}\)</span> <span class="process-math">\(y \in B\text{,}\)</span> dan <span class="process-math">\(y \notin C\text{.}\)</span> Dengan demikian, <span class="process-math">\(y \in A\)</span> dan <span class="process-math">\(y \in B \setminus C\text{.}\)</span> Kita menyimpulkan bahwa <span class="process-math">\(y \in A \cap (B \setminus C)\text{,}\)</span> yang menunjukkan bahwa <span class="process-math">\((A \cap B) \setminus (A \cap C) \subseteq A \cap (B \setminus C)\text{.}\)</span> Kedua inklusi, <span class="process-math">\(A \cap (B \setminus C) \subseteq (A \cap B) \setminus (A \cap C)\)</span> dan <span class="process-math">\((A \cap B) \setminus (A \cap C) \subseteq A \cap (B \setminus C)\text{,}\)</span> menunjukkan bahwa <span class="process-math">\(A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)\text{.}\)</span>
+</div></article><div class="para" id="p-65">Kita akan menggunakan gagasan dalam <a href="" class="xref" data-knowl="./knowl/act_set_equality.html" title="Kegiatan 1.3">Kegiatan 1.3</a> dan <a href="" class="xref" data-knowl="./knowl/ex_set_eq.html" title="Contoh 1.3">Contoh 1.3</a> untuk membuktikan kesamaan himpunan di sepanjang buku ini. Aktivitas berikut memberikan latihan tambahan.</div>
+<article class="activity project-like" id="act_sets_1"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="introduction-6"><div class="para" id="p-66">Dalam aktivitas ini, kita bekerja dengan gabungan, irisan, dan komplemen himpunan. Misalkan <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> adalah himpunan.</div></div>
+<article class="task exercise-like" id="task-23"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="introduction" id="introduction-7"><div class="para" id="p-67">Misalkan <span class="process-math">\(A = \{1,2,3,4,5,6\}\)</span> dan <span class="process-math">\(B = \{2,4,6,8,10\}\text{,}\)</span> dengan <span class="process-math">\(U = \{1,2,3,4,5,6,7,8,9,10\}\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-24"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para" id="p-68">Tentukan anggota <span class="process-math">\(A \cup B\)</span> dan <span class="process-math">\(A \cap B\text{.}\)</span> Apa saja anggota <span class="process-math">\((A \cup B)^c\)</span> dan <span class="process-math">\((A \cap B)^c\text{?}\)</span>
+</div></article><article class="task exercise-like" id="task-25"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para" id="p-69">Tentukan anggota <span class="process-math">\(A^{c} \cup B^{c}\)</span> dan <span class="process-math">\(A^{c} \cap B^{c}\text{.}\)</span>
+</div></article></article><article class="task exercise-like" id="task-26"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="introduction" id="introduction-8"><div class="para" id="p-70">Misalkan <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> merupakan sembarang himpunan bagian dari suatu himpunan semesta <span class="process-math">\(U\text{.}\)</span> Terdapat hubungan antara <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> komplemen keduanya, gabungan, dan irisan.</div></div>
+<article class="task exercise-like" id="task-27"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para" id="p-71">Gunakan diagram Venn untuk menggambar <span class="process-math">\((A \cup B)^c\)</span> dan <span class="process-math">\((A \cap B)^c\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-28"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para" id="p-72">Gunakan diagram Venn dan hasil pada bagian (a) untuk menemukan serta membuktikan hubungan antara <span class="process-math">\(A^c\text{,}\)</span> <span class="process-math">\(B^c\text{,}\)</span> dan <span class="process-math">\((A \cup B)^c\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-29"><h5 class="heading"><span class="codenumber">(iii)</span></h5>
+<div class="para" id="p-73">Gunakan diagram Venn dan hasil pada bagian (a) untuk menemukan serta membuktikan hubungan antara <span class="process-math">\(A^c\text{,}\)</span> <span class="process-math">\(B^c\text{,}\)</span> dan <span class="process-math">\((A \cap B)^c\text{.}\)</span>
+</div></article></article></article><div class="para" id="p-74">Dalam <a href="" class="xref" data-knowl="./knowl/act_sets_1.html" title="Kegiatan 1.4">Kegiatan 1.4</a> kita bekerja dengan gabungan dan irisan dua himpunan. Tidak ada alasan untuk membatasi definisi ini hanya pada dua himpunan, seperti yang ditunjukkan oleh aktivitas berikut.</div>
+<article class="activity project-like" id="activity-4"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="introduction-9"><div class="para" id="p-75">Untuk mendefinisikan kumpulan himpunan tak hingga, kita sering menggunakan apa yang disebut <dfn class="terminology">himpunan indeks</dfn>. Himpunan indeks memungkinkan kita mempertimbangkan kumpulan objek yang berkorespondensi satu-satu dengan himpunan seperti bilangan bulat positif, atau bahkan bilangan real. Ketika menggunakan himpunan indeks, biasanya kita membuat pernyataan seperti “misalkan <span class="process-math">\(\{A_{\alpha}\}\text{,}\)</span> untuk <span class="process-math">\(\alpha \in I\text{,}\)</span> adalah kumpulan himpunan yang diindeks oleh suatu himpunan <span class="process-math">\(I\)</span>”. Kumpulan <span class="process-math">\(\{A_{\alpha}\}_{\alpha \in I}\)</span> disebut <dfn class="terminology">keluarga himpunan berindeks</dfn>.</div></div>
+<article class="task exercise-like" id="task-30"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="introduction" id="introduction-10"><div class="para" id="p-76">Himpunan <span class="process-math">\(I\)</span> dapat berhingga. Sebagai contoh, misalkan <span class="process-math">\(A_{n} = \{1, 2, 3, \ldots n\}\)</span> untuk <span class="process-math">\(n\)</span> dalam himpunan <span class="process-math">\(I = \{1,2,3, \ldots, 10\}\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-31"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para" id="p-77">Tentukan <span class="process-math">\(A_5\text{.}\)</span> Tentukan <span class="process-math">\(A_{8}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-32"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para" id="p-78">Ada berapa himpunan dalam keluarga berindeks <span class="process-math">\(\{A_n\}_{n \in I}\text{?}\)</span>
+</div></article></article><article class="task exercise-like" id="task-33"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-79">Himpunan indeks juga dapat tak hingga. Sebagai contoh, misalkan <span class="process-math">\(A_{\alpha} = [0, |\alpha|)\)</span> untuk <span class="process-math">\(\alpha\)</span> dalam himpunan <span class="process-math">\(\R\)</span> (dengan <span class="process-math">\([a,b)\)</span> menyatakan interval yang terdiri atas bilangan real <span class="process-math">\(x\)</span> sedemikian sehingga <span class="process-math">\(a \leq x \lt b\)</span>). Dalam hal ini, tentukan <span class="process-math">\(A_5\text{.}\)</span> Tentukan <span class="process-math">\(A_{\pi}\text{.}\)</span> Tentukan <span class="process-math">\(A_{-\frac{2}{3}}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-34"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="introduction" id="introduction-11"><div class="para" id="p-80">Kita telah mendefinisikan gabungan dan irisan dua himpunan. Gagasan yang sama dapat diperluas untuk mendefinisikan gabungan dan irisan suatu kumpulan himpunan berindeks.</div></div>
+<article class="task exercise-like" id="task-35"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para logical" id="p-81">
+<div class="para">Ingat bahwa jika <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> adalah himpunan, irisan <span class="process-math">\(A \cap B\)</span> adalah himpunan <span class="process-math">\(\{x \mid x \in A \text{ dan }  x \in B\}\text{.}\)</span> Bagaimana kita dapat memperluas definisi ini dari dua himpunan menjadi sebarang kumpulan himpunan? Dengan kata lain, bagaimana kita <em class="emphasis">mendefinisikan</em>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcap_{\alpha \in I} A_{\alpha}?
+\end{equation*}
+</div>
+<div class="para">Dalam contoh pada bagian (b), himpunan apakah <span class="process-math">\(\ds \bigcap_{\alpha \in \R} A_{\alpha}\)</span> itu?</div>
+</div></article><article class="task exercise-like" id="task-36"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para logical" id="p-82">
+<div class="para">Ingat bahwa jika <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> adalah himpunan, gabungan <span class="process-math">\(A \cup B\)</span> adalah himpunan <span class="process-math">\(\{x \mid x \in A \text{ atau }  x \in B\}\text{.}\)</span> Bagaimana kita dapat memperluas definisi ini dari dua himpunan menjadi sebarang kumpulan himpunan? Dengan kata lain, bagaimana kita <em class="emphasis">mendefinisikan</em>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcup_{\alpha \in I} A_{\alpha}?
+\end{equation*}
+</div>
+<div class="para">Dalam contoh pada bagian (b), himpunan apakah <span class="process-math">\(\ds \bigcup_{\alpha \in \R} A_{\alpha}\)</span> itu?</div>
+</div></article></article></article><div class="para" id="p-83">Sifat <span class="process-math">\((A \cap B)^c = A^c \cup B^c\)</span> dan <span class="process-math">\((A \cup B)^c = A^c \cap B^c\)</span> yang kita pelajari dalam <a href="" class="xref" data-knowl="./knowl/act_sets_1.html" title="Kegiatan 1.4">Kegiatan 1.4</a> disebut Hukum De Morgan. Hukum ini berlaku untuk sebarang gabungan atau irisan himpunan, baik berhingga maupun tak hingga. Pembuktiannya diserahkan kepada <a href="" class="xref" data-knowl="./knowl/ex_DeMorgan.html" title="Latihan 4">Latihan 4</a>.</div>
+<article class="theorem theorem-like" id="theorem-1"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Hukum De Morgan.</span>
+</h3>
+<div class="para logical" id="p-84">
+<div class="para">Misalkan <span class="process-math">\(\{A_{\alpha}\}\)</span> adalah kumpulan himpunan yang diindeks oleh suatu himpunan <span class="process-math">\(I\)</span> di dalam himpunan semesta <span class="process-math">\(U\text{.}\)</span> Maka</div>
+<ol class="decimal">
+<li id="li-15"><div class="para" id="p-85"><span class="process-math">\(\displaystyle \displaystyle \left(\bigcup_{\alpha \in I} A_{\alpha}\right)^c = \bigcap_{\alpha \in I} A_{\alpha}^c\)</span></div></li>
+<li id="li-16"><div class="para" id="p-86"><span class="process-math">\(\displaystyle \displaystyle \left(\bigcap_{\alpha \in I} A_{\alpha}\right)^c = \bigcup_{\alpha \in I} A_{\alpha}^c\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="activity-5"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-37"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-87">Verifikasikan Hukum De Morgan untuk kasus khusus <span class="process-math">\(A_{\alpha} = \{1, 2, 3, \ldots \alpha\}\)</span> di dalam <span class="process-math">\(U = \Z\text{,}\)</span> dengan <span class="process-math">\(\alpha\)</span> sebarang anggota himpunan indeks <span class="process-math">\(I = \Z^+\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-38"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-88">Mengapa komplemen suatu gabungan seharusnya berupa irisan, dan mengapa komplemen suatu irisan seharusnya berupa gabungan?</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><div class="para" id="p-89">Perhatikan definisi gabungan dan irisan.</div></div></div>
+</div></article></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_intervals.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="sec_cart_prod.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runestone Academy"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax"></a>
+</div>
+</body>
+</html>

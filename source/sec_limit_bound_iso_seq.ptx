@@ -1,0 +1,113 @@
+<section xml:id="sec_limit_bound_iso_seq">
+  <title>Limit Points, Boundary Points, Isolated Points, and Sequences</title>
+  <p>
+    Recall that a limit point of a subset <m>A</m> of a metric space <m>X</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
+    You might wonder about the use of the word
+    <q>limit</q>
+    in the definition of limit point.
+    The next activity should make this clear.
+  </p>
+
+  <activity xml:id="act_CS_3">
+    <introduction>
+    <p>
+      Let <m>X</m> be a metric space,
+      let <m>A</m> be a subset of <m>X</m>,
+      and let <m>x</m> be a limit point of <m>A</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>n \in \Z^+</m>.
+            Explain why <m>B\left(x, \frac{1}{n}\right)</m> must contain a point <m>a_n</m> in <m>A</m> different from <m>x</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What is <m>\lim a_n</m>?
+            Why?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    The result of <xref ref="act_CS_3"/>
+    is summarized in the following theorem.
+  </p>
+
+  <theorem xml:id="thm_CS_limit_pt">
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space,
+        let <m>A</m> be a subset of <m>X</m>,
+        and let <m>x</m> be a limit point of <m>A</m>.
+        Then there is a sequence <m>(a_n)</m> in <m>A</m> that converges to <m>x</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Of course, the constant sequence <m>(a)</m> always converges to the point <m>a</m>,
+    so every point in a set <m>A</m> is the limit of a sequence.
+    With limit points there is a non-constant sequence that converges to the point.
+    We might ask what we can say about a point <m>a \in A</m> if the only sequences in <m>A</m> that converges to <m>a \in A</m> are the eventually constant sequences <m>(a)</m>. (By an eventually constant sequence <m>(a_n)</m>,
+    we mean that there is a positive integer <m>K</m> such that for <m>k \geq K</m>,
+    we have <m>a_k = a</m> for some element <m>a</m>.) That is the subject of our next activity.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X,d)</m> be a metric space,
+      and let <m>A</m> be a subset of <m>X</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>a</m> be an isolated point of <m>A</m>.
+            Prove that the only sequences in <m>A</m> that converge to <m>a</m> are the eventually constant sequences <m>(a)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove that if the only sequences in <m>A</m> that converges to <m>a</m> are the eventually constant sequences <m>(a)</m>,
+            then <m>a</m> is an isolated point of <m>A</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Boundary points are points that are, in some sense, situated
+    <q>between</q>
+    a set and its complement.
+    We will make this idea of
+    <q>between</q>
+    more concrete soon.
+  </p>
+  <p>
+    An argument just like the one in <xref ref="act_CS_3"/>
+    gives us the following result about boundary points.
+  </p>
+  
+  <theorem xml:id="thm_CS_2">
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space,
+        let <m>A</m> be a subset of <m>X</m>,
+        and let <m>b</m> be a boundary point of <m>A</m>.
+        Then there are sequences <m>(x_n)</m> in
+        <m>X \setminus A</m> and <m>(a_n)</m> in <m>A</m> that converge to <m>x</m>.
+      </p>
+    </statement>
+  </theorem>
+</section>

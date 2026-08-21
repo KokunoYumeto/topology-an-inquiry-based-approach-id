@@ -1,0 +1,152 @@
+<section xml:id="sec_connect_subset_rn">
+  <title>Connected Subsets of <m>\R</m></title>
+  <p>
+    With <xref ref="thm_conn_subset"/> in hand,
+    we are just about ready to show that any interval in <m>\R</m> is connected.
+    Let us return for a moment to our example of <m>A = (-1,0) \cup (4,5)</m> in <m>\R</m>.
+    It is not difficult to see that if <m>U</m> and <m>V</m> are a separation of <m>A</m>,
+    then the subset <m>(-1,0)</m> must be entirely contained in either <m>U</m> or in <m>V</m>.
+    The reason for this is that <m>(-1,0)</m> is a connected subset of <m>A</m>.
+    This result is true in general.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X</m> be a topological space,
+      and let <m>A</m> be a subset of <m>X</m>.
+      Assume that <m>U</m> and <m>V</m> form a separation of <m>A</m>.
+      Let <m>C</m> be a connected subset of <m>A</m>.
+      In this activity we want to prove that
+      <m>C \subseteq U</m> or <m>C \subseteq V</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Use the fact that <m>U</m> and <m>V</m> form a separation to <m>A</m> to wxplain why
+            <m>C \subseteq U \cup V</m> and <m>C \cap U \cap V = \emptyset</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Given that <m>C</m> is connected,
+            what conclusion can we draw about the sets
+            <m>U' = U \cap C</m> and <m>V' = V \cap C</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof of the following lemma.
+          </p>
+            <lemma xml:id="lem_separation_subset">
+              <statement>
+                <p>
+                  Let <m>X</m> be a topological space,
+                  and let <m>A</m> be a subset of <m>X</m>.
+                  Assume that <m>U</m> and <m>V</m> form a separation of <m>A</m>.
+                  If <m>C</m> is a connected subset of <m>A</m>,
+                  then <m>C \subseteq U</m> or <m>C \subseteq V</m>.
+                </p>
+              </statement>
+            </lemma>
+          
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Now we can prove that any interval in <m>\R</m> is connected.
+    Since <m>[a,b]</m>, <m>[a,b)</m>,
+    and <m>(a,b]</m> are all sets that lie between <m>(a,b)</m> and <m>\overline{(a,b)}</m>,
+    we can address their connectedness all at once with the next result.
+  </p>
+
+  <theorem xml:id="thm_connected_limitpoints">
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space and <m>C</m> a connected subset of <m>X</m>.
+        If <m>A</m> is a subset of <m>X</m> and <m>C \subseteq A \subseteq \overline{C}</m>,
+        then <m>A</m> is connected in <m>X</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a topological space and <m>C</m> a connected subset of <m>X</m>.
+      Let <m>A</m> be a subset of <m>X</m> such that <m>C \subseteq A \subseteq \overline{C}</m>.
+      To show that <m>A</m> is connected,
+      assume to the contrary that <m>A</m> is disconnected.
+      Then there are nonempty open subsets <m>U</m> and <m>V</m> of <m>X</m> that form a separation of <m>A</m>.
+      <xref ref="lem_separation_subset"/>
+      shows that <m>C \subseteq U</m> or <m>C \subseteq V</m>.
+      Without loss of generality we assume that <m>C \subseteq U</m>.
+      Since <m>U \cap V \cap A = \emptyset</m>, it follows that
+      <me>
+        C \cap V = (C \cap A) \cap V = C \cap (A \cap V)  \subseteq U \cap A \cap V = \emptyset
+      </me>.
+    </p>
+    <p>
+      Since <m>A \cap V \neq \emptyset</m>,
+      there is an element <m>x \in A \cap V</m>.
+      Since <m>x \notin C</m> and <m>x \in A \subseteq \overline{C}</m>,
+      it must be the case that <m>x</m> is a limit point of <m>C</m>.
+      Since <m>V</m> is an open neighborhood of <m>x</m>,
+      it follows that <m>V \cap C \neq \emptyset</m>.
+      This contradiction allows us to conclude that <m>A</m> is connected.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    One consequence of <xref ref="thm_connected_limitpoints"/>
+    is that any interval of the form <m>[a,b)</m>,
+    <m>(a,b]</m>, <m>[a,b]</m>,
+    <m>(-\infty,
+    b]</m>, or <m>[a, \infty)</m> in <m>\R</m> is connected.
+    This prompts the question,
+    are there any other subsets of <m>\R</m> that are connected?
+  </p>
+
+  <activity xml:id="act_connected_subsets_R">
+    <introduction>
+    <p>
+      Let <m>A</m> be a subset of <m>\R</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>A = \{a\}</m> be a single point subset of <m>\R</m>.
+            Is <m>A</m> connected?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now suppose that <m>A</m> is a subset of <m>\R</m> that contains two or more points.
+            Assume that <m>A</m> is not an interval.
+            Then there must exist points <m>a</m> and <m>b</m> in <m>A</m> and a point <m>c</m> in
+            <m>\R \setminus A</m> between <m>a</m> and <m>b</m>.
+            Use this idea to find a separation of <m>A</m>.
+            What can we conclude about <m>A</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Explicitly describe the connected subsets of <m>(\R, d_E)</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

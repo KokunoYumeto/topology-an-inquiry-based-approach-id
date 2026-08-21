@@ -1,0 +1,81 @@
+<section xml:id="sec_path_intro">
+  <title>Introduction</title>
+  <p>
+    We defined connectedness in terms of separability by open sets.
+    There are other ways to look at connectedness.
+    For example,
+    the subset <m>(0,1)</m> is connected in <m>\R</m> because we can draw a line segment
+    (which we will call a <term>path</term>)
+    between any two points in <m>(0,1)</m> and remain in the set <m>(0,1)</m>.
+    So we might alternatively consider a topological space to be connected if there is always a path from one point in the spaced to another.
+    Although this is a new notion of connectedness,
+    we will see that path connectedness and connectedness are related.
+  </p>
+  <p>
+    Intuitively,
+    a space is path connected if there is a path in the space between any two points in the space.
+    To formalize this idea, we need to define what we mean by a path.
+    Simply put, a path is a continuous curve between two points.
+    We can therefore define a path as a continuous function.
+  </p>
+
+  <definition>
+  <idx><h>path</h></idx>
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space.
+        A <term>path</term>
+        from point <m>a</m> to point <m>b</m> in <m>X</m> is a continuous function
+        <m>p: [0,1] \to X</m> such that <m>p(0) = a</m> and <m>p(1)=b</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    With the notion of path, we can now define path connectedness.
+  </p>
+
+  <definition>
+  <idx><h>path connected</h></idx>
+    <statement>
+      <p>
+        A subspace <m>A</m> of a topological space <m>X</m> is <term>path connected</term>
+        if, given any <m>a, b \in A</m> there is a path in <m>A</m> from <m>a</m> to <m>b</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <exploration>
+    
+      <task>
+        <statement>
+          <p>
+            Is <m>\R</m> with the Euclidean metric topology path connected?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>\R</m> with the finite complement topology path connected?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>A = \{b,c\}</m> in <m>(X, \tau)</m> with <m>X= \{a,b,c,d,e,f\}</m> and
+            <me>
+              \tau = \{\emptyset,\{a\}, \{c,d\}, \{a,c,d\}, \{b,c,d,e,f\}, X\}
+            </me>.
+            Is <m>A</m> connected?
+            Is <m>A</m> path connected?
+            Explain.
+          </p>
+        </statement>
+      </task>
+    
+  </exploration>
+</section>

@@ -1,0 +1,126 @@
+<section xml:id="sec_sub">
+  <title>Introduction</title>
+  <p>
+    We have seen that a subset <m>A</m> of a metric space <m>(X,d_X)</m> is a subspace of <m>X</m> using the restriction of the metric <m>d_X</m> to <m>A</m>.
+    We do not have a metric in general topological spaces,
+    so that approach can't be duplicated.
+    But, we proved that the open sets in a subspace <m>A</m> of a metric space <m>(X,d_X)</m> are exactly the intersections of open sets in <m>X</m> with <m>A</m>.
+    That idea can be transferred to topological spaces.
+  </p>
+  <p>
+    To make a subspace <m>A</m> of a topological space
+    <m>(X,\tau)</m> into a topological space,
+    we need to define a topology on <m>A</m>.
+  </p>
+
+  <exploration>
+  <introduction>
+    <p>
+      Let <m>(X, \tau)</m> be a topological space and <m>A</m> a nonempty subset of <m>X</m>.
+      It is reasonable to use the open sets in <m>X</m> to define open sets in <m>A</m>.
+      More specifically,
+      we might consider a subset <m>O_A</m> of <m>A</m> to be open in <m>A</m> if <m>O_A</m> is the intersection of <m>A</m> with some open set in <m>X</m>,
+      as illustrated in <xref ref="F_Subspace_open"/>.
+      With this in mind we define <m>\tau_A</m> as
+      <me>
+        \tau_A = \{O \cap A \mid O \in \tau\}
+      </me>.
+    </p>
+
+    <figure xml:id="F_Subspace_open">
+      <caption>A potentially open subset in a subspace.</caption>
+      <image width="50%" source="Subspace_open"/>
+    </figure>
+    
+    </introduction>
+    <task xml:id="act_TS_subspace">
+      <statement>
+        <p>
+          Show that <m>\tau_A</m> is a topology on <m>A</m>.
+          The result of item (1) is that any subset of a topological space
+          <m>(X,\tau)</m> is also a topological space with topology <m>\tau_A</m>.
+        </p>
+          <definition xml:id="def_TS_subspace">
+          <idx><h>subspace of a topological space</h></idx>
+            <statement>
+              <p>
+                Let <m>(X,\tau)</m> be a topological space.
+                A <term>subspace</term> of
+                <m>(X,\tau)</m> is a nonempty subset <m>A</m> of <m>X</m> together with the topology
+                <me>
+                  \tau_A = \{O \cap A \mid O \in \tau\}
+                </me>.
+              </p>
+            </statement>
+          </definition>
+     
+      </statement>
+    </task>
+    <task>
+      <introduction>
+        <p>
+          For each of the following,
+          <m>X</m> is a topological space and <m>\tau</m> is a topology on <m>X</m>.
+        </p>
+      </introduction>
+          <task>
+            <statement>
+              <p>
+                Let <m>X= \{a,b,c,d\}</m> and <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
+                Consider the subset <m>A=\{b,c\}</m> and list the open sets in the subspace topology <m>\tau_A</m>.
+                Now consider <m>Z = \{a,b\}</m>.
+                What is the name of the subspace topology <m>\tau_Z</m> on this subset of <m>X</m>?
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Consider <m>X=\R</m> with <m>\tau</m> the indiscrete topology.
+                What are the open sets in the subspace topology on <m>[1,2]</m>?
+                Now generalize to any nonempty set in the indiscrete topology.
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Let <m>X = \{a,b,c,d,e,f,g,h,i\}</m> with <m>\tau</m> the discrete topology.
+                What are the open sets in the subspace topology on <m>\{a,b,d\}</m>.
+                Now generalize to any nonempty set in the discrete topology.
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Let <m>X= \{a,b,c,d,e,f\}</m> with <m>\tau = \{\emptyset,\{a\}, \{c,d\}, \{a,c,d\}, \{b,c,d,e,f\}, X\}</m>.
+                What are the open sets in the subspace <m>A = \{a, b, e\}</m>?
+                Is every open set in <m>A</m> an open set in <m>X</m>?
+                Explain.
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Let <m>X=\Z</m> with <m>\tau = \tau_{FC}</m> the finite complement topology.
+                What are the open sets in the subspace topology on <m>A = \{0,19, 37, 5284\}</m>?
+                Can you generalize this to the subspace topology on any finite subset of <m>\Z</m>?
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Let <m>X=\Z</m> with <m>\tau = \tau_{FC}</m> the finite complement topology.
+                What are the open sets in the subspace topology on the even integers?
+                Can you generalize this to the subspace topology on any infinite subset of <m>\Z</m>?
+              </p>
+            </statement>
+          </task>
+        
+      </task>
+    
+  </exploration>
+</section>

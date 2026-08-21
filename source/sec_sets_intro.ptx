@@ -1,0 +1,116 @@
+<section xml:id="sec_sets_intro">
+  <title>Pendahuluan</title>
+  <p>
+    Pada tingkat paling mendasar, topologi membahas himpunan dan cara kita dapat mengubah bentuk suatu himpunan menjadi himpunan lain. Jadi, untuk memulai kajian kita tentang topologi, kita mulai dengan himpunan. Sebagian besar materi ini semestinya sudah tidak asing, tetapi beberapa bagian mungkin baru. Hal pertama yang perlu kita tetapkan adalah definisi <q>himpunan</q> yang setepat mungkin.
+  </p>
+  <exploration xml:id="pa_sets">
+    <introduction>
+    <p>
+      Andaikan kita mencoba mendefinisikan himpunan sebagai suatu kumpulan anggota.
+      Jadi, menurut definisi tersebut, anggota adalah objek-objek yang terdapat di dalam himpunan.
+      Kita menggunakan simbol <m>\in</m> untuk menyatakan bahwa suatu objek merupakan anggota suatu himpunan.
+      Dengan demikian, <m>\notin</m> berarti bahwa suatu objek bukan anggota himpunan tersebut <mdash/> jika <m>x</m> merupakan anggota suatu himpunan <m>S</m>, kita menulis <m>x \in S</m>,
+      sedangkan jika <m>x</m> bukan anggota himpunan <m>S</m>, kita menulis <m>x \notin S</m>.
+      Kita menuliskan himpunan dengan kurung kurawal.
+      Sebagai contoh,
+      himpunan <m>\{a,b,c\}</m> adalah himpunan yang anggotanya berupa simbol <m>a</m>,
+      <m>b</m>,
+      dan <m>c</m>.
+      Dalam notasi himpunan, kita juga dapat mencantumkan syarat yang harus dipenuhi oleh anggotanya.
+      Sebagai contoh,
+      <m>\{x \in \R : x \gt 0\}</m> adalah himpunan bilangan real positif.
+      Biasanya kita menggunakan huruf kapital untuk menyatakan himpunan.
+      Beberapa contoh himpunan yang sudah dikenal adalah <m>\R</m>, himpunan bilangan real;
+      <m>\Q</m>, himpunan bilangan rasional;
+      dan <m>\Z</m>, himpunan bilangan bulat.
+      Suatu himpunan juga dapat memiliki himpunan sebagai anggotanya.
+      Sebagai contoh,
+      himpunan kuasa suatu himpunan <m>S</m> adalah himpunan semua himpunan bagian dari <m>S</m>.
+      Jadi, himpunan kuasa dari <m>S = \{1,2\}</m> adalah himpunan
+      <m>\{\emptyset, \{1\}, \{2\}, \{1,2\}\}</m>. (Kita akan mendefinisikan himpunan bagian dan himpunan kosong nanti dalam aktivitas ini).
+      </p>
+      </introduction>
+
+      <task>
+        <introduction>
+          <p>
+            Perhatikan
+            <q>himpunan</q>
+            <m>S</m> berikut, yang merupakan suatu kumpulan objek:
+            <me>
+              S = \{A \text{ adalah himpunan }  \mid A \notin A\}
+            </me>.
+            Dengan kata lain, <m>S</m> adalah kumpulan himpunan yang tidak memuat dirinya sendiri sebagai anggota.
+            Untuk setiap objek <m>x</m>, berlaku salah satu dari <m>x \in S</m> atau <m>x \notin S</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Apakah <m>S</m> merupakan anggota <m>S</m>?
+                  Jelaskan.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Apakah berlaku <m>S \notin S</m>?
+                  Jelaskan.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Berdasarkan jawaban Anda pada bagian (a) dan (b),
+                  jelaskan mengapa gagasan kita saat ini, bahwa himpunan adalah kumpulan anggota, tidak memadai.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+        <task>
+        <introduction>
+          <p>
+            Anggaplah kita telah memiliki definisi himpunan yang dapat digunakan.
+            Pada bagian aktivitas ini, kita mendefinisikan himpunan bagian dari suatu himpunan.
+            Notasi yang akan kita gunakan adalah
+            <m>A \subset S</m> jika <m>A</m> merupakan himpunan bagian dari <m>S</m> yang tidak sama dengan <m>S</m>,
+            dan <m>A \subseteq S</m> jika <m>A</m> merupakan himpunan bagian dari <m>S</m> yang mungkin sama dengan seluruh himpunan <m>S</m>.
+            Kita juga akan mengatakan bahwa <m>A</m> <term>termuat</term>
+            dalam <m>S</m> jika <m>A</m> merupakan himpunan bagian dari <m>S</m>,
+            dan menyebut relasi <m>A \subset S</m>
+            (atau <m>A \subseteq S</m>)
+            sebagai suatu <term>inklusi</term>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Bagaimana sebaiknya kita mendefinisikan himpunan bagian dari suatu himpunan?
+                  Berikan satu contoh konkret suatu himpunan dan dua contoh himpunan bagian dari himpunan tersebut.
+                </p>
+              </statement>
+        </task>
+        <task>
+              <statement>
+                <p>
+                  Jika <m>A</m> adalah suatu himpunan, apakah <m>A</m> merupakan himpunan bagian dari <m>A</m>?
+                  Jelaskan.
+                </p>
+              </statement>
+        </task>
+        <task>
+              <statement>
+                <p>
+                  Apa yang dimaksud dengan himpunan kosong <m>\emptyset</m>?
+                  Jika <m>A</m> adalah suatu himpunan, apakah <m>\emptyset</m> merupakan himpunan bagian dari <m>A</m>? Jelaskan.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+
+  </exploration>
+</section>

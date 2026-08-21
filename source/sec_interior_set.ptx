@@ -1,0 +1,162 @@
+<section xml:id="sec_interior_set">
+  <title>The Interior of a Set</title>
+  <p>
+    Open sets can be characterized in terms of their interior points.
+    By definition,
+    every open set is a neighborhood of each of its points,
+    so every point of an open set <m>O</m> is an interior point of <m>O</m>.
+    Conversely, if every point of a set <m>O</m> is an interior point,
+    then <m>O</m> is a neighborhood of each of its points and is open.
+    This argument is summarized in the next theorem.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space.
+        A subset <m>O</m> of <m>X</m> is open if and only if every point of <m>O</m> is an interior point of <m>O</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    The collection of interior points in a set form a subset of that set,
+    called the <term>interior</term> of the set.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The interior
+            <idx><h>interior of a set</h></idx>
+        of a subset <m>A</m> of a metric space <m>X</m> is the set
+        <me>
+          \Int(A) = \{a \in A \mid a \text{ is an interior point of }  A\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <introduction>
+    <p>
+      Determine <m>\Int(A)</m> for each of the sets <m>A</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>A = (0,1]</m> in <m>(\R, d_E)</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>A = [0,1]</m> in <m>(\R, d_E)</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>A = \{-2\} \cup [0,5] \cup \{7,8,9\}</m> in <m>(\R,d_E)</m>
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    One might expect that the interior of a set is an open set.
+    This is true, but we can say even more.
+    As <xref ref="thm_Interior_MS"/> will show,
+    if <m>A</m> is a subset of a metric space <m>X</m>,
+    not only is <m>\Int(A)</m> an open set,
+    but every open set that is contained in <m>A</m> is a subset of <m>\Int(A)</m>.
+    So <m>\Int(A)</m> is the largest,
+    in the sense of containment, open subset of <m>X</m> that contains <m>A</m>.
+  </p>
+
+  <theorem xml:id="thm_Interior_MS">
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space,
+        and let <m>A</m> be a subset of <m>X</m>.
+        Then interior of <m>A</m> is the largest open subset of <m>X</m> contained in <m>A</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>(X,d)</m> be a metric space,
+      and let <m>A</m> be a subset of <m>X</m>.
+      We need to prove that <m>\Int(A)</m> is an open set in <m>X</m>,
+      and that <m>\Int(A)</m> is the largest open subset of <m>X</m> contained in <m>A</m>.
+      First we demonstrate that <m>\Int(A)</m> is an open set.
+      Let <m>a \in \Int(A)</m>.
+      Then <m>a</m> is an interior point of <m>A</m>,
+      so <m>A</m> is a neighborhood of <m>a</m>.
+      This implies that there exists an
+      <m>\epsilon \gt 0</m> so that <m>B(a, \epsilon) \subseteq A</m>.
+      But <m>B(a, \epsilon)</m> is a neighborhood of each of its points,
+      so every point in <m>B(a, \epsilon)</m> is an interior point of <m>A</m>.
+      It follows that <m>B(a, \epsilon) \subseteq \Int(A)</m>.
+      Thus, <m>\Int(A)</m> is a neighborhood of each of its points and,
+      consequently, <m>\Int(A)</m> is an open set.
+    </p>
+    <p>
+      The proof that <m>\Int(A)</m> is the largest open subset of <m>X</m> contained in <m>A</m> is left for the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X,d)</m> be a metric space,
+      and let <m>A</m> be a subset of <m>X</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            What will we have to show to prove that <m>\Int(A)</m> is the largest open subset of <m>X</m> contained in <m>A</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that <m>O</m> is an open subset of <m>X</m> that is contained in <m>A</m>,
+            and let <m>x \in O</m>.
+            What does the fact that <m>O</m> is open tell us?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof that <m>O \subseteq \Int(A)</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    One consequence of <xref ref="thm_Interior_MS"/> is the following.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        A subset <m>O</m> of a metric space <m>X</m> is open if and only if <m>O = \Int(O)</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    The proof is left for <xref ref="ex_O_int_O"/>.
+  </p>
+</section>

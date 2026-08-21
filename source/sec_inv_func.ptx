@@ -1,0 +1,357 @@
+<section xml:id="sec_inv_func">
+  <title>Fungsi Invers</title>
+  <p>
+    Setelah mempelajari fungsi komposit,
+    kita beralih ke gagasan penting lainnya:
+    invers suatu fungsi.
+    Dalam mata kuliah matematika sebelumnya,
+    Anda mungkin telah mempelajari bahwa fungsi eksponensial
+    (dengan basis <m>e</m>)
+    dan fungsi logaritma natural saling berinvers.
+    Hubungan ini mungkin pernah Anda lihat dinyatakan sebagai berikut: Untuk setiap
+    <m>x \in \R</m> dengan <m>x \gt 0</m> dan setiap <m>y \in \R</m>,
+  </p>
+  <p>
+    <m>y = \ln(x)</m> jika dan hanya jika <m>x = e^y</m>.
+    Perhatikan bahwa <m>x</m> merupakan masukan dan <m>y</m> merupakan keluaran bagi fungsi logaritma natural jika dan hanya jika <m>y</m> merupakan masukan dan <m>x</m> merupakan keluaran bagi fungsi eksponensial.
+    Pada dasarnya, fungsi invers
+    (dalam hal ini, fungsi eksponensial)
+    membalik tindakan fungsi semula
+    (dalam hal ini, fungsi logaritma natural).
+    Dalam bentuk pasangan terurut (pasangan masukan-keluaran),
+    hal ini berarti bahwa jika <m>( {x, y} )</m> merupakan pasangan terurut dalam suatu fungsi,
+    maka <m>( {y, x} )</m> merupakan pasangan terurut dalam invers fungsi tersebut.
+    Gagasan untuk menukar peran koordinat pertama dan kedua mendasari definisi invers suatu fungsi.
+  </p>
+  <definition xml:id="sym_finverse">
+    <idx><h>fungsi</h><h>invers</h></idx>
+    <statement>
+      <p>
+        Misalkan <m>f : A \to B</m> suatu fungsi.
+        <term>Invers</term>
+        dari <m>f</m>, yang dinyatakan dengan <m>f^{ - 1}</m>,
+        adalah himpunan pasangan terurut
+        <me>
+          f^{ - 1}  = \left\{ { {( {b, a} ) \in B \times A} \mid ( {a, b} ) \in f} \right\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Perhatikan bahwa definisi ini tidak menyatakan bahwa <m>f^{-1}</m> merupakan fungsi.
+    Sebaliknya, <m>f^{-1}</m> hanyalah subhimpunan dari <m>B \times A</m>.
+    Dalam <xref ref="prog_exploringinverse"/>,
+    kita akan menyelidiki syarat-syarat yang membuat invers suatu fungsi
+    <m>f: A \to B</m> juga merupakan fungsi dari <m>B</m> ke <m>A</m>.
+  </p>
+  <activity xml:id="prog_exploringinverse">
+    <introduction>
+    <p>
+      Misalkan <m>A = \left\{ {a, b, c} \right\}</m>,
+      <m>B = \left\{ {a,b,c,d} \right\}</m>,
+      dan <m>C = \left\{ {p, q, r} \right\}</m>.
+      Definisikan
+      <md>
+        <mrow>f: A \amp \to C \text{ dengan} \amp g: A \amp \to C \text{ dengan} \amp h: B \amp \to C \text{ dengan}</mrow>
+        <mrow>f( a ) \amp = r \amp g( a ) \amp = p \amp h( a ) \amp = p</mrow>
+        <mrow>f( b ) \amp = p \amp g( b ) \amp = q \amp h( b ) \amp = q</mrow>
+        <mrow>f( c ) \amp = q \amp g( c ) \amp = p \amp h( c ) \amp = r</mrow>
+        <mrow>\amp \amp \amp \amp h ( d ) \amp = q</mrow>
+      </md>
+    </p>
+    
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Tentukan invers setiap fungsi sebagai suatu himpunan pasangan terurut.
+        </p>
+      </statement>
+    </task>
+    <task>
+      
+        <task>
+          <statement>
+            <p>
+              Apakah <m>f^{ - 1}</m> merupakan fungsi dari <m>C</m> ke <m>A</m>?
+              Jelaskan.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Apakah <m>g^{ - 1}</m> merupakan fungsi dari <m>C</m> ke <m>A</m>?
+              Jelaskan.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Apakah <m>h^{ - 1}</m> merupakan fungsi dari <m>C</m> ke <m>B</m>?
+              Jelaskan.
+            </p>
+          </statement>
+        </task>
+      </task>
+      <task xml:id="A_exploringinverse3">
+      <statement>
+        <p>
+          Buatlah konjektur tentang syarat-syarat pada suatu fungsi
+          <m>F: S \to T</m> yang memastikan bahwa inversnya merupakan fungsi dari <m>T</m> ke <m>S</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    Hasil <xref ref="prog_exploringinverse"/>
+    semestinya berupa teorema berikut.
+  </p>
+
+  <theorem xml:id="T_inverseandbijection">
+    <statement>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> himpunan tak kosong,
+        serta misalkan <m>f: A \to B</m>.
+        Invers <m>f</m> merupakan fungsi dari <m>B</m> ke <m>A</m> jika dan hanya jika <m>f</m> merupakan bijeksi.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Garis besar bukti <xref ref="T_inverseandbijection"/>
+    diberikan dalam aktivitas berikut.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      <xref ref="T_inverseandbijection"/> merupakan pernyataan bikondisional,
+      sehingga kita perlu membuktikan kedua arahnya.
+      Misalkan <m>A</m> dan <m>B</m> himpunan tak kosong,
+      serta misalkan <m>f: A \to B</m>.
+    </p>
+    </introduction>
+      <task>
+        <introduction>
+          <p>
+            Andaikan <m>f</m> merupakan bijeksi.
+            Kita akan membuktikan bahwa <m>f^{-1}</m> merupakan fungsi,
+            yakni bahwa <m>f^{-1}</m> memenuhi syarat-syarat dalam <xref ref="def_function"/>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Misalkan <m>b \in B</m>.
+                  Sifat apa dari <m>f</m> yang memastikan bahwa
+                  <m>(b,a) \in f^{-1}</m> untuk suatu <m>a \in A</m>?
+                  Kesimpulan apa yang dapat kita tarik tentang <m>f^{-1}</m>?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Sekarang misalkan <m>b \in B</m>, <m>a_1 , a_2  \in A</m>, dan andaikan bahwa
+                  <me>
+                    ( {b, a_1 } ) \in f^{ - 1} \text{ dan }  ( {b, a_2 } ) \in f^{-1}
+                  </me>.
+                  Apa yang ditunjukkan hal ini tentang pasangan-pasangan terurut yang harus termuat dalam <m>f</m>?
+                  Sifat apa dari <m>f</m> yang memastikan bahwa <m>a_1=a_2</m>?
+                  Kesimpulan apa yang dapat kita tarik tentang <m>f^{-1}</m>?
+                </p>
+              </statement>
+            </task>
+       </task>
+        <task>
+          <introduction>
+          <p>
+            Sekarang andaikan <m>f^{-1}</m> merupakan fungsi dari <m>B</m> ke <m>A</m>.
+            Kita akan membuktikan bahwa <m>f</m> merupakan bijeksi.
+          </p>
+          </introduction>
+            <task>
+              <statement>
+                <p>
+                  Apa yang perlu ditunjukkan untuk membuktikan bahwa <m>f</m> merupakan injeksi?
+                  Gunakan fakta bahwa <m>f^{-1}</m> merupakan fungsi untuk membuktikan bahwa <m>f</m> merupakan injeksi.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Apa yang perlu ditunjukkan untuk membuktikan bahwa <m>f</m> merupakan surjeksi?
+                  Gunakan fakta bahwa <m>f^{-1}</m> merupakan fungsi untuk membuktikan bahwa <m>f</m> merupakan surjeksi.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+      
+  </activity>
+
+  <p>
+    Dalam keadaan ketika <m>f: A \to B</m> merupakan bijeksi dan <m>f^{-1}</m> merupakan fungsi dari <m>B</m> ke <m>A</m>,
+    kita dapat menulis <m>f^{-1} : B \to A</m>.
+    Dalam hal ini, kita sering menyebut <m>f</m> sebagai
+    <term>fungsi invertibel</term>,
+    dan biasanya kita tidak menggunakan penyajian pasangan terurut, baik untuk <m>f</m> maupun <m>f^{-1}</m>.
+    Alih-alih menulis <m>( {a, b} ) \in f</m>,
+    kita menulis <m>f( a ) = b</m>,
+    dan alih-alih menulis <m>( {b, a} ) \in f^{-1}</m>,
+    kita menulis <m>f^{-1} ( b ) = a</m>.
+    Dengan menggunakan fakta bahwa <m>( {a, b} ) \in f</m> jika dan hanya jika <m>( {b, a} ) \in f^{-1}</m>,
+    sekarang kita dapat menulis <m>f( a ) = b</m> jika dan hanya jika <m>f^{-1} ( b ) = a</m>.
+    <xref ref="T_inversenotation"/> memformalkan pengamatan ini.
+  </p>
+
+  <theorem xml:id="T_inversenotation">
+    <statement>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> himpunan tak kosong,
+        serta misalkan <m>f: A \to B</m> suatu bijeksi.
+        Maka <m>f^{ - 1} : B \to A</m> merupakan fungsi,
+        dan untuk setiap <m>a \in A</m> dan <m>b \in B</m>,
+        <me>
+          f( a ) = b  \text{ jika dan hanya jika }  f^{ - 1} ( b ) = a
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Hasil berikut memberikan informasi yang berguna tentang fungsi invers.
+    Pembuktiannya diserahkan kepada <xref ref="ex_inverse_composite"/>.
+  </p>
+
+  <corollary xml:id="C_inversecomposition">
+    <statement>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> himpunan tak kosong,
+        serta misalkan <m>f: A \to B</m> suatu bijeksi.
+        Maka
+        <ol>
+          <li xml:id="C_inversecomposition1">
+            <p>
+              Untuk setiap <m>x</m> di dalam <m>A</m>,
+              <m>\left( f^{ - 1} \circ f \right)(x) = x</m>.
+            </p>
+          </li>
+          <li xml:id="C_inversecomposition2">
+            <p>
+              Untuk setiap <m>y</m> di dalam <m>B</m>,
+              <m>\left( f \circ f^{ - 1}\right)(y) = y</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    Pertanyaan berikutnya adalah apa yang dapat kita katakan tentang komposisi bijeksi.
+    Secara khusus,
+    jika <m>f: A \to B</m> dan <m>g: B \to C</m> keduanya merupakan bijeksi,
+    maka <m>f^{ - 1} : B \to A</m> dan <m>g^{ - 1} : C \to B</m> keduanya merupakan fungsi.
+    Apakah <m>g \circ f</m> pasti invertibel dan, jika demikian,
+    apa bentuk <m>(g \circ f)^{-1}</m>?
+  </p>
+
+  <activity xml:id="act_comp_inverse">
+    <introduction>
+    <p>
+      Misalkan <m>f: A \to B</m> dan <m>g: B \to C</m> keduanya merupakan bijeksi.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Mengapa kita mengetahui bahwa <m>g \circ f</m> invertibel?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Sekarang kita menentukan invers <m>g \circ f</m>.
+            Kita mungkin tergoda untuk mengira bahwa
+            <m>(g \circ f)^{-1}</m> adalah <m>g^{-1} \circ f^{-1}</m>,
+            tetapi komposit ini tidak didefinisikan karena <m>g^{-1}</m> memetakan <m>C</m> ke <m>B</m> dan <m>f^{-1}</m> memetakan <m>B</m> ke <m>A</m>.
+            Namun, <m>f^{-1} \circ g^{-1}</m> didefinisikan.
+            Untuk membuktikan bahwa <m>(g \circ f)^{-1} = f^{-1} \circ g^{-1}</m>,
+            kita perlu membuktikan bahwa dua fungsi tersebut sama.
+            Bagaimana kita membuktikan bahwa dua fungsi sama?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            Misalkan <m>c \in C</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Sifat apa yang memastikan bahwa terdapat <m>b \in B</m> sedemikian sehingga <m>g(b) = c</m>?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Sifat apa yang memastikan bahwa terdapat <m>a \in A</m> sedemikian sehingga <m>f(a) = b</m>?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Unsur apakah <m>(g \circ f)^{-1}(c)</m>?
+                  Mengapa?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Unsur apakah <m>f^{-1}(b)</m>?
+                  Mengapa?
+                  Unsur apakah <m>g^{-1}(c)</m>?
+                  Mengapa?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Unsur apakah <m>(f^{-1} \circ g^{-1})(c)</m>?
+                  Mengapa?
+                  Kesimpulan apa yang dapat kita tarik tentang
+                  <m>(g \circ f)^{-1}</m> dan <m>f^{-1} \circ g^{-1}</m>?
+                  Jelaskan.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+     
+  </activity>
+
+  <p>
+    Hasil <xref ref="act_comp_inverse"/>
+    tercakup dalam teorema berikut.
+  </p>
+  <theorem xml:id="compositionofbijections">
+    <statement>
+      <p>
+        Misalkan <m>f: A \to B</m> dan <m>g: B \to C</m> bijeksi.
+        Maka <m>g \circ f</m> merupakan bijeksi dan <m>( {g \circ f} )^{ - 1} = f^{ - 1} \circ g^{ - 1}</m>.
+      </p>
+    </statement>
+  </theorem>
+</section>

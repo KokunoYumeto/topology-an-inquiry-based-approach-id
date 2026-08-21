@@ -1,0 +1,164 @@
+<section xml:id="sec_glb_intro">
+  <title>Introduction</title>
+  <p>
+    The real numbers have a special property that allows us to,
+    among other things,
+    define the distance between a point and a set in a metric space.
+    It also allows us to define distances between subsets of certain types of metric spaces,
+    which creates a whole new metric space whose elements are the subsets of the metric space.
+    We will examine that property of the real numbers in this activity.
+  </p>
+  <p>
+    We begin by considering the problem of defining the distance between a real number and an interval in <m>\R</m> with the Euclidean metric <m>d_E</m> defined by
+    <me>
+      d_E(x,y) = | x-y |
+    </me>.
+  </p>
+  <p>
+    Let <m>x = 1</m> and let <m>A</m> be the closed interval <m>[-1,0]</m>.
+    It is natural to suggest that the distance between the point <m>x</m> and the set <m>A</m>,
+    denoted <m>d_E(x,A)</m>,
+    should be the distance from the point <m>x</m> to the point in <m>A</m> closest to <m>x</m>.
+    So in this case we would say
+    <me>
+      d(x,A) = d(x,[-1,0]) = d_E(x,0) = 1
+    </me>.
+  </p>
+  <p>
+    This might lead us to suggest that the distance from a point <m>x</m> to a set <m>A</m>,
+    denoted by <m>d(x,A)</m> is the minimum distance from the point to any point in the set,
+    or <m>d(x,A) = \min\{d_E(x,a) \mid a \in A\}</m>.
+  </p>
+  <p>
+    What if we changed the set <m>A</m> to be the open interval <m>(-1,0)</m>?
+    What then should <m>d(x,A)</m> be,
+    or should this distance even exist?
+    If we think of the distance between a point and a set as measuring how far we have to travel from the point until we reach the set,
+    then in the case of <m>x=1</m> and <m>A=(-1,0)</m>,
+    as soon as we travel a distance more than 1 from <m>x</m> in the direction of <m>A</m>,
+    we reach the set <m>A</m>.
+    So we might intuitively say that <m>d_E(x,(-1,0)) = 1</m> as well.
+    But we cannot define this distance as a distance from <m>x</m> to a point in <m>A</m> since <m>0 \notin A</m>.
+    We need a different way to formulate the notion of a distance from a point to a set.
+  </p>
+  <p>
+    In a case like this, with <m>x=1</m> and <m>A = (-1,0)</m>,
+    we can examine the set <m>T=\{d_E(x,a) \mid a \in A\}</m> and notice some facts about this set.
+    For example,
+    the set <m>T</m> is a subset of the nonnegative real numbers.
+    Also, in this example there are no numbers in <m>T</m> that are smaller than 1.
+    Because of this property,
+    we will call the number 1 a <term>lower bound</term> for <m>T</m>.
+    More generally,
+  </p>
+
+  <definition>
+  <idx><h>lower bound</h></idx>
+    <statement>
+      <p>
+        Let <m>S</m> be a nonempty subset of <m>\R</m>.
+        A <term>lower bound</term>
+        for <m>S</m> is a real number <m>m</m> such that
+        <m>m \leq s</m> for all <m>s \in S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    If a subset <m>S</m> of <m>\R</m> has a lower bound,
+    we say that <m>S</m> is <term>bounded below</term>.
+    So the set <m>T = \{d_E(1,a) \mid a \in (-1,0)\}</m> is bounded below by 1.
+    The set <m>T</m> is also bounded below by 0.5 and 0.
+    In fact, any number less than 1 is a lower bound for <m>T</m>.
+    The critical idea, though,
+    is that no number larger than 1 is a lower bound for <m>T</m>.
+    Because of this we call 1 a <term>greatest lower bound</term> of <m>T</m>.
+    More generally,
+  </p>
+
+  <definition>
+    <idx><h>greatest lower bound</h></idx>
+    <statement>
+      <p>
+        Let <m>S</m> be a nonempty subset of <m>\R</m> that is bounded below.
+        A <term>greatest lower bound</term>
+        for <m>S</m> is a real number <m>m</m> such that
+        <ol>
+          <li>
+            <p>
+              <m>m</m> is a lower bound for <m>S</m> and
+            </p>
+          </li>
+          <li>
+            <p>
+              if <m>k</m> is a lower bound for <m>S</m>, then <m>m \geq k</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <idx><h>infimum</h></idx>
+    A greatest lower bound is also called an <term>infimum</term>.
+        
+    We might now use this idea of a greatest lower bound to define the distance between <m>1</m> and
+    <m>A = (-1,0)</m> as the greatest lower bound of the set <m>\{d_E(1,a) \mid a \in (-1,0)\}</m>.
+    However, there are questions we need to address before we can do so.
+    One question is whether or not every nonempty subset of <m>\R</m> that is bounded below has an infimum.
+    The answer to this question is yes,
+    and we will take this result as an axiom of the real number system
+    (often called the <term>completeness axiom</term>).
+  </p>
+
+  <exploration>
+    <task>
+      <statement>
+        <p>
+          Does every subset of <m>\R</m> have a lower bound?
+          Explain.
+          (When a subset of <m>\R</m> has a lower bound we say that the set is
+          <term>bounded below</term>.)
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <introduction>
+        <p>
+          Which of the following subsets <m>S</m> of <m>\R</m> are bounded below?
+          If the set is bounded below, what is its infimum?
+        </p>
+      </introduction>
+        <task>
+          <statement>
+            <p>
+              <m>S = \{x \mid 3x^2-12x+3 \lt 0\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>S = \{3x^3-1 \mid x \in \R\}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>S = \{2^r+3^s \mid r, s \in \Z^+\}</m>
+            </p>
+          </statement>
+        </task>
+      </task>
+    <task>
+      <statement>
+        <p>
+          How would you define a least upper bound of a subset <m>S</m> of <m>\R</m>?
+        </p>
+      </statement>
+    </task>
+  </exploration>
+</section>

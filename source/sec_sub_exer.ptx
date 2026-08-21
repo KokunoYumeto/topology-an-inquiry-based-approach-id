@@ -1,0 +1,180 @@
+<exercises xml:id="sec_sub_exer">
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>X</m> and <m>Y</m> be topological spaces and
+        <m>f: X \to Y</m> be a continuous function.
+        If <m>A</m> is a subspace of <m>X</m>,
+        prove that <m>f|_A : A \to Y</m> is also continuous.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space,
+        let <m>A</m> be a subspace of <m>X</m>,
+        and let <m>B</m> be a subspace of <m>A</m>.
+        Show that the subspace topology that <m>B</m> inherits from <m>A</m> is the same as the subspace topology that <m>B</m> inherits from <m>X</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>A</m> be a subspace of a topological space <m>X</m> and let <m>B</m> be a subset of <m>A</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Prove that a point <m>x</m> in <m>A</m> is a limit point of <m>B</m> in the subspace topology for <m>A</m> if and only if <m>x</m> is a limit point of <m>B</m> in the topology on <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that the closure of <m>B</m> in the subspace topology for <m>A</m> is equal to <m>\overline{B} \cap A</m>,
+              where <m>\overline{B}</m> is the closure of <m>B</m> in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_R_intervals">
+    <statement>
+      <p>
+        Show that <m>\R</m> is homeomorphic,
+        with the standard topology,
+        to any interval of the form
+        <m>(a,\infty)</m> or <m>(-\infty,b)</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be a topological space.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>O</m> be an open subset of <m>X</m>.
+              Prove that a subset <m>A</m> of <m>O</m> is open in <m>O</m> if and only if <m>A</m> is open in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>C</m> be a closed subset of <m>X</m>.
+              Prove that a subset <m>B</m> of <m>C</m> is closed in <m>C</m> if and only if <m>B</m> is closed in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        A property of a topological space is said to be hereditary if that property is inherited by every subspace.
+        We state this more formally in the following definition.
+      </p>
+        <definition>
+          <idx><h>hereditary property</h></idx>
+          <statement>
+            <p>
+              A property <m>P</m> of a topological space <m>X</m> is <term>hereditary</term>
+              if every subspace of <m>X</m> also has property <m>P</m>.
+            </p>
+          </statement>
+        </definition>
+      <p>
+        Show that properties <m>T_1</m>,
+        <m>T_2</m>, and <m>T_3</m> are hereditary.
+        (The separation axioms <m>T_i</m> are found in <xref ref="chap_Closed_sets_topology"/>.)
+        The fact that <m>T_4</m> is not hereditary is somewhat difficult.
+        One example is the Tychonoff plank
+        (which is normal)
+        with the Deleted Tychonoff plank
+        (which is not normal)
+        as subspace.
+        An interested reader can consult
+        <pubtitle>Counterexamples in Topology (2nd ed.)</pubtitle>, Lynn Arthur Steen and J. Arthur Seebach, Jr., Dover Publications, 1978.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Suppose that <m>f : X \to Y</m> is a homeomorphism from a topological space <m>X</m> to a topological space <m>Y</m>.
+        Let <m>a \in X</m>.
+        Must the subspace <m>X' = X \setminus \{a\}</m> of <m>X</m> be homeomorphic to the subspace <m>Y' = Y \setminus \{f(a)\}</m> of <m>Y</m>?
+        Prove your conjecture.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> has the discrete topology,
+              then every subspace of <m>X</m> has the discrete topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>X</m> is a topological space that does not have the discrete topology,
+              then no subspace of <m>X</m> has the discrete topology.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>f : X \to Y</m> is a continuous function between topological spaces <m>X</m> and <m>Y</m>,
+              and <m>X</m> is Hausdorff,
+              then the subspace <m>f(X)</m> of <m>Y</m> is Hausdorff.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> is a subspace of a topological space <m>X</m> and <m>B</m> is a subset of <m>X</m>,
+              then the closure of <m>B \cap A</m> in the subspace topology for <m>A</m> equals <m>\overline{B} \cap A</m>,
+              where <m>\overline{B}</m> is the closure of <m>B</m> in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>A</m> is a subspace of a topological space <m>X</m> and <m>C</m> is a subset of <m>X</m>,
+              then the interior of <m>C \cap A</m> in the subspace topology for <m>A</m> equals <m>\Int(C) \cap A</m>,
+              where <m>\Int(C)</m> is the interior of <m>C</m> in <m>X</m>.
+            </p>
+          </statement>
+        </task>
+      
+    </exercise>
+  
+</exercises>

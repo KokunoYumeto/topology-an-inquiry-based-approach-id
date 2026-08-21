@@ -1,0 +1,204 @@
+<section xml:id="sec_cont_open_sets">
+  <title>Continuity and Open Sets</title>
+  <p>
+    Recall that we showed that a function <m>f</m> from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m> is continuous if and only if
+    <m>f^{-1}(N)</m> is a neighborhood of <m>a \in X</m> whenever <m>N</m> is a neighborhood of <m>f(a)</m> in <m>Y</m>.
+    We can now provide another characterization of continuous functions in terms of open sets.
+    This is the characterization that will serve as our definition of continuity in topological spaces.
+  </p>
+  
+  <theorem xml:id="thm_Open_continuity">
+    <statement>
+      <p>
+        Let <m>f</m> be a function from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m>.
+        Then <m>f</m> is continuous if and only if
+        <m>f^{-1}(O)</m> is an open set in <m>X</m> whenever <m>O</m> is an open set in <m>Y</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>(X, d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
+      and let <m>f : X \to Y</m> be a function.
+      To prove this biconditional statement we need to prove both implications.
+      First assume that <m>f</m> is a continuous function.
+      We must show that <m>f^{-1}(O)</m> is an open set in <m>X</m> for every open set <m>O</m> in <m>Y</m>.
+      So let <m>O</m> be an open set in <m>Y</m>.
+      To demonstrate that <m>f^{-1}(O)</m> is open in <m>X</m>,
+      we will show that <m>f^{-1}(O)</m> is a neighborhood of each of its points.
+      Let <m>a \in f^{-1}(O)</m>.
+      Then <m>f(a) \in O</m>.
+      Now <m>O</m> is an open set,
+      so there is an open ball <m>B(f(a), \epsilon)</m> around <m>f(a)</m> that is entirely contained in <m>O</m>.
+      Since <m>B(f(a), \epsilon)</m> is a neighborhood of <m>f(a)</m>,
+      we know that <m>f^{-1}(B(f(a), \epsilon))</m> is a neighborhood of <m>a</m>.
+      Thus, there exists <m>\delta \gt 0</m> so that <m>B(a, \delta) \subseteq f^{-1}(B(f(a), \epsilon))</m>.
+      Now <m>f(B(a, \delta)) \subseteq B(f(a), \epsilon) \subseteq O</m>,
+      and so <m>B(a, \delta) \subseteq f^{-1}(O)</m>.
+      We conclude that <m>f^{-1}(O)</m> is a neighborhood of each of its points and is therefore an open set in <m>X</m>.
+    </p>
+    <p>
+      The proof of the reverse implication is left for the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>f</m> be a function from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            What assumption do we make to prove the remaining implication of <xref ref="thm_Open_continuity"/>?
+            What do we need to demonstrate to prove the conclusion?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>a \in X</m>,
+            and let <m>N</m> be a neighborhood of <m>f(a)</m> in <m>Y</m>.
+            Why does there exist an <m>\epsilon \gt 0</m> so that <m>B(f(a), \epsilon) \subseteq N</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What does our hypothesis tell us about <m>f^{-1}(B(f(a), \epsilon))</m> in <m>X</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Why is <m>f^{-1}(N)</m> a neighborhood of <m>a</m>?
+            How does this show that <m>f</m> is a continuous function?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Recall that every open set is a union of open balls,
+    so we can simplify proofs of continuous functions in metric spaces by working only with open balls instead of arbitrary open sets.
+    The next activity provides the details.
+  </p>
+  
+  <activity xml:id="act_continuity_balls">
+  <introduction>
+    <p>
+      In this activity we prove the following corollary to <xref ref="thm_Open_continuity"/>.
+    </p>
+    <corollary xml:id="cor_continuity_balls">
+      <statement>
+        <p>
+          A function <m>f</m> from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m> is continuous if and only if
+          <m>f^{-1}(B)</m> is open in <m>X</m> whenever <m>B</m> is an open ball in <m>Y</m>.
+        </p>
+      </statement>
+    </corollary>
+    <p>
+      To set up the proof,
+      let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
+      and let <m>f: X \to Y</m> be a function.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            Since the corollary is a biconditional statement,
+            we need to prove both implications.
+            First, assume that <m>f</m> is continuous.
+            Use <xref ref="thm_Open_continuity"/>
+            to explain why <m>f^{-1}(B)</m> is open in <m>X</m> whenever <m>B</m> is an open ball in <m>Y</m>.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <introduction>
+          <p>
+            For the remaining implication,
+            assume that <m>f^{-1}(B)</m> is an open set in <m>X</m> for any open ball <m>B</m> in <m>Y</m>.
+            To show that <m>f</m> is a continuous function,
+            we will use <xref ref="thm_Open_continuity"/>
+            and show that <m>f^{-1}(O)</m> is open in <m>X</m> whenever <m>O</m> is an open set in <m>Y</m>.
+            So let <m>O</m> be an open set in <m>Y</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  What does <xref ref="thm_OS_1"/> tell us about <m>O</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Recall that <xref ref="lem_functions_subsets"/>
+                  tells us that if <m>\{B_{\beta}\}</m> is a collection of subsets of <m>Y</m> for <m>\beta</m> in some indexing set <m>J</m>, then
+                  <me>
+                    f^{-1}\left(\bigcup_{\beta \in J} B_{\beta}\right) = \bigcup_{\beta \in J} f^{-1}(B_{\beta})
+                  </me>.
+                  Use <xref ref="lem_functions_subsets"/>
+                  to show that <m>f^{-1}(O)</m> is open in <m>X</m> and conclude that <m>f</m> is a continuous function.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+     
+  </activity>
+  
+  <example xml:id="exp_linear_continuous">
+    <statement>
+      <p>
+        As an example of <xref ref="cor_continuity_balls"/>,
+        we prove that the square function from <m>\R</m> to <m>\R</m> is a continuous function.
+        Let <m>X = \R</m> with the Euclidean metric <m>d_E</m>,
+        and let <m>f: X \to X</m> be defined by <m>f(x) = x^2</m>.
+        We will show that <m>f</m> is a continuous function by verifying that
+        <m>f^{-1}(B)</m> is open in <m>X</m> for every open ball <m>B</m> in <m>X</m>.
+        Let <m>B = B(b,\beta) = (b-\beta,
+        b+\beta)</m> be an open ball in <m>X</m>.
+        Let <m>B' = B(b,\beta) \cap (\R^+ \cup \{0\})</m>.
+        We consider cases.
+        <ul>
+          <li>
+            <p>
+              Suppose that <m>B' = \emptyset</m>.
+              Then <m>f^{-1}(B) = \emptyset</m> and <m>f^{-1}(B)</m> is open in <m>X</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Suppose that <m>B' = [0, b+\beta)</m>.
+              Then <m>f^{-1}(B) = (-\sqrt{b+\beta}, \sqrt{b+\beta})</m> and <m>f^{-1}(B)</m> is open in <m>X</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The final case is <m>B' = (b-\beta, b+\beta)</m>.
+              Then
+              <me>
+                f^{-1}(B) = (-\sqrt{b+\beta}, -\sqrt{b-\beta}) \cup (\sqrt{b-\beta}, \sqrt{b+\beta})
+              </me>
+              and <m>f^{-1}(B)</m> is open in <m>X</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Since the inverse image of every open ball is an open set,
+        we conclude that <m>f</m> is a continuous function.
+      </p>
+    </statement>
+  </example>
+</section>

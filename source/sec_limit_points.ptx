@@ -1,0 +1,182 @@
+<section xml:id="sec_limit_points">
+  <title>Limit Points and Sequences in Topological Spaces</title>
+  <p>
+    Recall that we defined a limit point of a set <m>A</m> in a metric space <m>X</m> to be a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
+    Since we have defined neighborhoods in topological spaces,
+    we can make the same definition.
+  </p>
+
+  <definition>
+    <idx><h>limit point in a topological space</h></idx>
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space,
+        and let <m>A</m> be a subset of <m>X</m>.
+        A <term>limit point</term> of <m>A</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <idx><h>derived set</h></idx>
+    The set <m>A'</m> of limit points of <m>A</m> is called the <term>derived set</term>
+    of <m>A</m>.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Find the limit point(s) of the following sets
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\{c,d\}</m> in <m>(X, \tau)</m> with
+            <m>X= \{a,b,c,d\}</m> and <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\{a,b\}</m> in the set <m>X= \{a,b,c,d,e,f\}</m> with topology
+            <me>
+              \tau= \{\emptyset,\{b\}, \{a,b,c\},\{d,e,f\},\{b,d,e,f\}, X\}
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\{a,b\} \subset X</m> where
+            <m>X = \{a,b,c\}</m> in the discrete topology.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\{-1,0,1\} \subset \Z</m> with <m>\tau</m> the topology on <m>\Z</m> with basis <m>\{B(n)\}</m>, where
+            <me>
+              B(n) = \begin{cases}\{n\}  \amp \text{ if \(n\) is odd } , \\ \{n-1,n,n+1\}  \amp \text{ if \(n\) is even } . \end{cases}
+            </me>
+            (This topology is called the <term>digital line topology</term>
+            and has applications in digital processing.
+            That the collection <m>\{B(n)\}</m> is a basis for a topology on <m>\Z</m> is the topic of <xref ref="ex_digital_line_topology"/>)
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    In metric spaces,
+    a set is closed if and only if it contains all of its limit points.
+    So the corresponding result in topological spaces should be no surprise.
+  </p>
+
+  <theorem xml:id="thm_TS_closed_limitpoints">
+    <statement>
+      <p>
+        Let <m>C</m> be a subset of a topological space <m>X</m>,
+        and let <m>C'</m> be the set of limit points of <m>C</m>.
+        Then <m>C</m> is closed if and only if <m>C' \subseteq C</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a topological space,
+      and let <m>C</m> be a subset of <m>X</m>.
+      First we assume that <m>C</m> is closed and show that <m>C</m> contains all of its limit points.
+      Let <m>x \in X</m> be a limit point of <m>C</m>.
+      We proceed by contradiction and assume that <m>x \notin C</m>.
+      Then <m>x \in X \setminus C</m>, which is an open set.
+      This means that there is a neighborhood
+      (namely <m>X \setminus C</m>)
+      of <m>x</m> that contains no points in <m>C</m>,
+      which contradicts the fact that <m>x</m> is a limit point of <m>C</m>.
+      We conclude that <m>x \in C</m> and <m>C</m> contains all of its limit points.
+    </p>
+    <p>
+      For the converse,
+      assume that <m>C</m> contains all of its limit points.
+      To show that <m>C</m> is closed,
+      we prove that <m>X \setminus C</m> is open.
+      We again proceed by contradiction and assume that <m>X \setminus C</m> is not open.
+      Then there exists <m>x \in X \setminus C</m> such that no neighborhood of <m>x</m> is entirely contained in <m>X \setminus C</m>.
+      This implies that every neighborhood of <m>x</m> contains a point in <m>C</m> and so <m>x</m> is a limit point of <m>C</m>.
+      It follows that <m>x \in C</m>,
+      contradicting the fact that <m>x \in X \setminus C</m>.
+      We conclude that <m>X \setminus C</m> is open and <m>C</m> is closed.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    In metric spaces we saw that limit point of a set is the limit of a sequence of points in the set.
+    To explore this idea in topological spaces,
+    we define sequences in the same way we did in metric spaces.
+  </p>
+
+  <definition>
+  <idx><h>sequence in a topological space</h></idx>
+    <statement>
+      <p>
+        A <term>sequence</term> in a topological space <m>X</m> is a function <m>f: \Z^+</m> to <m>X</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We use the same notation and terminology related to sequences as we did in metric spaces:
+    we will write <m>(x_n)</m> to represent a sequence <m>f</m>,
+    where <m>x_n = f(n)</m> for each <m>n \in \Z^+</m>.
+    We can't define convergence in a topological space using a metric,
+    but we can use open sets.
+    Recall that a sequence <m>(x_n)</m> in a metric space <m>(X,d)</m> converges to a point <m>x</m> in the space if,
+    given <m>\epsilon \gt 0</m> there exists a positive integer <m>N</m> such that
+    <m>d(x_n,x) \lt \epsilon</m> for all <m>n \geq N</m>.
+    In other words,
+    every open ball centered at <m>x</m> contains all of the entries of the sequence past a certain point.
+    We can replace open balls with open sets and make a similar definition of convergence in topological spaces.
+  </p>
+
+  <definition>
+  <idx><h>convergent sequence in a topological space</h></idx>
+    <statement>
+      <p>
+        A sequence <m>(x_n)</m> in a topological space <m>X</m> <term>converges</term> to the point <m>x \in X</m> if,
+        for each open set <m>O</m> that contains <m>x</m> there exists a positive integer <m>N</m> such that
+        <m>x_n \in O</m> for all <m>n \geq N</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <idx><h>limit of a sequence in a topological space</h></idx>
+    If a sequence <m>(x_n)</m> converges to a point <m>x</m>,
+    we call <m>x</m> a <term>limit</term> of the sequence <m>(x_n)</m>.
+  </p>
+<!-- 13.3 -->
+  <activity xml:id="act_TS_limits2">
+    <p>
+      In metric spaces, limits of sequences are unique.
+      We may wonder if the same result is true in topological spaces.
+      Consider the topological space <m>(X,\tau)</m>,
+      where <m>X = \{a, b, c\}</m> and <m>\tau = \{\emptyset, \{c\}, \{a, c\}, \{b, c\}, X\}</m>.
+      Find all limits of all constant sequences in <m>X</m>.
+    </p>
+  </activity>
+  
+  <p>
+    The result of <xref ref="act_TS_limits2"/>
+    is that sequences do not behave in topological spaces as we would expect them to.
+    Consequently,
+    sequences do not play the same important role in topological spaces as they do in metric spaces.
+    However, the concept of limit point is important,
+    as are the notions of boundary and closure in topological spaces.
+  </p>
+</section>

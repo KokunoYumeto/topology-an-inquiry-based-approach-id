@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="id-ID">
+  <docinfo>
+<macros>
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\DeclareMathOperator{\ch}{char}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\NE}{\mathcal{E}}
+\newcommand{\Mn}[1]{\mathcal{M}_{#1 \times #1}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\Rn}{\R^n}
+\newcommand{\Mat}{\mathbf}
+\newcommand{\Seq}{\boldsymbol}
+\newcommand{\seq}[1]{\boldsymbol{#1}}
+\newcommand{\set}[1]{\mathcal{#1}}
+\newcommand{\abs}[1]{\left\lvert{}#1\right\rvert}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\cq}{\scalebox{.34}{\pscirclebox{ \textbf{?}}}}
+\newcommand{\cqup}{\,$^{\text{\scalebox{.2}{\pscirclebox{\textbf{?}}}}}$}
+\newcommand{\cqupmath}{\,^{\text{\scalebox{.2}{\pscirclebox{\textbf{?}}}}}}
+\newcommand{\cqupmathnospace}{^{\text{\scalebox{.2}{\pscirclebox{\textbf{?}}}}}}
+\newcommand{\uspace}[1]{\underline{}}
+\newcommand{\muspace}[1]{\underline{\mspace{#1 mu}}}
+\newcommand{\bspace}[1]{}
+\newcommand{\ie}{\emph{i}.\emph{e}.}
+\newcommand{\nq}[1]{\scalebox{.34}{\pscirclebox{\textbf{#1}}}}
+\newcommand{\equalwhy}{\stackrel{\cqupmath}{=}}
+\newcommand{\notequalwhy}{\stackrel{\cqupmath}{\neq}}
+\newcommand{\Ker}{\text{Ker}}
+\newcommand{\Image}{\text{Im}}
+\newcommand{\polyp}{p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots a_2x^2 + a_1x + a_0}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\SL}{\text{SL}}
+\newcommand{\lcm}{\text{lcm}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Inn}{\text{Inn}}
+\newcommand{\Hol}{\text{Hol}}
+\newcommand{\cl}{\text{cl}}
+\newcommand{\bsq}{\hfill $\blacksquare$}
+\newcommand{\NIMdot}{{ $\cdot$ }}
+\newcommand{\eG}{e_{\scriptscriptstyle{G}}}
+\newcommand{\eGroup}[1]{e_{\scriptscriptstyle{#1}}}
+\newcommand{\Gdot}[1]{\cdot_{\scriptscriptstyle{#1}}}
+\newcommand{\rbar}{\overline{r}}
+\newcommand{\nuG}[1]{\nu_{\scriptscriptstyle{#1}}}
+\newcommand{\rightarray}[2]{\left[ \begin{array}{#1} #2 \end{array} \right]}
+\newcommand{\polymod}[1]{\mspace{5 mu}(\text{mod} #1)}
+\newcommand{\ts}{\mspace{2 mu}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\adj}{\text{adj}}
+\newcommand{\pol}{\mathbb{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CB}{\mathcal{B}}
+\renewcommand{\CD}{\mathcal{D}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CQ}{\mathcal{Q}}
+\newcommand{\CW}{\mathcal{W}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\nullity}{\text{nullity}}
+\newcommand{\trace}{\text{trace}}
+\newcommand{\Area}{\text{Area}}
+\newcommand{\Vol}{\text{Vol}}
+\newcommand{\cov}{\text{cov}}
+\newcommand{\var}{\text{var}}
+\newcommand{\la}{\left|}
+\newcommand{\ra}{\right|}
+\newcommand{\Int}{\text{Int}}
+\newcommand{\Bdry}{\text{Bdry}}
+\newcommand{\lub}{\text{lub}}
+\newcommand{\glb}{\text{glb}}
+\newcommand{\ssim}{\sim}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vc}{\mathbf{c}}
+\newcommand{\vd}{\mathbf{d}}
+\newcommand{\ve}{\mathbf{e}}
+\newcommand{\vf}{\mathbf{f}}
+\newcommand{\vg}{\mathbf{g}}
+\newcommand{\vh}{\mathbf{h}}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vp}{\mathbf{p}}
+\newcommand{\vq}{\mathbf{q}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vz}{\mathbf{z}}
+\newcommand{\vzero}{\mathbf{0}}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vF}{\mathbf{F}}
+\newcommand{\vP}{\mathbf{P}}
+\newcommand{\nin}{}
+\newcommand{\Dom}{\text{Dom}}
+\newcommand{\tr}{\mathsf{T}}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\Row}{\text{Row }}
+\newcommand{\Col}{\text{Col }}
+\newcommand{\Nul}{\text{Nul }}
+\newcommand{\Span}{\text{Span}}
+\newcommand{\Range}{\text{Range}}
+\newcommand{\Domain}{\text{Domain}}
+\newcommand{\gr}{\varphi}
+\newcommand{\grc}{\overline{\varphi}}
+\newcommand{\hthin}{\hlinewd{.1pt}}
+\newcommand{\hthick}{\hlinewd{.7pt}}
+<!-- \newcommand{\pbreaks}{1}
+\newcommand{\pbreak}{
+} -->
+\newcommand{\lint}{\underline{}
+\int}
+\newcommand{\uint}{ \underline{}
+\int}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bei}{\begin{numlist2}}
+\newcommand{\eei}{\end{numlist2}}
+\newcommand{\ba}{\begin{itemize}}
+\newcommand{\ea}{\end{itemize}}
+\newcommand{\bal}{\begin{alphalist2}}
+\newcommand{\eal}{\end{alphalist2}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\btl}{\begin{thmlist}}
+\newcommand{\etl}{\end{thmlist}}
+\renewcommand{\be}{\begin{enumerate}}
+\renewcommand{\ee}{\end{enumerate}}
+<!-- \renewcommand{\labelenumi}{(\arabic{enumi})} -->
+<!-- \newcommand{\xitem}{\ans \item \ansend} -->
+<!-- \newcommand{\obe}{\begin{oddenumerate}} -->
+<!-- \newcommand{\oee}{\end{oddenumerate}} -->
+<!-- \newcommand{\skipitems}[1]{
+} -->
+<!-- \renewcommand{\phi}{\varphi}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35} -->
+<!-- \renewcommand{\MakeUppercase}[1]{#1} -->
+</macros>
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usepackage{pgfplots}
+</latex-image-preamble>
+<latex-preamble>
+  <package>setspace</package>
+  <package>unicode-math</package>
+</latex-preamble>
+<rename element="part">Bagian</rename>
+<rename element="chapter">Bab</rename>
+<rename element="section">Bagian</rename>
+<rename element="subsection">Subbagian</rename>
+<rename element="introduction">Pendahuluan</rename>
+<rename element="conclusion">Penutup</rename>
+<rename element="exercises">Latihan</rename>
+<rename element="solutions">Solusi</rename>
+<rename element="theorem">Teorema</rename>
+<rename element="lemma">Lema</rename>
+<rename element="proof">Bukti</rename>
+<rename element="definition">Definisi</rename>
+<rename element="example">Contoh</rename>
+<rename element="activity">Kegiatan</rename>
+<rename element="exploration">Aktivitas Persiapan</rename>
+<rename element="task">Butir</rename>
+<rename element="li">Butir</rename>
+<rename element="objectives">Pertanyaan Pemandu</rename>
+<rename element="objective">Pertanyaan</rename>
+<rename element="exercise">Latihan</rename>
+<rename element="divisionalexercise">Latihan</rename>
+<rename element="inlineexercise">Pemeriksaan</rename>
+<rename element="hint">Petunjuk</rename>
+<rename element="answer">Jawaban</rename>
+<rename element="solution">Solusi</rename>
+<rename element="figure">Gambar</rename>
+<rename element="table">Tabel</rename>
+<rename element="remark">Catatan</rename>
+<rename element="contents">Daftar Isi</rename>
+<rename element="toc">Daftar Isi</rename>
+<rename element="appendix">Lampiran</rename>
+<rename element="index">Indeks</rename>
+  </docinfo>
+  <book xml:id="schlicker-topology" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Topologi</title>
+    <subtitle>Pendekatan Berbasis Inkuiri</subtitle>
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Steven Schlicker</personname>
+          <institution>Grand Valley State University</institution>
+          <!-- <department>Mathematics</department> -->
+        </author>
+      </titlepage>
+      
+
+    <xi:include href="./preface.ptx"/>
+
+    </frontmatter>
+
+    <part xml:id="part-sets-funcs">
+      <title>Himpunan dan Fungsi</title>
+
+      <xi:include href="./chap_sets.ptx"/>
+      <xi:include href="./chap_functions.ptx"/>
+
+    </part>
+
+    <part xml:id="part-metric-spaces">
+      <title>Metric Spaces</title>
+      <xi:include href="./chap_metric_spaces.ptx"/>
+      <xi:include href="./chap_metric_spaces_apps.ptx"/>
+      <xi:include href="./chap_glb.ptx"/>
+      <xi:include href="./chap_continuous_functions.ptx"/>
+      <xi:include href="./chap_open_balls.ptx"/>
+      <xi:include href="./chap_open_sets.ptx"/>
+      <xi:include href="./chap_sequences.ptx"/>
+      <xi:include href="./chap_closed_sets.ptx"/>
+      <xi:include href="./chap_metric_subspaces.ptx"/>
+    </part>
+
+    <part xml:id="part-top-spaces">
+      <title>Topological Spaces</title>
+
+      <xi:include href="./chap_top_spaces.ptx"/>
+      <xi:include href="./chap_Closed_sets_topology.ptx"/>
+      <xi:include href="./chap_continuity_topology.ptx"/>
+      <xi:include href="./chap_subspaces.ptx"/>
+      <xi:include href="./chap_quotients.ptx"/>
+      <xi:include href="./chap_Compact_topology.ptx"/>
+      <xi:include href="./chap_Connected_topology.ptx"/>
+      <xi:include href="./chap_Path_connected_topology.ptx"/>
+      <xi:include href="./chap_Product_topology.ptx"/>
+    </part>
+
+    <backmatter>
+      <!-- <xi:include href="./bibliography.ptx"/> -->
+      <xi:include href="../companion/chapter_01_sets_self_study.ptx"/>
+      <index>
+        <title>Indeks</title>
+        <index-list/>
+      </index>
+    </backmatter>
+  </book>
+</pretext>

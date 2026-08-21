@@ -1,0 +1,144 @@
+<section xml:id="sec_top_equiv">
+  <title>Topological Equivalence</title>
+  <p>
+    When we can deform one set into another without poking holes in the set,
+    we consider the two sets to be equivalent from a topological perspective.
+    Such a deformation <m>f</m> has to be a bijection to ensure that the two sets contain the same number of elements,
+    continuous so that the inverse images of open sets are open,
+    and <m>f^{-1}</m> must be continuous so images of open sets are open.
+    Such a function provides a one-to-one correspondence between open sets in the two spaces.
+    This leads to the next definition.
+  </p>
+
+  <definition xml:id="def_MS_topological_equivalence">
+  <idx><h>topologically equivalent</h></idx>
+    <statement>
+      <p>
+        Two topological spaces <m>(X,d_X)</m> and <m>(Y,d_Y)</m> are <term>topologically equivalent</term> if there is a continuous bijection
+        <m>f : X \to Y</m> such that <m>f^{-1}</m> is also continuous.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Metric equivalence always implies topological equivalence
+    (using the metric topologies),
+    which is left for <xref ref="ex_me_implies_te"/>.
+    So metric equivalence is a stronger condition than topological equivalence.
+  </p>
+
+  <p>
+    The function <m>f</m>
+    (or <m>f^{-1}</m>)
+    in <xref ref="def_MS_topological_equivalence"/>
+    is called a <term>homeomorphism</term>.
+  </p>
+
+  <definition xml:id="def_Homeomorphism">
+  <idx><h>homeomorphism</h></idx>
+    <statement>
+      <p>
+        Let <m>(X,\tau_X)</m> and <m>(Y,\tau_Y)</m> be topological spaces.
+        A function <m>f: X \to Y</m> is a <term>homeomorphism</term>
+        if <m>f</m> is a continuous bijection such that <m>f^{-1}</m> is also continuous.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <idx><h>homeomorphic spaces</h></idx>
+    If there is a homeomorphism from <m>(X,\tau_X)</m> to
+    <m>(Y,\tau_Y)</m> we say that the spaces <m>(X,\tau_X)</m> to
+    <m>(Y,\tau_Y)</m> are <term>homeomorphic</term>
+    topological spaces.
+  </p>
+  <p>
+    It can be difficult to show directly that two metric spaces are homeomorphic,
+    but there are ways to make the process easier in metric spaces.
+    If <m>f</m> is a homeomorphism from the metric space
+    <m>(\R^2, d_E)</m> to the metric space <m>(\R^2, d_M)</m>,
+    the continuity of <m>f</m> ensures a smooth deformation from <m>\R^2</m> to <m>\R^2</m>.
+    In terms of the metrics,
+    this means that distances cannot get distorted too much <mdash/> in fact,
+    the amount distances are distorted should be bounded.
+    In other words,
+    we might expect that there is a constant <m>K</m> so that
+    <m>d_E(x,y) \leq K d_M(f(x),
+    f(y))</m> for any <m>x, y \in \R^2</m>.
+    The next theorem tells us that this is a sufficient condition for topological equivalence when we work in the same underlying space.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>X</m> be a set on which two metrics <m>d</m> and <m>d'</m> are defined.
+        If there exist positive constants <m>K</m> and <m>K'</m> so that
+        <md>
+          <mrow>d'(x,y) \amp \leq K d(x,y)</mrow>
+          <mrow>d(x,y) \amp \leq K' d'(x,y)</mrow>
+        </md>
+        for all <m>x,y \in X</m>,
+        then <m>(X,d)</m> is topologically equivalent to <m>(X,d')</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a set on which two metrics <m>d</m> and <m>d'</m> are defined.
+      Suppose there exist positive constants <m>K</m> and <m>K'</m> so that
+      <md>
+        <mrow>d'(x,y) \amp \leq K d(x,y)</mrow>
+        <mrow>d(x,y) \amp \leq K' d'(x,y)</mrow>
+      </md>
+      for all <m>x,y \in X</m>.
+      Let <m>i_X : (X,d) \to (X,d')</m> be the identity mapping.
+      That is, <m>i_X(x)=x</m> for all <m>x \in X</m>.
+      We will prove that <m>i_X</m> is a homeomorphism.
+      We know that <m>i_X</m> is a bijection,
+      so we only need verify that <m>i_X</m> and <m>i_X^{-1}</m> are continuous.
+      Let <m>\epsilon \gt 0</m> be given, and let <m>a \in X</m>.
+      Let <m>\delta = \frac{\epsilon}{K}</m>.
+      Suppose <m>x \in X</m> so that <m>d(x,a) \lt  \delta</m>.
+      Then
+      <me>
+        d'(i_X(x), i_X(a)) = d'(x,a) \leq Kd(x,a) \lt  K\delta = K\left(\frac{\epsilon}{K}\right) = \epsilon
+      </me>.
+    </p>
+    <p>
+      Thus, <m>i_X</m> is continuous.
+      The same argument shows that <m>i_X^{-1}</m> is also continuous.
+      Therefore, <m>i_X</m> is a homeomorphism between <m>(X,d)</m> and <m>(X,d')</m>.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    
+      <task>
+        <statement>
+          <p>
+            Are <m>(\R^2,d_T)</m> and <m>(\R^2, d_M)</m> topologically equivalent?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Are <m>(\R^2,d_E)</m> and <m>(\R^2, d_T)</m> topologically equivalent?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Do you expect that <m>(\R^2,d_E)</m> and
+            <m>(\R^2, d_M)</m> are topologically equivalent.
+            Explain without doing any calculations or comparisons.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

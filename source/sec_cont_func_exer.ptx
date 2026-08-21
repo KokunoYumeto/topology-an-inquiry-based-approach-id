@@ -1,0 +1,363 @@
+<exercises xml:id="sec_cont_func_exer">
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f: \R \to \R</m> be defined by <m>f(x) = |x|</m>,
+        with the Euclidean metric on both the domain and the codomain.
+        Is <m>f</m> continuous at <m>x=0</m>?
+        Prove your answer.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f: \R \to \R</m> be defined by
+        <m>f(x) = \begin{cases}\frac{x}{|x|} \amp \text{ if } x \neq 0 \\ 1 \amp \text{ if } x=0. \end{cases}</m> Is <m>f</m> continuous at <m>x=0</m>?
+        Prove your answer.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>(Y, d_Y) = (\R, d_E)</m>,
+        where <m>d_E</m> is the Euclidean metric.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>(X,d_X) = (\R^2, d_E)</m>.
+              Prove or disprove: the function
+              <m>f:X \to Y</m> defined by <m>f((x_1,x_2)) = x_1 + x_2</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>(X,d_X) = (\R^2, d_M)</m> where <m>d_M</m> is the max metric.
+              Prove or disprove: the function
+              <m>f:X \to Y</m> defined by <m>f((x_1,x_2)) = x_1 + x_2</m> is continuous.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>X</m> be any set and define <m>d : X \times X \to \R</m> by
+        <me>
+          d(x,y) = \begin{cases}0 \amp \text{ if }  x=y \\ 1 \amp \text{ if }  x \neq y. \end{cases}
+        </me>
+        <xref ref="ex_MS_discrete"/>
+        asks us to show that <m>d</m> is a metric
+        (the discrete metric)
+        on <m>\R</m>.
+        Let <m>(X,d_X)</m> and <m>(Y, d_Y)</m> be metric spaces with <m>d_X</m> the discrete metric.
+        Determine all of the continuous functions <m>f</m> from <m>X</m> to <m>Y</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex_sum_continuous">
+    <introduction>
+      <p>
+        Let <m>f</m> and <m>g</m> be continuous functions from <m>(\R,d_E)</m> to <m>(\R, d_E)</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>k \in \R</m> with <m>k \neq 0</m> and define <m>kf : \R \to \R</m> by
+              <m>(kf)(x) = kf(x)</m> for all <m>x \in \R</m>.
+              Show that <m>kf</m> is a continuous function.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Define <m>f+g : \R \to \R</m> by
+              <m>(f+g)(x) = f(x) + g(x)</m> for all <m>x \in \R</m>.
+              Show that <m>f+g</m> is a continuous function.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>f</m> and <m>g</m> be continuous functions from <m>(\R, d_E)</m> to <m>(\R,d_E)</m>.
+        In this exercise we will prove that <m>fg</m> is a continuous function from <m>\R</m> to <m>\R</m>.
+        Let <m>a</m> be in <m>\R</m>,
+        and follow the steps below to show that <m>fg</m> is continuous at <m>x=a</m>.
+        Let <m>\epsilon</m> be a positive number.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              We will first want to express
+              <m>f(x)g(x) - f(a)g(a)</m> in a more useful way.
+              Use the fact that <m>f(x) = f(a) + (f(x)-f(a))</m> and <m>g(x)  = g(a) + (g(x)-g(a))</m> to show that
+              <md>
+                <mrow>f(x)g(x)-f(a)g(a) = f(a)(g(x)-g(a)) \amp + g(a)(f(x)-f(a))</mrow>
+                <mrow> \amp + (f(x)-f(a))(g(x)-g(a))</mrow>
+              </md>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Explain why there exist positive numbers <m>\delta_1</m>,
+              <m>\delta_2</m>, <m>\delta_3</m>,
+              and <m>\delta_4</m> such that
+              <md>
+                <mrow>|f(x)-f(a)| \lt  \sqrt{\frac{\epsilon}{3}} \amp \text{ when }  |x-a| \lt  \delta_1</mrow>
+                <mrow>|g(x)-g(a)| \lt   \sqrt{\frac{\epsilon}{3}}  \amp \text{ when }  |x-a| \lt  \delta_2</mrow>
+                <mrow>|f(x)-f(a)| \lt  \frac{\epsilon}{3(1+|g(a)|)}  \amp \text{ when }  |x-a| \lt  \delta_3</mrow>
+                <mrow>|g(x)-g(a)| \lt  \frac{\epsilon}{3(1+|f(a)|)}  \amp \text{ when }  |x-a| \lt  \delta_4</mrow>
+              </md>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Use the results of (a) and (b) to show that <m>fg</m> is continuous at <m>x=a</m>. (Hint:
+              <m>1+|f(a)| \gt |f(a)|</m>.)
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>f</m> and <m>g</m> be functions from <m>(\R,d_E)</m> to <m>(\R,d_E)</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Is it true that if <m>f+g</m> is a continuous function,
+              then <m>f</m> and <m>g</m> are continuous functions?
+              Verify your answer.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Is it true that if <m>fg</m> is a continuous function,
+              then <m>f</m> and <m>g</m> are continuous functions?
+              Verify your answer.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>f(x) = 2x^2+1</m> map from <m>\R</m> to <m>\R</m>,
+        with both the domain and codomain having the Euclidean metric.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>\epsilon = \frac{1}{4}</m>.
+              Find a value of <m>\delta</m> such that
+              <m>|x-1| \lt \delta</m> implies that <m>|f(x)-f(a)| \lt \epsilon</m>.
+              You might use the applet at to confirm your value of <m>\delta</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that <m>f</m> is continuous at <m>x=1</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise xml:id="ex_min_1_metric">
+    <statement>
+      <p>
+        Define <m>d: \R \times \R \to \R</m> as
+        <me>
+          d(x,y) = \min\{|x-y|,1\}
+        </me>.
+        Prove that <m>d</m> is a metric.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f : \R \to \R</m> be a continuous function,
+        with both copies of <m>\R</m> having the Euclidean metric.
+        Assume that <m>f(x) = 0</m> whenever <m>x</m> is rational.
+        Prove that <m>f(x) = 0</m> for every <m>x \in \R</m>.
+        
+      </p>
+    </statement>
+    <hint>
+          <p>
+            Use <xref ref="ex_GLB_rational"/>.
+          </p>
+        </hint>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f: \R \to \R</m> be defined by
+        <m>f(x) = 0</m> if <m>x</m> is irrational and
+        <m>f(x) = 1</m> if <m>x</m> is rational.
+        Assume the Euclidean metric on both copies of <m>\R</m>.
+        Show that <m>f</m> is not continuous at any point in <m>\R</m>.
+        
+      </p>
+    </statement>
+    <hint>
+          <p>
+            Use <xref ref="ex_GLB_rational"/>
+            and <xref ref="ex_GLB_irrational"/>.
+          </p>
+        </hint>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>g: \R \to \R</m> be defined by
+        <m>g(x) = 0</m> if <m>x</m> is irrational and
+        <m>g(x) = x</m> if <m>x</m> is rational.
+        Assume the Euclidean metric on both copies of <m>\R</m>.
+        Show that <m>g</m> is continuous only at <m>0</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Let <m>X</m> be the set of continuous functions <m>f: [a,b] \to \mathbb{R}</m>.
+        Let <m>d^*</m> be the distance function on <m>X</m> defined by
+        <me>
+          d^*(f,g)= \int_a^b \la f(t)-g(t) \ra \, dt
+        </me>,
+        for <m>f, g \in X</m>.
+        For each <m>f \in X</m>, set
+        <me>
+          I(f) = \int_a^b f(t) \, dt
+        </me>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Determine the value of <m>d^*(f,g)</m> when <m>f(x) = x^2</m>,
+              <m>g(x) = 3-2x</m>, and <m>[a,b] = [-3,3]</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Determine the value of <m>I(f)</m> if
+              <m>f(x) = 2x</m> and <m>[a,b] = [0,2]</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Prove that the function <m>I : (X, d^*) \to (\R,d)</m> is continuous,
+              where <m>d</m> is the Euclidean metric.
+              
+            </p>
+          </statement>
+          <hint>
+                <p>
+                  It helps to start by explicitly writing down what it means for <m>I</m> to be continuous in terms of the metrics <m>d^*</m> and <m>d</m> before trying to prove this statement.
+                </p>
+              </hint>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        For each of the following, answer true if the statement is always true.
+        If the statement is only sometimes true or never true,
+        answer false and provide a concrete example to illustrate that the statement is false.
+        If a statement is true, explain why.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Let <m>f : X \to Y</m> be a function,
+              where <m>(X, d_X)</m> and <m>(Y, d_Y)</m> are metric spaces.
+              If <m>d_X</m> is the discrete metric and <m>d_Y</m> is any metric,
+              then <m>f</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>f : X \to Y</m> be a function,
+              where <m>(X, d_X)</m> and <m>(Y, d_Y)</m> are metric spaces.
+              If <m>d_Y</m> is the discrete metric and <m>d_X</m> is any metric,
+              then <m>f</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>d_1</m> and <m>d_2</m> be two metrics on a set <m>X</m>.
+              The identity function <m>i_X : (X,d_1) \to (X,d_2)</m> defined by
+              <m>i_X(x) = x</m> for every <m>x \in X</m> is continuous.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Let <m>f</m> and <m>g</m> be continuous functions from <m>(\R^2, d_T)</m>
+              (the taxicab metric)
+              to <m>(\R,d_E)</m>.
+              Then the function <m>f+g</m> from <m>(\R^2, d_T)</m> to
+              <m>(\R,d_E)</m> defined by <m>(f+g)(x) = f(x) + g(x)</m> for every
+              <m>x \in \R^2</m> is a continuous function.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              If <m>(X, d_X)</m> and <m>(Y,d_Y)</m> are metric spaces with <m>y \in Y</m>,
+              then the constant function <m>f: X \to Y</m> defined by
+              <m>f(x) = y</m> for every <m>x \in X</m> is a continuous function.
+            </p>
+          </statement>
+        </task>
+  
+    </exercise>
+
+</exercises>

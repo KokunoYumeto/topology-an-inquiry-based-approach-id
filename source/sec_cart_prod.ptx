@@ -1,0 +1,242 @@
+<section xml:id="sec_cart_prod">
+  <title>Hasil Kali Kartesius Himpunan</title>
+  <p>
+    Operasi terakhir pada himpunan yang akan kita bahas adalah
+    <term>hasil kali Kartesius</term>
+    (atau <term>hasil kali silang</term>).
+    Operasi ini sebenarnya sudah pernah kita jumpai.
+    Ketika menggambar grafik garis <m>y = mx+b</m> pada bidang,
+    kita memetakan titik-titik <m>(x,mx+b)</m>.
+    Titik-titik tersebut merupakan pasangan terurut bilangan real.
+    Gagasan ini dapat kita perluas ke sebarang himpunan.
+  </p>
+
+  <definition>
+  <idx><h>hasil kali Kartesius</h></idx>
+    <statement>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> adalah himpunan.
+        <term>Hasil kali Kartesius</term>
+        dari <m>A</m> dan <m>B</m> adalah himpunan
+        <me>
+          A \times B = \{(a,b) \mid a \in A \text{ dan }  b \in B\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Dengan kata lain,
+    hasil kali Kartesius <m>A</m> dan <m>B</m> adalah himpunan pasangan terurut <m>(a,b)</m>, dengan <m>a</m> berasal dari <m>A</m> dan <m>b</m> berasal dari <m>B</m>.
+    Perhatikan bahwa urutannya penting.
+  </p>
+
+  <activity>
+
+      <task>
+        <statement>
+          <p>
+            Tuliskan semua anggota <m>\{\text{ merah } , \text{ biru } \} \times \{\text{ mobil } , \text{ truk } , \text{ van } \}</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Jika <m>A</m> memiliki <m>m</m> anggota dan <m>B</m> memiliki <m>n</m> anggota,
+            berapa banyak anggota yang dimiliki himpunan <m>A \times B</m>?
+            Jelaskan.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Tidak ada alasan untuk membatasi diri pada hasil kali Kartesius dua himpunan saja.
+    Gagasan ini juga sudah pernah kita jumpai.
+    Hasil kali Kartesius <m>\R \times \R</m> adalah bidang real standar yang kita nyatakan dengan <m>\R^2</m>, sedangkan hasil kali Kartesius
+    <m>\R \times \R \times \R</m> adalah ruang real berdimensi tiga yang dinyatakan dengan <m>\R^3</m>.
+    Jika kita memiliki suatu kumpulan berindeks <m>\{X_{i}\}</m> yang terdiri atas himpunan-himpunan,
+    dengan <m>i</m> menjelajahi himpunan bilangan bulat positif,
+    maka hasil kali Kartesius himpunan-himpunan <m>X_{i}</m> dapat kita definisikan sebagai himpunan barisan tak hingga <m>(x_1, x_2, \ldots,
+    x_n, \ldots)</m>,
+    dengan <m>x_i \in X_i</m> untuk setiap <m>i \in \Z^+</m>.
+    Kita menyatakan hasil kali Kartesius ini dengan
+    <me>
+      \Pi_{i \in \Z^+} X_i = \Pi_{i=1}^{\infty} X_i
+    </me>.
+  </p>
+  <p>
+    Huruf pi kapital (<m>\Pi</m>) digunakan untuk menyatakan hasil kali, sebagai analog dari sigma kapital (<m>\Sigma</m>) yang digunakan untuk menyatakan jumlah.
+    Kita akan mempelajari barisan secara lebih mendalam nanti.
+  </p>
+  <p>
+    Sebagai penutup bagian ini, kita merangkum beberapa sifat himpunan.
+    Banyak di antara sifat-sifat ini dapat diperluas ke kumpulan himpunan sembarang.
+    Sebagian besar pembuktiannya langsung.
+    Pembuktian hukum asosiatif dan distributif diserahkan kepada <xref ref="ex_set_props"/>.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Misalkan <m>A</m>, <m>B</m>,
+        dan <m>C</m> merupakan himpunan bagian dari suatu himpunan semesta <m>U</m>.
+        <dl width="narrow">
+          <li>
+            <title>Sifat Himpunan Kosong</title>
+            <p>
+              <ol marker="i">
+                <li>
+                  <p>
+                    <m>A \cap \emptyset = \emptyset</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A \cup \emptyset = A</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A-\emptyset = A</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\emptyset^c = U</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <title>Sifat Himpunan Semesta</title>
+            <p>
+              
+              <ol marker="i">
+                <li>
+                  <p>
+                    <m>A \cap U = A</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A \cup U = U</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A-U = \emptyset</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>U^c = \emptyset</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <title>Hukum Idempoten</title>
+            <p>
+             
+              <ol marker="i">
+                <li>
+                  <p>
+                    <m>A \cap A = A</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A \cup A = A</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <title>Hukum Komutatif</title>
+            <p>
+              
+              <ol marker="i">
+                <li>
+                  <p>
+                    <m>A \cap B = B \cap A</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A \cup B = B \cup A</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <title>Hukum Asosiatif</title>
+            <p>
+              
+              <ol marker="i">
+                <li>
+                  <p>
+                    <m>(A \cap B) \cap C = A \cap (B \cap C)</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(A \cup B) \cup C = A \cup (B \cup C)</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <title>Hukum Distributif</title>
+            <p>
+              
+              <ol marker="i">
+                <li>
+                  <p>
+                    <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C)</m> 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <title>Sifat Dasar</title>
+            <p>
+              
+              <ol marker="i">
+                <li>
+                  <p>
+                    <m>\left(A^c\right)^c = A</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>A - B = A \cap B^c</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <title>Himpunan Bagian dan Komplemen</title>
+            <p>
+               <m>A \subseteq B \text{ jika dan hanya jika } B^c \subseteq A^c</m>
+            </p>
+          </li>
+        </dl>
+      </p>
+    </statement>
+  </theorem>
+</section>

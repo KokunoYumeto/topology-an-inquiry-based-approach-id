@@ -1,0 +1,275 @@
+<section xml:id="sec_set_closure">
+  <title>The Closure of a Set</title>
+  <p>
+    We have seen that the interior of a set is the largest open subset of that set.
+    There is a similar result for closed sets.
+    For example, let <m>A = (0,1)</m> in <m>(\R, d_E)</m>.
+    The set <m>A</m> is an open set,
+    but if we union <m>A</m> with its limit points,
+    we obtain the closed set <m>C = [0,1]</m>.
+    Moreover, The set <m>[0,1]</m> is the smallest closed set that contains <m>A</m>.
+    This leads to the idea of the <term>closure</term> of a set.
+  </p>
+
+  <definition>
+  <idx><h>closure of a set in a metric space</h></idx>
+    <statement>
+      <p>
+        The <term>closure</term> of a subset <m>A</m> of a metric space <m>X</m> is the set
+        <me>
+          \overline{A} = A \cup A'
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    In other words,
+    the closure of a set is the collection of the elements of the set and the limit points of the set <mdash/> those points that are on the
+    <q>edge</q>
+    of the set.
+    The importance of the closure of a set <m>A</m> is that the closure of <m>A</m> is the smallest closed set that contains <m>A</m>.
+  </p>
+
+  <theorem xml:id="thm_closure_closed">
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+        The closure of <m>A</m> is a closed set.
+        Moreover, the closure of <m>A</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+      To prove that <m>\overline{A}</m> is a closed set,
+      we will prove that <m>\overline{A}</m> contains its limit points.
+      Let <m>x \in \overline{A}'</m>.
+      To show that <m>x \in \overline{A}</m>,
+      we proceed by contradiction and assume that <m>x \notin \overline{A}</m>.
+      This implies that <m>x \notin A</m> and <m>x \notin A'</m>.
+      Since <m>x \notin A'</m>,
+      there exists a neighborhood <m>N</m> of <m>x</m> that contains no points of <m>A</m> other than <m>x</m>.
+      But <m>A \subseteq \overline{A}</m> and <m>x \notin \overline{A}</m>,
+      so it follows that <m>N \cap A = \emptyset</m>.
+      This implies that there is an open ball
+      <m>B \subseteq N</m> centered at <m>x</m> so that <m>B \cap A = \emptyset</m>.
+      The fact that <m>x \in \overline{A}'</m> means that
+      <m>B \cap \overline{A}</m> contains a point <m>y</m> in
+      <m>\overline{A}</m> different from <m>x</m>.
+      Since <m>B \cap A = \emptyset</m>,
+      we must have <m>y \in A'</m>.
+      But this, and the fact that <m>B</m> is a neighborhood of <m>y</m>,
+      means that <m>B</m> must contain a point of <m>A</m> different than <m>y</m>.
+      But <m>B \cap A = \emptyset</m>,
+      so we have reached a contradiction.
+      We conclude that <m>x \in \overline{A}</m> and <m>\overline{A}' \subseteq \overline{A}</m>.
+      This shows that <m>\overline{A}</m> is a closed set.
+    </p>
+    <p>
+      The proof that <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m> is left for the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+  <introduction>
+    <p>
+      Let <m>(X,d)</m> be a metric space,
+      and let <m>A</m> be a subset of <m>X</m>.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            What will we have to show to prove that
+            <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that <m>C</m> is a closed subset of <m>X</m> that contains <m>A</m>.
+            To show that <m>\overline{A} \subseteq C</m>,
+            why is it enough to demonstrate that <m>A' \subseteq C</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If <m>x \in A'</m>, what can we say about <m>x</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof that <m>\overline{A} \subseteq C</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    One consequence of <xref ref="thm_closure_closed"/> is the following.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        A subset <m>C</m> of a metric space <m>X</m> is closed if and only if <m>C = \overline{C}</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    We can also characterize closed sets as sets that contain their boundaries.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>boundary</term> <m>\Bdry(A)</m> of a subset <m>A</m> of a metric space <m>X</m> is the set of all boundary points of <m>A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="thm_Closed_boundary">
+    <statement>
+      <p>
+        A subset <m>C</m> of a metric space <m>X</m> is closed if and only if <m>C</m> contains its boundary.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    The proof of <xref ref="thm_Closed_boundary"/>
+    is left to <xref ref="ex_closed_bounded"/>.
+  </p>
+  <p>
+    Recall that a boundary point of a subset <m>A</m> of a metric space <m>X</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
+    The boundary points are those that are somehow
+    <q>between</q>
+    a set and its complement.
+    For example if <m>A = (0,1]</m> in <m>\R</m>,
+    the boundary of <m>A</m> is the set <m>\{0,1\}</m>.
+    We also have that <m>\overline{A} = [0,1]</m>,
+    <m>\R \setminus A = (-\infty, 0] \cup (1, \infty)</m>,
+    and <m>\overline{\R \setminus A} = (-\infty, 0] \cup [1, \infty)</m>.
+    Notice that <m>\Bdry(A) = \overline{A} \cap \overline{\R \setminus A}</m>.
+    That this is always true is formalized in the next theorem.
+  </p>
+
+  <theorem xml:id="thm_Bd_between">
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+        Then
+        <me>
+          \Bdry(A) = \overline{A} \cap \overline{X \setminus A}
+        </me>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+      To prove <m>\Bdry(A) = \overline{A} \cap \overline{X \setminus A}</m> we need to verify the containment in each direction.
+      Let <m>x \in \Bdry(A)</m> and let <m>N</m> be a neighborhood of <m>x</m>.
+      Then <m>N</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
+      We consider the cases of <m>x \in A</m> or <m>x \notin A</m>.
+      <ul>
+        <li>
+          <p>
+            Suppose <m>x \in A</m>.
+            Then <m>x \in \overline{A}</m>.
+            Also, <m>x \notin X \setminus A</m>,
+            so <m>N</m> must contain a point in
+            <m>X \setminus A</m> different from <m>x</m>.
+            That makes <m>x</m> a limit point of
+            <m>X \setminus A</m> and so <m>X \in \overline{A} \cap \overline{X \setminus A}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Suppose <m>x \notin A</m>.
+            Then <m>x \in X \setminus A \subseteq \overline{X \setminus A}</m>.
+            Also, <m>x \notin A</m>,
+            so <m>N</m> must contain a point in <m>A</m> different from <m>x</m>.
+            That makes <m>x</m> a limit point of <m>A</m> and so <m>X \in \overline{A} \cap \overline{X \setminus A}</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      In either case we have <m>x \in \overline{A} \cap \overline{X \setminus A}</m> and so <m>\Bdry(A) \subseteq \overline{A} \cap \overline{X \setminus A}</m>.
+    </p>
+    <p>
+      For the reverse implication, refer to the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+      In this activity we prove that
+      <me>
+        \overline{A} \cap \overline{X \setminus A} \subseteq \Bdry(A)
+      </me>.
+    </p>
+    <p>
+      Let <m>x \in \overline{A} \cap \overline{X \setminus A}</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            What must be true about <m>x</m>,
+            given that <m>x</m> is in the intersection of two sets?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            Let <m>N</m> be a neighborhood of <m>x</m>.
+            As we did in the proof of <xref ref="thm_Bd_between"/>,
+            we consider the cases <m>x \in A</m> and <m>x \notin A</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Suppose <m>x \in A</m>.
+                  Why must <m>N</m> contain a point in <m>A</m> and a point not in <m>A</m>?
+                  What does this tell us about <m>x</m>?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Suppose <m>x \notin A</m>.
+                  Why must <m>N</m> contain a point in <m>A</m> and a point not in <m>A</m>?
+                  What does this tell us about <m>x</m>?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  What can we conclude from parts (i) and (ii)?
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+  
+  </activity>
+</section>

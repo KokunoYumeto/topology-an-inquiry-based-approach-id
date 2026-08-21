@@ -1,0 +1,202 @@
+<section xml:id="sec_closed_sets_intro">
+  <title>Introduction</title>
+  <p>
+    Once we have defined open sets in metric spaces,
+    it is natural to ask if there are closed sets.
+    Recall that closed intervals are important in calculus because every continuous function on a closed interval attains an absolute maximum and absolute minimum value on that interval.
+    If we have closed sets in metric spaces,
+    we might consider if there is some result that is similar to this for continuous functions on closed sets.
+    In this section we introduce the idea of closed sets in metric spaces and discover a few of their properties.
+  </p>
+  <p>
+    Every interval of the form <m>[a,b]</m> in <m>\R</m> is a closed set using the Euclidean metric.
+    What distinguishes these closed intervals from the open intervals is that the open intervals do not contain either of their endpoints <mdash/> this is what makes an open interval a neighborhood of each of its points.
+    In general, what makes open sets open is that they do not contain their boundaries.
+    If an open set doesn't contain its boundary,
+    then its complement, by contrast,
+    should contain its boundary.
+    This leads to the definition of a closed set.
+  </p>
+
+  <definition xml:id="def_closed_metric_space">
+  <idx><h>closed subset of a metric space</h></idx>
+    <statement>
+      <p>
+        A subset <m>C</m> of a metric space <m>X</m> is <term>closed</term> if its complement <m>X \setminus C</m> is open.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We said that open sets are open because they do not contain their boundary and closed sets are closed because they do contain their boundary.
+    However, we did not define what we mean by boundary.
+    The point <m>a</m> on the
+    <q>boundary</q>
+    of an open interval of the form <m>O=(a,b)</m> in <m>\R</m> with the Euclidean metric has the property that every open ball that contains <m>a</m> contains points in <m>O</m> and points not in <m>O</m>.
+    This is what makes the point <m>a</m> lie on the boundary.
+    We can also think of the point <m>a</m> as being at the very limit of the set <m>O</m>.
+    This motivates the next definition.
+  </p>
+
+  <definition>
+  <idx><h>boundary point in a metric space</h></idx>
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space,
+        and let <m>A</m> be a subset of <m>X</m>.
+        A <term>boundary point</term> of <m>A</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    For example, in <m>A=(0,1)</m> as a subset of <m>(\R, d_E)</m>,
+    the number 0 is a boundary point of <m>A</m> because any open interval in <m>\R</m> that contains <m>0</m> contains points in <m>A</m> and points not in <m>A</m>.
+    Boundary points can arise in other ways.
+    If <m>A = \{0,1\}</m> as a subset of <m>(\R, d_E)</m>,
+    then 0 is again a boundary point because any open interval in <m>\R</m> that contains <m>0</m> contains a point (<m>0</m>) in <m>A</m> and points not in <m>A</m>.
+    However, <m>0</m> is the only point in <m>A</m> that is contained in any open interval that contains <m>0</m>.
+    In this case we call <m>0</m> an
+    <term>isolated point</term> of <m>A</m>,
+    and in the case of the set
+    <m>A = (0,1)</m> we call <m>0</m> an
+    <term>accumulation point</term>
+    or a <term>limit point</term> of <m>A</m>
+    (the use of the word
+    <q>limit</q>
+    here will become clear later).
+  </p>
+
+  <definition>
+  <idx><h>accumulation point in a metric space</h></idx>
+  <idx><h>limit point in a metric space</h></idx>
+  <idx><h>isolated point in a metric space</h></idx>
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space,
+        and let <m>A</m> be a subset of <m>X</m>.
+        <ol>
+          <li>
+            <p>
+              An <term>accumulation point</term> or
+              <term>limit point</term> of <m>A</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              An <term>isolated point</term> of <m>A</m> is a point <m>a \in A</m> such that there exists a neighborhood <m>N</m> of <m>a</m> in <m>X</m> with <m>N \cap A = \{a\}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    You might wonder about the use of the term
+    <q>limit point</q>
+    and how limit points might be related to limits.
+    As we will see later, limit points are limits of sequences,
+    but the definition as we have given is one that will translate directly to topological spaces later.
+  </p>
+  <p>
+    Note that every boundary point is either an accumulation point or an isolated point.
+    The proof is left as an exercise.
+  </p>
+
+  <exploration>
+    
+      <task>
+        <introduction>
+          <p>
+            For each of the given sets <m>A</m>,
+            find all boundary points, limit points, and isolated points.
+            Then determine if the set <m>A</m> is a closed set in the metric space <m>(X,d)</m>.
+            Explain your reasoning.
+          </p>
+        </introduction>
+          
+            <task>
+              <statement>
+                <p>
+                  <m>X = \R</m>, <m>d = d_E</m>,
+                  the Euclidean metric, <m>A = [0,0.5)</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  <m>X = \{x \in \R \mid 0 \lt x \leq 1\}</m>,
+                  <m>d = d_E</m>, the Euclidean metric, <m>A = (0,0.5]</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  <m>X = \{a,b,c,e\}</m>, <m>d</m> is the discrete metric defined by
+                  <me>
+                    d(x,y) = \begin{cases}0 \amp \text{ if }  x = y \\ 1 \amp \text{ if }  x \neq y, \end{cases}
+                  </me>
+                  and <m>A = \{a,b\}</m>.
+                </p>
+              </statement>
+            </task>
+      </task>
+
+      <task>
+        <introduction>
+          <p>
+            Label each of the following statements as either true or false.
+            If true, provide a convincing argument.
+            If false, provide a specific counterexample.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Every limit point is a boundary point.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Every boundary point is a limit point.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Every limit point is an isolated point
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Every isolated point is a limit point.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Every boundary point is an isolated point.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Every isolated point is a boundary point.
+                </p>
+              </statement>
+            </task>
+          
+      </task>
+     
+  </exploration>
+</section>

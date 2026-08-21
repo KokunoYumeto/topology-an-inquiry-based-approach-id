@@ -1,0 +1,257 @@
+<section xml:id="sec_cont_func_btwn">
+  <title>Continuous Functions Between Metric Spaces</title>
+  <p>
+    In our preview activity we saw how to formally define what it means for a function
+    <m>f : \R \to \R</m> to be continuous at a point.
+  </p>
+  <p>
+    Note that <xref ref="def_epsilon_delta_continuity"/>
+    depends only on being able to measure how close points are to each other.
+    Since that is precisely what a metric does,
+    we can extend this notion of continuity to define continuity for functions between metric spaces.
+    Continuity is an important idea in topology,
+    and we will work with this idea extensively throughout the semester.
+  </p>
+  <p>
+    If we let <m>d_E : \R \times \R \to \R</m> be defined by <m>d_R(x,y) = | x - y |</m>,
+    then we have seen that <m>d_E</m> is a metric on <m>\R</m>
+    (note that <m>d_E</m> is the Euclidean metric on <m>\R</m>).
+    Using this metric we can reformulate what it means for a function
+    <m>f : \R \to \R</m> to be continuous at a point.
+  </p>
+
+  <definition>
+    <title>Alternate Definition</title>
+    <statement>
+      <p>
+        A function <m>f : \R \to \R</m> is <term>continuous at a point <m>a</m></term> if,
+        given any <m>\epsilon \gt 0</m>,
+        there exists a <m>\delta \gt 0</m> so that
+        <m>d_E(x,a) \lt \delta</m> implies <m>d_E(f(x), f(a)) \lt \epsilon</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    This alternate definition depends on the metric <m>d_E</m>.
+    We could easily replace the metric <m>d</m> with any other metric we choose.
+    This allows us to define continuity at a point for functions between metric spaces.
+  </p>
+
+  <definition>
+  <idx><h>continuity at a point in a metric space</h></idx>
+    <statement>
+      <p>
+        Let <m>(X,d_X)</m> and <m>(Y, d_Y)</m> be metric spaces.
+        A function <m>f:X \to Y</m> is <term>continuous</term> at <m>a \in X</m> if,
+        given any <m>\epsilon \gt 0</m>,
+        there exists a <m>\delta \gt 0</m> so that
+        <m>d_X(x,a)\lt \delta</m> implies <m>d_Y(f(x), f(a)) \lt \epsilon</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Once we have defined continuity at a point,
+    we can define continuous functions.
+  </p>
+
+  <definition>
+  <idx><h>continuous function</h></idx>
+    <statement>
+      <p>
+        Let <m>(X,d_X)</m> and <m>(Y, d_Y)</m> be metric spaces.
+        A function <m>f:X \to Y</m> is <term>continuous</term>
+        if <m>f</m> is continuous at every point in <m>X</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        In general, to prove that a function <m>f:X \to Y</m> is continuous,
+        where <m>(X,d_X)</m> and <m>(Y, d_Y)</m> are metric spaces,
+        we begin by choosing an arbitrary element <m>a</m> in <m>X</m>.
+        Then we let <m>\epsilon</m> be a number greater than <m>0</m> and show that there is a <m>\delta \gt 0</m> so that
+        <m>d_Y(f(x),f(a)) \lt  \epsilon</m> whenever <m>d_X(x,a) \lt  \delta</m>.
+        The <m>\delta</m> we need cannot depend on <m>x</m>
+        (since <m>x</m> isn't known),
+        but can depend on the value of <m>a</m> that we choose,
+        and will likely depend on <m>\epsilon</m> as well.
+        That is, there is a function <m>C</m> of only the independent variables <m>a</m> and
+        <m>\epsilon</m> that produces the <m>\delta</m>,
+        or <m>\delta = C(a,\epsilon)</m>.
+        As an example, let <m>X = \R</m> and let <m>d_X</m> be defined as
+        <me>
+          d_X(x,y) = \min\{|x-y|,1\}
+        </me>.
+      </p>
+      <p>
+        The proof that <m>d_X</m> is a metric is left for <xref ref="ex_min_1_metric"/>.
+        Consider <m>f : X \to Y</m> defined by <m>f(x) = x^2</m>,
+        where <m>(Y,d_Y) = (\R, d_E)</m>.
+        To show that <m>f</m> is continuous,
+        we let <m>a \in \R</m> and let <m>\epsilon \gt 0</m>.
+      </p>
+      <blockquote>
+        <p>
+        <em>Scratch work.</em> What happens next is not part of the proof, but shows how we go about finding a <m>\delta</m> we need. We are looking for <m>\delta \gt 0</m> such that <m>d_X(x,a) \lt  \delta</m> implies that <m>d_E(f(x),f(a)) \lt  \epsilon</m>. That is, we want to make
+        <me>
+          d_E(f(x),f(a)) = \sqrt{(f(x)-f(a))^2} = |f(x)-f(a)| = |x^2-a^2| \lt  \epsilon
+        </me>
+        whenever
+        <me>
+          d_X(x,a) = \min\{|x-a|, 1\} \lt  \delta
+        </me>.
+        Now <m>|x^2-a^2| = |(x-a)(x+a)| = |x-a| \ |x+a|</m>. If <m>d_X(x,a) \lt  \delta</m>, then <m>\min\{|x-a|, 1\} \lt  \delta</m>. If we choose <m>\delta \lt  1</m>, then <m>d_X(x,a) \lt  \delta \lt  1</m> implies that <m>|x-a| \lt  1</m> and so <m>d_X(x,a) = |x-a|</m>. Now
+        <me>
+          |x+a| = |(x-a) + 2a| \leq |x-a| + 2|a| \lt  1+2|a|
+        </me>.
+        It follows that
+        <me>
+          |x-a| \ |x+a| \lt  \delta(1+2|a|)
+        </me>.
+        To make this product less that <m>\epsilon</m>, we can choose <m>\delta</m> such that <m>\delta(1+2|a|) \lt  \epsilon</m> or <m>\delta \lt  \frac{\epsilon}{1+2|a|}</m>. That is, there is a function <m>C</m> of <m>\epsilon</m> that gives us the <m>\delta</m> we want, namely <m>\delta = C(a,\epsilon) = \left\{1, \frac{\epsilon}{1+2|a|}\right\}</m>.
+        Now we ignore this paragraph and present the proof, which is essentially reversing the steps we just made. If the steps can't be reversed, then we have to rethink our argument. The next step in the proof might seem like magic to the uninitiated reader, but we have seen behind the curtain so it isn't a mystery to us.
+        </p>
+      </blockquote>
+      <p>
+        Let <m>\delta</m> be a positive number less than <m>\min\left\{1, \frac{\epsilon}{1+2|a|}\right\}</m>.
+        Then
+        <me>
+          d_X(x,a) = \min\{|x-a|,1\} \lt  \delta
+        </me>
+        implies that <m>d_X(x,a) \lt  \delta \lt  1</m> and so <m>d_X(x,a) = |x-a| \lt  \delta \lt  1</m>.
+        Then
+        <me>
+          |x+a| = |(x-a) + 2a| \leq |x-a| + 2|a| \lt  1+2|a|
+        </me>.
+      </p>
+      <p>
+        It follows that
+        <md>
+          <mrow>d_E(f(x),f(a)) \amp = \sqrt{(f(x)-f(a))^2}</mrow>
+          <mrow>\amp = |f(x)-f(a)|</mrow>
+          <mrow>\amp = |x^2-a^2|</mrow>
+          <mrow>\amp = |(x-a)(x+a)|</mrow>
+          <mrow>\amp = |x-a| \ |x+a|</mrow>
+          <mrow>\amp \lt  \delta (1+2|a|)</mrow>
+          <mrow>\amp \lt   \left(\frac{\epsilon}{1+2|a|}\right) (1+2|a|)</mrow>
+          <mrow>\amp = \epsilon</mrow>
+        </md>.
+      </p>
+      <p>
+        We conclude that <m>f</m> is continuous at every point in <m>X</m> and so <m>f</m> is a continuous function.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Not all functions are continuous as we see in the next example.
+  </p>
+
+  <example xml:id="exp_not_continuous">
+    <statement>
+      <p>
+        Let <m>X = Y = \R</m> and define <m>f : X \to Y</m> by <m>f(x) = x</m>.
+        Let <m>d_X</m> be the Euclidean metric and <m>d_Y</m> the discrete metric. (Recall that <m>d_Y(x,y) = 1</m> whenever
+        <m>x \neq y</m>.) Let <m>a \in X</m> and let <m>0 \lt \epsilon \lt 1</m>.
+      </p>
+      <p>
+        Let <m>\delta \gt 0</m>, and let <m>x = a+\frac{\delta}{2}</m>.
+        Then <m>x \neq a</m> and <m>d_X(x,a) \lt  \delta</m>.
+        However,
+        <me>
+          d_Y(f(x),f(a)) = d_Y(x,a) = 1
+        </me>.
+      </p>
+      <p>
+        So if <m>0 \lt \epsilon \lt 1</m>,
+        there is no <m>\delta \gt 0</m> such that
+        <m>d_X(x,a) \lt \delta</m> implies that <m>d_Y(f(x),f(a)) \lt \epsilon</m>.
+        We conclude that <m>f</m> is continuous at no point in <m>X</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Certain functions are always continuous,
+    as the next activity shows.
+  </p>
+
+  <activity xml:id="act_id_constant_continuous">
+   
+      <task>
+        <statement>
+          <p>
+            Let <m>(X, d_X)</m> and <m>(Y, d_Y)</m> be metric spaces,
+            and let <m>b \in Y</m>.
+            Define <m>f : X \to Y</m> by
+            <m>f(x) = b</m> for every <m>x \in X</m>.
+            Show that <m>f</m> is a continuous function.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>(X, d)</m> be a metric space.
+            Define the function <m>i_X : X \to X</m> by
+            <m>i_X(x) = x</m> for every <m>x \in X</m>.
+            Show that <m>i_X</m> is a continuous function.
+            (The function <m>i_X</m> is called the
+            <term>identity function</term>
+              <idx><h>identity function</h></idx>
+            on <m>X</m>.)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Why doesn't the argument in part (b) contradict <xref ref="exp_not_continuous"/>?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    More complicated examples are in the next activity.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X = (\R^2, d_T)</m> and <m>Y = (\R^2, d_M)</m>, where
+      <me>
+        d_T((x_1, x_2), (y_1,y_2)) = | x_1-y_1 | + | x_2-y_2 |
+      </me>
+      is the taxicab metric and
+      <me>
+        d_M((x_1, x_2), (y_1,y_2)) = \max\{| x_1-y_1 |,  | x_2-y_2 |\}
+      </me>
+      is the max metric.
+      Define <m>f : \R^2 \to \R^2</m> by <m>f((a,b)) = (a+b, b)</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Is <m>f</m> a continuous function from <m>X</m> to <m>Y</m>?
+            Justify your answer.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>f</m> a continuous function from <m>Y</m> to <m>X</m>?
+            Justify your answer.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

@@ -1,0 +1,129 @@
+<section xml:id="sec_open_balls_intro">
+  <title>Introduction</title>
+  <p>
+    Open sets are vitally important in topology.
+    We will see later that every topological space is completely defined by its open sets,
+    and continuous functions can be defined just in terms of open sets.
+    In this section we introduce the idea of open balls and neighborhoods in metric spaces and discover a few of their properties.
+    This discussion will form the basis for introducing open sets in the next section.
+  </p>
+  <p>
+    Recall that the continuity of a function <m>f</m> from a metric space <m>(X, d_X)</m> to a metric space
+    <m>(Y, d_Y)</m> at a point <m>a</m> is defined in terms of sets of points <m>x \in X</m> such that
+    <m>d_X(x,a) \lt \delta</m> and <m>y \in Y</m> such that
+    <m>d_Y(y, f(a)) \lt \epsilon</m> for positive real numbers <m>\delta</m> and <m>\epsilon</m>.
+    In <m>\R</m> with the Euclidean metric <m>d_E</m>,
+    for real numbers <m>x</m> and <m>a</m> the set of <m>x</m> values satisfying
+    <m>d_E(x,a) \lt \delta</m> is the set of <m>x</m> values so that <m>| x-a | \lt \delta</m>.
+    We often write this set in interval notation as
+    <m>(a-\delta,
+    a+\delta)</m> and call <m>(a-\delta,
+    a+\delta)</m> an open interval.
+    An informal reason that we call such an interval open (as opposed to the intervals
+    <m>[a-\delta,
+    a+\delta)</m>, <m>(a-\delta, a+\delta]</m>, or
+    <m>[a-\delta,
+    a+\delta]</m>) is that the open interval does not contain either of its endpoints.
+    A more substantial reason to call such an interval open is that if <m>x'</m> is any element in <m>(a-\delta,
+    a+\delta)</m>,
+    then we can find another open interval around <m>x'</m> that is completely contained in the interval <m>(a-\delta,
+    a+\delta)</m>.
+    So you could naively think of an open interval as one in which there is enough room in the interval for any point in the interval to wiggle around a bit and stay within the interval.
+  </p>
+  <p>
+    Since the open interval <m>(a-\delta,
+    a+\delta)</m> can be described completely by the Euclidean metric as the set of <m>x</m> values so that <m>d_E(x,a) \lt \delta</m>,
+    there is no reason why we can't extend this notation of open interval to any metric space.
+    We must note, though,
+    that <m>\R</m> is one-dimensional while most metric spaces are not,
+    so the term
+    <q>interval</q>
+    will no longer be appropriate.
+    We replace the concept of interval with that of an open ball.
+  </p>
+
+  <definition>
+    <idx><h>open ball in a metric space</h></idx>
+    <statement>
+      <p>
+        Let <m>(X, d_X)</m> be a metric space, and let <m>a \in X</m>.
+        For <m>\delta \gt 0</m>, the <term>open ball <m>B(a, \delta)</m> of radius <m>\delta</m> around <m>a</m></term> is the set
+        <me>
+          B(a, \delta) = \{x \in X \mid d_X(x,a) \lt  \delta\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We note here that our notation for an open ball is not universal.
+    For example, some texts use
+    <m>B_{\delta}(a)</m> for our <m>B(a,\delta)</m>.
+  </p>
+
+  <exploration>
+    <introduction>
+    <p>
+      Describe and draw a picture of the indicated open ball in each of the following metric spaces.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            The open ball <m>B(2, 1)</m> in the metric space
+            <m>(\R, d_E)</m> with the Euclidean metric
+            <me>
+              d_E(x,y) = | x-y |
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The open ball <m>B((3,2), 1)</m> in the metric space
+            <m>(\R^2, d_E)</m> with the Euclidean metric
+            <me>
+              d_E((x_1,x_2),(y_1,y_2)) = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2}
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The open ball <m>B((3,2), 1)</m> in the metric space <m>(\R^2, d_M)</m> with the max metric
+            <me>
+              d_M((x_1,x_2),(y_1,y_2)) = \max\{| x_1-y_1 |, | x_2-y_2 |\}
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The open ball <m>B((3,2), 1)</m> in the metric space
+            <m>(\R^2, d_T)</m> with the taxicab metric
+            <me>
+              d_T((x_1,x_2),(y_1,y_2)) = | x_1-y_1 | + | x_2-y_2 |
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The open ball <m>B((3,2), 1)</m> in the metric space
+            <m>(\R^2, d)</m> with the discrete metric
+            <me>
+              d(x,y) = \begin{cases}0 \amp \text{ if }  x=y \\ 1 \amp \text{ if }  x \neq y. \end{cases}
+            </me>.
+            What is the difference between <m>B((3,2),1)</m> and
+            <m>B((3,2),r)</m> in this metric space if <m>r > 1</m>?
+            If <m>r \lt  1</m>?
+          </p>
+        </statement>
+      </task>
+    
+  </exploration>
+</section>

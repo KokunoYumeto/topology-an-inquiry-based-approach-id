@@ -1,0 +1,1194 @@
+<appendix xml:id="o003-c90-ch02-companion" xml:lang="id-ID">
+  <title>Pendamping Mandiri Bab 2: Fungsi</title>
+
+  <introduction>
+    <p>
+      Komponen ini mendampingi Bab 2, bukan menggantikannya. Kerjakan eksplorasi,
+      aktivitas, dan latihan pada bab utama sebelum membuka unsur
+      <term>petunjuk</term>, <term>jawaban</term>, atau <term>pembahasan</term> di sini.
+      Seluruh uraian pendamping ini ditulis secara mandiri untuk edisi ini; uraian ini
+      bukan teks Steven Schlicker atau GVSU dan tidak menyalin ungkapan dari karya
+      Anton Petrunin. Komponen asli ini disediakan secara terpisah di bawah
+      Creative Commons Attribution 4.0.
+    </p>
+    <p>
+      Ketika menilai suatu fungsi, selalu tulis domain, kodomain, dan aturannya.
+      Notasi <m>f^{-1}(B)</m> untuk prapeta suatu himpunan berlaku bagi setiap fungsi,
+      sedangkan notasi <m>f^{-1}:B\to A</m> sebagai fungsi invers hanya berlaku jika
+      <m>f:A\to B</m> bijektif.
+    </p>
+  </introduction>
+
+  <section xml:id="o003-c90-ch02-activity-checkpoints">
+    <title>Pemeriksaan eksplorasi dan aktivitas</title>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-01">
+      <title>Pemeriksaan 1: aturan yang sama, fungsi yang berbeda</title>
+      <statement>
+        <p>
+          Setelah menyelesaikan eksplorasi pembuka pada bagian Pendahuluan,
+          klasifikasikan keempat fungsi yang memakai aturan <m>x\mapsto x^2+1</m>.
+          Nyatakan pula fungsi mana yang merupakan pembatasan dan fungsi mana yang
+          merupakan perluasannya.
+          Rubrik lengkap: domain dan kodomain harus disebutkan; kegagalan injektivitas
+          harus disertai dua masukan; kegagalan surjektivitas harus disertai satu unsur
+          kodomain tanpa prapeta; setiap klaim positif harus dibuktikan.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-01-hint">
+        <p><em>Petunjuk 1.</em> Bandingkan <m>2</m> dan <m>-2</m>, lalu selesaikan <m>x^2+1=y</m>.</p>
+        <p><em>Petunjuk 2.</em> Periksa secara terpisah apakah <m>0</m> termasuk domain dan apakah <m>1</m> termasuk daerah hasil.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-01-answer">
+        <p>
+          <m>f:\R\to\R</m> bukan injeksi maupun surjeksi;
+          <m>h:\R^+\to\R</m> injektif tetapi bukan surjektif;
+          <m>F:\R\to[1,\infty)</m> surjektif tetapi bukan injektif; dan
+          <m>g:[0,\infty)\to[1,\infty)</m> bijektif.
+          Fungsi <m>h</m> adalah pembatasan <m>f</m> pada <m>\R^+</m>, dan <m>f</m>
+          merupakan perluasan <m>h</m>. Selain itu, <m>g=F|_{[0,\infty)}</m>, sehingga
+          <m>g</m> merupakan pembatasan <m>F</m> dan <m>F</m> merupakan perluasan <m>g</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-01-solution">
+        <p>
+          Karena <m>f(2)=f(-2)=5</m>, fungsi pertama dan <m>F</m> tidak injektif.
+          Daerah hasil aturan tersebut pada <m>\R</m> ialah <m>[1,\infty)</m>, sehingga
+          <m>f</m> tidak mencapai, misalnya, <m>0</m>, sedangkan <m>F</m> mencapai setiap
+          <m>y\geq1</m> melalui <m>x=\sqrt{y-1}</m>. Pada domain positif ketat,
+          <m>x\mapsto x^2+1</m> naik tegas dan daerah hasilnya <m>(1,\infty)</m>;
+          karena itu <m>h</m> injektif tetapi tidak mencapai <m>1</m> ataupun unsur
+          kodomain di bawahnya. Pada domain tak negatif, akar
+          <m>x=\sqrt{y-1}</m> ada dan tunggal untuk setiap <m>y\geq1</m>, sehingga
+          <m>g</m> bijektif. Menurut definisi, kesamaan aturan pada subdomain memberi
+          <m>h=f|_{\R^+}</m>, sehingga <m>h</m> pembatasan <m>f</m> dan <m>f</m>
+          perluasan <m>h</m>. Demikian pula, aturan <m>F</m> dan <m>g</m> sama pada
+          subdomain <m>[0,\infty)</m>, jadi <m>g=F|_{[0,\infty)}</m>: <m>g</m> adalah
+          pembatasan <m>F</m> dan <m>F</m> adalah perluasan <m>g</m>. Klasifikasi berubah
+          karena domain dan kodomain merupakan bagian dari data fungsi, bukan hiasan
+          pada rumus.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-02">
+      <title>Pemeriksaan 2: komposisi pada himpunan berhingga</title>
+      <statement>
+        <p>
+          Periksa seluruh lima tugas pada aktivitas <xref ref="act_functions_1"/>. Rubrik:
+          tulis tabel nilai kedua komposit, lalu dukung setiap klasifikasi dengan
+          tabrakan masukan, unsur kodomain yang hilang, atau pemeriksaan menyeluruh.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-02-hint">
+        <p><em>Petunjuk 1.</em> Terapkan <m>f</m> atau <m>g</m> dahulu, baru <m>h</m>.</p>
+        <p><em>Petunjuk 2.</em> Pada himpunan berhingga, bandingkan daftar keluaran dengan seluruh kodomain.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-02-answer">
+        <p>
+          <m>h\circ f</m> memetakan <m>1,2,3</m> berturut-turut ke
+          <m>\alpha,\beta,\gamma</m>; <m>h\circ g</m> memetakannya ke
+          <m>\alpha,\beta,\alpha</m>. Fungsi <m>f</m> injektif tetapi tidak surjektif,
+          <m>g</m> bukan keduanya, dan <m>h</m> surjektif tetapi tidak injektif.
+          Komposit pertama bijektif; komposit kedua bukan injektif maupun surjektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-02-solution">
+        <p>
+          Dari tabel sumber,
+          <m>h(f(1))=h(b)=\alpha</m>, <m>h(f(2))=h(c)=\beta</m>, dan
+          <m>h(f(3))=h(a)=\gamma</m>. Ketiga keluaran berbeda dan memenuhi <m>C</m>.
+          Sebaliknya, <m>h(g(1))=h(d)=\alpha</m>,
+          <m>h(g(2))=h(c)=\beta</m>, dan <m>h(g(3))=h(d)=\alpha</m>;
+          masukan <m>1</m> dan <m>3</m> bertabrakan dan <m>\gamma</m> tidak tercapai.
+          Keluaran <m>f</m> ialah <m>\{a,b,c\}</m>, keluaran <m>g</m> ialah
+          <m>\{c,d\}</m>, dan keluaran <m>h</m> ialah seluruh <m>C</m>, dengan
+          <m>h(b)=h(d)</m>. Fakta-fakta ini memberi semua klasifikasi pada jawaban.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-03">
+      <title>Pemeriksaan 3: membangun komposit</title>
+      <statement>
+        <p>
+          Untuk aktivitas <xref ref="act_composition2"/>, berikan fungsi konkret pada ketiga
+          bagian dan jelaskan sifat kompositnya. Rubrik: setiap unsur domain harus
+          mempunyai tepat satu citra, kodomain harus benar, dan alasan tidak boleh
+          hanya mengandalkan gambar.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-03-hint">
+        <p><em>Petunjuk 1.</em> Gunakan korespondensi <m>a\mapsto p</m>, <m>b\mapsto q</m>, <m>c\mapsto r</m> sebagai fungsi pertama.</p>
+        <p><em>Petunjuk 2.</em> Untuk surjeksi ke <m>D=\{u,v\}</m>, salah satu nilai boleh dipakai dua kali.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-03-answer">
+        <p>
+          Contoh yang sah: gunakan <m>f(a)=p,f(b)=q,f(c)=r</m>. Untuk kasus injektif,
+          ambil <m>g(p)=u,g(q)=v,g(r)=w</m>. Untuk kasus surjektif ke <m>D</m>, ambil
+          <m>g(p)=u,g(q)=v,g(r)=u</m>. Untuk kasus bijektif ke <m>A</m>, ambil
+          <m>g(p)=a,g(q)=b,g(r)=c</m>. Kompositnya berturut-turut injektif,
+          surjektif, dan bijektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-03-solution">
+        <p>
+          Fungsi <m>f</m> yang dipilih adalah bijeksi <m>A\to B</m>, jadi khususnya
+          injektif dan surjektif. Pada pilihan pertama, keluaran komposit adalah
+          <m>u,v,w</m>, semuanya berbeda, maka komposit injektif. Pada pilihan kedua,
+          keluaran komposit memuat <m>u</m> dan <m>v</m>, yaitu seluruh <m>D</m>, maka
+          komposit surjektif. Pada pilihan terakhir, komposit memetakan
+          <m>a,b,c</m> masing-masing ke dirinya sendiri; fungsi identitas ini bijektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-04">
+      <title>Pemeriksaan 4: teorema komposisi</title>
+      <statement>
+        <p>
+          Lengkapi aktivitas pembuktian sesudah <xref ref="thm_compositefunctions"/>.
+          Rubrik: bukti injektivitas dimulai dari kesamaan keluaran, bukti surjektivitas
+          dimulai dari unsur sembarang kodomain, dan bagian bijektif menyebut kedua hasil.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-04-hint">
+        <p><em>Petunjuk 1.</em> Dari <m>g(f(a_1))=g(f(a_2))</m>, gunakan injektivitas dalam urutan terbalik.</p>
+        <p><em>Petunjuk 2.</em> Untuk <m>c\in C</m>, pilih dahulu prapeta di <m>B</m>, lalu prapetanya di <m>A</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-04-answer">
+        <p>
+          Komposit dua injeksi adalah injeksi; komposit dua surjeksi adalah surjeksi;
+          karena bijeksi berarti kedua sifat tersebut, komposit dua bijeksi adalah bijeksi.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-04-solution">
+        <p>
+          Andaikan <m>(g\circ f)(a_1)=(g\circ f)(a_2)</m>. Injektivitas <m>g</m>
+          memberi <m>f(a_1)=f(a_2)</m>, lalu injektivitas <m>f</m> memberi
+          <m>a_1=a_2</m>. Untuk surjektivitas, ambil <m>c\in C</m>. Karena <m>g</m>
+          surjektif, ada <m>b\in B</m> dengan <m>g(b)=c</m>; karena <m>f</m>
+          surjektif, ada <m>a\in A</m> dengan <m>f(a)=b</m>. Maka
+          <m>(g\circ f)(a)=c</m>. Jika kedua fungsi bijektif, kedua argumen berlaku,
+          sehingga komposit sekaligus injektif dan surjektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-05">
+      <title>Pemeriksaan 5: kapan relasi invers menjadi fungsi</title>
+      <statement>
+        <p>
+          Periksa aktivitas <xref ref="prog_exploringinverse"/>. Rubrik: tulis setiap relasi
+          invers sebagai pasangan terurut; uji syarat eksistensi bagi setiap unsur
+          domain baru dan syarat ketunggalan keluarannya; simpulkan syarat umum.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-05-hint">
+        <p><em>Petunjuk 1.</em> Balik urutan setiap pasangan pada tabel fungsi.</p>
+        <p><em>Petunjuk 2.</em> Surjektivitas fungsi asal memberi eksistensi pada invers; injektivitas memberi ketunggalan.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-05-answer">
+        <p>
+          <m>f^{-1}=\{(r,a),(p,b),(q,c)\}</m> merupakan fungsi <m>C\to A</m>.
+          <m>g^{-1}=\{(p,a),(q,b),(p,c)\}</m> dan
+          <m>h^{-1}=\{(p,a),(q,b),(r,c),(q,d)\}</m> bukan fungsi dengan domain <m>C</m>.
+          Secara umum, invers <m>F:S\to T</m> merupakan fungsi <m>T\to S</m> tepat
+          ketika <m>F</m> bijektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-05-solution">
+        <p>
+          Pada <m>f^{-1}</m>, setiap unsur <m>C</m> muncul sekali sebagai koordinat
+          pertama, sehingga eksistensi dan ketunggalan terpenuhi. Pada <m>g^{-1}</m>,
+          <m>p</m> mempunyai dua keluaran dan <m>r</m> tidak mempunyai keluaran. Pada
+          <m>h^{-1}</m>, <m>q</m> mempunyai dua keluaran. Untuk relasi invers umum,
+          setiap <m>t\in T</m> muncul sebagai koordinat pertama sedikitnya sekali tepat
+          ketika <m>F</m> surjektif, dan paling banyak sekali tepat ketika <m>F</m>
+          injektif. Kedua syarat fungsi berlaku tepat ketika <m>F</m> bijektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-06">
+      <title>Pemeriksaan 6: bukti bikondisional invers</title>
+      <statement>
+        <p>
+          Lengkapi aktivitas pembuktian sesudah <xref ref="T_inverseandbijection"/>.
+          Rubrik: kedua arah bikondisional harus dibuktikan; pada tiap arah, pisahkan
+          eksistensi dan ketunggalan, atau surjektivitas dan injektivitas.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-06-hint">
+        <p><em>Petunjuk 1.</em> Jika <m>f</m> bijektif, gunakan surjektivitas untuk menemukan <m>a</m> dan injektivitas untuk membuktikan bahwa <m>a</m> tunggal.</p>
+        <p><em>Petunjuk 2.</em> Jika <m>f^{-1}:B\to A</m> fungsi, setiap <m>b</m> harus mempunyai tepat satu pasangan balik.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-06-answer">
+        <p><m>f^{-1}</m> merupakan fungsi <m>B\to A</m> jika dan hanya jika <m>f:A\to B</m> bijektif.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-06-solution">
+        <p>
+          Jika <m>f</m> bijektif dan <m>b\in B</m>, surjektivitas memberi suatu
+          <m>a\in A</m> dengan <m>f(a)=b</m>, sehingga <m>(b,a)\in f^{-1}</m>.
+          Jika juga <m>(b,a')\in f^{-1}</m>, maka <m>f(a)=f(a')</m>; injektivitas
+          memberi <m>a=a'</m>. Jadi invers adalah fungsi. Sebaliknya, andaikan invers
+          adalah fungsi pada seluruh <m>B</m>. Untuk setiap <m>b\in B</m>, adanya nilai
+          <m>f^{-1}(b)=a</m> memberi <m>f(a)=b</m>, jadi <m>f</m> surjektif. Jika
+          <m>f(a_1)=f(a_2)=b</m>, relasi invers memuat <m>(b,a_1)</m> dan
+          <m>(b,a_2)</m>; ketunggalan nilai fungsi invers memberi <m>a_1=a_2</m>.
+          Jadi <m>f</m> injektif dan karenanya bijektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-07">
+      <title>Pemeriksaan 7: invers komposit</title>
+      <statement>
+        <p>
+          Selesaikan aktivitas <xref ref="act_comp_inverse"/>. Rubrik: periksa tipe setiap
+          komposit, gunakan unsur sembarang <m>c\in C</m>, dan buktikan kesamaan fungsi
+          pada seluruh domain, bukan pada satu contoh.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-07-hint">
+        <p><em>Petunjuk 1.</em> Untuk membatalkan <m>g\circ f</m>, tindakan terakhir <m>g</m> harus dibalik lebih dahulu.</p>
+        <p><em>Petunjuk 2.</em> Tuliskan <m>c=g(b)</m> dan <m>b=f(a)</m>, lalu evaluasi kedua ruas pada <m>c</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-07-answer">
+        <p>
+          <m>g\circ f</m> bijektif dan
+          <m>(g\circ f)^{-1}=f^{-1}\circ g^{-1}:C\to A</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-07-solution">
+        <p>
+          Komposit bijeksi adalah bijeksi, jadi inversnya ada. Ambil <m>c\in C</m>.
+          Karena <m>g</m> dan <m>f</m> bijektif, terdapat unsur tunggal <m>b\in B</m>
+          dan <m>a\in A</m> dengan <m>g(b)=c</m> dan <m>f(a)=b</m>. Maka
+          <m>(g\circ f)(a)=c</m>, sehingga <m>(g\circ f)^{-1}(c)=a</m>. Di sisi lain,
+          <m>g^{-1}(c)=b</m> dan <m>f^{-1}(b)=a</m>, sehingga
+          <m>(f^{-1}\circ g^{-1})(c)=a</m>. Kesamaan berlaku untuk setiap <m>c</m>,
+          jadi kedua fungsi sama. Urutan sebaliknya umumnya bahkan tidak bertipe benar.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-checkpoint-08">
+      <title>Pemeriksaan 8: prapeta komposit</title>
+      <statement>
+        <p>
+          Untuk aktivitas terakhir pada bagian Fungsi dan Himpunan, tentukan hubungan
+          antara dua prapeta yang diberikan dan buktikan dengan argumen unsur. Rubrik:
+          semua ekuivalensi harus menyebut keanggotaan pada <m>C</m>; jangan berasumsi
+          bahwa <m>f</m> atau <m>g</m> invertibel.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-checkpoint-08-hint">
+        <p><em>Petunjuk 1.</em> Mulai dengan <m>x\in(g\circ f)^{-1}(C)</m>.</p>
+        <p><em>Petunjuk 2.</em> Buka definisi prapeta dua kali.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-checkpoint-08-answer">
+        <p><m>(g\circ f)^{-1}(C)=f^{-1}(g^{-1}(C))</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-checkpoint-08-solution">
+        <p>
+          Untuk <m>x\in X</m>,
+          <m>x\in(g\circ f)^{-1}(C)</m> jika dan hanya jika
+          <m>g(f(x))\in C</m>. Ini setara dengan <m>f(x)\in g^{-1}(C)</m>, yang
+          setara dengan <m>x\in f^{-1}(g^{-1}(C))</m>. Rantai ekuivalensi berlaku bagi
+          setiap <m>x\in X</m>, sehingga kedua himpunan sama. Simbol invers di sini
+          menyatakan prapeta himpunan dan tidak memerlukan bijektivitas.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch02-mastery">
+    <title>Uji penguasaan</title>
+    <p>
+      Kerjakan tanpa melihat bab atau pembahasan. Buka petunjuk hanya setelah Anda
+      menuliskan domain, kodomain, dan argumen pertama.
+    </p>
+
+    <exercise xml:id="o003-c90-ch02-mastery-01">
+      <title>Penguasaan 1: data fungsi</title>
+      <statement>
+        <p>
+          Untuk <m>f:\Z\to\Z</m>, <m>f(n)=2n</m>, tentukan domain, kodomain,
+          daerah hasil, citra <m>-3</m>, semua prapeta <m>5</m>, dan klasifikasinya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-01-hint">
+        <p>Bedakan himpunan yang dinyatakan setelah tanda panah dari himpunan nilai yang benar-benar tercapai.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-01-answer">
+        <p>
+          Domain dan kodomain sama-sama <m>\Z</m>; daerah hasilnya <m>2\Z</m>;
+          <m>f(-3)=-6</m>; <m>5</m> tidak mempunyai prapeta; fungsi injektif tetapi tidak surjektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-01-solution">
+        <p>
+          Dari penulisan <m>f:\Z\to\Z</m>, domain dan kodomainnya sama-sama <m>\Z</m>.
+          Substitusi langsung memberi <m>f(-3)=2(-3)=-6</m>. Daerah hasil terdiri tepat
+          atas bilangan genap. Jika <m>f(n)=f(m)</m>, maka
+          <m>2n=2m</m> dan <m>n=m</m>, jadi fungsi injektif. Persamaan <m>2n=5</m>
+          tidak mempunyai solusi bilangan bulat, sehingga <m>5</m> adalah unsur kodomain
+          yang tidak tercapai dan fungsi tidak surjektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-mastery-02">
+      <title>Penguasaan 2: mengubah kodomain</title>
+      <statement>
+        <p>
+          Pandang aturan yang sama sebagai <m>g:\Z\to2\Z</m>, <m>g(n)=2n</m>.
+          Buktikan klasifikasinya dan tulis inversnya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-02-hint">
+        <p>Setiap unsur kodomain kini berbentuk <m>2k</m> untuk suatu <m>k\in\Z</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-02-answer">
+        <p><m>g</m> bijektif dan <m>g^{-1}(2k)=k</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-02-solution">
+        <p>
+          Bukti injektivitas sama seperti pada soal sebelumnya. Untuk setiap
+          <m>2k\in2\Z</m>, berlaku <m>g(k)=2k</m>, sehingga <m>g</m> surjektif ke
+          kodomain barunya. Jadi <m>g</m> bijektif. Persamaan <m>g(k)=2k</m>
+          menunjukkan langsung bahwa fungsi invers memetakan <m>2k</m> ke <m>k</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-mastery-03">
+      <title>Penguasaan 3: tipe dan urutan komposisi</title>
+      <statement>
+        <p>
+          Misalkan <m>f:\R\to[0,\infty)</m>, <m>f(x)=x^2</m>, dan
+          <m>g:[0,\infty)\to\R</m>, <m>g(t)=t+1</m>. Tentukan tipe dan rumus kedua
+          urutan komposisi, lalu nilai injektivitas dan surjektivitas masing-masing.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-03-hint">
+        <p>Cocokkan kodomain fungsi yang diterapkan pertama dengan domain fungsi kedua.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-03-answer">
+        <p>
+          <m>g\circ f:\R\to\R</m> selalu terdefinisi dan bernilai
+          <m>x^2+1</m>; fungsi ini bukan injektif dan bukan surjektif.
+          <m>f\circ g:[0,\infty)\to[0,\infty)</m> bernilai <m>(t+1)^2</m>;
+          fungsi ini injektif tetapi tidak surjektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-03-solution">
+        <p>
+          Karena keluaran <m>f</m> berada dalam domain <m>g</m>,
+          <m>(g\circ f)(x)=g(x^2)=x^2+1</m>. Nilai <m>x</m> dan <m>-x</m> bertabrakan
+          untuk <m>x\neq0</m>, dan keluaran di bawah <m>1</m> tidak tercapai, jadi fungsi
+          bukan injektif maupun surjektif ke <m>\R</m>. Karena kodomain <m>g</m> sama
+          dengan domain <m>f</m>, <m>f\circ g</m> juga terdefinisi dan bernilai
+          <m>(t+1)^2</m>. Pada <m>t\geq0</m> fungsi ini naik tegas, maka injektif; daerah
+          hasilnya <m>[1,\infty)</m>, sehingga <m>0</m> dalam kodomain tidak tercapai dan
+          fungsi tidak surjektif. Kedua urutan sah di sini, tetapi tipenya tetap harus
+          diperiksa sebelum rumus dievaluasi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-mastery-04">
+      <title>Penguasaan 4: relasi invers dan fungsi invers</title>
+      <statement>
+        <p>
+          Definisikan <m>q:\{-2,-1,0,1,2\}\to\{0,1,4\}</m> dengan <m>q(x)=x^2</m>.
+          Tuliskan relasi <m>q^{-1}</m>, putuskan apakah ia fungsi, lalu temukan pembatasan
+          domain terbesar yang membuat aturan kuadrat bijektif ke kodomain yang sama.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-04-hint">
+        <p>Pilih tepat satu unsur dari setiap pasangan <m>\{-2,2\}</m> dan <m>\{-1,1\}</m>, serta pertahankan <m>0</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-04-answer">
+        <p>
+          <m>q^{-1}=\{(4,-2),(1,-1),(0,0),(1,1),(4,2)\}</m> bukan fungsi.
+          Salah satu pembatasan terbesar ialah <m>q|_{\{0,1,2\}}:\{0,1,2\}\to\{0,1,4\}</m>, yang bijektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-04-solution">
+        <p>
+          Pada relasi balik, masukan <m>1</m> mempunyai keluaran <m>-1</m> dan <m>1</m>,
+          sedangkan masukan <m>4</m> mempunyai keluaran <m>-2</m> dan <m>2</m>; syarat
+          ketunggalan fungsi gagal. Suatu pembatasan bijektif harus memilih satu prapeta
+          bagi masing-masing <m>0,1,4</m>. Pilihan <m>\{0,1,2\}</m> melakukan tepat itu,
+          sehingga pembatasannya injektif dan surjektif. Ukuran <m>3</m> maksimal karena
+          kodomain hanya mempunyai tiga unsur.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-mastery-05">
+      <title>Penguasaan 5: menghitung citra dan prapeta</title>
+      <statement>
+        <p>
+          Misalkan <m>f:\{1,2,3\}\to\{a,b\}</m> memenuhi
+          <m>f(1)=a,f(2)=a,f(3)=b</m>. Untuk <m>A=\{1,3\}</m> dan <m>B=\{a\}</m>,
+          hitung <m>f(A)</m>, <m>f^{-1}(B)</m>, <m>f^{-1}(f(A))</m>, dan
+          <m>f(f^{-1}(B))</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-05-hint">
+        <p>Prapeta menghimpun semua masukan yang nilainya berada di himpunan sasaran, termasuk masukan yang tidak berada di <m>A</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-05-answer">
+        <p>
+          <m>f(A)=\{a,b\}</m>, <m>f^{-1}(B)=\{1,2\}</m>,
+          <m>f^{-1}(f(A))=\{1,2,3\}</m>, dan <m>f(f^{-1}(B))=\{a\}</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-05-solution">
+        <p>
+          Citra <m>1</m> dan <m>3</m> ialah <m>a</m> dan <m>b</m>, jadi <m>f(A)</m>
+          sama dengan seluruh kodomain. Karena <m>1</m> dan <m>2</m> tepat merupakan
+          masukan yang bernilai <m>a</m>, prapeta <m>B</m> ialah <m>\{1,2\}</m>.
+          Prapeta seluruh kodomain adalah seluruh domain. Menerapkan <m>f</m> pada
+          <m>\{1,2\}</m> menghasilkan hanya <m>\{a\}</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-mastery-06">
+      <title>Penguasaan 6: prapeta dan selisih</title>
+      <statement>
+        <p>
+          Untuk <m>f:X\to Y</m> dan <m>B,C\subseteq Y</m>, buktikan
+          <m>f^{-1}(B\setminus C)=f^{-1}(B)\setminus f^{-1}(C)</m>. Nyatakan kasus
+          komplemen sebagai akibatnya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-06-hint">
+        <p>Buka syarat <m>f(x)\in B\setminus C</m> menjadi satu keanggotaan dan satu ketidakanggotaan.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-06-answer">
+        <p>
+          Identitas berlaku untuk setiap fungsi. Dengan <m>B=Y</m>, diperoleh
+          <m>f^{-1}(Y\setminus C)=X\setminus f^{-1}(C)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-06-solution">
+        <p>
+          Untuk <m>x\in X</m>,
+          <m>x\in f^{-1}(B\setminus C)</m> setara dengan
+          <m>f(x)\in B</m> dan <m>f(x)\notin C</m>. Ini setara dengan
+          <m>x\in f^{-1}(B)</m> dan <m>x\notin f^{-1}(C)</m>, yaitu
+          <m>x\in f^{-1}(B)\setminus f^{-1}(C)</m>. Jika <m>B=Y</m>, maka
+          <m>f^{-1}(Y)=X</m>, sehingga rumus komplemen mengikuti.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-mastery-07">
+      <title>Penguasaan 7: sama banyak dengan subhimpunan ketat</title>
+      <statement>
+        <p>
+          Buktikan bahwa <m>\Z</m> dan himpunan bilangan bulat genap <m>2\Z</m>
+          mempunyai kardinalitas sama, walaupun <m>2\Z\subsetneq\Z</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-07-hint">
+        <p>Bangun bijeksi dengan mengalikan dua dan tulis inversnya pada kodomain <m>2\Z</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-07-answer">
+        <p>Bijeksi <m>b:\Z\to2\Z</m>, <m>b(n)=2n</m>, membuktikan kedua himpunan ekuinumeros.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-07-solution">
+        <p>
+          Jika <m>2n=2m</m>, maka <m>n=m</m>, jadi <m>b</m> injektif. Setiap unsur
+          <m>2\Z</m> secara definisi berbentuk <m>2k</m> dan merupakan <m>b(k)</m>, jadi
+          <m>b</m> surjektif. Inversnya <m>b^{-1}(2k)=k</m>. Inklusi bersifat ketat
+          karena, misalnya, <m>1\in\Z</m> tetapi <m>1\notin2\Z</m>. Fenomena ini dapat
+          terjadi pada himpunan tak berhingga.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-mastery-08">
+      <title>Penguasaan 8: injeksi versus surjeksi pada himpunan berhingga</title>
+      <statement>
+        <p>
+          Misalkan <m>A</m> dan <m>B</m> berhingga dengan <m>|A|=|B|</m>, dan
+          <m>f:A\to B</m>. Buktikan bahwa <m>f</m> injektif jika dan hanya jika <m>f</m> surjektif.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-mastery-08-hint">
+        <p>Pada himpunan berukuran sama, satu tabrakan memaksa satu unsur kodomain hilang, dan satu unsur hilang memaksa satu tabrakan.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-mastery-08-answer">
+        <p>Pada domain dan kodomain berhingga yang sama besar, injektivitas dan surjektivitas ekuivalen.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-mastery-08-solution">
+        <p>
+          Tuliskan <m>|A|=|B|=n</m>. Jika <m>f</m> injektif, <m>n</m> unsur domain
+          mempunyai <m>n</m> citra berbeda di dalam kodomain yang hanya berisi <m>n</m>
+          unsur; semua unsur kodomain tercapai, jadi <m>f</m> surjektif. Jika <m>f</m>
+          surjektif, pilih sedikitnya satu prapeta bagi setiap satu dari <m>n</m> unsur
+          kodomain. Pilihan ini sudah memakai seluruh <m>n</m> unsur domain, sehingga
+          tidak ada unsur kodomain yang dapat mempunyai prapeta kedua; jadi <m>f</m>
+          injektif. Argumen gagal tanpa keberhinggaan atau tanpa kesamaan ukuran.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch02-error-diagnostics">
+    <title>Diagnostik kesalahan ringkas</title>
+    <p><dl>
+      <li><title>Mengabaikan kodomain</title><p>Dua aturan yang sama dapat mempunyai sifat surjektif berbeda. Tulis tipe lengkap <m>f:A\to B</m> sebelum menguji.</p></li>
+      <li><title>Menukar daerah hasil dan kodomain</title><p>Daerah hasil adalah nilai yang benar-benar tercapai dan selalu merupakan subhimpunan kodomain.</p></li>
+      <li><title>Membaca komposisi dari kiri</title><p>Pada <m>g\circ f</m>, terapkan <m>f</m> lebih dahulu; periksa bahwa keluarannya dapat menjadi masukan <m>g</m>.</p></li>
+      <li><title>Menganggap simbol <m>f^{-1}</m> selalu fungsi</title><p>Relasi balik menjadi fungsi hanya untuk bijeksi; prapeta himpunan <m>f^{-1}(B)</m> tetap terdefinisi tanpa bijektivitas.</p></li>
+      <li><title>Citra dan irisan</title><p>Citra mempertahankan gabungan, tetapi untuk irisan hanya satu inklusi yang selalu benar; prapeta mempertahankan keduanya.</p></li>
+      <li><title>Membuktikan surjektivitas dengan satu contoh</title><p>Mulai dari unsur sembarang kodomain dan bangun prapetanya.</p></li>
+      <li><title>Mengabaikan kasus kosong atau faktor tak kosong</title><p>Periksa asumsi ketakosongan ketika memakai proyeksi, membatalkan produk, atau menafsirkan irisan keluarga kosong.</p></li>
+    </dl></p>
+  </section>
+
+  <section xml:id="o003-c90-ch02-exercise-guides">
+    <title>Panduan dan pembahasan tujuh belas latihan</title>
+    <p>
+      Nomor di bawah mengikuti urutan latihan pada bagian Latihan Bab 2. Jika sebuah
+      latihan sumber mempunyai beberapa tugas, satu panduan di sini menutup semuanya.
+    </p>
+
+    <exercise xml:id="o003-c90-ch02-exercise-01">
+      <title>Latihan 1: merancang banyaknya prapeta</title>
+      <statement>
+        <p>
+          Periksa kelima contoh Anda pada latihan pertama. Sebuah contoh lengkap harus
+          merupakan fungsi pada seluruh <m>\R</m>, mencapai setiap keluaran yang diklaim,
+          dan mempunyai tepat banyak prapeta yang diminta.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-01-hint">
+        <p><em>Petunjuk 1.</em> Identitas menyelesaikan kasus satu prapeta. Untuk dua prapeta, lipat setiap pasangan interval satuan berurutan ke satu interval satuan.</p>
+        <p><em>Petunjuk 2.</em> Grafik <m>x^3-x</m> mempunyai keluaran dengan tiga prapeta dan keluaran pada titik ekstrem dengan dua prapeta.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-01-answer">
+        <p>
+          Contoh berturut-turut dapat diambil sebagai fungsi identitas; fungsi lipatan
+          interval yang mempunyai tepat dua prapeta bagi setiap keluaran (juga memenuhi
+          <q>setidaknya dua</q>); fungsi lipatan yang sama; <m>x\mapsto x^3-x</m>;
+          dan fungsi konstan <m>x\mapsto0</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-01-solution">
+        <p>
+          Untuk kasus pertama, <m>f(x)=x</m> memberi satu prapeta bagi setiap <m>y</m>.
+          Untuk kasus kedua dan ketiga, bagi setiap <m>k\in\Z</m> definisikan
+          <m>f(x)=x-k</m> pada <m>[2k,2k+1)</m> dan
+          <m>f(x)=x-k-1</m> pada <m>[2k+1,2k+2)</m>. Interval-interval domain
+          saling lepas dan menutupi <m>\R</m>. Jika <m>y\in[k,k+1)</m>, dua dan hanya
+          dua prapetanya ialah <m>y+k</m> dan <m>y+k+1</m>. Jadi fungsi ini mempunyai
+          tepat dua prapeta untuk setiap <m>y</m>, dan khususnya sedikitnya dua.
+        </p>
+        <p>
+          Untuk kasus keempat, ambil <m>p(x)=x^3-x</m>. Keluaran <m>0</m> mempunyai
+          tepat tiga prapeta <m>-1,0,1</m>. Keluaran
+          <m>2/(3\sqrt{3})</m> mempunyai dua prapeta berbeda: akar ganda
+          <m>-1/\sqrt{3}</m> dan akar <m>2/\sqrt{3}</m>; faktorisasi setelah memindahkan
+          keluaran ke ruas kiri memverifikasi bahwa tidak ada akar lain. Untuk kasus
+          terakhir, fungsi konstan <m>f(x)=0</m> memberi tak berhingga banyak prapeta
+          bagi unsur kodomain <m>0</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-02">
+      <title>Latihan 2: enam klasifikasi fungsi</title>
+      <statement>
+        <p>
+          Klasifikasikan keenam fungsi pada latihan berjangkar <xref ref="exer_forexample"/>
+          dan dukung setiap keputusan dengan persamaan, tabrakan, atau unsur yang hilang.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-02-hint">
+        <p><em>Petunjuk 1.</em> Untuk fungsi pecahan, selesaikan <m>y=3x/(x-4)</m> terhadap <m>x</m> dan periksa nilai <m>y=3</m>.</p>
+        <p><em>Petunjuk 2.</em> Aturan kuadrat menjadi injektif setelah domain dibatasi ke bilangan tak negatif.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-02-answer">
+        <p>
+          Berturut-turut: <m>F</m> bijektif; <m>G</m> injektif tetapi tidak surjektif;
+          <m>f</m> injektif tetapi tidak surjektif; <m>g</m> bijektif;
+          <m>h</m> surjektif tetapi tidak injektif; dan <m>k</m> bijektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-02-solution">
+        <p>
+          Persamaan <m>5x+3=y</m> mempunyai solusi tunggal
+          <m>x=(y-3)/5</m> di <m>\R</m>, jadi <m>F</m> bijektif. Pada <m>\Z</m>,
+          kesamaan keluaran masih memaksa kesamaan masukan, tetapi semua keluaran
+          kongruen dengan <m>3</m> modulo <m>5</m>; misalnya <m>0</m> tidak tercapai,
+          sehingga <m>G</m> hanya injektif.
+        </p>
+        <p>
+          Jika <m>y=3x/(x-4)</m>, maka untuk <m>y\neq3</m> satu-satunya kandidat ialah
+          <m>x=4y/(y-3)</m>, yang tidak pernah sama dengan <m>4</m>. Nilai <m>3</m>
+          mustahil karena akan memberi <m>3x=3x-12</m>. Karena itu aturan pecahan
+          injektif dengan daerah hasil <m>\R\setminus\{3\}</m>: fungsi ke <m>\R</m>
+          tidak surjektif, sedangkan fungsi ke <m>\R\setminus\{3\}</m> bijektif.
+          Akhirnya, <m>x^2</m> dari <m>\R</m> ke bilangan tak negatif surjektif tetapi
+          <m>x</m> dan <m>-x</m> bertabrakan bila <m>x\neq0</m>. Pada domain tak negatif,
+          akar kuadrat memberi prapeta tunggal bagi setiap keluaran, jadi <m>k</m> bijektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-03">
+      <title>Latihan 3: membatasi tabel fungsi</title>
+      <statement>
+        <p>
+          Gunakan tabel pada latihan ketiga untuk menilai fungsi, menemukan pembatasan
+          injektif terbesar, menyesuaikan kodomain agar surjektif, dan menghasilkan bijeksi.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-03-hint">
+        <p><em>Petunjuk 1.</em> Kelompokkan unsur domain menurut nilai <m>f(x)</m>.</p>
+        <p><em>Petunjuk 2.</em> Pembatasan injektif boleh memilih paling banyak satu wakil dari setiap serat.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-03-answer">
+        <p>
+          Fungsi asal bukan injeksi dan bukan surjeksi. Salah satu pembatasan injektif
+          terbesar memakai <m>C=\{1,2,3,4,7\}</m>. Kodomain surjektif yang tepat ialah
+          <m>D=\{a,c,d,e,g\}</m>. Dengan <m>X=C</m> dan <m>Y=D</m>, pembatasan
+          <m>f|_X:X\to Y</m> merupakan bijeksi.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-03-solution">
+        <p>
+          Serat-serat tak kosongnya adalah
+          <m>f^{-1}(a)=\{3,5,10\}</m>, <m>f^{-1}(c)=\{1,6,9\}</m>,
+          <m>f^{-1}(d)=\{2,8\}</m>, <m>f^{-1}(e)=\{7\}</m>, dan
+          <m>f^{-1}(g)=\{4\}</m>. Jadi terdapat tabrakan, sedangkan <m>b</m> tidak
+          tercapai. Suatu pembatasan injektif memilih paling banyak satu unsur dari
+          masing-masing lima serat; pilihan pada jawaban memilih tepat satu dari setiap
+          serat, sehingga ukurannya maksimal, yaitu <m>5</m>. Daerah hasil fungsi adalah
+          <m>D</m>; memandang aturan yang sama sebagai fungsi <m>A\to D</m> membuatnya
+          surjektif. Membatasi sekaligus domain ke <m>C</m> membuat setiap unsur <m>D</m>
+          mempunyai tepat satu prapeta, sehingga diperoleh bijeksi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-04">
+      <title>Latihan 4: subhimpunan produk dan persegi panjang</title>
+      <statement>
+        <p>
+          Berikan satu subhimpunan berbentuk produk dan satu subhimpunan yang tidak dapat
+          ditulis sebagai produk, dengan memakai dua unsur berbeda dari masing-masing faktor.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-04-hint">
+        <p><em>Petunjuk 1.</em> Produk satu unsur dengan dua unsur memberi contoh positif.</p>
+        <p><em>Petunjuk 2.</em> Dua sudut diagonal memaksa dua sudut silang jika himpunannya benar-benar produk.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-04-answer">
+        <p>
+          Untuk <m>a_1\neq a_2</m> dan <m>b_1\neq b_2</m>, ambil
+          <m>X=\{a_1\}\times\{b_1,b_2\}</m>. Sebagai contoh negatif, ambil
+          <m>W=\{(a_1,b_1),(a_2,b_2)\}</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-04-solution">
+        <p>
+          Bentuk <m>X</m> sudah secara eksplisit merupakan produk dua subhimpunan.
+          Andaikan <m>W=C\times D</m>. Dari dua pasangan di dalam <m>W</m> diperoleh
+          <m>a_1,a_2\in C</m> dan <m>b_1,b_2\in D</m>. Definisi produk lalu memaksa
+          <m>(a_1,b_2)</m> dan <m>(a_2,b_1)</m> berada di <m>W</m>, padahal keduanya
+          tidak tercantum. Kontradiksi ini membuktikan bahwa <m>W</m> bukan produk.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-05">
+      <title>Latihan 5: kardinalitas berhingga dan bijeksi</title>
+      <statement>
+        <p>
+          Buktikan kedua arah hubungan antara <m>|A|=|B|</m> dan keberadaan bijeksi
+          <m>A\to B</m> untuk himpunan berhingga.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-05-hint">
+        <p><em>Petunjuk 1.</em> Gunakan bijeksi pencacahan <m>A\to\{1,\ldots,n\}</m> dan <m>B\to\{1,\ldots,m\}</m>.</p>
+        <p><em>Petunjuk 2.</em> Komposisi dengan bijeksi yang diasumsikan menghasilkan bijeksi antara dua himpunan bilangan bulat awal.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-05-answer">
+        <p>Terdapat bijeksi <m>A\to B</m> jika dan hanya jika <m>n=m</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-05-solution">
+        <p>
+          Pilih bijeksi pencacahan <m>\alpha:A\to\{1,\ldots,n\}</m> dan
+          <m>\beta:B\to\{1,\ldots,m\}</m>. Jika <m>n=m</m>, maka
+          <m>\beta^{-1}\circ\alpha:A\to B</m> adalah bijeksi. Sebaliknya, jika
+          <m>f:A\to B</m> bijektif, maka
+          <m>\beta\circ f\circ\alpha^{-1}</m> adalah bijeksi dari
+          <m>\{1,\ldots,n\}</m> ke <m>\{1,\ldots,m\}</m>. Jika <m>n&lt;m</m>, fungsi
+          itu tidak mungkin surjektif; jika <m>n&gt;m</m>, fungsi itu tidak mungkin
+          injektif, menurut prinsip rumah merpati. Jadi satu-satunya kemungkinan ialah
+          <m>n=m</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-06">
+      <title>Latihan 6: citra sesudah prapeta dan sebaliknya</title>
+      <statement>
+        <p>
+          Lengkapi empat bagian latihan tentang <m>f^{-1}(f(A))</m> dan
+          <m>f(f^{-1}(B))</m>, termasuk contoh ketat dan dua karakterisasi.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-06-hint">
+        <p><em>Petunjuk 1.</em> Untuk kegagalan kesamaan pertama gunakan fungsi konstan pada domain dua unsur; untuk kegagalan kedua tambahkan unsur kodomain yang tidak tercapai.</p>
+        <p><em>Petunjuk 2.</em> Pada arah balik karakterisasi injeksi, uji himpunan satu unsur.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-06-answer">
+        <p>
+          Selalu <m>A\subseteq f^{-1}(f(A))</m> dan
+          <m>f(f^{-1}(B))\subseteq B</m>, dan keduanya dapat ketat.
+          Kesamaan kedua berlaku untuk setiap <m>B\subseteq Y</m> tepat ketika <m>f</m>
+          surjektif; kesamaan pertama berlaku untuk setiap <m>A\subseteq X</m> tepat
+          ketika <m>f</m> injektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-06-solution">
+        <p>
+          Jika <m>x\in A</m>, maka <m>f(x)\in f(A)</m>, sehingga
+          <m>x\in f^{-1}(f(A))</m>. Kesamaan dapat gagal: untuk fungsi konstan
+          <m>f:\{0,1\}\to\{*\}</m> dan <m>A=\{0\}</m>, prapeta citranya adalah
+          seluruh <m>\{0,1\}</m>. Jika <m>y\in f(f^{-1}(B))</m>, ada <m>x</m> dengan
+          <m>y=f(x)</m> dan <m>f(x)\in B</m>, jadi <m>y\in B</m>. Kesamaan dapat gagal
+          untuk <m>f:\{0\}\to\{0,1\}</m>, <m>f(0)=0</m>, dan <m>B=\{0,1\}</m>.
+        </p>
+        <p>
+          Jika <m>f</m> surjektif dan <m>y\in B</m>, pilih <m>x</m> dengan
+          <m>f(x)=y</m>; maka <m>x\in f^{-1}(B)</m> dan <m>y\in f(f^{-1}(B))</m>,
+          sehingga kesamaan berlaku. Jika kesamaan berlaku untuk semua <m>B</m>, ambil
+          <m>B=Y</m> untuk memperoleh <m>f(X)=Y</m>. Jika <m>f</m> injektif dan
+          <m>x\in f^{-1}(f(A))</m>, ada <m>a\in A</m> dengan <m>f(x)=f(a)</m>, maka
+          <m>x=a\in A</m>. Sebaliknya, andaikan kesamaan berlaku untuk semua <m>A</m>.
+          Jika <m>f(x)=f(x')</m>, ambil <m>A=\{x\}</m>; maka
+          <m>x'\in f^{-1}(f(A))=A</m>, sehingga <m>x'=x</m> dan <m>f</m> injektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-07">
+      <title>Latihan 7: fungsi dan irisan terindeks</title>
+      <statement>
+        <p>
+          Putuskan kedua identitas pada latihan <xref ref="ex_intersection_image"/>. Jika suatu
+          kesamaan gagal, nyatakan dan buktikan inklusi yang selalu benar serta berikan
+          contoh tandingan terkecil yang jelas.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-07-hint">
+        <p><em>Petunjuk 1.</em> Fungsi konstan pada dua unsur dapat membuat citra dua himpunan saling beririsan walaupun himpunan asalnya tidak.</p>
+        <p><em>Petunjuk 2.</em> Untuk prapeta, buka kuantor <q>untuk setiap indeks</q>; tidak diperlukan injektivitas.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-07-answer">
+        <p>
+          Selalu
+          <m>f(\bigcap_{\alpha\in I}A_\alpha)\subseteq
+          \bigcap_{\alpha\in I}f(A_\alpha)</m>, tetapi kesamaan dapat gagal.
+          Sebaliknya, prapeta mempertahankan irisan secara tepat:
+          <m>f^{-1}(\bigcap_{\beta\in J}B_\beta)=
+          \bigcap_{\beta\in J}f^{-1}(B_\beta)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-07-solution">
+        <p>
+          Jika <m>y\in f(\bigcap A_\alpha)</m>, ada <m>x</m> yang berada di setiap
+          <m>A_\alpha</m> dan memenuhi <m>f(x)=y</m>. Maka <m>y</m> berada di setiap
+          <m>f(A_\alpha)</m>, sehingga inklusi berlaku. Kesamaan gagal untuk fungsi
+          konstan <m>f:\{0,1\}\to\{*\}</m> dengan <m>A_1=\{0\}</m> dan
+          <m>A_2=\{1\}</m>: citra irisannya kosong, sedangkan irisan citranya
+          <m>\{*\}</m>. Untuk prapeta,
+          <m>x\in f^{-1}(\bigcap B_\beta)</m> setara dengan
+          <m>f(x)\in B_\beta</m> bagi setiap <m>\beta</m>, yang setara dengan
+          <m>x\in f^{-1}(B_\beta)</m> bagi setiap <m>\beta</m>. Dengan konvensi
+          irisan keluarga kosong sebagai seluruh himpunan semesta yang sesuai,
+          argumen dan inklusi pertama juga mencakup himpunan indeks kosong.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-08">
+      <title>Latihan 8: membatalkan bijeksi dengan inversnya</title>
+      <statement>
+        <p>
+          Buktikan kedua identitas pada latihan <xref ref="ex_inverse_composite"/> langsung
+          dari definisi invers, dengan memperhatikan domain masing-masing identitas.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-08-hint">
+        <p><em>Petunjuk 1.</em> Tetapkan <m>y=f(x)</m> dan gunakan ekuivalensi <m>f(x)=y\iff f^{-1}(y)=x</m>.</p>
+        <p><em>Petunjuk 2.</em> Untuk arah lain, tetapkan <m>x=f^{-1}(y)</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-08-answer">
+        <p><m>f^{-1}\circ f=i_A</m> dan <m>f\circ f^{-1}=i_B</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-08-solution">
+        <p>
+          Untuk <m>x\in A</m>, ambil <m>y=f(x)\in B</m>. Definisi fungsi invers
+          memberi <m>f^{-1}(y)=x</m>, sehingga
+          <m>(f^{-1}\circ f)(x)=f^{-1}(f(x))=x</m>. Untuk <m>y\in B</m>, bijektivitas
+          memberi unsur tunggal <m>x=f^{-1}(y)\in A</m> dengan <m>f(x)=y</m>.
+          Karena itu <m>(f\circ f^{-1})(y)=f(f^{-1}(y))=y</m>. Identitas pertama
+          adalah fungsi pada <m>A</m>, sedangkan identitas kedua fungsi pada <m>B</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-09">
+      <title>Latihan 9: prapeta himpunan oleh komposit</title>
+      <statement>
+        <p>
+          Buktikan identitas pada latihan <xref ref="ex_inverse_composite_sets"/> dengan rantai
+          ekuivalensi keanggotaan; jangan menganggap <m>g</m> atau <m>h</m> bijektif.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-09-hint">
+        <p>Untuk <m>r\in R</m>, terjemahkan berturut-turut <m>r\in(h\circ g)^{-1}(O)</m>, <m>h(g(r))\in O</m>, dan <m>g(r)\in h^{-1}(O)</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-09-answer">
+        <p><m>(h\circ g)^{-1}(O)=g^{-1}(h^{-1}(O))</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-09-solution">
+        <p>
+          Bagi setiap <m>r\in R</m>,
+          <m>r\in(h\circ g)^{-1}(O)</m> jika dan hanya jika
+          <m>h(g(r))\in O</m>. Hal terakhir berlaku jika dan hanya jika
+          <m>g(r)\in h^{-1}(O)</m>, yang menurut definisi setara dengan
+          <m>r\in g^{-1}(h^{-1}(O))</m>. Karena unsur pada kedua ruas sama, himpunannya
+          sama. Ini adalah identitas prapeta, bukan rumus invers fungsi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-10">
+      <title>Latihan 10: proyeksi dan hasil kali fungsi</title>
+      <statement>
+        <p>
+          Selesaikan keempat tugas tentang proyeksi, fungsi hasil kali, komposisinya,
+          dan inversnya. Rubrik: rumus kandidat harus ditulis, keberadaan dan ketunggalan
+          harus dipisahkan, dan semua kesamaan fungsi dibuktikan per unsur.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-10-hint">
+        <p><em>Petunjuk 1.</em> Faktor lain yang tak kosong menyediakan koordinat pendamping untuk membuktikan proyeksi surjektif.</p>
+        <p><em>Petunjuk 2.</em> Satu-satunya kandidat ialah <m>f(x_1,x_2)=(f_1(x_1),f_2(x_2))</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-10-answer">
+        <p>
+          Setiap <m>\pi_i</m> surjektif. Fungsi tunggal yang diminta adalah
+          <m>f_1\times f_2:(x_1,x_2)\mapsto(f_1(x_1),f_2(x_2))</m>. Hasil kali
+          mempertahankan komposisi secara koordinat, dan jika invers <m>h_i=f_i^{-1}</m>
+          ada, maka <m>(f_1\times f_2)^{-1}=h_1\times h_2</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-10-solution">
+        <p>
+          Untuk <m>x_1\in X_1</m>, pilih satu <m>x_2\in X_2</m>; maka
+          <m>\pi_1(x_1,x_2)=x_1</m>. Argumen simetris berlaku bagi <m>\pi_2</m>.
+          Definisikan <m>F(x_1,x_2)=(f_1(x_1),f_2(x_2))</m>. Proyeksi ke koordinat
+          <m>i</m> memberi <m>f_i(x_i)</m>, jadi diagram yang diminta komutatif.
+          Sebaliknya, jika <m>G</m> memenuhi kedua persamaan proyeksi, kedua koordinat
+          <m>G(x_1,x_2)</m> harus sama dengan koordinat <m>F(x_1,x_2)</m>; maka
+          <m>G=F</m>, membuktikan ketunggalan.
+        </p>
+        <p>
+          Pada <m>(x_1,x_2)</m>, ruas kiri identitas komposisi bernilai
+          <m>(g_1(f_1(x_1)),g_2(f_2(x_2)))</m>, sama dengan ruas kanan. Jika
+          <m>h_i</m> adalah invers <m>f_i</m>, maka komposisi
+          <m>(h_1\times h_2)\circ(f_1\times f_2)</m> mengirim
+          <m>(x_1,x_2)</m> ke dirinya sendiri, dan komposisi dalam urutan sebaliknya
+          juga identitas pada <m>Y_1\times Y_2</m>. Jadi <m>h_1\times h_2</m> memang
+          fungsi inversnya. Ketakosongan kedua faktor diperlukan pada bukti surjektivitas proyeksi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-11">
+      <title>Latihan 11: pencacahan bilangan bulat</title>
+      <statement>
+        <p>
+          Tentukan apakah rumus yang diberikan mendefinisikan injeksi dan surjeksi
+          <m>\N\to\Z</m>, lalu beri prapeta eksplisit untuk setiap bilangan bulat.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-11-hint">
+        <p><em>Petunjuk 1.</em> Tulis <m>n=2k</m> atau <m>n=2k-1</m>.</p>
+        <p><em>Petunjuk 2.</em> Keluaran cabang genap positif, sedangkan cabang ganjil tidak positif.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-11-answer">
+        <p>
+          Fungsi tersebut bijektif. Secara khusus,
+          <m>f(2k)=k</m> dan <m>f(2k-1)=1-k</m> untuk <m>k\geq1</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-11-solution">
+        <p>
+          Substitusi memberi
+          <m>f(2k)=(1+(4k-1))/4=k</m> dan
+          <m>f(2k-1)=(1-(4k-3))/4=1-k</m>. Cabang genap memuat setiap bilangan bulat
+          positif tepat sekali; cabang ganjil memuat <m>0,-1,-2,\ldots</m> tepat sekali.
+          Kedua daerah hasil cabang saling lepas, jadi fungsi injektif. Untuk
+          <m>z\geq1</m>, prapetanya <m>2z</m>; untuk <m>z\leq0</m>, prapetanya
+          <m>1-2z</m>. Maka setiap <m>z\in\Z</m> tercapai dan fungsi surjektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-12">
+      <title>Latihan 12: penjumlahan sebagai fungsi dua peubah</title>
+      <statement>
+        <p>
+          Nilai injektivitas dan surjektivitas fungsi <m>f:\Z\times\Z\to\Z</m>,
+          <m>f(a,b)=a+b</m>, dengan saksi konkret.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-12-hint">
+        <p>Bandingkan <m>(0,0)</m> dengan <m>(1,-1)</m>; untuk mencapai <m>z</m>, gunakan pasangan <m>(z,0)</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-12-answer">
+        <p>Fungsi penjumlahan tidak injektif, tetapi surjektif.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-12-solution">
+        <p>
+          Pasangan berbeda <m>(0,0)</m> dan <m>(1,-1)</m> keduanya dipetakan ke
+          <m>0</m>, sehingga fungsi tidak injektif. Untuk setiap <m>z\in\Z</m>, pasangan
+          <m>(z,0)</m> berada dalam domain dan memenuhi <m>f(z,0)=z</m>; karena itu fungsi surjektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-13">
+      <title>Latihan 13: sifat yang dipaksa oleh komposit</title>
+      <statement>
+        <p>
+          Tentukan bagian mana dari injektivitas atau surjektivitas
+          <m>g\circ f</m> yang harus diwarisi oleh faktor-faktornya, dan sangkal klaim
+          yang terlalu kuat dengan fungsi berhingga yang bertipe benar.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-13-hint">
+        <p><em>Petunjuk 1.</em> Jika <m>f(a)=f(a')</m>, terapkan <m>g</m> pada kedua ruas.</p>
+        <p><em>Petunjuk 2.</em> Jika setiap <m>c\in C</m> berbentuk <m>g(f(a))</m>, maka setiap <m>c</m> tentu berada dalam daerah hasil <m>g</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-13-answer">
+        <p>
+          Jika <m>g\circ f</m> injektif, maka <m>f</m> harus injektif, tetapi <m>g</m>
+          tidak harus injektif. Jika <m>g\circ f</m> surjektif, maka <m>g</m> harus
+          surjektif, tetapi <m>f</m> tidak harus surjektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-13-solution">
+        <p>
+          Jika <m>f(a)=f(a')</m>, maka <m>(g\circ f)(a)=(g\circ f)(a')</m>;
+          injektivitas komposit memberi <m>a=a'</m>, jadi <m>f</m> injektif.
+          Namun ambil <m>A=\{a\}</m>, <m>B=\{b_1,b_2\}</m>, <m>C=\{c\}</m>,
+          <m>f(a)=b_1</m>, dan <m>g(b_1)=g(b_2)=c</m>. Komposit dari satu unsur ke
+          satu unsur injektif, sedangkan <m>g</m> tidak.
+        </p>
+        <p>
+          Jika komposit surjektif dan <m>c\in C</m>, ada <m>a\in A</m> dengan
+          <m>g(f(a))=c</m>. Jadi <m>c</m> mempunyai prapeta <m>f(a)\in B</m> oleh
+          <m>g</m>, sehingga <m>g</m> surjektif. Untuk menunjukkan bahwa <m>f</m>
+          tidak harus surjektif, gunakan himpunan dan fungsi yang sama: <m>f</m> tidak
+          mencapai <m>b_2</m>, tetapi komposit mencapai satu-satunya unsur <m>C</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-14">
+      <title>Latihan 14: komutativitas dan asosiativitas komposisi</title>
+      <statement>
+        <p>
+          Putuskan apakah komposisi komutatif dan asosiatif. Untuk klaim positif,
+          buktikan secara titik demi titik; untuk klaim negatif, pastikan kedua urutan
+          komposisi pada contoh Anda sama-sama terdefinisi.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-14-hint">
+        <p><em>Petunjuk 1.</em> Coba endofungsi <m>f(x)=x+1</m> dan <m>g(x)=2x</m> pada <m>\R</m>.</p>
+        <p><em>Petunjuk 2.</em> Evaluasi kedua pengelompokan tiga fungsi pada unsur <m>x</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-14-answer">
+        <p>Komposisi tidak komutatif secara umum, tetapi asosiatif ketika semua komposit yang ditulis bertipe benar.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-14-solution">
+        <p>
+          Untuk <m>f,g:\R\to\R</m> dengan <m>f(x)=x+1</m> dan <m>g(x)=2x</m>,
+          diperoleh <m>(g\circ f)(x)=2x+2</m>, sedangkan
+          <m>(f\circ g)(x)=2x+1</m>. Jadi komposisi tidak komutatif; pada fungsi dengan
+          domain dan kodomain berbeda, salah satu urutan bahkan mungkin tidak terdefinisi.
+          Jika <m>f:A\to B</m>, <m>g:B\to C</m>, dan <m>h:C\to D</m>, maka bagi
+          setiap <m>a\in A</m>,
+          <m>(h\circ(g\circ f))(a)=h(g(f(a)))=((h\circ g)\circ f)(a)</m>.
+          Kedua fungsi mempunyai domain <m>A</m>, kodomain <m>D</m>, dan nilai yang sama
+          pada setiap unsur, sehingga komposisi asosiatif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-15">
+      <title>Latihan 15: invers fungsi pada <m>\Z_5</m></title>
+      <statement>
+        <p>
+          Buat tabel lengkap bagi kedua fungsi pada <m>\Z_5</m>, balik semua pasangan,
+          tentukan apakah relasi inversnya fungsi, lalu rumuskan akar pangkat tiga dan
+          invers <m>g</m> secara eksplisit.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-15-hint">
+        <p><em>Petunjuk 1.</em> Hitung pangkat perwakilan <m>0,1,2,3,4</m> modulo <m>5</m>.</p>
+        <p><em>Petunjuk 2.</em> Pada <m>\Z_5</m>, pemetaan pangkat tiga adalah invers bagi dirinya sendiri.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-15-answer">
+        <p>
+          Relasi invers <m>f</m> ialah
+          <m>\{([4],[0]),([0],[1]),([3],[2]),([3],[3]),([0],[4])\}</m> dan bukan
+          fungsi. Relasi invers <m>g</m> ialah
+          <m>\{([4],[0]),([0],[1]),([2],[2]),([1],[3]),([3],[4])\}</m> dan merupakan
+          fungsi. Akar pangkat tiga dari <m>[0],[1],[2],[3],[4]</m> berturut-turut ialah
+          <m>[0],[1],[3],[2],[4]</m>, serta
+          <m>g^{-1}([y])=[(y+1)^3]</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-15-solution">
+        <p>
+          Nilai <m>f([x])=[x^2+4]</m> untuk <m>x=0,1,2,3,4</m> berturut-turut
+          adalah <m>[4],[0],[3],[3],[0]</m>. Membalik tabel memberi relasi pada jawaban;
+          masukan <m>[0]</m> dan <m>[3]</m> pada relasi invers masing-masing mempunyai
+          dua keluaran, sedangkan <m>[1]</m> dan <m>[2]</m> tidak mempunyai keluaran.
+          Jadi relasi itu bukan fungsi <m>\Z_5\to\Z_5</m>.
+        </p>
+        <p>
+          Nilai <m>g([x])=[x^3+4]</m> berturut-turut ialah
+          <m>[4],[0],[2],[1],[3]</m>, suatu permutasi seluruh <m>\Z_5</m>. Pembalikan
+          tabel memberi relasi invers pada jawaban dan menunjukkan bahwa ia fungsi.
+          Kubus dari <m>[0],[1],[2],[3],[4]</m> ialah
+          <m>[0],[1],[3],[2],[4]</m>; menerapkan kubus sekali lagi mengembalikan unsur
+          semula, jadi akar pangkat tiga <m>[z]</m> adalah <m>[z^3]</m>. Dari
+          <m>[y]=[x^3+4]</m> diperoleh <m>[x^3]=[y+1]</m>, sehingga
+          <m>[x]=[(y+1)^3]</m>, rumus yang dinyatakan.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-16">
+      <title>Latihan 16: diferensiasi dan integrasi sebagai fungsi</title>
+      <statement>
+        <p>
+          Lengkapi seluruh bagian latihan ruang fungsi: berikan tiga contoh pada
+          <m>[-1,1]</m>, nilai invertibilitas operator turunan, lalu buktikan bahwa
+          operator integral yang diberikan mempunyai invers.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-16-hint">
+        <p><em>Petunjuk 1.</em> Gunakan <m>|x|</m>, fungsi konstan, dan fungsi linear untuk tiga contoh pertama.</p>
+        <p><em>Petunjuk 2.</em> Teorema Dasar Kalkulus memberi <m>(\int_a^x f(t)\,dt)'=f(x)</m> dan <m>\int_a^x c'(t)\,dt=c(x)-c(a)</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-16-answer">
+        <p>
+          Pada <m>[-1,1]</m>, contoh berturut-turut ialah <m>|x|</m>, fungsi konstan
+          <m>1</m>, dan <m>x+1</m>. Operator turunan <m>d:B\to A</m> surjektif tetapi
+          tidak injektif, jadi tidak invertibel. Operator
+          <m>h:A\to C</m>, <m>(h(f))(x)=\int_a^x f(t)\,dt</m>, bijektif dengan invers
+          <m>g:C\to A</m>, <m>g(c)=c'</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-16-solution">
+        <p>
+          Fungsi <m>|x|</m> kontinu tetapi tidak terdiferensialkan di <m>0</m>, jadi
+          berada di <m>A\setminus B</m>. Fungsi konstan <m>1</m> mempunyai turunan
+          kontinu tetapi nilainya di <m>a=-1</m> bukan nol, jadi berada di
+          <m>B\setminus C</m>. Fungsi <m>x+1</m> mempunyai turunan kontinu dan bernilai
+          nol di <m>-1</m>, jadi berada di <m>C</m>. Setiap fungsi kontinu <m>q\in A</m>
+          adalah turunan fungsi <m>x\mapsto\int_a^x q(t)\,dt</m> dalam <m>B</m>, maka
+          <m>d</m> surjektif. Namun dua fungsi yang berbeda sebesar konstanta mempunyai
+          turunan sama; misalnya turunan fungsi konstan <m>0</m> dan <m>1</m> sama-sama
+          nol. Jadi <m>d</m> tidak injektif dan tidak invertibel.
+        </p>
+        <p>
+          Untuk <m>f\in A</m>, Teorema Dasar Kalkulus menyatakan bahwa <m>h(f)</m>
+          mempunyai turunan kontinu <m>f</m>, dan <m>h(f)(a)=0</m>; maka
+          <m>h(f)\in C</m>. Definisikan <m>g(c)=c'</m>. Bagi <m>f\in A</m>,
+          <m>g(h(f))=f</m>. Bagi <m>c\in C</m>,
+          <m>(h(g(c)))(x)=\int_a^x c'(t)\,dt=c(x)-c(a)=c(x)</m>, karena
+          <m>c(a)=0</m>. Jadi kedua komposisi adalah identitas dan <m>g=h^{-1}</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch02-exercise-17">
+      <title>Latihan 17: tiga belas klaim tentang citra dan prapeta</title>
+      <statement>
+        <p>
+          Periksa ketiga belas klaim terakhir dalam urutan sumber. Setiap klaim salah
+          memerlukan contoh fungsi dan himpunan konkret; setiap klaim benar memerlukan
+          sedikitnya satu rantai keanggotaan.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch02-exercise-17-hint">
+        <p><em>Petunjuk 1.</em> Fungsi konstan pada domain dua unsur menguji klaim citra yang memerlukan injektivitas.</p>
+        <p><em>Petunjuk 2.</em> Fungsi identitas pada dua unsur dan satu unsur kodomain yang tidak tercapai menguji arah inklusi prapeta dan citra.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch02-exercise-17-answer">
+        <p>
+          Urutannya adalah: benar, salah, salah, benar, benar, benar, salah, benar,
+          benar, salah, benar, salah, benar.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch02-exercise-17-solution">
+        <p>
+          (a) Benar karena <m>x\in A</m> memberi <m>f(x)\in f(A)</m>.
+          (b) Salah: untuk fungsi konstan <m>f:\{0,1\}\to\{*\}</m> dan
+          <m>A=\{0\}</m>, prapeta citra <m>A</m> adalah seluruh domain.
+          (c) Salah: untuk <m>f:\{0\}\to\{0,1\}</m>, <m>f(0)=0</m>, dan
+          <m>B=\{1\}</m>, ruas kanan kosong.
+          (d) Benar: setiap unsur citra prapeta <m>B</m> menurut definisi berada di <m>B</m>.
+          (e) Benar: citra anggota <m>A_1\subseteq A_2</m> juga citra anggota <m>A_2</m>.
+          (f) Benar: <m>f(x)\in B_1\subseteq B_2</m> memberi inklusi prapeta.
+        </p>
+        <p>
+          (g) Salah: untuk fungsi identitas pada <m>\{0,1\}</m>, ambil
+          <m>B_1=\{0\}</m> dan <m>B_2=\{0,1\}</m>; prapeta <m>B_2</m> tidak termuat
+          dalam prapeta <m>B_1</m>.
+          (h) Benar: sebuah nilai berasal dari gabungan tepat ketika berasal dari
+          sedikitnya satu bagian.
+          (i) Benar karena, untuk setiap <m>x\in X</m>,
+          <m>x\in f^{-1}(B_1\cup B_2)</m> jika dan hanya jika
+          <m>f(x)\in B_1\cup B_2</m>, jika dan hanya jika
+          <m>f(x)\in B_1</m> atau <m>f(x)\in B_2</m>, jika dan hanya jika
+          <m>x\in f^{-1}(B_1)\cup f^{-1}(B_2)</m>.
+          (j) Salah: pada fungsi konstan <m>\{0,1\}\to\{*\}</m>, ambil
+          <m>A_1=\{0\}</m> dan <m>A_2=\{1\}</m>; citra irisan kosong, tetapi irisan
+          citra tidak kosong.
+          (k) Benar: syarat <m>f(x)\in B_1</m> dan <m>f(x)\in B_2</m> setara dengan
+          <m>f(x)\in B_1\cap B_2</m>.
+        </p>
+        <p>
+          (l) Salah: pada fungsi konstan yang sama, ambil
+          <m>A_1=\{0,1\}</m> dan <m>A_2=\{1\}</m>. Ruas kiri
+          <m>f(A_1\setminus A_2)=\{*\}</m>, sedangkan
+          <m>f(A_1)\setminus f(A_2)=\emptyset</m>.
+          (m) Benar: <m>x</m> berada pada prapeta <m>B_1\setminus B_2</m> tepat ketika
+          <m>f(x)\in B_1</m> dan <m>f(x)\notin B_2</m>, yaitu tepat ketika
+          <m>x\in f^{-1}(B_1)\setminus f^{-1}(B_2)</m>.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+</appendix>

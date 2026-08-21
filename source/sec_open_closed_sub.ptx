@@ -1,0 +1,110 @@
+<section xml:id="sec_open_closed_sub">
+  <title>Open and Closed Sets in Subspaces</title>
+  <p>
+    We saw in our preview activity that a subspace does not necessarily inherit the properties of the larger space.
+    For example,
+    a subset of a subspace might be open in the subspace,
+    but not open in the larger space.
+    However, there is a connection between the open subsets in a subspace and the open sets in the larger space.
+  </p>
+
+  <theorem xml:id="thm_relatively_open_ms">
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+        A subset <m>O_A</m> of <m>A</m> is open in <m>A</m> if and only if there is an open set <m>O_X</m> in <m>X</m> so that <m>O_A = O_X \cap A</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>(X,d)</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+      Let <m>O_A</m> be an open subset of <m>A</m>.
+      So for each <m>a \in A</m> there is a
+      <m>\delta_a \gt 0</m> so that <m>B_A(a, \delta_a) \subseteq O_A</m>,
+      where <m>B_A(a, \delta_a)</m> is the open ball in <m>A</m> centered at <m>a</m> of radius <m>\delta_a</m>.
+      Then, <m>O_A~=~\bigcup_{a \in O_A}~B_A(a, \delta_a)</m>.
+      Now let <m>B_X(a, \delta_a)</m> be the open ball in <m>X</m> centered at <m>a</m> of radius <m>\delta_a</m>,
+      and let <m>O_X = \bigcup_{a \in O_A} B_X(a, \delta_a)</m>.
+      Note that
+      <me>
+        B_A(a, \delta_a)~=~B_X(a, \delta_a)~\cap~A
+      </me>.
+    </p>
+    <p>
+      As a union of open balls in <m>X</m>,
+      the set <m>O_X</m> is open in <m>X</m>.
+      Now
+      <md>
+        <mrow>O_X \cap A = \left(\bigcup_{a \in O_A} B_X(a, \delta_a) \right) \cap A \amp = \bigcup_{a \in O_A} \left( B_X(a, \delta_a) \cap A \right)</mrow>
+        <mrow> \amp = \bigcup_{a \in O_A} B_A(a, \delta_a) = O_A</mrow>
+      </md>.
+    </p>
+    <p>
+      So there is an open set <m>O_X</m> in <m>X</m> such that <m>O_A = O_X \cap A</m>.
+    </p>
+    <p>
+      For the reverse implication, see the following activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X,d)</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+      Suppose that <m>O_A = A \cap O_X</m> for some set <m>O_X</m> that is open in <m>X</m>.
+      In this activity we will prove that <m>O_A</m> is an open subset of <m>A</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>a \in O_A</m>.
+            Explain why there must exist a
+            <m>\delta \gt 0</m> such that <m>B_X(a, \delta)</m>,
+            the open ball in <m>X</m> of radius <m>\delta</m> around <m>a</m> in <m>X</m>,
+            is a subset of <m>O_X</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What would be a natural candidate for an open ball in <m>A</m> centered at <m>a</m> that is contained in <m>A</m>?
+            Prove your conjecture.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What conclusion can we draw?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    We might now wonder about closed sets in a subspace.
+    If <m>X</m> is a metric space and <m>A</m> is a subspace,
+    then by definition a subset <m>C_A</m> of <m>A</m> is closed if and only if
+    <m>C_A = A \setminus O_A</m> for some set <m>O_A</m> that is open in <m>A</m>.
+    The analogy of <xref ref="thm_relatively_open_ms"/>
+    is true for closed sets in subspaces.
+  </p>
+
+  <theorem xml:id="thm_relatively_closed_ms">
+    <statement>
+      <p>
+        Let <m>(X,d)</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+        A subset <m>C_A</m> of <m>A</m> is closed in <m>A</m> if and only if there is a closed set <m>C_X</m> in <m>X</m> so that <m>C_A = C_X \cap A</m>.
+      </p>
+    </statement>
+  </theorem>
+  
+  <p>
+    The proof is left to <xref ref="ex_relatively_closed_ms"/>.
+  </p>
+</section>

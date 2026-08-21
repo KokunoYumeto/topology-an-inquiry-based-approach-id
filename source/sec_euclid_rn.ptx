@@ -1,0 +1,313 @@
+<section xml:id="sec_euclid_rn">
+  <title>The Euclidean Metric on <m>\R^n</m></title>
+  <p>
+    The metric space that is most familiar to us is the metric space <m>(\R^2, d_E)</m>, where
+    <me>
+      d_E((x_1,x_2), (y_1,y_2)) = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2}
+    </me>
+  </p>
+  <p>
+    <idx><h>metric</h><h>Euclidean</h></idx>
+    The metric <m>d_E</m> called the
+    <term>standard</term> or <term>Euclidean</term>
+    metric on <m>\R^2</m>.
+  </p>
+  <p>
+    We can generalize this Euclidean metric from <m>\R^2</m> to any dimensional real space.
+    Let <m>n</m> be a positive integer and let
+    <m>x = (x_1, x_2, \ldots,
+    x_n)</m> and <m>y = (y_1, y_2, \ldots,
+    y_n)</m> be in <m>\R^n</m>.
+    We define <m>d_E : \R^n \times \R^n \to \R</m> by
+    <me>
+      d_E(x,y) = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + \cdots (x_n-y_n)^2} = \sqrt{\sum_{i=1}^n (x_i-y_i)^2}
+    </me>.
+  </p>
+  <p>
+    In the next activity we will show that <m>d_E</m> satisfies the first three properties of a metric.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>x = (x_1, x_2, \ldots,
+      x_n)</m> and <m>y = (y_1, y_2, \ldots,
+      y_n)</m> be in <m>\R^n</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Show that <m>d_E(x,y) \geq 0</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that <m>d_E(x,y) = d_E(y,x)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that if <m>x=y</m>, then <m>d_E(x,y) = 0</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that if <m>d_E(x,y) = 0</m>, then <m>x=y</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Proving that the triangle inequality is satisfied is often the most difficult part of proving that a function is a metric.
+    We will work through this proof with the help of the Cauchy-Schwarz Inequality.
+  </p>
+
+  <lemma xml:id="lem_CS_Euclidean">
+    <title>Cauchy-Schwarz Inequality</title>
+  <idx><h>Cauchy-Schwarz Inequality</h></idx>
+    <statement>
+      <p>
+        Let <m>n</m> be a positive integer and <m>x = (x_1, x_2, \ldots,
+        x_n)</m>,
+        <m>y=(y_1, y_2, \ldots, y_n)</m> be in <m>\R^n</m>.
+        Then
+        <men xml:id="eq_SL">
+          \sum_{i=1}^n x_iy_i \leq  \left(\sqrt{\sum_{i=1}^n x_i^2}\right) \left(\sqrt{\sum_{i=1}^n y_i^2}\right)
+        </men>.
+      </p>
+    </statement>
+  </lemma>
+
+  <activity>
+    <introduction>
+    <p>
+      Before we prove the Cauchy-Schwarz Inequality,
+      let us analyze it in two specific situations.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>x=(1,4)</m> and <m>y = (3,2)</m> in <m>\R^2</m>.
+            Verify the Cauchy-Schwarz Inequality in this case.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>x=(1,2, -3)</m> and <m>y = (-4, 0, -1)</m> in <m>\R^3</m>.
+            Verify the Cauchy-Schwarz Inequality in this case.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Now we prove the Cauchy-Schwarz Inequality.
+  </p>
+
+  <proof>
+    <p>
+      Let <m>n</m> be a positive integer and <m>x = (x_1, x_2, \ldots,
+      x_n)</m>,
+      <m>y=(y_1, y_2, \ldots, y_n)</m> be in <m>\R^n</m>.
+      To verify <xref ref="eq_SL"/> it suffices to show that
+      <me>
+        \left(\sum_{i=1}^n x_iy_i\right)^2 \leq  \left(\sum_{i=1}^n x_i^2\right) \left(\sum_{i=1}^n y_i^2\right)
+      </me>.
+    </p>
+    <p>
+      This is difficult to do directly,
+      but there is a nice trick one can use.
+      Consider the expression
+      <me>
+        \sum (x_i-\lambda y_i)^2
+      </me>.
+    </p>
+    <p>
+      (All of our sums are understood to be from 1 to <m>n</m>,
+      so we will omit the limits on the sums for the remainder of the proof.) Now
+      <md>
+        <mrow>0 \amp  \leq \sum (x_i-\lambda y_i)^2</mrow>
+        <mrow>\amp = \sum \left(x_i^2 - 2\lambda x_iy_i + \lambda^2 y_i^2 \right)</mrow>
+        <mrow xml:id="eq_SL_1" number="yes">\amp = \left( \sum y_i^2 \right)\lambda^2 - 2\left(\sum x_iy_i\right) \lambda + \left(\sum x_i^2\right)</mrow>
+      </md>.
+    </p>
+    <p>
+      To interpret this last expression more clearly,
+      let <m>a=\sum y_i^2</m>, <m>b=-2\sum x_iy_i</m> and <m>c = \sum x_i^2</m>.
+      The inequality defined by <xref ref="eq_SL_1"/> can then be written in the form
+      <me>
+        p(\lambda) = a \lambda^2 + b \lambda + c \geq 0
+      </me>.
+    </p>
+    <p>
+      So we have a quadratic <m>p(\lambda)</m> that is never negative.
+      This implies that the quadratic
+      <m>p(\lambda)</m> can have at most one real zero.
+      The quadratic formula gives the roots of <m>p(\lambda)</m> as
+      <me>
+        \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+      </me>.
+    </p>
+    <p>
+      If <m>b^2-4ac \gt 0</m>, then <m>p(\lambda)</m> has two real roots.
+      Therefore, in order for <m>p(\lambda)</m> to have at most one real zero we must have
+      <me>
+        0 \geq b^2-4ac = 4 \left(\sum x_iy_i\right)^2 - 4\left(\sum y_i^2\right)\left(\sum x_i^2\right)
+      </me>
+      or
+      <me>
+        \left(\sum y_i^2\right)\left(\sum x_i^2\right) \geq \left(\sum x_iy_i\right)^2
+      </me>.
+    </p>
+    <p>
+      This establishes the Cauchy-Schwarz Inequality.
+    </p>
+  </proof>
+
+  <p>
+    One consequence of the Cauchy-Schwarz Inequality that we will need to show that <m>d_E</m> is a metric is the following.
+  </p>
+
+  <corollary xml:id="cor_SL">
+    <statement>
+      <p>
+        Let <m>n</m> be a positive integer and <m>x = (x_1, x_2, \ldots,
+        x_n)</m>,
+        <m>y=(y_1, y_2, \ldots, y_n)</m> be in <m>\R^n</m>.
+        Then
+        <me>
+          \sqrt{\sum_{i=1}^n (x_i+y_i)^2} \leq \sqrt{\sum_{i=1}^n x_i^2} + \sqrt{\sum_{i=1}^n y_i^2}
+        </me>.
+      </p>
+    </statement>
+  </corollary>
+
+  <activity>
+    <introduction>
+    <p>
+      Before we prove the corollary,
+      let us analyze it in two specific situations.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>x=(1,4)</m> and <m>y = (3,2)</m> in <m>\R^2</m>.
+            Verify <xref ref="cor_SL"/> in this case.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>x=(1,2, -3)</m> and <m>y = (-4, 0, -1)</m> in <m>\R^3</m>.
+            Verify <xref ref="cor_SL"/> in this case.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Now we prove <xref ref="cor_SL"/>.
+  </p>
+
+  <proof>
+    <p>
+      Let <m>n</m> be a positive integer and <m>x = (x_1, x_2, \ldots,
+      x_n)</m>,
+      <m>y=(y_1, y_2, \ldots, y_n)</m> be in <m>\R^n</m>.
+      Now
+      <md>
+        <mrow>\sum \left(x_i+y_i\right)^2 \amp = \sum \left(x_i^2 +2x_iy_i + y_i^2 \right)</mrow>
+        <mrow>\amp = \sum x_i^2 + 2\sum x_iy_i + \sum y_i^2</mrow>
+        <mrow>\amp \leq \sum x_i^2 + 2\left(\sqrt{\sum x_i^2}\right) \left(\sqrt{\sum y_i^2} \right) + \sum y_i^2</mrow>
+        <mrow>\amp = \left(\sqrt{\sum x_i^2} + \sqrt{\sum y_i^2}\right)^2</mrow>
+      </md>.
+    </p>
+    <p>
+      Taking the square roots of both sides yields the desired inequality.
+    </p>
+  </proof>
+
+  <p>
+    We can now complete the proof that <m>d_E</m> is a metric.
+  </p>
+
+  <activity>
+    <p>
+      Let <m>n</m> be a positive integer and <m>x = (x_1, x_2, \ldots,
+      x_n)</m>,
+      <m>y=(y_1, y_2, \ldots, y_n)</m>,
+      and <m>z=(z_1, z_2, \ldots, z_n)</m> be in <m>\R^n</m>.
+      Use <xref ref="cor_SL"/> to show that
+      <me>
+        d_E(x,y) \leq d_E(x,z)+d_E(z,y)
+      </me>.
+    </p>
+  </activity>
+
+  <p>
+    This concludes our proof that the Euclidean metric is in fact a metric.
+  </p>
+
+  <p>
+    We have seen several metrics in this section,
+    some of which are given special names.
+    Let <m>x = (x_1, x_2, \ldots,
+    x_n)</m> and <m>y = (y_1, y_2, \ldots, y_n)</m>
+    <ul>
+      <li>
+        <p>
+          The Euclidean metric <m>d_E</m>, where
+          <md>
+            <mrow>d_E(x,y) \amp = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + \cdots (x_n-y_n)^2}</mrow>
+            <mrow> \amp = \sqrt{\sum_{i=1}^n (x_i-y_i)^2}</mrow>
+          </md>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The Taxicab metric <m>d_T</m>, where
+          <me>
+            d_T(x,y) = |x_1-y_1| + |x_2-y_2| + \cdots + |x_n-y_n| = \sum_{i=1}^n \{|x_i-y_i|\}
+          </me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The max metric <m>d_M</m>, where
+          <md>
+            <mrow>d_M(x,y) \amp = \max\{| x_1-y_1 |, | x_2-y_2 |, |x_3-y_3|, \ldots, |x_n-y_n| \}</mrow>
+            <mrow> \amp = \max_{1 \leq i \leq n} \{|x_i-y_i|\}</mrow>
+          </md>.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    We have only shown that <m>d_T</m> and <m>d_M</m> are metrics on <m>\R^2</m>,
+    but similar arguments apply in <m>\R^n</m>.
+    Proofs are left to <xref ref="ex_Taxicab"/> and <xref ref="ex_Max"></xref>.
+    In addition, the <term>discrete metric</term>
+        <idx><h>metric</h><h>discrete</h></idx>
+    <me>
+      d(x,y) = \begin{cases}0 \amp  \text{ if }  x=y \\ 1 \amp  \text{ if }  x \neq y \end{cases}
+    </me>
+    makes any set <m>X</m> into a metric space.
+    The proof is left to <xref ref="ex_MS_discrete"/>.
+  </p>
+</section>

@@ -1,0 +1,126 @@
+<section xml:id="sec_levenshtein">
+  <title>The Levenshtein Metric</title>
+  <p>
+    The Levenshtein metric is one measure of distance that researchers use to understand DNA. DNA is composed of double chains of nucleotides,
+    which wind together to form a double helix.
+    The nucleotides come in four types:
+    adenine (A), cytosine (C), guanine (G), and thymine (T).
+    The nucleotides in the two chains of a DNA strand pair together, (A with T, and C with G), so the nucleotides in one chain determine the nucleotides in the other.
+    Therefore, we can represent a DNA strand with a string of letters from the alphabet <m>\{A, C, G, T\}</m>.
+    One problem DNA researchers have is how to compare two strands of DNA, and the Levenshtein metric is one way that the distance between strands can be measured.
+    Other metrics could be used,
+    but the Levenshtein metric is appropriate to the task for several reasons.
+    During evolution,
+    changes in DNA sequences arise due to nucleotide substitution,
+    or the insertion or deletion of nucleotides.
+    These evolutionary changes can be modeled by the operations that determine the Levenshtein distance better than other metrics.
+    In addition,
+    the Levenshtein metric can be used to calculate distances between strings of different lengths.
+    The Levenshtein metric also has applications in spell checkers,
+    speech recognition, and automated plagiarism detection.
+    To understand how the Levenshtein metric is calculated,
+    consider the question of how far apart the words
+    <q>green</q>
+    and
+    <q>grease</q>
+    are.
+  </p>
+  <p>
+    To compare these words, we have to be able to change letters,
+    and add or delete letters.
+    If <m>x = x_1x_2 \cdots x_n</m> is a string of letters,
+    we allow the following operations:
+    <dl>
+      <li>
+        <title>a deletion:</title>
+        <p>
+          replace <m>x</m> with <m>x_1 \cdots x_{i-1}x_{i+1} \cdots x_n</m> for some <m>i</m>,
+        </p>
+      </li>
+      <li>
+        <title>an insertion:</title>
+        <p>
+          replace <m>x</m> with <m>x_1 \cdots x_{i}yx_{i+1} \cdots x_n</m>,
+          where <m>y</m> is an allowable letter and <m>0 \leq i \leq n</m>,
+        </p>
+      </li>
+      <li>
+        <title>a substitution:</title>
+        <p>
+          replace <m>x</m> with <m>x_1 \cdots x_{i-1}yx_{i+1} \cdots x_n</m>,
+          where <m>y</m> is an allowable letter and <m>1 \leq i \leq n</m>.
+        </p>
+      </li>
+    </dl>
+  </p>
+
+  <activity>
+      <task>
+        <statement>
+          <p>
+            Using the allowable operations, change the word
+            <q>green</q>
+            into the word
+            <q>grease</q>. Specifically identify each operation you use.
+            (Note: the intermediate strings of letters do not have to form recognizable words.)
+            How many operations did you use?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If it took three operations to transform
+            <q>green</q>
+            into
+            <q>grease</q>, we could say that the distance between
+            <q>green</q>
+            and
+            <q>grease</q>
+            is at most 3.
+            However, it may be possible to transform
+            <q>green</q>
+            into
+            <q>grease</q>
+            in fewer than 3 operations,
+            which might change our opinion of the distance between these words.
+            In general, to define the Levenshtein distance <m>d_L</m> between a sting <m>x</m> and a string <m>y</m>,
+            let <m>m_d</m> denote the number of deletions,
+            <m>m_i</m> the number of insertions,
+            and <m>m_s</m> the number of substitutions we use to get from <m>x</m> to <m>y</m>.
+            There may be many different combinations of <m>m_d</m>,
+            <m>m_i</m>,
+            and <m>m_s</m> that get us from <m>x</m> to <m>y</m>,
+            so we want the smallest number.
+            <definition>
+              <idx><h>metric</h><h>Levenshtein</h></idx>
+              <statement>
+                <p>
+                  The <term>Levenshtein distance</term>
+                  <m>d_L(x,y)</m> between strings <m>x</m> and <m>y</m> is
+                  <me>
+                    d_L(x,y) = \min\{m_d+m_i+m_s\}
+                  </me>.
+                </p>
+              </statement>
+            </definition>
+            Prove that the Levenshtein distance function is really a metric on the set of all possible words
+            (sensical or nonsensical).
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            A spell checker corrects the misspelled word
+            <q>tupotagry</q>. Using the Levenshtein metric,
+            which word would the spell checker use as the closest to
+            <q>tupotagry</q>? Why?
+            <me>\text{"topography} \qquad \text{"topology"} \qquad \text{"tautology"}</me>
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

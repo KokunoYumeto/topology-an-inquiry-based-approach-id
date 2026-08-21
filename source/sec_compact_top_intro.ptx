@@ -1,0 +1,195 @@
+<section xml:id="sec_compact_top_intro">
+  <title>Introduction</title>
+  <p>
+    Closed and bounded intervals have important properties in calculus.
+    Recall, for example,
+    that every real-valued function that is continuous on a closed interval <m>[a, b]</m> attains a maximum and minimum value on that interval.
+    The question we want to address in this section is if there is a corresponding characterization for subsets of topological spaces that ensure that continuous real-valued functions with domains in topological spaces attain maximum and minimum values.
+    The property that we will develop is called compactness.
+  </p>
+  <p>
+    The word
+    <q>compact</q>
+    might bring to mind a notion of smallness,
+    but we need to be careful with the term.
+    We might think that the interval <m>(0, 0.5)</m> is small,
+    but <m>(0, 0.5)</m> is homeomorphic to <m>\R</m>, which is not small.
+    Similarly, we might think that the interval <m>[-10000, 10000]</m> is large,
+    but this interval is homeomorphic to the
+    <q>small</q>
+    interval <m>[-0.00001, 0.000001]</m>.
+    As a result,
+    the concept of compactness does not correspond to size,
+    but rather structure, in a way.
+    We will expand on this idea in this section.
+  </p>
+  <p>
+    Since a topology defines open sets,
+    topological properties are often defined in terms of open sets.
+    Let us consider an example to see if we can tease out some of the details we will need to get a useful notion of compactness.
+    Consider the open interval <m>(0, 1)</m> in <m>\R</m>.
+    Suppose we write <m>(0, 1)</m> as a union of open balls.
+    For example,
+    let <m>O_n = \left(\frac{1}{n}, 1-\frac{1}{n}\right)</m> for <m>n \in \Z^+</m> and <m>n \geq 3</m>.
+    Notice that <m>(0, 1) \subseteq \bigcup_{n \geq 3} O_n</m>.
+    Any collection of open sets whose union contains <m>(0, 1)</m> is called an
+    <term>open cover</term> of <m>(0, 1)</m>.
+    Working with a larger number of sets is generally more complicated than working with a smaller number,
+    so it is reasonable to ask if we can reduce the number of sets in our open cover of <m>(0, 1)</m> and still cover <m>(0, 1)</m>.
+    In particular,
+    working with a finite collection of sets is preferable to working with an infinite number of sets
+    (we can exhaustively check all of the possibilities in a finite setting if necessary).
+    Notice that <m>O_n \subset O_{n+1}</m> for each <m>n</m>,
+    so we can eliminate many of the sets in this cover.
+    However, if we eliminate enough sets so that we are left with only finitely many,
+    then there will be a maximum value of <m>n</m> so that <m>O_n</m> remains in our collection.
+    But then <m>\frac{1}{2n}</m> will not be in the union of our remaining collection of sets.
+    As a result,
+    we cannot find a finite collection of the <m>O_n</m> whose union contains <m>(0, 1)</m>.
+    Note that there may be some collections of open sets that cover of <m>(0,1)</m> for which there is a finite subcollection of sets that also cover <m>(0,1)</m>.
+    For example,
+    if we let <m>U_n = \left(n-\frac{3}{4}, n+\frac{3}{4}\right)</m>,
+    then <m>(0,1) \subseteq \bigcup_{n \in \Z} U_n</m>,
+    and <m>(0,1) \subseteq U_{0} \cup U_1</m>.
+    The main point is that there is at least one collection of open sets that covers <m>(0,1)</m> for which there is no finite subcollection of sets that covers <m>(0,1)</m>.
+  </p>
+  <p>
+    Let's apply the same idea now to the set <m>[0, 1]</m>.
+    Suppose we extend our open cover <m>\{O_n\}</m> to be an open cover of the closed interval <m>[0, 1]</m> by including two additional open balls in <m>\R</m>:
+    <m>O_0 = B(0, 0.5)</m> and <m>O_1 = B(1, 0.5)</m>.
+    Now the sets <m>O_0</m>, <m>O_1</m>,
+    and <m>O_4</m> form a finite collection of sets that covers <m>[0, 1]</m>.
+    So even though the interval <m>[0, 1]</m> is
+    <q>larger</q>
+    than <m>(0, 1)</m> in the sense that
+    <m>(0, 1) \subset [0, 1]</m> we can represent <m>[0, 1]</m> in a more efficient
+    (that is finite)
+    way in terms of open sets than we can the interval <m>(0, 1)</m>.
+    This is the basic idea behind compactness.
+  </p>
+
+  <definition xml:id="def_compact">
+    <idx><h>compact subset</h></idx>
+    <statement>
+      <p>
+        A subset <m>A</m> of a topological space <m>X</m> is <term>compact</term>
+        if for every set <m>I</m> and every family of open sets <m>\{O_{\alpha}\}</m> with
+        <m>\alpha \in I</m> such that <m>A \subseteq \bigcup_{\alpha \in I} O_{\alpha}</m>,
+        there exists a finite subfamily
+        <m>\{O_{\alpha_1}, O_{\alpha_2}, \ldots, O_{\alpha_n}\}</m> such that <m>A \subseteq \bigcup_{i = 1}^n O_{\alpha_i}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    If <m>(X,\tau)</m> is a topological space and <m>X</m> is a compact subset of <m>X</m>,
+    then we say that <m>X</m> is a <term>compact topological space</term>.
+    There is some terminology associated with <xref ref="def_compact"/>.
+  </p>
+
+  <definition>
+  <idx><h>cover</h></idx>
+<idx><h>cover</h><h>open</h></idx>
+    <statement>
+      <p>
+        A <term>cover</term>
+        of a subset <m>A</m> of a topological space <m>X</m> is a collection
+        <m>\{S_{\alpha}\}</m> of subsets of <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m> so that <m>A \subseteq \bigcup_{\alpha \in I} S_{\alpha}</m>.
+        In addition, if each set <m>S_{\alpha}</m> is an open set,
+        then the collection <m>\{S_{\alpha}\}</m> is an <term>open cover</term>
+        for <m>A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>subcover</term>
+        of a cover <m>\{S_{\alpha}\}_{\alpha \in I}</m> of a subset <m>A</m> of a topological space <m>X</m> is a collection
+        <m>\{S_{\beta}\}</m> for <m>\beta \in J</m>,
+        where <m>J</m> is a subset of <m>I</m> such that <m>A \subseteq \bigcup_{\beta \in J} S_{\beta}</m>.
+        In addition, if <m>J</m> is a finite set,
+        the subcover <m>\{S_{\beta}\}_{\beta \in J}</m> is a <term>finite subcover</term>
+        of <m>\{S_{\alpha}\}_{\alpha \in I}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    So the sets <m>O_0</m>, <m>O_1</m>,
+    and <m>O_4</m> in our previous example form a finite subcover of the open cover <m>\{O_n\}_{n \geq 3}</m>.
+  </p>
+  <p>
+    Using the terminology we have now established,
+    we can restate the definition of compactness in the following way:
+    a subset <m>A</m> of a topological space <m>X</m> is compact if every open cover of <m>A</m> has a finite subcover of <m>A</m>.
+  </p>
+
+  <exploration>
+    <introduction>
+    <p>
+      Determine if the subset <m>A</m> of the topological space <m>X</m> is compact.
+      Either prove <m>A</m> is compact by starting with an arbitrary infinite cover and demonstrating that there is a finite subcover,
+      or find a specific infinite cover and prove that there is no finite subcover.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>A = \{-2, 3, e, \pi, 456875\}</m> in <m>X = \R</m> with the Euclidean topology.
+            Generalize this example.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>A = (0, 1]</m> in <m>X = \R</m> with the Euclidean topology.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>A = \left\{\frac{1}{n} \mid n \in \Z^+\right\}</m> in <m>X = \R</m> with the Euclidean topology.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>A = \Z^+</m> in <m>X = \R</m> with the Euclidean topology.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>A = \Z^+</m> in <m>X = \R</m> with the finite complement topology.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>A = \R</m> in <m>X = \R</m> with the Euclidean topology.
+          </p>
+        </statement>
+      </task>
+    
+  </exploration>
+
+  <p>
+    There are two perspectives by which we can look at compactness.
+    If <m>(X,\tau_X)</m> is a topological space and <m>A</m> is a subset of <m>X</m>,
+    then <xref ref="def_compact"/>
+    tells us what it means for <m>A</m> to be compact as a subset of <m>X</m>.
+    From this perspective,
+    we use open sets in <m>X</m> to make open covers of <m>A</m>.
+    We can also consider <m>A</m> as a subspace of <m>X</m> using the subspace topology <m>\tau_A</m>.
+    From this perspective we can examine the compactness of <m>A</m> using relatively open sets for open covers.
+    <xref ref="ex_subspace_compact"/> tells us that these two perspectives are equivalent,
+    so we will use whatever perspective is appropriate for a given situation.
+  </p>
+</section>

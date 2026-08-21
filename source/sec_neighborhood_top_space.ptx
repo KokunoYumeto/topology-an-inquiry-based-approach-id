@@ -1,0 +1,108 @@
+<section xml:id="sec_neighborhood_top_space">
+  <title>Neighborhoods in Topological Spaces</title>
+  <p>
+    Recall that we defined a neighborhood of a point <m>a</m> in a metric space to be a subset of the space that contains an open ball centered at <m>X</m>.
+    Every open ball is an open set,
+    so we can extend the idea of neighborhood to topological spaces.
+  </p>
+
+  <definition>
+    <idx><h>neighborhood in a topological space</h></idx>
+    <statement>
+      <p>
+        Let <m>(X, \tau)</m> be a topological space, and let <m>a \in X</m>.
+        A subset <m>N</m> of <m>X</m> is a <term>neighborhood</term> of <m>a</m> if <m>N</m> contains an open set that contains <m>a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Let's look at some examples.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X = \{a,b,c,d\}</m> and let <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Find all of the neighborhoods of the point <m>a</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find all of the neighborhoods of the point <m>c</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    In metric spaces,
+    an open set was a neighborhood of each of its points.
+    This is also true in topological spaces.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>(X, \tau)</m> be a topological space.
+        A subset <m>O</m> of <m>X</m> is open if and only if <m>O</m> is a neighborhood of each of its points.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>(X, \tau)</m> be a topological space,
+      and let <m>O</m> be a subset of <m>X</m>.
+      First we demonstrate that if <m>O</m> is open,
+      then <m>O</m> is a neighborhood of each of its points.
+      Assume that <m>O</m> is an open set, and let <m>a \in O</m>.
+      Then <m>O</m> contains the open set <m>O</m> that contains <m>a</m>,
+      so <m>O</m> is a neighborhood of <m>a</m>.
+    </p>
+    <p>
+      The reverse containment is the subject of the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+   <introduction>
+    <p>
+      Let <m>(X, \tau)</m> be a topological space.
+      Let <m>O</m> be a subset of <m>X</m>.
+      Assume <m>O</m> is a neighborhood of each of its points.
+    </p>
+   </introduction>
+      <task>
+        <statement>
+          <p>
+            What do we need to do to show that <m>O</m> is an open set?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>a \in O</m>.
+            Why must there exist an open set <m>O_a</m> such that <m>a \in O_a \subseteq O</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof that <m>O</m> is an open set.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

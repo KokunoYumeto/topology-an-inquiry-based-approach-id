@@ -1,0 +1,145 @@
+<section xml:id="sec_connect_top_intro">
+  <title>Introduction</title>
+  <p>
+    The term
+    <q>connected</q>
+    should bring up images of something that is one piece,
+    not separated.
+    There is more than one way we can interpret the notion of connectedness in topological spaces.
+    For example,
+    we might consider a topological space to be connected if we can't separate it into disjoint pieces in any non-trivial way.
+    As another possibility,
+    we might consider a topological space to be connected if there is always a path from one point in the spaced to another,
+    provided we define what <q>path</q> means.
+    These are different notions of connectedness,
+    and we focus on the first notion in this section.
+  </p>
+  <p>
+    Connectedness is an important property,
+    and one that we encounter in the calculus.
+    For example,
+    we will see in this section that the Intermediate Value Theorem relies on connected subsets of <m>\R</m>.
+    To define a connected set,
+    we will need to have a way to understand when and how a set can be separated into different pieces.
+    Since a topology is defined by open sets,
+    when we want to separate objects we will do so with open sets.
+    This is similar to the idea behind Hausdorff spaces,
+    except that we now want to know if a set can be separated in some way rather than separating points.
+  </p>
+  <p>
+    As an example to motivate the definition,
+    consider the sets <m>X = (0,1) \cup (1,2)</m> and
+    <m>Y = [1,2]</m> in <m>\R</m> with the Euclidean topology.
+    Notice that we can write <m>X</m> as the union of two disjoint open sets
+    <m>X_1 = (0,1)</m> and <m>X_2 = (1,2)</m>.
+    So we shouldn't think of <m>X</m> as being connected.
+    However, if we attempt to write <m>Y</m> as a union of two subsets,
+    say <m>Y_1 = [1,1.5)</m> and <m>Y_2 = [1.5,2]</m>,
+    it is impossible for both of these subsets to be open and disjoint.
+    So <m>Y</m> is a set we should consider to be connected.
+    This is the notion of connectedness that we wish to investigate.
+  </p>
+
+  <definition>
+  <idx><h>connected space</h></idx>
+    <statement>
+      <p>
+        A topological space <m>(X,\tau)</m> is <term>connected</term>
+            
+        if <m>X</m> cannot be written as the union of two disjoint,
+        nonempty,
+        open subsets.
+        A subset <m>A</m> of a topological space topological space
+        <m>(X,\tau)</m> is connected if <m>A</m> is connected in the subspace topology.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    If a set <m>X</m> is not connected,
+    we say that <m>X</m> is disconnected.
+    If <m>X</m> is a disconnected topological space,
+    then there exist disjoint nonempty open sets <m>U</m> and <m>V</m> such that <m>X = U \cup V</m>.
+  </p>
+
+  <exploration>
+    <introduction>
+    <p>
+      Can the subset <m>A</m> of the topological space <m>X</m> be written as the union of two disjoint nonempty relatively open sets?
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = \{a, b\}</m> in <m>(X, \tau)</m> with
+            <m>X = \{a, b, c, d\}</m> and <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a, b\}, X\}</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = \{a, b, c\}</m> in
+            <m>(X, \tau)</m> with <m>X = \{a,b,c,d,e,f\}</m> and
+            <me>
+              \tau = \{\emptyset, \{a\}, \{c,d\}, \{a, c, d\}, \{b,c,d,e,f\}, X\}
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = X</m> with <m>X = \{a,b,c,d\}</m> and
+            <me>
+              \tau = \{\emptyset, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,b,c\}, \{b,c,d\}, X\}
+            </me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = \{d, f\}</m> in
+            <m>X = \{a, b, c, d, e, f\}</m> with the discrete topology.
+            Generalize your findings.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = \{a, c, d\}</m> in
+            <m>X = \{a, b, c, d, e\}</m> with the indiscrete topology.
+            Generalize your findings.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = \Z</m> in <m>X = \R</m> with the finite complement topology.
+            Generalize your findings.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = X</m> in <m>X = \{x \in \R \ \mid \ 1 \leq x \leq 2 \text{ or } 3 \lt x \lt 4\}</m> with the subspace metric topology from <m>(\R, d_E)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The set <m>A = X</m> in <m>X = \left\{(x, y) \in \R^2 \ \mid \  y = \frac{1}{x} \text{ or }  y = 0\right\}</m> with open sets
+            <me>
+              \tau = \{U  \cap X \ \mid \ U \text{ is open in the Euclidean Topology on }  \R^2\}
+            </me>.
+          </p>
+        </statement>
+      </task>
+    
+  </exploration>
+</section>

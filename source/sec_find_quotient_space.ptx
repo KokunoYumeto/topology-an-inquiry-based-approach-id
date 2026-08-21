@@ -1,0 +1,253 @@
+<section xml:id="sec_find_quotient_space">
+  <title>Identifying Quotient Spaces</title>
+  <p>
+    Suppose <m>X</m> is a topological space and <m>Y</m> is a set,
+    and let <m>p: X \to Y</m> be a surjection.
+    We can define a relation <m>\sim_p</m> on <m>X</m> by
+    <m>x \sim_p y</m> if and only if <m>p(x) = p(y)</m>.
+    It is straightforward to show that <m>\sim_p</m> is an equivalence relation, the details are left for <xref ref="ex_sim_p_relation"/>.
+    From this we can see that our two approaches to defining the quotient topology and quotient spaces are really the same.
+  </p>
+  <p>
+    Oftentimes we have a topological space <m>X</m> and a relation <m>\sim</m> on <m>X</m>,
+    and we would like to have an effective way to be able to identify the quotient space <m>X/\ssim</m> as homeomorphic to some familiar topological space <m>Y</m>.
+    That is, we want to be able to show that there is a homeomorphism <m>f</m> from <m>X/\ssim</m> to <m>Y</m>.
+  </p>
+
+  <example xml:id="exp_R_Z_quotient">
+    <statement>
+      <p>
+        Consider the following situation.
+        Let <m>X = \R</m> with the standard topology and define the relation <m>\sim</m> on <m>\R</m> by
+        <m>x \sim y</m> if <m>x - y \in \Z</m>.
+        It is straightforward to show that <m>\sim</m> is an equivalence relation.
+        By this equivalence relation,
+        we have <m>x-1 \sim x</m> for every real number <m>x</m>.
+        This identifies <m>\R</m> with the interval <m>[0,1]</m>,
+        where <m>0</m> and <m>1</m> are identified under the relation.
+        So we might expect that <m>\R/\ssim</m> is homeomorphic to the circle
+        <m>S^1 = \{(x,y) \in \R^2 \mid x^2+y^2 = 1\}</m> as a subspace of <m>\R^2</m> with the standard topology.
+        Now the objective is to find a homeomorphism between <m>S_1</m> and <m>\R/\ssim</m>.
+        Since every point on the unit circle has the form
+        <m>(\cos(t), \sin(t))</m> for some real number <m>t</m>,
+        we might try defining <m>f: (\R/\ssim) \to S^1</m> by <m>f([t]) = (\cos(t), \sin(t))</m>.
+        However, we have that <m>0 \sim 1</m>,
+        which means that <m>[0] = [1]</m>,
+        but <m>f([0]) \neq f([1])</m> and so <m>f</m> is not well-defined.
+        Another option might be <m>f([t]) = (\cos(2 \pi t), \sin(2 \pi t))</m>.
+        In this case, if <m>x \sim y</m>,
+        then <m>2 \pi x</m> and <m>2 \pi y</m> differ by a multiple of <m>2 \pi</m> and so <m>f([x]) = f([y])</m>.
+        We could then show that <m>f</m> is a homeomorphism.
+        We will continue this example shortly.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The following theorem encapsulates the above example.
+  </p>
+
+  <theorem xml:id="thm_quotient_1">
+    <statement>
+      <p>
+        Let <m>X</m> and <m>Y</m> be sets and let <m>\sim</m> be an equivalence relation on <m>X</m>.
+        Let <m>f</m> be a function from <m>X</m> to <m>Y</m> such that
+        <m>f(x_1) = f(x_2)</m> whenever <m>x_1 \sim x_2</m> in <m>X</m>.
+        Let <m>X/\ssim</m> be the set of equivalence classes of <m>X</m> under the relation <m>\sim</m>,
+        and let <m>p: X \to (X/\ssim)</m> be the standard map defined by <m>p(x) = [x]</m>.
+        The function <m>\overline{f}</m> mapping <m>X/\ssim</m> to <m>Y</m> defined by
+        <m>\overline{f}([x]) = f(x)</m> for every <m>x \in X</m> is the unique function that satisfies
+        <me>
+          f = \overline{f} \circ p
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      <xref ref="thm_quotient_1"/>
+      is a statement about sets and functions,
+      and there is no topology involved.
+      We prove the theorem in this activity.
+      Use the conditions stated in <xref ref="thm_quotient_1"/>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Show that <m>\overline{f}</m> is well-defined.
+            That is, show that whenever <m>[x_1] = [x_2]</m> in <m>X/\ssim</m>,
+            then <m>\overline{f}([x_1]) =\overline{f}([x_2])</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove that <m>f = \overline{f} \circ p</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that the uniqueness of
+            <m>\overline{f}</m> comes from the equation <m>f = \overline{f} \circ p</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Now we present a final result that can be very helpful when working with quotient spaces.
+  </p>
+
+  <theorem xml:id="thm_quotient_2">
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space and let <m>\sim</m> be an equivalence relation on <m>X</m>.
+        Consider the set <m>X/\ssim</m> to be a topological space with the quotient topology,
+        and let <m>p: X \to (X/\ssim)</m> be the standard surjection defined by <m>p(x) = [x]</m>.
+        Let <m>Y</m> be a topological space with
+        <m>f: X \to Y</m> a continuous function such that
+        <m>f(x_1) = f(x_2)</m> whenever <m>x_1 \sim x_2</m> in <m>X</m>.
+        Then <m>\overline{f} : (X/\ssim) \to Y</m> defined by
+        <m>\overline{f}([x]) = f(x)</m> is the unique continuous function satisfying <m>f = \overline{f} \circ p</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      The existence of <m>\overline{f}</m> as the unique function satisfying
+      <m>f = \overline{f} \circ p</m> was established in <xref ref="thm_quotient_1"/>.
+      All that remains is to show that <m>\overline{f}</m> is continuous.
+      Let <m>O</m> be an open set in <m>Y</m>.
+      Since <m>f</m> is continuous,
+      we know that <m>f^{-1}(O)</m> is open in <m>X</m>.
+      If <m>x_1 \in f^{-1}(O)</m> and <m>x_1 \sim x_2</m>,
+      then <m>x_2 \in f^{-1}(O)</m> as well.
+      Thus, we can write <m>f^{-1}(O)</m> as
+      <me>
+        f^{-1}(O) = \bigcup_{x \in f^{-1}(O)} [x]
+      </me>.
+    </p>
+    <p>
+      That is, <m>f^{-1}(O)</m> is a union of equivalence classes.
+      Now <m>\overline{f}([x]) = f(x)</m>,
+      so if <m>x \in f^{-1}(O)</m>,
+      then <m>[x] \in \overline{f}^{-1}(O)</m>.
+      Thus,
+      <me>
+        f^{-1}(O) = \bigcup_{x \in f^{-1}(O)} [x] = \bigcup_{[x] \in \overline{f}^{-1}(O)} [x] = \overline{f}^{-1}(O)
+      </me>.
+    </p>
+    <p>
+      We conclude that <m>\overline{f}^{-1}(O)</m> is open in <m>X</m> and <m>\overline{f}</m> is continuous.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    Now we will see how to use <xref ref="thm_quotient_2"/>
+    to establish a homeomorphism from a quotient space of a given topological space to another topological space
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        We return to the situation from <xref ref="exp_R_Z_quotient"/>
+        with <m>X = \R</m> under the standard topology and equivalence relation <m>\sim</m> defined by
+        <m>x \sim y</m> if <m>x - y \in \Z</m>.
+        We will use <xref ref="thm_quotient_2"/>
+        to show that <m>\R/\ssim</m> is homeomorphic to the circle <m>Y = S^1</m>.
+      </p>
+      <figure xml:id="F_S_1_basis">
+        <caption>A basis element for <m>S^1</m>.</caption>
+        <image width="50%" source="S_1_basis"/>
+      </figure>
+      <p>
+      <dl>
+        <li>
+          <title>Step 1</title>
+          <p>
+            Define a continuous surjection
+            <m>f: X \to Y</m> that respects the relation.
+            That is, we need to ensure that
+            <m>f(x_1) = f(x_2)</m> whenever <m>x_1 \sim x_2</m> in <m>X</m>.
+            We saw earlier that the function <m>f</m> defined by
+            <m>f(t) = (\cos(2 \pi t), \sin(2 \pi t))</m> respects the relation.
+            Since every point on the unit circle is of the form
+            <m>(\cos(\theta), \sin(\theta))</m> for some real number <m>\theta</m>,
+            choosing <m>t = \frac{\theta}{2 \pi}</m> makes
+            <m>f(t) = (\cos(\theta), \sin(\theta))</m> and <m>f</m> is a surjection.
+            Now we need to demonstrate that <m>f</m> is continuous.
+            A collection of basic open sets in <m>S^1</m> can be found by intersecting <m>S^1</m> with open balls in <m>\R^2</m> as illustrated in <xref ref="F_S_1_basis"/>.
+            We can see that the basic open sets are arcs of the form
+            <m>\overparen{ab}</m> for <m>a</m> and <m>b</m> in <m>S^1</m>.
+            Suppose <m>a = (\cos(2 \pi A), \sin(2 \pi A))</m> and
+            <m>b = (\cos(2 \pi B), \sin(2 \pi B))</m> for angles <m>A</m> and <m>B</m>.
+            Then <m>f^{-1}(\overparen{ab})</m> is the union of intervals <m>(A+2\pi k, B+2 \pi k)</m> for <m>k \in \Z</m>.
+            As a union of open intervals,
+            we have that <m>f^{-1}(\overparen{ab})</m> is open in <m>X</m>.
+            We have now found a continuous surjection from <m>X</m> to <m>Y</m> that respects the relation.
+          </p>
+        </li>
+        <li>
+          <title>Step 2</title>
+          <p>
+            Find a continuous function from <m>X/\ssim</m> to <m>Y</m>.
+            <xref ref="thm_quotient_2"/>
+            tells us that the function
+            <m>\overline{f} : (X/\ssim) \to Y</m> defined by <m>\overline{f}([t]) = f(t)</m> is continuous.
+            So <m>\overline{f}</m> is our candidate to be a homeomorphism.
+          </p>
+        </li>
+        <li>
+          <title>Step 3</title>
+          <p>
+            Show that <m>\overline{f}</m> is a bijection.
+            Let <m>y \in Y</m>.
+            The fact that <m>f</m> is a surjection means that there is a
+            <m>t \in \R</m> such that <m>f(t) = y</m>.
+            It follows that <m>\overline{f}([t]) = f(t) = y</m> and <m>\overline{f}</m> is a surjection.
+            To demonstrate that <m>\overline{f}</m> is an injection,
+            suppose <m>\overline{f}([s]) = \overline{f}([t])</m> for some <m>s,
+            t \in \R</m>.
+            Then <m>(\cos(2 \pi s), \sin(2 \pi s)) = f(s) = f(t) = (\cos(2\pi t), \sin(2 \pi t))</m>.
+            It must be the case then that <m>2 \pi s</m> and <m>2 \pi t</m> differ by a multiple of <m>2 \pi</m>.
+            That is, <m>2 \pi s - 2 \pi t = 2 \pi k</m> for some integer <m>k</m>.
+            From this we have <m>s - t = k \in \Z</m>, and so <m>s \sim t</m>.
+            This makes <m>[s] = [t]</m> and we conclude that <m>\overline{f}</m> is an injection.
+          </p>
+        </li>
+        <li>
+          <title>Step 4</title>
+          <p>
+            Show that <m>\overline{f}</m> is a homeomorphism.
+            At this point we already know that
+            <m>\overline{f}</m> is a continuous bijection,
+            so the only item that remains is to show that <m>\overline{f}(\overline{O})</m> is open whenever
+            <m>\overline{O}</m> is open in <m>X/\ssim</m>.
+            Let <m>p: X \to (X/\ssim)</m> be the standard map.
+            Let <m>\overline{O}</m> be a nonempty open set in <m>X/\ssim</m>.
+            Then <m>O = p^{-1}(\overline{O})</m> is open in <m>X</m>.
+            Thus, <m>O</m> is a union of open intervals.
+            Let <m>(a,b)</m> be an interval contained in <m>O</m>.
+            From the definition of <m>f</m> we have that <m>f(a,b)</m> is the open arc <m>\overparen{f(a)f(b)}</m>,
+            which is open in <m>Y</m>.
+            So <m>f(O)</m> is a union of open arcs in <m>Y</m>,
+            which makes <m>f(O)</m> open in <m>Y</m>.
+            Now <m>f(O) = (\overline{f} \circ p)(O) = \overline{f}(p(O)) = \overline{f}(\overline{O})</m>,
+            and <m>\overline{f}(\overline{O})</m> is open in <m>Y</m>.
+            We conclude that <m>\overline{f}</m> is a homeomorphism from <m>X/\ssim</m> to <m>S^1</m>,
+            and so <m>S^1</m> is a quotient space of <m>\R</m>.
+          </p>
+        </li>
+      </dl>
+      </p>
+    </statement>
+  </example>
+</section>

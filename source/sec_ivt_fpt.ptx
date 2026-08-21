@@ -1,0 +1,157 @@
+<section xml:id="sec_ivt_fpt">
+  <title>The Intermediate Value Theorem and a Fixed Point Theorem</title>
+  <p>
+    In this section we present two important consequences of connectedness.
+    The first consequence is the Intermediate Value Theorem.
+    In calculus,
+    the Intermediate Value Theorem tells us that if <m>f</m> is a continuous function on a closed interval <m>[a,b]</m>,
+    then <m>f</m> assumes all values between <m>f(a)</m> and <m>f(b)</m>.
+    This result seems straightforward if one just draws a graph of a continuous function on a closed interval.
+    But a picture is not a proof.
+    We state and then prove a more general version of the Intermediate Value Theorem.
+  </p>
+
+  <theorem>
+    <title>The Intermediate Value Theorem</title>
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space and <m>A</m> a connected subset of <m>X</m>.
+        If <m>f : A \to \R</m> is a continuous function,
+        then for any <m>a,b \in A</m> and any
+        <m>y \in \R</m> between <m>f(a)</m> and <m>f(b)</m>,
+        there is a point <m>x \in A</m> such that <m>f(x) = y</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      In this activity we prove the Intermediate Value Theorem.
+      Let <m>X</m> be a topological space and <m>A</m> a connected subset of <m>X</m>.
+      Assume that <m>f : A \to \R</m> is a continuous function,
+      and let <m>a,b \in A</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Explain why we can assume that <m>a \neq b</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Explain what happens if <m>y = f(a)</m> or <m>y=f(b)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now assume that <m>f(a) \neq f(b)</m>.
+            Without loss of generality, assume that <m>f(a) \lt f(b)</m>.
+            Why can we say that <m>f(A)</m> is an interval?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            How does the fact that <m>f(A)</m> is an interval complete the proof?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Our second consequence of connectedness involves a fixed point theorem.
+    Fixed point theorems are important in mathematics.
+    A fixed point of a function <m>f</m> is an input <m>c</m> so that <m>f(c) = c</m>.
+    There are many fixed point theorems <mdash/> one of the most well-known is the Brouwer Fixed Point Theorem that shows that every continuous function from a closed ball <m>B</m> in <m>\R^n</m> to itself must have a fixed point.
+    We can use the Intermediate Value Theorem to prove this result in <m>\R</m>.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      In this activity we prove the following theorem.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>a,b \in \R</m> with <m>a \lt b</m>,
+          and let <m>f : [a,b] \to [a,b]</m> be a continuous function.
+          Then there is a number <m>c \in [a,b]</m> such that <m>f(c) = c</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      So let <m>a,b \in \R</m> with <m>a \lt b</m>,
+      and let <m>f : [a,b] \to [a,b]</m> be a continuous function.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Explain why we can assume that
+            <m>a \lt f(a)</m> and <m>f(b) \lt b</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            Define <m>g : [a,b] \to \R</m> by <m>g(x) = x-f(x)</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Why is <m>g</m> a continuous function?
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  What can we say about <m>g(a)</m> and <m>g(b)</m>?
+                  Use the Intermediate Value Theorem to complete the proof.
+                </p>
+              </statement>
+            </task>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            Let <m>f(x) = \frac{1}{6}x^3+\frac{1}{4}x</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Show that <m>f</m> maps the interval <m>[-1,2]</m> into the interval <m>[-1,2]</m>.
+                  
+                </p>
+              </statement>
+              <hint>
+                    <p>
+                      Use <xref ref="thm_max_min"/>
+                      that a continuous function from a compact topological space to <m>\R</m> assumes a maximum and minimum value.
+                    </p>
+                  </hint>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Find all values of <m>c</m> in <m>[-1,2]</m> such that <m>f(c) = c</m>.
+                </p>
+              </statement>
+            </task>
+        
+        </task>
+    
+  </activity>
+</section>

@@ -1,0 +1,237 @@
+<section xml:id="sec_prop_prod_top">
+  <title>Properties of Products of Topological Spaces</title>
+  <p>
+    It is natural to ask what topological properties of the topological spaces <m>(X, \tau_X)</m> and
+    <m>(Y, \tau_Y)</m> are inherited by the product <m>X \times Y</m>.
+    We have studied Hausdorff, connected,
+    and compact spaces, and we now consider those properties.
+  </p>
+
+  <activity>
+  <introduction>
+    <p>
+      Let <m>(X, \tau_X)</m> and <m>(Y, \tau_Y)</m> be Hausdorff spaces.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            What will it take to prove that the space
+            <m>X \times Y</m> with the product topology is Hausdorff?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that <m>(x_1,y_1), (x_2, y_2) \in X \times Y</m>.
+            What does the fact that <m>X</m> is Hausdorff tell us about <m>x_1</m> and <m>x_2</m>?
+            What can we say about <m>y_1</m> and <m>y_2</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof of the following theorem.
+          </p>
+            <theorem>
+              <statement>
+                <p>
+                  If <m>(X, \tau_X)</m> and <m>(Y, \tau_Y)</m> are Hausdorff spaces,
+                  then <m>X \times Y</m> with the product topology is a Hausdorff space.
+                </p>
+              </statement>
+            </theorem>
+          
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    The proofs that a product of connected spaces is connected,
+    that a product of path connected spaces is path connected,
+    and that a product of compact spaces is compact are a bit more complicated.
+    To prove that a product of two connected spaces is connected,
+    we will use the result of <xref ref="act_connected_compenent"/>
+    in <xref ref="chap_Connected_topology"/>
+    that the union of connected subsets is connected if the intersection of the subsets is nonempty.
+    A consequence of this result is the following.
+  </p>
+
+  <lemma xml:id="lem_Connected_union">
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space,
+        and let <m>A_{\alpha}</m> be a connected subset of <m>X</m> for all <m>\alpha</m> in some indexing set <m>I</m>.
+        Let <m>B</m> be a connected subset of <m>X</m> such that
+        <m>A_{\alpha} \cap B \neq \emptyset</m> for every <m>\alpha \in I</m>.
+        Then <m>B \cup \left(\bigcup_{\alpha \in I} A_{\alpha} \right)</m> is connected.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a topological space,
+      and let <m>A_{\alpha}</m> be a connected subset of <m>X</m> for all <m>\alpha</m> in some indexing set <m>I</m>.
+      Let <m>B</m> be a connected subset of <m>X</m> such that
+      <m>A_{\alpha} \cap B \neq \emptyset</m> for every <m>\alpha \in I</m>.
+      For each <m>\alpha \in I</m> let <m>B_{\alpha} = B \cup A_{\alpha}</m>.
+      Let <m>\beta \in I</m>.
+      Since <m>B \cap A_{\beta} \neq \emptyset</m>,
+      <xref ref="lem_Connected_union"/>
+      shows that <m>B_{\beta}</m> is connected.
+      Given that <m>B</m> is not empty,
+      and <m>B \subseteq \bigcap_{\alpha \in I} B_{\alpha}</m>,
+      we see that <m>\bigcap_{\alpha \in I} B_{\alpha} \neq \emptyset</m>.
+      <xref ref="lem_Connected_union"/>
+      allows us to conclude that <m>\bigcup_{\alpha \in I} B_{\alpha}</m> is connected.
+      But
+      <me>
+        \bigcup_{\alpha \in I} B_{\alpha} = \bigcup_{\alpha \in I} (B \cup A_{\alpha}) = B \cup \left(\bigcup_{\alpha \in I} A_{\alpha}\right)
+      </me>,
+      and so <m>B \cup \left(\bigcup_{\alpha \in I} A_{\alpha}\right)</m> is connected.
+    </p>
+  </proof>
+  </lemma>
+
+  <p>
+    We will use <xref ref="lem_Connected_union"/>
+    to show that a product of connected spaces is connected.
+  </p>
+
+  <theorem xml:id="thm_connected_product">
+    <statement>
+      <p>
+        If <m>(X, \tau_X)</m> and <m>(Y, \tau_Y)</m> are connected topological spaces,
+        then <m>X \times Y</m> with the product topology is a connected topological space.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Assume <m>(X, \tau_X)</m> and
+      <m>(Y, \tau_Y)</m> are connected topological spaces.
+      Our approach to proving that
+      <m>X \times Y</m> is connected is to write
+      <m>X \times Y</m> as a union of two connected subspaces whose intersection is not empty.
+      Let <m>a \in X</m>.
+      The space <m>X_a = \{a\} \times Y</m> is homeomorphic to <m>Y</m> via the inclusion map <m>i</m> which sends
+      <m>(a,t) \in \{a\} \times Y</m> to the point <m>t \in Y</m>.
+      Since <m>Y</m> is connected, so is <m>X'</m>.
+      Let <m>b \in Y</m>.
+      The space <m>Y_b = X \times \{b\}</m> is homeomorphic to <m>X</m> via the inclusion map <m>i</m> which sends
+      <m>(s,b) \in X \times \{b\}</m> to the point <m>s \in X</m>.
+      Since <m>X</m> is connected, so is <m>Y_b</m>.
+      (The verification of these homeomorphisms is left to the reader.)
+      The point <m>(a,b)</m> is in <m>X_a \cap Y_b</m>,
+      so <m>X_a \cap Y_b \neq \emptyset</m> for every <m>b \in Y</m>.
+      It follows that <m>X_a \cup \left( \bigcup_{t \in Y} Y_t \right)</m> is connected by <xref ref="lem_Connected_union"/>.
+      All that remains is to prove that
+      <m>X_a \cup \left( \bigcup_{t \in Y} Y_t \right) = X \times Y</m> and we will have demonstrated that <m>X \times Y</m> is connected.
+      The fact that <m>X_a \subseteq X \times Y</m> and
+      <m>Y_t \subseteq X \times Y</m> for every <m>t \in Y</m> implies that <m>X_a \cup \left( \bigcup_{t \in Y} Y_t \right) \subseteq X \times Y</m>.
+      It then remains to show that <m>X \times Y \subseteq X_a \cup \left( \bigcup_{t \in Y} Y_t \right)</m>.
+      Let <m>(u,v) \in X \times Y</m>.
+      Then <m>u \in X</m> and <m>v \in Y</m> and <m>(u,v) \in Y_v</m>.
+      Thus, <m>X \times Y \subseteq X_a \cup \left( \bigcup_{t \in Y} Y_t \right)</m> and so <m>X \times Y = X_a \cup \left( \bigcup_{t \in Y} Y_t \right)</m>.
+      Therefore, <m>X \times Y</m> is connected.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    Once we know that a product of connected topological spaces is connected,
+    we can extend that result to any finite number of connected spaces by induction.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        Let <m>X_{k}</m> be a connected topological space for <m>k</m> from 1 to <m>n</m>.
+        Then the product <m>\Pi_{k=1}^n X_k</m> is connected.
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    The proof is left to <xref ref="ex_connected_product"/>.
+  </p>
+  <p>
+    We conclude this section by demonstrating that a product of compact topological spaces is compact.
+    It is also true that finite products of path connected and compact spaces are path connected and compact.
+    The proofs are left to <xref ref="ex_compact_product"/> and <xref ref="ex_path_connected_product"/>.
+  </p>
+
+  <theorem xml:id="thm_compact_product">
+    <statement>
+      <p>
+        If <m>X</m> and <m>Y</m> are compact topological spaces,
+        then <m>X \times Y</m> is a compact topological space under the product topology.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>(X, \tau_X)</m> and
+      <m>(Y, \tau_Y)</m> be compact topological spaces.
+      Let <m>\CC = \{O_{\alpha}\}</m> be an open cover of
+      <m>X \times Y</m> for <m>\alpha</m> in some indexing set <m>I</m>.
+      Let <m>a \in X</m> and let <m>Y_a = \{a\} \times Y</m>.
+      Since <m>Y_a</m> is homeomorphic to <m>Y</m>,
+      we know that <m>Y_a</m> is compact.
+      The collection <m>\{O_{\alpha} \cap Y_a\}</m> is an open cover of <m>Y_a</m>,
+      and so has a finite sub-cover <m>\{O_{\alpha_i}\}_{1 \leq i \leq n}</m>.
+      The set <m>N_a = \bigcup_{1 \leq i \leq n} O_{\alpha_i}</m> is an open set that contains <m>Y_a</m>.
+      We will show that there is a neighborhood <m>W_a</m> of <m>a</m> that <m>N_a</m> contains the entire set <m>W_a \times Y</m>.
+    </p>
+    <p>
+      Cover the set <m>Y_a</m> with open sets that are contained in <m>N_a</m>
+      (since <m>N_a</m> is open,
+      we can intersect any open set with <m>N_a</m> and still have an open set).
+      Each open set is a union of basis elements,
+      so we can cover <m>Y_a</m> with basis elements
+      <m>U \times V</m> that are contained in <m>N_a</m>.
+      Since <m>Y_a</m> is compact,
+      there is a finite collection <m>U_1 \times V_1</m>,
+      <m>U_2 \times V_2</m>, <m>\ldots</m>,
+      <m>U_m \times V_m</m> of basis elements contained in <m>N_a</m> that cover <m>Y_a</m>.
+      Assume that each <m>U_i \times V_i</m> intersects <m>Y_a</m>
+      (otherwise, we can remove that set and still have a cover).
+      Let <m>W_a = U_1 \cap U_2 \cap \cdots \cap U_m</m>.
+      Since <m>a \in U_i</m> for each <m>i</m>,
+      we know that <m>W_a</m> is not empty.
+      Each <m>U_i</m> is open in <m>X</m> and so <m>W_a</m> is open in <m>X</m>.
+      Thus, <m>W_a</m> is a neighborhood of <m>a</m> in <m>X</m>.
+      Now we demonstrate that <m>W_a \times Y \subseteq \bigcup_{1 \leq i \leq m} U_i \times V_i</m>.
+      Let <m>(x,y) \in W_a \times Y</m>.
+      Since the collection <m>\{U_i \times V_i\}_{1 \leq i \leq m}</m> covers <m>Y_a</m>,
+      the point <m>(a,y)</m> is in
+      <m>U_k \times V_k</m> for some <m>k</m> between <m>1</m> and <m>m</m>.
+      So <m>y \in Y_k</m>.
+      But <m>x \in W_a = \bigcap_{1 \leq i \leq m} U_i</m>, so <m>x \in U_k</m>.
+      Thus, <m>(x,y) \in U_k \times V_k</m> and we conclude that <m>W_a \times Y \subseteq \bigcup_{1 \leq i \leq m} U_i \times V_i</m>.
+    </p>
+    <p>
+      So for each <m>a \in X</m>,
+      the set <m>N_a</m> contains a set of the form <m>W_a \times Y</m>,
+      where <m>W_a</m> is a neighborhood of <m>a</m> in <m>X</m>.
+      So <m>W_a \times Y</m> is covered by a finite sub-cover of our open cover <m>\CC</m> of <m>X \times Y</m>.
+      The collection <m>\{W_a \times Y\}_{a \in X}</m> is an open cover of <m>X \times Y</m>.
+      Since <m>X</m> is compact,
+      the is a finite sub-cover <m>W_1</m>,
+      <m>W_2</m>, <m>\ldots</m>,
+      <m>W_r</m> of the open cover
+      <m>\{W_a\}_{a \in X}</m> of <m>X</m>. is an open cover of <m>X</m>.
+      It follows that the sets <m>W_1 \times Y</m>, <m>W_2 \times Y</m>,
+      <m>\ldots</m>,
+      <m>W_r \times Y</m> is a cover of <m>X \times Y</m>.
+      For each <m>i</m>, the set
+      <m>W_i \times Y</m> is covered by finitely many of the sets in <m>\CC</m>,
+      and so the collection of these sets forms a finite sub-cover of <m>X \times Y</m> in <m>\CC</m>.
+      Therefore, <m>X \times Y</m> is compact.
+    </p>
+  </proof>
+  </theorem>
+</section>

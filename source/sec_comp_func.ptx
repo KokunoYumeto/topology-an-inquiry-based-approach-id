@@ -1,0 +1,236 @@
+<section xml:id="sec_comp_func">
+  <title>Komposisi Fungsi</title>
+  <p>
+    Dalam pembelajaran matematika sebelumnya,
+    kita sering menjumlahkan dan mengalikan fungsi (misalnya, jika <m>f(x) = x^2</m> dan
+    <m>g(x) = x+1</m> memetakan <m>\R</m> ke <m>\R</m>,
+    maka <m>(fg)(x) = x^2(x+1)</m> dan <m>(f+g)(x) = x^2+(x+1)</m>).
+    Dalam topologi,
+    pada umumnya kita tidak memperhatikan struktur aljabar apa pun yang mungkin dimiliki suatu himpunan.
+    Karena itu, kita akan beralih dari penjumlahan dan perkalian,
+    lalu memusatkan perhatian pada komposisi fungsi.
+  </p>
+  <p>
+    Gagasan dasar komposisi fungsi adalah bahwa, jika memungkinkan,
+    keluaran suatu fungsi <m>f</m> digunakan sebagai masukan suatu fungsi <m>g</m>.
+    Fungsi yang dihasilkan dapat disebut
+    <q><m>f</m> kemudian <m>g</m></q>
+    dan dinamakan komposit <m>f</m> dengan <m>g</m>.
+    Notasi yang kita gunakan adalah <m>g \circ f</m>
+    (perhatikan urutannya <mdash/> <m>f</m> diterapkan lebih dahulu).
+    Sebagai contoh, jika
+    <me>
+      f(x) = 3x^2 + 2 \text{ dan }  g(x) = \sin(x)
+    </me>,
+    keduanya memetakan <m>\R</m> ke <m>\R</m>,
+    maka kita dapat menghitung <m>(g \circ f)(x)</m> sebagai berikut:
+    <me>
+      (g \circ f)(x) = g(f(x)) = g(3x^2 + 2) = \sin\left(3x^2 + 2\right)
+    </me>.
+  </p>
+  <p>
+    Dalam hal ini, <m>f(x)</m>,
+    yaitu keluaran fungsi <m>f</m>,
+    digunakan sebagai masukan bagi fungsi <m>g</m>.
+    Gagasan ini melandasi definisi formal komposisi dua fungsi.
+  </p>
+
+  <definition>
+  <idx><h>komposisi fungsi</h></idx>
+    <statement>
+      <p>
+        Misalkan <m>A</m>, <m>B</m>, dan <m>C</m> himpunan tak kosong,
+        serta misalkan <m>f : A \to B</m> dan <m>g : B \to C</m> fungsi.
+        <term>Komposit</term> <m>f</m> dan <m>g</m> adalah fungsi <m>g \circ f : A \to C</m> yang didefinisikan oleh
+        <me>
+          (g \circ f)(x) = g(f(x))
+        </me>
+        untuk setiap <m>x \in A</m>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Fungsi <m>g \circ f</m> kita sebut fungsi komposit,
+    dan <m>(g \circ f)(x)</m> kita baca sebagai
+    <q><m>g</m> komposisi <m>f</m> dari <m>x</m></q>.
+  </p>
+  <activity xml:id="act_functions_1">
+    <introduction>
+    <p>
+      Misalkan <m>A = \{1, 2, 3\}</m>,
+      <m>B = \{a, b, c, d\}</m>, dan <m>C = \{\alpha, \beta, \gamma\}</m>.
+      Definisikan <m>f : A \to B</m>,
+      <m>g : A \to B</m>, dan <m>h : B \to C</m> dengan
+      <me>
+        f(1) = b, \ f(2) = c, \  f(3) = a
+      </me>,
+      <me>
+        g(1) = d, \ g(2) = c, \  g(3) = d, \text{ dan }
+      </me>
+      <me>
+        h(a) = \gamma, \ h(b) = \alpha, \ h(c) = \beta,  \ h(d) = \alpha
+      </me>.
+      </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Tentukan citra unsur-unsur di dalam <m>A</m> oleh fungsi <m>h \circ f</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Tentukan citra unsur-unsur di dalam <m>A</m> oleh fungsi <m>h \circ g</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Apakah di antara <m>f</m>, <m>g</m>, dan <m>h</m> ada yang merupakan injeksi?
+            Apakah di antara <m>f</m>, <m>g</m>, dan <m>h</m> ada yang merupakan surjeksi?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Apakah <m>h \circ f</m> merupakan injeksi?
+            Apakah <m>h \circ f</m> merupakan surjeksi?
+            Jelaskan.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Apakah <m>h \circ g</m> merupakan injeksi?
+            Apakah <m>h \circ g</m> merupakan surjeksi?
+            Jelaskan.
+          </p>
+        </statement>
+      </task>
+  
+  </activity>
+
+  <p>
+    Dalam <xref ref="act_functions_1"/>,
+    kita menanyakan apakah fungsi-fungsi komposit tertentu merupakan injeksi atau surjeksi, atau keduanya.
+    Dalam matematika,
+    lazim untuk menyelidiki apakah sifat tertentu suatu objek juga dimiliki oleh objek yang berkaitan dengannya.
+    Secara khusus,
+    kita mungkin ingin mengetahui apakah komposit dua fungsi injektif juga merupakan injeksi.
+    (Tentu saja, kita dapat mengajukan pertanyaan serupa untuk surjeksi.)
+    Pertanyaan-pertanyaan ini diselidiki dalam aktivitas berikutnya.
+  </p>
+
+  <activity xml:id="act_composition2">
+    <introduction>
+    <p>
+      Diberikan himpunan <m>A</m>, <m>B</m>,
+      <m>C</m>, dan <m>D</m> berikut:
+      <me>
+        A = \{ a, b, c \},  B = \{p, q, r\},  C = \{u, v, w, x \},  \text{ dan }   D = \{u, v \}
+      </me>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Susun suatu fungsi <m>f : A \to B</m> yang merupakan injeksi dan suatu fungsi
+            <m>g : B \to C</m> yang merupakan injeksi.
+            Dalam hal ini,
+            apakah fungsi komposit <m>g \circ f : A \to C</m> merupakan injeksi?
+            Jelaskan.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Susun suatu fungsi <m>f : A \to B</m> yang merupakan surjeksi dan suatu fungsi
+            <m>g : B \to D</m> yang merupakan surjeksi.
+            Dalam hal ini,
+            apakah fungsi komposit <m>g \circ f : A \to D</m> merupakan surjeksi?
+            Jelaskan.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Susun suatu fungsi <m>f : A \to B</m> yang merupakan bijeksi dan suatu fungsi <m>g : B \to A</m> yang merupakan bijeksi.
+            Dalam hal ini,
+            apakah fungsi komposit <m>g \circ f : A \to A</m> merupakan bijeksi?
+            Jelaskan.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    Dalam <xref ref="act_composition2"/>,
+    kita menyelidiki beberapa sifat fungsi komposit yang berkaitan dengan injeksi,
+    surjeksi, dan bijeksi.
+    Teorema berikut merangkum hasil yang hendak diilustrasikan oleh penyelidikan tersebut.
+  </p>
+
+  <theorem xml:id="thm_compositefunctions">
+    <statement>
+      <p>
+        Misalkan <m>A</m>, <m>B</m>, dan <m>C</m> himpunan tak kosong,
+        serta misalkan <m>f : A \to B</m> dan <m>g : B \to C</m>.
+        <ol>
+          <li xml:id="thm_compositefunctions1">
+            <p>
+              Jika <m>f</m> dan <m>g</m> keduanya merupakan injeksi,
+              maka <m>(g \circ f) : A \to C</m> merupakan injeksi.
+            </p>
+          </li>
+          <li xml:id="thm_compositefunctions2">
+            <p>
+              Jika <m>f</m> dan <m>g</m> keduanya merupakan surjeksi,
+              maka <m>(g \circ f) : A \to C</m> merupakan surjeksi.
+            </p>
+          </li>
+          <li xml:id="thm_compositefunctions3">
+            <p>
+              Jika <m>f</m> dan <m>g</m> keduanya merupakan bijeksi,
+              maka <m>(g \circ f) : A \to C</m> merupakan bijeksi.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    
+      <task>
+        <statement>
+          <p>
+            Buktikan bagian (1) dari <xref ref="thm_compositefunctions"/>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Buktikan bagian (2) dari <xref ref="thm_compositefunctions"/>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Mengapa bukti bagian (3) dari <xref ref="thm_compositefunctions"/>
+            merupakan akibat langsung dari bagian (1) dan (2)?
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

@@ -1,0 +1,113 @@
+<section xml:id="sec_closed_limits_seq">
+  <title>Closed Sets and Limits of Sequences</title>
+  <p>
+    Suppose we consider a sequence <m>(a_n)</m> in a subset <m>A</m> of a metric space <m>X</m> that converges to a point <m>x</m>.
+    Must it be the case that <m>x \in A</m>?
+    We consider this question in the next activity.
+  </p>
+
+  <activity xml:id="act_closed_limitpoints">
+    <introduction>
+    <p>
+      Let <m>A = (0,1)</m> and <m>B = [0,1]</m> in <m>(\R, d_E)</m>.
+      For each positive integer <m>n</m>,
+      let <m>a_n =\frac{1}{n}</m>.
+      Note that the sequence <m>(a_n)</m> is contained in both sets <m>A</m> and <m>B</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            To what does the sequence <m>(a_n)</m> converge in <m>\R</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>\lim a_n</m> in <m>A</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>\lim a_n \in B</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Name two significant differences between the sets <m>A</m> and <m>B</m> that account for the different responses in parts (b) and <m>(c)</m>?
+            Respond using the terminology we have introduced in this section.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    The result of <xref ref="act_closed_limitpoints"/>
+    is encapsulated in the next theorem.
+  </p>
+
+  <theorem xml:id="thm_Closed_convergent">
+    <statement>
+      <p>
+        A subset <m>C</m> of a metric space <m>X</m> is closed if and only if whenever <m>(c_n)</m> is a sequence in <m>C</m> that converges to a point <m>c \in X</m>,
+        then <m>c \in C</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a metric space and <m>C</m> a subset of <m>X</m>.
+      First assume that <m>C</m> is closed.
+      Let <m>(c_n)</m> be a convergent sequence in <m>C</m> with <m>c = \lim c_n</m>.
+      So either <m>c \in C</m> or <m>c</m> is a limit point of <m>C</m>.
+      Since <m>C</m> contains its limit points,
+      either case gives us <m>c \in C</m>.
+      So <m>\lim c_n \in C</m>.
+    </p>
+    <p>
+      The proof of the remaining implication is left to the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X</m> be a metric space and <m>C</m> a subset of <m>X</m>.
+      In this activity we will prove that if any time a sequence <m>(c_n)</m> in <m>C</m> converges to a point <m>c \in X</m>,
+      the point <m>c</m> is in <m>C</m>,
+      then <m>C</m> is a closed set.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            List three different ways that we can show that a subset of a metric space is closed.
+            Which one might be relevant in this situation to show that the set <m>C</m> is closed?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>c</m> be a limit point of <m>C</m>.
+            What does that tell us?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof that <m>C</m> is a closed set.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+</section>

@@ -1,0 +1,127 @@
+<section xml:id="sec_metric_equiv">
+  <title>Metric Equivalence</title>
+  <p>
+    We have seen that we can make a set into a metric space with different metrics.
+    For example, the spaces <m>(\R^2, d_E)</m>, <m>(\R^2, d_T)</m>,
+    <m>(\R^2, d_M)</m>, and <m>(\R^2, d)</m> are all metric spaces,
+    where <m>d_E</m> is the Euclidean metric,
+    <m>d_T</m> the taxicab metric,
+    <m>d_M</m> the max metric, and <m>d</m> the discrete metric.
+    But are these metric spaces really
+    <q>different</q>
+    metric spaces?
+    What do we mean by
+    <q>different</q>?
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      We might consider two metric spaces <m>(X, d_X)</m> and
+      <m>(Y, d_Y)</m> to be equivalent if we can find a bijection between the two sets <m>X</m> and <m>Y</m> that preserves the metric properties.
+      That is, find a bijective function <m>f : X \to Y</m> such that
+      <m>d_X(a,b) = d_Y(f(a),
+      f(b))</m> for all <m>a,b \in X</m>.
+      In other words, <m>f</m> preserves distances.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>X = ((0,1), d_X)</m> and <m>Y = ((0,2), d_Y)</m>,
+            with both <m>d_X</m> and <m>d_Y</m> the Euclidean metric.
+            Is it possible to find a bijection
+            <m>f : X \to Y</m> that preserves the metric properties?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now let <m>X = ((0,1), d_X)</m> and <m>Y = ((0,2), d_Y)</m>,
+            where <m>d_X</m> is defined by
+            <m>d_X(a,b) = 2 | a-b |</m> and <m>d_Y = d_E</m>.
+            You may assume that <m>d_X</m> is a metric.
+            Is it possible to find a bijection
+            <m>f : X \to Y</m> that preserves the metric properties?
+            Explain.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    If there is a bijection between metric spaces that preserves distances,
+    we say that the metric spaces are
+    <term>metrically equivalent</term>.
+  </p>
+
+  <definition xml:id="def_MS_metric_equivalence">
+  <idx><h>metrically equivalent</h></idx>
+    <statement>
+      <p>
+        Two metric spaces <m>(X,d_X)</m> and <m>(Y,d_Y)</m> are <term>metrically equivalent</term>
+            
+        if there is a bijection <m>f : X \to Y</m> such that
+        <me>
+          d_X(x,y) = d_Y(f(x),f(y))
+        </me>
+        for all <m>x,y \in X</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Because <m>f</m> is a bijection,
+    it will also be the case in <xref ref="def_MS_metric_equivalence"/> that
+    <me>
+      d_Y(u,v) = d_X(f^{-1}(u), f^{-1}(v))
+    </me>
+    for all <m>u</m> and <m>v</m> in <m>Y</m>.
+    The proof is left for <xref ref="ex_isometry_reverse"/>.
+  </p>
+  <p>
+    Any function <m>f</m> that preserves distances
+    (like the one in <xref ref="def_MS_metric_equivalence"/>)
+    is called an <term>isometry</term>.
+  </p>
+
+  <definition>
+  <idx><h>isometry</h></idx>
+    <statement>
+      <p>
+        A function <m>f</m> from a metric space <m>(X,d_X)</m> to a metric space <m>(Y, d_Y)</m> is an <term>isometry</term>
+        if <m>f</m> is a bijection and
+        <men xml:id="eq_distance_preserving">
+          d_Y(f(a),f(b)) = d_X(a,b)
+        </men>
+        for all <m>a, b \in X</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Metric equivalence is a very strong type of equivalence <mdash/> the existence of an isometry does not allow for much flexibility since distances must be preserved.
+    From a topological perspective,
+    we are only concerned about the open sets <mdash/> there are no distances.
+    The open unit ball in <m>(\R^2, d_E)</m> and the open ball in <m>(\R^2, d_M)</m>
+    (where <m>d_E</m> is the Euclidean metric and <m>d_M</m> is the max metric)
+    are not that different as we can see in <xref ref="F_Equivalence"/>.
+    If we don't worry about preserving distances,
+    we can stretch the open ball <m>B_E = B((0,0),1)</m> in
+    <m>(\R^2, d_E)</m> along the lines <m>y=x</m> and <m>y=-x</m> uniformly in a way to mold it onto the unit ball
+    <m>B_M = B((0,0),1)</m> in <m>(\R^2, d_M)</m>.
+    The important thing is that this stretching will preserve the open sets.
+    This is a much more forgiving type of equivalence and maintains the central idea of topology that we have discussed <mdash/> what properties of a space are not altered by stretching and bending the space.
+    This type of equivalence that allows us to manipulate a space without fundamentally changing the open sets is called
+    <term>topological equivalence</term>.
+  </p>
+
+  <figure xml:id="F_Equivalence">
+    <caption>The open unit balls in <m>(\R^2, d_E)</m> and <m>(\R^2, d_M)</m>.</caption>
+    <image width="70%" source="Equivalence"/>
+  </figure>
+
+</section>

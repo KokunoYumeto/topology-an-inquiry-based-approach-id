@@ -1,0 +1,113 @@
+<section xml:id="sec_sub_metric_intro">
+  <title>Introduction</title>
+  <p>
+    Let <m>(X,d)</m> be a metric space,
+    and let <m>A</m> be a subset of <m>X</m>.
+    We can make <m>A</m> into a metric space itself in a very straightforward manner.
+    When we do so, we say that <m>A</m> is a
+    <term>subspace</term> of <m>X</m>.
+  </p>
+
+  <exploration>
+    <introduction>
+    <p>
+      Let <m>(X,d)</m> be a metric space,
+      and let <m>A</m> be a subset of <m>X</m>.
+      To make the subset <m>A</m> into a metric space,
+      we need to define a metric on <m>A</m>.
+      For us to consider <m>A</m> as a subspace of <m>X</m>,
+      we want the metric on <m>A</m> to agree with the metric on <m>X</m>.
+      So we define <m>d' : A \times A \to \R</m> by
+      <me>
+        d'(a_1,a_2) = d(a_1,a_2)
+      </me>
+      for all <m>a_1, a_2 \in A</m>.
+      Note that <m>d</m> and <m>d'</m> are different functions because they have different domains.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Show that <m>d'</m> is a metric on <m>A</m>.
+            Since <m>d'</m> is a metric on <m>A</m> it follows that <m>(A,d')</m> is a metric space.
+            The metric <m>d'</m> is the <term>restriction</term>
+            of <m>d</m> to <m>A \times A</m> and can also be denoted by <m>d_A</m>.
+          </p>
+            <definition>
+              <idx><h>subspace of a metric space</h></idx>
+              <statement>
+                <p>
+                  Let <m>(X,d)</m> be a metric space.
+                  A <term>subspace</term> of <m>(X,d)</m> is a subset <m>A</m> of <m>X</m> together with the metric <m>d_A</m> from
+                  <m>A \times A</m> to <m>\R</m> defined by
+                  <me>
+                    d_A(a_1,a_2) = d(a_1,a_2)
+                  </me>
+                  for all <m>a_1,a_2 \in A</m>.
+                </p>
+              </statement>
+            </definition>
+          <p>
+            We might wonder what, if any,
+            properties of the space <m>X</m> are inherited by a subspace.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>(X,d) = (\R,d_E)</m> and let <m>A = [0,1]</m>.
+            Let <m>0 \lt a \lt 1</m>.
+            Is the set <m>[0,a)</m> open in <m>X</m>?
+            Is the set <m>[0,a)</m> open in <m>A</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>(X,d) = (\R,d_E)</m> and let <m>A = \Z</m>.
+            What are the open subsets of <m>A</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <introduction>
+          <p>
+            Let <m>(X,d) = (\R^2,d_E)</m>,
+            let <m>A = \{(x,0) \mid x \in \R\}</m>
+            (the <m>x</m>-axis in <m>\R^2</m>),
+            and let <m>Z = \{(x,0) \mid 0 \lt x \lt 1\}</m>.
+            Note that <m>Z \subset A \subset X</m> and we can consider <m>Z</m> as a subspace of <m>A</m> and <m>X</m>,
+            and <m>A</m> as a subspace of <m>X</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Explain why <m>A</m> is a closed subset of <m>X</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Explain why <m>Z</m> is an open subset of <m>A</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Is <m>Z</m> an open subset of <m>X</m>?
+                  Explain
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+     
+  </exploration>
+</section>

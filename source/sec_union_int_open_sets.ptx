@@ -1,0 +1,130 @@
+<section xml:id="sec_union_int_open_sets">
+  <title>Unions and Intersections of Open Sets</title>
+  <p>
+    Once we have defined open sets we might wonder about what happens if we take a union or intersection of open sets.
+  </p>
+
+  <activity xml:id="act_Open_union">
+  
+      <task>
+        <introduction>
+          <p>
+            Let <m>A = (-2,1)</m> and <m>B = (-1,2)</m> in <m>(\R, d_E)</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  Is <m>A \cup B</m> open?
+                  Explain.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Is <m>A \cap B</m> open?
+                  Explain.
+                </p>
+              </statement>
+            </task>
+      </task>
+
+      <task>
+        <introduction>
+          <p>
+            Let <m>X = \R</m> with the Euclidean metric.
+            Let <m>A_n = \left(1-\frac{1}{n}, 1+\frac{1}{n}\right)</m> for each <m>n \in \Z^+</m>.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  What is <m>\bigcup_{n \geq 1} A_n</m>?
+                  A proof is not necessary.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Is <m>\bigcup_{n \geq 1} A_n</m> open in <m>\R</m>?
+                  Explain.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  What is <m>\bigcap_{n \geq 1} A_n</m>?
+                  A proof is not necessary.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Is <m>\bigcap_{n \geq 1} A_n</m> open in <m>\R</m>?
+                  Explain.
+                </p>
+              </statement>
+            </task>
+          
+        </task>
+     
+  </activity>
+
+  <p>
+    <xref ref="act_Open_union"/>
+    demonstrates that an arbitrary intersection of open sets is not necessarily open.
+    However, there are some things we can say about unions and intersections of open sets.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space.
+        <ol>
+          <li>
+            <p>
+              Any union of open sets in <m>X</m> is an open set in <m>X</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Any finite intersection of open sets in <m>X</m> is an open set in <m>X</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a metric space.
+      To prove part 1, assume that
+      <m>\{O_{\alpha}\}</m> is a collection of open sets in <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m> and let <m>O = \bigcup_{\alpha \in I} O_{\alpha}</m>.
+      By <xref ref="thm_OS_1"/>,
+      we know that <m>O_{\alpha}</m> is a union of open balls for each <m>\alpha \in I</m>.
+      Combining all of these open balls together shows that <m>O</m> is a union of open balls and is therefore an open set by <xref ref="thm_OS_1"/>.
+    </p>
+    <p>
+      For part 2, assume that <m>O_1</m>,
+      <m>O_2</m>, <m>\ldots</m>,
+      <m>O_n</m> are open sets in <m>X</m> for some <m>n \in \Z^+</m>.
+      To show that <m>O = \bigcap_{k=1}^n O_k</m> is an open set,
+      we will show that <m>O</m> is a neighborhood of each of its points.
+      Let <m>x \in O</m>.
+      Then <m>x \in O_k</m> for each <m>1 \leq k \leq n</m>.
+      Let <m>k</m> be between 1 and <m>n</m>.
+      Since <m>O_k</m> is open,
+      we know that <m>O_k</m> is a neighborhood of each of its points.
+      So there exists <m>\epsilon_k \gt 0</m> such that <m>B(x, \epsilon_k) \subseteq O_k</m>.
+      Since there are only finitely many values of <m>k</m>,
+      let <m>\epsilon = \min\{\epsilon_k \mid 1 \leq k \leq n\}</m>.
+      Then <m>B(x, \epsilon) \subseteq B(x, \epsilon_k)</m> for each <m>k</m> and so <m>B(x, \epsilon) \subseteq \bigcap_{k=1}^n O_k = O</m>.
+      Therefore, <m>O</m> is a neighborhood of each of its points and <m>O</m> is an open set.
+    </p>
+  </proof>
+  </theorem>
+</section>

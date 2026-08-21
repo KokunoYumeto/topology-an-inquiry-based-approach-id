@@ -1,0 +1,133 @@
+<section xml:id="sec_open_sets_intro">
+  <title>Introduction</title>
+  <p>
+    Consider the interval <m>(a,b)</m> in <m>\R</m> using the Euclidean metric.
+    If <m>m = \frac{a+b}{2}</m>,
+    then <m>(a,b) = B\left(m,\frac{b-a}{2}\right)</m>,
+    so every open interval is an open ball.
+    As an open ball,
+    an open interval <m>(a,b)</m> is a neighborhood of each of its points.
+    This is the foundation for the definition of an open set in a metric space.
+  </p>
+  <p>
+    Recall that we defined a subset <m>N</m> of <m>X</m> to be neighborhood of point <m>a</m> in a metric space <m>(X,d)</m> if <m>N</m> contains an open ball
+    <m>B(a, \epsilon)</m> for some <m>\epsilon \gt 0</m>.
+    We saw that every open ball is a neighborhood of each of its points,
+    and we will now extend that idea to define an
+    <term>open set</term> in a metric space.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A subset <m>O</m> of a metric space <m>X</m> is an open set<idx><h>open set in a metric space</h></idx> if <m>O</m> is a neighborhood of each of its points.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    So, by definition, any open ball is an open set.
+    Also by definition,
+    open sets are neighborhoods of each of their points.
+    Open sets are different than non-open sets.
+    For example,
+    <m>(0,1)</m> is an open set in <m>\R</m> using the Euclidean metric,
+    but <m>[0,1)</m> is not.
+    The reason <m>[0,1)</m> is not an open set is that there is no open ball centered at <m>0</m> that is entirely contained in <m>[0,1)</m>.
+    So <m>0</m> has a different property than the other points in <m>[0,1)</m>.
+    The set <m>[0,1)</m> is a neighborhood of each of the points in <m>(0,1)</m>,
+    but is not a neighborhood of <m>0</m>.
+    We can think of the points in <m>(0,1)</m> as being in the interior of the set <m>[0,1)</m>.
+    This leads to the next definition.
+  </p>
+
+  <definition>
+    <idx><h>interior point in a subset of a metric space</h></idx>
+    <statement>
+      <p>
+        Let <m>A</m> be a subset of a metric space <m>X</m>.
+        A point <m>a \in A</m> is an <term>interior point</term> of <m>A</m> if <m>A</m> is a neighborhood of <m>a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    As we will soon see,
+    open sets can be characterized in terms of interior points.
+  </p>
+
+  <exploration>
+    
+      <task>
+        <introduction>
+          <p>
+            Determine if the set <m>A</m> is an open set in the metric space <m>(X,d)</m>.
+            Explain your reasoning.
+          </p>
+        </introduction>
+            <task>
+              <statement>
+                <p>
+                  <m>X = \R</m>, <m>d = d_E</m>,
+                  the Euclidean metric, <m>A = [0,0.5)</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  <m>X = \{x \in \R \mid 0 \leq x \leq 1\}</m>,
+                  <m>d = d_E</m>, the Euclidean metric, <m>A = [0,0.5)</m>.
+                  Assume that the Euclidean metric is a metric on <m>X</m>.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  <m>X = \{a,b,c,d\}</m>, <m>d</m> is the discrete metric defined by
+                  <me>
+                    d(x,y) = \begin{cases}0 \amp \text{ if }  x = y \\ 1 \amp \text{ if }  x \neq y, \end{cases}
+                  </me>
+                  and <m>A = \{a,b\}</m>.
+                </p>
+              </statement>
+            </task>
+      </task>
+
+      <task>
+        <task>
+            
+              <statement>
+                <p>
+                  What are the interior points of the following sets in <m>(\R, d_E)</m>?
+                  Explain.
+                  <me>
+                    (0,1) \ \ \ (0,1] \ \ \ [0,1) \ \ \ [0,1]
+                  </me>.
+                </p>
+              </statement>
+        </task>
+        <task>
+              <statement>
+                <p>
+                  Let <m>A = \{0, 1, 2\}</m> in <m>(\R, d_E)</m>.
+                  What are the interior points of <m>A</m>?
+                  Explain.
+                </p>
+              </statement>
+        </task>
+        <task>
+              <statement>
+                <p>
+                  Let <m>\Q</m> be the set of rational numbers in <m>(\R, d_E)</m>.
+                  What are the interior points of <m>\Q</m>?
+                  Explain.
+                </p>
+              </statement>
+            </task>
+        
+      </task>
+    
+  </exploration>
+</section>

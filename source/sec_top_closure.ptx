@@ -1,0 +1,118 @@
+<section xml:id="sec_top_closure">
+  <title>Closure in Topological Spaces</title>
+  <p>
+    Once we have a definition of limit point,
+    we can define the closure of a set just as we did in metric spaces.
+  </p>
+
+  <definition>
+  <idx><h>closure in topological spaces</h></idx>
+    <statement>
+      <p>
+        The <term>closure</term> of a subset <m>A</m> of a topological space <m>X</m> is the set
+        <me>
+          \overline{A} = A \cup A'
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    In other words,
+    the closure of a set is the collection of the elements of the set and the limit points of the set.
+    The following theorem is the analog of the theorem in metric spaces about closures.
+  </p>
+
+  <theorem xml:id="thm_TS_closure_closed">
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space and <m>A</m> a subset of <m>X</m>.
+        The closure of a <m>A</m> is a closed set.
+        Moreover, the closure of <m>A</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a topological space and <m>A</m> a subset of <m>X</m>.
+      To prove that <m>\overline{A}</m> is a closed set,
+      we will prove that <m>\overline{A}</m> contains its limit points.
+      Let <m>x \in \overline{A}'</m>.
+      To show that <m>x \in \overline{A}</m>,
+      we proceed by contradiction and assume that <m>x \notin \overline{A}</m>.
+      This implies that <m>x \notin A</m> and <m>x \notin A'</m>.
+      Since <m>x \notin A'</m>,
+      there exists a neighborhood <m>N</m> of <m>x</m> that contains no points of <m>A</m> other than <m>x</m>.
+      But <m>A \subseteq \overline{A}</m> and <m>x \notin \overline{A}</m>,
+      so it follows that <m>N \cap A = \emptyset</m>.
+      This implies that there is an open set
+      <m>O \subseteq N</m> centered at <m>x</m> so that <m>O \cap A = \emptyset</m>.
+      The fact that <m>x \in \overline{A}'</m> means that
+      <m>O \cap \overline{A}</m> contains a point <m>y</m> in
+      <m>\overline{A}</m> different from <m>x</m>.
+      Since <m>O \cap A = \emptyset</m>,
+      we must have <m>y \in A'</m>.
+      But the fact that <m>O</m> is a neighborhood of <m>y</m> means that <m>O</m> must contain a point of <m>A</m> different than <m>y</m>,
+      which contradicts the fact that <m>O \cap A = \emptyset</m>.
+      We conclude that <m>x \in \overline{A}</m> and <m>\overline{A}' \subseteq \overline{A}</m>.
+      This shows that <m>\overline{A}</m> is a closed set.
+    </p>
+    <p>
+      The proof that <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m> is left for the next activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>(X,d)</m> be a topological space,
+      and let <m>A</m> be a subset of <m>X</m>.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            What will we have to show to prove that
+            <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that <m>C</m> is a closed subset of <m>X</m> that contains <m>A</m>.
+            To show that <m>\overline{A} \subseteq C</m>,
+            why is it enough to demonstrate that <m>A' \subseteq C</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If <m>x \in A'</m>, what can we say about <m>x</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof that <m>\overline{A} \subseteq C</m>.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    One consequence of <xref ref="thm_TS_closure_closed"/> is the following.
+  </p>
+  
+  <corollary>
+    <statement>
+      <p>
+        A subset <m>C</m> of a topological space <m>X</m> is closed if and only if <m>C = \overline{C}</m>.
+      </p>
+    </statement>
+  </corollary>
+</section>

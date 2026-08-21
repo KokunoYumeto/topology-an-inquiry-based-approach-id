@@ -1,0 +1,118 @@
+<section xml:id="sec_open_sets">
+  <title>Open Sets</title>
+  <p>
+    Open sets are vitally important in topology.
+    In fact, we will see later that every topological space is completely defined by its open sets.
+    Recall that an open ball is an open set.
+    There are other subsets that every metric space contains,
+    and we might ask if they are open or not.
+  </p>
+
+  <activity>
+    <introduction>
+    <p>
+      Let <m>X</m> be a metric space.
+    </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Is <m>\emptyset</m> an open set in <m>X</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>X</m> an open set in <m>X</m>?
+            Explain.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+
+  <p>
+    We have defined open balls,
+    and open balls are the canonical examples of open sets.
+    In fact, as the following theorem shows,
+    the open balls determine the open sets.
+  </p>
+
+  <theorem xml:id="thm_OS_1">
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space.
+        A subset <m>O</m> of <m>X</m> is open if and only if <m>O</m> is a union of open balls.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>X</m> be a metric space and <m>O</m> a subset of <m>X</m>.
+      To prove this biconditional statement we first assume that <m>O</m> is an open set and demonstrate that <m>O</m> is a union of open balls.
+      Let <m>a \in O</m>.
+      Since <m>O</m> is open, there exists
+      <m>\epsilon_a \gt 0</m> so that <m>B(a, \epsilon_a) \subseteq O</m>.
+      We will show that
+      <me>
+        O = \bigcup_{a \in O} B(a, \epsilon_a)
+      </me>.
+    </p>
+    <p>
+      By the way we chose <m>\epsilon_a</m>,
+      <m>B(a, \epsilon_a) \subseteq O</m> for every <m>a \in O</m>.
+      So <m>\bigcup_{a \in O} B(a, \epsilon_a) \subseteq O</m>.
+      For the reverse containment, let <m>x \in O</m>.
+      Then <m>x \in B(x, \epsilon_x)</m> and so <m>x \in \bigcup_{a \in O} B(a, \epsilon_a)</m>.
+      Thus, <m>O \subseteq \bigcup_{a \in O} B(a, \epsilon_a)</m>.
+      We conclude that <m>O</m> is a union of open balls if <m>O</m> is an open set.
+    </p>
+    <p>
+      The proof of the converse is left for the following activity.
+    </p>
+  </proof>
+  </theorem>
+
+  <activity>
+  <introduction>
+    <p>
+      Let <m>X</m> be a metric space.
+      To prove the remaining implication of <xref ref="thm_OS_1"/>,
+      assume that a subset <m>O</m> of <m>X</m> is a union of open balls.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            What do we need to show to prove that <m>O</m> is an open set?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>x \in O</m>.
+            Why is there an open ball <m>B</m> in <m>O</m> that contains <m>x</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Complete the proof to show that <m>O</m> is an open set.
+          </p>
+        </statement>
+      </task>
+    
+  </activity>
+  <p>
+    <xref ref="thm_OS_1"/>
+    tells us that every open set is made up of open balls,
+    so the open balls generate all open sets much like a basis of a vector space in linear algebra generates all of the elements of the vector space.
+    For this reason we call the set of open balls in a metric space a <term>basis</term>
+    for the open sets of the metric space.
+    We will discuss this idea in more detail in a subsequent section.
+  </p>
+</section>
