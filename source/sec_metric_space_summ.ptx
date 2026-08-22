@@ -1,86 +1,88 @@
 <section xml:id="sec_metric_space_summ">
-  <title>Summary</title>
+  <title>Ringkasan</title>
   <p>
-    Important ideas that we discussed in this section include the following.
+    Gagasan penting yang telah kita bahas dalam bab ini antara lain sebagai berikut.
   
   <ul>
     <li>
       <p>
-        A metric on a space <m>X</m> is a function that measures distance between elements in the space.
-        More formally,
-        a metric on a space <m>X</m> is a function <m>d: X \times X \to \R^+ \cup \{0\}</m> such that
+        Metrik pada suatu ruang <m>X</m> adalah fungsi yang mengukur jarak antara
+        unsur-unsur ruang tersebut.
+        Secara lebih formal, metrik pada ruang <m>X</m> adalah fungsi
+        <m>d: X \times X \to \R^+ \cup \{0\}</m> sedemikian sehingga
       
       <ol>
         <li>
           <p>
-            <m>d(x,y) \geq 0</m> for all <m>x,y \in X</m>,
+            <m>d(x,y) \geq 0</m> untuk setiap <m>x,y \in X</m>,
           </p>
         </li>
         <li>
           <p>
-            <m>d(x,y) = 0</m> if and only if <m>x = y</m> in <m>X</m>,
+            <m>d(x,y) = 0</m> jika dan hanya jika <m>x = y</m> di dalam <m>X</m>,
           </p>
         </li>
         <li>
           <p>
-            <m>d(x,y) = d(y,x)</m> for all <m>x, y \in X</m>, and
+            <m>d(x,y) = d(y,x)</m> untuk setiap <m>x, y \in X</m>, dan
           </p>
         </li>
         <li>
           <p>
-            <m>d(x,y) \leq d(x,z) + d(z,y)</m> for all <m>x,y,z \in X</m>.
+            <m>d(x,y) \leq d(x,z) + d(z,y)</m> untuk setiap <m>x,y,z \in X</m>.
           </p>
         </li>
       </ol>
-      A metric space is any space combined with a metric defined on that space.
+      Ruang metrik adalah suatu ruang beserta metrik yang didefinisikan pada
+      ruang tersebut.
       </p>
     </li>
     <li>
       <p>
-        The Euclidean,
-        taxicab, and max metric are all metrics on <m>\R^n</m>,
-        so they all provide ways to measure distances between points in <m>\R^n</m>.
-        These metric are different in how they define the distances.
+        Metrik Euklides, metrik taksi, dan metrik maksimum semuanya merupakan
+        metrik pada <m>\R^n</m>, sehingga ketiganya memberikan cara untuk
+        mengukur jarak antara titik-titik di <m>\R^n</m>.
+        Ketiga metrik ini berbeda dalam cara mendefinisikan jarak.
       
       <ul>
         <li>
           <p>
-            The Euclidean metric is the standard metric that we have used through our mathematical careers.
-            For elements <m>x = (x_1, x_2, \ldots,
-            x_n)</m> and <m>y = (y_1, y_2, \ldots,
-            y_n)</m> in <m>\R^n</m>, the Euclidean metric <m>d_E</m> is defined as
+            Metrik Euklides adalah metrik standar yang telah kita gunakan
+            sepanjang pengalaman kita mempelajari matematika.
+            Untuk unsur <m>x = (x_1, x_2, \ldots, x_n)</m> dan
+            <m>y = (y_1, y_2, \ldots, y_n)</m> di <m>\R^n</m>, metrik Euklides
+            <m>d_E</m> didefinisikan oleh
             <md>
-              <mrow>d_E(x,y) \amp =  \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + \cdots (x_n-y_n)^2}</mrow> 
+              <mrow>d_E(x,y) \amp =  \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + \cdots + (x_n-y_n)^2}</mrow> 
               <mrow> \amp = \sqrt{\sum_{i=1}^n (x_i-y_i)^2}</mrow>
             </md>.
-            With this metric, the unit circle in <m>\R^2</m>
-            (the set of points a distance <m>1</m> from the origin)
-            is the standard unit circle we know from Euclidean geometry.
+            Dengan metrik ini, lingkaran satuan di <m>\R^2</m>
+            (himpunan titik yang berjarak <m>1</m> dari titik asal) adalah
+            lingkaran satuan standar yang kita kenal dari geometri Euklides.
           </p>
         </li>
         <li>
           <p>
-            The taxicab metric <m>d_T</m> is defined as
+            Metrik taksi <m>d_T</m> didefinisikan oleh
             <md>
               <mrow>d_T(x,y) \amp = |x_1-y_1| + |x_2-y_2| + \cdots + |x_n-y_n|</mrow> 
               <mrow> \amp = \sum_{i=1}^n |x_i-y_i|</mrow>
             </md>.
-            The unit circle in <m>\R^2</m> using the taxicab metric is the square with vertices <m>(1,0)</m>,
-            <m>(0,1)</m>, <m>(-1,0)</m>,
-            and <m>(0,-1)</m> when viewed in Euclidean geometry.
+            Lingkaran satuan di <m>\R^2</m> dengan metrik taksi, apabila
+            dilihat dalam geometri Euklides, adalah persegi dengan titik sudut
+            <m>(1,0)</m>, <m>(0,1)</m>, <m>(-1,0)</m>, dan <m>(0,-1)</m>.
           </p>
         </li>
         <li>
           <p>
-            The max metric <m>d_M</m> is defined by
+            Metrik maksimum <m>d_M</m> didefinisikan oleh
             <md>
               <mrow>d_M(x,y) \amp = \max\{| x_1-y_1 |, | x_2-y_2 |, |x_3-y_3|, \ldots, |x_n-y_n| \}</mrow>
               <mrow> \amp = \max_{1 \leq i \leq n} \{|x_i-y_i|\}</mrow>
             </md>.
-            Under the max metric,
-            the unit circle in <m>\R^2</m> is the square with vertices <m>(1,1)</m>,
-            <m>(-1,1)</m>, <m>(-1,-1)</m>,
-            and <m>(1,-1)</m> when viewed in Euclidean geometry.
+            Dengan metrik maksimum, lingkaran satuan di <m>\R^2</m>, apabila
+            dilihat dalam geometri Euklides, adalah persegi dengan titik sudut
+            <m>(1,1)</m>, <m>(-1,1)</m>, <m>(-1,-1)</m>, dan <m>(1,-1)</m>.
           </p>
         </li>
       

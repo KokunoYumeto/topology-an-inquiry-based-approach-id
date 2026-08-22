@@ -1,65 +1,152 @@
 <section xml:id="sec_metric_space_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    Metric spaces are particular examples of topological spaces.
-    A metric space is a space that has a metric defined on it.
-    A metric is a function that measures the distance between points in a metric space.
+    Ruang metrik merupakan contoh khusus ruang topologis.
+    Ruang metrik adalah ruang yang dilengkapi dengan suatu metrik.
+    Metrik adalah fungsi yang mengukur jarak antara titik-titik dalam ruang metrik.
   </p>
   <p>
-    We are familiar with one special metric,
-    the Euclidean metric <m>d_E</m> in <m>\R^2</m> where
+    Kita sudah mengenal satu metrik khusus,
+    yaitu metrik Euklides <m>d_E</m> pada <m>\R^2</m>, yang didefinisikan oleh
     <me>
       d_E((x_1,x_2),(y_1,y_2)) = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2}
     </me>.
   </p>
 
   <figure xml:id="F_Euclidean_metric">
-    <caption>The Euclidean distance between <m>(x_1,x_2)</m> and <m>(y_1,y_2)</m> and the Euclidean unit circle in <m>\R^2</m>.</caption>
-    <image width="75%" source="Euclidean_metric"/>
+    <caption>Jarak Euklides antara <m>(x_1,x_2)</m> dan <m>(y_1,y_2)</m>, serta lingkaran satuan Euklides pada <m>\R^2</m>.</caption>
+    <image width="75%" source="Euclidean_metric"><description>Gambar dua panel. Panel kiri memperlihatkan ruas garis horizontal yang menghubungkan titik berlabel <m>(x_1,x_2)</m> dan <m>(y_1,y_2)</m>. Panel kanan memperlihatkan sumbu koordinat dan sebuah lingkaran yang berpusat di titik asal serta memotong sumbu horizontal pada titik berjarak satu satuan dari pusat.</description></image>
   </figure>
 
   <p>
-    Using this metric,
-    the distance between two points <m>(x_1,x_2)</m> and
-    <m>(y_1,y_2)</m> is the length of the segment connecting the points,
-    while the unit circle
-    (the set of points a distance 1 from the origin)
-    looks like what we think of as a circle as illustrated in <xref ref="F_Euclidean_metric"/>.
+    Dengan metrik ini,
+    jarak antara dua titik <m>(x_1,x_2)</m> dan
+    <m>(y_1,y_2)</m> adalah panjang ruas garis yang menghubungkan kedua titik tersebut,
+    sedangkan lingkaran satuannya
+    (himpunan titik yang berjarak 1 dari titik asal)
+    berbentuk seperti lingkaran yang biasa kita bayangkan, sebagaimana diperlihatkan dalam <xref ref="F_Euclidean_metric"/>.
   </p>
   <p>
-    As we will see,
-    there are many other metrics that can be defined on <m>\R^n</m>,
-    or on other sets.
+    Seperti yang akan kita lihat,
+    ada banyak metrik lain yang dapat didefinisikan pada <m>\R^n</m>
+    ataupun pada himpunan-himpunan lain.
   </p>
 
+  <lemma xml:id="lem_abs_TI">
+    <statement>
+      <p>
+        Misalkan <m>a</m> dan <m>b</m> bilangan real.
+        Maka
+        <me>
+          | a+b | \leq | a | + | b |
+        </me>.
+      </p>
+    </statement>
+
+    <proof>
+      <p>
+        Misalkan <m>a</m> dan <m>b</m> bilangan real.
+        Untuk membuktikan lemma ini, kita meninjau beberapa kasus.
+
+        <dl width="narrow">
+          <li>
+            <title>Kasus 1: <m>a \geq 0</m> dan <m>b \geq 0</m></title>
+            <p>
+              Dalam kasus ini, <m>a+b</m> tak negatif sehingga <m>| a | = a</m>,
+              <m>| b | = b</m>, dan <m>| a+b | = a+b</m>.
+              Dengan demikian,
+              <me>
+                | a+b | = a+b =  | a | + | b |
+              </me>.
+            </p>
+          </li>
+          <li>
+            <title>Kasus 2: <m>a \leq 0</m> dan <m>b \leq 0</m></title>
+            <p>
+              Dalam kasus ini, <m>a = -a'</m> dan <m>b = -b'</m>, dengan <m>a'</m> dan <m>b'</m> tak negatif.
+              Berdasarkan Kasus 1,
+              <md>
+                <mrow>| a+b | \amp = | -(a'+b') | = | a'+b' | = a'+b' = | a' | + | b' |</mrow>
+                <mrow> \amp = | -a' | + | -b' | = | a | + | b |</mrow>
+              </md>.
+            </p>
+          </li>
+          <li>
+            <title>Kasus 3: Salah satu dari <m>a</m> atau <m>b</m> positif dan yang lainnya negatif</title>
+            <p>
+              Tanpa mengurangi keumuman, kita andaikan <m>a \gt 0</m> dan <m>b \lt 0</m>.
+              Sekali lagi, kita meninjau beberapa kasus.
+              Perhatikan bahwa <m>b \lt 0</m> mengakibatkan <m>a+b \lt a</m>.
+
+              <ul>
+                <li>
+                  <p>
+                    Andaikan <m>b \geq -2a</m>.
+                    Maka <m>a+b \geq -a</m>, sehingga <m>-a \leq a+b \lt  a</m>.
+                    Akibatnya,
+                    <me>
+                      | a+b | \leq a = | a | \lt  | a | + | b |
+                    </me>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Kasus terakhir terjadi ketika <m>b \lt  -2a</m>.
+                    Dalam kasus ini, <m>-b \gt 2a</m>, sehingga
+                    <me>
+                      | b | = -b \gt 2a = 2| a | \gt | a |
+                    </me>.
+                    Maka <m>a+b \lt  a = | a | \lt  | b |</m>.
+                    Terakhir, <m>a \gt 0</m> mengakibatkan <m>a+b \gt b = -| b |</m>.
+                    Jadi,
+                    <me>
+                      - | b | \lt  a+b \lt  | b |
+                    </me>
+                    dan
+                    <me>
+                      | a+b | \leq | b | \lt  | a | + | b |
+                    </me>.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </dl>
+
+        Ini membuktikan lemma kita untuk setiap pasangan <m>a</m>,
+        <m>b</m>.
+      </p>
+    </proof>
+  </lemma>
+
   <exploration>
-  <idx><h>metric</h><h>taxicab</h></idx>
+  <idx><h>metrik</h><h>taksi</h></idx>
     <introduction>
     <p>
-      Consider the function <m>d_T</m> that assigns to each pair of points in <m>\R^2</m> the real number
+      Perhatikan fungsi <m>d_T</m> yang memasangkan setiap pasangan titik dalam <m>\R^2</m> dengan bilangan real
       <me>
         d_T((x_1,x_2),(y_1,y_2)) = | x_1-y_1 | + | x_2-y_2 |
       </me>.
     </p>
     <p>
-      This function <m>d_T</m> is sometimes called the <term>taxicab metric</term>
-      or <term>distance</term> because the distance between points <m>x</m> and <m>y</m> can be thought of as obtained by driving around a city block rather than going directly from point <m>x</m> to point <m>y</m>.
+      Fungsi <m>d_T</m> ini kadang-kadang disebut <term>metrik taksi</term>
+      atau <term>jarak taksi</term> karena jarak antara titik <m>x</m> dan <m>y</m> dapat dibayangkan sebagai jarak yang ditempuh dengan menyusuri ruas-ruas jalan kota, alih-alih bergerak langsung dari titik <m>x</m> ke titik <m>y</m>.
     </p>
     <p>
-      Any distance function should satisfy certain properties:
-      the distance between two points should never be negative,
-      the distance from point <m>A</m> to point <m>B</m> should be the same as the distance from point <m>B</m> to point <m>A</m>,
-      the shortest distance between two points <m>A</m> and <m>B</m> should never be more than the distance from <m>A</m> to some point <m>C</m> plus the distance from <m>C</m> to <m>B</m>,
-      and the distance between points should only be zero if the points are the same.
-      In this activity, we determine if <m>d_T</m> has these properties.
-      Let <m>x=(x_1,x_2)</m> and <m>y=(y_1,y_2)</m> in <m>\R^2</m>.
+      Setiap fungsi jarak seharusnya memenuhi sifat-sifat tertentu:
+      jarak antara dua titik tidak boleh negatif;
+      jarak dari titik <m>A</m> ke titik <m>B</m> harus sama dengan jarak dari titik <m>B</m> ke titik <m>A</m>;
+      jarak terpendek antara titik <m>A</m> dan <m>B</m> tidak boleh melebihi jumlah jarak dari <m>A</m> ke suatu titik <m>C</m> dan jarak dari <m>C</m> ke <m>B</m>;
+      dan jarak antara dua titik hanya boleh bernilai nol jika kedua titik tersebut sama.
+      Dalam aktivitas ini, kita menentukan apakah <m>d_T</m> memiliki sifat-sifat tersebut.
+      Misalkan <m>x=(x_1,x_2)</m> dan <m>y=(y_1,y_2)</m> berada di dalam <m>\R^2</m>.
     </p>
     </introduction>
 
     <task>
       <statement>
         <p>
-          Prove that <m>d_T(x,y) \geq 0</m>.
+          Buktikan bahwa <m>d_T(x,y) \geq 0</m>.
         </p>
       </statement>
     </task>
@@ -67,7 +154,7 @@
     <task>
       <statement>
         <p>
-          Prove that <m>d_T(x,y) = d_T(y,x)</m>.
+          Buktikan bahwa <m>d_T(x,y) = d_T(y,x)</m>.
         </p>
       </statement>
     </task>
@@ -75,7 +162,7 @@
     <task>
       <statement>
         <p>
-          Prove that <m>d_T(x,y) = 0</m> if and only if <m>x = y</m>.
+          Buktikan bahwa <m>d_T(x,y) = 0</m> jika dan hanya jika <m>x = y</m>.
         </p>
       </statement>
     </task>
@@ -83,131 +170,44 @@
     <task>
       <statement>
         <p>
-          Let <m>z = (z_1,z_2)</m> in <m>\R^2</m>.
-      Read the proof of <xref ref="lem_abs_TI"/>
-      (below) and then use <xref ref="lem_abs_TI"/> to show that
+          Misalkan <m>z = (z_1,z_2)</m> berada di dalam <m>\R^2</m>.
+      Pelajari bukti <xref ref="lem_abs_TI"/>, kemudian gunakan <xref ref="lem_abs_TI"/> untuk menunjukkan bahwa
       <me>
         d_T(x,y) \leq d_T(x,z) + d_T(z,y)
       </me>.
         </p>
         <p>
-      (Do you have any questions about the proof of the lemma?)
+      (Apakah Anda memiliki pertanyaan tentang bukti lemma ini?)
     </p>
    
-    <lemma xml:id="lem_abs_TI">
-      <statement>
-        <p>
-          Let <m>a</m> and <m>b</m> be real numbers.
-          Then
-          <me>
-            | a+b | \leq | a | + | b |
-          </me>.
-        </p>
-      </statement>
-    
-    <proof>
-      <p>
-        Let <m>a</m> and <m>b</m> be real numbers.
-        To prove the lemma we consider cases.
-      
-      <dl width="narrow">
-        <li>
-          <title>Case 1: <m>a \geq 0</m> and <m>b \geq 0</m></title>
-          <p>
-            In this case <m>a+b</m> is nonnegative and so <m>| a | = a</m>,
-            <m>| b | = b</m>, and <m>| a+b | = a+b</m>.
-            Then
-            <me>
-              | a+b | = a+b =  | a | + | b |
-            </me>.
-          </p>
-        </li>
-        <li>
-          <title>Case 2: <m>a \leq 0</m> and <m>b \leq 0</m></title>
-          <p>
-            In this case <m>a = -a'</m> and <m>b = -b'</m> where <m>a'</m> and <m>b'</m> are nonnegative.
-            It follows from Case 1 that
-            <md>
-              <mrow>| a+b | \amp = | -(a'+b') | = | a'+b' | = a'+b' = | a' | + | b' |</mrow>
-              <mrow> \amp = | -a' | + | -b' | = | a | + | b |</mrow>
-            </md>.
-          </p>
-        </li>
-        <li>
-          <title>Case 3: One of <m>a</m> or <m>b</m> is positive and the other negative</title>
-          <p>
-            Without loss of generality we assume <m>a \gt 0</m> and <m>b \lt 0</m>.
-            Again we consider cases.
-            Note that <m>b \lt 0</m> implies <m>a+b \lt a</m>.
-          
-          <ul>
-            <li>
-              <p>
-                Suppose <m>b \geq -2a</m>.
-                Then <m>a+b \geq -a</m> and so <m>-a \leq a+b \lt  a</m>.
-                It follows that
-                <me>
-                  | a+b | \leq a = | a | \lt  | a | + | b |
-                </me>.
-              </p>
-            </li>
-            <li>
-              <p>
-                The last case is when <m>b \lt  -2a</m>.
-                In this case <m>-b \gt 2a</m> and so
-                <me>
-                  | b | = -b \gt 2a = 2| a | \gt | a |
-                </me>.
-                Then <m>a+b \lt  a = | a | \lt  | b |</m>.
-                Finally, <m>a \gt 0</m> implies <m>a+b \gt b = -| b |</m>.
-                So
-                <me>
-                  - | b | \lt  a+b \lt  | b |
-                </me>
-                and
-                <me>
-                  | a+b | \leq | b | \lt  | a | + | b |
-                </me>.
-              </p>
-            </li>
-          </ul>
-          </p>
-        </li>
-      </dl>
-      
-        This proves our lemma for every possible pair <m>a</m>,
-        <m>b</m>.
-      </p>
-    </proof>
-    </lemma>
     </statement>
     </task>
 
     <task>
     <statement>
     <p>
-      A picture to illustrate the taxicab distance <m>d_T</m> between (points <m>x_1,x_2)</m> and
-      <m>(y_1,y_2)</m> is shown in <xref ref="F_PA_metric"/>.
-      Draw a picture of the unit circle
-      (the set of points a distance 1 from the origin)
-      using the Taxicab metric.
-      Explain your reasoning.
+      Ilustrasi jarak taksi <m>d_T</m> antara titik <m>(x_1,x_2)</m> dan
+      <m>(y_1,y_2)</m> diperlihatkan dalam <xref ref="F_PA_metric"/>.
+      Gambarlah lingkaran satuan
+      (himpunan titik yang berjarak 1 dari titik asal)
+      menurut metrik taksi.
+      Jelaskan alasan Anda.
     </p>
     
     <figure xml:id="F_PA_metric">
-      <caption>The taxicab distance between <m>(x_1,x_2)</m> and <m>(y_1,y_2)</m> in <m>\R^2</m>.</caption>
-      <image width="50%" source="Taxicab"/>
+      <caption>Jarak taksi antara <m>(x_1,x_2)</m> dan <m>(y_1,y_2)</m> pada <m>\R^2</m>.</caption>
+      <image width="50%" source="Taxicab"><description>Bidang koordinat memperlihatkan dua titik berlabel <m>(x_1,x_2)</m> di kiri bawah dan <m>(y_1,y_2)</m> di kanan atas. Keduanya dihubungkan oleh lintasan berbentuk siku-siku: satu ruas horizontal sepanjang <m>|x_1-y_1|</m> diikuti satu ruas vertikal sepanjang <m>|x_2-y_2|</m>.</description></image>
     </figure>
     </statement>
     </task>
   </exploration>
 
   <p>
-    The taxicab metric can be extended to <m>\R^n</m> for any <m>n \geq 1</m> as follows.
-    If <m>x = (x_1, x_2, \ldots,
-    x_n)</m> and <m>y = (y_1, y_2, \ldots,
-    y_n)</m> are in <m>\R^n</m>,
-    then the taxicab distance <m>d_T(x,y)</m> from <m>x</m> to <m>y</m> is defined as
+    Metrik taksi dapat diperluas ke <m>\R^n</m> untuk setiap <m>n \geq 1</m> sebagai berikut.
+    Jika <m>x = (x_1, x_2, \ldots,
+    x_n)</m> dan <m>y = (y_1, y_2, \ldots,
+    y_n)</m> berada di dalam <m>\R^n</m>,
+    maka jarak taksi <m>d_T(x,y)</m> dari <m>x</m> ke <m>y</m> didefinisikan sebagai
     <me>
       d_T(x,y) = |x_1-y_1| + |x_2-y_2| + \cdots + |x_n-y_n| = \sum_{i=1}^n |x_i-y_i|
     </me>.

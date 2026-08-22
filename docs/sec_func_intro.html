@@ -86,7 +86,7 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-02-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–2 — Himpunan, Fungsi, dan Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-03-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–3 — Himpunan, Fungsi, Ruang Metrik, dan Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -214,10 +214,10 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch02-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch03-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-sets-functions.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan dan Fungsi</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, dan Ruang Metrik</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
@@ -243,6 +243,16 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_metric_space_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space.html" class="internal"><span class="title">Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_euclid_rn.html" class="internal"><span class="title">Metrik Euklides pada <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -264,6 +274,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch02-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
 <li><div class="toc-item"><a href="o003-c90-ch02-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
 <li><div class="toc-item"><a href="o003-c90-ch02-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan tujuh belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch03-companion.html" class="internal"><span class="codenumber">C</span> <span class="title">Pendamping Mandiri Bab 3: Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch03-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan empat belas latihan</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
@@ -336,32 +355,32 @@ f : a \mapsto b\text{.}
 </div></li>
 <li id="li-66"><div class="para" id="p-206">Fungsi <span class="process-math">\(f\)</span> merupakan <dfn class="terminology">bijeksi</dfn> jika <span class="process-math">\(f\)</span> sekaligus merupakan injeksi dan surjeksi.</div></li>
 </ol>
-</div></article><article class="exploration project-like" id="exploration-2"><h3 class="heading">
-<span class="type">Aktivitas Persiapan</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="introduction-19">
-<div class="para logical" id="p-207">
-<div class="para">Kita sering mendefinisikan fungsi dengan aturan, tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik. Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan. Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan/atau surjeksi. Sebagai contoh, misalkan <span class="process-math">\(f(x) = x^2+1\text{.}\)</span> (Perhatikan bahwa <span class="process-math">\(f\)</span> adalah fungsinya dan <span class="process-math">\(f(x)\)</span> adalah citra <span class="process-math">\(x\)</span> oleh <span class="process-math">\(f\text{.}\)</span>) Perhatikan bahwa</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(2) = 5 \text{ dan }  f(-2) = 5\text{.}
-\end{equation*}
-</div>
-</div> <div class="para" id="p-208">Pengamatan ini cukup untuk membuktikan bahwa fungsi <span class="process-math">\(f\)</span> bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.</div> <div class="para" id="p-209">Karena <span class="process-math">\(f(x) = x^2 + 1\text{,}\)</span> kita mengetahui bahwa <span class="process-math">\(f(x) \geq 1\)</span> untuk setiap <span class="process-math">\(x \in \R\text{.}\)</span> Hal ini menyiratkan bahwa fungsi <span class="process-math">\(f\)</span> bukan surjeksi. Sebagai contoh, <span class="process-math">\(-2\)</span> berada di dalam kodomain <span class="process-math">\(f\text{,}\)</span> sedangkan <span class="process-math">\(f(x) \neq -2\)</span> untuk setiap <span class="process-math">\(x\)</span> di dalam domain <span class="process-math">\(f\text{.}\)</span>
-</div>
-</div>
-<article class="task exercise-like" id="task-74"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="introduction" id="introduction-20">
-<div class="para" id="p-210">Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula. Fungsi semacam ini disebut pembatasan.</div> <article class="definition definition-like" id="definition-5"><h5 class="heading">
+</div></article><article class="definition definition-like" id="definition-5"><h3 class="heading">
 <span class="type">Definisi</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
-</h5> <div class="para logical" id="p-211">
+</h3> <div class="para logical" id="p-207">
 <div class="para">Misalkan <span class="process-math">\(f\)</span> suatu fungsi dari himpunan <span class="process-math">\(A\)</span> ke himpunan <span class="process-math">\(B\)</span> dan misalkan <span class="process-math">\(C\)</span> suatu subhimpunan dari <span class="process-math">\(A\text{.}\)</span> <dfn class="terminology">Pembatasan</dfn> <span class="process-math">\(f\)</span> pada <span class="process-math">\(C\)</span> adalah fungsi <span class="process-math">\(F: C \to B\)</span> yang memenuhi</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F(c) = f(c) \text{ untuk setiap }  c \in C\text{.}
 \end{equation*}
 </div>
-</div></article> <div class="para" id="p-212">Pembatasan tersebut juga dinyatakan dengan notasi <span class="process-math">\(F = f\mid_C\text{.}\)</span> Kita juga menyebut <span class="process-math">\(f\)</span> sebagai suatu <dfn class="terminology">perluasan</dfn> dari <span class="process-math">\(F\text{.}\)</span> Misalkan <span class="process-math">\(f: \R \to \R\)</span> didefinisikan oleh <span class="process-math">\(f(x) = x^2+1\text{,}\)</span> dan misalkan <span class="process-math">\(h = f \mid_{\R^+}\text{,}\)</span> dengan <span class="process-math">\(\R^+\)</span> menyatakan himpunan bilangan real positif. Jadi, <span class="process-math">\(h\)</span> memiliki kodomain yang sama dengan <span class="process-math">\(f\text{,}\)</span> tetapi domain yang berbeda.</div>
+</div></article><article class="exploration project-like" id="exploration-2"><h3 class="heading">
+<span class="type">Aktivitas Persiapan</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="introduction-19">
+<div class="para logical" id="p-208">
+<div class="para">Kita sering mendefinisikan fungsi dengan aturan, tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik. Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan. Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan/atau surjeksi. Sebagai contoh, misalkan <span class="process-math">\(f(x) = x^2+1\text{.}\)</span> (Perhatikan bahwa <span class="process-math">\(f\)</span> adalah fungsinya dan <span class="process-math">\(f(x)\)</span> adalah citra <span class="process-math">\(x\)</span> oleh <span class="process-math">\(f\text{.}\)</span>) Perhatikan bahwa</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(2) = 5 \text{ dan }  f(-2) = 5\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-209">Pengamatan ini cukup untuk membuktikan bahwa fungsi <span class="process-math">\(f\)</span> bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.</div> <div class="para" id="p-210">Karena <span class="process-math">\(f(x) = x^2 + 1\text{,}\)</span> kita mengetahui bahwa <span class="process-math">\(f(x) \geq 1\)</span> untuk setiap <span class="process-math">\(x \in \R\text{.}\)</span> Hal ini menyiratkan bahwa fungsi <span class="process-math">\(f\)</span> bukan surjeksi. Sebagai contoh, <span class="process-math">\(-2\)</span> berada di dalam kodomain <span class="process-math">\(f\text{,}\)</span> sedangkan <span class="process-math">\(f(x) \neq -2\)</span> untuk setiap <span class="process-math">\(x\)</span> di dalam domain <span class="process-math">\(f\text{.}\)</span>
+</div>
+</div>
+<article class="task exercise-like" id="task-74"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="introduction" id="introduction-20">
+<div class="para" id="p-211">Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula. Fungsi semacam ini disebut pembatasan.</div> <div class="para" id="p-212">Pembatasan tersebut juga dinyatakan dengan notasi <span class="process-math">\(F = f\mid_C\text{.}\)</span> Kita juga menyebut <span class="process-math">\(f\)</span> sebagai suatu <dfn class="terminology">perluasan</dfn> dari <span class="process-math">\(F\text{.}\)</span> Misalkan <span class="process-math">\(f: \R \to \R\)</span> didefinisikan oleh <span class="process-math">\(f(x) = x^2+1\text{,}\)</span> dan misalkan <span class="process-math">\(h = f \mid_{\R^+}\text{,}\)</span> dengan <span class="process-math">\(\R^+\)</span> menyatakan himpunan bilangan real positif. Jadi, <span class="process-math">\(h\)</span> memiliki kodomain yang sama dengan <span class="process-math">\(f\text{,}\)</span> tetapi domain yang berbeda.</div>
 </div>
 <article class="task exercise-like" id="task-75"><h5 class="heading"><span class="codenumber">(i)</span></h5>
 <div class="para" id="p-213">Buktikan bahwa <span class="process-math">\(h\)</span> merupakan injeksi.</div></article><article class="task exercise-like" id="task-76"><h5 class="heading"><span class="codenumber">(ii)</span></h5>

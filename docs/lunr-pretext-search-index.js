@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch02-edition-note",
+  "id": "o003-c90-ch03-edition-note",
   "level": "1",
-  "url": "o003-c90-ch02-edition-note.html",
+  "url": "o003-c90-ch03-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat dua bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan markah yang dicatat, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat tiga bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
 },
 {
   "id": "sec_sets_intro",
@@ -340,7 +340,7 @@ var ptx_lunr_docs = [
   "type": "Bagian",
   "number": "",
   "title": "Pendahuluan",
-  "body": " Pendahuluan  Banyak sifat topologis didefinisikan menggunakan fungsi kontinu. Kontinuitas akan kita pelajari secara khusus nanti untuk saat ini, kita meninjau beberapa konsep penting yang berkaitan dengan fungsi. Sebagian besar konsep ini semestinya sudah tidak asing, tetapi beberapa di antaranya mungkin baru.  Pertama-tama kita sajikan definisi-definisi dasarnya. Sebagian besar pembahasan kita sebelumnya mungkin berkaitan dengan fungsi yang memetakan bilangan real ke bilangan real, tetapi di sini kita akan memandang fungsi dari sudut pandang yang lebih umum. Kita mulai dengan definisi formal suatu fungsi.   fungsi   Suatu fungsi  dari himpunan tak kosong ke himpunan adalah koleksi pasangan terurut sedemikian sehingga   untuk setiap , terdapat pasangan di dalam , dan    jika dan berada di dalam , maka .       Perhatikan bahwa sifat pertama adalah sifat eksistensi jika , maka terdapat unsur di dalam yang dipasangkan dengan . Sifat pertama ini juga menyatakan bahwa setiap unsur di dalam digunakan, atau bahwa setiap unsur di dalam dipasangkan dengan suatu unsur di dalam , dan unsur di dalam tersebut bergantung pada unsur di dalam yang dipilih. Sifat kedua adalah sifat ketunggalan hanya ada satu unsur di dalam yang dipasangkan dengan suatu unsur tertentu di dalam .  Umumnya kita menggunakan notasi lain untuk suatu fungsi. Jika merupakan anggota fungsi , kita menulis , dan dengan cara ini kita memandang sebagai pemetaan dari himpunan ke himpunan . Kita menyatakan bahwa adalah pemetaan dari himpunan ke himpunan dengan notasi .  Jika memetakan unsur ke unsur , kita juga menggunakan notasi .  Ada beberapa istilah dan notasi yang sudah dikenal dan berkaitan dengan fungsi. Misalkan suatu fungsi dari himpunan ke himpunan .   Himpunan disebut domain  fungsi domain dari , dan kita menulis .    Himpunan disebut kodomain  fungsi kodomain dari , dan kita menulis .    Subhimpunan dari disebut daerah hasil  fungsi daerah hasil dari , yang kita nyatakan dengan .    Jika , maka adalah citra  citra suatu unsur dari oleh . Karena setiap di dalam dipasangkan dengan tepat satu , citra oleh hanya ada satu. Karena itu, kita dapat merujuk tanpa ambiguitas pada citra unsur tersebut .    Jika dan untuk suatu , maka disebut suatu prapeta  prapeta suatu unsur dari . Untuk suatu tertentu, mungkin memiliki banyak prapeta yang berbeda, mungkin tidak memiliki prapeta, atau mungkin memiliki tepat satu prapeta. Menyusun contoh untuk setiap keadaan tersebut dapat membantu pemahaman. Karena prapeta suatu unsur belum tentu tunggal, kita menyebutnya suatu prapeta .     Mengetahui domain dan kodomain sangat penting ketika bekerja dengan fungsi, dan kedua himpunan ini akan banyak kita perhatikan.  Dalam pembelajaran matematika sebelumnya, kita mungkin telah menjumpai fungsi satu-ke-satu dan fungsi pada. Fungsi satu-ke-satu (atau injeksi) dan fungsi pada (atau surjeksi) merupakan jenis fungsi khusus; definisinya kita sajikan di sini.   fungsi injeksi  fungsi surjeksi  fungsi bijeksi   Misalkan suatu fungsi dari himpunan ke himpunan .   Fungsi merupakan injeksi jika setiap kali dan berada di dalam , berlaku . Secara ekuivalen, dengan menggunakan notasi fungsi, merupakan injeksi jika mengakibatkan .    Fungsi merupakan surjeksi jika untuk setiap , terdapat sedemikian sehingga berada di dalam . Secara ekuivalen, dengan menggunakan notasi fungsi, merupakan surjeksi jika untuk setiap terdapat sedemikian sehingga .    Fungsi merupakan bijeksi jika sekaligus merupakan injeksi dan surjeksi.         Kita sering mendefinisikan fungsi dengan aturan, tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik. Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan. Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan\/atau surjeksi. Sebagai contoh, misalkan . (Perhatikan bahwa adalah fungsinya dan adalah citra oleh .) Perhatikan bahwa .  Pengamatan ini cukup untuk membuktikan bahwa fungsi bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.  Karena , kita mengetahui bahwa untuk setiap . Hal ini menyiratkan bahwa fungsi bukan surjeksi. Sebagai contoh, berada di dalam kodomain , sedangkan untuk setiap di dalam domain .    Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula. Fungsi semacam ini disebut pembatasan.   fungsi pembatasan   Misalkan suatu fungsi dari himpunan ke himpunan dan misalkan suatu subhimpunan dari . Pembatasan  pada adalah fungsi yang memenuhi .    Pembatasan tersebut juga dinyatakan dengan notasi . Kita juga menyebut sebagai suatu perluasan dari . Misalkan didefinisikan oleh , dan misalkan , dengan menyatakan himpunan bilangan real positif. Jadi, memiliki kodomain yang sama dengan , tetapi domain yang berbeda.   Buktikan bahwa merupakan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan , dan misalkan didefinisikan oleh . Perhatikan bahwa fungsi menggunakan rumus yang sama dengan fungsi dan memiliki domain yang sama dengan , tetapi kodomainnya berbeda dari kodomain .   Jelaskan mengapa bukan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan . Definisikan dengan .   Buktikan atau berikan contoh tandingan: fungsi merupakan injeksi.   Buktikan atau berikan contoh tandingan: fungsi merupakan surjeksi.    Dalam aktivitas pendahuluan kita, rumus matematika yang sama digunakan untuk menentukan keluaran fungsi-fungsi tersebut. Namun:   Salah satu fungsi bukan injeksi maupun surjeksi.    Salah satu fungsi bukan injeksi, tetapi merupakan surjeksi.    Salah satu fungsi merupakan injeksi, tetapi bukan surjeksi.    Salah satu fungsi sekaligus merupakan injeksi dan surjeksi.     Hal ini menggambarkan fakta penting bahwa sifat injektif atau surjektif suatu fungsi tidak hanya bergantung pada rumus yang menentukan keluaran fungsi tersebut, tetapi juga pada domain dan kodomainnya.  Salah satu fungsi khusus yang penting dan selalu merupakan injeksi sekaligus surjeksi adalah fungsi identitas  fungsi identitas pada suatu himpunan. Jika adalah suatu himpunan, fungsi identitas pada dinyatakan dengan , dan untuk setiap .  "
+  "body": " Pendahuluan  Banyak sifat topologis didefinisikan menggunakan fungsi kontinu. Kontinuitas akan kita pelajari secara khusus nanti untuk saat ini, kita meninjau beberapa konsep penting yang berkaitan dengan fungsi. Sebagian besar konsep ini semestinya sudah tidak asing, tetapi beberapa di antaranya mungkin baru.  Pertama-tama kita sajikan definisi-definisi dasarnya. Sebagian besar pembahasan kita sebelumnya mungkin berkaitan dengan fungsi yang memetakan bilangan real ke bilangan real, tetapi di sini kita akan memandang fungsi dari sudut pandang yang lebih umum. Kita mulai dengan definisi formal suatu fungsi.   fungsi   Suatu fungsi  dari himpunan tak kosong ke himpunan adalah koleksi pasangan terurut sedemikian sehingga   untuk setiap , terdapat pasangan di dalam , dan    jika dan berada di dalam , maka .       Perhatikan bahwa sifat pertama adalah sifat eksistensi jika , maka terdapat unsur di dalam yang dipasangkan dengan . Sifat pertama ini juga menyatakan bahwa setiap unsur di dalam digunakan, atau bahwa setiap unsur di dalam dipasangkan dengan suatu unsur di dalam , dan unsur di dalam tersebut bergantung pada unsur di dalam yang dipilih. Sifat kedua adalah sifat ketunggalan hanya ada satu unsur di dalam yang dipasangkan dengan suatu unsur tertentu di dalam .  Umumnya kita menggunakan notasi lain untuk suatu fungsi. Jika merupakan anggota fungsi , kita menulis , dan dengan cara ini kita memandang sebagai pemetaan dari himpunan ke himpunan . Kita menyatakan bahwa adalah pemetaan dari himpunan ke himpunan dengan notasi .  Jika memetakan unsur ke unsur , kita juga menggunakan notasi .  Ada beberapa istilah dan notasi yang sudah dikenal dan berkaitan dengan fungsi. Misalkan suatu fungsi dari himpunan ke himpunan .   Himpunan disebut domain  fungsi domain dari , dan kita menulis .    Himpunan disebut kodomain  fungsi kodomain dari , dan kita menulis .    Subhimpunan dari disebut daerah hasil  fungsi daerah hasil dari , yang kita nyatakan dengan .    Jika , maka adalah citra  citra suatu unsur dari oleh . Karena setiap di dalam dipasangkan dengan tepat satu , citra oleh hanya ada satu. Karena itu, kita dapat merujuk tanpa ambiguitas pada citra unsur tersebut .    Jika dan untuk suatu , maka disebut suatu prapeta  prapeta suatu unsur dari . Untuk suatu tertentu, mungkin memiliki banyak prapeta yang berbeda, mungkin tidak memiliki prapeta, atau mungkin memiliki tepat satu prapeta. Menyusun contoh untuk setiap keadaan tersebut dapat membantu pemahaman. Karena prapeta suatu unsur belum tentu tunggal, kita menyebutnya suatu prapeta .     Mengetahui domain dan kodomain sangat penting ketika bekerja dengan fungsi, dan kedua himpunan ini akan banyak kita perhatikan.  Dalam pembelajaran matematika sebelumnya, kita mungkin telah menjumpai fungsi satu-ke-satu dan fungsi pada. Fungsi satu-ke-satu (atau injeksi) dan fungsi pada (atau surjeksi) merupakan jenis fungsi khusus; definisinya kita sajikan di sini.   fungsi injeksi  fungsi surjeksi  fungsi bijeksi   Misalkan suatu fungsi dari himpunan ke himpunan .   Fungsi merupakan injeksi jika setiap kali dan berada di dalam , berlaku . Secara ekuivalen, dengan menggunakan notasi fungsi, merupakan injeksi jika mengakibatkan .    Fungsi merupakan surjeksi jika untuk setiap , terdapat sedemikian sehingga berada di dalam . Secara ekuivalen, dengan menggunakan notasi fungsi, merupakan surjeksi jika untuk setiap terdapat sedemikian sehingga .    Fungsi merupakan bijeksi jika sekaligus merupakan injeksi dan surjeksi.        fungsi pembatasan   Misalkan suatu fungsi dari himpunan ke himpunan dan misalkan suatu subhimpunan dari . Pembatasan  pada adalah fungsi yang memenuhi .      Kita sering mendefinisikan fungsi dengan aturan, tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik. Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan. Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan\/atau surjeksi. Sebagai contoh, misalkan . (Perhatikan bahwa adalah fungsinya dan adalah citra oleh .) Perhatikan bahwa .  Pengamatan ini cukup untuk membuktikan bahwa fungsi bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.  Karena , kita mengetahui bahwa untuk setiap . Hal ini menyiratkan bahwa fungsi bukan surjeksi. Sebagai contoh, berada di dalam kodomain , sedangkan untuk setiap di dalam domain .    Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula. Fungsi semacam ini disebut pembatasan.  Pembatasan tersebut juga dinyatakan dengan notasi . Kita juga menyebut sebagai suatu perluasan dari . Misalkan didefinisikan oleh , dan misalkan , dengan menyatakan himpunan bilangan real positif. Jadi, memiliki kodomain yang sama dengan , tetapi domain yang berbeda.   Buktikan bahwa merupakan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan , dan misalkan didefinisikan oleh . Perhatikan bahwa fungsi menggunakan rumus yang sama dengan fungsi dan memiliki domain yang sama dengan , tetapi kodomainnya berbeda dari kodomain .   Jelaskan mengapa bukan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan . Definisikan dengan .   Buktikan atau berikan contoh tandingan: fungsi merupakan injeksi.   Buktikan atau berikan contoh tandingan: fungsi merupakan surjeksi.    Dalam aktivitas pendahuluan kita, rumus matematika yang sama digunakan untuk menentukan keluaran fungsi-fungsi tersebut. Namun:   Salah satu fungsi bukan injeksi maupun surjeksi.    Salah satu fungsi bukan injeksi, tetapi merupakan surjeksi.    Salah satu fungsi merupakan injeksi, tetapi bukan surjeksi.    Salah satu fungsi sekaligus merupakan injeksi dan surjeksi.     Hal ini menggambarkan fakta penting bahwa sifat injektif atau surjektif suatu fungsi tidak hanya bergantung pada rumus yang menentukan keluaran fungsi tersebut, tetapi juga pada domain dan kodomainnya.  Salah satu fungsi khusus yang penting dan selalu merupakan injeksi sekaligus surjeksi adalah fungsi identitas  fungsi identitas pada suatu himpunan. Jika adalah suatu himpunan, fungsi identitas pada dinyatakan dengan , dan untuk setiap .  "
 },
 {
   "id": "def_function",
@@ -370,13 +370,22 @@ var ptx_lunr_docs = [
   "body": " fungsi injeksi  fungsi surjeksi  fungsi bijeksi   Misalkan suatu fungsi dari himpunan ke himpunan .   Fungsi merupakan injeksi jika setiap kali dan berada di dalam , berlaku . Secara ekuivalen, dengan menggunakan notasi fungsi, merupakan injeksi jika mengakibatkan .    Fungsi merupakan surjeksi jika untuk setiap , terdapat sedemikian sehingga berada di dalam . Secara ekuivalen, dengan menggunakan notasi fungsi, merupakan surjeksi jika untuk setiap terdapat sedemikian sehingga .    Fungsi merupakan bijeksi jika sekaligus merupakan injeksi dan surjeksi.      "
 },
 {
+  "id": "definition-5",
+  "level": "2",
+  "url": "sec_func_intro.html#definition-5",
+  "type": "Definisi",
+  "number": "2.3",
+  "title": "",
+  "body": " fungsi pembatasan   Misalkan suatu fungsi dari himpunan ke himpunan dan misalkan suatu subhimpunan dari . Pembatasan  pada adalah fungsi yang memenuhi .   "
+},
+{
   "id": "exploration-2",
   "level": "2",
   "url": "sec_func_intro.html#exploration-2",
   "type": "Aktivitas Persiapan",
   "number": "2.1",
   "title": "",
-  "body": "  Kita sering mendefinisikan fungsi dengan aturan, tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik. Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan. Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan\/atau surjeksi. Sebagai contoh, misalkan . (Perhatikan bahwa adalah fungsinya dan adalah citra oleh .) Perhatikan bahwa .  Pengamatan ini cukup untuk membuktikan bahwa fungsi bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.  Karena , kita mengetahui bahwa untuk setiap . Hal ini menyiratkan bahwa fungsi bukan surjeksi. Sebagai contoh, berada di dalam kodomain , sedangkan untuk setiap di dalam domain .    Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula. Fungsi semacam ini disebut pembatasan.   fungsi pembatasan   Misalkan suatu fungsi dari himpunan ke himpunan dan misalkan suatu subhimpunan dari . Pembatasan  pada adalah fungsi yang memenuhi .    Pembatasan tersebut juga dinyatakan dengan notasi . Kita juga menyebut sebagai suatu perluasan dari . Misalkan didefinisikan oleh , dan misalkan , dengan menyatakan himpunan bilangan real positif. Jadi, memiliki kodomain yang sama dengan , tetapi domain yang berbeda.   Buktikan bahwa merupakan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan , dan misalkan didefinisikan oleh . Perhatikan bahwa fungsi menggunakan rumus yang sama dengan fungsi dan memiliki domain yang sama dengan , tetapi kodomainnya berbeda dari kodomain .   Jelaskan mengapa bukan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan . Definisikan dengan .   Buktikan atau berikan contoh tandingan: fungsi merupakan injeksi.   Buktikan atau berikan contoh tandingan: fungsi merupakan surjeksi.   "
+  "body": "  Kita sering mendefinisikan fungsi dengan aturan, tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik. Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan. Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan\/atau surjeksi. Sebagai contoh, misalkan . (Perhatikan bahwa adalah fungsinya dan adalah citra oleh .) Perhatikan bahwa .  Pengamatan ini cukup untuk membuktikan bahwa fungsi bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.  Karena , kita mengetahui bahwa untuk setiap . Hal ini menyiratkan bahwa fungsi bukan surjeksi. Sebagai contoh, berada di dalam kodomain , sedangkan untuk setiap di dalam domain .    Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula. Fungsi semacam ini disebut pembatasan.  Pembatasan tersebut juga dinyatakan dengan notasi . Kita juga menyebut sebagai suatu perluasan dari . Misalkan didefinisikan oleh , dan misalkan , dengan menyatakan himpunan bilangan real positif. Jadi, memiliki kodomain yang sama dengan , tetapi domain yang berbeda.   Buktikan bahwa merupakan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan , dan misalkan didefinisikan oleh . Perhatikan bahwa fungsi menggunakan rumus yang sama dengan fungsi dan memiliki domain yang sama dengan , tetapi kodomainnya berbeda dari kodomain .   Jelaskan mengapa bukan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan . Definisikan dengan .   Buktikan atau berikan contoh tandingan: fungsi merupakan injeksi.   Buktikan atau berikan contoh tandingan: fungsi merupakan surjeksi.   "
 },
 {
   "id": "p-227",
@@ -755,6 +764,375 @@ var ptx_lunr_docs = [
   "number": "17",
   "title": "",
   "body": " Misalkan suatu fungsi. Untuk setiap pernyataan berikut, nyatakan “benar” jika pernyataan tersebut selalu benar. Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar, nyatakan “salah” dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan subhimpunan dari , maka .   Jika merupakan subhimpunan dari , maka .   Jika merupakan subhimpunan dari , maka .   Jika merupakan subhimpunan dari , maka .   Jika dan merupakan subhimpunan dari dengan , maka .   Jika dan merupakan subhimpunan dari dengan , maka .   Jika dan merupakan subhimpunan dari dengan , maka .   Jika dan merupakan subhimpunan dari , maka .   Jika dan merupakan subhimpunan dari , maka .   Jika dan merupakan subhimpunan dari , maka .   Jika dan merupakan subhimpunan dari , maka .   Jika dan merupakan subhimpunan dari , maka .   Jika dan merupakan subhimpunan dari , maka .  "
+},
+{
+  "id": "sec_metric_space_intro",
+  "level": "1",
+  "url": "sec_metric_space_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Ruang metrik merupakan contoh khusus ruang topologis. Ruang metrik adalah ruang yang dilengkapi dengan suatu metrik. Metrik adalah fungsi yang mengukur jarak antara titik-titik dalam ruang metrik.  Kita sudah mengenal satu metrik khusus, yaitu metrik Euklides pada , yang didefinisikan oleh .   Jarak Euklides antara dan , serta lingkaran satuan Euklides pada .  Gambar dua panel. Panel kiri memperlihatkan ruas garis horizontal yang menghubungkan titik berlabel dan . Panel kanan memperlihatkan sumbu koordinat dan sebuah lingkaran yang berpusat di titik asal serta memotong sumbu horizontal pada titik berjarak satu satuan dari pusat.   Dengan metrik ini, jarak antara dua titik dan adalah panjang ruas garis yang menghubungkan kedua titik tersebut, sedangkan lingkaran satuannya (himpunan titik yang berjarak 1 dari titik asal) berbentuk seperti lingkaran yang biasa kita bayangkan, sebagaimana diperlihatkan dalam .  Seperti yang akan kita lihat, ada banyak metrik lain yang dapat didefinisikan pada ataupun pada himpunan-himpunan lain.    Misalkan dan bilangan real. Maka .    Misalkan dan bilangan real. Untuk membuktikan lemma ini, kita meninjau beberapa kasus.   Kasus 1: dan  Dalam kasus ini, tak negatif sehingga , , dan . Dengan demikian, .    Kasus 2: dan  Dalam kasus ini, dan , dengan dan tak negatif. Berdasarkan Kasus 1, .    Kasus 3: Salah satu dari atau positif dan yang lainnya negatif  Tanpa mengurangi keumuman, kita andaikan dan . Sekali lagi, kita meninjau beberapa kasus. Perhatikan bahwa mengakibatkan .   Andaikan . Maka , sehingga . Akibatnya, .    Kasus terakhir terjadi ketika . Dalam kasus ini, , sehingga . Maka . Terakhir, mengakibatkan . Jadi, dan .      Ini membuktikan lemma kita untuk setiap pasangan , .     metrik taksi   Perhatikan fungsi yang memasangkan setiap pasangan titik dalam dengan bilangan real .  Fungsi ini kadang-kadang disebut metrik taksi atau jarak taksi karena jarak antara titik dan dapat dibayangkan sebagai jarak yang ditempuh dengan menyusuri ruas-ruas jalan kota, alih-alih bergerak langsung dari titik ke titik .  Setiap fungsi jarak seharusnya memenuhi sifat-sifat tertentu: jarak antara dua titik tidak boleh negatif; jarak dari titik ke titik harus sama dengan jarak dari titik ke titik ; jarak terpendek antara titik dan tidak boleh melebihi jumlah jarak dari ke suatu titik dan jarak dari ke ; dan jarak antara dua titik hanya boleh bernilai nol jika kedua titik tersebut sama. Dalam aktivitas ini, kita menentukan apakah memiliki sifat-sifat tersebut. Misalkan dan berada di dalam .    Buktikan bahwa .    Buktikan bahwa .    Buktikan bahwa jika dan hanya jika .    Misalkan berada di dalam . Pelajari bukti , kemudian gunakan untuk menunjukkan bahwa .  (Apakah Anda memiliki pertanyaan tentang bukti lemma ini?)    Ilustrasi jarak taksi antara titik dan diperlihatkan dalam . Gambarlah lingkaran satuan (himpunan titik yang berjarak 1 dari titik asal) menurut metrik taksi. Jelaskan alasan Anda.   Jarak taksi antara dan pada .  Bidang koordinat memperlihatkan dua titik berlabel di kiri bawah dan di kanan atas. Keduanya dihubungkan oleh lintasan berbentuk siku-siku: satu ruas horizontal sepanjang diikuti satu ruas vertikal sepanjang .     Metrik taksi dapat diperluas ke untuk setiap sebagai berikut. Jika dan berada di dalam , maka jarak taksi dari ke didefinisikan sebagai .  "
+},
+{
+  "id": "F_Euclidean_metric",
+  "level": "2",
+  "url": "sec_metric_space_intro.html#F_Euclidean_metric",
+  "type": "Gambar",
+  "number": "3.1",
+  "title": "",
+  "body": " Jarak Euklides antara dan , serta lingkaran satuan Euklides pada .  Gambar dua panel. Panel kiri memperlihatkan ruas garis horizontal yang menghubungkan titik berlabel dan . Panel kanan memperlihatkan sumbu koordinat dan sebuah lingkaran yang berpusat di titik asal serta memotong sumbu horizontal pada titik berjarak satu satuan dari pusat.  "
+},
+{
+  "id": "lem_abs_TI",
+  "level": "2",
+  "url": "sec_metric_space_intro.html#lem_abs_TI",
+  "type": "Lema",
+  "number": "3.2",
+  "title": "",
+  "body": "  Misalkan dan bilangan real. Maka .    Misalkan dan bilangan real. Untuk membuktikan lemma ini, kita meninjau beberapa kasus.   Kasus 1: dan  Dalam kasus ini, tak negatif sehingga , , dan . Dengan demikian, .    Kasus 2: dan  Dalam kasus ini, dan , dengan dan tak negatif. Berdasarkan Kasus 1, .    Kasus 3: Salah satu dari atau positif dan yang lainnya negatif  Tanpa mengurangi keumuman, kita andaikan dan . Sekali lagi, kita meninjau beberapa kasus. Perhatikan bahwa mengakibatkan .   Andaikan . Maka , sehingga . Akibatnya, .    Kasus terakhir terjadi ketika . Dalam kasus ini, , sehingga . Maka . Terakhir, mengakibatkan . Jadi, dan .      Ini membuktikan lemma kita untuk setiap pasangan , .   "
+},
+{
+  "id": "exploration-3",
+  "level": "2",
+  "url": "sec_metric_space_intro.html#exploration-3",
+  "type": "Aktivitas Persiapan",
+  "number": "3.1",
+  "title": "",
+  "body": " metrik taksi   Perhatikan fungsi yang memasangkan setiap pasangan titik dalam dengan bilangan real .  Fungsi ini kadang-kadang disebut metrik taksi atau jarak taksi karena jarak antara titik dan dapat dibayangkan sebagai jarak yang ditempuh dengan menyusuri ruas-ruas jalan kota, alih-alih bergerak langsung dari titik ke titik .  Setiap fungsi jarak seharusnya memenuhi sifat-sifat tertentu: jarak antara dua titik tidak boleh negatif; jarak dari titik ke titik harus sama dengan jarak dari titik ke titik ; jarak terpendek antara titik dan tidak boleh melebihi jumlah jarak dari ke suatu titik dan jarak dari ke ; dan jarak antara dua titik hanya boleh bernilai nol jika kedua titik tersebut sama. Dalam aktivitas ini, kita menentukan apakah memiliki sifat-sifat tersebut. Misalkan dan berada di dalam .    Buktikan bahwa .    Buktikan bahwa .    Buktikan bahwa jika dan hanya jika .    Misalkan berada di dalam . Pelajari bukti , kemudian gunakan untuk menunjukkan bahwa .  (Apakah Anda memiliki pertanyaan tentang bukti lemma ini?)    Ilustrasi jarak taksi antara titik dan diperlihatkan dalam . Gambarlah lingkaran satuan (himpunan titik yang berjarak 1 dari titik asal) menurut metrik taksi. Jelaskan alasan Anda.   Jarak taksi antara dan pada .  Bidang koordinat memperlihatkan dua titik berlabel di kiri bawah dan di kanan atas. Keduanya dihubungkan oleh lintasan berbentuk siku-siku: satu ruas horizontal sepanjang diikuti satu ruas vertikal sepanjang .    "
+},
+{
+  "id": "sec_metric_space",
+  "level": "1",
+  "url": "sec_metric_space.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ruang Metrik",
+  "body": " Ruang Metrik  Dalam sebagian besar pengalaman kita mempelajari matematika, pembahasan berlangsung di , tempat kita mengukur jarak antara titik dan dengan jarak Euklides standar . Dalam aktivitas pendahuluan, kita melihat bahwa fungsi memenuhi banyak sifat yang sama dengan . Sifat-sifat ini memungkinkan kita menggunakan maupun sebagai fungsi jarak. Setiap fungsi jarak kita sebut metrik , dan setiap ruang tempat suatu metrik didefinisikan disebut ruang metrik .   metrik   Suatu metrik pada ruang adalah fungsi yang memenuhi sifat-sifat berikut:    untuk setiap ,     jika dan hanya jika di dalam ,     untuk setiap , dan     untuk setiap .       Sifat 1 dan 2 suatu metrik menyatakan bahwa metrik tersebut definit positif , sedangkan sifat 3 menyatakan bahwa metrik tersebut simetris . Sifat 4 dalam definisi biasanya merupakan sifat metrik yang paling sulit diverifikasi dan disebut pertidaksamaan segitiga . pertidaksamaan segitiga    ruang metrik   Suatu ruang metrik adalah pasangan , dengan suatu metrik pada ruang .    Apabila metriknya jelas dari konteks, kita cukup menyebut sebagai ruang metrik.    Untuk setiap butir berikut, tentukan apakah merupakan ruang metrik. Jika merupakan ruang metrik, jelaskan alasannya. Jika bukan ruang metrik, tentukan sifat metrik mana yang dipenuhi oleh dan mana yang tidak. Jika merupakan ruang metrik, berikan deskripsi geometris lingkaran satuan (himpunan semua titik di dalam yang berjarak dari unsur nol) di ruang tersebut.     , .     ,      ,      , himpunan semua fungsi kontinu pada interval , .    Perlu diperhatikan bahwa tidak semua ruang metrik bersifat tak berhingga. Pada contoh berikut, kita membahas suatu metrik pada ruang berhingga.    Misalkan dan definisikan dengan nilai-nilai pada Tabel .   Tabel nilai fungsi                             Menurut definisi, kita mempunyai untuk setiap , dengan jika dan hanya jika . Karena tabel tersebut simetris terhadap diagonalnya, kita dapat melihat bahwa untuk setiap . Satu-satunya sifat yang masih perlu diverifikasi adalah pertidaksamaan segitiga. Jika , maka untuk setiap . Jika , maka dan . Jika , maka dan .  Dengan demikian, tersisa tiga kasus yang perlu dipertimbangkan, yaitu ketika , , dan berbeda satu sama lain. Sekarang, .  Jadi, merupakan metrik pada .     menunjukkan bahwa himpunan berhingga pun dapat menjadi ruang metrik. Bahkan, kita dapat membentuk ruang metrik berhingga dengan mengambil sebarang subhimpunan berhingga dari ruang metrik , lalu menggunakan pembatasan pada sebagai metrik. mengilustrasikan hal ini dengan menetapkan , , dan di dalam . Dengan demikian, merupakan pembatasan metrik Euklides pada himpunan . Cara lain untuk membangun ruang metrik berhingga adalah memulai dengan himpunan titik yang berhingga, kemudian membuat graf yang menggunakan titik-titik tersebut sebagai simpul. Buatlah sisi-sisi sedemikian sehingga graf tersebut terhubung (artinya, terdapat lintasan dari setiap simpul ke setiap simpul lainnya), lalu berikan bobot pada sisi-sisinya seperti yang diilustrasikan pada . Selanjutnya, kita mendefinisikan metrik pada dengan menetapkan sebagai panjang lintasan terpendek antara simpul dan di dalam graf. Sebagai contoh, pada graf ini.   Graf untuk mendefinisikan suatu metrik.  Graf berbobot dengan lima simpul a, b, c, d, dan e. Sisi-sisinya berbobot a–b: 3, a–c: 8, a–e: 1, b–d: 7, b–e: 2, c–d: 2, c–e: 7, dan d–e: 5.   Seperti metrik Euklides dan metrik taksi, butir (c) dalam dapat diperluas ke sebagai berikut. Jika dan berada di dalam , maka jarak maksimum dari ke didefinisikan sebagai .   metrik maksimum Metrik disebut metrik maksimum . Pada bagian berikutnya, kita membuktikan bahwa metrik Euklides memang merupakan suatu metrik. Pembuktian bahwa dan merupakan metrik diserahkan kepada dan .  "
+},
+{
+  "id": "p-418",
+  "level": "2",
+  "url": "sec_metric_space.html#p-418",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "metrik ruang metrik "
+},
+{
+  "id": "definition-9",
+  "level": "2",
+  "url": "sec_metric_space.html#definition-9",
+  "type": "Definisi",
+  "number": "3.4",
+  "title": "",
+  "body": " metrik   Suatu metrik pada ruang adalah fungsi yang memenuhi sifat-sifat berikut:    untuk setiap ,     jika dan hanya jika di dalam ,     untuk setiap , dan     untuk setiap .      "
+},
+{
+  "id": "p-424",
+  "level": "2",
+  "url": "sec_metric_space.html#p-424",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "definit positif simetris pertidaksamaan segitiga "
+},
+{
+  "id": "definition-10",
+  "level": "2",
+  "url": "sec_metric_space.html#definition-10",
+  "type": "Definisi",
+  "number": "3.5",
+  "title": "",
+  "body": " ruang metrik   Suatu ruang metrik adalah pasangan , dengan suatu metrik pada ruang .   "
+},
+{
+  "id": "act_MS_metrics",
+  "level": "2",
+  "url": "sec_metric_space.html#act_MS_metrics",
+  "type": "Kegiatan",
+  "number": "3.2",
+  "title": "",
+  "body": "  Untuk setiap butir berikut, tentukan apakah merupakan ruang metrik. Jika merupakan ruang metrik, jelaskan alasannya. Jika bukan ruang metrik, tentukan sifat metrik mana yang dipenuhi oleh dan mana yang tidak. Jika merupakan ruang metrik, berikan deskripsi geometris lingkaran satuan (himpunan semua titik di dalam yang berjarak dari unsur nol) di ruang tersebut.     , .     ,      ,      , himpunan semua fungsi kontinu pada interval , .   "
+},
+{
+  "id": "exp_finite_ms",
+  "level": "2",
+  "url": "sec_metric_space.html#exp_finite_ms",
+  "type": "Contoh",
+  "number": "3.6",
+  "title": "",
+  "body": "  Misalkan dan definisikan dengan nilai-nilai pada Tabel .   Tabel nilai fungsi                             Menurut definisi, kita mempunyai untuk setiap , dengan jika dan hanya jika . Karena tabel tersebut simetris terhadap diagonalnya, kita dapat melihat bahwa untuk setiap . Satu-satunya sifat yang masih perlu diverifikasi adalah pertidaksamaan segitiga. Jika , maka untuk setiap . Jika , maka dan . Jika , maka dan .  Dengan demikian, tersisa tiga kasus yang perlu dipertimbangkan, yaitu ketika , , dan berbeda satu sama lain. Sekarang, .  Jadi, merupakan metrik pada .   "
+},
+{
+  "id": "F_Graph_metric",
+  "level": "2",
+  "url": "sec_metric_space.html#F_Graph_metric",
+  "type": "Gambar",
+  "number": "3.8",
+  "title": "",
+  "body": " Graf untuk mendefinisikan suatu metrik.  Graf berbobot dengan lima simpul a, b, c, d, dan e. Sisi-sisinya berbobot a–b: 3, a–c: 8, a–e: 1, b–d: 7, b–e: 2, c–d: 2, c–e: 7, dan d–e: 5.  "
+},
+{
+  "id": "p-439",
+  "level": "2",
+  "url": "sec_metric_space.html#p-439",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "maksimum "
+},
+{
+  "id": "sec_euclid_rn",
+  "level": "1",
+  "url": "sec_euclid_rn.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Metrik Euklides pada <span class=\"process-math\">\\(\\R^n\\)<\/span>",
+  "body": " Metrik Euklides pada  Ruang metrik yang paling kita kenal adalah ruang metrik , dengan    metrik Euklides Metrik disebut metrik standar atau metrik Euklides pada .  Metrik Euklides ini dapat kita perumum dari ke ruang real berdimensi berapa pun. Misalkan bilangan bulat positif dan misalkan serta berada di dalam . Kita definisikan dengan .  Dalam aktivitas berikutnya, kita akan menunjukkan bahwa memenuhi tiga sifat pertama suatu metrik.    Misalkan dan berada di dalam .    Tunjukkan bahwa .    Tunjukkan bahwa .    Tunjukkan bahwa jika , maka .    Tunjukkan bahwa jika , maka .    Membuktikan bahwa pertidaksamaan segitiga terpenuhi sering kali merupakan bagian tersulit dalam membuktikan bahwa suatu fungsi adalah metrik. Kita akan menguraikan pembuktian ini dengan bantuan Pertidaksamaan Cauchy-Schwarz.   Pertidaksamaan Cauchy-Schwarz  Pertidaksamaan Cauchy-Schwarz   Misalkan bilangan bulat positif dan , berada di dalam . Maka .      Sebelum membuktikan Pertidaksamaan Cauchy-Schwarz, mari kita telaah pertidaksamaan tersebut dalam dua keadaan khusus.    Misalkan dan berada di dalam . Verifikasikan Pertidaksamaan Cauchy-Schwarz dalam keadaan ini.    Misalkan dan berada di dalam . Verifikasikan Pertidaksamaan Cauchy-Schwarz dalam keadaan ini.    Sekarang kita buktikan Pertidaksamaan Cauchy-Schwarz.   Misalkan bilangan bulat positif dan , berada di dalam . Untuk memverifikasi , cukup ditunjukkan bahwa .  Hal ini sulit dilakukan secara langsung, tetapi ada siasat yang dapat kita gunakan. Perhatikan bentuk .  (Semua penjumlahan kita dipahami berlangsung dari 1 sampai , sehingga batas penjumlahan tidak akan kita tuliskan lagi sepanjang sisa pembuktian.) Sekarang .  Untuk menafsirkan bentuk terakhir ini dengan lebih jelas, misalkan , , dan . Jika , pertidaksamaan yang hendak dibuktikan langsung berlaku. Jadi, dalam argumen berikutnya kita dapat menganggap , sehingga . Pertidaksamaan yang diberikan oleh kemudian dapat ditulis dalam bentuk .  Jadi, kita memiliki polinom kuadrat yang tidak pernah bernilai negatif. Hal ini menyiratkan bahwa polinom kuadrat memiliki paling banyak satu akar real. Rumus kuadrat memberikan akar-akar sebagai .  Jika , maka memiliki dua akar real. Oleh karena itu, agar memiliki paling banyak satu akar real, harus berlaku atau .  Dengan demikian, Pertidaksamaan Cauchy-Schwarz terbukti.   Salah satu akibat Pertidaksamaan Cauchy-Schwarz yang kita perlukan untuk menunjukkan bahwa adalah metrik ialah hasil berikut.    Misalkan bilangan bulat positif dan , berada di dalam . Maka .      Sebelum membuktikan akibat tersebut, mari kita telaah hasil itu dalam dua keadaan khusus.    Misalkan dan berada di dalam . Verifikasikan dalam keadaan ini.    Misalkan dan berada di dalam . Verifikasikan dalam keadaan ini.    Sekarang kita buktikan .   Misalkan bilangan bulat positif dan , berada di dalam . Sekarang .  Mengambil akar kuadrat kedua ruas menghasilkan pertidaksamaan yang diinginkan.   Sekarang kita dapat menyelesaikan pembuktian bahwa adalah metrik.   Misalkan bilangan bulat positif dan , , serta berada di dalam . Gunakan untuk menunjukkan bahwa .   Dengan demikian, pembuktian bahwa metrik Euklides memang merupakan metrik telah selesai.  Kita telah melihat beberapa metrik dalam bagian ini, dan sebagian di antaranya memiliki nama khusus. Misalkan dan .   Metrik Euklides , dengan .    Metrik taksi , dengan .    Metrik maksimum , dengan .     Kita baru menunjukkan bahwa dan merupakan metrik pada , tetapi argumen serupa berlaku di dalam . Pembuktiannya diserahkan kepada dan . Selain itu, metrik diskret  metrik diskret  menjadikan setiap himpunan sebagai ruang metrik. Pembuktiannya diserahkan kepada .  "
+},
+{
+  "id": "p-441",
+  "level": "2",
+  "url": "sec_euclid_rn.html#p-441",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "standar Euklides "
+},
+{
+  "id": "activity-15",
+  "level": "2",
+  "url": "sec_euclid_rn.html#activity-15",
+  "type": "Kegiatan",
+  "number": "3.3",
+  "title": "",
+  "body": "  Misalkan dan berada di dalam .    Tunjukkan bahwa .    Tunjukkan bahwa .    Tunjukkan bahwa jika , maka .    Tunjukkan bahwa jika , maka .   "
+},
+{
+  "id": "lem_CS_Euclidean",
+  "level": "2",
+  "url": "sec_euclid_rn.html#lem_CS_Euclidean",
+  "type": "Lema",
+  "number": "3.9",
+  "title": "Pertidaksamaan Cauchy-Schwarz.",
+  "body": " Pertidaksamaan Cauchy-Schwarz  Pertidaksamaan Cauchy-Schwarz   Misalkan bilangan bulat positif dan , berada di dalam . Maka .   "
+},
+{
+  "id": "activity-16",
+  "level": "2",
+  "url": "sec_euclid_rn.html#activity-16",
+  "type": "Kegiatan",
+  "number": "3.4",
+  "title": "",
+  "body": "  Sebelum membuktikan Pertidaksamaan Cauchy-Schwarz, mari kita telaah pertidaksamaan tersebut dalam dua keadaan khusus.    Misalkan dan berada di dalam . Verifikasikan Pertidaksamaan Cauchy-Schwarz dalam keadaan ini.    Misalkan dan berada di dalam . Verifikasikan Pertidaksamaan Cauchy-Schwarz dalam keadaan ini.   "
+},
+{
+  "id": "proof-3",
+  "level": "2",
+  "url": "sec_euclid_rn.html#proof-3",
+  "type": "Bukti",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan bilangan bulat positif dan , berada di dalam . Untuk memverifikasi , cukup ditunjukkan bahwa .  Hal ini sulit dilakukan secara langsung, tetapi ada siasat yang dapat kita gunakan. Perhatikan bentuk .  (Semua penjumlahan kita dipahami berlangsung dari 1 sampai , sehingga batas penjumlahan tidak akan kita tuliskan lagi sepanjang sisa pembuktian.) Sekarang .  Untuk menafsirkan bentuk terakhir ini dengan lebih jelas, misalkan , , dan . Jika , pertidaksamaan yang hendak dibuktikan langsung berlaku. Jadi, dalam argumen berikutnya kita dapat menganggap , sehingga . Pertidaksamaan yang diberikan oleh kemudian dapat ditulis dalam bentuk .  Jadi, kita memiliki polinom kuadrat yang tidak pernah bernilai negatif. Hal ini menyiratkan bahwa polinom kuadrat memiliki paling banyak satu akar real. Rumus kuadrat memberikan akar-akar sebagai .  Jika , maka memiliki dua akar real. Oleh karena itu, agar memiliki paling banyak satu akar real, harus berlaku atau .  Dengan demikian, Pertidaksamaan Cauchy-Schwarz terbukti.  "
+},
+{
+  "id": "cor_SL",
+  "level": "2",
+  "url": "sec_euclid_rn.html#cor_SL",
+  "type": "Corollary",
+  "number": "3.10",
+  "title": "",
+  "body": "  Misalkan bilangan bulat positif dan , berada di dalam . Maka .   "
+},
+{
+  "id": "activity-17",
+  "level": "2",
+  "url": "sec_euclid_rn.html#activity-17",
+  "type": "Kegiatan",
+  "number": "3.5",
+  "title": "",
+  "body": "  Sebelum membuktikan akibat tersebut, mari kita telaah hasil itu dalam dua keadaan khusus.    Misalkan dan berada di dalam . Verifikasikan dalam keadaan ini.    Misalkan dan berada di dalam . Verifikasikan dalam keadaan ini.   "
+},
+{
+  "id": "proof-4",
+  "level": "2",
+  "url": "sec_euclid_rn.html#proof-4",
+  "type": "Bukti",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan bilangan bulat positif dan , berada di dalam . Sekarang .  Mengambil akar kuadrat kedua ruas menghasilkan pertidaksamaan yang diinginkan.  "
+},
+{
+  "id": "activity-18",
+  "level": "2",
+  "url": "sec_euclid_rn.html#activity-18",
+  "type": "Kegiatan",
+  "number": "3.6",
+  "title": "",
+  "body": " Misalkan bilangan bulat positif dan , , serta berada di dalam . Gunakan untuk menunjukkan bahwa .  "
+},
+{
+  "id": "p-477",
+  "level": "2",
+  "url": "sec_euclid_rn.html#p-477",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "metrik diskret "
+},
+{
+  "id": "sec_metric_space_summ",
+  "level": "1",
+  "url": "sec_metric_space_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan penting yang telah kita bahas dalam bab ini antara lain sebagai berikut.   Metrik pada suatu ruang adalah fungsi yang mengukur jarak antara unsur-unsur ruang tersebut. Secara lebih formal, metrik pada ruang adalah fungsi sedemikian sehingga    untuk setiap ,     jika dan hanya jika di dalam ,     untuk setiap , dan     untuk setiap .   Ruang metrik adalah suatu ruang beserta metrik yang didefinisikan pada ruang tersebut.    Metrik Euklides, metrik taksi, dan metrik maksimum semuanya merupakan metrik pada , sehingga ketiganya memberikan cara untuk mengukur jarak antara titik-titik di . Ketiga metrik ini berbeda dalam cara mendefinisikan jarak.   Metrik Euklides adalah metrik standar yang telah kita gunakan sepanjang pengalaman kita mempelajari matematika. Untuk unsur dan di , metrik Euklides didefinisikan oleh . Dengan metrik ini, lingkaran satuan di (himpunan titik yang berjarak dari titik asal) adalah lingkaran satuan standar yang kita kenal dari geometri Euklides.    Metrik taksi didefinisikan oleh . Lingkaran satuan di dengan metrik taksi, apabila dilihat dalam geometri Euklides, adalah persegi dengan titik sudut , , , dan .    Metrik maksimum didefinisikan oleh . Dengan metrik maksimum, lingkaran satuan di , apabila dilihat dalam geometri Euklides, adalah persegi dengan titik sudut , , , dan .        "
+},
+{
+  "id": "sec_metric_space_exer",
+  "level": "1",
+  "url": "sec_metric_space_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "   bola terbuka dalam ruang metrik   Misalkan suatu ruang metrik. Untuk setiap bilangan real positif , bola terbuka yang berpusat di dan berjari-jari  dalam adalah himpunan .      Misalkan suatu himpunan. Tunjukkan bahwa fungsi (metrik diskret) yang didefinisikan oleh merupakan metrik.    Misalkan dan definisikan dengan . Artinya, adalah sisa pembagian oleh .   Untuk setiap nilai , tentukan apakah mendefinisikan suatu metrik pada . Buktikan jawaban Anda.    Sebagai motivasi untuk definisi berikut, pada yang dilengkapi suatu metrik (tidak harus fungsi di atas), lingkaran satuan adalah himpunan semua titik di yang berjarak dari titik asal. Jika jaraknya kita syaratkan kurang dari , kita memperoleh apa yang disebut bola terbuka. Definisi tersebut berlaku dalam setiap ruang metrik. Jika merupakan ruang metrik untuk nilai yang diberikan, tentukan semua bola terbuka dalam yang berpusat di . Jika bukan ruang metrik, jelaskan alasannya.               Misalkan himpunan semua bilangan rasional dalam bentuk paling sederhana. Bilangan rasional berada dalam bentuk paling sederhana jika serta dan tidak mempunyai faktor persekutuan yang lebih besar dari . Definisikan dengan .   Buktikan bahwa merupakan metrik.   Suatu metrik memungkinkan kita menentukan unsur-unsur mana dalam ruang metrik yang “berdekatan”. Deskripsikan himpunan unsur di yang berjarak kurang dari terhadap dengan menggunakan metrik ini. Dengan kata lain, deskripsikan bola terbuka berpusat di dengan jari-jari (lihat ).   Jika , , dan merupakan unsur suatu ruang metrik , kita mengatakan bahwa berada di antara dan jika . Dengan metrik Euklides pada , terdapat tak berhingga banyak bilangan rasional yang berbeda di antara dan (yaitu bilangan rasional di antara dan yang terletak pada garis Euklides melalui dan ). Deskripsikan semua titik dalam yang berada di antara dan .    Misalkan ruang metrik dari . Jika , , dan merupakan unsur suatu ruang metrik , kita mengatakan bahwa berada di antara  dan jika . Dengan metrik Euklides pada , terdapat tak berhingga banyak bilangan rasional yang berbeda di antara dan (yaitu bilangan rasional di antara dan yang terletak pada garis Euklides melalui dan ). Dalam latihan ini kita menyelidiki bilangan-bilangan yang berada di antara bilangan lain dalam ruang .   Temukan semua unsur dalam yang berada di antara dan .   Manakah yang lebih dekat ke dalam : atau ?   Sekarang temukan semua unsur dalam yang berada di antara dan .    Buktikan bahwa metrik taksi merupakan metrik pada .    Misalkan dan subhimpunan berhingga tak kosong dari , dan misalkan .   Buktikan bahwa .   Buktikan bahwa metrik maksimum merupakan metrik pada .    Jika , kita tuliskan . Untuk dan , definisikan dengan    Tunjukkan bahwa merupakan metrik (disebut metrik hub ).   Misalkan . Deskripsikan secara eksplisit titik-titik yang termasuk dalam himpunan di . (Lihat untuk definisi bola terbuka.)   Misalkan . Deskripsikan secara eksplisit titik-titik yang termasuk dalam himpunan di .   Sekarang deskripsikan secara eksplisit semua bola terbuka dalam .    Misalkan himpunan bilangan bulat dan suatu bilangan prima. Untuk setiap pasangan bilangan bulat berbeda dan , terdapat bilangan bulat sedemikian sehingga , dengan tidak membagi . Sebagai contoh, jika , , dan , maka . Jadi . Namun, jika dan , maka . Jadi . Definisikan dengan    Tentukan nilai dengan dan dengan .   Buktikan bahwa jika , , dan berada di , maka .   Buktikan bahwa merupakan ruang metrik.   Misalkan . Deskripsikan himpunan semua unsur dalam yang memenuhi .   Tetap gunakan . Deskripsikan himpunan semua unsur dalam yang memenuhi .    Misalkan dan ruang-ruang metrik. Kita dapat menjadikan hasil kali Kartesius suatu ruang metrik dengan mendefinisikan metrik pada sebagai berikut. Jika dan berada di , maka . Anda boleh menganggap tanpa bukti bahwa merupakan metrik pada .   Misalkan dan . Misalkan dan . Berapakah Ingat bahwa dan .   Misalkan dan , dengan metrik diskret. Misalkan di . Misalkan di . Deskripsikan secara geometris bentuk bola terbuka dalam ruang hasil kali . Gambarlah bola terbuka ini.    Misalkan , himpunan bilangan real positif, dan definisikan dengan . Apakah merupakan metrik pada ? Buktikan jawaban Anda.    Misalkan didefinisikan oleh . Tunjukkan bahwa merupakan metrik pada . (Petunjuk: Untuk pertidaksamaan segitiga, perhatikan bahwa , dengan , dan merupakan fungsi naik.)    Misalkan suatu ruang metrik dan suatu konstanta. Definisikan dengan . Dengan syarat apa, jika ada, merupakan metrik pada ? Jelaskan alasan Anda.    Fungsi bernilai real pada suatu interval disebut cekung jika untuk setiap dan setiap serta dalam interval tersebut. Perhatikan bahwa ekspresi linear terhadap , bernilai ketika , dan bernilai ketika . Jadi merupakan parameterisasi ruas garis yang menghubungkan dengan . Seperti diperlihatkan , persamaan menyatakan bahwa grafik fungsi cekung pada setiap interval terletak di atas garis sekan yang menghubungkan titik dan .   Suatu fungsi cekung.  Grafik sebuah fungsi cekung melengkung di atas garis sekan yang menghubungkan dua titik pada grafik.    Misalkan memetakan ke dengan metrik Euklides standar. Tunjukkan bahwa cekung pada interval .   Mulailah dari fakta bahwa .   Tunjukkan bahwa jika merupakan fungsi cekung pada dan . Jika dan berada dalam interval tersebut, maka .   Tinjau dengan . Lalu gunakan fakta bahwa berada di .   Misalkan suatu ruang metrik dan suatu fungsi naik dan cekung sedemikian sehingga jika dan hanya jika . Buktikan bahwa merupakan metrik pada .    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Fungsi yang didefinisikan oleh merupakan metrik pada .   Setiap himpunan tak kosong dapat dijadikan ruang metrik.   Pada setiap himpunan yang memuat sekurang-kurangnya dua unsur, dapat didefinisikan tak berhingga banyak metrik.   Misalkan dan ruang-ruang metrik dengan . Maka fungsi yang didefinisikan oleh merupakan metrik pada .   Misalkan suatu ruang metrik. Jika tak berhingga, maka daerah hasil juga merupakan himpunan tak berhingga.   "
+},
+{
+  "id": "def_ms_open_ball",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#def_ms_open_ball",
+  "type": "Definisi",
+  "number": "3.11",
+  "title": "",
+  "body": " bola terbuka dalam ruang metrik   Misalkan suatu ruang metrik. Untuk setiap bilangan real positif , bola terbuka yang berpusat di dan berjari-jari  dalam adalah himpunan .   "
+},
+{
+  "id": "ex_MS_discrete",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#ex_MS_discrete",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan suatu himpunan. Tunjukkan bahwa fungsi (metrik diskret) yang didefinisikan oleh merupakan metrik.  "
+},
+{
+  "id": "ex_MS_mod_metric",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#ex_MS_mod_metric",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan dan definisikan dengan . Artinya, adalah sisa pembagian oleh .   Untuk setiap nilai , tentukan apakah mendefinisikan suatu metrik pada . Buktikan jawaban Anda.    Sebagai motivasi untuk definisi berikut, pada yang dilengkapi suatu metrik (tidak harus fungsi di atas), lingkaran satuan adalah himpunan semua titik di yang berjarak dari titik asal. Jika jaraknya kita syaratkan kurang dari , kita memperoleh apa yang disebut bola terbuka. Definisi tersebut berlaku dalam setiap ruang metrik. Jika merupakan ruang metrik untuk nilai yang diberikan, tentukan semua bola terbuka dalam yang berpusat di . Jika bukan ruang metrik, jelaskan alasannya.             "
+},
+{
+  "id": "ex_MS_Q_metric",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#ex_MS_Q_metric",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan himpunan semua bilangan rasional dalam bentuk paling sederhana. Bilangan rasional berada dalam bentuk paling sederhana jika serta dan tidak mempunyai faktor persekutuan yang lebih besar dari . Definisikan dengan .   Buktikan bahwa merupakan metrik.   Suatu metrik memungkinkan kita menentukan unsur-unsur mana dalam ruang metrik yang “berdekatan”. Deskripsikan himpunan unsur di yang berjarak kurang dari terhadap dengan menggunakan metrik ini. Dengan kata lain, deskripsikan bola terbuka berpusat di dengan jari-jari (lihat ).   Jika , , dan merupakan unsur suatu ruang metrik , kita mengatakan bahwa berada di antara dan jika . Dengan metrik Euklides pada , terdapat tak berhingga banyak bilangan rasional yang berbeda di antara dan (yaitu bilangan rasional di antara dan yang terletak pada garis Euklides melalui dan ). Deskripsikan semua titik dalam yang berada di antara dan .  "
+},
+{
+  "id": "exercise-31",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#exercise-31",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan ruang metrik dari . Jika , , dan merupakan unsur suatu ruang metrik , kita mengatakan bahwa berada di antara  dan jika . Dengan metrik Euklides pada , terdapat tak berhingga banyak bilangan rasional yang berbeda di antara dan (yaitu bilangan rasional di antara dan yang terletak pada garis Euklides melalui dan ). Dalam latihan ini kita menyelidiki bilangan-bilangan yang berada di antara bilangan lain dalam ruang .   Temukan semua unsur dalam yang berada di antara dan .   Manakah yang lebih dekat ke dalam : atau ?   Sekarang temukan semua unsur dalam yang berada di antara dan .  "
+},
+{
+  "id": "ex_Taxicab",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#ex_Taxicab",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Buktikan bahwa metrik taksi merupakan metrik pada .  "
+},
+{
+  "id": "ex_Max",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#ex_Max",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Misalkan dan subhimpunan berhingga tak kosong dari , dan misalkan .   Buktikan bahwa .   Buktikan bahwa metrik maksimum merupakan metrik pada .  "
+},
+{
+  "id": "ex_MS_hub",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#ex_MS_hub",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Jika , kita tuliskan . Untuk dan , definisikan dengan    Tunjukkan bahwa merupakan metrik (disebut metrik hub ).   Misalkan . Deskripsikan secara eksplisit titik-titik yang termasuk dalam himpunan di . (Lihat untuk definisi bola terbuka.)   Misalkan . Deskripsikan secara eksplisit titik-titik yang termasuk dalam himpunan di .   Sekarang deskripsikan secara eksplisit semua bola terbuka dalam .  "
+},
+{
+  "id": "exercise-35",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#exercise-35",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Misalkan himpunan bilangan bulat dan suatu bilangan prima. Untuk setiap pasangan bilangan bulat berbeda dan , terdapat bilangan bulat sedemikian sehingga , dengan tidak membagi . Sebagai contoh, jika , , dan , maka . Jadi . Namun, jika dan , maka . Jadi . Definisikan dengan    Tentukan nilai dengan dan dengan .   Buktikan bahwa jika , , dan berada di , maka .   Buktikan bahwa merupakan ruang metrik.   Misalkan . Deskripsikan himpunan semua unsur dalam yang memenuhi .   Tetap gunakan . Deskripsikan himpunan semua unsur dalam yang memenuhi .  "
+},
+{
+  "id": "exercise-36",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#exercise-36",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan dan ruang-ruang metrik. Kita dapat menjadikan hasil kali Kartesius suatu ruang metrik dengan mendefinisikan metrik pada sebagai berikut. Jika dan berada di , maka . Anda boleh menganggap tanpa bukti bahwa merupakan metrik pada .   Misalkan dan . Misalkan dan . Berapakah Ingat bahwa dan .   Misalkan dan , dengan metrik diskret. Misalkan di . Misalkan di . Deskripsikan secara geometris bentuk bola terbuka dalam ruang hasil kali . Gambarlah bola terbuka ini.  "
+},
+{
+  "id": "exercise-37",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#exercise-37",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Misalkan , himpunan bilangan real positif, dan definisikan dengan . Apakah merupakan metrik pada ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "ex_1_over_1_plus_t_metric",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#ex_1_over_1_plus_t_metric",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Misalkan didefinisikan oleh . Tunjukkan bahwa merupakan metrik pada . (Petunjuk: Untuk pertidaksamaan segitiga, perhatikan bahwa , dengan , dan merupakan fungsi naik.)  "
+},
+{
+  "id": "exercise-39",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#exercise-39",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Misalkan suatu ruang metrik dan suatu konstanta. Definisikan dengan . Dengan syarat apa, jika ada, merupakan metrik pada ? Jelaskan alasan Anda.  "
+},
+{
+  "id": "exercise-40",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#exercise-40",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Fungsi bernilai real pada suatu interval disebut cekung jika untuk setiap dan setiap serta dalam interval tersebut. Perhatikan bahwa ekspresi linear terhadap , bernilai ketika , dan bernilai ketika . Jadi merupakan parameterisasi ruas garis yang menghubungkan dengan . Seperti diperlihatkan , persamaan menyatakan bahwa grafik fungsi cekung pada setiap interval terletak di atas garis sekan yang menghubungkan titik dan .   Suatu fungsi cekung.  Grafik sebuah fungsi cekung melengkung di atas garis sekan yang menghubungkan dua titik pada grafik.    Misalkan memetakan ke dengan metrik Euklides standar. Tunjukkan bahwa cekung pada interval .   Mulailah dari fakta bahwa .   Tunjukkan bahwa jika merupakan fungsi cekung pada dan . Jika dan berada dalam interval tersebut, maka .   Tinjau dengan . Lalu gunakan fakta bahwa berada di .   Misalkan suatu ruang metrik dan suatu fungsi naik dan cekung sedemikian sehingga jika dan hanya jika . Buktikan bahwa merupakan metrik pada .  "
+},
+{
+  "id": "exercise-41",
+  "level": "2",
+  "url": "sec_metric_space_exer.html#exercise-41",
+  "type": "Latihan",
+  "number": "14",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Fungsi yang didefinisikan oleh merupakan metrik pada .   Setiap himpunan tak kosong dapat dijadikan ruang metrik.   Pada setiap himpunan yang memuat sekurang-kurangnya dua unsur, dapat didefinisikan tak berhingga banyak metrik.   Misalkan dan ruang-ruang metrik dengan . Maka fungsi yang didefinisikan oleh merupakan metrik pada .   Misalkan suatu ruang metrik. Jika tak berhingga, maka daerah hasil juga merupakan himpunan tak berhingga.  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -1331,6 +1709,294 @@ var ptx_lunr_docs = [
   "number": "B.33",
   "title": "Latihan 17: tiga belas klaim tentang citra dan prapeta.",
   "body": "Latihan 17: tiga belas klaim tentang citra dan prapeta  Periksa ketiga belas klaim terakhir dalam urutan sumber. Setiap klaim salah memerlukan contoh fungsi dan himpunan konkret; setiap klaim benar memerlukan sedikitnya satu rantai keanggotaan.   Petunjuk 1. Fungsi konstan pada domain dua unsur menguji klaim citra yang memerlukan injektivitas.  Petunjuk 2. Fungsi identitas pada dua unsur dan satu unsur kodomain yang tidak tercapai menguji arah inklusi prapeta dan citra.   Urutannya adalah: benar, salah, salah, benar, benar, benar, salah, benar, benar, salah, benar, salah, benar.   (a) Benar karena memberi . (b) Salah: untuk fungsi konstan dan , prapeta citra adalah seluruh domain. (c) Salah: untuk , , dan , ruas kanan kosong. (d) Benar: setiap unsur citra prapeta menurut definisi berada di . (e) Benar: citra anggota juga citra anggota . (f) Benar: memberi inklusi prapeta.  (g) Salah: untuk fungsi identitas pada , ambil dan ; prapeta tidak termuat dalam prapeta . (h) Benar: sebuah nilai berasal dari gabungan tepat ketika berasal dari sedikitnya satu bagian. (i) Benar karena, untuk setiap , jika dan hanya jika , jika dan hanya jika atau , jika dan hanya jika . (j) Salah: pada fungsi konstan , ambil dan ; citra irisan kosong, tetapi irisan citra tidak kosong. (k) Benar: syarat dan setara dengan .  (l) Salah: pada fungsi konstan yang sama, ambil dan . Ruas kiri , sedangkan . (m) Benar: berada pada prapeta tepat ketika dan , yaitu tepat ketika .  "
+},
+{
+  "id": "o003-c90-ch03-activity-checkpoints",
+  "level": "1",
+  "url": "o003-c90-ch03-activity-checkpoints.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan eksplorasi dan aktivitas",
+  "body": " Pemeriksaan eksplorasi dan aktivitas  Pemeriksaan 1: metrik taksi  Audit kelima tugas eksplorasi pembuka: buktikan empat aksioma untuk pada , lalu tentukan lingkaran satuannya dalam koordinat Euklides. Rubrik lengkap: setiap aksioma harus dinyatakan; bukti pertidaksamaan segitiga harus berlaku koordinat demi koordinat; gambar lingkaran harus disertai persamaan atau pertidaksamaan yang menjelaskan keempat sisinya.   Petunjuk 1. Gunakan pada masing-masing selisih koordinat.  Petunjuk 2. Lingkaran satuan memenuhi .   Fungsi merupakan metrik. Lingkaran satuannya adalah , yakni persegi yang tampak sebagai belah ketupat dengan titik sudut , , , dan dalam gambar Euklides.   Nilai mutlak tak negatif, jadi . Jumlah dua nilai mutlak bernilai nol tepat ketika kedua selisih koordinat nol, yaitu tepat ketika . Karena , fungsi ini simetris. Untuk titik ketiga , tulis . Ketaksamaan nilai mutlak memberi untuk . Menjumlahkan kedua pertidaksamaan menghasilkan .  Jarak titik dari asal ialah . Pada setiap kuadran, persamaan menjadi sebuah ruas garis; keempat ruas bertemu pada empat titik sudut yang dinyatakan pada jawaban.   Pemeriksaan 2: empat calon ruang metrik  Periksa seluruh butir pada aktivitas . Rubrik: untuk calon yang gagal, berikan aksioma dan titik konkret yang gagal; untuk calon yang berhasil, buktikan semua aksioma yang belum langsung; deskripsikan lingkaran satuan relatif terhadap unsur nol.   Petunjuk 1. Uji pada calon pertama.  Petunjuk 2. Untuk integral, gunakan pertidaksamaan segitiga titik demi titik dan kekontinuan .   Calon (a) bukan metrik karena . Calon (b) adalah metrik diskret dan lingkaran satuan berpusat di ialah . Calon (c) adalah metrik maksimum; lingkaran satuannya ialah batas persegi . Calon (d) adalah metrik pada ; lingkaran satuannya terdiri atas fungsi kontinu dengan .   Pada (a), aksioma identitas titik sudah gagal: jarak suatu titik dari dirinya seharusnya nol. Pada (b), nilai hanya atau ; identitas dan simetri langsung, dan jika , sedikitnya satu dari dan bernilai , sehingga pertidaksamaan segitiga berlaku. Jarak dari nol sama dengan satu tepat bagi semua titik bukan nol.  Pada (c), tak-negatif, identitas, dan simetri mengikuti nilai mutlak. Untuk tiap koordinat, ; mengambil maksimum atas membuktikan aksioma keempat. Pada (d), integral tak negatif dan simetris. Jika integral nol, fungsi kontinu tak negatif tidak dapat positif di satu titik tanpa positif pada suatu interval; jadi . Ketaksamaan yang diintegralkan memberi pertidaksamaan segitiga. Deskripsi lingkaran mengikuti dengan mengambil jarak dari fungsi nol.   Pemeriksaan 3: tiga aksioma pertama metrik Euklides  Lengkapi empat tugas aktivitas pertama pada bagian metrik Euklides di . Rubrik: jelaskan mengapa akar kuadrat terdefinisi, buktikan kedua arah dari syarat jarak nol, dan jangan memakai gambar sebagai bukti.   Petunjuk. Jumlah kuadrat tak negatif, dan jumlah bilangan tak negatif bernilai nol tepat ketika setiap sukunya nol.   Untuk semua , berlaku , , dan tepat ketika .   Setiap tak negatif, sehingga jumlahnya dan akar kuadratnya tak negatif. Karena untuk setiap , menukar dan tidak mengubah jarak. Jika , semua selisih nol dan jaraknya nol. Sebaliknya, jika jaraknya nol, maka . Semua suku tak negatif, jadi setiap suku nol; maka untuk seluruh , yakni .   Pemeriksaan 4: dua uji numerik Cauchy–Schwarz  Hitung kedua ruas Pertidaksamaan Cauchy–Schwarz pada dua pasangan vektor dalam aktivitas. Rubrik: tampilkan hasil kali titik, kedua norma, dan perbandingan numeriknya.   Petunjuk. Ruas kiri adalah ; ruas kanan adalah .   Untuk dan , diperoleh . Untuk dan , diperoleh .   Pada pasangan pertama, hasil kali titiknya . Kuadrat normanya masing-masing dan , sehingga ruas kanan ; karena , perbandingan berlaku. Pada pasangan kedua, hasil kali titiknya , sedangkan kuadrat normanya dan . Jadi ruas kanan positif dan jelas lebih besar daripada . Bentuk standar dengan nilai mutlak juga terpenuhi karena .   Pemeriksaan 5: dua uji numerik pertidaksamaan jumlah  Verifikasikan akibat Cauchy–Schwarz pada dua pasangan vektor yang diberikan. Rubrik: hitung norma jumlah serta jumlah kedua norma tanpa membulatkan akar.   Petunjuk. Hitung terlebih dahulu, lalu kuadratkan kedua ruas jika perlu.   Pasangan pertama memberi . Pasangan kedua memberi .   Untuk dan , jumlahnya , sehingga normanya ; norma masing-masing vektor adalah dan . Setelah mengurangi , cukup memeriksa . Untuk pasangan kedua, jumlahnya dengan norma , sedangkan jumlah norma awal ialah . Menguadratkan ruas kanan menghasilkan , jadi pertidaksamaan berlaku.   Pemeriksaan 6: pertidaksamaan segitiga Euklides  Lengkapi aktivitas terakhir pada bagian Euklides dengan menurunkan langsung dari . Rubrik: vektor yang dimasukkan ke akibat harus disebutkan dan jumlahnya harus disederhanakan menjadi .   Petunjuk. Ambil dan .   Terapkan pada dan ; karena , hasilnya tepat pertidaksamaan segitiga bagi .   Notasi norma Euklides memberi . Dengan dan , akibat Cauchy–Schwarz menyatakan . Karena , ruas kiri ialah , sedangkan dua suku ruas kanan ialah dan . Jadi aksioma keempat terbukti untuk semua .   "
+},
+{
+  "id": "o003-c90-ch03-checkpoint-01",
+  "level": "2",
+  "url": "o003-c90-ch03-activity-checkpoints.html#o003-c90-ch03-checkpoint-01",
+  "type": "Pemeriksaan",
+  "number": "C.1",
+  "title": "Pemeriksaan 1: metrik taksi.",
+  "body": "Pemeriksaan 1: metrik taksi  Audit kelima tugas eksplorasi pembuka: buktikan empat aksioma untuk pada , lalu tentukan lingkaran satuannya dalam koordinat Euklides. Rubrik lengkap: setiap aksioma harus dinyatakan; bukti pertidaksamaan segitiga harus berlaku koordinat demi koordinat; gambar lingkaran harus disertai persamaan atau pertidaksamaan yang menjelaskan keempat sisinya.   Petunjuk 1. Gunakan pada masing-masing selisih koordinat.  Petunjuk 2. Lingkaran satuan memenuhi .   Fungsi merupakan metrik. Lingkaran satuannya adalah , yakni persegi yang tampak sebagai belah ketupat dengan titik sudut , , , dan dalam gambar Euklides.   Nilai mutlak tak negatif, jadi . Jumlah dua nilai mutlak bernilai nol tepat ketika kedua selisih koordinat nol, yaitu tepat ketika . Karena , fungsi ini simetris. Untuk titik ketiga , tulis . Ketaksamaan nilai mutlak memberi untuk . Menjumlahkan kedua pertidaksamaan menghasilkan .  Jarak titik dari asal ialah . Pada setiap kuadran, persamaan menjadi sebuah ruas garis; keempat ruas bertemu pada empat titik sudut yang dinyatakan pada jawaban.  "
+},
+{
+  "id": "o003-c90-ch03-checkpoint-02",
+  "level": "2",
+  "url": "o003-c90-ch03-activity-checkpoints.html#o003-c90-ch03-checkpoint-02",
+  "type": "Pemeriksaan",
+  "number": "C.2",
+  "title": "Pemeriksaan 2: empat calon ruang metrik.",
+  "body": "Pemeriksaan 2: empat calon ruang metrik  Periksa seluruh butir pada aktivitas . Rubrik: untuk calon yang gagal, berikan aksioma dan titik konkret yang gagal; untuk calon yang berhasil, buktikan semua aksioma yang belum langsung; deskripsikan lingkaran satuan relatif terhadap unsur nol.   Petunjuk 1. Uji pada calon pertama.  Petunjuk 2. Untuk integral, gunakan pertidaksamaan segitiga titik demi titik dan kekontinuan .   Calon (a) bukan metrik karena . Calon (b) adalah metrik diskret dan lingkaran satuan berpusat di ialah . Calon (c) adalah metrik maksimum; lingkaran satuannya ialah batas persegi . Calon (d) adalah metrik pada ; lingkaran satuannya terdiri atas fungsi kontinu dengan .   Pada (a), aksioma identitas titik sudah gagal: jarak suatu titik dari dirinya seharusnya nol. Pada (b), nilai hanya atau ; identitas dan simetri langsung, dan jika , sedikitnya satu dari dan bernilai , sehingga pertidaksamaan segitiga berlaku. Jarak dari nol sama dengan satu tepat bagi semua titik bukan nol.  Pada (c), tak-negatif, identitas, dan simetri mengikuti nilai mutlak. Untuk tiap koordinat, ; mengambil maksimum atas membuktikan aksioma keempat. Pada (d), integral tak negatif dan simetris. Jika integral nol, fungsi kontinu tak negatif tidak dapat positif di satu titik tanpa positif pada suatu interval; jadi . Ketaksamaan yang diintegralkan memberi pertidaksamaan segitiga. Deskripsi lingkaran mengikuti dengan mengambil jarak dari fungsi nol.  "
+},
+{
+  "id": "o003-c90-ch03-checkpoint-03",
+  "level": "2",
+  "url": "o003-c90-ch03-activity-checkpoints.html#o003-c90-ch03-checkpoint-03",
+  "type": "Pemeriksaan",
+  "number": "C.3",
+  "title": "Pemeriksaan 3: tiga aksioma pertama metrik Euklides.",
+  "body": "Pemeriksaan 3: tiga aksioma pertama metrik Euklides  Lengkapi empat tugas aktivitas pertama pada bagian metrik Euklides di . Rubrik: jelaskan mengapa akar kuadrat terdefinisi, buktikan kedua arah dari syarat jarak nol, dan jangan memakai gambar sebagai bukti.   Petunjuk. Jumlah kuadrat tak negatif, dan jumlah bilangan tak negatif bernilai nol tepat ketika setiap sukunya nol.   Untuk semua , berlaku , , dan tepat ketika .   Setiap tak negatif, sehingga jumlahnya dan akar kuadratnya tak negatif. Karena untuk setiap , menukar dan tidak mengubah jarak. Jika , semua selisih nol dan jaraknya nol. Sebaliknya, jika jaraknya nol, maka . Semua suku tak negatif, jadi setiap suku nol; maka untuk seluruh , yakni .  "
+},
+{
+  "id": "o003-c90-ch03-checkpoint-04",
+  "level": "2",
+  "url": "o003-c90-ch03-activity-checkpoints.html#o003-c90-ch03-checkpoint-04",
+  "type": "Pemeriksaan",
+  "number": "C.4",
+  "title": "Pemeriksaan 4: dua uji numerik Cauchy–Schwarz.",
+  "body": "Pemeriksaan 4: dua uji numerik Cauchy–Schwarz  Hitung kedua ruas Pertidaksamaan Cauchy–Schwarz pada dua pasangan vektor dalam aktivitas. Rubrik: tampilkan hasil kali titik, kedua norma, dan perbandingan numeriknya.   Petunjuk. Ruas kiri adalah ; ruas kanan adalah .   Untuk dan , diperoleh . Untuk dan , diperoleh .   Pada pasangan pertama, hasil kali titiknya . Kuadrat normanya masing-masing dan , sehingga ruas kanan ; karena , perbandingan berlaku. Pada pasangan kedua, hasil kali titiknya , sedangkan kuadrat normanya dan . Jadi ruas kanan positif dan jelas lebih besar daripada . Bentuk standar dengan nilai mutlak juga terpenuhi karena .  "
+},
+{
+  "id": "o003-c90-ch03-checkpoint-05",
+  "level": "2",
+  "url": "o003-c90-ch03-activity-checkpoints.html#o003-c90-ch03-checkpoint-05",
+  "type": "Pemeriksaan",
+  "number": "C.5",
+  "title": "Pemeriksaan 5: dua uji numerik pertidaksamaan jumlah.",
+  "body": "Pemeriksaan 5: dua uji numerik pertidaksamaan jumlah  Verifikasikan akibat Cauchy–Schwarz pada dua pasangan vektor yang diberikan. Rubrik: hitung norma jumlah serta jumlah kedua norma tanpa membulatkan akar.   Petunjuk. Hitung terlebih dahulu, lalu kuadratkan kedua ruas jika perlu.   Pasangan pertama memberi . Pasangan kedua memberi .   Untuk dan , jumlahnya , sehingga normanya ; norma masing-masing vektor adalah dan . Setelah mengurangi , cukup memeriksa . Untuk pasangan kedua, jumlahnya dengan norma , sedangkan jumlah norma awal ialah . Menguadratkan ruas kanan menghasilkan , jadi pertidaksamaan berlaku.  "
+},
+{
+  "id": "o003-c90-ch03-checkpoint-06",
+  "level": "2",
+  "url": "o003-c90-ch03-activity-checkpoints.html#o003-c90-ch03-checkpoint-06",
+  "type": "Pemeriksaan",
+  "number": "C.6",
+  "title": "Pemeriksaan 6: pertidaksamaan segitiga Euklides.",
+  "body": "Pemeriksaan 6: pertidaksamaan segitiga Euklides  Lengkapi aktivitas terakhir pada bagian Euklides dengan menurunkan langsung dari . Rubrik: vektor yang dimasukkan ke akibat harus disebutkan dan jumlahnya harus disederhanakan menjadi .   Petunjuk. Ambil dan .   Terapkan pada dan ; karena , hasilnya tepat pertidaksamaan segitiga bagi .   Notasi norma Euklides memberi . Dengan dan , akibat Cauchy–Schwarz menyatakan . Karena , ruas kiri ialah , sedangkan dua suku ruas kanan ialah dan . Jadi aksioma keempat terbukti untuk semua .  "
+},
+{
+  "id": "o003-c90-ch03-mastery",
+  "level": "1",
+  "url": "o003-c90-ch03-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Uji penguasaan",
+  "body": " Uji penguasaan  Delapan butir berikut merupakan materi asli pendamping. Kerjakan tanpa membuka petunjuk terlebih dahulu; gunakan pembahasan untuk mengaudit setiap langkah, bukan hanya hasil akhir.  Penguasaan 1: jarak yang dikuadratkan  Pada , tentukan apakah merupakan metrik. Jika tidak, identifikasi aksioma yang gagal dengan contoh terkecil yang wajar.   Petunjuk. Bandingkan jarak dari ke dengan lintasan melalui .   Bukan metrik; pertidaksamaan segitiga gagal pada titik .   Fungsi ini tak negatif, simetris, dan bernilai nol tepat pada diagonal. Namun , sedangkan . Karena , aksioma pertidaksamaan segitiga gagal. Contoh ini juga menunjukkan mengapa memeriksa tiga aksioma pertama saja tidak cukup.   Penguasaan 2: membandingkan tiga metrik pada  Buktikan bahwa untuk setiap , . Nyatakan akibatnya bagi bola terbuka yang berpusat sama dan berjari-jari .   Petunjuk 1. Setiap suku maksimum tidak melebihi akar jumlah kuadrat.  Petunjuk 2. Terapkan Cauchy–Schwarz pada vektor dan .   Rantai pertidaksamaan berlaku. Karena jarak yang lebih besar menghasilkan bola berjari-jari sama yang lebih kecil, , dan .   Tuliskan . Karena , diperoleh . Karena , diperoleh . Cauchy–Schwarz memberi .  Jika , maka , lalu ; ini memberi tiga inklusi pertama. Jika , maka , memberi inklusi terakhir.   Penguasaan 3: semua bola pada metrik diskret  Misalkan himpunan tak kosong dengan metrik diskret dan . Tentukan untuk setiap .   Petunjuk. Satu-satunya nilai jarak adalah dan ; perhatikan ketegasan tanda .   untuk , dan untuk .   Titik pusat selalu masuk karena . Setiap mempunyai jarak dari . Jika , syarat gagal, termasuk pada ; jadi hanya pusat yang masuk. Jika , kedua nilai jarak lebih kecil dari , sehingga seluruh masuk.   Penguasaan 4: metrik lintasan terpendek  Pada graf berbobot , hitung dan . Berikan satu verifikasi eksplisit pertidaksamaan segitiga yang melibatkan , , dan .   Petunjuk. Daftarkan lintasan pendek melalui dan bandingkan dengan sisi atau lintasan lain.   dan ; misalnya .   Lintasan berbobot . Semua alternatif yang tampak lebih pendek gagal: sisi melalui memberi sedikitnya , dan melalui memberi ; jadi . Dari ke , lintasan dan masing-masing berbobot dan ; lintasan melalui berbobot , jadi jarak terpendeknya . Untuk ketiga titik yang diminta, dan , sehingga .   Penguasaan 5: menarik kembali metrik melalui injeksi  Misalkan ruang metrik dan injektif. Buktikan bahwa mendefinisikan metrik pada . Jelaskan tepat di mana injektivitas dipakai.   Petunjuk. Tiga aksioma diwarisi langsung; untuk jarak nol, ubah kesamaan citra menjadi kesamaan masukan.   Fungsi merupakan metrik. Injektivitas diperlukan pada arah .   Tak-negatif dan simetri mengikuti sifat . Jika , jelas . Sebaliknya, jarak nol memberi menurut identitas titik di ; injektivitas lalu memberi . Untuk , , yang tepat merupakan pertidaksamaan segitiga bagi . Tanpa injektivitas, dua masukan berbeda yang mempunyai citra sama akan berjarak nol.   Penguasaan 6: maksimum dua metrik  Jika dan adalah metrik pada himpunan yang sama , buktikan bahwa juga metrik.   Petunjuk. Untuk setiap , batasi dengan jumlah yang suku-sukunya masing-masing tidak melebihi .   merupakan metrik pada .   Maksimum dua bilangan tak negatif tak negatif dan simetris. Nilai nol tepat ketika kedua nol, dan karena keduanya metrik, hal itu tepat ketika . Untuk , . Kedua calon di dalam maksimum dibatasi oleh ruas kanan yang sama; mengambil maksimumnya memberi .   Penguasaan 7: penskalaan tidak mengubah bola secara hakiki  Misalkan metrik dan . Buktikan bahwa . Simpulkan bahwa kedua metrik menentukan keluarga himpunan terbuka yang sama ketika konsep itu diperkenalkan nanti.   Petunjuk. Bagi pertidaksamaan dengan bilangan positif .   Kedua bola sama karena tepat ketika . Jadi penskalaan positif hanya mengganti label jari-jari.   Untuk titik sembarang , jika dan hanya jika . Karena , pembagian tidak membalik tanda, sehingga syarat ini setara dengan , yakni . Setiap bola bagi satu metrik dengan demikian merupakan bola bagi metrik lain; gabungan bola yang kelak mendefinisikan himpunan terbuka juga sama.   Penguasaan 8: membangun tak berhingga banyak metrik  Misalkan mempunyai sedikitnya dua unsur. Bangun tak berhingga banyak metrik yang berbeda pada , dan buktikan bahwa metrik-metrik tersebut memang berbeda sebagai fungsi.   Petunjuk. Kalikan metrik diskret dengan konstanta positif yang berbeda.   Untuk setiap , fungsi jika dan jika merupakan metrik; nilai yang berbeda menghasilkan fungsi yang berbeda.   Tak-negatif, identitas, dan simetri langsung. Jika , pertidaksamaan segitiga seketika. Jika , tidak mungkin sekaligus dan ; sedikitnya satu jarak pada ruas kanan bernilai , sehingga . Pilih dua unsur berbeda . Untuk , , jadi metriknya berbeda. Karena ada tak berhingga banyak bilangan real positif, diperoleh tak berhingga banyak metrik.   "
+},
+{
+  "id": "o003-c90-ch03-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "C.7",
+  "title": "Penguasaan 1: jarak yang dikuadratkan.",
+  "body": "Penguasaan 1: jarak yang dikuadratkan  Pada , tentukan apakah merupakan metrik. Jika tidak, identifikasi aksioma yang gagal dengan contoh terkecil yang wajar.   Petunjuk. Bandingkan jarak dari ke dengan lintasan melalui .   Bukan metrik; pertidaksamaan segitiga gagal pada titik .   Fungsi ini tak negatif, simetris, dan bernilai nol tepat pada diagonal. Namun , sedangkan . Karena , aksioma pertidaksamaan segitiga gagal. Contoh ini juga menunjukkan mengapa memeriksa tiga aksioma pertama saja tidak cukup.  "
+},
+{
+  "id": "o003-c90-ch03-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "C.8",
+  "title": "Penguasaan 2: membandingkan tiga metrik pada <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
+  "body": "Penguasaan 2: membandingkan tiga metrik pada  Buktikan bahwa untuk setiap , . Nyatakan akibatnya bagi bola terbuka yang berpusat sama dan berjari-jari .   Petunjuk 1. Setiap suku maksimum tidak melebihi akar jumlah kuadrat.  Petunjuk 2. Terapkan Cauchy–Schwarz pada vektor dan .   Rantai pertidaksamaan berlaku. Karena jarak yang lebih besar menghasilkan bola berjari-jari sama yang lebih kecil, , dan .   Tuliskan . Karena , diperoleh . Karena , diperoleh . Cauchy–Schwarz memberi .  Jika , maka , lalu ; ini memberi tiga inklusi pertama. Jika , maka , memberi inklusi terakhir.  "
+},
+{
+  "id": "o003-c90-ch03-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "C.9",
+  "title": "Penguasaan 3: semua bola pada metrik diskret.",
+  "body": "Penguasaan 3: semua bola pada metrik diskret  Misalkan himpunan tak kosong dengan metrik diskret dan . Tentukan untuk setiap .   Petunjuk. Satu-satunya nilai jarak adalah dan ; perhatikan ketegasan tanda .   untuk , dan untuk .   Titik pusat selalu masuk karena . Setiap mempunyai jarak dari . Jika , syarat gagal, termasuk pada ; jadi hanya pusat yang masuk. Jika , kedua nilai jarak lebih kecil dari , sehingga seluruh masuk.  "
+},
+{
+  "id": "o003-c90-ch03-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "C.10",
+  "title": "Penguasaan 4: metrik lintasan terpendek.",
+  "body": "Penguasaan 4: metrik lintasan terpendek  Pada graf berbobot , hitung dan . Berikan satu verifikasi eksplisit pertidaksamaan segitiga yang melibatkan , , dan .   Petunjuk. Daftarkan lintasan pendek melalui dan bandingkan dengan sisi atau lintasan lain.   dan ; misalnya .   Lintasan berbobot . Semua alternatif yang tampak lebih pendek gagal: sisi melalui memberi sedikitnya , dan melalui memberi ; jadi . Dari ke , lintasan dan masing-masing berbobot dan ; lintasan melalui berbobot , jadi jarak terpendeknya . Untuk ketiga titik yang diminta, dan , sehingga .  "
+},
+{
+  "id": "o003-c90-ch03-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "C.11",
+  "title": "Penguasaan 5: menarik kembali metrik melalui injeksi.",
+  "body": "Penguasaan 5: menarik kembali metrik melalui injeksi  Misalkan ruang metrik dan injektif. Buktikan bahwa mendefinisikan metrik pada . Jelaskan tepat di mana injektivitas dipakai.   Petunjuk. Tiga aksioma diwarisi langsung; untuk jarak nol, ubah kesamaan citra menjadi kesamaan masukan.   Fungsi merupakan metrik. Injektivitas diperlukan pada arah .   Tak-negatif dan simetri mengikuti sifat . Jika , jelas . Sebaliknya, jarak nol memberi menurut identitas titik di ; injektivitas lalu memberi . Untuk , , yang tepat merupakan pertidaksamaan segitiga bagi . Tanpa injektivitas, dua masukan berbeda yang mempunyai citra sama akan berjarak nol.  "
+},
+{
+  "id": "o003-c90-ch03-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "C.12",
+  "title": "Penguasaan 6: maksimum dua metrik.",
+  "body": "Penguasaan 6: maksimum dua metrik  Jika dan adalah metrik pada himpunan yang sama , buktikan bahwa juga metrik.   Petunjuk. Untuk setiap , batasi dengan jumlah yang suku-sukunya masing-masing tidak melebihi .   merupakan metrik pada .   Maksimum dua bilangan tak negatif tak negatif dan simetris. Nilai nol tepat ketika kedua nol, dan karena keduanya metrik, hal itu tepat ketika . Untuk , . Kedua calon di dalam maksimum dibatasi oleh ruas kanan yang sama; mengambil maksimumnya memberi .  "
+},
+{
+  "id": "o003-c90-ch03-mastery-07",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-07",
+  "type": "Pemeriksaan",
+  "number": "C.13",
+  "title": "Penguasaan 7: penskalaan tidak mengubah bola secara hakiki.",
+  "body": "Penguasaan 7: penskalaan tidak mengubah bola secara hakiki  Misalkan metrik dan . Buktikan bahwa . Simpulkan bahwa kedua metrik menentukan keluarga himpunan terbuka yang sama ketika konsep itu diperkenalkan nanti.   Petunjuk. Bagi pertidaksamaan dengan bilangan positif .   Kedua bola sama karena tepat ketika . Jadi penskalaan positif hanya mengganti label jari-jari.   Untuk titik sembarang , jika dan hanya jika . Karena , pembagian tidak membalik tanda, sehingga syarat ini setara dengan , yakni . Setiap bola bagi satu metrik dengan demikian merupakan bola bagi metrik lain; gabungan bola yang kelak mendefinisikan himpunan terbuka juga sama.  "
+},
+{
+  "id": "o003-c90-ch03-mastery-08",
+  "level": "2",
+  "url": "o003-c90-ch03-mastery.html#o003-c90-ch03-mastery-08",
+  "type": "Pemeriksaan",
+  "number": "C.14",
+  "title": "Penguasaan 8: membangun tak berhingga banyak metrik.",
+  "body": "Penguasaan 8: membangun tak berhingga banyak metrik  Misalkan mempunyai sedikitnya dua unsur. Bangun tak berhingga banyak metrik yang berbeda pada , dan buktikan bahwa metrik-metrik tersebut memang berbeda sebagai fungsi.   Petunjuk. Kalikan metrik diskret dengan konstanta positif yang berbeda.   Untuk setiap , fungsi jika dan jika merupakan metrik; nilai yang berbeda menghasilkan fungsi yang berbeda.   Tak-negatif, identitas, dan simetri langsung. Jika , pertidaksamaan segitiga seketika. Jika , tidak mungkin sekaligus dan ; sedikitnya satu jarak pada ruas kanan bernilai , sehingga . Pilih dua unsur berbeda . Untuk , , jadi metriknya berbeda. Karena ada tak berhingga banyak bilangan real positif, diperoleh tak berhingga banyak metrik.  "
+},
+{
+  "id": "o003-c90-ch03-diagnostics",
+  "level": "1",
+  "url": "o003-c90-ch03-diagnostics.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Diagnostik kesalahan ringkas",
+  "body": " Diagnostik kesalahan ringkas    Memeriksa hanya tiga aksioma Calon jarak yang tak negatif, simetris, dan nol pada diagonal masih dapat gagal pada pertidaksamaan segitiga.  Mengabaikan domain Rumus yang sama dapat menjadi metrik pada satu himpunan dan gagal atau bahkan tidak terdefinisi pada himpunan lain.  Menggambar bola dengan geometri yang salah Bola selalu ditentukan oleh metrik yang sedang dipakai; bentuk Euklidesnya dapat berupa lingkaran, belah ketupat, persegi, ruas, atau himpunan lain.  Mengganti “kurang dari” dengan “kurang dari atau sama dengan” Bola terbuka memakai syarat tegas ; titik pada batas tidak termasuk.  Menganggap representasi rasional tidak penting Pada metrik pembilang-penyebut, gunakan bentuk paling sederhana dengan penyebut positif sebelum menghitung jarak.  Membagi dengan koefisien yang mungkin nol Dalam bukti Cauchy–Schwarz, pisahkan kasus vektor nol sebelum memakai rumus kuadrat dengan koefisien utama .  Membuktikan hasil kali jarak dengan gambar Untuk metrik maksimum pada produk, buktikan pertidaksamaan koordinat demi koordinat lalu ambil maksimum.  Menggunakan petunjuk pecahan pada kasus nol Jika petunjuk memakai , tangani lebih dahulu.    "
+},
+{
+  "id": "o003-c90-ch03-exercise-guides",
+  "level": "1",
+  "url": "o003-c90-ch03-exercise-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan dan pembahasan empat belas latihan",
+  "body": " Panduan dan pembahasan empat belas latihan  Nomor panduan mengikuti urutan empat belas latihan pada bagian akhir Bab 3. Setiap panduan mempertahankan persoalan sumber, tetapi penyelesaiannya merupakan uraian asli pendamping ini.  Latihan 1: metrik diskret  Buktikan latihan dengan memeriksa keempat aksioma.   Petunjuk. Dalam pertidaksamaan segitiga, pisahkan kasus dan .   Fungsi nol-satu yang diberikan merupakan metrik pada setiap himpunan .   Nilainya atau , jadi tak negatif. Menurut definisi, tepat ketika , dan kondisi kesamaan tidak berubah ketika urutan titik dibalik, sehingga simetri berlaku. Jika , ruas kiri pertidaksamaan segitiga nol. Jika , sedikitnya satu dari atau harus berlaku; maka sedikitnya satu suku ruas kanan bernilai . Jadi .   Latihan 2: metrik modular pada tiga titik  Selesaikan kedua nilai pada . Untuk nilai yang menghasilkan metrik, klasifikasikan semua bola terbuka berpusat di menurut jari-jarinya.   Petunjuk 1. Buat tabel simetris untuk pasangan .  Petunjuk 2. Pada , tiga jarak antartitik adalah .   Untuk , fungsi bukan metrik karena . Untuk , fungsi merupakan metrik. Dalam kasus ini, untuk , untuk , dan untuk .   Modulo , nilai diagonal semuanya nol, tetapi juga bersisa nol; identitas titik gagal. Modulo , tabel jaraknya ialah , , , nilai diagonal nol, dan tabel simetris. Ketiga pertidaksamaan tak trivial adalah , , dan ; semuanya benar, jadi fungsi merupakan metrik.  Jarak dari pusat ke berturut-turut . Karena bola terbuka memakai tanda tegas, titik baru masuk ketika dan titik baru masuk ketika , yang menghasilkan tiga kasus pada jawaban.   Latihan 3: metrik pembilang–penyebut pada  Selesaikan ketiga tugas pada : buktikan metriknya, tentukan bola terbuka berpusat di berjari-jari , dan tentukan titik yang berada di antara dan .   Petunjuk 1. Petakan pecahan paling sederhana ke pasangan dan gunakan metrik maksimum.  Petunjuk 2. Semua jarak yang muncul adalah bilangan bulat tak negatif.   Fungsi merupakan metrik. Bola hanya memuat . Titik-titik yang berada di antara dan hanyalah kedua titik ujung tersebut.   Representasi paling sederhana dengan penyebut positif bersifat tunggal, sehingga peta injektif. Rumus adalah pembatasan metrik maksimum pada ke citra ; karena itu keempat aksioma diwarisi. Secara langsung, pertidaksamaan segitiga mengikuti dari dan ketaksamaan yang sama bagi penyebut, lalu mengambil maksimum.  Jarak antardua representasi merupakan maksimum dua bilangan bulat. Syarat jarak kurang dari memaksa kedua selisih nol, jadi bola hanya memuat pusat. Selanjutnya . Jika berada di antara keduanya, dua jarak bilangan bulat tak negatif harus berjumlah ; salah satunya nol. Maka sama dengan salah satu titik ujung. Kedua ujung memang memenuhi definisi betweenness.   Latihan 4: betweenness yang berbeda pada  Pada latihan keempat dalam urutan sumber, tentukan semua titik di antara dan , bandingkan jarak dan dari , lalu tentukan semua titik di antara dan .   Petunjuk. Untuk kasus terakhir, jarak total ialah ; periksa kemungkinan , , dan .   Di antara dan hanya ada dan . Titik lebih dekat ke daripada . Di antara dan terdapat tepat .   Bagian pertama sama dengan akhir panduan sebelumnya. Karena representasi dan , jaraknya . Sementara itu ; jadi lebih dekat.  Misalkan dalam bentuk paling sederhana dan berada di antara dan . Jumlah kedua jaraknya harus . Kasus dan memberi titik ujung. Pada kasus , syarat pertama memberi dan ; syarat kedua memberi dan . Dengan , irisan syarat memaksa dan . Pecahan bukan bentuk paling sederhana, sedangkan sah dan berjarak dari kedua ujung. Jadi daftar pada jawaban lengkap.   Latihan 5: metrik taksi pada  Buktikan untuk dimensi sembarang dengan memeriksa keempat aksioma metrik, termasuk pertidaksamaan segitiga sebagai jumlah pertidaksamaan koordinat.   Petunjuk. Jumlahkan ketaksamaan dari sampai .   merupakan metrik pada .   Setiap suku tak negatif, jadi jumlahnya tak negatif. Jumlah itu nol tepat ketika setiap , yakni ketika . Simetri mengikuti . Untuk titik ketiga , ketaksamaan nilai mutlak pada setiap koordinat memberi . Menjumlahkan atas semua menghasilkan .   Latihan 6: metrik maksimum pada  Selesaikan kedua tugas : buktikan ketaksamaan maksimum bagi dua himpunan berhingga tak kosong di , lalu gunakan hasilnya atau argumen koordinat untuk membuktikan bahwa merupakan metrik.   Petunjuk. Setiap memenuhi .   Berlaku , dan merupakan metrik pada .   Karena berhingga dan tak kosong, semua maksimum ada. Untuk setiap dan , dan , jadi . Mengambil maksimum atas semua jumlah membuktikan ketaksamaan pertama.  Tak-negatif, identitas, dan simetri bagi mengikuti nilai mutlak. Untuk setiap koordinat, . Karena semua dibatasi ruas kanan yang sama, maksimum mereka juga dibatasi ruas kanan tersebut. Inilah pertidaksamaan segitiga.   Latihan 7: metrik hub dan bola-bolanya  Selesaikan seluruh tugas : buktikan bahwa metrik, tentukan dua bola yang diminta, lalu deskripsikan untuk pusat dan jari-jari sembarang.   Petunjuk 1. Jika tiga titik berbeda, ruas kanan pertidaksamaan segitiga memuat tambahan.  Petunjuk 2. Untuk , syarat bola ialah .   Fungsi merupakan metrik. Untuk , . Untuk , . Secara umum, jika , bolanya ; jika , bolanya .   Tak-negatif, identitas, dan simetri langsung dari definisi kasus. Untuk pertidaksamaan segitiga, jika ruas kiri nol. Jika dan atau , diperoleh kesamaan. Jika berbeda dari keduanya, ruas kiri , sedangkan ruas kanan , yang tidak lebih kecil.  Pusat selalu masuk karena jaraknya nol. Untuk , tepat ketika . Jika , tidak ada titik tambahan. Jika , titik tambahannya membentuk bola Euklides berpusat di asal dengan jari-jari . Substitusi dan memberi dua kasus khusus.   Latihan 8: metrik -adik pada bilangan bulat  Selesaikan lima tugas latihan kedelapan: dua perhitungan, lema tentang eksponen keterbagian, bukti metrik, dan dua deskripsi himpunan untuk .   Petunjuk 1. Faktorkan dan .  Petunjuk 2. Jika dua selisih habis dibagi , jumlahnya juga habis dibagi .    untuk dan untuk . Berlaku , sehingga merupakan metrik, bahkan memenuhi pertidaksamaan ultrametrik. Untuk , syarat berarti , sedangkan berarti , dengan turut termasuk pada himpunan kedua.   Selisih pertama , jadi eksponennya dan jaraknya . Selisih kedua , jadi jaraknya .  Misalkan . Bilangan membagi dan , maka membagi jumlahnya ; karena itu . Setelah membalik pangkat positif, diperoleh . Tak-negatif, identitas, dan simetri mengikuti definisi serta ; jadi metrik.  Untuk dan , jarak satu berarti eksponen keterbagian , yakni tidak membagi . Nilai positif yang kurang dari mulai dari , jadi diperlukan , tepat ketika . Titik mempunyai jarak nol dan karena itu juga memenuhi syarat kedua.   Latihan 9: metrik maksimum pada ruang hasil kali  Hitung jarak pasangan pada tugas pertama latihan kesembilan, lalu deskripsikan dan gambarkan bola pada produk metrik Euklides dan diskret.   Petunjuk 1. Hitung jarak pada faktor dan secara terpisah, kemudian ambil maksimum.  Petunjuk 2. Syarat maksimum kurang dari memaksa kedua jarak faktor kurang dari .   Pada tugas pertama, . Pada tugas kedua, , sebuah ruas horizontal terbuka pada tinggi dalam gambar koordinat biasa.   Pada faktor pertama, . Pada faktor kedua, . Maka jarak produk ialah .  Untuk titik , syarat berada dalam bola kedua ialah . Jarak diskret hanya atau ; karena pertidaksamaannya tegas, harus . Syarat yang tersisa ialah . Jadi kedua titik ujung tidak masuk dan tidak ada titik pada tinggi lain.   Latihan 10: metrik logaritmik  Tentukan apakah merupakan metrik pada bilangan real positif dan buktikan jawaban Anda.   Petunjuk. Tulis dan gunakan bahwa injektif pada .   Ya. Metrik tersebut adalah tarikan balik metrik Euklides pada melalui bijeksi .   Karena , logaritma terdefinisi, dan . Nilai ini tak negatif dan simetris. Nilainya nol tepat ketika , yang oleh injektivitas logaritma setara dengan . Untuk , , yaitu tepat . Jadi semua aksioma terpenuhi.   Latihan 11: transformasi terbatas suatu metrik  Buktikan . Selain monotonitas, buktikan secara eksplisit bahwa subaditif pada bilangan tak negatif.   Petunjuk. Sederhanakan menjadi pecahan dengan penyebut positif.   Fungsi merupakan metrik pada .   Fungsi pada tak negatif, naik, dan bernilai nol tepat ketika . Selain itu, untuk , perhitungan langsung memberi Jadi .  Tak-negatif, identitas, dan simetri bagi kini langsung. Untuk pertidaksamaan segitiga, . Monotonitas lalu subaditivitas memberi , yang merupakan aksioma keempat.   Latihan 12: mengalikan metrik dengan konstanta  Tentukan semua syarat pada konstanta agar merupakan metrik. Nyatakan secara terpisah kasus ruang yang mempunyai sedikitnya dua titik dan kasus ruang satu titik.   Petunjuk. Untuk dua titik berbeda, uji tanda dan kemungkinan jarak nol; untuk ruang satu titik, semua nilai sudah nol.   Jika mempunyai sedikitnya dua titik, syarat perlu dan cukup adalah . Jika hanya mempunyai satu titik, setiap konstanta real menghasilkan fungsi nol yang sama dan tetap metrik.   Untuk , mengalikan setiap aksioma metrik dengan mempertahankan tak-negatif, himpunan nol, simetri, dan arah pertidaksamaan segitiga. Jika ada , maka . Untuk , jarak kedua titik menjadi nol dan identitas gagal; untuk , jaraknya negatif. Jadi perlu pada ruang dengan sedikitnya dua titik.  Pada ruang satu titik, satu-satunya pasangan adalah dan . Maka adalah fungsi nol untuk setiap ; semua aksioma tetap terpenuhi. Kasus kosong, jika diizinkan oleh konvensi, juga bersifat vakum.   Latihan 13: fungsi cekung dan transformasi metrik  Selesaikan ketiga tugas latihan fungsi cekung: verifikasi cekungnya , buktikan subaditivitas fungsi cekung pada yang nilainya di nol tak negatif, lalu buktikan bahwa adalah metrik di bawah hipotesis sumber.   Petunjuk 1. Selisih yang relevan untuk adalah .  Petunjuk 2. Jika , gunakan bobot dan ; tangani lebih dahulu.   Fungsi cekung pada , bahkan pada seluruh . Setiap fungsi cekung dengan memenuhi . Dengan tambahan bahwa naik dan nol tepat di nol, komposit merupakan metrik.   Untuk , pertidaksamaan cekung ekuivalen dengan . Selisih ruas kanan dan kiri ialah , jadi klaim berlaku.  Jika , maka . Jika , letakkan . Kekonkavan dengan titik dan memberi . Dengan bobot pelengkap diperoleh . Menjumlahkan memberi subaditivitas.  Untuk , tak-negatif jelas; nilai nol setara dengan , lalu dengan . Simetri diwarisi dari . Akhirnya, monotonitas dan subaditivitas memberi . Jadi semua aksioma metrik terpenuhi.   Latihan 14: lima klaim benar–salah  Putuskan lima klaim pada latihan terakhir dalam urutan sumber. Setiap jawaban salah harus disertai contoh konkret; setiap jawaban benar harus disertai argumen yang berlaku umum.   Petunjuk 1. Titik menguji jarak kuadrat; metrik diskret menguji klaim tentang himpunan dan daerah hasil.  Petunjuk 2. Pada hasil kali jarak, pilih dua titik yang berbeda hanya pada satu koordinat.   Urutannya adalah: salah, benar, benar, salah, salah.   (a) Salah: , tetapi . (b) Benar: pada setiap himpunan tak kosong, metrik diskret merupakan metrik. (c) Benar: jika himpunan mempunyai dua titik berbeda, metrik yang memberi jarak pada setiap pasangan berbeda adalah metrik; nilai yang berbeda memberi tak berhingga banyak fungsi berbeda.  (d) Salah. Ambil dengan metrik diskret. Titik dan berbeda, tetapi hasil kali jaraknya , sehingga identitas titik gagal. (e) Salah: himpunan tak berhingga apa pun dengan metrik diskret mempunyai daerah hasil jarak hanya , suatu himpunan berhingga.   "
+},
+{
+  "id": "o003-c90-ch03-exercise-01",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-01",
+  "type": "Pemeriksaan",
+  "number": "C.15",
+  "title": "Latihan 1: metrik diskret.",
+  "body": "Latihan 1: metrik diskret  Buktikan latihan dengan memeriksa keempat aksioma.   Petunjuk. Dalam pertidaksamaan segitiga, pisahkan kasus dan .   Fungsi nol-satu yang diberikan merupakan metrik pada setiap himpunan .   Nilainya atau , jadi tak negatif. Menurut definisi, tepat ketika , dan kondisi kesamaan tidak berubah ketika urutan titik dibalik, sehingga simetri berlaku. Jika , ruas kiri pertidaksamaan segitiga nol. Jika , sedikitnya satu dari atau harus berlaku; maka sedikitnya satu suku ruas kanan bernilai . Jadi .  "
+},
+{
+  "id": "o003-c90-ch03-exercise-02",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-02",
+  "type": "Pemeriksaan",
+  "number": "C.16",
+  "title": "Latihan 2: metrik modular pada tiga titik.",
+  "body": "Latihan 2: metrik modular pada tiga titik  Selesaikan kedua nilai pada . Untuk nilai yang menghasilkan metrik, klasifikasikan semua bola terbuka berpusat di menurut jari-jarinya.   Petunjuk 1. Buat tabel simetris untuk pasangan .  Petunjuk 2. Pada , tiga jarak antartitik adalah .   Untuk , fungsi bukan metrik karena . Untuk , fungsi merupakan metrik. Dalam kasus ini, untuk , untuk , dan untuk .   Modulo , nilai diagonal semuanya nol, tetapi juga bersisa nol; identitas titik gagal. Modulo , tabel jaraknya ialah , , , nilai diagonal nol, dan tabel simetris. Ketiga pertidaksamaan tak trivial adalah , , dan ; semuanya benar, jadi fungsi merupakan metrik.  Jarak dari pusat ke berturut-turut . Karena bola terbuka memakai tanda tegas, titik baru masuk ketika dan titik baru masuk ketika , yang menghasilkan tiga kasus pada jawaban.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-03",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-03",
+  "type": "Pemeriksaan",
+  "number": "C.17",
+  "title": "Latihan 3: metrik pembilang–penyebut pada <span class=\"process-math\">\\(\\Q\\)<\/span>.",
+  "body": "Latihan 3: metrik pembilang–penyebut pada  Selesaikan ketiga tugas pada : buktikan metriknya, tentukan bola terbuka berpusat di berjari-jari , dan tentukan titik yang berada di antara dan .   Petunjuk 1. Petakan pecahan paling sederhana ke pasangan dan gunakan metrik maksimum.  Petunjuk 2. Semua jarak yang muncul adalah bilangan bulat tak negatif.   Fungsi merupakan metrik. Bola hanya memuat . Titik-titik yang berada di antara dan hanyalah kedua titik ujung tersebut.   Representasi paling sederhana dengan penyebut positif bersifat tunggal, sehingga peta injektif. Rumus adalah pembatasan metrik maksimum pada ke citra ; karena itu keempat aksioma diwarisi. Secara langsung, pertidaksamaan segitiga mengikuti dari dan ketaksamaan yang sama bagi penyebut, lalu mengambil maksimum.  Jarak antardua representasi merupakan maksimum dua bilangan bulat. Syarat jarak kurang dari memaksa kedua selisih nol, jadi bola hanya memuat pusat. Selanjutnya . Jika berada di antara keduanya, dua jarak bilangan bulat tak negatif harus berjumlah ; salah satunya nol. Maka sama dengan salah satu titik ujung. Kedua ujung memang memenuhi definisi betweenness.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-04",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-04",
+  "type": "Pemeriksaan",
+  "number": "C.18",
+  "title": "Latihan 4: betweenness yang berbeda pada <span class=\"process-math\">\\(\\Q\\)<\/span>.",
+  "body": "Latihan 4: betweenness yang berbeda pada  Pada latihan keempat dalam urutan sumber, tentukan semua titik di antara dan , bandingkan jarak dan dari , lalu tentukan semua titik di antara dan .   Petunjuk. Untuk kasus terakhir, jarak total ialah ; periksa kemungkinan , , dan .   Di antara dan hanya ada dan . Titik lebih dekat ke daripada . Di antara dan terdapat tepat .   Bagian pertama sama dengan akhir panduan sebelumnya. Karena representasi dan , jaraknya . Sementara itu ; jadi lebih dekat.  Misalkan dalam bentuk paling sederhana dan berada di antara dan . Jumlah kedua jaraknya harus . Kasus dan memberi titik ujung. Pada kasus , syarat pertama memberi dan ; syarat kedua memberi dan . Dengan , irisan syarat memaksa dan . Pecahan bukan bentuk paling sederhana, sedangkan sah dan berjarak dari kedua ujung. Jadi daftar pada jawaban lengkap.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-05",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-05",
+  "type": "Pemeriksaan",
+  "number": "C.19",
+  "title": "Latihan 5: metrik taksi pada <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
+  "body": "Latihan 5: metrik taksi pada  Buktikan untuk dimensi sembarang dengan memeriksa keempat aksioma metrik, termasuk pertidaksamaan segitiga sebagai jumlah pertidaksamaan koordinat.   Petunjuk. Jumlahkan ketaksamaan dari sampai .   merupakan metrik pada .   Setiap suku tak negatif, jadi jumlahnya tak negatif. Jumlah itu nol tepat ketika setiap , yakni ketika . Simetri mengikuti . Untuk titik ketiga , ketaksamaan nilai mutlak pada setiap koordinat memberi . Menjumlahkan atas semua menghasilkan .  "
+},
+{
+  "id": "o003-c90-ch03-exercise-06",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-06",
+  "type": "Pemeriksaan",
+  "number": "C.20",
+  "title": "Latihan 6: metrik maksimum pada <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
+  "body": "Latihan 6: metrik maksimum pada  Selesaikan kedua tugas : buktikan ketaksamaan maksimum bagi dua himpunan berhingga tak kosong di , lalu gunakan hasilnya atau argumen koordinat untuk membuktikan bahwa merupakan metrik.   Petunjuk. Setiap memenuhi .   Berlaku , dan merupakan metrik pada .   Karena berhingga dan tak kosong, semua maksimum ada. Untuk setiap dan , dan , jadi . Mengambil maksimum atas semua jumlah membuktikan ketaksamaan pertama.  Tak-negatif, identitas, dan simetri bagi mengikuti nilai mutlak. Untuk setiap koordinat, . Karena semua dibatasi ruas kanan yang sama, maksimum mereka juga dibatasi ruas kanan tersebut. Inilah pertidaksamaan segitiga.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-07",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-07",
+  "type": "Pemeriksaan",
+  "number": "C.21",
+  "title": "Latihan 7: metrik hub dan bola-bolanya.",
+  "body": "Latihan 7: metrik hub dan bola-bolanya  Selesaikan seluruh tugas : buktikan bahwa metrik, tentukan dua bola yang diminta, lalu deskripsikan untuk pusat dan jari-jari sembarang.   Petunjuk 1. Jika tiga titik berbeda, ruas kanan pertidaksamaan segitiga memuat tambahan.  Petunjuk 2. Untuk , syarat bola ialah .   Fungsi merupakan metrik. Untuk , . Untuk , . Secara umum, jika , bolanya ; jika , bolanya .   Tak-negatif, identitas, dan simetri langsung dari definisi kasus. Untuk pertidaksamaan segitiga, jika ruas kiri nol. Jika dan atau , diperoleh kesamaan. Jika berbeda dari keduanya, ruas kiri , sedangkan ruas kanan , yang tidak lebih kecil.  Pusat selalu masuk karena jaraknya nol. Untuk , tepat ketika . Jika , tidak ada titik tambahan. Jika , titik tambahannya membentuk bola Euklides berpusat di asal dengan jari-jari . Substitusi dan memberi dua kasus khusus.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-08",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-08",
+  "type": "Pemeriksaan",
+  "number": "C.22",
+  "title": "Latihan 8: metrik <span class=\"process-math\">\\(p\\)<\/span>-adik pada bilangan bulat.",
+  "body": "Latihan 8: metrik -adik pada bilangan bulat  Selesaikan lima tugas latihan kedelapan: dua perhitungan, lema tentang eksponen keterbagian, bukti metrik, dan dua deskripsi himpunan untuk .   Petunjuk 1. Faktorkan dan .  Petunjuk 2. Jika dua selisih habis dibagi , jumlahnya juga habis dibagi .    untuk dan untuk . Berlaku , sehingga merupakan metrik, bahkan memenuhi pertidaksamaan ultrametrik. Untuk , syarat berarti , sedangkan berarti , dengan turut termasuk pada himpunan kedua.   Selisih pertama , jadi eksponennya dan jaraknya . Selisih kedua , jadi jaraknya .  Misalkan . Bilangan membagi dan , maka membagi jumlahnya ; karena itu . Setelah membalik pangkat positif, diperoleh . Tak-negatif, identitas, dan simetri mengikuti definisi serta ; jadi metrik.  Untuk dan , jarak satu berarti eksponen keterbagian , yakni tidak membagi . Nilai positif yang kurang dari mulai dari , jadi diperlukan , tepat ketika . Titik mempunyai jarak nol dan karena itu juga memenuhi syarat kedua.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-09",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-09",
+  "type": "Pemeriksaan",
+  "number": "C.23",
+  "title": "Latihan 9: metrik maksimum pada ruang hasil kali.",
+  "body": "Latihan 9: metrik maksimum pada ruang hasil kali  Hitung jarak pasangan pada tugas pertama latihan kesembilan, lalu deskripsikan dan gambarkan bola pada produk metrik Euklides dan diskret.   Petunjuk 1. Hitung jarak pada faktor dan secara terpisah, kemudian ambil maksimum.  Petunjuk 2. Syarat maksimum kurang dari memaksa kedua jarak faktor kurang dari .   Pada tugas pertama, . Pada tugas kedua, , sebuah ruas horizontal terbuka pada tinggi dalam gambar koordinat biasa.   Pada faktor pertama, . Pada faktor kedua, . Maka jarak produk ialah .  Untuk titik , syarat berada dalam bola kedua ialah . Jarak diskret hanya atau ; karena pertidaksamaannya tegas, harus . Syarat yang tersisa ialah . Jadi kedua titik ujung tidak masuk dan tidak ada titik pada tinggi lain.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-10",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-10",
+  "type": "Pemeriksaan",
+  "number": "C.24",
+  "title": "Latihan 10: metrik logaritmik.",
+  "body": "Latihan 10: metrik logaritmik  Tentukan apakah merupakan metrik pada bilangan real positif dan buktikan jawaban Anda.   Petunjuk. Tulis dan gunakan bahwa injektif pada .   Ya. Metrik tersebut adalah tarikan balik metrik Euklides pada melalui bijeksi .   Karena , logaritma terdefinisi, dan . Nilai ini tak negatif dan simetris. Nilainya nol tepat ketika , yang oleh injektivitas logaritma setara dengan . Untuk , , yaitu tepat . Jadi semua aksioma terpenuhi.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-11",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-11",
+  "type": "Pemeriksaan",
+  "number": "C.25",
+  "title": "Latihan 11: transformasi terbatas suatu metrik.",
+  "body": "Latihan 11: transformasi terbatas suatu metrik  Buktikan . Selain monotonitas, buktikan secara eksplisit bahwa subaditif pada bilangan tak negatif.   Petunjuk. Sederhanakan menjadi pecahan dengan penyebut positif.   Fungsi merupakan metrik pada .   Fungsi pada tak negatif, naik, dan bernilai nol tepat ketika . Selain itu, untuk , perhitungan langsung memberi Jadi .  Tak-negatif, identitas, dan simetri bagi kini langsung. Untuk pertidaksamaan segitiga, . Monotonitas lalu subaditivitas memberi , yang merupakan aksioma keempat.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-12",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-12",
+  "type": "Pemeriksaan",
+  "number": "C.26",
+  "title": "Latihan 12: mengalikan metrik dengan konstanta.",
+  "body": "Latihan 12: mengalikan metrik dengan konstanta  Tentukan semua syarat pada konstanta agar merupakan metrik. Nyatakan secara terpisah kasus ruang yang mempunyai sedikitnya dua titik dan kasus ruang satu titik.   Petunjuk. Untuk dua titik berbeda, uji tanda dan kemungkinan jarak nol; untuk ruang satu titik, semua nilai sudah nol.   Jika mempunyai sedikitnya dua titik, syarat perlu dan cukup adalah . Jika hanya mempunyai satu titik, setiap konstanta real menghasilkan fungsi nol yang sama dan tetap metrik.   Untuk , mengalikan setiap aksioma metrik dengan mempertahankan tak-negatif, himpunan nol, simetri, dan arah pertidaksamaan segitiga. Jika ada , maka . Untuk , jarak kedua titik menjadi nol dan identitas gagal; untuk , jaraknya negatif. Jadi perlu pada ruang dengan sedikitnya dua titik.  Pada ruang satu titik, satu-satunya pasangan adalah dan . Maka adalah fungsi nol untuk setiap ; semua aksioma tetap terpenuhi. Kasus kosong, jika diizinkan oleh konvensi, juga bersifat vakum.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-13",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-13",
+  "type": "Pemeriksaan",
+  "number": "C.27",
+  "title": "Latihan 13: fungsi cekung dan transformasi metrik.",
+  "body": "Latihan 13: fungsi cekung dan transformasi metrik  Selesaikan ketiga tugas latihan fungsi cekung: verifikasi cekungnya , buktikan subaditivitas fungsi cekung pada yang nilainya di nol tak negatif, lalu buktikan bahwa adalah metrik di bawah hipotesis sumber.   Petunjuk 1. Selisih yang relevan untuk adalah .  Petunjuk 2. Jika , gunakan bobot dan ; tangani lebih dahulu.   Fungsi cekung pada , bahkan pada seluruh . Setiap fungsi cekung dengan memenuhi . Dengan tambahan bahwa naik dan nol tepat di nol, komposit merupakan metrik.   Untuk , pertidaksamaan cekung ekuivalen dengan . Selisih ruas kanan dan kiri ialah , jadi klaim berlaku.  Jika , maka . Jika , letakkan . Kekonkavan dengan titik dan memberi . Dengan bobot pelengkap diperoleh . Menjumlahkan memberi subaditivitas.  Untuk , tak-negatif jelas; nilai nol setara dengan , lalu dengan . Simetri diwarisi dari . Akhirnya, monotonitas dan subaditivitas memberi . Jadi semua aksioma metrik terpenuhi.  "
+},
+{
+  "id": "o003-c90-ch03-exercise-14",
+  "level": "2",
+  "url": "o003-c90-ch03-exercise-guides.html#o003-c90-ch03-exercise-14",
+  "type": "Pemeriksaan",
+  "number": "C.28",
+  "title": "Latihan 14: lima klaim benar–salah.",
+  "body": "Latihan 14: lima klaim benar–salah  Putuskan lima klaim pada latihan terakhir dalam urutan sumber. Setiap jawaban salah harus disertai contoh konkret; setiap jawaban benar harus disertai argumen yang berlaku umum.   Petunjuk 1. Titik menguji jarak kuadrat; metrik diskret menguji klaim tentang himpunan dan daerah hasil.  Petunjuk 2. Pada hasil kali jarak, pilih dua titik yang berbeda hanya pada satu koordinat.   Urutannya adalah: salah, benar, benar, salah, salah.   (a) Salah: , tetapi . (b) Benar: pada setiap himpunan tak kosong, metrik diskret merupakan metrik. (c) Benar: jika himpunan mempunyai dua titik berbeda, metrik yang memberi jarak pada setiap pasangan berbeda adalah metrik; nilai yang berbeda memberi tak berhingga banyak fungsi berbeda.  (d) Salah. Ambil dengan metrik diskret. Titik dan berbeda, tetapi hasil kali jaraknya , sehingga identitas titik gagal. (e) Salah: himpunan tak berhingga apa pun dengan metrik diskret mempunyai daerah hasil jarak hanya , suatu himpunan berhingga.  "
 },
 {
   "id": "index-1",

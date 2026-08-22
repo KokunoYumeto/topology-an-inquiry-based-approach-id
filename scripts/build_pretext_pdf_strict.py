@@ -33,11 +33,14 @@ def main() -> int:
     parser.add_argument("--log", required=True, type=Path)
     parser.add_argument("--expect-pdf", required=True, type=Path)
     parser.add_argument("--source-date-epoch", default="1692057600")
+    parser.add_argument("--clean", action="store_true")
     args = parser.parse_args()
 
     environment = os.environ.copy()
     environment["SOURCE_DATE_EPOCH"] = args.source_date_epoch
     command = [sys.executable, "-m", "pretext", "build", args.target]
+    if args.clean:
+        command.append("--clean")
     result = subprocess.run(
         command,
         stdout=subprocess.PIPE,

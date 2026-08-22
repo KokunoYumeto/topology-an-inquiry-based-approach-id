@@ -6,8 +6,9 @@ Approach* karya Steven Schlicker, Grand Valley State University.
 **Baca edisi web:**  
 https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/
 
-**Unduh PDF batas terverifikasi Bab 1-2 (51 halaman):**  
-https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-02-id.pdf
+**Unduh PDF batas terverifikasi Bab 1-3 (73 halaman):**
+
+https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-03-id.pdf
 
 ## Status
 
@@ -15,15 +16,17 @@ Produksi lengkap masih berlangsung. Batas publik saat ini memuat:
 
 - Bab 1, *Himpunan*;
 - Bab 2, *Fungsi*;
-- pendamping belajar mandiri orisinal untuk kedua bab, dengan petunjuk,
+- Bab 3, *Ruang Metrik*;
+- pendamping belajar mandiri orisinal untuk ketiga bab, dengan petunjuk,
   jawaban, rubrik, dan solusi bertahap; dan
 - backend modular netral-lokal untuk provenance, istilah, latihan, solusi,
   koreksi sumber, hak komponen, dan status QA.
 
-Batas Bab 1-2 telah melewati pemeriksaan struktur sumber, audit matematika
+Batas Bab 1-3 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
+audit matematika
 pendamping, dua pembangunan HTML deterministik, dua pembangunan PDF ketat,
 pemeriksaan tautan/aset, reflow desktop/seluler, interaksi petunjuk, dan
-inspeksi visual seluruh 51 halaman. Ini bukan klaim bahwa edisi 20 bab sudah
+inspeksi visual seluruh 73 halaman. Ini bukan klaim bahwa edisi 20 bab sudah
 selesai.
 
 ## Sumber resmi yang dibekukan
@@ -54,8 +57,8 @@ PreTeXt, atau repositori sumber yang dinyatakan maupun disiratkan.
 - `docs/` - byte pembaca publik untuk GitHub Pages.
 
 Manifest kumulatif yang mengikat batas ini adalah
-`qa/CHAPTER02_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
-`qa/CHAPTER02_BUILD_QA.md`.
+`qa/CHAPTER03_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
+`qa/CHAPTER03_BUILD_QA.md`.
 
 ## Membangun batas saat ini
 
@@ -63,9 +66,9 @@ Lingkungan yang direkam memakai Python 3.12.13, PreTeXt 1.7.5,
 setuptools 75.8.0, dan MiKTeX 26.5.
 
 ```text
-pretext build chapters01-02-html
-python scripts/finalize_chapter01_html.py output/chapters01-02-html --manifest qa/CHAPTER02_HTML_MANIFEST.json
-python scripts/build_pretext_pdf_strict.py chapters01-02-pdf --log qa/CHAPTER02_PDF_BUILD.log --expect-pdf output/chapters01-02-pdf/chapters_01_02_reader.pdf
+pretext build chapters01-03-html --clean
+python scripts/finalize_chapter01_html.py output/chapters01-03-html --manifest qa/CHAPTER03_HTML_MANIFEST.json
+python scripts/build_pretext_pdf_strict.py chapters01-03-pdf --clean --log qa/CHAPTER03_PDF_BUILD.log --expect-pdf output/chapters01-03-pdf/chapters_01_03_reader.pdf
 ```
 
 HTML saat ini masih memanggil beberapa dependensi runtime jarak jauh dari

@@ -15,7 +15,10 @@ from lxml import etree
 
 
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
-MATH_TAGS = {"m", "me", "men"}
+# Protect every leaf-level mathematics carrier used by this corpus.  Display
+# rows hold the actual TeX payload inside <md>, so omitting <mrow> would allow
+# a changed multiline formula to escape the source-fidelity comparison.
+MATH_TAGS = {"m", "me", "men", "mrow"}
 PROTECTED_TAGS = {"c", "code", "program", "sage"}
 
 
@@ -63,6 +66,12 @@ def main() -> int:
         default=[],
         metavar="FILE:ZERO_BASED_TRANSLATED_INDEX:TAG",
     )
+    parser.add_argument(
+        "--allow-element-block-move",
+        action="append",
+        default=[],
+        metavar="FILE:ZERO_BASED_TRANSLATED_START:ELEMENT_COUNT:ZERO_BASED_AUTHORITY_START:ROOT_TAG",
+    )
     parser.add_argument("files", nargs="+")
     args = parser.parse_args()
 
@@ -84,6 +93,21 @@ def main() -> int:
             raise SystemExit(f"invalid --allow-element-insertion: {specification}")
         insertion_allowances.setdefault(file_name, []).append((index, tag, specification))
     observed_element_insertions: list[dict[str, object]] = []
+    move_allowances: dict[str, list[tuple[int, int, int, str, str]]] = {}
+    for specification in args.allow_element_block_move:
+        try:
+            file_name, start_text, count_text, authority_start_text, root_tag = specification.rsplit(":", 4)
+            start = int(start_text)
+            count = int(count_text)
+            authority_start = int(authority_start_text)
+        except (ValueError, TypeError):
+            raise SystemExit(f"invalid --allow-element-block-move: {specification}")
+        if count <= 0:
+            raise SystemExit(f"element-block-move count must be positive: {specification}")
+        move_allowances.setdefault(file_name, []).append(
+            (start, count, authority_start, root_tag, specification)
+        )
+    observed_element_block_moves: list[dict[str, object]] = []
 
     for name in args.files:
         authority_path = (authority_root / name).resolve(strict=True)
@@ -108,9 +132,7 @@ def main() -> int:
         translated_tags = [local_name(node) for node in translated_elements]
         authority_attributes = [sorted(node.attrib.items()) for node in authority_elements]
         translated_attributes = [sorted(node.attrib.items()) for node in translated_elements]
-        adjusted_translated_tags = list(translated_tags)
-        adjusted_translated_attributes = list(translated_attributes)
-        allowed_insertion_indices_for_file: set[int] = set()
+        adjusted_translated_elements = list(translated_elements)
         for index, expected_tag, specification in sorted(
             insertion_allowances.get(name, []), reverse=True
         ):
@@ -127,9 +149,77 @@ def main() -> int:
                 "key": specification,
                 "element": serialized(translated_elements[index]),
             })
-            allowed_insertion_indices_for_file.add(index)
-            adjusted_translated_tags.pop(index)
-            adjusted_translated_attributes.pop(index)
+            adjusted_translated_elements.pop(index)
+        for start, count, authority_start, expected_root_tag, specification in move_allowances.get(name, []):
+            if start < 0 or start + count > len(adjusted_translated_elements):
+                failures.append(f"element-block-move translated range out of bounds: {specification}")
+                continue
+            if authority_start < 0 or authority_start + count > len(authority_elements):
+                failures.append(f"element-block-move authority range out of bounds: {specification}")
+                continue
+            if start == authority_start:
+                failures.append(f"element-block-move is a no-op: {specification}")
+                continue
+            block = adjusted_translated_elements[start:start + count]
+            if not block or local_name(block[0]) != expected_root_tag:
+                actual = local_name(block[0]) if block else "<empty>"
+                failures.append(
+                    f"element-block-move root mismatch: {specification}; got {actual}"
+                )
+                continue
+            retained_ids = {id(node) for node in adjusted_translated_elements}
+            retained_subtree = [
+                node
+                for node in block[0].iter()
+                if isinstance(node.tag, str) and id(node) in retained_ids
+            ]
+            if len(retained_subtree) != count or any(
+                actual is not expected for actual, expected in zip(block, retained_subtree)
+            ):
+                failures.append(
+                    f"element-block-move does not select exactly one retained subtree: {specification}"
+                )
+                continue
+            authority_block = authority_elements[authority_start:authority_start + count]
+            authority_subtree = [
+                node
+                for node in authority_block[0].iter()
+                if isinstance(node.tag, str)
+            ]
+            if len(authority_subtree) != count or any(
+                actual is not expected for actual, expected in zip(authority_block, authority_subtree)
+            ):
+                failures.append(
+                    f"element-block-move authority range is not one subtree: {specification}"
+                )
+                continue
+            translated_signature = [
+                (local_name(node), sorted(node.attrib.items())) for node in block
+            ]
+            authority_signature = [
+                (local_name(node), sorted(node.attrib.items())) for node in authority_block
+            ]
+            if translated_signature != authority_signature:
+                failures.append(
+                    f"element-block-move subtree topology differs from authority: {specification}"
+                )
+                continue
+            del adjusted_translated_elements[start:start + count]
+            adjusted_translated_elements[authority_start:authority_start] = block
+            moved_payload = serialized(block[0]).encode("utf-8")
+            observed_element_block_moves.append({
+                "key": specification,
+                "translated_start_after_insertions": start,
+                "element_count": count,
+                "authority_start": authority_start,
+                "root_tag": expected_root_tag,
+                "xml_id": block[0].get(XML_ID),
+                "serialized_root_sha256": hashlib.sha256(moved_payload).hexdigest(),
+            })
+        adjusted_translated_tags = [local_name(node) for node in adjusted_translated_elements]
+        adjusted_translated_attributes = [
+            sorted(node.attrib.items()) for node in adjusted_translated_elements
+        ]
         if authority_tags != adjusted_translated_tags:
             first = next(
                 (index for index, pair in enumerate(zip(authority_tags, adjusted_translated_tags)) if pair[0] != pair[1]),
@@ -142,9 +232,8 @@ def main() -> int:
         authority_math = [normalized_math(node) for node in authority_elements if local_name(node) in MATH_TAGS]
         translated_math = [
             normalized_math(node)
-            for index, node in enumerate(translated_elements)
+            for node in adjusted_translated_elements
             if local_name(node) in MATH_TAGS
-            and index not in allowed_insertion_indices_for_file
         ]
         if len(authority_math) != len(translated_math):
             failures.append(f"protected mathematics count changed: {name}")
@@ -163,7 +252,11 @@ def main() -> int:
                 })
 
         authority_protected = [serialized(node) for node in authority_elements if local_name(node) in PROTECTED_TAGS]
-        translated_protected = [serialized(node) for node in translated_elements if local_name(node) in PROTECTED_TAGS]
+        translated_protected = [
+            serialized(node)
+            for node in adjusted_translated_elements
+            if local_name(node) in PROTECTED_TAGS
+        ]
         if authority_protected != translated_protected:
             failures.append(f"protected code changed: {name}")
 
@@ -203,6 +296,12 @@ def main() -> int:
     )
     if unused_insertion_allowances:
         failures.append(f"unused element-insertion allowances: {unused_insertion_allowances}")
+    unused_move_allowances = sorted(
+        set(args.allow_element_block_move)
+        - {str(row["key"]) for row in observed_element_block_moves}
+    )
+    if unused_move_allowances:
+        failures.append(f"unused element-block-move allowances: {unused_move_allowances}")
 
     combined = hashlib.sha256()
     for row in rows:
@@ -212,7 +311,7 @@ def main() -> int:
         combined.update((translated_root / name).read_bytes())
 
     report = {
-        "schema_version": 1,
+        "schema_version": 2,
         "status": "pass" if not failures else "fail",
         "files": rows,
         "combined_translated_sha256": combined.hexdigest(),
@@ -221,6 +320,7 @@ def main() -> int:
         "missing_xref_targets": missing_refs,
         "approved_math_changes": observed_allowed_math_changes,
         "approved_element_insertions": observed_element_insertions,
+        "approved_element_block_moves": observed_element_block_moves,
         "failures": failures,
     }
     payload = json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n"

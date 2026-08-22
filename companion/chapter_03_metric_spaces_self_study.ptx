@@ -1,0 +1,1044 @@
+<appendix xml:id="o003-c90-ch03-companion" xml:lang="id-ID">
+  <title>Pendamping Mandiri Bab 3: Ruang Metrik</title>
+
+  <introduction>
+    <p>
+      Komponen ini mendampingi Bab 3, bukan menggantikannya. Kerjakan eksplorasi,
+      aktivitas, dan latihan pada bab utama sebelum membuka unsur
+      <term>petunjuk</term>, <term>jawaban</term>, atau <term>pembahasan</term> di sini.
+      Seluruh uraian pendamping ini ditulis secara mandiri untuk edisi ini; uraian
+      ini bukan teks Steven Schlicker atau GVSU dan tidak menyalin ungkapan dari
+      karya Anton Petrunin. Komponen asli ini disediakan secara terpisah di bawah
+      Creative Commons Attribution 4.0.
+    </p>
+    <p>
+      Untuk setiap calon metrik, periksa empat sifat secara terpisah: tak negatif,
+      identitas titik, simetri, dan pertidaksamaan segitiga. Sebuah gambar dapat
+      menuntun intuisi, tetapi bukti harus berlaku bagi semua titik dalam domain.
+      Pada latihan bertahap, jawaban ringkas menyatakan hasil akhir, sedangkan
+      pembahasan memberikan alasan lengkap yang dapat dipakai untuk belajar mandiri.
+    </p>
+  </introduction>
+
+  <section xml:id="o003-c90-ch03-activity-checkpoints">
+    <title>Pemeriksaan eksplorasi dan aktivitas</title>
+    <exercise xml:id="o003-c90-ch03-checkpoint-01">
+      <title>Pemeriksaan 1: metrik taksi</title>
+      <statement>
+        <p>
+          Audit kelima tugas eksplorasi pembuka: buktikan empat aksioma untuk
+          <m>d_T</m> pada <m>\R^2</m>, lalu tentukan lingkaran satuannya dalam
+          koordinat Euklides. Rubrik lengkap: setiap aksioma harus dinyatakan;
+          bukti pertidaksamaan segitiga harus berlaku koordinat demi koordinat;
+          gambar lingkaran harus disertai persamaan atau pertidaksamaan yang
+          menjelaskan keempat sisinya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-checkpoint-01-hint">
+        <p><em>Petunjuk 1.</em> Gunakan <m>|u+v|\leq |u|+|v|</m> pada masing-masing selisih koordinat.</p>
+        <p><em>Petunjuk 2.</em> Lingkaran satuan memenuhi <m>|x_1|+|x_2|=1</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-checkpoint-01-answer">
+        <p>
+          Fungsi <m>d_T</m> merupakan metrik. Lingkaran satuannya adalah
+          <m>\{(x_1,x_2):|x_1|+|x_2|=1\}</m>, yakni persegi yang tampak sebagai
+          belah ketupat dengan titik sudut <m>(1,0)</m>, <m>(0,1)</m>,
+          <m>(-1,0)</m>, dan <m>(0,-1)</m> dalam gambar Euklides.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-checkpoint-01-solution">
+        <p>
+          Nilai mutlak tak negatif, jadi <m>d_T(x,y)\geq0</m>. Jumlah dua nilai
+          mutlak bernilai nol tepat ketika kedua selisih koordinat nol, yaitu tepat
+          ketika <m>x=y</m>. Karena <m>|x_i-y_i|=|y_i-x_i|</m>, fungsi ini simetris.
+          Untuk titik ketiga <m>z</m>, tulis
+          <m>x_i-y_i=(x_i-z_i)+(z_i-y_i)</m>. Ketaksamaan nilai mutlak memberi
+          <m>|x_i-y_i|\leq|x_i-z_i|+|z_i-y_i|</m> untuk <m>i=1,2</m>.
+          Menjumlahkan kedua pertidaksamaan menghasilkan
+          <m>d_T(x,y)\leq d_T(x,z)+d_T(z,y)</m>.
+        </p>
+        <p>
+          Jarak titik <m>(x_1,x_2)</m> dari asal ialah <m>|x_1|+|x_2|</m>.
+          Pada setiap kuadran, persamaan <m>|x_1|+|x_2|=1</m> menjadi sebuah
+          ruas garis; keempat ruas bertemu pada empat titik sudut yang dinyatakan
+          pada jawaban.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-checkpoint-02">
+      <title>Pemeriksaan 2: empat calon ruang metrik</title>
+      <statement>
+        <p>
+          Periksa seluruh butir pada aktivitas <xref ref="act_MS_metrics"/>.
+          Rubrik: untuk calon yang gagal, berikan aksioma dan titik konkret yang
+          gagal; untuk calon yang berhasil, buktikan semua aksioma yang belum
+          langsung; deskripsikan lingkaran satuan relatif terhadap unsur nol.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-checkpoint-02-hint">
+        <p><em>Petunjuk 1.</em> Uji <m>d(1,1)</m> pada calon pertama.</p>
+        <p><em>Petunjuk 2.</em> Untuk integral, gunakan pertidaksamaan segitiga titik demi titik dan kekontinuan <m>|f-g|</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-checkpoint-02-answer">
+        <p>
+          Calon (a) bukan metrik karena <m>d(1,1)=1</m>. Calon (b) adalah metrik
+          diskret dan lingkaran satuan berpusat di <m>0</m> ialah
+          <m>\R\setminus\{0\}</m>. Calon (c) adalah metrik maksimum; lingkaran
+          satuannya ialah batas persegi <m>\max\{|x_1|,|x_2|\}=1</m>.
+          Calon (d) adalah metrik pada <m>C[0,1]</m>; lingkaran satuannya terdiri
+          atas fungsi kontinu <m>f</m> dengan <m>\int_0^1|f(x)|\,dx=1</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-checkpoint-02-solution">
+        <p>
+          Pada (a), aksioma identitas titik sudah gagal: jarak suatu titik dari
+          dirinya seharusnya nol. Pada (b), nilai hanya <m>0</m> atau <m>1</m>;
+          identitas dan simetri langsung, dan jika <m>x\ne y</m>, sedikitnya satu
+          dari <m>d(x,z)</m> dan <m>d(z,y)</m> bernilai <m>1</m>, sehingga
+          pertidaksamaan segitiga berlaku. Jarak dari nol sama dengan satu tepat
+          bagi semua titik bukan nol.
+        </p>
+        <p>
+          Pada (c), tak-negatif, identitas, dan simetri mengikuti nilai mutlak.
+          Untuk tiap koordinat,
+          <m>|x_i-y_i|\leq|x_i-z_i|+|z_i-y_i|\leq d_M(x,z)+d_M(z,y)</m>;
+          mengambil maksimum atas <m>i</m> membuktikan aksioma keempat.
+          Pada (d), integral tak negatif dan simetris. Jika integral
+          <m>|f-g|</m> nol, fungsi kontinu tak negatif <m>|f-g|</m> tidak dapat
+          positif di satu titik tanpa positif pada suatu interval; jadi <m>f=g</m>.
+          Ketaksamaan <m>|f(x)-g(x)|\leq|f(x)-h(x)|+|h(x)-g(x)|</m> yang
+          diintegralkan memberi pertidaksamaan segitiga. Deskripsi lingkaran
+          mengikuti dengan mengambil jarak dari fungsi nol.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-checkpoint-03">
+      <title>Pemeriksaan 3: tiga aksioma pertama metrik Euklides</title>
+      <statement>
+        <p>
+          Lengkapi empat tugas aktivitas pertama pada bagian metrik Euklides di
+          <m>\R^n</m>. Rubrik: jelaskan mengapa akar kuadrat terdefinisi, buktikan
+          kedua arah dari syarat jarak nol, dan jangan memakai gambar sebagai bukti.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-checkpoint-03-hint">
+        <p><em>Petunjuk.</em> Jumlah kuadrat tak negatif, dan jumlah bilangan tak negatif bernilai nol tepat ketika setiap sukunya nol.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-checkpoint-03-answer">
+        <p>
+          Untuk semua <m>x,y\in\R^n</m>, berlaku <m>d_E(x,y)\geq0</m>,
+          <m>d_E(x,y)=d_E(y,x)</m>, dan <m>d_E(x,y)=0</m> tepat ketika <m>x=y</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-checkpoint-03-solution">
+        <p>
+          Setiap <m>(x_i-y_i)^2</m> tak negatif, sehingga jumlahnya dan akar
+          kuadratnya tak negatif. Karena <m>(x_i-y_i)^2=(y_i-x_i)^2</m> untuk
+          setiap <m>i</m>, menukar <m>x</m> dan <m>y</m> tidak mengubah jarak.
+          Jika <m>x=y</m>, semua selisih nol dan jaraknya nol. Sebaliknya, jika
+          jaraknya nol, maka <m>\sum_i(x_i-y_i)^2=0</m>. Semua suku tak negatif,
+          jadi setiap suku nol; maka <m>x_i=y_i</m> untuk seluruh <m>i</m>, yakni
+          <m>x=y</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-checkpoint-04">
+      <title>Pemeriksaan 4: dua uji numerik Cauchy–Schwarz</title>
+      <statement>
+        <p>
+          Hitung kedua ruas Pertidaksamaan Cauchy–Schwarz pada dua pasangan
+          vektor dalam aktivitas. Rubrik: tampilkan hasil kali titik, kedua norma,
+          dan perbandingan numeriknya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-checkpoint-04-hint">
+        <p><em>Petunjuk.</em> Ruas kiri adalah <m>\sum_i x_i y_i</m>; ruas kanan adalah <m>\sqrt{\sum_i x_i^2}\sqrt{\sum_i y_i^2}</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-checkpoint-04-answer">
+        <p>
+          Untuk <m>(1,4)</m> dan <m>(3,2)</m>, diperoleh
+          <m>11\leq\sqrt{221}</m>. Untuk <m>(1,2,-3)</m> dan
+          <m>(-4,0,-1)</m>, diperoleh <m>-1\leq\sqrt{238}</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-checkpoint-04-solution">
+        <p>
+          Pada pasangan pertama, hasil kali titiknya <m>1\cdot3+4\cdot2=11</m>.
+          Kuadrat normanya masing-masing <m>17</m> dan <m>13</m>, sehingga ruas
+          kanan <m>\sqrt{17}\sqrt{13}=\sqrt{221}</m>; karena
+          <m>121\leq221</m>, perbandingan berlaku. Pada pasangan kedua, hasil kali
+          titiknya <m>-4+0+3=-1</m>, sedangkan kuadrat normanya <m>14</m> dan
+          <m>17</m>. Jadi ruas kanan <m>\sqrt{238}</m> positif dan jelas lebih
+          besar daripada <m>-1</m>. Bentuk standar dengan nilai mutlak juga
+          terpenuhi karena <m>1\leq\sqrt{238}</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-checkpoint-05">
+      <title>Pemeriksaan 5: dua uji numerik pertidaksamaan jumlah</title>
+      <statement>
+        <p>
+          Verifikasikan akibat Cauchy–Schwarz <xref ref="cor_SL"/> pada dua
+          pasangan vektor yang diberikan. Rubrik: hitung norma jumlah serta jumlah
+          kedua norma tanpa membulatkan akar.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-checkpoint-05-hint">
+        <p><em>Petunjuk.</em> Hitung <m>x+y</m> terlebih dahulu, lalu kuadratkan kedua ruas jika perlu.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-checkpoint-05-answer">
+        <p>
+          Pasangan pertama memberi <m>2\sqrt{13}\leq\sqrt{17}+\sqrt{13}</m>.
+          Pasangan kedua memberi <m>\sqrt{29}\leq\sqrt{14}+\sqrt{17}</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-checkpoint-05-solution">
+        <p>
+          Untuk <m>x=(1,4)</m> dan <m>y=(3,2)</m>, jumlahnya <m>(4,6)</m>,
+          sehingga normanya <m>\sqrt{16+36}=2\sqrt{13}</m>; norma masing-masing
+          vektor adalah <m>\sqrt{17}</m> dan <m>\sqrt{13}</m>. Setelah mengurangi
+          <m>\sqrt{13}</m>, cukup memeriksa <m>\sqrt{13}\leq\sqrt{17}</m>.
+          Untuk pasangan kedua, jumlahnya <m>(-3,2,-4)</m> dengan norma
+          <m>\sqrt{29}</m>, sedangkan jumlah norma awal ialah
+          <m>\sqrt{14}+\sqrt{17}</m>. Menguadratkan ruas kanan menghasilkan
+          <m>31+2\sqrt{238}>29</m>, jadi pertidaksamaan berlaku.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-checkpoint-06">
+      <title>Pemeriksaan 6: pertidaksamaan segitiga Euklides</title>
+      <statement>
+        <p>
+          Lengkapi aktivitas terakhir pada bagian Euklides dengan menurunkan
+          <m>d_E(x,y)\leq d_E(x,z)+d_E(z,y)</m> langsung dari
+          <xref ref="cor_SL"/>. Rubrik: vektor yang dimasukkan ke akibat harus
+          disebutkan dan jumlahnya harus disederhanakan menjadi <m>x-y</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-checkpoint-06-hint">
+        <p><em>Petunjuk.</em> Ambil <m>u=x-z</m> dan <m>v=z-y</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-checkpoint-06-answer">
+        <p>
+          Terapkan <xref ref="cor_SL"/> pada <m>u=x-z</m> dan <m>v=z-y</m>;
+          karena <m>u+v=x-y</m>, hasilnya tepat pertidaksamaan segitiga bagi <m>d_E</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-checkpoint-06-solution">
+        <p>
+          Notasi norma Euklides memberi <m>d_E(x,y)=\|x-y\|_2</m>.
+          Dengan <m>u=x-z</m> dan <m>v=z-y</m>, akibat Cauchy–Schwarz menyatakan
+          <m>\|u+v\|_2\leq\|u\|_2+\|v\|_2</m>. Karena
+          <m>u+v=(x-z)+(z-y)=x-y</m>, ruas kiri ialah <m>d_E(x,y)</m>, sedangkan
+          dua suku ruas kanan ialah <m>d_E(x,z)</m> dan <m>d_E(z,y)</m>.
+          Jadi aksioma keempat terbukti untuk semua <m>x,y,z\in\R^n</m>.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch03-mastery">
+    <title>Uji penguasaan</title>
+    <p>
+      Delapan butir berikut merupakan materi asli pendamping. Kerjakan tanpa
+      membuka petunjuk terlebih dahulu; gunakan pembahasan untuk mengaudit setiap
+      langkah, bukan hanya hasil akhir.
+    </p>
+    <exercise xml:id="o003-c90-ch03-mastery-01">
+      <title>Penguasaan 1: jarak yang dikuadratkan</title>
+      <statement>
+        <p>
+          Pada <m>\R</m>, tentukan apakah <m>\rho(x,y)=|x-y|^2</m> merupakan
+          metrik. Jika tidak, identifikasi aksioma yang gagal dengan contoh terkecil
+          yang wajar.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-01-hint">
+        <p><em>Petunjuk.</em> Bandingkan jarak dari <m>0</m> ke <m>2</m> dengan lintasan melalui <m>1</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-01-answer">
+        <p>Bukan metrik; pertidaksamaan segitiga gagal pada titik <m>0,1,2</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-01-solution">
+        <p>
+          Fungsi ini tak negatif, simetris, dan bernilai nol tepat pada diagonal.
+          Namun <m>\rho(0,2)=4</m>, sedangkan
+          <m>\rho(0,1)+\rho(1,2)=1+1=2</m>. Karena <m>4\nleq2</m>, aksioma
+          pertidaksamaan segitiga gagal. Contoh ini juga menunjukkan mengapa
+          memeriksa tiga aksioma pertama saja tidak cukup.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-mastery-02">
+      <title>Penguasaan 2: membandingkan tiga metrik pada <m>\R^n</m></title>
+      <statement>
+        <p>
+          Buktikan bahwa untuk setiap <m>x,y\in\R^n</m>,
+          <m>d_M(x,y)\leq d_E(x,y)\leq d_T(x,y)\leq\sqrt n\,d_E(x,y)</m>.
+          Nyatakan akibatnya bagi bola terbuka yang berpusat sama dan berjari-jari
+          <m>r</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-02-hint">
+        <p><em>Petunjuk 1.</em> Setiap suku maksimum tidak melebihi akar jumlah kuadrat.</p>
+        <p><em>Petunjuk 2.</em> Terapkan Cauchy–Schwarz pada vektor <m>(|x_i-y_i|)</m> dan <m>(1,\ldots,1)</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-02-answer">
+        <p>
+          Rantai pertidaksamaan berlaku. Karena jarak yang lebih besar menghasilkan
+          bola berjari-jari sama yang lebih kecil,
+          <m>B_T(a,r)\subseteq B_E(a,r)\subseteq B_M(a,r)</m>, dan
+          <m>B_E(a,r/\sqrt n)\subseteq B_T(a,r)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-02-solution">
+        <p>
+          Tuliskan <m>u_i=|x_i-y_i|</m>. Karena
+          <m>\max_i u_i^2\leq\sum_i u_i^2</m>, diperoleh
+          <m>d_M\leq d_E</m>. Karena
+          <m>(\sum_i u_i)^2=\sum_i u_i^2+2\sum_{i&lt;j}u_i u_j\geq\sum_i u_i^2</m>,
+          diperoleh <m>d_E\leq d_T</m>. Cauchy–Schwarz memberi
+          <m>\sum_i u_i\leq\sqrt{\sum_i u_i^2}\sqrt{\sum_i1^2}=\sqrt n\,d_E</m>.
+        </p>
+        <p>
+          Jika <m>d_T(a,x)&lt;r</m>, maka <m>d_E(a,x)&lt;r</m>, lalu
+          <m>d_M(a,x)&lt;r</m>; ini memberi tiga inklusi pertama. Jika
+          <m>d_E(a,x)&lt;r/\sqrt n</m>, maka
+          <m>d_T(a,x)\leq\sqrt n\,d_E(a,x)&lt;r</m>, memberi inklusi terakhir.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-mastery-03">
+      <title>Penguasaan 3: semua bola pada metrik diskret</title>
+      <statement>
+        <p>
+          Misalkan <m>X</m> himpunan tak kosong dengan metrik diskret dan
+          <m>a\in X</m>. Tentukan <m>B(a,r)</m> untuk setiap <m>r&gt;0</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-03-hint">
+        <p><em>Petunjuk.</em> Satu-satunya nilai jarak adalah <m>0</m> dan <m>1</m>; perhatikan ketegasan tanda <m>&lt;</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-03-answer">
+        <p><m>B(a,r)=\{a\}</m> untuk <m>0&lt;r\leq1</m>, dan <m>B(a,r)=X</m> untuk <m>r&gt;1</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-03-solution">
+        <p>
+          Titik pusat selalu masuk karena <m>d(a,a)=0&lt;r</m>. Setiap
+          <m>x\ne a</m> mempunyai jarak <m>1</m> dari <m>a</m>. Jika
+          <m>r\leq1</m>, syarat <m>1&lt;r</m> gagal, termasuk pada <m>r=1</m>;
+          jadi hanya pusat yang masuk. Jika <m>r&gt;1</m>, kedua nilai jarak lebih
+          kecil dari <m>r</m>, sehingga seluruh <m>X</m> masuk.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-mastery-04">
+      <title>Penguasaan 4: metrik lintasan terpendek</title>
+      <statement>
+        <p>
+          Pada graf berbobot <xref ref="F_Graph_metric"/>, hitung
+          <m>d(a,d)</m> dan <m>d(b,c)</m>. Berikan satu verifikasi eksplisit
+          pertidaksamaan segitiga yang melibatkan <m>a</m>, <m>d</m>, dan <m>e</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-04-hint">
+        <p><em>Petunjuk.</em> Daftarkan lintasan pendek melalui <m>e</m> dan bandingkan dengan sisi atau lintasan lain.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-04-answer">
+        <p><m>d(a,d)=6</m> dan <m>d(b,c)=9</m>; misalnya <m>d(a,d)\leq d(a,e)+d(e,d)=1+5</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-04-solution">
+        <p>
+          Lintasan <m>a-e-d</m> berbobot <m>1+5=6</m>. Semua alternatif yang
+          tampak lebih pendek gagal: sisi melalui <m>b</m> memberi sedikitnya
+          <m>3+7=10</m>, dan melalui <m>c</m> memberi <m>8+2=10</m>;
+          jadi <m>d(a,d)=6</m>. Dari <m>b</m> ke <m>c</m>, lintasan
+          <m>b-e-c</m> dan <m>b-d-c</m> masing-masing berbobot <m>2+7=9</m>
+          dan <m>7+2=9</m>; lintasan melalui <m>a</m> berbobot <m>11</m>, jadi
+          jarak terpendeknya <m>9</m>. Untuk ketiga titik yang diminta,
+          <m>d(a,e)=1</m> dan <m>d(e,d)=5</m>, sehingga
+          <m>d(a,d)=6=d(a,e)+d(e,d)</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-mastery-05">
+      <title>Penguasaan 5: menarik kembali metrik melalui injeksi</title>
+      <statement>
+        <p>
+          Misalkan <m>(Y,d_Y)</m> ruang metrik dan <m>f:X\to Y</m> injektif.
+          Buktikan bahwa <m>d_X(x,x')=d_Y(f(x),f(x'))</m> mendefinisikan metrik
+          pada <m>X</m>. Jelaskan tepat di mana injektivitas dipakai.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-05-hint">
+        <p><em>Petunjuk.</em> Tiga aksioma diwarisi langsung; untuk jarak nol, ubah kesamaan citra menjadi kesamaan masukan.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-05-answer">
+        <p>
+          Fungsi <m>d_X</m> merupakan metrik. Injektivitas diperlukan pada arah
+          <m>d_X(x,x')=0\Rightarrow x=x'</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-05-solution">
+        <p>
+          Tak-negatif dan simetri mengikuti sifat <m>d_Y</m>. Jika <m>x=x'</m>,
+          jelas <m>d_X(x,x')=0</m>. Sebaliknya, jarak nol memberi
+          <m>f(x)=f(x')</m> menurut identitas titik di <m>Y</m>; injektivitas
+          <m>f</m> lalu memberi <m>x=x'</m>. Untuk <m>x,x',z\in X</m>,
+          <m>d_Y(f(x),f(x'))\leq d_Y(f(x),f(z))+d_Y(f(z),f(x'))</m>, yang tepat
+          merupakan pertidaksamaan segitiga bagi <m>d_X</m>. Tanpa injektivitas,
+          dua masukan berbeda yang mempunyai citra sama akan berjarak nol.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-mastery-06">
+      <title>Penguasaan 6: maksimum dua metrik</title>
+      <statement>
+        <p>
+          Jika <m>d_1</m> dan <m>d_2</m> adalah metrik pada himpunan yang sama
+          <m>X</m>, buktikan bahwa
+          <m>D(x,y)=\max\{d_1(x,y),d_2(x,y)\}</m> juga metrik.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-06-hint">
+        <p><em>Petunjuk.</em> Untuk setiap <m>i</m>, batasi <m>d_i(x,y)</m> dengan jumlah yang suku-sukunya masing-masing tidak melebihi <m>D</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-06-answer">
+        <p><m>D</m> merupakan metrik pada <m>X</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-06-solution">
+        <p>
+          Maksimum dua bilangan tak negatif tak negatif dan simetris. Nilai
+          <m>D(x,y)</m> nol tepat ketika kedua <m>d_i(x,y)</m> nol, dan karena
+          keduanya metrik, hal itu tepat ketika <m>x=y</m>. Untuk <m>i=1,2</m>,
+          <m>d_i(x,y)\leq d_i(x,z)+d_i(z,y)\leq D(x,z)+D(z,y)</m>.
+          Kedua calon di dalam maksimum dibatasi oleh ruas kanan yang sama;
+          mengambil maksimumnya memberi
+          <m>D(x,y)\leq D(x,z)+D(z,y)</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-mastery-07">
+      <title>Penguasaan 7: penskalaan tidak mengubah bola secara hakiki</title>
+      <statement>
+        <p>
+          Misalkan <m>d</m> metrik dan <m>c&gt;0</m>. Buktikan bahwa
+          <m>B_{cd}(a,r)=B_d(a,r/c)</m>. Simpulkan bahwa kedua metrik menentukan
+          keluarga himpunan terbuka yang sama ketika konsep itu diperkenalkan nanti.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-07-hint">
+        <p><em>Petunjuk.</em> Bagi pertidaksamaan <m>c\,d(a,x)&lt;r</m> dengan bilangan positif <m>c</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-07-answer">
+        <p>
+          Kedua bola sama karena <m>c\,d(a,x)&lt;r</m> tepat ketika
+          <m>d(a,x)&lt;r/c</m>. Jadi penskalaan positif hanya mengganti label jari-jari.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-07-solution">
+        <p>
+          Untuk titik sembarang <m>x</m>,
+          <m>x\in B_{cd}(a,r)</m> jika dan hanya jika
+          <m>(cd)(a,x)=c\,d(a,x)&lt;r</m>. Karena <m>c&gt;0</m>, pembagian tidak
+          membalik tanda, sehingga syarat ini setara dengan
+          <m>d(a,x)&lt;r/c</m>, yakni <m>x\in B_d(a,r/c)</m>. Setiap bola bagi satu
+          metrik dengan demikian merupakan bola bagi metrik lain; gabungan bola
+          yang kelak mendefinisikan himpunan terbuka juga sama.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-mastery-08">
+      <title>Penguasaan 8: membangun tak berhingga banyak metrik</title>
+      <statement>
+        <p>
+          Misalkan <m>X</m> mempunyai sedikitnya dua unsur. Bangun tak berhingga
+          banyak metrik yang berbeda pada <m>X</m>, dan buktikan bahwa metrik-metrik
+          tersebut memang berbeda sebagai fungsi.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-mastery-08-hint">
+        <p><em>Petunjuk.</em> Kalikan metrik diskret dengan konstanta positif yang berbeda.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-mastery-08-answer">
+        <p>
+          Untuk setiap <m>c&gt;0</m>, fungsi <m>d_c(x,y)=0</m> jika <m>x=y</m>
+          dan <m>d_c(x,y)=c</m> jika <m>x\ne y</m> merupakan metrik; nilai <m>c</m>
+          yang berbeda menghasilkan fungsi yang berbeda.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-mastery-08-solution">
+        <p>
+          Tak-negatif, identitas, dan simetri langsung. Jika <m>x=y</m>,
+          pertidaksamaan segitiga seketika. Jika <m>x\ne y</m>, tidak mungkin
+          sekaligus <m>x=z</m> dan <m>z=y</m>; sedikitnya satu jarak pada ruas kanan
+          bernilai <m>c</m>, sehingga <m>c\leq d_c(x,z)+d_c(z,y)</m>.
+          Pilih dua unsur berbeda <m>p,q\in X</m>. Untuk <m>c_1\ne c_2</m>,
+          <m>d_{c_1}(p,q)=c_1\ne c_2=d_{c_2}(p,q)</m>, jadi metriknya berbeda.
+          Karena ada tak berhingga banyak bilangan real positif, diperoleh tak
+          berhingga banyak metrik.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch03-diagnostics">
+    <title>Diagnostik kesalahan ringkas</title>
+    <p>
+      <dl>
+        <li><title>Memeriksa hanya tiga aksioma</title><p>Calon jarak yang tak negatif, simetris, dan nol pada diagonal masih dapat gagal pada pertidaksamaan segitiga.</p></li>
+        <li><title>Mengabaikan domain</title><p>Rumus yang sama dapat menjadi metrik pada satu himpunan dan gagal atau bahkan tidak terdefinisi pada himpunan lain.</p></li>
+        <li><title>Menggambar bola dengan geometri yang salah</title><p>Bola selalu ditentukan oleh metrik yang sedang dipakai; bentuk Euklidesnya dapat berupa lingkaran, belah ketupat, persegi, ruas, atau himpunan lain.</p></li>
+        <li><title>Mengganti “kurang dari” dengan “kurang dari atau sama dengan”</title><p>Bola terbuka <m>B(a,r)</m> memakai syarat tegas <m>d(x,a)\lt r</m>; titik pada batas tidak termasuk.</p></li>
+        <li><title>Menganggap representasi rasional tidak penting</title><p>Pada metrik pembilang-penyebut, gunakan bentuk paling sederhana dengan penyebut positif sebelum menghitung jarak.</p></li>
+        <li><title>Membagi dengan koefisien yang mungkin nol</title><p>Dalam bukti Cauchy–Schwarz, pisahkan kasus vektor nol sebelum memakai rumus kuadrat dengan koefisien utama <m>\sum y_i^2</m>.</p></li>
+        <li><title>Membuktikan hasil kali jarak dengan gambar</title><p>Untuk metrik maksimum pada produk, buktikan pertidaksamaan koordinat demi koordinat lalu ambil maksimum.</p></li>
+        <li><title>Menggunakan petunjuk pecahan pada kasus nol</title><p>Jika petunjuk memakai <m>a/(a+b)</m>, tangani <m>a+b=0</m> lebih dahulu.</p></li>
+      </dl>
+    </p>
+  </section>
+
+  <section xml:id="o003-c90-ch03-exercise-guides">
+    <title>Panduan dan pembahasan empat belas latihan</title>
+    <p>
+      Nomor panduan mengikuti urutan empat belas latihan pada bagian akhir Bab 3.
+      Setiap panduan mempertahankan persoalan sumber, tetapi penyelesaiannya merupakan
+      uraian asli pendamping ini.
+    </p>
+    <exercise xml:id="o003-c90-ch03-exercise-01">
+      <title>Latihan 1: metrik diskret</title>
+      <statement>
+        <p>Buktikan latihan <xref ref="ex_MS_discrete"/> dengan memeriksa keempat aksioma.</p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-01-hint">
+        <p><em>Petunjuk.</em> Dalam pertidaksamaan segitiga, pisahkan kasus <m>x=y</m> dan <m>x\ne y</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-01-answer">
+        <p>Fungsi nol-satu yang diberikan merupakan metrik pada setiap himpunan <m>X</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-01-solution">
+        <p>
+          Nilainya <m>0</m> atau <m>1</m>, jadi tak negatif. Menurut definisi,
+          <m>d(x,y)=0</m> tepat ketika <m>x=y</m>, dan kondisi kesamaan tidak berubah
+          ketika urutan titik dibalik, sehingga simetri berlaku. Jika <m>x=y</m>,
+          ruas kiri pertidaksamaan segitiga nol. Jika <m>x\ne y</m>, sedikitnya satu
+          dari <m>x\ne z</m> atau <m>z\ne y</m> harus berlaku; maka sedikitnya satu
+          suku ruas kanan bernilai <m>1</m>. Jadi
+          <m>d(x,y)=1\leq d(x,z)+d(z,y)</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-02">
+      <title>Latihan 2: metrik modular pada tiga titik</title>
+      <statement>
+        <p>
+          Selesaikan kedua nilai <m>n</m> pada <xref ref="ex_MS_mod_metric"/>.
+          Untuk nilai yang menghasilkan metrik, klasifikasikan semua bola terbuka
+          berpusat di <m>1</m> menurut jari-jarinya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-02-hint">
+        <p><em>Petunjuk 1.</em> Buat tabel simetris untuk pasangan <m>1,3,5</m>.</p>
+        <p><em>Petunjuk 2.</em> Pada <m>n=8</m>, tiga jarak antartitik adalah <m>2,4,6</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-02-answer">
+        <p>
+          Untuk <m>n=4</m>, fungsi bukan metrik karena <m>d(1,5)=0</m>.
+          Untuk <m>n=8</m>, fungsi merupakan metrik. Dalam kasus ini,
+          <m>B(1,r)=\{1\}</m> untuk <m>0&lt;r\leq2</m>,
+          <m>B(1,r)=\{1,3\}</m> untuk <m>2&lt;r\leq4</m>, dan
+          <m>B(1,r)=X</m> untuk <m>r&gt;4</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-02-solution">
+        <p>
+          Modulo <m>4</m>, nilai diagonal semuanya nol, tetapi
+          <m>1\cdot5-1=4</m> juga bersisa nol; identitas titik gagal.
+          Modulo <m>8</m>, tabel jaraknya ialah
+          <m>d(1,3)=2</m>, <m>d(1,5)=4</m>, <m>d(3,5)=6</m>, nilai diagonal nol,
+          dan tabel simetris. Ketiga pertidaksamaan tak trivial adalah
+          <m>2\leq4+6</m>, <m>4\leq2+6</m>, dan <m>6\leq2+4</m>; semuanya benar,
+          jadi fungsi merupakan metrik.
+        </p>
+        <p>
+          Jarak dari pusat <m>1</m> ke <m>1,3,5</m> berturut-turut
+          <m>0,2,4</m>. Karena bola terbuka memakai tanda tegas, titik <m>3</m>
+          baru masuk ketika <m>r&gt;2</m> dan titik <m>5</m> baru masuk ketika
+          <m>r&gt;4</m>, yang menghasilkan tiga kasus pada jawaban.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-03">
+      <title>Latihan 3: metrik pembilang–penyebut pada <m>\Q</m></title>
+      <statement>
+        <p>
+          Selesaikan ketiga tugas pada <xref ref="ex_MS_Q_metric"/>: buktikan
+          metriknya, tentukan bola terbuka berpusat di <m>2/3</m> berjari-jari
+          <m>1</m>, dan tentukan titik yang berada di antara <m>0</m> dan <m>1</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-03-hint">
+        <p><em>Petunjuk 1.</em> Petakan pecahan paling sederhana <m>a/b</m> ke pasangan <m>(a,b)</m> dan gunakan metrik maksimum.</p>
+        <p><em>Petunjuk 2.</em> Semua jarak yang muncul adalah bilangan bulat tak negatif.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-03-answer">
+        <p>
+          Fungsi <m>d</m> merupakan metrik. Bola <m>B(2/3,1)</m> hanya memuat
+          <m>2/3</m>. Titik-titik yang berada di antara <m>0</m> dan <m>1</m>
+          hanyalah kedua titik ujung tersebut.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-03-solution">
+        <p>
+          Representasi paling sederhana dengan penyebut positif bersifat tunggal,
+          sehingga peta <m>\phi(a/b)=(a,b)</m> injektif. Rumus <m>d</m> adalah
+          pembatasan metrik maksimum pada <m>\Z\times\N</m> ke citra <m>\phi</m>;
+          karena itu keempat aksioma diwarisi. Secara langsung, pertidaksamaan
+          segitiga mengikuti dari
+          <m>|a-r|\leq|a-c|+|c-r|</m> dan ketaksamaan yang sama bagi penyebut,
+          lalu mengambil maksimum.
+        </p>
+        <p>
+          Jarak antardua representasi merupakan maksimum dua bilangan bulat.
+          Syarat jarak kurang dari <m>1</m> memaksa kedua selisih nol, jadi bola
+          hanya memuat pusat. Selanjutnya <m>d(0/1,1/1)=1</m>. Jika <m>q</m>
+          berada di antara keduanya, dua jarak bilangan bulat tak negatif harus
+          berjumlah <m>1</m>; salah satunya nol. Maka <m>q</m> sama dengan salah
+          satu titik ujung. Kedua ujung memang memenuhi definisi betweenness.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-04">
+      <title>Latihan 4: betweenness yang berbeda pada <m>\Q</m></title>
+      <statement>
+        <p>
+          Pada latihan keempat dalam urutan sumber, tentukan semua titik di antara
+          <m>0</m> dan <m>1</m>, bandingkan jarak <m>1</m> dan <m>1/3</m> dari
+          <m>0</m>, lalu tentukan semua titik di antara <m>0</m> dan <m>1/3</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-04-hint">
+        <p><em>Petunjuk.</em> Untuk kasus terakhir, jarak total ialah <m>2</m>; periksa kemungkinan <m>0+2</m>, <m>1+1</m>, dan <m>2+0</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-04-answer">
+        <p>
+          Di antara <m>0</m> dan <m>1</m> hanya ada <m>0</m> dan <m>1</m>.
+          Titik <m>1</m> lebih dekat ke <m>0</m> daripada <m>1/3</m>.
+          Di antara <m>0</m> dan <m>1/3</m> terdapat tepat
+          <m>0,1/2,1/3</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-04-solution">
+        <p>
+          Bagian pertama sama dengan akhir panduan sebelumnya.
+          Karena representasi <m>0=0/1</m> dan <m>1=1/1</m>, jaraknya <m>1</m>.
+          Sementara itu <m>d(0/1,1/3)=\max\{1,2\}=2</m>; jadi <m>1</m> lebih dekat.
+        </p>
+        <p>
+          Misalkan <m>q=a/b</m> dalam bentuk paling sederhana dan berada di antara
+          <m>0/1</m> dan <m>1/3</m>. Jumlah kedua jaraknya harus <m>2</m>.
+          Kasus <m>0+2</m> dan <m>2+0</m> memberi titik ujung. Pada kasus
+          <m>1+1</m>, syarat pertama memberi <m>|a|\leq1</m> dan
+          <m>|b-1|\leq1</m>; syarat kedua memberi <m>|a-1|\leq1</m> dan
+          <m>|b-3|\leq1</m>. Dengan <m>b&gt;0</m>, irisan syarat memaksa
+          <m>b=2</m> dan <m>a\in\{0,1\}</m>. Pecahan <m>0/2</m> bukan bentuk
+          paling sederhana, sedangkan <m>1/2</m> sah dan berjarak <m>1</m> dari
+          kedua ujung. Jadi daftar pada jawaban lengkap.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-05">
+      <title>Latihan 5: metrik taksi pada <m>\R^n</m></title>
+      <statement>
+        <p>
+          Buktikan <xref ref="ex_Taxicab"/> untuk dimensi <m>n</m> sembarang
+          dengan memeriksa keempat aksioma metrik, termasuk pertidaksamaan
+          segitiga sebagai jumlah pertidaksamaan koordinat.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-05-hint">
+        <p><em>Petunjuk.</em> Jumlahkan ketaksamaan <m>|x_i-y_i|\leq|x_i-z_i|+|z_i-y_i|</m> dari <m>i=1</m> sampai <m>n</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-05-answer">
+        <p><m>d_T(x,y)=\sum_{i=1}^n|x_i-y_i|</m> merupakan metrik pada <m>\R^n</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-05-solution">
+        <p>
+          Setiap suku tak negatif, jadi jumlahnya tak negatif. Jumlah itu nol tepat
+          ketika setiap <m>|x_i-y_i|=0</m>, yakni ketika <m>x=y</m>. Simetri
+          mengikuti <m>|x_i-y_i|=|y_i-x_i|</m>. Untuk titik ketiga <m>z</m>,
+          ketaksamaan nilai mutlak pada setiap koordinat memberi
+          <m>|x_i-y_i|\leq|x_i-z_i|+|z_i-y_i|</m>. Menjumlahkan atas semua
+          <m>i</m> menghasilkan <m>d_T(x,y)\leq d_T(x,z)+d_T(z,y)</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-06">
+      <title>Latihan 6: metrik maksimum pada <m>\R^n</m></title>
+      <statement>
+        <p>
+          Selesaikan kedua tugas <xref ref="ex_Max"/>: buktikan ketaksamaan
+          maksimum bagi dua himpunan berhingga tak kosong di <m>\R</m>, lalu
+          gunakan hasilnya atau argumen koordinat untuk membuktikan bahwa <m>d_M</m>
+          merupakan metrik.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-06-hint">
+        <p><em>Petunjuk.</em> Setiap <m>a+b\in A+B</m> memenuhi <m>a+b\leq\max A+\max B</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-06-answer">
+        <p>
+          Berlaku <m>\max(A+B)\leq\max A+\max B</m>, dan
+          <m>d_M(x,y)=\max_i|x_i-y_i|</m> merupakan metrik pada <m>\R^n</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-06-solution">
+        <p>
+          Karena <m>A,B</m> berhingga dan tak kosong, semua maksimum ada.
+          Untuk setiap <m>a\in A</m> dan <m>b\in B</m>,
+          <m>a\leq\max A</m> dan <m>b\leq\max B</m>, jadi
+          <m>a+b\leq\max A+\max B</m>. Mengambil maksimum atas semua jumlah
+          membuktikan ketaksamaan pertama.
+        </p>
+        <p>
+          Tak-negatif, identitas, dan simetri bagi <m>d_M</m> mengikuti nilai
+          mutlak. Untuk setiap koordinat,
+          <m>|x_i-y_i|\leq|x_i-z_i|+|z_i-y_i|\leq d_M(x,z)+d_M(z,y)</m>.
+          Karena semua <m>|x_i-y_i|</m> dibatasi ruas kanan yang sama, maksimum
+          mereka juga dibatasi ruas kanan tersebut. Inilah pertidaksamaan segitiga.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-07">
+      <title>Latihan 7: metrik hub dan bola-bolanya</title>
+      <statement>
+        <p>
+          Selesaikan seluruh tugas <xref ref="ex_MS_hub"/>: buktikan bahwa
+          <m>d_H</m> metrik, tentukan dua bola yang diminta, lalu deskripsikan
+          <m>B(a,r)</m> untuk pusat dan jari-jari sembarang.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-07-hint">
+        <p><em>Petunjuk 1.</em> Jika tiga titik berbeda, ruas kanan pertidaksamaan segitiga memuat <m>2|z|</m> tambahan.</p>
+        <p><em>Petunjuk 2.</em> Untuk <m>x\ne a</m>, syarat bola ialah <m>|x|&lt;r-|a|</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-07-answer">
+        <p>
+          Fungsi <m>d_H</m> merupakan metrik.
+          Untuk <m>a=(1/2,0)</m>,
+          <m>B(a,1)=\{a\}\cup\{x:|x|&lt;1/2\}</m>.
+          Untuk <m>a=(3,4)</m>, <m>B(a,1)=\{a\}</m>.
+          Secara umum, jika <m>r\leq|a|</m>, bolanya <m>\{a\}</m>; jika
+          <m>r&gt;|a|</m>, bolanya
+          <m>\{a\}\cup\{x:|x|&lt;r-|a|\}</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-07-solution">
+        <p>
+          Tak-negatif, identitas, dan simetri langsung dari definisi kasus.
+          Untuk pertidaksamaan segitiga, jika <m>x=y</m> ruas kiri nol. Jika
+          <m>x\ne y</m> dan <m>z=x</m> atau <m>z=y</m>, diperoleh kesamaan.
+          Jika <m>z</m> berbeda dari keduanya, ruas kiri
+          <m>|x|+|y|</m>, sedangkan ruas kanan
+          <m>(|x|+|z|)+(|z|+|y|)=|x|+|y|+2|z|</m>, yang tidak lebih kecil.
+        </p>
+        <p>
+          Pusat <m>a</m> selalu masuk karena jaraknya nol. Untuk <m>x\ne a</m>,
+          <m>d_H(x,a)=|x|+|a|&lt;r</m> tepat ketika <m>|x|&lt;r-|a|</m>.
+          Jika <m>r\leq|a|</m>, tidak ada titik tambahan. Jika <m>r&gt;|a|</m>,
+          titik tambahannya membentuk bola Euklides berpusat di asal dengan
+          jari-jari <m>r-|a|</m>. Substitusi <m>|(1/2,0)|=1/2</m> dan
+          <m>|(3,4)|=5</m> memberi dua kasus khusus.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-08">
+      <title>Latihan 8: metrik <m>p</m>-adik pada bilangan bulat</title>
+      <statement>
+        <p>
+          Selesaikan lima tugas latihan kedelapan: dua perhitungan, lema tentang
+          eksponen keterbagian, bukti metrik, dan dua deskripsi himpunan untuk
+          <m>p=3</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-08-hint">
+        <p><em>Petunjuk 1.</em> Faktorkan <m>108=4\cdot3^3</m> dan <m>12005=5\cdot7^4</m>.</p>
+        <p><em>Petunjuk 2.</em> Jika dua selisih habis dibagi <m>p^r</m>, jumlahnya juga habis dibagi <m>p^r</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-08-answer">
+        <p>
+          <m>d(62,170)=1/27</m> untuk <m>p=3</m> dan
+          <m>d(14008,2003)=1/2401</m> untuk <m>p=7</m>.
+          Berlaku <m>t(a,c)\geq\min\{t(a,b),t(b,c)\}</m>, sehingga <m>d</m>
+          merupakan metrik, bahkan memenuhi pertidaksamaan ultrametrik.
+          Untuk <m>p=3</m>, syarat <m>d(x,0)=1</m> berarti <m>3\nmid x</m>,
+          sedangkan <m>d(x,0)&lt;1/2</m> berarti <m>3\mid x</m>, dengan <m>0</m>
+          turut termasuk pada himpunan kedua.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-08-solution">
+        <p>
+          Selisih pertama <m>|62-170|=108=4\cdot3^3</m>, jadi eksponennya
+          <m>3</m> dan jaraknya <m>3^{-3}=1/27</m>. Selisih kedua
+          <m>14008-2003=12005=5\cdot7^4</m>, jadi jaraknya
+          <m>7^{-4}=1/2401</m>.
+        </p>
+        <p>
+          Misalkan <m>r=\min\{t(a,b),t(b,c)\}</m>. Bilangan <m>p^r</m> membagi
+          <m>a-b</m> dan <m>b-c</m>, maka membagi jumlahnya <m>a-c</m>;
+          karena itu <m>t(a,c)\geq r</m>. Setelah membalik pangkat positif,
+          diperoleh
+          <m>d(a,c)\leq\max\{d(a,b),d(b,c)\}\leq d(a,b)+d(b,c)</m>.
+          Tak-negatif, identitas, dan simetri mengikuti definisi serta
+          <m>|a-b|=|b-a|</m>; jadi <m>d</m> metrik.
+        </p>
+        <p>
+          Untuk <m>p=3</m> dan <m>x\ne0</m>, jarak satu berarti eksponen
+          keterbagian <m>t=0</m>, yakni <m>3</m> tidak membagi <m>x</m>.
+          Nilai positif yang kurang dari <m>1/2</m> mulai dari <m>1/3</m>, jadi
+          diperlukan <m>t\geq1</m>, tepat ketika <m>3\mid x</m>. Titik <m>0</m>
+          mempunyai jarak nol dan karena itu juga memenuhi syarat kedua.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-09">
+      <title>Latihan 9: metrik maksimum pada ruang hasil kali</title>
+      <statement>
+        <p>
+          Hitung jarak pasangan <m>u,v</m> pada tugas pertama latihan kesembilan,
+          lalu deskripsikan dan gambarkan bola <m>B((0,1),1)</m> pada produk
+          metrik Euklides dan diskret.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-09-hint">
+        <p><em>Petunjuk 1.</em> Hitung jarak pada faktor <m>X</m> dan <m>Y</m> secara terpisah, kemudian ambil maksimum.</p>
+        <p><em>Petunjuk 2.</em> Syarat maksimum kurang dari <m>1</m> memaksa kedua jarak faktor kurang dari <m>1</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-09-answer">
+        <p>
+          Pada tugas pertama, <m>d'(u,v)=3</m>. Pada tugas kedua,
+          <m>B((0,1),1)=\{(x,1):-1&lt;x&lt;1\}</m>, sebuah ruas horizontal terbuka
+          pada tinggi <m>y=1</m> dalam gambar koordinat biasa.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-09-solution">
+        <p>
+          Pada faktor pertama,
+          <m>d_M((1,2),(0,5))=\max\{1,3\}=3</m>. Pada faktor kedua,
+          <m>d_T((1,-1),(2,-2))=1+1=2</m>. Maka jarak produk ialah
+          <m>\max\{3,2\}=3</m>.
+        </p>
+        <p>
+          Untuk titik <m>(x,y)</m>, syarat berada dalam bola kedua ialah
+          <m>\max\{|x|,d_{\mathrm{diskret}}(y,1)\}&lt;1</m>. Jarak diskret hanya
+          <m>0</m> atau <m>1</m>; karena pertidaksamaannya tegas, harus
+          <m>y=1</m>. Syarat yang tersisa ialah <m>|x|&lt;1</m>. Jadi kedua titik
+          ujung tidak masuk dan tidak ada titik pada tinggi lain.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-10">
+      <title>Latihan 10: metrik logaritmik</title>
+      <statement>
+        <p>
+          Tentukan apakah <m>d(x,y)=|\ln(y/x)|</m> merupakan metrik pada bilangan
+          real positif dan buktikan jawaban Anda.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-10-hint">
+        <p><em>Petunjuk.</em> Tulis <m>d(x,y)=|\ln y-\ln x|</m> dan gunakan bahwa <m>\ln</m> injektif pada <m>\R^+</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-10-answer">
+        <p>Ya. Metrik tersebut adalah tarikan balik metrik Euklides pada <m>\R</m> melalui bijeksi <m>\ln:\R^+\to\R</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-10-solution">
+        <p>
+          Karena <m>y/x&gt;0</m>, logaritma terdefinisi, dan
+          <m>|\ln(y/x)|=|\ln y-\ln x|</m>. Nilai ini tak negatif dan simetris.
+          Nilainya nol tepat ketika <m>\ln y=\ln x</m>, yang oleh injektivitas
+          logaritma setara dengan <m>x=y</m>. Untuk <m>z&gt;0</m>,
+          <m>|\ln y-\ln x|\leq|\ln z-\ln x|+|\ln y-\ln z|</m>, yaitu tepat
+          <m>d(x,y)\leq d(x,z)+d(z,y)</m>. Jadi semua aksioma terpenuhi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-11">
+      <title>Latihan 11: transformasi terbatas suatu metrik</title>
+      <statement>
+        <p>
+          Buktikan <xref ref="ex_1_over_1_plus_t_metric"/>. Selain monotonitas,
+          buktikan secara eksplisit bahwa <m>f(t)=t/(1+t)</m> subaditif pada
+          bilangan tak negatif.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-11-hint">
+        <p><em>Petunjuk.</em> Sederhanakan <m>f(a)+f(b)-f(a+b)</m> menjadi pecahan dengan penyebut positif.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-11-answer">
+        <p>
+          Fungsi <m>d(x,y)=|x-y|/(1+|x-y|)</m> merupakan metrik pada <m>\R</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-11-solution">
+        <p>
+          Fungsi <m>f(t)=t/(1+t)</m> pada <m>[0,\infty)</m> tak negatif, naik,
+          dan bernilai nol tepat ketika <m>t=0</m>. Selain itu, untuk
+          <m>a,b\geq0</m>, perhitungan langsung memberi
+          <me>
+            f(a)+f(b)-f(a+b)=\frac{ab(a+b+2)}{(1+a)(1+b)(1+a+b)}\geq0.
+          </me>
+          Jadi <m>f(a+b)\leq f(a)+f(b)</m>.
+        </p>
+        <p>
+          Tak-negatif, identitas, dan simetri bagi <m>d=f\circ d_E</m> kini
+          langsung. Untuk pertidaksamaan segitiga,
+          <m>|x-y|\leq|x-z|+|z-y|</m>. Monotonitas lalu subaditivitas memberi
+          <m>f(|x-y|)\leq f(|x-z|+|z-y|)\leq f(|x-z|)+f(|z-y|)</m>, yang
+          merupakan aksioma keempat.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-12">
+      <title>Latihan 12: mengalikan metrik dengan konstanta</title>
+      <statement>
+        <p>
+          Tentukan semua syarat pada konstanta <m>k</m> agar <m>kd</m> merupakan
+          metrik. Nyatakan secara terpisah kasus ruang yang mempunyai sedikitnya
+          dua titik dan kasus ruang satu titik.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-12-hint">
+        <p><em>Petunjuk.</em> Untuk dua titik berbeda, uji tanda dan kemungkinan jarak nol; untuk ruang satu titik, semua nilai <m>d</m> sudah nol.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-12-answer">
+        <p>
+          Jika <m>X</m> mempunyai sedikitnya dua titik, syarat perlu dan cukup
+          adalah <m>k&gt;0</m>. Jika <m>X</m> hanya mempunyai satu titik, setiap
+          konstanta real <m>k</m> menghasilkan fungsi nol yang sama dan tetap metrik.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-12-solution">
+        <p>
+          Untuk <m>k&gt;0</m>, mengalikan setiap aksioma metrik dengan <m>k</m>
+          mempertahankan tak-negatif, himpunan nol, simetri, dan arah
+          pertidaksamaan segitiga. Jika ada <m>x\ne y</m>, maka <m>d(x,y)&gt;0</m>.
+          Untuk <m>k=0</m>, jarak kedua titik menjadi nol dan identitas gagal;
+          untuk <m>k&lt;0</m>, jaraknya negatif. Jadi <m>k&gt;0</m> perlu pada ruang
+          dengan sedikitnya dua titik.
+        </p>
+        <p>
+          Pada ruang satu titik, satu-satunya pasangan adalah <m>(x,x)</m> dan
+          <m>d(x,x)=0</m>. Maka <m>k d</m> adalah fungsi nol untuk setiap <m>k</m>;
+          semua aksioma tetap terpenuhi. Kasus kosong, jika diizinkan oleh
+          konvensi, juga bersifat vakum.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-13">
+      <title>Latihan 13: fungsi cekung dan transformasi metrik</title>
+      <statement>
+        <p>
+          Selesaikan ketiga tugas latihan fungsi cekung: verifikasi cekungnya
+          <m>-x^2</m>, buktikan subaditivitas fungsi cekung pada
+          <m>[0,\infty)</m> yang nilainya di nol tak negatif, lalu buktikan bahwa
+          <m>f\circ d</m> adalah metrik di bawah hipotesis sumber.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-13-hint">
+        <p><em>Petunjuk 1.</em> Selisih yang relevan untuk <m>-x^2</m> adalah <m>\alpha(1-\alpha)(x-y)^2</m>.</p>
+        <p><em>Petunjuk 2.</em> Jika <m>a+b&gt;0</m>, gunakan bobot <m>a/(a+b)</m> dan <m>b/(a+b)</m>; tangani <m>a=b=0</m> lebih dahulu.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-13-answer">
+        <p>
+          Fungsi <m>-x^2</m> cekung pada <m>[-1,1]</m>, bahkan pada seluruh
+          <m>\R</m>. Setiap fungsi cekung <m>f:[0,\infty)\to\R</m> dengan
+          <m>f(0)\geq0</m> memenuhi <m>f(a+b)\leq f(a)+f(b)</m>. Dengan tambahan
+          bahwa <m>f</m> naik dan nol tepat di nol, komposit <m>f\circ d</m>
+          merupakan metrik.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-13-solution">
+        <p>
+          Untuk <m>g(x)=-x^2</m>, pertidaksamaan cekung ekuivalen dengan
+          <m>((1-\alpha)x+\alpha y)^2\leq(1-\alpha)x^2+\alpha y^2</m>.
+          Selisih ruas kanan dan kiri ialah
+          <m>\alpha(1-\alpha)(x-y)^2\geq0</m>, jadi klaim berlaku.
+        </p>
+        <p>
+          Jika <m>a=b=0</m>, maka <m>f(a)+f(b)=2f(0)\geq f(0)=f(a+b)</m>.
+          Jika <m>a+b&gt;0</m>, letakkan <m>\lambda=a/(a+b)</m>. Kekonkavan dengan
+          titik <m>a+b</m> dan <m>0</m> memberi
+          <m>f(a)\geq\lambda f(a+b)+(1-\lambda)f(0)\geq\lambda f(a+b)</m>.
+          Dengan bobot pelengkap diperoleh
+          <m>f(b)\geq(1-\lambda)f(a+b)</m>. Menjumlahkan memberi subaditivitas.
+        </p>
+        <p>
+          Untuk <m>f\circ d</m>, tak-negatif jelas; nilai nol setara dengan
+          <m>d(x,y)=0</m>, lalu dengan <m>x=y</m>. Simetri diwarisi dari <m>d</m>.
+          Akhirnya, monotonitas dan subaditivitas memberi
+          <m>f(d(x,y))\leq f(d(x,z)+d(z,y))\leq f(d(x,z))+f(d(z,y))</m>.
+          Jadi semua aksioma metrik terpenuhi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch03-exercise-14">
+      <title>Latihan 14: lima klaim benar–salah</title>
+      <statement>
+        <p>
+          Putuskan lima klaim pada latihan terakhir dalam urutan sumber. Setiap
+          jawaban salah harus disertai contoh konkret; setiap jawaban benar harus
+          disertai argumen yang berlaku umum.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch03-exercise-14-hint">
+        <p><em>Petunjuk 1.</em> Titik <m>0,1,2</m> menguji jarak kuadrat; metrik diskret menguji klaim tentang himpunan dan daerah hasil.</p>
+        <p><em>Petunjuk 2.</em> Pada hasil kali jarak, pilih dua titik yang berbeda hanya pada satu koordinat.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch03-exercise-14-answer">
+        <p>Urutannya adalah: salah, benar, benar, salah, salah.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch03-exercise-14-solution">
+        <p>
+          (a) Salah: <m>d(0,2)=4</m>, tetapi <m>d(0,1)+d(1,2)=2</m>.
+          (b) Benar: pada setiap himpunan tak kosong, metrik diskret merupakan
+          metrik. (c) Benar: jika himpunan mempunyai dua titik berbeda, metrik
+          <m>d_c</m> yang memberi jarak <m>c&gt;0</m> pada setiap pasangan berbeda
+          adalah metrik; nilai <m>c</m> yang berbeda memberi tak berhingga banyak
+          fungsi berbeda.
+        </p>
+        <p>
+          (d) Salah. Ambil <m>X=Y=\{0,1\}</m> dengan metrik diskret. Titik
+          <m>(0,0)</m> dan <m>(0,1)</m> berbeda, tetapi hasil kali jaraknya
+          <m>d_X(0,0)d_Y(0,1)=0\cdot1=0</m>, sehingga identitas titik gagal.
+          (e) Salah: himpunan tak berhingga apa pun dengan metrik diskret mempunyai
+          daerah hasil jarak hanya <m>\{0,1\}</m>, suatu himpunan berhingga.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+</appendix>

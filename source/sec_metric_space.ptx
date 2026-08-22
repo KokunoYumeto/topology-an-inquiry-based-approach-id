@@ -1,41 +1,41 @@
 <section xml:id="sec_metric_space">
-  <title>Metric Spaces</title>
+  <title>Ruang Metrik</title>
   <p>
-    For most of our mathematical careers our mathematics has taken place in <m>\R^2</m>,
-    where we measure the distance between points <m>(x_1,x_2)</m> and
-    <m>(y_1,y_2)</m> with the standard Euclidean distance <m>d_E</m>.
-    In our preview activity we saw that the function <m>d_T</m> satisfies many of the same properties as <m>d_E</m>.
-    These properties allow us to use <m>d_E</m> or <m>d_T</m> as distance functions.
-    We call any distance function a <term>metric</term>,
-    and any space on which a metric is defined is called a <term>metric space</term>.
+    Dalam sebagian besar pengalaman kita mempelajari matematika, pembahasan berlangsung di <m>\R^2</m>,
+    tempat kita mengukur jarak antara titik <m>(x_1,x_2)</m> dan
+    <m>(y_1,y_2)</m> dengan jarak Euklides standar <m>d_E</m>.
+    Dalam aktivitas pendahuluan, kita melihat bahwa fungsi <m>d_T</m> memenuhi banyak sifat yang sama dengan <m>d_E</m>.
+    Sifat-sifat ini memungkinkan kita menggunakan <m>d_E</m> maupun <m>d_T</m> sebagai fungsi jarak.
+    Setiap fungsi jarak kita sebut <term>metrik</term>,
+    dan setiap ruang tempat suatu metrik didefinisikan disebut <term>ruang metrik</term>.
   </p>
 
   <definition>
-  <idx><h>metric</h></idx>
+  <idx><h>metrik</h></idx>
     <statement>
       <p>
-        A <term>metric</term>
-        on a space <m>X</m> is a function
-        <m>d : X \times X \to \R^+ \cup \{0\}</m> that satisfies the properties:
+        Suatu <term>metrik</term>
+        pada ruang <m>X</m> adalah fungsi
+        <m>d : X \times X \to \R^+ \cup \{0\}</m> yang memenuhi sifat-sifat berikut:
         <ol>
           <li>
             <p>
-              <m>d(x,y) \geq 0</m> for all <m>x,y \in X</m>,
+              <m>d(x,y) \geq 0</m> untuk setiap <m>x,y \in X</m>,
             </p>
           </li>
           <li>
             <p>
-              <m>d(x,y) = 0</m> if and only if <m>x = y</m> in <m>X</m>,
+              <m>d(x,y) = 0</m> jika dan hanya jika <m>x = y</m> di dalam <m>X</m>,
             </p>
           </li>
           <li>
             <p>
-              <m>d(x,y) = d(y,x)</m> for all <m>x, y \in X</m>, and
+              <m>d(x,y) = d(y,x)</m> untuk setiap <m>x, y \in X</m>, dan
             </p>
           </li>
           <li>
             <p>
-              <m>d(x,y) \leq d(x,z) + d(z,y)</m> for all <m>x,y,z \in X</m>.
+              <m>d(x,y) \leq d(x,z) + d(z,y)</m> untuk setiap <m>x,y,z \in X</m>.
             </p>
           </li>
         </ol>
@@ -43,38 +43,38 @@
     </statement>
   </definition>
   <p>
-    Properties 1 and 2 of a metric say that a metric is
-    <term>positive definite</term>,
-    while property 3 states that a metric is <term>symmetric</term>.
-    Property 4 of the definition is usually the most difficult property to verify for a metric and is called the
-    <term>triangle inequality</term>.
-        <idx><h>triangle inequality</h></idx>
+    Sifat 1 dan 2 suatu metrik menyatakan bahwa metrik tersebut
+    <term>definit positif</term>,
+    sedangkan sifat 3 menyatakan bahwa metrik tersebut <term>simetris</term>.
+    Sifat 4 dalam definisi biasanya merupakan sifat metrik yang paling sulit diverifikasi dan disebut
+    <term>pertidaksamaan segitiga</term>.
+        <idx><h>pertidaksamaan segitiga</h></idx>
   </p>
   <definition>
-  <idx><h>metric space</h></idx>
+  <idx><h>ruang metrik</h></idx>
     <statement>
       <p>
-        A <term>metric space</term>
-        is a pair <m>(X,d)</m>, where <m>d</m> is a metric on the space <m>X</m>.
+        Suatu <term>ruang metrik</term>
+        adalah pasangan <m>(X,d)</m>, dengan <m>d</m> suatu metrik pada ruang <m>X</m>.
       </p>
     </statement>
   </definition>
   <p>
-    When the metric is clear from the context,
-    we just refer to <m>X</m> as the metric space.
+    Apabila metriknya jelas dari konteks,
+    kita cukup menyebut <m>X</m> sebagai ruang metrik.
   </p>
 
   <activity xml:id="act_MS_metrics">
     <introduction>
     <p>
-      For each of the following, determine if <m>(X,d)</m> is a metric space.
-      If <m>(X,d)</m> is a metric space, explain why.
-      If <m>(X,d)</m> is not a metric space,
-      determine which properties of a metric <m>d</m> satisfies and which it does not.
-      If <m>(X,d)</m> is a metric space,
-      give a geometric description of the unit circle
-      (the set of all points in <m>X</m> a distance <m>1</m> from the zero element)
-      in the space.
+      Untuk setiap butir berikut, tentukan apakah <m>(X,d)</m> merupakan ruang metrik.
+      Jika <m>(X,d)</m> merupakan ruang metrik, jelaskan alasannya.
+      Jika <m>(X,d)</m> bukan ruang metrik,
+      tentukan sifat metrik mana yang dipenuhi oleh <m>d</m> dan mana yang tidak.
+      Jika <m>(X,d)</m> merupakan ruang metrik,
+      berikan deskripsi geometris lingkaran satuan
+      (himpunan semua titik di dalam <m>X</m> yang berjarak <m>1</m> dari unsur nol)
+      di ruang tersebut.
     </p>
     </introduction>
       <task>
@@ -88,7 +88,7 @@
         <statement>
           <p>
             <m>X = \R</m>,
-            <m>d(x,y) = \begin{cases}0 \amp \text{ if } x=y \\ 1 \amp \text{ if } x \neq y. \end{cases}</m>
+            <m>d(x,y) = \begin{cases}0 \amp \text{ jika } x=y \\ 1 \amp \text{ jika } x \neq y. \end{cases}</m>
           </p>
         </statement>
       </task>
@@ -104,7 +104,7 @@
         <statement>
           <p>
             <m>X = C[0,1]</m>,
-            the set of all continuous functions on the interval <m>[0,1]</m>,
+            himpunan semua fungsi kontinu pada interval <m>[0,1]</m>,
             <me>
               d(f,g) = \ds \int_0^1 | f(x) - g(x) | \, dx
             </me>.
@@ -115,18 +115,18 @@
   </activity>
 
   <p>
-    It should be noted that not all metric spaces are infinite.
-    We discuss one metric on a finite space in the following example.
+    Perlu diperhatikan bahwa tidak semua ruang metrik bersifat tak berhingga.
+    Pada contoh berikut, kita membahas suatu metrik pada ruang berhingga.
   </p>
 
   <example xml:id="exp_finite_ms">
     <statement>
       <p>
-        Let <m>X = \{a,b,c\}</m> and define
-        <m>d: A \times A \to \R^+ \cup \{0\}</m> with the entries in <xref ref="T_finite_metric_ex">Table</xref>.
+        Misalkan <m>X = \{a,b,c\}</m> dan definisikan
+        <m>d: X \times X \to \R^+ \cup \{0\}</m> dengan nilai-nilai pada <xref ref="T_finite_metric_ex">Tabel</xref>.
       </p>
       <table xml:id="T_finite_metric_ex">
-        <title>Table of values for a function <m>d</m></title>
+        <title>Tabel nilai fungsi <m>d</m></title>
         <tabular row-headers="yes">
           <row bottom="minor">
             <cell right="minor"></cell>
@@ -155,26 +155,30 @@
         </tabular>
       </table>
       <p>
-        By definition we have <m>d(x,y) \geq 0</m> for all
+        Menurut definisi, kita mempunyai <m>d(x,y) \geq 0</m> untuk setiap
         <m>x,
-        y \in X</m> with <m>d(x,y) = 0</m> if and only if <m>x=y</m>.
-        Since the table is symmetric around the diagonal,
-        we can see that <m>d(x,y) = d(y,x)</m> for all <m>x,y \in X</m>.
-        The only item to verify is the triangle inequality.
-        If <m>d(x,y) = 0</m>, then
+        y \in X</m>, dengan <m>d(x,y) = 0</m> jika dan hanya jika <m>x=y</m>.
+        Karena tabel tersebut simetris terhadap diagonalnya,
+        kita dapat melihat bahwa <m>d(x,y) = d(y,x)</m> untuk setiap <m>x,y \in X</m>.
+        Satu-satunya sifat yang masih perlu diverifikasi adalah pertidaksamaan segitiga.
+        Jika <m>d(x,y) = 0</m>, maka
         <me>
           d(x,y) = 0 \leq d(x,z) + d(z,y)
         </me>
-        for any <m>x,y \in X</m>.
-        If <m>d(x,z) = 0</m>, then <m>x=z</m> and
+        untuk setiap <m>x,y,z \in X</m>.
+        Jika <m>d(x,z) = 0</m>, maka <m>x=z</m> dan
         <me>
           d(x,y) = d(z,y) \leq d(z,z) + d(z,y)
         </me>.
+        Jika <m>d(z,y)=0</m>, maka <m>z=y</m> dan
+        <me>
+          d(x,y)=d(x,z) \leq d(x,z)+d(z,y)
+        </me>.
       </p>
       <p>
-        That leaves three cases to consider,
-        when <m>x</m>, <m>y</m>, and <m>z</m> are distinct.
-        Now
+        Dengan demikian, tersisa tiga kasus yang perlu dipertimbangkan,
+        yaitu ketika <m>x</m>, <m>y</m>, dan <m>z</m> berbeda satu sama lain.
+        Sekarang,
         <md>
           <mrow>d(a,b) \amp = 3 \leq 5+4 = d(a,c) + d(c,b),</mrow>
           <mrow>d(a,c) \amp = 5 \leq 3+4 = d(a,b) + d(b,c),</mrow>
@@ -182,49 +186,49 @@
         </md>.
       </p>
       <p>
-        So <m>d</m> is a metric on <m>X</m>.
+        Jadi, <m>d</m> merupakan metrik pada <m>X</m>.
       </p>
     </statement>
   </example>
 
   <p>
     <xref ref="exp_finite_ms"/>
-    shows that even finite sets can be metric spaces.
-    In fact, we can make a finite metric space by taking any finite subset <m>S</m> of a metric space <m>(X,d)</m> and use as a metric the restriction of <m>d</m> to <m>S</m>.
+    menunjukkan bahwa himpunan berhingga pun dapat menjadi ruang metrik.
+    Bahkan, kita dapat membentuk ruang metrik berhingga dengan mengambil sebarang subhimpunan berhingga <m>S</m> dari ruang metrik <m>(X,d)</m>, lalu menggunakan pembatasan <m>d</m> pada <m>S</m> sebagai metrik.
     <xref ref="exp_finite_ms"/>
-    illustrates this by letting <m>a = (0,0)</m>,
-    <m>b = (3,0)</m>, and <m>c = (3,4)</m> in <m>\R^2</m>.
-    Then <m>d</m> is the restriction of the Euclidean metric to the set <m>X</m>.
-    Another way to construct a finite metric space is to start with a finite set of points and make a graph with the points as vertices.
-    Construct edges so that the graph is connected
-    (that is, there is a path from any one vertex to any other)
-    and give weights to the edges as illustrated in <xref ref="F_Graph_metric"/>.
-    We then define a metric <m>d</m> on <m>S</m> by letting <m>d(x,y)</m> be the length of a shortest path between vertices <m>x</m> and <m>y</m> in the graph.
-    For example,
-    <m>d(b,c) = d(b,e) + d(e,c) = 9</m> in this example.
+    mengilustrasikan hal ini dengan menetapkan <m>a = (0,0)</m>,
+    <m>b = (3,0)</m>, dan <m>c = (3,4)</m> di dalam <m>\R^2</m>.
+    Dengan demikian, <m>d</m> merupakan pembatasan metrik Euklides pada himpunan <m>X</m>.
+    Cara lain untuk membangun ruang metrik berhingga adalah memulai dengan himpunan titik yang berhingga, kemudian membuat graf yang menggunakan titik-titik tersebut sebagai simpul.
+    Buatlah sisi-sisi sedemikian sehingga graf tersebut terhubung
+    (artinya, terdapat lintasan dari setiap simpul ke setiap simpul lainnya),
+    lalu berikan bobot pada sisi-sisinya seperti yang diilustrasikan pada <xref ref="F_Graph_metric"/>.
+    Selanjutnya, kita mendefinisikan metrik <m>d</m> pada <m>S</m> dengan menetapkan <m>d(x,y)</m> sebagai panjang lintasan terpendek antara simpul <m>x</m> dan <m>y</m> di dalam graf.
+    Sebagai contoh,
+    <m>d(b,c) = d(b,e) + d(e,c) = 9</m> pada graf ini.
   </p>
 
   <figure xml:id="F_Graph_metric">
-    <caption>A graph to define a metric.</caption>
-    <image width="30%" source="Graph_metric"/>
+    <caption>Graf untuk mendefinisikan suatu metrik.</caption>
+    <image width="30%" source="Graph_metric"><description>Graf berbobot dengan lima simpul a, b, c, d, dan e. Sisi-sisinya berbobot a–b: 3, a–c: 8, a–e: 1, b–d: 7, b–e: 2, c–d: 2, c–e: 7, dan d–e: 5.</description></image>
   </figure>
 
   <p>
-    Just as with the Euclidean and taxicab metrics,
-    item (c) in <xref ref="act_MS_metrics"/>
-    can be extended to <m>\R^n</m> as follows.
-    If <m>x = (x_1, x_2, \ldots,
-    x_n)</m> and <m>y = (y_1, y_2, \ldots,
-    y_n)</m> are in <m>\R^n</m>,
-    then the maximum distance <m>d_M(x,y)</m> from <m>x</m> to <m>y</m> is defined as
+    Seperti metrik Euklides dan metrik taksi,
+    butir (c) dalam <xref ref="act_MS_metrics"/>
+    dapat diperluas ke <m>\R^n</m> sebagai berikut.
+    Jika <m>x = (x_1, x_2, \ldots,
+    x_n)</m> dan <m>y = (y_1, y_2, \ldots,
+    y_n)</m> berada di dalam <m>\R^n</m>,
+    maka jarak maksimum <m>d_M(x,y)</m> dari <m>x</m> ke <m>y</m> didefinisikan sebagai
     <me>
       d_M(x,y) = \max\{| x_1-y_1 |, | x_2-y_2 |, |x_3-y_3|, \ldots, |x_n-y_n| \} = \max_{1 \leq i \leq n} \{|x_i-y_i|\}
     </me>.
   </p>
   <p>
-    <idx><h>metric</h><h>max</h></idx>
-    The metric <m>d_M</m> is called the <term>max</term> metric.
-    In the following section we prove that the Euclidean metric is in fact a metric.
-    Proofs that <m>d_T</m> and <m>d_M</m> are metrics are left to <xref ref="ex_Taxicab"/> and <xref ref="ex_Max"/>.
+    <idx><h>metrik</h><h>maksimum</h></idx>
+    Metrik <m>d_M</m> disebut metrik <term>maksimum</term>.
+    Pada bagian berikutnya, kita membuktikan bahwa metrik Euklides memang merupakan suatu metrik.
+    Pembuktian bahwa <m>d_T</m> dan <m>d_M</m> merupakan metrik diserahkan kepada <xref ref="ex_Taxicab"/> dan <xref ref="ex_Max"/>.
   </p>
 </section>

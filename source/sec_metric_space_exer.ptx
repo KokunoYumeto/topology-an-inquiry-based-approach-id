@@ -1,16 +1,31 @@
 <exercises xml:id="sec_metric_space_exer">
+  <introduction>
+    <definition xml:id="def_ms_open_ball">
+      <idx><h>bola terbuka dalam ruang metrik</h></idx>
+      <statement>
+        <p>
+          Misalkan <m>(Y, d_Y)</m> suatu ruang metrik.
+          Untuk setiap bilangan real positif <m>r</m>,
+          <term>bola terbuka yang berpusat di <m>b</m> dan berjari-jari</term>
+          <m>r</m> dalam <m>(Y, d_Y)</m> adalah himpunan
+          <me>
+            B(b,r) = \{y \in Y \mid d_Y(y,b) \lt  r\}
+          </me>.
+        </p>
+      </statement>
+    </definition>
+  </introduction>
   
   <exercise xml:id="ex_MS_discrete">
     <statement>
       <p>
-        Let <m>X</m> be a set.
-        Show that the function <m>d</m>
-        (the discrete metric)
-        defined by
+        Misalkan <m>X</m> suatu himpunan.
+        Tunjukkan bahwa fungsi <m>d</m>
+        (metrik diskret) yang didefinisikan oleh
         <me>
-          d(x,y) = \begin{cases}0 \amp  \text{ if }  x=y \\ 1 \amp  \text{ if }  x \neq y \end{cases}
+          d(x,y) = \begin{cases}0 \amp  \text{ jika }  x=y \\ 1 \amp  \text{ jika }  x \neq y \end{cases}
         </me>
-        is a metric.
+        merupakan metrik.
       </p>
     </statement>
   </exercise>
@@ -19,39 +34,30 @@
   <introduction>
   
       <p>
-        Let <m>X = \{1,3,5\} \subset \Z</m> and define
-        <m>d: X \times X \to \R</m> by <m>d(x,y) = xy - 1 \pmod{n}</m>.
-        That is, <m>d(x,y)</m> is the remainder when <m>xy - 1</m> is divided by <m>n</m>.
+        Misalkan <m>X = \{1,3,5\} \subset \Z</m> dan definisikan
+        <m>d: X \times X \to \R</m> dengan <m>d(x,y) = xy - 1 \pmod{n}</m>.
+        Artinya, <m>d(x,y)</m> adalah sisa pembagian <m>xy - 1</m> oleh <m>n</m>.
         <ul>
           <li>
             <p>
-              For each value of <m>n</m>,
-              determine if <m>d</m> defines a metric on <m>X</m>.
-              Prove your answers.
+              Untuk setiap nilai <m>n</m>, tentukan apakah <m>d</m>
+              mendefinisikan suatu metrik pada <m>X</m>.
+              Buktikan jawaban Anda.
             </p>
           </li>
           <li>
             <p>
-              The unit circle in <m>\R^2</m> with metric <m>d</m> is the set of all points in <m>\R^2</m> whose distance from the origin is <m>1</m>.
-              If we let the distance be less than <m>1</m>,
-              then we have what we call an open ball.
-              We can make this same definition in any metric space.
-              <definition xml:id="def_ms_open_ball">
-                <idx><h>open ball in a metric space</h></idx>
-                <statement>
-                  <p>
-                    Let <m>(Y, d_Y)</m> be a metric space.
-                    For any positive real number <m>r</m>,
-                    the <term>open ball centered at <m>b</m> of radius</term> <m>r</m> in <m>(Y, d_Y)</m> is the the set
-                    <me>
-                      B(b,r) = \{y \in Y \mid d_Y(y,b) \lt  r\}
-                    </me>.
-                  </p>
-                </statement>
-              </definition>
-              If <m>(X,d)</m> is a metric space for a given value of <m>n</m>,
-              determine all of the open balls in <m>X</m> centered at <m>1</m>.
-              If <m>(X,d)</m> is not a metric space, explain why.
+              Sebagai motivasi untuk definisi berikut, pada <m>\R^2</m> yang
+              dilengkapi suatu metrik (tidak harus fungsi <m>d</m> di atas),
+              lingkaran satuan adalah himpunan semua titik di <m>\R^2</m> yang
+              berjarak <m>1</m> dari titik asal.
+              Jika jaraknya kita syaratkan kurang dari <m>1</m>, kita memperoleh
+              apa yang disebut bola terbuka.
+              Definisi tersebut berlaku dalam setiap ruang metrik.
+              Jika <m>(X,d)</m> merupakan ruang metrik untuk nilai <m>n</m>
+              yang diberikan, tentukan semua bola terbuka dalam <m>X</m>
+              yang berpusat di <m>1</m>.
+              Jika <m>(X,d)</m> bukan ruang metrik, jelaskan alasannya.
             </p>
           </li>
         </ul>
@@ -77,9 +83,11 @@
     <exercise xml:id="ex_MS_Q_metric">
     <introduction>
       <p>
-        Let <m>Q</m> be the set of all rational numbers in reduced form.
-        A rational number <m>\frac{r}{s}</m> is in reduced form if <m>s \gt 0</m> and <m>r</m> and <m>s</m> have no common factors larger than <m>1</m>.
-        Define <m>d : Q \times Q \to \R</m> by
+        Misalkan <m>Q</m> himpunan semua bilangan rasional dalam bentuk paling sederhana.
+        Bilangan rasional <m>\frac{r}{s}</m> berada dalam bentuk paling sederhana
+        jika <m>s \gt 0</m> serta <m>r</m> dan <m>s</m> tidak mempunyai faktor
+        persekutuan yang lebih besar dari <m>1</m>.
+        Definisikan <m>d : Q \times Q \to \R</m> dengan
         <me>
           d\left(\frac{a}{b}, \frac{r}{s}\right) = \max\{| a-r |, | b-s |\}
         </me>.
@@ -88,31 +96,37 @@
         <task>
           <statement>
             <p>
-              Prove that <m>d</m> is a metric.
+              Buktikan bahwa <m>d</m> merupakan metrik.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              A metric allows us to determine which elements in our metric space are ''close'' together.
-              Describe the set of elements in <m>Q</m> that are a distance no more than <m>1</m> from
-              <m>\frac{2}{3}</m> using this metric <m>d</m>.
-              In other words,
-              describe the open ball centered at <m>\frac{2}{3}</m> with radius <m>1</m>
-              (see <xref ref="def_ms_open_ball"/>).
+              Suatu metrik memungkinkan kita menentukan unsur-unsur mana dalam
+              ruang metrik yang “berdekatan”.
+              Deskripsikan himpunan unsur di <m>Q</m> yang berjarak kurang dari
+              <m>1</m> terhadap <m>\frac{2}{3}</m> dengan menggunakan metrik
+              <m>d</m> ini.
+              Dengan kata lain, deskripsikan bola terbuka berpusat di
+              <m>\frac{2}{3}</m> dengan jari-jari <m>1</m>
+              (lihat <xref ref="def_ms_open_ball"/>).
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>a</m>, <m>b</m>,
-              and <m>c</m> are elements of a metric space <m>(X, d_X)</m>,
-              we say that <m>b</m> is between <m>a</m> and <m>c</m> if <m>d_X(a,c) = d_X(a,b) + d_X(b,c)</m>.
-              Using the Euclidean metric on <m>\Q</m>,
-              there are infinitely many different rational numbers between <m>0</m> and <m>1</m> (the rational numbers between <m>0</m> and <m>1</m> that lie on the Euclidean line through <m>0</m> and <m>1</m>.
-              Describe all of the points in <m>(\Q,d)</m> that are between <m>0</m> and <m>1</m>.
+              Jika <m>a</m>, <m>b</m>, dan <m>c</m> merupakan unsur suatu ruang
+              metrik <m>(X, d_X)</m>, kita mengatakan bahwa <m>b</m> berada di
+              antara <m>a</m> dan <m>c</m> jika
+              <m>d_X(a,c) = d_X(a,b) + d_X(b,c)</m>.
+              Dengan metrik Euklides pada <m>\Q</m>, terdapat tak berhingga banyak
+              bilangan rasional yang berbeda di antara <m>0</m> dan <m>1</m>
+              (yaitu bilangan rasional di antara <m>0</m> dan <m>1</m> yang
+              terletak pada garis Euklides melalui <m>0</m> dan <m>1</m>).
+              Deskripsikan semua titik dalam <m>(\Q,d)</m> yang berada di antara
+              <m>0</m> dan <m>1</m>.
             </p>
           </statement>
         </task>
@@ -122,35 +136,40 @@
     <exercise>
     <introduction>
       <p>
-        Let <m>(\Q,d)</m> be the metric space from <xref ref="ex_MS_Q_metric"/>.
-        If <m>a</m>, <m>b</m>,
-        and <m>c</m> are elements of a metric space <m>(X, d_X)</m>,
-        we say that <m>b</m> is <term>between</term>
-        <m>a</m> and <m>c</m> if <m>d_X(a,c) = d_X(a,b) + d_X(b,c)</m>.
-        Using the Euclidean metric on <m>\Q</m>,
-        there are infinitely many different rational numbers between <m>0</m> and <m>1</m> (the rational numbers between <m>0</m> and <m>1</m> that lie on the Euclidean line through <m>0</m> and <m>1</m>.
-        In this exercise we explore numbers that are between others in the space <m>(\Q,d)</m>.
+        Misalkan <m>(\Q,d)</m> ruang metrik dari <xref ref="ex_MS_Q_metric"/>.
+        Jika <m>a</m>, <m>b</m>, dan <m>c</m> merupakan unsur suatu ruang metrik
+        <m>(X, d_X)</m>, kita mengatakan bahwa <m>b</m> berada
+        <term>di antara</term> <m>a</m> dan <m>c</m> jika
+        <m>d_X(a,c) = d_X(a,b) + d_X(b,c)</m>.
+        Dengan metrik Euklides pada <m>\Q</m>, terdapat tak berhingga banyak
+        bilangan rasional yang berbeda di antara <m>0</m> dan <m>1</m>
+        (yaitu bilangan rasional di antara <m>0</m> dan <m>1</m> yang terletak
+        pada garis Euklides melalui <m>0</m> dan <m>1</m>).
+        Dalam latihan ini kita menyelidiki bilangan-bilangan yang berada di
+        antara bilangan lain dalam ruang <m>(\Q,d)</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Find all of the elements in <m>(\Q,d)</m> that are between <m>0</m> and <m>1</m>.
+              Temukan semua unsur dalam <m>(\Q,d)</m> yang berada di antara
+              <m>0</m> dan <m>1</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Which is closer to <m>0</m> in <m>(\Q,d)</m>:
-              <m>1</m> or <m>\frac{1}{3}</m>?
+              Manakah yang lebih dekat ke <m>0</m> dalam <m>(\Q,d)</m>:
+              <m>1</m> atau <m>\frac{1}{3}</m>?
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Now find all of the elements in <m>(\Q,d)</m> that are between <m>0</m> and <m>\frac{1}{3}</m>.
+              Sekarang temukan semua unsur dalam <m>(\Q,d)</m> yang berada di
+              antara <m>0</m> dan <m>\frac{1}{3}</m>.
             </p>
           </statement>
         </task>
@@ -160,7 +179,7 @@
     <exercise xml:id="ex_Taxicab">
     <statement>
       <p>
-        Prove that the taxicab metric <m>d_T</m> is a metric on <m>\R^n</m>.
+        Buktikan bahwa metrik taksi <m>d_T</m> merupakan metrik pada <m>\R^n</m>.
       </p>
     </statement>
     </exercise>
@@ -168,21 +187,23 @@
     <exercise xml:id="ex_Max">
     <introduction>
       <p>
-        Let <m>A</m> and <m>B</m> be nonempty finite subsets of <m>\R^n</m>,
-        and let <m>A+B = \{a+b \mid a \in A, b \in B\}</m>.
+        Misalkan <m>A</m> dan <m>B</m> subhimpunan berhingga tak kosong dari
+        <m>\R</m>, dan misalkan
+        <m>A+B = \{a+b \mid a \in A, b \in B\}</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Prove that <m>\max (A+B) \leq \max A + \max B</m>.
+              Buktikan bahwa <m>\max (A+B) \leq \max A + \max B</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Prove that the max metric <m>d_M</m> is a metric on <m>\R^n</m>.
+              Buktikan bahwa metrik maksimum <m>d_M</m> merupakan metrik pada
+              <m>\R^n</m>.
             </p>
           </statement>
         </task>
@@ -192,21 +213,21 @@
     <exercise xml:id="ex_MS_hub">
     <introduction>
       <p>
-        If <m>x = (x_1, x_2, \ldots, x_n)</m>,
-        we let <m>|x| = \sqrt{x_1^2+x_2^2+ \cdots + x_n^2}</m>.
-        For <m>x = (x_1, x_2, \ldots,
-        x_n)</m> and <m>y = (y_1, y_2, \ldots y_n)</m>,
-        define <m>d_H: \R^n \times \R^n \to \R</m> by
+        Jika <m>x = (x_1, x_2, \ldots, x_n)</m>, kita tuliskan
+        <m>|x| = \sqrt{x_1^2+x_2^2+ \cdots + x_n^2}</m>.
+        Untuk <m>x = (x_1, x_2, \ldots, x_n)</m> dan
+        <m>y = (y_1, y_2, \ldots y_n)</m>, definisikan
+        <m>d_H: \R^n \times \R^n \to \R</m> dengan
         <me>
-          d_H(x,y) = \begin{cases}0 \amp \text{ if }  x=y \\ |x|+|y| \amp \text{ otherwise } . \end{cases}
+          d_H(x,y) = \begin{cases}0 \amp \text{ jika }  x=y \\ |x|+|y| \amp \text{ selain itu } . \end{cases}
         </me>
         </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>d_H</m> is a metric
-              (called the <term>hub</term> metric).
+              Tunjukkan bahwa <m>d_H</m> merupakan metrik
+              (disebut <term>metrik hub</term>).
             </p>
           </statement>
         </task>
@@ -214,25 +235,28 @@
               <task>
                 <statement>
                   <p>
-                    Let <m>a = \left(\frac{1}{2}, 0\right)</m>.
-                    Explicitly describe which points are in the set <m>B(a,1)</m> in <m>(\R^2, d_H)</m>.
-                    (See <xref ref="ex_MS_mod_metric"/>
-                    for the definition of an open ball.)
+                    Misalkan <m>a = \left(\frac{1}{2}, 0\right)</m>.
+                    Deskripsikan secara eksplisit titik-titik yang termasuk
+                    dalam himpunan <m>B(a,1)</m> di <m>(\R^2, d_H)</m>.
+                    (Lihat <xref ref="ex_MS_mod_metric"/> untuk definisi bola
+                    terbuka.)
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Let <m>a = (3,4)</m>.
-                    Explicitly describe which points are in the set <m>B(a,1)</m> in <m>(\R^2, d_H)</m>.
+                    Misalkan <m>a = (3,4)</m>.
+                    Deskripsikan secara eksplisit titik-titik yang termasuk
+                    dalam himpunan <m>B(a,1)</m> di <m>(\R^2, d_H)</m>.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Now explicitly describe all open balls in <m>(\R^2, d_H)</m>.
+                    Sekarang deskripsikan secara eksplisit semua bola terbuka
+                    dalam <m>(\R^2, d_H)</m>.
                   </p>
                 </statement>
               </task>
@@ -244,34 +268,35 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>\Z</m> be the set of integers and let <m>p</m> be a prime.
-        For each pair of distinct integers <m>m</m> and <m>n</m> there is an integer
-        <m>t = t(m,n)</m> such that <m>|m-n| = k \times p^t</m>,
-        where <m>p</m> does not divide <m>k</m>.
-        For example, if <m>p=5</m>, <m>m = 34</m>,
-        and <m>n = 7</m>, then <m>m-n = 27 = 27 \times 5^0</m>.
-        So <m>t(43,7) = 27</m>.
-        However, if <m>m = 54</m> and <m>n = 4</m>,
-        then <m>m-n = 50 = 2 \times 5^2</m>.
-        So <m>t(54,4) = 2</m>.
-        Define <m>d: \Z \times \Z \to \R</m> by
+        Misalkan <m>\Z</m> himpunan bilangan bulat dan <m>p</m> suatu bilangan prima.
+        Untuk setiap pasangan bilangan bulat berbeda <m>m</m> dan <m>n</m>,
+        terdapat bilangan bulat <m>t = t(m,n)</m> sedemikian sehingga
+        <m>|m-n| = k \times p^t</m>, dengan <m>p</m> tidak membagi <m>k</m>.
+        Sebagai contoh, jika <m>p=5</m>, <m>m = 34</m>, dan <m>n = 7</m>, maka
+        <m>m-n = 27 = 27 \times 5^0</m>.
+        Jadi <m>t(34,7) = 0</m>.
+        Namun, jika <m>m = 54</m> dan <m>n = 4</m>, maka
+        <m>m-n = 50 = 2 \times 5^2</m>.
+        Jadi <m>t(54,4) = 2</m>.
+        Definisikan <m>d: \Z \times \Z \to \R</m> dengan
         <me>
-          d(m,n) = \begin{cases}0 \amp \text{ if }  m=n \\ \frac{1}{p^t} \amp \text{ if }  m \neq n. \end{cases}
+          d(m,n) = \begin{cases}0 \amp \text{ jika }  m=n \\ \frac{1}{p^t} \amp \text{ jika }  m \neq n. \end{cases}
         </me>
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Determine the values of <m>d(62,170)</m> using <m>p=3</m> and <m>d(14008,2003)</m> using <m>p=7</m>.
+              Tentukan nilai <m>d(62,170)</m> dengan <m>p=3</m> dan
+              <m>d(14008,2003)</m> dengan <m>p=7</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Prove that if <m>a</m>, <m>b</m>,
-              and <m>c</m> are in <m>\Z</m>, then
+              Buktikan bahwa jika <m>a</m>, <m>b</m>, dan <m>c</m> berada di
+              <m>\Z</m>, maka
               <me>
                 t(a,c) \geq \min\{t(a,b), t(b,c)\}
               </me>.
@@ -281,23 +306,25 @@
         <task>
           <statement>
             <p>
-              Prove that <m>(\Z,d)</m> is a metric space.
+              Buktikan bahwa <m>(\Z,d)</m> merupakan ruang metrik.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>p = 3</m>.
-              Describe the set of all elements <m>x</m> in <m>(\Z,d)</m> such that <m>d(x,0) = 1</m>.
+              Misalkan <m>p = 3</m>.
+              Deskripsikan himpunan semua unsur <m>x</m> dalam <m>(\Z,d)</m>
+              yang memenuhi <m>d(x,0) = 1</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Continue with <m>p=3</m>.
-              Describe the set of all elements <m>x</m> in <m>(\Z,d)</m> such that <m>d(x,0) \lt \frac{1}{2}</m>.
+              Tetap gunakan <m>p=3</m>.
+              Deskripsikan himpunan semua unsur <m>x</m> dalam <m>(\Z,d)</m>
+              yang memenuhi <m>d(x,0) \lt \frac{1}{2}</m>.
             </p>
           </statement>
         </task>
@@ -307,30 +334,34 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>(X, d_X)</m> and <m>(Y, d_Y)</m> be metric spaces.
-        We can make the Cartesian product
-        <m>X \times Y</m> into a metric space by defining a metric <m>d'</m> on <m>X \times Y</m> as follows.
-        If <m>(x_1, y_2)</m> and <m>(x_2, y_2)</m> are in <m>X \times Y</m>, then
+        Misalkan <m>(X, d_X)</m> dan <m>(Y, d_Y)</m> ruang-ruang metrik.
+        Kita dapat menjadikan hasil kali Kartesius <m>X \times Y</m> suatu ruang
+        metrik dengan mendefinisikan metrik <m>d'</m> pada <m>X \times Y</m>
+        sebagai berikut.
+        Jika <m>(x_1, y_1)</m> dan <m>(x_2, y_2)</m> berada di <m>X \times Y</m>, maka
         <me>
           d'((x_1,y_1), (x_2, y_2)) = \max\{d_X(x_1,x_2), d_Y(y_1,y_2)\}
         </me>.
-        You may assume without proof that <m>d'</m> is a metric on <m>X \times Y</m>.
+        Anda boleh menganggap tanpa bukti bahwa <m>d'</m> merupakan metrik pada
+        <m>X \times Y</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Let <m>(X, d_X) = (\R^2, d_M)</m> and <m>(Y, d_Y) = (\R^2, d_T)</m>.
-              Let <m>u = ((1,2), (1,-1))</m> and <m>v = ((0,5),(2,-2))</m>.
-              What is
+              Misalkan <m>(X, d_X) = (\R^2, d_M)</m> dan
+              <m>(Y, d_Y) = (\R^2, d_T)</m>.
+              Misalkan <m>u = ((1,2), (1,-1))</m> dan
+              <m>v = ((0,5),(2,-2))</m>.
+              Berapakah
               <me>
                 d'(u,v)?
               </me>
-              Recall that
+              Ingat bahwa
               <me>
                 d_M((x_1,x_2),(y_1,y_2)) = \max\{ | x_1-y_1 |, | x_2-y_2 |\}
               </me>
-              and
+              dan
               <me>
                 d_T((x_1,x_2),(y_1,y_2)) = | x_1-y_1 | + | x_2-y_2 |
               </me>.
@@ -340,17 +371,17 @@
         <task>
           <statement>
             <p>
-              Let <m>(X, d_X) = (\R, d_E)</m> and <m>(Y, d_Y) = (\R, d)</m>,
-              where <m>d</m> is the discrete metric.
-              Let
+              Misalkan <m>(X, d_X) = (\R, d_E)</m> dan
+              <m>(Y, d_Y) = (\R, d)</m>, dengan <m>d</m> metrik diskret.
+              Misalkan
               <me>
-                A=\{(x,y) \in \R \times \R \mid -1\leq x \leq 1 \text{ and }  -1 \leq y \leq 1\}
+                A=\{(x,y) \in \R \times \R \mid -1\leq x \leq 1 \text{ dan }  -1 \leq y \leq 1\}
               </me>
-              in <m>X \times Y</m>.
-              Let <m>a = (0,1)</m> in <m>X \times Y</m>.
-              Describe, geometrically,
-              what the open ball <m>B(a,1)</m> looks like in the product space <m>X \times Y</m>.
-              Draw a picture of this open ball.
+              di <m>X \times Y</m>.
+              Misalkan <m>a = (0,1)</m> di <m>X \times Y</m>.
+              Deskripsikan secara geometris bentuk bola terbuka <m>B(a,1)</m>
+              dalam ruang hasil kali <m>X \times Y</m>.
+              Gambarlah bola terbuka ini.
             </p>
           </statement>
         </task>
@@ -359,13 +390,13 @@
   <exercise>
     <statement>
       <p>
-        Let <m>X = \R^+</m>, the set of positive reals,
-        and define <m>d: X \times X \to \R</m> by
+        Misalkan <m>X = \R^+</m>, himpunan bilangan real positif, dan definisikan
+        <m>d: X \times X \to \R</m> dengan
         <me>
           d(x,y) = |\ln(y/x)|
         </me>.
-        Is <m>d</m> is a metric on <m>X</m>?
-        Prove your answer.
+        Apakah <m>d</m> merupakan metrik pada <m>X</m>?
+        Buktikan jawaban Anda.
       </p>
     </statement>
   </exercise>
@@ -373,13 +404,14 @@
   <exercise xml:id="ex_1_over_1_plus_t_metric">
     <statement>
       <p>
-        Let <m>d: \R \times \R \to \R</m> be defined by
+        Misalkan <m>d: \R \times \R \to \R</m> didefinisikan oleh
         <me>
           d(x,y) = \frac{|x-y|}{|x-y|+1}
         </me>.
-        Show that <m>d</m> is a metric on <m>\R</m>. (Hint: For the triangle inequality,
-        note that <m>d(x,y) = f(|x-y|)</m> where <m>f(t) = \frac{t}{t+1}</m>,
-        and <m>f</m> is an increasing function.)
+        Tunjukkan bahwa <m>d</m> merupakan metrik pada <m>\R</m>.
+        (Petunjuk: Untuk pertidaksamaan segitiga, perhatikan bahwa
+        <m>d(x,y) = f(|x-y|)</m>, dengan <m>f(t) = \frac{t}{t+1}</m>, dan <m>f</m>
+        merupakan fungsi naik.)
       </p>
     </statement>
   </exercise>
@@ -387,13 +419,13 @@
   <exercise>
     <statement>
       <p>
-        Let <m>(X,d)</m> be a metric space and <m>k</m> be a constant.
-        Define <m>kd: X \times X \to \R</m> by
+        Misalkan <m>(X,d)</m> suatu ruang metrik dan <m>k</m> suatu konstanta.
+        Definisikan <m>kd: X \times X \to \R</m> dengan
         <me>
           (kd)(x,y) = kd(x,y)
         </me>.
-        Under what, if any, conditions is <m>kd</m> a metric on <m>X</m>.
-        Justify your answer.
+        Dengan syarat apa, jika ada, <m>kd</m> merupakan metrik pada <m>X</m>?
+        Jelaskan alasan Anda.
       </p>
     </statement>
   </exercise>
@@ -401,61 +433,69 @@
   <exercise>
     <introduction>
       <p>
-        A real valued function <m>f</m> on an interval is <term>concave</term> if
+        Fungsi bernilai real <m>f</m> pada suatu interval disebut
+        <term>cekung</term> jika
         <men xml:id="eq_concave">
           f((1-\alpha)x + \alpha y) \geq (1-\alpha)f(x) + \alpha f(y)
         </men>
-        for all <m>\alpha \in [0,1]</m> and all <m>x</m> and <m>y</m> in the interval.
-        Note that the expression <m>(1-\alpha)x + \alpha y</m> is linear in <m>\alpha</m> and is equal to <m>x</m> when
-        <m>\alpha = 0</m> and <m>y</m> when <m>\alpha = 1</m>.
-        So <m>(1-\alpha)x + \alpha y</m> is a parameterization of the line segment joining <m>x</m> to <m>y</m>.
-        As <xref ref="F_concave"/> indicates, equation
-        <xref ref="eq_concave"/> implies that the graph of a concave function <m>f</m> on any interval <m>[x,y]</m> lies above the secant line joining the points <m>(x,f(x))</m> and <m>(y,f(y))</m>.
+        untuk setiap <m>\alpha \in [0,1]</m> dan setiap <m>x</m> serta <m>y</m>
+        dalam interval tersebut.
+        Perhatikan bahwa ekspresi <m>(1-\alpha)x + \alpha y</m> linear terhadap
+        <m>\alpha</m>, bernilai <m>x</m> ketika <m>\alpha = 0</m>, dan bernilai
+        <m>y</m> ketika <m>\alpha = 1</m>.
+        Jadi <m>(1-\alpha)x + \alpha y</m> merupakan parameterisasi ruas garis
+        yang menghubungkan <m>x</m> dengan <m>y</m>.
+        Seperti diperlihatkan <xref ref="F_concave"/>, persamaan
+        <xref ref="eq_concave"/> menyatakan bahwa grafik fungsi cekung <m>f</m>
+        pada setiap interval <m>[x,y]</m> terletak di atas garis sekan yang
+        menghubungkan titik <m>(x,f(x))</m> dan <m>(y,f(y))</m>.
       </p>
       <figure xml:id="F_concave">
-          <caption>A concave function.</caption>
-          <image width="50%" source="Concave"/>
+          <caption>Suatu fungsi cekung.</caption>
+          <image width="50%" source="Concave"><description>Grafik sebuah fungsi cekung melengkung di atas garis sekan yang menghubungkan dua titik pada grafik.</description></image>
         </figure>
     </introduction>
         <task>
           <statement>
             <p>
-              Let <m>f(x) = -x^2</m> map <m>\R</m> to <m>\R</m> with the standard Euclidean metric.
-              Show that <m>f</m> is concave on the interval <m>[-1,1]</m>.
+              Misalkan <m>f(x) = -x^2</m> memetakan <m>\R</m> ke <m>\R</m>
+              dengan metrik Euklides standar.
+              Tunjukkan bahwa <m>f</m> cekung pada interval <m>[-1,1]</m>.
             </p>
           </statement>
           <hint>
             <p>
-              Start with the fact that <m>\alpha(1-\alpha)(x-y)^2 \geq 0</m>.
+              Mulailah dari fakta bahwa
+              <m>\alpha(1-\alpha)(x-y)^2 \geq 0</m>.
             </p>
           </hint>
         </task>
         <task>
           <statement>
             <p>
-              Show that if <m>f</m> is a concave function on
-              <m>[0,\infty)</m> and <m>f(0) \geq 0</m>,
-              an interval and <m>a</m> and <m>b</m> are in the interval, then
+              Tunjukkan bahwa jika <m>f</m> merupakan fungsi cekung pada
+              <m>[0,\infty)</m> dan <m>f(0) \geq 0</m>.
+              Jika <m>a</m> dan <m>b</m> berada dalam interval tersebut, maka
               <me>
                 f(a) + f(b) \geq f(a+b)
               </me>.
-              
             </p>
           </statement>
           <hint>
                 <p>
-                  Consider <xref ref="eq_concave"/> with <m>y=0</m>.
-                  Then use the fact that <m>\frac{a}{a+b}</m> is in <m>[0,1]</m>.
+                  Tinjau <xref ref="eq_concave"/> dengan <m>y=0</m>.
+                  Lalu gunakan fakta bahwa <m>\frac{a}{a+b}</m> berada di
+                  <m>[0,1]</m>.
                 </p>
               </hint>
         </task>
         <task>
           <statement>
             <p>
-              Suppose <m>(X,d)</m> is a metric space and <m>f: [0, \infty) \to [0, \infty)</m> is an increasing,
-              concave function such that
-              <m>f(x) = 0</m> if and only if <m>x=0</m>.
-              Prove that <m>f \circ d</m> is a metric on <m>X</m>.
+              Misalkan <m>(X,d)</m> suatu ruang metrik dan
+              <m>f: [0, \infty) \to [0, \infty)</m> suatu fungsi naik dan cekung
+              sedemikian sehingga <m>f(x) = 0</m> jika dan hanya jika <m>x=0</m>.
+              Buktikan bahwa <m>f \circ d</m> merupakan metrik pada <m>X</m>.
             </p>
           </statement>
         </task>
@@ -464,49 +504,54 @@
   <exercise>
     <introduction>
       <p>
-        For each of the following, answer true if the statement is always true.
-        If the statement is only sometimes true or never true,
-        answer false and provide a concrete example to illustrate that the statement is false.
-        If a statement is true, explain why.
+        Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu
+        selalu benar.
+        Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar,
+        jawablah salah dan berikan contoh konkret yang menunjukkan bahwa
+        pernyataan tersebut salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              The function <m>d: \R \times \R \to \R</m> defined by
-              <m>d(x,y) = (x-y)^2</m> is a metric on <m>\R</m>.
+              Fungsi <m>d: \R \times \R \to \R</m> yang didefinisikan oleh
+              <m>d(x,y) = (x-y)^2</m> merupakan metrik pada <m>\R</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Every nonempty set can be made into a metric space.
+              Setiap himpunan tak kosong dapat dijadikan ruang metrik.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              It is possible to define an infinite number of metrics on every set containing at least two elements.
+              Pada setiap himpunan yang memuat sekurang-kurangnya dua unsur,
+              dapat didefinisikan tak berhingga banyak metrik.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>(X, d_X)</m> and <m>(Y, d_Y)</m> be metric spaces with <m>|X| \geq 2</m>.
-              Then the function <m>d: X \times Y \to \R</m> defined by
-              <m>d((a,b),(c,d)) = d_X(a,c)d_Y(b,d)</m> is a metric on <m>X \times Y</m>.
+              Misalkan <m>(X, d_X)</m> dan <m>(Y, d_Y)</m> ruang-ruang metrik
+              dengan <m>|X| \geq 2</m>.
+              Maka fungsi <m>d: (X \times Y) \times (X \times Y) \to \R</m> yang didefinisikan oleh
+              <m>d((a,b),(c,d)) = d_X(a,c)d_Y(b,d)</m> merupakan metrik pada
+              <m>X \times Y</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>(X,d)</m> be a metric space.
-              If <m>X</m> is infinite,
-              then the range of <m>d</m> is also an infinite set.
+              Misalkan <m>(X,d)</m> suatu ruang metrik.
+              Jika <m>X</m> tak berhingga, maka daerah hasil <m>d</m> juga
+              merupakan himpunan tak berhingga.
             </p>
           </statement>
         </task>
