@@ -1,0 +1,630 @@
+<section xml:id="o003-c90-ch08-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian kedua</title>
+
+  <p>
+    Dua belas panduan berikut berkorespondensi, dalam urutan sumber, dengan
+    perintah ke-14 sampai ke-25 pada bagian latihan penutup Bab 8. ID panduan
+    berlanjut dari <c>o003-c90-ch08-guide-44</c> sampai
+    <c>o003-c90-ch08-guide-55</c>. Materi pendamping ini merupakan uraian
+    asli untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh
+    penulis karya sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch08-guide-44">
+    <title>Memisahkan dua titik dengan himpunan terbuka</title>
+    <statement>
+      <p>
+        Pada perintah ke-14 latihan penutup, misalkan <m>x_1\neq x_2</m>
+        dalam ruang metrik <m>(X,d)</m>. Buktikan bahwa ada himpunan terbuka
+        <m>O_1\ni x_1</m> dan <m>O_2\ni x_2</m> dengan
+        <m>O_1\cap O_2=\emptyset</m>.
+        <em>Rubrik.</em> Gunakan jarak positif antartitik untuk memilih dua
+        bola, lalu singkirkan kemungkinan adanya titik pada irisan memakai
+        pertidaksamaan segitiga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-44-hint">
+      <p>
+        <em>Langkah 1.</em> Tetapkan <m>D=d(x_1,x_2)\gt0</m> dan ambil
+        <m>O_i=B(x_i,D/2)</m> untuk <m>i=1,2</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>z</m> berada dalam kedua bola, bandingkan
+        <m>d(x_1,z)+d(z,x_2)</m> dengan <m>D</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-44-answer">
+      <p>
+        Ambil <m>O_1=B(x_1,D/2)</m> dan
+        <m>O_2=B(x_2,D/2)</m>, dengan <m>D=d(x_1,x_2)</m>. Kedua bola
+        terbuka, memuat pusat masing-masing, dan saling lepas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-44-solution">
+      <p>
+        Karena <m>x_1\neq x_2</m>, aksioma metrik memberi
+        <m>D=d(x_1,x_2)\gt0</m>. Tetapkan
+        <m>O_1=B(x_1,D/2)</m> dan <m>O_2=B(x_2,D/2)</m>. Bola terbuka adalah
+        himpunan terbuka, dan <m>d(x_i,x_i)=0\lt D/2</m>, sehingga
+        <m>x_i\in O_i</m>.
+      </p>
+      <p>
+        Andaikan ada <m>z\in O_1\cap O_2</m>. Pertidaksamaan segitiga
+        menghasilkan
+        <me>
+          D=d(x_1,x_2)\leq d(x_1,z)+d(z,x_2)
+          \lt\frac D2+\frac D2=D,
+        </me>
+        suatu kontradiksi. Jadi <m>O_1\cap O_2=\emptyset</m>, sebagaimana
+        diminta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-45">
+    <title>Bola terbuka untuk metrik jarak terkompresi</title>
+    <statement>
+      <p>
+        Pada perintah ke-15 latihan penutup, <m>Y=\R</m> memakai metrik
+        <m>d(x,y)=|x-y|/(|x-y|+1)</m>. Deskripsikan
+        <m>B(c,\delta)</m> untuk pusat <m>c\in\R</m> dan
+        <m>\delta\gt0</m>. Huruf pusat diganti dari <m>a</m> pada perintah
+        sumber menjadi <m>c</m> agar tidak bertabrakan dengan koefisien
+        <m>a</m> dalam rumus <m>f(x)=ax+b</m>; rumus sumber tidak diubah.
+        Sumber juga menyebut rumus itu “linear” untuk semua <m>b</m>, padahal
+        secara umum ia afin dan hanya linear bila <m>b=0</m>. Panduan ini
+        mempertahankan kuantor <m>a,b\in\R</m> dan tidak mengubah rumusnya.
+        <em>Rubrik.</em> Pisahkan kasus <m>0\lt\delta\lt1</m> dan
+        <m>\delta\geq1</m>, sebab semua jarak dalam metrik ini kurang dari
+        <m>1</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-45-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>0\lt\delta\lt1</m>, tetapkan
+        <m>t=|x-c|</m> dan selesaikan
+        <m>t/(t+1)\lt\delta</m> terhadap <m>t</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>\delta\geq1</m>, gunakan
+        <m>0\leq t/(t+1)\lt1\leq\delta</m> bagi setiap <m>t\geq0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-45-answer">
+      <p>
+        Jika <m>0\lt\delta\lt1</m>, maka
+        <m>B(c,\delta)=(c-\delta/(1-\delta),c+\delta/(1-\delta))</m>.
+        Jika <m>\delta\geq1</m>, maka <m>B(c,\delta)=\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-45-solution">
+      <p>
+        Ambil <m>x\in\R</m> dan tuliskan <m>t=|x-c|\geq0</m>. Jika
+        <m>0\lt\delta\lt1</m>, maka
+        <md>
+          <mrow> d(x,c)\lt\delta</mrow>
+          <mrow>\Longleftrightarrow \frac{t}{t+1}\lt\delta</mrow>
+          <mrow>\Longleftrightarrow (1-\delta)t\lt\delta</mrow>
+          <mrow>\Longleftrightarrow t\lt\frac{\delta}{1-\delta}.</mrow>
+        </md>
+        Jadi
+        <me>
+          B(c,\delta)=
+          \left(c-\frac{\delta}{1-\delta},
+          c+\frac{\delta}{1-\delta}\right)
+          \quad(0\lt\delta\lt1).
+        </me>
+      </p>
+      <p>
+        Untuk setiap <m>t\geq0</m>, berlaku <m>t/(t+1)\lt1</m>. Maka jika
+        <m>\delta\geq1</m>, setiap <m>x\in\R</m> memenuhi
+        <m>d(x,c)\lt\delta</m>, termasuk ketika <m>\delta=1</m> karena
+        pertidaksamaannya tetap ketat pada jarak. Jadi
+        <m>B(c,\delta)=\R</m> untuk <m>\delta\geq1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-46">
+    <title>Rumus afin dari metrik Euklides ke metrik terkompresi</title>
+    <statement>
+      <p>
+        Pada perintah ke-16 latihan penutup, domain
+        <m>X=(\R,d_E)</m>, kodomain <m>Y=(\R,d)</m> dengan
+        <m>d(u,v)=|u-v|/(|u-v|+1)</m>, dan
+        <m>f(x)=ax+b</m> untuk <m>a,b\in\R</m>. Tentukan apakah
+        <m>f:X\to Y</m> kontinu untuk semua <m>a,b</m> dan buktikan.
+        Label sumber “fungsi linear sebarang” tidak tepat ketika
+        <m>b\neq0</m>; panduan mempertahankan formula serta kuantor sumber
+        dan menyebutnya fungsi afin secara umum.
+        <em>Rubrik.</em> Pisahkan kasus <m>a=0</m>; jika <m>a\neq0</m>,
+        bandingkan jarak kodomain dengan <m>|a||x-x_0|</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-46-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>t\geq0</m>, berlaku
+        <m>t/(t+1)\leq t</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>a\neq0</m> dan toleransi keluaran adalah
+        <m>\epsilon\gt0</m>, coba <m>\delta=\epsilon/|a|</m> pada domain
+        Euklides.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-46-answer">
+      <p>
+        Ya. Semua rumus <m>f(x)=ax+b</m> itu kontinu dari <m>X</m> ke
+        <m>Y</m>; untuk <m>a\neq0</m>, pilihan
+        <m>\delta=\epsilon/|a|</m> cukup, sedangkan <m>a=0</m> memberi fungsi
+        konstan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-46-solution">
+      <p>
+        Tetapkan <m>x_0\in\R</m> dan <m>\epsilon\gt0</m>. Jika
+        <m>a=0</m>, fungsi <m>f(x)=b</m> konstan, sehingga jarak semua
+        nilainya dari <m>f(x_0)</m> adalah nol dan kontinuitas langsung
+        berlaku.
+      </p>
+      <p>
+        Andaikan <m>a\neq0</m> dan pilih
+        <m>\delta=\epsilon/|a|\gt0</m>. Jika
+        <m>d_E(x,x_0)=|x-x_0|\lt\delta</m>, maka, dengan
+        <m>t=|f(x)-f(x_0)|=|a||x-x_0|</m>,
+        <me>
+          d(f(x),f(x_0))=\frac{t}{t+1}\leq t
+          =|a||x-x_0|\lt |a|\delta=\epsilon.
+        </me>
+        Jadi <m>f</m> kontinu di <m>x_0</m>. Karena <m>x_0</m> sebarang,
+        <m>f:X\to Y</m> kontinu untuk semua <m>a,b\in\R</m>. Suku
+        translasi <m>b</m> hilang dari selisih, tetapi tetap bagian dari
+        formula yang dibuktikan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-47">
+    <title>Rumus afin dari metrik terkompresi ke metrik Euklides</title>
+    <statement>
+      <p>
+        Pada perintah ke-17 latihan penutup, balik peran ruang:
+        <m>Y=(\R,d)</m> menjadi domain dan
+        <m>X=(\R,d_E)</m> menjadi kodomain. Untuk formula sumber yang sama,
+        <m>f(x)=ax+b</m> dengan <m>a,b\in\R</m>, tentukan apakah
+        <m>f:Y\to X</m> kontinu. Seperti pada panduan sebelumnya, formula
+        ini diperlakukan sebagai afin secara umum dan linear hanya pada kasus
+        <m>b=0</m>; tidak ada rumus atau kuantor sumber yang diubah.
+        <em>Rubrik.</em> Untuk <m>a\neq0</m>, pilih radius domain kurang dari
+        satu dan balik pertidaksamaan <m>t/(t+1)\lt\delta</m> agar
+        <m>|a|t\lt\epsilon</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-47-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>a\neq0</m> dan
+        <m>\epsilon\gt0</m>, ambil
+        <m>\delta=\epsilon/(|a|+\epsilon)</m>; periksa bahwa
+        <m>0\lt\delta\lt1</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Dari
+        <m>t/(t+1)\lt\delta</m>, peroleh
+        <m>t\lt\delta/(1-\delta)=\epsilon/|a|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-47-answer">
+      <p>
+        Ya. Semua fungsi itu kontinu dari <m>Y</m> ke <m>X</m>. Untuk
+        <m>a\neq0</m>, pilihan
+        <m>\delta=\epsilon/(|a|+\epsilon)</m> bekerja; kasus
+        <m>a=0</m> konstan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-47-solution">
+      <p>
+        Tetapkan <m>x_0\in\R</m> dan <m>\epsilon\gt0</m>. Jika
+        <m>a=0</m>, <m>f</m> konstan dan kontinu. Andaikan
+        <m>a\neq0</m>, lalu pilih
+        <me>
+          \delta=\frac{\epsilon}{|a|+\epsilon}.
+        </me>
+        Karena pembilang dan penyebut positif serta penyebut lebih besar,
+        <m>0\lt\delta\lt1</m>.
+      </p>
+      <p>
+        Jika <m>d(x,x_0)\lt\delta</m> dan
+        <m>t=|x-x_0|</m>, maka
+        <me>
+          \frac{t}{t+1}\lt\delta
+          \quad\Longrightarrow\quad
+          t\lt\frac{\delta}{1-\delta}
+          =\frac{\epsilon}{|a|}.
+        </me>
+        Oleh sebab itu jarak Euklides di kodomain memenuhi
+        <me>
+          d_E(f(x),f(x_0))=|a||x-x_0|=|a|t\lt\epsilon.
+        </me>
+        Maka <m>f</m> kontinu di setiap <m>x_0</m>, untuk seluruh
+        <m>a,b\in\R</m> yang dikuantifikasi dalam sumber.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-48">
+    <title>Kontinuitas proyeksi dari metrik maksimum</title>
+    <statement>
+      <p>
+        Pada perintah ke-18 latihan penutup, fungsi
+        <m>f:(\R^2,d_M)\to(\R,d_E)</m> diberikan oleh
+        <m>f((x,y))=x</m>. Tentukan dan buktikan apakah <m>f</m> kontinu.
+        Teks sumber hanya mengatakan “Gunakan Teorema” tanpa nomor, ID, atau
+        xref. Karena sasaran itu memang menggantung dan lebih dari satu hasil
+        kontinuitas di sekitar bagian tersebut dapat dipakai, panduan ini
+        tidak menebak teoremanya dan memberikan bukti langsung.
+        <em>Rubrik.</em> Bandingkan perubahan koordinat pertama dengan jarak
+        maksimum dua titik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-48-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>p=(x,y)</m> dan
+        <m>q=(u,v)</m>, hitung <m>d_E(f(p),f(q))</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Tunjukkan
+        <m>|x-u|\leq\max\{|x-u|,|y-v|\}=d_M(p,q)</m>, lalu pilih
+        <m>\delta=\epsilon</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-48-answer">
+      <p>
+        Ya. Proyeksi itu kontinu, bahkan 1-Lipschitz:
+        <m>d_E(f(p),f(q))\leq d_M(p,q)</m> untuk semua
+        <m>p,q\in\R^2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-48-solution">
+      <p>
+        Ambil <m>p=(x,y)</m> dan <m>q=(u,v)</m>. Maka
+        <me>
+          d_E(f(p),f(q))=|x-u|
+          \leq\max\{|x-u|,|y-v|\}=d_M(p,q).
+        </me>
+        Tetapkan <m>p\in\R^2</m> dan <m>\epsilon\gt0</m>. Pilih
+        <m>\delta=\epsilon</m>. Jika <m>d_M(p,q)\lt\delta</m>, pertidaksamaan
+        di atas memberi
+        <m>d_E(f(p),f(q))\lt\epsilon</m>. Jadi <m>f</m> kontinu di setiap
+        <m>p</m>. Bukti ini menyelesaikan soal tanpa memasang xref baru pada
+        frasa “Gunakan Teorema” yang sasarannya belum ditentukan secara
+        otoritatif.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-49">
+    <title>Interior gabungan tidak selalu masuk gabungan interior</title>
+    <statement>
+      <p>
+        Pada perintah ke-19 latihan penutup, putuskan benar atau salah:
+        untuk subhimpunan tak kosong <m>A,B</m> dari ruang metrik <m>X</m>,
+        selalu berlaku
+        <m>\Int(A\cup B)\subseteq\Int(A)\cup\Int(B)</m>.
+        <em>Rubrik.</em> Jika salah, pilih dua interval tertutup yang bertemu
+        pada satu titik dan hitung ketiga interiornya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-49-hint">
+      <p>
+        <em>Langkah 1.</em> Dalam <m>(\R,d_E)</m>, ambil
+        <m>A=[-1,0]</m> dan <m>B=[0,1]</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Periksa posisi titik <m>0</m> terhadap
+        <m>\Int(A\cup B)</m> dan
+        <m>\Int(A)\cup\Int(B)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-49-answer">
+      <p>
+        Salah. Untuk <m>A=[-1,0]</m> dan <m>B=[0,1]</m>, titik
+        <m>0</m> berada dalam <m>\Int(A\cup B)=(-1,1)</m>, tetapi tidak
+        berada dalam <m>\Int(A)\cup\Int(B)=(-1,0)\cup(0,1)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-49-solution">
+      <p>
+        Ambil <m>X=(\R,d_E)</m>, <m>A=[-1,0]</m>, dan
+        <m>B=[0,1]</m>. Kedua himpunan tak kosong. Interiornya adalah
+        <m>\Int(A)=(-1,0)</m> dan <m>\Int(B)=(0,1)</m>. Namun
+        <m>A\cup B=[-1,1]</m>, sehingga
+        <m>\Int(A\cup B)=(-1,1)</m>. Khususnya,
+        <me>
+          0\in\Int(A\cup B)
+          \quad\text{tetapi}\quad
+          0\notin\Int(A)\cup\Int(B).
+        </me>
+        Maka inklusi yang diklaim gagal, jadi pernyataan universal tersebut
+        salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-50">
+    <title>Gabungan interior masuk interior gabungan</title>
+    <statement>
+      <p>
+        Pada perintah ke-20 latihan penutup, putuskan benar atau salah:
+        untuk subhimpunan tak kosong <m>A,B\subseteq X</m>, selalu berlaku
+        <m>\Int(A)\cup\Int(B)\subseteq\Int(A\cup B)</m>.
+        <em>Rubrik.</em> Tunjukkan bahwa ruas kiri terbuka dan termuat dalam
+        <m>A\cup B</m>, lalu gunakan sifat interior sebagai himpunan terbuka
+        terbesar yang termuat di dalam suatu himpunan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-50-hint">
+      <p>
+        <em>Langkah 1.</em> Himpunan <m>\Int(A)</m> dan
+        <m>\Int(B)</m> terbuka, sehingga gabungannya terbuka.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan
+        <m>\Int(A)\subseteq A</m> dan <m>\Int(B)\subseteq B</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-50-answer">
+      <p>
+        Benar. <m>\Int(A)\cup\Int(B)</m> adalah himpunan terbuka yang
+        termuat dalam <m>A\cup B</m>, maka termuat dalam interior gabungan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-50-solution">
+      <p>
+        Interior <m>\Int(A)</m> dan <m>\Int(B)</m> masing-masing terbuka;
+        gabungan dua himpunan terbuka juga terbuka. Selain itu,
+        <me>
+          \Int(A)\cup\Int(B)\subseteq A\cup B.
+        </me>
+        Karena <m>\Int(A\cup B)</m> adalah himpunan terbuka terbesar yang
+        termuat dalam <m>A\cup B</m>, setiap himpunan terbuka yang termuat
+        dalam <m>A\cup B</m>, termasuk <m>\Int(A)\cup\Int(B)</m>, harus
+        termuat di dalamnya. Jadi inklusi itu benar. Hipotesis tak kosong
+        bahkan tidak diperlukan untuk argumen ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-51">
+    <title>Interior irisan masuk irisan interior</title>
+    <statement>
+      <p>
+        Pada perintah ke-21 latihan penutup, putuskan benar atau salah:
+        untuk subhimpunan tak kosong <m>A,B\subseteq X</m>, selalu berlaku
+        <m>\Int(A\cap B)\subseteq\Int(A)\cap\Int(B)</m>.
+        <em>Rubrik.</em> Mulailah dari satu bola yang termuat dalam irisan
+        dan gunakan bola yang sama untuk kedua himpunan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-51-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>x\in\Int(A\cap B)</m>, ada
+        <m>r\gt0</m> dengan <m>B(x,r)\subseteq A\cap B</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Dari inklusi itu simpulkan secara terpisah
+        <m>B(x,r)\subseteq A</m> dan <m>B(x,r)\subseteq B</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-51-answer">
+      <p>
+        Benar. Setiap titik interior dari <m>A\cap B</m> sekaligus merupakan
+        titik interior dari <m>A</m> dan dari <m>B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-51-solution">
+      <p>
+        Ambil <m>x\in\Int(A\cap B)</m>. Terdapat <m>r\gt0</m> dengan
+        <m>B(x,r)\subseteq A\cap B</m>. Karena
+        <m>A\cap B\subseteq A</m> dan <m>A\cap B\subseteq B</m>, berlaku
+        <m>B(x,r)\subseteq A</m> serta <m>B(x,r)\subseteq B</m>. Jadi
+        <m>x\in\Int(A)</m> dan <m>x\in\Int(B)</m>, sehingga
+        <m>x\in\Int(A)\cap\Int(B)</m>. Karena <m>x</m> sebarang, inklusi
+        yang diminta benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-52">
+    <title>Irisan interior masuk interior irisan</title>
+    <statement>
+      <p>
+        Pada perintah ke-22 latihan penutup, putuskan benar atau salah:
+        untuk subhimpunan tak kosong <m>A,B\subseteq X</m>, selalu berlaku
+        <m>\Int(A)\cap\Int(B)\subseteq\Int(A\cap B)</m>.
+        <em>Rubrik.</em> Dari dua radius yang mungkin berbeda, bangun satu
+        radius positif yang bekerja untuk irisan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-52-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>x\in\Int(A)\cap\Int(B)</m>, pilih
+        <m>r_A,r_B\gt0</m> dengan bola masing-masing termuat dalam
+        <m>A</m> dan <m>B</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan
+        <m>r=\min\{r_A,r_B\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-52-answer">
+      <p>
+        Benar. Bola beradius <m>\min\{r_A,r_B\}</m> termuat sekaligus dalam
+        <m>A</m> dan <m>B</m>, maka termuat dalam irisannya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-52-solution">
+      <p>
+        Ambil <m>x\in\Int(A)\cap\Int(B)</m>. Ada
+        <m>r_A,r_B\gt0</m> sedemikian sehingga
+        <m>B(x,r_A)\subseteq A</m> dan <m>B(x,r_B)\subseteq B</m>. Tetapkan
+        <m>r=\min\{r_A,r_B\}\gt0</m>. Jika <m>y\in B(x,r)</m>, maka
+        <m>d(x,y)\lt r\leq r_A</m> dan
+        <m>d(x,y)\lt r\leq r_B</m>. Jadi <m>y\in A\cap B</m>. Maka
+        <m>B(x,r)\subseteq A\cap B</m>, sehingga
+        <m>x\in\Int(A\cap B)</m>. Inklusi itu benar; bersama perintah
+        sebelumnya, bahkan diperoleh
+        <m>\Int(A\cap B)=\Int(A)\cap\Int(B)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-53">
+    <title>Subhimpunan himpunan terbuka belum tentu terbuka</title>
+    <statement>
+      <p>
+        Pada perintah ke-23 latihan penutup, putuskan benar atau salah:
+        setiap subhimpunan dari suatu himpunan terbuka dalam ruang metrik
+        <m>(X,d)</m> terbuka dalam <m>X</m>.
+        <em>Rubrik.</em> Jika salah, pilih himpunan terbuka sederhana di garis
+        real dan sebuah himpunan satu titik di dalamnya; verifikasi kegagalan
+        keterbukaan himpunan satu titik tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-53-hint">
+      <p>
+        <em>Langkah 1.</em> Dalam <m>(\R,d_E)</m>, ambil
+        <m>O=(-1,1)</m> dan <m>A=\{0\}\subseteq O</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk setiap <m>r\gt0</m>, cari titik bukan nol
+        di dalam <m>B(0,r)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-53-answer">
+      <p>
+        Salah. <m>O=(-1,1)</m> terbuka dalam <m>\R</m>, tetapi subhimpunannya
+        <m>\{0\}</m> tidak terbuka dalam metrik Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-53-solution">
+      <p>
+        Dalam <m>(\R,d_E)</m>, himpunan <m>O=(-1,1)</m> terbuka dan
+        <m>A=\{0\}</m> memenuhi <m>A\subseteq O</m>. Namun untuk setiap
+        <m>r\gt0</m>, titik <m>r/2</m> memenuhi
+        <m>|r/2-0|=r/2\lt r</m>, sehingga berada dalam
+        <m>B(0,r)</m>, tetapi <m>r/2\notin\{0\}</m>. Jadi tidak ada bola
+        berpusat di <m>0</m> yang termuat dalam <m>A</m>. Maka <m>A</m>
+        tidak terbuka, dan contoh ini membantah pernyataan sumber.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-54">
+    <title>Metrik Euklides dan taksi memberi himpunan terbuka yang sama</title>
+    <statement>
+      <p>
+        Pada perintah ke-24 latihan penutup, putuskan benar atau salah:
+        <m>O\subseteq\R^2</m> terbuka terhadap metrik Euklides
+        <m>d_E</m> jika dan hanya jika terbuka terhadap metrik taksi
+        <m>d_T</m>.
+        <em>Rubrik.</em> Buktikan kedua arah dengan perbandingan
+        <m>d_E(p,q)\leq d_T(p,q)\leq\sqrt{2}\,d_E(p,q)</m> dan inklusi bola
+        yang sesuai.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-54-hint">
+      <p>
+        <em>Langkah 1.</em> Jika
+        <m>B_{d_E}(p,r)\subseteq O</m>, gunakan
+        <m>B_{d_T}(p,r)\subseteq B_{d_E}(p,r)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika
+        <m>B_{d_T}(p,r)\subseteq O</m>, gunakan
+        <m>B_{d_E}(p,r/\sqrt2)\subseteq B_{d_T}(p,r)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-54-answer">
+      <p>
+        Benar. Kedua metrik menghasilkan keluarga himpunan terbuka yang sama
+        karena setiap bola kecil untuk salah satu metrik memuat bola yang
+        sesuai untuk metrik lainnya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-54-solution">
+      <p>
+        Untuk <m>p=(x,y)</m> dan <m>q=(u,v)</m>, tuliskan
+        <m>s=|x-u|</m> dan <m>t=|y-v|</m>. Maka
+        <me>
+          d_E(p,q)=\sqrt{s^2+t^2}\leq s+t=d_T(p,q)
+          \leq\sqrt{2}\sqrt{s^2+t^2}=\sqrt{2}\,d_E(p,q).
+        </me>
+      </p>
+      <p>
+        Andaikan <m>O</m> terbuka terhadap <m>d_E</m>. Untuk
+        <m>p\in O</m>, pilih <m>r\gt0</m> dengan
+        <m>B_{d_E}(p,r)\subseteq O</m>. Ketaksamaan pertama memberi
+        <m>B_{d_T}(p,r)\subseteq B_{d_E}(p,r)</m>, jadi <m>O</m> terbuka
+        terhadap <m>d_T</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>O</m> terbuka terhadap <m>d_T</m>. Untuk
+        <m>p\in O</m>, pilih <m>r\gt0</m> dengan
+        <m>B_{d_T}(p,r)\subseteq O</m>. Jika
+        <m>d_E(p,q)\lt r/\sqrt2</m>, maka
+        <m>d_T(p,q)\leq\sqrt{2}\,d_E(p,q)\lt r</m>. Jadi
+        <m>B_{d_E}(p,r/\sqrt2)\subseteq B_{d_T}(p,r)\subseteq O</m>.
+        Dengan demikian <m>O</m> juga terbuka terhadap <m>d_E</m>, dan
+        bikondisional tersebut terbukti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-55">
+    <title>Komponen interval terbuka dalam ruang bagian</title>
+    <statement>
+      <p>
+        Pada perintah ke-25 latihan penutup, misalkan
+        <m>X=[0,1]\cup[2,3]</m> dilengkapi metrik Euklides yang dibatasi ke
+        <m>X</m>. Putuskan benar atau salah bahwa <m>[0,1]</m> merupakan
+        subhimpunan terbuka dari <m>X</m>.
+        <em>Rubrik.</em> Bola harus dihitung di dalam ruang <m>X</m>, bukan
+        di seluruh <m>\R</m>; gunakan celah antara dua interval untuk memilih
+        radius.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-55-hint">
+      <p>
+        <em>Langkah 1.</em> Ambil <m>x\in[0,1]</m> dan pertimbangkan bola
+        relatif <m>B_X(x,1)=\{y\in X\mid |y-x|\lt1\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>y\in[2,3]</m>, tunjukkan
+        <m>|y-x|\geq1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-55-answer">
+      <p>
+        Benar. Untuk setiap <m>x\in[0,1]</m>, bola relatif
+        <m>B_X(x,1)</m> tidak mencapai <m>[2,3]</m> dan karena itu termuat
+        dalam <m>[0,1]</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-55-solution">
+      <p>
+        Ambil sebarang <m>x\in[0,1]</m>. Jika <m>y\in[2,3]</m>, maka
+        <m>y-x\geq2-x\geq1</m>, sehingga <m>|y-x|\geq1</m>. Jadi tidak ada
+        titik dari komponen <m>[2,3]</m> yang berada dalam bola relatif
+        <me>
+          B_X(x,1)=\{y\in X\mid |y-x|\lt1\}.
+        </me>
+        Karena semua titik <m>X</m> yang tersisa berada dalam
+        <m>[0,1]</m>, berlaku <m>B_X(x,1)\subseteq[0,1]</m>. Setiap titik
+        <m>[0,1]</m> mempunyai bola terbuka relatif yang termuat dalam
+        <m>[0,1]</m>, sehingga <m>[0,1]</m> terbuka sebagai subhimpunan
+        <m>X</m>. Pernyataan ini tidak mengatakan bahwa <m>[0,1]</m> terbuka
+        dalam ruang induk <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch07-edition-note",
+  "id": "o003-c90-ch08-edition-note",
   "level": "1",
-  "url": "o003-c90-ch07-edition-note.html",
+  "url": "o003-c90-ch08-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat tujuh bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat delapan bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  "
 },
 {
   "id": "sec_sets_intro",
@@ -2024,6 +2024,366 @@ var ptx_lunr_docs = [
   "number": "11",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan lingkungan dari suatu titik dalam ruang metrik , maka setiap bola terbuka yang termuat dalam juga merupakan lingkungan dari .   Jika merupakan lingkungan dari suatu titik dalam ruang metrik , maka merupakan lingkungan dari setiap titiknya.   Jika dan merupakan ruang metrik dan suatu fungsi kontinu, maka merupakan lingkungan dari dalam setiap kali merupakan lingkungan dari dalam .   Jika dan merupakan ruang metrik, kontinu di , dan merupakan lingkungan dari dalam , maka merupakan lingkungan dari dalam .   Jika suatu titik dalam ruang metrik dan suatu bilangan real positif, maka bola terbuka memuat tak berhingga banyak titik dari .   Jika , , , merupakan lingkungan dari suatu titik dalam ruang metrik untuk suatu bilangan bulat positif , maka merupakan lingkungan dari .   Jika merupakan lingkungan dari suatu titik dalam ruang metrik untuk setiap dalam suatu himpunan indeks , maka merupakan lingkungan dari .  "
+},
+{
+  "id": "sec_open_sets_intro",
+  "level": "1",
+  "url": "sec_open_sets_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Perhatikan interval dalam dengan metrik Euklides. Jika , maka , sehingga setiap interval terbuka merupakan bola terbuka. Sebagai bola terbuka, interval terbuka merupakan lingkungan bagi setiap titiknya. Hal ini mendasari definisi himpunan terbuka dalam ruang metrik.  Ingat bahwa kita mendefinisikan suatu subhimpunan dari sebagai lingkungan bagi titik dalam ruang metrik jika memuat suatu bola terbuka untuk suatu . Kita telah melihat bahwa setiap bola terbuka merupakan lingkungan bagi setiap titiknya, dan kini kita akan memperluas gagasan tersebut untuk mendefinisikan himpunan terbuka dalam ruang metrik.    Suatu subhimpunan dari ruang metrik disebut himpunan terbuka himpunan terbuka dalam ruang metrik jika merupakan lingkungan bagi setiap titiknya.    Jadi, menurut definisi, setiap bola terbuka merupakan himpunan terbuka. Masih menurut definisi, himpunan terbuka merupakan lingkungan bagi setiap titiknya. Himpunan terbuka berbeda dari himpunan yang tidak terbuka. Sebagai contoh, merupakan himpunan terbuka dalam dengan metrik Euklides, tetapi bukan himpunan terbuka. Himpunan bukan himpunan terbuka karena tidak ada bola terbuka berpusat di yang seluruhnya termuat dalam . Jadi, memiliki sifat yang berbeda dari titik-titik lain dalam . Himpunan merupakan lingkungan bagi setiap titik dalam , tetapi bukan lingkungan bagi . Kita dapat memandang titik-titik dalam sebagai titik-titik yang berada di interior himpunan . Hal ini membawa kita ke definisi berikut.   titik interior dalam subhimpunan ruang metrik   Misalkan suatu subhimpunan dari ruang metrik . Titik disebut titik interior dari jika merupakan lingkungan bagi .    Seperti yang akan segera kita lihat, himpunan terbuka dapat dicirikan melalui titik-titik interior.    Tentukan apakah himpunan merupakan himpunan terbuka dalam ruang metrik . Jelaskan alasan Anda.    , , metrik Euklides, .    , , metrik Euklides, . Anggap bahwa metrik Euklides merupakan suatu metrik pada .    , adalah metrik diskret yang didefinisikan oleh dan .    Apa saja titik interior dari himpunan-himpunan berikut dalam ? Jelaskan. .   Misalkan dalam . Apa saja titik interior dari ? Jelaskan.   Misalkan himpunan bilangan rasional dalam . Apa saja titik interior dari ? Jelaskan.    "
+},
+{
+  "id": "p-841",
+  "level": "2",
+  "url": "sec_open_sets_intro.html#p-841",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "himpunan terbuka "
+},
+{
+  "id": "definition-23",
+  "level": "2",
+  "url": "sec_open_sets_intro.html#definition-23",
+  "type": "Definisi",
+  "number": "8.1",
+  "title": "",
+  "body": "  Suatu subhimpunan dari ruang metrik disebut himpunan terbuka himpunan terbuka dalam ruang metrik jika merupakan lingkungan bagi setiap titiknya.   "
+},
+{
+  "id": "definition-24",
+  "level": "2",
+  "url": "sec_open_sets_intro.html#definition-24",
+  "type": "Definisi",
+  "number": "8.2",
+  "title": "",
+  "body": " titik interior dalam subhimpunan ruang metrik   Misalkan suatu subhimpunan dari ruang metrik . Titik disebut titik interior dari jika merupakan lingkungan bagi .   "
+},
+{
+  "id": "exploration-7",
+  "level": "2",
+  "url": "sec_open_sets_intro.html#exploration-7",
+  "type": "Aktivitas Persiapan",
+  "number": "8.1",
+  "title": "",
+  "body": "  Tentukan apakah himpunan merupakan himpunan terbuka dalam ruang metrik . Jelaskan alasan Anda.    , , metrik Euklides, .    , , metrik Euklides, . Anggap bahwa metrik Euklides merupakan suatu metrik pada .    , adalah metrik diskret yang didefinisikan oleh dan .    Apa saja titik interior dari himpunan-himpunan berikut dalam ? Jelaskan. .   Misalkan dalam . Apa saja titik interior dari ? Jelaskan.   Misalkan himpunan bilangan rasional dalam . Apa saja titik interior dari ? Jelaskan.   "
+},
+{
+  "id": "sec_open_sets",
+  "level": "1",
+  "url": "sec_open_sets.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Himpunan Terbuka",
+  "body": " Himpunan Terbuka  Himpunan terbuka sangat penting dalam topologi. Bahkan, nanti kita akan melihat bahwa setiap ruang topologis sepenuhnya ditentukan oleh himpunan-himpunan terbukanya. Ingat bahwa bola terbuka merupakan himpunan terbuka. Ada subhimpunan lain yang terdapat dalam setiap ruang metrik, dan kita dapat menanyakan apakah subhimpunan tersebut terbuka atau tidak.    Misalkan suatu ruang metrik.    Apakah merupakan himpunan terbuka dalam ? Jelaskan.    Apakah merupakan himpunan terbuka dalam ? Jelaskan.    Kita telah mendefinisikan bola terbuka, dan bola terbuka merupakan contoh utama himpunan terbuka. Bahkan, seperti yang ditunjukkan oleh teorema berikut, bola-bola terbuka menentukan himpunan-himpunan terbuka.    Misalkan suatu ruang metrik. Suatu subhimpunan dari terbuka jika dan hanya jika merupakan gabungan bola-bola terbuka.    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Untuk membuktikan pernyataan bikondisional ini, pertama-tama kita mengasumsikan bahwa merupakan himpunan terbuka dan menunjukkan bahwa merupakan gabungan bola-bola terbuka. Misalkan . Karena terbuka, terdapat sedemikian sehingga . Kita akan menunjukkan bahwa .  Berdasarkan cara kita memilih , untuk setiap . Jadi, . Untuk inklusi sebaliknya, misalkan . Kemudian , sehingga . Dengan demikian, . Kita menyimpulkan bahwa jika merupakan himpunan terbuka, maka merupakan gabungan bola-bola terbuka.  Arah sebaliknya akan Anda buktikan dalam aktivitas berikut.      Misalkan suatu ruang metrik. Untuk membuktikan implikasi yang tersisa dari , asumsikan bahwa suatu subhimpunan dari merupakan gabungan bola-bola terbuka.    Apa yang perlu kita tunjukkan untuk membuktikan bahwa merupakan himpunan terbuka?    Misalkan . Mengapa terdapat bola terbuka yang termuat dalam dan memuat ?    Lengkapi bukti untuk menunjukkan bahwa merupakan himpunan terbuka.     menyatakan bahwa setiap himpunan terbuka tersusun dari bola-bola terbuka, sehingga bola-bola terbuka menghasilkan semua himpunan terbuka, seperti halnya basis suatu ruang vektor dalam aljabar linear menghasilkan semua unsur ruang vektor tersebut. Karena itu, kita menyebut himpunan semua bola terbuka dalam suatu ruang metrik sebagai basis bagi himpunan-himpunan terbuka ruang metrik tersebut. Kita akan membahas gagasan ini secara lebih terperinci dalam bagian selanjutnya.  "
+},
+{
+  "id": "activity-30",
+  "level": "2",
+  "url": "sec_open_sets.html#activity-30",
+  "type": "Kegiatan",
+  "number": "8.2",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik.    Apakah merupakan himpunan terbuka dalam ? Jelaskan.    Apakah merupakan himpunan terbuka dalam ? Jelaskan.   "
+},
+{
+  "id": "thm_OS_1",
+  "level": "2",
+  "url": "sec_open_sets.html#thm_OS_1",
+  "type": "Teorema",
+  "number": "8.3",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik. Suatu subhimpunan dari terbuka jika dan hanya jika merupakan gabungan bola-bola terbuka.    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Untuk membuktikan pernyataan bikondisional ini, pertama-tama kita mengasumsikan bahwa merupakan himpunan terbuka dan menunjukkan bahwa merupakan gabungan bola-bola terbuka. Misalkan . Karena terbuka, terdapat sedemikian sehingga . Kita akan menunjukkan bahwa .  Berdasarkan cara kita memilih , untuk setiap . Jadi, . Untuk inklusi sebaliknya, misalkan . Kemudian , sehingga . Dengan demikian, . Kita menyimpulkan bahwa jika merupakan himpunan terbuka, maka merupakan gabungan bola-bola terbuka.  Arah sebaliknya akan Anda buktikan dalam aktivitas berikut.   "
+},
+{
+  "id": "activity-31",
+  "level": "2",
+  "url": "sec_open_sets.html#activity-31",
+  "type": "Kegiatan",
+  "number": "8.3",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik. Untuk membuktikan implikasi yang tersisa dari , asumsikan bahwa suatu subhimpunan dari merupakan gabungan bola-bola terbuka.    Apa yang perlu kita tunjukkan untuk membuktikan bahwa merupakan himpunan terbuka?    Misalkan . Mengapa terdapat bola terbuka yang termuat dalam dan memuat ?    Lengkapi bukti untuk menunjukkan bahwa merupakan himpunan terbuka.   "
+},
+{
+  "id": "p-866",
+  "level": "2",
+  "url": "sec_open_sets.html#p-866",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "basis "
+},
+{
+  "id": "sec_union_int_open_sets",
+  "level": "1",
+  "url": "sec_union_int_open_sets.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Gabungan dan Irisan Himpunan Terbuka",
+  "body": " Gabungan dan Irisan Himpunan Terbuka  Setelah mendefinisikan himpunan terbuka, kita mungkin bertanya-tanya apa yang terjadi jika kita mengambil gabungan atau irisan dari himpunan-himpunan terbuka.    Misalkan dan dalam .   Apakah terbuka? Jelaskan.   Apakah terbuka? Jelaskan.    Misalkan dengan metrik Euklides. Misalkan untuk setiap .   Tentukan . Bukti tidak diperlukan.   Apakah terbuka dalam ? Jelaskan.   Tentukan . Bukti tidak diperlukan.   Apakah terbuka dalam ? Jelaskan.     menunjukkan bahwa irisan sebarang dari himpunan-himpunan terbuka belum tentu terbuka. Namun, ada beberapa hal yang dapat kita nyatakan tentang gabungan dan irisan himpunan-himpunan terbuka.    Misalkan suatu ruang metrik.   Gabungan sebarang dari himpunan-himpunan terbuka dalam merupakan himpunan terbuka dalam .    Sebarang irisan berhingga dari himpunan-himpunan terbuka dalam merupakan himpunan terbuka dalam .       Misalkan suatu ruang metrik. Untuk membuktikan bagian 1, asumsikan bahwa merupakan koleksi himpunan terbuka dalam , dengan berkisar pada suatu himpunan indeks , dan misalkan . Berdasarkan , kita mengetahui bahwa merupakan gabungan bola-bola terbuka untuk setiap . Menggabungkan semua bola terbuka tersebut menunjukkan bahwa merupakan gabungan bola-bola terbuka dan oleh karena itu merupakan himpunan terbuka berdasarkan .  Untuk bagian 2, asumsikan bahwa , , , merupakan himpunan-himpunan terbuka dalam untuk suatu . Untuk menunjukkan bahwa merupakan himpunan terbuka, kita akan menunjukkan bahwa merupakan lingkungan bagi setiap titiknya. Misalkan . Maka untuk setiap . Ambil di antara 1 dan . Karena terbuka, kita mengetahui bahwa merupakan lingkungan bagi setiap titiknya. Jadi, terdapat sedemikian sehingga . Karena nilai hanya berhingga banyaknya, misalkan . Kemudian untuk setiap , sehingga . Oleh karena itu, merupakan lingkungan bagi setiap titiknya dan merupakan himpunan terbuka.    "
+},
+{
+  "id": "act_Open_union",
+  "level": "2",
+  "url": "sec_union_int_open_sets.html#act_Open_union",
+  "type": "Kegiatan",
+  "number": "8.4",
+  "title": "",
+  "body": "  Misalkan dan dalam .   Apakah terbuka? Jelaskan.   Apakah terbuka? Jelaskan.    Misalkan dengan metrik Euklides. Misalkan untuk setiap .   Tentukan . Bukti tidak diperlukan.   Apakah terbuka dalam ? Jelaskan.   Tentukan . Bukti tidak diperlukan.   Apakah terbuka dalam ? Jelaskan.   "
+},
+{
+  "id": "theorem-15",
+  "level": "2",
+  "url": "sec_union_int_open_sets.html#theorem-15",
+  "type": "Teorema",
+  "number": "8.4",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik.   Gabungan sebarang dari himpunan-himpunan terbuka dalam merupakan himpunan terbuka dalam .    Sebarang irisan berhingga dari himpunan-himpunan terbuka dalam merupakan himpunan terbuka dalam .       Misalkan suatu ruang metrik. Untuk membuktikan bagian 1, asumsikan bahwa merupakan koleksi himpunan terbuka dalam , dengan berkisar pada suatu himpunan indeks , dan misalkan . Berdasarkan , kita mengetahui bahwa merupakan gabungan bola-bola terbuka untuk setiap . Menggabungkan semua bola terbuka tersebut menunjukkan bahwa merupakan gabungan bola-bola terbuka dan oleh karena itu merupakan himpunan terbuka berdasarkan .  Untuk bagian 2, asumsikan bahwa , , , merupakan himpunan-himpunan terbuka dalam untuk suatu . Untuk menunjukkan bahwa merupakan himpunan terbuka, kita akan menunjukkan bahwa merupakan lingkungan bagi setiap titiknya. Misalkan . Maka untuk setiap . Ambil di antara 1 dan . Karena terbuka, kita mengetahui bahwa merupakan lingkungan bagi setiap titiknya. Jadi, terdapat sedemikian sehingga . Karena nilai hanya berhingga banyaknya, misalkan . Kemudian untuk setiap , sehingga . Oleh karena itu, merupakan lingkungan bagi setiap titiknya dan merupakan himpunan terbuka.   "
+},
+{
+  "id": "sec_cont_open_sets",
+  "level": "1",
+  "url": "sec_cont_open_sets.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Kekontinuan dan Himpunan Terbuka",
+  "body": " Kekontinuan dan Himpunan Terbuka  Ingatlah bahwa kita telah menunjukkan bahwa suatu fungsi dari ruang metrik ke ruang metrik kontinu jika dan hanya jika merupakan lingkungan bagi setiap kali merupakan lingkungan bagi dalam . Kini kita dapat memberikan pencirian lain bagi fungsi kontinu dalam kaitannya dengan himpunan terbuka. Pencirian inilah yang akan menjadi definisi kekontinuan kita dalam ruang topologis.    Misalkan suatu fungsi dari ruang metrik ke ruang metrik . Maka kontinu jika dan hanya jika merupakan himpunan terbuka dalam setiap kali merupakan himpunan terbuka dalam .    Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Untuk membuktikan pernyataan bikondisional ini, kita perlu membuktikan kedua implikasinya. Pertama, asumsikan bahwa merupakan fungsi kontinu. Kita harus menunjukkan bahwa merupakan himpunan terbuka dalam untuk setiap himpunan terbuka dalam . Jadi, misalkan suatu himpunan terbuka dalam . Untuk menunjukkan bahwa terbuka dalam , kita akan menunjukkan bahwa merupakan lingkungan bagi setiap titiknya. Misalkan . Maka . Karena merupakan himpunan terbuka, terdapat bola terbuka di sekitar yang seluruhnya termuat dalam . Karena merupakan lingkungan bagi , kita mengetahui bahwa merupakan lingkungan bagi . Jadi, terdapat sedemikian sehingga . Selanjutnya, , sehingga . Kita menyimpulkan bahwa merupakan lingkungan bagi setiap titiknya dan karena itu merupakan himpunan terbuka dalam .  Pembuktian implikasi sebaliknya diserahkan kepada aktivitas berikut.      Misalkan suatu fungsi dari ruang metrik ke ruang metrik .    Asumsi apa yang kita buat untuk membuktikan implikasi yang tersisa dari ? Apa yang perlu kita tunjukkan untuk membuktikan kesimpulannya?    Misalkan , dan misalkan suatu lingkungan bagi dalam . Mengapa terdapat sedemikian sehingga ?    Apa yang dinyatakan oleh hipotesis kita mengenai dalam ?    Mengapa merupakan lingkungan bagi ? Bagaimana hal ini menunjukkan bahwa merupakan fungsi kontinu?    Ingatlah bahwa setiap himpunan terbuka merupakan gabungan bola-bola terbuka. Jadi, kita dapat menyederhanakan pembuktian kekontinuan fungsi dalam ruang metrik dengan hanya menggunakan bola terbuka alih-alih himpunan terbuka sebarang. Aktivitas berikut memberikan perinciannya.    Dalam aktivitas ini, kita membuktikan akibat berikut dari .    Suatu fungsi dari ruang metrik ke ruang metrik kontinu jika dan hanya jika terbuka dalam setiap kali merupakan bola terbuka dalam .    Untuk menyiapkan pembuktiannya, misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi.    Karena akibat ini merupakan pernyataan bikondisional, kita perlu membuktikan kedua implikasinya. Pertama, asumsikan bahwa kontinu. Gunakan untuk menjelaskan mengapa terbuka dalam setiap kali merupakan bola terbuka dalam .    Untuk implikasi yang tersisa, asumsikan bahwa merupakan himpunan terbuka dalam untuk setiap bola terbuka dalam . Untuk menunjukkan bahwa merupakan fungsi kontinu, kita akan menggunakan dan menunjukkan bahwa terbuka dalam setiap kali merupakan himpunan terbuka dalam . Jadi, misalkan suatu himpunan terbuka dalam .   Apa yang dinyatakan oleh mengenai ?   Ingatlah bahwa menyatakan bahwa jika merupakan koleksi subhimpunan dari untuk dalam suatu himpunan indeks , maka . Gunakan untuk menunjukkan bahwa terbuka dalam dan simpulkan bahwa merupakan fungsi kontinu.      Sebagai contoh penerapan , kita membuktikan bahwa fungsi kuadrat dari ke merupakan fungsi kontinu. Misalkan dengan metrik Euklides , dan misalkan didefinisikan oleh . Kita akan menunjukkan bahwa merupakan fungsi kontinu dengan memverifikasi bahwa terbuka dalam untuk setiap bola terbuka dalam . Misalkan suatu bola terbuka dalam . Misalkan . Kita meninjau beberapa kasus.   Misalkan . Maka dan terbuka dalam .    Misalkan . Maka dan terbuka dalam .    Kasus terakhir adalah . Maka dan terbuka dalam .     Karena prapeta setiap bola terbuka merupakan himpunan terbuka, kita menyimpulkan bahwa merupakan fungsi kontinu.    "
+},
+{
+  "id": "thm_Open_continuity",
+  "level": "2",
+  "url": "sec_cont_open_sets.html#thm_Open_continuity",
+  "type": "Teorema",
+  "number": "8.5",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang metrik ke ruang metrik . Maka kontinu jika dan hanya jika merupakan himpunan terbuka dalam setiap kali merupakan himpunan terbuka dalam .    Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Untuk membuktikan pernyataan bikondisional ini, kita perlu membuktikan kedua implikasinya. Pertama, asumsikan bahwa merupakan fungsi kontinu. Kita harus menunjukkan bahwa merupakan himpunan terbuka dalam untuk setiap himpunan terbuka dalam . Jadi, misalkan suatu himpunan terbuka dalam . Untuk menunjukkan bahwa terbuka dalam , kita akan menunjukkan bahwa merupakan lingkungan bagi setiap titiknya. Misalkan . Maka . Karena merupakan himpunan terbuka, terdapat bola terbuka di sekitar yang seluruhnya termuat dalam . Karena merupakan lingkungan bagi , kita mengetahui bahwa merupakan lingkungan bagi . Jadi, terdapat sedemikian sehingga . Selanjutnya, , sehingga . Kita menyimpulkan bahwa merupakan lingkungan bagi setiap titiknya dan karena itu merupakan himpunan terbuka dalam .  Pembuktian implikasi sebaliknya diserahkan kepada aktivitas berikut.   "
+},
+{
+  "id": "activity-33",
+  "level": "2",
+  "url": "sec_cont_open_sets.html#activity-33",
+  "type": "Kegiatan",
+  "number": "8.5",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang metrik ke ruang metrik .    Asumsi apa yang kita buat untuk membuktikan implikasi yang tersisa dari ? Apa yang perlu kita tunjukkan untuk membuktikan kesimpulannya?    Misalkan , dan misalkan suatu lingkungan bagi dalam . Mengapa terdapat sedemikian sehingga ?    Apa yang dinyatakan oleh hipotesis kita mengenai dalam ?    Mengapa merupakan lingkungan bagi ? Bagaimana hal ini menunjukkan bahwa merupakan fungsi kontinu?   "
+},
+{
+  "id": "act_continuity_balls",
+  "level": "2",
+  "url": "sec_cont_open_sets.html#act_continuity_balls",
+  "type": "Kegiatan",
+  "number": "8.6",
+  "title": "",
+  "body": "  Dalam aktivitas ini, kita membuktikan akibat berikut dari .    Suatu fungsi dari ruang metrik ke ruang metrik kontinu jika dan hanya jika terbuka dalam setiap kali merupakan bola terbuka dalam .    Untuk menyiapkan pembuktiannya, misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi.    Karena akibat ini merupakan pernyataan bikondisional, kita perlu membuktikan kedua implikasinya. Pertama, asumsikan bahwa kontinu. Gunakan untuk menjelaskan mengapa terbuka dalam setiap kali merupakan bola terbuka dalam .    Untuk implikasi yang tersisa, asumsikan bahwa merupakan himpunan terbuka dalam untuk setiap bola terbuka dalam . Untuk menunjukkan bahwa merupakan fungsi kontinu, kita akan menggunakan dan menunjukkan bahwa terbuka dalam setiap kali merupakan himpunan terbuka dalam . Jadi, misalkan suatu himpunan terbuka dalam .   Apa yang dinyatakan oleh mengenai ?   Ingatlah bahwa menyatakan bahwa jika merupakan koleksi subhimpunan dari untuk dalam suatu himpunan indeks , maka . Gunakan untuk menunjukkan bahwa terbuka dalam dan simpulkan bahwa merupakan fungsi kontinu.   "
+},
+{
+  "id": "exp_linear_continuous",
+  "level": "2",
+  "url": "sec_cont_open_sets.html#exp_linear_continuous",
+  "type": "Contoh",
+  "number": "8.7",
+  "title": "",
+  "body": "  Sebagai contoh penerapan , kita membuktikan bahwa fungsi kuadrat dari ke merupakan fungsi kontinu. Misalkan dengan metrik Euklides , dan misalkan didefinisikan oleh . Kita akan menunjukkan bahwa merupakan fungsi kontinu dengan memverifikasi bahwa terbuka dalam untuk setiap bola terbuka dalam . Misalkan suatu bola terbuka dalam . Misalkan . Kita meninjau beberapa kasus.   Misalkan . Maka dan terbuka dalam .    Misalkan . Maka dan terbuka dalam .    Kasus terakhir adalah . Maka dan terbuka dalam .     Karena prapeta setiap bola terbuka merupakan himpunan terbuka, kita menyimpulkan bahwa merupakan fungsi kontinu.   "
+},
+{
+  "id": "sec_interior_set",
+  "level": "1",
+  "url": "sec_interior_set.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Interior Suatu Himpunan",
+  "body": " Interior Suatu Himpunan  Himpunan terbuka dapat dicirikan melalui titik-titik interiornya. Menurut definisi, setiap himpunan terbuka merupakan lingkungan bagi setiap titiknya, sehingga setiap titik dari suatu himpunan terbuka merupakan titik interior dari . Sebaliknya, jika setiap titik dari suatu himpunan merupakan titik interior dari himpunan tersebut, maka merupakan lingkungan bagi setiap titiknya dan bersifat terbuka. Argumen ini dirangkum dalam teorema berikut.    Misalkan suatu ruang metrik. Suatu subhimpunan dari merupakan himpunan terbuka jika dan hanya jika setiap titik dari merupakan titik interior dari .    Kumpulan titik-titik interior suatu himpunan membentuk subhimpunan dari himpunan tersebut, yang disebut interior himpunan itu.    Interior interior suatu himpunan dari suatu subhimpunan dari ruang metrik adalah himpunan .      Tentukan untuk setiap himpunan berikut.     dalam      dalam      dalam     Kita mungkin menduga bahwa interior suatu himpunan merupakan himpunan terbuka. Hal ini benar, tetapi kita bahkan dapat menyatakan lebih jauh. Seperti yang akan ditunjukkan oleh , jika merupakan subhimpunan dari ruang metrik , tidak hanya merupakan himpunan terbuka, tetapi setiap himpunan terbuka yang termuat dalam juga merupakan subhimpunan dari . Jadi, dalam arti relasi inklusi, merupakan subhimpunan terbuka terbesar dari yang termuat dalam .    Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari . Maka interior merupakan subhimpunan terbuka terbesar dari yang termuat dalam .    Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari . Kita perlu membuktikan bahwa merupakan himpunan terbuka dalam , dan bahwa merupakan subhimpunan terbuka terbesar dari yang termuat dalam . Pertama, kita menunjukkan bahwa merupakan himpunan terbuka. Misalkan . Maka merupakan titik interior dari , sehingga merupakan lingkungan bagi . Hal ini berarti bahwa terdapat sedemikian sehingga . Namun, merupakan lingkungan bagi setiap titiknya, sehingga setiap titik dalam merupakan titik interior dari . Dengan demikian, . Jadi, merupakan lingkungan bagi setiap titiknya dan, akibatnya, merupakan himpunan terbuka.  Pembuktian bahwa merupakan subhimpunan terbuka terbesar dari yang termuat dalam diserahkan kepada aktivitas berikut.      Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan terbuka terbesar dari yang termuat dalam ?    Misalkan suatu subhimpunan terbuka dari yang termuat dalam , dan misalkan . Apa yang dapat kita simpulkan dari fakta bahwa terbuka?    Lengkapi pembuktian bahwa .    Salah satu akibat dari adalah sebagai berikut.    Suatu subhimpunan dari ruang metrik merupakan himpunan terbuka jika dan hanya jika .    Pembuktiannya diserahkan kepada .  "
+},
+{
+  "id": "theorem-17",
+  "level": "2",
+  "url": "sec_interior_set.html#theorem-17",
+  "type": "Teorema",
+  "number": "8.8",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik. Suatu subhimpunan dari merupakan himpunan terbuka jika dan hanya jika setiap titik dari merupakan titik interior dari .   "
+},
+{
+  "id": "p-906",
+  "level": "2",
+  "url": "sec_interior_set.html#p-906",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "interior "
+},
+{
+  "id": "definition-25",
+  "level": "2",
+  "url": "sec_interior_set.html#definition-25",
+  "type": "Definisi",
+  "number": "8.9",
+  "title": "",
+  "body": "  Interior interior suatu himpunan dari suatu subhimpunan dari ruang metrik adalah himpunan .   "
+},
+{
+  "id": "activity-35",
+  "level": "2",
+  "url": "sec_interior_set.html#activity-35",
+  "type": "Kegiatan",
+  "number": "8.7",
+  "title": "",
+  "body": "  Tentukan untuk setiap himpunan berikut.     dalam      dalam      dalam    "
+},
+{
+  "id": "thm_Interior_MS",
+  "level": "2",
+  "url": "sec_interior_set.html#thm_Interior_MS",
+  "type": "Teorema",
+  "number": "8.10",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari . Maka interior merupakan subhimpunan terbuka terbesar dari yang termuat dalam .    Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari . Kita perlu membuktikan bahwa merupakan himpunan terbuka dalam , dan bahwa merupakan subhimpunan terbuka terbesar dari yang termuat dalam . Pertama, kita menunjukkan bahwa merupakan himpunan terbuka. Misalkan . Maka merupakan titik interior dari , sehingga merupakan lingkungan bagi . Hal ini berarti bahwa terdapat sedemikian sehingga . Namun, merupakan lingkungan bagi setiap titiknya, sehingga setiap titik dalam merupakan titik interior dari . Dengan demikian, . Jadi, merupakan lingkungan bagi setiap titiknya dan, akibatnya, merupakan himpunan terbuka.  Pembuktian bahwa merupakan subhimpunan terbuka terbesar dari yang termuat dalam diserahkan kepada aktivitas berikut.   "
+},
+{
+  "id": "activity-36",
+  "level": "2",
+  "url": "sec_interior_set.html#activity-36",
+  "type": "Kegiatan",
+  "number": "8.8",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan terbuka terbesar dari yang termuat dalam ?    Misalkan suatu subhimpunan terbuka dari yang termuat dalam , dan misalkan . Apa yang dapat kita simpulkan dari fakta bahwa terbuka?    Lengkapi pembuktian bahwa .   "
+},
+{
+  "id": "corollary-4",
+  "level": "2",
+  "url": "sec_interior_set.html#corollary-4",
+  "type": "Corollary",
+  "number": "8.11",
+  "title": "",
+  "body": "  Suatu subhimpunan dari ruang metrik merupakan himpunan terbuka jika dan hanya jika .   "
+},
+{
+  "id": "sec_open_sets_summ",
+  "level": "1",
+  "url": "sec_open_sets_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Rangkuman",
+  "body": " Rangkuman  Gagasan penting yang telah kita bahas dalam bagian ini mencakup hal-hal berikut.   Suatu subhimpunan dari ruang metrik merupakan himpunan terbuka jika merupakan lingkungan bagi setiap titiknya. Dengan kata lain, terbuka jika merupakan gabungan bola-bola terbuka.    Suatu titik dalam subhimpunan dari ruang metrik merupakan titik interior dari jika merupakan lingkungan bagi . Suatu himpunan merupakan himpunan terbuka jika setiap titik dari merupakan titik interior dari .    Interior suatu himpunan adalah himpunan semua titik interior dari himpunan tersebut. Interior suatu himpunan dalam ruang metrik merupakan subhimpunan terbuka terbesar dari yang termuat dalam . Suatu himpunan bersifat terbuka jika dan hanya jika himpunan tersebut sama dengan interiornya.    Suatu fungsi dari ruang metrik ke ruang metrik kontinu jika terbuka dalam setiap kali terbuka dalam .    Gabungan sebarang koleksi himpunan terbuka bersifat terbuka, sedangkan irisan sebarang koleksi berhingga himpunan terbuka juga bersifat terbuka.     "
+},
+{
+  "id": "sec_open_sets_exer",
+  "level": "1",
+  "url": "sec_open_sets_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Misalkan metrik diskret. Misalkan suatu ruang metrik.   Tunjukkan bahwa setiap subhimpunan dari terbuka.   Misalkan suatu ruang metrik. Buktikan bahwa setiap fungsi kontinu.   Apakah setiap fungsi juga kontinu? Jika ya, buktikan jawaban Anda. Jika tidak, carilah sebuah contoh tandingan.    Buktikan bahwa suatu subhimpunan dari ruang metrik merupakan himpunan terbuka jika dan hanya jika .    Misalkan dan subhimpunan dari ruang metrik dengan . Buktikan atau sangkal pernyataan-pernyataan berikut.            Misalkan dengan . Tunjukkan bahwa himpunan dalam bukan himpunan terbuka.    Misalkan .   Apakah merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.   Apakah merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.   Apakah merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.    Misalkan suatu himpunan berhingga yang terdiri atas titik-titik dalam . Apakah himpunan merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.    Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika untuk setiap subhimpunan dari .    Tinjau ruang metrik , dengan didefinisikan oleh (Fakta bahwa merupakan metrik dibahas dalam .) Deskripsikan bola terbuka dalam jika .    Misalkan suatu ruang metrik dan misalkan serta titik-titik berbeda dalam . Buktikan bahwa terdapat himpunan-himpunan terbuka yang memuat dan yang memuat sedemikian sehingga . (Hal ini menunjukkan bahwa kita dapat memisahkan titik-titik dalam ruang metrik dengan himpunan terbuka. Sifat-sifat pemisahan penting dalam topologi.)    Misalkan dengan metrik Euklides , dan misalkan dengan metrik yang didefinisikan oleh (fakta bahwa merupakan metrik dibahas dalam ). Misalkan dan bilangan-bilangan real, dan misalkan didefinisikan oleh . Dengan kata lain, merupakan fungsi linear sebarang dari ke .   Deskripsikan bola-bola terbuka dalam . Artinya, jika suatu bilangan real dan suatu bilangan real positif, apa tepatnya himpunan titik yang membentuk dalam ?   Apakah dari ke kontinu untuk sebarang bilangan real dan ? Buktikan jawaban Anda.   Apakah dari ke kontinu untuk sebarang bilangan real dan ? Buktikan jawaban Anda.    Misalkan didefinisikan oleh . Asumsikan bahwa kita menggunakan metrik maksimum pada dan metrik Euklides pada . Gunakan Teorema untuk menentukan apakah merupakan fungsi kontinu. Buktikan dugaan Anda.    Untuk setiap pernyataan berikut, jawablah benar jika pernyataannya selalu benar. Jika pernyataannya hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Setiap subhimpunan dari suatu himpunan terbuka dalam ruang metrik terbuka dalam .   Suatu subhimpunan dari terbuka terhadap metrik Euklides jika dan hanya jika terbuka terhadap metrik taksi .   Misalkan X = dilengkapi dengan metrik Euklides. Maka merupakan subhimpunan terbuka dari .   "
+},
+{
+  "id": "exercise-80",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-80",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan metrik diskret. Misalkan suatu ruang metrik.   Tunjukkan bahwa setiap subhimpunan dari terbuka.   Misalkan suatu ruang metrik. Buktikan bahwa setiap fungsi kontinu.   Apakah setiap fungsi juga kontinu? Jika ya, buktikan jawaban Anda. Jika tidak, carilah sebuah contoh tandingan.  "
+},
+{
+  "id": "ex_O_int_O",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#ex_O_int_O",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Buktikan bahwa suatu subhimpunan dari ruang metrik merupakan himpunan terbuka jika dan hanya jika .  "
+},
+{
+  "id": "exercise-82",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-82",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan dan subhimpunan dari ruang metrik dengan . Buktikan atau sangkal pernyataan-pernyataan berikut.          "
+},
+{
+  "id": "exercise-83",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-83",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan dengan . Tunjukkan bahwa himpunan dalam bukan himpunan terbuka.  "
+},
+{
+  "id": "exercise-84",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-84",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Misalkan .   Apakah merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.   Apakah merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.   Apakah merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-85",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-85",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Misalkan suatu himpunan berhingga yang terdiri atas titik-titik dalam . Apakah himpunan merupakan himpunan terbuka dalam ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-86",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-86",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika untuk setiap subhimpunan dari .  "
+},
+{
+  "id": "exercise-87",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-87",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Tinjau ruang metrik , dengan didefinisikan oleh (Fakta bahwa merupakan metrik dibahas dalam .) Deskripsikan bola terbuka dalam jika .  "
+},
+{
+  "id": "exercise-88",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-88",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan suatu ruang metrik dan misalkan serta titik-titik berbeda dalam . Buktikan bahwa terdapat himpunan-himpunan terbuka yang memuat dan yang memuat sedemikian sehingga . (Hal ini menunjukkan bahwa kita dapat memisahkan titik-titik dalam ruang metrik dengan himpunan terbuka. Sifat-sifat pemisahan penting dalam topologi.)  "
+},
+{
+  "id": "ex_linear_continuous2",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#ex_linear_continuous2",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Misalkan dengan metrik Euklides , dan misalkan dengan metrik yang didefinisikan oleh (fakta bahwa merupakan metrik dibahas dalam ). Misalkan dan bilangan-bilangan real, dan misalkan didefinisikan oleh . Dengan kata lain, merupakan fungsi linear sebarang dari ke .   Deskripsikan bola-bola terbuka dalam . Artinya, jika suatu bilangan real dan suatu bilangan real positif, apa tepatnya himpunan titik yang membentuk dalam ?   Apakah dari ke kontinu untuk sebarang bilangan real dan ? Buktikan jawaban Anda.   Apakah dari ke kontinu untuk sebarang bilangan real dan ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-90",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-90",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Misalkan didefinisikan oleh . Asumsikan bahwa kita menggunakan metrik maksimum pada dan metrik Euklides pada . Gunakan Teorema untuk menentukan apakah merupakan fungsi kontinu. Buktikan dugaan Anda.  "
+},
+{
+  "id": "exercise-91",
+  "level": "2",
+  "url": "sec_open_sets_exer.html#exercise-91",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataannya selalu benar. Jika pernyataannya hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Setiap subhimpunan dari suatu himpunan terbuka dalam ruang metrik terbuka dalam .   Suatu subhimpunan dari terbuka terhadap metrik Euklides jika dan hanya jika terbuka terhadap metrik taksi .   Misalkan X = dilengkapi dengan metrik Euklides. Maka merupakan subhimpunan terbuka dari .  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -4436,6 +4796,591 @@ var ptx_lunr_docs = [
   "number": "G.46",
   "title": "Arah prapeta dan citra lingkungan.",
   "body": "Arah prapeta dan citra lingkungan  Misalkan kontinu di . Buktikan bahwa prapeta setiap lingkungan bagi merupakan lingkungan bagi . Sangkal pernyataan serupa bahwa citra setiap lingkungan bagi harus merupakan lingkungan bagi . Terakhir, nyatakan satu hipotesis tambahan yang cukup agar pernyataan tentang citra menjadi benar.   Gunakan pencirian kekontinuan dengan lingkungan untuk prapeta. Untuk citra, uji fungsi konstan dari ke . Hipotesis tambahan yang berguna ialah bahwa merupakan pemetaan terbuka: citra setiap himpunan terbuka harus terbuka.   Pernyataan prapeta benar menurut pencirian kekontinuan. Pernyataan citra salah: fungsi konstan , , memetakan setiap lingkungan ke singleton , yang bukan lingkungan bagi dalam metrik Euklides. Jika kontinu dan juga merupakan pemetaan terbuka, maka citra setiap lingkungan bagi merupakan lingkungan bagi .   Karena kontinu di , teorema lingkungan menyatakan langsung bahwa untuk setiap lingkungan bagi , himpunan merupakan lingkungan bagi . Arah prapeta ini sesuai dengan urutan kuantor dalam definisi kekontinuan.  Untuk arah citra, ambil fungsi konstan dengan . Fungsi ini kontinu. Jika , maka merupakan lingkungan bagi , tetapi . Singleton tersebut tidak memuat bola Euklides berjari-jari positif di sekitar , jadi bukan lingkungan.  Sekarang andaikan, sebagai tambahan, bahwa merupakan pemetaan terbuka. Jika lingkungan bagi , pilih dengan . Himpunan terbuka, sehingga terbuka karena pemetaan terbuka. Himpunan itu memuat dan termuat dalam . Jadi memuat suatu lingkungan terbuka bagi dan karenanya merupakan lingkungan bagi .  "
+},
+{
+  "id": "o003-c90-ch08-source-guides",
+  "level": "1",
+  "url": "o003-c90-ch08-source-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan kegiatan sumber",
+  "body": " Panduan kegiatan sumber  Tiga puluh panduan berikut mendampingi seluruh tugas daun dalam eksplorasi dan aktivitas Bab 8, sesuai urutan sumbernya. Kerjakan dahulu pertanyaan pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap pernyataan menunjukkan letak tugas sumber dan memparafrasakan sasaran kerjanya. Teks panduan asli ini tersedia di bawah lisensi Creative Commons Atribusi 4.0 Internasional (CC BY 4.0).  Keterbukaan interval setengah tertutup dalam garis  Pada kasus pertama eksplorasi di bagian Pendahuluan, putuskan apakah terbuka ketika ruang sekitarnya adalah , lalu pertanggungjawabkan keputusan itu dari definisi. Rubrik: nyatakan titik penguji yang menentukan dan jelaskan mengapa tidak ada bola berpusat di titik itu yang memenuhi syarat.   Tahap 1: uji titik ujung . Tahap 2: untuk jari-jari sebarang, cari titik negatif di .   Tidak. Himpunan tidak terbuka dalam karena bukan lingkungan bagi titik anggotanya .   Titik termasuk dalam . Ambil sembarang . Titik memenuhi , sehingga , tetapi . Jadi tidak ada dengan . Dengan demikian bukan lingkungan bagi setiap titiknya dan bukan himpunan terbuka. Bukti lengkap harus memuat titik penguji, kuantor sebarang, dan saksi yang keluar dari .   Peran ruang sekitar pada keterbukaan  Pada kasus kedua eksplorasi Pendahuluan, periksa himpunan yang sama, , tetapi sekarang sebagai subhimpunan dari dengan metrik Euklides yang dibatasi ke . Rubrik: gunakan bola yang anggotanya wajib berada di , dan berikan jari-jari positif untuk setiap .   Tahap 1: titik negatif bukan anggota ruang . Tahap 2: untuk , bandingkan jarak dengan jarak ke ujung kanan .   Ya. Himpunan terbuka relatif terhadap ruang metrik .   Ambil sembarang dan tetapkan . Jika , maka dan . Akibatnya ; sementara itu, keanggotaan memberi . Jadi , sehingga . Hal ini berlaku untuk setiap , termasuk . Maka terbuka dalam . Rubrik lengkap menuntut jari-jari positif, pemakaian ruang relatif, dan inklusi bola.   Subhimpunan dalam metrik diskret  Pada kasus ketiga eksplorasi Pendahuluan, tentukan keterbukaan di ruang dengan metrik diskret. Rubrik: pilih satu jari-jari yang bekerja di setiap titik dan hitung bola yang dihasilkannya.   Tahap 1: jarak antara dua titik berbeda adalah . Tahap 2: pilih jari-jari yang lebih kecil daripada .   Ya. Himpunan terbuka dalam ruang bermetrik diskret tersebut.   Untuk setiap , ambil . Dalam metrik diskret, , sedangkan untuk setiap berlaku , yang tidak lebih kecil dari . Jadi . Karena setiap titik mempunyai bola demikian, merupakan lingkungan bagi setiap titiknya dan bersifat terbuka. Argumen yang sama sebenarnya menunjukkan bahwa setiap subhimpunan ruang diskret terbuka.   Titik interior empat interval  Pada butir pertama kelompok kedua eksplorasi Pendahuluan, tentukan semua titik interior dari , , , dan di . Rubrik: buktikan bahwa titik di antara kedua ujung bersifat interior dan uji setiap ujung yang termasuk dalam himpunannya.   Tahap 1: untuk , gunakan radius yang lebih kecil daripada jarak ke dan ke . Tahap 2: bola sekecil apa pun di sekitar atau melintasi salah satu ujung.   Keempat himpunan mempunyai himpunan titik interior yang sama, yaitu .   Jika , pilih . Maka , sehingga merupakan titik interior dari masing-masing empat himpunan. Titik , bila termasuk, bukan titik interior: untuk setiap , titik berada dalam tetapi di luar himpunan. Demikian pula titik , bila termasuk, gagal karena tetapi berada di luar himpunan. Tidak ada titik anggota lainnya. Jadi interior keempatnya adalah .   Interior himpunan berhingga di garis  Pada butir kedua kelompok titik interior di Pendahuluan, cari semua titik interior sebagai subhimpunan . Rubrik: uji setiap kandidat dengan jari-jari sebarang dan temukan titik bola yang tidak berada dalam himpunan berhingga itu.   Tahap 1: pusatkan bola di salah satu . Tahap 2: pilih perpindahan positif yang lebih kecil daripada jari-jari dan juga lebih kecil daripada .   Himpunan tidak mempunyai titik interior; jadi .   Ambil dan sebarang. Tetapkan . Maka . Karena , bilangan tidak sama dengan , , atau ; jadi . Dengan demikian tidak ada bola berpusat di yang termuat dalam . Argumen berlaku untuk ketiga titik, sehingga tidak satu pun merupakan titik interior.   Interior bilangan rasional  Pada butir terakhir eksplorasi Pendahuluan, tentukan titik interior ketika dipandang sebagai subhimpunan . Rubrik: mulai dari bilangan rasional dan radius sebarang, lalu hasilkan bilangan irasional di dalam bola tersebut.   Tahap 1: ambil dan . Tahap 2: pilih cukup besar sehingga , lalu periksa .   Tidak ada bilangan rasional yang menjadi titik interior ; dengan kata lain, .   Ambil sebarang dan . Menurut sifat Archimedes, ada dengan . Bilangan bersifat irasional, sebab jika rasional maka juga rasional, suatu kontradiksi. Namun , jadi . Setiap bola di sekitar setiap keluar dari ; karena itu interiornya kosong.   Himpunan kosong sebagai himpunan terbuka  Pada pertanyaan pertama aktivitas pembuka bagian Himpunan Terbuka, tentukan apakah terbuka dalam ruang metrik sebarang . Rubrik: terapkan pernyataan berkuantor untuk setiap titik anggotanya dengan cermat.   Tahap 1: tuliskan kemungkinan cara menggagalkan definisi keterbukaan. Tahap 2: tanyakan apakah mempunyai sebuah titik yang dapat menjadi contoh kegagalan itu.   Ya. Himpunan kosong terbuka dalam setiap ruang metrik.   Suatu himpunan terbuka jika untuk setiap terdapat dengan . Himpunan tidak mempunyai titik anggota. Karena itu tidak ada yang melanggar syarat tersebut; pernyataan universalnya benar secara vakum. Maka terbuka. Jawaban lengkap harus menjelaskan kebenaran vakum, bukan mencoba membangun bola berpusat di titik yang tidak ada.   Seluruh ruang sebagai himpunan terbuka  Pada pertanyaan kedua aktivitas pembuka bagian Himpunan Terbuka, putuskan apakah ruang metrik terbuka sebagai subhimpunan dirinya sendiri. Rubrik: untuk titik sebarang, berikan satu radius positif dan verifikasi inklusi bolanya.   Tahap 1: ambil . Tahap 2: ingat bahwa, apa pun radius positifnya, definisi hanya memilih titik-titik dari .   Ya. Seluruh ruang selalu merupakan himpunan terbuka dalam dirinya sendiri.   Ambil sembarang dan, misalnya, pilih . Berdasarkan definisi bola dalam ruang metrik , berlaku , sehingga otomatis . Jadi merupakan lingkungan bagi setiap titiknya dan karena itu terbuka. Radius lain yang positif juga dapat digunakan.   Target arah balik teorema gabungan bola  Pada langkah pertama aktivitas pembuktian di bagian Himpunan Terbuka, dengan asumsi adalah gabungan bola-bola terbuka, rumuskan sasaran yang harus dicapai agar terbukti terbuka. Rubrik: nyatakan titik sebarang, keberadaan radius positif, dan inklusi bola yang tepat.   Tahap 1: buka definisi terbuka . Tahap 2: jangan mengganti pusat bola oleh pusat salah satu bola penyusun; sasaran akhirnya harus berpusat di titik yang sedang diuji.   Kita harus menunjukkan bahwa untuk setiap terdapat sehingga .   Menurut definisi, terbuka tepat ketika merupakan lingkungan bagi setiap titiknya. Jadi ambil sebarang. Target lokalnya adalah menemukan dengan . Setelah target ini dibuktikan untuk setiap , keterbukaan langsung mengikuti. Rubrik lengkap harus memuat kedua kuantor dan arah inklusi yang benar.   Memilih bola penyusun yang memuat titik  Pada langkah kedua aktivitas pembuktian yang sama, jelaskan mengapa setiap terletak dalam suatu bola terbuka penyusun yang juga memenuhi . Rubrik: gunakan arti keanggotaan dalam suatu gabungan terindeks.   Tahap 1: tuliskan . Tahap 2: terjemahkan menjadi pernyataan keberadaan sebuah indeks.   Ada dengan , dan setiap bola penyusun memenuhi .   Karena merupakan gabungan bola-bola terbuka, kita dapat menulis . Keanggotaan berarti terdapat sekurang-kurangnya satu sedemikian sehingga . Di sisi lain, setiap anggota keluarga yang digabungkan merupakan subhimpunan gabungannya, sehingga . Jadi , tepat seperti yang diperlukan.   Menuntaskan arah balik teorema gabungan bola  Pada langkah terakhir aktivitas pembuktian bagian Himpunan Terbuka, selesaikan argumen bahwa gabungan bola-bola terbuka memang terbuka. Rubrik: mulai dari titik sebarang, pakai bola penyusun yang memuatnya, bangun bola berpusat di titik itu, lalu tutup semua kuantor.   Tahap 1: tulis bola penyusun sebagai dan gunakan . Tahap 2: radius positif dan menghasilkan melalui pertidaksamaan segitiga.   Setiap mempunyai bola terbuka berpusat di yang termuat dalam ; oleh sebab itu terbuka.   Ambil sebarang . Karena adalah gabungan bola-bola terbuka, ada bola penyusun dengan . Maka . Jika , pertidaksamaan segitiga memberi Jadi , sehingga . Karena dipilih sebarang, merupakan lingkungan bagi setiap titiknya dan dengan demikian terbuka. Ini melengkapi implikasi yang tertunda.   Gabungan dua interval yang bertumpang tindih  Pada kasus pertama aktivitas Gabungan dan Irisan Himpunan Terbuka, dengan dan di garis Euklides, tentukan apakah terbuka dan jelaskan. Rubrik: hitung gabungannya dengan tepat dan hubungkan bentuk hasilnya dengan keterbukaan.   Tahap 1: kedua interval bertumpang tindih pada . Tahap 2: telusuri semua titik dari ujung kiri hingga ujung kanan , dengan kedua ujung dikecualikan.    , sehingga gabungan tersebut terbuka dalam .   Interval mencakup titik-titik dari sampai , sedangkan mencakup titik-titik dari sampai . Karena keduanya bertumpang tindih, gabungannya tidak mempunyai celah dan sama dengan . Interval terbuka ini adalah bola dalam metrik Euklides, sehingga terbuka. Rubrik lengkap memerlukan perhitungan gabungan dan alasan keterbukaannya, bukan hanya jawaban ya.   Irisan dua interval yang bertumpang tindih  Pada kasus kedua aktivitas Gabungan dan Irisan Himpunan Terbuka, tentukan keterbukaan untuk dan . Rubrik: hitung irisan melalui syarat keanggotaan bersama dan jelaskan status hasilnya.   Tahap 1: suatu titik harus lebih besar daripada kedua batas kiri dan lebih kecil daripada kedua batas kanan. Tahap 2: gunakan batas kiri yang lebih besar dan batas kanan yang lebih kecil.    , dan himpunan ini terbuka dalam .   Syarat berarti sekaligus dan . Kedua syarat bersama-sama ekuivalen dengan . Jadi . Sebagai bola terbuka, irisan itu terbuka. Ini juga merupakan contoh irisan berhingga dari himpunan terbuka yang tetap terbuka.   Gabungan keluarga interval menyusut  Pada butir pertama kasus keluarga dalam aktivitas Gabungan dan Irisan, tentukan tanpa tuntutan bukti dari sumber. Rubrik panduan: kenali interval terbesar dalam keluarga dan cek bahwa semua interval lain termuat di dalamnya.   Tahap 1: hitung . Tahap 2: untuk , bandingkan dengan .    .   Untuk , diperoleh . Jika , maka , sehingga dan . Jadi untuk setiap . Karena sendiri termasuk dalam keluarga yang digabungkan, gabungan seluruh keluarga tepat sama dengan . Penjelasan ini memverifikasi jawaban meskipun tugas sumber tidak mewajibkan bukti.   Keterbukaan gabungan keluarga interval  Pada butir kedua kasus , putuskan apakah terbuka di dan beri alasan. Rubrik: gunakan hasil gabungan yang telah dihitung atau teorema gabungan sebarang himpunan terbuka.   Tahap 1: ingat hasil butir sebelumnya. Tahap 2: kenali sebagai sebuah interval terbuka atau bola Euklides.   Ya. Gabungan itu adalah , yang terbuka dalam .   Dari perhitungan sebelumnya, . Himpunan ini sama dengan bola dalam metrik Euklides, sehingga terbuka. Secara alternatif, setiap adalah interval terbuka dan teorema gabungan sebarang menyatakan bahwa gabungan keluarga himpunan terbuka juga terbuka. Salah satu alasan yang dinyatakan dengan lengkap sudah memenuhi rubrik.   Irisan keluarga interval menyusut  Pada butir ketiga kasus , tentukan ; sumber tidak menuntut bukti. Rubrik panduan: tunjukkan titik yang berada di semua interval dan jelaskan bagaimana suatu titik lain akhirnya dikeluarkan oleh interval yang cukup sempit.   Tahap 1: titik pusat selalu memenuhi syarat. Tahap 2: jika , pilih sehingga .    .   Untuk setiap , berlaku ; jadi untuk semua . Sebaliknya, ambil dan tetapkan . Pilih cukup besar sehingga . Keanggotaan dalam mensyaratkan , yang gagal. Jadi setiap terbuang dari setidaknya satu interval. Hanya yang berada dalam irisan seluruhnya.   Keterbukaan irisan tak berhingga  Pada butir terakhir kasus keluarga , tentukan apakah terbuka dalam garis Euklides. Rubrik: gunakan hasil irisan dan uji satu-satunya titiknya dengan bola berjari-jari sebarang.   Tahap 1: irisan itu adalah . Tahap 2: setiap dengan juga memuat titik selain .   Tidak. Irisan bukan himpunan terbuka dalam .   Hasil butir sebelumnya memberi . Ambil sembarang . Titik berada dalam , tetapi tidak sama dengan ; jadi . Tidak ada bola berpusat di yang termuat dalam irisan, sehingga irisan itu tidak terbuka. Contoh ini menunjukkan mengapa teorema hanya menjamin keterbukaan untuk irisan berhingga, bukan irisan sebarang.   Hipotesis dan target arah balik kekontinuan  Pada langkah pertama aktivitas Kekontinuan dan Himpunan Terbuka, orientasikan implikasi yang belum dibuktikan: nyatakan asumsi tentang prapeta himpunan terbuka dan sasaran kekontinuan yang harus dicapai. Rubrik: berikan kuantor untuk himpunan terbuka, titik domain, dan lingkungan nilai fungsi.   Tahap 1: arah maju telah dimulai dari kontinu. Tahap 2: untuk arah balik, gunakan pencirian: prapeta setiap lingkungan bagi harus menjadi lingkungan bagi .   Asumsinya: untuk setiap himpunan terbuka , terbuka dalam . Targetnya: untuk setiap dan setiap lingkungan bagi , merupakan lingkungan bagi , sehingga kontinu.   Teorema berbentuk bikondisional. Implikasi dari kekontinuan menuju keterbukaan semua prapeta sudah dibuktikan, jadi arah tersisa dimulai dengan hipotesis Untuk menyimpulkan kekontinuan melalui lingkungan, ambil sebarang dan sebarang lingkungan bagi , lalu buktikan bahwa merupakan lingkungan bagi . Karena pilihan dan harus sebarang, kedua kuantor itu merupakan bagian wajib dari target.   Bola di dalam lingkungan nilai fungsi  Pada langkah kedua aktivitas kekontinuan, untuk dan lingkungan bagi , jelaskan asal keberadaan dengan . Rubrik: sebutkan definisi yang diterapkan dan cocokkan pusat bolanya.   Tahap 1: jangan gunakan kekontinuan, karena itulah yang sedang dibuktikan. Tahap 2: buka langsung definisi merupakan lingkungan bagi .   Keberadaan tersebut adalah tepat isi definisi lingkungan pada titik .   Definisi lingkungan menyatakan bahwa suatu himpunan merupakan lingkungan bagi titik jika terdapat sehingga . Terapkan definisi ini dengan . Karena diasumsikan sebagai lingkungan bagi , langsung diperoleh suatu dengan . Tidak ada asumsi tambahan yang diperlukan.   Prapeta bola menurut hipotesis keterbukaan  Pada langkah ketiga aktivitas kekontinuan, terapkan hipotesis arah balik pada . Rubrik: verifikasi dahulu jenis himpunan di kodomain, lalu nyatakan keterbukaan prapetanya dan relevansi titik .   Tahap 1: setiap bola terbuka memang merupakan himpunan terbuka. Tahap 2: periksa untuk mengetahui apakah berada dalam prapetanya.   Hipotesis memberi bahwa terbuka dalam ; himpunan ini juga memuat , sehingga merupakan lingkungan bagi .   Bola adalah himpunan terbuka dalam . Hipotesis bahwa prapeta setiap himpunan terbuka di terbuka di karenanya menghasilkan Selain itu, , jadi dan . Setiap himpunan terbuka merupakan lingkungan bagi setiap titiknya; maka prapeta tersebut merupakan lingkungan bagi .   Menutup bukti kekontinuan melalui lingkungan  Pada langkah keempat aktivitas kekontinuan, buktikan bahwa merupakan lingkungan bagi , lalu jelaskan mengapa hal itu menyelesaikan arah balik teorema. Rubrik: gunakan inklusi bola di dalam , sifat prapeta yang mempertahankan inklusi, dan pencirian kekontinuan melalui lingkungan.   Tahap 1: dari , ambil prapeta kedua ruas. Tahap 2: setiap himpunan yang memuat suatu lingkungan bagi juga merupakan lingkungan bagi .   Karena dan himpunan di kiri merupakan lingkungan bagi , maka juga lingkungan bagi . Hal ini berlaku untuk setiap dan , sehingga kontinu.   Dari definisi lingkungan, pilih sehingga . Prapeta mempertahankan inklusi, jadi Langkah sebelumnya menunjukkan bahwa himpunan di kiri merupakan lingkungan bagi ; maka ia memuat suatu . Rantai inklusi memberi , sehingga juga lingkungan bagi . Karena dan lingkungan bagi dipilih sebarang, pencirian melalui lingkungan menyimpulkan bahwa kontinu.   Arah maju pencirian melalui bola  Pada langkah pertama aktivitas akibat tentang bola terbuka, mulai dengan kontinu dan jelaskan mengapa prapeta setiap bola terbuka terbuka dalam . Rubrik: sebutkan fakta bahwa bola terbuka adalah himpunan terbuka dan terapkan teorema pencirian melalui himpunan terbuka.   Tahap 1: klasifikasikan sebagai himpunan terbuka di . Tahap 2: substitusikan ke implikasi teorema untuk fungsi kontinu.   Setiap bola terbuka terbuka dalam ; karena kontinu, teorema pencirian memberi bahwa terbuka dalam .   Ambil sembarang bola terbuka di . Berdasarkan sifat dasar bola, merupakan himpunan terbuka dalam . Teorema pencirian kekontinuan menyatakan bahwa jika kontinu, maka prapeta setiap himpunan terbuka di kodomain terbuka di domain. Dengan memilih himpunan terbuka itu sebagai , diperoleh terbuka dalam . Karena sebarang, implikasi pertama akibat terbukti.   Menguraikan himpunan terbuka menjadi bola  Pada sublangkah pertama arah balik aktivitas akibat tentang bola, untuk himpunan terbuka sebarang , nyatakan bentuk yang dijamin oleh teorema basis bola. Rubrik: berikan keluarga terindeks bola-bola terbuka dan persamaan gabungannya.   Tahap 1: teorema yang dirujuk mencirikan himpunan terbuka sebagai gabungan bola-bola terbuka. Tahap 2: namai keluarga itu .   Ada keluarga bola terbuka dalam sedemikian sehingga .   Teorema basis bola menyatakan bahwa suatu subhimpunan ruang metrik terbuka jika dan hanya jika ia merupakan gabungan bola-bola terbuka. Karena terbuka dalam , terdapat himpunan indeks dan bola-bola terbuka untuk dengan Bentuk ini dipilih karena hipotesis arah balik sudah mengendalikan prapeta masing-masing bola.   Menutup pencirian kekontinuan melalui bola  Pada sublangkah terakhir aktivitas akibat tentang bola, gunakan identitas prapeta gabungan untuk membuktikan bahwa terbuka bagi setiap himpunan terbuka , lalu simpulkan kekontinuan . Rubrik: tulis persamaan prapeta, terapkan hipotesis pada setiap bola, gunakan keterbukaan gabungan sebarang, dan sebutkan teorema penutup.   Tahap 1: substitusikan . Tahap 2: ubah prapeta gabungan menjadi gabungan prapeta dan klasifikasikan setiap sukunya.    adalah gabungan himpunan-himpunan terbuka, sehingga terbuka. Karena ini berlaku untuk setiap terbuka, teorema pencirian menyatakan bahwa kontinu.   Asumsikan bahwa terbuka dalam untuk setiap bola terbuka . Ambil himpunan terbuka sebarang . Dari langkah sebelumnya, tulis , dengan setiap bola terbuka. Identitas prapeta gabungan memberi Menurut hipotesis, setiap terbuka dalam ; gabungan sebarang dari himpunan terbuka juga terbuka. Jadi terbuka untuk setiap terbuka dalam . Teorema pencirian melalui himpunan terbuka kemudian memberi bahwa kontinu.   Interior interval setengah tertutup kanan  Pada kasus pertama aktivitas Interior Suatu Himpunan, tentukan untuk dalam . Rubrik: buktikan bahwa semua titik di antara ujung adalah interior dan uji titik ujung yang termasuk dalam .   Tahap 1: untuk , gunakan radius lebih kecil daripada dan . Tahap 2: setiap bola di sekitar memuat bilangan yang lebih besar daripada .    .   Jika , pilih . Maka , sehingga titik interior. Satu-satunya anggota yang tersisa untuk diuji adalah . Untuk setiap , titik tetapi tidak berada dalam . Jadi bukan titik interior. Titik bukan anggota , sehingga bukan kandidat. Maka interiornya tepat .   Interior interval tertutup  Pada kasus kedua aktivitas Interior Suatu Himpunan, hitung dalam garis Euklides. Rubrik: berikan bola yang bekerja untuk titik antara dan saksi kegagalan untuk kedua titik ujung.   Tahap 1: argumen untuk sama seperti pada kasus sebelumnya. Tahap 2: gerakkan sedikit ke kiri dari dan sedikit ke kanan dari .    .   Untuk , radius positif dan memenuhi . Jadi semua titik interior. Untuk setiap , bola memuat , sehingga bukan interior. Bola memuat , sehingga juga bukan interior. Tidak ada titik anggota lain; jadi interiornya adalah .   Interior gabungan interval dan titik-titik terisolasi  Pada kasus ketiga aktivitas Interior Suatu Himpunan, tentukan interior dalam . Rubrik: pisahkan titik-titik di bagian dalam interval, kedua ujung interval, dan seluruh titik terisolasi.   Tahap 1: titik mempunyai jarak positif ke kedua ujung interval. Tahap 2: setiap bola di sekitar salah satu dari memuat bilangan di luar jika perpindahannya dipilih cukup kecil.    .   Jika , ambil ; maka . Jadi . Titik dan bukan interior karena setiap bola di sekitarnya melintasi ujung interval menuju celah di luar . Titik juga bukan interior: masing-masing terisolasi dalam , sedangkan setiap bola Euklides beradius positif memuat bilangan lain yang cukup dekat dan tidak berada dalam . Karena daftar ini mencakup semua anggota di luar , diperoleh .   Target sifat interior sebagai himpunan terbuka terbesar  Pada langkah pertama aktivitas penutup bagian Interior Suatu Himpunan, rumuskan apa yang masih harus dibuktikan agar menjadi subhimpunan terbuka terbesar dari yang termuat dalam . Rubrik: sertakan sifat terbuka dan inklusi dasar, lalu nyatakan sifat universal terhadap setiap himpunan terbuka lain di dalam .   Tahap 1: bagian awal bukti teorema telah menangani keterbukaan ; definisi memberi . Tahap 2: arti terbesar adalah memuat setiap kandidat terbuka .   Selain mengetahui bahwa terbuka dan , kita harus membuktikan: untuk setiap terbuka dalam dengan , berlaku .   Sebuah subhimpunan terbuka terbesar yang termuat dalam harus memenuhi tiga hal: ia terbuka dalam , ia merupakan subhimpunan , dan ia memuat setiap subhimpunan terbuka lain dari yang termuat dalam . Bagian awal pembuktian sudah menunjukkan bahwa terbuka, sedangkan definisinya langsung memberi . Jadi pekerjaan yang tersisa tepatlah mengambil terbuka sebarang dengan dan membuktikan .   Konsekuensi lokal dari keterbukaan kandidat  Pada langkah kedua aktivitas penutup Interior Suatu Himpunan, misalkan terbuka, , dan . Uraikan kesimpulan lokal yang berasal dari keterbukaan dan kaitkan kesimpulan itu dengan . Rubrik: hasilkan radius positif, rantai inklusi, dan status sebagai titik interior.   Tahap 1: karena terbuka dan , ada bola berpusat di yang termuat dalam . Tahap 2: gabungkan dengan dan baca kembali definisi titik interior.   Ada dengan ; jadi merupakan lingkungan bagi , sehingga .   Karena terbuka, ia merupakan lingkungan bagi setiap titiknya. Khusus untuk , terdapat sedemikian sehingga . Hipotesis memperpanjang inklusi itu menjadi Jadi memuat sebuah bola terbuka berpusat di dan merupakan lingkungan bagi . Menurut definisi, adalah titik interior , yakni .   Menuntaskan sifat maksimal interior  Pada langkah terakhir aktivitas Interior Suatu Himpunan, lengkapilah bukti dan jelaskan bagaimana inklusi itu menutup klaim maksimalitas. Rubrik: gunakan titik sebarang, simpulkan keanggotaan dalam interior, lalu kembalikan kuantor pada semua kandidat terbuka .   Tahap 1: langkah sebelumnya berlaku untuk setiap . Tahap 2: setelah memperoleh inklusi himpunan, gabungkan dengan fakta yang sudah terbukti bahwa terbuka dan termuat dalam .   Setiap adalah titik interior , sehingga . Karena ini berlaku bagi setiap subhimpunan terbuka , interior adalah kandidat terbuka terbesar yang termuat dalam .   Ambil sebarang himpunan terbuka dengan , lalu ambil sebarang . Karena terbuka, terdapat dengan . Maka , sehingga adalah titik interior dan . Kesimpulan ini berlaku untuk setiap ; jadi . Karena adalah kandidat terbuka sebarang di dalam , sementara sendiri sudah terbukti terbuka dan termuat dalam , interior itu memang subhimpunan terbuka terbesar yang termuat dalam .   "
+},
+{
+  "id": "o003-c90-ch08-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-01",
+  "type": "Pemeriksaan",
+  "number": "H.1",
+  "title": "Keterbukaan interval setengah tertutup dalam garis.",
+  "body": "Keterbukaan interval setengah tertutup dalam garis  Pada kasus pertama eksplorasi di bagian Pendahuluan, putuskan apakah terbuka ketika ruang sekitarnya adalah , lalu pertanggungjawabkan keputusan itu dari definisi. Rubrik: nyatakan titik penguji yang menentukan dan jelaskan mengapa tidak ada bola berpusat di titik itu yang memenuhi syarat.   Tahap 1: uji titik ujung . Tahap 2: untuk jari-jari sebarang, cari titik negatif di .   Tidak. Himpunan tidak terbuka dalam karena bukan lingkungan bagi titik anggotanya .   Titik termasuk dalam . Ambil sembarang . Titik memenuhi , sehingga , tetapi . Jadi tidak ada dengan . Dengan demikian bukan lingkungan bagi setiap titiknya dan bukan himpunan terbuka. Bukti lengkap harus memuat titik penguji, kuantor sebarang, dan saksi yang keluar dari .  "
+},
+{
+  "id": "o003-c90-ch08-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-02",
+  "type": "Pemeriksaan",
+  "number": "H.2",
+  "title": "Peran ruang sekitar pada keterbukaan.",
+  "body": "Peran ruang sekitar pada keterbukaan  Pada kasus kedua eksplorasi Pendahuluan, periksa himpunan yang sama, , tetapi sekarang sebagai subhimpunan dari dengan metrik Euklides yang dibatasi ke . Rubrik: gunakan bola yang anggotanya wajib berada di , dan berikan jari-jari positif untuk setiap .   Tahap 1: titik negatif bukan anggota ruang . Tahap 2: untuk , bandingkan jarak dengan jarak ke ujung kanan .   Ya. Himpunan terbuka relatif terhadap ruang metrik .   Ambil sembarang dan tetapkan . Jika , maka dan . Akibatnya ; sementara itu, keanggotaan memberi . Jadi , sehingga . Hal ini berlaku untuk setiap , termasuk . Maka terbuka dalam . Rubrik lengkap menuntut jari-jari positif, pemakaian ruang relatif, dan inklusi bola.  "
+},
+{
+  "id": "o003-c90-ch08-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-03",
+  "type": "Pemeriksaan",
+  "number": "H.3",
+  "title": "Subhimpunan dalam metrik diskret.",
+  "body": "Subhimpunan dalam metrik diskret  Pada kasus ketiga eksplorasi Pendahuluan, tentukan keterbukaan di ruang dengan metrik diskret. Rubrik: pilih satu jari-jari yang bekerja di setiap titik dan hitung bola yang dihasilkannya.   Tahap 1: jarak antara dua titik berbeda adalah . Tahap 2: pilih jari-jari yang lebih kecil daripada .   Ya. Himpunan terbuka dalam ruang bermetrik diskret tersebut.   Untuk setiap , ambil . Dalam metrik diskret, , sedangkan untuk setiap berlaku , yang tidak lebih kecil dari . Jadi . Karena setiap titik mempunyai bola demikian, merupakan lingkungan bagi setiap titiknya dan bersifat terbuka. Argumen yang sama sebenarnya menunjukkan bahwa setiap subhimpunan ruang diskret terbuka.  "
+},
+{
+  "id": "o003-c90-ch08-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-04",
+  "type": "Pemeriksaan",
+  "number": "H.4",
+  "title": "Titik interior empat interval.",
+  "body": "Titik interior empat interval  Pada butir pertama kelompok kedua eksplorasi Pendahuluan, tentukan semua titik interior dari , , , dan di . Rubrik: buktikan bahwa titik di antara kedua ujung bersifat interior dan uji setiap ujung yang termasuk dalam himpunannya.   Tahap 1: untuk , gunakan radius yang lebih kecil daripada jarak ke dan ke . Tahap 2: bola sekecil apa pun di sekitar atau melintasi salah satu ujung.   Keempat himpunan mempunyai himpunan titik interior yang sama, yaitu .   Jika , pilih . Maka , sehingga merupakan titik interior dari masing-masing empat himpunan. Titik , bila termasuk, bukan titik interior: untuk setiap , titik berada dalam tetapi di luar himpunan. Demikian pula titik , bila termasuk, gagal karena tetapi berada di luar himpunan. Tidak ada titik anggota lainnya. Jadi interior keempatnya adalah .  "
+},
+{
+  "id": "o003-c90-ch08-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-05",
+  "type": "Pemeriksaan",
+  "number": "H.5",
+  "title": "Interior himpunan berhingga di garis.",
+  "body": "Interior himpunan berhingga di garis  Pada butir kedua kelompok titik interior di Pendahuluan, cari semua titik interior sebagai subhimpunan . Rubrik: uji setiap kandidat dengan jari-jari sebarang dan temukan titik bola yang tidak berada dalam himpunan berhingga itu.   Tahap 1: pusatkan bola di salah satu . Tahap 2: pilih perpindahan positif yang lebih kecil daripada jari-jari dan juga lebih kecil daripada .   Himpunan tidak mempunyai titik interior; jadi .   Ambil dan sebarang. Tetapkan . Maka . Karena , bilangan tidak sama dengan , , atau ; jadi . Dengan demikian tidak ada bola berpusat di yang termuat dalam . Argumen berlaku untuk ketiga titik, sehingga tidak satu pun merupakan titik interior.  "
+},
+{
+  "id": "o003-c90-ch08-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-06",
+  "type": "Pemeriksaan",
+  "number": "H.6",
+  "title": "Interior bilangan rasional.",
+  "body": "Interior bilangan rasional  Pada butir terakhir eksplorasi Pendahuluan, tentukan titik interior ketika dipandang sebagai subhimpunan . Rubrik: mulai dari bilangan rasional dan radius sebarang, lalu hasilkan bilangan irasional di dalam bola tersebut.   Tahap 1: ambil dan . Tahap 2: pilih cukup besar sehingga , lalu periksa .   Tidak ada bilangan rasional yang menjadi titik interior ; dengan kata lain, .   Ambil sebarang dan . Menurut sifat Archimedes, ada dengan . Bilangan bersifat irasional, sebab jika rasional maka juga rasional, suatu kontradiksi. Namun , jadi . Setiap bola di sekitar setiap keluar dari ; karena itu interiornya kosong.  "
+},
+{
+  "id": "o003-c90-ch08-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-07",
+  "type": "Pemeriksaan",
+  "number": "H.7",
+  "title": "Himpunan kosong sebagai himpunan terbuka.",
+  "body": "Himpunan kosong sebagai himpunan terbuka  Pada pertanyaan pertama aktivitas pembuka bagian Himpunan Terbuka, tentukan apakah terbuka dalam ruang metrik sebarang . Rubrik: terapkan pernyataan berkuantor untuk setiap titik anggotanya dengan cermat.   Tahap 1: tuliskan kemungkinan cara menggagalkan definisi keterbukaan. Tahap 2: tanyakan apakah mempunyai sebuah titik yang dapat menjadi contoh kegagalan itu.   Ya. Himpunan kosong terbuka dalam setiap ruang metrik.   Suatu himpunan terbuka jika untuk setiap terdapat dengan . Himpunan tidak mempunyai titik anggota. Karena itu tidak ada yang melanggar syarat tersebut; pernyataan universalnya benar secara vakum. Maka terbuka. Jawaban lengkap harus menjelaskan kebenaran vakum, bukan mencoba membangun bola berpusat di titik yang tidak ada.  "
+},
+{
+  "id": "o003-c90-ch08-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-08",
+  "type": "Pemeriksaan",
+  "number": "H.8",
+  "title": "Seluruh ruang sebagai himpunan terbuka.",
+  "body": "Seluruh ruang sebagai himpunan terbuka  Pada pertanyaan kedua aktivitas pembuka bagian Himpunan Terbuka, putuskan apakah ruang metrik terbuka sebagai subhimpunan dirinya sendiri. Rubrik: untuk titik sebarang, berikan satu radius positif dan verifikasi inklusi bolanya.   Tahap 1: ambil . Tahap 2: ingat bahwa, apa pun radius positifnya, definisi hanya memilih titik-titik dari .   Ya. Seluruh ruang selalu merupakan himpunan terbuka dalam dirinya sendiri.   Ambil sembarang dan, misalnya, pilih . Berdasarkan definisi bola dalam ruang metrik , berlaku , sehingga otomatis . Jadi merupakan lingkungan bagi setiap titiknya dan karena itu terbuka. Radius lain yang positif juga dapat digunakan.  "
+},
+{
+  "id": "o003-c90-ch08-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-09",
+  "type": "Pemeriksaan",
+  "number": "H.9",
+  "title": "Target arah balik teorema gabungan bola.",
+  "body": "Target arah balik teorema gabungan bola  Pada langkah pertama aktivitas pembuktian di bagian Himpunan Terbuka, dengan asumsi adalah gabungan bola-bola terbuka, rumuskan sasaran yang harus dicapai agar terbukti terbuka. Rubrik: nyatakan titik sebarang, keberadaan radius positif, dan inklusi bola yang tepat.   Tahap 1: buka definisi terbuka . Tahap 2: jangan mengganti pusat bola oleh pusat salah satu bola penyusun; sasaran akhirnya harus berpusat di titik yang sedang diuji.   Kita harus menunjukkan bahwa untuk setiap terdapat sehingga .   Menurut definisi, terbuka tepat ketika merupakan lingkungan bagi setiap titiknya. Jadi ambil sebarang. Target lokalnya adalah menemukan dengan . Setelah target ini dibuktikan untuk setiap , keterbukaan langsung mengikuti. Rubrik lengkap harus memuat kedua kuantor dan arah inklusi yang benar.  "
+},
+{
+  "id": "o003-c90-ch08-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-10",
+  "type": "Pemeriksaan",
+  "number": "H.10",
+  "title": "Memilih bola penyusun yang memuat titik.",
+  "body": "Memilih bola penyusun yang memuat titik  Pada langkah kedua aktivitas pembuktian yang sama, jelaskan mengapa setiap terletak dalam suatu bola terbuka penyusun yang juga memenuhi . Rubrik: gunakan arti keanggotaan dalam suatu gabungan terindeks.   Tahap 1: tuliskan . Tahap 2: terjemahkan menjadi pernyataan keberadaan sebuah indeks.   Ada dengan , dan setiap bola penyusun memenuhi .   Karena merupakan gabungan bola-bola terbuka, kita dapat menulis . Keanggotaan berarti terdapat sekurang-kurangnya satu sedemikian sehingga . Di sisi lain, setiap anggota keluarga yang digabungkan merupakan subhimpunan gabungannya, sehingga . Jadi , tepat seperti yang diperlukan.  "
+},
+{
+  "id": "o003-c90-ch08-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-11",
+  "type": "Pemeriksaan",
+  "number": "H.11",
+  "title": "Menuntaskan arah balik teorema gabungan bola.",
+  "body": "Menuntaskan arah balik teorema gabungan bola  Pada langkah terakhir aktivitas pembuktian bagian Himpunan Terbuka, selesaikan argumen bahwa gabungan bola-bola terbuka memang terbuka. Rubrik: mulai dari titik sebarang, pakai bola penyusun yang memuatnya, bangun bola berpusat di titik itu, lalu tutup semua kuantor.   Tahap 1: tulis bola penyusun sebagai dan gunakan . Tahap 2: radius positif dan menghasilkan melalui pertidaksamaan segitiga.   Setiap mempunyai bola terbuka berpusat di yang termuat dalam ; oleh sebab itu terbuka.   Ambil sebarang . Karena adalah gabungan bola-bola terbuka, ada bola penyusun dengan . Maka . Jika , pertidaksamaan segitiga memberi Jadi , sehingga . Karena dipilih sebarang, merupakan lingkungan bagi setiap titiknya dan dengan demikian terbuka. Ini melengkapi implikasi yang tertunda.  "
+},
+{
+  "id": "o003-c90-ch08-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-12",
+  "type": "Pemeriksaan",
+  "number": "H.12",
+  "title": "Gabungan dua interval yang bertumpang tindih.",
+  "body": "Gabungan dua interval yang bertumpang tindih  Pada kasus pertama aktivitas Gabungan dan Irisan Himpunan Terbuka, dengan dan di garis Euklides, tentukan apakah terbuka dan jelaskan. Rubrik: hitung gabungannya dengan tepat dan hubungkan bentuk hasilnya dengan keterbukaan.   Tahap 1: kedua interval bertumpang tindih pada . Tahap 2: telusuri semua titik dari ujung kiri hingga ujung kanan , dengan kedua ujung dikecualikan.    , sehingga gabungan tersebut terbuka dalam .   Interval mencakup titik-titik dari sampai , sedangkan mencakup titik-titik dari sampai . Karena keduanya bertumpang tindih, gabungannya tidak mempunyai celah dan sama dengan . Interval terbuka ini adalah bola dalam metrik Euklides, sehingga terbuka. Rubrik lengkap memerlukan perhitungan gabungan dan alasan keterbukaannya, bukan hanya jawaban ya.  "
+},
+{
+  "id": "o003-c90-ch08-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-13",
+  "type": "Pemeriksaan",
+  "number": "H.13",
+  "title": "Irisan dua interval yang bertumpang tindih.",
+  "body": "Irisan dua interval yang bertumpang tindih  Pada kasus kedua aktivitas Gabungan dan Irisan Himpunan Terbuka, tentukan keterbukaan untuk dan . Rubrik: hitung irisan melalui syarat keanggotaan bersama dan jelaskan status hasilnya.   Tahap 1: suatu titik harus lebih besar daripada kedua batas kiri dan lebih kecil daripada kedua batas kanan. Tahap 2: gunakan batas kiri yang lebih besar dan batas kanan yang lebih kecil.    , dan himpunan ini terbuka dalam .   Syarat berarti sekaligus dan . Kedua syarat bersama-sama ekuivalen dengan . Jadi . Sebagai bola terbuka, irisan itu terbuka. Ini juga merupakan contoh irisan berhingga dari himpunan terbuka yang tetap terbuka.  "
+},
+{
+  "id": "o003-c90-ch08-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-14",
+  "type": "Pemeriksaan",
+  "number": "H.14",
+  "title": "Gabungan keluarga interval menyusut.",
+  "body": "Gabungan keluarga interval menyusut  Pada butir pertama kasus keluarga dalam aktivitas Gabungan dan Irisan, tentukan tanpa tuntutan bukti dari sumber. Rubrik panduan: kenali interval terbesar dalam keluarga dan cek bahwa semua interval lain termuat di dalamnya.   Tahap 1: hitung . Tahap 2: untuk , bandingkan dengan .    .   Untuk , diperoleh . Jika , maka , sehingga dan . Jadi untuk setiap . Karena sendiri termasuk dalam keluarga yang digabungkan, gabungan seluruh keluarga tepat sama dengan . Penjelasan ini memverifikasi jawaban meskipun tugas sumber tidak mewajibkan bukti.  "
+},
+{
+  "id": "o003-c90-ch08-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-15",
+  "type": "Pemeriksaan",
+  "number": "H.15",
+  "title": "Keterbukaan gabungan keluarga interval.",
+  "body": "Keterbukaan gabungan keluarga interval  Pada butir kedua kasus , putuskan apakah terbuka di dan beri alasan. Rubrik: gunakan hasil gabungan yang telah dihitung atau teorema gabungan sebarang himpunan terbuka.   Tahap 1: ingat hasil butir sebelumnya. Tahap 2: kenali sebagai sebuah interval terbuka atau bola Euklides.   Ya. Gabungan itu adalah , yang terbuka dalam .   Dari perhitungan sebelumnya, . Himpunan ini sama dengan bola dalam metrik Euklides, sehingga terbuka. Secara alternatif, setiap adalah interval terbuka dan teorema gabungan sebarang menyatakan bahwa gabungan keluarga himpunan terbuka juga terbuka. Salah satu alasan yang dinyatakan dengan lengkap sudah memenuhi rubrik.  "
+},
+{
+  "id": "o003-c90-ch08-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-16",
+  "type": "Pemeriksaan",
+  "number": "H.16",
+  "title": "Irisan keluarga interval menyusut.",
+  "body": "Irisan keluarga interval menyusut  Pada butir ketiga kasus , tentukan ; sumber tidak menuntut bukti. Rubrik panduan: tunjukkan titik yang berada di semua interval dan jelaskan bagaimana suatu titik lain akhirnya dikeluarkan oleh interval yang cukup sempit.   Tahap 1: titik pusat selalu memenuhi syarat. Tahap 2: jika , pilih sehingga .    .   Untuk setiap , berlaku ; jadi untuk semua . Sebaliknya, ambil dan tetapkan . Pilih cukup besar sehingga . Keanggotaan dalam mensyaratkan , yang gagal. Jadi setiap terbuang dari setidaknya satu interval. Hanya yang berada dalam irisan seluruhnya.  "
+},
+{
+  "id": "o003-c90-ch08-guide-17",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-17",
+  "type": "Pemeriksaan",
+  "number": "H.17",
+  "title": "Keterbukaan irisan tak berhingga.",
+  "body": "Keterbukaan irisan tak berhingga  Pada butir terakhir kasus keluarga , tentukan apakah terbuka dalam garis Euklides. Rubrik: gunakan hasil irisan dan uji satu-satunya titiknya dengan bola berjari-jari sebarang.   Tahap 1: irisan itu adalah . Tahap 2: setiap dengan juga memuat titik selain .   Tidak. Irisan bukan himpunan terbuka dalam .   Hasil butir sebelumnya memberi . Ambil sembarang . Titik berada dalam , tetapi tidak sama dengan ; jadi . Tidak ada bola berpusat di yang termuat dalam irisan, sehingga irisan itu tidak terbuka. Contoh ini menunjukkan mengapa teorema hanya menjamin keterbukaan untuk irisan berhingga, bukan irisan sebarang.  "
+},
+{
+  "id": "o003-c90-ch08-guide-18",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-18",
+  "type": "Pemeriksaan",
+  "number": "H.18",
+  "title": "Hipotesis dan target arah balik kekontinuan.",
+  "body": "Hipotesis dan target arah balik kekontinuan  Pada langkah pertama aktivitas Kekontinuan dan Himpunan Terbuka, orientasikan implikasi yang belum dibuktikan: nyatakan asumsi tentang prapeta himpunan terbuka dan sasaran kekontinuan yang harus dicapai. Rubrik: berikan kuantor untuk himpunan terbuka, titik domain, dan lingkungan nilai fungsi.   Tahap 1: arah maju telah dimulai dari kontinu. Tahap 2: untuk arah balik, gunakan pencirian: prapeta setiap lingkungan bagi harus menjadi lingkungan bagi .   Asumsinya: untuk setiap himpunan terbuka , terbuka dalam . Targetnya: untuk setiap dan setiap lingkungan bagi , merupakan lingkungan bagi , sehingga kontinu.   Teorema berbentuk bikondisional. Implikasi dari kekontinuan menuju keterbukaan semua prapeta sudah dibuktikan, jadi arah tersisa dimulai dengan hipotesis Untuk menyimpulkan kekontinuan melalui lingkungan, ambil sebarang dan sebarang lingkungan bagi , lalu buktikan bahwa merupakan lingkungan bagi . Karena pilihan dan harus sebarang, kedua kuantor itu merupakan bagian wajib dari target.  "
+},
+{
+  "id": "o003-c90-ch08-guide-19",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-19",
+  "type": "Pemeriksaan",
+  "number": "H.19",
+  "title": "Bola di dalam lingkungan nilai fungsi.",
+  "body": "Bola di dalam lingkungan nilai fungsi  Pada langkah kedua aktivitas kekontinuan, untuk dan lingkungan bagi , jelaskan asal keberadaan dengan . Rubrik: sebutkan definisi yang diterapkan dan cocokkan pusat bolanya.   Tahap 1: jangan gunakan kekontinuan, karena itulah yang sedang dibuktikan. Tahap 2: buka langsung definisi merupakan lingkungan bagi .   Keberadaan tersebut adalah tepat isi definisi lingkungan pada titik .   Definisi lingkungan menyatakan bahwa suatu himpunan merupakan lingkungan bagi titik jika terdapat sehingga . Terapkan definisi ini dengan . Karena diasumsikan sebagai lingkungan bagi , langsung diperoleh suatu dengan . Tidak ada asumsi tambahan yang diperlukan.  "
+},
+{
+  "id": "o003-c90-ch08-guide-20",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-20",
+  "type": "Pemeriksaan",
+  "number": "H.20",
+  "title": "Prapeta bola menurut hipotesis keterbukaan.",
+  "body": "Prapeta bola menurut hipotesis keterbukaan  Pada langkah ketiga aktivitas kekontinuan, terapkan hipotesis arah balik pada . Rubrik: verifikasi dahulu jenis himpunan di kodomain, lalu nyatakan keterbukaan prapetanya dan relevansi titik .   Tahap 1: setiap bola terbuka memang merupakan himpunan terbuka. Tahap 2: periksa untuk mengetahui apakah berada dalam prapetanya.   Hipotesis memberi bahwa terbuka dalam ; himpunan ini juga memuat , sehingga merupakan lingkungan bagi .   Bola adalah himpunan terbuka dalam . Hipotesis bahwa prapeta setiap himpunan terbuka di terbuka di karenanya menghasilkan Selain itu, , jadi dan . Setiap himpunan terbuka merupakan lingkungan bagi setiap titiknya; maka prapeta tersebut merupakan lingkungan bagi .  "
+},
+{
+  "id": "o003-c90-ch08-guide-21",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-21",
+  "type": "Pemeriksaan",
+  "number": "H.21",
+  "title": "Menutup bukti kekontinuan melalui lingkungan.",
+  "body": "Menutup bukti kekontinuan melalui lingkungan  Pada langkah keempat aktivitas kekontinuan, buktikan bahwa merupakan lingkungan bagi , lalu jelaskan mengapa hal itu menyelesaikan arah balik teorema. Rubrik: gunakan inklusi bola di dalam , sifat prapeta yang mempertahankan inklusi, dan pencirian kekontinuan melalui lingkungan.   Tahap 1: dari , ambil prapeta kedua ruas. Tahap 2: setiap himpunan yang memuat suatu lingkungan bagi juga merupakan lingkungan bagi .   Karena dan himpunan di kiri merupakan lingkungan bagi , maka juga lingkungan bagi . Hal ini berlaku untuk setiap dan , sehingga kontinu.   Dari definisi lingkungan, pilih sehingga . Prapeta mempertahankan inklusi, jadi Langkah sebelumnya menunjukkan bahwa himpunan di kiri merupakan lingkungan bagi ; maka ia memuat suatu . Rantai inklusi memberi , sehingga juga lingkungan bagi . Karena dan lingkungan bagi dipilih sebarang, pencirian melalui lingkungan menyimpulkan bahwa kontinu.  "
+},
+{
+  "id": "o003-c90-ch08-guide-22",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-22",
+  "type": "Pemeriksaan",
+  "number": "H.22",
+  "title": "Arah maju pencirian melalui bola.",
+  "body": "Arah maju pencirian melalui bola  Pada langkah pertama aktivitas akibat tentang bola terbuka, mulai dengan kontinu dan jelaskan mengapa prapeta setiap bola terbuka terbuka dalam . Rubrik: sebutkan fakta bahwa bola terbuka adalah himpunan terbuka dan terapkan teorema pencirian melalui himpunan terbuka.   Tahap 1: klasifikasikan sebagai himpunan terbuka di . Tahap 2: substitusikan ke implikasi teorema untuk fungsi kontinu.   Setiap bola terbuka terbuka dalam ; karena kontinu, teorema pencirian memberi bahwa terbuka dalam .   Ambil sembarang bola terbuka di . Berdasarkan sifat dasar bola, merupakan himpunan terbuka dalam . Teorema pencirian kekontinuan menyatakan bahwa jika kontinu, maka prapeta setiap himpunan terbuka di kodomain terbuka di domain. Dengan memilih himpunan terbuka itu sebagai , diperoleh terbuka dalam . Karena sebarang, implikasi pertama akibat terbukti.  "
+},
+{
+  "id": "o003-c90-ch08-guide-23",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-23",
+  "type": "Pemeriksaan",
+  "number": "H.23",
+  "title": "Menguraikan himpunan terbuka menjadi bola.",
+  "body": "Menguraikan himpunan terbuka menjadi bola  Pada sublangkah pertama arah balik aktivitas akibat tentang bola, untuk himpunan terbuka sebarang , nyatakan bentuk yang dijamin oleh teorema basis bola. Rubrik: berikan keluarga terindeks bola-bola terbuka dan persamaan gabungannya.   Tahap 1: teorema yang dirujuk mencirikan himpunan terbuka sebagai gabungan bola-bola terbuka. Tahap 2: namai keluarga itu .   Ada keluarga bola terbuka dalam sedemikian sehingga .   Teorema basis bola menyatakan bahwa suatu subhimpunan ruang metrik terbuka jika dan hanya jika ia merupakan gabungan bola-bola terbuka. Karena terbuka dalam , terdapat himpunan indeks dan bola-bola terbuka untuk dengan Bentuk ini dipilih karena hipotesis arah balik sudah mengendalikan prapeta masing-masing bola.  "
+},
+{
+  "id": "o003-c90-ch08-guide-24",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-24",
+  "type": "Pemeriksaan",
+  "number": "H.24",
+  "title": "Menutup pencirian kekontinuan melalui bola.",
+  "body": "Menutup pencirian kekontinuan melalui bola  Pada sublangkah terakhir aktivitas akibat tentang bola, gunakan identitas prapeta gabungan untuk membuktikan bahwa terbuka bagi setiap himpunan terbuka , lalu simpulkan kekontinuan . Rubrik: tulis persamaan prapeta, terapkan hipotesis pada setiap bola, gunakan keterbukaan gabungan sebarang, dan sebutkan teorema penutup.   Tahap 1: substitusikan . Tahap 2: ubah prapeta gabungan menjadi gabungan prapeta dan klasifikasikan setiap sukunya.    adalah gabungan himpunan-himpunan terbuka, sehingga terbuka. Karena ini berlaku untuk setiap terbuka, teorema pencirian menyatakan bahwa kontinu.   Asumsikan bahwa terbuka dalam untuk setiap bola terbuka . Ambil himpunan terbuka sebarang . Dari langkah sebelumnya, tulis , dengan setiap bola terbuka. Identitas prapeta gabungan memberi Menurut hipotesis, setiap terbuka dalam ; gabungan sebarang dari himpunan terbuka juga terbuka. Jadi terbuka untuk setiap terbuka dalam . Teorema pencirian melalui himpunan terbuka kemudian memberi bahwa kontinu.  "
+},
+{
+  "id": "o003-c90-ch08-guide-25",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-25",
+  "type": "Pemeriksaan",
+  "number": "H.25",
+  "title": "Interior interval setengah tertutup kanan.",
+  "body": "Interior interval setengah tertutup kanan  Pada kasus pertama aktivitas Interior Suatu Himpunan, tentukan untuk dalam . Rubrik: buktikan bahwa semua titik di antara ujung adalah interior dan uji titik ujung yang termasuk dalam .   Tahap 1: untuk , gunakan radius lebih kecil daripada dan . Tahap 2: setiap bola di sekitar memuat bilangan yang lebih besar daripada .    .   Jika , pilih . Maka , sehingga titik interior. Satu-satunya anggota yang tersisa untuk diuji adalah . Untuk setiap , titik tetapi tidak berada dalam . Jadi bukan titik interior. Titik bukan anggota , sehingga bukan kandidat. Maka interiornya tepat .  "
+},
+{
+  "id": "o003-c90-ch08-guide-26",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-26",
+  "type": "Pemeriksaan",
+  "number": "H.26",
+  "title": "Interior interval tertutup.",
+  "body": "Interior interval tertutup  Pada kasus kedua aktivitas Interior Suatu Himpunan, hitung dalam garis Euklides. Rubrik: berikan bola yang bekerja untuk titik antara dan saksi kegagalan untuk kedua titik ujung.   Tahap 1: argumen untuk sama seperti pada kasus sebelumnya. Tahap 2: gerakkan sedikit ke kiri dari dan sedikit ke kanan dari .    .   Untuk , radius positif dan memenuhi . Jadi semua titik interior. Untuk setiap , bola memuat , sehingga bukan interior. Bola memuat , sehingga juga bukan interior. Tidak ada titik anggota lain; jadi interiornya adalah .  "
+},
+{
+  "id": "o003-c90-ch08-guide-27",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-27",
+  "type": "Pemeriksaan",
+  "number": "H.27",
+  "title": "Interior gabungan interval dan titik-titik terisolasi.",
+  "body": "Interior gabungan interval dan titik-titik terisolasi  Pada kasus ketiga aktivitas Interior Suatu Himpunan, tentukan interior dalam . Rubrik: pisahkan titik-titik di bagian dalam interval, kedua ujung interval, dan seluruh titik terisolasi.   Tahap 1: titik mempunyai jarak positif ke kedua ujung interval. Tahap 2: setiap bola di sekitar salah satu dari memuat bilangan di luar jika perpindahannya dipilih cukup kecil.    .   Jika , ambil ; maka . Jadi . Titik dan bukan interior karena setiap bola di sekitarnya melintasi ujung interval menuju celah di luar . Titik juga bukan interior: masing-masing terisolasi dalam , sedangkan setiap bola Euklides beradius positif memuat bilangan lain yang cukup dekat dan tidak berada dalam . Karena daftar ini mencakup semua anggota di luar , diperoleh .  "
+},
+{
+  "id": "o003-c90-ch08-guide-28",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-28",
+  "type": "Pemeriksaan",
+  "number": "H.28",
+  "title": "Target sifat interior sebagai himpunan terbuka terbesar.",
+  "body": "Target sifat interior sebagai himpunan terbuka terbesar  Pada langkah pertama aktivitas penutup bagian Interior Suatu Himpunan, rumuskan apa yang masih harus dibuktikan agar menjadi subhimpunan terbuka terbesar dari yang termuat dalam . Rubrik: sertakan sifat terbuka dan inklusi dasar, lalu nyatakan sifat universal terhadap setiap himpunan terbuka lain di dalam .   Tahap 1: bagian awal bukti teorema telah menangani keterbukaan ; definisi memberi . Tahap 2: arti terbesar adalah memuat setiap kandidat terbuka .   Selain mengetahui bahwa terbuka dan , kita harus membuktikan: untuk setiap terbuka dalam dengan , berlaku .   Sebuah subhimpunan terbuka terbesar yang termuat dalam harus memenuhi tiga hal: ia terbuka dalam , ia merupakan subhimpunan , dan ia memuat setiap subhimpunan terbuka lain dari yang termuat dalam . Bagian awal pembuktian sudah menunjukkan bahwa terbuka, sedangkan definisinya langsung memberi . Jadi pekerjaan yang tersisa tepatlah mengambil terbuka sebarang dengan dan membuktikan .  "
+},
+{
+  "id": "o003-c90-ch08-guide-29",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-29",
+  "type": "Pemeriksaan",
+  "number": "H.29",
+  "title": "Konsekuensi lokal dari keterbukaan kandidat.",
+  "body": "Konsekuensi lokal dari keterbukaan kandidat  Pada langkah kedua aktivitas penutup Interior Suatu Himpunan, misalkan terbuka, , dan . Uraikan kesimpulan lokal yang berasal dari keterbukaan dan kaitkan kesimpulan itu dengan . Rubrik: hasilkan radius positif, rantai inklusi, dan status sebagai titik interior.   Tahap 1: karena terbuka dan , ada bola berpusat di yang termuat dalam . Tahap 2: gabungkan dengan dan baca kembali definisi titik interior.   Ada dengan ; jadi merupakan lingkungan bagi , sehingga .   Karena terbuka, ia merupakan lingkungan bagi setiap titiknya. Khusus untuk , terdapat sedemikian sehingga . Hipotesis memperpanjang inklusi itu menjadi Jadi memuat sebuah bola terbuka berpusat di dan merupakan lingkungan bagi . Menurut definisi, adalah titik interior , yakni .  "
+},
+{
+  "id": "o003-c90-ch08-guide-30",
+  "level": "2",
+  "url": "o003-c90-ch08-source-guides.html#o003-c90-ch08-guide-30",
+  "type": "Pemeriksaan",
+  "number": "H.30",
+  "title": "Menuntaskan sifat maksimal interior.",
+  "body": "Menuntaskan sifat maksimal interior  Pada langkah terakhir aktivitas Interior Suatu Himpunan, lengkapilah bukti dan jelaskan bagaimana inklusi itu menutup klaim maksimalitas. Rubrik: gunakan titik sebarang, simpulkan keanggotaan dalam interior, lalu kembalikan kuantor pada semua kandidat terbuka .   Tahap 1: langkah sebelumnya berlaku untuk setiap . Tahap 2: setelah memperoleh inklusi himpunan, gabungkan dengan fakta yang sudah terbukti bahwa terbuka dan termuat dalam .   Setiap adalah titik interior , sehingga . Karena ini berlaku bagi setiap subhimpunan terbuka , interior adalah kandidat terbuka terbesar yang termuat dalam .   Ambil sebarang himpunan terbuka dengan , lalu ambil sebarang . Karena terbuka, terdapat dengan . Maka , sehingga adalah titik interior dan . Kesimpulan ini berlaku untuk setiap ; jadi . Karena adalah kandidat terbuka sebarang di dalam , sementara sendiri sudah terbukti terbuka dan termuat dalam , interior itu memang subhimpunan terbuka terbesar yang termuat dalam .  "
+},
+{
+  "id": "o003-c90-ch08-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch08-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian pertama",
+  "body": " Panduan latihan sumber, bagian pertama  Tiga belas panduan berikut berkorespondensi, dalam urutan sumber, dengan tiga belas perintah pertama pada bagian latihan penutup Bab 8. ID panduan berlanjut dari o003-c90-ch08-guide-31 sampai o003-c90-ch08-guide-43 . Materi pendamping ini merupakan uraian asli untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh penulis karya sumber.  Setiap subhimpunan ruang diskret terbuka  Pada perintah pertama latihan penutup, memakai metrik diskret. Buktikan bahwa setiap subhimpunan terbuka. Rubrik. Periksa kasus ; untuk , mulai dari titik sebarang dan berikan satu bola berpusat di yang termuat dalam .    Langkah 1. Dalam metrik diskret, hitung dengan mengingat bahwa syarat bola memakai pertidaksamaan ketat.   Langkah 2. Jika , bandingkan bola itu dengan ; keterbukaan himpunan kosong berlaku secara hampa.   Benar. Untuk setiap , berlaku ; jadi setiap titik adalah titik interior.   Jika , syarat bahwa setiap titiknya mempunyai bola yang termuat dalam benar secara hampa, sehingga terbuka. Sekarang andaikan dan ambil sebarang . Pada metrik diskret, jika dan jika . Karena itu Maka . Titik sebarang, jadi setiap titik merupakan titik interior. Dengan demikian terbuka.   Setiap fungsi dari ruang diskret kontinu  Pada perintah kedua latihan penutup, domain bermetrik diskret dan adalah ruang metrik sebarang. Buktikan bahwa setiap fungsi kontinu. Rubrik. Terapkan karakterisasi kontinuitas melalui prapeta himpunan terbuka dan gunakan hasil perintah sebelumnya.    Langkah 1. Ambil himpunan terbuka sebarang dan amati bahwa hanyalah suatu subhimpunan dari .   Langkah 2. Semua subhimpunan dari ruang diskret terbuka; masukkan fakta ini ke kriteria prapeta-terbuka.   Ya. Untuk setiap himpunan terbuka , prapetanya merupakan subhimpunan ruang diskret , maka terbuka. Jadi kontinu.   Misalkan suatu himpunan terbuka dalam . Apa pun nilai-nilai fungsi , himpunan adalah suatu subhimpunan dari . Menurut hasil perintah pertama, setiap subhimpunan dari terbuka karena memakai metrik diskret. Jadi terbuka dalam untuk setiap himpunan terbuka . Karakterisasi kontinuitas melalui prapeta himpunan terbuka sekarang memberi bahwa kontinu.   Fungsi menuju ruang diskret tidak selalu kontinu  Pada perintah ketiga latihan penutup, tentukan apakah setiap fungsi menuju ruang diskret juga harus kontinu. Jika tidak, berikan ruang metrik , fungsi konkret, dan himpunan terbuka di kodomain yang prapetanya tidak terbuka. Rubrik. Sebuah ruang diskret dua titik dan satu fungsi yang membedakan satu titik garis real dari semua titik lain sudah cukup.    Langkah 1. Ambil dan dengan metrik diskret.   Langkah 2. Definisikan dan untuk , lalu hitung .   Tidak. Untuk fungsi di atas, terbuka dalam , sedangkan tidak terbuka dalam .   Ambil dan dengan metrik diskret. Definisikan Karena diskret, himpunan satu titik terbuka dalam . Akan tetapi, . Himpunan ini tidak terbuka dalam garis real bermetrik Euklides: untuk setiap , titik berada dalam tetapi tidak dalam . Jadi prapeta suatu himpunan terbuka tidak terbuka, sehingga tidak kontinu. Dengan demikian pernyataan universal pada sumber salah.   Himpunan terbuka sama dengan interiornya  Pada perintah keempat latihan penutup, buktikan pernyataan bikondisional: suatu subhimpunan dari ruang metrik terbuka jika dan hanya jika . Rubrik. Buktikan kedua arah secara terpisah dan jangan lupa bahwa selalu berlaku.    Langkah 1. Jika terbuka, setiap mempunyai bola terbuka yang termuat dalam .   Langkah 2. Untuk arah sebaliknya, gunakan fakta bahwa interior suatu himpunan adalah himpunan terbuka.   Benar. Keterbukaan memberi , sedangkan inklusi sebaliknya selalu benar. Jika , maka terbuka karena interior terbuka.   Andaikan dahulu terbuka. Untuk setiap , ada dengan . Jadi setiap merupakan titik interior dan . Dari definisi interior selalu berlaku , maka .  Sebaliknya, andaikan . Interior setiap himpunan merupakan himpunan terbuka. Karena sama dengan interiornya, sendiri terbuka. Kedua implikasi telah dibuktikan.   Interior bersifat monoton terhadap inklusi  Pada perintah kelima latihan penutup, diketahui . Buktikan atau sangkal . Rubrik. Mulailah dari titik interior sebarang dari dan pertahankan bola saksinya ketika memperbesar himpunan.    Langkah 1. Jika , ada dengan .   Langkah 2. Rangkaikan inklusi bola itu dengan .   Benar. Bola yang menunjukkan bahwa interior bagi juga termuat dalam .   Ambil sebarang . Menurut definisi, terdapat sedemikian sehingga . Karena , diperoleh Maka merupakan titik interior dari , yaitu . Karena sebarang, . Jadi pernyataan tersebut benar.   Interior bersifat idempoten  Pada perintah keenam latihan penutup, buktikan atau sangkal untuk setiap subhimpunan dari ruang metrik . Rubrik. Identifikasi sifat topologis , lalu terapkan karakterisasi pada perintah keempat.    Langkah 1. Himpunan selalu terbuka.   Langkah 2. Setiap himpunan terbuka sama dengan interiornya sendiri.   Benar. Karena terbuka, interior dari sama dengan .   Tetapkan . Berdasarkan sifat dasar interior, merupakan himpunan terbuka. Hasil perintah keempat menyatakan bahwa himpunan terbuka sama dengan interiornya, sehingga Jadi pernyataan tersebut benar untuk setiap , termasuk .   Interval setengah terbuka bukan himpunan terbuka  Pada perintah ketujuh latihan penutup, misalkan dengan . Tunjukkan bahwa tidak terbuka dalam . Rubrik. Pilih satu titik anggota yang menjadi titik batas dan, untuk setiap radius positif, bangun titik bola yang keluar dari interval.    Langkah 1. Titik berada dalam .   Langkah 2. Untuk , periksa titik .   Himpunan itu tidak terbuka. Setiap bola memuat , yang lebih besar daripada dan karena itu tidak berada dalam .   Titik adalah anggota . Ambil sebarang dan tetapkan . Karena , berlaku . Namun , sehingga . Jadi tidak ada bola terbuka berpusat di yang termuat dalam . Titik bukan titik interior, maka bukan himpunan terbuka.   Persegi panjang terbuka dalam metrik Euklides  Pada perintah kedelapan latihan penutup, tentukan apakah terbuka dalam , lalu buktikan jawaban Anda. Rubrik. Untuk titik sebarang dalam , gunakan jarak terkecil ke empat sisi sebagai radius.    Langkah 1. Untuk , tetapkan dan periksa bahwa .   Langkah 2. Jika dan , maka serta .   Ya. Untuk setiap , radius memenuhi .   Ambil . Keempat bilangan , , , dan positif. Jadi . Jika , maka Karena dan , pertidaksamaan pertama memberi . Karena dan , pertidaksamaan kedua memberi . Maka , sehingga . Karena sebarang, terbuka dalam metrik Euklides.   Persegi panjang terbuka dalam metrik taksi  Pada perintah kesembilan latihan penutup, tentukan apakah persegi panjang terbuka dalam , lalu buktikan jawaban Anda. Rubrik. Gunakan radius jarak minimum ke sisi dan turunkan batas perubahan masing-masing koordinat dari jarak taksi.    Langkah 1. Untuk , gunakan kembali .   Langkah 2. Dari , simpulkan secara terpisah bahwa dan .   Ya. Radius minimum ke empat sisi menghasilkan bagi setiap .   Ambil dan tetapkan . Jika , maka Kedua suku tak negatif, sehingga masing-masing kurang daripada . Seperti pada metrik Euklides, batas memberi , sedangkan memberi . Jadi . Dengan demikian dan terbuka dalam metrik taksi.   Persegi panjang terbuka dalam metrik maksimum  Pada perintah kesepuluh latihan penutup, tentukan apakah persegi panjang terbuka dalam , lalu buktikan jawaban Anda. Rubrik. Hubungkan langsung syarat bola maksimum dengan dua pertidaksamaan koordinat.    Langkah 1. Untuk , pilih .   Langkah 2. Syarat menyatakan bahwa kedua selisih koordinat kurang daripada .   Ya. Untuk setiap , bola maksimum dengan radius termuat dalam .   Ambil dan tetapkan . Jika , maka Jadi dan . Pilihan kemudian memberikan serta . Maka , sehingga . Karena setiap titik mempunyai bola demikian, terbuka dalam metrik maksimum.   Komplemen himpunan titik berhingga terbuka  Pada perintah kesebelas latihan penutup, adalah himpunan berhingga titik-titik di . Tentukan, disertai bukti, apakah terbuka dalam . Rumus ini mempertahankan perbaikan sumber yang telah disetujui: komplemennya adalah , bukan variabel yang tidak didefinisikan. Rubrik. Untuk titik di luar , ambil minimum dari sejumlah berhingga jarak positif; bahas pula kemungkinan kosong.    Langkah 1. Jika dan , tetapkan .   Langkah 2. Buktikan dan bahwa tidak ada di dalam . Jika kosong, komplemennya adalah seluruh ruang.   Ya. Jika tidak kosong, jarak minimum dari ke positif dan bolanya dengan radius itu menghindari ; kasus langsung.   Jika , maka , yang terbuka. Andaikan sekarang dan ambil sebarang . Untuk setiap , berlaku . Karena berhingga dan tidak kosong, minimum ada dan positif.  Jika suatu berada dalam , maka . Hal ini bertentangan dengan definisi . Jadi bola itu tidak beririsan dengan , atau . Setiap titik komplemen adalah titik interior, maka komplemen tersebut terbuka.   Kriteria kontinuitas melalui interior prapeta  Pada perintah kedua belas latihan penutup, untuk fungsi , buktikan bahwa kontinu jika dan hanya jika untuk setiap . Rubrik. Pada arah maju gunakan bahwa terbuka; pada arah balik substitusikan himpunan terbuka sebagai dan buktikan prapetanya terbuka.    Langkah 1. Jika kontinu, maka adalah himpunan terbuka yang termuat dalam .   Langkah 2. Jika inklusi diasumsikan dan terbuka, gunakan serta .   Pernyataan bikondisional itu benar. Arah maju mengikuti sifat interior sebagai himpunan terbuka terbesar; arah balik membuat setiap prapeta himpunan terbuka sama dengan interiornya sendiri.   Andaikan kontinu dan ambil sebarang . Himpunan terbuka dalam , sehingga terbuka dalam . Karena , berlaku . Setiap himpunan terbuka yang termuat dalam termuat dalam interiornya. Maka   Sebaliknya, andaikan inklusi tersebut berlaku untuk setiap . Ambil himpunan terbuka sebarang dan pilih . Karena , hipotesis memberi . Inklusi sebaliknya selalu berlaku dari definisi interior, jadi . Dengan hasil perintah keempat, terbuka. Prapeta setiap himpunan terbuka terbuka, maka kontinu.   Bola radius dua dalam metrik pecahan tereduksi  Pada perintah ketiga belas latihan penutup, memuat bilangan rasional dalam bentuk paling sederhana, dengan penyebut positif, dan . Deskripsikan tepat . Rubrik. Ubah pertidaksamaan jarak menjadi dua syarat pada pembilang dan penyebut bulat, lalu sisakan hanya pasangan yang relatif prima.    Langkah 1. Syarat memberi dan .   Langkah 2. Dari sembilan pasangan itu, coret , , dan karena pecahannya tidak dalam bentuk paling sederhana.   Bola yang diminta adalah .   Tuliskan titik sebarang di sebagai dalam bentuk paling sederhana dengan . Titik itu berada dalam bola tepat ketika Karena dan bilangan bulat, syarat ini ekuivalen dengan dan . Ada sembilan pasangan kandidat.  Pasangan , , dan tidak relatif prima, sehingga bukan representasi paling sederhana dan bukan titik dalam koordinat yang mendefinisikan metrik ini. Enam pasangan lainnya relatif prima. Oleh karena itu Misalnya, pecahan tidak boleh dimasukkan sebagai nama lain bagi ; bentuk kanonis justru mempunyai jarak dari .   "
+},
+{
+  "id": "o003-c90-ch08-guide-31",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-31",
+  "type": "Pemeriksaan",
+  "number": "H.31",
+  "title": "Setiap subhimpunan ruang diskret terbuka.",
+  "body": "Setiap subhimpunan ruang diskret terbuka  Pada perintah pertama latihan penutup, memakai metrik diskret. Buktikan bahwa setiap subhimpunan terbuka. Rubrik. Periksa kasus ; untuk , mulai dari titik sebarang dan berikan satu bola berpusat di yang termuat dalam .    Langkah 1. Dalam metrik diskret, hitung dengan mengingat bahwa syarat bola memakai pertidaksamaan ketat.   Langkah 2. Jika , bandingkan bola itu dengan ; keterbukaan himpunan kosong berlaku secara hampa.   Benar. Untuk setiap , berlaku ; jadi setiap titik adalah titik interior.   Jika , syarat bahwa setiap titiknya mempunyai bola yang termuat dalam benar secara hampa, sehingga terbuka. Sekarang andaikan dan ambil sebarang . Pada metrik diskret, jika dan jika . Karena itu Maka . Titik sebarang, jadi setiap titik merupakan titik interior. Dengan demikian terbuka.  "
+},
+{
+  "id": "o003-c90-ch08-guide-32",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-32",
+  "type": "Pemeriksaan",
+  "number": "H.32",
+  "title": "Setiap fungsi dari ruang diskret kontinu.",
+  "body": "Setiap fungsi dari ruang diskret kontinu  Pada perintah kedua latihan penutup, domain bermetrik diskret dan adalah ruang metrik sebarang. Buktikan bahwa setiap fungsi kontinu. Rubrik. Terapkan karakterisasi kontinuitas melalui prapeta himpunan terbuka dan gunakan hasil perintah sebelumnya.    Langkah 1. Ambil himpunan terbuka sebarang dan amati bahwa hanyalah suatu subhimpunan dari .   Langkah 2. Semua subhimpunan dari ruang diskret terbuka; masukkan fakta ini ke kriteria prapeta-terbuka.   Ya. Untuk setiap himpunan terbuka , prapetanya merupakan subhimpunan ruang diskret , maka terbuka. Jadi kontinu.   Misalkan suatu himpunan terbuka dalam . Apa pun nilai-nilai fungsi , himpunan adalah suatu subhimpunan dari . Menurut hasil perintah pertama, setiap subhimpunan dari terbuka karena memakai metrik diskret. Jadi terbuka dalam untuk setiap himpunan terbuka . Karakterisasi kontinuitas melalui prapeta himpunan terbuka sekarang memberi bahwa kontinu.  "
+},
+{
+  "id": "o003-c90-ch08-guide-33",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-33",
+  "type": "Pemeriksaan",
+  "number": "H.33",
+  "title": "Fungsi menuju ruang diskret tidak selalu kontinu.",
+  "body": "Fungsi menuju ruang diskret tidak selalu kontinu  Pada perintah ketiga latihan penutup, tentukan apakah setiap fungsi menuju ruang diskret juga harus kontinu. Jika tidak, berikan ruang metrik , fungsi konkret, dan himpunan terbuka di kodomain yang prapetanya tidak terbuka. Rubrik. Sebuah ruang diskret dua titik dan satu fungsi yang membedakan satu titik garis real dari semua titik lain sudah cukup.    Langkah 1. Ambil dan dengan metrik diskret.   Langkah 2. Definisikan dan untuk , lalu hitung .   Tidak. Untuk fungsi di atas, terbuka dalam , sedangkan tidak terbuka dalam .   Ambil dan dengan metrik diskret. Definisikan Karena diskret, himpunan satu titik terbuka dalam . Akan tetapi, . Himpunan ini tidak terbuka dalam garis real bermetrik Euklides: untuk setiap , titik berada dalam tetapi tidak dalam . Jadi prapeta suatu himpunan terbuka tidak terbuka, sehingga tidak kontinu. Dengan demikian pernyataan universal pada sumber salah.  "
+},
+{
+  "id": "o003-c90-ch08-guide-34",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-34",
+  "type": "Pemeriksaan",
+  "number": "H.34",
+  "title": "Himpunan terbuka sama dengan interiornya.",
+  "body": "Himpunan terbuka sama dengan interiornya  Pada perintah keempat latihan penutup, buktikan pernyataan bikondisional: suatu subhimpunan dari ruang metrik terbuka jika dan hanya jika . Rubrik. Buktikan kedua arah secara terpisah dan jangan lupa bahwa selalu berlaku.    Langkah 1. Jika terbuka, setiap mempunyai bola terbuka yang termuat dalam .   Langkah 2. Untuk arah sebaliknya, gunakan fakta bahwa interior suatu himpunan adalah himpunan terbuka.   Benar. Keterbukaan memberi , sedangkan inklusi sebaliknya selalu benar. Jika , maka terbuka karena interior terbuka.   Andaikan dahulu terbuka. Untuk setiap , ada dengan . Jadi setiap merupakan titik interior dan . Dari definisi interior selalu berlaku , maka .  Sebaliknya, andaikan . Interior setiap himpunan merupakan himpunan terbuka. Karena sama dengan interiornya, sendiri terbuka. Kedua implikasi telah dibuktikan.  "
+},
+{
+  "id": "o003-c90-ch08-guide-35",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-35",
+  "type": "Pemeriksaan",
+  "number": "H.35",
+  "title": "Interior bersifat monoton terhadap inklusi.",
+  "body": "Interior bersifat monoton terhadap inklusi  Pada perintah kelima latihan penutup, diketahui . Buktikan atau sangkal . Rubrik. Mulailah dari titik interior sebarang dari dan pertahankan bola saksinya ketika memperbesar himpunan.    Langkah 1. Jika , ada dengan .   Langkah 2. Rangkaikan inklusi bola itu dengan .   Benar. Bola yang menunjukkan bahwa interior bagi juga termuat dalam .   Ambil sebarang . Menurut definisi, terdapat sedemikian sehingga . Karena , diperoleh Maka merupakan titik interior dari , yaitu . Karena sebarang, . Jadi pernyataan tersebut benar.  "
+},
+{
+  "id": "o003-c90-ch08-guide-36",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-36",
+  "type": "Pemeriksaan",
+  "number": "H.36",
+  "title": "Interior bersifat idempoten.",
+  "body": "Interior bersifat idempoten  Pada perintah keenam latihan penutup, buktikan atau sangkal untuk setiap subhimpunan dari ruang metrik . Rubrik. Identifikasi sifat topologis , lalu terapkan karakterisasi pada perintah keempat.    Langkah 1. Himpunan selalu terbuka.   Langkah 2. Setiap himpunan terbuka sama dengan interiornya sendiri.   Benar. Karena terbuka, interior dari sama dengan .   Tetapkan . Berdasarkan sifat dasar interior, merupakan himpunan terbuka. Hasil perintah keempat menyatakan bahwa himpunan terbuka sama dengan interiornya, sehingga Jadi pernyataan tersebut benar untuk setiap , termasuk .  "
+},
+{
+  "id": "o003-c90-ch08-guide-37",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-37",
+  "type": "Pemeriksaan",
+  "number": "H.37",
+  "title": "Interval setengah terbuka bukan himpunan terbuka.",
+  "body": "Interval setengah terbuka bukan himpunan terbuka  Pada perintah ketujuh latihan penutup, misalkan dengan . Tunjukkan bahwa tidak terbuka dalam . Rubrik. Pilih satu titik anggota yang menjadi titik batas dan, untuk setiap radius positif, bangun titik bola yang keluar dari interval.    Langkah 1. Titik berada dalam .   Langkah 2. Untuk , periksa titik .   Himpunan itu tidak terbuka. Setiap bola memuat , yang lebih besar daripada dan karena itu tidak berada dalam .   Titik adalah anggota . Ambil sebarang dan tetapkan . Karena , berlaku . Namun , sehingga . Jadi tidak ada bola terbuka berpusat di yang termuat dalam . Titik bukan titik interior, maka bukan himpunan terbuka.  "
+},
+{
+  "id": "o003-c90-ch08-guide-38",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-38",
+  "type": "Pemeriksaan",
+  "number": "H.38",
+  "title": "Persegi panjang terbuka dalam metrik Euklides.",
+  "body": "Persegi panjang terbuka dalam metrik Euklides  Pada perintah kedelapan latihan penutup, tentukan apakah terbuka dalam , lalu buktikan jawaban Anda. Rubrik. Untuk titik sebarang dalam , gunakan jarak terkecil ke empat sisi sebagai radius.    Langkah 1. Untuk , tetapkan dan periksa bahwa .   Langkah 2. Jika dan , maka serta .   Ya. Untuk setiap , radius memenuhi .   Ambil . Keempat bilangan , , , dan positif. Jadi . Jika , maka Karena dan , pertidaksamaan pertama memberi . Karena dan , pertidaksamaan kedua memberi . Maka , sehingga . Karena sebarang, terbuka dalam metrik Euklides.  "
+},
+{
+  "id": "o003-c90-ch08-guide-39",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-39",
+  "type": "Pemeriksaan",
+  "number": "H.39",
+  "title": "Persegi panjang terbuka dalam metrik taksi.",
+  "body": "Persegi panjang terbuka dalam metrik taksi  Pada perintah kesembilan latihan penutup, tentukan apakah persegi panjang terbuka dalam , lalu buktikan jawaban Anda. Rubrik. Gunakan radius jarak minimum ke sisi dan turunkan batas perubahan masing-masing koordinat dari jarak taksi.    Langkah 1. Untuk , gunakan kembali .   Langkah 2. Dari , simpulkan secara terpisah bahwa dan .   Ya. Radius minimum ke empat sisi menghasilkan bagi setiap .   Ambil dan tetapkan . Jika , maka Kedua suku tak negatif, sehingga masing-masing kurang daripada . Seperti pada metrik Euklides, batas memberi , sedangkan memberi . Jadi . Dengan demikian dan terbuka dalam metrik taksi.  "
+},
+{
+  "id": "o003-c90-ch08-guide-40",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-40",
+  "type": "Pemeriksaan",
+  "number": "H.40",
+  "title": "Persegi panjang terbuka dalam metrik maksimum.",
+  "body": "Persegi panjang terbuka dalam metrik maksimum  Pada perintah kesepuluh latihan penutup, tentukan apakah persegi panjang terbuka dalam , lalu buktikan jawaban Anda. Rubrik. Hubungkan langsung syarat bola maksimum dengan dua pertidaksamaan koordinat.    Langkah 1. Untuk , pilih .   Langkah 2. Syarat menyatakan bahwa kedua selisih koordinat kurang daripada .   Ya. Untuk setiap , bola maksimum dengan radius termuat dalam .   Ambil dan tetapkan . Jika , maka Jadi dan . Pilihan kemudian memberikan serta . Maka , sehingga . Karena setiap titik mempunyai bola demikian, terbuka dalam metrik maksimum.  "
+},
+{
+  "id": "o003-c90-ch08-guide-41",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-41",
+  "type": "Pemeriksaan",
+  "number": "H.41",
+  "title": "Komplemen himpunan titik berhingga terbuka.",
+  "body": "Komplemen himpunan titik berhingga terbuka  Pada perintah kesebelas latihan penutup, adalah himpunan berhingga titik-titik di . Tentukan, disertai bukti, apakah terbuka dalam . Rumus ini mempertahankan perbaikan sumber yang telah disetujui: komplemennya adalah , bukan variabel yang tidak didefinisikan. Rubrik. Untuk titik di luar , ambil minimum dari sejumlah berhingga jarak positif; bahas pula kemungkinan kosong.    Langkah 1. Jika dan , tetapkan .   Langkah 2. Buktikan dan bahwa tidak ada di dalam . Jika kosong, komplemennya adalah seluruh ruang.   Ya. Jika tidak kosong, jarak minimum dari ke positif dan bolanya dengan radius itu menghindari ; kasus langsung.   Jika , maka , yang terbuka. Andaikan sekarang dan ambil sebarang . Untuk setiap , berlaku . Karena berhingga dan tidak kosong, minimum ada dan positif.  Jika suatu berada dalam , maka . Hal ini bertentangan dengan definisi . Jadi bola itu tidak beririsan dengan , atau . Setiap titik komplemen adalah titik interior, maka komplemen tersebut terbuka.  "
+},
+{
+  "id": "o003-c90-ch08-guide-42",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-42",
+  "type": "Pemeriksaan",
+  "number": "H.42",
+  "title": "Kriteria kontinuitas melalui interior prapeta.",
+  "body": "Kriteria kontinuitas melalui interior prapeta  Pada perintah kedua belas latihan penutup, untuk fungsi , buktikan bahwa kontinu jika dan hanya jika untuk setiap . Rubrik. Pada arah maju gunakan bahwa terbuka; pada arah balik substitusikan himpunan terbuka sebagai dan buktikan prapetanya terbuka.    Langkah 1. Jika kontinu, maka adalah himpunan terbuka yang termuat dalam .   Langkah 2. Jika inklusi diasumsikan dan terbuka, gunakan serta .   Pernyataan bikondisional itu benar. Arah maju mengikuti sifat interior sebagai himpunan terbuka terbesar; arah balik membuat setiap prapeta himpunan terbuka sama dengan interiornya sendiri.   Andaikan kontinu dan ambil sebarang . Himpunan terbuka dalam , sehingga terbuka dalam . Karena , berlaku . Setiap himpunan terbuka yang termuat dalam termuat dalam interiornya. Maka   Sebaliknya, andaikan inklusi tersebut berlaku untuk setiap . Ambil himpunan terbuka sebarang dan pilih . Karena , hipotesis memberi . Inklusi sebaliknya selalu berlaku dari definisi interior, jadi . Dengan hasil perintah keempat, terbuka. Prapeta setiap himpunan terbuka terbuka, maka kontinu.  "
+},
+{
+  "id": "o003-c90-ch08-guide-43",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-a.html#o003-c90-ch08-guide-43",
+  "type": "Pemeriksaan",
+  "number": "H.43",
+  "title": "Bola radius dua dalam metrik pecahan tereduksi.",
+  "body": "Bola radius dua dalam metrik pecahan tereduksi  Pada perintah ketiga belas latihan penutup, memuat bilangan rasional dalam bentuk paling sederhana, dengan penyebut positif, dan . Deskripsikan tepat . Rubrik. Ubah pertidaksamaan jarak menjadi dua syarat pada pembilang dan penyebut bulat, lalu sisakan hanya pasangan yang relatif prima.    Langkah 1. Syarat memberi dan .   Langkah 2. Dari sembilan pasangan itu, coret , , dan karena pecahannya tidak dalam bentuk paling sederhana.   Bola yang diminta adalah .   Tuliskan titik sebarang di sebagai dalam bentuk paling sederhana dengan . Titik itu berada dalam bola tepat ketika Karena dan bilangan bulat, syarat ini ekuivalen dengan dan . Ada sembilan pasangan kandidat.  Pasangan , , dan tidak relatif prima, sehingga bukan representasi paling sederhana dan bukan titik dalam koordinat yang mendefinisikan metrik ini. Enam pasangan lainnya relatif prima. Oleh karena itu Misalnya, pecahan tidak boleh dimasukkan sebagai nama lain bagi ; bentuk kanonis justru mempunyai jarak dari .  "
+},
+{
+  "id": "o003-c90-ch08-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch08-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian kedua",
+  "body": " Panduan latihan sumber, bagian kedua  Dua belas panduan berikut berkorespondensi, dalam urutan sumber, dengan perintah ke-14 sampai ke-25 pada bagian latihan penutup Bab 8. ID panduan berlanjut dari o003-c90-ch08-guide-44 sampai o003-c90-ch08-guide-55 . Materi pendamping ini merupakan uraian asli untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh penulis karya sumber.  Memisahkan dua titik dengan himpunan terbuka  Pada perintah ke-14 latihan penutup, misalkan dalam ruang metrik . Buktikan bahwa ada himpunan terbuka dan dengan . Rubrik. Gunakan jarak positif antartitik untuk memilih dua bola, lalu singkirkan kemungkinan adanya titik pada irisan memakai pertidaksamaan segitiga.    Langkah 1. Tetapkan dan ambil untuk .   Langkah 2. Jika berada dalam kedua bola, bandingkan dengan .   Ambil dan , dengan . Kedua bola terbuka, memuat pusat masing-masing, dan saling lepas.   Karena , aksioma metrik memberi . Tetapkan dan . Bola terbuka adalah himpunan terbuka, dan , sehingga .  Andaikan ada . Pertidaksamaan segitiga menghasilkan suatu kontradiksi. Jadi , sebagaimana diminta.   Bola terbuka untuk metrik jarak terkompresi  Pada perintah ke-15 latihan penutup, memakai metrik . Deskripsikan untuk pusat dan . Huruf pusat diganti dari pada perintah sumber menjadi agar tidak bertabrakan dengan koefisien dalam rumus ; rumus sumber tidak diubah. Sumber juga menyebut rumus itu “linear” untuk semua , padahal secara umum ia afin dan hanya linear bila . Panduan ini mempertahankan kuantor dan tidak mengubah rumusnya. Rubrik. Pisahkan kasus dan , sebab semua jarak dalam metrik ini kurang dari .    Langkah 1. Untuk , tetapkan dan selesaikan terhadap .   Langkah 2. Untuk , gunakan bagi setiap .   Jika , maka . Jika , maka .   Ambil dan tuliskan . Jika , maka Jadi   Untuk setiap , berlaku . Maka jika , setiap memenuhi , termasuk ketika karena pertidaksamaannya tetap ketat pada jarak. Jadi untuk .   Rumus afin dari metrik Euklides ke metrik terkompresi  Pada perintah ke-16 latihan penutup, domain , kodomain dengan , dan untuk . Tentukan apakah kontinu untuk semua dan buktikan. Label sumber “fungsi linear sebarang” tidak tepat ketika ; panduan mempertahankan formula serta kuantor sumber dan menyebutnya fungsi afin secara umum. Rubrik. Pisahkan kasus ; jika , bandingkan jarak kodomain dengan .    Langkah 1. Untuk , berlaku .   Langkah 2. Jika dan toleransi keluaran adalah , coba pada domain Euklides.   Ya. Semua rumus itu kontinu dari ke ; untuk , pilihan cukup, sedangkan memberi fungsi konstan.   Tetapkan dan . Jika , fungsi konstan, sehingga jarak semua nilainya dari adalah nol dan kontinuitas langsung berlaku.  Andaikan dan pilih . Jika , maka, dengan , Jadi kontinu di . Karena sebarang, kontinu untuk semua . Suku translasi hilang dari selisih, tetapi tetap bagian dari formula yang dibuktikan.   Rumus afin dari metrik terkompresi ke metrik Euklides  Pada perintah ke-17 latihan penutup, balik peran ruang: menjadi domain dan menjadi kodomain. Untuk formula sumber yang sama, dengan , tentukan apakah kontinu. Seperti pada panduan sebelumnya, formula ini diperlakukan sebagai afin secara umum dan linear hanya pada kasus ; tidak ada rumus atau kuantor sumber yang diubah. Rubrik. Untuk , pilih radius domain kurang dari satu dan balik pertidaksamaan agar .    Langkah 1. Untuk dan , ambil ; periksa bahwa .   Langkah 2. Dari , peroleh .   Ya. Semua fungsi itu kontinu dari ke . Untuk , pilihan bekerja; kasus konstan.   Tetapkan dan . Jika , konstan dan kontinu. Andaikan , lalu pilih Karena pembilang dan penyebut positif serta penyebut lebih besar, .  Jika dan , maka Oleh sebab itu jarak Euklides di kodomain memenuhi Maka kontinu di setiap , untuk seluruh yang dikuantifikasi dalam sumber.   Kontinuitas proyeksi dari metrik maksimum  Pada perintah ke-18 latihan penutup, fungsi diberikan oleh . Tentukan dan buktikan apakah kontinu. Teks sumber hanya mengatakan “Gunakan Teorema” tanpa nomor, ID, atau xref. Karena sasaran itu memang menggantung dan lebih dari satu hasil kontinuitas di sekitar bagian tersebut dapat dipakai, panduan ini tidak menebak teoremanya dan memberikan bukti langsung. Rubrik. Bandingkan perubahan koordinat pertama dengan jarak maksimum dua titik.    Langkah 1. Untuk dan , hitung .   Langkah 2. Tunjukkan , lalu pilih .   Ya. Proyeksi itu kontinu, bahkan 1-Lipschitz: untuk semua .   Ambil dan . Maka Tetapkan dan . Pilih . Jika , pertidaksamaan di atas memberi . Jadi kontinu di setiap . Bukti ini menyelesaikan soal tanpa memasang xref baru pada frasa “Gunakan Teorema” yang sasarannya belum ditentukan secara otoritatif.   Interior gabungan tidak selalu masuk gabungan interior  Pada perintah ke-19 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong dari ruang metrik , selalu berlaku . Rubrik. Jika salah, pilih dua interval tertutup yang bertemu pada satu titik dan hitung ketiga interiornya.    Langkah 1. Dalam , ambil dan .   Langkah 2. Periksa posisi titik terhadap dan .   Salah. Untuk dan , titik berada dalam , tetapi tidak berada dalam .   Ambil , , dan . Kedua himpunan tak kosong. Interiornya adalah dan . Namun , sehingga . Khususnya, Maka inklusi yang diklaim gagal, jadi pernyataan universal tersebut salah.   Gabungan interior masuk interior gabungan  Pada perintah ke-20 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong , selalu berlaku . Rubrik. Tunjukkan bahwa ruas kiri terbuka dan termuat dalam , lalu gunakan sifat interior sebagai himpunan terbuka terbesar yang termuat di dalam suatu himpunan.    Langkah 1. Himpunan dan terbuka, sehingga gabungannya terbuka.   Langkah 2. Gunakan dan .   Benar. adalah himpunan terbuka yang termuat dalam , maka termuat dalam interior gabungan.   Interior dan masing-masing terbuka; gabungan dua himpunan terbuka juga terbuka. Selain itu, Karena adalah himpunan terbuka terbesar yang termuat dalam , setiap himpunan terbuka yang termuat dalam , termasuk , harus termuat di dalamnya. Jadi inklusi itu benar. Hipotesis tak kosong bahkan tidak diperlukan untuk argumen ini.   Interior irisan masuk irisan interior  Pada perintah ke-21 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong , selalu berlaku . Rubrik. Mulailah dari satu bola yang termuat dalam irisan dan gunakan bola yang sama untuk kedua himpunan.    Langkah 1. Jika , ada dengan .   Langkah 2. Dari inklusi itu simpulkan secara terpisah dan .   Benar. Setiap titik interior dari sekaligus merupakan titik interior dari dan dari .   Ambil . Terdapat dengan . Karena dan , berlaku serta . Jadi dan , sehingga . Karena sebarang, inklusi yang diminta benar.   Irisan interior masuk interior irisan  Pada perintah ke-22 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong , selalu berlaku . Rubrik. Dari dua radius yang mungkin berbeda, bangun satu radius positif yang bekerja untuk irisan.    Langkah 1. Jika , pilih dengan bola masing-masing termuat dalam dan .   Langkah 2. Gunakan .   Benar. Bola beradius termuat sekaligus dalam dan , maka termuat dalam irisannya.   Ambil . Ada sedemikian sehingga dan . Tetapkan . Jika , maka dan . Jadi . Maka , sehingga . Inklusi itu benar; bersama perintah sebelumnya, bahkan diperoleh .   Subhimpunan himpunan terbuka belum tentu terbuka  Pada perintah ke-23 latihan penutup, putuskan benar atau salah: setiap subhimpunan dari suatu himpunan terbuka dalam ruang metrik terbuka dalam . Rubrik. Jika salah, pilih himpunan terbuka sederhana di garis real dan sebuah himpunan satu titik di dalamnya; verifikasi kegagalan keterbukaan himpunan satu titik tersebut.    Langkah 1. Dalam , ambil dan .   Langkah 2. Untuk setiap , cari titik bukan nol di dalam .   Salah. terbuka dalam , tetapi subhimpunannya tidak terbuka dalam metrik Euklides.   Dalam , himpunan terbuka dan memenuhi . Namun untuk setiap , titik memenuhi , sehingga berada dalam , tetapi . Jadi tidak ada bola berpusat di yang termuat dalam . Maka tidak terbuka, dan contoh ini membantah pernyataan sumber.   Metrik Euklides dan taksi memberi himpunan terbuka yang sama  Pada perintah ke-24 latihan penutup, putuskan benar atau salah: terbuka terhadap metrik Euklides jika dan hanya jika terbuka terhadap metrik taksi . Rubrik. Buktikan kedua arah dengan perbandingan dan inklusi bola yang sesuai.    Langkah 1. Jika , gunakan .   Langkah 2. Jika , gunakan .   Benar. Kedua metrik menghasilkan keluarga himpunan terbuka yang sama karena setiap bola kecil untuk salah satu metrik memuat bola yang sesuai untuk metrik lainnya.   Untuk dan , tuliskan dan . Maka   Andaikan terbuka terhadap . Untuk , pilih dengan . Ketaksamaan pertama memberi , jadi terbuka terhadap .  Sebaliknya, andaikan terbuka terhadap . Untuk , pilih dengan . Jika , maka . Jadi . Dengan demikian juga terbuka terhadap , dan bikondisional tersebut terbukti.   Komponen interval terbuka dalam ruang bagian  Pada perintah ke-25 latihan penutup, misalkan dilengkapi metrik Euklides yang dibatasi ke . Putuskan benar atau salah bahwa merupakan subhimpunan terbuka dari . Rubrik. Bola harus dihitung di dalam ruang , bukan di seluruh ; gunakan celah antara dua interval untuk memilih radius.    Langkah 1. Ambil dan pertimbangkan bola relatif .   Langkah 2. Untuk , tunjukkan .   Benar. Untuk setiap , bola relatif tidak mencapai dan karena itu termuat dalam .   Ambil sebarang . Jika , maka , sehingga . Jadi tidak ada titik dari komponen yang berada dalam bola relatif Karena semua titik yang tersisa berada dalam , berlaku . Setiap titik mempunyai bola terbuka relatif yang termuat dalam , sehingga terbuka sebagai subhimpunan . Pernyataan ini tidak mengatakan bahwa terbuka dalam ruang induk .   "
+},
+{
+  "id": "o003-c90-ch08-guide-44",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-44",
+  "type": "Pemeriksaan",
+  "number": "H.44",
+  "title": "Memisahkan dua titik dengan himpunan terbuka.",
+  "body": "Memisahkan dua titik dengan himpunan terbuka  Pada perintah ke-14 latihan penutup, misalkan dalam ruang metrik . Buktikan bahwa ada himpunan terbuka dan dengan . Rubrik. Gunakan jarak positif antartitik untuk memilih dua bola, lalu singkirkan kemungkinan adanya titik pada irisan memakai pertidaksamaan segitiga.    Langkah 1. Tetapkan dan ambil untuk .   Langkah 2. Jika berada dalam kedua bola, bandingkan dengan .   Ambil dan , dengan . Kedua bola terbuka, memuat pusat masing-masing, dan saling lepas.   Karena , aksioma metrik memberi . Tetapkan dan . Bola terbuka adalah himpunan terbuka, dan , sehingga .  Andaikan ada . Pertidaksamaan segitiga menghasilkan suatu kontradiksi. Jadi , sebagaimana diminta.  "
+},
+{
+  "id": "o003-c90-ch08-guide-45",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-45",
+  "type": "Pemeriksaan",
+  "number": "H.45",
+  "title": "Bola terbuka untuk metrik jarak terkompresi.",
+  "body": "Bola terbuka untuk metrik jarak terkompresi  Pada perintah ke-15 latihan penutup, memakai metrik . Deskripsikan untuk pusat dan . Huruf pusat diganti dari pada perintah sumber menjadi agar tidak bertabrakan dengan koefisien dalam rumus ; rumus sumber tidak diubah. Sumber juga menyebut rumus itu “linear” untuk semua , padahal secara umum ia afin dan hanya linear bila . Panduan ini mempertahankan kuantor dan tidak mengubah rumusnya. Rubrik. Pisahkan kasus dan , sebab semua jarak dalam metrik ini kurang dari .    Langkah 1. Untuk , tetapkan dan selesaikan terhadap .   Langkah 2. Untuk , gunakan bagi setiap .   Jika , maka . Jika , maka .   Ambil dan tuliskan . Jika , maka Jadi   Untuk setiap , berlaku . Maka jika , setiap memenuhi , termasuk ketika karena pertidaksamaannya tetap ketat pada jarak. Jadi untuk .  "
+},
+{
+  "id": "o003-c90-ch08-guide-46",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-46",
+  "type": "Pemeriksaan",
+  "number": "H.46",
+  "title": "Rumus afin dari metrik Euklides ke metrik terkompresi.",
+  "body": "Rumus afin dari metrik Euklides ke metrik terkompresi  Pada perintah ke-16 latihan penutup, domain , kodomain dengan , dan untuk . Tentukan apakah kontinu untuk semua dan buktikan. Label sumber “fungsi linear sebarang” tidak tepat ketika ; panduan mempertahankan formula serta kuantor sumber dan menyebutnya fungsi afin secara umum. Rubrik. Pisahkan kasus ; jika , bandingkan jarak kodomain dengan .    Langkah 1. Untuk , berlaku .   Langkah 2. Jika dan toleransi keluaran adalah , coba pada domain Euklides.   Ya. Semua rumus itu kontinu dari ke ; untuk , pilihan cukup, sedangkan memberi fungsi konstan.   Tetapkan dan . Jika , fungsi konstan, sehingga jarak semua nilainya dari adalah nol dan kontinuitas langsung berlaku.  Andaikan dan pilih . Jika , maka, dengan , Jadi kontinu di . Karena sebarang, kontinu untuk semua . Suku translasi hilang dari selisih, tetapi tetap bagian dari formula yang dibuktikan.  "
+},
+{
+  "id": "o003-c90-ch08-guide-47",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-47",
+  "type": "Pemeriksaan",
+  "number": "H.47",
+  "title": "Rumus afin dari metrik terkompresi ke metrik Euklides.",
+  "body": "Rumus afin dari metrik terkompresi ke metrik Euklides  Pada perintah ke-17 latihan penutup, balik peran ruang: menjadi domain dan menjadi kodomain. Untuk formula sumber yang sama, dengan , tentukan apakah kontinu. Seperti pada panduan sebelumnya, formula ini diperlakukan sebagai afin secara umum dan linear hanya pada kasus ; tidak ada rumus atau kuantor sumber yang diubah. Rubrik. Untuk , pilih radius domain kurang dari satu dan balik pertidaksamaan agar .    Langkah 1. Untuk dan , ambil ; periksa bahwa .   Langkah 2. Dari , peroleh .   Ya. Semua fungsi itu kontinu dari ke . Untuk , pilihan bekerja; kasus konstan.   Tetapkan dan . Jika , konstan dan kontinu. Andaikan , lalu pilih Karena pembilang dan penyebut positif serta penyebut lebih besar, .  Jika dan , maka Oleh sebab itu jarak Euklides di kodomain memenuhi Maka kontinu di setiap , untuk seluruh yang dikuantifikasi dalam sumber.  "
+},
+{
+  "id": "o003-c90-ch08-guide-48",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-48",
+  "type": "Pemeriksaan",
+  "number": "H.48",
+  "title": "Kontinuitas proyeksi dari metrik maksimum.",
+  "body": "Kontinuitas proyeksi dari metrik maksimum  Pada perintah ke-18 latihan penutup, fungsi diberikan oleh . Tentukan dan buktikan apakah kontinu. Teks sumber hanya mengatakan “Gunakan Teorema” tanpa nomor, ID, atau xref. Karena sasaran itu memang menggantung dan lebih dari satu hasil kontinuitas di sekitar bagian tersebut dapat dipakai, panduan ini tidak menebak teoremanya dan memberikan bukti langsung. Rubrik. Bandingkan perubahan koordinat pertama dengan jarak maksimum dua titik.    Langkah 1. Untuk dan , hitung .   Langkah 2. Tunjukkan , lalu pilih .   Ya. Proyeksi itu kontinu, bahkan 1-Lipschitz: untuk semua .   Ambil dan . Maka Tetapkan dan . Pilih . Jika , pertidaksamaan di atas memberi . Jadi kontinu di setiap . Bukti ini menyelesaikan soal tanpa memasang xref baru pada frasa “Gunakan Teorema” yang sasarannya belum ditentukan secara otoritatif.  "
+},
+{
+  "id": "o003-c90-ch08-guide-49",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-49",
+  "type": "Pemeriksaan",
+  "number": "H.49",
+  "title": "Interior gabungan tidak selalu masuk gabungan interior.",
+  "body": "Interior gabungan tidak selalu masuk gabungan interior  Pada perintah ke-19 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong dari ruang metrik , selalu berlaku . Rubrik. Jika salah, pilih dua interval tertutup yang bertemu pada satu titik dan hitung ketiga interiornya.    Langkah 1. Dalam , ambil dan .   Langkah 2. Periksa posisi titik terhadap dan .   Salah. Untuk dan , titik berada dalam , tetapi tidak berada dalam .   Ambil , , dan . Kedua himpunan tak kosong. Interiornya adalah dan . Namun , sehingga . Khususnya, Maka inklusi yang diklaim gagal, jadi pernyataan universal tersebut salah.  "
+},
+{
+  "id": "o003-c90-ch08-guide-50",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-50",
+  "type": "Pemeriksaan",
+  "number": "H.50",
+  "title": "Gabungan interior masuk interior gabungan.",
+  "body": "Gabungan interior masuk interior gabungan  Pada perintah ke-20 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong , selalu berlaku . Rubrik. Tunjukkan bahwa ruas kiri terbuka dan termuat dalam , lalu gunakan sifat interior sebagai himpunan terbuka terbesar yang termuat di dalam suatu himpunan.    Langkah 1. Himpunan dan terbuka, sehingga gabungannya terbuka.   Langkah 2. Gunakan dan .   Benar. adalah himpunan terbuka yang termuat dalam , maka termuat dalam interior gabungan.   Interior dan masing-masing terbuka; gabungan dua himpunan terbuka juga terbuka. Selain itu, Karena adalah himpunan terbuka terbesar yang termuat dalam , setiap himpunan terbuka yang termuat dalam , termasuk , harus termuat di dalamnya. Jadi inklusi itu benar. Hipotesis tak kosong bahkan tidak diperlukan untuk argumen ini.  "
+},
+{
+  "id": "o003-c90-ch08-guide-51",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-51",
+  "type": "Pemeriksaan",
+  "number": "H.51",
+  "title": "Interior irisan masuk irisan interior.",
+  "body": "Interior irisan masuk irisan interior  Pada perintah ke-21 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong , selalu berlaku . Rubrik. Mulailah dari satu bola yang termuat dalam irisan dan gunakan bola yang sama untuk kedua himpunan.    Langkah 1. Jika , ada dengan .   Langkah 2. Dari inklusi itu simpulkan secara terpisah dan .   Benar. Setiap titik interior dari sekaligus merupakan titik interior dari dan dari .   Ambil . Terdapat dengan . Karena dan , berlaku serta . Jadi dan , sehingga . Karena sebarang, inklusi yang diminta benar.  "
+},
+{
+  "id": "o003-c90-ch08-guide-52",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-52",
+  "type": "Pemeriksaan",
+  "number": "H.52",
+  "title": "Irisan interior masuk interior irisan.",
+  "body": "Irisan interior masuk interior irisan  Pada perintah ke-22 latihan penutup, putuskan benar atau salah: untuk subhimpunan tak kosong , selalu berlaku . Rubrik. Dari dua radius yang mungkin berbeda, bangun satu radius positif yang bekerja untuk irisan.    Langkah 1. Jika , pilih dengan bola masing-masing termuat dalam dan .   Langkah 2. Gunakan .   Benar. Bola beradius termuat sekaligus dalam dan , maka termuat dalam irisannya.   Ambil . Ada sedemikian sehingga dan . Tetapkan . Jika , maka dan . Jadi . Maka , sehingga . Inklusi itu benar; bersama perintah sebelumnya, bahkan diperoleh .  "
+},
+{
+  "id": "o003-c90-ch08-guide-53",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-53",
+  "type": "Pemeriksaan",
+  "number": "H.53",
+  "title": "Subhimpunan himpunan terbuka belum tentu terbuka.",
+  "body": "Subhimpunan himpunan terbuka belum tentu terbuka  Pada perintah ke-23 latihan penutup, putuskan benar atau salah: setiap subhimpunan dari suatu himpunan terbuka dalam ruang metrik terbuka dalam . Rubrik. Jika salah, pilih himpunan terbuka sederhana di garis real dan sebuah himpunan satu titik di dalamnya; verifikasi kegagalan keterbukaan himpunan satu titik tersebut.    Langkah 1. Dalam , ambil dan .   Langkah 2. Untuk setiap , cari titik bukan nol di dalam .   Salah. terbuka dalam , tetapi subhimpunannya tidak terbuka dalam metrik Euklides.   Dalam , himpunan terbuka dan memenuhi . Namun untuk setiap , titik memenuhi , sehingga berada dalam , tetapi . Jadi tidak ada bola berpusat di yang termuat dalam . Maka tidak terbuka, dan contoh ini membantah pernyataan sumber.  "
+},
+{
+  "id": "o003-c90-ch08-guide-54",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-54",
+  "type": "Pemeriksaan",
+  "number": "H.54",
+  "title": "Metrik Euklides dan taksi memberi himpunan terbuka yang sama.",
+  "body": "Metrik Euklides dan taksi memberi himpunan terbuka yang sama  Pada perintah ke-24 latihan penutup, putuskan benar atau salah: terbuka terhadap metrik Euklides jika dan hanya jika terbuka terhadap metrik taksi . Rubrik. Buktikan kedua arah dengan perbandingan dan inklusi bola yang sesuai.    Langkah 1. Jika , gunakan .   Langkah 2. Jika , gunakan .   Benar. Kedua metrik menghasilkan keluarga himpunan terbuka yang sama karena setiap bola kecil untuk salah satu metrik memuat bola yang sesuai untuk metrik lainnya.   Untuk dan , tuliskan dan . Maka   Andaikan terbuka terhadap . Untuk , pilih dengan . Ketaksamaan pertama memberi , jadi terbuka terhadap .  Sebaliknya, andaikan terbuka terhadap . Untuk , pilih dengan . Jika , maka . Jadi . Dengan demikian juga terbuka terhadap , dan bikondisional tersebut terbukti.  "
+},
+{
+  "id": "o003-c90-ch08-guide-55",
+  "level": "2",
+  "url": "o003-c90-ch08-exercise-guides-b.html#o003-c90-ch08-guide-55",
+  "type": "Pemeriksaan",
+  "number": "H.55",
+  "title": "Komponen interval terbuka dalam ruang bagian.",
+  "body": "Komponen interval terbuka dalam ruang bagian  Pada perintah ke-25 latihan penutup, misalkan dilengkapi metrik Euklides yang dibatasi ke . Putuskan benar atau salah bahwa merupakan subhimpunan terbuka dari . Rubrik. Bola harus dihitung di dalam ruang , bukan di seluruh ; gunakan celah antara dua interval untuk memilih radius.    Langkah 1. Ambil dan pertimbangkan bola relatif .   Langkah 2. Untuk , tunjukkan .   Benar. Untuk setiap , bola relatif tidak mencapai dan karena itu termuat dalam .   Ambil sebarang . Jika , maka , sehingga . Jadi tidak ada titik dari komponen yang berada dalam bola relatif Karena semua titik yang tersisa berada dalam , berlaku . Setiap titik mempunyai bola terbuka relatif yang termuat dalam , sehingga terbuka sebagai subhimpunan . Pernyataan ini tidak mengatakan bahwa terbuka dalam ruang induk .  "
+},
+{
+  "id": "o003-c90-ch08-mastery",
+  "level": "1",
+  "url": "o003-c90-ch08-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 8",
+  "body": " Pemeriksaan penguasaan Bab 8  Enam soal kumulatif berikut ditulis baru sebagai materi pendamping dan tersedia di bawah CC BY 4.0. Setiap petunjuk dibagi menjadi beberapa tahap; gunakan hanya tahap yang diperlukan sebelum membandingkan jawaban dan pembahasan lengkap.  Kriteria bola untuk daerah yang lebih dekat  Misalkan suatu ruang metrik dan dua titik berbeda. Definisikan Untuk setiap , tentukan secara eksplisit suatu yang hanya bergantung pada jarak dari ke dan . Buktikan bahwa , lalu simpulkan bahwa terbuka. Apakah kesimpulan yang sama berlaku bagi ?    Tahap 1. Karena , selisih positif. Ambil setengah dari selisih itu sebagai jari-jari.   Tahap 2. Untuk di dalam bola tersebut, batasi dari atas dan dari bawah dengan pertidaksamaan segitiga.   Tahap 3. Setelah memperoleh , terapkan kriteria bola di setiap titik . Tukarkan peran dan untuk bagian terakhir.   Jari-jari bernilai positif dan memenuhi . Jadi terbuka. Dengan argumen simetris, juga terbuka.   Ambil . Definisi memberikan , sehingga Misalkan . Pertidaksamaan segitiga dan bentuk baliknya memberikan sedangkan Maka , jadi . Karena dipilih sebarang, .  Setiap titik dengan demikian menjadi pusat suatu bola terbuka yang termuat dalam . Berdasarkan kriteria bola, terbuka. Jika dan dipertukarkan, bukti yang sama menghasilkan jari-jari pada setiap ; jadi juga terbuka.   Gabungan sebarang, irisan berhingga, dan batas kegagalannya  Misalkan suatu ruang metrik.    Buktikan langsung dengan kriteria bola bahwa gabungan sebarang keluarga himpunan terbuka dalam bersifat terbuka.    Buktikan bahwa irisan berhingga himpunan-himpunan terbuka dalam bersifat terbuka. Sertakan kasus irisan atas keluarga kosong.    Dalam , tetapkan untuk . Tentukan dan buktikan nilai , lalu jelaskan mengapa hasilnya menyangkal pernyataan serupa untuk irisan tak berhingga.      Tahap 1. Jika sebuah titik berada dalam suatu gabungan, pilih satu anggota keluarga yang memuat titik itu dan gunakan bola saksi dari anggota tersebut.   Tahap 2. Untuk irisan , pilih satu jari-jari positif dari setiap , lalu ambil minimumnya. Ingat bahwa irisan keluarga kosong didefinisikan sebagai .   Tahap 3. Titik-titik sampai berada dalam setiap . Jika atau , pilih cukup besar agar tidak lagi berada dalam .   Gabungan sebarang himpunan terbuka bersifat terbuka karena setiap titiknya mewarisi bola dari salah satu anggota keluarga. Untuk irisan berhingga tak kosong, minimum dari jari-jari saksi tetap positif; irisan tanpa faktor ialah . Namun, , yang tidak terbuka dalam metrik Euklides.   Misalkan suatu keluarga himpunan terbuka dan . Jika , terdapat dengan . Karena terbuka, ada sehingga . Jadi terbuka. Jika kosong, gabungannya adalah , yang terbuka karena tidak mempunyai titik yang melanggar kriteria bola.  Sekarang misalkan terbuka dengan , dan ambil . Untuk setiap , terdapat dengan . Bilangan positif, dan Maka irisannya terbuka. Irisan keluarga kosong adalah seluruh ruang , yang terbuka karena untuk setiap .  Untuk contoh tak berhingga, setiap memenuhi bagi semua . Jadi . Jika , pilih ; maka , sehingga . Jika , pilih ; maka , sehingga lagi-lagi . Oleh karena itu, .  Himpunan tidak terbuka dalam : setiap bola berjari-jari positif yang berpusat di memuat bilangan negatif. Jadi, tidak ada hukum keterbukaan untuk irisan tak berhingga yang sepadan dengan hukum irisan berhingga.   Penajaman lokal oleh basis bola terbuka  Misalkan adalah keluarga semua bola terbuka dalam ruang metrik .    Jika , buktikan bahwa positif dan bahwa .    Jelaskan mengapa hasil tersebut, bersama fakta bahwa setiap titik berada dalam suatu bola terbuka, memverifikasi sifat tumpang tindih lokal yang diperlukan agar menjadi basis.    Buktikan pencirian berikut: terbuka jika dan hanya jika untuk setiap terdapat dengan . Nyatakan pula sebagai gabungan bola-bola basis tersebut.      Tahap 1. Keanggotaan dalam kedua bola membuat kedua selisih pada definisi bernilai positif.   Tahap 2. Jika , gunakan , lalu ulangi untuk pusat .   Tahap 3. Untuk arah maju pada pencirian, gunakan kriteria bola di . Untuk arah balik, amati bahwa kumpulan bola yang dipilih menutupi dan tidak memuat titik di luar .   Jari-jari yang dinyatakan pada soal positif dan menghasilkan bola yang termuat dalam kedua bola semula. Karena setiap juga berada dalam , keluarga semua bola terbuka memenuhi kedua syarat basis. Suatu himpunan terbuka tepat ketika setiap titiknya memiliki bola basis yang termuat dalam ; dalam hal itu, untuk pilihan jari-jari yang sesuai.   Karena dan , berlaku dan . Jadi kedua bilangan dan positif, demikian pula minimumnya . Jika , maka Dengan cara yang sama, . Jadi , dan karena sebarang, .  Setiap titik berada dalam anggota basis . Selain itu, jika dua anggota bertumpang tindih pada , perhitungan di atas menghasilkan anggota basis ketiga yang memuat dan termuat dalam irisan keduanya. Inilah sifat penajaman lokal untuk suatu basis.  Jika terbuka dan , kriteria bola memberikan dengan . Karena pusat selalu berada dalam bolanya sendiri, Untuk , ruas kanan adalah gabungan kosong dan kesamaan tetap berlaku. Sebaliknya, jika setiap berada dalam suatu bola basis , maka . Pertidaksamaan segitiga memberi , sehingga kriteria bola berlaku di dan terbuka. Kesamaan mengikuti dari untuk setiap .   Kekontinuan fungsi jumlah melalui prapeta  Lengkapi dengan metrik maksimum dan dengan metrik Euklides. Definisikan oleh . Gunakan pencirian kekontinuan melalui prapeta himpunan terbuka untuk membuktikan bahwa kontinu: mulai dengan himpunan terbuka sebarang dan tunjukkan langsung bahwa terbuka dalam .    Tahap 1. Ambil . Karena terbuka dan memuat , pilih sehingga .   Tahap 2. Uji bola maksimum berjari-jari di sekitar . Untuk dalam bola itu, batasi .   Tahap 3. Setelah menemukan bola domain di setiap titik prapeta, simpulkan bahwa prapeta setiap himpunan terbuka bersifat terbuka, lalu gunakan pencirian kekontinuan yang diminta.   Jika dan , maka . Dengan demikian, terbuka untuk setiap terbuka, sehingga kontinu.   Misalkan terbuka. Jika kosong, prapeta itu terbuka. Jika tidak, ambil titik sebarang . Maka . Keterbukaan memberikan dengan .  Misalkan . Definisi metrik maksimum menghasilkan dan . Oleh karena itu, Jadi , sehingga . Hal ini membuktikan   Setiap titik dalam mempunyai bola domain yang termuat dalam prapeta tersebut. Maka terbuka. Karena hal ini berlaku untuk setiap himpunan terbuka , pencirian kekontinuan melalui prapeta menunjukkan bahwa kontinu.   Interior sebagai bagian terbuka terbesar  Untuk dalam ruang metrik , definisikan     Buktikan bahwa . Gunakan kesamaan ini untuk menjelaskan dengan tepat arti pernyataan bahwa interior adalah subhimpunan terbuka terbesar yang termuat dalam .    Turunkan sifat idempoten .    Hitung interior dalam dan periksa hasilnya dengan sifat idempoten.      Tahap 1. Gabungan semua anggota terbuka dan tetap termuat dalam . Karena itu, setiap titiknya adalah titik interior .   Tahap 2. Jika , sebuah bola terbuka yang berpusat di termuat dalam . Bola ini sendiri adalah anggota .   Tahap 3. Interior yang sudah terbukti terbuka tidak kehilangan titik ketika operasi interior diterapkan lagi. Pada contoh konkret, periksa semua titik ujung dan titik tunggal secara terpisah.   Berlaku . Karena itu, setiap himpunan terbuka yang termuat dalam termuat pula dalam . Interior sendiri terbuka, sehingga . Untuk himpunan pada soal, , dan interior dari hasil ini tetap sama.   Berdasarkan hukum gabungan sebarang, terbuka. Setiap anggota termuat dalam , jadi gabungannya juga termuat dalam . Dengan demikian, untuk setiap terdapat suatu lingkungan terbuka bagi yang termuat dalam ; khususnya, . Maka .  Sebaliknya, jika , terdapat dengan . Bola tersebut terbuka, sehingga . Akibatnya, . Jadi , dan kedua inklusi memberikan .  Kesamaan ini sekaligus menunjukkan kemaksimalan: terbuka dan termuat dalam , sedangkan setiap himpunan terbuka merupakan salah satu anggota dan karenanya memenuhi . Karena terbuka, setiap titiknya merupakan titik interior dari . Selalu juga berlaku . Oleh sebab itu,   Dalam contoh konkret, setiap titik di mempunyai interval kecil yang termuat dalam , dan setiap titik di mempunyai interval kecil yang termuat dalam . Tidak satu pun dari titik mempunyai bola Euklides yang termuat dalam . Jadi . Hasil ini merupakan gabungan dua interval terbuka, sehingga menerapkan interior sekali lagi tidak mengubahnya, sesuai sifat idempoten.   Terbuka, tertutup, clopen, dan peran metrik  Pada himpunan dasar , bandingkan metrik Euklides dengan metrik diskret Suatu himpunan disebut tertutup jika komplemennya terbuka, dan disebut clopen jika terbuka sekaligus tertutup.    Terhadap , klasifikasikan masing-masing dari , , , , dan sebagai hanya terbuka, hanya tertutup, clopen, atau tidak terbuka maupun tertutup. Berikan alasan berbasis bola atau komplemen.    Ulangi klasifikasi terhadap dan buktikan jawaban Anda untuk subhimpunan sebarang dari .    Gunakan hasil klasifikasi untuk menyangkal kedua pernyataan: “himpunan tertutup tidak mungkin terbuka” dan “keterbukaan suatu subhimpunan hanya bergantung pada himpunan dasar, bukan pada metriknya.”      Tahap 1. Dalam metrik Euklides, uji titik ujung. Untuk ketertutupannya, tulis komplemen dan periksa apakah setiap titik komplemen memiliki interval kecil di dalam komplemen itu.   Tahap 2. Dalam metrik diskret, . Gunakan bola singleton ini untuk setiap titik suatu subhimpunan, lalu terapkan argumen yang sama pada komplemennya.   Tahap 3. Himpunan kosong atau seluruh ruang menyangkal klaim pertama. Untuk klaim kedua, ikuti perubahan klasifikasi ketika metrik diganti.   Terhadap , hanya terbuka, hanya tertutup, tidak terbuka maupun tertutup, sedangkan dan bersifat clopen. Terhadap , kelima himpunan tersebut—bahkan setiap subhimpunan —bersifat clopen. Himpunan menyangkal klaim bahwa himpunan tertutup tidak mungkin terbuka, dan perubahan status menyangkal ketidakbergantungan pada metrik.   Dalam metrik Euklides, terbuka karena setiap titiknya mempunyai interval kecil yang tetap berada di antara dan . Himpunan ini tidak tertutup: komplemennya tidak terbuka, sebab setiap bola di sekitar memuat titik positif yang lebih kecil dari .  Himpunan tertutup karena komplemennya terbuka. Himpunan tersebut tidak terbuka karena tidak ada bola Euklides berjari-jari positif di sekitar yang termuat di dalamnya. Himpunan juga tidak terbuka karena alasan yang sama pada . Ia tidak tertutup karena komplemennya tidak terbuka di titik . Terakhir, terbuka secara vakum dan terbuka sebagai seluruh ruang; karena keduanya saling berkomplemen, keduanya juga tertutup. Jadi keduanya bersifat clopen.  Dalam metrik diskret, untuk setiap berlaku . Jika dan , bola singleton ini termuat dalam . Maka setiap terbuka. Argumen tersebut berlaku pula pada , sehingga komplemen terbuka dan tertutup. Jadi setiap subhimpunan bersifat clopen terhadap .  Karena dan sekaligus tertutup dan terbuka, sifat “tertutup” bukan negasi sifat “terbuka”. Selain itu, himpunan yang sama, , tidak terbuka terhadap tetapi terbuka—bahkan bersifat clopen—terhadap . Jadi keterbukaan bergantung pada metrik yang dipasang pada himpunan dasar.   "
+},
+{
+  "id": "o003-c90-ch08-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch08-mastery.html#o003-c90-ch08-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "H.56",
+  "title": "Kriteria bola untuk daerah yang lebih dekat.",
+  "body": "Kriteria bola untuk daerah yang lebih dekat  Misalkan suatu ruang metrik dan dua titik berbeda. Definisikan Untuk setiap , tentukan secara eksplisit suatu yang hanya bergantung pada jarak dari ke dan . Buktikan bahwa , lalu simpulkan bahwa terbuka. Apakah kesimpulan yang sama berlaku bagi ?    Tahap 1. Karena , selisih positif. Ambil setengah dari selisih itu sebagai jari-jari.   Tahap 2. Untuk di dalam bola tersebut, batasi dari atas dan dari bawah dengan pertidaksamaan segitiga.   Tahap 3. Setelah memperoleh , terapkan kriteria bola di setiap titik . Tukarkan peran dan untuk bagian terakhir.   Jari-jari bernilai positif dan memenuhi . Jadi terbuka. Dengan argumen simetris, juga terbuka.   Ambil . Definisi memberikan , sehingga Misalkan . Pertidaksamaan segitiga dan bentuk baliknya memberikan sedangkan Maka , jadi . Karena dipilih sebarang, .  Setiap titik dengan demikian menjadi pusat suatu bola terbuka yang termuat dalam . Berdasarkan kriteria bola, terbuka. Jika dan dipertukarkan, bukti yang sama menghasilkan jari-jari pada setiap ; jadi juga terbuka.  "
+},
+{
+  "id": "o003-c90-ch08-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch08-mastery.html#o003-c90-ch08-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "H.57",
+  "title": "Gabungan sebarang, irisan berhingga, dan batas kegagalannya.",
+  "body": "Gabungan sebarang, irisan berhingga, dan batas kegagalannya  Misalkan suatu ruang metrik.    Buktikan langsung dengan kriteria bola bahwa gabungan sebarang keluarga himpunan terbuka dalam bersifat terbuka.    Buktikan bahwa irisan berhingga himpunan-himpunan terbuka dalam bersifat terbuka. Sertakan kasus irisan atas keluarga kosong.    Dalam , tetapkan untuk . Tentukan dan buktikan nilai , lalu jelaskan mengapa hasilnya menyangkal pernyataan serupa untuk irisan tak berhingga.      Tahap 1. Jika sebuah titik berada dalam suatu gabungan, pilih satu anggota keluarga yang memuat titik itu dan gunakan bola saksi dari anggota tersebut.   Tahap 2. Untuk irisan , pilih satu jari-jari positif dari setiap , lalu ambil minimumnya. Ingat bahwa irisan keluarga kosong didefinisikan sebagai .   Tahap 3. Titik-titik sampai berada dalam setiap . Jika atau , pilih cukup besar agar tidak lagi berada dalam .   Gabungan sebarang himpunan terbuka bersifat terbuka karena setiap titiknya mewarisi bola dari salah satu anggota keluarga. Untuk irisan berhingga tak kosong, minimum dari jari-jari saksi tetap positif; irisan tanpa faktor ialah . Namun, , yang tidak terbuka dalam metrik Euklides.   Misalkan suatu keluarga himpunan terbuka dan . Jika , terdapat dengan . Karena terbuka, ada sehingga . Jadi terbuka. Jika kosong, gabungannya adalah , yang terbuka karena tidak mempunyai titik yang melanggar kriteria bola.  Sekarang misalkan terbuka dengan , dan ambil . Untuk setiap , terdapat dengan . Bilangan positif, dan Maka irisannya terbuka. Irisan keluarga kosong adalah seluruh ruang , yang terbuka karena untuk setiap .  Untuk contoh tak berhingga, setiap memenuhi bagi semua . Jadi . Jika , pilih ; maka , sehingga . Jika , pilih ; maka , sehingga lagi-lagi . Oleh karena itu, .  Himpunan tidak terbuka dalam : setiap bola berjari-jari positif yang berpusat di memuat bilangan negatif. Jadi, tidak ada hukum keterbukaan untuk irisan tak berhingga yang sepadan dengan hukum irisan berhingga.  "
+},
+{
+  "id": "o003-c90-ch08-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch08-mastery.html#o003-c90-ch08-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "H.58",
+  "title": "Penajaman lokal oleh basis bola terbuka.",
+  "body": "Penajaman lokal oleh basis bola terbuka  Misalkan adalah keluarga semua bola terbuka dalam ruang metrik .    Jika , buktikan bahwa positif dan bahwa .    Jelaskan mengapa hasil tersebut, bersama fakta bahwa setiap titik berada dalam suatu bola terbuka, memverifikasi sifat tumpang tindih lokal yang diperlukan agar menjadi basis.    Buktikan pencirian berikut: terbuka jika dan hanya jika untuk setiap terdapat dengan . Nyatakan pula sebagai gabungan bola-bola basis tersebut.      Tahap 1. Keanggotaan dalam kedua bola membuat kedua selisih pada definisi bernilai positif.   Tahap 2. Jika , gunakan , lalu ulangi untuk pusat .   Tahap 3. Untuk arah maju pada pencirian, gunakan kriteria bola di . Untuk arah balik, amati bahwa kumpulan bola yang dipilih menutupi dan tidak memuat titik di luar .   Jari-jari yang dinyatakan pada soal positif dan menghasilkan bola yang termuat dalam kedua bola semula. Karena setiap juga berada dalam , keluarga semua bola terbuka memenuhi kedua syarat basis. Suatu himpunan terbuka tepat ketika setiap titiknya memiliki bola basis yang termuat dalam ; dalam hal itu, untuk pilihan jari-jari yang sesuai.   Karena dan , berlaku dan . Jadi kedua bilangan dan positif, demikian pula minimumnya . Jika , maka Dengan cara yang sama, . Jadi , dan karena sebarang, .  Setiap titik berada dalam anggota basis . Selain itu, jika dua anggota bertumpang tindih pada , perhitungan di atas menghasilkan anggota basis ketiga yang memuat dan termuat dalam irisan keduanya. Inilah sifat penajaman lokal untuk suatu basis.  Jika terbuka dan , kriteria bola memberikan dengan . Karena pusat selalu berada dalam bolanya sendiri, Untuk , ruas kanan adalah gabungan kosong dan kesamaan tetap berlaku. Sebaliknya, jika setiap berada dalam suatu bola basis , maka . Pertidaksamaan segitiga memberi , sehingga kriteria bola berlaku di dan terbuka. Kesamaan mengikuti dari untuk setiap .  "
+},
+{
+  "id": "o003-c90-ch08-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch08-mastery.html#o003-c90-ch08-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "H.59",
+  "title": "Kekontinuan fungsi jumlah melalui prapeta.",
+  "body": "Kekontinuan fungsi jumlah melalui prapeta  Lengkapi dengan metrik maksimum dan dengan metrik Euklides. Definisikan oleh . Gunakan pencirian kekontinuan melalui prapeta himpunan terbuka untuk membuktikan bahwa kontinu: mulai dengan himpunan terbuka sebarang dan tunjukkan langsung bahwa terbuka dalam .    Tahap 1. Ambil . Karena terbuka dan memuat , pilih sehingga .   Tahap 2. Uji bola maksimum berjari-jari di sekitar . Untuk dalam bola itu, batasi .   Tahap 3. Setelah menemukan bola domain di setiap titik prapeta, simpulkan bahwa prapeta setiap himpunan terbuka bersifat terbuka, lalu gunakan pencirian kekontinuan yang diminta.   Jika dan , maka . Dengan demikian, terbuka untuk setiap terbuka, sehingga kontinu.   Misalkan terbuka. Jika kosong, prapeta itu terbuka. Jika tidak, ambil titik sebarang . Maka . Keterbukaan memberikan dengan .  Misalkan . Definisi metrik maksimum menghasilkan dan . Oleh karena itu, Jadi , sehingga . Hal ini membuktikan   Setiap titik dalam mempunyai bola domain yang termuat dalam prapeta tersebut. Maka terbuka. Karena hal ini berlaku untuk setiap himpunan terbuka , pencirian kekontinuan melalui prapeta menunjukkan bahwa kontinu.  "
+},
+{
+  "id": "o003-c90-ch08-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch08-mastery.html#o003-c90-ch08-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "H.60",
+  "title": "Interior sebagai bagian terbuka terbesar.",
+  "body": "Interior sebagai bagian terbuka terbesar  Untuk dalam ruang metrik , definisikan     Buktikan bahwa . Gunakan kesamaan ini untuk menjelaskan dengan tepat arti pernyataan bahwa interior adalah subhimpunan terbuka terbesar yang termuat dalam .    Turunkan sifat idempoten .    Hitung interior dalam dan periksa hasilnya dengan sifat idempoten.      Tahap 1. Gabungan semua anggota terbuka dan tetap termuat dalam . Karena itu, setiap titiknya adalah titik interior .   Tahap 2. Jika , sebuah bola terbuka yang berpusat di termuat dalam . Bola ini sendiri adalah anggota .   Tahap 3. Interior yang sudah terbukti terbuka tidak kehilangan titik ketika operasi interior diterapkan lagi. Pada contoh konkret, periksa semua titik ujung dan titik tunggal secara terpisah.   Berlaku . Karena itu, setiap himpunan terbuka yang termuat dalam termuat pula dalam . Interior sendiri terbuka, sehingga . Untuk himpunan pada soal, , dan interior dari hasil ini tetap sama.   Berdasarkan hukum gabungan sebarang, terbuka. Setiap anggota termuat dalam , jadi gabungannya juga termuat dalam . Dengan demikian, untuk setiap terdapat suatu lingkungan terbuka bagi yang termuat dalam ; khususnya, . Maka .  Sebaliknya, jika , terdapat dengan . Bola tersebut terbuka, sehingga . Akibatnya, . Jadi , dan kedua inklusi memberikan .  Kesamaan ini sekaligus menunjukkan kemaksimalan: terbuka dan termuat dalam , sedangkan setiap himpunan terbuka merupakan salah satu anggota dan karenanya memenuhi . Karena terbuka, setiap titiknya merupakan titik interior dari . Selalu juga berlaku . Oleh sebab itu,   Dalam contoh konkret, setiap titik di mempunyai interval kecil yang termuat dalam , dan setiap titik di mempunyai interval kecil yang termuat dalam . Tidak satu pun dari titik mempunyai bola Euklides yang termuat dalam . Jadi . Hasil ini merupakan gabungan dua interval terbuka, sehingga menerapkan interior sekali lagi tidak mengubahnya, sesuai sifat idempoten.  "
+},
+{
+  "id": "o003-c90-ch08-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch08-mastery.html#o003-c90-ch08-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "H.61",
+  "title": "Terbuka, tertutup, clopen, dan peran metrik.",
+  "body": "Terbuka, tertutup, clopen, dan peran metrik  Pada himpunan dasar , bandingkan metrik Euklides dengan metrik diskret Suatu himpunan disebut tertutup jika komplemennya terbuka, dan disebut clopen jika terbuka sekaligus tertutup.    Terhadap , klasifikasikan masing-masing dari , , , , dan sebagai hanya terbuka, hanya tertutup, clopen, atau tidak terbuka maupun tertutup. Berikan alasan berbasis bola atau komplemen.    Ulangi klasifikasi terhadap dan buktikan jawaban Anda untuk subhimpunan sebarang dari .    Gunakan hasil klasifikasi untuk menyangkal kedua pernyataan: “himpunan tertutup tidak mungkin terbuka” dan “keterbukaan suatu subhimpunan hanya bergantung pada himpunan dasar, bukan pada metriknya.”      Tahap 1. Dalam metrik Euklides, uji titik ujung. Untuk ketertutupannya, tulis komplemen dan periksa apakah setiap titik komplemen memiliki interval kecil di dalam komplemen itu.   Tahap 2. Dalam metrik diskret, . Gunakan bola singleton ini untuk setiap titik suatu subhimpunan, lalu terapkan argumen yang sama pada komplemennya.   Tahap 3. Himpunan kosong atau seluruh ruang menyangkal klaim pertama. Untuk klaim kedua, ikuti perubahan klasifikasi ketika metrik diganti.   Terhadap , hanya terbuka, hanya tertutup, tidak terbuka maupun tertutup, sedangkan dan bersifat clopen. Terhadap , kelima himpunan tersebut—bahkan setiap subhimpunan —bersifat clopen. Himpunan menyangkal klaim bahwa himpunan tertutup tidak mungkin terbuka, dan perubahan status menyangkal ketidakbergantungan pada metrik.   Dalam metrik Euklides, terbuka karena setiap titiknya mempunyai interval kecil yang tetap berada di antara dan . Himpunan ini tidak tertutup: komplemennya tidak terbuka, sebab setiap bola di sekitar memuat titik positif yang lebih kecil dari .  Himpunan tertutup karena komplemennya terbuka. Himpunan tersebut tidak terbuka karena tidak ada bola Euklides berjari-jari positif di sekitar yang termuat di dalamnya. Himpunan juga tidak terbuka karena alasan yang sama pada . Ia tidak tertutup karena komplemennya tidak terbuka di titik . Terakhir, terbuka secara vakum dan terbuka sebagai seluruh ruang; karena keduanya saling berkomplemen, keduanya juga tertutup. Jadi keduanya bersifat clopen.  Dalam metrik diskret, untuk setiap berlaku . Jika dan , bola singleton ini termuat dalam . Maka setiap terbuka. Argumen tersebut berlaku pula pada , sehingga komplemen terbuka dan tertutup. Jadi setiap subhimpunan bersifat clopen terhadap .  Karena dan sekaligus tertutup dan terbuka, sifat “tertutup” bukan negasi sifat “terbuka”. Selain itu, himpunan yang sama, , tidak terbuka terhadap tetapi terbuka—bahkan bersifat clopen—terhadap . Jadi keterbukaan bergantung pada metrik yang dipasang pada himpunan dasar.  "
 },
 {
   "id": "index-1",

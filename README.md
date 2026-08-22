@@ -3,16 +3,19 @@
 Edisi Bahasa Indonesia yang sedang diproduksi dari *Topology: An Inquiry-Based
 Approach* karya Steven Schlicker, Grand Valley State University.
 
-**Baca edisi web:**  
+**Baca batas GitHub publik terakhir (Bab 1-5):**  
 https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/
 
-**Unduh PDF batas terverifikasi Bab 1-7 (156 halaman):**
+**Unduh PDF batas GitHub publik terakhir, Bab 1-5 (108 halaman):**
 
-https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-07-id.pdf
+https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-05-id.pdf
+
+**Arsip Zenodo untuk batas terverifikasi terbaru, Bab 1-8:**  
+https://doi.org/10.5281/zenodo.22059895
 
 ## Status
 
-Produksi lengkap masih berlangsung. Batas publik saat ini memuat:
+Produksi lengkap masih berlangsung. Batas lokal terverifikasi terbaru memuat:
 
 - Bab 1, *Himpunan*;
 - Bab 2, *Fungsi*;
@@ -21,21 +24,23 @@ Produksi lengkap masih berlangsung. Batas publik saat ini memuat:
 - Bab 5, *Batas Bawah Terbesar*;
 - Bab 6, *Fungsi Kontinu di Ruang Metrik*;
 - Bab 7, *Bola Terbuka dan Lingkungan pada Ruang Metrik*;
-- pendamping belajar mandiri orisinal untuk ketujuh bab, dengan petunjuk,
+- Bab 8, *Himpunan Terbuka dalam Ruang Metrik*;
+- pendamping belajar mandiri orisinal untuk kedelapan bab, dengan petunjuk,
   jawaban, rubrik, dan solusi bertahap;
 - laboratorium epsilon-delta orisinal yang dapat digunakan secara luring untuk
   menggantikan kebergantungan aplet Bab 6 yang tidak terarsipkan; dan
 - backend modular netral-lokal untuk provenance, istilah, latihan, solusi,
   koreksi sumber, hak komponen, dan status QA.
 
-Batas Bab 1-7 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
+Batas Bab 1-8 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
 audit matematika
 pendamping, dua pembangunan HTML deterministik, dua pembangunan PDF ketat,
 pemeriksaan tautan/aset, reflow desktop/seluler, interaksi petunjuk, dan
-inspeksi visual seluruh 156 halaman. Kolom baca desktop menggunakan lebar 960
+inspeksi visual seluruh 187 halaman. Kolom baca desktop menggunakan lebar 960
 px dan terpusat di panel utama; versi seluler mengalir ulang tanpa luapan
-horizontal. Ini bukan klaim bahwa edisi 20 bab sudah
-selesai.
+horizontal. Penulisan ke GitHub sedang terhalang oleh penangguhan akun, sehingga
+permukaan GitHub yang ditautkan di atas tetap berada pada Bab 1-5; batas Bab
+1-8 dipelihara melalui Zenodo. Ini bukan klaim bahwa edisi 20 bab sudah selesai.
 
 ## Sumber resmi yang dibekukan
 
@@ -65,8 +70,8 @@ PreTeXt, atau repositori sumber yang dinyatakan maupun disiratkan.
 - `docs/` - byte pembaca publik untuk GitHub Pages.
 
 Manifest kumulatif yang mengikat batas ini adalah
-`qa/CHAPTER07_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
-`qa/CHAPTER07_BUILD_QA.md`.
+`qa/CHAPTER08_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
+`qa/CHAPTER08_BUILD_QA.md`.
 
 ## Membangun batas saat ini
 
@@ -74,15 +79,17 @@ Lingkungan yang direkam memakai Python 3.12.13, PreTeXt 1.7.5,
 setuptools 75.8.0, dan MiKTeX 26.5.
 
 ```text
-pretext build chapters01-07-html --clean
-python scripts/finalize_chapter01_html.py output/chapters01-07-html --manifest qa/CHAPTER07_HTML_MANIFEST.json
-python scripts/build_pretext_pdf_strict.py chapters01-07-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTER07_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-07-pdf/chapters_01_07_reader.pdf
+pretext build chapters01-08-html --clean
+python scripts/finalize_chapter01_html.py output/chapters01-08-html --manifest qa/CHAPTER08_HTML_MANIFEST.json
+python scripts/build_pretext_pdf_strict.py chapters01-08-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTER08_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-08-pdf/chapters_01_08_reader.pdf --source-date-epoch 1692057600
 ```
 
 HTML saat ini masih memanggil beberapa dependensi runtime jarak jauh dari
 PreTeXt, Runestone, MathJax, dan penyedia font. Penutupan luring penuh tetap
 merupakan gerbang rilis edisi lengkap. PDF belum bertag; HTML adalah permukaan
-aksesibilitas utama.
+aksesibilitas utama. Sebagian font matematika PDF juga belum memiliki pemetaan
+Unicode yang lengkap, sehingga ekstraksi teks matematika dari PDF tidak selalu
+andal meskipun tampilan visualnya lolos pemeriksaan.
 
 ## Hak dan atribusi
 

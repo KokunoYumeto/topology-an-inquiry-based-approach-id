@@ -1,0 +1,640 @@
+<section xml:id="o003-c90-ch08-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Tiga belas panduan berikut berkorespondensi, dalam urutan sumber, dengan
+    tiga belas perintah pertama pada bagian latihan penutup Bab 8. ID panduan
+    berlanjut dari <c>o003-c90-ch08-guide-31</c> sampai
+    <c>o003-c90-ch08-guide-43</c>. Materi pendamping ini merupakan uraian asli
+    untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh penulis
+    karya sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch08-guide-31">
+    <title>Setiap subhimpunan ruang diskret terbuka</title>
+    <statement>
+      <p>
+        Pada perintah pertama latihan penutup, <m>(X,d)</m> memakai metrik
+        diskret. Buktikan bahwa setiap subhimpunan <m>A\subseteq X</m>
+        terbuka.
+        <em>Rubrik.</em> Periksa kasus <m>A=\emptyset</m>; untuk
+        <m>A\neq\emptyset</m>, mulai dari titik sebarang <m>x\in A</m> dan
+        berikan satu bola berpusat di <m>x</m> yang termuat dalam <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-31-hint">
+      <p>
+        <em>Langkah 1.</em> Dalam metrik diskret, hitung
+        <m>B(x,1)</m> dengan mengingat bahwa syarat bola memakai
+        pertidaksamaan ketat.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>x\in A</m>, bandingkan bola itu dengan
+        <m>A</m>; keterbukaan himpunan kosong berlaku secara hampa.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-31-answer">
+      <p>
+        Benar. Untuk setiap <m>x\in A</m>, berlaku
+        <m>B(x,1)=\{x\}\subseteq A</m>; jadi setiap titik <m>A</m> adalah
+        titik interior.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-31-solution">
+      <p>
+        Jika <m>A=\emptyset</m>, syarat bahwa setiap titiknya mempunyai bola
+        yang termuat dalam <m>A</m> benar secara hampa, sehingga
+        <m>A</m> terbuka. Sekarang andaikan <m>A\neq\emptyset</m> dan ambil
+        sebarang <m>x\in A</m>. Pada metrik diskret,
+        <m>d(x,y)=0</m> jika <m>y=x</m> dan <m>d(x,y)=1</m> jika
+        <m>y\neq x</m>. Karena itu
+        <me>
+          B(x,1)=\{y\in X\mid d(x,y)\lt1\}=\{x\}.
+        </me>
+        Maka <m>B(x,1)=\{x\}\subseteq A</m>. Titik <m>x</m> sebarang, jadi
+        setiap titik <m>A</m> merupakan titik interior. Dengan demikian
+        <m>A</m> terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-32">
+    <title>Setiap fungsi dari ruang diskret kontinu</title>
+    <statement>
+      <p>
+        Pada perintah kedua latihan penutup, domain <m>(X,d)</m> bermetrik
+        diskret dan <m>(Y,d_Y)</m> adalah ruang metrik sebarang. Buktikan
+        bahwa setiap fungsi <m>f:X\to Y</m> kontinu.
+        <em>Rubrik.</em> Terapkan karakterisasi kontinuitas melalui prapeta
+        himpunan terbuka dan gunakan hasil perintah sebelumnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-32-hint">
+      <p>
+        <em>Langkah 1.</em> Ambil himpunan terbuka sebarang
+        <m>O\subseteq Y</m> dan amati bahwa <m>f^{-1}(O)</m> hanyalah suatu
+        subhimpunan dari <m>X</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Semua subhimpunan dari ruang diskret terbuka;
+        masukkan fakta ini ke kriteria prapeta-terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-32-answer">
+      <p>
+        Ya. Untuk setiap himpunan terbuka <m>O\subseteq Y</m>, prapetanya
+        <m>f^{-1}(O)</m> merupakan subhimpunan ruang diskret <m>X</m>, maka
+        terbuka. Jadi <m>f</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-32-solution">
+      <p>
+        Misalkan <m>O</m> suatu himpunan terbuka dalam <m>Y</m>. Apa pun
+        nilai-nilai fungsi <m>f</m>, himpunan <m>f^{-1}(O)</m> adalah suatu
+        subhimpunan dari <m>X</m>. Menurut hasil perintah pertama, setiap
+        subhimpunan dari <m>X</m> terbuka karena <m>X</m> memakai metrik
+        diskret. Jadi <m>f^{-1}(O)</m> terbuka dalam <m>X</m> untuk setiap
+        himpunan terbuka <m>O\subseteq Y</m>. Karakterisasi kontinuitas
+        melalui prapeta himpunan terbuka sekarang memberi bahwa
+        <m>f:X\to Y</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-33">
+    <title>Fungsi menuju ruang diskret tidak selalu kontinu</title>
+    <statement>
+      <p>
+        Pada perintah ketiga latihan penutup, tentukan apakah setiap fungsi
+        <m>f:Y\to X</m> menuju ruang diskret <m>X</m> juga harus kontinu.
+        Jika tidak, berikan ruang metrik <m>Y</m>, fungsi konkret, dan
+        himpunan terbuka di kodomain yang prapetanya tidak terbuka.
+        <em>Rubrik.</em> Sebuah ruang diskret dua titik dan satu fungsi yang
+        membedakan satu titik garis real dari semua titik lain sudah cukup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-33-hint">
+      <p>
+        <em>Langkah 1.</em> Ambil <m>Y=(\R,d_E)</m> dan
+        <m>X=\{0,1\}</m> dengan metrik diskret.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Definisikan <m>f(0)=0</m> dan
+        <m>f(t)=1</m> untuk <m>t\neq0</m>, lalu hitung
+        <m>f^{-1}(\{0\})</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-33-answer">
+      <p>
+        Tidak. Untuk fungsi di atas, <m>\{0\}</m> terbuka dalam
+        <m>X</m>, sedangkan <m>f^{-1}(\{0\})=\{0\}</m> tidak terbuka dalam
+        <m>(\R,d_E)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-33-solution">
+      <p>
+        Ambil <m>Y=(\R,d_E)</m> dan
+        <m>X=\{0,1\}</m> dengan metrik diskret. Definisikan
+        <me>
+          f(t)=\begin{cases}0,\amp t=0,\\1,\amp t\neq0.\end{cases}
+        </me>
+        Karena <m>X</m> diskret, himpunan satu titik <m>\{0\}</m> terbuka dalam
+        <m>X</m>. Akan tetapi,
+        <m>f^{-1}(\{0\})=\{0\}</m>. Himpunan ini tidak terbuka dalam garis
+        real bermetrik Euklides: untuk setiap <m>r\gt0</m>, titik
+        <m>r/2</m> berada dalam <m>B(0,r)</m> tetapi tidak dalam
+        <m>\{0\}</m>. Jadi prapeta suatu himpunan terbuka tidak terbuka,
+        sehingga <m>f</m> tidak kontinu. Dengan demikian pernyataan
+        universal pada sumber salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-34">
+    <title>Himpunan terbuka sama dengan interiornya</title>
+    <statement>
+      <p>
+        Pada perintah keempat latihan penutup, buktikan pernyataan
+        bikondisional: suatu subhimpunan <m>O</m> dari ruang metrik
+        <m>X</m> terbuka jika dan hanya jika
+        <m>O=\Int(O)</m>.
+        <em>Rubrik.</em> Buktikan kedua arah secara terpisah dan jangan lupa
+        bahwa <m>\Int(O)\subseteq O</m> selalu berlaku.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-34-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>O</m> terbuka, setiap
+        <m>x\in O</m> mempunyai bola terbuka yang termuat dalam <m>O</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk arah sebaliknya, gunakan fakta bahwa
+        interior suatu himpunan adalah himpunan terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-34-answer">
+      <p>
+        Benar. Keterbukaan <m>O</m> memberi
+        <m>O\subseteq\Int(O)</m>, sedangkan inklusi sebaliknya selalu benar.
+        Jika <m>O=\Int(O)</m>, maka <m>O</m> terbuka karena interior terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-34-solution">
+      <p>
+        Andaikan dahulu <m>O</m> terbuka. Untuk setiap <m>x\in O</m>, ada
+        <m>r\gt0</m> dengan <m>B(x,r)\subseteq O</m>. Jadi setiap
+        <m>x\in O</m> merupakan titik interior dan
+        <m>O\subseteq\Int(O)</m>. Dari definisi interior selalu berlaku
+        <m>\Int(O)\subseteq O</m>, maka <m>O=\Int(O)</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>O=\Int(O)</m>. Interior setiap himpunan
+        merupakan himpunan terbuka. Karena <m>O</m> sama dengan interiornya,
+        <m>O</m> sendiri terbuka. Kedua implikasi telah dibuktikan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-35">
+    <title>Interior bersifat monoton terhadap inklusi</title>
+    <statement>
+      <p>
+        Pada perintah kelima latihan penutup, diketahui
+        <m>A\subseteq B\subseteq X</m>. Buktikan atau sangkal
+        <m>\Int(A)\subseteq\Int(B)</m>.
+        <em>Rubrik.</em> Mulailah dari titik interior sebarang dari
+        <m>A</m> dan pertahankan bola saksinya ketika memperbesar himpunan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-35-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>x\in\Int(A)</m>, ada
+        <m>r\gt0</m> dengan <m>B(x,r)\subseteq A</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Rangkaikan inklusi bola itu dengan
+        <m>A\subseteq B</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-35-answer">
+      <p>
+        Benar. Bola yang menunjukkan bahwa <m>x</m> interior bagi
+        <m>A</m> juga termuat dalam <m>B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-35-solution">
+      <p>
+        Ambil sebarang <m>x\in\Int(A)</m>. Menurut definisi, terdapat
+        <m>r\gt0</m> sedemikian sehingga
+        <m>B(x,r)\subseteq A</m>. Karena <m>A\subseteq B</m>, diperoleh
+        <me>
+          B(x,r)\subseteq A\subseteq B.
+        </me>
+        Maka <m>x</m> merupakan titik interior dari <m>B</m>, yaitu
+        <m>x\in\Int(B)</m>. Karena <m>x</m> sebarang,
+        <m>\Int(A)\subseteq\Int(B)</m>. Jadi pernyataan tersebut benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-36">
+    <title>Interior bersifat idempoten</title>
+    <statement>
+      <p>
+        Pada perintah keenam latihan penutup, buktikan atau sangkal
+        <m>\Int(\Int(A))=\Int(A)</m> untuk setiap subhimpunan
+        <m>A</m> dari ruang metrik <m>X</m>.
+        <em>Rubrik.</em> Identifikasi sifat topologis
+        <m>\Int(A)</m>, lalu terapkan karakterisasi pada perintah keempat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-36-hint">
+      <p>
+        <em>Langkah 1.</em> Himpunan <m>\Int(A)</m> selalu terbuka.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Setiap himpunan terbuka sama dengan interiornya
+        sendiri.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-36-answer">
+      <p>
+        Benar. Karena <m>\Int(A)</m> terbuka, interior dari
+        <m>\Int(A)</m> sama dengan <m>\Int(A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-36-solution">
+      <p>
+        Tetapkan <m>U=\Int(A)</m>. Berdasarkan sifat dasar interior,
+        <m>U</m> merupakan himpunan terbuka. Hasil perintah keempat
+        menyatakan bahwa himpunan terbuka sama dengan interiornya, sehingga
+        <me>
+          \Int(\Int(A))=\Int(U)=U=\Int(A).
+        </me>
+        Jadi pernyataan tersebut benar untuk setiap <m>A\subseteq X</m>,
+        termasuk <m>A=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-37">
+    <title>Interval setengah terbuka bukan himpunan terbuka</title>
+    <statement>
+      <p>
+        Pada perintah ketujuh latihan penutup, misalkan
+        <m>a,b\in\R</m> dengan <m>a\lt b</m>. Tunjukkan bahwa
+        <m>(a,b]</m> tidak terbuka dalam <m>(\R,d_E)</m>.
+        <em>Rubrik.</em> Pilih satu titik anggota yang menjadi titik batas
+        dan, untuk setiap radius positif, bangun titik bola yang keluar dari
+        interval.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-37-hint">
+      <p>
+        <em>Langkah 1.</em> Titik <m>b</m> berada dalam
+        <m>(a,b]</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>r\gt0</m>, periksa titik
+        <m>b+r/2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-37-answer">
+      <p>
+        Himpunan itu tidak terbuka. Setiap bola <m>B(b,r)</m> memuat
+        <m>b+r/2</m>, yang lebih besar daripada <m>b</m> dan karena itu tidak
+        berada dalam <m>(a,b]</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-37-solution">
+      <p>
+        Titik <m>b</m> adalah anggota <m>(a,b]</m>. Ambil sebarang
+        <m>r\gt0</m> dan tetapkan <m>y=b+r/2</m>. Karena
+        <m>d_E(y,b)=|y-b|=r/2\lt r</m>, berlaku
+        <m>y\in B(b,r)</m>. Namun <m>y\gt b</m>, sehingga
+        <m>y\notin(a,b]</m>. Jadi tidak ada bola terbuka berpusat di
+        <m>b</m> yang termuat dalam <m>(a,b]</m>. Titik <m>b</m> bukan titik
+        interior, maka <m>(a,b]</m> bukan himpunan terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-38">
+    <title>Persegi panjang terbuka dalam metrik Euklides</title>
+    <statement>
+      <p>
+        Pada perintah kedelapan latihan penutup, tentukan apakah
+        <m>A=\{(x,y)\in\R^2\mid1\lt x\lt3,\ 0\lt y\lt1\}</m> terbuka
+        dalam <m>(\R^2,d_E)</m>, lalu buktikan jawaban Anda.
+        <em>Rubrik.</em> Untuk titik sebarang dalam <m>A</m>, gunakan jarak
+        terkecil ke empat sisi sebagai radius.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-38-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>p=(x,y)\in A</m>, tetapkan
+        <m>r=\min\{x-1,3-x,y,1-y\}</m> dan periksa bahwa <m>r\gt0</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>q=(u,v)</m> dan
+        <m>d_E(p,q)\lt r</m>, maka
+        <m>|u-x|\lt r</m> serta <m>|v-y|\lt r</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-38-answer">
+      <p>
+        Ya. Untuk setiap <m>p=(x,y)\in A</m>, radius
+        <m>r=\min\{x-1,3-x,y,1-y\}</m> memenuhi
+        <m>B_{d_E}(p,r)\subseteq A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-38-solution">
+      <p>
+        Ambil <m>p=(x,y)\in A</m>. Keempat bilangan
+        <m>x-1</m>, <m>3-x</m>, <m>y</m>, dan <m>1-y</m> positif. Jadi
+        <m>r=\min\{x-1,3-x,y,1-y\}\gt0</m>. Jika
+        <m>q=(u,v)\in B_{d_E}(p,r)</m>, maka
+        <me>
+          |u-x|\leq d_E(p,q)\lt r,
+          \qquad |v-y|\leq d_E(p,q)\lt r.
+        </me>
+        Karena <m>r\leq x-1</m> dan <m>r\leq3-x</m>, pertidaksamaan pertama
+        memberi <m>1\lt u\lt3</m>. Karena <m>r\leq y</m> dan
+        <m>r\leq1-y</m>, pertidaksamaan kedua memberi
+        <m>0\lt v\lt1</m>. Maka <m>q\in A</m>, sehingga
+        <m>B_{d_E}(p,r)\subseteq A</m>. Karena <m>p</m> sebarang,
+        <m>A</m> terbuka dalam metrik Euklides.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-39">
+    <title>Persegi panjang terbuka dalam metrik taksi</title>
+    <statement>
+      <p>
+        Pada perintah kesembilan latihan penutup, tentukan apakah persegi
+        panjang
+        <m>A=\{(x,y)\in\R^2\mid1\lt x\lt3,\ 0\lt y\lt1\}</m> terbuka
+        dalam <m>(\R^2,d_T)</m>, lalu buktikan jawaban Anda.
+        <em>Rubrik.</em> Gunakan radius jarak minimum ke sisi dan turunkan
+        batas perubahan masing-masing koordinat dari jarak taksi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-39-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>p=(x,y)\in A</m>, gunakan kembali
+        <m>r=\min\{x-1,3-x,y,1-y\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Dari
+        <m>|u-x|+|v-y|\lt r</m>, simpulkan secara terpisah bahwa
+        <m>|u-x|\lt r</m> dan <m>|v-y|\lt r</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-39-answer">
+      <p>
+        Ya. Radius minimum ke empat sisi menghasilkan
+        <m>B_{d_T}((x,y),r)\subseteq A</m> bagi setiap
+        <m>(x,y)\in A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-39-solution">
+      <p>
+        Ambil <m>p=(x,y)\in A</m> dan tetapkan
+        <m>r=\min\{x-1,3-x,y,1-y\}\gt0</m>. Jika
+        <m>q=(u,v)\in B_{d_T}(p,r)</m>, maka
+        <me>
+          |u-x|+|v-y|=d_T(p,q)\lt r.
+        </me>
+        Kedua suku tak negatif, sehingga masing-masing kurang daripada
+        <m>r</m>. Seperti pada metrik Euklides, batas
+        <m>|u-x|\lt r</m> memberi <m>1\lt u\lt3</m>, sedangkan
+        <m>|v-y|\lt r</m> memberi <m>0\lt v\lt1</m>. Jadi
+        <m>q\in A</m>. Dengan demikian <m>B_{d_T}(p,r)\subseteq A</m> dan
+        <m>A</m> terbuka dalam metrik taksi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-40">
+    <title>Persegi panjang terbuka dalam metrik maksimum</title>
+    <statement>
+      <p>
+        Pada perintah kesepuluh latihan penutup, tentukan apakah persegi
+        panjang
+        <m>A=\{(x,y)\in\R^2\mid1\lt x\lt3,\ 0\lt y\lt1\}</m> terbuka
+        dalam <m>(\R^2,d_M)</m>, lalu buktikan jawaban Anda.
+        <em>Rubrik.</em> Hubungkan langsung syarat bola maksimum dengan dua
+        pertidaksamaan koordinat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-40-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>p=(x,y)\in A</m>, pilih
+        <m>r=\min\{x-1,3-x,y,1-y\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Syarat
+        <m>\max\{|u-x|,|v-y|\}\lt r</m> menyatakan bahwa kedua selisih
+        koordinat kurang daripada <m>r</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-40-answer">
+      <p>
+        Ya. Untuk setiap <m>p=(x,y)\in A</m>, bola maksimum dengan radius
+        <m>\min\{x-1,3-x,y,1-y\}</m> termuat dalam <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-40-solution">
+      <p>
+        Ambil <m>p=(x,y)\in A</m> dan tetapkan
+        <m>r=\min\{x-1,3-x,y,1-y\}\gt0</m>. Jika
+        <m>q=(u,v)\in B_{d_M}(p,r)</m>, maka
+        <me>
+          \max\{|u-x|,|v-y|\}=d_M(p,q)\lt r.
+        </me>
+        Jadi <m>|u-x|\lt r</m> dan <m>|v-y|\lt r</m>. Pilihan <m>r</m>
+        kemudian memberikan <m>1\lt u\lt3</m> serta
+        <m>0\lt v\lt1</m>. Maka <m>q\in A</m>, sehingga
+        <m>B_{d_M}(p,r)\subseteq A</m>. Karena setiap titik <m>A</m>
+        mempunyai bola demikian, <m>A</m> terbuka dalam metrik maksimum.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-41">
+    <title>Komplemen himpunan titik berhingga terbuka</title>
+    <statement>
+      <p>
+        Pada perintah kesebelas latihan penutup, <m>S</m> adalah himpunan
+        berhingga titik-titik di <m>\R^2</m>. Tentukan, disertai bukti,
+        apakah <m>\R^2\setminus S</m> terbuka dalam
+        <m>(\R^2,d_E)</m>. Rumus ini mempertahankan perbaikan sumber yang
+        telah disetujui: komplemennya adalah <m>S</m>, bukan variabel
+        <m>A</m> yang tidak didefinisikan.
+        <em>Rubrik.</em> Untuk titik di luar <m>S</m>, ambil minimum dari
+        sejumlah berhingga jarak positif; bahas pula kemungkinan <m>S</m>
+        kosong.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-41-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>S\neq\emptyset</m> dan
+        <m>p\notin S</m>, tetapkan
+        <m>r=\min\{d_E(p,s)\mid s\in S\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Buktikan <m>r\gt0</m> dan bahwa tidak ada
+        <m>s\in S</m> di dalam <m>B_{d_E}(p,r)</m>. Jika <m>S</m> kosong,
+        komplemennya adalah seluruh ruang.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-41-answer">
+      <p>
+        Ya. Jika <m>S</m> tidak kosong, jarak minimum dari
+        <m>p\in\R^2\setminus S</m> ke <m>S</m> positif dan bolanya dengan
+        radius itu menghindari <m>S</m>; kasus <m>S=\emptyset</m> langsung.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-41-solution">
+      <p>
+        Jika <m>S=\emptyset</m>, maka
+        <m>\R^2\setminus S=\R^2</m>, yang terbuka. Andaikan sekarang
+        <m>S\neq\emptyset</m> dan ambil sebarang
+        <m>p\in\R^2\setminus S</m>. Untuk setiap <m>s\in S</m>, berlaku
+        <m>d_E(p,s)\gt0</m>. Karena <m>S</m> berhingga dan tidak kosong,
+        minimum
+        <me>
+          r=\min\{d_E(p,s)\mid s\in S\}
+        </me>
+        ada dan positif.
+      </p>
+      <p>
+        Jika suatu <m>s\in S</m> berada dalam <m>B_{d_E}(p,r)</m>, maka
+        <m>d_E(p,s)\lt r</m>. Hal ini bertentangan dengan definisi
+        <m>r\leq d_E(p,s)</m>. Jadi bola itu tidak beririsan dengan
+        <m>S</m>, atau
+        <m>B_{d_E}(p,r)\subseteq\R^2\setminus S</m>. Setiap titik komplemen
+        adalah titik interior, maka komplemen tersebut terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-42">
+    <title>Kriteria kontinuitas melalui interior prapeta</title>
+    <statement>
+      <p>
+        Pada perintah kedua belas latihan penutup, untuk fungsi
+        <m>f:(X,d_X)\to(Y,d_Y)</m>, buktikan bahwa <m>f</m> kontinu jika dan
+        hanya jika
+        <m>f^{-1}(\Int(B))\subseteq\Int(f^{-1}(B))</m> untuk setiap
+        <m>B\subseteq Y</m>.
+        <em>Rubrik.</em> Pada arah maju gunakan bahwa
+        <m>\Int(B)</m> terbuka; pada arah balik substitusikan himpunan
+        terbuka <m>O</m> sebagai <m>B</m> dan buktikan prapetanya terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-42-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>f</m> kontinu, maka
+        <m>f^{-1}(\Int(B))</m> adalah himpunan terbuka yang termuat dalam
+        <m>f^{-1}(B)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika inklusi diasumsikan dan <m>O</m> terbuka,
+        gunakan <m>\Int(O)=O</m> serta
+        <m>\Int(f^{-1}(O))\subseteq f^{-1}(O)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-42-answer">
+      <p>
+        Pernyataan bikondisional itu benar. Arah maju mengikuti sifat
+        interior sebagai himpunan terbuka terbesar; arah balik membuat setiap
+        prapeta himpunan terbuka sama dengan interiornya sendiri.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-42-solution">
+      <p>
+        Andaikan <m>f</m> kontinu dan ambil sebarang <m>B\subseteq Y</m>.
+        Himpunan <m>\Int(B)</m> terbuka dalam <m>Y</m>, sehingga
+        <m>f^{-1}(\Int(B))</m> terbuka dalam <m>X</m>. Karena
+        <m>\Int(B)\subseteq B</m>, berlaku
+        <m>f^{-1}(\Int(B))\subseteq f^{-1}(B)</m>. Setiap himpunan terbuka
+        yang termuat dalam <m>f^{-1}(B)</m> termuat dalam interiornya. Maka
+        <me>
+          f^{-1}(\Int(B))\subseteq\Int(f^{-1}(B)).
+        </me>
+      </p>
+      <p>
+        Sebaliknya, andaikan inklusi tersebut berlaku untuk setiap
+        <m>B\subseteq Y</m>. Ambil himpunan terbuka sebarang
+        <m>O\subseteq Y</m> dan pilih <m>B=O</m>. Karena
+        <m>\Int(O)=O</m>, hipotesis memberi
+        <m>f^{-1}(O)\subseteq\Int(f^{-1}(O))</m>. Inklusi sebaliknya selalu
+        berlaku dari definisi interior, jadi
+        <m>f^{-1}(O)=\Int(f^{-1}(O))</m>. Dengan hasil perintah keempat,
+        <m>f^{-1}(O)</m> terbuka. Prapeta setiap himpunan terbuka terbuka,
+        maka <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-43">
+    <title>Bola radius dua dalam metrik pecahan tereduksi</title>
+    <statement>
+      <p>
+        Pada perintah ketiga belas latihan penutup, <m>Q</m> memuat bilangan
+        rasional dalam bentuk paling sederhana, dengan penyebut positif, dan
+        <m>d(a/b,u/v)=\max\{|a-u|,|b-v|\}</m>. Deskripsikan tepat
+        <m>B(2/5,2)</m>.
+        <em>Rubrik.</em> Ubah pertidaksamaan jarak menjadi dua syarat pada
+        pembilang dan penyebut bulat, lalu sisakan hanya pasangan yang relatif
+        prima.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-43-hint">
+      <p>
+        <em>Langkah 1.</em> Syarat
+        <m>\max\{|2-u|,|5-v|\}\lt2</m> memberi
+        <m>u\in\{1,2,3\}</m> dan <m>v\in\{4,5,6\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Dari sembilan pasangan itu, coret
+        <m>(2,4)</m>, <m>(2,6)</m>, dan <m>(3,6)</m> karena pecahannya tidak
+        dalam bentuk paling sederhana.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-43-answer">
+      <p>
+        Bola yang diminta adalah
+        <m>B(2/5,2)=\{1/4,1/5,1/6,2/5,3/4,3/5\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-43-solution">
+      <p>
+        Tuliskan titik sebarang di <m>Q</m> sebagai <m>u/v</m> dalam bentuk
+        paling sederhana dengan <m>v\gt0</m>. Titik itu berada dalam bola
+        tepat ketika
+        <me>
+          \max\{|2-u|,|5-v|\}\lt2.
+        </me>
+        Karena <m>u</m> dan <m>v</m> bilangan bulat, syarat ini ekuivalen
+        dengan <m>u\in\{1,2,3\}</m> dan
+        <m>v\in\{4,5,6\}</m>. Ada sembilan pasangan kandidat.
+      </p>
+      <p>
+        Pasangan <m>(2,4)</m>, <m>(2,6)</m>, dan <m>(3,6)</m> tidak
+        relatif prima, sehingga bukan representasi paling sederhana dan
+        bukan titik <m>Q</m> dalam koordinat yang mendefinisikan metrik ini.
+        Enam pasangan lainnya relatif prima. Oleh karena itu
+        <me>
+          B(2/5,2)=
+          \left\{\frac14,\frac15,\frac16,\frac25,\frac34,\frac35\right\}.
+        </me>
+        Misalnya, pecahan <m>2/4</m> tidak boleh dimasukkan sebagai nama lain
+        bagi <m>1/2</m>; bentuk kanonis <m>1/2</m> justru mempunyai jarak
+        <m>\max\{|2-1|,|5-2|\}=3</m> dari <m>2/5</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at_utc": "2026-08-22T17:17:41.1350741Z",
+  "scope": "Chapter 1–8 cumulative HTML reader, with focused Chapter 8 and staged-disclosure checks",
+  "surface": "output/chapters01-08-html",
+  "canonical_html_manifest_sha256": "5877bcaf7c08baf2d56e58a36fe9097af3b902f2315f86e667f82dd3118dbdab",
+  "origin": "http://127.0.0.1:8974/",
+  "browser": {
+    "name": "Codex In-app Browser",
+    "type": "iab",
+    "engine_version": null
+  },
+  "desktop": {
+    "requested_viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "document_client_width": 1265,
+    "document_scroll_width": 1265,
+    "horizontal_overflow": false,
+    "html_lang": "id-ID",
+    "page_title": "Himpunan Terbuka dalam Ruang Metrik",
+    "main_bounds_css_px": {
+      "left": 240,
+      "right": 1264.888916015625,
+      "width": 1024.888916015625
+    },
+    "content_bounds_css_px": {
+      "left": 272.8888854980469,
+      "right": 1232.8888854980469,
+      "width": 960
+    },
+    "visual_result": "pass",
+    "evidence": {
+      "path": "qa/browser-evidence/CHAPTER08_DESKTOP_1280x900.jpg",
+      "bytes": 124491,
+      "sha256": "84e8ab6160fb97fe7b792444ffd26c2d37d49e6e2dec4755800b9acbd2fec9dd"
+    }
+  },
+  "staged_disclosure": {
+    "page": "o003-c90-ch08-source-guides.html",
+    "tested_entry": "Pemeriksaan H.1. Keterbukaan interval setengah tertutup dalam garis.",
+    "entry_opened": true,
+    "hint_opened": true,
+    "visible_controls": {
+      "Petunjuk": 1,
+      "Jawaban": 1,
+      "Solusi": 1
+    },
+    "visible_knowl_widths_css_px": [
+      960,
+      960,
+      954,
+      954
+    ],
+    "horizontal_overflow": false,
+    "visual_result": "pass",
+    "evidence": {
+      "path": "qa/browser-evidence/CHAPTER08_DISCLOSURE_1280x900.jpg",
+      "bytes": 173945,
+      "sha256": "cd0f9a1a8a44e2fa9dad2bf2e4fc4aa18dbce6332936fb91a20f21253abcd076"
+    }
+  },
+  "interior_macro_repair": {
+    "page": "sec_interior_set.html",
+    "tested_expression": "Int(A) = {a in A | a is an interior point of A}",
+    "mathjax_aria_entries_with_Int": 8,
+    "content_width_css_px": 960,
+    "horizontal_overflow": false,
+    "console_errors": [],
+    "visual_result": "pass",
+    "evidence": {
+      "path": "qa/browser-evidence/CHAPTER08_INTERIOR_MACRO_1280x900.jpg",
+      "bytes": 168449,
+      "sha256": "d2673491aee9afe3b2f396e990bdde7a8265ef3048cd62155c1bdb873cb35b7b"
+    }
+  },
+  "mobile": {
+    "requested_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "document_client_width": 375,
+    "document_scroll_width": 375,
+    "horizontal_overflow": false,
+    "html_lang": "id-ID",
+    "page_title": "Himpunan Terbuka dalam Ruang Metrik",
+    "main_bounds_css_px": {
+      "left": 0,
+      "right": 375.1111145019531,
+      "width": 375.1111145019531
+    },
+    "content_bounds_css_px": {
+      "left": 28.88888931274414,
+      "right": 347.1111183166504,
+      "width": 318.22222900390625
+    },
+    "contents_drawer": {
+      "opened": true,
+      "left": 0,
+      "right": 240,
+      "width": 240,
+      "horizontal_overflow": false
+    },
+    "visual_result": "pass",
+    "evidence": {
+      "path": "qa/browser-evidence/CHAPTER08_MOBILE_390x844_DRAWER.jpg",
+      "bytes": 51882,
+      "sha256": "948a21987a3728605fe3e628cb987381d220a497b28729472e7ed08179cbd2ce"
+    }
+  },
+  "console": {
+    "errors": [],
+    "warnings": [
+      {
+        "message": "No version information available for component [tex]/newcommand",
+        "source": "MathJax tex-chtml.js",
+        "count": 3
+      },
+      {
+        "message": "No version information available for component [pretext]/mathjaxknowl3.js",
+        "source": "MathJax tex-chtml.js",
+        "count": 3
+      }
+    ],
+    "warning_disposition": "Known MathJax component-version warnings; no rendering or interaction failure was observed. Remote runtime dependencies remain an explicit unfinished whole-reader closure item."
+  },
+  "manual_visual_inspection": {
+    "all_evidence_files_opened": true,
+    "findings": "Desktop chapter navigation and content are centered and page-filling without clipping; staged hint controls open cleanly; the mobile contents drawer overlays at 240 CSS px while the document remains within the viewport; the restored Int macro renders correctly in the Chapter 8 interior definition and activities."
+  },
+  "failures": [],
+  "status": "pass"
+}

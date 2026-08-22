@@ -1,59 +1,59 @@
 <section xml:id="sec_open_sets_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    Consider the interval <m>(a,b)</m> in <m>\R</m> using the Euclidean metric.
-    If <m>m = \frac{a+b}{2}</m>,
-    then <m>(a,b) = B\left(m,\frac{b-a}{2}\right)</m>,
-    so every open interval is an open ball.
-    As an open ball,
-    an open interval <m>(a,b)</m> is a neighborhood of each of its points.
-    This is the foundation for the definition of an open set in a metric space.
+    Perhatikan interval <m>(a,b)</m> dalam <m>\R</m> dengan metrik Euklides.
+    Jika <m>m = \frac{a+b}{2}</m>,
+    maka <m>(a,b) = B\left(m,\frac{b-a}{2}\right)</m>,
+    sehingga setiap interval terbuka merupakan bola terbuka.
+    Sebagai bola terbuka,
+    interval terbuka <m>(a,b)</m> merupakan lingkungan bagi setiap titiknya.
+    Hal ini mendasari definisi himpunan terbuka dalam ruang metrik.
   </p>
   <p>
-    Recall that we defined a subset <m>N</m> of <m>X</m> to be neighborhood of point <m>a</m> in a metric space <m>(X,d)</m> if <m>N</m> contains an open ball
-    <m>B(a, \epsilon)</m> for some <m>\epsilon \gt 0</m>.
-    We saw that every open ball is a neighborhood of each of its points,
-    and we will now extend that idea to define an
-    <term>open set</term> in a metric space.
+    Ingat bahwa kita mendefinisikan suatu subhimpunan <m>N</m> dari <m>X</m> sebagai lingkungan bagi titik <m>a</m> dalam ruang metrik <m>(X,d)</m> jika <m>N</m> memuat suatu bola terbuka
+    <m>B(a, \epsilon)</m> untuk suatu <m>\epsilon \gt 0</m>.
+    Kita telah melihat bahwa setiap bola terbuka merupakan lingkungan bagi setiap titiknya,
+    dan kini kita akan memperluas gagasan tersebut untuk mendefinisikan
+    <term>himpunan terbuka</term> dalam ruang metrik.
   </p>
 
   <definition>
     <statement>
       <p>
-        A subset <m>O</m> of a metric space <m>X</m> is an open set<idx><h>open set in a metric space</h></idx> if <m>O</m> is a neighborhood of each of its points.
+        Suatu subhimpunan <m>O</m> dari ruang metrik <m>X</m> disebut himpunan terbuka<idx><h>himpunan terbuka dalam ruang metrik</h></idx> jika <m>O</m> merupakan lingkungan bagi setiap titiknya.
       </p>
     </statement>
   </definition>
 
   <p>
-    So, by definition, any open ball is an open set.
-    Also by definition,
-    open sets are neighborhoods of each of their points.
-    Open sets are different than non-open sets.
-    For example,
-    <m>(0,1)</m> is an open set in <m>\R</m> using the Euclidean metric,
-    but <m>[0,1)</m> is not.
-    The reason <m>[0,1)</m> is not an open set is that there is no open ball centered at <m>0</m> that is entirely contained in <m>[0,1)</m>.
-    So <m>0</m> has a different property than the other points in <m>[0,1)</m>.
-    The set <m>[0,1)</m> is a neighborhood of each of the points in <m>(0,1)</m>,
-    but is not a neighborhood of <m>0</m>.
-    We can think of the points in <m>(0,1)</m> as being in the interior of the set <m>[0,1)</m>.
-    This leads to the next definition.
+    Jadi, menurut definisi, setiap bola terbuka merupakan himpunan terbuka.
+    Masih menurut definisi,
+    himpunan terbuka merupakan lingkungan bagi setiap titiknya.
+    Himpunan terbuka berbeda dari himpunan yang tidak terbuka.
+    Sebagai contoh,
+    <m>(0,1)</m> merupakan himpunan terbuka dalam <m>\R</m> dengan metrik Euklides,
+    tetapi <m>[0,1)</m> bukan himpunan terbuka.
+    Himpunan <m>[0,1)</m> bukan himpunan terbuka karena tidak ada bola terbuka berpusat di <m>0</m> yang seluruhnya termuat dalam <m>[0,1)</m>.
+    Jadi, <m>0</m> memiliki sifat yang berbeda dari titik-titik lain dalam <m>[0,1)</m>.
+    Himpunan <m>[0,1)</m> merupakan lingkungan bagi setiap titik dalam <m>(0,1)</m>,
+    tetapi bukan lingkungan bagi <m>0</m>.
+    Kita dapat memandang titik-titik dalam <m>(0,1)</m> sebagai titik-titik yang berada di interior himpunan <m>[0,1)</m>.
+    Hal ini membawa kita ke definisi berikut.
   </p>
 
   <definition>
-    <idx><h>interior point in a subset of a metric space</h></idx>
+    <idx><h>titik interior dalam subhimpunan ruang metrik</h></idx>
     <statement>
       <p>
-        Let <m>A</m> be a subset of a metric space <m>X</m>.
-        A point <m>a \in A</m> is an <term>interior point</term> of <m>A</m> if <m>A</m> is a neighborhood of <m>a</m>.
+        Misalkan <m>A</m> suatu subhimpunan dari ruang metrik <m>X</m>.
+        Titik <m>a \in A</m> disebut <term>titik interior</term> dari <m>A</m> jika <m>A</m> merupakan lingkungan bagi <m>a</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    As we will soon see,
-    open sets can be characterized in terms of interior points.
+    Seperti yang akan segera kita lihat,
+    himpunan terbuka dapat dicirikan melalui titik-titik interior.
   </p>
 
   <exploration>
@@ -61,15 +61,15 @@
       <task>
         <introduction>
           <p>
-            Determine if the set <m>A</m> is an open set in the metric space <m>(X,d)</m>.
-            Explain your reasoning.
+            Tentukan apakah himpunan <m>A</m> merupakan himpunan terbuka dalam ruang metrik <m>(X,d)</m>.
+            Jelaskan alasan Anda.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
                   <m>X = \R</m>, <m>d = d_E</m>,
-                  the Euclidean metric, <m>A = [0,0.5)</m>.
+                  metrik Euklides, <m>A = [0,0.5)</m>.
                 </p>
               </statement>
             </task>
@@ -77,19 +77,19 @@
               <statement>
                 <p>
                   <m>X = \{x \in \R \mid 0 \leq x \leq 1\}</m>,
-                  <m>d = d_E</m>, the Euclidean metric, <m>A = [0,0.5)</m>.
-                  Assume that the Euclidean metric is a metric on <m>X</m>.
+                  <m>d = d_E</m>, metrik Euklides, <m>A = [0,0.5)</m>.
+                  Anggap bahwa metrik Euklides merupakan suatu metrik pada <m>X</m>.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  <m>X = \{a,b,c,d\}</m>, <m>d</m> is the discrete metric defined by
+                  <m>X = \{a,b,c,d\}</m>, <m>d</m> adalah metrik diskret yang didefinisikan oleh
                   <me>
                     d(x,y) = \begin{cases}0 \amp \text{ if }  x = y \\ 1 \amp \text{ if }  x \neq y, \end{cases}
                   </me>
-                  and <m>A = \{a,b\}</m>.
+                  dan <m>A = \{a,b\}</m>.
                 </p>
               </statement>
             </task>
@@ -100,8 +100,8 @@
             
               <statement>
                 <p>
-                  What are the interior points of the following sets in <m>(\R, d_E)</m>?
-                  Explain.
+                  Apa saja titik interior dari himpunan-himpunan berikut dalam <m>(\R, d_E)</m>?
+                  Jelaskan.
                   <me>
                     (0,1) \ \ \ (0,1] \ \ \ [0,1) \ \ \ [0,1]
                   </me>.
@@ -111,18 +111,18 @@
         <task>
               <statement>
                 <p>
-                  Let <m>A = \{0, 1, 2\}</m> in <m>(\R, d_E)</m>.
-                  What are the interior points of <m>A</m>?
-                  Explain.
+                  Misalkan <m>A = \{0, 1, 2\}</m> dalam <m>(\R, d_E)</m>.
+                  Apa saja titik interior dari <m>A</m>?
+                  Jelaskan.
                 </p>
               </statement>
         </task>
         <task>
               <statement>
                 <p>
-                  Let <m>\Q</m> be the set of rational numbers in <m>(\R, d_E)</m>.
-                  What are the interior points of <m>\Q</m>?
-                  Explain.
+                  Misalkan <m>\Q</m> himpunan bilangan rasional dalam <m>(\R, d_E)</m>.
+                  Apa saja titik interior dari <m>\Q</m>?
+                  Jelaskan.
                 </p>
               </statement>
             </task>

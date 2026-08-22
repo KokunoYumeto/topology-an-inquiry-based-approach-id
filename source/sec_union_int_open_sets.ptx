@@ -1,7 +1,7 @@
 <section xml:id="sec_union_int_open_sets">
-  <title>Unions and Intersections of Open Sets</title>
+  <title>Gabungan dan Irisan Himpunan Terbuka</title>
   <p>
-    Once we have defined open sets we might wonder about what happens if we take a union or intersection of open sets.
+    Setelah mendefinisikan himpunan terbuka, kita mungkin bertanya-tanya apa yang terjadi jika kita mengambil gabungan atau irisan dari himpunan-himpunan terbuka.
   </p>
 
   <activity xml:id="act_Open_union">
@@ -9,22 +9,22 @@
       <task>
         <introduction>
           <p>
-            Let <m>A = (-2,1)</m> and <m>B = (-1,2)</m> in <m>(\R, d_E)</m>.
+            Misalkan <m>A = (-2,1)</m> dan <m>B = (-1,2)</m> dalam <m>(\R, d_E)</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Is <m>A \cup B</m> open?
-                  Explain.
+                  Apakah <m>A \cup B</m> terbuka?
+                  Jelaskan.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Is <m>A \cap B</m> open?
-                  Explain.
+                  Apakah <m>A \cap B</m> terbuka?
+                  Jelaskan.
                 </p>
               </statement>
             </task>
@@ -33,39 +33,39 @@
       <task>
         <introduction>
           <p>
-            Let <m>X = \R</m> with the Euclidean metric.
-            Let <m>A_n = \left(1-\frac{1}{n}, 1+\frac{1}{n}\right)</m> for each <m>n \in \Z^+</m>.
+            Misalkan <m>X = \R</m> dengan metrik Euklides.
+            Misalkan <m>A_n = \left(1-\frac{1}{n}, 1+\frac{1}{n}\right)</m> untuk setiap <m>n \in \Z^+</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  What is <m>\bigcup_{n \geq 1} A_n</m>?
-                  A proof is not necessary.
+                  Tentukan <m>\bigcup_{n \geq 1} A_n</m>.
+                  Bukti tidak diperlukan.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Is <m>\bigcup_{n \geq 1} A_n</m> open in <m>\R</m>?
-                  Explain.
+                  Apakah <m>\bigcup_{n \geq 1} A_n</m> terbuka dalam <m>\R</m>?
+                  Jelaskan.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  What is <m>\bigcap_{n \geq 1} A_n</m>?
-                  A proof is not necessary.
+                  Tentukan <m>\bigcap_{n \geq 1} A_n</m>.
+                  Bukti tidak diperlukan.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Is <m>\bigcap_{n \geq 1} A_n</m> open in <m>\R</m>?
-                  Explain.
+                  Apakah <m>\bigcap_{n \geq 1} A_n</m> terbuka dalam <m>\R</m>?
+                  Jelaskan.
                 </p>
               </statement>
             </task>
@@ -76,23 +76,23 @@
 
   <p>
     <xref ref="act_Open_union"/>
-    demonstrates that an arbitrary intersection of open sets is not necessarily open.
-    However, there are some things we can say about unions and intersections of open sets.
+    menunjukkan bahwa irisan sebarang dari himpunan-himpunan terbuka belum tentu terbuka.
+    Namun, ada beberapa hal yang dapat kita nyatakan tentang gabungan dan irisan himpunan-himpunan terbuka.
   </p>
 
   <theorem>
     <statement>
       <p>
-        Let <m>X</m> be a metric space.
+        Misalkan <m>X</m> suatu ruang metrik.
         <ol>
           <li>
             <p>
-              Any union of open sets in <m>X</m> is an open set in <m>X</m>.
+              Gabungan sebarang dari himpunan-himpunan terbuka dalam <m>X</m> merupakan himpunan terbuka dalam <m>X</m>.
             </p>
           </li>
           <li>
             <p>
-              Any finite intersection of open sets in <m>X</m> is an open set in <m>X</m>.
+              Sebarang irisan berhingga dari himpunan-himpunan terbuka dalam <m>X</m> merupakan himpunan terbuka dalam <m>X</m>.
             </p>
           </li>
         </ol>
@@ -101,29 +101,29 @@
   
   <proof>
     <p>
-      Let <m>X</m> be a metric space.
-      To prove part 1, assume that
-      <m>\{O_{\alpha}\}</m> is a collection of open sets in <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m> and let <m>O = \bigcup_{\alpha \in I} O_{\alpha}</m>.
-      By <xref ref="thm_OS_1"/>,
-      we know that <m>O_{\alpha}</m> is a union of open balls for each <m>\alpha \in I</m>.
-      Combining all of these open balls together shows that <m>O</m> is a union of open balls and is therefore an open set by <xref ref="thm_OS_1"/>.
+      Misalkan <m>X</m> suatu ruang metrik.
+      Untuk membuktikan bagian 1, asumsikan bahwa
+      <m>\{O_{\alpha}\}</m> merupakan koleksi himpunan terbuka dalam <m>X</m>, dengan <m>\alpha</m> berkisar pada suatu himpunan indeks <m>I</m>, dan misalkan <m>O = \bigcup_{\alpha \in I} O_{\alpha}</m>.
+      Berdasarkan <xref ref="thm_OS_1"/>,
+      kita mengetahui bahwa <m>O_{\alpha}</m> merupakan gabungan bola-bola terbuka untuk setiap <m>\alpha \in I</m>.
+      Menggabungkan semua bola terbuka tersebut menunjukkan bahwa <m>O</m> merupakan gabungan bola-bola terbuka dan oleh karena itu merupakan himpunan terbuka berdasarkan <xref ref="thm_OS_1"/>.
     </p>
     <p>
-      For part 2, assume that <m>O_1</m>,
+      Untuk bagian 2, asumsikan bahwa <m>O_1</m>,
       <m>O_2</m>, <m>\ldots</m>,
-      <m>O_n</m> are open sets in <m>X</m> for some <m>n \in \Z^+</m>.
-      To show that <m>O = \bigcap_{k=1}^n O_k</m> is an open set,
-      we will show that <m>O</m> is a neighborhood of each of its points.
-      Let <m>x \in O</m>.
-      Then <m>x \in O_k</m> for each <m>1 \leq k \leq n</m>.
-      Let <m>k</m> be between 1 and <m>n</m>.
-      Since <m>O_k</m> is open,
-      we know that <m>O_k</m> is a neighborhood of each of its points.
-      So there exists <m>\epsilon_k \gt 0</m> such that <m>B(x, \epsilon_k) \subseteq O_k</m>.
-      Since there are only finitely many values of <m>k</m>,
-      let <m>\epsilon = \min\{\epsilon_k \mid 1 \leq k \leq n\}</m>.
-      Then <m>B(x, \epsilon) \subseteq B(x, \epsilon_k)</m> for each <m>k</m> and so <m>B(x, \epsilon) \subseteq \bigcap_{k=1}^n O_k = O</m>.
-      Therefore, <m>O</m> is a neighborhood of each of its points and <m>O</m> is an open set.
+      <m>O_n</m> merupakan himpunan-himpunan terbuka dalam <m>X</m> untuk suatu <m>n \in \Z^+</m>.
+      Untuk menunjukkan bahwa <m>O = \bigcap_{k=1}^n O_k</m> merupakan himpunan terbuka,
+      kita akan menunjukkan bahwa <m>O</m> merupakan lingkungan bagi setiap titiknya.
+      Misalkan <m>x \in O</m>.
+      Maka <m>x \in O_k</m> untuk setiap <m>1 \leq k \leq n</m>.
+      Ambil <m>k</m> di antara 1 dan <m>n</m>.
+      Karena <m>O_k</m> terbuka,
+      kita mengetahui bahwa <m>O_k</m> merupakan lingkungan bagi setiap titiknya.
+      Jadi, terdapat <m>\epsilon_k \gt 0</m> sedemikian sehingga <m>B(x, \epsilon_k) \subseteq O_k</m>.
+      Karena nilai <m>k</m> hanya berhingga banyaknya,
+      misalkan <m>\epsilon = \min\{\epsilon_k \mid 1 \leq k \leq n\}</m>.
+      Kemudian <m>B(x, \epsilon) \subseteq B(x, \epsilon_k)</m> untuk setiap <m>k</m>, sehingga <m>B(x, \epsilon) \subseteq \bigcap_{k=1}^n O_k = O</m>.
+      Oleh karena itu, <m>O</m> merupakan lingkungan bagi setiap titiknya dan <m>O</m> merupakan himpunan terbuka.
     </p>
   </proof>
   </theorem>

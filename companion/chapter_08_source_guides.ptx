@@ -1,0 +1,1165 @@
+<section xml:id="o003-c90-ch08-source-guides" xml:lang="id-ID">
+  <title>Panduan kegiatan sumber</title>
+
+  <p>
+    Tiga puluh panduan berikut mendampingi seluruh tugas daun dalam eksplorasi
+    dan aktivitas Bab 8, sesuai urutan sumbernya. Kerjakan dahulu pertanyaan
+    pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap.
+    Setiap pernyataan menunjukkan letak tugas sumber dan memparafrasakan
+    sasaran kerjanya. Teks panduan asli ini tersedia di bawah lisensi Creative
+    Commons Atribusi 4.0 Internasional (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch08-guide-01">
+    <title>Keterbukaan interval setengah tertutup dalam garis</title>
+    <statement>
+      <p>
+        Pada kasus pertama eksplorasi di bagian Pendahuluan, putuskan apakah
+        <m>A=[0,0.5)</m> terbuka ketika ruang sekitarnya adalah
+        <m>(\R,d_E)</m>, lalu pertanggungjawabkan keputusan itu dari definisi.
+        Rubrik: nyatakan titik penguji yang menentukan dan jelaskan mengapa
+        tidak ada bola berpusat di titik itu yang memenuhi syarat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-01-hint">
+      <p>
+        Tahap 1: uji titik ujung <m>0</m>. Tahap 2: untuk jari-jari
+        <m>r\gt0</m> sebarang, cari titik negatif di <m>B(0,r)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-01-answer">
+      <p>
+        Tidak. Himpunan <m>[0,0.5)</m> tidak terbuka dalam
+        <m>(\R,d_E)</m> karena bukan lingkungan bagi titik anggotanya
+        <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-01-solution">
+      <p>
+        Titik <m>0</m> termasuk dalam <m>A</m>. Ambil sembarang
+        <m>r\gt0</m>. Titik <m>-r/2</m> memenuhi
+        <m>d_E(-r/2,0)=r/2\lt r</m>, sehingga
+        <m>-r/2\in B(0,r)</m>, tetapi <m>-r/2\notin A</m>. Jadi tidak ada
+        <m>r\gt0</m> dengan <m>B(0,r)\subseteq A</m>. Dengan demikian
+        <m>A</m> bukan lingkungan bagi setiap titiknya dan bukan himpunan
+        terbuka. Bukti lengkap harus memuat titik penguji, kuantor
+        <m>r\gt0</m> sebarang, dan saksi yang keluar dari <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-02">
+    <title>Peran ruang sekitar pada keterbukaan</title>
+    <statement>
+      <p>
+        Pada kasus kedua eksplorasi Pendahuluan, periksa himpunan yang sama,
+        <m>A=[0,0.5)</m>, tetapi sekarang sebagai subhimpunan dari
+        <m>X=[0,1]</m> dengan metrik Euklides yang dibatasi ke <m>X</m>.
+        Rubrik: gunakan bola yang anggotanya wajib berada di <m>X</m>, dan
+        berikan jari-jari positif untuk setiap <m>x\in A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-02-hint">
+      <p>
+        Tahap 1: titik negatif bukan anggota ruang <m>X</m>. Tahap 2: untuk
+        <m>x\in[0,0.5)</m>, bandingkan jarak <m>0.5-x</m> dengan jarak ke
+        ujung kanan <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-02-answer">
+      <p>
+        Ya. Himpunan <m>[0,0.5)</m> terbuka relatif terhadap ruang metrik
+        <m>X=[0,1]</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-02-solution">
+      <p>
+        Ambil sembarang <m>x\in A</m> dan tetapkan
+        <m>r=0.5-x\gt0</m>. Jika <m>y\in B_X(x,r)</m>, maka
+        <m>y\in X</m> dan <m>|y-x|\lt0.5-x</m>. Akibatnya
+        <m>y\lt0.5</m>; sementara itu, keanggotaan <m>y\in X=[0,1]</m>
+        memberi <m>y\geq0</m>. Jadi <m>y\in[0,0.5)=A</m>, sehingga
+        <m>B_X(x,r)\subseteq A</m>. Hal ini berlaku untuk setiap
+        <m>x\in A</m>, termasuk <m>x=0</m>. Maka <m>A</m> terbuka dalam
+        <m>X</m>. Rubrik lengkap menuntut jari-jari positif, pemakaian ruang
+        relatif, dan inklusi bola.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-03">
+    <title>Subhimpunan dalam metrik diskret</title>
+    <statement>
+      <p>
+        Pada kasus ketiga eksplorasi Pendahuluan, tentukan keterbukaan
+        <m>A=\{a,b\}</m> di ruang <m>X=\{a,b,c,d\}</m> dengan metrik
+        diskret. Rubrik: pilih satu jari-jari yang bekerja di setiap titik
+        <m>A</m> dan hitung bola yang dihasilkannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-03-hint">
+      <p>
+        Tahap 1: jarak antara dua titik berbeda adalah <m>1</m>. Tahap 2:
+        pilih jari-jari yang lebih kecil daripada <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-03-answer">
+      <p>
+        Ya. Himpunan <m>\{a,b\}</m> terbuka dalam ruang bermetrik diskret
+        tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-03-solution">
+      <p>
+        Untuk setiap <m>x\in A</m>, ambil <m>r=1/2</m>. Dalam metrik
+        diskret, <m>d(x,x)=0\lt1/2</m>, sedangkan untuk setiap
+        <m>y\neq x</m> berlaku <m>d(x,y)=1</m>, yang tidak lebih kecil dari
+        <m>1/2</m>. Jadi <m>B(x,1/2)=\{x\}\subseteq A</m>. Karena setiap
+        titik <m>A</m> mempunyai bola demikian, <m>A</m> merupakan
+        lingkungan bagi setiap titiknya dan bersifat terbuka. Argumen yang
+        sama sebenarnya menunjukkan bahwa setiap subhimpunan ruang diskret
+        terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-04">
+    <title>Titik interior empat interval</title>
+    <statement>
+      <p>
+        Pada butir pertama kelompok kedua eksplorasi Pendahuluan, tentukan
+        semua titik interior dari <m>(0,1)</m>, <m>(0,1]</m>,
+        <m>[0,1)</m>, dan <m>[0,1]</m> di <m>(\R,d_E)</m>. Rubrik: buktikan
+        bahwa titik di antara kedua ujung bersifat interior dan uji setiap
+        ujung yang termasuk dalam himpunannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-04-hint">
+      <p>
+        Tahap 1: untuk <m>0\lt x\lt1</m>, gunakan radius yang lebih kecil
+        daripada jarak ke <m>0</m> dan ke <m>1</m>. Tahap 2: bola sekecil apa
+        pun di sekitar <m>0</m> atau <m>1</m> melintasi salah satu ujung.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-04-answer">
+      <p>
+        Keempat himpunan mempunyai himpunan titik interior yang sama, yaitu
+        <m>(0,1)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-04-solution">
+      <p>
+        Jika <m>0\lt x\lt1</m>, pilih
+        <m>r=\frac12\min\{x,1-x\}\gt0</m>. Maka
+        <m>B(x,r)\subseteq(0,1)</m>, sehingga <m>x</m> merupakan titik
+        interior dari masing-masing empat himpunan. Titik <m>0</m>, bila
+        termasuk, bukan titik interior: untuk setiap <m>r\gt0</m>, titik
+        <m>-r/2</m> berada dalam <m>B(0,r)</m> tetapi di luar himpunan.
+        Demikian pula titik <m>1</m>, bila termasuk, gagal karena
+        <m>1+r/2\in B(1,r)</m> tetapi berada di luar himpunan. Tidak ada titik
+        anggota lainnya. Jadi interior keempatnya adalah <m>(0,1)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-05">
+    <title>Interior himpunan berhingga di garis</title>
+    <statement>
+      <p>
+        Pada butir kedua kelompok titik interior di Pendahuluan, cari semua
+        titik interior <m>A=\{0,1,2\}</m> sebagai subhimpunan
+        <m>(\R,d_E)</m>. Rubrik: uji setiap kandidat dengan jari-jari sebarang
+        dan temukan titik bola yang tidak berada dalam himpunan berhingga itu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-05-hint">
+      <p>
+        Tahap 1: pusatkan bola di salah satu <m>a\in A</m>. Tahap 2: pilih
+        perpindahan positif yang lebih kecil daripada jari-jari dan juga lebih
+        kecil daripada <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-05-answer">
+      <p>
+        Himpunan <m>A</m> tidak mempunyai titik interior; jadi
+        <m>\Int(A)=\emptyset</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-05-solution">
+      <p>
+        Ambil <m>a\in\{0,1,2\}</m> dan <m>r\gt0</m> sebarang. Tetapkan
+        <m>t=\min\{r/2,1/2\}\gt0</m>. Maka <m>a+t\in B(a,r)</m>. Karena
+        <m>0\lt t\leq1/2</m>, bilangan <m>a+t</m> tidak sama dengan
+        <m>0</m>, <m>1</m>, atau <m>2</m>; jadi <m>a+t\notin A</m>.
+        Dengan demikian tidak ada bola berpusat di <m>a</m> yang termuat
+        dalam <m>A</m>. Argumen berlaku untuk ketiga titik, sehingga tidak
+        satu pun merupakan titik interior.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-06">
+    <title>Interior bilangan rasional</title>
+    <statement>
+      <p>
+        Pada butir terakhir eksplorasi Pendahuluan, tentukan titik interior
+        <m>\Q</m> ketika dipandang sebagai subhimpunan
+        <m>(\R,d_E)</m>. Rubrik: mulai dari bilangan rasional dan radius
+        sebarang, lalu hasilkan bilangan irasional di dalam bola tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-06-hint">
+      <p>
+        Tahap 1: ambil <m>q\in\Q</m> dan <m>r\gt0</m>. Tahap 2: pilih
+        <m>n\in\Z^+</m> cukup besar sehingga <m>\sqrt2/n\lt r</m>, lalu
+        periksa <m>q+\sqrt2/n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-06-answer">
+      <p>
+        Tidak ada bilangan rasional yang menjadi titik interior
+        <m>\Q</m>; dengan kata lain, <m>\Int(\Q)=\emptyset</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-06-solution">
+      <p>
+        Ambil sebarang <m>q\in\Q</m> dan <m>r\gt0</m>. Menurut sifat
+        Archimedes, ada <m>n\in\Z^+</m> dengan <m>\sqrt2/n\lt r</m>.
+        Bilangan <m>y=q+\sqrt2/n</m> bersifat irasional, sebab jika
+        <m>y</m> rasional maka <m>\sqrt2=n(y-q)</m> juga rasional, suatu
+        kontradiksi. Namun <m>d_E(y,q)=\sqrt2/n\lt r</m>, jadi
+        <m>y\in B(q,r)\setminus\Q</m>. Setiap bola di sekitar setiap
+        <m>q\in\Q</m> keluar dari <m>\Q</m>; karena itu interiornya kosong.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch08-guide-07">
+    <title>Himpunan kosong sebagai himpunan terbuka</title>
+    <statement>
+      <p>
+        Pada pertanyaan pertama aktivitas pembuka bagian Himpunan Terbuka,
+        tentukan apakah <m>\emptyset</m> terbuka dalam ruang metrik sebarang
+        <m>X</m>. Rubrik: terapkan pernyataan berkuantor <q>untuk setiap
+        titik anggotanya</q> dengan cermat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-07-hint">
+      <p>
+        Tahap 1: tuliskan kemungkinan cara menggagalkan definisi
+        keterbukaan. Tahap 2: tanyakan apakah <m>\emptyset</m> mempunyai
+        sebuah titik yang dapat menjadi contoh kegagalan itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-07-answer">
+      <p>
+        Ya. Himpunan kosong terbuka dalam setiap ruang metrik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-07-solution">
+      <p>
+        Suatu himpunan <m>O</m> terbuka jika untuk setiap <m>x\in O</m>
+        terdapat <m>r\gt0</m> dengan <m>B(x,r)\subseteq O</m>. Himpunan
+        <m>\emptyset</m> tidak mempunyai titik anggota. Karena itu tidak ada
+        <m>x\in\emptyset</m> yang melanggar syarat tersebut; pernyataan
+        universalnya benar secara vakum. Maka <m>\emptyset</m> terbuka.
+        Jawaban lengkap harus menjelaskan kebenaran vakum, bukan mencoba
+        membangun bola berpusat di titik yang tidak ada.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-08">
+    <title>Seluruh ruang sebagai himpunan terbuka</title>
+    <statement>
+      <p>
+        Pada pertanyaan kedua aktivitas pembuka bagian Himpunan Terbuka,
+        putuskan apakah ruang metrik <m>X</m> terbuka sebagai subhimpunan
+        dirinya sendiri. Rubrik: untuk titik sebarang, berikan satu radius
+        positif dan verifikasi inklusi bolanya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-08-hint">
+      <p>
+        Tahap 1: ambil <m>x\in X</m>. Tahap 2: ingat bahwa, apa pun radius
+        positifnya, definisi <m>B(x,r)</m> hanya memilih titik-titik dari
+        <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-08-answer">
+      <p>
+        Ya. Seluruh ruang <m>X</m> selalu merupakan himpunan terbuka dalam
+        dirinya sendiri.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-08-solution">
+      <p>
+        Ambil sembarang <m>x\in X</m> dan, misalnya, pilih <m>r=1</m>.
+        Berdasarkan definisi bola dalam ruang metrik <m>X</m>, berlaku
+        <m>B(x,1)=\{y\in X\mid d(x,y)\lt1\}</m>, sehingga otomatis
+        <m>B(x,1)\subseteq X</m>. Jadi <m>X</m> merupakan lingkungan bagi
+        setiap titiknya dan karena itu terbuka. Radius lain yang positif juga
+        dapat digunakan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-09">
+    <title>Target arah balik teorema gabungan bola</title>
+    <statement>
+      <p>
+        Pada langkah pertama aktivitas pembuktian di bagian Himpunan Terbuka,
+        dengan asumsi <m>O</m> adalah gabungan bola-bola terbuka, rumuskan
+        sasaran yang harus dicapai agar <m>O</m> terbukti terbuka. Rubrik:
+        nyatakan titik sebarang, keberadaan radius positif, dan inklusi bola
+        yang tepat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-09-hint">
+      <p>
+        Tahap 1: buka definisi <q><m>O</m> terbuka</q>. Tahap 2: jangan
+        mengganti pusat bola oleh pusat salah satu bola penyusun; sasaran
+        akhirnya harus berpusat di titik <m>x\in O</m> yang sedang diuji.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-09-answer">
+      <p>
+        Kita harus menunjukkan bahwa untuk setiap <m>x\in O</m> terdapat
+        <m>r_x\gt0</m> sehingga <m>B(x,r_x)\subseteq O</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-09-solution">
+      <p>
+        Menurut definisi, <m>O</m> terbuka tepat ketika <m>O</m> merupakan
+        lingkungan bagi setiap titiknya. Jadi ambil <m>x\in O</m> sebarang.
+        Target lokalnya adalah menemukan <m>r_x\gt0</m> dengan
+        <m>B(x,r_x)\subseteq O</m>. Setelah target ini dibuktikan untuk
+        setiap <m>x</m>, keterbukaan <m>O</m> langsung mengikuti. Rubrik
+        lengkap harus memuat kedua kuantor dan arah inklusi yang benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-10">
+    <title>Memilih bola penyusun yang memuat titik</title>
+    <statement>
+      <p>
+        Pada langkah kedua aktivitas pembuktian yang sama, jelaskan mengapa
+        setiap <m>x\in O</m> terletak dalam suatu bola terbuka penyusun
+        <m>B</m> yang juga memenuhi <m>B\subseteq O</m>. Rubrik: gunakan arti
+        keanggotaan dalam suatu gabungan terindeks.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-10-hint">
+      <p>
+        Tahap 1: tuliskan <m>O=\bigcup_{\alpha\in I}B_\alpha</m>. Tahap 2:
+        terjemahkan <m>x\in\bigcup_{\alpha\in I}B_\alpha</m> menjadi
+        pernyataan keberadaan sebuah indeks.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-10-answer">
+      <p>
+        Ada <m>\alpha_0\in I</m> dengan <m>x\in B_{\alpha_0}</m>, dan setiap
+        bola penyusun memenuhi <m>B_{\alpha_0}\subseteq O</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-10-solution">
+      <p>
+        Karena <m>O</m> merupakan gabungan bola-bola terbuka, kita dapat
+        menulis <m>O=\bigcup_{\alpha\in I}B_\alpha</m>. Keanggotaan
+        <m>x\in O</m> berarti terdapat sekurang-kurangnya satu
+        <m>\alpha_0\in I</m> sedemikian sehingga
+        <m>x\in B_{\alpha_0}</m>. Di sisi lain, setiap anggota keluarga yang
+        digabungkan merupakan subhimpunan gabungannya, sehingga
+        <m>B_{\alpha_0}\subseteq O</m>. Jadi
+        <m>x\in B_{\alpha_0}\subseteq O</m>, tepat seperti yang diperlukan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-11">
+    <title>Menuntaskan arah balik teorema gabungan bola</title>
+    <statement>
+      <p>
+        Pada langkah terakhir aktivitas pembuktian bagian Himpunan Terbuka,
+        selesaikan argumen bahwa gabungan bola-bola terbuka <m>O</m> memang
+        terbuka. Rubrik: mulai dari titik sebarang, pakai bola penyusun yang
+        memuatnya, bangun bola berpusat di titik itu, lalu tutup semua kuantor.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-11-hint">
+      <p>
+        Tahap 1: tulis bola penyusun sebagai <m>B(c,R)</m> dan gunakan
+        <m>x\in B(c,R)</m>. Tahap 2: radius
+        <m>s=R-d(c,x)</m> positif dan menghasilkan
+        <m>B(x,s)\subseteq B(c,R)</m> melalui pertidaksamaan segitiga.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-11-answer">
+      <p>
+        Setiap <m>x\in O</m> mempunyai bola terbuka berpusat di <m>x</m> yang
+        termuat dalam <m>O</m>; oleh sebab itu <m>O</m> terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-11-solution">
+      <p>
+        Ambil sebarang <m>x\in O</m>. Karena <m>O</m> adalah gabungan
+        bola-bola terbuka, ada bola penyusun <m>B(c,R)</m> dengan
+        <m>x\in B(c,R)\subseteq O</m>. Maka
+        <m>s=R-d(c,x)\gt0</m>. Jika <m>y\in B(x,s)</m>, pertidaksamaan
+        segitiga memberi
+        <me>
+          d(c,y)\leq d(c,x)+d(x,y)\lt d(c,x)+s=R.
+        </me>
+        Jadi <m>y\in B(c,R)</m>, sehingga
+        <m>B(x,s)\subseteq B(c,R)\subseteq O</m>. Karena <m>x\in O</m>
+        dipilih sebarang, <m>O</m> merupakan lingkungan bagi setiap titiknya
+        dan dengan demikian terbuka. Ini melengkapi implikasi yang tertunda.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-12">
+    <title>Gabungan dua interval yang bertumpang tindih</title>
+    <statement>
+      <p>
+        Pada kasus pertama aktivitas Gabungan dan Irisan Himpunan Terbuka,
+        dengan <m>A=(-2,1)</m> dan <m>B=(-1,2)</m> di garis Euklides,
+        tentukan apakah <m>A\cup B</m> terbuka dan jelaskan. Rubrik: hitung
+        gabungannya dengan tepat dan hubungkan bentuk hasilnya dengan
+        keterbukaan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-12-hint">
+      <p>
+        Tahap 1: kedua interval bertumpang tindih pada <m>(-1,1)</m>.
+        Tahap 2: telusuri semua titik dari ujung kiri <m>-2</m> hingga ujung
+        kanan <m>2</m>, dengan kedua ujung dikecualikan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-12-answer">
+      <p>
+        <m>A\cup B=(-2,2)</m>, sehingga gabungan tersebut terbuka dalam
+        <m>(\R,d_E)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-12-solution">
+      <p>
+        Interval <m>A</m> mencakup titik-titik dari <m>-2</m> sampai
+        <m>1</m>, sedangkan <m>B</m> mencakup titik-titik dari <m>-1</m>
+        sampai <m>2</m>. Karena keduanya bertumpang tindih, gabungannya tidak
+        mempunyai celah dan sama dengan <m>(-2,2)</m>. Interval terbuka ini
+        adalah bola <m>B(0,2)</m> dalam metrik Euklides, sehingga terbuka.
+        Rubrik lengkap memerlukan perhitungan gabungan dan alasan
+        keterbukaannya, bukan hanya jawaban ya.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch08-guide-13">
+    <title>Irisan dua interval yang bertumpang tindih</title>
+    <statement>
+      <p>
+        Pada kasus kedua aktivitas Gabungan dan Irisan Himpunan Terbuka,
+        tentukan keterbukaan <m>A\cap B</m> untuk
+        <m>A=(-2,1)</m> dan <m>B=(-1,2)</m>. Rubrik: hitung irisan melalui
+        syarat keanggotaan bersama dan jelaskan status hasilnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-13-hint">
+      <p>
+        Tahap 1: suatu titik harus lebih besar daripada kedua batas kiri dan
+        lebih kecil daripada kedua batas kanan. Tahap 2: gunakan batas kiri
+        yang lebih besar dan batas kanan yang lebih kecil.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-13-answer">
+      <p>
+        <m>A\cap B=(-1,1)</m>, dan himpunan ini terbuka dalam
+        <m>(\R,d_E)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-13-solution">
+      <p>
+        Syarat <m>x\in A\cap B</m> berarti sekaligus
+        <m>-2\lt x\lt1</m> dan <m>-1\lt x\lt2</m>. Kedua syarat bersama-sama
+        ekuivalen dengan <m>-1\lt x\lt1</m>. Jadi
+        <m>A\cap B=(-1,1)=B(0,1)</m>. Sebagai bola terbuka, irisan itu
+        terbuka. Ini juga merupakan contoh irisan berhingga dari himpunan
+        terbuka yang tetap terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-14">
+    <title>Gabungan keluarga interval menyusut</title>
+    <statement>
+      <p>
+        Pada butir pertama kasus keluarga
+        <m>A_n=(1-1/n,1+1/n)</m> dalam aktivitas Gabungan dan Irisan,
+        tentukan <m>\bigcup_{n\geq1}A_n</m> tanpa tuntutan bukti dari sumber.
+        Rubrik panduan: kenali interval terbesar dalam keluarga dan cek bahwa
+        semua interval lain termuat di dalamnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-14-hint">
+      <p>
+        Tahap 1: hitung <m>A_1</m>. Tahap 2: untuk <m>n\geq1</m>, bandingkan
+        <m>1/n</m> dengan <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-14-answer">
+      <p>
+        <m>\displaystyle\bigcup_{n\geq1}A_n=(0,2)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-14-solution">
+      <p>
+        Untuk <m>n=1</m>, diperoleh <m>A_1=(0,2)</m>. Jika
+        <m>n\geq1</m>, maka <m>1/n\leq1</m>, sehingga
+        <m>1-1/n\geq0</m> dan <m>1+1/n\leq2</m>. Jadi
+        <m>A_n\subseteq A_1</m> untuk setiap <m>n</m>. Karena <m>A_1</m>
+        sendiri termasuk dalam keluarga yang digabungkan, gabungan seluruh
+        keluarga tepat sama dengan <m>A_1=(0,2)</m>. Penjelasan ini
+        memverifikasi jawaban meskipun tugas sumber tidak mewajibkan bukti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-15">
+    <title>Keterbukaan gabungan keluarga interval</title>
+    <statement>
+      <p>
+        Pada butir kedua kasus <m>A_n=(1-1/n,1+1/n)</m>, putuskan apakah
+        <m>\bigcup_{n\geq1}A_n</m> terbuka di <m>\R</m> dan beri alasan.
+        Rubrik: gunakan hasil gabungan yang telah dihitung atau teorema
+        gabungan sebarang himpunan terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-15-hint">
+      <p>
+        Tahap 1: ingat hasil butir sebelumnya. Tahap 2: kenali
+        <m>(0,2)</m> sebagai sebuah interval terbuka atau bola Euklides.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-15-answer">
+      <p>
+        Ya. Gabungan itu adalah <m>(0,2)</m>, yang terbuka dalam
+        <m>(\R,d_E)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-15-solution">
+      <p>
+        Dari perhitungan sebelumnya,
+        <m>\bigcup_{n\geq1}A_n=(0,2)</m>. Himpunan ini sama dengan bola
+        <m>B(1,1)</m> dalam metrik Euklides, sehingga terbuka. Secara
+        alternatif, setiap <m>A_n</m> adalah interval terbuka dan teorema
+        gabungan sebarang menyatakan bahwa gabungan keluarga himpunan terbuka
+        juga terbuka. Salah satu alasan yang dinyatakan dengan lengkap sudah
+        memenuhi rubrik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-16">
+    <title>Irisan keluarga interval menyusut</title>
+    <statement>
+      <p>
+        Pada butir ketiga kasus <m>A_n=(1-1/n,1+1/n)</m>, tentukan
+        <m>\bigcap_{n\geq1}A_n</m>; sumber tidak menuntut bukti. Rubrik
+        panduan: tunjukkan titik yang berada di semua interval dan jelaskan
+        bagaimana suatu titik lain akhirnya dikeluarkan oleh interval yang
+        cukup sempit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-16-hint">
+      <p>
+        Tahap 1: titik pusat <m>1</m> selalu memenuhi syarat. Tahap 2: jika
+        <m>x\neq1</m>, pilih <m>n</m> sehingga <m>1/n\leq|x-1|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-16-answer">
+      <p>
+        <m>\displaystyle\bigcap_{n\geq1}A_n=\{1\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-16-solution">
+      <p>
+        Untuk setiap <m>n\geq1</m>, berlaku
+        <m>1-1/n\lt1\lt1+1/n</m>; jadi <m>1\in A_n</m> untuk semua
+        <m>n</m>. Sebaliknya, ambil <m>x\neq1</m> dan tetapkan
+        <m>\delta=|x-1|\gt0</m>. Pilih <m>n</m> cukup besar sehingga
+        <m>1/n\leq\delta</m>. Keanggotaan dalam <m>A_n</m> mensyaratkan
+        <m>|x-1|\lt1/n</m>, yang gagal. Jadi setiap <m>x\neq1</m> terbuang
+        dari setidaknya satu interval. Hanya <m>1</m> yang berada dalam
+        irisan seluruhnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-17">
+    <title>Keterbukaan irisan tak berhingga</title>
+    <statement>
+      <p>
+        Pada butir terakhir kasus keluarga <m>A_n</m>, tentukan apakah
+        <m>\bigcap_{n\geq1}A_n</m> terbuka dalam garis Euklides. Rubrik:
+        gunakan hasil irisan dan uji satu-satunya titiknya dengan bola
+        berjari-jari sebarang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-17-hint">
+      <p>
+        Tahap 1: irisan itu adalah <m>\{1\}</m>. Tahap 2: setiap
+        <m>B(1,r)</m> dengan <m>r\gt0</m> juga memuat titik selain <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-17-answer">
+      <p>
+        Tidak. Irisan <m>\{1\}</m> bukan himpunan terbuka dalam
+        <m>(\R,d_E)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-17-solution">
+      <p>
+        Hasil butir sebelumnya memberi
+        <m>\bigcap_{n\geq1}A_n=\{1\}</m>. Ambil sembarang <m>r\gt0</m>.
+        Titik <m>1+r/2</m> berada dalam <m>B(1,r)</m>, tetapi tidak sama
+        dengan <m>1</m>; jadi <m>B(1,r)\nsubseteq\{1\}</m>. Tidak ada bola
+        berpusat di <m>1</m> yang termuat dalam irisan, sehingga irisan itu
+        tidak terbuka. Contoh ini menunjukkan mengapa teorema hanya menjamin
+        keterbukaan untuk irisan berhingga, bukan irisan sebarang.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch08-guide-18">
+    <title>Hipotesis dan target arah balik kekontinuan</title>
+    <statement>
+      <p>
+        Pada langkah pertama aktivitas Kekontinuan dan Himpunan Terbuka,
+        orientasikan implikasi yang belum dibuktikan: nyatakan asumsi tentang
+        prapeta himpunan terbuka dan sasaran kekontinuan yang harus dicapai.
+        Rubrik: berikan kuantor untuk himpunan terbuka, titik domain, dan
+        lingkungan nilai fungsi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-18-hint">
+      <p>
+        Tahap 1: arah maju telah dimulai dari <m>f</m> kontinu. Tahap 2:
+        untuk arah balik, gunakan pencirian: prapeta setiap lingkungan bagi
+        <m>f(a)</m> harus menjadi lingkungan bagi <m>a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-18-answer">
+      <p>
+        Asumsinya: untuk setiap himpunan terbuka <m>O\subseteq Y</m>,
+        <m>f^{-1}(O)</m> terbuka dalam <m>X</m>. Targetnya: untuk setiap
+        <m>a\in X</m> dan setiap lingkungan <m>N</m> bagi <m>f(a)</m>,
+        <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m>, sehingga
+        <m>f</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-18-solution">
+      <p>
+        Teorema berbentuk bikondisional. Implikasi dari kekontinuan menuju
+        keterbukaan semua prapeta sudah dibuktikan, jadi arah tersisa dimulai
+        dengan hipotesis
+        <me>
+          O\text{ terbuka dalam }Y
+          \implies f^{-1}(O)\text{ terbuka dalam }X.
+        </me>
+        Untuk menyimpulkan kekontinuan melalui lingkungan, ambil sebarang
+        <m>a\in X</m> dan sebarang lingkungan <m>N</m> bagi <m>f(a)</m>, lalu
+        buktikan bahwa <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m>.
+        Karena pilihan <m>a</m> dan <m>N</m> harus sebarang, kedua kuantor itu
+        merupakan bagian wajib dari target.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-19">
+    <title>Bola di dalam lingkungan nilai fungsi</title>
+    <statement>
+      <p>
+        Pada langkah kedua aktivitas kekontinuan, untuk <m>a\in X</m> dan
+        lingkungan <m>N</m> bagi <m>f(a)</m>, jelaskan asal keberadaan
+        <m>\epsilon\gt0</m> dengan
+        <m>B(f(a),\epsilon)\subseteq N</m>. Rubrik: sebutkan definisi yang
+        diterapkan dan cocokkan pusat bolanya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-19-hint">
+      <p>
+        Tahap 1: jangan gunakan kekontinuan, karena itulah yang sedang
+        dibuktikan. Tahap 2: buka langsung definisi <q><m>N</m> merupakan
+        lingkungan bagi <m>f(a)</m></q>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-19-answer">
+      <p>
+        Keberadaan <m>\epsilon\gt0</m> tersebut adalah tepat isi definisi
+        lingkungan <m>N</m> pada titik <m>f(a)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-19-solution">
+      <p>
+        Definisi lingkungan menyatakan bahwa suatu himpunan
+        <m>N\subseteq Y</m> merupakan lingkungan bagi titik <m>y\in Y</m>
+        jika terdapat <m>r\gt0</m> sehingga <m>B_Y(y,r)\subseteq N</m>.
+        Terapkan definisi ini dengan <m>y=f(a)</m>. Karena <m>N</m>
+        diasumsikan sebagai lingkungan bagi <m>f(a)</m>, langsung diperoleh
+        suatu <m>\epsilon\gt0</m> dengan
+        <m>B_Y(f(a),\epsilon)\subseteq N</m>. Tidak ada asumsi tambahan yang
+        diperlukan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-20">
+    <title>Prapeta bola menurut hipotesis keterbukaan</title>
+    <statement>
+      <p>
+        Pada langkah ketiga aktivitas kekontinuan, terapkan hipotesis arah
+        balik pada <m>f^{-1}(B(f(a),\epsilon))</m>. Rubrik: verifikasi dahulu
+        jenis himpunan <m>B(f(a),\epsilon)</m> di kodomain, lalu nyatakan
+        keterbukaan prapetanya dan relevansi titik <m>a</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-20-hint">
+      <p>
+        Tahap 1: setiap bola terbuka memang merupakan himpunan terbuka.
+        Tahap 2: periksa <m>f(a)\in B(f(a),\epsilon)</m> untuk mengetahui
+        apakah <m>a</m> berada dalam prapetanya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-20-answer">
+      <p>
+        Hipotesis memberi bahwa
+        <m>f^{-1}(B(f(a),\epsilon))</m> terbuka dalam <m>X</m>; himpunan ini
+        juga memuat <m>a</m>, sehingga merupakan lingkungan bagi <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-20-solution">
+      <p>
+        Bola <m>B(f(a),\epsilon)</m> adalah himpunan terbuka dalam <m>Y</m>.
+        Hipotesis bahwa prapeta setiap himpunan terbuka di <m>Y</m> terbuka
+        di <m>X</m> karenanya menghasilkan
+        <me>
+          f^{-1}(B(f(a),\epsilon))\text{ terbuka dalam }X.
+        </me>
+        Selain itu, <m>d_Y(f(a),f(a))=0\lt\epsilon</m>, jadi
+        <m>f(a)\in B(f(a),\epsilon)</m> dan
+        <m>a\in f^{-1}(B(f(a),\epsilon))</m>. Setiap himpunan terbuka
+        merupakan lingkungan bagi setiap titiknya; maka prapeta tersebut
+        merupakan lingkungan bagi <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-21">
+    <title>Menutup bukti kekontinuan melalui lingkungan</title>
+    <statement>
+      <p>
+        Pada langkah keempat aktivitas kekontinuan, buktikan bahwa
+        <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m>, lalu jelaskan
+        mengapa hal itu menyelesaikan arah balik teorema. Rubrik: gunakan
+        inklusi bola di dalam <m>N</m>, sifat prapeta yang mempertahankan
+        inklusi, dan pencirian kekontinuan melalui lingkungan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-21-hint">
+      <p>
+        Tahap 1: dari <m>B(f(a),\epsilon)\subseteq N</m>, ambil prapeta kedua
+        ruas. Tahap 2: setiap himpunan yang memuat suatu lingkungan bagi
+        <m>a</m> juga merupakan lingkungan bagi <m>a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-21-answer">
+      <p>
+        Karena
+        <m>f^{-1}(B(f(a),\epsilon))\subseteq f^{-1}(N)</m> dan himpunan di
+        kiri merupakan lingkungan bagi <m>a</m>, maka <m>f^{-1}(N)</m> juga
+        lingkungan bagi <m>a</m>. Hal ini berlaku untuk setiap <m>a</m> dan
+        <m>N</m>, sehingga <m>f</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-21-solution">
+      <p>
+        Dari definisi lingkungan, pilih <m>\epsilon\gt0</m> sehingga
+        <m>B(f(a),\epsilon)\subseteq N</m>. Prapeta mempertahankan inklusi,
+        jadi
+        <me>
+          f^{-1}(B(f(a),\epsilon))
+          \subseteq f^{-1}(N).
+        </me>
+        Langkah sebelumnya menunjukkan bahwa himpunan di kiri merupakan
+        lingkungan bagi <m>a</m>; maka ia memuat suatu
+        <m>B_X(a,\delta)</m>. Rantai inklusi memberi
+        <m>B_X(a,\delta)\subseteq f^{-1}(N)</m>, sehingga
+        <m>f^{-1}(N)</m> juga lingkungan bagi <m>a</m>. Karena <m>a\in X</m>
+        dan lingkungan <m>N</m> bagi <m>f(a)</m> dipilih sebarang,
+        pencirian melalui lingkungan menyimpulkan bahwa <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-22">
+    <title>Arah maju pencirian melalui bola</title>
+    <statement>
+      <p>
+        Pada langkah pertama aktivitas akibat tentang bola terbuka, mulai
+        dengan <m>f</m> kontinu dan jelaskan mengapa prapeta setiap bola
+        terbuka <m>B\subseteq Y</m> terbuka dalam <m>X</m>. Rubrik: sebutkan
+        fakta bahwa bola terbuka adalah himpunan terbuka dan terapkan teorema
+        pencirian melalui himpunan terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-22-hint">
+      <p>
+        Tahap 1: klasifikasikan <m>B</m> sebagai himpunan terbuka di
+        <m>Y</m>. Tahap 2: substitusikan <m>O=B</m> ke implikasi teorema untuk
+        fungsi kontinu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-22-answer">
+      <p>
+        Setiap bola terbuka <m>B</m> terbuka dalam <m>Y</m>; karena <m>f</m>
+        kontinu, teorema pencirian memberi bahwa <m>f^{-1}(B)</m> terbuka
+        dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-22-solution">
+      <p>
+        Ambil sembarang bola terbuka <m>B</m> di <m>Y</m>. Berdasarkan sifat
+        dasar bola, <m>B</m> merupakan himpunan terbuka dalam <m>Y</m>.
+        Teorema pencirian kekontinuan menyatakan bahwa jika <m>f</m> kontinu,
+        maka prapeta setiap himpunan terbuka di kodomain terbuka di domain.
+        Dengan memilih himpunan terbuka itu sebagai <m>B</m>, diperoleh
+        <m>f^{-1}(B)</m> terbuka dalam <m>X</m>. Karena <m>B</m> sebarang,
+        implikasi pertama akibat terbukti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-23">
+    <title>Menguraikan himpunan terbuka menjadi bola</title>
+    <statement>
+      <p>
+        Pada sublangkah pertama arah balik aktivitas akibat tentang bola,
+        untuk himpunan terbuka sebarang <m>O\subseteq Y</m>, nyatakan bentuk
+        <m>O</m> yang dijamin oleh teorema basis bola. Rubrik: berikan
+        keluarga terindeks bola-bola terbuka dan persamaan gabungannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-23-hint">
+      <p>
+        Tahap 1: teorema yang dirujuk mencirikan himpunan terbuka sebagai
+        gabungan bola-bola terbuka. Tahap 2: namai keluarga itu
+        <m>\{B_\beta\}_{\beta\in J}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-23-answer">
+      <p>
+        Ada keluarga bola terbuka
+        <m>\{B_\beta\}_{\beta\in J}</m> dalam <m>Y</m> sedemikian sehingga
+        <m>O=\bigcup_{\beta\in J}B_\beta</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-23-solution">
+      <p>
+        Teorema basis bola menyatakan bahwa suatu subhimpunan ruang metrik
+        terbuka jika dan hanya jika ia merupakan gabungan bola-bola terbuka.
+        Karena <m>O</m> terbuka dalam <m>Y</m>, terdapat himpunan indeks
+        <m>J</m> dan bola-bola terbuka <m>B_\beta\subseteq Y</m> untuk
+        <m>\beta\in J</m> dengan
+        <me>O=\bigcup_{\beta\in J}B_\beta.</me>
+        Bentuk ini dipilih karena hipotesis arah balik sudah mengendalikan
+        prapeta masing-masing bola.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-24">
+    <title>Menutup pencirian kekontinuan melalui bola</title>
+    <statement>
+      <p>
+        Pada sublangkah terakhir aktivitas akibat tentang bola, gunakan
+        identitas prapeta gabungan untuk membuktikan bahwa
+        <m>f^{-1}(O)</m> terbuka bagi setiap himpunan terbuka
+        <m>O\subseteq Y</m>, lalu simpulkan kekontinuan <m>f</m>. Rubrik:
+        tulis persamaan prapeta, terapkan hipotesis pada setiap bola, gunakan
+        keterbukaan gabungan sebarang, dan sebutkan teorema penutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-24-hint">
+      <p>
+        Tahap 1: substitusikan
+        <m>O=\bigcup_{\beta\in J}B_\beta</m>. Tahap 2: ubah prapeta gabungan
+        menjadi gabungan prapeta dan klasifikasikan setiap sukunya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-24-answer">
+      <p>
+        <m>f^{-1}(O)=\bigcup_{\beta\in J}f^{-1}(B_\beta)</m> adalah gabungan
+        himpunan-himpunan terbuka, sehingga terbuka. Karena ini berlaku untuk
+        setiap <m>O</m> terbuka, teorema pencirian menyatakan bahwa
+        <m>f</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-24-solution">
+      <p>
+        Asumsikan bahwa <m>f^{-1}(B)</m> terbuka dalam <m>X</m> untuk setiap
+        bola terbuka <m>B\subseteq Y</m>. Ambil himpunan terbuka sebarang
+        <m>O\subseteq Y</m>. Dari langkah sebelumnya, tulis
+        <m>O=\bigcup_{\beta\in J}B_\beta</m>, dengan setiap
+        <m>B_\beta</m> bola terbuka. Identitas prapeta gabungan memberi
+        <me>
+          f^{-1}(O)
+          =f^{-1}\left(\bigcup_{\beta\in J}B_\beta\right)
+          =\bigcup_{\beta\in J}f^{-1}(B_\beta).
+        </me>
+        Menurut hipotesis, setiap <m>f^{-1}(B_\beta)</m> terbuka dalam
+        <m>X</m>; gabungan sebarang dari himpunan terbuka juga terbuka. Jadi
+        <m>f^{-1}(O)</m> terbuka untuk setiap <m>O</m> terbuka dalam
+        <m>Y</m>. Teorema pencirian melalui himpunan terbuka kemudian memberi
+        bahwa <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch08-guide-25">
+    <title>Interior interval setengah tertutup kanan</title>
+    <statement>
+      <p>
+        Pada kasus pertama aktivitas Interior Suatu Himpunan, tentukan
+        <m>\Int(A)</m> untuk <m>A=(0,1]</m> dalam <m>(\R,d_E)</m>.
+        Rubrik: buktikan bahwa semua titik di antara ujung adalah interior dan
+        uji titik ujung <m>1</m> yang termasuk dalam <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-25-hint">
+      <p>
+        Tahap 1: untuk <m>0\lt x\lt1</m>, gunakan radius lebih kecil daripada
+        <m>x</m> dan <m>1-x</m>. Tahap 2: setiap bola di sekitar <m>1</m>
+        memuat bilangan yang lebih besar daripada <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-25-answer">
+      <p>
+        <m>\Int((0,1])=(0,1)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-25-solution">
+      <p>
+        Jika <m>0\lt x\lt1</m>, pilih
+        <m>r=\frac12\min\{x,1-x\}\gt0</m>. Maka
+        <m>B(x,r)\subseteq(0,1)\subseteq A</m>, sehingga <m>x</m> titik
+        interior. Satu-satunya anggota <m>A</m> yang tersisa untuk diuji
+        adalah <m>1</m>. Untuk setiap <m>r\gt0</m>, titik
+        <m>1+r/2\in B(1,r)</m> tetapi tidak berada dalam <m>A</m>. Jadi
+        <m>1</m> bukan titik interior. Titik <m>0</m> bukan anggota
+        <m>A</m>, sehingga bukan kandidat. Maka interiornya tepat
+        <m>(0,1)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-26">
+    <title>Interior interval tertutup</title>
+    <statement>
+      <p>
+        Pada kasus kedua aktivitas Interior Suatu Himpunan, hitung
+        <m>\Int([0,1])</m> dalam garis Euklides. Rubrik: berikan bola yang
+        bekerja untuk titik antara dan saksi kegagalan untuk kedua titik
+        ujung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-26-hint">
+      <p>
+        Tahap 1: argumen untuk <m>0\lt x\lt1</m> sama seperti pada kasus
+        sebelumnya. Tahap 2: gerakkan sedikit ke kiri dari <m>0</m> dan
+        sedikit ke kanan dari <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-26-answer">
+      <p>
+        <m>\Int([0,1])=(0,1)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-26-solution">
+      <p>
+        Untuk <m>0\lt x\lt1</m>, radius
+        <m>r=\frac12\min\{x,1-x\}</m> positif dan memenuhi
+        <m>B(x,r)\subseteq[0,1]</m>. Jadi semua titik <m>(0,1)</m> interior.
+        Untuk setiap <m>r\gt0</m>, bola <m>B(0,r)</m> memuat
+        <m>-r/2\notin[0,1]</m>, sehingga <m>0</m> bukan interior. Bola
+        <m>B(1,r)</m> memuat <m>1+r/2\notin[0,1]</m>, sehingga <m>1</m>
+        juga bukan interior. Tidak ada titik anggota lain; jadi interiornya
+        adalah <m>(0,1)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-27">
+    <title>Interior gabungan interval dan titik-titik terisolasi</title>
+    <statement>
+      <p>
+        Pada kasus ketiga aktivitas Interior Suatu Himpunan, tentukan
+        interior
+        <m>A=\{-2\}\cup[0,5]\cup\{7,8,9\}</m> dalam
+        <m>(\R,d_E)</m>. Rubrik: pisahkan titik-titik di bagian dalam interval,
+        kedua ujung interval, dan seluruh titik terisolasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-27-hint">
+      <p>
+        Tahap 1: titik <m>0\lt x\lt5</m> mempunyai jarak positif ke kedua
+        ujung interval. Tahap 2: setiap bola di sekitar salah satu dari
+        <m>-2,0,5,7,8,9</m> memuat bilangan di luar <m>A</m> jika
+        perpindahannya dipilih cukup kecil.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-27-answer">
+      <p>
+        <m>\Int(A)=(0,5)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-27-solution">
+      <p>
+        Jika <m>0\lt x\lt5</m>, ambil
+        <m>r=\frac12\min\{x,5-x\}\gt0</m>; maka
+        <m>B(x,r)\subseteq(0,5)\subseteq A</m>. Jadi
+        <m>(0,5)\subseteq\Int(A)</m>. Titik <m>0</m> dan <m>5</m> bukan
+        interior karena setiap bola di sekitarnya melintasi ujung interval
+        menuju celah di luar <m>A</m>. Titik <m>-2,7,8,9</m> juga bukan
+        interior: masing-masing terisolasi dalam <m>A</m>, sedangkan setiap
+        bola Euklides beradius positif memuat bilangan lain yang cukup dekat
+        dan tidak berada dalam <m>A</m>. Karena daftar ini mencakup semua
+        anggota di luar <m>(0,5)</m>, diperoleh <m>\Int(A)=(0,5)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-28">
+    <title>Target sifat interior sebagai himpunan terbuka terbesar</title>
+    <statement>
+      <p>
+        Pada langkah pertama aktivitas penutup bagian Interior Suatu
+        Himpunan, rumuskan apa yang masih harus dibuktikan agar
+        <m>\Int(A)</m> menjadi subhimpunan terbuka terbesar dari <m>X</m>
+        yang termuat dalam <m>A</m>. Rubrik: sertakan sifat terbuka dan inklusi
+        dasar, lalu nyatakan sifat universal terhadap setiap himpunan terbuka
+        lain di dalam <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-28-hint">
+      <p>
+        Tahap 1: bagian awal bukti teorema telah menangani keterbukaan
+        <m>\Int(A)</m>; definisi memberi <m>\Int(A)\subseteq A</m>.
+        Tahap 2: arti <q>terbesar</q> adalah memuat setiap kandidat terbuka
+        <m>O\subseteq A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-28-answer">
+      <p>
+        Selain mengetahui bahwa <m>\Int(A)</m> terbuka dan
+        <m>\Int(A)\subseteq A</m>, kita harus membuktikan: untuk setiap
+        <m>O</m> terbuka dalam <m>X</m> dengan <m>O\subseteq A</m>, berlaku
+        <m>O\subseteq\Int(A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-28-solution">
+      <p>
+        Sebuah <q>subhimpunan terbuka terbesar yang termuat dalam
+        <m>A</m></q> harus memenuhi tiga hal: ia terbuka dalam <m>X</m>, ia
+        merupakan subhimpunan <m>A</m>, dan ia memuat setiap subhimpunan
+        terbuka lain dari <m>X</m> yang termuat dalam <m>A</m>. Bagian awal
+        pembuktian sudah menunjukkan bahwa <m>\Int(A)</m> terbuka, sedangkan
+        definisinya langsung memberi <m>\Int(A)\subseteq A</m>. Jadi pekerjaan
+        yang tersisa tepatlah mengambil <m>O</m> terbuka sebarang dengan
+        <m>O\subseteq A</m> dan membuktikan
+        <m>O\subseteq\Int(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-29">
+    <title>Konsekuensi lokal dari keterbukaan kandidat</title>
+    <statement>
+      <p>
+        Pada langkah kedua aktivitas penutup Interior Suatu Himpunan,
+        misalkan <m>O</m> terbuka, <m>O\subseteq A</m>, dan <m>x\in O</m>.
+        Uraikan kesimpulan lokal yang berasal dari keterbukaan <m>O</m> dan
+        kaitkan kesimpulan itu dengan <m>A</m>. Rubrik: hasilkan radius
+        positif, rantai inklusi, dan status <m>x</m> sebagai titik interior.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-29-hint">
+      <p>
+        Tahap 1: karena <m>O</m> terbuka dan <m>x\in O</m>, ada bola berpusat
+        di <m>x</m> yang termuat dalam <m>O</m>. Tahap 2: gabungkan dengan
+        <m>O\subseteq A</m> dan baca kembali definisi titik interior.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-29-answer">
+      <p>
+        Ada <m>\epsilon\gt0</m> dengan
+        <m>B(x,\epsilon)\subseteq O\subseteq A</m>; jadi <m>A</m> merupakan
+        lingkungan bagi <m>x</m>, sehingga <m>x\in\Int(A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-29-solution">
+      <p>
+        Karena <m>O</m> terbuka, ia merupakan lingkungan bagi setiap
+        titiknya. Khusus untuk <m>x\in O</m>, terdapat
+        <m>\epsilon\gt0</m> sedemikian sehingga
+        <m>B(x,\epsilon)\subseteq O</m>. Hipotesis <m>O\subseteq A</m>
+        memperpanjang inklusi itu menjadi
+        <me>B(x,\epsilon)\subseteq O\subseteq A.</me>
+        Jadi <m>A</m> memuat sebuah bola terbuka berpusat di <m>x</m> dan
+        merupakan lingkungan bagi <m>x</m>. Menurut definisi, <m>x</m> adalah
+        titik interior <m>A</m>, yakni <m>x\in\Int(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-guide-30">
+    <title>Menuntaskan sifat maksimal interior</title>
+    <statement>
+      <p>
+        Pada langkah terakhir aktivitas Interior Suatu Himpunan, lengkapilah
+        bukti <m>O\subseteq\Int(A)</m> dan jelaskan bagaimana inklusi itu
+        menutup klaim maksimalitas. Rubrik: gunakan titik <m>x\in O</m>
+        sebarang, simpulkan keanggotaan dalam interior, lalu kembalikan
+        kuantor pada semua kandidat terbuka <m>O\subseteq A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-guide-30-hint">
+      <p>
+        Tahap 1: langkah sebelumnya berlaku untuk setiap <m>x\in O</m>.
+        Tahap 2: setelah memperoleh inklusi himpunan, gabungkan dengan fakta
+        yang sudah terbukti bahwa <m>\Int(A)</m> terbuka dan termuat dalam
+        <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-guide-30-answer">
+      <p>
+        Setiap <m>x\in O</m> adalah titik interior <m>A</m>, sehingga
+        <m>O\subseteq\Int(A)</m>. Karena ini berlaku bagi setiap subhimpunan
+        terbuka <m>O\subseteq A</m>, interior <m>A</m> adalah kandidat terbuka
+        terbesar yang termuat dalam <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-guide-30-solution">
+      <p>
+        Ambil sebarang himpunan terbuka <m>O\subseteq X</m> dengan
+        <m>O\subseteq A</m>, lalu ambil sebarang <m>x\in O</m>. Karena
+        <m>O</m> terbuka, terdapat <m>\epsilon\gt0</m> dengan
+        <m>B(x,\epsilon)\subseteq O</m>. Maka
+        <m>B(x,\epsilon)\subseteq A</m>, sehingga <m>x</m> adalah titik
+        interior <m>A</m> dan <m>x\in\Int(A)</m>. Kesimpulan ini berlaku
+        untuk setiap <m>x\in O</m>; jadi <m>O\subseteq\Int(A)</m>. Karena
+        <m>O</m> adalah kandidat terbuka sebarang di dalam <m>A</m>, sementara
+        <m>\Int(A)</m> sendiri sudah terbukti terbuka dan termuat dalam
+        <m>A</m>, interior itu memang subhimpunan terbuka terbesar yang
+        termuat dalam <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

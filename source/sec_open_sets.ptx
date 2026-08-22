@@ -1,32 +1,32 @@
 <section xml:id="sec_open_sets">
-  <title>Open Sets</title>
+  <title>Himpunan Terbuka</title>
   <p>
-    Open sets are vitally important in topology.
-    In fact, we will see later that every topological space is completely defined by its open sets.
-    Recall that an open ball is an open set.
-    There are other subsets that every metric space contains,
-    and we might ask if they are open or not.
+    Himpunan terbuka sangat penting dalam topologi.
+    Bahkan, nanti kita akan melihat bahwa setiap ruang topologis sepenuhnya ditentukan oleh himpunan-himpunan terbukanya.
+    Ingat bahwa bola terbuka merupakan himpunan terbuka.
+    Ada subhimpunan lain yang terdapat dalam setiap ruang metrik,
+    dan kita dapat menanyakan apakah subhimpunan tersebut terbuka atau tidak.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>X</m> be a metric space.
+      Misalkan <m>X</m> suatu ruang metrik.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Is <m>\emptyset</m> an open set in <m>X</m>?
-            Explain.
+            Apakah <m>\emptyset</m> merupakan himpunan terbuka dalam <m>X</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>X</m> an open set in <m>X</m>?
-            Explain.
+            Apakah <m>X</m> merupakan himpunan terbuka dalam <m>X</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
@@ -34,43 +34,43 @@
   </activity>
 
   <p>
-    We have defined open balls,
-    and open balls are the canonical examples of open sets.
-    In fact, as the following theorem shows,
-    the open balls determine the open sets.
+    Kita telah mendefinisikan bola terbuka,
+    dan bola terbuka merupakan contoh utama himpunan terbuka.
+    Bahkan, seperti yang ditunjukkan oleh teorema berikut,
+    bola-bola terbuka menentukan himpunan-himpunan terbuka.
   </p>
 
   <theorem xml:id="thm_OS_1">
     <statement>
       <p>
-        Let <m>X</m> be a metric space.
-        A subset <m>O</m> of <m>X</m> is open if and only if <m>O</m> is a union of open balls.
+        Misalkan <m>X</m> suatu ruang metrik.
+        Suatu subhimpunan <m>O</m> dari <m>X</m> terbuka jika dan hanya jika <m>O</m> merupakan gabungan bola-bola terbuka.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a metric space and <m>O</m> a subset of <m>X</m>.
-      To prove this biconditional statement we first assume that <m>O</m> is an open set and demonstrate that <m>O</m> is a union of open balls.
-      Let <m>a \in O</m>.
-      Since <m>O</m> is open, there exists
-      <m>\epsilon_a \gt 0</m> so that <m>B(a, \epsilon_a) \subseteq O</m>.
-      We will show that
+      Misalkan <m>X</m> suatu ruang metrik dan <m>O</m> suatu subhimpunan dari <m>X</m>.
+      Untuk membuktikan pernyataan bikondisional ini, pertama-tama kita mengasumsikan bahwa <m>O</m> merupakan himpunan terbuka dan menunjukkan bahwa <m>O</m> merupakan gabungan bola-bola terbuka.
+      Misalkan <m>a \in O</m>.
+      Karena <m>O</m> terbuka, terdapat
+      <m>\epsilon_a \gt 0</m> sedemikian sehingga <m>B(a, \epsilon_a) \subseteq O</m>.
+      Kita akan menunjukkan bahwa
       <me>
         O = \bigcup_{a \in O} B(a, \epsilon_a)
       </me>.
     </p>
     <p>
-      By the way we chose <m>\epsilon_a</m>,
-      <m>B(a, \epsilon_a) \subseteq O</m> for every <m>a \in O</m>.
-      So <m>\bigcup_{a \in O} B(a, \epsilon_a) \subseteq O</m>.
-      For the reverse containment, let <m>x \in O</m>.
-      Then <m>x \in B(x, \epsilon_x)</m> and so <m>x \in \bigcup_{a \in O} B(a, \epsilon_a)</m>.
-      Thus, <m>O \subseteq \bigcup_{a \in O} B(a, \epsilon_a)</m>.
-      We conclude that <m>O</m> is a union of open balls if <m>O</m> is an open set.
+      Berdasarkan cara kita memilih <m>\epsilon_a</m>,
+      <m>B(a, \epsilon_a) \subseteq O</m> untuk setiap <m>a \in O</m>.
+      Jadi, <m>\bigcup_{a \in O} B(a, \epsilon_a) \subseteq O</m>.
+      Untuk inklusi sebaliknya, misalkan <m>x \in O</m>.
+      Kemudian <m>x \in B(x, \epsilon_x)</m>, sehingga <m>x \in \bigcup_{a \in O} B(a, \epsilon_a)</m>.
+      Dengan demikian, <m>O \subseteq \bigcup_{a \in O} B(a, \epsilon_a)</m>.
+      Kita menyimpulkan bahwa jika <m>O</m> merupakan himpunan terbuka, maka <m>O</m> merupakan gabungan bola-bola terbuka.
     </p>
     <p>
-      The proof of the converse is left for the following activity.
+      Arah sebaliknya akan Anda buktikan dalam aktivitas berikut.
     </p>
   </proof>
   </theorem>
@@ -78,30 +78,30 @@
   <activity>
   <introduction>
     <p>
-      Let <m>X</m> be a metric space.
-      To prove the remaining implication of <xref ref="thm_OS_1"/>,
-      assume that a subset <m>O</m> of <m>X</m> is a union of open balls.
+      Misalkan <m>X</m> suatu ruang metrik.
+      Untuk membuktikan implikasi yang tersisa dari <xref ref="thm_OS_1"/>,
+      asumsikan bahwa suatu subhimpunan <m>O</m> dari <m>X</m> merupakan gabungan bola-bola terbuka.
     </p>
   </introduction>
       <task>
         <statement>
           <p>
-            What do we need to show to prove that <m>O</m> is an open set?
+            Apa yang perlu kita tunjukkan untuk membuktikan bahwa <m>O</m> merupakan himpunan terbuka?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>x \in O</m>.
-            Why is there an open ball <m>B</m> in <m>O</m> that contains <m>x</m>?
+            Misalkan <m>x \in O</m>.
+            Mengapa terdapat bola terbuka <m>B</m> yang termuat dalam <m>O</m> dan memuat <m>x</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Complete the proof to show that <m>O</m> is an open set.
+            Lengkapi bukti untuk menunjukkan bahwa <m>O</m> merupakan himpunan terbuka.
           </p>
         </statement>
       </task>
@@ -109,10 +109,10 @@
   </activity>
   <p>
     <xref ref="thm_OS_1"/>
-    tells us that every open set is made up of open balls,
-    so the open balls generate all open sets much like a basis of a vector space in linear algebra generates all of the elements of the vector space.
-    For this reason we call the set of open balls in a metric space a <term>basis</term>
-    for the open sets of the metric space.
-    We will discuss this idea in more detail in a subsequent section.
+    menyatakan bahwa setiap himpunan terbuka tersusun dari bola-bola terbuka,
+    sehingga bola-bola terbuka menghasilkan semua himpunan terbuka, seperti halnya basis suatu ruang vektor dalam aljabar linear menghasilkan semua unsur ruang vektor tersebut.
+    Karena itu, kita menyebut himpunan semua bola terbuka dalam suatu ruang metrik sebagai <term>basis</term>
+    bagi himpunan-himpunan terbuka ruang metrik tersebut.
+    Kita akan membahas gagasan ini secara lebih terperinci dalam bagian selanjutnya.
   </p>
 </section>

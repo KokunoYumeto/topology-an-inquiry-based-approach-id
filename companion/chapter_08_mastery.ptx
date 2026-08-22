@@ -1,0 +1,575 @@
+<section xml:id="o003-c90-ch08-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 8</title>
+
+  <p>
+    Enam soal kumulatif berikut ditulis baru sebagai materi pendamping dan
+    tersedia di bawah CC BY 4.0. Setiap petunjuk dibagi menjadi beberapa tahap;
+    gunakan hanya tahap yang diperlukan sebelum membandingkan jawaban dan
+    pembahasan lengkap.
+  </p>
+
+  <exercise xml:id="o003-c90-ch08-mastery-01">
+    <title>Kriteria bola untuk daerah yang lebih dekat</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> suatu ruang metrik dan <m>p,q\in X</m> dua titik
+        berbeda. Definisikan
+        <me>
+          V_p=\{x\in X:d(x,p)\lt d(x,q)\}.
+        </me>
+        Untuk setiap <m>a\in V_p</m>, tentukan secara eksplisit suatu
+        <m>r_a\gt0</m> yang hanya bergantung pada jarak dari <m>a</m> ke
+        <m>p</m> dan <m>q</m>. Buktikan bahwa
+        <m>B(a,r_a)\subseteq V_p</m>, lalu simpulkan bahwa <m>V_p</m> terbuka.
+        Apakah kesimpulan yang sama berlaku bagi
+        <m>V_q=\{x\in X:d(x,q)\lt d(x,p)\}</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-mastery-01-hint">
+      <p>
+        <em>Tahap 1.</em> Karena <m>a\in V_p</m>, selisih
+        <m>d(a,q)-d(a,p)</m> positif. Ambil setengah dari selisih itu sebagai
+        jari-jari.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk <m>x</m> di dalam bola tersebut, batasi
+        <m>d(x,p)</m> dari atas dan <m>d(x,q)</m> dari bawah dengan
+        pertidaksamaan segitiga.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Setelah memperoleh
+        <m>d(x,p)\lt d(x,q)</m>, terapkan kriteria bola di setiap titik
+        <m>a\in V_p</m>. Tukarkan peran <m>p</m> dan <m>q</m> untuk bagian
+        terakhir.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-mastery-01-answer">
+      <p>
+        Jari-jari
+        <m>r_a=(d(a,q)-d(a,p))/2</m> bernilai positif dan memenuhi
+        <m>B(a,r_a)\subseteq V_p</m>. Jadi <m>V_p</m> terbuka. Dengan argumen
+        simetris, <m>V_q</m> juga terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-mastery-01-solution">
+      <p>
+        Ambil <m>a\in V_p</m>. Definisi <m>V_p</m> memberikan
+        <m>d(a,p)\lt d(a,q)</m>, sehingga
+        <me>
+          r_a=\frac{d(a,q)-d(a,p)}{2}\gt0.
+        </me>
+        Misalkan <m>x\in B(a,r_a)</m>. Pertidaksamaan segitiga dan bentuk
+        baliknya memberikan
+        <md>
+          <mrow>d(x,p)\amp\leq d(x,a)+d(a,p)</mrow>
+          <mrow>\amp\lt r_a+d(a,p)
+          =\frac{d(a,q)+d(a,p)}{2},</mrow>
+        </md>
+        sedangkan
+        <md>
+          <mrow>d(x,q)\amp\geq d(a,q)-d(x,a)</mrow>
+          <mrow>\amp\gt d(a,q)-r_a
+          =\frac{d(a,q)+d(a,p)}{2}.</mrow>
+        </md>
+        Maka <m>d(x,p)\lt d(x,q)</m>, jadi <m>x\in V_p</m>. Karena
+        <m>x</m> dipilih sebarang, <m>B(a,r_a)\subseteq V_p</m>.
+      </p>
+      <p>
+        Setiap titik <m>a\in V_p</m> dengan demikian menjadi pusat suatu bola
+        terbuka yang termuat dalam <m>V_p</m>. Berdasarkan kriteria bola,
+        <m>V_p</m> terbuka. Jika <m>p</m> dan <m>q</m> dipertukarkan, bukti yang
+        sama menghasilkan jari-jari
+        <m>(d(a,p)-d(a,q))/2</m> pada setiap <m>a\in V_q</m>; jadi
+        <m>V_q</m> juga terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-mastery-02">
+    <title>Gabungan sebarang, irisan berhingga, dan batas kegagalannya</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> suatu ruang metrik.
+      </p>
+      <ol>
+          <li>
+            <p>
+              Buktikan langsung dengan kriteria bola bahwa gabungan sebarang
+              keluarga himpunan terbuka dalam <m>X</m> bersifat terbuka.
+            </p>
+          </li>
+          <li>
+            <p>
+              Buktikan bahwa irisan berhingga himpunan-himpunan terbuka dalam
+              <m>X</m> bersifat terbuka. Sertakan kasus irisan atas keluarga
+              kosong.
+            </p>
+          </li>
+          <li>
+            <p>
+              Dalam <m>(\R,d_E)</m>, tetapkan
+              <m>U_n=(-1/n,1+1/n)</m> untuk <m>n\in\Z^+</m>. Tentukan dan
+              buktikan nilai <m>\bigcap_{n=1}^{\infty}U_n</m>, lalu jelaskan
+              mengapa hasilnya menyangkal pernyataan serupa untuk irisan tak
+              berhingga.
+            </p>
+          </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch08-mastery-02-hint">
+      <p>
+        <em>Tahap 1.</em> Jika sebuah titik berada dalam suatu gabungan, pilih
+        satu anggota keluarga yang memuat titik itu dan gunakan bola saksi dari
+        anggota tersebut.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk irisan <m>O_1\cap\cdots\cap O_k</m>, pilih satu
+        jari-jari positif dari setiap <m>O_i</m>, lalu ambil minimumnya. Ingat
+        bahwa irisan keluarga kosong didefinisikan sebagai <m>X</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Titik-titik <m>0</m> sampai <m>1</m> berada dalam
+        setiap <m>U_n</m>. Jika <m>x\lt0</m> atau <m>x\gt1</m>, pilih
+        <m>n</m> cukup besar agar <m>x</m> tidak lagi berada dalam
+        <m>U_n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-mastery-02-answer">
+      <p>
+        Gabungan sebarang himpunan terbuka bersifat terbuka karena setiap
+        titiknya mewarisi bola dari salah satu anggota keluarga. Untuk irisan
+        berhingga tak kosong, minimum dari jari-jari saksi tetap positif;
+        irisan tanpa faktor ialah <m>X</m>. Namun,
+        <m>\bigcap_{n=1}^{\infty}(-1/n,1+1/n)=[0,1]</m>, yang tidak terbuka
+        dalam metrik Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-mastery-02-solution">
+      <p>
+        Misalkan <m>\{O_\alpha\}_{\alpha\in I}</m> suatu keluarga himpunan
+        terbuka dan <m>O=\bigcup_{\alpha\in I}O_\alpha</m>. Jika
+        <m>x\in O</m>, terdapat <m>\alpha_0\in I</m> dengan
+        <m>x\in O_{\alpha_0}</m>. Karena <m>O_{\alpha_0}</m> terbuka, ada
+        <m>r\gt0</m> sehingga
+        <m>B(x,r)\subseteq O_{\alpha_0}\subseteq O</m>. Jadi <m>O</m>
+        terbuka. Jika <m>I</m> kosong, gabungannya adalah <m>\emptyset</m>,
+        yang terbuka karena tidak mempunyai titik yang melanggar kriteria
+        bola.
+      </p>
+      <p>
+        Sekarang misalkan <m>O_1,\ldots,O_k</m> terbuka dengan
+        <m>k\geq1</m>, dan ambil
+        <m>x\in\bigcap_{i=1}^kO_i</m>. Untuk setiap <m>i</m>, terdapat
+        <m>r_i\gt0</m> dengan <m>B(x,r_i)\subseteq O_i</m>. Bilangan
+        <m>r=\min\{r_1,\ldots,r_k\}</m> positif, dan
+        <me>
+          B(x,r)\subseteq\bigcap_{i=1}^kO_i.
+        </me>
+        Maka irisannya terbuka. Irisan keluarga kosong adalah seluruh ruang
+        <m>X</m>, yang terbuka karena <m>B(x,1)\subseteq X</m> untuk setiap
+        <m>x\in X</m>.
+      </p>
+      <p>
+        Untuk contoh tak berhingga, setiap <m>x\in[0,1]</m> memenuhi
+        <m>-1/n\lt x\lt1+1/n</m> bagi semua <m>n\geq1</m>. Jadi
+        <m>[0,1]\subseteq\bigcap_{n=1}^{\infty}U_n</m>. Jika <m>x\lt0</m>,
+        pilih <m>n\gt-1/x</m>; maka <m>x\leq-1/n</m>, sehingga
+        <m>x\notin U_n</m>. Jika <m>x\gt1</m>, pilih
+        <m>n\gt1/(x-1)</m>; maka <m>x\geq1+1/n</m>, sehingga lagi-lagi
+        <m>x\notin U_n</m>. Oleh karena itu,
+        <m>\bigcap_{n=1}^{\infty}U_n=[0,1]</m>.
+      </p>
+      <p>
+        Himpunan <m>[0,1]</m> tidak terbuka dalam <m>(\R,d_E)</m>: setiap
+        bola berjari-jari positif yang berpusat di <m>0</m> memuat bilangan
+        negatif. Jadi, tidak ada hukum keterbukaan untuk irisan tak berhingga
+        yang sepadan dengan hukum irisan berhingga.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-mastery-03">
+    <title>Penajaman lokal oleh basis bola terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>\mathcal B=\{B(c,r):c\in X,\ r\gt0\}</m> adalah keluarga
+        semua bola terbuka dalam ruang metrik <m>(X,d)</m>.
+      </p>
+      <ol>
+          <li>
+            <p>
+              Jika <m>x\in B(a,r)\cap B(b,s)</m>, buktikan bahwa
+              <me>
+                t=\min\{r-d(a,x),\ s-d(b,x)\}
+              </me>
+              positif dan bahwa <m>B(x,t)\subseteq B(a,r)\cap B(b,s)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Jelaskan mengapa hasil tersebut, bersama fakta bahwa setiap
+              titik berada dalam suatu bola terbuka, memverifikasi sifat
+              tumpang tindih lokal yang diperlukan agar <m>\mathcal B</m>
+              menjadi basis.
+            </p>
+          </li>
+          <li>
+            <p>
+              Buktikan pencirian berikut: <m>O\subseteq X</m> terbuka jika dan
+              hanya jika untuk setiap <m>x\in O</m> terdapat
+              <m>B\in\mathcal B</m> dengan
+              <m>x\in B\subseteq O</m>. Nyatakan pula <m>O</m> sebagai
+              gabungan bola-bola basis tersebut.
+            </p>
+          </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch08-mastery-03-hint">
+      <p>
+        <em>Tahap 1.</em> Keanggotaan <m>x</m> dalam kedua bola membuat kedua
+        selisih pada definisi <m>t</m> bernilai positif.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>y\in B(x,t)</m>, gunakan
+        <m>d(a,y)\leq d(a,x)+d(x,y)</m>, lalu ulangi untuk pusat <m>b</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Untuk arah maju pada pencirian, gunakan kriteria
+        bola di <m>x</m>. Untuk arah balik, amati bahwa kumpulan bola yang
+        dipilih menutupi <m>O</m> dan tidak memuat titik di luar <m>O</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-mastery-03-answer">
+      <p>
+        Jari-jari <m>t</m> yang dinyatakan pada soal positif dan menghasilkan
+        bola yang termuat dalam kedua bola semula. Karena setiap
+        <m>x\in X</m> juga berada dalam <m>B(x,1)</m>, keluarga semua bola
+        terbuka memenuhi kedua syarat basis. Suatu himpunan <m>O</m> terbuka
+        tepat ketika setiap titiknya memiliki bola basis yang termuat dalam
+        <m>O</m>; dalam hal itu,
+        <m>O=\bigcup_{x\in O}B(x,r_x)</m> untuk pilihan jari-jari yang sesuai.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-mastery-03-solution">
+      <p>
+        Karena <m>x\in B(a,r)</m> dan <m>x\in B(b,s)</m>, berlaku
+        <m>d(a,x)\lt r</m> dan <m>d(b,x)\lt s</m>. Jadi kedua bilangan
+        <m>r-d(a,x)</m> dan <m>s-d(b,x)</m> positif, demikian pula
+        minimumnya <m>t</m>. Jika <m>y\in B(x,t)</m>, maka
+        <md>
+          <mrow>d(a,y)\amp\leq d(a,x)+d(x,y)</mrow>
+          <mrow>\amp\lt d(a,x)+t\leq r.</mrow>
+        </md>
+        Dengan cara yang sama, <m>d(b,y)\lt s</m>. Jadi
+        <m>y\in B(a,r)\cap B(b,s)</m>, dan karena <m>y</m> sebarang,
+        <m>B(x,t)\subseteq B(a,r)\cap B(b,s)</m>.
+      </p>
+      <p>
+        Setiap titik <m>x\in X</m> berada dalam anggota basis
+        <m>B(x,1)</m>. Selain itu, jika dua anggota <m>\mathcal B</m> bertumpang
+        tindih pada <m>x</m>, perhitungan di atas menghasilkan anggota basis
+        ketiga yang memuat <m>x</m> dan termuat dalam irisan keduanya. Inilah
+        sifat penajaman lokal untuk suatu basis.
+      </p>
+      <p>
+        Jika <m>O</m> terbuka dan <m>x\in O</m>, kriteria bola memberikan
+        <m>r_x\gt0</m> dengan <m>B(x,r_x)\subseteq O</m>. Karena pusat selalu
+        berada dalam bolanya sendiri,
+        <me>
+          O=\bigcup_{x\in O}B(x,r_x).
+        </me>
+        Untuk <m>O=\emptyset</m>, ruas kanan adalah gabungan kosong dan
+        kesamaan tetap berlaku. Sebaliknya, jika setiap <m>x\in O</m> berada
+        dalam suatu bola basis <m>B_x=B(c_x,r_x)\subseteq O</m>, maka
+        <m>\rho_x=r_x-d(c_x,x)\gt0</m>. Pertidaksamaan segitiga memberi
+        <m>B(x,\rho_x)\subseteq B_x\subseteq O</m>, sehingga kriteria bola
+        berlaku di <m>x</m> dan <m>O</m> terbuka. Kesamaan
+        <m>O=\bigcup_{x\in O}B_x</m> mengikuti dari
+        <m>x\in B_x\subseteq O</m> untuk setiap <m>x\in O</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-mastery-04">
+    <title>Kekontinuan fungsi jumlah melalui prapeta</title>
+    <statement>
+      <p>
+        Lengkapi <m>\R^2</m> dengan metrik maksimum <m>d_M</m> dan
+        <m>\R</m> dengan metrik Euklides. Definisikan
+        <m>F:\R^2\to\R</m> oleh <m>F(x,y)=x+y</m>. Gunakan pencirian
+        kekontinuan melalui prapeta himpunan terbuka untuk membuktikan bahwa
+        <m>F</m> kontinu: mulai dengan himpunan terbuka sebarang
+        <m>V\subseteq\R</m> dan tunjukkan langsung bahwa
+        <m>F^{-1}(V)</m> terbuka dalam <m>(\R^2,d_M)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch08-mastery-04-hint">
+      <p>
+        <em>Tahap 1.</em> Ambil <m>(a,b)\in F^{-1}(V)</m>. Karena <m>V</m>
+        terbuka dan memuat <m>a+b</m>, pilih <m>\eta\gt0</m> sehingga
+        <m>B_E(a+b,\eta)\subseteq V</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Uji bola maksimum berjari-jari
+        <m>\eta/2</m> di sekitar <m>(a,b)</m>. Untuk
+        <m>(u,v)</m> dalam bola itu, batasi
+        <m>|(u+v)-(a+b)|</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Setelah menemukan bola domain di setiap titik
+        prapeta, simpulkan bahwa prapeta setiap himpunan terbuka bersifat
+        terbuka, lalu gunakan pencirian kekontinuan yang diminta.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-mastery-04-answer">
+      <p>
+        Jika <m>(a,b)\in F^{-1}(V)</m> dan
+        <m>B_E(a+b,\eta)\subseteq V</m>, maka
+        <m>B_M((a,b),\eta/2)\subseteq F^{-1}(V)</m>. Dengan demikian,
+        <m>F^{-1}(V)</m> terbuka untuk setiap <m>V</m> terbuka, sehingga
+        <m>F</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-mastery-04-solution">
+      <p>
+        Misalkan <m>V\subseteq\R</m> terbuka. Jika <m>F^{-1}(V)</m> kosong,
+        prapeta itu terbuka. Jika tidak, ambil titik sebarang
+        <m>(a,b)\in F^{-1}(V)</m>. Maka <m>a+b=F(a,b)\in V</m>. Keterbukaan
+        <m>V</m> memberikan <m>\eta\gt0</m> dengan
+        <m>B_E(a+b,\eta)\subseteq V</m>.
+      </p>
+      <p>
+        Misalkan
+        <m>(u,v)\in B_M((a,b),\eta/2)</m>. Definisi metrik maksimum
+        menghasilkan <m>|u-a|\lt\eta/2</m> dan
+        <m>|v-b|\lt\eta/2</m>. Oleh karena itu,
+        <md>
+          <mrow>|F(u,v)-F(a,b)|
+          \amp=|(u+v)-(a+b)|</mrow>
+          <mrow>\amp\leq |u-a|+|v-b|\lt\eta.</mrow>
+        </md>
+        Jadi <m>F(u,v)\in B_E(a+b,\eta)\subseteq V</m>, sehingga
+        <m>(u,v)\in F^{-1}(V)</m>. Hal ini membuktikan
+        <me>
+          B_M((a,b),\eta/2)\subseteq F^{-1}(V).
+        </me>
+      </p>
+      <p>
+        Setiap titik dalam <m>F^{-1}(V)</m> mempunyai bola domain yang termuat
+        dalam prapeta tersebut. Maka <m>F^{-1}(V)</m> terbuka. Karena hal ini
+        berlaku untuk setiap himpunan terbuka <m>V\subseteq\R</m>, pencirian
+        kekontinuan melalui prapeta menunjukkan bahwa <m>F</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-mastery-05">
+    <title>Interior sebagai bagian terbuka terbesar</title>
+    <statement>
+      <p>
+        Untuk <m>A\subseteq X</m> dalam ruang metrik <m>(X,d)</m>, definisikan
+        <md>
+          <mrow>\mathcal U_A\amp=\{O\subseteq X:O\text{ terbuka dan }
+          O\subseteq A\},</mrow>
+          <mrow>U_A\amp=\bigcup_{O\in\mathcal U_A}O.</mrow>
+        </md>
+      </p>
+      <ol>
+          <li>
+            <p>
+              Buktikan bahwa <m>U_A=\Int(A)</m>. Gunakan kesamaan ini untuk
+              menjelaskan dengan tepat arti pernyataan bahwa interior adalah
+              subhimpunan terbuka terbesar yang termuat dalam <m>A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Turunkan sifat idempoten
+              <m>\Int(\Int(A))=\Int(A)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Hitung interior
+              <m>A=[-2,-1]\cup\{0\}\cup(1,4]</m> dalam
+              <m>(\R,d_E)</m> dan periksa hasilnya dengan sifat idempoten.
+            </p>
+          </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch08-mastery-05-hint">
+      <p>
+        <em>Tahap 1.</em> Gabungan semua anggota <m>\mathcal U_A</m> terbuka
+        dan tetap termuat dalam <m>A</m>. Karena itu, setiap titiknya adalah
+        titik interior <m>A</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>x\in\Int(A)</m>, sebuah bola terbuka yang
+        berpusat di <m>x</m> termuat dalam <m>A</m>. Bola ini sendiri adalah
+        anggota <m>\mathcal U_A</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Interior yang sudah terbukti terbuka tidak kehilangan
+        titik ketika operasi interior diterapkan lagi. Pada contoh konkret,
+        periksa semua titik ujung dan titik tunggal <m>0</m> secara terpisah.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-mastery-05-answer">
+      <p>
+        Berlaku
+        <m>\Int(A)=\bigcup\{O:O\text{ terbuka dan }O\subseteq A\}</m>.
+        Karena itu, setiap himpunan terbuka yang termuat dalam <m>A</m> termuat
+        pula dalam <m>\Int(A)</m>. Interior sendiri terbuka, sehingga
+        <m>\Int(\Int(A))=\Int(A)</m>. Untuk himpunan pada soal,
+        <m>\Int(A)=(-2,-1)\cup(1,4)</m>, dan interior dari hasil ini tetap
+        sama.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-mastery-05-solution">
+      <p>
+        Berdasarkan hukum gabungan sebarang, <m>U_A</m> terbuka. Setiap anggota
+        <m>\mathcal U_A</m> termuat dalam <m>A</m>, jadi gabungannya juga
+        termuat dalam <m>A</m>. Dengan demikian, untuk setiap <m>x\in U_A</m>
+        terdapat suatu lingkungan terbuka bagi <m>x</m> yang termuat dalam
+        <m>A</m>; khususnya, <m>x\in\Int(A)</m>. Maka
+        <m>U_A\subseteq\Int(A)</m>.
+      </p>
+      <p>
+        Sebaliknya, jika <m>x\in\Int(A)</m>, terdapat <m>r\gt0</m> dengan
+        <m>B(x,r)\subseteq A</m>. Bola tersebut terbuka, sehingga
+        <m>B(x,r)\in\mathcal U_A</m>. Akibatnya, <m>x\in U_A</m>. Jadi
+        <m>\Int(A)\subseteq U_A</m>, dan kedua inklusi memberikan
+        <m>U_A=\Int(A)</m>.
+      </p>
+      <p>
+        Kesamaan ini sekaligus menunjukkan kemaksimalan: <m>\Int(A)</m>
+        terbuka dan termuat dalam <m>A</m>, sedangkan setiap himpunan terbuka
+        <m>O\subseteq A</m> merupakan salah satu anggota <m>\mathcal U_A</m>
+        dan karenanya memenuhi <m>O\subseteq\Int(A)</m>. Karena
+        <m>\Int(A)</m> terbuka, setiap titiknya merupakan titik interior dari
+        <m>\Int(A)</m>. Selalu juga berlaku
+        <m>\Int(\Int(A))\subseteq\Int(A)</m>. Oleh sebab itu,
+        <me>
+          \Int(\Int(A))=\Int(A).
+        </me>
+      </p>
+      <p>
+        Dalam contoh konkret, setiap titik di <m>(-2,-1)</m> mempunyai
+        interval kecil yang termuat dalam <m>[-2,-1]</m>, dan setiap titik di
+        <m>(1,4)</m> mempunyai interval kecil yang termuat dalam
+        <m>(1,4]</m>. Tidak satu pun dari titik <m>-2,-1,0,4</m> mempunyai
+        bola Euklides yang termuat dalam <m>A</m>. Jadi
+        <m>\Int(A)=(-2,-1)\cup(1,4)</m>. Hasil ini merupakan gabungan dua
+        interval terbuka, sehingga menerapkan interior sekali lagi tidak
+        mengubahnya, sesuai sifat idempoten.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch08-mastery-06">
+    <title>Terbuka, tertutup, clopen, dan peran metrik</title>
+    <statement>
+      <p>
+        Pada himpunan dasar <m>X=\R</m>, bandingkan metrik Euklides
+        <m>d_E</m> dengan metrik diskret
+        <me>
+          d_D(x,y)=\begin{cases}
+          0 \amp \text{jika }x=y,\\
+          1 \amp \text{jika }x\neq y.
+          \end{cases}
+        </me>
+        Suatu himpunan disebut <em>tertutup</em> jika komplemennya terbuka, dan
+        disebut <em>clopen</em> jika terbuka sekaligus tertutup.
+      </p>
+      <ol>
+          <li>
+            <p>
+              Terhadap <m>d_E</m>, klasifikasikan masing-masing dari
+              <m>(0,1)</m>, <m>[0,1]</m>, <m>[0,1)</m>, <m>\emptyset</m>, dan
+              <m>\R</m> sebagai hanya terbuka, hanya tertutup, clopen, atau
+              tidak terbuka maupun tertutup. Berikan alasan berbasis bola atau
+              komplemen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ulangi klasifikasi terhadap <m>d_D</m> dan buktikan jawaban Anda
+              untuk subhimpunan sebarang dari <m>X</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Gunakan hasil klasifikasi untuk menyangkal kedua pernyataan:
+              “himpunan tertutup tidak mungkin terbuka” dan “keterbukaan suatu
+              subhimpunan hanya bergantung pada himpunan dasar, bukan pada
+              metriknya.”
+            </p>
+          </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch08-mastery-06-hint">
+      <p>
+        <em>Tahap 1.</em> Dalam metrik Euklides, uji titik ujung. Untuk
+        ketertutupannya, tulis komplemen dan periksa apakah setiap titik
+        komplemen memiliki interval kecil di dalam komplemen itu.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Dalam metrik diskret,
+        <m>B_D(x,1/2)=\{x\}</m>. Gunakan bola singleton ini untuk setiap titik
+        suatu subhimpunan, lalu terapkan argumen yang sama pada komplemennya.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Himpunan kosong atau seluruh ruang menyangkal klaim
+        pertama. Untuk klaim kedua, ikuti perubahan klasifikasi
+        <m>[0,1)</m> ketika metrik diganti.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch08-mastery-06-answer">
+      <p>
+        Terhadap <m>d_E</m>, <m>(0,1)</m> hanya terbuka, <m>[0,1]</m> hanya
+        tertutup, <m>[0,1)</m> tidak terbuka maupun tertutup, sedangkan
+        <m>\emptyset</m> dan <m>\R</m> bersifat clopen. Terhadap <m>d_D</m>,
+        kelima himpunan tersebut—bahkan setiap subhimpunan <m>\R</m>—bersifat
+        clopen.
+        Himpunan <m>\emptyset</m> menyangkal klaim bahwa himpunan tertutup tidak
+        mungkin terbuka, dan perubahan status <m>[0,1)</m> menyangkal
+        ketidakbergantungan pada metrik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch08-mastery-06-solution">
+      <p>
+        Dalam metrik Euklides, <m>(0,1)</m> terbuka karena setiap titiknya
+        mempunyai interval kecil yang tetap berada di antara <m>0</m> dan
+        <m>1</m>. Himpunan ini tidak tertutup: komplemennya
+        <m>(-\infty,0]\cup[1,\infty)</m> tidak terbuka, sebab setiap bola di
+        sekitar <m>0</m> memuat titik positif yang lebih kecil dari <m>1</m>.
+      </p>
+      <p>
+        Himpunan <m>[0,1]</m> tertutup karena komplemennya
+        <m>(-\infty,0)\cup(1,\infty)</m> terbuka. Himpunan tersebut tidak
+        terbuka karena tidak ada bola Euklides berjari-jari positif di sekitar
+        <m>0</m> yang termuat di dalamnya. Himpunan <m>[0,1)</m> juga tidak
+        terbuka karena alasan yang sama pada <m>0</m>. Ia tidak tertutup karena
+        komplemennya <m>(-\infty,0)\cup[1,\infty)</m> tidak terbuka di titik
+        <m>1</m>. Terakhir, <m>\emptyset</m> terbuka secara vakum dan
+        <m>\R</m> terbuka sebagai seluruh ruang; karena keduanya saling
+        berkomplemen, keduanya juga tertutup. Jadi keduanya bersifat clopen.
+      </p>
+      <p>
+        Dalam metrik diskret, untuk setiap <m>x\in\R</m> berlaku
+        <m>B_D(x,1/2)=\{x\}</m>. Jika <m>A\subseteq\R</m> dan <m>x\in A</m>,
+        bola singleton ini termuat dalam <m>A</m>. Maka setiap <m>A</m>
+        terbuka. Argumen tersebut berlaku pula pada <m>\R\setminus A</m>,
+        sehingga komplemen <m>A</m> terbuka dan <m>A</m> tertutup. Jadi setiap
+        subhimpunan bersifat clopen terhadap <m>d_D</m>.
+      </p>
+      <p>
+        Karena <m>\emptyset</m> dan <m>\R</m> sekaligus tertutup dan terbuka,
+        sifat “tertutup” bukan negasi sifat “terbuka”. Selain itu, himpunan
+        yang sama, <m>[0,1)</m>, tidak terbuka terhadap <m>d_E</m> tetapi
+        terbuka—bahkan bersifat clopen—terhadap <m>d_D</m>. Jadi keterbukaan
+        bergantung pada metrik yang dipasang pada himpunan dasar.
+      </p>
+    </solution>
+  </exercise>
+</section>
