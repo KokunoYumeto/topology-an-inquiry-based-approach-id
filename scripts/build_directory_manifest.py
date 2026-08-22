@@ -16,7 +16,7 @@ def sha256(path: Path) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("directory", type=Path)
-    parser.add_argument("--glob", default="*")
+    parser.add_argument("--glob", default="**/*")
     parser.add_argument("--label", required=True)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--relative-to", type=Path)
@@ -26,21 +26,23 @@ def main() -> int:
     relative_root = (args.relative_to or directory).resolve()
     files = sorted(
         (path for path in directory.glob(args.glob) if path.is_file()),
-        key=lambda path: path.relative_to(directory).as_posix(),
+        key=lambda path: path.relative_to(directory).as_posix().casefold(),
     )
     if not files:
         raise SystemExit("no files matched the bounded manifest request")
 
-    canonical = hashlib.sha256()
     rows: list[dict[str, object]] = []
     for path in files:
         relative = path.relative_to(relative_root).as_posix()
         data = path.read_bytes()
         digest = hashlib.sha256(data).hexdigest()
-        canonical.update(relative.encode("utf-8"))
-        canonical.update(b"\0")
-        canonical.update(data)
         rows.append({"path": relative, "bytes": len(data), "sha256": digest})
+
+    canonical = hashlib.sha256(
+        "".join(
+            f"{row['path']}\t{row['bytes']}\t{row['sha256']}\n" for row in rows
+        ).encode("utf-8")
+    ).hexdigest()
 
     manifest = {
         "schema_version": 1,
@@ -48,11 +50,14 @@ def main() -> int:
         "source_directory": directory.relative_to(relative_root).as_posix(),
         "glob": args.glob,
         "combined_algorithm": (
-            "SHA-256 over each ordered relative path, one NUL byte, "
-            "then exact file bytes"
+            "SHA-256 over UTF-8 lines: relative path, TAB, byte count, TAB, "
+            "file SHA-256, LF; paths ordered case-insensitively"
         ),
-        "canonical_manifest_sha256": canonical.hexdigest(),
+        "canonical_manifest_sha256": canonical,
         "file_count": len(rows),
+        "html_files": sum(
+            1 for path in files if path.suffix.lower() in {".html", ".htm"}
+        ),
         "total_bytes": sum(int(row["bytes"]) for row in rows),
         "files": rows,
     }

@@ -17,18 +17,38 @@ original O003 completion modules are finished.
   with raw ordered SHA-256
   `c6d2935beda94460617eeba29cf6bd181fd7d061bbd11ed6b8471b91d614cce9`.
 - The complete translated five-file chapter has ordered SHA-256
-  `a653b56cdec48fe4497ba807bcc1bfb564019c1fc38805bb26d450f61ac1806e`.
+  `16508d2363ba205c28b5187b7909d577a1fd482c49414ca7d05572ca77125c73`.
   `CHAPTER09_SOURCE_QA.json` is 5,719 bytes / SHA-256
-  `6697bd179dc1ac85986291437417672ba62cba735fd28b68d00ef07d86578328`
+  `95218a80b9b8ca1bf1e2ba90e42b2e15e4aa91231ef636abd2b887c48cad7aa3`
   and reports zero failures, 11 unique IDs and 12 resolving xrefs.
 - The cumulative Chapters 1-9 source closure is 56 files. Its deterministic
   named-file SHA-256 is
-  `0ebec21ae855f45842c0a475a3712b7a74d46e2660e322a5f755712a69f9c8fa`.
-- `CHAPTER09_SOURCE_MANIFEST.json` is 49,185 bytes / SHA-256
-  `a941e47b1d1fc7dc8f68d1a26471c8ccd69119f8f97e3eb90028224867a7e6f1`.
+  `583966ac3c2f46208b1423db42e46ce6ed51cc039790fcde758916ccb7626a63`.
+- `CHAPTER09_SOURCE_MANIFEST.json` is 60,728 bytes / SHA-256
+  `a731db7e0a89f68a638208055997f5f51a167dd2a552f7ff69d3a3208527480d`.
   It fails closed over the exact cumulative source, companion, rights, assets,
   corrections, backend, HTML, browser and PDF identities and has status
   `pass` with no pending evidence.
+
+## Indonesian terminology audit
+
+- A bounded official arXiv search found no Indonesian point-set-topology
+  source package under the exact phrases `ruang metrik`, `ruang topologi`,
+  or `himpunan terbuka`; the permitted PDF fallback was therefore used.
+- The primary witness is Oki Neswan's 2019 FMIPA-ITB teaching deck
+  *Dari Barisan Bilangan ke Barisan Fungsi* (723,813 bytes; SHA-256
+  `636b5110a6ac6fece61f75bb4a3c04206734b4806e5335df21c096b8cbe9fdee`),
+  corroborated by Universitas Terbuka's PEMA4427 topology overview
+  (96,422 bytes; SHA-256
+  `3271d0016f0386079f53202021b0f717b1c87103d469edcb4a3c5f755474fcbc`).
+- The actual PDF bodies support the edition forms `ruang topologi`,
+  `tutupan`, `kekontinuan`, `pertidaksamaan segitiga`, and `unsur`.
+  The controlled glossary was updated, the justified refinements were
+  propagated through Chapters 1-9, and stale variants were checked away.
+- `00_control/CHAPTER09_TERMINOLOGY_AUDIT.md` is 5,307 bytes / SHA-256
+  `9ece56964e47cb36dc0528aa3899e2d90a860de3d6b58ab1f92ad0a370ff8036`;
+  the cumulative manifest explicitly records every inherited source and
+  companion identity changed by this audit.
 
 ## Companion and modular backend
 
@@ -36,13 +56,13 @@ original O003 completion modules are finished.
   activity-task guides and 28 exercise-prompt guides. Six additional mastery
   checks bring the total to 50 entries.
 - Every entry has a statement, staged hint, answer and complete solution.
-  `CHAPTER09_COMPANION_QA.json` is 97,616 bytes / SHA-256
-  `09f2c1bd527ab8d1cf89b4feab48cf99289ccea1366817c8be68e91df6ecb492`
+  `CHAPTER09_COMPANION_QA.json` is 97,611 bytes / SHA-256
+  `4e8712c1dea303278bc293e64907d7e96029e1bfe1258f33898ce70b3638b2bf`
   and reports zero failures and one described Chapter 9 image.
-- The stable-ID backend is 166,727 bytes / SHA-256
-  `b1d3912e790273a1ece9d1f52530897c3dd10671de97c35991781867471da637`.
+- The stable-ID backend is 166,775 bytes / SHA-256
+  `11902b466090d7218c093e1b420c63970679604ab4a46483fda4a228187feccd`.
   Its 26,671-byte alias table has SHA-256
-  `1623f26008ae191bf6426dd712c205a9d664c914c5d11cae07af79d1b3884852`.
+  `31d6115571a035d775d581f48a4e90a09a9d34fb8df45b0083ad93326e6464ab`.
   It binds all 50 entries and all 200 disclosure surfaces, the image, source
   locators, component rights and 15 verified Chapter 9 corrections.
 - O003-C094 records the source-critical subspace-convergence correction;
@@ -55,46 +75,65 @@ original O003 completion modules are finished.
 
 - Two clean, fixed-epoch HTML builds followed by the idempotent Indonesian
   finalizer produced identical 7,038-file manifests. The tree contains 6,927
-  HTML documents and 17,715,106 bytes; its canonical manifest SHA-256 is
-  `373560dd1d3e2ddf4704688e3a0dbd22ef6a4eb7aa0cba94f2bf907dd3d61392`.
+  HTML documents and 17,715,029 bytes; its canonical manifest SHA-256 is
+  `e8df11b6f24433ec04fb62d232927363f6e37eb872a79e7f019b49593b7514cc`.
 - The canonical file manifest is 1,153,907 bytes / SHA-256
-  `d96bec7bc5b543b842fccb109506d61f4561d21fa49b867f958e183a11c26881`.
+  `7840b39e1ebf4e90adab72ce3082389d609137c25c1f0d770a67a4dc37ebfac4`.
   Local QA checked 21,251 links/assets and 37 image references with zero
   failures; its 846-byte report has SHA-256
-  `a1caf9b2acac995241c37373b3212599ee180ed27fdbdde3f3412077c9fc1d12`.
-- Browser QA at 1440, 1280, 1024, 768 and 390 CSS-pixel widths found no
-  document-level horizontal overflow. The desktop reading measure is centered
-  at 960 px; intermediate and mobile widths reflow to 600 px and 318 px rather
-  than remaining left-anchored. The long masthead, Indonesian navigation,
-  Chapter 9 pages and companion pages remain readable.
+  `662f26cac6564f87f413a46fb1e692a5671b00a24f27944fc774ef6e28496af6`.
+- Browser regression at 1280 and 390 CSS-pixel widths found no document-level
+  horizontal overflow. The desktop reading measure is centered at 960 px;
+  mobile content reflows to 318.2222 px. The cumulative wrapper, affected
+  source pages, prior point-set guides, and Chapter 8-9 exercise guides remain
+  readable after the terminology changes.
 - Browser interaction opened a source guide, exercise guide and mastery check
   and proved independent staged hint, answer and solution disclosures. The
-  3,086-byte browser receipt has SHA-256
-  `7c7a2d3146c79e3dd9a99fd2a77447180b78e50fc5038c7b70ee51d888faeede`.
+  3,583-byte browser receipt has SHA-256
+  `9eeb3c7b9598ebdfd208b647ec6d7227f7890a7bdafe20b30d799b73acaedbbe`.
+
+## GitHub Pages publication tree
+
+- The bounded `docs/` tree retains the historical Chapter 1-8 entry surfaces
+  and PDFs while advancing the primary reader to the corrected Chapters 1-9
+  boundary. It contains 7,049 files, including 6,929 HTML documents, totaling
+  25,541,658 bytes; its canonical manifest SHA-256 is
+  `0d4b1bfefda757ee6bdfa52fe067d373f4de5f1959bfc1951f4a6d6b006cb888`.
+- The detailed 1,156,217-byte file manifest has SHA-256
+  `adf93b69f2b4b2dfe34faf8c24202e527aa248c6eeec89401d51dfb878567cd0`.
+  The compact 353-byte identity manifest has SHA-256
+  `153fcd182104f4a5fdb2dcd0d7ded2bbe7eae82f6bb46b67a7bf6786b79036a1`.
+- The 834-byte Pages-tree QA report has SHA-256
+  `c3872beda84c793f6b2f22ceddc981f63b61dc81f894fc926c208305578b3a7c`
+  and status `pass`. It checked 21,527 links/assets and 37 image references,
+  required the cumulative reader, Chapter 9 source and companion entry points,
+  mastery surface and current PDF, and found zero failures.
 
 ## Deterministic PDF and visual inspection
 
 - Two clean strict XeLaTeX builds used `SOURCE_DATE_EPOCH=1692057600` and the
-  transcript error gate. Both emitted exactly 1,866,941 bytes with SHA-256
-  `1ea66543c895f20472d273861847de09baf85299a87cd34a13b32566d1ad897a`.
+  transcript error gate. Both emitted exactly 1,866,925 bytes with SHA-256
+  `554f6c699e73951f2eddcc32b80ceb656448a2f85eb945a88fc507dab6033621`.
   The two deterministic receipts are 314 bytes / SHA-256
-  `a6851b5f7d608793ee654b7fdc7d00231ffd9666beca6b10c629ec1cbe5f5ed0`
+  `fa5acac5a2b48eaf8abe0ae474e4f98554338b4df651bc8ebda83c5e567fd1e6`
   and 349 bytes / SHA-256
-  `fcf05784d90f6bea0e0159db28825d40866e7318820b6216b8a852eb1ba2446a`.
+  `d8f68d80adefcc71eccdbb3ff41d74427df5e678863219e5ca4b64b4713eff90`.
 - The PDF has 215 US-Letter pages, no rotation and 23 outline entries. Physical
   pages 1-6 use lowercase Roman page labels and physical page 7 begins Arabic
   page 1. All 218 link annotations are valid; the two interactive-lab links
   use the portable public HTTPS target and no relative URI remains.
 - The 5,689-byte structure report has SHA-256
-  `cbe4363464029ee043059b3ef73fa76ec99d29f07649a1577dae64be4e1c4188`
+  `a5667e67b85202f052f87d8d7407070ceef881892bcca6281df134649148b1bc`
   and status `pass`.
 - All 215 pages were inspected through all-page contact sheets; physical
-  pages 82-90 (Chapter 9), 91-215 (appendices), and long titles on pages 65,
-  73, 174 and 196 received closer inspection. No clipping, overlap, broken
+  pages 82-90 (Chapter 9), the terminology-changed companion pages 127,
+  138-140, 178-180, 196, 198 and 208, and long titles on pages 65, 73, 174
+  and 196 received full-page inspection. No clipping, overlap, broken
   glyph box, illegible formula, title overflow, figure cutoff or faulty
   transition was found. A 10-pixel edge sweep at 120 dpi found no edge content.
-  The 1,240-byte visual receipt has SHA-256
-  `52fd3dcc712a00d510da0c7da8c73aa7021e314c07481cf6ed18a0c7b495860f`.
+  The minimum observed content margin was 77 pixels. The 1,259-byte visual
+  receipt has SHA-256
+  `a8f8cca1ccb047fd0a2e23e4e0286f58d5c353c054c3483858afc31eb17283a1`.
 - Non-blocking TeX box warnings include inherited long headings and a 2.83 pt
   Chapter 9 line; targeted visual inspection proves that they do not clip.
   Sparse pages 90, 98, 109 and 142 arise from clean chapter/appendix breaks.

@@ -66,17 +66,45 @@ EVOLVING_PRIOR_IMPLEMENTATION = {
     "project.ptx": "addition of cumulative Chapters 1-9 build targets",
     "scripts/qa_source_translation.py": "Chapter 9 source topology and approved-change validation",
     "scripts/build_pretext_pdf_strict.py": "cumulative deterministic PDF builder evolution",
+    "scripts/build_directory_manifest.py": "full-tree manifest and HTML-QA algorithm alignment",
+    "scripts/build_zenodo_boundary_package.py": "generic public-byte privacy hardening",
     "scripts/finalize_chapter01_html.py": "cumulative finalized HTML reader evolution",
+    "scripts/qa_chapter01_reader.py": "generic public-byte privacy hardening",
+    "scripts/qa_chapter03_companion.py": "replace machine-local QA paths with repository-relative paths",
+    "scripts/qa_chapter04_companion.py": "replace machine-local QA paths with repository-relative paths",
+    "scripts/qa_chapter05_companion.py": "replace machine-local QA paths with repository-relative paths",
     "xsl/custom-latex.xsl": "cumulative PDF reader implementation evolution",
     "xsl/topology-style.xsl": "cumulative HTML reader implementation evolution",
 }
 EVOLVING_PRIOR_ADDITIVE = {
     "companion/RIGHTS.md": "cumulative Chapter 9 companion rights preservation",
+    "backend/chapter_03_companion_manifest.json": "rebound after the audited Indonesian terminology refinement",
+    "companion/chapter_05_point_set_guides.ptx": "audited topological-closure terminology refinement",
+    "companion/chapter_05_exercise_guides_b.ptx": "audited topological-closure terminology refinement",
+    "companion/chapter_05_mastery.ptx": "audited topological-closure terminology refinement",
+    "backend/chapter_05_companion_manifest.json": "rebound after the audited Indonesian terminology refinement",
+    "backend/chapter_06_companion_manifest.json": "rebound after the audited Indonesian terminology refinement",
+    "backend/chapter_07_companion_manifest.json": "rebound after the audited Indonesian terminology refinement",
+    "companion/chapter_08_exercise_guides_a.ptx": "audited continuity terminology normalization",
+    "companion/chapter_08_exercise_guides_b.ptx": "audited continuity terminology normalization",
+    "backend/chapter_08_companion_manifest.json": "rebound after the audited Indonesian terminology refinement",
+}
+EVOLVING_PRIOR_SOURCE = {
+    "source/sec_metric_space_intro.ptx": "audited topological-space terminology refinement",
+    "source/sec_cont_func_intro.ptx": "audited topological-space terminology refinement",
+    "source/sec_comp_cont_func.ptx": "audited topological-space terminology refinement",
+    "source/sec_open_balls_intro.ptx": "audited topological-space terminology refinement",
+    "source/sec_neighborhoods.ptx": "audited topological-space terminology refinement",
+    "source/sec_cont_neighborhoods.ptx": "audited topological-space terminology refinement",
+    "source/sec_open_balls_summ.ptx": "audited topological-space terminology refinement",
+    "source/sec_open_sets.ptx": "audited topological-space terminology refinement",
+    "source/sec_cont_open_sets.ptx": "audited topological-space terminology refinement",
 }
 CONTROL_INPUTS = (
     "00_control/TERMINOLOGY.csv",
     "00_control/SOURCE_CORRECTIONS.csv",
 )
+TERMINOLOGY_AUDIT = "00_control/CHAPTER09_TERMINOLOGY_AUDIT.md"
 EXPECTED_PRIOR_SOURCE_FILES = 51
 EXPECTED_TOTAL_SOURCE_FILES = 56
 HTML_RUN_1 = "qa/CHAPTER09_HTML_MANIFEST_RUN1.json"
@@ -271,6 +299,7 @@ def main() -> int:
         raise RuntimeError("unexpected Chapter 8 admission boundary")
 
     prior_source_names: list[str] = []
+    inherited_source_updates: list[dict[str, object]] = []
     translated_source = require_dict(prior.get("translated_source"), "prior translated source")
     inherited_chapters: dict[str, dict[str, Any]] = {}
     for chapter in PRIOR_CHAPTERS:
@@ -285,12 +314,28 @@ def main() -> int:
             if name in prior_source_names:
                 raise RuntimeError(f"duplicate previously admitted source file: {name}")
             current = file_row(relative)
-            assert_identity(f"previously admitted source {name}", row, current)
+            changed = row.get("bytes") != current["bytes"] or row.get("sha256") != current["sha256"]
+            if changed and relative not in EVOLVING_PRIOR_SOURCE:
+                raise RuntimeError(f"unapproved previously admitted source drift: {relative}")
+            if changed:
+                inherited_source_updates.append(
+                    {
+                        "path": current["path"],
+                        "previous_bytes": row.get("bytes"),
+                        "previous_sha256": row.get("sha256"),
+                        "current": current,
+                        "reason": EVOLVING_PRIOR_SOURCE[relative],
+                        "audit": TERMINOLOGY_AUDIT,
+                    }
+                )
             prior_source_names.append(name)
             current_files.append(current)
         inherited = dict(chapter_row)
         inherited["files"] = current_files
-        inherited["admission"] = f"identity preserved from repo/{PRIOR_MANIFEST}"
+        inherited["admission"] = (
+            f"identity preserved from repo/{PRIOR_MANIFEST}, except explicitly audited "
+            f"terminology refinements bound by {TERMINOLOGY_AUDIT}"
+        )
         inherited_chapters[chapter] = inherited
     if len(prior_source_names) != EXPECTED_PRIOR_SOURCE_FILES:
         raise RuntimeError(f"prior source closure changed: {len(prior_source_names)} != {EXPECTED_PRIOR_SOURCE_FILES}")
@@ -684,9 +729,13 @@ def main() -> int:
             "chapter_09_raw_concatenated_sha256": authority_raw,
         },
         "translated_source": translated,
+        "inherited_source_updates": inherited_source_updates,
         "additive_components": inherited_additive + [file_row(path) for path in NEW_ADDITIVE],
         "inherited_additive_updates": inherited_additive_updates,
-        "control_inputs": [current_controls[path] for path in CONTROL_INPUTS],
+        "control_inputs": [
+            *[current_controls[path] for path in CONTROL_INPUTS],
+            control_row(TERMINOLOGY_AUDIT),
+        ],
         "inherited_control_updates": inherited_control_updates,
         "production_implementation": [implementation_by_path[path] for path in sorted(implementation_by_path)],
         "inherited_implementation_updates": inherited_implementation_updates,

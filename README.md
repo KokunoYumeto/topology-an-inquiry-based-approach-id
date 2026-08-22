@@ -63,7 +63,7 @@ PreTeXt, atau repositori sumber yang dinyatakan maupun disiratkan.
 
 Catatan provenance alat: draf terjemahan, materi pendamping, backend modular,
 dan pemeriksaan edisi ini diproduksi oleh **OpenAI Codex gpt-5.6-sol, Ultra**,
-atas arahan Floris. Catatan ini tidak menggantikan kredit penulis, sumber,
+atas arahan pengguna. Catatan ini tidak menggantikan kredit penulis, sumber,
 institusi, atau kontributor manusia yang dipertahankan di seluruh edisi.
 
 ## Struktur repositori

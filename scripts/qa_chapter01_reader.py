@@ -26,7 +26,6 @@ FORBIDDEN_VISIBLE = re.compile(
 )
 FORBIDDEN_PUBLIC_TEXT = (
     re.compile(rb"C:[\\/]Users[\\/]", re.IGNORECASE),
-    re.compile(rb"\bFloris\b", re.IGNORECASE),
     re.compile(rb"gh[pousr]_[A-Za-z0-9_]{20,}"),
     re.compile(rb"github_pat_[A-Za-z0-9_]{20,}"),
     re.compile(rb"sk-[A-Za-z0-9_-]{20,}"),

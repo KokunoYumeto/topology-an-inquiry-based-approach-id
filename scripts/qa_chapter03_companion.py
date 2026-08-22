@@ -32,7 +32,12 @@ def local_name(node: etree._Element) -> str:
 
 def identity(path: Path) -> dict[str, object]:
     data = path.read_bytes()
-    return {"path": str(path), "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
+    repo = Path(__file__).resolve().parent.parent
+    return {
+        "path": path.resolve().relative_to(repo).as_posix(),
+        "bytes": len(data),
+        "sha256": hashlib.sha256(data).hexdigest(),
+    }
 
 
 def text_length(node: etree._Element) -> int:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the deterministic, sanitized Chapters 1–8 Zenodo preservation set."""
+"""Build the deterministic, sanitized Chapters 1–9 Zenodo preservation set."""
 
 from __future__ import annotations
 
@@ -11,11 +11,13 @@ import shutil
 import tempfile
 import zipfile
 
+from PyPDF2 import PdfReader
+
 
 ROOT = Path(__file__).resolve().parents[1]
 LANE = ROOT.parent
 FIXED_ZIP_TIME = (2023, 8, 15, 0, 0, 0)
-BASE = "topologi-pendekatan-berbasis-inkuiri-bab-01-08"
+BASE = "topologi-pendekatan-berbasis-inkuiri-bab-01-09"
 PDF_NAME = f"{BASE}-id.pdf"
 HTML_NAME = f"{BASE}-html.zip"
 SOURCE_NAME = f"{BASE}-sumber.zip"
@@ -29,10 +31,10 @@ AUTHORITY_ARCHIVE = (
     / "archives"
     / "gvsuoer-topology-0c2d8f614ef87aa00de373f3418146c2f1d13bb9.zip"
 )
-PDF = ROOT / "output" / "chapters01-08-pdf" / "chapters_01_08_reader.pdf"
-HTML_ROOT = ROOT / "output" / "chapters01-08-html"
-SOURCE_MANIFEST = ROOT / "qa" / "CHAPTER08_SOURCE_MANIFEST.json"
-HTML_MANIFEST = ROOT / "qa" / "CHAPTER08_HTML_MANIFEST.json"
+PDF = ROOT / "output" / "chapters01-09-pdf" / "chapters_01_09_reader.pdf"
+HTML_ROOT = ROOT / "output" / "chapters01-09-html"
+SOURCE_MANIFEST = ROOT / "qa" / "CHAPTER09_SOURCE_MANIFEST.json"
+HTML_MANIFEST = ROOT / "qa" / "CHAPTER09_HTML_MANIFEST.json"
 
 EXPECTED = {
     "authority_archive": {
@@ -40,42 +42,36 @@ EXPECTED = {
         "sha256": "d7cadeb10e6525568a90340bceadbc77dc1e5620053e257e8b3126acb8ce01f3",
     },
     "pdf": {
-        "bytes": 1_653_047,
-        "sha256": "78c076c58839dfd1a18cca663e58accdee2a391e429d5f38e6c71ac3c3e7937d",
-        "pages": 187,
+        "bytes": 1_866_925,
+        "sha256": "554f6c699e73951f2eddcc32b80ceb656448a2f85eb945a88fc507dab6033621",
+        "pages": 215,
     },
     "html": {
-        "files": 6_172,
-        "bytes": 15_657_116,
-        "canonical_manifest_sha256": "5877bcaf7c08baf2d56e58a36fe9097af3b902f2315f86e667f82dd3118dbdab",
+        "files": 7_038,
+        "bytes": 17_715_029,
+        "canonical_manifest_sha256": "e8df11b6f24433ec04fb62d232927363f6e37eb872a79e7f019b49593b7514cc",
     },
-    "source_manifest_sha256": "TO_BE_VALIDATED_AT_BUILD_TIME",
 }
 
 SANITIZED_QA = (
-    *(f"qa/CHAPTER{number:02d}_SOURCE_MANIFEST.json" for number in range(1, 9)),
-    "qa/CHAPTER08_SOURCE_QA.json",
-    "qa/CHAPTER08_COMPANION_QA.json",
-    "qa/CHAPTER08_HTML_MANIFEST.json",
-    "qa/CHAPTER08_HTML_MANIFEST_RUN1.json",
-    "qa/CHAPTER08_HTML_MANIFEST_RUN2.json",
-    "qa/CHAPTER08_HTML_QA.json",
-    "qa/CHAPTER08_BROWSER_QA.json",
-    "qa/CHAPTER08_PDF_RUN1_HASH.json",
-    "qa/CHAPTER08_PDF_RUN2_HASH.json",
-    "qa/CHAPTER08_PDF_STRUCTURE.json",
-    "qa/CHAPTER08_PDF_VISUAL_QA.json",
-    "qa/CHAPTER08_PDF_RENDER_MANIFEST.json",
-    "qa/CHAPTER08_PDF_CONTACT_SHEET_MANIFEST.json",
-    "qa/CHAPTER08_BUILD_QA.md",
+    *(f"qa/CHAPTER{number:02d}_SOURCE_MANIFEST.json" for number in range(1, 10)),
+    "qa/CHAPTER09_SOURCE_QA.json",
+    "qa/CHAPTER09_COMPANION_QA.json",
+    "qa/CHAPTER09_HTML_MANIFEST.json",
+    "qa/CHAPTER09_HTML_MANIFEST_RUN1.json",
+    "qa/CHAPTER09_HTML_MANIFEST_RUN2.json",
+    "qa/CHAPTER09_HTML_QA.json",
+    "qa/CHAPTER09_BROWSER_QA.json",
+    "qa/CHAPTER09_PDF_RUN1_HASH.json",
+    "qa/CHAPTER09_PDF_RUN2_HASH.json",
+    "qa/CHAPTER09_PDF_STRUCTURE.json",
+    "qa/CHAPTER09_PDF_VISUAL_QA.json",
+    "qa/CHAPTER09_DOCS_MANIFEST.json",
+    "qa/CHAPTER09_DOCS_QA.json",
+    "qa/CHAPTER09_BUILD_QA.md",
 )
 
-BROWSER_EVIDENCE = (
-    "qa/browser-evidence/CHAPTER08_DESKTOP_1280x900.jpg",
-    "qa/browser-evidence/CHAPTER08_DISCLOSURE_1280x900.jpg",
-    "qa/browser-evidence/CHAPTER08_INTERIOR_MACRO_1280x900.jpg",
-    "qa/browser-evidence/CHAPTER08_MOBILE_390x844_DRAWER.jpg",
-)
+BROWSER_EVIDENCE: tuple[str, ...] = ()
 
 SENSITIVE_TEXT_MARKERS = (
     b"C:\\Users\\",
@@ -84,6 +80,7 @@ SENSITIVE_TEXT_MARKERS = (
     b"Authorization:" b" Bearer",
     b"access_" b"token=",
 )
+PRIVATE_NAME_MARKER = bytes((70, 108, 111, 114, 105, 115))
 
 
 def digest(data: bytes) -> str:
@@ -119,6 +116,8 @@ def assert_sanitized(name: str, data: bytes) -> None:
     lowered = name.casefold()
     if lowered.endswith((".log", ".tmp", ".pyc")) or "__pycache__" in lowered:
         raise RuntimeError(f"disallowed archive entry: {name}")
+    if PRIVATE_NAME_MARKER.lower() in data.lower():
+        raise RuntimeError(f"private-name marker in {name}")
     if Path(name).suffix.casefold() in {
         ".md",
         ".txt",
@@ -174,6 +173,26 @@ def collect_paths(value: object) -> set[str]:
         for item in value:
             paths.update(collect_paths(item))
     return paths
+
+
+def collect_identity_rows(value: object) -> dict[str, set[tuple[int, str]]]:
+    rows: dict[str, set[tuple[int, str]]] = {}
+    if isinstance(value, dict):
+        path = value.get("path")
+        size = value.get("bytes")
+        sha = value.get("sha256")
+        if isinstance(path, str) and isinstance(size, int) and isinstance(sha, str):
+            rows.setdefault(path, set()).add((size, sha))
+        for item in value.values():
+            nested = collect_identity_rows(item)
+            for nested_path, identities in nested.items():
+                rows.setdefault(nested_path, set()).update(identities)
+    elif isinstance(value, list):
+        for item in value:
+            nested = collect_identity_rows(item)
+            for nested_path, identities in nested.items():
+                rows.setdefault(nested_path, set()).update(identities)
+    return rows
 
 
 def canonical_entries(entries: dict[str, bytes]) -> str:
@@ -254,7 +273,7 @@ def html_entries(html_manifest: dict[str, object]) -> dict[str, bytes]:
         ("README.md", ROOT / "README.md"),
         ("LICENSES.md", ROOT / "LICENSES.md"),
         ("COMPANION_RIGHTS.md", ROOT / "companion" / "RIGHTS.md"),
-        ("CHAPTER08_HTML_MANIFEST.json", HTML_MANIFEST),
+        ("CHAPTER09_HTML_MANIFEST.json", HTML_MANIFEST),
     ):
         archive_name, data = file_entry(name, path)
         entries[archive_name] = data
@@ -263,6 +282,7 @@ def html_entries(html_manifest: dict[str, object]) -> dict[str, bytes]:
 
 def source_entries(source_manifest: dict[str, object]) -> dict[str, bytes]:
     entries: dict[str, bytes] = {}
+    manifest_identities = collect_identity_rows(source_manifest)
 
     def add(name: str, path: Path) -> None:
         archive_name, data = file_entry(name, path)
@@ -274,6 +294,7 @@ def source_entries(source_manifest: dict[str, object]) -> dict[str, bytes]:
 
     prefix = "point-set-topology-id"
     for relative in (
+        ".gitattributes",
         "README.md",
         "LICENSES.md",
         "project.ptx",
@@ -281,6 +302,7 @@ def source_entries(source_manifest: dict[str, object]) -> dict[str, bytes]:
         "publication/publication.ptx",
         "00_control/TERMINOLOGY.csv",
         "00_control/SOURCE_CORRECTIONS.csv",
+        "00_control/CHAPTER09_TERMINOLOGY_AUDIT.md",
     ):
         if relative.startswith("00_control/"):
             path = LANE / relative
@@ -299,6 +321,13 @@ def source_entries(source_manifest: dict[str, object]) -> dict[str, bytes]:
         if not manifest_path.startswith("repo/source/"):
             continue
         relative = manifest_path.removeprefix("repo/")
+        identities = manifest_identities.get(manifest_path, set())
+        if len(identities) != 1:
+            raise RuntimeError(
+                f"source manifest has {len(identities)} identities for {manifest_path}"
+            )
+        size, sha = next(iter(identities))
+        require_identity(ROOT / relative, {"bytes": size, "sha256": sha}, manifest_path)
         add(f"{prefix}/repo/{relative}", ROOT / relative)
 
     for directory in ("companion", "backend", "assets", "xsl"):
@@ -330,14 +359,31 @@ def main() -> int:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=ROOT / "output" / "zenodo-chapters01-08",
+        default=ROOT / "output" / "zenodo-chapters01-09",
     )
     args = parser.parse_args()
     output = args.output_dir.resolve()
     output.mkdir(parents=True, exist_ok=True)
 
+    expected_output_names = {
+        PDF_NAME,
+        HTML_NAME,
+        SOURCE_NAME,
+        LICENSES_NAME,
+        COMPANION_RIGHTS_NAME,
+        MANIFEST_NAME,
+    }
+    unexpected = sorted(
+        path.name for path in output.iterdir() if path.name not in expected_output_names
+    )
+    if unexpected:
+        raise RuntimeError(f"unexpected existing package output(s): {unexpected}")
+
     require_identity(AUTHORITY_ARCHIVE, EXPECTED["authority_archive"], "authority archive")
     require_identity(PDF, EXPECTED["pdf"], "PDF")
+    if len(PdfReader(str(PDF)).pages) != EXPECTED["pdf"]["pages"]:
+        raise RuntimeError("PDF page count changed")
+    assert_sanitized(PDF.name, PDF.read_bytes())
     source_manifest = read_json(SOURCE_MANIFEST)
     html_manifest = read_json(HTML_MANIFEST)
     if source_manifest.get("status") != "pass":
@@ -349,14 +395,16 @@ def main() -> int:
     shutil.copyfile(PDF, pdf_target)
     licenses_target = output / LICENSES_NAME
     companion_target = output / COMPANION_RIGHTS_NAME
-    shutil.copyfile(ROOT / "LICENSES.md", licenses_target)
-    shutil.copyfile(ROOT / "companion" / "RIGHTS.md", companion_target)
+    _, licenses_data = file_entry(LICENSES_NAME, ROOT / "LICENSES.md")
+    _, companion_data = file_entry(COMPANION_RIGHTS_NAME, ROOT / "companion" / "RIGHTS.md")
+    licenses_target.write_bytes(licenses_data)
+    companion_target.write_bytes(companion_data)
 
     html_zip = deterministic_zip(output / HTML_NAME, html_entries(html_manifest))
     source_zip = deterministic_zip(output / SOURCE_NAME, source_entries(source_manifest))
 
     file_rows = [
-        {"path": PDF_NAME, **identity(pdf_target), "role": "187-page Indonesian reader PDF"},
+        {"path": PDF_NAME, **identity(pdf_target), "role": "215-page Indonesian reader PDF"},
         {**html_zip, "role": "cumulative HTML reader and rights notes"},
         {**source_zip, "role": "editable PreTeXt, companions, backend, build code, authority archive, and sanitized QA"},
         {"path": LICENSES_NAME, **identity(licenses_target), "role": "collection component-rights map"},
@@ -366,12 +414,13 @@ def main() -> int:
         "schema_version": 1,
         "status": "pass",
         "record": {
-            "id": 22059895,
-            "doi": "10.5281/zenodo.22059895",
+            "concept_doi": "10.5281/zenodo.22059894",
+            "predecessor_record_id": 22061937,
+            "publication_target": "new version of the existing concept lineage",
             "title": "Topologi: Pendekatan Berbasis Inkuiri",
-            "version": "2026.08.22-bab01-08",
+            "version": "2026.08.22-bab01-09-r2",
             "language": "ind",
-            "completion": {"chapters_verified": 8, "chapters_total": 20, "complete": False},
+            "completion": {"chapters_verified": 9, "chapters_total": 20, "complete": False},
         },
         "authority": {
             "work": "Topology: An Inquiry-Based Approach",
@@ -382,14 +431,14 @@ def main() -> int:
             "archive": {"path": AUTHORITY_ARCHIVE.name, **identity(AUTHORITY_ARCHIVE)},
         },
         "reader": {
-            "pdf": {"pages": 187, **identity(PDF)},
+            "pdf": {"pages": 215, **identity(PDF)},
             "html": {
                 "files": EXPECTED["html"]["files"],
                 "bytes": EXPECTED["html"]["bytes"],
                 "canonical_manifest_sha256": EXPECTED["html"]["canonical_manifest_sha256"],
             },
-            "source_files_translated": 51,
-            "source_manifest": {"path": "qa/CHAPTER08_SOURCE_MANIFEST.json", **identity(SOURCE_MANIFEST)},
+            "source_files_translated": 56,
+            "source_manifest": {"path": "qa/CHAPTER09_SOURCE_MANIFEST.json", **identity(SOURCE_MANIFEST)},
         },
         "rights": [
             {
@@ -409,12 +458,17 @@ def main() -> int:
             },
         ],
         "caveats": [
-            "This is a verified 8-of-20 maintenance boundary, not the complete edition.",
+            "This is a verified 9-of-20 maintenance boundary, not the complete edition.",
             "HTML is the primary accessible surface; the PDF is untagged and some mathematical fonts have incomplete Unicode maps.",
-            "The cumulative HTML reader retains nine remote runtime host families; full offline closure remains a complete-edition gate.",
+            "The cumulative HTML reader retains remote runtime dependencies; full offline closure remains a complete-edition gate.",
             "Whole-book figure-provenance closure remains unfinished beyond this bounded release.",
-            "The dedicated GitHub mirror remains at Chapters 1–5 while account suspension prevents the Chapters 1–8 push.",
         ],
+        "production_provenance": {
+            "tool": "OpenAI Codex gpt-5.6-sol, Ultra",
+            "direction": "the user",
+            "scope": "translation drafting, original companion, modular backend, and edition QA",
+            "credit_note": "This provenance does not replace source-author, institutional, or human-contributor credits.",
+        },
         "files": file_rows,
         "package_validation": {
             "zip_crc_test": "pass",
@@ -430,6 +484,12 @@ def main() -> int:
         encoding="utf-8",
         newline="\n",
     )
+    assert_sanitized(manifest_target.name, manifest_target.read_bytes())
+    actual_output_names = {path.name for path in output.iterdir() if path.is_file()}
+    if actual_output_names != expected_output_names:
+        raise RuntimeError(
+            f"final package output set differs: {sorted(actual_output_names)}"
+        )
     result = {
         "status": "pass",
         "output": output.as_posix(),
