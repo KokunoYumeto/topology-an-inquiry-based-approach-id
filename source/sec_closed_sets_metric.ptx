@@ -1,32 +1,32 @@
 <section xml:id="sec_closed_sets_metric">
-  <title>Closed Sets in Metric Spaces</title>
+  <title>Himpunan Tertutup di Ruang Metrik</title>
   <p>
-    Recall that <xref ref="def_closed_metric_space"/>
-    defines a closed set in a metric space to be a set whose complement is open.
-    We have seen that both <m>\emptyset</m> and <m>X</m> are open subsets of <m>X</m>.
-    We now ask the same question,
-    this time in terms of closed sets.
+    Ingat bahwa <xref ref="def_closed_metric_space"/>
+    mendefinisikan himpunan tertutup di ruang metrik sebagai himpunan yang komplemennya terbuka.
+    Kita telah melihat bahwa <m>\emptyset</m> dan <m>X</m> keduanya merupakan subhimpunan terbuka dari <m>X</m>.
+    Sekarang kita mengajukan pertanyaan yang sama,
+    kali ini dalam kaitannya dengan himpunan tertutup.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>X</m> be a metric space.
+      Misalkan <m>X</m> ruang metrik.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Is <m>\emptyset</m> closed in <m>X</m>?
-            Explain.
+            Apakah <m>\emptyset</m> tertutup di <m>X</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>X</m> closed in <m>X</m>?
-            Explain.
+            Apakah <m>X</m> tertutup di <m>X</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
@@ -34,38 +34,38 @@
   </activity>
 
   <p>
-    Note that a subset of a metric space can be both open and closed.
-    We call such sets <term>clopen</term>
-    (for closed-open).
-    When we discussed open sets,
-    we saw that an arbitrary union of open sets is open,
-    but that an arbitrary intersection of open sets may not be open
-    (although a finite intersection of open sets is open).
-    Since closed sets are complements of open sets,
-    we should expect a similar result for closed sets.
+    Perhatikan bahwa suatu subhimpunan ruang metrik dapat sekaligus terbuka dan tertutup.
+    Kita menyebut himpunan seperti itu <term>terbuka-tertutup</term>
+    (karena sekaligus tertutup dan terbuka).
+    Ketika membahas himpunan terbuka,
+    kita melihat bahwa gabungan sebarang himpunan terbuka bersifat terbuka,
+    tetapi irisan sebarang himpunan terbuka belum tentu terbuka
+    (meskipun irisan berhingga himpunan terbuka bersifat terbuka).
+    Karena himpunan tertutup merupakan komplemen himpunan terbuka,
+    kita patut mengharapkan hasil serupa bagi himpunan tertutup.
   </p>
 
   <activity xml:id="act_Closed_union">
     <introduction>
     <p>
-      Let <m>X = \R</m> with the Euclidean metric.
-      Let <m>A_n = \left[\frac{1}{n}, 1-\frac{1}{n}\right]</m> for each <m>n \in \Z^+</m>,
+      Misalkan <m>X = \R</m> dengan metrik Euklides.
+      Misalkan <m>A_n = \left[\frac{1}{n}, 1-\frac{1}{n}\right]</m> untuk setiap <m>n \in \Z^+</m>,
       <m>n \geq 2</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What is <m>\bigcup_{n \geq 2} A_n</m>?
-            A proof is not necessary.
+            Tentukan <m>\bigcup_{n \geq 2} A_n</m>.
+            Bukti tidak diperlukan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>\bigcup_{n \geq 2} A_n</m> closed in <m>\R</m>?
-            Explain.
+            Apakah <m>\bigcup_{n \geq 2} A_n</m> tertutup di <m>\R</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
@@ -74,24 +74,24 @@
 
   <p>
     <xref ref="act_Closed_union"/>
-    shows that an arbitrary union of closed sets is not necessarily closed.
-    However, the following theorem tells us what we can say about unions and intersections of closed sets.
-    The results should not be surprising given the relationship between open and closed sets.
+    menunjukkan bahwa gabungan sebarang himpunan tertutup belum tentu tertutup.
+    Namun, teorema berikut menjelaskan apa yang dapat kita simpulkan tentang gabungan dan irisan himpunan tertutup.
+    Hasil-hasil ini semestinya tidak mengejutkan mengingat hubungan antara himpunan terbuka dan himpunan tertutup.
   </p>
   
   <theorem>
     <statement>
       <p>
-        Let <m>X</m> be a metric space.
+        Misalkan <m>X</m> ruang metrik.
         <ol>
           <li>
             <p>
-              Any intersection of closed sets in <m>X</m> is a closed set in <m>X</m>.
+              Irisan sebarang keluarga himpunan tertutup di <m>X</m> merupakan himpunan tertutup di <m>X</m>.
             </p>
           </li>
           <li>
             <p>
-              Any finite union of closed sets in <m>X</m> is a closed set in <m>X</m>.
+              Gabungan berhingga himpunan tertutup di <m>X</m> merupakan himpunan tertutup di <m>X</m>.
             </p>
           </li>
         </ol>
@@ -100,31 +100,31 @@
   
   <proof>
     <p>
-      Let <m>X</m> be a metric space.
-      To prove part 1, assume that
-      <m>\{C_{\alpha}\}</m> is a collection of closed sets in <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m>.
-      DeMoivre's Theorem shows that
+      Misalkan <m>X</m> ruang metrik.
+      Untuk membuktikan bagian 1, andaikan bahwa
+      <m>\{C_{\alpha}\}</m> merupakan koleksi himpunan tertutup di <m>X</m> untuk <m>\alpha</m> dalam suatu himpunan indeks <m>I</m>.
+      Hukum De Morgan menunjukkan bahwa
       <me>
         X \setminus \bigcap_{\alpha \in I} C_{\alpha} = \bigcup_{\alpha \in I} X \setminus C_{\alpha}
       </me>.
     </p>
     <p>
-      The latter is an arbitrary union of open sets and so it an open set.
-      By definition, then,
-      <m>\bigcap_{\alpha \in I} C_{\alpha}</m> is a closed set.
+      Ruas terakhir merupakan gabungan sebarang himpunan terbuka dan karenanya merupakan himpunan terbuka.
+      Jadi, berdasarkan definisi,
+      <m>\bigcap_{\alpha \in I} C_{\alpha}</m> merupakan himpunan tertutup.
     </p>
     <p>
-      For part 2, assume that <m>C_1</m>,
+      Untuk bagian 2, andaikan bahwa <m>C_1</m>,
       <m>C_2</m>, <m>\ldots</m>,
-      <m>C_n</m> are closed sets in <m>X</m> for some <m>n \in \Z^+</m>.
-      To show that <m>C = \bigcup_{k=1}^n C_k</m> is a closed set,
-      we will show that <m>X \setminus C</m> is an open set.
-      Now
+      <m>C_n</m> merupakan himpunan tertutup di <m>X</m> untuk suatu <m>n \in \Z^+</m>.
+      Untuk menunjukkan bahwa <m>C = \bigcup_{k=1}^n C_k</m> merupakan himpunan tertutup,
+      kita akan menunjukkan bahwa <m>X \setminus C</m> merupakan himpunan terbuka.
+      Sekarang
       <me>
         X \setminus \bigcup_{i=1}^n C_{i} = \bigcap_{i=1}^n X \setminus C_{i}
       </me>
-      is a finite intersection of open sets, and so is an open set.
-      Therefore, <m>\bigcup_{i=1}^n C_{i}</m> is a closed set.
+      merupakan irisan berhingga himpunan terbuka, sehingga merupakan himpunan terbuka.
+      Oleh karena itu, <m>\bigcup_{i=1}^n C_{i}</m> merupakan himpunan tertutup.
     </p>
   </proof>
   </theorem>

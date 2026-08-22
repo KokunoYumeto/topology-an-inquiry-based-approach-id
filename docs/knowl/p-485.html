@@ -13,6 +13,9 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
+<div class="para">Metrik Euklides, metrik taksi, dan metrik maksimum semuanya merupakan metrik pada <span class="process-math">\(\R^n\text{,}\)</span> sehingga ketiganya memberikan cara untuk mengukur jarak antara titik-titik di <span class="process-math">\(\R^n\text{.}\)</span> Ketiga metrik ini berbeda dalam cara mendefinisikan jarak.</div>
+<ul class="circle">
+<li><div class="para logical">
 <div class="para">Metrik Euklides adalah metrik standar yang telah kita gunakan sepanjang pengalaman kita mempelajari matematika. Untuk unsur <span class="process-math">\(x = (x_1, x_2, \ldots, x_n)\)</span> dan <span class="process-math">\(y = (y_1, y_2, \ldots, y_n)\)</span> di <span class="process-math">\(\R^n\text{,}\)</span> metrik Euklides <span class="process-math">\(d_E\)</span> didefinisikan oleh</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -21,6 +24,30 @@ d_E(x,y) \amp =  \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + \cdots + (x_n-y_n)^2}\\
 \end{align*}
 </div>
 <div class="para">Dengan metrik ini, lingkaran satuan di <span class="process-math">\(\R^2\)</span> (himpunan titik yang berjarak <span class="process-math">\(1\)</span> dari titik asal) adalah lingkaran satuan standar yang kita kenal dari geometri Euklides.</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Metrik taksi <span class="process-math">\(d_T\)</span> didefinisikan oleh</div>
+<div class="displaymath process-math">
+\begin{align*}
+d_T(x,y) \amp = |x_1-y_1| + |x_2-y_2| + \cdots + |x_n-y_n|\\
+\amp = \sum_{i=1}^n |x_i-y_i|\text{.}
+\end{align*}
+</div>
+<div class="para">Lingkaran satuan di <span class="process-math">\(\R^2\)</span> dengan metrik taksi, apabila dilihat dalam geometri Euklides, adalah persegi dengan titik sudut <span class="process-math">\((1,0)\text{,}\)</span> <span class="process-math">\((0,1)\text{,}\)</span> <span class="process-math">\((-1,0)\text{,}\)</span> dan <span class="process-math">\((0,-1)\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Metrik maksimum <span class="process-math">\(d_M\)</span> didefinisikan oleh</div>
+<div class="displaymath process-math">
+\begin{align*}
+d_M(x,y) \amp = \max\{| x_1-y_1 |, | x_2-y_2 |, |x_3-y_3|, \ldots, |x_n-y_n| \}\\
+\amp = \max_{1 \leq i \leq n} \{|x_i-y_i|\}\text{.}
+\end{align*}
+</div>
+<div class="para">Dengan metrik maksimum, lingkaran satuan di <span class="process-math">\(\R^2\text{,}\)</span> apabila dilihat dalam geometri Euklides, adalah persegi dengan titik sudut <span class="process-math">\((1,1)\text{,}\)</span> <span class="process-math">\((-1,1)\text{,}\)</span> <span class="process-math">\((-1,-1)\text{,}\)</span> dan <span class="process-math">\((1,-1)\text{.}\)</span>
+</div>
+</div></li>
+</ul>
 </div>
 <span class="incontext"><a href="sec_metric_space_summ.html#p-485" class="internal">in-context</a></span>
 </body>

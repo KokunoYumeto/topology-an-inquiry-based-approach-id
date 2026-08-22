@@ -1,46 +1,46 @@
 <section xml:id="sec_closed_limits_seq">
-  <title>Closed Sets and Limits of Sequences</title>
+  <title>Himpunan Tertutup dan Limit Barisan</title>
   <p>
-    Suppose we consider a sequence <m>(a_n)</m> in a subset <m>A</m> of a metric space <m>X</m> that converges to a point <m>x</m>.
-    Must it be the case that <m>x \in A</m>?
-    We consider this question in the next activity.
+    Misalkan kita meninjau suatu barisan <m>(a_n)</m> di dalam subhimpunan <m>A</m> dari ruang metrik <m>X</m> yang konvergen ke suatu titik <m>x</m>.
+    Haruskah <m>x \in A</m>?
+    Kita akan meninjau pertanyaan ini dalam kegiatan berikutnya.
   </p>
 
   <activity xml:id="act_closed_limitpoints">
     <introduction>
     <p>
-      Let <m>A = (0,1)</m> and <m>B = [0,1]</m> in <m>(\R, d_E)</m>.
-      For each positive integer <m>n</m>,
-      let <m>a_n =\frac{1}{n}</m>.
-      Note that the sequence <m>(a_n)</m> is contained in both sets <m>A</m> and <m>B</m>.
+      Misalkan <m>A = (0,1)</m> dan <m>B = [0,1]</m> di <m>(\R, d_E)</m>.
+      Untuk setiap bilangan bulat positif <m>n</m>,
+      misalkan <m>a_n =\frac{1}{n+1}</m>.
+      Perhatikan bahwa barisan <m>(a_n)</m> termuat dalam himpunan <m>A</m> maupun <m>B</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            To what does the sequence <m>(a_n)</m> converge in <m>\R</m>?
+            Barisan <m>(a_n)</m> konvergen ke titik apa di <m>\R</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>\lim a_n</m> in <m>A</m>?
+            Apakah <m>\lim a_n</m> berada di <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>\lim a_n \in B</m>?
+            Benarkah <m>\lim a_n \in B</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Name two significant differences between the sets <m>A</m> and <m>B</m> that account for the different responses in parts (b) and <m>(c)</m>?
-            Respond using the terminology we have introduced in this section.
+            Sebutkan dua perbedaan penting antara himpunan <m>A</m> dan <m>B</m> yang menjelaskan perbedaan jawaban pada bagian (b) dan <m>(c)</m>.
+            Jawablah dengan menggunakan terminologi yang telah kita perkenalkan dalam bagian ini.
           </p>
         </statement>
       </task>
@@ -48,30 +48,30 @@
   </activity>
 
   <p>
-    The result of <xref ref="act_closed_limitpoints"/>
-    is encapsulated in the next theorem.
+    Hasil <xref ref="act_closed_limitpoints"/>
+    dirangkum dalam teorema berikut.
   </p>
 
   <theorem xml:id="thm_Closed_convergent">
     <statement>
       <p>
-        A subset <m>C</m> of a metric space <m>X</m> is closed if and only if whenever <m>(c_n)</m> is a sequence in <m>C</m> that converges to a point <m>c \in X</m>,
-        then <m>c \in C</m>.
+        Suatu subhimpunan <m>C</m> dari ruang metrik <m>X</m> tertutup jika dan hanya jika setiap barisan <m>(c_n)</m> di <m>C</m> yang konvergen ke suatu titik <m>c \in X</m>
+        memenuhi <m>c \in C</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a metric space and <m>C</m> a subset of <m>X</m>.
-      First assume that <m>C</m> is closed.
-      Let <m>(c_n)</m> be a convergent sequence in <m>C</m> with <m>c = \lim c_n</m>.
-      So either <m>c \in C</m> or <m>c</m> is a limit point of <m>C</m>.
-      Since <m>C</m> contains its limit points,
-      either case gives us <m>c \in C</m>.
-      So <m>\lim c_n \in C</m>.
+      Misalkan <m>X</m> suatu ruang metrik dan <m>C</m> suatu subhimpunan dari <m>X</m>.
+      Pertama, andaikan <m>C</m> tertutup.
+      Misalkan <m>(c_n)</m> suatu barisan konvergen di <m>C</m> dengan <m>c = \lim c_n</m>.
+      Jadi, <m>c \in C</m> atau <m>c</m> merupakan titik limit dari <m>C</m>.
+      Karena <m>C</m> memuat titik-titik limitnya,
+      kedua kasus tersebut memberikan <m>c \in C</m>.
+      Jadi, <m>\lim c_n \in C</m>.
     </p>
     <p>
-      The proof of the remaining implication is left to the next activity.
+      Pembuktian implikasi yang tersisa diserahkan kepada kegiatan berikutnya.
     </p>
   </proof>
   </theorem>
@@ -79,32 +79,32 @@
   <activity>
     <introduction>
     <p>
-      Let <m>X</m> be a metric space and <m>C</m> a subset of <m>X</m>.
-      In this activity we will prove that if any time a sequence <m>(c_n)</m> in <m>C</m> converges to a point <m>c \in X</m>,
-      the point <m>c</m> is in <m>C</m>,
-      then <m>C</m> is a closed set.
+      Misalkan <m>X</m> suatu ruang metrik dan <m>C</m> suatu subhimpunan dari <m>X</m>.
+      Dalam kegiatan ini, kita akan membuktikan pernyataan berikut: jika setiap kali suatu barisan <m>(c_n)</m> di <m>C</m> konvergen ke suatu titik <m>c \in X</m>,
+      titik <m>c</m> tersebut berada di <m>C</m>,
+      maka <m>C</m> adalah himpunan tertutup.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            List three different ways that we can show that a subset of a metric space is closed.
-            Which one might be relevant in this situation to show that the set <m>C</m> is closed?
+            Sebutkan tiga cara berbeda untuk menunjukkan bahwa suatu subhimpunan dari ruang metrik adalah himpunan tertutup.
+            Cara manakah yang mungkin relevan dalam situasi ini untuk menunjukkan bahwa himpunan <m>C</m> tertutup?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>c</m> be a limit point of <m>C</m>.
-            What does that tell us?
+            Misalkan <m>c</m> suatu titik limit dari <m>C</m>.
+            Apa yang dapat kita simpulkan dari hal tersebut?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Complete the proof that <m>C</m> is a closed set.
+            Lengkapilah pembuktian bahwa <m>C</m> adalah himpunan tertutup.
           </p>
         </statement>
       </task>

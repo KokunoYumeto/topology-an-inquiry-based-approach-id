@@ -12,8 +12,24 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Misalkan <span class="process-math">\((X,d)\)</span> ruang metrik dengan <span class="process-math">\(d\)</span> sebagai metrik diskret. Buktikan bahwa setiap subhimpunan <span class="process-math">\(A\subseteq X\)</span> merupakan lingkungan dari setiap titiknya. <em class="emphasis">Rubrik.</em> Tetapkan titik sebarang <span class="process-math">\(a\in A\text{,}\)</span> tentukan sebuah bola yang hanya memuat <span class="process-math">\(a\text{,}\)</span> dan bahas kasus <span class="process-math">\(A=\emptyset\text{.}\)</span>
+<div class="para logical">
+<div class="para">Kekontinuan di <span class="process-math">\(a\)</span> berarti</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall\epsilon\gt0\ \exists\delta\gt0\ \forall x\in X,\quad
+d_X(x,a)\lt\delta\ \Rightarrow\
+d_Y(f(x),f(a))\lt\epsilon.
+\end{equation*}
 </div>
-<span class="incontext"><a href="o003-c90-ch07-exercise-guides-b.html#p-2251" class="internal">in-context</a></span>
+<div class="para">Ketidakkontinuan di <span class="process-math">\(a\)</span> berarti</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\exists\epsilon_0\gt0\ \forall\delta\gt0\ \exists x\in X,\quad
+d_X(x,a)\lt\delta\ \text{ dan }\
+d_Y(f(x),f(a))\geq\epsilon_0.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch06-mastery.html#p-2251" class="internal">in-context</a></span>
 </body>
 </html>

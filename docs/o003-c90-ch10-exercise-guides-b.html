@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<!--********************************************--><!--*       Generated from PreTeXt source      *--><!--*                                          *--><!--*         https://pretextbook.org          *--><!--*                                          *--><!--********************************************--><html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Panduan latihan lanjutan</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Topologi: Pendekatan Berbasis Inkuiri">
+<meta property="book:author" content="Steven Schlicker">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="o003-c90-chapters-01-10-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–10 — Himpunan, Fungsi, Ruang Metrik, Himpunan Terbuka dan Tertutup, Barisan, serta Pendamping Belajar Mandiri</span></a></h1>
+<p class="byline">Steven Schlicker</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Hasil Pencarian: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Tidak ada hasil.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Tampilkan atau sembunyikan daftar isi"><span class="icon">☰</span><span class="name">Daftar Isi</span></button><a class="index-button button" href="index-1.html" title="Indeks"><span class="name">Indeks</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Ubah preferensi pengguna"><span id="avatarbutton" class="avatarbutton name">Anda!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Pilih avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>Anda!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Keluarga font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Sesuaikan font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Ukuran</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Lebih kecil</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Lebih besar</li>
+<li>Lebar</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">lebih sempit</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">lebih lebar</li>
+<li>Ketebalan</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">lebih tipis</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">lebih tebal</li>
+<li>Jarak huruf</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">lebih rapat</li>
+<li data-val="lspace" data-change="1" tabindex="-1">lebih renggang</li>
+<li>Jarak kata</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">celah lebih kecil </li>
+<li data-val="wspace" data-change="1" tabindex="-1">celah lebih besar</li>
+<li>Jarak baris</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">lebih rapat<br>merapat</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">lebih renggang<br>merenggang</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Mode terang/gelap<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>bawaan</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>senja</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>gelap</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>tengah malam</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Penggaris baca<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>tanpa penggaris</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>garis bawah</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>garis bawah-L</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>bilah abu-abu</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>kotak terang</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>fajar</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>garis bawah fajar</li>
+<li class="moveQ">Gerakkan dengan:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>ikuti tetikus</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>panah atas/bawah — belum tersedia</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>pelacakan mata — belum tersedia</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="o003-c90-ch10-exercise-guides-a.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="up-button button" href="o003-c90-ch10-companion.html" title="Naik"><span class="icon">^</span><span class="name">Naik</span></a><a class="next-button button" href="o003-c90-ch10-mastery.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Cari" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lub}{\text{lub}}
+\newcommand{\glb}{\text{glb}}
+\newcommand{\Int}{\text{Int}}
+\newcommand{\Bdry}{\text{Bdry}}
+\newcommand{\la}{\left|}
+\newcommand{\ra}{\right|}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch10-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Himpunan Terbuka dan Tertutup, serta Barisan</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basic_top.html" class="internal"><span class="title">Gagasan Dasar Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_intervals.html" class="internal"><span class="title">Interval</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_comp.html" class="internal"><span class="title">Gabungan, Irisan, dan Komplemen Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cart_prod.html" class="internal"><span class="title">Hasil Kali Kartesius Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_functions.html" class="internal"><span class="codenumber">2</span> <span class="title">Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_func.html" class="internal"><span class="title">Komposisi Fungsi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_inv_func.html" class="internal"><span class="title">Fungsi Invers</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fun_set.html" class="internal"><span class="title">Fungsi dan Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_card_set.html" class="internal"><span class="title">Kardinalitas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_metric_space_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space.html" class="internal"><span class="title">Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_euclid_rn.html" class="internal"><span class="title">Metrik Euklides pada <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces_apps.html" class="internal"><span class="codenumber">4</span> <span class="title">Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_met_space_app.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hamming.html" class="internal"><span class="title">Metrik Hamming</span></a></div></li>
+<li><div class="toc-item"><a href="sec_levenshtein.html" class="internal"><span class="title">Metrik Levenshtein</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_glb.html" class="internal"><span class="codenumber">5</span> <span class="title">Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_glb_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_dist_point_set.html" class="internal"><span class="title">Jarak dari Titik ke Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_continuous_functions.html" class="internal"><span class="codenumber">6</span> <span class="title">Fungsi Kontinu di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_cont_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_btwn.html" class="internal"><span class="title">Fungsi Kontinu antara Ruang-Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_cont_func.html" class="internal"><span class="title">Komposit Fungsi Kontinu</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_open_balls.html" class="internal"><span class="codenumber">7</span> <span class="title">Bola Terbuka dan Lingkungan pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_balls_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_neighborhoods.html" class="internal"><span class="title">Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_neighborhoods.html" class="internal"><span class="title">Kekontinuan dan Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_open_sets.html" class="internal"><span class="codenumber">8</span> <span class="title">Himpunan Terbuka dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets.html" class="internal"><span class="title">Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_open_sets.html" class="internal"><span class="title">Gabungan dan Irisan Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_open_sets.html" class="internal"><span class="title">Kekontinuan dan Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_interior_set.html" class="internal"><span class="title">Interior Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets_summ.html" class="internal"><span class="title">Rangkuman</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_sequences.html" class="internal"><span class="codenumber">9</span> <span class="title">Barisan di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_seq_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_cont_metric.html" class="internal"><span class="title">Barisan dan Kekontinuan dalam Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_closed_sets.html" class="internal"><span class="codenumber">10</span> <span class="title">Himpunan Tertutup di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_closed_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_sets_metric.html" class="internal"><span class="title">Himpunan Tertutup di Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_closed_sets.html" class="internal"><span class="title">Kekontinuan dan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_bound_iso_seq.html" class="internal"><span class="title">Titik Limit, Titik Batas, Titik Terasing, dan Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_closed.html" class="internal"><span class="title">Titik Limit dan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_set_closure.html" class="internal"><span class="title">Tutupan Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_limits_seq.html" class="internal"><span class="title">Himpunan Tertutup dan Limit Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_set_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_set_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Bagian Akhir</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="o003-c90-ch01-companion.html" class="internal"><span class="codenumber">A</span> <span class="title">Pendamping Mandiri Bab 1: Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch01-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-exercise-guides.html" class="internal"><span class="title">Jawaban dan panduan sepuluh latihan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch02-companion.html" class="internal"><span class="codenumber">B</span> <span class="title">Pendamping Mandiri Bab 2: Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch02-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan tujuh belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch03-companion.html" class="internal"><span class="codenumber">C</span> <span class="title">Pendamping Mandiri Bab 3: Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch03-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan empat belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch04-companion.html" class="internal"><span class="codenumber">D</span> <span class="title">Pendamping Mandiri Bab 4: Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch04-source-task-guides.html" class="internal"><span class="title">Panduan untuk tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch04-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch05-companion.html" class="internal"><span class="codenumber">E</span> <span class="title">Pendamping Mandiri Bab 5: Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch05-intro-guides.html" class="internal"><span class="title">Panduan untuk kegiatan pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-point-set-guides.html" class="internal"><span class="title">Panduan untuk jarak titik ke himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch06-companion.html" class="internal"><span class="codenumber">F</span> <span class="title">Pendamping Mandiri Bab 6: Fungsi Kontinu pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch06-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch07-companion.html" class="internal"><span class="codenumber">G</span> <span class="title">Pendamping Mandiri Bab 7: Bola Terbuka dan Lingkungan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch07-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 7</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch08-companion.html" class="internal"><span class="codenumber">H</span> <span class="title">Pendamping Mandiri Bab 8: Himpunan Terbuka dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch08-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 8</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch09-companion.html" class="internal"><span class="codenumber">I</span> <span class="title">Pendamping Mandiri Bab 9: Barisan dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch09-source-guides.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 9</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch10-companion.html" class="internal"><span class="codenumber">J</span> <span class="title">Pendamping Mandiri Bab 10: Himpunan Tertutup dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch10-source-guides-a.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-source-guides-b.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="o003-c90-ch10-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan lanjutan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 10</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch10-exercise-guides-b"><h2 class="heading hide-type">
+<span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Panduan latihan lanjutan</span>
+</h2>
+<div class="para" id="p-3375">Sembilan belas panduan berikut mendampingi butir ke-19 sampai ke-37 pada latihan Bab 10, yakni panduan bernomor 62–80 dalam urutan seluruh bab. Kerjakan dahulu latihan sumber. Buka petunjuk, jawaban, dan solusi secara bertahap hanya setelah Anda telah mencoba menyusun argumen sendiri. Pernyataan di bawah memparafrasakan sasaran latihan, sedangkan solusinya merupakan uraian asli yang ditulis untuk edisi ini dan tersedia sebagai komponen terpisah di bawah Creative Commons Attribution 4.0 International (CC BY 4.0).</div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-62"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-62"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.62</span><span class="period">.</span><span class="space"> </span><span class="title">Dua barisan menuju titik batas.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-62"><article class="exercise exercise-like"><div class="para" id="p-3376">Susun bukti bahwa setiap titik batas <span class="process-math">\(b\)</span> dari <span class="process-math">\(A\)</span> dapat didekati oleh satu barisan dari <span class="process-math">\(A\)</span> dan satu barisan dari <span class="process-math">\(X\setminus A\text{.}\)</span> Rubrik keberhasilan: pilihan suku harus sah untuk setiap indeks positif dan kedua bukti konvergensi harus dinyatakan.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-62-hint" id="o003-c90-ch10-guide-62-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-62-hint"><div class="hint solution-like"><div class="para" id="p-3377">Tahap 1: gunakan lingkungan <span class="process-math">\(B(b,1/n)\text{.}\)</span> Tahap 2: sifat titik batas memastikan bahwa bola tersebut bertemu dengan kedua himpunan.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-62-answer" id="o003-c90-ch10-guide-62-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-62-answer"><div class="answer solution-like"><div class="para" id="p-3378">Pilih <span class="process-math">\(a_n\in A\cap B(b,1/n)\)</span> dan <span class="process-math">\(x_n\in(X\setminus A)\cap B(b,1/n)\text{.}\)</span> Maka <span class="process-math">\(a_n\to b\)</span> dan <span class="process-math">\(x_n\to b\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-62-solution" id="o003-c90-ch10-guide-62-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-62-solution"><div class="solution solution-like"><div class="para logical" id="p-3379">
+<div class="para">Karena <span class="process-math">\(b\)</span> adalah titik batas, setiap lingkungan <span class="process-math">\(b\)</span> memuat titik dari <span class="process-math">\(A\)</span> dan titik dari komplemennya. Jadi, untuk setiap <span class="process-math">\(n\in\Z^+\text{,}\)</span> pilihan <span class="process-math">\(a_n\in A\cap B(b,1/n)\)</span> dan <span class="process-math">\(x_n\in(X\setminus A)\cap B(b,1/n)\)</span> memang tersedia. Untuk <span class="process-math">\(\epsilon\gt0\text{,}\)</span> pilih <span class="process-math">\(N\in\Z^+\)</span> dengan <span class="process-math">\(N\gt1/\epsilon\text{.}\)</span> Jika <span class="process-math">\(n\geq N\text{,}\)</span> maka</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(a_n,b)\lt 1/n\leq1/N\lt\epsilon
+\quad\text{dan}\quad
+d(x_n,b)\lt1/n\leq1/N\lt\epsilon.
+\end{equation*}
+</div>
+<div class="para">Definisi konvergensi memberi <span class="process-math">\(a_n\to b\)</span> dan <span class="process-math">\(x_n\to b\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-63"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-63"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.63</span><span class="period">.</span><span class="space"> </span><span class="title">Jarak nol sebagai uji ketertutupan.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-63"><article class="exercise exercise-like"><div class="para" id="p-3380">Untuk subhimpunan tak kosong <span class="process-math">\(C\)</span> dari ruang metrik <span class="process-math">\(X\text{,}\)</span> buktikan bahwa <span class="process-math">\(C\)</span> tertutup tepat ketika <span class="process-math">\(d(x,C)=0\)</span> selalu memaksa <span class="process-math">\(x\in C\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-63-hint" id="o003-c90-ch10-guide-63-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-63-hint"><div class="hint solution-like"><div class="para" id="p-3381">Arah maju: titik di luar himpunan tertutup memiliki bola yang tidak bertemu <span class="process-math">\(C\text{.}\)</span> Arah balik: dari <span class="process-math">\(d(x,C)=0\text{,}\)</span> pilih titik <span class="process-math">\(c_n\in C\)</span> dengan <span class="process-math">\(d(x,c_n)\lt1/n\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-63-answer" id="o003-c90-ch10-guide-63-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-63-answer"><div class="answer solution-like"><div class="para" id="p-3382">Pernyataan benar. Himpunan tertutup menjaga setiap titik luar pada jarak positif; sebaliknya, setiap titik tutupan memiliki jarak nol dan karena itu harus berada di <span class="process-math">\(C\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-63-solution" id="o003-c90-ch10-guide-63-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-63-solution"><div class="solution solution-like">
+<div class="para" id="p-3383">Andaikan <span class="process-math">\(C\)</span> tertutup dan <span class="process-math">\(x\notin C\text{.}\)</span> Komplemen <span class="process-math">\(C\)</span> terbuka, sehingga ada <span class="process-math">\(r\gt0\)</span> dengan <span class="process-math">\(B(x,r)\cap C=\emptyset\text{.}\)</span> Jadi <span class="process-math">\(d(x,c)\geq r\)</span> untuk setiap <span class="process-math">\(c\in C\text{,}\)</span> dan <span class="process-math">\(d(x,C)\geq r\gt0\text{.}\)</span> Kontraposisinya memberi arah yang diminta.</div> <div class="para" id="p-3384">Sekarang andaikan sifat jarak nol berlaku. Jika <span class="process-math">\(x\in\overline C\text{,}\)</span> maka untuk setiap <span class="process-math">\(n\)</span> terdapat <span class="process-math">\(c_n\in C\cap B(x,1/n)\text{.}\)</span> Karena <span class="process-math">\(0\leq d(x,C)\leq d(x,c_n)\lt1/n\)</span> untuk semua <span class="process-math">\(n\text{,}\)</span> berlaku <span class="process-math">\(d(x,C)=0\text{,}\)</span> sehingga <span class="process-math">\(x\in C\text{.}\)</span> Maka <span class="process-math">\(\overline C\subseteq C\text{;}\)</span> inklusi sebaliknya selalu benar, jadi <span class="process-math">\(C=\overline C\)</span> dan <span class="process-math">\(C\)</span> tertutup.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-64"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-64"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.64</span><span class="period">.</span><span class="space"> </span><span class="title">Subhimpunan berhingga selalu tertutup.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-64"><article class="exercise exercise-like"><div class="para" id="p-3385">Buktikan bahwa setiap subhimpunan berhingga dari ruang metrik bersifat tertutup, termasuk kasus himpunan kosong.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-64-hint" id="o003-c90-ch10-guide-64-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-64-hint"><div class="hint solution-like"><div class="para" id="p-3386">Untuk titik <span class="process-math">\(x\)</span> di luar himpunan berhingga tak kosong <span class="process-math">\(F\text{,}\)</span> ambil minimum dari daftar berhingga jarak <span class="process-math">\(d(x,a)\)</span> dengan <span class="process-math">\(a\in F\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-64-answer" id="o003-c90-ch10-guide-64-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-64-answer"><div class="answer solution-like"><div class="para" id="p-3387">Benar. Setiap titik luar memiliki jarak minimum positif dari himpunan, sehingga komplemennya terbuka.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-64-solution" id="o003-c90-ch10-guide-64-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-64-solution"><div class="solution solution-like"><div class="para" id="p-3388">Himpunan kosong tertutup karena komplemennya adalah <span class="process-math">\(X\text{.}\)</span> Untuk <span class="process-math">\(F=\{a_1,\ldots,a_k\}\)</span> tak kosong dan <span class="process-math">\(x\notin F\text{,}\)</span> semua bilangan <span class="process-math">\(d(x,a_i)\)</span> positif. Karena daftarnya berhingga, <span class="process-math">\(\delta=\min_i d(x,a_i)\gt0\text{.}\)</span> Bola <span class="process-math">\(B(x,\delta/2)\)</span> tidak memuat satu pun <span class="process-math">\(a_i\text{,}\)</span> jadi berada di <span class="process-math">\(X\setminus F\text{.}\)</span> Setiap titik komplemen mempunyai lingkungan di dalam komplemen; akibatnya <span class="process-math">\(X\setminus F\)</span> terbuka dan <span class="process-math">\(F\)</span> tertutup.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-65"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-65"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.65</span><span class="period">.</span><span class="space"> </span><span class="title">Ketertutupan dan batas himpunan.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-65"><article class="exercise exercise-like"><div class="para" id="p-3389">Buktikan pencirian: <span class="process-math">\(C\)</span> tertutup jika dan hanya jika semua titik pada batas <span class="process-math">\(C\)</span> termuat di dalam <span class="process-math">\(C\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-65-hint" id="o003-c90-ch10-guide-65-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-65-hint"><div class="hint solution-like"><div class="para" id="p-3390">Gunakan identitas <span class="process-math">\(\overline C=\Int(C)\mathbin{\dot\cup}\Bdry(C)\text{,}\)</span> atau buktikan langsung bahwa titik di luar <span class="process-math">\(C\)</span> yang bukan titik batas memiliki lingkungan yang tidak bertemu <span class="process-math">\(C\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-65-answer" id="o003-c90-ch10-guide-65-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-65-answer"><div class="answer solution-like"><div class="para" id="p-3391">Pencirian benar. Jika <span class="process-math">\(C\)</span> tertutup, batasnya berada dalam <span class="process-math">\(\overline C=C\text{;}\)</span> jika batasnya berada dalam <span class="process-math">\(C\text{,}\)</span> maka seluruh tutupan <span class="process-math">\(C\)</span> juga berada dalam <span class="process-math">\(C\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-65-solution" id="o003-c90-ch10-guide-65-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-65-solution"><div class="solution solution-like"><div class="para logical" id="p-3392">
+<div class="para">Jika <span class="process-math">\(C\)</span> tertutup, maka <span class="process-math">\(\overline C=C\text{.}\)</span> Karena <span class="process-math">\(\Bdry(C)\subseteq\overline C\text{,}\)</span> diperoleh <span class="process-math">\(\Bdry(C)\subseteq C\text{.}\)</span> Sebaliknya, andaikan <span class="process-math">\(\Bdry(C)\subseteq C\text{.}\)</span> Identitas yang telah dibuktikan dalam bab memberi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline C=\Int(C)\mathbin{\dot\cup}\Bdry(C).
+\end{equation*}
+</div>
+<div class="para">Kedua bagian ruas kanan termuat di <span class="process-math">\(C\text{,}\)</span> sehingga <span class="process-math">\(\overline C\subseteq C\text{.}\)</span> Karena selalu <span class="process-math">\(C\subseteq\overline C\text{,}\)</span> berlaku <span class="process-math">\(C=\overline C\text{;}\)</span> jadi <span class="process-math">\(C\)</span> tertutup.</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-66"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-66"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.66</span><span class="period">.</span><span class="space"> </span><span class="title">Kekontinuan melalui interior prapeta.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-66"><article class="exercise exercise-like"><div class="para" id="p-3393">Untuk <span class="process-math">\(f:X\to Y\text{,}\)</span> buktikan bahwa <span class="process-math">\(f\)</span> kontinu tepat ketika <span class="process-math">\(f^{-1}(\Int B)\subseteq\Int(f^{-1}(B))\)</span> bagi setiap <span class="process-math">\(B\subseteq Y\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-66-hint" id="o003-c90-ch10-guide-66-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-66-hint"><div class="hint solution-like"><div class="para" id="p-3394">Arah maju: <span class="process-math">\(\Int B\)</span> terbuka dan termuat di <span class="process-math">\(B\text{.}\)</span> Arah balik: terapkan syarat pada himpunan terbuka <span class="process-math">\(B=O\text{,}\)</span> sehingga <span class="process-math">\(\Int O=O\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-66-answer" id="o003-c90-ch10-guide-66-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-66-answer"><div class="answer solution-like"><div class="para" id="p-3395">Kriterium tersebut ekuivalen dengan pernyataan bahwa prapeta setiap himpunan terbuka bersifat terbuka.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-66-solution" id="o003-c90-ch10-guide-66-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-66-solution"><div class="solution solution-like">
+<div class="para" id="p-3396">Jika <span class="process-math">\(f\)</span> kontinu, maka <span class="process-math">\(f^{-1}(\Int B)\)</span> terbuka. Selain itu, dari <span class="process-math">\(\Int B\subseteq B\)</span> diperoleh <span class="process-math">\(f^{-1}(\Int B)\subseteq f^{-1}(B)\text{.}\)</span> Karena interior adalah himpunan terbuka terbesar di dalam suatu himpunan, <span class="process-math">\(f^{-1}(\Int B)\subseteq\Int(f^{-1}(B))\text{.}\)</span>
+</div> <div class="para" id="p-3397">Sebaliknya, andaikan inklusi berlaku untuk semua <span class="process-math">\(B\text{.}\)</span> Untuk himpunan terbuka <span class="process-math">\(O\subseteq Y\text{,}\)</span> kita mempunyai <span class="process-math">\(\Int O=O\text{,}\)</span> sehingga <span class="process-math">\(f^{-1}(O)\subseteq\Int(f^{-1}(O))\text{.}\)</span> Inklusi sebaliknya selalu benar; jadi <span class="process-math">\(f^{-1}(O)=\Int(f^{-1}(O))\)</span> terbuka. Prapeta setiap himpunan terbuka bersifat terbuka, maka <span class="process-math">\(f\)</span> kontinu.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-67"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-67"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.67</span><span class="period">.</span><span class="space"> </span><span class="title">Contoh inklusi interior yang ketat.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-67"><article class="exercise exercise-like"><div class="para" id="p-3398">Berikan fungsi kontinu dan subhimpunan <span class="process-math">\(B\)</span> yang membuat inklusi pada panduan sebelumnya ketat.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-67-hint" id="o003-c90-ch10-guide-67-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-67-hint"><div class="hint solution-like"><div class="para" id="p-3399">Cobalah fungsi konstan <span class="process-math">\(f:\R\to\R\)</span> dan himpunan satu titik yang memuat nilai konstannya.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-67-answer" id="o003-c90-ch10-guide-67-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-67-answer"><div class="answer solution-like"><div class="para" id="p-3400">Ambil <span class="process-math">\(f(x)=0\)</span> dan <span class="process-math">\(B=\{0\}\text{.}\)</span> Ruas kiri kosong, sedangkan ruas kanan adalah <span class="process-math">\(\R\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-67-solution" id="o003-c90-ch10-guide-67-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-67-solution"><div class="solution solution-like"><div class="para logical" id="p-3401">
+<div class="para">Fungsi konstan <span class="process-math">\(f:\R\to\R\text{,}\)</span> <span class="process-math">\(f(x)=0\text{,}\)</span> kontinu. Untuk <span class="process-math">\(B=\{0\}\)</span> dalam metrik Euklides, <span class="process-math">\(\Int(B)=\emptyset\text{.}\)</span> Karena itu</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}(\Int B)=f^{-1}(\emptyset)=\emptyset.
+\end{equation*}
+</div>
+<div class="para">Namun <span class="process-math">\(f^{-1}(B)=\R\text{,}\)</span> sehingga <span class="process-math">\(\Int(f^{-1}(B))=\R\text{.}\)</span> Jadi inklusinya benar-benar ketat: <span class="process-math">\(\emptyset\subsetneq\R\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-68"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-68"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.68</span><span class="period">.</span><span class="space"> </span><span class="title">Contoh ketika kedua interior sama.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-68"><article class="exercise exercise-like"><div class="para" id="p-3402">Berikan contoh konkret ketika inklusi <span class="process-math">\(f^{-1}(\Int B)\subseteq\Int(f^{-1}(B))\)</span> menjadi kesamaan.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-68-hint" id="o003-c90-ch10-guide-68-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-68-hint"><div class="hint solution-like"><div class="para" id="p-3403">Gunakan fungsi identitas; prapeta terhadap fungsi ini tidak mengubah himpunan.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-68-answer" id="o003-c90-ch10-guide-68-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-68-answer"><div class="answer solution-like"><div class="para" id="p-3404">Untuk <span class="process-math">\(f=\operatorname{id}_{\R}\)</span> dan, misalnya, <span class="process-math">\(B=[0,1]\text{,}\)</span> kedua ruas sama dengan <span class="process-math">\((0,1)\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-68-solution" id="o003-c90-ch10-guide-68-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-68-solution"><div class="solution solution-like"><div class="para logical" id="p-3405">
+<div class="para">Ambil <span class="process-math">\(f:\R\to\R\)</span> sebagai fungsi identitas dan <span class="process-math">\(B=[0,1]\text{.}\)</span> Fungsi ini kontinu, <span class="process-math">\(f^{-1}(B)=B\text{,}\)</span> dan <span class="process-math">\(f^{-1}(\Int B)=\Int B\text{.}\)</span> Karena <span class="process-math">\(\Int[0,1]=(0,1)\text{,}\)</span> kita memperoleh</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}(\Int B)=(0,1)=\Int(f^{-1}(B)).
+\end{equation*}
+</div>
+<div class="para">Bahkan fungsi identitas memberikan kesamaan tersebut untuk setiap subhimpunan <span class="process-math">\(B\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-69"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-69"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.69</span><span class="period">.</span><span class="space"> </span><span class="title">Titik batas: limit atau terasing.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-69"><article class="exercise exercise-like"><div class="para" id="p-3406">Buktikan bahwa setiap titik batas <span class="process-math">\(b\)</span> dari <span class="process-math">\(A\)</span> merupakan titik limit atau titik terasing dari <span class="process-math">\(A\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-69-hint" id="o003-c90-ch10-guide-69-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-69-hint"><div class="hint solution-like"><div class="para" id="p-3407">Pisahkan kasus <span class="process-math">\(b\notin A\)</span> dan <span class="process-math">\(b\in A\text{.}\)</span> Pada kasus kedua, gunakan langsung negasi definisi titik terasing.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-69-answer" id="o003-c90-ch10-guide-69-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-69-answer"><div class="answer solution-like"><div class="para" id="p-3408">Jika <span class="process-math">\(b\notin A\text{,}\)</span> setiap pertemuan lingkungan dengan <span class="process-math">\(A\)</span> otomatis berbeda dari <span class="process-math">\(b\text{,}\)</span> jadi <span class="process-math">\(b\)</span> titik limit. Jika <span class="process-math">\(b\in A\text{,}\)</span> titik itu terasing atau, jika tidak, merupakan titik limit.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-69-solution" id="o003-c90-ch10-guide-69-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-69-solution"><div class="solution solution-like"><div class="para" id="p-3409">Misalkan <span class="process-math">\(b\in\Bdry(A)\text{.}\)</span> Jika <span class="process-math">\(b\notin A\text{,}\)</span> setiap lingkungan <span class="process-math">\(b\)</span> bertemu <span class="process-math">\(A\text{,}\)</span> dan setiap titik pertemuan berbeda dari <span class="process-math">\(b\text{.}\)</span> Maka <span class="process-math">\(b\)</span> adalah titik limit. Jika <span class="process-math">\(b\in A\)</span> dan <span class="process-math">\(b\)</span> terasing, kesimpulan sudah diperoleh. Jika <span class="process-math">\(b\in A\)</span> tetapi tidak terasing, tidak ada lingkungan <span class="process-math">\(N\)</span> dengan <span class="process-math">\(N\cap A=\{b\}\text{.}\)</span> Jadi setiap lingkungan <span class="process-math">\(b\)</span> memuat titik <span class="process-math">\(A\)</span> selain <span class="process-math">\(b\text{,}\)</span> sehingga <span class="process-math">\(b\)</span> adalah titik limit. Ketiga kemungkinan menuntaskan bukti.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-70"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-70"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.70</span><span class="period">.</span><span class="space"> </span><span class="title">Tutupan mempertahankan gabungan berhingga.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-70"><article class="exercise exercise-like"><div class="para" id="p-3410">Tentukan apakah <span class="process-math">\(\overline{A\cup B}=\overline A\cup\overline B\)</span> selalu berlaku, lalu buktikan keputusan Anda.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-70-hint" id="o003-c90-ch10-guide-70-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-70-hint"><div class="hint solution-like"><div class="para" id="p-3411">Gunakan monotonisitas tutupan untuk satu inklusi. Untuk inklusi lain, perhatikan bahwa gabungan dua himpunan tertutup tetap tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-70-answer" id="o003-c90-ch10-guide-70-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-70-answer"><div class="answer solution-like"><div class="para" id="p-3412">Ya, kesamaan selalu berlaku untuk gabungan dua subhimpunan.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-70-solution" id="o003-c90-ch10-guide-70-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-70-solution"><div class="solution solution-like"><div class="para" id="p-3413">Dari <span class="process-math">\(A\subseteq A\cup B\)</span> dan <span class="process-math">\(B\subseteq A\cup B\text{,}\)</span> monotonisitas memberi <span class="process-math">\(\overline A\cup\overline B\subseteq\overline{A\cup B}\text{.}\)</span> Sebaliknya, <span class="process-math">\(\overline A\cup\overline B\)</span> tertutup karena merupakan gabungan berhingga dari himpunan tertutup, dan himpunan itu memuat <span class="process-math">\(A\cup B\text{.}\)</span> Tutupan adalah himpunan tertutup terkecil yang memuat himpunan asal, sehingga <span class="process-math">\(\overline{A\cup B}\subseteq\overline A\cup\overline B\text{.}\)</span> Kedua inklusi memberi kesamaan.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-71"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-71"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.71</span><span class="period">.</span><span class="space"> </span><span class="title">Tutupan tidak selalu mempertahankan irisan.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-71"><article class="exercise exercise-like"><div class="para" id="p-3414">Uji apakah <span class="process-math">\(\overline{A\cap B}=\overline A\cap\overline B\)</span> selalu benar. Jika tidak, berikan contoh penyangkal dan nyatakan inklusi yang tetap berlaku.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-71-hint" id="o003-c90-ch10-guide-71-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-71-hint"><div class="hint solution-like"><div class="para" id="p-3415">Ambil dua interval terbuka yang saling lepas tetapi kedua tutupannya memuat titik <span class="process-math">\(0\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-71-answer" id="o003-c90-ch10-guide-71-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-71-answer"><div class="answer solution-like"><div class="para" id="p-3416">Tidak. Selalu <span class="process-math">\(\overline{A\cap B}\subseteq\overline A\cap\overline B\text{,}\)</span> tetapi inklusi dapat ketat.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-71-solution" id="o003-c90-ch10-guide-71-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-71-solution"><div class="solution solution-like"><div class="para" id="p-3417">Karena <span class="process-math">\(A\cap B\subseteq A\)</span> dan <span class="process-math">\(A\cap B\subseteq B\text{,}\)</span> monotonisitas tutupan memberikan <span class="process-math">\(\overline{A\cap B}\subseteq\overline A\cap\overline B\text{.}\)</span> Untuk melihat bahwa kesamaan dapat gagal, di <span class="process-math">\(\R\)</span> ambil <span class="process-math">\(A=(-\infty,0)\)</span> dan <span class="process-math">\(B=(0,\infty)\text{.}\)</span> Maka <span class="process-math">\(A\cap B=\emptyset\text{,}\)</span> sehingga <span class="process-math">\(\overline{A\cap B}=\emptyset\text{.}\)</span> Akan tetapi, <span class="process-math">\(\overline A=(-\infty,0]\)</span> dan <span class="process-math">\(\overline B=[0,\infty)\text{,}\)</span> jadi <span class="process-math">\(\overline A\cap\overline B=\{0\}\text{.}\)</span>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-72"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-72"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.72</span><span class="period">.</span><span class="space"> </span><span class="title">Titik luar berjarak positif dari himpunan tertutup.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-72"><article class="exercise exercise-like"><div class="para" id="p-3418">Untuk himpunan tertutup tak kosong <span class="process-math">\(C\)</span> dan <span class="process-math">\(x\notin C\text{,}\)</span> buktikan bahwa <span class="process-math">\(d(x,C)\gt0\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-72-hint" id="o003-c90-ch10-guide-72-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-72-hint"><div class="hint solution-like"><div class="para" id="p-3419">Komplemen <span class="process-math">\(C\)</span> terbuka. Ambil sebuah bola berpusat di <span class="process-math">\(x\)</span> yang seluruhnya berada dalam komplemen.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-72-answer" id="o003-c90-ch10-guide-72-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-72-answer"><div class="answer solution-like"><div class="para" id="p-3420">Ada <span class="process-math">\(r\gt0\)</span> dengan <span class="process-math">\(B(x,r)\cap C=\emptyset\text{;}\)</span> akibatnya <span class="process-math">\(d(x,C)\geq r\gt0\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-72-solution" id="o003-c90-ch10-guide-72-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-72-solution"><div class="solution solution-like"><div class="para" id="p-3421">Karena <span class="process-math">\(C\)</span> tertutup, <span class="process-math">\(X\setminus C\)</span> terbuka. Dari <span class="process-math">\(x\in X\setminus C\text{,}\)</span> terdapat <span class="process-math">\(r\gt0\)</span> sedemikian sehingga <span class="process-math">\(B(x,r)\subseteq X\setminus C\text{.}\)</span> Jadi tidak ada <span class="process-math">\(c\in C\)</span> dengan <span class="process-math">\(d(x,c)\lt r\text{;}\)</span> dengan kata lain, <span class="process-math">\(d(x,c)\geq r\)</span> untuk setiap <span class="process-math">\(c\in C\text{.}\)</span> Mengambil infimum menghasilkan <span class="process-math">\(d(x,C)=\inf_{c\in C}d(x,c)\geq r\gt0\text{.}\)</span>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-73"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-73"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.73</span><span class="period">.</span><span class="space"> </span><span class="title">Gabungan keluarga tertutup yang lokal berhingga.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-73"><article class="exercise exercise-like"><div class="para" id="p-3422">Misalkan setiap titik <span class="process-math">\(x\in X\)</span> mempunyai bola yang bertemu hanya berhingga banyak anggota keluarga tertutup <span class="process-math">\(\{C_\alpha\}_{\alpha\in I}\text{.}\)</span> Buktikan bahwa gabungan seluruh keluarga tersebut tertutup.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-73-hint" id="o003-c90-ch10-guide-73-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-73-hint"><div class="hint solution-like"><div class="para" id="p-3423">Untuk <span class="process-math">\(x\)</span> di luar gabungan, pilih bola yang hanya melihat <span class="process-math">\(C_{\alpha_1},\ldots,C_{\alpha_k}\text{.}\)</span> Gunakan jarak positif dari <span class="process-math">\(x\)</span> ke masing-masing himpunan berhingga itu.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-73-answer" id="o003-c90-ch10-guide-73-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-73-answer"><div class="answer solution-like"><div class="para" id="p-3424">Benar. Di sekitar setiap titik luar, hanya berhingga banyak himpunan perlu dihindari; radius minimum positif menghasilkan bola yang menghindari semuanya.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-73-solution" id="o003-c90-ch10-guide-73-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-73-solution"><div class="solution solution-like"><div class="para logical" id="p-3425">
+<div class="para">Tetapkan <span class="process-math">\(x\notin\bigcup_{\alpha\in I}C_\alpha\text{.}\)</span> Pilih <span class="process-math">\(\epsilon_x\gt0\)</span> sehingga <span class="process-math">\(B(x,\epsilon_x)\)</span> bertemu hanya dengan, katakanlah, <span class="process-math">\(C_{\alpha_1},\ldots,C_{\alpha_k}\text{.}\)</span> Karena <span class="process-math">\(x\)</span> tidak berada dalam satu pun himpunan itu dan masing-masing tertutup, panduan 72 memberi <span class="process-math">\(\delta_i=d(x,C_{\alpha_i})\gt0\text{.}\)</span> Jika <span class="process-math">\(k=0\text{,}\)</span> bola awal sudah tidak bertemu gabungan. Jika <span class="process-math">\(k\gt0\text{,}\)</span> ambil</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r=\frac12\min\{\epsilon_x,\delta_1,\ldots,\delta_k\}\gt0.
+\end{equation*}
+</div>
+<div class="para">Bola <span class="process-math">\(B(x,r)\)</span> berada dalam bola awal, sehingga tidak dapat bertemu anggota keluarga selain daftar berhingga tersebut; pilihan <span class="process-math">\(r\lt\delta_i\)</span> juga membuatnya tidak bertemu satu pun anggota dalam daftar. Jadi <span class="process-math">\(B(x,r)\)</span> terletak di komplemen gabungan. Komplemen itu terbuka, maka gabungannya tertutup.</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-74"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-74"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.74</span><span class="period">.</span><span class="space"> </span><span class="title">Pernyataan dual untuk irisan himpunan terbuka.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-74"><article class="exercise exercise-like"><div class="para" id="p-3426">Rumuskan dan buktikan syarat lokal yang menjamin irisan tak hingga dari keluarga himpunan terbuka tetap terbuka.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-74-hint" id="o003-c90-ch10-guide-74-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-74-hint"><div class="hint solution-like"><div class="para" id="p-3427">Terapkan hasil gabungan tertutup pada keluarga komplemen <span class="process-math">\(C_\alpha=X\setminus O_\alpha\text{,}\)</span> lalu gunakan Hukum De Morgan.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-74-answer" id="o003-c90-ch10-guide-74-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-74-answer"><div class="answer solution-like"><div class="para" id="p-3428">Jika keluarga komplemen <span class="process-math">\(\{X\setminus O_\alpha\}\)</span> lokal berhingga, maka <span class="process-math">\(\bigcap_\alpha O_\alpha\)</span> terbuka.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-74-solution" id="o003-c90-ch10-guide-74-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-74-solution"><div class="solution solution-like"><div class="para logical" id="p-3429">
+<div class="para">Pernyataan yang tepat adalah: jika setiap <span class="process-math">\(O_\alpha\)</span> terbuka dan, untuk setiap <span class="process-math">\(x\in X\text{,}\)</span> ada lingkungan yang bertemu hanya berhingga banyak komplemen <span class="process-math">\(X\setminus O_\alpha\text{,}\)</span> maka <span class="process-math">\(\bigcap_\alpha O_\alpha\)</span> terbuka. Memang, <span class="process-math">\(C_\alpha=X\setminus O_\alpha\)</span> tertutup dan keluarga <span class="process-math">\(\{C_\alpha\}\)</span> lokal berhingga. Panduan 73 menyatakan bahwa <span class="process-math">\(\bigcup_\alpha C_\alpha\)</span> tertutup. Hukum De Morgan memberi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X\setminus\bigcup_\alpha C_\alpha
+=X\setminus\bigcup_\alpha(X\setminus O_\alpha)
+=\bigcap_\alpha O_\alpha.
+\end{equation*}
+</div>
+<div class="para">Ruas kiri adalah komplemen suatu himpunan tertutup, sehingga irisan pada ruas kanan terbuka.</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-75"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-75"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.75</span><span class="period">.</span><span class="space"> </span><span class="title">Himpunan satu titik tertutup.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-75"><article class="exercise exercise-like"><div class="para" id="p-3430">Putuskan apakah <span class="process-math">\(\{x\}\)</span> selalu tertutup dalam setiap ruang metrik dan berikan alasan yang tidak bergantung pada gambar.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-75-hint" id="o003-c90-ch10-guide-75-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-75-hint"><div class="hint solution-like"><div class="para" id="p-3431">Untuk <span class="process-math">\(y\neq x\text{,}\)</span> gunakan radius yang lebih kecil daripada <span class="process-math">\(d(x,y)\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-75-answer" id="o003-c90-ch10-guide-75-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-75-answer"><div class="answer solution-like"><div class="para" id="p-3432">Benar. Setiap <span class="process-math">\(y\in X\setminus\{x\}\)</span> memiliki bola yang tidak memuat <span class="process-math">\(x\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-75-solution" id="o003-c90-ch10-guide-75-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-75-solution"><div class="solution solution-like"><div class="para" id="p-3433">Ambil <span class="process-math">\(y\in X\setminus\{x\}\text{.}\)</span> Karena metrik memisahkan titik, <span class="process-math">\(d(x,y)\gt0\text{.}\)</span> Dengan <span class="process-math">\(r=d(x,y)/2\text{,}\)</span> titik <span class="process-math">\(x\)</span> tidak dapat berada di <span class="process-math">\(B(y,r)\text{,}\)</span> sebab jaraknya dari <span class="process-math">\(y\)</span> adalah <span class="process-math">\(2r\text{.}\)</span> Jadi <span class="process-math">\(B(y,r)\subseteq X\setminus\{x\}\text{.}\)</span> Komplemen <span class="process-math">\(\{x\}\)</span> terbuka, maka <span class="process-math">\(\{x\}\)</span> tertutup.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-76"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-76"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.76</span><span class="period">.</span><span class="space"> </span><span class="title">Himpunan sekaligus terbuka dan tertutup di garis real.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-76"><article class="exercise exercise-like"><div class="para" id="p-3434">Tentukan apakah <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(\R\)</span> merupakan satu-satunya subhimpunan yang sekaligus terbuka dan tertutup dalam metrik Euklides.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-76-hint" id="o003-c90-ch10-guide-76-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-76-hint"><div class="hint solution-like"><div class="para" id="p-3435">Andaikan <span class="process-math">\(A\)</span> tak kosong dan tidak sama dengan <span class="process-math">\(\R\text{.}\)</span> Pilih <span class="process-math">\(a\in A\)</span> dan <span class="process-math">\(b\notin A\text{,}\)</span> lalu gunakan sifat supremum pada bagian <span class="process-math">\(A\)</span> di antara kedua titik tersebut.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-76-answer" id="o003-c90-ch10-guide-76-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-76-answer"><div class="answer solution-like"><div class="para" id="p-3436">Benar. Tidak ada pemisahan garis real menjadi dua himpunan terbuka tak kosong yang saling komplemen.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-76-solution" id="o003-c90-ch10-guide-76-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-76-solution"><div class="solution solution-like">
+<div class="para" id="p-3437">Jelas <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(\R\)</span> keduanya terbuka dan tertutup. Andaikan ada <span class="process-math">\(A\)</span> lain dengan kedua sifat itu. Pilih <span class="process-math">\(a\in A\)</span> dan <span class="process-math">\(b\notin A\text{.}\)</span> Setelah menukar arah garis bila perlu, kita dapat menganggap <span class="process-math">\(a\lt b\text{.}\)</span> Himpunan <span class="process-math">\(S=A\cap[a,b]\)</span> tak kosong dan terbatas atas; tulis <span class="process-math">\(s=\sup S\text{.}\)</span> Karena komplemen <span class="process-math">\(A\)</span> terbuka dan memuat <span class="process-math">\(b\text{,}\)</span> ada interval di sekitar <span class="process-math">\(b\)</span> yang tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga <span class="process-math">\(s\lt b\text{.}\)</span> Karena <span class="process-math">\(A\)</span> terbuka dan memuat <span class="process-math">\(a\text{,}\)</span> ada titik <span class="process-math">\(A\)</span> di kanan <span class="process-math">\(a\text{,}\)</span> sehingga <span class="process-math">\(s\gt a\text{.}\)</span>
+</div> <div class="para" id="p-3438">Jika <span class="process-math">\(s\in A\text{,}\)</span> keterbukaan <span class="process-math">\(A\)</span> memberi titik <span class="process-math">\(A\cap[a,b]\)</span> yang lebih besar dari <span class="process-math">\(s\text{,}\)</span> bertentangan dengan sifat batas atas. Jika <span class="process-math">\(s\notin A\text{,}\)</span> keterbukaan komplemen memberi interval di sekitar <span class="process-math">\(s\)</span> tanpa titik <span class="process-math">\(A\text{;}\)</span> tetapi definisi supremum menuntut titik <span class="process-math">\(S\)</span> sedekat apa pun di bawah <span class="process-math">\(s\text{.}\)</span> Keduanya mustahil. Jadi tidak ada <span class="process-math">\(A\)</span> seperti itu.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-77"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-77"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.77</span><span class="period">.</span><span class="space"> </span><span class="title">Subhimpunan pada ruang metrik berhingga.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-77"><article class="exercise exercise-like"><div class="para" id="p-3439">Untuk <span class="process-math">\(X=\{1,3,5\}\)</span> dengan <span class="process-math">\(d(x,y)=xy-1\pmod 8\text{,}\)</span> tentukan apakah <span class="process-math">\(\{1,3\}\)</span> sekaligus terbuka dan tertutup.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-77-hint" id="o003-c90-ch10-guide-77-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-77-hint"><div class="hint solution-like"><div class="para" id="p-3440">Hitung jarak pasangan berbeda: <span class="process-math">\(d(1,3)\text{,}\)</span> <span class="process-math">\(d(1,5)\text{,}\)</span> dan <span class="process-math">\(d(3,5)\text{.}\)</span> Gunakan bola kecil untuk mengisolasi setiap titik.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-77-answer" id="o003-c90-ch10-guide-77-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-77-answer"><div class="answer solution-like"><div class="para" id="p-3441">Benar. Topologi metrik pada himpunan berhingga ini diskret, sehingga setiap subhimpunan terbuka dan tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-77-solution" id="o003-c90-ch10-guide-77-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-77-solution"><div class="solution solution-like"><div class="para" id="p-3442">Perhitungan modulo <span class="process-math">\(8\)</span> memberi <span class="process-math">\(d(1,3)=2\text{,}\)</span> <span class="process-math">\(d(1,5)=4\text{,}\)</span> dan <span class="process-math">\(d(3,5)=6\text{.}\)</span> Jadi jarak positif terkecil antara dua titik berbeda adalah <span class="process-math">\(2\text{.}\)</span> Untuk setiap <span class="process-math">\(x\in X\text{,}\)</span> bola <span class="process-math">\(B(x,1)\)</span> sama dengan <span class="process-math">\(\{x\}\text{.}\)</span> Dengan demikian semua himpunan satu titik terbuka, sehingga setiap subhimpunan adalah gabungan himpunan-himpunan satu titik dan karenanya terbuka. Komplemen setiap subhimpunan juga terbuka, jadi setiap subhimpunan tertutup. Secara khusus, <span class="process-math">\(\{1,3\}\)</span> terbuka dan komplemennya <span class="process-math">\(\{5\}\)</span> terbuka; maka <span class="process-math">\(\{1,3\}\)</span> juga tertutup.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-78"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-78"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.78</span><span class="period">.</span><span class="space"> </span><span class="title">Interior tutupan tidak memulihkan himpunan asal.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-78"><article class="exercise exercise-like"><div class="para" id="p-3443">Uji klaim <span class="process-math">\(\Int(\overline A)=A\)</span> untuk setiap subhimpunan ruang metrik dan, jika salah, berikan contoh yang tegas.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-78-hint" id="o003-c90-ch10-guide-78-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-78-hint"><div class="hint solution-like"><div class="para" id="p-3444">Gunakan himpunan rapat yang bukan seluruh garis real, misalnya <span class="process-math">\(\Q\subset\R\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-78-answer" id="o003-c90-ch10-guide-78-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-78-answer"><div class="answer solution-like"><div class="para" id="p-3445">Salah. Untuk <span class="process-math">\(A=\Q\)</span> dalam <span class="process-math">\(\R\text{,}\)</span> ruas kiri adalah <span class="process-math">\(\R\text{,}\)</span> bukan <span class="process-math">\(\Q\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-78-solution" id="o003-c90-ch10-guide-78-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-78-solution"><div class="solution solution-like"><div class="para" id="p-3446">Ambil <span class="process-math">\(A=\Q\)</span> sebagai subhimpunan <span class="process-math">\((\R,d_E)\text{.}\)</span> Setiap interval terbuka memuat bilangan rasional, jadi <span class="process-math">\(\Q\)</span> rapat di <span class="process-math">\(\R\)</span> dan <span class="process-math">\(\overline\Q=\R\text{.}\)</span> Karena <span class="process-math">\(\R\)</span> terbuka dalam dirinya sendiri, <span class="process-math">\(\Int(\overline\Q)=\Int(\R)=\R\text{.}\)</span> Namun <span class="process-math">\(\Q\neq\R\text{.}\)</span> Satu contoh ini cukup menyangkal klaim universal.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-79"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-79"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.79</span><span class="period">.</span><span class="space"> </span><span class="title">Batas suatu himpunan selalu tertutup.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-79"><article class="exercise exercise-like"><div class="para" id="p-3447">Tentukan apakah <span class="process-math">\(\Bdry(A)\)</span> tertutup untuk setiap <span class="process-math">\(A\subseteq X\)</span> dan buktikan keputusan Anda.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-79-hint" id="o003-c90-ch10-guide-79-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-79-hint"><div class="hint solution-like"><div class="para" id="p-3448">Gunakan rumus <span class="process-math">\(\Bdry(A)=\overline A\cap\overline{X\setminus A}\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-79-answer" id="o003-c90-ch10-guide-79-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-79-answer"><div class="answer solution-like"><div class="para" id="p-3449">Benar. Batas adalah irisan dua himpunan tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-79-solution" id="o003-c90-ch10-guide-79-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-79-solution"><div class="solution solution-like"><div class="para logical" id="p-3450">
+<div class="para">Bab ini telah membuktikan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Bdry(A)=\overline A\cap\overline{X\setminus A}.
+\end{equation*}
+</div>
+<div class="para">Tutupan setiap himpunan bersifat tertutup, sehingga <span class="process-math">\(\overline A\)</span> dan <span class="process-math">\(\overline{X\setminus A}\)</span> tertutup. Irisan berhingga dari himpunan tertutup tetap tertutup. Oleh karena itu <span class="process-math">\(\Bdry(A)\)</span> tertutup untuk setiap <span class="process-math">\(A\subseteq X\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch10-guide-80"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch10-guide-80"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">J.80</span><span class="period">.</span><span class="space"> </span><span class="title">Setiap titik himpunan: limit atau terasing.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-80"><article class="exercise exercise-like"><div class="para" id="p-3451">Buktikan bahwa <span class="process-math">\(A\subseteq A'\cup A^i\text{,}\)</span> dengan <span class="process-math">\(A'\)</span> himpunan titik limit dan <span class="process-math">\(A^i\)</span> himpunan titik terasing dari <span class="process-math">\(A\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch10-guide-80-hint" id="o003-c90-ch10-guide-80-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-80-hint"><div class="hint solution-like"><div class="para" id="p-3452">Ambil sembarang <span class="process-math">\(a\in A\)</span> dan gunakan dikotomi: <span class="process-math">\(a\)</span> terasing atau tidak terasing.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch10-guide-80-answer" id="o003-c90-ch10-guide-80-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-80-answer"><div class="answer solution-like"><div class="para" id="p-3453">Benar. Titik <span class="process-math">\(A\)</span> yang tidak terasing memenuhi definisi titik limit.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch10-guide-80-solution" id="o003-c90-ch10-guide-80-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch10-guide-80-solution"><div class="solution solution-like"><div class="para" id="p-3454">Tetapkan <span class="process-math">\(a\in A\text{.}\)</span> Jika ada lingkungan <span class="process-math">\(N\)</span> dari <span class="process-math">\(a\)</span> dengan <span class="process-math">\(N\cap A=\{a\}\text{,}\)</span> maka <span class="process-math">\(a\in A^i\text{.}\)</span> Jika tidak ada lingkungan seperti itu, setiap lingkungan <span class="process-math">\(a\)</span> memuat suatu titik dari <span class="process-math">\(A\)</span> yang berbeda dari <span class="process-math">\(a\text{.}\)</span> Ini tepat definisi bahwa <span class="process-math">\(a\in A'\text{.}\)</span> Jadi dalam kedua kasus <span class="process-math">\(a\in A'\cup A^i\text{.}\)</span> Karena <span class="process-math">\(a\)</span> dipilih sembarang, <span class="process-math">\(A\subseteq A'\cup A^i\text{.}\)</span>
+</div></div></div>
+</div></article></div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="o003-c90-ch10-exercise-guides-a.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch10-mastery.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runestone Academy"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax"></a>
+</div>
+</body>
+</html>

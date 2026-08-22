@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "surface": "output/chapters01-10-html",
+  "canonical_html_manifest_sha256": "3f816cedb8ff1244a62bc6bca22f70171652c064af8c4b0e7384a9281a4cf91f",
+  "language": "id-ID",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "document_client_width": 1425,
+      "document_scroll_width": 1425,
+      "content_left": 352.8889,
+      "content_width": 960,
+      "content_right": 1312.8889,
+      "result": "centered in the available main column and no page overflow"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "content_left": 272.8889,
+      "content_width": 960,
+      "content_right": 1232.8889,
+      "result": "centered in the available main column and no page overflow"
+    },
+    {
+      "width": 1024,
+      "height": 800,
+      "document_client_width": 1009,
+      "document_scroll_width": 1009,
+      "content_left": 272.8889,
+      "content_width": 600,
+      "content_right": 872.8889,
+      "result": "centered reading measure and no page overflow"
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "document_client_width": 753,
+      "document_scroll_width": 753,
+      "content_left": 32.8889,
+      "content_width": 600,
+      "content_right": 632.8889,
+      "result": "reflowed and no page overflow"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "content_left": 28.8889,
+      "content_width": 318.2222,
+      "content_right": 347.1111,
+      "result": "mobile reflow and no page overflow"
+    }
+  ],
+  "surfaces_checked": [
+    "o003-c90-chapters-01-10-reader.html",
+    "chap_closed_sets.html",
+    "o003-c90-ch10-companion.html",
+    "o003-c90-ch10-exercise-guides-a.html",
+    "o003-c90-ch10-mastery.html",
+    "o003-c90-ch10-edition-note.html"
+  ],
+  "surface_regression": {
+    "desktop": {
+      "width": 1280,
+      "height": 900,
+      "pages_checked": 5,
+      "content_width": 960,
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "navigation_label_widths": {
+        "Daftar Isi": {
+          "client_width": 71,
+          "scroll_width": 71
+        },
+        "Sebelumnya": {
+          "client_width": 92,
+          "scroll_width": 92
+        },
+        "Berikutnya": {
+          "client_width": 81,
+          "scroll_width": 81
+        }
+      },
+      "result": "pass"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "pages_checked": 5,
+      "content_width": 318.2222,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "edition_note_internal_scroll_width": 340,
+      "edition_note_note": "The unbreakable pinned commit token extends 22 CSS pixels into the reserved right margin but remains inside the 375-pixel viewport; there is no document-level overflow or clipping.",
+      "result": "pass"
+    }
+  },
+  "staged_disclosures": {
+    "guide_58_desktop": {
+      "closed_characters": 5101,
+      "statement_characters": 5494,
+      "after_hint_characters": 5711,
+      "after_answer_characters": 5845,
+      "after_solution_characters": 6594,
+      "visible_knowl_outputs": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "result": "statement, hint, answer, and direct neighborhood solution reveal independently"
+    },
+    "mastery_08_mobile": {
+      "closed_characters": 987,
+      "statement_characters": 1226,
+      "after_hint_characters": 1311,
+      "after_answer_characters": 1443,
+      "after_solution_characters": 2011,
+      "visible_knowl_outputs": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "content_client_width": 318,
+      "content_scroll_width": 318,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "result": "all four disclosure stages reflow without horizontal overflow"
+    }
+  },
+  "checks": {
+    "reader_centering_and_fill": "pass",
+    "responsive_reflow": "pass",
+    "long_masthead_wrap": "pass",
+    "navigation_labels": "pass",
+    "chapter_10_reflow": "pass",
+    "staged_hint_answer_solution": "pass",
+    "document_horizontal_overflow": "none",
+    "html_language": "id-ID",
+    "generated_english_chrome": "none on checked surfaces",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra present in the edition note",
+    "browser_console_errors": "none"
+  },
+  "visual_inspection": {
+    "desktop": "The Chapter 10 opening page uses the full centered 960-pixel reading measure beside the table of contents; headings, guiding questions, and section links are readable and unclipped.",
+    "mobile": "Mastery check J.88 and its open solution are readable in a single reflowed column; disclosure controls remain independently operable."
+  },
+  "evidence": [
+    {
+      "path": "qa/CHAPTER10_HTML_MANIFEST.json",
+      "bytes": 1394104,
+      "sha256": "399ad3e04e1ef1c31a4092af1948efd2ae982b3d0e1da048c9d763b1b011483e"
+    },
+    {
+      "path": "qa/CHAPTER10_HTML_QA.json",
+      "bytes": 919,
+      "sha256": "3f02dd93e44fdd4720389f1a87b9d0b39932c7fd338a4b65137a247a06c485f2"
+    }
+  ],
+  "failures": []
+}

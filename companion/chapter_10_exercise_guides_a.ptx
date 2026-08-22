@@ -1,0 +1,887 @@
+<section xml:id="o003-c90-ch10-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Delapan belas panduan berikut mengikuti, dalam urutan baca, delapan belas
+    perintah atomik pertama pada latihan penutup Bab 10. Tugas yang berulang
+    tetap diperlakukan sebagai kesempatan pembuktian tersendiri. Uraian ini
+    merupakan materi pendamping asli untuk belajar mandiri, bukan jawaban dari
+    penulis karya sumber, dan tersedia di bawah lisensi Creative Commons
+    Atribusi 4.0 Internasional (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch10-guide-44">
+    <title>Klasifikasi cakram satuan tertutup</title>
+    <statement>
+      <p>
+        Untuk cakram
+        <m>D=\{(x,y)\in\R^2\mid x^2+y^2\leq1\}</m> dalam metrik Euklides,
+        tentukan interior, batas, titik limit, dan titik terasingnya, lalu
+        putuskan apakah <m>D</m> terbuka atau tertutup.
+        <em>Rubrik.</em> Jawaban lengkap harus membedakan pertidaksamaan ketat
+        dari persamaan pada lingkaran satuan dan membenarkan setiap
+        klasifikasi dengan bola terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-44-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>\|z\|_2\lt1</m>, bandingkan radius bola
+        dengan <m>1-\|z\|_2</m>. Jika <m>\|z\|_2=1</m>, gerakkan titik sedikit
+        ke arah dalam dan ke arah luar sepanjang garis radial.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk menunjukkan bahwa setiap titik cakram adalah
+        titik limit, dekatkan titik itu dengan titik cakram lain; di pusat,
+        pilih arah tetap. Gunakan hasil ini untuk menguji keterbukaan dan
+        ketertutupan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-44-answer">
+      <p>
+        <m>\Int(D)=\{z\in\R^2\mid\|z\|_2\lt1\}</m>,
+        <m>\Bdry(D)=\{z\in\R^2\mid\|z\|_2=1\}</m>, dan
+        <m>D'=D</m>. Tidak ada titik terasing. Cakram <m>D</m> tidak terbuka,
+        tetapi tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-44-solution">
+      <p>
+        Tuliskan <m>\|z\|_2</m> untuk jarak <m>z</m> dari pusat. Jika
+        <m>\|z\|_2\lt1</m>, bola berjari-jari
+        <m>1-\|z\|_2</m> di <m>z</m> termuat dalam <m>D</m>, karena
+        <m>\|w\|_2\leq\|w-z\|_2+\|z\|_2\lt1</m>. Jadi titik-titik dengan
+        norma kurang dari <m>1</m> tepat merupakan titik interior. Bila
+        <m>\|z\|_2=1</m>, setiap bola di <m>z</m> memuat
+        <m>(1-t)z\in D</m> dan <m>(1+t)z\notin D</m> untuk <m>t\gt0</m>
+        yang cukup kecil. Maka lingkaran satuan adalah batas. Titik dengan
+        norma lebih dari <m>1</m> mempunyai bola berjari-jari
+        <m>\|z\|_2-1</m> yang tidak memotong <m>D</m>, sehingga tidak ada
+        titik batas lain.
+      </p>
+      <p>
+        Setiap <m>z\in D</m> didekati oleh titik lain dari <m>D</m>: untuk
+        <m>z\neq0</m> gunakan <m>(1-1/n)z</m> untuk <m>n</m> cukup besar,
+        sedangkan untuk <m>z=0</m> gunakan <m>(1/n,0)</m>. Jadi <m>D'=D</m>
+        dan tidak ada titik terasing. Titik pada lingkaran bukan titik
+        interior, sehingga <m>D</m> tidak terbuka. Komplemennya terbuka oleh
+        bola yang baru dibangun untuk <m>\|z\|_2\gt1</m>; karena itu
+        <m>D</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-45">
+    <title>Klasifikasi himpunan bilangan rasional</title>
+    <statement>
+      <p>
+        Pandang <m>\Q</m> sebagai subhimpunan dari garis real bermetrik
+        standar. Tentukan interior, batas, titik limit, dan titik terasingnya,
+        lalu tentukan apakah <m>\Q</m> terbuka atau tertutup.
+        <em>Rubrik.</em> Gunakan kerapatan bilangan rasional dan irasional di
+        setiap interval terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-45-hint">
+      <p>
+        <em>Langkah 1.</em> Setiap bola terbuka pada garis real adalah suatu
+        interval dan memuat bilangan rasional sekaligus irasional.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Bahkan jika pusat bola rasional, ada rasional lain
+        di dalam bola. Terapkan pengamatan ini pada definisi interior, batas,
+        titik limit, dan titik terasing.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-45-answer">
+      <p>
+        <m>\Int(\Q)=\emptyset</m>,
+        <m>\Bdry(\Q)=\R</m>, <m>\Q'=\R</m>, dan
+        <m>\Q^i=\emptyset</m>. Maka <m>\Q</m> tidak terbuka dan tidak
+        tertutup dalam <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-45-solution">
+      <p>
+        Untuk setiap <m>x\in\R</m> dan <m>r\gt0</m>, interval
+        <m>(x-r,x+r)</m> memuat bilangan rasional dan irasional. Karena itu
+        tidak ada bola di suatu anggota <m>\Q</m> yang termuat dalam
+        <m>\Q</m>, sehingga interiornya kosong. Setiap bola berpusat di
+        sebarang <m>x\in\R</m> memotong <m>\Q</m> dan komplemennya, maka
+        setiap bilangan real adalah titik batas: <m>\Bdry(\Q)=\R</m>.
+      </p>
+      <p>
+        Kerapatan rasional juga menjamin bahwa setiap bola di <m>x</m>
+        memuat anggota <m>\Q</m> yang berbeda dari <m>x</m>; jadi
+        <m>\Q'=\R</m>. Akibatnya tidak ada anggota rasional yang terasing.
+        Interior kosong membuat <m>\Q</m> tidak terbuka, dan
+        <m>\overline{\Q}=\R\neq\Q</m> membuatnya tidak tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-46">
+    <title>Klasifikasi himpunan <m>\{1/n\}</m></title>
+    <statement>
+      <p>
+        Untuk <m>A=\{1/n\mid n\in\Z^+\}\subseteq\R</m>, tentukan interior,
+        batas, titik limit, dan titik terasingnya, lalu putuskan apakah
+        <m>A</m> terbuka atau tertutup.
+        <em>Rubrik.</em> Perlakukan <m>0</m> secara terpisah dan tunjukkan
+        secara eksplisit bahwa setiap <m>1/n</m> dapat dipisahkan dari semua
+        suku lainnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-46-hint">
+      <p>
+        <em>Langkah 1.</em> Barisan <m>1/n</m> menuju <m>0</m>. Di sekitar
+        <m>1/n</m>, ambil radius yang lebih kecil daripada separuh jarak ke
+        tetangga terdekat dalam daftar menurun tersebut.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>x\notin A\cup\{0\}</m>, cari celah
+        terbuka di antara dua suku berurutan yang memuat <m>x</m>, atau
+        gunakan bahwa <m>x</m> berada di luar <m>[0,1]</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-46-answer">
+      <p>
+        <m>\Int(A)=\emptyset</m>,
+        <m>\Bdry(A)=A\cup\{0\}</m>, <m>A'=\{0\}</m>, dan
+        <m>A^i=A</m>. Himpunan <m>A</m> tidak terbuka dan tidak tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-46-solution">
+      <p>
+        Karena <m>1/n\to0</m>, setiap bola di <m>0</m> memuat suatu
+        <m>1/n</m>; jadi <m>0</m> adalah titik limit dan berada dalam
+        <m>\overline A</m>. Untuk <m>n\geq2</m>, ambil radius positif yang
+        lebih kecil daripada
+        <m>\frac12\min\{1/(n-1)-1/n,1/n-1/(n+1)\}</m>; untuk <m>n=1</m>
+        ambil, misalnya, radius <m>1/4</m>. Bola tersebut beririsan dengan
+        <m>A</m> hanya di <m>1/n</m>. Maka setiap anggota <m>A</m> terasing
+        dan bukan titik limit.
+      </p>
+      <p>
+        Jika <m>x\notin A\cup\{0\}</m>, ada bola di <m>x</m> yang tidak
+        memotong <m>A</m>. Hal ini langsung untuk <m>x\lt0</m> atau
+        <m>x\gt1</m>; untuk <m>0\lt x\lt1</m>, sifat Archimedes dan urutan
+        menurun <m>1/n</m> menempatkan <m>x</m> secara ketat di antara dua
+        suku berurutan, sehingga jarak positif ke kedua ujung memberi bola
+        yang diinginkan. Jadi <m>\overline A=A\cup\{0\}</m> dan satu-satunya
+        titik limit ialah <m>0</m>. Tidak ada anggota <m>A</m> yang interior,
+        sebab setiap interval di sekitarnya memuat bilangan yang bukan
+        anggota <m>A</m>. Dengan demikian interior kosong, sehingga batas
+        sama dengan tutupan, yaitu <m>A\cup\{0\}</m>. Himpunan itu tidak
+        terbuka dan tidak tertutup; kegagalan ketertutupan disaksikan oleh
+        <m>0\notin A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-47">
+    <title>Ketertutupan bola tertutup</title>
+    <statement>
+      <p>
+        Dalam ruang metrik <m>(X,d)</m>, untuk <m>a\in X</m> dan
+        <m>r\gt0</m>, buktikan atau sangkal bahwa
+        <m>B[a,r]=\{x\in X\mid d(a,x)\leq r\}</m> selalu tertutup.
+        <em>Rubrik.</em> Putuskan klaim untuk metrik sebarang, bukan hanya
+        metrik Euklides, dan berikan bola yang berada di dalam komplemen.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-47-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>x\notin B[a,r]</m>, maka
+        <m>d(a,x)-r</m> positif.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>y</m> yang cukup dekat dengan <m>x</m>,
+        gunakan pertidaksamaan segitiga terbalik untuk membuktikan
+        <m>d(a,y)\gt r</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-47-answer">
+      <p>
+        Klaim benar: setiap bola tertutup dalam setiap ruang metrik adalah
+        himpunan tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-47-solution">
+      <p>
+        Ambil <m>x\in X\setminus B[a,r]</m>. Maka
+        <m>\delta=d(a,x)-r\gt0</m>. Jika <m>y\in B(x,\delta)</m>,
+        pertidaksamaan segitiga memberi
+        <me>
+          d(a,y)\geq d(a,x)-d(x,y)
+          \gt d(a,x)-\delta=r.
+        </me>
+        Jadi <m>y\notin B[a,r]</m>, dan
+        <m>B(x,\delta)\subseteq X\setminus B[a,r]</m>. Setiap titik
+        komplemen merupakan titik interior komplemen; komplemen itu terbuka,
+        sehingga <m>B[a,r]</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-48">
+    <title>Batas kosong mencirikan himpunan terbuka-tertutup</title>
+    <statement>
+      <p>
+        Temukan dan buktikan syarat pada <m>\Bdry(A)</m> yang ekuivalen
+        dengan suatu subhimpunan <m>A</m> sekaligus terbuka dan tertutup.
+        <em>Rubrik.</em> Isian yang benar harus berlaku bagi semua ruang
+        metrik, termasuk <m>A=\emptyset</m> dan <m>A=X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-48-hint">
+      <p>
+        <em>Langkah 1.</em> Ingat bahwa titik batas adalah titik yang setiap
+        bolanya bertemu <m>A</m> dan <m>X\setminus A</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika batas kosong, terapkan definisi itu secara
+        terpisah pada titik di <m>A</m> dan titik di komplemennya untuk
+        mendapatkan bola yang seluruhnya berada pada salah satu sisi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-48-answer">
+      <p>
+        Suatu <m>A\subseteq X</m> sekaligus terbuka dan tertutup jika dan
+        hanya jika <m>\Bdry(A)=\emptyset</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-48-solution">
+      <p>
+        Andaikan <m>A</m> terbuka dan tertutup. Untuk <m>x\in A</m>, ada
+        bola di <m>x</m> yang termuat dalam <m>A</m>; untuk
+        <m>x\notin A</m>, ketertutupan <m>A</m> membuat komplemennya terbuka,
+        sehingga ada bola di <m>x</m> yang termuat dalam komplemen. Dalam
+        kedua kasus, sebuah bola gagal bertemu salah satu sisi, maka tidak
+        ada titik batas.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>\Bdry(A)=\emptyset</m>. Jika <m>x\in A</m>,
+        suatu bola di <m>x</m> pasti bertemu <m>A</m> di <m>x</m>. Karena
+        <m>x</m> bukan titik batas, ada bola di <m>x</m> yang tidak bertemu
+        komplemen, jadi termuat dalam <m>A</m>. Dengan demikian <m>A</m>
+        terbuka. Argumen yang sama untuk <m>x\in X\setminus A</m>
+        menunjukkan bahwa komplemen <m>A</m> terbuka, sehingga <m>A</m>
+        tertutup. Kesetaraan ini juga mencakup himpunan kosong dan seluruh
+        ruang.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-49">
+    <title>Menguraikan <m>A\cup A'</m></title>
+    <statement>
+      <p>
+        Jika <m>A'</m> adalah himpunan titik limit dan <m>A^i</m> himpunan
+        titik terasing dari <m>A</m>, buktikan
+        <m>A'\cup A^i=A\cup A'</m>.
+        Cetakan sumber menampilkan <m>A\cup A^i=A\cup A'</m>, yang tidak
+        benar secara umum; edisi ini memakai identitas yang dimaksud sesuai
+        emendasi tercatat O003-C102.
+        <em>Rubrik.</em> Buktikan kedua inklusi dan jelaskan dikotomi bagi
+        setiap anggota <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-49-hint">
+      <p>
+        <em>Langkah 1.</em> Menurut definisi, setiap titik terasing dari
+        <m>A</m> merupakan anggota <m>A</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>x\in A</m>, jika <m>x\notin A'</m>,
+        negasi definisi titik limit menghasilkan bola yang tidak memuat
+        anggota <m>A</m> selain <m>x</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-49-answer">
+      <p>
+        Identitas benar: anggota <m>A</m> yang bukan titik limit tepat
+        merupakan titik terasing, sedangkan <m>A^i\subseteq A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-49-solution">
+      <p>
+        Karena titik terasing, menurut definisi, harus menjadi anggota
+        <m>A</m>, berlaku <m>A^i\subseteq A</m>. Maka
+        <m>A'\cup A^i\subseteq A'\cup A</m>. Untuk inklusi sebaliknya,
+        ambil <m>x\in A\cup A'</m>. Jika <m>x\in A'</m>, tidak ada lagi yang
+        perlu dibuktikan. Jika <m>x\in A\setminus A'</m>, ada bola terbuka
+        di <m>x</m> yang tidak memuat titik <m>A</m> selain <m>x</m>;
+        karenanya <m>x\in A^i</m>. Jadi
+        <m>A\cup A'\subseteq A'\cup A^i</m>, dan kedua himpunan sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-50">
+    <title>Titik limit dan titik terasing tidak bertumpang tindih</title>
+    <statement>
+      <p>
+        Buktikan <m>A'\cap A^i=\emptyset</m>.
+        <em>Rubrik.</em> Bandingkan tuntutan “setiap bola” dalam definisi
+        titik limit dengan “ada sebuah bola” dalam definisi titik terasing.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-50-hint">
+      <p>
+        <em>Langkah 1.</em> Andaikan <m>x\in A^i</m> dan pilih radius yang
+        mengisolasi <m>x</m> dari <m>A\setminus\{x\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Bola yang sama menyangkal syarat agar <m>x</m>
+        menjadi titik limit.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-50-answer">
+      <p>
+        Identitas benar. Bola yang menyaksikan keterasingan suatu titik
+        sekaligus membuktikan bahwa titik itu bukan titik limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-50-solution">
+      <p>
+        Jika <m>x\in A^i</m>, terdapat <m>r\gt0</m> sehingga
+        <m>B(x,r)\cap A=\{x\}</m>. Jadi bola ini tidak memuat anggota
+        <m>A</m> yang berbeda dari <m>x</m>. Namun titik limit menuntut agar
+        setiap bola di <m>x</m> memuat anggota semacam itu. Karena itu
+        <m>x\notin A'</m>. Tidak ada titik yang dapat berada sekaligus di
+        <m>A'</m> dan <m>A^i</m>, sehingga irisannya kosong.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-51">
+    <title>Setiap anggota adalah titik limit atau titik terasing</title>
+    <statement>
+      <p>
+        Buktikan <m>A\subseteq A'\cup A^i</m>.
+        <em>Rubrik.</em> Mulailah dengan anggota sebarang <m>x\in A</m> dan
+        pisahkan kasus menurut apakah <m>x</m> merupakan titik limit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-51-hint">
+      <p>
+        <em>Langkah 1.</em> Kasus <m>x\in A'</m> langsung selesai.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>x\notin A'</m>, negasikan kuantor pada
+        definisi titik limit untuk memperoleh satu bola yang hanya dapat
+        memotong <m>A</m> di pusatnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-51-answer">
+      <p>
+        Inklusi benar. Setiap <m>x\in A</m> yang bukan titik limit memiliki
+        lingkungan yang mengisolasinya, sehingga termasuk <m>A^i</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-51-solution">
+      <p>
+        Ambil <m>x\in A</m>. Jika <m>x\in A'</m>, jelas
+        <m>x\in A'\cup A^i</m>. Jika <m>x\notin A'</m>, tidak benar bahwa
+        setiap bola di <m>x</m> memuat titik <m>A</m> yang berbeda dari
+        <m>x</m>. Jadi terdapat <m>r\gt0</m> dengan
+        <m>B(x,r)\cap(A\setminus\{x\})=\emptyset</m>. Karena
+        <m>x\in A\cap B(x,r)</m>, diperoleh
+        <m>B(x,r)\cap A=\{x\}</m>, sehingga <m>x\in A^i</m>. Kedua kasus
+        membuktikan inklusi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-52">
+    <title>Penutup melalui limit barisan</title>
+    <statement>
+      <p>
+        Buktikan bahwa <m>x\in\overline A</m> jika dan hanya jika ada
+        barisan titik-titik di <m>A</m> yang konvergen ke <m>x</m>.
+        <em>Rubrik.</em> Perhatikan bahwa barisan konstan diperlukan ketika
+        <m>x\in A</m>; ketika <m>x\notin A</m>, pilih titik dari bola dengan
+        radius yang menuju nol.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-52-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>x\in A</m>, ambil <m>a_n=x</m>. Jika
+        <m>x\in\overline A\setminus A</m>, pilih
+        <m>a_n\in A\cap B(x,1/n)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk arah balik, gunakan konvergensi untuk
+        menunjukkan bahwa setiap bola di <m>x</m> bertemu <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-52-answer">
+      <p>
+        Ekuivalensi benar. Keanggotaan dalam tutupan memungkinkan pemilihan
+        <m>a_n\in A</m> dengan <m>d(a_n,x)\lt1/n</m> (atau barisan konstan),
+        sedangkan limit barisan di <m>A</m> memaksa setiap bola di
+        <m>x</m> memotong <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-52-solution">
+      <p>
+        Andaikan <m>x\in\overline A</m>. Jika <m>x\in A</m>, barisan
+        konstan <m>a_n=x</m> berada dalam <m>A</m> dan konvergen ke
+        <m>x</m>. Jika <m>x\notin A</m>, setiap bola di <m>x</m> bertemu
+        <m>A</m>; untuk tiap <m>n</m>, pilih
+        <m>a_n\in A\cap B(x,1/n)</m>. Maka
+        <m>d(a_n,x)\lt1/n\to0</m>, jadi <m>a_n\to x</m>.
+      </p>
+      <p>
+        Sebaliknya, misalkan <m>a_n\in A</m> dan <m>a_n\to x</m>. Untuk
+        setiap <m>r\gt0</m>, ada <m>N</m> sehingga
+        <m>d(a_N,x)\lt r</m>. Jadi
+        <m>a_N\in A\cap B(x,r)</m>, sehingga setiap bola di <m>x</m>
+        memotong <m>A</m>. Inilah karakterisasi keanggotaan dalam tutupan,
+        maka <m>x\in\overline A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-53">
+    <title>Penutup sebagai irisan semua superset tertutup</title>
+    <statement>
+      <p>
+        Buktikan bahwa <m>\overline A</m> adalah irisan semua himpunan
+        tertutup yang memuat <m>A</m>.
+        <em>Rubrik.</em> Tunjukkan bahwa tutupan itu sendiri merupakan superset
+        tertutup dan bahwa ia termuat dalam setiap superset tertutup lain.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-53-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>F</m> tertutup dan <m>A\subseteq F</m>,
+        maka <m>\overline A\subseteq\overline F=F</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Masukkan <m>\overline A</m> sendiri ke dalam
+        keluarga semua superset tertutup <m>A</m>, lalu bandingkan kedua
+        inklusi terhadap irisannya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-53-answer">
+      <p>
+        Jika <m>\mathcal F</m> menyatakan keluarga semua
+        <m>F\subseteq X</m> yang tertutup dan memuat <m>A</m>, maka
+        <m>\overline A=\bigcap_{F\in\mathcal F}F</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-53-solution">
+      <p>
+        Penutup <m>\overline A</m> tertutup dan memuat <m>A</m>. Selanjutnya,
+        jika <m>F</m> tertutup serta <m>A\subseteq F</m>, kemonotonan tutupan
+        memberi <m>\overline A\subseteq\overline F=F</m>. Secara langsung,
+        kemonotonan ini juga terlihat karena setiap bola di titik
+        <m>\overline A</m> bertemu <m>A</m>, maka bertemu <m>F</m>, sehingga
+        titik itu berada dalam <m>\overline F</m>.
+      </p>
+      <p>
+        Misalkan <m>G=\bigcap_{F\in\mathcal F}F</m>. Inklusi sebelumnya
+        menunjukkan <m>\overline A\subseteq G</m>. Karena
+        <m>\overline A\in\mathcal F</m>, irisan <m>G</m> termuat dalam
+        <m>\overline A</m>. Jadi <m>G=\overline A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-54">
+    <title>Interior sebagai gabungan semua subhimpunan terbuka</title>
+    <statement>
+      <p>
+        Buktikan bahwa <m>\Int(A)</m> adalah gabungan semua himpunan terbuka
+        yang termuat di dalam <m>A</m>.
+        <em>Rubrik.</em> Identifikasi interior sebagai subhimpunan terbuka
+        terbesar dari <m>A</m> melalui dua inklusi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-54-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>U</m> terbuka dan <m>U\subseteq A</m>,
+        setiap <m>x\in U</m> mempunyai bola di dalam <m>U</m>, sehingga
+        <m>x\in\Int(A)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Interior <m>A</m> sendiri terbuka dan termuat
+        dalam <m>A</m>, jadi ia merupakan salah satu himpunan dalam keluarga
+        yang digabungkan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-54-answer">
+      <p>
+        Jika <m>\mathcal U</m> menyatakan keluarga semua
+        <m>U\subseteq A</m> yang terbuka dalam <m>X</m>, maka
+        <m>\Int(A)=\bigcup_{U\in\mathcal U}U</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-54-solution">
+      <p>
+        Ambil <m>U\in\mathcal U</m> dan <m>x\in U</m>. Karena <m>U</m>
+        terbuka, ada <m>r\gt0</m> dengan <m>B(x,r)\subseteq U\subseteq A</m>.
+        Maka <m>x\in\Int(A)</m>. Ini berlaku untuk setiap <m>U</m>, sehingga
+        <m>\bigcup_{U\in\mathcal U}U\subseteq\Int(A)</m>.
+      </p>
+      <p>
+        Sebaliknya, <m>\Int(A)</m> terbuka dan termuat dalam <m>A</m>, maka
+        <m>\Int(A)\in\mathcal U</m>. Karena setiap anggota suatu keluarga
+        termuat dalam gabungannya,
+        <m>\Int(A)\subseteq\bigcup_{U\in\mathcal U}U</m>. Kedua inklusi
+        membuktikan kesamaan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-55">
+    <title>Penutup sebagai gabungan saling lepas</title>
+    <statement>
+      <p>
+        Buktikan bahwa <m>\overline A</m> adalah gabungan saling lepas dari
+        <m>\Int(A)</m> dan <m>\Bdry(A)</m>.
+        <em>Rubrik.</em> Tunjukkan baik kesamaan gabungan maupun kosongnya
+        irisan kedua bagian.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-55-hint">
+      <p>
+        <em>Langkah 1.</em> Titik interior memiliki sebuah bola yang tidak
+        bertemu komplemen, jadi tidak mungkin menjadi titik batas.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>x\in\overline A</m> tetapi bukan titik
+        interior, setiap bola di <m>x</m> bertemu <m>A</m> dan juga bertemu
+        komplemennya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-55-answer">
+      <p>
+        Berlaku
+        <m>\overline A=\Int(A)\mathbin{\dot\cup}\Bdry(A)</m>: kedua himpunan
+        menutupi tutupan dan irisannya kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-55-solution">
+      <p>
+        Setiap titik interior <m>A</m> berada dalam <m>A\subseteq\overline A</m>.
+        Setiap titik batas juga berada dalam <m>\overline A</m>, sebab setiap
+        bolanya bertemu <m>A</m>. Jadi
+        <m>\Int(A)\cup\Bdry(A)\subseteq\overline A</m>.
+      </p>
+      <p>
+        Ambil <m>x\in\overline A\setminus\Int(A)</m>. Setiap bola di
+        <m>x</m> bertemu <m>A</m> karena <m>x\in\overline A</m>. Karena
+        <m>x</m> bukan interior, tidak ada bola di <m>x</m> yang termuat
+        dalam <m>A</m>; jadi setiap bola juga bertemu
+        <m>X\setminus A</m>. Maka <m>x\in\Bdry(A)</m>, yang membuktikan
+        inklusi sebaliknya. Akhirnya, titik interior memiliki satu bola yang
+        tidak bertemu komplemen, sedangkan titik batas menuntut semua bola
+        bertemu komplemen. Karena itu
+        <m>\Int(A)\cap\Bdry(A)=\emptyset</m>, sehingga gabungan tersebut
+        saling lepas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-56">
+    <title>Penutup komplemen dan komplemen interior</title>
+    <statement>
+      <p>
+        Buktikan identitas
+        <m>\overline{X\setminus A}=X\setminus\Int(A)</m>.
+        <em>Rubrik.</em> Uraikan kedua sisi secara titik demi titik memakai
+        syarat bahwa setiap bola memotong suatu himpunan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-56-hint">
+      <p>
+        <em>Langkah 1.</em> <m>x\notin\Int(A)</m> berarti tidak ada bola di
+        <m>x</m> yang seluruhnya berada dalam <m>A</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Negasi itu ekuivalen dengan pernyataan bahwa
+        setiap bola di <m>x</m> memuat titik dari <m>X\setminus A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-56-answer">
+      <p>
+        Identitas benar: tidak menjadi titik interior <m>A</m> tepat berarti
+        setiap lingkungan memotong komplemen <m>A</m>, yaitu berada dalam
+        tutupan komplemen.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-56-solution">
+      <p>
+        Untuk <m>x\in X</m>, rangkaian ekuivalensi berikut berlaku:
+        <me>
+          \begin{aligned}
+          x\in X\setminus\Int(A)
+          &amp;\iff \text{tidak ada }r\gt0\text{ dengan }B(x,r)\subseteq A\\
+          &amp;\iff \text{untuk setiap }r\gt0,
+          B(x,r)\cap(X\setminus A)\neq\emptyset\\
+          &amp;\iff x\in\overline{X\setminus A}.
+          \end{aligned}
+        </me>
+        Karena keanggotaan kedua himpunan ekuivalen bagi setiap <m>x</m>,
+        diperoleh
+        <m>\overline{X\setminus A}=X\setminus\Int(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-57">
+    <title>Interior komplemen dan komplemen tutupan</title>
+    <statement>
+      <p>
+        Buktikan identitas
+        <m>\Int(X\setminus A)=X\setminus\overline A</m>.
+        <em>Rubrik.</em> Hubungkan keberadaan bola yang termuat dalam
+        komplemen dengan keberadaan bola yang tidak memotong <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-57-hint">
+      <p>
+        <em>Langkah 1.</em> Tuliskan definisi
+        <m>x\in\Int(X\setminus A)</m> dengan sebuah radius positif.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ganti inklusi bola ke dalam komplemen dengan
+        syarat irisan kosong terhadap <m>A</m>, lalu negasikan karakterisasi
+        tutupan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-57-answer">
+      <p>
+        Identitas benar: sebuah titik berada di interior komplemen tepat
+        ketika suatu bolanya tidak bertemu <m>A</m>, yakni ketika titik itu
+        berada di luar <m>\overline A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-57-solution">
+      <p>
+        Bagi setiap <m>x\in X</m>,
+        <me>
+          \begin{aligned}
+          x\in\Int(X\setminus A)
+          &amp;\iff \text{ada }r\gt0\text{ dengan }
+          B(x,r)\subseteq X\setminus A\\
+          &amp;\iff \text{ada }r\gt0\text{ dengan }B(x,r)\cap A=\emptyset\\
+          &amp;\iff x\notin\overline A\\
+          &amp;\iff x\in X\setminus\overline A.
+          \end{aligned}
+        </me>
+        Maka <m>\Int(X\setminus A)=X\setminus\overline A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-58">
+    <title>Karakterisasi bola bagi titik limit</title>
+    <statement>
+      <p>
+        Buktikan bahwa <m>x\in X</m> adalah titik limit dari
+        <m>A\subseteq X</m> jika dan hanya jika setiap bola terbuka berpusat
+        di <m>x</m> memuat suatu titik <m>A</m> yang berbeda dari <m>x</m>.
+        <em>Rubrik.</em> Gunakan langsung hubungan antara lingkungan dan bola:
+        setiap bola terbuka merupakan lingkungan pusatnya, sedangkan setiap
+        lingkungan memuat suatu bola terbuka yang berpusat di titik tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-58-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk arah maju, ingat bahwa setiap
+        <m>B(x,r)</m> merupakan lingkungan dari <m>x</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk arah balik, ambil lingkungan sebarang
+        <m>N</m> dari <m>x</m> dan pilih <m>r\gt0</m> dengan
+        <m>B(x,r)\subseteq N</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-58-answer">
+      <p>
+        Ekuivalensi benar karena bola terbuka adalah lingkungan, dan setiap
+        lingkungan dari <m>x</m> memuat suatu bola terbuka berpusat di
+        <m>x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-58-solution">
+      <p>
+        Andaikan dahulu <m>x</m> adalah titik limit dari <m>A</m>. Setiap
+        bola terbuka <m>B(x,r)</m> merupakan lingkungan dari <m>x</m>.
+        Menurut definisi titik limit, bola itu memuat suatu titik dari
+        <m>A</m> yang berbeda dari <m>x</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan setiap bola terbuka berpusat di <m>x</m> memuat
+        suatu titik dari <m>A\setminus\{x\}</m>. Ambil lingkungan sebarang
+        <m>N</m> dari <m>x</m>. Berdasarkan definisi lingkungan dalam ruang
+        metrik, ada <m>r\gt0</m> sehingga <m>B(x,r)\subseteq N</m>. Hipotesis
+        memberikan titik <m>a\in B(x,r)\cap(A\setminus\{x\})</m>; karena
+        <m>B(x,r)\subseteq N</m>, titik yang sama berada di
+        <m>N\cap(A\setminus\{x\})</m>. Jadi setiap lingkungan dari <m>x</m>
+        memuat anggota <m>A</m> yang berbeda dari <m>x</m>, tepat definisi
+        bahwa <m>x</m> adalah titik limit dari <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-59">
+    <title>Mengulang dikotomi limit-terasing</title>
+    <statement>
+      <p>
+        Dalam tugas pembuktian ulang, buktikan sekaligus
+        <m>A'\cap A^i=\emptyset</m> dan <m>A\subseteq A'\cup A^i</m>.
+        <em>Rubrik.</em> Satu analisis kasus pada <m>x\in A</m> harus
+        membuktikan cakupan, sedangkan ketidakmungkinan memenuhi dua definisi
+        sekaligus harus membuktikan keterpisahan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-59-hint">
+      <p>
+        <em>Langkah 1.</em> Jika suatu anggota <m>A</m> bukan titik limit,
+        ada bola di pusat itu tanpa anggota <m>A</m> lain.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Bola pengisolasi tersebut bertentangan langsung
+        dengan tuntutan bahwa setiap bola memuat anggota <m>A</m> lain.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-59-answer">
+      <p>
+        Kedua klaim benar: setiap anggota <m>A</m> adalah titik limit atau
+        terasing, dan titik terasing tidak pernah menjadi titik limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-59-solution">
+      <p>
+        Ambil <m>x\in A</m>. Bila setiap bola di <m>x</m> memuat anggota
+        <m>A</m> selain <m>x</m>, maka <m>x\in A'</m>. Bila tidak, ada
+        <m>r\gt0</m> dengan
+        <m>B(x,r)\cap(A\setminus\{x\})=\emptyset</m>. Karena pusatnya berada
+        dalam <m>A</m>, ini berarti <m>B(x,r)\cap A=\{x\}</m>, maka
+        <m>x\in A^i</m>. Jadi <m>A\subseteq A'\cup A^i</m>.
+      </p>
+      <p>
+        Sekarang, jika <m>x\in A^i</m>, sebuah bola pengisolasi di
+        <m>x</m> tidak memuat anggota <m>A</m> yang berbeda dari <m>x</m>.
+        Karena titik limit mengharuskan setiap bola memuat anggota demikian,
+        <m>x\notin A'</m>. Jadi <m>A'\cap A^i=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-60">
+    <title>Mengulang karakterisasi barisan bagi tutupan</title>
+    <statement>
+      <p>
+        Dalam tugas pembuktian ulang, buktikan lagi bahwa
+        <m>x\in\overline A</m> jika dan hanya jika suatu barisan di
+        <m>A</m> konvergen ke <m>x</m>.
+        <em>Rubrik.</em> Pastikan bukti mencakup kasus <m>x\in A</m> tanpa
+        mensyaratkan suku-suku barisan berbeda dari limit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-60-hint">
+      <p>
+        <em>Langkah 1.</em> Gunakan barisan konstan jika <m>x\in A</m>;
+        selain itu, pilih satu anggota <m>A</m> dari tiap
+        <m>B(x,1/n)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>a_n\to x</m>, setiap bola di <m>x</m>
+        memuat semua suku yang indeksnya cukup besar, khususnya setidaknya
+        satu anggota <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-60-answer">
+      <p>
+        Ekuivalensi benar. Titik tutupan dapat didekati oleh pilihan dari
+        bola-bola <m>1/n</m> (dengan barisan konstan untuk anggota
+        <m>A</m>), dan limit barisan di <m>A</m> selalu berada dalam
+        tutupan <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-60-solution">
+      <p>
+        Jika <m>x\in\overline A</m> dan <m>x\in A</m>, tetapkan
+        <m>a_n=x</m> untuk semua <m>n</m>. Jika
+        <m>x\in\overline A\setminus A</m>, setiap bola <m>B(x,1/n)</m>
+        bertemu <m>A</m>; pilih <m>a_n</m> dari irisan itu. Dalam kasus
+        kedua <m>d(a_n,x)\lt1/n</m>, dan dalam kasus pertama jaraknya nol.
+        Jadi pada kedua kasus <m>a_n\to x</m> dengan semua <m>a_n\in A</m>.
+      </p>
+      <p>
+        Untuk arah balik, andaikan <m>a_n\in A</m> dan <m>a_n\to x</m>.
+        Bagi setiap <m>r\gt0</m>, ada indeks <m>N</m> sehingga
+        <m>a_n\in B(x,r)</m> bila <m>n\geq N</m>. Maka bola tersebut
+        memotong <m>A</m>. Semua bola di <m>x</m> memotong <m>A</m>, jadi
+        <m>x\in\overline A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-61">
+    <title>Minimalitas dan ketertutupan tutupan</title>
+    <statement>
+      <p>
+        Dalam tugas pembuktian ulang, jika <m>F</m> tertutup dan
+        <m>A\subseteq F</m>, buktikan <m>\overline A\subseteq F</m>.
+        Selanjutnya buktikan bahwa <m>\overline A</m> adalah irisan semua
+        himpunan tertutup semacam itu dan karenanya tertutup.
+        <em>Rubrik.</em> Bukti harus mencakup minimalitas, kesamaan dengan
+        irisan, dan alasan tersendiri bahwa irisan tersebut tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-61-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>x\notin F</m>, keterbukaan
+        <m>X\setminus F</m> memberi bola di <m>x</m> yang tidak memotong
+        <m>A\subseteq F</m>; gunakan kontrapositif.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Misalkan <m>G</m> adalah irisan semua superset
+        tertutup <m>A</m>. Buktikan <m>\overline A\subseteq G</m> dan
+        <m>G\subseteq\overline A</m>, lalu gunakan bahwa irisan sebarang
+        himpunan tertutup adalah tertutup.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-61-answer">
+      <p>
+        Setiap superset tertutup <m>F</m> dari <m>A</m> memuat
+        <m>\overline A</m>. Karena <m>\overline A</m> sendiri termasuk dalam
+        keluarga itu, irisannya tepat <m>\overline A</m>; sebagai irisan
+        himpunan-himpunan tertutup, tutupan tersebut tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-61-solution">
+      <p>
+        Misalkan <m>F</m> tertutup dan <m>A\subseteq F</m>. Jika
+        <m>x\notin F</m>, karena <m>X\setminus F</m> terbuka, ada
+        <m>r\gt0</m> dengan <m>B(x,r)\subseteq X\setminus F</m>. Bola itu
+        tidak memotong <m>A</m>, sehingga <m>x\notin\overline A</m>.
+        Kontrapositifnya memberi <m>\overline A\subseteq F</m>.
+      </p>
+      <p>
+        Biarkan <m>\mathcal F</m> menjadi keluarga semua himpunan tertutup
+        yang memuat <m>A</m>, dan tetapkan
+        <m>G=\bigcap_{F\in\mathcal F}F</m>. Hasil paragraf pertama memberi
+        <m>\overline A\subseteq G</m>. Penutup <m>\overline A</m> sendiri
+        memuat <m>A</m> dan tertutup: memang, jika
+        <m>x\notin\overline A</m>, ada <m>r\gt0</m> sehingga
+        <m>B(x,r)\cap A=\emptyset</m>. Untuk setiap
+        <m>y\in B(x,r/2)</m>, bola
+        <m>B(y,r-d(x,y))</m> termuat dalam <m>B(x,r)</m> dan tidak memotong
+        <m>A</m>. Jadi <m>B(x,r/2)\subseteq X\setminus\overline A</m>,
+        sehingga komplemen tutupan terbuka. Dengan demikian
+        <m>\overline A\in\mathcal F</m>, sehingga
+        <m>G\subseteq\overline A</m>. Maka <m>G=\overline A</m>. Selain itu,
+        komplemen <m>G</m> adalah gabungan komplemen-komplemen terbuka dari
+        anggota <m>\mathcal F</m>, sehingga terbuka. Jadi <m>G</m>, dan
+        karenanya <m>\overline A</m>, tertutup.
+      </p>
+    </solution>
+  </exercise>
+</section>

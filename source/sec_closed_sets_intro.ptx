@@ -1,90 +1,90 @@
 <section xml:id="sec_closed_sets_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    Once we have defined open sets in metric spaces,
-    it is natural to ask if there are closed sets.
-    Recall that closed intervals are important in calculus because every continuous function on a closed interval attains an absolute maximum and absolute minimum value on that interval.
-    If we have closed sets in metric spaces,
-    we might consider if there is some result that is similar to this for continuous functions on closed sets.
-    In this section we introduce the idea of closed sets in metric spaces and discover a few of their properties.
+    Setelah mendefinisikan himpunan terbuka di ruang metrik,
+    wajar jika kita bertanya apakah terdapat himpunan tertutup.
+    Ingat bahwa interval tertutup penting dalam kalkulus karena setiap fungsi kontinu pada interval tertutup mencapai nilai maksimum mutlak dan minimum mutlak pada interval tersebut.
+    Jika terdapat himpunan tertutup di ruang metrik,
+    kita dapat menanyakan apakah ada hasil serupa bagi fungsi kontinu pada himpunan tertutup.
+    Pada bagian ini kita memperkenalkan gagasan himpunan tertutup di ruang metrik dan menemukan beberapa sifatnya.
   </p>
   <p>
-    Every interval of the form <m>[a,b]</m> in <m>\R</m> is a closed set using the Euclidean metric.
-    What distinguishes these closed intervals from the open intervals is that the open intervals do not contain either of their endpoints <mdash/> this is what makes an open interval a neighborhood of each of its points.
-    In general, what makes open sets open is that they do not contain their boundaries.
-    If an open set doesn't contain its boundary,
-    then its complement, by contrast,
-    should contain its boundary.
-    This leads to the definition of a closed set.
+    Setiap interval berbentuk <m>[a,b]</m> dalam <m>\R</m> merupakan himpunan tertutup terhadap metrik Euklides.
+    Yang membedakan interval-interval tertutup ini dari interval terbuka adalah bahwa interval terbuka tidak memuat satu pun titik ujungnya <mdash/> hal inilah yang menjadikan interval terbuka suatu lingkungan bagi setiap titiknya.
+    Secara umum, himpunan terbuka bersifat terbuka karena tidak memuat batasnya.
+    Jika suatu himpunan terbuka tidak memuat batasnya,
+    maka sebagai kebalikannya, komplemennya
+    semestinya memuat batas tersebut.
+    Hal ini mengantarkan kita pada definisi himpunan tertutup.
   </p>
 
   <definition xml:id="def_closed_metric_space">
-  <idx><h>closed subset of a metric space</h></idx>
+  <idx><h>subhimpunan tertutup dari ruang metrik</h></idx>
     <statement>
       <p>
-        A subset <m>C</m> of a metric space <m>X</m> is <term>closed</term> if its complement <m>X \setminus C</m> is open.
+        Suatu subhimpunan <m>C</m> dari ruang metrik <m>X</m> disebut <term>tertutup</term> jika komplemennya <m>X \setminus C</m> terbuka.
       </p>
     </statement>
   </definition>
 
   <p>
-    We said that open sets are open because they do not contain their boundary and closed sets are closed because they do contain their boundary.
-    However, we did not define what we mean by boundary.
-    The point <m>a</m> on the
-    <q>boundary</q>
-    of an open interval of the form <m>O=(a,b)</m> in <m>\R</m> with the Euclidean metric has the property that every open ball that contains <m>a</m> contains points in <m>O</m> and points not in <m>O</m>.
-    This is what makes the point <m>a</m> lie on the boundary.
-    We can also think of the point <m>a</m> as being at the very limit of the set <m>O</m>.
-    This motivates the next definition.
+    Kita mengatakan bahwa himpunan terbuka bersifat terbuka karena tidak memuat batasnya dan himpunan tertutup bersifat tertutup karena memuat batasnya.
+    Namun, kita belum mendefinisikan apa yang dimaksud dengan batas.
+    Titik <m>a</m> pada
+    <q>batas</q>
+    interval terbuka berbentuk <m>O=(a,b)</m> dalam <m>\R</m> dengan metrik Euklides memiliki sifat bahwa setiap bola terbuka yang memuat <m>a</m> juga memuat titik-titik di <m>O</m> dan titik-titik yang tidak berada di <m>O</m>.
+    Hal inilah yang membuat titik <m>a</m> terletak pada batas.
+    Kita juga dapat memandang titik <m>a</m> sebagai berada tepat pada batas himpunan <m>O</m>.
+    Hal ini memotivasi definisi berikut.
   </p>
 
   <definition>
-  <idx><h>boundary point in a metric space</h></idx>
+  <idx><h>titik batas di ruang metrik</h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a metric space,
-        and let <m>A</m> be a subset of <m>X</m>.
-        A <term>boundary point</term> of <m>A</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
+        Misalkan <m>X</m> ruang metrik,
+        dan misalkan <m>A</m> subhimpunan dari <m>X</m>.
+        Suatu <term>titik batas</term> dari <m>A</m> adalah titik <m>x \in X</m> sedemikian sehingga setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> dan suatu titik di <m>X \setminus A</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    For example, in <m>A=(0,1)</m> as a subset of <m>(\R, d_E)</m>,
-    the number 0 is a boundary point of <m>A</m> because any open interval in <m>\R</m> that contains <m>0</m> contains points in <m>A</m> and points not in <m>A</m>.
-    Boundary points can arise in other ways.
-    If <m>A = \{0,1\}</m> as a subset of <m>(\R, d_E)</m>,
-    then 0 is again a boundary point because any open interval in <m>\R</m> that contains <m>0</m> contains a point (<m>0</m>) in <m>A</m> and points not in <m>A</m>.
-    However, <m>0</m> is the only point in <m>A</m> that is contained in any open interval that contains <m>0</m>.
-    In this case we call <m>0</m> an
-    <term>isolated point</term> of <m>A</m>,
-    and in the case of the set
-    <m>A = (0,1)</m> we call <m>0</m> an
-    <term>accumulation point</term>
-    or a <term>limit point</term> of <m>A</m>
-    (the use of the word
+    Sebagai contoh, dalam <m>A=(0,1)</m> sebagai subhimpunan dari <m>(\R, d_E)</m>,
+    bilangan 0 merupakan titik batas dari <m>A</m> karena setiap interval terbuka dalam <m>\R</m> yang memuat <m>0</m> juga memuat titik-titik di <m>A</m> dan titik-titik yang tidak berada di <m>A</m>.
+    Titik batas dapat muncul dengan cara lain.
+    Jika <m>A = \{0,1\}</m> sebagai subhimpunan dari <m>(\R, d_E)</m>,
+    maka 0 kembali merupakan titik batas karena setiap interval terbuka dalam <m>\R</m> yang memuat <m>0</m> juga memuat suatu titik (<m>0</m>) di <m>A</m> dan titik-titik yang tidak berada di <m>A</m>.
+    Namun, <m>0</m> merupakan satu-satunya titik di <m>A</m> yang termuat dalam setiap interval terbuka yang memuat <m>0</m>.
+    Dalam hal ini kita menyebut <m>0</m> sebagai
+    <term>titik terasing</term> dari <m>A</m>,
+    sedangkan untuk himpunan
+    <m>A = (0,1)</m> kita menyebut <m>0</m> sebagai
+    <term>titik akumulasi</term>
+    atau <term>titik limit</term> dari <m>A</m>
+    (penggunaan kata
     <q>limit</q>
-    here will become clear later).
+    di sini akan menjadi jelas nanti).
   </p>
 
   <definition>
-  <idx><h>accumulation point in a metric space</h></idx>
-  <idx><h>limit point in a metric space</h></idx>
-  <idx><h>isolated point in a metric space</h></idx>
+  <idx><h>titik akumulasi di ruang metrik</h></idx>
+  <idx><h>titik limit di ruang metrik</h></idx>
+  <idx><h>titik terasing di ruang metrik</h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a metric space,
-        and let <m>A</m> be a subset of <m>X</m>.
+        Misalkan <m>X</m> ruang metrik,
+        dan misalkan <m>A</m> subhimpunan dari <m>X</m>.
         <ol>
           <li>
             <p>
-              An <term>accumulation point</term> or
-              <term>limit point</term> of <m>A</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
+              Suatu <term>titik akumulasi</term> atau
+              <term>titik limit</term> dari <m>A</m> adalah titik <m>x \in X</m> sedemikian sehingga setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> yang berbeda dari <m>x</m>.
             </p>
           </li>
           <li>
             <p>
-              An <term>isolated point</term> of <m>A</m> is a point <m>a \in A</m> such that there exists a neighborhood <m>N</m> of <m>a</m> in <m>X</m> with <m>N \cap A = \{a\}</m>.
+              Suatu <term>titik terasing</term> dari <m>A</m> adalah titik <m>a \in A</m> sedemikian sehingga terdapat lingkungan <m>N</m> dari <m>a</m> di <m>X</m> dengan <m>N \cap A = \{a\}</m>.
             </p>
           </li>
         </ol>
@@ -93,15 +93,15 @@
   </definition>
 
   <p>
-    You might wonder about the use of the term
-    <q>limit point</q>
-    and how limit points might be related to limits.
-    As we will see later, limit points are limits of sequences,
-    but the definition as we have given is one that will translate directly to topological spaces later.
+    Anda mungkin bertanya-tanya tentang penggunaan istilah
+    <q>titik limit</q>
+    dan bagaimana titik limit berkaitan dengan limit.
+    Seperti akan kita lihat nanti, titik limit merupakan limit barisan,
+    tetapi definisi yang telah kita berikan ini kelak dapat diterapkan secara langsung pada ruang topologi.
   </p>
   <p>
-    Note that every boundary point is either an accumulation point or an isolated point.
-    The proof is left as an exercise.
+    Perhatikan bahwa setiap titik batas merupakan titik limit atau titik terasing.
+    Buktinya diserahkan sebagai latihan.
   </p>
 
   <exploration>
@@ -109,10 +109,10 @@
       <task>
         <introduction>
           <p>
-            For each of the given sets <m>A</m>,
-            find all boundary points, limit points, and isolated points.
-            Then determine if the set <m>A</m> is a closed set in the metric space <m>(X,d)</m>.
-            Explain your reasoning.
+            Untuk setiap himpunan <m>A</m> yang diberikan,
+            tentukan semua titik batas, titik limit, dan titik terasing.
+            Kemudian tentukan apakah himpunan <m>A</m> merupakan himpunan tertutup dalam ruang metrik <m>(X,d)</m>.
+            Jelaskan alasan Anda.
           </p>
         </introduction>
           
@@ -120,7 +120,7 @@
               <statement>
                 <p>
                   <m>X = \R</m>, <m>d = d_E</m>,
-                  the Euclidean metric, <m>A = [0,0.5)</m>.
+                  metrik Euklides, <m>A = [0,0.5)</m>.
                 </p>
               </statement>
             </task>
@@ -128,18 +128,18 @@
               <statement>
                 <p>
                   <m>X = \{x \in \R \mid 0 \lt x \leq 1\}</m>,
-                  <m>d = d_E</m>, the Euclidean metric, <m>A = (0,0.5]</m>.
+                  <m>d = d_E</m>, metrik Euklides, <m>A = (0,0.5]</m>.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  <m>X = \{a,b,c,e\}</m>, <m>d</m> is the discrete metric defined by
+                  <m>X = \{a,b,c,e\}</m>, <m>d</m> adalah metrik diskret yang didefinisikan oleh
                   <me>
-                    d(x,y) = \begin{cases}0 \amp \text{ if }  x = y \\ 1 \amp \text{ if }  x \neq y, \end{cases}
+                    d(x,y) = \begin{cases}0 \amp \text{ jika }  x = y \\ 1 \amp \text{ jika }  x \neq y, \end{cases}
                   </me>
-                  and <m>A = \{a,b\}</m>.
+                  dan <m>A = \{a,b\}</m>.
                 </p>
               </statement>
             </task>
@@ -148,50 +148,50 @@
       <task>
         <introduction>
           <p>
-            Label each of the following statements as either true or false.
-            If true, provide a convincing argument.
-            If false, provide a specific counterexample.
+            Tentukan apakah setiap pernyataan berikut benar atau salah.
+            Jika benar, berikan argumen yang meyakinkan.
+            Jika salah, berikan contoh tandingan yang spesifik.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Every limit point is a boundary point.
+                  Setiap titik limit merupakan titik batas.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Every boundary point is a limit point.
+                  Setiap titik batas merupakan titik limit.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Every limit point is an isolated point
+                  Setiap titik limit merupakan titik terasing
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Every isolated point is a limit point.
+                  Setiap titik terasing merupakan titik limit.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Every boundary point is an isolated point.
+                  Setiap titik batas merupakan titik terasing.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Every isolated point is a boundary point.
+                  Setiap titik terasing merupakan titik batas.
                 </p>
               </statement>
             </task>

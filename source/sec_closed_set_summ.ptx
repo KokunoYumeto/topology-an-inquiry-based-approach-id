@@ -1,97 +1,97 @@
 <section xml:id="sec_closed_set_summ">
-  <title>Summary</title>
+  <title>Ringkasan</title>
   <p>
-    Important ideas that we discussed in this section include the following.
+    Gagasan-gagasan penting yang telah kita bahas dalam bagian ini meliputi hal-hal berikut.
+  </p>
     <ul>
       <li>
         <p>
-          Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
+          Misalkan <m>X</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan dari <m>X</m>.
           <ol marker="i">
             <li>
               <p>
-                A point <m>x \in X</m> is a boundary point of <m>A</m> if every neighborhood of <m>x</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
+                Suatu titik <m>x \in X</m> adalah titik batas dari <m>A</m> jika setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> dan suatu titik di <m>X \setminus A</m>.
               </p>
             </li>
             <li>
               <p>
-                A point <m>x</m> is a limit point of <m>A</m> if every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
+                Suatu titik <m>x</m> adalah titik limit dari <m>A</m> jika setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> yang berbeda dari <m>x</m>.
               </p>
             </li>
             <li>
               <p>
-                A point <m>a \in A</m> is an isolated point of <m>A</m> if there is a neighborhood <m>N</m> of <m>a</m> such that <m>N \cap A = \{a\}</m>.
+                Suatu titik <m>a \in A</m> adalah titik terasing dari <m>A</m> jika terdapat lingkungan <m>N</m> dari <m>a</m> sedemikian sehingga <m>N \cap A = \{a\}</m>.
               </p>
             </li>
           </ol>
         
-        Boundary points and limit points don't need to be in the set <m>A</m>,
-        whereas an isolated point of <m>A</m> must be in <m>A</m>.
-        In <m>A = (0,1) \cup \{2\}</m> as a subset of <m>=(\R, d_E)</m>,
-        <m>0</m> is a boundary point but not an isolated point while <m>2</m> is a boundary point but not a limit point.
-        Also, <m>0.5</m> is a limit point but neither a boundary or isolated point.
-        With <m>A</m> as subset of <m>\R</m> with the discrete metric,
-        every point of <m>A</m> is an isolated point but no point in <m>\R</m> is a boundary point or a limit point of <m>A</m>.
-        So even though every boundary point is either a limit point or an isolated point,
-        the three concepts are different.
+        Titik batas dan titik limit tidak harus berada dalam himpunan <m>A</m>,
+        sedangkan titik terasing dari <m>A</m> harus berada dalam <m>A</m>.
+        Untuk <m>A = (0,1) \cup \{2\}</m> sebagai subhimpunan dari <m>(\R, d_E)</m>,
+        <m>0</m> merupakan titik batas, tetapi bukan titik terasing, sedangkan <m>2</m> merupakan titik batas, tetapi bukan titik limit.
+        Selain itu, <m>0.5</m> merupakan titik limit, tetapi bukan titik batas maupun titik terasing.
+        Jika <m>A</m> dipandang sebagai subhimpunan dari <m>\R</m> dengan metrik diskret,
+        setiap titik dari <m>A</m> merupakan titik terasing, tetapi tidak ada titik di <m>\R</m> yang merupakan titik batas atau titik limit dari <m>A</m>.
+        Jadi, meskipun setiap titik batas merupakan titik limit atau titik terasing,
+        ketiga konsep tersebut berbeda.
         </p>
       </li>
       <li>
         <p>
-          A subset <m>A</m> of a metric space <m>X</m> is closed if <m>X \setminus A</m> is an open set.
+          Suatu subhimpunan <m>A</m> dari ruang metrik <m>X</m> tertutup jika <m>X \setminus A</m> merupakan himpunan terbuka.
         </p>
       </li>
       <li>
         <p>
-          Any intersection of closed sets is closed while finite unions of closed sets are closed.
+          Sebarang irisan himpunan-himpunan tertutup adalah tertutup, sedangkan gabungan berhingga dari himpunan-himpunan tertutup adalah tertutup.
         </p>
       </li>
       <li>
         <p>
-          A function <m>f</m> from a metric space <m>X</m> to a metric space <m>Y</m> is continuous if
-          <m>f^{-1}(C)</m> is a closed set in <m>X</m> whenever <m>C</m> is a closed set in <m>Y</m>.
+          Suatu fungsi <m>f</m> dari ruang metrik <m>X</m> ke ruang metrik <m>Y</m> kontinu jika dan hanya jika
+          <m>f^{-1}(C)</m> merupakan himpunan tertutup di <m>X</m> setiap kali <m>C</m> merupakan himpunan tertutup di <m>Y</m>.
         </p>
       </li>
       <li>
         <p>
-          Let <m>X</m> be a metric space,
-          let <m>A</m> be a subset of <m>X</m>,
-          and let <m>x</m> be a limit point of <m>A</m>.
-          Then there is a sequence <m>(a_n)</m> in <m>A</m> that converges to <m>x</m>.
+          Misalkan <m>X</m> suatu ruang metrik,
+          misalkan <m>A</m> suatu subhimpunan dari <m>X</m>,
+          dan misalkan <m>x</m> suatu titik limit dari <m>A</m>.
+          Maka terdapat barisan <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>x</m>.
         </p>
       </li>
       <li>
         <p>
-          Let <m>X</m> be a metric space,
-          let <m>A</m> be a subset of <m>X</m>,
-          and let <m>x</m> be a boundary point of <m>A</m>.
-          Then there are sequences <m>(x_n)</m> in
-          <m>X \setminus A</m> and <m>(a_n)</m> in <m>A</m> that converge to <m>x</m>.
+          Misalkan <m>X</m> suatu ruang metrik,
+          misalkan <m>A</m> suatu subhimpunan dari <m>X</m>,
+          dan misalkan <m>x</m> suatu titik batas dari <m>A</m>.
+          Maka terdapat barisan <m>(x_n)</m> di
+          <m>X \setminus A</m> dan barisan <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>x</m>.
         </p>
       </li>
       <li>
         <p>
-          The boundary of a subset <m>A</m> of a metric space <m>X</m> is the set of boundary points of <m>A</m>.
+          Batas suatu subhimpunan <m>A</m> dari ruang metrik <m>X</m> adalah himpunan titik-titik batas dari <m>A</m>.
         </p>
       </li>
       <li>
         <p>
-          A subset <m>A</m> of a metric space <m>X</m> is closed if and only if <m>A</m> contains all of its limit points.
-          Similarly, <m>A</m> is closed if and only if <m>A</m> contains all of its boundary points.
+          Suatu subhimpunan <m>A</m> dari ruang metrik <m>X</m> tertutup jika dan hanya jika <m>A</m> memuat semua titik limitnya.
+          Demikian pula, <m>A</m> tertutup jika dan hanya jika <m>A</m> memuat semua titik batasnya.
         </p>
       </li>
       <li>
         <p>
-          The set of all limit points of a subset <m>A</m> of a metric space <m>X</m> is denoted by <m>A'</m>.
-          The closure of <m>A</m> is the set <m>\overline{A} = A \cup A'</m>.
-          The closure of <m>A</m> is the smallest closed set in <m>X</m> that contains <m>A</m>.
+          Himpunan semua titik limit dari suatu subhimpunan <m>A</m> pada ruang metrik <m>X</m> dinotasikan dengan <m>A'</m>.
+          Tutupan <m>A</m> adalah himpunan <m>\overline{A} = A \cup A'</m>.
+          Tutupan <m>A</m> adalah himpunan tertutup terkecil di <m>X</m> yang memuat <m>A</m>.
         </p>
       </li>
       <li>
         <p>
-          A subset <m>A</m> of a metric space <m>X</m> is closed if and only if
-          <m>\lim a_n</m> is in <m>A</m> whenever <m>(a_n)</m> is a convergent sequence in <m>A</m>.
+          Suatu subhimpunan <m>A</m> dari ruang metrik <m>X</m> tertutup jika dan hanya jika
+          <m>\lim a_n</m> berada di <m>A</m> setiap kali <m>(a_n)</m> merupakan barisan konvergen di <m>A</m>.
         </p>
       </li>
     </ul>
-  </p>
 </section>

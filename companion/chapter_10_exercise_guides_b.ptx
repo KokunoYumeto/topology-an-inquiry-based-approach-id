@@ -1,0 +1,724 @@
+<section xml:id="o003-c90-ch10-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan lanjutan</title>
+
+  <p>
+    Sembilan belas panduan berikut mendampingi butir ke-19 sampai ke-37 pada
+    latihan Bab 10, yakni panduan bernomor 62–80 dalam urutan seluruh bab.
+    Kerjakan dahulu latihan sumber. Buka petunjuk, jawaban, dan solusi secara
+    bertahap hanya setelah Anda telah mencoba menyusun argumen sendiri.
+    Pernyataan di bawah memparafrasakan sasaran latihan, sedangkan solusinya
+    merupakan uraian asli yang ditulis untuk edisi ini dan tersedia sebagai
+    komponen terpisah di bawah Creative Commons Attribution 4.0 International
+    (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch10-guide-62">
+    <title>Dua barisan menuju titik batas</title>
+    <statement>
+      <p>
+        Susun bukti bahwa setiap titik batas <m>b</m> dari <m>A</m> dapat
+        didekati oleh satu barisan dari <m>A</m> dan satu barisan dari
+        <m>X\setminus A</m>. Rubrik keberhasilan: pilihan suku harus sah untuk
+        setiap indeks positif dan kedua bukti konvergensi harus dinyatakan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-62-hint">
+      <p>
+        Tahap 1: gunakan lingkungan <m>B(b,1/n)</m>. Tahap 2: sifat titik batas
+        memastikan bahwa bola tersebut bertemu dengan kedua himpunan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-62-answer">
+      <p>
+        Pilih <m>a_n\in A\cap B(b,1/n)</m> dan
+        <m>x_n\in(X\setminus A)\cap B(b,1/n)</m>. Maka
+        <m>a_n\to b</m> dan <m>x_n\to b</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-62-solution">
+      <p>
+        Karena <m>b</m> adalah titik batas, setiap lingkungan <m>b</m> memuat
+        titik dari <m>A</m> dan titik dari komplemennya. Jadi, untuk setiap
+        <m>n\in\Z^+</m>, pilihan
+        <m>a_n\in A\cap B(b,1/n)</m> dan
+        <m>x_n\in(X\setminus A)\cap B(b,1/n)</m> memang tersedia. Untuk
+        <m>\epsilon\gt0</m>, pilih <m>N\in\Z^+</m> dengan
+        <m>N\gt1/\epsilon</m>. Jika <m>n\geq N</m>, maka
+        <me>
+          d(a_n,b)\lt 1/n\leq1/N\lt\epsilon
+          \quad\text{dan}\quad
+          d(x_n,b)\lt1/n\leq1/N\lt\epsilon.
+        </me>
+        Definisi konvergensi memberi <m>a_n\to b</m> dan <m>x_n\to b</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-63">
+    <title>Jarak nol sebagai uji ketertutupan</title>
+    <statement>
+      <p>
+        Untuk subhimpunan tak kosong <m>C</m> dari ruang metrik <m>X</m>,
+        buktikan bahwa <m>C</m> tertutup tepat ketika
+        <m>d(x,C)=0</m> selalu memaksa <m>x\in C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-63-hint">
+      <p>
+        Arah maju: titik di luar himpunan tertutup memiliki bola yang tidak
+        bertemu <m>C</m>. Arah balik: dari <m>d(x,C)=0</m>, pilih titik
+        <m>c_n\in C</m> dengan <m>d(x,c_n)\lt1/n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-63-answer">
+      <p>
+        Pernyataan benar. Himpunan tertutup menjaga setiap titik luar pada
+        jarak positif; sebaliknya, setiap titik tutupan memiliki jarak nol dan
+        karena itu harus berada di <m>C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-63-solution">
+      <p>
+        Andaikan <m>C</m> tertutup dan <m>x\notin C</m>. Komplemen <m>C</m>
+        terbuka, sehingga ada <m>r\gt0</m> dengan
+        <m>B(x,r)\cap C=\emptyset</m>. Jadi <m>d(x,c)\geq r</m> untuk setiap
+        <m>c\in C</m>, dan <m>d(x,C)\geq r\gt0</m>. Kontraposisinya memberi
+        arah yang diminta.
+      </p>
+      <p>
+        Sekarang andaikan sifat jarak nol berlaku. Jika
+        <m>x\in\overline C</m>, maka untuk setiap <m>n</m> terdapat
+        <m>c_n\in C\cap B(x,1/n)</m>. Karena
+        <m>0\leq d(x,C)\leq d(x,c_n)\lt1/n</m> untuk semua <m>n</m>, berlaku
+        <m>d(x,C)=0</m>, sehingga <m>x\in C</m>. Maka
+        <m>\overline C\subseteq C</m>; inklusi sebaliknya selalu benar, jadi
+        <m>C=\overline C</m> dan <m>C</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-64">
+    <title>Subhimpunan berhingga selalu tertutup</title>
+    <statement>
+      <p>
+        Buktikan bahwa setiap subhimpunan berhingga dari ruang metrik bersifat
+        tertutup, termasuk kasus himpunan kosong.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-64-hint">
+      <p>
+        Untuk titik <m>x</m> di luar himpunan berhingga tak kosong <m>F</m>,
+        ambil minimum dari daftar berhingga jarak <m>d(x,a)</m> dengan
+        <m>a\in F</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-64-answer">
+      <p>
+        Benar. Setiap titik luar memiliki jarak minimum positif dari
+        himpunan, sehingga komplemennya terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-64-solution">
+      <p>
+        Himpunan kosong tertutup karena komplemennya adalah <m>X</m>. Untuk
+        <m>F=\{a_1,\ldots,a_k\}</m> tak kosong dan <m>x\notin F</m>, semua
+        bilangan <m>d(x,a_i)</m> positif. Karena daftarnya berhingga,
+        <m>\delta=\min_i d(x,a_i)\gt0</m>. Bola
+        <m>B(x,\delta/2)</m> tidak memuat satu pun <m>a_i</m>, jadi berada di
+        <m>X\setminus F</m>. Setiap titik komplemen mempunyai lingkungan di
+        dalam komplemen; akibatnya <m>X\setminus F</m> terbuka dan <m>F</m>
+        tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-65">
+    <title>Ketertutupan dan batas himpunan</title>
+    <statement>
+      <p>
+        Buktikan pencirian: <m>C</m> tertutup jika dan hanya jika semua titik
+        pada batas <m>C</m> termuat di dalam <m>C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-65-hint">
+      <p>
+        Gunakan identitas
+        <m>\overline C=\Int(C)\mathbin{\dot\cup}\Bdry(C)</m>, atau buktikan
+        langsung bahwa titik di luar <m>C</m> yang bukan titik batas memiliki
+        lingkungan yang tidak bertemu <m>C</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-65-answer">
+      <p>
+        Pencirian benar. Jika <m>C</m> tertutup, batasnya berada dalam
+        <m>\overline C=C</m>; jika batasnya berada dalam <m>C</m>, maka seluruh
+        tutupan <m>C</m> juga berada dalam <m>C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-65-solution">
+      <p>
+        Jika <m>C</m> tertutup, maka <m>\overline C=C</m>. Karena
+        <m>\Bdry(C)\subseteq\overline C</m>, diperoleh
+        <m>\Bdry(C)\subseteq C</m>. Sebaliknya, andaikan
+        <m>\Bdry(C)\subseteq C</m>. Identitas yang telah dibuktikan dalam bab
+        memberi
+        <me>
+          \overline C=\Int(C)\mathbin{\dot\cup}\Bdry(C).
+        </me>
+        Kedua bagian ruas kanan termuat di <m>C</m>, sehingga
+        <m>\overline C\subseteq C</m>. Karena selalu
+        <m>C\subseteq\overline C</m>, berlaku <m>C=\overline C</m>; jadi
+        <m>C</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-66">
+    <title>Kekontinuan melalui interior prapeta</title>
+    <statement>
+      <p>
+        Untuk <m>f:X\to Y</m>, buktikan bahwa <m>f</m> kontinu tepat ketika
+        <m>f^{-1}(\Int B)\subseteq\Int(f^{-1}(B))</m> bagi setiap
+        <m>B\subseteq Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-66-hint">
+      <p>
+        Arah maju: <m>\Int B</m> terbuka dan termuat di <m>B</m>. Arah balik:
+        terapkan syarat pada himpunan terbuka <m>B=O</m>, sehingga
+        <m>\Int O=O</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-66-answer">
+      <p>
+        Kriterium tersebut ekuivalen dengan pernyataan bahwa prapeta setiap
+        himpunan terbuka bersifat terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-66-solution">
+      <p>
+        Jika <m>f</m> kontinu, maka <m>f^{-1}(\Int B)</m> terbuka. Selain itu,
+        dari <m>\Int B\subseteq B</m> diperoleh
+        <m>f^{-1}(\Int B)\subseteq f^{-1}(B)</m>. Karena interior adalah
+        himpunan terbuka terbesar di dalam suatu himpunan,
+        <m>f^{-1}(\Int B)\subseteq\Int(f^{-1}(B))</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan inklusi berlaku untuk semua <m>B</m>. Untuk
+        himpunan terbuka <m>O\subseteq Y</m>, kita mempunyai
+        <m>\Int O=O</m>, sehingga
+        <m>f^{-1}(O)\subseteq\Int(f^{-1}(O))</m>. Inklusi sebaliknya selalu
+        benar; jadi <m>f^{-1}(O)=\Int(f^{-1}(O))</m> terbuka. Prapeta setiap
+        himpunan terbuka bersifat terbuka, maka <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-67">
+    <title>Contoh inklusi interior yang ketat</title>
+    <statement>
+      <p>
+        Berikan fungsi kontinu dan subhimpunan <m>B</m> yang membuat inklusi
+        pada panduan sebelumnya ketat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-67-hint">
+      <p>
+        Cobalah fungsi konstan <m>f:\R\to\R</m> dan himpunan satu titik yang
+        memuat nilai konstannya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-67-answer">
+      <p>
+        Ambil <m>f(x)=0</m> dan <m>B=\{0\}</m>. Ruas kiri kosong, sedangkan
+        ruas kanan adalah <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-67-solution">
+      <p>
+        Fungsi konstan <m>f:\R\to\R</m>, <m>f(x)=0</m>, kontinu. Untuk
+        <m>B=\{0\}</m> dalam metrik Euklides, <m>\Int(B)=\emptyset</m>.
+        Karena itu
+        <me>
+          f^{-1}(\Int B)=f^{-1}(\emptyset)=\emptyset.
+        </me>
+        Namun <m>f^{-1}(B)=\R</m>, sehingga
+        <m>\Int(f^{-1}(B))=\R</m>. Jadi inklusinya benar-benar ketat:
+        <m>\emptyset\subsetneq\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-68">
+    <title>Contoh ketika kedua interior sama</title>
+    <statement>
+      <p>
+        Berikan contoh konkret ketika inklusi
+        <m>f^{-1}(\Int B)\subseteq\Int(f^{-1}(B))</m> menjadi kesamaan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-68-hint">
+      <p>
+        Gunakan fungsi identitas; prapeta terhadap fungsi ini tidak mengubah
+        himpunan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-68-answer">
+      <p>
+        Untuk <m>f=\operatorname{id}_{\R}</m> dan, misalnya,
+        <m>B=[0,1]</m>, kedua ruas sama dengan <m>(0,1)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-68-solution">
+      <p>
+        Ambil <m>f:\R\to\R</m> sebagai fungsi identitas dan
+        <m>B=[0,1]</m>. Fungsi ini kontinu,
+        <m>f^{-1}(B)=B</m>, dan <m>f^{-1}(\Int B)=\Int B</m>. Karena
+        <m>\Int[0,1]=(0,1)</m>, kita memperoleh
+        <me>
+          f^{-1}(\Int B)=(0,1)=\Int(f^{-1}(B)).
+        </me>
+        Bahkan fungsi identitas memberikan kesamaan tersebut untuk setiap
+        subhimpunan <m>B</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-69">
+    <title>Titik batas: limit atau terasing</title>
+    <statement>
+      <p>
+        Buktikan bahwa setiap titik batas <m>b</m> dari <m>A</m> merupakan
+        titik limit atau titik terasing dari <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-69-hint">
+      <p>
+        Pisahkan kasus <m>b\notin A</m> dan <m>b\in A</m>. Pada kasus kedua,
+        gunakan langsung negasi definisi titik terasing.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-69-answer">
+      <p>
+        Jika <m>b\notin A</m>, setiap pertemuan lingkungan dengan <m>A</m>
+        otomatis berbeda dari <m>b</m>, jadi <m>b</m> titik limit. Jika
+        <m>b\in A</m>, titik itu terasing atau, jika tidak, merupakan titik
+        limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-69-solution">
+      <p>
+        Misalkan <m>b\in\Bdry(A)</m>. Jika <m>b\notin A</m>, setiap lingkungan
+        <m>b</m> bertemu <m>A</m>, dan setiap titik pertemuan berbeda dari
+        <m>b</m>. Maka <m>b</m> adalah titik limit. Jika <m>b\in A</m> dan
+        <m>b</m> terasing, kesimpulan sudah diperoleh. Jika <m>b\in A</m>
+        tetapi tidak terasing, tidak ada lingkungan <m>N</m> dengan
+        <m>N\cap A=\{b\}</m>. Jadi setiap lingkungan <m>b</m> memuat titik
+        <m>A</m> selain <m>b</m>, sehingga <m>b</m> adalah titik limit.
+        Ketiga kemungkinan menuntaskan bukti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-70">
+    <title>Tutupan mempertahankan gabungan berhingga</title>
+    <statement>
+      <p>
+        Tentukan apakah
+        <m>\overline{A\cup B}=\overline A\cup\overline B</m> selalu berlaku,
+        lalu buktikan keputusan Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-70-hint">
+      <p>
+        Gunakan monotonisitas tutupan untuk satu inklusi. Untuk inklusi lain,
+        perhatikan bahwa gabungan dua himpunan tertutup tetap tertutup.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-70-answer">
+      <p>
+        Ya, kesamaan selalu berlaku untuk gabungan dua subhimpunan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-70-solution">
+      <p>
+        Dari <m>A\subseteq A\cup B</m> dan <m>B\subseteq A\cup B</m>,
+        monotonisitas memberi
+        <m>\overline A\cup\overline B\subseteq\overline{A\cup B}</m>.
+        Sebaliknya, <m>\overline A\cup\overline B</m> tertutup karena merupakan
+        gabungan berhingga dari himpunan tertutup, dan himpunan itu memuat
+        <m>A\cup B</m>. Tutupan adalah himpunan tertutup terkecil yang memuat
+        himpunan asal, sehingga
+        <m>\overline{A\cup B}\subseteq\overline A\cup\overline B</m>. Kedua
+        inklusi memberi kesamaan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-71">
+    <title>Tutupan tidak selalu mempertahankan irisan</title>
+    <statement>
+      <p>
+        Uji apakah
+        <m>\overline{A\cap B}=\overline A\cap\overline B</m> selalu benar.
+        Jika tidak, berikan contoh penyangkal dan nyatakan inklusi yang tetap
+        berlaku.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-71-hint">
+      <p>
+        Ambil dua interval terbuka yang saling lepas tetapi kedua tutupannya
+        memuat titik <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-71-answer">
+      <p>
+        Tidak. Selalu
+        <m>\overline{A\cap B}\subseteq\overline A\cap\overline B</m>, tetapi
+        inklusi dapat ketat.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-71-solution">
+      <p>
+        Karena <m>A\cap B\subseteq A</m> dan <m>A\cap B\subseteq B</m>,
+        monotonisitas tutupan memberikan
+        <m>\overline{A\cap B}\subseteq\overline A\cap\overline B</m>.
+        Untuk melihat bahwa kesamaan dapat gagal, di <m>\R</m> ambil
+        <m>A=(-\infty,0)</m> dan <m>B=(0,\infty)</m>. Maka
+        <m>A\cap B=\emptyset</m>, sehingga
+        <m>\overline{A\cap B}=\emptyset</m>. Akan tetapi,
+        <m>\overline A=(-\infty,0]</m> dan
+        <m>\overline B=[0,\infty)</m>, jadi
+        <m>\overline A\cap\overline B=\{0\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-72">
+    <title>Titik luar berjarak positif dari himpunan tertutup</title>
+    <statement>
+      <p>
+        Untuk himpunan tertutup tak kosong <m>C</m> dan <m>x\notin C</m>,
+        buktikan bahwa <m>d(x,C)\gt0</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-72-hint">
+      <p>
+        Komplemen <m>C</m> terbuka. Ambil sebuah bola berpusat di <m>x</m>
+        yang seluruhnya berada dalam komplemen.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-72-answer">
+      <p>
+        Ada <m>r\gt0</m> dengan <m>B(x,r)\cap C=\emptyset</m>; akibatnya
+        <m>d(x,C)\geq r\gt0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-72-solution">
+      <p>
+        Karena <m>C</m> tertutup, <m>X\setminus C</m> terbuka. Dari
+        <m>x\in X\setminus C</m>, terdapat <m>r\gt0</m> sedemikian sehingga
+        <m>B(x,r)\subseteq X\setminus C</m>. Jadi tidak ada
+        <m>c\in C</m> dengan <m>d(x,c)\lt r</m>; dengan kata lain,
+        <m>d(x,c)\geq r</m> untuk setiap <m>c\in C</m>. Mengambil infimum
+        menghasilkan
+        <m>d(x,C)=\inf_{c\in C}d(x,c)\geq r\gt0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-73">
+    <title>Gabungan keluarga tertutup yang lokal berhingga</title>
+    <statement>
+      <p>
+        Misalkan setiap titik <m>x\in X</m> mempunyai bola yang bertemu hanya
+        berhingga banyak anggota keluarga tertutup
+        <m>\{C_\alpha\}_{\alpha\in I}</m>. Buktikan bahwa gabungan seluruh
+        keluarga tersebut tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-73-hint">
+      <p>
+        Untuk <m>x</m> di luar gabungan, pilih bola yang hanya melihat
+        <m>C_{\alpha_1},\ldots,C_{\alpha_k}</m>. Gunakan jarak positif dari
+        <m>x</m> ke masing-masing himpunan berhingga itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-73-answer">
+      <p>
+        Benar. Di sekitar setiap titik luar, hanya berhingga banyak himpunan
+        perlu dihindari; radius minimum positif menghasilkan bola yang
+        menghindari semuanya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-73-solution">
+      <p>
+        Tetapkan <m>x\notin\bigcup_{\alpha\in I}C_\alpha</m>. Pilih
+        <m>\epsilon_x\gt0</m> sehingga <m>B(x,\epsilon_x)</m> bertemu hanya
+        dengan, katakanlah,
+        <m>C_{\alpha_1},\ldots,C_{\alpha_k}</m>. Karena <m>x</m> tidak berada
+        dalam satu pun himpunan itu dan masing-masing tertutup, panduan 72
+        memberi <m>\delta_i=d(x,C_{\alpha_i})\gt0</m>. Jika <m>k=0</m>, bola
+        awal sudah tidak bertemu gabungan. Jika <m>k\gt0</m>, ambil
+        <me>
+          r=\frac12\min\{\epsilon_x,\delta_1,\ldots,\delta_k\}\gt0.
+        </me>
+        Bola <m>B(x,r)</m> berada dalam bola awal, sehingga tidak dapat bertemu
+        anggota keluarga selain daftar berhingga tersebut; pilihan
+        <m>r\lt\delta_i</m> juga membuatnya tidak bertemu satu pun anggota
+        dalam daftar. Jadi <m>B(x,r)</m> terletak di komplemen gabungan.
+        Komplemen itu terbuka, maka gabungannya tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-74">
+    <title>Pernyataan dual untuk irisan himpunan terbuka</title>
+    <statement>
+      <p>
+        Rumuskan dan buktikan syarat lokal yang menjamin irisan tak hingga
+        dari keluarga himpunan terbuka tetap terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-74-hint">
+      <p>
+        Terapkan hasil gabungan tertutup pada keluarga komplemen
+        <m>C_\alpha=X\setminus O_\alpha</m>, lalu gunakan Hukum De Morgan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-74-answer">
+      <p>
+        Jika keluarga komplemen <m>\{X\setminus O_\alpha\}</m> lokal berhingga,
+        maka <m>\bigcap_\alpha O_\alpha</m> terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-74-solution">
+      <p>
+        Pernyataan yang tepat adalah: jika setiap <m>O_\alpha</m> terbuka dan,
+        untuk setiap <m>x\in X</m>, ada lingkungan yang bertemu hanya berhingga
+        banyak komplemen <m>X\setminus O_\alpha</m>, maka
+        <m>\bigcap_\alpha O_\alpha</m> terbuka. Memang,
+        <m>C_\alpha=X\setminus O_\alpha</m> tertutup dan keluarga
+        <m>\{C_\alpha\}</m> lokal berhingga. Panduan 73 menyatakan bahwa
+        <m>\bigcup_\alpha C_\alpha</m> tertutup. Hukum De Morgan memberi
+        <me>
+          X\setminus\bigcup_\alpha C_\alpha
+          =X\setminus\bigcup_\alpha(X\setminus O_\alpha)
+          =\bigcap_\alpha O_\alpha.
+        </me>
+        Ruas kiri adalah komplemen suatu himpunan tertutup, sehingga irisan
+        pada ruas kanan terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-75">
+    <title>Himpunan satu titik tertutup</title>
+    <statement>
+      <p>
+        Putuskan apakah <m>\{x\}</m> selalu tertutup dalam setiap ruang metrik
+        dan berikan alasan yang tidak bergantung pada gambar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-75-hint">
+      <p>
+        Untuk <m>y\neq x</m>, gunakan radius yang lebih kecil daripada
+        <m>d(x,y)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-75-answer">
+      <p>
+        Benar. Setiap <m>y\in X\setminus\{x\}</m> memiliki bola yang tidak
+        memuat <m>x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-75-solution">
+      <p>
+        Ambil <m>y\in X\setminus\{x\}</m>. Karena metrik memisahkan titik,
+        <m>d(x,y)\gt0</m>. Dengan <m>r=d(x,y)/2</m>, titik <m>x</m> tidak dapat
+        berada di <m>B(y,r)</m>, sebab jaraknya dari <m>y</m> adalah
+        <m>2r</m>. Jadi <m>B(y,r)\subseteq X\setminus\{x\}</m>. Komplemen
+        <m>\{x\}</m> terbuka, maka <m>\{x\}</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-76">
+    <title>Himpunan sekaligus terbuka dan tertutup di garis real</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>\emptyset</m> dan <m>\R</m> merupakan satu-satunya
+        subhimpunan yang sekaligus terbuka dan tertutup dalam metrik Euklides.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-76-hint">
+      <p>
+        Andaikan <m>A</m> tak kosong dan tidak sama dengan <m>\R</m>. Pilih
+        <m>a\in A</m> dan <m>b\notin A</m>, lalu gunakan sifat supremum pada
+        bagian <m>A</m> di antara kedua titik tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-76-answer">
+      <p>
+        Benar. Tidak ada pemisahan garis real menjadi dua himpunan terbuka tak
+        kosong yang saling komplemen.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-76-solution">
+      <p>
+        Jelas <m>\emptyset</m> dan <m>\R</m> keduanya terbuka dan tertutup.
+        Andaikan ada <m>A</m> lain dengan kedua sifat itu. Pilih
+        <m>a\in A</m> dan <m>b\notin A</m>. Setelah menukar arah garis bila
+        perlu, kita dapat menganggap <m>a\lt b</m>. Himpunan
+        <m>S=A\cap[a,b]</m> tak kosong dan terbatas atas; tulis
+        <m>s=\sup S</m>. Karena komplemen <m>A</m> terbuka dan memuat <m>b</m>,
+        ada interval di sekitar <m>b</m> yang tidak bertemu <m>A</m>, sehingga
+        <m>s\lt b</m>. Karena <m>A</m> terbuka dan memuat <m>a</m>, ada titik
+        <m>A</m> di kanan <m>a</m>, sehingga <m>s\gt a</m>.
+      </p>
+      <p>
+        Jika <m>s\in A</m>, keterbukaan <m>A</m> memberi titik
+        <m>A\cap[a,b]</m> yang lebih besar dari <m>s</m>, bertentangan dengan
+        sifat batas atas. Jika <m>s\notin A</m>, keterbukaan komplemen memberi
+        interval di sekitar <m>s</m> tanpa titik <m>A</m>; tetapi definisi
+        supremum menuntut titik <m>S</m> sedekat apa pun di bawah <m>s</m>.
+        Keduanya mustahil. Jadi tidak ada <m>A</m> seperti itu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-77">
+    <title>Subhimpunan pada ruang metrik berhingga</title>
+    <statement>
+      <p>
+        Untuk <m>X=\{1,3,5\}</m> dengan
+        <m>d(x,y)=xy-1\pmod 8</m>, tentukan apakah <m>\{1,3\}</m> sekaligus
+        terbuka dan tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-77-hint">
+      <p>
+        Hitung jarak pasangan berbeda:
+        <m>d(1,3)</m>, <m>d(1,5)</m>, dan <m>d(3,5)</m>. Gunakan bola kecil
+        untuk mengisolasi setiap titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-77-answer">
+      <p>
+        Benar. Topologi metrik pada himpunan berhingga ini diskret, sehingga
+        setiap subhimpunan terbuka dan tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-77-solution">
+      <p>
+        Perhitungan modulo <m>8</m> memberi
+        <m>d(1,3)=2</m>, <m>d(1,5)=4</m>, dan <m>d(3,5)=6</m>. Jadi jarak
+        positif terkecil antara dua titik berbeda adalah <m>2</m>. Untuk setiap
+        <m>x\in X</m>, bola <m>B(x,1)</m> sama dengan <m>\{x\}</m>. Dengan
+        demikian semua himpunan satu titik terbuka, sehingga setiap subhimpunan
+        adalah gabungan himpunan-himpunan satu titik dan karenanya terbuka.
+        Komplemen setiap subhimpunan juga terbuka, jadi setiap subhimpunan
+        tertutup. Secara khusus, <m>\{1,3\}</m> terbuka dan komplemennya
+        <m>\{5\}</m> terbuka; maka <m>\{1,3\}</m> juga tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-78">
+    <title>Interior tutupan tidak memulihkan himpunan asal</title>
+    <statement>
+      <p>
+        Uji klaim <m>\Int(\overline A)=A</m> untuk setiap subhimpunan ruang
+        metrik dan, jika salah, berikan contoh yang tegas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-78-hint">
+      <p>
+        Gunakan himpunan rapat yang bukan seluruh garis real, misalnya
+        <m>\Q\subset\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-78-answer">
+      <p>
+        Salah. Untuk <m>A=\Q</m> dalam <m>\R</m>, ruas kiri adalah
+        <m>\R</m>, bukan <m>\Q</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-78-solution">
+      <p>
+        Ambil <m>A=\Q</m> sebagai subhimpunan <m>(\R,d_E)</m>. Setiap interval
+        terbuka memuat bilangan rasional, jadi <m>\Q</m> rapat di
+        <m>\R</m> dan <m>\overline\Q=\R</m>. Karena <m>\R</m> terbuka dalam
+        dirinya sendiri, <m>\Int(\overline\Q)=\Int(\R)=\R</m>. Namun
+        <m>\Q\neq\R</m>. Satu contoh ini cukup menyangkal klaim universal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-79">
+    <title>Batas suatu himpunan selalu tertutup</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>\Bdry(A)</m> tertutup untuk setiap
+        <m>A\subseteq X</m> dan buktikan keputusan Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-79-hint">
+      <p>
+        Gunakan rumus
+        <m>\Bdry(A)=\overline A\cap\overline{X\setminus A}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-79-answer">
+      <p>
+        Benar. Batas adalah irisan dua himpunan tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-79-solution">
+      <p>
+        Bab ini telah membuktikan
+        <me>
+          \Bdry(A)=\overline A\cap\overline{X\setminus A}.
+        </me>
+        Tutupan setiap himpunan bersifat tertutup, sehingga
+        <m>\overline A</m> dan <m>\overline{X\setminus A}</m> tertutup.
+        Irisan berhingga dari himpunan tertutup tetap tertutup. Oleh karena itu
+        <m>\Bdry(A)</m> tertutup untuk setiap <m>A\subseteq X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-80">
+    <title>Setiap titik himpunan: limit atau terasing</title>
+    <statement>
+      <p>
+        Buktikan bahwa <m>A\subseteq A'\cup A^i</m>, dengan <m>A'</m>
+        himpunan titik limit dan <m>A^i</m> himpunan titik terasing dari
+        <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-80-hint">
+      <p>
+        Ambil sembarang <m>a\in A</m> dan gunakan dikotomi: <m>a</m> terasing
+        atau tidak terasing.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-80-answer">
+      <p>
+        Benar. Titik <m>A</m> yang tidak terasing memenuhi definisi titik
+        limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-80-solution">
+      <p>
+        Tetapkan <m>a\in A</m>. Jika ada lingkungan <m>N</m> dari <m>a</m>
+        dengan <m>N\cap A=\{a\}</m>, maka <m>a\in A^i</m>. Jika tidak ada
+        lingkungan seperti itu, setiap lingkungan <m>a</m> memuat suatu titik
+        dari <m>A</m> yang berbeda dari <m>a</m>. Ini tepat definisi bahwa
+        <m>a\in A'</m>. Jadi dalam kedua kasus
+        <m>a\in A'\cup A^i</m>. Karena <m>a</m> dipilih sembarang,
+        <m>A\subseteq A'\cup A^i</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

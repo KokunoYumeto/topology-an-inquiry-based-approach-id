@@ -1,34 +1,34 @@
 <section xml:id="sec_limit_bound_iso_seq">
-  <title>Limit Points, Boundary Points, Isolated Points, and Sequences</title>
+  <title>Titik Limit, Titik Batas, Titik Terasing, dan Barisan</title>
   <p>
-    Recall that a limit point of a subset <m>A</m> of a metric space <m>X</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
-    You might wonder about the use of the word
+    Ingatlah bahwa titik limit dari suatu subhimpunan <m>A</m> dari ruang metrik <m>X</m> adalah titik <m>x \in X</m> sedemikian sehingga setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> yang berbeda dari <m>x</m>.
+    Anda mungkin bertanya-tanya mengapa kata
     <q>limit</q>
-    in the definition of limit point.
-    The next activity should make this clear.
+    digunakan dalam definisi titik limit.
+    Kegiatan berikut akan memperjelas hal ini.
   </p>
 
   <activity xml:id="act_CS_3">
     <introduction>
     <p>
-      Let <m>X</m> be a metric space,
-      let <m>A</m> be a subset of <m>X</m>,
-      and let <m>x</m> be a limit point of <m>A</m>.
+      Misalkan <m>X</m> suatu ruang metrik,
+      misalkan <m>A</m> suatu subhimpunan dari <m>X</m>,
+      dan misalkan <m>x</m> suatu titik limit dari <m>A</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Let <m>n \in \Z^+</m>.
-            Explain why <m>B\left(x, \frac{1}{n}\right)</m> must contain a point <m>a_n</m> in <m>A</m> different from <m>x</m>.
+            Misalkan <m>n \in \Z^+</m>.
+            Jelaskan mengapa <m>B\left(x, \frac{1}{n}\right)</m> harus memuat suatu titik <m>a_n</m> di <m>A</m> yang berbeda dari <m>x</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What is <m>\lim a_n</m>?
-            Why?
+            Berapakah <m>\lim a_n</m>?
+            Mengapa?
           </p>
         </statement>
       </task>
@@ -36,50 +36,50 @@
   </activity>
 
   <p>
-    The result of <xref ref="act_CS_3"/>
-    is summarized in the following theorem.
+    Hasil <xref ref="act_CS_3"/>
+    dirangkum dalam teorema berikut.
   </p>
 
   <theorem xml:id="thm_CS_limit_pt">
     <statement>
       <p>
-        Let <m>X</m> be a metric space,
-        let <m>A</m> be a subset of <m>X</m>,
-        and let <m>x</m> be a limit point of <m>A</m>.
-        Then there is a sequence <m>(a_n)</m> in <m>A</m> that converges to <m>x</m>.
+        Misalkan <m>X</m> suatu ruang metrik,
+        misalkan <m>A</m> suatu subhimpunan dari <m>X</m>,
+        dan misalkan <m>x</m> suatu titik limit dari <m>A</m>.
+        Maka terdapat suatu barisan <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>x</m>.
       </p>
     </statement>
   </theorem>
 
   <p>
-    Of course, the constant sequence <m>(a)</m> always converges to the point <m>a</m>,
-    so every point in a set <m>A</m> is the limit of a sequence.
-    With limit points there is a non-constant sequence that converges to the point.
-    We might ask what we can say about a point <m>a \in A</m> if the only sequences in <m>A</m> that converges to <m>a \in A</m> are the eventually constant sequences <m>(a)</m>. (By an eventually constant sequence <m>(a_n)</m>,
-    we mean that there is a positive integer <m>K</m> such that for <m>k \geq K</m>,
-    we have <m>a_k = a</m> for some element <m>a</m>.) That is the subject of our next activity.
+    Tentu saja, barisan konstan <m>(a)</m> selalu konvergen ke titik <m>a</m>,
+    sehingga setiap titik dalam suatu himpunan <m>A</m> merupakan limit dari suatu barisan.
+    Untuk titik limit, terdapat barisan tak konstan yang konvergen ke titik tersebut.
+    Kita dapat menanyakan apa yang dapat dikatakan tentang suatu titik <m>a \in A</m> jika setiap barisan di <m>A</m> yang konvergen ke <m>a \in A</m> pada akhirnya sama dengan barisan konstan <m>(a)</m>. (Yang dimaksud dengan barisan <m>(a_n)</m> yang pada akhirnya konstan
+    adalah terdapat bilangan bulat positif <m>K</m> sedemikian sehingga untuk <m>k \geq K</m>,
+    berlaku <m>a_k = a</m> untuk suatu unsur <m>a</m>.) Hal inilah yang akan kita telaah dalam kegiatan berikut.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>(X,d)</m> be a metric space,
-      and let <m>A</m> be a subset of <m>X</m>.
+      Misalkan <m>(X,d)</m> suatu ruang metrik,
+      dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Let <m>a</m> be an isolated point of <m>A</m>.
-            Prove that the only sequences in <m>A</m> that converge to <m>a</m> are the eventually constant sequences <m>(a)</m>.
+            Misalkan <m>a</m> suatu titik terasing dari <m>A</m>.
+            Buktikan bahwa setiap barisan di <m>A</m> yang konvergen ke <m>a</m> pada akhirnya sama dengan barisan konstan <m>(a)</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Prove that if the only sequences in <m>A</m> that converges to <m>a</m> are the eventually constant sequences <m>(a)</m>,
-            then <m>a</m> is an isolated point of <m>A</m>.
+            Buktikan bahwa jika setiap barisan di <m>A</m> yang konvergen ke <m>a</m> pada akhirnya sama dengan barisan konstan <m>(a)</m>,
+            maka <m>a</m> merupakan titik terasing dari <m>A</m>.
           </p>
         </statement>
       </task>
@@ -87,26 +87,26 @@
   </activity>
 
   <p>
-    Boundary points are points that are, in some sense, situated
-    <q>between</q>
-    a set and its complement.
-    We will make this idea of
-    <q>between</q>
-    more concrete soon.
+    Titik batas adalah titik yang, dalam arti tertentu, terletak
+    <q>di antara</q>
+    suatu himpunan dan komplemennya.
+    Kita akan segera membuat gagasan
+    <q>di antara</q>
+    ini lebih konkret.
   </p>
   <p>
-    An argument just like the one in <xref ref="act_CS_3"/>
-    gives us the following result about boundary points.
+    Argumen yang serupa dengan argumen dalam <xref ref="act_CS_3"/>
+    memberikan hasil berikut tentang titik batas.
   </p>
   
   <theorem xml:id="thm_CS_2">
     <statement>
       <p>
-        Let <m>X</m> be a metric space,
-        let <m>A</m> be a subset of <m>X</m>,
-        and let <m>b</m> be a boundary point of <m>A</m>.
-        Then there are sequences <m>(x_n)</m> in
-        <m>X \setminus A</m> and <m>(a_n)</m> in <m>A</m> that converge to <m>x</m>.
+        Misalkan <m>X</m> suatu ruang metrik,
+        misalkan <m>A</m> suatu subhimpunan dari <m>X</m>,
+        dan misalkan <m>b</m> suatu titik batas dari <m>A</m>.
+        Maka terdapat barisan <m>(x_n)</m> di
+        <m>X \setminus A</m> dan barisan <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>b</m>.
       </p>
     </statement>
   </theorem>

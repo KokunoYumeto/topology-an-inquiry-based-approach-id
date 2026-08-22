@@ -12,7 +12,22 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Ingat kembali dari <a href="chap_metric_spaces.html" class="internal" title="Bab 3: Ruang Metrik">Bab 3</a> bahwa kita dapat membangun ruang metrik berhingga dengan memulai dari suatu himpunan titik berhingga lalu membuat graf yang titik-titiknya menjadi simpul. Kita membuat sisi-sisi sedemikian sehingga graf tersebut terhubung (artinya, terdapat lintasan dari setiap simpul ke setiap simpul lainnya) dan memberikan bobot pada sisi-sisinya. Selanjutnya, kita mendefinisikan metrik <span class="process-math">\(d\)</span> pada <span class="process-math">\(X\)</span> dengan menetapkan <span class="process-math">\(d(x,y)\)</span> sebagai panjang lintasan terpendek antara simpul <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> pada graf tersebut. Perhatikan ruang metrik <span class="process-math">\((X,d)\)</span> yang bersesuaian dengan graf dalam <a href="" class="xref" data-knowl="./knowl/F_Graph_metric_ex.html" title="Gambar 7.7">Gambar 7.7</a>.</div>
+<div class="para logical">
+<div class="para">Jika <span class="process-math">\(x = (x_1, x_2, \ldots, x_n)\text{,}\)</span> tetapkan <span class="process-math">\(|x| = \sqrt{x_1^2+x_2^2+ \cdots + x_n^2}\text{.}\)</span> Untuk <span class="process-math">\(x = (x_1, x_2, \ldots,
+x_n)\)</span> dan <span class="process-math">\(y = (y_1, y_2, \ldots y_n)\text{,}\)</span> definisikan <span class="process-math">\(d_H: \R^n \times \R^n \to \R\)</span> dengan</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_MS_hub.html">
+\begin{equation*}
+d_H(x,y) = \begin{cases}0 \amp \text{ jika }  x=y \\ |x|+|y| \amp \text{ selain itu } . \end{cases}
+\end{equation*}
+</div>
+<div class="para">Fakta bahwa <span class="process-math">\(d_H\)</span> merupakan metrik dikaji dalam <a href="" class="xref" data-knowl="./knowl/ex_MS_hub.html" title="Latihan 7">Latihan 7</a>. Misalkan <span class="process-math">\((X,d_X) = (\R^2, d_H)\)</span> dan <span class="process-math">\((Y,d_Y) = (\R, d_E)\text{.}\)</span> Definisikan <span class="process-math">\(f: X \to Y\)</span> dan <span class="process-math">\(g: X \to Y\)</span> dengan</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_MS_hub.html">
+\begin{equation*}
+f(x) = \begin{cases}0 \amp \text{ jika }  x = (0,0) \\ 1 \amp \text{ selain itu } \end{cases}  \  \text{ dan }  \ g(x) = \begin{cases}0 \amp \text{ jika }  |x|\lt 1 \\ 1 \amp \text{ selain itu } \end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">Salah satu dari <span class="process-math">\(f\)</span> dan <span class="process-math">\(g\)</span> kontinu, sedangkan yang lain tidak. Tentukan yang mana, disertai bukti untuk masing-masing fungsi.</div>
+</div>
 <span class="incontext"><a href="sec_open_balls_exer.html#p-812" class="internal">in-context</a></span>
 </body>
 </html>

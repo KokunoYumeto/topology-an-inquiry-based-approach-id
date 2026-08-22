@@ -1,0 +1,336 @@
+<section xml:id="o003-c90-ch10-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 10</title>
+
+  <p>
+    Delapan pemeriksaan berikut menggabungkan beberapa gagasan Bab 10 dalam
+    situasi baru. Materi ini ditulis secara mandiri untuk komponen pendamping
+    berlisensi CC BY 4.0. Gunakan petunjuk hanya setelah mencoba soal; jawaban
+    menyatakan hasil, sedangkan solusi memperlihatkan bukti lengkap.
+  </p>
+
+  <exercise xml:id="o003-c90-ch10-mastery-01">
+    <title>Membaca seluruh struktur sebuah himpunan</title>
+    <statement>
+      <p>
+        Dalam <m>(\R,d_E)</m>, ambil
+        <m>A=\{0\}\cup(1,2]</m>. Tentukan interior, tutupan, batas, himpunan
+        titik limit, dan himpunan titik terasing dari <m>A</m>. Putuskan pula
+        apakah <m>A</m> terbuka atau tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-01-hint">
+      <p>
+        Analisis titik <m>0</m>, kedua ujung <m>1,2</m>, dan titik di antara
+        <m>1</m> dan <m>2</m> secara terpisah.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-01-answer">
+      <p>
+        <m>\Int(A)=(1,2)</m>,
+        <m>\overline A=\{0\}\cup[1,2]</m>,
+        <m>\Bdry(A)=\{0,1,2\}</m>,
+        <m>A'=[1,2]</m>, dan <m>A^i=\{0\}</m>. Himpunan <m>A</m> tidak
+        terbuka dan tidak tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-01-solution">
+      <p>
+        Setiap titik di <m>(1,2)</m> memiliki interval kecil di dalam
+        <m>A</m>; tidak ada titik lain yang interior. Titik <m>1</m> dapat
+        didekati dari kanan dan titik <m>2</m> dari kiri, sehingga keduanya
+        berada dalam tutupan dan merupakan titik limit. Semua titik
+        <m>(1,2)</m> juga titik limit, sedangkan titik <m>0</m> terasing karena,
+        misalnya, <m>( -1/2,1/2)\cap A=\{0\}</m>. Jadi
+        <m>A'=[1,2]</m> dan <m>A^i=\{0\}</m>. Tutupan adalah
+        <m>A\cup A'=\{0\}\cup[1,2]</m>. Menggunakan
+        <m>\Bdry(A)=\overline A\setminus\Int(A)</m> memberi
+        <m>\{0,1,2\}</m>. Karena <m>0</m> bukan titik interior, <m>A</m> tidak
+        terbuka; karena <m>1\in\overline A\setminus A</m>, <m>A</m> tidak
+        tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-mastery-02">
+    <title>Menutup barisan kebalikan</title>
+    <statement>
+      <p>
+        Buktikan langsung bahwa
+        <m>C=\{0\}\cup\{1/n\mid n\in\Z^+\}</m> tertutup di <m>\R</m>, dan
+        tentukan semua titik limit serta titik terasingnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-02-hint">
+      <p>
+        Titik <m>0</m> adalah satu-satunya kandidat titik limit. Untuk
+        <m>1/n</m>, pilih radius kurang dari separuh jaraknya ke tetangga
+        terdekat dalam daftar.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-02-answer">
+      <p>
+        Himpunan titik limit adalah <m>C'=\{0\}</m>; setiap <m>1/n</m>
+        terasing. Karena <m>C'\subseteq C</m>, himpunan <m>C</m> tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-02-solution">
+      <p>
+        Barisan <m>1/n</m> konvergen ke <m>0</m>, sehingga setiap lingkungan
+        <m>0</m> memuat titik <m>C</m> selain <m>0</m>; jadi <m>0\in C'</m>.
+        Untuk suatu <m>1/n</m>, jaraknya ke anggota lain dari daftar mempunyai
+        minimum positif di sekitar indeks itu; pilih radius lebih kecil
+        daripada setengah jarak ke <m>1/(n-1)</m> dan <m>1/(n+1)</m>, dengan
+        penyesuaian yang jelas untuk <m>n=1</m>. Bola tersebut bertemu <m>C</m>
+        hanya di <m>1/n</m>, jadi setiap <m>1/n</m> terasing.
+      </p>
+      <p>
+        Jika <m>x\notin C</m> dan <m>x\neq0</m>, pilih lingkungan kecil yang
+        tidak memuat <m>0</m>. Hanya berhingga banyak suku <m>1/n</m> dapat
+        berada di lingkungan itu; radius dapat diperkecil lagi untuk
+        menghindari semuanya. Maka <m>x</m> bukan titik limit. Jadi
+        <m>C'=\{0\}</m>. Karena <m>C</m> memuat semua titik limitnya, <m>C</m>
+        tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-mastery-03">
+    <title>Mengapa syarat lokal berhingga diperlukan</title>
+    <statement>
+      <p>
+        Berikan keluarga terhitung himpunan tertutup di <m>\R</m> yang
+        gabungannya tidak tertutup. Tunjukkan secara eksplisit di titik mana
+        keluarga itu gagal menjadi lokal berhingga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-03-hint">
+      <p>
+        Gunakan himpunan satu titik <m>C_n=\{1/n\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-03-answer">
+      <p>
+        Keluarga <m>C_n=\{1/n\}</m> terdiri atas himpunan tertutup, tetapi
+        gabungannya tidak memuat titik limit <m>0</m>. Keluarga itu tidak lokal
+        berhingga di <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-03-solution">
+      <p>
+        Setiap <m>C_n=\{1/n\}</m> tertutup karena himpunan satu titik tertutup
+        dalam ruang metrik. Gabungannya adalah
+        <m>U=\{1/n\mid n\in\Z^+\}</m>. Barisan <m>1/n</m> konvergen ke
+        <m>0</m>, jadi <m>0\in\overline U</m>, tetapi <m>0\notin U</m>.
+        Maka <m>U</m> tidak tertutup. Untuk setiap <m>\epsilon\gt0</m>, terdapat
+        tak hingga banyak <m>n</m> dengan <m>1/n\lt\epsilon</m>; akibatnya
+        <m>B(0,\epsilon)</m> bertemu tak hingga banyak <m>C_n</m>. Tepat di
+        <m>0</m> syarat lokal berhingga gagal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-mastery-04">
+    <title>Himpunan nol fungsi kontinu</title>
+    <statement>
+      <p>
+        Jika <m>f:X\to\R</m> kontinu, buktikan bahwa
+        <m>Z(f)=\{x\in X\mid f(x)=0\}</m> tertutup. Kemudian simpulkan bahwa
+        setiap himpunan aras <m>\{x\mid f(x)=c\}</m> juga tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-04-hint">
+      <p>
+        Tulis himpunan tersebut sebagai prapeta dari himpunan satu titik di
+        <m>\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-04-answer">
+      <p>
+        <m>Z(f)=f^{-1}(\{0\})</m> dan
+        <m>\{x\mid f(x)=c\}=f^{-1}(\{c\})</m>; keduanya tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-04-solution">
+      <p>
+        Setiap himpunan satu titik <m>\{c\}</m> tertutup di <m>\R</m>. Menurut
+        pencirian kekontinuan dengan himpunan tertutup, prapeta himpunan
+        tertutup terhadap <m>f</m> tertutup di <m>X</m>. Karena
+        <m>Z(f)=f^{-1}(\{0\})</m>, himpunan nol tertutup. Argumen yang sama
+        dengan <m>\{c\}</m> memberi ketertutupan setiap himpunan aras
+        <m>f^{-1}(\{c\})</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-mastery-05">
+    <title>Fungsi jarak ke suatu himpunan</title>
+    <statement>
+      <p>
+        Untuk <m>C\neq\emptyset</m>, definisikan
+        <m>\delta_C(x)=d(x,C)</m>. Buktikan
+        <m>|\delta_C(x)-\delta_C(y)|\leq d(x,y)</m>. Simpulkan bahwa
+        <m>\delta_C</m> kontinu dan bahwa himpunan nolnya adalah
+        <m>\overline C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-05-hint">
+      <p>
+        Untuk setiap <m>c\in C</m>, pertidaksamaan segitiga memberi
+        <m>d(x,c)\leq d(x,y)+d(y,c)</m>. Ambil infimum, lalu tukar <m>x</m>
+        dan <m>y</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-05-answer">
+      <p>
+        Fungsi <m>\delta_C</m> bersifat Lipschitz dengan konstanta <m>1</m>,
+        sehingga kontinu, dan
+        <m>\delta_C^{-1}(\{0\})=\overline C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-05-solution">
+      <p>
+        Untuk setiap <m>c\in C</m>,
+        <m>d(x,c)\leq d(x,y)+d(y,c)</m>. Mengambil infimum atas <m>c</m>
+        memberi <m>\delta_C(x)\leq d(x,y)+\delta_C(y)</m>, jadi
+        <m>\delta_C(x)-\delta_C(y)\leq d(x,y)</m>. Menukar <m>x</m> dan
+        <m>y</m> menghasilkan pertidaksamaan lawan; keduanya setara dengan
+        <m>|\delta_C(x)-\delta_C(y)|\leq d(x,y)</m>. Maka <m>\delta_C</m>
+        kontinu.
+      </p>
+      <p>
+        Jika <m>x\in\overline C</m>, setiap <m>B(x,1/n)</m> bertemu <m>C</m>,
+        sehingga <m>0\leq\delta_C(x)\lt1/n</m> untuk semua <m>n</m> dan
+        <m>\delta_C(x)=0</m>. Sebaliknya, jika <m>\delta_C(x)=0</m>, untuk
+        setiap <m>n</m> ada <m>c_n\in C</m> dengan
+        <m>d(x,c_n)\lt1/n</m>; jadi setiap lingkungan <m>x</m> bertemu
+        <m>C</m> dan <m>x\in\overline C</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-mastery-06">
+    <title>Dua identitas batas</title>
+    <statement>
+      <p>
+        Buktikan
+        <m>\Bdry(A)=\overline A\setminus\Int(A)</m> dan
+        <m>\Bdry(A)=\Bdry(X\setminus A)</m> untuk setiap <m>A\subseteq X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-06-hint">
+      <p>
+        Mulai dari
+        <m>\Bdry(A)=\overline A\cap\overline{X\setminus A}</m> dan identitas
+        <m>\overline{X\setminus A}=X\setminus\Int(A)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-06-answer">
+      <p>
+        Kedua identitas benar; yang pertama mengikuti dari identitas komplemen
+        interior, dan yang kedua dari simetri irisan kedua tutupan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-06-solution">
+      <p>
+        Gunakan rumus batas dan dualitas interior–tutupan:
+        <me>
+          \Bdry(A)=\overline A\cap\overline{X\setminus A}
+          =\overline A\cap(X\setminus\Int(A))
+          =\overline A\setminus\Int(A).
+        </me>
+        Selanjutnya,
+        <me>
+          \Bdry(X\setminus A)
+          =\overline{X\setminus A}\cap\overline{X\setminus(X\setminus A)}
+          =\overline{X\setminus A}\cap\overline A
+          =\Bdry(A).
+        </me>
+        Kesamaan terakhir hanya menggunakan sifat komutatif irisan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-mastery-07">
+    <title>Pencirian titik tutupan dengan barisan</title>
+    <statement>
+      <p>
+        Buktikan bahwa <m>x\in\overline A</m> jika dan hanya jika terdapat
+        barisan <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>x</m>. Jelaskan
+        mengapa barisan konstan diperlukan ketika <m>x\in A</m> terasing.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-07-hint">
+      <p>
+        Dari tutupan, pilih <m>a_n\in A\cap B(x,1/n)</m>. Untuk arah balik,
+        setiap lingkungan akhirnya memuat semua suku barisan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-07-answer">
+      <p>
+        Pilihan dari bola menyusut memberi arah maju; definisi konvergensi
+        memberi arah balik. Jika <m>x</m> terasing, pilihan yang mungkin untuk
+        semua indeks besar adalah <m>a_n=x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-07-solution">
+      <p>
+        Jika <m>x\in\overline A</m>, setiap bola <m>B(x,1/n)</m> bertemu
+        <m>A</m>. Pilih <m>a_n\in A\cap B(x,1/n)</m>. Untuk
+        <m>\epsilon\gt0</m>, pilih <m>N\gt1/\epsilon</m>; jika
+        <m>n\geq N</m>, maka <m>d(a_n,x)\lt1/n\leq1/N\lt\epsilon</m>.
+        Jadi <m>a_n\to x</m>. Bila <m>x</m> terasing, bola yang cukup kecil
+        bertemu <m>A</m> hanya di <m>x</m>, sehingga konstruksi ini akhirnya
+        memilih <m>a_n=x</m>; barisan konstan memang harus diizinkan.
+      </p>
+      <p>
+        Sebaliknya, jika <m>a_n\in A</m> dan <m>a_n\to x</m>, setiap
+        lingkungan <m>N</m> dari <m>x</m> memuat suatu bola
+        <m>B(x,\epsilon)</m>. Semua suku dengan indeks cukup besar berada
+        dalam bola itu, sehingga <m>N\cap A\neq\emptyset</m>. Maka setiap
+        lingkungan <m>x</m> bertemu <m>A</m>, yakni
+        <m>x\in\overline A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-mastery-08">
+    <title>Himpunan terbuka-tertutup dan fungsi indikator</title>
+    <statement>
+      <p>
+        Beri <m>\{0,1\}</m> metrik diskret dan definisikan
+        <m>\chi_A:X\to\{0,1\}</m> dengan nilai <m>1</m> pada <m>A</m> dan
+        <m>0</m> di luar <m>A</m>. Buktikan bahwa <m>\chi_A</m> kontinu jika
+        dan hanya jika <m>A</m> sekaligus terbuka dan tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-mastery-08-hint">
+      <p>
+        Dalam ruang diskret dua titik, <m>\{0\}</m> dan <m>\{1\}</m> terbuka.
+        Hitung kedua prapetanya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-mastery-08-answer">
+      <p>
+        <m>\chi_A^{-1}(\{1\})=A</m> dan
+        <m>\chi_A^{-1}(\{0\})=X\setminus A</m>; kekontinuan ekuivalen dengan
+        keterbukaan kedua himpunan tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-mastery-08-solution">
+      <p>
+        Jika <m>\chi_A</m> kontinu, prapeta dua himpunan terbuka
+        <m>\{1\}</m> dan <m>\{0\}</m> harus terbuka. Prapeta itu masing-masing
+        adalah <m>A</m> dan <m>X\setminus A</m>. Jadi <m>A</m> terbuka dan
+        komplemennya terbuka, yang berarti <m>A</m> juga tertutup.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>A</m> sekaligus terbuka dan tertutup. Maka
+        <m>A</m> dan <m>X\setminus A</m> terbuka. Setiap himpunan terbuka dalam
+        ruang diskret <m>\{0,1\}</m> adalah salah satu dari
+        <m>\emptyset,\{0\},\{1\},\{0,1\}</m>; prapetanya berturut-turut
+        <m>\emptyset,X\setminus A,A,X</m>, semuanya terbuka. Karena prapeta
+        setiap himpunan terbuka bersifat terbuka, <m>\chi_A</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+</section>

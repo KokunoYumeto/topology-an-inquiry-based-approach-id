@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch09-edition-note",
+  "id": "o003-c90-ch10-edition-note",
   "level": "1",
-  "url": "o003-c90-ch09-edition-note.html",
+  "url": "o003-c90-ch10-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat sembilan bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat sepuluh bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
 },
 {
   "id": "sec_sets_intro",
@@ -64,18 +64,18 @@ var ptx_lunr_docs = [
   "body": " interval   Suatu himpunan bagian dari disebut interval jika untuk setiap , , dan dalam (dalam notasi interval tak berbatas yang diperkenalkan di bawah, atau juga dapat diganti secara formal dengan ) yang memenuhi , apabila dan berada dalam , maka juga berada dalam .   "
 },
 {
-  "id": "p-38",
+  "id": "p-39",
   "level": "2",
-  "url": "sec_intervals.html#p-38",
+  "url": "sec_intervals.html#p-39",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "terbuka tertutup setengah terbuka setengah tertutup "
 },
 {
-  "id": "p-39",
+  "id": "p-40",
   "level": "2",
-  "url": "sec_intervals.html#p-39",
+  "url": "sec_intervals.html#p-40",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -91,9 +91,9 @@ var ptx_lunr_docs = [
   "body": " Gabungan, Irisan, dan Komplemen Himpunan  Dalam matematika, kumpulan titik yang membentuk seutas tali atau segumpal plastisin seperti dalam direpresentasikan sebagai suatu himpunan. Topologi kemudian mempelajari himpunan-himpunan tersebut serta sifat-sifat yang tidak berubah ketika suatu transformasi diterapkan padanya. Untuk mempelajari topologi, kita memerlukan pemahaman yang kuat tentang himpunan dan berbagai operasi pada himpunan.   himpunan Apa yang kita jumpai dalam disebut paradoks . Upaya awal kita untuk mendefinisikan himpunan menghasilkan keadaan yang mustahil, karena baik maupun menimbulkan kontradiksi. Paradoks ini disebut paradoks Russell , mengambil nama Bertrand Russell, meskipun tampaknya paradoks tersebut telah diketahui sebelum Russell. Pelajaran yang dapat kita ambil adalah bahwa kita harus berhati-hati ketika membuat definisi. Himpunan mungkin tampak sebagai objek yang sederhana, dan dalam pengalaman kita biasanya memang demikian, tetapi mendefinisikan himpunan secara formal dapat menimbulkan masalah. Oleh karena itu, kita tidak akan memberikan definisi formal, melainkan menganggap himpunan sebagai kumpulan objek yang tidak menimbulkan paradoks. Objek-objek tersebut disebut anggota himpunan. (Dalam teori himpunan aksiomatik, himpunan dipandang sebagai konsep primitif yang tidak didefinisikan sebagaimana titik tidak didefinisikan dalam geometri Euklides.)  Agar dapat bekerja dengan himpunan secara efektif, kita perlu memahami apa artinya dua himpunan sama.    Apa yang dimaksud dengan dua himpunan yang sama? Jika dan adalah himpunan, bagaimana kita membuktikan bahwa ? (Pertanyaan ini memerlukan pembahasan, berbeda dengan pertanyaan yang hanya meminta perhitungan atau contoh. Aktivitas di sepanjang buku ini akan memuat kedua jenis pertanyaan tersebut.)    Misalkan dan . Apakah ? Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.    Misalkan dan . Apakah ? Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.    Misalkan dan . Apakah ? Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.    Setelah memiliki gagasan tentang himpunan, kita dapat membentuk himpunan baru dari himpunan yang sudah ada. Sebagai contoh, kita mendefinisikan gabungan, irisan, selisih himpunan, dan komplemen sebagai berikut.   himpunan gabungan   Gabungan himpunan dan adalah himpunan yang didefinisikan sebagai .     Irisan  himpunan irisan himpunan dan adalah himpunan yang didefinisikan sebagai .    Misalkan dan adalah himpunan. Selisih himpunan  selisih himpunan  adalah himpunan .    Misalkan merupakan himpunan bagian dari suatu himpunan . Komplemen  himpunan komplemen  di dalam adalah himpunan . Komplemen himpunan di dalam himpunan juga dinyatakan dengan , (jika himpunan sudah dipahami dari konteks), , atau bahkan .     Kita dapat memvisualisasikan himpunan-himpunan ini dengan diagram Venn. Diagram Venn menggambarkan himpunan menggunakan bangun-bangun geometri. Sebagai contoh, jika adalah himpunan yang memuat semua himpunan lain yang sedang diperhatikan (kita menyebut sebagai himpunan semesta ), kita dapat merepresentasikan sebagai wadah besar (misalnya persegi panjang), dengan himpunan bagian dan sebagai wadah yang lebih kecil (misalnya lingkaran), lalu mengarsir anggota-anggota suatu himpunan tertentu. Diagram Venn dalam menggambarkan himpunan , , , , , dan .   Diagram Venn    Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A di kiri dan B di kanan. Seluruh lingkaran A, termasuk daerah irisannya dengan B, diarsir.  Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A di kiri dan B di kanan. Seluruh lingkaran B, termasuk daerah irisannya dengan A, diarsir.  Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Kedua lingkaran, termasuk daerah irisannya, diarsir untuk menunjukkan gabungan A dan B.         Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Hanya daerah berbentuk lensa tempat A dan B beririsan yang diarsir.  Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Seluruh daerah di luar lingkaran A diarsir untuk menunjukkan komplemen A.  Sebuah persegi panjang yang mewakili himpunan semesta memuat dua lingkaran beririsan, A dan B. Seluruh daerah di luar lingkaran B diarsir untuk menunjukkan komplemen B.          Seperti yang telah kita bahas, untuk membuktikan bahwa dua himpunan dan sama, kita membuktikan bahwa masing-masing merupakan himpunan bagian dari yang lain. Contoh berikut memberikan ilustrasi lain dari gagasan tersebut.    Misalkan , , dan adalah himpunan. Kita akan membuktikan bahwa .  Untuk membuktikan kesamaan himpunan ini, kita harus membuktikan bahwa dan . Kita mulai dengan .  Untuk membuktikan bahwa , kita perlu menunjukkan bahwa setiap anggota juga merupakan anggota . Untuk itu, kita pilih sembarang anggota dari dan menunjukkan bahwa anggota tersebut berada dalam . Misalkan . Maka dan . Fakta bahwa berarti bahwa , tetapi . Oleh karena itu, dan , tetapi . Ini berarti bahwa dan , sedangkan dan . Jadi, dan , tetapi . Kita menyimpulkan bahwa . Hal ini membuktikan bahwa .  Untuk inklusi sebaliknya, misalkan . Jadi, , tetapi . Karena , kita mengetahui bahwa dan . Fakta bahwa , bersama dengan keanggotaan yang telah disebutkan, berarti bahwa . Jadi, , , dan . Dengan demikian, dan . Kita menyimpulkan bahwa , yang menunjukkan bahwa . Kedua inklusi, dan , menunjukkan bahwa .    Kita akan menggunakan gagasan dalam dan untuk membuktikan kesamaan himpunan di sepanjang buku ini. Aktivitas berikut memberikan latihan tambahan.    Dalam aktivitas ini, kita bekerja dengan gabungan, irisan, dan komplemen himpunan. Misalkan dan adalah himpunan.    Misalkan dan , dengan .   Tentukan anggota dan . Apa saja anggota dan ?   Tentukan anggota dan .    Misalkan dan merupakan sembarang himpunan bagian dari suatu himpunan semesta . Terdapat hubungan antara , , komplemen keduanya, gabungan, dan irisan.   Gunakan diagram Venn untuk menggambar dan .   Gunakan diagram Venn dan hasil pada bagian (a) untuk menemukan serta membuktikan hubungan antara , , dan .   Gunakan diagram Venn dan hasil pada bagian (a) untuk menemukan serta membuktikan hubungan antara , , dan .    Dalam kita bekerja dengan gabungan dan irisan dua himpunan. Tidak ada alasan untuk membatasi definisi ini hanya pada dua himpunan, seperti yang ditunjukkan oleh aktivitas berikut.   keluarga himpunan berindeks   Untuk mendefinisikan kumpulan himpunan tak hingga, kita sering menggunakan apa yang disebut himpunan indeks . Himpunan indeks memungkinkan kita mempertimbangkan kumpulan objek yang berkorespondensi satu-satu dengan himpunan seperti bilangan bulat positif, atau bahkan bilangan real. Ketika menggunakan himpunan indeks, biasanya kita membuat pernyataan seperti “misalkan , untuk , adalah kumpulan himpunan yang diindeks oleh suatu himpunan ”. Kumpulan disebut keluarga himpunan berindeks .    Himpunan dapat berhingga. Sebagai contoh, misalkan untuk dalam himpunan .   Tentukan . Tentukan .   Ada berapa himpunan dalam keluarga berindeks ?    Himpunan indeks juga dapat tak hingga. Sebagai contoh, misalkan untuk dalam himpunan (dengan menyatakan interval yang terdiri atas bilangan real sedemikian sehingga ). Dalam hal ini, tentukan . Tentukan . Tentukan .    Kita telah mendefinisikan gabungan dan irisan dua himpunan. Gagasan yang sama dapat diperluas untuk mendefinisikan gabungan dan irisan suatu kumpulan himpunan berindeks.  himpunan irisan sembarang  Ingat bahwa jika dan adalah himpunan, irisan adalah himpunan . Bagaimana kita dapat memperluas definisi ini dari dua himpunan menjadi sebarang kumpulan himpunan? Dengan kata lain, bagaimana kita mendefinisikan  Dalam contoh pada bagian (b), himpunan apakah itu?  himpunan gabungan sembarang  Ingat bahwa jika dan adalah himpunan, gabungan adalah himpunan . Bagaimana kita dapat memperluas definisi ini dari dua himpunan menjadi sebarang kumpulan himpunan? Dengan kata lain, bagaimana kita mendefinisikan  Dalam contoh pada bagian (b), himpunan apakah itu?    Sifat dan yang kita pelajari dalam disebut Hukum De Morgan. Hukum ini berlaku untuk sebarang gabungan atau irisan himpunan, baik berhingga maupun tak hingga. Pembuktiannya diserahkan kepada .   Hukum De Morgan   Misalkan adalah kumpulan himpunan yang diindeks oleh suatu himpunan di dalam himpunan semesta . Maka                  Verifikasikan Hukum De Morgan untuk kasus khusus di dalam , dengan sebarang anggota himpunan indeks .    Mengapa komplemen suatu gabungan seharusnya berupa irisan, dan mengapa komplemen suatu irisan seharusnya berupa gabungan?   Perhatikan definisi gabungan dan irisan.    "
 },
 {
-  "id": "p-42",
+  "id": "p-43",
   "level": "2",
-  "url": "sec_union_int_comp.html#p-42",
+  "url": "sec_union_int_comp.html#p-43",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -109,18 +109,18 @@ var ptx_lunr_docs = [
   "body": "  Apa yang dimaksud dengan dua himpunan yang sama? Jika dan adalah himpunan, bagaimana kita membuktikan bahwa ? (Pertanyaan ini memerlukan pembahasan, berbeda dengan pertanyaan yang hanya meminta perhitungan atau contoh. Aktivitas di sepanjang buku ini akan memuat kedua jenis pertanyaan tersebut.)    Misalkan dan . Apakah ? Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.    Misalkan dan . Apakah ? Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.    Misalkan dan . Apakah ? Jika ya, buktikan jawaban Anda. Jika tidak, buktikan setiap inklusi yang berlaku.   "
 },
 {
-  "id": "p-48",
+  "id": "p-49",
   "level": "2",
-  "url": "sec_union_int_comp.html#p-48",
+  "url": "sec_union_int_comp.html#p-49",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Gabungan Irisan Selisih himpunan Komplemen "
 },
 {
-  "id": "p-53",
+  "id": "p-54",
   "level": "2",
-  "url": "sec_union_int_comp.html#p-53",
+  "url": "sec_union_int_comp.html#p-54",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -190,9 +190,9 @@ var ptx_lunr_docs = [
   "body": " Hasil Kali Kartesius Himpunan  Operasi terakhir pada himpunan yang akan kita bahas adalah hasil kali Kartesius (atau hasil kali silang ). Operasi ini sebenarnya sudah pernah kita jumpai. Ketika menggambar grafik garis pada bidang, kita memetakan titik-titik . Titik-titik tersebut merupakan pasangan terurut bilangan real. Gagasan ini dapat kita perluas ke sebarang himpunan.   hasil kali Kartesius   Misalkan dan adalah himpunan. Hasil kali Kartesius dari dan adalah himpunan .    Dengan kata lain, hasil kali Kartesius dan adalah himpunan pasangan terurut , dengan berasal dari dan berasal dari . Perhatikan bahwa urutannya penting.    Tuliskan semua anggota .    Jika memiliki anggota dan memiliki anggota, berapa banyak anggota yang dimiliki himpunan ? Jelaskan.    Tidak ada alasan untuk membatasi diri pada hasil kali Kartesius dua himpunan saja. Gagasan ini juga sudah pernah kita jumpai. Hasil kali Kartesius adalah bidang real standar yang kita nyatakan dengan , sedangkan hasil kali Kartesius adalah ruang real berdimensi tiga yang dinyatakan dengan . Jika kita memiliki suatu kumpulan berindeks yang terdiri atas himpunan-himpunan, dengan menjelajahi himpunan bilangan bulat positif, maka hasil kali Kartesius himpunan-himpunan dapat kita definisikan sebagai himpunan barisan tak hingga , dengan untuk setiap . Kita menyatakan hasil kali Kartesius ini dengan .  Huruf pi kapital ( ) digunakan untuk menyatakan hasil kali, sebagai analog dari sigma kapital ( ) yang digunakan untuk menyatakan jumlah. Kita akan mempelajari barisan secara lebih mendalam nanti.  Sebagai penutup bagian ini, kita merangkum beberapa sifat himpunan. Banyak di antara sifat-sifat ini dapat diperluas ke kumpulan himpunan sembarang. Sebagian besar pembuktiannya langsung. Pembuktian hukum asosiatif dan distributif diserahkan kepada .    Misalkan , , dan merupakan himpunan bagian dari suatu himpunan semesta .   Sifat Himpunan Kosong                            Sifat Himpunan Semesta                            Hukum Idempoten                  Hukum Komutatif                  Hukum Asosiatif                  Hukum Distributif                  Sifat Dasar                  Himpunan Bagian dan Komplemen          "
 },
 {
-  "id": "p-90",
+  "id": "p-91",
   "level": "2",
-  "url": "sec_cart_prod.html#p-90",
+  "url": "sec_cart_prod.html#p-91",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -352,9 +352,9 @@ var ptx_lunr_docs = [
   "body": " fungsi   Suatu fungsi  dari himpunan tak kosong ke himpunan adalah koleksi pasangan terurut sedemikian sehingga   untuk setiap , terdapat pasangan di dalam , dan    jika dan berada di dalam , maka .      "
 },
 {
-  "id": "p-195",
+  "id": "p-196",
   "level": "2",
-  "url": "sec_func_intro.html#p-195",
+  "url": "sec_func_intro.html#p-196",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -388,9 +388,9 @@ var ptx_lunr_docs = [
   "body": "  Kita sering mendefinisikan fungsi dengan aturan, tetapi fungsi juga dapat didefinisikan melalui tabel atau grafik. Dalam aktivitas ini, kita akan bekerja dengan fungsi yang didefinisikan melalui aturan. Tujuan aktivitas ini adalah menunjukkan bahwa domain, kodomain, dan aturan yang menentukan keluaran sama-sama penting untuk menentukan apakah suatu fungsi merupakan injeksi dan\/atau surjeksi. Sebagai contoh, misalkan . (Perhatikan bahwa adalah fungsinya dan adalah citra oleh .) Perhatikan bahwa .  Pengamatan ini cukup untuk membuktikan bahwa fungsi bukan injeksi karena terdapat dua masukan berbeda yang menghasilkan keluaran yang sama.  Karena , kita mengetahui bahwa untuk setiap . Hal ini menyiratkan bahwa fungsi bukan surjeksi. Sebagai contoh, berada di dalam kodomain , sedangkan untuk setiap di dalam domain .    Kita dapat mengubah domain suatu fungsi sehingga fungsi tersebut didefinisikan pada subhimpunan dari domain semula. Fungsi semacam ini disebut pembatasan.  Pembatasan tersebut juga dinyatakan dengan notasi . Kita juga menyebut sebagai suatu perluasan dari . Misalkan didefinisikan oleh , dan misalkan , dengan menyatakan himpunan bilangan real positif. Jadi, memiliki kodomain yang sama dengan , tetapi domain yang berbeda.   Buktikan bahwa merupakan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan , dan misalkan didefinisikan oleh . Perhatikan bahwa fungsi menggunakan rumus yang sama dengan fungsi dan memiliki domain yang sama dengan , tetapi kodomainnya berbeda dari kodomain .   Jelaskan mengapa bukan injeksi.   Apakah merupakan surjeksi? Berikan alasan untuk kesimpulan Anda.    Misalkan . Definisikan dengan .   Buktikan atau berikan contoh tandingan: fungsi merupakan injeksi.   Buktikan atau berikan contoh tandingan: fungsi merupakan surjeksi.   "
 },
 {
-  "id": "p-227",
+  "id": "p-228",
   "level": "2",
-  "url": "sec_func_intro.html#p-227",
+  "url": "sec_func_intro.html#p-228",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -496,9 +496,9 @@ var ptx_lunr_docs = [
   "body": "   merupakan pernyataan bikondisional, sehingga kita perlu membuktikan kedua arahnya. Misalkan dan himpunan tak kosong, serta misalkan .    Andaikan merupakan bijeksi. Kita akan membuktikan bahwa merupakan fungsi, yakni bahwa memenuhi syarat-syarat dalam .   Misalkan . Sifat apa dari yang memastikan bahwa untuk suatu ? Kesimpulan apa yang dapat kita tarik tentang ?   Sekarang misalkan , , dan andaikan bahwa . Apa yang ditunjukkan hal ini tentang pasangan-pasangan terurut yang harus termuat dalam ? Sifat apa dari yang memastikan bahwa ? Kesimpulan apa yang dapat kita tarik tentang ?    Sekarang andaikan merupakan fungsi dari ke . Kita akan membuktikan bahwa merupakan bijeksi.   Apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan injeksi? Gunakan fakta bahwa merupakan fungsi untuk membuktikan bahwa merupakan injeksi.   Apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan surjeksi? Gunakan fakta bahwa merupakan fungsi untuk membuktikan bahwa merupakan surjeksi.   "
 },
 {
-  "id": "p-272",
+  "id": "p-273",
   "level": "2",
-  "url": "sec_inv_func.html#p-272",
+  "url": "sec_inv_func.html#p-273",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -586,9 +586,9 @@ var ptx_lunr_docs = [
   "body": " himpunan berhingga   Suatu himpunan disebut berhingga jika atau terdapat suatu bijeksi yang memetakan ke himpunan untuk suatu bilangan bulat positif .   "
 },
 {
-  "id": "p-307",
+  "id": "p-308",
   "level": "2",
-  "url": "sec_card_set.html#p-307",
+  "url": "sec_card_set.html#p-308",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -811,9 +811,9 @@ var ptx_lunr_docs = [
   "body": " Ruang Metrik  Dalam sebagian besar pengalaman kita mempelajari matematika, pembahasan berlangsung di , tempat kita mengukur jarak antara titik dan dengan jarak Euklides standar . Dalam aktivitas pendahuluan, kita melihat bahwa fungsi memenuhi banyak sifat yang sama dengan . Sifat-sifat ini memungkinkan kita menggunakan maupun sebagai fungsi jarak. Setiap fungsi jarak kita sebut metrik , dan setiap ruang tempat suatu metrik didefinisikan disebut ruang metrik .   metrik   Suatu metrik pada ruang adalah fungsi yang memenuhi sifat-sifat berikut:    untuk setiap ,     jika dan hanya jika di dalam ,     untuk setiap , dan     untuk setiap .       Sifat 1 dan 2 suatu metrik menyatakan bahwa metrik tersebut definit positif , sedangkan sifat 3 menyatakan bahwa metrik tersebut simetris . Sifat 4 dalam definisi biasanya merupakan sifat metrik yang paling sulit diverifikasi dan disebut pertidaksamaan segitiga . pertidaksamaan segitiga    ruang metrik   Suatu ruang metrik adalah pasangan , dengan suatu metrik pada ruang .    Apabila metriknya jelas dari konteks, kita cukup menyebut sebagai ruang metrik.    Untuk setiap butir berikut, tentukan apakah merupakan ruang metrik. Jika merupakan ruang metrik, jelaskan alasannya. Jika bukan ruang metrik, tentukan sifat metrik mana yang dipenuhi oleh dan mana yang tidak. Jika merupakan ruang metrik, berikan deskripsi geometris lingkaran satuan (himpunan semua titik di dalam yang berjarak dari unsur nol) di ruang tersebut.     , .     ,      ,      , himpunan semua fungsi kontinu pada interval , .    Perlu diperhatikan bahwa tidak semua ruang metrik bersifat tak berhingga. Pada contoh berikut, kita membahas suatu metrik pada ruang berhingga.    Misalkan dan definisikan dengan nilai-nilai pada Tabel .   Tabel nilai fungsi                             Menurut definisi, kita mempunyai untuk setiap , dengan jika dan hanya jika . Karena tabel tersebut simetris terhadap diagonalnya, kita dapat melihat bahwa untuk setiap . Satu-satunya sifat yang masih perlu diverifikasi adalah pertidaksamaan segitiga. Jika , maka untuk setiap . Jika , maka dan . Jika , maka dan .  Dengan demikian, tersisa tiga kasus yang perlu dipertimbangkan, yaitu ketika , , dan berbeda satu sama lain. Sekarang, .  Jadi, merupakan metrik pada .     menunjukkan bahwa himpunan berhingga pun dapat menjadi ruang metrik. Bahkan, kita dapat membentuk ruang metrik berhingga dengan mengambil sebarang subhimpunan berhingga dari ruang metrik , lalu menggunakan pembatasan pada sebagai metrik. mengilustrasikan hal ini dengan menetapkan , , dan di dalam . Dengan demikian, merupakan pembatasan metrik Euklides pada himpunan . Cara lain untuk membangun ruang metrik berhingga adalah memulai dengan himpunan titik yang berhingga, kemudian membuat graf yang menggunakan titik-titik tersebut sebagai simpul. Buatlah sisi-sisi sedemikian sehingga graf tersebut terhubung (artinya, terdapat lintasan dari setiap simpul ke setiap simpul lainnya), lalu berikan bobot pada sisi-sisinya seperti yang diilustrasikan pada . Selanjutnya, kita mendefinisikan metrik pada dengan menetapkan sebagai panjang lintasan terpendek antara simpul dan di dalam graf. Sebagai contoh, pada graf ini.   Graf untuk mendefinisikan suatu metrik.  Graf berbobot dengan lima simpul a, b, c, d, dan e. Sisi-sisinya berbobot a–b: 3, a–c: 8, a–e: 1, b–d: 7, b–e: 2, c–d: 2, c–e: 7, dan d–e: 5.   Seperti metrik Euklides dan metrik taksi, butir (c) dalam dapat diperluas ke sebagai berikut. Jika dan berada di dalam , maka jarak maksimum dari ke didefinisikan sebagai .   metrik maksimum Metrik disebut metrik maksimum . Pada bagian berikutnya, kita membuktikan bahwa metrik Euklides memang merupakan suatu metrik. Pembuktian bahwa dan merupakan metrik diserahkan kepada dan .  "
 },
 {
-  "id": "p-418",
+  "id": "p-419",
   "level": "2",
-  "url": "sec_metric_space.html#p-418",
+  "url": "sec_metric_space.html#p-419",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -829,9 +829,9 @@ var ptx_lunr_docs = [
   "body": " metrik   Suatu metrik pada ruang adalah fungsi yang memenuhi sifat-sifat berikut:    untuk setiap ,     jika dan hanya jika di dalam ,     untuk setiap , dan     untuk setiap .      "
 },
 {
-  "id": "p-424",
+  "id": "p-425",
   "level": "2",
-  "url": "sec_metric_space.html#p-424",
+  "url": "sec_metric_space.html#p-425",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -874,9 +874,9 @@ var ptx_lunr_docs = [
   "body": " Graf untuk mendefinisikan suatu metrik.  Graf berbobot dengan lima simpul a, b, c, d, dan e. Sisi-sisinya berbobot a–b: 3, a–c: 8, a–e: 1, b–d: 7, b–e: 2, c–d: 2, c–e: 7, dan d–e: 5.  "
 },
 {
-  "id": "p-439",
+  "id": "p-440",
   "level": "2",
-  "url": "sec_metric_space.html#p-439",
+  "url": "sec_metric_space.html#p-440",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -892,9 +892,9 @@ var ptx_lunr_docs = [
   "body": " Metrik Euklides pada  Ruang metrik yang paling kita kenal adalah ruang metrik , dengan    metrik Euklides Metrik disebut metrik standar atau metrik Euklides pada .  Metrik Euklides ini dapat kita perumum dari ke ruang real berdimensi berapa pun. Misalkan bilangan bulat positif dan misalkan serta berada di dalam . Kita definisikan dengan .  Dalam aktivitas berikutnya, kita akan menunjukkan bahwa memenuhi tiga sifat pertama suatu metrik.    Misalkan dan berada di dalam .    Tunjukkan bahwa .    Tunjukkan bahwa .    Tunjukkan bahwa jika , maka .    Tunjukkan bahwa jika , maka .    Membuktikan bahwa pertidaksamaan segitiga terpenuhi sering kali merupakan bagian tersulit dalam membuktikan bahwa suatu fungsi adalah metrik. Kita akan menguraikan pembuktian ini dengan bantuan Pertidaksamaan Cauchy-Schwarz.   Pertidaksamaan Cauchy-Schwarz  Pertidaksamaan Cauchy-Schwarz   Misalkan bilangan bulat positif dan , berada di dalam . Maka .      Sebelum membuktikan Pertidaksamaan Cauchy-Schwarz, mari kita telaah pertidaksamaan tersebut dalam dua keadaan khusus.    Misalkan dan berada di dalam . Verifikasikan Pertidaksamaan Cauchy-Schwarz dalam keadaan ini.    Misalkan dan berada di dalam . Verifikasikan Pertidaksamaan Cauchy-Schwarz dalam keadaan ini.    Sekarang kita buktikan Pertidaksamaan Cauchy-Schwarz.   Misalkan bilangan bulat positif dan , berada di dalam . Untuk memverifikasi , cukup ditunjukkan bahwa .  Hal ini sulit dilakukan secara langsung, tetapi ada siasat yang dapat kita gunakan. Perhatikan bentuk .  (Semua penjumlahan kita dipahami berlangsung dari 1 sampai , sehingga batas penjumlahan tidak akan kita tuliskan lagi sepanjang sisa pembuktian.) Sekarang .  Untuk menafsirkan bentuk terakhir ini dengan lebih jelas, misalkan , , dan . Jika , pertidaksamaan yang hendak dibuktikan langsung berlaku. Jadi, dalam argumen berikutnya kita dapat menganggap , sehingga . Pertidaksamaan yang diberikan oleh kemudian dapat ditulis dalam bentuk .  Jadi, kita memiliki polinom kuadrat yang tidak pernah bernilai negatif. Hal ini menyiratkan bahwa polinom kuadrat memiliki paling banyak satu akar real. Rumus kuadrat memberikan akar-akar sebagai .  Jika , maka memiliki dua akar real. Oleh karena itu, agar memiliki paling banyak satu akar real, harus berlaku atau .  Dengan demikian, Pertidaksamaan Cauchy-Schwarz terbukti.   Salah satu akibat Pertidaksamaan Cauchy-Schwarz yang kita perlukan untuk menunjukkan bahwa adalah metrik ialah hasil berikut.    Misalkan bilangan bulat positif dan , berada di dalam . Maka .      Sebelum membuktikan akibat tersebut, mari kita telaah hasil itu dalam dua keadaan khusus.    Misalkan dan berada di dalam . Verifikasikan dalam keadaan ini.    Misalkan dan berada di dalam . Verifikasikan dalam keadaan ini.    Sekarang kita buktikan .   Misalkan bilangan bulat positif dan , berada di dalam . Sekarang .  Mengambil akar kuadrat kedua ruas menghasilkan pertidaksamaan yang diinginkan.   Sekarang kita dapat menyelesaikan pembuktian bahwa adalah metrik.   Misalkan bilangan bulat positif dan , , serta berada di dalam . Gunakan untuk menunjukkan bahwa .   Dengan demikian, pembuktian bahwa metrik Euklides memang merupakan metrik telah selesai.  Kita telah melihat beberapa metrik dalam bagian ini, dan sebagian di antaranya memiliki nama khusus. Misalkan dan .   Metrik Euklides , dengan .    Metrik taksi , dengan .    Metrik maksimum , dengan .     Kita baru menunjukkan bahwa dan merupakan metrik pada , tetapi argumen serupa berlaku di dalam . Pembuktiannya diserahkan kepada dan . Selain itu, metrik diskret  metrik diskret  menjadikan setiap himpunan sebagai ruang metrik. Pembuktiannya diserahkan kepada .  "
 },
 {
-  "id": "p-441",
+  "id": "p-442",
   "level": "2",
-  "url": "sec_euclid_rn.html#p-441",
+  "url": "sec_euclid_rn.html#p-442",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -973,9 +973,9 @@ var ptx_lunr_docs = [
   "body": " Misalkan bilangan bulat positif dan , , serta berada di dalam . Gunakan untuk menunjukkan bahwa .  "
 },
 {
-  "id": "p-477",
+  "id": "p-478",
   "level": "2",
-  "url": "sec_euclid_rn.html#p-477",
+  "url": "sec_euclid_rn.html#p-478",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1153,9 +1153,9 @@ var ptx_lunr_docs = [
   "body": " Metrik Hamming  Dalam masyarakat kita, banyak sekali informasi dikomunikasikan secara elektronik. Transaksi bank, program televisi, komunikasi militer, panggilan telepon seluler, citra digital, dan hampir setiap pertukaran yang dapat dibayangkan dapat didigitalkan dan dikirimkan secara elektronik, atau memang sudah dilakukan dengan cara tersebut. Dalam banyak situasi, kita perlu membandingkan satu kumpulan data dengan kumpulan lainnya (misalnya, pencarian untai teks atau pencocokan citra di Internet, serta untaian DNA), dan metrik sering digunakan untuk tujuan ini. Komputer bekerja dengan sistem biner, artinya komputer hanya mengenali nol dan satu. Karena itu, pesan teks digital merupakan suatu untai nol dan satu. Dengan kata lain, pesan digital merupakan kumpulan unsur dalam ruang untuk suatu bilangan bulat positif , dengan . Setiap unsur dalam disebut kata —yakni, kata adalah unsur dalam yang dinyatakan dalam bentuk . Seperti halnya dalam bahasa Inggris, yang tidak setiap kombinasi hurufnya membentuk kata yang bermakna, tidak setiap kata dapat dikenali sebagai bagian dari pesan yang dapat dipahami. Sebagai contoh, kita dapat mengodekan huruf-huruf dalam alfabet dengan menetapkan bilangan 1 sampai 26 pada huruf-huruf tersebut, kemudian menjadikannya unsur dalam dengan mengonversinya ke bentuk biner. Himpunan semua kata yang dapat dipahami disebut kode . Jadi, kode hanyalah suatu subhimpunan yang unsur-unsurnya disepakati oleh semua pihak sebagai kata-kata yang bermakna. Kata-kata dalam suatu kode disebut kata kode . Untuk menangani masalah yang terjadi dalam pengiriman pesan digital, seperti mengacak pesan ( pengodean ), memulihkan pesan dari bentuk teracak ( pendekodean ), serta mendeteksi dan memperbaiki galat dalam pesan, kita perlu memiliki cara untuk mengukur jarak antarkata. Salah satu caranya adalah menggunakan metrik Hamming.   metrik Hamming   Misalkan dan merupakan kata-kata dalam . Jarak Hamming  antara dan adalah .    Ingatlah bahwa untuk setiap , baik maupun bernilai 0 atau 1. Oleh karena itu,   Dengan kata lain, menghitung banyaknya komponen tempat dan berbeda.    Jelaskan mengapa merupakan suatu metrik.    Misalkan kita membuat kode dalam , dengan Artinya, kata-kata , , , , , , , dan merupakan satu-satunya kata yang dapat menyusun suatu pesan. Hitung .    Misalkan kita menerima pesan .   Bagaimana kita mengetahui bahwa telah terjadi galat dalam transmisi pesan yang kita terima?   Untuk memperbaiki galat dalam pesan yang diterima ini, kita mengganti kata-kata yang salah dengan kata kode dalam yang paling dekat dengan masing-masing kata tersebut. Perbaikilah pesan ini. (Perhatikan bahwa mungkin terdapat lebih dari satu kemungkinan penggantian. Temukan semua kemungkinannya.)    "
 },
 {
-  "id": "p-537",
+  "id": "p-538",
   "level": "2",
-  "url": "sec_hamming.html#p-537",
+  "url": "sec_hamming.html#p-538",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1225,9 +1225,9 @@ var ptx_lunr_docs = [
   "body": " Pendahuluan  Bilangan real memiliki suatu sifat khusus yang, antara lain, memungkinkan kita mendefinisikan jarak antara suatu titik dan suatu himpunan di ruang metrik. Sifat tersebut juga memungkinkan kita mendefinisikan jarak antarsubhimpunan pada jenis ruang metrik tertentu, sehingga terbentuk suatu ruang metrik yang sama sekali baru, yang unsur-unsurnya adalah subhimpunan dari ruang metrik semula. Dalam aktivitas ini, kita akan menelaah sifat bilangan real tersebut.  Kita mulai dengan meninjau cara mendefinisikan jarak antara suatu bilangan real dan suatu interval di dengan metrik Euklides yang didefinisikan oleh .  Misalkan dan misalkan adalah interval tertutup . Wajar jika kita mengusulkan bahwa jarak antara titik dan himpunan , yang dinotasikan dengan , seharusnya merupakan jarak dari titik ke titik di yang paling dekat dengan . Jadi, dalam kasus ini kita akan mengatakan .  Hal ini mungkin mengarahkan kita untuk mengusulkan bahwa jarak dari suatu titik ke suatu himpunan , yang dinotasikan dengan , adalah jarak minimum dari titik tersebut ke sebarang titik di dalam himpunan itu, yaitu .  Bagaimana jika kita mengubah himpunan menjadi interval terbuka ? Lalu, berapakah seharusnya , atau apakah jarak ini seharusnya ada? Jika kita memandang jarak antara suatu titik dan suatu himpunan sebagai ukuran seberapa jauh kita harus bergerak dari titik tersebut hingga mencapai himpunan itu, maka dalam kasus dan , segera setelah kita menempuh jarak lebih dari 1 dari ke arah , kita mencapai himpunan . Jadi, secara intuitif kita dapat mengatakan bahwa juga. Namun, kita tidak dapat mendefinisikan jarak ini sebagai jarak dari ke suatu titik di karena . Kita memerlukan cara lain untuk merumuskan gagasan jarak dari suatu titik ke suatu himpunan.  Dalam kasus seperti ini, dengan dan , kita dapat menelaah himpunan dan mencermati beberapa fakta tentang himpunan tersebut. Sebagai contoh, himpunan merupakan subhimpunan dari bilangan real tak negatif. Selain itu, dalam contoh ini tidak ada bilangan di yang lebih kecil dari 1. Karena sifat ini, kita akan menyebut bilangan 1 sebagai batas bawah untuk . Secara umum,   batas bawah   Misalkan adalah subhimpunan tak kosong dari . Suatu batas bawah untuk adalah bilangan real sedemikian sehingga untuk setiap .    Jika suatu subhimpunan dari memiliki batas bawah, kita mengatakan bahwa  terbatas di bawah . Jadi, himpunan terbatas di bawah oleh 1. Himpunan juga terbatas di bawah oleh 0.5 dan 0. Bahkan, setiap bilangan yang lebih kecil dari 1 merupakan batas bawah untuk . Namun, gagasan pentingnya adalah bahwa tidak ada bilangan yang lebih besar dari 1 yang merupakan batas bawah untuk . Karena itu, kita menyebut 1 sebagai batas bawah terbesar dari . Secara umum,   batas bawah terbesar   Misalkan adalah subhimpunan tak kosong dari yang terbatas di bawah. Suatu batas bawah terbesar untuk adalah bilangan real sedemikian sehingga memenuhi dua syarat berikut.    merupakan batas bawah untuk ; dan    jika merupakan batas bawah untuk , maka .        infimum Batas bawah terbesar juga disebut infimum . Sekarang kita dapat menggunakan gagasan batas bawah terbesar ini untuk mendefinisikan jarak antara dan sebagai batas bawah terbesar dari himpunan . Namun, ada beberapa pertanyaan yang perlu kita jawab sebelum dapat melakukannya. Salah satunya adalah apakah setiap subhimpunan tak kosong dari yang terbatas di bawah memiliki infimum. Jawaban atas pertanyaan ini adalah ya, dan kita akan menerima hasil ini sebagai suatu aksioma dalam sistem bilangan real (yang sering disebut aksioma kelengkapan ).    Apakah setiap subhimpunan memiliki batas bawah? Jelaskan. (Jika suatu subhimpunan memiliki batas bawah, kita mengatakan bahwa himpunan tersebut terbatas di bawah .)    Manakah dari subhimpunan dari berikut yang terbatas di bawah? Jika himpunannya terbatas di bawah, berapakah infimumnya?                Bagaimana cara mendefinisikan batas atas terkecil dari suatu subhimpunan dari ?    "
 },
 {
-  "id": "p-564",
+  "id": "p-565",
   "level": "2",
-  "url": "sec_glb_intro.html#p-564",
+  "url": "sec_glb_intro.html#p-565",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1243,9 +1243,9 @@ var ptx_lunr_docs = [
   "body": " batas bawah   Misalkan adalah subhimpunan tak kosong dari . Suatu batas bawah untuk adalah bilangan real sedemikian sehingga untuk setiap .   "
 },
 {
-  "id": "p-566",
+  "id": "p-567",
   "level": "2",
-  "url": "sec_glb_intro.html#p-566",
+  "url": "sec_glb_intro.html#p-567",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1261,9 +1261,9 @@ var ptx_lunr_docs = [
   "body": " batas bawah terbesar   Misalkan adalah subhimpunan tak kosong dari yang terbatas di bawah. Suatu batas bawah terbesar untuk adalah bilangan real sedemikian sehingga memenuhi dua syarat berikut.    merupakan batas bawah untuk ; dan    jika merupakan batas bawah untuk , maka .      "
 },
 {
-  "id": "p-570",
+  "id": "p-571",
   "level": "2",
-  "url": "sec_glb_intro.html#p-570",
+  "url": "sec_glb_intro.html#p-571",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1288,9 +1288,9 @@ var ptx_lunr_docs = [
   "body": " Jarak dari Titik ke Himpunan  Metrik digunakan untuk menetapkan keterpisahan antarobjek. Ruang topologis dapat dikelompokkan ke dalam berbagai kategori berdasarkan seberapa baik jenis-jenis himpunan tertentu dapat dipisahkan. Kita telah mendefinisikan metrik sebagai fungsi yang mengukur jarak antartitik di suatu ruang metrik, dan dalam aktivitas ini kita memperluas gagasan tersebut untuk mengukur jarak antara sebuah titik dan suatu subhimpunan di ruang metrik. Akan tetapi, sebelum itu kita perlu menjawab dua pertanyaan. Pertanyaan pertama telah kita kemukakan dalam aktivitas pendahuluan. Kita akan mengasumsikan aksioma kelengkapan bagi bilangan real, yakni bahwa setiap subhimpunan tak kosong dari yang terbatas di bawah selalu mempunyai batas bawah terbesar. Pertanyaan kedua adalah apakah batas bawah terbesar itu unik.    Misalkan suatu subhimpunan dari yang terbatas di bawah, dan asumsikan bahwa mempunyai batas bawah terbesar. Dalam aktivitas ini, kita akan menunjukkan bahwa infimum itu unik.    Metode apa yang dapat kita gunakan untuk membuktikan bahwa hanya mempunyai satu batas bawah terbesar?    Misalkan dan keduanya merupakan batas bawah terbesar untuk . Mengapa dan keduanya merupakan batas bawah untuk ?    Dua hal apa yang dinyatakan sifat kedua batas bawah terbesar mengenai hubungan antara dan ?    Mengapa batas bawah terbesar dari harus unik?    Setelah meninjau keberadaan dan keunikan batas bawah terbesar, kini kita dapat mengatakan bahwa setiap subhimpunan tak kosong dari yang terbatas di bawah mempunyai batas bawah terbesar yang unik. Kita menggunakan notasi (atau untuk infimum dari ) bagi batas bawah terbesar dari . Terdapat pula batas atas terkecil  batas atas terkecil ( , atau untuk supremum  supremum ) bagi suatu subhimpunan tak kosong dari yang terbatas di atas.  Sekarang kita dapat mendefinisikan secara formal jarak antara sebuah titik dan suatu subhimpunan di ruang metrik.    Misalkan suatu ruang metrik, misalkan , dan misalkan suatu subhimpunan tak kosong dari . Jarak dari ke adalah .    Kita menotasikan jarak dari ke dengan . Ketika menghitung jarak seperti ini, metrik yang mendasarinya harus dipahami dengan jelas.    Dalam aktivitas ini, kita menelaah beberapa fakta mengenai jarak antara sebuah titik dan suatu himpunan. Misalkan suatu ruang metrik, misalkan , dan misalkan suatu subhimpunan tak kosong dari .    Mengapa pasti ada?    Jika , apakah harus berlaku ?    "
 },
 {
-  "id": "p-577",
+  "id": "p-578",
   "level": "2",
-  "url": "sec_dist_point_set.html#p-577",
+  "url": "sec_dist_point_set.html#p-578",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1306,9 +1306,9 @@ var ptx_lunr_docs = [
   "body": "  Misalkan suatu subhimpunan dari yang terbatas di bawah, dan asumsikan bahwa mempunyai batas bawah terbesar. Dalam aktivitas ini, kita akan menunjukkan bahwa infimum itu unik.    Metode apa yang dapat kita gunakan untuk membuktikan bahwa hanya mempunyai satu batas bawah terbesar?    Misalkan dan keduanya merupakan batas bawah terbesar untuk . Mengapa dan keduanya merupakan batas bawah untuk ?    Dua hal apa yang dinyatakan sifat kedua batas bawah terbesar mengenai hubungan antara dan ?    Mengapa batas bawah terbesar dari harus unik?   "
 },
 {
-  "id": "p-583",
+  "id": "p-584",
   "level": "2",
-  "url": "sec_dist_point_set.html#p-583",
+  "url": "sec_dist_point_set.html#p-584",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1819,9 +1819,9 @@ var ptx_lunr_docs = [
   "body": " Lingkungan  -lingkungan suatu titik dalam ruang metrik  Kita telah mengenal gagasan interval terbuka dalam . Selanjutnya, kita memperkenalkan gagasan lingkungan suatu titik dan mencirikan kekontinuan dalam kaitannya dengan lingkungan. Ini merupakan langkah berikutnya dalam mengembangkan gagasan kekontinuan di ruang topologi.  Bola terbuka dalam ruang metrik juga disebut -lingkungan di sekitar . Lingkungan suatu titik dapat dipandang sebagai sebarang himpunan yang mencakup titik tersebut.   lingkungan dalam ruang metrik   Misalkan suatu ruang metrik dan . Suatu subhimpunan dari merupakan lingkungan bagi jika terdapat sedemikian sehingga .         Dalam dengan metrik Euklides, himpunan (bilangan-bilangan riil positif) merupakan lingkungan bagi karena bola terbuka termuat seluruhnya dalam .    Dalam dengan metrik Euklides, himpunan bukan lingkungan bagi karena setiap bola terbuka yang berpusat di memuat sejumlah bilangan bukan bulat.    Dalam dengan metrik diskret, himpunan merupakan lingkungan bagi karena bola terbuka .       Sebagai contoh lain, bola terbuka merupakan lingkungan bagi . Kita bahkan dapat mengatakan lebih banyak mengenai bola terbuka.    Misalkan suatu ruang metrik, , dan . Dalam aktivitas ini, kita mengajukan pertanyaan: apakah merupakan lingkungan bagi setiap titik di dalamnya?    Misalkan . Apa yang harus kita lakukan untuk menunjukkan bahwa merupakan lingkungan bagi ?    Gunakan untuk membantu menunjukkan bahwa merupakan lingkungan bagi .   sebagai lingkungan bagi .   Bola besar berwarna biru dengan garis putus-putus, B(a, delta), berpusat di a. Titik b berada di dalam bola itu dan dihubungkan ke a oleh sebuah ruas garis. Bola lebih kecil berwarna magenta dengan garis putus-putus berpusat di b dan seluruhnya berada di dalam bola besar.      Apakah pernyataan sebaliknya benar? Artinya, jika suatu himpunan merupakan lingkungan bagi setiap titiknya, apakah himpunan tersebut merupakan bola terbuka? Pembuktian tidak diperlukan, tetapi berikan argumen yang meyakinkan.    "
 },
 {
-  "id": "p-765",
+  "id": "p-766",
   "level": "2",
-  "url": "sec_neighborhoods.html#p-765",
+  "url": "sec_neighborhoods.html#p-766",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1873,9 +1873,9 @@ var ptx_lunr_docs = [
   "body": "  Misalkan suatu fungsi dari ruang metrik ke ruang metrik yang kontinu di . Dengan menggunakan notasi dari paragraf di atas, dalam aktivitas ini kita menentukan apakah harus sama dengan untuk suatu .  Definisikan dengan , dan gunakan metrik Euklides pada seluruh aktivitas. Asumsikan bahwa merupakan fungsi kontinu. Maka kontinu di .    Tentukan .    Tentukan .    Apakah merupakan bola terbuka yang berpusat di ? Jelaskan.   "
 },
 {
-  "id": "p-783",
+  "id": "p-784",
   "level": "2",
-  "url": "sec_cont_neighborhoods.html#p-783",
+  "url": "sec_cont_neighborhoods.html#p-784",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2035,9 +2035,9 @@ var ptx_lunr_docs = [
   "body": " Pendahuluan  Perhatikan interval dalam dengan metrik Euklides. Jika , maka , sehingga setiap interval terbuka merupakan bola terbuka. Sebagai bola terbuka, interval terbuka merupakan lingkungan bagi setiap titiknya. Hal ini mendasari definisi himpunan terbuka dalam ruang metrik.  Ingat bahwa kita mendefinisikan suatu subhimpunan dari sebagai lingkungan bagi titik dalam ruang metrik jika memuat suatu bola terbuka untuk suatu . Kita telah melihat bahwa setiap bola terbuka merupakan lingkungan bagi setiap titiknya, dan kini kita akan memperluas gagasan tersebut untuk mendefinisikan himpunan terbuka dalam ruang metrik.    Suatu subhimpunan dari ruang metrik disebut himpunan terbuka himpunan terbuka dalam ruang metrik jika merupakan lingkungan bagi setiap titiknya.    Jadi, menurut definisi, setiap bola terbuka merupakan himpunan terbuka. Masih menurut definisi, himpunan terbuka merupakan lingkungan bagi setiap titiknya. Himpunan terbuka berbeda dari himpunan yang tidak terbuka. Sebagai contoh, merupakan himpunan terbuka dalam dengan metrik Euklides, tetapi bukan himpunan terbuka. Himpunan bukan himpunan terbuka karena tidak ada bola terbuka berpusat di yang seluruhnya termuat dalam . Jadi, memiliki sifat yang berbeda dari titik-titik lain dalam . Himpunan merupakan lingkungan bagi setiap titik dalam , tetapi bukan lingkungan bagi . Kita dapat memandang titik-titik dalam sebagai titik-titik yang berada di interior himpunan . Hal ini membawa kita ke definisi berikut.   titik interior dalam subhimpunan ruang metrik   Misalkan suatu subhimpunan dari ruang metrik . Titik disebut titik interior dari jika merupakan lingkungan bagi .    Seperti yang akan segera kita lihat, himpunan terbuka dapat dicirikan melalui titik-titik interior.    Tentukan apakah himpunan merupakan himpunan terbuka dalam ruang metrik . Jelaskan alasan Anda.    , , metrik Euklides, .    , , metrik Euklides, . Anggap bahwa metrik Euklides merupakan suatu metrik pada .    , adalah metrik diskret yang didefinisikan oleh dan .    Apa saja titik interior dari himpunan-himpunan berikut dalam ? Jelaskan. .   Misalkan dalam . Apa saja titik interior dari ? Jelaskan.   Misalkan himpunan bilangan rasional dalam . Apa saja titik interior dari ? Jelaskan.    "
 },
 {
-  "id": "p-841",
+  "id": "p-842",
   "level": "2",
-  "url": "sec_open_sets_intro.html#p-841",
+  "url": "sec_open_sets_intro.html#p-842",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2107,9 +2107,9 @@ var ptx_lunr_docs = [
   "body": "  Misalkan suatu ruang metrik. Untuk membuktikan implikasi yang tersisa dari , asumsikan bahwa suatu subhimpunan dari merupakan gabungan bola-bola terbuka.    Apa yang perlu kita tunjukkan untuk membuktikan bahwa merupakan himpunan terbuka?    Misalkan . Mengapa terdapat bola terbuka yang termuat dalam dan memuat ?    Lengkapi bukti untuk menunjukkan bahwa merupakan himpunan terbuka.   "
 },
 {
-  "id": "p-866",
+  "id": "p-867",
   "level": "2",
-  "url": "sec_open_sets.html#p-866",
+  "url": "sec_open_sets.html#p-867",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2206,9 +2206,9 @@ var ptx_lunr_docs = [
   "body": "  Misalkan suatu ruang metrik. Suatu subhimpunan dari merupakan himpunan terbuka jika dan hanya jika setiap titik dari merupakan titik interior dari .   "
 },
 {
-  "id": "p-906",
+  "id": "p-907",
   "level": "2",
-  "url": "sec_interior_set.html#p-906",
+  "url": "sec_interior_set.html#p-907",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2404,9 +2404,9 @@ var ptx_lunr_docs = [
   "body": " limit barisan bilangan real   Suatu barisan bilangan real mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .   "
 },
 {
-  "id": "p-966",
+  "id": "p-967",
   "level": "2",
-  "url": "sec_seq_intro.html#p-966",
+  "url": "sec_seq_intro.html#p-967",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2449,9 +2449,9 @@ var ptx_lunr_docs = [
   "body": " limit barisan di ruang metrik   Misalkan ruang metrik. Suatu barisan di mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .   "
 },
 {
-  "id": "p-980",
+  "id": "p-981",
   "level": "2",
-  "url": "sec_seq_intro.html#p-980",
+  "url": "sec_seq_intro.html#p-981",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2618,6 +2618,492 @@ var ptx_lunr_docs = [
   "number": "10",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika adalah barisan dalam dengan untuk setiap dan himpunan terbatas di bawah, maka adalah limit barisan .   Misalkan adalah ruang metrik dan subhimpunan tak kosong dari . Jika dan dalam memuat suatu titik dari untuk setiap , maka terdapat barisan di yang konvergen ke .   Misalkan adalah subhimpunan tak kosong dari yang terbatas di atas dan di bawah. Jika adalah subhimpunan tak kosong dari dan untuk semua dan semua , maka .   Barisan konvergen ke dalam ruang metrik yang terdiri dari semua bilangan rasional dalam bentuk paling sederhana, dengan metrik yang didefinisikan oleh . (Lihat .)   Satu-satunya barisan konvergen dalam ruang metrik dengan metrik diskret adalah barisan yang pada akhirnya konstan. (Barisan dalam ruang metrik disebut pada akhirnya konstan jika terdapat unsur dan sedemikian sehingga untuk semua .)  "
+},
+{
+  "id": "sec_closed_sets_intro",
+  "level": "1",
+  "url": "sec_closed_sets_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Setelah mendefinisikan himpunan terbuka di ruang metrik, wajar jika kita bertanya apakah terdapat himpunan tertutup. Ingat bahwa interval tertutup penting dalam kalkulus karena setiap fungsi kontinu pada interval tertutup mencapai nilai maksimum mutlak dan minimum mutlak pada interval tersebut. Jika terdapat himpunan tertutup di ruang metrik, kita dapat menanyakan apakah ada hasil serupa bagi fungsi kontinu pada himpunan tertutup. Pada bagian ini kita memperkenalkan gagasan himpunan tertutup di ruang metrik dan menemukan beberapa sifatnya.  Setiap interval berbentuk dalam merupakan himpunan tertutup terhadap metrik Euklides. Yang membedakan interval-interval tertutup ini dari interval terbuka adalah bahwa interval terbuka tidak memuat satu pun titik ujungnya hal inilah yang menjadikan interval terbuka suatu lingkungan bagi setiap titiknya. Secara umum, himpunan terbuka bersifat terbuka karena tidak memuat batasnya. Jika suatu himpunan terbuka tidak memuat batasnya, maka sebagai kebalikannya, komplemennya semestinya memuat batas tersebut. Hal ini mengantarkan kita pada definisi himpunan tertutup.   subhimpunan tertutup dari ruang metrik   Suatu subhimpunan dari ruang metrik disebut tertutup jika komplemennya terbuka.    Kita mengatakan bahwa himpunan terbuka bersifat terbuka karena tidak memuat batasnya dan himpunan tertutup bersifat tertutup karena memuat batasnya. Namun, kita belum mendefinisikan apa yang dimaksud dengan batas. Titik pada batas interval terbuka berbentuk dalam dengan metrik Euklides memiliki sifat bahwa setiap bola terbuka yang memuat juga memuat titik-titik di dan titik-titik yang tidak berada di . Hal inilah yang membuat titik terletak pada batas. Kita juga dapat memandang titik sebagai berada tepat pada batas himpunan . Hal ini memotivasi definisi berikut.   titik batas di ruang metrik   Misalkan ruang metrik, dan misalkan subhimpunan dari . Suatu titik batas dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di dan suatu titik di .    Sebagai contoh, dalam sebagai subhimpunan dari , bilangan 0 merupakan titik batas dari karena setiap interval terbuka dalam yang memuat juga memuat titik-titik di dan titik-titik yang tidak berada di . Titik batas dapat muncul dengan cara lain. Jika sebagai subhimpunan dari , maka 0 kembali merupakan titik batas karena setiap interval terbuka dalam yang memuat juga memuat suatu titik ( ) di dan titik-titik yang tidak berada di . Namun, merupakan satu-satunya titik di yang termuat dalam setiap interval terbuka yang memuat . Dalam hal ini kita menyebut sebagai titik terasing dari , sedangkan untuk himpunan kita menyebut sebagai titik akumulasi atau titik limit dari (penggunaan kata limit di sini akan menjadi jelas nanti).   titik akumulasi di ruang metrik  titik limit di ruang metrik  titik terasing di ruang metrik   Misalkan ruang metrik, dan misalkan subhimpunan dari .   Suatu titik akumulasi atau titik limit dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di yang berbeda dari .    Suatu titik terasing dari adalah titik sedemikian sehingga terdapat lingkungan dari di dengan .       Anda mungkin bertanya-tanya tentang penggunaan istilah titik limit dan bagaimana titik limit berkaitan dengan limit. Seperti akan kita lihat nanti, titik limit merupakan limit barisan, tetapi definisi yang telah kita berikan ini kelak dapat diterapkan secara langsung pada ruang topologi.  Perhatikan bahwa setiap titik batas merupakan titik limit atau titik terasing. Buktinya diserahkan sebagai latihan.    Untuk setiap himpunan yang diberikan, tentukan semua titik batas, titik limit, dan titik terasing. Kemudian tentukan apakah himpunan merupakan himpunan tertutup dalam ruang metrik . Jelaskan alasan Anda.    , , metrik Euklides, .    , , metrik Euklides, .    , adalah metrik diskret yang didefinisikan oleh dan .    Tentukan apakah setiap pernyataan berikut benar atau salah. Jika benar, berikan argumen yang meyakinkan. Jika salah, berikan contoh tandingan yang spesifik.   Setiap titik limit merupakan titik batas.   Setiap titik batas merupakan titik limit.   Setiap titik limit merupakan titik terasing   Setiap titik terasing merupakan titik limit.   Setiap titik batas merupakan titik terasing.   Setiap titik terasing merupakan titik batas.    "
+},
+{
+  "id": "def_closed_metric_space",
+  "level": "2",
+  "url": "sec_closed_sets_intro.html#def_closed_metric_space",
+  "type": "Definisi",
+  "number": "10.1",
+  "title": "",
+  "body": " subhimpunan tertutup dari ruang metrik   Suatu subhimpunan dari ruang metrik disebut tertutup jika komplemennya terbuka.   "
+},
+{
+  "id": "definition-31",
+  "level": "2",
+  "url": "sec_closed_sets_intro.html#definition-31",
+  "type": "Definisi",
+  "number": "10.2",
+  "title": "",
+  "body": " titik batas di ruang metrik   Misalkan ruang metrik, dan misalkan subhimpunan dari . Suatu titik batas dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di dan suatu titik di .   "
+},
+{
+  "id": "p-1069",
+  "level": "2",
+  "url": "sec_closed_sets_intro.html#p-1069",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "titik terasing titik akumulasi titik limit "
+},
+{
+  "id": "definition-32",
+  "level": "2",
+  "url": "sec_closed_sets_intro.html#definition-32",
+  "type": "Definisi",
+  "number": "10.3",
+  "title": "",
+  "body": " titik akumulasi di ruang metrik  titik limit di ruang metrik  titik terasing di ruang metrik   Misalkan ruang metrik, dan misalkan subhimpunan dari .   Suatu titik akumulasi atau titik limit dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di yang berbeda dari .    Suatu titik terasing dari adalah titik sedemikian sehingga terdapat lingkungan dari di dengan .      "
+},
+{
+  "id": "exploration-9",
+  "level": "2",
+  "url": "sec_closed_sets_intro.html#exploration-9",
+  "type": "Aktivitas Persiapan",
+  "number": "10.1",
+  "title": "",
+  "body": "  Untuk setiap himpunan yang diberikan, tentukan semua titik batas, titik limit, dan titik terasing. Kemudian tentukan apakah himpunan merupakan himpunan tertutup dalam ruang metrik . Jelaskan alasan Anda.    , , metrik Euklides, .    , , metrik Euklides, .    , adalah metrik diskret yang didefinisikan oleh dan .    Tentukan apakah setiap pernyataan berikut benar atau salah. Jika benar, berikan argumen yang meyakinkan. Jika salah, berikan contoh tandingan yang spesifik.   Setiap titik limit merupakan titik batas.   Setiap titik batas merupakan titik limit.   Setiap titik limit merupakan titik terasing   Setiap titik terasing merupakan titik limit.   Setiap titik batas merupakan titik terasing.   Setiap titik terasing merupakan titik batas.   "
+},
+{
+  "id": "sec_closed_sets_metric",
+  "level": "1",
+  "url": "sec_closed_sets_metric.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Himpunan Tertutup di Ruang Metrik",
+  "body": " Himpunan Tertutup di Ruang Metrik  Ingat bahwa mendefinisikan himpunan tertutup di ruang metrik sebagai himpunan yang komplemennya terbuka. Kita telah melihat bahwa dan keduanya merupakan subhimpunan terbuka dari . Sekarang kita mengajukan pertanyaan yang sama, kali ini dalam kaitannya dengan himpunan tertutup.    Misalkan ruang metrik.    Apakah tertutup di ? Jelaskan.    Apakah tertutup di ? Jelaskan.    Perhatikan bahwa suatu subhimpunan ruang metrik dapat sekaligus terbuka dan tertutup. Kita menyebut himpunan seperti itu terbuka-tertutup (karena sekaligus tertutup dan terbuka). Ketika membahas himpunan terbuka, kita melihat bahwa gabungan sebarang himpunan terbuka bersifat terbuka, tetapi irisan sebarang himpunan terbuka belum tentu terbuka (meskipun irisan berhingga himpunan terbuka bersifat terbuka). Karena himpunan tertutup merupakan komplemen himpunan terbuka, kita patut mengharapkan hasil serupa bagi himpunan tertutup.    Misalkan dengan metrik Euklides. Misalkan untuk setiap , .    Tentukan . Bukti tidak diperlukan.    Apakah tertutup di ? Jelaskan.     menunjukkan bahwa gabungan sebarang himpunan tertutup belum tentu tertutup. Namun, teorema berikut menjelaskan apa yang dapat kita simpulkan tentang gabungan dan irisan himpunan tertutup. Hasil-hasil ini semestinya tidak mengejutkan mengingat hubungan antara himpunan terbuka dan himpunan tertutup.    Misalkan ruang metrik.   Irisan sebarang keluarga himpunan tertutup di merupakan himpunan tertutup di .    Gabungan berhingga himpunan tertutup di merupakan himpunan tertutup di .       Misalkan ruang metrik. Untuk membuktikan bagian 1, andaikan bahwa merupakan koleksi himpunan tertutup di untuk dalam suatu himpunan indeks . Hukum De Morgan menunjukkan bahwa .  Ruas terakhir merupakan gabungan sebarang himpunan terbuka dan karenanya merupakan himpunan terbuka. Jadi, berdasarkan definisi, merupakan himpunan tertutup.  Untuk bagian 2, andaikan bahwa , , , merupakan himpunan tertutup di untuk suatu . Untuk menunjukkan bahwa merupakan himpunan tertutup, kita akan menunjukkan bahwa merupakan himpunan terbuka. Sekarang merupakan irisan berhingga himpunan terbuka, sehingga merupakan himpunan terbuka. Oleh karena itu, merupakan himpunan tertutup.    "
+},
+{
+  "id": "activity-40",
+  "level": "2",
+  "url": "sec_closed_sets_metric.html#activity-40",
+  "type": "Kegiatan",
+  "number": "10.2",
+  "title": "",
+  "body": "  Misalkan ruang metrik.    Apakah tertutup di ? Jelaskan.    Apakah tertutup di ? Jelaskan.   "
+},
+{
+  "id": "p-1090",
+  "level": "2",
+  "url": "sec_closed_sets_metric.html#p-1090",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "terbuka-tertutup "
+},
+{
+  "id": "act_Closed_union",
+  "level": "2",
+  "url": "sec_closed_sets_metric.html#act_Closed_union",
+  "type": "Kegiatan",
+  "number": "10.3",
+  "title": "",
+  "body": "  Misalkan dengan metrik Euklides. Misalkan untuk setiap , .    Tentukan . Bukti tidak diperlukan.    Apakah tertutup di ? Jelaskan.   "
+},
+{
+  "id": "theorem-21",
+  "level": "2",
+  "url": "sec_closed_sets_metric.html#theorem-21",
+  "type": "Teorema",
+  "number": "10.4",
+  "title": "",
+  "body": "  Misalkan ruang metrik.   Irisan sebarang keluarga himpunan tertutup di merupakan himpunan tertutup di .    Gabungan berhingga himpunan tertutup di merupakan himpunan tertutup di .       Misalkan ruang metrik. Untuk membuktikan bagian 1, andaikan bahwa merupakan koleksi himpunan tertutup di untuk dalam suatu himpunan indeks . Hukum De Morgan menunjukkan bahwa .  Ruas terakhir merupakan gabungan sebarang himpunan terbuka dan karenanya merupakan himpunan terbuka. Jadi, berdasarkan definisi, merupakan himpunan tertutup.  Untuk bagian 2, andaikan bahwa , , , merupakan himpunan tertutup di untuk suatu . Untuk menunjukkan bahwa merupakan himpunan tertutup, kita akan menunjukkan bahwa merupakan himpunan terbuka. Sekarang merupakan irisan berhingga himpunan terbuka, sehingga merupakan himpunan terbuka. Oleh karena itu, merupakan himpunan tertutup.   "
+},
+{
+  "id": "sec_cont_closed_sets",
+  "level": "1",
+  "url": "sec_cont_closed_sets.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Kekontinuan dan Himpunan Tertutup",
+  "body": " Kekontinuan dan Himpunan Tertutup  Ingatlah bahwa kita telah menunjukkan bahwa suatu fungsi dari ruang metrik ke ruang metrik bersifat kontinu jika dan hanya jika terbuka untuk setiap himpunan terbuka di . Kita mungkin menduga bahwa hasil serupa berlaku untuk himpunan tertutup. Karena himpunan tertutup merupakan komplemen dari himpunan terbuka, untuk membuat hubungan ini kita perlu mengetahui hubungan antara dan untuk .    Misalkan diberikan sebagai fungsi. Fungsi tersebut memetakan ruang metrik ke ruang metrik , dan misalkan suatu subhimpunan dari .    Misalkan .   Apa yang dapat kita simpulkan tentang dari hal ini?   Apa yang dapat kita simpulkan tentang hubungan antara dan ?    Misalkan .   Apa yang dapat kita simpulkan tentang dari hal ini?   Apa yang dapat kita simpulkan tentang hubungan antara dan ?    Apa hubungan antara dan ?    Sekarang kita dapat menelaah kekontinuan dan himpunan tertutup.    Misalkan suatu fungsi dari ruang metrik ke ruang metrik .    Andaikan kontinu dan merupakan himpunan tertutup di . Bagaimana hasil menunjukkan bahwa tertutup di ?    Sekarang andaikan tertutup di untuk setiap yang tertutup di . Bagaimana hasil menunjukkan bahwa merupakan fungsi kontinu?    Hasil dirangkum dalam teorema berikut.    Misalkan suatu fungsi dari ruang metrik ke ruang metrik . Maka kontinu jika dan hanya jika tertutup di untuk setiap himpunan tertutup di .    "
+},
+{
+  "id": "act_CS_1",
+  "level": "2",
+  "url": "sec_cont_closed_sets.html#act_CS_1",
+  "type": "Kegiatan",
+  "number": "10.4",
+  "title": "",
+  "body": "  Misalkan diberikan sebagai fungsi. Fungsi tersebut memetakan ruang metrik ke ruang metrik , dan misalkan suatu subhimpunan dari .    Misalkan .   Apa yang dapat kita simpulkan tentang dari hal ini?   Apa yang dapat kita simpulkan tentang hubungan antara dan ?    Misalkan .   Apa yang dapat kita simpulkan tentang dari hal ini?   Apa yang dapat kita simpulkan tentang hubungan antara dan ?    Apa hubungan antara dan ?   "
+},
+{
+  "id": "act_CS_2",
+  "level": "2",
+  "url": "sec_cont_closed_sets.html#act_CS_2",
+  "type": "Kegiatan",
+  "number": "10.5",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang metrik ke ruang metrik .    Andaikan kontinu dan merupakan himpunan tertutup di . Bagaimana hasil menunjukkan bahwa tertutup di ?    Sekarang andaikan tertutup di untuk setiap yang tertutup di . Bagaimana hasil menunjukkan bahwa merupakan fungsi kontinu?   "
+},
+{
+  "id": "thm_closed_sets_continuity_MS",
+  "level": "2",
+  "url": "sec_cont_closed_sets.html#thm_closed_sets_continuity_MS",
+  "type": "Teorema",
+  "number": "10.5",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang metrik ke ruang metrik . Maka kontinu jika dan hanya jika tertutup di untuk setiap himpunan tertutup di .   "
+},
+{
+  "id": "sec_limit_bound_iso_seq",
+  "level": "1",
+  "url": "sec_limit_bound_iso_seq.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Titik Limit, Titik Batas, Titik Terasing, dan Barisan",
+  "body": " Titik Limit, Titik Batas, Titik Terasing, dan Barisan  Ingatlah bahwa titik limit dari suatu subhimpunan dari ruang metrik adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di yang berbeda dari . Anda mungkin bertanya-tanya mengapa kata limit digunakan dalam definisi titik limit. Kegiatan berikut akan memperjelas hal ini.    Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik limit dari .    Misalkan . Jelaskan mengapa harus memuat suatu titik di yang berbeda dari .    Berapakah ? Mengapa?    Hasil dirangkum dalam teorema berikut.    Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik limit dari . Maka terdapat suatu barisan di yang konvergen ke .    Tentu saja, barisan konstan selalu konvergen ke titik , sehingga setiap titik dalam suatu himpunan merupakan limit dari suatu barisan. Untuk titik limit, terdapat barisan tak konstan yang konvergen ke titik tersebut. Kita dapat menanyakan apa yang dapat dikatakan tentang suatu titik jika setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan . (Yang dimaksud dengan barisan yang pada akhirnya konstan adalah terdapat bilangan bulat positif sedemikian sehingga untuk , berlaku untuk suatu unsur .) Hal inilah yang akan kita telaah dalam kegiatan berikut.    Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari .    Misalkan suatu titik terasing dari . Buktikan bahwa setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan .    Buktikan bahwa jika setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan , maka merupakan titik terasing dari .    Titik batas adalah titik yang, dalam arti tertentu, terletak di antara suatu himpunan dan komplemennya. Kita akan segera membuat gagasan di antara ini lebih konkret.  Argumen yang serupa dengan argumen dalam memberikan hasil berikut tentang titik batas.    Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik batas dari . Maka terdapat barisan di dan barisan di yang konvergen ke .    "
+},
+{
+  "id": "act_CS_3",
+  "level": "2",
+  "url": "sec_limit_bound_iso_seq.html#act_CS_3",
+  "type": "Kegiatan",
+  "number": "10.6",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik limit dari .    Misalkan . Jelaskan mengapa harus memuat suatu titik di yang berbeda dari .    Berapakah ? Mengapa?   "
+},
+{
+  "id": "thm_CS_limit_pt",
+  "level": "2",
+  "url": "sec_limit_bound_iso_seq.html#thm_CS_limit_pt",
+  "type": "Teorema",
+  "number": "10.6",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik limit dari . Maka terdapat suatu barisan di yang konvergen ke .   "
+},
+{
+  "id": "activity-45",
+  "level": "2",
+  "url": "sec_limit_bound_iso_seq.html#activity-45",
+  "type": "Kegiatan",
+  "number": "10.7",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari .    Misalkan suatu titik terasing dari . Buktikan bahwa setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan .    Buktikan bahwa jika setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan , maka merupakan titik terasing dari .   "
+},
+{
+  "id": "thm_CS_2",
+  "level": "2",
+  "url": "sec_limit_bound_iso_seq.html#thm_CS_2",
+  "type": "Teorema",
+  "number": "10.7",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik batas dari . Maka terdapat barisan di dan barisan di yang konvergen ke .   "
+},
+{
+  "id": "sec_limit_closed",
+  "level": "1",
+  "url": "sec_limit_closed.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Titik Limit dan Himpunan Tertutup",
+  "body": " Titik Limit dan Himpunan Tertutup  Terdapat hubungan antara titik limit dan himpunan tertutup. Himpunan terbuka dalam tidak memuat semua titik limitnya maupun satu pun titik batasnya, sedangkan himpunan tertutup memuat semua titik batas dan titik limitnya. Hal ini merupakan sifat penting dari himpunan tertutup. Ingatlah bahwa untuk suatu titik limit dari subhimpunan dari ruang metrik , setiap lingkungan dari memuat suatu titik di yang berbeda dari . Lingkungan tersebut dapat kita buat sekecil apa pun sehingga, dalam arti tertentu, titik-titik limit dari yang tidak berada di merupakan titik-titik di yang dapat berjarak sedekat apa pun dari himpunan . Kita menyatakan himpunan semua titik limit dari dengan , dan titik-titik limit suatu himpunan dapat menentukan apakah himpunan tersebut tertutup.    Misalkan suatu subhimpunan dari ruang metrik , dan misalkan himpunan semua titik limit dari . Maka tertutup jika dan hanya jika .    Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari . Pertama, andaikan tertutup dan tunjukkan bahwa memuat semua titik limitnya. Misalkan suatu titik limit dari . Kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa . Maka , yang merupakan himpunan terbuka. Hal ini mengakibatkan bahwa terdapat sedemikian sehingga . Namun, lingkungan ini tidak memuat satu pun titik di , yang bertentangan dengan fakta bahwa merupakan titik limit dari . Kita menyimpulkan bahwa dan memuat semua titik limitnya.  Implikasi sebaliknya dari hasil yang baru saja kita buktikan akan ditelaah dalam kegiatan berikut.      Misalkan suatu subhimpunan dari ruang metrik , dan misalkan himpunan semua titik limit dari . Dalam kegiatan ini, kita membuktikan bahwa tertutup jika memuat semua titik limitnya. Jadi, andaikan .    Apa yang perlu kita lakukan untuk menunjukkan bahwa tertutup?    Jika kita menggunakan pembuktian dengan kontradiksi untuk membuktikan bahwa tertutup, kita mengandaikan bahwa tidak tertutup. Apa yang dapat kita simpulkan tentang dari hal ini?    Apa yang dapat kita simpulkan dari hasil butir (b)?    Bagaimana hasil butir (c) bertentangan dengan asumsi bahwa memuat semua titik limitnya?    "
+},
+{
+  "id": "thm_closed_limitpoints",
+  "level": "2",
+  "url": "sec_limit_closed.html#thm_closed_limitpoints",
+  "type": "Teorema",
+  "number": "10.8",
+  "title": "",
+  "body": "  Misalkan suatu subhimpunan dari ruang metrik , dan misalkan himpunan semua titik limit dari . Maka tertutup jika dan hanya jika .    Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari . Pertama, andaikan tertutup dan tunjukkan bahwa memuat semua titik limitnya. Misalkan suatu titik limit dari . Kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa . Maka , yang merupakan himpunan terbuka. Hal ini mengakibatkan bahwa terdapat sedemikian sehingga . Namun, lingkungan ini tidak memuat satu pun titik di , yang bertentangan dengan fakta bahwa merupakan titik limit dari . Kita menyimpulkan bahwa dan memuat semua titik limitnya.  Implikasi sebaliknya dari hasil yang baru saja kita buktikan akan ditelaah dalam kegiatan berikut.   "
+},
+{
+  "id": "activity-46",
+  "level": "2",
+  "url": "sec_limit_closed.html#activity-46",
+  "type": "Kegiatan",
+  "number": "10.8",
+  "title": "",
+  "body": "  Misalkan suatu subhimpunan dari ruang metrik , dan misalkan himpunan semua titik limit dari . Dalam kegiatan ini, kita membuktikan bahwa tertutup jika memuat semua titik limitnya. Jadi, andaikan .    Apa yang perlu kita lakukan untuk menunjukkan bahwa tertutup?    Jika kita menggunakan pembuktian dengan kontradiksi untuk membuktikan bahwa tertutup, kita mengandaikan bahwa tidak tertutup. Apa yang dapat kita simpulkan tentang dari hal ini?    Apa yang dapat kita simpulkan dari hasil butir (b)?    Bagaimana hasil butir (c) bertentangan dengan asumsi bahwa memuat semua titik limitnya?   "
+},
+{
+  "id": "sec_set_closure",
+  "level": "1",
+  "url": "sec_set_closure.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Tutupan Suatu Himpunan",
+  "body": " Tutupan Suatu Himpunan  Kita telah melihat bahwa interior suatu himpunan adalah subhimpunan terbuka terbesar dari himpunan tersebut. Ada hasil serupa untuk himpunan tertutup. Sebagai contoh, misalkan di . Himpunan adalah himpunan terbuka, tetapi jika kita menggabungkan dengan titik-titik limitnya, kita memperoleh himpunan tertutup . Selain itu, himpunan adalah himpunan tertutup terkecil yang memuat . Hal ini mengarah pada gagasan tentang tutupan suatu himpunan.   tutupan suatu himpunan di ruang metrik    Tutupan suatu subhimpunan pada ruang metrik adalah himpunan .    Dengan kata lain, tutupan suatu himpunan adalah kumpulan anggota himpunan tersebut dan titik-titik limit himpunan tersebut yaitu titik-titik yang berada di tepi himpunan tersebut. Arti penting tutupan suatu himpunan adalah bahwa tutupan merupakan himpunan tertutup terkecil yang memuat .    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Tutupan adalah himpunan tertutup. Selain itu, tutupan adalah subhimpunan tertutup terkecil dari yang memuat .    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Untuk membuktikan bahwa adalah himpunan tertutup, kita akan membuktikan bahwa memuat titik-titik limitnya. Misalkan . Untuk menunjukkan bahwa , kita gunakan pembuktian dengan kontradiksi dan andaikan bahwa . Hal ini menyiratkan bahwa dan . Karena , terdapat lingkungan dari yang tidak memuat titik-titik selain . Akan tetapi, dan , sehingga . Hal ini menyiratkan bahwa terdapat bola terbuka yang berpusat di sedemikian sehingga . Fakta bahwa berarti bahwa memuat suatu titik di yang berbeda dari . Karena , pastilah . Namun, hal ini, bersama dengan fakta bahwa merupakan lingkungan dari , berarti bahwa harus memuat titik dari yang berbeda dari . Akan tetapi, , sehingga kita memperoleh kontradiksi. Kita simpulkan bahwa dan . Hal ini menunjukkan bahwa adalah himpunan tertutup.  Pembuktian bahwa adalah subhimpunan tertutup terkecil dari yang memuat diserahkan kepada kegiatan berikutnya.      Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa adalah subhimpunan tertutup terkecil dari yang memuat ?    Andaikan suatu subhimpunan tertutup dari yang memuat . Untuk menunjukkan bahwa , mengapa cukup untuk menunjukkan bahwa ?    Jika , apa yang dapat kita katakan tentang ?    Lengkapilah pembuktian bahwa .    Salah satu konsekuensi dari adalah sebagai berikut.    Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika .    Kita juga dapat mencirikan himpunan tertutup sebagai himpunan yang memuat batasnya.     Batas  dari suatu subhimpunan pada ruang metrik adalah himpunan semua titik batas dari .      Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika memuat batasnya.    Pembuktian diserahkan kepada .  Ingat bahwa titik batas dari suatu subhimpunan pada ruang metrik adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di dan suatu titik di . Titik-titik batas adalah titik-titik yang, dalam arti tertentu, berada di antara suatu himpunan dan komplemennya. Sebagai contoh, jika di , batas adalah himpunan . Kita juga memperoleh bahwa , , dan . Perhatikan bahwa . Pernyataan ini selalu benar, sebagaimana dirumuskan secara formal dalam teorema berikut.    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Maka .    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Untuk membuktikan , kita perlu memverifikasi inklusi pada kedua arah. Misalkan dan suatu lingkungan dari . Maka memuat suatu titik di dan suatu titik di . Kita meninjau kasus dan kasus .   Andaikan . Maka . Selain itu, , sehingga harus memuat suatu titik di yang berbeda dari . Hal ini menjadikan titik limit dari , sehingga .    Andaikan . Maka . Selain itu, , sehingga harus memuat suatu titik di yang berbeda dari . Hal ini menjadikan titik limit dari , sehingga .     Dalam kedua kasus tersebut, kita memperoleh , sehingga .  Untuk implikasi sebaliknya, lihat kegiatan berikutnya.      Misalkan suatu ruang metrik dan suatu subhimpunan dari . Dalam kegiatan ini, kita membuktikan bahwa .  Misalkan .    Apa yang harus berlaku bagi , mengingat berada dalam irisan dua himpunan?    Misalkan suatu lingkungan dari . Seperti yang kita lakukan dalam pembuktian , kita meninjau kasus dan .   Andaikan . Mengapa harus memuat suatu titik di dan suatu titik yang tidak berada di ? Apa yang dapat kita simpulkan tentang ?   Andaikan . Mengapa harus memuat suatu titik di dan suatu titik yang tidak berada di ? Apa yang dapat kita simpulkan tentang ?   Apa yang dapat kita simpulkan dari bagian (i) dan (ii)?    "
+},
+{
+  "id": "p-1138",
+  "level": "2",
+  "url": "sec_set_closure.html#p-1138",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "tutupan "
+},
+{
+  "id": "definition-33",
+  "level": "2",
+  "url": "sec_set_closure.html#definition-33",
+  "type": "Definisi",
+  "number": "10.9",
+  "title": "",
+  "body": " tutupan suatu himpunan di ruang metrik    Tutupan suatu subhimpunan pada ruang metrik adalah himpunan .   "
+},
+{
+  "id": "thm_closure_closed",
+  "level": "2",
+  "url": "sec_set_closure.html#thm_closure_closed",
+  "type": "Teorema",
+  "number": "10.10",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik dan suatu subhimpunan dari . Tutupan adalah himpunan tertutup. Selain itu, tutupan adalah subhimpunan tertutup terkecil dari yang memuat .    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Untuk membuktikan bahwa adalah himpunan tertutup, kita akan membuktikan bahwa memuat titik-titik limitnya. Misalkan . Untuk menunjukkan bahwa , kita gunakan pembuktian dengan kontradiksi dan andaikan bahwa . Hal ini menyiratkan bahwa dan . Karena , terdapat lingkungan dari yang tidak memuat titik-titik selain . Akan tetapi, dan , sehingga . Hal ini menyiratkan bahwa terdapat bola terbuka yang berpusat di sedemikian sehingga . Fakta bahwa berarti bahwa memuat suatu titik di yang berbeda dari . Karena , pastilah . Namun, hal ini, bersama dengan fakta bahwa merupakan lingkungan dari , berarti bahwa harus memuat titik dari yang berbeda dari . Akan tetapi, , sehingga kita memperoleh kontradiksi. Kita simpulkan bahwa dan . Hal ini menunjukkan bahwa adalah himpunan tertutup.  Pembuktian bahwa adalah subhimpunan tertutup terkecil dari yang memuat diserahkan kepada kegiatan berikutnya.   "
+},
+{
+  "id": "activity-47",
+  "level": "2",
+  "url": "sec_set_closure.html#activity-47",
+  "type": "Kegiatan",
+  "number": "10.9",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa adalah subhimpunan tertutup terkecil dari yang memuat ?    Andaikan suatu subhimpunan tertutup dari yang memuat . Untuk menunjukkan bahwa , mengapa cukup untuk menunjukkan bahwa ?    Jika , apa yang dapat kita katakan tentang ?    Lengkapilah pembuktian bahwa .   "
+},
+{
+  "id": "corollary-5",
+  "level": "2",
+  "url": "sec_set_closure.html#corollary-5",
+  "type": "Corollary",
+  "number": "10.11",
+  "title": "",
+  "body": "  Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika .   "
+},
+{
+  "id": "definition-34",
+  "level": "2",
+  "url": "sec_set_closure.html#definition-34",
+  "type": "Definisi",
+  "number": "10.12",
+  "title": "",
+  "body": "   Batas  dari suatu subhimpunan pada ruang metrik adalah himpunan semua titik batas dari .   "
+},
+{
+  "id": "thm_Closed_boundary",
+  "level": "2",
+  "url": "sec_set_closure.html#thm_Closed_boundary",
+  "type": "Teorema",
+  "number": "10.13",
+  "title": "",
+  "body": "  Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika memuat batasnya.   "
+},
+{
+  "id": "thm_Bd_between",
+  "level": "2",
+  "url": "sec_set_closure.html#thm_Bd_between",
+  "type": "Teorema",
+  "number": "10.14",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik dan suatu subhimpunan dari . Maka .    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Untuk membuktikan , kita perlu memverifikasi inklusi pada kedua arah. Misalkan dan suatu lingkungan dari . Maka memuat suatu titik di dan suatu titik di . Kita meninjau kasus dan kasus .   Andaikan . Maka . Selain itu, , sehingga harus memuat suatu titik di yang berbeda dari . Hal ini menjadikan titik limit dari , sehingga .    Andaikan . Maka . Selain itu, , sehingga harus memuat suatu titik di yang berbeda dari . Hal ini menjadikan titik limit dari , sehingga .     Dalam kedua kasus tersebut, kita memperoleh , sehingga .  Untuk implikasi sebaliknya, lihat kegiatan berikutnya.   "
+},
+{
+  "id": "activity-48",
+  "level": "2",
+  "url": "sec_set_closure.html#activity-48",
+  "type": "Kegiatan",
+  "number": "10.10",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik dan suatu subhimpunan dari . Dalam kegiatan ini, kita membuktikan bahwa .  Misalkan .    Apa yang harus berlaku bagi , mengingat berada dalam irisan dua himpunan?    Misalkan suatu lingkungan dari . Seperti yang kita lakukan dalam pembuktian , kita meninjau kasus dan .   Andaikan . Mengapa harus memuat suatu titik di dan suatu titik yang tidak berada di ? Apa yang dapat kita simpulkan tentang ?   Andaikan . Mengapa harus memuat suatu titik di dan suatu titik yang tidak berada di ? Apa yang dapat kita simpulkan tentang ?   Apa yang dapat kita simpulkan dari bagian (i) dan (ii)?   "
+},
+{
+  "id": "sec_closed_limits_seq",
+  "level": "1",
+  "url": "sec_closed_limits_seq.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Himpunan Tertutup dan Limit Barisan",
+  "body": " Himpunan Tertutup dan Limit Barisan  Misalkan kita meninjau suatu barisan di dalam subhimpunan dari ruang metrik yang konvergen ke suatu titik . Haruskah ? Kita akan meninjau pertanyaan ini dalam kegiatan berikutnya.    Misalkan dan di . Untuk setiap bilangan bulat positif , misalkan . Perhatikan bahwa barisan termuat dalam himpunan maupun .    Barisan konvergen ke titik apa di ?    Apakah berada di ?    Benarkah ?    Sebutkan dua perbedaan penting antara himpunan dan yang menjelaskan perbedaan jawaban pada bagian (b) dan . Jawablah dengan menggunakan terminologi yang telah kita perkenalkan dalam bagian ini.    Hasil dirangkum dalam teorema berikut.    Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika setiap barisan di yang konvergen ke suatu titik memenuhi .    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Pertama, andaikan tertutup. Misalkan suatu barisan konvergen di dengan . Jadi, atau merupakan titik limit dari . Karena memuat titik-titik limitnya, kedua kasus tersebut memberikan . Jadi, .  Pembuktian implikasi yang tersisa diserahkan kepada kegiatan berikutnya.      Misalkan suatu ruang metrik dan suatu subhimpunan dari . Dalam kegiatan ini, kita akan membuktikan pernyataan berikut: jika setiap kali suatu barisan di konvergen ke suatu titik , titik tersebut berada di , maka adalah himpunan tertutup.    Sebutkan tiga cara berbeda untuk menunjukkan bahwa suatu subhimpunan dari ruang metrik adalah himpunan tertutup. Cara manakah yang mungkin relevan dalam situasi ini untuk menunjukkan bahwa himpunan tertutup?    Misalkan suatu titik limit dari . Apa yang dapat kita simpulkan dari hal tersebut?    Lengkapilah pembuktian bahwa adalah himpunan tertutup.    "
+},
+{
+  "id": "act_closed_limitpoints",
+  "level": "2",
+  "url": "sec_closed_limits_seq.html#act_closed_limitpoints",
+  "type": "Kegiatan",
+  "number": "10.11",
+  "title": "",
+  "body": "  Misalkan dan di . Untuk setiap bilangan bulat positif , misalkan . Perhatikan bahwa barisan termuat dalam himpunan maupun .    Barisan konvergen ke titik apa di ?    Apakah berada di ?    Benarkah ?    Sebutkan dua perbedaan penting antara himpunan dan yang menjelaskan perbedaan jawaban pada bagian (b) dan . Jawablah dengan menggunakan terminologi yang telah kita perkenalkan dalam bagian ini.   "
+},
+{
+  "id": "thm_Closed_convergent",
+  "level": "2",
+  "url": "sec_closed_limits_seq.html#thm_Closed_convergent",
+  "type": "Teorema",
+  "number": "10.15",
+  "title": "",
+  "body": "  Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika setiap barisan di yang konvergen ke suatu titik memenuhi .    Misalkan suatu ruang metrik dan suatu subhimpunan dari . Pertama, andaikan tertutup. Misalkan suatu barisan konvergen di dengan . Jadi, atau merupakan titik limit dari . Karena memuat titik-titik limitnya, kedua kasus tersebut memberikan . Jadi, .  Pembuktian implikasi yang tersisa diserahkan kepada kegiatan berikutnya.   "
+},
+{
+  "id": "activity-50",
+  "level": "2",
+  "url": "sec_closed_limits_seq.html#activity-50",
+  "type": "Kegiatan",
+  "number": "10.12",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik dan suatu subhimpunan dari . Dalam kegiatan ini, kita akan membuktikan pernyataan berikut: jika setiap kali suatu barisan di konvergen ke suatu titik , titik tersebut berada di , maka adalah himpunan tertutup.    Sebutkan tiga cara berbeda untuk menunjukkan bahwa suatu subhimpunan dari ruang metrik adalah himpunan tertutup. Cara manakah yang mungkin relevan dalam situasi ini untuk menunjukkan bahwa himpunan tertutup?    Misalkan suatu titik limit dari . Apa yang dapat kita simpulkan dari hal tersebut?    Lengkapilah pembuktian bahwa adalah himpunan tertutup.   "
+},
+{
+  "id": "sec_closed_set_summ",
+  "level": "1",
+  "url": "sec_closed_set_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan-gagasan penting yang telah kita bahas dalam bagian ini meliputi hal-hal berikut.    Misalkan suatu ruang metrik dan suatu subhimpunan dari .   Suatu titik adalah titik batas dari jika setiap lingkungan dari memuat suatu titik di dan suatu titik di .    Suatu titik adalah titik limit dari jika setiap lingkungan dari memuat suatu titik di yang berbeda dari .    Suatu titik adalah titik terasing dari jika terdapat lingkungan dari sedemikian sehingga .   Titik batas dan titik limit tidak harus berada dalam himpunan , sedangkan titik terasing dari harus berada dalam . Untuk sebagai subhimpunan dari , merupakan titik batas, tetapi bukan titik terasing, sedangkan merupakan titik batas, tetapi bukan titik limit. Selain itu, merupakan titik limit, tetapi bukan titik batas maupun titik terasing. Jika dipandang sebagai subhimpunan dari dengan metrik diskret, setiap titik dari merupakan titik terasing, tetapi tidak ada titik di yang merupakan titik batas atau titik limit dari . Jadi, meskipun setiap titik batas merupakan titik limit atau titik terasing, ketiga konsep tersebut berbeda.    Suatu subhimpunan dari ruang metrik tertutup jika merupakan himpunan terbuka.    Sebarang irisan himpunan-himpunan tertutup adalah tertutup, sedangkan gabungan berhingga dari himpunan-himpunan tertutup adalah tertutup.    Suatu fungsi dari ruang metrik ke ruang metrik kontinu jika dan hanya jika merupakan himpunan tertutup di setiap kali merupakan himpunan tertutup di .    Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik limit dari . Maka terdapat barisan di yang konvergen ke .    Misalkan suatu ruang metrik, misalkan suatu subhimpunan dari , dan misalkan suatu titik batas dari . Maka terdapat barisan di dan barisan di yang konvergen ke .    Batas suatu subhimpunan dari ruang metrik adalah himpunan titik-titik batas dari .    Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika memuat semua titik limitnya. Demikian pula, tertutup jika dan hanya jika memuat semua titik batasnya.    Himpunan semua titik limit dari suatu subhimpunan pada ruang metrik dinotasikan dengan . Tutupan adalah himpunan . Tutupan adalah himpunan tertutup terkecil di yang memuat .    Suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika berada di setiap kali merupakan barisan konvergen di .    "
+},
+{
+  "id": "sec_closed_set_exer",
+  "level": "1",
+  "url": "sec_closed_set_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Untuk soal ini, argumen informal tetapi meyakinkan sudah memadai.   Misalkan sebagai subhimpunan dari . Perhatikan bahwa adalah cakram satuan pada bidang. Tentukan semua titik interior, titik batas, titik akumulasi (titik limit), dan titik terasing dari . Berikan alasan untuk kesimpulan Anda. Apakah merupakan himpunan terbuka? Apakah merupakan himpunan tertutup? Jelaskan.   Misalkan , himpunan bilangan rasional, sebagai subhimpunan dari . Tentukan semua titik interior, titik batas, titik akumulasi (titik limit), dan titik terasing dari . Berikan alasan untuk kesimpulan Anda. Apakah merupakan himpunan terbuka? Apakah merupakan himpunan tertutup? Jelaskan.   Misalkan sebagai subhimpunan dari . Tentukan semua titik interior, titik batas, titik akumulasi (titik limit), dan titik terasing dari . Berikan alasan untuk kesimpulan Anda. Apakah merupakan himpunan terbuka? Apakah merupakan himpunan tertutup? Jelaskan.    Misalkan adalah ruang metrik. Misalkan , dan misalkan . Kita tahu bahwa bola terbuka merupakan himpunan terbuka. Misalkan . Buktikan atau sangkal: merupakan himpunan tertutup di .    Misalkan adalah ruang metrik. Kita telah melihat bahwa suatu subhimpunan dari dapat sekaligus terbuka dan tertutup. Himpunan yang sekaligus terbuka dan tertutup dapat dicirikan melalui batasnya. Temukan dan buktikan pencirian tersebut. (Pernyataan Anda harus berbentuk: Suatu subhimpunan dari ruang metrik sekaligus terbuka dan tertutup jika dan hanya jika batas adalah .)    Misalkan adalah subhimpunan dari suatu ruang metrik. Misalkan adalah himpunan titik limit dari dan adalah himpunan titik terasing dari . Buktikan pernyataan-pernyataan berikut.                jika dan hanya jika terdapat suatu barisan titik-titik di yang konvergen ke     adalah irisan semua himpunan tertutup yang memuat     adalah gabungan semua himpunan terbuka yang termuat di dalam     adalah gabungan saling lepas dari dan             Misalkan adalah ruang metrik dan adalah subhimpunan dari . Buktikan bahwa suatu titik adalah titik limit dari jika dan hanya jika setiap bola terbuka yang berpusat di memuat suatu titik di yang berbeda dari .    Misalkan adalah subhimpunan dari suatu ruang metrik. Misalkan adalah himpunan titik limit dari dan adalah himpunan titik terasing dari .   Buktikan bahwa dan .   Buktikan bahwa jika dan hanya jika terdapat suatu barisan titik-titik di yang konvergen ke .   Buktikan bahwa jika adalah himpunan tertutup sedemikian sehingga , maka . Selanjutnya, buktikan bahwa adalah irisan semua himpunan tertutup tersebut dan karena itu tertutup.    Buktikan bahwa jika adalah subhimpunan dari ruang metrik dan adalah titik batas dari , maka terdapat barisan di dan barisan di yang konvergen ke .    Ingat bahwa jarak dari suatu titik dalam ruang metrik ke suatu subhimpunan tak kosong dari adalah . Buktikan bahwa suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika, kapan pun dan , berlaku .    Misalkan adalah ruang metrik. Dalam latihan ini, kita menunjukkan bahwa beberapa subhimpunan dari , selain dan , pasti tertutup. Tunjukkan bahwa setiap subhimpunan berhingga dari tertutup.   Apa saja titik limit dari suatu subhimpunan berhingga?    Buktikan bahwa suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika memuat batasnya.    Misalkan dan adalah ruang metrik dan misalkan adalah suatu fungsi.   Buktikan bahwa kontinu jika dan hanya jika untuk setiap subhimpunan dari .   Berikan contoh ketika inklusi, dan bukan kesamaan, pada (a) merupakan hasil terbaik yang dapat diperoleh.   Berikan contoh yang menunjukkan bahwa kesamaan pada (a) memang dapat tercapai.    Misalkan adalah ruang metrik dan misalkan adalah subhimpunan dari . Buktikan bahwa setiap titik batas dari merupakan titik limit atau titik terasing dari .    Misalkan adalah ruang metrik, dan misalkan serta adalah subhimpunan dari .   Apakah berlaku ? Jika benar, buktikan. Jika salah, tunjukkan alasannya dan buktikan setiap inklusi yang benar.   Apakah berlaku ? Jika benar, buktikan. Jika salah, tunjukkan alasannya dan buktikan setiap inklusi yang benar.    Ingat bahwa gabungan tak hingga dari himpunan-himpunan tertutup dalam ruang metrik belum tentu tertutup, dan irisan tak hingga dari himpunan-himpunan terbuka dalam ruang metrik belum tentu terbuka. Dalam latihan ini, kita menyelidiki keadaan yang memungkinkan kita menyimpulkan bahwa gabungan tak hingga dari himpunan-himpunan tertutup bersifat tertutup dan irisan tak hingga dari himpunan-himpunan terbuka bersifat terbuka. Misalkan adalah ruang metrik.   Pertama-tama, kita buktikan sebuah hasil pendahuluan. Misalkan adalah subhimpunan tertutup dari dan . Buktikan bahwa jika , maka .   Misalkan adalah suatu koleksi subhimpunan tertutup dari , dengan berada dalam suatu himpunan indeks , yang memiliki sifat berikut: untuk setiap , terdapat sedemikian sehingga beririsan dengan hanya berhingga banyak himpunan . Buktikan bahwa tertutup.   Tentukan dan buktikan pernyataan analog untuk himpunan-himpunan terbuka di .    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika adalah suatu titik dalam ruang metrik , maka himpunan beranggota tunggal tertutup.   Satu-satunya subhimpunan dari yang sekaligus terbuka dan tertutup terhadap metrik standar adalah dan .   Jika adalah ruang metrik dengan dan , maka himpunan sekaligus terbuka dan tertutup di .   Jika adalah ruang metrik dan , maka .   Batas dari setiap subhimpunan ruang metrik merupakan himpunan tertutup.   Jika adalah subhimpunan dari ruang metrik , maka , dengan adalah himpunan titik limit dari dan adalah himpunan titik terasing dari    "
+},
+{
+  "id": "exercise-102",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-102",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Untuk soal ini, argumen informal tetapi meyakinkan sudah memadai.   Misalkan sebagai subhimpunan dari . Perhatikan bahwa adalah cakram satuan pada bidang. Tentukan semua titik interior, titik batas, titik akumulasi (titik limit), dan titik terasing dari . Berikan alasan untuk kesimpulan Anda. Apakah merupakan himpunan terbuka? Apakah merupakan himpunan tertutup? Jelaskan.   Misalkan , himpunan bilangan rasional, sebagai subhimpunan dari . Tentukan semua titik interior, titik batas, titik akumulasi (titik limit), dan titik terasing dari . Berikan alasan untuk kesimpulan Anda. Apakah merupakan himpunan terbuka? Apakah merupakan himpunan tertutup? Jelaskan.   Misalkan sebagai subhimpunan dari . Tentukan semua titik interior, titik batas, titik akumulasi (titik limit), dan titik terasing dari . Berikan alasan untuk kesimpulan Anda. Apakah merupakan himpunan terbuka? Apakah merupakan himpunan tertutup? Jelaskan.  "
+},
+{
+  "id": "exercise-103",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-103",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan adalah ruang metrik. Misalkan , dan misalkan . Kita tahu bahwa bola terbuka merupakan himpunan terbuka. Misalkan . Buktikan atau sangkal: merupakan himpunan tertutup di .  "
+},
+{
+  "id": "exercise-104",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-104",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan adalah ruang metrik. Kita telah melihat bahwa suatu subhimpunan dari dapat sekaligus terbuka dan tertutup. Himpunan yang sekaligus terbuka dan tertutup dapat dicirikan melalui batasnya. Temukan dan buktikan pencirian tersebut. (Pernyataan Anda harus berbentuk: Suatu subhimpunan dari ruang metrik sekaligus terbuka dan tertutup jika dan hanya jika batas adalah .)  "
+},
+{
+  "id": "exercise-105",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-105",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan adalah subhimpunan dari suatu ruang metrik. Misalkan adalah himpunan titik limit dari dan adalah himpunan titik terasing dari . Buktikan pernyataan-pernyataan berikut.                jika dan hanya jika terdapat suatu barisan titik-titik di yang konvergen ke     adalah irisan semua himpunan tertutup yang memuat     adalah gabungan semua himpunan terbuka yang termuat di dalam     adalah gabungan saling lepas dari dan           "
+},
+{
+  "id": "exercise-106",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-106",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Misalkan adalah ruang metrik dan adalah subhimpunan dari . Buktikan bahwa suatu titik adalah titik limit dari jika dan hanya jika setiap bola terbuka yang berpusat di memuat suatu titik di yang berbeda dari .  "
+},
+{
+  "id": "exercise-107",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-107",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Misalkan adalah subhimpunan dari suatu ruang metrik. Misalkan adalah himpunan titik limit dari dan adalah himpunan titik terasing dari .   Buktikan bahwa dan .   Buktikan bahwa jika dan hanya jika terdapat suatu barisan titik-titik di yang konvergen ke .   Buktikan bahwa jika adalah himpunan tertutup sedemikian sehingga , maka . Selanjutnya, buktikan bahwa adalah irisan semua himpunan tertutup tersebut dan karena itu tertutup.  "
+},
+{
+  "id": "ex_CS_2",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#ex_CS_2",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Buktikan bahwa jika adalah subhimpunan dari ruang metrik dan adalah titik batas dari , maka terdapat barisan di dan barisan di yang konvergen ke .  "
+},
+{
+  "id": "ex_distance_pt_to_set",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#ex_distance_pt_to_set",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Ingat bahwa jarak dari suatu titik dalam ruang metrik ke suatu subhimpunan tak kosong dari adalah . Buktikan bahwa suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika, kapan pun dan , berlaku .  "
+},
+{
+  "id": "exercise-110",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-110",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan adalah ruang metrik. Dalam latihan ini, kita menunjukkan bahwa beberapa subhimpunan dari , selain dan , pasti tertutup. Tunjukkan bahwa setiap subhimpunan berhingga dari tertutup.   Apa saja titik limit dari suatu subhimpunan berhingga?  "
+},
+{
+  "id": "ex_closed_bounded",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#ex_closed_bounded",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Buktikan bahwa suatu subhimpunan dari ruang metrik tertutup jika dan hanya jika memuat batasnya.  "
+},
+{
+  "id": "exercise-112",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-112",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Misalkan dan adalah ruang metrik dan misalkan adalah suatu fungsi.   Buktikan bahwa kontinu jika dan hanya jika untuk setiap subhimpunan dari .   Berikan contoh ketika inklusi, dan bukan kesamaan, pada (a) merupakan hasil terbaik yang dapat diperoleh.   Berikan contoh yang menunjukkan bahwa kesamaan pada (a) memang dapat tercapai.  "
+},
+{
+  "id": "ex_MS_boundary_limit_isolated",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#ex_MS_boundary_limit_isolated",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Misalkan adalah ruang metrik dan misalkan adalah subhimpunan dari . Buktikan bahwa setiap titik batas dari merupakan titik limit atau titik terasing dari .  "
+},
+{
+  "id": "exercise-114",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-114",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Misalkan adalah ruang metrik, dan misalkan serta adalah subhimpunan dari .   Apakah berlaku ? Jika benar, buktikan. Jika salah, tunjukkan alasannya dan buktikan setiap inklusi yang benar.   Apakah berlaku ? Jika benar, buktikan. Jika salah, tunjukkan alasannya dan buktikan setiap inklusi yang benar.  "
+},
+{
+  "id": "exercise-115",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-115",
+  "type": "Latihan",
+  "number": "14",
+  "title": "",
+  "body": " Ingat bahwa gabungan tak hingga dari himpunan-himpunan tertutup dalam ruang metrik belum tentu tertutup, dan irisan tak hingga dari himpunan-himpunan terbuka dalam ruang metrik belum tentu terbuka. Dalam latihan ini, kita menyelidiki keadaan yang memungkinkan kita menyimpulkan bahwa gabungan tak hingga dari himpunan-himpunan tertutup bersifat tertutup dan irisan tak hingga dari himpunan-himpunan terbuka bersifat terbuka. Misalkan adalah ruang metrik.   Pertama-tama, kita buktikan sebuah hasil pendahuluan. Misalkan adalah subhimpunan tertutup dari dan . Buktikan bahwa jika , maka .   Misalkan adalah suatu koleksi subhimpunan tertutup dari , dengan berada dalam suatu himpunan indeks , yang memiliki sifat berikut: untuk setiap , terdapat sedemikian sehingga beririsan dengan hanya berhingga banyak himpunan . Buktikan bahwa tertutup.   Tentukan dan buktikan pernyataan analog untuk himpunan-himpunan terbuka di .  "
+},
+{
+  "id": "exercise-116",
+  "level": "2",
+  "url": "sec_closed_set_exer.html#exercise-116",
+  "type": "Latihan",
+  "number": "15",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika adalah suatu titik dalam ruang metrik , maka himpunan beranggota tunggal tertutup.   Satu-satunya subhimpunan dari yang sekaligus terbuka dan tertutup terhadap metrik standar adalah dan .   Jika adalah ruang metrik dengan dan , maka himpunan sekaligus terbuka dan tertutup di .   Jika adalah ruang metrik dan , maka .   Batas dari setiap subhimpunan ruang metrik merupakan himpunan tertutup.   Jika adalah subhimpunan dari ruang metrik , maka , dengan adalah himpunan titik limit dari dan adalah himpunan titik terasing dari   "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -6101,6 +6587,843 @@ var ptx_lunr_docs = [
   "number": "I.50",
   "title": "Konvergensi titik demi titik dan konvergensi seragam.",
   "body": "Konvergensi titik demi titik dan konvergensi seragam  Misalkan adalah himpunan semua fungsi terbatas bernilai real pada , dengan metrik supremum     Untuk , tentukan limit titik demi titik pada .    Hitung . Apakah konvergen ke dalam metrik supremum, yakni secara seragam?    Untuk pembanding, tetapkan . Buktikan bahwa konvergen secara seragam ke fungsi nol. Jelaskan secara umum mengapa konvergensi dalam metrik supremum selalu mengakibatkan konvergensi titik demi titik.      Tahap 1. Jika , maka , sedangkan .   Tahap 2. Untuk , selisih sama dengan . Nilai-nilai ini dapat dibuat sedekat yang diinginkan dengan dengan memilih cukup dekat ke , walaupun pada selisihnya nol.   Tahap 3. Untuk fungsi pembanding, . Untuk implikasi umum, bandingkan nilai pada satu titik tetap dengan supremum atas semua titik.   Limit titik demi titik ialah untuk dan . Namun, untuk setiap , sehingga konvergensi itu tidak seragam. Sebaliknya, . Secara umum, pada setiap titik, sehingga konvergensi seragam mengakibatkan konvergensi titik demi titik.   Untuk , berlaku untuk semua . Jika , berlaku . Jika , tetapkan . Ketaksamaan Bernoulli memberi , sehingga Jadi limit titik demi titiknya adalah   Untuk , selisihnya adalah , sedangkan pada selisihnya nol. Meskipun nilai tidak dicapai oleh selisih tersebut, nilai itu adalah supremumnya. Memang, jika , pilih . Maka dan . Jadi nilai selisih dapat melampaui setiap , sementara selalu dibatasi di atas oleh . Dengan demikian, untuk setiap . Jarak ini tidak menuju nol, sehingga tidak konvergen ke secara seragam.  Untuk , karena , Jadi dalam metrik supremum. Secara umum, jika dan ditetapkan, maka Maka pada setiap titik . Contoh menunjukkan bahwa implikasi sebaliknya tidak berlaku.  "
+},
+{
+  "id": "o003-c90-ch10-source-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch10-source-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan konsep dan tugas sumber",
+  "body": " Panduan konsep dan tugas sumber  Dua puluh dua panduan berikut mengikuti urutan tugas sumber: sembilan tugas tentang titik batas, titik limit, dan titik terasing; empat tugas tentang himpunan tertutup di ruang metrik; tujuh langkah tentang kekontinuan dan prapeta himpunan tertutup; serta dua langkah konstruksi barisan dari titik limit. Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap pernyataan memparafrasakan sasaran sumber dan menyertakan rubrik keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang tersedia di bawah Creative Commons Attribution 4.0 International (CC BY 4.0).  Interval setengah tertutup di garis real  Untuk di , tentukan semua titik batas, titik limit, dan titik terasing, lalu putuskan apakah tertutup. Rubrik: nyatakan masing-masing himpunan titik secara lengkap, uji kedua titik ujung, dan jelaskan keputusan tertutup dari komplemen atau dari titik batas yang hilang.   Tahap 1: pisahkan titik di bagian dalam interval, kedua titik ujung, dan titik di luar interval. Tahap 2: tanyakan apakah setiap lingkungan memotong , memotong komplemennya, atau memuat titik lain dari .   Titik batasnya adalah , titik limitnya adalah , tidak ada titik terasing, dan tidak tertutup di .   Setiap lingkungan dari dan memuat titik sekaligus titik , jadi tepat kedua titik itu merupakan titik batas. Titik dalam mempunyai bola yang seluruhnya di , sedangkan titik di luar mempunyai bola yang tidak memotong . Setiap lingkungan dari titik memuat titik lain dari , sehingga himpunan titik limitnya ; akibatnya tidak ada titik terasing. Titik limit tidak termasuk , dan komplemen tidak terbuka di titik itu. Maka tidak tertutup.   Ketertutupan relatif dalam subruang  Ambil dengan metrik Euklides terinduksi dan . Tentukan titik batas, titik limit, dan titik terasing relatif terhadap , lalu tentukan apakah tertutup di . Rubrik: jangan memasukkan titik yang bukan unsur ruang sekitar .   Tahap 1: titik bukan titik di . Tahap 2: periksa sisi mana dari yang berada dalam , lalu tuliskan dan uji keterbukaannya di .   Relatif terhadap , titik batasnya hanya , titik limitnya , tidak ada titik terasing, dan tertutup di .   Setiap lingkungan relatif dari memuat titik di bawahnya yang termasuk dan titik di atasnya yang termasuk , jadi itulah satu-satunya titik batas. Titik-titik interior relatif , sedangkan titik-titik interior relatif komplemennya. Setiap titik didekati titik lain dari , sehingga titik limitnya sendiri dan tidak ada titik terasing. Karena terbuka relatif, tertutup di . Titik tidak didaftarkan karena .   Subhimpunan dalam ruang diskret hingga  Misalkan bermetrik diskret dan . Tentukan semua titik batas, titik limit, dan titik terasing , lalu putuskan apakah tertutup. Rubrik: gunakan satu radius kurang dari untuk menganalisis setiap titik.   Tahap 1: untuk , bola hanya memuat . Tahap 2: periksa akibat bola satu titik itu bagi definisi ketiga jenis titik dan bagi keterbukaan komplemen.   Himpunan titik batas dan titik limit keduanya kosong, titik terasingnya adalah , dan tertutup; bahkan terbuka-tertutup.   Untuk setiap , bola . Jika , bola ini tidak memuat titik komplemen atau titik selain ; jadi bukan titik batas atau titik limit, tetapi titik terasing. Jika , bola yang sama tidak memotong , sehingga juga bukan titik batas atau titik limit. Jadi titik batas dan titik limit kosong, sedangkan titik terasing tepat . Setiap subhimpunan ruang diskret terbuka, maka terbuka dan tertutup; sendiri juga terbuka.   Apakah titik limit selalu titik batas?  Nilai benar atau salah pernyataan “setiap titik limit merupakan titik batas.” Rubrik: jika salah, berikan ruang metrik, himpunan, dan satu titik tertentu, lalu periksa kedua definisi pada titik itu.   Tahap 1: titik interior suatu interval dapat didekati titik lain dari interval. Tahap 2: lingkungan yang seluruhnya di dalam interval gagal memotong komplemennya.   Salah. Misalnya, adalah titik limit di , tetapi bukan titik batas .   Setiap lingkungan dari memuat suatu bola , sehingga memuat titik taknol dari jika titik itu dipilih cukup kecil. Jadi titik limit . Namun , sehingga bola ini tidak memuat titik komplemen. Definisi titik batas gagal, dan contoh tandingan ini membuktikan pernyataannya salah.   Apakah titik batas selalu titik limit?  Nilai benar atau salah pernyataan “setiap titik batas merupakan titik limit.” Rubrik: perhatikan bahwa titik batas boleh menjadi satu-satunya titik himpunan di lingkungan kecilnya.   Tahap 1: coba himpunan satu titik di garis real. Tahap 2: setiap lingkungan pusat itu memuat pusat dan titik komplemen, tetapi apakah harus memuat titik kedua dari himpunan?   Salah. Untuk , titik adalah titik batas tetapi bukan titik limit.   Setiap lingkungan dari memuat dan, karena memuat bola berjari-jari positif, juga memuat titik real taknol dalam . Jadi titik batas . Tetapi tidak ada titik yang berbeda dari , sehingga syarat titik limit mustahil dipenuhi. Maka pernyataannya salah.   Apakah titik limit selalu terasing?  Nilai benar atau salah pernyataan “setiap titik limit merupakan titik terasing.” Rubrik: bandingkan tuntutan “setiap lingkungan memuat titik lain” dengan tuntutan “ada lingkungan yang tidak memuat titik lain.”   Tahap 1: gunakan titik dalam suatu interval real. Tahap 2: tunjukkan bahwa setiap lingkungan memuat unsur interval selain pusat, sehingga tidak mungkin mengasingkan pusat.   Salah. Dalam , titik merupakan titik limit tetapi bukan titik terasing.   Setiap lingkungan dari memuat bola . Ada yang cukup kecil sehingga ; jadi titik limit. Fakta ini berlaku bagi setiap lingkungan, maka tidak ada lingkungan dengan . Jadi tidak terasing dan klaim universal itu salah.   Apakah titik terasing selalu titik limit?  Nilai benar atau salah pernyataan “setiap titik terasing merupakan titik limit.” Rubrik: sajikan contoh yang memenuhi definisi titik terasing dan tunjukkan lingkungan yang menggagalkan definisi titik limit.   Tahap 1: ambil di garis real. Tahap 2: irisan setiap lingkungan dengan tidak pernah dapat memuat anggota selain .   Salah. Titik terasing dalam , tetapi bukan titik limit .   Bola memenuhi , sehingga titik terasing. Definisi titik limit meminta setiap lingkungan memuat titik yang berbeda dari . Karena tidak mempunyai titik demikian, syarat itu gagal. Jadi contoh ini menyangkal pernyataan tersebut.   Apakah titik batas selalu terasing?  Nilai benar atau salah pernyataan “setiap titik batas merupakan titik terasing.” Rubrik: cari titik ujung interval yang sekaligus didekati oleh banyak titik interval.   Tahap 1: uji untuk di . Tahap 2: setiap lingkungan memuat bilangan negatif dan bilangan positif kecil; tentukan akibat masing-masing bagi kedua definisi.   Salah. Titik adalah titik batas , tetapi bukan titik terasing dari himpunan itu.   Setiap lingkungan dari memuat dan bilangan negatif di luar , jadi titik batas. Lingkungan itu juga memuat bilangan positif kecil yang berbeda dari dan berada di . Maka tidak ada lingkungan yang beririsan dengan tepat pada ; bukan titik terasing.   Apakah titik terasing selalu titik batas?  Nilai benar atau salah pernyataan “setiap titik terasing merupakan titik batas.” Rubrik: pilih ruang yang mempunyai lingkungan satu titik dan periksa apakah lingkungan itu harus memotong komplemen himpunan.   Tahap 1: gunakan ruang diskret dan . Tahap 2: periksa bola .   Salah. Dalam ruang diskret , titik terasing dalam , tetapi bukan titik batas .   Pada metrik diskret, . Irisannya dengan tepat , maka terasing. Namun bola itu tidak memuat , satu-satunya titik . Jadi ada lingkungan yang tidak memotong komplemen, sehingga bukan titik batas.   Ketertutupan himpunan kosong  Untuk ruang metrik sebarang , tentukan apakah tertutup di dan jelaskan. Rubrik: gunakan definisi tertutup melalui komplemen dan sifat dasar himpunan terbuka.   Tahap 1: hitung . Tahap 2: ingat apakah seluruh ruang terbuka dalam dirinya sendiri.   Ya. Himpunan tertutup di setiap ruang metrik .   Komplemen himpunan kosong di adalah . Seluruh ruang terbuka: bagi setiap , bola terbuka berpusat di tetap merupakan subhimpunan . Karena komplemennya terbuka, definisi menyatakan bahwa tertutup.   Ketertutupan seluruh ruang  Untuk ruang metrik sebarang , tentukan apakah tertutup di dirinya sendiri dan jelaskan. Rubrik: hitung komplemen relatifnya dan uji keterbukaan komplemen itu.   Tahap 1: tidak mempunyai anggota. Tahap 2: syarat keterbukaan yang dikuantifikasi atas semua anggota berlaku secara hampa bagi himpunan tanpa anggota.   Ya. Seluruh ruang tertutup di .   Komplemen relatif terhadap dirinya adalah . Himpunan kosong terbuka karena tidak ada titik yang dapat melanggar syarat keterbukaan. Maka komplemen terbuka, sehingga tertutup di . Jadi dan keduanya terbuka-tertutup.   Gabungan interval tertutup yang membesar  Di , tetapkan untuk . Tentukan tanpa perlu membuktikannya. Rubrik: identifikasi titik ujung yang tidak pernah tercapai dan titik di antaranya yang akhirnya masuk ke salah satu interval.   Tahap 1: semua terletak di antara dan , tanpa memuat kedua titik itu. Tahap 2: untuk , pilih sehingga lebih kecil daripada .   Gabungannya adalah .   Setiap . Sebaliknya, jika , maka . Pilih cukup besar agar . Maka , jadi . Karena itu gabungannya tepat , sedangkan dan tidak pernah termasuk.   Apakah gabungan tersebut tertutup?  Putuskan apakah dari tugas sebelumnya tertutup di . Rubrik: gunakan hasil gabungan dan jelaskan kegagalan definisi tertutup pada salah satu titik ujung.   Tahap 1: gabungannya adalah . Tahap 2: uji apakah komplemen mempunyai lingkungan terbuka di titik atau .   Tidak. Gabungan itu adalah , yang tidak tertutup di .   Komplemen ialah . Setiap bola terbuka di sekitar memuat bilangan positif kecil yang tidak berada dalam komplemen, sehingga komplemen tidak terbuka. Jadi tidak tertutup. Contoh ini menunjukkan bahwa gabungan tak berhingga dari himpunan-himpunan tertutup dapat gagal tertutup.   Citra titik di luar prapeta  Untuk fungsi dan , andaikan . Tentukan apa yang dapat disimpulkan tentang . Rubrik: uraikan keanggotaan komplemen dan definisi prapeta satu langkah demi satu langkah.   Tahap 1: hipotesis berarti . Tahap 2: ubah pernyataan itu menjadi pernyataan tentang apakah termasuk .   Berlaku , atau secara ekuivalen .   Dari diperoleh . Definisi prapeta menyatakan jika dan hanya jika . Jadi . Karena , kesimpulan itu sama dengan .   Inklusi komplemen prapeta yang pertama  Dengan hipotesis panduan sebelumnya, simpulkan hubungan inklusi antara dan . Rubrik: mulai dari anggota sebarang himpunan pertama dan tunjukkan bahwa ia anggota himpunan kedua.   Tahap 1: panduan 14 memberi . Tahap 2: terjemahkan kembali pernyataan itu menjadi keanggotaan dalam suatu prapeta.   Diperoleh .   Ambil sebarang. Panduan 14 memberi , yang menurut definisi prapeta berarti . Karena berlaku bagi setiap anggota ruas kiri, diperoleh .   Citra titik dalam prapeta komplemen  Sekarang andaikan . Tentukan apa yang dapat disimpulkan tentang . Rubrik: gunakan definisi prapeta dan uraikan arti keanggotaan dalam komplemen .   Tahap 1: keanggotaan dalam prapeta memberi . Tahap 2: nyatakan konsekuensinya terhadap keanggotaan dalam .   Berlaku , sehingga .   Definisi prapeta langsung memberi . Menjadi anggota komplemen di berarti tidak menjadi anggota ; oleh karena itu .   Inklusi komplemen prapeta yang kedua  Dengan hipotesis panduan 16, simpulkan hubungan inklusi antara dan . Rubrik: mulai dari anggota sebarang himpunan pertama dan buktikan keanggotaannya dalam himpunan kedua.   Tahap 1: dari , simpulkan . Tahap 2: karena , tuliskan keanggotaan itu sebagai keanggotaan dalam komplemen relatif.   Diperoleh .   Ambil . Panduan 16 memberi , sehingga . Karena domain adalah , juga ; jadi . Keumuman membuktikan inklusi tersebut.   Prapeta dan komplemen  Tentukan hubungan tepat antara dan . Rubrik: gabungkan kedua inklusi yang telah diperoleh dan nyatakan identitas himpunannya.   Tahap 1: panduan 15 memberi satu arah inklusi. Tahap 2: panduan 17 memberi arah sebaliknya; dua inklusi berlawanan menentukan kesamaan.   Identitasnya adalah .   Panduan 15 membuktikan , sedangkan panduan 17 membuktikan inklusi sebaliknya. Dua himpunan yang saling memuat adalah sama. Jadi prapeta menghormati komplemen: .   Fungsi kontinu menarik himpunan tertutup  Misalkan kontinu antara ruang metrik dan tertutup di . Tunjukkan, dengan identitas panduan 18, bahwa tertutup di . Rubrik: mulai dari komplemen , gunakan karakterisasi kekontinuan melalui prapeta himpunan terbuka, lalu kembali ke definisi tertutup.   Tahap 1: karena tertutup, terbuka. Tahap 2: kekontinuan membuat terbuka, dan panduan 18 mengidentifikasinya dengan komplemen .   Berlaku ; ruas kanan terbuka, sehingga tertutup di .   Karena tertutup, terbuka. Kekontinuan menjamin terbuka di . Identitas panduan 18 memberi Jadi komplemen terbuka. Berdasarkan definisi, tertutup di .   Prapeta tertutup memaksa kekontinuan  Misalkan mempunyai sifat bahwa tertutup di untuk setiap himpunan tertutup . Gunakan identitas panduan 18 untuk membuktikan bahwa kontinu. Rubrik: mulai dari himpunan terbuka sebarang dan buktikan prapetanya terbuka.   Tahap 1: jika terbuka, maka tertutup. Tahap 2: hipotesis dan panduan 18 menunjukkan bahwa tertutup; ambil komplemennya.   Untuk setiap terbuka di , himpunan terbuka di . Karena itu kontinu.   Ambil terbuka. Himpunan tertutup, sehingga tertutup di . Identitas panduan 18 memberi Jadi komplemen tertutup, yang berarti terbuka. Ini berlaku untuk setiap terbuka; karakterisasi prapeta himpunan terbuka membuktikan kontinu.   Memilih titik barisan dari bola yang menyusut  Misalkan titik limit subhimpunan dari ruang metrik . Untuk setiap , jelaskan mengapa memuat titik yang berbeda dari . Rubrik: periksa bahwa bola itu lingkungan dan terapkan setiap bagian definisi titik limit.   Tahap 1: , jadi lingkungan terbuka dari . Tahap 2: definisi titik limit berlaku untuk setiap lingkungan, bukan hanya radius tertentu.   Definisi titik limit menjamin pilihan untuk setiap .   Ambil . Karena , bola adalah lingkungan dari . Karena titik limit , setiap lingkungannya memuat titik yang berbeda dari . Maka ada dengan dan . Pilihan bagi setiap menghasilkan barisan yang diminta.   Limit barisan dari titik-titik sekitar  Untuk barisan yang dipilih pada panduan 21, tentukan dan buktikan jawaban Anda. Rubrik: mulai dengan toleransi sebarang, pilih indeks secara Archimedes, lalu kendalikan semua suku pada ekor barisan.   Tahap 1: konstruksi memberi . Tahap 2: untuk , pilih dengan dan bandingkan dengan ketika .   Barisan tersebut konvergen ke ; jadi .   Ambil . Menurut sifat Archimedes, pilih dengan . Jika , konstruksi panduan 21 memberi Jadi seluruh ekor mulai dari berada dalam . Karena berlaku untuk setiap , definisi memberi , sehingga . Syarat mempertahankan makna titik limit tanpa mengubah bukti konvergensi.   "
+},
+{
+  "id": "o003-c90-ch10-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-01",
+  "type": "Pemeriksaan",
+  "number": "J.1",
+  "title": "Interval setengah tertutup di garis real.",
+  "body": "Interval setengah tertutup di garis real  Untuk di , tentukan semua titik batas, titik limit, dan titik terasing, lalu putuskan apakah tertutup. Rubrik: nyatakan masing-masing himpunan titik secara lengkap, uji kedua titik ujung, dan jelaskan keputusan tertutup dari komplemen atau dari titik batas yang hilang.   Tahap 1: pisahkan titik di bagian dalam interval, kedua titik ujung, dan titik di luar interval. Tahap 2: tanyakan apakah setiap lingkungan memotong , memotong komplemennya, atau memuat titik lain dari .   Titik batasnya adalah , titik limitnya adalah , tidak ada titik terasing, dan tidak tertutup di .   Setiap lingkungan dari dan memuat titik sekaligus titik , jadi tepat kedua titik itu merupakan titik batas. Titik dalam mempunyai bola yang seluruhnya di , sedangkan titik di luar mempunyai bola yang tidak memotong . Setiap lingkungan dari titik memuat titik lain dari , sehingga himpunan titik limitnya ; akibatnya tidak ada titik terasing. Titik limit tidak termasuk , dan komplemen tidak terbuka di titik itu. Maka tidak tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-02",
+  "type": "Pemeriksaan",
+  "number": "J.2",
+  "title": "Ketertutupan relatif dalam subruang.",
+  "body": "Ketertutupan relatif dalam subruang  Ambil dengan metrik Euklides terinduksi dan . Tentukan titik batas, titik limit, dan titik terasing relatif terhadap , lalu tentukan apakah tertutup di . Rubrik: jangan memasukkan titik yang bukan unsur ruang sekitar .   Tahap 1: titik bukan titik di . Tahap 2: periksa sisi mana dari yang berada dalam , lalu tuliskan dan uji keterbukaannya di .   Relatif terhadap , titik batasnya hanya , titik limitnya , tidak ada titik terasing, dan tertutup di .   Setiap lingkungan relatif dari memuat titik di bawahnya yang termasuk dan titik di atasnya yang termasuk , jadi itulah satu-satunya titik batas. Titik-titik interior relatif , sedangkan titik-titik interior relatif komplemennya. Setiap titik didekati titik lain dari , sehingga titik limitnya sendiri dan tidak ada titik terasing. Karena terbuka relatif, tertutup di . Titik tidak didaftarkan karena .  "
+},
+{
+  "id": "o003-c90-ch10-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-03",
+  "type": "Pemeriksaan",
+  "number": "J.3",
+  "title": "Subhimpunan dalam ruang diskret hingga.",
+  "body": "Subhimpunan dalam ruang diskret hingga  Misalkan bermetrik diskret dan . Tentukan semua titik batas, titik limit, dan titik terasing , lalu putuskan apakah tertutup. Rubrik: gunakan satu radius kurang dari untuk menganalisis setiap titik.   Tahap 1: untuk , bola hanya memuat . Tahap 2: periksa akibat bola satu titik itu bagi definisi ketiga jenis titik dan bagi keterbukaan komplemen.   Himpunan titik batas dan titik limit keduanya kosong, titik terasingnya adalah , dan tertutup; bahkan terbuka-tertutup.   Untuk setiap , bola . Jika , bola ini tidak memuat titik komplemen atau titik selain ; jadi bukan titik batas atau titik limit, tetapi titik terasing. Jika , bola yang sama tidak memotong , sehingga juga bukan titik batas atau titik limit. Jadi titik batas dan titik limit kosong, sedangkan titik terasing tepat . Setiap subhimpunan ruang diskret terbuka, maka terbuka dan tertutup; sendiri juga terbuka.  "
+},
+{
+  "id": "o003-c90-ch10-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-04",
+  "type": "Pemeriksaan",
+  "number": "J.4",
+  "title": "Apakah titik limit selalu titik batas?",
+  "body": "Apakah titik limit selalu titik batas?  Nilai benar atau salah pernyataan “setiap titik limit merupakan titik batas.” Rubrik: jika salah, berikan ruang metrik, himpunan, dan satu titik tertentu, lalu periksa kedua definisi pada titik itu.   Tahap 1: titik interior suatu interval dapat didekati titik lain dari interval. Tahap 2: lingkungan yang seluruhnya di dalam interval gagal memotong komplemennya.   Salah. Misalnya, adalah titik limit di , tetapi bukan titik batas .   Setiap lingkungan dari memuat suatu bola , sehingga memuat titik taknol dari jika titik itu dipilih cukup kecil. Jadi titik limit . Namun , sehingga bola ini tidak memuat titik komplemen. Definisi titik batas gagal, dan contoh tandingan ini membuktikan pernyataannya salah.  "
+},
+{
+  "id": "o003-c90-ch10-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-05",
+  "type": "Pemeriksaan",
+  "number": "J.5",
+  "title": "Apakah titik batas selalu titik limit?",
+  "body": "Apakah titik batas selalu titik limit?  Nilai benar atau salah pernyataan “setiap titik batas merupakan titik limit.” Rubrik: perhatikan bahwa titik batas boleh menjadi satu-satunya titik himpunan di lingkungan kecilnya.   Tahap 1: coba himpunan satu titik di garis real. Tahap 2: setiap lingkungan pusat itu memuat pusat dan titik komplemen, tetapi apakah harus memuat titik kedua dari himpunan?   Salah. Untuk , titik adalah titik batas tetapi bukan titik limit.   Setiap lingkungan dari memuat dan, karena memuat bola berjari-jari positif, juga memuat titik real taknol dalam . Jadi titik batas . Tetapi tidak ada titik yang berbeda dari , sehingga syarat titik limit mustahil dipenuhi. Maka pernyataannya salah.  "
+},
+{
+  "id": "o003-c90-ch10-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-06",
+  "type": "Pemeriksaan",
+  "number": "J.6",
+  "title": "Apakah titik limit selalu terasing?",
+  "body": "Apakah titik limit selalu terasing?  Nilai benar atau salah pernyataan “setiap titik limit merupakan titik terasing.” Rubrik: bandingkan tuntutan “setiap lingkungan memuat titik lain” dengan tuntutan “ada lingkungan yang tidak memuat titik lain.”   Tahap 1: gunakan titik dalam suatu interval real. Tahap 2: tunjukkan bahwa setiap lingkungan memuat unsur interval selain pusat, sehingga tidak mungkin mengasingkan pusat.   Salah. Dalam , titik merupakan titik limit tetapi bukan titik terasing.   Setiap lingkungan dari memuat bola . Ada yang cukup kecil sehingga ; jadi titik limit. Fakta ini berlaku bagi setiap lingkungan, maka tidak ada lingkungan dengan . Jadi tidak terasing dan klaim universal itu salah.  "
+},
+{
+  "id": "o003-c90-ch10-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-07",
+  "type": "Pemeriksaan",
+  "number": "J.7",
+  "title": "Apakah titik terasing selalu titik limit?",
+  "body": "Apakah titik terasing selalu titik limit?  Nilai benar atau salah pernyataan “setiap titik terasing merupakan titik limit.” Rubrik: sajikan contoh yang memenuhi definisi titik terasing dan tunjukkan lingkungan yang menggagalkan definisi titik limit.   Tahap 1: ambil di garis real. Tahap 2: irisan setiap lingkungan dengan tidak pernah dapat memuat anggota selain .   Salah. Titik terasing dalam , tetapi bukan titik limit .   Bola memenuhi , sehingga titik terasing. Definisi titik limit meminta setiap lingkungan memuat titik yang berbeda dari . Karena tidak mempunyai titik demikian, syarat itu gagal. Jadi contoh ini menyangkal pernyataan tersebut.  "
+},
+{
+  "id": "o003-c90-ch10-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-08",
+  "type": "Pemeriksaan",
+  "number": "J.8",
+  "title": "Apakah titik batas selalu terasing?",
+  "body": "Apakah titik batas selalu terasing?  Nilai benar atau salah pernyataan “setiap titik batas merupakan titik terasing.” Rubrik: cari titik ujung interval yang sekaligus didekati oleh banyak titik interval.   Tahap 1: uji untuk di . Tahap 2: setiap lingkungan memuat bilangan negatif dan bilangan positif kecil; tentukan akibat masing-masing bagi kedua definisi.   Salah. Titik adalah titik batas , tetapi bukan titik terasing dari himpunan itu.   Setiap lingkungan dari memuat dan bilangan negatif di luar , jadi titik batas. Lingkungan itu juga memuat bilangan positif kecil yang berbeda dari dan berada di . Maka tidak ada lingkungan yang beririsan dengan tepat pada ; bukan titik terasing.  "
+},
+{
+  "id": "o003-c90-ch10-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-09",
+  "type": "Pemeriksaan",
+  "number": "J.9",
+  "title": "Apakah titik terasing selalu titik batas?",
+  "body": "Apakah titik terasing selalu titik batas?  Nilai benar atau salah pernyataan “setiap titik terasing merupakan titik batas.” Rubrik: pilih ruang yang mempunyai lingkungan satu titik dan periksa apakah lingkungan itu harus memotong komplemen himpunan.   Tahap 1: gunakan ruang diskret dan . Tahap 2: periksa bola .   Salah. Dalam ruang diskret , titik terasing dalam , tetapi bukan titik batas .   Pada metrik diskret, . Irisannya dengan tepat , maka terasing. Namun bola itu tidak memuat , satu-satunya titik . Jadi ada lingkungan yang tidak memotong komplemen, sehingga bukan titik batas.  "
+},
+{
+  "id": "o003-c90-ch10-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-10",
+  "type": "Pemeriksaan",
+  "number": "J.10",
+  "title": "Ketertutupan himpunan kosong.",
+  "body": "Ketertutupan himpunan kosong  Untuk ruang metrik sebarang , tentukan apakah tertutup di dan jelaskan. Rubrik: gunakan definisi tertutup melalui komplemen dan sifat dasar himpunan terbuka.   Tahap 1: hitung . Tahap 2: ingat apakah seluruh ruang terbuka dalam dirinya sendiri.   Ya. Himpunan tertutup di setiap ruang metrik .   Komplemen himpunan kosong di adalah . Seluruh ruang terbuka: bagi setiap , bola terbuka berpusat di tetap merupakan subhimpunan . Karena komplemennya terbuka, definisi menyatakan bahwa tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-11",
+  "type": "Pemeriksaan",
+  "number": "J.11",
+  "title": "Ketertutupan seluruh ruang.",
+  "body": "Ketertutupan seluruh ruang  Untuk ruang metrik sebarang , tentukan apakah tertutup di dirinya sendiri dan jelaskan. Rubrik: hitung komplemen relatifnya dan uji keterbukaan komplemen itu.   Tahap 1: tidak mempunyai anggota. Tahap 2: syarat keterbukaan yang dikuantifikasi atas semua anggota berlaku secara hampa bagi himpunan tanpa anggota.   Ya. Seluruh ruang tertutup di .   Komplemen relatif terhadap dirinya adalah . Himpunan kosong terbuka karena tidak ada titik yang dapat melanggar syarat keterbukaan. Maka komplemen terbuka, sehingga tertutup di . Jadi dan keduanya terbuka-tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-12",
+  "type": "Pemeriksaan",
+  "number": "J.12",
+  "title": "Gabungan interval tertutup yang membesar.",
+  "body": "Gabungan interval tertutup yang membesar  Di , tetapkan untuk . Tentukan tanpa perlu membuktikannya. Rubrik: identifikasi titik ujung yang tidak pernah tercapai dan titik di antaranya yang akhirnya masuk ke salah satu interval.   Tahap 1: semua terletak di antara dan , tanpa memuat kedua titik itu. Tahap 2: untuk , pilih sehingga lebih kecil daripada .   Gabungannya adalah .   Setiap . Sebaliknya, jika , maka . Pilih cukup besar agar . Maka , jadi . Karena itu gabungannya tepat , sedangkan dan tidak pernah termasuk.  "
+},
+{
+  "id": "o003-c90-ch10-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-13",
+  "type": "Pemeriksaan",
+  "number": "J.13",
+  "title": "Apakah gabungan tersebut tertutup?",
+  "body": "Apakah gabungan tersebut tertutup?  Putuskan apakah dari tugas sebelumnya tertutup di . Rubrik: gunakan hasil gabungan dan jelaskan kegagalan definisi tertutup pada salah satu titik ujung.   Tahap 1: gabungannya adalah . Tahap 2: uji apakah komplemen mempunyai lingkungan terbuka di titik atau .   Tidak. Gabungan itu adalah , yang tidak tertutup di .   Komplemen ialah . Setiap bola terbuka di sekitar memuat bilangan positif kecil yang tidak berada dalam komplemen, sehingga komplemen tidak terbuka. Jadi tidak tertutup. Contoh ini menunjukkan bahwa gabungan tak berhingga dari himpunan-himpunan tertutup dapat gagal tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-14",
+  "type": "Pemeriksaan",
+  "number": "J.14",
+  "title": "Citra titik di luar prapeta.",
+  "body": "Citra titik di luar prapeta  Untuk fungsi dan , andaikan . Tentukan apa yang dapat disimpulkan tentang . Rubrik: uraikan keanggotaan komplemen dan definisi prapeta satu langkah demi satu langkah.   Tahap 1: hipotesis berarti . Tahap 2: ubah pernyataan itu menjadi pernyataan tentang apakah termasuk .   Berlaku , atau secara ekuivalen .   Dari diperoleh . Definisi prapeta menyatakan jika dan hanya jika . Jadi . Karena , kesimpulan itu sama dengan .  "
+},
+{
+  "id": "o003-c90-ch10-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-15",
+  "type": "Pemeriksaan",
+  "number": "J.15",
+  "title": "Inklusi komplemen prapeta yang pertama.",
+  "body": "Inklusi komplemen prapeta yang pertama  Dengan hipotesis panduan sebelumnya, simpulkan hubungan inklusi antara dan . Rubrik: mulai dari anggota sebarang himpunan pertama dan tunjukkan bahwa ia anggota himpunan kedua.   Tahap 1: panduan 14 memberi . Tahap 2: terjemahkan kembali pernyataan itu menjadi keanggotaan dalam suatu prapeta.   Diperoleh .   Ambil sebarang. Panduan 14 memberi , yang menurut definisi prapeta berarti . Karena berlaku bagi setiap anggota ruas kiri, diperoleh .  "
+},
+{
+  "id": "o003-c90-ch10-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-16",
+  "type": "Pemeriksaan",
+  "number": "J.16",
+  "title": "Citra titik dalam prapeta komplemen.",
+  "body": "Citra titik dalam prapeta komplemen  Sekarang andaikan . Tentukan apa yang dapat disimpulkan tentang . Rubrik: gunakan definisi prapeta dan uraikan arti keanggotaan dalam komplemen .   Tahap 1: keanggotaan dalam prapeta memberi . Tahap 2: nyatakan konsekuensinya terhadap keanggotaan dalam .   Berlaku , sehingga .   Definisi prapeta langsung memberi . Menjadi anggota komplemen di berarti tidak menjadi anggota ; oleh karena itu .  "
+},
+{
+  "id": "o003-c90-ch10-guide-17",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-17",
+  "type": "Pemeriksaan",
+  "number": "J.17",
+  "title": "Inklusi komplemen prapeta yang kedua.",
+  "body": "Inklusi komplemen prapeta yang kedua  Dengan hipotesis panduan 16, simpulkan hubungan inklusi antara dan . Rubrik: mulai dari anggota sebarang himpunan pertama dan buktikan keanggotaannya dalam himpunan kedua.   Tahap 1: dari , simpulkan . Tahap 2: karena , tuliskan keanggotaan itu sebagai keanggotaan dalam komplemen relatif.   Diperoleh .   Ambil . Panduan 16 memberi , sehingga . Karena domain adalah , juga ; jadi . Keumuman membuktikan inklusi tersebut.  "
+},
+{
+  "id": "o003-c90-ch10-guide-18",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-18",
+  "type": "Pemeriksaan",
+  "number": "J.18",
+  "title": "Prapeta dan komplemen.",
+  "body": "Prapeta dan komplemen  Tentukan hubungan tepat antara dan . Rubrik: gabungkan kedua inklusi yang telah diperoleh dan nyatakan identitas himpunannya.   Tahap 1: panduan 15 memberi satu arah inklusi. Tahap 2: panduan 17 memberi arah sebaliknya; dua inklusi berlawanan menentukan kesamaan.   Identitasnya adalah .   Panduan 15 membuktikan , sedangkan panduan 17 membuktikan inklusi sebaliknya. Dua himpunan yang saling memuat adalah sama. Jadi prapeta menghormati komplemen: .  "
+},
+{
+  "id": "o003-c90-ch10-guide-19",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-19",
+  "type": "Pemeriksaan",
+  "number": "J.19",
+  "title": "Fungsi kontinu menarik himpunan tertutup.",
+  "body": "Fungsi kontinu menarik himpunan tertutup  Misalkan kontinu antara ruang metrik dan tertutup di . Tunjukkan, dengan identitas panduan 18, bahwa tertutup di . Rubrik: mulai dari komplemen , gunakan karakterisasi kekontinuan melalui prapeta himpunan terbuka, lalu kembali ke definisi tertutup.   Tahap 1: karena tertutup, terbuka. Tahap 2: kekontinuan membuat terbuka, dan panduan 18 mengidentifikasinya dengan komplemen .   Berlaku ; ruas kanan terbuka, sehingga tertutup di .   Karena tertutup, terbuka. Kekontinuan menjamin terbuka di . Identitas panduan 18 memberi Jadi komplemen terbuka. Berdasarkan definisi, tertutup di .  "
+},
+{
+  "id": "o003-c90-ch10-guide-20",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-20",
+  "type": "Pemeriksaan",
+  "number": "J.20",
+  "title": "Prapeta tertutup memaksa kekontinuan.",
+  "body": "Prapeta tertutup memaksa kekontinuan  Misalkan mempunyai sifat bahwa tertutup di untuk setiap himpunan tertutup . Gunakan identitas panduan 18 untuk membuktikan bahwa kontinu. Rubrik: mulai dari himpunan terbuka sebarang dan buktikan prapetanya terbuka.   Tahap 1: jika terbuka, maka tertutup. Tahap 2: hipotesis dan panduan 18 menunjukkan bahwa tertutup; ambil komplemennya.   Untuk setiap terbuka di , himpunan terbuka di . Karena itu kontinu.   Ambil terbuka. Himpunan tertutup, sehingga tertutup di . Identitas panduan 18 memberi Jadi komplemen tertutup, yang berarti terbuka. Ini berlaku untuk setiap terbuka; karakterisasi prapeta himpunan terbuka membuktikan kontinu.  "
+},
+{
+  "id": "o003-c90-ch10-guide-21",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-21",
+  "type": "Pemeriksaan",
+  "number": "J.21",
+  "title": "Memilih titik barisan dari bola yang menyusut.",
+  "body": "Memilih titik barisan dari bola yang menyusut  Misalkan titik limit subhimpunan dari ruang metrik . Untuk setiap , jelaskan mengapa memuat titik yang berbeda dari . Rubrik: periksa bahwa bola itu lingkungan dan terapkan setiap bagian definisi titik limit.   Tahap 1: , jadi lingkungan terbuka dari . Tahap 2: definisi titik limit berlaku untuk setiap lingkungan, bukan hanya radius tertentu.   Definisi titik limit menjamin pilihan untuk setiap .   Ambil . Karena , bola adalah lingkungan dari . Karena titik limit , setiap lingkungannya memuat titik yang berbeda dari . Maka ada dengan dan . Pilihan bagi setiap menghasilkan barisan yang diminta.  "
+},
+{
+  "id": "o003-c90-ch10-guide-22",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-a.html#o003-c90-ch10-guide-22",
+  "type": "Pemeriksaan",
+  "number": "J.22",
+  "title": "Limit barisan dari titik-titik sekitar.",
+  "body": "Limit barisan dari titik-titik sekitar  Untuk barisan yang dipilih pada panduan 21, tentukan dan buktikan jawaban Anda. Rubrik: mulai dengan toleransi sebarang, pilih indeks secara Archimedes, lalu kendalikan semua suku pada ekor barisan.   Tahap 1: konstruksi memberi . Tahap 2: untuk , pilih dengan dan bandingkan dengan ketika .   Barisan tersebut konvergen ke ; jadi .   Ambil . Menurut sifat Archimedes, pilih dengan . Jika , konstruksi panduan 21 memberi Jadi seluruh ekor mulai dari berada dalam . Karena berlaku untuk setiap , definisi memberi , sehingga . Syarat mempertahankan makna titik limit tanpa mengubah bukti konvergensi.  "
+},
+{
+  "id": "o003-c90-ch10-source-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch10-source-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan konsep dan tugas sumber, bagian kedua",
+  "body": " Panduan konsep dan tugas sumber, bagian kedua  Dua puluh satu panduan berikut melanjutkan urutan tugas sumber Bab 10: dua pembuktian tentang titik terasing, empat langkah karakterisasi himpunan tertutup melalui titik limit, delapan langkah tentang tutupan dan batas, serta tujuh tugas tentang limit barisan dalam himpunan tertutup. Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap pernyataan di bawah memparafrasakan sasaran sumber dan menyertakan rubrik keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang tersedia di bawah Creative Commons Attribution 4.0 International (CC BY 4.0).  Dari titik terasing ke ekor konstan  Misalkan subhimpunan ruang metrik dan titik terasing dari . Buktikan bahwa setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan . Rubrik: gunakan satu lingkungan yang mengasingkan , terapkan definisi konvergensi pada radiusnya, dan tunjukkan bahwa seluruh ekor barisan sama dengan .   Tahap 1: pilih sehingga . Tahap 2: karena , cari yang membuat untuk setiap .   Untuk suatu , satu-satunya anggota di ialah . Konvergensi menempatkan seluruh ekor di bola itu, sehingga pada akhirnya.   Karena titik terasing dari , terdapat dengan . Konvergensi , diterapkan pada toleransi , memberi sehingga apabila . Untuk indeks tersebut, ; karena barisan berada di , juga . Jadi , dan akibatnya untuk setiap . Inilah arti bahwa barisan pada akhirnya sama dengan barisan konstan .   Dari ekor konstan ke titik terasing  Misalkan dan setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan . Buktikan bahwa merupakan titik terasing dari . Rubrik: sangkal keterasingan, bangun satu titik berbeda dari di setiap bola berjari-jari , lalu peroleh barisan penyangkal.   Tahap 1: jika tidak terasing, untuk setiap pilih . Tahap 2: buktikan , kemudian bandingkan dengan hipotesis tentang ekor konstan.   Jika tidak terasing, ada barisan di dengan . Barisan ini menuju tetapi tidak pernah sama dengan , bertentangan dengan hipotesis. Jadi terasing.   Andaikan, demi kontradiksi, bahwa bukan titik terasing dari . Maka tidak ada bola berpusat di yang irisannya dengan hanya . Jadi, untuk setiap , kita dapat memilih . Dengan demikian dan untuk semua .  Untuk , pilih . Jika , maka ; jadi . Hipotesis sekarang mengharuskan untuk semua indeks yang cukup besar, padahal konstruksi memastikan untuk setiap indeks. Kontradiksi tersebut membuktikan bahwa titik terasing dari .   Sasaran untuk membuktikan ketertutupan  Andaikan . Pada langkah pertama pembuktian bahwa tertutup, nyatakan apa yang cukup ditunjukkan menurut definisi himpunan tertutup. Rubrik: identifikasi komplemen di dalam dan sifat topologis yang harus dimilikinya.   Tahap 1: ingat kesetaraan antara ketertutupan suatu himpunan dan keterbukaan komplemennya. Tahap 2: terjemahkan keterbukaan ke syarat bola di setiap titik komplemen.   Cukup dibuktikan bahwa terbuka, yaitu bahwa setiap mempunyai bola terbuka yang termuat dalam .   Menurut definisi, tertutup tepat ketika komplemennya terbuka. Karena itu sasaran pembuktian dapat dinyatakan sebagai berikut: untuk setiap , temukan sehingga . Sasaran ekuivalen inilah yang akan disangkal pada langkah berikutnya untuk menjalankan pembuktian dengan kontradiksi.   Akibat andaian bahwa himpunan tidak tertutup  Lanjutkan dengan pembuktian kontradiksi: andaikan tidak tertutup. Apa yang dapat disimpulkan tentang ? Rubrik: gunakan negasi langsung dari definisi ketertutupan, tanpa memakai dahulu asumsi .   Tahap 1: tertutup jika dan hanya jika terbuka. Tahap 2: negasikan kedua sisi pernyataan ekuivalen itu.   Jika tidak tertutup, maka komplemennya tidak terbuka.   Definisi ketertutupan menyatakan bahwa tertutup jika dan hanya jika terbuka. Oleh sebab itu, andaian bahwa tidak tertutup memaksa tidak terbuka. Secara berkuantor, kegagalan keterbukaan ini berarti ada sedikitnya satu titik komplemen yang tidak memiliki bola terbuka yang seluruhnya tinggal di dalam komplemen.   Titik komplemen yang juga titik limit  Uraikan akibat dari fakta bahwa tidak terbuka. Hasilkan suatu dan buktikan bahwa . Rubrik: nyatakan kegagalan syarat bola, tunjukkan bahwa setiap bola di bertemu , dan periksa bahwa titik pertemuan itu berbeda dari .   Tahap 1: ada sehingga untuk setiap , bola tidak termuat dalam . Tahap 2: titik bola yang berada di luar komplemen terletak di , dan tidak mungkin sama dengan .   Ada sehingga setiap bertemu . Karena , setiap titik pertemuan berbeda dari ; jadi adalah titik limit dari .   Karena tidak terbuka, terdapat yang memenuhi: untuk setiap , bola tidak termuat dalam . Maka setiap bola tersebut memuat suatu titik yang tidak berada di , sehingga . Di sisi lain , jadi . Dengan demikian setiap lingkungan bola di memuat anggota yang berbeda dari . Menurut definisi, .   Kontradiksi yang menuntaskan ketertutupan  Jelaskan mengapa titik yang diperoleh pada langkah sebelumnya bertentangan dengan asumsi , lalu tuntaskan pembuktian. Rubrik: tulis kedua keanggotaan yang tidak serasi dan nyatakan kesimpulan tentang .   Tahap 1: konstruksi memberi sekaligus dan . Tahap 2: terapkan inklusi pada keanggotaan pertama.   Dari dan diperoleh , sedangkan konstruksi memberi . Kontradiksi ini menunjukkan bahwa tertutup.   Langkah sebelumnya menghasilkan . Asumsi awal karenanya memberi . Namun titik yang sama dipilih dari , sehingga . Ini kontradiksi. Jadi andaian bahwa tidak tertutup harus ditolak; akibatnya tertutup. Bersama arah pertama teorema, diperoleh karakterisasi bahwa tertutup jika dan hanya jika memuat semua titik limitnya.   Sasaran sifat minimal tutupan  Misalkan . Nyatakan apa yang harus dibuktikan agar merupakan subhimpunan tertutup terkecil dari yang memuat . Rubrik: pisahkan ketertutupan dan keanggotaan yang sudah diketahui dari syarat minimal terhadap setiap pesaing tertutup.   Tahap 1: teorema sebelumnya sudah memberi bahwa tertutup, dan definisinya memberi . Tahap 2: ambil sembarang himpunan tertutup dengan dan tentukan inklusi yang harus dibuktikan.   Selain mengetahui bahwa tertutup dan memuat , harus dibuktikan bahwa untuk setiap himpunan tertutup yang memuat , berlaku .   Sebuah himpunan tertutup yang memuat adalah yang terkecil menurut inklusi apabila ia termuat dalam setiap himpunan tertutup lain yang memuat . Sudah diketahui bahwa memuat , dan teorema sebelumnya menyatakan bahwa tertutup. Jadi bagian yang tersisa ialah: untuk sembarang , jika tertutup dan , maka .   Mengurangi sasaran ke titik limit  Andaikan tertutup dan . Jelaskan mengapa, untuk membuktikan , cukup menunjukkan . Rubrik: uraikan definisi tutupan sebagai gabungan dan tangani kedua bagiannya.   Tahap 1: gunakan . Tahap 2: inklusi satu bagian gabungan, yakni , sudah menjadi hipotesis.   Karena dan sudah diketahui, satu-satunya inklusi yang masih perlu dibuktikan ialah .   Ambil . Dari , berlaku atau . Pada kasus pertama, hipotesis langsung memberi . Karena itu, jika dapat dibuktikan bahwa setiap juga berada di , kedua kasus memberi . Maka bersama memang cukup untuk menyimpulkan .   Titik limit berpindah ke superset tertutup  Ambil , dengan dan tertutup. Tentukan apa yang dapat disimpulkan tentang . Rubrik: mula-mula hubungkan titik limit dengan titik limit , lalu gunakan karakterisasi himpunan tertutup.   Tahap 1: setiap lingkungan memuat anggota , yang juga anggota . Tahap 2: karena tertutup, ia memuat semua titik limitnya.   Inklusi membuat setiap titik limit juga titik limit . Jadi , dan ketertutupan memberi .   Misalkan . Setiap lingkungan dari memuat suatu dengan . Karena , titik yang sama memenuhi dan . Jadi setiap lingkungan memuat anggota yang berbeda dari , sehingga . Himpunan tertutup dan karenanya memuat semua titik limitnya; maka . Ini membuktikan bahwa .   Menuntaskan sifat minimal tutupan  Lengkapi pembuktian bahwa untuk setiap subhimpunan tertutup yang memuat , lalu simpulkan sifat minimal . Rubrik: gabungkan dua inklusi bagian dari dan nyatakan kuantifikasi atas .   Tahap 1: hipotesis memberi , sedangkan langkah sebelumnya memberi . Tahap 2: ambil gabungan dan ingat bahwa dipilih sembarang di antara superset tertutup .   Dari dan diperoleh . Karena ini berlaku bagi setiap superset tertutup dari , tutupan adalah yang terkecil.   Misalkan sembarang subhimpunan tertutup dari dengan . Untuk setiap , panduan sebelumnya menunjukkan ; jadi . Oleh karena itu Tutupan sendiri tertutup dan memuat . Karena ia termuat dalam setiap himpunan tertutup yang memuat , adalah subhimpunan tertutup terkecil dari yang memuat .   Dua keanggotaan dari irisan tutupan  Misalkan . Nyatakan dua keanggotaan yang langsung mengikuti dari fakta bahwa berada dalam irisan itu. Rubrik: uraikan definisi keanggotaan dalam irisan tanpa menambahkan asumsi kasus.   Tahap 1: keanggotaan dalam berarti keanggotaan dalam dan . Tahap 2: substitusikan kedua tutupan untuk dan .   Berlaku sekaligus dan .   Menurut definisi irisan, jika dan hanya jika serta . Dengan dan , kita memperoleh dan . Kedua fakta ini akan dipakai terpisah sesuai apakah atau .   Kasus titik berada di dalam himpunan  Misalkan sembarang lingkungan dari dan tinjau kasus . Jelaskan mengapa memuat sebuah titik di dan sebuah titik di , lalu simpulkan sifat . Rubrik: gunakan sendiri untuk salah satu sisi dan keanggotaan dalam tutupan komplemen untuk sisi lain.   Tahap 1: karena dan , lingkungan itu sudah memuat titik . Tahap 2: dari tetapi , simpulkan bahwa titik limit komplemen.   Lingkungan memuat . Selain itu, , sehingga memuat titik . Jadi setiap lingkungan bertemu kedua sisi, dan .   Ambil sembarang lingkungan dari . Karena dan setiap lingkungan memuat titik pusatnya, memuat sebuah titik di , yakni . Kita juga mengetahui . Karena dalam kasus ini , definisi tutupan memaksa . Maka memuat suatu titik dari yang berbeda dari . Karena sebarang dan bertemu maupun komplemennya, adalah titik batas dari .   Kasus titik berada di luar himpunan  Dengan sembarang lingkungan dari , tinjau kasus . Jelaskan mengapa memuat sebuah titik di dan sebuah titik di , lalu simpulkan sifat . Rubrik: tukarkan peran himpunan dan komplemennya dari kasus sebelumnya.   Tahap 1: kini , jadi titik luar sudah tersedia di . Tahap 2: dari tetapi , simpulkan dan gunakan definisinya.   Lingkungan memuat . Karena , lingkungan yang sama juga memuat titik . Jadi bertemu kedua sisi dan .   Ambil sembarang lingkungan dari . Andaian berarti ; karena , lingkungan tersebut memuat titik di luar . Di sisi lain, dan , sehingga . Oleh definisi titik limit, memuat suatu anggota yang berbeda dari . Jadi setiap lingkungan memuat titik dari dan dari . Dengan demikian .   Menyimpulkan inklusi ke dalam batas  Gabungkan kedua kasus sebelumnya untuk membuktikan . Rubrik: jelaskan bahwa pemisahan kasus mencakup setiap dan kembalikan kesimpulan titik-sebarang menjadi inklusi himpunan.   Tahap 1: setiap titik memenuhi tepat satu di antara dan . Tahap 2: kedua cabang telah memberi kesimpulan yang sama, yaitu .   Baik ketika maupun ketika , setiap lingkungan bertemu dan komplemennya. Maka setiap dalam irisan kedua tutupan berada di , sehingga inklusi yang diminta berlaku.   Ambil sembarang . Jika , panduan 34 menunjukkan bahwa setiap lingkungan memuat titik dari dan dari . Jika , panduan 35 memberikan sifat yang sama. Kedua kasus mencakup semua kemungkinan, sehingga selalu . Karena dipilih sembarang, Bersama inklusi arah lain yang telah dibuktikan, hasil ini memberi .   Limit barisan di dalam dua himpunan  Dalam , tentukan limit barisan , yang seluruh sukunya berada di dan . Rubrik: ajukan kandidat limit dan verifikasi langsung dengan definisi - . Cetakan sumber menulis , tetapi suku pertamanya tidak berada di ; edisi ini menggeser indeks satu langkah sesuai emendasi tercatat O003-C100 agar syarat soal berlaku bagi semua suku.   Tahap 1: uji titik dan hitung . Tahap 2: untuk , pilih yang cukup besar sehingga .   Limit barisan tersebut ialah .   Ambil . Menurut sifat Archimedes, pilih dengan . Jika , maka Jadi semua suku pada ekor barisan berada sedekat yang diminta dari , dan .   Limit tidak berada di himpunan terbuka  Tentukan apakah dari panduan sebelumnya berada di . Rubrik: gunakan nilai limit yang telah diperoleh dan periksa syarat keanggotaan interval terbuka.   Tahap 1: substitusikan . Tahap 2: anggota harus lebih besar secara ketat dari .   Tidak. Karena dan , limit tidak berada di .   Panduan 37 menunjukkan bahwa . Interval berisi tepat bilangan real dengan ; titik ujung tidak disertakan. Oleh karena itu . Contoh ini memperlihatkan bahwa suatu barisan yang seluruh sukunya berada dalam himpunan terbuka tidak harus memiliki limit di himpunan tersebut.   Limit berada di himpunan tertutup  Tentukan apakah berada di . Rubrik: gunakan limit dan periksa apakah tanda kurung siku menyertakan titik ujung.   Tahap 1: interval memuat kedua titik ujungnya. Tahap 2: bandingkan fakta ini dengan .   Ya. Titik berada di , sehingga .   Karena , titik ujung merupakan anggota . Dari diperoleh . Berbeda dengan , himpunan tidak kehilangan titik batas ini.   Dua perbedaan yang menjelaskan perilaku limit  Sebutkan dua perbedaan penting antara dan yang menjelaskan mengapa limit barisan berada di tetapi tidak di . Gunakan terminologi bagian ini. Rubrik: bandingkan jenis keterbukaan atau ketertutupan dan perlakuan kedua himpunan terhadap titik limit atau titik batasnya.   Tahap 1: klasifikasikan dan sebagai terbuka atau tertutup di . Tahap 2: periksa apakah masing-masing memuat titik limit sekaligus titik batas dan .   Himpunan terbuka dan tidak tertutup, sedangkan tertutup dan tidak terbuka. Selain itu, tidak memuat titik batas sekaligus titik limit dan , sedangkan memuat keduanya.   Perbedaan pertama ialah sifat topologisnya: terbuka tetapi tidak tertutup dalam , sedangkan tertutup tetapi tidak terbuka. Perbedaan kedua menyangkut titik tepi: dan merupakan titik batas dan titik limit dari kedua interval, tetapi tidak memuat keduanya sedangkan memuat keduanya. Khususnya, limit dari hilang dari tetapi dipertahankan oleh . Hal ini mencerminkan karakterisasi bahwa himpunan tertutup memuat semua titik limitnya.   Memilih karakterisasi ketertutupan yang relevan  Sebutkan tiga cara untuk menunjukkan bahwa subhimpunan ruang metrik adalah himpunan tertutup, lalu pilih cara yang paling sesuai apabila hipotesis berbicara tentang limit setiap barisan di . Rubrik: berikan tiga kriteria yang ekuivalen dan jelaskan mengapa kriteria titik limit cocok dengan informasi barisan.   Tahap 1: ingat kriteria melalui komplemen, titik limit, dan tutupan. Tahap 2: titik limit menghasilkan barisan di yang konvergen ke titik tersebut.   Tiga cara ialah membuktikan terbuka, membuktikan , atau membuktikan . Cara kedua paling relevan karena sebuah titik limit dari dapat diwujudkan sebagai limit suatu barisan di .   Tiga karakterisasi yang dapat dipakai adalah: tertutup apabila terbuka; tertutup apabila ia memuat semua titik limitnya, yakni ; dan tertutup apabila . Kriteria melalui titik limit adalah pilihan paling langsung di sini. Jika , teorema tentang titik limit menyediakan barisan di yang menuju , tepat jenis objek yang dapat dimasukkan ke hipotesis soal. Karakterisasi melalui batas, , juga setara, tetapi tidak diperlukan untuk argumen ini.   Barisan yang mendekati sebuah titik limit  Misalkan titik limit dari . Nyatakan kesimpulan berurutan yang diperlukan untuk memakai hipotesis bahwa setiap barisan konvergen di memiliki limit di . Rubrik: bangun atau kutip keberadaan barisan di , nyatakan limitnya, dan jaga agar semua sukunya berada di .   Tahap 1: untuk setiap , pilih . Tahap 2: gunakan untuk membuktikan .   Terdapat barisan di , bahkan dengan , yang konvergen ke .   Karena , setiap bola di memuat anggota yang berbeda dari . Untuk tiap , pilih . Maka seluruh suku berada di dan . Jika , pilih . Untuk , . Jadi . Ini juga merupakan penerapan langsung teorema bahwa setiap titik limit suatu himpunan adalah limit sebuah barisan di himpunan itu.   Menuntaskan kriteria barisan untuk himpunan tertutup  Andaikan setiap barisan di yang konvergen ke suatu memenuhi . Gunakan hasil panduan sebelumnya untuk menyelesaikan pembuktian bahwa tertutup. Rubrik: terapkan hipotesis kepada barisan yang dibangun, generalisasikan dari satu titik limit sebarang, lalu gunakan karakterisasi ketertutupan.   Tahap 1: barisan dari panduan 42 berada di dan menuju , sehingga hipotesis menentukan keanggotaan . Tahap 2: karena dipilih sembarang, simpulkan satu inklusi himpunan.   Hipotesis memberi untuk setiap . Jadi , dan karakterisasi melalui titik limit menyatakan bahwa tertutup.   Ambil sembarang . Panduan 42 menghasilkan barisan di dengan . Hipotesis soal berlaku bagi setiap barisan di yang konvergen ke titik di ; karena itu hipotesis tersebut memberi . Titik dipilih sembarang, sehingga . Menurut karakterisasi himpunan tertutup melalui titik limit, inklusi ini membuktikan bahwa tertutup. Dengan demikian kedua arah kriteria barisan telah lengkap: tertutup jika dan hanya jika setiap barisan konvergen di memiliki limit di .   "
+},
+{
+  "id": "o003-c90-ch10-guide-23",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-23",
+  "type": "Pemeriksaan",
+  "number": "J.23",
+  "title": "Dari titik terasing ke ekor konstan.",
+  "body": "Dari titik terasing ke ekor konstan  Misalkan subhimpunan ruang metrik dan titik terasing dari . Buktikan bahwa setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan . Rubrik: gunakan satu lingkungan yang mengasingkan , terapkan definisi konvergensi pada radiusnya, dan tunjukkan bahwa seluruh ekor barisan sama dengan .   Tahap 1: pilih sehingga . Tahap 2: karena , cari yang membuat untuk setiap .   Untuk suatu , satu-satunya anggota di ialah . Konvergensi menempatkan seluruh ekor di bola itu, sehingga pada akhirnya.   Karena titik terasing dari , terdapat dengan . Konvergensi , diterapkan pada toleransi , memberi sehingga apabila . Untuk indeks tersebut, ; karena barisan berada di , juga . Jadi , dan akibatnya untuk setiap . Inilah arti bahwa barisan pada akhirnya sama dengan barisan konstan .  "
+},
+{
+  "id": "o003-c90-ch10-guide-24",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-24",
+  "type": "Pemeriksaan",
+  "number": "J.24",
+  "title": "Dari ekor konstan ke titik terasing.",
+  "body": "Dari ekor konstan ke titik terasing  Misalkan dan setiap barisan di yang konvergen ke pada akhirnya sama dengan barisan konstan . Buktikan bahwa merupakan titik terasing dari . Rubrik: sangkal keterasingan, bangun satu titik berbeda dari di setiap bola berjari-jari , lalu peroleh barisan penyangkal.   Tahap 1: jika tidak terasing, untuk setiap pilih . Tahap 2: buktikan , kemudian bandingkan dengan hipotesis tentang ekor konstan.   Jika tidak terasing, ada barisan di dengan . Barisan ini menuju tetapi tidak pernah sama dengan , bertentangan dengan hipotesis. Jadi terasing.   Andaikan, demi kontradiksi, bahwa bukan titik terasing dari . Maka tidak ada bola berpusat di yang irisannya dengan hanya . Jadi, untuk setiap , kita dapat memilih . Dengan demikian dan untuk semua .  Untuk , pilih . Jika , maka ; jadi . Hipotesis sekarang mengharuskan untuk semua indeks yang cukup besar, padahal konstruksi memastikan untuk setiap indeks. Kontradiksi tersebut membuktikan bahwa titik terasing dari .  "
+},
+{
+  "id": "o003-c90-ch10-guide-25",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-25",
+  "type": "Pemeriksaan",
+  "number": "J.25",
+  "title": "Sasaran untuk membuktikan ketertutupan.",
+  "body": "Sasaran untuk membuktikan ketertutupan  Andaikan . Pada langkah pertama pembuktian bahwa tertutup, nyatakan apa yang cukup ditunjukkan menurut definisi himpunan tertutup. Rubrik: identifikasi komplemen di dalam dan sifat topologis yang harus dimilikinya.   Tahap 1: ingat kesetaraan antara ketertutupan suatu himpunan dan keterbukaan komplemennya. Tahap 2: terjemahkan keterbukaan ke syarat bola di setiap titik komplemen.   Cukup dibuktikan bahwa terbuka, yaitu bahwa setiap mempunyai bola terbuka yang termuat dalam .   Menurut definisi, tertutup tepat ketika komplemennya terbuka. Karena itu sasaran pembuktian dapat dinyatakan sebagai berikut: untuk setiap , temukan sehingga . Sasaran ekuivalen inilah yang akan disangkal pada langkah berikutnya untuk menjalankan pembuktian dengan kontradiksi.  "
+},
+{
+  "id": "o003-c90-ch10-guide-26",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-26",
+  "type": "Pemeriksaan",
+  "number": "J.26",
+  "title": "Akibat andaian bahwa himpunan tidak tertutup.",
+  "body": "Akibat andaian bahwa himpunan tidak tertutup  Lanjutkan dengan pembuktian kontradiksi: andaikan tidak tertutup. Apa yang dapat disimpulkan tentang ? Rubrik: gunakan negasi langsung dari definisi ketertutupan, tanpa memakai dahulu asumsi .   Tahap 1: tertutup jika dan hanya jika terbuka. Tahap 2: negasikan kedua sisi pernyataan ekuivalen itu.   Jika tidak tertutup, maka komplemennya tidak terbuka.   Definisi ketertutupan menyatakan bahwa tertutup jika dan hanya jika terbuka. Oleh sebab itu, andaian bahwa tidak tertutup memaksa tidak terbuka. Secara berkuantor, kegagalan keterbukaan ini berarti ada sedikitnya satu titik komplemen yang tidak memiliki bola terbuka yang seluruhnya tinggal di dalam komplemen.  "
+},
+{
+  "id": "o003-c90-ch10-guide-27",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-27",
+  "type": "Pemeriksaan",
+  "number": "J.27",
+  "title": "Titik komplemen yang juga titik limit.",
+  "body": "Titik komplemen yang juga titik limit  Uraikan akibat dari fakta bahwa tidak terbuka. Hasilkan suatu dan buktikan bahwa . Rubrik: nyatakan kegagalan syarat bola, tunjukkan bahwa setiap bola di bertemu , dan periksa bahwa titik pertemuan itu berbeda dari .   Tahap 1: ada sehingga untuk setiap , bola tidak termuat dalam . Tahap 2: titik bola yang berada di luar komplemen terletak di , dan tidak mungkin sama dengan .   Ada sehingga setiap bertemu . Karena , setiap titik pertemuan berbeda dari ; jadi adalah titik limit dari .   Karena tidak terbuka, terdapat yang memenuhi: untuk setiap , bola tidak termuat dalam . Maka setiap bola tersebut memuat suatu titik yang tidak berada di , sehingga . Di sisi lain , jadi . Dengan demikian setiap lingkungan bola di memuat anggota yang berbeda dari . Menurut definisi, .  "
+},
+{
+  "id": "o003-c90-ch10-guide-28",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-28",
+  "type": "Pemeriksaan",
+  "number": "J.28",
+  "title": "Kontradiksi yang menuntaskan ketertutupan.",
+  "body": "Kontradiksi yang menuntaskan ketertutupan  Jelaskan mengapa titik yang diperoleh pada langkah sebelumnya bertentangan dengan asumsi , lalu tuntaskan pembuktian. Rubrik: tulis kedua keanggotaan yang tidak serasi dan nyatakan kesimpulan tentang .   Tahap 1: konstruksi memberi sekaligus dan . Tahap 2: terapkan inklusi pada keanggotaan pertama.   Dari dan diperoleh , sedangkan konstruksi memberi . Kontradiksi ini menunjukkan bahwa tertutup.   Langkah sebelumnya menghasilkan . Asumsi awal karenanya memberi . Namun titik yang sama dipilih dari , sehingga . Ini kontradiksi. Jadi andaian bahwa tidak tertutup harus ditolak; akibatnya tertutup. Bersama arah pertama teorema, diperoleh karakterisasi bahwa tertutup jika dan hanya jika memuat semua titik limitnya.  "
+},
+{
+  "id": "o003-c90-ch10-guide-29",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-29",
+  "type": "Pemeriksaan",
+  "number": "J.29",
+  "title": "Sasaran sifat minimal tutupan.",
+  "body": "Sasaran sifat minimal tutupan  Misalkan . Nyatakan apa yang harus dibuktikan agar merupakan subhimpunan tertutup terkecil dari yang memuat . Rubrik: pisahkan ketertutupan dan keanggotaan yang sudah diketahui dari syarat minimal terhadap setiap pesaing tertutup.   Tahap 1: teorema sebelumnya sudah memberi bahwa tertutup, dan definisinya memberi . Tahap 2: ambil sembarang himpunan tertutup dengan dan tentukan inklusi yang harus dibuktikan.   Selain mengetahui bahwa tertutup dan memuat , harus dibuktikan bahwa untuk setiap himpunan tertutup yang memuat , berlaku .   Sebuah himpunan tertutup yang memuat adalah yang terkecil menurut inklusi apabila ia termuat dalam setiap himpunan tertutup lain yang memuat . Sudah diketahui bahwa memuat , dan teorema sebelumnya menyatakan bahwa tertutup. Jadi bagian yang tersisa ialah: untuk sembarang , jika tertutup dan , maka .  "
+},
+{
+  "id": "o003-c90-ch10-guide-30",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-30",
+  "type": "Pemeriksaan",
+  "number": "J.30",
+  "title": "Mengurangi sasaran ke titik limit.",
+  "body": "Mengurangi sasaran ke titik limit  Andaikan tertutup dan . Jelaskan mengapa, untuk membuktikan , cukup menunjukkan . Rubrik: uraikan definisi tutupan sebagai gabungan dan tangani kedua bagiannya.   Tahap 1: gunakan . Tahap 2: inklusi satu bagian gabungan, yakni , sudah menjadi hipotesis.   Karena dan sudah diketahui, satu-satunya inklusi yang masih perlu dibuktikan ialah .   Ambil . Dari , berlaku atau . Pada kasus pertama, hipotesis langsung memberi . Karena itu, jika dapat dibuktikan bahwa setiap juga berada di , kedua kasus memberi . Maka bersama memang cukup untuk menyimpulkan .  "
+},
+{
+  "id": "o003-c90-ch10-guide-31",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-31",
+  "type": "Pemeriksaan",
+  "number": "J.31",
+  "title": "Titik limit berpindah ke superset tertutup.",
+  "body": "Titik limit berpindah ke superset tertutup  Ambil , dengan dan tertutup. Tentukan apa yang dapat disimpulkan tentang . Rubrik: mula-mula hubungkan titik limit dengan titik limit , lalu gunakan karakterisasi himpunan tertutup.   Tahap 1: setiap lingkungan memuat anggota , yang juga anggota . Tahap 2: karena tertutup, ia memuat semua titik limitnya.   Inklusi membuat setiap titik limit juga titik limit . Jadi , dan ketertutupan memberi .   Misalkan . Setiap lingkungan dari memuat suatu dengan . Karena , titik yang sama memenuhi dan . Jadi setiap lingkungan memuat anggota yang berbeda dari , sehingga . Himpunan tertutup dan karenanya memuat semua titik limitnya; maka . Ini membuktikan bahwa .  "
+},
+{
+  "id": "o003-c90-ch10-guide-32",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-32",
+  "type": "Pemeriksaan",
+  "number": "J.32",
+  "title": "Menuntaskan sifat minimal tutupan.",
+  "body": "Menuntaskan sifat minimal tutupan  Lengkapi pembuktian bahwa untuk setiap subhimpunan tertutup yang memuat , lalu simpulkan sifat minimal . Rubrik: gabungkan dua inklusi bagian dari dan nyatakan kuantifikasi atas .   Tahap 1: hipotesis memberi , sedangkan langkah sebelumnya memberi . Tahap 2: ambil gabungan dan ingat bahwa dipilih sembarang di antara superset tertutup .   Dari dan diperoleh . Karena ini berlaku bagi setiap superset tertutup dari , tutupan adalah yang terkecil.   Misalkan sembarang subhimpunan tertutup dari dengan . Untuk setiap , panduan sebelumnya menunjukkan ; jadi . Oleh karena itu Tutupan sendiri tertutup dan memuat . Karena ia termuat dalam setiap himpunan tertutup yang memuat , adalah subhimpunan tertutup terkecil dari yang memuat .  "
+},
+{
+  "id": "o003-c90-ch10-guide-33",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-33",
+  "type": "Pemeriksaan",
+  "number": "J.33",
+  "title": "Dua keanggotaan dari irisan tutupan.",
+  "body": "Dua keanggotaan dari irisan tutupan  Misalkan . Nyatakan dua keanggotaan yang langsung mengikuti dari fakta bahwa berada dalam irisan itu. Rubrik: uraikan definisi keanggotaan dalam irisan tanpa menambahkan asumsi kasus.   Tahap 1: keanggotaan dalam berarti keanggotaan dalam dan . Tahap 2: substitusikan kedua tutupan untuk dan .   Berlaku sekaligus dan .   Menurut definisi irisan, jika dan hanya jika serta . Dengan dan , kita memperoleh dan . Kedua fakta ini akan dipakai terpisah sesuai apakah atau .  "
+},
+{
+  "id": "o003-c90-ch10-guide-34",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-34",
+  "type": "Pemeriksaan",
+  "number": "J.34",
+  "title": "Kasus titik berada di dalam himpunan.",
+  "body": "Kasus titik berada di dalam himpunan  Misalkan sembarang lingkungan dari dan tinjau kasus . Jelaskan mengapa memuat sebuah titik di dan sebuah titik di , lalu simpulkan sifat . Rubrik: gunakan sendiri untuk salah satu sisi dan keanggotaan dalam tutupan komplemen untuk sisi lain.   Tahap 1: karena dan , lingkungan itu sudah memuat titik . Tahap 2: dari tetapi , simpulkan bahwa titik limit komplemen.   Lingkungan memuat . Selain itu, , sehingga memuat titik . Jadi setiap lingkungan bertemu kedua sisi, dan .   Ambil sembarang lingkungan dari . Karena dan setiap lingkungan memuat titik pusatnya, memuat sebuah titik di , yakni . Kita juga mengetahui . Karena dalam kasus ini , definisi tutupan memaksa . Maka memuat suatu titik dari yang berbeda dari . Karena sebarang dan bertemu maupun komplemennya, adalah titik batas dari .  "
+},
+{
+  "id": "o003-c90-ch10-guide-35",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-35",
+  "type": "Pemeriksaan",
+  "number": "J.35",
+  "title": "Kasus titik berada di luar himpunan.",
+  "body": "Kasus titik berada di luar himpunan  Dengan sembarang lingkungan dari , tinjau kasus . Jelaskan mengapa memuat sebuah titik di dan sebuah titik di , lalu simpulkan sifat . Rubrik: tukarkan peran himpunan dan komplemennya dari kasus sebelumnya.   Tahap 1: kini , jadi titik luar sudah tersedia di . Tahap 2: dari tetapi , simpulkan dan gunakan definisinya.   Lingkungan memuat . Karena , lingkungan yang sama juga memuat titik . Jadi bertemu kedua sisi dan .   Ambil sembarang lingkungan dari . Andaian berarti ; karena , lingkungan tersebut memuat titik di luar . Di sisi lain, dan , sehingga . Oleh definisi titik limit, memuat suatu anggota yang berbeda dari . Jadi setiap lingkungan memuat titik dari dan dari . Dengan demikian .  "
+},
+{
+  "id": "o003-c90-ch10-guide-36",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-36",
+  "type": "Pemeriksaan",
+  "number": "J.36",
+  "title": "Menyimpulkan inklusi ke dalam batas.",
+  "body": "Menyimpulkan inklusi ke dalam batas  Gabungkan kedua kasus sebelumnya untuk membuktikan . Rubrik: jelaskan bahwa pemisahan kasus mencakup setiap dan kembalikan kesimpulan titik-sebarang menjadi inklusi himpunan.   Tahap 1: setiap titik memenuhi tepat satu di antara dan . Tahap 2: kedua cabang telah memberi kesimpulan yang sama, yaitu .   Baik ketika maupun ketika , setiap lingkungan bertemu dan komplemennya. Maka setiap dalam irisan kedua tutupan berada di , sehingga inklusi yang diminta berlaku.   Ambil sembarang . Jika , panduan 34 menunjukkan bahwa setiap lingkungan memuat titik dari dan dari . Jika , panduan 35 memberikan sifat yang sama. Kedua kasus mencakup semua kemungkinan, sehingga selalu . Karena dipilih sembarang, Bersama inklusi arah lain yang telah dibuktikan, hasil ini memberi .  "
+},
+{
+  "id": "o003-c90-ch10-guide-37",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-37",
+  "type": "Pemeriksaan",
+  "number": "J.37",
+  "title": "Limit barisan di dalam dua himpunan.",
+  "body": "Limit barisan di dalam dua himpunan  Dalam , tentukan limit barisan , yang seluruh sukunya berada di dan . Rubrik: ajukan kandidat limit dan verifikasi langsung dengan definisi - . Cetakan sumber menulis , tetapi suku pertamanya tidak berada di ; edisi ini menggeser indeks satu langkah sesuai emendasi tercatat O003-C100 agar syarat soal berlaku bagi semua suku.   Tahap 1: uji titik dan hitung . Tahap 2: untuk , pilih yang cukup besar sehingga .   Limit barisan tersebut ialah .   Ambil . Menurut sifat Archimedes, pilih dengan . Jika , maka Jadi semua suku pada ekor barisan berada sedekat yang diminta dari , dan .  "
+},
+{
+  "id": "o003-c90-ch10-guide-38",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-38",
+  "type": "Pemeriksaan",
+  "number": "J.38",
+  "title": "Limit tidak berada di himpunan terbuka.",
+  "body": "Limit tidak berada di himpunan terbuka  Tentukan apakah dari panduan sebelumnya berada di . Rubrik: gunakan nilai limit yang telah diperoleh dan periksa syarat keanggotaan interval terbuka.   Tahap 1: substitusikan . Tahap 2: anggota harus lebih besar secara ketat dari .   Tidak. Karena dan , limit tidak berada di .   Panduan 37 menunjukkan bahwa . Interval berisi tepat bilangan real dengan ; titik ujung tidak disertakan. Oleh karena itu . Contoh ini memperlihatkan bahwa suatu barisan yang seluruh sukunya berada dalam himpunan terbuka tidak harus memiliki limit di himpunan tersebut.  "
+},
+{
+  "id": "o003-c90-ch10-guide-39",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-39",
+  "type": "Pemeriksaan",
+  "number": "J.39",
+  "title": "Limit berada di himpunan tertutup.",
+  "body": "Limit berada di himpunan tertutup  Tentukan apakah berada di . Rubrik: gunakan limit dan periksa apakah tanda kurung siku menyertakan titik ujung.   Tahap 1: interval memuat kedua titik ujungnya. Tahap 2: bandingkan fakta ini dengan .   Ya. Titik berada di , sehingga .   Karena , titik ujung merupakan anggota . Dari diperoleh . Berbeda dengan , himpunan tidak kehilangan titik batas ini.  "
+},
+{
+  "id": "o003-c90-ch10-guide-40",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-40",
+  "type": "Pemeriksaan",
+  "number": "J.40",
+  "title": "Dua perbedaan yang menjelaskan perilaku limit.",
+  "body": "Dua perbedaan yang menjelaskan perilaku limit  Sebutkan dua perbedaan penting antara dan yang menjelaskan mengapa limit barisan berada di tetapi tidak di . Gunakan terminologi bagian ini. Rubrik: bandingkan jenis keterbukaan atau ketertutupan dan perlakuan kedua himpunan terhadap titik limit atau titik batasnya.   Tahap 1: klasifikasikan dan sebagai terbuka atau tertutup di . Tahap 2: periksa apakah masing-masing memuat titik limit sekaligus titik batas dan .   Himpunan terbuka dan tidak tertutup, sedangkan tertutup dan tidak terbuka. Selain itu, tidak memuat titik batas sekaligus titik limit dan , sedangkan memuat keduanya.   Perbedaan pertama ialah sifat topologisnya: terbuka tetapi tidak tertutup dalam , sedangkan tertutup tetapi tidak terbuka. Perbedaan kedua menyangkut titik tepi: dan merupakan titik batas dan titik limit dari kedua interval, tetapi tidak memuat keduanya sedangkan memuat keduanya. Khususnya, limit dari hilang dari tetapi dipertahankan oleh . Hal ini mencerminkan karakterisasi bahwa himpunan tertutup memuat semua titik limitnya.  "
+},
+{
+  "id": "o003-c90-ch10-guide-41",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-41",
+  "type": "Pemeriksaan",
+  "number": "J.41",
+  "title": "Memilih karakterisasi ketertutupan yang relevan.",
+  "body": "Memilih karakterisasi ketertutupan yang relevan  Sebutkan tiga cara untuk menunjukkan bahwa subhimpunan ruang metrik adalah himpunan tertutup, lalu pilih cara yang paling sesuai apabila hipotesis berbicara tentang limit setiap barisan di . Rubrik: berikan tiga kriteria yang ekuivalen dan jelaskan mengapa kriteria titik limit cocok dengan informasi barisan.   Tahap 1: ingat kriteria melalui komplemen, titik limit, dan tutupan. Tahap 2: titik limit menghasilkan barisan di yang konvergen ke titik tersebut.   Tiga cara ialah membuktikan terbuka, membuktikan , atau membuktikan . Cara kedua paling relevan karena sebuah titik limit dari dapat diwujudkan sebagai limit suatu barisan di .   Tiga karakterisasi yang dapat dipakai adalah: tertutup apabila terbuka; tertutup apabila ia memuat semua titik limitnya, yakni ; dan tertutup apabila . Kriteria melalui titik limit adalah pilihan paling langsung di sini. Jika , teorema tentang titik limit menyediakan barisan di yang menuju , tepat jenis objek yang dapat dimasukkan ke hipotesis soal. Karakterisasi melalui batas, , juga setara, tetapi tidak diperlukan untuk argumen ini.  "
+},
+{
+  "id": "o003-c90-ch10-guide-42",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-42",
+  "type": "Pemeriksaan",
+  "number": "J.42",
+  "title": "Barisan yang mendekati sebuah titik limit.",
+  "body": "Barisan yang mendekati sebuah titik limit  Misalkan titik limit dari . Nyatakan kesimpulan berurutan yang diperlukan untuk memakai hipotesis bahwa setiap barisan konvergen di memiliki limit di . Rubrik: bangun atau kutip keberadaan barisan di , nyatakan limitnya, dan jaga agar semua sukunya berada di .   Tahap 1: untuk setiap , pilih . Tahap 2: gunakan untuk membuktikan .   Terdapat barisan di , bahkan dengan , yang konvergen ke .   Karena , setiap bola di memuat anggota yang berbeda dari . Untuk tiap , pilih . Maka seluruh suku berada di dan . Jika , pilih . Untuk , . Jadi . Ini juga merupakan penerapan langsung teorema bahwa setiap titik limit suatu himpunan adalah limit sebuah barisan di himpunan itu.  "
+},
+{
+  "id": "o003-c90-ch10-guide-43",
+  "level": "2",
+  "url": "o003-c90-ch10-source-guides-b.html#o003-c90-ch10-guide-43",
+  "type": "Pemeriksaan",
+  "number": "J.43",
+  "title": "Menuntaskan kriteria barisan untuk himpunan tertutup.",
+  "body": "Menuntaskan kriteria barisan untuk himpunan tertutup  Andaikan setiap barisan di yang konvergen ke suatu memenuhi . Gunakan hasil panduan sebelumnya untuk menyelesaikan pembuktian bahwa tertutup. Rubrik: terapkan hipotesis kepada barisan yang dibangun, generalisasikan dari satu titik limit sebarang, lalu gunakan karakterisasi ketertutupan.   Tahap 1: barisan dari panduan 42 berada di dan menuju , sehingga hipotesis menentukan keanggotaan . Tahap 2: karena dipilih sembarang, simpulkan satu inklusi himpunan.   Hipotesis memberi untuk setiap . Jadi , dan karakterisasi melalui titik limit menyatakan bahwa tertutup.   Ambil sembarang . Panduan 42 menghasilkan barisan di dengan . Hipotesis soal berlaku bagi setiap barisan di yang konvergen ke titik di ; karena itu hipotesis tersebut memberi . Titik dipilih sembarang, sehingga . Menurut karakterisasi himpunan tertutup melalui titik limit, inklusi ini membuktikan bahwa tertutup. Dengan demikian kedua arah kriteria barisan telah lengkap: tertutup jika dan hanya jika setiap barisan konvergen di memiliki limit di .  "
+},
+{
+  "id": "o003-c90-ch10-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch10-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian pertama",
+  "body": " Panduan latihan sumber, bagian pertama  Delapan belas panduan berikut mengikuti, dalam urutan baca, delapan belas perintah atomik pertama pada latihan penutup Bab 10. Tugas yang berulang tetap diperlakukan sebagai kesempatan pembuktian tersendiri. Uraian ini merupakan materi pendamping asli untuk belajar mandiri, bukan jawaban dari penulis karya sumber, dan tersedia di bawah lisensi Creative Commons Atribusi 4.0 Internasional (CC BY 4.0).  Klasifikasi cakram satuan tertutup  Untuk cakram dalam metrik Euklides, tentukan interior, batas, titik limit, dan titik terasingnya, lalu putuskan apakah terbuka atau tertutup. Rubrik. Jawaban lengkap harus membedakan pertidaksamaan ketat dari persamaan pada lingkaran satuan dan membenarkan setiap klasifikasi dengan bola terbuka.    Langkah 1. Jika , bandingkan radius bola dengan . Jika , gerakkan titik sedikit ke arah dalam dan ke arah luar sepanjang garis radial.   Langkah 2. Untuk menunjukkan bahwa setiap titik cakram adalah titik limit, dekatkan titik itu dengan titik cakram lain; di pusat, pilih arah tetap. Gunakan hasil ini untuk menguji keterbukaan dan ketertutupan.    , , dan . Tidak ada titik terasing. Cakram tidak terbuka, tetapi tertutup.   Tuliskan untuk jarak dari pusat. Jika , bola berjari-jari di termuat dalam , karena . Jadi titik-titik dengan norma kurang dari tepat merupakan titik interior. Bila , setiap bola di memuat dan untuk yang cukup kecil. Maka lingkaran satuan adalah batas. Titik dengan norma lebih dari mempunyai bola berjari-jari yang tidak memotong , sehingga tidak ada titik batas lain.  Setiap didekati oleh titik lain dari : untuk gunakan untuk cukup besar, sedangkan untuk gunakan . Jadi dan tidak ada titik terasing. Titik pada lingkaran bukan titik interior, sehingga tidak terbuka. Komplemennya terbuka oleh bola yang baru dibangun untuk ; karena itu tertutup.   Klasifikasi himpunan bilangan rasional  Pandang sebagai subhimpunan dari garis real bermetrik standar. Tentukan interior, batas, titik limit, dan titik terasingnya, lalu tentukan apakah terbuka atau tertutup. Rubrik. Gunakan kerapatan bilangan rasional dan irasional di setiap interval terbuka.    Langkah 1. Setiap bola terbuka pada garis real adalah suatu interval dan memuat bilangan rasional sekaligus irasional.   Langkah 2. Bahkan jika pusat bola rasional, ada rasional lain di dalam bola. Terapkan pengamatan ini pada definisi interior, batas, titik limit, dan titik terasing.    , , , dan . Maka tidak terbuka dan tidak tertutup dalam .   Untuk setiap dan , interval memuat bilangan rasional dan irasional. Karena itu tidak ada bola di suatu anggota yang termuat dalam , sehingga interiornya kosong. Setiap bola berpusat di sebarang memotong dan komplemennya, maka setiap bilangan real adalah titik batas: .  Kerapatan rasional juga menjamin bahwa setiap bola di memuat anggota yang berbeda dari ; jadi . Akibatnya tidak ada anggota rasional yang terasing. Interior kosong membuat tidak terbuka, dan membuatnya tidak tertutup.   Klasifikasi himpunan  Untuk , tentukan interior, batas, titik limit, dan titik terasingnya, lalu putuskan apakah terbuka atau tertutup. Rubrik. Perlakukan secara terpisah dan tunjukkan secara eksplisit bahwa setiap dapat dipisahkan dari semua suku lainnya.    Langkah 1. Barisan menuju . Di sekitar , ambil radius yang lebih kecil daripada separuh jarak ke tetangga terdekat dalam daftar menurun tersebut.   Langkah 2. Jika , cari celah terbuka di antara dua suku berurutan yang memuat , atau gunakan bahwa berada di luar .    , , , dan . Himpunan tidak terbuka dan tidak tertutup.   Karena , setiap bola di memuat suatu ; jadi adalah titik limit dan berada dalam . Untuk , ambil radius positif yang lebih kecil daripada ; untuk ambil, misalnya, radius . Bola tersebut beririsan dengan hanya di . Maka setiap anggota terasing dan bukan titik limit.  Jika , ada bola di yang tidak memotong . Hal ini langsung untuk atau ; untuk , sifat Archimedes dan urutan menurun menempatkan secara ketat di antara dua suku berurutan, sehingga jarak positif ke kedua ujung memberi bola yang diinginkan. Jadi dan satu-satunya titik limit ialah . Tidak ada anggota yang interior, sebab setiap interval di sekitarnya memuat bilangan yang bukan anggota . Dengan demikian interior kosong, sehingga batas sama dengan tutupan, yaitu . Himpunan itu tidak terbuka dan tidak tertutup; kegagalan ketertutupan disaksikan oleh .   Ketertutupan bola tertutup  Dalam ruang metrik , untuk dan , buktikan atau sangkal bahwa selalu tertutup. Rubrik. Putuskan klaim untuk metrik sebarang, bukan hanya metrik Euklides, dan berikan bola yang berada di dalam komplemen.    Langkah 1. Jika , maka positif.   Langkah 2. Untuk yang cukup dekat dengan , gunakan pertidaksamaan segitiga terbalik untuk membuktikan .   Klaim benar: setiap bola tertutup dalam setiap ruang metrik adalah himpunan tertutup.   Ambil . Maka . Jika , pertidaksamaan segitiga memberi Jadi , dan . Setiap titik komplemen merupakan titik interior komplemen; komplemen itu terbuka, sehingga tertutup.   Batas kosong mencirikan himpunan terbuka-tertutup  Temukan dan buktikan syarat pada yang ekuivalen dengan suatu subhimpunan sekaligus terbuka dan tertutup. Rubrik. Isian yang benar harus berlaku bagi semua ruang metrik, termasuk dan .    Langkah 1. Ingat bahwa titik batas adalah titik yang setiap bolanya bertemu dan .   Langkah 2. Jika batas kosong, terapkan definisi itu secara terpisah pada titik di dan titik di komplemennya untuk mendapatkan bola yang seluruhnya berada pada salah satu sisi.   Suatu sekaligus terbuka dan tertutup jika dan hanya jika .   Andaikan terbuka dan tertutup. Untuk , ada bola di yang termuat dalam ; untuk , ketertutupan membuat komplemennya terbuka, sehingga ada bola di yang termuat dalam komplemen. Dalam kedua kasus, sebuah bola gagal bertemu salah satu sisi, maka tidak ada titik batas.  Sebaliknya, andaikan . Jika , suatu bola di pasti bertemu di . Karena bukan titik batas, ada bola di yang tidak bertemu komplemen, jadi termuat dalam . Dengan demikian terbuka. Argumen yang sama untuk menunjukkan bahwa komplemen terbuka, sehingga tertutup. Kesetaraan ini juga mencakup himpunan kosong dan seluruh ruang.   Menguraikan  Jika adalah himpunan titik limit dan himpunan titik terasing dari , buktikan . Cetakan sumber menampilkan , yang tidak benar secara umum; edisi ini memakai identitas yang dimaksud sesuai emendasi tercatat O003-C102. Rubrik. Buktikan kedua inklusi dan jelaskan dikotomi bagi setiap anggota .    Langkah 1. Menurut definisi, setiap titik terasing dari merupakan anggota .   Langkah 2. Untuk , jika , negasi definisi titik limit menghasilkan bola yang tidak memuat anggota selain .   Identitas benar: anggota yang bukan titik limit tepat merupakan titik terasing, sedangkan .   Karena titik terasing, menurut definisi, harus menjadi anggota , berlaku . Maka . Untuk inklusi sebaliknya, ambil . Jika , tidak ada lagi yang perlu dibuktikan. Jika , ada bola terbuka di yang tidak memuat titik selain ; karenanya . Jadi , dan kedua himpunan sama.   Titik limit dan titik terasing tidak bertumpang tindih  Buktikan . Rubrik. Bandingkan tuntutan “setiap bola” dalam definisi titik limit dengan “ada sebuah bola” dalam definisi titik terasing.    Langkah 1. Andaikan dan pilih radius yang mengisolasi dari .   Langkah 2. Bola yang sama menyangkal syarat agar menjadi titik limit.   Identitas benar. Bola yang menyaksikan keterasingan suatu titik sekaligus membuktikan bahwa titik itu bukan titik limit.   Jika , terdapat sehingga . Jadi bola ini tidak memuat anggota yang berbeda dari . Namun titik limit menuntut agar setiap bola di memuat anggota semacam itu. Karena itu . Tidak ada titik yang dapat berada sekaligus di dan , sehingga irisannya kosong.   Setiap anggota adalah titik limit atau titik terasing  Buktikan . Rubrik. Mulailah dengan anggota sebarang dan pisahkan kasus menurut apakah merupakan titik limit.    Langkah 1. Kasus langsung selesai.   Langkah 2. Jika , negasikan kuantor pada definisi titik limit untuk memperoleh satu bola yang hanya dapat memotong di pusatnya.   Inklusi benar. Setiap yang bukan titik limit memiliki lingkungan yang mengisolasinya, sehingga termasuk .   Ambil . Jika , jelas . Jika , tidak benar bahwa setiap bola di memuat titik yang berbeda dari . Jadi terdapat dengan . Karena , diperoleh , sehingga . Kedua kasus membuktikan inklusi.   Penutup melalui limit barisan  Buktikan bahwa jika dan hanya jika ada barisan titik-titik di yang konvergen ke . Rubrik. Perhatikan bahwa barisan konstan diperlukan ketika ; ketika , pilih titik dari bola dengan radius yang menuju nol.    Langkah 1. Jika , ambil . Jika , pilih .   Langkah 2. Untuk arah balik, gunakan konvergensi untuk menunjukkan bahwa setiap bola di bertemu .   Ekuivalensi benar. Keanggotaan dalam tutupan memungkinkan pemilihan dengan (atau barisan konstan), sedangkan limit barisan di memaksa setiap bola di memotong .   Andaikan . Jika , barisan konstan berada dalam dan konvergen ke . Jika , setiap bola di bertemu ; untuk tiap , pilih . Maka , jadi .  Sebaliknya, misalkan dan . Untuk setiap , ada sehingga . Jadi , sehingga setiap bola di memotong . Inilah karakterisasi keanggotaan dalam tutupan, maka .   Penutup sebagai irisan semua superset tertutup  Buktikan bahwa adalah irisan semua himpunan tertutup yang memuat . Rubrik. Tunjukkan bahwa tutupan itu sendiri merupakan superset tertutup dan bahwa ia termuat dalam setiap superset tertutup lain.    Langkah 1. Jika tertutup dan , maka .   Langkah 2. Masukkan sendiri ke dalam keluarga semua superset tertutup , lalu bandingkan kedua inklusi terhadap irisannya.   Jika menyatakan keluarga semua yang tertutup dan memuat , maka .   Penutup tertutup dan memuat . Selanjutnya, jika tertutup serta , kemonotonan tutupan memberi . Secara langsung, kemonotonan ini juga terlihat karena setiap bola di titik bertemu , maka bertemu , sehingga titik itu berada dalam .  Misalkan . Inklusi sebelumnya menunjukkan . Karena , irisan termuat dalam . Jadi .   Interior sebagai gabungan semua subhimpunan terbuka  Buktikan bahwa adalah gabungan semua himpunan terbuka yang termuat di dalam . Rubrik. Identifikasi interior sebagai subhimpunan terbuka terbesar dari melalui dua inklusi.    Langkah 1. Jika terbuka dan , setiap mempunyai bola di dalam , sehingga .   Langkah 2. Interior sendiri terbuka dan termuat dalam , jadi ia merupakan salah satu himpunan dalam keluarga yang digabungkan.   Jika menyatakan keluarga semua yang terbuka dalam , maka .   Ambil dan . Karena terbuka, ada dengan . Maka . Ini berlaku untuk setiap , sehingga .  Sebaliknya, terbuka dan termuat dalam , maka . Karena setiap anggota suatu keluarga termuat dalam gabungannya, . Kedua inklusi membuktikan kesamaan.   Penutup sebagai gabungan saling lepas  Buktikan bahwa adalah gabungan saling lepas dari dan . Rubrik. Tunjukkan baik kesamaan gabungan maupun kosongnya irisan kedua bagian.    Langkah 1. Titik interior memiliki sebuah bola yang tidak bertemu komplemen, jadi tidak mungkin menjadi titik batas.   Langkah 2. Jika tetapi bukan titik interior, setiap bola di bertemu dan juga bertemu komplemennya.   Berlaku : kedua himpunan menutupi tutupan dan irisannya kosong.   Setiap titik interior berada dalam . Setiap titik batas juga berada dalam , sebab setiap bolanya bertemu . Jadi .  Ambil . Setiap bola di bertemu karena . Karena bukan interior, tidak ada bola di yang termuat dalam ; jadi setiap bola juga bertemu . Maka , yang membuktikan inklusi sebaliknya. Akhirnya, titik interior memiliki satu bola yang tidak bertemu komplemen, sedangkan titik batas menuntut semua bola bertemu komplemen. Karena itu , sehingga gabungan tersebut saling lepas.   Penutup komplemen dan komplemen interior  Buktikan identitas . Rubrik. Uraikan kedua sisi secara titik demi titik memakai syarat bahwa setiap bola memotong suatu himpunan.    Langkah 1.  berarti tidak ada bola di yang seluruhnya berada dalam .   Langkah 2. Negasi itu ekuivalen dengan pernyataan bahwa setiap bola di memuat titik dari .   Identitas benar: tidak menjadi titik interior tepat berarti setiap lingkungan memotong komplemen , yaitu berada dalam tutupan komplemen.   Untuk , rangkaian ekuivalensi berikut berlaku: Karena keanggotaan kedua himpunan ekuivalen bagi setiap , diperoleh .   Interior komplemen dan komplemen tutupan  Buktikan identitas . Rubrik. Hubungkan keberadaan bola yang termuat dalam komplemen dengan keberadaan bola yang tidak memotong .    Langkah 1. Tuliskan definisi dengan sebuah radius positif.   Langkah 2. Ganti inklusi bola ke dalam komplemen dengan syarat irisan kosong terhadap , lalu negasikan karakterisasi tutupan.   Identitas benar: sebuah titik berada di interior komplemen tepat ketika suatu bolanya tidak bertemu , yakni ketika titik itu berada di luar .   Bagi setiap , Maka .   Karakterisasi bola bagi titik limit  Buktikan bahwa adalah titik limit dari jika dan hanya jika setiap bola terbuka berpusat di memuat suatu titik yang berbeda dari . Rubrik. Gunakan langsung hubungan antara lingkungan dan bola: setiap bola terbuka merupakan lingkungan pusatnya, sedangkan setiap lingkungan memuat suatu bola terbuka yang berpusat di titik tersebut.    Langkah 1. Untuk arah maju, ingat bahwa setiap merupakan lingkungan dari .   Langkah 2. Untuk arah balik, ambil lingkungan sebarang dari dan pilih dengan .   Ekuivalensi benar karena bola terbuka adalah lingkungan, dan setiap lingkungan dari memuat suatu bola terbuka berpusat di .   Andaikan dahulu adalah titik limit dari . Setiap bola terbuka merupakan lingkungan dari . Menurut definisi titik limit, bola itu memuat suatu titik dari yang berbeda dari .  Sebaliknya, andaikan setiap bola terbuka berpusat di memuat suatu titik dari . Ambil lingkungan sebarang dari . Berdasarkan definisi lingkungan dalam ruang metrik, ada sehingga . Hipotesis memberikan titik ; karena , titik yang sama berada di . Jadi setiap lingkungan dari memuat anggota yang berbeda dari , tepat definisi bahwa adalah titik limit dari .   Mengulang dikotomi limit-terasing  Dalam tugas pembuktian ulang, buktikan sekaligus dan . Rubrik. Satu analisis kasus pada harus membuktikan cakupan, sedangkan ketidakmungkinan memenuhi dua definisi sekaligus harus membuktikan keterpisahan.    Langkah 1. Jika suatu anggota bukan titik limit, ada bola di pusat itu tanpa anggota lain.   Langkah 2. Bola pengisolasi tersebut bertentangan langsung dengan tuntutan bahwa setiap bola memuat anggota lain.   Kedua klaim benar: setiap anggota adalah titik limit atau terasing, dan titik terasing tidak pernah menjadi titik limit.   Ambil . Bila setiap bola di memuat anggota selain , maka . Bila tidak, ada dengan . Karena pusatnya berada dalam , ini berarti , maka . Jadi .  Sekarang, jika , sebuah bola pengisolasi di tidak memuat anggota yang berbeda dari . Karena titik limit mengharuskan setiap bola memuat anggota demikian, . Jadi .   Mengulang karakterisasi barisan bagi tutupan  Dalam tugas pembuktian ulang, buktikan lagi bahwa jika dan hanya jika suatu barisan di konvergen ke . Rubrik. Pastikan bukti mencakup kasus tanpa mensyaratkan suku-suku barisan berbeda dari limit.    Langkah 1. Gunakan barisan konstan jika ; selain itu, pilih satu anggota dari tiap .   Langkah 2. Jika , setiap bola di memuat semua suku yang indeksnya cukup besar, khususnya setidaknya satu anggota .   Ekuivalensi benar. Titik tutupan dapat didekati oleh pilihan dari bola-bola (dengan barisan konstan untuk anggota ), dan limit barisan di selalu berada dalam tutupan .   Jika dan , tetapkan untuk semua . Jika , setiap bola bertemu ; pilih dari irisan itu. Dalam kasus kedua , dan dalam kasus pertama jaraknya nol. Jadi pada kedua kasus dengan semua .  Untuk arah balik, andaikan dan . Bagi setiap , ada indeks sehingga bila . Maka bola tersebut memotong . Semua bola di memotong , jadi .   Minimalitas dan ketertutupan tutupan  Dalam tugas pembuktian ulang, jika tertutup dan , buktikan . Selanjutnya buktikan bahwa adalah irisan semua himpunan tertutup semacam itu dan karenanya tertutup. Rubrik. Bukti harus mencakup minimalitas, kesamaan dengan irisan, dan alasan tersendiri bahwa irisan tersebut tertutup.    Langkah 1. Jika , keterbukaan memberi bola di yang tidak memotong ; gunakan kontrapositif.   Langkah 2. Misalkan adalah irisan semua superset tertutup . Buktikan dan , lalu gunakan bahwa irisan sebarang himpunan tertutup adalah tertutup.   Setiap superset tertutup dari memuat . Karena sendiri termasuk dalam keluarga itu, irisannya tepat ; sebagai irisan himpunan-himpunan tertutup, tutupan tersebut tertutup.   Misalkan tertutup dan . Jika , karena terbuka, ada dengan . Bola itu tidak memotong , sehingga . Kontrapositifnya memberi .  Biarkan menjadi keluarga semua himpunan tertutup yang memuat , dan tetapkan . Hasil paragraf pertama memberi . Penutup sendiri memuat dan tertutup: memang, jika , ada sehingga . Untuk setiap , bola termuat dalam dan tidak memotong . Jadi , sehingga komplemen tutupan terbuka. Dengan demikian , sehingga . Maka . Selain itu, komplemen adalah gabungan komplemen-komplemen terbuka dari anggota , sehingga terbuka. Jadi , dan karenanya , tertutup.   "
+},
+{
+  "id": "o003-c90-ch10-guide-44",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-44",
+  "type": "Pemeriksaan",
+  "number": "J.44",
+  "title": "Klasifikasi cakram satuan tertutup.",
+  "body": "Klasifikasi cakram satuan tertutup  Untuk cakram dalam metrik Euklides, tentukan interior, batas, titik limit, dan titik terasingnya, lalu putuskan apakah terbuka atau tertutup. Rubrik. Jawaban lengkap harus membedakan pertidaksamaan ketat dari persamaan pada lingkaran satuan dan membenarkan setiap klasifikasi dengan bola terbuka.    Langkah 1. Jika , bandingkan radius bola dengan . Jika , gerakkan titik sedikit ke arah dalam dan ke arah luar sepanjang garis radial.   Langkah 2. Untuk menunjukkan bahwa setiap titik cakram adalah titik limit, dekatkan titik itu dengan titik cakram lain; di pusat, pilih arah tetap. Gunakan hasil ini untuk menguji keterbukaan dan ketertutupan.    , , dan . Tidak ada titik terasing. Cakram tidak terbuka, tetapi tertutup.   Tuliskan untuk jarak dari pusat. Jika , bola berjari-jari di termuat dalam , karena . Jadi titik-titik dengan norma kurang dari tepat merupakan titik interior. Bila , setiap bola di memuat dan untuk yang cukup kecil. Maka lingkaran satuan adalah batas. Titik dengan norma lebih dari mempunyai bola berjari-jari yang tidak memotong , sehingga tidak ada titik batas lain.  Setiap didekati oleh titik lain dari : untuk gunakan untuk cukup besar, sedangkan untuk gunakan . Jadi dan tidak ada titik terasing. Titik pada lingkaran bukan titik interior, sehingga tidak terbuka. Komplemennya terbuka oleh bola yang baru dibangun untuk ; karena itu tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-45",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-45",
+  "type": "Pemeriksaan",
+  "number": "J.45",
+  "title": "Klasifikasi himpunan bilangan rasional.",
+  "body": "Klasifikasi himpunan bilangan rasional  Pandang sebagai subhimpunan dari garis real bermetrik standar. Tentukan interior, batas, titik limit, dan titik terasingnya, lalu tentukan apakah terbuka atau tertutup. Rubrik. Gunakan kerapatan bilangan rasional dan irasional di setiap interval terbuka.    Langkah 1. Setiap bola terbuka pada garis real adalah suatu interval dan memuat bilangan rasional sekaligus irasional.   Langkah 2. Bahkan jika pusat bola rasional, ada rasional lain di dalam bola. Terapkan pengamatan ini pada definisi interior, batas, titik limit, dan titik terasing.    , , , dan . Maka tidak terbuka dan tidak tertutup dalam .   Untuk setiap dan , interval memuat bilangan rasional dan irasional. Karena itu tidak ada bola di suatu anggota yang termuat dalam , sehingga interiornya kosong. Setiap bola berpusat di sebarang memotong dan komplemennya, maka setiap bilangan real adalah titik batas: .  Kerapatan rasional juga menjamin bahwa setiap bola di memuat anggota yang berbeda dari ; jadi . Akibatnya tidak ada anggota rasional yang terasing. Interior kosong membuat tidak terbuka, dan membuatnya tidak tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-46",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-46",
+  "type": "Pemeriksaan",
+  "number": "J.46",
+  "title": "Klasifikasi himpunan <span class=\"process-math\">\\(\\{1\/n\\}\\)<\/span>.",
+  "body": "Klasifikasi himpunan  Untuk , tentukan interior, batas, titik limit, dan titik terasingnya, lalu putuskan apakah terbuka atau tertutup. Rubrik. Perlakukan secara terpisah dan tunjukkan secara eksplisit bahwa setiap dapat dipisahkan dari semua suku lainnya.    Langkah 1. Barisan menuju . Di sekitar , ambil radius yang lebih kecil daripada separuh jarak ke tetangga terdekat dalam daftar menurun tersebut.   Langkah 2. Jika , cari celah terbuka di antara dua suku berurutan yang memuat , atau gunakan bahwa berada di luar .    , , , dan . Himpunan tidak terbuka dan tidak tertutup.   Karena , setiap bola di memuat suatu ; jadi adalah titik limit dan berada dalam . Untuk , ambil radius positif yang lebih kecil daripada ; untuk ambil, misalnya, radius . Bola tersebut beririsan dengan hanya di . Maka setiap anggota terasing dan bukan titik limit.  Jika , ada bola di yang tidak memotong . Hal ini langsung untuk atau ; untuk , sifat Archimedes dan urutan menurun menempatkan secara ketat di antara dua suku berurutan, sehingga jarak positif ke kedua ujung memberi bola yang diinginkan. Jadi dan satu-satunya titik limit ialah . Tidak ada anggota yang interior, sebab setiap interval di sekitarnya memuat bilangan yang bukan anggota . Dengan demikian interior kosong, sehingga batas sama dengan tutupan, yaitu . Himpunan itu tidak terbuka dan tidak tertutup; kegagalan ketertutupan disaksikan oleh .  "
+},
+{
+  "id": "o003-c90-ch10-guide-47",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-47",
+  "type": "Pemeriksaan",
+  "number": "J.47",
+  "title": "Ketertutupan bola tertutup.",
+  "body": "Ketertutupan bola tertutup  Dalam ruang metrik , untuk dan , buktikan atau sangkal bahwa selalu tertutup. Rubrik. Putuskan klaim untuk metrik sebarang, bukan hanya metrik Euklides, dan berikan bola yang berada di dalam komplemen.    Langkah 1. Jika , maka positif.   Langkah 2. Untuk yang cukup dekat dengan , gunakan pertidaksamaan segitiga terbalik untuk membuktikan .   Klaim benar: setiap bola tertutup dalam setiap ruang metrik adalah himpunan tertutup.   Ambil . Maka . Jika , pertidaksamaan segitiga memberi Jadi , dan . Setiap titik komplemen merupakan titik interior komplemen; komplemen itu terbuka, sehingga tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-48",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-48",
+  "type": "Pemeriksaan",
+  "number": "J.48",
+  "title": "Batas kosong mencirikan himpunan terbuka-tertutup.",
+  "body": "Batas kosong mencirikan himpunan terbuka-tertutup  Temukan dan buktikan syarat pada yang ekuivalen dengan suatu subhimpunan sekaligus terbuka dan tertutup. Rubrik. Isian yang benar harus berlaku bagi semua ruang metrik, termasuk dan .    Langkah 1. Ingat bahwa titik batas adalah titik yang setiap bolanya bertemu dan .   Langkah 2. Jika batas kosong, terapkan definisi itu secara terpisah pada titik di dan titik di komplemennya untuk mendapatkan bola yang seluruhnya berada pada salah satu sisi.   Suatu sekaligus terbuka dan tertutup jika dan hanya jika .   Andaikan terbuka dan tertutup. Untuk , ada bola di yang termuat dalam ; untuk , ketertutupan membuat komplemennya terbuka, sehingga ada bola di yang termuat dalam komplemen. Dalam kedua kasus, sebuah bola gagal bertemu salah satu sisi, maka tidak ada titik batas.  Sebaliknya, andaikan . Jika , suatu bola di pasti bertemu di . Karena bukan titik batas, ada bola di yang tidak bertemu komplemen, jadi termuat dalam . Dengan demikian terbuka. Argumen yang sama untuk menunjukkan bahwa komplemen terbuka, sehingga tertutup. Kesetaraan ini juga mencakup himpunan kosong dan seluruh ruang.  "
+},
+{
+  "id": "o003-c90-ch10-guide-49",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-49",
+  "type": "Pemeriksaan",
+  "number": "J.49",
+  "title": "Menguraikan <span class=\"process-math\">\\(A\\cup A'\\)<\/span>.",
+  "body": "Menguraikan  Jika adalah himpunan titik limit dan himpunan titik terasing dari , buktikan . Cetakan sumber menampilkan , yang tidak benar secara umum; edisi ini memakai identitas yang dimaksud sesuai emendasi tercatat O003-C102. Rubrik. Buktikan kedua inklusi dan jelaskan dikotomi bagi setiap anggota .    Langkah 1. Menurut definisi, setiap titik terasing dari merupakan anggota .   Langkah 2. Untuk , jika , negasi definisi titik limit menghasilkan bola yang tidak memuat anggota selain .   Identitas benar: anggota yang bukan titik limit tepat merupakan titik terasing, sedangkan .   Karena titik terasing, menurut definisi, harus menjadi anggota , berlaku . Maka . Untuk inklusi sebaliknya, ambil . Jika , tidak ada lagi yang perlu dibuktikan. Jika , ada bola terbuka di yang tidak memuat titik selain ; karenanya . Jadi , dan kedua himpunan sama.  "
+},
+{
+  "id": "o003-c90-ch10-guide-50",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-50",
+  "type": "Pemeriksaan",
+  "number": "J.50",
+  "title": "Titik limit dan titik terasing tidak bertumpang tindih.",
+  "body": "Titik limit dan titik terasing tidak bertumpang tindih  Buktikan . Rubrik. Bandingkan tuntutan “setiap bola” dalam definisi titik limit dengan “ada sebuah bola” dalam definisi titik terasing.    Langkah 1. Andaikan dan pilih radius yang mengisolasi dari .   Langkah 2. Bola yang sama menyangkal syarat agar menjadi titik limit.   Identitas benar. Bola yang menyaksikan keterasingan suatu titik sekaligus membuktikan bahwa titik itu bukan titik limit.   Jika , terdapat sehingga . Jadi bola ini tidak memuat anggota yang berbeda dari . Namun titik limit menuntut agar setiap bola di memuat anggota semacam itu. Karena itu . Tidak ada titik yang dapat berada sekaligus di dan , sehingga irisannya kosong.  "
+},
+{
+  "id": "o003-c90-ch10-guide-51",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-51",
+  "type": "Pemeriksaan",
+  "number": "J.51",
+  "title": "Setiap anggota adalah titik limit atau titik terasing.",
+  "body": "Setiap anggota adalah titik limit atau titik terasing  Buktikan . Rubrik. Mulailah dengan anggota sebarang dan pisahkan kasus menurut apakah merupakan titik limit.    Langkah 1. Kasus langsung selesai.   Langkah 2. Jika , negasikan kuantor pada definisi titik limit untuk memperoleh satu bola yang hanya dapat memotong di pusatnya.   Inklusi benar. Setiap yang bukan titik limit memiliki lingkungan yang mengisolasinya, sehingga termasuk .   Ambil . Jika , jelas . Jika , tidak benar bahwa setiap bola di memuat titik yang berbeda dari . Jadi terdapat dengan . Karena , diperoleh , sehingga . Kedua kasus membuktikan inklusi.  "
+},
+{
+  "id": "o003-c90-ch10-guide-52",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-52",
+  "type": "Pemeriksaan",
+  "number": "J.52",
+  "title": "Penutup melalui limit barisan.",
+  "body": "Penutup melalui limit barisan  Buktikan bahwa jika dan hanya jika ada barisan titik-titik di yang konvergen ke . Rubrik. Perhatikan bahwa barisan konstan diperlukan ketika ; ketika , pilih titik dari bola dengan radius yang menuju nol.    Langkah 1. Jika , ambil . Jika , pilih .   Langkah 2. Untuk arah balik, gunakan konvergensi untuk menunjukkan bahwa setiap bola di bertemu .   Ekuivalensi benar. Keanggotaan dalam tutupan memungkinkan pemilihan dengan (atau barisan konstan), sedangkan limit barisan di memaksa setiap bola di memotong .   Andaikan . Jika , barisan konstan berada dalam dan konvergen ke . Jika , setiap bola di bertemu ; untuk tiap , pilih . Maka , jadi .  Sebaliknya, misalkan dan . Untuk setiap , ada sehingga . Jadi , sehingga setiap bola di memotong . Inilah karakterisasi keanggotaan dalam tutupan, maka .  "
+},
+{
+  "id": "o003-c90-ch10-guide-53",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-53",
+  "type": "Pemeriksaan",
+  "number": "J.53",
+  "title": "Penutup sebagai irisan semua superset tertutup.",
+  "body": "Penutup sebagai irisan semua superset tertutup  Buktikan bahwa adalah irisan semua himpunan tertutup yang memuat . Rubrik. Tunjukkan bahwa tutupan itu sendiri merupakan superset tertutup dan bahwa ia termuat dalam setiap superset tertutup lain.    Langkah 1. Jika tertutup dan , maka .   Langkah 2. Masukkan sendiri ke dalam keluarga semua superset tertutup , lalu bandingkan kedua inklusi terhadap irisannya.   Jika menyatakan keluarga semua yang tertutup dan memuat , maka .   Penutup tertutup dan memuat . Selanjutnya, jika tertutup serta , kemonotonan tutupan memberi . Secara langsung, kemonotonan ini juga terlihat karena setiap bola di titik bertemu , maka bertemu , sehingga titik itu berada dalam .  Misalkan . Inklusi sebelumnya menunjukkan . Karena , irisan termuat dalam . Jadi .  "
+},
+{
+  "id": "o003-c90-ch10-guide-54",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-54",
+  "type": "Pemeriksaan",
+  "number": "J.54",
+  "title": "Interior sebagai gabungan semua subhimpunan terbuka.",
+  "body": "Interior sebagai gabungan semua subhimpunan terbuka  Buktikan bahwa adalah gabungan semua himpunan terbuka yang termuat di dalam . Rubrik. Identifikasi interior sebagai subhimpunan terbuka terbesar dari melalui dua inklusi.    Langkah 1. Jika terbuka dan , setiap mempunyai bola di dalam , sehingga .   Langkah 2. Interior sendiri terbuka dan termuat dalam , jadi ia merupakan salah satu himpunan dalam keluarga yang digabungkan.   Jika menyatakan keluarga semua yang terbuka dalam , maka .   Ambil dan . Karena terbuka, ada dengan . Maka . Ini berlaku untuk setiap , sehingga .  Sebaliknya, terbuka dan termuat dalam , maka . Karena setiap anggota suatu keluarga termuat dalam gabungannya, . Kedua inklusi membuktikan kesamaan.  "
+},
+{
+  "id": "o003-c90-ch10-guide-55",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-55",
+  "type": "Pemeriksaan",
+  "number": "J.55",
+  "title": "Penutup sebagai gabungan saling lepas.",
+  "body": "Penutup sebagai gabungan saling lepas  Buktikan bahwa adalah gabungan saling lepas dari dan . Rubrik. Tunjukkan baik kesamaan gabungan maupun kosongnya irisan kedua bagian.    Langkah 1. Titik interior memiliki sebuah bola yang tidak bertemu komplemen, jadi tidak mungkin menjadi titik batas.   Langkah 2. Jika tetapi bukan titik interior, setiap bola di bertemu dan juga bertemu komplemennya.   Berlaku : kedua himpunan menutupi tutupan dan irisannya kosong.   Setiap titik interior berada dalam . Setiap titik batas juga berada dalam , sebab setiap bolanya bertemu . Jadi .  Ambil . Setiap bola di bertemu karena . Karena bukan interior, tidak ada bola di yang termuat dalam ; jadi setiap bola juga bertemu . Maka , yang membuktikan inklusi sebaliknya. Akhirnya, titik interior memiliki satu bola yang tidak bertemu komplemen, sedangkan titik batas menuntut semua bola bertemu komplemen. Karena itu , sehingga gabungan tersebut saling lepas.  "
+},
+{
+  "id": "o003-c90-ch10-guide-56",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-56",
+  "type": "Pemeriksaan",
+  "number": "J.56",
+  "title": "Penutup komplemen dan komplemen interior.",
+  "body": "Penutup komplemen dan komplemen interior  Buktikan identitas . Rubrik. Uraikan kedua sisi secara titik demi titik memakai syarat bahwa setiap bola memotong suatu himpunan.    Langkah 1.  berarti tidak ada bola di yang seluruhnya berada dalam .   Langkah 2. Negasi itu ekuivalen dengan pernyataan bahwa setiap bola di memuat titik dari .   Identitas benar: tidak menjadi titik interior tepat berarti setiap lingkungan memotong komplemen , yaitu berada dalam tutupan komplemen.   Untuk , rangkaian ekuivalensi berikut berlaku: Karena keanggotaan kedua himpunan ekuivalen bagi setiap , diperoleh .  "
+},
+{
+  "id": "o003-c90-ch10-guide-57",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-57",
+  "type": "Pemeriksaan",
+  "number": "J.57",
+  "title": "Interior komplemen dan komplemen tutupan.",
+  "body": "Interior komplemen dan komplemen tutupan  Buktikan identitas . Rubrik. Hubungkan keberadaan bola yang termuat dalam komplemen dengan keberadaan bola yang tidak memotong .    Langkah 1. Tuliskan definisi dengan sebuah radius positif.   Langkah 2. Ganti inklusi bola ke dalam komplemen dengan syarat irisan kosong terhadap , lalu negasikan karakterisasi tutupan.   Identitas benar: sebuah titik berada di interior komplemen tepat ketika suatu bolanya tidak bertemu , yakni ketika titik itu berada di luar .   Bagi setiap , Maka .  "
+},
+{
+  "id": "o003-c90-ch10-guide-58",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-58",
+  "type": "Pemeriksaan",
+  "number": "J.58",
+  "title": "Karakterisasi bola bagi titik limit.",
+  "body": "Karakterisasi bola bagi titik limit  Buktikan bahwa adalah titik limit dari jika dan hanya jika setiap bola terbuka berpusat di memuat suatu titik yang berbeda dari . Rubrik. Gunakan langsung hubungan antara lingkungan dan bola: setiap bola terbuka merupakan lingkungan pusatnya, sedangkan setiap lingkungan memuat suatu bola terbuka yang berpusat di titik tersebut.    Langkah 1. Untuk arah maju, ingat bahwa setiap merupakan lingkungan dari .   Langkah 2. Untuk arah balik, ambil lingkungan sebarang dari dan pilih dengan .   Ekuivalensi benar karena bola terbuka adalah lingkungan, dan setiap lingkungan dari memuat suatu bola terbuka berpusat di .   Andaikan dahulu adalah titik limit dari . Setiap bola terbuka merupakan lingkungan dari . Menurut definisi titik limit, bola itu memuat suatu titik dari yang berbeda dari .  Sebaliknya, andaikan setiap bola terbuka berpusat di memuat suatu titik dari . Ambil lingkungan sebarang dari . Berdasarkan definisi lingkungan dalam ruang metrik, ada sehingga . Hipotesis memberikan titik ; karena , titik yang sama berada di . Jadi setiap lingkungan dari memuat anggota yang berbeda dari , tepat definisi bahwa adalah titik limit dari .  "
+},
+{
+  "id": "o003-c90-ch10-guide-59",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-59",
+  "type": "Pemeriksaan",
+  "number": "J.59",
+  "title": "Mengulang dikotomi limit-terasing.",
+  "body": "Mengulang dikotomi limit-terasing  Dalam tugas pembuktian ulang, buktikan sekaligus dan . Rubrik. Satu analisis kasus pada harus membuktikan cakupan, sedangkan ketidakmungkinan memenuhi dua definisi sekaligus harus membuktikan keterpisahan.    Langkah 1. Jika suatu anggota bukan titik limit, ada bola di pusat itu tanpa anggota lain.   Langkah 2. Bola pengisolasi tersebut bertentangan langsung dengan tuntutan bahwa setiap bola memuat anggota lain.   Kedua klaim benar: setiap anggota adalah titik limit atau terasing, dan titik terasing tidak pernah menjadi titik limit.   Ambil . Bila setiap bola di memuat anggota selain , maka . Bila tidak, ada dengan . Karena pusatnya berada dalam , ini berarti , maka . Jadi .  Sekarang, jika , sebuah bola pengisolasi di tidak memuat anggota yang berbeda dari . Karena titik limit mengharuskan setiap bola memuat anggota demikian, . Jadi .  "
+},
+{
+  "id": "o003-c90-ch10-guide-60",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-60",
+  "type": "Pemeriksaan",
+  "number": "J.60",
+  "title": "Mengulang karakterisasi barisan bagi tutupan.",
+  "body": "Mengulang karakterisasi barisan bagi tutupan  Dalam tugas pembuktian ulang, buktikan lagi bahwa jika dan hanya jika suatu barisan di konvergen ke . Rubrik. Pastikan bukti mencakup kasus tanpa mensyaratkan suku-suku barisan berbeda dari limit.    Langkah 1. Gunakan barisan konstan jika ; selain itu, pilih satu anggota dari tiap .   Langkah 2. Jika , setiap bola di memuat semua suku yang indeksnya cukup besar, khususnya setidaknya satu anggota .   Ekuivalensi benar. Titik tutupan dapat didekati oleh pilihan dari bola-bola (dengan barisan konstan untuk anggota ), dan limit barisan di selalu berada dalam tutupan .   Jika dan , tetapkan untuk semua . Jika , setiap bola bertemu ; pilih dari irisan itu. Dalam kasus kedua , dan dalam kasus pertama jaraknya nol. Jadi pada kedua kasus dengan semua .  Untuk arah balik, andaikan dan . Bagi setiap , ada indeks sehingga bila . Maka bola tersebut memotong . Semua bola di memotong , jadi .  "
+},
+{
+  "id": "o003-c90-ch10-guide-61",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-a.html#o003-c90-ch10-guide-61",
+  "type": "Pemeriksaan",
+  "number": "J.61",
+  "title": "Minimalitas dan ketertutupan tutupan.",
+  "body": "Minimalitas dan ketertutupan tutupan  Dalam tugas pembuktian ulang, jika tertutup dan , buktikan . Selanjutnya buktikan bahwa adalah irisan semua himpunan tertutup semacam itu dan karenanya tertutup. Rubrik. Bukti harus mencakup minimalitas, kesamaan dengan irisan, dan alasan tersendiri bahwa irisan tersebut tertutup.    Langkah 1. Jika , keterbukaan memberi bola di yang tidak memotong ; gunakan kontrapositif.   Langkah 2. Misalkan adalah irisan semua superset tertutup . Buktikan dan , lalu gunakan bahwa irisan sebarang himpunan tertutup adalah tertutup.   Setiap superset tertutup dari memuat . Karena sendiri termasuk dalam keluarga itu, irisannya tepat ; sebagai irisan himpunan-himpunan tertutup, tutupan tersebut tertutup.   Misalkan tertutup dan . Jika , karena terbuka, ada dengan . Bola itu tidak memotong , sehingga . Kontrapositifnya memberi .  Biarkan menjadi keluarga semua himpunan tertutup yang memuat , dan tetapkan . Hasil paragraf pertama memberi . Penutup sendiri memuat dan tertutup: memang, jika , ada sehingga . Untuk setiap , bola termuat dalam dan tidak memotong . Jadi , sehingga komplemen tutupan terbuka. Dengan demikian , sehingga . Maka . Selain itu, komplemen adalah gabungan komplemen-komplemen terbuka dari anggota , sehingga terbuka. Jadi , dan karenanya , tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch10-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan lanjutan",
+  "body": " Panduan latihan lanjutan  Sembilan belas panduan berikut mendampingi butir ke-19 sampai ke-37 pada latihan Bab 10, yakni panduan bernomor 62–80 dalam urutan seluruh bab. Kerjakan dahulu latihan sumber. Buka petunjuk, jawaban, dan solusi secara bertahap hanya setelah Anda telah mencoba menyusun argumen sendiri. Pernyataan di bawah memparafrasakan sasaran latihan, sedangkan solusinya merupakan uraian asli yang ditulis untuk edisi ini dan tersedia sebagai komponen terpisah di bawah Creative Commons Attribution 4.0 International (CC BY 4.0).  Dua barisan menuju titik batas  Susun bukti bahwa setiap titik batas dari dapat didekati oleh satu barisan dari dan satu barisan dari . Rubrik keberhasilan: pilihan suku harus sah untuk setiap indeks positif dan kedua bukti konvergensi harus dinyatakan.   Tahap 1: gunakan lingkungan . Tahap 2: sifat titik batas memastikan bahwa bola tersebut bertemu dengan kedua himpunan.   Pilih dan . Maka dan .   Karena adalah titik batas, setiap lingkungan memuat titik dari dan titik dari komplemennya. Jadi, untuk setiap , pilihan dan memang tersedia. Untuk , pilih dengan . Jika , maka Definisi konvergensi memberi dan .   Jarak nol sebagai uji ketertutupan  Untuk subhimpunan tak kosong dari ruang metrik , buktikan bahwa tertutup tepat ketika selalu memaksa .   Arah maju: titik di luar himpunan tertutup memiliki bola yang tidak bertemu . Arah balik: dari , pilih titik dengan .   Pernyataan benar. Himpunan tertutup menjaga setiap titik luar pada jarak positif; sebaliknya, setiap titik tutupan memiliki jarak nol dan karena itu harus berada di .   Andaikan tertutup dan . Komplemen terbuka, sehingga ada dengan . Jadi untuk setiap , dan . Kontraposisinya memberi arah yang diminta.  Sekarang andaikan sifat jarak nol berlaku. Jika , maka untuk setiap terdapat . Karena untuk semua , berlaku , sehingga . Maka ; inklusi sebaliknya selalu benar, jadi dan tertutup.   Subhimpunan berhingga selalu tertutup  Buktikan bahwa setiap subhimpunan berhingga dari ruang metrik bersifat tertutup, termasuk kasus himpunan kosong.   Untuk titik di luar himpunan berhingga tak kosong , ambil minimum dari daftar berhingga jarak dengan .   Benar. Setiap titik luar memiliki jarak minimum positif dari himpunan, sehingga komplemennya terbuka.   Himpunan kosong tertutup karena komplemennya adalah . Untuk tak kosong dan , semua bilangan positif. Karena daftarnya berhingga, . Bola tidak memuat satu pun , jadi berada di . Setiap titik komplemen mempunyai lingkungan di dalam komplemen; akibatnya terbuka dan tertutup.   Ketertutupan dan batas himpunan  Buktikan pencirian: tertutup jika dan hanya jika semua titik pada batas termuat di dalam .   Gunakan identitas , atau buktikan langsung bahwa titik di luar yang bukan titik batas memiliki lingkungan yang tidak bertemu .   Pencirian benar. Jika tertutup, batasnya berada dalam ; jika batasnya berada dalam , maka seluruh tutupan juga berada dalam .   Jika tertutup, maka . Karena , diperoleh . Sebaliknya, andaikan . Identitas yang telah dibuktikan dalam bab memberi Kedua bagian ruas kanan termuat di , sehingga . Karena selalu , berlaku ; jadi tertutup.   Kekontinuan melalui interior prapeta  Untuk , buktikan bahwa kontinu tepat ketika bagi setiap .   Arah maju: terbuka dan termuat di . Arah balik: terapkan syarat pada himpunan terbuka , sehingga .   Kriterium tersebut ekuivalen dengan pernyataan bahwa prapeta setiap himpunan terbuka bersifat terbuka.   Jika kontinu, maka terbuka. Selain itu, dari diperoleh . Karena interior adalah himpunan terbuka terbesar di dalam suatu himpunan, .  Sebaliknya, andaikan inklusi berlaku untuk semua . Untuk himpunan terbuka , kita mempunyai , sehingga . Inklusi sebaliknya selalu benar; jadi terbuka. Prapeta setiap himpunan terbuka bersifat terbuka, maka kontinu.   Contoh inklusi interior yang ketat  Berikan fungsi kontinu dan subhimpunan yang membuat inklusi pada panduan sebelumnya ketat.   Cobalah fungsi konstan dan himpunan satu titik yang memuat nilai konstannya.   Ambil dan . Ruas kiri kosong, sedangkan ruas kanan adalah .   Fungsi konstan , , kontinu. Untuk dalam metrik Euklides, . Karena itu Namun , sehingga . Jadi inklusinya benar-benar ketat: .   Contoh ketika kedua interior sama  Berikan contoh konkret ketika inklusi menjadi kesamaan.   Gunakan fungsi identitas; prapeta terhadap fungsi ini tidak mengubah himpunan.   Untuk dan, misalnya, , kedua ruas sama dengan .   Ambil sebagai fungsi identitas dan . Fungsi ini kontinu, , dan . Karena , kita memperoleh Bahkan fungsi identitas memberikan kesamaan tersebut untuk setiap subhimpunan .   Titik batas: limit atau terasing  Buktikan bahwa setiap titik batas dari merupakan titik limit atau titik terasing dari .   Pisahkan kasus dan . Pada kasus kedua, gunakan langsung negasi definisi titik terasing.   Jika , setiap pertemuan lingkungan dengan otomatis berbeda dari , jadi titik limit. Jika , titik itu terasing atau, jika tidak, merupakan titik limit.   Misalkan . Jika , setiap lingkungan bertemu , dan setiap titik pertemuan berbeda dari . Maka adalah titik limit. Jika dan terasing, kesimpulan sudah diperoleh. Jika tetapi tidak terasing, tidak ada lingkungan dengan . Jadi setiap lingkungan memuat titik selain , sehingga adalah titik limit. Ketiga kemungkinan menuntaskan bukti.   Tutupan mempertahankan gabungan berhingga  Tentukan apakah selalu berlaku, lalu buktikan keputusan Anda.   Gunakan monotonisitas tutupan untuk satu inklusi. Untuk inklusi lain, perhatikan bahwa gabungan dua himpunan tertutup tetap tertutup.   Ya, kesamaan selalu berlaku untuk gabungan dua subhimpunan.   Dari dan , monotonisitas memberi . Sebaliknya, tertutup karena merupakan gabungan berhingga dari himpunan tertutup, dan himpunan itu memuat . Tutupan adalah himpunan tertutup terkecil yang memuat himpunan asal, sehingga . Kedua inklusi memberi kesamaan.   Tutupan tidak selalu mempertahankan irisan  Uji apakah selalu benar. Jika tidak, berikan contoh penyangkal dan nyatakan inklusi yang tetap berlaku.   Ambil dua interval terbuka yang saling lepas tetapi kedua tutupannya memuat titik .   Tidak. Selalu , tetapi inklusi dapat ketat.   Karena dan , monotonisitas tutupan memberikan . Untuk melihat bahwa kesamaan dapat gagal, di ambil dan . Maka , sehingga . Akan tetapi, dan , jadi .   Titik luar berjarak positif dari himpunan tertutup  Untuk himpunan tertutup tak kosong dan , buktikan bahwa .   Komplemen terbuka. Ambil sebuah bola berpusat di yang seluruhnya berada dalam komplemen.   Ada dengan ; akibatnya .   Karena tertutup, terbuka. Dari , terdapat sedemikian sehingga . Jadi tidak ada dengan ; dengan kata lain, untuk setiap . Mengambil infimum menghasilkan .   Gabungan keluarga tertutup yang lokal berhingga  Misalkan setiap titik mempunyai bola yang bertemu hanya berhingga banyak anggota keluarga tertutup . Buktikan bahwa gabungan seluruh keluarga tersebut tertutup.   Untuk di luar gabungan, pilih bola yang hanya melihat . Gunakan jarak positif dari ke masing-masing himpunan berhingga itu.   Benar. Di sekitar setiap titik luar, hanya berhingga banyak himpunan perlu dihindari; radius minimum positif menghasilkan bola yang menghindari semuanya.   Tetapkan . Pilih sehingga bertemu hanya dengan, katakanlah, . Karena tidak berada dalam satu pun himpunan itu dan masing-masing tertutup, panduan 72 memberi . Jika , bola awal sudah tidak bertemu gabungan. Jika , ambil Bola berada dalam bola awal, sehingga tidak dapat bertemu anggota keluarga selain daftar berhingga tersebut; pilihan juga membuatnya tidak bertemu satu pun anggota dalam daftar. Jadi terletak di komplemen gabungan. Komplemen itu terbuka, maka gabungannya tertutup.   Pernyataan dual untuk irisan himpunan terbuka  Rumuskan dan buktikan syarat lokal yang menjamin irisan tak hingga dari keluarga himpunan terbuka tetap terbuka.   Terapkan hasil gabungan tertutup pada keluarga komplemen , lalu gunakan Hukum De Morgan.   Jika keluarga komplemen lokal berhingga, maka terbuka.   Pernyataan yang tepat adalah: jika setiap terbuka dan, untuk setiap , ada lingkungan yang bertemu hanya berhingga banyak komplemen , maka terbuka. Memang, tertutup dan keluarga lokal berhingga. Panduan 73 menyatakan bahwa tertutup. Hukum De Morgan memberi Ruas kiri adalah komplemen suatu himpunan tertutup, sehingga irisan pada ruas kanan terbuka.   Himpunan satu titik tertutup  Putuskan apakah selalu tertutup dalam setiap ruang metrik dan berikan alasan yang tidak bergantung pada gambar.   Untuk , gunakan radius yang lebih kecil daripada .   Benar. Setiap memiliki bola yang tidak memuat .   Ambil . Karena metrik memisahkan titik, . Dengan , titik tidak dapat berada di , sebab jaraknya dari adalah . Jadi . Komplemen terbuka, maka tertutup.   Himpunan sekaligus terbuka dan tertutup di garis real  Tentukan apakah dan merupakan satu-satunya subhimpunan yang sekaligus terbuka dan tertutup dalam metrik Euklides.   Andaikan tak kosong dan tidak sama dengan . Pilih dan , lalu gunakan sifat supremum pada bagian di antara kedua titik tersebut.   Benar. Tidak ada pemisahan garis real menjadi dua himpunan terbuka tak kosong yang saling komplemen.   Jelas dan keduanya terbuka dan tertutup. Andaikan ada lain dengan kedua sifat itu. Pilih dan . Setelah menukar arah garis bila perlu, kita dapat menganggap . Himpunan tak kosong dan terbatas atas; tulis . Karena komplemen terbuka dan memuat , ada interval di sekitar yang tidak bertemu , sehingga . Karena terbuka dan memuat , ada titik di kanan , sehingga .  Jika , keterbukaan memberi titik yang lebih besar dari , bertentangan dengan sifat batas atas. Jika , keterbukaan komplemen memberi interval di sekitar tanpa titik ; tetapi definisi supremum menuntut titik sedekat apa pun di bawah . Keduanya mustahil. Jadi tidak ada seperti itu.   Subhimpunan pada ruang metrik berhingga  Untuk dengan , tentukan apakah sekaligus terbuka dan tertutup.   Hitung jarak pasangan berbeda: , , dan . Gunakan bola kecil untuk mengisolasi setiap titik.   Benar. Topologi metrik pada himpunan berhingga ini diskret, sehingga setiap subhimpunan terbuka dan tertutup.   Perhitungan modulo memberi , , dan . Jadi jarak positif terkecil antara dua titik berbeda adalah . Untuk setiap , bola sama dengan . Dengan demikian semua himpunan satu titik terbuka, sehingga setiap subhimpunan adalah gabungan himpunan-himpunan satu titik dan karenanya terbuka. Komplemen setiap subhimpunan juga terbuka, jadi setiap subhimpunan tertutup. Secara khusus, terbuka dan komplemennya terbuka; maka juga tertutup.   Interior tutupan tidak memulihkan himpunan asal  Uji klaim untuk setiap subhimpunan ruang metrik dan, jika salah, berikan contoh yang tegas.   Gunakan himpunan rapat yang bukan seluruh garis real, misalnya .   Salah. Untuk dalam , ruas kiri adalah , bukan .   Ambil sebagai subhimpunan . Setiap interval terbuka memuat bilangan rasional, jadi rapat di dan . Karena terbuka dalam dirinya sendiri, . Namun . Satu contoh ini cukup menyangkal klaim universal.   Batas suatu himpunan selalu tertutup  Tentukan apakah tertutup untuk setiap dan buktikan keputusan Anda.   Gunakan rumus .   Benar. Batas adalah irisan dua himpunan tertutup.   Bab ini telah membuktikan Tutupan setiap himpunan bersifat tertutup, sehingga dan tertutup. Irisan berhingga dari himpunan tertutup tetap tertutup. Oleh karena itu tertutup untuk setiap .   Setiap titik himpunan: limit atau terasing  Buktikan bahwa , dengan himpunan titik limit dan himpunan titik terasing dari .   Ambil sembarang dan gunakan dikotomi: terasing atau tidak terasing.   Benar. Titik yang tidak terasing memenuhi definisi titik limit.   Tetapkan . Jika ada lingkungan dari dengan , maka . Jika tidak ada lingkungan seperti itu, setiap lingkungan memuat suatu titik dari yang berbeda dari . Ini tepat definisi bahwa . Jadi dalam kedua kasus . Karena dipilih sembarang, .   "
+},
+{
+  "id": "o003-c90-ch10-guide-62",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-62",
+  "type": "Pemeriksaan",
+  "number": "J.62",
+  "title": "Dua barisan menuju titik batas.",
+  "body": "Dua barisan menuju titik batas  Susun bukti bahwa setiap titik batas dari dapat didekati oleh satu barisan dari dan satu barisan dari . Rubrik keberhasilan: pilihan suku harus sah untuk setiap indeks positif dan kedua bukti konvergensi harus dinyatakan.   Tahap 1: gunakan lingkungan . Tahap 2: sifat titik batas memastikan bahwa bola tersebut bertemu dengan kedua himpunan.   Pilih dan . Maka dan .   Karena adalah titik batas, setiap lingkungan memuat titik dari dan titik dari komplemennya. Jadi, untuk setiap , pilihan dan memang tersedia. Untuk , pilih dengan . Jika , maka Definisi konvergensi memberi dan .  "
+},
+{
+  "id": "o003-c90-ch10-guide-63",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-63",
+  "type": "Pemeriksaan",
+  "number": "J.63",
+  "title": "Jarak nol sebagai uji ketertutupan.",
+  "body": "Jarak nol sebagai uji ketertutupan  Untuk subhimpunan tak kosong dari ruang metrik , buktikan bahwa tertutup tepat ketika selalu memaksa .   Arah maju: titik di luar himpunan tertutup memiliki bola yang tidak bertemu . Arah balik: dari , pilih titik dengan .   Pernyataan benar. Himpunan tertutup menjaga setiap titik luar pada jarak positif; sebaliknya, setiap titik tutupan memiliki jarak nol dan karena itu harus berada di .   Andaikan tertutup dan . Komplemen terbuka, sehingga ada dengan . Jadi untuk setiap , dan . Kontraposisinya memberi arah yang diminta.  Sekarang andaikan sifat jarak nol berlaku. Jika , maka untuk setiap terdapat . Karena untuk semua , berlaku , sehingga . Maka ; inklusi sebaliknya selalu benar, jadi dan tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-64",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-64",
+  "type": "Pemeriksaan",
+  "number": "J.64",
+  "title": "Subhimpunan berhingga selalu tertutup.",
+  "body": "Subhimpunan berhingga selalu tertutup  Buktikan bahwa setiap subhimpunan berhingga dari ruang metrik bersifat tertutup, termasuk kasus himpunan kosong.   Untuk titik di luar himpunan berhingga tak kosong , ambil minimum dari daftar berhingga jarak dengan .   Benar. Setiap titik luar memiliki jarak minimum positif dari himpunan, sehingga komplemennya terbuka.   Himpunan kosong tertutup karena komplemennya adalah . Untuk tak kosong dan , semua bilangan positif. Karena daftarnya berhingga, . Bola tidak memuat satu pun , jadi berada di . Setiap titik komplemen mempunyai lingkungan di dalam komplemen; akibatnya terbuka dan tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-65",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-65",
+  "type": "Pemeriksaan",
+  "number": "J.65",
+  "title": "Ketertutupan dan batas himpunan.",
+  "body": "Ketertutupan dan batas himpunan  Buktikan pencirian: tertutup jika dan hanya jika semua titik pada batas termuat di dalam .   Gunakan identitas , atau buktikan langsung bahwa titik di luar yang bukan titik batas memiliki lingkungan yang tidak bertemu .   Pencirian benar. Jika tertutup, batasnya berada dalam ; jika batasnya berada dalam , maka seluruh tutupan juga berada dalam .   Jika tertutup, maka . Karena , diperoleh . Sebaliknya, andaikan . Identitas yang telah dibuktikan dalam bab memberi Kedua bagian ruas kanan termuat di , sehingga . Karena selalu , berlaku ; jadi tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-66",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-66",
+  "type": "Pemeriksaan",
+  "number": "J.66",
+  "title": "Kekontinuan melalui interior prapeta.",
+  "body": "Kekontinuan melalui interior prapeta  Untuk , buktikan bahwa kontinu tepat ketika bagi setiap .   Arah maju: terbuka dan termuat di . Arah balik: terapkan syarat pada himpunan terbuka , sehingga .   Kriterium tersebut ekuivalen dengan pernyataan bahwa prapeta setiap himpunan terbuka bersifat terbuka.   Jika kontinu, maka terbuka. Selain itu, dari diperoleh . Karena interior adalah himpunan terbuka terbesar di dalam suatu himpunan, .  Sebaliknya, andaikan inklusi berlaku untuk semua . Untuk himpunan terbuka , kita mempunyai , sehingga . Inklusi sebaliknya selalu benar; jadi terbuka. Prapeta setiap himpunan terbuka bersifat terbuka, maka kontinu.  "
+},
+{
+  "id": "o003-c90-ch10-guide-67",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-67",
+  "type": "Pemeriksaan",
+  "number": "J.67",
+  "title": "Contoh inklusi interior yang ketat.",
+  "body": "Contoh inklusi interior yang ketat  Berikan fungsi kontinu dan subhimpunan yang membuat inklusi pada panduan sebelumnya ketat.   Cobalah fungsi konstan dan himpunan satu titik yang memuat nilai konstannya.   Ambil dan . Ruas kiri kosong, sedangkan ruas kanan adalah .   Fungsi konstan , , kontinu. Untuk dalam metrik Euklides, . Karena itu Namun , sehingga . Jadi inklusinya benar-benar ketat: .  "
+},
+{
+  "id": "o003-c90-ch10-guide-68",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-68",
+  "type": "Pemeriksaan",
+  "number": "J.68",
+  "title": "Contoh ketika kedua interior sama.",
+  "body": "Contoh ketika kedua interior sama  Berikan contoh konkret ketika inklusi menjadi kesamaan.   Gunakan fungsi identitas; prapeta terhadap fungsi ini tidak mengubah himpunan.   Untuk dan, misalnya, , kedua ruas sama dengan .   Ambil sebagai fungsi identitas dan . Fungsi ini kontinu, , dan . Karena , kita memperoleh Bahkan fungsi identitas memberikan kesamaan tersebut untuk setiap subhimpunan .  "
+},
+{
+  "id": "o003-c90-ch10-guide-69",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-69",
+  "type": "Pemeriksaan",
+  "number": "J.69",
+  "title": "Titik batas: limit atau terasing.",
+  "body": "Titik batas: limit atau terasing  Buktikan bahwa setiap titik batas dari merupakan titik limit atau titik terasing dari .   Pisahkan kasus dan . Pada kasus kedua, gunakan langsung negasi definisi titik terasing.   Jika , setiap pertemuan lingkungan dengan otomatis berbeda dari , jadi titik limit. Jika , titik itu terasing atau, jika tidak, merupakan titik limit.   Misalkan . Jika , setiap lingkungan bertemu , dan setiap titik pertemuan berbeda dari . Maka adalah titik limit. Jika dan terasing, kesimpulan sudah diperoleh. Jika tetapi tidak terasing, tidak ada lingkungan dengan . Jadi setiap lingkungan memuat titik selain , sehingga adalah titik limit. Ketiga kemungkinan menuntaskan bukti.  "
+},
+{
+  "id": "o003-c90-ch10-guide-70",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-70",
+  "type": "Pemeriksaan",
+  "number": "J.70",
+  "title": "Tutupan mempertahankan gabungan berhingga.",
+  "body": "Tutupan mempertahankan gabungan berhingga  Tentukan apakah selalu berlaku, lalu buktikan keputusan Anda.   Gunakan monotonisitas tutupan untuk satu inklusi. Untuk inklusi lain, perhatikan bahwa gabungan dua himpunan tertutup tetap tertutup.   Ya, kesamaan selalu berlaku untuk gabungan dua subhimpunan.   Dari dan , monotonisitas memberi . Sebaliknya, tertutup karena merupakan gabungan berhingga dari himpunan tertutup, dan himpunan itu memuat . Tutupan adalah himpunan tertutup terkecil yang memuat himpunan asal, sehingga . Kedua inklusi memberi kesamaan.  "
+},
+{
+  "id": "o003-c90-ch10-guide-71",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-71",
+  "type": "Pemeriksaan",
+  "number": "J.71",
+  "title": "Tutupan tidak selalu mempertahankan irisan.",
+  "body": "Tutupan tidak selalu mempertahankan irisan  Uji apakah selalu benar. Jika tidak, berikan contoh penyangkal dan nyatakan inklusi yang tetap berlaku.   Ambil dua interval terbuka yang saling lepas tetapi kedua tutupannya memuat titik .   Tidak. Selalu , tetapi inklusi dapat ketat.   Karena dan , monotonisitas tutupan memberikan . Untuk melihat bahwa kesamaan dapat gagal, di ambil dan . Maka , sehingga . Akan tetapi, dan , jadi .  "
+},
+{
+  "id": "o003-c90-ch10-guide-72",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-72",
+  "type": "Pemeriksaan",
+  "number": "J.72",
+  "title": "Titik luar berjarak positif dari himpunan tertutup.",
+  "body": "Titik luar berjarak positif dari himpunan tertutup  Untuk himpunan tertutup tak kosong dan , buktikan bahwa .   Komplemen terbuka. Ambil sebuah bola berpusat di yang seluruhnya berada dalam komplemen.   Ada dengan ; akibatnya .   Karena tertutup, terbuka. Dari , terdapat sedemikian sehingga . Jadi tidak ada dengan ; dengan kata lain, untuk setiap . Mengambil infimum menghasilkan .  "
+},
+{
+  "id": "o003-c90-ch10-guide-73",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-73",
+  "type": "Pemeriksaan",
+  "number": "J.73",
+  "title": "Gabungan keluarga tertutup yang lokal berhingga.",
+  "body": "Gabungan keluarga tertutup yang lokal berhingga  Misalkan setiap titik mempunyai bola yang bertemu hanya berhingga banyak anggota keluarga tertutup . Buktikan bahwa gabungan seluruh keluarga tersebut tertutup.   Untuk di luar gabungan, pilih bola yang hanya melihat . Gunakan jarak positif dari ke masing-masing himpunan berhingga itu.   Benar. Di sekitar setiap titik luar, hanya berhingga banyak himpunan perlu dihindari; radius minimum positif menghasilkan bola yang menghindari semuanya.   Tetapkan . Pilih sehingga bertemu hanya dengan, katakanlah, . Karena tidak berada dalam satu pun himpunan itu dan masing-masing tertutup, panduan 72 memberi . Jika , bola awal sudah tidak bertemu gabungan. Jika , ambil Bola berada dalam bola awal, sehingga tidak dapat bertemu anggota keluarga selain daftar berhingga tersebut; pilihan juga membuatnya tidak bertemu satu pun anggota dalam daftar. Jadi terletak di komplemen gabungan. Komplemen itu terbuka, maka gabungannya tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-74",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-74",
+  "type": "Pemeriksaan",
+  "number": "J.74",
+  "title": "Pernyataan dual untuk irisan himpunan terbuka.",
+  "body": "Pernyataan dual untuk irisan himpunan terbuka  Rumuskan dan buktikan syarat lokal yang menjamin irisan tak hingga dari keluarga himpunan terbuka tetap terbuka.   Terapkan hasil gabungan tertutup pada keluarga komplemen , lalu gunakan Hukum De Morgan.   Jika keluarga komplemen lokal berhingga, maka terbuka.   Pernyataan yang tepat adalah: jika setiap terbuka dan, untuk setiap , ada lingkungan yang bertemu hanya berhingga banyak komplemen , maka terbuka. Memang, tertutup dan keluarga lokal berhingga. Panduan 73 menyatakan bahwa tertutup. Hukum De Morgan memberi Ruas kiri adalah komplemen suatu himpunan tertutup, sehingga irisan pada ruas kanan terbuka.  "
+},
+{
+  "id": "o003-c90-ch10-guide-75",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-75",
+  "type": "Pemeriksaan",
+  "number": "J.75",
+  "title": "Himpunan satu titik tertutup.",
+  "body": "Himpunan satu titik tertutup  Putuskan apakah selalu tertutup dalam setiap ruang metrik dan berikan alasan yang tidak bergantung pada gambar.   Untuk , gunakan radius yang lebih kecil daripada .   Benar. Setiap memiliki bola yang tidak memuat .   Ambil . Karena metrik memisahkan titik, . Dengan , titik tidak dapat berada di , sebab jaraknya dari adalah . Jadi . Komplemen terbuka, maka tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-76",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-76",
+  "type": "Pemeriksaan",
+  "number": "J.76",
+  "title": "Himpunan sekaligus terbuka dan tertutup di garis real.",
+  "body": "Himpunan sekaligus terbuka dan tertutup di garis real  Tentukan apakah dan merupakan satu-satunya subhimpunan yang sekaligus terbuka dan tertutup dalam metrik Euklides.   Andaikan tak kosong dan tidak sama dengan . Pilih dan , lalu gunakan sifat supremum pada bagian di antara kedua titik tersebut.   Benar. Tidak ada pemisahan garis real menjadi dua himpunan terbuka tak kosong yang saling komplemen.   Jelas dan keduanya terbuka dan tertutup. Andaikan ada lain dengan kedua sifat itu. Pilih dan . Setelah menukar arah garis bila perlu, kita dapat menganggap . Himpunan tak kosong dan terbatas atas; tulis . Karena komplemen terbuka dan memuat , ada interval di sekitar yang tidak bertemu , sehingga . Karena terbuka dan memuat , ada titik di kanan , sehingga .  Jika , keterbukaan memberi titik yang lebih besar dari , bertentangan dengan sifat batas atas. Jika , keterbukaan komplemen memberi interval di sekitar tanpa titik ; tetapi definisi supremum menuntut titik sedekat apa pun di bawah . Keduanya mustahil. Jadi tidak ada seperti itu.  "
+},
+{
+  "id": "o003-c90-ch10-guide-77",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-77",
+  "type": "Pemeriksaan",
+  "number": "J.77",
+  "title": "Subhimpunan pada ruang metrik berhingga.",
+  "body": "Subhimpunan pada ruang metrik berhingga  Untuk dengan , tentukan apakah sekaligus terbuka dan tertutup.   Hitung jarak pasangan berbeda: , , dan . Gunakan bola kecil untuk mengisolasi setiap titik.   Benar. Topologi metrik pada himpunan berhingga ini diskret, sehingga setiap subhimpunan terbuka dan tertutup.   Perhitungan modulo memberi , , dan . Jadi jarak positif terkecil antara dua titik berbeda adalah . Untuk setiap , bola sama dengan . Dengan demikian semua himpunan satu titik terbuka, sehingga setiap subhimpunan adalah gabungan himpunan-himpunan satu titik dan karenanya terbuka. Komplemen setiap subhimpunan juga terbuka, jadi setiap subhimpunan tertutup. Secara khusus, terbuka dan komplemennya terbuka; maka juga tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-guide-78",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-78",
+  "type": "Pemeriksaan",
+  "number": "J.78",
+  "title": "Interior tutupan tidak memulihkan himpunan asal.",
+  "body": "Interior tutupan tidak memulihkan himpunan asal  Uji klaim untuk setiap subhimpunan ruang metrik dan, jika salah, berikan contoh yang tegas.   Gunakan himpunan rapat yang bukan seluruh garis real, misalnya .   Salah. Untuk dalam , ruas kiri adalah , bukan .   Ambil sebagai subhimpunan . Setiap interval terbuka memuat bilangan rasional, jadi rapat di dan . Karena terbuka dalam dirinya sendiri, . Namun . Satu contoh ini cukup menyangkal klaim universal.  "
+},
+{
+  "id": "o003-c90-ch10-guide-79",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-79",
+  "type": "Pemeriksaan",
+  "number": "J.79",
+  "title": "Batas suatu himpunan selalu tertutup.",
+  "body": "Batas suatu himpunan selalu tertutup  Tentukan apakah tertutup untuk setiap dan buktikan keputusan Anda.   Gunakan rumus .   Benar. Batas adalah irisan dua himpunan tertutup.   Bab ini telah membuktikan Tutupan setiap himpunan bersifat tertutup, sehingga dan tertutup. Irisan berhingga dari himpunan tertutup tetap tertutup. Oleh karena itu tertutup untuk setiap .  "
+},
+{
+  "id": "o003-c90-ch10-guide-80",
+  "level": "2",
+  "url": "o003-c90-ch10-exercise-guides-b.html#o003-c90-ch10-guide-80",
+  "type": "Pemeriksaan",
+  "number": "J.80",
+  "title": "Setiap titik himpunan: limit atau terasing.",
+  "body": "Setiap titik himpunan: limit atau terasing  Buktikan bahwa , dengan himpunan titik limit dan himpunan titik terasing dari .   Ambil sembarang dan gunakan dikotomi: terasing atau tidak terasing.   Benar. Titik yang tidak terasing memenuhi definisi titik limit.   Tetapkan . Jika ada lingkungan dari dengan , maka . Jika tidak ada lingkungan seperti itu, setiap lingkungan memuat suatu titik dari yang berbeda dari . Ini tepat definisi bahwa . Jadi dalam kedua kasus . Karena dipilih sembarang, .  "
+},
+{
+  "id": "o003-c90-ch10-mastery",
+  "level": "1",
+  "url": "o003-c90-ch10-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 10",
+  "body": " Pemeriksaan penguasaan Bab 10  Delapan pemeriksaan berikut menggabungkan beberapa gagasan Bab 10 dalam situasi baru. Materi ini ditulis secara mandiri untuk komponen pendamping berlisensi CC BY 4.0. Gunakan petunjuk hanya setelah mencoba soal; jawaban menyatakan hasil, sedangkan solusi memperlihatkan bukti lengkap.  Membaca seluruh struktur sebuah himpunan  Dalam , ambil . Tentukan interior, tutupan, batas, himpunan titik limit, dan himpunan titik terasing dari . Putuskan pula apakah terbuka atau tertutup.   Analisis titik , kedua ujung , dan titik di antara dan secara terpisah.    , , , , dan . Himpunan tidak terbuka dan tidak tertutup.   Setiap titik di memiliki interval kecil di dalam ; tidak ada titik lain yang interior. Titik dapat didekati dari kanan dan titik dari kiri, sehingga keduanya berada dalam tutupan dan merupakan titik limit. Semua titik juga titik limit, sedangkan titik terasing karena, misalnya, . Jadi dan . Tutupan adalah . Menggunakan memberi . Karena bukan titik interior, tidak terbuka; karena , tidak tertutup.   Menutup barisan kebalikan  Buktikan langsung bahwa tertutup di , dan tentukan semua titik limit serta titik terasingnya.   Titik adalah satu-satunya kandidat titik limit. Untuk , pilih radius kurang dari separuh jaraknya ke tetangga terdekat dalam daftar.   Himpunan titik limit adalah ; setiap terasing. Karena , himpunan tertutup.   Barisan konvergen ke , sehingga setiap lingkungan memuat titik selain ; jadi . Untuk suatu , jaraknya ke anggota lain dari daftar mempunyai minimum positif di sekitar indeks itu; pilih radius lebih kecil daripada setengah jarak ke dan , dengan penyesuaian yang jelas untuk . Bola tersebut bertemu hanya di , jadi setiap terasing.  Jika dan , pilih lingkungan kecil yang tidak memuat . Hanya berhingga banyak suku dapat berada di lingkungan itu; radius dapat diperkecil lagi untuk menghindari semuanya. Maka bukan titik limit. Jadi . Karena memuat semua titik limitnya, tertutup.   Mengapa syarat lokal berhingga diperlukan  Berikan keluarga terhitung himpunan tertutup di yang gabungannya tidak tertutup. Tunjukkan secara eksplisit di titik mana keluarga itu gagal menjadi lokal berhingga.   Gunakan himpunan satu titik .   Keluarga terdiri atas himpunan tertutup, tetapi gabungannya tidak memuat titik limit . Keluarga itu tidak lokal berhingga di .   Setiap tertutup karena himpunan satu titik tertutup dalam ruang metrik. Gabungannya adalah . Barisan konvergen ke , jadi , tetapi . Maka tidak tertutup. Untuk setiap , terdapat tak hingga banyak dengan ; akibatnya bertemu tak hingga banyak . Tepat di syarat lokal berhingga gagal.   Himpunan nol fungsi kontinu  Jika kontinu, buktikan bahwa tertutup. Kemudian simpulkan bahwa setiap himpunan aras juga tertutup.   Tulis himpunan tersebut sebagai prapeta dari himpunan satu titik di .    dan ; keduanya tertutup.   Setiap himpunan satu titik tertutup di . Menurut pencirian kekontinuan dengan himpunan tertutup, prapeta himpunan tertutup terhadap tertutup di . Karena , himpunan nol tertutup. Argumen yang sama dengan memberi ketertutupan setiap himpunan aras .   Fungsi jarak ke suatu himpunan  Untuk , definisikan . Buktikan . Simpulkan bahwa kontinu dan bahwa himpunan nolnya adalah .   Untuk setiap , pertidaksamaan segitiga memberi . Ambil infimum, lalu tukar dan .   Fungsi bersifat Lipschitz dengan konstanta , sehingga kontinu, dan .   Untuk setiap , . Mengambil infimum atas memberi , jadi . Menukar dan menghasilkan pertidaksamaan lawan; keduanya setara dengan . Maka kontinu.  Jika , setiap bertemu , sehingga untuk semua dan . Sebaliknya, jika , untuk setiap ada dengan ; jadi setiap lingkungan bertemu dan .   Dua identitas batas  Buktikan dan untuk setiap .   Mulai dari dan identitas .   Kedua identitas benar; yang pertama mengikuti dari identitas komplemen interior, dan yang kedua dari simetri irisan kedua tutupan.   Gunakan rumus batas dan dualitas interior–tutupan: Selanjutnya, Kesamaan terakhir hanya menggunakan sifat komutatif irisan.   Pencirian titik tutupan dengan barisan  Buktikan bahwa jika dan hanya jika terdapat barisan di yang konvergen ke . Jelaskan mengapa barisan konstan diperlukan ketika terasing.   Dari tutupan, pilih . Untuk arah balik, setiap lingkungan akhirnya memuat semua suku barisan.   Pilihan dari bola menyusut memberi arah maju; definisi konvergensi memberi arah balik. Jika terasing, pilihan yang mungkin untuk semua indeks besar adalah .   Jika , setiap bola bertemu . Pilih . Untuk , pilih ; jika , maka . Jadi . Bila terasing, bola yang cukup kecil bertemu hanya di , sehingga konstruksi ini akhirnya memilih ; barisan konstan memang harus diizinkan.  Sebaliknya, jika dan , setiap lingkungan dari memuat suatu bola . Semua suku dengan indeks cukup besar berada dalam bola itu, sehingga . Maka setiap lingkungan bertemu , yakni .   Himpunan terbuka-tertutup dan fungsi indikator  Beri metrik diskret dan definisikan dengan nilai pada dan di luar . Buktikan bahwa kontinu jika dan hanya jika sekaligus terbuka dan tertutup.   Dalam ruang diskret dua titik, dan terbuka. Hitung kedua prapetanya.    dan ; kekontinuan ekuivalen dengan keterbukaan kedua himpunan tersebut.   Jika kontinu, prapeta dua himpunan terbuka dan harus terbuka. Prapeta itu masing-masing adalah dan . Jadi terbuka dan komplemennya terbuka, yang berarti juga tertutup.  Sebaliknya, andaikan sekaligus terbuka dan tertutup. Maka dan terbuka. Setiap himpunan terbuka dalam ruang diskret adalah salah satu dari ; prapetanya berturut-turut , semuanya terbuka. Karena prapeta setiap himpunan terbuka bersifat terbuka, kontinu.   "
+},
+{
+  "id": "o003-c90-ch10-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "J.81",
+  "title": "Membaca seluruh struktur sebuah himpunan.",
+  "body": "Membaca seluruh struktur sebuah himpunan  Dalam , ambil . Tentukan interior, tutupan, batas, himpunan titik limit, dan himpunan titik terasing dari . Putuskan pula apakah terbuka atau tertutup.   Analisis titik , kedua ujung , dan titik di antara dan secara terpisah.    , , , , dan . Himpunan tidak terbuka dan tidak tertutup.   Setiap titik di memiliki interval kecil di dalam ; tidak ada titik lain yang interior. Titik dapat didekati dari kanan dan titik dari kiri, sehingga keduanya berada dalam tutupan dan merupakan titik limit. Semua titik juga titik limit, sedangkan titik terasing karena, misalnya, . Jadi dan . Tutupan adalah . Menggunakan memberi . Karena bukan titik interior, tidak terbuka; karena , tidak tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "J.82",
+  "title": "Menutup barisan kebalikan.",
+  "body": "Menutup barisan kebalikan  Buktikan langsung bahwa tertutup di , dan tentukan semua titik limit serta titik terasingnya.   Titik adalah satu-satunya kandidat titik limit. Untuk , pilih radius kurang dari separuh jaraknya ke tetangga terdekat dalam daftar.   Himpunan titik limit adalah ; setiap terasing. Karena , himpunan tertutup.   Barisan konvergen ke , sehingga setiap lingkungan memuat titik selain ; jadi . Untuk suatu , jaraknya ke anggota lain dari daftar mempunyai minimum positif di sekitar indeks itu; pilih radius lebih kecil daripada setengah jarak ke dan , dengan penyesuaian yang jelas untuk . Bola tersebut bertemu hanya di , jadi setiap terasing.  Jika dan , pilih lingkungan kecil yang tidak memuat . Hanya berhingga banyak suku dapat berada di lingkungan itu; radius dapat diperkecil lagi untuk menghindari semuanya. Maka bukan titik limit. Jadi . Karena memuat semua titik limitnya, tertutup.  "
+},
+{
+  "id": "o003-c90-ch10-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "J.83",
+  "title": "Mengapa syarat lokal berhingga diperlukan.",
+  "body": "Mengapa syarat lokal berhingga diperlukan  Berikan keluarga terhitung himpunan tertutup di yang gabungannya tidak tertutup. Tunjukkan secara eksplisit di titik mana keluarga itu gagal menjadi lokal berhingga.   Gunakan himpunan satu titik .   Keluarga terdiri atas himpunan tertutup, tetapi gabungannya tidak memuat titik limit . Keluarga itu tidak lokal berhingga di .   Setiap tertutup karena himpunan satu titik tertutup dalam ruang metrik. Gabungannya adalah . Barisan konvergen ke , jadi , tetapi . Maka tidak tertutup. Untuk setiap , terdapat tak hingga banyak dengan ; akibatnya bertemu tak hingga banyak . Tepat di syarat lokal berhingga gagal.  "
+},
+{
+  "id": "o003-c90-ch10-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "J.84",
+  "title": "Himpunan nol fungsi kontinu.",
+  "body": "Himpunan nol fungsi kontinu  Jika kontinu, buktikan bahwa tertutup. Kemudian simpulkan bahwa setiap himpunan aras juga tertutup.   Tulis himpunan tersebut sebagai prapeta dari himpunan satu titik di .    dan ; keduanya tertutup.   Setiap himpunan satu titik tertutup di . Menurut pencirian kekontinuan dengan himpunan tertutup, prapeta himpunan tertutup terhadap tertutup di . Karena , himpunan nol tertutup. Argumen yang sama dengan memberi ketertutupan setiap himpunan aras .  "
+},
+{
+  "id": "o003-c90-ch10-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "J.85",
+  "title": "Fungsi jarak ke suatu himpunan.",
+  "body": "Fungsi jarak ke suatu himpunan  Untuk , definisikan . Buktikan . Simpulkan bahwa kontinu dan bahwa himpunan nolnya adalah .   Untuk setiap , pertidaksamaan segitiga memberi . Ambil infimum, lalu tukar dan .   Fungsi bersifat Lipschitz dengan konstanta , sehingga kontinu, dan .   Untuk setiap , . Mengambil infimum atas memberi , jadi . Menukar dan menghasilkan pertidaksamaan lawan; keduanya setara dengan . Maka kontinu.  Jika , setiap bertemu , sehingga untuk semua dan . Sebaliknya, jika , untuk setiap ada dengan ; jadi setiap lingkungan bertemu dan .  "
+},
+{
+  "id": "o003-c90-ch10-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "J.86",
+  "title": "Dua identitas batas.",
+  "body": "Dua identitas batas  Buktikan dan untuk setiap .   Mulai dari dan identitas .   Kedua identitas benar; yang pertama mengikuti dari identitas komplemen interior, dan yang kedua dari simetri irisan kedua tutupan.   Gunakan rumus batas dan dualitas interior–tutupan: Selanjutnya, Kesamaan terakhir hanya menggunakan sifat komutatif irisan.  "
+},
+{
+  "id": "o003-c90-ch10-mastery-07",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-07",
+  "type": "Pemeriksaan",
+  "number": "J.87",
+  "title": "Pencirian titik tutupan dengan barisan.",
+  "body": "Pencirian titik tutupan dengan barisan  Buktikan bahwa jika dan hanya jika terdapat barisan di yang konvergen ke . Jelaskan mengapa barisan konstan diperlukan ketika terasing.   Dari tutupan, pilih . Untuk arah balik, setiap lingkungan akhirnya memuat semua suku barisan.   Pilihan dari bola menyusut memberi arah maju; definisi konvergensi memberi arah balik. Jika terasing, pilihan yang mungkin untuk semua indeks besar adalah .   Jika , setiap bola bertemu . Pilih . Untuk , pilih ; jika , maka . Jadi . Bila terasing, bola yang cukup kecil bertemu hanya di , sehingga konstruksi ini akhirnya memilih ; barisan konstan memang harus diizinkan.  Sebaliknya, jika dan , setiap lingkungan dari memuat suatu bola . Semua suku dengan indeks cukup besar berada dalam bola itu, sehingga . Maka setiap lingkungan bertemu , yakni .  "
+},
+{
+  "id": "o003-c90-ch10-mastery-08",
+  "level": "2",
+  "url": "o003-c90-ch10-mastery.html#o003-c90-ch10-mastery-08",
+  "type": "Pemeriksaan",
+  "number": "J.88",
+  "title": "Himpunan terbuka-tertutup dan fungsi indikator.",
+  "body": "Himpunan terbuka-tertutup dan fungsi indikator  Beri metrik diskret dan definisikan dengan nilai pada dan di luar . Buktikan bahwa kontinu jika dan hanya jika sekaligus terbuka dan tertutup.   Dalam ruang diskret dua titik, dan terbuka. Hitung kedua prapetanya.    dan ; kekontinuan ekuivalen dengan keterbukaan kedua himpunan tersebut.   Jika kontinu, prapeta dua himpunan terbuka dan harus terbuka. Prapeta itu masing-masing adalah dan . Jadi terbuka dan komplemennya terbuka, yang berarti juga tertutup.  Sebaliknya, andaikan sekaligus terbuka dan tertutup. Maka dan terbuka. Setiap himpunan terbuka dalam ruang diskret adalah salah satu dari ; prapetanya berturut-turut , semuanya terbuka. Karena prapeta setiap himpunan terbuka bersifat terbuka, kontinu.  "
 },
 {
   "id": "index-1",

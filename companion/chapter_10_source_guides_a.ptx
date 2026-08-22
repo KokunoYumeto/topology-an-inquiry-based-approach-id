@@ -1,0 +1,794 @@
+<section xml:id="o003-c90-ch10-source-guides-a" xml:lang="id-ID">
+  <title>Panduan konsep dan tugas sumber</title>
+
+  <p>
+    Dua puluh dua panduan berikut mengikuti urutan tugas sumber: sembilan tugas
+    tentang titik batas, titik limit, dan titik terasing; empat tugas tentang
+    himpunan tertutup di ruang metrik; tujuh langkah tentang kekontinuan dan
+    prapeta himpunan tertutup; serta dua langkah konstruksi barisan dari titik
+    limit. Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban,
+    dan solusi secara bertahap. Setiap pernyataan memparafrasakan sasaran
+    sumber dan menyertakan rubrik keberhasilan. Teks panduan asli ini merupakan
+    komponen terpisah yang tersedia di bawah Creative Commons Attribution 4.0
+    International (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch10-guide-01">
+    <title>Interval setengah tertutup di garis real</title>
+    <statement>
+      <p>
+        Untuk <m>A=[0,\frac12)</m> di <m>(\R,d_E)</m>, tentukan semua titik
+        batas, titik limit, dan titik terasing, lalu putuskan apakah <m>A</m>
+        tertutup. Rubrik: nyatakan masing-masing himpunan titik secara lengkap,
+        uji kedua titik ujung, dan jelaskan keputusan tertutup dari komplemen
+        atau dari titik batas yang hilang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-01-hint">
+      <p>
+        Tahap 1: pisahkan titik di bagian dalam interval, kedua titik ujung,
+        dan titik di luar interval. Tahap 2: tanyakan apakah setiap lingkungan
+        memotong <m>A</m>, memotong komplemennya, atau memuat titik lain dari
+        <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-01-answer">
+      <p>
+        Titik batasnya adalah <m>\{0,\frac12\}</m>, titik limitnya adalah
+        <m>[0,\frac12]</m>, tidak ada titik terasing, dan <m>A</m> tidak
+        tertutup di <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-01-solution">
+      <p>
+        Setiap lingkungan dari <m>0</m> dan <m>\frac12</m> memuat titik
+        <m>A</m> sekaligus titik <m>\R\setminus A</m>, jadi tepat kedua titik
+        itu merupakan titik batas. Titik dalam <m>(0,\frac12)</m> mempunyai
+        bola yang seluruhnya di <m>A</m>, sedangkan titik di luar
+        <m>[0,\frac12]</m> mempunyai bola yang tidak memotong <m>A</m>.
+        Setiap lingkungan dari titik <m>[0,\frac12]</m> memuat titik lain
+        dari <m>A</m>, sehingga himpunan titik limitnya
+        <m>[0,\frac12]</m>; akibatnya tidak ada titik terasing. Titik limit
+        <m>\frac12</m> tidak termasuk <m>A</m>, dan komplemen <m>A</m> tidak
+        terbuka di titik itu. Maka <m>A</m> tidak tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-02">
+    <title>Ketertutupan relatif dalam subruang</title>
+    <statement>
+      <p>
+        Ambil <m>X=(0,1]</m> dengan metrik Euklides terinduksi dan
+        <m>A=(0,\frac12]</m>. Tentukan titik batas, titik limit, dan titik
+        terasing <m>A</m> relatif terhadap <m>X</m>, lalu tentukan apakah
+        <m>A</m> tertutup di <m>X</m>. Rubrik: jangan memasukkan titik yang
+        bukan unsur ruang sekitar <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-02-hint">
+      <p>
+        Tahap 1: titik <m>0</m> bukan titik di <m>X</m>. Tahap 2: periksa sisi
+        mana dari <m>\frac12</m> yang berada dalam <m>A</m>, lalu tuliskan
+        <m>X\setminus A</m> dan uji keterbukaannya di <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-02-answer">
+      <p>
+        Relatif terhadap <m>X</m>, titik batasnya hanya <m>\frac12</m>, titik
+        limitnya <m>(0,\frac12]</m>, tidak ada titik terasing, dan <m>A</m>
+        tertutup di <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-02-solution">
+      <p>
+        Setiap lingkungan relatif dari <m>\frac12</m> memuat titik di bawahnya
+        yang termasuk <m>A</m> dan titik di atasnya yang termasuk
+        <m>X\setminus A</m>, jadi itulah satu-satunya titik batas.
+        Titik-titik <m>(0,\frac12)</m> interior relatif <m>A</m>, sedangkan
+        titik-titik <m>(\frac12,1]</m> interior relatif komplemennya. Setiap
+        titik <m>A</m> didekati titik lain dari <m>A</m>, sehingga titik
+        limitnya <m>A</m> sendiri dan tidak ada titik terasing. Karena
+        <m>X\setminus A=(\frac12,1]</m> terbuka relatif, <m>A</m> tertutup
+        di <m>X</m>. Titik <m>0</m> tidak didaftarkan karena
+        <m>0\notin X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-03">
+    <title>Subhimpunan dalam ruang diskret hingga</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,e\}</m> bermetrik diskret dan
+        <m>A=\{a,b\}</m>. Tentukan semua titik batas, titik limit, dan titik
+        terasing <m>A</m>, lalu putuskan apakah <m>A</m> tertutup. Rubrik:
+        gunakan satu radius kurang dari <m>1</m> untuk menganalisis setiap
+        titik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-03-hint">
+      <p>
+        Tahap 1: untuk <m>0\lt r\leq1</m>, bola <m>B(x,r)</m> hanya memuat
+        <m>x</m>. Tahap 2: periksa akibat bola satu titik itu bagi definisi
+        ketiga jenis titik dan bagi keterbukaan komplemen.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-03-answer">
+      <p>
+        Himpunan titik batas dan titik limit keduanya kosong, titik
+        terasingnya adalah <m>\{a,b\}</m>, dan <m>A</m> tertutup; bahkan
+        <m>A</m> terbuka-tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-03-solution">
+      <p>
+        Untuk setiap <m>x\in X</m>, bola <m>B(x,\frac12)=\{x\}</m>. Jika
+        <m>x\in A</m>, bola ini tidak memuat titik komplemen atau titik
+        <m>A</m> selain <m>x</m>; jadi <m>x</m> bukan titik batas atau titik
+        limit, tetapi titik terasing. Jika <m>x\notin A</m>, bola yang sama
+        tidak memotong <m>A</m>, sehingga <m>x</m> juga bukan titik batas
+        atau titik limit. Jadi titik batas dan titik limit kosong, sedangkan
+        titik terasing tepat <m>a,b</m>. Setiap subhimpunan ruang diskret
+        terbuka, maka <m>X\setminus A</m> terbuka dan <m>A</m> tertutup;
+        <m>A</m> sendiri juga terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-04">
+    <title>Apakah titik limit selalu titik batas?</title>
+    <statement>
+      <p>
+        Nilai benar atau salah pernyataan “setiap titik limit merupakan titik
+        batas.” Rubrik: jika salah, berikan ruang metrik, himpunan, dan satu
+        titik tertentu, lalu periksa kedua definisi pada titik itu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-04-hint">
+      <p>
+        Tahap 1: titik interior suatu interval dapat didekati titik lain dari
+        interval. Tahap 2: lingkungan yang seluruhnya di dalam interval gagal
+        memotong komplemennya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-04-answer">
+      <p>
+        Salah. Misalnya, <m>0</m> adalah titik limit <m>A=(-1,1)</m> di
+        <m>\R</m>, tetapi bukan titik batas <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-04-solution">
+      <p>
+        Setiap lingkungan <m>N</m> dari <m>0</m> memuat suatu bola
+        <m>B(0,r)</m>, sehingga memuat titik taknol dari <m>A=(-1,1)</m>
+        jika titik itu dipilih cukup kecil. Jadi <m>0</m> titik limit
+        <m>A</m>. Namun <m>B(0,\frac12)\subseteq A</m>, sehingga bola ini
+        tidak memuat titik komplemen. Definisi titik batas gagal, dan contoh
+        tandingan ini membuktikan pernyataannya salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-05">
+    <title>Apakah titik batas selalu titik limit?</title>
+    <statement>
+      <p>
+        Nilai benar atau salah pernyataan “setiap titik batas merupakan titik
+        limit.” Rubrik: perhatikan bahwa titik batas boleh menjadi satu-satunya
+        titik himpunan di lingkungan kecilnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-05-hint">
+      <p>
+        Tahap 1: coba himpunan satu titik di garis real. Tahap 2: setiap
+        lingkungan pusat itu memuat pusat dan titik komplemen, tetapi apakah
+        harus memuat titik kedua dari himpunan?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-05-answer">
+      <p>
+        Salah. Untuk <m>A=\{0\}\subseteq\R</m>, titik <m>0</m> adalah titik
+        batas tetapi bukan titik limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-05-solution">
+      <p>
+        Setiap lingkungan <m>N</m> dari <m>0</m> memuat <m>0\in A</m> dan,
+        karena memuat bola berjari-jari positif, juga memuat titik real taknol
+        dalam <m>\R\setminus A</m>. Jadi <m>0</m> titik batas <m>A</m>.
+        Tetapi tidak ada titik <m>A</m> yang berbeda dari <m>0</m>, sehingga
+        syarat titik limit mustahil dipenuhi. Maka pernyataannya salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-06">
+    <title>Apakah titik limit selalu terasing?</title>
+    <statement>
+      <p>
+        Nilai benar atau salah pernyataan “setiap titik limit merupakan titik
+        terasing.” Rubrik: bandingkan tuntutan “setiap lingkungan memuat titik
+        lain” dengan tuntutan “ada lingkungan yang tidak memuat titik lain.”
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-06-hint">
+      <p>
+        Tahap 1: gunakan titik <m>0</m> dalam suatu interval real. Tahap 2:
+        tunjukkan bahwa setiap lingkungan memuat unsur interval selain pusat,
+        sehingga tidak mungkin mengasingkan pusat.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-06-answer">
+      <p>
+        Salah. Dalam <m>A=(-1,1)\subseteq\R</m>, titik <m>0</m> merupakan
+        titik limit tetapi bukan titik terasing.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-06-solution">
+      <p>
+        Setiap lingkungan dari <m>0</m> memuat bola <m>B(0,r)</m>. Ada
+        <m>y\neq0</m> yang cukup kecil sehingga
+        <m>y\in(-1,1)\cap B(0,r)</m>; jadi <m>0</m> titik limit. Fakta ini
+        berlaku bagi setiap lingkungan, maka tidak ada lingkungan <m>N</m>
+        dengan <m>N\cap A=\{0\}</m>. Jadi <m>0</m> tidak terasing dan klaim
+        universal itu salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-07">
+    <title>Apakah titik terasing selalu titik limit?</title>
+    <statement>
+      <p>
+        Nilai benar atau salah pernyataan “setiap titik terasing merupakan
+        titik limit.” Rubrik: sajikan contoh yang memenuhi definisi titik
+        terasing dan tunjukkan lingkungan yang menggagalkan definisi titik
+        limit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-07-hint">
+      <p>
+        Tahap 1: ambil <m>A=\{0\}</m> di garis real. Tahap 2: irisan setiap
+        lingkungan dengan <m>A</m> tidak pernah dapat memuat anggota
+        <m>A</m> selain <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-07-answer">
+      <p>
+        Salah. Titik <m>0</m> terasing dalam <m>A=\{0\}\subseteq\R</m>,
+        tetapi bukan titik limit <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-07-solution">
+      <p>
+        Bola <m>B(0,1)</m> memenuhi <m>B(0,1)\cap A=\{0\}</m>, sehingga
+        <m>0</m> titik terasing. Definisi titik limit meminta setiap
+        lingkungan memuat titik <m>A</m> yang berbeda dari <m>0</m>. Karena
+        <m>A</m> tidak mempunyai titik demikian, syarat itu gagal. Jadi contoh
+        ini menyangkal pernyataan tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-08">
+    <title>Apakah titik batas selalu terasing?</title>
+    <statement>
+      <p>
+        Nilai benar atau salah pernyataan “setiap titik batas merupakan titik
+        terasing.” Rubrik: cari titik ujung interval yang sekaligus didekati
+        oleh banyak titik interval.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-08-hint">
+      <p>
+        Tahap 1: uji <m>0</m> untuk <m>A=[0,1]</m> di <m>\R</m>. Tahap 2:
+        setiap lingkungan memuat bilangan negatif dan bilangan positif kecil;
+        tentukan akibat masing-masing bagi kedua definisi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-08-answer">
+      <p>
+        Salah. Titik <m>0</m> adalah titik batas <m>[0,1]</m>, tetapi bukan
+        titik terasing dari himpunan itu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-08-solution">
+      <p>
+        Setiap lingkungan dari <m>0</m> memuat <m>0\in A=[0,1]</m> dan
+        bilangan negatif di luar <m>A</m>, jadi <m>0</m> titik batas.
+        Lingkungan itu juga memuat bilangan positif kecil yang berbeda dari
+        <m>0</m> dan berada di <m>A</m>. Maka tidak ada lingkungan yang
+        beririsan dengan <m>A</m> tepat pada <m>\{0\}</m>; <m>0</m> bukan
+        titik terasing.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-09">
+    <title>Apakah titik terasing selalu titik batas?</title>
+    <statement>
+      <p>
+        Nilai benar atau salah pernyataan “setiap titik terasing merupakan
+        titik batas.” Rubrik: pilih ruang yang mempunyai lingkungan satu titik
+        dan periksa apakah lingkungan itu harus memotong komplemen himpunan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-09-hint">
+      <p>
+        Tahap 1: gunakan ruang diskret <m>X=\{a,b\}</m> dan
+        <m>A=\{a\}</m>. Tahap 2: periksa bola <m>B(a,\frac12)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-09-answer">
+      <p>
+        Salah. Dalam ruang diskret <m>X=\{a,b\}</m>, titik <m>a</m> terasing
+        dalam <m>A=\{a\}</m>, tetapi bukan titik batas <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-09-solution">
+      <p>
+        Pada metrik diskret, <m>B(a,\frac12)=\{a\}</m>. Irisannya dengan
+        <m>A</m> tepat <m>\{a\}</m>, maka <m>a</m> terasing. Namun bola itu
+        tidak memuat <m>b</m>, satu-satunya titik <m>X\setminus A</m>. Jadi
+        ada lingkungan <m>a</m> yang tidak memotong komplemen, sehingga
+        <m>a</m> bukan titik batas.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch10-guide-10">
+    <title>Ketertutupan himpunan kosong</title>
+    <statement>
+      <p>
+        Untuk ruang metrik sebarang <m>X</m>, tentukan apakah
+        <m>\emptyset</m> tertutup di <m>X</m> dan jelaskan. Rubrik: gunakan
+        definisi tertutup melalui komplemen dan sifat dasar himpunan terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-10-hint">
+      <p>
+        Tahap 1: hitung <m>X\setminus\emptyset</m>. Tahap 2: ingat apakah
+        seluruh ruang <m>X</m> terbuka dalam dirinya sendiri.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-10-answer">
+      <p>
+        Ya. Himpunan <m>\emptyset</m> tertutup di setiap ruang metrik
+        <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-10-solution">
+      <p>
+        Komplemen himpunan kosong di <m>X</m> adalah
+        <m>X\setminus\emptyset=X</m>. Seluruh ruang <m>X</m> terbuka: bagi
+        setiap <m>x\in X</m>, bola terbuka berpusat di <m>x</m> tetap
+        merupakan subhimpunan <m>X</m>. Karena komplemennya terbuka,
+        definisi menyatakan bahwa <m>\emptyset</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-11">
+    <title>Ketertutupan seluruh ruang</title>
+    <statement>
+      <p>
+        Untuk ruang metrik sebarang <m>X</m>, tentukan apakah <m>X</m>
+        tertutup di dirinya sendiri dan jelaskan. Rubrik: hitung komplemen
+        relatifnya dan uji keterbukaan komplemen itu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-11-hint">
+      <p>
+        Tahap 1: <m>X\setminus X</m> tidak mempunyai anggota. Tahap 2: syarat
+        keterbukaan yang dikuantifikasi atas semua anggota berlaku secara
+        hampa bagi himpunan tanpa anggota.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-11-answer">
+      <p>
+        Ya. Seluruh ruang <m>X</m> tertutup di <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-11-solution">
+      <p>
+        Komplemen <m>X</m> relatif terhadap dirinya adalah
+        <m>X\setminus X=\emptyset</m>. Himpunan kosong terbuka karena tidak
+        ada titik yang dapat melanggar syarat keterbukaan. Maka komplemen
+        <m>X</m> terbuka, sehingga <m>X</m> tertutup di <m>X</m>. Jadi
+        <m>X</m> dan <m>\emptyset</m> keduanya terbuka-tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-12">
+    <title>Gabungan interval tertutup yang membesar</title>
+    <statement>
+      <p>
+        Di <m>\R</m>, tetapkan
+        <m>A_n=[\frac1n,1-\frac1n]</m> untuk <m>n\geq2</m>. Tentukan
+        <m>\bigcup_{n\geq2}A_n</m> tanpa perlu membuktikannya. Rubrik:
+        identifikasi titik ujung yang tidak pernah tercapai dan titik di
+        antaranya yang akhirnya masuk ke salah satu interval.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-12-hint">
+      <p>
+        Tahap 1: semua <m>A_n</m> terletak di antara <m>0</m> dan <m>1</m>,
+        tanpa memuat kedua titik itu. Tahap 2: untuk <m>0\lt x\lt1</m>, pilih
+        <m>n</m> sehingga <m>1/n</m> lebih kecil daripada
+        <m>\min\{x,1-x\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-12-answer">
+      <p>
+        Gabungannya adalah <m>\bigcup_{n\geq2}A_n=(0,1)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-12-solution">
+      <p>
+        Setiap <m>A_n\subseteq(0,1)</m>. Sebaliknya, jika
+        <m>0\lt x\lt1</m>, maka <m>\min\{x,1-x\}\gt0</m>. Pilih
+        <m>n\geq2</m> cukup besar agar
+        <m>1/n\leq\min\{x,1-x\}</m>. Maka
+        <m>1/n\leq x\leq1-1/n</m>, jadi <m>x\in A_n</m>. Karena itu
+        gabungannya tepat <m>(0,1)</m>, sedangkan <m>0</m> dan <m>1</m>
+        tidak pernah termasuk.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-13">
+    <title>Apakah gabungan tersebut tertutup?</title>
+    <statement>
+      <p>
+        Putuskan apakah <m>\bigcup_{n\geq2}A_n</m> dari tugas sebelumnya
+        tertutup di <m>\R</m>. Rubrik: gunakan hasil gabungan dan jelaskan
+        kegagalan definisi tertutup pada salah satu titik ujung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-13-hint">
+      <p>
+        Tahap 1: gabungannya adalah <m>(0,1)</m>. Tahap 2: uji apakah
+        komplemen <m>(-\infty,0]\cup[1,\infty)</m> mempunyai lingkungan
+        terbuka di titik <m>0</m> atau <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-13-answer">
+      <p>
+        Tidak. Gabungan itu adalah <m>(0,1)</m>, yang tidak tertutup di
+        <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-13-solution">
+      <p>
+        Komplemen <m>(0,1)</m> ialah
+        <m>(-\infty,0]\cup[1,\infty)</m>. Setiap bola terbuka di sekitar
+        <m>0</m> memuat bilangan positif kecil yang tidak berada dalam
+        komplemen, sehingga komplemen tidak terbuka. Jadi <m>(0,1)</m> tidak
+        tertutup. Contoh ini menunjukkan bahwa gabungan tak berhingga dari
+        himpunan-himpunan tertutup <m>A_n</m> dapat gagal tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-14">
+    <title>Citra titik di luar prapeta</title>
+    <statement>
+      <p>
+        Untuk fungsi <m>f:X\to Y</m> dan <m>B\subseteq Y</m>, andaikan
+        <m>x\in X\setminus f^{-1}(B)</m>. Tentukan apa yang dapat disimpulkan
+        tentang <m>f(x)</m>. Rubrik: uraikan keanggotaan komplemen dan
+        definisi prapeta satu langkah demi satu langkah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-14-hint">
+      <p>
+        Tahap 1: hipotesis berarti <m>x\notin f^{-1}(B)</m>. Tahap 2: ubah
+        pernyataan itu menjadi pernyataan tentang apakah <m>f(x)</m> termasuk
+        <m>B</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-14-answer">
+      <p>
+        Berlaku <m>f(x)\notin B</m>, atau secara ekuivalen
+        <m>f(x)\in Y\setminus B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-14-solution">
+      <p>
+        Dari <m>x\in X\setminus f^{-1}(B)</m> diperoleh
+        <m>x\notin f^{-1}(B)</m>. Definisi prapeta menyatakan
+        <m>x\in f^{-1}(B)</m> jika dan hanya jika <m>f(x)\in B</m>. Jadi
+        <m>f(x)\notin B</m>. Karena <m>f(x)\in Y</m>, kesimpulan itu sama
+        dengan <m>f(x)\in Y\setminus B</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-15">
+    <title>Inklusi komplemen prapeta yang pertama</title>
+    <statement>
+      <p>
+        Dengan hipotesis panduan sebelumnya, simpulkan hubungan inklusi antara
+        <m>X\setminus f^{-1}(B)</m> dan <m>f^{-1}(Y\setminus B)</m>. Rubrik:
+        mulai dari anggota sebarang himpunan pertama dan tunjukkan bahwa ia
+        anggota himpunan kedua.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-15-hint">
+      <p>
+        Tahap 1: panduan 14 memberi <m>f(x)\in Y\setminus B</m>. Tahap 2:
+        terjemahkan kembali pernyataan itu menjadi keanggotaan <m>x</m> dalam
+        suatu prapeta.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-15-answer">
+      <p>
+        Diperoleh
+        <m>X\setminus f^{-1}(B)\subseteq f^{-1}(Y\setminus B)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-15-solution">
+      <p>
+        Ambil <m>x\in X\setminus f^{-1}(B)</m> sebarang. Panduan 14 memberi
+        <m>f(x)\in Y\setminus B</m>, yang menurut definisi prapeta berarti
+        <m>x\in f^{-1}(Y\setminus B)</m>. Karena berlaku bagi setiap anggota
+        ruas kiri, diperoleh
+        <m>X\setminus f^{-1}(B)\subseteq f^{-1}(Y\setminus B)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-16">
+    <title>Citra titik dalam prapeta komplemen</title>
+    <statement>
+      <p>
+        Sekarang andaikan <m>x\in f^{-1}(Y\setminus B)</m>. Tentukan apa yang
+        dapat disimpulkan tentang <m>f(x)</m>. Rubrik: gunakan definisi prapeta
+        dan uraikan arti keanggotaan dalam komplemen <m>B</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-16-hint">
+      <p>
+        Tahap 1: keanggotaan dalam prapeta memberi
+        <m>f(x)\in Y\setminus B</m>. Tahap 2: nyatakan konsekuensinya terhadap
+        keanggotaan <m>f(x)</m> dalam <m>B</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-16-answer">
+      <p>
+        Berlaku <m>f(x)\in Y\setminus B</m>, sehingga <m>f(x)\notin B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-16-solution">
+      <p>
+        Definisi prapeta langsung memberi
+        <m>f(x)\in Y\setminus B</m>. Menjadi anggota komplemen <m>B</m> di
+        <m>Y</m> berarti tidak menjadi anggota <m>B</m>; oleh karena itu
+        <m>f(x)\notin B</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-17">
+    <title>Inklusi komplemen prapeta yang kedua</title>
+    <statement>
+      <p>
+        Dengan hipotesis panduan 16, simpulkan hubungan inklusi antara
+        <m>f^{-1}(Y\setminus B)</m> dan <m>X\setminus f^{-1}(B)</m>. Rubrik:
+        mulai dari anggota sebarang himpunan pertama dan buktikan keanggotaannya
+        dalam himpunan kedua.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-17-hint">
+      <p>
+        Tahap 1: dari <m>f(x)\notin B</m>, simpulkan
+        <m>x\notin f^{-1}(B)</m>. Tahap 2: karena <m>x\in X</m>, tuliskan
+        keanggotaan itu sebagai keanggotaan dalam komplemen relatif.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-17-answer">
+      <p>
+        Diperoleh
+        <m>f^{-1}(Y\setminus B)\subseteq X\setminus f^{-1}(B)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-17-solution">
+      <p>
+        Ambil <m>x\in f^{-1}(Y\setminus B)</m>. Panduan 16 memberi
+        <m>f(x)\notin B</m>, sehingga <m>x\notin f^{-1}(B)</m>. Karena domain
+        <m>f</m> adalah <m>X</m>, juga <m>x\in X</m>; jadi
+        <m>x\in X\setminus f^{-1}(B)</m>. Keumuman <m>x</m> membuktikan
+        inklusi tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-18">
+    <title>Prapeta dan komplemen</title>
+    <statement>
+      <p>
+        Tentukan hubungan tepat antara <m>X\setminus f^{-1}(B)</m> dan
+        <m>f^{-1}(Y\setminus B)</m>. Rubrik: gabungkan kedua inklusi yang telah
+        diperoleh dan nyatakan identitas himpunannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-18-hint">
+      <p>
+        Tahap 1: panduan 15 memberi satu arah inklusi. Tahap 2: panduan 17
+        memberi arah sebaliknya; dua inklusi berlawanan menentukan kesamaan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-18-answer">
+      <p>
+        Identitasnya adalah
+        <m>X\setminus f^{-1}(B)=f^{-1}(Y\setminus B)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-18-solution">
+      <p>
+        Panduan 15 membuktikan
+        <m>X\setminus f^{-1}(B)\subseteq f^{-1}(Y\setminus B)</m>, sedangkan
+        panduan 17 membuktikan inklusi sebaliknya. Dua himpunan yang saling
+        memuat adalah sama. Jadi prapeta menghormati komplemen:
+        <m>X\setminus f^{-1}(B)=f^{-1}(Y\setminus B)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-19">
+    <title>Fungsi kontinu menarik himpunan tertutup</title>
+    <statement>
+      <p>
+        Misalkan <m>f:X\to Y</m> kontinu antara ruang metrik dan <m>C</m>
+        tertutup di <m>Y</m>. Tunjukkan, dengan identitas panduan 18, bahwa
+        <m>f^{-1}(C)</m> tertutup di <m>X</m>. Rubrik: mulai dari komplemen
+        <m>Y\setminus C</m>, gunakan karakterisasi kekontinuan melalui prapeta
+        himpunan terbuka, lalu kembali ke definisi tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-19-hint">
+      <p>
+        Tahap 1: karena <m>C</m> tertutup, <m>Y\setminus C</m> terbuka.
+        Tahap 2: kekontinuan membuat <m>f^{-1}(Y\setminus C)</m> terbuka, dan
+        panduan 18 mengidentifikasinya dengan komplemen <m>f^{-1}(C)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-19-answer">
+      <p>
+        Berlaku
+        <m>X\setminus f^{-1}(C)=f^{-1}(Y\setminus C)</m>; ruas kanan terbuka,
+        sehingga <m>f^{-1}(C)</m> tertutup di <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-19-solution">
+      <p>
+        Karena <m>C</m> tertutup, <m>Y\setminus C</m> terbuka. Kekontinuan
+        <m>f</m> menjamin <m>f^{-1}(Y\setminus C)</m> terbuka di <m>X</m>.
+        Identitas panduan 18 memberi
+        <me>
+          f^{-1}(Y\setminus C)=X\setminus f^{-1}(C).
+        </me>
+        Jadi komplemen <m>f^{-1}(C)</m> terbuka. Berdasarkan definisi,
+        <m>f^{-1}(C)</m> tertutup di <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-20">
+    <title>Prapeta tertutup memaksa kekontinuan</title>
+    <statement>
+      <p>
+        Misalkan <m>f:X\to Y</m> mempunyai sifat bahwa <m>f^{-1}(C)</m>
+        tertutup di <m>X</m> untuk setiap himpunan tertutup <m>C\subseteq Y</m>.
+        Gunakan identitas panduan 18 untuk membuktikan bahwa <m>f</m> kontinu.
+        Rubrik: mulai dari himpunan terbuka sebarang dan buktikan prapetanya
+        terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-20-hint">
+      <p>
+        Tahap 1: jika <m>O</m> terbuka, maka <m>C=Y\setminus O</m> tertutup.
+        Tahap 2: hipotesis dan panduan 18 menunjukkan bahwa
+        <m>X\setminus f^{-1}(O)</m> tertutup; ambil komplemennya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-20-answer">
+      <p>
+        Untuk setiap <m>O</m> terbuka di <m>Y</m>, himpunan
+        <m>f^{-1}(O)</m> terbuka di <m>X</m>. Karena itu <m>f</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-20-solution">
+      <p>
+        Ambil <m>O\subseteq Y</m> terbuka. Himpunan
+        <m>C=Y\setminus O</m> tertutup, sehingga <m>f^{-1}(C)</m> tertutup
+        di <m>X</m>. Identitas panduan 18 memberi
+        <me>
+          f^{-1}(C)=f^{-1}(Y\setminus O)=X\setminus f^{-1}(O).
+        </me>
+        Jadi komplemen <m>f^{-1}(O)</m> tertutup, yang berarti
+        <m>f^{-1}(O)</m> terbuka. Ini berlaku untuk setiap <m>O</m> terbuka;
+        karakterisasi prapeta himpunan terbuka membuktikan <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-21">
+    <title>Memilih titik barisan dari bola yang menyusut</title>
+    <statement>
+      <p>
+        Misalkan <m>x</m> titik limit subhimpunan <m>A</m> dari ruang metrik
+        <m>X</m>. Untuk setiap <m>n\in\Z^+</m>, jelaskan mengapa
+        <m>B(x,1/n)</m> memuat titik <m>a_n\in A</m> yang berbeda dari
+        <m>x</m>. Rubrik: periksa bahwa bola itu lingkungan dan terapkan
+        setiap bagian definisi titik limit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-21-hint">
+      <p>
+        Tahap 1: <m>1/n\gt0</m>, jadi <m>B(x,1/n)</m> lingkungan terbuka
+        dari <m>x</m>. Tahap 2: definisi titik limit berlaku untuk setiap
+        lingkungan, bukan hanya radius tertentu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-21-answer">
+      <p>
+        Definisi titik limit menjamin pilihan
+        <m>a_n\in B(x,1/n)\cap(A\setminus\{x\})</m> untuk setiap
+        <m>n\in\Z^+</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-21-solution">
+      <p>
+        Ambil <m>n\in\Z^+</m>. Karena <m>1/n\gt0</m>, bola
+        <m>B(x,1/n)</m> adalah lingkungan dari <m>x</m>. Karena <m>x</m>
+        titik limit <m>A</m>, setiap lingkungannya memuat titik <m>A</m> yang
+        berbeda dari <m>x</m>. Maka ada <m>a_n\in A</m> dengan
+        <m>a_n\neq x</m> dan <m>d(a_n,x)\lt1/n</m>. Pilihan bagi setiap
+        <m>n</m> menghasilkan barisan yang diminta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-22">
+    <title>Limit barisan dari titik-titik sekitar</title>
+    <statement>
+      <p>
+        Untuk barisan <m>(a_n)</m> yang dipilih pada panduan 21, tentukan
+        <m>\lim a_n</m> dan buktikan jawaban Anda. Rubrik: mulai dengan
+        toleransi sebarang, pilih indeks secara Archimedes, lalu kendalikan
+        semua suku pada ekor barisan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-22-hint">
+      <p>
+        Tahap 1: konstruksi memberi <m>d(a_n,x)\lt1/n</m>. Tahap 2: untuk
+        <m>\epsilon\gt0</m>, pilih <m>N\in\Z^+</m> dengan
+        <m>N\gt1/\epsilon</m> dan bandingkan <m>1/n</m> dengan
+        <m>1/N</m> ketika <m>n\geq N</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-22-answer">
+      <p>
+        Barisan tersebut konvergen ke <m>x</m>; jadi
+        <m>\lim a_n=x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-22-solution">
+      <p>
+        Ambil <m>\epsilon\gt0</m>. Menurut sifat Archimedes, pilih
+        <m>N\in\Z^+</m> dengan <m>N\gt1/\epsilon</m>. Jika <m>n\geq N</m>,
+        konstruksi panduan 21 memberi
+        <me>
+          d(a_n,x)\lt\frac1n\leq\frac1N\lt\epsilon.
+        </me>
+        Jadi seluruh ekor mulai dari <m>N</m> berada dalam
+        <m>B(x,\epsilon)</m>. Karena berlaku untuk setiap
+        <m>\epsilon\gt0</m>, definisi memberi <m>a_n\to x</m>, sehingga
+        <m>\lim a_n=x</m>. Syarat <m>a_n\neq x</m> mempertahankan makna titik
+        limit tanpa mengubah bukti konvergensi.
+      </p>
+    </solution>
+  </exercise>
+</section>

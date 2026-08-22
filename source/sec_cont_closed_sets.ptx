@@ -1,39 +1,39 @@
 <section xml:id="sec_cont_closed_sets">
-  <title>Continuity and Closed Sets</title>
+  <title>Kekontinuan dan Himpunan Tertutup</title>
   <p>
-    Recall that we showed that a function <m>f</m> from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m> is continuous if and only if
-    <m>f^{-1}(O)</m> is open for every open set <m>O</m> in <m>Y</m>.
-    We might conjecture that a similar result holds for closed sets.
-    Since closed sets are complements of open sets,
-    to make this connection we will want to know how <m>X \setminus f^{-1}(B)</m> is related to
-    <m>f^{-1}(Y \setminus B)</m> for <m>B \subset Y</m>.
+    Ingatlah bahwa kita telah menunjukkan bahwa suatu fungsi <m>f</m> dari ruang metrik <m>(X,d_X)</m> ke ruang metrik <m>(Y,d_Y)</m> bersifat kontinu jika dan hanya jika
+    <m>f^{-1}(O)</m> terbuka untuk setiap himpunan terbuka <m>O</m> di <m>Y</m>.
+    Kita mungkin menduga bahwa hasil serupa berlaku untuk himpunan tertutup.
+    Karena himpunan tertutup merupakan komplemen dari himpunan terbuka,
+    untuk membuat hubungan ini kita perlu mengetahui hubungan antara <m>X \setminus f^{-1}(B)</m> dan
+    <m>f^{-1}(Y \setminus B)</m> untuk <m>B \subset Y</m>.
   </p>
 
   <activity xml:id="act_CS_1">
   <introduction>
     <p>
-      Let <m>f</m> be a function <m>f</m> from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m>,
-      and let <m>B</m> be a subset of <m>Y</m>.
+      Misalkan <m>f</m> diberikan sebagai fungsi. Fungsi <m>f</m> tersebut memetakan ruang metrik <m>(X,d_X)</m> ke ruang metrik <m>(Y,d_Y)</m>,
+      dan misalkan <m>B</m> suatu subhimpunan dari <m>Y</m>.
     </p>
   </introduction>
       <task>
         <introduction>
           <p>
-            Let <m>x \in X \setminus f^{-1}(B)</m>.
+            Misalkan <m>x \in X \setminus f^{-1}(B)</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  What does this tell us about <m>f(x)</m>?
+                  Apa yang dapat kita simpulkan tentang <m>f(x)</m> dari hal ini?
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  What can we conclude about the relationship between
-                  <m>X \setminus f^{-1}(B)</m> and <m>f^{-1}(Y \setminus B)</m>?
+                  Apa yang dapat kita simpulkan tentang hubungan antara
+                  <m>X \setminus f^{-1}(B)</m> dan <m>f^{-1}(Y \setminus B)</m>?
                 </p>
               </statement>
             </task>
@@ -42,21 +42,21 @@
       <task>
         <introduction>
           <p>
-            Let <m>x \in f^{-1}(Y \setminus B)</m>.
+            Misalkan <m>x \in f^{-1}(Y \setminus B)</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  What does this tell us about <m>f(x)</m>?
+                  Apa yang dapat kita simpulkan tentang <m>f(x)</m> dari hal ini?
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  What can we conclude about the relationship between
-                  <m>X \setminus f^{-1}(B)</m> and <m>f^{-1}(Y \setminus B)</m>?
+                  Apa yang dapat kita simpulkan tentang hubungan antara
+                  <m>X \setminus f^{-1}(B)</m> dan <m>f^{-1}(Y \setminus B)</m>?
                 </p>
               </statement>
             </task>
@@ -64,8 +64,8 @@
       <task>
         <statement>
           <p>
-            What is the relationship between
-            <m>X \setminus f^{-1}(B)</m> and <m>f^{-1}(Y \setminus B)</m>?
+            Apa hubungan antara
+            <m>X \setminus f^{-1}(B)</m> dan <m>f^{-1}(Y \setminus B)</m>?
           </p>
         </statement>
       </task>
@@ -73,30 +73,30 @@
   </activity>
 
   <p>
-    Now we can consider the issue of continuity and closed sets.
+    Sekarang kita dapat menelaah kekontinuan dan himpunan tertutup.
   </p>
 
   <activity xml:id="act_CS_2">
     <introduction>
     <p>
-      Let <m>f</m> be a function from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m>.
+      Misalkan <m>f</m> suatu fungsi dari ruang metrik <m>(X,d_X)</m> ke ruang metrik <m>(Y,d_Y)</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Assume that <m>f</m> is continuous and that <m>C</m> is a closed set in <m>Y</m>.
-            How does the result of <xref ref="act_CS_1"/>
-            tell us that <m>f^{-1}(C)</m> is closed in <m>X</m>?
+            Andaikan <m>f</m> kontinu dan <m>C</m> merupakan himpunan tertutup di <m>Y</m>.
+            Bagaimana hasil <xref ref="act_CS_1"/>
+            menunjukkan bahwa <m>f^{-1}(C)</m> tertutup di <m>X</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Now assume that <m>f^{-1}(C)</m> is closed in <m>X</m> whenever <m>C</m> is closed in <m>Y</m>.
-            How does the result of <xref ref="act_CS_1"/>
-            tell us that <m>f</m> is a continuous function?
+            Sekarang andaikan <m>f^{-1}(C)</m> tertutup di <m>X</m> untuk setiap <m>C</m> yang tertutup di <m>Y</m>.
+            Bagaimana hasil <xref ref="act_CS_1"/>
+            menunjukkan bahwa <m>f</m> merupakan fungsi kontinu?
           </p>
         </statement>
       </task>
@@ -104,16 +104,16 @@
   </activity>
 
   <p>
-    The result of <xref ref="act_CS_2"/>
-    is summarized in the following theorem.
+    Hasil <xref ref="act_CS_2"/>
+    dirangkum dalam teorema berikut.
   </p>
   
   <theorem xml:id="thm_closed_sets_continuity_MS">
     <statement>
       <p>
-        Let <m>f</m> be a function from a metric space <m>(X,d_X)</m> to a metric space <m>(Y,d_Y)</m>.
-        Then <m>f</m> is continuous if and only if
-        <m>f^{-1}(C)</m> is closed in <m>X</m> whenever <m>C</m> is a closed set in <m>Y</m>.
+        Misalkan <m>f</m> suatu fungsi dari ruang metrik <m>(X,d_X)</m> ke ruang metrik <m>(Y,d_Y)</m>.
+        Maka <m>f</m> kontinu jika dan hanya jika
+        <m>f^{-1}(C)</m> tertutup di <m>X</m> untuk setiap himpunan tertutup <m>C</m> di <m>Y</m>.
       </p>
     </statement>
   </theorem>

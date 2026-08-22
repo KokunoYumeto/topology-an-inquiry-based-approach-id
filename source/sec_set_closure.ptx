@@ -1,21 +1,21 @@
 <section xml:id="sec_set_closure">
-  <title>The Closure of a Set</title>
+  <title>Tutupan Suatu Himpunan</title>
   <p>
-    We have seen that the interior of a set is the largest open subset of that set.
-    There is a similar result for closed sets.
-    For example, let <m>A = (0,1)</m> in <m>(\R, d_E)</m>.
-    The set <m>A</m> is an open set,
-    but if we union <m>A</m> with its limit points,
-    we obtain the closed set <m>C = [0,1]</m>.
-    Moreover, The set <m>[0,1]</m> is the smallest closed set that contains <m>A</m>.
-    This leads to the idea of the <term>closure</term> of a set.
+    Kita telah melihat bahwa interior suatu himpunan adalah subhimpunan terbuka terbesar dari himpunan tersebut.
+    Ada hasil serupa untuk himpunan tertutup.
+    Sebagai contoh, misalkan <m>A = (0,1)</m> di <m>(\R, d_E)</m>.
+    Himpunan <m>A</m> adalah himpunan terbuka,
+    tetapi jika kita menggabungkan <m>A</m> dengan titik-titik limitnya,
+    kita memperoleh himpunan tertutup <m>C = [0,1]</m>.
+    Selain itu, himpunan <m>[0,1]</m> adalah himpunan tertutup terkecil yang memuat <m>A</m>.
+    Hal ini mengarah pada gagasan tentang <term>tutupan</term> suatu himpunan.
   </p>
 
   <definition>
-  <idx><h>closure of a set in a metric space</h></idx>
+  <idx><h>tutupan suatu himpunan di ruang metrik</h></idx>
     <statement>
       <p>
-        The <term>closure</term> of a subset <m>A</m> of a metric space <m>X</m> is the set
+        <term>Tutupan</term> suatu subhimpunan <m>A</m> pada ruang metrik <m>X</m> adalah himpunan
         <me>
           \overline{A} = A \cup A'
         </me>.
@@ -24,51 +24,51 @@
   </definition>
 
   <p>
-    In other words,
-    the closure of a set is the collection of the elements of the set and the limit points of the set <mdash/> those points that are on the
-    <q>edge</q>
-    of the set.
-    The importance of the closure of a set <m>A</m> is that the closure of <m>A</m> is the smallest closed set that contains <m>A</m>.
+    Dengan kata lain,
+    tutupan suatu himpunan adalah kumpulan anggota himpunan tersebut dan titik-titik limit himpunan tersebut <mdash/> yaitu titik-titik yang berada di
+    <q>tepi</q>
+    himpunan tersebut.
+    Arti penting tutupan suatu himpunan <m>A</m> adalah bahwa tutupan <m>A</m> merupakan himpunan tertutup terkecil yang memuat <m>A</m>.
   </p>
 
   <theorem xml:id="thm_closure_closed">
     <statement>
       <p>
-        Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
-        The closure of <m>A</m> is a closed set.
-        Moreover, the closure of <m>A</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>.
+        Misalkan <m>X</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+        Tutupan <m>A</m> adalah himpunan tertutup.
+        Selain itu, tutupan <m>A</m> adalah subhimpunan tertutup terkecil dari <m>X</m> yang memuat <m>A</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
-      To prove that <m>\overline{A}</m> is a closed set,
-      we will prove that <m>\overline{A}</m> contains its limit points.
-      Let <m>x \in \overline{A}'</m>.
-      To show that <m>x \in \overline{A}</m>,
-      we proceed by contradiction and assume that <m>x \notin \overline{A}</m>.
-      This implies that <m>x \notin A</m> and <m>x \notin A'</m>.
-      Since <m>x \notin A'</m>,
-      there exists a neighborhood <m>N</m> of <m>x</m> that contains no points of <m>A</m> other than <m>x</m>.
-      But <m>A \subseteq \overline{A}</m> and <m>x \notin \overline{A}</m>,
-      so it follows that <m>N \cap A = \emptyset</m>.
-      This implies that there is an open ball
-      <m>B \subseteq N</m> centered at <m>x</m> so that <m>B \cap A = \emptyset</m>.
-      The fact that <m>x \in \overline{A}'</m> means that
-      <m>B \cap \overline{A}</m> contains a point <m>y</m> in
-      <m>\overline{A}</m> different from <m>x</m>.
-      Since <m>B \cap A = \emptyset</m>,
-      we must have <m>y \in A'</m>.
-      But this, and the fact that <m>B</m> is a neighborhood of <m>y</m>,
-      means that <m>B</m> must contain a point of <m>A</m> different than <m>y</m>.
-      But <m>B \cap A = \emptyset</m>,
-      so we have reached a contradiction.
-      We conclude that <m>x \in \overline{A}</m> and <m>\overline{A}' \subseteq \overline{A}</m>.
-      This shows that <m>\overline{A}</m> is a closed set.
+      Misalkan <m>X</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+      Untuk membuktikan bahwa <m>\overline{A}</m> adalah himpunan tertutup,
+      kita akan membuktikan bahwa <m>\overline{A}</m> memuat titik-titik limitnya.
+      Misalkan <m>x \in \overline{A}'</m>.
+      Untuk menunjukkan bahwa <m>x \in \overline{A}</m>,
+      kita gunakan pembuktian dengan kontradiksi dan andaikan bahwa <m>x \notin \overline{A}</m>.
+      Hal ini menyiratkan bahwa <m>x \notin A</m> dan <m>x \notin A'</m>.
+      Karena <m>x \notin A'</m>,
+      terdapat lingkungan <m>N</m> dari <m>x</m> yang tidak memuat titik-titik <m>A</m> selain <m>x</m>.
+      Akan tetapi, <m>A \subseteq \overline{A}</m> dan <m>x \notin \overline{A}</m>,
+      sehingga <m>N \cap A = \emptyset</m>.
+      Hal ini menyiratkan bahwa terdapat bola terbuka
+      <m>B \subseteq N</m> yang berpusat di <m>x</m> sedemikian sehingga <m>B \cap A = \emptyset</m>.
+      Fakta bahwa <m>x \in \overline{A}'</m> berarti bahwa
+      <m>B \cap \overline{A}</m> memuat suatu titik <m>y</m> di
+      <m>\overline{A}</m> yang berbeda dari <m>x</m>.
+      Karena <m>B \cap A = \emptyset</m>,
+      pastilah <m>y \in A'</m>.
+      Namun, hal ini, bersama dengan fakta bahwa <m>B</m> merupakan lingkungan dari <m>y</m>,
+      berarti bahwa <m>B</m> harus memuat titik dari <m>A</m> yang berbeda dari <m>y</m>.
+      Akan tetapi, <m>B \cap A = \emptyset</m>,
+      sehingga kita memperoleh kontradiksi.
+      Kita simpulkan bahwa <m>x \in \overline{A}</m> dan <m>\overline{A}' \subseteq \overline{A}</m>.
+      Hal ini menunjukkan bahwa <m>\overline{A}</m> adalah himpunan tertutup.
     </p>
     <p>
-      The proof that <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m> is left for the next activity.
+      Pembuktian bahwa <m>\overline{A}</m> adalah subhimpunan tertutup terkecil dari <m>X</m> yang memuat <m>A</m> diserahkan kepada kegiatan berikutnya.
     </p>
   </proof>
   </theorem>
@@ -76,38 +76,38 @@
   <activity>
   <introduction>
     <p>
-      Let <m>(X,d)</m> be a metric space,
-      and let <m>A</m> be a subset of <m>X</m>.
+      Misalkan <m>(X,d)</m> suatu ruang metrik,
+      dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m>.
     </p>
   </introduction>
       <task>
         <statement>
           <p>
-            What will we have to show to prove that
-            <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>?
+            Apa yang harus kita tunjukkan untuk membuktikan bahwa
+            <m>\overline{A}</m> adalah subhimpunan tertutup terkecil dari <m>X</m> yang memuat <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Suppose that <m>C</m> is a closed subset of <m>X</m> that contains <m>A</m>.
-            To show that <m>\overline{A} \subseteq C</m>,
-            why is it enough to demonstrate that <m>A' \subseteq C</m>?
+            Andaikan <m>C</m> suatu subhimpunan tertutup dari <m>X</m> yang memuat <m>A</m>.
+            Untuk menunjukkan bahwa <m>\overline{A} \subseteq C</m>,
+            mengapa cukup untuk menunjukkan bahwa <m>A' \subseteq C</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If <m>x \in A'</m>, what can we say about <m>x</m>?
+            Jika <m>x \in A'</m>, apa yang dapat kita katakan tentang <m>x</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Complete the proof that <m>\overline{A} \subseteq C</m>.
+            Lengkapilah pembuktian bahwa <m>\overline{A} \subseteq C</m>.
           </p>
         </statement>
       </task>
@@ -115,25 +115,25 @@
   </activity>
 
   <p>
-    One consequence of <xref ref="thm_closure_closed"/> is the following.
+    Salah satu konsekuensi dari <xref ref="thm_closure_closed"/> adalah sebagai berikut.
   </p>
 
   <corollary>
     <statement>
       <p>
-        A subset <m>C</m> of a metric space <m>X</m> is closed if and only if <m>C = \overline{C}</m>.
+        Suatu subhimpunan <m>C</m> dari ruang metrik <m>X</m> tertutup jika dan hanya jika <m>C = \overline{C}</m>.
       </p>
     </statement>
   </corollary>
 
   <p>
-    We can also characterize closed sets as sets that contain their boundaries.
+    Kita juga dapat mencirikan himpunan tertutup sebagai himpunan yang memuat batasnya.
   </p>
 
   <definition>
     <statement>
       <p>
-        The <term>boundary</term> <m>\Bdry(A)</m> of a subset <m>A</m> of a metric space <m>X</m> is the set of all boundary points of <m>A</m>.
+        <term>Batas</term> <m>\Bdry(A)</m> dari suatu subhimpunan <m>A</m> pada ruang metrik <m>X</m> adalah himpunan semua titik batas dari <m>A</m>.
       </p>
     </statement>
   </definition>
@@ -141,34 +141,34 @@
   <theorem xml:id="thm_Closed_boundary">
     <statement>
       <p>
-        A subset <m>C</m> of a metric space <m>X</m> is closed if and only if <m>C</m> contains its boundary.
+        Suatu subhimpunan <m>C</m> dari ruang metrik <m>X</m> tertutup jika dan hanya jika <m>C</m> memuat batasnya.
       </p>
     </statement>
   </theorem>
 
   <p>
-    The proof of <xref ref="thm_Closed_boundary"/>
-    is left to <xref ref="ex_closed_bounded"/>.
+    Pembuktian <xref ref="thm_Closed_boundary"/>
+    diserahkan kepada <xref ref="ex_closed_bounded"/>.
   </p>
   <p>
-    Recall that a boundary point of a subset <m>A</m> of a metric space <m>X</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
-    The boundary points are those that are somehow
-    <q>between</q>
-    a set and its complement.
-    For example if <m>A = (0,1]</m> in <m>\R</m>,
-    the boundary of <m>A</m> is the set <m>\{0,1\}</m>.
-    We also have that <m>\overline{A} = [0,1]</m>,
+    Ingat bahwa titik batas dari suatu subhimpunan <m>A</m> pada ruang metrik <m>X</m> adalah titik <m>x \in X</m> sedemikian sehingga setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> dan suatu titik di <m>X \setminus A</m>.
+    Titik-titik batas adalah titik-titik yang, dalam arti tertentu, berada
+    <q>di antara</q>
+    suatu himpunan dan komplemennya.
+    Sebagai contoh, jika <m>A = (0,1]</m> di <m>\R</m>,
+    batas <m>A</m> adalah himpunan <m>\{0,1\}</m>.
+    Kita juga memperoleh bahwa <m>\overline{A} = [0,1]</m>,
     <m>\R \setminus A = (-\infty, 0] \cup (1, \infty)</m>,
-    and <m>\overline{\R \setminus A} = (-\infty, 0] \cup [1, \infty)</m>.
-    Notice that <m>\Bdry(A) = \overline{A} \cap \overline{\R \setminus A}</m>.
-    That this is always true is formalized in the next theorem.
+    dan <m>\overline{\R \setminus A} = (-\infty, 0] \cup [1, \infty)</m>.
+    Perhatikan bahwa <m>\Bdry(A) = \overline{A} \cap \overline{\R \setminus A}</m>.
+    Pernyataan ini selalu benar, sebagaimana dirumuskan secara formal dalam teorema berikut.
   </p>
 
   <theorem xml:id="thm_Bd_between">
     <statement>
       <p>
-        Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
-        Then
+        Misalkan <m>X</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+        Maka
         <me>
           \Bdry(A) = \overline{A} \cap \overline{X \setminus A}
         </me>.
@@ -177,39 +177,39 @@
   
   <proof>
     <p>
-      Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
-      To prove <m>\Bdry(A) = \overline{A} \cap \overline{X \setminus A}</m> we need to verify the containment in each direction.
-      Let <m>x \in \Bdry(A)</m> and let <m>N</m> be a neighborhood of <m>x</m>.
-      Then <m>N</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
-      We consider the cases of <m>x \in A</m> or <m>x \notin A</m>.
+      Misalkan <m>X</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+      Untuk membuktikan <m>\Bdry(A) = \overline{A} \cap \overline{X \setminus A}</m>, kita perlu memverifikasi inklusi pada kedua arah.
+      Misalkan <m>x \in \Bdry(A)</m> dan <m>N</m> suatu lingkungan dari <m>x</m>.
+      Maka <m>N</m> memuat suatu titik di <m>A</m> dan suatu titik di <m>X \setminus A</m>.
+      Kita meninjau kasus <m>x \in A</m> dan kasus <m>x \notin A</m>.
       <ul>
         <li>
           <p>
-            Suppose <m>x \in A</m>.
-            Then <m>x \in \overline{A}</m>.
-            Also, <m>x \notin X \setminus A</m>,
-            so <m>N</m> must contain a point in
-            <m>X \setminus A</m> different from <m>x</m>.
-            That makes <m>x</m> a limit point of
-            <m>X \setminus A</m> and so <m>X \in \overline{A} \cap \overline{X \setminus A}</m>.
+            Andaikan <m>x \in A</m>.
+            Maka <m>x \in \overline{A}</m>.
+            Selain itu, <m>x \notin X \setminus A</m>,
+            sehingga <m>N</m> harus memuat suatu titik di
+            <m>X \setminus A</m> yang berbeda dari <m>x</m>.
+            Hal ini menjadikan <m>x</m> titik limit dari
+            <m>X \setminus A</m>, sehingga <m>x \in \overline{A} \cap \overline{X \setminus A}</m>.
           </p>
         </li>
         <li>
           <p>
-            Suppose <m>x \notin A</m>.
-            Then <m>x \in X \setminus A \subseteq \overline{X \setminus A}</m>.
-            Also, <m>x \notin A</m>,
-            so <m>N</m> must contain a point in <m>A</m> different from <m>x</m>.
-            That makes <m>x</m> a limit point of <m>A</m> and so <m>X \in \overline{A} \cap \overline{X \setminus A}</m>.
+            Andaikan <m>x \notin A</m>.
+            Maka <m>x \in X \setminus A \subseteq \overline{X \setminus A}</m>.
+            Selain itu, <m>x \notin A</m>,
+            sehingga <m>N</m> harus memuat suatu titik di <m>A</m> yang berbeda dari <m>x</m>.
+            Hal ini menjadikan <m>x</m> titik limit dari <m>A</m>, sehingga <m>x \in \overline{A} \cap \overline{X \setminus A}</m>.
           </p>
         </li>
       </ul>
     </p>
     <p>
-      In either case we have <m>x \in \overline{A} \cap \overline{X \setminus A}</m> and so <m>\Bdry(A) \subseteq \overline{A} \cap \overline{X \setminus A}</m>.
+      Dalam kedua kasus tersebut, kita memperoleh <m>x \in \overline{A} \cap \overline{X \setminus A}</m>, sehingga <m>\Bdry(A) \subseteq \overline{A} \cap \overline{X \setminus A}</m>.
     </p>
     <p>
-      For the reverse implication, refer to the next activity.
+      Untuk implikasi sebaliknya, lihat kegiatan berikutnya.
     </p>
   </proof>
   </theorem>
@@ -217,54 +217,54 @@
   <activity>
     <introduction>
     <p>
-      Let <m>X</m> be a metric space and <m>A</m> a subset of <m>X</m>.
-      In this activity we prove that
+      Misalkan <m>X</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+      Dalam kegiatan ini, kita membuktikan bahwa
       <me>
         \overline{A} \cap \overline{X \setminus A} \subseteq \Bdry(A)
       </me>.
     </p>
     <p>
-      Let <m>x \in \overline{A} \cap \overline{X \setminus A}</m>.
+      Misalkan <m>x \in \overline{A} \cap \overline{X \setminus A}</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What must be true about <m>x</m>,
-            given that <m>x</m> is in the intersection of two sets?
+            Apa yang harus berlaku bagi <m>x</m>,
+            mengingat <m>x</m> berada dalam irisan dua himpunan?
           </p>
         </statement>
       </task>
       <task>
         <introduction>
           <p>
-            Let <m>N</m> be a neighborhood of <m>x</m>.
-            As we did in the proof of <xref ref="thm_Bd_between"/>,
-            we consider the cases <m>x \in A</m> and <m>x \notin A</m>.
+            Misalkan <m>N</m> suatu lingkungan dari <m>x</m>.
+            Seperti yang kita lakukan dalam pembuktian <xref ref="thm_Bd_between"/>,
+            kita meninjau kasus <m>x \in A</m> dan <m>x \notin A</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Suppose <m>x \in A</m>.
-                  Why must <m>N</m> contain a point in <m>A</m> and a point not in <m>A</m>?
-                  What does this tell us about <m>x</m>?
+                  Andaikan <m>x \in A</m>.
+                  Mengapa <m>N</m> harus memuat suatu titik di <m>A</m> dan suatu titik yang tidak berada di <m>A</m>?
+                  Apa yang dapat kita simpulkan tentang <m>x</m>?
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Suppose <m>x \notin A</m>.
-                  Why must <m>N</m> contain a point in <m>A</m> and a point not in <m>A</m>?
-                  What does this tell us about <m>x</m>?
+                  Andaikan <m>x \notin A</m>.
+                  Mengapa <m>N</m> harus memuat suatu titik di <m>A</m> dan suatu titik yang tidak berada di <m>A</m>?
+                  Apa yang dapat kita simpulkan tentang <m>x</m>?
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  What can we conclude from parts (i) and (ii)?
+                  Apa yang dapat kita simpulkan dari bagian (i) dan (ii)?
                 </p>
               </statement>
             </task>

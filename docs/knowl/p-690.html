@@ -13,18 +13,17 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Akibatnya,</div>
+<div class="para">Misalkan <span class="process-math">\(\delta\)</span> suatu bilangan positif yang lebih kecil daripada <span class="process-math">\(\min\left\{1, \frac{\epsilon}{1+2|a|}\right\}\text{.}\)</span> Maka</div>
 <div class="displaymath process-math">
-\begin{align*}
-d_E(f(x),f(a)) \amp = \sqrt{(f(x)-f(a))^2}\\
-\amp = |f(x)-f(a)|\\
-\amp = |x^2-a^2|\\
-\amp = |(x-a)(x+a)|\\
-\amp = |x-a| \ |x+a|\\
-\amp \lt  \delta (1+2|a|)\\
-\amp \lt   \left(\frac{\epsilon}{1+2|a|}\right) (1+2|a|)\\
-\amp = \epsilon\text{.}
-\end{align*}
+\begin{equation*}
+d_X(x,a) = \min\{|x-a|,1\} \lt  \delta
+\end{equation*}
+</div>
+<div class="para">mengakibatkan <span class="process-math">\(d_X(x,a) \lt  \delta \lt  1\text{,}\)</span> sehingga <span class="process-math">\(d_X(x,a) = |x-a| \lt  \delta \lt  1\text{.}\)</span> Selanjutnya,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|x+a| = |(x-a) + 2a| \leq |x-a| + 2|a| \lt  1+2|a|\text{.}
+\end{equation*}
 </div>
 </div>
 <span class="incontext"><a href="sec_cont_func_btwn.html#p-690" class="internal">in-context</a></span>

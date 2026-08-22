@@ -1,0 +1,837 @@
+<section xml:id="o003-c90-ch10-source-guides-b" xml:lang="id-ID">
+  <title>Panduan konsep dan tugas sumber, bagian kedua</title>
+
+  <p>
+    Dua puluh satu panduan berikut melanjutkan urutan tugas sumber Bab 10:
+    dua pembuktian tentang titik terasing, empat langkah karakterisasi himpunan
+    tertutup melalui titik limit, delapan langkah tentang tutupan dan batas,
+    serta tujuh tugas tentang limit barisan dalam himpunan tertutup. Kerjakan
+    dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara
+    bertahap. Setiap pernyataan di bawah memparafrasakan sasaran sumber dan
+    menyertakan rubrik keberhasilan. Teks panduan asli ini merupakan komponen
+    terpisah yang tersedia di bawah Creative Commons Attribution 4.0
+    International (CC BY 4.0).
+  </p>
+  <exercise xml:id="o003-c90-ch10-guide-23">
+    <title>Dari titik terasing ke ekor konstan</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> subhimpunan ruang metrik <m>(X,d)</m> dan
+        <m>a</m> titik terasing dari <m>A</m>. Buktikan bahwa setiap barisan
+        <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>a</m> pada akhirnya
+        sama dengan barisan konstan <m>(a)</m>. Rubrik: gunakan satu lingkungan
+        yang mengasingkan <m>a</m>, terapkan definisi konvergensi pada radiusnya,
+        dan tunjukkan bahwa seluruh ekor barisan sama dengan <m>a</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-23-hint">
+      <p>
+        Tahap 1: pilih <m>r\gt0</m> sehingga
+        <m>B(a,r)\cap A=\{a\}</m>. Tahap 2: karena <m>a_n\to a</m>, cari
+        <m>N</m> yang membuat <m>d(a_n,a)\lt r</m> untuk setiap
+        <m>n\geq N</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-23-answer">
+      <p>
+        Untuk suatu <m>r\gt0</m>, satu-satunya anggota <m>A</m> di
+        <m>B(a,r)</m> ialah <m>a</m>. Konvergensi menempatkan seluruh ekor
+        <m>(a_n)</m> di bola itu, sehingga <m>a_n=a</m> pada akhirnya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-23-solution">
+      <p>
+        Karena <m>a</m> titik terasing dari <m>A</m>, terdapat
+        <m>r\gt0</m> dengan <m>B(a,r)\cap A=\{a\}</m>. Konvergensi
+        <m>a_n\to a</m>, diterapkan pada toleransi <m>r</m>, memberi
+        <m>N\in\Z^+</m> sehingga <m>d(a_n,a)\lt r</m> apabila
+        <m>n\geq N</m>. Untuk indeks tersebut, <m>a_n\in B(a,r)</m>; karena
+        barisan berada di <m>A</m>, juga <m>a_n\in A</m>. Jadi
+        <m>a_n\in B(a,r)\cap A=\{a\}</m>, dan akibatnya <m>a_n=a</m> untuk
+        setiap <m>n\geq N</m>. Inilah arti bahwa barisan pada akhirnya sama
+        dengan barisan konstan <m>(a)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-24">
+    <title>Dari ekor konstan ke titik terasing</title>
+    <statement>
+      <p>
+        Misalkan <m>a\in A</m> dan setiap barisan di <m>A</m> yang konvergen
+        ke <m>a</m> pada akhirnya sama dengan barisan konstan <m>(a)</m>.
+        Buktikan bahwa <m>a</m> merupakan titik terasing dari <m>A</m>.
+        Rubrik: sangkal keterasingan, bangun satu titik berbeda dari <m>a</m>
+        di setiap bola berjari-jari <m>1/n</m>, lalu peroleh barisan penyangkal.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-24-hint">
+      <p>
+        Tahap 1: jika <m>a</m> tidak terasing, untuk setiap <m>n</m> pilih
+        <m>a_n\in (B(a,1/n)\cap A)\setminus\{a\}</m>. Tahap 2: buktikan
+        <m>a_n\to a</m>, kemudian bandingkan dengan hipotesis tentang ekor
+        konstan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-24-answer">
+      <p>
+        Jika <m>a</m> tidak terasing, ada barisan <m>(a_n)</m> di
+        <m>A\setminus\{a\}</m> dengan <m>d(a_n,a)\lt1/n</m>. Barisan ini
+        menuju <m>a</m> tetapi tidak pernah sama dengan <m>a</m>, bertentangan
+        dengan hipotesis. Jadi <m>a</m> terasing.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-24-solution">
+      <p>
+        Andaikan, demi kontradiksi, bahwa <m>a</m> bukan titik terasing dari
+        <m>A</m>. Maka tidak ada bola berpusat di <m>a</m> yang irisannya
+        dengan <m>A</m> hanya <m>\{a\}</m>. Jadi, untuk setiap
+        <m>n\in\Z^+</m>, kita dapat memilih
+        <m>a_n\in (B(a,1/n)\cap A)\setminus\{a\}</m>. Dengan demikian
+        <m>d(a_n,a)\lt1/n</m> dan <m>a_n\neq a</m> untuk semua <m>n</m>.
+      </p>
+      <p>
+        Untuk <m>\epsilon\gt0</m>, pilih <m>N\gt1/\epsilon</m>. Jika
+        <m>n\geq N</m>, maka
+        <m>d(a_n,a)\lt1/n\leq1/N\lt\epsilon</m>; jadi <m>a_n\to a</m>.
+        Hipotesis sekarang mengharuskan <m>a_n=a</m> untuk semua indeks yang
+        cukup besar, padahal konstruksi memastikan <m>a_n\neq a</m> untuk
+        setiap indeks. Kontradiksi tersebut membuktikan bahwa <m>a</m> titik
+        terasing dari <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-25">
+    <title>Sasaran untuk membuktikan ketertutupan</title>
+    <statement>
+      <p>
+        Andaikan <m>C'\subseteq C</m>. Pada langkah pertama pembuktian bahwa
+        <m>C</m> tertutup, nyatakan apa yang cukup ditunjukkan menurut definisi
+        himpunan tertutup. Rubrik: identifikasi komplemen <m>C</m> di dalam
+        <m>X</m> dan sifat topologis yang harus dimilikinya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-25-hint">
+      <p>
+        Tahap 1: ingat kesetaraan antara ketertutupan suatu himpunan dan
+        keterbukaan komplemennya. Tahap 2: terjemahkan keterbukaan ke syarat
+        bola di setiap titik komplemen.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-25-answer">
+      <p>
+        Cukup dibuktikan bahwa <m>X\setminus C</m> terbuka, yaitu bahwa setiap
+        <m>x\in X\setminus C</m> mempunyai bola terbuka yang termuat dalam
+        <m>X\setminus C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-25-solution">
+      <p>
+        Menurut definisi, <m>C</m> tertutup tepat ketika komplemennya
+        <m>X\setminus C</m> terbuka. Karena itu sasaran pembuktian dapat
+        dinyatakan sebagai berikut: untuk setiap <m>x\in X\setminus C</m>,
+        temukan <m>r\gt0</m> sehingga
+        <m>B(x,r)\subseteq X\setminus C</m>. Sasaran ekuivalen inilah yang
+        akan disangkal pada langkah berikutnya untuk menjalankan pembuktian
+        dengan kontradiksi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-26">
+    <title>Akibat andaian bahwa himpunan tidak tertutup</title>
+    <statement>
+      <p>
+        Lanjutkan dengan pembuktian kontradiksi: andaikan <m>C</m> tidak
+        tertutup. Apa yang dapat disimpulkan tentang <m>X\setminus C</m>?
+        Rubrik: gunakan negasi langsung dari definisi ketertutupan, tanpa
+        memakai dahulu asumsi <m>C'\subseteq C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-26-hint">
+      <p>
+        Tahap 1: <m>C</m> tertutup jika dan hanya jika
+        <m>X\setminus C</m> terbuka. Tahap 2: negasikan kedua sisi pernyataan
+        ekuivalen itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-26-answer">
+      <p>
+        Jika <m>C</m> tidak tertutup, maka komplemennya
+        <m>X\setminus C</m> tidak terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-26-solution">
+      <p>
+        Definisi ketertutupan menyatakan bahwa <m>C</m> tertutup jika dan
+        hanya jika <m>X\setminus C</m> terbuka. Oleh sebab itu, andaian bahwa
+        <m>C</m> tidak tertutup memaksa <m>X\setminus C</m> tidak terbuka.
+        Secara berkuantor, kegagalan keterbukaan ini berarti ada sedikitnya
+        satu titik komplemen yang tidak memiliki bola terbuka yang seluruhnya
+        tinggal di dalam komplemen.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-27">
+    <title>Titik komplemen yang juga titik limit</title>
+    <statement>
+      <p>
+        Uraikan akibat dari fakta bahwa <m>X\setminus C</m> tidak terbuka.
+        Hasilkan suatu <m>x\in X\setminus C</m> dan buktikan bahwa
+        <m>x\in C'</m>. Rubrik: nyatakan kegagalan syarat bola, tunjukkan bahwa
+        setiap bola di <m>x</m> bertemu <m>C</m>, dan periksa bahwa titik
+        pertemuan itu berbeda dari <m>x</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-27-hint">
+      <p>
+        Tahap 1: ada <m>x\in X\setminus C</m> sehingga untuk setiap
+        <m>r\gt0</m>, bola <m>B(x,r)</m> tidak termuat dalam
+        <m>X\setminus C</m>. Tahap 2: titik bola yang berada di luar komplemen
+        terletak di <m>C</m>, dan tidak mungkin sama dengan <m>x</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-27-answer">
+      <p>
+        Ada <m>x\in X\setminus C</m> sehingga setiap <m>B(x,r)</m> bertemu
+        <m>C</m>. Karena <m>x\notin C</m>, setiap titik pertemuan berbeda dari
+        <m>x</m>; jadi <m>x</m> adalah titik limit dari <m>C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-27-solution">
+      <p>
+        Karena <m>X\setminus C</m> tidak terbuka, terdapat
+        <m>x\in X\setminus C</m> yang memenuhi: untuk setiap <m>r\gt0</m>,
+        bola <m>B(x,r)</m> tidak termuat dalam <m>X\setminus C</m>. Maka
+        setiap bola tersebut memuat suatu titik <m>y_r</m> yang tidak berada
+        di <m>X\setminus C</m>, sehingga <m>y_r\in C</m>. Di sisi lain
+        <m>x\notin C</m>, jadi <m>y_r\neq x</m>. Dengan demikian setiap
+        lingkungan bola di <m>x</m> memuat anggota <m>C</m> yang berbeda dari
+        <m>x</m>. Menurut definisi, <m>x\in C'</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-28">
+    <title>Kontradiksi yang menuntaskan ketertutupan</title>
+    <statement>
+      <p>
+        Jelaskan mengapa titik yang diperoleh pada langkah sebelumnya
+        bertentangan dengan asumsi <m>C'\subseteq C</m>, lalu tuntaskan
+        pembuktian. Rubrik: tulis kedua keanggotaan yang tidak serasi dan
+        nyatakan kesimpulan tentang <m>C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-28-hint">
+      <p>
+        Tahap 1: konstruksi memberi sekaligus <m>x\in C'</m> dan
+        <m>x\in X\setminus C</m>. Tahap 2: terapkan inklusi
+        <m>C'\subseteq C</m> pada keanggotaan pertama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-28-answer">
+      <p>
+        Dari <m>x\in C'</m> dan <m>C'\subseteq C</m> diperoleh
+        <m>x\in C</m>, sedangkan konstruksi memberi <m>x\notin C</m>.
+        Kontradiksi ini menunjukkan bahwa <m>C</m> tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-28-solution">
+      <p>
+        Langkah sebelumnya menghasilkan <m>x\in C'</m>. Asumsi awal
+        <m>C'\subseteq C</m> karenanya memberi <m>x\in C</m>. Namun titik
+        yang sama dipilih dari <m>X\setminus C</m>, sehingga
+        <m>x\notin C</m>. Ini kontradiksi. Jadi andaian bahwa <m>C</m> tidak
+        tertutup harus ditolak; akibatnya <m>C</m> tertutup. Bersama arah
+        pertama teorema, diperoleh karakterisasi bahwa <m>C</m> tertutup jika
+        dan hanya jika memuat semua titik limitnya.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch10-guide-29">
+    <title>Sasaran sifat minimal tutupan</title>
+    <statement>
+      <p>
+        Misalkan <m>A\subseteq X</m>. Nyatakan apa yang harus dibuktikan agar
+        <m>\overline{A}</m> merupakan subhimpunan tertutup terkecil dari
+        <m>X</m> yang memuat <m>A</m>. Rubrik: pisahkan ketertutupan dan
+        keanggotaan <m>A</m> yang sudah diketahui dari syarat minimal terhadap
+        setiap pesaing tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-29-hint">
+      <p>
+        Tahap 1: teorema sebelumnya sudah memberi bahwa
+        <m>\overline{A}</m> tertutup, dan definisinya memberi
+        <m>A\subseteq\overline{A}</m>. Tahap 2: ambil sembarang himpunan
+        tertutup <m>C</m> dengan <m>A\subseteq C</m> dan tentukan inklusi yang
+        harus dibuktikan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-29-answer">
+      <p>
+        Selain mengetahui bahwa <m>\overline{A}</m> tertutup dan memuat
+        <m>A</m>, harus dibuktikan bahwa untuk setiap himpunan tertutup
+        <m>C</m> yang memuat <m>A</m>, berlaku
+        <m>\overline{A}\subseteq C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-29-solution">
+      <p>
+        Sebuah himpunan tertutup yang memuat <m>A</m> adalah yang terkecil
+        menurut inklusi apabila ia termuat dalam setiap himpunan tertutup lain
+        yang memuat <m>A</m>. Sudah diketahui bahwa
+        <m>\overline{A}=A\cup A'</m> memuat <m>A</m>, dan teorema sebelumnya
+        menyatakan bahwa <m>\overline{A}</m> tertutup. Jadi bagian yang tersisa
+        ialah: untuk sembarang <m>C\subseteq X</m>, jika <m>C</m> tertutup dan
+        <m>A\subseteq C</m>, maka <m>\overline{A}\subseteq C</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-30">
+    <title>Mengurangi sasaran ke titik limit</title>
+    <statement>
+      <p>
+        Andaikan <m>C</m> tertutup dan <m>A\subseteq C</m>. Jelaskan mengapa,
+        untuk membuktikan <m>\overline{A}\subseteq C</m>, cukup menunjukkan
+        <m>A'\subseteq C</m>. Rubrik: uraikan definisi tutupan sebagai gabungan
+        dan tangani kedua bagiannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-30-hint">
+      <p>
+        Tahap 1: gunakan <m>\overline{A}=A\cup A'</m>. Tahap 2: inklusi satu
+        bagian gabungan, yakni <m>A\subseteq C</m>, sudah menjadi hipotesis.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-30-answer">
+      <p>
+        Karena <m>\overline{A}=A\cup A'</m> dan <m>A\subseteq C</m> sudah
+        diketahui, satu-satunya inklusi yang masih perlu dibuktikan ialah
+        <m>A'\subseteq C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-30-solution">
+      <p>
+        Ambil <m>x\in\overline{A}</m>. Dari
+        <m>\overline{A}=A\cup A'</m>, berlaku <m>x\in A</m> atau
+        <m>x\in A'</m>. Pada kasus pertama, hipotesis <m>A\subseteq C</m>
+        langsung memberi <m>x\in C</m>. Karena itu, jika dapat dibuktikan bahwa
+        setiap <m>x\in A'</m> juga berada di <m>C</m>, kedua kasus memberi
+        <m>x\in C</m>. Maka <m>A'\subseteq C</m> bersama
+        <m>A\subseteq C</m> memang cukup untuk menyimpulkan
+        <m>\overline{A}\subseteq C</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-31">
+    <title>Titik limit berpindah ke superset tertutup</title>
+    <statement>
+      <p>
+        Ambil <m>x\in A'</m>, dengan <m>A\subseteq C</m> dan <m>C</m>
+        tertutup. Tentukan apa yang dapat disimpulkan tentang <m>x</m>.
+        Rubrik: mula-mula hubungkan titik limit <m>A</m> dengan titik limit
+        <m>C</m>, lalu gunakan karakterisasi himpunan tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-31-hint">
+      <p>
+        Tahap 1: setiap lingkungan <m>x</m> memuat anggota
+        <m>A\setminus\{x\}</m>, yang juga anggota <m>C\setminus\{x\}</m>.
+        Tahap 2: karena <m>C</m> tertutup, ia memuat semua titik limitnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-31-answer">
+      <p>
+        Inklusi <m>A\subseteq C</m> membuat setiap titik limit <m>A</m> juga
+        titik limit <m>C</m>. Jadi <m>x\in C'</m>, dan ketertutupan <m>C</m>
+        memberi <m>x\in C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-31-solution">
+      <p>
+        Misalkan <m>x\in A'</m>. Setiap lingkungan <m>N</m> dari <m>x</m>
+        memuat suatu <m>y\in A</m> dengan <m>y\neq x</m>. Karena
+        <m>A\subseteq C</m>, titik yang sama memenuhi <m>y\in C</m> dan
+        <m>y\neq x</m>. Jadi setiap lingkungan <m>x</m> memuat anggota
+        <m>C</m> yang berbeda dari <m>x</m>, sehingga <m>x\in C'</m>. Himpunan
+        <m>C</m> tertutup dan karenanya memuat semua titik limitnya; maka
+        <m>x\in C</m>. Ini membuktikan bahwa <m>A'\subseteq C</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-32">
+    <title>Menuntaskan sifat minimal tutupan</title>
+    <statement>
+      <p>
+        Lengkapi pembuktian bahwa <m>\overline{A}\subseteq C</m> untuk setiap
+        subhimpunan tertutup <m>C</m> yang memuat <m>A</m>, lalu simpulkan
+        sifat minimal <m>\overline{A}</m>. Rubrik: gabungkan dua inklusi bagian
+        dari <m>A\cup A'</m> dan nyatakan kuantifikasi atas <m>C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-32-hint">
+      <p>
+        Tahap 1: hipotesis memberi <m>A\subseteq C</m>, sedangkan langkah
+        sebelumnya memberi <m>A'\subseteq C</m>. Tahap 2: ambil gabungan dan
+        ingat bahwa <m>C</m> dipilih sembarang di antara superset tertutup
+        <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-32-answer">
+      <p>
+        Dari <m>A\subseteq C</m> dan <m>A'\subseteq C</m> diperoleh
+        <m>\overline{A}=A\cup A'\subseteq C</m>. Karena ini berlaku bagi setiap
+        superset tertutup <m>C</m> dari <m>A</m>, tutupan <m>A</m> adalah yang
+        terkecil.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-32-solution">
+      <p>
+        Misalkan <m>C</m> sembarang subhimpunan tertutup dari <m>X</m> dengan
+        <m>A\subseteq C</m>. Untuk setiap <m>x\in A'</m>, panduan sebelumnya
+        menunjukkan <m>x\in C</m>; jadi <m>A'\subseteq C</m>. Oleh karena itu
+        <me>
+          \overline{A}=A\cup A'\subseteq C.
+        </me>
+        Tutupan <m>\overline{A}</m> sendiri tertutup dan memuat <m>A</m>.
+        Karena ia termuat dalam setiap himpunan tertutup <m>C</m> yang memuat
+        <m>A</m>, <m>\overline{A}</m> adalah subhimpunan tertutup terkecil dari
+        <m>X</m> yang memuat <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch10-guide-33">
+    <title>Dua keanggotaan dari irisan tutupan</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>x\in\overline{A}\cap\overline{X\setminus A}</m>. Nyatakan dua
+        keanggotaan yang langsung mengikuti dari fakta bahwa <m>x</m> berada
+        dalam irisan itu. Rubrik: uraikan definisi keanggotaan dalam irisan
+        tanpa menambahkan asumsi kasus.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-33-hint">
+      <p>
+        Tahap 1: keanggotaan dalam <m>P\cap Q</m> berarti keanggotaan dalam
+        <m>P</m> dan <m>Q</m>. Tahap 2: substitusikan kedua tutupan untuk
+        <m>P</m> dan <m>Q</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-33-answer">
+      <p>
+        Berlaku sekaligus <m>x\in\overline{A}</m> dan
+        <m>x\in\overline{X\setminus A}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-33-solution">
+      <p>
+        Menurut definisi irisan, <m>x\in P\cap Q</m> jika dan hanya jika
+        <m>x\in P</m> serta <m>x\in Q</m>. Dengan
+        <m>P=\overline{A}</m> dan <m>Q=\overline{X\setminus A}</m>, kita
+        memperoleh <m>x\in\overline{A}</m> dan
+        <m>x\in\overline{X\setminus A}</m>. Kedua fakta ini akan dipakai
+        terpisah sesuai apakah <m>x\in A</m> atau <m>x\notin A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-34">
+    <title>Kasus titik berada di dalam himpunan</title>
+    <statement>
+      <p>
+        Misalkan <m>N</m> sembarang lingkungan dari <m>x</m> dan tinjau kasus
+        <m>x\in A</m>. Jelaskan mengapa <m>N</m> memuat sebuah titik di
+        <m>A</m> dan sebuah titik di <m>X\setminus A</m>, lalu simpulkan sifat
+        <m>x</m>. Rubrik: gunakan <m>x</m> sendiri untuk salah satu sisi dan
+        keanggotaan dalam tutupan komplemen untuk sisi lain.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-34-hint">
+      <p>
+        Tahap 1: karena <m>x\in A</m> dan <m>x\in N</m>, lingkungan itu sudah
+        memuat titik <m>A</m>. Tahap 2: dari
+        <m>x\in\overline{X\setminus A}</m> tetapi
+        <m>x\notin X\setminus A</m>, simpulkan bahwa <m>x</m> titik limit
+        komplemen.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-34-answer">
+      <p>
+        Lingkungan <m>N</m> memuat <m>x\in A</m>. Selain itu,
+        <m>x\in (X\setminus A)'</m>, sehingga <m>N</m> memuat titik
+        <m>X\setminus A</m>. Jadi setiap lingkungan <m>x</m> bertemu kedua
+        sisi, dan <m>x\in\Bdry(A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-34-solution">
+      <p>
+        Ambil sembarang lingkungan <m>N</m> dari <m>x</m>. Karena
+        <m>x\in A</m> dan setiap lingkungan memuat titik pusatnya, <m>N</m>
+        memuat sebuah titik di <m>A</m>, yakni <m>x</m>. Kita juga mengetahui
+        <m>x\in\overline{X\setminus A}</m>. Karena dalam kasus ini
+        <m>x\notin X\setminus A</m>, definisi tutupan
+        <m>\overline{X\setminus A}=(X\setminus A)\cup(X\setminus A)'</m>
+        memaksa <m>x\in(X\setminus A)'</m>. Maka <m>N</m> memuat suatu titik
+        dari <m>X\setminus A</m> yang berbeda dari <m>x</m>. Karena
+        <m>N</m> sebarang dan bertemu <m>A</m> maupun komplemennya,
+        <m>x</m> adalah titik batas dari <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-35">
+    <title>Kasus titik berada di luar himpunan</title>
+    <statement>
+      <p>
+        Dengan <m>N</m> sembarang lingkungan dari <m>x</m>, tinjau kasus
+        <m>x\notin A</m>. Jelaskan mengapa <m>N</m> memuat sebuah titik di
+        <m>A</m> dan sebuah titik di <m>X\setminus A</m>, lalu simpulkan sifat
+        <m>x</m>. Rubrik: tukarkan peran himpunan dan komplemennya dari kasus
+        sebelumnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-35-hint">
+      <p>
+        Tahap 1: kini <m>x\in X\setminus A</m>, jadi titik luar sudah tersedia
+        di <m>N</m>. Tahap 2: dari <m>x\in\overline{A}</m> tetapi
+        <m>x\notin A</m>, simpulkan <m>x\in A'</m> dan gunakan definisinya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-35-answer">
+      <p>
+        Lingkungan <m>N</m> memuat <m>x\in X\setminus A</m>. Karena
+        <m>x\in A'</m>, lingkungan yang sama juga memuat titik <m>A</m>.
+        Jadi <m>N</m> bertemu kedua sisi dan <m>x\in\Bdry(A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-35-solution">
+      <p>
+        Ambil sembarang lingkungan <m>N</m> dari <m>x</m>. Andaian
+        <m>x\notin A</m> berarti <m>x\in X\setminus A</m>; karena
+        <m>x\in N</m>, lingkungan tersebut memuat titik di luar <m>A</m>.
+        Di sisi lain, <m>x\in\overline{A}=A\cup A'</m> dan
+        <m>x\notin A</m>, sehingga <m>x\in A'</m>. Oleh definisi titik limit,
+        <m>N</m> memuat suatu anggota <m>A</m> yang berbeda dari <m>x</m>.
+        Jadi setiap lingkungan <m>x</m> memuat titik dari <m>A</m> dan dari
+        <m>X\setminus A</m>. Dengan demikian <m>x\in\Bdry(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-36">
+    <title>Menyimpulkan inklusi ke dalam batas</title>
+    <statement>
+      <p>
+        Gabungkan kedua kasus sebelumnya untuk membuktikan
+        <m>\overline{A}\cap\overline{X\setminus A}\subseteq\Bdry(A)</m>.
+        Rubrik: jelaskan bahwa pemisahan kasus mencakup setiap <m>x\in X</m>
+        dan kembalikan kesimpulan titik-sebarang menjadi inklusi himpunan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-36-hint">
+      <p>
+        Tahap 1: setiap titik <m>x\in X</m> memenuhi tepat satu di antara
+        <m>x\in A</m> dan <m>x\notin A</m>. Tahap 2: kedua cabang telah memberi
+        kesimpulan yang sama, yaitu <m>x\in\Bdry(A)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-36-answer">
+      <p>
+        Baik ketika <m>x\in A</m> maupun ketika <m>x\notin A</m>, setiap
+        lingkungan <m>x</m> bertemu <m>A</m> dan komplemennya. Maka setiap
+        <m>x</m> dalam irisan kedua tutupan berada di <m>\Bdry(A)</m>, sehingga
+        inklusi yang diminta berlaku.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-36-solution">
+      <p>
+        Ambil sembarang
+        <m>x\in\overline{A}\cap\overline{X\setminus A}</m>. Jika
+        <m>x\in A</m>, panduan 34 menunjukkan bahwa setiap lingkungan
+        <m>x</m> memuat titik dari <m>A</m> dan dari <m>X\setminus A</m>.
+        Jika <m>x\notin A</m>, panduan 35 memberikan sifat yang sama. Kedua
+        kasus mencakup semua kemungkinan, sehingga selalu
+        <m>x\in\Bdry(A)</m>. Karena <m>x</m> dipilih sembarang,
+        <me>
+          \overline{A}\cap\overline{X\setminus A}\subseteq\Bdry(A).
+        </me>
+        Bersama inklusi arah lain yang telah dibuktikan, hasil ini memberi
+        <m>\Bdry(A)=\overline{A}\cap\overline{X\setminus A}</m>.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch10-guide-37">
+    <title>Limit barisan di dalam dua himpunan</title>
+    <statement>
+      <p>
+        Dalam <m>(\R,d_E)</m>, tentukan limit barisan
+        <m>a_n=1/(n+1)</m>, yang seluruh sukunya berada di
+        <m>A=(0,1)</m> dan <m>B=[0,1]</m>. Rubrik: ajukan kandidat limit dan
+        verifikasi langsung dengan definisi <m>\epsilon</m>-<m>N</m>.
+        Cetakan sumber menulis <m>a_n=1/n</m>, tetapi suku pertamanya tidak
+        berada di <m>A</m>; edisi ini menggeser indeks satu langkah sesuai
+        emendasi tercatat O003-C100 agar syarat soal berlaku bagi semua suku.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-37-hint">
+      <p>
+        Tahap 1: uji titik <m>0</m> dan hitung
+        <m>d_E(a_n,0)=1/(n+1)</m>. Tahap 2: untuk <m>\epsilon\gt0</m>, pilih
+        <m>N</m> yang cukup besar sehingga <m>1/(N+1)\lt\epsilon</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-37-answer">
+      <p>
+        Limit barisan tersebut ialah <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-37-solution">
+      <p>
+        Ambil <m>\epsilon\gt0</m>. Menurut sifat Archimedes, pilih
+        <m>N\in\Z^+</m> dengan <m>N\gt1/\epsilon</m>. Jika
+        <m>n\geq N</m>, maka
+        <me>
+          d_E(a_n,0)=\left|\frac{1}{n+1}\right|
+          =\frac{1}{n+1}\lt\frac{1}{n}\leq\frac{1}{N}\lt\epsilon.
+        </me>
+        Jadi semua suku pada ekor barisan berada sedekat yang diminta dari
+        <m>0</m>, dan <m>\lim a_n=0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-38">
+    <title>Limit tidak berada di himpunan terbuka</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>\lim a_n</m> dari panduan sebelumnya berada di
+        <m>A=(0,1)</m>. Rubrik: gunakan nilai limit yang telah diperoleh dan
+        periksa syarat keanggotaan interval terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-38-hint">
+      <p>
+        Tahap 1: substitusikan <m>\lim a_n=0</m>. Tahap 2: anggota
+        <m>(0,1)</m> harus lebih besar secara ketat dari <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-38-answer">
+      <p>
+        Tidak. Karena <m>\lim a_n=0</m> dan <m>0\notin(0,1)</m>, limit tidak
+        berada di <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-38-solution">
+      <p>
+        Panduan 37 menunjukkan bahwa <m>\lim a_n=0</m>. Interval
+        <m>A=(0,1)</m> berisi tepat bilangan real <m>x</m> dengan
+        <m>0\lt x\lt1</m>; titik ujung <m>0</m> tidak disertakan. Oleh karena
+        itu <m>\lim a_n=0\notin A</m>. Contoh ini memperlihatkan bahwa suatu
+        barisan yang seluruh sukunya berada dalam himpunan terbuka tidak harus
+        memiliki limit di himpunan tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-39">
+    <title>Limit berada di himpunan tertutup</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>\lim a_n</m> berada di <m>B=[0,1]</m>. Rubrik:
+        gunakan limit <m>0</m> dan periksa apakah tanda kurung siku menyertakan
+        titik ujung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-39-hint">
+      <p>
+        Tahap 1: interval <m>[0,1]</m> memuat kedua titik ujungnya. Tahap 2:
+        bandingkan fakta ini dengan <m>\lim a_n=0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-39-answer">
+      <p>
+        Ya. Titik <m>0</m> berada di <m>[0,1]</m>, sehingga
+        <m>\lim a_n\in B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-39-solution">
+      <p>
+        Karena <m>B=[0,1]=\{x\in\R:0\leq x\leq1\}</m>, titik ujung
+        <m>0</m> merupakan anggota <m>B</m>. Dari <m>\lim a_n=0</m> diperoleh
+        <m>\lim a_n\in B</m>. Berbeda dengan <m>A</m>, himpunan <m>B</m>
+        tidak kehilangan titik batas ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-40">
+    <title>Dua perbedaan yang menjelaskan perilaku limit</title>
+    <statement>
+      <p>
+        Sebutkan dua perbedaan penting antara <m>A=(0,1)</m> dan
+        <m>B=[0,1]</m> yang menjelaskan mengapa limit barisan berada di
+        <m>B</m> tetapi tidak di <m>A</m>. Gunakan terminologi bagian ini.
+        Rubrik: bandingkan jenis keterbukaan atau ketertutupan dan perlakuan
+        kedua himpunan terhadap titik limit atau titik batasnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-40-hint">
+      <p>
+        Tahap 1: klasifikasikan <m>(0,1)</m> dan <m>[0,1]</m> sebagai terbuka
+        atau tertutup di <m>\R</m>. Tahap 2: periksa apakah masing-masing
+        memuat titik limit sekaligus titik batas <m>0</m> dan <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-40-answer">
+      <p>
+        Himpunan <m>A</m> terbuka dan tidak tertutup, sedangkan <m>B</m>
+        tertutup dan tidak terbuka. Selain itu, <m>A</m> tidak memuat titik
+        batas sekaligus titik limit <m>0</m> dan <m>1</m>, sedangkan <m>B</m>
+        memuat keduanya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-40-solution">
+      <p>
+        Perbedaan pertama ialah sifat topologisnya: <m>A=(0,1)</m> terbuka
+        tetapi tidak tertutup dalam <m>\R</m>, sedangkan <m>B=[0,1]</m>
+        tertutup tetapi tidak terbuka. Perbedaan kedua menyangkut titik tepi:
+        <m>0</m> dan <m>1</m> merupakan titik batas dan titik limit dari kedua
+        interval, tetapi <m>A</m> tidak memuat keduanya sedangkan <m>B</m>
+        memuat keduanya. Khususnya, limit <m>0</m> dari <m>(a_n)</m> hilang dari
+        <m>A</m> tetapi dipertahankan oleh <m>B</m>. Hal ini mencerminkan
+        karakterisasi bahwa himpunan tertutup memuat semua titik limitnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-41">
+    <title>Memilih karakterisasi ketertutupan yang relevan</title>
+    <statement>
+      <p>
+        Sebutkan tiga cara untuk menunjukkan bahwa subhimpunan ruang metrik
+        adalah himpunan tertutup, lalu pilih cara yang paling sesuai apabila
+        hipotesis berbicara tentang limit setiap barisan di <m>C</m>. Rubrik:
+        berikan tiga kriteria yang ekuivalen dan jelaskan mengapa kriteria titik
+        limit cocok dengan informasi barisan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-41-hint">
+      <p>
+        Tahap 1: ingat kriteria melalui komplemen, titik limit, dan tutupan.
+        Tahap 2: titik limit menghasilkan barisan di <m>C</m> yang konvergen ke
+        titik tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-41-answer">
+      <p>
+        Tiga cara ialah membuktikan <m>X\setminus C</m> terbuka, membuktikan
+        <m>C'\subseteq C</m>, atau membuktikan <m>C=\overline{C}</m>. Cara
+        kedua paling relevan karena sebuah titik limit <m>c</m> dari <m>C</m>
+        dapat diwujudkan sebagai limit suatu barisan di <m>C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-41-solution">
+      <p>
+        Tiga karakterisasi yang dapat dipakai adalah: <m>C</m> tertutup
+        apabila <m>X\setminus C</m> terbuka; <m>C</m> tertutup apabila ia
+        memuat semua titik limitnya, yakni <m>C'\subseteq C</m>; dan
+        <m>C</m> tertutup apabila <m>C=\overline{C}</m>. Kriteria melalui
+        titik limit adalah pilihan paling langsung di sini. Jika
+        <m>c\in C'</m>, teorema tentang titik limit menyediakan barisan
+        <m>(c_n)</m> di <m>C</m> yang menuju <m>c</m>, tepat jenis objek yang
+        dapat dimasukkan ke hipotesis soal. Karakterisasi melalui batas,
+        <m>\Bdry(C)\subseteq C</m>, juga setara, tetapi tidak diperlukan untuk
+        argumen ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-42">
+    <title>Barisan yang mendekati sebuah titik limit</title>
+    <statement>
+      <p>
+        Misalkan <m>c</m> titik limit dari <m>C</m>. Nyatakan kesimpulan
+        berurutan yang diperlukan untuk memakai hipotesis bahwa setiap barisan
+        konvergen di <m>C</m> memiliki limit di <m>C</m>. Rubrik: bangun atau
+        kutip keberadaan barisan di <m>C</m>, nyatakan limitnya, dan jaga agar
+        semua sukunya berada di <m>C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-42-hint">
+      <p>
+        Tahap 1: untuk setiap <m>n</m>, pilih
+        <m>c_n\in (B(c,1/n)\cap C)\setminus\{c\}</m>. Tahap 2: gunakan
+        <m>d(c_n,c)\lt1/n</m> untuk membuktikan <m>c_n\to c</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-42-answer">
+      <p>
+        Terdapat barisan <m>(c_n)</m> di <m>C</m>, bahkan dengan
+        <m>c_n\neq c</m>, yang konvergen ke <m>c</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-42-solution">
+      <p>
+        Karena <m>c\in C'</m>, setiap bola di <m>c</m> memuat anggota
+        <m>C</m> yang berbeda dari <m>c</m>. Untuk tiap
+        <m>n\in\Z^+</m>, pilih
+        <m>c_n\in (B(c,1/n)\cap C)\setminus\{c\}</m>. Maka seluruh suku
+        <m>c_n</m> berada di <m>C</m> dan <m>d(c_n,c)\lt1/n</m>. Jika
+        <m>\epsilon\gt0</m>, pilih <m>N\gt1/\epsilon</m>. Untuk
+        <m>n\geq N</m>, <m>d(c_n,c)\lt1/n\leq1/N\lt\epsilon</m>. Jadi
+        <m>c_n\to c</m>. Ini juga merupakan penerapan langsung teorema bahwa
+        setiap titik limit suatu himpunan adalah limit sebuah barisan di
+        himpunan itu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch10-guide-43">
+    <title>Menuntaskan kriteria barisan untuk himpunan tertutup</title>
+    <statement>
+      <p>
+        Andaikan setiap barisan <m>(c_n)</m> di <m>C</m> yang konvergen ke
+        suatu <m>c\in X</m> memenuhi <m>c\in C</m>. Gunakan hasil panduan
+        sebelumnya untuk menyelesaikan pembuktian bahwa <m>C</m> tertutup.
+        Rubrik: terapkan hipotesis kepada barisan yang dibangun, generalisasikan
+        dari satu titik limit sebarang, lalu gunakan karakterisasi
+        ketertutupan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch10-guide-43-hint">
+      <p>
+        Tahap 1: barisan dari panduan 42 berada di <m>C</m> dan menuju
+        <m>c</m>, sehingga hipotesis menentukan keanggotaan <m>c</m>.
+        Tahap 2: karena <m>c\in C'</m> dipilih sembarang, simpulkan satu
+        inklusi himpunan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch10-guide-43-answer">
+      <p>
+        Hipotesis memberi <m>c\in C</m> untuk setiap <m>c\in C'</m>. Jadi
+        <m>C'\subseteq C</m>, dan karakterisasi melalui titik limit menyatakan
+        bahwa <m>C</m> tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch10-guide-43-solution">
+      <p>
+        Ambil sembarang <m>c\in C'</m>. Panduan 42 menghasilkan barisan
+        <m>(c_n)</m> di <m>C</m> dengan <m>c_n\to c</m>. Hipotesis soal berlaku
+        bagi setiap barisan di <m>C</m> yang konvergen ke titik di <m>X</m>;
+        karena itu hipotesis tersebut memberi <m>c\in C</m>. Titik
+        <m>c\in C'</m> dipilih sembarang, sehingga <m>C'\subseteq C</m>.
+        Menurut karakterisasi himpunan tertutup melalui titik limit, inklusi ini
+        membuktikan bahwa <m>C</m> tertutup. Dengan demikian kedua arah
+        kriteria barisan telah lengkap: <m>C</m> tertutup jika dan hanya jika
+        setiap barisan konvergen di <m>C</m> memiliki limit di <m>C</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

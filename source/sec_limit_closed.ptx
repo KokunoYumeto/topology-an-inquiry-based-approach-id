@@ -1,44 +1,44 @@
 <section xml:id="sec_limit_closed">
-  <title>Limit Points and Closed Sets</title>
+  <title>Titik Limit dan Himpunan Tertutup</title>
   <p>
-    There is a connection between limit points and closed sets.
-    The open set <m>(1,2)</m> in
-    <m>(\R, d_E)</m> does not contain all of its limit points or any of its boundary points,
-    while the closed set <m>[1,2]</m> contains all of its boundary and limit points.
-    This is an important attribute of closed sets.
-    Recall that for a limit point <m>x</m> of a subset <m>A</m> of a metric space <m>X</m>,
-    every neighborhood of <m>x</m> contains a point in <m>A</m> different from <m>x</m>.
-    We can make the neighborhoods as small as we like so, in a sense,
-    the limit points of <m>A</m> that are not in <m>A</m> are the points in <m>X</m> that are arbitrarily close to the set <m>A</m>.
-    We denote the set of limit points of <m>A</m> as <m>A'</m>,
-    and the limit points of a set can tell us if the set is closed.
+    Terdapat hubungan antara titik limit dan himpunan tertutup.
+    Himpunan terbuka <m>(1,2)</m> dalam
+    <m>(\R, d_E)</m> tidak memuat semua titik limitnya maupun satu pun titik batasnya,
+    sedangkan himpunan tertutup <m>[1,2]</m> memuat semua titik batas dan titik limitnya.
+    Hal ini merupakan sifat penting dari himpunan tertutup.
+    Ingatlah bahwa untuk suatu titik limit <m>x</m> dari subhimpunan <m>A</m> dari ruang metrik <m>X</m>,
+    setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> yang berbeda dari <m>x</m>.
+    Lingkungan tersebut dapat kita buat sekecil apa pun sehingga, dalam arti tertentu,
+    titik-titik limit dari <m>A</m> yang tidak berada di <m>A</m> merupakan titik-titik di <m>X</m> yang dapat berjarak sedekat apa pun dari himpunan <m>A</m>.
+    Kita menyatakan himpunan semua titik limit dari <m>A</m> dengan <m>A'</m>,
+    dan titik-titik limit suatu himpunan dapat menentukan apakah himpunan tersebut tertutup.
   </p>
   <theorem xml:id="thm_closed_limitpoints">
     <statement>
       <p>
-        Let <m>C</m> be a subset of a metric space <m>X</m>,
-        and let <m>C'</m> be the set of limit points of <m>C</m>.
-        Then <m>C</m> is closed if and only if <m>C' \subseteq C</m>.
+        Misalkan <m>C</m> suatu subhimpunan dari ruang metrik <m>X</m>,
+        dan misalkan <m>C'</m> himpunan semua titik limit dari <m>C</m>.
+        Maka <m>C</m> tertutup jika dan hanya jika <m>C' \subseteq C</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a metric space,
-      and let <m>C</m> be a subset of <m>X</m>.
-      First we assume that <m>C</m> is closed and show that <m>C</m> contains all of its limit points.
-      Let <m>x \in X</m> be a limit point of <m>C</m>.
-      We proceed by contradiction and assume that <m>x \notin C</m>.
-      Then <m>x \in X \setminus C</m>, which is an open set.
-      This implies that there is an
-      <m>\epsilon \gt 0</m> so that <m>B(x, \epsilon) \subseteq X \setminus C</m>.
-      But then this neighborhood
-      <m>B(x, \epsilon)</m> contains no points in <m>C</m>,
-      which contradicts the fact that <m>x</m> is a limit point of <m>C</m>.
-      We conclude that <m>x \in C</m> and <m>C</m> contains all of its limit points.
+      Misalkan <m>X</m> suatu ruang metrik,
+      dan misalkan <m>C</m> suatu subhimpunan dari <m>X</m>.
+      Pertama, andaikan <m>C</m> tertutup dan tunjukkan bahwa <m>C</m> memuat semua titik limitnya.
+      Misalkan <m>x \in X</m> suatu titik limit dari <m>C</m>.
+      Kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa <m>x \notin C</m>.
+      Maka <m>x \in X \setminus C</m>, yang merupakan himpunan terbuka.
+      Hal ini mengakibatkan bahwa terdapat
+      <m>\epsilon \gt 0</m> sedemikian sehingga <m>B(x, \epsilon) \subseteq X \setminus C</m>.
+      Namun, lingkungan
+      <m>B(x, \epsilon)</m> ini tidak memuat satu pun titik di <m>C</m>,
+      yang bertentangan dengan fakta bahwa <m>x</m> merupakan titik limit dari <m>C</m>.
+      Kita menyimpulkan bahwa <m>x \in C</m> dan <m>C</m> memuat semua titik limitnya.
     </p>
     <p>
-      The converse of the result we just proved is the subject of the next activity.
+      Implikasi sebaliknya dari hasil yang baru saja kita buktikan akan ditelaah dalam kegiatan berikut.
     </p>
   </proof>
   </theorem>
@@ -46,39 +46,39 @@
   <activity>
   <introduction>
     <p>
-      Let <m>C</m> be a subset of a metric space <m>X</m>,
-      and let <m>C'</m> be the set of limit points of <m>C</m>.
-      In this activity we prove that <m>C</m> is closed if <m>C</m> contains all of its limit points.
-      So assume <m>C' \subseteq C</m>.
+      Misalkan <m>C</m> suatu subhimpunan dari ruang metrik <m>X</m>,
+      dan misalkan <m>C'</m> himpunan semua titik limit dari <m>C</m>.
+      Dalam kegiatan ini, kita membuktikan bahwa <m>C</m> tertutup jika <m>C</m> memuat semua titik limitnya.
+      Jadi, andaikan <m>C' \subseteq C</m>.
     </p>
   </introduction>
       <task>
         <statement>
           <p>
-            What do we need to do to show that <m>C</m> is closed?
+            Apa yang perlu kita lakukan untuk menunjukkan bahwa <m>C</m> tertutup?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If we proceed by contradiction to prove that <m>C</m> is closed,
-            we assume that <m>C</m> is not closed.
-            What does this tell us about <m>X \setminus C</m>?
+            Jika kita menggunakan pembuktian dengan kontradiksi untuk membuktikan bahwa <m>C</m> tertutup,
+            kita mengandaikan bahwa <m>C</m> tidak tertutup.
+            Apa yang dapat kita simpulkan tentang <m>X \setminus C</m> dari hal ini?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What does the conclusion of part (b) tells us?
+            Apa yang dapat kita simpulkan dari hasil butir (b)?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            How does the result of (c) contradict the assumption that <m>C</m> contains all of its limit points?
+            Bagaimana hasil butir (c) bertentangan dengan asumsi bahwa <m>C</m> memuat semua titik limitnya?
           </p>
         </statement>
       </task>
