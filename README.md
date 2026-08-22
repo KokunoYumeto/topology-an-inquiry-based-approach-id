@@ -6,9 +6,9 @@ Approach* karya Steven Schlicker, Grand Valley State University.
 **Baca edisi web:**  
 https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/
 
-**Unduh PDF batas terverifikasi Bab 1-5 (108 halaman):**
+**Unduh PDF batas terverifikasi Bab 1-6 (133 halaman):**
 
-https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-05-id.pdf
+https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-06-id.pdf
 
 ## Status
 
@@ -19,16 +19,19 @@ Produksi lengkap masih berlangsung. Batas publik saat ini memuat:
 - Bab 3, *Ruang Metrik*;
 - Bab 4, *Penerapan Ruang Metrik*;
 - Bab 5, *Batas Bawah Terbesar*;
-- pendamping belajar mandiri orisinal untuk kelima bab, dengan petunjuk,
-  jawaban, rubrik, dan solusi bertahap; dan
+- Bab 6, *Fungsi Kontinu di Ruang Metrik*;
+- pendamping belajar mandiri orisinal untuk keenam bab, dengan petunjuk,
+  jawaban, rubrik, dan solusi bertahap;
+- laboratorium epsilon-delta orisinal yang dapat digunakan secara luring untuk
+  menggantikan kebergantungan aplet Bab 6 yang tidak terarsipkan; dan
 - backend modular netral-lokal untuk provenance, istilah, latihan, solusi,
   koreksi sumber, hak komponen, dan status QA.
 
-Batas Bab 1-5 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
+Batas Bab 1-6 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
 audit matematika
 pendamping, dua pembangunan HTML deterministik, dua pembangunan PDF ketat,
 pemeriksaan tautan/aset, reflow desktop/seluler, interaksi petunjuk, dan
-inspeksi visual seluruh 108 halaman. Kolom baca desktop menggunakan lebar 960
+inspeksi visual seluruh 133 halaman. Kolom baca desktop menggunakan lebar 960
 px dan terpusat di panel utama; versi seluler mengalir ulang tanpa luapan
 horizontal. Ini bukan klaim bahwa edisi 20 bab sudah
 selesai.
@@ -61,8 +64,8 @@ PreTeXt, atau repositori sumber yang dinyatakan maupun disiratkan.
 - `docs/` - byte pembaca publik untuk GitHub Pages.
 
 Manifest kumulatif yang mengikat batas ini adalah
-`qa/CHAPTER05_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
-`qa/CHAPTER05_BUILD_QA.md`.
+`qa/CHAPTER06_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
+`qa/CHAPTER06_BUILD_QA.md`.
 
 ## Membangun batas saat ini
 
@@ -70,9 +73,9 @@ Lingkungan yang direkam memakai Python 3.12.13, PreTeXt 1.7.5,
 setuptools 75.8.0, dan MiKTeX 26.5.
 
 ```text
-pretext build chapters01-05-html --clean
-python scripts/finalize_chapter01_html.py output/chapters01-05-html --manifest qa/CHAPTER05_HTML_MANIFEST.json
-python scripts/build_pretext_pdf_strict.py chapters01-05-pdf --clean --log qa/CHAPTER05_PDF_BUILD.log --expect-pdf output/chapters01-05-pdf/chapters_01_05_reader.pdf
+pretext build chapters01-06-html --clean
+python scripts/finalize_chapter01_html.py output/chapters01-06-html --manifest qa/CHAPTER06_HTML_MANIFEST.json
+python scripts/build_pretext_pdf_strict.py chapters01-06-pdf --clean --mainmatter-physical-page 7 --log qa/CHAPTER06_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-06-pdf/chapters_01_06_reader.pdf
 ```
 
 HTML saat ini masih memanggil beberapa dependensi runtime jarak jauh dari
@@ -84,7 +87,8 @@ aksesibilitas utama.
 
 Terjemahan spine GVSU diperlakukan secara konservatif sebagai
 CC BY-NC-SA 3.0 karena metadata resmi dan prosa prakata tidak konsisten.
-Pendamping yang ditulis baru merupakan komponen terpisah berlisensi CC BY 4.0.
+Pendamping dan laboratorium epsilon-delta yang ditulis baru merupakan komponen
+terpisah berlisensi CC BY 4.0.
 Perangkat lunak, XSLT, font, dan gambar yang diberi pemberitahuan tersendiri
 mempertahankan hak masing-masing. Lihat `LICENSES.md` dan
 `companion/RIGHTS.md`; tidak ada lisensi payung yang meratakan seluruh

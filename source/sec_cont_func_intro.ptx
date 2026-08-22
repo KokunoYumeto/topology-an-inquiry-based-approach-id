@@ -1,165 +1,168 @@
 <section xml:id="sec_cont_func_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    We have likely had previous experiences with continuous functions.
-    Continuity is an important consideration in optimization problems because a continuous function attains a maximum value and a minimum value on any closed and bounded interval.
-    Continuous functions also satisfy the Intermediate Value Theorem,
-    that a continuous function <m>f</m> takes on all values between <m>f(a)</m> and <m>f(b)</m> on an interval <m>[a,b]</m>.
-    An important consequence of the Intermediate Value Theorem is that if <m>f</m> is a continuous function on an interval and <m>f(a)</m> and <m>f(b)</m> have opposite signs,
-    then <m>f</m> must have a root in the interval <m>[a,b]</m>.
-    In this section we will begin to explore continuity of functions between metric spaces.
-    Our ultimate goal in future sections is to understand continuous functions well enough that we can define continuity just in terms of open sets.
+    Kita mungkin telah menjumpai fungsi kontinu sebelumnya.
+    Kekontinuan merupakan pertimbangan penting dalam masalah optimisasi karena suatu fungsi kontinu mencapai nilai maksimum dan nilai minimum pada setiap interval tertutup dan terbatas.
+    Fungsi kontinu juga memenuhi Teorema Nilai Antara,
+    yakni bahwa suatu fungsi kontinu <m>f</m> mengambil semua nilai di antara <m>f(a)</m> dan <m>f(b)</m> pada interval <m>[a,b]</m>.
+    Salah satu akibat penting Teorema Nilai Antara adalah bahwa jika <m>f</m> merupakan fungsi kontinu pada suatu interval dan <m>f(a)</m> serta <m>f(b)</m> berlainan tanda,
+    maka <m>f</m> pasti mempunyai akar di dalam interval <m>[a,b]</m>.
+    Dalam bagian ini, kita akan mulai menelaah kekontinuan fungsi antara ruang-ruang metrik.
+    Tujuan akhir kita dalam bagian-bagian mendatang adalah memahami fungsi kontinu dengan cukup baik sehingga kita dapat mendefinisikan kekontinuan hanya dalam kaitannya dengan himpunan terbuka.
   </p>
   <p>
-    In calculus we discuss the idea of continuity.
-    A function <m>f:\R \to \R</m>
-    (using the standard Euclidean metric)
-    is continuous at a point <m>a</m> if
+    Dalam kalkulus, kita membahas gagasan kekontinuan.
+    Suatu fungsi <m>f:\R \to \R</m>
+    (dengan menggunakan metrik Euklides standar)
+    kontinu di titik <m>a</m> jika
     <me>
       \lim_{x \to a} f(x) = f(a)
     </me>.
   </p>
   <p>
-    This involved providing some explanation about what it means for a function <m>f</m> to have a limit at a point.
-    Intuitively,
-    the idea is that a function <m>f</m> has a limit <m>L</m> at <m>x=a</m> if we can make all of the value of <m>f(x)</m> as close to <m>L</m> as we want by choosing <m>x</m> as close to
-    (but not equal to)
-    <m>a</m> as we need.
-    To extend this informal notion of limit to continuity at a point we would say that a function <m>f</m> is continuous at a point <m>a</m> if if we can make all of the value of <m>f(x)</m> as close to <m>f(a)</m> as we want by choosing <m>x</m> as close to <m>a</m> as we need
-    (now <m>x</m> can equal <m>a</m>).
+    Pernyataan ini mengharuskan kita menjelaskan apa artinya suatu fungsi <m>f</m> mempunyai limit di sebuah titik.
+    Secara intuitif,
+    gagasannya adalah bahwa fungsi <m>f</m> mempunyai limit <m>L</m> ketika <m>x=a</m> jika kita dapat membuat nilai <m>f(x)</m> sedekat yang kita inginkan dengan <m>L</m> dengan memilih <m>x</m> sedekat yang diperlukan dengan
+    (tetapi tidak sama dengan)
+    <m>a</m>.
+    Untuk memperluas gagasan limit informal ini menjadi kekontinuan di suatu titik, kita dapat mengatakan bahwa fungsi <m>f</m> kontinu di titik <m>a</m> jika kita dapat membuat nilai <m>f(x)</m> sedekat yang kita inginkan dengan <m>f(a)</m> dengan memilih <m>x</m> sedekat yang diperlukan dengan <m>a</m>
+    (kini <m>x</m> boleh sama dengan <m>a</m>).
   </p>
   <p>
-    In order to define continuity in a more general context
-    (in topological spaces)
-    we will need to have a rigorous definition of continuity to work with.
-    We will begin by discussing continuous functions from <m>\R</m> to <m>\R</m>,
-    and build from that to continuous functions in metric spaces.
-    These ideas will allow us to ultimately define continuous functions in topological spaces.
+    Untuk mendefinisikan kekontinuan dalam konteks yang lebih umum
+    (di ruang topologis),
+    kita memerlukan definisi kekontinuan yang ketat sebagai landasan.
+    Kita akan mulai dengan membahas fungsi kontinu dari <m>\R</m> ke <m>\R</m>,
+    lalu mengembangkannya menjadi fungsi kontinu di ruang metrik.
+    Gagasan-gagasan ini pada akhirnya akan memungkinkan kita mendefinisikan fungsi kontinu di ruang topologis.
   </p>
   <p>
-    We begin by working with continuous functions from <m>\R</m> to <m>\R</m>.
-    Our goal is to make more rigorous our informal definition of continuity at a point.
-    To do so will require us to formally defining what we mean by
+    Kita mulai dengan mempelajari fungsi kontinu dari <m>\R</m> ke <m>\R</m>.
+    Tujuan kita adalah memperketat definisi informal mengenai kekontinuan di suatu titik.
+    Untuk melakukannya, kita perlu mendefinisikan secara formal apa yang dimaksud dengan
     <ul>
       <li>
         <p>
-          making the values of <m>f(x)</m>
-          <q>as close to <m>f(a)</m> as we want</q>, and
+          membuat nilai <m>f(x)</m>
+          <q>sedekat yang kita inginkan dengan <m>f(a)</m></q>, dan
         </p>
       </li>
       <li>
         <p>
-          choosing <m>x</m>
-          <q>as close to <m>a</m> as we need</q>.
+          memilih <m>x</m>
+          <q>sedekat yang kita perlukan dengan <m>a</m></q>.
         </p>
       </li>
     </ul>
   </p>
 
   <figure xml:id="F_Continuity">
-    <caption>Demonstrating the definition of continuity at a point.</caption>
+    <caption>Ilustrasi definisi kekontinuan di suatu titik.</caption>
     <sidebyside>
-    <image width="50%" source="Continuity_1"/>
-    <image width="50%" source="Continuity_2"/>
+    <image width="50%" source="Continuity_1">
+      <description>Grafik biru fungsi kontinu melalui titik di atas x sama dengan a. Dua garis putus-putus magenta pada tinggi f(a) dikurangi epsilon dan f(a) ditambah epsilon membatasi pita horizontal yang diinginkan.</description>
+    </image>
+    <image width="50%" source="Continuity_2">
+      <description>Grafik biru yang sama dengan pita horizontal epsilon, ditambah dua garis putus-putus merah pada x sama dengan a dikurangi delta dan a ditambah delta. Bagian grafik di antara kedua batas delta berada di dalam pita epsilon.</description>
+    </image>
     </sidebyside>
   </figure>
 
   <p>
-    Let's deal with the first statement,
-    making the values of <m>f(x)</m>
-    <q>as close to <m>f(a)</m> as we want</q>. What this means is that if we set any tolerance, say <m>0.0001</m>,
-    then we can make the values of <m>f(x)</m> within <m>0.0001</m> of <m>f(a)</m>.
-    Since the absolute value <m>| f(x)-f(a) |</m> measures how close <m>f(x)</m> is to <m>f(a)</m>,
-    we can rewrite the statement that the values of <m>f(x)</m> are within <m>0.0001</m> of <m>f(a)</m> as <m>| f(x) - f(a) | \lt  0.0001</m>.
-    Of course, <m>0.0001</m> may not be as close as we want to <m>f(a)</m>,
-    so we need a way to indicate that we can make the values of <m>f(x)</m> arbitrarily close to <m>f(a)</m> <mdash/> within any tolerance at all.
-    We do this by making the tolerance a parameter, <m>\epsilon</m>.
-    Then our job is to make the values of <m>f(x)</m> within
-    <m>\epsilon</m> of <m>f(a)</m> regardless of the size of <m>\epsilon</m>.
-    We write this as
+    Mari kita bahas pernyataan pertama,
+    yakni membuat nilai <m>f(x)</m>
+    <q>sedekat yang kita inginkan dengan <m>f(a)</m></q>. Artinya, jika kita menetapkan sembarang toleransi, misalnya <m>0.0001</m>,
+    kita dapat membuat nilai <m>f(x)</m> berjarak kurang dari <m>0.0001</m> terhadap <m>f(a)</m>.
+    Karena nilai mutlak <m>| f(x)-f(a) |</m> mengukur kedekatan <m>f(x)</m> dengan <m>f(a)</m>,
+    kita dapat menuliskan kembali pernyataan bahwa nilai <m>f(x)</m> berjarak kurang dari <m>0.0001</m> terhadap <m>f(a)</m> sebagai <m>| f(x) - f(a) | \lt  0.0001</m>.
+    Tentu saja, jarak <m>0.0001</m> mungkin belum sedekat yang kita inginkan dengan <m>f(a)</m>,
+    sehingga kita memerlukan cara untuk menyatakan bahwa nilai <m>f(x)</m> dapat dibuat sedekat apa pun dengan <m>f(a)</m> <mdash/> dalam toleransi sebarang.
+    Untuk itu, kita menjadikan toleransi sebagai parameter <m>\epsilon</m>.
+    Tugas kita kemudian adalah membuat nilai <m>f(x)</m> berjarak kurang dari
+    <m>\epsilon</m> terhadap <m>f(a)</m>, berapa pun besar <m>\epsilon</m>.
+    Kita menuliskannya sebagai
     <me>
       | f(x) - f(a) | \lt  \epsilon
     </me>.
   </p>
   <p>
-    We can picture this as shown at left in <xref ref="F_Continuity"/>.
-    Here we want to make the values of <m>f(x)</m> lie within an
-    <m>\epsilon</m> band of <m>f(a)</m> above and below <m>f(a)</m>.
-    That is, we want to be able to make the values of <m>f(x)</m> lie between
-    <m>f(a)-\epsilon</m> and <m>f(a)+\epsilon</m>.
+    Kita dapat menggambarkannya seperti di sisi kiri <xref ref="F_Continuity"/>.
+    Di sini kita ingin membuat nilai <m>f(x)</m> berada di dalam pita
+    <m>\epsilon</m> di sekitar <m>f(a)</m>, yakni di atas dan di bawah <m>f(a)</m>.
+    Dengan kata lain, kita ingin dapat membuat nilai <m>f(x)</m> berada di antara
+    <m>f(a)-\epsilon</m> dan <m>f(a)+\epsilon</m>.
   </p>
   <p>
-    Now we have to address the question of how we
-    <q>make</q>
-    the values of <m>f(x)</m> to be within <m>\epsilon</m> of <m>f(a)</m>.
-    Since the values <m>f(x)</m> are the dependent values,
-    dependent on <m>x</m>, we
-    <q>make</q>
-    the values of <m>f(x)</m> have the property we want by choosing the inputs <m>x</m> appropriately.
-    In order for <m>f</m> to be continuous at <m>x=a</m>,
-    we must be able to find <m>x</m> values close enough to <m>a</m> to force <m>| f(x) - f(a) | \lt \epsilon</m>.
-    Pictorially,
-    we can see how this might happen in the image at right in <xref ref="F_Continuity"/>.
-    We need to be able to find an interval around <m>x=a</m> so that the graph of <m>f(x)</m> lies in the
-    <m>\epsilon</m> band around <m>f(a)</m> for values of <m>x</m> in that interval.
-    In other words,
-    we need to be able to find some positive number <m>\delta</m> so that if <m>x</m> is in the interval <m>(a-\delta,
+    Sekarang kita harus menjawab pertanyaan tentang cara
+    <q>membuat</q>
+    nilai <m>f(x)</m> berjarak kurang dari <m>\epsilon</m> terhadap <m>f(a)</m>.
+    Karena nilai <m>f(x)</m> bergantung pada <m>x</m>, kita
+    <q>membuat</q>
+    nilai <m>f(x)</m> mempunyai sifat yang diinginkan dengan memilih masukan <m>x</m> secara tepat.
+    Agar <m>f</m> kontinu ketika <m>x=a</m>,
+    kita harus dapat memilih nilai <m>x</m> yang cukup dekat dengan <m>a</m> sehingga <m>| f(x) - f(a) | \lt \epsilon</m>.
+    Secara bergambar,
+    kita dapat melihat bagaimana hal ini terjadi pada gambar di sisi kanan <xref ref="F_Continuity"/>.
+    Kita harus dapat menemukan interval di sekitar <m>x=a</m> sedemikian sehingga graf <m>f(x)</m> berada di dalam
+    pita <m>\epsilon</m> di sekitar <m>f(a)</m> untuk nilai-nilai <m>x</m> di interval tersebut.
+    Dengan kata lain,
+    kita harus dapat menemukan suatu bilangan positif <m>\delta</m> sedemikian sehingga jika <m>x</m> berada dalam interval <m>(a-\delta,
     a+\delta)</m>,
-    then the graph of <m>f(x)</m> lies in the
-    <m>\epsilon</m> band around <m>y=f(a)</m>.
-    More formally,
-    if we are given any positive tolerance <m>\epsilon</m>,
-    we must be able to find a positive number <m>\delta</m> so that if <m>| x-a | \lt \delta</m> (that is,
-    <m>x</m> is in the interval <m>(a-\delta, a+\delta)</m>),
-    then <m>| f(x) - f(a) | \lt \epsilon</m> (or <m>f(x)</m> lies in the
-    <m>\epsilon</m> band around <m>y=f(a)</m>).
+    maka graf <m>f(x)</m> berada dalam
+    pita <m>\epsilon</m> di sekitar <m>y=f(a)</m>.
+    Secara lebih formal,
+    jika diberikan sembarang toleransi positif <m>\epsilon</m>,
+    kita harus dapat menemukan bilangan positif <m>\delta</m> sedemikian sehingga jika <m>| x-a | \lt \delta</m> (yakni,
+    <m>x</m> berada dalam interval <m>(a-\delta, a+\delta)</m>),
+    maka <m>| f(x) - f(a) | \lt \epsilon</m> (atau <m>f(x)</m> berada dalam
+    pita <m>\epsilon</m> di sekitar <m>y=f(a)</m>).
   </p>
   <p>
-    This gives us a rigorous definition of what it means for a function
-    <m>f: \R \to \R</m> to be continuous at a point.
+    Pernyataan ini memberikan definisi yang ketat tentang arti suatu fungsi
+    <m>f: \R \to \R</m> kontinu di suatu titik.
   </p>
 
   <definition xml:id="def_epsilon_delta_continuity">
     <statement>
       <p>
-        A function <m>f : \R \to \R</m> is <term>continuous at a point <m>a</m></term> if,
-        given any <m>\epsilon \gt 0</m>,
-        there exists a <m>\delta \gt 0</m> so that
-        <m>| x - a | \lt \delta</m> implies <m>| f(x) - f(a)| \lt \epsilon</m>.
+        Suatu fungsi <m>f : \R \to \R</m> <term>kontinu di titik <m>a</m></term> jika,
+        untuk setiap <m>\epsilon \gt 0</m>,
+        terdapat <m>\delta \gt 0</m> sedemikian sehingga
+        <m>| x - a | \lt \delta</m> mengakibatkan <m>| f(x) - f(a)| \lt \epsilon</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    Note that the value of <m>\delta</m> can depend on the value of <m>a</m> and on <m>\epsilon</m>,
-    but not on values of <m>x</m>.
+    Perhatikan bahwa nilai <m>\delta</m> boleh bergantung pada nilai <m>a</m> dan <m>\epsilon</m>,
+    tetapi tidak pada nilai <m>x</m>.
   </p>
 
   <exploration xml:id="pa_MS_continuity">
     <introduction>
     <p>
-      The <url href="https://www.geogebra.org/m/rym36sqs" visual="geogebra.org/m/rym36sqs">GeoGebra file online</url> will allow us to play around with this definition.
-      Use this GeoGebra applet for the first two problems in this activity.
+      <url href="external/o003-epsilon-delta-lab.html" visual="external/o003-epsilon-delta-lab.html">Laboratorium epsilon-delta O003</url> memungkinkan kita bereksperimen dengan definisi ini tanpa sambungan jaringan.
+      Gunakan laboratorium interaktif ini untuk dua soal pertama dalam aktivitas ini.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Enter <m>f(x)=x\sin(x)</m> as your function.
-            (You can change the viewing window coordinates, the base point <m>a</m>,
-            and the function using the input boxes at the left on the screen.)
-            Determine a value of <m>\delta</m> so that
-            <m>| f(x) - f(1) | \lt 0.5</m> whenever <m>| x - 1 | \lt \delta</m>.
-            Explain your method.
+            Gunakan fungsi tetap <m>f(x)=x\sin(x)</m> pada laboratorium.
+            Anda dapat mengubah jendela tampilan, titik pangkal <m>a</m>,
+            epsilon, dan delta dengan kontrol yang tersedia.
+            Tentukan nilai <m>\delta</m> sedemikian sehingga
+            <m>| f(x) - f(1) | \lt 0.5</m> setiap kali <m>| x - 1 | \lt \delta</m>.
+            Jelaskan metode Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Now find a value of <m>\delta</m> so that
-            <m>| f(x) - f(2.5) | \lt 0.25</m> whenever <m>| x - 2.5 | \lt \delta</m>.
-            Explain your method.
+            Sekarang carilah nilai <m>\delta</m> sedemikian sehingga
+            <m>| f(x) - f(2.5) | \lt 0.25</m> setiap kali <m>| x - 2.5 | \lt \delta</m>.
+            Jelaskan metode Anda.
           </p>
         </statement>
       </task>
@@ -168,20 +171,20 @@
             <task>
               <statement>
                 <p>
-                  What is the negation of the definition of continuity at a point?
-                  In other words, what do we need to do to show that a function
-                  <m>f: \R \to \R</m> is not continuous at a point <m>x=a</m>?
+                  Apakah negasi dari definisi kekontinuan di suatu titik?
+                  Dengan kata lain, apa yang perlu kita lakukan untuk menunjukkan bahwa suatu fungsi
+                  <m>f: \R \to \R</m> tidak kontinu ketika <m>x=a</m>?
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Use the negation of the definition to explain why the function <m>f : \R \to \R</m> defined by
+                  Gunakan negasi definisi tersebut untuk menjelaskan mengapa fungsi <m>f : \R \to \R</m> yang didefinisikan oleh
                   <me>
-                    f(x) = \begin{cases}-1 \amp \text{ if }  x \lt  1 \\ 1 \amp \text{ if }  x \geq 1 \end{cases}
+                    f(x) = \begin{cases}-1 \amp \text{ jika }  x \lt  1 \\ 1 \amp \text{ jika }  x \geq 1 \end{cases}
                   </me>
-                  is not continuous at <m>x=1</m>.
+                  tidak kontinu ketika <m>x=1</m>.
                 </p>
               </statement>
             </task>

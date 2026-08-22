@@ -24,12 +24,17 @@ provenance metadata. No endorsement is claimed.
 
 ## Original self-study companions
 
-The new companion expression in `companion/chapter_*_self_study.ptx` is
-licensed separately under
+The new companion expression in `companion/chapter_*_self_study.ptx` and its
+included guide/mastery fragments is licensed separately under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). It supplies staged
 hints, answers, complete solutions or rubrics, mastery checks, and diagnostics.
 It is not upstream Schlicker/GVSU prose and does not reproduce Petrunin
 expression. See `companion/RIGHTS.md`.
+
+The independently authored, dependency-free Chapter 6 epsilon-delta lab at
+`assets/o003-epsilon-delta-lab.html` is also licensed under CC BY 4.0. It
+replaces an unarchived external interactive dependency; it is not a copy of or
+claim to rights in the upstream GeoGebra object.
 
 ## Software, transformations, fonts, and images
 

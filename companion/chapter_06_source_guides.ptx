@@ -1,0 +1,535 @@
+<section xml:id="o003-c90-ch06-source-guides" xml:lang="id-ID">
+  <title>Panduan kegiatan sumber</title>
+
+  <p>
+    Tiga belas panduan berikut mengikuti semua tugas yang benar-benar meminta
+    jawaban dalam kegiatan Bab 6: empat tugas pendahuluan, lima tugas tentang
+    fungsi antara ruang metrik, dan empat tugas tentang komposisi. Kerjakan
+    pernyataan pada bab utama sebelum membuka petunjuk, jawaban, dan pembahasan.
+  </p>
+
+  <exercise xml:id="o003-c90-ch06-intro-task-01">
+    <title>Toleransi di titik <m>x=1</m></title>
+    <statement>
+      <p>
+        Untuk <m>f(x)=x\sin(x)</m>, tentukan <m>\delta&gt;0</m> sedemikian
+        sehingga <m>|f(x)-f(1)|&lt;0.5</m> setiap kali
+        <m>|x-1|&lt;\delta</m>. Jelaskan metode Anda. Rubrik: berikan satu nilai
+        <m>\delta</m> yang sah dan buktikan implikasinya; pembacaan graf saja
+        belum merupakan pembuktian.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-intro-task-01-hint">
+      <p>
+        Tulis selisih sebagai
+        <m>(x-1)\sin(x)+(\sin(x)-\sin(1))</m>, lalu gunakan
+        <m>|\sin(x)|\leq1</m> dan
+        <m>|\sin(x)-\sin(1)|\leq|x-1|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-intro-task-01-answer">
+      <p>
+        Salah satu pilihan yang sah adalah <m>\delta=1/4</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-intro-task-01-solution">
+      <p>
+        Karena <m>f(1)=\sin(1)</m>, pertidaksamaan segitiga dan Teorema Nilai
+        Rata-Rata, yang memberi
+        <m>|\sin(x)-\sin(1)|\leq|x-1|</m> sebab
+        <m>|\cos(t)|\leq1</m>, menghasilkan
+        <md>
+          <mrow>|f(x)-f(1)|
+          \amp=|(x-1)\sin(x)+\sin(x)-\sin(1)|</mrow>
+          <mrow>\amp\leq |x-1|\,|\sin(x)|+|\sin(x)-\sin(1)|</mrow>
+          <mrow>\amp\leq2|x-1|.</mrow>
+        </md>
+        Jika <m>|x-1|&lt;\delta=1/4</m>, maka
+        <m>|f(x)-f(1)|&lt;2(1/4)=1/2</m>. Jadi nilai tersebut memenuhi syarat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-intro-task-02">
+    <title>Toleransi di titik <m>x=2.5</m></title>
+    <statement>
+      <p>
+        Untuk <m>f(x)=x\sin(x)</m>, tentukan <m>\delta&gt;0</m> sedemikian
+        sehingga <m>|f(x)-f(2.5)|&lt;0.25</m> setiap kali
+        <m>|x-2.5|&lt;\delta</m>. Jelaskan metode Anda. Rubrik: hubungkan batas
+        jarak masukan dengan batas jarak keluaran secara eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-intro-task-02-hint">
+      <p>
+        Tambahkan dan kurangkan <m>2.5\sin(x)</m>. Batas yang dihasilkan adalah
+        <m>(1+2.5)|x-2.5|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-intro-task-02-answer">
+      <p>
+        Salah satu pilihan yang sah adalah <m>\delta=1/14</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-intro-task-02-solution">
+      <p>
+        Dengan <m>a=2.5</m>, kita mempunyai
+        <md>
+          <mrow>|f(x)-f(a)|
+          \amp=|(x-a)\sin(x)+a(\sin(x)-\sin(a))|</mrow>
+          <mrow>\amp\leq |x-a|+a|x-a|</mrow>
+          <mrow>\amp=3.5|x-a|.</mrow>
+        </md>
+        Di sini digunakan <m>|\sin(x)|\leq1</m> dan, melalui Teorema Nilai
+        Rata-Rata serta <m>|\cos(t)|\leq1</m>,
+        <m>|\sin(x)-\sin(a)|\leq|x-a|</m>. Jika
+        <m>|x-2.5|&lt;1/14</m>, maka
+        <m>|f(x)-f(2.5)|&lt;3.5/14=1/4</m>. Jadi
+        <m>\delta=1/14</m> memenuhi syarat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-intro-task-03">
+    <title>Negasi kekontinuan di suatu titik</title>
+    <statement>
+      <p>
+        Nyatakan negasi definisi bahwa <m>f:\R\to\R</m> kontinu di
+        <m>a</m>. Rubrik: balikkan seluruh urutan kuantor dan negasikan
+        pertidaksamaan keluaran dengan tepat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-intro-task-03-hint">
+      <p>
+        Negasi pernyataan
+        <q>untuk setiap <m>\epsilon</m> terdapat <m>\delta</m> sehingga untuk
+        setiap <m>x</m> berlaku implikasi</q> dimulai dengan
+        <q>terdapat <m>\epsilon_0</m> sehingga untuk setiap
+        <m>\delta</m> terdapat <m>x</m></q>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-intro-task-03-answer">
+      <p>
+        Fungsi <m>f</m> tidak kontinu di <m>a</m> jika terdapat
+        <m>\epsilon_0&gt;0</m> sedemikian sehingga, untuk setiap
+        <m>\delta&gt;0</m>, terdapat <m>x\in\R</m> dengan
+        <m>|x-a|&lt;\delta</m> tetapi
+        <m>|f(x)-f(a)|\geq\epsilon_0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-intro-task-03-solution">
+      <p>
+        Kekontinuan di <m>a</m> menyatakan
+        <me>
+          \forall\epsilon&gt;0\;\exists\delta&gt;0\;\forall x\in\R,
+          \quad |x-a|&lt;\delta\Longrightarrow
+          |f(x)-f(a)|&lt;\epsilon.
+        </me>
+        Ketika menegasikan, kuantor universal dan eksistensial saling bertukar.
+        Negasi suatu implikasi <m>P\Longrightarrow Q</m> adalah
+        <m>P\land\neg Q</m>, dan negasi
+        <m>|f(x)-f(a)|&lt;\epsilon_0</m> adalah
+        <m>|f(x)-f(a)|\geq\epsilon_0</m>. Karena itu negasinya persis pernyataan
+        pada jawaban. Satu toleransi keluaran tetap harus gagal pada setiap
+        skala masukan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-intro-task-04">
+    <title>Diskontinuitas fungsi loncatan</title>
+    <statement>
+      <p>
+        Misalkan <m>f(x)=-1</m> untuk <m>x&lt;1</m> dan <m>f(x)=1</m> untuk
+        <m>x\geq1</m>. Gunakan negasi definisi untuk membuktikan bahwa
+        <m>f</m> tidak kontinu di <m>x=1</m>. Rubrik: pilih satu
+        <m>\epsilon_0</m> dan, untuk sebarang <m>\delta&gt;0</m>, berikan saksi
+        <m>x</m> yang bergantung pada <m>\delta</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-intro-task-04-hint">
+      <p>
+        Ambil titik sedikit di sebelah kiri <m>1</m>, misalnya
+        <m>x=1-\delta/2</m>, dan bandingkan <m>f(x)</m> dengan <m>f(1)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-intro-task-04-answer">
+      <p>
+        Ambil <m>\epsilon_0=1</m>. Untuk setiap <m>\delta&gt;0</m>, titik
+        <m>x=1-\delta/2</m> memenuhi
+        <m>|x-1|&lt;\delta</m>, tetapi
+        <m>|f(x)-f(1)|=2\geq\epsilon_0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-intro-task-04-solution">
+      <p>
+        Nilai fungsi di titik pangkal adalah <m>f(1)=1</m>. Tetapkan
+        <m>\epsilon_0=1</m> dan ambil sebarang <m>\delta&gt;0</m>. Untuk
+        <m>x=1-\delta/2</m>, berlaku <m>x&lt;1</m>, sehingga <m>f(x)=-1</m>, serta
+        <m>|x-1|=\delta/2&lt;\delta</m>. Akan tetapi,
+        <me>|f(x)-f(1)|=|-1-1|=2\geq1=\epsilon_0.</me>
+        Jadi toleransi keluaran <m>\epsilon_0</m> gagal untuk setiap pilihan
+        <m>\delta</m>. Ini tepat negasi kekontinuan di <m>1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-between-task-01">
+    <title>Fungsi konstan selalu kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang metrik,
+        <m>b\in Y</m>, dan <m>f:X\to Y</m> didefinisikan oleh
+        <m>f(x)=b</m>. Buktikan bahwa <m>f</m> kontinu. Rubrik: periksa
+        definisi di titik sebarang dan berikan pilihan <m>\delta</m> yang
+        tidak bergantung pada <m>x</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-between-task-01-hint">
+      <p>
+        Berapa nilai <m>d_Y(f(x),f(a))</m> untuk dua titik masukan mana pun?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-between-task-01-answer">
+      <p>
+        Fungsi <m>f</m> kontinu; di setiap titik dapat dipilih, misalnya,
+        <m>\delta=1</m> untuk setiap <m>\epsilon&gt;0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-between-task-01-solution">
+      <p>
+        Ambil sebarang <m>a\in X</m> dan <m>\epsilon&gt;0</m>. Pilih
+        <m>\delta=1</m>. Jika <m>d_X(x,a)&lt;\delta</m>, maka karena fungsi
+        tersebut konstan,
+        <me>d_Y(f(x),f(a))=d_Y(b,b)=0&lt;\epsilon.</me>
+        Jadi <m>f</m> kontinu di setiap <m>a\in X</m>, dan karenanya kontinu
+        pada <m>X</m>. Jika <m>X</m> kosong, pernyataan itu berlaku secara
+        hampa.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-between-task-02">
+    <title>Kekontinuan fungsi identitas</title>
+    <statement>
+      <p>
+        Untuk ruang metrik <m>(X,d)</m>, buktikan bahwa fungsi identitas
+        <m>i_X:(X,d)\to(X,d)</m>, dengan <m>i_X(x)=x</m>, kontinu. Rubrik:
+        nyatakan pilihan <m>\delta</m> sebagai fungsi dari
+        <m>\epsilon</m> dan hitung jarak keluaran.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-between-task-02-hint">
+      <p>
+        Domain dan kodomain memakai metrik yang sama, sehingga
+        <m>d(i_X(x),i_X(a))=d(x,a)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-between-task-02-answer">
+      <p>
+        Fungsi identitas kontinu; untuk setiap <m>a</m> dan
+        <m>\epsilon&gt;0</m>, pilih <m>\delta=\epsilon</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-between-task-02-solution">
+      <p>
+        Ambil sebarang <m>a\in X</m> dan <m>\epsilon&gt;0</m>, lalu tetapkan
+        <m>\delta=\epsilon</m>. Jika <m>d(x,a)&lt;\delta</m>, maka
+        <me>
+          d(i_X(x),i_X(a))=d(x,a)&lt;\delta=\epsilon.
+        </me>
+        Jadi <m>i_X</m> kontinu di <m>a</m>. Karena <m>a</m> sebarang,
+        <m>i_X</m> kontinu pada seluruh <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-between-task-03">
+    <title>Dua metrik pada fungsi identitas</title>
+    <statement>
+      <p>
+        Jelaskan mengapa kekontinuan fungsi identitas pada butir sebelumnya
+        tidak bertentangan dengan contoh fungsi identitas dari
+        <m>\R</m> bermetrik Euklides ke <m>\R</m> bermetrik diskret yang tidak
+        kontinu. Rubrik: bedakan fungsi sebagai aturan dari ruang bermetrik
+        yang menjadi domain dan kodomainnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-between-task-03-hint">
+      <p>
+        Tanyakan apakah jarak pada domain dan kodomain sama dalam kedua
+        pernyataan tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-between-task-03-answer">
+      <p>
+        Tidak ada pertentangan: butir sebelumnya memakai metrik <m>d</m> yang
+        sama pada domain dan kodomain, sedangkan contoh tersebut memakai
+        metrik Euklides pada domain dan metrik diskret pada kodomain.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-between-task-03-solution">
+      <p>
+        Rumus kedua fungsi memang sama, yaitu <m>x\mapsto x</m>, tetapi
+        kekontinuan bergantung pada metrik. Untuk
+        <m>i_X:(X,d)\to(X,d)</m>, jarak keluaran sama persis dengan jarak
+        masukan. Pada contoh
+        <m>i:(\R,d_E)\to(\R,d_D)</m>, titik berbeda dapat sedekat apa pun
+        menurut <m>d_E</m>, tetapi jarak keluarannya selalu <m>1</m> menurut
+        <m>d_D</m>. Jadi untuk, misalnya, <m>\epsilon=1/2</m>, tidak ada
+        <m>\delta&gt;0</m> yang bekerja. Perbedaan metrik menjelaskan perbedaan
+        kesimpulan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-between-task-04">
+    <title>Dari metrik taksi ke metrik maksimum</title>
+    <statement>
+      <p>
+        Pada <m>\R^2</m>, misalkan <m>d_T</m> adalah metrik taksi dan
+        <m>d_M</m> metrik maksimum. Untuk
+        <m>f(a,b)=(a+b,b)</m>, buktikan atau sangkal bahwa
+        <m>f:(\R^2,d_T)\to(\R^2,d_M)</m> kontinu. Rubrik: turunkan satu batas
+        global yang membandingkan jarak keluaran dengan jarak masukan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-between-task-04-hint">
+      <p>
+        Untuk <m>u=(x_1,x_2)</m> dan <m>v=(a,b)</m>, batasi
+        <m>|(x_1+x_2)-(a+b)|</m> dengan pertidaksamaan segitiga.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-between-task-04-answer">
+      <p>
+        Fungsi tersebut kontinu, bahkan
+        <m>d_M(f(u),f(v))\leq d_T(u,v)</m>. Pilihan
+        <m>\delta=\epsilon</m> berlaku di setiap titik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-between-task-04-solution">
+      <p>
+        Ambil <m>u=(x_1,x_2)</m> dan <m>v=(a,b)</m>. Maka
+        <md>
+          <mrow>d_M(f(u),f(v))
+          \amp=\max\{|(x_1-a)+(x_2-b)|,|x_2-b|\}</mrow>
+          <mrow>\amp\leq |x_1-a|+|x_2-b|</mrow>
+          <mrow>\amp=d_T(u,v).</mrow>
+        </md>
+        Sekarang ambil sebarang titik <m>v</m> dan
+        <m>\epsilon&gt;0</m>, serta pilih <m>\delta=\epsilon</m>. Jika
+        <m>d_T(u,v)&lt;\delta</m>, pertidaksamaan di atas memberi
+        <m>d_M(f(u),f(v))&lt;\epsilon</m>. Jadi <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-between-task-05">
+    <title>Dari metrik maksimum ke metrik taksi</title>
+    <statement>
+      <p>
+        Dengan fungsi yang sama, buktikan atau sangkal bahwa
+        <m>f:(\R^2,d_M)\to(\R^2,d_T)</m> kontinu. Rubrik: batasi jumlah dua
+        jarak koordinat keluaran dengan kelipatan jarak maksimum masukan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-between-task-05-hint">
+      <p>
+        Setelah memakai pertidaksamaan segitiga pada koordinat pertama,
+        masing-masing <m>|x_1-a|</m> dan <m>|x_2-b|</m> tidak melebihi
+        <m>d_M(u,v)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-between-task-05-answer">
+      <p>
+        Fungsi tersebut kontinu, karena
+        <m>d_T(f(u),f(v))\leq3d_M(u,v)</m>. Pilihan
+        <m>\delta=\epsilon/3</m> berlaku di setiap titik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-between-task-05-solution">
+      <p>
+        Untuk <m>u=(x_1,x_2)</m> dan <m>v=(a,b)</m>, berlaku
+        <md>
+          <mrow>d_T(f(u),f(v))
+          \amp=|(x_1-a)+(x_2-b)|+|x_2-b|</mrow>
+          <mrow>\amp\leq |x_1-a|+2|x_2-b|</mrow>
+          <mrow>\amp\leq3\max\{|x_1-a|,|x_2-b|\}</mrow>
+          <mrow>\amp=3d_M(u,v).</mrow>
+        </md>
+        Untuk sebarang titik <m>v</m> dan <m>\epsilon&gt;0</m>, pilih
+        <m>\delta=\epsilon/3</m>. Jika <m>d_M(u,v)&lt;\delta</m>, maka
+        <m>d_T(f(u),f(v))&lt;3\delta=\epsilon</m>. Jadi <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-composition-task-01">
+    <title>Memulai bukti kekontinuan komposisi</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,d_X)\to(Y,d_Y)</m> dan
+        <m>g:(Y,d_Y)\to(Z,d_Z)</m> kontinu. Nyatakan apa yang harus dibuktikan
+        agar <m>g\circ f</m> kontinu dan sebutkan dua langkah pertama bukti.
+        Rubrik: mulai di titik domain sebarang dan dengan toleransi keluaran
+        sebarang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-composition-task-01-hint">
+      <p>
+        Buka definisi kekontinuan pada seluruh ruang: pertama pilih
+        <m>a\in X</m>, kemudian pilih <m>\epsilon&gt;0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-composition-task-01-answer">
+      <p>
+        Ambil sebarang <m>a\in X</m> dan <m>\epsilon&gt;0</m>. Harus ditemukan
+        <m>\delta&gt;0</m> sehingga
+        <m>d_X(x,a)&lt;\delta</m> mengakibatkan
+        <m>d_Z(g(f(x)),g(f(a)))&lt;\epsilon</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-composition-task-01-solution">
+      <p>
+        Kekontinuan <m>g\circ f</m> berarti kekontinuan di setiap titik
+        <m>a\in X</m>. Karena itu dua langkah pertama adalah menetapkan
+        sebarang <m>a\in X</m> dan kemudian sebarang
+        <m>\epsilon&gt;0</m>. Setelah itu kita harus membangun
+        <m>\delta&gt;0</m>, yang boleh bergantung pada <m>a</m> dan
+        <m>\epsilon</m> tetapi tidak pada <m>x</m>, agar
+        <me>
+          d_X(x,a)&lt;\delta\Longrightarrow
+          d_Z((g\circ f)(x),(g\circ f)(a))&lt;\epsilon.
+        </me>
+        Butir berikutnya membangun <m>\delta</m> melalui ruang antara
+        <m>Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-composition-task-02">
+    <title>Toleransi di ruang antara</title>
+    <statement>
+      <p>
+        Dengan <m>a\in X</m>, <m>b=f(a)</m>, dan
+        <m>\epsilon&gt;0</m>, jelaskan mengapa terdapat
+        <m>\delta_1&gt;0</m> sehingga
+        <m>d_Y(y,b)&lt;\delta_1</m> mengakibatkan
+        <m>d_Z(g(y),g(b))&lt;\epsilon</m>. Rubrik: sebutkan hipotesis dan titik
+        tempat definisi diterapkan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-composition-task-02-hint">
+      <p>
+        Terapkan kekontinuan <m>g</m> di titik <m>b=f(a)\in Y</m> dengan
+        toleransi keluaran <m>\epsilon</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-composition-task-02-answer">
+      <p>
+        Keberadaan <m>\delta_1</m> adalah persis konsekuensi kekontinuan
+        <m>g</m> di <m>b=f(a)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-composition-task-02-solution">
+      <p>
+        Karena <m>f:X\to Y</m>, titik <m>b=f(a)</m> berada dalam <m>Y</m>.
+        Hipotesis menyatakan bahwa <m>g</m> kontinu pada <m>Y</m>, khususnya di
+        <m>b</m>. Dengan menerapkan definisi kekontinuan <m>g</m> di
+        <m>b</m> pada bilangan <m>\epsilon&gt;0</m> yang telah dipilih, kita
+        memperoleh <m>\delta_1&gt;0</m> sedemikian sehingga untuk setiap
+        <m>y\in Y</m>,
+        <me>
+          d_Y(y,b)&lt;\delta_1\Longrightarrow
+          d_Z(g(y),g(b))&lt;\epsilon.
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-composition-task-03">
+    <title>Mengangkut toleransi ke domain</title>
+    <statement>
+      <p>
+        Jelaskan mengapa terdapat <m>\delta_2&gt;0</m> sehingga
+        <m>d_X(x,a)&lt;\delta_2</m> mengakibatkan
+        <m>d_Y(f(x),f(a))&lt;\delta_1</m>. Rubrik: gunakan
+        <m>\delta_1</m> sebagai toleransi keluaran untuk fungsi yang tepat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-composition-task-03-hint">
+      <p>
+        Terapkan kekontinuan <m>f</m> di <m>a</m> dengan
+        <m>\epsilon</m> pada definisi diganti oleh <m>\delta_1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-composition-task-03-answer">
+      <p>
+        Keberadaan <m>\delta_2</m> adalah persis konsekuensi kekontinuan
+        <m>f</m> di <m>a</m> dengan toleransi keluaran
+        <m>\delta_1&gt;0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-composition-task-03-solution">
+      <p>
+        Hipotesis menyatakan bahwa <m>f</m> kontinu pada <m>X</m>, khususnya di
+        titik <m>a</m>. Bilangan <m>\delta_1</m> yang diperoleh pada butir
+        sebelumnya positif, sehingga sah dipakai sebagai toleransi keluaran
+        dalam definisi kekontinuan <m>f</m>. Oleh karena itu ada
+        <m>\delta_2&gt;0</m> sedemikian sehingga
+        <me>
+          d_X(x,a)&lt;\delta_2\Longrightarrow
+          d_Y(f(x),f(a))&lt;\delta_1.
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-composition-task-04">
+    <title>Komposisi fungsi kontinu</title>
+    <statement>
+      <p>
+        Lengkapi pembuktian bahwa
+        <m>g\circ f:(X,d_X)\to(Z,d_Z)</m> kontinu. Rubrik: rangkai dua
+        implikasi metrik, identifikasi <m>b=f(a)</m>, lalu tutup semua kuantor.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-composition-task-04-hint">
+      <p>
+        Pilih <m>\delta=\delta_2</m>. Kedekatan di <m>X</m> mula-mula memberi
+        kedekatan <m>f(x)</m> dengan <m>f(a)=b</m> di <m>Y</m>, lalu memberi
+        kedekatan setelah menerapkan <m>g</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-composition-task-04-answer">
+      <p>
+        Dengan <m>\delta=\delta_2</m>, berlaku
+        <m>d_X(x,a)&lt;\delta</m> mengakibatkan
+        <m>d_Z(g(f(x)),g(f(a)))&lt;\epsilon</m>. Jadi
+        <m>g\circ f</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-composition-task-04-solution">
+      <p>
+        Ambil sebarang <m>a\in X</m> dan <m>\epsilon&gt;0</m>, lalu tetapkan
+        <m>b=f(a)</m>. Kekontinuan <m>g</m> di <m>b</m> menghasilkan
+        <m>\delta_1&gt;0</m> sehingga
+        <m>d_Y(y,b)&lt;\delta_1</m> mengakibatkan
+        <m>d_Z(g(y),g(b))&lt;\epsilon</m>. Kekontinuan <m>f</m> di <m>a</m>,
+        dengan toleransi keluaran <m>\delta_1</m>, menghasilkan
+        <m>\delta_2&gt;0</m> sehingga
+        <m>d_X(x,a)&lt;\delta_2</m> mengakibatkan
+        <m>d_Y(f(x),f(a))&lt;\delta_1</m>.
+      </p>
+      <p>
+        Pilih <m>\delta=\delta_2</m>. Jika
+        <m>d_X(x,a)&lt;\delta</m>, maka
+        <m>d_Y(f(x),b)&lt;\delta_1</m>, dan karenanya
+        <m>d_Z(g(f(x)),g(b))&lt;\epsilon</m>. Karena <m>b=f(a)</m>, ini adalah
+        <m>d_Z((g\circ f)(x),(g\circ f)(a))&lt;\epsilon</m>. Jadi komposisi
+        kontinu di <m>a</m>; karena <m>a</m> sebarang, komposisi kontinu pada
+        <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

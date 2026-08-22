@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-08-22T07:02:44.0300325Z",
+  "status": "pass",
+  "scope": "Final structural, navigation-metadata, and all-page visual QA of the deterministic cumulative Chapters 1–6 PDF, including Chapter 6 and Appendix F.",
+  "sha256": "5085c7d8f29d97c993b663288856f34683c2a6a1c5e19f8620befb3e08c61eaf",
+  "pages": 133,
+  "tagged": false,
+  "pdf": {
+    "path": "output/chapters01-06-pdf/chapters_01_06_reader.pdf",
+    "bytes": 1102652,
+    "sha256": "5085c7d8f29d97c993b663288856f34683c2a6a1c5e19f8620befb3e08c61eaf",
+    "pages": 133,
+    "version": "1.7",
+    "page_size_points": [612, 792],
+    "page_size_name": "US Letter",
+    "rotations": [0],
+    "encrypted": false,
+    "tagged": false,
+    "javascript": false,
+    "acroform": false,
+    "outlines": true,
+    "top_level_outline_entries": 7,
+    "page_labels": true,
+    "link_annotations": 161,
+    "uri_links": 2,
+    "local_lab_uri_links": 2,
+    "poppler_extracted_text_characters": 350902,
+    "poppler_replacement_characters": 0,
+    "poppler_nul_characters": 0,
+    "poppler_cid_tokens": 0,
+    "empty_text_pages": [3],
+    "empty_page_assessment": "Physical page 3 is the intentional blank front-matter verso.",
+    "title": "Topologi: Pendekatan Berbasis Inkuiri",
+    "creator": "LaTeX with hyperref",
+    "producer": "MiKTeX-dvipdfmx (20260404)",
+    "creation_date": "D:20230815000000Z"
+  },
+  "determinism": {
+    "run_1_receipt": "qa/CHAPTER06_PDF_RUN1_HASH.json",
+    "run_2_receipt": "qa/CHAPTER06_PDF_RUN2_HASH.json",
+    "run_1_log": {
+      "path": "qa/CHAPTER06_PDF_BUILD_RUN1.log",
+      "bytes": 70117,
+      "sha256": "6f9c912d7697b3121d1366e943d82fb025ccb20eb25da614e824d5a955a1d196"
+    },
+    "run_2_log": {
+      "path": "qa/CHAPTER06_PDF_BUILD_RUN2.log",
+      "bytes": 70117,
+      "sha256": "ed1538b391fbec569e31c9a5a58505d47164183a3aeca13e4815254340e7e960"
+    },
+    "result": "PASS: both clean fixed-epoch strict builds produced the same 1102652-byte PDF and SHA-256 after deterministic page-label normalization. Build-log bytes differ only in ephemeral build-directory diagnostics."
+  },
+  "final_latex_run": {
+    "log": "qa/CHAPTER06_PDF_BUILD_RUN2.log",
+    "line_span": [1174, 1797],
+    "counts": {
+      "latex_errors": 0,
+      "undefined_control_sequences": 0,
+      "fatal_errors": 0,
+      "emergency_stops": 0,
+      "undefined_references": 0,
+      "multiply_defined_references": 0,
+      "latex_warnings": 0,
+      "package_warnings": 3,
+      "underfull_boxes": 1,
+      "overfull_boxes": 3,
+      "success_markers": 1,
+      "page_label_normalization_markers": 1
+    },
+    "package_warnings": [
+      "xcolor option usenames is obsolete and ignored",
+      "geometry h-direction over-specification",
+      "geometry v-direction over-specification"
+    ],
+    "box_diagnostics": [
+      {
+        "kind": "underfull",
+        "badness": 1043,
+        "tex_lines": "2886-2887",
+        "assessment": "Inherited from the previously admitted irrational-number paragraph; the final pixels remain readable and contained."
+      },
+      {
+        "kind": "overfull",
+        "width_points": 9.81952,
+        "tex_lines": "3281-3281",
+        "location": "Chapter 1 self-study companion title",
+        "assessment": "Previously accepted; final pixels remain inside the physical page."
+      },
+      {
+        "kind": "overfull",
+        "width_points": 6.48035,
+        "tex_lines": "3368-3370",
+        "location": "Chapter 1 self-study companion answer",
+        "assessment": "Previously accepted long answer line; final pixels remain inside the physical page."
+      },
+      {
+        "kind": "overfull",
+        "width_points": 10.19273,
+        "tex_lines": "4415-4415",
+        "location": "Chapter 4 self-study companion title",
+        "assessment": "Previously accepted; final pixels remain inside the physical page."
+      }
+    ],
+    "assessment": "The final internal XeLaTeX pass is error-free and reference-clean. Chapter 6 introduces no new box diagnostic."
+  },
+  "page_label_gate": {
+    "status": "pass",
+    "normalization": "The strict builder writes and reopens an explicit PageLabels number tree after TeX succeeds.",
+    "page_labels_tree": [0, "/r", 6, "/D"],
+    "physical_pages_1_through_7": ["i", "ii", "iii", "iv", "v", "vi", "1"],
+    "chapter_6_physical_page_56": "50",
+    "appendix_f_physical_page_117": "111",
+    "index_physical_page_133": "127",
+    "assessment": "Embedded viewer labels now equal the printed page labels; bookmark destinations, 161 annotations, two local-lab URI links, and all 133 pages survive normalization."
+  },
+  "render": {
+    "dpi": 100,
+    "page_directory": "tmp/pdfs/chapter06-release-pages",
+    "page_png_count": 133,
+    "page_png_bytes": 24538504,
+    "page_pixel_dimensions": [850, 1100],
+    "page_manifest_sha256": "a28db5b69310f7421264920ab87de54139ee5764f833a25a0fe605410d1c7678",
+    "contact_sheet_directory": "tmp/pdfs/chapter06-release-sheets",
+    "contact_sheet_count": 7,
+    "contact_sheet_bytes": 8295043,
+    "contact_sheet_manifest_sha256": "fa0cfce1a0a1177267bed540672500faff2eb7b895921731adc48e3a5f38e0a6",
+    "pixel_equivalence": "All 133 final page PNG hashes and all seven final contact-sheet hashes equal the fully inspected pre-normalization render, proving that the catalog-only page-label repair did not alter visible content."
+  },
+  "inspection": {
+    "all_pages_inspected_at_contact_sheet_scale": true,
+    "contact_sheets_inspected": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png",
+      "contact-04.png",
+      "contact-05.png",
+      "contact-06.png",
+      "contact-07.png"
+    ],
+    "full_size_pages_inspected": [56, 57, 58, 59, 60, 63, 64, 65, 72, 83, 116, 117, 118, 120, 124, 127, 128, 129, 130, 131, 132, 133],
+    "targeted_checks": {
+      "page_3_blank_verso": "PASS: intentional blank front-matter verso",
+      "page_56_chapter_6_start": "PASS: clean chapter transition and heading",
+      "page_57_continuity_figures": "PASS: both epsilon-delta panels are sharp, aligned, and fully contained",
+      "pages_58_and_63_lab_links": "PASS: two printable local-lab links are readable and retained as URI annotations",
+      "page_64_chapter_6_tail": "PASS: intentionally sparse exercise tail without clipping",
+      "page_65_appendix_divider": "PASS: intentional appendix divider",
+      "page_117_appendix_f_start": "PASS: clean transition, readable title, rights note, and first staged solution",
+      "pages_118_through_132_appendix_f": "PASS: dense proofs, quantifiers, integrals, staged hints, answers, solutions, and mastery checks remain legible and contained",
+      "page_133_index": "PASS: final index is readable and balanced"
+    },
+    "layout_checks": {
+      "clipping": "PASS",
+      "overlap": "PASS",
+      "missing_or_broken_glyphs": "PASS",
+      "equation_rendering": "PASS",
+      "pagination": "PASS",
+      "embedded_page_labels": "PASS",
+      "headers_and_footers": "PASS",
+      "figures_and_tables": "PASS",
+      "reading_margins": "PASS",
+      "generated_locale_labels": "PASS",
+      "staged_disclosure_labels": "PASS"
+    }
+  },
+  "findings": [
+    {
+      "severity": "resolved",
+      "code": "embedded_page_labels_normalized",
+      "pages": [6, 7, 56, 117, 133],
+      "detail": "Hyperref originally switched to Arabic labels one physical page early. The strict build now installs and verifies the correct Roman-through-vi and Arabic-from-1 PageLabels tree deterministically."
+    },
+    {
+      "severity": "nonblocking",
+      "code": "inherited_box_diagnostics",
+      "pages": [49, 66, 68, 93],
+      "detail": "One underfull and three overfull diagnostics inherited from earlier admitted chapters remain visually contained; Chapter 6 adds none."
+    },
+    {
+      "severity": "informational",
+      "code": "pdf_not_tagged",
+      "pages": [],
+      "detail": "The PDF has no structure tree or MarkInfo; HTML remains the primary accessible surface. Some math fonts lack ToUnicode mappings, although Poppler reports no replacement, NUL, or cid-token extraction artifacts."
+    }
+  ],
+  "uncertainties": [
+    "This pass verifies final rendering, navigation metadata, and targeted Chapter 6 mathematical surfaces; it does not independently re-proofread every extracted character of the six-chapter translation.",
+    "The inherited box diagnostics remain accepted only because their exact final rendering is contained and readable."
+  ],
+  "result_rationale": "PASS: all 133 pages are visually clean; Chapter 6 figures, formulas, lab fallbacks and full Appendix F support are readable; the strict final pass is error- and reference-clean; page labels match printed numbering; and two clean fixed-epoch builds are byte-identical."
+}

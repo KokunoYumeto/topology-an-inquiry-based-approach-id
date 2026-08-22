@@ -1,68 +1,68 @@
 <section xml:id="sec_cont_func_btwn">
-  <title>Continuous Functions Between Metric Spaces</title>
+  <title>Fungsi Kontinu antara Ruang-Ruang Metrik</title>
   <p>
-    In our preview activity we saw how to formally define what it means for a function
-    <m>f : \R \to \R</m> to be continuous at a point.
+    Dalam aktivitas pendahuluan, kita telah melihat cara mendefinisikan secara formal arti suatu fungsi
+    <m>f : \R \to \R</m> kontinu di suatu titik.
   </p>
   <p>
-    Note that <xref ref="def_epsilon_delta_continuity"/>
-    depends only on being able to measure how close points are to each other.
-    Since that is precisely what a metric does,
-    we can extend this notion of continuity to define continuity for functions between metric spaces.
-    Continuity is an important idea in topology,
-    and we will work with this idea extensively throughout the semester.
+    Perhatikan bahwa <xref ref="def_epsilon_delta_continuity"/>
+    hanya bergantung pada kemampuan untuk mengukur kedekatan antartitik.
+    Karena persis itulah yang dilakukan oleh metrik,
+    kita dapat memperluas gagasan kekontinuan ini untuk mendefinisikan kekontinuan fungsi antara ruang-ruang metrik.
+    Kekontinuan merupakan gagasan penting dalam topologi,
+    dan kita akan banyak menggunakan gagasan ini sepanjang semester.
   </p>
   <p>
-    If we let <m>d_E : \R \times \R \to \R</m> be defined by <m>d_R(x,y) = | x - y |</m>,
-    then we have seen that <m>d_E</m> is a metric on <m>\R</m>
-    (note that <m>d_E</m> is the Euclidean metric on <m>\R</m>).
-    Using this metric we can reformulate what it means for a function
-    <m>f : \R \to \R</m> to be continuous at a point.
+    Jika <m>d_E : \R \times \R \to \R</m> didefinisikan oleh <m>d_E(x,y) = | x - y |</m>,
+    maka kita telah melihat bahwa <m>d_E</m> merupakan metrik pada <m>\R</m>
+    (perhatikan bahwa <m>d_E</m> adalah metrik Euklides pada <m>\R</m>).
+    Dengan menggunakan metrik ini, kita dapat merumuskan kembali arti suatu fungsi
+    <m>f : \R \to \R</m> kontinu di suatu titik.
   </p>
 
   <definition>
-    <title>Alternate Definition</title>
+    <title>Definisi Alternatif</title>
     <statement>
       <p>
-        A function <m>f : \R \to \R</m> is <term>continuous at a point <m>a</m></term> if,
-        given any <m>\epsilon \gt 0</m>,
-        there exists a <m>\delta \gt 0</m> so that
-        <m>d_E(x,a) \lt \delta</m> implies <m>d_E(f(x), f(a)) \lt \epsilon</m>.
+        Suatu fungsi <m>f : \R \to \R</m> <term>kontinu di titik <m>a</m></term> jika,
+        untuk setiap <m>\epsilon \gt 0</m>,
+        terdapat <m>\delta \gt 0</m> sedemikian sehingga
+        <m>d_E(x,a) \lt \delta</m> mengakibatkan <m>d_E(f(x), f(a)) \lt \epsilon</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    This alternate definition depends on the metric <m>d_E</m>.
-    We could easily replace the metric <m>d</m> with any other metric we choose.
-    This allows us to define continuity at a point for functions between metric spaces.
+    Definisi alternatif ini bergantung pada metrik <m>d_E</m>.
+    Kita dapat dengan mudah mengganti metrik <m>d_E</m> dengan metrik lain yang kita pilih.
+    Hal ini memungkinkan kita mendefinisikan kekontinuan di suatu titik bagi fungsi antara ruang-ruang metrik.
   </p>
 
   <definition>
-  <idx><h>continuity at a point in a metric space</h></idx>
+  <idx><h>kekontinuan di suatu titik dalam ruang metrik</h></idx>
     <statement>
       <p>
-        Let <m>(X,d_X)</m> and <m>(Y, d_Y)</m> be metric spaces.
-        A function <m>f:X \to Y</m> is <term>continuous</term> at <m>a \in X</m> if,
-        given any <m>\epsilon \gt 0</m>,
-        there exists a <m>\delta \gt 0</m> so that
-        <m>d_X(x,a)\lt \delta</m> implies <m>d_Y(f(x), f(a)) \lt \epsilon</m>.
+        Misalkan <m>(X,d_X)</m> dan <m>(Y, d_Y)</m> ruang-ruang metrik.
+        Suatu fungsi <m>f:X \to Y</m> <term>kontinu</term> di <m>a \in X</m> jika,
+        untuk setiap <m>\epsilon \gt 0</m>,
+        terdapat <m>\delta \gt 0</m> sedemikian sehingga
+        <m>d_X(x,a)\lt \delta</m> mengakibatkan <m>d_Y(f(x), f(a)) \lt \epsilon</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    Once we have defined continuity at a point,
-    we can define continuous functions.
+    Setelah mendefinisikan kekontinuan di suatu titik,
+    kita dapat mendefinisikan fungsi kontinu.
   </p>
 
   <definition>
-  <idx><h>continuous function</h></idx>
+  <idx><h>fungsi kontinu</h></idx>
     <statement>
       <p>
-        Let <m>(X,d_X)</m> and <m>(Y, d_Y)</m> be metric spaces.
-        A function <m>f:X \to Y</m> is <term>continuous</term>
-        if <m>f</m> is continuous at every point in <m>X</m>.
+        Misalkan <m>(X,d_X)</m> dan <m>(Y, d_Y)</m> ruang-ruang metrik.
+        Suatu fungsi <m>f:X \to Y</m> <term>kontinu</term>
+        jika <m>f</m> kontinu di setiap titik dalam <m>X</m>.
       </p>
     </statement>
   </definition>
@@ -70,66 +70,66 @@
   <example>
     <statement>
       <p>
-        In general, to prove that a function <m>f:X \to Y</m> is continuous,
-        where <m>(X,d_X)</m> and <m>(Y, d_Y)</m> are metric spaces,
-        we begin by choosing an arbitrary element <m>a</m> in <m>X</m>.
-        Then we let <m>\epsilon</m> be a number greater than <m>0</m> and show that there is a <m>\delta \gt 0</m> so that
-        <m>d_Y(f(x),f(a)) \lt  \epsilon</m> whenever <m>d_X(x,a) \lt  \delta</m>.
-        The <m>\delta</m> we need cannot depend on <m>x</m>
-        (since <m>x</m> isn't known),
-        but can depend on the value of <m>a</m> that we choose,
-        and will likely depend on <m>\epsilon</m> as well.
-        That is, there is a function <m>C</m> of only the independent variables <m>a</m> and
-        <m>\epsilon</m> that produces the <m>\delta</m>,
-        or <m>\delta = C(a,\epsilon)</m>.
-        As an example, let <m>X = \R</m> and let <m>d_X</m> be defined as
+        Secara umum, untuk membuktikan bahwa fungsi <m>f:X \to Y</m> kontinu,
+        dengan <m>(X,d_X)</m> dan <m>(Y, d_Y)</m> ruang-ruang metrik,
+        kita mulai dengan memilih unsur sembarang <m>a</m> dalam <m>X</m>.
+        Kemudian kita ambil suatu bilangan <m>\epsilon</m> yang lebih besar dari <m>0</m> dan menunjukkan bahwa terdapat <m>\delta \gt 0</m> sedemikian sehingga
+        <m>d_Y(f(x),f(a)) \lt  \epsilon</m> setiap kali <m>d_X(x,a) \lt  \delta</m>.
+        Nilai <m>\delta</m> yang kita perlukan tidak boleh bergantung pada <m>x</m>
+        (karena <m>x</m> belum diketahui),
+        tetapi boleh bergantung pada nilai <m>a</m> yang kita pilih,
+        dan kemungkinan juga akan bergantung pada <m>\epsilon</m>.
+        Dengan kata lain, terdapat fungsi <m>C</m> yang hanya bergantung pada variabel bebas <m>a</m> dan
+        <m>\epsilon</m> dan menghasilkan <m>\delta</m>,
+        yakni <m>\delta = C(a,\epsilon)</m>.
+        Sebagai contoh, misalkan <m>X = \R</m> dan <m>d_X</m> didefinisikan sebagai
         <me>
           d_X(x,y) = \min\{|x-y|,1\}
         </me>.
       </p>
       <p>
-        The proof that <m>d_X</m> is a metric is left for <xref ref="ex_min_1_metric"/>.
-        Consider <m>f : X \to Y</m> defined by <m>f(x) = x^2</m>,
-        where <m>(Y,d_Y) = (\R, d_E)</m>.
-        To show that <m>f</m> is continuous,
-        we let <m>a \in \R</m> and let <m>\epsilon \gt 0</m>.
+        Pembuktian bahwa <m>d_X</m> merupakan metrik diserahkan kepada <xref ref="ex_min_1_metric"/>.
+        Tinjau <m>f : X \to Y</m> yang didefinisikan oleh <m>f(x) = x^2</m>,
+        dengan <m>(Y,d_Y) = (\R, d_E)</m>.
+        Untuk menunjukkan bahwa <m>f</m> kontinu,
+        kita ambil <m>a \in \R</m> dan <m>\epsilon \gt 0</m>.
       </p>
       <blockquote>
         <p>
-        <em>Scratch work.</em> What happens next is not part of the proof, but shows how we go about finding a <m>\delta</m> we need. We are looking for <m>\delta \gt 0</m> such that <m>d_X(x,a) \lt  \delta</m> implies that <m>d_E(f(x),f(a)) \lt  \epsilon</m>. That is, we want to make
+        <em>Pekerjaan pendahuluan.</em> Langkah-langkah berikut bukan bagian dari pembuktian, tetapi menunjukkan cara kita menemukan <m>\delta</m> yang diperlukan. Kita mencari <m>\delta \gt 0</m> sedemikian sehingga <m>d_X(x,a) \lt  \delta</m> mengakibatkan <m>d_E(f(x),f(a)) \lt  \epsilon</m>. Artinya, kita ingin membuat
         <me>
           d_E(f(x),f(a)) = \sqrt{(f(x)-f(a))^2} = |f(x)-f(a)| = |x^2-a^2| \lt  \epsilon
         </me>
-        whenever
+        setiap kali
         <me>
           d_X(x,a) = \min\{|x-a|, 1\} \lt  \delta
         </me>.
-        Now <m>|x^2-a^2| = |(x-a)(x+a)| = |x-a| \ |x+a|</m>. If <m>d_X(x,a) \lt  \delta</m>, then <m>\min\{|x-a|, 1\} \lt  \delta</m>. If we choose <m>\delta \lt  1</m>, then <m>d_X(x,a) \lt  \delta \lt  1</m> implies that <m>|x-a| \lt  1</m> and so <m>d_X(x,a) = |x-a|</m>. Now
+        Sekarang <m>|x^2-a^2| = |(x-a)(x+a)| = |x-a| \ |x+a|</m>. Jika <m>d_X(x,a) \lt  \delta</m>, maka <m>\min\{|x-a|, 1\} \lt  \delta</m>. Jika kita memilih <m>\delta \lt  1</m>, maka <m>d_X(x,a) \lt  \delta \lt  1</m> mengakibatkan <m>|x-a| \lt  1</m>, sehingga <m>d_X(x,a) = |x-a|</m>. Sekarang
         <me>
           |x+a| = |(x-a) + 2a| \leq |x-a| + 2|a| \lt  1+2|a|
         </me>.
-        It follows that
+        Akibatnya,
         <me>
           |x-a| \ |x+a| \lt  \delta(1+2|a|)
         </me>.
-        To make this product less that <m>\epsilon</m>, we can choose <m>\delta</m> such that <m>\delta(1+2|a|) \lt  \epsilon</m> or <m>\delta \lt  \frac{\epsilon}{1+2|a|}</m>. That is, there is a function <m>C</m> of <m>\epsilon</m> that gives us the <m>\delta</m> we want, namely <m>\delta = C(a,\epsilon) = \left\{1, \frac{\epsilon}{1+2|a|}\right\}</m>.
-        Now we ignore this paragraph and present the proof, which is essentially reversing the steps we just made. If the steps can't be reversed, then we have to rethink our argument. The next step in the proof might seem like magic to the uninitiated reader, but we have seen behind the curtain so it isn't a mystery to us.
+        Agar hasil kali ini lebih kecil daripada <m>\epsilon</m>, kita dapat memilih <m>\delta</m> sedemikian sehingga <m>\delta(1+2|a|) \lt  \epsilon</m>, atau <m>\delta \lt  \frac{\epsilon}{1+2|a|}</m>. Dengan kata lain, pilihan <m>\delta</m> bergantung pada <m>a</m> dan <m>\epsilon</m>; sebagai contoh, kita dapat mengambil <m>\delta = \min\left\{1, \frac{\epsilon}{1+2|a|}\right\}</m>.
+        Sekarang kita kesampingkan paragraf ini dan menyajikan pembuktiannya, yang pada dasarnya membalik langkah-langkah yang baru saja kita lakukan. Jika langkah-langkah itu tidak dapat dibalik, kita harus memikirkan ulang argumen kita. Langkah berikut dalam pembuktian mungkin tampak seperti sulap bagi pembaca yang belum terbiasa, tetapi kita telah melihat apa yang terjadi di balik layar sehingga langkah itu bukan misteri bagi kita.
         </p>
       </blockquote>
       <p>
-        Let <m>\delta</m> be a positive number less than <m>\min\left\{1, \frac{\epsilon}{1+2|a|}\right\}</m>.
-        Then
+        Misalkan <m>\delta</m> suatu bilangan positif yang lebih kecil daripada <m>\min\left\{1, \frac{\epsilon}{1+2|a|}\right\}</m>.
+        Maka
         <me>
           d_X(x,a) = \min\{|x-a|,1\} \lt  \delta
         </me>
-        implies that <m>d_X(x,a) \lt  \delta \lt  1</m> and so <m>d_X(x,a) = |x-a| \lt  \delta \lt  1</m>.
-        Then
+        mengakibatkan <m>d_X(x,a) \lt  \delta \lt  1</m>, sehingga <m>d_X(x,a) = |x-a| \lt  \delta \lt  1</m>.
+        Selanjutnya,
         <me>
           |x+a| = |(x-a) + 2a| \leq |x-a| + 2|a| \lt  1+2|a|
         </me>.
       </p>
       <p>
-        It follows that
+        Akibatnya,
         <md>
           <mrow>d_E(f(x),f(a)) \amp = \sqrt{(f(x)-f(a))^2}</mrow>
           <mrow>\amp = |f(x)-f(a)|</mrow>
@@ -142,42 +142,42 @@
         </md>.
       </p>
       <p>
-        We conclude that <m>f</m> is continuous at every point in <m>X</m> and so <m>f</m> is a continuous function.
+        Kita menyimpulkan bahwa <m>f</m> kontinu di setiap titik dalam <m>X</m>, sehingga <m>f</m> merupakan fungsi kontinu.
       </p>
     </statement>
   </example>
 
   <p>
-    Not all functions are continuous as we see in the next example.
+    Tidak semua fungsi bersifat kontinu, seperti yang akan kita lihat dalam contoh berikut.
   </p>
 
   <example xml:id="exp_not_continuous">
     <statement>
       <p>
-        Let <m>X = Y = \R</m> and define <m>f : X \to Y</m> by <m>f(x) = x</m>.
-        Let <m>d_X</m> be the Euclidean metric and <m>d_Y</m> the discrete metric. (Recall that <m>d_Y(x,y) = 1</m> whenever
-        <m>x \neq y</m>.) Let <m>a \in X</m> and let <m>0 \lt \epsilon \lt 1</m>.
+        Misalkan <m>X = Y = \R</m> dan definisikan <m>f : X \to Y</m> dengan <m>f(x) = x</m>.
+        Misalkan <m>d_X</m> metrik Euklides dan <m>d_Y</m> metrik diskret. (Ingatlah bahwa <m>d_Y(x,y) = 1</m> setiap kali
+        <m>x \neq y</m>.) Misalkan <m>a \in X</m> dan <m>0 \lt \epsilon \lt 1</m>.
       </p>
       <p>
-        Let <m>\delta \gt 0</m>, and let <m>x = a+\frac{\delta}{2}</m>.
-        Then <m>x \neq a</m> and <m>d_X(x,a) \lt  \delta</m>.
-        However,
+        Misalkan <m>\delta \gt 0</m>, dan ambil <m>x = a+\frac{\delta}{2}</m>.
+        Maka <m>x \neq a</m> dan <m>d_X(x,a) \lt  \delta</m>.
+        Akan tetapi,
         <me>
           d_Y(f(x),f(a)) = d_Y(x,a) = 1
         </me>.
       </p>
       <p>
-        So if <m>0 \lt \epsilon \lt 1</m>,
-        there is no <m>\delta \gt 0</m> such that
-        <m>d_X(x,a) \lt \delta</m> implies that <m>d_Y(f(x),f(a)) \lt \epsilon</m>.
-        We conclude that <m>f</m> is continuous at no point in <m>X</m>.
+        Jadi, jika <m>0 \lt \epsilon \lt 1</m>,
+        tidak terdapat <m>\delta \gt 0</m> sedemikian sehingga
+        <m>d_X(x,a) \lt \delta</m> mengakibatkan <m>d_Y(f(x),f(a)) \lt \epsilon</m>.
+        Kita menyimpulkan bahwa <m>f</m> tidak kontinu di titik mana pun dalam <m>X</m>.
       </p>
     </statement>
   </example>
 
   <p>
-    Certain functions are always continuous,
-    as the next activity shows.
+    Fungsi-fungsi tertentu selalu kontinu,
+    seperti ditunjukkan oleh aktivitas berikut.
   </p>
 
   <activity xml:id="act_id_constant_continuous">
@@ -185,32 +185,32 @@
       <task>
         <statement>
           <p>
-            Let <m>(X, d_X)</m> and <m>(Y, d_Y)</m> be metric spaces,
-            and let <m>b \in Y</m>.
-            Define <m>f : X \to Y</m> by
-            <m>f(x) = b</m> for every <m>x \in X</m>.
-            Show that <m>f</m> is a continuous function.
+            Misalkan <m>(X, d_X)</m> dan <m>(Y, d_Y)</m> ruang-ruang metrik,
+            dan misalkan <m>b \in Y</m>.
+            Definisikan <m>f : X \to Y</m> dengan
+            <m>f(x) = b</m> untuk setiap <m>x \in X</m>.
+            Tunjukkan bahwa <m>f</m> merupakan fungsi kontinu.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>(X, d)</m> be a metric space.
-            Define the function <m>i_X : X \to X</m> by
-            <m>i_X(x) = x</m> for every <m>x \in X</m>.
-            Show that <m>i_X</m> is a continuous function.
-            (The function <m>i_X</m> is called the
-            <term>identity function</term>
-              <idx><h>identity function</h></idx>
-            on <m>X</m>.)
+            Misalkan <m>(X, d)</m> suatu ruang metrik.
+            Definisikan fungsi <m>i_X : X \to X</m> dengan
+            <m>i_X(x) = x</m> untuk setiap <m>x \in X</m>.
+            Tunjukkan bahwa <m>i_X</m> merupakan fungsi kontinu.
+            (Fungsi <m>i_X</m> disebut
+            <term>fungsi identitas</term>
+              <idx><h>fungsi identitas</h></idx>
+            pada <m>X</m>.)
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Why doesn't the argument in part (b) contradict <xref ref="exp_not_continuous"/>?
+            Mengapa argumen pada bagian (b) tidak bertentangan dengan <xref ref="exp_not_continuous"/>?
           </p>
         </statement>
       </task>
@@ -218,37 +218,37 @@
   </activity>
 
   <p>
-    More complicated examples are in the next activity.
+    Contoh-contoh yang lebih rumit terdapat dalam aktivitas berikut.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>X = (\R^2, d_T)</m> and <m>Y = (\R^2, d_M)</m>, where
+      Misalkan <m>X = (\R^2, d_T)</m> dan <m>Y = (\R^2, d_M)</m>, dengan
       <me>
         d_T((x_1, x_2), (y_1,y_2)) = | x_1-y_1 | + | x_2-y_2 |
       </me>
-      is the taxicab metric and
+      merupakan metrik taksi dan
       <me>
         d_M((x_1, x_2), (y_1,y_2)) = \max\{| x_1-y_1 |,  | x_2-y_2 |\}
       </me>
-      is the max metric.
-      Define <m>f : \R^2 \to \R^2</m> by <m>f((a,b)) = (a+b, b)</m>.
+      merupakan metrik maksimum.
+      Definisikan <m>f : \R^2 \to \R^2</m> dengan <m>f((a,b)) = (a+b, b)</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Is <m>f</m> a continuous function from <m>X</m> to <m>Y</m>?
-            Justify your answer.
+            Apakah <m>f</m> merupakan fungsi kontinu dari <m>X</m> ke <m>Y</m>?
+            Berikan alasan untuk jawaban Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>f</m> a continuous function from <m>Y</m> to <m>X</m>?
-            Justify your answer.
+            Apakah <m>f</m> merupakan fungsi kontinu dari <m>Y</m> ke <m>X</m>?
+            Berikan alasan untuk jawaban Anda.
           </p>
         </statement>
       </task>

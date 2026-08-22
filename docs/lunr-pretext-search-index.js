@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch05-edition-note",
+  "id": "o003-c90-ch06-edition-note",
   "level": "1",
-  "url": "o003-c90-ch05-edition-note.html",
+  "url": "o003-c90-ch06-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat lima bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat enam bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
 },
 {
   "id": "sec_sets_intro",
@@ -1511,6 +1511,276 @@ var ptx_lunr_docs = [
   "number": "13",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawab benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawab salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya. Sepanjang latihan ini, misalkan dan subhimpunan tak kosong dan terbatas dari (suatu subhimpunan dari disebut terbatas jika terbatas di atas dan di bawah).   Setiap subhimpunan tak kosong dari terbatas.   Jika , maka .   Jika , maka .   Jika suatu subhimpunan tak kosong dari , maka .   Jika suatu subhimpunan tak kosong dari , maka .   Jika suatu subhimpunan tak kosong dari dan dengan dalam metrik Euklides, maka .  "
+},
+{
+  "id": "sec_cont_func_intro",
+  "level": "1",
+  "url": "sec_cont_func_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Kita mungkin telah menjumpai fungsi kontinu sebelumnya. Kekontinuan merupakan pertimbangan penting dalam masalah optimisasi karena suatu fungsi kontinu mencapai nilai maksimum dan nilai minimum pada setiap interval tertutup dan terbatas. Fungsi kontinu juga memenuhi Teorema Nilai Antara, yakni bahwa suatu fungsi kontinu mengambil semua nilai di antara dan pada interval . Salah satu akibat penting Teorema Nilai Antara adalah bahwa jika merupakan fungsi kontinu pada suatu interval dan serta berlainan tanda, maka pasti mempunyai akar di dalam interval . Dalam bagian ini, kita akan mulai menelaah kekontinuan fungsi antara ruang-ruang metrik. Tujuan akhir kita dalam bagian-bagian mendatang adalah memahami fungsi kontinu dengan cukup baik sehingga kita dapat mendefinisikan kekontinuan hanya dalam kaitannya dengan himpunan terbuka.  Dalam kalkulus, kita membahas gagasan kekontinuan. Suatu fungsi (dengan menggunakan metrik Euklides standar) kontinu di titik jika .  Pernyataan ini mengharuskan kita menjelaskan apa artinya suatu fungsi mempunyai limit di sebuah titik. Secara intuitif, gagasannya adalah bahwa fungsi mempunyai limit ketika jika kita dapat membuat nilai sedekat yang kita inginkan dengan dengan memilih sedekat yang diperlukan dengan (tetapi tidak sama dengan) . Untuk memperluas gagasan limit informal ini menjadi kekontinuan di suatu titik, kita dapat mengatakan bahwa fungsi kontinu di titik jika kita dapat membuat nilai sedekat yang kita inginkan dengan dengan memilih sedekat yang diperlukan dengan (kini boleh sama dengan ).  Untuk mendefinisikan kekontinuan dalam konteks yang lebih umum (di ruang topologis), kita memerlukan definisi kekontinuan yang ketat sebagai landasan. Kita akan mulai dengan membahas fungsi kontinu dari ke , lalu mengembangkannya menjadi fungsi kontinu di ruang metrik. Gagasan-gagasan ini pada akhirnya akan memungkinkan kita mendefinisikan fungsi kontinu di ruang topologis.  Kita mulai dengan mempelajari fungsi kontinu dari ke . Tujuan kita adalah memperketat definisi informal mengenai kekontinuan di suatu titik. Untuk melakukannya, kita perlu mendefinisikan secara formal apa yang dimaksud dengan   membuat nilai  sedekat yang kita inginkan dengan , dan    memilih  sedekat yang kita perlukan dengan .      Ilustrasi definisi kekontinuan di suatu titik.    Grafik biru fungsi kontinu melalui titik di atas x sama dengan a. Dua garis putus-putus magenta pada tinggi f(a) dikurangi epsilon dan f(a) ditambah epsilon membatasi pita horizontal yang diinginkan.    Grafik biru yang sama dengan pita horizontal epsilon, ditambah dua garis putus-putus merah pada x sama dengan a dikurangi delta dan a ditambah delta. Bagian grafik di antara kedua batas delta berada di dalam pita epsilon.     Mari kita bahas pernyataan pertama, yakni membuat nilai  sedekat yang kita inginkan dengan . Artinya, jika kita menetapkan sembarang toleransi, misalnya , kita dapat membuat nilai berjarak kurang dari terhadap . Karena nilai mutlak mengukur kedekatan dengan , kita dapat menuliskan kembali pernyataan bahwa nilai berjarak kurang dari terhadap sebagai . Tentu saja, jarak mungkin belum sedekat yang kita inginkan dengan , sehingga kita memerlukan cara untuk menyatakan bahwa nilai dapat dibuat sedekat apa pun dengan  dalam toleransi sebarang. Untuk itu, kita menjadikan toleransi sebagai parameter . Tugas kita kemudian adalah membuat nilai berjarak kurang dari terhadap , berapa pun besar . Kita menuliskannya sebagai .  Kita dapat menggambarkannya seperti di sisi kiri . Di sini kita ingin membuat nilai berada di dalam pita di sekitar , yakni di atas dan di bawah . Dengan kata lain, kita ingin dapat membuat nilai berada di antara dan .  Sekarang kita harus menjawab pertanyaan tentang cara membuat nilai berjarak kurang dari terhadap . Karena nilai bergantung pada , kita membuat nilai mempunyai sifat yang diinginkan dengan memilih masukan secara tepat. Agar kontinu ketika , kita harus dapat memilih nilai yang cukup dekat dengan sehingga . Secara bergambar, kita dapat melihat bagaimana hal ini terjadi pada gambar di sisi kanan . Kita harus dapat menemukan interval di sekitar sedemikian sehingga graf berada di dalam pita di sekitar untuk nilai-nilai di interval tersebut. Dengan kata lain, kita harus dapat menemukan suatu bilangan positif sedemikian sehingga jika berada dalam interval , maka graf berada dalam pita di sekitar . Secara lebih formal, jika diberikan sembarang toleransi positif , kita harus dapat menemukan bilangan positif sedemikian sehingga jika (yakni, berada dalam interval ), maka (atau berada dalam pita di sekitar ).  Pernyataan ini memberikan definisi yang ketat tentang arti suatu fungsi kontinu di suatu titik.    Suatu fungsi  kontinu di titik jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan .    Perhatikan bahwa nilai boleh bergantung pada nilai dan , tetapi tidak pada nilai .     Laboratorium epsilon-delta O003 memungkinkan kita bereksperimen dengan definisi ini tanpa sambungan jaringan. Gunakan laboratorium interaktif ini untuk dua soal pertama dalam aktivitas ini.    Gunakan fungsi tetap pada laboratorium. Anda dapat mengubah jendela tampilan, titik pangkal , epsilon, dan delta dengan kontrol yang tersedia. Tentukan nilai sedemikian sehingga setiap kali . Jelaskan metode Anda.    Sekarang carilah nilai sedemikian sehingga setiap kali . Jelaskan metode Anda.    Apakah negasi dari definisi kekontinuan di suatu titik? Dengan kata lain, apa yang perlu kita lakukan untuk menunjukkan bahwa suatu fungsi tidak kontinu ketika ?   Gunakan negasi definisi tersebut untuk menjelaskan mengapa fungsi yang didefinisikan oleh tidak kontinu ketika .    "
+},
+{
+  "id": "F_Continuity",
+  "level": "2",
+  "url": "sec_cont_func_intro.html#F_Continuity",
+  "type": "Gambar",
+  "number": "6.1",
+  "title": "",
+  "body": " Ilustrasi definisi kekontinuan di suatu titik.    Grafik biru fungsi kontinu melalui titik di atas x sama dengan a. Dua garis putus-putus magenta pada tinggi f(a) dikurangi epsilon dan f(a) ditambah epsilon membatasi pita horizontal yang diinginkan.    Grafik biru yang sama dengan pita horizontal epsilon, ditambah dua garis putus-putus merah pada x sama dengan a dikurangi delta dan a ditambah delta. Bagian grafik di antara kedua batas delta berada di dalam pita epsilon.    "
+},
+{
+  "id": "def_epsilon_delta_continuity",
+  "level": "2",
+  "url": "sec_cont_func_intro.html#def_epsilon_delta_continuity",
+  "type": "Definisi",
+  "number": "6.2",
+  "title": "",
+  "body": "  Suatu fungsi  kontinu di titik jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan .   "
+},
+{
+  "id": "pa_MS_continuity",
+  "level": "2",
+  "url": "sec_cont_func_intro.html#pa_MS_continuity",
+  "type": "Aktivitas Persiapan",
+  "number": "6.1",
+  "title": "",
+  "body": "   Laboratorium epsilon-delta O003 memungkinkan kita bereksperimen dengan definisi ini tanpa sambungan jaringan. Gunakan laboratorium interaktif ini untuk dua soal pertama dalam aktivitas ini.    Gunakan fungsi tetap pada laboratorium. Anda dapat mengubah jendela tampilan, titik pangkal , epsilon, dan delta dengan kontrol yang tersedia. Tentukan nilai sedemikian sehingga setiap kali . Jelaskan metode Anda.    Sekarang carilah nilai sedemikian sehingga setiap kali . Jelaskan metode Anda.    Apakah negasi dari definisi kekontinuan di suatu titik? Dengan kata lain, apa yang perlu kita lakukan untuk menunjukkan bahwa suatu fungsi tidak kontinu ketika ?   Gunakan negasi definisi tersebut untuk menjelaskan mengapa fungsi yang didefinisikan oleh tidak kontinu ketika .   "
+},
+{
+  "id": "sec_cont_func_btwn",
+  "level": "1",
+  "url": "sec_cont_func_btwn.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Fungsi Kontinu antara Ruang-Ruang Metrik",
+  "body": " Fungsi Kontinu antara Ruang-Ruang Metrik  Dalam aktivitas pendahuluan, kita telah melihat cara mendefinisikan secara formal arti suatu fungsi kontinu di suatu titik.  Perhatikan bahwa hanya bergantung pada kemampuan untuk mengukur kedekatan antartitik. Karena persis itulah yang dilakukan oleh metrik, kita dapat memperluas gagasan kekontinuan ini untuk mendefinisikan kekontinuan fungsi antara ruang-ruang metrik. Kekontinuan merupakan gagasan penting dalam topologi, dan kita akan banyak menggunakan gagasan ini sepanjang semester.  Jika didefinisikan oleh , maka kita telah melihat bahwa merupakan metrik pada (perhatikan bahwa adalah metrik Euklides pada ). Dengan menggunakan metrik ini, kita dapat merumuskan kembali arti suatu fungsi kontinu di suatu titik.   Definisi Alternatif   Suatu fungsi  kontinu di titik jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan .    Definisi alternatif ini bergantung pada metrik . Kita dapat dengan mudah mengganti metrik dengan metrik lain yang kita pilih. Hal ini memungkinkan kita mendefinisikan kekontinuan di suatu titik bagi fungsi antara ruang-ruang metrik.   kekontinuan di suatu titik dalam ruang metrik   Misalkan dan ruang-ruang metrik. Suatu fungsi  kontinu di jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan .    Setelah mendefinisikan kekontinuan di suatu titik, kita dapat mendefinisikan fungsi kontinu.   fungsi kontinu   Misalkan dan ruang-ruang metrik. Suatu fungsi  kontinu jika kontinu di setiap titik dalam .      Secara umum, untuk membuktikan bahwa fungsi kontinu, dengan dan ruang-ruang metrik, kita mulai dengan memilih unsur sembarang dalam . Kemudian kita ambil suatu bilangan yang lebih besar dari dan menunjukkan bahwa terdapat sedemikian sehingga setiap kali . Nilai yang kita perlukan tidak boleh bergantung pada (karena belum diketahui), tetapi boleh bergantung pada nilai yang kita pilih, dan kemungkinan juga akan bergantung pada . Dengan kata lain, terdapat fungsi yang hanya bergantung pada variabel bebas dan dan menghasilkan , yakni . Sebagai contoh, misalkan dan didefinisikan sebagai .  Pembuktian bahwa merupakan metrik diserahkan kepada . Tinjau yang didefinisikan oleh , dengan . Untuk menunjukkan bahwa kontinu, kita ambil dan .    Pekerjaan pendahuluan. Langkah-langkah berikut bukan bagian dari pembuktian, tetapi menunjukkan cara kita menemukan yang diperlukan. Kita mencari sedemikian sehingga mengakibatkan . Artinya, kita ingin membuat setiap kali . Sekarang . Jika , maka . Jika kita memilih , maka mengakibatkan , sehingga . Sekarang . Akibatnya, . Agar hasil kali ini lebih kecil daripada , kita dapat memilih sedemikian sehingga , atau . Dengan kata lain, pilihan bergantung pada dan ; sebagai contoh, kita dapat mengambil . Sekarang kita kesampingkan paragraf ini dan menyajikan pembuktiannya, yang pada dasarnya membalik langkah-langkah yang baru saja kita lakukan. Jika langkah-langkah itu tidak dapat dibalik, kita harus memikirkan ulang argumen kita. Langkah berikut dalam pembuktian mungkin tampak seperti sulap bagi pembaca yang belum terbiasa, tetapi kita telah melihat apa yang terjadi di balik layar sehingga langkah itu bukan misteri bagi kita.   Misalkan suatu bilangan positif yang lebih kecil daripada . Maka mengakibatkan , sehingga . Selanjutnya, .  Akibatnya, .  Kita menyimpulkan bahwa kontinu di setiap titik dalam , sehingga merupakan fungsi kontinu.    Tidak semua fungsi bersifat kontinu, seperti yang akan kita lihat dalam contoh berikut.    Misalkan dan definisikan dengan . Misalkan metrik Euklides dan metrik diskret. (Ingatlah bahwa setiap kali .) Misalkan dan .  Misalkan , dan ambil . Maka dan . Akan tetapi, .  Jadi, jika , tidak terdapat sedemikian sehingga mengakibatkan . Kita menyimpulkan bahwa tidak kontinu di titik mana pun dalam .    Fungsi-fungsi tertentu selalu kontinu, seperti ditunjukkan oleh aktivitas berikut.    Misalkan dan ruang-ruang metrik, dan misalkan . Definisikan dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu.    Misalkan suatu ruang metrik. Definisikan fungsi dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu. (Fungsi disebut fungsi identitas  fungsi identitas pada .)    Mengapa argumen pada bagian (b) tidak bertentangan dengan ?    Contoh-contoh yang lebih rumit terdapat dalam aktivitas berikut.    Misalkan dan , dengan merupakan metrik taksi dan merupakan metrik maksimum. Definisikan dengan .    Apakah merupakan fungsi kontinu dari ke ? Berikan alasan untuk jawaban Anda.    Apakah merupakan fungsi kontinu dari ke ? Berikan alasan untuk jawaban Anda.    "
+},
+{
+  "id": "definition-18",
+  "level": "2",
+  "url": "sec_cont_func_btwn.html#definition-18",
+  "type": "Definisi",
+  "number": "6.3",
+  "title": "Definisi Alternatif.",
+  "body": " Definisi Alternatif   Suatu fungsi  kontinu di titik jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan .   "
+},
+{
+  "id": "definition-19",
+  "level": "2",
+  "url": "sec_cont_func_btwn.html#definition-19",
+  "type": "Definisi",
+  "number": "6.4",
+  "title": "",
+  "body": " kekontinuan di suatu titik dalam ruang metrik   Misalkan dan ruang-ruang metrik. Suatu fungsi  kontinu di jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan .   "
+},
+{
+  "id": "definition-20",
+  "level": "2",
+  "url": "sec_cont_func_btwn.html#definition-20",
+  "type": "Definisi",
+  "number": "6.5",
+  "title": "",
+  "body": " fungsi kontinu   Misalkan dan ruang-ruang metrik. Suatu fungsi  kontinu jika kontinu di setiap titik dalam .   "
+},
+{
+  "id": "example-3",
+  "level": "2",
+  "url": "sec_cont_func_btwn.html#example-3",
+  "type": "Contoh",
+  "number": "6.6",
+  "title": "",
+  "body": "  Secara umum, untuk membuktikan bahwa fungsi kontinu, dengan dan ruang-ruang metrik, kita mulai dengan memilih unsur sembarang dalam . Kemudian kita ambil suatu bilangan yang lebih besar dari dan menunjukkan bahwa terdapat sedemikian sehingga setiap kali . Nilai yang kita perlukan tidak boleh bergantung pada (karena belum diketahui), tetapi boleh bergantung pada nilai yang kita pilih, dan kemungkinan juga akan bergantung pada . Dengan kata lain, terdapat fungsi yang hanya bergantung pada variabel bebas dan dan menghasilkan , yakni . Sebagai contoh, misalkan dan didefinisikan sebagai .  Pembuktian bahwa merupakan metrik diserahkan kepada . Tinjau yang didefinisikan oleh , dengan . Untuk menunjukkan bahwa kontinu, kita ambil dan .    Pekerjaan pendahuluan. Langkah-langkah berikut bukan bagian dari pembuktian, tetapi menunjukkan cara kita menemukan yang diperlukan. Kita mencari sedemikian sehingga mengakibatkan . Artinya, kita ingin membuat setiap kali . Sekarang . Jika , maka . Jika kita memilih , maka mengakibatkan , sehingga . Sekarang . Akibatnya, . Agar hasil kali ini lebih kecil daripada , kita dapat memilih sedemikian sehingga , atau . Dengan kata lain, pilihan bergantung pada dan ; sebagai contoh, kita dapat mengambil . Sekarang kita kesampingkan paragraf ini dan menyajikan pembuktiannya, yang pada dasarnya membalik langkah-langkah yang baru saja kita lakukan. Jika langkah-langkah itu tidak dapat dibalik, kita harus memikirkan ulang argumen kita. Langkah berikut dalam pembuktian mungkin tampak seperti sulap bagi pembaca yang belum terbiasa, tetapi kita telah melihat apa yang terjadi di balik layar sehingga langkah itu bukan misteri bagi kita.   Misalkan suatu bilangan positif yang lebih kecil daripada . Maka mengakibatkan , sehingga . Selanjutnya, .  Akibatnya, .  Kita menyimpulkan bahwa kontinu di setiap titik dalam , sehingga merupakan fungsi kontinu.   "
+},
+{
+  "id": "exp_not_continuous",
+  "level": "2",
+  "url": "sec_cont_func_btwn.html#exp_not_continuous",
+  "type": "Contoh",
+  "number": "6.7",
+  "title": "",
+  "body": "  Misalkan dan definisikan dengan . Misalkan metrik Euklides dan metrik diskret. (Ingatlah bahwa setiap kali .) Misalkan dan .  Misalkan , dan ambil . Maka dan . Akan tetapi, .  Jadi, jika , tidak terdapat sedemikian sehingga mengakibatkan . Kita menyimpulkan bahwa tidak kontinu di titik mana pun dalam .   "
+},
+{
+  "id": "act_id_constant_continuous",
+  "level": "2",
+  "url": "sec_cont_func_btwn.html#act_id_constant_continuous",
+  "type": "Kegiatan",
+  "number": "6.2",
+  "title": "",
+  "body": "  Misalkan dan ruang-ruang metrik, dan misalkan . Definisikan dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu.    Misalkan suatu ruang metrik. Definisikan fungsi dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu. (Fungsi disebut fungsi identitas  fungsi identitas pada .)    Mengapa argumen pada bagian (b) tidak bertentangan dengan ?   "
+},
+{
+  "id": "activity-25",
+  "level": "2",
+  "url": "sec_cont_func_btwn.html#activity-25",
+  "type": "Kegiatan",
+  "number": "6.3",
+  "title": "",
+  "body": "  Misalkan dan , dengan merupakan metrik taksi dan merupakan metrik maksimum. Definisikan dengan .    Apakah merupakan fungsi kontinu dari ke ? Berikan alasan untuk jawaban Anda.    Apakah merupakan fungsi kontinu dari ke ? Berikan alasan untuk jawaban Anda.   "
+},
+{
+  "id": "sec_comp_cont_func",
+  "level": "1",
+  "url": "sec_comp_cont_func.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Komposit Fungsi Kontinu",
+  "body": " Komposit Fungsi Kontinu  Misalkan , , dan merupakan ruang-ruang metrik, dan andaikan serta merupakan fungsi kontinu. Wajar jika kita bertanya apakah komposit juga merupakan fungsi kontinu.    Misalkan , , dan merupakan ruang-ruang metrik, dan andaikan serta merupakan fungsi kontinu. Kita akan membuktikan bahwa merupakan fungsi kontinu.    Apa yang harus kita lakukan untuk menunjukkan bahwa merupakan fungsi kontinu? Apa dua langkah pertama dalam pembuktian kita?    Misalkan dan misalkan . Andaikan diberikan . Jelaskan mengapa pasti ada sedemikian sehingga mengakibatkan .    Sekarang jelaskan mengapa ada sedemikian sehingga mengakibatkan .    Buktikan bahwa merupakan fungsi kontinu.    Kekontinuan merupakan konsep penting dalam topologi. Kita telah melihat cara mendefinisikan kekontinuan di ruang metrik, dan tidak lama lagi kita akan memperluas gagasan ini untuk mendefinisikan kekontinuan tanpa merujuk pada metrik sama sekali. Dengan demikian, kelak kita dapat mendefinisikan fungsi kontinu di antara sebarang ruang topologis.  "
+},
+{
+  "id": "activity-26",
+  "level": "2",
+  "url": "sec_comp_cont_func.html#activity-26",
+  "type": "Kegiatan",
+  "number": "6.4",
+  "title": "",
+  "body": "  Misalkan , , dan merupakan ruang-ruang metrik, dan andaikan serta merupakan fungsi kontinu. Kita akan membuktikan bahwa merupakan fungsi kontinu.    Apa yang harus kita lakukan untuk menunjukkan bahwa merupakan fungsi kontinu? Apa dua langkah pertama dalam pembuktian kita?    Misalkan dan misalkan . Andaikan diberikan . Jelaskan mengapa pasti ada sedemikian sehingga mengakibatkan .    Sekarang jelaskan mengapa ada sedemikian sehingga mengakibatkan .    Buktikan bahwa merupakan fungsi kontinu.   "
+},
+{
+  "id": "sec_cont_func_summ",
+  "level": "1",
+  "url": "sec_cont_func_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan-gagasan penting yang kita bahas dalam bagian ini mencakup hal-hal berikut.   Misalkan dan merupakan ruang metrik. Suatu fungsi kontinu di jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan .    Misalkan dan merupakan ruang metrik. Suatu fungsi kontinu jika kontinu di setiap titik dalam .     "
+},
+{
+  "id": "sec_cont_func_exer",
+  "level": "1",
+  "url": "sec_cont_func_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Misalkan didefinisikan oleh , dengan metrik Euklides pada domain maupun kodomain. Apakah kontinu di ? Buktikan jawaban Anda.    Misalkan didefinisikan oleh Apakah kontinu di ? Buktikan jawaban Anda.    Misalkan , dengan sebagai metrik Euklides.   Misalkan . Buktikan atau berikan contoh tandingan: fungsi yang didefinisikan oleh bersifat kontinu.   Misalkan , dengan sebagai metrik maksimum. Buktikan atau berikan contoh tandingan: fungsi yang didefinisikan oleh bersifat kontinu.    Misalkan sebarang himpunan dan definisikan dengan  meminta kita menunjukkan bahwa merupakan metrik (metrik diskret) pada . Misalkan dan merupakan ruang metrik, dengan sebagai metrik diskret. Tentukan semua fungsi kontinu dari ke .    Misalkan dan merupakan fungsi kontinu dari ke .   Misalkan dengan dan definisikan dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu.   Definisikan dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu.    Misalkan dan merupakan fungsi kontinu dari ke . Dalam soal ini, kita akan membuktikan bahwa merupakan fungsi kontinu dari ke . Misalkan berada di , dan ikuti langkah-langkah berikut untuk menunjukkan bahwa kontinu di . Misalkan suatu bilangan positif.   Mula-mula, kita akan menyatakan dalam bentuk yang lebih berguna. Gunakan fakta bahwa dan untuk menunjukkan bahwa .   Jelaskan mengapa terdapat bilangan-bilangan positif , , , dan sedemikian sehingga .   Gunakan hasil dari (a) dan (b) untuk menunjukkan bahwa kontinu di . (Petunjuk: .)    Misalkan dan merupakan fungsi dari ke .   Benarkah bahwa jika merupakan fungsi kontinu, maka dan juga merupakan fungsi kontinu? Buktikan jawaban Anda.   Benarkah bahwa jika merupakan fungsi kontinu, maka dan juga merupakan fungsi kontinu? Buktikan jawaban Anda.    Misalkan memetakan ke , dengan metrik Euklides pada domain maupun kodomain.   Misalkan . Carilah nilai sedemikian sehingga mengakibatkan . Anda dapat menggunakan Laboratorium epsilon-delta O003 untuk memeriksa nilai Anda secara numerik.   Buktikan bahwa kontinu di .    Definisikan dengan . Buktikan bahwa merupakan metrik.    Misalkan merupakan fungsi kontinu, dengan metrik Euklides pada kedua salinan . Andaikan setiap kali rasional. Buktikan bahwa untuk setiap .   Gunakan .    Misalkan didefinisikan oleh jika irasional dan jika rasional. Gunakan metrik Euklides pada kedua salinan . Tunjukkan bahwa tidak kontinu di titik mana pun dalam .   Gunakan dan .    Misalkan didefinisikan oleh jika irasional dan jika rasional. Gunakan metrik Euklides pada kedua salinan . Tunjukkan bahwa hanya kontinu di .    Misalkan dan himpunan semua fungsi kontinu . Misalkan fungsi jarak pada yang didefinisikan oleh , untuk . Untuk setiap , tetapkan .   Tentukan nilai ketika , , dan .   Tentukan nilai jika dan .   Buktikan bahwa fungsi bersifat kontinu, dengan sebagai metrik Euklides.   Sebelum mencoba membuktikan pernyataan ini, akan membantu jika Anda terlebih dahulu menuliskan secara eksplisit apa artinya kontinu dalam metrik dan .    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Misalkan suatu fungsi, dengan dan sebagai ruang metrik. Jika merupakan metrik diskret dan sebarang metrik, maka kontinu.   Misalkan suatu fungsi, dengan dan sebagai ruang metrik. Jika merupakan metrik diskret dan sebarang metrik, maka kontinu.   Misalkan dan dua metrik pada suatu himpunan . Fungsi identitas yang didefinisikan oleh untuk setiap bersifat kontinu.   Misalkan dan merupakan fungsi kontinu dari (metrik taksi) ke . Maka fungsi dari ke yang didefinisikan oleh untuk setiap merupakan fungsi kontinu.   Jika dan merupakan ruang metrik dengan , maka fungsi konstan yang didefinisikan oleh untuk setiap merupakan fungsi kontinu.   "
+},
+{
+  "id": "exercise-55",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-55",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan didefinisikan oleh , dengan metrik Euklides pada domain maupun kodomain. Apakah kontinu di ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-56",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-56",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan didefinisikan oleh Apakah kontinu di ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-57",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-57",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan , dengan sebagai metrik Euklides.   Misalkan . Buktikan atau berikan contoh tandingan: fungsi yang didefinisikan oleh bersifat kontinu.   Misalkan , dengan sebagai metrik maksimum. Buktikan atau berikan contoh tandingan: fungsi yang didefinisikan oleh bersifat kontinu.  "
+},
+{
+  "id": "exercise-58",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-58",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan sebarang himpunan dan definisikan dengan  meminta kita menunjukkan bahwa merupakan metrik (metrik diskret) pada . Misalkan dan merupakan ruang metrik, dengan sebagai metrik diskret. Tentukan semua fungsi kontinu dari ke .  "
+},
+{
+  "id": "ex_sum_continuous",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#ex_sum_continuous",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Misalkan dan merupakan fungsi kontinu dari ke .   Misalkan dengan dan definisikan dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu.   Definisikan dengan untuk setiap . Tunjukkan bahwa merupakan fungsi kontinu.  "
+},
+{
+  "id": "exercise-60",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-60",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Misalkan dan merupakan fungsi kontinu dari ke . Dalam soal ini, kita akan membuktikan bahwa merupakan fungsi kontinu dari ke . Misalkan berada di , dan ikuti langkah-langkah berikut untuk menunjukkan bahwa kontinu di . Misalkan suatu bilangan positif.   Mula-mula, kita akan menyatakan dalam bentuk yang lebih berguna. Gunakan fakta bahwa dan untuk menunjukkan bahwa .   Jelaskan mengapa terdapat bilangan-bilangan positif , , , dan sedemikian sehingga .   Gunakan hasil dari (a) dan (b) untuk menunjukkan bahwa kontinu di . (Petunjuk: .)  "
+},
+{
+  "id": "exercise-61",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-61",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Misalkan dan merupakan fungsi dari ke .   Benarkah bahwa jika merupakan fungsi kontinu, maka dan juga merupakan fungsi kontinu? Buktikan jawaban Anda.   Benarkah bahwa jika merupakan fungsi kontinu, maka dan juga merupakan fungsi kontinu? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-62",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-62",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Misalkan memetakan ke , dengan metrik Euklides pada domain maupun kodomain.   Misalkan . Carilah nilai sedemikian sehingga mengakibatkan . Anda dapat menggunakan Laboratorium epsilon-delta O003 untuk memeriksa nilai Anda secara numerik.   Buktikan bahwa kontinu di .  "
+},
+{
+  "id": "ex_min_1_metric",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#ex_min_1_metric",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Definisikan dengan . Buktikan bahwa merupakan metrik.  "
+},
+{
+  "id": "exercise-64",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-64",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Misalkan merupakan fungsi kontinu, dengan metrik Euklides pada kedua salinan . Andaikan setiap kali rasional. Buktikan bahwa untuk setiap .   Gunakan .  "
+},
+{
+  "id": "exercise-65",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-65",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Misalkan didefinisikan oleh jika irasional dan jika rasional. Gunakan metrik Euklides pada kedua salinan . Tunjukkan bahwa tidak kontinu di titik mana pun dalam .   Gunakan dan .  "
+},
+{
+  "id": "exercise-66",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-66",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Misalkan didefinisikan oleh jika irasional dan jika rasional. Gunakan metrik Euklides pada kedua salinan . Tunjukkan bahwa hanya kontinu di .  "
+},
+{
+  "id": "exercise-67",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-67",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Misalkan dan himpunan semua fungsi kontinu . Misalkan fungsi jarak pada yang didefinisikan oleh , untuk . Untuk setiap , tetapkan .   Tentukan nilai ketika , , dan .   Tentukan nilai jika dan .   Buktikan bahwa fungsi bersifat kontinu, dengan sebagai metrik Euklides.   Sebelum mencoba membuktikan pernyataan ini, akan membantu jika Anda terlebih dahulu menuliskan secara eksplisit apa artinya kontinu dalam metrik dan .  "
+},
+{
+  "id": "exercise-68",
+  "level": "2",
+  "url": "sec_cont_func_exer.html#exercise-68",
+  "type": "Latihan",
+  "number": "14",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Misalkan suatu fungsi, dengan dan sebagai ruang metrik. Jika merupakan metrik diskret dan sebarang metrik, maka kontinu.   Misalkan suatu fungsi, dengan dan sebagai ruang metrik. Jika merupakan metrik diskret dan sebarang metrik, maka kontinu.   Misalkan dan dua metrik pada suatu himpunan . Fungsi identitas yang didefinisikan oleh untuk setiap bersifat kontinu.   Misalkan dan merupakan fungsi kontinu dari (metrik taksi) ke . Maka fungsi dari ke yang didefinisikan oleh untuk setiap merupakan fungsi kontinu.   Jika dan merupakan ruang metrik dengan , maka fungsi konstan yang didefinisikan oleh untuk setiap merupakan fungsi kontinu.  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -3032,6 +3302,447 @@ var ptx_lunr_docs = [
   "number": "E.54",
   "title": "Aproksimasi rasional pada ketelitian yang ditentukan.",
   "body": "Aproksimasi rasional pada ketelitian yang ditentukan  Untuk sembarang dan , berikan konstruksi eksplisit bilangan rasional yang memenuhi . Gunakan hasil latihan sebelumnya dan fungsi lantai. Kemudian jalankan konstruksi tersebut untuk dan dengan memilih .   Rubrik. Nyatakan pilihan dan , turunkan batas galat tanpa mengandalkan desimal, hitung pecahan pada contoh, dan jelaskan mengapa konstruksi membuktikan bahwa rapat dalam .    Langkah 1. Pilih dengan , lalu gunakan .   Langkah 2. Setelah membagi dengan , jarak dari ke kurang dari .   Langkah 3. Untuk contoh, gunakan .   Pilih dengan , tetapkan , dan ambil . Maka . Untuk contoh, dan .   Menurut latihan sebelumnya, pilih sehingga . Ambil bilangan bulat . Definisi fungsi lantai memberi Karena , pembagian dengan mempertahankan arah pertidaksamaan dan menghasilkan Dengan , kita memperoleh , sehingga .  Untuk , , dan , berlaku . Pertidaksamaan dapat diperiksa dengan menguadratkan semua suku positif: . Jadi dan   Konstruksi ini berlaku untuk setiap pusat real dan setiap radius . Karena itu setiap bola terbuka memuat suatu , yang tepat menyatakan bahwa rapat dalam .  "
+},
+{
+  "id": "o003-c90-ch06-source-guides",
+  "level": "1",
+  "url": "o003-c90-ch06-source-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan kegiatan sumber",
+  "body": " Panduan kegiatan sumber  Tiga belas panduan berikut mengikuti semua tugas yang benar-benar meminta jawaban dalam kegiatan Bab 6: empat tugas pendahuluan, lima tugas tentang fungsi antara ruang metrik, dan empat tugas tentang komposisi. Kerjakan pernyataan pada bab utama sebelum membuka petunjuk, jawaban, dan pembahasan.  Toleransi di titik  Untuk , tentukan sedemikian sehingga setiap kali . Jelaskan metode Anda. Rubrik: berikan satu nilai yang sah dan buktikan implikasinya; pembacaan graf saja belum merupakan pembuktian.   Tulis selisih sebagai , lalu gunakan dan .   Salah satu pilihan yang sah adalah .   Karena , pertidaksamaan segitiga dan Teorema Nilai Rata-Rata, yang memberi sebab , menghasilkan Jika , maka . Jadi nilai tersebut memenuhi syarat.   Toleransi di titik  Untuk , tentukan sedemikian sehingga setiap kali . Jelaskan metode Anda. Rubrik: hubungkan batas jarak masukan dengan batas jarak keluaran secara eksplisit.   Tambahkan dan kurangkan . Batas yang dihasilkan adalah .   Salah satu pilihan yang sah adalah .   Dengan , kita mempunyai Di sini digunakan dan, melalui Teorema Nilai Rata-Rata serta , . Jika , maka . Jadi memenuhi syarat.   Negasi kekontinuan di suatu titik  Nyatakan negasi definisi bahwa kontinu di . Rubrik: balikkan seluruh urutan kuantor dan negasikan pertidaksamaan keluaran dengan tepat.   Negasi pernyataan untuk setiap terdapat sehingga untuk setiap berlaku implikasi dimulai dengan terdapat sehingga untuk setiap terdapat .   Fungsi tidak kontinu di jika terdapat sedemikian sehingga, untuk setiap , terdapat dengan tetapi .   Kekontinuan di menyatakan Ketika menegasikan, kuantor universal dan eksistensial saling bertukar. Negasi suatu implikasi adalah , dan negasi adalah . Karena itu negasinya persis pernyataan pada jawaban. Satu toleransi keluaran tetap harus gagal pada setiap skala masukan.   Diskontinuitas fungsi loncatan  Misalkan untuk dan untuk . Gunakan negasi definisi untuk membuktikan bahwa tidak kontinu di . Rubrik: pilih satu dan, untuk sebarang , berikan saksi yang bergantung pada .   Ambil titik sedikit di sebelah kiri , misalnya , dan bandingkan dengan .   Ambil . Untuk setiap , titik memenuhi , tetapi .   Nilai fungsi di titik pangkal adalah . Tetapkan dan ambil sebarang . Untuk , berlaku , sehingga , serta . Akan tetapi, Jadi toleransi keluaran gagal untuk setiap pilihan . Ini tepat negasi kekontinuan di .   Fungsi konstan selalu kontinu  Misalkan dan ruang metrik, , dan didefinisikan oleh . Buktikan bahwa kontinu. Rubrik: periksa definisi di titik sebarang dan berikan pilihan yang tidak bergantung pada .   Berapa nilai untuk dua titik masukan mana pun?   Fungsi kontinu; di setiap titik dapat dipilih, misalnya, untuk setiap .   Ambil sebarang dan . Pilih . Jika , maka karena fungsi tersebut konstan, Jadi kontinu di setiap , dan karenanya kontinu pada . Jika kosong, pernyataan itu berlaku secara hampa.   Kekontinuan fungsi identitas  Untuk ruang metrik , buktikan bahwa fungsi identitas , dengan , kontinu. Rubrik: nyatakan pilihan sebagai fungsi dari dan hitung jarak keluaran.   Domain dan kodomain memakai metrik yang sama, sehingga .   Fungsi identitas kontinu; untuk setiap dan , pilih .   Ambil sebarang dan , lalu tetapkan . Jika , maka Jadi kontinu di . Karena sebarang, kontinu pada seluruh .   Dua metrik pada fungsi identitas  Jelaskan mengapa kekontinuan fungsi identitas pada butir sebelumnya tidak bertentangan dengan contoh fungsi identitas dari bermetrik Euklides ke bermetrik diskret yang tidak kontinu. Rubrik: bedakan fungsi sebagai aturan dari ruang bermetrik yang menjadi domain dan kodomainnya.   Tanyakan apakah jarak pada domain dan kodomain sama dalam kedua pernyataan tersebut.   Tidak ada pertentangan: butir sebelumnya memakai metrik yang sama pada domain dan kodomain, sedangkan contoh tersebut memakai metrik Euklides pada domain dan metrik diskret pada kodomain.   Rumus kedua fungsi memang sama, yaitu , tetapi kekontinuan bergantung pada metrik. Untuk , jarak keluaran sama persis dengan jarak masukan. Pada contoh , titik berbeda dapat sedekat apa pun menurut , tetapi jarak keluarannya selalu menurut . Jadi untuk, misalnya, , tidak ada yang bekerja. Perbedaan metrik menjelaskan perbedaan kesimpulan.   Dari metrik taksi ke metrik maksimum  Pada , misalkan adalah metrik taksi dan metrik maksimum. Untuk , buktikan atau sangkal bahwa kontinu. Rubrik: turunkan satu batas global yang membandingkan jarak keluaran dengan jarak masukan.   Untuk dan , batasi dengan pertidaksamaan segitiga.   Fungsi tersebut kontinu, bahkan . Pilihan berlaku di setiap titik.   Ambil dan . Maka Sekarang ambil sebarang titik dan , serta pilih . Jika , pertidaksamaan di atas memberi . Jadi kontinu.   Dari metrik maksimum ke metrik taksi  Dengan fungsi yang sama, buktikan atau sangkal bahwa kontinu. Rubrik: batasi jumlah dua jarak koordinat keluaran dengan kelipatan jarak maksimum masukan.   Setelah memakai pertidaksamaan segitiga pada koordinat pertama, masing-masing dan tidak melebihi .   Fungsi tersebut kontinu, karena . Pilihan berlaku di setiap titik.   Untuk dan , berlaku Untuk sebarang titik dan , pilih . Jika , maka . Jadi kontinu.   Memulai bukti kekontinuan komposisi  Misalkan dan kontinu. Nyatakan apa yang harus dibuktikan agar kontinu dan sebutkan dua langkah pertama bukti. Rubrik: mulai di titik domain sebarang dan dengan toleransi keluaran sebarang.   Buka definisi kekontinuan pada seluruh ruang: pertama pilih , kemudian pilih .   Ambil sebarang dan . Harus ditemukan sehingga mengakibatkan .   Kekontinuan berarti kekontinuan di setiap titik . Karena itu dua langkah pertama adalah menetapkan sebarang dan kemudian sebarang . Setelah itu kita harus membangun , yang boleh bergantung pada dan tetapi tidak pada , agar Butir berikutnya membangun melalui ruang antara .   Toleransi di ruang antara  Dengan , , dan , jelaskan mengapa terdapat sehingga mengakibatkan . Rubrik: sebutkan hipotesis dan titik tempat definisi diterapkan.   Terapkan kekontinuan di titik dengan toleransi keluaran .   Keberadaan adalah persis konsekuensi kekontinuan di .   Karena , titik berada dalam . Hipotesis menyatakan bahwa kontinu pada , khususnya di . Dengan menerapkan definisi kekontinuan di pada bilangan yang telah dipilih, kita memperoleh sedemikian sehingga untuk setiap ,    Mengangkut toleransi ke domain  Jelaskan mengapa terdapat sehingga mengakibatkan . Rubrik: gunakan sebagai toleransi keluaran untuk fungsi yang tepat.   Terapkan kekontinuan di dengan pada definisi diganti oleh .   Keberadaan adalah persis konsekuensi kekontinuan di dengan toleransi keluaran .   Hipotesis menyatakan bahwa kontinu pada , khususnya di titik . Bilangan yang diperoleh pada butir sebelumnya positif, sehingga sah dipakai sebagai toleransi keluaran dalam definisi kekontinuan . Oleh karena itu ada sedemikian sehingga    Komposisi fungsi kontinu  Lengkapi pembuktian bahwa kontinu. Rubrik: rangkai dua implikasi metrik, identifikasi , lalu tutup semua kuantor.   Pilih . Kedekatan di mula-mula memberi kedekatan dengan di , lalu memberi kedekatan setelah menerapkan .   Dengan , berlaku mengakibatkan . Jadi kontinu.   Ambil sebarang dan , lalu tetapkan . Kekontinuan di menghasilkan sehingga mengakibatkan . Kekontinuan di , dengan toleransi keluaran , menghasilkan sehingga mengakibatkan .  Pilih . Jika , maka , dan karenanya . Karena , ini adalah . Jadi komposisi kontinu di ; karena sebarang, komposisi kontinu pada .   "
+},
+{
+  "id": "o003-c90-ch06-intro-task-01",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-intro-task-01",
+  "type": "Pemeriksaan",
+  "number": "F.1",
+  "title": "Toleransi di titik <span class=\"process-math\">\\(x=1\\)<\/span>.",
+  "body": "Toleransi di titik  Untuk , tentukan sedemikian sehingga setiap kali . Jelaskan metode Anda. Rubrik: berikan satu nilai yang sah dan buktikan implikasinya; pembacaan graf saja belum merupakan pembuktian.   Tulis selisih sebagai , lalu gunakan dan .   Salah satu pilihan yang sah adalah .   Karena , pertidaksamaan segitiga dan Teorema Nilai Rata-Rata, yang memberi sebab , menghasilkan Jika , maka . Jadi nilai tersebut memenuhi syarat.  "
+},
+{
+  "id": "o003-c90-ch06-intro-task-02",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-intro-task-02",
+  "type": "Pemeriksaan",
+  "number": "F.2",
+  "title": "Toleransi di titik <span class=\"process-math\">\\(x=2.5\\)<\/span>.",
+  "body": "Toleransi di titik  Untuk , tentukan sedemikian sehingga setiap kali . Jelaskan metode Anda. Rubrik: hubungkan batas jarak masukan dengan batas jarak keluaran secara eksplisit.   Tambahkan dan kurangkan . Batas yang dihasilkan adalah .   Salah satu pilihan yang sah adalah .   Dengan , kita mempunyai Di sini digunakan dan, melalui Teorema Nilai Rata-Rata serta , . Jika , maka . Jadi memenuhi syarat.  "
+},
+{
+  "id": "o003-c90-ch06-intro-task-03",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-intro-task-03",
+  "type": "Pemeriksaan",
+  "number": "F.3",
+  "title": "Negasi kekontinuan di suatu titik.",
+  "body": "Negasi kekontinuan di suatu titik  Nyatakan negasi definisi bahwa kontinu di . Rubrik: balikkan seluruh urutan kuantor dan negasikan pertidaksamaan keluaran dengan tepat.   Negasi pernyataan untuk setiap terdapat sehingga untuk setiap berlaku implikasi dimulai dengan terdapat sehingga untuk setiap terdapat .   Fungsi tidak kontinu di jika terdapat sedemikian sehingga, untuk setiap , terdapat dengan tetapi .   Kekontinuan di menyatakan Ketika menegasikan, kuantor universal dan eksistensial saling bertukar. Negasi suatu implikasi adalah , dan negasi adalah . Karena itu negasinya persis pernyataan pada jawaban. Satu toleransi keluaran tetap harus gagal pada setiap skala masukan.  "
+},
+{
+  "id": "o003-c90-ch06-intro-task-04",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-intro-task-04",
+  "type": "Pemeriksaan",
+  "number": "F.4",
+  "title": "Diskontinuitas fungsi loncatan.",
+  "body": "Diskontinuitas fungsi loncatan  Misalkan untuk dan untuk . Gunakan negasi definisi untuk membuktikan bahwa tidak kontinu di . Rubrik: pilih satu dan, untuk sebarang , berikan saksi yang bergantung pada .   Ambil titik sedikit di sebelah kiri , misalnya , dan bandingkan dengan .   Ambil . Untuk setiap , titik memenuhi , tetapi .   Nilai fungsi di titik pangkal adalah . Tetapkan dan ambil sebarang . Untuk , berlaku , sehingga , serta . Akan tetapi, Jadi toleransi keluaran gagal untuk setiap pilihan . Ini tepat negasi kekontinuan di .  "
+},
+{
+  "id": "o003-c90-ch06-between-task-01",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-between-task-01",
+  "type": "Pemeriksaan",
+  "number": "F.5",
+  "title": "Fungsi konstan selalu kontinu.",
+  "body": "Fungsi konstan selalu kontinu  Misalkan dan ruang metrik, , dan didefinisikan oleh . Buktikan bahwa kontinu. Rubrik: periksa definisi di titik sebarang dan berikan pilihan yang tidak bergantung pada .   Berapa nilai untuk dua titik masukan mana pun?   Fungsi kontinu; di setiap titik dapat dipilih, misalnya, untuk setiap .   Ambil sebarang dan . Pilih . Jika , maka karena fungsi tersebut konstan, Jadi kontinu di setiap , dan karenanya kontinu pada . Jika kosong, pernyataan itu berlaku secara hampa.  "
+},
+{
+  "id": "o003-c90-ch06-between-task-02",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-between-task-02",
+  "type": "Pemeriksaan",
+  "number": "F.6",
+  "title": "Kekontinuan fungsi identitas.",
+  "body": "Kekontinuan fungsi identitas  Untuk ruang metrik , buktikan bahwa fungsi identitas , dengan , kontinu. Rubrik: nyatakan pilihan sebagai fungsi dari dan hitung jarak keluaran.   Domain dan kodomain memakai metrik yang sama, sehingga .   Fungsi identitas kontinu; untuk setiap dan , pilih .   Ambil sebarang dan , lalu tetapkan . Jika , maka Jadi kontinu di . Karena sebarang, kontinu pada seluruh .  "
+},
+{
+  "id": "o003-c90-ch06-between-task-03",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-between-task-03",
+  "type": "Pemeriksaan",
+  "number": "F.7",
+  "title": "Dua metrik pada fungsi identitas.",
+  "body": "Dua metrik pada fungsi identitas  Jelaskan mengapa kekontinuan fungsi identitas pada butir sebelumnya tidak bertentangan dengan contoh fungsi identitas dari bermetrik Euklides ke bermetrik diskret yang tidak kontinu. Rubrik: bedakan fungsi sebagai aturan dari ruang bermetrik yang menjadi domain dan kodomainnya.   Tanyakan apakah jarak pada domain dan kodomain sama dalam kedua pernyataan tersebut.   Tidak ada pertentangan: butir sebelumnya memakai metrik yang sama pada domain dan kodomain, sedangkan contoh tersebut memakai metrik Euklides pada domain dan metrik diskret pada kodomain.   Rumus kedua fungsi memang sama, yaitu , tetapi kekontinuan bergantung pada metrik. Untuk , jarak keluaran sama persis dengan jarak masukan. Pada contoh , titik berbeda dapat sedekat apa pun menurut , tetapi jarak keluarannya selalu menurut . Jadi untuk, misalnya, , tidak ada yang bekerja. Perbedaan metrik menjelaskan perbedaan kesimpulan.  "
+},
+{
+  "id": "o003-c90-ch06-between-task-04",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-between-task-04",
+  "type": "Pemeriksaan",
+  "number": "F.8",
+  "title": "Dari metrik taksi ke metrik maksimum.",
+  "body": "Dari metrik taksi ke metrik maksimum  Pada , misalkan adalah metrik taksi dan metrik maksimum. Untuk , buktikan atau sangkal bahwa kontinu. Rubrik: turunkan satu batas global yang membandingkan jarak keluaran dengan jarak masukan.   Untuk dan , batasi dengan pertidaksamaan segitiga.   Fungsi tersebut kontinu, bahkan . Pilihan berlaku di setiap titik.   Ambil dan . Maka Sekarang ambil sebarang titik dan , serta pilih . Jika , pertidaksamaan di atas memberi . Jadi kontinu.  "
+},
+{
+  "id": "o003-c90-ch06-between-task-05",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-between-task-05",
+  "type": "Pemeriksaan",
+  "number": "F.9",
+  "title": "Dari metrik maksimum ke metrik taksi.",
+  "body": "Dari metrik maksimum ke metrik taksi  Dengan fungsi yang sama, buktikan atau sangkal bahwa kontinu. Rubrik: batasi jumlah dua jarak koordinat keluaran dengan kelipatan jarak maksimum masukan.   Setelah memakai pertidaksamaan segitiga pada koordinat pertama, masing-masing dan tidak melebihi .   Fungsi tersebut kontinu, karena . Pilihan berlaku di setiap titik.   Untuk dan , berlaku Untuk sebarang titik dan , pilih . Jika , maka . Jadi kontinu.  "
+},
+{
+  "id": "o003-c90-ch06-composition-task-01",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-composition-task-01",
+  "type": "Pemeriksaan",
+  "number": "F.10",
+  "title": "Memulai bukti kekontinuan komposisi.",
+  "body": "Memulai bukti kekontinuan komposisi  Misalkan dan kontinu. Nyatakan apa yang harus dibuktikan agar kontinu dan sebutkan dua langkah pertama bukti. Rubrik: mulai di titik domain sebarang dan dengan toleransi keluaran sebarang.   Buka definisi kekontinuan pada seluruh ruang: pertama pilih , kemudian pilih .   Ambil sebarang dan . Harus ditemukan sehingga mengakibatkan .   Kekontinuan berarti kekontinuan di setiap titik . Karena itu dua langkah pertama adalah menetapkan sebarang dan kemudian sebarang . Setelah itu kita harus membangun , yang boleh bergantung pada dan tetapi tidak pada , agar Butir berikutnya membangun melalui ruang antara .  "
+},
+{
+  "id": "o003-c90-ch06-composition-task-02",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-composition-task-02",
+  "type": "Pemeriksaan",
+  "number": "F.11",
+  "title": "Toleransi di ruang antara.",
+  "body": "Toleransi di ruang antara  Dengan , , dan , jelaskan mengapa terdapat sehingga mengakibatkan . Rubrik: sebutkan hipotesis dan titik tempat definisi diterapkan.   Terapkan kekontinuan di titik dengan toleransi keluaran .   Keberadaan adalah persis konsekuensi kekontinuan di .   Karena , titik berada dalam . Hipotesis menyatakan bahwa kontinu pada , khususnya di . Dengan menerapkan definisi kekontinuan di pada bilangan yang telah dipilih, kita memperoleh sedemikian sehingga untuk setiap ,   "
+},
+{
+  "id": "o003-c90-ch06-composition-task-03",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-composition-task-03",
+  "type": "Pemeriksaan",
+  "number": "F.12",
+  "title": "Mengangkut toleransi ke domain.",
+  "body": "Mengangkut toleransi ke domain  Jelaskan mengapa terdapat sehingga mengakibatkan . Rubrik: gunakan sebagai toleransi keluaran untuk fungsi yang tepat.   Terapkan kekontinuan di dengan pada definisi diganti oleh .   Keberadaan adalah persis konsekuensi kekontinuan di dengan toleransi keluaran .   Hipotesis menyatakan bahwa kontinu pada , khususnya di titik . Bilangan yang diperoleh pada butir sebelumnya positif, sehingga sah dipakai sebagai toleransi keluaran dalam definisi kekontinuan . Oleh karena itu ada sedemikian sehingga   "
+},
+{
+  "id": "o003-c90-ch06-composition-task-04",
+  "level": "2",
+  "url": "o003-c90-ch06-source-guides.html#o003-c90-ch06-composition-task-04",
+  "type": "Pemeriksaan",
+  "number": "F.13",
+  "title": "Komposisi fungsi kontinu.",
+  "body": "Komposisi fungsi kontinu  Lengkapi pembuktian bahwa kontinu. Rubrik: rangkai dua implikasi metrik, identifikasi , lalu tutup semua kuantor.   Pilih . Kedekatan di mula-mula memberi kedekatan dengan di , lalu memberi kedekatan setelah menerapkan .   Dengan , berlaku mengakibatkan . Jadi kontinu.   Ambil sebarang dan , lalu tetapkan . Kekontinuan di menghasilkan sehingga mengakibatkan . Kekontinuan di , dengan toleransi keluaran , menghasilkan sehingga mengakibatkan .  Pilih . Jika , maka , dan karenanya . Karena , ini adalah . Jadi komposisi kontinu di ; karena sebarang, komposisi kontinu pada .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch06-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian pertama",
+  "body": " Panduan latihan sumber, bagian pertama  Tiga belas panduan berikut berkorespondensi dengan tiga belas perintah pertama pada bagian latihan Bab 6 menurut urutan kedalaman sumber. Latihan yang hanya mempunyai pernyataan dihitung sekali; pada latihan bertingkat, hanya tugas daun yang meminta jawaban yang dihitung.  Kekontinuan fungsi nilai mutlak di nol  Misalkan didefinisikan oleh , dengan metrik Euklides pada domain dan kodomain. Tentukan apakah kontinu di dan buktikan jawaban Anda. Rubrik: mulai dari sebarang , nyatakan , dan periksa implikasi definisi.   Karena , sederhanakan sebelum memilih .   Ya. Untuk setiap , pilihan memenuhi definisi kekontinuan di .   Ambil sebarang dan pilih . Jika , maka Jadi syarat epsilon-delta terpenuhi dan kontinu di .   Diskontinuitas fungsi tanda di nol  Misalkan untuk dan , dengan metrik Euklides. Tentukan apakah kontinu di dan buktikan jawaban Anda. Rubrik: jika jawabannya negatif, nyatakan negasi definisi beserta satu saksi untuk setiap .   Ambil titik negatif yang berjarak kurang daripada dari , misalnya .   Tidak. Dengan , untuk setiap titik memenuhi , tetapi .   Tetapkan dan ambil sebarang . Pilih . Maka , sedangkan sehingga . Karena , Satu toleransi keluaran gagal pada setiap skala masukan. Menurut negasi definisi, tidak kontinu di .   Penjumlahan koordinat dengan metrik Euklides  Dengan metrik Euklides pada dan , buktikan atau sangkal bahwa kontinu. Rubrik: bandingkan nilai mutlak selisih keluaran dengan jarak Euklides dua titik masukan.   Gunakan pertidaksamaan Cauchy pada vektor dan .   Fungsi tersebut kontinu, bahkan . Pilih .   Untuk dan , pertidaksamaan Cauchy memberikan Ambil sebarang dan , lalu pilih . Jika , batas di atas memberi . Jadi kontinu.   Penjumlahan koordinat dengan metrik maksimum  Dengan metrik maksimum pada domain dan metrik Euklides pada kodomain , buktikan atau sangkal bahwa kontinu. Rubrik: turunkan batas yang berlaku bagi semua pasangan titik dan berikan pilihan .   Masing-masing selisih koordinat tidak melebihi jarak maksimum.   Fungsi tersebut kontinu, karena . Pilih .   Untuk dan , Ambil sebarang dan , serta pilih . Jika , maka . Jadi kontinu.   Semua fungsi dari ruang diskret  Misalkan memakai metrik diskret dan sebarang ruang metrik. Tentukan semua fungsi kontinu . Rubrik: buktikan klasifikasi Anda langsung dari definisi; jangan mengasumsikan sifat khusus kodomain.   Jika , apa yang dapat disimpulkan tentang dan ?   Setiap fungsi kontinu ketika domain memakai metrik diskret.   Ambil fungsi sebarang , titik sebarang , dan . Pilih . Jika , definisi metrik diskret memaksa . Karena itu Jadi setiap fungsi kontinu di setiap titik domain. Tidak ada syarat tambahan pada atau pada metrik .   Kelipatan skalar fungsi kontinu  Misalkan kontinu dan . Buktikan bahwa fungsi , yang didefinisikan oleh , kontinu. Rubrik: gunakan kekontinuan dengan toleransi keluaran yang disesuaikan oleh .   Karena , mintalah .   Fungsi kontinu. Untuk toleransi , pakai dalam definisi kekontinuan .   Ambil sebarang dan . Karena , bilangan positif. Kekontinuan di memberikan sedemikian sehingga mengakibatkan . Maka Jadi kontinu di setiap , sehingga kontinu pada .   Jumlah dua fungsi kontinu  Misalkan kontinu. Buktikan bahwa , yang didefinisikan oleh , kontinu. Rubrik: alokasikan toleransi keluaran di antara dua suku dan gabungkan dua skala masukan.   Gunakan toleransi untuk masing-masing fungsi dan pilih nilai minimum dari dua yang dihasilkan.   Fungsi kontinu; jika dan bekerja untuk toleransi , pilih .   Ambil sebarang dan . Kekontinuan dan di memberikan sehingga, berturut-turut, mengakibatkan dan mengakibatkan .  Pilih . Jika , kedua batas berlaku dan Jadi kontinu.   Menguraikan selisih hasil kali  Untuk fungsi dan serta titik , buktikan identitas Rubrik: perluas kedua faktor setelah menambahkan dan mengurangkan nilai di , lalu sederhanakan seluruh suku.   Substitusikan dan ke dalam .   Identitas tersebut benar; ia diperoleh dengan memperluas hasil kali dua jumlah dan membatalkan suku .   Tuliskan dan . Maka Mengembalikan definisi dan menghasilkan tepat identitas yang diminta. Bentuk ini memisahkan dua suku linear dan satu suku hasil kali yang masing-masing dapat dikendalikan oleh kekontinuan dan .   Empat skala untuk bukti hasil kali  Misalkan dan kontinu di dan . Jelaskan mengapa ada yang masing-masing menjamin Rubrik: pasangkan setiap toleransi positif dengan fungsi yang sesuai.   Keempat ruas kanan positif. Terapkan definisi kekontinuan dua kali dan definisi kekontinuan dua kali.   Kekontinuan menghasilkan dan ; kekontinuan menghasilkan dan , dengan toleransi keluaran sesuai urutan yang ditampilkan.   Karena , semua bilangan , , dan positif. Kekontinuan di , berturut-turut dengan toleransi dan , memberikan dan . Kekontinuan di , berturut-turut dengan toleransi dan , memberikan dan . Masing-masing definisi tepat menghasilkan implikasi yang diminta ketika lebih kecil daripada terkait.   Hasil kali dua fungsi kontinu  Gunakan penguraian selisih dan empat skala pada dua butir sebelumnya untuk membuktikan bahwa kontinu di . Rubrik: pilih satu yang mengaktifkan keempat batas dan tunjukkan bahwa masing-masing dari tiga suku bernilai kurang daripada .   Pilih . Gunakan dan analoginya untuk .   Dengan sebagai minimum keempat skala, tiga suku dalam batas segitiga masing-masing kurang daripada ; karena itu .   Pilih . Jika , penguraian pada butir pertama dan pertidaksamaan segitiga memberikan Batas dari menjadikan suku pertama kurang daripada . Batas dari menjadikan suku kedua kurang daripada . Batas dari dan menjadikan suku ketiga kurang daripada . Jadi seluruh jumlah kurang daripada , sehingga kontinu di .   Kebalikan pernyataan tentang jumlah  Tentukan apakah kekontinuan memaksa dan masing-masing kontinu. Buktikan jawaban Anda. Rubrik: jika pernyataan salah, berikan fungsi konkret, periksa jumlahnya, dan buktikan diskontinuitas kedua suku yang diperlukan.   Ambil suatu fungsi tak kontinu , lalu pertimbangkan dan .   Tidak. Jika untuk dan untuk , maka dan tidak kontinu di , tetapi kontinu.   Definisikan dengan jika dan jika . Fungsi tidak kontinu di : untuk dan setiap , titik memenuhi , tetapi . Fungsi juga tidak kontinu di dengan argumen yang sama.  Ambil dan . Untuk setiap , , sehingga adalah fungsi konstan dan kontinu. Jadi kekontinuan jumlah tidak memaksa kekontinuan kedua sukunya.   Kebalikan pernyataan tentang hasil kali  Tentukan apakah kekontinuan memaksa dan masing-masing kontinu. Buktikan jawaban Anda. Rubrik: berikan contoh tandingan konkret dan verifikasi baik hasil kali maupun diskontinuitas faktor-faktornya.   Carilah fungsi tak kontinu yang hanya bernilai dan , lalu kalikan fungsi itu dengan dirinya sendiri.   Tidak. Jika untuk dan untuk , maka tidak kontinu di , tetapi kontinu.   Definisikan dengan untuk dan untuk . Fungsi ini tidak kontinu di : tetapkan ; untuk setiap , titik memenuhi , tetapi .  Ambil . Kedua faktor tidak kontinu di , sedangkan untuk setiap , . Hasil kali tersebut adalah fungsi konstan, sehingga kontinu. Jadi pernyataannya salah.   Skala eksplisit untuk fungsi kuadrat  Misalkan . Untuk , carilah sedemikian sehingga mengakibatkan . Rubrik: berikan satu nilai sah dan buktikan batasnya secara aljabar.   Faktorkan . Jika , maka .   Salah satu pilihan yang sah adalah .   Pilih ; khususnya . Jika , maka . Oleh karena itu Jadi memenuhi implikasi yang diminta.   "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-01",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-01",
+  "type": "Pemeriksaan",
+  "number": "F.14",
+  "title": "Kekontinuan fungsi nilai mutlak di nol.",
+  "body": "Kekontinuan fungsi nilai mutlak di nol  Misalkan didefinisikan oleh , dengan metrik Euklides pada domain dan kodomain. Tentukan apakah kontinu di dan buktikan jawaban Anda. Rubrik: mulai dari sebarang , nyatakan , dan periksa implikasi definisi.   Karena , sederhanakan sebelum memilih .   Ya. Untuk setiap , pilihan memenuhi definisi kekontinuan di .   Ambil sebarang dan pilih . Jika , maka Jadi syarat epsilon-delta terpenuhi dan kontinu di .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-02",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-02",
+  "type": "Pemeriksaan",
+  "number": "F.15",
+  "title": "Diskontinuitas fungsi tanda di nol.",
+  "body": "Diskontinuitas fungsi tanda di nol  Misalkan untuk dan , dengan metrik Euklides. Tentukan apakah kontinu di dan buktikan jawaban Anda. Rubrik: jika jawabannya negatif, nyatakan negasi definisi beserta satu saksi untuk setiap .   Ambil titik negatif yang berjarak kurang daripada dari , misalnya .   Tidak. Dengan , untuk setiap titik memenuhi , tetapi .   Tetapkan dan ambil sebarang . Pilih . Maka , sedangkan sehingga . Karena , Satu toleransi keluaran gagal pada setiap skala masukan. Menurut negasi definisi, tidak kontinu di .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-03",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-03",
+  "type": "Pemeriksaan",
+  "number": "F.16",
+  "title": "Penjumlahan koordinat dengan metrik Euklides.",
+  "body": "Penjumlahan koordinat dengan metrik Euklides  Dengan metrik Euklides pada dan , buktikan atau sangkal bahwa kontinu. Rubrik: bandingkan nilai mutlak selisih keluaran dengan jarak Euklides dua titik masukan.   Gunakan pertidaksamaan Cauchy pada vektor dan .   Fungsi tersebut kontinu, bahkan . Pilih .   Untuk dan , pertidaksamaan Cauchy memberikan Ambil sebarang dan , lalu pilih . Jika , batas di atas memberi . Jadi kontinu.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-04",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-04",
+  "type": "Pemeriksaan",
+  "number": "F.17",
+  "title": "Penjumlahan koordinat dengan metrik maksimum.",
+  "body": "Penjumlahan koordinat dengan metrik maksimum  Dengan metrik maksimum pada domain dan metrik Euklides pada kodomain , buktikan atau sangkal bahwa kontinu. Rubrik: turunkan batas yang berlaku bagi semua pasangan titik dan berikan pilihan .   Masing-masing selisih koordinat tidak melebihi jarak maksimum.   Fungsi tersebut kontinu, karena . Pilih .   Untuk dan , Ambil sebarang dan , serta pilih . Jika , maka . Jadi kontinu.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-05",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-05",
+  "type": "Pemeriksaan",
+  "number": "F.18",
+  "title": "Semua fungsi dari ruang diskret.",
+  "body": "Semua fungsi dari ruang diskret  Misalkan memakai metrik diskret dan sebarang ruang metrik. Tentukan semua fungsi kontinu . Rubrik: buktikan klasifikasi Anda langsung dari definisi; jangan mengasumsikan sifat khusus kodomain.   Jika , apa yang dapat disimpulkan tentang dan ?   Setiap fungsi kontinu ketika domain memakai metrik diskret.   Ambil fungsi sebarang , titik sebarang , dan . Pilih . Jika , definisi metrik diskret memaksa . Karena itu Jadi setiap fungsi kontinu di setiap titik domain. Tidak ada syarat tambahan pada atau pada metrik .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-06",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-06",
+  "type": "Pemeriksaan",
+  "number": "F.19",
+  "title": "Kelipatan skalar fungsi kontinu.",
+  "body": "Kelipatan skalar fungsi kontinu  Misalkan kontinu dan . Buktikan bahwa fungsi , yang didefinisikan oleh , kontinu. Rubrik: gunakan kekontinuan dengan toleransi keluaran yang disesuaikan oleh .   Karena , mintalah .   Fungsi kontinu. Untuk toleransi , pakai dalam definisi kekontinuan .   Ambil sebarang dan . Karena , bilangan positif. Kekontinuan di memberikan sedemikian sehingga mengakibatkan . Maka Jadi kontinu di setiap , sehingga kontinu pada .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-07",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-07",
+  "type": "Pemeriksaan",
+  "number": "F.20",
+  "title": "Jumlah dua fungsi kontinu.",
+  "body": "Jumlah dua fungsi kontinu  Misalkan kontinu. Buktikan bahwa , yang didefinisikan oleh , kontinu. Rubrik: alokasikan toleransi keluaran di antara dua suku dan gabungkan dua skala masukan.   Gunakan toleransi untuk masing-masing fungsi dan pilih nilai minimum dari dua yang dihasilkan.   Fungsi kontinu; jika dan bekerja untuk toleransi , pilih .   Ambil sebarang dan . Kekontinuan dan di memberikan sehingga, berturut-turut, mengakibatkan dan mengakibatkan .  Pilih . Jika , kedua batas berlaku dan Jadi kontinu.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-08",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-08",
+  "type": "Pemeriksaan",
+  "number": "F.21",
+  "title": "Menguraikan selisih hasil kali.",
+  "body": "Menguraikan selisih hasil kali  Untuk fungsi dan serta titik , buktikan identitas Rubrik: perluas kedua faktor setelah menambahkan dan mengurangkan nilai di , lalu sederhanakan seluruh suku.   Substitusikan dan ke dalam .   Identitas tersebut benar; ia diperoleh dengan memperluas hasil kali dua jumlah dan membatalkan suku .   Tuliskan dan . Maka Mengembalikan definisi dan menghasilkan tepat identitas yang diminta. Bentuk ini memisahkan dua suku linear dan satu suku hasil kali yang masing-masing dapat dikendalikan oleh kekontinuan dan .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-09",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-09",
+  "type": "Pemeriksaan",
+  "number": "F.22",
+  "title": "Empat skala untuk bukti hasil kali.",
+  "body": "Empat skala untuk bukti hasil kali  Misalkan dan kontinu di dan . Jelaskan mengapa ada yang masing-masing menjamin Rubrik: pasangkan setiap toleransi positif dengan fungsi yang sesuai.   Keempat ruas kanan positif. Terapkan definisi kekontinuan dua kali dan definisi kekontinuan dua kali.   Kekontinuan menghasilkan dan ; kekontinuan menghasilkan dan , dengan toleransi keluaran sesuai urutan yang ditampilkan.   Karena , semua bilangan , , dan positif. Kekontinuan di , berturut-turut dengan toleransi dan , memberikan dan . Kekontinuan di , berturut-turut dengan toleransi dan , memberikan dan . Masing-masing definisi tepat menghasilkan implikasi yang diminta ketika lebih kecil daripada terkait.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-10",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-10",
+  "type": "Pemeriksaan",
+  "number": "F.23",
+  "title": "Hasil kali dua fungsi kontinu.",
+  "body": "Hasil kali dua fungsi kontinu  Gunakan penguraian selisih dan empat skala pada dua butir sebelumnya untuk membuktikan bahwa kontinu di . Rubrik: pilih satu yang mengaktifkan keempat batas dan tunjukkan bahwa masing-masing dari tiga suku bernilai kurang daripada .   Pilih . Gunakan dan analoginya untuk .   Dengan sebagai minimum keempat skala, tiga suku dalam batas segitiga masing-masing kurang daripada ; karena itu .   Pilih . Jika , penguraian pada butir pertama dan pertidaksamaan segitiga memberikan Batas dari menjadikan suku pertama kurang daripada . Batas dari menjadikan suku kedua kurang daripada . Batas dari dan menjadikan suku ketiga kurang daripada . Jadi seluruh jumlah kurang daripada , sehingga kontinu di .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-11",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-11",
+  "type": "Pemeriksaan",
+  "number": "F.24",
+  "title": "Kebalikan pernyataan tentang jumlah.",
+  "body": "Kebalikan pernyataan tentang jumlah  Tentukan apakah kekontinuan memaksa dan masing-masing kontinu. Buktikan jawaban Anda. Rubrik: jika pernyataan salah, berikan fungsi konkret, periksa jumlahnya, dan buktikan diskontinuitas kedua suku yang diperlukan.   Ambil suatu fungsi tak kontinu , lalu pertimbangkan dan .   Tidak. Jika untuk dan untuk , maka dan tidak kontinu di , tetapi kontinu.   Definisikan dengan jika dan jika . Fungsi tidak kontinu di : untuk dan setiap , titik memenuhi , tetapi . Fungsi juga tidak kontinu di dengan argumen yang sama.  Ambil dan . Untuk setiap , , sehingga adalah fungsi konstan dan kontinu. Jadi kekontinuan jumlah tidak memaksa kekontinuan kedua sukunya.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-12",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-12",
+  "type": "Pemeriksaan",
+  "number": "F.25",
+  "title": "Kebalikan pernyataan tentang hasil kali.",
+  "body": "Kebalikan pernyataan tentang hasil kali  Tentukan apakah kekontinuan memaksa dan masing-masing kontinu. Buktikan jawaban Anda. Rubrik: berikan contoh tandingan konkret dan verifikasi baik hasil kali maupun diskontinuitas faktor-faktornya.   Carilah fungsi tak kontinu yang hanya bernilai dan , lalu kalikan fungsi itu dengan dirinya sendiri.   Tidak. Jika untuk dan untuk , maka tidak kontinu di , tetapi kontinu.   Definisikan dengan untuk dan untuk . Fungsi ini tidak kontinu di : tetapkan ; untuk setiap , titik memenuhi , tetapi .  Ambil . Kedua faktor tidak kontinu di , sedangkan untuk setiap , . Hasil kali tersebut adalah fungsi konstan, sehingga kontinu. Jadi pernyataannya salah.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-13",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-a.html#o003-c90-ch06-exercise-task-13",
+  "type": "Pemeriksaan",
+  "number": "F.26",
+  "title": "Skala eksplisit untuk fungsi kuadrat.",
+  "body": "Skala eksplisit untuk fungsi kuadrat  Misalkan . Untuk , carilah sedemikian sehingga mengakibatkan . Rubrik: berikan satu nilai sah dan buktikan batasnya secara aljabar.   Faktorkan . Jika , maka .   Salah satu pilihan yang sah adalah .   Pilih ; khususnya . Jika , maka . Oleh karena itu Jadi memenuhi implikasi yang diminta.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch06-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian kedua",
+  "body": " Panduan latihan sumber, bagian kedua  Panduan ini mengikuti Tugas 14–26 pada latihan sumber secara berurutan. Kerjakan pernyataannya terlebih dahulu, lalu gunakan rubrik untuk menilai kelengkapan argumen Anda. Bukalah petunjuk, jawaban, dan solusi secara bertahap hanya setelah Anda mencoba tugas secara mandiri.  Tugas 14: kekontinuan fungsi kuadrat di titik  Misalkan didefinisikan oleh , dengan metrik Euklides pada domain dan kodomain. Buktikan bahwa kontinu di . Rubrik. Mulailah dengan sembarang , berikan pilihan yang hanya bergantung pada , dan turunkan pertidaksamaan yang diperlukan tanpa mengandaikan kesimpulan.    Langkah 1. Faktorkan .   Langkah 2. Jika , maka . Pilih yang sekaligus menjamin syarat ini dan membuat .   Fungsi kontinu di . Untuk , pilihan memenuhi definisi kekontinuan.   Ambil sembarang dan tetapkan . Andaikan . Karena , berlaku . Pertidaksamaan segitiga kemudian memberi .  Oleh karena itu, Jadi, untuk setiap toleransi positif telah ditemukan radius positif yang memenuhi implikasi definisi. Maka kontinu di .   Tugas 15: metrik yang dipangkas pada  Definisikan dengan . Buktikan bahwa merupakan metrik. Rubrik. Verifikasi keempat aksioma metrik. Untuk pertidaksamaan segitiga, jelaskan mengapa pemangkasan pada mempertahankan pertidaksamaan, bukan sekadar menyatakan bahwa hasilnya jelas.    Langkah 1. Ketaknegatifan, simetri, dan pemisahan titik diwarisi dari nilai mutlak.   Langkah 2. Untuk , buktikan dengan memisahkan kasus ketika salah satu dari sedikitnya dan ketika keduanya kurang dari .   Benar, merupakan metrik. Aksioma pertama hingga ketiga mengikuti sifat nilai mutlak, sedangkan pertidaksamaan segitiga mengikuti untuk .   Untuk setiap , kedua bilangan dan tak negatif, sehingga . Selanjutnya, tepat ketika , yakni tepat ketika . Simetri nilai mutlak juga memberi .  Tinggal membuktikan pertidaksamaan segitiga. Untuk bilangan tak negatif , berlaku Memang, jika atau , ruas kanan sedikitnya , sedangkan ruas kiri paling besar . Jika dan , ruas kanan sama dengan , yang tidak lebih kecil daripada ruas kiri.  Sekarang tetapkan dan . Dari dan sifat naik fungsi , diperoleh Keempat aksioma terpenuhi, jadi merupakan metrik pada .   Tugas 16: nilai pada himpunan rapat menentukan fungsi kontinu  Misalkan kontinu dalam metrik Euklides dan untuk setiap . Buktikan bahwa untuk setiap . Rubrik. Gunakan kerapatan secara kuantitatif di dalam lingkungan ; jangan mengandaikan hasil tentang limit barisan yang belum diperlukan.    Langkah 1. Tetapkan . Kekontinuan di menyediakan untuk setiap .   Langkah 2. Pilih dengan . Kemudian bandingkan dengan .   Untuk setiap dan setiap , kekontinuan dan kerapatan memberi . Karena ini berlaku untuk setiap toleransi positif, . Jadi identik nol.   Ambil sembarang . Untuk membuktikan , tetapkan sembarang . Karena kontinu di , ada sedemikian sehingga mengakibatkan .  Kerapatan bilangan rasional dalam bilangan real memberi dengan . Oleh hipotesis, , sehingga Jika positif, kita dapat memilih dan memperoleh kontradiksi. Jadi . Karena dipilih sembarang, kesimpulan ini berlaku pada seluruh .   Tugas 17: fungsi Dirichlet tidak kontinu di mana pun  Definisikan dengan untuk irasional dan untuk rasional. Dengan metrik Euklides pada domain dan kodomain, tunjukkan bahwa tidak kontinu di titik mana pun. Rubrik. Untuk setiap titik pusat, berikan satu toleransi tetap yang menggagalkan setiap pilihan , dan gunakan kerapatan bilangan rasional serta irasional dengan urutan kuantor yang benar.    Langkah 1. Tetapkan dan pilih .   Langkah 2. Di setiap interval terbuka di sekitar terdapat titik yang jenisnya—rasional atau irasional—berlawanan dengan jenis .   Fungsi tidak kontinu di setiap . Untuk dan setiap , ada dengan tetapi .   Tetapkan sembarang dan ambil . Misalkan diberikan. Jika rasional, kerapatan bilangan irasional memberi titik irasional dengan . Maka , , dan .  Jika irasional, kerapatan bilangan rasional memberi titik rasional dengan . Kini , , dan kembali . Jadi, pada kedua kasus, toleransi menggagalkan setiap radius positif. Ini tepat merupakan negasi definisi kekontinuan di . Karena sembarang, tidak kontinu di mana pun.   Tugas 18: fungsi yang kontinu hanya di titik asal  Definisikan dengan jika irasional dan jika rasional. Dengan metrik Euklides pada domain dan kodomain, buktikan bahwa kontinu tepat di . Rubrik. Berikan pembuktian langsung epsilon-delta di , lalu gunakan negasi definisi dan kerapatan untuk setiap titik tak nol.    Langkah 1. Untuk semua , berlaku .   Langkah 2. Jika , ambil . Pilih titik yang jenis rasionalitasnya berlawanan dengan dan juga cukup dekat agar nilai mutlaknya lebih besar daripada bila diperlukan.   Di , pilihan bekerja karena . Pada setiap , toleransi digagalkan oleh titik-titik rasional atau irasional yang sedekat apa pun dengan . Jadi himpunan titik kekontinuan adalah .   Karena rasional, . Ambil dan pilih . Jika , maka untuk irasional berlaku , sedangkan untuk rasional berlaku . Jadi kontinu di .  Sekarang tetapkan dan ambil . Jika rasional, maka . Untuk setiap , pilih titik irasional dengan . Karena , diperoleh .  Jika irasional, maka . Untuk radius , kerapatan bilangan rasional memungkinkan kita memilih dengan . Pertidaksamaan segitiga terbalik memberi . Jadi . Dalam kedua kasus, negasi kekontinuan terpenuhi di . Dengan demikian hanya merupakan titik kekontinuan .   Tugas 19: menghitung jarak integral  Pada , gunakan . Hitung untuk dan . Rubrik. Temukan semua titik tempat selisih berubah tanda, pecah integral mutlak pada titik-titik tersebut, dan berikan nilai eksak.    Langkah 1. Faktorkan .   Langkah 2. Ekspresi itu tidak positif pada dan tidak negatif pada .   Nilainya adalah .   Selisih kedua fungsi adalah . Pada interval , berlaku , sedangkan pada , berlaku . Dengan antiturunan , kita peroleh   Nilai-nilainya adalah , , dan . Jadi setiap integral bertanda positif bernilai , dan    Tugas 20: nilai fungsional integral  Untuk , hitung ketika dan . Rubrik. Tampilkan antiturunan dan evaluasi pada kedua ujung interval.   Suatu antiturunan adalah .    .   Berdasarkan Teorema Dasar Kalkulus,    Tugas 21: kekontinuan fungsional integral  Misalkan , , , dan . Buktikan bahwa kontinu. Rubrik. Tuliskan definisi kekontinuan dalam kedua metrik, gunakan pertidaksamaan nilai mutlak integral, dan berikan pilihan yang eksplisit.    Langkah 1. Untuk , tuliskan .   Langkah 2. Gunakan ; fungsi bahkan memenuhi pertidaksamaan Lipschitz dengan konstanta .   Untuk semua , berlaku . Karena itu pilihan membuktikan bahwa kontinu di setiap .   Tetapkan sembarang dan . Ambil . Jika memenuhi , maka sifat linear integral dan pertidaksamaan nilai mutlak memberi Jadi kontinu di . Karena sembarang, kontinu pada seluruh . Pertidaksamaan yang sama juga menunjukkan bahwa bersifat 1-Lipschitz.   Tugas 22: domain bermetrik diskret  Putuskan benar atau salah: jika suatu fungsi, metrik diskret, dan sebarang metrik, maka kontinu. Rubrik. Jika benar, berikan pembuktian epsilon-delta yang berlaku untuk sebarang fungsi dan sebarang titik tanpa memakai sifat khusus kodomain.   Pada metrik diskret, memaksa .   Benar. Untuk setiap titik dan setiap , pilih . Syarat memaksa , sehingga jarak keluarannya nol.   Tetapkan dan . Ambil . Karena diskret, nilainya hanya atau . Maka mengakibatkan , sehingga . Akibatnya . Jadi kontinu di setiap , apa pun fungsi dan metrik .   Tugas 23: kodomain bermetrik diskret  Putuskan benar atau salah: jika suatu fungsi, metrik diskret, dan sebarang metrik, maka kontinu. Rubrik. Jika salah, tentukan domain, kodomain, fungsi, titik, dan satu toleransi yang menggagalkan setiap radius positif.   Gunakan fungsi identitas dari bermetrik Euklides menuju bermetrik diskret dan ambil .   Salah. Fungsi identitas tidak kontinu di titik mana pun, dengan metrik diskret.   Ambil , gunakan metrik Euklides pada domain dan metrik diskret pada kodomain, lalu definisikan . Tetapkan sembarang dan ambil . Untuk setiap , pilih . Maka , tetapi , sehingga . Jadi tidak kontinu di . Contoh ini membantah pernyataan universal.   Tugas 24: identitas di antara dua metrik  Putuskan benar atau salah: untuk sebarang dua metrik dan pada himpunan , fungsi identitas selalu kontinu. Rubrik. Jika salah, berikan dua metrik konkret pada himpunan yang sama dan tunjukkan kegagalan definisi kekontinuan.   Pilih , , dan , dengan metrik diskret.   Salah. Identitas tidak kontinu, sebab titik-titik yang berbeda dapat sedekat apa pun dalam tetapi selalu berjarak dalam .   Pada , ambil dan metrik diskret . Tetapkan dan . Apa pun , titik memenuhi . Namun , sehingga . Jadi identitas ini tidak kontinu. Kekontinuan identitas bergantung pada hubungan antara kedua metrik, bukan hanya pada fakta bahwa keduanya didefinisikan pada himpunan yang sama.   Tugas 25: jumlah fungsi pada domain bermetrik taksi  Misalkan kontinu. Buktikan bahwa fungsi , yang didefinisikan oleh , juga kontinu. Rubrik. Buktikan kekontinuan di titik sembarang, bagikan toleransi keluaran di antara kedua fungsi, dan gabungkan radius dengan minimum.    Langkah 1. Untuk toleransi , terapkan kekontinuan dan masing-masing dengan toleransi .   Langkah 2. Ambil dan gunakan pertidaksamaan segitiga dalam .   Benar. Kekontinuan kedua fungsi dengan toleransi menghasilkan radius ; radius minimumnya membuat selisih nilai kurang dari .   Tetapkan dan . Karena kontinu di , terdapat sedemikian sehingga mengakibatkan . Demikian pula, terdapat sedemikian sehingga mengakibatkan .  Ambil . Jika , kedua taksiran di atas berlaku, sehingga Jadi kontinu di , dan karena sembarang, fungsi itu kontinu pada seluruh .   Tugas 26: fungsi konstan di antara ruang metrik  Misalkan dan ruang-ruang metrik serta . Buktikan bahwa fungsi konstan yang didefinisikan oleh untuk setiap kontinu. Rubrik. Berikan pembuktian epsilon-delta yang berlaku sekalipun domain kosong atau tidak terbatas dan jangan memberlakukan syarat yang tidak diperlukan pada metrik.   Jarak antara dua keluaran fungsi konstan selalu nol. Bila perlu pilih radius tetap, misalnya .   Fungsi konstan selalu kontinu. Untuk setiap titik domain dan setiap , pilihan bekerja karena .   Jika kosong, pernyataan bahwa kontinu di setiap titik domain benar secara hampa. Jika tidak kosong, tetapkan sembarang dan . Pilih . Untuk setiap yang memenuhi , kita mempunyai Dengan demikian kontinu di setiap titik , sehingga kontinu.   "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-14",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-14",
+  "type": "Pemeriksaan",
+  "number": "F.27",
+  "title": "Tugas 14: kekontinuan fungsi kuadrat di titik <span class=\"process-math\">\\(1\\)<\/span>.",
+  "body": "Tugas 14: kekontinuan fungsi kuadrat di titik  Misalkan didefinisikan oleh , dengan metrik Euklides pada domain dan kodomain. Buktikan bahwa kontinu di . Rubrik. Mulailah dengan sembarang , berikan pilihan yang hanya bergantung pada , dan turunkan pertidaksamaan yang diperlukan tanpa mengandaikan kesimpulan.    Langkah 1. Faktorkan .   Langkah 2. Jika , maka . Pilih yang sekaligus menjamin syarat ini dan membuat .   Fungsi kontinu di . Untuk , pilihan memenuhi definisi kekontinuan.   Ambil sembarang dan tetapkan . Andaikan . Karena , berlaku . Pertidaksamaan segitiga kemudian memberi .  Oleh karena itu, Jadi, untuk setiap toleransi positif telah ditemukan radius positif yang memenuhi implikasi definisi. Maka kontinu di .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-15",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-15",
+  "type": "Pemeriksaan",
+  "number": "F.28",
+  "title": "Tugas 15: metrik yang dipangkas pada <span class=\"process-math\">\\(1\\)<\/span>.",
+  "body": "Tugas 15: metrik yang dipangkas pada  Definisikan dengan . Buktikan bahwa merupakan metrik. Rubrik. Verifikasi keempat aksioma metrik. Untuk pertidaksamaan segitiga, jelaskan mengapa pemangkasan pada mempertahankan pertidaksamaan, bukan sekadar menyatakan bahwa hasilnya jelas.    Langkah 1. Ketaknegatifan, simetri, dan pemisahan titik diwarisi dari nilai mutlak.   Langkah 2. Untuk , buktikan dengan memisahkan kasus ketika salah satu dari sedikitnya dan ketika keduanya kurang dari .   Benar, merupakan metrik. Aksioma pertama hingga ketiga mengikuti sifat nilai mutlak, sedangkan pertidaksamaan segitiga mengikuti untuk .   Untuk setiap , kedua bilangan dan tak negatif, sehingga . Selanjutnya, tepat ketika , yakni tepat ketika . Simetri nilai mutlak juga memberi .  Tinggal membuktikan pertidaksamaan segitiga. Untuk bilangan tak negatif , berlaku Memang, jika atau , ruas kanan sedikitnya , sedangkan ruas kiri paling besar . Jika dan , ruas kanan sama dengan , yang tidak lebih kecil daripada ruas kiri.  Sekarang tetapkan dan . Dari dan sifat naik fungsi , diperoleh Keempat aksioma terpenuhi, jadi merupakan metrik pada .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-16",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-16",
+  "type": "Pemeriksaan",
+  "number": "F.29",
+  "title": "Tugas 16: nilai pada himpunan rapat menentukan fungsi kontinu.",
+  "body": "Tugas 16: nilai pada himpunan rapat menentukan fungsi kontinu  Misalkan kontinu dalam metrik Euklides dan untuk setiap . Buktikan bahwa untuk setiap . Rubrik. Gunakan kerapatan secara kuantitatif di dalam lingkungan ; jangan mengandaikan hasil tentang limit barisan yang belum diperlukan.    Langkah 1. Tetapkan . Kekontinuan di menyediakan untuk setiap .   Langkah 2. Pilih dengan . Kemudian bandingkan dengan .   Untuk setiap dan setiap , kekontinuan dan kerapatan memberi . Karena ini berlaku untuk setiap toleransi positif, . Jadi identik nol.   Ambil sembarang . Untuk membuktikan , tetapkan sembarang . Karena kontinu di , ada sedemikian sehingga mengakibatkan .  Kerapatan bilangan rasional dalam bilangan real memberi dengan . Oleh hipotesis, , sehingga Jika positif, kita dapat memilih dan memperoleh kontradiksi. Jadi . Karena dipilih sembarang, kesimpulan ini berlaku pada seluruh .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-17",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-17",
+  "type": "Pemeriksaan",
+  "number": "F.30",
+  "title": "Tugas 17: fungsi Dirichlet tidak kontinu di mana pun.",
+  "body": "Tugas 17: fungsi Dirichlet tidak kontinu di mana pun  Definisikan dengan untuk irasional dan untuk rasional. Dengan metrik Euklides pada domain dan kodomain, tunjukkan bahwa tidak kontinu di titik mana pun. Rubrik. Untuk setiap titik pusat, berikan satu toleransi tetap yang menggagalkan setiap pilihan , dan gunakan kerapatan bilangan rasional serta irasional dengan urutan kuantor yang benar.    Langkah 1. Tetapkan dan pilih .   Langkah 2. Di setiap interval terbuka di sekitar terdapat titik yang jenisnya—rasional atau irasional—berlawanan dengan jenis .   Fungsi tidak kontinu di setiap . Untuk dan setiap , ada dengan tetapi .   Tetapkan sembarang dan ambil . Misalkan diberikan. Jika rasional, kerapatan bilangan irasional memberi titik irasional dengan . Maka , , dan .  Jika irasional, kerapatan bilangan rasional memberi titik rasional dengan . Kini , , dan kembali . Jadi, pada kedua kasus, toleransi menggagalkan setiap radius positif. Ini tepat merupakan negasi definisi kekontinuan di . Karena sembarang, tidak kontinu di mana pun.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-18",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-18",
+  "type": "Pemeriksaan",
+  "number": "F.31",
+  "title": "Tugas 18: fungsi yang kontinu hanya di titik asal.",
+  "body": "Tugas 18: fungsi yang kontinu hanya di titik asal  Definisikan dengan jika irasional dan jika rasional. Dengan metrik Euklides pada domain dan kodomain, buktikan bahwa kontinu tepat di . Rubrik. Berikan pembuktian langsung epsilon-delta di , lalu gunakan negasi definisi dan kerapatan untuk setiap titik tak nol.    Langkah 1. Untuk semua , berlaku .   Langkah 2. Jika , ambil . Pilih titik yang jenis rasionalitasnya berlawanan dengan dan juga cukup dekat agar nilai mutlaknya lebih besar daripada bila diperlukan.   Di , pilihan bekerja karena . Pada setiap , toleransi digagalkan oleh titik-titik rasional atau irasional yang sedekat apa pun dengan . Jadi himpunan titik kekontinuan adalah .   Karena rasional, . Ambil dan pilih . Jika , maka untuk irasional berlaku , sedangkan untuk rasional berlaku . Jadi kontinu di .  Sekarang tetapkan dan ambil . Jika rasional, maka . Untuk setiap , pilih titik irasional dengan . Karena , diperoleh .  Jika irasional, maka . Untuk radius , kerapatan bilangan rasional memungkinkan kita memilih dengan . Pertidaksamaan segitiga terbalik memberi . Jadi . Dalam kedua kasus, negasi kekontinuan terpenuhi di . Dengan demikian hanya merupakan titik kekontinuan .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-19",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-19",
+  "type": "Pemeriksaan",
+  "number": "F.32",
+  "title": "Tugas 19: menghitung jarak integral.",
+  "body": "Tugas 19: menghitung jarak integral  Pada , gunakan . Hitung untuk dan . Rubrik. Temukan semua titik tempat selisih berubah tanda, pecah integral mutlak pada titik-titik tersebut, dan berikan nilai eksak.    Langkah 1. Faktorkan .   Langkah 2. Ekspresi itu tidak positif pada dan tidak negatif pada .   Nilainya adalah .   Selisih kedua fungsi adalah . Pada interval , berlaku , sedangkan pada , berlaku . Dengan antiturunan , kita peroleh   Nilai-nilainya adalah , , dan . Jadi setiap integral bertanda positif bernilai , dan   "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-20",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-20",
+  "type": "Pemeriksaan",
+  "number": "F.33",
+  "title": "Tugas 20: nilai fungsional integral.",
+  "body": "Tugas 20: nilai fungsional integral  Untuk , hitung ketika dan . Rubrik. Tampilkan antiturunan dan evaluasi pada kedua ujung interval.   Suatu antiturunan adalah .    .   Berdasarkan Teorema Dasar Kalkulus,   "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-21",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-21",
+  "type": "Pemeriksaan",
+  "number": "F.34",
+  "title": "Tugas 21: kekontinuan fungsional integral.",
+  "body": "Tugas 21: kekontinuan fungsional integral  Misalkan , , , dan . Buktikan bahwa kontinu. Rubrik. Tuliskan definisi kekontinuan dalam kedua metrik, gunakan pertidaksamaan nilai mutlak integral, dan berikan pilihan yang eksplisit.    Langkah 1. Untuk , tuliskan .   Langkah 2. Gunakan ; fungsi bahkan memenuhi pertidaksamaan Lipschitz dengan konstanta .   Untuk semua , berlaku . Karena itu pilihan membuktikan bahwa kontinu di setiap .   Tetapkan sembarang dan . Ambil . Jika memenuhi , maka sifat linear integral dan pertidaksamaan nilai mutlak memberi Jadi kontinu di . Karena sembarang, kontinu pada seluruh . Pertidaksamaan yang sama juga menunjukkan bahwa bersifat 1-Lipschitz.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-22",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-22",
+  "type": "Pemeriksaan",
+  "number": "F.35",
+  "title": "Tugas 22: domain bermetrik diskret.",
+  "body": "Tugas 22: domain bermetrik diskret  Putuskan benar atau salah: jika suatu fungsi, metrik diskret, dan sebarang metrik, maka kontinu. Rubrik. Jika benar, berikan pembuktian epsilon-delta yang berlaku untuk sebarang fungsi dan sebarang titik tanpa memakai sifat khusus kodomain.   Pada metrik diskret, memaksa .   Benar. Untuk setiap titik dan setiap , pilih . Syarat memaksa , sehingga jarak keluarannya nol.   Tetapkan dan . Ambil . Karena diskret, nilainya hanya atau . Maka mengakibatkan , sehingga . Akibatnya . Jadi kontinu di setiap , apa pun fungsi dan metrik .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-23",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-23",
+  "type": "Pemeriksaan",
+  "number": "F.36",
+  "title": "Tugas 23: kodomain bermetrik diskret.",
+  "body": "Tugas 23: kodomain bermetrik diskret  Putuskan benar atau salah: jika suatu fungsi, metrik diskret, dan sebarang metrik, maka kontinu. Rubrik. Jika salah, tentukan domain, kodomain, fungsi, titik, dan satu toleransi yang menggagalkan setiap radius positif.   Gunakan fungsi identitas dari bermetrik Euklides menuju bermetrik diskret dan ambil .   Salah. Fungsi identitas tidak kontinu di titik mana pun, dengan metrik diskret.   Ambil , gunakan metrik Euklides pada domain dan metrik diskret pada kodomain, lalu definisikan . Tetapkan sembarang dan ambil . Untuk setiap , pilih . Maka , tetapi , sehingga . Jadi tidak kontinu di . Contoh ini membantah pernyataan universal.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-24",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-24",
+  "type": "Pemeriksaan",
+  "number": "F.37",
+  "title": "Tugas 24: identitas di antara dua metrik.",
+  "body": "Tugas 24: identitas di antara dua metrik  Putuskan benar atau salah: untuk sebarang dua metrik dan pada himpunan , fungsi identitas selalu kontinu. Rubrik. Jika salah, berikan dua metrik konkret pada himpunan yang sama dan tunjukkan kegagalan definisi kekontinuan.   Pilih , , dan , dengan metrik diskret.   Salah. Identitas tidak kontinu, sebab titik-titik yang berbeda dapat sedekat apa pun dalam tetapi selalu berjarak dalam .   Pada , ambil dan metrik diskret . Tetapkan dan . Apa pun , titik memenuhi . Namun , sehingga . Jadi identitas ini tidak kontinu. Kekontinuan identitas bergantung pada hubungan antara kedua metrik, bukan hanya pada fakta bahwa keduanya didefinisikan pada himpunan yang sama.  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-25",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-25",
+  "type": "Pemeriksaan",
+  "number": "F.38",
+  "title": "Tugas 25: jumlah fungsi pada domain bermetrik taksi.",
+  "body": "Tugas 25: jumlah fungsi pada domain bermetrik taksi  Misalkan kontinu. Buktikan bahwa fungsi , yang didefinisikan oleh , juga kontinu. Rubrik. Buktikan kekontinuan di titik sembarang, bagikan toleransi keluaran di antara kedua fungsi, dan gabungkan radius dengan minimum.    Langkah 1. Untuk toleransi , terapkan kekontinuan dan masing-masing dengan toleransi .   Langkah 2. Ambil dan gunakan pertidaksamaan segitiga dalam .   Benar. Kekontinuan kedua fungsi dengan toleransi menghasilkan radius ; radius minimumnya membuat selisih nilai kurang dari .   Tetapkan dan . Karena kontinu di , terdapat sedemikian sehingga mengakibatkan . Demikian pula, terdapat sedemikian sehingga mengakibatkan .  Ambil . Jika , kedua taksiran di atas berlaku, sehingga Jadi kontinu di , dan karena sembarang, fungsi itu kontinu pada seluruh .  "
+},
+{
+  "id": "o003-c90-ch06-exercise-task-26",
+  "level": "2",
+  "url": "o003-c90-ch06-exercise-guides-b.html#o003-c90-ch06-exercise-task-26",
+  "type": "Pemeriksaan",
+  "number": "F.39",
+  "title": "Tugas 26: fungsi konstan di antara ruang metrik.",
+  "body": "Tugas 26: fungsi konstan di antara ruang metrik  Misalkan dan ruang-ruang metrik serta . Buktikan bahwa fungsi konstan yang didefinisikan oleh untuk setiap kontinu. Rubrik. Berikan pembuktian epsilon-delta yang berlaku sekalipun domain kosong atau tidak terbatas dan jangan memberlakukan syarat yang tidak diperlukan pada metrik.   Jarak antara dua keluaran fungsi konstan selalu nol. Bila perlu pilih radius tetap, misalnya .   Fungsi konstan selalu kontinu. Untuk setiap titik domain dan setiap , pilihan bekerja karena .   Jika kosong, pernyataan bahwa kontinu di setiap titik domain benar secara hampa. Jika tidak kosong, tetapkan sembarang dan . Pilih . Untuk setiap yang memenuhi , kita mempunyai Dengan demikian kontinu di setiap titik , sehingga kontinu.  "
+},
+{
+  "id": "o003-c90-ch06-mastery",
+  "level": "1",
+  "url": "o003-c90-ch06-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan dan transfer",
+  "body": " Pemeriksaan penguasaan dan transfer  Enam latihan asli berikut menguji penguasaan definisi epsilon-delta, kekontinuan di antara ruang metrik, serta operasi pada fungsi kontinu. Kerjakan setiap pernyataan sebelum membuka petunjuk. Gunakan rubrik untuk memeriksa urutan kuantor, ketepatan pilihan radius, dan kelengkapan contoh tandingan Anda.  Definisi kekontinuan dan negasinya  Misalkan dan ruang-ruang metrik, , dan .   Tuliskan definisi lengkap bahwa kontinu di dengan semua kuantornya.    Negasikan definisi tersebut untuk memperoleh pernyataan lengkap bahwa tidak kontinu di .      Rubrik. Urutan , , dan harus tepat; pada negasi, balik setiap kuantor dan negasikan implikasi menjadi dua syarat serentak. Nyatakan dengan tegas variabel mana yang boleh bergantung pada variabel sebelumnya.    Langkah 1. Kekontinuan dimulai dengan “untuk setiap ” dan baru sesudah itu memilih .   Langkah 2. Negasi pernyataan adalah dan bukan .   Langkah 3. Negasi adalah .   Kekontinuan di berarti Ketidakkontinuan di berarti    Fungsi kontinu di jika Dengan urutan ini, boleh bergantung pada dan titik tetap , tetapi tidak boleh dipilih sesudah melihat . Titik harus memenuhi implikasi yang sama untuk semua titik di dalam bola .  Untuk menegasikan pernyataan tersebut, kuantor universal menjadi eksistensial dan sebaliknya. Selain itu, gagal tepat ketika benar dan salah. Jadi tidak kontinu di tepat ketika Di sini satu toleransi keluaran dipilih lebih dahulu dan harus menggagalkan setiap radius masukan, meskipun titik saksi boleh bergantung pada radius tersebut.   Pemetaan Lipschitz bersifat kontinu  Misalkan dan ruang-ruang metrik. Andaikan dan terdapat konstanta sedemikian sehingga untuk semua . Buktikan langsung dari definisi bahwa kontinu.   Rubrik. Tetapkan titik dan toleransi sembarang, berikan pilihan yang eksplisit, dan tunjukkan rantai pertidaksamaan lengkap. Jangan hanya menyebut teorema tentang fungsi Lipschitz.    Langkah 1. Untuk membuat , cukup minta .   Langkah 2. Pilihan radius yang sama bekerja di setiap titik .   Untuk setiap dan , ambil . Jika , maka . Jadi kontinu.   Tetapkan sembarang dan . Karena , bilangan positif. Jika memenuhi , hipotesis Lipschitz memberi Maka kontinu di . Karena dipilih sembarang, kontinu pada . Bahkan radius tersebut tidak bergantung pada titik pusat; hipotesis memberi kendali yang lebih kuat daripada kekontinuan biasa.   Metrik Euklides, metrik pangkas, dan metrik diskret  Pada , definisikan , , dan metrik diskret jika serta jika . Selidiki kekontinuan keempat fungsi identitas berikut:   ;    ;    ;    .      Rubrik. Untuk setiap fungsi yang kontinu, berikan pilihan radius. Untuk fungsi yang tidak kontinu, berikan satu toleransi dan saksi untuk setiap radius. Jelaskan apa yang ditunjukkan dua arah pertama tentang pengaruh pemangkasan jarak besar.    Langkah 1. Selalu berlaku . Sebaliknya, jika , maka .   Langkah 2. Bola diskret berjari-jari hanya memuat pusatnya.   Langkah 3. Untuk menggagalkan , pilih pada kodomain diskret dan titik berbeda yang sedekat apa pun dalam .   Fungsi , , dan kontinu, sedangkan tidak kontinu di titik mana pun. Jadi metrik Euklides dan metrik pangkas mempunyai perilaku kekontinuan lokal yang sama, tetapi metrik diskret pada kodomain menuntut pemisahan yang lebih kuat.   Untuk , tetapkan dan , lalu pilih . Jika , maka . Jadi kontinu.  Untuk , pilih . Jika , nilai minimum tidak mungkin berasal dari cabang . Maka . Jadi juga kontinu. Kedua hasil ini menunjukkan bahwa pemangkasan semua jarak besar pada tidak mengubah perilaku lokal yang dideteksi oleh kekontinuan.  Untuk , ambil untuk setiap toleransi positif. Syarat memaksa , sehingga jarak keluarannya nol. Jadi kontinu.  Sebaliknya, tetapkan dan untuk . Untuk setiap , ambil dan . Maka , tetapi , sehingga . Dengan demikian tidak kontinu di , dan sembarang.   Jumlah dua fungsi kontinu pada ruang metrik  Misalkan ruang metrik, , dan kontinu di , dengan metrik Euklides pada . Buktikan langsung bahwa kontinu di .   Rubrik. Jangan mengandaikan radius yang sama tersedia untuk kedua fungsi. Bagikan toleransi, peroleh dua radius, ambil minimumnya, dan gunakan pertidaksamaan segitiga.    Langkah 1. Terapkan kekontinuan dan masing-masing dengan toleransi .   Langkah 2. Gunakan .   Jika dan bekerja untuk toleransi , maka bekerja untuk dan toleransi .   Ambil sembarang . Kekontinuan di memberi sedemikian sehingga mengakibatkan . Kekontinuan memberi dengan implikasi serupa untuk .  Pilih . Jika , kedua taksiran berlaku dan Ini membuktikan bahwa kontinu di .   Komposisi fungsi kontinu  Misalkan , , dan ruang-ruang metrik. Jika kontinu di dan kontinu di , buktikan bahwa kontinu di .   Rubrik. Mulailah dari toleransi di . Radius yang dihasilkan oleh kekontinuan harus dipakai sebagai toleransi keluaran ketika menerapkan kekontinuan .    Langkah 1. Untuk , kekontinuan di memberi suatu pada ruang .   Langkah 2. Terapkan kekontinuan di dengan toleransi untuk memperoleh pada ruang .   Pilih dari kekontinuan untuk toleransi , lalu pilih dari kekontinuan untuk toleransi . Rantai kedua implikasi membuktikan kekontinuan di .   Tetapkan . Karena kontinu di , ada sedemikian sehingga Karena kontinu di , untuk toleransi ini ada sedemikian sehingga   Jadi, jika , implikasi kedua menempatkan di dalam bola berjari-jari di sekitar . Dengan mengambil pada implikasi pertama, diperoleh Maka kontinu di .   Contoh tandingan bagi kebalikan aturan jumlah  Bangun dua fungsi yang masing-masing tidak kontinu di titik mana pun, tetapi jumlah kontinu di setiap titik. Buktikan kedua klaim menggunakan metrik Euklides.   Rubrik. Berikan rumus eksplisit bagi kedua fungsi. Untuk ketidakkontinuan, gunakan satu toleransi tetap dan kerapatan bilangan rasional serta irasional. Untuk kekontinuan jumlah, hitung jumlahnya tepat, bukan hanya menyatakan bahwa diskontinuitas “saling meniadakan.”    Langkah 1. Definisikan pada bilangan rasional dan pada bilangan irasional.   Langkah 2. Ambil dan . Gunakan untuk membuktikan ketidakkontinuan masing-masing.   Ambil dan , dengan . Fungsi dan tidak kontinu di titik mana pun, tetapi untuk semua , sehingga jumlahnya kontinu.   Definisikan Ambil dan . Tetapkan sembarang dan . Jika rasional, setiap lingkungan di sekitar memuat titik irasional , dan . Jika irasional, setiap lingkungan memuat titik rasional , dan kembali . Jadi tidak kontinu di . Karena , argumen yang sama membuktikan bahwa juga tidak kontinu di . Titik sembarang, sehingga keduanya tidak kontinu di mana pun.  Namun, untuk setiap , Jadi adalah fungsi konstan nol dan kontinu di setiap titik. Contoh ini menunjukkan bahwa kekontinuan jumlah tidak memaksa kekontinuan masing-masing suku.   "
+},
+{
+  "id": "o003-c90-ch06-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch06-mastery.html#o003-c90-ch06-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "F.40",
+  "title": "Definisi kekontinuan dan negasinya.",
+  "body": "Definisi kekontinuan dan negasinya  Misalkan dan ruang-ruang metrik, , dan .   Tuliskan definisi lengkap bahwa kontinu di dengan semua kuantornya.    Negasikan definisi tersebut untuk memperoleh pernyataan lengkap bahwa tidak kontinu di .      Rubrik. Urutan , , dan harus tepat; pada negasi, balik setiap kuantor dan negasikan implikasi menjadi dua syarat serentak. Nyatakan dengan tegas variabel mana yang boleh bergantung pada variabel sebelumnya.    Langkah 1. Kekontinuan dimulai dengan “untuk setiap ” dan baru sesudah itu memilih .   Langkah 2. Negasi pernyataan adalah dan bukan .   Langkah 3. Negasi adalah .   Kekontinuan di berarti Ketidakkontinuan di berarti    Fungsi kontinu di jika Dengan urutan ini, boleh bergantung pada dan titik tetap , tetapi tidak boleh dipilih sesudah melihat . Titik harus memenuhi implikasi yang sama untuk semua titik di dalam bola .  Untuk menegasikan pernyataan tersebut, kuantor universal menjadi eksistensial dan sebaliknya. Selain itu, gagal tepat ketika benar dan salah. Jadi tidak kontinu di tepat ketika Di sini satu toleransi keluaran dipilih lebih dahulu dan harus menggagalkan setiap radius masukan, meskipun titik saksi boleh bergantung pada radius tersebut.  "
+},
+{
+  "id": "o003-c90-ch06-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch06-mastery.html#o003-c90-ch06-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "F.41",
+  "title": "Pemetaan Lipschitz bersifat kontinu.",
+  "body": "Pemetaan Lipschitz bersifat kontinu  Misalkan dan ruang-ruang metrik. Andaikan dan terdapat konstanta sedemikian sehingga untuk semua . Buktikan langsung dari definisi bahwa kontinu.   Rubrik. Tetapkan titik dan toleransi sembarang, berikan pilihan yang eksplisit, dan tunjukkan rantai pertidaksamaan lengkap. Jangan hanya menyebut teorema tentang fungsi Lipschitz.    Langkah 1. Untuk membuat , cukup minta .   Langkah 2. Pilihan radius yang sama bekerja di setiap titik .   Untuk setiap dan , ambil . Jika , maka . Jadi kontinu.   Tetapkan sembarang dan . Karena , bilangan positif. Jika memenuhi , hipotesis Lipschitz memberi Maka kontinu di . Karena dipilih sembarang, kontinu pada . Bahkan radius tersebut tidak bergantung pada titik pusat; hipotesis memberi kendali yang lebih kuat daripada kekontinuan biasa.  "
+},
+{
+  "id": "o003-c90-ch06-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch06-mastery.html#o003-c90-ch06-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "F.42",
+  "title": "Metrik Euklides, metrik pangkas, dan metrik diskret.",
+  "body": "Metrik Euklides, metrik pangkas, dan metrik diskret  Pada , definisikan , , dan metrik diskret jika serta jika . Selidiki kekontinuan keempat fungsi identitas berikut:   ;    ;    ;    .      Rubrik. Untuk setiap fungsi yang kontinu, berikan pilihan radius. Untuk fungsi yang tidak kontinu, berikan satu toleransi dan saksi untuk setiap radius. Jelaskan apa yang ditunjukkan dua arah pertama tentang pengaruh pemangkasan jarak besar.    Langkah 1. Selalu berlaku . Sebaliknya, jika , maka .   Langkah 2. Bola diskret berjari-jari hanya memuat pusatnya.   Langkah 3. Untuk menggagalkan , pilih pada kodomain diskret dan titik berbeda yang sedekat apa pun dalam .   Fungsi , , dan kontinu, sedangkan tidak kontinu di titik mana pun. Jadi metrik Euklides dan metrik pangkas mempunyai perilaku kekontinuan lokal yang sama, tetapi metrik diskret pada kodomain menuntut pemisahan yang lebih kuat.   Untuk , tetapkan dan , lalu pilih . Jika , maka . Jadi kontinu.  Untuk , pilih . Jika , nilai minimum tidak mungkin berasal dari cabang . Maka . Jadi juga kontinu. Kedua hasil ini menunjukkan bahwa pemangkasan semua jarak besar pada tidak mengubah perilaku lokal yang dideteksi oleh kekontinuan.  Untuk , ambil untuk setiap toleransi positif. Syarat memaksa , sehingga jarak keluarannya nol. Jadi kontinu.  Sebaliknya, tetapkan dan untuk . Untuk setiap , ambil dan . Maka , tetapi , sehingga . Dengan demikian tidak kontinu di , dan sembarang.  "
+},
+{
+  "id": "o003-c90-ch06-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch06-mastery.html#o003-c90-ch06-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "F.43",
+  "title": "Jumlah dua fungsi kontinu pada ruang metrik.",
+  "body": "Jumlah dua fungsi kontinu pada ruang metrik  Misalkan ruang metrik, , dan kontinu di , dengan metrik Euklides pada . Buktikan langsung bahwa kontinu di .   Rubrik. Jangan mengandaikan radius yang sama tersedia untuk kedua fungsi. Bagikan toleransi, peroleh dua radius, ambil minimumnya, dan gunakan pertidaksamaan segitiga.    Langkah 1. Terapkan kekontinuan dan masing-masing dengan toleransi .   Langkah 2. Gunakan .   Jika dan bekerja untuk toleransi , maka bekerja untuk dan toleransi .   Ambil sembarang . Kekontinuan di memberi sedemikian sehingga mengakibatkan . Kekontinuan memberi dengan implikasi serupa untuk .  Pilih . Jika , kedua taksiran berlaku dan Ini membuktikan bahwa kontinu di .  "
+},
+{
+  "id": "o003-c90-ch06-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch06-mastery.html#o003-c90-ch06-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "F.44",
+  "title": "Komposisi fungsi kontinu.",
+  "body": "Komposisi fungsi kontinu  Misalkan , , dan ruang-ruang metrik. Jika kontinu di dan kontinu di , buktikan bahwa kontinu di .   Rubrik. Mulailah dari toleransi di . Radius yang dihasilkan oleh kekontinuan harus dipakai sebagai toleransi keluaran ketika menerapkan kekontinuan .    Langkah 1. Untuk , kekontinuan di memberi suatu pada ruang .   Langkah 2. Terapkan kekontinuan di dengan toleransi untuk memperoleh pada ruang .   Pilih dari kekontinuan untuk toleransi , lalu pilih dari kekontinuan untuk toleransi . Rantai kedua implikasi membuktikan kekontinuan di .   Tetapkan . Karena kontinu di , ada sedemikian sehingga Karena kontinu di , untuk toleransi ini ada sedemikian sehingga   Jadi, jika , implikasi kedua menempatkan di dalam bola berjari-jari di sekitar . Dengan mengambil pada implikasi pertama, diperoleh Maka kontinu di .  "
+},
+{
+  "id": "o003-c90-ch06-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch06-mastery.html#o003-c90-ch06-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "F.45",
+  "title": "Contoh tandingan bagi kebalikan aturan jumlah.",
+  "body": "Contoh tandingan bagi kebalikan aturan jumlah  Bangun dua fungsi yang masing-masing tidak kontinu di titik mana pun, tetapi jumlah kontinu di setiap titik. Buktikan kedua klaim menggunakan metrik Euklides.   Rubrik. Berikan rumus eksplisit bagi kedua fungsi. Untuk ketidakkontinuan, gunakan satu toleransi tetap dan kerapatan bilangan rasional serta irasional. Untuk kekontinuan jumlah, hitung jumlahnya tepat, bukan hanya menyatakan bahwa diskontinuitas “saling meniadakan.”    Langkah 1. Definisikan pada bilangan rasional dan pada bilangan irasional.   Langkah 2. Ambil dan . Gunakan untuk membuktikan ketidakkontinuan masing-masing.   Ambil dan , dengan . Fungsi dan tidak kontinu di titik mana pun, tetapi untuk semua , sehingga jumlahnya kontinu.   Definisikan Ambil dan . Tetapkan sembarang dan . Jika rasional, setiap lingkungan di sekitar memuat titik irasional , dan . Jika irasional, setiap lingkungan memuat titik rasional , dan kembali . Jadi tidak kontinu di . Karena , argumen yang sama membuktikan bahwa juga tidak kontinu di . Titik sembarang, sehingga keduanya tidak kontinu di mana pun.  Namun, untuk setiap , Jadi adalah fungsi konstan nol dan kontinu di setiap titik. Contoh ini menunjukkan bahwa kekontinuan jumlah tidak memaksa kekontinuan masing-masing suku.  "
 },
 {
   "id": "index-1",

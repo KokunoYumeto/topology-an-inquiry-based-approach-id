@@ -1,0 +1,550 @@
+<section xml:id="o003-c90-ch06-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Tiga belas panduan berikut berkorespondensi dengan tiga belas perintah
+    pertama pada bagian latihan Bab 6 menurut urutan kedalaman sumber. Latihan
+    yang hanya mempunyai pernyataan dihitung sekali; pada latihan bertingkat,
+    hanya tugas daun yang meminta jawaban yang dihitung.
+  </p>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-01">
+    <title>Kekontinuan fungsi nilai mutlak di nol</title>
+    <statement>
+      <p>
+        Misalkan <m>f:\R\to\R</m> didefinisikan oleh <m>f(x)=|x|</m>, dengan
+        metrik Euklides pada domain dan kodomain. Tentukan apakah <m>f</m>
+        kontinu di <m>0</m> dan buktikan jawaban Anda. Rubrik: mulai dari
+        sebarang <m>\epsilon&gt;0</m>, nyatakan <m>\delta</m>, dan periksa
+        implikasi definisi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-01-hint">
+      <p>
+        Karena <m>f(0)=0</m>, sederhanakan
+        <m>|f(x)-f(0)|</m> sebelum memilih <m>\delta</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-01-answer">
+      <p>
+        Ya. Untuk setiap <m>\epsilon&gt;0</m>, pilihan
+        <m>\delta=\epsilon</m> memenuhi definisi kekontinuan di <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-01-solution">
+      <p>
+        Ambil sebarang <m>\epsilon&gt;0</m> dan pilih
+        <m>\delta=\epsilon</m>. Jika <m>|x-0|&lt;\delta</m>, maka
+        <me>
+          |f(x)-f(0)|=\big||x|-0\big|=|x|&lt;\delta=\epsilon.
+        </me>
+        Jadi syarat epsilon-delta terpenuhi dan <m>f</m> kontinu di
+        <m>0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-02">
+    <title>Diskontinuitas fungsi tanda di nol</title>
+    <statement>
+      <p>
+        Misalkan <m>f(x)=x/|x|</m> untuk <m>x\neq0</m> dan <m>f(0)=1</m>,
+        dengan metrik Euklides. Tentukan apakah <m>f</m> kontinu di
+        <m>0</m> dan buktikan jawaban Anda. Rubrik: jika jawabannya negatif,
+        nyatakan negasi definisi beserta satu saksi untuk setiap
+        <m>\delta&gt;0</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-02-hint">
+      <p>
+        Ambil titik negatif yang berjarak kurang daripada <m>\delta</m> dari
+        <m>0</m>, misalnya <m>x=-\delta/2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-02-answer">
+      <p>
+        Tidak. Dengan <m>\epsilon_0=1</m>, untuk setiap
+        <m>\delta&gt;0</m> titik <m>x=-\delta/2</m> memenuhi
+        <m>|x|&lt;\delta</m>, tetapi <m>|f(x)-f(0)|=2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-02-solution">
+      <p>
+        Tetapkan <m>\epsilon_0=1</m> dan ambil sebarang
+        <m>\delta&gt;0</m>. Pilih <m>x=-\delta/2</m>. Maka
+        <m>|x-0|=\delta/2&lt;\delta</m>, sedangkan <m>x&lt;0</m> sehingga
+        <m>f(x)=-1</m>. Karena <m>f(0)=1</m>,
+        <me>|f(x)-f(0)|=|-1-1|=2\geq\epsilon_0.</me>
+        Satu toleransi keluaran gagal pada setiap skala masukan. Menurut negasi
+        definisi, <m>f</m> tidak kontinu di <m>0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-03">
+    <title>Penjumlahan koordinat dengan metrik Euklides</title>
+    <statement>
+      <p>
+        Dengan metrik Euklides pada <m>\R^2</m> dan <m>\R</m>, buktikan atau
+        sangkal bahwa <m>f(x_1,x_2)=x_1+x_2</m> kontinu. Rubrik: bandingkan
+        nilai mutlak selisih keluaran dengan jarak Euklides dua titik masukan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-03-hint">
+      <p>
+        Gunakan pertidaksamaan Cauchy pada vektor
+        <m>(1,1)</m> dan <m>(x_1-a_1,x_2-a_2)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-03-answer">
+      <p>
+        Fungsi tersebut kontinu, bahkan
+        <m>|f(x)-f(a)|\leq\sqrt{2}\,d_E(x,a)</m>. Pilih
+        <m>\delta=\epsilon/\sqrt{2}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-03-solution">
+      <p>
+        Untuk <m>x=(x_1,x_2)</m> dan <m>a=(a_1,a_2)</m>, pertidaksamaan
+        Cauchy memberikan
+        <md>
+          <mrow>|f(x)-f(a)|
+          \amp=|(x_1-a_1)+(x_2-a_2)|</mrow>
+          <mrow>\amp\leq\sqrt{2}
+          \sqrt{(x_1-a_1)^2+(x_2-a_2)^2}</mrow>
+          <mrow>\amp=\sqrt{2}\,d_E(x,a).</mrow>
+        </md>
+        Ambil sebarang <m>a</m> dan <m>\epsilon&gt;0</m>, lalu pilih
+        <m>\delta=\epsilon/\sqrt{2}</m>. Jika
+        <m>d_E(x,a)&lt;\delta</m>, batas di atas memberi
+        <m>|f(x)-f(a)|&lt;\epsilon</m>. Jadi <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-04">
+    <title>Penjumlahan koordinat dengan metrik maksimum</title>
+    <statement>
+      <p>
+        Dengan metrik maksimum pada domain <m>\R^2</m> dan metrik Euklides
+        pada kodomain <m>\R</m>, buktikan atau sangkal bahwa
+        <m>f(x_1,x_2)=x_1+x_2</m> kontinu. Rubrik: turunkan batas yang berlaku
+        bagi semua pasangan titik dan berikan pilihan <m>\delta</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-04-hint">
+      <p>
+        Masing-masing selisih koordinat tidak melebihi jarak maksimum.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-04-answer">
+      <p>
+        Fungsi tersebut kontinu, karena
+        <m>|f(x)-f(a)|\leq2d_M(x,a)</m>. Pilih
+        <m>\delta=\epsilon/2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-04-solution">
+      <p>
+        Untuk <m>x=(x_1,x_2)</m> dan <m>a=(a_1,a_2)</m>,
+        <md>
+          <mrow>|f(x)-f(a)|
+          \amp\leq|x_1-a_1|+|x_2-a_2|</mrow>
+          <mrow>\amp\leq2\max\{|x_1-a_1|,|x_2-a_2|\}</mrow>
+          <mrow>\amp=2d_M(x,a).</mrow>
+        </md>
+        Ambil sebarang <m>a</m> dan <m>\epsilon&gt;0</m>, serta pilih
+        <m>\delta=\epsilon/2</m>. Jika <m>d_M(x,a)&lt;\delta</m>, maka
+        <m>|f(x)-f(a)|&lt;2\delta=\epsilon</m>. Jadi <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-05">
+    <title>Semua fungsi dari ruang diskret</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> memakai metrik diskret dan
+        <m>(Y,d_Y)</m> sebarang ruang metrik. Tentukan semua fungsi kontinu
+        <m>f:X\to Y</m>. Rubrik: buktikan klasifikasi Anda langsung dari
+        definisi; jangan mengasumsikan sifat khusus kodomain.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-05-hint">
+      <p>
+        Jika <m>d_X(x,a)&lt;1</m>, apa yang dapat disimpulkan tentang
+        <m>x</m> dan <m>a</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-05-answer">
+      <p>
+        Setiap fungsi <m>f:X\to Y</m> kontinu ketika domain memakai metrik
+        diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-05-solution">
+      <p>
+        Ambil fungsi sebarang <m>f:X\to Y</m>, titik sebarang
+        <m>a\in X</m>, dan <m>\epsilon&gt;0</m>. Pilih <m>\delta=1</m>.
+        Jika <m>d_X(x,a)&lt;1</m>, definisi metrik diskret memaksa
+        <m>x=a</m>. Karena itu
+        <me>d_Y(f(x),f(a))=d_Y(f(a),f(a))=0&lt;\epsilon.</me>
+        Jadi setiap fungsi kontinu di setiap titik domain. Tidak ada syarat
+        tambahan pada <m>f</m> atau pada metrik <m>d_Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-06">
+    <title>Kelipatan skalar fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(\R,d_E)\to(\R,d_E)</m> kontinu dan
+        <m>k\neq0</m>. Buktikan bahwa fungsi <m>kf</m>, yang didefinisikan
+        oleh <m>(kf)(x)=kf(x)</m>, kontinu. Rubrik: gunakan kekontinuan
+        <m>f</m> dengan toleransi keluaran yang disesuaikan oleh
+        <m>|k|</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-06-hint">
+      <p>
+        Karena
+        <m>|(kf)(x)-(kf)(a)|=|k|\,|f(x)-f(a)|</m>, mintalah
+        <m>|f(x)-f(a)|&lt;\epsilon/|k|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-06-answer">
+      <p>
+        Fungsi <m>kf</m> kontinu. Untuk toleransi <m>\epsilon</m>, pakai
+        <m>\epsilon/|k|</m> dalam definisi kekontinuan <m>f</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-06-solution">
+      <p>
+        Ambil sebarang <m>a\in\R</m> dan <m>\epsilon&gt;0</m>. Karena
+        <m>k\neq0</m>, bilangan <m>\epsilon/|k|</m> positif. Kekontinuan
+        <m>f</m> di <m>a</m> memberikan <m>\delta&gt;0</m> sedemikian sehingga
+        <m>|x-a|&lt;\delta</m> mengakibatkan
+        <m>|f(x)-f(a)|&lt;\epsilon/|k|</m>. Maka
+        <me>
+          |(kf)(x)-(kf)(a)|=|k|\,|f(x)-f(a)|&lt;\epsilon.
+        </me>
+        Jadi <m>kf</m> kontinu di setiap <m>a</m>, sehingga kontinu pada
+        <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-07">
+    <title>Jumlah dua fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>f,g:(\R,d_E)\to(\R,d_E)</m> kontinu. Buktikan bahwa
+        <m>f+g</m>, yang didefinisikan oleh
+        <m>(f+g)(x)=f(x)+g(x)</m>, kontinu. Rubrik: alokasikan toleransi keluaran
+        di antara dua suku dan gabungkan dua skala masukan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-07-hint">
+      <p>
+        Gunakan toleransi <m>\epsilon/2</m> untuk masing-masing fungsi dan
+        pilih nilai minimum dari dua <m>\delta</m> yang dihasilkan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-07-answer">
+      <p>
+        Fungsi <m>f+g</m> kontinu; jika <m>\delta_f</m> dan
+        <m>\delta_g</m> bekerja untuk toleransi <m>\epsilon/2</m>, pilih
+        <m>\delta=\min\{\delta_f,\delta_g\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-07-solution">
+      <p>
+        Ambil sebarang <m>a\in\R</m> dan <m>\epsilon&gt;0</m>. Kekontinuan
+        <m>f</m> dan <m>g</m> di <m>a</m> memberikan
+        <m>\delta_f,\delta_g&gt;0</m> sehingga, berturut-turut,
+        <m>|x-a|&lt;\delta_f</m> mengakibatkan
+        <m>|f(x)-f(a)|&lt;\epsilon/2</m> dan
+        <m>|x-a|&lt;\delta_g</m> mengakibatkan
+        <m>|g(x)-g(a)|&lt;\epsilon/2</m>.
+      </p>
+      <p>
+        Pilih <m>\delta=\min\{\delta_f,\delta_g\}</m>. Jika
+        <m>|x-a|&lt;\delta</m>, kedua batas berlaku dan
+        <me>
+          |(f+g)(x)-(f+g)(a)|
+          \leq|f(x)-f(a)|+|g(x)-g(a)|&lt;\epsilon.
+        </me>
+        Jadi <m>f+g</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-08">
+    <title>Menguraikan selisih hasil kali</title>
+    <statement>
+      <p>
+        Untuk fungsi <m>f</m> dan <m>g</m> serta titik <m>a</m>, buktikan
+        identitas
+        <md>
+          <mrow>f(x)g(x)-f(a)g(a)=f(a)(g(x)-g(a))
+          \amp+g(a)(f(x)-f(a))</mrow>
+          <mrow>\amp+(f(x)-f(a))(g(x)-g(a)).</mrow>
+        </md>
+        Rubrik: perluas kedua faktor setelah menambahkan dan mengurangkan nilai
+        di <m>a</m>, lalu sederhanakan seluruh suku.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-08-hint">
+      <p>
+        Substitusikan
+        <m>f(x)=f(a)+(f(x)-f(a))</m> dan
+        <m>g(x)=g(a)+(g(x)-g(a))</m> ke dalam <m>f(x)g(x)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-08-answer">
+      <p>
+        Identitas tersebut benar; ia diperoleh dengan memperluas hasil kali
+        dua jumlah dan membatalkan suku <m>f(a)g(a)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-08-solution">
+      <p>
+        Tuliskan <m>\Delta f=f(x)-f(a)</m> dan
+        <m>\Delta g=g(x)-g(a)</m>. Maka
+        <md>
+          <mrow>f(x)g(x)-f(a)g(a)
+          \amp=(f(a)+\Delta f)(g(a)+\Delta g)-f(a)g(a)</mrow>
+          <mrow>\amp=f(a)\Delta g+g(a)\Delta f+\Delta f\Delta g.</mrow>
+        </md>
+        Mengembalikan definisi <m>\Delta f</m> dan <m>\Delta g</m> menghasilkan
+        tepat identitas yang diminta. Bentuk ini memisahkan dua suku linear dan
+        satu suku hasil kali yang masing-masing dapat dikendalikan oleh
+        kekontinuan <m>f</m> dan <m>g</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-09">
+    <title>Empat skala untuk bukti hasil kali</title>
+    <statement>
+      <p>
+        Misalkan <m>f</m> dan <m>g</m> kontinu di <m>a</m> dan
+        <m>\epsilon&gt;0</m>. Jelaskan mengapa ada
+        <m>\delta_1,\delta_2,\delta_3,\delta_4&gt;0</m> yang masing-masing
+        menjamin
+        <md>
+          <mrow>|f(x)-f(a)|&lt;\sqrt{\epsilon/3},\quad
+          |g(x)-g(a)|&lt;\sqrt{\epsilon/3},</mrow>
+          <mrow>|f(x)-f(a)|&lt;\frac{\epsilon}{3(1+|g(a)|)},\quad
+          |g(x)-g(a)|&lt;\frac{\epsilon}{3(1+|f(a)|)}.</mrow>
+        </md>
+        Rubrik: pasangkan setiap toleransi positif dengan fungsi yang sesuai.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-09-hint">
+      <p>
+        Keempat ruas kanan positif. Terapkan definisi kekontinuan <m>f</m>
+        dua kali dan definisi kekontinuan <m>g</m> dua kali.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-09-answer">
+      <p>
+        Kekontinuan <m>f</m> menghasilkan <m>\delta_1</m> dan
+        <m>\delta_3</m>; kekontinuan <m>g</m> menghasilkan
+        <m>\delta_2</m> dan <m>\delta_4</m>, dengan toleransi keluaran sesuai
+        urutan yang ditampilkan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-09-solution">
+      <p>
+        Karena <m>\epsilon&gt;0</m>, semua bilangan
+        <m>\sqrt{\epsilon/3}</m>,
+        <m>\epsilon/[3(1+|g(a)|)]</m>, dan
+        <m>\epsilon/[3(1+|f(a)|)]</m> positif. Kekontinuan <m>f</m> di
+        <m>a</m>, berturut-turut dengan toleransi
+        <m>\sqrt{\epsilon/3}</m> dan
+        <m>\epsilon/[3(1+|g(a)|)]</m>, memberikan
+        <m>\delta_1&gt;0</m> dan <m>\delta_3&gt;0</m>. Kekontinuan
+        <m>g</m> di <m>a</m>, berturut-turut dengan toleransi
+        <m>\sqrt{\epsilon/3}</m> dan
+        <m>\epsilon/[3(1+|f(a)|)]</m>, memberikan
+        <m>\delta_2&gt;0</m> dan <m>\delta_4&gt;0</m>. Masing-masing definisi
+        tepat menghasilkan implikasi yang diminta ketika
+        <m>|x-a|</m> lebih kecil daripada <m>\delta_i</m> terkait.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-10">
+    <title>Hasil kali dua fungsi kontinu</title>
+    <statement>
+      <p>
+        Gunakan penguraian selisih dan empat skala pada dua butir sebelumnya
+        untuk membuktikan bahwa <m>fg</m> kontinu di <m>a</m>. Rubrik: pilih
+        satu <m>\delta</m> yang mengaktifkan keempat batas dan tunjukkan bahwa
+        masing-masing dari tiga suku bernilai kurang daripada
+        <m>\epsilon/3</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-10-hint">
+      <p>
+        Pilih
+        <m>\delta=\min\{\delta_1,\delta_2,\delta_3,\delta_4\}</m>. Gunakan
+        <m>|f(a)|/(1+|f(a)|)&lt;1</m> dan analoginya untuk <m>g(a)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-10-answer">
+      <p>
+        Dengan <m>\delta</m> sebagai minimum keempat skala, tiga suku dalam
+        batas segitiga masing-masing kurang daripada <m>\epsilon/3</m>;
+        karena itu <m>|f(x)g(x)-f(a)g(a)|&lt;\epsilon</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-10-solution">
+      <p>
+        Pilih
+        <m>\delta=\min\{\delta_1,\delta_2,\delta_3,\delta_4\}</m>. Jika
+        <m>|x-a|&lt;\delta</m>, penguraian pada butir pertama dan pertidaksamaan
+        segitiga memberikan
+        <md>
+          <mrow>|f(x)g(x)-f(a)g(a)|
+          \amp\leq |f(a)|\,|g(x)-g(a)|</mrow>
+          <mrow>\amp\quad+|g(a)|\,|f(x)-f(a)|</mrow>
+          <mrow>\amp\quad+|f(x)-f(a)|\,|g(x)-g(a)|.</mrow>
+        </md>
+        Batas dari <m>\delta_4</m> menjadikan suku pertama kurang daripada
+        <m>\epsilon|f(a)|/[3(1+|f(a)|)]&lt;\epsilon/3</m>. Batas dari
+        <m>\delta_3</m> menjadikan suku kedua kurang daripada
+        <m>\epsilon|g(a)|/[3(1+|g(a)|)]&lt;\epsilon/3</m>. Batas dari
+        <m>\delta_1</m> dan <m>\delta_2</m> menjadikan suku ketiga kurang
+        daripada
+        <m>\sqrt{\epsilon/3}\sqrt{\epsilon/3}=\epsilon/3</m>. Jadi seluruh
+        jumlah kurang daripada <m>\epsilon</m>, sehingga <m>fg</m> kontinu di
+        <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-11">
+    <title>Kebalikan pernyataan tentang jumlah</title>
+    <statement>
+      <p>
+        Tentukan apakah kekontinuan <m>f+g</m> memaksa <m>f</m> dan
+        <m>g</m> masing-masing kontinu. Buktikan jawaban Anda. Rubrik: jika
+        pernyataan salah, berikan fungsi konkret, periksa jumlahnya, dan
+        buktikan diskontinuitas kedua suku yang diperlukan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-11-hint">
+      <p>
+        Ambil suatu fungsi tak kontinu <m>h</m>, lalu pertimbangkan
+        <m>f=h</m> dan <m>g=-h</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-11-answer">
+      <p>
+        Tidak. Jika <m>h(x)=1</m> untuk <m>x\geq0</m> dan <m>h(x)=0</m>
+        untuk <m>x&lt;0</m>, maka <m>f=h</m> dan <m>g=-h</m> tidak kontinu di
+        <m>0</m>, tetapi <m>f+g=0</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-11-solution">
+      <p>
+        Definisikan <m>h:\R\to\R</m> dengan <m>h(x)=1</m> jika
+        <m>x\geq0</m> dan <m>h(x)=0</m> jika <m>x&lt;0</m>. Fungsi <m>h</m>
+        tidak kontinu di <m>0</m>: untuk <m>\epsilon_0=1/2</m> dan setiap
+        <m>\delta&gt;0</m>, titik <m>x=-\delta/2</m> memenuhi
+        <m>|x|&lt;\delta</m>, tetapi
+        <m>|h(x)-h(0)|=1\geq\epsilon_0</m>. Fungsi <m>-h</m> juga tidak
+        kontinu di <m>0</m> dengan argumen yang sama.
+      </p>
+      <p>
+        Ambil <m>f=h</m> dan <m>g=-h</m>. Untuk setiap <m>x</m>,
+        <m>(f+g)(x)=h(x)-h(x)=0</m>, sehingga <m>f+g</m> adalah fungsi konstan
+        dan kontinu. Jadi kekontinuan jumlah tidak memaksa kekontinuan kedua
+        sukunya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-12">
+    <title>Kebalikan pernyataan tentang hasil kali</title>
+    <statement>
+      <p>
+        Tentukan apakah kekontinuan <m>fg</m> memaksa <m>f</m> dan
+        <m>g</m> masing-masing kontinu. Buktikan jawaban Anda. Rubrik: berikan
+        contoh tandingan konkret dan verifikasi baik hasil kali maupun
+        diskontinuitas faktor-faktornya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-12-hint">
+      <p>
+        Carilah fungsi tak kontinu yang hanya bernilai <m>-1</m> dan
+        <m>1</m>, lalu kalikan fungsi itu dengan dirinya sendiri.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-12-answer">
+      <p>
+        Tidak. Jika <m>s(x)=1</m> untuk <m>x\geq0</m> dan <m>s(x)=-1</m>
+        untuk <m>x&lt;0</m>, maka <m>f=g=s</m> tidak kontinu di <m>0</m>, tetapi
+        <m>fg=s^2=1</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-12-solution">
+      <p>
+        Definisikan <m>s:\R\to\R</m> dengan <m>s(x)=1</m> untuk
+        <m>x\geq0</m> dan <m>s(x)=-1</m> untuk <m>x&lt;0</m>. Fungsi ini tidak
+        kontinu di <m>0</m>: tetapkan <m>\epsilon_0=1</m>; untuk setiap
+        <m>\delta&gt;0</m>, titik <m>x=-\delta/2</m> memenuhi
+        <m>|x|&lt;\delta</m>, tetapi
+        <m>|s(x)-s(0)|=|-1-1|=2\geq\epsilon_0</m>.
+      </p>
+      <p>
+        Ambil <m>f=g=s</m>. Kedua faktor tidak kontinu di <m>0</m>, sedangkan
+        untuk setiap <m>x</m>, <m>(fg)(x)=s(x)^2=1</m>. Hasil kali tersebut
+        adalah fungsi konstan, sehingga kontinu. Jadi pernyataannya salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-13">
+    <title>Skala eksplisit untuk fungsi kuadrat</title>
+    <statement>
+      <p>
+        Misalkan <m>f(x)=2x^2+1</m>. Untuk <m>\epsilon=1/4</m>, carilah
+        <m>\delta&gt;0</m> sedemikian sehingga
+        <m>|x-1|&lt;\delta</m> mengakibatkan
+        <m>|f(x)-f(1)|&lt;\epsilon</m>. Rubrik: berikan satu nilai sah dan
+        buktikan batasnya secara aljabar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-13-hint">
+      <p>
+        Faktorkan
+        <m>|f(x)-f(1)|=2|x-1|\,|x+1|</m>. Jika
+        <m>|x-1|&lt;1</m>, maka <m>|x+1|&lt;3</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-13-answer">
+      <p>
+        Salah satu pilihan yang sah adalah <m>\delta=1/24</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-13-solution">
+      <p>
+        Pilih <m>\delta=1/24</m>; khususnya <m>\delta&lt;1</m>. Jika
+        <m>|x-1|&lt;\delta</m>, maka
+        <m>|x+1|=|(x-1)+2|\leq|x-1|+2&lt;3</m>. Oleh karena itu
+        <md>
+          <mrow>|f(x)-f(1)|
+          \amp=|2x^2+1-(2\cdot1^2+1)|</mrow>
+          <mrow>\amp=2|x^2-1|</mrow>
+          <mrow>\amp=2|x-1|\,|x+1|</mrow>
+          <mrow>\amp&lt;6|x-1|&lt;6\delta=\frac14.</mrow>
+        </md>
+        Jadi <m>\delta=1/24</m> memenuhi implikasi yang diminta.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,11 +1,14 @@
 # Rights and attribution — original self-study companions
 
-The `chapter_*_self_study.ptx` files in this directory are original Bahasa
-Indonesia companion material prepared to accompany the derivative edition of
-Steven Schlicker, *Topology: An Inquiry-Based Approach*. They supply delayed
-checkpoints, hints, worked guidance, mastery checks, and error diagnostics; they
+The `chapter_*_self_study.ptx` wrappers and their included guide/mastery
+fragments in this directory are original Bahasa Indonesia companion material
+prepared to accompany the derivative edition of Steven Schlicker, *Topology:
+An Inquiry-Based Approach*. The original offline Chapter 6 epsilon-delta lab at
+`assets/o003-epsilon-delta-lab.html` is part of the same independently authored
+learning surface. These components supply delayed checkpoints, hints, worked
+guidance, mastery checks, error diagnostics, and interactive exploration; they
 are not a replacement textbook and do not reproduce expression from Anton
-Petrunin's separate work.
+Petrunin's separate work or the unavailable upstream GeoGebra object.
 
 The controlling upstream witness is `gvsuoer/topology` at commit
 `0c2d8f614ef87aa00de373f3418146c2f1d13bb9`, frozen from the official repository
@@ -17,7 +20,7 @@ preface also contains conflicting prose naming version 4.0; this edition therefo
 uses the more conservative CC BY-NC-SA 3.0 authority unless the rightsholder
 clarifies otherwise.
 
-The new, separately authored companion components are released under
+The new, separately authored companion components and epsilon-delta lab are released under
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 Attribution: original work by Steven Schlicker, Grand Valley State University;
 Bahasa Indonesia derivative companion prepared for this edition. Changes include

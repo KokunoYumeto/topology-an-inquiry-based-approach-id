@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id-ID" xml:lang="id-ID">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Laboratorium ε–δ untuk f(x) = x sin x</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f9fc;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #536174;
+      --line: #c8d1df;
+      --accent: #1559b7;
+      --accent-dark: #0c3f86;
+      --epsilon: #a5229b;
+      --delta: #c43d19;
+      --pass: #176c3a;
+      --pass-bg: #eaf7ef;
+      --fail: #9b2c24;
+      --fail-bg: #fff0ee;
+      --focus: #ffbf47;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    main {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1.25rem 0 2rem;
+    }
+    h1 { margin: 0 0 .35rem; font-size: clamp(1.55rem, 4vw, 2.25rem); line-height: 1.2; }
+    h2 { margin: 0 0 .8rem; font-size: 1.2rem; }
+    p { margin: .45rem 0; }
+    .lead { max-width: 78ch; color: var(--muted); }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(15rem, 19rem) minmax(0, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+      align-items: start;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: .75rem;
+      box-shadow: 0 1px 3px rgb(15 35 60 / 9%);
+      padding: 1rem;
+    }
+    fieldset { border: 0; padding: 0; margin: 0; }
+    legend { font-weight: 700; margin-bottom: .65rem; }
+    .control { margin-bottom: .85rem; }
+    label { display: block; font-weight: 650; margin-bottom: .2rem; }
+    label span { color: var(--muted); font-weight: 450; }
+    input[type="number"] {
+      width: 100%;
+      min-height: 2.65rem;
+      border: 1px solid #7d8da4;
+      border-radius: .4rem;
+      background: var(--panel);
+      color: var(--ink);
+      font: inherit;
+      padding: .45rem .55rem;
+    }
+    input:focus-visible, button:focus-visible, a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .help { color: var(--muted); font-size: .88rem; margin-top: .15rem; }
+    .button-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
+    button {
+      min-height: 2.65rem;
+      border: 1px solid var(--accent-dark);
+      border-radius: .42rem;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      font-weight: 650;
+      padding: .45rem .7rem;
+      cursor: pointer;
+    }
+    button.secondary { background: var(--panel); color: var(--accent-dark); }
+    .graph-panel { padding: .65rem; }
+    #graph {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+      border: 1px solid var(--line);
+      border-radius: .5rem;
+      background: #fff;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem 1rem;
+      margin: .65rem .25rem 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .swatch { display: inline-block; width: 1.2rem; height: .65rem; margin-right: .3rem; vertical-align: -.05rem; }
+    .curve-swatch { border-top: .22rem solid var(--accent); }
+    .epsilon-swatch { background: rgb(165 34 155 / 23%); border: 1px solid var(--epsilon); }
+    .delta-swatch { background: rgb(196 61 25 / 17%); border: 1px solid var(--delta); }
+    .result {
+      margin-top: 1rem;
+      border: 2px solid;
+      border-radius: .65rem;
+      padding: .8rem 1rem;
+    }
+    .result.pass { color: var(--pass); background: var(--pass-bg); border-color: var(--pass); }
+    .result.fail { color: var(--fail); background: var(--fail-bg); border-color: var(--fail); }
+    .result h2 { color: inherit; margin-bottom: .25rem; }
+    .caution { font-size: .9rem; color: var(--muted); }
+    .table-wrap { overflow-x: auto; margin-top: 1rem; }
+    table { width: 100%; border-collapse: collapse; background: var(--panel); }
+    caption { text-align: left; font-weight: 700; padding: 0 0 .45rem; }
+    th, td { border: 1px solid var(--line); padding: .45rem .55rem; text-align: right; white-space: nowrap; }
+    th:first-child, td:first-child { text-align: left; }
+    thead th { background: #edf2f8; color: #172033; }
+    .yes { color: var(--pass); font-weight: 700; }
+    .no { color: var(--fail); font-weight: 700; }
+    footer { margin-top: 1rem; color: var(--muted); font-size: .9rem; }
+    footer a { color: var(--accent-dark); }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (max-width: 760px) {
+      main { width: min(100% - 1rem, 1120px); padding-top: .75rem; }
+      .layout { grid-template-columns: 1fr; }
+      #graph { min-height: 245px; }
+      th, td { padding: .4rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Laboratorium ε–δ untuk <span lang="zxx">f(x) = x sin x</span></h1>
+    <p class="lead">
+      Atur titik pangkal <strong>a</strong>, toleransi keluaran <strong>ε</strong>, dan radius masukan
+      <strong>δ</strong>. Grafik memperlihatkan apakah nilai sampel dengan
+      <span lang="zxx">|x − a| &lt; δ</span> tetap berada di dalam pita
+      <span lang="zxx">|f(x) − f(a)| &lt; ε</span>.
+    </p>
+    <p class="lead"><strong>Catatan:</strong> hasil numerik membantu eksplorasi, tetapi bukan pengganti bukti ε–δ.</p>
+
+    <div class="layout">
+      <section class="panel" aria-labelledby="controls-heading">
+        <h2 id="controls-heading">Kendali</h2>
+        <fieldset>
+          <legend class="sr-only">Parameter laboratorium</legend>
+          <div class="control">
+            <label for="a">Titik pangkal, a</label>
+            <input id="a" name="a" type="number" value="1" min="-20" max="20" step="0.1" inputmode="decimal">
+          </div>
+          <div class="control">
+            <label for="epsilon">Toleransi keluaran, ε <span>(harus positif)</span></label>
+            <input id="epsilon" name="epsilon" type="number" value="0.5" min="0.001" max="50" step="0.05" inputmode="decimal">
+          </div>
+          <div class="control">
+            <label for="delta">Radius masukan, δ <span>(harus positif)</span></label>
+            <input id="delta" name="delta" type="number" value="0.25" min="0.001" max="50" step="0.05" inputmode="decimal">
+          </div>
+          <div class="control">
+            <label for="x-radius">Setengah rentang horizontal</label>
+            <input id="x-radius" name="x-radius" type="number" value="4" min="0.1" max="100" step="0.5" inputmode="decimal">
+            <p class="help">Sumbu x ditampilkan dari a − rentang hingga a + rentang.</p>
+          </div>
+          <div class="control">
+            <label for="y-radius">Setengah rentang vertikal</label>
+            <input id="y-radius" name="y-radius" type="number" value="4" min="0.1" max="200" step="0.5" inputmode="decimal">
+            <p class="help">Sumbu y dipusatkan pada f(a).</p>
+          </div>
+          <div class="button-row">
+            <button id="apply" type="button">Perbarui grafik</button>
+            <button id="preset-one" class="secondary" type="button">Soal 1</button>
+            <button id="preset-two" class="secondary" type="button">Soal 2</button>
+            <button id="reset" class="secondary" type="button">Atur ulang</button>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="panel graph-panel" aria-labelledby="graph-heading">
+        <h2 id="graph-heading" class="sr-only">Grafik interaktif</h2>
+        <svg id="graph" viewbox="0 0 960 560" role="img" aria-labelledby="graph-title graph-description">
+          <title id="graph-title">Grafik f(x) sama dengan x sinus x dengan pita epsilon dan delta</title>
+          <desc id="graph-description">Grafik akan diperbarui setelah JavaScript dijalankan.</desc>
+        </svg>
+        <div class="legend" aria-label="Legenda grafik">
+          <span><span class="swatch curve-swatch" aria-hidden="true"></span>f(x) = x sin x</span>
+          <span><span class="swatch epsilon-swatch" aria-hidden="true"></span>pita f(a) ± ε</span>
+          <span><span class="swatch delta-swatch" aria-hidden="true"></span>pita a ± δ</span>
+        </div>
+      </section>
+    </div>
+
+    <section id="result" class="result" role="status" aria-live="polite" aria-atomic="true">
+      <h2 id="result-heading">Menyiapkan perhitungan…</h2>
+      <p id="result-detail"></p>
+      <p class="caution">Pemeriksaan memakai 2.001 titik sampel di dalam interval terbuka; kelulusan sampel bukan bukti untuk semua bilangan real.</p>
+    </section>
+
+    <section class="panel table-wrap" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Ringkasan numerik</h2>
+      <table>
+        <caption id="sample-caption">Lima titik perwakilan di dalam pita δ</caption>
+        <thead>
+          <tr>
+            <th scope="col">Posisi</th>
+            <th scope="col">x</th>
+            <th scope="col">f(x)</th>
+            <th scope="col">|f(x) − f(a)|</th>
+            <th scope="col">Kurang dari ε?</th>
+          </tr>
+        </thead>
+        <tbody id="sample-body"></tbody>
+      </table>
+      <p id="maximum-detail" class="caution"></p>
+    </section>
+
+    <footer>
+      <p>
+        <strong>Komponen asli O003.</strong> Dibuat untuk edisi Bahasa Indonesia ini, 2026;
+        tidak berasal dari GeoGebra atau dari prosa GVSU. Komponen ini dilisensikan
+        <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.
+      </p>
+      <p>Aplikasi ini mandiri, tidak memakai pelacak, dan tidak mengirim atau mengambil data melalui jaringan.</p>
+    </footer>
+  </main>
+
+  <script>
+    "use strict";
+
+    const NS = "http://www.w3.org/2000/svg";
+    const controls = {
+      a: document.getElementById("a"),
+      epsilon: document.getElementById("epsilon"),
+      delta: document.getElementById("delta"),
+      xRadius: document.getElementById("x-radius"),
+      yRadius: document.getElementById("y-radius")
+    };
+    const graph = document.getElementById("graph");
+    const graphDescription = document.getElementById("graph-description");
+    const result = document.getElementById("result");
+    const resultHeading = document.getElementById("result-heading");
+    const resultDetail = document.getElementById("result-detail");
+    const sampleBody = document.getElementById("sample-body");
+    const maximumDetail = document.getElementById("maximum-detail");
+
+    function f(x) {
+      return x * Math.sin(x);
+    }
+
+    function finiteNumber(input, fallback, positive = false) {
+      const value = Number(input.value);
+      if (!Number.isFinite(value) || (positive && value <= 0)) {
+        input.value = String(fallback);
+        return fallback;
+      }
+      return value;
+    }
+
+    function format(value, digits = 5) {
+      if (Math.abs(value) < 5e-12) value = 0;
+      return new Intl.NumberFormat("id-ID", {
+        maximumFractionDigits: digits,
+        minimumFractionDigits: 0
+      }).format(value);
+    }
+
+    function svgElement(name, attributes = {}, text = "") {
+      const element = document.createElementNS(NS, name);
+      for (const [key, value] of Object.entries(attributes)) {
+        element.setAttribute(key, String(value));
+      }
+      if (text) element.textContent = text;
+      return element;
+    }
+
+    function appendLine(parent, x1, y1, x2, y2, stroke, width = 1, dash = "") {
+      parent.appendChild(svgElement("line", {
+        x1, y1, x2, y2, stroke,
+        "stroke-width": width,
+        "stroke-dasharray": dash,
+        "vector-effect": "non-scaling-stroke"
+      }));
+    }
+
+    function draw() {
+      const a = finiteNumber(controls.a, 1);
+      const epsilon = finiteNumber(controls.epsilon, 0.5, true);
+      const delta = finiteNumber(controls.delta, 0.25, true);
+      const xRadius = finiteNumber(controls.xRadius, 4, true);
+      const yRadius = finiteNumber(controls.yRadius, 4, true);
+      const fa = f(a);
+
+      const xMin = a - xRadius;
+      const xMax = a + xRadius;
+      const yMin = fa - yRadius;
+      const yMax = fa + yRadius;
+      const width = 960;
+      const height = 560;
+      const margin = { left: 78, right: 30, top: 28, bottom: 62 };
+      const plotWidth = width - margin.left - margin.right;
+      const plotHeight = height - margin.top - margin.bottom;
+      const px = x => margin.left + (x - xMin) / (xMax - xMin) * plotWidth;
+      const py = y => margin.top + (yMax - y) / (yMax - yMin) * plotHeight;
+
+      while (graph.lastChild && !["title", "desc"].includes(graph.lastChild.localName)) {
+        graph.removeChild(graph.lastChild);
+      }
+
+      const plot = svgElement("g", { "aria-hidden": "true" });
+      graph.appendChild(plot);
+      plot.appendChild(svgElement("rect", {
+        x: margin.left,
+        y: margin.top,
+        width: plotWidth,
+        height: plotHeight,
+        fill: "#ffffff",
+        stroke: "#8290a3"
+      }));
+
+      const epsilonTop = py(fa + epsilon);
+      const epsilonBottom = py(fa - epsilon);
+      const clippedEpsilonTop = Math.max(margin.top, Math.min(margin.top + plotHeight, epsilonTop));
+      const clippedEpsilonBottom = Math.max(margin.top, Math.min(margin.top + plotHeight, epsilonBottom));
+      plot.appendChild(svgElement("rect", {
+        x: margin.left,
+        y: Math.min(clippedEpsilonTop, clippedEpsilonBottom),
+        width: plotWidth,
+        height: Math.abs(clippedEpsilonBottom - clippedEpsilonTop),
+        fill: "#a5229b",
+        "fill-opacity": 0.16
+      }));
+
+      const deltaLeft = Math.max(margin.left, Math.min(margin.left + plotWidth, px(a - delta)));
+      const deltaRight = Math.max(margin.left, Math.min(margin.left + plotWidth, px(a + delta)));
+      plot.appendChild(svgElement("rect", {
+        x: Math.min(deltaLeft, deltaRight),
+        y: margin.top,
+        width: Math.abs(deltaRight - deltaLeft),
+        height: plotHeight,
+        fill: "#c43d19",
+        "fill-opacity": 0.13
+      }));
+
+      for (let i = 0; i <= 8; i += 1) {
+        const x = xMin + (xMax - xMin) * i / 8;
+        const screenX = px(x);
+        appendLine(plot, screenX, margin.top, screenX, margin.top + plotHeight, "#dfe5ed");
+        plot.appendChild(svgElement("text", {
+          x: screenX,
+          y: height - 31,
+          fill: "#38475a",
+          "font-size": 16,
+          "text-anchor": "middle"
+        }, format(x, 3)));
+      }
+      for (let i = 0; i <= 8; i += 1) {
+        const y = yMin + (yMax - yMin) * i / 8;
+        const screenY = py(y);
+        appendLine(plot, margin.left, screenY, margin.left + plotWidth, screenY, "#dfe5ed");
+        plot.appendChild(svgElement("text", {
+          x: margin.left - 10,
+          y: screenY + 5,
+          fill: "#38475a",
+          "font-size": 16,
+          "text-anchor": "end"
+        }, format(y, 3)));
+      }
+
+      if (xMin <= 0 && 0 <= xMax) appendLine(plot, px(0), margin.top, px(0), margin.top + plotHeight, "#2f3948", 1.5);
+      if (yMin <= 0 && 0 <= yMax) appendLine(plot, margin.left, py(0), margin.left + plotWidth, py(0), "#2f3948", 1.5);
+
+      appendLine(plot, margin.left, epsilonTop, margin.left + plotWidth, epsilonTop, "#a5229b", 2, "10 7");
+      appendLine(plot, margin.left, epsilonBottom, margin.left + plotWidth, epsilonBottom, "#a5229b", 2, "10 7");
+      appendLine(plot, px(a - delta), margin.top, px(a - delta), margin.top + plotHeight, "#c43d19", 2, "10 7");
+      appendLine(plot, px(a + delta), margin.top, px(a + delta), margin.top + plotHeight, "#c43d19", 2, "10 7");
+
+      let pathData = "";
+      const curvePoints = 1600;
+      for (let i = 0; i <= curvePoints; i += 1) {
+        const x = xMin + (xMax - xMin) * i / curvePoints;
+        const y = f(x);
+        const command = i === 0 ? "M" : "L";
+        pathData += `${command}${px(x).toFixed(2)},${py(y).toFixed(2)} `;
+      }
+      plot.appendChild(svgElement("path", {
+        d: pathData,
+        fill: "none",
+        stroke: "#1559b7",
+        "stroke-width": 3,
+        "stroke-linejoin": "round",
+        "stroke-linecap": "round",
+        "vector-effect": "non-scaling-stroke",
+        "clip-path": "url(#plot-clip)"
+      }));
+
+      const defs = svgElement("defs");
+      const clipPath = svgElement("clipPath", { id: "plot-clip" });
+      clipPath.appendChild(svgElement("rect", { x: margin.left, y: margin.top, width: plotWidth, height: plotHeight }));
+      defs.appendChild(clipPath);
+      graph.insertBefore(defs, plot);
+
+      plot.appendChild(svgElement("circle", { cx: px(a), cy: py(fa), r: 6, fill: "#111827", stroke: "#fff", "stroke-width": 2 }));
+      plot.appendChild(svgElement("text", { x: width - 18, y: height - 14, fill: "#172033", "font-size": 18, "text-anchor": "end" }, "x"));
+      plot.appendChild(svgElement("text", { x: 23, y: 24, fill: "#172033", "font-size": 18, "text-anchor": "middle" }, "y"));
+
+      const sampleCount = 2001;
+      let worstDeviation = -1;
+      let worstX = a;
+      for (let i = 1; i <= sampleCount; i += 1) {
+        const fraction = i / (sampleCount + 1);
+        const x = a - delta + 2 * delta * fraction;
+        const deviation = Math.abs(f(x) - fa);
+        if (deviation > worstDeviation) {
+          worstDeviation = deviation;
+          worstX = x;
+        }
+      }
+      const passed = worstDeviation < epsilon;
+      result.className = `result ${passed ? "pass" : "fail"}`;
+      resultHeading.textContent = passed ? "Lulus pada seluruh titik sampel" : "Gagal pada sedikitnya satu titik sampel";
+      resultDetail.textContent = passed
+        ? `Deviasi sampel terbesar adalah ${format(worstDeviation)}; nilainya kurang dari ε = ${format(epsilon)}.`
+        : `Deviasi sampel terbesar adalah ${format(worstDeviation)}; nilainya tidak kurang dari ε = ${format(epsilon)}.`;
+
+      graphDescription.textContent =
+        `Grafik f(x)=x sin x untuk x dari ${format(xMin, 3)} sampai ${format(xMax, 3)}. ` +
+        `Titik pangkal a=${format(a, 3)} dengan f(a)=${format(fa, 3)}. ` +
+        `Pita vertikal membatasi x antara ${format(a - delta, 3)} dan ${format(a + delta, 3)}; ` +
+        `pita horizontal membatasi y antara ${format(fa - epsilon, 3)} dan ${format(fa + epsilon, 3)}. ` +
+        `Pemeriksaan sampel ${passed ? "lulus" : "gagal"}.`;
+
+      const representativeFactors = [-0.999, -0.5, 0, 0.5, 0.999];
+      const labels = ["dekat a − δ", "tengah kiri", "a", "tengah kanan", "dekat a + δ"];
+      sampleBody.replaceChildren();
+      representativeFactors.forEach((factor, index) => {
+        const x = a + factor * delta;
+        const fx = f(x);
+        const deviation = Math.abs(fx - fa);
+        const ok = deviation < epsilon;
+        const row = document.createElement("tr");
+        const values = [labels[index], format(x), format(fx), format(deviation)];
+        values.forEach(value => {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          row.appendChild(cell);
+        });
+        const statusCell = document.createElement("td");
+        statusCell.textContent = ok ? "Ya" : "Tidak";
+        statusCell.className = ok ? "yes" : "no";
+        row.appendChild(statusCell);
+        sampleBody.appendChild(row);
+      });
+      maximumDetail.textContent =
+        `Di antara ${format(sampleCount, 0)} titik sampel, deviasi terbesar yang ditemukan adalah ` +
+        `${format(worstDeviation)} pada x ≈ ${format(worstX)}. Interval masukan terbuka: ` +
+        `(${format(a - delta)}, ${format(a + delta)}); pita keluaran terbuka: ` +
+        `(${format(fa - epsilon)}, ${format(fa + epsilon)}).`;
+    }
+
+    document.getElementById("apply").addEventListener("click", draw);
+    Object.values(controls).forEach(control => {
+      control.addEventListener("change", draw);
+      control.addEventListener("keydown", event => {
+        if (event.key === "Enter") draw();
+      });
+    });
+    document.getElementById("preset-one").addEventListener("click", () => {
+      controls.a.value = "1";
+      controls.epsilon.value = "0.5";
+      controls.xRadius.value = "4";
+      controls.yRadius.value = "4";
+      draw();
+      controls.delta.focus();
+    });
+    document.getElementById("preset-two").addEventListener("click", () => {
+      controls.a.value = "2.5";
+      controls.epsilon.value = "0.25";
+      controls.xRadius.value = "4";
+      controls.yRadius.value = "4";
+      draw();
+      controls.delta.focus();
+    });
+    document.getElementById("reset").addEventListener("click", () => {
+      controls.a.value = "1";
+      controls.epsilon.value = "0.5";
+      controls.delta.value = "0.25";
+      controls.xRadius.value = "4";
+      controls.yRadius.value = "4";
+      draw();
+      controls.a.focus();
+    });
+
+    draw();
+  </script>
+</body>
+</html>

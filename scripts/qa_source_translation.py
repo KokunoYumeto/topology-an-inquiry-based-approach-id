@@ -50,6 +50,8 @@ def hash_file(path: Path) -> dict[str, object]:
 
 
 def main() -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser()
     parser.add_argument("--authority-root", required=True, type=Path)
     parser.add_argument("--translated-root", required=True, type=Path)
@@ -83,6 +85,26 @@ def main() -> int:
             "subtree prefix and the final complete element sequence must match."
         ),
     )
+    parser.add_argument(
+        "--allow-external-xref",
+        action="append",
+        default=[],
+        metavar="XML_ID",
+        help=(
+            "Permit a referenced xml:id that is intentionally outside the explicit "
+            "unit; every allowance must be used."
+        ),
+    )
+    parser.add_argument(
+        "--allow-attribute-change",
+        action="append",
+        default=[],
+        metavar="FILE:ZERO_BASED_ADJUSTED_INDEX:ATTRIBUTE",
+        help=(
+            "Permit one intentional attribute-value change after approved element "
+            "insertions/moves; every allowance must be used."
+        ),
+    )
     parser.add_argument("files", nargs="+")
     args = parser.parse_args()
 
@@ -94,6 +116,17 @@ def main() -> int:
     all_ids: list[str] = []
     all_refs: list[str] = []
     allowed_math_changes = set(args.allow_math_change)
+    attribute_change_allowances: dict[str, set[tuple[int, str]]] = {}
+    for specification in args.allow_attribute_change:
+        try:
+            file_name, index_text, attribute = specification.split(":", 2)
+            index = int(index_text)
+        except ValueError as error:
+            raise SystemExit(f"invalid --allow-attribute-change: {specification}") from error
+        if index < 0 or not attribute:
+            raise SystemExit(f"invalid --allow-attribute-change: {specification}")
+        attribute_change_allowances.setdefault(file_name, set()).add((index, attribute))
+    observed_attribute_changes: list[dict[str, object]] = []
     observed_allowed_math_changes: list[dict[str, object]] = []
     insertion_allowances: dict[str, list[tuple[int, str, str]]] = {}
     for specification in args.allow_element_insertion:
@@ -322,7 +355,41 @@ def main() -> int:
                 min(len(authority_tags), len(adjusted_translated_tags)),
             )
             failures.append(f"element sequence changed: {name}; first mismatch {first}")
-        if authority_attributes != adjusted_translated_attributes:
+        observed_file_attribute_changes: set[tuple[int, str]] = set()
+        if len(authority_attributes) == len(adjusted_translated_attributes):
+            permitted = attribute_change_allowances.get(name, set())
+            for index, (authority_row, translated_row) in enumerate(
+                zip(authority_attributes, adjusted_translated_attributes)
+            ):
+                authority_map = dict(authority_row)
+                translated_map = dict(translated_row)
+                for attribute in sorted(set(authority_map) | set(translated_map)):
+                    if authority_map.get(attribute) == translated_map.get(attribute):
+                        continue
+                    key = (index, attribute)
+                    if key not in permitted:
+                        failures.append(
+                            f"unapproved attribute change: {name}:{index}:{attribute}"
+                        )
+                        continue
+                    observed_file_attribute_changes.add(key)
+                    observed_attribute_changes.append(
+                        {
+                            "key": f"{name}:{index}:{attribute}",
+                            "file": name,
+                            "adjusted_element_index": index,
+                            "element": local_name(adjusted_translated_elements[index]),
+                            "attribute": attribute,
+                            "authority_value": authority_map.get(attribute),
+                            "translated_value": translated_map.get(attribute),
+                        }
+                    )
+            unused = sorted(permitted - observed_file_attribute_changes)
+            if unused:
+                failures.append(
+                    f"unused attribute-change allowances for {name}: {unused}"
+                )
+        elif authority_attributes != adjusted_translated_attributes:
             failures.append(f"attribute sequence changed: {name}")
 
         authority_math = [normalized_math(node) for node in authority_elements if local_name(node) in MATH_TAGS]
@@ -378,9 +445,18 @@ def main() -> int:
     duplicate_ids = sorted(name for name, count in Counter(all_ids).items() if count > 1)
     if duplicate_ids:
         failures.append(f"duplicate xml:id values: {duplicate_ids}")
-    missing_refs = sorted(set(all_refs) - set(all_ids))
+    external_xref_allowances = set(args.allow_external_xref)
+    observed_external_xrefs = sorted((set(all_refs) - set(all_ids)) & external_xref_allowances)
+    missing_refs = sorted(set(all_refs) - set(all_ids) - external_xref_allowances)
     if missing_refs:
         failures.append(f"xref targets absent from explicit unit: {missing_refs}")
+    unused_external_xref_allowances = sorted(
+        external_xref_allowances - set(observed_external_xrefs)
+    )
+    if unused_external_xref_allowances:
+        failures.append(
+            f"unused external-xref allowances: {unused_external_xref_allowances}"
+        )
     unused_math_allowances = sorted(
         allowed_math_changes - {str(row["key"]) for row in observed_allowed_math_changes}
     )
@@ -420,10 +496,12 @@ def main() -> int:
         "xml_ids": len(all_ids),
         "xrefs": len(all_refs),
         "missing_xref_targets": missing_refs,
+        "approved_external_xref_targets": observed_external_xrefs,
         "approved_math_changes": observed_allowed_math_changes,
         "approved_element_insertions": observed_element_insertions,
         "approved_element_block_moves": observed_element_block_moves,
         "approved_element_shell_moves": observed_element_shell_moves,
+        "approved_attribute_changes": observed_attribute_changes,
         "failures": failures,
     }
     payload = json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n"

@@ -1,0 +1,660 @@
+<section xml:id="o003-c90-ch06-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian kedua</title>
+
+  <p>
+    Panduan ini mengikuti Tugas 14–26 pada latihan sumber secara berurutan.
+    Kerjakan pernyataannya terlebih dahulu, lalu gunakan rubrik untuk menilai
+    kelengkapan argumen Anda. Bukalah petunjuk, jawaban, dan solusi secara
+    bertahap hanya setelah Anda mencoba tugas secara mandiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-14">
+    <title>Tugas 14: kekontinuan fungsi kuadrat di titik <m>1</m></title>
+    <statement>
+      <p>
+        Misalkan <m>f:\R\to\R</m> didefinisikan oleh
+        <m>f(x)=2x^2+1</m>, dengan metrik Euklides pada domain dan kodomain.
+        Buktikan bahwa <m>f</m> kontinu di <m>x=1</m>.
+        <em>Rubrik.</em> Mulailah dengan sembarang <m>\epsilon\gt0</m>,
+        berikan pilihan <m>\delta</m> yang hanya bergantung pada
+        <m>\epsilon</m>, dan turunkan pertidaksamaan yang diperlukan tanpa
+        mengandaikan kesimpulan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-14-hint">
+      <p>
+        <em>Langkah 1.</em> Faktorkan
+        <m>|f(x)-f(1)|=2|x-1||x+1|</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>|x-1|\lt1</m>, maka
+        <m>|x+1|\lt3</m>. Pilih <m>\delta</m> yang sekaligus menjamin
+        syarat ini dan membuat <m>6|x-1|\lt\epsilon</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-14-answer">
+      <p>
+        Fungsi <m>f</m> kontinu di <m>1</m>. Untuk
+        <m>\epsilon\gt0</m>, pilihan
+        <m>\delta=\min\{1,\epsilon/6\}</m> memenuhi definisi
+        kekontinuan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-14-solution">
+      <p>
+        Ambil sembarang <m>\epsilon\gt0</m> dan tetapkan
+        <m>\delta=\min\{1,\epsilon/6\}</m>. Andaikan
+        <m>|x-1|\lt\delta</m>. Karena <m>\delta\leq1</m>, berlaku
+        <m>|x-1|\lt1</m>. Pertidaksamaan segitiga kemudian memberi
+        <m>|x+1|=|(x-1)+2|\leq|x-1|+2\lt3</m>.
+      </p>
+      <p>
+        Oleh karena itu,
+        <me>
+          |f(x)-f(1)|=|2x^2+1-3|
+          =2|x-1||x+1|\lt6|x-1|\lt6\delta\leq\epsilon.
+        </me>
+        Jadi, untuk setiap toleransi positif telah ditemukan radius positif
+        yang memenuhi implikasi definisi. Maka <m>f</m> kontinu di
+        <m>x=1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-15">
+    <title>Tugas 15: metrik yang dipangkas pada <m>1</m></title>
+    <statement>
+      <p>
+        Definisikan <m>d:\R\times\R\to\R</m> dengan
+        <m>d(x,y)=\min\{|x-y|,1\}</m>. Buktikan bahwa <m>d</m>
+        merupakan metrik.
+        <em>Rubrik.</em> Verifikasi keempat aksioma metrik. Untuk
+        pertidaksamaan segitiga, jelaskan mengapa pemangkasan pada <m>1</m>
+        mempertahankan pertidaksamaan, bukan sekadar menyatakan bahwa hasilnya
+        jelas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-15-hint">
+      <p>
+        <em>Langkah 1.</em> Ketaknegatifan, simetri, dan pemisahan titik
+        diwarisi dari nilai mutlak.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>a,b\geq0</m>, buktikan
+        <m>\min\{a+b,1\}\leq\min\{a,1\}+\min\{b,1\}</m>
+        dengan memisahkan kasus ketika salah satu dari <m>a,b</m> sedikitnya
+        <m>1</m> dan ketika keduanya kurang dari <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-15-answer">
+      <p>
+        Benar, <m>d</m> merupakan metrik. Aksioma pertama hingga ketiga
+        mengikuti sifat nilai mutlak, sedangkan pertidaksamaan segitiga
+        mengikuti
+        <m>\min\{a+b,1\}\leq\min\{a,1\}+\min\{b,1\}</m>
+        untuk <m>a,b\geq0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-15-solution">
+      <p>
+        Untuk setiap <m>x,y\in\R</m>, kedua bilangan
+        <m>|x-y|</m> dan <m>1</m> tak negatif, sehingga
+        <m>d(x,y)\geq0</m>. Selanjutnya,
+        <m>d(x,y)=0</m> tepat ketika <m>|x-y|=0</m>, yakni tepat ketika
+        <m>x=y</m>. Simetri nilai mutlak juga memberi
+        <m>d(x,y)=d(y,x)</m>.
+      </p>
+      <p>
+        Tinggal membuktikan pertidaksamaan segitiga. Untuk bilangan tak negatif
+        <m>a,b</m>, berlaku
+        <me>
+          \min\{a+b,1\}\leq
+          \min\{a,1\}+\min\{b,1\}.
+        </me>
+        Memang, jika <m>a\geq1</m> atau <m>b\geq1</m>, ruas kanan
+        sedikitnya <m>1</m>, sedangkan ruas kiri paling besar <m>1</m>. Jika
+        <m>a\lt1</m> dan <m>b\lt1</m>, ruas kanan sama dengan
+        <m>a+b</m>, yang tidak lebih kecil daripada ruas kiri.
+      </p>
+      <p>
+        Sekarang tetapkan <m>a=|x-y|</m> dan <m>b=|y-z|</m>. Dari
+        <m>|x-z|\leq a+b</m> dan sifat naik fungsi
+        <m>t\mapsto\min\{t,1\}</m>, diperoleh
+        <md>
+          <mrow>d(x,z)\amp=\min\{|x-z|,1\}</mrow>
+          <mrow>\amp\leq\min\{a+b,1\}</mrow>
+          <mrow>\amp\leq\min\{a,1\}+\min\{b,1\}</mrow>
+          <mrow>\amp=d(x,y)+d(y,z).</mrow>
+        </md>
+        Keempat aksioma terpenuhi, jadi <m>d</m> merupakan metrik pada
+        <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-16">
+    <title>Tugas 16: nilai pada himpunan rapat menentukan fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>f:\R\to\R</m> kontinu dalam metrik Euklides
+        dan <m>f(q)=0</m> untuk setiap <m>q\in\Q</m>. Buktikan bahwa
+        <m>f(x)=0</m> untuk setiap <m>x\in\R</m>.
+        <em>Rubrik.</em> Gunakan kerapatan <m>\Q</m> secara kuantitatif di
+        dalam lingkungan <m>\delta</m>; jangan mengandaikan hasil tentang
+        limit barisan yang belum diperlukan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-16-hint">
+      <p>
+        <em>Langkah 1.</em> Tetapkan <m>a\in\R</m>. Kekontinuan di
+        <m>a</m> menyediakan <m>\delta</m> untuk setiap
+        <m>\epsilon\gt0</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Pilih <m>q\in\Q</m> dengan
+        <m>|q-a|\lt\delta</m>. Kemudian bandingkan
+        <m>|f(a)|</m> dengan <m>|f(q)-f(a)|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-16-answer">
+      <p>
+        Untuk setiap <m>a\in\R</m> dan setiap
+        <m>\epsilon\gt0</m>, kekontinuan dan kerapatan
+        <m>\Q</m> memberi <m>|f(a)|\lt\epsilon</m>. Karena ini berlaku
+        untuk setiap toleransi positif, <m>f(a)=0</m>. Jadi
+        <m>f</m> identik nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-16-solution">
+      <p>
+        Ambil sembarang <m>a\in\R</m>. Untuk membuktikan
+        <m>f(a)=0</m>, tetapkan sembarang <m>\epsilon\gt0</m>.
+        Karena <m>f</m> kontinu di <m>a</m>, ada <m>\delta\gt0</m>
+        sedemikian sehingga
+        <m>|x-a|\lt\delta</m> mengakibatkan
+        <m>|f(x)-f(a)|\lt\epsilon</m>.
+      </p>
+      <p>
+        Kerapatan bilangan rasional dalam bilangan real memberi
+        <m>q\in\Q</m> dengan <m>|q-a|\lt\delta</m>. Oleh
+        hipotesis, <m>f(q)=0</m>, sehingga
+        <me>
+          |f(a)|=|0-f(a)|=|f(q)-f(a)|\lt\epsilon.
+        </me>
+        Jika <m>|f(a)|</m> positif, kita dapat memilih
+        <m>\epsilon=|f(a)|</m> dan memperoleh kontradiksi. Jadi
+        <m>f(a)=0</m>. Karena <m>a</m> dipilih sembarang, kesimpulan ini
+        berlaku pada seluruh <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-17">
+    <title>Tugas 17: fungsi Dirichlet tidak kontinu di mana pun</title>
+    <statement>
+      <p>
+        Definisikan <m>f:\R\to\R</m> dengan <m>f(x)=0</m> untuk
+        <m>x</m> irasional dan <m>f(x)=1</m> untuk <m>x</m> rasional. Dengan
+        metrik Euklides pada domain dan kodomain, tunjukkan bahwa <m>f</m>
+        tidak kontinu di titik mana pun.
+        <em>Rubrik.</em> Untuk setiap titik pusat, berikan satu toleransi tetap
+        yang menggagalkan setiap pilihan <m>\delta</m>, dan gunakan
+        kerapatan bilangan rasional serta irasional dengan urutan kuantor yang
+        benar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-17-hint">
+      <p>
+        <em>Langkah 1.</em> Tetapkan <m>a\in\R</m> dan pilih
+        <m>\epsilon=1/2</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Di setiap interval terbuka di sekitar <m>a</m>
+        terdapat titik yang jenisnya—rasional atau irasional—berlawanan dengan
+        jenis <m>a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-17-answer">
+      <p>
+        Fungsi <m>f</m> tidak kontinu di setiap <m>a\in\R</m>. Untuk
+        <m>\epsilon=1/2</m> dan setiap <m>\delta\gt0</m>, ada
+        <m>x</m> dengan <m>|x-a|\lt\delta</m> tetapi
+        <m>|f(x)-f(a)|=1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-17-solution">
+      <p>
+        Tetapkan sembarang <m>a\in\R</m> dan ambil
+        <m>\epsilon=1/2</m>. Misalkan <m>\delta\gt0</m> diberikan.
+        Jika <m>a</m> rasional, kerapatan bilangan irasional memberi titik
+        irasional <m>x</m> dengan <m>|x-a|\lt\delta</m>. Maka
+        <m>f(a)=1</m>, <m>f(x)=0</m>, dan
+        <m>|f(x)-f(a)|=1\geq\epsilon</m>.
+      </p>
+      <p>
+        Jika <m>a</m> irasional, kerapatan bilangan rasional memberi titik
+        rasional <m>x</m> dengan <m>|x-a|\lt\delta</m>. Kini
+        <m>f(a)=0</m>, <m>f(x)=1</m>, dan kembali
+        <m>|f(x)-f(a)|=1\geq\epsilon</m>. Jadi, pada kedua kasus,
+        toleransi <m>1/2</m> menggagalkan setiap radius positif. Ini tepat
+        merupakan negasi definisi kekontinuan di <m>a</m>. Karena <m>a</m>
+        sembarang, <m>f</m> tidak kontinu di mana pun.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-18">
+    <title>Tugas 18: fungsi yang kontinu hanya di titik asal</title>
+    <statement>
+      <p>
+        Definisikan <m>g:\R\to\R</m> dengan <m>g(x)=0</m> jika
+        <m>x</m> irasional dan <m>g(x)=x</m> jika <m>x</m> rasional. Dengan
+        metrik Euklides pada domain dan kodomain, buktikan bahwa <m>g</m>
+        kontinu tepat di <m>0</m>.
+        <em>Rubrik.</em> Berikan pembuktian langsung epsilon-delta di <m>0</m>, lalu
+        gunakan negasi definisi dan kerapatan untuk setiap titik tak nol.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-18-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk semua <m>x</m>, berlaku
+        <m>|g(x)|\leq|x|</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>a\neq0</m>, ambil
+        <m>\epsilon=|a|/2</m>. Pilih titik yang jenis rasionalitasnya
+        berlawanan dengan <m>a</m> dan juga cukup dekat agar nilai mutlaknya
+        lebih besar daripada <m>|a|/2</m> bila diperlukan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-18-answer">
+      <p>
+        Di <m>0</m>, pilihan <m>\delta=\epsilon</m> bekerja karena
+        <m>|g(x)-g(0)|\leq|x|</m>. Pada setiap <m>a\neq0</m>, toleransi
+        <m>|a|/2</m> digagalkan oleh titik-titik rasional atau irasional yang
+        sedekat apa pun dengan <m>a</m>. Jadi himpunan titik kekontinuan
+        <m>g</m> adalah <m>\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-18-solution">
+      <p>
+        Karena <m>0</m> rasional, <m>g(0)=0</m>. Ambil
+        <m>\epsilon\gt0</m> dan pilih <m>\delta=\epsilon</m>.
+        Jika <m>|x|\lt\delta</m>, maka untuk <m>x</m> irasional berlaku
+        <m>|g(x)-g(0)|=0</m>, sedangkan untuk <m>x</m> rasional berlaku
+        <m>|g(x)-g(0)|=|x|\lt\delta=\epsilon</m>. Jadi <m>g</m>
+        kontinu di <m>0</m>.
+      </p>
+      <p>
+        Sekarang tetapkan <m>a\neq0</m> dan ambil
+        <m>\epsilon=|a|/2\gt0</m>. Jika <m>a</m> rasional, maka
+        <m>g(a)=a</m>. Untuk setiap <m>\delta\gt0</m>, pilih titik
+        irasional <m>x</m> dengan <m>|x-a|\lt\delta</m>. Karena
+        <m>g(x)=0</m>, diperoleh
+        <m>|g(x)-g(a)|=|a|\geq\epsilon</m>.
+      </p>
+      <p>
+        Jika <m>a</m> irasional, maka <m>g(a)=0</m>. Untuk radius
+        <m>\delta\gt0</m>, kerapatan bilangan rasional memungkinkan kita
+        memilih <m>x\in\Q</m> dengan
+        <m>|x-a|\lt\min\{\delta,|a|/2\}</m>. Pertidaksamaan
+        segitiga terbalik memberi
+        <m>|x|\gt|a|-|x-a|\gt|a|/2=\epsilon</m>. Jadi
+        <m>|g(x)-g(a)|=|x|\gt\epsilon</m>. Dalam kedua kasus, negasi
+        kekontinuan terpenuhi di <m>a</m>. Dengan demikian hanya <m>0</m>
+        merupakan titik kekontinuan <m>g</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-19">
+    <title>Tugas 19: menghitung jarak integral</title>
+    <statement>
+      <p>
+        Pada <m>X=C[-3,3]</m>, gunakan
+        <m>d^*(f,g)=\int_{-3}^{3}|f(t)-g(t)|\,dt</m>. Hitung
+        <m>d^*(f,g)</m> untuk <m>f(x)=x^2</m> dan <m>g(x)=3-2x</m>.
+        <em>Rubrik.</em> Temukan semua titik tempat selisih berubah tanda,
+        pecah integral mutlak pada titik-titik tersebut, dan berikan nilai
+        eksak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-19-hint">
+      <p>
+        <em>Langkah 1.</em> Faktorkan
+        <m>f(x)-g(x)=x^2+2x-3=(x+3)(x-1)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ekspresi itu tidak positif pada
+        <m>[-3,1]</m> dan tidak negatif pada <m>[1,3]</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-19-answer">
+      <p>
+        Nilainya adalah
+        <m>d^*(f,g)=32/3+32/3=64/3</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-19-solution">
+      <p>
+        Selisih kedua fungsi adalah
+        <m>h(x)=x^2-(3-2x)=x^2+2x-3=(x+3)(x-1)</m>. Pada interval
+        <m>[-3,1]</m>, berlaku <m>h(x)\leq0</m>, sedangkan pada
+        <m>[1,3]</m>, berlaku <m>h(x)\geq0</m>. Dengan antiturunan
+        <m>H(x)=x^3/3+x^2-3x</m>, kita peroleh
+        <md>
+          <mrow>d^*(f,g)\amp=-\int_{-3}^{1}h(x)\,dx+\int_{1}^{3}h(x)\,dx</mrow>
+          <mrow>\amp=-\bigl(H(1)-H(-3)\bigr)+\bigl(H(3)-H(1)\bigr).</mrow>
+        </md>
+      </p>
+      <p>
+        Nilai-nilainya adalah <m>H(-3)=9</m>, <m>H(1)=-5/3</m>, dan
+        <m>H(3)=9</m>. Jadi setiap integral bertanda positif bernilai
+        <m>32/3</m>, dan
+        <me>
+          d^*(f,g)=\frac{32}{3}+\frac{32}{3}=\frac{64}{3}.
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-20">
+    <title>Tugas 20: nilai fungsional integral</title>
+    <statement>
+      <p>
+        Untuk <m>I(f)=\int_a^b f(t)\,dt</m>, hitung <m>I(f)</m> ketika
+        <m>f(x)=2x</m> dan <m>[a,b]=[0,2]</m>.
+        <em>Rubrik.</em> Tampilkan antiturunan dan evaluasi pada kedua ujung
+        interval.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-20-hint">
+      <p>
+        Suatu antiturunan <m>2x</m> adalah <m>x^2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-20-answer">
+      <p>
+        <m>I(f)=\int_0^2 2x\,dx=4</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-20-solution">
+      <p>
+        Berdasarkan Teorema Dasar Kalkulus,
+        <me>
+          I(f)=\int_0^2 2x\,dx=\bigl[x^2\bigr]_0^2=2^2-0^2=4.
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-21">
+    <title>Tugas 21: kekontinuan fungsional integral</title>
+    <statement>
+      <p>
+        Misalkan <m>a\lt b</m>, <m>X=C[a,b]</m>,
+        <m>d^*(f,g)=\int_a^b|f(t)-g(t)|\,dt</m>, dan
+        <m>I(f)=\int_a^b f(t)\,dt</m>. Buktikan bahwa
+        <m>I:(X,d^*)\to(\R,d_E)</m> kontinu.
+        <em>Rubrik.</em> Tuliskan definisi kekontinuan dalam kedua metrik,
+        gunakan pertidaksamaan nilai mutlak integral, dan berikan pilihan
+        <m>\delta</m> yang eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-21-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>f,g\in X</m>, tuliskan
+        <m>I(f)-I(g)=\int_a^b(f(t)-g(t))\,dt</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan
+        <m>|\int h|\leq\int|h|</m>; fungsi <m>I</m> bahkan memenuhi
+        pertidaksamaan Lipschitz dengan konstanta <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-21-answer">
+      <p>
+        Untuk semua <m>f,g\in X</m>, berlaku
+        <m>|I(f)-I(g)|\leq d^*(f,g)</m>. Karena itu pilihan
+        <m>\delta=\epsilon</m> membuktikan bahwa <m>I</m> kontinu di
+        setiap <m>f\in X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-21-solution">
+      <p>
+        Tetapkan sembarang <m>f\in X</m> dan
+        <m>\epsilon\gt0</m>. Ambil <m>\delta=\epsilon</m>.
+        Jika <m>g\in X</m> memenuhi <m>d^*(f,g)\lt\delta</m>, maka
+        sifat linear integral dan pertidaksamaan nilai mutlak memberi
+        <md>
+          <mrow>d_E(I(f),I(g))\amp=|I(f)-I(g)|</mrow>
+          <mrow>\amp=\left|\int_a^b(f(t)-g(t))\,dt\right|</mrow>
+          <mrow>\amp\leq\int_a^b|f(t)-g(t)|\,dt</mrow>
+          <mrow>\amp=d^*(f,g)\lt\delta=\epsilon.</mrow>
+        </md>
+        Jadi <m>I</m> kontinu di <m>f</m>. Karena <m>f</m> sembarang,
+        <m>I</m> kontinu pada seluruh <m>X</m>. Pertidaksamaan yang sama juga
+        menunjukkan bahwa <m>I</m> bersifat 1-Lipschitz.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-22">
+    <title>Tugas 22: domain bermetrik diskret</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>f:X\to Y</m> suatu fungsi,
+        <m>d_X</m> metrik diskret, dan <m>d_Y</m> sebarang metrik, maka
+        <m>f</m> kontinu.
+        <em>Rubrik.</em> Jika benar, berikan pembuktian epsilon-delta yang berlaku untuk
+        sebarang fungsi dan sebarang titik tanpa memakai sifat khusus
+        kodomain.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-22-hint">
+      <p>
+        Pada metrik diskret, <m>d_X(x,a)\lt1</m> memaksa <m>x=a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-22-answer">
+      <p>
+        Benar. Untuk setiap titik dan setiap <m>\epsilon\gt0</m>, pilih
+        <m>\delta=1</m>. Syarat <m>d_X(x,a)\lt1</m> memaksa
+        <m>x=a</m>, sehingga jarak keluarannya nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-22-solution">
+      <p>
+        Tetapkan <m>a\in X</m> dan <m>\epsilon\gt0</m>. Ambil
+        <m>\delta=1</m>. Karena <m>d_X</m> diskret, nilainya hanya
+        <m>0</m> atau <m>1</m>. Maka <m>d_X(x,a)\lt\delta</m>
+        mengakibatkan <m>d_X(x,a)=0</m>, sehingga <m>x=a</m>. Akibatnya
+        <m>d_Y(f(x),f(a))=d_Y(f(a),f(a))=0\lt\epsilon</m>. Jadi
+        <m>f</m> kontinu di setiap <m>a\in X</m>, apa pun fungsi
+        <m>f</m> dan metrik <m>d_Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-23">
+    <title>Tugas 23: kodomain bermetrik diskret</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>f:X\to Y</m> suatu fungsi,
+        <m>d_Y</m> metrik diskret, dan <m>d_X</m> sebarang metrik, maka
+        <m>f</m> kontinu.
+        <em>Rubrik.</em> Jika salah, tentukan domain, kodomain, fungsi, titik,
+        dan satu toleransi yang menggagalkan setiap radius positif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-23-hint">
+      <p>
+        Gunakan fungsi identitas dari <m>\R</m> bermetrik Euklides menuju
+        <m>\R</m> bermetrik diskret dan ambil
+        <m>\epsilon=1/2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-23-answer">
+      <p>
+        Salah. Fungsi identitas
+        <m>i:(\R,d_E)\to(\R,d_D)</m> tidak kontinu di titik mana pun,
+        dengan <m>d_D</m> metrik diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-23-solution">
+      <p>
+        Ambil <m>X=Y=\R</m>, gunakan metrik Euklides
+        <m>d_E(x,y)=|x-y|</m> pada domain dan metrik diskret <m>d_D</m> pada
+        kodomain, lalu definisikan <m>i(x)=x</m>. Tetapkan sembarang
+        <m>a\in\R</m> dan ambil <m>\epsilon=1/2</m>. Untuk setiap
+        <m>\delta\gt0</m>, pilih <m>x=a+\delta/2</m>. Maka
+        <m>d_E(x,a)=\delta/2\lt\delta</m>, tetapi <m>x\neq a</m>,
+        sehingga
+        <m>d_D(i(x),i(a))=1\geq\epsilon</m>. Jadi <m>i</m> tidak
+        kontinu di <m>a</m>. Contoh ini membantah pernyataan universal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-24">
+    <title>Tugas 24: identitas di antara dua metrik</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: untuk sebarang dua metrik <m>d_1</m> dan
+        <m>d_2</m> pada himpunan <m>X</m>, fungsi identitas
+        <m>i_X:(X,d_1)\to(X,d_2)</m> selalu kontinu.
+        <em>Rubrik.</em> Jika salah, berikan dua metrik konkret pada himpunan
+        yang sama dan tunjukkan kegagalan definisi kekontinuan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-24-hint">
+      <p>
+        Pilih <m>X=\R</m>, <m>d_1=d_E</m>, dan <m>d_2=d_D</m>, dengan
+        <m>d_D</m> metrik diskret.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-24-answer">
+      <p>
+        Salah. Identitas
+        <m>i_{\R}:(\R,d_E)\to(\R,d_D)</m> tidak kontinu, sebab
+        titik-titik yang berbeda dapat sedekat apa pun dalam <m>d_E</m> tetapi
+        selalu berjarak <m>1</m> dalam <m>d_D</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-24-solution">
+      <p>
+        Pada <m>X=\R</m>, ambil <m>d_1(x,y)=|x-y|</m> dan metrik diskret
+        <m>d_2=d_D</m>. Tetapkan <m>a\in\R</m> dan
+        <m>\epsilon=1/2</m>. Apa pun <m>\delta\gt0</m>, titik
+        <m>x=a+\delta/2</m> memenuhi
+        <m>d_1(x,a)=\delta/2\lt\delta</m>. Namun <m>x\neq a</m>,
+        sehingga
+        <m>d_2(i_X(x),i_X(a))=d_D(x,a)=1\geq\epsilon</m>. Jadi identitas
+        ini tidak kontinu. Kekontinuan identitas bergantung pada hubungan
+        antara kedua metrik, bukan hanya pada fakta bahwa keduanya didefinisikan
+        pada himpunan yang sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-25">
+    <title>Tugas 25: jumlah fungsi pada domain bermetrik taksi</title>
+    <statement>
+      <p>
+        Misalkan <m>f,g:(\R^2,d_T)\to(\R,d_E)</m> kontinu. Buktikan
+        bahwa fungsi <m>f+g</m>, yang didefinisikan oleh
+        <m>(f+g)(x)=f(x)+g(x)</m>, juga kontinu.
+        <em>Rubrik.</em> Buktikan kekontinuan di titik sembarang, bagikan
+        toleransi keluaran di antara kedua fungsi, dan gabungkan radius dengan
+        minimum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-25-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk toleransi <m>\epsilon</m>, terapkan
+        kekontinuan <m>f</m> dan <m>g</m> masing-masing dengan toleransi
+        <m>\epsilon/2</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ambil
+        <m>\delta=\min\{\delta_f,\delta_g\}</m> dan gunakan
+        pertidaksamaan segitiga dalam <m>\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-25-answer">
+      <p>
+        Benar. Kekontinuan kedua fungsi dengan toleransi
+        <m>\epsilon/2</m> menghasilkan radius
+        <m>\delta_f,\delta_g</m>; radius minimumnya membuat selisih nilai
+        <m>f+g</m> kurang dari <m>\epsilon</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-25-solution">
+      <p>
+        Tetapkan <m>a\in\R^2</m> dan <m>\epsilon\gt0</m>.
+        Karena <m>f</m> kontinu di <m>a</m>, terdapat
+        <m>\delta_f\gt0</m> sedemikian sehingga
+        <m>d_T(x,a)\lt\delta_f</m> mengakibatkan
+        <m>|f(x)-f(a)|\lt\epsilon/2</m>. Demikian pula, terdapat
+        <m>\delta_g\gt0</m> sedemikian sehingga
+        <m>d_T(x,a)\lt\delta_g</m> mengakibatkan
+        <m>|g(x)-g(a)|\lt\epsilon/2</m>.
+      </p>
+      <p>
+        Ambil <m>\delta=\min\{\delta_f,\delta_g\}</m>.
+        Jika <m>d_T(x,a)\lt\delta</m>, kedua taksiran di atas berlaku,
+        sehingga
+        <md>
+          <mrow>|(f+g)(x)-(f+g)(a)|</mrow>
+          <mrow>\amp=|(f(x)-f(a))+(g(x)-g(a))|</mrow>
+          <mrow>\amp\leq|f(x)-f(a)|+|g(x)-g(a)|</mrow>
+          <mrow>\amp\lt\epsilon/2+\epsilon/2=\epsilon.</mrow>
+        </md>
+        Jadi <m>f+g</m> kontinu di <m>a</m>, dan karena <m>a</m> sembarang,
+        fungsi itu kontinu pada seluruh <m>\R^2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-exercise-task-26">
+    <title>Tugas 26: fungsi konstan di antara ruang metrik</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang-ruang metrik serta
+        <m>y_0\in Y</m>. Buktikan bahwa fungsi konstan
+        <m>f:X\to Y</m> yang didefinisikan oleh <m>f(x)=y_0</m> untuk setiap
+        <m>x\in X</m> kontinu.
+        <em>Rubrik.</em> Berikan pembuktian epsilon-delta yang berlaku sekalipun domain
+        kosong atau tidak terbatas dan jangan memberlakukan syarat yang tidak
+        diperlukan pada metrik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-exercise-task-26-hint">
+      <p>
+        Jarak antara dua keluaran fungsi konstan selalu nol. Bila perlu pilih
+        radius tetap, misalnya <m>\delta=1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-exercise-task-26-answer">
+      <p>
+        Fungsi konstan selalu kontinu. Untuk setiap titik domain dan setiap
+        <m>\epsilon\gt0</m>, pilihan <m>\delta=1</m> bekerja karena
+        <m>d_Y(f(x),f(a))=d_Y(y_0,y_0)=0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-exercise-task-26-solution">
+      <p>
+        Jika <m>X</m> kosong, pernyataan bahwa <m>f</m> kontinu di setiap titik
+        domain benar secara hampa. Jika <m>X</m> tidak kosong, tetapkan
+        sembarang <m>a\in X</m> dan <m>\epsilon\gt0</m>. Pilih
+        <m>\delta=1</m>. Untuk setiap <m>x\in X</m> yang memenuhi
+        <m>d_X(x,a)\lt\delta</m>, kita mempunyai
+        <me>
+          d_Y(f(x),f(a))=d_Y(y_0,y_0)=0\lt\epsilon.
+        </me>
+        Dengan demikian <m>f</m> kontinu di setiap titik <m>a\in X</m>,
+        sehingga <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+</section>

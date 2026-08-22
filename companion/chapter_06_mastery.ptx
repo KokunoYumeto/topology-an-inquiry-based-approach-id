@@ -1,0 +1,437 @@
+<section xml:id="o003-c90-ch06-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan dan transfer</title>
+
+  <p>
+    Enam latihan asli berikut menguji penguasaan definisi epsilon-delta, kekontinuan di
+    antara ruang metrik, serta operasi pada fungsi kontinu. Kerjakan setiap
+    pernyataan sebelum membuka petunjuk. Gunakan rubrik untuk memeriksa urutan
+    kuantor, ketepatan pilihan radius, dan kelengkapan contoh tandingan Anda.
+  </p>
+
+  <exercise xml:id="o003-c90-ch06-mastery-01">
+    <title>Definisi kekontinuan dan negasinya</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang-ruang metrik,
+        <m>f:X\to Y</m>, dan <m>a\in X</m>.
+        <ol>
+          <li>
+            <p>
+              Tuliskan definisi lengkap bahwa <m>f</m> kontinu di <m>a</m>
+              dengan semua kuantornya.
+            </p>
+          </li>
+          <li>
+            <p>
+              Negasikan definisi tersebut untuk memperoleh pernyataan lengkap
+              bahwa <m>f</m> tidak kontinu di <m>a</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <em>Rubrik.</em> Urutan <m>\forall\epsilon</m>,
+        <m>\exists\delta</m>, dan <m>\forall x</m> harus tepat;
+        pada negasi, balik setiap kuantor dan negasikan implikasi menjadi dua
+        syarat serentak. Nyatakan dengan tegas variabel mana yang boleh
+        bergantung pada variabel sebelumnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-mastery-01-hint">
+      <p>
+        <em>Langkah 1.</em> Kekontinuan dimulai dengan
+        “untuk setiap <m>\epsilon\gt0</m>” dan baru sesudah itu memilih
+        <m>\delta\gt0</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Negasi pernyataan
+        <m>P\Rightarrow Q</m> adalah <m>P</m> dan bukan <m>Q</m>.
+      </p>
+      <p>
+        <em>Langkah 3.</em> Negasi
+        <m>d_Y(f(x),f(a))\lt\epsilon_0</m> adalah
+        <m>d_Y(f(x),f(a))\geq\epsilon_0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-mastery-01-answer">
+      <p>
+        Kekontinuan di <m>a</m> berarti
+        <me>
+          \forall\epsilon\gt0\ \exists\delta\gt0\ \forall x\in X,\quad
+          d_X(x,a)\lt\delta\ \Rightarrow\
+          d_Y(f(x),f(a))\lt\epsilon.
+        </me>
+        Ketidakkontinuan di <m>a</m> berarti
+        <me>
+          \exists\epsilon_0\gt0\ \forall\delta\gt0\ \exists x\in X,\quad
+          d_X(x,a)\lt\delta\ \text{ dan }\
+          d_Y(f(x),f(a))\geq\epsilon_0.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-mastery-01-solution">
+      <p>
+        Fungsi <m>f</m> kontinu di <m>a</m> jika
+        <me>
+          \forall\epsilon\gt0\ \exists\delta\gt0\ \forall x\in X,\quad
+          d_X(x,a)\lt\delta\ \Rightarrow\
+          d_Y(f(x),f(a))\lt\epsilon.
+        </me>
+        Dengan urutan ini, <m>\delta</m> boleh bergantung pada
+        <m>\epsilon</m> dan titik tetap <m>a</m>, tetapi tidak boleh
+        dipilih sesudah melihat <m>x</m>. Titik <m>x</m> harus memenuhi
+        implikasi yang sama untuk semua titik di dalam bola
+        <m>B_X(a,\delta)</m>.
+      </p>
+      <p>
+        Untuk menegasikan pernyataan tersebut, kuantor universal menjadi
+        eksistensial dan sebaliknya. Selain itu,
+        <m>P\Rightarrow Q</m> gagal tepat ketika <m>P</m> benar dan
+        <m>Q</m> salah. Jadi <m>f</m> tidak kontinu di <m>a</m> tepat ketika
+        <me>
+          \exists\epsilon_0\gt0\ \forall\delta\gt0\ \exists x\in X,\quad
+          d_X(x,a)\lt\delta\ \text{ dan }\
+          d_Y(f(x),f(a))\geq\epsilon_0.
+        </me>
+        Di sini satu toleransi keluaran <m>\epsilon_0</m> dipilih lebih
+        dahulu dan harus menggagalkan setiap radius masukan, meskipun titik
+        saksi <m>x</m> boleh bergantung pada radius tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-mastery-02">
+    <title>Pemetaan Lipschitz bersifat kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang-ruang metrik.
+        Andaikan <m>f:X\to Y</m> dan terdapat konstanta <m>L\gt0</m>
+        sedemikian sehingga
+        <me>
+          d_Y(f(x),f(z))\leq Ld_X(x,z)
+        </me>
+        untuk semua <m>x,z\in X</m>. Buktikan langsung dari definisi bahwa
+        <m>f</m> kontinu.
+      </p>
+      <p>
+        <em>Rubrik.</em> Tetapkan titik dan toleransi sembarang, berikan
+        pilihan <m>\delta</m> yang eksplisit, dan tunjukkan rantai
+        pertidaksamaan lengkap. Jangan hanya menyebut teorema tentang fungsi
+        Lipschitz.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-mastery-02-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk membuat
+        <m>Ld_X(x,a)\lt\epsilon</m>, cukup minta
+        <m>d_X(x,a)\lt\epsilon/L</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Pilihan radius yang sama bekerja di setiap titik
+        <m>a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-mastery-02-answer">
+      <p>
+        Untuk setiap <m>a\in X</m> dan <m>\epsilon\gt0</m>, ambil
+        <m>\delta=\epsilon/L</m>. Jika
+        <m>d_X(x,a)\lt\delta</m>, maka
+        <m>d_Y(f(x),f(a))\leq Ld_X(x,a)\lt\epsilon</m>. Jadi
+        <m>f</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-mastery-02-solution">
+      <p>
+        Tetapkan sembarang <m>a\in X</m> dan
+        <m>\epsilon\gt0</m>. Karena <m>L\gt0</m>, bilangan
+        <m>\delta=\epsilon/L</m> positif. Jika <m>x\in X</m>
+        memenuhi <m>d_X(x,a)\lt\delta</m>, hipotesis Lipschitz memberi
+        <me>
+          d_Y(f(x),f(a))\leq Ld_X(x,a)\lt
+          L\delta=L\frac{\epsilon}{L}=\epsilon.
+        </me>
+        Maka <m>f</m> kontinu di <m>a</m>. Karena <m>a</m> dipilih sembarang,
+        <m>f</m> kontinu pada <m>X</m>. Bahkan radius tersebut tidak bergantung
+        pada titik pusat; hipotesis memberi kendali yang lebih kuat daripada
+        kekontinuan biasa.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-mastery-03">
+    <title>Metrik Euklides, metrik pangkas, dan metrik diskret</title>
+    <statement>
+      <p>
+        Pada <m>\R</m>, definisikan
+        <m>d_E(x,y)=|x-y|</m>,
+        <m>d_c(x,y)=\min\{|x-y|,1\}</m>, dan metrik diskret
+        <m>d_D(x,y)=0</m> jika <m>x=y</m> serta <m>d_D(x,y)=1</m> jika
+        <m>x\neq y</m>. Selidiki kekontinuan keempat fungsi identitas berikut:
+        <ol>
+          <li>
+            <p><m>i_1:(\R,d_E)\to(\R,d_c)</m>;</p>
+          </li>
+          <li>
+            <p><m>i_2:(\R,d_c)\to(\R,d_E)</m>;</p>
+          </li>
+          <li>
+            <p><m>i_3:(\R,d_D)\to(\R,d_c)</m>;</p>
+          </li>
+          <li>
+            <p><m>i_4:(\R,d_c)\to(\R,d_D)</m>.</p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <em>Rubrik.</em> Untuk setiap fungsi yang kontinu, berikan pilihan
+        radius. Untuk fungsi yang tidak kontinu, berikan satu toleransi dan
+        saksi untuk setiap radius. Jelaskan apa yang ditunjukkan dua arah
+        pertama tentang pengaruh pemangkasan jarak besar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-mastery-03-hint">
+      <p>
+        <em>Langkah 1.</em> Selalu berlaku <m>d_c\leq d_E</m>. Sebaliknya,
+        jika <m>d_c(x,a)\lt1/2</m>, maka
+        <m>d_c(x,a)=d_E(x,a)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Bola diskret berjari-jari <m>1</m> hanya memuat
+        pusatnya.
+      </p>
+      <p>
+        <em>Langkah 3.</em> Untuk menggagalkan <m>i_4</m>, pilih
+        <m>\epsilon=1/2</m> pada kodomain diskret dan titik berbeda yang
+        sedekat apa pun dalam <m>d_c</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-mastery-03-answer">
+      <p>
+        Fungsi <m>i_1</m>, <m>i_2</m>, dan <m>i_3</m> kontinu, sedangkan
+        <m>i_4</m> tidak kontinu di titik mana pun. Jadi metrik Euklides dan
+        metrik pangkas mempunyai perilaku kekontinuan lokal yang sama, tetapi
+        metrik diskret pada kodomain menuntut pemisahan yang lebih kuat.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-mastery-03-solution">
+      <p>
+        Untuk <m>i_1</m>, tetapkan <m>a\in\R</m> dan
+        <m>\epsilon\gt0</m>, lalu pilih <m>\delta=\epsilon</m>.
+        Jika <m>d_E(x,a)\lt\delta</m>, maka
+        <m>d_c(i_1(x),i_1(a))\leq d_E(x,a)\lt\epsilon</m>.
+        Jadi <m>i_1</m> kontinu.
+      </p>
+      <p>
+        Untuk <m>i_2</m>, pilih
+        <m>\delta=\min\{\epsilon,1/2\}</m>. Jika
+        <m>d_c(x,a)\lt\delta\leq1/2</m>, nilai minimum
+        <m>\min\{|x-a|,1\}</m> tidak mungkin berasal dari cabang
+        <m>1</m>. Maka <m>|x-a|=d_c(x,a)\lt\delta\leq\epsilon</m>.
+        Jadi <m>i_2</m> juga kontinu. Kedua hasil ini menunjukkan bahwa
+        pemangkasan semua jarak besar pada <m>1</m> tidak mengubah perilaku
+        lokal yang dideteksi oleh kekontinuan.
+      </p>
+      <p>
+        Untuk <m>i_3</m>, ambil <m>\delta=1</m> untuk setiap toleransi
+        positif. Syarat <m>d_D(x,a)\lt1</m> memaksa <m>x=a</m>, sehingga
+        jarak keluarannya nol. Jadi <m>i_3</m> kontinu.
+      </p>
+      <p>
+        Sebaliknya, tetapkan <m>a\in\R</m> dan
+        <m>\epsilon=1/2</m> untuk <m>i_4</m>. Untuk setiap
+        <m>\delta\gt0</m>, ambil
+        <m>r=\min\{\delta/2,1/2\}\gt0</m> dan
+        <m>x=a+r</m>. Maka <m>d_c(x,a)=r\lt\delta</m>, tetapi
+        <m>x\neq a</m>, sehingga
+        <m>d_D(i_4(x),i_4(a))=1\geq\epsilon</m>. Dengan demikian
+        <m>i_4</m> tidak kontinu di <m>a</m>, dan <m>a</m> sembarang.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-mastery-04">
+    <title>Jumlah dua fungsi kontinu pada ruang metrik</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> ruang metrik, <m>a\in X</m>, dan
+        <m>f,g:X\to\R</m> kontinu di <m>a</m>, dengan metrik Euklides
+        pada <m>\R</m>. Buktikan langsung bahwa
+        <m>h=f+g</m> kontinu di <m>a</m>.
+      </p>
+      <p>
+        <em>Rubrik.</em> Jangan mengandaikan radius yang sama tersedia untuk
+        kedua fungsi. Bagikan toleransi, peroleh dua radius, ambil minimumnya,
+        dan gunakan pertidaksamaan segitiga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-mastery-04-hint">
+      <p>
+        <em>Langkah 1.</em> Terapkan kekontinuan <m>f</m> dan <m>g</m>
+        masing-masing dengan toleransi <m>\epsilon/2</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan
+        <m>|h(x)-h(a)|\leq|f(x)-f(a)|+|g(x)-g(a)|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-mastery-04-answer">
+      <p>
+        Jika <m>\delta_f</m> dan <m>\delta_g</m> bekerja untuk
+        toleransi <m>\epsilon/2</m>, maka
+        <m>\delta=\min\{\delta_f,\delta_g\}</m> bekerja
+        untuk <m>h=f+g</m> dan toleransi <m>\epsilon</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-mastery-04-solution">
+      <p>
+        Ambil sembarang <m>\epsilon\gt0</m>. Kekontinuan <m>f</m>
+        di <m>a</m> memberi <m>\delta_f\gt0</m> sedemikian sehingga
+        <m>d_X(x,a)\lt\delta_f</m> mengakibatkan
+        <m>|f(x)-f(a)|\lt\epsilon/2</m>. Kekontinuan <m>g</m> memberi
+        <m>\delta_g\gt0</m> dengan implikasi serupa untuk
+        <m>|g(x)-g(a)|\lt\epsilon/2</m>.
+      </p>
+      <p>
+        Pilih <m>\delta=\min\{\delta_f,\delta_g\}</m>.
+        Jika <m>d_X(x,a)\lt\delta</m>, kedua taksiran berlaku dan
+        <md>
+          <mrow>|h(x)-h(a)|\amp=|(f(x)-f(a))+(g(x)-g(a))|</mrow>
+          <mrow>\amp\leq|f(x)-f(a)|+|g(x)-g(a)|</mrow>
+          <mrow>\amp\lt\epsilon/2+\epsilon/2=\epsilon.</mrow>
+        </md>
+        Ini membuktikan bahwa <m>h</m> kontinu di <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-mastery-05">
+    <title>Komposisi fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m>, <m>(Y,d_Y)</m>, dan <m>(Z,d_Z)</m>
+        ruang-ruang metrik. Jika <m>f:X\to Y</m> kontinu di
+        <m>a\in X</m> dan <m>g:Y\to Z</m> kontinu di <m>f(a)</m>,
+        buktikan bahwa <m>g\circ f</m> kontinu di <m>a</m>.
+      </p>
+      <p>
+        <em>Rubrik.</em> Mulailah dari toleransi di <m>Z</m>. Radius yang
+        dihasilkan oleh kekontinuan <m>g</m> harus dipakai sebagai toleransi
+        keluaran ketika menerapkan kekontinuan <m>f</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-mastery-05-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk <m>\epsilon\gt0</m>, kekontinuan
+        <m>g</m> di <m>f(a)</m> memberi suatu
+        <m>\eta\gt0</m> pada ruang <m>Y</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Terapkan kekontinuan <m>f</m> di <m>a</m> dengan
+        toleransi <m>\eta</m> untuk memperoleh <m>\delta</m> pada
+        ruang <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-mastery-05-answer">
+      <p>
+        Pilih <m>\eta</m> dari kekontinuan <m>g</m> untuk toleransi
+        <m>\epsilon</m>, lalu pilih <m>\delta</m> dari kekontinuan
+        <m>f</m> untuk toleransi <m>\eta</m>. Rantai kedua implikasi
+        membuktikan kekontinuan <m>g\circ f</m> di <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-mastery-05-solution">
+      <p>
+        Tetapkan <m>\epsilon\gt0</m>. Karena <m>g</m> kontinu di
+        <m>f(a)</m>, ada <m>\eta\gt0</m> sedemikian sehingga
+        <me>
+          d_Y(y,f(a))\lt\eta\quad\Rightarrow\quad
+          d_Z(g(y),g(f(a)))\lt\epsilon.
+        </me>
+        Karena <m>f</m> kontinu di <m>a</m>, untuk toleransi
+        <m>\eta</m> ini ada <m>\delta\gt0</m> sedemikian sehingga
+        <me>
+          d_X(x,a)\lt\delta\quad\Rightarrow\quad
+          d_Y(f(x),f(a))\lt\eta.
+        </me>
+      </p>
+      <p>
+        Jadi, jika <m>d_X(x,a)\lt\delta</m>, implikasi kedua
+        menempatkan <m>f(x)</m> di dalam bola berjari-jari <m>\eta</m>
+        di sekitar <m>f(a)</m>. Dengan mengambil <m>y=f(x)</m> pada implikasi
+        pertama, diperoleh
+        <me>
+          d_Z((g\circ f)(x),(g\circ f)(a))
+          =d_Z(g(f(x)),g(f(a)))\lt\epsilon.
+        </me>
+        Maka <m>g\circ f</m> kontinu di <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch06-mastery-06">
+    <title>Contoh tandingan bagi kebalikan aturan jumlah</title>
+    <statement>
+      <p>
+        Bangun dua fungsi <m>f,g:\R\to\R</m> yang masing-masing
+        tidak kontinu di titik mana pun, tetapi jumlah <m>f+g</m> kontinu di
+        setiap titik. Buktikan kedua klaim menggunakan metrik Euklides.
+      </p>
+      <p>
+        <em>Rubrik.</em> Berikan rumus eksplisit bagi kedua fungsi. Untuk
+        ketidakkontinuan, gunakan satu toleransi tetap dan kerapatan bilangan
+        rasional serta irasional. Untuk kekontinuan jumlah, hitung jumlahnya
+        tepat, bukan hanya menyatakan bahwa diskontinuitas “saling meniadakan.”
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch06-mastery-06-hint">
+      <p>
+        <em>Langkah 1.</em> Definisikan <m>D(x)=1</m> pada bilangan rasional
+        dan <m>D(x)=0</m> pada bilangan irasional.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ambil <m>f=D</m> dan <m>g=-D</m>. Gunakan
+        <m>\epsilon=1/2</m> untuk membuktikan ketidakkontinuan masing-masing.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch06-mastery-06-answer">
+      <p>
+        Ambil <m>f=D</m> dan <m>g=-D</m>, dengan
+        <m>D=\mathbf{1}_{\Q}</m>. Fungsi <m>D</m> dan <m>-D</m>
+        tidak kontinu di titik mana pun, tetapi
+        <m>(f+g)(x)=D(x)-D(x)=0</m> untuk semua <m>x</m>, sehingga jumlahnya
+        kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch06-mastery-06-solution">
+      <p>
+        Definisikan
+        <me>
+          D(x)=\begin{cases}
+          1 \amp \text{ jika }x\in\Q, \\
+          0 \amp \text{ jika }x\notin\Q.
+          \end{cases}
+        </me>
+        Ambil <m>f=D</m> dan <m>g=-D</m>. Tetapkan sembarang
+        <m>a\in\R</m> dan <m>\epsilon=1/2</m>. Jika <m>a</m>
+        rasional, setiap lingkungan <m>\delta</m> di sekitar <m>a</m>
+        memuat titik irasional <m>x</m>, dan
+        <m>|D(x)-D(a)|=|0-1|=1\geq\epsilon</m>. Jika <m>a</m>
+        irasional, setiap lingkungan memuat titik rasional <m>x</m>, dan
+        kembali <m>|D(x)-D(a)|=1\geq\epsilon</m>. Jadi <m>D</m>
+        tidak kontinu di <m>a</m>. Karena
+        <m>|(-D)(x)-(-D)(a)|=|D(x)-D(a)|</m>, argumen yang sama membuktikan
+        bahwa <m>-D</m> juga tidak kontinu di <m>a</m>. Titik <m>a</m>
+        sembarang, sehingga keduanya tidak kontinu di mana pun.
+      </p>
+      <p>
+        Namun, untuk setiap <m>x\in\R</m>,
+        <me>
+          (f+g)(x)=D(x)+(-D(x))=0.
+        </me>
+        Jadi <m>f+g</m> adalah fungsi konstan nol dan kontinu di setiap titik.
+        Contoh ini menunjukkan bahwa kekontinuan jumlah tidak memaksa
+        kekontinuan masing-masing suku.
+      </p>
+    </solution>
+  </exercise>
+</section>
