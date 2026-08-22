@@ -1,0 +1,927 @@
+<section xml:id="o003-c90-ch05-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian kedua</title>
+
+  <p>
+    Panduan ini mengikuti sembilan belas tugas pada Latihan 7–13 secara
+    berurutan. Setiap pembahasan mempertahankan tujuan pembuktian pada sumber;
+    bukalah petunjuk, jawaban, dan solusi secara bertahap setelah mencoba tugas
+    secara mandiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-19">
+    <title>Tugas 19: batas bawah bagi himpunan bilangan bulat</title>
+    <statement>
+      <p>
+        Untuk <m>S=\{k\in\Z\mid k&gt;nx\}</m>, buktikan bahwa <m>S</m>
+        terbatas di bawah. Rubrik: berikan satu batas bawah real yang berlaku
+        untuk setiap <m>k\in S</m> dan hubungkan langsung dengan syarat
+        pembentuk <m>S</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-19-hint">
+      <p>
+        <em>Langkah 1.</em> Tidak perlu mencari suatu bilangan bulat sebagai
+        batas bawah; batas bawah boleh berupa sebarang bilangan real.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Setiap <m>k\in S</m> memenuhi <m>k&gt;nx</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-19-answer">
+      <p>
+        Bilangan <m>nx</m> adalah batas bawah bagi <m>S</m>, sebab
+        <m>nx&lt;k</m> untuk setiap <m>k\in S</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-19-solution">
+      <p>
+        Berdasarkan definisi <m>S</m>, jika <m>k\in S</m>, maka
+        <m>k&gt;nx</m>. Dengan demikian <m>nx\leq k</m> untuk setiap anggota
+        <m>S</m>. Ini tepat merupakan definisi bahwa <m>nx</m> adalah batas
+        bawah bagi <m>S</m>. Karena <m>nx\in\R</m>, himpunan <m>S</m>
+        terbatas di bawah dalam <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-20">
+    <title>Tugas 20: anggota bulat terkecil</title>
+    <statement>
+      <p>
+        Tunjukkan bahwa <m>S</m> memuat suatu bilangan bulat <m>m</m> sedemikian
+        sehingga setiap <m>q\in\Z</m> dengan <m>q&lt;m</m> memenuhi
+        <m>q\leq nx</m>. Rubrik: terapkan Prinsip Pengurutan Baik kepada
+        <m>S</m>, lalu gunakan keminimalan anggota yang diperoleh.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-20-hint">
+      <p>
+        <em>Langkah 1.</em> Himpunan <m>S</m> tak kosong dan, menurut tugas
+        sebelumnya, terbatas di bawah; semua anggotanya bilangan bulat.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>q&lt;m</m> tetapi <m>q&gt;nx</m>, di manakah
+        letak <m>q</m> terhadap anggota terkecil <m>m</m> dari <m>S</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-20-answer">
+      <p>
+        Prinsip Pengurutan Baik memberi anggota terkecil <m>m=\inf S\in S</m>.
+        Jika <m>q\in\Z</m> dan <m>q&lt;m</m>, maka <m>q</m> tidak mungkin memenuhi
+        <m>q&gt;nx</m>; jadi <m>q\leq nx</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-20-solution">
+      <p>
+        Sifat Archimedes menjamin bahwa <m>S</m> tak kosong, sedangkan Tugas 19
+        menunjukkan bahwa <m>S</m> terbatas di bawah. Karena
+        <m>S\subseteq\Z</m>, Prinsip Pengurutan Baik yang dinyatakan pada
+        latihan sumber memastikan bahwa <m>S</m> memuat infimumnya. Tuliskan
+        anggota terkecil ini sebagai <m>m=\inf S</m>; khususnya <m>m\in S</m>.
+      </p>
+      <p>
+        Ambil <m>q\in\Z</m> dengan <m>q&lt;m</m>. Andaikan
+        <m>q&gt;nx</m>. Syarat ini dan fakta bahwa <m>q</m> bilangan bulat akan
+        memberi <m>q\in S</m>, bertentangan dengan keminimalan <m>m</m> karena
+        <m>q&lt;m</m>. Jadi pengandaian tersebut salah dan harus berlaku
+        <m>q\leq nx</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-21">
+    <title>Tugas 21: bilangan rasional di antara dua bilangan real</title>
+    <statement>
+      <p>
+        Gunakan anggota terkecil <m>m\in S</m> untuk membuktikan
+        <m>nx&lt;m&lt;ny</m>, lalu temukan bilangan rasional di antara
+        <m>x</m> dan <m>y</m>. Rubrik: terapkan hasil tugas sebelumnya kepada
+        <m>m-1</m> dan gunakan <m>n(y-x)&gt;1</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-21-hint">
+      <p>
+        <em>Langkah 1.</em> Karena <m>m\in S</m>, langsung diperoleh satu dari
+        dua pertidaksamaan. Untuk yang lain, masukkan <m>q=m-1</m> ke hasil
+        Tugas 20.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ubah <m>n(y-x)&gt;1</m> menjadi
+        <m>nx+1&lt;ny</m>, kemudian bagi rantai pertidaksamaan dengan
+        <m>n&gt;0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-21-answer">
+      <p>
+        Berlaku <m>nx&lt;m\leq nx+1&lt;ny</m>. Karena itu
+        <m>x&lt;m/n&lt;y</m>, dan <m>m/n\in\Q</m> adalah bilangan rasional yang
+        dicari.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-21-solution">
+      <p>
+        Karena <m>m\in S</m>, definisi <m>S</m> memberi <m>m&gt;nx</m>.
+        Bilangan <m>m-1</m> adalah bilangan bulat dan memenuhi
+        <m>m-1&lt;m</m>. Maka Tugas 20, dengan <m>q=m-1</m>, memberi
+        <m>m-1\leq nx</m>, atau setara dengan <m>m\leq nx+1</m>.
+      </p>
+      <p>
+        Dari <m>n(y-x)&gt;1</m> diperoleh <m>ny-nx&gt;1</m>, sehingga
+        <m>nx+1&lt;ny</m>. Menggabungkan semuanya menghasilkan
+        <me>
+          nx&lt;m\leq nx+1&lt;ny.
+        </me>
+        Karena <m>n</m> bilangan bulat positif, pembagian dengan <m>n</m>
+        mempertahankan arah pertidaksamaan dan memberi
+        <m>x&lt;m/n&lt;y</m>. Dengan <m>m\in\Z</m> dan
+        <m>n\in\Z^+</m>, bilangan <m>m/n</m> rasional. Jadi setiap interval
+        terbuka tak kosong di <m>\R</m> memuat suatu bilangan rasional.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-22">
+    <title>Tugas 22: titik rasional dalam bola Euklides</title>
+    <statement>
+      <p>
+        Buktikan bahwa setiap bola terbuka dalam <m>(\R^2,d_E)</m> memuat titik
+        yang kedua koordinatnya rasional. Rubrik: mulai dari pusat dan jari-jari
+        bola, pilih satu bilangan rasional dekat dengan tiap koordinat pusat,
+        lalu perkirakan jarak Euklidesnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-22-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk bola berpusat
+        <m>c=(c_1,c_2)</m> berjari-jari <m>\varepsilon&gt;0</m>, gunakan
+        kerapatan <m>\Q</m> untuk memilih
+        <m>q_i\in(c_i-\varepsilon/2,c_i+\varepsilon/2)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan
+        <m>\sqrt{u^2+v^2}\leq |u|+|v|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-22-answer">
+      <p>
+        Pilih <m>q_1,q_2\in\Q</m> dengan
+        <m>|q_i-c_i|&lt;\varepsilon/2</m>. Untuk
+        <m>q=(q_1,q_2)</m>, berlaku <m>d_E(c,q)&lt;\varepsilon</m>; jadi
+        <m>q</m> berada dalam bola dan kedua koordinatnya rasional.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-22-solution">
+      <p>
+        Misalkan <m>B_{d_E}(c,\varepsilon)</m> suatu bola terbuka dengan
+        <m>c=(c_1,c_2)</m> dan <m>\varepsilon&gt;0</m>. Berdasarkan kerapatan
+        bilangan rasional dalam bilangan real, terdapat <m>q_1,q_2\in\Q</m>
+        sedemikian sehingga
+        <m>|q_1-c_1|&lt;\varepsilon/2</m> dan
+        <m>|q_2-c_2|&lt;\varepsilon/2</m>. Tetapkan
+        <m>q=(q_1,q_2)</m>.
+      </p>
+      <p>
+        Untuk bilangan real <m>u,v</m>, kedua ruas tak negatif dan
+        <m>u^2+v^2\leq(|u|+|v|)^2</m>, sehingga
+        <m>\sqrt{u^2+v^2}\leq|u|+|v|</m>. Karena itu
+        <me>
+          d_E(c,q)
+          \leq |q_1-c_1|+|q_2-c_2|
+          &lt; \frac{\varepsilon}{2}+\frac{\varepsilon}{2}
+          =\varepsilon.
+        </me>
+        Maka <m>q\in B_{d_E}(c,\varepsilon)</m>, dan kedua koordinat
+        <m>q</m> rasional sebagaimana diminta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-23">
+    <title>Tugas 23: membentuk calon akar kuadrat</title>
+    <statement>
+      <p>
+        Untuk <m>S=\{t\in\R^+\mid t^2&gt;2\}</m>, buktikan bahwa <m>S</m>
+        mempunyai batas bawah terbesar <m>m</m>. Rubrik: tunjukkan bahwa
+        <m>S</m> tak kosong dan berikan satu batas bawahnya sebelum memakai
+        kelengkapan <m>\R</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-23-hint">
+      <p>
+        <em>Langkah 1.</em> Periksa bahwa <m>2\in S</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>0&lt;t\leq1</m>, maka <m>t^2\leq1</m>;
+        jadi setiap anggota <m>S</m> lebih besar daripada <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-23-answer">
+      <p>
+        Himpunan <m>S</m> tak kosong karena <m>2\in S</m>, dan <m>1</m>
+        adalah batas bawahnya. Kelengkapan <m>\R</m> memberi
+        <m>m=\inf S</m>; selain itu <m>1\leq m\leq2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-23-solution">
+      <p>
+        Bilangan <m>2</m> positif dan <m>2^2=4&gt;2</m>, sehingga
+        <m>2\in S</m> dan <m>S</m> tak kosong. Jika <m>t\in S</m>, maka
+        <m>t&gt;0</m> dan <m>t^2&gt;2&gt;1</m>. Seandainya <m>t\leq1</m>, akan
+        berlaku <m>t^2\leq1</m>, suatu kontradiksi. Jadi <m>t&gt;1</m> untuk
+        setiap <m>t\in S</m>, dan <m>1</m> adalah batas bawah <m>S</m>.
+      </p>
+      <p>
+        Aksioma kelengkapan bilangan real menjamin bahwa himpunan real tak
+        kosong yang terbatas di bawah mempunyai infimum. Maka
+        <m>m=\inf S</m> ada. Karena <m>1</m> adalah batas bawah,
+        <m>1\leq m</m>; karena <m>2\in S</m> dan infimum tidak melebihi setiap
+        anggota himpunan, <m>m\leq2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-24">
+    <title>Tugas 24: menyingkirkan kasus <m>m^2&lt;2</m></title>
+    <statement>
+      <p>
+        Andaikan <m>m^2&lt;2</m>. Pilih <m>n\in\Z^+</m> sehingga
+        <m>(m+1/n)^2&lt;2</m>, lalu jelaskan kontradiksinya. Rubrik: buat pilihan
+        kuantitatif untuk <m>n</m> dan buktikan bahwa <m>m+1/n</m> menjadi batas
+        bawah <m>S</m> yang lebih besar daripada <m>m</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-24-hint">
+      <p>
+        <em>Langkah 1.</em> Tetapkan <m>\delta=2-m^2&gt;0</m> dan gunakan sifat
+        Archimedes untuk memilih
+        <m>n&gt;(2m+1)/\delta</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>n\geq1</m>, berlaku
+        <m>2m/n+1/n^2\leq(2m+1)/n</m>. Jika kuadrat suatu bilangan positif
+        <m>t</m> kurang daripada <m>2</m>, bandingkan <m>t</m> dengan semua
+        anggota <m>S</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-24-answer">
+      <p>
+        Dengan <m>\delta=2-m^2</m>, pilih
+        <m>n&gt;(2m+1)/\delta</m>. Maka
+        <m>(m+1/n)^2&lt;2</m>. Bilangan <m>m+1/n</m> lalu merupakan batas bawah
+        <m>S</m> yang lebih besar daripada <m>m=\inf S</m>, suatu kontradiksi.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-24-solution">
+      <p>
+        Andaikan <m>m^2&lt;2</m> dan tetapkan
+        <m>\delta=2-m^2&gt;0</m>. Sifat Archimedes memberi bilangan bulat
+        positif <m>n</m> dengan <m>n&gt;(2m+1)/\delta</m>. Karena
+        <m>n\geq1</m>, diperoleh
+        <me>
+          \left(m+\frac1n\right)^2
+          =m^2+\frac{2m}{n}+\frac1{n^2}
+          \leq m^2+\frac{2m+1}{n}
+          &lt;m^2+\delta=2.
+        </me>
+      </p>
+      <p>
+        Tuliskan <m>t=m+1/n</m>. Bilangan <m>t</m> positif dan <m>t&gt;m</m>.
+        Untuk setiap <m>s\in S</m>, berlaku <m>s&gt;0</m> dan
+        <m>s^2&gt;2&gt;t^2</m>. Karena keduanya positif, <m>s&gt;t</m>. Jadi
+        <m>t</m> adalah batas bawah bagi <m>S</m>. Akan tetapi,
+        <m>t=m+1/n&gt;m</m>, bertentangan dengan fakta bahwa <m>m</m> adalah
+        batas bawah terbesar. Maka kasus <m>m^2&lt;2</m> mustahil.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-25">
+    <title>Tugas 25: menyingkirkan kasus <m>m^2&gt;2</m></title>
+    <statement>
+      <p>
+        Andaikan <m>m^2&gt;2</m>. Pilih <m>n\in\Z^+</m> sehingga
+        <m>(m-1/n)^2&gt;2</m>, lalu jelaskan kontradiksinya. Rubrik: pastikan
+        <m>m-1/n&gt;0</m> serta buktikan bahwa bilangan tersebut menjadi anggota
+        <m>S</m> yang lebih kecil daripada batas bawah <m>m</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-25-hint">
+      <p>
+        <em>Langkah 1.</em> Tetapkan <m>\delta=m^2-2&gt;0</m> dan pilih
+        <m>n</m> sedemikian besar sehingga sekaligus
+        <m>2m/n&lt;\delta</m> dan <m>1/n&lt;m</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan
+        <m>(m-1/n)^2&gt;m^2-2m/n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-25-answer">
+      <p>
+        Pilih <m>n&gt;\max\{2m/(m^2-2),1/m\}</m>. Maka
+        <m>0&lt;m-1/n&lt;m</m> dan <m>(m-1/n)^2&gt;2</m>. Jadi
+        <m>m-1/n\in S</m>, bertentangan dengan <m>m</m> sebagai batas bawah
+        <m>S</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-25-solution">
+      <p>
+        Andaikan <m>m^2&gt;2</m> dan tetapkan
+        <m>\delta=m^2-2&gt;0</m>. Sifat Archimedes memungkinkan kita memilih
+        <m>n\in\Z^+</m> dengan
+        <m>n&gt;\max\{2m/\delta,1/m\}</m>. Maka <m>1/n&lt;m</m>, sehingga
+        <m>t=m-1/n&gt;0</m>. Selain itu,
+        <me>
+          t^2
+          =m^2-\frac{2m}{n}+\frac1{n^2}
+          &gt;m^2-\frac{2m}{n}
+          &gt;m^2-\delta=2.
+        </me>
+      </p>
+      <p>
+        Karena <m>t&gt;0</m> dan <m>t^2&gt;2</m>, definisi memberi
+        <m>t\in S</m>. Namun <m>t=m-1/n&lt;m</m>, sedangkan <m>m</m> sebagai
+        batas bawah <m>S</m> harus memenuhi <m>m\leq s</m> untuk setiap
+        <m>s\in S</m>. Kontradiksi ini menunjukkan bahwa kasus
+        <m>m^2&gt;2</m> juga mustahil.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-26">
+    <title>Tugas 26: keberadaan <m>\sqrt{2}</m></title>
+    <statement>
+      <p>
+        Simpulkan dari dua kasus yang telah disingkirkan bahwa bilangan real
+        positif <m>\sqrt{2}</m> ada. Rubrik: gunakan trikotomi pada
+        <m>m^2</m> dan, untuk ketepatan notasi, jelaskan ketunggalan akar
+        positif tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-26-hint">
+      <p>
+        <em>Langkah 1.</em> Tepat satu dari <m>m^2&lt;2</m>, <m>m^2=2</m>,
+        atau <m>m^2&gt;2</m> berlaku.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>u,v&gt;0</m> dan <m>u^2=v^2</m>, faktorkan
+        <m>u^2-v^2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-26-answer">
+      <p>
+        Karena kedua pertidaksamaan ketat mustahil, <m>m^2=2</m>. Dari
+        <m>m\geq1</m>, <m>m</m> positif; ia adalah akar kuadrat positif yang
+        tunggal dan karenanya <m>m=\sqrt{2}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-26-solution">
+      <p>
+        Trikotomi urutan bilangan real menyatakan bahwa tepat satu dari
+        <m>m^2&lt;2</m>, <m>m^2=2</m>, dan <m>m^2&gt;2</m> berlaku. Tugas 24
+        menyingkirkan kemungkinan pertama dan Tugas 25 menyingkirkan
+        kemungkinan ketiga. Oleh sebab itu <m>m^2=2</m>. Tugas 23 memberi
+        <m>m\geq1</m>, sehingga <m>m&gt;0</m>.
+      </p>
+      <p>
+        Untuk memeriksa ketunggalan, andaikan <m>u,v&gt;0</m> dan
+        <m>u^2=v^2=2</m>. Maka
+        <m>0=u^2-v^2=(u-v)(u+v)</m>. Karena <m>u+v&gt;0</m>, harus berlaku
+        <m>u-v=0</m>, jadi <m>u=v</m>. Dengan demikian ada tepat satu bilangan
+        real positif yang kuadratnya <m>2</m>; bilangan itu dinotasikan dengan
+        <m>\sqrt{2}</m>, dan konstruksi di atas membuktikan bahwa
+        <m>m=\sqrt{2}</m> benar-benar ada.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-27">
+    <title>Tugas 27: paritas pembilang</title>
+    <statement>
+      <p>
+        Andaikan demi kontradiksi bahwa
+        <m>\sqrt{2}=r/s</m>, dengan <m>r,s\in\Z^+</m> relatif prima. Buktikan
+        <m>r^2=2s^2</m> dan simpulkan bahwa <m>2</m> membagi <m>r</m>. Rubrik:
+        kuadratkan persamaan dan gunakan bahwa jika bilangan prima membagi
+        suatu kuadrat, bilangan itu membagi dasarnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-27-hint">
+      <p>
+        <em>Langkah 1.</em> Gunakan <m>(\sqrt{2})^2=2</m> dan kalikan dengan
+        <m>s^2</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Persamaan yang diperoleh menunjukkan
+        <m>2\mid r^2</m>; terapkan sifat bilangan prima <m>2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-27-answer">
+      <p>
+        Menguadratkan <m>\sqrt{2}=r/s</m> memberi
+        <m>2=r^2/s^2</m>, sehingga <m>r^2=2s^2</m>. Jadi
+        <m>2\mid r^2</m>; karena <m>2</m> prima, <m>2\mid r</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-27-solution">
+      <p>
+        Dari <m>\sqrt{2}=r/s</m>, dengan <m>s&gt;0</m>, kita memperoleh
+        <me>
+          2=(\sqrt{2})^2=\frac{r^2}{s^2}.
+        </me>
+        Mengalikan kedua ruas dengan <m>s^2</m> menghasilkan
+        <m>r^2=2s^2</m>. Maka <m>r^2</m> genap, atau
+        <m>2\mid r^2=r\cdot r</m>. Berdasarkan lema Euklides, jika bilangan
+        prima membagi suatu hasil kali, ia membagi sekurang-kurangnya satu
+        faktornya. Karena kedua faktor di sini sama-sama <m>r</m>, diperoleh
+        <m>2\mid r</m>. Jadi ada <m>k\in\Z^+</m> dengan <m>r=2k</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-28">
+    <title>Tugas 28: kontradiksi faktor persekutuan</title>
+    <statement>
+      <p>
+        Dengan hasil <m>2\mid r</m>, buktikan bahwa <m>2\mid s</m> dan
+        selesaikan pembuktian bahwa <m>\sqrt{2}</m> irasional. Rubrik: tuliskan
+        <m>r=2k</m>, substitusikan ke <m>r^2=2s^2</m>, dan bandingkan dengan
+        asumsi bahwa pecahan telah disederhanakan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-28-hint">
+      <p>
+        <em>Langkah 1.</em> Substitusi <m>r=2k</m> memberi
+        <m>4k^2=2s^2</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Setelah membagi dengan <m>2</m>, gunakan kembali
+        sifat prima yang dipakai pada tugas sebelumnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-28-answer">
+      <p>
+        Dari <m>r=2k</m> diperoleh <m>s^2=2k^2</m>, sehingga
+        <m>2\mid s</m>. Maka <m>2</m> membagi baik <m>r</m> maupun <m>s</m>,
+        bertentangan dengan keduanya relatif prima. Jadi
+        <m>\sqrt{2}\notin\Q</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-28-solution">
+      <p>
+        Karena <m>2\mid r</m>, tuliskan <m>r=2k</m> untuk suatu
+        <m>k\in\Z^+</m>. Substitusi ke persamaan <m>r^2=2s^2</m> memberi
+        <me>
+          (2k)^2=2s^2,
+          \qquad 4k^2=2s^2,
+          \qquad s^2=2k^2.
+        </me>
+        Jadi <m>2\mid s^2</m>. Karena <m>2</m> prima, lema Euklides memberi
+        <m>2\mid s</m>.
+      </p>
+      <p>
+        Dengan demikian <m>2</m> adalah faktor persekutuan positif dari
+        <m>r</m> dan <m>s</m>. Ini bertentangan dengan pilihan <m>r/s</m>
+        dalam bentuk paling sederhana, yakni bahwa <m>r</m> dan <m>s</m> tidak
+        mempunyai faktor persekutuan positif selain <m>1</m>. Pengandaian
+        bahwa <m>\sqrt{2}</m> rasional harus salah; maka
+        <m>\sqrt{2}</m> irasional.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-29">
+    <title>Tugas 29: bilangan irasional di antara dua bilangan real</title>
+    <statement>
+      <p>
+        Untuk dua bilangan real berbeda <m>x</m> dan <m>y</m>, temukan
+        <m>q\in\Z</m> dan <m>N\in\Z^+</m> sehingga
+        <m>z=q\sqrt{2}/2^N</m> irasional dan terletak ketat di antara
+        <m>x</m> dan <m>y</m>. Rubrik: buat langkah
+        <m>h=\sqrt{2}/2^N</m> cukup kecil, pilih kelipatan bulat yang tepat,
+        pastikan <m>q\neq0</m>, lalu buktikan irasionalitasnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-29-hint">
+      <p>
+        <em>Langkah 1.</em> Setelah menamai ujung interval sebagai
+        <m>u&lt;v</m>, pilih <m>N</m> sehingga <m>0&lt;h&lt;v-u</m>. Jika interval
+        tidak melintasi <m>0</m>, ambil bilangan bulat terkecil
+        <m>q&gt;u/h</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>u&lt;0&lt;v</m>, buat juga <m>h&lt;v</m> dan
+        ambil <m>q=1</m>. Jika <m>q\neq0</m> dan <m>qh</m> rasional, selesaikan
+        persamaan itu terhadap <m>\sqrt{2}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-29-answer">
+      <p>
+        Tulis <m>u=\min\{x,y\}</m> dan <m>v=\max\{x,y\}</m>. Pilih
+        <m>N</m> sehingga <m>h=\sqrt{2}/2^N&lt;v-u</m>. Jika interval tidak
+        melintasi <m>0</m>, bilangan bulat terkecil <m>q&gt;u/h</m> memenuhi
+        <m>u&lt;qh&lt;v</m> dan <m>q\neq0</m>. Jika <m>u&lt;0&lt;v</m>, pilih juga
+        <m>h&lt;v</m> dan ambil <m>q=1</m>. Dalam kedua kasus
+        <m>z=qh=q\sqrt{2}/2^N</m> irasional.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-29-solution">
+      <p>
+        Tukarkan nama kedua bilangan jika perlu dan tetapkan
+        <m>u=\min\{x,y\}</m> serta <m>v=\max\{x,y\}</m>, sehingga
+        <m>u&lt;v</m>. Bilangan
+        <m>h_N=\sqrt{2}/2^N</m> dapat dibuat sekecil yang diinginkan: menurut
+        induksi <m>2^N\geq N+1</m>, dan sifat Archimedes memungkinkan
+        <m>N+1</m> melampaui sebarang batas real yang ditentukan. Jadi pilih
+        <m>N\in\Z^+</m> sehingga <m>0&lt;h=h_N&lt;v-u</m>.
+      </p>
+      <p>
+        Mula-mula andaikan interval tidak melintasi nol, yaitu
+        <m>u\geq0</m> atau <m>v\leq0</m>. Ambil bilangan bulat terkecil
+        <m>q</m> yang memenuhi <m>q&gt;u/h</m>. Keminimalannya memberi
+        <m>q-1\leq u/h</m>, sehingga
+        <me>
+          u&lt;qh\leq u+h&lt;v.
+        </me>
+        Jika <m>u\geq0</m>, maka <m>q&gt;u/h\geq0</m>, sehingga <m>q\geq1</m>.
+        Jika <m>v\leq0</m>, rantai di atas memberi <m>qh&lt;v\leq0</m>, sehingga
+        <m>q&lt;0</m>. Jadi dalam kedua subkasus <m>q\neq0</m>.
+      </p>
+      <p>
+        Jika <m>u&lt;0&lt;v</m>, pilih <m>N</m> lebih besar lagi bila perlu agar
+        juga <m>h&lt;v</m>, dan ambil <m>q=1</m>. Maka
+        <m>u&lt;0&lt;h&lt;v</m>, sehingga kembali diperoleh kelipatan
+        <m>z=qh</m> di dalam interval dengan <m>q\neq0</m>.
+      </p>
+      <p>
+        Akhirnya, dalam kedua kasus
+        <m>z=q\sqrt{2}/2^N</m>. Seandainya <m>z</m> rasional, karena
+        <m>q\neq0</m> kita akan memperoleh
+        <m>\sqrt{2}=(2^N/q)z\in\Q</m>, bertentangan dengan Tugas 28. Jadi
+        <m>z</m> irasional dan terletak ketat di antara <m>x</m> dan
+        <m>y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-30">
+    <title>Tugas 30: pertidaksamaan jarak titik ke himpunan</title>
+    <statement>
+      <p>
+        Dalam ruang metrik <m>(X,d)</m>, untuk himpunan tak kosong
+        <m>A\subseteq X</m> dan <m>x,y\in X</m>, buktikan
+        <m>d(x,A)\leq d(x,y)+d(y,A)</m>. Rubrik: gunakan sifat infimum untuk
+        memilih titik <m>A</m> yang hampir meminimumkan jarak dari <m>y</m>,
+        terapkan pertidaksamaan segitiga, lalu hilangkan galat positifnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-30-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk setiap <m>\varepsilon&gt;0</m>, ada
+        <m>a_\varepsilon\in A</m> dengan
+        <m>d(y,a_\varepsilon)&lt;d(y,A)+\varepsilon</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Bandingkan <m>d(x,A)</m> dengan
+        <m>d(x,a_\varepsilon)</m>, lalu gunakan pertidaksamaan segitiga.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-30-answer">
+      <p>
+        Untuk setiap <m>\varepsilon&gt;0</m>, pilih
+        <m>a_\varepsilon\in A</m> dengan
+        <m>d(y,a_\varepsilon)&lt;d(y,A)+\varepsilon</m>. Maka
+        <m>d(x,A)&lt;d(x,y)+d(y,A)+\varepsilon</m>. Karena ini berlaku untuk
+        setiap <m>\varepsilon&gt;0</m>, diperoleh pertidaksamaan yang diminta.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-30-solution">
+      <p>
+        Ambil sebarang <m>\varepsilon&gt;0</m>. Karena
+        <m>d(y,A)=\inf\{d(y,a)\mid a\in A\}</m>, terdapat
+        <m>a_\varepsilon\in A</m> dengan
+        <m>d(y,a_\varepsilon)&lt;d(y,A)+\varepsilon</m>. Jika tidak ada titik
+        seperti itu, <m>d(y,A)+\varepsilon</m> akan menjadi batas bawah yang
+        lebih besar daripada infimum, suatu kontradiksi.
+      </p>
+      <p>
+        Berdasarkan definisi infimum dan pertidaksamaan segitiga,
+        <me>
+          d(x,A)
+          \leq d(x,a_\varepsilon)
+          \leq d(x,y)+d(y,a_\varepsilon)
+          &lt;d(x,y)+d(y,A)+\varepsilon.
+        </me>
+        Misalkan, sebaliknya,
+        <m>d(x,A)&gt;d(x,y)+d(y,A)</m>. Memilih <m>\varepsilon</m> lebih kecil
+        daripada selisih positif kedua ruas akan bertentangan dengan
+        pertidaksamaan terakhir. Jadi
+        <m>d(x,A)\leq d(x,y)+d(y,A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-31">
+    <title>Tugas 31: jarak ke gabungan</title>
+    <statement>
+      <p>
+        Untuk subhimpunan tak kosong <m>B,C</m> dari ruang metrik
+        <m>(X,d)</m> dan <m>a\in X</m>, buktikan
+        <m>d(a,B\cup C)=\min\{d(a,B),d(a,C)\}</m>. Rubrik: buktikan kedua arah
+        pertidaksamaan dengan membandingkan himpunan kandidat jarak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-31-hint">
+      <p>
+        <em>Langkah 1.</em> Karena <m>B\subseteq B\cup C</m> dan
+        <m>C\subseteq B\cup C</m>, mengambil infimum atas gabungan tidak dapat
+        menghasilkan nilai yang lebih besar daripada salah satu infimum.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika
+        <m>r=\min\{d(a,B),d(a,C)\}</m>, tunjukkan bahwa <m>r</m> adalah batas
+        bawah bagi semua <m>d(a,u)</m> dengan <m>u\in B\cup C</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-31-answer">
+      <p>
+        Jarak ke gabungan tidak melebihi jarak ke masing-masing himpunan,
+        sehingga tidak melebihi minimum keduanya. Sebaliknya, minimum itu
+        adalah batas bawah bagi setiap jarak ke titik dalam <m>B\cup C</m>.
+        Kedua pertidaksamaan memberi kesamaan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-31-solution">
+      <p>
+        Tetapkan <m>\alpha=d(a,B)</m>, <m>\beta=d(a,C)</m>, dan
+        <m>r=\min\{\alpha,\beta\}</m>. Karena <m>B\subseteq B\cup C</m>,
+        himpunan jarak yang dipakai untuk mendefinisikan
+        <m>d(a,B\cup C)</m> memuat semua jarak ke <m>B</m>. Maka
+        <m>d(a,B\cup C)\leq\alpha</m>. Dengan alasan yang sama,
+        <m>d(a,B\cup C)\leq\beta</m>. Jadi
+        <m>d(a,B\cup C)\leq r</m>.
+      </p>
+      <p>
+        Sebaliknya, ambil <m>u\in B\cup C</m>. Jika <m>u\in B</m>, definisi
+        infimum memberi <m>d(a,u)\geq\alpha\geq r</m>. Jika
+        <m>u\in C</m>, diperoleh <m>d(a,u)\geq\beta\geq r</m>. Jadi
+        <m>r</m> adalah batas bawah bagi semua jarak
+        <m>\{d(a,u)\mid u\in B\cup C\}</m>. Karena infimum adalah batas bawah
+        terbesar, <m>r\leq d(a,B\cup C)</m>. Menggabungkan kedua arah memberi
+        <m>d(a,B\cup C)=r=\min\{d(a,B),d(a,C)\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-32">
+    <title>Tugas 32: keterbatasan diwarisi subhimpunan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: setiap subhimpunan tak kosong dari himpunan
+        terbatas <m>S\subseteq\R</m> juga terbatas. Rubrik: jika benar, gunakan
+        batas bawah dan batas atas yang sama untuk semua anggota subhimpunan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-32-hint">
+      <p>
+        <em>Langkah 1.</em> Karena <m>S</m> terbatas, ada <m>L,U\in\R</m>
+        dengan <m>L\leq s\leq U</m> untuk setiap <m>s\in S</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Apa yang berubah jika kuantifikasi dibatasi pada
+        anggota suatu <m>V\subseteq S</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-32-answer">
+      <p>
+        Benar. Setiap batas bawah dan batas atas bagi <m>S</m> juga menjadi
+        batas bawah dan batas atas bagi setiap <m>V\subseteq S</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-32-solution">
+      <p>
+        Karena <m>S</m> terbatas, terdapat <m>L,U\in\R</m> sedemikian sehingga
+        <m>L\leq s\leq U</m> untuk setiap <m>s\in S</m>. Jika
+        <m>V\subseteq S</m> dan <m>v\in V</m>, maka juga <m>v\in S</m>, sehingga
+        <m>L\leq v\leq U</m>. Jadi <m>L</m> adalah batas bawah dan <m>U</m>
+        adalah batas atas bagi <m>V</m>. Dengan demikian setiap subhimpunan tak
+        kosong dari <m>S</m> terbatas. Syarat tak kosong diperlukan agar
+        pembahasan infimum dan supremum biasa dapat dilanjutkan, tetapi
+        pewarisan kedua batas itu sendiri tetap berlaku bagi himpunan kosong.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-33">
+    <title>Tugas 33: supremum jumlah himpunan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah:
+        <m>\sup(S+T)=\max\{\sup S,\sup T\}</m>. Rubrik: uji dengan himpunan
+        tunggal yang konkret dan bandingkan kedua ruas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-33-hint">
+      <p>
+        <em>Langkah 1.</em> Ambil <m>S=T=\{1\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Hitung <m>S+T</m> sebelum mengambil supremumnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-33-answer">
+      <p>
+        Salah. Untuk <m>S=T=\{1\}</m>, diperoleh
+        <m>\sup(S+T)=2</m>, sedangkan
+        <m>\max\{\sup S,\sup T\}=1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-33-solution">
+      <p>
+        Pilih himpunan tak kosong dan terbatas <m>S=T=\{1\}</m>. Maka
+        <m>S+T=\{s+t\mid s\in S,t\in T\}=\{2\}</m>, sehingga
+        <m>\sup(S+T)=2</m>. Di sisi lain,
+        <m>\sup S=\sup T=1</m>, jadi
+        <m>\max\{\sup S,\sup T\}=1</m>. Karena <m>2\neq1</m>, pernyataan
+        tersebut salah. Rumus yang benar di bawah hipotesis latihan ialah
+        <m>\sup(S+T)=\sup S+\sup T</m>, bukan maksimum kedua supremum.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-34">
+    <title>Tugas 34: infimum jumlah himpunan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah:
+        <m>\inf(S+T)=\min\{\inf S,\inf T\}</m>. Rubrik: berikan contoh konkret
+        yang memenuhi semua hipotesis dan hitung kedua ruas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-34-hint">
+      <p>
+        <em>Langkah 1.</em> Himpunan tunggal <m>S=T=\{1\}</m> juga cukup di
+        sini.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Bandingkan infimum <m>\{2\}</m> dengan minimum
+        dari dua salinan bilangan <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-34-answer">
+      <p>
+        Salah. Untuk <m>S=T=\{1\}</m>, diperoleh
+        <m>\inf(S+T)=2</m>, sedangkan
+        <m>\min\{\inf S,\inf T\}=1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-34-solution">
+      <p>
+        Ambil <m>S=T=\{1\}</m>, yang keduanya tak kosong dan terbatas. Karena
+        <m>S+T=\{2\}</m>, diperoleh <m>\inf(S+T)=2</m>. Namun
+        <m>\inf S=\inf T=1</m>, sehingga
+        <m>\min\{\inf S,\inf T\}=1</m>. Kedua nilai itu berbeda, jadi
+        pernyataan salah. Rumus yang benar adalah
+        <m>\inf(S+T)=\inf S+\inf T</m> di bawah hipotesis yang diberikan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-35">
+    <title>Tugas 35: supremum subhimpunan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>U</m> subhimpunan tak kosong dari
+        <m>S</m>, maka <m>\sup U\leq\sup S</m>. Rubrik: tunjukkan bahwa
+        <m>\sup S</m> adalah batas atas bagi <m>U</m>, lalu gunakan sifat
+        terkecil dari supremum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-35-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk setiap <m>u\in U\subseteq S</m>, berlaku
+        <m>u\leq\sup S</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Supremum <m>U</m> tidak melebihi batas atas mana
+        pun bagi <m>U</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-35-answer">
+      <p>
+        Benar. Bilangan <m>\sup S</m> adalah batas atas bagi <m>U</m>, sehingga
+        batas atas terkecil <m>\sup U</m> memenuhi
+        <m>\sup U\leq\sup S</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-35-solution">
+      <p>
+        Ambil sebarang <m>u\in U</m>. Karena <m>U\subseteq S</m>, berlaku
+        <m>u\in S</m>. Berdasarkan definisi supremum,
+        <m>u\leq\sup S</m>. Jadi <m>\sup S</m> adalah batas atas bagi
+        <m>U</m>. Himpunan <m>U</m> tak kosong dan terbatas karena merupakan
+        subhimpunan dari <m>S</m>, sehingga <m>\sup U</m> ada. Sebagai batas
+        atas terkecil, <m>\sup U</m> tidak melebihi setiap batas atas bagi
+        <m>U</m>, khususnya tidak melebihi <m>\sup S</m>. Maka
+        <m>\sup U\leq\sup S</m>, dan pernyataannya benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-36">
+    <title>Tugas 36: infimum subhimpunan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>U</m> subhimpunan tak kosong dari
+        <m>S</m>, maka <m>\inf S\leq\inf U</m>. Rubrik: tunjukkan bahwa
+        <m>\inf S</m> adalah batas bawah bagi <m>U</m>, lalu gunakan sifat
+        terbesar dari infimum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-36-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk setiap <m>u\in U\subseteq S</m>, berlaku
+        <m>\inf S\leq u</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Infimum <m>U</m> tidak lebih kecil daripada batas
+        bawah mana pun bagi <m>U</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-36-answer">
+      <p>
+        Benar. Bilangan <m>\inf S</m> adalah batas bawah bagi <m>U</m>, sehingga
+        batas bawah terbesar <m>\inf U</m> memenuhi
+        <m>\inf S\leq\inf U</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-36-solution">
+      <p>
+        Untuk setiap <m>u\in U</m>, inklusi <m>U\subseteq S</m> memberi
+        <m>u\in S</m>. Karena <m>\inf S</m> adalah batas bawah bagi <m>S</m>,
+        berlaku <m>\inf S\leq u</m>. Jadi <m>\inf S</m> juga merupakan batas
+        bawah bagi <m>U</m>. Himpunan <m>U</m> tak kosong dan terbatas, sehingga
+        <m>\inf U</m> ada. Karena <m>\inf U</m> adalah batas bawah terbesar
+        bagi <m>U</m>, ia sekurang-kurangnya sebesar setiap batas bawah bagi
+        <m>U</m>, khususnya <m>\inf S</m>. Dengan demikian
+        <m>\inf S\leq\inf U</m>, dan pernyataannya benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-37">
+    <title>Tugas 37: jarak nol dan penutupan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>A\subseteq\R</m> tak kosong dan
+        <m>d_E(x,A)=0</m>, maka <m>x\in A</m>. Rubrik: jika salah, berikan
+        contoh konkret dalam metrik Euklides <m>d_E</m> dan nyatakan hubungan
+        yang tepat antara jarak nol, penutupan <m>\overline{A}</m>, dan
+        keanggotaan dalam <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-37-hint">
+      <p>
+        <em>Langkah 1.</em> Ambil <m>A=(0,1)</m> dan <m>x=0</m>. Titik-titik
+        <m>1/n</m> berada dalam <m>A</m> untuk <m>n&gt;1</m> dan mendekati
+        <m>0</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Dalam ruang metrik, <m>d(x,A)=0</m> mencirikan
+        <m>x\in\overline{A}</m>, bukan selalu <m>x\in A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-37-answer">
+      <p>
+        Salah. Untuk <m>A=(0,1)</m> dan <m>x=0</m>, berlaku
+        <m>d_E(0,A)=0</m>, tetapi <m>0\notin A</m>. Yang benar ialah
+        <m>d_E(x,A)=0</m> jika dan hanya jika
+        <m>x\in\overline{A}</m>; keanggotaan dalam penutupan tidak sama dengan
+        keanggotaan dalam <m>A</m> kecuali, misalnya, <m>A</m> tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-37-solution">
+      <p>
+        Gunakan metrik Euklides <m>d_E(u,v)=|u-v|</m> pada <m>\R</m>. Ambil
+        <m>A=(0,1)</m> dan <m>x=0</m>. Semua jarak <m>d_E(0,a)=a</m> dengan
+        <m>a\in A</m> positif, tetapi untuk setiap
+        <m>\varepsilon&gt;0</m> terdapat <m>a\in A</m> dengan
+        <m>0&lt;a&lt;\varepsilon</m>. Oleh karena itu
+        <m>d_E(0,A)=\inf(0,1)=0</m>. Meskipun demikian,
+        <m>0\notin(0,1)=A</m>. Ini membantah pernyataan.
+      </p>
+      <p>
+        Secara umum dalam ruang metrik, <m>d(x,A)=0</m> berarti bahwa untuk
+        setiap <m>\varepsilon&gt;0</m> terdapat <m>a\in A</m> dengan
+        <m>d(x,a)&lt;\varepsilon</m>; pernyataan ini setara dengan setiap bola
+        terbuka di sekitar <m>x</m> bertemu <m>A</m>, yakni
+        <m>x\in\overline{A}</m>. Sebaliknya, sifat penutupan tersebut membuat
+        infimum semua jarak ke <m>A</m> sama dengan nol. Jadi kesetaraan yang
+        tepat adalah
+        <m>d_E(x,A)=0\iff x\in\overline{A}</m>. Dari sini hanya dapat
+        disimpulkan <m>x\in A</m> apabila diketahui tambahan bahwa
+        <m>A=\overline{A}</m>, misalnya bila <m>A</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+</section>

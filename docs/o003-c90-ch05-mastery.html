@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--********************************************--><!--*       Generated from PreTeXt source      *--><!--*                                          *--><!--*         https://pretextbook.org          *--><!--*                                          *--><!--********************************************--><html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pemeriksaan penguasaan dan transfer</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Topologi: Pendekatan Berbasis Inkuiri">
+<meta property="book:author" content="Steven Schlicker">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="o003-c90-chapters-01-05-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–5 — Himpunan, Fungsi, Ruang Metrik, Penerapan Ruang Metrik, Batas Bawah Terbesar, dan Pendamping Belajar Mandiri</span></a></h1>
+<p class="byline">Steven Schlicker</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Hasil Pencarian: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Tidak ada hasil.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Tampilkan atau sembunyikan daftar isi"><span class="icon">☰</span><span class="name">Daftar Isi</span></button><a class="index-button button" href="index-1.html" title="Indeks"><span class="name">Indeks</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Ubah preferensi pengguna"><span id="avatarbutton" class="avatarbutton name">Anda!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Pilih avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>Anda!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Keluarga font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Sesuaikan font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Ukuran</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Lebih kecil</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Lebih besar</li>
+<li>Lebar</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">lebih sempit</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">lebih lebar</li>
+<li>Ketebalan</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">lebih tipis</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">lebih tebal</li>
+<li>Jarak huruf</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">lebih rapat</li>
+<li data-val="lspace" data-change="1" tabindex="-1">lebih renggang</li>
+<li>Jarak kata</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">celah lebih kecil </li>
+<li data-val="wspace" data-change="1" tabindex="-1">celah lebih besar</li>
+<li>Jarak baris</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">lebih rapat<br>merapat</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">lebih renggang<br>merenggang</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Mode terang/gelap<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>bawaan</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>senja</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>gelap</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>tengah malam</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Penggaris baca<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>tanpa penggaris</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>garis bawah</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>garis bawah-L</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>bilah abu-abu</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>kotak terang</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>fajar</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>garis bawah fajar</li>
+<li class="moveQ">Gerakkan dengan:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>ikuti tetikus</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>panah atas/bawah — belum tersedia</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>pelacakan mata — belum tersedia</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="o003-c90-ch05-exercise-guides-b.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="up-button button" href="o003-c90-ch05-companion.html" title="Naik"><span class="icon">^</span><span class="name">Naik</span></a><a class="next-button button" href="index-1.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Cari" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lub}{\text{lub}}
+\newcommand{\glb}{\text{glb}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch05-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, dan Penerapannya</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basic_top.html" class="internal"><span class="title">Gagasan Dasar Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_intervals.html" class="internal"><span class="title">Interval</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_comp.html" class="internal"><span class="title">Gabungan, Irisan, dan Komplemen Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cart_prod.html" class="internal"><span class="title">Hasil Kali Kartesius Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_functions.html" class="internal"><span class="codenumber">2</span> <span class="title">Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_func.html" class="internal"><span class="title">Komposisi Fungsi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_inv_func.html" class="internal"><span class="title">Fungsi Invers</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fun_set.html" class="internal"><span class="title">Fungsi dan Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_card_set.html" class="internal"><span class="title">Kardinalitas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_metric_space_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space.html" class="internal"><span class="title">Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_euclid_rn.html" class="internal"><span class="title">Metrik Euklides pada <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces_apps.html" class="internal"><span class="codenumber">4</span> <span class="title">Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_met_space_app.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hamming.html" class="internal"><span class="title">Metrik Hamming</span></a></div></li>
+<li><div class="toc-item"><a href="sec_levenshtein.html" class="internal"><span class="title">Metrik Levenshtein</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_glb.html" class="internal"><span class="codenumber">5</span> <span class="title">Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_glb_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_dist_point_set.html" class="internal"><span class="title">Jarak dari Titik ke Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Bagian Akhir</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="o003-c90-ch01-companion.html" class="internal"><span class="codenumber">A</span> <span class="title">Pendamping Mandiri Bab 1: Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch01-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-exercise-guides.html" class="internal"><span class="title">Jawaban dan panduan sepuluh latihan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch02-companion.html" class="internal"><span class="codenumber">B</span> <span class="title">Pendamping Mandiri Bab 2: Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch02-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan tujuh belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch03-companion.html" class="internal"><span class="codenumber">C</span> <span class="title">Pendamping Mandiri Bab 3: Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch03-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan empat belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch04-companion.html" class="internal"><span class="codenumber">D</span> <span class="title">Pendamping Mandiri Bab 4: Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch04-source-task-guides.html" class="internal"><span class="title">Panduan untuk tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch04-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch05-companion.html" class="internal"><span class="codenumber">E</span> <span class="title">Pendamping Mandiri Bab 5: Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch05-intro-guides.html" class="internal"><span class="title">Panduan untuk kegiatan pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-point-set-guides.html" class="internal"><span class="title">Panduan untuk jarak titik ke himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="o003-c90-ch05-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch05-mastery"><h2 class="heading hide-type">
+<span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Pemeriksaan penguasaan dan transfer</span>
+</h2>
+<div class="para" id="p-1428">Enam latihan asli berikut menguji apakah gagasan Bab 5 dapat dipakai pada situasi baru. Kerjakan pernyataannya terlebih dahulu, nilai pekerjaan Anda dengan rubrik yang diberikan, lalu buka petunjuk secara bertahap sebelum membandingkan jawaban dan pembahasan lengkap.</div>
+<article class="exercise exercise-like" id="o003-c90-ch05-mastery-01"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch05-mastery-01"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">E.49</span><span class="period">.</span><span class="space"> </span><span class="title">Infimum, supremum, minimum, dan maksimum.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-01"><article class="exercise exercise-like"><div class="para logical" id="p-1429">
+<div class="para">Untuk parameter <span class="process-math">\(t\in\R\text{,}\)</span> definisikan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_t=(t,t+1)\mathbin{\cup}
+\left\{t+2-\frac{1}{n}\mid n\in\N\right\},
+\end{equation*}
+</div>
+<div class="para">dengan <span class="process-math">\(\N=\{1,2,3,\ldots\}\text{.}\)</span> Tentukan <span class="process-math">\(\inf S_t\)</span> dan <span class="process-math">\(\sup S_t\text{,}\)</span> lalu putuskan apakah <span class="process-math">\(S_t\)</span> mempunyai minimum atau maksimum.</div>
+</div> <div class="para" id="p-1430">
+<em class="emphasis">Rubrik.</em> Buktikan bahwa setiap nilai yang Anda usulkan memang merupakan batas yang sesuai dan bahwa tidak ada batas bawah yang lebih besar atau batas atas yang lebih kecil. Bedakan dengan tegas antara infimum atau supremum dan anggota himpunan yang menjadi minimum atau maksimum.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch05-mastery-01-hint" id="o003-c90-ch05-mastery-01-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-01-hint"><div class="hint solution-like">
+<div class="para" id="p-1431">
+<em class="emphasis">Langkah 1.</em> Titik-titik pada interval terbuka dapat mendekati <span class="process-math">\(t\)</span> dari kanan sedekat apa pun.</div> <div class="para" id="p-1432">
+<em class="emphasis">Langkah 2.</em> Barisan <span class="process-math">\(t+2-1/n\)</span> meningkat menuju <span class="process-math">\(t+2\text{,}\)</span> tetapi tidak pernah mencapainya.</div> <div class="para" id="p-1433">
+<em class="emphasis">Langkah 3.</em> Untuk menguji minimum atau maksimum, periksa apakah infimum atau supremum tersebut merupakan anggota <span class="process-math">\(S_t\text{.}\)</span>
+</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch05-mastery-01-answer" id="o003-c90-ch05-mastery-01-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-01-answer"><div class="answer solution-like"><div class="para" id="p-1434">
+<span class="process-math">\(\inf S_t=t\)</span> dan <span class="process-math">\(\sup S_t=t+2\text{.}\)</span> Karena kedua nilai itu tidak berada dalam <span class="process-math">\(S_t\text{,}\)</span> himpunan tersebut tidak mempunyai minimum dan tidak mempunyai maksimum.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch05-mastery-01-solution" id="o003-c90-ch05-mastery-01-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-01-solution"><div class="solution solution-like">
+<div class="para" id="p-1435">Setiap anggota interval <span class="process-math">\((t,t+1)\)</span> lebih besar daripada <span class="process-math">\(t\text{.}\)</span> Selain itu, untuk <span class="process-math">\(n\geq1\)</span> berlaku <span class="process-math">\(t+2-1/n\geq t+1&gt;t\text{.}\)</span> Jadi <span class="process-math">\(t\)</span> adalah batas bawah <span class="process-math">\(S_t\text{.}\)</span> Jika <span class="process-math">\(b&gt;t\text{,}\)</span> pilih <span class="process-math">\(u=t+\min\{(b-t)/2,1/2\}\text{.}\)</span> Kita mempunyai <span class="process-math">\(t&lt;u&lt;t+1\text{,}\)</span> sehingga <span class="process-math">\(u\in S_t\text{,}\)</span> dan sekaligus <span class="process-math">\(u&lt;b\text{.}\)</span> Maka <span class="process-math">\(b\)</span> bukan batas bawah. Jadi <span class="process-math">\(\inf S_t=t\text{.}\)</span>
+</div> <div class="para" id="p-1436">Setiap anggota <span class="process-math">\((t,t+1)\)</span> lebih kecil daripada <span class="process-math">\(t+2\text{,}\)</span> dan <span class="process-math">\(t+2-1/n&lt;t+2\)</span> untuk setiap <span class="process-math">\(n\in\N\text{.}\)</span> Dengan demikian <span class="process-math">\(t+2\)</span> adalah batas atas. Jika <span class="process-math">\(U&lt;t+2\text{,}\)</span> sifat Archimedes memberi <span class="process-math">\(n\in\N\)</span> dengan <span class="process-math">\(1/n&lt;t+2-U\text{.}\)</span> Akibatnya <span class="process-math">\(t+2-1/n&gt;U\text{,}\)</span> sehingga <span class="process-math">\(U\)</span> bukan batas atas. Oleh karena itu <span class="process-math">\(\sup S_t=t+2\text{.}\)</span>
+</div> <div class="para" id="p-1437">Interval <span class="process-math">\((t,t+1)\)</span> tidak memuat <span class="process-math">\(t\text{,}\)</span> sedangkan setiap unsur barisan sedikitnya <span class="process-math">\(t+1\text{;}\)</span> jadi <span class="process-math">\(t\notin S_t\text{.}\)</span> Demikian pula, tidak satu pun dari kedua bagian pembentuk <span class="process-math">\(S_t\)</span> memuat <span class="process-math">\(t+2\text{.}\)</span> Karena minimum harus sama dengan infimum dan maksimum harus sama dengan supremum, <span class="process-math">\(S_t\)</span> tidak mempunyai minimum maupun maksimum.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch05-mastery-02"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch05-mastery-02"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">E.50</span><span class="period">.</span><span class="space"> </span><span class="title">Jarak nol dan penutupan.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-02"><article class="exercise exercise-like"><div class="para logical" id="p-1438">
+<div class="para">Misalkan <span class="process-math">\((X,d)\)</span> ruang metrik, <span class="process-math">\(A\subseteq X\)</span> tak kosong, dan <span class="process-math">\(d(x,A)=\inf\{d(x,a)\mid a\in A\}\text{.}\)</span> Buktikan bahwa</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(x,A)=0\quad\Longleftrightarrow\quad x\in\overline{A}.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1439">
+<em class="emphasis">Rubrik.</em> Buktikan kedua implikasi dengan definisi penutupan melalui bola terbuka; nyatakan secara eksplisit bagaimana sifat infimum menghasilkan titik <span class="process-math">\(a\in A\)</span> pada jarak kurang dari <span class="process-math">\(\varepsilon\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch05-mastery-02-hint" id="o003-c90-ch05-mastery-02-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-02-hint"><div class="hint solution-like">
+<div class="para" id="p-1440">
+<em class="emphasis">Langkah 1.</em> Jika <span class="process-math">\(x\in\overline{A}\text{,}\)</span> maka <span class="process-math">\(B(x,\varepsilon)\cap A\neq\varnothing\)</span> untuk setiap <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span>
+</div> <div class="para" id="p-1441">
+<em class="emphasis">Langkah 2.</em> Jika infimum himpunan jarak adalah nol tetapi tidak ada jarak yang lebih kecil daripada suatu <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> maka <span class="process-math">\(\varepsilon\)</span> akan menjadi batas bawah positif.</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch05-mastery-02-answer" id="o003-c90-ch05-mastery-02-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-02-answer"><div class="answer solution-like"><div class="para" id="p-1442">Kesetaraan itu benar: <span class="process-math">\(d(x,A)=0\)</span> tepat ketika setiap bola terbuka berpusat di <span class="process-math">\(x\)</span> bertemu <span class="process-math">\(A\text{,}\)</span> dan kondisi terakhir adalah definisi <span class="process-math">\(x\in\overline{A}\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch05-mastery-02-solution" id="o003-c90-ch05-mastery-02-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-02-solution"><div class="solution solution-like">
+<div class="para" id="p-1443">Andaikan <span class="process-math">\(x\in\overline{A}\text{.}\)</span> Untuk setiap <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> ada <span class="process-math">\(a_\varepsilon\in A\)</span> dengan <span class="process-math">\(d(x,a_\varepsilon)&lt;\varepsilon\text{.}\)</span> Karena infimum tidak melebihi setiap anggota himpunan yang diinfimumkan, <span class="process-math">\(0\leq d(x,A)\leq d(x,a_\varepsilon)&lt;\varepsilon\text{.}\)</span> Tidak ada bilangan real positif yang lebih kecil daripada setiap <span class="process-math">\(\varepsilon&gt;0\text{;}\)</span> maka <span class="process-math">\(d(x,A)=0\text{.}\)</span>
+</div> <div class="para" id="p-1444">Sebaliknya, andaikan <span class="process-math">\(d(x,A)=0\text{.}\)</span> Ambil sembarang <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Jika semua <span class="process-math">\(a\in A\)</span> memenuhi <span class="process-math">\(d(x,a)\geq\varepsilon\text{,}\)</span> maka <span class="process-math">\(\varepsilon\)</span> merupakan batas bawah himpunan <span class="process-math">\(\{d(x,a)\mid a\in A\}\text{,}\)</span> bertentangan dengan fakta bahwa batas bawah terbesarnya adalah nol. Jadi terdapat <span class="process-math">\(a\in A\)</span> dengan <span class="process-math">\(d(x,a)&lt;\varepsilon\text{.}\)</span> Artinya <span class="process-math">\(B(x,\varepsilon)\cap A\neq\varnothing\)</span> untuk setiap radius positif, sehingga <span class="process-math">\(x\in\overline{A}\text{.}\)</span>
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch05-mastery-03"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch05-mastery-03"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">E.51</span><span class="period">.</span><span class="space"> </span><span class="title">Fungsi jarak bersifat 1-Lipschitz.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-03"><article class="exercise exercise-like"><div class="para logical" id="p-1445">
+<div class="para">Dalam keadaan latihan sebelumnya, definisikan <span class="process-math">\(\delta_A:X\to\R\)</span> dengan <span class="process-math">\(\delta_A(x)=d(x,A)\text{.}\)</span> Buktikan bahwa untuk semua <span class="process-math">\(x,y\in X\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\delta_A(x)-\delta_A(y)|\leq d(x,y).
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1446">
+<em class="emphasis">Rubrik.</em> Gunakan pertidaksamaan segitiga sebelum mengambil infimum, peroleh dua pertidaksamaan satu arah dengan menukar <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\text{,}\)</span> lalu gabungkan keduanya. Jangan mengandaikan bahwa infimum dicapai oleh suatu anggota <span class="process-math">\(A\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch05-mastery-03-hint" id="o003-c90-ch05-mastery-03-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-03-hint"><div class="hint solution-like">
+<div class="para" id="p-1447">
+<em class="emphasis">Langkah 1.</em> Untuk setiap <span class="process-math">\(a\in A\text{,}\)</span> berlaku <span class="process-math">\(d(x,a)\leq d(x,y)+d(y,a)\text{.}\)</span>
+</div> <div class="para" id="p-1448">
+<em class="emphasis">Langkah 2.</em> Ambil infimum terhadap <span class="process-math">\(a\text{,}\)</span> lalu ulangi dengan menukar <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\text{.}\)</span>
+</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch05-mastery-03-answer" id="o003-c90-ch05-mastery-03-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-03-answer"><div class="answer solution-like"><div class="para" id="p-1449">Fungsi <span class="process-math">\(\delta_A\)</span> bersifat 1-Lipschitz: <span class="process-math">\(|d(x,A)-d(y,A)|\leq d(x,y)\)</span> untuk setiap <span class="process-math">\(x,y\in X\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch05-mastery-03-solution" id="o003-c90-ch05-mastery-03-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-03-solution"><div class="solution solution-like">
+<div class="para logical" id="p-1450">
+<div class="para">Tetapkan <span class="process-math">\(x,y\in X\text{.}\)</span> Untuk setiap <span class="process-math">\(a\in A\text{,}\)</span> pertidaksamaan segitiga memberi <span class="process-math">\(d(x,a)\leq d(x,y)+d(y,a)\text{.}\)</span> Karena <span class="process-math">\(d(x,A)\)</span> adalah infimum nilai-nilai di ruas kiri, kita mempunyai <span class="process-math">\(d(x,A)\leq d(x,y)+d(y,a)\)</span> untuk setiap <span class="process-math">\(a\in A\text{.}\)</span> Mengambil infimum ruas kanan terhadap <span class="process-math">\(a\)</span> menghasilkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(x,A)\leq d(x,y)+d(y,A),
+\end{equation*}
+</div>
+<div class="para">sehingga <span class="process-math">\(d(x,A)-d(y,A)\leq d(x,y)\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-1451">Dengan menukar <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> serta memakai simetri metrik, diperoleh <span class="process-math">\(d(y,A)-d(x,A)\leq d(y,x)=d(x,y)\text{.}\)</span> Jadi baik selisih <span class="process-math">\(d(x,A)-d(y,A)\)</span> maupun kebalikannya tidak melebihi <span class="process-math">\(d(x,y)\text{.}\)</span> Kedua pertidaksamaan itu setara dengan <span class="process-math">\(|d(x,A)-d(y,A)|\leq d(x,y)\text{.}\)</span> Bukti ini tidak memerlukan titik terdekat dalam <span class="process-math">\(A\text{,}\)</span> yang memang belum tentu ada.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch05-mastery-04"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch05-mastery-04"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">E.52</span><span class="period">.</span><span class="space"> </span><span class="title">Geometri metrik supremum.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-04"><article class="exercise exercise-like"><div class="para" id="p-1452">Pada <span class="process-math">\(\R^3\text{,}\)</span> gunakan metrik supremum <span class="process-math">\(d_\infty(u,v)=\max_{1\leq i\leq3}|u_i-v_i|\text{.}\)</span> Ambil <span class="process-math">\(p=(1,-2,0)\text{,}\)</span> <span class="process-math">\(q=(4,2,-1)\text{,}\)</span> dan <span class="process-math">\(m=(5/2,0,-1/2)\text{.}\)</span> Hitung <span class="process-math">\(d_\infty(p,q)\text{,}\)</span> deskripsikan <span class="process-math">\(B_\infty(p,2)\)</span> sebagai hasil kali interval, dan tentukan apakah <span class="process-math">\(m\)</span> berada pada lintasan yang membuat pertidaksamaan segitiga dari <span class="process-math">\(p\)</span> ke <span class="process-math">\(q\)</span> menjadi kesamaan.</div> <div class="para" id="p-1453">
+<em class="emphasis">Rubrik.</em> Tampilkan semua selisih koordinat, bedakan bola terbuka dari bola tertutup, dan periksa kedua jarak melalui <span class="process-math">\(m\)</span> sebelum menyimpulkan kesamaan segitiga.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch05-mastery-04-hint" id="o003-c90-ch05-mastery-04-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-04-hint"><div class="hint solution-like">
+<div class="para" id="p-1454">
+<em class="emphasis">Langkah 1.</em> Untuk berada dalam bola terbuka berjari-jari dua, ketiga selisih koordinat harus bernilai mutlak kurang dari dua.</div> <div class="para" id="p-1455">
+<em class="emphasis">Langkah 2.</em> Hitung maksimum dari <span class="process-math">\((3,4,1)\text{,}\)</span> lalu maksimum selisih koordinat untuk pasangan <span class="process-math">\((p,m)\)</span> dan <span class="process-math">\((m,q)\text{.}\)</span>
+</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch05-mastery-04-answer" id="o003-c90-ch05-mastery-04-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-04-answer"><div class="answer solution-like"><div class="para" id="p-1456">
+<span class="process-math">\(d_\infty(p,q)=4\)</span> dan <span class="process-math">\(B_\infty(p,2)=(-1,3)\times(-4,0)\times(-2,2)\text{.}\)</span> Selain itu, <span class="process-math">\(d_\infty(p,m)=d_\infty(m,q)=2\text{,}\)</span> sehingga <span class="process-math">\(d_\infty(p,q)=d_\infty(p,m)+d_\infty(m,q)\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch05-mastery-04-solution" id="o003-c90-ch05-mastery-04-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-04-solution"><div class="solution solution-like">
+<div class="para" id="p-1457">Selisih mutlak koordinat <span class="process-math">\(p\)</span> dan <span class="process-math">\(q\)</span> adalah <span class="process-math">\((|1-4|,|-2-2|,|0-(-1)|)=(3,4,1)\text{.}\)</span> Jadi nilai maksimumnya empat dan <span class="process-math">\(d_\infty(p,q)=4\text{.}\)</span>
+</div> <div class="para logical" id="p-1458">
+<div class="para">Suatu titik <span class="process-math">\(u=(u_1,u_2,u_3)\)</span> berada dalam <span class="process-math">\(B_\infty(p,2)\)</span> tepat ketika <span class="process-math">\(|u_1-1|&lt;2\text{,}\)</span> <span class="process-math">\(|u_2+2|&lt;2\text{,}\)</span> dan <span class="process-math">\(|u_3|&lt;2\text{.}\)</span> Oleh karena itu</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B_\infty(p,2)=(-1,3)\times(-4,0)\times(-2,2).
+\end{equation*}
+</div>
+<div class="para">Titik pada muka kotak, tempat salah satu selisih bernilai tepat dua, tidak termasuk karena bolanya terbuka.</div>
+</div> <div class="para" id="p-1459">Selisih mutlak bagi <span class="process-math">\(p\)</span> dan <span class="process-math">\(m\)</span> adalah <span class="process-math">\((3/2,2,1/2)\text{,}\)</span> sedangkan bagi <span class="process-math">\(m\)</span> dan <span class="process-math">\(q\)</span> juga <span class="process-math">\((3/2,2,1/2)\text{.}\)</span> Maka kedua jarak tersebut sama dengan dua. Akhirnya, <span class="process-math">\(4=2+2\text{,}\)</span> sehingga pertidaksamaan segitiga menjadi kesamaan melalui <span class="process-math">\(m\text{.}\)</span> Perhatikan bahwa <span class="process-math">\(m\)</span> terletak pada batas, bukan di dalam, bola terbuka <span class="process-math">\(B_\infty(p,2)\text{.}\)</span>
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch05-mastery-05"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch05-mastery-05"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">E.53</span><span class="period">.</span><span class="space"> </span><span class="title">Batas resiprokal yang sekecil apa pun.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-05"><article class="exercise exercise-like"><div class="para logical" id="p-1460">
+<div class="para">Gunakan sifat Archimedes—untuk setiap <span class="process-math">\(M\in\R\)</span> terdapat <span class="process-math">\(n\in\N\)</span> dengan <span class="process-math">\(n&gt;M\)</span>—untuk membuktikan pernyataan yang lebih terarah berikut: bagi setiap <span class="process-math">\(\varepsilon&gt;0\)</span> dan setiap <span class="process-math">\(N_0\in\N\text{,}\)</span> terdapat <span class="process-math">\(n\in\N\)</span> dengan <span class="process-math">\(n&gt;N_0\)</span> dan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0&lt;\frac{1}{n}&lt;\varepsilon.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1461">
+<em class="emphasis">Rubrik.</em> Berikan satu pilihan ambang Archimedes yang sekaligus menjamin <span class="process-math">\(n&gt;N_0\)</span> dan pertidaksamaan resiprokal; jelaskan mengapa membalik pertidaksamaan sah.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch05-mastery-05-hint" id="o003-c90-ch05-mastery-05-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-05-hint"><div class="hint solution-like">
+<div class="para" id="p-1462">
+<em class="emphasis">Langkah 1.</em> Terapkan sifat Archimedes pada <span class="process-math">\(M=\max\{N_0,1/\varepsilon\}\text{.}\)</span>
+</div> <div class="para" id="p-1463">
+<em class="emphasis">Langkah 2.</em> Semua bilangan yang dibalik bersifat positif, jadi <span class="process-math">\(n&gt;1/\varepsilon\)</span> setara dengan <span class="process-math">\(1/n&lt;\varepsilon\text{.}\)</span>
+</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch05-mastery-05-answer" id="o003-c90-ch05-mastery-05-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-05-answer"><div class="answer solution-like"><div class="para" id="p-1464">Pilih <span class="process-math">\(n\in\N\)</span> yang memenuhi <span class="process-math">\(n&gt;\max\{N_0,1/\varepsilon\}\text{.}\)</span> Maka <span class="process-math">\(n&gt;N_0\)</span> dan <span class="process-math">\(0&lt;1/n&lt;\varepsilon\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch05-mastery-05-solution" id="o003-c90-ch05-mastery-05-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-05-solution"><div class="solution solution-like">
+<div class="para" id="p-1465">Tetapkan <span class="process-math">\(\varepsilon&gt;0\)</span> dan <span class="process-math">\(N_0\in\N\text{,}\)</span> lalu definisikan <span class="process-math">\(M=\max\{N_0,1/\varepsilon\}\text{.}\)</span> Sifat Archimedes memberi <span class="process-math">\(n\in\N\)</span> dengan <span class="process-math">\(n&gt;M\text{.}\)</span> Karena <span class="process-math">\(M\geq N_0\text{,}\)</span> kita langsung memperoleh <span class="process-math">\(n&gt;N_0\text{.}\)</span>
+</div> <div class="para" id="p-1466">Selanjutnya, <span class="process-math">\(n&gt;M\geq1/\varepsilon&gt;0\text{.}\)</span> Membalik dua bilangan positif membalik arah pertidaksamaan, sehingga <span class="process-math">\(0&lt;1/n&lt;\varepsilon\text{.}\)</span> Karena <span class="process-math">\(N_0\)</span> dapat dipilih sebesar apa pun, bukan hanya ada satu resiprokal kecil: terdapat resiprokal dengan indeks yang melampaui setiap ambang yang ditentukan.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-ch05-mastery-06"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch05-mastery-06"><h2 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">E.54</span><span class="period">.</span><span class="space"> </span><span class="title">Aproksimasi rasional pada ketelitian yang ditentukan.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-06"><article class="exercise exercise-like"><div class="para" id="p-1467">Untuk sembarang <span class="process-math">\(x\in\R\)</span> dan <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> berikan konstruksi eksplisit bilangan rasional <span class="process-math">\(q\)</span> yang memenuhi <span class="process-math">\(|x-q|&lt;\varepsilon\text{.}\)</span> Gunakan hasil latihan sebelumnya dan fungsi lantai. Kemudian jalankan konstruksi tersebut untuk <span class="process-math">\(x=\sqrt{2}\)</span> dan <span class="process-math">\(\varepsilon=10^{-3}\)</span> dengan memilih <span class="process-math">\(n=2000\text{.}\)</span>
+</div> <div class="para" id="p-1468">
+<em class="emphasis">Rubrik.</em> Nyatakan pilihan <span class="process-math">\(n\)</span> dan <span class="process-math">\(m=\lfloor nx\rfloor\text{,}\)</span> turunkan batas galat tanpa mengandalkan desimal, hitung pecahan pada contoh, dan jelaskan mengapa konstruksi membuktikan bahwa <span class="process-math">\(\Q\)</span> rapat dalam <span class="process-math">\(\R\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch05-mastery-06-hint" id="o003-c90-ch05-mastery-06-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-06-hint"><div class="hint solution-like">
+<div class="para" id="p-1469">
+<em class="emphasis">Langkah 1.</em> Pilih <span class="process-math">\(n\in\N\)</span> dengan <span class="process-math">\(1/n&lt;\varepsilon\text{,}\)</span> lalu gunakan <span class="process-math">\(\lfloor nx\rfloor\leq nx&lt;\lfloor nx\rfloor+1\text{.}\)</span>
+</div> <div class="para" id="p-1470">
+<em class="emphasis">Langkah 2.</em> Setelah membagi dengan <span class="process-math">\(n&gt;0\text{,}\)</span> jarak dari <span class="process-math">\(x\)</span> ke <span class="process-math">\(\lfloor nx\rfloor/n\)</span> kurang dari <span class="process-math">\(1/n\text{.}\)</span>
+</div> <div class="para" id="p-1471">
+<em class="emphasis">Langkah 3.</em> Untuk contoh, gunakan <span class="process-math">\(2828&lt;2000\sqrt{2}&lt;2829\text{.}\)</span>
+</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch05-mastery-06-answer" id="o003-c90-ch05-mastery-06-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-06-answer"><div class="answer solution-like"><div class="para" id="p-1472">Pilih <span class="process-math">\(n\)</span> dengan <span class="process-math">\(1/n&lt;\varepsilon\text{,}\)</span> tetapkan <span class="process-math">\(m=\lfloor nx\rfloor\text{,}\)</span> dan ambil <span class="process-math">\(q=m/n\text{.}\)</span> Maka <span class="process-math">\(0\leq x-q&lt;1/n&lt;\varepsilon\text{.}\)</span> Untuk contoh, <span class="process-math">\(m=2828\)</span> dan <span class="process-math">\(q=2828/2000=707/500\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch05-mastery-06-solution" id="o003-c90-ch05-mastery-06-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch05-mastery-06-solution"><div class="solution solution-like">
+<div class="para logical" id="p-1473">
+<div class="para">Menurut latihan sebelumnya, pilih <span class="process-math">\(n\in\N\)</span> sehingga <span class="process-math">\(1/n&lt;\varepsilon\text{.}\)</span> Ambil bilangan bulat <span class="process-math">\(m=\lfloor nx\rfloor\text{.}\)</span> Definisi fungsi lantai memberi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m\leq nx&lt;m+1.
+\end{equation*}
+</div>
+<div class="para">Karena <span class="process-math">\(n&gt;0\text{,}\)</span> pembagian dengan <span class="process-math">\(n\)</span> mempertahankan arah pertidaksamaan dan menghasilkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{m}{n}\leq x&lt;\frac{m}{n}+\frac{1}{n}.
+\end{equation*}
+</div>
+<div class="para">Dengan <span class="process-math">\(q=m/n\in\Q\text{,}\)</span> kita memperoleh <span class="process-math">\(0\leq x-q&lt;1/n&lt;\varepsilon\text{,}\)</span> sehingga <span class="process-math">\(|x-q|&lt;\varepsilon\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-1474">
+<div class="para">Untuk <span class="process-math">\(x=\sqrt{2}\text{,}\)</span> <span class="process-math">\(\varepsilon=10^{-3}\text{,}\)</span> dan <span class="process-math">\(n=2000\text{,}\)</span> berlaku <span class="process-math">\(1/n=1/2000&lt;10^{-3}\text{.}\)</span> Pertidaksamaan <span class="process-math">\(2828&lt;2000\sqrt{2}&lt;2829\)</span> dapat diperiksa dengan menguadratkan semua suku positif: <span class="process-math">\(2828^2&lt;8{,}000{,}000&lt;2829^2\text{.}\)</span> Jadi <span class="process-math">\(m=\lfloor2000\sqrt{2}\rfloor=2828\)</span> dan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q=\frac{2828}{2000}=\frac{707}{500},\qquad
+0&lt;\sqrt{2}-\frac{707}{500}&lt;\frac{1}{2000}&lt;10^{-3}.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1475">Konstruksi ini berlaku untuk setiap pusat real <span class="process-math">\(x\)</span> dan setiap radius <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Karena itu setiap bola terbuka <span class="process-math">\((x-\varepsilon,x+\varepsilon)\)</span> memuat suatu <span class="process-math">\(q\in\Q\text{,}\)</span> yang tepat menyatakan bahwa <span class="process-math">\(\Q\)</span> rapat dalam <span class="process-math">\(\R\text{.}\)</span>
+</div>
+</div></div>
+</div></article></div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="o003-c90-ch05-exercise-guides-b.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="index-1.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runestone Academy"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax"></a>
+</div>
+</body>
+</html>

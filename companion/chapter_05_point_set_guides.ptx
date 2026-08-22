@@ -1,0 +1,271 @@
+<section xml:id="o003-c90-ch05-point-set-guides" xml:lang="id-ID">
+  <title>Panduan untuk jarak titik ke himpunan</title>
+
+  <p>
+    Enam panduan berikut mengikuti urutan tugas pada bagian tentang jarak dari
+    titik ke himpunan. Empat tugas pertama menyusun bukti bahwa batas bawah
+    terbesar itu tunggal; dua tugas terakhir memeriksa keberadaan dan makna
+    <m>d(x,A)</m>. Bukalah petunjuk, jawaban, dan pembahasan hanya setelah
+    mencoba tiap tugas secara mandiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch05-pointset-task-01">
+    <title>Tugas 1: memilih bentuk bukti ketunggalan</title>
+    <statement>
+      <p>
+        Tentukan metode untuk membuktikan bahwa himpunan <m>S\subseteq\R</m>
+        mempunyai paling banyak satu batas bawah terbesar. Rubrik: nyatakan dua
+        calon batas bawah terbesar dan jelaskan hubungan apa yang cukup
+        dibuktikan di antara keduanya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-pointset-task-01-hint">
+      <p>
+        <em>Langkah 1.</em> Misalkan <m>m</m> dan <m>m'</m> sama-sama memenuhi
+        definisi batas bawah terbesar untuk <m>S</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Carilah dua pertidaksamaan yang, jika digabungkan,
+        memaksa <m>m=m'</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-pointset-task-01-answer">
+      <p>
+        Gunakan bukti langsung: ambil dua calon <m>m</m> dan <m>m'</m>, lalu
+        buktikan <m>m\leq m'</m> dan <m>m'\leq m</m>. Antisimetri urutan pada
+        <m>\R</m> kemudian memberi <m>m=m'</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-pointset-task-01-solution">
+      <p>
+        Pernyataan ketunggalan berbentuk: jika <m>m</m> dan <m>m'</m> keduanya
+        merupakan batas bawah terbesar <m>S</m>, maka keduanya sama. Karena
+        objek-objek ini berada dalam himpunan terurut <m>\R</m>, cukup
+        memperoleh kedua arah perbandingan, yaitu <m>m\leq m'</m> dan
+        <m>m'\leq m</m>. Sifat antisimetri urutan real menyimpulkan
+        <m>m=m'</m>. Langkah-langkah berikut menunjukkan bagaimana definisi
+        batas bawah terbesar menghasilkan kedua pertidaksamaan itu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-pointset-task-02">
+    <title>Tugas 2: mengenali kedua batas bawah</title>
+    <statement>
+      <p>
+        Andaikan <m>m</m> dan <m>m'</m> sama-sama merupakan batas bawah terbesar
+        untuk <m>S</m>. Mengapa masing-masing merupakan batas bawah <m>S</m>?
+        Rubrik: gunakan bagian yang tepat dari definisi dan tuliskan
+        pertidaksamaannya untuk setiap <m>s\in S</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-pointset-task-02-hint">
+      <p>
+        <em>Langkah 1.</em> Kata <q>terbesar</q> menambahkan suatu sifat pada
+        sebuah objek yang lebih dahulu harus menjadi batas bawah.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Terapkan syarat batas bawah sekali untuk <m>m</m>
+        dan sekali lagi untuk <m>m'</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-pointset-task-02-answer">
+      <p>
+        Itu merupakan syarat pertama dalam definisi batas bawah terbesar:
+        untuk setiap <m>s\in S</m>, berlaku <m>m\leq s</m> dan
+        <m>m'\leq s</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-pointset-task-02-solution">
+      <p>
+        Sebuah batas bawah terbesar harus, pertama-tama, merupakan batas bawah.
+        Karena <m>m</m> adalah batas bawah terbesar <m>S</m>, definisi memberi
+        <m>m\leq s</m> untuk setiap <m>s\in S</m>. Alasan yang sama untuk
+        <m>m'</m> memberi <m>m'\leq s</m> untuk setiap <m>s\in S</m>. Jadi
+        kedua bilangan itu berada di antara batas-batas bawah yang dapat
+        dibandingkan oleh sifat <q>terbesar</q> pada langkah berikutnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-pointset-task-03">
+    <title>Tugas 3: memperoleh dua pertidaksamaan</title>
+    <statement>
+      <p>
+        Dengan <m>m</m> dan <m>m'</m> seperti pada tugas sebelumnya, tentukan
+        dua kesimpulan yang diberikan oleh sifat bahwa masing-masing adalah
+        batas bawah <em>terbesar</em>. Rubrik: terapkan kemaksimalan <m>m</m>
+        kepada <m>m'</m>, lalu kemaksimalan <m>m'</m> kepada <m>m</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-pointset-task-03-hint">
+      <p>
+        <em>Langkah 1.</em> Setiap batas bawah <m>b</m> bagi <m>S</m> memenuhi
+        <m>b\leq m</m> apabila <m>m</m> adalah batas bawah terbesar.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Pada penerapan pertama pilih <m>b=m'</m>; pada
+        penerapan kedua tukarkan peran keduanya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-pointset-task-03-answer">
+      <p>
+        Karena <m>m'</m> adalah batas bawah dan <m>m</m> yang terbesar,
+        <m>m'\leq m</m>. Sebaliknya, karena <m>m</m> adalah batas bawah dan
+        <m>m'</m> yang terbesar, <m>m\leq m'</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-pointset-task-03-solution">
+      <p>
+        Sifat kedua batas bawah terbesar <m>m</m> menyatakan bahwa setiap batas
+        bawah <m>b</m> dari <m>S</m> memenuhi <m>b\leq m</m>. Tugas sebelumnya
+        membuktikan bahwa <m>m'</m> merupakan batas bawah, sehingga memilih
+        <m>b=m'</m> menghasilkan <m>m'\leq m</m>. Dengan menukar peran
+        keduanya, sifat terbesar dari <m>m'</m> diterapkan kepada batas bawah
+        <m>m</m> dan menghasilkan <m>m\leq m'</m>. Kedua arah perbandingan telah
+        diperoleh tanpa mengasumsikan kesimpulan ketunggalan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-pointset-task-04">
+    <title>Tugas 4: menutup bukti ketunggalan</title>
+    <statement>
+      <p>
+        Selesaikan bukti bahwa batas bawah terbesar <m>S</m> itu tunggal.
+        Rubrik: sebutkan sifat urutan yang dipakai dan nyatakan dengan jelas
+        bahwa setiap dua calon harus sama.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-pointset-task-04-hint">
+      <p>
+        <em>Langkah 1.</em> Dari tugas sebelumnya diketahui sekaligus
+        <m>m'\leq m</m> dan <m>m\leq m'</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan antisimetri relasi <m>\leq</m> pada
+        bilangan real.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-pointset-task-04-answer">
+      <p>
+        Antisimetri memberi <m>m=m'</m>. Karena dua calon batas bawah terbesar
+        mana pun harus sama, batas bawah terbesar <m>S</m> itu tunggal.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-pointset-task-04-solution">
+      <p>
+        Misalkan <m>m</m> dan <m>m'</m> merupakan dua batas bawah terbesar bagi
+        <m>S</m>. Karena masing-masing merupakan batas bawah, sifat terbesar
+        dari <m>m</m> memberi <m>m'\leq m</m>, sedangkan sifat terbesar dari
+        <m>m'</m> memberi <m>m\leq m'</m>. Relasi <m>\leq</m> pada <m>\R</m>
+        bersifat antisimetris, sehingga dua pertidaksamaan tersebut memaksa
+        <m>m=m'</m>. Jadi tidak mungkin ada dua batas bawah terbesar yang
+        berbeda; jika batas bawah terbesar itu ada, nilainya tunggal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-pointset-task-05">
+    <title>Tugas 5: keberadaan jarak titik ke himpunan</title>
+    <statement>
+      <p>
+        Untuk ruang metrik <m>(X,d)</m>, titik <m>x\in X</m>, dan himpunan tak
+        kosong <m>A\subseteq X</m>, buktikan bahwa
+        <m>d(x,A)=\inf\{d(x,a)\mid a\in A\}</m> ada. Rubrik: buktikan bahwa
+        himpunan nilai jarak itu tak kosong dan terbatas di bawah sebelum
+        memakai sifat kelengkapan <m>\R</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-pointset-task-05-hint">
+      <p>
+        <em>Langkah 1.</em> Pilih satu <m>a_0\in A</m> untuk menunjukkan bahwa
+        <m>D=\{d(x,a)\mid a\in A\}</m> bukan himpunan kosong.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Aksioma metrik memberi satu batas bawah yang sama
+        bagi semua anggota <m>D</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-pointset-task-05-answer">
+      <p>
+        Himpunan <m>D=\{d(x,a)\mid a\in A\}</m> tak kosong karena
+        <m>A\neq\varnothing</m>, dan <m>0</m> adalah batas bawahnya karena
+        jarak selalu tak negatif. Kelengkapan bilangan real menjamin bahwa
+        <m>\inf D</m>, yaitu <m>d(x,A)</m>, ada dan tunggal.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-pointset-task-05-solution">
+      <p>
+        Karena <m>A</m> tak kosong, ada <m>a_0\in A</m>. Maka bilangan real
+        <m>d(x,a_0)</m> merupakan anggota
+        <m>D=\{d(x,a)\mid a\in A\}</m>, sehingga <m>D\neq\varnothing</m>.
+        Untuk setiap <m>a\in A</m>, aksioma tak-negatif metrik memberi
+        <m>d(x,a)\geq0</m>. Jadi <m>0</m> adalah batas bawah <m>D</m>.
+      </p>
+      <p>
+        Aksioma kelengkapan <m>\R</m> menyatakan bahwa setiap himpunan real tak
+        kosong yang terbatas di bawah mempunyai infimum. Karena kedua
+        hipotesis itu berlaku untuk <m>D</m>, bilangan <m>\inf D</m> ada.
+        Ketunggalan batas bawah terbesar, yang dibuktikan pada empat tugas
+        pertama, memastikan nilainya tunggal. Berdasarkan definisi,
+        <m>d(x,A)=\inf D</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-pointset-task-06">
+    <title>Tugas 6: apakah jarak nol berarti keanggotaan?</title>
+    <statement>
+      <p>
+        Putuskan apakah <m>d(x,A)=0</m> selalu mengakibatkan <m>x\in A</m>.
+        Rubrik: jika pernyataan salah, berikan ruang metrik, titik, dan himpunan
+        tak kosong yang konkret; hitung infimumnya dan jelaskan hubungan yang
+        benar dengan penutupan <m>\overline{A}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-pointset-task-06-hint">
+      <p>
+        <em>Langkah 1.</em> Di <m>\R</m> dengan metrik Euklides, periksa
+        <m>x=0</m> dan <m>A=(0,1)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Anggota <m>A</m> dapat mendekati <m>0</m> sedekat
+        apa pun tanpa pernah sama dengan <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-pointset-task-06-answer">
+      <p>
+        Tidak. Dalam <m>\R</m> dengan metrik Euklides, ambil <m>x=0</m> dan
+        <m>A=(0,1)</m>. Maka <m>d(0,A)=0</m>, tetapi <m>0\notin A</m>. Yang
+        selalu benar dalam ruang metrik ialah
+        <m>d(x,A)=0</m> jika dan hanya jika <m>x\in\overline{A}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-pointset-task-06-solution">
+      <p>
+        Gunakan ruang metrik <m>(\R,d)</m> dengan <m>d(u,v)=|u-v|</m>. Untuk
+        <m>x=0</m> dan <m>A=(0,1)</m>, himpunan jaraknya ialah
+        <m>\{|a|\mid 0&lt;a&lt;1\}=(0,1)</m>. Infimum himpunan ini adalah
+        <m>0</m>, sehingga <m>d(0,A)=0</m>. Akan tetapi, interval <m>(0,1)</m>
+        tidak memuat titik ujung <m>0</m>; jadi <m>0\notin A</m>. Ini merupakan
+        contoh tandingan bagi implikasi yang ditanyakan.
+      </p>
+      <p>
+        Makna yang tepat adalah keanggotaan dalam penutupan. Jika
+        <m>d(x,A)=0</m>, maka untuk setiap <m>\varepsilon&gt;0</m> terdapat
+        <m>a\in A</m> dengan <m>d(x,a)&lt;\varepsilon</m>; jika tidak, suatu
+        <m>\varepsilon&gt;0</m> akan menjadi batas bawah positif bagi semua
+        jarak dan infimumnya tidak mungkin nol. Jadi setiap bola terbuka di
+        sekitar <m>x</m> bertemu <m>A</m>, sehingga
+        <m>x\in\overline{A}</m>. Sebaliknya, jika
+        <m>x\in\overline{A}</m>, untuk setiap <m>\varepsilon&gt;0</m> ada
+        <m>a\in A</m> dengan <m>d(x,a)&lt;\varepsilon</m>. Karena
+        <m>d(x,A)\geq0</m> dan <m>d(x,A)\leq d(x,a)&lt;\varepsilon</m> untuk
+        setiap <m>\varepsilon&gt;0</m>, haruslah <m>d(x,A)=0</m>. Maka
+        <m>d(x,A)=0</m> setara dengan <m>x\in\overline{A}</m>, bukan dengan
+        <m>x\in A</m> kecuali, misalnya, <m>A</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+</section>

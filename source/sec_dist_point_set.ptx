@@ -1,51 +1,51 @@
 <section xml:id="sec_dist_point_set">
-  <title>The Distance from a Point to a Set</title>
+  <title>Jarak dari Titik ke Himpunan</title>
   <p>
-    Metrics are used to establish separation between objects.
-    Topological spaces can be placed into different categories based on how well certain types of sets can be separated.
-    We have defined metrics as measuring distances between points in a metric space,
-    and in this activity we extend that idea to measure the distance between a point and a subset in a metric space.
-    However, there are two questions we need to address before we can do so.
-    The first we mentioned in our preview activity.
-    We will assume the <term>completeness axiom</term> of the reals,
-    that is that any subset of <m>\R</m> that is bounded below always has a greatest lower bound.
-    The second question is whether or not a greatest lower bound is unique.
+    Metrik digunakan untuk menetapkan keterpisahan antarobjek.
+    Ruang topologis dapat dikelompokkan ke dalam berbagai kategori berdasarkan seberapa baik jenis-jenis himpunan tertentu dapat dipisahkan.
+    Kita telah mendefinisikan metrik sebagai fungsi yang mengukur jarak antartitik di suatu ruang metrik,
+    dan dalam aktivitas ini kita memperluas gagasan tersebut untuk mengukur jarak antara sebuah titik dan suatu subhimpunan di ruang metrik.
+    Akan tetapi, sebelum itu kita perlu menjawab dua pertanyaan.
+    Pertanyaan pertama telah kita kemukakan dalam aktivitas pendahuluan.
+    Kita akan mengasumsikan <term>aksioma kelengkapan</term> bagi bilangan real,
+    yakni bahwa setiap subhimpunan tak kosong dari <m>\R</m> yang terbatas di bawah selalu mempunyai batas bawah terbesar.
+    Pertanyaan kedua adalah apakah batas bawah terbesar itu unik.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>S</m> be a subset of <m>\R</m> that is bounded below,
-      and assume that <m>S</m> has a greatest lower bound.
-      In this activity we will show that the infimum of <m>S</m> is unique.
+      Misalkan <m>S</m> suatu subhimpunan dari <m>\R</m> yang terbatas di bawah,
+      dan asumsikan bahwa <m>S</m> mempunyai batas bawah terbesar.
+      Dalam aktivitas ini, kita akan menunjukkan bahwa infimum <m>S</m> itu unik.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What method can we use to prove that there is only one greatest lower bound for <m>S</m>?
+            Metode apa yang dapat kita gunakan untuk membuktikan bahwa <m>S</m> hanya mempunyai satu batas bawah terbesar?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Suppose <m>m</m> and <m>m'</m> are both greatest lower bounds for <m>S</m>.
-            Why are <m>m</m> and <m>m'</m> both lower bounds for <m>S</m>?
+            Misalkan <m>m</m> dan <m>m'</m> keduanya merupakan batas bawah terbesar untuk <m>S</m>.
+            Mengapa <m>m</m> dan <m>m'</m> keduanya merupakan batas bawah untuk <m>S</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What two things does the second property of a greatest lower bound tell us about the relationship between <m>m</m> and <m>m'</m>?
+            Dua hal apa yang dinyatakan sifat kedua batas bawah terbesar mengenai hubungan antara <m>m</m> dan <m>m'</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Why must the greatest lower bound of <m>S</m> be unique?
+            Mengapa batas bawah terbesar dari <m>S</m> harus unik?
           </p>
         </statement>
       </task>
@@ -53,26 +53,26 @@
   </activity>
 
   <p>
-    With the existence and uniqueness of greatest lower bounds considered,
-    we can now say that any nonempty subset <m>S</m> of <m>\R</m> that is bounded below has a unique greatest lower bound.
-    We use the notation <m>\glb(S)</m> (or <m>\inf(S)</m> for <term>infimum</term>
-    of <m>S</m>) for the greatest lower bound of <m>S</m>.
-    There is also a <term>least upper bound</term>
-        <idx><h>least upper bound</h></idx>
-    (<m>\lub(S)</m>, or <m>\sup(S)</m> for <term>supremum</term>
+    Setelah meninjau keberadaan dan keunikan batas bawah terbesar,
+    kini kita dapat mengatakan bahwa setiap subhimpunan tak kosong <m>S</m> dari <m>\R</m> yang terbatas di bawah mempunyai batas bawah terbesar yang unik.
+    Kita menggunakan notasi <m>\glb(S)</m> (atau <m>\inf(S)</m> untuk <term>infimum</term>
+    dari <m>S</m>) bagi batas bawah terbesar dari <m>S</m>.
+    Terdapat pula <term>batas atas terkecil</term>
+        <idx><h>batas atas terkecil</h></idx>
+    (<m>\lub(S)</m>, atau <m>\sup(S)</m> untuk <term>supremum</term>
         <idx><h>supremum</h></idx>
-    ) of a subset <m>S</m> of <m>\R</m> that is bounded above.
+    ) bagi suatu subhimpunan tak kosong <m>S</m> dari <m>\R</m> yang terbatas di atas.
   </p>
   <p>
-    Now we can formally define the distance between a point and a subset in a metric space.
+    Sekarang kita dapat mendefinisikan secara formal jarak antara sebuah titik dan suatu subhimpunan di ruang metrik.
   </p>
 
   <definition>
     <statement>
       <p>
-        Let <m>(X,d)</m> be a metric space,
-        let <m>x \in X</m>, and let <m>A</m> be a nonempty subset of <m>X</m>.
-        The <term>distance from <m>x</m> to <m>A</m></term> is
+        Misalkan <m>(X,d)</m> suatu ruang metrik,
+        misalkan <m>x \in X</m>, dan misalkan <m>A</m> suatu subhimpunan tak kosong dari <m>X</m>.
+        <term>Jarak dari <m>x</m> ke <m>A</m></term> adalah
         <me>
           \inf\{d(x,a) \mid a \in A\}
         </me>.
@@ -81,30 +81,30 @@
   </definition>
 
   <p>
-    We denote the distance from <m>x</m> to <m>A</m> by <m>d(x,A)</m>.
-    When calculating these distances,
-    it must be understood what the underlying metric is.
+    Kita menotasikan jarak dari <m>x</m> ke <m>A</m> dengan <m>d(x,A)</m>.
+    Ketika menghitung jarak seperti ini,
+    metrik yang mendasarinya harus dipahami dengan jelas.
   </p>
 
   <activity>
     <introduction>
     <p>
-      There are a couple of facts about the distance between a point and a set that we examine in this activity.
-      Let <m>(X,d)</m> be a metric space,
-      let <m>x \in X</m>, and let <m>A</m> be a nonempty subset of <m>X</m>
+      Dalam aktivitas ini, kita menelaah beberapa fakta mengenai jarak antara sebuah titik dan suatu himpunan.
+      Misalkan <m>(X,d)</m> suatu ruang metrik,
+      misalkan <m>x \in X</m>, dan misalkan <m>A</m> suatu subhimpunan tak kosong dari <m>X</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Why must <m>d(x,A)</m> exist?
+            Mengapa <m>d(x,A)</m> pasti ada?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If <m>d(x,A) = 0</m>, must <m>x \in A</m>?
+            Jika <m>d(x,A) = 0</m>, apakah harus berlaku <m>x \in A</m>?
           </p>
         </statement>
       </task>

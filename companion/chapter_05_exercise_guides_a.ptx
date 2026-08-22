@@ -1,0 +1,764 @@
+<section xml:id="o003-c90-ch05-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Delapan belas panduan berikut berkorespondensi, dalam urutan sumber, dengan
+    semua tugas yang memuat pernyataan pada enam latihan pertama bagian latihan
+    Bab 5. Buka petunjuk secara bertahap; jawaban menyatakan kesimpulan langsung,
+    sedangkan pembahasan memberikan pembuktian lengkap. Rubrik pada setiap butir
+    menunjukkan unsur yang harus tampak dalam pekerjaan mandiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-01">
+    <title>Translasi himpunan dan batas bawah</title>
+    <statement>
+      <p>
+        Misalkan <m>S\subseteq\R</m> tidak kosong dan terbatas di bawah, serta
+        <m>a\in\R</m>. Jelaskan mengapa <m>a+\inf(S)</m> merupakan batas bawah
+        bagi <m>a+S=\{a+s\mid s\in S\}</m> dan mengapa <m>a+S</m> mempunyai
+        infimum. Rubrik: buktikan sifat batas bawah, ketak-kosongan, dan syarat
+        untuk memakai aksioma kelengkapan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-01-hint">
+      <p>
+        Mulailah dari <m>\inf(S)\leq s</m> untuk setiap
+        <m>s\in S</m>, lalu tambahkan <m>a</m> pada kedua ruas.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-01-answer">
+      <p>
+        Setiap <m>a+s\in a+S</m> memenuhi
+        <m>a+\inf(S)\leq a+s</m>. Himpunan <m>a+S</m> tidak kosong dan terbatas
+        di bawah, sehingga aksioma kelengkapan menjamin adanya
+        <m>\inf(a+S)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-01-solution">
+      <p>
+        Karena <m>\inf(S)</m> adalah batas bawah bagi <m>S</m>, untuk setiap
+        <m>s\in S</m> berlaku <m>\inf(S)\leq s</m>. Penjumlahan dengan bilangan
+        real <m>a</m> mempertahankan urutan, sehingga
+        <m>a+\inf(S)\leq a+s</m>. Setiap unsur <m>a+S</m> berbentuk <m>a+s</m>;
+        jadi <m>a+\inf(S)</m> memang batas bawah bagi <m>a+S</m>.
+      </p>
+      <p>
+        Pilih <m>s_0\in S</m>, yang ada karena <m>S</m> tidak kosong. Maka
+        <m>a+s_0\in a+S</m>, sehingga <m>a+S</m> tidak kosong. Bersama dengan
+        batas bawah yang baru ditemukan, aksioma kelengkapan untuk
+        <m>\R</m> menyatakan bahwa <m>a+S</m> mempunyai batas bawah terbesar,
+        yakni <m>\inf(a+S)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-02">
+    <title>Infimum translasi himpunan</title>
+    <statement>
+      <p>
+        Dengan asumsi yang sama, misalkan <m>b</m> suatu batas bawah bagi
+        <m>a+S</m>. Buktikan bahwa <m>b\leq a+\inf(S)</m>, lalu simpulkan
+        <m>\inf(a+S)=a+\inf(S)</m>. Rubrik: ubah <m>b</m> menjadi batas bawah
+        bagi <m>S</m> dan gunakan sifat terbesar dari infimum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-02-hint">
+      <p>
+        Dari <m>b\leq a+s</m> untuk semua <m>s\in S</m>,
+        kurangi kedua ruas dengan <m>a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-02-answer">
+      <p>
+        Bilangan <m>b-a</m> adalah batas bawah bagi <m>S</m>, jadi
+        <m>b-a\leq\inf(S)</m> dan <m>b\leq a+\inf(S)</m>. Karena
+        <m>a+\inf(S)</m> sendiri merupakan batas bawah bagi <m>a+S</m>, bilangan
+        itu adalah infimumnya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-02-solution">
+      <p>
+        Karena <m>b</m> batas bawah bagi <m>a+S</m>, untuk setiap <m>s\in S</m>
+        berlaku <m>b\leq a+s</m>. Mengurangi kedua ruas dengan <m>a</m> memberi
+        <m>b-a\leq s</m> untuk setiap <m>s\in S</m>. Jadi <m>b-a</m> merupakan
+        batas bawah bagi <m>S</m>. Infimum adalah batas bawah terbesar, sehingga
+        <m>b-a\leq\inf(S)</m>, atau ekuivalen dengan
+        <m>b\leq a+\inf(S)</m>.
+      </p>
+      <p>
+        Butir sebelumnya telah membuktikan bahwa <m>a+\inf(S)</m> adalah batas
+        bawah bagi <m>a+S</m>. Argumen di atas membuktikan bahwa setiap batas
+        bawah <m>b</m> bagi <m>a+S</m> tidak melebihi bilangan tersebut. Maka
+        <m>a+\inf(S)</m> adalah batas bawah terbesar bagi <m>a+S</m>, sehingga
+        <m>\inf(a+S)=a+\inf(S)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-03">
+    <title>Mendekati supremum dari bawah</title>
+    <statement>
+      <p>
+        Misalkan <m>S\subseteq\R</m> tidak kosong dan terbatas di atas, serta
+        <m>t=\sup(S)</m>. Buktikan bahwa untuk setiap <m>r\lt t</m> terdapat
+        <m>s\in S</m> dengan <m>r\lt s\leq t</m>. Rubrik: gunakan kontraposisi
+        dari sifat batas atas, bukan asumsi bahwa supremum harus berada di dalam
+        <m>S</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-03-hint">
+      <p>
+        Jika tidak ada <m>s\in S</m> yang lebih besar daripada
+        <m>r</m>, apakah peran <m>r</m> bagi <m>S</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-03-answer">
+      <p>
+        Jika tidak ada <m>s\in S</m> dengan <m>s\gt r</m>, maka <m>r</m> adalah
+        batas atas bagi <m>S</m>, yang bertentangan dengan
+        <m>t=\sup(S)\gt r</m>. Karena <m>t</m> batas atas, unsur yang diperoleh
+        juga memenuhi <m>s\leq t</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-03-solution">
+      <p>
+        Ambil sebarang <m>r\lt t</m>. Andaikan tidak terdapat <m>s\in S</m>
+        dengan <m>r\lt s</m>. Maka setiap <m>s\in S</m> memenuhi <m>s\leq r</m>,
+        sehingga <m>r</m> adalah batas atas bagi <m>S</m>. Namun, karena
+        <m>t=\sup(S)</m> adalah batas atas terkecil, setiap batas atas bagi
+        <m>S</m> harus memenuhi <m>t\leq r</m>. Hal ini bertentangan dengan
+        <m>r\lt t</m>. Jadi ada <m>s\in S</m> dengan <m>r\lt s</m>. Selain itu,
+        <m>t</m> adalah batas atas bagi <m>S</m>, maka <m>s\leq t</m>. Dengan
+        demikian <m>r\lt s\leq t</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-04">
+    <title>Mendekati infimum dari atas</title>
+    <statement>
+      <p>
+        Misalkan <m>S\subseteq\R</m> tidak kosong dan terbatas di bawah, serta
+        <m>t=\inf(S)</m>. Buktikan bahwa untuk setiap <m>r\gt t</m> terdapat
+        <m>s\in S</m> dengan <m>t\leq s\lt r</m>. Rubrik: tunjukkan secara
+        eksplisit kontradiksi yang timbul jika <m>r</m> menjadi batas bawah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-04-hint">
+      <p>
+        Andaikan tidak ada <m>s\in S</m> dengan
+        <m>s\lt r</m>; bandingkan <m>r</m> dengan batas bawah terbesar <m>t</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-04-answer">
+      <p>
+        Jika semua <m>s\in S</m> memenuhi <m>r\leq s</m>, maka <m>r</m> adalah
+        batas bawah bagi <m>S</m>, sehingga <m>r\leq t</m>; ini bertentangan
+        dengan <m>r\gt t</m>. Unsur yang diperoleh memenuhi <m>t\leq s</m>
+        karena <m>t</m> batas bawah.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-04-solution">
+      <p>
+        Ambil sebarang <m>r\gt t</m>. Jika tidak ada <m>s\in S</m> dengan
+        <m>s\lt r</m>, maka <m>r\leq s</m> untuk setiap <m>s\in S</m>. Dengan
+        demikian <m>r</m> merupakan batas bawah bagi <m>S</m>. Karena
+        <m>t=\inf(S)</m> adalah batas bawah terbesar, setiap batas bawah harus
+        memenuhi <m>r\leq t</m>, bertentangan dengan <m>r\gt t</m>. Jadi
+        terdapat <m>s\in S</m> dengan <m>s\lt r</m>. Karena <m>t</m> sendiri
+        batas bawah bagi <m>S</m>, berlaku pula <m>t\leq s</m>. Maka
+        <m>t\leq s\lt r</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-05">
+    <title>Batas atas jumlah dua himpunan</title>
+    <statement>
+      <p>
+        Misalkan <m>A,B\subseteq\R</m> tidak kosong serta terbatas di atas dan di
+        bawah. Tetapkan <m>x=\sup(A)</m>, <m>y=\sup(B)</m>, dan
+        <m>A+B=\{a+b\mid a\in A,\ b\in B\}</m>. Buktikan bahwa <m>x+y</m>
+        merupakan batas atas bagi <m>A+B</m>. Rubrik: mulai dari dua
+        pertidaksamaan batas atas dan kuantifikasikan atas setiap unsur
+        <m>A+B</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-05-hint">
+      <p>
+        Untuk <m>a\in A</m> dan <m>b\in B</m>, jumlahkan
+        <m>a\leq x</m> dan <m>b\leq y</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-05-answer">
+      <p>
+        Setiap <m>a+b\in A+B</m> memenuhi <m>a+b\leq x+y</m>; jadi <m>x+y</m>
+        adalah batas atas bagi <m>A+B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-05-solution">
+      <p>
+        Supremum <m>x</m> adalah batas atas bagi <m>A</m>, sehingga
+        <m>a\leq x</m> untuk setiap <m>a\in A</m>. Demikian pula,
+        <m>b\leq y</m> untuk setiap <m>b\in B</m>. Ambil sebarang unsur
+        <m>c\in A+B</m>. Berdasarkan definisi jumlah himpunan, terdapat
+        <m>a\in A</m> dan <m>b\in B</m> dengan <m>c=a+b</m>. Menjumlahkan kedua
+        pertidaksamaan menghasilkan <m>c=a+b\leq x+y</m>. Karena hal ini berlaku
+        bagi setiap <m>c\in A+B</m>, <m>x+y</m> adalah batas atas bagi
+        <m>A+B</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-06">
+    <title>Membandingkan dua supremum</title>
+    <statement>
+      <p>
+        Dengan notasi pada butir sebelumnya, misalkan <m>z=\sup(A+B)</m>.
+        Jelaskan mengapa <m>z\leq x+y</m>. Rubrik: sebutkan sifat supremum yang
+        dipakai dan alasan <m>z</m> ada.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-06-hint">
+      <p>
+        Supremum tidak lebih besar daripada batas atas mana
+        pun bagi himpunan yang sama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-06-answer">
+      <p>
+        Himpunan <m>A+B</m> tidak kosong dan, menurut butir sebelumnya, terbatas
+        di atas oleh <m>x+y</m>. Jadi <m>z</m> ada dan, sebagai batas atas
+        terkecil, memenuhi <m>z\leq x+y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-06-solution">
+      <p>
+        Karena <m>A</m> dan <m>B</m> tidak kosong, terdapat
+        <m>a_0\in A</m> dan <m>b_0\in B</m>, sehingga
+        <m>a_0+b_0\in A+B</m>; jadi <m>A+B</m> tidak kosong. Butir sebelumnya
+        menunjukkan bahwa <m>x+y</m> merupakan batas atas bagi <m>A+B</m>.
+        Aksioma kelengkapan kemudian menjamin adanya <m>z=\sup(A+B)</m>.
+        Supremum adalah batas atas terkecil, sehingga ia tidak dapat melebihi
+        batas atas <m>x+y</m>. Oleh karena itu <m>z\leq x+y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-07">
+    <title>Kesamaan supremum jumlah himpunan</title>
+    <statement>
+      <p>
+        Dengan <m>x=\sup(A)</m>, <m>y=\sup(B)</m>, dan
+        <m>z=\sup(A+B)</m>, buktikan bahwa <m>z=x+y</m> melalui kontradiksi.
+        Jika <m>z\lt x+y</m>, tetapkan <m>\epsilon=x+y-z</m> dan gunakan sifat
+        pendekatan supremum. Rubrik: pilih unsur dari kedua himpunan dengan
+        galat yang jumlahnya kurang dari <m>\epsilon</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-07-hint">
+      <p>
+        Pilih <m>a\in A</m> dan <m>b\in B</m> sehingga
+        <m>x-\epsilon/2\lt a\leq x</m> dan
+        <m>y-\epsilon/2\lt b\leq y</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-07-answer">
+      <p>
+        Pilihan tersebut memberi
+        <m>a+b\gt x+y-\epsilon=z</m>, padahal <m>a+b\in A+B</m> dan <m>z</m>
+        adalah batas atas. Maka <m>z\not\lt x+y</m>; bersama
+        <m>z\leq x+y</m>, diperoleh <m>z=x+y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-07-solution">
+      <p>
+        Kita sudah mengetahui <m>z\leq x+y</m>. Andaikan
+        <m>z\lt x+y</m> dan definisikan
+        <m>\epsilon=x+y-z\gt0</m>. Karena
+        <m>x-\epsilon/2\lt x=\sup(A)</m>, sifat pendekatan supremum menjamin
+        adanya <m>a\in A</m> dengan
+        <m>x-\epsilon/2\lt a\leq x</m>. Dengan alasan yang sama, ada
+        <m>b\in B</m> dengan <m>y-\epsilon/2\lt b\leq y</m>.
+      </p>
+      <p>
+        Menjumlahkan dua pertidaksamaan ketat itu menghasilkan
+        <me>
+          a+b \gt x+y-\epsilon=x+y-(x+y-z)=z.
+        </me>
+        Akan tetapi, <m>a+b\in A+B</m>, sedangkan <m>z=\sup(A+B)</m> adalah
+        batas atas bagi <m>A+B</m>; seharusnya <m>a+b\leq z</m>. Kontradiksi ini
+        menolak <m>z\lt x+y</m>. Karena sebelumnya telah dibuktikan
+        <m>z\leq x+y</m>, satu-satunya kemungkinan ialah
+        <m>z=x+y</m>. Jadi
+        <m>\sup(A+B)=\sup(A)+\sup(B)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-08">
+    <title>Infimum jumlah himpunan</title>
+    <statement>
+      <p>
+        Buktikan bahwa
+        <m>\inf(A+B)=\inf(A)+\inf(B)</m>. Rubrik: buktikan terlebih dahulu satu
+        batas bawah, lalu gunakan pendekatan infimum dengan pembagian galat yang
+        eksplisit untuk membuktikan arah sebaliknya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-08-hint">
+      <p>
+        Jika <m>p=\inf(A)</m>, <m>q=\inf(B)</m>, dan
+        <m>w=\inf(A+B)\gt p+q</m>, gunakan
+        <m>\epsilon=w-p-q</m> untuk memilih
+        <m>a\lt p+\epsilon/2</m> serta <m>b\lt q+\epsilon/2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-08-answer">
+      <p>
+        Bilangan <m>p+q</m> adalah batas bawah bagi <m>A+B</m>, jadi
+        <m>p+q\leq w</m>. Jika ketat, unsur <m>a\in A</m> dan <m>b\in B</m>
+        dapat dipilih dengan <m>a+b\lt w</m>, bertentangan dengan sifat
+        <m>w</m> sebagai batas bawah. Jadi <m>w=p+q</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-08-solution">
+      <p>
+        Tetapkan <m>p=\inf(A)</m> dan <m>q=\inf(B)</m>. Untuk setiap
+        <m>a\in A</m> dan <m>b\in B</m>, berlaku <m>p\leq a</m> dan
+        <m>q\leq b</m>, sehingga <m>p+q\leq a+b</m>. Jadi <m>p+q</m> adalah
+        batas bawah bagi <m>A+B</m>. Himpunan <m>A+B</m> tidak kosong, maka
+        infimumnya <m>w=\inf(A+B)</m> ada, dan sifat terbesar infimum memberi
+        <m>p+q\leq w</m>.
+      </p>
+      <p>
+        Andaikan <m>w\gt p+q</m> dan tetapkan
+        <m>\epsilon=w-(p+q)\gt0</m>. Karena <m>p+\epsilon/2\gt p=\inf(A)</m>,
+        sifat pendekatan infimum memberi <m>a\in A</m> dengan
+        <m>p\leq a\lt p+\epsilon/2</m>. Demikian pula, ada <m>b\in B</m>
+        dengan <m>q\leq b\lt q+\epsilon/2</m>. Maka
+        <me>
+          a+b\lt p+q+\epsilon=w.
+        </me>
+        Ini mustahil karena <m>a+b\in A+B</m> dan <m>w</m> adalah batas bawah
+        bagi <m>A+B</m>, yang mengharuskan <m>w\leq a+b</m>. Jadi
+        <m>w\not\gt p+q</m>. Bersama <m>p+q\leq w</m>, diperoleh
+        <m>w=p+q</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-09">
+    <title>Supremum suatu gabungan</title>
+    <statement>
+      <p>
+        Buktikan atau bantah pernyataan berikut.
+        <me>\sup(A\cup B)=\max\{\sup(A),\sup(B)\}</me>
+        Rubrik: putuskan nilai kebenarannya dan verifikasi dua syarat batas atas
+        terkecil.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-09-hint">
+      <p>
+        Setiap unsur gabungan berasal dari <m>A</m> atau
+        <m>B</m>; setiap batas atas bagi gabungan juga membatasi keduanya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-09-answer">
+      <p>
+        Pernyataan benar. Bilangan
+        <m>M=\max\{\sup(A),\sup(B)\}</m> membatasi <m>A\cup B</m> dari atas,
+        dan setiap batas atas bagi <m>A\cup B</m> sedikitnya sebesar <m>M</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-09-solution">
+      <p>
+        Tetapkan <m>M=\max\{\sup(A),\sup(B)\}</m>. Jika
+        <m>u\in A\cup B</m>, maka <m>u\in A</m> atau <m>u\in B</m>. Dalam kasus
+        pertama, <m>u\leq\sup(A)\leq M</m>; dalam kasus kedua,
+        <m>u\leq\sup(B)\leq M</m>. Jadi <m>M</m> adalah batas atas bagi
+        <m>A\cup B</m>.
+      </p>
+      <p>
+        Sekarang misalkan <m>U</m> sebarang batas atas bagi <m>A\cup B</m>.
+        Karena <m>A\subseteq A\cup B</m> dan <m>B\subseteq A\cup B</m>,
+        <m>U</m> adalah batas atas bagi <m>A</m> dan bagi <m>B</m>. Maka
+        <m>\sup(A)\leq U</m> dan <m>\sup(B)\leq U</m>, sehingga <m>M\leq U</m>.
+        Jadi <m>M</m> adalah batas atas terkecil, yang membuktikan kesamaan
+        tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-10">
+    <title>Infimum suatu gabungan</title>
+    <statement>
+      <p>
+        Buktikan atau bantah pernyataan berikut.
+        <me>\inf(A\cup B)=\min\{\inf(A),\inf(B)\}</me>
+        Rubrik: putuskan nilai kebenarannya dan verifikasi dua syarat batas bawah
+        terbesar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-10-hint">
+      <p>
+        Gunakan bahwa setiap unsur gabungan berada dalam salah
+        satu himpunan dan setiap batas bawah bagi gabungan membatasi keduanya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-10-answer">
+      <p>
+        Pernyataan benar. Bilangan
+        <m>L=\min\{\inf(A),\inf(B)\}</m> membatasi <m>A\cup B</m> dari bawah,
+        dan setiap batas bawah bagi gabungan tidak melebihi <m>L</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-10-solution">
+      <p>
+        Tetapkan <m>L=\min\{\inf(A),\inf(B)\}</m>. Jika
+        <m>u\in A\cup B</m>, maka <m>u\in A</m> atau <m>u\in B</m>. Jika
+        <m>u\in A</m>, maka <m>L\leq\inf(A)\leq u</m>; jika <m>u\in B</m>, maka
+        <m>L\leq\inf(B)\leq u</m>. Jadi <m>L</m> adalah batas bawah bagi
+        <m>A\cup B</m>.
+      </p>
+      <p>
+        Misalkan <m>V</m> sebarang batas bawah bagi <m>A\cup B</m>. Karena
+        <m>A,B\subseteq A\cup B</m>, <m>V</m> adalah batas bawah bagi
+        <m>A</m> dan bagi <m>B</m>. Maka <m>V\leq\inf(A)</m> dan
+        <m>V\leq\inf(B)</m>, sehingga <m>V\leq L</m>. Jadi <m>L</m> adalah
+        batas bawah terbesar dan kesamaan yang diminta berlaku.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-11">
+    <title>Menghitung metrik supremum</title>
+    <statement>
+      <p>
+        Pada <m>C[0,1]</m> dengan
+        <m>d(f,g)=\sup\{|f(t)-g(t)|\mid t\in[0,1]\}</m>, hitung
+        <m>d(t^2,1-2t)</m>. Rubrik: tentukan supremum nilai mutlak pada seluruh
+        interval dan tunjukkan bahwa nilainya dicapai.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-11-hint">
+      <p>
+        Fungsi <m>h(t)=t^2+2t-1</m> meningkat pada
+        <m>[0,1]</m>; bandingkan nilai mutlak pada kedua ujung rentangnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-11-answer">
+      <p><m>d(t^2,1-2t)=2</m>, dan jarak maksimum itu dicapai pada <m>t=1</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-11-solution">
+      <p>
+        Selisih kedua fungsi adalah
+        <m>h(t)=t^2-(1-2t)=t^2+2t-1</m>. Untuk
+        <m>0\leq u\lt v\leq1</m>,
+        <me>
+          h(v)-h(u)=(v-u)(u+v+2)\gt0,
+        </me>
+        sehingga <m>h</m> meningkat pada <m>[0,1]</m>. Karena
+        <m>h(0)=-1</m> dan <m>h(1)=2</m>, setiap <m>h(t)</m> berada dalam
+        <m>[-1,2]</m>. Maka <m>|h(t)|\leq2</m> untuk semua <m>t\in[0,1]</m>.
+        Pada <m>t=1</m>, <m>|h(1)|=2</m>, sehingga batas atas ini dicapai dan
+        <m>\sup_{t\in[0,1]}|h(t)|=2</m>. Jadi
+        <m>d(t^2,1-2t)=2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-12">
+    <title>Membuktikan metrik seragam pada ruang fungsi</title>
+    <statement>
+      <p>
+        Misalkan <m>X=C[a,b]</m>, dengan <m>a\lt b</m>, dan definisikan
+        <m>d(f,g)=\sup\{|f(t)-g(t)|\mid t\in[a,b]\}</m>. Buktikan bahwa
+        <m>d</m> merupakan metrik dan jelaskan makna geometrisnya. Rubrik:
+        buktikan nilai supremum berhingga serta keempat aksioma metrik, lalu
+        identifikasi jarak vertikal maksimum antara dua graf.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-12-hint">
+      <p>
+        Gunakan kekompakan <m>[a,b]</m> untuk keberadaan
+        maksimum dan terapkan pertidaksamaan segitiga nilai mutlak secara
+        titik-demi-titik sebelum mengambil supremum.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-12-answer">
+      <p>
+        Fungsi <m>|f-g|</m> kontinu pada interval kompak, sehingga supremumnya
+        berhingga dan dicapai. Fungsi <m>d</m> tak negatif, nol tepat untuk
+        <m>f=g</m>, simetris, dan memenuhi pertidaksamaan segitiga. Secara
+        geometris, <m>d(f,g)</m> adalah pemisahan vertikal terbesar antara graf
+        <m>f</m> dan <m>g</m> pada interval tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-12-solution">
+      <p>
+        Untuk <m>f,g\in C[a,b]</m>, fungsi <m>t\mapsto|f(t)-g(t)|</m> kontinu.
+        Teorema nilai ekstrem pada interval kompak <m>[a,b]</m> menjamin bahwa
+        fungsi ini mencapai suatu maksimum berhingga. Jadi <m>d(f,g)</m>
+        terdefinisi sebagai bilangan real tak negatif.
+      </p>
+      <p>
+        Jelas <m>d(f,g)\geq0</m>. Jika <m>f=g</m>, maka seluruh selisih bernilai
+        nol, sehingga <m>d(f,g)=0</m>. Sebaliknya, jika <m>d(f,g)=0</m>, maka
+        untuk setiap <m>t\in[a,b]</m>,
+        <m>0\leq|f(t)-g(t)|\leq d(f,g)=0</m>. Jadi <m>f(t)=g(t)</m> untuk setiap
+        <m>t</m>, yakni <m>f=g</m>. Selanjutnya,
+        <m>|f(t)-g(t)|=|g(t)-f(t)|</m> pada setiap <m>t</m>, maka
+        <m>d(f,g)=d(g,f)</m>.
+      </p>
+      <p>
+        Untuk <m>f,g,h\in C[a,b]</m> dan setiap <m>t\in[a,b]</m>,
+        <me>
+          |f(t)-h(t)|\leq |f(t)-g(t)|+|g(t)-h(t)|
+          \leq d(f,g)+d(g,h).
+        </me>
+        Ruas kanan adalah batas atas yang tidak bergantung pada <m>t</m>.
+        Mengambil supremum atas <m>t\in[a,b]</m> pada ruas kiri memberi
+        <m>d(f,h)\leq d(f,g)+d(g,h)</m>. Jadi keempat aksioma metrik terpenuhi.
+        Nilai <m>|f(t)-g(t)|</m> adalah jarak vertikal kedua graf di absis
+        <m>t</m>; supremum, yang di sini merupakan maksimum, adalah jarak
+        vertikal terbesar pada seluruh interval. Itulah alasan nama
+        <term>metrik supremum</term> atau <term>metrik seragam</term>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-13">
+    <title>Asumsi negasi sifat Archimedes</title>
+    <statement>
+      <p>
+        Misalkan <m>x\in\R</m>. Andaikan tidak ada bilangan bulat positif
+        <m>N</m> dengan <m>N\gt x</m>. Jelaskan mengapa <m>\Z^+</m> terbatas di
+        atas. Rubrik: terjemahkan negasi kuantor dengan tepat dan berikan batas
+        atas yang eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-13-hint">
+      <p>
+        Negasi “ada <m>N\in\Z^+</m> dengan <m>N\gt x</m>”
+        adalah “untuk setiap <m>N\in\Z^+</m>, <m>N\leq x</m>.”
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-13-answer">
+      <p>
+        Asumsi tersebut menyatakan <m>N\leq x</m> bagi setiap
+        <m>N\in\Z^+</m>. Jadi <m>x</m> adalah batas atas bagi <m>\Z^+</m>, dan
+        <m>\Z^+</m> terbatas di atas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-13-solution">
+      <p>
+        Pernyataan yang diandaikan salah adalah
+        <m>\exists N\in\Z^+\;(N\gt x)</m>. Negasinya ialah
+        <m>\forall N\in\Z^+\;(N\leq x)</m>. Dengan demikian setiap unsur
+        <m>\Z^+</m> tidak melebihi bilangan real <m>x</m>. Menurut definisi,
+        <m>x</m> adalah batas atas bagi <m>\Z^+</m>; karena itu
+        <m>\Z^+</m> terbatas di atas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-14">
+    <title>Supremum bilangan bulat positif</title>
+    <statement>
+      <p>
+        Dengan mengandaikan <m>\Z^+</m> terbatas di atas, jelaskan mengapa
+        terdapat batas atas terkecil <m>M</m> bagi <m>\Z^+</m>. Rubrik:
+        verifikasi ketak-kosongan dan terapkan aksioma kelengkapan dengan tepat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-14-hint">
+      <p>
+        Himpunan <m>\Z^+</m> memuat <m>1</m> dan, menurut
+        asumsi, mempunyai suatu batas atas real.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-14-answer">
+      <p>
+        Karena <m>1\in\Z^+</m>, himpunan itu tidak kosong; menurut asumsi,
+        himpunan itu terbatas di atas. Aksioma kelengkapan menjamin adanya
+        <m>M=\sup(\Z^+)</m>, yaitu batas atas terkecilnya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-14-solution">
+      <p>
+        Aksioma kelengkapan menyatakan bahwa setiap subhimpunan tak kosong dari
+        <m>\R</m> yang terbatas di atas mempunyai supremum. Himpunan
+        <m>\Z^+</m> merupakan subhimpunan <m>\R</m> dan tidak kosong karena
+        memuat <m>1</m>. Dalam argumen kontradiksi ini, keterbatasannya di atas
+        sedang diandaikan. Karena semua hipotesis aksioma kelengkapan terpenuhi,
+        terdapat <m>M=\sup(\Z^+)</m>. Berdasarkan definisi supremum, <m>M</m>
+        adalah batas atas terkecil bagi <m>\Z^+</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-15">
+    <title>Kontradiksi yang membuktikan sifat Archimedes</title>
+    <statement>
+      <p>
+        Andaikan <m>M=\sup(\Z^+)</m>. Buktikan bahwa <m>M</m> tidak mungkin
+        menjadi batas atas terkecil, lalu simpulkan sifat Archimedes. Rubrik:
+        gunakan <m>M-1\lt M</m> untuk memperoleh bilangan bulat positif yang
+        menghasilkan unsur baru di atas <m>M</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-15-hint">
+      <p>
+        Karena <m>M-1</m> lebih kecil daripada supremum, ia
+        bukan batas atas; pilih <m>N\in\Z^+</m> dengan <m>N\gt M-1</m> dan
+        perhatikan <m>N+1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-15-answer">
+      <p>
+        Ada <m>N\in\Z^+</m> dengan <m>N\gt M-1</m>, sehingga
+        <m>N+1\in\Z^+</m> dan <m>N+1\gt M</m>. Ini bertentangan dengan
+        <m>M</m> sebagai batas atas. Jadi <m>\Z^+</m> tidak terbatas di atas,
+        yang persis menyatakan bahwa untuk setiap <m>x\in\R</m> ada
+        <m>N\in\Z^+</m> dengan <m>N\gt x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-15-solution">
+      <p>
+        Karena <m>M-1\lt M=\sup(\Z^+)</m>, bilangan <m>M-1</m> tidak dapat
+        menjadi batas atas bagi <m>\Z^+</m>; jika ia batas atas, sifat terkecil
+        supremum akan memberi <m>M\leq M-1</m>. Jadi terdapat
+        <m>N\in\Z^+</m> dengan <m>N\gt M-1</m>. Penambahan satu memberi
+        <m>N+1\gt M</m>. Akan tetapi, <m>N+1</m> juga bilangan bulat positif,
+        sehingga <m>N+1\in\Z^+</m>. Ini bertentangan dengan asumsi bahwa
+        <m>M</m> adalah batas atas bagi <m>\Z^+</m>.
+      </p>
+      <p>
+        Kontradiksi tersebut berasal dari asumsi awal bahwa, untuk suatu
+        <m>x\in\R</m>, tidak ada bilangan bulat positif yang lebih besar daripada
+        <m>x</m>. Maka asumsi itu salah untuk setiap <m>x</m>: bagi setiap
+        <m>x\in\R</m> terdapat <m>N\in\Z^+</m> dengan <m>N\gt x</m>. Inilah
+        sifat Archimedes.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-16">
+    <title>Dari sifat Archimedes menuju bentuk berskala</title>
+    <statement>
+      <p>
+        Misalkan <m>x,y\in\R</m> dengan <m>x\gt0</m>. Dengan mengandaikan sifat
+        Archimedes, buktikan bahwa ada <m>N\in\Z^+</m> sedemikian sehingga
+        <m>Nx\gt y</m>. Rubrik: terapkan sifat Archimedes pada hasil bagi yang
+        tepat dan perhatikan arah pertidaksamaan ketika mengalikan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-16-hint">
+      <p>
+        Terapkan sifat Archimedes pada bilangan real
+        <m>y/x</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-16-answer">
+      <p>
+        Pilih <m>N\in\Z^+</m> dengan <m>N\gt y/x</m>. Karena <m>x\gt0</m>,
+        perkalian dengan <m>x</m> memberi <m>Nx\gt y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-16-solution">
+      <p>
+        Karena <m>x\gt0</m>, hasil bagi <m>y/x</m> adalah bilangan real. Sifat
+        Archimedes memberi bilangan bulat positif <m>N</m> dengan
+        <m>N\gt y/x</m>. Mengalikan kedua ruas dengan <m>x\gt0</m> tidak
+        membalik arah pertidaksamaan, sehingga <m>Nx\gt y</m>. Argumen ini juga
+        mencakup <m>y\leq0</m>; tidak diperlukan asumsi tambahan pada tanda
+        <m>y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-17">
+    <title>Dari bentuk berskala kembali ke sifat Archimedes</title>
+    <statement>
+      <p>
+        Andaikan bahwa untuk setiap <m>x,y\in\R</m> dengan <m>x\gt0</m> ada
+        <m>N\in\Z^+</m> yang memenuhi <m>Nx\gt y</m>. Buktikan sifat
+        Archimedes dan simpulkan ekuivalensi kedua pernyataan. Rubrik: buat satu
+        substitusi yang berlaku bagi sebarang batas real.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-17-hint">
+      <p>
+        Dalam bentuk berskala, tetapkan faktor positif sama
+        dengan <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-17-answer">
+      <p>
+        Untuk sebarang <m>u\in\R</m>, gunakan pernyataan berskala dengan
+        <m>x=1</m> dan <m>y=u</m>. Diperoleh <m>N\in\Z^+</m> dengan
+        <m>N\gt u</m>, yaitu sifat Archimedes. Bersama butir sebelumnya, kedua
+        pernyataan ekuivalen.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-17-solution">
+      <p>
+        Ambil sebarang bilangan real <m>u</m>. Hipotesis bentuk berskala dapat
+        diterapkan pada <m>x=1\gt0</m> dan <m>y=u</m>. Maka terdapat bilangan
+        bulat positif <m>N</m> sehingga <m>N\cdot1\gt u</m>, yakni
+        <m>N\gt u</m>. Karena <m>u</m> dipilih sebarang, ini membuktikan sifat
+        Archimedes. Butir sebelumnya membuktikan implikasi dari sifat Archimedes
+        ke bentuk berskala, sedangkan argumen ini membuktikan implikasi balik.
+        Oleh sebab itu kedua pernyataan ekuivalen.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-exercise-task-18">
+    <title>Ekuivalensi bentuk kebalikan sifat Archimedes</title>
+    <statement>
+      <p>
+        Buktikan bahwa pernyataan “untuk setiap <m>x\gt0</m> terdapat
+        <m>N\in\Z^+</m> dengan <m>1/N\lt x</m>” ekuivalen dengan sifat
+        Archimedes. Rubrik: buktikan kedua arah, pisahkan kasus batas real tak
+        positif dalam arah balik, dan jaga tanda ketika mengambil kebalikan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-exercise-task-18-hint">
+      <p>
+        Untuk arah maju gunakan <m>1/x</m>. Untuk arah balik,
+        jika batas <m>y</m> positif, terapkan pernyataan kebalikan pada
+        <m>1/y</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-exercise-task-18-answer">
+      <p>
+        Sifat Archimedes pada <m>1/x</m> memberi <m>N\gt1/x</m>, sehingga
+        <m>1/N\lt x</m>. Sebaliknya, untuk <m>y\gt0</m>, penerapan pernyataan
+        pada <m>1/y</m> memberi <m>1/N\lt1/y</m>, sehingga <m>N\gt y</m>;
+        untuk <m>y\leq0</m>, ambil <m>N=1</m>. Jadi sifat Archimedes berlaku.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-exercise-task-18-solution">
+      <p>
+        Pertama, andaikan sifat Archimedes dan ambil sebarang <m>x\gt0</m>.
+        Karena <m>1/x\in\R</m>, terdapat <m>N\in\Z^+</m> dengan
+        <m>N\gt1/x</m>. Semua bilangan ini positif. Mengalikan dengan
+        <m>x/N\gt0</m> memberi <m>x\gt1/N</m>. Jadi bentuk kebalikan mengikuti
+        dari sifat Archimedes.
+      </p>
+      <p>
+        Sebaliknya, andaikan untuk setiap <m>x\gt0</m> terdapat
+        <m>N\in\Z^+</m> dengan <m>1/N\lt x</m>. Ambil sebarang <m>y\in\R</m>.
+        Jika <m>y\leq0</m>, bilangan <m>N=1</m> memenuhi <m>N\gt y</m>. Jika
+        <m>y\gt0</m>, terapkan hipotesis pada <m>x=1/y\gt0</m>. Terdapat
+        <m>N\in\Z^+</m> dengan <m>1/N\lt1/y</m>. Mengalikan dengan
+        <m>Ny\gt0</m> menghasilkan <m>y\lt N</m>. Dalam kedua kasus ada
+        bilangan bulat positif <m>N\gt y</m>. Karena <m>y</m> sebarang, sifat
+        Archimedes berlaku. Kedua implikasi telah dibuktikan, maka kedua
+        pernyataan ekuivalen.
+      </p>
+    </solution>
+  </exercise>
+</section>

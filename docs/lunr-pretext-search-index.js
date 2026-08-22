@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch04-edition-note",
+  "id": "o003-c90-ch05-edition-note",
   "level": "1",
-  "url": "o003-c90-ch04-edition-note.html",
+  "url": "o003-c90-ch05-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat empat bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat lima bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
 },
 {
   "id": "sec_sets_intro",
@@ -1216,6 +1216,303 @@ var ptx_lunr_docs = [
   "body": "  Buktikan bahwa fungsi jarak Levenshtein benar-benar merupakan metrik pada himpunan semua untai berhingga di atas alfabet tetap (baik yang membentuk kata bermakna maupun tidak).    Sebuah pemeriksa ejaan memperbaiki kata yang salah eja tupotagry . Dengan menggunakan metrik Levenshtein, kata manakah yang akan dipilih pemeriksa ejaan sebagai kata yang paling dekat dengan tupotagry ? Mengapa?    "
 },
 {
+  "id": "sec_glb_intro",
+  "level": "1",
+  "url": "sec_glb_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Bilangan real memiliki suatu sifat khusus yang, antara lain, memungkinkan kita mendefinisikan jarak antara suatu titik dan suatu himpunan di ruang metrik. Sifat tersebut juga memungkinkan kita mendefinisikan jarak antarsubhimpunan pada jenis ruang metrik tertentu, sehingga terbentuk suatu ruang metrik yang sama sekali baru, yang unsur-unsurnya adalah subhimpunan dari ruang metrik semula. Dalam aktivitas ini, kita akan menelaah sifat bilangan real tersebut.  Kita mulai dengan meninjau cara mendefinisikan jarak antara suatu bilangan real dan suatu interval di dengan metrik Euklides yang didefinisikan oleh .  Misalkan dan misalkan adalah interval tertutup . Wajar jika kita mengusulkan bahwa jarak antara titik dan himpunan , yang dinotasikan dengan , seharusnya merupakan jarak dari titik ke titik di yang paling dekat dengan . Jadi, dalam kasus ini kita akan mengatakan .  Hal ini mungkin mengarahkan kita untuk mengusulkan bahwa jarak dari suatu titik ke suatu himpunan , yang dinotasikan dengan , adalah jarak minimum dari titik tersebut ke sebarang titik di dalam himpunan itu, yaitu .  Bagaimana jika kita mengubah himpunan menjadi interval terbuka ? Lalu, berapakah seharusnya , atau apakah jarak ini seharusnya ada? Jika kita memandang jarak antara suatu titik dan suatu himpunan sebagai ukuran seberapa jauh kita harus bergerak dari titik tersebut hingga mencapai himpunan itu, maka dalam kasus dan , segera setelah kita menempuh jarak lebih dari 1 dari ke arah , kita mencapai himpunan . Jadi, secara intuitif kita dapat mengatakan bahwa juga. Namun, kita tidak dapat mendefinisikan jarak ini sebagai jarak dari ke suatu titik di karena . Kita memerlukan cara lain untuk merumuskan gagasan jarak dari suatu titik ke suatu himpunan.  Dalam kasus seperti ini, dengan dan , kita dapat menelaah himpunan dan mencermati beberapa fakta tentang himpunan tersebut. Sebagai contoh, himpunan merupakan subhimpunan dari bilangan real tak negatif. Selain itu, dalam contoh ini tidak ada bilangan di yang lebih kecil dari 1. Karena sifat ini, kita akan menyebut bilangan 1 sebagai batas bawah untuk . Secara umum,   batas bawah   Misalkan adalah subhimpunan tak kosong dari . Suatu batas bawah untuk adalah bilangan real sedemikian sehingga untuk setiap .    Jika suatu subhimpunan dari memiliki batas bawah, kita mengatakan bahwa  terbatas di bawah . Jadi, himpunan terbatas di bawah oleh 1. Himpunan juga terbatas di bawah oleh 0.5 dan 0. Bahkan, setiap bilangan yang lebih kecil dari 1 merupakan batas bawah untuk . Namun, gagasan pentingnya adalah bahwa tidak ada bilangan yang lebih besar dari 1 yang merupakan batas bawah untuk . Karena itu, kita menyebut 1 sebagai batas bawah terbesar dari . Secara umum,   batas bawah terbesar   Misalkan adalah subhimpunan tak kosong dari yang terbatas di bawah. Suatu batas bawah terbesar untuk adalah bilangan real sedemikian sehingga memenuhi dua syarat berikut.    merupakan batas bawah untuk ; dan    jika merupakan batas bawah untuk , maka .        infimum Batas bawah terbesar juga disebut infimum . Sekarang kita dapat menggunakan gagasan batas bawah terbesar ini untuk mendefinisikan jarak antara dan sebagai batas bawah terbesar dari himpunan . Namun, ada beberapa pertanyaan yang perlu kita jawab sebelum dapat melakukannya. Salah satunya adalah apakah setiap subhimpunan tak kosong dari yang terbatas di bawah memiliki infimum. Jawaban atas pertanyaan ini adalah ya, dan kita akan menerima hasil ini sebagai suatu aksioma dalam sistem bilangan real (yang sering disebut aksioma kelengkapan ).    Apakah setiap subhimpunan memiliki batas bawah? Jelaskan. (Jika suatu subhimpunan memiliki batas bawah, kita mengatakan bahwa himpunan tersebut terbatas di bawah .)    Manakah dari subhimpunan dari berikut yang terbatas di bawah? Jika himpunannya terbatas di bawah, berapakah infimumnya?                Bagaimana cara mendefinisikan batas atas terkecil dari suatu subhimpunan dari ?    "
+},
+{
+  "id": "p-564",
+  "level": "2",
+  "url": "sec_glb_intro.html#p-564",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "batas bawah "
+},
+{
+  "id": "definition-14",
+  "level": "2",
+  "url": "sec_glb_intro.html#definition-14",
+  "type": "Definisi",
+  "number": "5.1",
+  "title": "",
+  "body": " batas bawah   Misalkan adalah subhimpunan tak kosong dari . Suatu batas bawah untuk adalah bilangan real sedemikian sehingga untuk setiap .   "
+},
+{
+  "id": "p-566",
+  "level": "2",
+  "url": "sec_glb_intro.html#p-566",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "terbatas di bawah batas bawah terbesar "
+},
+{
+  "id": "definition-15",
+  "level": "2",
+  "url": "sec_glb_intro.html#definition-15",
+  "type": "Definisi",
+  "number": "5.2",
+  "title": "",
+  "body": " batas bawah terbesar   Misalkan adalah subhimpunan tak kosong dari yang terbatas di bawah. Suatu batas bawah terbesar untuk adalah bilangan real sedemikian sehingga memenuhi dua syarat berikut.    merupakan batas bawah untuk ; dan    jika merupakan batas bawah untuk , maka .      "
+},
+{
+  "id": "p-570",
+  "level": "2",
+  "url": "sec_glb_intro.html#p-570",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "infimum aksioma kelengkapan "
+},
+{
+  "id": "exploration-4",
+  "level": "2",
+  "url": "sec_glb_intro.html#exploration-4",
+  "type": "Aktivitas Persiapan",
+  "number": "5.1",
+  "title": "",
+  "body": "  Apakah setiap subhimpunan memiliki batas bawah? Jelaskan. (Jika suatu subhimpunan memiliki batas bawah, kita mengatakan bahwa himpunan tersebut terbatas di bawah .)    Manakah dari subhimpunan dari berikut yang terbatas di bawah? Jika himpunannya terbatas di bawah, berapakah infimumnya?                Bagaimana cara mendefinisikan batas atas terkecil dari suatu subhimpunan dari ?   "
+},
+{
+  "id": "sec_dist_point_set",
+  "level": "1",
+  "url": "sec_dist_point_set.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Jarak dari Titik ke Himpunan",
+  "body": " Jarak dari Titik ke Himpunan  Metrik digunakan untuk menetapkan keterpisahan antarobjek. Ruang topologis dapat dikelompokkan ke dalam berbagai kategori berdasarkan seberapa baik jenis-jenis himpunan tertentu dapat dipisahkan. Kita telah mendefinisikan metrik sebagai fungsi yang mengukur jarak antartitik di suatu ruang metrik, dan dalam aktivitas ini kita memperluas gagasan tersebut untuk mengukur jarak antara sebuah titik dan suatu subhimpunan di ruang metrik. Akan tetapi, sebelum itu kita perlu menjawab dua pertanyaan. Pertanyaan pertama telah kita kemukakan dalam aktivitas pendahuluan. Kita akan mengasumsikan aksioma kelengkapan bagi bilangan real, yakni bahwa setiap subhimpunan tak kosong dari yang terbatas di bawah selalu mempunyai batas bawah terbesar. Pertanyaan kedua adalah apakah batas bawah terbesar itu unik.    Misalkan suatu subhimpunan dari yang terbatas di bawah, dan asumsikan bahwa mempunyai batas bawah terbesar. Dalam aktivitas ini, kita akan menunjukkan bahwa infimum itu unik.    Metode apa yang dapat kita gunakan untuk membuktikan bahwa hanya mempunyai satu batas bawah terbesar?    Misalkan dan keduanya merupakan batas bawah terbesar untuk . Mengapa dan keduanya merupakan batas bawah untuk ?    Dua hal apa yang dinyatakan sifat kedua batas bawah terbesar mengenai hubungan antara dan ?    Mengapa batas bawah terbesar dari harus unik?    Setelah meninjau keberadaan dan keunikan batas bawah terbesar, kini kita dapat mengatakan bahwa setiap subhimpunan tak kosong dari yang terbatas di bawah mempunyai batas bawah terbesar yang unik. Kita menggunakan notasi (atau untuk infimum dari ) bagi batas bawah terbesar dari . Terdapat pula batas atas terkecil  batas atas terkecil ( , atau untuk supremum  supremum ) bagi suatu subhimpunan tak kosong dari yang terbatas di atas.  Sekarang kita dapat mendefinisikan secara formal jarak antara sebuah titik dan suatu subhimpunan di ruang metrik.    Misalkan suatu ruang metrik, misalkan , dan misalkan suatu subhimpunan tak kosong dari . Jarak dari ke adalah .    Kita menotasikan jarak dari ke dengan . Ketika menghitung jarak seperti ini, metrik yang mendasarinya harus dipahami dengan jelas.    Dalam aktivitas ini, kita menelaah beberapa fakta mengenai jarak antara sebuah titik dan suatu himpunan. Misalkan suatu ruang metrik, misalkan , dan misalkan suatu subhimpunan tak kosong dari .    Mengapa pasti ada?    Jika , apakah harus berlaku ?    "
+},
+{
+  "id": "p-577",
+  "level": "2",
+  "url": "sec_dist_point_set.html#p-577",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "aksioma kelengkapan "
+},
+{
+  "id": "activity-22",
+  "level": "2",
+  "url": "sec_dist_point_set.html#activity-22",
+  "type": "Kegiatan",
+  "number": "5.2",
+  "title": "",
+  "body": "  Misalkan suatu subhimpunan dari yang terbatas di bawah, dan asumsikan bahwa mempunyai batas bawah terbesar. Dalam aktivitas ini, kita akan menunjukkan bahwa infimum itu unik.    Metode apa yang dapat kita gunakan untuk membuktikan bahwa hanya mempunyai satu batas bawah terbesar?    Misalkan dan keduanya merupakan batas bawah terbesar untuk . Mengapa dan keduanya merupakan batas bawah untuk ?    Dua hal apa yang dinyatakan sifat kedua batas bawah terbesar mengenai hubungan antara dan ?    Mengapa batas bawah terbesar dari harus unik?   "
+},
+{
+  "id": "p-583",
+  "level": "2",
+  "url": "sec_dist_point_set.html#p-583",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "infimum batas atas terkecil supremum "
+},
+{
+  "id": "definition-16",
+  "level": "2",
+  "url": "sec_dist_point_set.html#definition-16",
+  "type": "Definisi",
+  "number": "5.3",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, misalkan , dan misalkan suatu subhimpunan tak kosong dari . Jarak dari ke adalah .   "
+},
+{
+  "id": "activity-23",
+  "level": "2",
+  "url": "sec_dist_point_set.html#activity-23",
+  "type": "Kegiatan",
+  "number": "5.3",
+  "title": "",
+  "body": "  Dalam aktivitas ini, kita menelaah beberapa fakta mengenai jarak antara sebuah titik dan suatu himpunan. Misalkan suatu ruang metrik, misalkan , dan misalkan suatu subhimpunan tak kosong dari .    Mengapa pasti ada?    Jika , apakah harus berlaku ?   "
+},
+{
+  "id": "sec_glb_summ",
+  "level": "1",
+  "url": "sec_glb_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan penting yang kita bahas dalam bagian ini antara lain sebagai berikut.   Batas bawah untuk subhimpunan tak kosong dari yang terbatas di bawah adalah bilangan real sedemikian sehingga untuk setiap . Batas bawah terbesar (atau infimum) untuk subhimpunan tak kosong dari yang terbatas di bawah adalah bilangan real sedemikian sehingga memenuhi dua syarat berikut.    merupakan batas bawah untuk , dan    jika merupakan batas bawah untuk , maka .       Batas atas untuk subhimpunan tak kosong dari yang terbatas di atas adalah bilangan real sedemikian sehingga untuk setiap . Batas atas terkecil (atau supremum) untuk subhimpunan tak kosong dari yang terbatas di atas adalah bilangan real sedemikian sehingga memenuhi dua syarat berikut.    merupakan batas atas untuk , dan    jika merupakan batas atas untuk , maka .       Jarak dari sebuah titik ke suatu himpunan tak kosong di ruang metrik adalah . Mungkin tidak ada titik yang memenuhi , sehingga infimum diperlukan untuk mendefinisikan jarak ini.     "
+},
+{
+  "id": "sec_glb_exer",
+  "level": "1",
+  "url": "sec_glb_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Lima teorema berikut merupakan sasaran pembuktian dalam latihan-latihan di bawah. Bacalah pernyataannya terlebih dahulu, lalu kembangkan setiap pembuktian melalui urutan tugas yang terkait.   Sifat Archimedes  sifat Archimedes   Untuk setiap bilangan real , terdapat bilangan asli sedemikian sehingga .      Untuk setiap bilangan real dan dengan , terdapat bilangan asli sedemikian sehingga .      Jika suatu bilangan real positif, maka terdapat bilangan bulat positif sedemikian sehingga .      Untuk sebarang dua bilangan real yang berbeda dan , terdapat bilangan rasional yang terletak di antaranya.      Untuk sebarang dua bilangan real yang berbeda dan , terdapat bilangan irasional yang terletak di antaranya.      Misalkan suatu subhimpunan tak kosong dari yang terbatas di bawah. Misalkan , dan definisikan sebagai .   Jelaskan mengapa merupakan batas bawah bagi . Jelaskan mengapa memiliki infimum.   Misalkan suatu batas bawah bagi . Tunjukkan bahwa . Lalu jelaskan mengapa .    Misalkan suatu subhimpunan tak kosong dari .   Andaikan terbatas di atas, dan misalkan . Tunjukkan bahwa untuk setiap , terdapat bilangan sedemikian sehingga .   Andaikan terbatas di bawah, dan misalkan . Tunjukkan bahwa untuk setiap , terdapat bilangan sedemikian sehingga .    Misalkan dan merupakan subhimpunan tak kosong dari yang terbatas di atas dan di bawah. Misalkan .   Ikuti langkah-langkah berikut untuk menunjukkan bahwa .   Misalkan dan . Tunjukkan bahwa merupakan batas atas bagi .   Bagian sebelumnya menunjukkan bahwa terbatas di atas sehingga memiliki supremum. Misalkan . Jelaskan mengapa .   Untuk menunjukkan bahwa , kita harus membuktikan bahwa tidak mungkin lebih kecil daripada . Andaikan, demi memperoleh kontradiksi, bahwa . Misalkan . Gunakan hasil untuk memperoleh kontradiksi.   Buktikan bahwa .   Buktikan atau bantah:    Buktikan atau bantah:     Misalkan , dengan , adalah himpunan semua fungsi kontinu dari ke . Definisikan dengan .   Berapakah pada ?   Buktikan bahwa merupakan metrik pada . Deskripsikan secara geometris bagaimana metrik ini mengukur jarak antara fungsi dan . (Metrik ini disebut metrik supremum atau metrik seragam pada .)    Dalam latihan ini, kita membuktikan sifat Archimedes bilangan asli. Perhatikan bahwa himpunan bilangan asli, yang dinotasikan dengan atau , adalah himpunan semua bilangan bulat positif. Misalkan suatu bilangan real.   Andaikan tidak terdapat bilangan bulat positif sedemikian sehingga . Jelaskan bagaimana kita dapat menyimpulkan bahwa terbatas di atas.   Dengan mengandaikan bahwa terbatas di atas, jelaskan mengapa harus memiliki batas atas terkecil .   Jelaskan mengapa tidak mungkin menjadi batas atas terkecil bagi . Jelaskan mengapa hal ini membuktikan sifat Archimedes.    Dalam latihan ini, kita membuktikan dua pernyataan yang ekuivalen dengan sifat Archimedes (lihat ). Kedua pernyataan tersebut dicantumkan dalam pendahuluan kumpulan latihan ini.   Misalkan dan bilangan real dengan .   Tunjukkan bahwa jika sifat Archimedes benar, maka juga benar.   Tunjukkan bahwa jika benar, maka sifat Archimedes juga benar. Simpulkan bahwa ekuivalen dengan sifat Archimedes.   Buktikan bahwa ekuivalen dengan sifat Archimedes.    Kita dapat menggunakan batas bawah terbesar untuk membuktikan teorema tentang kerapatan bilangan rasional yang dicantumkan dalam pendahuluan kumpulan latihan ini. Teorema ini menunjukkan suatu fakta penting bilangan rasional bersifat rapat dalam himpunan bilangan real. Kita membuktikan teorema ini dalam latihan ini. Misalkan dan bilangan real dan andaikan . Berdasarkan sifat Archimedes bilangan asli (lihat Latihan dan ), terdapat bilangan bulat positif sedemikian sehingga . Misalkan . Sifat Archimedes juga menjamin adanya bilangan bulat positif yang memenuhi syarat pembentuk himpunan tersebut; oleh karena itu, himpunan itu tidak kosong.   Tunjukkan bahwa terbatas di bawah dalam .   Jelaskan mengapa memuat suatu bilangan bulat sedemikian sehingga jika dengan , maka . Prinsip Pengurutan Baik berikut mungkin berguna:   Setiap subhimpunan tak kosong dari bilangan bulat yang terbatas di bawah memuat infimumnya.   (Prinsip Pengurutan Baik merupakan salah satu dari banyak aksioma yang ekuivalen dengan Prinsip Induksi Matematika. Prinsip-prinsip ini diterima sebagai aksioma dan dianggap benar.)   Jelaskan mengapa dan . Gunakan pertidaksamaan ini bersama dengan untuk menunjukkan bahwa . Kemudian, temukan suatu bilangan rasional yang terletak di antara dan .    Tunjukkan bahwa setiap bola terbuka dalam memuat suatu titik dengan dan keduanya rasional.    Kita sudah terbiasa menyelesaikan persamaan kuadrat dan memperoleh penyelesaian . Namun, apakah kita benar-benar mengetahui bahwa bilangan ada? Kita membahas pertanyaan tersebut dalam latihan ini dan menunjukkan keberadaan bilangan dengan menggunakan batas bawah terbesar. Di sini, adalah himpunan bilangan real positif.   Sebagai langkah awal, misalkan . Jelaskan mengapa harus memiliki batas bawah terbesar .   Selanjutnya, kita menunjukkan bahwa , sehingga . Kita meninjau kasus dan .   Andaikan . Tunjukkan bahwa terdapat bilangan bulat positif sedemikian sehingga . Jelaskan mengapa hal ini juga tidak mungkin terjadi.   Andaikan . Tunjukkan bahwa terdapat bilangan bulat positif sedemikian sehingga . Jelaskan mengapa hal ini juga tidak mungkin terjadi.   Jelaskan bagaimana kita telah menunjukkan keberadaan .    Serupa dengan , kita dapat membuktikan teorema tentang kerapatan bilangan irasional yang dicantumkan dalam pendahuluan kumpulan latihan ini.   Langkah pertama adalah menunjukkan keberadaan suatu bilangan irasional. Kita akan melakukannya dengan membuktikan bahwa irasional. Gunakan pembuktian dengan kontradiksi dan andaikan bahwa merupakan bilangan rasional. Artinya, untuk suatu bilangan bulat positif dan sedemikian sehingga dan tidak memiliki faktor persekutuan positif selain 1.   Jelaskan mengapa . Karena prima, diperoleh bahwa membagi .   Tunjukkan bahwa membagi . Jelaskan bagaimana hal ini membuktikan bahwa merupakan bilangan irasional.   Misalkan dan dua bilangan real berbeda. Tunjukkan bahwa terdapat bilangan bulat dan bilangan bulat positif sedemikian sehingga merupakan bilangan irasional di antara dan .   Pertimbangkan pendekatan dalam .    Misalkan suatu ruang metrik dan suatu subhimpunan tak kosong dari . Untuk , buktikan bahwa .    Buktikan bahwa jika suatu ruang metrik dan serta subhimpunan tak kosong dari , maka untuk setiap .    Untuk setiap pernyataan berikut, jawab benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawab salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya. Sepanjang latihan ini, misalkan dan subhimpunan tak kosong dan terbatas dari (suatu subhimpunan dari disebut terbatas jika terbatas di atas dan di bawah).   Setiap subhimpunan tak kosong dari terbatas.   Jika , maka .   Jika , maka .   Jika suatu subhimpunan tak kosong dari , maka .   Jika suatu subhimpunan tak kosong dari , maka .   Jika suatu subhimpunan tak kosong dari dan dengan dalam metrik Euklides, maka .   "
+},
+{
+  "id": "theorem-7",
+  "level": "2",
+  "url": "sec_glb_exer.html#theorem-7",
+  "type": "Teorema",
+  "number": "5.4",
+  "title": "Sifat Archimedes.",
+  "body": " Sifat Archimedes  sifat Archimedes   Untuk setiap bilangan real , terdapat bilangan asli sedemikian sehingga .   "
+},
+{
+  "id": "thm_Archimedean_2",
+  "level": "2",
+  "url": "sec_glb_exer.html#thm_Archimedean_2",
+  "type": "Teorema",
+  "number": "5.5",
+  "title": "",
+  "body": "  Untuk setiap bilangan real dan dengan , terdapat bilangan asli sedemikian sehingga .   "
+},
+{
+  "id": "thm_Archimedean_3",
+  "level": "2",
+  "url": "sec_glb_exer.html#thm_Archimedean_3",
+  "type": "Teorema",
+  "number": "5.6",
+  "title": "",
+  "body": "  Jika suatu bilangan real positif, maka terdapat bilangan bulat positif sedemikian sehingga .   "
+},
+{
+  "id": "theorem-10",
+  "level": "2",
+  "url": "sec_glb_exer.html#theorem-10",
+  "type": "Teorema",
+  "number": "5.7",
+  "title": "",
+  "body": "  Untuk sebarang dua bilangan real yang berbeda dan , terdapat bilangan rasional yang terletak di antaranya.   "
+},
+{
+  "id": "theorem-11",
+  "level": "2",
+  "url": "sec_glb_exer.html#theorem-11",
+  "type": "Teorema",
+  "number": "5.8",
+  "title": "",
+  "body": "  Untuk sebarang dua bilangan real yang berbeda dan , terdapat bilangan irasional yang terletak di antaranya.   "
+},
+{
+  "id": "exercise-42",
+  "level": "2",
+  "url": "sec_glb_exer.html#exercise-42",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan suatu subhimpunan tak kosong dari yang terbatas di bawah. Misalkan , dan definisikan sebagai .   Jelaskan mengapa merupakan batas bawah bagi . Jelaskan mengapa memiliki infimum.   Misalkan suatu batas bawah bagi . Tunjukkan bahwa . Lalu jelaskan mengapa .  "
+},
+{
+  "id": "ex_GLB_between",
+  "level": "2",
+  "url": "sec_glb_exer.html#ex_GLB_between",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan suatu subhimpunan tak kosong dari .   Andaikan terbatas di atas, dan misalkan . Tunjukkan bahwa untuk setiap , terdapat bilangan sedemikian sehingga .   Andaikan terbatas di bawah, dan misalkan . Tunjukkan bahwa untuk setiap , terdapat bilangan sedemikian sehingga .  "
+},
+{
+  "id": "exercise-44",
+  "level": "2",
+  "url": "sec_glb_exer.html#exercise-44",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan dan merupakan subhimpunan tak kosong dari yang terbatas di atas dan di bawah. Misalkan .   Ikuti langkah-langkah berikut untuk menunjukkan bahwa .   Misalkan dan . Tunjukkan bahwa merupakan batas atas bagi .   Bagian sebelumnya menunjukkan bahwa terbatas di atas sehingga memiliki supremum. Misalkan . Jelaskan mengapa .   Untuk menunjukkan bahwa , kita harus membuktikan bahwa tidak mungkin lebih kecil daripada . Andaikan, demi memperoleh kontradiksi, bahwa . Misalkan . Gunakan hasil untuk memperoleh kontradiksi.   Buktikan bahwa .   Buktikan atau bantah:    Buktikan atau bantah:   "
+},
+{
+  "id": "ex_GLB_function_sup_metric",
+  "level": "2",
+  "url": "sec_glb_exer.html#ex_GLB_function_sup_metric",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan , dengan , adalah himpunan semua fungsi kontinu dari ke . Definisikan dengan .   Berapakah pada ?   Buktikan bahwa merupakan metrik pada . Deskripsikan secara geometris bagaimana metrik ini mengukur jarak antara fungsi dan . (Metrik ini disebut metrik supremum atau metrik seragam pada .)  "
+},
+{
+  "id": "ex_GLB_Archimedean",
+  "level": "2",
+  "url": "sec_glb_exer.html#ex_GLB_Archimedean",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Dalam latihan ini, kita membuktikan sifat Archimedes bilangan asli. Perhatikan bahwa himpunan bilangan asli, yang dinotasikan dengan atau , adalah himpunan semua bilangan bulat positif. Misalkan suatu bilangan real.   Andaikan tidak terdapat bilangan bulat positif sedemikian sehingga . Jelaskan bagaimana kita dapat menyimpulkan bahwa terbatas di atas.   Dengan mengandaikan bahwa terbatas di atas, jelaskan mengapa harus memiliki batas atas terkecil .   Jelaskan mengapa tidak mungkin menjadi batas atas terkecil bagi . Jelaskan mengapa hal ini membuktikan sifat Archimedes.  "
+},
+{
+  "id": "ex_GLB_Archimedean_2",
+  "level": "2",
+  "url": "sec_glb_exer.html#ex_GLB_Archimedean_2",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Dalam latihan ini, kita membuktikan dua pernyataan yang ekuivalen dengan sifat Archimedes (lihat ). Kedua pernyataan tersebut dicantumkan dalam pendahuluan kumpulan latihan ini.   Misalkan dan bilangan real dengan .   Tunjukkan bahwa jika sifat Archimedes benar, maka juga benar.   Tunjukkan bahwa jika benar, maka sifat Archimedes juga benar. Simpulkan bahwa ekuivalen dengan sifat Archimedes.   Buktikan bahwa ekuivalen dengan sifat Archimedes.  "
+},
+{
+  "id": "ex_GLB_rational",
+  "level": "2",
+  "url": "sec_glb_exer.html#ex_GLB_rational",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Kita dapat menggunakan batas bawah terbesar untuk membuktikan teorema tentang kerapatan bilangan rasional yang dicantumkan dalam pendahuluan kumpulan latihan ini. Teorema ini menunjukkan suatu fakta penting bilangan rasional bersifat rapat dalam himpunan bilangan real. Kita membuktikan teorema ini dalam latihan ini. Misalkan dan bilangan real dan andaikan . Berdasarkan sifat Archimedes bilangan asli (lihat Latihan dan ), terdapat bilangan bulat positif sedemikian sehingga . Misalkan . Sifat Archimedes juga menjamin adanya bilangan bulat positif yang memenuhi syarat pembentuk himpunan tersebut; oleh karena itu, himpunan itu tidak kosong.   Tunjukkan bahwa terbatas di bawah dalam .   Jelaskan mengapa memuat suatu bilangan bulat sedemikian sehingga jika dengan , maka . Prinsip Pengurutan Baik berikut mungkin berguna:   Setiap subhimpunan tak kosong dari bilangan bulat yang terbatas di bawah memuat infimumnya.   (Prinsip Pengurutan Baik merupakan salah satu dari banyak aksioma yang ekuivalen dengan Prinsip Induksi Matematika. Prinsip-prinsip ini diterima sebagai aksioma dan dianggap benar.)   Jelaskan mengapa dan . Gunakan pertidaksamaan ini bersama dengan untuk menunjukkan bahwa . Kemudian, temukan suatu bilangan rasional yang terletak di antara dan .  "
+},
+{
+  "id": "exercise-49",
+  "level": "2",
+  "url": "sec_glb_exer.html#exercise-49",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Tunjukkan bahwa setiap bola terbuka dalam memuat suatu titik dengan dan keduanya rasional.  "
+},
+{
+  "id": "exercise-50",
+  "level": "2",
+  "url": "sec_glb_exer.html#exercise-50",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Kita sudah terbiasa menyelesaikan persamaan kuadrat dan memperoleh penyelesaian . Namun, apakah kita benar-benar mengetahui bahwa bilangan ada? Kita membahas pertanyaan tersebut dalam latihan ini dan menunjukkan keberadaan bilangan dengan menggunakan batas bawah terbesar. Di sini, adalah himpunan bilangan real positif.   Sebagai langkah awal, misalkan . Jelaskan mengapa harus memiliki batas bawah terbesar .   Selanjutnya, kita menunjukkan bahwa , sehingga . Kita meninjau kasus dan .   Andaikan . Tunjukkan bahwa terdapat bilangan bulat positif sedemikian sehingga . Jelaskan mengapa hal ini juga tidak mungkin terjadi.   Andaikan . Tunjukkan bahwa terdapat bilangan bulat positif sedemikian sehingga . Jelaskan mengapa hal ini juga tidak mungkin terjadi.   Jelaskan bagaimana kita telah menunjukkan keberadaan .  "
+},
+{
+  "id": "ex_GLB_irrational",
+  "level": "2",
+  "url": "sec_glb_exer.html#ex_GLB_irrational",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Serupa dengan , kita dapat membuktikan teorema tentang kerapatan bilangan irasional yang dicantumkan dalam pendahuluan kumpulan latihan ini.   Langkah pertama adalah menunjukkan keberadaan suatu bilangan irasional. Kita akan melakukannya dengan membuktikan bahwa irasional. Gunakan pembuktian dengan kontradiksi dan andaikan bahwa merupakan bilangan rasional. Artinya, untuk suatu bilangan bulat positif dan sedemikian sehingga dan tidak memiliki faktor persekutuan positif selain 1.   Jelaskan mengapa . Karena prima, diperoleh bahwa membagi .   Tunjukkan bahwa membagi . Jelaskan bagaimana hal ini membuktikan bahwa merupakan bilangan irasional.   Misalkan dan dua bilangan real berbeda. Tunjukkan bahwa terdapat bilangan bulat dan bilangan bulat positif sedemikian sehingga merupakan bilangan irasional di antara dan .   Pertimbangkan pendekatan dalam .  "
+},
+{
+  "id": "ex_GLB_triangle",
+  "level": "2",
+  "url": "sec_glb_exer.html#ex_GLB_triangle",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Misalkan suatu ruang metrik dan suatu subhimpunan tak kosong dari . Untuk , buktikan bahwa .  "
+},
+{
+  "id": "exercise-53",
+  "level": "2",
+  "url": "sec_glb_exer.html#exercise-53",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Buktikan bahwa jika suatu ruang metrik dan serta subhimpunan tak kosong dari , maka untuk setiap .  "
+},
+{
+  "id": "exercise-54",
+  "level": "2",
+  "url": "sec_glb_exer.html#exercise-54",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawab benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawab salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya. Sepanjang latihan ini, misalkan dan subhimpunan tak kosong dan terbatas dari (suatu subhimpunan dari disebut terbatas jika terbatas di atas dan di bawah).   Setiap subhimpunan tak kosong dari terbatas.   Jika , maka .   Jika , maka .   Jika suatu subhimpunan tak kosong dari , maka .   Jika suatu subhimpunan tak kosong dari , maka .   Jika suatu subhimpunan tak kosong dari dan dengan dalam metrik Euklides, maka .  "
+},
+{
   "id": "o003-c90-ch01-activity-checkpoints",
   "level": "1",
   "url": "o003-c90-ch01-activity-checkpoints.html",
@@ -2204,6 +2501,537 @@ var ptx_lunr_docs = [
   "number": "D.12",
   "title": "Penguasaan 4: membandingkan Hamming dan Levenshtein.",
   "body": "Penguasaan 4: membandingkan Hamming dan Levenshtein  Untuk dua untai biner dengan panjang sama, buktikan . Tunjukkan bahwa pertidaksamaan dapat ketat dengan menghitung kedua jarak bagi dan .   Petunjuk 1. Substitusikan tepat koordinat yang berbeda untuk memperoleh batas umum.  Petunjuk 2. Pada contoh, satu penghapusan dan satu penyisipan memindahkan pola bergantian.   Selalu berlaku . Pada contoh, , sedangkan .   Jika berbeda pada koordinat, substitusikan huruf pada masing-masing koordinat tersebut dengan huruf . Urutan ini mengubah menjadi dalam operasi, sehingga minimum Levenshtein memenuhi .  Keempat koordinat dan berbeda, jadi jarak Hamming-nya empat. Untuk Levenshtein, hapus nol pertama dari 0101 sehingga diperoleh 101 , lalu sisipkan nol di ujung sehingga diperoleh 1010 ; jadi . Jaraknya bukan nol karena untainya berbeda. Jaraknya juga bukan satu: satu penyisipan atau penghapusan akan mengubah panjang, sedangkan satu substitusi hanya dapat mengubah satu dari empat koordinat yang berbeda. Jadi .  "
+},
+{
+  "id": "o003-c90-ch05-intro-guides",
+  "level": "1",
+  "url": "o003-c90-ch05-intro-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan untuk kegiatan pendahuluan",
+  "body": " Panduan untuk kegiatan pendahuluan  Tugas 1: keberadaan batas bawah  Tentukan apakah setiap himpunan bagian dari mempunyai batas bawah, lalu benarkan jawaban dengan contoh atau argumen umum. Rubrik: gunakan definisi batas bawah dan, jika jawabannya negatif, berikan satu himpunan bagian yang tidak terbatas di bawah.   Carilah himpunan yang, untuk setiap calon batas bawah , masih memuat suatu bilangan yang lebih kecil daripada .   Tidak. Sebagai contoh, sendiri tidak mempunyai batas bawah.   Andaikan merupakan batas bawah untuk . Menurut definisi, harus berlaku untuk setiap . Akan tetapi, bilangan juga anggota dan memenuhi . Hal ini bertentangan dengan syarat bahwa adalah batas bawah. Jadi tidak mempunyai batas bawah, sehingga tidak setiap himpunan bagian dari terbatas di bawah.   Tugas 2: pertidaksamaan kuadrat  Untuk , tentukan apakah terbatas di bawah dan, jika demikian, tentukan infimumnya. Rubrik: selesaikan pertidaksamaan, nyatakan himpunannya sebagai interval, dan jelaskan mengapa titik ujung bawah adalah batas bawah terbesarnya.    Langkah 1. Bagilah pertidaksamaan dengan dan tentukan akar-akar .   Langkah 2. Karena koefisien positif, polinom bernilai negatif tepat di antara kedua akarnya.    ; himpunan ini terbatas di bawah dan .   Karena , pertidaksamaan semula setara dengan . Akar-akarnya adalah Parabola membuka ke atas, sehingga nilainya negatif tepat untuk . Jadi .  Setiap anggota lebih besar daripada , maka adalah batas bawah. Jika , pilih di antara dan ; maka tetapi , sehingga bukan batas bawah. Dengan demikian , meskipun titik itu tidak termasuk dalam karena pertidaksamaannya ketat.   Tugas 3: citra fungsi kubik  Untuk , tentukan apakah terbatas di bawah dan apakah mempunyai infimum di . Rubrik: tentukan citra fungsi kubik tersebut, bukan hanya beberapa nilainya.   Untuk sembarang , coba selesaikan persamaan terhadap .    . Karena itu tidak terbatas di bawah dan tidak mempunyai infimum yang merupakan bilangan real.   Ambil sembarang dan tetapkan . Bilangan ini real dan memenuhi . Jadi setiap bilangan real merupakan anggota , sedangkan berdasarkan definisinya ; maka . Untuk setiap calon batas bawah , bilangan lebih kecil daripada . Jadi tidak terbatas di bawah dan tidak mempunyai infimum di .   Tugas 4: jumlah dua perpangkatan  Dengan konvensi , tentukan apakah terbatas di bawah dan tentukan infimumnya. Rubrik: buktikan satu batas bawah berlaku untuk semua pasangan eksponen dan periksa apakah batas itu dicapai.   Karena eksponen positif terkecil adalah , bandingkan dengan dan dengan .   Himpunan terbatas di bawah dan ; bahkan adalah nilai minimumnya.   Untuk menurut konvensi yang dinyatakan, berlaku dan . Karena perpangkatan dengan basis lebih besar daripada satu meningkat terhadap eksponennya, dan . Akibatnya untuk setiap anggota , sehingga adalah batas bawah.  Dengan memilih , kita memperoleh . Tidak ada batas bawah yang lebih besar daripada suatu anggota himpunan, khususnya daripada . Oleh sebab itu adalah batas bawah terbesar, minimum, dan infimum .   Tugas 5: batas atas terkecil  Rumuskan definisi batas atas terkecil untuk suatu himpunan bagian dari . Rubrik: nyatakan baik syarat menjadi batas atas maupun syarat bahwa batas atas tersebut tidak melebihi batas atas lain mana pun.   Balik arah pertidaksamaan dalam dua butir definisi batas bawah terbesar: anggota berada di bawah calon batas, dan calon itu berada di bawah setiap batas atas lainnya.   Untuk yang terbatas di atas, bilangan adalah batas atas terkecil jika untuk setiap dan untuk setiap batas atas dari . Bilangan ini disebut supremum dan ditulis .   Misalkan adalah himpunan bagian tak kosong dari yang terbatas di atas. Bilangan disebut batas atas terkecil dari apabila memenuhi dua syarat berikut.   untuk setiap , sehingga adalah batas atas ;    jika adalah batas atas , maka .   Syarat kedua menyatakan bahwa tidak ada batas atas yang lebih kecil daripada . Bilangan tersebut juga disebut supremum, dan dinotasikan dengan . Aksioma kelengkapan bilangan real menjamin keberadaannya bagi setiap himpunan bagian tak kosong dari yang terbatas di atas.   "
+},
+{
+  "id": "o003-c90-ch05-intro-task-01",
+  "level": "2",
+  "url": "o003-c90-ch05-intro-guides.html#o003-c90-ch05-intro-task-01",
+  "type": "Pemeriksaan",
+  "number": "E.1",
+  "title": "Tugas 1: keberadaan batas bawah.",
+  "body": "Tugas 1: keberadaan batas bawah  Tentukan apakah setiap himpunan bagian dari mempunyai batas bawah, lalu benarkan jawaban dengan contoh atau argumen umum. Rubrik: gunakan definisi batas bawah dan, jika jawabannya negatif, berikan satu himpunan bagian yang tidak terbatas di bawah.   Carilah himpunan yang, untuk setiap calon batas bawah , masih memuat suatu bilangan yang lebih kecil daripada .   Tidak. Sebagai contoh, sendiri tidak mempunyai batas bawah.   Andaikan merupakan batas bawah untuk . Menurut definisi, harus berlaku untuk setiap . Akan tetapi, bilangan juga anggota dan memenuhi . Hal ini bertentangan dengan syarat bahwa adalah batas bawah. Jadi tidak mempunyai batas bawah, sehingga tidak setiap himpunan bagian dari terbatas di bawah.  "
+},
+{
+  "id": "o003-c90-ch05-intro-task-02",
+  "level": "2",
+  "url": "o003-c90-ch05-intro-guides.html#o003-c90-ch05-intro-task-02",
+  "type": "Pemeriksaan",
+  "number": "E.2",
+  "title": "Tugas 2: pertidaksamaan kuadrat.",
+  "body": "Tugas 2: pertidaksamaan kuadrat  Untuk , tentukan apakah terbatas di bawah dan, jika demikian, tentukan infimumnya. Rubrik: selesaikan pertidaksamaan, nyatakan himpunannya sebagai interval, dan jelaskan mengapa titik ujung bawah adalah batas bawah terbesarnya.    Langkah 1. Bagilah pertidaksamaan dengan dan tentukan akar-akar .   Langkah 2. Karena koefisien positif, polinom bernilai negatif tepat di antara kedua akarnya.    ; himpunan ini terbatas di bawah dan .   Karena , pertidaksamaan semula setara dengan . Akar-akarnya adalah Parabola membuka ke atas, sehingga nilainya negatif tepat untuk . Jadi .  Setiap anggota lebih besar daripada , maka adalah batas bawah. Jika , pilih di antara dan ; maka tetapi , sehingga bukan batas bawah. Dengan demikian , meskipun titik itu tidak termasuk dalam karena pertidaksamaannya ketat.  "
+},
+{
+  "id": "o003-c90-ch05-intro-task-03",
+  "level": "2",
+  "url": "o003-c90-ch05-intro-guides.html#o003-c90-ch05-intro-task-03",
+  "type": "Pemeriksaan",
+  "number": "E.3",
+  "title": "Tugas 3: citra fungsi kubik.",
+  "body": "Tugas 3: citra fungsi kubik  Untuk , tentukan apakah terbatas di bawah dan apakah mempunyai infimum di . Rubrik: tentukan citra fungsi kubik tersebut, bukan hanya beberapa nilainya.   Untuk sembarang , coba selesaikan persamaan terhadap .    . Karena itu tidak terbatas di bawah dan tidak mempunyai infimum yang merupakan bilangan real.   Ambil sembarang dan tetapkan . Bilangan ini real dan memenuhi . Jadi setiap bilangan real merupakan anggota , sedangkan berdasarkan definisinya ; maka . Untuk setiap calon batas bawah , bilangan lebih kecil daripada . Jadi tidak terbatas di bawah dan tidak mempunyai infimum di .  "
+},
+{
+  "id": "o003-c90-ch05-intro-task-04",
+  "level": "2",
+  "url": "o003-c90-ch05-intro-guides.html#o003-c90-ch05-intro-task-04",
+  "type": "Pemeriksaan",
+  "number": "E.4",
+  "title": "Tugas 4: jumlah dua perpangkatan.",
+  "body": "Tugas 4: jumlah dua perpangkatan  Dengan konvensi , tentukan apakah terbatas di bawah dan tentukan infimumnya. Rubrik: buktikan satu batas bawah berlaku untuk semua pasangan eksponen dan periksa apakah batas itu dicapai.   Karena eksponen positif terkecil adalah , bandingkan dengan dan dengan .   Himpunan terbatas di bawah dan ; bahkan adalah nilai minimumnya.   Untuk menurut konvensi yang dinyatakan, berlaku dan . Karena perpangkatan dengan basis lebih besar daripada satu meningkat terhadap eksponennya, dan . Akibatnya untuk setiap anggota , sehingga adalah batas bawah.  Dengan memilih , kita memperoleh . Tidak ada batas bawah yang lebih besar daripada suatu anggota himpunan, khususnya daripada . Oleh sebab itu adalah batas bawah terbesar, minimum, dan infimum .  "
+},
+{
+  "id": "o003-c90-ch05-intro-task-05",
+  "level": "2",
+  "url": "o003-c90-ch05-intro-guides.html#o003-c90-ch05-intro-task-05",
+  "type": "Pemeriksaan",
+  "number": "E.5",
+  "title": "Tugas 5: batas atas terkecil.",
+  "body": "Tugas 5: batas atas terkecil  Rumuskan definisi batas atas terkecil untuk suatu himpunan bagian dari . Rubrik: nyatakan baik syarat menjadi batas atas maupun syarat bahwa batas atas tersebut tidak melebihi batas atas lain mana pun.   Balik arah pertidaksamaan dalam dua butir definisi batas bawah terbesar: anggota berada di bawah calon batas, dan calon itu berada di bawah setiap batas atas lainnya.   Untuk yang terbatas di atas, bilangan adalah batas atas terkecil jika untuk setiap dan untuk setiap batas atas dari . Bilangan ini disebut supremum dan ditulis .   Misalkan adalah himpunan bagian tak kosong dari yang terbatas di atas. Bilangan disebut batas atas terkecil dari apabila memenuhi dua syarat berikut.   untuk setiap , sehingga adalah batas atas ;    jika adalah batas atas , maka .   Syarat kedua menyatakan bahwa tidak ada batas atas yang lebih kecil daripada . Bilangan tersebut juga disebut supremum, dan dinotasikan dengan . Aksioma kelengkapan bilangan real menjamin keberadaannya bagi setiap himpunan bagian tak kosong dari yang terbatas di atas.  "
+},
+{
+  "id": "o003-c90-ch05-point-set-guides",
+  "level": "1",
+  "url": "o003-c90-ch05-point-set-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan untuk jarak titik ke himpunan",
+  "body": " Panduan untuk jarak titik ke himpunan  Enam panduan berikut mengikuti urutan tugas pada bagian tentang jarak dari titik ke himpunan. Empat tugas pertama menyusun bukti bahwa batas bawah terbesar itu tunggal; dua tugas terakhir memeriksa keberadaan dan makna . Bukalah petunjuk, jawaban, dan pembahasan hanya setelah mencoba tiap tugas secara mandiri.  Tugas 1: memilih bentuk bukti ketunggalan  Tentukan metode untuk membuktikan bahwa himpunan mempunyai paling banyak satu batas bawah terbesar. Rubrik: nyatakan dua calon batas bawah terbesar dan jelaskan hubungan apa yang cukup dibuktikan di antara keduanya.    Langkah 1. Misalkan dan sama-sama memenuhi definisi batas bawah terbesar untuk .   Langkah 2. Carilah dua pertidaksamaan yang, jika digabungkan, memaksa .   Gunakan bukti langsung: ambil dua calon dan , lalu buktikan dan . Antisimetri urutan pada kemudian memberi .   Pernyataan ketunggalan berbentuk: jika dan keduanya merupakan batas bawah terbesar , maka keduanya sama. Karena objek-objek ini berada dalam himpunan terurut , cukup memperoleh kedua arah perbandingan, yaitu dan . Sifat antisimetri urutan real menyimpulkan . Langkah-langkah berikut menunjukkan bagaimana definisi batas bawah terbesar menghasilkan kedua pertidaksamaan itu.   Tugas 2: mengenali kedua batas bawah  Andaikan dan sama-sama merupakan batas bawah terbesar untuk . Mengapa masing-masing merupakan batas bawah ? Rubrik: gunakan bagian yang tepat dari definisi dan tuliskan pertidaksamaannya untuk setiap .    Langkah 1. Kata terbesar menambahkan suatu sifat pada sebuah objek yang lebih dahulu harus menjadi batas bawah.   Langkah 2. Terapkan syarat batas bawah sekali untuk dan sekali lagi untuk .   Itu merupakan syarat pertama dalam definisi batas bawah terbesar: untuk setiap , berlaku dan .   Sebuah batas bawah terbesar harus, pertama-tama, merupakan batas bawah. Karena adalah batas bawah terbesar , definisi memberi untuk setiap . Alasan yang sama untuk memberi untuk setiap . Jadi kedua bilangan itu berada di antara batas-batas bawah yang dapat dibandingkan oleh sifat terbesar pada langkah berikutnya.   Tugas 3: memperoleh dua pertidaksamaan  Dengan dan seperti pada tugas sebelumnya, tentukan dua kesimpulan yang diberikan oleh sifat bahwa masing-masing adalah batas bawah terbesar . Rubrik: terapkan kemaksimalan kepada , lalu kemaksimalan kepada .    Langkah 1. Setiap batas bawah bagi memenuhi apabila adalah batas bawah terbesar.   Langkah 2. Pada penerapan pertama pilih ; pada penerapan kedua tukarkan peran keduanya.   Karena adalah batas bawah dan yang terbesar, . Sebaliknya, karena adalah batas bawah dan yang terbesar, .   Sifat kedua batas bawah terbesar menyatakan bahwa setiap batas bawah dari memenuhi . Tugas sebelumnya membuktikan bahwa merupakan batas bawah, sehingga memilih menghasilkan . Dengan menukar peran keduanya, sifat terbesar dari diterapkan kepada batas bawah dan menghasilkan . Kedua arah perbandingan telah diperoleh tanpa mengasumsikan kesimpulan ketunggalan.   Tugas 4: menutup bukti ketunggalan  Selesaikan bukti bahwa batas bawah terbesar itu tunggal. Rubrik: sebutkan sifat urutan yang dipakai dan nyatakan dengan jelas bahwa setiap dua calon harus sama.    Langkah 1. Dari tugas sebelumnya diketahui sekaligus dan .   Langkah 2. Gunakan antisimetri relasi pada bilangan real.   Antisimetri memberi . Karena dua calon batas bawah terbesar mana pun harus sama, batas bawah terbesar itu tunggal.   Misalkan dan merupakan dua batas bawah terbesar bagi . Karena masing-masing merupakan batas bawah, sifat terbesar dari memberi , sedangkan sifat terbesar dari memberi . Relasi pada bersifat antisimetris, sehingga dua pertidaksamaan tersebut memaksa . Jadi tidak mungkin ada dua batas bawah terbesar yang berbeda; jika batas bawah terbesar itu ada, nilainya tunggal.   Tugas 5: keberadaan jarak titik ke himpunan  Untuk ruang metrik , titik , dan himpunan tak kosong , buktikan bahwa ada. Rubrik: buktikan bahwa himpunan nilai jarak itu tak kosong dan terbatas di bawah sebelum memakai sifat kelengkapan .    Langkah 1. Pilih satu untuk menunjukkan bahwa bukan himpunan kosong.   Langkah 2. Aksioma metrik memberi satu batas bawah yang sama bagi semua anggota .   Himpunan tak kosong karena , dan adalah batas bawahnya karena jarak selalu tak negatif. Kelengkapan bilangan real menjamin bahwa , yaitu , ada dan tunggal.   Karena tak kosong, ada . Maka bilangan real merupakan anggota , sehingga . Untuk setiap , aksioma tak-negatif metrik memberi . Jadi adalah batas bawah .  Aksioma kelengkapan menyatakan bahwa setiap himpunan real tak kosong yang terbatas di bawah mempunyai infimum. Karena kedua hipotesis itu berlaku untuk , bilangan ada. Ketunggalan batas bawah terbesar, yang dibuktikan pada empat tugas pertama, memastikan nilainya tunggal. Berdasarkan definisi, .   Tugas 6: apakah jarak nol berarti keanggotaan?  Putuskan apakah selalu mengakibatkan . Rubrik: jika pernyataan salah, berikan ruang metrik, titik, dan himpunan tak kosong yang konkret; hitung infimumnya dan jelaskan hubungan yang benar dengan penutupan .    Langkah 1. Di dengan metrik Euklides, periksa dan .   Langkah 2. Anggota dapat mendekati sedekat apa pun tanpa pernah sama dengan .   Tidak. Dalam dengan metrik Euklides, ambil dan . Maka , tetapi . Yang selalu benar dalam ruang metrik ialah jika dan hanya jika .   Gunakan ruang metrik dengan . Untuk dan , himpunan jaraknya ialah . Infimum himpunan ini adalah , sehingga . Akan tetapi, interval tidak memuat titik ujung ; jadi . Ini merupakan contoh tandingan bagi implikasi yang ditanyakan.  Makna yang tepat adalah keanggotaan dalam penutupan. Jika , maka untuk setiap terdapat dengan ; jika tidak, suatu akan menjadi batas bawah positif bagi semua jarak dan infimumnya tidak mungkin nol. Jadi setiap bola terbuka di sekitar bertemu , sehingga . Sebaliknya, jika , untuk setiap ada dengan . Karena dan untuk setiap , haruslah . Maka setara dengan , bukan dengan kecuali, misalnya, tertutup.   "
+},
+{
+  "id": "o003-c90-ch05-pointset-task-01",
+  "level": "2",
+  "url": "o003-c90-ch05-point-set-guides.html#o003-c90-ch05-pointset-task-01",
+  "type": "Pemeriksaan",
+  "number": "E.6",
+  "title": "Tugas 1: memilih bentuk bukti ketunggalan.",
+  "body": "Tugas 1: memilih bentuk bukti ketunggalan  Tentukan metode untuk membuktikan bahwa himpunan mempunyai paling banyak satu batas bawah terbesar. Rubrik: nyatakan dua calon batas bawah terbesar dan jelaskan hubungan apa yang cukup dibuktikan di antara keduanya.    Langkah 1. Misalkan dan sama-sama memenuhi definisi batas bawah terbesar untuk .   Langkah 2. Carilah dua pertidaksamaan yang, jika digabungkan, memaksa .   Gunakan bukti langsung: ambil dua calon dan , lalu buktikan dan . Antisimetri urutan pada kemudian memberi .   Pernyataan ketunggalan berbentuk: jika dan keduanya merupakan batas bawah terbesar , maka keduanya sama. Karena objek-objek ini berada dalam himpunan terurut , cukup memperoleh kedua arah perbandingan, yaitu dan . Sifat antisimetri urutan real menyimpulkan . Langkah-langkah berikut menunjukkan bagaimana definisi batas bawah terbesar menghasilkan kedua pertidaksamaan itu.  "
+},
+{
+  "id": "o003-c90-ch05-pointset-task-02",
+  "level": "2",
+  "url": "o003-c90-ch05-point-set-guides.html#o003-c90-ch05-pointset-task-02",
+  "type": "Pemeriksaan",
+  "number": "E.7",
+  "title": "Tugas 2: mengenali kedua batas bawah.",
+  "body": "Tugas 2: mengenali kedua batas bawah  Andaikan dan sama-sama merupakan batas bawah terbesar untuk . Mengapa masing-masing merupakan batas bawah ? Rubrik: gunakan bagian yang tepat dari definisi dan tuliskan pertidaksamaannya untuk setiap .    Langkah 1. Kata terbesar menambahkan suatu sifat pada sebuah objek yang lebih dahulu harus menjadi batas bawah.   Langkah 2. Terapkan syarat batas bawah sekali untuk dan sekali lagi untuk .   Itu merupakan syarat pertama dalam definisi batas bawah terbesar: untuk setiap , berlaku dan .   Sebuah batas bawah terbesar harus, pertama-tama, merupakan batas bawah. Karena adalah batas bawah terbesar , definisi memberi untuk setiap . Alasan yang sama untuk memberi untuk setiap . Jadi kedua bilangan itu berada di antara batas-batas bawah yang dapat dibandingkan oleh sifat terbesar pada langkah berikutnya.  "
+},
+{
+  "id": "o003-c90-ch05-pointset-task-03",
+  "level": "2",
+  "url": "o003-c90-ch05-point-set-guides.html#o003-c90-ch05-pointset-task-03",
+  "type": "Pemeriksaan",
+  "number": "E.8",
+  "title": "Tugas 3: memperoleh dua pertidaksamaan.",
+  "body": "Tugas 3: memperoleh dua pertidaksamaan  Dengan dan seperti pada tugas sebelumnya, tentukan dua kesimpulan yang diberikan oleh sifat bahwa masing-masing adalah batas bawah terbesar . Rubrik: terapkan kemaksimalan kepada , lalu kemaksimalan kepada .    Langkah 1. Setiap batas bawah bagi memenuhi apabila adalah batas bawah terbesar.   Langkah 2. Pada penerapan pertama pilih ; pada penerapan kedua tukarkan peran keduanya.   Karena adalah batas bawah dan yang terbesar, . Sebaliknya, karena adalah batas bawah dan yang terbesar, .   Sifat kedua batas bawah terbesar menyatakan bahwa setiap batas bawah dari memenuhi . Tugas sebelumnya membuktikan bahwa merupakan batas bawah, sehingga memilih menghasilkan . Dengan menukar peran keduanya, sifat terbesar dari diterapkan kepada batas bawah dan menghasilkan . Kedua arah perbandingan telah diperoleh tanpa mengasumsikan kesimpulan ketunggalan.  "
+},
+{
+  "id": "o003-c90-ch05-pointset-task-04",
+  "level": "2",
+  "url": "o003-c90-ch05-point-set-guides.html#o003-c90-ch05-pointset-task-04",
+  "type": "Pemeriksaan",
+  "number": "E.9",
+  "title": "Tugas 4: menutup bukti ketunggalan.",
+  "body": "Tugas 4: menutup bukti ketunggalan  Selesaikan bukti bahwa batas bawah terbesar itu tunggal. Rubrik: sebutkan sifat urutan yang dipakai dan nyatakan dengan jelas bahwa setiap dua calon harus sama.    Langkah 1. Dari tugas sebelumnya diketahui sekaligus dan .   Langkah 2. Gunakan antisimetri relasi pada bilangan real.   Antisimetri memberi . Karena dua calon batas bawah terbesar mana pun harus sama, batas bawah terbesar itu tunggal.   Misalkan dan merupakan dua batas bawah terbesar bagi . Karena masing-masing merupakan batas bawah, sifat terbesar dari memberi , sedangkan sifat terbesar dari memberi . Relasi pada bersifat antisimetris, sehingga dua pertidaksamaan tersebut memaksa . Jadi tidak mungkin ada dua batas bawah terbesar yang berbeda; jika batas bawah terbesar itu ada, nilainya tunggal.  "
+},
+{
+  "id": "o003-c90-ch05-pointset-task-05",
+  "level": "2",
+  "url": "o003-c90-ch05-point-set-guides.html#o003-c90-ch05-pointset-task-05",
+  "type": "Pemeriksaan",
+  "number": "E.10",
+  "title": "Tugas 5: keberadaan jarak titik ke himpunan.",
+  "body": "Tugas 5: keberadaan jarak titik ke himpunan  Untuk ruang metrik , titik , dan himpunan tak kosong , buktikan bahwa ada. Rubrik: buktikan bahwa himpunan nilai jarak itu tak kosong dan terbatas di bawah sebelum memakai sifat kelengkapan .    Langkah 1. Pilih satu untuk menunjukkan bahwa bukan himpunan kosong.   Langkah 2. Aksioma metrik memberi satu batas bawah yang sama bagi semua anggota .   Himpunan tak kosong karena , dan adalah batas bawahnya karena jarak selalu tak negatif. Kelengkapan bilangan real menjamin bahwa , yaitu , ada dan tunggal.   Karena tak kosong, ada . Maka bilangan real merupakan anggota , sehingga . Untuk setiap , aksioma tak-negatif metrik memberi . Jadi adalah batas bawah .  Aksioma kelengkapan menyatakan bahwa setiap himpunan real tak kosong yang terbatas di bawah mempunyai infimum. Karena kedua hipotesis itu berlaku untuk , bilangan ada. Ketunggalan batas bawah terbesar, yang dibuktikan pada empat tugas pertama, memastikan nilainya tunggal. Berdasarkan definisi, .  "
+},
+{
+  "id": "o003-c90-ch05-pointset-task-06",
+  "level": "2",
+  "url": "o003-c90-ch05-point-set-guides.html#o003-c90-ch05-pointset-task-06",
+  "type": "Pemeriksaan",
+  "number": "E.11",
+  "title": "Tugas 6: apakah jarak nol berarti keanggotaan?",
+  "body": "Tugas 6: apakah jarak nol berarti keanggotaan?  Putuskan apakah selalu mengakibatkan . Rubrik: jika pernyataan salah, berikan ruang metrik, titik, dan himpunan tak kosong yang konkret; hitung infimumnya dan jelaskan hubungan yang benar dengan penutupan .    Langkah 1. Di dengan metrik Euklides, periksa dan .   Langkah 2. Anggota dapat mendekati sedekat apa pun tanpa pernah sama dengan .   Tidak. Dalam dengan metrik Euklides, ambil dan . Maka , tetapi . Yang selalu benar dalam ruang metrik ialah jika dan hanya jika .   Gunakan ruang metrik dengan . Untuk dan , himpunan jaraknya ialah . Infimum himpunan ini adalah , sehingga . Akan tetapi, interval tidak memuat titik ujung ; jadi . Ini merupakan contoh tandingan bagi implikasi yang ditanyakan.  Makna yang tepat adalah keanggotaan dalam penutupan. Jika , maka untuk setiap terdapat dengan ; jika tidak, suatu akan menjadi batas bawah positif bagi semua jarak dan infimumnya tidak mungkin nol. Jadi setiap bola terbuka di sekitar bertemu , sehingga . Sebaliknya, jika , untuk setiap ada dengan . Karena dan untuk setiap , haruslah . Maka setara dengan , bukan dengan kecuali, misalnya, tertutup.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch05-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian pertama",
+  "body": " Panduan latihan sumber, bagian pertama  Delapan belas panduan berikut berkorespondensi, dalam urutan sumber, dengan semua tugas yang memuat pernyataan pada enam latihan pertama bagian latihan Bab 5. Buka petunjuk secara bertahap; jawaban menyatakan kesimpulan langsung, sedangkan pembahasan memberikan pembuktian lengkap. Rubrik pada setiap butir menunjukkan unsur yang harus tampak dalam pekerjaan mandiri.  Translasi himpunan dan batas bawah  Misalkan tidak kosong dan terbatas di bawah, serta . Jelaskan mengapa merupakan batas bawah bagi dan mengapa mempunyai infimum. Rubrik: buktikan sifat batas bawah, ketak-kosongan, dan syarat untuk memakai aksioma kelengkapan.   Mulailah dari untuk setiap , lalu tambahkan pada kedua ruas.   Setiap memenuhi . Himpunan tidak kosong dan terbatas di bawah, sehingga aksioma kelengkapan menjamin adanya .   Karena adalah batas bawah bagi , untuk setiap berlaku . Penjumlahan dengan bilangan real mempertahankan urutan, sehingga . Setiap unsur berbentuk ; jadi memang batas bawah bagi .  Pilih , yang ada karena tidak kosong. Maka , sehingga tidak kosong. Bersama dengan batas bawah yang baru ditemukan, aksioma kelengkapan untuk menyatakan bahwa mempunyai batas bawah terbesar, yakni .   Infimum translasi himpunan  Dengan asumsi yang sama, misalkan suatu batas bawah bagi . Buktikan bahwa , lalu simpulkan . Rubrik: ubah menjadi batas bawah bagi dan gunakan sifat terbesar dari infimum.   Dari untuk semua , kurangi kedua ruas dengan .   Bilangan adalah batas bawah bagi , jadi dan . Karena sendiri merupakan batas bawah bagi , bilangan itu adalah infimumnya.   Karena batas bawah bagi , untuk setiap berlaku . Mengurangi kedua ruas dengan memberi untuk setiap . Jadi merupakan batas bawah bagi . Infimum adalah batas bawah terbesar, sehingga , atau ekuivalen dengan .  Butir sebelumnya telah membuktikan bahwa adalah batas bawah bagi . Argumen di atas membuktikan bahwa setiap batas bawah bagi tidak melebihi bilangan tersebut. Maka adalah batas bawah terbesar bagi , sehingga .   Mendekati supremum dari bawah  Misalkan tidak kosong dan terbatas di atas, serta . Buktikan bahwa untuk setiap terdapat dengan . Rubrik: gunakan kontraposisi dari sifat batas atas, bukan asumsi bahwa supremum harus berada di dalam .   Jika tidak ada yang lebih besar daripada , apakah peran bagi ?   Jika tidak ada dengan , maka adalah batas atas bagi , yang bertentangan dengan . Karena batas atas, unsur yang diperoleh juga memenuhi .   Ambil sebarang . Andaikan tidak terdapat dengan . Maka setiap memenuhi , sehingga adalah batas atas bagi . Namun, karena adalah batas atas terkecil, setiap batas atas bagi harus memenuhi . Hal ini bertentangan dengan . Jadi ada dengan . Selain itu, adalah batas atas bagi , maka . Dengan demikian .   Mendekati infimum dari atas  Misalkan tidak kosong dan terbatas di bawah, serta . Buktikan bahwa untuk setiap terdapat dengan . Rubrik: tunjukkan secara eksplisit kontradiksi yang timbul jika menjadi batas bawah.   Andaikan tidak ada dengan ; bandingkan dengan batas bawah terbesar .   Jika semua memenuhi , maka adalah batas bawah bagi , sehingga ; ini bertentangan dengan . Unsur yang diperoleh memenuhi karena batas bawah.   Ambil sebarang . Jika tidak ada dengan , maka untuk setiap . Dengan demikian merupakan batas bawah bagi . Karena adalah batas bawah terbesar, setiap batas bawah harus memenuhi , bertentangan dengan . Jadi terdapat dengan . Karena sendiri batas bawah bagi , berlaku pula . Maka .   Batas atas jumlah dua himpunan  Misalkan tidak kosong serta terbatas di atas dan di bawah. Tetapkan , , dan . Buktikan bahwa merupakan batas atas bagi . Rubrik: mulai dari dua pertidaksamaan batas atas dan kuantifikasikan atas setiap unsur .   Untuk dan , jumlahkan dan .   Setiap memenuhi ; jadi adalah batas atas bagi .   Supremum adalah batas atas bagi , sehingga untuk setiap . Demikian pula, untuk setiap . Ambil sebarang unsur . Berdasarkan definisi jumlah himpunan, terdapat dan dengan . Menjumlahkan kedua pertidaksamaan menghasilkan . Karena hal ini berlaku bagi setiap , adalah batas atas bagi .   Membandingkan dua supremum  Dengan notasi pada butir sebelumnya, misalkan . Jelaskan mengapa . Rubrik: sebutkan sifat supremum yang dipakai dan alasan ada.   Supremum tidak lebih besar daripada batas atas mana pun bagi himpunan yang sama.   Himpunan tidak kosong dan, menurut butir sebelumnya, terbatas di atas oleh . Jadi ada dan, sebagai batas atas terkecil, memenuhi .   Karena dan tidak kosong, terdapat dan , sehingga ; jadi tidak kosong. Butir sebelumnya menunjukkan bahwa merupakan batas atas bagi . Aksioma kelengkapan kemudian menjamin adanya . Supremum adalah batas atas terkecil, sehingga ia tidak dapat melebihi batas atas . Oleh karena itu .   Kesamaan supremum jumlah himpunan  Dengan , , dan , buktikan bahwa melalui kontradiksi. Jika , tetapkan dan gunakan sifat pendekatan supremum. Rubrik: pilih unsur dari kedua himpunan dengan galat yang jumlahnya kurang dari .   Pilih dan sehingga dan .   Pilihan tersebut memberi , padahal dan adalah batas atas. Maka ; bersama , diperoleh .   Kita sudah mengetahui . Andaikan dan definisikan . Karena , sifat pendekatan supremum menjamin adanya dengan . Dengan alasan yang sama, ada dengan .  Menjumlahkan dua pertidaksamaan ketat itu menghasilkan Akan tetapi, , sedangkan adalah batas atas bagi ; seharusnya . Kontradiksi ini menolak . Karena sebelumnya telah dibuktikan , satu-satunya kemungkinan ialah . Jadi .   Infimum jumlah himpunan  Buktikan bahwa . Rubrik: buktikan terlebih dahulu satu batas bawah, lalu gunakan pendekatan infimum dengan pembagian galat yang eksplisit untuk membuktikan arah sebaliknya.   Jika , , dan , gunakan untuk memilih serta .   Bilangan adalah batas bawah bagi , jadi . Jika ketat, unsur dan dapat dipilih dengan , bertentangan dengan sifat sebagai batas bawah. Jadi .   Tetapkan dan . Untuk setiap dan , berlaku dan , sehingga . Jadi adalah batas bawah bagi . Himpunan tidak kosong, maka infimumnya ada, dan sifat terbesar infimum memberi .  Andaikan dan tetapkan . Karena , sifat pendekatan infimum memberi dengan . Demikian pula, ada dengan . Maka Ini mustahil karena dan adalah batas bawah bagi , yang mengharuskan . Jadi . Bersama , diperoleh .   Supremum suatu gabungan  Buktikan atau bantah pernyataan berikut. Rubrik: putuskan nilai kebenarannya dan verifikasi dua syarat batas atas terkecil.   Setiap unsur gabungan berasal dari atau ; setiap batas atas bagi gabungan juga membatasi keduanya.   Pernyataan benar. Bilangan membatasi dari atas, dan setiap batas atas bagi sedikitnya sebesar .   Tetapkan . Jika , maka atau . Dalam kasus pertama, ; dalam kasus kedua, . Jadi adalah batas atas bagi .  Sekarang misalkan sebarang batas atas bagi . Karena dan , adalah batas atas bagi dan bagi . Maka dan , sehingga . Jadi adalah batas atas terkecil, yang membuktikan kesamaan tersebut.   Infimum suatu gabungan  Buktikan atau bantah pernyataan berikut. Rubrik: putuskan nilai kebenarannya dan verifikasi dua syarat batas bawah terbesar.   Gunakan bahwa setiap unsur gabungan berada dalam salah satu himpunan dan setiap batas bawah bagi gabungan membatasi keduanya.   Pernyataan benar. Bilangan membatasi dari bawah, dan setiap batas bawah bagi gabungan tidak melebihi .   Tetapkan . Jika , maka atau . Jika , maka ; jika , maka . Jadi adalah batas bawah bagi .  Misalkan sebarang batas bawah bagi . Karena , adalah batas bawah bagi dan bagi . Maka dan , sehingga . Jadi adalah batas bawah terbesar dan kesamaan yang diminta berlaku.   Menghitung metrik supremum  Pada dengan , hitung . Rubrik: tentukan supremum nilai mutlak pada seluruh interval dan tunjukkan bahwa nilainya dicapai.   Fungsi meningkat pada ; bandingkan nilai mutlak pada kedua ujung rentangnya.   , dan jarak maksimum itu dicapai pada .   Selisih kedua fungsi adalah . Untuk , sehingga meningkat pada . Karena dan , setiap berada dalam . Maka untuk semua . Pada , , sehingga batas atas ini dicapai dan . Jadi .   Membuktikan metrik seragam pada ruang fungsi  Misalkan , dengan , dan definisikan . Buktikan bahwa merupakan metrik dan jelaskan makna geometrisnya. Rubrik: buktikan nilai supremum berhingga serta keempat aksioma metrik, lalu identifikasi jarak vertikal maksimum antara dua graf.   Gunakan kekompakan untuk keberadaan maksimum dan terapkan pertidaksamaan segitiga nilai mutlak secara titik-demi-titik sebelum mengambil supremum.   Fungsi kontinu pada interval kompak, sehingga supremumnya berhingga dan dicapai. Fungsi tak negatif, nol tepat untuk , simetris, dan memenuhi pertidaksamaan segitiga. Secara geometris, adalah pemisahan vertikal terbesar antara graf dan pada interval tersebut.   Untuk , fungsi kontinu. Teorema nilai ekstrem pada interval kompak menjamin bahwa fungsi ini mencapai suatu maksimum berhingga. Jadi terdefinisi sebagai bilangan real tak negatif.  Jelas . Jika , maka seluruh selisih bernilai nol, sehingga . Sebaliknya, jika , maka untuk setiap , . Jadi untuk setiap , yakni . Selanjutnya, pada setiap , maka .  Untuk dan setiap , Ruas kanan adalah batas atas yang tidak bergantung pada . Mengambil supremum atas pada ruas kiri memberi . Jadi keempat aksioma metrik terpenuhi. Nilai adalah jarak vertikal kedua graf di absis ; supremum, yang di sini merupakan maksimum, adalah jarak vertikal terbesar pada seluruh interval. Itulah alasan nama metrik supremum atau metrik seragam .   Asumsi negasi sifat Archimedes  Misalkan . Andaikan tidak ada bilangan bulat positif dengan . Jelaskan mengapa terbatas di atas. Rubrik: terjemahkan negasi kuantor dengan tepat dan berikan batas atas yang eksplisit.   Negasi “ada dengan ” adalah “untuk setiap , .”   Asumsi tersebut menyatakan bagi setiap . Jadi adalah batas atas bagi , dan terbatas di atas.   Pernyataan yang diandaikan salah adalah . Negasinya ialah . Dengan demikian setiap unsur tidak melebihi bilangan real . Menurut definisi, adalah batas atas bagi ; karena itu terbatas di atas.   Supremum bilangan bulat positif  Dengan mengandaikan terbatas di atas, jelaskan mengapa terdapat batas atas terkecil bagi . Rubrik: verifikasi ketak-kosongan dan terapkan aksioma kelengkapan dengan tepat.   Himpunan memuat dan, menurut asumsi, mempunyai suatu batas atas real.   Karena , himpunan itu tidak kosong; menurut asumsi, himpunan itu terbatas di atas. Aksioma kelengkapan menjamin adanya , yaitu batas atas terkecilnya.   Aksioma kelengkapan menyatakan bahwa setiap subhimpunan tak kosong dari yang terbatas di atas mempunyai supremum. Himpunan merupakan subhimpunan dan tidak kosong karena memuat . Dalam argumen kontradiksi ini, keterbatasannya di atas sedang diandaikan. Karena semua hipotesis aksioma kelengkapan terpenuhi, terdapat . Berdasarkan definisi supremum, adalah batas atas terkecil bagi .   Kontradiksi yang membuktikan sifat Archimedes  Andaikan . Buktikan bahwa tidak mungkin menjadi batas atas terkecil, lalu simpulkan sifat Archimedes. Rubrik: gunakan untuk memperoleh bilangan bulat positif yang menghasilkan unsur baru di atas .   Karena lebih kecil daripada supremum, ia bukan batas atas; pilih dengan dan perhatikan .   Ada dengan , sehingga dan . Ini bertentangan dengan sebagai batas atas. Jadi tidak terbatas di atas, yang persis menyatakan bahwa untuk setiap ada dengan .   Karena , bilangan tidak dapat menjadi batas atas bagi ; jika ia batas atas, sifat terkecil supremum akan memberi . Jadi terdapat dengan . Penambahan satu memberi . Akan tetapi, juga bilangan bulat positif, sehingga . Ini bertentangan dengan asumsi bahwa adalah batas atas bagi .  Kontradiksi tersebut berasal dari asumsi awal bahwa, untuk suatu , tidak ada bilangan bulat positif yang lebih besar daripada . Maka asumsi itu salah untuk setiap : bagi setiap terdapat dengan . Inilah sifat Archimedes.   Dari sifat Archimedes menuju bentuk berskala  Misalkan dengan . Dengan mengandaikan sifat Archimedes, buktikan bahwa ada sedemikian sehingga . Rubrik: terapkan sifat Archimedes pada hasil bagi yang tepat dan perhatikan arah pertidaksamaan ketika mengalikan.   Terapkan sifat Archimedes pada bilangan real .   Pilih dengan . Karena , perkalian dengan memberi .   Karena , hasil bagi adalah bilangan real. Sifat Archimedes memberi bilangan bulat positif dengan . Mengalikan kedua ruas dengan tidak membalik arah pertidaksamaan, sehingga . Argumen ini juga mencakup ; tidak diperlukan asumsi tambahan pada tanda .   Dari bentuk berskala kembali ke sifat Archimedes  Andaikan bahwa untuk setiap dengan ada yang memenuhi . Buktikan sifat Archimedes dan simpulkan ekuivalensi kedua pernyataan. Rubrik: buat satu substitusi yang berlaku bagi sebarang batas real.   Dalam bentuk berskala, tetapkan faktor positif sama dengan .   Untuk sebarang , gunakan pernyataan berskala dengan dan . Diperoleh dengan , yaitu sifat Archimedes. Bersama butir sebelumnya, kedua pernyataan ekuivalen.   Ambil sebarang bilangan real . Hipotesis bentuk berskala dapat diterapkan pada dan . Maka terdapat bilangan bulat positif sehingga , yakni . Karena dipilih sebarang, ini membuktikan sifat Archimedes. Butir sebelumnya membuktikan implikasi dari sifat Archimedes ke bentuk berskala, sedangkan argumen ini membuktikan implikasi balik. Oleh sebab itu kedua pernyataan ekuivalen.   Ekuivalensi bentuk kebalikan sifat Archimedes  Buktikan bahwa pernyataan “untuk setiap terdapat dengan ” ekuivalen dengan sifat Archimedes. Rubrik: buktikan kedua arah, pisahkan kasus batas real tak positif dalam arah balik, dan jaga tanda ketika mengambil kebalikan.   Untuk arah maju gunakan . Untuk arah balik, jika batas positif, terapkan pernyataan kebalikan pada .   Sifat Archimedes pada memberi , sehingga . Sebaliknya, untuk , penerapan pernyataan pada memberi , sehingga ; untuk , ambil . Jadi sifat Archimedes berlaku.   Pertama, andaikan sifat Archimedes dan ambil sebarang . Karena , terdapat dengan . Semua bilangan ini positif. Mengalikan dengan memberi . Jadi bentuk kebalikan mengikuti dari sifat Archimedes.  Sebaliknya, andaikan untuk setiap terdapat dengan . Ambil sebarang . Jika , bilangan memenuhi . Jika , terapkan hipotesis pada . Terdapat dengan . Mengalikan dengan menghasilkan . Dalam kedua kasus ada bilangan bulat positif . Karena sebarang, sifat Archimedes berlaku. Kedua implikasi telah dibuktikan, maka kedua pernyataan ekuivalen.   "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-01",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-01",
+  "type": "Pemeriksaan",
+  "number": "E.12",
+  "title": "Translasi himpunan dan batas bawah.",
+  "body": "Translasi himpunan dan batas bawah  Misalkan tidak kosong dan terbatas di bawah, serta . Jelaskan mengapa merupakan batas bawah bagi dan mengapa mempunyai infimum. Rubrik: buktikan sifat batas bawah, ketak-kosongan, dan syarat untuk memakai aksioma kelengkapan.   Mulailah dari untuk setiap , lalu tambahkan pada kedua ruas.   Setiap memenuhi . Himpunan tidak kosong dan terbatas di bawah, sehingga aksioma kelengkapan menjamin adanya .   Karena adalah batas bawah bagi , untuk setiap berlaku . Penjumlahan dengan bilangan real mempertahankan urutan, sehingga . Setiap unsur berbentuk ; jadi memang batas bawah bagi .  Pilih , yang ada karena tidak kosong. Maka , sehingga tidak kosong. Bersama dengan batas bawah yang baru ditemukan, aksioma kelengkapan untuk menyatakan bahwa mempunyai batas bawah terbesar, yakni .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-02",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-02",
+  "type": "Pemeriksaan",
+  "number": "E.13",
+  "title": "Infimum translasi himpunan.",
+  "body": "Infimum translasi himpunan  Dengan asumsi yang sama, misalkan suatu batas bawah bagi . Buktikan bahwa , lalu simpulkan . Rubrik: ubah menjadi batas bawah bagi dan gunakan sifat terbesar dari infimum.   Dari untuk semua , kurangi kedua ruas dengan .   Bilangan adalah batas bawah bagi , jadi dan . Karena sendiri merupakan batas bawah bagi , bilangan itu adalah infimumnya.   Karena batas bawah bagi , untuk setiap berlaku . Mengurangi kedua ruas dengan memberi untuk setiap . Jadi merupakan batas bawah bagi . Infimum adalah batas bawah terbesar, sehingga , atau ekuivalen dengan .  Butir sebelumnya telah membuktikan bahwa adalah batas bawah bagi . Argumen di atas membuktikan bahwa setiap batas bawah bagi tidak melebihi bilangan tersebut. Maka adalah batas bawah terbesar bagi , sehingga .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-03",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-03",
+  "type": "Pemeriksaan",
+  "number": "E.14",
+  "title": "Mendekati supremum dari bawah.",
+  "body": "Mendekati supremum dari bawah  Misalkan tidak kosong dan terbatas di atas, serta . Buktikan bahwa untuk setiap terdapat dengan . Rubrik: gunakan kontraposisi dari sifat batas atas, bukan asumsi bahwa supremum harus berada di dalam .   Jika tidak ada yang lebih besar daripada , apakah peran bagi ?   Jika tidak ada dengan , maka adalah batas atas bagi , yang bertentangan dengan . Karena batas atas, unsur yang diperoleh juga memenuhi .   Ambil sebarang . Andaikan tidak terdapat dengan . Maka setiap memenuhi , sehingga adalah batas atas bagi . Namun, karena adalah batas atas terkecil, setiap batas atas bagi harus memenuhi . Hal ini bertentangan dengan . Jadi ada dengan . Selain itu, adalah batas atas bagi , maka . Dengan demikian .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-04",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-04",
+  "type": "Pemeriksaan",
+  "number": "E.15",
+  "title": "Mendekati infimum dari atas.",
+  "body": "Mendekati infimum dari atas  Misalkan tidak kosong dan terbatas di bawah, serta . Buktikan bahwa untuk setiap terdapat dengan . Rubrik: tunjukkan secara eksplisit kontradiksi yang timbul jika menjadi batas bawah.   Andaikan tidak ada dengan ; bandingkan dengan batas bawah terbesar .   Jika semua memenuhi , maka adalah batas bawah bagi , sehingga ; ini bertentangan dengan . Unsur yang diperoleh memenuhi karena batas bawah.   Ambil sebarang . Jika tidak ada dengan , maka untuk setiap . Dengan demikian merupakan batas bawah bagi . Karena adalah batas bawah terbesar, setiap batas bawah harus memenuhi , bertentangan dengan . Jadi terdapat dengan . Karena sendiri batas bawah bagi , berlaku pula . Maka .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-05",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-05",
+  "type": "Pemeriksaan",
+  "number": "E.16",
+  "title": "Batas atas jumlah dua himpunan.",
+  "body": "Batas atas jumlah dua himpunan  Misalkan tidak kosong serta terbatas di atas dan di bawah. Tetapkan , , dan . Buktikan bahwa merupakan batas atas bagi . Rubrik: mulai dari dua pertidaksamaan batas atas dan kuantifikasikan atas setiap unsur .   Untuk dan , jumlahkan dan .   Setiap memenuhi ; jadi adalah batas atas bagi .   Supremum adalah batas atas bagi , sehingga untuk setiap . Demikian pula, untuk setiap . Ambil sebarang unsur . Berdasarkan definisi jumlah himpunan, terdapat dan dengan . Menjumlahkan kedua pertidaksamaan menghasilkan . Karena hal ini berlaku bagi setiap , adalah batas atas bagi .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-06",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-06",
+  "type": "Pemeriksaan",
+  "number": "E.17",
+  "title": "Membandingkan dua supremum.",
+  "body": "Membandingkan dua supremum  Dengan notasi pada butir sebelumnya, misalkan . Jelaskan mengapa . Rubrik: sebutkan sifat supremum yang dipakai dan alasan ada.   Supremum tidak lebih besar daripada batas atas mana pun bagi himpunan yang sama.   Himpunan tidak kosong dan, menurut butir sebelumnya, terbatas di atas oleh . Jadi ada dan, sebagai batas atas terkecil, memenuhi .   Karena dan tidak kosong, terdapat dan , sehingga ; jadi tidak kosong. Butir sebelumnya menunjukkan bahwa merupakan batas atas bagi . Aksioma kelengkapan kemudian menjamin adanya . Supremum adalah batas atas terkecil, sehingga ia tidak dapat melebihi batas atas . Oleh karena itu .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-07",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-07",
+  "type": "Pemeriksaan",
+  "number": "E.18",
+  "title": "Kesamaan supremum jumlah himpunan.",
+  "body": "Kesamaan supremum jumlah himpunan  Dengan , , dan , buktikan bahwa melalui kontradiksi. Jika , tetapkan dan gunakan sifat pendekatan supremum. Rubrik: pilih unsur dari kedua himpunan dengan galat yang jumlahnya kurang dari .   Pilih dan sehingga dan .   Pilihan tersebut memberi , padahal dan adalah batas atas. Maka ; bersama , diperoleh .   Kita sudah mengetahui . Andaikan dan definisikan . Karena , sifat pendekatan supremum menjamin adanya dengan . Dengan alasan yang sama, ada dengan .  Menjumlahkan dua pertidaksamaan ketat itu menghasilkan Akan tetapi, , sedangkan adalah batas atas bagi ; seharusnya . Kontradiksi ini menolak . Karena sebelumnya telah dibuktikan , satu-satunya kemungkinan ialah . Jadi .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-08",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-08",
+  "type": "Pemeriksaan",
+  "number": "E.19",
+  "title": "Infimum jumlah himpunan.",
+  "body": "Infimum jumlah himpunan  Buktikan bahwa . Rubrik: buktikan terlebih dahulu satu batas bawah, lalu gunakan pendekatan infimum dengan pembagian galat yang eksplisit untuk membuktikan arah sebaliknya.   Jika , , dan , gunakan untuk memilih serta .   Bilangan adalah batas bawah bagi , jadi . Jika ketat, unsur dan dapat dipilih dengan , bertentangan dengan sifat sebagai batas bawah. Jadi .   Tetapkan dan . Untuk setiap dan , berlaku dan , sehingga . Jadi adalah batas bawah bagi . Himpunan tidak kosong, maka infimumnya ada, dan sifat terbesar infimum memberi .  Andaikan dan tetapkan . Karena , sifat pendekatan infimum memberi dengan . Demikian pula, ada dengan . Maka Ini mustahil karena dan adalah batas bawah bagi , yang mengharuskan . Jadi . Bersama , diperoleh .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-09",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-09",
+  "type": "Pemeriksaan",
+  "number": "E.20",
+  "title": "Supremum suatu gabungan.",
+  "body": "Supremum suatu gabungan  Buktikan atau bantah pernyataan berikut. Rubrik: putuskan nilai kebenarannya dan verifikasi dua syarat batas atas terkecil.   Setiap unsur gabungan berasal dari atau ; setiap batas atas bagi gabungan juga membatasi keduanya.   Pernyataan benar. Bilangan membatasi dari atas, dan setiap batas atas bagi sedikitnya sebesar .   Tetapkan . Jika , maka atau . Dalam kasus pertama, ; dalam kasus kedua, . Jadi adalah batas atas bagi .  Sekarang misalkan sebarang batas atas bagi . Karena dan , adalah batas atas bagi dan bagi . Maka dan , sehingga . Jadi adalah batas atas terkecil, yang membuktikan kesamaan tersebut.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-10",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-10",
+  "type": "Pemeriksaan",
+  "number": "E.21",
+  "title": "Infimum suatu gabungan.",
+  "body": "Infimum suatu gabungan  Buktikan atau bantah pernyataan berikut. Rubrik: putuskan nilai kebenarannya dan verifikasi dua syarat batas bawah terbesar.   Gunakan bahwa setiap unsur gabungan berada dalam salah satu himpunan dan setiap batas bawah bagi gabungan membatasi keduanya.   Pernyataan benar. Bilangan membatasi dari bawah, dan setiap batas bawah bagi gabungan tidak melebihi .   Tetapkan . Jika , maka atau . Jika , maka ; jika , maka . Jadi adalah batas bawah bagi .  Misalkan sebarang batas bawah bagi . Karena , adalah batas bawah bagi dan bagi . Maka dan , sehingga . Jadi adalah batas bawah terbesar dan kesamaan yang diminta berlaku.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-11",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-11",
+  "type": "Pemeriksaan",
+  "number": "E.22",
+  "title": "Menghitung metrik supremum.",
+  "body": "Menghitung metrik supremum  Pada dengan , hitung . Rubrik: tentukan supremum nilai mutlak pada seluruh interval dan tunjukkan bahwa nilainya dicapai.   Fungsi meningkat pada ; bandingkan nilai mutlak pada kedua ujung rentangnya.   , dan jarak maksimum itu dicapai pada .   Selisih kedua fungsi adalah . Untuk , sehingga meningkat pada . Karena dan , setiap berada dalam . Maka untuk semua . Pada , , sehingga batas atas ini dicapai dan . Jadi .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-12",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-12",
+  "type": "Pemeriksaan",
+  "number": "E.23",
+  "title": "Membuktikan metrik seragam pada ruang fungsi.",
+  "body": "Membuktikan metrik seragam pada ruang fungsi  Misalkan , dengan , dan definisikan . Buktikan bahwa merupakan metrik dan jelaskan makna geometrisnya. Rubrik: buktikan nilai supremum berhingga serta keempat aksioma metrik, lalu identifikasi jarak vertikal maksimum antara dua graf.   Gunakan kekompakan untuk keberadaan maksimum dan terapkan pertidaksamaan segitiga nilai mutlak secara titik-demi-titik sebelum mengambil supremum.   Fungsi kontinu pada interval kompak, sehingga supremumnya berhingga dan dicapai. Fungsi tak negatif, nol tepat untuk , simetris, dan memenuhi pertidaksamaan segitiga. Secara geometris, adalah pemisahan vertikal terbesar antara graf dan pada interval tersebut.   Untuk , fungsi kontinu. Teorema nilai ekstrem pada interval kompak menjamin bahwa fungsi ini mencapai suatu maksimum berhingga. Jadi terdefinisi sebagai bilangan real tak negatif.  Jelas . Jika , maka seluruh selisih bernilai nol, sehingga . Sebaliknya, jika , maka untuk setiap , . Jadi untuk setiap , yakni . Selanjutnya, pada setiap , maka .  Untuk dan setiap , Ruas kanan adalah batas atas yang tidak bergantung pada . Mengambil supremum atas pada ruas kiri memberi . Jadi keempat aksioma metrik terpenuhi. Nilai adalah jarak vertikal kedua graf di absis ; supremum, yang di sini merupakan maksimum, adalah jarak vertikal terbesar pada seluruh interval. Itulah alasan nama metrik supremum atau metrik seragam .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-13",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-13",
+  "type": "Pemeriksaan",
+  "number": "E.24",
+  "title": "Asumsi negasi sifat Archimedes.",
+  "body": "Asumsi negasi sifat Archimedes  Misalkan . Andaikan tidak ada bilangan bulat positif dengan . Jelaskan mengapa terbatas di atas. Rubrik: terjemahkan negasi kuantor dengan tepat dan berikan batas atas yang eksplisit.   Negasi “ada dengan ” adalah “untuk setiap , .”   Asumsi tersebut menyatakan bagi setiap . Jadi adalah batas atas bagi , dan terbatas di atas.   Pernyataan yang diandaikan salah adalah . Negasinya ialah . Dengan demikian setiap unsur tidak melebihi bilangan real . Menurut definisi, adalah batas atas bagi ; karena itu terbatas di atas.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-14",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-14",
+  "type": "Pemeriksaan",
+  "number": "E.25",
+  "title": "Supremum bilangan bulat positif.",
+  "body": "Supremum bilangan bulat positif  Dengan mengandaikan terbatas di atas, jelaskan mengapa terdapat batas atas terkecil bagi . Rubrik: verifikasi ketak-kosongan dan terapkan aksioma kelengkapan dengan tepat.   Himpunan memuat dan, menurut asumsi, mempunyai suatu batas atas real.   Karena , himpunan itu tidak kosong; menurut asumsi, himpunan itu terbatas di atas. Aksioma kelengkapan menjamin adanya , yaitu batas atas terkecilnya.   Aksioma kelengkapan menyatakan bahwa setiap subhimpunan tak kosong dari yang terbatas di atas mempunyai supremum. Himpunan merupakan subhimpunan dan tidak kosong karena memuat . Dalam argumen kontradiksi ini, keterbatasannya di atas sedang diandaikan. Karena semua hipotesis aksioma kelengkapan terpenuhi, terdapat . Berdasarkan definisi supremum, adalah batas atas terkecil bagi .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-15",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-15",
+  "type": "Pemeriksaan",
+  "number": "E.26",
+  "title": "Kontradiksi yang membuktikan sifat Archimedes.",
+  "body": "Kontradiksi yang membuktikan sifat Archimedes  Andaikan . Buktikan bahwa tidak mungkin menjadi batas atas terkecil, lalu simpulkan sifat Archimedes. Rubrik: gunakan untuk memperoleh bilangan bulat positif yang menghasilkan unsur baru di atas .   Karena lebih kecil daripada supremum, ia bukan batas atas; pilih dengan dan perhatikan .   Ada dengan , sehingga dan . Ini bertentangan dengan sebagai batas atas. Jadi tidak terbatas di atas, yang persis menyatakan bahwa untuk setiap ada dengan .   Karena , bilangan tidak dapat menjadi batas atas bagi ; jika ia batas atas, sifat terkecil supremum akan memberi . Jadi terdapat dengan . Penambahan satu memberi . Akan tetapi, juga bilangan bulat positif, sehingga . Ini bertentangan dengan asumsi bahwa adalah batas atas bagi .  Kontradiksi tersebut berasal dari asumsi awal bahwa, untuk suatu , tidak ada bilangan bulat positif yang lebih besar daripada . Maka asumsi itu salah untuk setiap : bagi setiap terdapat dengan . Inilah sifat Archimedes.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-16",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-16",
+  "type": "Pemeriksaan",
+  "number": "E.27",
+  "title": "Dari sifat Archimedes menuju bentuk berskala.",
+  "body": "Dari sifat Archimedes menuju bentuk berskala  Misalkan dengan . Dengan mengandaikan sifat Archimedes, buktikan bahwa ada sedemikian sehingga . Rubrik: terapkan sifat Archimedes pada hasil bagi yang tepat dan perhatikan arah pertidaksamaan ketika mengalikan.   Terapkan sifat Archimedes pada bilangan real .   Pilih dengan . Karena , perkalian dengan memberi .   Karena , hasil bagi adalah bilangan real. Sifat Archimedes memberi bilangan bulat positif dengan . Mengalikan kedua ruas dengan tidak membalik arah pertidaksamaan, sehingga . Argumen ini juga mencakup ; tidak diperlukan asumsi tambahan pada tanda .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-17",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-17",
+  "type": "Pemeriksaan",
+  "number": "E.28",
+  "title": "Dari bentuk berskala kembali ke sifat Archimedes.",
+  "body": "Dari bentuk berskala kembali ke sifat Archimedes  Andaikan bahwa untuk setiap dengan ada yang memenuhi . Buktikan sifat Archimedes dan simpulkan ekuivalensi kedua pernyataan. Rubrik: buat satu substitusi yang berlaku bagi sebarang batas real.   Dalam bentuk berskala, tetapkan faktor positif sama dengan .   Untuk sebarang , gunakan pernyataan berskala dengan dan . Diperoleh dengan , yaitu sifat Archimedes. Bersama butir sebelumnya, kedua pernyataan ekuivalen.   Ambil sebarang bilangan real . Hipotesis bentuk berskala dapat diterapkan pada dan . Maka terdapat bilangan bulat positif sehingga , yakni . Karena dipilih sebarang, ini membuktikan sifat Archimedes. Butir sebelumnya membuktikan implikasi dari sifat Archimedes ke bentuk berskala, sedangkan argumen ini membuktikan implikasi balik. Oleh sebab itu kedua pernyataan ekuivalen.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-18",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-a.html#o003-c90-ch05-exercise-task-18",
+  "type": "Pemeriksaan",
+  "number": "E.29",
+  "title": "Ekuivalensi bentuk kebalikan sifat Archimedes.",
+  "body": "Ekuivalensi bentuk kebalikan sifat Archimedes  Buktikan bahwa pernyataan “untuk setiap terdapat dengan ” ekuivalen dengan sifat Archimedes. Rubrik: buktikan kedua arah, pisahkan kasus batas real tak positif dalam arah balik, dan jaga tanda ketika mengambil kebalikan.   Untuk arah maju gunakan . Untuk arah balik, jika batas positif, terapkan pernyataan kebalikan pada .   Sifat Archimedes pada memberi , sehingga . Sebaliknya, untuk , penerapan pernyataan pada memberi , sehingga ; untuk , ambil . Jadi sifat Archimedes berlaku.   Pertama, andaikan sifat Archimedes dan ambil sebarang . Karena , terdapat dengan . Semua bilangan ini positif. Mengalikan dengan memberi . Jadi bentuk kebalikan mengikuti dari sifat Archimedes.  Sebaliknya, andaikan untuk setiap terdapat dengan . Ambil sebarang . Jika , bilangan memenuhi . Jika , terapkan hipotesis pada . Terdapat dengan . Mengalikan dengan menghasilkan . Dalam kedua kasus ada bilangan bulat positif . Karena sebarang, sifat Archimedes berlaku. Kedua implikasi telah dibuktikan, maka kedua pernyataan ekuivalen.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch05-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian kedua",
+  "body": " Panduan latihan sumber, bagian kedua  Panduan ini mengikuti sembilan belas tugas pada Latihan 7–13 secara berurutan. Setiap pembahasan mempertahankan tujuan pembuktian pada sumber; bukalah petunjuk, jawaban, dan solusi secara bertahap setelah mencoba tugas secara mandiri.  Tugas 19: batas bawah bagi himpunan bilangan bulat  Untuk , buktikan bahwa terbatas di bawah. Rubrik: berikan satu batas bawah real yang berlaku untuk setiap dan hubungkan langsung dengan syarat pembentuk .    Langkah 1. Tidak perlu mencari suatu bilangan bulat sebagai batas bawah; batas bawah boleh berupa sebarang bilangan real.   Langkah 2. Setiap memenuhi .   Bilangan adalah batas bawah bagi , sebab untuk setiap .   Berdasarkan definisi , jika , maka . Dengan demikian untuk setiap anggota . Ini tepat merupakan definisi bahwa adalah batas bawah bagi . Karena , himpunan terbatas di bawah dalam .   Tugas 20: anggota bulat terkecil  Tunjukkan bahwa memuat suatu bilangan bulat sedemikian sehingga setiap dengan memenuhi . Rubrik: terapkan Prinsip Pengurutan Baik kepada , lalu gunakan keminimalan anggota yang diperoleh.    Langkah 1. Himpunan tak kosong dan, menurut tugas sebelumnya, terbatas di bawah; semua anggotanya bilangan bulat.   Langkah 2. Jika tetapi , di manakah letak terhadap anggota terkecil dari ?   Prinsip Pengurutan Baik memberi anggota terkecil . Jika dan , maka tidak mungkin memenuhi ; jadi .   Sifat Archimedes menjamin bahwa tak kosong, sedangkan Tugas 19 menunjukkan bahwa terbatas di bawah. Karena , Prinsip Pengurutan Baik yang dinyatakan pada latihan sumber memastikan bahwa memuat infimumnya. Tuliskan anggota terkecil ini sebagai ; khususnya .  Ambil dengan . Andaikan . Syarat ini dan fakta bahwa bilangan bulat akan memberi , bertentangan dengan keminimalan karena . Jadi pengandaian tersebut salah dan harus berlaku .   Tugas 21: bilangan rasional di antara dua bilangan real  Gunakan anggota terkecil untuk membuktikan , lalu temukan bilangan rasional di antara dan . Rubrik: terapkan hasil tugas sebelumnya kepada dan gunakan .    Langkah 1. Karena , langsung diperoleh satu dari dua pertidaksamaan. Untuk yang lain, masukkan ke hasil Tugas 20.   Langkah 2. Ubah menjadi , kemudian bagi rantai pertidaksamaan dengan .   Berlaku . Karena itu , dan adalah bilangan rasional yang dicari.   Karena , definisi memberi . Bilangan adalah bilangan bulat dan memenuhi . Maka Tugas 20, dengan , memberi , atau setara dengan .  Dari diperoleh , sehingga . Menggabungkan semuanya menghasilkan Karena bilangan bulat positif, pembagian dengan mempertahankan arah pertidaksamaan dan memberi . Dengan dan , bilangan rasional. Jadi setiap interval terbuka tak kosong di memuat suatu bilangan rasional.   Tugas 22: titik rasional dalam bola Euklides  Buktikan bahwa setiap bola terbuka dalam memuat titik yang kedua koordinatnya rasional. Rubrik: mulai dari pusat dan jari-jari bola, pilih satu bilangan rasional dekat dengan tiap koordinat pusat, lalu perkirakan jarak Euklidesnya.    Langkah 1. Untuk bola berpusat berjari-jari , gunakan kerapatan untuk memilih .   Langkah 2. Gunakan .   Pilih dengan . Untuk , berlaku ; jadi berada dalam bola dan kedua koordinatnya rasional.   Misalkan suatu bola terbuka dengan dan . Berdasarkan kerapatan bilangan rasional dalam bilangan real, terdapat sedemikian sehingga dan . Tetapkan .  Untuk bilangan real , kedua ruas tak negatif dan , sehingga . Karena itu Maka , dan kedua koordinat rasional sebagaimana diminta.   Tugas 23: membentuk calon akar kuadrat  Untuk , buktikan bahwa mempunyai batas bawah terbesar . Rubrik: tunjukkan bahwa tak kosong dan berikan satu batas bawahnya sebelum memakai kelengkapan .    Langkah 1. Periksa bahwa .   Langkah 2. Jika , maka ; jadi setiap anggota lebih besar daripada .   Himpunan tak kosong karena , dan adalah batas bawahnya. Kelengkapan memberi ; selain itu .   Bilangan positif dan , sehingga dan tak kosong. Jika , maka dan . Seandainya , akan berlaku , suatu kontradiksi. Jadi untuk setiap , dan adalah batas bawah .  Aksioma kelengkapan bilangan real menjamin bahwa himpunan real tak kosong yang terbatas di bawah mempunyai infimum. Maka ada. Karena adalah batas bawah, ; karena dan infimum tidak melebihi setiap anggota himpunan, .   Tugas 24: menyingkirkan kasus  Andaikan . Pilih sehingga , lalu jelaskan kontradiksinya. Rubrik: buat pilihan kuantitatif untuk dan buktikan bahwa menjadi batas bawah yang lebih besar daripada .    Langkah 1. Tetapkan dan gunakan sifat Archimedes untuk memilih .   Langkah 2. Untuk , berlaku . Jika kuadrat suatu bilangan positif kurang daripada , bandingkan dengan semua anggota .   Dengan , pilih . Maka . Bilangan lalu merupakan batas bawah yang lebih besar daripada , suatu kontradiksi.   Andaikan dan tetapkan . Sifat Archimedes memberi bilangan bulat positif dengan . Karena , diperoleh   Tuliskan . Bilangan positif dan . Untuk setiap , berlaku dan . Karena keduanya positif, . Jadi adalah batas bawah bagi . Akan tetapi, , bertentangan dengan fakta bahwa adalah batas bawah terbesar. Maka kasus mustahil.   Tugas 25: menyingkirkan kasus  Andaikan . Pilih sehingga , lalu jelaskan kontradiksinya. Rubrik: pastikan serta buktikan bahwa bilangan tersebut menjadi anggota yang lebih kecil daripada batas bawah .    Langkah 1. Tetapkan dan pilih sedemikian besar sehingga sekaligus dan .   Langkah 2. Gunakan .   Pilih . Maka dan . Jadi , bertentangan dengan sebagai batas bawah .   Andaikan dan tetapkan . Sifat Archimedes memungkinkan kita memilih dengan . Maka , sehingga . Selain itu,   Karena dan , definisi memberi . Namun , sedangkan sebagai batas bawah harus memenuhi untuk setiap . Kontradiksi ini menunjukkan bahwa kasus juga mustahil.   Tugas 26: keberadaan  Simpulkan dari dua kasus yang telah disingkirkan bahwa bilangan real positif ada. Rubrik: gunakan trikotomi pada dan, untuk ketepatan notasi, jelaskan ketunggalan akar positif tersebut.    Langkah 1. Tepat satu dari , , atau berlaku.   Langkah 2. Jika dan , faktorkan .   Karena kedua pertidaksamaan ketat mustahil, . Dari , positif; ia adalah akar kuadrat positif yang tunggal dan karenanya .   Trikotomi urutan bilangan real menyatakan bahwa tepat satu dari , , dan berlaku. Tugas 24 menyingkirkan kemungkinan pertama dan Tugas 25 menyingkirkan kemungkinan ketiga. Oleh sebab itu . Tugas 23 memberi , sehingga .  Untuk memeriksa ketunggalan, andaikan dan . Maka . Karena , harus berlaku , jadi . Dengan demikian ada tepat satu bilangan real positif yang kuadratnya ; bilangan itu dinotasikan dengan , dan konstruksi di atas membuktikan bahwa benar-benar ada.   Tugas 27: paritas pembilang  Andaikan demi kontradiksi bahwa , dengan relatif prima. Buktikan dan simpulkan bahwa membagi . Rubrik: kuadratkan persamaan dan gunakan bahwa jika bilangan prima membagi suatu kuadrat, bilangan itu membagi dasarnya.    Langkah 1. Gunakan dan kalikan dengan .   Langkah 2. Persamaan yang diperoleh menunjukkan ; terapkan sifat bilangan prima .   Menguadratkan memberi , sehingga . Jadi ; karena prima, .   Dari , dengan , kita memperoleh Mengalikan kedua ruas dengan menghasilkan . Maka genap, atau . Berdasarkan lema Euklides, jika bilangan prima membagi suatu hasil kali, ia membagi sekurang-kurangnya satu faktornya. Karena kedua faktor di sini sama-sama , diperoleh . Jadi ada dengan .   Tugas 28: kontradiksi faktor persekutuan  Dengan hasil , buktikan bahwa dan selesaikan pembuktian bahwa irasional. Rubrik: tuliskan , substitusikan ke , dan bandingkan dengan asumsi bahwa pecahan telah disederhanakan.    Langkah 1. Substitusi memberi .   Langkah 2. Setelah membagi dengan , gunakan kembali sifat prima yang dipakai pada tugas sebelumnya.   Dari diperoleh , sehingga . Maka membagi baik maupun , bertentangan dengan keduanya relatif prima. Jadi .   Karena , tuliskan untuk suatu . Substitusi ke persamaan memberi Jadi . Karena prima, lema Euklides memberi .  Dengan demikian adalah faktor persekutuan positif dari dan . Ini bertentangan dengan pilihan dalam bentuk paling sederhana, yakni bahwa dan tidak mempunyai faktor persekutuan positif selain . Pengandaian bahwa rasional harus salah; maka irasional.   Tugas 29: bilangan irasional di antara dua bilangan real  Untuk dua bilangan real berbeda dan , temukan dan sehingga irasional dan terletak ketat di antara dan . Rubrik: buat langkah cukup kecil, pilih kelipatan bulat yang tepat, pastikan , lalu buktikan irasionalitasnya.    Langkah 1. Setelah menamai ujung interval sebagai , pilih sehingga . Jika interval tidak melintasi , ambil bilangan bulat terkecil .   Langkah 2. Jika , buat juga dan ambil . Jika dan rasional, selesaikan persamaan itu terhadap .   Tulis dan . Pilih sehingga . Jika interval tidak melintasi , bilangan bulat terkecil memenuhi dan . Jika , pilih juga dan ambil . Dalam kedua kasus irasional.   Tukarkan nama kedua bilangan jika perlu dan tetapkan serta , sehingga . Bilangan dapat dibuat sekecil yang diinginkan: menurut induksi , dan sifat Archimedes memungkinkan melampaui sebarang batas real yang ditentukan. Jadi pilih sehingga .  Mula-mula andaikan interval tidak melintasi nol, yaitu atau . Ambil bilangan bulat terkecil yang memenuhi . Keminimalannya memberi , sehingga Jika , maka , sehingga . Jika , rantai di atas memberi , sehingga . Jadi dalam kedua subkasus .  Jika , pilih lebih besar lagi bila perlu agar juga , dan ambil . Maka , sehingga kembali diperoleh kelipatan di dalam interval dengan .  Akhirnya, dalam kedua kasus . Seandainya rasional, karena kita akan memperoleh , bertentangan dengan Tugas 28. Jadi irasional dan terletak ketat di antara dan .   Tugas 30: pertidaksamaan jarak titik ke himpunan  Dalam ruang metrik , untuk himpunan tak kosong dan , buktikan . Rubrik: gunakan sifat infimum untuk memilih titik yang hampir meminimumkan jarak dari , terapkan pertidaksamaan segitiga, lalu hilangkan galat positifnya.    Langkah 1. Untuk setiap , ada dengan .   Langkah 2. Bandingkan dengan , lalu gunakan pertidaksamaan segitiga.   Untuk setiap , pilih dengan . Maka . Karena ini berlaku untuk setiap , diperoleh pertidaksamaan yang diminta.   Ambil sebarang . Karena , terdapat dengan . Jika tidak ada titik seperti itu, akan menjadi batas bawah yang lebih besar daripada infimum, suatu kontradiksi.  Berdasarkan definisi infimum dan pertidaksamaan segitiga, Misalkan, sebaliknya, . Memilih lebih kecil daripada selisih positif kedua ruas akan bertentangan dengan pertidaksamaan terakhir. Jadi .   Tugas 31: jarak ke gabungan  Untuk subhimpunan tak kosong dari ruang metrik dan , buktikan . Rubrik: buktikan kedua arah pertidaksamaan dengan membandingkan himpunan kandidat jarak.    Langkah 1. Karena dan , mengambil infimum atas gabungan tidak dapat menghasilkan nilai yang lebih besar daripada salah satu infimum.   Langkah 2. Jika , tunjukkan bahwa adalah batas bawah bagi semua dengan .   Jarak ke gabungan tidak melebihi jarak ke masing-masing himpunan, sehingga tidak melebihi minimum keduanya. Sebaliknya, minimum itu adalah batas bawah bagi setiap jarak ke titik dalam . Kedua pertidaksamaan memberi kesamaan.   Tetapkan , , dan . Karena , himpunan jarak yang dipakai untuk mendefinisikan memuat semua jarak ke . Maka . Dengan alasan yang sama, . Jadi .  Sebaliknya, ambil . Jika , definisi infimum memberi . Jika , diperoleh . Jadi adalah batas bawah bagi semua jarak . Karena infimum adalah batas bawah terbesar, . Menggabungkan kedua arah memberi .   Tugas 32: keterbatasan diwarisi subhimpunan  Putuskan benar atau salah: setiap subhimpunan tak kosong dari himpunan terbatas juga terbatas. Rubrik: jika benar, gunakan batas bawah dan batas atas yang sama untuk semua anggota subhimpunan.    Langkah 1. Karena terbatas, ada dengan untuk setiap .   Langkah 2. Apa yang berubah jika kuantifikasi dibatasi pada anggota suatu ?   Benar. Setiap batas bawah dan batas atas bagi juga menjadi batas bawah dan batas atas bagi setiap .   Karena terbatas, terdapat sedemikian sehingga untuk setiap . Jika dan , maka juga , sehingga . Jadi adalah batas bawah dan adalah batas atas bagi . Dengan demikian setiap subhimpunan tak kosong dari terbatas. Syarat tak kosong diperlukan agar pembahasan infimum dan supremum biasa dapat dilanjutkan, tetapi pewarisan kedua batas itu sendiri tetap berlaku bagi himpunan kosong.   Tugas 33: supremum jumlah himpunan  Putuskan benar atau salah: . Rubrik: uji dengan himpunan tunggal yang konkret dan bandingkan kedua ruas.    Langkah 1. Ambil .   Langkah 2. Hitung sebelum mengambil supremumnya.   Salah. Untuk , diperoleh , sedangkan .   Pilih himpunan tak kosong dan terbatas . Maka , sehingga . Di sisi lain, , jadi . Karena , pernyataan tersebut salah. Rumus yang benar di bawah hipotesis latihan ialah , bukan maksimum kedua supremum.   Tugas 34: infimum jumlah himpunan  Putuskan benar atau salah: . Rubrik: berikan contoh konkret yang memenuhi semua hipotesis dan hitung kedua ruas.    Langkah 1. Himpunan tunggal juga cukup di sini.   Langkah 2. Bandingkan infimum dengan minimum dari dua salinan bilangan .   Salah. Untuk , diperoleh , sedangkan .   Ambil , yang keduanya tak kosong dan terbatas. Karena , diperoleh . Namun , sehingga . Kedua nilai itu berbeda, jadi pernyataan salah. Rumus yang benar adalah di bawah hipotesis yang diberikan.   Tugas 35: supremum subhimpunan  Putuskan benar atau salah: jika subhimpunan tak kosong dari , maka . Rubrik: tunjukkan bahwa adalah batas atas bagi , lalu gunakan sifat terkecil dari supremum.    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Supremum tidak melebihi batas atas mana pun bagi .   Benar. Bilangan adalah batas atas bagi , sehingga batas atas terkecil memenuhi .   Ambil sebarang . Karena , berlaku . Berdasarkan definisi supremum, . Jadi adalah batas atas bagi . Himpunan tak kosong dan terbatas karena merupakan subhimpunan dari , sehingga ada. Sebagai batas atas terkecil, tidak melebihi setiap batas atas bagi , khususnya tidak melebihi . Maka , dan pernyataannya benar.   Tugas 36: infimum subhimpunan  Putuskan benar atau salah: jika subhimpunan tak kosong dari , maka . Rubrik: tunjukkan bahwa adalah batas bawah bagi , lalu gunakan sifat terbesar dari infimum.    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Infimum tidak lebih kecil daripada batas bawah mana pun bagi .   Benar. Bilangan adalah batas bawah bagi , sehingga batas bawah terbesar memenuhi .   Untuk setiap , inklusi memberi . Karena adalah batas bawah bagi , berlaku . Jadi juga merupakan batas bawah bagi . Himpunan tak kosong dan terbatas, sehingga ada. Karena adalah batas bawah terbesar bagi , ia sekurang-kurangnya sebesar setiap batas bawah bagi , khususnya . Dengan demikian , dan pernyataannya benar.   Tugas 37: jarak nol dan penutupan  Putuskan benar atau salah: jika tak kosong dan , maka . Rubrik: jika salah, berikan contoh konkret dalam metrik Euklides dan nyatakan hubungan yang tepat antara jarak nol, penutupan , dan keanggotaan dalam .    Langkah 1. Ambil dan . Titik-titik berada dalam untuk dan mendekati .   Langkah 2. Dalam ruang metrik, mencirikan , bukan selalu .   Salah. Untuk dan , berlaku , tetapi . Yang benar ialah jika dan hanya jika ; keanggotaan dalam penutupan tidak sama dengan keanggotaan dalam kecuali, misalnya, tertutup.   Gunakan metrik Euklides pada . Ambil dan . Semua jarak dengan positif, tetapi untuk setiap terdapat dengan . Oleh karena itu . Meskipun demikian, . Ini membantah pernyataan.  Secara umum dalam ruang metrik, berarti bahwa untuk setiap terdapat dengan ; pernyataan ini setara dengan setiap bola terbuka di sekitar bertemu , yakni . Sebaliknya, sifat penutupan tersebut membuat infimum semua jarak ke sama dengan nol. Jadi kesetaraan yang tepat adalah . Dari sini hanya dapat disimpulkan apabila diketahui tambahan bahwa , misalnya bila tertutup.   "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-19",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-19",
+  "type": "Pemeriksaan",
+  "number": "E.30",
+  "title": "Tugas 19: batas bawah bagi himpunan bilangan bulat.",
+  "body": "Tugas 19: batas bawah bagi himpunan bilangan bulat  Untuk , buktikan bahwa terbatas di bawah. Rubrik: berikan satu batas bawah real yang berlaku untuk setiap dan hubungkan langsung dengan syarat pembentuk .    Langkah 1. Tidak perlu mencari suatu bilangan bulat sebagai batas bawah; batas bawah boleh berupa sebarang bilangan real.   Langkah 2. Setiap memenuhi .   Bilangan adalah batas bawah bagi , sebab untuk setiap .   Berdasarkan definisi , jika , maka . Dengan demikian untuk setiap anggota . Ini tepat merupakan definisi bahwa adalah batas bawah bagi . Karena , himpunan terbatas di bawah dalam .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-20",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-20",
+  "type": "Pemeriksaan",
+  "number": "E.31",
+  "title": "Tugas 20: anggota bulat terkecil.",
+  "body": "Tugas 20: anggota bulat terkecil  Tunjukkan bahwa memuat suatu bilangan bulat sedemikian sehingga setiap dengan memenuhi . Rubrik: terapkan Prinsip Pengurutan Baik kepada , lalu gunakan keminimalan anggota yang diperoleh.    Langkah 1. Himpunan tak kosong dan, menurut tugas sebelumnya, terbatas di bawah; semua anggotanya bilangan bulat.   Langkah 2. Jika tetapi , di manakah letak terhadap anggota terkecil dari ?   Prinsip Pengurutan Baik memberi anggota terkecil . Jika dan , maka tidak mungkin memenuhi ; jadi .   Sifat Archimedes menjamin bahwa tak kosong, sedangkan Tugas 19 menunjukkan bahwa terbatas di bawah. Karena , Prinsip Pengurutan Baik yang dinyatakan pada latihan sumber memastikan bahwa memuat infimumnya. Tuliskan anggota terkecil ini sebagai ; khususnya .  Ambil dengan . Andaikan . Syarat ini dan fakta bahwa bilangan bulat akan memberi , bertentangan dengan keminimalan karena . Jadi pengandaian tersebut salah dan harus berlaku .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-21",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-21",
+  "type": "Pemeriksaan",
+  "number": "E.32",
+  "title": "Tugas 21: bilangan rasional di antara dua bilangan real.",
+  "body": "Tugas 21: bilangan rasional di antara dua bilangan real  Gunakan anggota terkecil untuk membuktikan , lalu temukan bilangan rasional di antara dan . Rubrik: terapkan hasil tugas sebelumnya kepada dan gunakan .    Langkah 1. Karena , langsung diperoleh satu dari dua pertidaksamaan. Untuk yang lain, masukkan ke hasil Tugas 20.   Langkah 2. Ubah menjadi , kemudian bagi rantai pertidaksamaan dengan .   Berlaku . Karena itu , dan adalah bilangan rasional yang dicari.   Karena , definisi memberi . Bilangan adalah bilangan bulat dan memenuhi . Maka Tugas 20, dengan , memberi , atau setara dengan .  Dari diperoleh , sehingga . Menggabungkan semuanya menghasilkan Karena bilangan bulat positif, pembagian dengan mempertahankan arah pertidaksamaan dan memberi . Dengan dan , bilangan rasional. Jadi setiap interval terbuka tak kosong di memuat suatu bilangan rasional.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-22",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-22",
+  "type": "Pemeriksaan",
+  "number": "E.33",
+  "title": "Tugas 22: titik rasional dalam bola Euklides.",
+  "body": "Tugas 22: titik rasional dalam bola Euklides  Buktikan bahwa setiap bola terbuka dalam memuat titik yang kedua koordinatnya rasional. Rubrik: mulai dari pusat dan jari-jari bola, pilih satu bilangan rasional dekat dengan tiap koordinat pusat, lalu perkirakan jarak Euklidesnya.    Langkah 1. Untuk bola berpusat berjari-jari , gunakan kerapatan untuk memilih .   Langkah 2. Gunakan .   Pilih dengan . Untuk , berlaku ; jadi berada dalam bola dan kedua koordinatnya rasional.   Misalkan suatu bola terbuka dengan dan . Berdasarkan kerapatan bilangan rasional dalam bilangan real, terdapat sedemikian sehingga dan . Tetapkan .  Untuk bilangan real , kedua ruas tak negatif dan , sehingga . Karena itu Maka , dan kedua koordinat rasional sebagaimana diminta.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-23",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-23",
+  "type": "Pemeriksaan",
+  "number": "E.34",
+  "title": "Tugas 23: membentuk calon akar kuadrat.",
+  "body": "Tugas 23: membentuk calon akar kuadrat  Untuk , buktikan bahwa mempunyai batas bawah terbesar . Rubrik: tunjukkan bahwa tak kosong dan berikan satu batas bawahnya sebelum memakai kelengkapan .    Langkah 1. Periksa bahwa .   Langkah 2. Jika , maka ; jadi setiap anggota lebih besar daripada .   Himpunan tak kosong karena , dan adalah batas bawahnya. Kelengkapan memberi ; selain itu .   Bilangan positif dan , sehingga dan tak kosong. Jika , maka dan . Seandainya , akan berlaku , suatu kontradiksi. Jadi untuk setiap , dan adalah batas bawah .  Aksioma kelengkapan bilangan real menjamin bahwa himpunan real tak kosong yang terbatas di bawah mempunyai infimum. Maka ada. Karena adalah batas bawah, ; karena dan infimum tidak melebihi setiap anggota himpunan, .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-24",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-24",
+  "type": "Pemeriksaan",
+  "number": "E.35",
+  "title": "Tugas 24: menyingkirkan kasus <span class=\"process-math\">\\(m^2<2\\)<\/span>.",
+  "body": "Tugas 24: menyingkirkan kasus  Andaikan . Pilih sehingga , lalu jelaskan kontradiksinya. Rubrik: buat pilihan kuantitatif untuk dan buktikan bahwa menjadi batas bawah yang lebih besar daripada .    Langkah 1. Tetapkan dan gunakan sifat Archimedes untuk memilih .   Langkah 2. Untuk , berlaku . Jika kuadrat suatu bilangan positif kurang daripada , bandingkan dengan semua anggota .   Dengan , pilih . Maka . Bilangan lalu merupakan batas bawah yang lebih besar daripada , suatu kontradiksi.   Andaikan dan tetapkan . Sifat Archimedes memberi bilangan bulat positif dengan . Karena , diperoleh   Tuliskan . Bilangan positif dan . Untuk setiap , berlaku dan . Karena keduanya positif, . Jadi adalah batas bawah bagi . Akan tetapi, , bertentangan dengan fakta bahwa adalah batas bawah terbesar. Maka kasus mustahil.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-25",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-25",
+  "type": "Pemeriksaan",
+  "number": "E.36",
+  "title": "Tugas 25: menyingkirkan kasus <span class=\"process-math\">\\(m^2>2\\)<\/span>.",
+  "body": "Tugas 25: menyingkirkan kasus  Andaikan . Pilih sehingga , lalu jelaskan kontradiksinya. Rubrik: pastikan serta buktikan bahwa bilangan tersebut menjadi anggota yang lebih kecil daripada batas bawah .    Langkah 1. Tetapkan dan pilih sedemikian besar sehingga sekaligus dan .   Langkah 2. Gunakan .   Pilih . Maka dan . Jadi , bertentangan dengan sebagai batas bawah .   Andaikan dan tetapkan . Sifat Archimedes memungkinkan kita memilih dengan . Maka , sehingga . Selain itu,   Karena dan , definisi memberi . Namun , sedangkan sebagai batas bawah harus memenuhi untuk setiap . Kontradiksi ini menunjukkan bahwa kasus juga mustahil.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-26",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-26",
+  "type": "Pemeriksaan",
+  "number": "E.37",
+  "title": "Tugas 26: keberadaan <span class=\"process-math\">\\(\\sqrt{2}\\)<\/span>.",
+  "body": "Tugas 26: keberadaan  Simpulkan dari dua kasus yang telah disingkirkan bahwa bilangan real positif ada. Rubrik: gunakan trikotomi pada dan, untuk ketepatan notasi, jelaskan ketunggalan akar positif tersebut.    Langkah 1. Tepat satu dari , , atau berlaku.   Langkah 2. Jika dan , faktorkan .   Karena kedua pertidaksamaan ketat mustahil, . Dari , positif; ia adalah akar kuadrat positif yang tunggal dan karenanya .   Trikotomi urutan bilangan real menyatakan bahwa tepat satu dari , , dan berlaku. Tugas 24 menyingkirkan kemungkinan pertama dan Tugas 25 menyingkirkan kemungkinan ketiga. Oleh sebab itu . Tugas 23 memberi , sehingga .  Untuk memeriksa ketunggalan, andaikan dan . Maka . Karena , harus berlaku , jadi . Dengan demikian ada tepat satu bilangan real positif yang kuadratnya ; bilangan itu dinotasikan dengan , dan konstruksi di atas membuktikan bahwa benar-benar ada.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-27",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-27",
+  "type": "Pemeriksaan",
+  "number": "E.38",
+  "title": "Tugas 27: paritas pembilang.",
+  "body": "Tugas 27: paritas pembilang  Andaikan demi kontradiksi bahwa , dengan relatif prima. Buktikan dan simpulkan bahwa membagi . Rubrik: kuadratkan persamaan dan gunakan bahwa jika bilangan prima membagi suatu kuadrat, bilangan itu membagi dasarnya.    Langkah 1. Gunakan dan kalikan dengan .   Langkah 2. Persamaan yang diperoleh menunjukkan ; terapkan sifat bilangan prima .   Menguadratkan memberi , sehingga . Jadi ; karena prima, .   Dari , dengan , kita memperoleh Mengalikan kedua ruas dengan menghasilkan . Maka genap, atau . Berdasarkan lema Euklides, jika bilangan prima membagi suatu hasil kali, ia membagi sekurang-kurangnya satu faktornya. Karena kedua faktor di sini sama-sama , diperoleh . Jadi ada dengan .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-28",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-28",
+  "type": "Pemeriksaan",
+  "number": "E.39",
+  "title": "Tugas 28: kontradiksi faktor persekutuan.",
+  "body": "Tugas 28: kontradiksi faktor persekutuan  Dengan hasil , buktikan bahwa dan selesaikan pembuktian bahwa irasional. Rubrik: tuliskan , substitusikan ke , dan bandingkan dengan asumsi bahwa pecahan telah disederhanakan.    Langkah 1. Substitusi memberi .   Langkah 2. Setelah membagi dengan , gunakan kembali sifat prima yang dipakai pada tugas sebelumnya.   Dari diperoleh , sehingga . Maka membagi baik maupun , bertentangan dengan keduanya relatif prima. Jadi .   Karena , tuliskan untuk suatu . Substitusi ke persamaan memberi Jadi . Karena prima, lema Euklides memberi .  Dengan demikian adalah faktor persekutuan positif dari dan . Ini bertentangan dengan pilihan dalam bentuk paling sederhana, yakni bahwa dan tidak mempunyai faktor persekutuan positif selain . Pengandaian bahwa rasional harus salah; maka irasional.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-29",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-29",
+  "type": "Pemeriksaan",
+  "number": "E.40",
+  "title": "Tugas 29: bilangan irasional di antara dua bilangan real.",
+  "body": "Tugas 29: bilangan irasional di antara dua bilangan real  Untuk dua bilangan real berbeda dan , temukan dan sehingga irasional dan terletak ketat di antara dan . Rubrik: buat langkah cukup kecil, pilih kelipatan bulat yang tepat, pastikan , lalu buktikan irasionalitasnya.    Langkah 1. Setelah menamai ujung interval sebagai , pilih sehingga . Jika interval tidak melintasi , ambil bilangan bulat terkecil .   Langkah 2. Jika , buat juga dan ambil . Jika dan rasional, selesaikan persamaan itu terhadap .   Tulis dan . Pilih sehingga . Jika interval tidak melintasi , bilangan bulat terkecil memenuhi dan . Jika , pilih juga dan ambil . Dalam kedua kasus irasional.   Tukarkan nama kedua bilangan jika perlu dan tetapkan serta , sehingga . Bilangan dapat dibuat sekecil yang diinginkan: menurut induksi , dan sifat Archimedes memungkinkan melampaui sebarang batas real yang ditentukan. Jadi pilih sehingga .  Mula-mula andaikan interval tidak melintasi nol, yaitu atau . Ambil bilangan bulat terkecil yang memenuhi . Keminimalannya memberi , sehingga Jika , maka , sehingga . Jika , rantai di atas memberi , sehingga . Jadi dalam kedua subkasus .  Jika , pilih lebih besar lagi bila perlu agar juga , dan ambil . Maka , sehingga kembali diperoleh kelipatan di dalam interval dengan .  Akhirnya, dalam kedua kasus . Seandainya rasional, karena kita akan memperoleh , bertentangan dengan Tugas 28. Jadi irasional dan terletak ketat di antara dan .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-30",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-30",
+  "type": "Pemeriksaan",
+  "number": "E.41",
+  "title": "Tugas 30: pertidaksamaan jarak titik ke himpunan.",
+  "body": "Tugas 30: pertidaksamaan jarak titik ke himpunan  Dalam ruang metrik , untuk himpunan tak kosong dan , buktikan . Rubrik: gunakan sifat infimum untuk memilih titik yang hampir meminimumkan jarak dari , terapkan pertidaksamaan segitiga, lalu hilangkan galat positifnya.    Langkah 1. Untuk setiap , ada dengan .   Langkah 2. Bandingkan dengan , lalu gunakan pertidaksamaan segitiga.   Untuk setiap , pilih dengan . Maka . Karena ini berlaku untuk setiap , diperoleh pertidaksamaan yang diminta.   Ambil sebarang . Karena , terdapat dengan . Jika tidak ada titik seperti itu, akan menjadi batas bawah yang lebih besar daripada infimum, suatu kontradiksi.  Berdasarkan definisi infimum dan pertidaksamaan segitiga, Misalkan, sebaliknya, . Memilih lebih kecil daripada selisih positif kedua ruas akan bertentangan dengan pertidaksamaan terakhir. Jadi .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-31",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-31",
+  "type": "Pemeriksaan",
+  "number": "E.42",
+  "title": "Tugas 31: jarak ke gabungan.",
+  "body": "Tugas 31: jarak ke gabungan  Untuk subhimpunan tak kosong dari ruang metrik dan , buktikan . Rubrik: buktikan kedua arah pertidaksamaan dengan membandingkan himpunan kandidat jarak.    Langkah 1. Karena dan , mengambil infimum atas gabungan tidak dapat menghasilkan nilai yang lebih besar daripada salah satu infimum.   Langkah 2. Jika , tunjukkan bahwa adalah batas bawah bagi semua dengan .   Jarak ke gabungan tidak melebihi jarak ke masing-masing himpunan, sehingga tidak melebihi minimum keduanya. Sebaliknya, minimum itu adalah batas bawah bagi setiap jarak ke titik dalam . Kedua pertidaksamaan memberi kesamaan.   Tetapkan , , dan . Karena , himpunan jarak yang dipakai untuk mendefinisikan memuat semua jarak ke . Maka . Dengan alasan yang sama, . Jadi .  Sebaliknya, ambil . Jika , definisi infimum memberi . Jika , diperoleh . Jadi adalah batas bawah bagi semua jarak . Karena infimum adalah batas bawah terbesar, . Menggabungkan kedua arah memberi .  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-32",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-32",
+  "type": "Pemeriksaan",
+  "number": "E.43",
+  "title": "Tugas 32: keterbatasan diwarisi subhimpunan.",
+  "body": "Tugas 32: keterbatasan diwarisi subhimpunan  Putuskan benar atau salah: setiap subhimpunan tak kosong dari himpunan terbatas juga terbatas. Rubrik: jika benar, gunakan batas bawah dan batas atas yang sama untuk semua anggota subhimpunan.    Langkah 1. Karena terbatas, ada dengan untuk setiap .   Langkah 2. Apa yang berubah jika kuantifikasi dibatasi pada anggota suatu ?   Benar. Setiap batas bawah dan batas atas bagi juga menjadi batas bawah dan batas atas bagi setiap .   Karena terbatas, terdapat sedemikian sehingga untuk setiap . Jika dan , maka juga , sehingga . Jadi adalah batas bawah dan adalah batas atas bagi . Dengan demikian setiap subhimpunan tak kosong dari terbatas. Syarat tak kosong diperlukan agar pembahasan infimum dan supremum biasa dapat dilanjutkan, tetapi pewarisan kedua batas itu sendiri tetap berlaku bagi himpunan kosong.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-33",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-33",
+  "type": "Pemeriksaan",
+  "number": "E.44",
+  "title": "Tugas 33: supremum jumlah himpunan.",
+  "body": "Tugas 33: supremum jumlah himpunan  Putuskan benar atau salah: . Rubrik: uji dengan himpunan tunggal yang konkret dan bandingkan kedua ruas.    Langkah 1. Ambil .   Langkah 2. Hitung sebelum mengambil supremumnya.   Salah. Untuk , diperoleh , sedangkan .   Pilih himpunan tak kosong dan terbatas . Maka , sehingga . Di sisi lain, , jadi . Karena , pernyataan tersebut salah. Rumus yang benar di bawah hipotesis latihan ialah , bukan maksimum kedua supremum.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-34",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-34",
+  "type": "Pemeriksaan",
+  "number": "E.45",
+  "title": "Tugas 34: infimum jumlah himpunan.",
+  "body": "Tugas 34: infimum jumlah himpunan  Putuskan benar atau salah: . Rubrik: berikan contoh konkret yang memenuhi semua hipotesis dan hitung kedua ruas.    Langkah 1. Himpunan tunggal juga cukup di sini.   Langkah 2. Bandingkan infimum dengan minimum dari dua salinan bilangan .   Salah. Untuk , diperoleh , sedangkan .   Ambil , yang keduanya tak kosong dan terbatas. Karena , diperoleh . Namun , sehingga . Kedua nilai itu berbeda, jadi pernyataan salah. Rumus yang benar adalah di bawah hipotesis yang diberikan.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-35",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-35",
+  "type": "Pemeriksaan",
+  "number": "E.46",
+  "title": "Tugas 35: supremum subhimpunan.",
+  "body": "Tugas 35: supremum subhimpunan  Putuskan benar atau salah: jika subhimpunan tak kosong dari , maka . Rubrik: tunjukkan bahwa adalah batas atas bagi , lalu gunakan sifat terkecil dari supremum.    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Supremum tidak melebihi batas atas mana pun bagi .   Benar. Bilangan adalah batas atas bagi , sehingga batas atas terkecil memenuhi .   Ambil sebarang . Karena , berlaku . Berdasarkan definisi supremum, . Jadi adalah batas atas bagi . Himpunan tak kosong dan terbatas karena merupakan subhimpunan dari , sehingga ada. Sebagai batas atas terkecil, tidak melebihi setiap batas atas bagi , khususnya tidak melebihi . Maka , dan pernyataannya benar.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-36",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-36",
+  "type": "Pemeriksaan",
+  "number": "E.47",
+  "title": "Tugas 36: infimum subhimpunan.",
+  "body": "Tugas 36: infimum subhimpunan  Putuskan benar atau salah: jika subhimpunan tak kosong dari , maka . Rubrik: tunjukkan bahwa adalah batas bawah bagi , lalu gunakan sifat terbesar dari infimum.    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Infimum tidak lebih kecil daripada batas bawah mana pun bagi .   Benar. Bilangan adalah batas bawah bagi , sehingga batas bawah terbesar memenuhi .   Untuk setiap , inklusi memberi . Karena adalah batas bawah bagi , berlaku . Jadi juga merupakan batas bawah bagi . Himpunan tak kosong dan terbatas, sehingga ada. Karena adalah batas bawah terbesar bagi , ia sekurang-kurangnya sebesar setiap batas bawah bagi , khususnya . Dengan demikian , dan pernyataannya benar.  "
+},
+{
+  "id": "o003-c90-ch05-exercise-task-37",
+  "level": "2",
+  "url": "o003-c90-ch05-exercise-guides-b.html#o003-c90-ch05-exercise-task-37",
+  "type": "Pemeriksaan",
+  "number": "E.48",
+  "title": "Tugas 37: jarak nol dan penutupan.",
+  "body": "Tugas 37: jarak nol dan penutupan  Putuskan benar atau salah: jika tak kosong dan , maka . Rubrik: jika salah, berikan contoh konkret dalam metrik Euklides dan nyatakan hubungan yang tepat antara jarak nol, penutupan , dan keanggotaan dalam .    Langkah 1. Ambil dan . Titik-titik berada dalam untuk dan mendekati .   Langkah 2. Dalam ruang metrik, mencirikan , bukan selalu .   Salah. Untuk dan , berlaku , tetapi . Yang benar ialah jika dan hanya jika ; keanggotaan dalam penutupan tidak sama dengan keanggotaan dalam kecuali, misalnya, tertutup.   Gunakan metrik Euklides pada . Ambil dan . Semua jarak dengan positif, tetapi untuk setiap terdapat dengan . Oleh karena itu . Meskipun demikian, . Ini membantah pernyataan.  Secara umum dalam ruang metrik, berarti bahwa untuk setiap terdapat dengan ; pernyataan ini setara dengan setiap bola terbuka di sekitar bertemu , yakni . Sebaliknya, sifat penutupan tersebut membuat infimum semua jarak ke sama dengan nol. Jadi kesetaraan yang tepat adalah . Dari sini hanya dapat disimpulkan apabila diketahui tambahan bahwa , misalnya bila tertutup.  "
+},
+{
+  "id": "o003-c90-ch05-mastery",
+  "level": "1",
+  "url": "o003-c90-ch05-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan dan transfer",
+  "body": " Pemeriksaan penguasaan dan transfer  Enam latihan asli berikut menguji apakah gagasan Bab 5 dapat dipakai pada situasi baru. Kerjakan pernyataannya terlebih dahulu, nilai pekerjaan Anda dengan rubrik yang diberikan, lalu buka petunjuk secara bertahap sebelum membandingkan jawaban dan pembahasan lengkap.  Infimum, supremum, minimum, dan maksimum  Untuk parameter , definisikan dengan . Tentukan dan , lalu putuskan apakah mempunyai minimum atau maksimum.   Rubrik. Buktikan bahwa setiap nilai yang Anda usulkan memang merupakan batas yang sesuai dan bahwa tidak ada batas bawah yang lebih besar atau batas atas yang lebih kecil. Bedakan dengan tegas antara infimum atau supremum dan anggota himpunan yang menjadi minimum atau maksimum.    Langkah 1. Titik-titik pada interval terbuka dapat mendekati dari kanan sedekat apa pun.   Langkah 2. Barisan meningkat menuju , tetapi tidak pernah mencapainya.   Langkah 3. Untuk menguji minimum atau maksimum, periksa apakah infimum atau supremum tersebut merupakan anggota .    dan . Karena kedua nilai itu tidak berada dalam , himpunan tersebut tidak mempunyai minimum dan tidak mempunyai maksimum.   Setiap anggota interval lebih besar daripada . Selain itu, untuk berlaku . Jadi adalah batas bawah . Jika , pilih . Kita mempunyai , sehingga , dan sekaligus . Maka bukan batas bawah. Jadi .  Setiap anggota lebih kecil daripada , dan untuk setiap . Dengan demikian adalah batas atas. Jika , sifat Archimedes memberi dengan . Akibatnya , sehingga bukan batas atas. Oleh karena itu .  Interval tidak memuat , sedangkan setiap unsur barisan sedikitnya ; jadi . Demikian pula, tidak satu pun dari kedua bagian pembentuk memuat . Karena minimum harus sama dengan infimum dan maksimum harus sama dengan supremum, tidak mempunyai minimum maupun maksimum.   Jarak nol dan penutupan  Misalkan ruang metrik, tak kosong, dan . Buktikan bahwa    Rubrik. Buktikan kedua implikasi dengan definisi penutupan melalui bola terbuka; nyatakan secara eksplisit bagaimana sifat infimum menghasilkan titik pada jarak kurang dari .    Langkah 1. Jika , maka untuk setiap .   Langkah 2. Jika infimum himpunan jarak adalah nol tetapi tidak ada jarak yang lebih kecil daripada suatu , maka akan menjadi batas bawah positif.   Kesetaraan itu benar: tepat ketika setiap bola terbuka berpusat di bertemu , dan kondisi terakhir adalah definisi .   Andaikan . Untuk setiap , ada dengan . Karena infimum tidak melebihi setiap anggota himpunan yang diinfimumkan, . Tidak ada bilangan real positif yang lebih kecil daripada setiap ; maka .  Sebaliknya, andaikan . Ambil sembarang . Jika semua memenuhi , maka merupakan batas bawah himpunan , bertentangan dengan fakta bahwa batas bawah terbesarnya adalah nol. Jadi terdapat dengan . Artinya untuk setiap radius positif, sehingga .   Fungsi jarak bersifat 1-Lipschitz  Dalam keadaan latihan sebelumnya, definisikan dengan . Buktikan bahwa untuk semua ,    Rubrik. Gunakan pertidaksamaan segitiga sebelum mengambil infimum, peroleh dua pertidaksamaan satu arah dengan menukar dan , lalu gabungkan keduanya. Jangan mengandaikan bahwa infimum dicapai oleh suatu anggota .    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Ambil infimum terhadap , lalu ulangi dengan menukar dan .   Fungsi bersifat 1-Lipschitz: untuk setiap .   Tetapkan . Untuk setiap , pertidaksamaan segitiga memberi . Karena adalah infimum nilai-nilai di ruas kiri, kita mempunyai untuk setiap . Mengambil infimum ruas kanan terhadap menghasilkan sehingga .  Dengan menukar dan serta memakai simetri metrik, diperoleh . Jadi baik selisih maupun kebalikannya tidak melebihi . Kedua pertidaksamaan itu setara dengan . Bukti ini tidak memerlukan titik terdekat dalam , yang memang belum tentu ada.   Geometri metrik supremum  Pada , gunakan metrik supremum . Ambil , , dan . Hitung , deskripsikan sebagai hasil kali interval, dan tentukan apakah berada pada lintasan yang membuat pertidaksamaan segitiga dari ke menjadi kesamaan.   Rubrik. Tampilkan semua selisih koordinat, bedakan bola terbuka dari bola tertutup, dan periksa kedua jarak melalui sebelum menyimpulkan kesamaan segitiga.    Langkah 1. Untuk berada dalam bola terbuka berjari-jari dua, ketiga selisih koordinat harus bernilai mutlak kurang dari dua.   Langkah 2. Hitung maksimum dari , lalu maksimum selisih koordinat untuk pasangan dan .    dan . Selain itu, , sehingga .   Selisih mutlak koordinat dan adalah . Jadi nilai maksimumnya empat dan .  Suatu titik berada dalam tepat ketika , , dan . Oleh karena itu Titik pada muka kotak, tempat salah satu selisih bernilai tepat dua, tidak termasuk karena bolanya terbuka.  Selisih mutlak bagi dan adalah , sedangkan bagi dan juga . Maka kedua jarak tersebut sama dengan dua. Akhirnya, , sehingga pertidaksamaan segitiga menjadi kesamaan melalui . Perhatikan bahwa terletak pada batas, bukan di dalam, bola terbuka .   Batas resiprokal yang sekecil apa pun  Gunakan sifat Archimedes—untuk setiap terdapat dengan —untuk membuktikan pernyataan yang lebih terarah berikut: bagi setiap dan setiap , terdapat dengan dan    Rubrik. Berikan satu pilihan ambang Archimedes yang sekaligus menjamin dan pertidaksamaan resiprokal; jelaskan mengapa membalik pertidaksamaan sah.    Langkah 1. Terapkan sifat Archimedes pada .   Langkah 2. Semua bilangan yang dibalik bersifat positif, jadi setara dengan .   Pilih yang memenuhi . Maka dan .   Tetapkan dan , lalu definisikan . Sifat Archimedes memberi dengan . Karena , kita langsung memperoleh .  Selanjutnya, . Membalik dua bilangan positif membalik arah pertidaksamaan, sehingga . Karena dapat dipilih sebesar apa pun, bukan hanya ada satu resiprokal kecil: terdapat resiprokal dengan indeks yang melampaui setiap ambang yang ditentukan.   Aproksimasi rasional pada ketelitian yang ditentukan  Untuk sembarang dan , berikan konstruksi eksplisit bilangan rasional yang memenuhi . Gunakan hasil latihan sebelumnya dan fungsi lantai. Kemudian jalankan konstruksi tersebut untuk dan dengan memilih .   Rubrik. Nyatakan pilihan dan , turunkan batas galat tanpa mengandalkan desimal, hitung pecahan pada contoh, dan jelaskan mengapa konstruksi membuktikan bahwa rapat dalam .    Langkah 1. Pilih dengan , lalu gunakan .   Langkah 2. Setelah membagi dengan , jarak dari ke kurang dari .   Langkah 3. Untuk contoh, gunakan .   Pilih dengan , tetapkan , dan ambil . Maka . Untuk contoh, dan .   Menurut latihan sebelumnya, pilih sehingga . Ambil bilangan bulat . Definisi fungsi lantai memberi Karena , pembagian dengan mempertahankan arah pertidaksamaan dan menghasilkan Dengan , kita memperoleh , sehingga .  Untuk , , dan , berlaku . Pertidaksamaan dapat diperiksa dengan menguadratkan semua suku positif: . Jadi dan   Konstruksi ini berlaku untuk setiap pusat real dan setiap radius . Karena itu setiap bola terbuka memuat suatu , yang tepat menyatakan bahwa rapat dalam .   "
+},
+{
+  "id": "o003-c90-ch05-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch05-mastery.html#o003-c90-ch05-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "E.49",
+  "title": "Infimum, supremum, minimum, dan maksimum.",
+  "body": "Infimum, supremum, minimum, dan maksimum  Untuk parameter , definisikan dengan . Tentukan dan , lalu putuskan apakah mempunyai minimum atau maksimum.   Rubrik. Buktikan bahwa setiap nilai yang Anda usulkan memang merupakan batas yang sesuai dan bahwa tidak ada batas bawah yang lebih besar atau batas atas yang lebih kecil. Bedakan dengan tegas antara infimum atau supremum dan anggota himpunan yang menjadi minimum atau maksimum.    Langkah 1. Titik-titik pada interval terbuka dapat mendekati dari kanan sedekat apa pun.   Langkah 2. Barisan meningkat menuju , tetapi tidak pernah mencapainya.   Langkah 3. Untuk menguji minimum atau maksimum, periksa apakah infimum atau supremum tersebut merupakan anggota .    dan . Karena kedua nilai itu tidak berada dalam , himpunan tersebut tidak mempunyai minimum dan tidak mempunyai maksimum.   Setiap anggota interval lebih besar daripada . Selain itu, untuk berlaku . Jadi adalah batas bawah . Jika , pilih . Kita mempunyai , sehingga , dan sekaligus . Maka bukan batas bawah. Jadi .  Setiap anggota lebih kecil daripada , dan untuk setiap . Dengan demikian adalah batas atas. Jika , sifat Archimedes memberi dengan . Akibatnya , sehingga bukan batas atas. Oleh karena itu .  Interval tidak memuat , sedangkan setiap unsur barisan sedikitnya ; jadi . Demikian pula, tidak satu pun dari kedua bagian pembentuk memuat . Karena minimum harus sama dengan infimum dan maksimum harus sama dengan supremum, tidak mempunyai minimum maupun maksimum.  "
+},
+{
+  "id": "o003-c90-ch05-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch05-mastery.html#o003-c90-ch05-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "E.50",
+  "title": "Jarak nol dan penutupan.",
+  "body": "Jarak nol dan penutupan  Misalkan ruang metrik, tak kosong, dan . Buktikan bahwa    Rubrik. Buktikan kedua implikasi dengan definisi penutupan melalui bola terbuka; nyatakan secara eksplisit bagaimana sifat infimum menghasilkan titik pada jarak kurang dari .    Langkah 1. Jika , maka untuk setiap .   Langkah 2. Jika infimum himpunan jarak adalah nol tetapi tidak ada jarak yang lebih kecil daripada suatu , maka akan menjadi batas bawah positif.   Kesetaraan itu benar: tepat ketika setiap bola terbuka berpusat di bertemu , dan kondisi terakhir adalah definisi .   Andaikan . Untuk setiap , ada dengan . Karena infimum tidak melebihi setiap anggota himpunan yang diinfimumkan, . Tidak ada bilangan real positif yang lebih kecil daripada setiap ; maka .  Sebaliknya, andaikan . Ambil sembarang . Jika semua memenuhi , maka merupakan batas bawah himpunan , bertentangan dengan fakta bahwa batas bawah terbesarnya adalah nol. Jadi terdapat dengan . Artinya untuk setiap radius positif, sehingga .  "
+},
+{
+  "id": "o003-c90-ch05-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch05-mastery.html#o003-c90-ch05-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "E.51",
+  "title": "Fungsi jarak bersifat 1-Lipschitz.",
+  "body": "Fungsi jarak bersifat 1-Lipschitz  Dalam keadaan latihan sebelumnya, definisikan dengan . Buktikan bahwa untuk semua ,    Rubrik. Gunakan pertidaksamaan segitiga sebelum mengambil infimum, peroleh dua pertidaksamaan satu arah dengan menukar dan , lalu gabungkan keduanya. Jangan mengandaikan bahwa infimum dicapai oleh suatu anggota .    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Ambil infimum terhadap , lalu ulangi dengan menukar dan .   Fungsi bersifat 1-Lipschitz: untuk setiap .   Tetapkan . Untuk setiap , pertidaksamaan segitiga memberi . Karena adalah infimum nilai-nilai di ruas kiri, kita mempunyai untuk setiap . Mengambil infimum ruas kanan terhadap menghasilkan sehingga .  Dengan menukar dan serta memakai simetri metrik, diperoleh . Jadi baik selisih maupun kebalikannya tidak melebihi . Kedua pertidaksamaan itu setara dengan . Bukti ini tidak memerlukan titik terdekat dalam , yang memang belum tentu ada.  "
+},
+{
+  "id": "o003-c90-ch05-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch05-mastery.html#o003-c90-ch05-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "E.52",
+  "title": "Geometri metrik supremum.",
+  "body": "Geometri metrik supremum  Pada , gunakan metrik supremum . Ambil , , dan . Hitung , deskripsikan sebagai hasil kali interval, dan tentukan apakah berada pada lintasan yang membuat pertidaksamaan segitiga dari ke menjadi kesamaan.   Rubrik. Tampilkan semua selisih koordinat, bedakan bola terbuka dari bola tertutup, dan periksa kedua jarak melalui sebelum menyimpulkan kesamaan segitiga.    Langkah 1. Untuk berada dalam bola terbuka berjari-jari dua, ketiga selisih koordinat harus bernilai mutlak kurang dari dua.   Langkah 2. Hitung maksimum dari , lalu maksimum selisih koordinat untuk pasangan dan .    dan . Selain itu, , sehingga .   Selisih mutlak koordinat dan adalah . Jadi nilai maksimumnya empat dan .  Suatu titik berada dalam tepat ketika , , dan . Oleh karena itu Titik pada muka kotak, tempat salah satu selisih bernilai tepat dua, tidak termasuk karena bolanya terbuka.  Selisih mutlak bagi dan adalah , sedangkan bagi dan juga . Maka kedua jarak tersebut sama dengan dua. Akhirnya, , sehingga pertidaksamaan segitiga menjadi kesamaan melalui . Perhatikan bahwa terletak pada batas, bukan di dalam, bola terbuka .  "
+},
+{
+  "id": "o003-c90-ch05-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch05-mastery.html#o003-c90-ch05-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "E.53",
+  "title": "Batas resiprokal yang sekecil apa pun.",
+  "body": "Batas resiprokal yang sekecil apa pun  Gunakan sifat Archimedes—untuk setiap terdapat dengan —untuk membuktikan pernyataan yang lebih terarah berikut: bagi setiap dan setiap , terdapat dengan dan    Rubrik. Berikan satu pilihan ambang Archimedes yang sekaligus menjamin dan pertidaksamaan resiprokal; jelaskan mengapa membalik pertidaksamaan sah.    Langkah 1. Terapkan sifat Archimedes pada .   Langkah 2. Semua bilangan yang dibalik bersifat positif, jadi setara dengan .   Pilih yang memenuhi . Maka dan .   Tetapkan dan , lalu definisikan . Sifat Archimedes memberi dengan . Karena , kita langsung memperoleh .  Selanjutnya, . Membalik dua bilangan positif membalik arah pertidaksamaan, sehingga . Karena dapat dipilih sebesar apa pun, bukan hanya ada satu resiprokal kecil: terdapat resiprokal dengan indeks yang melampaui setiap ambang yang ditentukan.  "
+},
+{
+  "id": "o003-c90-ch05-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch05-mastery.html#o003-c90-ch05-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "E.54",
+  "title": "Aproksimasi rasional pada ketelitian yang ditentukan.",
+  "body": "Aproksimasi rasional pada ketelitian yang ditentukan  Untuk sembarang dan , berikan konstruksi eksplisit bilangan rasional yang memenuhi . Gunakan hasil latihan sebelumnya dan fungsi lantai. Kemudian jalankan konstruksi tersebut untuk dan dengan memilih .   Rubrik. Nyatakan pilihan dan , turunkan batas galat tanpa mengandalkan desimal, hitung pecahan pada contoh, dan jelaskan mengapa konstruksi membuktikan bahwa rapat dalam .    Langkah 1. Pilih dengan , lalu gunakan .   Langkah 2. Setelah membagi dengan , jarak dari ke kurang dari .   Langkah 3. Untuk contoh, gunakan .   Pilih dengan , tetapkan , dan ambil . Maka . Untuk contoh, dan .   Menurut latihan sebelumnya, pilih sehingga . Ambil bilangan bulat . Definisi fungsi lantai memberi Karena , pembagian dengan mempertahankan arah pertidaksamaan dan menghasilkan Dengan , kita memperoleh , sehingga .  Untuk , , dan , berlaku . Pertidaksamaan dapat diperiksa dengan menguadratkan semua suku positif: . Jadi dan   Konstruksi ini berlaku untuk setiap pusat real dan setiap radius . Karena itu setiap bola terbuka memuat suatu , yang tepat menyatakan bahwa rapat dalam .  "
 },
 {
   "id": "index-1",

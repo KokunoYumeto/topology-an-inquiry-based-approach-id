@@ -1,97 +1,96 @@
 <section xml:id="sec_glb_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    The real numbers have a special property that allows us to,
-    among other things,
-    define the distance between a point and a set in a metric space.
-    It also allows us to define distances between subsets of certain types of metric spaces,
-    which creates a whole new metric space whose elements are the subsets of the metric space.
-    We will examine that property of the real numbers in this activity.
+    Bilangan real memiliki suatu sifat khusus yang, antara lain,
+    memungkinkan kita mendefinisikan jarak antara suatu titik dan suatu himpunan di ruang metrik.
+    Sifat tersebut juga memungkinkan kita mendefinisikan jarak antarsubhimpunan pada jenis ruang metrik tertentu,
+    sehingga terbentuk suatu ruang metrik yang sama sekali baru, yang unsur-unsurnya adalah subhimpunan dari ruang metrik semula.
+    Dalam aktivitas ini, kita akan menelaah sifat bilangan real tersebut.
   </p>
   <p>
-    We begin by considering the problem of defining the distance between a real number and an interval in <m>\R</m> with the Euclidean metric <m>d_E</m> defined by
+    Kita mulai dengan meninjau cara mendefinisikan jarak antara suatu bilangan real dan suatu interval di <m>\R</m> dengan metrik Euklides <m>d_E</m> yang didefinisikan oleh
     <me>
       d_E(x,y) = | x-y |
     </me>.
   </p>
   <p>
-    Let <m>x = 1</m> and let <m>A</m> be the closed interval <m>[-1,0]</m>.
-    It is natural to suggest that the distance between the point <m>x</m> and the set <m>A</m>,
-    denoted <m>d_E(x,A)</m>,
-    should be the distance from the point <m>x</m> to the point in <m>A</m> closest to <m>x</m>.
-    So in this case we would say
+    Misalkan <m>x = 1</m> dan misalkan <m>A</m> adalah interval tertutup <m>[-1,0]</m>.
+    Wajar jika kita mengusulkan bahwa jarak antara titik <m>x</m> dan himpunan <m>A</m>,
+    yang dinotasikan dengan <m>d_E(x,A)</m>,
+    seharusnya merupakan jarak dari titik <m>x</m> ke titik di <m>A</m> yang paling dekat dengan <m>x</m>.
+    Jadi, dalam kasus ini kita akan mengatakan
     <me>
-      d(x,A) = d(x,[-1,0]) = d_E(x,0) = 1
+      d_E(x,A) = d_E(x,[-1,0]) = d_E(x,0) = 1
     </me>.
   </p>
   <p>
-    This might lead us to suggest that the distance from a point <m>x</m> to a set <m>A</m>,
-    denoted by <m>d(x,A)</m> is the minimum distance from the point to any point in the set,
-    or <m>d(x,A) = \min\{d_E(x,a) \mid a \in A\}</m>.
+    Hal ini mungkin mengarahkan kita untuk mengusulkan bahwa jarak dari suatu titik <m>x</m> ke suatu himpunan <m>A</m>,
+    yang dinotasikan dengan <m>d_E(x,A)</m>, adalah jarak minimum dari titik tersebut ke sebarang titik di dalam himpunan itu,
+    yaitu <m>d_E(x,A) = \min\{d_E(x,a) \mid a \in A\}</m>.
   </p>
   <p>
-    What if we changed the set <m>A</m> to be the open interval <m>(-1,0)</m>?
-    What then should <m>d(x,A)</m> be,
-    or should this distance even exist?
-    If we think of the distance between a point and a set as measuring how far we have to travel from the point until we reach the set,
-    then in the case of <m>x=1</m> and <m>A=(-1,0)</m>,
-    as soon as we travel a distance more than 1 from <m>x</m> in the direction of <m>A</m>,
-    we reach the set <m>A</m>.
-    So we might intuitively say that <m>d_E(x,(-1,0)) = 1</m> as well.
-    But we cannot define this distance as a distance from <m>x</m> to a point in <m>A</m> since <m>0 \notin A</m>.
-    We need a different way to formulate the notion of a distance from a point to a set.
+    Bagaimana jika kita mengubah himpunan <m>A</m> menjadi interval terbuka <m>(-1,0)</m>?
+    Lalu, berapakah seharusnya <m>d_E(x,A)</m>,
+    atau apakah jarak ini seharusnya ada?
+    Jika kita memandang jarak antara suatu titik dan suatu himpunan sebagai ukuran seberapa jauh kita harus bergerak dari titik tersebut hingga mencapai himpunan itu,
+    maka dalam kasus <m>x=1</m> dan <m>A=(-1,0)</m>,
+    segera setelah kita menempuh jarak lebih dari 1 dari <m>x</m> ke arah <m>A</m>,
+    kita mencapai himpunan <m>A</m>.
+    Jadi, secara intuitif kita dapat mengatakan bahwa <m>d_E(x,(-1,0)) = 1</m> juga.
+    Namun, kita tidak dapat mendefinisikan jarak ini sebagai jarak dari <m>x</m> ke suatu titik di <m>A</m> karena <m>0 \notin A</m>.
+    Kita memerlukan cara lain untuk merumuskan gagasan jarak dari suatu titik ke suatu himpunan.
   </p>
   <p>
-    In a case like this, with <m>x=1</m> and <m>A = (-1,0)</m>,
-    we can examine the set <m>T=\{d_E(x,a) \mid a \in A\}</m> and notice some facts about this set.
-    For example,
-    the set <m>T</m> is a subset of the nonnegative real numbers.
-    Also, in this example there are no numbers in <m>T</m> that are smaller than 1.
-    Because of this property,
-    we will call the number 1 a <term>lower bound</term> for <m>T</m>.
-    More generally,
+    Dalam kasus seperti ini, dengan <m>x=1</m> dan <m>A = (-1,0)</m>,
+    kita dapat menelaah himpunan <m>T=\{d_E(x,a) \mid a \in A\}</m> dan mencermati beberapa fakta tentang himpunan tersebut.
+    Sebagai contoh,
+    himpunan <m>T</m> merupakan subhimpunan dari bilangan real tak negatif.
+    Selain itu, dalam contoh ini tidak ada bilangan di <m>T</m> yang lebih kecil dari 1.
+    Karena sifat ini,
+    kita akan menyebut bilangan 1 sebagai <term>batas bawah</term> untuk <m>T</m>.
+    Secara umum,
   </p>
 
   <definition>
-  <idx><h>lower bound</h></idx>
+  <idx><h>batas bawah</h></idx>
     <statement>
       <p>
-        Let <m>S</m> be a nonempty subset of <m>\R</m>.
-        A <term>lower bound</term>
-        for <m>S</m> is a real number <m>m</m> such that
-        <m>m \leq s</m> for all <m>s \in S</m>.
+        Misalkan <m>S</m> adalah subhimpunan tak kosong dari <m>\R</m>.
+        Suatu <term>batas bawah</term>
+        untuk <m>S</m> adalah bilangan real <m>m</m> sedemikian sehingga
+        <m>m \leq s</m> untuk setiap <m>s \in S</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    If a subset <m>S</m> of <m>\R</m> has a lower bound,
-    we say that <m>S</m> is <term>bounded below</term>.
-    So the set <m>T = \{d_E(1,a) \mid a \in (-1,0)\}</m> is bounded below by 1.
-    The set <m>T</m> is also bounded below by 0.5 and 0.
-    In fact, any number less than 1 is a lower bound for <m>T</m>.
-    The critical idea, though,
-    is that no number larger than 1 is a lower bound for <m>T</m>.
-    Because of this we call 1 a <term>greatest lower bound</term> of <m>T</m>.
-    More generally,
+    Jika suatu subhimpunan <m>S</m> dari <m>\R</m> memiliki batas bawah,
+    kita mengatakan bahwa <m>S</m> <term>terbatas di bawah</term>.
+    Jadi, himpunan <m>T = \{d_E(1,a) \mid a \in (-1,0)\}</m> terbatas di bawah oleh 1.
+    Himpunan <m>T</m> juga terbatas di bawah oleh 0.5 dan 0.
+    Bahkan, setiap bilangan yang lebih kecil dari 1 merupakan batas bawah untuk <m>T</m>.
+    Namun, gagasan pentingnya adalah bahwa
+    tidak ada bilangan yang lebih besar dari 1 yang merupakan batas bawah untuk <m>T</m>.
+    Karena itu, kita menyebut 1 sebagai <term>batas bawah terbesar</term> dari <m>T</m>.
+    Secara umum,
   </p>
 
   <definition>
-    <idx><h>greatest lower bound</h></idx>
+    <idx><h>batas bawah terbesar</h></idx>
     <statement>
       <p>
-        Let <m>S</m> be a nonempty subset of <m>\R</m> that is bounded below.
-        A <term>greatest lower bound</term>
-        for <m>S</m> is a real number <m>m</m> such that
+        Misalkan <m>S</m> adalah subhimpunan tak kosong dari <m>\R</m> yang terbatas di bawah.
+        Suatu <term>batas bawah terbesar</term>
+        untuk <m>S</m> adalah bilangan real <m>m</m> sedemikian sehingga memenuhi dua syarat berikut.
         <ol>
           <li>
             <p>
-              <m>m</m> is a lower bound for <m>S</m> and
+              <m>m</m> merupakan batas bawah untuk <m>S</m>; dan
             </p>
           </li>
           <li>
             <p>
-              if <m>k</m> is a lower bound for <m>S</m>, then <m>m \geq k</m>.
+              jika <m>k</m> merupakan batas bawah untuk <m>S</m>, maka <m>m \geq k</m>.
             </p>
           </li>
         </ol>
@@ -101,25 +100,25 @@
 
   <p>
     <idx><h>infimum</h></idx>
-    A greatest lower bound is also called an <term>infimum</term>.
+    Batas bawah terbesar juga disebut <term>infimum</term>.
         
-    We might now use this idea of a greatest lower bound to define the distance between <m>1</m> and
-    <m>A = (-1,0)</m> as the greatest lower bound of the set <m>\{d_E(1,a) \mid a \in (-1,0)\}</m>.
-    However, there are questions we need to address before we can do so.
-    One question is whether or not every nonempty subset of <m>\R</m> that is bounded below has an infimum.
-    The answer to this question is yes,
-    and we will take this result as an axiom of the real number system
-    (often called the <term>completeness axiom</term>).
+    Sekarang kita dapat menggunakan gagasan batas bawah terbesar ini untuk mendefinisikan jarak antara <m>1</m> dan
+    <m>A = (-1,0)</m> sebagai batas bawah terbesar dari himpunan <m>\{d_E(1,a) \mid a \in (-1,0)\}</m>.
+    Namun, ada beberapa pertanyaan yang perlu kita jawab sebelum dapat melakukannya.
+    Salah satunya adalah apakah setiap subhimpunan tak kosong dari <m>\R</m> yang terbatas di bawah memiliki infimum.
+    Jawaban atas pertanyaan ini adalah ya,
+    dan kita akan menerima hasil ini sebagai suatu aksioma dalam sistem bilangan real
+    (yang sering disebut <term>aksioma kelengkapan</term>).
   </p>
 
   <exploration>
     <task>
       <statement>
         <p>
-          Does every subset of <m>\R</m> have a lower bound?
-          Explain.
-          (When a subset of <m>\R</m> has a lower bound we say that the set is
-          <term>bounded below</term>.)
+          Apakah setiap subhimpunan <m>\R</m> memiliki batas bawah?
+          Jelaskan.
+          (Jika suatu subhimpunan <m>\R</m> memiliki batas bawah, kita mengatakan bahwa himpunan tersebut
+          <term>terbatas di bawah</term>.)
         </p>
       </statement>
     </task>
@@ -127,8 +126,8 @@
     <task>
       <introduction>
         <p>
-          Which of the following subsets <m>S</m> of <m>\R</m> are bounded below?
-          If the set is bounded below, what is its infimum?
+          Manakah dari subhimpunan <m>S</m> dari <m>\R</m> berikut yang terbatas di bawah?
+          Jika himpunannya terbatas di bawah, berapakah infimumnya?
         </p>
       </introduction>
         <task>
@@ -156,7 +155,7 @@
     <task>
       <statement>
         <p>
-          How would you define a least upper bound of a subset <m>S</m> of <m>\R</m>?
+          Bagaimana cara mendefinisikan batas atas terkecil dari suatu subhimpunan <m>S</m> dari <m>\R</m>?
         </p>
       </statement>
     </task>

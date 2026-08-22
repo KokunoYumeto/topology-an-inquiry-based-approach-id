@@ -1,0 +1,211 @@
+<section xml:id="o003-c90-ch05-intro-guides" xml:lang="id-ID">
+  <title>Panduan untuk kegiatan pendahuluan</title>
+
+  <exercise xml:id="o003-c90-ch05-intro-task-01">
+    <title>Tugas 1: keberadaan batas bawah</title>
+    <statement>
+      <p>
+        Tentukan apakah setiap himpunan bagian dari <m>\R</m> mempunyai batas
+        bawah, lalu benarkan jawaban dengan contoh atau argumen umum. Rubrik:
+        gunakan definisi batas bawah dan, jika jawabannya negatif, berikan satu
+        himpunan bagian yang tidak terbatas di bawah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-intro-task-01-hint">
+      <p>
+        Carilah himpunan yang, untuk setiap calon batas bawah
+        <m>b</m>, masih memuat suatu bilangan yang lebih kecil daripada <m>b</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-intro-task-01-answer">
+      <p>
+        Tidak. Sebagai contoh, <m>\R</m> sendiri tidak mempunyai batas bawah.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-intro-task-01-solution">
+      <p>
+        Andaikan <m>b\in\R</m> merupakan batas bawah untuk <m>\R</m>. Menurut
+        definisi, harus berlaku <m>b\leq x</m> untuk setiap <m>x\in\R</m>.
+        Akan tetapi, bilangan <m>b-1</m> juga anggota <m>\R</m> dan memenuhi
+        <m>b-1&lt;b</m>. Hal ini bertentangan dengan syarat bahwa <m>b</m> adalah
+        batas bawah. Jadi <m>\R</m> tidak mempunyai batas bawah, sehingga tidak
+        setiap himpunan bagian dari <m>\R</m> terbatas di bawah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-intro-task-02">
+    <title>Tugas 2: pertidaksamaan kuadrat</title>
+    <statement>
+      <p>
+        Untuk
+        <m>S=\{x\in\R\mid 3x^2-12x+3&lt;0\}</m>, tentukan apakah <m>S</m>
+        terbatas di bawah dan, jika demikian, tentukan infimumnya. Rubrik:
+        selesaikan pertidaksamaan, nyatakan himpunannya sebagai interval, dan
+        jelaskan mengapa titik ujung bawah adalah batas bawah terbesarnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-intro-task-02-hint">
+      <p>
+        <em>Langkah 1.</em> Bagilah pertidaksamaan dengan <m>3</m> dan tentukan
+        akar-akar <m>x^2-4x+1</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Karena koefisien <m>x^2</m> positif, polinom bernilai
+        negatif tepat di antara kedua akarnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-intro-task-02-answer">
+      <p>
+        <m>S=(2-\sqrt{3},2+\sqrt{3})</m>; himpunan ini terbatas di bawah dan
+        <m>\inf S=2-\sqrt{3}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-intro-task-02-solution">
+      <p>
+        Karena <m>3&gt;0</m>, pertidaksamaan semula setara dengan
+        <m>x^2-4x+1&lt;0</m>. Akar-akarnya adalah
+        <me>
+          x=\frac{4\pm\sqrt{16-4}}{2}=2\pm\sqrt{3}.
+        </me>
+        Parabola membuka ke atas, sehingga nilainya negatif tepat untuk
+        <m>2-\sqrt{3}&lt;x&lt;2+\sqrt{3}</m>. Jadi
+        <m>S=(2-\sqrt{3},2+\sqrt{3})</m>.
+      </p>
+      <p>
+        Setiap anggota <m>S</m> lebih besar daripada <m>2-\sqrt{3}</m>, maka
+        <m>2-\sqrt{3}</m> adalah batas bawah. Jika <m>k&gt;2-\sqrt{3}</m>, pilih
+        <m>x</m> di antara <m>2-\sqrt{3}</m> dan
+        <m>\min\{k,2+\sqrt{3}\}</m>; maka <m>x\in S</m> tetapi <m>x&lt;k</m>,
+        sehingga <m>k</m> bukan batas bawah. Dengan demikian
+        <m>\inf S=2-\sqrt{3}</m>, meskipun titik itu tidak termasuk dalam
+        <m>S</m> karena pertidaksamaannya ketat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-intro-task-03">
+    <title>Tugas 3: citra fungsi kubik</title>
+    <statement>
+      <p>
+        Untuk <m>S=\{3x^3-1\mid x\in\R\}</m>, tentukan apakah <m>S</m>
+        terbatas di bawah dan apakah <m>S</m> mempunyai infimum di
+        <m>\R</m>. Rubrik: tentukan citra fungsi kubik tersebut, bukan hanya
+        beberapa nilainya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-intro-task-03-hint">
+      <p>
+        Untuk sembarang <m>y\in\R</m>, coba selesaikan
+        persamaan <m>3x^3-1=y</m> terhadap <m>x</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-intro-task-03-answer">
+      <p>
+        <m>S=\R</m>. Karena itu <m>S</m> tidak terbatas di bawah dan tidak
+        mempunyai infimum yang merupakan bilangan real.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-intro-task-03-solution">
+      <p>
+        Ambil sembarang <m>y\in\R</m> dan tetapkan
+        <m>x=\sqrt[3]{(y+1)/3}</m>. Bilangan <m>x</m> ini real dan memenuhi
+        <m>3x^3-1=y</m>. Jadi setiap bilangan real merupakan anggota <m>S</m>,
+        sedangkan berdasarkan definisinya <m>S\subseteq\R</m>; maka
+        <m>S=\R</m>. Untuk setiap calon batas bawah <m>b\in\R</m>, bilangan
+        <m>b-1\in S</m> lebih kecil daripada <m>b</m>. Jadi <m>S</m> tidak
+        terbatas di bawah dan tidak mempunyai infimum di <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-intro-task-04">
+    <title>Tugas 4: jumlah dua perpangkatan</title>
+    <statement>
+      <p>
+        Dengan konvensi <m>\Z^+=\{1,2,3,\ldots\}</m>, tentukan apakah
+        <m>S=\{2^r+3^s\mid r,s\in\Z^+\}</m> terbatas di bawah dan tentukan
+        infimumnya. Rubrik: buktikan satu batas bawah berlaku untuk semua
+        pasangan eksponen dan periksa apakah batas itu dicapai.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-intro-task-04-hint">
+      <p>
+        Karena eksponen positif terkecil adalah <m>1</m>,
+        bandingkan <m>2^r</m> dengan <m>2^1</m> dan <m>3^s</m> dengan
+        <m>3^1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-intro-task-04-answer">
+      <p>
+        Himpunan <m>S</m> terbatas di bawah dan <m>\inf S=5</m>; bahkan
+        <m>5</m> adalah nilai minimumnya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-intro-task-04-solution">
+      <p>
+        Untuk <m>r,s\in\Z^+</m> menurut konvensi yang dinyatakan, berlaku
+        <m>r\geq1</m> dan <m>s\geq1</m>. Karena perpangkatan dengan basis lebih
+        besar daripada satu meningkat terhadap eksponennya,
+        <m>2^r\geq2</m> dan <m>3^s\geq3</m>. Akibatnya
+        <m>2^r+3^s\geq5</m> untuk setiap anggota <m>S</m>, sehingga <m>5</m>
+        adalah batas bawah.
+      </p>
+      <p>
+        Dengan memilih <m>r=s=1</m>, kita memperoleh
+        <m>2^1+3^1=5\in S</m>. Tidak ada batas bawah yang lebih besar daripada
+        suatu anggota himpunan, khususnya daripada <m>5</m>. Oleh sebab itu
+        <m>5</m> adalah batas bawah terbesar, minimum, dan infimum <m>S</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch05-intro-task-05">
+    <title>Tugas 5: batas atas terkecil</title>
+    <statement>
+      <p>
+        Rumuskan definisi batas atas terkecil untuk suatu himpunan bagian
+        <m>S</m> dari <m>\R</m>. Rubrik: nyatakan baik syarat menjadi batas
+        atas maupun syarat bahwa batas atas tersebut tidak melebihi batas atas
+        lain mana pun.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch05-intro-task-05-hint">
+      <p>
+        Balik arah pertidaksamaan dalam dua butir definisi
+        batas bawah terbesar: anggota <m>S</m> berada di bawah calon batas, dan
+        calon itu berada di bawah setiap batas atas lainnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch05-intro-task-05-answer">
+      <p>
+        Untuk <m>S\neq\varnothing</m> yang terbatas di atas, bilangan
+        <m>M\in\R</m> adalah batas atas terkecil jika
+        <m>s\leq M</m> untuk setiap <m>s\in S</m> dan <m>M\leq U</m> untuk
+        setiap batas atas <m>U</m> dari <m>S</m>. Bilangan ini disebut
+        supremum <m>S</m> dan ditulis <m>\sup S</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch05-intro-task-05-solution">
+      <p>
+        Misalkan <m>S</m> adalah himpunan bagian tak kosong dari <m>\R</m>
+        yang terbatas di atas. Bilangan <m>M\in\R</m> disebut
+        <term>batas atas terkecil</term> dari <m>S</m> apabila memenuhi dua
+        syarat berikut.
+        <ol>
+          <li>
+            <p><m>s\leq M</m> untuk setiap <m>s\in S</m>, sehingga <m>M</m> adalah batas atas <m>S</m>;</p>
+          </li>
+          <li>
+            <p>jika <m>U</m> adalah batas atas <m>S</m>, maka <m>M\leq U</m>.</p>
+          </li>
+        </ol>
+        Syarat kedua menyatakan bahwa tidak ada batas atas yang lebih kecil
+        daripada <m>M</m>. Bilangan tersebut juga disebut supremum, dan
+        dinotasikan dengan <m>\sup S</m>. Aksioma kelengkapan bilangan real
+        menjamin keberadaannya bagi setiap himpunan bagian tak kosong dari
+        <m>\R</m> yang terbatas di atas.
+      </p>
+    </solution>
+  </exercise>
+</section>

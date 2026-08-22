@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-08-22T04:35:51.7009901Z",
+  "status": "pass",
+  "scope": "Final structural and all-page visual QA of the deterministic Chapters 1–5 PDF after the Chapter 5 companion disclosure-label and display-math reflow corrections.",
+  "sha256": "db4d7d2e39837f43595719ddc371a05052eb7c12849f8d49421e10ad5b7f8126",
+  "pages": 108,
+  "tagged": false,
+  "pdf": {
+    "path": "output/chapters01-05-pdf/chapters_01_05_reader.pdf",
+    "bytes": 601566,
+    "sha256": "db4d7d2e39837f43595719ddc371a05052eb7c12849f8d49421e10ad5b7f8126",
+    "pages": 108,
+    "version": "1.7",
+    "page_size_points": [612, 792],
+    "page_size_name": "US Letter",
+    "rotations": [0],
+    "encrypted": false,
+    "tagged": false,
+    "javascript": false,
+    "acroform": false,
+    "outlines": true,
+    "page_labels": true,
+    "link_annotations": 145,
+    "extracted_text_characters": 276646,
+    "replacement_characters": 0,
+    "empty_text_pages": [3],
+    "empty_page_assessment": "Physical page 3 is the intentional blank front-matter verso.",
+    "title": "Topologi: Pendekatan Berbasis Inkuiri",
+    "creator": "LaTeX with hyperref",
+    "producer": "MiKTeX-dvipdfmx (20260404)"
+  },
+  "determinism": {
+    "run_1_receipt": "qa/CHAPTER05_PDF_RUN1_HASH.json",
+    "run_2_receipt": "qa/CHAPTER05_PDF_RUN2_HASH.json",
+    "run_1_log": {
+      "path": "qa/CHAPTER05_PDF_BUILD_RUN1.log",
+      "bytes": 65898,
+      "sha256": "80687bb3b6a0c4e8b8bf37b393742074dbf6b4b141f7c9e2f518a0eda4d82434"
+    },
+    "run_2_log": {
+      "path": "qa/CHAPTER05_PDF_BUILD_RUN2.log",
+      "bytes": 65898,
+      "sha256": "f4bea98e3f83ebb1fa4cb25e866e69441cf20c58a6feeb6bf1dfee463e9e2829"
+    },
+    "result": "PASS: both fixed-epoch strict builds produced the same 601566-byte PDF and SHA-256. Build-log bytes differ only as diagnostic transcripts and are not release artifacts."
+  },
+  "final_latex_run": {
+    "log": "qa/CHAPTER05_PDF_BUILD_RUN2.log",
+    "line_span": [1124, 1669],
+    "counts": {
+      "latex_errors": 0,
+      "undefined_control_sequences": 0,
+      "fatal_errors": 0,
+      "emergency_stops": 0,
+      "undefined_references": 0,
+      "multiply_defined_references": 0,
+      "latex_warnings": 0,
+      "package_warnings": 3,
+      "underfull_boxes": 1,
+      "overfull_boxes": 3,
+      "success_markers": 1
+    },
+    "package_warnings": [
+      "xcolor option usenames is obsolete and ignored",
+      "geometry h-direction over-specification",
+      "geometry v-direction over-specification"
+    ],
+    "box_diagnostics": [
+      {
+        "kind": "underfull",
+        "badness": 1043,
+        "tex_lines": "2877-2878",
+        "assessment": "No clipping, collision, or distracting spacing defect is visible in the corresponding final page render."
+      },
+      {
+        "kind": "overfull",
+        "width_points": 9.81952,
+        "tex_lines": "2921-2921",
+        "location": "Chapter 1 self-study companion title",
+        "assessment": "Previously accepted title-formatter diagnostic; the final pixels remain inside the physical page."
+      },
+      {
+        "kind": "overfull",
+        "width_points": 6.48035,
+        "tex_lines": "3008-3010",
+        "location": "Chapter 1 self-study companion answer",
+        "assessment": "Previously accepted long answer line; the final pixels remain inside the physical page."
+      },
+      {
+        "kind": "overfull",
+        "width_points": 10.19273,
+        "tex_lines": "4055-4055",
+        "location": "Chapter 4 self-study companion title",
+        "assessment": "Previously accepted title-formatter diagnostic; the final pixels remain inside the physical page."
+      }
+    ],
+    "assessment": "The final LaTeX run is reference-clean and error-free. No new Chapter 5 overfull diagnostic remains after reflowing the two long equations."
+  },
+  "render": {
+    "dpi": 100,
+    "page_directory": "tmp/pdfs/chapter05-final-pages",
+    "page_png_count": 108,
+    "page_png_bytes": 19779868,
+    "page_pixel_dimensions": [850, 1100],
+    "contact_sheet_directory": "tmp/pdfs/chapter05-final-sheets",
+    "contact_sheet_count": 7,
+    "contact_sheet_bytes": 3882848
+  },
+  "inspection": {
+    "all_pages_inspected_at_contact_sheet_scale": true,
+    "contact_sheets_inspected": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png",
+      "contact-04.png",
+      "contact-05.png",
+      "contact-06.png",
+      "contact-07.png"
+    ],
+    "full_size_pages_inspected": [49, 50, 53, 89, 93, 94, 95, 96, 101, 107],
+    "targeted_checks": {
+      "page_3_blank_verso": "PASS: intentional blank front-matter verso",
+      "page_56_appendix_divider": "PASS: intentional Lampiran divider",
+      "page_89_chapter_5_appendix_start": "PASS: clean transition into the Chapter 5 companion",
+      "pages_89_107_disclosure_labels": "PASS: no duplicated Petunjuk label remains",
+      "page_107_final_mastery_page": "PASS: intentionally sparse and visually balanced"
+    },
+    "layout_checks": {
+      "clipping": "PASS",
+      "overlap": "PASS",
+      "missing_or_broken_glyphs": "PASS",
+      "equation_rendering": "PASS",
+      "pagination": "PASS",
+      "headers_and_footers": "PASS",
+      "figures_and_tables": "PASS",
+      "reading_margins": "PASS",
+      "generated_locale_labels": "PASS",
+      "staged_disclosure_labels": "PASS"
+    }
+  },
+  "findings": [
+    {
+      "severity": "resolved",
+      "code": "duplicate_hint_labels_removed",
+      "pages": [89, 93, 95, 107],
+      "detail": "The companion now relies on the single generated Indonesian hint label; redundant inner Petunjuk labels were removed while numbered multi-step hints retain Langkah labels."
+    },
+    {
+      "severity": "resolved",
+      "code": "chapter_5_long_equations_reflowed",
+      "pages": [93, 95],
+      "detail": "The supremum and infimum union identities use display mathematics and no longer create Chapter 5 overfull diagnostics."
+    },
+    {
+      "severity": "nonblocking",
+      "code": "inherited_box_diagnostics",
+      "pages": [49, 51, 76],
+      "detail": "Three previously accepted overfull diagnostics remain in Chapters 1 and 4; all are visually contained without clipping or collision."
+    },
+    {
+      "severity": "informational",
+      "code": "pdf_not_tagged",
+      "pages": [],
+      "detail": "The PDF has no structure tree or MarkInfo; HTML remains the primary accessible surface."
+    }
+  ],
+  "uncertainties": [
+    "This pass verifies final rendering and targeted Chapter 5 corrections; it does not independently re-proofread all 276646 extracted characters for translation accuracy.",
+    "The inherited overfull diagnostics remain accepted only because their exact final rendering is contained and readable."
+  ],
+  "result_rationale": "PASS: all 108 pages are visually clean; targeted Chapter 5 disclosure and display-math repairs are present; the strict final run is error- and reference-clean; and the release PDF is byte-identical across two fixed-epoch builds."
+}

@@ -1,27 +1,75 @@
 <exercises xml:id="sec_glb_exer">
+  <introduction>
+    <p>
+      Lima teorema berikut merupakan sasaran pembuktian dalam latihan-latihan di bawah.
+      Bacalah pernyataannya terlebih dahulu, lalu kembangkan setiap pembuktian melalui
+      urutan tugas yang terkait.
+    </p>
+    <theorem>
+      <title>Sifat Archimedes</title>
+      <idx><h>sifat Archimedes</h></idx>
+      <statement>
+        <p>
+          Untuk setiap bilangan real <m>x</m>, terdapat bilangan asli <m>N</m> sedemikian sehingga <m>N \gt x</m>.
+        </p>
+      </statement>
+    </theorem>
+    <theorem xml:id="thm_Archimedean_2">
+      <statement>
+        <p>
+          Untuk setiap bilangan real <m>x</m> dan <m>y</m> dengan <m>x \gt 0</m>,
+          terdapat bilangan asli <m>N</m> sedemikian sehingga <m>Nx \gt y</m>.
+        </p>
+      </statement>
+    </theorem>
+    <theorem xml:id="thm_Archimedean_3">
+      <statement>
+        <p>
+          Jika <m>x</m> suatu bilangan real positif,
+          maka terdapat bilangan bulat positif <m>N</m> sedemikian sehingga <m>\frac{1}{N} \lt x</m>.
+        </p>
+      </statement>
+    </theorem>
+    <theorem>
+      <statement>
+        <p>
+          Untuk sebarang dua bilangan real yang berbeda <m>x</m> dan <m>y</m>,
+          terdapat bilangan rasional yang terletak di antaranya.
+        </p>
+      </statement>
+    </theorem>
+    <theorem>
+      <statement>
+        <p>
+          Untuk sebarang dua bilangan real yang berbeda <m>x</m> dan <m>y</m>,
+          terdapat bilangan irasional yang terletak di antaranya.
+        </p>
+      </statement>
+    </theorem>
+  </introduction>
   
   <exercise>
     <introduction>
       <p>
-        Let <m>S</m> be a nonempty subset of <m>\R</m> that is bounded below.
-        Let <m>a \in \R</m>,
-        and define <m>a+S</m> to be <m>a+S = \{a+s \mid s \in S\}</m>.
+        Misalkan <m>S</m> suatu subhimpunan tak kosong dari <m>\R</m> yang terbatas di bawah.
+        Misalkan <m>a \in \R</m>,
+        dan definisikan <m>a+S</m> sebagai <m>a+S = \{a+s \mid s \in S\}</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Explain why <m>a+\inf(S)</m> is a lower bound for <m>a+S</m>.
-              Explain why <m>a+S</m> has an infimum.
+              Jelaskan mengapa <m>a+\inf(S)</m> merupakan batas bawah bagi <m>a+S</m>.
+              Jelaskan mengapa <m>a+S</m> memiliki infimum.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>b</m> be a lower bound for <m>a+S</m>.
-              Show that <m>a + \inf(S) \geq b</m>.
-              Then explain why <m>a+\inf(S) = \inf(a+S)</m>.
+              Misalkan <m>b</m> suatu batas bawah bagi <m>a+S</m>.
+              Tunjukkan bahwa <m>a + \inf(S) \geq b</m>.
+              Lalu jelaskan mengapa <m>a+\inf(S) = \inf(a+S)</m>.
             </p>
           </statement>
         </task>
@@ -30,26 +78,26 @@
   <exercise xml:id="ex_GLB_between">
     <introduction>
       <p>
-        Let <m>S</m> be a nonempty subset of <m>\R</m>.
+        Misalkan <m>S</m> suatu subhimpunan tak kosong dari <m>\R</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Assume that <m>S</m> is bounded above,
-              and let <m>t = \sup(S)</m>.
-              Show that for every <m>r \lt t</m>,
-              there is a number <m>s \in S</m> such that <m>r \lt s \leq t</m>.
+              Andaikan <m>S</m> terbatas di atas,
+              dan misalkan <m>t = \sup(S)</m>.
+              Tunjukkan bahwa untuk setiap <m>r \lt t</m>,
+              terdapat bilangan <m>s \in S</m> sedemikian sehingga <m>r \lt s \leq t</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Assume that <m>S</m> is bounded below,
-              and let <m>t = \inf(S)</m>.
-              Show that for every <m>r \gt t</m>,
-              there is a number <m>s \in S</m> such that <m>t \leq s \lt r</m>.
+              Andaikan <m>S</m> terbatas di bawah,
+              dan misalkan <m>t = \inf(S)</m>.
+              Tunjukkan bahwa untuk setiap <m>r \gt t</m>,
+              terdapat bilangan <m>s \in S</m> sedemikian sehingga <m>t \leq s \lt r</m>.
             </p>
           </statement>
         </task>
@@ -58,40 +106,40 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>A</m> and <m>B</m> be nonempty subsets of <m>\R</m> that are bounded above and below.
-        Let <m>A+B = \{a+b \mid a \in A, b \in B\}</m>.
+        Misalkan <m>A</m> dan <m>B</m> merupakan subhimpunan tak kosong dari <m>\R</m> yang terbatas di atas dan di bawah.
+        Misalkan <m>A+B = \{a+b \mid a \in A, b \in B\}</m>.
       </p>
     </introduction>
         <task>
           <introduction>
             <p>
-              Follow the steps below to show that <m>\sup(A+B) = \sup(A) + \sup(B)</m>.
+              Ikuti langkah-langkah berikut untuk menunjukkan bahwa <m>\sup(A+B) = \sup(A) + \sup(B)</m>.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Let <m>x = \sup(A)</m> and <m>y = \sup(B)</m>.
-                    Show that <m>x+y</m> is an upper bound for <m>A+B</m>.
+                    Misalkan <m>x = \sup(A)</m> dan <m>y = \sup(B)</m>.
+                    Tunjukkan bahwa <m>x+y</m> merupakan batas atas bagi <m>A+B</m>.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    The previous part shows that <m>A+B</m> is bounded above and so has a supremum.
-                    Let <m>z = \sup(A+B)</m>.
-                    Explain why <m>z \leq x+y</m>.
+                    Bagian sebelumnya menunjukkan bahwa <m>A+B</m> terbatas di atas sehingga memiliki supremum.
+                    Misalkan <m>z = \sup(A+B)</m>.
+                    Jelaskan mengapa <m>z \leq x+y</m>.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    To show that <m>z = x+y</m> we have to prove that <m>z</m> cannot be strictly less than <m>x+y</m>.
-                    Suppose to the contrary that <m>z \lt x+y</m>.
-                    Let <m>\epsilon = x+y-z</m>.
-                    Use the result of <xref ref="ex_GLB_between"/> to arrive at a contradiction.
+                    Untuk menunjukkan bahwa <m>z = x+y</m>, kita harus membuktikan bahwa <m>z</m> tidak mungkin lebih kecil daripada <m>x+y</m>.
+                    Andaikan, demi memperoleh kontradiksi, bahwa <m>z \lt x+y</m>.
+                    Misalkan <m>\epsilon = x+y-z</m>.
+                    Gunakan hasil <xref ref="ex_GLB_between"/> untuk memperoleh kontradiksi.
                   </p>
                 </statement>
               </task>
@@ -100,21 +148,21 @@
           <task>
           <statement>
             <p>
-              Prove that <m>\inf(A+B) = \inf(A) + \inf(B)</m>.
+              Buktikan bahwa <m>\inf(A+B) = \inf(A) + \inf(B)</m>.
             </p>
           </statement>
           </task>
           <task>
           <statement>
             <p>
-              Prove or disprove: <m>\sup(A \cup B) = \max\{\sup(A), \sup(B)\}</m>
+              Buktikan atau bantah: <m>\sup(A \cup B) = \max\{\sup(A), \sup(B)\}</m>
             </p>
           </statement>
           </task>
           <task>
           <statement>
             <p>
-              Prove or disprove: <m>\inf(A \cup B) = \min\{\inf(A), \inf(B)\}</m>
+              Buktikan atau bantah: <m>\inf(A \cup B) = \min\{\inf(A), \inf(B)\}</m>
             </p>
           </statement>
         </task>
@@ -123,9 +171,9 @@
   <exercise xml:id="ex_GLB_function_sup_metric">
     <introduction>
       <p>
-        Let <m>X = C[a,b]</m>,
-        the set of continuous functions from <m>\R</m> to <m>\R</m> on an interval <m>[a,b]</m>.
-        Define <m>d: X \times X \to \R</m> by
+        Misalkan <m>X = C[a,b]</m>, dengan <m>a,b \in \R,\ a \lt b</m>,
+        adalah himpunan semua fungsi kontinu dari <m>[a,b]</m> ke <m>\R</m>.
+        Definisikan <m>d: X \times X \to \R</m> dengan
         <me>
           d(f,g) = \sup\{|f(x)-g(x)| \mid x \in [a,b]\}
         </me>.
@@ -134,17 +182,17 @@
         <task>
           <statement>
             <p>
-              What is <m>d(x^2,1-2x)</m> on <m>[0,1]</m>?
+              Berapakah <m>d(x^2,1-2x)</m> pada <m>[0,1]</m>?
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Prove that <m>d</m> is a metric on <m>X</m>.
-              Describe in geometric terms how this metric measures the distance between functions <m>f</m> and <m>g</m>. (This metric is called the
-              <term>supremum metric</term>
-              or the <term>uniform metric</term> on <m>X</m>.)
+              Buktikan bahwa <m>d</m> merupakan metrik pada <m>X</m>.
+              Deskripsikan secara geometris bagaimana metrik ini mengukur jarak antara fungsi <m>f</m> dan <m>g</m>. (Metrik ini disebut
+              <term>metrik supremum</term>
+              atau <term>metrik seragam</term> pada <m>X</m>.)
             </p>
           </statement>
         </task>
@@ -153,43 +201,34 @@
   <exercise xml:id="ex_GLB_Archimedean">
     <introduction>
       <p>
-        In this exercise we prove the <term>Archimedean property</term> of the natural numbers.
-        Note that the set of natural numbers,
-        denoted <m>\N</m> or <m>\Z^+</m>,
-        is the set of all positive integers.
-        <theorem>
-          <title>The Archimedean Property</title>
-          <idx><h>Archimedean property</h></idx>
-          <statement>
-            <p>
-     Given any real number <m>x</m>, there exists a natural number <m>N</m> such that <m>N \gt x</m>.
-            </p>
-          </statement>
-        </theorem>
-        Let <m>x</m> be a real number.
+        Dalam latihan ini, kita membuktikan <term>sifat Archimedes</term> bilangan asli.
+        Perhatikan bahwa himpunan bilangan asli,
+        yang dinotasikan dengan <m>\N</m> atau <m>\Z^+</m>,
+        adalah himpunan semua bilangan bulat positif.
+        Misalkan <m>x</m> suatu bilangan real.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Suppose that there is no positive integer <m>N</m> such that <m>N > x</m>.
-              Explain how we can conclude that <m>\Z^+</m> is bounded above.
+              Andaikan tidak terdapat bilangan bulat positif <m>N</m> sedemikian sehingga <m>N > x</m>.
+              Jelaskan bagaimana kita dapat menyimpulkan bahwa <m>\Z^+</m> terbatas di atas.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Assuming that <m>\Z^+</m> is bounded above,
-              explain why <m>\Z^+</m> must have a least upper bound <m>M</m>.
+              Dengan mengandaikan bahwa <m>\Z^+</m> terbatas di atas,
+              jelaskan mengapa <m>\Z^+</m> harus memiliki batas atas terkecil <m>M</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Explain why <m>M</m> cannot be a least upper bound for <m>\Z^+</m>.
-              Explain why this proves the Archimedean property.
+              Jelaskan mengapa <m>M</m> tidak mungkin menjadi batas atas terkecil bagi <m>\Z^+</m>.
+              Jelaskan mengapa hal ini membuktikan sifat Archimedes.
             </p>
           </statement>
         </task>
@@ -198,40 +237,32 @@
   <exercise xml:id="ex_GLB_Archimedean_2">
     <introduction>
       <p>
-        In this exercise we prove two statements that are equivalent to the Archimedean property
-        (see <xref ref="ex_GLB_Archimedean"/>).
-        One of the statements is the following theorem:
-        <theorem xml:id="thm_Archimedean_2">
-          <statement>
-            <p>
-              Given real numbers <m>x</m> and <m>y</m> with <m>x \gt 0</m>,
-              there exists a natural number <m>N</m> such that <m>Nx \gt y</m>.
-            </p>
-          </statement>
-        </theorem>
+        Dalam latihan ini, kita membuktikan dua pernyataan yang ekuivalen dengan sifat Archimedes
+        (lihat <xref ref="ex_GLB_Archimedean"/>).
+        Kedua pernyataan tersebut dicantumkan dalam pendahuluan kumpulan latihan ini.
       </p>
     </introduction>
         <task>
           <introduction>
             <p>
-              Let <m>x</m> and <m>y</m> be real numbers with <m>x \gt 0</m>.
+              Misalkan <m>x</m> dan <m>y</m> bilangan real dengan <m>x \gt 0</m>.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Show that if the Archimedean property is true,
-                    then so is <xref ref="thm_Archimedean_2"/>.
+                    Tunjukkan bahwa jika sifat Archimedes benar,
+                    maka <xref ref="thm_Archimedean_2"/> juga benar.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Show that if <xref ref="thm_Archimedean_2"/> is true,
-                    then so is the Archimedean property.
-                    Conclude that <xref ref="thm_Archimedean_2"/>
-                    is equivalent to the Archimedean property.
+                    Tunjukkan bahwa jika <xref ref="thm_Archimedean_2"/> benar,
+                    maka sifat Archimedes juga benar.
+                    Simpulkan bahwa <xref ref="thm_Archimedean_2"/>
+                    ekuivalen dengan sifat Archimedes.
                   </p>
                 </statement>
               </task>
@@ -240,17 +271,8 @@
           <task>
           <statement>
             <p>
-              A second statement that is equivalent to the Archimedean property is the following.
-              <theorem xml:id="thm_Archimedean_3">
-                <statement>
-                  <p>
-                    If <m>x</m> is a positive real number,
-                    then there exists a positive integer <m>N</m> such that <m>\frac{1}{N} \lt x</m>.
-                  </p>
-                </statement>
-              </theorem>
-              Prove that <xref ref="thm_Archimedean_3"/>
-              is equivalent to the Archimedean property.
+              Buktikan bahwa <xref ref="thm_Archimedean_3"/>
+              ekuivalen dengan sifat Archimedes.
             </p>
           </statement>
         </task>
@@ -259,56 +281,51 @@
   <exercise xml:id="ex_GLB_rational">
     <introduction>
       <p>
-        We can use greatest lower bounds to prove the following theorem.
-        <theorem>
-          <statement>
-            <p>
-              Given any two distinct real numbers <m>x</m> and <m>y</m>,
-              there is a rational number that lies between them.
-            </p>
-          </statement>
-        </theorem>
-        This theorem tells us an important fact <mdash/> that the rational numbers are what is called <term>dense</term>
-        in the set of real numbers.
-        We prove this theorem in this exercise.
-        Let <m>x</m> and <m>y</m> be real numbers and assume <m>x \lt  y</m>.
-        By the Archimedean property of the natural numbers
-        (see <xref ref="ex_GLB_Archimedean">Exercises</xref>
-        and <xref ref="ex_GLB_Archimedean_2"></xref>),
-        there is a positive integer <m>n</m> such that <m>n(y-x) \gt 1</m>.
-        Let <m>S = \{k \in \Z \mid k \gt nx \}</m>.
+        Kita dapat menggunakan batas bawah terbesar untuk membuktikan teorema tentang
+        kerapatan bilangan rasional yang dicantumkan dalam pendahuluan kumpulan latihan ini.
+        Teorema ini menunjukkan suatu fakta penting <mdash/> bilangan rasional bersifat <term>rapat</term>
+        dalam himpunan bilangan real.
+        Kita membuktikan teorema ini dalam latihan ini.
+        Misalkan <m>x</m> dan <m>y</m> bilangan real dan andaikan <m>x \lt  y</m>.
+        Berdasarkan sifat Archimedes bilangan asli
+        (lihat <xref ref="ex_GLB_Archimedean">Latihan</xref>
+        dan <xref ref="ex_GLB_Archimedean_2"></xref>),
+        terdapat bilangan bulat positif <m>n</m> sedemikian sehingga <m>n(y-x) \gt 1</m>.
+        Misalkan <m>S = \{k \in \Z \mid k \gt nx \}</m>.
+        Sifat Archimedes juga menjamin adanya bilangan bulat positif yang memenuhi
+        syarat pembentuk himpunan tersebut; oleh karena itu, himpunan itu tidak kosong.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>S</m> is bounded below in <m>\R</m>.
+              Tunjukkan bahwa <m>S</m> terbatas di bawah dalam <m>\R</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Explain why <m>S</m> contains an integer <m>m</m> such that if
-              <m>q \in \Z</m> with <m>q \lt m</m>, then <m>q \leq nx</m>.
-              It may be helpful to use the Well-Ordering Principle that states
+              Jelaskan mengapa <m>S</m> memuat suatu bilangan bulat <m>m</m> sedemikian sehingga jika
+              <m>q \in \Z</m> dengan <m>q \lt m</m>, maka <m>q \leq nx</m>.
+              Prinsip Pengurutan Baik berikut mungkin berguna:
             </p>
               <blockquote>
-              <p>Every subset of the integers that is bounded below contains its infimum.</p>
+              <p>Setiap subhimpunan tak kosong dari bilangan bulat yang terbatas di bawah memuat infimumnya.</p>
               </blockquote>
             <p>
-              (The Well-Ordering Principle is one of many axioms that are equivalent to the Principle of Mathematical Induction.
-              These principles are taken as axioms and are assumed to be true.)
+              (Prinsip Pengurutan Baik merupakan salah satu dari banyak aksioma yang ekuivalen dengan Prinsip Induksi Matematika.
+              Prinsip-prinsip ini diterima sebagai aksioma dan dianggap benar.)
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Explain why <m>m \gt nx</m> and <m>m-1 \leq nx</m>.
-              Use these inequalities, along with <m>n(y-x) \gt 1</m>,
-              to show that <m>nx \lt m \lt ny</m>.
-              Then find a rational number that is strictly between <m>x</m> and <m>y</m>.
+              Jelaskan mengapa <m>m \gt nx</m> dan <m>m-1 \leq nx</m>.
+              Gunakan pertidaksamaan ini bersama dengan <m>n(y-x) \gt 1</m>
+              untuk menunjukkan bahwa <m>nx \lt m \lt ny</m>.
+              Kemudian, temukan suatu bilangan rasional yang terletak di antara <m>x</m> dan <m>y</m>.
             </p>
           </statement>
         </task>
@@ -318,8 +335,8 @@
     <exercise>
     <statement>
       <p>
-        Show that every open ball in <m>(\R^2,d_E)</m> contains a point
-        <m>x = (x_1,x_2)</m> with both <m>x_1</m> and <m>x_2</m> rational.
+        Tunjukkan bahwa setiap bola terbuka dalam <m>(\R^2,d_E)</m> memuat suatu titik
+        <m>x = (x_1,x_2)</m> dengan <m>x_1</m> dan <m>x_2</m> keduanya rasional.
       </p>
     </statement>
     </exercise>
@@ -327,18 +344,19 @@
     <exercise>
     <introduction>
       <p>
-        We are familiar with solving the quadratic equation
-        <m>x^2-2 = 0</m> to obtain the solutions <m>\pm \sqrt{2}</m>.
-        But do we really know that the number <m>\sqrt{2}</m> exists?
-        We address that question in this exercise and demonstrate the existence of the number
-        <m>\sqrt{2}</m> using the greatest lower bound.
+        Kita sudah terbiasa menyelesaikan persamaan kuadrat
+        <m>x^2-2 = 0</m> dan memperoleh penyelesaian <m>\pm \sqrt{2}</m>.
+        Namun, apakah kita benar-benar mengetahui bahwa bilangan <m>\sqrt{2}</m> ada?
+        Kita membahas pertanyaan tersebut dalam latihan ini dan menunjukkan keberadaan bilangan
+        <m>\sqrt{2}</m> dengan menggunakan batas bawah terbesar.
+        Di sini, <m>\R^+ = \{r \in \R \mid r \gt 0\}</m> adalah himpunan bilangan real positif.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              To begin, let <m>S = \{x \in \R^+ \mid x^2 \gt 2\}</m>.
-              Explain why <m>S</m> must have a greatest lower bound <m>m</m>.
+              Sebagai langkah awal, misalkan <m>S = \{x \in \R^+ \mid x^2 \gt 2\}</m>.
+              Jelaskan mengapa <m>S</m> harus memiliki batas bawah terbesar <m>m</m>.
             </p>
           </statement>
         </task>
@@ -346,32 +364,32 @@
         <task>
           <introduction>
             <p>
-              In what follows we demonstrate that <m>m^2 = 2</m>,
-              which makes <m>m = \sqrt{2}</m>.
-              We consider the cases <m>m^2 \lt  2</m> and <m>m^2 \gt 2</m>.
+              Selanjutnya, kita menunjukkan bahwa <m>m^2 = 2</m>,
+              sehingga <m>m = \sqrt{2}</m>.
+              Kita meninjau kasus <m>m^2 \lt  2</m> dan <m>m^2 \gt 2</m>.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Suppose <m>m^2 \lt  2</m>.
-                    Show that there is a positive integer <m>n</m> such that
+                    Andaikan <m>m^2 \lt  2</m>.
+                    Tunjukkan bahwa terdapat bilangan bulat positif <m>n</m> sedemikian sehingga
                     <me>
                       \left(m+\frac{1}{n}\right)^2~\lt ~2
                     </me>.
-                    Explain why this also cannot happen.
+                    Jelaskan mengapa hal ini juga tidak mungkin terjadi.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Suppose <m>m^2 \gt 2</m>.
-                    Show that there is a positive integer <m>n</m> such that
+                    Andaikan <m>m^2 \gt 2</m>.
+                    Tunjukkan bahwa terdapat bilangan bulat positif <m>n</m> sedemikian sehingga
                     <me>
                       \left(m-\frac{1}{n}\right)^2~\gt~2
                     </me>.
-                    Explain why this also cannot happen.
+                    Jelaskan mengapa hal ini juga tidak mungkin terjadi.
                   </p>
                 </statement>
               </task>
@@ -380,7 +398,7 @@
           <task>
           <statement>
             <p>
-              Explain how we have demonstrated the existence of <m>\sqrt{2}</m>.
+              Jelaskan bagaimana kita telah menunjukkan keberadaan <m>\sqrt{2}</m>.
             </p>
           </statement>
         </task>
@@ -389,42 +407,35 @@
     <exercise xml:id="ex_GLB_irrational">
     <introduction>
       <p>
-        Similar to <xref ref="ex_GLB_rational"/>
-        we can prove the following theorem.
-        <theorem>
-          <statement>
-            <p>
-              Given any two distinct real numbers <m>x</m> and <m>y</m>,
-              there is an irrational number that lies between them.
-            </p>
-          </statement>
-        </theorem>
+        Serupa dengan <xref ref="ex_GLB_rational"/>,
+        kita dapat membuktikan teorema tentang kerapatan bilangan irasional yang
+        dicantumkan dalam pendahuluan kumpulan latihan ini.
       </p>
     </introduction>
         <task>
           <introduction>
             <p>
-              The first step is to demonstrate the existence of an irrational number.
-              We will do that by proving that <m>\sqrt{2}</m> is irrational.
-              Proceed by contradiction and assume that
-              <m>\sqrt{2}</m> is a rational number.
-              That is, <m>\sqrt{2} = \frac{r}{s}</m> for some positive integers <m>r</m> and <m>s</m> such that <m>r</m> and <m>s</m> have no positive common factors other than 1.
+              Langkah pertama adalah menunjukkan keberadaan suatu bilangan irasional.
+              Kita akan melakukannya dengan membuktikan bahwa <m>\sqrt{2}</m> irasional.
+              Gunakan pembuktian dengan kontradiksi dan andaikan bahwa
+              <m>\sqrt{2}</m> merupakan bilangan rasional.
+              Artinya, <m>\sqrt{2} = \frac{r}{s}</m> untuk suatu bilangan bulat positif <m>r</m> dan <m>s</m> sedemikian sehingga <m>r</m> dan <m>s</m> tidak memiliki faktor persekutuan positif selain 1.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Explain why <m>r^2=2s^2</m>.
-                    Since <m>2</m> is prime, it follows that <m>2</m> divides <m>r</m>.
+                    Jelaskan mengapa <m>r^2=2s^2</m>.
+                    Karena <m>2</m> prima, diperoleh bahwa <m>2</m> membagi <m>r</m>.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Show that <m>2</m> divides <m>s</m>.
-                    Explain how this proves that
-                    <m>\sqrt{2}</m> is an irrational number.
+                    Tunjukkan bahwa <m>2</m> membagi <m>s</m>.
+                    Jelaskan bagaimana hal ini membuktikan bahwa
+                    <m>\sqrt{2}</m> merupakan bilangan irasional.
                   </p>
                 </statement>
               </task>
@@ -433,15 +444,15 @@
           <task>
           <statement>
             <p>
-              Let <m>x</m> and <m>y</m> be distinct real numbers.
-              Show that there exists an integer <m>q</m> and a positive integer <m>N</m> such that
-              <m>z=\frac{q\sqrt{2}}{2^N}</m> is an irrational number between <m>x</m> and <m>y</m>.
+              Misalkan <m>x</m> dan <m>y</m> dua bilangan real berbeda.
+              Tunjukkan bahwa terdapat bilangan bulat <m>q</m> dan bilangan bulat positif <m>N</m> sedemikian sehingga
+              <m>z=\frac{q\sqrt{2}}{2^N}</m> merupakan bilangan irasional di antara <m>x</m> dan <m>y</m>.
               
             </p>
           </statement>
           <hint>
                 <p>
-                  Consider the approach in <xref ref="ex_GLB_rational"/> .
+                  Pertimbangkan pendekatan dalam <xref ref="ex_GLB_rational"/>.
                 </p>
               </hint>
         </task>
@@ -450,8 +461,8 @@
   <exercise xml:id="ex_GLB_triangle">
     <statement>
       <p>
-        Let <m>(X,d)</m> be a metric space and <m>A</m> a nonempty subset of <m>X</m>.
-        For <m>x,y \in X</m>, prove that <m>d(x,A) \leq d(x,y) + d(y,A)</m>.
+        Misalkan <m>(X,d)</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan tak kosong dari <m>X</m>.
+        Untuk <m>x,y \in X</m>, buktikan bahwa <m>d(x,A) \leq d(x,y) + d(y,A)</m>.
       </p>
     </statement>
   </exercise>
@@ -459,11 +470,11 @@
   <exercise>
     <statement>
       <p>
-        Prove that if <m>(X,d)</m> is a metric space and <m>B</m> and <m>C</m> are nonempty subsets of <m>X</m>, then
+        Buktikan bahwa jika <m>(X,d)</m> suatu ruang metrik dan <m>B</m> serta <m>C</m> subhimpunan tak kosong dari <m>X</m>, maka
         <me>
           d(a, B \cup C) = \min\{d(a,B), d(a,C)\}
         </me>
-        for every <m>a \in X</m>.
+        untuk setiap <m>a \in X</m>.
       </p>
     </statement>
   </exercise>
@@ -471,57 +482,58 @@
   <exercise>
     <introduction>
       <p>
-        For each of the following, answer true if the statement is always true.
-        If the statement is only sometimes true or never true,
-        answer false and provide a concrete example to illustrate that the statement is false.
-        If a statement is true, explain why.
-        Throughout, let <m>S</m> and <m>T</m> be bounded subsets of <m>\R</m> (a subset of <m>\R</m> is bounded if it is both bounded above and bounded below).
+        Untuk setiap pernyataan berikut, jawab benar jika pernyataan tersebut selalu benar.
+        Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar,
+        jawab salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
+        Sepanjang latihan ini, misalkan <m>S</m> dan <m>T</m> subhimpunan tak kosong dan terbatas dari <m>\R</m>
+        (suatu subhimpunan dari <m>\R</m> disebut terbatas jika terbatas di atas dan di bawah).
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Any nonempty subset of <m>S</m> is bounded.
+              Setiap subhimpunan tak kosong dari <m>S</m> terbatas.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>S + T = \{s+t \mid s \in S, t \in T\}</m>,
-              then <m>\sup(S + T) = \max\{\sup(S), \sup(T)\}</m>.
+              Jika <m>S + T = \{s+t \mid s \in S, t \in T\}</m>,
+              maka <m>\sup(S + T) = \max\{\sup(S), \sup(T)\}</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>S + T = \{s+t \mid s \in S, t \in T\}</m>,
-              then <m>\inf(S + T) = \min\{\inf(S), \inf(T)\}</m>.
+              Jika <m>S + T = \{s+t \mid s \in S, t \in T\}</m>,
+              maka <m>\inf(S + T) = \min\{\inf(S), \inf(T)\}</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>U</m> is a nonempty subset of <m>S</m>,
-              then <m>\sup(U) \leq \sup(S)</m>.
+              Jika <m>U</m> suatu subhimpunan tak kosong dari <m>S</m>,
+              maka <m>\sup(U) \leq \sup(S)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>U</m> is a nonempty subset of <m>S</m>,
-              then <m>\inf(S) \leq \inf(U)</m>.
+              Jika <m>U</m> suatu subhimpunan tak kosong dari <m>S</m>,
+              maka <m>\inf(S) \leq \inf(U)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>A</m> is a subset of <m>\R</m> and <m>x \in \R</m> with
-              <m>d(x,A) = 0</m>, then <m>x \in A</m>.
+              Jika <m>A</m> suatu subhimpunan tak kosong dari <m>\R</m> dan <m>x \in \R</m> dengan
+              <m>d_E(x,A) = 0</m> dalam metrik Euklides, maka <m>x \in A</m>.
             </p>
           </statement>
         </task>
