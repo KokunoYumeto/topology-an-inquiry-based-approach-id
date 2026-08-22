@@ -2,7 +2,7 @@
 <!--********************************************--><!--*       Generated from PreTeXt source      *--><!--*                                          *--><!--*         https://pretextbook.org          *--><!--*                                          *--><!--********************************************--><html lang="id-ID" dir="ltr" xml:lang="id-ID">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Topologi: Pendekatan Berbasis Inkuiri</title>
+<title>Metrik Levenshtein</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,7 +86,7 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-03-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–3 — Himpunan, Fungsi, Ruang Metrik, dan Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-04-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–4 — Himpunan, Fungsi, Ruang Metrik, Penerapan Ruang Metrik, dan Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -197,7 +197,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>pelacakan mata — belum tersedia</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><span class="previous-button button disabled"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></span><span class="up-button button disabled"><span class="icon">^</span><span class="name">Naik</span></span><a class="next-button button" href="frontmatter-1.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec_hamming.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="up-button button" href="chap_metric_spaces_apps.html" title="Naik"><span class="icon">^</span><span class="name">Naik</span></a><a class="next-button button" href="backmatter-1.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Cari" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
@@ -214,10 +214,10 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch03-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch04-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, dan Ruang Metrik</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, dan Penerapannya</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
@@ -253,6 +253,14 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_metric_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces_apps.html" class="internal"><span class="codenumber">4</span> <span class="title">Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_met_space_app.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hamming.html" class="internal"><span class="title">Metrik Hamming</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="sec_levenshtein.html" class="internal"><span class="title">Metrik Levenshtein</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -285,17 +293,65 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch03-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan empat belas latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch04-companion.html" class="internal"><span class="codenumber">D</span> <span class="title">Pendamping Mandiri Bab 4: Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch04-source-task-guides.html" class="internal"><span class="title">Panduan untuk tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch04-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="o003-c90-chapters-01-03-reader"><nav class="summary-links"><ul>
-<li><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></li>
-<li><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, dan Ruang Metrik</span></a></li>
-<li><a href="backmatter-1.html" class="internal"><span class="title">Bagian Akhir</span></a></li>
-</ul></nav></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_levenshtein"><h2 class="heading hide-type">
+<span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Metrik Levenshtein</span>
+</h2>
+<div class="para" id="p-546">Metrik Levenshtein merupakan salah satu ukuran jarak yang digunakan para peneliti untuk memahami DNA. DNA tersusun atas dua rantai nukleotida, yang saling berpilin membentuk heliks ganda. Nukleotida terdiri atas empat jenis: adenin (A), sitosin (C), guanin (G), dan timin (T). Nukleotida pada kedua rantai dalam suatu untai DNA saling berpasangan (A dengan T dan C dengan G), sehingga nukleotida pada satu rantai menentukan nukleotida pada rantai lainnya. Karena itu, kita dapat merepresentasikan suatu untai DNA dengan untai huruf dari alfabet <span class="process-math">\(\{A, C, G, T\}\text{.}\)</span> Salah satu persoalan yang dihadapi peneliti DNA adalah cara membandingkan dua untai DNA, dan metrik Levenshtein merupakan salah satu cara untuk mengukur jarak di antara keduanya. Metrik lain dapat digunakan, tetapi metrik Levenshtein sesuai untuk tugas ini karena beberapa alasan. Selama evolusi, perubahan pada urutan DNA terjadi karena substitusi nukleotida, atau karena penyisipan maupun penghapusan nukleotida. Perubahan evolusioner ini dapat dimodelkan lebih baik oleh operasi-operasi yang menentukan jarak Levenshtein daripada oleh metrik lain. Selain itu, metrik Levenshtein dapat digunakan untuk menghitung jarak antara untai-untai yang panjangnya berbeda. Metrik Levenshtein juga diterapkan dalam pemeriksa ejaan, pengenalan wicara, dan deteksi plagiarisme otomatis. Untuk memahami cara menghitung metrik Levenshtein, perhatikan pertanyaan tentang seberapa jauh jarak antara kata “green” dan “grease”.</div>
+<div class="para logical" id="p-547">
+<div class="para">Untuk membandingkan kedua kata ini, kita harus dapat mengubah, menambahkan, atau menghapus huruf. Jika <span class="process-math">\(x = x_1x_2 \cdots x_n\)</span> merupakan suatu untai huruf, kita memperbolehkan operasi-operasi berikut:</div>
+<dl class="description-list">
+<dt id="li-113">penghapusan:</dt>
+<dd><div class="para" id="p-548">ganti <span class="process-math">\(x\)</span> dengan <span class="process-math">\(x_1 \cdots x_{i-1}x_{i+1} \cdots x_n\)</span> untuk suatu <span class="process-math">\(i\text{,}\)</span>
+</div></dd>
+<dt id="li-114">penyisipan:</dt>
+<dd><div class="para" id="p-549">ganti <span class="process-math">\(x\)</span> dengan <span class="process-math">\(x_1 \cdots x_{i}yx_{i+1} \cdots x_n\text{,}\)</span> dengan <span class="process-math">\(y\)</span> merupakan huruf yang diperbolehkan dan <span class="process-math">\(0 \leq i \leq n\text{,}\)</span>
+</div></dd>
+<dt id="li-115">substitusi:</dt>
+<dd><div class="para" id="p-550">ganti <span class="process-math">\(x\)</span> dengan <span class="process-math">\(x_1 \cdots x_{i-1}yx_{i+1} \cdots x_n\text{,}\)</span> dengan <span class="process-math">\(y\)</span> merupakan huruf yang diperbolehkan dan <span class="process-math">\(1 \leq i \leq n\text{.}\)</span>
+</div></dd>
+</dl>
+</div>
+<article class="activity project-like" id="activity-20"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-226"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-551">Dengan menggunakan operasi-operasi yang diperbolehkan, ubahlah kata “green” menjadi kata “grease”. Sebutkan secara spesifik setiap operasi yang Anda gunakan. (Catatan: untai-untai huruf antara tidak harus membentuk kata yang dapat dikenali.) Berapa banyak operasi yang Anda gunakan?</div></article></article><div class="para" id="p-552">Jika diperlukan tiga operasi untuk mengubah “green” menjadi “grease”, kita dapat mengatakan bahwa jarak antara “green” dan “grease” paling besar 3. Akan tetapi, mungkin saja “green” dapat diubah menjadi “grease” dengan kurang dari 3 operasi, sehingga penilaian kita tentang jarak antara kedua kata tersebut dapat berubah. Secara umum, untuk mendefinisikan jarak Levenshtein <span class="process-math">\(d_L\)</span> antara untai <span class="process-math">\(x\)</span> dan untai <span class="process-math">\(y\)</span> di atas suatu alfabet tetap <span class="process-math">\(\Sigma\text{,}\)</span> misalkan <span class="process-math">\(m_d\)</span> menyatakan banyaknya penghapusan, <span class="process-math">\(m_i\)</span> menyatakan banyaknya penyisipan, dan <span class="process-math">\(m_s\)</span> menyatakan banyaknya substitusi yang digunakan untuk mengubah <span class="process-math">\(x\)</span> menjadi <span class="process-math">\(y\text{.}\)</span> Mungkin terdapat banyak kombinasi berbeda dari <span class="process-math">\(m_d\text{,}\)</span> <span class="process-math">\(m_i\text{,}\)</span> dan <span class="process-math">\(m_s\)</span> yang mengubah <span class="process-math">\(x\)</span> menjadi <span class="process-math">\(y\text{,}\)</span> sehingga kita menginginkan jumlah terkecil.</div>
+<article class="definition definition-like" id="definition-13"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
+</h3> <div class="para logical" id="p-553">
+<div class="para">
+<dfn class="terminology">Jarak Levenshtein</dfn> <span class="process-math">\(d_L(x,y)\)</span> antara untai <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> adalah</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_L(x,y) = \min\{m_d+m_i+m_s\}\text{.}
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="activity-21"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-227"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-554">Buktikan bahwa fungsi jarak Levenshtein benar-benar merupakan metrik pada himpunan <span class="process-math">\(\Sigma^*\)</span> semua untai berhingga di atas alfabet tetap <span class="process-math">\(\Sigma\)</span> (baik yang membentuk kata bermakna maupun tidak).</div></article><article class="task exercise-like" id="task-228"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="p-555">
+<div class="para">Sebuah pemeriksa ejaan memperbaiki kata yang salah eja “tupotagry”. Dengan menggunakan metrik Levenshtein, kata manakah yang akan dipilih pemeriksa ejaan sebagai kata yang paling dekat dengan “tupotagry”? Mengapa?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{"topography"} \qquad \text{"topology"} \qquad \text{"tautology"}
+\end{equation*}
+</div>
+</div></article></article></section></div>
 <div class="ptx-content-footer">
-<span class="previous-button button disabled"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></span><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="frontmatter-1.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="sec_hamming.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="backmatter-1.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

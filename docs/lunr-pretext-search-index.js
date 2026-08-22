@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch03-edition-note",
+  "id": "o003-c90-ch04-edition-note",
   "level": "1",
-  "url": "o003-c90-ch03-edition-note.html",
+  "url": "o003-c90-ch04-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat tiga bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat empat bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
 },
 {
   "id": "sec_sets_intro",
@@ -1135,6 +1135,87 @@ var ptx_lunr_docs = [
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Fungsi yang didefinisikan oleh merupakan metrik pada .   Setiap himpunan tak kosong dapat dijadikan ruang metrik.   Pada setiap himpunan yang memuat sekurang-kurangnya dua unsur, dapat didefinisikan tak berhingga banyak metrik.   Misalkan dan ruang-ruang metrik dengan . Maka fungsi yang didefinisikan oleh merupakan metrik pada .   Misalkan suatu ruang metrik. Jika tak berhingga, maka daerah hasil juga merupakan himpunan tak berhingga.  "
 },
 {
+  "id": "sec_met_space_app",
+  "level": "1",
+  "url": "sec_met_space_app.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Pada bagian ini, kita menelaah dua penerapan ruang metrik.  "
+},
+{
+  "id": "sec_hamming",
+  "level": "1",
+  "url": "sec_hamming.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Metrik Hamming",
+  "body": " Metrik Hamming  Dalam masyarakat kita, banyak sekali informasi dikomunikasikan secara elektronik. Transaksi bank, program televisi, komunikasi militer, panggilan telepon seluler, citra digital, dan hampir setiap pertukaran yang dapat dibayangkan dapat didigitalkan dan dikirimkan secara elektronik, atau memang sudah dilakukan dengan cara tersebut. Dalam banyak situasi, kita perlu membandingkan satu kumpulan data dengan kumpulan lainnya (misalnya, pencarian untai teks atau pencocokan citra di Internet, serta untaian DNA), dan metrik sering digunakan untuk tujuan ini. Komputer bekerja dengan sistem biner, artinya komputer hanya mengenali nol dan satu. Karena itu, pesan teks digital merupakan suatu untai nol dan satu. Dengan kata lain, pesan digital merupakan kumpulan unsur dalam ruang untuk suatu bilangan bulat positif , dengan . Setiap unsur dalam disebut kata —yakni, kata adalah unsur dalam yang dinyatakan dalam bentuk . Seperti halnya dalam bahasa Inggris, yang tidak setiap kombinasi hurufnya membentuk kata yang bermakna, tidak setiap kata dapat dikenali sebagai bagian dari pesan yang dapat dipahami. Sebagai contoh, kita dapat mengodekan huruf-huruf dalam alfabet dengan menetapkan bilangan 1 sampai 26 pada huruf-huruf tersebut, kemudian menjadikannya unsur dalam dengan mengonversinya ke bentuk biner. Himpunan semua kata yang dapat dipahami disebut kode . Jadi, kode hanyalah suatu subhimpunan yang unsur-unsurnya disepakati oleh semua pihak sebagai kata-kata yang bermakna. Kata-kata dalam suatu kode disebut kata kode . Untuk menangani masalah yang terjadi dalam pengiriman pesan digital, seperti mengacak pesan ( pengodean ), memulihkan pesan dari bentuk teracak ( pendekodean ), serta mendeteksi dan memperbaiki galat dalam pesan, kita perlu memiliki cara untuk mengukur jarak antarkata. Salah satu caranya adalah menggunakan metrik Hamming.   metrik Hamming   Misalkan dan merupakan kata-kata dalam . Jarak Hamming  antara dan adalah .    Ingatlah bahwa untuk setiap , baik maupun bernilai 0 atau 1. Oleh karena itu,   Dengan kata lain, menghitung banyaknya komponen tempat dan berbeda.    Jelaskan mengapa merupakan suatu metrik.    Misalkan kita membuat kode dalam , dengan Artinya, kata-kata , , , , , , , dan merupakan satu-satunya kata yang dapat menyusun suatu pesan. Hitung .    Misalkan kita menerima pesan .   Bagaimana kita mengetahui bahwa telah terjadi galat dalam transmisi pesan yang kita terima?   Untuk memperbaiki galat dalam pesan yang diterima ini, kita mengganti kata-kata yang salah dengan kata kode dalam yang paling dekat dengan masing-masing kata tersebut. Perbaikilah pesan ini. (Perhatikan bahwa mungkin terdapat lebih dari satu kemungkinan penggantian. Temukan semua kemungkinannya.)    "
+},
+{
+  "id": "p-537",
+  "level": "2",
+  "url": "sec_hamming.html#p-537",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "kata kode kata kode pengodean pendekodean "
+},
+{
+  "id": "definition-12",
+  "level": "2",
+  "url": "sec_hamming.html#definition-12",
+  "type": "Definisi",
+  "number": "4.1",
+  "title": "",
+  "body": " metrik Hamming   Misalkan dan merupakan kata-kata dalam . Jarak Hamming  antara dan adalah .   "
+},
+{
+  "id": "activity-19",
+  "level": "2",
+  "url": "sec_hamming.html#activity-19",
+  "type": "Kegiatan",
+  "number": "4.1",
+  "title": "",
+  "body": "  Jelaskan mengapa merupakan suatu metrik.    Misalkan kita membuat kode dalam , dengan Artinya, kata-kata , , , , , , , dan merupakan satu-satunya kata yang dapat menyusun suatu pesan. Hitung .    Misalkan kita menerima pesan .   Bagaimana kita mengetahui bahwa telah terjadi galat dalam transmisi pesan yang kita terima?   Untuk memperbaiki galat dalam pesan yang diterima ini, kita mengganti kata-kata yang salah dengan kata kode dalam yang paling dekat dengan masing-masing kata tersebut. Perbaikilah pesan ini. (Perhatikan bahwa mungkin terdapat lebih dari satu kemungkinan penggantian. Temukan semua kemungkinannya.)   "
+},
+{
+  "id": "sec_levenshtein",
+  "level": "1",
+  "url": "sec_levenshtein.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Metrik Levenshtein",
+  "body": " Metrik Levenshtein  Metrik Levenshtein merupakan salah satu ukuran jarak yang digunakan para peneliti untuk memahami DNA. DNA tersusun atas dua rantai nukleotida, yang saling berpilin membentuk heliks ganda. Nukleotida terdiri atas empat jenis: adenin (A), sitosin (C), guanin (G), dan timin (T). Nukleotida pada kedua rantai dalam suatu untai DNA saling berpasangan (A dengan T dan C dengan G), sehingga nukleotida pada satu rantai menentukan nukleotida pada rantai lainnya. Karena itu, kita dapat merepresentasikan suatu untai DNA dengan untai huruf dari alfabet . Salah satu persoalan yang dihadapi peneliti DNA adalah cara membandingkan dua untai DNA, dan metrik Levenshtein merupakan salah satu cara untuk mengukur jarak di antara keduanya. Metrik lain dapat digunakan, tetapi metrik Levenshtein sesuai untuk tugas ini karena beberapa alasan. Selama evolusi, perubahan pada urutan DNA terjadi karena substitusi nukleotida, atau karena penyisipan maupun penghapusan nukleotida. Perubahan evolusioner ini dapat dimodelkan lebih baik oleh operasi-operasi yang menentukan jarak Levenshtein daripada oleh metrik lain. Selain itu, metrik Levenshtein dapat digunakan untuk menghitung jarak antara untai-untai yang panjangnya berbeda. Metrik Levenshtein juga diterapkan dalam pemeriksa ejaan, pengenalan wicara, dan deteksi plagiarisme otomatis. Untuk memahami cara menghitung metrik Levenshtein, perhatikan pertanyaan tentang seberapa jauh jarak antara kata green dan grease .  Untuk membandingkan kedua kata ini, kita harus dapat mengubah, menambahkan, atau menghapus huruf. Jika merupakan suatu untai huruf, kita memperbolehkan operasi-operasi berikut:   penghapusan:  ganti dengan untuk suatu ,    penyisipan:  ganti dengan , dengan merupakan huruf yang diperbolehkan dan ,    substitusi:  ganti dengan , dengan merupakan huruf yang diperbolehkan dan .       Dengan menggunakan operasi-operasi yang diperbolehkan, ubahlah kata green menjadi kata grease . Sebutkan secara spesifik setiap operasi yang Anda gunakan. (Catatan: untai-untai huruf antara tidak harus membentuk kata yang dapat dikenali.) Berapa banyak operasi yang Anda gunakan?    Jika diperlukan tiga operasi untuk mengubah green menjadi grease , kita dapat mengatakan bahwa jarak antara green dan grease paling besar 3. Akan tetapi, mungkin saja green dapat diubah menjadi grease dengan kurang dari 3 operasi, sehingga penilaian kita tentang jarak antara kedua kata tersebut dapat berubah. Secara umum, untuk mendefinisikan jarak Levenshtein antara untai dan untai di atas suatu alfabet tetap , misalkan menyatakan banyaknya penghapusan, menyatakan banyaknya penyisipan, dan menyatakan banyaknya substitusi yang digunakan untuk mengubah menjadi . Mungkin terdapat banyak kombinasi berbeda dari , , dan yang mengubah menjadi , sehingga kita menginginkan jumlah terkecil.   metrik Levenshtein    Jarak Levenshtein  antara untai dan adalah .      Buktikan bahwa fungsi jarak Levenshtein benar-benar merupakan metrik pada himpunan semua untai berhingga di atas alfabet tetap (baik yang membentuk kata bermakna maupun tidak).    Sebuah pemeriksa ejaan memperbaiki kata yang salah eja tupotagry . Dengan menggunakan metrik Levenshtein, kata manakah yang akan dipilih pemeriksa ejaan sebagai kata yang paling dekat dengan tupotagry ? Mengapa?     "
+},
+{
+  "id": "activity-20",
+  "level": "2",
+  "url": "sec_levenshtein.html#activity-20",
+  "type": "Kegiatan",
+  "number": "4.2",
+  "title": "",
+  "body": "  Dengan menggunakan operasi-operasi yang diperbolehkan, ubahlah kata green menjadi kata grease . Sebutkan secara spesifik setiap operasi yang Anda gunakan. (Catatan: untai-untai huruf antara tidak harus membentuk kata yang dapat dikenali.) Berapa banyak operasi yang Anda gunakan?   "
+},
+{
+  "id": "definition-13",
+  "level": "2",
+  "url": "sec_levenshtein.html#definition-13",
+  "type": "Definisi",
+  "number": "4.2",
+  "title": "",
+  "body": " metrik Levenshtein    Jarak Levenshtein  antara untai dan adalah .   "
+},
+{
+  "id": "activity-21",
+  "level": "2",
+  "url": "sec_levenshtein.html#activity-21",
+  "type": "Kegiatan",
+  "number": "4.3",
+  "title": "",
+  "body": "  Buktikan bahwa fungsi jarak Levenshtein benar-benar merupakan metrik pada himpunan semua untai berhingga di atas alfabet tetap (baik yang membentuk kata bermakna maupun tidak).    Sebuah pemeriksa ejaan memperbaiki kata yang salah eja tupotagry . Dengan menggunakan metrik Levenshtein, kata manakah yang akan dipilih pemeriksa ejaan sebagai kata yang paling dekat dengan tupotagry ? Mengapa?    "
+},
+{
   "id": "o003-c90-ch01-activity-checkpoints",
   "level": "1",
   "url": "o003-c90-ch01-activity-checkpoints.html",
@@ -1997,6 +2078,132 @@ var ptx_lunr_docs = [
   "number": "C.28",
   "title": "Latihan 14: lima klaim benar–salah.",
   "body": "Latihan 14: lima klaim benar–salah  Putuskan lima klaim pada latihan terakhir dalam urutan sumber. Setiap jawaban salah harus disertai contoh konkret; setiap jawaban benar harus disertai argumen yang berlaku umum.   Petunjuk 1. Titik menguji jarak kuadrat; metrik diskret menguji klaim tentang himpunan dan daerah hasil.  Petunjuk 2. Pada hasil kali jarak, pilih dua titik yang berbeda hanya pada satu koordinat.   Urutannya adalah: salah, benar, benar, salah, salah.   (a) Salah: , tetapi . (b) Benar: pada setiap himpunan tak kosong, metrik diskret merupakan metrik. (c) Benar: jika himpunan mempunyai dua titik berbeda, metrik yang memberi jarak pada setiap pasangan berbeda adalah metrik; nilai yang berbeda memberi tak berhingga banyak fungsi berbeda.  (d) Salah. Ambil dengan metrik diskret. Titik dan berbeda, tetapi hasil kali jaraknya , sehingga identitas titik gagal. (e) Salah: himpunan tak berhingga apa pun dengan metrik diskret mempunyai daerah hasil jarak hanya , suatu himpunan berhingga.  "
+},
+{
+  "id": "o003-c90-ch04-source-task-guides",
+  "level": "1",
+  "url": "o003-c90-ch04-source-task-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan untuk tugas sumber",
+  "body": " Panduan untuk tugas sumber  Delapan pemeriksaan berikut berkorespondensi, secara berurutan, dengan lima tugas yang diratakan dari bagian dan tiga tugas dari bagian .  Tugas Hamming 1: membuktikan aksioma metrik  Buktikan bahwa fungsi pada , dengan , benar-benar merupakan metrik. Rubrik: tangani tak-negatif, identitas titik, simetri, dan pertidaksamaan segitiga; jangan mengganti bukti umum dengan satu contoh numerik.   Petunjuk 1. Setiap suku bernilai nol atau satu.  Petunjuk 2. Terapkan pertidaksamaan segitiga nilai mutlak pada setiap koordinat, lalu jumlahkan.   Ya. Keempat aksioma metrik mengikuti sifat nilai mutlak pada setiap koordinat dan fakta bahwa jumlahnya nol tepat ketika semua koordinat sama.   Karena setiap , jumlah tak negatif. Jumlah ini nol tepat ketika setiap sukunya nol, yakni tepat ketika untuk semua ; keadaan itu setara dengan . Kesamaan pada setiap koordinat memberi simetri.  Untuk , pertidaksamaan nilai mutlak memberi untuk setiap . Menjumlahkan dari sampai menghasilkan . Jadi memenuhi seluruh aksioma metrik.   Tugas Hamming 2: jarak dua kata kode  Untuk kode pada bab utama, hitung dan tunjukkan koordinat mana yang menyumbang pada jarak tersebut.   Petunjuk. Bandingkan dan dari kiri ke kanan.   ; kedua kata berbeda tepat pada koordinat ketiga dan keempat.   Kita mempunyai dan . Selisih pada koordinat pertama, kedua, kelima, dan keenam adalah nol, sedangkan selisih pada koordinat ketiga dan keempat bernilai satu. Karena itu, .   Tugas Hamming 3: menyiapkan pesan untuk pendekodean  Namai kelima blok pada pesan yang diterima sebagai , lalu tentukan blok mana yang sudah merupakan kata kode dalam . Rubrik: pertahankan urutan blok dan cocokkan blok yang sah dengan indeks kata kodenya.   Petunjuk. Bandingkan setiap blok enam bit dengan daftar , bukan hanya dengan panjangnya.   Bloknya adalah , , , , dan . Jadi sudah berada dalam , sedangkan tidak.   Memisahkan pesan pada setiap spasi menghasilkan, dalam urutan yang diterima, Pencocokan langsung dengan delapan anggota memberi , , dan . Tidak ada anggota daftar yang sama dengan atau . Audit ini menyiapkan dua sub-tugas pendekodean berikutnya tanpa menebak kata pengganti terlebih dahulu.   Tugas Hamming 4: mendeteksi galat transmisi  Jelaskan bagaimana pesan yang diterima membuktikan bahwa sedikitnya satu galat transmisi telah terjadi, dengan asumsi setiap blok yang dikirim harus merupakan kata kode dalam .   Petunjuk. Keanggotaan dalam kode adalah uji validitas blok yang diterima.   Blok pertama dan blok ketiga bukan anggota ; karena blok yang sah harus berada dalam , pesan tersebut tidak mungkin diterima tanpa galat.   Menurut definisi kode yang dipakai, pengirim hanya mengirim anggota . Pemeriksaan keanggotaan pada tugas sebelumnya menunjukkan dan . Maka kedua blok yang diterima itu tidak mungkin identik dengan blok sah yang dikirim. Sedikitnya satu bit berubah pada masing-masing blok tersebut. Sebaliknya, fakta bahwa tidak membuktikan bahwa bit-bitnya pasti tidak berubah; galat berganda secara prinsip dapat mengubah satu kata kode menjadi kata kode lain. Yang pasti dari data ini ialah adanya galat pada blok pertama dan ketiga.   Tugas Hamming 5: semua hasil pendekodean terdekat  Ganti setiap blok yang diterima dengan setiap kata kode yang berjarak paling dekat. Temukan seluruh pesan hasil, bukan hanya satu pilihan. Rubrik: hitung jarak terhadap kedelapan kata kode untuk setiap blok dan nyatakan semua keadaan seri.   Petunjuk 1. Susun satu baris delapan jarak untuk setiap .  Petunjuk 2. Empat kata kode sama-sama berjarak satu dari blok pertama.   Blok terdekatnya adalah , , , , dan . Jadi terdapat tepat empat pesan hasil.   Dengan kolom dalam urutan , seluruh vektor jarak adalah Minimum baris pertama ialah satu dan dicapai pada kolom . Minimum baris ketiga ialah satu dan hanya dicapai pada kolom pertama. Tiga blok yang memang sudah berupa kata kode mempunyai minimum nol yang unik pada kolomnya sendiri.  Oleh sebab itu, seluruh kemungkinan pesan terkoreksi, dalam urutan blok, ialah Dekode tetangga terdekat tidak menyediakan informasi untuk memilih satu di antara empat kemungkinan ini bagi blok pertama.   Tugas Levenshtein 1: dari green ke grease  Ubah green menjadi grease dengan operasi penyisipan, penghapusan, dan substitusi yang diizinkan. Berikan urutan terpendek, identifikasi setiap operasi, dan buktikan bahwa lebih sedikit operasi tidak mungkin.   Petunjuk 1. Pertahankan awalan gre , lalu ubah dua huruf dan tambahkan satu huruf.  Petunjuk 2. Karena panjang sasaran lebih besar satu, lintasan dengan paling banyak dua operasi harus memakai tepat satu penyisipan dan paling banyak satu substitusi.   Salah satu urutan terpendek adalah green → grean → greas → grease . Jadi .   Substitusikan huruf keempat e dengan a untuk memperoleh grean . Substitusikan n dengan s untuk memperoleh greas , lalu sisipkan e di ujung. Ini memberi batas atas tiga operasi.  Untuk batas bawah, perubahan panjang dari lima menjadi enam memerlukan sedikitnya satu penyisipan. Jika seluruh perubahan memakai paling banyak dua operasi, hitungan panjang memaksa tepat satu penyisipan, tanpa penghapusan, dan paling banyak satu substitusi. Menghapus calon huruf yang disisipkan dari grease menghasilkan salah satu dari rease , gease , grase , grese , greae , atau greas . Jarak Hamming masing-masing dari green adalah . Tidak satu pun dapat diperoleh dari green dengan paling banyak satu substitusi. Jadi dua operasi mustahil, sedangkan tiga operasi sudah dicapai; jaraknya tepat tiga.   Tugas Levenshtein 2: membuktikan metrik pada  Misalkan adalah himpunan semua untai berhingga atas alfabet . Buktikan bahwa banyak minimum operasi penyisipan, penghapusan, dan substitusi mendefinisikan metrik pada . Rubrik: jelaskan bahwa minimum ada, lalu buktikan keempat aksioma.   Petunjuk 1. Semua huruf dapat dihapus, kemudian semua huruf disisipkan.  Petunjuk 2. Balik urutan operasi untuk simetri dan sambungkan dua urutan terpendek untuk pertidaksamaan segitiga.   Fungsi merupakan metrik pada . Urutan kosong memberi identitas, pembalikan operasi memberi simetri, dan penyambungan urutan edit memberi pertidaksamaan segitiga.   Untuk sembarang untai , ada urutan edit berhingga: hapus seluruh huruf , lalu sisipkan seluruh huruf . Jadi himpunan panjang urutan edit dari ke adalah subhimpunan tak kosong dari bilangan bulat tak negatif; menurut prinsip pengurutan baik, himpunan itu mempunyai minimum. Karena panjang urutan edit tak negatif, .  Jika , urutan kosong mempunyai panjang nol, sehingga . Sebaliknya, jarak nol berarti minimum dicapai oleh urutan tanpa operasi; urutan demikian tidak mengubah untai, jadi . Setiap substitusi dapat dibalik dengan substitusi, setiap penyisipan dengan penghapusan, dan setiap penghapusan dengan penyisipan. Membalik urutan terpendek dari ke menghasilkan urutan sama panjang dari ke . Maka ; menukar peran memberi pertidaksamaan sebaliknya, sehingga jaraknya simetris.  Akhirnya, sambungkan urutan terpendek dari ke dengan urutan terpendek dari ke . Hasilnya adalah suatu urutan dari ke sepanjang . Karena adalah panjang minimum, . Keempat aksioma terpenuhi.   Tugas Levenshtein 3: memilih koreksi ejaan terdekat  Hitung secara tepat jarak Levenshtein dari tupotagry ke topography , topology , dan tautology . Tentukan pilihan pemeriksa ejaan dan buktikan bahwa setiap jarak yang dilaporkan memang minimum.   Petunjuk 1. Isi tabel jarak untuk semua pasangan awalan, bukan hanya mencocokkan huruf pada posisi yang sama.  Petunjuk 2. Rekurensi mengambil minimum dari penghapusan, penyisipan, dan substitusi atau pencocokan terakhir.   Jaraknya berturut-turut adalah , , dan . Karena itu, pilihan terdekat yang unik adalah topology .   Untuk awalan sepanjang dan , definisikan sebagai jarak keduanya. Nilai batasnya dan . Jika huruf terakhir sama, letakkan ; jika berbeda, letakkan . Meninjau operasi terakhir memberi rekurensi Argumen berdasarkan operasi terakhir menunjukkan bahwa setiap urutan edit masuk ke salah satu dari tiga kasus ini; karena itu, tabel tersebut memberi batas bawah sekaligus batas atas.  Untuk sumber tupotagry , baris terakhir tabel, mulai dari awalan sasaran kosong, adalah Unsur terakhir memberi jarak . Batas atas itu juga tampak pada urutan edit berikut; setiap anak panah adalah satu operasi:   tupotagry → topotagry → topogtagry → topogragry → topograpry → topography ;   tupotagry → topotagry → topolagry → topologry → topology ;   tupotagry → taupotagry → tautotagry → tautolagry → tautologry → tautology . Karena nilai minimum terkecil adalah empat dan hanya dimiliki topology , itulah koreksi menurut aturan tetangga terdekat.   "
+},
+{
+  "id": "o003-c90-ch04-hamming-task-01",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-hamming-task-01",
+  "type": "Pemeriksaan",
+  "number": "D.1",
+  "title": "Tugas Hamming 1: membuktikan aksioma metrik.",
+  "body": "Tugas Hamming 1: membuktikan aksioma metrik  Buktikan bahwa fungsi pada , dengan , benar-benar merupakan metrik. Rubrik: tangani tak-negatif, identitas titik, simetri, dan pertidaksamaan segitiga; jangan mengganti bukti umum dengan satu contoh numerik.   Petunjuk 1. Setiap suku bernilai nol atau satu.  Petunjuk 2. Terapkan pertidaksamaan segitiga nilai mutlak pada setiap koordinat, lalu jumlahkan.   Ya. Keempat aksioma metrik mengikuti sifat nilai mutlak pada setiap koordinat dan fakta bahwa jumlahnya nol tepat ketika semua koordinat sama.   Karena setiap , jumlah tak negatif. Jumlah ini nol tepat ketika setiap sukunya nol, yakni tepat ketika untuk semua ; keadaan itu setara dengan . Kesamaan pada setiap koordinat memberi simetri.  Untuk , pertidaksamaan nilai mutlak memberi untuk setiap . Menjumlahkan dari sampai menghasilkan . Jadi memenuhi seluruh aksioma metrik.  "
+},
+{
+  "id": "o003-c90-ch04-hamming-task-02",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-hamming-task-02",
+  "type": "Pemeriksaan",
+  "number": "D.2",
+  "title": "Tugas Hamming 2: jarak dua kata kode.",
+  "body": "Tugas Hamming 2: jarak dua kata kode  Untuk kode pada bab utama, hitung dan tunjukkan koordinat mana yang menyumbang pada jarak tersebut.   Petunjuk. Bandingkan dan dari kiri ke kanan.   ; kedua kata berbeda tepat pada koordinat ketiga dan keempat.   Kita mempunyai dan . Selisih pada koordinat pertama, kedua, kelima, dan keenam adalah nol, sedangkan selisih pada koordinat ketiga dan keempat bernilai satu. Karena itu, .  "
+},
+{
+  "id": "o003-c90-ch04-hamming-task-03",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-hamming-task-03",
+  "type": "Pemeriksaan",
+  "number": "D.3",
+  "title": "Tugas Hamming 3: menyiapkan pesan untuk pendekodean.",
+  "body": "Tugas Hamming 3: menyiapkan pesan untuk pendekodean  Namai kelima blok pada pesan yang diterima sebagai , lalu tentukan blok mana yang sudah merupakan kata kode dalam . Rubrik: pertahankan urutan blok dan cocokkan blok yang sah dengan indeks kata kodenya.   Petunjuk. Bandingkan setiap blok enam bit dengan daftar , bukan hanya dengan panjangnya.   Bloknya adalah , , , , dan . Jadi sudah berada dalam , sedangkan tidak.   Memisahkan pesan pada setiap spasi menghasilkan, dalam urutan yang diterima, Pencocokan langsung dengan delapan anggota memberi , , dan . Tidak ada anggota daftar yang sama dengan atau . Audit ini menyiapkan dua sub-tugas pendekodean berikutnya tanpa menebak kata pengganti terlebih dahulu.  "
+},
+{
+  "id": "o003-c90-ch04-hamming-task-04",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-hamming-task-04",
+  "type": "Pemeriksaan",
+  "number": "D.4",
+  "title": "Tugas Hamming 4: mendeteksi galat transmisi.",
+  "body": "Tugas Hamming 4: mendeteksi galat transmisi  Jelaskan bagaimana pesan yang diterima membuktikan bahwa sedikitnya satu galat transmisi telah terjadi, dengan asumsi setiap blok yang dikirim harus merupakan kata kode dalam .   Petunjuk. Keanggotaan dalam kode adalah uji validitas blok yang diterima.   Blok pertama dan blok ketiga bukan anggota ; karena blok yang sah harus berada dalam , pesan tersebut tidak mungkin diterima tanpa galat.   Menurut definisi kode yang dipakai, pengirim hanya mengirim anggota . Pemeriksaan keanggotaan pada tugas sebelumnya menunjukkan dan . Maka kedua blok yang diterima itu tidak mungkin identik dengan blok sah yang dikirim. Sedikitnya satu bit berubah pada masing-masing blok tersebut. Sebaliknya, fakta bahwa tidak membuktikan bahwa bit-bitnya pasti tidak berubah; galat berganda secara prinsip dapat mengubah satu kata kode menjadi kata kode lain. Yang pasti dari data ini ialah adanya galat pada blok pertama dan ketiga.  "
+},
+{
+  "id": "o003-c90-ch04-hamming-task-05",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-hamming-task-05",
+  "type": "Pemeriksaan",
+  "number": "D.5",
+  "title": "Tugas Hamming 5: semua hasil pendekodean terdekat.",
+  "body": "Tugas Hamming 5: semua hasil pendekodean terdekat  Ganti setiap blok yang diterima dengan setiap kata kode yang berjarak paling dekat. Temukan seluruh pesan hasil, bukan hanya satu pilihan. Rubrik: hitung jarak terhadap kedelapan kata kode untuk setiap blok dan nyatakan semua keadaan seri.   Petunjuk 1. Susun satu baris delapan jarak untuk setiap .  Petunjuk 2. Empat kata kode sama-sama berjarak satu dari blok pertama.   Blok terdekatnya adalah , , , , dan . Jadi terdapat tepat empat pesan hasil.   Dengan kolom dalam urutan , seluruh vektor jarak adalah Minimum baris pertama ialah satu dan dicapai pada kolom . Minimum baris ketiga ialah satu dan hanya dicapai pada kolom pertama. Tiga blok yang memang sudah berupa kata kode mempunyai minimum nol yang unik pada kolomnya sendiri.  Oleh sebab itu, seluruh kemungkinan pesan terkoreksi, dalam urutan blok, ialah Dekode tetangga terdekat tidak menyediakan informasi untuk memilih satu di antara empat kemungkinan ini bagi blok pertama.  "
+},
+{
+  "id": "o003-c90-ch04-levenshtein-task-01",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-levenshtein-task-01",
+  "type": "Pemeriksaan",
+  "number": "D.6",
+  "title": "Tugas Levenshtein 1: dari “green” ke “grease”.",
+  "body": "Tugas Levenshtein 1: dari green ke grease  Ubah green menjadi grease dengan operasi penyisipan, penghapusan, dan substitusi yang diizinkan. Berikan urutan terpendek, identifikasi setiap operasi, dan buktikan bahwa lebih sedikit operasi tidak mungkin.   Petunjuk 1. Pertahankan awalan gre , lalu ubah dua huruf dan tambahkan satu huruf.  Petunjuk 2. Karena panjang sasaran lebih besar satu, lintasan dengan paling banyak dua operasi harus memakai tepat satu penyisipan dan paling banyak satu substitusi.   Salah satu urutan terpendek adalah green → grean → greas → grease . Jadi .   Substitusikan huruf keempat e dengan a untuk memperoleh grean . Substitusikan n dengan s untuk memperoleh greas , lalu sisipkan e di ujung. Ini memberi batas atas tiga operasi.  Untuk batas bawah, perubahan panjang dari lima menjadi enam memerlukan sedikitnya satu penyisipan. Jika seluruh perubahan memakai paling banyak dua operasi, hitungan panjang memaksa tepat satu penyisipan, tanpa penghapusan, dan paling banyak satu substitusi. Menghapus calon huruf yang disisipkan dari grease menghasilkan salah satu dari rease , gease , grase , grese , greae , atau greas . Jarak Hamming masing-masing dari green adalah . Tidak satu pun dapat diperoleh dari green dengan paling banyak satu substitusi. Jadi dua operasi mustahil, sedangkan tiga operasi sudah dicapai; jaraknya tepat tiga.  "
+},
+{
+  "id": "o003-c90-ch04-levenshtein-task-02",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-levenshtein-task-02",
+  "type": "Pemeriksaan",
+  "number": "D.7",
+  "title": "Tugas Levenshtein 2: membuktikan metrik pada <span class=\"process-math\">\\(\\Sigma^\\ast\\)<\/span>.",
+  "body": "Tugas Levenshtein 2: membuktikan metrik pada  Misalkan adalah himpunan semua untai berhingga atas alfabet . Buktikan bahwa banyak minimum operasi penyisipan, penghapusan, dan substitusi mendefinisikan metrik pada . Rubrik: jelaskan bahwa minimum ada, lalu buktikan keempat aksioma.   Petunjuk 1. Semua huruf dapat dihapus, kemudian semua huruf disisipkan.  Petunjuk 2. Balik urutan operasi untuk simetri dan sambungkan dua urutan terpendek untuk pertidaksamaan segitiga.   Fungsi merupakan metrik pada . Urutan kosong memberi identitas, pembalikan operasi memberi simetri, dan penyambungan urutan edit memberi pertidaksamaan segitiga.   Untuk sembarang untai , ada urutan edit berhingga: hapus seluruh huruf , lalu sisipkan seluruh huruf . Jadi himpunan panjang urutan edit dari ke adalah subhimpunan tak kosong dari bilangan bulat tak negatif; menurut prinsip pengurutan baik, himpunan itu mempunyai minimum. Karena panjang urutan edit tak negatif, .  Jika , urutan kosong mempunyai panjang nol, sehingga . Sebaliknya, jarak nol berarti minimum dicapai oleh urutan tanpa operasi; urutan demikian tidak mengubah untai, jadi . Setiap substitusi dapat dibalik dengan substitusi, setiap penyisipan dengan penghapusan, dan setiap penghapusan dengan penyisipan. Membalik urutan terpendek dari ke menghasilkan urutan sama panjang dari ke . Maka ; menukar peran memberi pertidaksamaan sebaliknya, sehingga jaraknya simetris.  Akhirnya, sambungkan urutan terpendek dari ke dengan urutan terpendek dari ke . Hasilnya adalah suatu urutan dari ke sepanjang . Karena adalah panjang minimum, . Keempat aksioma terpenuhi.  "
+},
+{
+  "id": "o003-c90-ch04-levenshtein-task-03",
+  "level": "2",
+  "url": "o003-c90-ch04-source-task-guides.html#o003-c90-ch04-levenshtein-task-03",
+  "type": "Pemeriksaan",
+  "number": "D.8",
+  "title": "Tugas Levenshtein 3: memilih koreksi ejaan terdekat.",
+  "body": "Tugas Levenshtein 3: memilih koreksi ejaan terdekat  Hitung secara tepat jarak Levenshtein dari tupotagry ke topography , topology , dan tautology . Tentukan pilihan pemeriksa ejaan dan buktikan bahwa setiap jarak yang dilaporkan memang minimum.   Petunjuk 1. Isi tabel jarak untuk semua pasangan awalan, bukan hanya mencocokkan huruf pada posisi yang sama.  Petunjuk 2. Rekurensi mengambil minimum dari penghapusan, penyisipan, dan substitusi atau pencocokan terakhir.   Jaraknya berturut-turut adalah , , dan . Karena itu, pilihan terdekat yang unik adalah topology .   Untuk awalan sepanjang dan , definisikan sebagai jarak keduanya. Nilai batasnya dan . Jika huruf terakhir sama, letakkan ; jika berbeda, letakkan . Meninjau operasi terakhir memberi rekurensi Argumen berdasarkan operasi terakhir menunjukkan bahwa setiap urutan edit masuk ke salah satu dari tiga kasus ini; karena itu, tabel tersebut memberi batas bawah sekaligus batas atas.  Untuk sumber tupotagry , baris terakhir tabel, mulai dari awalan sasaran kosong, adalah Unsur terakhir memberi jarak . Batas atas itu juga tampak pada urutan edit berikut; setiap anak panah adalah satu operasi:   tupotagry → topotagry → topogtagry → topogragry → topograpry → topography ;   tupotagry → topotagry → topolagry → topologry → topology ;   tupotagry → taupotagry → tautotagry → tautolagry → tautologry → tautology . Karena nilai minimum terkecil adalah empat dan hanya dimiliki topology , itulah koreksi menurut aturan tetangga terdekat.  "
+},
+{
+  "id": "o003-c90-ch04-mastery",
+  "level": "1",
+  "url": "o003-c90-ch04-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Uji penguasaan",
+  "body": " Uji penguasaan  Empat butir berikut merupakan materi asli pendamping. Kerjakan tanpa membuka petunjuk terlebih dahulu, lalu gunakan pembahasan untuk mengaudit perhitungan dan argumen batas bawah Anda.  Penguasaan 1: lintasan geodesik Hamming  Dalam , ambil , , dan . Hitung ketiga jarak pasangan dan tentukan apakah pertidaksamaan segitiga menjadi kesamaan melalui .   Petunjuk. Tandai koordinat yang berbeda untuk setiap pasangan secara terpisah.   , , dan ; jadi kesamaan segitiga berlaku.   Kata berbeda pada koordinat , sehingga . Kata berbeda pada koordinat , sehingga jaraknya . Kata hanya berbeda pada koordinat kelima, sehingga jaraknya . Maka ; berada pada suatu lintasan terpendek dari ke dalam kubus Hamming.   Penguasaan 2: kapan dekode terdekat bersifat unik  Misalkan jarak minimum antara dua kata kode berbeda dalam adalah . Buktikan: jika kata diterima memenuhi untuk suatu , maka adalah satu-satunya kata kode terdekat dengan .   Petunjuk. Andaikan ada dengan , lalu gunakan pertidaksamaan segitiga pada .   Benar. Kata kode lain yang setidaknya sama dekat akan memaksa , bertentangan dengan definisi jarak minimum kode.   Andaikan , , dan . Pertidaksamaan segitiga memberi Namun dua kata kode berbeda harus berjarak sedikitnya . Kontradiksi ini menunjukkan bahwa tidak ada yang sama dekat atau lebih dekat daripada . Jadi dekode terdekatnya unik.   Penguasaan 3: jarak kitten dan sitting  Hitung jarak Levenshtein antara kitten dan sitting . Berikan urutan edit yang mencapai nilai tersebut dan sertakan alasan bahwa dua operasi tidak cukup.   Petunjuk. Dua substitusi dan satu penyisipan memberi batas atas; gunakan rekurensi awalan untuk batas bawah.   .   Urutan kitten → sitten → sittin → sitting memakai substitusi k menjadi s , substitusi e menjadi i , lalu penyisipan g . Jadi jaraknya paling besar tiga.  Rekurensi awalan dari pembahasan tugas Levenshtein 3, dengan kolom berlabel awalan sitting , menghasilkan baris terakhir untuk kitten  . Unsur terakhir adalah tiga. Karena rekurensi itu menguji ketiga kemungkinan operasi terakhir dan dimulai dari nilai batas yang tepat, tidak ada urutan sepanjang dua. Maka jaraknya tepat tiga.   Penguasaan 4: membandingkan Hamming dan Levenshtein  Untuk dua untai biner dengan panjang sama, buktikan . Tunjukkan bahwa pertidaksamaan dapat ketat dengan menghitung kedua jarak bagi dan .   Petunjuk 1. Substitusikan tepat koordinat yang berbeda untuk memperoleh batas umum.  Petunjuk 2. Pada contoh, satu penghapusan dan satu penyisipan memindahkan pola bergantian.   Selalu berlaku . Pada contoh, , sedangkan .   Jika berbeda pada koordinat, substitusikan huruf pada masing-masing koordinat tersebut dengan huruf . Urutan ini mengubah menjadi dalam operasi, sehingga minimum Levenshtein memenuhi .  Keempat koordinat dan berbeda, jadi jarak Hamming-nya empat. Untuk Levenshtein, hapus nol pertama dari 0101 sehingga diperoleh 101 , lalu sisipkan nol di ujung sehingga diperoleh 1010 ; jadi . Jaraknya bukan nol karena untainya berbeda. Jaraknya juga bukan satu: satu penyisipan atau penghapusan akan mengubah panjang, sedangkan satu substitusi hanya dapat mengubah satu dari empat koordinat yang berbeda. Jadi .   "
+},
+{
+  "id": "o003-c90-ch04-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch04-mastery.html#o003-c90-ch04-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "D.9",
+  "title": "Penguasaan 1: lintasan geodesik Hamming.",
+  "body": "Penguasaan 1: lintasan geodesik Hamming  Dalam , ambil , , dan . Hitung ketiga jarak pasangan dan tentukan apakah pertidaksamaan segitiga menjadi kesamaan melalui .   Petunjuk. Tandai koordinat yang berbeda untuk setiap pasangan secara terpisah.   , , dan ; jadi kesamaan segitiga berlaku.   Kata berbeda pada koordinat , sehingga . Kata berbeda pada koordinat , sehingga jaraknya . Kata hanya berbeda pada koordinat kelima, sehingga jaraknya . Maka ; berada pada suatu lintasan terpendek dari ke dalam kubus Hamming.  "
+},
+{
+  "id": "o003-c90-ch04-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch04-mastery.html#o003-c90-ch04-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "D.10",
+  "title": "Penguasaan 2: kapan dekode terdekat bersifat unik.",
+  "body": "Penguasaan 2: kapan dekode terdekat bersifat unik  Misalkan jarak minimum antara dua kata kode berbeda dalam adalah . Buktikan: jika kata diterima memenuhi untuk suatu , maka adalah satu-satunya kata kode terdekat dengan .   Petunjuk. Andaikan ada dengan , lalu gunakan pertidaksamaan segitiga pada .   Benar. Kata kode lain yang setidaknya sama dekat akan memaksa , bertentangan dengan definisi jarak minimum kode.   Andaikan , , dan . Pertidaksamaan segitiga memberi Namun dua kata kode berbeda harus berjarak sedikitnya . Kontradiksi ini menunjukkan bahwa tidak ada yang sama dekat atau lebih dekat daripada . Jadi dekode terdekatnya unik.  "
+},
+{
+  "id": "o003-c90-ch04-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch04-mastery.html#o003-c90-ch04-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "D.11",
+  "title": "Penguasaan 3: jarak “kitten” dan “sitting”.",
+  "body": "Penguasaan 3: jarak kitten dan sitting  Hitung jarak Levenshtein antara kitten dan sitting . Berikan urutan edit yang mencapai nilai tersebut dan sertakan alasan bahwa dua operasi tidak cukup.   Petunjuk. Dua substitusi dan satu penyisipan memberi batas atas; gunakan rekurensi awalan untuk batas bawah.   .   Urutan kitten → sitten → sittin → sitting memakai substitusi k menjadi s , substitusi e menjadi i , lalu penyisipan g . Jadi jaraknya paling besar tiga.  Rekurensi awalan dari pembahasan tugas Levenshtein 3, dengan kolom berlabel awalan sitting , menghasilkan baris terakhir untuk kitten  . Unsur terakhir adalah tiga. Karena rekurensi itu menguji ketiga kemungkinan operasi terakhir dan dimulai dari nilai batas yang tepat, tidak ada urutan sepanjang dua. Maka jaraknya tepat tiga.  "
+},
+{
+  "id": "o003-c90-ch04-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch04-mastery.html#o003-c90-ch04-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "D.12",
+  "title": "Penguasaan 4: membandingkan Hamming dan Levenshtein.",
+  "body": "Penguasaan 4: membandingkan Hamming dan Levenshtein  Untuk dua untai biner dengan panjang sama, buktikan . Tunjukkan bahwa pertidaksamaan dapat ketat dengan menghitung kedua jarak bagi dan .   Petunjuk 1. Substitusikan tepat koordinat yang berbeda untuk memperoleh batas umum.  Petunjuk 2. Pada contoh, satu penghapusan dan satu penyisipan memindahkan pola bergantian.   Selalu berlaku . Pada contoh, , sedangkan .   Jika berbeda pada koordinat, substitusikan huruf pada masing-masing koordinat tersebut dengan huruf . Urutan ini mengubah menjadi dalam operasi, sehingga minimum Levenshtein memenuhi .  Keempat koordinat dan berbeda, jadi jarak Hamming-nya empat. Untuk Levenshtein, hapus nol pertama dari 0101 sehingga diperoleh 101 , lalu sisipkan nol di ujung sehingga diperoleh 1010 ; jadi . Jaraknya bukan nol karena untainya berbeda. Jaraknya juga bukan satu: satu penyisipan atau penghapusan akan mengubah panjang, sedangkan satu substitusi hanya dapat mengubah satu dari empat koordinat yang berbeda. Jadi .  "
 },
 {
   "id": "index-1",

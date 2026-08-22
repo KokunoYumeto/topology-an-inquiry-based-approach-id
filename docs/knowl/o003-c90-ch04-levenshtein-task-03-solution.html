@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h2 class="heading">
+<span class="type">Solusi</span><span class="space"> </span><span class="codenumber">D.8.1</span><span class="period">.</span>
+</h2>
+<div class="para logical">
+<div class="para">Untuk awalan sepanjang <span class="process-math">\(i\)</span> dan <span class="process-math">\(j\text{,}\)</span> definisikan <span class="process-math">\(D(i,j)\)</span> sebagai jarak keduanya. Nilai batasnya <span class="process-math">\(D(i,0)=i\)</span> dan <span class="process-math">\(D(0,j)=j\text{.}\)</span> Jika huruf terakhir sama, letakkan <span class="process-math">\(\epsilon_{ij}=0\text{;}\)</span> jika berbeda, letakkan <span class="process-math">\(\epsilon_{ij}=1\text{.}\)</span> Meninjau operasi terakhir memberi rekurensi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D(i,j)=\min\{D(i-1,j)+1,\ D(i,j-1)+1,\ D(i-1,j-1)+\epsilon_{ij}\}.
+\end{equation*}
+</div>
+<div class="para">Argumen berdasarkan operasi terakhir menunjukkan bahwa setiap urutan edit masuk ke salah satu dari tiga kasus ini; karena itu, tabel tersebut memberi batas bawah sekaligus batas atas.</div>
+</div> <div class="para logical">
+<div class="para">Untuk sumber “tupotagry”, baris terakhir tabel, mulai dari awalan sasaran kosong, adalah</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{topography}: \amp (9,8,7,7,6,5,4,4,5,6,5),\\
+\text{topology}: \amp (9,8,7,7,6,6,6,5,4),\\
+\text{tautology}: \amp (9,8,7,7,7,7,7,7,6,5).
+\end{align*}
+</div>
+<div class="para">Unsur terakhir memberi jarak <span class="process-math">\(5,4,5\text{.}\)</span> Batas atas itu juga tampak pada urutan edit berikut; setiap anak panah adalah satu operasi:</div>
+</div> <div class="para">“tupotagry” → “topotagry” → “topogtagry” → “topogragry” → “topograpry” → “topography”;</div> <div class="para">“tupotagry” → “topotagry” → “topolagry” → “topologry” → “topology”;</div> <div class="para">“tupotagry” → “taupotagry” → “tautotagry” → “tautolagry” → “tautologry” → “tautology”. Karena nilai minimum terkecil adalah empat dan hanya dimiliki “topology”, itulah koreksi menurut aturan tetangga terdekat.</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch04-source-task-guides.html#o003-c90-ch04-levenshtein-task-03-solution" class="internal">in-context</a></span>
+</body>
+</html>

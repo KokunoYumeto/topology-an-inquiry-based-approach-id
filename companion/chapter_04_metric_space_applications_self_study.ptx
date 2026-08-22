@@ -1,0 +1,521 @@
+<appendix xml:id="o003-c90-ch04-companion" xml:lang="id-ID">
+  <title>Pendamping Mandiri Bab 4: Penerapan Ruang Metrik</title>
+
+  <introduction>
+    <p>
+      Komponen ini mendampingi Bab 4, bukan menggantikannya. Kerjakan tugas tentang
+      metrik Hamming dan metrik Levenshtein pada bab utama sebelum membuka unsur
+      <term>petunjuk</term>, <term>jawaban</term>, atau <term>pembahasan</term> di sini.
+      Seluruh uraian pendamping ini ditulis secara mandiri untuk edisi ini; uraian
+      ini bukan teks Steven Schlicker atau GVSU dan tidak menyalin ungkapan dari karya Anton Petrunin.
+      Komponen asli ini disediakan secara terpisah di bawah
+      Creative Commons Attribution 4.0.
+    </p>
+    <p>
+      Pada setiap perhitungan jarak, jawaban ringkas menyatakan hasil akhirnya,
+      sedangkan pembahasan memperlihatkan cara memperoleh hasil tersebut dan alasan
+      bahwa tidak ada hasil yang lebih kecil. Untuk tugas pembuktian, rubrik
+      mengharuskan setiap aksioma metrik ditangani secara eksplisit. Penyingkapan
+      bertahap ini mempertahankan sifat inkuiri bab utama sekaligus memberi penutup
+      yang cukup bagi pembelajar mandiri.
+    </p>
+  </introduction>
+
+  <section xml:id="o003-c90-ch04-source-task-guides">
+    <title>Panduan untuk tugas sumber</title>
+    <p>
+      Delapan pemeriksaan berikut berkorespondensi, secara berurutan, dengan lima
+      tugas yang diratakan dari bagian <xref ref="sec_hamming" text="title"/> dan tiga tugas dari
+      bagian <xref ref="sec_levenshtein" text="title"/>.
+    </p>
+
+    <exercise xml:id="o003-c90-ch04-hamming-task-01">
+      <title>Tugas Hamming 1: membuktikan aksioma metrik</title>
+      <statement>
+        <p>
+          Buktikan bahwa fungsi <m>d_H</m> pada <m>X^n</m>, dengan
+          <m>X=\{0,1\}</m>, benar-benar merupakan metrik. Rubrik: tangani
+          tak-negatif, identitas titik, simetri, dan pertidaksamaan segitiga;
+          jangan mengganti bukti umum dengan satu contoh numerik.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-hamming-task-01-hint">
+        <p><em>Petunjuk 1.</em> Setiap suku <m>|x_i-y_i|</m> bernilai nol atau satu.</p>
+        <p><em>Petunjuk 2.</em> Terapkan pertidaksamaan segitiga nilai mutlak pada setiap koordinat, lalu jumlahkan.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-hamming-task-01-answer">
+        <p>
+          Ya. Keempat aksioma metrik mengikuti sifat nilai mutlak pada setiap
+          koordinat dan fakta bahwa jumlahnya nol tepat ketika semua koordinat sama.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-hamming-task-01-solution">
+        <p>
+          Karena setiap <m>|x_i-y_i|\geq0</m>, jumlah
+          <m>d_H(x,y)=\sum_{i=1}^n|x_i-y_i|</m> tak negatif. Jumlah ini nol tepat
+          ketika setiap sukunya nol, yakni tepat ketika <m>x_i=y_i</m> untuk semua
+          <m>i</m>; keadaan itu setara dengan <m>x=y</m>. Kesamaan
+          <m>|x_i-y_i|=|y_i-x_i|</m> pada setiap koordinat memberi simetri.
+        </p>
+        <p>
+          Untuk <m>x,y,z\in X^n</m>, pertidaksamaan nilai mutlak memberi
+          <m>|x_i-y_i|\leq|x_i-z_i|+|z_i-y_i|</m> untuk setiap <m>i</m>.
+          Menjumlahkan dari <m>i=1</m> sampai <m>n</m> menghasilkan
+          <m>d_H(x,y)\leq d_H(x,z)+d_H(z,y)</m>. Jadi <m>d_H</m> memenuhi
+          seluruh aksioma metrik.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-hamming-task-02">
+      <title>Tugas Hamming 2: jarak dua kata kode</title>
+      <statement>
+        <p>
+          Untuk kode <m>C</m> pada bab utama, hitung <m>d_H(c_2,c_8)</m> dan
+          tunjukkan koordinat mana yang menyumbang pada jarak tersebut.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-hamming-task-02-hint">
+        <p><em>Petunjuk.</em> Bandingkan <m>000011</m> dan <m>001111</m> dari kiri ke kanan.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-hamming-task-02-answer">
+        <p><m>d_H(c_2,c_8)=2</m>; kedua kata berbeda tepat pada koordinat ketiga dan keempat.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-hamming-task-02-solution">
+        <p>
+          Kita mempunyai <m>c_2=(0,0,0,0,1,1)</m> dan
+          <m>c_8=(0,0,1,1,1,1)</m>. Selisih pada koordinat pertama, kedua,
+          kelima, dan keenam adalah nol, sedangkan selisih pada koordinat ketiga
+          dan keempat bernilai satu. Karena itu,
+          <m>d_H(c_2,c_8)=0+0+1+1+0+0=2</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-hamming-task-03">
+      <title>Tugas Hamming 3: menyiapkan pesan untuk pendekodean</title>
+      <statement>
+        <p>
+          Namai kelima blok pada pesan yang diterima sebagai <m>r_1,\ldots,r_5</m>,
+          lalu tentukan blok mana yang sudah merupakan kata kode dalam <m>C</m>.
+          Rubrik: pertahankan urutan blok dan cocokkan blok yang sah dengan indeks
+          kata kodenya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-hamming-task-03-hint">
+        <p><em>Petunjuk.</em> Bandingkan setiap blok enam bit dengan daftar <m>c_1,\ldots,c_8</m>, bukan hanya dengan panjangnya.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-hamming-task-03-answer">
+        <p>
+          Bloknya adalah <m>r_1=000111</m>, <m>r_2=001100=c_7</m>,
+          <m>r_3=100000</m>, <m>r_4=000011=c_2</m>, dan
+          <m>r_5=001001=c_4</m>. Jadi <m>r_2,r_4,r_5</m> sudah berada dalam
+          <m>C</m>, sedangkan <m>r_1,r_3</m> tidak.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-hamming-task-03-solution">
+        <p>
+          Memisahkan pesan pada setiap spasi menghasilkan, dalam urutan yang
+          diterima,
+          <me>
+            000111,\quad001100,\quad100000,\quad000011,\quad001001.
+          </me>
+          Pencocokan langsung dengan delapan anggota <m>C</m> memberi
+          <m>001100=c_7</m>, <m>000011=c_2</m>, dan <m>001001=c_4</m>.
+          Tidak ada anggota daftar yang sama dengan <m>000111</m> atau
+          <m>100000</m>. Audit ini menyiapkan dua sub-tugas pendekodean berikutnya
+          tanpa menebak kata pengganti terlebih dahulu.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-hamming-task-04">
+      <title>Tugas Hamming 4: mendeteksi galat transmisi</title>
+      <statement>
+        <p>
+          Jelaskan bagaimana pesan yang diterima membuktikan bahwa sedikitnya satu
+          galat transmisi telah terjadi, dengan asumsi setiap blok yang dikirim
+          harus merupakan kata kode dalam <m>C</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-hamming-task-04-hint">
+        <p><em>Petunjuk.</em> Keanggotaan dalam kode adalah uji validitas blok yang diterima.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-hamming-task-04-answer">
+        <p>
+          Blok pertama <m>000111</m> dan blok ketiga <m>100000</m> bukan anggota
+          <m>C</m>; karena blok yang sah harus berada dalam <m>C</m>, pesan tersebut
+          tidak mungkin diterima tanpa galat.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-hamming-task-04-solution">
+        <p>
+          Menurut definisi kode yang dipakai, pengirim hanya mengirim anggota
+          <m>C</m>. Pemeriksaan keanggotaan pada tugas sebelumnya menunjukkan
+          <m>r_1\notin C</m> dan <m>r_3\notin C</m>. Maka kedua blok yang diterima
+          itu tidak mungkin identik dengan blok sah yang dikirim. Sedikitnya satu
+          bit berubah pada masing-masing blok tersebut. Sebaliknya, fakta bahwa
+          <m>r_2,r_4,r_5\in C</m> tidak membuktikan bahwa bit-bitnya pasti tidak
+          berubah; galat berganda secara prinsip dapat mengubah satu kata kode
+          menjadi kata kode lain. Yang pasti dari data ini ialah adanya galat pada
+          blok pertama dan ketiga.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-hamming-task-05">
+      <title>Tugas Hamming 5: semua hasil pendekodean terdekat</title>
+      <statement>
+        <p>
+          Ganti setiap blok yang diterima dengan setiap kata kode yang berjarak
+          paling dekat. Temukan seluruh pesan hasil, bukan hanya satu pilihan.
+          Rubrik: hitung jarak terhadap kedelapan kata kode untuk setiap blok dan
+          nyatakan semua keadaan seri.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-hamming-task-05-hint">
+        <p><em>Petunjuk 1.</em> Susun satu baris delapan jarak untuk setiap <m>r_j</m>.</p>
+        <p><em>Petunjuk 2.</em> Empat kata kode sama-sama berjarak satu dari blok pertama.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-hamming-task-05-answer">
+        <p>
+          Blok terdekatnya adalah
+          <m>r_1\mapsto\{c_2,c_3,c_5,c_8\}</m>,
+          <m>r_2\mapsto c_7</m>, <m>r_3\mapsto c_1</m>,
+          <m>r_4\mapsto c_2</m>, dan <m>r_5\mapsto c_4</m>.
+          Jadi terdapat tepat empat pesan hasil.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-hamming-task-05-solution">
+        <p>
+          Dengan kolom dalam urutan <m>c_1,\ldots,c_8</m>, seluruh vektor jarak
+          adalah
+          <md>
+            <mrow>(d_H(r_1,c_i))_{i=1}^8 \amp = \amp (3,1,1,3,1,3,3,1),</mrow>
+            <mrow>(d_H(r_2,c_i))_{i=1}^8 \amp = \amp (2,4,2,2,2,2,0,2),</mrow>
+            <mrow>(d_H(r_3,c_i))_{i=1}^8 \amp = \amp (1,3,3,3,3,3,3,5),</mrow>
+            <mrow>(d_H(r_4,c_i))_{i=1}^8 \amp = \amp (2,0,2,2,2,2,4,2),</mrow>
+            <mrow>(d_H(r_5,c_i))_{i=1}^8 \amp = \amp (2,2,2,0,4,2,2,2).</mrow>
+          </md>
+          Minimum baris pertama ialah satu dan dicapai pada kolom
+          <m>2,3,5,8</m>. Minimum baris ketiga ialah satu dan hanya dicapai pada
+          kolom pertama. Tiga blok yang memang sudah berupa kata kode mempunyai
+          minimum nol yang unik pada kolomnya sendiri.
+        </p>
+        <p>
+          Oleh sebab itu, seluruh kemungkinan pesan terkoreksi, dalam urutan blok,
+          ialah
+          <md>
+            <mrow>(c_2,c_7,c_1,c_2,c_4),</mrow>
+            <mrow>(c_3,c_7,c_1,c_2,c_4),</mrow>
+            <mrow>(c_5,c_7,c_1,c_2,c_4),</mrow>
+            <mrow>(c_8,c_7,c_1,c_2,c_4).</mrow>
+          </md>
+          Dekode tetangga terdekat tidak menyediakan informasi untuk memilih satu
+          di antara empat kemungkinan ini bagi blok pertama.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-levenshtein-task-01">
+      <title>Tugas Levenshtein 1: dari <q>green</q> ke <q>grease</q></title>
+      <statement>
+        <p>
+          Ubah <q>green</q> menjadi <q>grease</q> dengan operasi penyisipan,
+          penghapusan, dan substitusi yang diizinkan. Berikan urutan terpendek,
+          identifikasi setiap operasi, dan buktikan bahwa lebih sedikit operasi
+          tidak mungkin.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-levenshtein-task-01-hint">
+        <p><em>Petunjuk 1.</em> Pertahankan awalan <q>gre</q>, lalu ubah dua huruf dan tambahkan satu huruf.</p>
+        <p><em>Petunjuk 2.</em> Karena panjang sasaran lebih besar satu, lintasan dengan paling banyak dua operasi harus memakai tepat satu penyisipan dan paling banyak satu substitusi.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-levenshtein-task-01-answer">
+        <p>
+          Salah satu urutan terpendek adalah
+          <q>green</q> → <q>grean</q> → <q>greas</q> → <q>grease</q>.
+          Jadi <m>d_L(\text{green},\text{grease})=3</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-levenshtein-task-01-solution">
+        <p>
+          Substitusikan huruf keempat <q>e</q> dengan <q>a</q> untuk memperoleh
+          <q>grean</q>. Substitusikan <q>n</q> dengan <q>s</q> untuk memperoleh
+          <q>greas</q>, lalu sisipkan <q>e</q> di ujung. Ini memberi batas atas
+          tiga operasi.
+        </p>
+        <p>
+          Untuk batas bawah, perubahan panjang dari lima menjadi enam memerlukan
+          sedikitnya satu penyisipan. Jika seluruh perubahan memakai paling banyak
+          dua operasi, hitungan panjang memaksa tepat satu penyisipan, tanpa
+          penghapusan, dan paling banyak satu substitusi. Menghapus calon huruf yang
+          disisipkan dari <q>grease</q> menghasilkan salah satu dari
+          <q>rease</q>, <q>gease</q>, <q>grase</q>, <q>grese</q>,
+          <q>greae</q>, atau <q>greas</q>. Jarak Hamming masing-masing dari
+          <q>green</q> adalah <m>5,4,3,2,2,2</m>. Tidak satu pun dapat diperoleh
+          dari <q>green</q> dengan paling banyak satu substitusi. Jadi dua operasi
+          mustahil, sedangkan tiga operasi sudah dicapai; jaraknya tepat tiga.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-levenshtein-task-02">
+      <title>Tugas Levenshtein 2: membuktikan metrik pada <m>\Sigma^\ast</m></title>
+      <statement>
+        <p>
+          Misalkan <m>\Sigma^\ast</m> adalah himpunan semua untai berhingga atas
+          alfabet <m>\Sigma</m>. Buktikan bahwa banyak minimum operasi penyisipan,
+          penghapusan, dan substitusi mendefinisikan metrik <m>d_L</m> pada
+          <m>\Sigma^\ast</m>. Rubrik: jelaskan bahwa minimum ada, lalu buktikan
+          keempat aksioma.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-levenshtein-task-02-hint">
+        <p><em>Petunjuk 1.</em> Semua huruf <m>x</m> dapat dihapus, kemudian semua huruf <m>y</m> disisipkan.</p>
+        <p><em>Petunjuk 2.</em> Balik urutan operasi untuk simetri dan sambungkan dua urutan terpendek untuk pertidaksamaan segitiga.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-levenshtein-task-02-answer">
+        <p>
+          Fungsi <m>d_L</m> merupakan metrik pada <m>\Sigma^\ast</m>. Urutan
+          kosong memberi identitas, pembalikan operasi memberi simetri, dan
+          penyambungan urutan edit memberi pertidaksamaan segitiga.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-levenshtein-task-02-solution">
+        <p>
+          Untuk sembarang untai <m>x,y</m>, ada urutan edit berhingga: hapus
+          seluruh <m>|x|</m> huruf <m>x</m>, lalu sisipkan seluruh <m>|y|</m>
+          huruf <m>y</m>. Jadi himpunan panjang urutan edit dari <m>x</m> ke
+          <m>y</m> adalah subhimpunan tak kosong dari bilangan bulat tak negatif;
+          menurut prinsip pengurutan baik, himpunan itu mempunyai minimum.
+          Karena panjang urutan edit tak negatif, <m>d_L(x,y)\geq0</m>.
+        </p>
+        <p>
+          Jika <m>x=y</m>, urutan kosong mempunyai panjang nol, sehingga
+          <m>d_L(x,y)=0</m>. Sebaliknya, jarak nol berarti minimum dicapai oleh
+          urutan tanpa operasi; urutan demikian tidak mengubah untai, jadi
+          <m>x=y</m>. Setiap substitusi dapat dibalik dengan substitusi, setiap
+          penyisipan dengan penghapusan, dan setiap penghapusan dengan penyisipan.
+          Membalik urutan terpendek dari <m>x</m> ke <m>y</m> menghasilkan urutan
+          sama panjang dari <m>y</m> ke <m>x</m>. Maka
+          <m>d_L(y,x)\leq d_L(x,y)</m>; menukar peran <m>x,y</m> memberi
+          pertidaksamaan sebaliknya, sehingga jaraknya simetris.
+        </p>
+        <p>
+          Akhirnya, sambungkan urutan terpendek dari <m>x</m> ke <m>z</m> dengan
+          urutan terpendek dari <m>z</m> ke <m>y</m>. Hasilnya adalah suatu urutan
+          dari <m>x</m> ke <m>y</m> sepanjang <m>d_L(x,z)+d_L(z,y)</m>. Karena
+          <m>d_L(x,y)</m> adalah panjang minimum,
+          <m>d_L(x,y)\leq d_L(x,z)+d_L(z,y)</m>. Keempat aksioma terpenuhi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-levenshtein-task-03">
+      <title>Tugas Levenshtein 3: memilih koreksi ejaan terdekat</title>
+      <statement>
+        <p>
+          Hitung secara tepat jarak Levenshtein dari <q>tupotagry</q> ke
+          <q>topography</q>, <q>topology</q>, dan <q>tautology</q>. Tentukan
+          pilihan pemeriksa ejaan dan buktikan bahwa setiap jarak yang dilaporkan
+          memang minimum.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-levenshtein-task-03-hint">
+        <p><em>Petunjuk 1.</em> Isi tabel jarak untuk semua pasangan awalan, bukan hanya mencocokkan huruf pada posisi yang sama.</p>
+        <p><em>Petunjuk 2.</em> Rekurensi mengambil minimum dari penghapusan, penyisipan, dan substitusi atau pencocokan terakhir.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-levenshtein-task-03-answer">
+        <p>
+          Jaraknya berturut-turut adalah <m>5</m>, <m>4</m>, dan <m>5</m>.
+          Karena itu, pilihan terdekat yang unik adalah <q>topology</q>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-levenshtein-task-03-solution">
+        <p>
+          Untuk awalan sepanjang <m>i</m> dan <m>j</m>, definisikan <m>D(i,j)</m>
+          sebagai jarak keduanya. Nilai batasnya <m>D(i,0)=i</m> dan
+          <m>D(0,j)=j</m>. Jika huruf terakhir sama, letakkan
+          <m>\epsilon_{ij}=0</m>; jika berbeda, letakkan
+          <m>\epsilon_{ij}=1</m>. Meninjau operasi terakhir memberi rekurensi
+          <me>
+            D(i,j)=\min\{D(i-1,j)+1,\ D(i,j-1)+1,\ D(i-1,j-1)+\epsilon_{ij}\}.
+          </me>
+          Argumen berdasarkan operasi terakhir menunjukkan bahwa setiap urutan
+          edit masuk ke salah satu dari tiga kasus ini; karena itu, tabel tersebut
+          memberi batas bawah sekaligus batas atas.
+        </p>
+        <p>
+          Untuk sumber <q>tupotagry</q>, baris terakhir tabel, mulai dari awalan
+          sasaran kosong, adalah
+          <md>
+            <mrow>\text{topography}: \amp (9,8,7,7,6,5,4,4,5,6,5),</mrow>
+            <mrow>\text{topology}: \amp (9,8,7,7,6,6,6,5,4),</mrow>
+            <mrow>\text{tautology}: \amp (9,8,7,7,7,7,7,7,6,5).</mrow>
+          </md>
+          Unsur terakhir memberi jarak <m>5,4,5</m>. Batas atas itu juga tampak
+          pada urutan edit berikut; setiap anak panah adalah satu operasi:
+        </p>
+        <p>
+          <q>tupotagry</q> → <q>topotagry</q> → <q>topogtagry</q> →
+          <q>topogragry</q> → <q>topograpry</q> → <q>topography</q>;
+        </p>
+        <p>
+          <q>tupotagry</q> → <q>topotagry</q> → <q>topolagry</q> →
+          <q>topologry</q> → <q>topology</q>;
+        </p>
+        <p>
+          <q>tupotagry</q> → <q>taupotagry</q> → <q>tautotagry</q> →
+          <q>tautolagry</q> → <q>tautologry</q> → <q>tautology</q>.
+          Karena nilai minimum terkecil adalah empat dan hanya dimiliki
+          <q>topology</q>, itulah koreksi menurut aturan tetangga terdekat.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+
+  <section xml:id="o003-c90-ch04-mastery">
+    <title>Uji penguasaan</title>
+    <p>
+      Empat butir berikut merupakan materi asli pendamping. Kerjakan tanpa
+      membuka petunjuk terlebih dahulu, lalu gunakan pembahasan untuk mengaudit
+      perhitungan dan argumen batas bawah Anda.
+    </p>
+
+    <exercise xml:id="o003-c90-ch04-mastery-01">
+      <title>Penguasaan 1: lintasan geodesik Hamming</title>
+      <statement>
+        <p>
+          Dalam <m>\{0,1\}^7</m>, ambil <m>x=1011010</m>,
+          <m>y=0011111</m>, dan <m>z=0011011</m>. Hitung ketiga jarak pasangan
+          dan tentukan apakah pertidaksamaan segitiga menjadi kesamaan melalui
+          <m>z</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-mastery-01-hint">
+        <p><em>Petunjuk.</em> Tandai koordinat yang berbeda untuk setiap pasangan secara terpisah.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-mastery-01-answer">
+        <p><m>d_H(x,y)=3</m>, <m>d_H(x,z)=2</m>, dan <m>d_H(z,y)=1</m>; jadi kesamaan segitiga berlaku.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-mastery-01-solution">
+        <p>
+          Kata <m>x,y</m> berbeda pada koordinat <m>1,5,7</m>, sehingga
+          <m>d_H(x,y)=3</m>. Kata <m>x,z</m> berbeda pada koordinat <m>1,7</m>,
+          sehingga jaraknya <m>2</m>. Kata <m>z,y</m> hanya berbeda pada koordinat
+          kelima, sehingga jaraknya <m>1</m>. Maka
+          <m>d_H(x,y)=3=2+1=d_H(x,z)+d_H(z,y)</m>; <m>z</m> berada pada suatu
+          lintasan terpendek dari <m>x</m> ke <m>y</m> dalam kubus Hamming.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-mastery-02">
+      <title>Penguasaan 2: kapan dekode terdekat bersifat unik</title>
+      <statement>
+        <p>
+          Misalkan jarak minimum antara dua kata kode berbeda dalam <m>C</m>
+          adalah <m>\delta</m>. Buktikan: jika kata diterima <m>r</m> memenuhi
+          <m>d_H(r,c)&lt;\delta/2</m> untuk suatu <m>c\in C</m>, maka <m>c</m>
+          adalah satu-satunya kata kode terdekat dengan <m>r</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-mastery-02-hint">
+        <p><em>Petunjuk.</em> Andaikan ada <m>c'\ne c</m> dengan <m>d_H(r,c')\leq d_H(r,c)</m>, lalu gunakan pertidaksamaan segitiga pada <m>c,r,c'</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-mastery-02-answer">
+        <p>
+          Benar. Kata kode lain yang setidaknya sama dekat akan memaksa
+          <m>d_H(c,c')&lt;\delta</m>, bertentangan dengan definisi jarak minimum kode.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-mastery-02-solution">
+        <p>
+          Andaikan <m>c'\in C</m>, <m>c'\ne c</m>, dan
+          <m>d_H(r,c')\leq d_H(r,c)</m>. Pertidaksamaan segitiga memberi
+          <me>
+            d_H(c,c')\leq d_H(c,r)+d_H(r,c')
+            \leq 2d_H(r,c)&lt;\delta.
+          </me>
+          Namun dua kata kode berbeda harus berjarak sedikitnya <m>\delta</m>.
+          Kontradiksi ini menunjukkan bahwa tidak ada <m>c'</m> yang sama dekat
+          atau lebih dekat daripada <m>c</m>. Jadi dekode terdekatnya unik.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-mastery-03">
+      <title>Penguasaan 3: jarak <q>kitten</q> dan <q>sitting</q></title>
+      <statement>
+        <p>
+          Hitung jarak Levenshtein antara <q>kitten</q> dan <q>sitting</q>.
+          Berikan urutan edit yang mencapai nilai tersebut dan sertakan alasan
+          bahwa dua operasi tidak cukup.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-mastery-03-hint">
+        <p><em>Petunjuk.</em> Dua substitusi dan satu penyisipan memberi batas atas; gunakan rekurensi awalan untuk batas bawah.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-mastery-03-answer">
+        <p><m>d_L(\text{kitten},\text{sitting})=3</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-mastery-03-solution">
+        <p>
+          Urutan <q>kitten</q> → <q>sitten</q> → <q>sittin</q> →
+          <q>sitting</q> memakai substitusi <q>k</q> menjadi <q>s</q>, substitusi
+          <q>e</q> menjadi <q>i</q>, lalu penyisipan <q>g</q>. Jadi jaraknya
+          paling besar tiga.
+        </p>
+        <p>
+          Rekurensi awalan dari pembahasan tugas Levenshtein 3, dengan kolom
+          berlabel awalan <q>sitting</q>, menghasilkan baris terakhir untuk
+          <q>kitten</q>
+          <m>(6,6,5,4,3,3,2,3)</m>. Unsur terakhir adalah tiga. Karena rekurensi
+          itu menguji ketiga kemungkinan operasi terakhir dan dimulai dari nilai
+          batas yang tepat, tidak ada urutan sepanjang dua. Maka jaraknya tepat
+          tiga.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-ch04-mastery-04">
+      <title>Penguasaan 4: membandingkan Hamming dan Levenshtein</title>
+      <statement>
+        <p>
+          Untuk dua untai biner <m>x,y</m> dengan panjang sama, buktikan
+          <m>d_L(x,y)\leq d_H(x,y)</m>. Tunjukkan bahwa pertidaksamaan dapat ketat
+          dengan menghitung kedua jarak bagi <m>x=0101</m> dan <m>y=1010</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-ch04-mastery-04-hint">
+        <p><em>Petunjuk 1.</em> Substitusikan tepat koordinat yang berbeda untuk memperoleh batas umum.</p>
+        <p><em>Petunjuk 2.</em> Pada contoh, satu penghapusan dan satu penyisipan memindahkan pola bergantian.</p>
+      </hint>
+      <answer xml:id="o003-c90-ch04-mastery-04-answer">
+        <p>
+          Selalu berlaku <m>d_L\leq d_H</m>. Pada contoh,
+          <m>d_H(0101,1010)=4</m>, sedangkan <m>d_L(0101,1010)=2</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-ch04-mastery-04-solution">
+        <p>
+          Jika <m>x,y</m> berbeda pada <m>k=d_H(x,y)</m> koordinat, substitusikan
+          huruf <m>x</m> pada masing-masing koordinat tersebut dengan huruf
+          <m>y</m>. Urutan ini mengubah <m>x</m> menjadi <m>y</m> dalam <m>k</m>
+          operasi, sehingga minimum Levenshtein memenuhi <m>d_L(x,y)\leq k</m>.
+        </p>
+        <p>
+          Keempat koordinat <m>0101</m> dan <m>1010</m> berbeda, jadi jarak
+          Hamming-nya empat. Untuk Levenshtein, hapus nol pertama dari
+          <q>0101</q> sehingga diperoleh <q>101</q>, lalu sisipkan nol di ujung
+          sehingga diperoleh <q>1010</q>; jadi <m>d_L\leq2</m>. Jaraknya bukan
+          nol karena untainya berbeda. Jaraknya juga bukan satu: satu penyisipan
+          atau penghapusan akan mengubah panjang, sedangkan satu substitusi hanya
+          dapat mengubah satu dari empat koordinat yang berbeda. Jadi
+          <m>d_L=2&lt;4=d_H</m>.
+        </p>
+      </solution>
+    </exercise>
+  </section>
+</appendix>

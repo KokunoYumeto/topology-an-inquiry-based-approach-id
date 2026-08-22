@@ -60,6 +60,21 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 </xsl:param>
 
 <!--
+The stock display-size chapter/appendix format may hyphenate Indonesian words
+inside large titles.  Permit ordinary line breaks at spaces, but disallow
+intra-word title breaks.  This leaves body hyphenation unchanged.
+-->
+<xsl:template name="titlesec-chapter-style">
+  <xsl:text>\titleformat{\chapter}[display]&#xa;</xsl:text>
+  <xsl:text>{\divisionfont\huge\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000}{\divisionnameptx\space\thechapter}{20pt}{\Huge\hyphenpenalty=10000\exhyphenpenalty=10000 #1}&#xa;</xsl:text>
+  <xsl:text>[{\Large\authorsptx}]&#xa;</xsl:text>
+  <xsl:text>\titleformat{name=\chapter,numberless}[display]&#xa;</xsl:text>
+  <xsl:text>{\divisionfont\huge\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000}{}{0pt}{\hyphenpenalty=10000\exhyphenpenalty=10000 #1}&#xa;</xsl:text>
+  <xsl:text>[{\Large\authorsptx}]&#xa;</xsl:text>
+  <xsl:text>\titlespacing*{\chapter}{0pt}{50pt}{40pt}&#xa;</xsl:text>
+</xsl:template>
+
+<!--
 PreTeXt's default top-level task labels use \alph*, which is undefined after
 item 26.  The source contains one exercise listing all 29 topologies on a
 three-point set.  Preserve its 29 sibling tasks and switch only overlong

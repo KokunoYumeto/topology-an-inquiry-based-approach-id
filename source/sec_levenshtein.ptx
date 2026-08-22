@@ -1,54 +1,54 @@
 <section xml:id="sec_levenshtein">
-  <title>The Levenshtein Metric</title>
+  <title>Metrik Levenshtein</title>
   <p>
-    The Levenshtein metric is one measure of distance that researchers use to understand DNA. DNA is composed of double chains of nucleotides,
-    which wind together to form a double helix.
-    The nucleotides come in four types:
-    adenine (A), cytosine (C), guanine (G), and thymine (T).
-    The nucleotides in the two chains of a DNA strand pair together, (A with T, and C with G), so the nucleotides in one chain determine the nucleotides in the other.
-    Therefore, we can represent a DNA strand with a string of letters from the alphabet <m>\{A, C, G, T\}</m>.
-    One problem DNA researchers have is how to compare two strands of DNA, and the Levenshtein metric is one way that the distance between strands can be measured.
-    Other metrics could be used,
-    but the Levenshtein metric is appropriate to the task for several reasons.
-    During evolution,
-    changes in DNA sequences arise due to nucleotide substitution,
-    or the insertion or deletion of nucleotides.
-    These evolutionary changes can be modeled by the operations that determine the Levenshtein distance better than other metrics.
-    In addition,
-    the Levenshtein metric can be used to calculate distances between strings of different lengths.
-    The Levenshtein metric also has applications in spell checkers,
-    speech recognition, and automated plagiarism detection.
-    To understand how the Levenshtein metric is calculated,
-    consider the question of how far apart the words
+    Metrik Levenshtein merupakan salah satu ukuran jarak yang digunakan para peneliti untuk memahami DNA.
+    DNA tersusun atas dua rantai nukleotida,
+    yang saling berpilin membentuk heliks ganda.
+    Nukleotida terdiri atas empat jenis:
+    adenin (A), sitosin (C), guanin (G), dan timin (T).
+    Nukleotida pada kedua rantai dalam suatu untai DNA saling berpasangan (A dengan T dan C dengan G), sehingga nukleotida pada satu rantai menentukan nukleotida pada rantai lainnya.
+    Karena itu, kita dapat merepresentasikan suatu untai DNA dengan untai huruf dari alfabet <m>\{A, C, G, T\}</m>.
+    Salah satu persoalan yang dihadapi peneliti DNA adalah cara membandingkan dua untai DNA, dan metrik Levenshtein merupakan salah satu cara untuk mengukur jarak di antara keduanya.
+    Metrik lain dapat digunakan,
+    tetapi metrik Levenshtein sesuai untuk tugas ini karena beberapa alasan.
+    Selama evolusi,
+    perubahan pada urutan DNA terjadi karena substitusi nukleotida,
+    atau karena penyisipan maupun penghapusan nukleotida.
+    Perubahan evolusioner ini dapat dimodelkan lebih baik oleh operasi-operasi yang menentukan jarak Levenshtein daripada oleh metrik lain.
+    Selain itu,
+    metrik Levenshtein dapat digunakan untuk menghitung jarak antara untai-untai yang panjangnya berbeda.
+    Metrik Levenshtein juga diterapkan dalam pemeriksa ejaan,
+    pengenalan wicara, dan deteksi plagiarisme otomatis.
+    Untuk memahami cara menghitung metrik Levenshtein,
+    perhatikan pertanyaan tentang seberapa jauh jarak antara kata
     <q>green</q>
-    and
-    <q>grease</q>
-    are.
+    dan
+    <q>grease</q>.
   </p>
   <p>
-    To compare these words, we have to be able to change letters,
-    and add or delete letters.
-    If <m>x = x_1x_2 \cdots x_n</m> is a string of letters,
-    we allow the following operations:
+    Untuk membandingkan kedua kata ini, kita harus dapat mengubah,
+    menambahkan, atau menghapus huruf.
+    Jika <m>x = x_1x_2 \cdots x_n</m> merupakan suatu untai huruf,
+    kita memperbolehkan operasi-operasi berikut:
     <dl>
       <li>
-        <title>a deletion:</title>
+        <title>penghapusan:</title>
         <p>
-          replace <m>x</m> with <m>x_1 \cdots x_{i-1}x_{i+1} \cdots x_n</m> for some <m>i</m>,
+          ganti <m>x</m> dengan <m>x_1 \cdots x_{i-1}x_{i+1} \cdots x_n</m> untuk suatu <m>i</m>,
         </p>
       </li>
       <li>
-        <title>an insertion:</title>
+        <title>penyisipan:</title>
         <p>
-          replace <m>x</m> with <m>x_1 \cdots x_{i}yx_{i+1} \cdots x_n</m>,
-          where <m>y</m> is an allowable letter and <m>0 \leq i \leq n</m>,
+          ganti <m>x</m> dengan <m>x_1 \cdots x_{i}yx_{i+1} \cdots x_n</m>,
+          dengan <m>y</m> merupakan huruf yang diperbolehkan dan <m>0 \leq i \leq n</m>,
         </p>
       </li>
       <li>
-        <title>a substitution:</title>
+        <title>substitusi:</title>
         <p>
-          replace <m>x</m> with <m>x_1 \cdots x_{i-1}yx_{i+1} \cdots x_n</m>,
-          where <m>y</m> is an allowable letter and <m>1 \leq i \leq n</m>.
+          ganti <m>x</m> dengan <m>x_1 \cdots x_{i-1}yx_{i+1} \cdots x_n</m>,
+          dengan <m>y</m> merupakan huruf yang diperbolehkan dan <m>1 \leq i \leq n</m>.
         </p>
       </li>
     </dl>
@@ -58,54 +58,61 @@
       <task>
         <statement>
           <p>
-            Using the allowable operations, change the word
+            Dengan menggunakan operasi-operasi yang diperbolehkan, ubahlah kata
             <q>green</q>
-            into the word
-            <q>grease</q>. Specifically identify each operation you use.
-            (Note: the intermediate strings of letters do not have to form recognizable words.)
-            How many operations did you use?
+            menjadi kata
+            <q>grease</q>. Sebutkan secara spesifik setiap operasi yang Anda gunakan.
+            (Catatan: untai-untai huruf antara tidak harus membentuk kata yang dapat dikenali.)
+            Berapa banyak operasi yang Anda gunakan?
           </p>
         </statement>
       </task>
+  </activity>
+
+  <p>
+    Jika diperlukan tiga operasi untuk mengubah
+    <q>green</q>
+    menjadi
+    <q>grease</q>, kita dapat mengatakan bahwa jarak antara
+    <q>green</q>
+    dan
+    <q>grease</q>
+    paling besar 3.
+    Akan tetapi, mungkin saja
+    <q>green</q>
+    dapat diubah menjadi
+    <q>grease</q>
+    dengan kurang dari 3 operasi,
+    sehingga penilaian kita tentang jarak antara kedua kata tersebut dapat berubah.
+    Secara umum, untuk mendefinisikan jarak Levenshtein <m>d_L</m> antara untai <m>x</m> dan untai <m>y</m> di atas suatu alfabet tetap <m>\Sigma</m>,
+    misalkan <m>m_d</m> menyatakan banyaknya penghapusan,
+    <m>m_i</m> menyatakan banyaknya penyisipan,
+    dan <m>m_s</m> menyatakan banyaknya substitusi yang digunakan untuk mengubah <m>x</m> menjadi <m>y</m>.
+    Mungkin terdapat banyak kombinasi berbeda dari <m>m_d</m>,
+    <m>m_i</m>,
+    dan <m>m_s</m> yang mengubah <m>x</m> menjadi <m>y</m>,
+    sehingga kita menginginkan jumlah terkecil.
+  </p>
+
+  <definition>
+    <idx><h>metrik</h><h>Levenshtein</h></idx>
+    <statement>
+      <p>
+        <term>Jarak Levenshtein</term>
+        <m>d_L(x,y)</m> antara untai <m>x</m> dan <m>y</m> adalah
+        <me>
+          d_L(x,y) = \min\{m_d+m_i+m_s\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
       <task>
         <statement>
           <p>
-            If it took three operations to transform
-            <q>green</q>
-            into
-            <q>grease</q>, we could say that the distance between
-            <q>green</q>
-            and
-            <q>grease</q>
-            is at most 3.
-            However, it may be possible to transform
-            <q>green</q>
-            into
-            <q>grease</q>
-            in fewer than 3 operations,
-            which might change our opinion of the distance between these words.
-            In general, to define the Levenshtein distance <m>d_L</m> between a sting <m>x</m> and a string <m>y</m>,
-            let <m>m_d</m> denote the number of deletions,
-            <m>m_i</m> the number of insertions,
-            and <m>m_s</m> the number of substitutions we use to get from <m>x</m> to <m>y</m>.
-            There may be many different combinations of <m>m_d</m>,
-            <m>m_i</m>,
-            and <m>m_s</m> that get us from <m>x</m> to <m>y</m>,
-            so we want the smallest number.
-            <definition>
-              <idx><h>metric</h><h>Levenshtein</h></idx>
-              <statement>
-                <p>
-                  The <term>Levenshtein distance</term>
-                  <m>d_L(x,y)</m> between strings <m>x</m> and <m>y</m> is
-                  <me>
-                    d_L(x,y) = \min\{m_d+m_i+m_s\}
-                  </me>.
-                </p>
-              </statement>
-            </definition>
-            Prove that the Levenshtein distance function is really a metric on the set of all possible words
-            (sensical or nonsensical).
+            Buktikan bahwa fungsi jarak Levenshtein benar-benar merupakan metrik pada himpunan <m>\Sigma^*</m> semua untai berhingga di atas alfabet tetap <m>\Sigma</m>
+            (baik yang membentuk kata bermakna maupun tidak).
           </p>
         </statement>
       </task>
@@ -113,14 +120,13 @@
       <task>
         <statement>
           <p>
-            A spell checker corrects the misspelled word
-            <q>tupotagry</q>. Using the Levenshtein metric,
-            which word would the spell checker use as the closest to
-            <q>tupotagry</q>? Why?
-            <me>\text{"topography} \qquad \text{"topology"} \qquad \text{"tautology"}</me>
+            Sebuah pemeriksa ejaan memperbaiki kata yang salah eja
+            <q>tupotagry</q>. Dengan menggunakan metrik Levenshtein,
+            kata manakah yang akan dipilih pemeriksa ejaan sebagai kata yang paling dekat dengan
+            <q>tupotagry</q>? Mengapa?
+            <me>\text{"topography"} \qquad \text{"topology"} \qquad \text{"tautology"}</me>
           </p>
         </statement>
       </task>
-    
   </activity>
 </section>

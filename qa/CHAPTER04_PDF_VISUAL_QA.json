@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-08-22T03:00:32.785Z",
+  "status": "pass",
+  "scope": "Read-only final structural and visual QA after the locale-label and title-formatter corrections; no source, PDF, or build-log mutation.",
+  "sha256": "1526cd465540617f3261047783d23f824d05d261635cc0fa2558e16aedbea676",
+  "pages": 81,
+  "tagged": false,
+  "pdf": {
+    "path": "output/chapters01-04-pdf/chapters_01_04_reader.pdf",
+    "bytes": 462645,
+    "sha256": "1526cd465540617f3261047783d23f824d05d261635cc0fa2558e16aedbea676",
+    "pages": 81,
+    "version": "1.7",
+    "page_size_points": [612, 792],
+    "page_size_name": "US Letter",
+    "rotations": [0],
+    "encrypted": false,
+    "tagged": false,
+    "javascript": false,
+    "acroform": false,
+    "outlines": true,
+    "page_labels": true,
+    "link_annotations": 127,
+    "extracted_text_characters": 196920,
+    "replacement_characters": 0,
+    "empty_text_pages": [3],
+    "empty_page_assessment": "Physical page 3 is an intentional blank front-matter verso.",
+    "title": "Topologi: Pendekatan Berbasis Inkuiri",
+    "creator": "LaTeX with hyperref",
+    "producer": "MiKTeX-dvipdfmx (20260404)"
+  },
+  "build_log": {
+    "path": "qa/CHAPTER04_PDF_BUILD.log",
+    "bytes": 61510,
+    "sha256": "02e901e03ca13cb82cf2c396e3e0d01afb5a4178d5ee141fbadefed44ff90b60",
+    "final_latex_run_lines": [1012, 1540],
+    "final_run_counts": {
+      "latex_errors": 0,
+      "undefined_control_sequences": 0,
+      "fatal_errors": 0,
+      "emergency_stops": 0,
+      "undefined_references": 0,
+      "multiply_defined_references": 0,
+      "latex_warnings": 0,
+      "package_warnings": 3,
+      "underfull_boxes": 0,
+      "overfull_boxes": 3,
+      "success_markers": 1
+    },
+    "package_warnings": [
+      "xcolor option usenames is obsolete and ignored",
+      "geometry h-direction over-specification",
+      "geometry v-direction over-specification"
+    ],
+    "overfull_boxes": [
+      {
+        "width_points": 9.81952,
+        "tex_lines": "2633-2633",
+        "location": "Chapter 1 self-study companion title, physical page 49 (printed page 44)",
+        "visual_effect": "The title keeps Himpunan intact and remains comfortably inside the physical page without collision or clipping."
+      },
+      {
+        "width_points": 6.48035,
+        "tex_lines": "2720-2722",
+        "location": "Chapter 1 self-study companion, physical page 51 (printed page 46)",
+        "visual_effect": "The known long answer line remains inside the rendered page and is not clipped."
+      },
+      {
+        "width_points": 10.19273,
+        "tex_lines": "3767-3767",
+        "location": "Chapter 4 self-study companion title, physical page 76 (printed page 71)",
+        "visual_effect": "The title keeps Penerapan intact and remains comfortably inside the physical page without collision or clipping."
+      }
+    ],
+    "two_pass_assessment": "The final second run succeeds with no fatal, reference, LaTeX-warning, or underfull diagnostics. Three overfull diagnostics remain; two are intentional title-formatter consequences and one is the known Chapter 1 answer line, and all three are visually contained."
+  },
+  "render": {
+    "dpi": 120,
+    "page_directory": "tmp/pdfs/chapter04-pages-final",
+    "page_png_count": 81,
+    "page_png_bytes": 18149787,
+    "page_pixel_dimensions": [1020, 1320],
+    "minimum_content_margins_pixels": {
+      "left": 118,
+      "top": 78,
+      "right": 104,
+      "bottom": 77
+    },
+    "pages_with_content_within_10_pixels_of_an_edge": [],
+    "contact_sheet_directory": "tmp/pdfs/chapter04-contact-sheets-final",
+    "contact_sheet_count": 7,
+    "contact_sheet_bytes": 4080818
+  },
+  "inspection": {
+    "all_pages_inspected_at_contact_sheet_scale": true,
+    "contact_sheets_inspected": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png",
+      "contact-04.png",
+      "contact-05.png",
+      "contact-06.png",
+      "contact-07.png"
+    ],
+    "full_size_pages_inspected": [5, 48, 49, 76],
+    "targeted_checks": {
+      "page_5_toc_parent_label": "PASS: Lampiran",
+      "page_5_toc_back_matter_label": "PASS: Bagian Akhir",
+      "page_48_divider": "PASS: Lampiran",
+      "page_49_himpunan_title": "PASS: Himpunan remains intact with no hyphenated word break",
+      "page_76_penerapan_title": "PASS: Penerapan remains intact with no hyphenated word break"
+    },
+    "layout_checks": {
+      "clipping": "PASS",
+      "overlap": "PASS",
+      "missing_or_broken_glyphs": "PASS",
+      "equation_rendering": "PASS",
+      "pagination": "PASS",
+      "headers_and_footers": "PASS",
+      "figures_and_tables": "PASS",
+      "reading_margins": "PASS",
+      "generated_locale_labels": "PASS",
+      "large_title_hyphenation": "PASS"
+    }
+  },
+  "findings": [
+    {
+      "severity": "resolved",
+      "code": "generated_structural_labels_localized",
+      "pages": [5, 48],
+      "detail": "The table of contents uses Lampiran and Bagian Akhir, and the divider on physical page 48 uses Lampiran."
+    },
+    {
+      "severity": "resolved",
+      "code": "large_title_hyphenation_removed",
+      "pages": [49, 76],
+      "detail": "Himpunan and Penerapan are intact in the final pixels. The headings remain legible, balanced, and inside the physical page."
+    },
+    {
+      "severity": "nonblocking",
+      "code": "title_formatter_overfull_diagnostics",
+      "pages": [49, 76],
+      "detail": "Keeping the long titles unhyphenated produces 9.81952 pt and 10.19273 pt overfull diagnostics relative to the nominal title text measure. Fresh full-size renders show ample physical-page margins and no clipping or collision."
+    },
+    {
+      "severity": "informational",
+      "code": "pdf_not_tagged",
+      "pages": [],
+      "detail": "The PDF has no structure tree or MarkInfo; accessibility must rely on the HTML surface unless PDF tagging is added."
+    }
+  ],
+  "uncertainties": [
+    "This pass verifies rendering and the four targeted corrections, but it does not independently proofread all 196920 extracted characters for translation accuracy.",
+    "The three overfull diagnostics are accepted here only because their exact final pixels were inspected and remain safely inside the page; the diagnostics themselves have not been suppressed."
+  ],
+  "result_rationale": "PASS: all 81 pages are visually clean at contact-sheet scale; the four targeted pages pass full-size inspection; locale labels and title word breaks are corrected; and the remaining TeX diagnostics have no visible clipping, collision, or readability consequence."
+}

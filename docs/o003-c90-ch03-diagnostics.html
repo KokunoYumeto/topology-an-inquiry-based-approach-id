@@ -86,7 +86,7 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-03-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–3 — Himpunan, Fungsi, Ruang Metrik, dan Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-04-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–4 — Himpunan, Fungsi, Ruang Metrik, Penerapan Ruang Metrik, dan Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -214,10 +214,10 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch03-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch04-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, dan Ruang Metrik</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, dan Penerapannya</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
@@ -253,6 +253,14 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_metric_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces_apps.html" class="internal"><span class="codenumber">4</span> <span class="title">Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_met_space_app.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hamming.html" class="internal"><span class="title">Metrik Hamming</span></a></div></li>
+<li><div class="toc-item"><a href="sec_levenshtein.html" class="internal"><span class="title">Metrik Levenshtein</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -285,6 +293,13 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch03-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan empat belas latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch04-companion.html" class="internal"><span class="codenumber">D</span> <span class="title">Pendamping Mandiri Bab 4: Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch04-source-task-guides.html" class="internal"><span class="title">Panduan untuk tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch04-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 </ul>
 </li>
@@ -292,24 +307,24 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch03-diagnostics"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Diagnostik kesalahan ringkas</span>
 </h2>
-<div class="para logical" id="p-897"><dl class="description-list">
-<dt id="li-127">Memeriksa hanya tiga aksioma</dt>
-<dd><div class="para" id="p-898">Calon jarak yang tak negatif, simetris, dan nol pada diagonal masih dapat gagal pada pertidaksamaan segitiga.</div></dd>
-<dt id="li-128">Mengabaikan domain</dt>
-<dd><div class="para" id="p-899">Rumus yang sama dapat menjadi metrik pada satu himpunan dan gagal atau bahkan tidak terdefinisi pada himpunan lain.</div></dd>
-<dt id="li-129">Menggambar bola dengan geometri yang salah</dt>
-<dd><div class="para" id="p-900">Bola selalu ditentukan oleh metrik yang sedang dipakai; bentuk Euklidesnya dapat berupa lingkaran, belah ketupat, persegi, ruas, atau himpunan lain.</div></dd>
-<dt id="li-130">Mengganti “kurang dari” dengan “kurang dari atau sama dengan”</dt>
-<dd><div class="para" id="p-901">Bola terbuka <span class="process-math">\(B(a,r)\)</span> memakai syarat tegas <span class="process-math">\(d(x,a)\lt r\text{;}\)</span> titik pada batas tidak termasuk.</div></dd>
-<dt id="li-131">Menganggap representasi rasional tidak penting</dt>
-<dd><div class="para" id="p-902">Pada metrik pembilang-penyebut, gunakan bentuk paling sederhana dengan penyebut positif sebelum menghitung jarak.</div></dd>
-<dt id="li-132">Membagi dengan koefisien yang mungkin nol</dt>
-<dd><div class="para" id="p-903">Dalam bukti Cauchy–Schwarz, pisahkan kasus vektor nol sebelum memakai rumus kuadrat dengan koefisien utama <span class="process-math">\(\sum y_i^2\text{.}\)</span>
+<div class="para logical" id="p-917"><dl class="description-list">
+<dt id="li-130">Memeriksa hanya tiga aksioma</dt>
+<dd><div class="para" id="p-918">Calon jarak yang tak negatif, simetris, dan nol pada diagonal masih dapat gagal pada pertidaksamaan segitiga.</div></dd>
+<dt id="li-131">Mengabaikan domain</dt>
+<dd><div class="para" id="p-919">Rumus yang sama dapat menjadi metrik pada satu himpunan dan gagal atau bahkan tidak terdefinisi pada himpunan lain.</div></dd>
+<dt id="li-132">Menggambar bola dengan geometri yang salah</dt>
+<dd><div class="para" id="p-920">Bola selalu ditentukan oleh metrik yang sedang dipakai; bentuk Euklidesnya dapat berupa lingkaran, belah ketupat, persegi, ruas, atau himpunan lain.</div></dd>
+<dt id="li-133">Mengganti “kurang dari” dengan “kurang dari atau sama dengan”</dt>
+<dd><div class="para" id="p-921">Bola terbuka <span class="process-math">\(B(a,r)\)</span> memakai syarat tegas <span class="process-math">\(d(x,a)\lt r\text{;}\)</span> titik pada batas tidak termasuk.</div></dd>
+<dt id="li-134">Menganggap representasi rasional tidak penting</dt>
+<dd><div class="para" id="p-922">Pada metrik pembilang-penyebut, gunakan bentuk paling sederhana dengan penyebut positif sebelum menghitung jarak.</div></dd>
+<dt id="li-135">Membagi dengan koefisien yang mungkin nol</dt>
+<dd><div class="para" id="p-923">Dalam bukti Cauchy–Schwarz, pisahkan kasus vektor nol sebelum memakai rumus kuadrat dengan koefisien utama <span class="process-math">\(\sum y_i^2\text{.}\)</span>
 </div></dd>
-<dt id="li-133">Membuktikan hasil kali jarak dengan gambar</dt>
-<dd><div class="para" id="p-904">Untuk metrik maksimum pada produk, buktikan pertidaksamaan koordinat demi koordinat lalu ambil maksimum.</div></dd>
-<dt id="li-134">Menggunakan petunjuk pecahan pada kasus nol</dt>
-<dd><div class="para" id="p-905">Jika petunjuk memakai <span class="process-math">\(a/(a+b)\text{,}\)</span> tangani <span class="process-math">\(a+b=0\)</span> lebih dahulu.</div></dd>
+<dt id="li-136">Membuktikan hasil kali jarak dengan gambar</dt>
+<dd><div class="para" id="p-924">Untuk metrik maksimum pada produk, buktikan pertidaksamaan koordinat demi koordinat lalu ambil maksimum.</div></dd>
+<dt id="li-137">Menggunakan petunjuk pecahan pada kasus nol</dt>
+<dd><div class="para" id="p-925">Jika petunjuk memakai <span class="process-math">\(a/(a+b)\text{,}\)</span> tangani <span class="process-math">\(a+b=0\)</span> lebih dahulu.</div></dd>
 </dl></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="o003-c90-ch03-mastery.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch03-exercise-guides.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>

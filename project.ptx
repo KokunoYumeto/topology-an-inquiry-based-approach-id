@@ -79,6 +79,20 @@
       <output-dir>output/chapters01-03-pdf</output-dir>
       <xsl>xsl/custom-latex.xsl</xsl>
     </target>
+    <target name="chapters01-04-html">
+      <format>html</format>
+      <source>source/chapters_01_04_reader.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/chapters01-04-html</output-dir>
+      <stringparam key="html.css.extra" value="external/o003-readable-layout.css"/>
+    </target>
+    <target name="chapters01-04-pdf" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/chapters_01_04_reader.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/chapters01-04-pdf</output-dir>
+      <xsl>xsl/custom-latex.xsl</xsl>
+    </target>
   </targets>
   <executables>
     <latex>latex</latex>

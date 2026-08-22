@@ -2,9 +2,9 @@
  * Bahasa Indonesia reader layout for the O003 topology edition.
  *
  * PreTeXt's stock desktop shell reserves a second 240 px column on the
- * right, which leaves the reading column visibly off-centre on wide screens.
- * Keep the stock compact/mobile layout, but use that dormant space at desktop
- * widths and centre the reader when the table of contents is collapsed.
+ * right, which leaves the reading column narrow and left-anchored inside the
+ * available main pane. Keep the stock compact/mobile layout, but use that
+ * dormant space and centre the reader inside the main pane at desktop widths.
  */
 @media (min-width: 1200px) {
   .pretext .ptx-masthead,
@@ -23,10 +23,10 @@
 
   .pretext .ptx-page > .ptx-main > .ptx-content,
   .pretext .ptx-page > .ptx-main > .ptx-content-footer {
-    width: calc(100% - 240px);
+    width: min(960px, 100%);
     max-width: 960px;
-    margin-left: 0;
-    margin-right: 240px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .pretext .ptx-page > .ptx-sidebar.hidden + .ptx-main {
