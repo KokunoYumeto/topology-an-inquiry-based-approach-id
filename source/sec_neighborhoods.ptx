@@ -1,24 +1,24 @@
 <section xml:id="sec_neighborhoods">
-  <title>Neighborhoods</title>
-  <idx><h><m>\delta</m>-neighborhood of a point in a metric space</h></idx>
+  <title>Lingkungan</title>
+  <idx><h><m>\delta</m>-lingkungan suatu titik dalam ruang metrik</h></idx>
   <p>
-    We are familiar with the idea of open intervals in <m>\R</m>.
-    We next introduce the idea of an open neighborhood of a point and characterize continuity in terms of neighborhoods.
-    This is the next step in developing the notation of continuity in topological spaces.
+    Kita telah mengenal gagasan interval terbuka dalam <m>\R</m>.
+    Selanjutnya, kita memperkenalkan gagasan lingkungan suatu titik dan mencirikan kekontinuan dalam kaitannya dengan lingkungan.
+    Ini merupakan langkah berikutnya dalam mengembangkan gagasan kekontinuan di ruang topologis.
   </p>
   <p>
-    The open ball <m>B(a, \delta)</m> in a metric space <m>(X,d)</m> is also called the
-    <term><m>\delta</m>-neighborhood</term> around <m>a</m>.
-    A neighborhood of a point can be thought of as any set that envelops that point.
+    Bola terbuka <m>B(a, \delta)</m> dalam ruang metrik <m>(X,d)</m> juga disebut
+    <term><m>\delta</m>-lingkungan</term> di sekitar <m>a</m>.
+    Lingkungan suatu titik dapat dipandang sebagai sebarang himpunan yang mencakup titik tersebut.
   </p>
 
   <definition>
-    <idx><h>neighborhood in a metric space</h></idx>
+    <idx><h>lingkungan dalam ruang metrik</h></idx>
     <statement>
       <p>
-        Let <m>(X, d_X)</m> be a metric space, and let <m>a \in X</m>.
-        A subset <m>N</m> of <m>X</m> is a <term>neighborhood</term> of <m>a</m> if there exists a
-        <m>\delta \gt 0</m> such that <m>B(a, \delta) \subseteq N</m>.
+        Misalkan <m>(X, d_X)</m> suatu ruang metrik dan <m>a \in X</m>.
+        Suatu subhimpunan <m>N</m> dari <m>X</m> merupakan <term>lingkungan</term> bagi <m>a</m> jika terdapat
+        <m>\delta \gt 0</m> sedemikian sehingga <m>B(a, \delta) \subseteq N</m>.
       </p>
     </statement>
   </definition>
@@ -30,22 +30,22 @@
         <ul>
           <li>
             <p>
-              In <m>\R</m> with the Euclidean metric, the set <m>\R^+</m>
-              (the positive real numbers)
-              is a neighborhood of <m>a=1</m> because the open ball
-              <m>B(1,0.5)</m> is completely contained in <m>\R^+</m>.
+              Dalam <m>\R</m> dengan metrik Euklides, himpunan <m>\R^+</m>
+              (bilangan-bilangan riil positif)
+              merupakan lingkungan bagi <m>a=1</m> karena bola terbuka
+              <m>B(1,0.5)</m> termuat seluruhnya dalam <m>\R^+</m>.
             </p>
           </li>
           <li>
             <p>
-              In <m>\R</m> with the Euclidean metric,
-              the set <m>\Z</m> is not a neighborhood of <m>a=1</m> because any open ball centered at <m>a=1</m> will contain some non-integers.
+              Dalam <m>\R</m> dengan metrik Euklides,
+              himpunan <m>\Z</m> bukan lingkungan bagi <m>a=1</m> karena setiap bola terbuka yang berpusat di <m>a=1</m> memuat sejumlah bilangan bukan bulat.
             </p>
           </li>
           <li>
             <p>
-              In <m>\R</m> with the discrete metric,
-              the set <m>\Z</m> is a neighborhood of <m>a=1</m> because the open ball <m>B(a,1) = \{a\}</m>.
+              Dalam <m>\R</m> dengan metrik diskret,
+              himpunan <m>\Z</m> merupakan lingkungan bagi <m>a=1</m> karena bola terbuka <m>B(a,1) = \{a\}</m>.
             </p>
           </li>
         </ul>
@@ -54,38 +54,40 @@
   </example>
 
   <p>
-    As another example, the open ball
-    <m>B(a, \delta)</m> is a neighborhood of <m>a</m>.
-    We can say even more about open balls.
+    Sebagai contoh lain, bola terbuka
+    <m>B(a, \delta)</m> merupakan lingkungan bagi <m>a</m>.
+    Kita bahkan dapat mengatakan lebih banyak mengenai bola terbuka.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>(X, d)</m> be a metric space,
-      let <m>a \in X</m>, and let <m>\delta \gt 0</m>.
-      In this activity we ask the question,
-      is <m>B(a, \delta)</m> a neighborhood of each of its points?
+      Misalkan <m>(X, d)</m> suatu ruang metrik,
+      <m>a \in X</m>, dan <m>\delta \gt 0</m>.
+      Dalam aktivitas ini, kita mengajukan pertanyaan:
+      apakah <m>B(a, \delta)</m> merupakan lingkungan bagi setiap titik di dalamnya?
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Let <m>b \in B(a, \delta)</m>.
-            What do we have to do to show that
-            <m>B(a, \delta)</m> is a neighborhood of <m>b</m>?
+            Misalkan <m>b \in B(a, \delta)</m>.
+            Apa yang harus kita lakukan untuk menunjukkan bahwa
+            <m>B(a, \delta)</m> merupakan lingkungan bagi <m>b</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Use <xref ref="F_Open_ball_neighborhood"/>
-            to help show that <m>B(a, \delta)</m> is a neighborhood of <m>b</m>.
+            Gunakan <xref ref="F_Open_ball_neighborhood"/>
+            untuk membantu menunjukkan bahwa <m>B(a, \delta)</m> merupakan lingkungan bagi <m>b</m>.
           </p>
             <figure xml:id="F_Open_ball_neighborhood">
-              <caption><m>B(a, \delta)</m> as a neighborhood of <m>b</m>.</caption>
-              <image width="50%" source="Open_ball_neighborhood"/>
+              <caption><m>B(a, \delta)</m> sebagai lingkungan bagi <m>b</m>.</caption>
+              <image width="50%" source="Open_ball_neighborhood">
+                <description>Bola besar berwarna biru dengan garis putus-putus, B(a, delta), berpusat di a. Titik b berada di dalam bola itu dan dihubungkan ke a oleh sebuah ruas garis. Bola lebih kecil berwarna magenta dengan garis putus-putus berpusat di b dan seluruhnya berada di dalam bola besar.</description>
+              </image>
             </figure>
           
         </statement>
@@ -93,10 +95,10 @@
       <task>
         <statement>
           <p>
-            Is the converse true?
-            That is, if a set is a neighborhood of each of its points,
-            is the set an open ball?
-            No proof is necessary, but a convincing argument is in order.
+            Apakah pernyataan sebaliknya benar?
+            Artinya, jika suatu himpunan merupakan lingkungan bagi setiap titiknya,
+            apakah himpunan tersebut merupakan bola terbuka?
+            Pembuktian tidak diperlukan, tetapi berikan argumen yang meyakinkan.
           </p>
         </statement>
       </task>

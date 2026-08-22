@@ -1,53 +1,53 @@
 <section xml:id="sec_open_balls_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    Open sets are vitally important in topology.
-    We will see later that every topological space is completely defined by its open sets,
-    and continuous functions can be defined just in terms of open sets.
-    In this section we introduce the idea of open balls and neighborhoods in metric spaces and discover a few of their properties.
-    This discussion will form the basis for introducing open sets in the next section.
+    Himpunan terbuka sangat penting dalam topologi.
+    Nanti kita akan melihat bahwa setiap ruang topologis sepenuhnya ditentukan oleh himpunan-himpunan terbukanya,
+    dan fungsi kontinu dapat didefinisikan hanya dengan menggunakan himpunan terbuka.
+    Pada bagian ini kita memperkenalkan gagasan bola terbuka dan lingkungan dalam ruang metrik serta menemukan beberapa sifatnya.
+    Pembahasan ini akan menjadi landasan untuk memperkenalkan himpunan terbuka pada bagian berikutnya.
   </p>
   <p>
-    Recall that the continuity of a function <m>f</m> from a metric space <m>(X, d_X)</m> to a metric space
-    <m>(Y, d_Y)</m> at a point <m>a</m> is defined in terms of sets of points <m>x \in X</m> such that
-    <m>d_X(x,a) \lt \delta</m> and <m>y \in Y</m> such that
-    <m>d_Y(y, f(a)) \lt \epsilon</m> for positive real numbers <m>\delta</m> and <m>\epsilon</m>.
-    In <m>\R</m> with the Euclidean metric <m>d_E</m>,
-    for real numbers <m>x</m> and <m>a</m> the set of <m>x</m> values satisfying
-    <m>d_E(x,a) \lt \delta</m> is the set of <m>x</m> values so that <m>| x-a | \lt \delta</m>.
-    We often write this set in interval notation as
+    Ingat bahwa kekontinuan suatu fungsi <m>f</m> dari ruang metrik <m>(X, d_X)</m> ke ruang metrik
+    <m>(Y, d_Y)</m> di titik <m>a</m> didefinisikan menggunakan himpunan titik <m>x \in X</m> yang memenuhi
+    <m>d_X(x,a) \lt \delta</m> dan titik <m>y \in Y</m> yang memenuhi
+    <m>d_Y(y, f(a)) \lt \epsilon</m>, untuk bilangan real positif <m>\delta</m> dan <m>\epsilon</m>.
+    Dalam <m>\R</m> dengan metrik Euklides <m>d_E</m>,
+    untuk bilangan real <m>x</m> dan <m>a</m>, himpunan nilai <m>x</m> yang memenuhi
+    <m>d_E(x,a) \lt \delta</m> adalah himpunan nilai <m>x</m> yang memenuhi <m>| x-a | \lt \delta</m>.
+    Kita sering menuliskan himpunan ini dalam notasi interval sebagai
     <m>(a-\delta,
-    a+\delta)</m> and call <m>(a-\delta,
-    a+\delta)</m> an open interval.
-    An informal reason that we call such an interval open (as opposed to the intervals
+    a+\delta)</m> dan menyebut <m>(a-\delta,
+    a+\delta)</m> sebagai interval terbuka.
+    Alasan informal mengapa kita menyebut interval tersebut terbuka (berbeda dengan interval
     <m>[a-\delta,
     a+\delta)</m>, <m>(a-\delta, a+\delta]</m>, or
     <m>[a-\delta,
-    a+\delta]</m>) is that the open interval does not contain either of its endpoints.
-    A more substantial reason to call such an interval open is that if <m>x'</m> is any element in <m>(a-\delta,
+    a+\delta]</m>) ialah bahwa interval terbuka tidak memuat satu pun dari kedua titik ujungnya.
+    Alasan yang lebih mendasar untuk menyebut interval tersebut terbuka ialah bahwa jika <m>x'</m> adalah sembarang unsur dalam <m>(a-\delta,
     a+\delta)</m>,
-    then we can find another open interval around <m>x'</m> that is completely contained in the interval <m>(a-\delta,
+    maka kita dapat menemukan interval terbuka lain di sekitar <m>x'</m> yang seluruhnya termuat dalam interval <m>(a-\delta,
     a+\delta)</m>.
-    So you could naively think of an open interval as one in which there is enough room in the interval for any point in the interval to wiggle around a bit and stay within the interval.
+    Jadi, secara naif, kita dapat membayangkan interval terbuka sebagai interval yang menyediakan cukup ruang bagi setiap titik di dalamnya untuk sedikit bergerak di sekitar posisinya sambil tetap berada di dalam interval tersebut.
   </p>
   <p>
-    Since the open interval <m>(a-\delta,
-    a+\delta)</m> can be described completely by the Euclidean metric as the set of <m>x</m> values so that <m>d_E(x,a) \lt \delta</m>,
-    there is no reason why we can't extend this notation of open interval to any metric space.
-    We must note, though,
-    that <m>\R</m> is one-dimensional while most metric spaces are not,
-    so the term
+    Karena interval terbuka <m>(a-\delta,
+    a+\delta)</m> dapat dijelaskan sepenuhnya dengan metrik Euklides sebagai himpunan nilai <m>x</m> yang memenuhi <m>d_E(x,a) \lt \delta</m>,
+    tidak ada alasan untuk tidak memperluas gagasan interval terbuka ini ke sembarang ruang metrik.
+    Namun, perlu kita perhatikan
+    bahwa <m>\R</m> berdimensi satu, sedangkan kebanyakan ruang metrik tidak demikian,
+    sehingga istilah
     <q>interval</q>
-    will no longer be appropriate.
-    We replace the concept of interval with that of an open ball.
+    tidak lagi sesuai.
+    Kita mengganti konsep interval dengan konsep bola terbuka.
   </p>
 
   <definition>
-    <idx><h>open ball in a metric space</h></idx>
+    <idx><h>bola terbuka dalam ruang metrik</h></idx>
     <statement>
       <p>
-        Let <m>(X, d_X)</m> be a metric space, and let <m>a \in X</m>.
-        For <m>\delta \gt 0</m>, the <term>open ball <m>B(a, \delta)</m> of radius <m>\delta</m> around <m>a</m></term> is the set
+        Misalkan <m>(X, d_X)</m> suatu ruang metrik dan <m>a \in X</m>.
+        Untuk <m>\delta \gt 0</m>, <term>bola terbuka <m>B(a, \delta)</m> berjari-jari <m>\delta</m> dan berpusat di <m>a</m></term> adalah himpunan
         <me>
           B(a, \delta) = \{x \in X \mid d_X(x,a) \lt  \delta\}
         </me>.
@@ -56,22 +56,22 @@
   </definition>
 
   <p>
-    We note here that our notation for an open ball is not universal.
-    For example, some texts use
-    <m>B_{\delta}(a)</m> for our <m>B(a,\delta)</m>.
+    Perlu diperhatikan bahwa notasi kita untuk bola terbuka tidak digunakan secara universal.
+    Sebagai contoh, beberapa buku menggunakan
+    <m>B_{\delta}(a)</m> untuk menyatakan <m>B(a,\delta)</m> dalam notasi kita.
   </p>
 
   <exploration>
     <introduction>
     <p>
-      Describe and draw a picture of the indicated open ball in each of the following metric spaces.
+      Jelaskan dan buat sketsa bola terbuka yang dinyatakan pada masing-masing ruang metrik berikut.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            The open ball <m>B(2, 1)</m> in the metric space
-            <m>(\R, d_E)</m> with the Euclidean metric
+            Bola terbuka <m>B(2, 1)</m> dalam ruang metrik
+            <m>(\R, d_E)</m> dengan metrik Euklides
             <me>
               d_E(x,y) = | x-y |
             </me>.
@@ -81,8 +81,8 @@
       <task>
         <statement>
           <p>
-            The open ball <m>B((3,2), 1)</m> in the metric space
-            <m>(\R^2, d_E)</m> with the Euclidean metric
+            Bola terbuka <m>B((3,2), 1)</m> dalam ruang metrik
+            <m>(\R^2, d_E)</m> dengan metrik Euklides
             <me>
               d_E((x_1,x_2),(y_1,y_2)) = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2}
             </me>.
@@ -92,7 +92,7 @@
       <task>
         <statement>
           <p>
-            The open ball <m>B((3,2), 1)</m> in the metric space <m>(\R^2, d_M)</m> with the max metric
+            Bola terbuka <m>B((3,2), 1)</m> dalam ruang metrik <m>(\R^2, d_M)</m> dengan metrik maksimum
             <me>
               d_M((x_1,x_2),(y_1,y_2)) = \max\{| x_1-y_1 |, | x_2-y_2 |\}
             </me>.
@@ -102,8 +102,8 @@
       <task>
         <statement>
           <p>
-            The open ball <m>B((3,2), 1)</m> in the metric space
-            <m>(\R^2, d_T)</m> with the taxicab metric
+            Bola terbuka <m>B((3,2), 1)</m> dalam ruang metrik
+            <m>(\R^2, d_T)</m> dengan metrik taksi
             <me>
               d_T((x_1,x_2),(y_1,y_2)) = | x_1-y_1 | + | x_2-y_2 |
             </me>.
@@ -113,14 +113,14 @@
       <task>
         <statement>
           <p>
-            The open ball <m>B((3,2), 1)</m> in the metric space
-            <m>(\R^2, d)</m> with the discrete metric
+            Bola terbuka <m>B((3,2), 1)</m> dalam ruang metrik
+            <m>(\R^2, d)</m> dengan metrik diskret
             <me>
-              d(x,y) = \begin{cases}0 \amp \text{ if }  x=y \\ 1 \amp \text{ if }  x \neq y. \end{cases}
+              d(x,y) = \begin{cases}0 \amp \text{ jika }  x=y \\ 1 \amp \text{ jika }  x \neq y. \end{cases}
             </me>.
-            What is the difference between <m>B((3,2),1)</m> and
-            <m>B((3,2),r)</m> in this metric space if <m>r > 1</m>?
-            If <m>r \lt  1</m>?
+            Apa perbedaan antara <m>B((3,2),1)</m> dan
+            <m>B((3,2),r)</m> dalam ruang metrik ini jika <m>r > 1</m>?
+            Bagaimana jika <m>r \lt 1</m>?
           </p>
         </statement>
       </task>

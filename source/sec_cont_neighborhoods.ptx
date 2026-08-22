@@ -1,62 +1,62 @@
 <section xml:id="sec_cont_neighborhoods">
-  <title>Continuity and Neighborhoods</title>
+  <title>Kekontinuan dan Lingkungan</title>
   <p>
-    We can define continuity now in terms of neighborhoods instead of using metrics.
-    The advantage here is that this idea does not explicitly depend on the existence of a metric,
-    so we will be able to adopt this concept of continuity for arbitrary topological spaces.
+    Sekarang kita dapat mendefinisikan kekontinuan dalam kaitannya dengan lingkungan alih-alih menggunakan metrik.
+    Keuntungannya adalah bahwa gagasan ini tidak secara eksplisit bergantung pada keberadaan metrik,
+    sehingga kita akan dapat menggunakan konsep kekontinuan ini untuk ruang topologis sebarang.
   </p>
   <p>
-    Recall that a function <m>f</m> from a metric space <m>(X, d_X)</m> to a metric space
-    <m>(Y, d_Y)</m> is continuous at <m>a \in X</m> if,
-    for any <m>\epsilon \gt 0</m> there exists <m>\delta \gt 0</m> so that
-    <m>d_X(x,a) \lt \delta</m> implies <m>d_Y(f(x),f(a)) \lt \epsilon</m>.
-    We can interpret this definition of continuity to say that for every <m>\epsilon \gt 0</m>,
-    the inverse image under <m>f</m> of the open ball
-    <m>B(f(a), \epsilon)</m> contains the open ball
-    <m>B(a, \delta)</m> for some <m>\delta \gt 0</m>.
-    It is not unreasonable to wonder if the set
-    <m>f^{-1}\left(B(f(a), \epsilon)\right)</m> itself is an open ball.
-    We investigate this question in the following activity.
+    Ingatlah bahwa suatu fungsi <m>f</m> dari ruang metrik <m>(X, d_X)</m> ke ruang metrik
+    <m>(Y, d_Y)</m> kontinu di <m>a \in X</m> jika,
+    untuk setiap <m>\epsilon \gt 0</m>, terdapat <m>\delta \gt 0</m> sedemikian sehingga
+    <m>d_X(x,a) \lt \delta</m> mengakibatkan <m>d_Y(f(x),f(a)) \lt \epsilon</m>.
+    Kita dapat menafsirkan definisi kekontinuan ini dengan mengatakan bahwa untuk setiap <m>\epsilon \gt 0</m>,
+    di bawah fungsi <m>f</m>, prapeta bola terbuka
+    <m>B(f(a), \epsilon)</m> memuat bola terbuka
+    <m>B(a, \delta)</m> untuk suatu <m>\delta \gt 0</m>.
+    Wajar jika kita bertanya apakah himpunan
+    <m>f^{-1}\left(B(f(a), \epsilon)\right)</m> itu sendiri merupakan bola terbuka.
+    Kita menyelidiki pertanyaan ini dalam aktivitas berikut.
   </p>
 
   <activity xml:id="act_OB_1">
     <introduction>
     <p>
-      Let <m>f</m> be a function from a metric space <m>(X, d_X)</m> to a metric space
-      <m>(Y, d_Y)</m> that is continuous at <m>a \in X</m>.
-      Using the notation from the paragraph above,
-      in this activity we determine if <m>f^{-1}\left(B(f(a), \epsilon)\right)</m> must equal
-      <m>B(a, \delta)</m> for some <m>\delta</m>.
+      Misalkan <m>f</m> suatu fungsi dari ruang metrik <m>(X, d_X)</m> ke ruang metrik
+      <m>(Y, d_Y)</m> yang kontinu di <m>a \in X</m>.
+      Dengan menggunakan notasi dari paragraf di atas,
+      dalam aktivitas ini kita menentukan apakah <m>f^{-1}\left(B(f(a), \epsilon)\right)</m> harus sama dengan
+      <m>B(a, \delta)</m> untuk suatu <m>\delta</m>.
     </p>
     <p>
-      Define <m>f : \R \to \R</m> by
+      Definisikan <m>f : \R \to \R</m> dengan
       <me>
         f(x) = x^2
       </me>,
-      where we use the Euclidean metric <m>d_E</m> throughout.
-      Assume that <m>f</m> is a continuous function.
-      Then <m>f</m> is continuous at <m>x=2</m>.
+      dan gunakan metrik Euklides <m>d_E</m> pada seluruh aktivitas.
+      Asumsikan bahwa <m>f</m> merupakan fungsi kontinu.
+      Maka <m>f</m> kontinu di <m>x=2</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What is <m>B(f(2), 1)</m>?
+            Tentukan <m>B(f(2), 1)</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What is <m>f^{-1}\left(B(f(2), 1)\right)</m>?
+            Tentukan <m>f^{-1}\left(B(f(2), 1)\right)</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>f^{-1}\left(B(f(2), 1)\right)</m> an open ball centered at <m>2</m>?
-            Explain.
+            Apakah <m>f^{-1}\left(B(f(2), 1)\right)</m> merupakan bola terbuka yang berpusat di <m>2</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
@@ -64,25 +64,25 @@
   </activity>
 
   <p>
-    The conclusion to be drawn from <xref ref="act_OB_1"/>
-    is that if <m>f</m> is continuous,
-    we can only conclude that the inverse image of <m>B(f(a), \epsilon)</m> <term>contains</term>
-    an open ball centered at <m>a</m>.
-    By definition of continuity,
-    if for every <m>\epsilon \gt 0</m> there exists a
-    <m>\delta \gt 0</m> so that the open ball
-    <m>f^{-1}\left(B(f(a), \epsilon)\right)</m> contains <m>B(a, \delta)</m>,
-    then <m>f</m> is continuous at <m>a</m>.
-    We summarize this in the next theorem.
+    Kesimpulan yang dapat ditarik dari <xref ref="act_OB_1"/>
+    adalah bahwa jika <m>f</m> kontinu,
+    kita hanya dapat menyimpulkan bahwa prapeta <m>B(f(a), \epsilon)</m> <term>memuat</term>
+    sebuah bola terbuka yang berpusat di <m>a</m>.
+    Menurut definisi kekontinuan,
+    jika untuk setiap <m>\epsilon \gt 0</m> terdapat
+    <m>\delta \gt 0</m> sedemikian sehingga
+    <m>f^{-1}\left(B(f(a), \epsilon)\right)</m> memuat bola terbuka <m>B(a, \delta)</m>,
+    maka <m>f</m> kontinu di <m>a</m>.
+    Kita merangkum hal ini dalam teorema berikut.
   </p>
 
   <theorem xml:id="thm_open_ball_continuity">
     <statement>
       <p>
-        Let <m>f</m> be a function a metric space <m>(X, d_X)</m> to a metric space
-        <m>(Y, d_Y)</m>, and let <m>a \in X</m>.
-        Then <m>f</m> is continuous at <m>a \in X</m> if and only if,
-        given any <m>\epsilon \gt 0</m> there exists <m>\delta \gt 0</m> so that
+        Misalkan <m>f</m> suatu fungsi dari ruang metrik <m>(X, d_X)</m> ke ruang metrik
+        <m>(Y, d_Y)</m>, dan misalkan <m>a \in X</m>.
+        Maka <m>f</m> kontinu di <m>a \in X</m> jika dan hanya jika,
+        untuk setiap <m>\epsilon \gt 0</m>, terdapat <m>\delta \gt 0</m> sedemikian sehingga
         <me>
           B(a, \delta) \subseteq f^{-1}\left(B(f(a), \epsilon)\right)
         </me>.
@@ -91,42 +91,42 @@
   </theorem>
 
   <p>
-    We can extend this idea of continuity to describe continuity in terms of neighborhoods.
-    This condition will allow us to later consider continuous functions even if there are no metrics on our spaces.
+    Kita dapat memperluas gagasan kekontinuan ini untuk mendeskripsikan kekontinuan dalam kaitannya dengan lingkungan.
+    Syarat ini nantinya memungkinkan kita meninjau fungsi kontinu sekalipun ruang kita tidak dilengkapi metrik.
   </p>
 
   <theorem>
     <statement>
       <p>
-        Let <m>(X, d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
-        and let <m>f : X \to Y</m> be a function.
-        Then <m>f</m> is continuous at <m>a \in X</m> if and only if the inverse image of every neighborhood of <m>f(a)</m> is a neighborhood of <m>a</m>.
+        Misalkan <m>(X, d_X)</m> dan <m>(Y,d_Y)</m> ruang-ruang metrik,
+        dan misalkan <m>f : X \to Y</m> suatu fungsi.
+        Maka <m>f</m> kontinu di <m>a \in X</m> jika dan hanya jika prapeta setiap lingkungan bagi <m>f(a)</m> merupakan lingkungan bagi <m>a</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>(X, d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
-      and let <m>f : X \to Y</m> be a function.
-      To prove this biconditional statement we need to prove both implications.
-      First assume that <m>f</m> is continuous at some point <m>a \in X</m>.
-      We will show that for any neighborhood <m>N</m> of <m>f(a)</m> in <m>Y</m>,
-      its inverse image <m>f^{-1}(N)</m> in <m>X</m> is a neighborhood of <m>a</m> in <m>X</m>.
-      Let <m>N</m> be a neighborhood of <m>f(a)</m> in <m>Y</m>.
-      To demonstrate that <m>f^{-1}(N)</m> is a neighborhood of <m>a</m> in <m>X</m>,
-      we need to find an open ball around <m>a</m> that is contained in <m>f^{-1}(N)</m>.
-      Since <m>N</m> is a neighborhood of <m>f(a)</m>,
-      by definition there exists
-      <m>\epsilon \gt 0</m> so that <m>B(f(a), \epsilon) \subseteq N</m>.
-      Since <m>f</m> is continuous at <m>a</m>,
-      there exists <m>\delta \gt 0</m> such that <m>B(a, \delta) \subseteq f^{-1}\left(B(f(a), \epsilon)\right)</m>.
-      So if <m>x \in B(a, \delta)</m>,
-      then <m>f(x) \in B(f(a), \epsilon) \subseteq N</m>.
-      So <m>B(a, \delta) \subseteq f^{-1}(N)</m>,
-      and <m>f^{-1}(N)</m> is a neighborhood of <m>a</m> in <m>X</m>.
+      Misalkan <m>(X, d_X)</m> dan <m>(Y,d_Y)</m> ruang-ruang metrik,
+      dan misalkan <m>f : X \to Y</m> suatu fungsi.
+      Untuk membuktikan pernyataan bikondisional ini, kita harus membuktikan kedua implikasinya.
+      Pertama, asumsikan bahwa <m>f</m> kontinu di suatu titik <m>a \in X</m>.
+      Kita akan menunjukkan bahwa untuk setiap lingkungan <m>N</m> bagi <m>f(a)</m> dalam <m>Y</m>,
+      prapetanya, yaitu <m>f^{-1}(N)</m> dalam <m>X</m>, merupakan lingkungan bagi <m>a</m> dalam <m>X</m>.
+      Misalkan <m>N</m> suatu lingkungan bagi <m>f(a)</m> dalam <m>Y</m>.
+      Untuk menunjukkan bahwa <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m> dalam <m>X</m>,
+      kita perlu menemukan bola terbuka di sekitar <m>a</m> yang termuat dalam <m>f^{-1}(N)</m>.
+      Karena <m>N</m> merupakan lingkungan bagi <m>f(a)</m>,
+      menurut definisi terdapat
+      <m>\epsilon \gt 0</m> sedemikian sehingga <m>B(f(a), \epsilon) \subseteq N</m>.
+      Karena <m>f</m> kontinu di <m>a</m>,
+      terdapat <m>\delta \gt 0</m> sedemikian sehingga <m>B(a, \delta) \subseteq f^{-1}\left(B(f(a), \epsilon)\right)</m>.
+      Jadi, jika <m>x \in B(a, \delta)</m>,
+      maka <m>f(x) \in B(f(a), \epsilon) \subseteq N</m>.
+      Dengan demikian, <m>B(a, \delta) \subseteq f^{-1}(N)</m>,
+      dan <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m> dalam <m>X</m>.
     </p>
     <p>
-      The proof of the reverse implication is left for the next activity.
+      Pembuktian implikasi sebaliknya diserahkan kepada aktivitas berikut.
     </p>
   </proof>
   </theorem>
@@ -134,45 +134,47 @@
   <activity>
     <introduction>
     <p>
-      Let <m>(X, d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
-      and let <m>f : X \to Y</m> be a function.
-      Let <m>a \in X</m>.
-      In this activity we prove that if the inverse image of every neighborhood of <m>f(a)</m> is a neighborhood of <m>a</m>,
-      then <m>f</m> is continuous at <m>a</m>.
+      Misalkan <m>(X, d_X)</m> dan <m>(Y,d_Y)</m> ruang-ruang metrik,
+      dan misalkan <m>f : X \to Y</m> suatu fungsi.
+      Misalkan <m>a \in X</m>.
+      Dalam aktivitas ini, kita membuktikan bahwa jika prapeta setiap lingkungan bagi <m>f(a)</m> merupakan lingkungan bagi <m>a</m>,
+      maka <m>f</m> kontinu di <m>a</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What does <xref ref="thm_open_ball_continuity"/>
-            tell us that we need to do to show that <m>f</m> is continuous at <m>a</m>?
-          </p>
-        </statement>
-        <statement>
-          <p>
-            Suppose <m>\epsilon</m> is greater than 0, why is
-            <m>B(f(a), \epsilon)</m> a neighborhood of <m>f(a)</m> in <m>Y</m>?
+            Menurut <xref ref="thm_open_ball_continuity"/>,
+            apa yang perlu kita lakukan untuk menunjukkan bahwa <m>f</m> kontinu di <m>a</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What does our hypothesis tell us about <m>f^{-1}\left(B(f(a), \epsilon)\right)</m>?
+            Misalkan <m>\epsilon</m> lebih besar daripada 0. Mengapa
+            <m>B(f(a), \epsilon)</m> merupakan lingkungan bagi <m>f(a)</m> dalam <m>Y</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What can we conclude from part (c)?
+            Apa yang dinyatakan oleh hipotesis kita mengenai <m>f^{-1}\left(B(f(a), \epsilon)\right)</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            How do (a)-(d) show that <m>f</m> is continuous at <m>a</m>?
+            Apa yang dapat kita simpulkan dari bagian (c)?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Bagaimana bagian (a)-(d) menunjukkan bahwa <m>f</m> kontinu di <m>a</m>?
           </p>
         </statement>
       </task>
@@ -180,29 +182,29 @@
   </activity>
 
   <p>
-    We conclude this section with some important facts about neighborhoods.
-    Assume that <m>(X,d)</m> is a metric space and <m>a \in X</m>.
+    Kita mengakhiri bagian ini dengan beberapa fakta penting mengenai lingkungan.
+    Asumsikan bahwa <m>(X,d)</m> suatu ruang metrik dan <m>a \in X</m>.
     <ul>
       <li>
         <p>
-          There is a neighborhood that contains <m>a</m>.
+          Terdapat suatu lingkungan yang memuat <m>a</m>.
         </p>
       </li>
       <li>
         <p>
-          If <m>N</m> is a neighborhood of <m>a</m> and <m>N \subseteq M</m>,
-          then <m>M</m> is a neighborhood of <m>a</m>.
+          Jika <m>N</m> merupakan lingkungan bagi <m>a</m> dan <m>N \subseteq M</m>,
+          maka <m>M</m> merupakan lingkungan bagi <m>a</m>.
         </p>
       </li>
       <li>
         <p>
-          If <m>M</m> and <m>N</m> are neighborhoods of <m>a</m>,
-          then so is <m>M \cap N</m>.
+          Jika <m>M</m> dan <m>N</m> merupakan lingkungan bagi <m>a</m>,
+          maka <m>M \cap N</m> juga demikian.
         </p>
       </li>
     </ul>
   </p>
   <p>
-    The proofs are straightforward and left for <xref ref="ex_Nghb_properties"/>.
+    Pembuktiannya langsung dan diserahkan kepada <xref ref="ex_Nghb_properties"/>.
   </p>
 </section>

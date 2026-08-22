@@ -1,0 +1,600 @@
+<section xml:id="o003-c90-ch07-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Dua belas panduan berikut berkorespondensi dengan dua belas perintah
+    pertama pada bagian latihan Bab 7 menurut urutan kedalaman sumber.
+    Materi pendamping ini merupakan uraian asli untuk pembelajaran mandiri,
+    bukan jawaban yang disediakan oleh penulis karya sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-01">
+    <title>Cakram satuan sebagai lingkungan</title>
+    <statement>
+      <p>
+        Dalam <m>(\R^2,d_E)</m>, misalkan
+        <m>A=\{(x,y)\in\R^2\mid x^2+y^2\lt1\}</m> dan
+        <m>a=(0.5,0.5)</m>. Tentukan, disertai bukti, apakah <m>A</m>
+        merupakan lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Nyatakan sebuah radius positif dan buktikan bahwa
+        seluruh bola terbuka dengan pusat <m>a</m> dan radius tersebut termuat
+        dalam <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-01-hint">
+      <p>
+        <em>Langkah 1.</em> Jarak Euklides <m>a</m> dari titik asal adalah
+        <m>\|a\|=1/\sqrt{2}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Gunakan pertidaksamaan segitiga untuk titik
+        <m>z\in B(a,1-1/\sqrt{2})</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-01-answer">
+      <p>
+        Ya. Radius <m>\delta=1-1/\sqrt{2}</m> positif dan memenuhi
+        <m>B(a,\delta)\subseteq A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-01-solution">
+      <p>
+        Tuliskan <m>\|z\|</m> untuk norma Euklides titik
+        <m>z\in\R^2</m>. Karena
+        <me>
+          \|a\|=\sqrt{(1/2)^2+(1/2)^2}=\frac{1}{\sqrt{2}}\lt1,
+        </me>
+        bilangan <m>\delta=1-1/\sqrt{2}</m> positif. Jika
+        <m>z\in B(a,\delta)</m>, maka pertidaksamaan segitiga memberi
+        <me>
+          \|z\|\leq\|z-a\|+\|a\|\lt\delta+\frac{1}{\sqrt{2}}=1.
+        </me>
+        Jadi jumlah kuadrat koordinat <m>z</m> kurang daripada <m>1</m>,
+        sehingga <m>z\in A</m>. Dengan demikian
+        <m>B(a,\delta)\subseteq A</m>, dan menurut definisi <m>A</m>
+        merupakan lingkungan dari <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-02">
+    <title>Sumbu horizontal dalam metrik taksi</title>
+    <statement>
+      <p>
+        Dalam <m>(\R^2,d_T)</m>, misalkan <m>A</m> adalah sumbu
+        <m>x</m> dan <m>a=(0,0)</m>. Tentukan, disertai bukti, apakah
+        <m>A</m> merupakan lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Jika jawabannya negatif, untuk setiap radius positif
+        berikan titik di dalam bola yang tidak berada pada sumbu <m>x</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-02-hint">
+      <p>
+        Untuk <m>\delta\gt0</m>, periksa titik
+        <m>z=(0,\delta/2)</m> dan hitung <m>d_T(z,a)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-02-answer">
+      <p>
+        Tidak. Setiap bola <m>B(a,\delta)</m> memuat titik
+        <m>(0,\delta/2)</m>, yang tidak berada pada sumbu <m>x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-02-solution">
+      <p>
+        Ambil sebarang <m>\delta\gt0</m> dan tetapkan
+        <m>z=(0,\delta/2)</m>. Jarak taksi dari <m>z</m> ke <m>a</m> adalah
+        <me>
+          d_T(z,a)=|0-0|+|\delta/2-0|=\delta/2\lt\delta.
+        </me>
+        Maka <m>z\in B(a,\delta)</m>. Akan tetapi, koordinat kedua
+        <m>z</m> tidak nol, sehingga <m>z\notin A</m>. Jadi tidak ada
+        <m>\delta\gt0</m> dengan <m>B(a,\delta)\subseteq A</m>.
+        Oleh karena itu, <m>A</m> bukan lingkungan dari <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-03">
+    <title>Bilangan rasional bukan lingkungan di garis real</title>
+    <statement>
+      <p>
+        Dalam <m>(\R,d_E)</m>, misalkan <m>A=\Q</m> dan
+        <m>a=0</m>. Tentukan, disertai bukti, apakah <m>A</m> merupakan
+        lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Gunakan urutan kuantor dalam definisi lingkungan dan
+        sifat kerapatan bilangan irasional.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-03-hint">
+      <p>
+        Setiap interval terbuka <m>(-\delta,\delta)</m> memuat bilangan
+        irasional.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-03-answer">
+      <p>
+        Tidak. Untuk setiap <m>\delta\gt0</m>, bola
+        <m>B(0,\delta)</m> memuat suatu bilangan irasional dan karenanya tidak
+        termuat dalam <m>\Q</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-03-solution">
+      <p>
+        Misalkan <m>\delta\gt0</m> diberikan. Kerapatan bilangan irasional
+        dalam <m>\R</m> menjamin adanya <m>u\in\R\setminus\Q</m> dengan
+        <m>-\delta\lt u\lt\delta</m>. Dengan demikian
+        <m>|u-0|\lt\delta</m>, sehingga <m>u\in B(0,\delta)</m>, tetapi
+        <m>u\notin A</m>. Argumen ini berlaku untuk setiap radius positif,
+        sehingga tidak ada bola terbuka berpusat di <m>0</m> yang termuat
+        dalam <m>A</m>. Jadi <m>\Q</m> bukan lingkungan dari <m>0</m> dalam
+        metrik Euklides.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-04">
+    <title>Bilangan bulat positif dalam metrik pecahan tereduksi</title>
+    <statement>
+      <p>
+        Misalkan <m>Q</m> adalah himpunan bilangan rasional dalam bentuk
+        paling sederhana dan
+        <m>d(a/b,c/d)=\max\{|a-c|,|b-d|\}</m>. Dalam <m>(Q,d)</m>, tentukan
+        apakah himpunan <m>A</m> semua bilangan bulat positif merupakan
+        lingkungan dari <m>1=1/1</m>.
+        <em>Rubrik.</em> Tentukan bola terbuka berjari-jari <m>1</m> di
+        sekitar <m>1/1</m> dan jelaskan peran koordinat pembilang serta
+        penyebut yang bulat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-04-hint">
+      <p>
+        Jika dua pecahan tereduksi berbeda, setidaknya salah satu dari selisih
+        pembilang dan selisih penyebutnya adalah bilangan bulat tak nol.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-04-answer">
+      <p>
+        Ya. Bola <m>B(1/1,1)</m> hanya berisi <m>1/1</m>, sehingga bola itu
+        termuat dalam himpunan bilangan bulat positif.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-04-solution">
+      <p>
+        Ambil <m>c/d\in Q</m> dalam bentuk paling sederhana. Jika
+        <m>c/d\neq1/1</m>, pasangan bilangan bulat <m>(c,d)</m> berbeda dari
+        <m>(1,1)</m>. Maka paling sedikit satu dari <m>|c-1|</m> dan
+        <m>|d-1|</m> merupakan bilangan bulat positif, sehingga
+        <me>
+          d(c/d,1/1)=\max\{|c-1|,|d-1|\}\geq1.
+        </me>
+        Akibatnya, syarat <m>d(c/d,1/1)\lt1</m> hanya dipenuhi oleh
+        <m>c/d=1/1</m>. Jadi
+        <m>B(1/1,1)=\{1/1\}\subseteq A</m>. Karena <m>A</m> memuat bola
+        terbuka berpusat di <m>1</m>, <m>A</m> merupakan lingkungan dari
+        <m>1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-05">
+    <title>Semua fungsi dari ruang metrik berhingga ini kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{1,3,5\}</m> dan
+        <m>d_X(x,y)=xy-1\pmod 8</m>, yakni sisa pembagian
+        <m>xy-1</m> oleh <m>8</m>. Untuk sebarang ruang metrik
+        <m>(Y,d_Y)</m>, tentukan apakah mungkin mendefinisikan fungsi
+        <m>f:X\to Y</m> yang tidak kontinu.
+        <em>Rubrik.</em> Hitung jarak antar-titik berbeda dan berikan satu
+        radius yang mengisolasi setiap titik domain.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-05-hint">
+      <p>
+        Jarak antartitik berbeda adalah
+        <m>d_X(1,3)=2</m>, <m>d_X(1,5)=4</m>, dan
+        <m>d_X(3,5)=6</m>. Apa isi <m>B(p,2)</m> untuk
+        <m>p\in X</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-05-answer">
+      <p>
+        Tidak mungkin. Setiap fungsi <m>f:X\to Y</m> kontinu; radius
+        <m>\delta=2</m> mengisolasi setiap titik <m>p\in X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-05-solution">
+      <p>
+        Perhitungan modulo <m>8</m> memberikan
+        <m>d_X(1,3)=2</m>, <m>d_X(1,5)=4</m>, dan
+        <m>d_X(3,5)=6</m>. Jadi untuk setiap <m>p\in X</m>, tidak ada titik
+        lain yang berjarak kurang daripada <m>2</m> dari <m>p</m>; dengan
+        kata lain, <m>B(p,2)=\{p\}</m>.
+      </p>
+      <p>
+        Sekarang ambil fungsi sebarang <m>f:X\to Y</m>, titik
+        <m>p\in X</m>, dan <m>\epsilon\gt0</m>. Pilih
+        <m>\delta=2</m>. Jika <m>d_X(x,p)\lt\delta</m>, maka <m>x=p</m>,
+        sehingga
+        <me>
+          d_Y(f(x),f(p))=d_Y(f(p),f(p))=0\lt\epsilon.
+        </me>
+        Jadi <m>f</m> kontinu di setiap titik dalam <m>X</m>. Tidak ada fungsi
+        tak kontinu dari domain ini ke ruang metrik mana pun.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-06">
+    <title>Dua fungsi pada ruang bermetrik pusat</title>
+    <statement>
+      <p>
+        Pada <m>X=(\R^2,d_H)</m>, dengan
+        <m>d_H(x,y)=0</m> jika <m>x=y</m> dan
+        <m>d_H(x,y)=|x|+|y|</m> jika <m>x\neq y</m>, definisikan
+        <m>f,g:X\to(\R,d_E)</m> oleh <m>f(0,0)=0</m>,
+        <m>f(x)=1</m> untuk <m>x\neq(0,0)</m>, serta
+        <m>g(x)=0</m> jika <m>|x|\lt1</m> dan <m>g(x)=1</m> selain itu.
+        Tentukan fungsi mana yang kontinu dan buktikan kedua klaim.
+        <em>Rubrik.</em> Periksa titik asal secara terpisah; untuk titik tak
+        nol, tunjukkan bahwa terdapat bola terbuka yang hanya memuat pusatnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-06-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk setiap <m>p\neq0</m>, berlaku
+        <m>B(p,|p|)=\{p\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Di titik asal, bandingkan perilaku <m>f</m> dan
+        <m>g</m> pada titik-titik tak nol yang normanya menuju nol.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-06-answer">
+      <p>
+        Fungsi <m>f</m> tidak kontinu di <m>0</m>, sedangkan <m>g</m>
+        kontinu pada seluruh <m>X</m>. Untuk <m>g</m> di <m>0</m>, radius
+        <m>1</m> bekerja; semua titik tak nol terisolasi.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-06-solution">
+      <p>
+        Untuk menunjukkan bahwa <m>f</m> tidak kontinu di
+        <m>0=(0,0)</m>, tetapkan <m>\epsilon_0=1/2</m>. Diberikan sebarang
+        <m>\delta\gt0</m>, pilih <m>x=(\delta/2,0)</m>. Maka
+        <m>x\neq0</m> dan
+        <me>
+          d_H(x,0)=|x|=\delta/2\lt\delta,
+          \qquad |f(x)-f(0)|=1\geq\epsilon_0.
+        </me>
+        Ini adalah negasi definisi kekontinuan, sehingga <m>f</m> tidak
+        kontinu.
+      </p>
+      <p>
+        Untuk <m>g</m> di titik asal, pilih <m>\delta=1</m> bagi sebarang
+        <m>\epsilon\gt0</m>. Jika <m>d_H(x,0)\lt1</m>, maka
+        <m>|x|\lt1</m>, sehingga <m>g(x)=0=g(0)</m> dan jarak keluarannya
+        nol. Jadi <m>g</m> kontinu di <m>0</m>.
+      </p>
+      <p>
+        Terakhir, jika <m>p\neq0</m>, maka untuk setiap <m>x\neq p</m>
+        berlaku <m>d_H(x,p)=|x|+|p|\geq|p|</m>. Karena itu
+        <m>B(p,|p|)=\{p\}</m>. Untuk setiap <m>\epsilon\gt0</m>, pilihan
+        <m>\delta=|p|</m> memaksa <m>x=p</m> dan karenanya
+        <m>|g(x)-g(p)|=0\lt\epsilon</m>. Maka <m>g</m> kontinu di setiap
+        titik tak nol juga, sehingga kontinu pada seluruh <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-07">
+    <title>Semua bola terbuka pada graf berbobot</title>
+    <statement>
+      <p>
+        Pada ruang metrik graf berbobot dengan sisi
+        <m>ab=3</m>, <m>ac=8</m>, <m>ae=1</m>, <m>ce=7</m>,
+        <m>cd=2</m>, <m>de=5</m>, <m>db=7</m>, dan <m>eb=2</m>, tentukan
+        <m>B(a,\delta)</m> untuk setiap <m>\delta\gt0</m>.
+        <em>Rubrik.</em> Hitung dahulu jarak lintasan terpendek dari
+        <m>a</m> ke kelima simpul, lalu pisahkan semua rentang radius pada
+        nilai jarak kritis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-07-hint">
+      <p>
+        Jarak dari <m>a</m> ke <m>a,e,b,d,c</m>, berturut-turut, adalah
+        <m>0,1,3,6,8</m>. Ingat bahwa bola terbuka memakai pertidaksamaan
+        ketat <m>d(a,x)\lt\delta</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-07-answer">
+      <p>
+        Bola-bolanya adalah
+        <m>\{a\}</m> untuk <m>0\lt\delta\leq1</m>;
+        <m>\{a,e\}</m> untuk <m>1\lt\delta\leq3</m>;
+        <m>\{a,e,b\}</m> untuk <m>3\lt\delta\leq6</m>;
+        <m>\{a,e,b,d\}</m> untuk <m>6\lt\delta\leq8</m>; dan
+        <m>\{a,e,b,d,c\}</m> untuk <m>\delta\gt8</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-07-solution">
+      <p>
+        Jalankan langkah jarak terpendek dari <m>a</m>. Mula-mula diperoleh
+        jarak tentatif <m>d(a,e)=1</m>, <m>d(a,b)=3</m>, dan
+        <m>d(a,c)=8</m> dari sisi-sisi yang bersisian dengan <m>a</m>.
+        Melalui <m>e</m>, jarak ke <m>b</m> tetap <m>3</m>, jarak ke
+        <m>d</m> menjadi <m>1+5=6</m>, dan jarak ke <m>c</m> tetap
+        <m>1+7=8</m>. Melalui <m>b</m>, kandidat jarak ke <m>d</m> adalah
+        <m>3+7=10</m>, sehingga tidak memperbaiki <m>6</m>. Melalui
+        <m>d</m>, kandidat jarak ke <m>c</m> adalah <m>6+2=8</m>, sama
+        dengan jarak yang sudah diperoleh. Karena semua bobot sisi positif,
+        langkah-langkah ini menyelesaikan pemeriksaan lintasan terpendek.
+        Jadi jarak dari <m>a</m> ke <m>a,e,b,d,c</m>, berturut-turut, adalah
+        <m>0,1,3,6,8</m>.
+      </p>
+      <p>
+        Sebuah simpul masuk ke <m>B(a,\delta)</m> tepat ketika jaraknya
+        kurang daripada <m>\delta</m>. Karena ketaksamaan ini ketat, simpul
+        pada jarak <m>1,3,6,8</m> baru masuk setelah radius melewati nilai
+        tersebut. Dengan demikian
+        <md>
+          <mrow>B(a,\delta)=\{a\}
+          \quad\text{jika }0\lt\delta\leq1,</mrow>
+          <mrow>B(a,\delta)=\{a,e\}
+          \quad\text{jika }1\lt\delta\leq3,</mrow>
+          <mrow>B(a,\delta)=\{a,e,b\}
+          \quad\text{jika }3\lt\delta\leq6,</mrow>
+          <mrow>B(a,\delta)=\{a,e,b,d\}
+          \quad\text{jika }6\lt\delta\leq8,</mrow>
+          <mrow>B(a,\delta)=\{a,e,b,d,c\}
+          \quad\text{jika }\delta\gt8.</mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-08">
+    <title>Semua lingkungan dari simpul a</title>
+    <statement>
+      <p>
+        Untuk ruang metrik graf berbobot pada tugas sebelumnya, tentukan semua
+        lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Gunakan bola terbuka terkecil yang ditemukan dan
+        buktikan kedua arah klasifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-08-hint">
+      <p>
+        Karena <m>B(a,1)=\{a\}</m>, setiap subhimpunan yang memuat
+        <m>a</m> otomatis memuat sebuah bola terbuka berpusat di <m>a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-08-answer">
+      <p>
+        Lingkungan dari <m>a</m> tepat merupakan semua subhimpunan
+        <m>N\subseteq X</m> yang memuat <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-08-solution">
+      <p>
+        Jika <m>N</m> merupakan lingkungan dari <m>a</m>, maka ada
+        <m>\delta\gt0</m> dengan <m>B(a,\delta)\subseteq N</m>. Setiap bola
+        berpusat di <m>a</m> memuat pusatnya, sehingga <m>a\in N</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>a\in N\subseteq X</m>. Dari perhitungan tugas
+        sebelumnya, <m>B(a,1)=\{a\}</m>. Maka
+        <m>B(a,1)\subseteq N</m>, sehingga menurut definisi <m>N</m>
+        merupakan lingkungan dari <m>a</m>. Kedua arah ini membuktikan
+        klasifikasi tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-09">
+    <title>Prapeta bola di bawah fungsi linear</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(\R,d_E)\to(\R,d_E)</m> didefinisikan oleh
+        <m>f(x)=ax+b</m>, dengan <m>a\neq0</m>. Untuk
+        <m>p\in\R</m> dan <m>r\gt0</m>, tunjukkan bahwa
+        <m>f^{-1}(B(f(p),r))</m> memuat bola terbuka berpusat di <m>p</m>,
+        lalu simpulkan kekontinuan fungsi linear.
+        <em>Rubrik.</em> Hitung selisih <m>f(x)-f(p)</m> dan berikan radius
+        eksplisit dalam <m>r</m> dan <m>|a|</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-09-hint">
+      <p>
+        Gunakan <m>|f(x)-f(p)|=|a|\,|x-p|</m> dan pilih
+        <m>\delta=r/|a|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-09-answer">
+      <p>
+        Berlaku
+        <m>f^{-1}(B(f(p),r))=B(p,r/|a|)</m>. Maka pilihan
+        <m>\delta=r/|a|</m> membuktikan kekontinuan di setiap <m>p</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-09-solution">
+      <p>
+        Untuk setiap <m>x\in\R</m>,
+        <me>
+          |f(x)-f(p)|=|ax+b-(ap+b)|=|a|\,|x-p|.
+        </me>
+        Karena <m>a\neq0</m>, radius <m>\delta=r/|a|</m> positif. Kita
+        mempunyai rangkaian kesetaraan
+        <md>
+          <mrow>x\in f^{-1}(B(f(p),r))</mrow>
+          <mrow>\amp\Longleftrightarrow |f(x)-f(p)|\lt r</mrow>
+          <mrow>\amp\Longleftrightarrow |x-p|\lt r/|a|</mrow>
+          <mrow>\amp\Longleftrightarrow x\in B(p,r/|a|).</mrow>
+        </md>
+        Jadi prapeta tersebut bukan hanya memuat, melainkan sama dengan bola
+        yang dinyatakan. Karena konstruksi ini berlaku bagi setiap
+        <m>p</m> dan <m>r\gt0</m>, <m>f</m> kontinu. Jika istilah fungsi
+        linear juga mencakup kasus <m>a=0</m>, kasus itu adalah fungsi konstan
+        dan juga kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-10">
+    <title>Prapeta bola di bawah fungsi kuadrat</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(\R,d_E)\to(\R,d_E)</m> didefinisikan oleh
+        <m>f(x)=ax^2+bx+c</m>, dengan <m>a\neq0</m>. Untuk
+        <m>p\in\R</m> dan <m>r\gt0</m>, tunjukkan bahwa
+        <m>f^{-1}(B(f(p),r))</m> memuat bola terbuka berpusat di <m>p</m>,
+        lalu simpulkan bahwa setiap fungsi kuadrat kontinu.
+        <em>Rubrik.</em> Faktorkan selisih nilai fungsi, batasi
+        <m>|x+p|</m> di sekitar <m>p</m>, dan berikan radius eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-10-hint">
+      <p>
+        <em>Langkah 1.</em> Gunakan
+        <m>f(x)-f(p)=(x-p)(a(x+p)+b)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Tetapkan
+        <m>C=|a|(2|p|+1)+|b|</m> dan pilih
+        <m>\delta=\min\{1,r/C\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-10-answer">
+      <p>
+        Dengan <m>C=|a|(2|p|+1)+|b|</m>, radius
+        <m>\delta=\min\{1,r/C\}</m> memenuhi
+        <m>B(p,\delta)\subseteq f^{-1}(B(f(p),r))</m>. Jadi <m>f</m>
+        kontinu di setiap <m>p</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-10-solution">
+      <p>
+        Karena <m>a\neq0</m>, bilangan
+        <m>C=|a|(2|p|+1)+|b|</m> positif. Tetapkan
+        <m>\delta=\min\{1,r/C\}</m>. Jika
+        <m>|x-p|\lt\delta</m>, maka <m>|x-p|\lt1</m>, sehingga
+        <m>|x|\leq|p|+|x-p|\lt|p|+1</m> dan
+        <m>|x+p|\lt2|p|+1</m>. Oleh karena itu,
+        <md>
+          <mrow>|f(x)-f(p)|
+          \amp=|(x-p)(a(x+p)+b)|</mrow>
+          <mrow>\amp\leq|x-p|\bigl(|a|\,|x+p|+|b|\bigr)</mrow>
+          <mrow>\amp\lt|x-p|C\lt\delta C\leq r.</mrow>
+        </md>
+        Jadi <m>f(x)\in B(f(p),r)</m> setiap kali
+        <m>x\in B(p,\delta)</m>. Ini membuktikan
+        <m>B(p,\delta)\subseteq f^{-1}(B(f(p),r))</m>. Karena <m>p</m> dan
+        <m>r</m> dipilih sembarang, <m>f</m> kontinu pada <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-11">
+    <title>Fungsi jarak ke suatu himpunan</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik dan <m>A\subseteq X</m> tak
+        kosong. Definisikan <m>f:X\to\R</m> dengan
+        <m>f(x)=d(x,A)</m>. Gunakan
+        <m>d(b,A)\leq d(b,c)+d(c,A)</m> untuk menunjukkan bahwa, bagi setiap
+        <m>b\in X</m> dan <m>\epsilon\gt0</m>, terdapat lingkungan
+        <m>N</m> dari <m>b</m> dengan
+        <m>x\in N\Longrightarrow f(x)\in B(f(b),\epsilon)</m>. Simpulkan
+        bahwa <m>f</m> kontinu.
+        <em>Rubrik.</em> Turunkan batas simetris untuk selisih mutlak dua
+        jarak ke <m>A</m>, lalu pilih lingkungan secara eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-11-hint">
+      <p>
+        Tukarkan <m>b</m> dan <m>c</m> dalam pertidaksamaan yang diberikan,
+        lalu gabungkan kedua hasil untuk memperoleh pertidaksamaan
+        1-Lipschitz.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-11-answer">
+      <p>
+        Berlaku <m>|d(b,A)-d(c,A)|\leq d(b,c)</m>. Karena itu
+        <m>N=B(b,\epsilon)</m> memenuhi syarat, dan <m>f</m> bahkan
+        1-Lipschitz.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-11-solution">
+      <p>
+        Pertidaksamaan yang diberikan menyatakan
+        <m>d(b,A)-d(c,A)\leq d(b,c)</m>. Setelah <m>b</m> dan <m>c</m>
+        ditukar, simetri metrik memberi
+        <m>d(c,A)-d(b,A)\leq d(c,b)=d(b,c)</m>. Kedua pertidaksamaan itu
+        setara dengan
+        <me>
+          |d(b,A)-d(c,A)|\leq d(b,c).
+        </me>
+      </p>
+      <p>
+        Tetapkan <m>b\in X</m> dan <m>\epsilon\gt0</m>, lalu ambil
+        <m>N=B(b,\epsilon)</m>. Jika <m>x\in N</m>, maka
+        <md>
+          <mrow>|f(x)-f(b)|
+          \amp=|d(x,A)-d(b,A)|</mrow>
+          <mrow>\amp\leq d(x,b)\lt\epsilon.</mrow>
+        </md>
+        Dengan demikian <m>f(x)\in B(f(b),\epsilon)</m>. Karena ini berlaku
+        untuk setiap <m>b</m> dan <m>\epsilon</m>, fungsi <m>f</m> kontinu;
+        batas pertama juga menunjukkan bahwa konstanta Lipschitz-nya paling
+        besar <m>1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-12">
+    <title>Lingkungan terpisah bagi dua titik berbeda</title>
+    <statement>
+      <p>
+        Misalkan <m>a</m> dan <m>b</m> dua titik berbeda dalam ruang metrik
+        <m>X</m>. Buktikan bahwa terdapat lingkungan <m>N_a</m> dan
+        <m>N_b</m>, masing-masing dari <m>a</m> dan <m>b</m>, dengan
+        <m>N_a\cap N_b=\emptyset</m>.
+        <em>Rubrik.</em> Pilih radius berdasarkan <m>d(a,b)</m> dan gunakan
+        pertidaksamaan segitiga untuk membuktikan ketakteririsan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-12-hint">
+      <p>
+        Karena <m>a\neq b</m>, bilangan <m>r=d(a,b)/2</m> positif. Cobalah
+        <m>N_a=B(a,r)</m> dan <m>N_b=B(b,r)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-12-answer">
+      <p>
+        Ambil <m>r=d(a,b)/2</m>,
+        <m>N_a=B(a,r)</m>, dan <m>N_b=B(b,r)</m>. Kedua bola terbuka itu
+        merupakan lingkungan dan tidak beririsan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-12-solution">
+      <p>
+        Karena <m>a\neq b</m>, sifat definit positif metrik memberi
+        <m>d(a,b)\gt0</m>. Tetapkan <m>r=d(a,b)/2</m> dan ambil
+        <m>N_a=B(a,r)</m> serta <m>N_b=B(b,r)</m>. Masing-masing jelas
+        merupakan lingkungan dari pusatnya.
+      </p>
+      <p>
+        Andaikan, untuk memperoleh kontradiksi, ada
+        <m>x\in N_a\cap N_b</m>. Maka
+        <m>d(a,x)\lt r</m> dan <m>d(x,b)\lt r</m>. Pertidaksamaan segitiga
+        memberikan
+        <me>
+          d(a,b)\leq d(a,x)+d(x,b)\lt r+r=d(a,b),
+        </me>
+        suatu kontradiksi. Jadi <m>N_a\cap N_b=\emptyset</m>, sebagaimana
+        diminta.
+      </p>
+    </solution>
+  </exercise>
+</section>

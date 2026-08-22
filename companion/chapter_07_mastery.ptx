@@ -1,0 +1,341 @@
+<section xml:id="o003-c90-ch07-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 7</title>
+
+  <p>
+    Enam soal berikut menggabungkan geometri bola, lingkungan, kekontinuan,
+    dan contoh penyangkal. Setiap soal merupakan materi asli pendamping. Cobalah
+    menyusun bukti lengkap sebelum membuka bantuan bertahap.
+  </p>
+
+  <exercise xml:id="o003-c90-ch07-mastery-01">
+    <title>Empat metrik dan empat bentuk bola</title>
+    <statement>
+      <p>
+        Pada <m>\R^2</m>, gambarkan dan nyatakan dengan pertidaksamaan bola
+        berjari-jari <m>1</m> yang berpusat di <m>0=(0,0)</m> untuk metrik
+        Euklides <m>d_E</m>, metrik maksimum <m>d_M</m>, metrik taksi
+        <m>d_T</m>, dan metrik diskret <m>d_D</m>. Buktikan bahwa
+        <me>
+          B_D(0,1)\subsetneq B_T(0,1)\subsetneq
+          B_E(0,1)\subsetneq B_M(0,1).
+        </me>
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-mastery-01-hint">
+      <p>
+        Tuliskan syarat jarak kurang dari <m>1</m> untuk setiap metrik. Untuk
+        inklusi, gunakan
+        <m>\lVert x\rVert_\infty\leq\lVert x\rVert_2
+        \leq\lVert x\rVert_1</m>. Untuk ketatnya inklusi, uji titik pada
+        sumbu, lalu titik <m>(0.6,0.6)</m> dan <m>(0.9,0.9)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-mastery-01-answer">
+      <p>
+        Untuk <m>d_E</m> bolanya ialah cakram <m>x^2+y^2\lt1</m>; untuk
+        <m>d_M</m>, persegi terbuka <m>\max\{|x|,|y|\}\lt1</m>; untuk
+        <m>d_T</m>, belah ketupat <m>|x|+|y|\lt1</m>; dan untuk
+        <m>d_D</m>, singleton <m>\{0\}</m>. Semua inklusi yang ditampilkan
+        bersifat ketat.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-mastery-01-solution">
+      <p>
+        Dari definisi masing-masing metrik diperoleh
+        <md>
+          <mrow>B_D(0,1)\amp=\{(0,0)\},</mrow>
+          <mrow>B_T(0,1)\amp=\{(x,y):|x|+|y|\lt1\},</mrow>
+          <mrow>B_E(0,1)\amp=\{(x,y):x^2+y^2\lt1\},</mrow>
+          <mrow>B_M(0,1)\amp=\{(x,y):\max\{|x|,|y|\}\lt1\}.</mrow>
+        </md>
+        Untuk setiap <m>z\in\R^2</m>, berlaku
+        <m>\lVert z\rVert_\infty\leq\lVert z\rVert_2
+        \leq\lVert z\rVert_1</m>. Karena itu, syarat norma satu kurang dari
+        <m>1</m> mengakibatkan syarat norma dua, dan syarat norma dua
+        mengakibatkan syarat norma maksimum. Bola diskret jelas termuat dalam
+        semuanya.
+      </p>
+      <p>
+        Inklusinya ketat: <m>(1/2,0)</m> berada dalam bola taksi tetapi bukan
+        dalam bola diskret; <m>(0.6,0.6)</m> berada dalam bola Euklides karena
+        <m>0.6^2+0.6^2=0.72\lt1</m>, tetapi tidak dalam bola taksi karena
+        <m>1.2\not\lt1</m>; dan <m>(0.9,0.9)</m> berada dalam bola maksimum,
+        tetapi tidak dalam bola Euklides karena
+        <m>0.9^2+0.9^2=1.62\gt1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-mastery-02">
+    <title>Ruang yang tersisa di dalam bola terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> suatu ruang metrik, <m>r\gt0</m>, dan
+        <m>b\in B(a,r)</m>. Nyatakan jari-jari residu alami yang berpusat di
+        <m>b</m>, buktikan bahwa jari-jari tersebut positif, lalu buktikan
+        bahwa bola yang dihasilkannya termuat dalam <m>B(a,r)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-mastery-02-hint">
+      <p>
+        Ukur bagian jari-jari <m>r</m> yang belum dipakai oleh jarak
+        <m>d(a,b)</m>. Untuk titik <m>x</m> dalam bola baru, terapkan
+        pertidaksamaan segitiga pada <m>d(x,a)</m> dan pertahankan
+        pertidaksamaan ketatnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-mastery-02-answer">
+      <p>
+        Ambil <m>s=r-d(a,b)</m>. Karena <m>b\in B(a,r)</m>, berlaku
+        <m>s\gt0</m>, dan <m>B(b,s)\subseteq B(a,r)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-mastery-02-solution">
+      <p>
+        Keanggotaan <m>b\in B(a,r)</m> berarti <m>d(a,b)\lt r</m>, sehingga
+        <m>s=r-d(a,b)\gt0</m>. Jika <m>x\in B(b,s)</m>, maka
+        <md>
+          <mrow>d(x,a)\amp\leq d(x,b)+d(b,a)</mrow>
+          <mrow>\amp\lt s+d(a,b)</mrow>
+          <mrow>\amp=r.</mrow>
+        </md>
+        Jadi <m>x\in B(a,r)</m>. Karena <m>x</m> dipilih sebarang,
+        <m>B(b,s)\subseteq B(a,r)</m>. Inilah alasan setiap bola terbuka
+        merupakan lingkungan bagi setiap titiknya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-mastery-03">
+    <title>Tiga bentuk yang setara untuk kekontinuan</title>
+    <statement>
+      <p>
+        Untuk fungsi <m>f:(X,d_X)\to(Y,d_Y)</m> dan <m>a\in X</m>, buktikan
+        kesetaraan ketiga syarat berikut: definisi epsilon-delta; untuk setiap
+        <m>\epsilon\gt0</m> terdapat <m>\delta\gt0</m> dengan
+        <m>B(a,\delta)\subseteq f^{-1}(B(f(a),\epsilon))</m>; dan prapeta
+        setiap lingkungan bagi <m>f(a)</m> merupakan lingkungan bagi
+        <m>a</m>. Kemudian gunakan <m>f(x)=x^2</m> di <m>a=2</m> untuk
+        menjelaskan mengapa prapeta bola tidak harus menjadi bola yang
+        berpusat di <m>a</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-mastery-03-hint">
+      <p>
+        Kesetaraan dua syarat pertama hanyalah penerjemahan keanggotaan bola.
+        Untuk lingkungan umum, sisipkan sebuah bola di dalam lingkungan.
+        Untuk arah sebaliknya, gunakan fakta bahwa
+        <m>B(f(a),\epsilon)</m> merupakan lingkungan bagi pusatnya. Pada contoh
+        konkret, selesaikan <m>3\lt x^2\lt5</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-mastery-03-answer">
+      <p>
+        Ketiga syarat setara. Untuk <m>f(x)=x^2</m>,
+        <m>f^{-1}(B(4,1))=(-\sqrt5,-\sqrt3)\cup(\sqrt3,\sqrt5)</m>, yang
+        bukan satu interval dan karena itu bukan bola Euklides yang berpusat di
+        <m>2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-mastery-03-solution">
+      <p>
+        Untuk <m>x\in X</m>, keanggotaan <m>x\in B(a,\delta)</m> tepat berarti
+        <m>d_X(x,a)\lt\delta</m>, sedangkan
+        <m>x\in f^{-1}(B(f(a),\epsilon))</m> tepat berarti
+        <m>d_Y(f(x),f(a))\lt\epsilon</m>. Jadi implikasi epsilon-delta untuk
+        semua <m>x</m> setara tepat dengan inklusi kedua bola tersebut.
+      </p>
+      <p>
+        Andaikan syarat inklusi bola berlaku dan <m>N</m> suatu lingkungan bagi
+        <m>f(a)</m>. Ada <m>\epsilon\gt0</m> dengan
+        <m>B(f(a),\epsilon)\subseteq N</m>. Pilih <m>\delta\gt0</m> dari syarat
+        inklusi. Maka
+        <me>
+          B(a,\delta)\subseteq f^{-1}(B(f(a),\epsilon))
+          \subseteq f^{-1}(N),
+        </me>
+        sehingga <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan sifat prapeta lingkungan berlaku. Untuk
+        <m>\epsilon\gt0</m>, bola <m>B(f(a),\epsilon)</m> merupakan lingkungan
+        bagi <m>f(a)</m>. Prapetanya karena itu merupakan lingkungan bagi
+        <m>a</m>, sehingga memuat <m>B(a,\delta)</m> untuk suatu
+        <m>\delta\gt0</m>. Ini menghasilkan syarat inklusi bola dan menutup
+        siklus kesetaraan.
+      </p>
+      <p>
+        Pada contoh <m>f(x)=x^2</m>, bola sasaran ialah
+        <m>B(f(2),1)=(3,5)</m>. Menyelesaikan <m>3\lt x^2\lt5</m> memberi
+        dua interval terpisah
+        <m>(-\sqrt5,-\sqrt3)\cup(\sqrt3,\sqrt5)</m>. Prapeta ini memuat bola
+        kecil di sekitar <m>2</m>, tetapi bukan dirinya sendiri sebuah bola
+        yang berpusat di <m>2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-mastery-04">
+    <title>Metrik graf berhingga yang lengkap</title>
+    <statement>
+      <p>
+        Ambil lintasan berbobot <m>a-b-c-d</m> dengan bobot sisi berturut-turut
+        <m>1,2,1</m>, dan definisikan jarak sebagai panjang lintasan terpendek.
+        Daftarkan semua bola berbeda <m>B(a,r)</m> untuk <m>r\gt0</m>, cirikan
+        semua lingkungan bagi <m>a</m>, lalu buktikan bahwa setiap fungsi dari
+        ruang ini ke sembarang ruang metrik bersifat kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-mastery-04-hint">
+      <p>
+        Hitung dahulu <m>d(a,a),d(a,b),d(a,c),d(a,d)</m> dan ingat bahwa syarat
+        bola adalah jarak <em>kurang dari</em> jari-jari. Untuk kekontinuan,
+        cari bola singleton di setiap simpul.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-mastery-04-answer">
+      <p>
+        Jarak dari <m>a</m> ialah <m>0,1,3,4</m>. Bola-bolanya adalah
+        <m>\{a\}</m> untuk <m>0\lt r\leq1</m>, <m>\{a,b\}</m> untuk
+        <m>1\lt r\leq3</m>, <m>\{a,b,c\}</m> untuk
+        <m>3\lt r\leq4</m>, dan seluruh ruang untuk <m>r\gt4</m>. Semua
+        subhimpunan yang memuat <m>a</m> merupakan lingkungan bagi <m>a</m>,
+        dan setiap fungsi dari ruang tersebut kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-mastery-04-solution">
+      <p>
+        Karena graf adalah lintasan, satu-satunya lintasan sederhana dari
+        <m>a</m> ke setiap simpul memberi
+        <m>d(a,a)=0</m>, <m>d(a,b)=1</m>, <m>d(a,c)=1+2=3</m>, dan
+        <m>d(a,d)=1+2+1=4</m>. Membandingkan angka-angka ini dengan syarat
+        <m>d(a,x)\lt r</m> menghasilkan tepat empat rezim bola yang dinyatakan
+        pada jawaban.
+      </p>
+      <p>
+        Karena <m>B(a,1)=\{a\}</m>, setiap himpunan <m>N</m> yang memuat
+        <m>a</m> juga memuat bola tersebut dan merupakan lingkungan bagi
+        <m>a</m>. Sebaliknya, setiap lingkungan bagi <m>a</m> harus memuat
+        pusatnya, jadi pencirian itu tepat.
+      </p>
+      <p>
+        Di setiap simpul <m>p</m>, jarak minimum dari <m>p</m> ke simpul lain
+        bernilai positif. Pilih jari-jari sebesar jarak minimum tersebut;
+        karena pertidaksamaan bola ketat, bola yang dihasilkan adalah
+        <m>\{p\}</m>. Untuk fungsi sebarang <m>f</m> dan toleransi keluaran
+        sebarang, gunakan bola singleton ini sebagai lingkungan masukan. Setiap
+        <m>x</m> di dalamnya sama dengan <m>p</m>, sehingga jarak keluarannya
+        nol. Jadi setiap fungsi kontinu di setiap simpul.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-mastery-05">
+    <title>Irisan berhingga dan irisan tak berhingga</title>
+    <statement>
+      <p>
+        Buktikan bahwa irisan setiap keluarga berhingga yang tak kosong dari
+        lingkungan bagi titik <m>a</m> kembali merupakan lingkungan bagi
+        <m>a</m>. Kemudian berikan
+        contoh yang menunjukkan bahwa pernyataan tersebut dapat gagal untuk
+        keluarga tak berhingga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-mastery-05-hint">
+      <p>
+        Untuk banyak lingkungan berhingga, ambil minimum dari jari-jari saksi.
+        Untuk menyangkal versi tak berhingga, gunakan interval terbuka yang
+        menyusut ke <m>0</m> dalam <m>\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-mastery-05-answer">
+      <p>
+        Jika <m>B(a,r_i)\subseteq N_i</m> untuk
+        <m>i=1,\ldots,k</m>, maka jari-jari
+        <m>r=\min_i r_i\gt0</m> menyaksikan bahwa
+        <m>\bigcap_iN_i</m> merupakan lingkungan. Untuk keluarga tak
+        berhingga, setiap <m>N_n=(-1/n,1/n)</m> merupakan lingkungan bagi
+        <m>0</m>, tetapi irisannya adalah <m>\{0\}</m>, yang bukan lingkungan
+        bagi <m>0</m> dalam metrik Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-mastery-05-solution">
+      <p>
+        Misalkan <m>k\geq1</m> dan <m>N_1,\ldots,N_k</m> lingkungan bagi <m>a</m>. Untuk setiap
+        <m>i</m>, pilih <m>r_i\gt0</m> dengan
+        <m>B(a,r_i)\subseteq N_i</m>. Karena hanya ada berhingga banyak
+        jari-jari positif, <m>r=\min\{r_1,\ldots,r_k\}</m> tetap positif.
+        Maka <m>B(a,r)\subseteq B(a,r_i)\subseteq N_i</m> untuk setiap
+        <m>i</m>, sehingga
+        <m>B(a,r)\subseteq\bigcap_{i=1}^kN_i</m>.
+      </p>
+      <p>
+        Dalam <m>(\R,d_E)</m>, tetapkan <m>N_n=(-1/n,1/n)</m>. Setiap
+        <m>N_n</m> adalah bola terbuka dan karena itu lingkungan bagi
+        <m>0</m>. Namun, satu-satunya bilangan real yang berada dalam semua
+        interval tersebut ialah <m>0</m>, jadi
+        <m>\bigcap_{n=1}^{\infty}N_n=\{0\}</m>. Setiap bola Euklides berjari-jari
+        positif di sekitar <m>0</m> memuat titik selain <m>0</m>, sehingga
+        tidak ada bola demikian yang termuat dalam <m>\{0\}</m>. Irisan itu
+        bukan lingkungan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-mastery-06">
+    <title>Arah prapeta dan citra lingkungan</title>
+    <statement>
+      <p>
+        Misalkan <m>f:X\to Y</m> kontinu di <m>a</m>. Buktikan bahwa prapeta
+        setiap lingkungan bagi <m>f(a)</m> merupakan lingkungan bagi
+        <m>a</m>. Sangkal pernyataan serupa bahwa citra setiap lingkungan bagi
+        <m>a</m> harus merupakan lingkungan bagi <m>f(a)</m>. Terakhir,
+        nyatakan satu hipotesis tambahan yang cukup agar pernyataan tentang
+        citra menjadi benar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-mastery-06-hint">
+      <p>
+        Gunakan pencirian kekontinuan dengan lingkungan untuk prapeta. Untuk
+        citra, uji fungsi konstan dari <m>\R</m> ke <m>\R</m>. Hipotesis
+        tambahan yang berguna ialah bahwa <m>f</m> merupakan pemetaan terbuka:
+        citra setiap himpunan terbuka harus terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-mastery-06-answer">
+      <p>
+        Pernyataan prapeta benar menurut pencirian kekontinuan. Pernyataan
+        citra salah: fungsi konstan <m>f:\R\to\R</m>, <m>f(x)=0</m>, memetakan
+        setiap lingkungan ke singleton <m>\{0\}</m>, yang bukan lingkungan
+        bagi <m>0</m> dalam metrik Euklides. Jika <m>f</m> kontinu dan juga
+        merupakan pemetaan terbuka, maka citra setiap lingkungan bagi
+        <m>a</m> merupakan lingkungan bagi <m>f(a)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-mastery-06-solution">
+      <p>
+        Karena <m>f</m> kontinu di <m>a</m>, teorema lingkungan menyatakan
+        langsung bahwa untuk setiap lingkungan <m>V</m> bagi <m>f(a)</m>,
+        himpunan <m>f^{-1}(V)</m> merupakan lingkungan bagi <m>a</m>. Arah
+        prapeta ini sesuai dengan urutan kuantor dalam definisi kekontinuan.
+      </p>
+      <p>
+        Untuk arah citra, ambil fungsi konstan <m>f:\R\to\R</m> dengan
+        <m>f(x)=0</m>. Fungsi ini kontinu. Jika <m>N=(-1,1)</m>, maka <m>N</m>
+        merupakan lingkungan bagi <m>0</m>, tetapi
+        <m>f(N)=\{0\}</m>. Singleton tersebut tidak memuat bola Euklides
+        berjari-jari positif di sekitar <m>0</m>, jadi bukan lingkungan.
+      </p>
+      <p>
+        Sekarang andaikan, sebagai tambahan, bahwa <m>f</m> merupakan pemetaan
+        terbuka. Jika <m>N</m> lingkungan bagi <m>a</m>, pilih
+        <m>r\gt0</m> dengan <m>B(a,r)\subseteq N</m>. Himpunan
+        <m>B(a,r)</m> terbuka, sehingga <m>f(B(a,r))</m> terbuka karena
+        <m>f</m> pemetaan terbuka. Himpunan itu memuat <m>f(a)</m> dan termuat
+        dalam <m>f(N)</m>. Jadi <m>f(N)</m> memuat suatu lingkungan terbuka
+        bagi <m>f(a)</m> dan karenanya merupakan lingkungan bagi
+        <m>f(a)</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

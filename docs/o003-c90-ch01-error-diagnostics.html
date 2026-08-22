@@ -86,7 +86,7 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-06-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–6 — Himpunan, Fungsi, Ruang Metrik, Penerapan Ruang Metrik, Batas Bawah Terbesar, Fungsi Kontinu, dan Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-07-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–7 — Himpunan, Fungsi, Ruang Metrik, Penerapan Ruang Metrik, Batas Bawah Terbesar, Fungsi Kontinu, Bola Terbuka dan Lingkungan, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -218,7 +218,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch06-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch07-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, dan Penerapannya</span></a></div>
@@ -284,6 +284,16 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_cont_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap_open_balls.html" class="internal"><span class="codenumber">7</span> <span class="title">Bola Terbuka dan Lingkungan pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_balls_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_neighborhoods.html" class="internal"><span class="title">Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_neighborhoods.html" class="internal"><span class="title">Kekontinuan dan Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -342,6 +352,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch06-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch07-companion.html" class="internal"><span class="codenumber">G</span> <span class="title">Pendamping Mandiri Bab 7: Bola Terbuka dan Lingkungan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch07-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 7</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 </ul>
 </li>
@@ -349,22 +368,22 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch01-error-diagnostics"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Diagnostik kesalahan ringkas</span>
 </h2>
-<div class="para logical" id="p-862"><dl class="description-list">
-<dt id="li-134">Menukar <span class="process-math">\(\in\)</span> dan <span class="process-math">\(\subseteq\)</span>
+<div class="para logical" id="p-947"><dl class="description-list">
+<dt id="li-147">Menukar <span class="process-math">\(\in\)</span> dan <span class="process-math">\(\subseteq\)</span>
 </dt>
-<dd><div class="para" id="p-863">Ucapkan jenis objeknya: ruas kiri <span class="process-math">\(\in\)</span> adalah satu anggota; ruas kiri <span class="process-math">\(\subseteq\)</span> adalah sebuah himpunan yang semua anggotanya harus diuji.</div></dd>
-<dt id="li-135">Membuktikan kesamaan hanya satu arah</dt>
-<dd><div class="para" id="p-864">Tulis dua sasaran terpisah, <span class="process-math">\(A\subseteq B\)</span> dan <span class="process-math">\(B\subseteq A\text{,}\)</span> sebelum memulai bukti.</div></dd>
-<dt id="li-136">Komplemen tanpa semesta</dt>
-<dd><div class="para" id="p-865">Catat semesta <span class="process-math">\(U\text{;}\)</span> nilai <span class="process-math">\(A^c\)</span> berubah ketika <span class="process-math">\(U\)</span> berubah.</div></dd>
-<dt id="li-137">Menukar “untuk semua” dan “ada”</dt>
-<dd><div class="para" id="p-866">Irisan memakai <span class="process-math">\(\forall\text{;}\)</span> gabungan memakai <span class="process-math">\(\exists\text{.}\)</span> Negasi menukar keduanya.</div></dd>
-<dt id="li-138">Contoh tandingan tidak memenuhi hipotesis</dt>
-<dd><div class="para" id="p-867">Periksa semua asumsi terlebih dahulu, baru tunjukkan bahwa kesimpulannya gagal.</div></dd>
-<dt id="li-139">Menganggap semua subhimpunan produk berbentuk produk</dt>
-<dd><div class="para" id="p-868">Produk <span class="process-math">\(C\times D\)</span> harus memuat seluruh kombinasi silang, bukan hanya pasangan yang dipilih.</div></dd>
-<dt id="li-140">Mengabaikan kasus kosong</dt>
-<dd><div class="para" id="p-869">Uji <span class="process-math">\(A=\emptyset\text{,}\)</span> keluarga indeks kosong, atau faktor produk kosong sebelum menyatakan inklusi ketat atau pembatalan.</div></dd>
+<dd><div class="para" id="p-948">Ucapkan jenis objeknya: ruas kiri <span class="process-math">\(\in\)</span> adalah satu anggota; ruas kiri <span class="process-math">\(\subseteq\)</span> adalah sebuah himpunan yang semua anggotanya harus diuji.</div></dd>
+<dt id="li-148">Membuktikan kesamaan hanya satu arah</dt>
+<dd><div class="para" id="p-949">Tulis dua sasaran terpisah, <span class="process-math">\(A\subseteq B\)</span> dan <span class="process-math">\(B\subseteq A\text{,}\)</span> sebelum memulai bukti.</div></dd>
+<dt id="li-149">Komplemen tanpa semesta</dt>
+<dd><div class="para" id="p-950">Catat semesta <span class="process-math">\(U\text{;}\)</span> nilai <span class="process-math">\(A^c\)</span> berubah ketika <span class="process-math">\(U\)</span> berubah.</div></dd>
+<dt id="li-150">Menukar “untuk semua” dan “ada”</dt>
+<dd><div class="para" id="p-951">Irisan memakai <span class="process-math">\(\forall\text{;}\)</span> gabungan memakai <span class="process-math">\(\exists\text{.}\)</span> Negasi menukar keduanya.</div></dd>
+<dt id="li-151">Contoh tandingan tidak memenuhi hipotesis</dt>
+<dd><div class="para" id="p-952">Periksa semua asumsi terlebih dahulu, baru tunjukkan bahwa kesimpulannya gagal.</div></dd>
+<dt id="li-152">Menganggap semua subhimpunan produk berbentuk produk</dt>
+<dd><div class="para" id="p-953">Produk <span class="process-math">\(C\times D\)</span> harus memuat seluruh kombinasi silang, bukan hanya pasangan yang dipilih.</div></dd>
+<dt id="li-153">Mengabaikan kasus kosong</dt>
+<dd><div class="para" id="p-954">Uji <span class="process-math">\(A=\emptyset\text{,}\)</span> keluarga indeks kosong, atau faktor produk kosong sebelum menyatakan inklusi ketat atau pembatalan.</div></dd>
 </dl></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="o003-c90-ch01-mastery.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch02-companion.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>

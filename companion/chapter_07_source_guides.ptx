@@ -1,0 +1,641 @@
+<section xml:id="o003-c90-ch07-source-guides" xml:lang="id-ID">
+  <title>Panduan kegiatan sumber</title>
+
+  <p>
+    Enam belas panduan berikut mendampingi seluruh tugas kegiatan dalam Bab 7:
+    lima tugas tentang bentuk bola terbuka, tiga tugas tentang lingkungan, tiga
+    tugas tentang prapeta bola terbuka, dan lima langkah pembuktian kekontinuan
+    melalui lingkungan. Kerjakan lebih dahulu tugas pada bab utama. Sesudah
+    itu, buka petunjuk, jawaban, dan solusi secara bertahap. Rubrik pada setiap
+    pernyataan menjelaskan bukti yang diperlukan tanpa menggantikan proses
+    penyelidikan.
+  </p>
+
+  <exercise xml:id="o003-c90-ch07-intro-task-01">
+    <title>Bola terbuka pada garis bilangan</title>
+    <statement>
+      <p>
+        Jelaskan dan buat sketsa bola terbuka <m>B(2,1)</m> dalam
+        <m>(\R,d_E)</m>, dengan <m>d_E(x,y)=|x-y|</m>. Rubrik: ubah syarat
+        jarak menjadi pertidaksamaan rangkap, tuliskan himpunannya, dan
+        tunjukkan apakah titik batas termasuk.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-intro-task-01-hint">
+      <p>
+        Mulailah dari <m>|x-2|\lt1</m>, lalu hilangkan nilai mutlak.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-intro-task-01-answer">
+      <p>
+        Bola tersebut adalah interval terbuka <m>(1,3)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-intro-task-01-solution">
+      <p>
+        Menurut definisi,
+        <me>
+          B(2,1)=\{x\in\R\mid d_E(x,2)\lt1\}
+          =\{x\in\R\mid |x-2|\lt1\}.
+        </me>
+        Pertidaksamaan <m>|x-2|\lt1</m> ekuivalen dengan
+        <m>-1\lt x-2\lt1</m>, atau <m>1\lt x\lt3</m>. Jadi
+        <m>B(2,1)=(1,3)</m>. Sketsanya adalah ruas garis di antara
+        <m>1</m> dan <m>3</m> dengan lingkaran kosong pada kedua ujung karena
+        pertidaksamaannya ketat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-intro-task-02">
+    <title>Bola untuk metrik Euklides pada bidang</title>
+    <statement>
+      <p>
+        Jelaskan dan buat sketsa <m>B((3,2),1)</m> dalam
+        <m>(\R^2,d_E)</m>. Rubrik: berikan deskripsi koordinat yang tepat,
+        identifikasi pusat dan jari-jari, serta bedakan bola dari lingkaran
+        batasnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-intro-task-02-hint">
+      <p>
+        Kuadratkan pertidaksamaan jarak; kedua ruasnya tidak negatif.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-intro-task-02-answer">
+      <p>
+        Hasilnya adalah cakram Euklides terbuka berpusat di <m>(3,2)</m>
+        dan berjari-jari <m>1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-intro-task-02-solution">
+      <p>
+        Titik <m>(x_1,x_2)</m> berada dalam bola tepat ketika
+        <me>
+          \sqrt{(x_1-3)^2+(x_2-2)^2}\lt1,
+        </me>
+        yang ekuivalen dengan
+        <m>(x_1-3)^2+(x_2-2)^2\lt1</m>. Jadi
+        <me>
+          B((3,2),1)=\{(x_1,x_2)\in\R^2\mid
+          (x_1-3)^2+(x_2-2)^2\lt1\}.
+        </me>
+        Sketsanya memuat seluruh bagian dalam lingkaran berpusat di
+        <m>(3,2)</m> dan berjari-jari <m>1</m>, tetapi tidak memuat
+        lingkaran batas karena jaraknya di sana sama dengan <m>1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-intro-task-03">
+    <title>Bola untuk metrik maksimum</title>
+    <statement>
+      <p>
+        Jelaskan dan buat sketsa <m>B((3,2),1)</m> dalam
+        <m>(\R^2,d_M)</m>, dengan
+        <m>d_M(x,y)=\max\{|x_1-y_1|,|x_2-y_2|\}</m>. Rubrik: uraikan
+        pertidaksamaan maksimum menjadi dua syarat koordinat dan nyatakan
+        status batasnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-intro-task-03-hint">
+      <p>
+        Nilai maksimum dua bilangan lebih kecil daripada <m>1</m> tepat ketika
+        keduanya lebih kecil daripada <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-intro-task-03-answer">
+      <p>
+        Bola tersebut adalah persegi terbuka
+        <m>(2,4)\times(1,3)</m> dengan sisi-sisi sejajar sumbu koordinat.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-intro-task-03-solution">
+      <p>
+        Syarat keanggotaan adalah
+        <me>
+          \max\{|x_1-3|,|x_2-2|\}\lt1.
+        </me>
+        Ini ekuivalen dengan dua syarat
+        <m>|x_1-3|\lt1</m> dan <m>|x_2-2|\lt1</m>, yakni
+        <m>2\lt x_1\lt4</m> dan <m>1\lt x_2\lt3</m>. Oleh karena itu
+        <m>B((3,2),1)=(2,4)\times(1,3)</m>. Sketsanya berupa bagian dalam
+        persegi dengan sudut batas <m>(2,1)</m>, <m>(2,3)</m>,
+        <m>(4,1)</m>, dan <m>(4,3)</m>; seluruh sisi dan sudut tidak termasuk.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-intro-task-04">
+    <title>Bola untuk metrik taksi</title>
+    <statement>
+      <p>
+        Jelaskan dan buat sketsa <m>B((3,2),1)</m> dalam
+        <m>(\R^2,d_T)</m>, dengan
+        <m>d_T(x,y)=|x_1-y_1|+|x_2-y_2|</m>. Rubrik: tuliskan
+        pertidaksamaan yang menentukan bola, berikan bentuk geometrisnya, dan
+        identifikasi titik-titik sudut pada batas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-intro-task-04-hint">
+      <p>
+        Periksa perpotongan batas <m>|x_1-3|+|x_2-2|=1</m> dengan garis
+        horizontal dan vertikal melalui pusat.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-intro-task-04-answer">
+      <p>
+        Bola tersebut adalah bagian dalam belah ketupat
+        <m>|x_1-3|+|x_2-2|\lt1</m>, dengan batas melalui
+        <m>(2,2)</m>, <m>(4,2)</m>, <m>(3,1)</m>, dan <m>(3,3)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-intro-task-04-solution">
+      <p>
+        Dari definisi metrik taksi,
+        <me>
+          B((3,2),1)=\{(x_1,x_2)\in\R^2\mid
+          |x_1-3|+|x_2-2|\lt1\}.
+        </me>
+        Himpunan batas diperoleh dengan mengganti <m>\lt</m> oleh
+        <m>=</m>. Pada garis <m>x_2=2</m>, batasnya berada di
+        <m>x_1=2</m> dan <m>x_1=4</m>; pada garis <m>x_1=3</m>, batasnya
+        berada di <m>x_2=1</m> dan <m>x_2=3</m>. Keempat ruas batas
+        membentuk belah ketupat. Karena bola memakai pertidaksamaan ketat,
+        hanya bagian dalam belah ketupat yang termasuk.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-intro-task-05">
+    <title>Bola untuk metrik diskret</title>
+    <statement>
+      <p>
+        Tentukan <m>B((3,2),1)</m> dalam <m>\R^2</m> dengan metrik diskret.
+        Bandingkan hasilnya dengan <m>B((3,2),r)</m> ketika
+        <m>r\gt1</m> dan ketika <m>0\lt r\lt1</m>. Rubrik: gunakan semua
+        kemungkinan nilai jarak diskret dan ingat bahwa definisi bola memakai
+        pertidaksamaan ketat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-intro-task-05-hint">
+      <p>
+        Dalam metrik diskret, jarak dari pusat hanya dapat bernilai
+        <m>0</m> atau <m>1</m>. Bandingkan kedua nilai itu dengan jari-jari.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-intro-task-05-answer">
+      <p>
+        Untuk <m>0\lt r\leq1</m>, bolanya hanya
+        <m>\{(3,2)\}</m>; untuk <m>r\gt1</m>, bolanya adalah seluruh
+        <m>\R^2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-intro-task-05-solution">
+      <p>
+        Pusat <m>c=(3,2)</m> mempunyai <m>d(c,c)=0</m>, sedangkan setiap
+        titik <m>x\neq c</m> mempunyai <m>d(x,c)=1</m>. Untuk jari-jari
+        <m>r=1</m>, hanya pusat yang memenuhi <m>d(x,c)\lt1</m>, sehingga
+        <m>B(c,1)=\{c\}</m>. Argumen yang sama berlaku jika
+        <m>0\lt r\lt1</m>: jarak <m>0</m> masih lebih kecil daripada
+        <m>r</m>, tetapi jarak <m>1</m> tidak. Jika <m>r\gt1</m>, baik
+        jarak <m>0</m> maupun <m>1</m> lebih kecil daripada <m>r</m>.
+        Karena itu setiap titik termasuk dan <m>B(c,r)=\R^2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-neighborhood-task-01">
+    <title>Target pembuktian lingkungan</title>
+    <statement>
+      <p>
+        Misalkan <m>b\in B(a,\delta)</m>. Nyatakan dengan tepat apa yang
+        harus ditemukan untuk membuktikan bahwa <m>B(a,\delta)</m> merupakan
+        lingkungan bagi <m>b</m>. Rubrik: buka definisi lingkungan pada titik
+        <m>b</m> dan nyatakan baik kepositifan jari-jari maupun inklusi
+        himpunannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-neighborhood-task-01-hint">
+      <p>
+        Ganti <m>N</m> oleh <m>B(a,\delta)</m> dan titik pangkal oleh
+        <m>b</m> dalam definisi lingkungan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-neighborhood-task-01-answer">
+      <p>
+        Kita harus menemukan <m>s\gt0</m> sedemikian sehingga
+        <m>B(b,s)\subseteq B(a,\delta)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-neighborhood-task-01-solution">
+      <p>
+        Sebuah himpunan <m>N</m> merupakan lingkungan bagi <m>b</m> tepat
+        ketika ada bola terbuka berpusat di <m>b</m> yang termuat dalam
+        <m>N</m>. Di sini <m>N=B(a,\delta)</m>. Jadi target lengkapnya adalah
+        membangun suatu bilangan <m>s\gt0</m> dan membuktikan
+        <me>B(b,s)\subseteq B(a,\delta).</me>
+        Syarat <m>b\in B(a,\delta)</m> akan menjamin adanya ruang positif
+        antara <m>b</m> dan batas berjari-jari <m>\delta</m>; butir berikutnya
+        menghitung ruang itu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-neighborhood-task-02">
+    <title>Bola kecil di dalam bola besar</title>
+    <statement>
+      <p>
+        Buktikan bahwa jika <m>b\in B(a,\delta)</m>, maka
+        <m>B(a,\delta)</m> merupakan lingkungan bagi <m>b</m>. Gunakan
+        <m>s=\delta-d(a,b)</m>. Rubrik: buktikan bahwa <m>s</m> positif, ambil
+        titik sebarang dalam <m>B(b,s)</m>, lalu gunakan pertidaksamaan
+        segitiga untuk memperoleh inklusi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-neighborhood-task-02-hint">
+      <p>
+        Untuk <m>x\in B(b,s)</m>, bandingkan <m>d(x,a)</m> dengan
+        <m>d(x,b)+d(b,a)</m>, kemudian substitusikan definisi <m>s</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-neighborhood-task-02-answer">
+      <p>
+        Nilai <m>s=\delta-d(a,b)</m> positif dan memenuhi
+        <m>B(b,s)\subseteq B(a,\delta)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-neighborhood-task-02-solution">
+      <p>
+        Karena <m>b\in B(a,\delta)</m>, berlaku
+        <m>d(a,b)\lt\delta</m>. Maka
+        <m>s=\delta-d(a,b)\gt0</m>. Ambil sebarang
+        <m>x\in B(b,s)</m>. Pertidaksamaan segitiga dan kesimetrian metrik
+        memberikan
+        <md>
+          <mrow>d(x,a)\amp\leq d(x,b)+d(b,a)</mrow>
+          <mrow>\amp\lt s+d(a,b)</mrow>
+          <mrow>\amp=\delta.</mrow>
+        </md>
+        Jadi <m>x\in B(a,\delta)</m>. Karena <m>x</m> sebarang,
+        <m>B(b,s)\subseteq B(a,\delta)</m>. Jadi <m>B(a,\delta)</m> memuat
+        bola terbuka berpusat di <m>b</m> dan merupakan lingkungan bagi
+        <m>b</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-neighborhood-task-03">
+    <title>Lingkungan setiap titik tidak harus sebuah bola</title>
+    <statement>
+      <p>
+        Tentukan apakah setiap himpunan yang merupakan lingkungan bagi semua
+        titiknya harus berupa satu bola terbuka. Berikan contoh tandingan
+        terbuka dan alasan yang meyakinkan. Rubrik: verifikasi sifat lingkungan
+        pada setiap titik dan buktikan bahwa himpunan contoh bukan satu bola.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-neighborhood-task-03-hint">
+      <p>
+        Dalam <m>\R</m> bermetrik Euklides, pertimbangkan gabungan dua
+        interval terbuka yang saling terpisah.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-neighborhood-task-03-answer">
+      <p>
+        Tidak. Sebagai contoh,
+        <m>N=(0,1)\cup(2,3)</m> merupakan lingkungan bagi setiap titiknya,
+        tetapi bukan sebuah bola terbuka dalam <m>\R</m> bermetrik Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-neighborhood-task-03-solution">
+      <p>
+        Ambil <m>N=(0,1)\cup(2,3)</m>. Jika <m>x\in(0,1)</m>, pilih
+        <m>s=\frac12\min\{x,1-x\}\gt0</m>; maka
+        <m>B(x,s)\subseteq(0,1)\subseteq N</m>. Jika
+        <m>x\in(2,3)</m>, pilih
+        <m>s=\frac12\min\{x-2,3-x\}\gt0</m>; lagi-lagi
+        <m>B(x,s)\subseteq(2,3)\subseteq N</m>. Jadi <m>N</m> merupakan
+        lingkungan bagi setiap titiknya.
+      </p>
+      <p>
+        Setiap bola terbuka dalam <m>\R</m> bermetrik Euklides adalah satu
+        interval <m>(c-r,c+r)</m>, sehingga memuat setiap titik di antara dua
+        titik anggotanya. Himpunan <m>N</m> memuat, misalnya,
+        <m>1/2</m> dan <m>5/2</m>, tetapi tidak memuat <m>3/2</m> yang berada
+        di antaranya. Karena itu <m>N</m> bukan satu bola terbuka. Pernyataan
+        sebaliknya salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-ball-task-01">
+    <title>Bola di sekitar nilai fungsi</title>
+    <statement>
+      <p>
+        Untuk <m>f:\R\to\R</m>, <m>f(x)=x^2</m>, dengan metrik Euklides,
+        tentukan <m>B(f(2),1)</m>. Rubrik: hitung dahulu nilai pusatnya, lalu
+        ubah syarat jarak menjadi interval terbuka.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-ball-task-01-hint">
+      <p>
+        Nilai <m>f(2)</m> adalah <m>4</m>; selesaikan
+        <m>|y-4|\lt1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-ball-task-01-answer">
+      <p>
+        <m>B(f(2),1)=B(4,1)=(3,5)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-ball-task-01-solution">
+      <p>
+        Karena <m>f(2)=2^2=4</m>, definisi bola Euklides memberi
+        <me>
+          B(f(2),1)=\{y\in\R\mid |y-4|\lt1\}.
+        </me>
+        Pertidaksamaan tersebut ekuivalen dengan
+        <m>3\lt y\lt5</m>. Maka bolanya adalah interval terbuka
+        <m>(3,5)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-ball-task-02">
+    <title>Prapeta bola di bawah fungsi kuadrat</title>
+    <statement>
+      <p>
+        Dengan fungsi dan metrik yang sama, tentukan
+        <m>f^{-1}(B(f(2),1))</m>. Rubrik: tuliskan pertidaksamaan ganda untuk
+        <m>x^2</m>, selesaikan pada bagian negatif dan positif, dan perhatikan
+        bahwa semua titik batas dikecualikan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-ball-task-02-hint">
+      <p>
+        Dari butir sebelumnya, syaratnya adalah
+        <m>3\lt x^2\lt5</m>. Gunakan
+        <m>\sqrt3\lt|x|\lt\sqrt5</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-ball-task-02-answer">
+      <p>
+        <m>f^{-1}(B(f(2),1))=(-\sqrt5,-\sqrt3)\cup(\sqrt3,\sqrt5)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-ball-task-02-solution">
+      <p>
+        Suatu bilangan <m>x</m> berada dalam prapeta tepat ketika
+        <m>f(x)\in(3,5)</m>, yaitu ketika
+        <m>3\lt x^2\lt5</m>. Syarat ini ekuivalen dengan
+        <m>\sqrt3\lt|x|\lt\sqrt5</m>. Pada sumbu negatif, diperoleh
+        <m>-\sqrt5\lt x\lt-\sqrt3</m>; pada sumbu positif, diperoleh
+        <m>\sqrt3\lt x\lt\sqrt5</m>. Oleh karena itu
+        <me>
+          f^{-1}(B(f(2),1))
+          =(-\sqrt5,-\sqrt3)\cup(\sqrt3,\sqrt5).
+        </me>
+        Keempat titik batas tidak termasuk karena bola asal memakai
+        pertidaksamaan ketat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-ball-task-03">
+    <title>Prapeta bukan bola berpusat di titik pangkal</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>f^{-1}(B(f(2),1))</m> merupakan bola terbuka yang
+        berpusat di <m>2</m>, dan jelaskan. Rubrik: bandingkan bentuk prapeta
+        dengan bentuk setiap bola Euklides berpusat di <m>2</m>; satu
+        pengamatan struktural yang menentukan harus dinyatakan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-ball-task-03-hint">
+      <p>
+        Bola <m>B(2,r)</m> selalu satu interval
+        <m>(2-r,2+r)</m>. Berapa banyak komponen interval yang dimiliki
+        prapeta pada butir sebelumnya?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-ball-task-03-answer">
+      <p>
+        Tidak. Prapeta itu adalah gabungan dua interval terpisah, sedangkan
+        setiap bola Euklides berpusat di <m>2</m> merupakan satu interval yang
+        simetris terhadap <m>2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-ball-task-03-solution">
+      <p>
+        Dari butir sebelumnya,
+        <me>
+          f^{-1}(B(f(2),1))
+          =(-\sqrt5,-\sqrt3)\cup(\sqrt3,\sqrt5).
+        </me>
+        Himpunan ini mempunyai dua bagian yang terpisah. Sebaliknya, untuk
+        setiap <m>r\gt0</m>, bola Euklides berpusat di <m>2</m> adalah
+        <m>B(2,r)=(2-r,2+r)</m>, yaitu satu interval. Bahkan prapeta memuat
+        titik-titik dekat <m>-2</m> tetapi tidak memuat <m>0</m>, meskipun
+        <m>0</m> lebih dekat ke <m>2</m> daripada titik-titik tersebut. Ini
+        mustahil bagi bola berpusat di <m>2</m>. Jadi prapeta itu bukan bola
+        terbuka berpusat di <m>2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-neighborhood-task-01">
+    <title>Target inklusi untuk kekontinuan</title>
+    <statement>
+      <p>
+        Misalkan prapeta setiap lingkungan bagi <m>f(a)</m> merupakan
+        lingkungan bagi <m>a</m>. Nyatakan target yang, menurut pencirian bola
+        terbuka, cukup untuk membuktikan bahwa <m>f</m> kontinu di <m>a</m>.
+        Rubrik: mulai dengan <m>\epsilon\gt0</m> sebarang dan nyatakan
+        kuantor untuk <m>\delta</m> beserta inklusi yang tepat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-neighborhood-task-01-hint">
+      <p>
+        Pencirian itu membandingkan <m>B(a,\delta)</m> dengan prapeta
+        <m>B(f(a),\epsilon)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-neighborhood-task-01-answer">
+      <p>
+        Untuk setiap <m>\epsilon\gt0</m>, kita harus menemukan
+        <m>\delta\gt0</m> sedemikian sehingga
+        <m>B(a,\delta)\subseteq f^{-1}(B(f(a),\epsilon))</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-neighborhood-task-01-solution">
+      <p>
+        Pencirian kekontinuan melalui bola terbuka menyatakan bahwa
+        <m>f</m> kontinu di <m>a</m> jika dan hanya jika
+        <me>
+          \forall\epsilon\gt0\;\exists\delta\gt0,
+          \qquad B(a,\delta)\subseteq
+          f^{-1}(B(f(a),\epsilon)).
+        </me>
+        Jadi setelah memilih <m>\epsilon\gt0</m> sebarang, seluruh pekerjaan
+        yang tersisa adalah menghasilkan <m>\delta\gt0</m> dengan inklusi
+        tersebut. Empat butir berikut membangunnya dari hipotesis lingkungan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-neighborhood-task-02">
+    <title>Bola sebagai lingkungan titik pusatnya</title>
+    <statement>
+      <p>
+        Untuk <m>\epsilon\gt0</m>, jelaskan mengapa
+        <m>B(f(a),\epsilon)</m> merupakan lingkungan bagi <m>f(a)</m>.
+        Rubrik: tunjukkan secara eksplisit sebuah bola terbuka berpusat di
+        <m>f(a)</m> yang termuat dalam himpunan tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-neighborhood-task-02-hint">
+      <p>
+        Himpunan yang hendak diuji sudah merupakan bola terbuka. Ia dapat
+        memuat dirinya sendiri.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-neighborhood-task-02-answer">
+      <p>
+        Pilih jari-jari <m>\epsilon</m>; berlaku
+        <m>B(f(a),\epsilon)\subseteq B(f(a),\epsilon)</m>, sehingga himpunan
+        itu merupakan lingkungan bagi <m>f(a)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-neighborhood-task-02-solution">
+      <p>
+        Menurut definisi, suatu himpunan <m>N</m> merupakan lingkungan bagi
+        <m>f(a)</m> jika terdapat <m>r\gt0</m> dengan
+        <m>B(f(a),r)\subseteq N</m>. Ambil
+        <m>N=B(f(a),\epsilon)</m> dan <m>r=\epsilon</m>. Jari-jari ini positif
+        dan
+        <me>B(f(a),r)=B(f(a),\epsilon)\subseteq N.</me>
+        Jadi bola tersebut memang merupakan lingkungan bagi titik pusatnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-neighborhood-task-03">
+    <title>Menerapkan hipotesis prapeta</title>
+    <statement>
+      <p>
+        Gunakan hipotesis bahwa prapeta setiap lingkungan bagi <m>f(a)</m>
+        merupakan lingkungan bagi <m>a</m> untuk menentukan sifat
+        <m>f^{-1}(B(f(a),\epsilon))</m>. Rubrik: identifikasi himpunan yang
+        memainkan peran sebagai lingkungan dalam kodomain dan terapkan
+        hipotesis tepat satu kali.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-neighborhood-task-03-hint">
+      <p>
+        Butir sebelumnya telah memverifikasi bahwa
+        <m>B(f(a),\epsilon)</m> memenuhi premis hipotesis.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-neighborhood-task-03-answer">
+      <p>
+        Himpunan <m>f^{-1}(B(f(a),\epsilon))</m> merupakan lingkungan bagi
+        <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-neighborhood-task-03-solution">
+      <p>
+        Tetapkan <m>N=B(f(a),\epsilon)</m>. Dari butir sebelumnya,
+        <m>N</m> merupakan lingkungan bagi <m>f(a)</m>. Hipotesis mengatakan
+        bahwa untuk setiap lingkungan <m>N</m> bagi <m>f(a)</m>, prapetanya
+        <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m>. Dengan
+        mensubstitusikan pilihan <m>N</m>, kita memperoleh bahwa
+        <me>f^{-1}(B(f(a),\epsilon))</me>
+        merupakan lingkungan bagi <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-neighborhood-task-04">
+    <title>Membuka definisi lingkungan prapeta</title>
+    <statement>
+      <p>
+        Uraikan kesimpulan bahwa
+        <m>f^{-1}(B(f(a),\epsilon))</m> merupakan lingkungan bagi
+        <m>a</m>. Rubrik: tuliskan jari-jari positif yang dijamin ada dan
+        inklusi bola yang dihasilkan; jangan berhenti pada kata
+        <q>lingkungan</q>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-neighborhood-task-04-hint">
+      <p>
+        Terapkan definisi lingkungan dengan
+        <m>N=f^{-1}(B(f(a),\epsilon))</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-neighborhood-task-04-answer">
+      <p>
+        Terdapat <m>\delta\gt0</m> sedemikian sehingga
+        <m>B(a,\delta)\subseteq f^{-1}(B(f(a),\epsilon))</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-neighborhood-task-04-solution">
+      <p>
+        Definisi lingkungan menyatakan bahwa <m>N</m> merupakan lingkungan
+        bagi <m>a</m> tepat ketika ada <m>\delta\gt0</m> dengan
+        <m>B(a,\delta)\subseteq N</m>. Butir sebelumnya memberi
+        <m>N=f^{-1}(B(f(a),\epsilon))</m>. Oleh karena itu terdapat
+        <m>\delta\gt0</m> sedemikian sehingga
+        <me>
+          B(a,\delta)\subseteq f^{-1}(B(f(a),\epsilon)).
+        </me>
+        Inilah inklusi yang ditetapkan sebagai target pada butir pertama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-continuity-neighborhood-task-05">
+    <title>Menutup pembuktian kekontinuan</title>
+    <statement>
+      <p>
+        Rangkai bagian (a)-(d) untuk membuktikan bahwa <m>f</m> kontinu di
+        <m>a</m>. Rubrik: mulai dengan <m>\epsilon</m> sebarang, jelaskan rantai
+        lingkungan dan prapeta, hasilkan inklusi untuk suatu
+        <m>\delta\gt0</m>, lalu sebutkan pencirian kekontinuan yang menutup
+        bukti.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-continuity-neighborhood-task-05-hint">
+      <p>
+        Rantainya adalah: bola di kodomain merupakan lingkungan; hipotesis
+        membawa lingkungan itu melalui prapeta; definisi lingkungan memberi
+        bola di domain; pencirian bola memberi kekontinuan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-continuity-neighborhood-task-05-answer">
+      <p>
+        Untuk setiap <m>\epsilon\gt0</m>, hipotesis menghasilkan
+        <m>\delta\gt0</m> dengan
+        <m>B(a,\delta)\subseteq f^{-1}(B(f(a),\epsilon))</m>. Menurut
+        pencirian bola terbuka, <m>f</m> kontinu di <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-continuity-neighborhood-task-05-solution">
+      <p>
+        Ambil sebarang <m>\epsilon\gt0</m>. Bola
+        <m>B(f(a),\epsilon)</m> merupakan lingkungan bagi <m>f(a)</m> karena
+        ia memuat bola itu sendiri. Berdasarkan hipotesis, prapetanya
+        <m>f^{-1}(B(f(a),\epsilon))</m> merupakan lingkungan bagi
+        <m>a</m>. Dengan membuka definisi lingkungan, terdapat
+        <m>\delta\gt0</m> sedemikian sehingga
+        <me>
+          B(a,\delta)\subseteq f^{-1}(B(f(a),\epsilon)).
+        </me>
+        Karena konstruksi ini berlaku untuk setiap <m>\epsilon\gt0</m>,
+        pencirian kekontinuan melalui bola terbuka menyatakan bahwa
+        <m>f</m> kontinu di <m>a</m>. Semua kuantor yang diperlukan untuk arah
+        pembuktian ini telah tertutup.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -31,17 +31,31 @@ FATAL_TEX = (
 )
 
 
-def normalize_page_labels(pdf_path: Path, mainmatter_physical_page: int) -> str:
-    """Replace a known-bad hyperref label tree with the printed book sequence.
+def normalize_pdf(
+    pdf_path: Path,
+    mainmatter_physical_page: int,
+    uri_rewrites: dict[str, str],
+) -> str:
+    """Normalize labels and rewrite explicitly declared relative URI targets.
 
     ``mainmatter_physical_page`` is one-based.  Pages before it use lowercase
     Roman labels; that page begins the Arabic sequence at 1.  PreTeXt's current
     LaTeX output can reset ``\\thepage`` before the final contents page is
     shipped, which otherwise makes the embedded viewer labels one page early.
+
+    PreTeXt emits an HTML-relative URI unchanged into PDF annotations.  Such a
+    link is not portable with a downloaded PDF, so callers may declare an
+    exact source-to-public-URL rewrite.  Only exact declared targets change.
     """
 
     from PyPDF2 import PdfReader, PdfWriter
-    from PyPDF2.generic import ArrayObject, DictionaryObject, NameObject, NumberObject
+    from PyPDF2.generic import (
+        ArrayObject,
+        DictionaryObject,
+        NameObject,
+        NumberObject,
+        TextStringObject,
+    )
 
     reader = PdfReader(str(pdf_path))
     if reader.is_encrypted:
@@ -73,6 +87,28 @@ def normalize_page_labels(pdf_path: Path, mainmatter_physical_page: int) -> str:
         }
     )
 
+    rewrite_counts = {source: 0 for source in uri_rewrites}
+    for page in writer.pages:
+        annotations = page.get("/Annots")
+        if annotations is None:
+            continue
+        if hasattr(annotations, "get_object"):
+            annotations = annotations.get_object()
+        for reference in annotations:
+            annotation = reference.get_object()
+            action = annotation.get("/A")
+            if action is None:
+                continue
+            if hasattr(action, "get_object"):
+                action = action.get_object()
+            uri = action.get("/URI")
+            if uri is None:
+                continue
+            source = str(uri)
+            if source in uri_rewrites:
+                action[NameObject("/URI")] = TextStringObject(uri_rewrites[source])
+                rewrite_counts[source] += 1
+
     temporary = pdf_path.with_name(pdf_path.name + ".page-labels.tmp")
     try:
         with temporary.open("wb") as stream:
@@ -92,16 +128,51 @@ def normalize_page_labels(pdf_path: Path, mainmatter_physical_page: int) -> str:
             raise RuntimeError(
                 f"page-label verification failed: {observed!r} != {expected!r}"
             )
+        observed_uris: list[str] = []
+        for page in check.pages:
+            annotations = page.get("/Annots")
+            if annotations is None:
+                continue
+            if hasattr(annotations, "get_object"):
+                annotations = annotations.get_object()
+            for reference in annotations:
+                annotation = reference.get_object()
+                action = annotation.get("/A")
+                if action is None:
+                    continue
+                if hasattr(action, "get_object"):
+                    action = action.get_object()
+                uri = action.get("/URI")
+                if uri is not None:
+                    observed_uris.append(str(uri))
+        for source, target in uri_rewrites.items():
+            if rewrite_counts[source] == 0:
+                raise RuntimeError(f"declared URI rewrite source absent: {source}")
+            if source in observed_uris:
+                raise RuntimeError(f"relative URI survived normalization: {source}")
+            if observed_uris.count(target) != rewrite_counts[source]:
+                raise RuntimeError(
+                    "URI rewrite verification failed for "
+                    f"{source}: expected {rewrite_counts[source]} target annotations, "
+                    f"found {observed_uris.count(target)}"
+                )
         os.replace(temporary, pdf_path)
     finally:
         if temporary.exists():
             temporary.unlink()
 
-    return (
+    label_message = (
         "PDF PAGE LABELS NORMALIZED: lowercase Roman through physical page "
         f"{mainmatter_physical_page - 1}; Arabic 1 begins on physical page "
         f"{mainmatter_physical_page}."
     )
+    if not uri_rewrites:
+        return label_message
+    rewrite_message = "; ".join(
+        f"{source} -> {target} ({rewrite_counts[source]} annotations)"
+        for source, target in uri_rewrites.items()
+    )
+    return label_message + "\nPDF URI TARGETS REWRITTEN: " + rewrite_message + "."
 
 
 def main() -> int:
@@ -119,7 +190,28 @@ def main() -> int:
             "begins Arabic page 1 and all earlier pages use lowercase Roman labels"
         ),
     )
+    parser.add_argument(
+        "--rewrite-uri",
+        action="append",
+        default=[],
+        metavar="SOURCE=TARGET",
+        help=(
+            "rewrite one exact PDF URI annotation target; may be repeated. "
+            "This does not alter the HTML source link."
+        ),
+    )
     args = parser.parse_args()
+
+    uri_rewrites: dict[str, str] = {}
+    for declaration in args.rewrite_uri:
+        if "=" not in declaration:
+            parser.error(f"--rewrite-uri requires SOURCE=TARGET, got {declaration!r}")
+        source, target = declaration.split("=", 1)
+        if not source or not target:
+            parser.error(f"--rewrite-uri requires nonempty SOURCE and TARGET")
+        if source in uri_rewrites and uri_rewrites[source] != target:
+            parser.error(f"conflicting rewrites declared for {source!r}")
+        uri_rewrites[source] = target
 
     environment = os.environ.copy()
     environment["SOURCE_DATE_EPOCH"] = args.source_date_epoch
@@ -150,8 +242,10 @@ def main() -> int:
 
     if not reasons and args.mainmatter_physical_page is not None:
         try:
-            message = normalize_page_labels(
-                args.expect_pdf, args.mainmatter_physical_page
+            message = normalize_pdf(
+                args.expect_pdf,
+                args.mainmatter_physical_page,
+                uri_rewrites,
             )
             transcript = transcript.rstrip("\n") + "\n" + message + "\n"
         except Exception as exc:

@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch06-edition-note",
+  "id": "o003-c90-ch07-edition-note",
   "level": "1",
-  "url": "o003-c90-ch06-edition-note.html",
+  "url": "o003-c90-ch07-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat enam bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat tujuh bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau pembahasan pendamping.  "
 },
 {
   "id": "sec_sets_intro",
@@ -1781,6 +1781,249 @@ var ptx_lunr_docs = [
   "number": "14",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Misalkan suatu fungsi, dengan dan sebagai ruang metrik. Jika merupakan metrik diskret dan sebarang metrik, maka kontinu.   Misalkan suatu fungsi, dengan dan sebagai ruang metrik. Jika merupakan metrik diskret dan sebarang metrik, maka kontinu.   Misalkan dan dua metrik pada suatu himpunan . Fungsi identitas yang didefinisikan oleh untuk setiap bersifat kontinu.   Misalkan dan merupakan fungsi kontinu dari (metrik taksi) ke . Maka fungsi dari ke yang didefinisikan oleh untuk setiap merupakan fungsi kontinu.   Jika dan merupakan ruang metrik dengan , maka fungsi konstan yang didefinisikan oleh untuk setiap merupakan fungsi kontinu.  "
+},
+{
+  "id": "sec_open_balls_intro",
+  "level": "1",
+  "url": "sec_open_balls_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Himpunan terbuka sangat penting dalam topologi. Nanti kita akan melihat bahwa setiap ruang topologis sepenuhnya ditentukan oleh himpunan-himpunan terbukanya, dan fungsi kontinu dapat didefinisikan hanya dengan menggunakan himpunan terbuka. Pada bagian ini kita memperkenalkan gagasan bola terbuka dan lingkungan dalam ruang metrik serta menemukan beberapa sifatnya. Pembahasan ini akan menjadi landasan untuk memperkenalkan himpunan terbuka pada bagian berikutnya.  Ingat bahwa kekontinuan suatu fungsi dari ruang metrik ke ruang metrik di titik didefinisikan menggunakan himpunan titik yang memenuhi dan titik yang memenuhi , untuk bilangan real positif dan . Dalam dengan metrik Euklides , untuk bilangan real dan , himpunan nilai yang memenuhi adalah himpunan nilai yang memenuhi . Kita sering menuliskan himpunan ini dalam notasi interval sebagai dan menyebut sebagai interval terbuka. Alasan informal mengapa kita menyebut interval tersebut terbuka (berbeda dengan interval , , or ) ialah bahwa interval terbuka tidak memuat satu pun dari kedua titik ujungnya. Alasan yang lebih mendasar untuk menyebut interval tersebut terbuka ialah bahwa jika adalah sembarang unsur dalam , maka kita dapat menemukan interval terbuka lain di sekitar yang seluruhnya termuat dalam interval . Jadi, secara naif, kita dapat membayangkan interval terbuka sebagai interval yang menyediakan cukup ruang bagi setiap titik di dalamnya untuk sedikit bergerak di sekitar posisinya sambil tetap berada di dalam interval tersebut.  Karena interval terbuka dapat dijelaskan sepenuhnya dengan metrik Euklides sebagai himpunan nilai yang memenuhi , tidak ada alasan untuk tidak memperluas gagasan interval terbuka ini ke sembarang ruang metrik. Namun, perlu kita perhatikan bahwa berdimensi satu, sedangkan kebanyakan ruang metrik tidak demikian, sehingga istilah interval tidak lagi sesuai. Kita mengganti konsep interval dengan konsep bola terbuka.   bola terbuka dalam ruang metrik   Misalkan suatu ruang metrik dan . Untuk , bola terbuka berjari-jari dan berpusat di adalah himpunan .    Perlu diperhatikan bahwa notasi kita untuk bola terbuka tidak digunakan secara universal. Sebagai contoh, beberapa buku menggunakan untuk menyatakan dalam notasi kita.    Jelaskan dan buat sketsa bola terbuka yang dinyatakan pada masing-masing ruang metrik berikut.    Bola terbuka dalam ruang metrik dengan metrik Euklides .    Bola terbuka dalam ruang metrik dengan metrik Euklides .    Bola terbuka dalam ruang metrik dengan metrik maksimum .    Bola terbuka dalam ruang metrik dengan metrik taksi .    Bola terbuka dalam ruang metrik dengan metrik diskret . Apa perbedaan antara dan dalam ruang metrik ini jika ? Bagaimana jika ?    "
+},
+{
+  "id": "definition-21",
+  "level": "2",
+  "url": "sec_open_balls_intro.html#definition-21",
+  "type": "Definisi",
+  "number": "7.1",
+  "title": "",
+  "body": " bola terbuka dalam ruang metrik   Misalkan suatu ruang metrik dan . Untuk , bola terbuka berjari-jari dan berpusat di adalah himpunan .   "
+},
+{
+  "id": "exploration-6",
+  "level": "2",
+  "url": "sec_open_balls_intro.html#exploration-6",
+  "type": "Aktivitas Persiapan",
+  "number": "7.1",
+  "title": "",
+  "body": "  Jelaskan dan buat sketsa bola terbuka yang dinyatakan pada masing-masing ruang metrik berikut.    Bola terbuka dalam ruang metrik dengan metrik Euklides .    Bola terbuka dalam ruang metrik dengan metrik Euklides .    Bola terbuka dalam ruang metrik dengan metrik maksimum .    Bola terbuka dalam ruang metrik dengan metrik taksi .    Bola terbuka dalam ruang metrik dengan metrik diskret . Apa perbedaan antara dan dalam ruang metrik ini jika ? Bagaimana jika ?   "
+},
+{
+  "id": "sec_neighborhoods",
+  "level": "1",
+  "url": "sec_neighborhoods.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Lingkungan",
+  "body": " Lingkungan  -lingkungan suatu titik dalam ruang metrik  Kita telah mengenal gagasan interval terbuka dalam . Selanjutnya, kita memperkenalkan gagasan lingkungan suatu titik dan mencirikan kekontinuan dalam kaitannya dengan lingkungan. Ini merupakan langkah berikutnya dalam mengembangkan gagasan kekontinuan di ruang topologis.  Bola terbuka dalam ruang metrik juga disebut -lingkungan di sekitar . Lingkungan suatu titik dapat dipandang sebagai sebarang himpunan yang mencakup titik tersebut.   lingkungan dalam ruang metrik   Misalkan suatu ruang metrik dan . Suatu subhimpunan dari merupakan lingkungan bagi jika terdapat sedemikian sehingga .         Dalam dengan metrik Euklides, himpunan (bilangan-bilangan riil positif) merupakan lingkungan bagi karena bola terbuka termuat seluruhnya dalam .    Dalam dengan metrik Euklides, himpunan bukan lingkungan bagi karena setiap bola terbuka yang berpusat di memuat sejumlah bilangan bukan bulat.    Dalam dengan metrik diskret, himpunan merupakan lingkungan bagi karena bola terbuka .       Sebagai contoh lain, bola terbuka merupakan lingkungan bagi . Kita bahkan dapat mengatakan lebih banyak mengenai bola terbuka.    Misalkan suatu ruang metrik, , dan . Dalam aktivitas ini, kita mengajukan pertanyaan: apakah merupakan lingkungan bagi setiap titik di dalamnya?    Misalkan . Apa yang harus kita lakukan untuk menunjukkan bahwa merupakan lingkungan bagi ?    Gunakan untuk membantu menunjukkan bahwa merupakan lingkungan bagi .   sebagai lingkungan bagi .   Bola besar berwarna biru dengan garis putus-putus, B(a, delta), berpusat di a. Titik b berada di dalam bola itu dan dihubungkan ke a oleh sebuah ruas garis. Bola lebih kecil berwarna magenta dengan garis putus-putus berpusat di b dan seluruhnya berada di dalam bola besar.      Apakah pernyataan sebaliknya benar? Artinya, jika suatu himpunan merupakan lingkungan bagi setiap titiknya, apakah himpunan tersebut merupakan bola terbuka? Pembuktian tidak diperlukan, tetapi berikan argumen yang meyakinkan.    "
+},
+{
+  "id": "p-765",
+  "level": "2",
+  "url": "sec_neighborhoods.html#p-765",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "-lingkungan "
+},
+{
+  "id": "definition-22",
+  "level": "2",
+  "url": "sec_neighborhoods.html#definition-22",
+  "type": "Definisi",
+  "number": "7.2",
+  "title": "",
+  "body": " lingkungan dalam ruang metrik   Misalkan suatu ruang metrik dan . Suatu subhimpunan dari merupakan lingkungan bagi jika terdapat sedemikian sehingga .   "
+},
+{
+  "id": "exp_neighborhood_MS",
+  "level": "2",
+  "url": "sec_neighborhoods.html#exp_neighborhood_MS",
+  "type": "Contoh",
+  "number": "7.3",
+  "title": "",
+  "body": "     Dalam dengan metrik Euklides, himpunan (bilangan-bilangan riil positif) merupakan lingkungan bagi karena bola terbuka termuat seluruhnya dalam .    Dalam dengan metrik Euklides, himpunan bukan lingkungan bagi karena setiap bola terbuka yang berpusat di memuat sejumlah bilangan bukan bulat.    Dalam dengan metrik diskret, himpunan merupakan lingkungan bagi karena bola terbuka .      "
+},
+{
+  "id": "activity-27",
+  "level": "2",
+  "url": "sec_neighborhoods.html#activity-27",
+  "type": "Kegiatan",
+  "number": "7.2",
+  "title": "",
+  "body": "  Misalkan suatu ruang metrik, , dan . Dalam aktivitas ini, kita mengajukan pertanyaan: apakah merupakan lingkungan bagi setiap titik di dalamnya?    Misalkan . Apa yang harus kita lakukan untuk menunjukkan bahwa merupakan lingkungan bagi ?    Gunakan untuk membantu menunjukkan bahwa merupakan lingkungan bagi .   sebagai lingkungan bagi .   Bola besar berwarna biru dengan garis putus-putus, B(a, delta), berpusat di a. Titik b berada di dalam bola itu dan dihubungkan ke a oleh sebuah ruas garis. Bola lebih kecil berwarna magenta dengan garis putus-putus berpusat di b dan seluruhnya berada di dalam bola besar.      Apakah pernyataan sebaliknya benar? Artinya, jika suatu himpunan merupakan lingkungan bagi setiap titiknya, apakah himpunan tersebut merupakan bola terbuka? Pembuktian tidak diperlukan, tetapi berikan argumen yang meyakinkan.   "
+},
+{
+  "id": "sec_cont_neighborhoods",
+  "level": "1",
+  "url": "sec_cont_neighborhoods.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Kekontinuan dan Lingkungan",
+  "body": " Kekontinuan dan Lingkungan  Sekarang kita dapat mendefinisikan kekontinuan dalam kaitannya dengan lingkungan alih-alih menggunakan metrik. Keuntungannya adalah bahwa gagasan ini tidak secara eksplisit bergantung pada keberadaan metrik, sehingga kita akan dapat menggunakan konsep kekontinuan ini untuk ruang topologis sebarang.  Ingatlah bahwa suatu fungsi dari ruang metrik ke ruang metrik kontinu di jika, untuk setiap , terdapat sedemikian sehingga mengakibatkan . Kita dapat menafsirkan definisi kekontinuan ini dengan mengatakan bahwa untuk setiap , di bawah fungsi , prapeta bola terbuka memuat bola terbuka untuk suatu . Wajar jika kita bertanya apakah himpunan itu sendiri merupakan bola terbuka. Kita menyelidiki pertanyaan ini dalam aktivitas berikut.    Misalkan suatu fungsi dari ruang metrik ke ruang metrik yang kontinu di . Dengan menggunakan notasi dari paragraf di atas, dalam aktivitas ini kita menentukan apakah harus sama dengan untuk suatu .  Definisikan dengan , dan gunakan metrik Euklides pada seluruh aktivitas. Asumsikan bahwa merupakan fungsi kontinu. Maka kontinu di .    Tentukan .    Tentukan .    Apakah merupakan bola terbuka yang berpusat di ? Jelaskan.    Kesimpulan yang dapat ditarik dari adalah bahwa jika kontinu, kita hanya dapat menyimpulkan bahwa prapeta  memuat sebuah bola terbuka yang berpusat di . Menurut definisi kekontinuan, jika untuk setiap terdapat sedemikian sehingga memuat bola terbuka , maka kontinu di . Kita merangkum hal ini dalam teorema berikut.    Misalkan suatu fungsi dari ruang metrik ke ruang metrik , dan misalkan . Maka kontinu di jika dan hanya jika, untuk setiap , terdapat sedemikian sehingga .    Kita dapat memperluas gagasan kekontinuan ini untuk mendeskripsikan kekontinuan dalam kaitannya dengan lingkungan. Syarat ini nantinya memungkinkan kita meninjau fungsi kontinu sekalipun ruang kita tidak dilengkapi metrik.    Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Maka kontinu di jika dan hanya jika prapeta setiap lingkungan bagi merupakan lingkungan bagi .    Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Untuk membuktikan pernyataan bikondisional ini, kita harus membuktikan kedua implikasinya. Pertama, asumsikan bahwa kontinu di suatu titik . Kita akan menunjukkan bahwa untuk setiap lingkungan bagi dalam , prapetanya, yaitu dalam , merupakan lingkungan bagi dalam . Misalkan suatu lingkungan bagi dalam . Untuk menunjukkan bahwa merupakan lingkungan bagi dalam , kita perlu menemukan bola terbuka di sekitar yang termuat dalam . Karena merupakan lingkungan bagi , menurut definisi terdapat sedemikian sehingga . Karena kontinu di , terdapat sedemikian sehingga . Jadi, jika , maka . Dengan demikian, , dan merupakan lingkungan bagi dalam .  Pembuktian implikasi sebaliknya diserahkan kepada aktivitas berikut.      Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Misalkan . Dalam aktivitas ini, kita membuktikan bahwa jika prapeta setiap lingkungan bagi merupakan lingkungan bagi , maka kontinu di .    Menurut , apa yang perlu kita lakukan untuk menunjukkan bahwa kontinu di ?    Misalkan lebih besar daripada 0. Mengapa merupakan lingkungan bagi dalam ?    Apa yang dinyatakan oleh hipotesis kita mengenai ?    Apa yang dapat kita simpulkan dari bagian (c)?    Bagaimana bagian (a)-(d) menunjukkan bahwa kontinu di ?    Kita mengakhiri bagian ini dengan beberapa fakta penting mengenai lingkungan. Asumsikan bahwa suatu ruang metrik dan .   Terdapat suatu lingkungan yang memuat .    Jika merupakan lingkungan bagi dan , maka merupakan lingkungan bagi .    Jika dan merupakan lingkungan bagi , maka juga demikian.     Pembuktiannya langsung dan diserahkan kepada .  "
+},
+{
+  "id": "act_OB_1",
+  "level": "2",
+  "url": "sec_cont_neighborhoods.html#act_OB_1",
+  "type": "Kegiatan",
+  "number": "7.3",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang metrik ke ruang metrik yang kontinu di . Dengan menggunakan notasi dari paragraf di atas, dalam aktivitas ini kita menentukan apakah harus sama dengan untuk suatu .  Definisikan dengan , dan gunakan metrik Euklides pada seluruh aktivitas. Asumsikan bahwa merupakan fungsi kontinu. Maka kontinu di .    Tentukan .    Tentukan .    Apakah merupakan bola terbuka yang berpusat di ? Jelaskan.   "
+},
+{
+  "id": "p-783",
+  "level": "2",
+  "url": "sec_cont_neighborhoods.html#p-783",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "memuat "
+},
+{
+  "id": "thm_open_ball_continuity",
+  "level": "2",
+  "url": "sec_cont_neighborhoods.html#thm_open_ball_continuity",
+  "type": "Teorema",
+  "number": "7.5",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang metrik ke ruang metrik , dan misalkan . Maka kontinu di jika dan hanya jika, untuk setiap , terdapat sedemikian sehingga .   "
+},
+{
+  "id": "theorem-13",
+  "level": "2",
+  "url": "sec_cont_neighborhoods.html#theorem-13",
+  "type": "Teorema",
+  "number": "7.6",
+  "title": "",
+  "body": "  Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Maka kontinu di jika dan hanya jika prapeta setiap lingkungan bagi merupakan lingkungan bagi .    Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Untuk membuktikan pernyataan bikondisional ini, kita harus membuktikan kedua implikasinya. Pertama, asumsikan bahwa kontinu di suatu titik . Kita akan menunjukkan bahwa untuk setiap lingkungan bagi dalam , prapetanya, yaitu dalam , merupakan lingkungan bagi dalam . Misalkan suatu lingkungan bagi dalam . Untuk menunjukkan bahwa merupakan lingkungan bagi dalam , kita perlu menemukan bola terbuka di sekitar yang termuat dalam . Karena merupakan lingkungan bagi , menurut definisi terdapat sedemikian sehingga . Karena kontinu di , terdapat sedemikian sehingga . Jadi, jika , maka . Dengan demikian, , dan merupakan lingkungan bagi dalam .  Pembuktian implikasi sebaliknya diserahkan kepada aktivitas berikut.   "
+},
+{
+  "id": "activity-29",
+  "level": "2",
+  "url": "sec_cont_neighborhoods.html#activity-29",
+  "type": "Kegiatan",
+  "number": "7.4",
+  "title": "",
+  "body": "  Misalkan dan ruang-ruang metrik, dan misalkan suatu fungsi. Misalkan . Dalam aktivitas ini, kita membuktikan bahwa jika prapeta setiap lingkungan bagi merupakan lingkungan bagi , maka kontinu di .    Menurut , apa yang perlu kita lakukan untuk menunjukkan bahwa kontinu di ?    Misalkan lebih besar daripada 0. Mengapa merupakan lingkungan bagi dalam ?    Apa yang dinyatakan oleh hipotesis kita mengenai ?    Apa yang dapat kita simpulkan dari bagian (c)?    Bagaimana bagian (a)-(d) menunjukkan bahwa kontinu di ?   "
+},
+{
+  "id": "sec_open_balls_summ",
+  "level": "1",
+  "url": "sec_open_balls_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan-gagasan penting yang kita bahas pada bagian ini meliputi hal-hal berikut.   Jika suatu ruang metrik dan , maka bola terbuka yang berpusat di adalah himpunan berbentuk untuk suatu bilangan positif .    Suatu subhimpunan dari ruang metrik merupakan lingkungan titik jika terdapat bilangan real positif sedemikian sehingga .    Salah satu sifat penting bola terbuka ialah bahwa setiap bola terbuka merupakan lingkungan bagi setiap titiknya. Inilah langkah pertama kita menuju definisi konsep himpunan terbuka yang akan menjadi landasan ruang topologis.    Suatu fungsi dari ruang metrik ke ruang metrik kontinu di jika merupakan lingkungan dalam untuk setiap lingkungan dari dalam .     "
+},
+{
+  "id": "sec_open_balls_exer",
+  "level": "1",
+  "url": "sec_open_balls_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Tentukan, disertai bukti, manakah di antara himpunan-himpunan berikut yang merupakan lingkungan dari dalam ruang metrik yang diberikan.    dalam dengan     adalah sumbu dalam dengan , dengan sebagai metrik taksi    adalah himpunan bilangan rasional dalam dengan     adalah himpunan bilangan bulat positif dalam dan , dengan sebagai himpunan semua bilangan rasional dalam bentuk paling sederhana dan metrik yang didefinisikan oleh (Fakta bahwa merupakan metrik dibahas dalam .)    Misalkan dan definisikan dengan . Artinya, adalah sisa pembagian oleh . Fakta bahwa merupakan metrik pada dikaji dalam . Misalkan suatu ruang metrik. Mungkinkah kita mendefinisikan suatu fungsi yang tidak kontinu? Jelaskan.    Jika , tetapkan . Untuk dan , definisikan dengan Fakta bahwa merupakan metrik dikaji dalam . Misalkan dan . Definisikan dan dengan . Salah satu dari dan kontinu, sedangkan yang lain tidak. Tentukan yang mana, disertai bukti untuk masing-masing fungsi.    Ingat kembali dari bahwa kita dapat membangun ruang metrik berhingga dengan memulai dari suatu himpunan titik berhingga lalu membuat graf yang titik-titiknya menjadi simpul. Kita membuat sisi-sisi sedemikian sehingga graf tersebut terhubung (artinya, terdapat lintasan dari setiap simpul ke setiap simpul lainnya) dan memberikan bobot pada sisi-sisinya. Selanjutnya, kita mendefinisikan metrik pada dengan menetapkan sebagai panjang lintasan terpendek antara simpul dan pada graf tersebut. Perhatikan ruang metrik yang bersesuaian dengan graf dalam .   Graf untuk mendefinisikan suatu metrik.   Graf berbobot dengan simpul a, b, c, d, dan e. Sisi-sisinya adalah a–b berbobot 3, a–c berbobot 8, a–e berbobot 1, c–e berbobot 7, c–d berbobot 2, d–e berbobot 5, d–b berbobot 7, dan e–b berbobot 2.     Tentukan semua bola terbuka untuk setiap bilangan real positif .   Tentukan semua lingkungan dari .    Misalkan didefinisikan oleh untuk suatu bilangan real dan dengan . Misalkan dan . Tunjukkan bahwa memuat suatu bola terbuka yang berpusat di . Simpulkan bahwa setiap fungsi linear dari ke bersifat kontinu.   Berdasarkan , kita dapat mengasumsikan untuk menyederhanakan soal.   Misalkan didefinisikan oleh untuk suatu bilangan real , , dan dengan . Misalkan dan . Tunjukkan bahwa memuat suatu bola terbuka yang berpusat di . Simpulkan bahwa setiap fungsi kuadrat dari ke bersifat kontinu.   Pertimbangkan beberapa kasus.    Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan tak kosong dari . memberi tahu kita bahwa untuk semua . Definisikan dengan . Misalkan . Diberikan , tunjukkan bahwa terdapat lingkungan dari sedemikian sehingga mengakibatkan . Simpulkan bahwa merupakan fungsi kontinu. (Asumsikan bahwa metrik pada adalah metrik Euklides.)    Misalkan dan merupakan dua titik berbeda dalam suatu ruang metrik . Buktikan bahwa terdapat lingkungan dan , masing-masing dari dan , sedemikian sehingga .    Misalkan suatu ruang metrik dan . Buktikan setiap pernyataan berikut.   Terdapat suatu lingkungan yang memuat .   Jika merupakan lingkungan dari dan , maka merupakan lingkungan dari .   Jika dan merupakan lingkungan dari , maka demikian pula halnya dengan .    Misalkan suatu fungsi kontinu. Tunjukkan bahwa jika untuk suatu , maka terdapat lingkungan dari sedemikian sehingga untuk semua .    Misalkan suatu ruang metrik dengan sebagai metrik diskret. Tunjukkan bahwa setiap subhimpunan dari merupakan lingkungan dari setiap titiknya.    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan lingkungan dari suatu titik dalam ruang metrik , maka setiap bola terbuka yang termuat dalam juga merupakan lingkungan dari .   Jika merupakan lingkungan dari suatu titik dalam ruang metrik , maka merupakan lingkungan dari setiap titiknya.   Jika dan merupakan ruang metrik dan suatu fungsi kontinu, maka merupakan lingkungan dari dalam setiap kali merupakan lingkungan dari dalam .   Jika dan merupakan ruang metrik, kontinu di , dan merupakan lingkungan dari dalam , maka merupakan lingkungan dari dalam .   Jika suatu titik dalam ruang metrik dan suatu bilangan real positif, maka bola terbuka memuat tak berhingga banyak titik dari .   Jika , , , merupakan lingkungan dari suatu titik dalam ruang metrik untuk suatu bilangan bulat positif , maka merupakan lingkungan dari .   Jika merupakan lingkungan dari suatu titik dalam ruang metrik untuk setiap dalam suatu himpunan indeks , maka merupakan lingkungan dari .   "
+},
+{
+  "id": "exercise-69",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-69",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Tentukan, disertai bukti, manakah di antara himpunan-himpunan berikut yang merupakan lingkungan dari dalam ruang metrik yang diberikan.    dalam dengan     adalah sumbu dalam dengan , dengan sebagai metrik taksi    adalah himpunan bilangan rasional dalam dengan     adalah himpunan bilangan bulat positif dalam dan , dengan sebagai himpunan semua bilangan rasional dalam bentuk paling sederhana dan metrik yang didefinisikan oleh (Fakta bahwa merupakan metrik dibahas dalam .)  "
+},
+{
+  "id": "exercise-70",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-70",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan dan definisikan dengan . Artinya, adalah sisa pembagian oleh . Fakta bahwa merupakan metrik pada dikaji dalam . Misalkan suatu ruang metrik. Mungkinkah kita mendefinisikan suatu fungsi yang tidak kontinu? Jelaskan.  "
+},
+{
+  "id": "exercise-71",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-71",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Jika , tetapkan . Untuk dan , definisikan dengan Fakta bahwa merupakan metrik dikaji dalam . Misalkan dan . Definisikan dan dengan . Salah satu dari dan kontinu, sedangkan yang lain tidak. Tentukan yang mana, disertai bukti untuk masing-masing fungsi.  "
+},
+{
+  "id": "exercise-72",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-72",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Ingat kembali dari bahwa kita dapat membangun ruang metrik berhingga dengan memulai dari suatu himpunan titik berhingga lalu membuat graf yang titik-titiknya menjadi simpul. Kita membuat sisi-sisi sedemikian sehingga graf tersebut terhubung (artinya, terdapat lintasan dari setiap simpul ke setiap simpul lainnya) dan memberikan bobot pada sisi-sisinya. Selanjutnya, kita mendefinisikan metrik pada dengan menetapkan sebagai panjang lintasan terpendek antara simpul dan pada graf tersebut. Perhatikan ruang metrik yang bersesuaian dengan graf dalam .   Graf untuk mendefinisikan suatu metrik.   Graf berbobot dengan simpul a, b, c, d, dan e. Sisi-sisinya adalah a–b berbobot 3, a–c berbobot 8, a–e berbobot 1, c–e berbobot 7, c–d berbobot 2, d–e berbobot 5, d–b berbobot 7, dan e–b berbobot 2.     Tentukan semua bola terbuka untuk setiap bilangan real positif .   Tentukan semua lingkungan dari .  "
+},
+{
+  "id": "ex_linear_continuous1",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#ex_linear_continuous1",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Misalkan didefinisikan oleh untuk suatu bilangan real dan dengan . Misalkan dan . Tunjukkan bahwa memuat suatu bola terbuka yang berpusat di . Simpulkan bahwa setiap fungsi linear dari ke bersifat kontinu.   Berdasarkan , kita dapat mengasumsikan untuk menyederhanakan soal.   Misalkan didefinisikan oleh untuk suatu bilangan real , , dan dengan . Misalkan dan . Tunjukkan bahwa memuat suatu bola terbuka yang berpusat di . Simpulkan bahwa setiap fungsi kuadrat dari ke bersifat kontinu.   Pertimbangkan beberapa kasus.  "
+},
+{
+  "id": "ex_metric_continuous",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#ex_metric_continuous",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Misalkan suatu ruang metrik, dan misalkan suatu subhimpunan tak kosong dari . memberi tahu kita bahwa untuk semua . Definisikan dengan . Misalkan . Diberikan , tunjukkan bahwa terdapat lingkungan dari sedemikian sehingga mengakibatkan . Simpulkan bahwa merupakan fungsi kontinu. (Asumsikan bahwa metrik pada adalah metrik Euklides.)  "
+},
+{
+  "id": "exercise-75",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-75",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Misalkan dan merupakan dua titik berbeda dalam suatu ruang metrik . Buktikan bahwa terdapat lingkungan dan , masing-masing dari dan , sedemikian sehingga .  "
+},
+{
+  "id": "ex_Nghb_properties",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#ex_Nghb_properties",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Misalkan suatu ruang metrik dan . Buktikan setiap pernyataan berikut.   Terdapat suatu lingkungan yang memuat .   Jika merupakan lingkungan dari dan , maka merupakan lingkungan dari .   Jika dan merupakan lingkungan dari , maka demikian pula halnya dengan .  "
+},
+{
+  "id": "exercise-77",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-77",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan suatu fungsi kontinu. Tunjukkan bahwa jika untuk suatu , maka terdapat lingkungan dari sedemikian sehingga untuk semua .  "
+},
+{
+  "id": "exercise-78",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-78",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Misalkan suatu ruang metrik dengan sebagai metrik diskret. Tunjukkan bahwa setiap subhimpunan dari merupakan lingkungan dari setiap titiknya.  "
+},
+{
+  "id": "exercise-79",
+  "level": "2",
+  "url": "sec_open_balls_exer.html#exercise-79",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan lingkungan dari suatu titik dalam ruang metrik , maka setiap bola terbuka yang termuat dalam juga merupakan lingkungan dari .   Jika merupakan lingkungan dari suatu titik dalam ruang metrik , maka merupakan lingkungan dari setiap titiknya.   Jika dan merupakan ruang metrik dan suatu fungsi kontinu, maka merupakan lingkungan dari dalam setiap kali merupakan lingkungan dari dalam .   Jika dan merupakan ruang metrik, kontinu di , dan merupakan lingkungan dari dalam , maka merupakan lingkungan dari dalam .   Jika suatu titik dalam ruang metrik dan suatu bilangan real positif, maka bola terbuka memuat tak berhingga banyak titik dari .   Jika , , , merupakan lingkungan dari suatu titik dalam ruang metrik untuk suatu bilangan bulat positif , maka merupakan lingkungan dari .   Jika merupakan lingkungan dari suatu titik dalam ruang metrik untuk setiap dalam suatu himpunan indeks , maka merupakan lingkungan dari .  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -3743,6 +3986,456 @@ var ptx_lunr_docs = [
   "number": "F.45",
   "title": "Contoh tandingan bagi kebalikan aturan jumlah.",
   "body": "Contoh tandingan bagi kebalikan aturan jumlah  Bangun dua fungsi yang masing-masing tidak kontinu di titik mana pun, tetapi jumlah kontinu di setiap titik. Buktikan kedua klaim menggunakan metrik Euklides.   Rubrik. Berikan rumus eksplisit bagi kedua fungsi. Untuk ketidakkontinuan, gunakan satu toleransi tetap dan kerapatan bilangan rasional serta irasional. Untuk kekontinuan jumlah, hitung jumlahnya tepat, bukan hanya menyatakan bahwa diskontinuitas “saling meniadakan.”    Langkah 1. Definisikan pada bilangan rasional dan pada bilangan irasional.   Langkah 2. Ambil dan . Gunakan untuk membuktikan ketidakkontinuan masing-masing.   Ambil dan , dengan . Fungsi dan tidak kontinu di titik mana pun, tetapi untuk semua , sehingga jumlahnya kontinu.   Definisikan Ambil dan . Tetapkan sembarang dan . Jika rasional, setiap lingkungan di sekitar memuat titik irasional , dan . Jika irasional, setiap lingkungan memuat titik rasional , dan kembali . Jadi tidak kontinu di . Karena , argumen yang sama membuktikan bahwa juga tidak kontinu di . Titik sembarang, sehingga keduanya tidak kontinu di mana pun.  Namun, untuk setiap , Jadi adalah fungsi konstan nol dan kontinu di setiap titik. Contoh ini menunjukkan bahwa kekontinuan jumlah tidak memaksa kekontinuan masing-masing suku.  "
+},
+{
+  "id": "o003-c90-ch07-source-guides",
+  "level": "1",
+  "url": "o003-c90-ch07-source-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan kegiatan sumber",
+  "body": " Panduan kegiatan sumber  Enam belas panduan berikut mendampingi seluruh tugas kegiatan dalam Bab 7: lima tugas tentang bentuk bola terbuka, tiga tugas tentang lingkungan, tiga tugas tentang prapeta bola terbuka, dan lima langkah pembuktian kekontinuan melalui lingkungan. Kerjakan lebih dahulu tugas pada bab utama. Sesudah itu, buka petunjuk, jawaban, dan solusi secara bertahap. Rubrik pada setiap pernyataan menjelaskan bukti yang diperlukan tanpa menggantikan proses penyelidikan.  Bola terbuka pada garis bilangan  Jelaskan dan buat sketsa bola terbuka dalam , dengan . Rubrik: ubah syarat jarak menjadi pertidaksamaan rangkap, tuliskan himpunannya, dan tunjukkan apakah titik batas termasuk.   Mulailah dari , lalu hilangkan nilai mutlak.   Bola tersebut adalah interval terbuka .   Menurut definisi, Pertidaksamaan ekuivalen dengan , atau . Jadi . Sketsanya adalah ruas garis di antara dan dengan lingkaran kosong pada kedua ujung karena pertidaksamaannya ketat.   Bola untuk metrik Euklides pada bidang  Jelaskan dan buat sketsa dalam . Rubrik: berikan deskripsi koordinat yang tepat, identifikasi pusat dan jari-jari, serta bedakan bola dari lingkaran batasnya.   Kuadratkan pertidaksamaan jarak; kedua ruasnya tidak negatif.   Hasilnya adalah cakram Euklides terbuka berpusat di dan berjari-jari .   Titik berada dalam bola tepat ketika yang ekuivalen dengan . Jadi Sketsanya memuat seluruh bagian dalam lingkaran berpusat di dan berjari-jari , tetapi tidak memuat lingkaran batas karena jaraknya di sana sama dengan .   Bola untuk metrik maksimum  Jelaskan dan buat sketsa dalam , dengan . Rubrik: uraikan pertidaksamaan maksimum menjadi dua syarat koordinat dan nyatakan status batasnya.   Nilai maksimum dua bilangan lebih kecil daripada tepat ketika keduanya lebih kecil daripada .   Bola tersebut adalah persegi terbuka dengan sisi-sisi sejajar sumbu koordinat.   Syarat keanggotaan adalah Ini ekuivalen dengan dua syarat dan , yakni dan . Oleh karena itu . Sketsanya berupa bagian dalam persegi dengan sudut batas , , , dan ; seluruh sisi dan sudut tidak termasuk.   Bola untuk metrik taksi  Jelaskan dan buat sketsa dalam , dengan . Rubrik: tuliskan pertidaksamaan yang menentukan bola, berikan bentuk geometrisnya, dan identifikasi titik-titik sudut pada batas.   Periksa perpotongan batas dengan garis horizontal dan vertikal melalui pusat.   Bola tersebut adalah bagian dalam belah ketupat , dengan batas melalui , , , dan .   Dari definisi metrik taksi, Himpunan batas diperoleh dengan mengganti oleh . Pada garis , batasnya berada di dan ; pada garis , batasnya berada di dan . Keempat ruas batas membentuk belah ketupat. Karena bola memakai pertidaksamaan ketat, hanya bagian dalam belah ketupat yang termasuk.   Bola untuk metrik diskret  Tentukan dalam dengan metrik diskret. Bandingkan hasilnya dengan ketika dan ketika . Rubrik: gunakan semua kemungkinan nilai jarak diskret dan ingat bahwa definisi bola memakai pertidaksamaan ketat.   Dalam metrik diskret, jarak dari pusat hanya dapat bernilai atau . Bandingkan kedua nilai itu dengan jari-jari.   Untuk , bolanya hanya ; untuk , bolanya adalah seluruh .   Pusat mempunyai , sedangkan setiap titik mempunyai . Untuk jari-jari , hanya pusat yang memenuhi , sehingga . Argumen yang sama berlaku jika : jarak masih lebih kecil daripada , tetapi jarak tidak. Jika , baik jarak maupun lebih kecil daripada . Karena itu setiap titik termasuk dan .   Target pembuktian lingkungan  Misalkan . Nyatakan dengan tepat apa yang harus ditemukan untuk membuktikan bahwa merupakan lingkungan bagi . Rubrik: buka definisi lingkungan pada titik dan nyatakan baik kepositifan jari-jari maupun inklusi himpunannya.   Ganti oleh dan titik pangkal oleh dalam definisi lingkungan.   Kita harus menemukan sedemikian sehingga .   Sebuah himpunan merupakan lingkungan bagi tepat ketika ada bola terbuka berpusat di yang termuat dalam . Di sini . Jadi target lengkapnya adalah membangun suatu bilangan dan membuktikan Syarat akan menjamin adanya ruang positif antara dan batas berjari-jari ; butir berikutnya menghitung ruang itu.   Bola kecil di dalam bola besar  Buktikan bahwa jika , maka merupakan lingkungan bagi . Gunakan . Rubrik: buktikan bahwa positif, ambil titik sebarang dalam , lalu gunakan pertidaksamaan segitiga untuk memperoleh inklusi.   Untuk , bandingkan dengan , kemudian substitusikan definisi .   Nilai positif dan memenuhi .   Karena , berlaku . Maka . Ambil sebarang . Pertidaksamaan segitiga dan kesimetrian metrik memberikan Jadi . Karena sebarang, . Jadi memuat bola terbuka berpusat di dan merupakan lingkungan bagi .   Lingkungan setiap titik tidak harus sebuah bola  Tentukan apakah setiap himpunan yang merupakan lingkungan bagi semua titiknya harus berupa satu bola terbuka. Berikan contoh tandingan terbuka dan alasan yang meyakinkan. Rubrik: verifikasi sifat lingkungan pada setiap titik dan buktikan bahwa himpunan contoh bukan satu bola.   Dalam bermetrik Euklides, pertimbangkan gabungan dua interval terbuka yang saling terpisah.   Tidak. Sebagai contoh, merupakan lingkungan bagi setiap titiknya, tetapi bukan sebuah bola terbuka dalam bermetrik Euklides.   Ambil . Jika , pilih ; maka . Jika , pilih ; lagi-lagi . Jadi merupakan lingkungan bagi setiap titiknya.  Setiap bola terbuka dalam bermetrik Euklides adalah satu interval , sehingga memuat setiap titik di antara dua titik anggotanya. Himpunan memuat, misalnya, dan , tetapi tidak memuat yang berada di antaranya. Karena itu bukan satu bola terbuka. Pernyataan sebaliknya salah.   Bola di sekitar nilai fungsi  Untuk , , dengan metrik Euklides, tentukan . Rubrik: hitung dahulu nilai pusatnya, lalu ubah syarat jarak menjadi interval terbuka.   Nilai adalah ; selesaikan .    .   Karena , definisi bola Euklides memberi Pertidaksamaan tersebut ekuivalen dengan . Maka bolanya adalah interval terbuka .   Prapeta bola di bawah fungsi kuadrat  Dengan fungsi dan metrik yang sama, tentukan . Rubrik: tuliskan pertidaksamaan ganda untuk , selesaikan pada bagian negatif dan positif, dan perhatikan bahwa semua titik batas dikecualikan.   Dari butir sebelumnya, syaratnya adalah . Gunakan .    .   Suatu bilangan berada dalam prapeta tepat ketika , yaitu ketika . Syarat ini ekuivalen dengan . Pada sumbu negatif, diperoleh ; pada sumbu positif, diperoleh . Oleh karena itu Keempat titik batas tidak termasuk karena bola asal memakai pertidaksamaan ketat.   Prapeta bukan bola berpusat di titik pangkal  Tentukan apakah merupakan bola terbuka yang berpusat di , dan jelaskan. Rubrik: bandingkan bentuk prapeta dengan bentuk setiap bola Euklides berpusat di ; satu pengamatan struktural yang menentukan harus dinyatakan.   Bola selalu satu interval . Berapa banyak komponen interval yang dimiliki prapeta pada butir sebelumnya?   Tidak. Prapeta itu adalah gabungan dua interval terpisah, sedangkan setiap bola Euklides berpusat di merupakan satu interval yang simetris terhadap .   Dari butir sebelumnya, Himpunan ini mempunyai dua bagian yang terpisah. Sebaliknya, untuk setiap , bola Euklides berpusat di adalah , yaitu satu interval. Bahkan prapeta memuat titik-titik dekat tetapi tidak memuat , meskipun lebih dekat ke daripada titik-titik tersebut. Ini mustahil bagi bola berpusat di . Jadi prapeta itu bukan bola terbuka berpusat di .   Target inklusi untuk kekontinuan  Misalkan prapeta setiap lingkungan bagi merupakan lingkungan bagi . Nyatakan target yang, menurut pencirian bola terbuka, cukup untuk membuktikan bahwa kontinu di . Rubrik: mulai dengan sebarang dan nyatakan kuantor untuk beserta inklusi yang tepat.   Pencirian itu membandingkan dengan prapeta .   Untuk setiap , kita harus menemukan sedemikian sehingga .   Pencirian kekontinuan melalui bola terbuka menyatakan bahwa kontinu di jika dan hanya jika Jadi setelah memilih sebarang, seluruh pekerjaan yang tersisa adalah menghasilkan dengan inklusi tersebut. Empat butir berikut membangunnya dari hipotesis lingkungan.   Bola sebagai lingkungan titik pusatnya  Untuk , jelaskan mengapa merupakan lingkungan bagi . Rubrik: tunjukkan secara eksplisit sebuah bola terbuka berpusat di yang termuat dalam himpunan tersebut.   Himpunan yang hendak diuji sudah merupakan bola terbuka. Ia dapat memuat dirinya sendiri.   Pilih jari-jari ; berlaku , sehingga himpunan itu merupakan lingkungan bagi .   Menurut definisi, suatu himpunan merupakan lingkungan bagi jika terdapat dengan . Ambil dan . Jari-jari ini positif dan Jadi bola tersebut memang merupakan lingkungan bagi titik pusatnya.   Menerapkan hipotesis prapeta  Gunakan hipotesis bahwa prapeta setiap lingkungan bagi merupakan lingkungan bagi untuk menentukan sifat . Rubrik: identifikasi himpunan yang memainkan peran sebagai lingkungan dalam kodomain dan terapkan hipotesis tepat satu kali.   Butir sebelumnya telah memverifikasi bahwa memenuhi premis hipotesis.   Himpunan merupakan lingkungan bagi .   Tetapkan . Dari butir sebelumnya, merupakan lingkungan bagi . Hipotesis mengatakan bahwa untuk setiap lingkungan bagi , prapetanya merupakan lingkungan bagi . Dengan mensubstitusikan pilihan , kita memperoleh bahwa merupakan lingkungan bagi .   Membuka definisi lingkungan prapeta  Uraikan kesimpulan bahwa merupakan lingkungan bagi . Rubrik: tuliskan jari-jari positif yang dijamin ada dan inklusi bola yang dihasilkan; jangan berhenti pada kata lingkungan .   Terapkan definisi lingkungan dengan .   Terdapat sedemikian sehingga .   Definisi lingkungan menyatakan bahwa merupakan lingkungan bagi tepat ketika ada dengan . Butir sebelumnya memberi . Oleh karena itu terdapat sedemikian sehingga Inilah inklusi yang ditetapkan sebagai target pada butir pertama.   Menutup pembuktian kekontinuan  Rangkai bagian (a)-(d) untuk membuktikan bahwa kontinu di . Rubrik: mulai dengan sebarang, jelaskan rantai lingkungan dan prapeta, hasilkan inklusi untuk suatu , lalu sebutkan pencirian kekontinuan yang menutup bukti.   Rantainya adalah: bola di kodomain merupakan lingkungan; hipotesis membawa lingkungan itu melalui prapeta; definisi lingkungan memberi bola di domain; pencirian bola memberi kekontinuan.   Untuk setiap , hipotesis menghasilkan dengan . Menurut pencirian bola terbuka, kontinu di .   Ambil sebarang . Bola merupakan lingkungan bagi karena ia memuat bola itu sendiri. Berdasarkan hipotesis, prapetanya merupakan lingkungan bagi . Dengan membuka definisi lingkungan, terdapat sedemikian sehingga Karena konstruksi ini berlaku untuk setiap , pencirian kekontinuan melalui bola terbuka menyatakan bahwa kontinu di . Semua kuantor yang diperlukan untuk arah pembuktian ini telah tertutup.   "
+},
+{
+  "id": "o003-c90-ch07-intro-task-01",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-intro-task-01",
+  "type": "Pemeriksaan",
+  "number": "G.1",
+  "title": "Bola terbuka pada garis bilangan.",
+  "body": "Bola terbuka pada garis bilangan  Jelaskan dan buat sketsa bola terbuka dalam , dengan . Rubrik: ubah syarat jarak menjadi pertidaksamaan rangkap, tuliskan himpunannya, dan tunjukkan apakah titik batas termasuk.   Mulailah dari , lalu hilangkan nilai mutlak.   Bola tersebut adalah interval terbuka .   Menurut definisi, Pertidaksamaan ekuivalen dengan , atau . Jadi . Sketsanya adalah ruas garis di antara dan dengan lingkaran kosong pada kedua ujung karena pertidaksamaannya ketat.  "
+},
+{
+  "id": "o003-c90-ch07-intro-task-02",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-intro-task-02",
+  "type": "Pemeriksaan",
+  "number": "G.2",
+  "title": "Bola untuk metrik Euklides pada bidang.",
+  "body": "Bola untuk metrik Euklides pada bidang  Jelaskan dan buat sketsa dalam . Rubrik: berikan deskripsi koordinat yang tepat, identifikasi pusat dan jari-jari, serta bedakan bola dari lingkaran batasnya.   Kuadratkan pertidaksamaan jarak; kedua ruasnya tidak negatif.   Hasilnya adalah cakram Euklides terbuka berpusat di dan berjari-jari .   Titik berada dalam bola tepat ketika yang ekuivalen dengan . Jadi Sketsanya memuat seluruh bagian dalam lingkaran berpusat di dan berjari-jari , tetapi tidak memuat lingkaran batas karena jaraknya di sana sama dengan .  "
+},
+{
+  "id": "o003-c90-ch07-intro-task-03",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-intro-task-03",
+  "type": "Pemeriksaan",
+  "number": "G.3",
+  "title": "Bola untuk metrik maksimum.",
+  "body": "Bola untuk metrik maksimum  Jelaskan dan buat sketsa dalam , dengan . Rubrik: uraikan pertidaksamaan maksimum menjadi dua syarat koordinat dan nyatakan status batasnya.   Nilai maksimum dua bilangan lebih kecil daripada tepat ketika keduanya lebih kecil daripada .   Bola tersebut adalah persegi terbuka dengan sisi-sisi sejajar sumbu koordinat.   Syarat keanggotaan adalah Ini ekuivalen dengan dua syarat dan , yakni dan . Oleh karena itu . Sketsanya berupa bagian dalam persegi dengan sudut batas , , , dan ; seluruh sisi dan sudut tidak termasuk.  "
+},
+{
+  "id": "o003-c90-ch07-intro-task-04",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-intro-task-04",
+  "type": "Pemeriksaan",
+  "number": "G.4",
+  "title": "Bola untuk metrik taksi.",
+  "body": "Bola untuk metrik taksi  Jelaskan dan buat sketsa dalam , dengan . Rubrik: tuliskan pertidaksamaan yang menentukan bola, berikan bentuk geometrisnya, dan identifikasi titik-titik sudut pada batas.   Periksa perpotongan batas dengan garis horizontal dan vertikal melalui pusat.   Bola tersebut adalah bagian dalam belah ketupat , dengan batas melalui , , , dan .   Dari definisi metrik taksi, Himpunan batas diperoleh dengan mengganti oleh . Pada garis , batasnya berada di dan ; pada garis , batasnya berada di dan . Keempat ruas batas membentuk belah ketupat. Karena bola memakai pertidaksamaan ketat, hanya bagian dalam belah ketupat yang termasuk.  "
+},
+{
+  "id": "o003-c90-ch07-intro-task-05",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-intro-task-05",
+  "type": "Pemeriksaan",
+  "number": "G.5",
+  "title": "Bola untuk metrik diskret.",
+  "body": "Bola untuk metrik diskret  Tentukan dalam dengan metrik diskret. Bandingkan hasilnya dengan ketika dan ketika . Rubrik: gunakan semua kemungkinan nilai jarak diskret dan ingat bahwa definisi bola memakai pertidaksamaan ketat.   Dalam metrik diskret, jarak dari pusat hanya dapat bernilai atau . Bandingkan kedua nilai itu dengan jari-jari.   Untuk , bolanya hanya ; untuk , bolanya adalah seluruh .   Pusat mempunyai , sedangkan setiap titik mempunyai . Untuk jari-jari , hanya pusat yang memenuhi , sehingga . Argumen yang sama berlaku jika : jarak masih lebih kecil daripada , tetapi jarak tidak. Jika , baik jarak maupun lebih kecil daripada . Karena itu setiap titik termasuk dan .  "
+},
+{
+  "id": "o003-c90-ch07-neighborhood-task-01",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-neighborhood-task-01",
+  "type": "Pemeriksaan",
+  "number": "G.6",
+  "title": "Target pembuktian lingkungan.",
+  "body": "Target pembuktian lingkungan  Misalkan . Nyatakan dengan tepat apa yang harus ditemukan untuk membuktikan bahwa merupakan lingkungan bagi . Rubrik: buka definisi lingkungan pada titik dan nyatakan baik kepositifan jari-jari maupun inklusi himpunannya.   Ganti oleh dan titik pangkal oleh dalam definisi lingkungan.   Kita harus menemukan sedemikian sehingga .   Sebuah himpunan merupakan lingkungan bagi tepat ketika ada bola terbuka berpusat di yang termuat dalam . Di sini . Jadi target lengkapnya adalah membangun suatu bilangan dan membuktikan Syarat akan menjamin adanya ruang positif antara dan batas berjari-jari ; butir berikutnya menghitung ruang itu.  "
+},
+{
+  "id": "o003-c90-ch07-neighborhood-task-02",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-neighborhood-task-02",
+  "type": "Pemeriksaan",
+  "number": "G.7",
+  "title": "Bola kecil di dalam bola besar.",
+  "body": "Bola kecil di dalam bola besar  Buktikan bahwa jika , maka merupakan lingkungan bagi . Gunakan . Rubrik: buktikan bahwa positif, ambil titik sebarang dalam , lalu gunakan pertidaksamaan segitiga untuk memperoleh inklusi.   Untuk , bandingkan dengan , kemudian substitusikan definisi .   Nilai positif dan memenuhi .   Karena , berlaku . Maka . Ambil sebarang . Pertidaksamaan segitiga dan kesimetrian metrik memberikan Jadi . Karena sebarang, . Jadi memuat bola terbuka berpusat di dan merupakan lingkungan bagi .  "
+},
+{
+  "id": "o003-c90-ch07-neighborhood-task-03",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-neighborhood-task-03",
+  "type": "Pemeriksaan",
+  "number": "G.8",
+  "title": "Lingkungan setiap titik tidak harus sebuah bola.",
+  "body": "Lingkungan setiap titik tidak harus sebuah bola  Tentukan apakah setiap himpunan yang merupakan lingkungan bagi semua titiknya harus berupa satu bola terbuka. Berikan contoh tandingan terbuka dan alasan yang meyakinkan. Rubrik: verifikasi sifat lingkungan pada setiap titik dan buktikan bahwa himpunan contoh bukan satu bola.   Dalam bermetrik Euklides, pertimbangkan gabungan dua interval terbuka yang saling terpisah.   Tidak. Sebagai contoh, merupakan lingkungan bagi setiap titiknya, tetapi bukan sebuah bola terbuka dalam bermetrik Euklides.   Ambil . Jika , pilih ; maka . Jika , pilih ; lagi-lagi . Jadi merupakan lingkungan bagi setiap titiknya.  Setiap bola terbuka dalam bermetrik Euklides adalah satu interval , sehingga memuat setiap titik di antara dua titik anggotanya. Himpunan memuat, misalnya, dan , tetapi tidak memuat yang berada di antaranya. Karena itu bukan satu bola terbuka. Pernyataan sebaliknya salah.  "
+},
+{
+  "id": "o003-c90-ch07-continuity-ball-task-01",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-ball-task-01",
+  "type": "Pemeriksaan",
+  "number": "G.9",
+  "title": "Bola di sekitar nilai fungsi.",
+  "body": "Bola di sekitar nilai fungsi  Untuk , , dengan metrik Euklides, tentukan . Rubrik: hitung dahulu nilai pusatnya, lalu ubah syarat jarak menjadi interval terbuka.   Nilai adalah ; selesaikan .    .   Karena , definisi bola Euklides memberi Pertidaksamaan tersebut ekuivalen dengan . Maka bolanya adalah interval terbuka .  "
+},
+{
+  "id": "o003-c90-ch07-continuity-ball-task-02",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-ball-task-02",
+  "type": "Pemeriksaan",
+  "number": "G.10",
+  "title": "Prapeta bola di bawah fungsi kuadrat.",
+  "body": "Prapeta bola di bawah fungsi kuadrat  Dengan fungsi dan metrik yang sama, tentukan . Rubrik: tuliskan pertidaksamaan ganda untuk , selesaikan pada bagian negatif dan positif, dan perhatikan bahwa semua titik batas dikecualikan.   Dari butir sebelumnya, syaratnya adalah . Gunakan .    .   Suatu bilangan berada dalam prapeta tepat ketika , yaitu ketika . Syarat ini ekuivalen dengan . Pada sumbu negatif, diperoleh ; pada sumbu positif, diperoleh . Oleh karena itu Keempat titik batas tidak termasuk karena bola asal memakai pertidaksamaan ketat.  "
+},
+{
+  "id": "o003-c90-ch07-continuity-ball-task-03",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-ball-task-03",
+  "type": "Pemeriksaan",
+  "number": "G.11",
+  "title": "Prapeta bukan bola berpusat di titik pangkal.",
+  "body": "Prapeta bukan bola berpusat di titik pangkal  Tentukan apakah merupakan bola terbuka yang berpusat di , dan jelaskan. Rubrik: bandingkan bentuk prapeta dengan bentuk setiap bola Euklides berpusat di ; satu pengamatan struktural yang menentukan harus dinyatakan.   Bola selalu satu interval . Berapa banyak komponen interval yang dimiliki prapeta pada butir sebelumnya?   Tidak. Prapeta itu adalah gabungan dua interval terpisah, sedangkan setiap bola Euklides berpusat di merupakan satu interval yang simetris terhadap .   Dari butir sebelumnya, Himpunan ini mempunyai dua bagian yang terpisah. Sebaliknya, untuk setiap , bola Euklides berpusat di adalah , yaitu satu interval. Bahkan prapeta memuat titik-titik dekat tetapi tidak memuat , meskipun lebih dekat ke daripada titik-titik tersebut. Ini mustahil bagi bola berpusat di . Jadi prapeta itu bukan bola terbuka berpusat di .  "
+},
+{
+  "id": "o003-c90-ch07-continuity-neighborhood-task-01",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-neighborhood-task-01",
+  "type": "Pemeriksaan",
+  "number": "G.12",
+  "title": "Target inklusi untuk kekontinuan.",
+  "body": "Target inklusi untuk kekontinuan  Misalkan prapeta setiap lingkungan bagi merupakan lingkungan bagi . Nyatakan target yang, menurut pencirian bola terbuka, cukup untuk membuktikan bahwa kontinu di . Rubrik: mulai dengan sebarang dan nyatakan kuantor untuk beserta inklusi yang tepat.   Pencirian itu membandingkan dengan prapeta .   Untuk setiap , kita harus menemukan sedemikian sehingga .   Pencirian kekontinuan melalui bola terbuka menyatakan bahwa kontinu di jika dan hanya jika Jadi setelah memilih sebarang, seluruh pekerjaan yang tersisa adalah menghasilkan dengan inklusi tersebut. Empat butir berikut membangunnya dari hipotesis lingkungan.  "
+},
+{
+  "id": "o003-c90-ch07-continuity-neighborhood-task-02",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-neighborhood-task-02",
+  "type": "Pemeriksaan",
+  "number": "G.13",
+  "title": "Bola sebagai lingkungan titik pusatnya.",
+  "body": "Bola sebagai lingkungan titik pusatnya  Untuk , jelaskan mengapa merupakan lingkungan bagi . Rubrik: tunjukkan secara eksplisit sebuah bola terbuka berpusat di yang termuat dalam himpunan tersebut.   Himpunan yang hendak diuji sudah merupakan bola terbuka. Ia dapat memuat dirinya sendiri.   Pilih jari-jari ; berlaku , sehingga himpunan itu merupakan lingkungan bagi .   Menurut definisi, suatu himpunan merupakan lingkungan bagi jika terdapat dengan . Ambil dan . Jari-jari ini positif dan Jadi bola tersebut memang merupakan lingkungan bagi titik pusatnya.  "
+},
+{
+  "id": "o003-c90-ch07-continuity-neighborhood-task-03",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-neighborhood-task-03",
+  "type": "Pemeriksaan",
+  "number": "G.14",
+  "title": "Menerapkan hipotesis prapeta.",
+  "body": "Menerapkan hipotesis prapeta  Gunakan hipotesis bahwa prapeta setiap lingkungan bagi merupakan lingkungan bagi untuk menentukan sifat . Rubrik: identifikasi himpunan yang memainkan peran sebagai lingkungan dalam kodomain dan terapkan hipotesis tepat satu kali.   Butir sebelumnya telah memverifikasi bahwa memenuhi premis hipotesis.   Himpunan merupakan lingkungan bagi .   Tetapkan . Dari butir sebelumnya, merupakan lingkungan bagi . Hipotesis mengatakan bahwa untuk setiap lingkungan bagi , prapetanya merupakan lingkungan bagi . Dengan mensubstitusikan pilihan , kita memperoleh bahwa merupakan lingkungan bagi .  "
+},
+{
+  "id": "o003-c90-ch07-continuity-neighborhood-task-04",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-neighborhood-task-04",
+  "type": "Pemeriksaan",
+  "number": "G.15",
+  "title": "Membuka definisi lingkungan prapeta.",
+  "body": "Membuka definisi lingkungan prapeta  Uraikan kesimpulan bahwa merupakan lingkungan bagi . Rubrik: tuliskan jari-jari positif yang dijamin ada dan inklusi bola yang dihasilkan; jangan berhenti pada kata lingkungan .   Terapkan definisi lingkungan dengan .   Terdapat sedemikian sehingga .   Definisi lingkungan menyatakan bahwa merupakan lingkungan bagi tepat ketika ada dengan . Butir sebelumnya memberi . Oleh karena itu terdapat sedemikian sehingga Inilah inklusi yang ditetapkan sebagai target pada butir pertama.  "
+},
+{
+  "id": "o003-c90-ch07-continuity-neighborhood-task-05",
+  "level": "2",
+  "url": "o003-c90-ch07-source-guides.html#o003-c90-ch07-continuity-neighborhood-task-05",
+  "type": "Pemeriksaan",
+  "number": "G.16",
+  "title": "Menutup pembuktian kekontinuan.",
+  "body": "Menutup pembuktian kekontinuan  Rangkai bagian (a)-(d) untuk membuktikan bahwa kontinu di . Rubrik: mulai dengan sebarang, jelaskan rantai lingkungan dan prapeta, hasilkan inklusi untuk suatu , lalu sebutkan pencirian kekontinuan yang menutup bukti.   Rantainya adalah: bola di kodomain merupakan lingkungan; hipotesis membawa lingkungan itu melalui prapeta; definisi lingkungan memberi bola di domain; pencirian bola memberi kekontinuan.   Untuk setiap , hipotesis menghasilkan dengan . Menurut pencirian bola terbuka, kontinu di .   Ambil sebarang . Bola merupakan lingkungan bagi karena ia memuat bola itu sendiri. Berdasarkan hipotesis, prapetanya merupakan lingkungan bagi . Dengan membuka definisi lingkungan, terdapat sedemikian sehingga Karena konstruksi ini berlaku untuk setiap , pencirian kekontinuan melalui bola terbuka menyatakan bahwa kontinu di . Semua kuantor yang diperlukan untuk arah pembuktian ini telah tertutup.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch07-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian pertama",
+  "body": " Panduan latihan sumber, bagian pertama  Dua belas panduan berikut berkorespondensi dengan dua belas perintah pertama pada bagian latihan Bab 7 menurut urutan kedalaman sumber. Materi pendamping ini merupakan uraian asli untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh penulis karya sumber.  Cakram satuan sebagai lingkungan  Dalam , misalkan dan . Tentukan, disertai bukti, apakah merupakan lingkungan dari . Rubrik. Nyatakan sebuah radius positif dan buktikan bahwa seluruh bola terbuka dengan pusat dan radius tersebut termuat dalam .    Langkah 1. Jarak Euklides dari titik asal adalah .   Langkah 2. Gunakan pertidaksamaan segitiga untuk titik .   Ya. Radius positif dan memenuhi .   Tuliskan untuk norma Euklides titik . Karena bilangan positif. Jika , maka pertidaksamaan segitiga memberi Jadi jumlah kuadrat koordinat kurang daripada , sehingga . Dengan demikian , dan menurut definisi merupakan lingkungan dari .   Sumbu horizontal dalam metrik taksi  Dalam , misalkan adalah sumbu dan . Tentukan, disertai bukti, apakah merupakan lingkungan dari . Rubrik. Jika jawabannya negatif, untuk setiap radius positif berikan titik di dalam bola yang tidak berada pada sumbu .   Untuk , periksa titik dan hitung .   Tidak. Setiap bola memuat titik , yang tidak berada pada sumbu .   Ambil sebarang dan tetapkan . Jarak taksi dari ke adalah Maka . Akan tetapi, koordinat kedua tidak nol, sehingga . Jadi tidak ada dengan . Oleh karena itu, bukan lingkungan dari .   Bilangan rasional bukan lingkungan di garis real  Dalam , misalkan dan . Tentukan, disertai bukti, apakah merupakan lingkungan dari . Rubrik. Gunakan urutan kuantor dalam definisi lingkungan dan sifat kerapatan bilangan irasional.   Setiap interval terbuka memuat bilangan irasional.   Tidak. Untuk setiap , bola memuat suatu bilangan irasional dan karenanya tidak termuat dalam .   Misalkan diberikan. Kerapatan bilangan irasional dalam menjamin adanya dengan . Dengan demikian , sehingga , tetapi . Argumen ini berlaku untuk setiap radius positif, sehingga tidak ada bola terbuka berpusat di yang termuat dalam . Jadi bukan lingkungan dari dalam metrik Euklides.   Bilangan bulat positif dalam metrik pecahan tereduksi  Misalkan adalah himpunan bilangan rasional dalam bentuk paling sederhana dan . Dalam , tentukan apakah himpunan semua bilangan bulat positif merupakan lingkungan dari . Rubrik. Tentukan bola terbuka berjari-jari di sekitar dan jelaskan peran koordinat pembilang serta penyebut yang bulat.   Jika dua pecahan tereduksi berbeda, setidaknya salah satu dari selisih pembilang dan selisih penyebutnya adalah bilangan bulat tak nol.   Ya. Bola hanya berisi , sehingga bola itu termuat dalam himpunan bilangan bulat positif.   Ambil dalam bentuk paling sederhana. Jika , pasangan bilangan bulat berbeda dari . Maka paling sedikit satu dari dan merupakan bilangan bulat positif, sehingga Akibatnya, syarat hanya dipenuhi oleh . Jadi . Karena memuat bola terbuka berpusat di , merupakan lingkungan dari .   Semua fungsi dari ruang metrik berhingga ini kontinu  Misalkan dan , yakni sisa pembagian oleh . Untuk sebarang ruang metrik , tentukan apakah mungkin mendefinisikan fungsi yang tidak kontinu. Rubrik. Hitung jarak antar-titik berbeda dan berikan satu radius yang mengisolasi setiap titik domain.   Jarak antartitik berbeda adalah , , dan . Apa isi untuk ?   Tidak mungkin. Setiap fungsi kontinu; radius mengisolasi setiap titik .   Perhitungan modulo memberikan , , dan . Jadi untuk setiap , tidak ada titik lain yang berjarak kurang daripada dari ; dengan kata lain, .  Sekarang ambil fungsi sebarang , titik , dan . Pilih . Jika , maka , sehingga Jadi kontinu di setiap titik dalam . Tidak ada fungsi tak kontinu dari domain ini ke ruang metrik mana pun.   Dua fungsi pada ruang bermetrik pusat  Pada , dengan jika dan jika , definisikan oleh , untuk , serta jika dan selain itu. Tentukan fungsi mana yang kontinu dan buktikan kedua klaim. Rubrik. Periksa titik asal secara terpisah; untuk titik tak nol, tunjukkan bahwa terdapat bola terbuka yang hanya memuat pusatnya.    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Di titik asal, bandingkan perilaku dan pada titik-titik tak nol yang normanya menuju nol.   Fungsi tidak kontinu di , sedangkan kontinu pada seluruh . Untuk di , radius bekerja; semua titik tak nol terisolasi.   Untuk menunjukkan bahwa tidak kontinu di , tetapkan . Diberikan sebarang , pilih . Maka dan Ini adalah negasi definisi kekontinuan, sehingga tidak kontinu.  Untuk di titik asal, pilih bagi sebarang . Jika , maka , sehingga dan jarak keluarannya nol. Jadi kontinu di .  Terakhir, jika , maka untuk setiap berlaku . Karena itu . Untuk setiap , pilihan memaksa dan karenanya . Maka kontinu di setiap titik tak nol juga, sehingga kontinu pada seluruh .   Semua bola terbuka pada graf berbobot  Pada ruang metrik graf berbobot dengan sisi , , , , , , , dan , tentukan untuk setiap . Rubrik. Hitung dahulu jarak lintasan terpendek dari ke kelima simpul, lalu pisahkan semua rentang radius pada nilai jarak kritis.   Jarak dari ke , berturut-turut, adalah . Ingat bahwa bola terbuka memakai pertidaksamaan ketat .   Bola-bolanya adalah untuk ; untuk ; untuk ; untuk ; dan untuk .   Jalankan langkah jarak terpendek dari . Mula-mula diperoleh jarak tentatif , , dan dari sisi-sisi yang bersisian dengan . Melalui , jarak ke tetap , jarak ke menjadi , dan jarak ke tetap . Melalui , kandidat jarak ke adalah , sehingga tidak memperbaiki . Melalui , kandidat jarak ke adalah , sama dengan jarak yang sudah diperoleh. Karena semua bobot sisi positif, langkah-langkah ini menyelesaikan pemeriksaan lintasan terpendek. Jadi jarak dari ke , berturut-turut, adalah .  Sebuah simpul masuk ke tepat ketika jaraknya kurang daripada . Karena ketaksamaan ini ketat, simpul pada jarak baru masuk setelah radius melewati nilai tersebut. Dengan demikian    Semua lingkungan dari simpul a  Untuk ruang metrik graf berbobot pada tugas sebelumnya, tentukan semua lingkungan dari . Rubrik. Gunakan bola terbuka terkecil yang ditemukan dan buktikan kedua arah klasifikasi.   Karena , setiap subhimpunan yang memuat otomatis memuat sebuah bola terbuka berpusat di .   Lingkungan dari tepat merupakan semua subhimpunan yang memuat .   Jika merupakan lingkungan dari , maka ada dengan . Setiap bola berpusat di memuat pusatnya, sehingga .  Sebaliknya, andaikan . Dari perhitungan tugas sebelumnya, . Maka , sehingga menurut definisi merupakan lingkungan dari . Kedua arah ini membuktikan klasifikasi tersebut.   Prapeta bola di bawah fungsi linear  Misalkan didefinisikan oleh , dengan . Untuk dan , tunjukkan bahwa memuat bola terbuka berpusat di , lalu simpulkan kekontinuan fungsi linear. Rubrik. Hitung selisih dan berikan radius eksplisit dalam dan .   Gunakan dan pilih .   Berlaku . Maka pilihan membuktikan kekontinuan di setiap .   Untuk setiap , Karena , radius positif. Kita mempunyai rangkaian kesetaraan Jadi prapeta tersebut bukan hanya memuat, melainkan sama dengan bola yang dinyatakan. Karena konstruksi ini berlaku bagi setiap dan , kontinu. Jika istilah fungsi linear juga mencakup kasus , kasus itu adalah fungsi konstan dan juga kontinu.   Prapeta bola di bawah fungsi kuadrat  Misalkan didefinisikan oleh , dengan . Untuk dan , tunjukkan bahwa memuat bola terbuka berpusat di , lalu simpulkan bahwa setiap fungsi kuadrat kontinu. Rubrik. Faktorkan selisih nilai fungsi, batasi di sekitar , dan berikan radius eksplisit.    Langkah 1. Gunakan .   Langkah 2. Tetapkan dan pilih .   Dengan , radius memenuhi . Jadi kontinu di setiap .   Karena , bilangan positif. Tetapkan . Jika , maka , sehingga dan . Oleh karena itu, Jadi setiap kali . Ini membuktikan . Karena dan dipilih sembarang, kontinu pada .   Fungsi jarak ke suatu himpunan  Misalkan ruang metrik dan tak kosong. Definisikan dengan . Gunakan untuk menunjukkan bahwa, bagi setiap dan , terdapat lingkungan dari dengan . Simpulkan bahwa kontinu. Rubrik. Turunkan batas simetris untuk selisih mutlak dua jarak ke , lalu pilih lingkungan secara eksplisit.   Tukarkan dan dalam pertidaksamaan yang diberikan, lalu gabungkan kedua hasil untuk memperoleh pertidaksamaan 1-Lipschitz.   Berlaku . Karena itu memenuhi syarat, dan bahkan 1-Lipschitz.   Pertidaksamaan yang diberikan menyatakan . Setelah dan ditukar, simetri metrik memberi . Kedua pertidaksamaan itu setara dengan   Tetapkan dan , lalu ambil . Jika , maka Dengan demikian . Karena ini berlaku untuk setiap dan , fungsi kontinu; batas pertama juga menunjukkan bahwa konstanta Lipschitz-nya paling besar .   Lingkungan terpisah bagi dua titik berbeda  Misalkan dan dua titik berbeda dalam ruang metrik . Buktikan bahwa terdapat lingkungan dan , masing-masing dari dan , dengan . Rubrik. Pilih radius berdasarkan dan gunakan pertidaksamaan segitiga untuk membuktikan ketakteririsan.   Karena , bilangan positif. Cobalah dan .   Ambil , , dan . Kedua bola terbuka itu merupakan lingkungan dan tidak beririsan.   Karena , sifat definit positif metrik memberi . Tetapkan dan ambil serta . Masing-masing jelas merupakan lingkungan dari pusatnya.  Andaikan, untuk memperoleh kontradiksi, ada . Maka dan . Pertidaksamaan segitiga memberikan suatu kontradiksi. Jadi , sebagaimana diminta.   "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-01",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-01",
+  "type": "Pemeriksaan",
+  "number": "G.17",
+  "title": "Cakram satuan sebagai lingkungan.",
+  "body": "Cakram satuan sebagai lingkungan  Dalam , misalkan dan . Tentukan, disertai bukti, apakah merupakan lingkungan dari . Rubrik. Nyatakan sebuah radius positif dan buktikan bahwa seluruh bola terbuka dengan pusat dan radius tersebut termuat dalam .    Langkah 1. Jarak Euklides dari titik asal adalah .   Langkah 2. Gunakan pertidaksamaan segitiga untuk titik .   Ya. Radius positif dan memenuhi .   Tuliskan untuk norma Euklides titik . Karena bilangan positif. Jika , maka pertidaksamaan segitiga memberi Jadi jumlah kuadrat koordinat kurang daripada , sehingga . Dengan demikian , dan menurut definisi merupakan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-02",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-02",
+  "type": "Pemeriksaan",
+  "number": "G.18",
+  "title": "Sumbu horizontal dalam metrik taksi.",
+  "body": "Sumbu horizontal dalam metrik taksi  Dalam , misalkan adalah sumbu dan . Tentukan, disertai bukti, apakah merupakan lingkungan dari . Rubrik. Jika jawabannya negatif, untuk setiap radius positif berikan titik di dalam bola yang tidak berada pada sumbu .   Untuk , periksa titik dan hitung .   Tidak. Setiap bola memuat titik , yang tidak berada pada sumbu .   Ambil sebarang dan tetapkan . Jarak taksi dari ke adalah Maka . Akan tetapi, koordinat kedua tidak nol, sehingga . Jadi tidak ada dengan . Oleh karena itu, bukan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-03",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-03",
+  "type": "Pemeriksaan",
+  "number": "G.19",
+  "title": "Bilangan rasional bukan lingkungan di garis real.",
+  "body": "Bilangan rasional bukan lingkungan di garis real  Dalam , misalkan dan . Tentukan, disertai bukti, apakah merupakan lingkungan dari . Rubrik. Gunakan urutan kuantor dalam definisi lingkungan dan sifat kerapatan bilangan irasional.   Setiap interval terbuka memuat bilangan irasional.   Tidak. Untuk setiap , bola memuat suatu bilangan irasional dan karenanya tidak termuat dalam .   Misalkan diberikan. Kerapatan bilangan irasional dalam menjamin adanya dengan . Dengan demikian , sehingga , tetapi . Argumen ini berlaku untuk setiap radius positif, sehingga tidak ada bola terbuka berpusat di yang termuat dalam . Jadi bukan lingkungan dari dalam metrik Euklides.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-04",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-04",
+  "type": "Pemeriksaan",
+  "number": "G.20",
+  "title": "Bilangan bulat positif dalam metrik pecahan tereduksi.",
+  "body": "Bilangan bulat positif dalam metrik pecahan tereduksi  Misalkan adalah himpunan bilangan rasional dalam bentuk paling sederhana dan . Dalam , tentukan apakah himpunan semua bilangan bulat positif merupakan lingkungan dari . Rubrik. Tentukan bola terbuka berjari-jari di sekitar dan jelaskan peran koordinat pembilang serta penyebut yang bulat.   Jika dua pecahan tereduksi berbeda, setidaknya salah satu dari selisih pembilang dan selisih penyebutnya adalah bilangan bulat tak nol.   Ya. Bola hanya berisi , sehingga bola itu termuat dalam himpunan bilangan bulat positif.   Ambil dalam bentuk paling sederhana. Jika , pasangan bilangan bulat berbeda dari . Maka paling sedikit satu dari dan merupakan bilangan bulat positif, sehingga Akibatnya, syarat hanya dipenuhi oleh . Jadi . Karena memuat bola terbuka berpusat di , merupakan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-05",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-05",
+  "type": "Pemeriksaan",
+  "number": "G.21",
+  "title": "Semua fungsi dari ruang metrik berhingga ini kontinu.",
+  "body": "Semua fungsi dari ruang metrik berhingga ini kontinu  Misalkan dan , yakni sisa pembagian oleh . Untuk sebarang ruang metrik , tentukan apakah mungkin mendefinisikan fungsi yang tidak kontinu. Rubrik. Hitung jarak antar-titik berbeda dan berikan satu radius yang mengisolasi setiap titik domain.   Jarak antartitik berbeda adalah , , dan . Apa isi untuk ?   Tidak mungkin. Setiap fungsi kontinu; radius mengisolasi setiap titik .   Perhitungan modulo memberikan , , dan . Jadi untuk setiap , tidak ada titik lain yang berjarak kurang daripada dari ; dengan kata lain, .  Sekarang ambil fungsi sebarang , titik , dan . Pilih . Jika , maka , sehingga Jadi kontinu di setiap titik dalam . Tidak ada fungsi tak kontinu dari domain ini ke ruang metrik mana pun.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-06",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-06",
+  "type": "Pemeriksaan",
+  "number": "G.22",
+  "title": "Dua fungsi pada ruang bermetrik pusat.",
+  "body": "Dua fungsi pada ruang bermetrik pusat  Pada , dengan jika dan jika , definisikan oleh , untuk , serta jika dan selain itu. Tentukan fungsi mana yang kontinu dan buktikan kedua klaim. Rubrik. Periksa titik asal secara terpisah; untuk titik tak nol, tunjukkan bahwa terdapat bola terbuka yang hanya memuat pusatnya.    Langkah 1. Untuk setiap , berlaku .   Langkah 2. Di titik asal, bandingkan perilaku dan pada titik-titik tak nol yang normanya menuju nol.   Fungsi tidak kontinu di , sedangkan kontinu pada seluruh . Untuk di , radius bekerja; semua titik tak nol terisolasi.   Untuk menunjukkan bahwa tidak kontinu di , tetapkan . Diberikan sebarang , pilih . Maka dan Ini adalah negasi definisi kekontinuan, sehingga tidak kontinu.  Untuk di titik asal, pilih bagi sebarang . Jika , maka , sehingga dan jarak keluarannya nol. Jadi kontinu di .  Terakhir, jika , maka untuk setiap berlaku . Karena itu . Untuk setiap , pilihan memaksa dan karenanya . Maka kontinu di setiap titik tak nol juga, sehingga kontinu pada seluruh .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-07",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-07",
+  "type": "Pemeriksaan",
+  "number": "G.23",
+  "title": "Semua bola terbuka pada graf berbobot.",
+  "body": "Semua bola terbuka pada graf berbobot  Pada ruang metrik graf berbobot dengan sisi , , , , , , , dan , tentukan untuk setiap . Rubrik. Hitung dahulu jarak lintasan terpendek dari ke kelima simpul, lalu pisahkan semua rentang radius pada nilai jarak kritis.   Jarak dari ke , berturut-turut, adalah . Ingat bahwa bola terbuka memakai pertidaksamaan ketat .   Bola-bolanya adalah untuk ; untuk ; untuk ; untuk ; dan untuk .   Jalankan langkah jarak terpendek dari . Mula-mula diperoleh jarak tentatif , , dan dari sisi-sisi yang bersisian dengan . Melalui , jarak ke tetap , jarak ke menjadi , dan jarak ke tetap . Melalui , kandidat jarak ke adalah , sehingga tidak memperbaiki . Melalui , kandidat jarak ke adalah , sama dengan jarak yang sudah diperoleh. Karena semua bobot sisi positif, langkah-langkah ini menyelesaikan pemeriksaan lintasan terpendek. Jadi jarak dari ke , berturut-turut, adalah .  Sebuah simpul masuk ke tepat ketika jaraknya kurang daripada . Karena ketaksamaan ini ketat, simpul pada jarak baru masuk setelah radius melewati nilai tersebut. Dengan demikian   "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-08",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-08",
+  "type": "Pemeriksaan",
+  "number": "G.24",
+  "title": "Semua lingkungan dari simpul a.",
+  "body": "Semua lingkungan dari simpul a  Untuk ruang metrik graf berbobot pada tugas sebelumnya, tentukan semua lingkungan dari . Rubrik. Gunakan bola terbuka terkecil yang ditemukan dan buktikan kedua arah klasifikasi.   Karena , setiap subhimpunan yang memuat otomatis memuat sebuah bola terbuka berpusat di .   Lingkungan dari tepat merupakan semua subhimpunan yang memuat .   Jika merupakan lingkungan dari , maka ada dengan . Setiap bola berpusat di memuat pusatnya, sehingga .  Sebaliknya, andaikan . Dari perhitungan tugas sebelumnya, . Maka , sehingga menurut definisi merupakan lingkungan dari . Kedua arah ini membuktikan klasifikasi tersebut.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-09",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-09",
+  "type": "Pemeriksaan",
+  "number": "G.25",
+  "title": "Prapeta bola di bawah fungsi linear.",
+  "body": "Prapeta bola di bawah fungsi linear  Misalkan didefinisikan oleh , dengan . Untuk dan , tunjukkan bahwa memuat bola terbuka berpusat di , lalu simpulkan kekontinuan fungsi linear. Rubrik. Hitung selisih dan berikan radius eksplisit dalam dan .   Gunakan dan pilih .   Berlaku . Maka pilihan membuktikan kekontinuan di setiap .   Untuk setiap , Karena , radius positif. Kita mempunyai rangkaian kesetaraan Jadi prapeta tersebut bukan hanya memuat, melainkan sama dengan bola yang dinyatakan. Karena konstruksi ini berlaku bagi setiap dan , kontinu. Jika istilah fungsi linear juga mencakup kasus , kasus itu adalah fungsi konstan dan juga kontinu.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-10",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-10",
+  "type": "Pemeriksaan",
+  "number": "G.26",
+  "title": "Prapeta bola di bawah fungsi kuadrat.",
+  "body": "Prapeta bola di bawah fungsi kuadrat  Misalkan didefinisikan oleh , dengan . Untuk dan , tunjukkan bahwa memuat bola terbuka berpusat di , lalu simpulkan bahwa setiap fungsi kuadrat kontinu. Rubrik. Faktorkan selisih nilai fungsi, batasi di sekitar , dan berikan radius eksplisit.    Langkah 1. Gunakan .   Langkah 2. Tetapkan dan pilih .   Dengan , radius memenuhi . Jadi kontinu di setiap .   Karena , bilangan positif. Tetapkan . Jika , maka , sehingga dan . Oleh karena itu, Jadi setiap kali . Ini membuktikan . Karena dan dipilih sembarang, kontinu pada .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-11",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-11",
+  "type": "Pemeriksaan",
+  "number": "G.27",
+  "title": "Fungsi jarak ke suatu himpunan.",
+  "body": "Fungsi jarak ke suatu himpunan  Misalkan ruang metrik dan tak kosong. Definisikan dengan . Gunakan untuk menunjukkan bahwa, bagi setiap dan , terdapat lingkungan dari dengan . Simpulkan bahwa kontinu. Rubrik. Turunkan batas simetris untuk selisih mutlak dua jarak ke , lalu pilih lingkungan secara eksplisit.   Tukarkan dan dalam pertidaksamaan yang diberikan, lalu gabungkan kedua hasil untuk memperoleh pertidaksamaan 1-Lipschitz.   Berlaku . Karena itu memenuhi syarat, dan bahkan 1-Lipschitz.   Pertidaksamaan yang diberikan menyatakan . Setelah dan ditukar, simetri metrik memberi . Kedua pertidaksamaan itu setara dengan   Tetapkan dan , lalu ambil . Jika , maka Dengan demikian . Karena ini berlaku untuk setiap dan , fungsi kontinu; batas pertama juga menunjukkan bahwa konstanta Lipschitz-nya paling besar .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-12",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-a.html#o003-c90-ch07-exercise-task-12",
+  "type": "Pemeriksaan",
+  "number": "G.28",
+  "title": "Lingkungan terpisah bagi dua titik berbeda.",
+  "body": "Lingkungan terpisah bagi dua titik berbeda  Misalkan dan dua titik berbeda dalam ruang metrik . Buktikan bahwa terdapat lingkungan dan , masing-masing dari dan , dengan . Rubrik. Pilih radius berdasarkan dan gunakan pertidaksamaan segitiga untuk membuktikan ketakteririsan.   Karena , bilangan positif. Cobalah dan .   Ambil , , dan . Kedua bola terbuka itu merupakan lingkungan dan tidak beririsan.   Karena , sifat definit positif metrik memberi . Tetapkan dan ambil serta . Masing-masing jelas merupakan lingkungan dari pusatnya.  Andaikan, untuk memperoleh kontradiksi, ada . Maka dan . Pertidaksamaan segitiga memberikan suatu kontradiksi. Jadi , sebagaimana diminta.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch07-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian kedua",
+  "body": " Panduan latihan sumber, bagian kedua  Dua belas panduan berikut berkorespondensi dengan perintah ke-13 sampai ke-24 pada bagian latihan Bab 7 menurut urutan kedalaman sumber. Materi pendamping ini merupakan uraian asli untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh penulis karya sumber.  Keberadaan lingkungan yang memuat pusatnya  Misalkan ruang metrik dan . Buktikan bahwa terdapat suatu lingkungan yang memuat . Rubrik. Berikan satu himpunan konkret, tunjukkan bahwa himpunan itu memuat bola terbuka berpusat di , dan periksa bahwa sendiri berada di dalamnya.   Bola terbuka memuat dirinya sendiri dan selalu memuat pusat .   Himpunan adalah lingkungan dari yang memuat .   Ambil . Karena , definisi lingkungan langsung menunjukkan bahwa merupakan lingkungan dari . Selain itu, , sehingga . Jadi lingkungan yang diminta selalu ada.   Himpunan yang lebih besar tetap merupakan lingkungan  Misalkan merupakan lingkungan dari dan . Buktikan bahwa juga merupakan lingkungan dari . Rubrik. Mulailah dari bola yang dijamin oleh definisi lingkungan bagi , lalu gunakan transitivitas inklusi.   Ada dengan . Gabungkan inklusi ini dengan .   Benar. Bola yang membuktikan bahwa merupakan lingkungan juga termuat dalam .   Karena merupakan lingkungan dari , terdapat sedemikian sehingga . Hipotesis kemudian memberi Jadi memuat sebuah bola terbuka berpusat di . Menurut definisi, merupakan lingkungan dari .   Irisan dua lingkungan  Misalkan dan merupakan lingkungan dari . Buktikan bahwa juga merupakan lingkungan dari . Rubrik. Nyatakan radius yang disediakan oleh masing-masing lingkungan dan gabungkan keduanya dengan operasi minimum.   Jika dan , pilih .   Benar. Bola termuat dalam .   Karena dan merupakan lingkungan dari , terdapat dengan dan . Tetapkan , yang tetap positif. Jika , maka dan . Jadi dan , sehingga . Maka irisan tersebut merupakan lingkungan dari .   Kepositifan bertahan di sekitar suatu titik  Misalkan kontinu dan untuk suatu . Buktikan bahwa terdapat lingkungan dari sedemikian sehingga untuk semua . Rubrik. Pilih toleransi keluaran sebagai fraksi eksplisit dari dan turunkan batas bawah positif bagi .   Terapkan kekontinuan di dengan .   Ambil . Radius kekontinuan yang sesuai menghasilkan lingkungan dengan bagi semua .   Karena , bilangan positif. Kekontinuan di memberikan sedemikian sehingga mengakibatkan . Tetapkan , yang merupakan lingkungan dari . Untuk setiap , Jadi tetap positif di seluruh lingkungan .   Subhimpunan ruang diskret  Misalkan ruang metrik dengan sebagai metrik diskret. Buktikan bahwa setiap subhimpunan merupakan lingkungan dari setiap titiknya. Rubrik. Tetapkan titik sebarang , tentukan sebuah bola yang hanya memuat , dan bahas kasus .   Dalam metrik diskret, .   Benar. Untuk setiap , berlaku . Jika kosong, pernyataannya benar secara hampa.   Jika , tidak ada titik yang perlu diperiksa. Jika tidak kosong, tetapkan sebarang . Pada metrik diskret, bernilai ketika dan ketika . Karena bola terbuka memakai pertidaksamaan ketat, . Maka , sehingga merupakan lingkungan dari . Karena sebarang, klaim berlaku bagi setiap titik dalam .   Bola di dalam lingkungan belum tentu berpusat tepat  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik , maka setiap bola terbuka yang termuat dalam juga merupakan lingkungan dari . Rubrik. Jika salah, berikan ruang, titik, lingkungan, dan bola terbuka konkret; verifikasi inklusi serta kegagalan sifat lingkungan.   Dalam , sebuah lingkungan dari dapat memuat bola kecil yang berpusat jauh dari dan bahkan tidak memuat .   Salah. Dalam , ambil , , dan bola . Bola itu termuat dalam , tetapi bukan lingkungan dari .   Dalam , himpunan merupakan lingkungan dari , misalnya karena . Bola terbuka memenuhi .  Akan tetapi, . Setiap lingkungan dari harus memuat , sebab setiap bola terbuka berpusat di memuat pusatnya. Jadi bukan lingkungan dari . Contoh ini membantah pernyataan universal tersebut.   Lingkungan dari satu titik belum tentu terbuka  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik , maka merupakan lingkungan dari setiap titiknya. Rubrik. Jika salah, buat himpunan yang memuat satu interval terbuka di sekitar dan satu titik tambahan yang tidak mempunyai ruang terbuka di dalam himpunan itu.   Pertimbangkan dalam , dengan .   Salah. Himpunan merupakan lingkungan dari , tetapi bukan lingkungan dari titiknya .   Dalam , ambil . Karena , himpunan merupakan lingkungan dari . Selain itu, .  Untuk sebarang , tetapkan dan . Maka , tetapi dan , sehingga . Jadi tidak ada bola terbuka berpusat di yang termuat dalam . Dengan demikian bukan lingkungan dari .   Citra lingkungan di bawah fungsi kontinu  Putuskan benar atau salah: jika ruang-ruang metrik, kontinu, dan merupakan lingkungan dari , maka merupakan lingkungan dari dalam . Rubrik. Jika salah, pilih fungsi kontinu yang meruntuhkan seluruh lingkungan menjadi sebuah himpunan yang terlalu kecil.   Gunakan fungsi konstan dan sebuah interval terbuka sebagai .   Salah. Untuk fungsi konstan dan , berlaku , yang bukan lingkungan dari dalam garis real bermetrik Euklides.   Ambil dengan metrik Euklides, definisikan fungsi konstan , dan pilih serta . Fungsi konstan kontinu, dan merupakan lingkungan dari .  Namun . Untuk setiap , bola memuat titik , sehingga tidak termuat dalam . Jadi bukan lingkungan dari . Kekontinuan tidak menjamin bahwa citra lingkungan merupakan lingkungan.   Prapeta lingkungan di bawah fungsi yang kontinu di titik  Putuskan benar atau salah: jika ruang-ruang metrik, kontinu di , dan merupakan lingkungan dari , maka merupakan lingkungan dari . Rubrik. Mulailah dari bola yang termuat dalam dan terapkan definisi kekontinuan dengan radius bola tersebut sebagai toleransi keluaran.   Pilih dengan , lalu gunakan kekontinuan untuk memperoleh .   Benar. Kekontinuan menghasilkan .   Karena merupakan lingkungan dari , ada dengan . Kekontinuan di memberikan sedemikian sehingga mengakibatkan .  Jadi, jika , maka , sehingga . Dengan demikian . Prapeta tersebut memuat bola terbuka berpusat di , sehingga merupakan lingkungan dari .   Bola terbuka belum tentu memuat tak berhingga banyak titik  Putuskan benar atau salah: jika suatu titik dalam ruang metrik dan , maka bola terbuka memuat tak berhingga banyak titik dari . Rubrik. Jika salah, berikan ruang metrik eksplisit, pusat, dan radius positif, lalu hitung bolanya.   Gunakan himpunan berhingga dengan metrik diskret dan radius .   Salah. Dalam dengan metrik diskret, , yang hanya memuat satu titik.   Ambil dan metrik diskret jika , serta jika . Untuk dan , titik berada dalam tepat ketika . Hanya yang memenuhi syarat ini; tidak kurang dari . Jadi , suatu himpunan berhingga. Contoh ini membantah pernyataan tersebut.   Irisan berhingga lingkungan  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik untuk suatu bilangan bulat positif , maka merupakan lingkungan dari . Rubrik. Pilih satu radius positif untuk setiap lingkungan, lalu gunakan minimum dari himpunan radius yang berhingga.   Jika untuk , tetapkan .   Benar. Radius minimum memenuhi .   Untuk setiap , karena merupakan lingkungan dari , pilih sehingga . Himpunan berhingga dan tak kosong, sehingga ada dan positif.  Jika , maka untuk setiap berlaku . Jadi bagi semua . Karena itu , yang membuktikan bahwa irisan tersebut merupakan lingkungan dari .   Irisan sebarang keluarga lingkungan  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik untuk setiap dalam suatu himpunan indeks , maka merupakan lingkungan dari . Rubrik. Jika salah, gunakan keluarga terhitung lingkungan yang radiusnya menuju nol, hitung irisannya, dan buktikan bahwa irisan itu tidak memuat bola terbuka beradius positif.   Dalam , ambil untuk setiap bilangan bulat positif .   Salah. Setiap merupakan lingkungan dari , tetapi , yang bukan lingkungan dari dalam metrik Euklides.   Dalam , untuk setiap bilangan bulat positif , himpunan merupakan lingkungan dari . Titik berada dalam semua . Sebaliknya, jika , sifat Archimedes memberi bilangan bulat positif dengan . Maka , sehingga . Jadi   Himpunan bukan lingkungan dari : untuk setiap , titik berada dalam tetapi tidak berada dalam . Jadi irisan tak berhingga dari lingkungan-lingkungan tidak harus merupakan lingkungan.   "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-13",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-13",
+  "type": "Pemeriksaan",
+  "number": "G.29",
+  "title": "Keberadaan lingkungan yang memuat pusatnya.",
+  "body": "Keberadaan lingkungan yang memuat pusatnya  Misalkan ruang metrik dan . Buktikan bahwa terdapat suatu lingkungan yang memuat . Rubrik. Berikan satu himpunan konkret, tunjukkan bahwa himpunan itu memuat bola terbuka berpusat di , dan periksa bahwa sendiri berada di dalamnya.   Bola terbuka memuat dirinya sendiri dan selalu memuat pusat .   Himpunan adalah lingkungan dari yang memuat .   Ambil . Karena , definisi lingkungan langsung menunjukkan bahwa merupakan lingkungan dari . Selain itu, , sehingga . Jadi lingkungan yang diminta selalu ada.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-14",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-14",
+  "type": "Pemeriksaan",
+  "number": "G.30",
+  "title": "Himpunan yang lebih besar tetap merupakan lingkungan.",
+  "body": "Himpunan yang lebih besar tetap merupakan lingkungan  Misalkan merupakan lingkungan dari dan . Buktikan bahwa juga merupakan lingkungan dari . Rubrik. Mulailah dari bola yang dijamin oleh definisi lingkungan bagi , lalu gunakan transitivitas inklusi.   Ada dengan . Gabungkan inklusi ini dengan .   Benar. Bola yang membuktikan bahwa merupakan lingkungan juga termuat dalam .   Karena merupakan lingkungan dari , terdapat sedemikian sehingga . Hipotesis kemudian memberi Jadi memuat sebuah bola terbuka berpusat di . Menurut definisi, merupakan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-15",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-15",
+  "type": "Pemeriksaan",
+  "number": "G.31",
+  "title": "Irisan dua lingkungan.",
+  "body": "Irisan dua lingkungan  Misalkan dan merupakan lingkungan dari . Buktikan bahwa juga merupakan lingkungan dari . Rubrik. Nyatakan radius yang disediakan oleh masing-masing lingkungan dan gabungkan keduanya dengan operasi minimum.   Jika dan , pilih .   Benar. Bola termuat dalam .   Karena dan merupakan lingkungan dari , terdapat dengan dan . Tetapkan , yang tetap positif. Jika , maka dan . Jadi dan , sehingga . Maka irisan tersebut merupakan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-16",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-16",
+  "type": "Pemeriksaan",
+  "number": "G.32",
+  "title": "Kepositifan bertahan di sekitar suatu titik.",
+  "body": "Kepositifan bertahan di sekitar suatu titik  Misalkan kontinu dan untuk suatu . Buktikan bahwa terdapat lingkungan dari sedemikian sehingga untuk semua . Rubrik. Pilih toleransi keluaran sebagai fraksi eksplisit dari dan turunkan batas bawah positif bagi .   Terapkan kekontinuan di dengan .   Ambil . Radius kekontinuan yang sesuai menghasilkan lingkungan dengan bagi semua .   Karena , bilangan positif. Kekontinuan di memberikan sedemikian sehingga mengakibatkan . Tetapkan , yang merupakan lingkungan dari . Untuk setiap , Jadi tetap positif di seluruh lingkungan .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-17",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-17",
+  "type": "Pemeriksaan",
+  "number": "G.33",
+  "title": "Subhimpunan ruang diskret.",
+  "body": "Subhimpunan ruang diskret  Misalkan ruang metrik dengan sebagai metrik diskret. Buktikan bahwa setiap subhimpunan merupakan lingkungan dari setiap titiknya. Rubrik. Tetapkan titik sebarang , tentukan sebuah bola yang hanya memuat , dan bahas kasus .   Dalam metrik diskret, .   Benar. Untuk setiap , berlaku . Jika kosong, pernyataannya benar secara hampa.   Jika , tidak ada titik yang perlu diperiksa. Jika tidak kosong, tetapkan sebarang . Pada metrik diskret, bernilai ketika dan ketika . Karena bola terbuka memakai pertidaksamaan ketat, . Maka , sehingga merupakan lingkungan dari . Karena sebarang, klaim berlaku bagi setiap titik dalam .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-18",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-18",
+  "type": "Pemeriksaan",
+  "number": "G.34",
+  "title": "Bola di dalam lingkungan belum tentu berpusat tepat.",
+  "body": "Bola di dalam lingkungan belum tentu berpusat tepat  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik , maka setiap bola terbuka yang termuat dalam juga merupakan lingkungan dari . Rubrik. Jika salah, berikan ruang, titik, lingkungan, dan bola terbuka konkret; verifikasi inklusi serta kegagalan sifat lingkungan.   Dalam , sebuah lingkungan dari dapat memuat bola kecil yang berpusat jauh dari dan bahkan tidak memuat .   Salah. Dalam , ambil , , dan bola . Bola itu termuat dalam , tetapi bukan lingkungan dari .   Dalam , himpunan merupakan lingkungan dari , misalnya karena . Bola terbuka memenuhi .  Akan tetapi, . Setiap lingkungan dari harus memuat , sebab setiap bola terbuka berpusat di memuat pusatnya. Jadi bukan lingkungan dari . Contoh ini membantah pernyataan universal tersebut.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-19",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-19",
+  "type": "Pemeriksaan",
+  "number": "G.35",
+  "title": "Lingkungan dari satu titik belum tentu terbuka.",
+  "body": "Lingkungan dari satu titik belum tentu terbuka  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik , maka merupakan lingkungan dari setiap titiknya. Rubrik. Jika salah, buat himpunan yang memuat satu interval terbuka di sekitar dan satu titik tambahan yang tidak mempunyai ruang terbuka di dalam himpunan itu.   Pertimbangkan dalam , dengan .   Salah. Himpunan merupakan lingkungan dari , tetapi bukan lingkungan dari titiknya .   Dalam , ambil . Karena , himpunan merupakan lingkungan dari . Selain itu, .  Untuk sebarang , tetapkan dan . Maka , tetapi dan , sehingga . Jadi tidak ada bola terbuka berpusat di yang termuat dalam . Dengan demikian bukan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-20",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-20",
+  "type": "Pemeriksaan",
+  "number": "G.36",
+  "title": "Citra lingkungan di bawah fungsi kontinu.",
+  "body": "Citra lingkungan di bawah fungsi kontinu  Putuskan benar atau salah: jika ruang-ruang metrik, kontinu, dan merupakan lingkungan dari , maka merupakan lingkungan dari dalam . Rubrik. Jika salah, pilih fungsi kontinu yang meruntuhkan seluruh lingkungan menjadi sebuah himpunan yang terlalu kecil.   Gunakan fungsi konstan dan sebuah interval terbuka sebagai .   Salah. Untuk fungsi konstan dan , berlaku , yang bukan lingkungan dari dalam garis real bermetrik Euklides.   Ambil dengan metrik Euklides, definisikan fungsi konstan , dan pilih serta . Fungsi konstan kontinu, dan merupakan lingkungan dari .  Namun . Untuk setiap , bola memuat titik , sehingga tidak termuat dalam . Jadi bukan lingkungan dari . Kekontinuan tidak menjamin bahwa citra lingkungan merupakan lingkungan.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-21",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-21",
+  "type": "Pemeriksaan",
+  "number": "G.37",
+  "title": "Prapeta lingkungan di bawah fungsi yang kontinu di titik.",
+  "body": "Prapeta lingkungan di bawah fungsi yang kontinu di titik  Putuskan benar atau salah: jika ruang-ruang metrik, kontinu di , dan merupakan lingkungan dari , maka merupakan lingkungan dari . Rubrik. Mulailah dari bola yang termuat dalam dan terapkan definisi kekontinuan dengan radius bola tersebut sebagai toleransi keluaran.   Pilih dengan , lalu gunakan kekontinuan untuk memperoleh .   Benar. Kekontinuan menghasilkan .   Karena merupakan lingkungan dari , ada dengan . Kekontinuan di memberikan sedemikian sehingga mengakibatkan .  Jadi, jika , maka , sehingga . Dengan demikian . Prapeta tersebut memuat bola terbuka berpusat di , sehingga merupakan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-22",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-22",
+  "type": "Pemeriksaan",
+  "number": "G.38",
+  "title": "Bola terbuka belum tentu memuat tak berhingga banyak titik.",
+  "body": "Bola terbuka belum tentu memuat tak berhingga banyak titik  Putuskan benar atau salah: jika suatu titik dalam ruang metrik dan , maka bola terbuka memuat tak berhingga banyak titik dari . Rubrik. Jika salah, berikan ruang metrik eksplisit, pusat, dan radius positif, lalu hitung bolanya.   Gunakan himpunan berhingga dengan metrik diskret dan radius .   Salah. Dalam dengan metrik diskret, , yang hanya memuat satu titik.   Ambil dan metrik diskret jika , serta jika . Untuk dan , titik berada dalam tepat ketika . Hanya yang memenuhi syarat ini; tidak kurang dari . Jadi , suatu himpunan berhingga. Contoh ini membantah pernyataan tersebut.  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-23",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-23",
+  "type": "Pemeriksaan",
+  "number": "G.39",
+  "title": "Irisan berhingga lingkungan.",
+  "body": "Irisan berhingga lingkungan  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik untuk suatu bilangan bulat positif , maka merupakan lingkungan dari . Rubrik. Pilih satu radius positif untuk setiap lingkungan, lalu gunakan minimum dari himpunan radius yang berhingga.   Jika untuk , tetapkan .   Benar. Radius minimum memenuhi .   Untuk setiap , karena merupakan lingkungan dari , pilih sehingga . Himpunan berhingga dan tak kosong, sehingga ada dan positif.  Jika , maka untuk setiap berlaku . Jadi bagi semua . Karena itu , yang membuktikan bahwa irisan tersebut merupakan lingkungan dari .  "
+},
+{
+  "id": "o003-c90-ch07-exercise-task-24",
+  "level": "2",
+  "url": "o003-c90-ch07-exercise-guides-b.html#o003-c90-ch07-exercise-task-24",
+  "type": "Pemeriksaan",
+  "number": "G.40",
+  "title": "Irisan sebarang keluarga lingkungan.",
+  "body": "Irisan sebarang keluarga lingkungan  Putuskan benar atau salah: jika merupakan lingkungan dari dalam ruang metrik untuk setiap dalam suatu himpunan indeks , maka merupakan lingkungan dari . Rubrik. Jika salah, gunakan keluarga terhitung lingkungan yang radiusnya menuju nol, hitung irisannya, dan buktikan bahwa irisan itu tidak memuat bola terbuka beradius positif.   Dalam , ambil untuk setiap bilangan bulat positif .   Salah. Setiap merupakan lingkungan dari , tetapi , yang bukan lingkungan dari dalam metrik Euklides.   Dalam , untuk setiap bilangan bulat positif , himpunan merupakan lingkungan dari . Titik berada dalam semua . Sebaliknya, jika , sifat Archimedes memberi bilangan bulat positif dengan . Maka , sehingga . Jadi   Himpunan bukan lingkungan dari : untuk setiap , titik berada dalam tetapi tidak berada dalam . Jadi irisan tak berhingga dari lingkungan-lingkungan tidak harus merupakan lingkungan.  "
+},
+{
+  "id": "o003-c90-ch07-mastery",
+  "level": "1",
+  "url": "o003-c90-ch07-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 7",
+  "body": " Pemeriksaan penguasaan Bab 7  Enam soal berikut menggabungkan geometri bola, lingkungan, kekontinuan, dan contoh penyangkal. Setiap soal merupakan materi asli pendamping. Cobalah menyusun bukti lengkap sebelum membuka bantuan bertahap.  Empat metrik dan empat bentuk bola  Pada , gambarkan dan nyatakan dengan pertidaksamaan bola berjari-jari yang berpusat di untuk metrik Euklides , metrik maksimum , metrik taksi , dan metrik diskret . Buktikan bahwa    Tuliskan syarat jarak kurang dari untuk setiap metrik. Untuk inklusi, gunakan . Untuk ketatnya inklusi, uji titik pada sumbu, lalu titik dan .   Untuk bolanya ialah cakram ; untuk , persegi terbuka ; untuk , belah ketupat ; dan untuk , singleton . Semua inklusi yang ditampilkan bersifat ketat.   Dari definisi masing-masing metrik diperoleh Untuk setiap , berlaku . Karena itu, syarat norma satu kurang dari mengakibatkan syarat norma dua, dan syarat norma dua mengakibatkan syarat norma maksimum. Bola diskret jelas termuat dalam semuanya.  Inklusinya ketat: berada dalam bola taksi tetapi bukan dalam bola diskret; berada dalam bola Euklides karena , tetapi tidak dalam bola taksi karena ; dan berada dalam bola maksimum, tetapi tidak dalam bola Euklides karena .   Ruang yang tersisa di dalam bola terbuka  Misalkan suatu ruang metrik, , dan . Nyatakan jari-jari residu alami yang berpusat di , buktikan bahwa jari-jari tersebut positif, lalu buktikan bahwa bola yang dihasilkannya termuat dalam .   Ukur bagian jari-jari yang belum dipakai oleh jarak . Untuk titik dalam bola baru, terapkan pertidaksamaan segitiga pada dan pertahankan pertidaksamaan ketatnya.   Ambil . Karena , berlaku , dan .   Keanggotaan berarti , sehingga . Jika , maka Jadi . Karena dipilih sebarang, . Inilah alasan setiap bola terbuka merupakan lingkungan bagi setiap titiknya.   Tiga bentuk yang setara untuk kekontinuan  Untuk fungsi dan , buktikan kesetaraan ketiga syarat berikut: definisi epsilon-delta; untuk setiap terdapat dengan ; dan prapeta setiap lingkungan bagi merupakan lingkungan bagi . Kemudian gunakan di untuk menjelaskan mengapa prapeta bola tidak harus menjadi bola yang berpusat di .   Kesetaraan dua syarat pertama hanyalah penerjemahan keanggotaan bola. Untuk lingkungan umum, sisipkan sebuah bola di dalam lingkungan. Untuk arah sebaliknya, gunakan fakta bahwa merupakan lingkungan bagi pusatnya. Pada contoh konkret, selesaikan .   Ketiga syarat setara. Untuk , , yang bukan satu interval dan karena itu bukan bola Euklides yang berpusat di .   Untuk , keanggotaan tepat berarti , sedangkan tepat berarti . Jadi implikasi epsilon-delta untuk semua setara tepat dengan inklusi kedua bola tersebut.  Andaikan syarat inklusi bola berlaku dan suatu lingkungan bagi . Ada dengan . Pilih dari syarat inklusi. Maka sehingga merupakan lingkungan bagi .  Sebaliknya, andaikan sifat prapeta lingkungan berlaku. Untuk , bola merupakan lingkungan bagi . Prapetanya karena itu merupakan lingkungan bagi , sehingga memuat untuk suatu . Ini menghasilkan syarat inklusi bola dan menutup siklus kesetaraan.  Pada contoh , bola sasaran ialah . Menyelesaikan memberi dua interval terpisah . Prapeta ini memuat bola kecil di sekitar , tetapi bukan dirinya sendiri sebuah bola yang berpusat di .   Metrik graf berhingga yang lengkap  Ambil lintasan berbobot dengan bobot sisi berturut-turut , dan definisikan jarak sebagai panjang lintasan terpendek. Daftarkan semua bola berbeda untuk , cirikan semua lingkungan bagi , lalu buktikan bahwa setiap fungsi dari ruang ini ke sembarang ruang metrik bersifat kontinu.   Hitung dahulu dan ingat bahwa syarat bola adalah jarak kurang dari jari-jari. Untuk kekontinuan, cari bola singleton di setiap simpul.   Jarak dari ialah . Bola-bolanya adalah untuk , untuk , untuk , dan seluruh ruang untuk . Semua subhimpunan yang memuat merupakan lingkungan bagi , dan setiap fungsi dari ruang tersebut kontinu.   Karena graf adalah lintasan, satu-satunya lintasan sederhana dari ke setiap simpul memberi , , , dan . Membandingkan angka-angka ini dengan syarat menghasilkan tepat empat rezim bola yang dinyatakan pada jawaban.  Karena , setiap himpunan yang memuat juga memuat bola tersebut dan merupakan lingkungan bagi . Sebaliknya, setiap lingkungan bagi harus memuat pusatnya, jadi pencirian itu tepat.  Di setiap simpul , jarak minimum dari ke simpul lain bernilai positif. Pilih jari-jari sebesar jarak minimum tersebut; karena pertidaksamaan bola ketat, bola yang dihasilkan adalah . Untuk fungsi sebarang dan toleransi keluaran sebarang, gunakan bola singleton ini sebagai lingkungan masukan. Setiap di dalamnya sama dengan , sehingga jarak keluarannya nol. Jadi setiap fungsi kontinu di setiap simpul.   Irisan berhingga dan irisan tak berhingga  Buktikan bahwa irisan setiap keluarga berhingga yang tak kosong dari lingkungan bagi titik kembali merupakan lingkungan bagi . Kemudian berikan contoh yang menunjukkan bahwa pernyataan tersebut dapat gagal untuk keluarga tak berhingga.   Untuk banyak lingkungan berhingga, ambil minimum dari jari-jari saksi. Untuk menyangkal versi tak berhingga, gunakan interval terbuka yang menyusut ke dalam .   Jika untuk , maka jari-jari menyaksikan bahwa merupakan lingkungan. Untuk keluarga tak berhingga, setiap merupakan lingkungan bagi , tetapi irisannya adalah , yang bukan lingkungan bagi dalam metrik Euklides.   Misalkan dan lingkungan bagi . Untuk setiap , pilih dengan . Karena hanya ada berhingga banyak jari-jari positif, tetap positif. Maka untuk setiap , sehingga .  Dalam , tetapkan . Setiap adalah bola terbuka dan karena itu lingkungan bagi . Namun, satu-satunya bilangan real yang berada dalam semua interval tersebut ialah , jadi . Setiap bola Euklides berjari-jari positif di sekitar memuat titik selain , sehingga tidak ada bola demikian yang termuat dalam . Irisan itu bukan lingkungan.   Arah prapeta dan citra lingkungan  Misalkan kontinu di . Buktikan bahwa prapeta setiap lingkungan bagi merupakan lingkungan bagi . Sangkal pernyataan serupa bahwa citra setiap lingkungan bagi harus merupakan lingkungan bagi . Terakhir, nyatakan satu hipotesis tambahan yang cukup agar pernyataan tentang citra menjadi benar.   Gunakan pencirian kekontinuan dengan lingkungan untuk prapeta. Untuk citra, uji fungsi konstan dari ke . Hipotesis tambahan yang berguna ialah bahwa merupakan pemetaan terbuka: citra setiap himpunan terbuka harus terbuka.   Pernyataan prapeta benar menurut pencirian kekontinuan. Pernyataan citra salah: fungsi konstan , , memetakan setiap lingkungan ke singleton , yang bukan lingkungan bagi dalam metrik Euklides. Jika kontinu dan juga merupakan pemetaan terbuka, maka citra setiap lingkungan bagi merupakan lingkungan bagi .   Karena kontinu di , teorema lingkungan menyatakan langsung bahwa untuk setiap lingkungan bagi , himpunan merupakan lingkungan bagi . Arah prapeta ini sesuai dengan urutan kuantor dalam definisi kekontinuan.  Untuk arah citra, ambil fungsi konstan dengan . Fungsi ini kontinu. Jika , maka merupakan lingkungan bagi , tetapi . Singleton tersebut tidak memuat bola Euklides berjari-jari positif di sekitar , jadi bukan lingkungan.  Sekarang andaikan, sebagai tambahan, bahwa merupakan pemetaan terbuka. Jika lingkungan bagi , pilih dengan . Himpunan terbuka, sehingga terbuka karena pemetaan terbuka. Himpunan itu memuat dan termuat dalam . Jadi memuat suatu lingkungan terbuka bagi dan karenanya merupakan lingkungan bagi .   "
+},
+{
+  "id": "o003-c90-ch07-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch07-mastery.html#o003-c90-ch07-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "G.41",
+  "title": "Empat metrik dan empat bentuk bola.",
+  "body": "Empat metrik dan empat bentuk bola  Pada , gambarkan dan nyatakan dengan pertidaksamaan bola berjari-jari yang berpusat di untuk metrik Euklides , metrik maksimum , metrik taksi , dan metrik diskret . Buktikan bahwa    Tuliskan syarat jarak kurang dari untuk setiap metrik. Untuk inklusi, gunakan . Untuk ketatnya inklusi, uji titik pada sumbu, lalu titik dan .   Untuk bolanya ialah cakram ; untuk , persegi terbuka ; untuk , belah ketupat ; dan untuk , singleton . Semua inklusi yang ditampilkan bersifat ketat.   Dari definisi masing-masing metrik diperoleh Untuk setiap , berlaku . Karena itu, syarat norma satu kurang dari mengakibatkan syarat norma dua, dan syarat norma dua mengakibatkan syarat norma maksimum. Bola diskret jelas termuat dalam semuanya.  Inklusinya ketat: berada dalam bola taksi tetapi bukan dalam bola diskret; berada dalam bola Euklides karena , tetapi tidak dalam bola taksi karena ; dan berada dalam bola maksimum, tetapi tidak dalam bola Euklides karena .  "
+},
+{
+  "id": "o003-c90-ch07-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch07-mastery.html#o003-c90-ch07-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "G.42",
+  "title": "Ruang yang tersisa di dalam bola terbuka.",
+  "body": "Ruang yang tersisa di dalam bola terbuka  Misalkan suatu ruang metrik, , dan . Nyatakan jari-jari residu alami yang berpusat di , buktikan bahwa jari-jari tersebut positif, lalu buktikan bahwa bola yang dihasilkannya termuat dalam .   Ukur bagian jari-jari yang belum dipakai oleh jarak . Untuk titik dalam bola baru, terapkan pertidaksamaan segitiga pada dan pertahankan pertidaksamaan ketatnya.   Ambil . Karena , berlaku , dan .   Keanggotaan berarti , sehingga . Jika , maka Jadi . Karena dipilih sebarang, . Inilah alasan setiap bola terbuka merupakan lingkungan bagi setiap titiknya.  "
+},
+{
+  "id": "o003-c90-ch07-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch07-mastery.html#o003-c90-ch07-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "G.43",
+  "title": "Tiga bentuk yang setara untuk kekontinuan.",
+  "body": "Tiga bentuk yang setara untuk kekontinuan  Untuk fungsi dan , buktikan kesetaraan ketiga syarat berikut: definisi epsilon-delta; untuk setiap terdapat dengan ; dan prapeta setiap lingkungan bagi merupakan lingkungan bagi . Kemudian gunakan di untuk menjelaskan mengapa prapeta bola tidak harus menjadi bola yang berpusat di .   Kesetaraan dua syarat pertama hanyalah penerjemahan keanggotaan bola. Untuk lingkungan umum, sisipkan sebuah bola di dalam lingkungan. Untuk arah sebaliknya, gunakan fakta bahwa merupakan lingkungan bagi pusatnya. Pada contoh konkret, selesaikan .   Ketiga syarat setara. Untuk , , yang bukan satu interval dan karena itu bukan bola Euklides yang berpusat di .   Untuk , keanggotaan tepat berarti , sedangkan tepat berarti . Jadi implikasi epsilon-delta untuk semua setara tepat dengan inklusi kedua bola tersebut.  Andaikan syarat inklusi bola berlaku dan suatu lingkungan bagi . Ada dengan . Pilih dari syarat inklusi. Maka sehingga merupakan lingkungan bagi .  Sebaliknya, andaikan sifat prapeta lingkungan berlaku. Untuk , bola merupakan lingkungan bagi . Prapetanya karena itu merupakan lingkungan bagi , sehingga memuat untuk suatu . Ini menghasilkan syarat inklusi bola dan menutup siklus kesetaraan.  Pada contoh , bola sasaran ialah . Menyelesaikan memberi dua interval terpisah . Prapeta ini memuat bola kecil di sekitar , tetapi bukan dirinya sendiri sebuah bola yang berpusat di .  "
+},
+{
+  "id": "o003-c90-ch07-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch07-mastery.html#o003-c90-ch07-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "G.44",
+  "title": "Metrik graf berhingga yang lengkap.",
+  "body": "Metrik graf berhingga yang lengkap  Ambil lintasan berbobot dengan bobot sisi berturut-turut , dan definisikan jarak sebagai panjang lintasan terpendek. Daftarkan semua bola berbeda untuk , cirikan semua lingkungan bagi , lalu buktikan bahwa setiap fungsi dari ruang ini ke sembarang ruang metrik bersifat kontinu.   Hitung dahulu dan ingat bahwa syarat bola adalah jarak kurang dari jari-jari. Untuk kekontinuan, cari bola singleton di setiap simpul.   Jarak dari ialah . Bola-bolanya adalah untuk , untuk , untuk , dan seluruh ruang untuk . Semua subhimpunan yang memuat merupakan lingkungan bagi , dan setiap fungsi dari ruang tersebut kontinu.   Karena graf adalah lintasan, satu-satunya lintasan sederhana dari ke setiap simpul memberi , , , dan . Membandingkan angka-angka ini dengan syarat menghasilkan tepat empat rezim bola yang dinyatakan pada jawaban.  Karena , setiap himpunan yang memuat juga memuat bola tersebut dan merupakan lingkungan bagi . Sebaliknya, setiap lingkungan bagi harus memuat pusatnya, jadi pencirian itu tepat.  Di setiap simpul , jarak minimum dari ke simpul lain bernilai positif. Pilih jari-jari sebesar jarak minimum tersebut; karena pertidaksamaan bola ketat, bola yang dihasilkan adalah . Untuk fungsi sebarang dan toleransi keluaran sebarang, gunakan bola singleton ini sebagai lingkungan masukan. Setiap di dalamnya sama dengan , sehingga jarak keluarannya nol. Jadi setiap fungsi kontinu di setiap simpul.  "
+},
+{
+  "id": "o003-c90-ch07-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch07-mastery.html#o003-c90-ch07-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "G.45",
+  "title": "Irisan berhingga dan irisan tak berhingga.",
+  "body": "Irisan berhingga dan irisan tak berhingga  Buktikan bahwa irisan setiap keluarga berhingga yang tak kosong dari lingkungan bagi titik kembali merupakan lingkungan bagi . Kemudian berikan contoh yang menunjukkan bahwa pernyataan tersebut dapat gagal untuk keluarga tak berhingga.   Untuk banyak lingkungan berhingga, ambil minimum dari jari-jari saksi. Untuk menyangkal versi tak berhingga, gunakan interval terbuka yang menyusut ke dalam .   Jika untuk , maka jari-jari menyaksikan bahwa merupakan lingkungan. Untuk keluarga tak berhingga, setiap merupakan lingkungan bagi , tetapi irisannya adalah , yang bukan lingkungan bagi dalam metrik Euklides.   Misalkan dan lingkungan bagi . Untuk setiap , pilih dengan . Karena hanya ada berhingga banyak jari-jari positif, tetap positif. Maka untuk setiap , sehingga .  Dalam , tetapkan . Setiap adalah bola terbuka dan karena itu lingkungan bagi . Namun, satu-satunya bilangan real yang berada dalam semua interval tersebut ialah , jadi . Setiap bola Euklides berjari-jari positif di sekitar memuat titik selain , sehingga tidak ada bola demikian yang termuat dalam . Irisan itu bukan lingkungan.  "
+},
+{
+  "id": "o003-c90-ch07-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch07-mastery.html#o003-c90-ch07-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "G.46",
+  "title": "Arah prapeta dan citra lingkungan.",
+  "body": "Arah prapeta dan citra lingkungan  Misalkan kontinu di . Buktikan bahwa prapeta setiap lingkungan bagi merupakan lingkungan bagi . Sangkal pernyataan serupa bahwa citra setiap lingkungan bagi harus merupakan lingkungan bagi . Terakhir, nyatakan satu hipotesis tambahan yang cukup agar pernyataan tentang citra menjadi benar.   Gunakan pencirian kekontinuan dengan lingkungan untuk prapeta. Untuk citra, uji fungsi konstan dari ke . Hipotesis tambahan yang berguna ialah bahwa merupakan pemetaan terbuka: citra setiap himpunan terbuka harus terbuka.   Pernyataan prapeta benar menurut pencirian kekontinuan. Pernyataan citra salah: fungsi konstan , , memetakan setiap lingkungan ke singleton , yang bukan lingkungan bagi dalam metrik Euklides. Jika kontinu dan juga merupakan pemetaan terbuka, maka citra setiap lingkungan bagi merupakan lingkungan bagi .   Karena kontinu di , teorema lingkungan menyatakan langsung bahwa untuk setiap lingkungan bagi , himpunan merupakan lingkungan bagi . Arah prapeta ini sesuai dengan urutan kuantor dalam definisi kekontinuan.  Untuk arah citra, ambil fungsi konstan dengan . Fungsi ini kontinu. Jika , maka merupakan lingkungan bagi , tetapi . Singleton tersebut tidak memuat bola Euklides berjari-jari positif di sekitar , jadi bukan lingkungan.  Sekarang andaikan, sebagai tambahan, bahwa merupakan pemetaan terbuka. Jika lingkungan bagi , pilih dengan . Himpunan terbuka, sehingga terbuka karena pemetaan terbuka. Himpunan itu memuat dan termuat dalam . Jadi memuat suatu lingkungan terbuka bagi dan karenanya merupakan lingkungan bagi .  "
 },
 {
   "id": "index-1",

@@ -1,0 +1,506 @@
+<section xml:id="o003-c90-ch07-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian kedua</title>
+
+  <p>
+    Dua belas panduan berikut berkorespondensi dengan perintah ke-13 sampai
+    ke-24 pada bagian latihan Bab 7 menurut urutan kedalaman sumber. Materi
+    pendamping ini merupakan uraian asli untuk pembelajaran mandiri, bukan
+    jawaban yang disediakan oleh penulis karya sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-13">
+    <title>Keberadaan lingkungan yang memuat pusatnya</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik dan <m>a\in X</m>. Buktikan bahwa
+        terdapat suatu lingkungan yang memuat <m>a</m>.
+        <em>Rubrik.</em> Berikan satu himpunan konkret, tunjukkan bahwa
+        himpunan itu memuat bola terbuka berpusat di <m>a</m>, dan periksa
+        bahwa <m>a</m> sendiri berada di dalamnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-13-hint">
+      <p>
+        Bola terbuka <m>B(a,1)</m> memuat dirinya sendiri dan selalu memuat
+        pusat <m>a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-13-answer">
+      <p>
+        Himpunan <m>B(a,1)</m> adalah lingkungan dari <m>a</m> yang memuat
+        <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-13-solution">
+      <p>
+        Ambil <m>N=B(a,1)</m>. Karena
+        <m>B(a,1)\subseteq N</m>, definisi lingkungan langsung menunjukkan
+        bahwa <m>N</m> merupakan lingkungan dari <m>a</m>. Selain itu,
+        <m>d(a,a)=0\lt1</m>, sehingga <m>a\in B(a,1)=N</m>. Jadi lingkungan
+        yang diminta selalu ada.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-14">
+    <title>Himpunan yang lebih besar tetap merupakan lingkungan</title>
+    <statement>
+      <p>
+        Misalkan <m>N</m> merupakan lingkungan dari <m>a</m> dan
+        <m>N\subseteq M</m>. Buktikan bahwa <m>M</m> juga merupakan
+        lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Mulailah dari bola yang dijamin oleh definisi
+        lingkungan bagi <m>N</m>, lalu gunakan transitivitas inklusi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-14-hint">
+      <p>
+        Ada <m>\delta\gt0</m> dengan
+        <m>B(a,\delta)\subseteq N</m>. Gabungkan inklusi ini dengan
+        <m>N\subseteq M</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-14-answer">
+      <p>
+        Benar. Bola yang membuktikan bahwa <m>N</m> merupakan lingkungan juga
+        termuat dalam <m>M</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-14-solution">
+      <p>
+        Karena <m>N</m> merupakan lingkungan dari <m>a</m>, terdapat
+        <m>\delta\gt0</m> sedemikian sehingga
+        <m>B(a,\delta)\subseteq N</m>. Hipotesis <m>N\subseteq M</m>
+        kemudian memberi
+        <me>
+          B(a,\delta)\subseteq N\subseteq M.
+        </me>
+        Jadi <m>M</m> memuat sebuah bola terbuka berpusat di <m>a</m>.
+        Menurut definisi, <m>M</m> merupakan lingkungan dari <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-15">
+    <title>Irisan dua lingkungan</title>
+    <statement>
+      <p>
+        Misalkan <m>M</m> dan <m>N</m> merupakan lingkungan dari
+        <m>a</m>. Buktikan bahwa <m>M\cap N</m> juga merupakan lingkungan
+        dari <m>a</m>.
+        <em>Rubrik.</em> Nyatakan radius yang disediakan oleh masing-masing
+        lingkungan dan gabungkan keduanya dengan operasi minimum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-15-hint">
+      <p>
+        Jika <m>B(a,r_M)\subseteq M</m> dan
+        <m>B(a,r_N)\subseteq N</m>, pilih
+        <m>r=\min\{r_M,r_N\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-15-answer">
+      <p>
+        Benar. Bola
+        <m>B(a,\min\{r_M,r_N\})</m> termuat dalam <m>M\cap N</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-15-solution">
+      <p>
+        Karena <m>M</m> dan <m>N</m> merupakan lingkungan dari <m>a</m>,
+        terdapat <m>r_M,r_N\gt0</m> dengan
+        <m>B(a,r_M)\subseteq M</m> dan
+        <m>B(a,r_N)\subseteq N</m>. Tetapkan
+        <m>r=\min\{r_M,r_N\}</m>, yang tetap positif. Jika
+        <m>x\in B(a,r)</m>, maka
+        <m>d(x,a)\lt r\leq r_M</m> dan
+        <m>d(x,a)\lt r\leq r_N</m>. Jadi <m>x\in M</m> dan
+        <m>x\in N</m>, sehingga
+        <m>B(a,r)\subseteq M\cap N</m>. Maka irisan tersebut merupakan
+        lingkungan dari <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-16">
+    <title>Kepositifan bertahan di sekitar suatu titik</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(\R,d_E)\to(\R,d_E)</m> kontinu dan
+        <m>f(a)\gt0</m> untuk suatu <m>a\in\R</m>. Buktikan bahwa terdapat
+        lingkungan <m>N</m> dari <m>a</m> sedemikian sehingga
+        <m>f(x)\gt0</m> untuk semua <m>x\in N</m>.
+        <em>Rubrik.</em> Pilih toleransi keluaran sebagai fraksi eksplisit
+        dari <m>f(a)</m> dan turunkan batas bawah positif bagi <m>f(x)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-16-hint">
+      <p>
+        Terapkan kekontinuan di <m>a</m> dengan
+        <m>\epsilon=f(a)/2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-16-answer">
+      <p>
+        Ambil <m>\epsilon=f(a)/2</m>. Radius kekontinuan yang sesuai
+        menghasilkan lingkungan <m>N=B(a,\delta)</m> dengan
+        <m>f(x)\gt f(a)/2\gt0</m> bagi semua <m>x\in N</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-16-solution">
+      <p>
+        Karena <m>f(a)\gt0</m>, bilangan
+        <m>\epsilon=f(a)/2</m> positif. Kekontinuan <m>f</m> di <m>a</m>
+        memberikan <m>\delta\gt0</m> sedemikian sehingga
+        <m>|x-a|\lt\delta</m> mengakibatkan
+        <m>|f(x)-f(a)|\lt f(a)/2</m>. Tetapkan
+        <m>N=B(a,\delta)</m>, yang merupakan lingkungan dari <m>a</m>.
+        Untuk setiap <m>x\in N</m>,
+        <me>
+          f(x)\gt f(a)-\frac{f(a)}{2}=\frac{f(a)}{2}\gt0.
+        </me>
+        Jadi <m>f</m> tetap positif di seluruh lingkungan <m>N</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-17">
+    <title>Subhimpunan ruang diskret</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik dengan <m>d</m> sebagai metrik
+        diskret. Buktikan bahwa setiap subhimpunan <m>A\subseteq X</m>
+        merupakan lingkungan dari setiap titiknya.
+        <em>Rubrik.</em> Tetapkan titik sebarang <m>a\in A</m>, tentukan
+        sebuah bola yang hanya memuat <m>a</m>, dan bahas kasus
+        <m>A=\emptyset</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-17-hint">
+      <p>
+        Dalam metrik diskret, <m>B(a,1)=\{a\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-17-answer">
+      <p>
+        Benar. Untuk setiap <m>a\in A</m>, berlaku
+        <m>B(a,1)=\{a\}\subseteq A</m>. Jika <m>A</m> kosong, pernyataannya
+        benar secara hampa.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-17-solution">
+      <p>
+        Jika <m>A=\emptyset</m>, tidak ada titik <m>a\in A</m> yang perlu
+        diperiksa. Jika <m>A</m> tidak kosong, tetapkan sebarang
+        <m>a\in A</m>. Pada metrik diskret, <m>d(x,a)</m> bernilai
+        <m>0</m> ketika <m>x=a</m> dan <m>1</m> ketika <m>x\neq a</m>.
+        Karena bola terbuka memakai pertidaksamaan ketat,
+        <m>B(a,1)=\{a\}</m>. Maka
+        <m>B(a,1)\subseteq A</m>, sehingga <m>A</m> merupakan lingkungan dari
+        <m>a</m>. Karena <m>a</m> sebarang, klaim berlaku bagi setiap titik
+        dalam <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-18">
+    <title>Bola di dalam lingkungan belum tentu berpusat tepat</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>N</m> merupakan lingkungan dari
+        <m>a</m> dalam ruang metrik <m>X</m>, maka setiap bola terbuka yang
+        termuat dalam <m>N</m> juga merupakan lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Jika salah, berikan ruang, titik, lingkungan, dan bola
+        terbuka konkret; verifikasi inklusi serta kegagalan sifat lingkungan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-18-hint">
+      <p>
+        Dalam <m>\R</m>, sebuah lingkungan dari <m>0</m> dapat memuat bola
+        kecil yang berpusat jauh dari <m>0</m> dan bahkan tidak memuat
+        <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-18-answer">
+      <p>
+        Salah. Dalam <m>(\R,d_E)</m>, ambil <m>a=0</m>,
+        <m>N=(-2,2)</m>, dan bola <m>B(1,1/4)=(3/4,5/4)</m>. Bola itu termuat
+        dalam <m>N</m>, tetapi bukan lingkungan dari <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-18-solution">
+      <p>
+        Dalam <m>(\R,d_E)</m>, himpunan <m>N=(-2,2)</m> merupakan
+        lingkungan dari <m>a=0</m>, misalnya karena
+        <m>B(0,1)\subseteq N</m>. Bola terbuka
+        <m>U=B(1,1/4)=(3/4,5/4)</m> memenuhi <m>U\subseteq N</m>.
+      </p>
+      <p>
+        Akan tetapi, <m>0\notin U</m>. Setiap lingkungan dari <m>0</m> harus
+        memuat <m>0</m>, sebab setiap bola terbuka berpusat di <m>0</m>
+        memuat pusatnya. Jadi <m>U</m> bukan lingkungan dari <m>0</m>.
+        Contoh ini membantah pernyataan universal tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-19">
+    <title>Lingkungan dari satu titik belum tentu terbuka</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>N</m> merupakan lingkungan dari
+        <m>a</m> dalam ruang metrik <m>X</m>, maka <m>N</m> merupakan
+        lingkungan dari setiap titiknya.
+        <em>Rubrik.</em> Jika salah, buat himpunan yang memuat satu interval
+        terbuka di sekitar <m>a</m> dan satu titik tambahan yang tidak
+        mempunyai ruang terbuka di dalam himpunan itu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-19-hint">
+      <p>
+        Pertimbangkan <m>N=(-1,1)\cup\{2\}</m> dalam <m>\R</m>, dengan
+        <m>a=0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-19-answer">
+      <p>
+        Salah. Himpunan <m>N=(-1,1)\cup\{2\}</m> merupakan lingkungan dari
+        <m>0</m>, tetapi bukan lingkungan dari titiknya <m>2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-19-solution">
+      <p>
+        Dalam <m>(\R,d_E)</m>, ambil
+        <m>N=(-1,1)\cup\{2\}</m>. Karena <m>B(0,1)=(-1,1)\subseteq N</m>,
+        himpunan <m>N</m> merupakan lingkungan dari <m>a=0</m>. Selain itu,
+        <m>2\in N</m>.
+      </p>
+      <p>
+        Untuk sebarang <m>\delta\gt0</m>, tetapkan
+        <m>t=\min\{\delta/2,1/2\}</m> dan <m>x=2+t</m>. Maka
+        <m>0\lt|x-2|=t\lt\delta</m>, tetapi <m>x\notin(-1,1)</m> dan
+        <m>x\neq2</m>, sehingga <m>x\notin N</m>. Jadi tidak ada bola terbuka
+        berpusat di <m>2</m> yang termuat dalam <m>N</m>. Dengan demikian
+        <m>N</m> bukan lingkungan dari <m>2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-20">
+    <title>Citra lingkungan di bawah fungsi kontinu</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>X,Y</m> ruang-ruang metrik,
+        <m>f:X\to Y</m> kontinu, dan <m>N</m> merupakan lingkungan dari
+        <m>a\in X</m>, maka <m>f(N)</m> merupakan lingkungan dari
+        <m>f(a)</m> dalam <m>Y</m>.
+        <em>Rubrik.</em> Jika salah, pilih fungsi kontinu yang meruntuhkan
+        seluruh lingkungan menjadi sebuah himpunan yang terlalu kecil.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-20-hint">
+      <p>
+        Gunakan fungsi konstan <m>f:\R\to\R</m> dan sebuah interval terbuka
+        sebagai <m>N</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-20-answer">
+      <p>
+        Salah. Untuk fungsi konstan <m>f(x)=0</m> dan
+        <m>N=(-1,1)</m>, berlaku <m>f(N)=\{0\}</m>, yang bukan lingkungan dari
+        <m>f(0)=0</m> dalam garis real bermetrik Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-20-solution">
+      <p>
+        Ambil <m>X=Y=\R</m> dengan metrik Euklides, definisikan fungsi
+        konstan <m>f(x)=0</m>, dan pilih <m>a=0</m> serta
+        <m>N=(-1,1)</m>. Fungsi konstan kontinu, dan <m>N</m> merupakan
+        lingkungan dari <m>a</m>.
+      </p>
+      <p>
+        Namun <m>f(N)=\{0\}</m>. Untuk setiap <m>\epsilon\gt0</m>, bola
+        <m>B(0,\epsilon)</m> memuat titik <m>\epsilon/2\neq0</m>, sehingga
+        tidak termuat dalam <m>\{0\}</m>. Jadi <m>\{0\}</m> bukan lingkungan
+        dari <m>0=f(a)</m>. Kekontinuan tidak menjamin bahwa citra lingkungan
+        merupakan lingkungan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-21">
+    <title>Prapeta lingkungan di bawah fungsi yang kontinu di titik</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>X,Y</m> ruang-ruang metrik,
+        <m>f:X\to Y</m> kontinu di <m>a\in X</m>, dan <m>N</m> merupakan
+        lingkungan dari <m>f(a)</m>, maka <m>f^{-1}(N)</m> merupakan
+        lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Mulailah dari bola yang termuat dalam <m>N</m> dan
+        terapkan definisi kekontinuan dengan radius bola tersebut sebagai
+        toleransi keluaran.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-21-hint">
+      <p>
+        Pilih <m>\epsilon\gt0</m> dengan
+        <m>B_Y(f(a),\epsilon)\subseteq N</m>, lalu gunakan kekontinuan untuk
+        memperoleh <m>\delta\gt0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-21-answer">
+      <p>
+        Benar. Kekontinuan menghasilkan
+        <m>B_X(a,\delta)\subseteq f^{-1}(B_Y(f(a),\epsilon))
+        \subseteq f^{-1}(N)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-21-solution">
+      <p>
+        Karena <m>N</m> merupakan lingkungan dari <m>f(a)</m>, ada
+        <m>\epsilon\gt0</m> dengan
+        <m>B_Y(f(a),\epsilon)\subseteq N</m>. Kekontinuan <m>f</m> di
+        <m>a</m> memberikan <m>\delta\gt0</m> sedemikian sehingga
+        <m>d_X(x,a)\lt\delta</m> mengakibatkan
+        <m>d_Y(f(x),f(a))\lt\epsilon</m>.
+      </p>
+      <p>
+        Jadi, jika <m>x\in B_X(a,\delta)</m>, maka
+        <m>f(x)\in B_Y(f(a),\epsilon)\subseteq N</m>, sehingga
+        <m>x\in f^{-1}(N)</m>. Dengan demikian
+        <m>B_X(a,\delta)\subseteq f^{-1}(N)</m>. Prapeta tersebut memuat bola
+        terbuka berpusat di <m>a</m>, sehingga merupakan lingkungan dari
+        <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-22">
+    <title>Bola terbuka belum tentu memuat tak berhingga banyak titik</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>a</m> suatu titik dalam ruang
+        metrik <m>X</m> dan <m>\delta\gt0</m>, maka bola terbuka
+        <m>B(a,\delta)</m> memuat tak berhingga banyak titik dari <m>X</m>.
+        <em>Rubrik.</em> Jika salah, berikan ruang metrik eksplisit, pusat,
+        dan radius positif, lalu hitung bolanya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-22-hint">
+      <p>
+        Gunakan himpunan berhingga dengan metrik diskret dan radius
+        <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-22-answer">
+      <p>
+        Salah. Dalam <m>X=\{0,1\}</m> dengan metrik diskret,
+        <m>B(0,1)=\{0\}</m>, yang hanya memuat satu titik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-22-solution">
+      <p>
+        Ambil <m>X=\{0,1\}</m> dan metrik diskret
+        <m>d(x,y)=0</m> jika <m>x=y</m>, serta <m>d(x,y)=1</m> jika
+        <m>x\neq y</m>. Untuk <m>a=0</m> dan <m>\delta=1</m>, titik
+        <m>x</m> berada dalam <m>B(0,1)</m> tepat ketika
+        <m>d(x,0)\lt1</m>. Hanya <m>x=0</m> yang memenuhi syarat ini;
+        <m>d(1,0)=1</m> tidak kurang dari <m>1</m>. Jadi
+        <m>B(0,1)=\{0\}</m>, suatu himpunan berhingga. Contoh ini membantah
+        pernyataan tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-23">
+    <title>Irisan berhingga lingkungan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika
+        <m>N_1,N_2,\ldots,N_k</m> merupakan lingkungan dari <m>a</m> dalam
+        ruang metrik <m>X</m> untuk suatu bilangan bulat positif <m>k</m>,
+        maka <m>\bigcap_{i=1}^kN_i</m> merupakan lingkungan dari <m>a</m>.
+        <em>Rubrik.</em> Pilih satu radius positif untuk setiap lingkungan,
+        lalu gunakan minimum dari himpunan radius yang berhingga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-23-hint">
+      <p>
+        Jika <m>B(a,r_i)\subseteq N_i</m> untuk
+        <m>i=1,\ldots,k</m>, tetapkan
+        <m>r=\min\{r_1,\ldots,r_k\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-23-answer">
+      <p>
+        Benar. Radius minimum <m>r\gt0</m> memenuhi
+        <m>B(a,r)\subseteq\bigcap_{i=1}^kN_i</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-23-solution">
+      <p>
+        Untuk setiap <m>i\in\{1,\ldots,k\}</m>, karena <m>N_i</m> merupakan
+        lingkungan dari <m>a</m>, pilih <m>r_i\gt0</m> sehingga
+        <m>B(a,r_i)\subseteq N_i</m>. Himpunan
+        <m>\{r_1,\ldots,r_k\}</m> berhingga dan tak kosong, sehingga
+        <m>r=\min\{r_1,\ldots,r_k\}</m> ada dan positif.
+      </p>
+      <p>
+        Jika <m>x\in B(a,r)</m>, maka untuk setiap <m>i</m> berlaku
+        <m>d(x,a)\lt r\leq r_i</m>. Jadi <m>x\in B(a,r_i)\subseteq N_i</m>
+        bagi semua <m>i</m>. Karena itu
+        <m>B(a,r)\subseteq\bigcap_{i=1}^kN_i</m>, yang membuktikan bahwa
+        irisan tersebut merupakan lingkungan dari <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch07-exercise-task-24">
+    <title>Irisan sebarang keluarga lingkungan</title>
+    <statement>
+      <p>
+        Putuskan benar atau salah: jika <m>N_\alpha</m> merupakan lingkungan
+        dari <m>a</m> dalam ruang metrik <m>X</m> untuk setiap
+        <m>\alpha</m> dalam suatu himpunan indeks <m>I</m>, maka
+        <m>\bigcap_{\alpha\in I}N_\alpha</m> merupakan lingkungan dari
+        <m>a</m>.
+        <em>Rubrik.</em> Jika salah, gunakan keluarga terhitung lingkungan
+        yang radiusnya menuju nol, hitung irisannya, dan buktikan bahwa irisan
+        itu tidak memuat bola terbuka beradius positif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch07-exercise-task-24-hint">
+      <p>
+        Dalam <m>\R</m>, ambil
+        <m>N_n=(-1/n,1/n)</m> untuk setiap bilangan bulat positif <m>n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch07-exercise-task-24-answer">
+      <p>
+        Salah. Setiap <m>N_n=(-1/n,1/n)</m> merupakan lingkungan dari
+        <m>0</m>, tetapi <m>\bigcap_{n=1}^{\infty}N_n=\{0\}</m>, yang bukan
+        lingkungan dari <m>0</m> dalam metrik Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch07-exercise-task-24-solution">
+      <p>
+        Dalam <m>(\R,d_E)</m>, untuk setiap bilangan bulat positif
+        <m>n</m>, himpunan <m>N_n=(-1/n,1/n)=B(0,1/n)</m> merupakan
+        lingkungan dari <m>0</m>. Titik <m>0</m> berada dalam semua
+        <m>N_n</m>. Sebaliknya, jika <m>x\neq0</m>, sifat Archimedes memberi
+        bilangan bulat positif <m>n</m> dengan <m>n\gt1/|x|</m>. Maka
+        <m>1/n\lt|x|</m>, sehingga <m>x\notin N_n</m>. Jadi
+        <me>
+          \bigcap_{n=1}^{\infty}N_n=\{0\}.
+        </me>
+      </p>
+      <p>
+        Himpunan <m>\{0\}</m> bukan lingkungan dari <m>0</m>: untuk setiap
+        <m>\delta\gt0</m>, titik <m>\delta/2</m> berada dalam
+        <m>B(0,\delta)</m> tetapi tidak berada dalam <m>\{0\}</m>. Jadi
+        irisan tak berhingga dari lingkungan-lingkungan tidak harus merupakan
+        lingkungan.
+      </p>
+    </solution>
+  </exercise>
+</section>

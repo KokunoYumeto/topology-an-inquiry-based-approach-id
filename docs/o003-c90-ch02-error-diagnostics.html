@@ -86,7 +86,7 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-06-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–6 — Himpunan, Fungsi, Ruang Metrik, Penerapan Ruang Metrik, Batas Bawah Terbesar, Fungsi Kontinu, dan Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-07-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–7 — Himpunan, Fungsi, Ruang Metrik, Penerapan Ruang Metrik, Batas Bawah Terbesar, Fungsi Kontinu, Bola Terbuka dan Lingkungan, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -218,7 +218,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch06-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch07-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, dan Penerapannya</span></a></div>
@@ -284,6 +284,16 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_cont_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap_open_balls.html" class="internal"><span class="codenumber">7</span> <span class="title">Bola Terbuka dan Lingkungan pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_balls_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_neighborhoods.html" class="internal"><span class="title">Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_neighborhoods.html" class="internal"><span class="title">Kekontinuan dan Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -342,6 +352,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch06-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch07-companion.html" class="internal"><span class="codenumber">G</span> <span class="title">Pendamping Mandiri Bab 7: Bola Terbuka dan Lingkungan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch07-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 7</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 </ul>
 </li>
@@ -349,22 +368,22 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch02-error-diagnostics"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Diagnostik kesalahan ringkas</span>
 </h2>
-<div class="para logical" id="p-945"><dl class="description-list">
-<dt id="li-141">Mengabaikan kodomain</dt>
-<dd><div class="para" id="p-946">Dua aturan yang sama dapat mempunyai sifat surjektif berbeda. Tulis tipe lengkap <span class="process-math">\(f:A\to B\)</span> sebelum menguji.</div></dd>
-<dt id="li-142">Menukar daerah hasil dan kodomain</dt>
-<dd><div class="para" id="p-947">Daerah hasil adalah nilai yang benar-benar tercapai dan selalu merupakan subhimpunan kodomain.</div></dd>
-<dt id="li-143">Membaca komposisi dari kiri</dt>
-<dd><div class="para" id="p-948">Pada <span class="process-math">\(g\circ f\text{,}\)</span> terapkan <span class="process-math">\(f\)</span> lebih dahulu; periksa bahwa keluarannya dapat menjadi masukan <span class="process-math">\(g\text{.}\)</span>
+<div class="para logical" id="p-1030"><dl class="description-list">
+<dt id="li-154">Mengabaikan kodomain</dt>
+<dd><div class="para" id="p-1031">Dua aturan yang sama dapat mempunyai sifat surjektif berbeda. Tulis tipe lengkap <span class="process-math">\(f:A\to B\)</span> sebelum menguji.</div></dd>
+<dt id="li-155">Menukar daerah hasil dan kodomain</dt>
+<dd><div class="para" id="p-1032">Daerah hasil adalah nilai yang benar-benar tercapai dan selalu merupakan subhimpunan kodomain.</div></dd>
+<dt id="li-156">Membaca komposisi dari kiri</dt>
+<dd><div class="para" id="p-1033">Pada <span class="process-math">\(g\circ f\text{,}\)</span> terapkan <span class="process-math">\(f\)</span> lebih dahulu; periksa bahwa keluarannya dapat menjadi masukan <span class="process-math">\(g\text{.}\)</span>
 </div></dd>
-<dt id="li-144">Menganggap simbol <span class="process-math">\(f^{-1}\)</span> selalu fungsi</dt>
-<dd><div class="para" id="p-949">Relasi balik menjadi fungsi hanya untuk bijeksi; prapeta himpunan <span class="process-math">\(f^{-1}(B)\)</span> tetap terdefinisi tanpa bijektivitas.</div></dd>
-<dt id="li-145">Citra dan irisan</dt>
-<dd><div class="para" id="p-950">Citra mempertahankan gabungan, tetapi untuk irisan hanya satu inklusi yang selalu benar; prapeta mempertahankan keduanya.</div></dd>
-<dt id="li-146">Membuktikan surjektivitas dengan satu contoh</dt>
-<dd><div class="para" id="p-951">Mulai dari unsur sembarang kodomain dan bangun prapetanya.</div></dd>
-<dt id="li-147">Mengabaikan kasus kosong atau faktor tak kosong</dt>
-<dd><div class="para" id="p-952">Periksa asumsi ketakosongan ketika memakai proyeksi, membatalkan produk, atau menafsirkan irisan keluarga kosong.</div></dd>
+<dt id="li-157">Menganggap simbol <span class="process-math">\(f^{-1}\)</span> selalu fungsi</dt>
+<dd><div class="para" id="p-1034">Relasi balik menjadi fungsi hanya untuk bijeksi; prapeta himpunan <span class="process-math">\(f^{-1}(B)\)</span> tetap terdefinisi tanpa bijektivitas.</div></dd>
+<dt id="li-158">Citra dan irisan</dt>
+<dd><div class="para" id="p-1035">Citra mempertahankan gabungan, tetapi untuk irisan hanya satu inklusi yang selalu benar; prapeta mempertahankan keduanya.</div></dd>
+<dt id="li-159">Membuktikan surjektivitas dengan satu contoh</dt>
+<dd><div class="para" id="p-1036">Mulai dari unsur sembarang kodomain dan bangun prapetanya.</div></dd>
+<dt id="li-160">Mengabaikan kasus kosong atau faktor tak kosong</dt>
+<dd><div class="para" id="p-1037">Periksa asumsi ketakosongan ketika memakai proyeksi, membatalkan produk, atau menafsirkan irisan keluarga kosong.</div></dd>
 </dl></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="o003-c90-ch02-mastery.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch02-exercise-guides.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
