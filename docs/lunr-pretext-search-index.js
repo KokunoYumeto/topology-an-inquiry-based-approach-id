@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch08-edition-note",
+  "id": "o003-c90-ch09-edition-note",
   "level": "1",
-  "url": "o003-c90-ch08-edition-note.html",
+  "url": "o003-c90-ch09-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat delapan bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat sembilan bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  "
 },
 {
   "id": "sec_sets_intro",
@@ -2384,6 +2384,240 @@ var ptx_lunr_docs = [
   "number": "12",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataannya selalu benar. Jika pernyataannya hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Jika dan merupakan subhimpunan tak kosong dari ruang metrik , maka .   Setiap subhimpunan dari suatu himpunan terbuka dalam ruang metrik terbuka dalam .   Suatu subhimpunan dari terbuka terhadap metrik Euklides jika dan hanya jika terbuka terhadap metrik taksi .   Misalkan X = dilengkapi dengan metrik Euklides. Maka merupakan subhimpunan terbuka dari .  "
+},
+{
+  "id": "sec_seq_intro",
+  "level": "1",
+  "url": "sec_seq_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Kita telah mengenal barisan dalam kalkulus, dan kita dapat memperluas gagasan limit barisan ke ruang metrik. Barisan menyediakan cara lain untuk menjelaskan banyak gagasan dalam ruang metrik. Sebagai contoh, kita akan melihat bahwa kita dapat mencirikan kekontinuan dalam kaitannya dengan barisan, dan kita dapat menggunakan barisan untuk menentukan himpunan terbuka dan tertutup.  Ingat kembali dari kalkulus bahwa barisan bilangan real adalah daftar bilangan dalam urutan tertentu. Kita menuliskan barisan , , , , sebagai atau cukup . Jika kita menganggap setiap sebagai keluaran suatu fungsi, kita dapat memberikan definisi barisan yang lebih formal sebagai fungsi , dengan untuk setiap .  Suatu barisan bilangan real konvergen ke bilangan jika suku-sukunya dapat dibuat sedekat yang diinginkan dengan melalui pemilihan yang cukup besar. Sekali lagi, ini merupakan penjelasan informal yang perlu dirumuskan secara lebih tepat. Seperti yang kita lihat pada fungsi kontinu, kita dapat merumuskan gagasan kedekatan secara tepat dengan memperkenalkan simbol bagi suatu bilangan yang dapat dibuat sekecil apa pun. Jadi, kita dapat mengatakan bahwa suku-suku dapat mendekati suatu bilangan sedekat yang kita inginkan jika kita dapat membuat untuk setiap bilangan positif . Gagasan memilih yang cukup besar berarti mencari suatu bilangan bulat tetap yang cukup besar sehingga jika . Hal ini membawa kita pada definisi berikut.   limit barisan bilangan real   Suatu barisan bilangan real mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .    Ketika suatu barisan mempunyai limit , kita menuliskan , atau cukup (karena kita mengasumsikan limit barisan diambil ketika menuju tak hingga), dan kita mengatakan bahwa barisan  konvergen ke .    Kita dapat menggambar grafik suatu barisan bilangan real sebagai himpunan titik . Dengan cara ini kita dapat memvisualisasikan suatu barisan dan limitnya. Berdasarkan definisi, merupakan limit barisan jika, untuk setiap , kita dapat memilih indeks yang cukup besar sehingga semua suku berikutnya terletak di dalam pita horizontal di antara garis dan , seperti diperlihatkan pada untuk barisan .   Limit barisan .  Grafik titik-titik biru untuk suku barisan terhadap indeks . Titik-titik meningkat dari bawah dan mendekati garis horizontal pada tinggi . Dua garis horizontal ungu pada tinggi dan membatasi pita; setelah suatu indeks, semua titik barisan berada di dalam pita tersebut.   Untuk memverifikasi bahwa limit barisan adalah , kita mulai dengan .    Perhitungan awal. Sekarang kita perlu mencari sehingga mengakibatkan . Seperti pada contoh kekontinuan kita, perhitungan ini bukan bagian dari bukti, tetapi menunjukkan cara kita menemukan yang dibutuhkan. Agar , kita memerlukan . Sekarang kita menggunakan perhitungan awal ini untuk menyusun bukti.   Ambil (sehingga bergantung pada ). Maka, untuk , kita memperoleh .  Jadi, barisan mempunyai limit .     hanya berlaku bagi barisan bilangan real. Pada akhirnya, kita ingin merumuskan definisi dengan cara yang memungkinkan kita mendefinisikan limit barisan di ruang metrik dan ruang topologis. Jadi, kita harus merumuskan ulang definisi sedemikian rupa sehingga tidak bergantung pada jarak.  Ingat bahwa mendefinisikan metrik pada , yaitu .  Jadi, kita dapat merumuskan kembali definisi limit barisan bilangan real sebagai berikut.   Definisi Alternatif   Suatu barisan bilangan real mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .    Setelah kita mendeskripsikan limit barisan dalam kaitannya dengan metrik, kita dapat memperluas gagasan tersebut ke sembarang ruang metrik.   barisan di ruang metrik   Suatu barisan di ruang metrik adalah fungsi .    Jika merupakan barisan di , kita menuliskan barisan yang didefinisikan oleh sebagai , dengan . Kita juga menggunakan notasi apabila . Dengan adanya metrik pada , kita dapat mendeskripsikan limit barisan.   limit barisan di ruang metrik   Misalkan ruang metrik. Suatu barisan di mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .    Dengan kata lain, suatu barisan di ruang metrik mempunyai limit jika  yakni, barisan bilangan real mempunyai limit . Sama seperti pada barisan bilangan real, ketika suatu barisan mempunyai limit , kita mengatakan bahwa barisan  konvergen ke , atau bahwa merupakan limit barisan .    Jelaskan mengapa barisan konvergen ke 0 di dengan menggunakan metrik Euklides , yakni .    Perhatikan barisan di , dengan adalah metrik taksi yang didefinisikan oleh . Apakah barisan konvergen? Jika ya, tentukan limitnya dan buktikan bahwa nilai yang Anda ajukan memang merupakan limit barisan tersebut. Jika tidak, jelaskan alasannya.    Misalkan di ruang metrik , dengan adalah metrik diskret yang didefinisikan oleh Apakah barisan konvergen? Jika ya, tentukan limitnya dan buktikan bahwa nilai yang Anda ajukan memang merupakan limit barisan tersebut. Jika tidak, jelaskan alasannya.    "
+},
+{
+  "id": "def_sequence_limit_real",
+  "level": "2",
+  "url": "sec_seq_intro.html#def_sequence_limit_real",
+  "type": "Definisi",
+  "number": "9.1",
+  "title": "",
+  "body": " limit barisan bilangan real   Suatu barisan bilangan real mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .   "
+},
+{
+  "id": "p-966",
+  "level": "2",
+  "url": "sec_seq_intro.html#p-966",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "konvergen "
+},
+{
+  "id": "example-7",
+  "level": "2",
+  "url": "sec_seq_intro.html#example-7",
+  "type": "Contoh",
+  "number": "9.2",
+  "title": "",
+  "body": "  Kita dapat menggambar grafik suatu barisan bilangan real sebagai himpunan titik . Dengan cara ini kita dapat memvisualisasikan suatu barisan dan limitnya. Berdasarkan definisi, merupakan limit barisan jika, untuk setiap , kita dapat memilih indeks yang cukup besar sehingga semua suku berikutnya terletak di dalam pita horizontal di antara garis dan , seperti diperlihatkan pada untuk barisan .   Limit barisan .  Grafik titik-titik biru untuk suku barisan terhadap indeks . Titik-titik meningkat dari bawah dan mendekati garis horizontal pada tinggi . Dua garis horizontal ungu pada tinggi dan membatasi pita; setelah suatu indeks, semua titik barisan berada di dalam pita tersebut.   Untuk memverifikasi bahwa limit barisan adalah , kita mulai dengan .    Perhitungan awal. Sekarang kita perlu mencari sehingga mengakibatkan . Seperti pada contoh kekontinuan kita, perhitungan ini bukan bagian dari bukti, tetapi menunjukkan cara kita menemukan yang dibutuhkan. Agar , kita memerlukan . Sekarang kita menggunakan perhitungan awal ini untuk menyusun bukti.   Ambil (sehingga bergantung pada ). Maka, untuk , kita memperoleh .  Jadi, barisan mempunyai limit .   "
+},
+{
+  "id": "definition-27",
+  "level": "2",
+  "url": "sec_seq_intro.html#definition-27",
+  "type": "Definisi",
+  "number": "9.4",
+  "title": "Definisi Alternatif.",
+  "body": " Definisi Alternatif   Suatu barisan bilangan real mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .   "
+},
+{
+  "id": "definition-28",
+  "level": "2",
+  "url": "sec_seq_intro.html#definition-28",
+  "type": "Definisi",
+  "number": "9.5",
+  "title": "",
+  "body": " barisan di ruang metrik   Suatu barisan di ruang metrik adalah fungsi .   "
+},
+{
+  "id": "definition-29",
+  "level": "2",
+  "url": "sec_seq_intro.html#definition-29",
+  "type": "Definisi",
+  "number": "9.6",
+  "title": "",
+  "body": " limit barisan di ruang metrik   Misalkan ruang metrik. Suatu barisan di mempunyai limit  jika, untuk setiap , terdapat bilangan bulat positif (yang hanya bergantung pada ) sedemikian sehingga .   "
+},
+{
+  "id": "p-980",
+  "level": "2",
+  "url": "sec_seq_intro.html#p-980",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "konvergen "
+},
+{
+  "id": "exploration-8",
+  "level": "2",
+  "url": "sec_seq_intro.html#exploration-8",
+  "type": "Aktivitas Persiapan",
+  "number": "9.1",
+  "title": "",
+  "body": "  Jelaskan mengapa barisan konvergen ke 0 di dengan menggunakan metrik Euklides , yakni .    Perhatikan barisan di , dengan adalah metrik taksi yang didefinisikan oleh . Apakah barisan konvergen? Jika ya, tentukan limitnya dan buktikan bahwa nilai yang Anda ajukan memang merupakan limit barisan tersebut. Jika tidak, jelaskan alasannya.    Misalkan di ruang metrik , dengan adalah metrik diskret yang didefinisikan oleh Apakah barisan konvergen? Jika ya, tentukan limitnya dan buktikan bahwa nilai yang Anda ajukan memang merupakan limit barisan tersebut. Jika tidak, jelaskan alasannya.   "
+},
+{
+  "id": "sec_seq_cont_metric",
+  "level": "1",
+  "url": "sec_seq_cont_metric.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Barisan dan Kekontinuan dalam Ruang Metrik",
+  "body": " Barisan dan Kekontinuan dalam Ruang Metrik  Kita telah melihat bahwa kekontinuan dapat dicirikan dengan berbagai cara. Sebagai contoh, terdapat definisi dan pencirian dalam hal lingkungan. Pada bagian ini, kita menyelidiki barisan dan limit barisan dalam ruang metrik, lalu memberikan pencirian fungsi kontinu dalam hal barisan.    Pertanyaan yang wajar diajukan adalah apakah limit suatu barisan bersifat tunggal. Kita akan menjawab pertanyaan itu dalam kegiatan ini. Misalkan ruang metrik dan barisan di . Andaikan barisan memiliki limit di . Untuk menunjukkan bahwa limit barisan bersifat tunggal, kita perlu menunjukkan bahwa jika dan untuk suatu , maka .  Andaikan dan untuk suatu . Tanpa banyak petunjuk, membuktikan mungkin tampak sulit. Akan tetapi, jika untuk setiap , maka haruslah . Jadi, ambil .    Mengapa harus ada bilangan bulat positif sedemikian sehingga untuk setiap ?    Mengapa harus ada bilangan bulat positif sedemikian sehingga untuk setiap ?    Sekarang, tetapkan . Apa yang dapat kita katakan tentang dan ? Mengapa?    Gunakan ketaksamaan segitiga untuk menyimpulkan bahwa . Apa lagi yang dapat kita simpulkan?    Sekarang kita akan menelaah bagaimana kekontinuan dapat dideskripsikan dalam hal barisan. Gagasan dasarnya adalah sebagai berikut. Andaikan kontinu di titik . Artinya, fungsi memiliki limit di . Jadi, jika kita mengambil sebarang barisan yang konvergen ke , kekontinuan mengakibatkan . Teorema berikut menyatakan bahwa hal ini merupakan syarat perlu sekaligus syarat cukup bagi kekontinuan.    Misalkan dan ruang metrik, dan misalkan . Fungsi kontinu di jika dan hanya jika untuk setiap barisan di yang konvergen ke .    Misalkan dan ruang metrik, misalkan , dan misalkan suatu fungsi. Andaikan kontinu di . Kita akan menunjukkan bahwa untuk setiap barisan di yang konvergen ke . Misalkan barisan di yang konvergen ke (kita tahu bahwa barisan demikian ada, yakni barisan konstan ). Untuk memverifikasi bahwa , ambil . Karena kontinu di , terdapat sedemikian sehingga apabila . Karena konvergen ke , kita tahu bahwa terdapat bilangan bulat positif sedemikian sehingga apabila . Hal ini mengakibatkan .  Kita menyimpulkan bahwa jika kontinu di , maka untuk setiap barisan di yang konvergen ke .  Bukti implikasi sebaliknya terdapat dalam kegiatan berikut.      Misalkan dan ruang metrik, misalkan , dan misalkan suatu fungsi. Dalam kegiatan ini, kita membuktikan implikasi yang tersisa dari , yaitu bahwa kontinu di jika untuk setiap barisan di yang konvergen ke .    Untuk memperoleh asumsi tambahan yang dapat kita gunakan, mari kita memakai pembuktian dengan kontradiksi dan mengandaikan bahwa tidak kontinu di . Mengapa kita kemudian dapat mengatakan bahwa terdapat sedemikian sehingga tidak ada dengan sifat bahwa mengakibatkan ?    Untuk memperoleh kontradiksi, kita akan membangun barisan yang konvergen ke , sedangkan tidak konvergen ke .   Jelaskan mengapa kita dapat menemukan bilangan bulat positif sedemikian sehingga .   Jika , jelaskan mengapa terdapat unsur sedemikian sehingga .   Untuk , misalkan sebarang unsur dalam . Jelaskan mengapa merupakan limit barisan .   Jelaskan mengapa bukan limit barisan . Kesimpulan apa yang dapat kita tarik, dan mengapa?    Salah satu penerapan umum diperlihatkan dalam kegiatan berikut.    Misalkan fungsi dari ke , dengan domain dan kodomain dilengkapi metrik Euklides, yang didefinisikan oleh   Untuk fungsi ini, dalam kegiatan ini kita menelaah kekontinuan di .    Gambarlah grafik pada suatu interval kecil yang berpusat di . Berdasarkan grafik tersebut, apakah menurut Anda memiliki limit di ? Jelaskan. (Di sini tidak ada jawaban yang benar atau salah; yang diminta hanyalah intuisi Anda berdasarkan grafik tersebut.)    Untuk nilai masukan berapakah ?    Gunakan hasil butir (b) untuk menemukan barisan yang konvergen ke dan memenuhi untuk setiap .    Apa yang ditunjukkan oleh hasil butir (c) tentang kekontinuan di ?    Meskipun terkadang sulit membuktikan suatu fakta tentang semua barisan yang konvergen ke suatu titik, menunjukkan bahwa kita dapat menggunakan untuk membuktikan bahwa fungsi tidak kontinu di dengan menemukan hanya satu barisan yang konvergen ke dan memenuhi . Kita menutup bagian ini dengan satu catatan terakhir.   CATATAN PENTING:  menyatakan bahwa jika fungsi kontinu, maka penerapan dan operasi pengambilan limit dapat dipertukarkan. Artinya, jika barisan di yang konvergen ke , maka .  "
+},
+{
+  "id": "activity-37",
+  "level": "2",
+  "url": "sec_seq_cont_metric.html#activity-37",
+  "type": "Kegiatan",
+  "number": "9.2",
+  "title": "",
+  "body": "  Pertanyaan yang wajar diajukan adalah apakah limit suatu barisan bersifat tunggal. Kita akan menjawab pertanyaan itu dalam kegiatan ini. Misalkan ruang metrik dan barisan di . Andaikan barisan memiliki limit di . Untuk menunjukkan bahwa limit barisan bersifat tunggal, kita perlu menunjukkan bahwa jika dan untuk suatu , maka .  Andaikan dan untuk suatu . Tanpa banyak petunjuk, membuktikan mungkin tampak sulit. Akan tetapi, jika untuk setiap , maka haruslah . Jadi, ambil .    Mengapa harus ada bilangan bulat positif sedemikian sehingga untuk setiap ?    Mengapa harus ada bilangan bulat positif sedemikian sehingga untuk setiap ?    Sekarang, tetapkan . Apa yang dapat kita katakan tentang dan ? Mengapa?    Gunakan ketaksamaan segitiga untuk menyimpulkan bahwa . Apa lagi yang dapat kita simpulkan?   "
+},
+{
+  "id": "thm_seq_continuity",
+  "level": "2",
+  "url": "sec_seq_cont_metric.html#thm_seq_continuity",
+  "type": "Teorema",
+  "number": "9.7",
+  "title": "",
+  "body": "  Misalkan dan ruang metrik, dan misalkan . Fungsi kontinu di jika dan hanya jika untuk setiap barisan di yang konvergen ke .    Misalkan dan ruang metrik, misalkan , dan misalkan suatu fungsi. Andaikan kontinu di . Kita akan menunjukkan bahwa untuk setiap barisan di yang konvergen ke . Misalkan barisan di yang konvergen ke (kita tahu bahwa barisan demikian ada, yakni barisan konstan ). Untuk memverifikasi bahwa , ambil . Karena kontinu di , terdapat sedemikian sehingga apabila . Karena konvergen ke , kita tahu bahwa terdapat bilangan bulat positif sedemikian sehingga apabila . Hal ini mengakibatkan .  Kita menyimpulkan bahwa jika kontinu di , maka untuk setiap barisan di yang konvergen ke .  Bukti implikasi sebaliknya terdapat dalam kegiatan berikut.   "
+},
+{
+  "id": "activity-38",
+  "level": "2",
+  "url": "sec_seq_cont_metric.html#activity-38",
+  "type": "Kegiatan",
+  "number": "9.3",
+  "title": "",
+  "body": "  Misalkan dan ruang metrik, misalkan , dan misalkan suatu fungsi. Dalam kegiatan ini, kita membuktikan implikasi yang tersisa dari , yaitu bahwa kontinu di jika untuk setiap barisan di yang konvergen ke .    Untuk memperoleh asumsi tambahan yang dapat kita gunakan, mari kita memakai pembuktian dengan kontradiksi dan mengandaikan bahwa tidak kontinu di . Mengapa kita kemudian dapat mengatakan bahwa terdapat sedemikian sehingga tidak ada dengan sifat bahwa mengakibatkan ?    Untuk memperoleh kontradiksi, kita akan membangun barisan yang konvergen ke , sedangkan tidak konvergen ke .   Jelaskan mengapa kita dapat menemukan bilangan bulat positif sedemikian sehingga .   Jika , jelaskan mengapa terdapat unsur sedemikian sehingga .   Untuk , misalkan sebarang unsur dalam . Jelaskan mengapa merupakan limit barisan .   Jelaskan mengapa bukan limit barisan . Kesimpulan apa yang dapat kita tarik, dan mengapa?   "
+},
+{
+  "id": "act_sequence_continuity",
+  "level": "2",
+  "url": "sec_seq_cont_metric.html#act_sequence_continuity",
+  "type": "Kegiatan",
+  "number": "9.4",
+  "title": "",
+  "body": "  Misalkan fungsi dari ke , dengan domain dan kodomain dilengkapi metrik Euklides, yang didefinisikan oleh   Untuk fungsi ini, dalam kegiatan ini kita menelaah kekontinuan di .    Gambarlah grafik pada suatu interval kecil yang berpusat di . Berdasarkan grafik tersebut, apakah menurut Anda memiliki limit di ? Jelaskan. (Di sini tidak ada jawaban yang benar atau salah; yang diminta hanyalah intuisi Anda berdasarkan grafik tersebut.)    Untuk nilai masukan berapakah ?    Gunakan hasil butir (b) untuk menemukan barisan yang konvergen ke dan memenuhi untuk setiap .    Apa yang ditunjukkan oleh hasil butir (c) tentang kekontinuan di ?   "
+},
+{
+  "id": "sec_seq_summ",
+  "level": "1",
+  "url": "sec_seq_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan-gagasan penting yang kita bahas dalam bagian ini mencakup hal-hal berikut.    Barisan dalam ruang metrik adalah fungsi .    Barisan dalam ruang metrik memiliki limit di jika, untuk setiap , terdapat bilangan bulat positif sedemikian sehingga setiap kali .    Misalkan adalah fungsi dari ruang metrik ke ruang metrik . Maka kontinu di jika dan hanya jika untuk setiap barisan di yang konvergen ke .    "
+},
+{
+  "id": "sec_seq_exer",
+  "level": "1",
+  "url": "sec_seq_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Tentukan dengan bukti apakah setiap barisan berikut konvergen atau divergen dalam ruang metrik yang disebutkan.    dalam     dalam     adalah fungsi yang didefinisikan oleh di mana adalah himpunan fungsi bernilai real pada interval dan metrik didefinisikan oleh . (Lihat .)    Misalkan adalah subhimpunan dari .   Tunjukkan bahwa jika terbatas di atas, maka terdapat barisan di sedemikian sehingga .   Tunjukkan bahwa jika terbatas di bawah, maka terdapat barisan di sedemikian sehingga .   Apakah limit pada (a) atau (b) harus berada di ? Jelaskan.    Misalkan adalah ruang metrik, , dan adalah subhimpunan tak kosong dari . Ingat bahwa jarak dari ke adalah . Dalam latihan ini, kita akan melihat cara memandang jarak antara suatu titik dan suatu himpunan melalui barisan. Misalkan . Kita akan menunjukkan bahwa harus ada barisan di sedemikian sehingga .   Untuk setiap , misalkan . Mengapa harus berlaku untuk setiap ?   Pilih untuk setiap . Sifat apakah yang dimiliki barisan ini? Jelaskan mengapa langkah-langkah di atas membuktikan teorema berikut.    Misalkan adalah ruang metrik, , dan adalah subhimpunan tak kosong dari . Maka terdapat barisan di sedemikian sehingga .      Misalkan adalah subruang dari . Misalkan , , adalah barisan titik di dan misalkan . Buktikan bahwa jika dalam , maka dalam .   Pernyataan sebaliknya secara harfiah dari bagian (a), dengan semua hipotesisnya dipertahankan, sebenarnya benar; jelaskan alasannya. Contoh berikut menunjukkan fenomena yang berbeda: suatu barisan titik di subruang dapat konvergen di ruang ambien menuju titik di luar subruang sehingga tidak konvergen di subruang. Tinjaulah subruang (bilangan rasional) dari . Misalkan , , adalah barisan bilangan rasional sedemikian sehingga dalam ruang ambien; limit ambien ini tidak terletak di subruang bilangan rasional. Buktikan bahwa, untuk setiap , terdapat bilangan bulat positif sedemikian sehingga untuk , . Apakah barisan , , konvergen jika dipandang sebagai barisan titik di ?    Dalam latihan ini, kita membuktikan beberapa hasil standar dari kalkulus mengenai limit barisan. Misalkan dan adalah barisan konvergen dalam ruang metrik .   Tunjukkan bahwa untuk setiap bilangan real .   Tunjukkan bahwa .   Tunjukkan bahwa barisan terbatas. Artinya, tunjukkan bahwa terdapat bilangan real positif sedemikian sehingga untuk semua .   Tunjukkan bahwa .   Jika untuk setiap dan , tunjukkan bahwa .    Misalkan dan adalah fungsi kontinu dari ke , dengan metrik Euklides standar pada keduanya. Definisikan fungsi dari ke dengan .   Buktikan bahwa adalah fungsi kontinu.   Andaikan untuk setiap . Definisikan fungsi dari ke dengan untuk setiap . Gunakan definisi kekontinuan untuk membuktikan bahwa adalah fungsi kontinu.    Misalkan menyatakan barisan dalam ; setiap sukunya adalah pasangan dari suku-suku berindeks sama dalam kedua barisan koordinat. Tunjukkan bahwa barisan konvergen ke titik jika dan hanya jika konvergen ke dan konvergen ke dalam .    Definisikan dengan    Untuk fungsi di atas, andaikan kedua salinan dilengkapi dengan topologi Euklides. Tunjukkan bahwa fungsi tersebut kontinu tepat di satu titik.   Modifikasilah fungsi untuk membentuk fungsi baru sedemikian sehingga kontinu tepat di bilangan dan . Buktikan hasil Anda. Dapatkah Anda melihat cara memperluas konstruksi ini untuk membentuk fungsi yang kontinu tepat pada sebarang himpunan berhingga dari titik-titik yang telah ditentukan?    Misalkan adalah himpunan fungsi bernilai real pada interval dan misalkan adalah metrik pada yang didefinisikan oleh . (Lihat .) Dalam latihan ini, kita menyelidiki perbedaan antara konvergensi titik demi titik suatu barisan fungsi dan konvergensi dalam ruang metrik . Untuk setiap , definisikan dengan .   Misalkan . Tunjukkan bahwa barisan dengan konvergen ke dalam .   Karena barisan konvergen ke , jika kita memperhatikan perilakunya di setiap titik, kita mungkin menduga bahwa barisan konvergen ke fungsi yang didefinisikan oleh Tentukan apakah barisan konvergen ke dalam ruang metrik .   Sekarang, andaikan kita memandang barisan sebagai barisan fungsi dalam , yaitu ruang fungsi kontinu dari ke , dengan metrik . (Lihat .) Fungsi pada bukan fungsi kontinu, sehingga tidak dapat menjadi limit barisan dalam . Tentukan apakah barisan memiliki limit dalam . Jika ya, apakah limitnya? Jika tidak, buktikan bahwa barisan tersebut tidak memiliki limit.    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika adalah barisan dalam dengan untuk setiap dan himpunan terbatas di bawah, maka adalah limit barisan .   Misalkan adalah ruang metrik dan subhimpunan tak kosong dari . Jika dan dalam memuat suatu titik dari untuk setiap , maka terdapat barisan di yang konvergen ke .   Misalkan adalah subhimpunan tak kosong dari yang terbatas di atas dan di bawah. Jika adalah subhimpunan tak kosong dari dan untuk semua dan semua , maka .   Barisan konvergen ke dalam ruang metrik yang terdiri dari semua bilangan rasional dalam bentuk paling sederhana, dengan metrik yang didefinisikan oleh . (Lihat .)   Satu-satunya barisan konvergen dalam ruang metrik dengan metrik diskret adalah barisan yang pada akhirnya konstan. (Barisan dalam ruang metrik disebut pada akhirnya konstan jika terdapat elemen dan sedemikian sehingga untuk semua .)   "
+},
+{
+  "id": "exercise-92",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-92",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Tentukan dengan bukti apakah setiap barisan berikut konvergen atau divergen dalam ruang metrik yang disebutkan.    dalam     dalam     adalah fungsi yang didefinisikan oleh di mana adalah himpunan fungsi bernilai real pada interval dan metrik didefinisikan oleh . (Lihat .)  "
+},
+{
+  "id": "exercise-93",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-93",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan adalah subhimpunan dari .   Tunjukkan bahwa jika terbatas di atas, maka terdapat barisan di sedemikian sehingga .   Tunjukkan bahwa jika terbatas di bawah, maka terdapat barisan di sedemikian sehingga .   Apakah limit pada (a) atau (b) harus berada di ? Jelaskan.  "
+},
+{
+  "id": "exercise-94",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-94",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan adalah ruang metrik, , dan adalah subhimpunan tak kosong dari . Ingat bahwa jarak dari ke adalah . Dalam latihan ini, kita akan melihat cara memandang jarak antara suatu titik dan suatu himpunan melalui barisan. Misalkan . Kita akan menunjukkan bahwa harus ada barisan di sedemikian sehingga .   Untuk setiap , misalkan . Mengapa harus berlaku untuk setiap ?   Pilih untuk setiap . Sifat apakah yang dimiliki barisan ini? Jelaskan mengapa langkah-langkah di atas membuktikan teorema berikut.    Misalkan adalah ruang metrik, , dan adalah subhimpunan tak kosong dari . Maka terdapat barisan di sedemikian sehingga .    "
+},
+{
+  "id": "exercise-95",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-95",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan adalah subruang dari . Misalkan , , adalah barisan titik di dan misalkan . Buktikan bahwa jika dalam , maka dalam .   Pernyataan sebaliknya secara harfiah dari bagian (a), dengan semua hipotesisnya dipertahankan, sebenarnya benar; jelaskan alasannya. Contoh berikut menunjukkan fenomena yang berbeda: suatu barisan titik di subruang dapat konvergen di ruang ambien menuju titik di luar subruang sehingga tidak konvergen di subruang. Tinjaulah subruang (bilangan rasional) dari . Misalkan , , adalah barisan bilangan rasional sedemikian sehingga dalam ruang ambien; limit ambien ini tidak terletak di subruang bilangan rasional. Buktikan bahwa, untuk setiap , terdapat bilangan bulat positif sedemikian sehingga untuk , . Apakah barisan , , konvergen jika dipandang sebagai barisan titik di ?  "
+},
+{
+  "id": "ex_limit_properties",
+  "level": "2",
+  "url": "sec_seq_exer.html#ex_limit_properties",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Dalam latihan ini, kita membuktikan beberapa hasil standar dari kalkulus mengenai limit barisan. Misalkan dan adalah barisan konvergen dalam ruang metrik .   Tunjukkan bahwa untuk setiap bilangan real .   Tunjukkan bahwa .   Tunjukkan bahwa barisan terbatas. Artinya, tunjukkan bahwa terdapat bilangan real positif sedemikian sehingga untuk semua .   Tunjukkan bahwa .   Jika untuk setiap dan , tunjukkan bahwa .  "
+},
+{
+  "id": "exercise-97",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-97",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Misalkan dan adalah fungsi kontinu dari ke , dengan metrik Euklides standar pada keduanya. Definisikan fungsi dari ke dengan .   Buktikan bahwa adalah fungsi kontinu.   Andaikan untuk setiap . Definisikan fungsi dari ke dengan untuk setiap . Gunakan definisi kekontinuan untuk membuktikan bahwa adalah fungsi kontinu.  "
+},
+{
+  "id": "exercise-98",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-98",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Misalkan menyatakan barisan dalam ; setiap sukunya adalah pasangan dari suku-suku berindeks sama dalam kedua barisan koordinat. Tunjukkan bahwa barisan konvergen ke titik jika dan hanya jika konvergen ke dan konvergen ke dalam .  "
+},
+{
+  "id": "exercise-99",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-99",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Definisikan dengan    Untuk fungsi di atas, andaikan kedua salinan dilengkapi dengan topologi Euklides. Tunjukkan bahwa fungsi tersebut kontinu tepat di satu titik.   Modifikasilah fungsi untuk membentuk fungsi baru sedemikian sehingga kontinu tepat di bilangan dan . Buktikan hasil Anda. Dapatkah Anda melihat cara memperluas konstruksi ini untuk membentuk fungsi yang kontinu tepat pada sebarang himpunan berhingga dari titik-titik yang telah ditentukan?  "
+},
+{
+  "id": "exercise-100",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-100",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan adalah himpunan fungsi bernilai real pada interval dan misalkan adalah metrik pada yang didefinisikan oleh . (Lihat .) Dalam latihan ini, kita menyelidiki perbedaan antara konvergensi titik demi titik suatu barisan fungsi dan konvergensi dalam ruang metrik . Untuk setiap , definisikan dengan .   Misalkan . Tunjukkan bahwa barisan dengan konvergen ke dalam .   Karena barisan konvergen ke , jika kita memperhatikan perilakunya di setiap titik, kita mungkin menduga bahwa barisan konvergen ke fungsi yang didefinisikan oleh Tentukan apakah barisan konvergen ke dalam ruang metrik .   Sekarang, andaikan kita memandang barisan sebagai barisan fungsi dalam , yaitu ruang fungsi kontinu dari ke , dengan metrik . (Lihat .) Fungsi pada bukan fungsi kontinu, sehingga tidak dapat menjadi limit barisan dalam . Tentukan apakah barisan memiliki limit dalam . Jika ya, apakah limitnya? Jika tidak, buktikan bahwa barisan tersebut tidak memiliki limit.  "
+},
+{
+  "id": "exercise-101",
+  "level": "2",
+  "url": "sec_seq_exer.html#exercise-101",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika adalah barisan dalam dengan untuk setiap dan himpunan terbatas di bawah, maka adalah limit barisan .   Misalkan adalah ruang metrik dan subhimpunan tak kosong dari . Jika dan dalam memuat suatu titik dari untuk setiap , maka terdapat barisan di yang konvergen ke .   Misalkan adalah subhimpunan tak kosong dari yang terbatas di atas dan di bawah. Jika adalah subhimpunan tak kosong dari dan untuk semua dan semua , maka .   Barisan konvergen ke dalam ruang metrik yang terdiri dari semua bilangan rasional dalam bentuk paling sederhana, dengan metrik yang didefinisikan oleh . (Lihat .)   Satu-satunya barisan konvergen dalam ruang metrik dengan metrik diskret adalah barisan yang pada akhirnya konstan. (Barisan dalam ruang metrik disebut pada akhirnya konstan jika terdapat elemen dan sedemikian sehingga untuk semua .)  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -5381,6 +5615,492 @@ var ptx_lunr_docs = [
   "number": "H.61",
   "title": "Terbuka, tertutup, clopen, dan peran metrik.",
   "body": "Terbuka, tertutup, clopen, dan peran metrik  Pada himpunan dasar , bandingkan metrik Euklides dengan metrik diskret Suatu himpunan disebut tertutup jika komplemennya terbuka, dan disebut clopen jika terbuka sekaligus tertutup.    Terhadap , klasifikasikan masing-masing dari , , , , dan sebagai hanya terbuka, hanya tertutup, clopen, atau tidak terbuka maupun tertutup. Berikan alasan berbasis bola atau komplemen.    Ulangi klasifikasi terhadap dan buktikan jawaban Anda untuk subhimpunan sebarang dari .    Gunakan hasil klasifikasi untuk menyangkal kedua pernyataan: “himpunan tertutup tidak mungkin terbuka” dan “keterbukaan suatu subhimpunan hanya bergantung pada himpunan dasar, bukan pada metriknya.”      Tahap 1. Dalam metrik Euklides, uji titik ujung. Untuk ketertutupannya, tulis komplemen dan periksa apakah setiap titik komplemen memiliki interval kecil di dalam komplemen itu.   Tahap 2. Dalam metrik diskret, . Gunakan bola singleton ini untuk setiap titik suatu subhimpunan, lalu terapkan argumen yang sama pada komplemennya.   Tahap 3. Himpunan kosong atau seluruh ruang menyangkal klaim pertama. Untuk klaim kedua, ikuti perubahan klasifikasi ketika metrik diganti.   Terhadap , hanya terbuka, hanya tertutup, tidak terbuka maupun tertutup, sedangkan dan bersifat clopen. Terhadap , kelima himpunan tersebut—bahkan setiap subhimpunan —bersifat clopen. Himpunan menyangkal klaim bahwa himpunan tertutup tidak mungkin terbuka, dan perubahan status menyangkal ketidakbergantungan pada metrik.   Dalam metrik Euklides, terbuka karena setiap titiknya mempunyai interval kecil yang tetap berada di antara dan . Himpunan ini tidak tertutup: komplemennya tidak terbuka, sebab setiap bola di sekitar memuat titik positif yang lebih kecil dari .  Himpunan tertutup karena komplemennya terbuka. Himpunan tersebut tidak terbuka karena tidak ada bola Euklides berjari-jari positif di sekitar yang termuat di dalamnya. Himpunan juga tidak terbuka karena alasan yang sama pada . Ia tidak tertutup karena komplemennya tidak terbuka di titik . Terakhir, terbuka secara vakum dan terbuka sebagai seluruh ruang; karena keduanya saling berkomplemen, keduanya juga tertutup. Jadi keduanya bersifat clopen.  Dalam metrik diskret, untuk setiap berlaku . Jika dan , bola singleton ini termuat dalam . Maka setiap terbuka. Argumen tersebut berlaku pula pada , sehingga komplemen terbuka dan tertutup. Jadi setiap subhimpunan bersifat clopen terhadap .  Karena dan sekaligus tertutup dan terbuka, sifat “tertutup” bukan negasi sifat “terbuka”. Selain itu, himpunan yang sama, , tidak terbuka terhadap tetapi terbuka—bahkan bersifat clopen—terhadap . Jadi keterbukaan bergantung pada metrik yang dipasang pada himpunan dasar.  "
+},
+{
+  "id": "o003-c90-ch09-source-guides",
+  "level": "1",
+  "url": "o003-c90-ch09-source-guides.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan konsep dan tugas sumber",
+  "body": " Panduan konsep dan tugas sumber  Enam belas panduan berikut mengikuti urutan sumber: tiga tugas eksplorasi pada Pendahuluan, empat langkah pembuktian ketunggalan limit, lima langkah arah balik teorema, dan empat tugas tentang fungsi . Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap pernyataan di bawah memparafrasakan sasaran sumber dan memberi rubrik keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang tersedia di bawah Creative Commons Attribution 4.0 International (CC BY 4.0).  Barisan kebalikan dalam garis Euklides  Pada tugas pertama eksplorasi Pendahuluan, buktikan dari definisi bahwa barisan konvergen ke dalam . Rubrik: mulai dengan , pilih satu bilangan bulat positif , dan periksa pertidaksamaan jarak untuk setiap .   Tahap 1: sederhanakan . Tahap 2: gunakan sifat Archimedes untuk memilih .   Barisan konvergen ke ; pilihan memenuhi definisi limit.   Ambil . Menurut sifat Archimedes, ada dengan . Jika , maka Jadi, untuk setiap toleransi positif terdapat indeks awal yang membuat semua suku sesudahnya berada dalam bola yang diminta. Inilah tepat definisi .   Konvergensi dalam metrik taksi  Pada tugas kedua eksplorasi Pendahuluan, tentukan limit barisan dalam dan buktikan klaim tersebut langsung dari definisi. Rubrik: ajukan titik kandidat, hitung jarak taksi, lalu pilih yang mengendalikan kedua koordinat sekaligus.   Tahap 1: kedua koordinat menuju , jadi uji . Tahap 2: gunakan dan pilih .   Ya. Barisan tersebut konvergen ke dalam metrik taksi.   Ambil dan pilih sehingga . Untuk , Pilihan hanya bergantung pada , dan pertidaksamaan berlaku bagi seluruh ekor barisan. Karena itu .   Barisan yang tidak konvergen dalam metrik diskret  Pada tugas ketiga eksplorasi Pendahuluan, tentukan apakah konvergen dalam yang dilengkapi metrik diskret. Rubrik: gunakan sebuah toleransi yang lebih kecil daripada , jelaskan akibatnya bagi ekor barisan, lalu bandingkan dengan bentuk eksplisit .   Tahap 1: dalam metrik diskret, memaksa . Tahap 2: periksa apakah pada akhirnya konstan.   Tidak. Barisan divergen dalam metrik diskret karena tidak pernah menjadi konstan pada suatu ekor.   Andaikan untuk suatu . Terapkan definisi limit dengan . Harus ada sehingga bagi setiap . Nilai metrik diskret hanya atau , sehingga ketaksamaan itu memaksa bagi seluruh . Namun koordinat pertama adalah , jadi untuk setiap . Kontradiksi ini menunjukkan bahwa limit tidak ada.   Indeks untuk limit pertama  Pada langkah pertama kegiatan ketunggalan limit, jelaskan mengapa asumsi menghasilkan bilangan bulat positif dengan untuk semua . Rubrik: tunjukkan definisi yang dipakai dan toleransi yang disubstitusikan.   Tahap 1: karena , juga . Tahap 2: masukkan sebagai toleransi dalam definisi .   Pernyataan itu merupakan definisi konvergensi yang diterapkan pada toleransi positif .   Definisi menyatakan bahwa untuk setiap terdapat sehingga apabila . Ambil , yang positif. Maka definisi langsung memberi dengan sifat yang diminta. Indeks ini boleh bergantung pada , tetapi tidak pada .   Indeks untuk limit kedua  Pada langkah kedua kegiatan ketunggalan limit, jelaskan mengapa asumsi menghasilkan bilangan bulat positif dengan untuk semua . Rubrik: terapkan definisi pada limit yang kedua tanpa menganggap bahwa indeksnya harus sama dengan indeks untuk .   Tahap 1: gunakan kembali toleransi . Tahap 2: definisi konvergensi boleh menghasilkan indeks baru .   Pernyataan itu mengikuti dari dengan mengambil toleransi .   Karena , untuk setiap ada sehingga bagi semua . Pilih . Kita memperoleh indeks yang diperlukan. Tidak ada alasan bahwa ; langkah berikutnya akan menyatukan kedua ambang tersebut.   Menyatukan dua ambang indeks  Pada langkah ketiga kegiatan ketunggalan limit, tetapkan dan tentukan apa yang dapat disimpulkan tentang serta . Rubrik: hubungkan definisi maksimum dengan kedua syarat ekor yang telah diperoleh.   Tahap 1: dari definisi maksimum, dan . Tahap 2: terapkan masing-masing kesimpulan hanya pada ambang yang sesuai.   Kedua pertidaksamaan berlaku sekaligus: dan .   Karena , berlaku . Sifat yang berasal dari karenanya memberi . Demikian pula , maka sifat yang berasal dari memberi . Pemilihan maksimum memungkinkan satu suku barisan memenuhi kedua kendali secara bersamaan.   Menuntaskan ketunggalan limit  Pada langkah terakhir kegiatan ketunggalan limit, gunakan ketaksamaan segitiga untuk memperoleh , lalu jelaskan mengapa hal itu memaksa . Rubrik: tulis rantai pertidaksamaan dan tutup argumen yang memakai sebarang.   Tahap 1: sisipkan titik di antara dan . Tahap 2: jika , coba pilih .   Ketaksamaan segitiga memberi untuk setiap ; maka dan sifat definit positif metrik memberi .   Dengan suku dari langkah sebelumnya, Ini berlaku untuk setiap . Andaikan ; memilih akan memberi , suatu kontradiksi. Jadi , dan aksioma metrik menyatakan . Dengan demikian limit barisan dalam ruang metrik bersifat tunggal.   Meniadakan definisi kekontinuan  Pada langkah pertama arah balik teorema, andaikan tidak kontinu di dan tuliskan bentuk berkuantor yang diperoleh. Rubrik: nyatakan satu toleransi keluaran positif yang tetap, lalu untuk setiap radius masukan hasilkan sebuah titik yang melanggar implikasi kekontinuan.   Tahap 1: mulai dari . Tahap 2: ketika meniadakan implikasi, syarat jarak masukan menjadi benar dan kesimpulan jarak keluaran menjadi salah.   Ada sehingga untuk setiap terdapat dengan dan .   Kekontinuan di berarti Penyangkalannya adalah Toleransi dipilih sekali dan kemudian tetap; titik pelanggar boleh bergantung pada .   Memilih ambang bilangan bulat  Pada sublangkah pertama konstruksi barisan penyangkal, jelaskan mengapa terdapat dengan , untuk toleransi tetap dari ketakkontinuan. Rubrik: sebutkan sifat bilangan real yang menjamin pilihan tersebut.   Tahap 1: ubah sasaran menjadi . Tahap 2: gunakan sifat Archimedes untuk menemukan bilangan bulat positif yang lebih besar daripada bilangan real itu.   Sifat Archimedes memberi dengan , sehingga .   Karena , bilangan terdefinisi. Sifat Archimedes menyatakan bahwa untuk setiap bilangan real terdapat bilangan bulat positif yang lebih besar daripadanya. Pilih dengan . Membalik kedua bilangan positif membalik arah pertidaksamaan, sehingga .   Memilih suku-suku penyangkal  Pada sublangkah kedua konstruksi, untuk setiap jelaskan mengapa dapat dipilih dengan . Rubrik: terapkan bentuk berkuantor ketakkontinuan pada satu radius positif yang bergantung pada .   Tahap 1: untuk setiap , bilangan positif. Tahap 2: substitusikan ke pernyataan panduan 08.   Negasi kekontinuan, diterapkan dengan , menjamin titik yang berada dalam tetapi citranya berjarak sekurang-kurangnya dari .   Untuk , ambil . Dari bentuk ketakkontinuan diperoleh suatu yang memenuhi Ketaksamaan pertama persis berarti . Pilihan boleh berbeda untuk setiap ; bersama-sama pilihan itu membentuk ekor barisan yang dibutuhkan.   Membuktikan barisan penyangkal menuju titik pusat  Pada sublangkah ketiga konstruksi, pilih sembarang untuk , lalu buktikan bahwa barisan lengkap konvergen ke . Rubrik: mulai dengan toleransi baru, pilih indeks awal, dan gunakan kendali .   Tahap 1: untuk , pilih . Tahap 2: bagi , bandingkan dengan dan .   Ya. Karena dan , berlaku ; pilihan berhingga untuk tidak memengaruhi limit.   Ambil . Pilih dengan . Untuk setiap , konstruksi memberi , sehingga Jadi definisi limit terpenuhi dan . Suku-suku awal hanya memastikan bahwa fungsi terdefinisi untuk seluruh ; jumlah suku awal yang berhingga tidak menentukan konvergensi.   Kontradiksi pada barisan citra  Pada sublangkah terakhir konstruksi, jelaskan mengapa tidak konvergen ke , kemudian tarik kesimpulan tentang asumsi bahwa tidak kontinu di . Rubrik: gunakan toleransi keluaran tetap dan hubungkan hasilnya dengan hipotesis sekuensial.   Tahap 1: untuk setiap , . Tahap 2: bandingkan fakta ini dengan syarat limit pada toleransi .   Barisan citra gagal masuk dan tetap berada dalam bola . Ini bertentangan dengan hipotesis bahwa setiap menghasilkan ; karena itu harus kontinu di .   Untuk seluruh , konstruksi memenuhi . Karena itu, berapa pun indeks awal yang dipilih, ada suku setelah indeks tersebut yang tidak berjarak kurang dari terhadap . Definisi gagal. Di sisi lain, panduan 11 menunjukkan . Ini menyangkal hipotesis sekuensial yang diasumsikan benar bagi setiap barisan. Maka asumsi sementara bahwa tidak kontinu di salah, sehingga kontinu di .   Intuisi grafik untuk osilasi di dekat nol  Pada tugas pertama kegiatan tentang untuk dan , gambarkan grafik pada interval kecil di sekitar dan catat intuisi Anda tentang keberadaan limit di . Rubrik: gambarkan osilasi yang semakin rapat, jelaskan pengamatan dengan kata-kata, dan nyatakan secara jujur bahwa grafik sendiri bukan bukti formal.   Tahap 1: plot dengan beberapa jendela yang makin sempit dan cukup banyak titik sampel. Tahap 2: perhatikan apakah nilai fungsi mengerucut ke satu tinggi atau terus mendekati banyak tinggi.   Intuisi yang didukung grafik adalah bahwa limit di tidak ada: grafik terus berosilasi antara nilai dekat dan seberapa pun sempit jendelanya. Tugas ini menerima penjelasan intuitif lain yang jujur terhadap gambar.   Rubrik lengkap meminta grafik yang memperlihatkan amplitudo tetap sekitar dan frekuensi osilasi yang meningkat ketika . Penjelasan yang baik menyatakan bahwa tidak tampak satu nilai yang didekati semua keluaran. Pengamatan ini bukan bukti: resolusi gambar dan pemilihan sampel dapat menipu. Butir-butir berikutnya mengubah intuisi itu menjadi penyangkal sekuensial dengan memilih titik yang nilainya tepat .   Menyelesaikan persamaan nilai maksimum sinus  Pada tugas kedua kegiatan tentang , tentukan semua masukan yang memenuhi . Rubrik: selesaikan dahulu persamaan sinus untuk , balikkan hasilnya, dan periksa nilai khusus .   Tahap 1: tepat ketika untuk . Tahap 2: substitusikan .   Semua dan hanya masukan , dengan , memenuhi . Titik tidak termasuk karena .   Untuk , persamaan setara dengan . Solusi umum adalah , . Karena penyebut ini tidak nol bagi bilangan bulat , pembalikan sah dan memberi Substitusi kembali menghasilkan . Sementara itu, definisi bercabang menetapkan , jadi bukan solusi.   Membangun barisan yang citranya tetap satu  Pada tugas ketiga kegiatan tentang , gunakan himpunan solusi sebelumnya untuk membangun barisan dengan bagi setiap . Rubrik: berikan rumus eksplisit, buktikan limit masukan, dan verifikasi nilai fungsi.   Tahap 1: pilih parameter bilangan bulat dalam panduan 14. Tahap 2: penyebut tumbuh tanpa batas, sedangkan .   Salah satu pilihan adalah untuk . Barisan ini menuju dan memenuhi untuk setiap .   Tetapkan . Karena penyebut positif dan menuju tak hingga, . Secara langsung, untuk , pilih cukup besar sehingga ; maka bagi . Selain itu, Jadi rumus tersebut memenuhi kedua syarat yang diminta.   Menyangkal kekontinuan dengan satu barisan  Pada tugas terakhir kegiatan tentang , gunakan barisan dari butir sebelumnya untuk menentukan kekontinuan di . Rubrik: bandingkan limit barisan masukan, limit barisan citra, dan nilai , lalu terapkan teorema pencirian sekuensial dengan arah logis yang benar.   Tahap 1: , tetapi barisan konstan bernilai . Tahap 2: bandingkan dengan .   Fungsi tidak kontinu di , sebab tetapi .   Panduan 15 memberi barisan dengan untuk semua . Maka , sedangkan definisi fungsi memberi . Jika kontinu di , teorema pencirian sekuensial akan memaksa setiap barisan yang menuju mempunyai citra yang menuju . Barisan ini melanggar keharusan tersebut, jadi tidak kontinu di . Satu barisan penyangkal sudah cukup; tidak perlu memeriksa semua barisan.   "
+},
+{
+  "id": "o003-c90-ch09-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-01",
+  "type": "Pemeriksaan",
+  "number": "I.1",
+  "title": "Barisan kebalikan dalam garis Euklides.",
+  "body": "Barisan kebalikan dalam garis Euklides  Pada tugas pertama eksplorasi Pendahuluan, buktikan dari definisi bahwa barisan konvergen ke dalam . Rubrik: mulai dengan , pilih satu bilangan bulat positif , dan periksa pertidaksamaan jarak untuk setiap .   Tahap 1: sederhanakan . Tahap 2: gunakan sifat Archimedes untuk memilih .   Barisan konvergen ke ; pilihan memenuhi definisi limit.   Ambil . Menurut sifat Archimedes, ada dengan . Jika , maka Jadi, untuk setiap toleransi positif terdapat indeks awal yang membuat semua suku sesudahnya berada dalam bola yang diminta. Inilah tepat definisi .  "
+},
+{
+  "id": "o003-c90-ch09-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-02",
+  "type": "Pemeriksaan",
+  "number": "I.2",
+  "title": "Konvergensi dalam metrik taksi.",
+  "body": "Konvergensi dalam metrik taksi  Pada tugas kedua eksplorasi Pendahuluan, tentukan limit barisan dalam dan buktikan klaim tersebut langsung dari definisi. Rubrik: ajukan titik kandidat, hitung jarak taksi, lalu pilih yang mengendalikan kedua koordinat sekaligus.   Tahap 1: kedua koordinat menuju , jadi uji . Tahap 2: gunakan dan pilih .   Ya. Barisan tersebut konvergen ke dalam metrik taksi.   Ambil dan pilih sehingga . Untuk , Pilihan hanya bergantung pada , dan pertidaksamaan berlaku bagi seluruh ekor barisan. Karena itu .  "
+},
+{
+  "id": "o003-c90-ch09-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-03",
+  "type": "Pemeriksaan",
+  "number": "I.3",
+  "title": "Barisan yang tidak konvergen dalam metrik diskret.",
+  "body": "Barisan yang tidak konvergen dalam metrik diskret  Pada tugas ketiga eksplorasi Pendahuluan, tentukan apakah konvergen dalam yang dilengkapi metrik diskret. Rubrik: gunakan sebuah toleransi yang lebih kecil daripada , jelaskan akibatnya bagi ekor barisan, lalu bandingkan dengan bentuk eksplisit .   Tahap 1: dalam metrik diskret, memaksa . Tahap 2: periksa apakah pada akhirnya konstan.   Tidak. Barisan divergen dalam metrik diskret karena tidak pernah menjadi konstan pada suatu ekor.   Andaikan untuk suatu . Terapkan definisi limit dengan . Harus ada sehingga bagi setiap . Nilai metrik diskret hanya atau , sehingga ketaksamaan itu memaksa bagi seluruh . Namun koordinat pertama adalah , jadi untuk setiap . Kontradiksi ini menunjukkan bahwa limit tidak ada.  "
+},
+{
+  "id": "o003-c90-ch09-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-04",
+  "type": "Pemeriksaan",
+  "number": "I.4",
+  "title": "Indeks untuk limit pertama.",
+  "body": "Indeks untuk limit pertama  Pada langkah pertama kegiatan ketunggalan limit, jelaskan mengapa asumsi menghasilkan bilangan bulat positif dengan untuk semua . Rubrik: tunjukkan definisi yang dipakai dan toleransi yang disubstitusikan.   Tahap 1: karena , juga . Tahap 2: masukkan sebagai toleransi dalam definisi .   Pernyataan itu merupakan definisi konvergensi yang diterapkan pada toleransi positif .   Definisi menyatakan bahwa untuk setiap terdapat sehingga apabila . Ambil , yang positif. Maka definisi langsung memberi dengan sifat yang diminta. Indeks ini boleh bergantung pada , tetapi tidak pada .  "
+},
+{
+  "id": "o003-c90-ch09-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-05",
+  "type": "Pemeriksaan",
+  "number": "I.5",
+  "title": "Indeks untuk limit kedua.",
+  "body": "Indeks untuk limit kedua  Pada langkah kedua kegiatan ketunggalan limit, jelaskan mengapa asumsi menghasilkan bilangan bulat positif dengan untuk semua . Rubrik: terapkan definisi pada limit yang kedua tanpa menganggap bahwa indeksnya harus sama dengan indeks untuk .   Tahap 1: gunakan kembali toleransi . Tahap 2: definisi konvergensi boleh menghasilkan indeks baru .   Pernyataan itu mengikuti dari dengan mengambil toleransi .   Karena , untuk setiap ada sehingga bagi semua . Pilih . Kita memperoleh indeks yang diperlukan. Tidak ada alasan bahwa ; langkah berikutnya akan menyatukan kedua ambang tersebut.  "
+},
+{
+  "id": "o003-c90-ch09-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-06",
+  "type": "Pemeriksaan",
+  "number": "I.6",
+  "title": "Menyatukan dua ambang indeks.",
+  "body": "Menyatukan dua ambang indeks  Pada langkah ketiga kegiatan ketunggalan limit, tetapkan dan tentukan apa yang dapat disimpulkan tentang serta . Rubrik: hubungkan definisi maksimum dengan kedua syarat ekor yang telah diperoleh.   Tahap 1: dari definisi maksimum, dan . Tahap 2: terapkan masing-masing kesimpulan hanya pada ambang yang sesuai.   Kedua pertidaksamaan berlaku sekaligus: dan .   Karena , berlaku . Sifat yang berasal dari karenanya memberi . Demikian pula , maka sifat yang berasal dari memberi . Pemilihan maksimum memungkinkan satu suku barisan memenuhi kedua kendali secara bersamaan.  "
+},
+{
+  "id": "o003-c90-ch09-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-07",
+  "type": "Pemeriksaan",
+  "number": "I.7",
+  "title": "Menuntaskan ketunggalan limit.",
+  "body": "Menuntaskan ketunggalan limit  Pada langkah terakhir kegiatan ketunggalan limit, gunakan ketaksamaan segitiga untuk memperoleh , lalu jelaskan mengapa hal itu memaksa . Rubrik: tulis rantai pertidaksamaan dan tutup argumen yang memakai sebarang.   Tahap 1: sisipkan titik di antara dan . Tahap 2: jika , coba pilih .   Ketaksamaan segitiga memberi untuk setiap ; maka dan sifat definit positif metrik memberi .   Dengan suku dari langkah sebelumnya, Ini berlaku untuk setiap . Andaikan ; memilih akan memberi , suatu kontradiksi. Jadi , dan aksioma metrik menyatakan . Dengan demikian limit barisan dalam ruang metrik bersifat tunggal.  "
+},
+{
+  "id": "o003-c90-ch09-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-08",
+  "type": "Pemeriksaan",
+  "number": "I.8",
+  "title": "Meniadakan definisi kekontinuan.",
+  "body": "Meniadakan definisi kekontinuan  Pada langkah pertama arah balik teorema, andaikan tidak kontinu di dan tuliskan bentuk berkuantor yang diperoleh. Rubrik: nyatakan satu toleransi keluaran positif yang tetap, lalu untuk setiap radius masukan hasilkan sebuah titik yang melanggar implikasi kekontinuan.   Tahap 1: mulai dari . Tahap 2: ketika meniadakan implikasi, syarat jarak masukan menjadi benar dan kesimpulan jarak keluaran menjadi salah.   Ada sehingga untuk setiap terdapat dengan dan .   Kekontinuan di berarti Penyangkalannya adalah Toleransi dipilih sekali dan kemudian tetap; titik pelanggar boleh bergantung pada .  "
+},
+{
+  "id": "o003-c90-ch09-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-09",
+  "type": "Pemeriksaan",
+  "number": "I.9",
+  "title": "Memilih ambang bilangan bulat.",
+  "body": "Memilih ambang bilangan bulat  Pada sublangkah pertama konstruksi barisan penyangkal, jelaskan mengapa terdapat dengan , untuk toleransi tetap dari ketakkontinuan. Rubrik: sebutkan sifat bilangan real yang menjamin pilihan tersebut.   Tahap 1: ubah sasaran menjadi . Tahap 2: gunakan sifat Archimedes untuk menemukan bilangan bulat positif yang lebih besar daripada bilangan real itu.   Sifat Archimedes memberi dengan , sehingga .   Karena , bilangan terdefinisi. Sifat Archimedes menyatakan bahwa untuk setiap bilangan real terdapat bilangan bulat positif yang lebih besar daripadanya. Pilih dengan . Membalik kedua bilangan positif membalik arah pertidaksamaan, sehingga .  "
+},
+{
+  "id": "o003-c90-ch09-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-10",
+  "type": "Pemeriksaan",
+  "number": "I.10",
+  "title": "Memilih suku-suku penyangkal.",
+  "body": "Memilih suku-suku penyangkal  Pada sublangkah kedua konstruksi, untuk setiap jelaskan mengapa dapat dipilih dengan . Rubrik: terapkan bentuk berkuantor ketakkontinuan pada satu radius positif yang bergantung pada .   Tahap 1: untuk setiap , bilangan positif. Tahap 2: substitusikan ke pernyataan panduan 08.   Negasi kekontinuan, diterapkan dengan , menjamin titik yang berada dalam tetapi citranya berjarak sekurang-kurangnya dari .   Untuk , ambil . Dari bentuk ketakkontinuan diperoleh suatu yang memenuhi Ketaksamaan pertama persis berarti . Pilihan boleh berbeda untuk setiap ; bersama-sama pilihan itu membentuk ekor barisan yang dibutuhkan.  "
+},
+{
+  "id": "o003-c90-ch09-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-11",
+  "type": "Pemeriksaan",
+  "number": "I.11",
+  "title": "Membuktikan barisan penyangkal menuju titik pusat.",
+  "body": "Membuktikan barisan penyangkal menuju titik pusat  Pada sublangkah ketiga konstruksi, pilih sembarang untuk , lalu buktikan bahwa barisan lengkap konvergen ke . Rubrik: mulai dengan toleransi baru, pilih indeks awal, dan gunakan kendali .   Tahap 1: untuk , pilih . Tahap 2: bagi , bandingkan dengan dan .   Ya. Karena dan , berlaku ; pilihan berhingga untuk tidak memengaruhi limit.   Ambil . Pilih dengan . Untuk setiap , konstruksi memberi , sehingga Jadi definisi limit terpenuhi dan . Suku-suku awal hanya memastikan bahwa fungsi terdefinisi untuk seluruh ; jumlah suku awal yang berhingga tidak menentukan konvergensi.  "
+},
+{
+  "id": "o003-c90-ch09-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-12",
+  "type": "Pemeriksaan",
+  "number": "I.12",
+  "title": "Kontradiksi pada barisan citra.",
+  "body": "Kontradiksi pada barisan citra  Pada sublangkah terakhir konstruksi, jelaskan mengapa tidak konvergen ke , kemudian tarik kesimpulan tentang asumsi bahwa tidak kontinu di . Rubrik: gunakan toleransi keluaran tetap dan hubungkan hasilnya dengan hipotesis sekuensial.   Tahap 1: untuk setiap , . Tahap 2: bandingkan fakta ini dengan syarat limit pada toleransi .   Barisan citra gagal masuk dan tetap berada dalam bola . Ini bertentangan dengan hipotesis bahwa setiap menghasilkan ; karena itu harus kontinu di .   Untuk seluruh , konstruksi memenuhi . Karena itu, berapa pun indeks awal yang dipilih, ada suku setelah indeks tersebut yang tidak berjarak kurang dari terhadap . Definisi gagal. Di sisi lain, panduan 11 menunjukkan . Ini menyangkal hipotesis sekuensial yang diasumsikan benar bagi setiap barisan. Maka asumsi sementara bahwa tidak kontinu di salah, sehingga kontinu di .  "
+},
+{
+  "id": "o003-c90-ch09-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-13",
+  "type": "Pemeriksaan",
+  "number": "I.13",
+  "title": "Intuisi grafik untuk osilasi di dekat nol.",
+  "body": "Intuisi grafik untuk osilasi di dekat nol  Pada tugas pertama kegiatan tentang untuk dan , gambarkan grafik pada interval kecil di sekitar dan catat intuisi Anda tentang keberadaan limit di . Rubrik: gambarkan osilasi yang semakin rapat, jelaskan pengamatan dengan kata-kata, dan nyatakan secara jujur bahwa grafik sendiri bukan bukti formal.   Tahap 1: plot dengan beberapa jendela yang makin sempit dan cukup banyak titik sampel. Tahap 2: perhatikan apakah nilai fungsi mengerucut ke satu tinggi atau terus mendekati banyak tinggi.   Intuisi yang didukung grafik adalah bahwa limit di tidak ada: grafik terus berosilasi antara nilai dekat dan seberapa pun sempit jendelanya. Tugas ini menerima penjelasan intuitif lain yang jujur terhadap gambar.   Rubrik lengkap meminta grafik yang memperlihatkan amplitudo tetap sekitar dan frekuensi osilasi yang meningkat ketika . Penjelasan yang baik menyatakan bahwa tidak tampak satu nilai yang didekati semua keluaran. Pengamatan ini bukan bukti: resolusi gambar dan pemilihan sampel dapat menipu. Butir-butir berikutnya mengubah intuisi itu menjadi penyangkal sekuensial dengan memilih titik yang nilainya tepat .  "
+},
+{
+  "id": "o003-c90-ch09-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-14",
+  "type": "Pemeriksaan",
+  "number": "I.14",
+  "title": "Menyelesaikan persamaan nilai maksimum sinus.",
+  "body": "Menyelesaikan persamaan nilai maksimum sinus  Pada tugas kedua kegiatan tentang , tentukan semua masukan yang memenuhi . Rubrik: selesaikan dahulu persamaan sinus untuk , balikkan hasilnya, dan periksa nilai khusus .   Tahap 1: tepat ketika untuk . Tahap 2: substitusikan .   Semua dan hanya masukan , dengan , memenuhi . Titik tidak termasuk karena .   Untuk , persamaan setara dengan . Solusi umum adalah , . Karena penyebut ini tidak nol bagi bilangan bulat , pembalikan sah dan memberi Substitusi kembali menghasilkan . Sementara itu, definisi bercabang menetapkan , jadi bukan solusi.  "
+},
+{
+  "id": "o003-c90-ch09-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-15",
+  "type": "Pemeriksaan",
+  "number": "I.15",
+  "title": "Membangun barisan yang citranya tetap satu.",
+  "body": "Membangun barisan yang citranya tetap satu  Pada tugas ketiga kegiatan tentang , gunakan himpunan solusi sebelumnya untuk membangun barisan dengan bagi setiap . Rubrik: berikan rumus eksplisit, buktikan limit masukan, dan verifikasi nilai fungsi.   Tahap 1: pilih parameter bilangan bulat dalam panduan 14. Tahap 2: penyebut tumbuh tanpa batas, sedangkan .   Salah satu pilihan adalah untuk . Barisan ini menuju dan memenuhi untuk setiap .   Tetapkan . Karena penyebut positif dan menuju tak hingga, . Secara langsung, untuk , pilih cukup besar sehingga ; maka bagi . Selain itu, Jadi rumus tersebut memenuhi kedua syarat yang diminta.  "
+},
+{
+  "id": "o003-c90-ch09-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch09-source-guides.html#o003-c90-ch09-guide-16",
+  "type": "Pemeriksaan",
+  "number": "I.16",
+  "title": "Menyangkal kekontinuan dengan satu barisan.",
+  "body": "Menyangkal kekontinuan dengan satu barisan  Pada tugas terakhir kegiatan tentang , gunakan barisan dari butir sebelumnya untuk menentukan kekontinuan di . Rubrik: bandingkan limit barisan masukan, limit barisan citra, dan nilai , lalu terapkan teorema pencirian sekuensial dengan arah logis yang benar.   Tahap 1: , tetapi barisan konstan bernilai . Tahap 2: bandingkan dengan .   Fungsi tidak kontinu di , sebab tetapi .   Panduan 15 memberi barisan dengan untuk semua . Maka , sedangkan definisi fungsi memberi . Jika kontinu di , teorema pencirian sekuensial akan memaksa setiap barisan yang menuju mempunyai citra yang menuju . Barisan ini melanggar keharusan tersebut, jadi tidak kontinu di . Satu barisan penyangkal sudah cukup; tidak perlu memeriksa semua barisan.  "
+},
+{
+  "id": "o003-c90-ch09-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch09-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian pertama",
+  "body": " Panduan latihan sumber, bagian pertama  Empat belas panduan berikut berkorespondensi, dalam urutan sumber, dengan empat belas perintah pertama pada bagian latihan penutup Bab 9. ID panduan berlanjut dari o003-c90-ch09-guide-17 sampai o003-c90-ch09-guide-30 , sesudah enam belas perintah pembelajar pada bagian-bagian sebelumnya dalam bab ini. Materi pendamping ini merupakan uraian asli untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh penulis karya sumber.  Barisan pada garis real  Pada perintah pertama latihan penutup, tentukan dengan bukti apakah konvergen atau divergen dalam . Rubrik. Nyatakan calon limitnya dan ubah syarat menjadi syarat sederhana pada .    Langkah 1. Coba dan hitung secara tepat.   Langkah 2. Untuk , gunakan sifat Archimedes untuk memilih bilangan bulat .   Barisan tersebut konvergen ke , sebab dapat dibuat lebih kecil daripada setiap .   Tetapkan . Pilih dengan . Jika , maka Jadi definisi konvergensi dipenuhi dan dalam .   Barisan dalam metrik maksimum  Pada perintah kedua latihan penutup, tentukan dengan bukti apakah konvergen atau divergen dalam . Rubrik. Andaikan ada calon limit dan perhatikan bahwa jarak maksimum sekurang-kurangnya sebesar selisih koordinat kedua.    Langkah 1. Untuk sebarang , tuliskan .   Langkah 2. Pilih cukup besar sehingga ; hal ini bertentangan dengan syarat konvergensi untuk .   Barisan tersebut divergen. Koordinat keduanya menjauh tanpa batas, dan untuk setiap calon limit .   Andaikan, demi kontradiksi, bahwa konvergen ke suatu . Definisi metrik maksimum memberi Konvergensi dengan menuntut adanya sehingga jarak di atas kurang dari untuk semua . Namun kita dapat memilih sekaligus , sehingga . Ini kontradiksi. Tidak ada calon limit, jadi barisan tersebut divergen.   Barisan fungsi dalam metrik supremum  Pada perintah ketiga latihan penutup, adalah himpunan fungsi bernilai real pada dengan metrik supremum, dan . Tentukan dengan bukti apakah konvergen. Rubrik. Bandingkan setiap dengan fungsi nol dan hitung supremum selisihnya pada seluruh interval.    Langkah 1. Jika menyatakan fungsi nol, maka .   Langkah 2. Supremum itu dicapai pada ; gunakan hasil perintah pertama untuk bilangan yang diperoleh.   Barisan fungsi tersebut konvergen ke fungsi nol dalam metrik supremum, karena .   Untuk setiap , berlaku . Fungsi meningkat pada , sehingga Diberikan , pilih . Untuk , jarak ini kurang dari . Maka dalam ruang metrik fungsi tersebut; bahkan konvergensinya seragam pada .   Mendekati supremum dengan barisan dari himpunan  Pada perintah keempat latihan penutup, misalkan tak kosong dan terbatas di atas. Bangun barisan di yang konvergen ke . Rubrik. Untuk setiap , gunakan bahwa bilangan yang sedikit lebih kecil daripada supremum tidak dapat menjadi batas atas. Syarat tak kosong tersirat oleh keberadaan supremum real dan dibuat eksplisit di sini.    Langkah 1. Tetapkan . Mengapa bukan batas atas dari ?   Langkah 2. Pilih dengan , lalu gunakan prinsip apit.   Untuk setiap , pilih sehingga , dengan . Maka , sehingga .   Tuliskan . Untuk setiap , bilangan lebih kecil daripada batas atas terkecil , jadi bukan batas atas dari . Karena itu ada dengan . Di sisi lain, karena batas atas. Jadi Diberikan , pilih . Jika , maka . Dengan demikian .   Mendekati infimum dengan barisan dari himpunan  Pada perintah kelima latihan penutup, misalkan tak kosong dan terbatas di bawah. Bangun barisan di yang konvergen ke . Rubrik. Terapkan argumen supremum secara terbalik: bilangan yang sedikit lebih besar daripada infimum bukan batas bawah.    Langkah 1. Tetapkan . Untuk setiap , cari dengan .   Langkah 2. Tunjukkan langsung bahwa .   Untuk , pilih dengan . Maka .   Tuliskan . Bilangan lebih besar daripada batas bawah terbesar , sehingga bukan batas bawah dari . Jadi ada dengan . Karena sendiri batas bawah, . Akibatnya Untuk , pilih . Jika , maka . Jadi .   Supremum dan infimum tidak harus menjadi anggota  Pada perintah keenam latihan penutup, putuskan apakah limit yang dibangun untuk supremum atau infimum harus berada dalam , lalu jelaskan. Rubrik. Satu interval terbuka terbatas dapat memberikan contoh untuk kedua ujung sekaligus.    Langkah 1. Ambil .   Langkah 2. Hitung dan , lalu periksa apakah kedua bilangan itu merupakan anggota .   Tidak. Untuk , supremumnya dan infimumnya , tetapi keduanya tidak berada dalam .   Ambil . Himpunan ini tak kosong serta terbatas di atas dan di bawah, dengan dan . Barisan seluruhnya berada dalam dan konvergen ke ; barisan juga seluruhnya berada dalam dan konvergen ke . Akan tetapi, . Jadi limit barisan dari tidak harus menjadi anggota ; keanggotaan limit memerlukan sifat tambahan seperti ketertutupan .   Bola yang sedikit lebih besar daripada jarak harus memotong himpunan  Pada perintah ketujuh latihan penutup, misalkan dan . Jelaskan mengapa untuk setiap . Rubrik. Gunakan sifat pendefinisi infimum, bukan anggapan bahwa jarak minimum selalu dicapai.    Langkah 1. Jika , apa yang dapat disimpulkan tentang untuk setiap ?   Langkah 2. Bandingkan kesimpulan itu dengan fakta bahwa adalah batas bawah terbesar dari himpunan semua jarak .   Karena , bilangan itu bukan batas bawah bagi semua . Jadi ada dengan , yakni .   Tetapkan . Karena , setiap bilangan yang lebih besar daripada , khususnya , tidak dapat menjadi batas bawah dari himpunan jarak tersebut. Maka terdapat sedemikian sehingga . Menurut definisi bola terbuka, . Jadi , dan irisan itu tak kosong. Argumen ini tidak menganggap adanya titik yang tepat berjarak dari .   Jarak ke himpunan sebagai limit jarak ke titik  Pada perintah kedelapan latihan penutup, pilih . Tentukan sifat barisan ini dan jelaskan mengapa konstruksi tersebut membuktikan bahwa ada barisan di dengan . Rubrik. Apit setiap jarak di antara dan ; jangan menyimpulkan bahwa sendiri harus konvergen.    Langkah 1. Keanggotaan memberi satu pertidaksamaan dari definisi infimum.   Langkah 2. Keanggotaan memberi pertidaksamaan lainnya. Kurangkan dan gunakan .   Barisan memenuhi dan . Karena itu .   Untuk setiap , pilihan memastikan . Karena adalah infimum dari semua jarak dengan , berlaku . Karena , juga berlaku . Jadi Ruas kanan menuju nol, sehingga prinsip apit memberi . Inilah tepat kesimpulan teorema pada sumber. Yang konvergen di sini adalah barisan bilangan real ; titik-titik sendiri belum tentu mempunyai limit dalam .   Konvergensi subruang memberi konvergensi ruang ambien  Pada perintah kesembilan latihan penutup, adalah subruang dari , semua dan berada dalam , dan dalam . Buktikan bahwa dalam . Rubrik. Gunakan bahwa metrik subruang adalah pembatasan metrik ambien: untuk .    Langkah 1. Tuliskan syarat untuk konvergensi dalam .   Langkah 2. Ganti setiap dengan ; indeks yang sama bekerja di ruang ambien.   Benar. Karena untuk semua , syarat konvergensi di subruang dan di ruang ambien identik ketika limitnya berada dalam .   Ambil . Dari dalam , terdapat sehingga untuk semua . Metrik subruang adalah pembatasan , dan , maka Ini adalah definisi dalam . Jadi konvergensi subruang menuju titik subruang selalu memberi konvergensi ambien menuju titik yang sama.   Konvers subruang dan limit ambien di luar subruang  Pada perintah kesepuluh latihan penutup, jelaskan mengapa konvers harfiah perintah sebelumnya benar ketika semua hipotesisnya, termasuk , dipertahankan. Kemudian, untuk barisan rasional yang konvergen ke dalam , buktikan sifat Cauchy yang diminta dan tentukan apakah barisan itu konvergen dalam subruang . Rubrik. Bedakan tegas dua klaim: konvers dengan limit di subruang memang benar, sedangkan contoh mempunyai limit ambien di luar subruang.    Langkah 1. Untuk konvers harfiah, gunakan lagi . Untuk sifat Cauchy, pilih sehingga jika .   Langkah 2. Jika barisan tersebut konvergen ke suatu dalam subruang, gunakan perintah sebelumnya dan ketunggalan limit di .   Konvers harfiahnya benar: jika limit ambien berada dalam , jarak subruang dan ambien sama. Barisan rasional yang menuju bersifat Cauchy, tetapi tidak konvergen dalam , sebab satu-satunya limit ambiennya adalah bilangan irasional .   Pertama, pertahankan semua hipotesis bagian sebelumnya dan andaikan dalam , dengan . Untuk setiap , akhirnya . Karena , pertidaksamaan yang sama membuktikan dalam . Jadi konvers harfiah itu benar.  Sekarang misalkan dan dalam . Diberikan , pilih sehingga untuk setiap . Jika , ketaksamaan segitiga memberi Jadi barisan itu Cauchy.  Andaikan barisan tersebut konvergen dalam ke suatu . Perintah sebelumnya akan membuatnya konvergen dalam ke . Namun di barisan yang sama sudah konvergen ke , dan limit dalam ruang metrik tunggal. Maka harus berlaku , bertentangan dengan . Jadi barisan itu tidak konvergen dalam . Contoh ini tidak membantah konvers harfiah, karena limit ambiennya tidak berada dalam subruang.   Limit kelipatan skalar barisan  Pada perintah ke-11 latihan penutup, jika dalam , buktikan bahwa untuk setiap . Rubrik. Pisahkan kasus ; untuk , ubah toleransi keluaran menjadi bagi barisan semula.    Langkah 1. Hitung .   Langkah 2. Jika , terapkan konvergensi dengan toleransi .   Benar. Kasus menghasilkan barisan nol; untuk , syarat memberi .   Tuliskan . Jika , setiap suku dan calon limit sama dengan nol, jadi konvergensi langsung berlaku. Andaikan dan tetapkan . Karena , ada sehingga untuk . Maka Jadi untuk setiap .   Limit jumlah dua barisan  Pada perintah ke-12 latihan penutup, jika dan , buktikan bahwa . Rubrik. Bagi toleransi menjadi dua bagian dan gunakan ketaksamaan segitiga.    Langkah 1. Cari indeks setelah mana dan indeks setelah mana .   Langkah 2. Ambil maksimum kedua indeks dan taksir .   Benar. Setelah kedua selisih masing-masing kurang dari , ketaksamaan segitiga membuat selisih jumlah kurang dari .   Tetapkan . Pilih sehingga untuk , dan pilih sehingga untuk . Tetapkan . Untuk , Maka .   Setiap barisan real konvergen terbatas  Pada perintah ke-13 latihan penutup, buktikan bahwa jika , maka ada dengan untuk semua . Rubrik. Konvergensi mengendalikan semua suku sesudah suatu indeks; masukkan sejumlah berhingga suku awal ke dalam satu maksimum.    Langkah 1. Pilih sehingga untuk ; simpulkan pada ekor barisan.   Langkah 2. Ambil maksimum dari , bilangan , dan nilai mutlak semua suku sebelum .   Benar. Ekor barisan dibatasi oleh , sedangkan sejumlah berhingga suku awal mempunyai maksimum nilai mutlak; maksimum kedua batas itu membatasi seluruh barisan.   Karena , terdapat sehingga untuk semua . Ketaksamaan segitiga memberi Tetapkan Jika , daftar suku awal itu kosong dan cukup ambil . Dalam semua kasus, dan baik untuk suku awal maupun untuk . Jadi barisan konvergen tersebut terbatas.   Limit hasil kali dua barisan  Pada perintah ke-14 latihan penutup, jika dan , buktikan bahwa . Rubrik. Gunakan hasil bahwa terbatas dan uraikan selisih hasil kali menjadi dua suku yang dapat dikendalikan secara terpisah.    Langkah 1. Pilih dengan , lalu gunakan .   Langkah 2. Buat dan secara serentak.   Benar. Keterbatasan dan uraian membuat kedua suku menuju nol.   Menurut perintah sebelumnya, ada sehingga untuk semua . Tetapkan . Dari , pilih sehingga jika . Dari , pilih sehingga jika . Untuk , Jadi , atau .   "
+},
+{
+  "id": "o003-c90-ch09-guide-17",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-17",
+  "type": "Pemeriksaan",
+  "number": "I.17",
+  "title": "Barisan <span class=\"process-math\">\\(1+1\/n\\)<\/span> pada garis real.",
+  "body": "Barisan pada garis real  Pada perintah pertama latihan penutup, tentukan dengan bukti apakah konvergen atau divergen dalam . Rubrik. Nyatakan calon limitnya dan ubah syarat menjadi syarat sederhana pada .    Langkah 1. Coba dan hitung secara tepat.   Langkah 2. Untuk , gunakan sifat Archimedes untuk memilih bilangan bulat .   Barisan tersebut konvergen ke , sebab dapat dibuat lebih kecil daripada setiap .   Tetapkan . Pilih dengan . Jika , maka Jadi definisi konvergensi dipenuhi dan dalam .  "
+},
+{
+  "id": "o003-c90-ch09-guide-18",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-18",
+  "type": "Pemeriksaan",
+  "number": "I.18",
+  "title": "Barisan <span class=\"process-math\">\\((2,n)\\)<\/span> dalam metrik maksimum.",
+  "body": "Barisan dalam metrik maksimum  Pada perintah kedua latihan penutup, tentukan dengan bukti apakah konvergen atau divergen dalam . Rubrik. Andaikan ada calon limit dan perhatikan bahwa jarak maksimum sekurang-kurangnya sebesar selisih koordinat kedua.    Langkah 1. Untuk sebarang , tuliskan .   Langkah 2. Pilih cukup besar sehingga ; hal ini bertentangan dengan syarat konvergensi untuk .   Barisan tersebut divergen. Koordinat keduanya menjauh tanpa batas, dan untuk setiap calon limit .   Andaikan, demi kontradiksi, bahwa konvergen ke suatu . Definisi metrik maksimum memberi Konvergensi dengan menuntut adanya sehingga jarak di atas kurang dari untuk semua . Namun kita dapat memilih sekaligus , sehingga . Ini kontradiksi. Tidak ada calon limit, jadi barisan tersebut divergen.  "
+},
+{
+  "id": "o003-c90-ch09-guide-19",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-19",
+  "type": "Pemeriksaan",
+  "number": "I.19",
+  "title": "Barisan fungsi <span class=\"process-math\">\\(x\/n\\)<\/span> dalam metrik supremum.",
+  "body": "Barisan fungsi dalam metrik supremum  Pada perintah ketiga latihan penutup, adalah himpunan fungsi bernilai real pada dengan metrik supremum, dan . Tentukan dengan bukti apakah konvergen. Rubrik. Bandingkan setiap dengan fungsi nol dan hitung supremum selisihnya pada seluruh interval.    Langkah 1. Jika menyatakan fungsi nol, maka .   Langkah 2. Supremum itu dicapai pada ; gunakan hasil perintah pertama untuk bilangan yang diperoleh.   Barisan fungsi tersebut konvergen ke fungsi nol dalam metrik supremum, karena .   Untuk setiap , berlaku . Fungsi meningkat pada , sehingga Diberikan , pilih . Untuk , jarak ini kurang dari . Maka dalam ruang metrik fungsi tersebut; bahkan konvergensinya seragam pada .  "
+},
+{
+  "id": "o003-c90-ch09-guide-20",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-20",
+  "type": "Pemeriksaan",
+  "number": "I.20",
+  "title": "Mendekati supremum dengan barisan dari himpunan.",
+  "body": "Mendekati supremum dengan barisan dari himpunan  Pada perintah keempat latihan penutup, misalkan tak kosong dan terbatas di atas. Bangun barisan di yang konvergen ke . Rubrik. Untuk setiap , gunakan bahwa bilangan yang sedikit lebih kecil daripada supremum tidak dapat menjadi batas atas. Syarat tak kosong tersirat oleh keberadaan supremum real dan dibuat eksplisit di sini.    Langkah 1. Tetapkan . Mengapa bukan batas atas dari ?   Langkah 2. Pilih dengan , lalu gunakan prinsip apit.   Untuk setiap , pilih sehingga , dengan . Maka , sehingga .   Tuliskan . Untuk setiap , bilangan lebih kecil daripada batas atas terkecil , jadi bukan batas atas dari . Karena itu ada dengan . Di sisi lain, karena batas atas. Jadi Diberikan , pilih . Jika , maka . Dengan demikian .  "
+},
+{
+  "id": "o003-c90-ch09-guide-21",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-21",
+  "type": "Pemeriksaan",
+  "number": "I.21",
+  "title": "Mendekati infimum dengan barisan dari himpunan.",
+  "body": "Mendekati infimum dengan barisan dari himpunan  Pada perintah kelima latihan penutup, misalkan tak kosong dan terbatas di bawah. Bangun barisan di yang konvergen ke . Rubrik. Terapkan argumen supremum secara terbalik: bilangan yang sedikit lebih besar daripada infimum bukan batas bawah.    Langkah 1. Tetapkan . Untuk setiap , cari dengan .   Langkah 2. Tunjukkan langsung bahwa .   Untuk , pilih dengan . Maka .   Tuliskan . Bilangan lebih besar daripada batas bawah terbesar , sehingga bukan batas bawah dari . Jadi ada dengan . Karena sendiri batas bawah, . Akibatnya Untuk , pilih . Jika , maka . Jadi .  "
+},
+{
+  "id": "o003-c90-ch09-guide-22",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-22",
+  "type": "Pemeriksaan",
+  "number": "I.22",
+  "title": "Supremum dan infimum tidak harus menjadi anggota.",
+  "body": "Supremum dan infimum tidak harus menjadi anggota  Pada perintah keenam latihan penutup, putuskan apakah limit yang dibangun untuk supremum atau infimum harus berada dalam , lalu jelaskan. Rubrik. Satu interval terbuka terbatas dapat memberikan contoh untuk kedua ujung sekaligus.    Langkah 1. Ambil .   Langkah 2. Hitung dan , lalu periksa apakah kedua bilangan itu merupakan anggota .   Tidak. Untuk , supremumnya dan infimumnya , tetapi keduanya tidak berada dalam .   Ambil . Himpunan ini tak kosong serta terbatas di atas dan di bawah, dengan dan . Barisan seluruhnya berada dalam dan konvergen ke ; barisan juga seluruhnya berada dalam dan konvergen ke . Akan tetapi, . Jadi limit barisan dari tidak harus menjadi anggota ; keanggotaan limit memerlukan sifat tambahan seperti ketertutupan .  "
+},
+{
+  "id": "o003-c90-ch09-guide-23",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-23",
+  "type": "Pemeriksaan",
+  "number": "I.23",
+  "title": "Bola yang sedikit lebih besar daripada jarak harus memotong himpunan.",
+  "body": "Bola yang sedikit lebih besar daripada jarak harus memotong himpunan  Pada perintah ketujuh latihan penutup, misalkan dan . Jelaskan mengapa untuk setiap . Rubrik. Gunakan sifat pendefinisi infimum, bukan anggapan bahwa jarak minimum selalu dicapai.    Langkah 1. Jika , apa yang dapat disimpulkan tentang untuk setiap ?   Langkah 2. Bandingkan kesimpulan itu dengan fakta bahwa adalah batas bawah terbesar dari himpunan semua jarak .   Karena , bilangan itu bukan batas bawah bagi semua . Jadi ada dengan , yakni .   Tetapkan . Karena , setiap bilangan yang lebih besar daripada , khususnya , tidak dapat menjadi batas bawah dari himpunan jarak tersebut. Maka terdapat sedemikian sehingga . Menurut definisi bola terbuka, . Jadi , dan irisan itu tak kosong. Argumen ini tidak menganggap adanya titik yang tepat berjarak dari .  "
+},
+{
+  "id": "o003-c90-ch09-guide-24",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-24",
+  "type": "Pemeriksaan",
+  "number": "I.24",
+  "title": "Jarak ke himpunan sebagai limit jarak ke titik.",
+  "body": "Jarak ke himpunan sebagai limit jarak ke titik  Pada perintah kedelapan latihan penutup, pilih . Tentukan sifat barisan ini dan jelaskan mengapa konstruksi tersebut membuktikan bahwa ada barisan di dengan . Rubrik. Apit setiap jarak di antara dan ; jangan menyimpulkan bahwa sendiri harus konvergen.    Langkah 1. Keanggotaan memberi satu pertidaksamaan dari definisi infimum.   Langkah 2. Keanggotaan memberi pertidaksamaan lainnya. Kurangkan dan gunakan .   Barisan memenuhi dan . Karena itu .   Untuk setiap , pilihan memastikan . Karena adalah infimum dari semua jarak dengan , berlaku . Karena , juga berlaku . Jadi Ruas kanan menuju nol, sehingga prinsip apit memberi . Inilah tepat kesimpulan teorema pada sumber. Yang konvergen di sini adalah barisan bilangan real ; titik-titik sendiri belum tentu mempunyai limit dalam .  "
+},
+{
+  "id": "o003-c90-ch09-guide-25",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-25",
+  "type": "Pemeriksaan",
+  "number": "I.25",
+  "title": "Konvergensi subruang memberi konvergensi ruang ambien.",
+  "body": "Konvergensi subruang memberi konvergensi ruang ambien  Pada perintah kesembilan latihan penutup, adalah subruang dari , semua dan berada dalam , dan dalam . Buktikan bahwa dalam . Rubrik. Gunakan bahwa metrik subruang adalah pembatasan metrik ambien: untuk .    Langkah 1. Tuliskan syarat untuk konvergensi dalam .   Langkah 2. Ganti setiap dengan ; indeks yang sama bekerja di ruang ambien.   Benar. Karena untuk semua , syarat konvergensi di subruang dan di ruang ambien identik ketika limitnya berada dalam .   Ambil . Dari dalam , terdapat sehingga untuk semua . Metrik subruang adalah pembatasan , dan , maka Ini adalah definisi dalam . Jadi konvergensi subruang menuju titik subruang selalu memberi konvergensi ambien menuju titik yang sama.  "
+},
+{
+  "id": "o003-c90-ch09-guide-26",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-26",
+  "type": "Pemeriksaan",
+  "number": "I.26",
+  "title": "Konvers subruang dan limit ambien di luar subruang.",
+  "body": "Konvers subruang dan limit ambien di luar subruang  Pada perintah kesepuluh latihan penutup, jelaskan mengapa konvers harfiah perintah sebelumnya benar ketika semua hipotesisnya, termasuk , dipertahankan. Kemudian, untuk barisan rasional yang konvergen ke dalam , buktikan sifat Cauchy yang diminta dan tentukan apakah barisan itu konvergen dalam subruang . Rubrik. Bedakan tegas dua klaim: konvers dengan limit di subruang memang benar, sedangkan contoh mempunyai limit ambien di luar subruang.    Langkah 1. Untuk konvers harfiah, gunakan lagi . Untuk sifat Cauchy, pilih sehingga jika .   Langkah 2. Jika barisan tersebut konvergen ke suatu dalam subruang, gunakan perintah sebelumnya dan ketunggalan limit di .   Konvers harfiahnya benar: jika limit ambien berada dalam , jarak subruang dan ambien sama. Barisan rasional yang menuju bersifat Cauchy, tetapi tidak konvergen dalam , sebab satu-satunya limit ambiennya adalah bilangan irasional .   Pertama, pertahankan semua hipotesis bagian sebelumnya dan andaikan dalam , dengan . Untuk setiap , akhirnya . Karena , pertidaksamaan yang sama membuktikan dalam . Jadi konvers harfiah itu benar.  Sekarang misalkan dan dalam . Diberikan , pilih sehingga untuk setiap . Jika , ketaksamaan segitiga memberi Jadi barisan itu Cauchy.  Andaikan barisan tersebut konvergen dalam ke suatu . Perintah sebelumnya akan membuatnya konvergen dalam ke . Namun di barisan yang sama sudah konvergen ke , dan limit dalam ruang metrik tunggal. Maka harus berlaku , bertentangan dengan . Jadi barisan itu tidak konvergen dalam . Contoh ini tidak membantah konvers harfiah, karena limit ambiennya tidak berada dalam subruang.  "
+},
+{
+  "id": "o003-c90-ch09-guide-27",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-27",
+  "type": "Pemeriksaan",
+  "number": "I.27",
+  "title": "Limit kelipatan skalar barisan.",
+  "body": "Limit kelipatan skalar barisan  Pada perintah ke-11 latihan penutup, jika dalam , buktikan bahwa untuk setiap . Rubrik. Pisahkan kasus ; untuk , ubah toleransi keluaran menjadi bagi barisan semula.    Langkah 1. Hitung .   Langkah 2. Jika , terapkan konvergensi dengan toleransi .   Benar. Kasus menghasilkan barisan nol; untuk , syarat memberi .   Tuliskan . Jika , setiap suku dan calon limit sama dengan nol, jadi konvergensi langsung berlaku. Andaikan dan tetapkan . Karena , ada sehingga untuk . Maka Jadi untuk setiap .  "
+},
+{
+  "id": "o003-c90-ch09-guide-28",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-28",
+  "type": "Pemeriksaan",
+  "number": "I.28",
+  "title": "Limit jumlah dua barisan.",
+  "body": "Limit jumlah dua barisan  Pada perintah ke-12 latihan penutup, jika dan , buktikan bahwa . Rubrik. Bagi toleransi menjadi dua bagian dan gunakan ketaksamaan segitiga.    Langkah 1. Cari indeks setelah mana dan indeks setelah mana .   Langkah 2. Ambil maksimum kedua indeks dan taksir .   Benar. Setelah kedua selisih masing-masing kurang dari , ketaksamaan segitiga membuat selisih jumlah kurang dari .   Tetapkan . Pilih sehingga untuk , dan pilih sehingga untuk . Tetapkan . Untuk , Maka .  "
+},
+{
+  "id": "o003-c90-ch09-guide-29",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-29",
+  "type": "Pemeriksaan",
+  "number": "I.29",
+  "title": "Setiap barisan real konvergen terbatas.",
+  "body": "Setiap barisan real konvergen terbatas  Pada perintah ke-13 latihan penutup, buktikan bahwa jika , maka ada dengan untuk semua . Rubrik. Konvergensi mengendalikan semua suku sesudah suatu indeks; masukkan sejumlah berhingga suku awal ke dalam satu maksimum.    Langkah 1. Pilih sehingga untuk ; simpulkan pada ekor barisan.   Langkah 2. Ambil maksimum dari , bilangan , dan nilai mutlak semua suku sebelum .   Benar. Ekor barisan dibatasi oleh , sedangkan sejumlah berhingga suku awal mempunyai maksimum nilai mutlak; maksimum kedua batas itu membatasi seluruh barisan.   Karena , terdapat sehingga untuk semua . Ketaksamaan segitiga memberi Tetapkan Jika , daftar suku awal itu kosong dan cukup ambil . Dalam semua kasus, dan baik untuk suku awal maupun untuk . Jadi barisan konvergen tersebut terbatas.  "
+},
+{
+  "id": "o003-c90-ch09-guide-30",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-a.html#o003-c90-ch09-guide-30",
+  "type": "Pemeriksaan",
+  "number": "I.30",
+  "title": "Limit hasil kali dua barisan.",
+  "body": "Limit hasil kali dua barisan  Pada perintah ke-14 latihan penutup, jika dan , buktikan bahwa . Rubrik. Gunakan hasil bahwa terbatas dan uraikan selisih hasil kali menjadi dua suku yang dapat dikendalikan secara terpisah.    Langkah 1. Pilih dengan , lalu gunakan .   Langkah 2. Buat dan secara serentak.   Benar. Keterbatasan dan uraian membuat kedua suku menuju nol.   Menurut perintah sebelumnya, ada sehingga untuk semua . Tetapkan . Dari , pilih sehingga jika . Dari , pilih sehingga jika . Untuk , Jadi , atau .  "
+},
+{
+  "id": "o003-c90-ch09-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch09-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian kedua",
+  "body": " Panduan latihan sumber, bagian kedua  Empat belas panduan berikut berkorespondensi, dalam urutan sumber, dengan empat belas perintah terakhir pada latihan penutup Bab 9. ID panduan berlanjut dari o003-c90-ch09-guide-31 sampai o003-c90-ch09-guide-44 . Materi ini merupakan uraian asli untuk pembelajaran mandiri dan tersedia sebagai bagian komponen CC BY 4.0, terpisah dari turunan GVSU.  Hukum limit untuk hasil bagi  Untuk perintah tentang , buktikan hukum limit hasil bagi ketika , , dan setiap . Rubrik: terlebih dahulu batasi penyebut menjauhi nol, lalu pisahkan selisih hasil bagi menjadi dua suku.   Tahap 1: akhirnya , sehingga . Tahap 2: tambahkan dan kurangkan sebelum memakai ketaksamaan segitiga.   Barisan hasil bagi konvergen dan .   Karena , ada sehingga bagi ; akibatnya . Untuk indeks tersebut, Jika , suku kedua hilang. Jika tidak, pilih ambang bagi kedua barisan sehingga masing-masing suku di ruas kanan lebih kecil dari , lalu ambil maksimum bersama . Maka selisih hasil bagi lebih kecil dari untuk semua indeks sesudah ambang itu, yang membuktikan limit yang dinyatakan.   Hasil kali fungsi kontinu  Pada perintah berikutnya, buktikan bahwa kontinu apabila kontinu. Rubrik: gunakan pencirian sekuensial dan hukum limit hasil kali yang baru dibuktikan.   Ambil titik dan sebarang barisan . Kekontinuan memberi dua limit citra; kalikan kedua limit itu.   Untuk setiap , berlaku ; jadi kontinu.   Tetapkan dan ambil sebarang barisan dengan . Karena dan kontinu, teorema pencirian sekuensial memberi dan . Hukum limit hasil kali kemudian memberi Sifat ini berlaku bagi setiap barisan yang menuju , maka kontinu di . Karena titiknya sebarang, fungsi itu kontinu di seluruh .   Hasil bagi fungsi kontinu  Buktikan langsung dari definisi bahwa kontinu jika dan kontinu serta untuk semua . Rubrik: di sekitar titik tetap, buat memiliki batas bawah positif sebelum menaksir hasil bagi.   Untuk titik , gunakan kekontinuan agar . Setelah itu uraikan selisih menjadi dua bagian.   Fungsi kontinu di setiap karena penyebutnya tetap menjauhi nol pada suatu lingkungan .   Tetapkan dan tulis . Dari kekontinuan , pilih lingkungan tempat ; di sana . Untuk di lingkungan itu, Dengan kekontinuan kedua fungsi, persempit lingkungan sehingga suku pertama kurang dari dan suku kedua juga kurang dari (suku kedua nol jika ). Maka selisih hasil bagi kurang dari . Ini adalah definisi kekontinuan di .   Konvergensi koordinat dalam bidang  Untuk barisan dalam bidang Euklides, buktikan bahwa tepat ketika kedua barisan koordinat menuju dan . Rubrik: buktikan kedua arah dengan taksiran jarak Euklides.   Satu arah memakai . Untuk arah balik, buat kedua selisih koordinat lebih kecil dari secara serentak.   Konvergensi Euklides di ekuivalen dengan konvergensi masing-masing koordinat.   Jika , maka setiap selisih koordinat tidak melebihi , sehingga keduanya menuju nol. Sebaliknya, andaikan dan . Untuk , pilih satu ambang sesudah kedua selisih mutlak kurang dari . Maka Jadi barisan pasangan menuju pasangan limitnya, dan kedua implikasi telah dibuktikan.   Fungsi rasional–irasional  Untuk fungsi yang bernilai pada bilangan rasional dan pada bilangan irasional, tentukan tepat semua titik kekontinuannya. Rubrik: buktikan kekontinuan pada calon titik, lalu gunakan barisan rasional atau irasional untuk setiap titik lain.   Selalu berlaku . Di titik tak nol, gunakan kerapatan bilangan rasional dan irasional untuk memilih barisan dari jenis yang membuat nilai fungsi tidak menuju nilai di titik itu.   Fungsi tersebut kontinu tepat di dan tidak kontinu di setiap titik real tak nol.   Karena dan , fungsi kontinu di . Jika rasional, ambil barisan irasional ; maka , tetapi . Jika irasional, ambil barisan rasional ; maka , tetapi . Pencirian sekuensial menyangkal kekontinuan dalam kedua kasus, sehingga hanya yang tersisa.   Merancang himpunan titik kontinu berhingga  Modifikasi konstruksi sebelumnya agar fungsi kontinu tepat di dan , lalu perluas ke sebarang himpunan berhingga yang telah ditentukan. Rubrik: gunakan polinom yang himpunan nolnya tepat sama dengan titik-titik sasaran.   Untuk , gunakan faktor . Untuk , gunakan pada bilangan rasional dan nol pada bilangan irasional.   Fungsi pada rasional dan pada irasional kontinu tepat pada himpunan nol polinom .   Ambil dan definisikan bila rasional, serta bila irasional. Di dan , kekontinuan dan taksiran memberi kekontinuan . Di titik lain, barisan rasional dan irasional memberi dua limit citra berbeda. Argumen sama berlaku bagi : fungsi hasil konstruksi kontinu tepat pada nol-nol , yaitu tepat pada himpunan berhingga .   Limit barisan geometri  Untuk , buktikan bahwa . Rubrik: pisahkan kasus ; untuk , hasilkan ambang indeks yang bergantung pada .   Tulis dengan . Ketaksamaan Bernoulli memberi , sehingga .   Barisan konvergen ke untuk setiap .   Jika , semua suku bernilai nol. Jika , tulis dengan . Untuk , pilih sehingga . Bagi , ketaksamaan Bernoulli memberi Ini tepat definisi .   Konvergensi titik demi titik bukan konvergensi seragam  Untuk pada , tentukan apakah konvergen dalam metrik supremum ke fungsi yang nol pada dan satu di . Rubrik: hitung supremum selisih, bukan hanya limit pada setiap titik.   Pada selisihnya nol, tetapi untuk selisihnya . Seberapa besar supremum ketika ?   Tidak. Untuk setiap , jarak supremum dari ke fungsi calon limit itu sama dengan .   Jika , fungsi calon limit bernilai nol sehingga ; pada selisihnya nol. Walaupun nilai tidak dicapai pada interval setengah terbuka , nilai dapat dibuat sedekat apa pun dengan dengan memilih cukup dekat ke . Jadi untuk setiap . Jarak itu tidak menuju nol, maka tidak ada konvergensi dalam metrik supremum.   Limit dalam metrik integral  Pandang kembali , kini di dengan metrik integral. Tentukan apakah barisan memiliki limit di ruang itu. Rubrik: uji fungsi nol yang kontinu dengan menghitung integral secara tepat.   Hitung . Limit titik demi titik yang tak kontinu bukan calon dalam , tetapi metrik integral dapat memiliki limit lain pada satu titik yang berbeda.   Ya. Dalam metrik integral, konvergen ke fungsi nol.   Fungsi nol berada dalam . Karena , Jadi dalam metrik integral. Tidak ada konflik dengan limit titik demi titik yang bernilai satu di : perubahan pada satu titik tidak memengaruhi integral, sedangkan metrik supremum peka terhadap nilai-nilai yang mendekati titik itu.   Barisan menurun dan infimum  Nilai pernyataan bahwa barisan real yang menurun dan terbatas di bawah konvergen ke infimum himpunan sukunya. Rubrik: gunakan sifat penentu infimum untuk menemukan satu suku di bawah .   Tulis . Ada dengan ; kemotonan mengendalikan semua suku sesudahnya.   Pernyataan benar: barisan tersebut konvergen ke infimum himpunan semua sukunya.   Karena batas bawah, bagi semua . Untuk , bilangan bukan batas bawah; maka ada dengan . Karena barisan menurun, bagi berlaku . Dengan demikian , sehingga .   Membangun barisan dari perpotongan bola  Nilai pernyataan: jika setiap bola bertemu subhimpunan tak kosong , maka ada barisan di yang konvergen ke . Rubrik: pilih satu titik dari bola berjari-jari untuk setiap .   Pilih . Definisi bola langsung memberi batas atas untuk .   Pernyataan benar; pilihan menghasilkan barisan yang konvergen ke .   Hipotesis menjamin bahwa tidak kosong untuk setiap . Pilih dari perpotongan itu. Maka . Untuk , pilih . Jika , maka . Jadi barisan yang seluruh sukunya berada di tersebut konvergen ke .   Membandingkan supremum dan infimum  Nilai pernyataan bahwa apabila setiap unsur tidak melebihi setiap unsur . Rubrik: baca setiap unsur sebagai batas atas , lalu balikkan peran batas itu.   Untuk setiap , berlaku . Artinya, sendiri merupakan batas bawah bagi .   Pernyataan benar: syarat urutan memaksa .   Tetapkan . Karena untuk semua , bilangan adalah batas atas ; sehingga . Ini berlaku bagi setiap , jadi adalah batas bawah . Karena adalah batas bawah terbesar, diperoleh .   Menguji klaim limit dalam metrik pecahan  Nilai klaim bahwa menuju dalam metrik pada pecahan rasional bentuk paling sederhana yang membandingkan pembilang dan penyebut. Rubrik: tulis representasi paling sederhana bagi dan , lalu hitung jaraknya.   Gunakan dan . Metrik memberi maksimum antara selisih pembilang dan selisih penyebut.   Klaim salah, sebab , yang tidak menuju nol.   Pecahan sudah dalam bentuk paling sederhana dan nol ditulis sebagai . Maka Nilai ini sekurang-kurangnya untuk semua , bahkan bertambah tanpa batas. Karena jarak ke calon limit tidak menuju nol, barisan tersebut tidak konvergen ke dalam metrik ini.   Konvergensi dalam metrik diskret  Nilai pernyataan bahwa barisan dalam ruang bermetrik diskret konvergen tepat ketika barisan itu pada akhirnya konstan. Rubrik: untuk satu arah pilih toleransi yang lebih kecil dari ; arah sebaliknya mengikuti definisi secara langsung.   Jika , gunakan . Dalam metrik diskret, ketaksamaan memaksa .   Pernyataan benar: barisan konvergen dalam metrik diskret jika dan hanya jika pada akhirnya semua sukunya sama dengan limitnya.   Andaikan . Untuk , ada sehingga bagi semua . Jarak diskret hanya bernilai nol atau satu, maka harus , yakni , sesudah . Sebaliknya, jika sesudah suatu ambang, maka bagi setiap jarak sesudah ambang tersebut. Jadi barisan konvergen ke .   "
+},
+{
+  "id": "o003-c90-ch09-guide-31",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-31",
+  "type": "Pemeriksaan",
+  "number": "I.31",
+  "title": "Hukum limit untuk hasil bagi.",
+  "body": "Hukum limit untuk hasil bagi  Untuk perintah tentang , buktikan hukum limit hasil bagi ketika , , dan setiap . Rubrik: terlebih dahulu batasi penyebut menjauhi nol, lalu pisahkan selisih hasil bagi menjadi dua suku.   Tahap 1: akhirnya , sehingga . Tahap 2: tambahkan dan kurangkan sebelum memakai ketaksamaan segitiga.   Barisan hasil bagi konvergen dan .   Karena , ada sehingga bagi ; akibatnya . Untuk indeks tersebut, Jika , suku kedua hilang. Jika tidak, pilih ambang bagi kedua barisan sehingga masing-masing suku di ruas kanan lebih kecil dari , lalu ambil maksimum bersama . Maka selisih hasil bagi lebih kecil dari untuk semua indeks sesudah ambang itu, yang membuktikan limit yang dinyatakan.  "
+},
+{
+  "id": "o003-c90-ch09-guide-32",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-32",
+  "type": "Pemeriksaan",
+  "number": "I.32",
+  "title": "Hasil kali fungsi kontinu.",
+  "body": "Hasil kali fungsi kontinu  Pada perintah berikutnya, buktikan bahwa kontinu apabila kontinu. Rubrik: gunakan pencirian sekuensial dan hukum limit hasil kali yang baru dibuktikan.   Ambil titik dan sebarang barisan . Kekontinuan memberi dua limit citra; kalikan kedua limit itu.   Untuk setiap , berlaku ; jadi kontinu.   Tetapkan dan ambil sebarang barisan dengan . Karena dan kontinu, teorema pencirian sekuensial memberi dan . Hukum limit hasil kali kemudian memberi Sifat ini berlaku bagi setiap barisan yang menuju , maka kontinu di . Karena titiknya sebarang, fungsi itu kontinu di seluruh .  "
+},
+{
+  "id": "o003-c90-ch09-guide-33",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-33",
+  "type": "Pemeriksaan",
+  "number": "I.33",
+  "title": "Hasil bagi fungsi kontinu.",
+  "body": "Hasil bagi fungsi kontinu  Buktikan langsung dari definisi bahwa kontinu jika dan kontinu serta untuk semua . Rubrik: di sekitar titik tetap, buat memiliki batas bawah positif sebelum menaksir hasil bagi.   Untuk titik , gunakan kekontinuan agar . Setelah itu uraikan selisih menjadi dua bagian.   Fungsi kontinu di setiap karena penyebutnya tetap menjauhi nol pada suatu lingkungan .   Tetapkan dan tulis . Dari kekontinuan , pilih lingkungan tempat ; di sana . Untuk di lingkungan itu, Dengan kekontinuan kedua fungsi, persempit lingkungan sehingga suku pertama kurang dari dan suku kedua juga kurang dari (suku kedua nol jika ). Maka selisih hasil bagi kurang dari . Ini adalah definisi kekontinuan di .  "
+},
+{
+  "id": "o003-c90-ch09-guide-34",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-34",
+  "type": "Pemeriksaan",
+  "number": "I.34",
+  "title": "Konvergensi koordinat dalam bidang.",
+  "body": "Konvergensi koordinat dalam bidang  Untuk barisan dalam bidang Euklides, buktikan bahwa tepat ketika kedua barisan koordinat menuju dan . Rubrik: buktikan kedua arah dengan taksiran jarak Euklides.   Satu arah memakai . Untuk arah balik, buat kedua selisih koordinat lebih kecil dari secara serentak.   Konvergensi Euklides di ekuivalen dengan konvergensi masing-masing koordinat.   Jika , maka setiap selisih koordinat tidak melebihi , sehingga keduanya menuju nol. Sebaliknya, andaikan dan . Untuk , pilih satu ambang sesudah kedua selisih mutlak kurang dari . Maka Jadi barisan pasangan menuju pasangan limitnya, dan kedua implikasi telah dibuktikan.  "
+},
+{
+  "id": "o003-c90-ch09-guide-35",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-35",
+  "type": "Pemeriksaan",
+  "number": "I.35",
+  "title": "Fungsi rasional–irasional.",
+  "body": "Fungsi rasional–irasional  Untuk fungsi yang bernilai pada bilangan rasional dan pada bilangan irasional, tentukan tepat semua titik kekontinuannya. Rubrik: buktikan kekontinuan pada calon titik, lalu gunakan barisan rasional atau irasional untuk setiap titik lain.   Selalu berlaku . Di titik tak nol, gunakan kerapatan bilangan rasional dan irasional untuk memilih barisan dari jenis yang membuat nilai fungsi tidak menuju nilai di titik itu.   Fungsi tersebut kontinu tepat di dan tidak kontinu di setiap titik real tak nol.   Karena dan , fungsi kontinu di . Jika rasional, ambil barisan irasional ; maka , tetapi . Jika irasional, ambil barisan rasional ; maka , tetapi . Pencirian sekuensial menyangkal kekontinuan dalam kedua kasus, sehingga hanya yang tersisa.  "
+},
+{
+  "id": "o003-c90-ch09-guide-36",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-36",
+  "type": "Pemeriksaan",
+  "number": "I.36",
+  "title": "Merancang himpunan titik kontinu berhingga.",
+  "body": "Merancang himpunan titik kontinu berhingga  Modifikasi konstruksi sebelumnya agar fungsi kontinu tepat di dan , lalu perluas ke sebarang himpunan berhingga yang telah ditentukan. Rubrik: gunakan polinom yang himpunan nolnya tepat sama dengan titik-titik sasaran.   Untuk , gunakan faktor . Untuk , gunakan pada bilangan rasional dan nol pada bilangan irasional.   Fungsi pada rasional dan pada irasional kontinu tepat pada himpunan nol polinom .   Ambil dan definisikan bila rasional, serta bila irasional. Di dan , kekontinuan dan taksiran memberi kekontinuan . Di titik lain, barisan rasional dan irasional memberi dua limit citra berbeda. Argumen sama berlaku bagi : fungsi hasil konstruksi kontinu tepat pada nol-nol , yaitu tepat pada himpunan berhingga .  "
+},
+{
+  "id": "o003-c90-ch09-guide-37",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-37",
+  "type": "Pemeriksaan",
+  "number": "I.37",
+  "title": "Limit barisan geometri.",
+  "body": "Limit barisan geometri  Untuk , buktikan bahwa . Rubrik: pisahkan kasus ; untuk , hasilkan ambang indeks yang bergantung pada .   Tulis dengan . Ketaksamaan Bernoulli memberi , sehingga .   Barisan konvergen ke untuk setiap .   Jika , semua suku bernilai nol. Jika , tulis dengan . Untuk , pilih sehingga . Bagi , ketaksamaan Bernoulli memberi Ini tepat definisi .  "
+},
+{
+  "id": "o003-c90-ch09-guide-38",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-38",
+  "type": "Pemeriksaan",
+  "number": "I.38",
+  "title": "Konvergensi titik demi titik bukan konvergensi seragam.",
+  "body": "Konvergensi titik demi titik bukan konvergensi seragam  Untuk pada , tentukan apakah konvergen dalam metrik supremum ke fungsi yang nol pada dan satu di . Rubrik: hitung supremum selisih, bukan hanya limit pada setiap titik.   Pada selisihnya nol, tetapi untuk selisihnya . Seberapa besar supremum ketika ?   Tidak. Untuk setiap , jarak supremum dari ke fungsi calon limit itu sama dengan .   Jika , fungsi calon limit bernilai nol sehingga ; pada selisihnya nol. Walaupun nilai tidak dicapai pada interval setengah terbuka , nilai dapat dibuat sedekat apa pun dengan dengan memilih cukup dekat ke . Jadi untuk setiap . Jarak itu tidak menuju nol, maka tidak ada konvergensi dalam metrik supremum.  "
+},
+{
+  "id": "o003-c90-ch09-guide-39",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-39",
+  "type": "Pemeriksaan",
+  "number": "I.39",
+  "title": "Limit dalam metrik integral.",
+  "body": "Limit dalam metrik integral  Pandang kembali , kini di dengan metrik integral. Tentukan apakah barisan memiliki limit di ruang itu. Rubrik: uji fungsi nol yang kontinu dengan menghitung integral secara tepat.   Hitung . Limit titik demi titik yang tak kontinu bukan calon dalam , tetapi metrik integral dapat memiliki limit lain pada satu titik yang berbeda.   Ya. Dalam metrik integral, konvergen ke fungsi nol.   Fungsi nol berada dalam . Karena , Jadi dalam metrik integral. Tidak ada konflik dengan limit titik demi titik yang bernilai satu di : perubahan pada satu titik tidak memengaruhi integral, sedangkan metrik supremum peka terhadap nilai-nilai yang mendekati titik itu.  "
+},
+{
+  "id": "o003-c90-ch09-guide-40",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-40",
+  "type": "Pemeriksaan",
+  "number": "I.40",
+  "title": "Barisan menurun dan infimum.",
+  "body": "Barisan menurun dan infimum  Nilai pernyataan bahwa barisan real yang menurun dan terbatas di bawah konvergen ke infimum himpunan sukunya. Rubrik: gunakan sifat penentu infimum untuk menemukan satu suku di bawah .   Tulis . Ada dengan ; kemotonan mengendalikan semua suku sesudahnya.   Pernyataan benar: barisan tersebut konvergen ke infimum himpunan semua sukunya.   Karena batas bawah, bagi semua . Untuk , bilangan bukan batas bawah; maka ada dengan . Karena barisan menurun, bagi berlaku . Dengan demikian , sehingga .  "
+},
+{
+  "id": "o003-c90-ch09-guide-41",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-41",
+  "type": "Pemeriksaan",
+  "number": "I.41",
+  "title": "Membangun barisan dari perpotongan bola.",
+  "body": "Membangun barisan dari perpotongan bola  Nilai pernyataan: jika setiap bola bertemu subhimpunan tak kosong , maka ada barisan di yang konvergen ke . Rubrik: pilih satu titik dari bola berjari-jari untuk setiap .   Pilih . Definisi bola langsung memberi batas atas untuk .   Pernyataan benar; pilihan menghasilkan barisan yang konvergen ke .   Hipotesis menjamin bahwa tidak kosong untuk setiap . Pilih dari perpotongan itu. Maka . Untuk , pilih . Jika , maka . Jadi barisan yang seluruh sukunya berada di tersebut konvergen ke .  "
+},
+{
+  "id": "o003-c90-ch09-guide-42",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-42",
+  "type": "Pemeriksaan",
+  "number": "I.42",
+  "title": "Membandingkan supremum dan infimum.",
+  "body": "Membandingkan supremum dan infimum  Nilai pernyataan bahwa apabila setiap unsur tidak melebihi setiap unsur . Rubrik: baca setiap unsur sebagai batas atas , lalu balikkan peran batas itu.   Untuk setiap , berlaku . Artinya, sendiri merupakan batas bawah bagi .   Pernyataan benar: syarat urutan memaksa .   Tetapkan . Karena untuk semua , bilangan adalah batas atas ; sehingga . Ini berlaku bagi setiap , jadi adalah batas bawah . Karena adalah batas bawah terbesar, diperoleh .  "
+},
+{
+  "id": "o003-c90-ch09-guide-43",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-43",
+  "type": "Pemeriksaan",
+  "number": "I.43",
+  "title": "Menguji klaim limit dalam metrik pecahan.",
+  "body": "Menguji klaim limit dalam metrik pecahan  Nilai klaim bahwa menuju dalam metrik pada pecahan rasional bentuk paling sederhana yang membandingkan pembilang dan penyebut. Rubrik: tulis representasi paling sederhana bagi dan , lalu hitung jaraknya.   Gunakan dan . Metrik memberi maksimum antara selisih pembilang dan selisih penyebut.   Klaim salah, sebab , yang tidak menuju nol.   Pecahan sudah dalam bentuk paling sederhana dan nol ditulis sebagai . Maka Nilai ini sekurang-kurangnya untuk semua , bahkan bertambah tanpa batas. Karena jarak ke calon limit tidak menuju nol, barisan tersebut tidak konvergen ke dalam metrik ini.  "
+},
+{
+  "id": "o003-c90-ch09-guide-44",
+  "level": "2",
+  "url": "o003-c90-ch09-exercise-guides-b.html#o003-c90-ch09-guide-44",
+  "type": "Pemeriksaan",
+  "number": "I.44",
+  "title": "Konvergensi dalam metrik diskret.",
+  "body": "Konvergensi dalam metrik diskret  Nilai pernyataan bahwa barisan dalam ruang bermetrik diskret konvergen tepat ketika barisan itu pada akhirnya konstan. Rubrik: untuk satu arah pilih toleransi yang lebih kecil dari ; arah sebaliknya mengikuti definisi secara langsung.   Jika , gunakan . Dalam metrik diskret, ketaksamaan memaksa .   Pernyataan benar: barisan konvergen dalam metrik diskret jika dan hanya jika pada akhirnya semua sukunya sama dengan limitnya.   Andaikan . Untuk , ada sehingga bagi semua . Jarak diskret hanya bernilai nol atau satu, maka harus , yakni , sesudah . Sebaliknya, jika sesudah suatu ambang, maka bagi setiap jarak sesudah ambang tersebut. Jadi barisan konvergen ke .  "
+},
+{
+  "id": "o003-c90-ch09-mastery",
+  "level": "1",
+  "url": "o003-c90-ch09-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 9",
+  "body": " Pemeriksaan penguasaan Bab 9  Keenam soal kumulatif berikut merupakan komponen pendamping asli O003, terpisah dari teks GVSU, dan tersedia di bawah CC BY 4.0. Setiap petunjuk dibagi menjadi beberapa tahap; gunakan hanya tahap yang diperlukan sebelum membandingkan jawaban dan pembahasan lengkap.  Menyusun bukti epsilon–N  Dalam , definisikan untuk .    Hitung dan, untuk , temukan bilangan bulat positif yang dinyatakan secara eksplisit dalam sehingga mengakibatkan .    Tulislah bukti lengkap langsung dari definisi bahwa . Pisahkan perhitungan untuk menemukan dari pembuktian yang memverifikasi pilihan tersebut.      Tahap 1. Satukan kedua suku pada dengan penyebut .   Tahap 2. Ketaksamaan yang perlu dijamin adalah . Pilihan sedikit lebih besar daripada yang benar-benar diperlukan, tetapi mudah diverifikasi.   Tahap 3. Dalam bukti formal, mulailah dengan , tetapkan , lalu ambil sebarang . Jangan memilih yang bergantung pada .   Berlaku . Untuk setiap , pilihan memenuhi syarat definisi limit; jadi .   Perhitungan awal memberikan Agar besaran terakhir lebih kecil daripada , cukup memastikan ; tambahan pada penyebut kemudian menghasilkan ketaksamaan ketat.  Sekarang misalkan diberikan dan tetapkan . Bilangan adalah bilangan bulat positif. Jika , maka . Karena semua besaran positif, Jadi, untuk setiap terdapat bilangan bulat positif sehingga mengakibatkan . Menurut definisi, konvergen ke .   Ketunggalan limit dan peran metrik    Misalkan suatu barisan dalam ruang metrik . Andaikan konvergen ke dan juga konvergen ke . Buktikan bahwa . Tunjukkan dengan jelas di mana sifat metrik dan kedua asumsi konvergensi digunakan.    Pada himpunan dasar , bandingkan metrik Euklides dengan metrik diskret   Buktikan bahwa barisan konvergen ke terhadap . Buktikan pula bahwa suatu barisan dalam ruang bermetrik diskret konvergen jika dan hanya jika barisan itu pada akhirnya konstan, lalu tentukan perilaku terhadap .    Jelaskan mengapa hasil pada bagian kedua tidak bertentangan dengan ketunggalan limit pada bagian pertama.      Tahap 1. Jika , gunakan bagi kedua limit. Pilih satu indeks yang melampaui kedua indeks ambang, lalu terapkan pertidaksamaan segitiga pada lintasan .   Tahap 2. Untuk metrik Euklides, pilih bilangan bulat .   Tahap 3. Jika suatu barisan konvergen ke dalam metrik diskret, terapkan definisi dengan . Untuk arah balik, jika semua suku mulai indeks tertentu sama dengan , jaraknya ke sama dengan nol.   Tahap 4. Teorema ketunggalan membahas satu ruang metrik yang telah ditetapkan. Di sini struktur metriknya diganti.   Jika , pilihan dan pertidaksamaan segitiga menghasilkan , suatu kontradiksi. Jadi limit dalam satu ruang metrik bersifat tunggal.  Barisan konvergen ke terhadap , tetapi divergen terhadap . Dalam metrik diskret, syarat memaksa ; jadi konvergensi setara dengan sifat pada akhirnya konstan. Ketunggalan limit tidak dilanggar karena kedua kesimpulan dibuat dalam dua ruang metrik yang berbeda.   Andaikan . Sifat definit positif suatu metrik memberi . Tetapkan . Karena dan , terdapat sehingga untuk dan untuk . Pilih . Simetri dan pertidaksamaan segitiga memberi yang mustahil. Jadi .  Misalkan . Berdasarkan sifat Archimedes, pilih dengan . Jika , maka Jadi dalam .  Sekarang misalkan suatu barisan konvergen ke terhadap . Dengan , terdapat sehingga untuk semua . Satu-satunya nilai metrik diskret yang lebih kecil daripada adalah , sehingga untuk setiap . Jadi barisan tersebut pada akhirnya konstan. Sebaliknya, jika untuk setiap , maka bagi setiap dan setiap ; jadi .  Suku-suku semuanya berbeda, sehingga barisan itu tidak pada akhirnya konstan. Maka divergen dalam . Teorema ketunggalan mengatakan bahwa suatu barisan tidak mempunyai dua limit berbeda terhadap metrik yang sama. Teorema itu tidak mengatakan bahwa perilaku konvergensi tidak berubah ketika metriknya diganti.   Menguji kekontinuan dengan barisan    Definisikan oleh . Gunakan pencirian kekontinuan melalui barisan untuk membuktikan bahwa kontinu di setiap . Jangan mengandaikan tanpa bukti bahwa hasil kali limit dapat dipertukarkan.    Definisikan oleh Temukan satu barisan yang konvergen ke tetapi tidak konvergen ke . Simpulkan bahwa tidak kontinu di .      Tahap 1. Jika , maka untuk suku-suku yang cukup jauh berlaku , sehingga .   Tahap 2. Gunakan faktorisasi . Untuk epsilon yang diberikan, minta .   Tahap 3. Untuk fungsi kedua, pilih penyebut yang membuat . Nilai sinusnya kemudian selalu sama.   Jika , maka untuk semua suku yang cukup jauh; jadi kontinu di setiap . Sebaliknya, konvergen ke , tetapi untuk semua , sedangkan . Jadi tidak kontinu di .   Ambil dan sebarang barisan dengan . Misalkan dan tetapkan Karena , ada sehingga untuk setiap . Untuk indeks tersebut, , sehingga dan . Oleh karena itu, Jadi . Hal ini berlaku bagi setiap barisan yang konvergen ke ; pencirian melalui barisan menunjukkan bahwa kontinu di . Karena sebarang, kontinu di seluruh .  Untuk fungsi kedua, tetapkan . Penyebutnya menuju tak hingga, sehingga . Namun, untuk setiap . Jadi barisan konvergen ke , bukan ke . Satu barisan saksi ini menyangkal syarat barisan yang diperlukan untuk kekontinuan di . Maka tidak kontinu di .   Limit dalam subruang dan ruang ambien  Misalkan , suatu ruang metrik, dan adalah metrik subruang, yakni untuk .    Jika adalah barisan di dan , buktikan bahwa dalam jika dan hanya jika dalam .    Untuk , tetapkan Buktikan bahwa konvergen dalam ruang ambien , tetapi tidak konvergen sebagai barisan dalam subruang . Jelaskan mengapa hal ini tidak bertentangan dengan bagian pertama.      Tahap 1. Untuk titik-titik yang semuanya berada di , bilangan dan persis sama.   Tahap 2. Sifat fungsi lantai memberi .   Tahap 3. Jika konvergen di ke suatu , bagian pertama menjadikannya konvergen ke di . Gunakan ketunggalan limit.   Selama calon limit berada di , kedua definisi konvergensi identik karena . Barisan memenuhi , sehingga konvergen ke di . Ia tidak dapat konvergen di : limit rasional demikian juga akan menjadi limit ambien, bertentangan dengan ketunggalan limit dan ketakrasionalan .   Misalkan barisan di dan . Untuk setiap , definisi metrik subruang memberi . Karena itu, bagi setiap dan setiap indeks , pernyataan setara dengan pernyataan yang sama dengan menggantikan . Kuantor dalam kedua definisi limit pun identik, sehingga di jika dan hanya jika di .  Untuk contoh, setiap rasional. Dari dengan , setelah dibagi dengan diperoleh Karena , untuk setiap semua suku yang cukup jauh memenuhi . Jadi dalam ruang ambien .  Andaikan konvergen sebagai barisan di . Maka limitnya harus berupa suatu . Berdasarkan bagian pertama, juga dalam . Akan tetapi, di barisan yang sama sudah terbukti konvergen ke . Ketunggalan limit memaksa , yang mustahil karena rasional dan irasional. Jadi barisan itu tidak konvergen di . Tidak ada kontradiksi dengan bagian pertama: limit ambien tidak berada di subruang , sedangkan kesetaraan pada bagian pertama mensyaratkan .   Konvergensi koordinat demi koordinat  Dalam dengan metrik Euklides, misalkan dan . Buktikan bahwa jika dan hanya jika dan dalam . Bukti harus menangani kedua arah langsung dari definisi metrik.    Tahap 1. Untuk arah dari pasangan ke koordinat, gunakan dan .   Tahap 2. Untuk arah sebaliknya dan epsilon yang diberikan, buat kedua selisih koordinat lebih kecil daripada .   Tahap 3. Kedua koordinat mungkin memberikan indeks awal yang berbeda. Ambil maksimum dari kedua indeks tersebut.   Konvergensi memaksa setiap selisih koordinat menuju nol karena masing-masing dibatasi oleh . Sebaliknya, jika kedua koordinat konvergen, buat masing-masing selisih lebih kecil daripada ; maka . Jadi kedua kondisi setara.   Andaikan . Untuk setiap , Misalkan . Untuk semua yang cukup besar, ; kedua ketaksamaan di atas kemudian memberi dan . Jadi dan .  Sebaliknya, andaikan dan . Diberikan , ada sehingga untuk , dan ada sehingga untuk . Jika , maka Dengan demikian, . Kedua arah membuktikan kesetaraan yang diminta.   Konvergensi titik demi titik dan konvergensi seragam  Misalkan adalah himpunan semua fungsi terbatas bernilai real pada , dengan metrik supremum     Untuk , tentukan limit titik demi titik pada .    Hitung . Apakah konvergen ke dalam metrik supremum, yakni secara seragam?    Untuk pembanding, tetapkan . Buktikan bahwa konvergen secara seragam ke fungsi nol. Jelaskan secara umum mengapa konvergensi dalam metrik supremum selalu mengakibatkan konvergensi titik demi titik.      Tahap 1. Jika , maka , sedangkan .   Tahap 2. Untuk , selisih sama dengan . Nilai-nilai ini dapat dibuat sedekat yang diinginkan dengan dengan memilih cukup dekat ke , walaupun pada selisihnya nol.   Tahap 3. Untuk fungsi pembanding, . Untuk implikasi umum, bandingkan nilai pada satu titik tetap dengan supremum atas semua titik.   Limit titik demi titik ialah untuk dan . Namun, untuk setiap , sehingga konvergensi itu tidak seragam. Sebaliknya, . Secara umum, pada setiap titik, sehingga konvergensi seragam mengakibatkan konvergensi titik demi titik.   Untuk , berlaku untuk semua . Jika , berlaku . Jika , tetapkan . Ketaksamaan Bernoulli memberi , sehingga Jadi limit titik demi titiknya adalah   Untuk , selisihnya adalah , sedangkan pada selisihnya nol. Meskipun nilai tidak dicapai oleh selisih tersebut, nilai itu adalah supremumnya. Memang, jika , pilih . Maka dan . Jadi nilai selisih dapat melampaui setiap , sementara selalu dibatasi di atas oleh . Dengan demikian, untuk setiap . Jarak ini tidak menuju nol, sehingga tidak konvergen ke secara seragam.  Untuk , karena , Jadi dalam metrik supremum. Secara umum, jika dan ditetapkan, maka Maka pada setiap titik . Contoh menunjukkan bahwa implikasi sebaliknya tidak berlaku.   "
+},
+{
+  "id": "o003-c90-ch09-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch09-mastery.html#o003-c90-ch09-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "I.45",
+  "title": "Menyusun bukti epsilon–N.",
+  "body": "Menyusun bukti epsilon–N  Dalam , definisikan untuk .    Hitung dan, untuk , temukan bilangan bulat positif yang dinyatakan secara eksplisit dalam sehingga mengakibatkan .    Tulislah bukti lengkap langsung dari definisi bahwa . Pisahkan perhitungan untuk menemukan dari pembuktian yang memverifikasi pilihan tersebut.      Tahap 1. Satukan kedua suku pada dengan penyebut .   Tahap 2. Ketaksamaan yang perlu dijamin adalah . Pilihan sedikit lebih besar daripada yang benar-benar diperlukan, tetapi mudah diverifikasi.   Tahap 3. Dalam bukti formal, mulailah dengan , tetapkan , lalu ambil sebarang . Jangan memilih yang bergantung pada .   Berlaku . Untuk setiap , pilihan memenuhi syarat definisi limit; jadi .   Perhitungan awal memberikan Agar besaran terakhir lebih kecil daripada , cukup memastikan ; tambahan pada penyebut kemudian menghasilkan ketaksamaan ketat.  Sekarang misalkan diberikan dan tetapkan . Bilangan adalah bilangan bulat positif. Jika , maka . Karena semua besaran positif, Jadi, untuk setiap terdapat bilangan bulat positif sehingga mengakibatkan . Menurut definisi, konvergen ke .  "
+},
+{
+  "id": "o003-c90-ch09-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch09-mastery.html#o003-c90-ch09-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "I.46",
+  "title": "Ketunggalan limit dan peran metrik.",
+  "body": "Ketunggalan limit dan peran metrik    Misalkan suatu barisan dalam ruang metrik . Andaikan konvergen ke dan juga konvergen ke . Buktikan bahwa . Tunjukkan dengan jelas di mana sifat metrik dan kedua asumsi konvergensi digunakan.    Pada himpunan dasar , bandingkan metrik Euklides dengan metrik diskret   Buktikan bahwa barisan konvergen ke terhadap . Buktikan pula bahwa suatu barisan dalam ruang bermetrik diskret konvergen jika dan hanya jika barisan itu pada akhirnya konstan, lalu tentukan perilaku terhadap .    Jelaskan mengapa hasil pada bagian kedua tidak bertentangan dengan ketunggalan limit pada bagian pertama.      Tahap 1. Jika , gunakan bagi kedua limit. Pilih satu indeks yang melampaui kedua indeks ambang, lalu terapkan pertidaksamaan segitiga pada lintasan .   Tahap 2. Untuk metrik Euklides, pilih bilangan bulat .   Tahap 3. Jika suatu barisan konvergen ke dalam metrik diskret, terapkan definisi dengan . Untuk arah balik, jika semua suku mulai indeks tertentu sama dengan , jaraknya ke sama dengan nol.   Tahap 4. Teorema ketunggalan membahas satu ruang metrik yang telah ditetapkan. Di sini struktur metriknya diganti.   Jika , pilihan dan pertidaksamaan segitiga menghasilkan , suatu kontradiksi. Jadi limit dalam satu ruang metrik bersifat tunggal.  Barisan konvergen ke terhadap , tetapi divergen terhadap . Dalam metrik diskret, syarat memaksa ; jadi konvergensi setara dengan sifat pada akhirnya konstan. Ketunggalan limit tidak dilanggar karena kedua kesimpulan dibuat dalam dua ruang metrik yang berbeda.   Andaikan . Sifat definit positif suatu metrik memberi . Tetapkan . Karena dan , terdapat sehingga untuk dan untuk . Pilih . Simetri dan pertidaksamaan segitiga memberi yang mustahil. Jadi .  Misalkan . Berdasarkan sifat Archimedes, pilih dengan . Jika , maka Jadi dalam .  Sekarang misalkan suatu barisan konvergen ke terhadap . Dengan , terdapat sehingga untuk semua . Satu-satunya nilai metrik diskret yang lebih kecil daripada adalah , sehingga untuk setiap . Jadi barisan tersebut pada akhirnya konstan. Sebaliknya, jika untuk setiap , maka bagi setiap dan setiap ; jadi .  Suku-suku semuanya berbeda, sehingga barisan itu tidak pada akhirnya konstan. Maka divergen dalam . Teorema ketunggalan mengatakan bahwa suatu barisan tidak mempunyai dua limit berbeda terhadap metrik yang sama. Teorema itu tidak mengatakan bahwa perilaku konvergensi tidak berubah ketika metriknya diganti.  "
+},
+{
+  "id": "o003-c90-ch09-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch09-mastery.html#o003-c90-ch09-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "I.47",
+  "title": "Menguji kekontinuan dengan barisan.",
+  "body": "Menguji kekontinuan dengan barisan    Definisikan oleh . Gunakan pencirian kekontinuan melalui barisan untuk membuktikan bahwa kontinu di setiap . Jangan mengandaikan tanpa bukti bahwa hasil kali limit dapat dipertukarkan.    Definisikan oleh Temukan satu barisan yang konvergen ke tetapi tidak konvergen ke . Simpulkan bahwa tidak kontinu di .      Tahap 1. Jika , maka untuk suku-suku yang cukup jauh berlaku , sehingga .   Tahap 2. Gunakan faktorisasi . Untuk epsilon yang diberikan, minta .   Tahap 3. Untuk fungsi kedua, pilih penyebut yang membuat . Nilai sinusnya kemudian selalu sama.   Jika , maka untuk semua suku yang cukup jauh; jadi kontinu di setiap . Sebaliknya, konvergen ke , tetapi untuk semua , sedangkan . Jadi tidak kontinu di .   Ambil dan sebarang barisan dengan . Misalkan dan tetapkan Karena , ada sehingga untuk setiap . Untuk indeks tersebut, , sehingga dan . Oleh karena itu, Jadi . Hal ini berlaku bagi setiap barisan yang konvergen ke ; pencirian melalui barisan menunjukkan bahwa kontinu di . Karena sebarang, kontinu di seluruh .  Untuk fungsi kedua, tetapkan . Penyebutnya menuju tak hingga, sehingga . Namun, untuk setiap . Jadi barisan konvergen ke , bukan ke . Satu barisan saksi ini menyangkal syarat barisan yang diperlukan untuk kekontinuan di . Maka tidak kontinu di .  "
+},
+{
+  "id": "o003-c90-ch09-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch09-mastery.html#o003-c90-ch09-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "I.48",
+  "title": "Limit dalam subruang dan ruang ambien.",
+  "body": "Limit dalam subruang dan ruang ambien  Misalkan , suatu ruang metrik, dan adalah metrik subruang, yakni untuk .    Jika adalah barisan di dan , buktikan bahwa dalam jika dan hanya jika dalam .    Untuk , tetapkan Buktikan bahwa konvergen dalam ruang ambien , tetapi tidak konvergen sebagai barisan dalam subruang . Jelaskan mengapa hal ini tidak bertentangan dengan bagian pertama.      Tahap 1. Untuk titik-titik yang semuanya berada di , bilangan dan persis sama.   Tahap 2. Sifat fungsi lantai memberi .   Tahap 3. Jika konvergen di ke suatu , bagian pertama menjadikannya konvergen ke di . Gunakan ketunggalan limit.   Selama calon limit berada di , kedua definisi konvergensi identik karena . Barisan memenuhi , sehingga konvergen ke di . Ia tidak dapat konvergen di : limit rasional demikian juga akan menjadi limit ambien, bertentangan dengan ketunggalan limit dan ketakrasionalan .   Misalkan barisan di dan . Untuk setiap , definisi metrik subruang memberi . Karena itu, bagi setiap dan setiap indeks , pernyataan setara dengan pernyataan yang sama dengan menggantikan . Kuantor dalam kedua definisi limit pun identik, sehingga di jika dan hanya jika di .  Untuk contoh, setiap rasional. Dari dengan , setelah dibagi dengan diperoleh Karena , untuk setiap semua suku yang cukup jauh memenuhi . Jadi dalam ruang ambien .  Andaikan konvergen sebagai barisan di . Maka limitnya harus berupa suatu . Berdasarkan bagian pertama, juga dalam . Akan tetapi, di barisan yang sama sudah terbukti konvergen ke . Ketunggalan limit memaksa , yang mustahil karena rasional dan irasional. Jadi barisan itu tidak konvergen di . Tidak ada kontradiksi dengan bagian pertama: limit ambien tidak berada di subruang , sedangkan kesetaraan pada bagian pertama mensyaratkan .  "
+},
+{
+  "id": "o003-c90-ch09-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch09-mastery.html#o003-c90-ch09-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "I.49",
+  "title": "Konvergensi koordinat demi koordinat.",
+  "body": "Konvergensi koordinat demi koordinat  Dalam dengan metrik Euklides, misalkan dan . Buktikan bahwa jika dan hanya jika dan dalam . Bukti harus menangani kedua arah langsung dari definisi metrik.    Tahap 1. Untuk arah dari pasangan ke koordinat, gunakan dan .   Tahap 2. Untuk arah sebaliknya dan epsilon yang diberikan, buat kedua selisih koordinat lebih kecil daripada .   Tahap 3. Kedua koordinat mungkin memberikan indeks awal yang berbeda. Ambil maksimum dari kedua indeks tersebut.   Konvergensi memaksa setiap selisih koordinat menuju nol karena masing-masing dibatasi oleh . Sebaliknya, jika kedua koordinat konvergen, buat masing-masing selisih lebih kecil daripada ; maka . Jadi kedua kondisi setara.   Andaikan . Untuk setiap , Misalkan . Untuk semua yang cukup besar, ; kedua ketaksamaan di atas kemudian memberi dan . Jadi dan .  Sebaliknya, andaikan dan . Diberikan , ada sehingga untuk , dan ada sehingga untuk . Jika , maka Dengan demikian, . Kedua arah membuktikan kesetaraan yang diminta.  "
+},
+{
+  "id": "o003-c90-ch09-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch09-mastery.html#o003-c90-ch09-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "I.50",
+  "title": "Konvergensi titik demi titik dan konvergensi seragam.",
+  "body": "Konvergensi titik demi titik dan konvergensi seragam  Misalkan adalah himpunan semua fungsi terbatas bernilai real pada , dengan metrik supremum     Untuk , tentukan limit titik demi titik pada .    Hitung . Apakah konvergen ke dalam metrik supremum, yakni secara seragam?    Untuk pembanding, tetapkan . Buktikan bahwa konvergen secara seragam ke fungsi nol. Jelaskan secara umum mengapa konvergensi dalam metrik supremum selalu mengakibatkan konvergensi titik demi titik.      Tahap 1. Jika , maka , sedangkan .   Tahap 2. Untuk , selisih sama dengan . Nilai-nilai ini dapat dibuat sedekat yang diinginkan dengan dengan memilih cukup dekat ke , walaupun pada selisihnya nol.   Tahap 3. Untuk fungsi pembanding, . Untuk implikasi umum, bandingkan nilai pada satu titik tetap dengan supremum atas semua titik.   Limit titik demi titik ialah untuk dan . Namun, untuk setiap , sehingga konvergensi itu tidak seragam. Sebaliknya, . Secara umum, pada setiap titik, sehingga konvergensi seragam mengakibatkan konvergensi titik demi titik.   Untuk , berlaku untuk semua . Jika , berlaku . Jika , tetapkan . Ketaksamaan Bernoulli memberi , sehingga Jadi limit titik demi titiknya adalah   Untuk , selisihnya adalah , sedangkan pada selisihnya nol. Meskipun nilai tidak dicapai oleh selisih tersebut, nilai itu adalah supremumnya. Memang, jika , pilih . Maka dan . Jadi nilai selisih dapat melampaui setiap , sementara selalu dibatasi di atas oleh . Dengan demikian, untuk setiap . Jarak ini tidak menuju nol, sehingga tidak konvergen ke secara seragam.  Untuk , karena , Jadi dalam metrik supremum. Secara umum, jika dan ditetapkan, maka Maka pada setiap titik . Contoh menunjukkan bahwa implikasi sebaliknya tidak berlaku.  "
 },
 {
   "id": "index-1",

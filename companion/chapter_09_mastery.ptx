@@ -1,0 +1,593 @@
+<section xml:id="o003-c90-ch09-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 9</title>
+
+  <p>
+    Keenam soal kumulatif berikut merupakan komponen pendamping asli O003,
+    terpisah dari teks GVSU, dan tersedia di bawah CC BY 4.0. Setiap petunjuk
+    dibagi menjadi beberapa tahap; gunakan hanya tahap yang diperlukan sebelum
+    membandingkan jawaban dan pembahasan lengkap.
+  </p>
+
+  <exercise xml:id="o003-c90-ch09-mastery-01">
+    <title>Menyusun bukti epsilon–N</title>
+    <statement>
+      <p>
+        Dalam <m>(\R,d_E)</m>, definisikan
+        <m>a_n=(2n+1)/(n+3)</m> untuk <m>n\in\Z^+</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Hitung <m>|a_n-2|</m> dan, untuk <m>\epsilon\gt0</m>, temukan
+            bilangan bulat positif <m>N</m> yang dinyatakan secara eksplisit
+            dalam <m>\epsilon</m> sehingga <m>n\geq N</m> mengakibatkan
+            <m>|a_n-2|\lt\epsilon</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Tulislah bukti lengkap langsung dari definisi bahwa
+            <m>\lim a_n=2</m>. Pisahkan perhitungan untuk menemukan <m>N</m>
+            dari pembuktian yang memverifikasi pilihan tersebut.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch09-mastery-01-hint">
+      <p>
+        <em>Tahap 1.</em> Satukan kedua suku pada
+        <m>|(2n+1)/(n+3)-2|</m> dengan penyebut <m>n+3</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Ketaksamaan yang perlu dijamin adalah
+        <m>5/(n+3)\lt\epsilon</m>. Pilihan
+        <m>N=\lceil5/\epsilon\rceil</m> sedikit lebih besar daripada yang
+        benar-benar diperlukan, tetapi mudah diverifikasi.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Dalam bukti formal, mulailah dengan
+        <m>\epsilon\gt0</m>, tetapkan <m>N</m>, lalu ambil sebarang
+        <m>n\geq N</m>. Jangan memilih <m>N</m> yang bergantung pada
+        <m>n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-mastery-01-answer">
+      <p>
+        Berlaku <m>|a_n-2|=5/(n+3)</m>. Untuk setiap
+        <m>\epsilon\gt0</m>, pilihan
+        <m>N=\lceil5/\epsilon\rceil</m> memenuhi syarat definisi limit;
+        jadi <m>\lim a_n=2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-mastery-01-solution">
+      <p>
+        Perhitungan awal memberikan
+        <me>
+          \left|\frac{2n+1}{n+3}-2\right|
+          =\left|\frac{2n+1-2n-6}{n+3}\right|
+          =\frac{5}{n+3}.
+        </me>
+        Agar besaran terakhir lebih kecil daripada <m>\epsilon</m>, cukup
+        memastikan <m>n\geq5/\epsilon</m>; tambahan <m>3</m> pada penyebut
+        kemudian menghasilkan ketaksamaan ketat.
+      </p>
+      <p>
+        Sekarang misalkan <m>\epsilon\gt0</m> diberikan dan tetapkan
+        <m>N=\lceil5/\epsilon\rceil</m>. Bilangan <m>N</m> adalah bilangan
+        bulat positif. Jika <m>n\geq N</m>, maka
+        <m>n+3\geq N+3\gt5/\epsilon</m>. Karena semua besaran positif,
+        <me>
+          |a_n-2|=\frac{5}{n+3}\lt\epsilon.
+        </me>
+        Jadi, untuk setiap <m>\epsilon\gt0</m> terdapat bilangan bulat
+        positif <m>N</m> sehingga <m>n\geq N</m> mengakibatkan
+        <m>d_E(a_n,2)\lt\epsilon</m>. Menurut definisi,
+        <m>(a_n)</m> konvergen ke <m>2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-mastery-02">
+    <title>Ketunggalan limit dan peran metrik</title>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Misalkan <m>(a_n)</m> suatu barisan dalam ruang metrik
+            <m>(X,d)</m>. Andaikan <m>(a_n)</m> konvergen ke <m>L</m> dan juga
+            konvergen ke <m>M</m>. Buktikan bahwa <m>L=M</m>. Tunjukkan dengan
+            jelas di mana sifat metrik dan kedua asumsi konvergensi digunakan.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pada himpunan dasar <m>X=\R</m>, bandingkan metrik Euklides
+            <m>d_E(x,y)=|x-y|</m> dengan metrik diskret
+          </p>
+          <me>
+            d_D(x,y)=\begin{cases}
+            0 \amp \text{jika }x=y,\\
+            1 \amp \text{jika }x\neq y.
+            \end{cases}
+          </me>
+          <p>
+            Buktikan bahwa barisan <m>a_n=1/n</m> konvergen ke <m>0</m>
+            terhadap <m>d_E</m>. Buktikan pula bahwa suatu barisan dalam
+            ruang bermetrik diskret konvergen jika dan hanya jika barisan itu
+            pada akhirnya konstan, lalu tentukan perilaku <m>(a_n)</m>
+            terhadap <m>d_D</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Jelaskan mengapa hasil pada bagian kedua tidak bertentangan
+            dengan ketunggalan limit pada bagian pertama.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch09-mastery-02-hint">
+      <p>
+        <em>Tahap 1.</em> Jika <m>L\neq M</m>, gunakan
+        <m>\epsilon=d(L,M)/3</m> bagi kedua limit. Pilih satu indeks yang
+        melampaui kedua indeks ambang, lalu terapkan pertidaksamaan segitiga
+        pada lintasan <m>L,a_n,M</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk metrik Euklides, pilih bilangan bulat
+        <m>N\gt1/\epsilon</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Jika suatu barisan konvergen ke <m>L</m> dalam
+        metrik diskret, terapkan definisi dengan <m>\epsilon=1/2</m>. Untuk
+        arah balik, jika semua suku mulai indeks tertentu sama dengan
+        <m>L</m>, jaraknya ke <m>L</m> sama dengan nol.
+      </p>
+      <p>
+        <em>Tahap 4.</em> Teorema ketunggalan membahas satu ruang metrik yang
+        telah ditetapkan. Di sini struktur metriknya diganti.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-mastery-02-answer">
+      <p>
+        Jika <m>L\neq M</m>, pilihan <m>\epsilon=d(L,M)/3</m> dan
+        pertidaksamaan segitiga menghasilkan
+        <m>d(L,M)\lt2d(L,M)/3</m>, suatu kontradiksi. Jadi limit dalam satu
+        ruang metrik bersifat tunggal.
+      </p>
+      <p>
+        Barisan <m>1/n</m> konvergen ke <m>0</m> terhadap <m>d_E</m>, tetapi
+        divergen terhadap <m>d_D</m>. Dalam metrik diskret, syarat
+        <m>d_D(a_n,L)\lt1/2</m> memaksa <m>a_n=L</m>; jadi konvergensi setara
+        dengan sifat pada akhirnya konstan. Ketunggalan limit tidak
+        dilanggar karena kedua kesimpulan dibuat dalam dua ruang metrik yang
+        berbeda.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-mastery-02-solution">
+      <p>
+        Andaikan <m>L\neq M</m>. Sifat definit positif suatu metrik memberi
+        <m>d(L,M)\gt0</m>. Tetapkan
+        <m>\epsilon=d(L,M)/3</m>. Karena <m>a_n\to L</m> dan
+        <m>a_n\to M</m>, terdapat <m>N_L,N_M\in\Z^+</m> sehingga
+        <m>d(a_n,L)\lt\epsilon</m> untuk <m>n\geq N_L</m> dan
+        <m>d(a_n,M)\lt\epsilon</m> untuk <m>n\geq N_M</m>. Pilih
+        <m>n\geq\max\{N_L,N_M\}</m>. Simetri dan pertidaksamaan segitiga
+        memberi
+        <me>
+          d(L,M)\leq d(L,a_n)+d(a_n,M)
+          \lt\frac{2}{3}d(L,M),
+        </me>
+        yang mustahil. Jadi <m>L=M</m>.
+      </p>
+      <p>
+        Misalkan <m>\epsilon\gt0</m>. Berdasarkan sifat Archimedes, pilih
+        <m>N\in\Z^+</m> dengan <m>N\gt1/\epsilon</m>. Jika
+        <m>n\geq N</m>, maka
+        <me>
+          d_E(a_n,0)=\left|\frac1n-0\right|=\frac1n
+          \leq\frac1N\lt\epsilon.
+        </me>
+        Jadi <m>a_n\to0</m> dalam <m>(\R,d_E)</m>.
+      </p>
+      <p>
+        Sekarang misalkan suatu barisan <m>(x_n)</m> konvergen ke <m>L</m>
+        terhadap <m>d_D</m>. Dengan <m>\epsilon=1/2</m>, terdapat
+        <m>N</m> sehingga <m>d_D(x_n,L)\lt1/2</m> untuk semua
+        <m>n\geq N</m>. Satu-satunya nilai metrik diskret yang lebih kecil
+        daripada <m>1/2</m> adalah <m>0</m>, sehingga <m>x_n=L</m> untuk
+        setiap <m>n\geq N</m>. Jadi barisan tersebut pada akhirnya konstan.
+        Sebaliknya, jika <m>x_n=L</m> untuk setiap <m>n\geq N</m>, maka
+        <m>d_D(x_n,L)=0\lt\epsilon</m> bagi setiap
+        <m>\epsilon\gt0</m> dan setiap <m>n\geq N</m>; jadi
+        <m>x_n\to L</m>.
+      </p>
+      <p>
+        Suku-suku <m>1/n</m> semuanya berbeda, sehingga barisan itu tidak
+        pada akhirnya konstan. Maka <m>(1/n)</m> divergen dalam
+        <m>(\R,d_D)</m>. Teorema ketunggalan mengatakan bahwa suatu barisan
+        tidak mempunyai dua limit berbeda terhadap metrik yang sama. Teorema
+        itu tidak mengatakan bahwa perilaku konvergensi tidak berubah ketika
+        metriknya diganti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-mastery-03">
+    <title>Menguji kekontinuan dengan barisan</title>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Definisikan <m>F:(\R,d_E)\to(\R,d_E)</m> oleh
+            <m>F(x)=x^2</m>. Gunakan pencirian kekontinuan melalui barisan
+            untuk membuktikan bahwa <m>F</m> kontinu di setiap
+            <m>a\in\R</m>. Jangan mengandaikan tanpa bukti bahwa hasil kali
+            limit dapat dipertukarkan.
+          </p>
+        </li>
+        <li>
+          <p>
+            Definisikan <m>H:\R\to\R</m> oleh
+            <me>
+              H(x)=\begin{cases}
+              \sin(1/x) \amp \text{jika }x\neq0,\\
+              0 \amp \text{jika }x=0.
+              \end{cases}
+            </me>
+            Temukan satu barisan <m>(x_n)</m> yang konvergen ke <m>0</m>
+            tetapi <m>(H(x_n))</m> tidak konvergen ke <m>H(0)</m>. Simpulkan
+            bahwa <m>H</m> tidak kontinu di <m>0</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch09-mastery-03-hint">
+      <p>
+        <em>Tahap 1.</em> Jika <m>x_n\to a</m>, maka untuk suku-suku yang
+        cukup jauh berlaku <m>|x_n-a|\lt1</m>, sehingga
+        <m>|x_n+a|\leq2|a|+1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan faktorisasi
+        <m>|x_n^2-a^2|=|x_n-a||x_n+a|</m>. Untuk epsilon yang diberikan,
+        minta <m>|x_n-a|\lt\min\{1,\epsilon/(2|a|+1)\}</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Untuk fungsi kedua, pilih penyebut yang membuat
+        <m>1/x_n=\pi/2+2\pi n</m>. Nilai sinusnya kemudian selalu sama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-mastery-03-answer">
+      <p>
+        Jika <m>x_n\to a</m>, maka
+        <m>|x_n^2-a^2|\leq(2|a|+1)|x_n-a|\to0</m> untuk semua suku yang
+        cukup jauh; jadi <m>F</m> kontinu di setiap <m>a</m>. Sebaliknya,
+        <m>x_n=1/(\pi/2+2\pi n)</m> konvergen ke <m>0</m>, tetapi
+        <m>H(x_n)=1</m> untuk semua <m>n</m>, sedangkan <m>H(0)=0</m>.
+        Jadi <m>H</m> tidak kontinu di <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-mastery-03-solution">
+      <p>
+        Ambil <m>a\in\R</m> dan sebarang barisan <m>(x_n)</m> dengan
+        <m>x_n\to a</m>. Misalkan <m>\epsilon\gt0</m> dan tetapkan
+        <me>
+          \delta=\min\left\{1,\frac{\epsilon}{2|a|+1}\right\}.
+        </me>
+        Karena <m>x_n\to a</m>, ada <m>N</m> sehingga
+        <m>|x_n-a|\lt\delta</m> untuk setiap <m>n\geq N</m>. Untuk indeks
+        tersebut, <m>|x_n-a|\lt1</m>, sehingga
+        <m>|x_n|\leq|a|+1</m> dan
+        <m>|x_n+a|\leq2|a|+1</m>. Oleh karena itu,
+        <md>
+          <mrow>|F(x_n)-F(a)|
+          \amp=|x_n^2-a^2|</mrow>
+          <mrow>
+          \amp=|x_n-a||x_n+a|</mrow>
+          <mrow>
+          \amp\lt\frac{\epsilon}{2|a|+1}(2|a|+1)
+          =\epsilon.</mrow>
+        </md>
+        Jadi <m>F(x_n)\to F(a)</m>. Hal ini berlaku bagi setiap barisan yang
+        konvergen ke <m>a</m>; pencirian melalui barisan menunjukkan bahwa
+        <m>F</m> kontinu di <m>a</m>. Karena <m>a</m> sebarang, <m>F</m>
+        kontinu di seluruh <m>\R</m>.
+      </p>
+      <p>
+        Untuk fungsi kedua, tetapkan
+        <m>x_n=1/(\pi/2+2\pi n)</m>. Penyebutnya menuju tak hingga, sehingga
+        <m>x_n\to0</m>. Namun,
+        <me>
+          H(x_n)=\sin(\pi/2+2\pi n)=1
+        </me>
+        untuk setiap <m>n</m>. Jadi barisan <m>(H(x_n))</m> konvergen ke
+        <m>1</m>, bukan ke <m>H(0)=0</m>. Satu barisan saksi ini menyangkal
+        syarat barisan yang diperlukan untuk kekontinuan di <m>0</m>. Maka
+        <m>H</m> tidak kontinu di <m>0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-mastery-04">
+    <title>Limit dalam subruang dan ruang ambien</title>
+    <statement>
+      <p>
+        Misalkan <m>Y\subseteq X</m>, <m>(X,d)</m> suatu ruang metrik, dan
+        <m>d_Y</m> adalah metrik subruang, yakni
+        <m>d_Y(y_1,y_2)=d(y_1,y_2)</m> untuk <m>y_1,y_2\in Y</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Jika <m>(a_n)</m> adalah barisan di <m>Y</m> dan <m>a\in Y</m>,
+            buktikan bahwa <m>a_n\to a</m> dalam <m>(Y,d_Y)</m> jika dan
+            hanya jika <m>a_n\to a</m> dalam <m>(X,d)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Untuk <m>Y=\Q\subseteq\R=X</m>, tetapkan
+            <me>
+              q_n=\frac{\lfloor10^n\sqrt2\rfloor}{10^n}.
+            </me>
+            Buktikan bahwa <m>(q_n)</m> konvergen dalam ruang ambien
+            <m>\R</m>, tetapi tidak konvergen sebagai barisan dalam subruang
+            <m>\Q</m>. Jelaskan mengapa hal ini tidak bertentangan dengan
+            bagian pertama.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch09-mastery-04-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk titik-titik yang semuanya berada di
+        <m>Y</m>, bilangan <m>d_Y(a_n,a)</m> dan <m>d(a_n,a)</m> persis sama.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Sifat fungsi lantai memberi
+        <m>0\leq\sqrt2-q_n\lt10^{-n}</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Jika <m>(q_n)</m> konvergen di <m>\Q</m> ke suatu
+        <m>q\in\Q</m>, bagian pertama menjadikannya konvergen ke <m>q</m>
+        di <m>\R</m>. Gunakan ketunggalan limit.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-mastery-04-answer">
+      <p>
+        Selama calon limit <m>a</m> berada di <m>Y</m>, kedua definisi
+        konvergensi identik karena <m>d_Y(a_n,a)=d(a_n,a)</m>. Barisan
+        <m>(q_n)</m> memenuhi
+        <m>0\leq\sqrt2-q_n\lt10^{-n}</m>, sehingga konvergen ke
+        <m>\sqrt2</m> di <m>\R</m>. Ia tidak dapat konvergen di <m>\Q</m>:
+        limit rasional demikian juga akan menjadi limit ambien, bertentangan
+        dengan ketunggalan limit dan ketakrasionalan <m>\sqrt2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-mastery-04-solution">
+      <p>
+        Misalkan <m>(a_n)</m> barisan di <m>Y</m> dan <m>a\in Y</m>. Untuk
+        setiap <m>n</m>, definisi metrik subruang memberi
+        <m>d_Y(a_n,a)=d(a_n,a)</m>. Karena itu, bagi setiap
+        <m>\epsilon\gt0</m> dan setiap indeks <m>N</m>, pernyataan
+        <me>
+          d_Y(a_n,a)\lt\epsilon\quad\text{untuk semua }n\geq N
+        </me>
+        setara dengan pernyataan yang sama dengan <m>d</m> menggantikan
+        <m>d_Y</m>. Kuantor dalam kedua definisi limit pun identik, sehingga
+        <m>a_n\to a</m> di <m>Y</m> jika dan hanya jika
+        <m>a_n\to a</m> di <m>X</m>.
+      </p>
+      <p>
+        Untuk contoh, setiap <m>q_n</m> rasional. Dari
+        <m>\lfloor t\rfloor\leq t\lt\lfloor t\rfloor+1</m> dengan
+        <m>t=10^n\sqrt2</m>, setelah dibagi dengan <m>10^n</m> diperoleh
+        <me>
+          0\leq\sqrt2-q_n\lt10^{-n}.
+        </me>
+        Karena <m>10^{-n}\to0</m>, untuk setiap <m>\epsilon\gt0</m> semua
+        suku yang cukup jauh memenuhi
+        <m>|q_n-\sqrt2|\lt\epsilon</m>. Jadi
+        <m>q_n\to\sqrt2</m> dalam ruang ambien <m>\R</m>.
+      </p>
+      <p>
+        Andaikan <m>(q_n)</m> konvergen sebagai barisan di <m>\Q</m>. Maka
+        limitnya harus berupa suatu <m>q\in\Q</m>. Berdasarkan bagian pertama,
+        <m>q_n\to q</m> juga dalam <m>\R</m>. Akan tetapi, di
+        <m>\R</m> barisan yang sama sudah terbukti konvergen ke
+        <m>\sqrt2</m>. Ketunggalan limit memaksa <m>q=\sqrt2</m>, yang
+        mustahil karena <m>q</m> rasional dan <m>\sqrt2</m> irasional. Jadi
+        barisan itu tidak konvergen di <m>\Q</m>. Tidak ada kontradiksi dengan
+        bagian pertama: limit ambien <m>\sqrt2</m> tidak berada di subruang
+        <m>\Q</m>, sedangkan kesetaraan pada bagian pertama mensyaratkan
+        <m>a\in Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-mastery-05">
+    <title>Konvergensi koordinat demi koordinat</title>
+    <statement>
+      <p>
+        Dalam <m>\R^2</m> dengan metrik Euklides, misalkan
+        <m>c_n=(a_n,b_n)</m> dan <m>c=(a,b)</m>. Buktikan bahwa
+        <m>c_n\to c</m> jika dan hanya jika <m>a_n\to a</m> dan
+        <m>b_n\to b</m> dalam <m>\R</m>. Bukti harus menangani kedua arah
+        langsung dari definisi metrik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-mastery-05-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk arah dari pasangan ke koordinat, gunakan
+        <m>|a_n-a|\leq d_E(c_n,c)</m> dan
+        <m>|b_n-b|\leq d_E(c_n,c)</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk arah sebaliknya dan epsilon yang diberikan,
+        buat kedua selisih koordinat lebih kecil daripada
+        <m>\epsilon/\sqrt2</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Kedua koordinat mungkin memberikan indeks awal yang
+        berbeda. Ambil maksimum dari kedua indeks tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-mastery-05-answer">
+      <p>
+        Konvergensi <m>c_n\to c</m> memaksa setiap selisih koordinat menuju
+        nol karena masing-masing dibatasi oleh <m>d_E(c_n,c)</m>. Sebaliknya,
+        jika kedua koordinat konvergen, buat masing-masing selisih lebih kecil
+        daripada <m>\epsilon/\sqrt2</m>; maka
+        <m>d_E(c_n,c)\lt\epsilon</m>. Jadi kedua kondisi setara.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-mastery-05-solution">
+      <p>
+        Andaikan <m>c_n\to c</m>. Untuk setiap <m>n</m>,
+        <md>
+          <mrow>|a_n-a|
+          \amp\leq\sqrt{(a_n-a)^2+(b_n-b)^2}=d_E(c_n,c),</mrow>
+          <mrow>|b_n-b|
+          \amp\leq\sqrt{(a_n-a)^2+(b_n-b)^2}=d_E(c_n,c).</mrow>
+        </md>
+        Misalkan <m>\epsilon\gt0</m>. Untuk semua <m>n</m> yang cukup besar,
+        <m>d_E(c_n,c)\lt\epsilon</m>; kedua ketaksamaan di atas kemudian
+        memberi <m>|a_n-a|\lt\epsilon</m> dan
+        <m>|b_n-b|\lt\epsilon</m>. Jadi <m>a_n\to a</m> dan
+        <m>b_n\to b</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>a_n\to a</m> dan <m>b_n\to b</m>. Diberikan
+        <m>\epsilon\gt0</m>, ada <m>N_a</m> sehingga
+        <m>|a_n-a|\lt\epsilon/\sqrt2</m> untuk
+        <m>n\geq N_a</m>, dan ada <m>N_b</m> sehingga
+        <m>|b_n-b|\lt\epsilon/\sqrt2</m> untuk
+        <m>n\geq N_b</m>. Jika
+        <m>n\geq N=\max\{N_a,N_b\}</m>, maka
+        <me>
+          d_E(c_n,c)
+          =\sqrt{(a_n-a)^2+(b_n-b)^2}
+          \lt\sqrt{\frac{\epsilon^2}{2}+\frac{\epsilon^2}{2}}
+          =\epsilon.
+        </me>
+        Dengan demikian, <m>c_n\to c</m>. Kedua arah membuktikan kesetaraan
+        yang diminta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-mastery-06">
+    <title>Konvergensi titik demi titik dan konvergensi seragam</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> adalah himpunan semua fungsi terbatas bernilai real
+        pada <m>[0,1]</m>, dengan metrik supremum
+        <me>
+          d_\infty(f,g)=\sup\{|f(x)-g(x)|:x\in[0,1]\}.
+        </me>
+      </p>
+      <ol>
+        <li>
+          <p>
+            Untuk <m>f_n(x)=x^n</m>, tentukan limit titik demi titik
+            <m>f</m> pada <m>[0,1]</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Hitung <m>d_\infty(f_n,f)</m>. Apakah <m>(f_n)</m> konvergen ke
+            <m>f</m> dalam metrik supremum, yakni secara seragam?
+          </p>
+        </li>
+        <li>
+          <p>
+            Untuk pembanding, tetapkan <m>g_n(x)=x/n</m>. Buktikan bahwa
+            <m>(g_n)</m> konvergen secara seragam ke fungsi nol. Jelaskan
+            secara umum mengapa konvergensi dalam metrik supremum selalu
+            mengakibatkan konvergensi titik demi titik.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <hint xml:id="o003-c90-ch09-mastery-06-hint">
+      <p>
+        <em>Tahap 1.</em> Jika <m>0\leq x\lt1</m>, maka
+        <m>x^n\to0</m>, sedangkan <m>1^n=1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk <m>x\lt1</m>, selisih
+        <m>|f_n(x)-f(x)|</m> sama dengan <m>x^n</m>. Nilai-nilai ini dapat
+        dibuat sedekat yang diinginkan dengan <m>1</m> dengan memilih
+        <m>x</m> cukup dekat ke <m>1</m>, walaupun pada <m>x=1</m> selisihnya
+        nol.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Untuk fungsi pembanding,
+        <m>\sup_{x\in[0,1]}|x/n|=1/n</m>. Untuk implikasi umum, bandingkan
+        nilai pada satu titik tetap dengan supremum atas semua titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-mastery-06-answer">
+      <p>
+        Limit titik demi titik <m>f_n(x)=x^n</m> ialah
+        <m>f(x)=0</m> untuk <m>0\leq x\lt1</m> dan <m>f(1)=1</m>. Namun,
+        <m>d_\infty(f_n,f)=1</m> untuk setiap <m>n</m>, sehingga konvergensi
+        itu tidak seragam. Sebaliknya,
+        <m>d_\infty(g_n,0)=1/n\to0</m>. Secara umum,
+        <m>|f_n(x)-f(x)|\leq d_\infty(f_n,f)</m> pada setiap titik, sehingga
+        konvergensi seragam mengakibatkan konvergensi titik demi titik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-mastery-06-solution">
+      <p>
+        Untuk <m>x=1</m>, berlaku <m>f_n(1)=1</m> untuk semua <m>n</m>. Jika
+        <m>x=0</m>, berlaku <m>f_n(0)=0</m>. Jika <m>0\lt x\lt1</m>, tetapkan
+        <m>r=1/x\gt1</m>. Ketaksamaan Bernoulli memberi
+        <m>r^n\geq1+n(r-1)</m>, sehingga
+        <me>
+          0\leq x^n=\frac1{r^n}
+          \leq\frac1{1+n(r-1)}\longrightarrow0.
+        </me>
+        Jadi limit titik demi titiknya adalah
+        <me>
+          f(x)=\begin{cases}
+          0 \amp \text{jika }0\leq x\lt1,\\
+          1 \amp \text{jika }x=1.
+          \end{cases}
+        </me>
+      </p>
+      <p>
+        Untuk <m>0\leq x\lt1</m>, selisihnya adalah
+        <m>|f_n(x)-f(x)|=x^n\lt1</m>, sedangkan pada <m>x=1</m> selisihnya
+        nol. Meskipun nilai <m>1</m> tidak dicapai oleh selisih tersebut,
+        nilai itu adalah supremumnya. Memang, jika <m>0\lt c\lt1</m>, pilih
+        <m>x=((1+c)/2)^{1/n}</m>. Maka <m>x\lt1</m> dan
+        <m>x^n=(1+c)/2\gt c</m>. Jadi nilai selisih dapat melampaui setiap
+        <m>c\lt1</m>, sementara selalu dibatasi di atas oleh <m>1</m>.
+        Dengan demikian,
+        <me>
+          d_\infty(f_n,f)=1
+        </me>
+        untuk setiap <m>n</m>. Jarak ini tidak menuju nol, sehingga
+        <m>(f_n)</m> tidak konvergen ke <m>f</m> secara seragam.
+      </p>
+      <p>
+        Untuk <m>g_n(x)=x/n</m>, karena <m>0\leq x\leq1</m>,
+        <me>
+          d_\infty(g_n,0)
+          =\sup_{x\in[0,1]}\left|\frac{x}{n}\right|
+          =\frac1n\longrightarrow0.
+        </me>
+        Jadi <m>g_n\to0</m> dalam metrik supremum. Secara umum, jika
+        <m>d_\infty(f_n,f)\to0</m> dan <m>x\in[0,1]</m> ditetapkan, maka
+        <me>
+          |f_n(x)-f(x)|\leq
+          \sup_{t\in[0,1]}|f_n(t)-f(t)|=d_\infty(f_n,f)\longrightarrow0.
+        </me>
+        Maka <m>f_n(x)\to f(x)</m> pada setiap titik <m>x</m>. Contoh
+        <m>x^n</m> menunjukkan bahwa implikasi sebaliknya tidak berlaku.
+      </p>
+    </solution>
+  </exercise>
+</section>

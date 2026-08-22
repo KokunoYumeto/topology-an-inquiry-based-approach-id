@@ -86,7 +86,7 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-08-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–8 — Himpunan, Fungsi, Ruang Metrik, Himpunan Terbuka, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-09-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–9 — Himpunan, Fungsi, Ruang Metrik, Himpunan Terbuka, Barisan, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -219,10 +219,10 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch08-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch09-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, dan Penerapannya</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Himpunan Terbuka, dan Barisan</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
@@ -307,6 +307,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap_sequences.html" class="internal"><span class="codenumber">9</span> <span class="title">Barisan di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_seq_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_cont_metric.html" class="internal"><span class="title">Barisan dan Kekontinuan dalam Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -383,6 +392,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch08-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 8</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch09-companion.html" class="internal"><span class="codenumber">I</span> <span class="title">Pendamping Mandiri Bab 9: Barisan dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch09-source-guides.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 9</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 </ul>
 </li>
@@ -390,24 +408,24 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch03-diagnostics"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Diagnostik kesalahan ringkas</span>
 </h2>
-<div class="para logical" id="p-1320"><dl class="description-list">
-<dt id="li-176">Memeriksa hanya tiga aksioma</dt>
-<dd><div class="para" id="p-1321">Calon jarak yang tak negatif, simetris, dan nol pada diagonal masih dapat gagal pada pertidaksamaan segitiga.</div></dd>
-<dt id="li-177">Mengabaikan domain</dt>
-<dd><div class="para" id="p-1322">Rumus yang sama dapat menjadi metrik pada satu himpunan dan gagal atau bahkan tidak terdefinisi pada himpunan lain.</div></dd>
-<dt id="li-178">Menggambar bola dengan geometri yang salah</dt>
-<dd><div class="para" id="p-1323">Bola selalu ditentukan oleh metrik yang sedang dipakai; bentuk Euklidesnya dapat berupa lingkaran, belah ketupat, persegi, ruas, atau himpunan lain.</div></dd>
-<dt id="li-179">Mengganti “kurang dari” dengan “kurang dari atau sama dengan”</dt>
-<dd><div class="para" id="p-1324">Bola terbuka <span class="process-math">\(B(a,r)\)</span> memakai syarat tegas <span class="process-math">\(d(x,a)\lt r\text{;}\)</span> titik pada batas tidak termasuk.</div></dd>
-<dt id="li-180">Menganggap representasi rasional tidak penting</dt>
-<dd><div class="para" id="p-1325">Pada metrik pembilang-penyebut, gunakan bentuk paling sederhana dengan penyebut positif sebelum menghitung jarak.</div></dd>
-<dt id="li-181">Membagi dengan koefisien yang mungkin nol</dt>
-<dd><div class="para" id="p-1326">Dalam bukti Cauchy–Schwarz, pisahkan kasus vektor nol sebelum memakai rumus kuadrat dengan koefisien utama <span class="process-math">\(\sum y_i^2\text{.}\)</span>
+<div class="para logical" id="p-1414"><dl class="description-list">
+<dt id="li-182">Memeriksa hanya tiga aksioma</dt>
+<dd><div class="para" id="p-1415">Calon jarak yang tak negatif, simetris, dan nol pada diagonal masih dapat gagal pada pertidaksamaan segitiga.</div></dd>
+<dt id="li-183">Mengabaikan domain</dt>
+<dd><div class="para" id="p-1416">Rumus yang sama dapat menjadi metrik pada satu himpunan dan gagal atau bahkan tidak terdefinisi pada himpunan lain.</div></dd>
+<dt id="li-184">Menggambar bola dengan geometri yang salah</dt>
+<dd><div class="para" id="p-1417">Bola selalu ditentukan oleh metrik yang sedang dipakai; bentuk Euklidesnya dapat berupa lingkaran, belah ketupat, persegi, ruas, atau himpunan lain.</div></dd>
+<dt id="li-185">Mengganti “kurang dari” dengan “kurang dari atau sama dengan”</dt>
+<dd><div class="para" id="p-1418">Bola terbuka <span class="process-math">\(B(a,r)\)</span> memakai syarat tegas <span class="process-math">\(d(x,a)\lt r\text{;}\)</span> titik pada batas tidak termasuk.</div></dd>
+<dt id="li-186">Menganggap representasi rasional tidak penting</dt>
+<dd><div class="para" id="p-1419">Pada metrik pembilang-penyebut, gunakan bentuk paling sederhana dengan penyebut positif sebelum menghitung jarak.</div></dd>
+<dt id="li-187">Membagi dengan koefisien yang mungkin nol</dt>
+<dd><div class="para" id="p-1420">Dalam bukti Cauchy–Schwarz, pisahkan kasus vektor nol sebelum memakai rumus kuadrat dengan koefisien utama <span class="process-math">\(\sum y_i^2\text{.}\)</span>
 </div></dd>
-<dt id="li-182">Membuktikan hasil kali jarak dengan gambar</dt>
-<dd><div class="para" id="p-1327">Untuk metrik maksimum pada produk, buktikan pertidaksamaan koordinat demi koordinat lalu ambil maksimum.</div></dd>
-<dt id="li-183">Menggunakan petunjuk pecahan pada kasus nol</dt>
-<dd><div class="para" id="p-1328">Jika petunjuk memakai <span class="process-math">\(a/(a+b)\text{,}\)</span> tangani <span class="process-math">\(a+b=0\)</span> lebih dahulu.</div></dd>
+<dt id="li-188">Membuktikan hasil kali jarak dengan gambar</dt>
+<dd><div class="para" id="p-1421">Untuk metrik maksimum pada produk, buktikan pertidaksamaan koordinat demi koordinat lalu ambil maksimum.</div></dd>
+<dt id="li-189">Menggunakan petunjuk pecahan pada kasus nol</dt>
+<dd><div class="para" id="p-1422">Jika petunjuk memakai <span class="process-math">\(a/(a+b)\text{,}\)</span> tangani <span class="process-math">\(a+b=0\)</span> lebih dahulu.</div></dd>
 </dl></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="o003-c90-ch03-mastery.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch03-exercise-guides.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>

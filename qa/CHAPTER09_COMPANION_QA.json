@@ -1,0 +1,2794 @@
+{
+  "assets": {
+    "described_images": 1,
+    "image_descriptions": [
+      {
+        "language": "id-ID",
+        "source_file": "source/sec_seq_intro.ptx",
+        "source_line": 72,
+        "source_selector": "/section/example/statement/figure/image/description",
+        "stem": "Sequence_limit",
+        "text": "Grafik titik-titik biru untuk suku barisan a_n=n/(1+n) terhadap indeks n. Titik-titik meningkat dari bawah dan mendekati garis horizontal pada tinggi 1. Dua garis horizontal ungu pada tinggi 1-\\epsilon dan 1+\\epsilon membatasi pita; setelah suatu indeks, semua titik barisan berada di dalam pita tersebut."
+      }
+    ],
+    "interactive_or_remote_surfaces": []
+  },
+  "authority_ordered_sha256": "c1bfefbb86f9f4a2dc0d19b1d73f50ec5de2ecd8aa188f24d271987cd44bc627",
+  "authority_raw_concatenated_sha256": "c6d2935beda94460617eeba29cf6bd181fd7d061bbd11ed6b8471b91d614cce9",
+  "companion": {
+    "bytes": 1913,
+    "path": "companion/chapter_09_sequences_self_study.ptx",
+    "sha256": "a6c01493e43ad29f9b8d1d05e5034b75ca3cbf16d8037f149d784092b1741ae4"
+  },
+  "control_inputs": {
+    "source_corrections": {
+      "bytes": 36557,
+      "path": "00_control/SOURCE_CORRECTIONS.csv",
+      "required_ids": [
+        "O003-C082",
+        "O003-C083",
+        "O003-C084",
+        "O003-C085",
+        "O003-C086",
+        "O003-C087",
+        "O003-C088",
+        "O003-C089",
+        "O003-C090",
+        "O003-C091",
+        "O003-C092",
+        "O003-C093",
+        "O003-C094",
+        "O003-C095",
+        "O003-C096"
+      ],
+      "sha256": "097a386bd4d8fda0e6f7a9afa9579fe7e576f1c6e8aed4bfcc49a64106d8a7d5"
+    },
+    "terminology": {
+      "bytes": 10795,
+      "path": "00_control/TERMINOLOGY.csv",
+      "required_ids": [
+        "O003-T113",
+        "O003-T114",
+        "O003-T115",
+        "O003-T116",
+        "O003-T117",
+        "O003-T118",
+        "O003-T119",
+        "O003-T120",
+        "O003-T121"
+      ],
+      "sha256": "af311679912cbcec97c0c9b6cb37ad16f201dc10929f91b24248c3768c7dba91"
+    }
+  },
+  "entries": [
+    {
+      "id": "o003-c90-ch09-guide-01",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-01-answer",
+        "hint": "o003-c90-ch09-guide-01-hint",
+        "solution": "o003-c90-ch09-guide-01-solution"
+      },
+      "sequence": 1,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-01-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-01-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-01-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-01-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-01-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-01-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-01-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 77,
+        "hint": 97,
+        "solution": 296,
+        "statement": 243
+      },
+      "title": "Barisan kebalikan dalam garis Euklides"
+    },
+    {
+      "id": "o003-c90-ch09-guide-02",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-02-answer",
+        "hint": "o003-c90-ch09-guide-02-hint",
+        "solution": "o003-c90-ch09-guide-02-solution"
+      },
+      "sequence": 2,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-02-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-02-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-02-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-02-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-02-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-02-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-02-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 59,
+        "hint": 111,
+        "solution": 293,
+        "statement": 260
+      },
+      "title": "Konvergensi dalam metrik taksi"
+    },
+    {
+      "id": "o003-c90-ch09-guide-03",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-03-answer",
+        "hint": "o003-c90-ch09-guide-03-hint",
+        "solution": "o003-c90-ch09-guide-03-solution"
+      },
+      "sequence": 3,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-03-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-03-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-03-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-03-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-03-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-03-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-03-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 103,
+        "hint": 112,
+        "solution": 373,
+        "statement": 268
+      },
+      "title": "Barisan yang tidak konvergen dalam metrik diskret"
+    },
+    {
+      "id": "o003-c90-ch09-guide-04",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-04-answer",
+        "hint": "o003-c90-ch09-guide-04-hint",
+        "solution": "o003-c90-ch09-guide-04-solution"
+      },
+      "sequence": 4,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-04-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-04-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-04-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-04-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-04-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-04-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-04-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 105,
+        "hint": 122,
+        "solution": 277,
+        "statement": 245
+      },
+      "title": "Indeks untuk limit pertama"
+    },
+    {
+      "id": "o003-c90-ch09-guide-05",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-05-answer",
+        "hint": "o003-c90-ch09-guide-05-hint",
+        "solution": "o003-c90-ch09-guide-05-solution"
+      },
+      "sequence": 5,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-05-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-05-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-05-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-05-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-05-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-05-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-05-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 78,
+        "hint": 111,
+        "solution": 253,
+        "statement": 286
+      },
+      "title": "Indeks untuk limit kedua"
+    },
+    {
+      "id": "o003-c90-ch09-guide-06",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-06-answer",
+        "hint": "o003-c90-ch09-guide-06-hint",
+        "solution": "o003-c90-ch09-guide-06-solution"
+      },
+      "sequence": 6,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-06-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-06-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-06-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-06-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-06-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-06-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-06-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 89,
+        "hint": 128,
+        "solution": 299,
+        "statement": 228
+      },
+      "title": "Menyatukan dua ambang indeks"
+    },
+    {
+      "id": "o003-c90-ch09-guide-07",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-07-answer",
+        "hint": "o003-c90-ch09-guide-07-hint",
+        "solution": "o003-c90-ch09-guide-07-solution"
+      },
+      "sequence": 7,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-07-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-07-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-07-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-07-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-07-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-07-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-07-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 136,
+        "hint": 105,
+        "solution": 368,
+        "statement": 249
+      },
+      "title": "Menuntaskan ketunggalan limit"
+    },
+    {
+      "id": "o003-c90-ch09-guide-08",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-08-answer",
+        "hint": "o003-c90-ch09-guide-08-hint",
+        "solution": "o003-c90-ch09-guide-08-solution"
+      },
+      "sequence": 8,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-08-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-08-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-08-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-08-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-08-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-08-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-08-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 126,
+        "hint": 188,
+        "solution": 392,
+        "statement": 271
+      },
+      "title": "Meniadakan definisi kekontinuan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-09",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-09-answer",
+        "hint": "o003-c90-ch09-guide-09-hint",
+        "solution": "o003-c90-ch09-guide-09-solution"
+      },
+      "sequence": 9,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-09-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-09-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-09-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-09-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-09-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-09-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-09-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 85,
+        "hint": 165,
+        "solution": 309,
+        "statement": 241
+      },
+      "title": "Memilih ambang bilangan bulat"
+    },
+    {
+      "id": "o003-c90-ch09-guide-10",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-10-answer",
+        "hint": "o003-c90-ch09-guide-10-hint",
+        "solution": "o003-c90-ch09-guide-10-solution"
+      },
+      "sequence": 10,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-10-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-10-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-10-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-10-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-10-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-10-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-10-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 161,
+        "hint": 127,
+        "solution": 326,
+        "statement": 238
+      },
+      "title": "Memilih suku-suku penyangkal"
+    },
+    {
+      "id": "o003-c90-ch09-guide-11",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-11-answer",
+        "hint": "o003-c90-ch09-guide-11-hint",
+        "solution": "o003-c90-ch09-guide-11-solution"
+      },
+      "sequence": 11,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-11-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-11-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-11-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-11-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-11-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-11-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-11-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 115,
+        "hint": 111,
+        "solution": 366,
+        "statement": 233
+      },
+      "title": "Membuktikan barisan penyangkal menuju titik pusat"
+    },
+    {
+      "id": "o003-c90-ch09-guide-12",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-12-answer",
+        "hint": "o003-c90-ch09-guide-12-hint",
+        "solution": "o003-c90-ch09-guide-12-solution"
+      },
+      "sequence": 12,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-12-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-12-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-12-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-12-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-12-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-12-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-12-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 191,
+        "hint": 138,
+        "solution": 452,
+        "statement": 258
+      },
+      "title": "Kontradiksi pada barisan citra"
+    },
+    {
+      "id": "o003-c90-ch09-guide-13",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-13-answer",
+        "hint": "o003-c90-ch09-guide-13-hint",
+        "solution": "o003-c90-ch09-guide-13-solution"
+      },
+      "sequence": 13,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-13-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-13-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-13-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-13-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-13-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-13-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-13-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 219,
+        "hint": 188,
+        "solution": 415,
+        "statement": 330
+      },
+      "title": "Intuisi grafik untuk osilasi di dekat nol"
+    },
+    {
+      "id": "o003-c90-ch09-guide-14",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-14-answer",
+        "hint": "o003-c90-ch09-guide-14-hint",
+        "solution": "o003-c90-ch09-guide-14-solution"
+      },
+      "sequence": 14,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-14-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-14-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-14-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-14-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-14-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-14-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-14-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 129,
+        "hint": 89,
+        "solution": 378,
+        "statement": 193
+      },
+      "title": "Menyelesaikan persamaan nilai maksimum sinus"
+    },
+    {
+      "id": "o003-c90-ch09-guide-15",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-15-answer",
+        "hint": "o003-c90-ch09-guide-15-hint",
+        "solution": "o003-c90-ch09-guide-15-solution"
+      },
+      "sequence": 15,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-15-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-15-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-15-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-15-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-15-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-15-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-15-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 118,
+        "hint": 129,
+        "solution": 351,
+        "statement": 229
+      },
+      "title": "Membangun barisan yang citranya tetap satu"
+    },
+    {
+      "id": "o003-c90-ch09-guide-16",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-16-answer",
+        "hint": "o003-c90-ch09-guide-16-hint",
+        "solution": "o003-c90-ch09-guide-16-solution"
+      },
+      "sequence": 16,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-16-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-16-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-16-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-16-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-16-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-16-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-16-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 71,
+        "hint": 106,
+        "solution": 396,
+        "statement": 274
+      },
+      "title": "Menyangkal kekontinuan dengan satu barisan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-17",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-17-answer",
+        "hint": "o003-c90-ch09-guide-17-hint",
+        "solution": "o003-c90-ch09-guide-17-solution"
+      },
+      "sequence": 17,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-17-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-17-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-17-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-17-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-17-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-17-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-17-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 108,
+        "hint": 153,
+        "solution": 225,
+        "statement": 220
+      },
+      "title": "Barisan 1+1/n pada garis real"
+    },
+    {
+      "id": "o003-c90-ch09-guide-18",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-18-answer",
+        "hint": "o003-c90-ch09-guide-18-hint",
+        "solution": "o003-c90-ch09-guide-18-solution"
+      },
+      "sequence": 18,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-18-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-18-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-18-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-18-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-18-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-18-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-18-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 128,
+        "hint": 182,
+        "solution": 405,
+        "statement": 244
+      },
+      "title": "Barisan (2,n) dalam metrik maksimum"
+    },
+    {
+      "id": "o003-c90-ch09-guide-19",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-19-answer",
+        "hint": "o003-c90-ch09-guide-19-hint",
+        "solution": "o003-c90-ch09-guide-19-solution"
+      },
+      "sequence": 19,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-19-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-19-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-19-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-19-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-19-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-19-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-19-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 97,
+        "hint": 192,
+        "solution": 356,
+        "statement": 275
+      },
+      "title": "Barisan fungsi x/n dalam metrik supremum"
+    },
+    {
+      "id": "o003-c90-ch09-guide-20",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-20-answer",
+        "hint": "o003-c90-ch09-guide-20-hint",
+        "solution": "o003-c90-ch09-guide-20-solution"
+      },
+      "sequence": 20,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-20-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-20-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-20-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-20-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-20-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-20-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-20-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 116,
+        "hint": 149,
+        "solution": 387,
+        "statement": 355
+      },
+      "title": "Mendekati supremum dengan barisan dari himpunan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-21",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-21-answer",
+        "hint": "o003-c90-ch09-guide-21-hint",
+        "solution": "o003-c90-ch09-guide-21-solution"
+      },
+      "sequence": 21,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-21-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-21-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-21-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-21-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-21-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-21-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-21-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 73,
+        "hint": 138,
+        "solution": 337,
+        "statement": 267
+      },
+      "title": "Mendekati infimum dengan barisan dari himpunan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-22",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-22-answer",
+        "hint": "o003-c90-ch09-guide-22-hint",
+        "solution": "o003-c90-ch09-guide-22-solution"
+      },
+      "sequence": 22,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-22-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-22-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-22-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-22-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-22-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-22-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-22-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 91,
+        "hint": 124,
+        "solution": 397,
+        "statement": 230
+      },
+      "title": "Supremum dan infimum tidak harus menjadi anggota"
+    },
+    {
+      "id": "o003-c90-ch09-guide-23",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-23-answer",
+        "hint": "o003-c90-ch09-guide-23-hint",
+        "solution": "o003-c90-ch09-guide-23-solution"
+      },
+      "sequence": 23,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-23-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-23-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-23-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-23-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-23-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-23-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-23-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 130,
+        "hint": 219,
+        "solution": 410,
+        "statement": 233
+      },
+      "title": "Bola yang sedikit lebih besar daripada jarak harus memotong himpunan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-24",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-24-answer",
+        "hint": "o003-c90-ch09-guide-24-hint",
+        "solution": "o003-c90-ch09-guide-24-solution"
+      },
+      "sequence": 24,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-24-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-24-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-24-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-24-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-24-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-24-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-24-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 87,
+        "hint": 181,
+        "solution": 477,
+        "statement": 311
+      },
+      "title": "Jarak ke himpunan sebagai limit jarak ke titik"
+    },
+    {
+      "id": "o003-c90-ch09-guide-25",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-25-answer",
+        "hint": "o003-c90-ch09-guide-25-hint",
+        "solution": "o003-c90-ch09-guide-25-solution"
+      },
+      "sequence": 25,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-25-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-25-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-25-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-25-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-25-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-25-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-25-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 138,
+        "hint": 162,
+        "solution": 372,
+        "statement": 265
+      },
+      "title": "Konvergensi subruang memberi konvergensi ruang ambien"
+    },
+    {
+      "id": "o003-c90-ch09-guide-26",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-26-answer",
+        "hint": "o003-c90-ch09-guide-26-hint",
+        "solution": "o003-c90-ch09-guide-26-solution"
+      },
+      "sequence": 26,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-26-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-26-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-26-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-26-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-26-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-26-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-26-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 248,
+        "hint": 273,
+        "solution": 984,
+        "statement": 473
+      },
+      "title": "Konvers subruang dan limit ambien di luar subruang"
+    },
+    {
+      "id": "o003-c90-ch09-guide-27",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-27-answer",
+        "hint": "o003-c90-ch09-guide-27-hint",
+        "solution": "o003-c90-ch09-guide-27-solution"
+      },
+      "sequence": 27,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-27-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-27-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-27-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-27-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-27-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-27-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-27-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 116,
+        "hint": 126,
+        "solution": 343,
+        "statement": 215
+      },
+      "title": "Limit kelipatan skalar barisan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-28",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-28-answer",
+        "hint": "o003-c90-ch09-guide-28-hint",
+        "solution": "o003-c90-ch09-guide-28-solution"
+      },
+      "sequence": 28,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-28-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-28-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-28-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-28-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-28-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-28-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-28-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 132,
+        "hint": 171,
+        "solution": 307,
+        "statement": 171
+      },
+      "title": "Limit jumlah dua barisan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-29",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-29-answer",
+        "hint": "o003-c90-ch09-guide-29-hint",
+        "solution": "o003-c90-ch09-guide-29-solution"
+      },
+      "sequence": 29,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-29-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-29-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-29-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-29-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-29-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-29-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-29-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 164,
+        "hint": 186,
+        "solution": 401,
+        "statement": 251
+      },
+      "title": "Setiap barisan real konvergen terbatas"
+    },
+    {
+      "id": "o003-c90-ch09-guide-30",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-30-answer",
+        "hint": "o003-c90-ch09-guide-30-hint",
+        "solution": "o003-c90-ch09-guide-30-solution"
+      },
+      "sequence": 30,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-30-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-30-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-30-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-30-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-30-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-30-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-30-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 109,
+        "hint": 178,
+        "solution": 511,
+        "statement": 225
+      },
+      "title": "Limit hasil kali dua barisan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-31",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-31-answer",
+        "hint": "o003-c90-ch09-guide-31-hint",
+        "solution": "o003-c90-ch09-guide-31-solution"
+      },
+      "sequence": 31,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-31-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-31-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-31-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-31-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-31-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-31-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-31-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 51,
+        "hint": 138,
+        "solution": 522,
+        "statement": 221
+      },
+      "title": "Hukum limit untuk hasil bagi"
+    },
+    {
+      "id": "o003-c90-ch09-guide-32",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-32-answer",
+        "hint": "o003-c90-ch09-guide-32-hint",
+        "solution": "o003-c90-ch09-guide-32-solution"
+      },
+      "sequence": 32,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-32-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-32-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-32-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-32-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-32-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-32-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-32-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 73,
+        "hint": 106,
+        "solution": 392,
+        "statement": 166
+      },
+      "title": "Hasil kali fungsi kontinu"
+    },
+    {
+      "id": "o003-c90-ch09-guide-33",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-33-answer",
+        "hint": "o003-c90-ch09-guide-33-hint",
+        "solution": "o003-c90-ch09-guide-33-solution"
+      },
+      "sequence": 33,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-33-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-33-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-33-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-33-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-33-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-33-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-33-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 97,
+        "hint": 144,
+        "solution": 547,
+        "statement": 203
+      },
+      "title": "Hasil bagi fungsi kontinu"
+    },
+    {
+      "id": "o003-c90-ch09-guide-34",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-34-answer",
+        "hint": "o003-c90-ch09-guide-34-hint",
+        "solution": "o003-c90-ch09-guide-34-solution"
+      },
+      "sequence": 34,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-34-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-34-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-34-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-34-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-34-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-34-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-34-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 82,
+        "hint": 142,
+        "solution": 394,
+        "statement": 190
+      },
+      "title": "Konvergensi koordinat dalam bidang"
+    },
+    {
+      "id": "o003-c90-ch09-guide-35",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-35-answer",
+        "hint": "o003-c90-ch09-guide-35-hint",
+        "solution": "o003-c90-ch09-guide-35-solution"
+      },
+      "sequence": 35,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-35-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-35-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-35-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-35-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-35-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-35-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-35-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 82,
+        "hint": 190,
+        "solution": 337,
+        "statement": 242
+      },
+      "title": "Fungsi rasional–irasional"
+    },
+    {
+      "id": "o003-c90-ch09-guide-36",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-36-answer",
+        "hint": "o003-c90-ch09-guide-36-hint",
+        "solution": "o003-c90-ch09-guide-36-solution"
+      },
+      "sequence": 36,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-36-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-36-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-36-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-36-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-36-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-36-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-36-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 89,
+        "hint": 155,
+        "solution": 395,
+        "statement": 221
+      },
+      "title": "Merancang himpunan titik kontinu berhingga"
+    },
+    {
+      "id": "o003-c90-ch09-guide-37",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-37-answer",
+        "hint": "o003-c90-ch09-guide-37-hint",
+        "solution": "o003-c90-ch09-guide-37-solution"
+      },
+      "sequence": 37,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-37-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-37-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-37-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-37-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-37-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-37-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-37-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 54,
+        "hint": 100,
+        "solution": 286,
+        "statement": 142
+      },
+      "title": "Limit barisan geometri"
+    },
+    {
+      "id": "o003-c90-ch09-guide-38",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-38-answer",
+        "hint": "o003-c90-ch09-guide-38-hint",
+        "solution": "o003-c90-ch09-guide-38-solution"
+      },
+      "sequence": 38,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-38-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-38-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-38-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-38-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-38-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-38-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-38-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 87,
+        "hint": 107,
+        "solution": 388,
+        "statement": 195
+      },
+      "title": "Konvergensi titik demi titik bukan konvergensi seragam"
+    },
+    {
+      "id": "o003-c90-ch09-guide-39",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-39-answer",
+        "hint": "o003-c90-ch09-guide-39-hint",
+        "solution": "o003-c90-ch09-guide-39-solution"
+      },
+      "sequence": 39,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-39-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-39-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-39-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-39-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-39-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-39-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-39-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 55,
+        "hint": 177,
+        "solution": 366,
+        "statement": 196
+      },
+      "title": "Limit dalam metrik integral"
+    },
+    {
+      "id": "o003-c90-ch09-guide-40",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-40-answer",
+        "hint": "o003-c90-ch09-guide-40-hint",
+        "solution": "o003-c90-ch09-guide-40-solution"
+      },
+      "sequence": 40,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-40-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-40-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-40-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-40-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-40-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-40-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-40-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 79,
+        "hint": 108,
+        "solution": 274,
+        "statement": 194
+      },
+      "title": "Barisan menurun dan infimum"
+    },
+    {
+      "id": "o003-c90-ch09-guide-41",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-41-answer",
+        "hint": "o003-c90-ch09-guide-41-hint",
+        "solution": "o003-c90-ch09-guide-41-solution"
+      },
+      "sequence": 41,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-41-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-41-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-41-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-41-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-41-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-41-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-41-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 89,
+        "hint": 86,
+        "solution": 287,
+        "statement": 186
+      },
+      "title": "Membangun barisan dari perpotongan bola"
+    },
+    {
+      "id": "o003-c90-ch09-guide-42",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-42-answer",
+        "hint": "o003-c90-ch09-guide-42-hint",
+        "solution": "o003-c90-ch09-guide-42-solution"
+      },
+      "sequence": 42,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-42-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-42-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-42-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-42-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-42-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-42-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-42-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 59,
+        "hint": 98,
+        "solution": 248,
+        "statement": 176
+      },
+      "title": "Membandingkan supremum dan infimum"
+    },
+    {
+      "id": "o003-c90-ch09-guide-43",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-43-answer",
+        "hint": "o003-c90-ch09-guide-43-hint",
+        "solution": "o003-c90-ch09-guide-43-solution"
+      },
+      "sequence": 43,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-43-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-43-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-43-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-43-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-43-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-43-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-43-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 65,
+        "hint": 91,
+        "solution": 319,
+        "statement": 216
+      },
+      "title": "Menguji klaim limit dalam metrik pecahan"
+    },
+    {
+      "id": "o003-c90-ch09-guide-44",
+      "kind": "source_prompt_guide",
+      "reveals": {
+        "answer": "o003-c90-ch09-guide-44-answer",
+        "hint": "o003-c90-ch09-guide-44-hint",
+        "solution": "o003-c90-ch09-guide-44-solution"
+      },
+      "sequence": 44,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-guide-44-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-44-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-guide-44-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-44-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-guide-44-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-guide-44-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-guide-44-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 126,
+        "hint": 100,
+        "solution": 336,
+        "statement": 235
+      },
+      "title": "Konvergensi dalam metrik diskret"
+    },
+    {
+      "id": "o003-c90-ch09-mastery-01",
+      "kind": "mastery_check",
+      "reveals": {
+        "answer": "o003-c90-ch09-mastery-01-answer",
+        "hint": "o003-c90-ch09-mastery-01-hint",
+        "solution": "o003-c90-ch09-mastery-01-solution"
+      },
+      "sequence": 45,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-mastery-01-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-01-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-mastery-01-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-01-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-mastery-01-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-01-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-mastery-01-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 133,
+        "hint": 396,
+        "solution": 655,
+        "statement": 388
+      },
+      "title": "Menyusun bukti epsilon–N"
+    },
+    {
+      "id": "o003-c90-ch09-mastery-02",
+      "kind": "mastery_check",
+      "reveals": {
+        "answer": "o003-c90-ch09-mastery-02-answer",
+        "hint": "o003-c90-ch09-mastery-02-hint",
+        "solution": "o003-c90-ch09-mastery-02-solution"
+      },
+      "sequence": 46,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-mastery-02-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-02-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-mastery-02-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-02-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-mastery-02-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-02-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-mastery-02-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 466,
+        "hint": 571,
+        "solution": 1355,
+        "statement": 730
+      },
+      "title": "Ketunggalan limit dan peran metrik"
+    },
+    {
+      "id": "o003-c90-ch09-mastery-03",
+      "kind": "mastery_check",
+      "reveals": {
+        "answer": "o003-c90-ch09-mastery-03-answer",
+        "hint": "o003-c90-ch09-mastery-03-hint",
+        "solution": "o003-c90-ch09-mastery-03-solution"
+      },
+      "sequence": 47,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-mastery-03-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-03-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-mastery-03-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-03-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-mastery-03-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-03-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-mastery-03-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 241,
+        "hint": 355,
+        "solution": 920,
+        "statement": 467
+      },
+      "title": "Menguji kekontinuan dengan barisan"
+    },
+    {
+      "id": "o003-c90-ch09-mastery-04",
+      "kind": "mastery_check",
+      "reveals": {
+        "answer": "o003-c90-ch09-mastery-04-answer",
+        "hint": "o003-c90-ch09-mastery-04-hint",
+        "solution": "o003-c90-ch09-mastery-04-solution"
+      },
+      "sequence": 48,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-mastery-04-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-04-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-mastery-04-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-04-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-mastery-04-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-04-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-mastery-04-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 336,
+        "hint": 294,
+        "solution": 1216,
+        "statement": 509
+      },
+      "title": "Limit dalam subruang dan ruang ambien"
+    },
+    {
+      "id": "o003-c90-ch09-mastery-05",
+      "kind": "mastery_check",
+      "reveals": {
+        "answer": "o003-c90-ch09-mastery-05-answer",
+        "hint": "o003-c90-ch09-mastery-05-hint",
+        "solution": "o003-c90-ch09-mastery-05-solution"
+      },
+      "sequence": 49,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-mastery-05-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-05-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-mastery-05-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-05-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-mastery-05-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-05-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-mastery-05-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 275,
+        "hint": 345,
+        "solution": 740,
+        "statement": 210
+      },
+      "title": "Konvergensi koordinat demi koordinat"
+    },
+    {
+      "id": "o003-c90-ch09-mastery-06",
+      "kind": "mastery_check",
+      "reveals": {
+        "answer": "o003-c90-ch09-mastery-06-answer",
+        "hint": "o003-c90-ch09-mastery-06-hint",
+        "solution": "o003-c90-ch09-mastery-06-solution"
+      },
+      "sequence": 50,
+      "surfaces": {
+        "answer": {
+          "id": "o003-c90-ch09-mastery-06-answer",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-06-answer"
+        },
+        "hint": {
+          "id": "o003-c90-ch09-mastery-06-hint",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-06-hint"
+        },
+        "solution": {
+          "id": "o003-c90-ch09-mastery-06-solution",
+          "id_origin": "xml_id",
+          "xml_id": "o003-c90-ch09-mastery-06-solution"
+        },
+        "statement": {
+          "id": "o003-c90-ch09-mastery-06-statement",
+          "id_origin": "assigned_backend_alias",
+          "xml_id": null
+        }
+      },
+      "text_lengths": {
+        "answer": 333,
+        "hint": 405,
+        "solution": 1249,
+        "statement": 517
+      },
+      "title": "Konvergensi titik demi titik dan konvergensi seragam"
+    }
+  ],
+  "entry_counts": {
+    "activity_or_task_guide": 16,
+    "exercise_prompt_guide": 28,
+    "mastery_check": 6,
+    "source_prompt_guide": 44,
+    "total": 50
+  },
+  "failures": [],
+  "fragments": [
+    {
+      "bytes": 25871,
+      "path": "companion/chapter_09_source_guides.ptx",
+      "sha256": "3e6ea4d1c93c40bf89ea4330298ff1ab4a96e8a34023064f87c41181462093f5"
+    },
+    {
+      "bytes": 26995,
+      "path": "companion/chapter_09_exercise_guides_a.ptx",
+      "sha256": "f9513a031a29ea53bd2b29e91a8495dff7f80084d086c8b8d2d4c8401359ca55"
+    },
+    {
+      "bytes": 21090,
+      "path": "companion/chapter_09_exercise_guides_b.ptx",
+      "sha256": "4f0eae4deb64c55cf775157396ecfce3b668aea27b741a701bd0c55668c9ba5f"
+    },
+    {
+      "bytes": 23373,
+      "path": "companion/chapter_09_mastery.ptx",
+      "sha256": "63c01a3c23a5a7680849faea0fa54c50df150b667db9c6cec8ad747bd76c642a"
+    }
+  ],
+  "missing_xrefs": [],
+  "reveal_counts": {
+    "answer": 50,
+    "hint": 50,
+    "solution": 50
+  },
+  "rights_boundary": {
+    "collection_licenses": {
+      "bytes": 2277,
+      "path": "LICENSES.md",
+      "sha256": "408eeec186fd9b34660ea5d6df19df5d0e0da7ae63e8681852ff5eaa7b6fb941"
+    },
+    "companion_license": "CC-BY-4.0",
+    "companion_rights": {
+      "bytes": 2181,
+      "path": "companion/RIGHTS.md",
+      "sha256": "ef9e9960775b17d187cc655fc73a6f7d76b3d8fe05b9960d3e168ae9fc4fcfe7"
+    },
+    "translated_spine_license": "CC-BY-NC-SA-3.0"
+  },
+  "schema_version": 2,
+  "source_prompt_counts": {
+    "chap_sequences.ptx": 0,
+    "sec_seq_cont_metric.ptx": 13,
+    "sec_seq_exer.ptx": 28,
+    "sec_seq_intro.ptx": 3,
+    "sec_seq_summ.ptx": 0
+  },
+  "source_prompt_mappings": [
+    {
+      "authority_file": "source/sec_seq_intro.ptx",
+      "authority_line": 193,
+      "authority_selector": "/section/exploration/task[1]/statement",
+      "authority_statement_sha256": "d11d1097989d2f68a63398eea052fbca9ebc839070d2460983e24b76692517e7",
+      "companion_entry_id": "o003-c90-ch09-guide-01",
+      "group": "sequence-intro",
+      "ordinal_within_group": 1,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_intro-prompt-01",
+      "source_context_id": "sec_seq_intro",
+      "translated_file": "source/sec_seq_intro.ptx",
+      "translated_line": 193,
+      "translated_selector": "/section/exploration/task[1]/statement",
+      "translated_statement_sha256": "13b1a498660388694f460f8917cd0a07b7374675648493cc2ad0541a6d2d66b4"
+    },
+    {
+      "authority_file": "source/sec_seq_intro.ptx",
+      "authority_line": 203,
+      "authority_selector": "/section/exploration/task[2]/statement",
+      "authority_statement_sha256": "1f5149781141899f757d795cfe074eebd917ec5bce5f074f5074bf5877bae1c9",
+      "companion_entry_id": "o003-c90-ch09-guide-02",
+      "group": "sequence-intro",
+      "ordinal_within_group": 2,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_intro-prompt-02",
+      "source_context_id": "sec_seq_intro",
+      "translated_file": "source/sec_seq_intro.ptx",
+      "translated_line": 203,
+      "translated_selector": "/section/exploration/task[2]/statement",
+      "translated_statement_sha256": "c0ddf11feb86b58722e7b6c0ba959182758a6510ae4c81ce5f19af40b2c8e9b4"
+    },
+    {
+      "authority_file": "source/sec_seq_intro.ptx",
+      "authority_line": 217,
+      "authority_selector": "/section/exploration/task[3]/statement",
+      "authority_statement_sha256": "0fc84bd7c7b7bd5c006c34a4f592d6995f58513f5ab56c144256489a6d5971e3",
+      "companion_entry_id": "o003-c90-ch09-guide-03",
+      "group": "sequence-intro",
+      "ordinal_within_group": 3,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_intro-prompt-03",
+      "source_context_id": "sec_seq_intro",
+      "translated_file": "source/sec_seq_intro.ptx",
+      "translated_line": 217,
+      "translated_selector": "/section/exploration/task[3]/statement",
+      "translated_statement_sha256": "d56230ab3d72dc2dbd6c144982a4ead33443b4d89260ed736367948239f9541a"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 31,
+      "authority_selector": "/section/activity[1]/task[1]/statement",
+      "authority_statement_sha256": "aeed3a84e2785625a7f907f95ec28ec137997dc4a2723b5ec087d579148e923d",
+      "companion_entry_id": "o003-c90-ch09-guide-04",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 1,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-01",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 31,
+      "translated_selector": "/section/activity[1]/task[1]/statement",
+      "translated_statement_sha256": "d238fabb383114a63beb057ffaeb143dde6e0df152bcaf0f0c14b3f7333b398a"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 39,
+      "authority_selector": "/section/activity[1]/task[2]/statement",
+      "authority_statement_sha256": "7795ee4af18eb6e51d539855163b9ad66b3be4f6b00841c27a486b3ba491290f",
+      "companion_entry_id": "o003-c90-ch09-guide-05",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 2,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-02",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 39,
+      "translated_selector": "/section/activity[1]/task[2]/statement",
+      "translated_statement_sha256": "35f9c6646b0801f560c09384ee4772bae915cc6a249d695eaeb412cb878aafa0"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 47,
+      "authority_selector": "/section/activity[1]/task[3]/statement",
+      "authority_statement_sha256": "f28f69c0775cf29be13c215d4de879c79eb950522220abd29452afd57aed9978",
+      "companion_entry_id": "o003-c90-ch09-guide-06",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 3,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-03",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 47,
+      "translated_selector": "/section/activity[1]/task[3]/statement",
+      "translated_statement_sha256": "c517defc2e0bc724a013c5ad531a551a06c8c24c89c434222d2ebdbd78ce63b0"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 56,
+      "authority_selector": "/section/activity[1]/task[4]/statement",
+      "authority_statement_sha256": "89178c40abdff0c797874b5193fc1636d087bbdd105994943411e8f36dd9516f",
+      "companion_entry_id": "o003-c90-ch09-guide-07",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 4,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-04",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 56,
+      "translated_selector": "/section/activity[1]/task[4]/statement",
+      "translated_statement_sha256": "c75c866bc8cc093a4a8adfa78ffbba9d22749aefe07725ef6b0c2e7464a32a56"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 130,
+      "authority_selector": "/section/activity[2]/task[1]/statement",
+      "authority_statement_sha256": "86fb51d206175216897d9e3ff4acde1ae483ebe88f0a4daa4a17429f4ee58910",
+      "companion_entry_id": "o003-c90-ch09-guide-08",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 5,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-05",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 127,
+      "translated_selector": "/section/activity[2]/task[1]/statement",
+      "translated_statement_sha256": "56ed0eac91fea1ccc22f97a22aa14522e90cb0052a03493f5d7556ca38ad711c"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 149,
+      "authority_selector": "/section/activity[2]/task[2]/task[1]/statement",
+      "authority_statement_sha256": "4c5f1dc937ba06451e412779dcb6be5c810d6e6056e8d28b5cbe0531cae15b94",
+      "companion_entry_id": "o003-c90-ch09-guide-09",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 6,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-06",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 146,
+      "translated_selector": "/section/activity[2]/task[2]/task[1]/statement",
+      "translated_statement_sha256": "9d5102c4ec402bfca38ef64c9489cf66d3d2b3e994ceb90ae641c0f34a55b18e"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 156,
+      "authority_selector": "/section/activity[2]/task[2]/task[2]/statement",
+      "authority_statement_sha256": "1e1b4c73b0411c2deb8f1337219aa3974ecd4c9e79b39acdc97fe6e1981f07f8",
+      "companion_entry_id": "o003-c90-ch09-guide-10",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 7,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-07",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 153,
+      "translated_selector": "/section/activity[2]/task[2]/task[2]/statement",
+      "translated_statement_sha256": "796fe669ef1a72a0ef6923980f7b55b97265f15ae0dcafab84a6da5ba8d7b711"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 165,
+      "authority_selector": "/section/activity[2]/task[2]/task[3]/statement",
+      "authority_statement_sha256": "4cab170b806a34a748b7be13fca1a3c6880f2c3c58a262ee06c4a5ed03ef3a48",
+      "companion_entry_id": "o003-c90-ch09-guide-11",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 8,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-08",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 162,
+      "translated_selector": "/section/activity[2]/task[2]/task[3]/statement",
+      "translated_statement_sha256": "f36d255ec0a18be8913f23bb59c759f7cab0b7b42576771e749247ab5532b591"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 174,
+      "authority_selector": "/section/activity[2]/task[2]/task[4]/statement",
+      "authority_statement_sha256": "80c39c82f97eed5279566a235d596bdba5b9f72ea53d4f143f1f2975cc45c312",
+      "companion_entry_id": "o003-c90-ch09-guide-12",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 9,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-09",
+      "source_context_id": "sec_seq_cont_metric",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 171,
+      "translated_selector": "/section/activity[2]/task[2]/task[4]/statement",
+      "translated_statement_sha256": "32612cce728df92aacb813ccc264832eabfbe33f6e86913d917c6efdbdfa9214"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 205,
+      "authority_selector": "/section/activity[3]/task[1]/statement",
+      "authority_statement_sha256": "adc2fb80029bfb0742295e7642a6ae7384df719fcf2da2e554a0a43a310ac574",
+      "companion_entry_id": "o003-c90-ch09-guide-13",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 10,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-10",
+      "source_context_id": "act_sequence_continuity",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 202,
+      "translated_selector": "/section/activity[3]/task[1]/statement",
+      "translated_statement_sha256": "964c7eb593cc0258bd3592698ed31367f0e25a030305ff857c36b0fe994c6e8a"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 216,
+      "authority_selector": "/section/activity[3]/task[2]/statement",
+      "authority_statement_sha256": "6127e8d70fe3a3db01f566563894c353f0e0ffbff82d94c76bb52eea290186d0",
+      "companion_entry_id": "o003-c90-ch09-guide-14",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 11,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-11",
+      "source_context_id": "act_sequence_continuity",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 213,
+      "translated_selector": "/section/activity[3]/task[2]/statement",
+      "translated_statement_sha256": "fd38ffb006fa55b03460e57c4ec1c90385362bf292d2dc36b707e3ebeecebc21"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 223,
+      "authority_selector": "/section/activity[3]/task[3]/statement",
+      "authority_statement_sha256": "0ff1e1f88fb4e4ca6e2c57c1585f60b5b80b3496ca1bb5313b5afd802004f209",
+      "companion_entry_id": "o003-c90-ch09-guide-15",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 12,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-12",
+      "source_context_id": "act_sequence_continuity",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 220,
+      "translated_selector": "/section/activity[3]/task[3]/statement",
+      "translated_statement_sha256": "c843d80cd29d4e5bc11ee69a518f2d822893f70f0e55168657593d65826fc8f5"
+    },
+    {
+      "authority_file": "source/sec_seq_cont_metric.ptx",
+      "authority_line": 230,
+      "authority_selector": "/section/activity[3]/task[4]/statement",
+      "authority_statement_sha256": "08a1f16c1b3d002551e5b2764c8d4e33c0e6eda1286dc4554cee419968f7fc66",
+      "companion_entry_id": "o003-c90-ch09-guide-16",
+      "group": "sequence-continuity",
+      "ordinal_within_group": 13,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_cont_metric-prompt-13",
+      "source_context_id": "act_sequence_continuity",
+      "translated_file": "source/sec_seq_cont_metric.ptx",
+      "translated_line": 227,
+      "translated_selector": "/section/activity[3]/task[4]/statement",
+      "translated_statement_sha256": "e9f6dfc0e130204ff85dabbfa36bcad0cb3f0397bee38ddbf375ea88d3953880"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 11,
+      "authority_selector": "/exercises/exercise[1]/task[1]/statement",
+      "authority_statement_sha256": "4ab5171a41216ef01feeea55813a6df6f5144d77ab997664387cc1d30ab992e9",
+      "companion_entry_id": "o003-c90-ch09-guide-17",
+      "group": "exercise",
+      "ordinal_within_group": 1,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-01",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 11,
+      "translated_selector": "/exercises/exercise[1]/task[1]/statement",
+      "translated_statement_sha256": "bfa89e2cbe10a64237f53f2028cb390738b7752ac1880901b1a27260d393b4e2"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 18,
+      "authority_selector": "/exercises/exercise[1]/task[2]/statement",
+      "authority_statement_sha256": "626e7c24a8499d2691bb236d355748879ef7642db8f177293e42f78a03173712",
+      "companion_entry_id": "o003-c90-ch09-guide-18",
+      "group": "exercise",
+      "ordinal_within_group": 2,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-02",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 18,
+      "translated_selector": "/exercises/exercise[1]/task[2]/statement",
+      "translated_statement_sha256": "db8a3f3b36adb06c91aac36c4ed1bb97b5c82eb9e2f86776919a73775ab06e18"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 25,
+      "authority_selector": "/exercises/exercise[1]/task[3]/statement",
+      "authority_statement_sha256": "5de0a83e2d71ee27e934db6da96ee4ede99aac751b905f9ae31aacec60761166",
+      "companion_entry_id": "o003-c90-ch09-guide-19",
+      "group": "exercise",
+      "ordinal_within_group": 3,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-03",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 25,
+      "translated_selector": "/exercises/exercise[1]/task[3]/statement",
+      "translated_statement_sha256": "b5164950b1aab3f48121e93b2aa20a3fbfafd26f84fda945340b3081ff95592c"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 48,
+      "authority_selector": "/exercises/exercise[2]/task[1]/statement",
+      "authority_statement_sha256": "ee2fd923c086a1dc75c07a3b546687b4d03e5d911685838f29a82999c09a28e4",
+      "companion_entry_id": "o003-c90-ch09-guide-20",
+      "group": "exercise",
+      "ordinal_within_group": 4,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-04",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 48,
+      "translated_selector": "/exercises/exercise[2]/task[1]/statement",
+      "translated_statement_sha256": "b2bcd095cbb64c6cb3f6d55415aee9e373f0ccfba6e6ad3f76d449a10c142875"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 56,
+      "authority_selector": "/exercises/exercise[2]/task[2]/statement",
+      "authority_statement_sha256": "b672e9b1fe43dd3f9ab6c9680cd3720de10f950d1be4f47959d54e13a118fae1",
+      "companion_entry_id": "o003-c90-ch09-guide-21",
+      "group": "exercise",
+      "ordinal_within_group": 5,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-05",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 56,
+      "translated_selector": "/exercises/exercise[2]/task[2]/statement",
+      "translated_statement_sha256": "4a749e9a7871e977090d4bf1f7d3806bd73908be0e9530564dc6a09ccdfaccec"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 64,
+      "authority_selector": "/exercises/exercise[2]/task[3]/statement",
+      "authority_statement_sha256": "fa141430b539c46c1bc9125ce982e99e0ee2e6f78b86158106a4151746fbff3d",
+      "companion_entry_id": "o003-c90-ch09-guide-22",
+      "group": "exercise",
+      "ordinal_within_group": 6,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-06",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 64,
+      "translated_selector": "/exercises/exercise[2]/task[3]/statement",
+      "translated_statement_sha256": "c6d5c134b6fdfe8754ec779dbc6360f957bc2bc608850a14864509d40a408dcb"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 88,
+      "authority_selector": "/exercises/exercise[3]/task[1]/statement",
+      "authority_statement_sha256": "679ffb165630ccf8bee27d97a6b2b4447c8fdb9937913d30ce1134359f2d5109",
+      "companion_entry_id": "o003-c90-ch09-guide-23",
+      "group": "exercise",
+      "ordinal_within_group": 7,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-07",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 88,
+      "translated_selector": "/exercises/exercise[3]/task[1]/statement",
+      "translated_statement_sha256": "84029f041610a931bdcf98027d1910a27e3318c2b486baa1aa9327548bde8e57"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 96,
+      "authority_selector": "/exercises/exercise[3]/task[2]/statement",
+      "authority_statement_sha256": "6b87ec9612b7240661fe5aaccbc4b2592b5a96be3de3744796d2d8b445c3458d",
+      "companion_entry_id": "o003-c90-ch09-guide-24",
+      "group": "exercise",
+      "ordinal_within_group": 8,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-08",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 96,
+      "translated_selector": "/exercises/exercise[3]/task[2]/statement",
+      "translated_statement_sha256": "54d5958f462662c8139f6902d142e67c8c20d63e65137b8ce9ace71d622cca60"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 122,
+      "authority_selector": "/exercises/exercise[4]/task[1]/statement",
+      "authority_statement_sha256": "3b53638767fdc274a7dc4746e5e80a3bba493111e568ecdb5856dc27a00e8391",
+      "companion_entry_id": "o003-c90-ch09-guide-25",
+      "group": "exercise",
+      "ordinal_within_group": 9,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-09",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 122,
+      "translated_selector": "/exercises/exercise[4]/task[1]/statement",
+      "translated_statement_sha256": "4f7f5ed4f9d23f5de4dc73aaffe50212634a9dc2b033037112fe93a1d700ce8c"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 133,
+      "authority_selector": "/exercises/exercise[4]/task[2]/statement",
+      "authority_statement_sha256": "8de65428a602d1d4ceba3b47f170a486b1401c04dc1635bd786774ab82d09ee9",
+      "companion_entry_id": "o003-c90-ch09-guide-26",
+      "group": "exercise",
+      "ordinal_within_group": 10,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-10",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 133,
+      "translated_selector": "/exercises/exercise[4]/task[2]/statement",
+      "translated_statement_sha256": "66ae9cf54949f449865f08f729e268951f5b31e717203855a5e09ae2c731fc38"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 159,
+      "authority_selector": "/exercises/exercise[5]/task[1]/statement",
+      "authority_statement_sha256": "27725c07203178abb819608197ab2f6bba7f420647e8a9694bef92c647209a23",
+      "companion_entry_id": "o003-c90-ch09-guide-27",
+      "group": "exercise",
+      "ordinal_within_group": 11,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-11",
+      "source_context_id": "ex_limit_properties",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 162,
+      "translated_selector": "/exercises/exercise[5]/task[1]/statement",
+      "translated_statement_sha256": "6d5b43d7b3180515dd401363079cba613784a6a89b5555cf17c4d4bbbd8f8ec2"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 166,
+      "authority_selector": "/exercises/exercise[5]/task[2]/statement",
+      "authority_statement_sha256": "3163f95a9ec343cad1a40d982e9e17477a8bb481180d07ba0960f419c0411a2e",
+      "companion_entry_id": "o003-c90-ch09-guide-28",
+      "group": "exercise",
+      "ordinal_within_group": 12,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-12",
+      "source_context_id": "ex_limit_properties",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 169,
+      "translated_selector": "/exercises/exercise[5]/task[2]/statement",
+      "translated_statement_sha256": "9ad51a432aa05e107653bf33d39869d68768c05bcbb1ca66f91a6b11259aeb3f"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 173,
+      "authority_selector": "/exercises/exercise[5]/task[3]/statement",
+      "authority_statement_sha256": "4ece3d8e4ba0572f71c06fa8ef6851865c15b7fffe897f1ac1f1d17e41d12ce4",
+      "companion_entry_id": "o003-c90-ch09-guide-29",
+      "group": "exercise",
+      "ordinal_within_group": 13,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-13",
+      "source_context_id": "ex_limit_properties",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 176,
+      "translated_selector": "/exercises/exercise[5]/task[3]/statement",
+      "translated_statement_sha256": "f52b63fc978feee4290724c24ac4748d4724478622a6c4c4d026928ae491fecd"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 182,
+      "authority_selector": "/exercises/exercise[5]/task[4]/statement",
+      "authority_statement_sha256": "ba20469f1ea2ee73d617c7537484c18c3226312704d02673c11b1abe187e23c9",
+      "companion_entry_id": "o003-c90-ch09-guide-30",
+      "group": "exercise",
+      "ordinal_within_group": 14,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-14",
+      "source_context_id": "ex_limit_properties",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 185,
+      "translated_selector": "/exercises/exercise[5]/task[4]/statement",
+      "translated_statement_sha256": "347d6415f74e3477616eab51217b855c16d903b1a551daea8f6a68b20a841f95"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 189,
+      "authority_selector": "/exercises/exercise[5]/task[5]/statement",
+      "authority_statement_sha256": "f33224a8201be7cf92118ef91e24fe860a780b7bf5bdbccbd868e21652ef0f06",
+      "companion_entry_id": "o003-c90-ch09-guide-31",
+      "group": "exercise",
+      "ordinal_within_group": 15,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-15",
+      "source_context_id": "ex_limit_properties",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 192,
+      "translated_selector": "/exercises/exercise[5]/task[5]/statement",
+      "translated_statement_sha256": "133c3c3b54681d093d4250163ff215cf663555a1ee02d4733aa3945e753fdcfe"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 210,
+      "authority_selector": "/exercises/exercise[6]/task[1]/statement",
+      "authority_statement_sha256": "cb0c17af9eb01a16ee2d49111d2788d3caf80e7097331b389b136152d0fcc2a4",
+      "companion_entry_id": "o003-c90-ch09-guide-32",
+      "group": "exercise",
+      "ordinal_within_group": 16,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-16",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 213,
+      "translated_selector": "/exercises/exercise[6]/task[1]/statement",
+      "translated_statement_sha256": "cf6d98083f295b024476edabd0ea15d1983ababf1da7688d85f92abeadc12d30"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 217,
+      "authority_selector": "/exercises/exercise[6]/task[2]/statement",
+      "authority_statement_sha256": "7331b6cfd5d40f653c9c21bf83c2018b8b7b82caa192c2ee579e941335a69bae",
+      "companion_entry_id": "o003-c90-ch09-guide-33",
+      "group": "exercise",
+      "ordinal_within_group": 17,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-17",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 220,
+      "translated_selector": "/exercises/exercise[6]/task[2]/statement",
+      "translated_statement_sha256": "bf18288b2325d176afd095625ccdc3c7f482c700bd927e5613f504fbd6a104ca"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 230,
+      "authority_selector": "/exercises/exercise[7]/statement",
+      "authority_statement_sha256": "cf78de8a5e6e2845fe42daa799949992fa392f243083007a23706caa5cb3c31c",
+      "companion_entry_id": "o003-c90-ch09-guide-34",
+      "group": "exercise",
+      "ordinal_within_group": 18,
+      "prompt_kind": "standalone_exercise",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-18",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 233,
+      "translated_selector": "/exercises/exercise[7]/statement",
+      "translated_statement_sha256": "82435c6e7508c98763a2170e6ce148ac9fe3140495ce3474ad05ded4ee43ab68"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 248,
+      "authority_selector": "/exercises/exercise[8]/task[1]/statement",
+      "authority_statement_sha256": "70d75b47ba2568eed96fba91c76249c5a608d30016754b8ee982ee9d7cafa59e",
+      "companion_entry_id": "o003-c90-ch09-guide-35",
+      "group": "exercise",
+      "ordinal_within_group": 19,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-19",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 251,
+      "translated_selector": "/exercises/exercise[8]/task[1]/statement",
+      "translated_statement_sha256": "ef7d68fff7955ee513199ceb2310465e8f24b517b1fc0e6aa4bfd529798eb8c4"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 256,
+      "authority_selector": "/exercises/exercise[8]/task[2]/statement",
+      "authority_statement_sha256": "7bbbb1c662de0bd3417ec9021ca89a86acebd08f9bfa2656752cf7b1beb622e5",
+      "companion_entry_id": "o003-c90-ch09-guide-36",
+      "group": "exercise",
+      "ordinal_within_group": 20,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-20",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 259,
+      "translated_selector": "/exercises/exercise[8]/task[2]/statement",
+      "translated_statement_sha256": "ac8d320409d3acb902939a695d7b3cc1404d5edd6b3b7b50227c2ddd137f6ea8"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 281,
+      "authority_selector": "/exercises/exercise[9]/task[1]/statement",
+      "authority_statement_sha256": "a1a440436385267b5d879a988169fafeb7fe03436320fc820cbcede5b48db79c",
+      "companion_entry_id": "o003-c90-ch09-guide-37",
+      "group": "exercise",
+      "ordinal_within_group": 21,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-21",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 284,
+      "translated_selector": "/exercises/exercise[9]/task[1]/statement",
+      "translated_statement_sha256": "65736f6c0af58a7a133e944931382898425c0520f01776de30b7a128aeb5d513"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 290,
+      "authority_selector": "/exercises/exercise[9]/task[2]/statement",
+      "authority_statement_sha256": "6beb8767bf76f6cfd38191b7a2e086cc792e409f7af70f4e0e61073ed0f38457",
+      "companion_entry_id": "o003-c90-ch09-guide-38",
+      "group": "exercise",
+      "ordinal_within_group": 22,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-22",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 293,
+      "translated_selector": "/exercises/exercise[9]/task[2]/statement",
+      "translated_statement_sha256": "79a212a1e82bb1223222c6f42d8a64837ef417def8740c71b595bed040c2cbea"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 303,
+      "authority_selector": "/exercises/exercise[9]/task[3]/statement",
+      "authority_statement_sha256": "e8c47c042edd2542dce2db72d7237fc4e52828a5ad1e5fbb2b776cecb5bb4616",
+      "companion_entry_id": "o003-c90-ch09-guide-39",
+      "group": "exercise",
+      "ordinal_within_group": 23,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-23",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 306,
+      "translated_selector": "/exercises/exercise[9]/task[3]/statement",
+      "translated_statement_sha256": "915eb9d6ae4101385bc2a34992f2c0162334fa6fb5617633aa133e3a93b1d447"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 331,
+      "authority_selector": "/exercises/exercise[10]/task[1]/statement",
+      "authority_statement_sha256": "ca51810ef3c1415523a170e4179e97f44da1166712ced4adaffcfe158a6aabd7",
+      "companion_entry_id": "o003-c90-ch09-guide-40",
+      "group": "exercise",
+      "ordinal_within_group": 24,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-24",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 334,
+      "translated_selector": "/exercises/exercise[10]/task[1]/statement",
+      "translated_statement_sha256": "9ee6eb28a7a1b6495066bdf4118e651ec4701944763661c37b34f3f86f7ec0d1"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 341,
+      "authority_selector": "/exercises/exercise[10]/task[2]/statement",
+      "authority_statement_sha256": "7940e37e768835037d41a29f330735f9ad0f509423184232ed1715736c7eaa19",
+      "companion_entry_id": "o003-c90-ch09-guide-41",
+      "group": "exercise",
+      "ordinal_within_group": 25,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-25",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 344,
+      "translated_selector": "/exercises/exercise[10]/task[2]/statement",
+      "translated_statement_sha256": "20b7b8a5e5788ff3a07314666d8dfb920629d2b6f9b5bb4002ee07ff1f83eaa3"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 350,
+      "authority_selector": "/exercises/exercise[10]/task[3]/statement",
+      "authority_statement_sha256": "d2bbd13dd9b77b04efd0f58684b41e4d7845a4b93abdb3e6a7adddf2be8bea51",
+      "companion_entry_id": "o003-c90-ch09-guide-42",
+      "group": "exercise",
+      "ordinal_within_group": 26,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-26",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 353,
+      "translated_selector": "/exercises/exercise[10]/task[3]/statement",
+      "translated_statement_sha256": "5368aab20c5669ca69943cb95a4ab2671be64f6653dec585e4422faef59b27d0"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 360,
+      "authority_selector": "/exercises/exercise[10]/task[4]/statement",
+      "authority_statement_sha256": "3fc36692fda00c14228969d59f22bf41581fdc3a3753954425474f071ea6a390",
+      "companion_entry_id": "o003-c90-ch09-guide-43",
+      "group": "exercise",
+      "ordinal_within_group": 27,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-27",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 363,
+      "translated_selector": "/exercises/exercise[10]/task[4]/statement",
+      "translated_statement_sha256": "b0578bf134dd9513120a0de51ab60ea117daa2f8a279df6b036548b0b76b776e"
+    },
+    {
+      "authority_file": "source/sec_seq_exer.ptx",
+      "authority_line": 371,
+      "authority_selector": "/exercises/exercise[10]/task[5]/statement",
+      "authority_statement_sha256": "add0a5678cf73efd261ad3810ee55b5d24e319adb3ddaeef0b35d6f5e9061617",
+      "companion_entry_id": "o003-c90-ch09-guide-44",
+      "group": "exercise",
+      "ordinal_within_group": 28,
+      "prompt_kind": "statement_bearing_task",
+      "source_anchor_id": "o003-gvsu-ch09-sec_seq_exer-prompt-28",
+      "source_context_id": "sec_seq_exer",
+      "translated_file": "source/sec_seq_exer.ptx",
+      "translated_line": 374,
+      "translated_selector": "/exercises/exercise[10]/task[5]/statement",
+      "translated_statement_sha256": "442de1c76e0db0891795062723dc9e7e61b2d147714d5f59de75555fbe8fac5b"
+    }
+  ],
+  "source_prompt_total": 44,
+  "source_qa": {
+    "bytes": 5719,
+    "path": "qa/CHAPTER09_SOURCE_QA.json",
+    "sha256": "6697bd179dc1ac85986291437417672ba62cba735fd28b68d00ef07d86578328"
+  },
+  "status": "pass",
+  "surface_counts": {
+    "answer": 50,
+    "hint": 50,
+    "solution": 50,
+    "statement": 50
+  },
+  "xml_ids": 205,
+  "xrefs": 0
+}

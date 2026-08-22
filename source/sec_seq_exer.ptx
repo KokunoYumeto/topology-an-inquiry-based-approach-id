@@ -3,36 +3,36 @@
   <exercise>
     <introduction>
       <p>
-        Determine, with proof,
-        the convergence or divergence of each of the following sequences in the indicated metric spaces.
+        Tentukan dengan bukti
+        apakah setiap barisan berikut konvergen atau divergen dalam ruang metrik yang disebutkan.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              <m>a_n = 1+\frac{1}{n}</m> in <m>(\R, d_E)</m>
+              <m>a_n = 1+\frac{1}{n}</m> dalam <m>(\R, d_E)</m>
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              <m>a_n = (2,n)</m> in <m>(\R^2, d_M)</m>
+              <m>a_n = (2,n)</m> dalam <m>(\R^2, d_M)</m>
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              <m>a_n</m> is the function defined by
+              <m>a_n</m> adalah fungsi yang didefinisikan oleh
               <me>
                 a_n(x) = \frac{1}{n}x
               </me>
-              where <m>X</m> is the set of real valued functions on the interval <m>[0,1]</m> and the metric <m>d</m> is defined by
+              di mana <m>X</m> adalah himpunan fungsi bernilai real pada interval <m>[0,1]</m> dan metrik <m>d</m> didefinisikan oleh
               <me>
                 d(f,g) = \sup\{|f(x)-g(x)| \mid x \in [0,1]\}
               </me>.
-              (See <xref ref="ex_GLB_function_sup_metric"/>.)
+              (Lihat <xref ref="ex_GLB_function_sup_metric"/>.)
             </p>
           </statement>
         </task>
@@ -41,30 +41,30 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>A</m> be a subset of <m>\R</m>.
+        Misalkan <m>A</m> adalah subhimpunan dari <m>\R</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that if <m>A</m> is bounded above,
-              then there is a sequence <m>(a_n)</m> in <m>A</m> such that <m>\lim a_n = \sup(A)</m>.
+              Tunjukkan bahwa jika <m>A</m> terbatas di atas,
+              maka terdapat barisan <m>(a_n)</m> di <m>A</m> sedemikian sehingga <m>\lim a_n = \sup(A)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Show that if <m>A</m> is bounded below,
-              then there is a sequence <m>(a_n)</m> in <m>A</m> such that <m>\lim a_n = \inf(A)</m>.
+              Tunjukkan bahwa jika <m>A</m> terbatas di bawah,
+              maka terdapat barisan <m>(a_n)</m> di <m>A</m> sedemikian sehingga <m>\lim a_n = \inf(A)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Are the limits from (a) or (b) necessarily in <m>A</m>?
-              Explain.
+              Apakah limit pada (a) atau (b) harus berada di <m>A</m>?
+              Jelaskan.
             </p>
           </statement>
         </task>
@@ -73,38 +73,38 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>(X,d)</m> be a metric space,
-        let <m>x \in X</m>, and let <m>A</m> be a nonempty subset of <m>X</m>.
-        Recall that the distance from <m>x</m> to <m>A</m> is
+        Misalkan <m>(X,d)</m> adalah ruang metrik,
+        <m>x \in X</m>, dan <m>A</m> adalah subhimpunan tak kosong dari <m>X</m>.
+        Ingat bahwa jarak dari <m>x</m> ke <m>A</m> adalah
         <me>
-          d(x,A) = \inf \{d(x,a) \mid a \in A
+          d(x,A) = \inf \{d(x,a) \mid a \in A\}
         </me>.
-        In this exercise we see how we can view the distance between a point and a set in terms of sequences.
-        Let <m>m = d(x,A)</m>.
-        We will show that there must be a sequence <m>(a_n)</m> in <m>A</m> so that <m>d(x,A) = \lim d(x,a_n)</m>.
+        Dalam latihan ini, kita akan melihat cara memandang jarak antara suatu titik dan suatu himpunan melalui barisan.
+        Misalkan <m>m = d(x,A)</m>.
+        Kita akan menunjukkan bahwa harus ada barisan <m>(a_n)</m> di <m>A</m> sedemikian sehingga <m>d(x,A) = \lim d(x,a_n)</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              For each <m>n \in \Z^+</m>, let <m>B_n = B\left(x;m+\frac{1}{n}\right)</m>.
-              Why must <m>B_n \cap A \neq \emptyset</m> for each <m>n \in \Z^+</m>?
+              Untuk setiap <m>n \in \Z^+</m>, misalkan <m>B_n = B\left(x;m+\frac{1}{n}\right)</m>.
+              Mengapa harus berlaku <m>B_n \cap A \neq \emptyset</m> untuk setiap <m>n \in \Z^+</m>?
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>a_n \in B_n \cap A</m> for each <m>n</m>.
-              What property does this sequence have?
-              Explain how we have just proved the following theorem.
+              Pilih <m>a_n \in B_n \cap A</m> untuk setiap <m>n</m>.
+              Sifat apakah yang dimiliki barisan ini?
+              Jelaskan mengapa langkah-langkah di atas membuktikan teorema berikut.
             </p>
               <theorem>
                 <statement>
                   <p>
-                    Let <m>(X,d)</m> be a metric space,
-                    let <m>x \in X</m>, and let <m>A</m> be a nonempty subset of <m>X</m>.
-                    Then there exists a sequence <m>(a_n)</m> in <m>A</m> such that
+                    Misalkan <m>(X,d)</m> adalah ruang metrik,
+                    <m>x \in X</m>, dan <m>A</m> adalah subhimpunan tak kosong dari <m>X</m>.
+                    Maka terdapat barisan <m>(a_n)</m> di <m>A</m> sedemikian sehingga
                     <me>
                       \lim d(x,a_n) = d(x,A)
                     </me>.
@@ -121,28 +121,31 @@
  
           <statement>
             <p>
-              Let <m>(Y,d')</m> be a subspace of <m>(X,d)</m>.
-              Let <m>a_1</m>, <m>a_2</m>,
-              <m>\ldots</m> be a sequence of points in <m>Y</m> and let <m>a \in Y</m>.
-              Prove that if <m>\lim_n a_n = a</m> in <m>(Y,d')</m>,
-              then <m>\lim_n a_n = a</m> in <m>(X,d)</m>.
+              Misalkan <m>(Y,d')</m> adalah subruang dari <m>(X,d)</m>.
+              Misalkan <m>a_1</m>, <m>a_2</m>,
+              <m>\ldots</m> adalah barisan titik di <m>Y</m> dan misalkan <m>a \in Y</m>.
+              Buktikan bahwa jika <m>\lim_n a_n = a</m> dalam <m>(Y,d')</m>,
+              maka <m>\lim_n a_n = a</m> dalam <m>(X,d)</m>.
             </p>
           </statement>
     </task>
     <task>
           <statement>
             <p>
-              Show that the converse of part (a) is false by considering the subspace <m>(\Q, d_{\Q})</m>
-              (the rational numbers)
-              of <m>(R,d)</m>.
-              Let <m>a_1</m>, <m>a_2</m>,
-              <m>\ldots</m> be a sequence of rational numbers such that <m>\lim_n a_n = \sqrt{2}</m>.
-              Prove that , given <m>\epsilon \gt 0</m>,
-              there is a positive integer <m>N</m> such that for <m>n,
+              Pernyataan sebaliknya secara harfiah dari bagian (a), dengan semua hipotesisnya dipertahankan, sebenarnya benar; jelaskan alasannya.
+              Contoh berikut menunjukkan fenomena yang berbeda: suatu barisan titik di subruang dapat konvergen di ruang ambien menuju titik di luar subruang sehingga tidak konvergen di subruang.
+              Tinjaulah subruang <m>(\Q, d_{\Q})</m>
+              (bilangan rasional)
+              dari <m>(\R,d)</m>.
+              Misalkan <m>a_1</m>, <m>a_2</m>,
+              <m>\ldots</m> adalah barisan bilangan rasional sedemikian sehingga <m>\lim_n a_n = \sqrt{2}</m>
+              dalam ruang ambien; limit ambien ini tidak terletak di subruang bilangan rasional.
+              Buktikan bahwa, untuk setiap <m>\epsilon \gt 0</m>,
+              terdapat bilangan bulat positif <m>N</m> sedemikian sehingga untuk <m>n,
               m \gt N</m>,
               <m>|a_n - a_m | \lt \epsilon</m>.
-              Does the sequence <m>a_1</m>, <m>a_2</m>,
-              <m>\ldots</m> converge when considered to be a sequence of points in <m>\Q</m>?
+              Apakah barisan <m>a_1</m>, <m>a_2</m>,
+              <m>\ldots</m> konvergen jika dipandang sebagai barisan titik di <m>\Q</m>?
             </p>
           </statement>
         </task>
@@ -151,45 +154,45 @@
   <exercise xml:id="ex_limit_properties">
     <introduction>
       <p>
-        In this exercise we prove some standard results about limits of sequences from calculus.
-        Let <m>(a_n)</m> and <m>(b_n)</m> be convergent sequences in a metric space <m>(\R,d_E)</m>.
+        Dalam latihan ini, kita membuktikan beberapa hasil standar dari kalkulus mengenai limit barisan.
+        Misalkan <m>(a_n)</m> dan <m>(b_n)</m> adalah barisan konvergen dalam ruang metrik <m>(\R,d_E)</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>\lim ka_n = k \lim a_n</m> for any real number <m>k</m>.
+              Tunjukkan bahwa <m>\lim ka_n = k \lim a_n</m> untuk setiap bilangan real <m>k</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Show that <m>\lim (a_n + b_n) = \lim a_n + \lim b_n</m>.
+              Tunjukkan bahwa <m>\lim (a_n + b_n) = \lim a_n + \lim b_n</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Show that the sequence <m>(a_n)</m> is bounded.
-              That is, show that there is a positive real number <m>M</m> such that
-              <m>|a_n| \leq M</m> for all <m>n \in \Z^+</m>.
+              Tunjukkan bahwa barisan <m>(a_n)</m> terbatas.
+              Artinya, tunjukkan bahwa terdapat bilangan real positif <m>M</m> sedemikian sehingga
+              <m>|a_n| \leq M</m> untuk semua <m>n \in \Z^+</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Show that <m>\lim a_nb_n = \lim a_n \ \lim b_n</m>.
+              Tunjukkan bahwa <m>\lim a_nb_n = \lim a_n \ \lim b_n</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>b_n \neq 0</m> for every <m>n</m> and <m>\lim b_n \neq 0</m>,
-              show that <m>\lim \frac{a_n}{b_n} = \frac{\lim a_n}{\lim b_n}</m>.
+              Jika <m>b_n \neq 0</m> untuk setiap <m>n</m> dan <m>\lim b_n \neq 0</m>,
+              tunjukkan bahwa <m>\lim \frac{a_n}{b_n} = \frac{\lim a_n}{\lim b_n}</m>.
             </p>
           </statement>
         </task>
@@ -198,29 +201,29 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>f</m> and <m>g</m> be continuous functions from <m>\R</m> to <m>\R</m>,
-        both with the standard Euclidean metric.
-        Define the function <m>fg</m> from <m>\R</m> to <m>\R</m> by
+        Misalkan <m>f</m> dan <m>g</m> adalah fungsi kontinu dari <m>\R</m> ke <m>\R</m>,
+        dengan metrik Euklides standar pada keduanya.
+        Definisikan fungsi <m>fg</m> dari <m>\R</m> ke <m>\R</m> dengan
         <me>
-          (fg)(x) = f(x)g(x) \text{ for every }  x \in \R
+          (fg)(x) = f(x)g(x) \text{ untuk setiap }  x \in \R
         </me>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Prove that <m>fg</m> is a continuous function.
+              Buktikan bahwa <m>fg</m> adalah fungsi kontinu.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Assume that <m>g(x) \neq 0</m> for every <m>x \in \R</m>.
-              Define the function <m>\frac{f}{g}</m> from <m>\R</m> to <m>\R</m> by
-              <m>\frac{f}{g}(x) = \frac{f(x)}{g(x)}</m> for every <m>x \in \R</m>.
-              Use the definition of continuity to prove that
-              <m>\frac{f}{g}</m> is a continuous function.
+              Andaikan <m>g(x) \neq 0</m> untuk setiap <m>x \in \R</m>.
+              Definisikan fungsi <m>\frac{f}{g}</m> dari <m>\R</m> ke <m>\R</m> dengan
+              <m>\frac{f}{g}(x) = \frac{f(x)}{g(x)}</m> untuk setiap <m>x \in \R</m>.
+              Gunakan definisi kekontinuan untuk membuktikan bahwa
+              <m>\frac{f}{g}</m> adalah fungsi kontinu.
             </p>
           </statement>
         </task>
@@ -229,8 +232,8 @@
   <exercise>
     <statement>
       <p>
-        Let <m>(c_n) = (a_n,b_n)</m> be a sequence in <m>(\R^2, d_E)</m>.
-        Show that the sequence <m>(c_n)</m> converges to a point <m>(a,b)</m> if and only if <m>(a_n)</m> converges to <m>a</m> and <m>(b_n)</m> converges to <m>b</m> in <m>(\R, d_E)</m>.
+        Misalkan <m>(c_n) = (a_n,b_n)</m> menyatakan barisan dalam <m>(\R^2, d_E)</m>; setiap sukunya adalah pasangan dari suku-suku berindeks sama dalam kedua barisan koordinat.
+        Tunjukkan bahwa barisan <m>(c_n)</m> konvergen ke titik <m>(a,b)</m> jika dan hanya jika <m>(a_n)</m> konvergen ke <m>a</m> dan <m>(b_n)</m> konvergen ke <m>b</m> dalam <m>(\R, d_E)</m>.
       </p>
     </statement>
   </exercise>
@@ -238,28 +241,28 @@
   <exercise>
     <introduction>
       <p>
-        Define <m>f : (\R,d_E) \to (\R,d_E)</m> by
+        Definisikan <m>f : (\R,d_E) \to (\R,d_E)</m> dengan
         <me>
-          f(x) = \begin{cases}0 \amp \text{ if }  x \text{ is irrational }  \\ x \amp \text{ if }  x \text{ is rational. } \end{cases}
+          f(x) = \begin{cases}0 \amp \text{ jika }  x \text{ irasional }  \\ x \amp \text{ jika }  x \text{ rasional. } \end{cases}
         </me>
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>f</m> is continuous at exactly one point.
-              Assume that both copies of <m>\R</m> are given the Euclidean topology.
+              Untuk fungsi <m>f</m> di atas, andaikan kedua salinan <m>\R</m> dilengkapi dengan topologi Euklides.
+              Tunjukkan bahwa fungsi tersebut kontinu tepat di satu titik.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Modify the function <m>f</m> to construct a new function
-              <m>g: \R \to \R</m> such that <m>g</m> is continuous at exactly the numbers <m>0</m> and <m>1</m>.
-              Prove your result.
-              Can you see how to extend this to construct a function
-              <m>h: \R \to \R</m> that is continuous at any given finite number of points?
+              Modifikasilah fungsi <m>f</m> untuk membentuk fungsi baru
+              <m>g: \R \to \R</m> sedemikian sehingga <m>g</m> kontinu tepat di bilangan <m>0</m> dan <m>1</m>.
+              Buktikan hasil Anda.
+              Dapatkah Anda melihat cara memperluas konstruksi ini untuk membentuk fungsi
+              <m>h: \R \to \R</m> yang kontinu tepat pada sebarang himpunan berhingga dari titik-titik yang telah ditentukan?
             </p>
           </statement>
         </task>
@@ -268,51 +271,51 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>X</m> be the set of real valued functions on the interval <m>[0,1]</m> and let <m>d</m> be the metric on <m>X</m> defined by
+        Misalkan <m>X</m> adalah himpunan fungsi bernilai real pada interval <m>[0,1]</m> dan misalkan <m>d</m> adalah metrik pada <m>X</m> yang didefinisikan oleh
         <me>
           d(f,g) = \sup\{|f(x)-g(x)| \mid x \in [0,1]\}
         </me>.
-        (See <xref ref="ex_GLB_function_sup_metric"/>.)  There is a difference between the point-wise convergence of a sequence of functions and convergence in the metric space <m>(X,d)</m> that we explore in this exercise.
-        For each <m>n \in \Z^+</m>,
-        define <m>f_n :[0,1] \to \R</m> by <m>f_n(x) = x^n</m>.
+        (Lihat <xref ref="ex_GLB_function_sup_metric"/>.)  Dalam latihan ini, kita menyelidiki perbedaan antara konvergensi titik demi titik suatu barisan fungsi dan konvergensi dalam ruang metrik <m>(X,d)</m>.
+        Untuk setiap <m>n \in \Z^+</m>,
+        definisikan <m>f_n :[0,1] \to \R</m> dengan <m>f_n(x) = x^n</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Let <m>0 \leq a \lt 1</m>.
-              Show that the sequence <m>(a_n)</m> where
-              <m>a_n = a^n</m> converges to <m>0</m> in <m>(\R, d_E)</m>.
+              Misalkan <m>0 \leq a \lt 1</m>.
+              Tunjukkan bahwa barisan <m>(a_n)</m> dengan
+              <m>a_n = a^n</m> konvergen ke <m>0</m> dalam <m>(\R, d_E)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Since the sequence <m>(1)</m> converges to <m>1</m>,
-              if we look at the behavior at each point,
-              we might think that the sequence <m>(f_n)</m> converges to the function <m>f</m> defined by
+              Karena barisan <m>(1)</m> konvergen ke <m>1</m>,
+              jika kita memperhatikan perilakunya di setiap titik,
+              kita mungkin menduga bahwa barisan <m>(f_n)</m> konvergen ke fungsi <m>f</m> yang didefinisikan oleh
               <men xml:id="eq_0_1_function">
-                f(x) = \begin{cases} 0 \amp \text{ if }  x \neq 1 \\ 1 \amp \text{ if }  x=1. \end{cases}
+                f(x) = \begin{cases} 0 \amp \text{ jika }  x \neq 1 \\ 1 \amp \text{ jika }  x=1. \end{cases}
               </men>
-              Determine if the sequence <m>(f_n)</m> converges to <m>(f)</m> in the metric space <m>(X,d)</m>.
+              Tentukan apakah barisan <m>(f_n)</m> konvergen ke <m>f</m> dalam ruang metrik <m>(X,d)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Suppose now we consider the sequence <m>(f_n)</m> as a sequence of functions in <m>C[0,1]</m>,
-              the space of continuous functions from <m>\R</m> to <m>\R</m>,
-              using the metric
+              Sekarang, andaikan kita memandang barisan <m>(f_n)</m> sebagai barisan fungsi dalam <m>C[0,1]</m>,
+              yaitu ruang fungsi kontinu dari <m>[0,1]</m> ke <m>\R</m>,
+              dengan metrik
               <me>
                 d(f,g) = \int_0^1 |f(x) - g(x)| \,dx
               </me>.
-              (Refer to <xref ref="act_MS_metrics"/>.) The function in <xref ref="eq_0_1_function"/> is not a continuous function,
-              so can't be a limit of the sequence <m>(f_n)</m> in <m>C[01]</m>.
-              Determine if the sequence <m>(f_n)</m> has a limit in <m>C[0,1]</m>.
-              If so, what is the limit?
-              If not, verify that the sequence has no limit.
+              (Lihat <xref ref="act_MS_metrics"/>.) Fungsi pada <xref ref="eq_0_1_function"/> bukan fungsi kontinu,
+              sehingga tidak dapat menjadi limit barisan <m>(f_n)</m> dalam <m>C[0,1]</m>.
+              Tentukan apakah barisan <m>(f_n)</m> memiliki limit dalam <m>C[0,1]</m>.
+              Jika ya, apakah limitnya?
+              Jika tidak, buktikan bahwa barisan tersebut tidak memiliki limit.
             </p>
           </statement>
         </task>
@@ -321,57 +324,57 @@
   <exercise>
     <introduction>
       <p>
-        For each of the following, answer true if the statement is always true.
-        If the statement is only sometimes true or never true,
-        answer false and provide a concrete example to illustrate that the statement is false.
-        If a statement is true, explain why.
+        Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar.
+        Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar,
+        jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              If <m>(a_n)</m> is a sequence in
-              <m>(\R, d_E)</m> with <m>a_{n+1} \lt a_n</m> for each
-              <m>n \in \Z^+</m> and the set <m>\{a_n\}</m> is bounded below,
-              then <m>\inf \{a_n \mid n \in \Z^+\}</m> is the limit of the sequence <m>(a_n)</m>.
+              Jika <m>(a_n)</m> adalah barisan dalam
+              <m>(\R, d_E)</m> dengan <m>a_{n+1} \lt a_n</m> untuk setiap
+              <m>n \in \Z^+</m> dan himpunan <m>\{a_n\}</m> terbatas di bawah,
+              maka <m>\inf \{a_n \mid n \in \Z^+\}</m> adalah limit barisan <m>(a_n)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>X</m> be a metric space and <m>A</m> a nonempty subset of <m>X</m>.
-              If <m>a \in X</m> and if <m>B(a,r)</m> in <m>X</m> contains a point of <m>A</m> for every <m>r \gt 0</m>,
-              then there is a sequence in <m>A</m> that converges to <m>a</m>.
+              Misalkan <m>X</m> adalah ruang metrik dan <m>A</m> subhimpunan tak kosong dari <m>X</m>.
+              Jika <m>a \in X</m> dan <m>B(a,r)</m> dalam <m>X</m> memuat suatu titik dari <m>A</m> untuk setiap <m>r \gt 0</m>,
+              maka terdapat barisan di <m>A</m> yang konvergen ke <m>a</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>R</m> be a nonempty subset of <m>\R</m> that is bounded above and below.
-              If <m>S</m> is a nonempty subset of <m>\R</m> and
-              <m>x \leq y</m> for all <m>x \in S</m> and for all <m>y \in R</m>,
-              then <m>\sup(S) \leq \inf(R)</m>.
+              Misalkan <m>R</m> adalah subhimpunan tak kosong dari <m>\R</m> yang terbatas di atas dan di bawah.
+              Jika <m>S</m> adalah subhimpunan tak kosong dari <m>\R</m> dan
+              <m>x \leq y</m> untuk semua <m>x \in S</m> dan semua <m>y \in R</m>,
+              maka <m>\sup(S) \leq \inf(R)</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              The sequence <m>\left(\frac{1}{n}\right)</m> converges to <m>0</m> in the metric space <m>Q</m> of all rational numbers in reduced form with metric <m>d</m> defined by
+              Barisan <m>\left(\frac{1}{n}\right)</m> konvergen ke <m>0</m> dalam ruang metrik <m>Q</m> yang terdiri dari semua bilangan rasional dalam bentuk paling sederhana, dengan metrik <m>d</m> yang didefinisikan oleh
               <me>
                 d\left(\frac{a}{b}, \frac{r}{s}\right) = \max\{| a-r |, | b-s |\}
               </me>.
-              (See <xref ref="ex_MS_Q_metric"/>.)
+              (Lihat <xref ref="ex_MS_Q_metric"/>.)
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              The only convergent sequences in a metric space <m>(X,d)</m> with discrete metric <m>d</m> are the sequences that are eventually constant. (A sequence <m>(a_n)</m> in a metric space <m>X</m> is eventually constant if there is an element <m>a \in X</m> and an
-              <m>N \in \Z^+</m> such that <m>a_n = a</m> for all <m>n \geq N</m>.)
+              Satu-satunya barisan konvergen dalam ruang metrik <m>(X,d)</m> dengan metrik diskret <m>d</m> adalah barisan yang pada akhirnya konstan. (Barisan <m>(a_n)</m> dalam ruang metrik <m>X</m> disebut pada akhirnya konstan jika terdapat elemen <m>a \in X</m> dan
+              <m>N \in \Z^+</m> sedemikian sehingga <m>a_n = a</m> untuk semua <m>n \geq N</m>.)
             </p>
           </statement>
         </task>

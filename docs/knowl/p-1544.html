@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Bilangan <span class="process-math">\(b-a\)</span> adalah batas bawah bagi <span class="process-math">\(S\text{,}\)</span> jadi <span class="process-math">\(b-a\leq\inf(S)\)</span> dan <span class="process-math">\(b\leq a+\inf(S)\text{.}\)</span> Karena <span class="process-math">\(a+\inf(S)\)</span> sendiri merupakan batas bawah bagi <span class="process-math">\(a+S\text{,}\)</span> bilangan itu adalah infimumnya.</div>
-<span class="incontext"><a href="o003-c90-ch05-exercise-guides-a.html#p-1544" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Untuk awalan sepanjang <span class="process-math">\(i\)</span> dan <span class="process-math">\(j\text{,}\)</span> definisikan <span class="process-math">\(D(i,j)\)</span> sebagai jarak keduanya. Nilai batasnya <span class="process-math">\(D(i,0)=i\)</span> dan <span class="process-math">\(D(0,j)=j\text{.}\)</span> Jika huruf terakhir sama, letakkan <span class="process-math">\(\epsilon_{ij}=0\text{;}\)</span> jika berbeda, letakkan <span class="process-math">\(\epsilon_{ij}=1\text{.}\)</span> Meninjau operasi terakhir memberi rekurensi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D(i,j)=\min\{D(i-1,j)+1,\ D(i,j-1)+1,\ D(i-1,j-1)+\epsilon_{ij}\}.
+\end{equation*}
+</div>
+<div class="para">Argumen berdasarkan operasi terakhir menunjukkan bahwa setiap urutan edit masuk ke salah satu dari tiga kasus ini; karena itu, tabel tersebut memberi batas bawah sekaligus batas atas.</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch04-source-task-guides.html#p-1544" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1,62 +1,62 @@
 <section xml:id="sec_seq_cont_metric">
-  <title>Sequences and Continuity in Metric Spaces</title>
+  <title>Barisan dan Kekontinuan dalam Ruang Metrik</title>
   <p>
-    We have seen that there are different ways to characterize. For example, there is
-the <m>\epsilon - \delta</m> definition and a characterization in terms of neighborhoods. In this
-section we investigate sequences and limits of sequences in metric spaces, and then
-provide a characterization of continuous functions in terms of sequences.
+    Kita telah melihat bahwa kekontinuan dapat dicirikan dengan berbagai cara. Sebagai contoh, terdapat
+definisi <m>\epsilon - \delta</m> dan pencirian dalam hal lingkungan. Pada bagian ini,
+kita menyelidiki barisan dan limit barisan dalam ruang metrik, lalu
+memberikan pencirian fungsi kontinu dalam hal barisan.
   </p>
 
   <activity>
     <introduction>
     <p>
-      A reasonable question to ask is if a limit of a sequence is unique.
-      We will answer that question in this activity.
-      Let <m>(X,d)</m> be a metric space and <m>(a_n)</m> a sequence in <m>X</m>.
-      Assume the sequence <m>(a_n)</m> has a limit in <m>X</m>.
-      To show that a limit of the sequence <m>(a_n)</m> is unique,
-      we need to show that if <m>\lim a_n = a</m> and <m>\lim a_n = a'</m> for some <m>a,
-      a' \in X</m>, then <m>a=a'</m>.
+      Pertanyaan yang wajar diajukan adalah apakah limit suatu barisan bersifat tunggal.
+      Kita akan menjawab pertanyaan itu dalam kegiatan ini.
+      Misalkan <m>(X,d)</m> ruang metrik dan <m>(a_n)</m> barisan di <m>X</m>.
+      Andaikan barisan <m>(a_n)</m> memiliki limit di <m>X</m>.
+      Untuk menunjukkan bahwa limit barisan <m>(a_n)</m> bersifat tunggal,
+      kita perlu menunjukkan bahwa jika <m>\lim a_n = a</m> dan <m>\lim a_n = a'</m> untuk suatu <m>a,
+      a' \in X</m>, maka <m>a=a'</m>.
     </p>
     <p>
-      Suppose <m>\lim a_n = a</m> and
-      <m>\lim a_n = a'</m> for some <m>a, a' \in X</m>.
-      Without much to go on it might appear that proving <m>a=a'</m> is a difficult task.
-      However, if <m>d(a,a') \lt \epsilon</m> for any <m>\epsilon \gt 0</m>,
-      then it will have to be the case that <m>a=a'</m>.
-      So let <m>\epsilon \gt 0</m>.
+      Andaikan <m>\lim a_n = a</m> dan
+      <m>\lim a_n = a'</m> untuk suatu <m>a, a' \in X</m>.
+      Tanpa banyak petunjuk, membuktikan <m>a=a'</m> mungkin tampak sulit.
+      Akan tetapi, jika <m>d(a,a') \lt \epsilon</m> untuk setiap <m>\epsilon \gt 0</m>,
+      maka haruslah <m>a=a'</m>.
+      Jadi, ambil <m>\epsilon \gt 0</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Why must there exist a positive integer <m>N</m> so that
-            <m>d(a_n, a) \lt \frac{\epsilon}{2}</m> for all <m>n \geq N</m>?
+            Mengapa harus ada bilangan bulat positif <m>N</m> sedemikian sehingga
+            <m>d(a_n, a) \lt \frac{\epsilon}{2}</m> untuk setiap <m>n \geq N</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Why must there exist a positive integer <m>N'</m> so that
-            <m>d(a_n, a') \lt \frac{\epsilon}{2}</m> for all <m>n \geq N'</m>?
+            Mengapa harus ada bilangan bulat positif <m>N'</m> sedemikian sehingga
+            <m>d(a_n, a') \lt \frac{\epsilon}{2}</m> untuk setiap <m>n \geq N'</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Now let <m>m = \max\{N, N'\}</m>.
-            What can we say about <m>d(a_m,a)</m> and <m>d(a_m,a')</m>?
-            Why?
+            Sekarang, tetapkan <m>m = \max\{N, N'\}</m>.
+            Apa yang dapat kita katakan tentang <m>d(a_m,a)</m> dan <m>d(a_m,a')</m>?
+            Mengapa?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Use the triangle inequality to conclude that <m>d(a,a') \lt \epsilon</m>.
-            What else can we conclude?
+            Gunakan ketaksamaan segitiga untuk menyimpulkan bahwa <m>d(a,a') \lt \epsilon</m>.
+            Apa lagi yang dapat kita simpulkan?
           </p>
         </statement>
       </task>
@@ -64,53 +64,51 @@ provide a characterization of continuous functions in terms of sequences.
   </activity>
 
   <p>
-    Now we will examine how continuity can be described in terms of sequences.
-    The basic idea is this.
-    Suppose that <m>f : \R \to \R</m> is continuous at a point <m>a</m>.
-    This means that <m>f</m> has a limit
-    (as a continuous function)
-    at <m>a</m>.
-    So if we were to take any sequence <m>(a_n)</m> that converges to <m>a</m>,
-    then the continuity of <m>f</m> implies that <m>f(a) = f(\lim a_n) = \lim f(a_n)</m>.
-    That this is both a necessary condition and a sufficient condition for continuity is given in the next theorem.
+    Sekarang kita akan menelaah bagaimana kekontinuan dapat dideskripsikan dalam hal barisan.
+    Gagasan dasarnya adalah sebagai berikut.
+    Andaikan <m>f : \R \to \R</m> kontinu di titik <m>a</m>.
+    Artinya, fungsi <m>f</m> memiliki limit di <m>a</m>.
+    Jadi, jika kita mengambil sebarang barisan <m>(a_n)</m> yang konvergen ke <m>a</m>,
+    kekontinuan <m>f</m> mengakibatkan <m>f(a) = f(\lim a_n) = \lim f(a_n)</m>.
+    Teorema berikut menyatakan bahwa hal ini merupakan syarat perlu sekaligus syarat cukup bagi kekontinuan.
   </p>
 
   <theorem xml:id="thm_seq_continuity">
     <statement>
       <p>
-        Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
-        and let <m>a \in X</m>.
-        A function <m>f:X \to Y</m> is continuous at <m>a</m> if and only if
-        <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>.
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang metrik,
+        dan misalkan <m>a \in X</m>.
+        Fungsi <m>f:X \to Y</m> kontinu di <m>a</m> jika dan hanya jika
+        <m>\lim f(a_n) = f(a)</m> untuk setiap barisan <m>(a_n)</m> di <m>X</m> yang konvergen ke <m>a</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
-      let <m>a \in X</m>, and let <m>f: X \to Y</m> be a function.
-      Assume that <m>f</m> is continuous at <m>a</m>.
-      We will show that <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>.
-      Let <m>(a_n)</m> be a sequence in <m>X</m> that converges to <m>a</m> (we know such a sequence exists,
-      namely the sequence <m>(a)</m>).
-      To verify that <m>\lim f(a_n) = a</m>, let <m>\epsilon \gt 0</m>.
-      The fact that <m>f</m> is continuous at <m>a</m> means that there is a <m>\delta \gt 0</m> so that
+      Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang metrik,
+      misalkan <m>a \in X</m>, dan misalkan <m>f: X \to Y</m> suatu fungsi.
+      Andaikan <m>f</m> kontinu di <m>a</m>.
+      Kita akan menunjukkan bahwa <m>\lim f(a_n) = f(a)</m> untuk setiap barisan <m>(a_n)</m> di <m>X</m> yang konvergen ke <m>a</m>.
+      Misalkan <m>(a_n)</m> barisan di <m>X</m> yang konvergen ke <m>a</m> (kita tahu bahwa barisan demikian ada,
+      yakni barisan konstan <m>(a)</m>).
+      Untuk memverifikasi bahwa <m>\lim f(a_n) = f(a)</m>, ambil <m>\epsilon \gt 0</m>.
+      Karena <m>f</m> kontinu di <m>a</m>, terdapat <m>\delta \gt 0</m> sedemikian sehingga
       <m>d_Y(f(x),
-      f(a)) \lt  \epsilon</m> whenever <m>d_X(x,a) \lt  \delta</m>.
-      Since <m>(a_n)</m> converges to <m>a</m>,
-      we know that there exists a positive integer <m>N</m> such that
-      <m>d_X(a_n, a) \lt  \delta</m> whenever <m>n \geq N</m>.
-      This implies that
+      f(a)) \lt  \epsilon</m> apabila <m>d_X(x,a) \lt  \delta</m>.
+      Karena <m>(a_n)</m> konvergen ke <m>a</m>,
+      kita tahu bahwa terdapat bilangan bulat positif <m>N</m> sedemikian sehingga
+      <m>d_X(a_n, a) \lt  \delta</m> apabila <m>n \geq N</m>.
+      Hal ini mengakibatkan
       <me>
-        d_Y(f(a_n), f(a)) \lt  \epsilon \ \text{ whenever }  \ n \geq N
+        d_Y(f(a_n), f(a)) \lt  \epsilon \ \text{ apabila }  \ n \geq N
       </me>.
     </p>
     <p>
-      We conclude that if <m>f</m> is continuous at <m>a</m>,
-      then <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>.
+      Kita menyimpulkan bahwa jika <m>f</m> kontinu di <m>a</m>,
+      maka <m>\lim f(a_n) = f(a)</m> untuk setiap barisan <m>(a_n)</m> di <m>X</m> yang konvergen ke <m>a</m>.
     </p>
     <p>
-      The proof of the reverse implication is contained in the next activity.
+      Bukti implikasi sebaliknya terdapat dalam kegiatan berikut.
     </p>
   </proof>
   </theorem>
@@ -118,45 +116,44 @@ provide a characterization of continuous functions in terms of sequences.
   <activity>
     <introduction>
     <p>
-      Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces,
-      let <m>a \in X</m>, and let <m>f: X \to Y</m> be a function.
-      We prove the remaining implication of <xref ref="thm_seq_continuity"/>,
-      that <m>f</m> is continuous at <m>a</m> if
-      <m>\lim f(a_n) = f(a)</m> for any sequence <m>(a_n)</m> in <m>X</m> that converges to <m>a</m>,
-      in this activity.
+      Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang metrik,
+      misalkan <m>a \in X</m>, dan misalkan <m>f: X \to Y</m> suatu fungsi.
+      Dalam kegiatan ini, kita membuktikan implikasi yang tersisa dari <xref ref="thm_seq_continuity"/>,
+      yaitu bahwa <m>f</m> kontinu di <m>a</m> jika
+      <m>\lim f(a_n) = f(a)</m> untuk setiap barisan <m>(a_n)</m> di <m>X</m> yang konvergen ke <m>a</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            To have an additional assumption with which to work,
-            let us proceed by contradiction and assume that <m>f</m> is not continuous at <m>a</m>.
-            Why can we then say that there is an <m>\epsilon \gt 0</m> so that there is no
-            <m>\delta \gt 0</m> with the property that
-            <m>d_X(x,a) \lt \delta</m> implies <m>d_Y(f(x), f(a)) \lt \epsilon</m>?
+            Untuk memperoleh asumsi tambahan yang dapat kita gunakan,
+            mari kita memakai pembuktian dengan kontradiksi dan mengandaikan bahwa <m>f</m> tidak kontinu di <m>a</m>.
+            Mengapa kita kemudian dapat mengatakan bahwa terdapat <m>\epsilon \gt 0</m> sedemikian sehingga tidak ada
+            <m>\delta \gt 0</m> dengan sifat bahwa
+            <m>d_X(x,a) \lt \delta</m> mengakibatkan <m>d_Y(f(x), f(a)) \lt \epsilon</m>?
           </p>
         </statement>
       </task>
       <task>
         <introduction>
           <p>
-            To create a contradiction,
-            we will construct a sequence <m>(a_n)</m> that converges to <m>a</m> while
-            <m>(f(a_n))</m> does not converge to <m>f(a)</m>.
+            Untuk memperoleh kontradiksi,
+            kita akan membangun barisan <m>(a_n)</m> yang konvergen ke <m>a</m>, sedangkan
+            <m>(f(a_n))</m> tidak konvergen ke <m>f(a)</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Explain why we can find a positive integer <m>K</m> such that <m>\frac{1}{K} \lt \epsilon</m>.
+                  Jelaskan mengapa kita dapat menemukan bilangan bulat positif <m>K</m> sedemikian sehingga <m>\frac{1}{K} \lt \epsilon</m>.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  If <m>k \gt K</m>, explain why there is an element
-                  <m>a_k \in B\left(a, \frac{1}{k}\right)</m> so that <m>d_Y(f(a_k),
+                  Jika <m>k \gt K</m>, jelaskan mengapa terdapat unsur
+                  <m>a_k \in B\left(a, \frac{1}{k}\right)</m> sedemikian sehingga <m>d_Y(f(a_k),
                   f(a)) \geq \epsilon</m>.
                 </p>
               </statement>
@@ -164,17 +161,17 @@ provide a characterization of continuous functions in terms of sequences.
             <task>
               <statement>
                 <p>
-                  For <m>k \leq K</m>,
-                  let <m>a_k</m> be any element in <m>B\left(a, \frac{1}{k}\right)</m>.
-                  Explain why <m>a</m> is a limit of <m>(a_n)</m>.
+                  Untuk <m>k \leq K</m>,
+                  misalkan <m>a_k</m> sebarang unsur dalam <m>B\left(a, \frac{1}{k}\right)</m>.
+                  Jelaskan mengapa <m>a</m> merupakan limit barisan <m>(a_n)</m>.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Explain why <m>f(a)</m> is not a limit of the sequence <m>(f(a_n))</m>.
-                  What conclusion can we draw, and why?
+                  Jelaskan mengapa <m>f(a)</m> bukan limit barisan <m>(f(a_n))</m>.
+                  Kesimpulan apa yang dapat kita tarik, dan mengapa?
                 </p>
               </statement>
             </task>
@@ -184,52 +181,52 @@ provide a characterization of continuous functions in terms of sequences.
   </activity>
 
   <p>
-    One way that <xref ref="thm_seq_continuity"/>
-    is often used is illustrated in the next activity.
+    Salah satu penerapan umum <xref ref="thm_seq_continuity"/>
+    diperlihatkan dalam kegiatan berikut.
   </p>
 
   <activity xml:id="act_sequence_continuity">
     <introduction>
     <p>
-      Let <m>f</m> be the function from <m>\R</m> to <m>\R</m>,
-      both with the Euclidean metric, defined by
+      Misalkan <m>f</m> fungsi dari <m>\R</m> ke <m>\R</m>,
+      dengan domain dan kodomain dilengkapi metrik Euklides, yang didefinisikan oleh
       <me>
-        f(x) = \begin{cases}\sin\left(\frac{1}{x}\right) \amp \text{ if }  x \neq 0 \\ 0 \amp \text{ if }  x = 0. \end{cases}
+        f(x) = \begin{cases}\sin\left(\frac{1}{x}\right) \amp \text{ jika }  x \neq 0 \\ 0 \amp \text{ jika }  x = 0. \end{cases}
       </me>
     </p>
     <p>
-      We consider the <m>f</m> continuity of <m>f</m> at <m>0</m> in this activity.
+      Untuk fungsi <m>f</m> ini, dalam kegiatan ini kita menelaah kekontinuan <m>f</m> di <m>0</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Draw a graph of <m>f</m> on some small interval centered at <m>0</m>.
-            Based on the graph, do you think <m>f</m> has a limit at <m>0</m>?
-            Explain.
-            (There is no right answer here,
-            just your intuition based on the graph.)
+            Gambarlah grafik <m>f</m> pada suatu interval kecil yang berpusat di <m>0</m>.
+            Berdasarkan grafik tersebut, apakah menurut Anda <m>f</m> memiliki limit di <m>0</m>?
+            Jelaskan.
+            (Di sini tidak ada jawaban yang benar atau salah;
+            yang diminta hanyalah intuisi Anda berdasarkan grafik tersebut.)
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            At which inputs is <m>f(x)=1</m>?
+            Untuk nilai masukan berapakah <m>f(x)=1</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Use the result of (b) to find a sequence <m>(a_n)</m> that converges to <m>0</m> for which <m>f(a_n) = 1</m> for every <m>n</m>.
+            Gunakan hasil butir (b) untuk menemukan barisan <m>(a_n)</m> yang konvergen ke <m>0</m> dan memenuhi <m>f(a_n) = 1</m> untuk setiap <m>n</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What does the result of (c) tell us about the continuity of <m>f</m> at <m>0</m>?
+            Apa yang ditunjukkan oleh hasil butir (c) tentang kekontinuan <m>f</m> di <m>0</m>?
           </p>
         </statement>
       </task>
@@ -237,17 +234,17 @@ provide a characterization of continuous functions in terms of sequences.
   </activity>
 
   <p>
-    While it can sometimes be difficult to prove a fact about all sequences that converge to a point,
+    Meskipun terkadang sulit membuktikan suatu fakta tentang semua barisan yang konvergen ke suatu titik,
     <xref ref="act_sequence_continuity"/>
-    shows that we can use <xref ref="thm_seq_continuity"/>
-    to prove that a function <m>f</m> is not continuous at an input <m>a</m> be finding just one sequence <m>(a_n)</m> that converges to <m>a</m> for which <m>\lim f(a_n) \neq f(a)</m>.
-    We conclude this section with one final note.
+    menunjukkan bahwa kita dapat menggunakan <xref ref="thm_seq_continuity"/>
+    untuk membuktikan bahwa fungsi <m>f</m> tidak kontinu di <m>a</m> dengan menemukan hanya satu barisan <m>(a_n)</m> yang konvergen ke <m>a</m> dan memenuhi <m>\lim f(a_n) \neq f(a)</m>.
+    Kita menutup bagian ini dengan satu catatan terakhir.
   </p>
   <p>
-    <alert>IMPORTANT NOTE:</alert> <xref ref="thm_seq_continuity"/>
-    tells us that if <m>f : X \to Y</m> is a continuous function,
-    then <m>f</m> commutes with limits.
-    That is, if <m>(a_n)</m> is a sequence in <m>X</m> that converges to <m>a \in X</m>, then
+    <alert>CATATAN PENTING:</alert> <xref ref="thm_seq_continuity"/>
+    menyatakan bahwa jika <m>f : X \to Y</m> fungsi kontinu,
+    maka penerapan <m>f</m> dan operasi pengambilan limit dapat dipertukarkan.
+    Artinya, jika <m>(a_n)</m> barisan di <m>X</m> yang konvergen ke <m>a \in X</m>, maka
     <me>
       f(a) = f(\lim a_n) = \lim f(a_n)
     </me>.

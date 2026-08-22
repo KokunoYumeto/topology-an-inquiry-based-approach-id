@@ -1,0 +1,699 @@
+<section xml:id="o003-c90-ch09-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Empat belas panduan berikut berkorespondensi, dalam urutan sumber, dengan
+    empat belas perintah pertama pada bagian latihan penutup Bab 9. ID panduan
+    berlanjut dari <c>o003-c90-ch09-guide-17</c> sampai
+    <c>o003-c90-ch09-guide-30</c>, sesudah enam belas perintah pembelajar pada
+    bagian-bagian sebelumnya dalam bab ini. Materi pendamping ini merupakan
+    uraian asli untuk pembelajaran mandiri, bukan jawaban yang disediakan oleh
+    penulis karya sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch09-guide-17">
+    <title>Barisan <m>1+1/n</m> pada garis real</title>
+    <statement>
+      <p>
+        Pada perintah pertama latihan penutup, tentukan dengan bukti apakah
+        <m>a_n=1+1/n</m> konvergen atau divergen dalam
+        <m>(\R,d_E)</m>.
+        <em>Rubrik.</em> Nyatakan calon limitnya dan ubah syarat
+        <m>d_E(a_n,a)\lt\epsilon</m> menjadi syarat sederhana pada
+        <m>n</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-17-hint">
+      <p>
+        <em>Langkah 1.</em> Coba <m>a=1</m> dan hitung
+        <m>|a_n-a|</m> secara tepat.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Untuk <m>\epsilon\gt0</m>, gunakan sifat
+        Archimedes untuk memilih bilangan bulat <m>N\gt1/\epsilon</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-17-answer">
+      <p>
+        Barisan tersebut konvergen ke <m>1</m>, sebab
+        <m>d_E(a_n,1)=1/n</m> dapat dibuat lebih kecil daripada setiap
+        <m>\epsilon\gt0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-17-solution">
+      <p>
+        Tetapkan <m>\epsilon\gt0</m>. Pilih <m>N\in\Z^+</m> dengan
+        <m>N\gt1/\epsilon</m>. Jika <m>n\geq N</m>, maka
+        <me>
+          d_E(a_n,1)=\left|1+\frac1n-1\right|
+          =\frac1n\leq\frac1N\lt\epsilon.
+        </me>
+        Jadi definisi konvergensi dipenuhi dan
+        <m>\lim_{n\to\infty}a_n=1</m> dalam <m>(\R,d_E)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-18">
+    <title>Barisan <m>(2,n)</m> dalam metrik maksimum</title>
+    <statement>
+      <p>
+        Pada perintah kedua latihan penutup, tentukan dengan bukti apakah
+        <m>a_n=(2,n)</m> konvergen atau divergen dalam
+        <m>(\R^2,d_M)</m>.
+        <em>Rubrik.</em> Andaikan ada calon limit <m>(u,v)</m> dan perhatikan
+        bahwa jarak maksimum sekurang-kurangnya sebesar selisih koordinat
+        kedua.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-18-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk sebarang <m>(u,v)\in\R^2</m>, tuliskan
+        <m>d_M((2,n),(u,v))</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Pilih <m>n</m> cukup besar sehingga
+        <m>|n-v|\gt1</m>; hal ini bertentangan dengan syarat konvergensi
+        untuk <m>\epsilon=1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-18-answer">
+      <p>
+        Barisan tersebut divergen. Koordinat keduanya menjauh tanpa batas,
+        dan
+        <m>d_M((2,n),(u,v))\geq|n-v|</m> untuk setiap calon limit
+        <m>(u,v)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-18-solution">
+      <p>
+        Andaikan, demi kontradiksi, bahwa <m>(2,n)</m> konvergen ke suatu
+        <m>(u,v)\in\R^2</m>. Definisi metrik maksimum memberi
+        <me>
+          d_M((2,n),(u,v))
+          =\max\{|2-u|,|n-v|\}\geq |n-v|.
+        </me>
+        Konvergensi dengan <m>\epsilon=1</m> menuntut adanya <m>N</m>
+        sehingga jarak di atas kurang dari <m>1</m> untuk semua
+        <m>n\geq N</m>. Namun kita dapat memilih
+        <m>n\geq N</m> sekaligus <m>n\gt v+1</m>, sehingga
+        <m>|n-v|\gt1</m>. Ini kontradiksi. Tidak ada calon limit, jadi
+        barisan tersebut divergen.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-19">
+    <title>Barisan fungsi <m>x/n</m> dalam metrik supremum</title>
+    <statement>
+      <p>
+        Pada perintah ketiga latihan penutup, <m>X</m> adalah himpunan
+        fungsi bernilai real pada <m>[0,1]</m> dengan metrik supremum, dan
+        <m>a_n(x)=x/n</m>. Tentukan dengan bukti apakah <m>(a_n)</m>
+        konvergen.
+        <em>Rubrik.</em> Bandingkan setiap <m>a_n</m> dengan fungsi nol dan
+        hitung supremum selisihnya pada seluruh interval.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-19-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>0_X</m> menyatakan fungsi nol, maka
+        <m>d(a_n,0_X)=\sup\{x/n\mid 0\leq x\leq1\}</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Supremum itu dicapai pada <m>x=1</m>; gunakan
+        hasil perintah pertama untuk bilangan yang diperoleh.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-19-answer">
+      <p>
+        Barisan fungsi tersebut konvergen ke fungsi nol dalam metrik
+        supremum, karena <m>d(a_n,0_X)=1/n\to0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-19-solution">
+      <p>
+        Untuk setiap <m>x\in[0,1]</m>, berlaku
+        <m>|a_n(x)-0_X(x)|=x/n</m>. Fungsi <m>x\mapsto x/n</m> meningkat
+        pada <m>[0,1]</m>, sehingga
+        <me>
+          d(a_n,0_X)
+          =\sup\left\{\frac{x}{n}\mid x\in[0,1]\right\}
+          =\frac1n.
+        </me>
+        Diberikan <m>\epsilon\gt0</m>, pilih
+        <m>N\gt1/\epsilon</m>. Untuk <m>n\geq N</m>, jarak ini kurang dari
+        <m>\epsilon</m>. Maka <m>a_n\to0_X</m> dalam ruang metrik fungsi
+        tersebut; bahkan konvergensinya seragam pada <m>[0,1]</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-20">
+    <title>Mendekati supremum dengan barisan dari himpunan</title>
+    <statement>
+      <p>
+        Pada perintah keempat latihan penutup, misalkan
+        <m>A\subseteq\R</m> tak kosong dan terbatas di atas. Bangun barisan
+        <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>\sup(A)</m>.
+        <em>Rubrik.</em> Untuk setiap <m>n</m>, gunakan bahwa bilangan yang
+        sedikit lebih kecil daripada supremum tidak dapat menjadi batas
+        atas. Syarat tak kosong tersirat oleh keberadaan supremum real dan
+        dibuat eksplisit di sini.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-20-hint">
+      <p>
+        <em>Langkah 1.</em> Tetapkan <m>s=\sup(A)</m>. Mengapa
+        <m>s-1/n</m> bukan batas atas dari <m>A</m>?
+      </p>
+      <p>
+        <em>Langkah 2.</em> Pilih <m>a_n\in A</m> dengan
+        <m>s-1/n\lt a_n\leq s</m>, lalu gunakan prinsip apit.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-20-answer">
+      <p>
+        Untuk setiap <m>n</m>, pilih <m>a_n\in A</m> sehingga
+        <m>s-1/n\lt a_n\leq s</m>, dengan <m>s=\sup(A)</m>. Maka
+        <m>|a_n-s|\lt1/n</m>, sehingga <m>a_n\to s</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-20-solution">
+      <p>
+        Tuliskan <m>s=\sup(A)</m>. Untuk setiap <m>n\in\Z^+</m>, bilangan
+        <m>s-1/n</m> lebih kecil daripada batas atas terkecil <m>s</m>, jadi
+        bukan batas atas dari <m>A</m>. Karena itu ada
+        <m>a_n\in A</m> dengan <m>a_n\gt s-1/n</m>. Di sisi lain,
+        <m>a_n\leq s</m> karena <m>s</m> batas atas. Jadi
+        <me>
+          0\leq s-a_n\lt\frac1n.
+        </me>
+        Diberikan <m>\epsilon\gt0</m>, pilih <m>N\gt1/\epsilon</m>. Jika
+        <m>n\geq N</m>, maka
+        <m>|a_n-s|=s-a_n\lt1/n\leq1/N\lt\epsilon</m>. Dengan demikian
+        <m>\lim a_n=\sup(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-21">
+    <title>Mendekati infimum dengan barisan dari himpunan</title>
+    <statement>
+      <p>
+        Pada perintah kelima latihan penutup, misalkan
+        <m>A\subseteq\R</m> tak kosong dan terbatas di bawah. Bangun barisan
+        <m>(a_n)</m> di <m>A</m> yang konvergen ke <m>\inf(A)</m>.
+        <em>Rubrik.</em> Terapkan argumen supremum secara terbalik: bilangan
+        yang sedikit lebih besar daripada infimum bukan batas bawah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-21-hint">
+      <p>
+        <em>Langkah 1.</em> Tetapkan <m>t=\inf(A)</m>. Untuk setiap
+        <m>n</m>, cari <m>a_n\in A</m> dengan
+        <m>t\leq a_n\lt t+1/n</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Tunjukkan langsung bahwa
+        <m>|a_n-t|\lt1/n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-21-answer">
+      <p>
+        Untuk <m>t=\inf(A)</m>, pilih
+        <m>a_n\in A</m> dengan <m>t\leq a_n\lt t+1/n</m>. Maka
+        <m>a_n\to t</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-21-solution">
+      <p>
+        Tuliskan <m>t=\inf(A)</m>. Bilangan <m>t+1/n</m> lebih besar
+        daripada batas bawah terbesar <m>t</m>, sehingga bukan batas bawah
+        dari <m>A</m>. Jadi ada <m>a_n\in A</m> dengan
+        <m>a_n\lt t+1/n</m>. Karena <m>t</m> sendiri batas bawah,
+        <m>t\leq a_n</m>. Akibatnya
+        <me>
+          0\leq a_n-t\lt\frac1n.
+        </me>
+        Untuk <m>\epsilon\gt0</m>, pilih <m>N\gt1/\epsilon</m>. Jika
+        <m>n\geq N</m>, maka <m>|a_n-t|\lt1/n\lt\epsilon</m>. Jadi
+        <m>\lim a_n=\inf(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-22">
+    <title>Supremum dan infimum tidak harus menjadi anggota</title>
+    <statement>
+      <p>
+        Pada perintah keenam latihan penutup, putuskan apakah limit yang
+        dibangun untuk supremum atau infimum harus berada dalam
+        <m>A</m>, lalu jelaskan.
+        <em>Rubrik.</em> Satu interval terbuka terbatas dapat memberikan
+        contoh untuk kedua ujung sekaligus.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-22-hint">
+      <p>
+        <em>Langkah 1.</em> Ambil <m>A=(0,1)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Hitung <m>\inf(A)</m> dan <m>\sup(A)</m>, lalu
+        periksa apakah kedua bilangan itu merupakan anggota <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-22-answer">
+      <p>
+        Tidak. Untuk <m>A=(0,1)</m>, supremumnya <m>1</m> dan infimumnya
+        <m>0</m>, tetapi keduanya tidak berada dalam <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-22-solution">
+      <p>
+        Ambil <m>A=(0,1)</m>. Himpunan ini tak kosong serta terbatas di atas
+        dan di bawah, dengan <m>\sup(A)=1</m> dan <m>\inf(A)=0</m>. Barisan
+        <m>a_n=1-1/(n+1)</m> seluruhnya berada dalam <m>A</m> dan konvergen
+        ke <m>1</m>; barisan <m>b_n=1/(n+1)</m> juga seluruhnya berada dalam
+        <m>A</m> dan konvergen ke <m>0</m>. Akan tetapi,
+        <m>0,1\notin A</m>. Jadi limit barisan dari <m>A</m> tidak harus
+        menjadi anggota <m>A</m>; keanggotaan limit memerlukan sifat tambahan
+        seperti ketertutupan <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-23">
+    <title>Bola yang sedikit lebih besar daripada jarak harus memotong himpunan</title>
+    <statement>
+      <p>
+        Pada perintah ketujuh latihan penutup, misalkan
+        <m>m=d(x,A)</m> dan
+        <m>B_n=B(x;m+1/n)</m>. Jelaskan mengapa
+        <m>B_n\cap A\neq\emptyset</m> untuk setiap
+        <m>n\in\Z^+</m>.
+        <em>Rubrik.</em> Gunakan sifat pendefinisi infimum, bukan anggapan
+        bahwa jarak minimum selalu dicapai.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-23-hint">
+      <p>
+        <em>Langkah 1.</em> Jika <m>B_n\cap A=\emptyset</m>, apa yang dapat
+        disimpulkan tentang <m>d(x,a)</m> untuk setiap <m>a\in A</m>?
+      </p>
+      <p>
+        <em>Langkah 2.</em> Bandingkan kesimpulan itu dengan fakta bahwa
+        <m>m</m> adalah batas bawah terbesar dari himpunan semua jarak
+        <m>d(x,a)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-23-answer">
+      <p>
+        Karena <m>m+1/n\gt m</m>, bilangan itu bukan batas bawah bagi
+        semua <m>d(x,a)</m>. Jadi ada <m>a\in A</m> dengan
+        <m>d(x,a)\lt m+1/n</m>, yakni <m>a\in B_n\cap A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-23-solution">
+      <p>
+        Tetapkan <m>n\in\Z^+</m>. Karena
+        <m>m=\inf\{d(x,a)\mid a\in A\}</m>, setiap bilangan yang lebih
+        besar daripada <m>m</m>, khususnya <m>m+1/n</m>, tidak dapat menjadi
+        batas bawah dari himpunan jarak tersebut. Maka terdapat
+        <m>a\in A</m> sedemikian sehingga
+        <m>d(x,a)\lt m+1/n</m>. Menurut definisi bola terbuka,
+        <m>a\in B(x;m+1/n)=B_n</m>. Jadi
+        <m>a\in B_n\cap A</m>, dan irisan itu tak kosong. Argumen ini tidak
+        menganggap adanya titik <m>A</m> yang tepat berjarak <m>m</m> dari
+        <m>x</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-24">
+    <title>Jarak ke himpunan sebagai limit jarak ke titik</title>
+    <statement>
+      <p>
+        Pada perintah kedelapan latihan penutup, pilih
+        <m>a_n\in B_n\cap A</m>. Tentukan sifat barisan ini dan jelaskan
+        mengapa konstruksi tersebut membuktikan bahwa ada barisan di
+        <m>A</m> dengan <m>\lim d(x,a_n)=d(x,A)</m>.
+        <em>Rubrik.</em> Apit setiap jarak <m>d(x,a_n)</m> di antara
+        <m>m</m> dan <m>m+1/n</m>; jangan menyimpulkan bahwa
+        <m>(a_n)</m> sendiri harus konvergen.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-24-hint">
+      <p>
+        <em>Langkah 1.</em> Keanggotaan <m>a_n\in A</m> memberi satu
+        pertidaksamaan dari definisi infimum.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Keanggotaan <m>a_n\in B_n</m> memberi
+        pertidaksamaan lainnya. Kurangkan <m>m</m> dan gunakan
+        <m>1/n\to0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-24-answer">
+      <p>
+        Barisan memenuhi <m>a_n\in A</m> dan
+        <m>m\leq d(x,a_n)\lt m+1/n</m>. Karena itu
+        <m>d(x,a_n)\to m=d(x,A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-24-solution">
+      <p>
+        Untuk setiap <m>n</m>, pilihan <m>a_n\in B_n\cap A</m> memastikan
+        <m>a_n\in A</m>. Karena <m>m</m> adalah infimum dari semua jarak
+        <m>d(x,a)</m> dengan <m>a\in A</m>, berlaku
+        <m>m\leq d(x,a_n)</m>. Karena <m>a_n\in B_n</m>, juga berlaku
+        <m>d(x,a_n)\lt m+1/n</m>. Jadi
+        <me>
+          0\leq d(x,a_n)-m\lt\frac1n.
+        </me>
+        Ruas kanan menuju nol, sehingga prinsip apit memberi
+        <m>d(x,a_n)\to m=d(x,A)</m>. Inilah tepat kesimpulan teorema pada
+        sumber. Yang konvergen di sini adalah barisan bilangan real
+        <m>(d(x,a_n))</m>; titik-titik <m>a_n</m> sendiri belum tentu
+        mempunyai limit dalam <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-25">
+    <title>Konvergensi subruang memberi konvergensi ruang ambien</title>
+    <statement>
+      <p>
+        Pada perintah kesembilan latihan penutup, <m>(Y,d')</m> adalah
+        subruang dari <m>(X,d)</m>, semua <m>a_n</m> dan <m>a</m> berada
+        dalam <m>Y</m>, dan <m>a_n\to a</m> dalam <m>Y</m>. Buktikan bahwa
+        <m>a_n\to a</m> dalam <m>X</m>.
+        <em>Rubrik.</em> Gunakan bahwa metrik subruang adalah pembatasan
+        metrik ambien: <m>d'(y,z)=d(y,z)</m> untuk <m>y,z\in Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-25-hint">
+      <p>
+        <em>Langkah 1.</em> Tuliskan syarat <m>\epsilon</m> untuk
+        konvergensi dalam <m>(Y,d')</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ganti setiap <m>d'(a_n,a)</m> dengan
+        <m>d(a_n,a)</m>; indeks <m>N</m> yang sama bekerja di ruang ambien.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-25-answer">
+      <p>
+        Benar. Karena <m>d'(a_n,a)=d(a_n,a)</m> untuk semua <m>n</m>, syarat
+        konvergensi di subruang dan di ruang ambien identik ketika limitnya
+        berada dalam <m>Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-25-solution">
+      <p>
+        Ambil <m>\epsilon\gt0</m>. Dari <m>a_n\to a</m> dalam
+        <m>(Y,d')</m>, terdapat <m>N\in\Z^+</m> sehingga
+        <m>d'(a_n,a)\lt\epsilon</m> untuk semua <m>n\geq N</m>. Metrik
+        subruang <m>d'</m> adalah pembatasan <m>d</m>, dan
+        <m>a_n,a\in Y</m>, maka
+        <me>
+          d(a_n,a)=d'(a_n,a)\lt\epsilon
+          \qquad(n\geq N).
+        </me>
+        Ini adalah definisi <m>a_n\to a</m> dalam <m>(X,d)</m>. Jadi
+        konvergensi subruang menuju titik subruang selalu memberi
+        konvergensi ambien menuju titik yang sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-26">
+    <title>Konvers subruang dan limit ambien di luar subruang</title>
+    <statement>
+      <p>
+        Pada perintah kesepuluh latihan penutup, jelaskan mengapa konvers
+        harfiah perintah sebelumnya benar ketika semua hipotesisnya, termasuk
+        <m>a\in Y</m>, dipertahankan. Kemudian, untuk barisan rasional
+        <m>(a_n)</m> yang konvergen ke <m>\sqrt2</m> dalam <m>\R</m>,
+        buktikan sifat Cauchy yang diminta dan tentukan apakah barisan itu
+        konvergen dalam subruang <m>\Q</m>.
+        <em>Rubrik.</em> Bedakan tegas dua klaim: konvers dengan limit di
+        subruang memang benar, sedangkan contoh <m>\sqrt2</m> mempunyai
+        limit ambien di luar subruang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-26-hint">
+      <p>
+        <em>Langkah 1.</em> Untuk konvers harfiah, gunakan lagi
+        <m>d'=d|_{Y\times Y}</m>. Untuk sifat Cauchy, pilih <m>N</m> sehingga
+        <m>|a_n-\sqrt2|\lt\epsilon/2</m> jika <m>n\gt N</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika barisan tersebut konvergen ke suatu
+        <m>q\in\Q</m> dalam subruang, gunakan perintah sebelumnya dan
+        ketunggalan limit di <m>\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-26-answer">
+      <p>
+        Konvers harfiahnya benar: jika limit ambien <m>a</m> berada dalam
+        <m>Y</m>, jarak subruang dan ambien sama. Barisan rasional yang
+        menuju <m>\sqrt2</m> bersifat Cauchy, tetapi tidak konvergen dalam
+        <m>\Q</m>, sebab satu-satunya limit ambiennya adalah bilangan
+        irasional <m>\sqrt2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-26-solution">
+      <p>
+        Pertama, pertahankan semua hipotesis bagian sebelumnya dan andaikan
+        <m>a_n\to a</m> dalam <m>X</m>, dengan <m>a_n,a\in Y</m>. Untuk
+        setiap <m>\epsilon\gt0</m>, akhirnya
+        <m>d(a_n,a)\lt\epsilon</m>. Karena
+        <m>d'(a_n,a)=d(a_n,a)</m>, pertidaksamaan yang sama membuktikan
+        <m>a_n\to a</m> dalam <m>Y</m>. Jadi konvers harfiah itu benar.
+      </p>
+      <p>
+        Sekarang misalkan <m>a_n\in\Q</m> dan <m>a_n\to\sqrt2</m> dalam
+        <m>\R</m>. Diberikan <m>\epsilon\gt0</m>, pilih <m>N</m> sehingga
+        <m>|a_k-\sqrt2|\lt\epsilon/2</m> untuk setiap <m>k\gt N</m>. Jika
+        <m>n,m\gt N</m>, ketaksamaan segitiga memberi
+        <me>
+          |a_n-a_m|
+          \leq |a_n-\sqrt2|+|a_m-\sqrt2|
+          \lt\frac\epsilon2+\frac\epsilon2=\epsilon.
+        </me>
+        Jadi barisan itu Cauchy.
+      </p>
+      <p>
+        Andaikan barisan tersebut konvergen dalam <m>\Q</m> ke suatu
+        <m>q\in\Q</m>. Perintah sebelumnya akan membuatnya konvergen dalam
+        <m>\R</m> ke <m>q</m>. Namun di <m>\R</m> barisan yang sama sudah
+        konvergen ke <m>\sqrt2</m>, dan limit dalam ruang metrik tunggal.
+        Maka harus berlaku <m>q=\sqrt2</m>, bertentangan dengan
+        <m>q\in\Q</m>. Jadi barisan itu tidak konvergen dalam <m>\Q</m>.
+        Contoh ini tidak membantah konvers harfiah, karena limit ambiennya
+        tidak berada dalam subruang.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-27">
+    <title>Limit kelipatan skalar barisan</title>
+    <statement>
+      <p>
+        Pada perintah ke-11 latihan penutup, jika <m>a_n\to A</m> dalam
+        <m>\R</m>, buktikan bahwa <m>ka_n\to kA</m> untuk setiap
+        <m>k\in\R</m>.
+        <em>Rubrik.</em> Pisahkan kasus <m>k=0</m>; untuk <m>k\neq0</m>,
+        ubah toleransi keluaran menjadi <m>\epsilon/|k|</m> bagi barisan
+        semula.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-27-hint">
+      <p>
+        <em>Langkah 1.</em> Hitung
+        <m>|ka_n-kA|=|k|\,|a_n-A|</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Jika <m>k\neq0</m>, terapkan konvergensi
+        <m>a_n\to A</m> dengan toleransi <m>\epsilon/|k|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-27-answer">
+      <p>
+        Benar. Kasus <m>k=0</m> menghasilkan barisan nol; untuk
+        <m>k\neq0</m>, syarat
+        <m>|a_n-A|\lt\epsilon/|k|</m> memberi
+        <m>|ka_n-kA|\lt\epsilon</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-27-solution">
+      <p>
+        Tuliskan <m>A=\lim a_n</m>. Jika <m>k=0</m>, setiap suku
+        <m>ka_n</m> dan calon limit <m>kA</m> sama dengan nol, jadi
+        konvergensi langsung berlaku. Andaikan <m>k\neq0</m> dan tetapkan
+        <m>\epsilon\gt0</m>. Karena <m>a_n\to A</m>, ada <m>N</m> sehingga
+        <m>|a_n-A|\lt\epsilon/|k|</m> untuk <m>n\geq N</m>. Maka
+        <me>
+          |ka_n-kA|=|k|\,|a_n-A|
+          \lt |k|\frac{\epsilon}{|k|}=\epsilon.
+        </me>
+        Jadi <m>\lim ka_n=k\lim a_n</m> untuk setiap <m>k\in\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-28">
+    <title>Limit jumlah dua barisan</title>
+    <statement>
+      <p>
+        Pada perintah ke-12 latihan penutup, jika
+        <m>a_n\to A</m> dan <m>b_n\to B</m>, buktikan bahwa
+        <m>a_n+b_n\to A+B</m>.
+        <em>Rubrik.</em> Bagi toleransi menjadi dua bagian dan gunakan
+        ketaksamaan segitiga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-28-hint">
+      <p>
+        <em>Langkah 1.</em> Cari indeks setelah mana
+        <m>|a_n-A|\lt\epsilon/2</m> dan indeks setelah mana
+        <m>|b_n-B|\lt\epsilon/2</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ambil maksimum kedua indeks dan taksir
+        <m>|(a_n+b_n)-(A+B)|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-28-answer">
+      <p>
+        Benar. Setelah kedua selisih masing-masing kurang dari
+        <m>\epsilon/2</m>, ketaksamaan segitiga membuat selisih jumlah
+        kurang dari <m>\epsilon</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-28-solution">
+      <p>
+        Tetapkan <m>\epsilon\gt0</m>. Pilih <m>N_a</m> sehingga
+        <m>|a_n-A|\lt\epsilon/2</m> untuk <m>n\geq N_a</m>, dan pilih
+        <m>N_b</m> sehingga <m>|b_n-B|\lt\epsilon/2</m> untuk
+        <m>n\geq N_b</m>. Tetapkan <m>N=\max\{N_a,N_b\}</m>. Untuk
+        <m>n\geq N</m>,
+        <me>
+          |(a_n+b_n)-(A+B)|
+          \leq |a_n-A|+|b_n-B|
+          \lt\frac\epsilon2+\frac\epsilon2=\epsilon.
+        </me>
+        Maka <m>\lim(a_n+b_n)=A+B=\lim a_n+\lim b_n</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-29">
+    <title>Setiap barisan real konvergen terbatas</title>
+    <statement>
+      <p>
+        Pada perintah ke-13 latihan penutup, buktikan bahwa jika
+        <m>a_n\to A</m>, maka ada <m>M\gt0</m> dengan
+        <m>|a_n|\leq M</m> untuk semua <m>n\in\Z^+</m>.
+        <em>Rubrik.</em> Konvergensi mengendalikan semua suku sesudah suatu
+        indeks; masukkan sejumlah berhingga suku awal ke dalam satu maksimum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-29-hint">
+      <p>
+        <em>Langkah 1.</em> Pilih <m>N</m> sehingga
+        <m>|a_n-A|\lt1</m> untuk <m>n\geq N</m>; simpulkan
+        <m>|a_n|\lt|A|+1</m> pada ekor barisan.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Ambil maksimum dari <m>|A|+1</m>, bilangan
+        <m>1</m>, dan nilai mutlak semua suku sebelum <m>N</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-29-answer">
+      <p>
+        Benar. Ekor barisan dibatasi oleh <m>|A|+1</m>, sedangkan sejumlah
+        berhingga suku awal mempunyai maksimum nilai mutlak; maksimum kedua
+        batas itu membatasi seluruh barisan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-29-solution">
+      <p>
+        Karena <m>a_n\to A</m>, terdapat <m>N\in\Z^+</m> sehingga
+        <m>|a_n-A|\lt1</m> untuk semua <m>n\geq N</m>. Ketaksamaan segitiga
+        memberi
+        <me>
+          |a_n|\leq|a_n-A|+|A|\lt|A|+1
+          \qquad(n\geq N).
+        </me>
+        Tetapkan
+        <me>
+          M=\max\{1,|A|+1,|a_1|,\ldots,|a_{N-1}|\}.
+        </me>
+        Jika <m>N=1</m>, daftar suku awal itu kosong dan cukup ambil
+        <m>M=\max\{1,|A|+1\}</m>. Dalam semua kasus, <m>M\gt0</m> dan
+        <m>|a_n|\leq M</m> baik untuk suku awal maupun untuk
+        <m>n\geq N</m>. Jadi barisan konvergen tersebut terbatas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-30">
+    <title>Limit hasil kali dua barisan</title>
+    <statement>
+      <p>
+        Pada perintah ke-14 latihan penutup, jika
+        <m>a_n\to A</m> dan <m>b_n\to B</m>, buktikan bahwa
+        <m>a_nb_n\to AB</m>.
+        <em>Rubrik.</em> Gunakan hasil bahwa <m>(a_n)</m> terbatas dan
+        uraikan selisih hasil kali menjadi dua suku yang dapat dikendalikan
+        secara terpisah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-30-hint">
+      <p>
+        <em>Langkah 1.</em> Pilih <m>M\geq1</m> dengan
+        <m>|a_n|\leq M</m>, lalu gunakan
+        <m>a_nb_n-AB=a_n(b_n-B)+B(a_n-A)</m>.
+      </p>
+      <p>
+        <em>Langkah 2.</em> Buat
+        <m>|b_n-B|\lt\epsilon/(2M)</m> dan
+        <m>|a_n-A|\lt\epsilon/(2(|B|+1))</m> secara serentak.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-30-answer">
+      <p>
+        Benar. Keterbatasan <m>|a_n|\leq M</m> dan uraian
+        <m>|a_nb_n-AB|\leq M|b_n-B|+|B||a_n-A|</m> membuat kedua suku
+        menuju nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-30-solution">
+      <p>
+        Menurut perintah sebelumnya, ada <m>M\geq1</m> sehingga
+        <m>|a_n|\leq M</m> untuk semua <m>n</m>. Tetapkan
+        <m>\epsilon\gt0</m>. Dari <m>b_n\to B</m>, pilih <m>N_b</m>
+        sehingga
+        <m>|b_n-B|\lt\epsilon/(2M)</m> jika <m>n\geq N_b</m>. Dari
+        <m>a_n\to A</m>, pilih <m>N_a</m> sehingga
+        <m>|a_n-A|\lt\epsilon/(2(|B|+1))</m> jika
+        <m>n\geq N_a</m>. Untuk
+        <m>n\geq\max\{N_a,N_b\}</m>,
+        <me>
+          \begin{aligned}
+          |a_nb_n-AB|
+          &amp;=|a_n(b_n-B)+B(a_n-A)|\\
+          &amp;\leq |a_n|\,|b_n-B|+|B|\,|a_n-A|\\
+          &amp;\lt M\frac{\epsilon}{2M}
+          +|B|\frac{\epsilon}{2(|B|+1)}
+          \lt\epsilon.
+          \end{aligned}
+        </me>
+        Jadi <m>a_nb_n\to AB</m>, atau
+        <m>\lim a_nb_n=(\lim a_n)(\lim b_n)</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,83 +1,83 @@
 <section xml:id="sec_seq_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    We were introduced to sequences in calculus,
-    and we can extend the notion of the limit of a sequence to metric spaces.
-    Sequences provide an alternate way to describe many ideas in metric space.
-    For example,
-    we will see that we can characterize continuity in terms of sequences,
-    and we can use sequences to determine open and closed sets.
+    Kita telah mengenal barisan dalam kalkulus,
+    dan kita dapat memperluas gagasan limit barisan ke ruang metrik.
+    Barisan menyediakan cara lain untuk menjelaskan banyak gagasan dalam ruang metrik.
+    Sebagai contoh,
+    kita akan melihat bahwa kita dapat mencirikan kekontinuan dalam kaitannya dengan barisan,
+    dan kita dapat menggunakan barisan untuk menentukan himpunan terbuka dan tertutup.
   </p>
   <p>
-    Recall from calculus that a sequence of real numbers is a list of numbers in a specified order.
-    We write a sequence <m>a_1</m>,
+    Ingat kembali dari kalkulus bahwa barisan bilangan real adalah daftar bilangan dalam urutan tertentu.
+    Kita menuliskan barisan <m>a_1</m>,
     <m>a_2</m>, <m>\ldots</m>, <m>a_n</m>,
-    <m>\ldots</m> as <m>(a_n)_{n \in \Z^+}</m> or just <m>(a_n)</m>.
-    If we think of each <m>a_n</m> as the output of a function,
-    we can give a more formal definition of a sequence as a function <m>f: \Z^+ \to \R</m>,
-    where <m>a_n = f(n)</m> for each <m>n</m>.
+    <m>\ldots</m> sebagai <m>(a_n)_{n \in \Z^+}</m> atau cukup <m>(a_n)</m>.
+    Jika kita menganggap setiap <m>a_n</m> sebagai keluaran suatu fungsi,
+    kita dapat memberikan definisi barisan yang lebih formal sebagai fungsi <m>f: \Z^+ \to \R</m>,
+    dengan <m>a_n = f(n)</m> untuk setiap <m>n</m>.
   </p>
   <p>
-    A sequence <m>(a_n)</m> of real numbers converges to a number <m>L</m> if we can make all of the numbers in the sequence as close to <m>L</m> as we like by choosing <m>n</m> to be large enough.
-    Once again, this is an informal description that we need to make more rigorous.
-    As we saw with continuous functions,
-    we can make more rigorous the idea of
-    <q>closeness</q>
-    by introducing a symbol for a number that can be arbitrarily small.
-    So we can say that the numbers <m>a_n</m> can get as close to a number <m>L</m> as we want if we can make
-    <m>| a_n - L | \lt \epsilon</m> for any positive number <m>\epsilon</m>.
-    The idea of choosing <m>n</m> large enough is just finding a large enough fixed integer <m>N</m> so that
-    <m>| a_n - L | \lt \epsilon</m> whenever <m>n \geq N</m>.
-    This leads to the definition.
+    Suatu barisan bilangan real <m>(a_n)</m> konvergen ke bilangan <m>L</m> jika suku-sukunya dapat dibuat sedekat yang diinginkan dengan <m>L</m> melalui pemilihan <m>n</m> yang cukup besar.
+    Sekali lagi, ini merupakan penjelasan informal yang perlu dirumuskan secara lebih tepat.
+    Seperti yang kita lihat pada fungsi kontinu,
+    kita dapat merumuskan gagasan
+    <q>kedekatan</q>
+    secara tepat dengan memperkenalkan simbol bagi suatu bilangan yang dapat dibuat sekecil apa pun.
+    Jadi, kita dapat mengatakan bahwa suku-suku <m>a_n</m> dapat mendekati suatu bilangan <m>L</m> sedekat yang kita inginkan jika kita dapat membuat
+    <m>| a_n - L | \lt \epsilon</m> untuk setiap bilangan positif <m>\epsilon</m>.
+    Gagasan memilih <m>n</m> yang cukup besar berarti mencari suatu bilangan bulat tetap <m>N</m> yang cukup besar sehingga
+    <m>| a_n - L | \lt \epsilon</m> jika <m>n \geq N</m>.
+    Hal ini membawa kita pada definisi berikut.
   </p>
 
   <definition xml:id="def_sequence_limit_real">
-  <idx><h>limit of a sequence of real numbers</h></idx>
+  <idx><h>limit barisan bilangan real</h></idx>
     <statement>
       <p>
-        A sequence <m>(a_n)</m> of real numbers has a <term>limit</term> <m>L</m> if,
-        given any <m>\epsilon \gt 0</m> there exists a positive integer <m>N</m> (depending only on <m>\epsilon</m>) such that
+        Suatu barisan bilangan real <m>(a_n)</m> mempunyai <term>limit</term> <m>L</m> jika,
+        untuk setiap <m>\epsilon \gt 0</m>, terdapat bilangan bulat positif <m>N</m> (yang hanya bergantung pada <m>\epsilon</m>) sedemikian sehingga
         <me>
-          | a_n - L | \lt  \epsilon \ \text{ whenever }  \ n \geq N
+          | a_n - L | \lt  \epsilon \ \text{ jika }  \ n \geq N
         </me>.
       </p>
     </statement>
   </definition>
 
   <p>
-    When a sequence <m>(a_n)</m> has a limit <m>L</m>, we write
+    Ketika suatu barisan <m>(a_n)</m> mempunyai limit <m>L</m>, kita menuliskan
     <me>
       \lim_{n \to \infty} a_n = L
     </me>,
-    or just <m>\lim a_n = L</m>
-    (since we assume the limit for a sequence occurs as <m>n</m> goes to infinity)
-    and we say that the sequence <m>(a_n)</m>
-    <term>converges</term> to <m>L</m>.
+    atau cukup <m>\lim a_n = L</m>
+    (karena kita mengasumsikan limit barisan diambil ketika <m>n</m> menuju tak hingga),
+    dan kita mengatakan bahwa barisan <m>(a_n)</m>
+    <term>konvergen</term> ke <m>L</m>.
   </p>
   
   <example>
     <statement>
       <p>
-        We can draw a graph of a sequence <m>(a_n)</m> of real numbers as the set of points <m>(n,a_n)</m>.
-        In this way we can visualize a sequence and its limit.
-        By definition,
-        <m>L</m> is a limit of the sequence <m>(a_n)</m> if,
-        given any <m>\epsilon \gt 0</m>,
-        we can go far enough out in the sequence so that the numbers in the sequence all lie in the horizontal band between <m>y = L -\epsilon</m> and
-        <m>L+ \epsilon</m> as illustrated in <xref ref="F_sequence_limit"/>
-        for the sequence <m>\left(\frac{n}{1+n}\right)</m>.
+        Kita dapat menggambar grafik suatu barisan bilangan real <m>(a_n)</m> sebagai himpunan titik <m>(n,a_n)</m>.
+        Dengan cara ini kita dapat memvisualisasikan suatu barisan dan limitnya.
+        Berdasarkan definisi,
+        <m>L</m> merupakan limit barisan <m>(a_n)</m> jika,
+        untuk setiap <m>\epsilon \gt 0</m>,
+        kita dapat memilih indeks yang cukup besar sehingga semua suku berikutnya terletak di dalam pita horizontal di antara garis <m>y = L -\epsilon</m> dan
+        <m>L+ \epsilon</m>, seperti diperlihatkan pada <xref ref="F_sequence_limit"/>
+        untuk barisan <m>\left(\frac{n}{1+n}\right)</m>.
       </p>
       <figure xml:id="F_sequence_limit">
-        <caption>The limit of the sequence <m>\left(\frac{n}{1+n}\right)</m>.</caption>
-        <image width="90%" source="Sequence_limit"/>
+        <caption>Limit barisan <m>\left(\frac{n}{1+n}\right)</m>.</caption>
+        <image width="90%" source="Sequence_limit"><description>Grafik titik-titik biru untuk suku barisan <m>a_n=n/(1+n)</m> terhadap indeks <m>n</m>. Titik-titik meningkat dari bawah dan mendekati garis horizontal pada tinggi <m>1</m>. Dua garis horizontal ungu pada tinggi <m>1-\epsilon</m> dan <m>1+\epsilon</m> membatasi pita; setelah suatu indeks, semua titik barisan berada di dalam pita tersebut.</description></image>
       </figure>
       <p>
-        To verify that the limit of the sequence <m>\left(\frac{n}{1+n}\right)</m> is <m>1</m>,
-        we start with <m>\epsilon \gt 0</m>.
+        Untuk memverifikasi bahwa limit barisan <m>\left(\frac{n}{1+n}\right)</m> adalah <m>1</m>,
+        kita mulai dengan <m>\epsilon \gt 0</m>.
       </p>
       <blockquote>
         <p>
-        <em>Scratch work.</em> Now we need to find <m>N</m> so that <m>n \geq N</m> implies <m>\left| \frac{n}{1+n} - 1 \right| \lt  \epsilon</m>. Just as with our continuity example, this work is not part of the proof, but shows how we go about finding the <m>N</m> we need. To make <m>\left| \frac{n}{1+n} - 1 \right| \lt  \epsilon</m> we need
+        <em>Perhitungan awal.</em> Sekarang kita perlu mencari <m>N</m> sehingga <m>n \geq N</m> mengakibatkan <m>\left| \frac{n}{1+n} - 1 \right| \lt  \epsilon</m>. Seperti pada contoh kekontinuan kita, perhitungan ini bukan bagian dari bukti, tetapi menunjukkan cara kita menemukan <m>N</m> yang dibutuhkan. Agar <m>\left| \frac{n}{1+n} - 1 \right| \lt  \epsilon</m>, kita memerlukan
         <md>
           <mrow>\left| \frac{n}{1+n} - 1 \right| \amp \lt  \epsilon</mrow>
           <mrow>\left| \frac{n}{1+n} - \frac{1+n}{1+n}  \right| \amp \lt  \epsilon</mrow>
@@ -85,16 +85,16 @@
           <mrow>1+n \amp \gt \frac{1}{\epsilon}</mrow>
           <mrow>n \amp \gt \frac{1}{\epsilon} -1</mrow>
         </md>.
-        Now we use this scratch work to design our proof.
+        Sekarang kita menggunakan perhitungan awal ini untuk menyusun bukti.
         </p>
       </blockquote>
 
       <p>
-        Let <m>N \gt \frac{1}{\epsilon} -1</m>
-        (so that <m>N</m> depends on <m>\epsilon</m>).
-        Then for <m>n \geq N</m> we have
+        Ambil <m>N \gt \frac{1}{\epsilon} -1</m>
+        (sehingga <m>N</m> bergantung pada <m>\epsilon</m>).
+        Maka, untuk <m>n \geq N</m>, kita memperoleh
         <md>
-          <mrow>n \amp \gt N \gt \frac{1}{\epsilon} -1</mrow>
+          <mrow>n \amp \geq N \gt \frac{1}{\epsilon} -1</mrow>
           <mrow>1+n \amp \gt \frac{1}{\epsilon}</mrow>
           <mrow>|-1| \left| \frac{1}{1+n} \right| \amp \lt  \epsilon</mrow>
           <mrow>\left| \frac{-1}{1+n} \right| \amp \lt  \epsilon</mrow>
@@ -104,87 +104,87 @@
       </p>
 
       <p>
-        So the sequence <m>\left(\frac{n}{1+n}\right)</m> has a limit of <m>1</m>.
+        Jadi, barisan <m>\left(\frac{n}{1+n}\right)</m> mempunyai limit <m>1</m>.
       </p>
     </statement>
   </example>
 
   <p>
     <xref ref="def_sequence_limit_real"/>
-    only applies to sequences of real numbers.
-    Ultimately, we want to phrase the definition in a way that allows us to define limits of sequences in metric spaces and topological spaces.
-    So we have to reformulate the definition in such a way that it does not depend on distances.
+    hanya berlaku bagi barisan bilangan real.
+    Pada akhirnya, kita ingin merumuskan definisi dengan cara yang memungkinkan kita mendefinisikan limit barisan di ruang metrik dan ruang topologis.
+    Jadi, kita harus merumuskan ulang definisi sedemikian rupa sehingga tidak bergantung pada jarak.
   </p>
   <p>
-    Recall that <m>| x-y |</m> defined a metric <m>d_E</m> on <m>\R</m>, that is
+    Ingat bahwa <m>| x-y |</m> mendefinisikan metrik <m>d_E</m> pada <m>\R</m>, yaitu
     <me>
       d_E(x,y) = | x-y |
     </me>.
   </p>
   <p>
-    So we can rephrase the definition of a limit of a sequence of real numbers as follows.
+    Jadi, kita dapat merumuskan kembali definisi limit barisan bilangan real sebagai berikut.
   </p>
 
   <definition>
-    <title>Alternate Definition</title>
+    <title>Definisi Alternatif</title>
     <statement>
       <p>
-        A sequence <m>(a_n)</m> of real numbers has a <term>limit</term> <m>L</m> if,
-        given any <m>\epsilon \gt 0</m> there exists a positive integer <m>N</m> (depending only on <m>\epsilon</m>) such that
+        Suatu barisan bilangan real <m>(a_n)</m> mempunyai <term>limit</term> <m>L</m> jika,
+        untuk setiap <m>\epsilon \gt 0</m>, terdapat bilangan bulat positif <m>N</m> (yang hanya bergantung pada <m>\epsilon</m>) sedemikian sehingga
         <me>
-          d_E(a_n, L) \lt  \epsilon \ \text{ whenever }  \ n \geq N
+          d_E(a_n, L) \lt  \epsilon \ \text{ jika }  \ n \geq N
         </me>.
       </p>
     </statement>
   </definition>
 
   <p>
-    Once we have described a limit of a sequence in terms of a metric,
-    then we can extend the idea into any metric space.
+    Setelah kita mendeskripsikan limit barisan dalam kaitannya dengan metrik,
+    kita dapat memperluas gagasan tersebut ke sembarang ruang metrik.
   </p>
 
   <definition>
-  <idx><h>sequence in a metric space</h></idx>
+  <idx><h>barisan di ruang metrik</h></idx>
     <statement>
       <p>
-        A <term>sequence</term> in a metric space <m>(X,d)</m> is a function <m>f: \Z^+ \to X</m>.
+        Suatu <term>barisan</term> di ruang metrik <m>(X,d)</m> adalah fungsi <m>f: \Z^+ \to X</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    If <m>f</m> is a sequence in <m>X</m>,
-    we write the sequence defined by <m>f</m> as <m>(f(n))</m>,
-    where <m>n \in \Z^+</m>.
-    We also use the notation <m>(a_n)</m>, when <m>a_n = f(n)</m>.
-    As long as <m>X</m> has a metric defined on it,
-    we can then describe the limit of a sequence.
+    Jika <m>f</m> merupakan barisan di <m>X</m>,
+    kita menuliskan barisan yang didefinisikan oleh <m>f</m> sebagai <m>(f(n))</m>,
+    dengan <m>n \in \Z^+</m>.
+    Kita juga menggunakan notasi <m>(a_n)</m> apabila <m>a_n = f(n)</m>.
+    Dengan adanya metrik pada <m>X</m>,
+    kita dapat mendeskripsikan limit barisan.
   </p>
 
   <definition>
-  <idx><h>limit of a sequence in a metric space</h></idx>
+  <idx><h>limit barisan di ruang metrik</h></idx>
     <statement>
       <p>
-        Let <m>(X,d)</m> be a metric space.
-        A sequence <m>(a_n)</m> in <m>X</m> has a <term>limit</term> <m>L \in X</m> if,
-        given any <m>\epsilon \gt 0</m> there exists a positive integer <m>N</m> (depending only on <m>\epsilon</m>) such that
+        Misalkan <m>(X,d)</m> ruang metrik.
+        Suatu barisan <m>(a_n)</m> di <m>X</m> mempunyai <term>limit</term> <m>L \in X</m> jika,
+        untuk setiap <m>\epsilon \gt 0</m>, terdapat bilangan bulat positif <m>N</m> (yang hanya bergantung pada <m>\epsilon</m>) sedemikian sehingga
         <me>
-          d(a_n, L) \lt  \epsilon \ \text{ whenever }  \ n \geq N
+          d(a_n, L) \lt  \epsilon \ \text{ jika }  \ n \geq N
         </me>.
       </p>
     </statement>
   </definition>
 
   <p>
-    In other words,
-    a sequence <m>(a_n)</m> in a metric space <m>(X,d)</m> has a limit <m>L \in X</m> if
-    <m>\lim d(a_n,L) = 0</m> <mdash/> or that the sequence
-    <m>d(a_n,L)</m> of real numbers has a limit of <m>0</m>.
-    Just as with sequences of real numbers,
-    when a sequence <m>(a_n)</m> has a limit <m>L</m>,
-    we say that the sequence <m>(a_n)</m>
-    <term>converges</term> to <m>L</m>,
-    or that <m>L</m> is a limit of the sequence <m>(a_n)</m>.
+    Dengan kata lain,
+    suatu barisan <m>(a_n)</m> di ruang metrik <m>(X,d)</m> mempunyai limit <m>L \in X</m> jika
+    <m>\lim d(a_n,L) = 0</m> <mdash/> yakni, barisan bilangan real
+    <m>d(a_n,L)</m> mempunyai limit <m>0</m>.
+    Sama seperti pada barisan bilangan real,
+    ketika suatu barisan <m>(a_n)</m> mempunyai limit <m>L</m>,
+    kita mengatakan bahwa barisan <m>(a_n)</m>
+    <term>konvergen</term> ke <m>L</m>,
+    atau bahwa <m>L</m> merupakan limit barisan <m>(a_n)</m>.
   </p>
 
   <exploration>
@@ -192,9 +192,9 @@
       <task>
         <statement>
           <p>
-            Explain why the sequence <m>\left(\frac{1}{n}\right)</m> converges to 0 in <m>\R</m> using the Euclidean metric <m>d_E</m>, where
+            Jelaskan mengapa barisan <m>\left(\frac{1}{n}\right)</m> konvergen ke 0 di <m>\R</m> dengan menggunakan metrik Euklides <m>d_E</m>, yakni
             <me>
-              d_E(a,y) = | x-y |
+              d_E(x,y) = | x-y |
             </me>.
           </p>
         </statement>
@@ -202,29 +202,29 @@
       <task>
         <statement>
           <p>
-            Consider the sequence <m>(a_n) = \left(\left(\frac{1}{n}, \frac{1}{n+1} \right)\right)</m> in <m>(\R^2, d_T)</m>,
-            where <m>d_T</m> is the taxicab metric
+            Perhatikan barisan <m>(a_n) = \left(\left(\frac{1}{n}, \frac{1}{n+1} \right)\right)</m> di <m>(\R^2, d_T)</m>,
+            dengan <m>d_T</m> adalah metrik taksi yang didefinisikan oleh
             <me>
-              d_T((x_1, x_2), (y_1, y_1)) = | x_1-y_1| + | x_2-y_2 |
+              d_T((x_1, x_2), (y_1, y_2)) = | x_1-y_1| + | x_2-y_2 |
             </me>.
-            Does the sequence <m>(a_n)</m> converge?
-            If so, find its limit and prove that your candidate is the limit.
-            If not, explain why.
+            Apakah barisan <m>(a_n)</m> konvergen?
+            Jika ya, tentukan limitnya dan buktikan bahwa nilai yang Anda ajukan memang merupakan limit barisan tersebut.
+            Jika tidak, jelaskan alasannya.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>(b_n) = \left((2n,
-            n^2)\right)</m> in the metric space <m>(\R^2, d)</m>,
-            where <m>d</m> is the discrete metric defined by
+            Misalkan <m>(b_n) = \left((2n,
+            n^2)\right)</m> di ruang metrik <m>(\R^2, d)</m>,
+            dengan <m>d</m> adalah metrik diskret yang didefinisikan oleh
             <me>
-              d(x,y) = \begin{cases}0 \amp \text{ if }  x=y \\ 1 \amp \text{ if }  x \neq y. \end{cases}
+              d(x,y) = \begin{cases}0 \amp \text{ jika }  x=y \\ 1 \amp \text{ jika }  x \neq y. \end{cases}
             </me>
-            Does the sequence <m>(b_n)</m> converge?
-            If so, find its limit and prove that your candidate is the limit.
-            If not, explain why.
+            Apakah barisan <m>(b_n)</m> konvergen?
+            Jika ya, tentukan limitnya dan buktikan bahwa nilai yang Anda ajukan memang merupakan limit barisan tersebut.
+            Jika tidak, jelaskan alasannya.
           </p>
         </statement>
       </task>

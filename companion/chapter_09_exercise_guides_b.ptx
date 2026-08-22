@@ -1,0 +1,536 @@
+<section xml:id="o003-c90-ch09-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian kedua</title>
+
+  <p>
+    Empat belas panduan berikut berkorespondensi, dalam urutan sumber, dengan
+    empat belas perintah terakhir pada latihan penutup Bab 9. ID panduan
+    berlanjut dari <c>o003-c90-ch09-guide-31</c> sampai
+    <c>o003-c90-ch09-guide-44</c>. Materi ini merupakan uraian asli untuk
+    pembelajaran mandiri dan tersedia sebagai bagian komponen CC BY 4.0,
+    terpisah dari turunan GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch09-guide-31">
+    <title>Hukum limit untuk hasil bagi</title>
+    <statement>
+      <p>
+        Untuk perintah tentang <m>a_n/b_n</m>, buktikan hukum limit hasil
+        bagi ketika <m>a_n\to a</m>, <m>b_n\to b\neq0</m>, dan setiap
+        <m>b_n\neq0</m>. Rubrik: terlebih dahulu batasi penyebut menjauhi
+        nol, lalu pisahkan selisih hasil bagi menjadi dua suku.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-31-hint">
+      <p>
+        Tahap 1: akhirnya <m>|b_n-b|\lt |b|/2</m>, sehingga
+        <m>|b_n|\geq |b|/2</m>. Tahap 2: tambahkan dan kurangkan
+        <m>a/b_n</m> sebelum memakai ketaksamaan segitiga.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-31-answer">
+      <p>
+        Barisan hasil bagi konvergen dan
+        <m>\lim(a_n/b_n)=a/b</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-31-solution">
+      <p>
+        Karena <m>b_n\to b\neq0</m>, ada <m>N_0</m> sehingga
+        <m>|b_n-b|\lt |b|/2</m> bagi <m>n\geq N_0</m>; akibatnya
+        <m>|b_n|\geq |b|/2</m>. Untuk indeks tersebut,
+        <me>
+          \left|\frac{a_n}{b_n}-\frac{a}{b}\right|
+          \leq \frac{2}{|b|}|a_n-a|
+          +\frac{2|a|}{|b|^2}|b_n-b|.
+        </me>
+        Jika <m>a=0</m>, suku kedua hilang. Jika tidak, pilih ambang bagi
+        kedua barisan sehingga masing-masing suku di ruas kanan lebih kecil
+        dari <m>\epsilon/2</m>, lalu ambil maksimum bersama <m>N_0</m>.
+        Maka selisih hasil bagi lebih kecil dari <m>\epsilon</m> untuk semua
+        indeks sesudah ambang itu, yang membuktikan limit yang dinyatakan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-32">
+    <title>Hasil kali fungsi kontinu</title>
+    <statement>
+      <p>
+        Pada perintah berikutnya, buktikan bahwa <m>fg</m> kontinu apabila
+        <m>f,g:\R\to\R</m> kontinu. Rubrik: gunakan pencirian sekuensial
+        dan hukum limit hasil kali yang baru dibuktikan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-32-hint">
+      <p>
+        Ambil titik <m>x</m> dan sebarang barisan <m>x_n\to x</m>.
+        Kekontinuan memberi dua limit citra; kalikan kedua limit itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-32-answer">
+      <p>
+        Untuk setiap <m>x_n\to x</m>, berlaku
+        <m>f(x_n)g(x_n)\to f(x)g(x)</m>; jadi <m>fg</m> kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-32-solution">
+      <p>
+        Tetapkan <m>x\in\R</m> dan ambil sebarang barisan
+        <m>(x_n)</m> dengan <m>x_n\to x</m>. Karena <m>f</m> dan
+        <m>g</m> kontinu, teorema pencirian sekuensial memberi
+        <m>f(x_n)\to f(x)</m> dan <m>g(x_n)\to g(x)</m>. Hukum limit
+        hasil kali kemudian memberi
+        <me>
+          (fg)(x_n)=f(x_n)g(x_n)\longrightarrow f(x)g(x)=(fg)(x).
+        </me>
+        Sifat ini berlaku bagi setiap barisan yang menuju <m>x</m>, maka
+        <m>fg</m> kontinu di <m>x</m>. Karena titiknya sebarang, fungsi itu
+        kontinu di seluruh <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-33">
+    <title>Hasil bagi fungsi kontinu</title>
+    <statement>
+      <p>
+        Buktikan langsung dari definisi bahwa <m>f/g</m> kontinu jika
+        <m>f</m> dan <m>g</m> kontinu serta <m>g(x)\neq0</m> untuk semua
+        <m>x</m>. Rubrik: di sekitar titik tetap, buat <m>|g(x)|</m>
+        memiliki batas bawah positif sebelum menaksir hasil bagi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-33-hint">
+      <p>
+        Untuk titik <m>x_0</m>, gunakan kekontinuan <m>g</m> agar
+        <m>|g(x)-g(x_0)|\lt |g(x_0)|/2</m>. Setelah itu uraikan selisih
+        <m>f(x)/g(x)-f(x_0)/g(x_0)</m> menjadi dua bagian.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-33-answer">
+      <p>
+        Fungsi <m>f/g</m> kontinu di setiap <m>x_0</m> karena penyebutnya
+        tetap menjauhi nol pada suatu lingkungan <m>x_0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-33-solution">
+      <p>
+        Tetapkan <m>x_0</m> dan tulis <m>g_0=g(x_0)\neq0</m>. Dari
+        kekontinuan <m>g</m>, pilih lingkungan tempat
+        <m>|g(x)-g_0|\lt |g_0|/2</m>; di sana
+        <m>|g(x)|\geq |g_0|/2</m>. Untuk <m>x</m> di lingkungan itu,
+        <me>
+          \left|\frac{f(x)}{g(x)}-\frac{f(x_0)}{g_0}\right|
+          \leq \frac{2}{|g_0|}|f(x)-f(x_0)|
+          +\frac{2|f(x_0)|}{|g_0|^2}|g(x)-g_0|.
+        </me>
+        Dengan kekontinuan kedua fungsi, persempit lingkungan sehingga suku
+        pertama kurang dari <m>\epsilon/2</m> dan suku kedua juga kurang dari
+        <m>\epsilon/2</m> (suku kedua nol jika <m>f(x_0)=0</m>). Maka
+        selisih hasil bagi kurang dari <m>\epsilon</m>. Ini adalah definisi
+        kekontinuan <m>f/g</m> di <m>x_0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-34">
+    <title>Konvergensi koordinat dalam bidang</title>
+    <statement>
+      <p>
+        Untuk barisan <m>c_n=(a_n,b_n)</m> dalam bidang Euklides, buktikan
+        bahwa <m>c_n\to(a,b)</m> tepat ketika kedua barisan koordinat menuju
+        <m>a</m> dan <m>b</m>. Rubrik: buktikan kedua arah dengan taksiran
+        jarak Euklides.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-34-hint">
+      <p>
+        Satu arah memakai <m>|a_n-a|\leq d_E(c_n,(a,b))</m>. Untuk arah
+        balik, buat kedua selisih koordinat lebih kecil dari
+        <m>\epsilon/\sqrt2</m> secara serentak.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-34-answer">
+      <p>
+        Konvergensi Euklides di <m>\R^2</m> ekuivalen dengan konvergensi
+        masing-masing koordinat.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-34-solution">
+      <p>
+        Jika <m>c_n\to(a,b)</m>, maka setiap selisih koordinat tidak melebihi
+        <m>d_E(c_n,(a,b))</m>, sehingga keduanya menuju nol. Sebaliknya,
+        andaikan <m>a_n\to a</m> dan <m>b_n\to b</m>. Untuk
+        <m>\epsilon\gt0</m>, pilih satu ambang sesudah kedua selisih mutlak
+        kurang dari <m>\epsilon/\sqrt2</m>. Maka
+        <me>
+          d_E(c_n,(a,b))
+          =\sqrt{(a_n-a)^2+(b_n-b)^2}\lt\epsilon.
+        </me>
+        Jadi barisan pasangan menuju pasangan limitnya, dan kedua implikasi
+        telah dibuktikan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-35">
+    <title>Fungsi rasional–irasional</title>
+    <statement>
+      <p>
+        Untuk fungsi yang bernilai <m>x</m> pada bilangan rasional dan
+        <m>0</m> pada bilangan irasional, tentukan tepat semua titik
+        kekontinuannya. Rubrik: buktikan kekontinuan pada calon titik, lalu
+        gunakan barisan rasional atau irasional untuk setiap titik lain.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-35-hint">
+      <p>
+        Selalu berlaku <m>|f(x)|\leq |x|</m>. Di titik tak nol, gunakan
+        kerapatan bilangan rasional dan irasional untuk memilih barisan dari
+        jenis yang membuat nilai fungsi tidak menuju nilai di titik itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-35-answer">
+      <p>
+        Fungsi tersebut kontinu tepat di <m>0</m> dan tidak kontinu di setiap
+        titik real tak nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-35-solution">
+      <p>
+        Karena <m>f(0)=0</m> dan <m>|f(x)-f(0)|\leq |x|</m>, fungsi kontinu
+        di <m>0</m>. Jika <m>a\neq0</m> rasional, ambil barisan irasional
+        <m>x_n\to a</m>; maka <m>f(x_n)=0</m>, tetapi
+        <m>f(a)=a\neq0</m>. Jika <m>a\neq0</m> irasional, ambil barisan
+        rasional <m>x_n\to a</m>; maka <m>f(x_n)=x_n\to a</m>, tetapi
+        <m>f(a)=0</m>. Pencirian sekuensial menyangkal kekontinuan dalam
+        kedua kasus, sehingga hanya <m>0</m> yang tersisa.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-36">
+    <title>Merancang himpunan titik kontinu berhingga</title>
+    <statement>
+      <p>
+        Modifikasi konstruksi sebelumnya agar fungsi kontinu tepat di
+        <m>0</m> dan <m>1</m>, lalu perluas ke sebarang himpunan berhingga
+        yang telah ditentukan. Rubrik: gunakan polinom yang himpunan nolnya
+        tepat sama dengan titik-titik sasaran.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-36-hint">
+      <p>
+        Untuk <m>\{0,1\}</m>, gunakan faktor <m>x(x-1)</m>. Untuk
+        <m>F=\{s_1,\ldots,s_k\}</m>, gunakan
+        <m>P(x)=\prod_{j=1}^k(x-s_j)</m> pada bilangan rasional dan nol pada
+        bilangan irasional.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-36-answer">
+      <p>
+        Fungsi <m>P(x)</m> pada rasional dan <m>0</m> pada irasional kontinu
+        tepat pada himpunan nol polinom <m>P</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-36-solution">
+      <p>
+        Ambil <m>P(x)=x(x-1)</m> dan definisikan <m>g(x)=P(x)</m> bila
+        <m>x</m> rasional, serta <m>g(x)=0</m> bila <m>x</m> irasional.
+        Di <m>0</m> dan <m>1</m>, kekontinuan <m>P</m> dan taksiran
+        <m>|g(x)|\leq |P(x)|</m> memberi kekontinuan <m>g</m>. Di titik
+        lain, barisan rasional dan irasional memberi dua limit citra berbeda.
+        Argumen sama berlaku bagi
+        <m>P(x)=\prod_{s\in F}(x-s)</m>: fungsi hasil konstruksi kontinu
+        tepat pada nol-nol <m>P</m>, yaitu tepat pada himpunan berhingga
+        <m>F</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-37">
+    <title>Limit barisan geometri</title>
+    <statement>
+      <p>
+        Untuk <m>0\leq a\lt1</m>, buktikan bahwa <m>a^n\to0</m>.
+        Rubrik: pisahkan kasus <m>a=0</m>; untuk <m>0\lt a\lt1</m>, hasilkan
+        ambang indeks yang bergantung pada <m>\epsilon</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-37-hint">
+      <p>
+        Tulis <m>1/a=1+h</m> dengan <m>h\gt0</m>. Ketaksamaan Bernoulli
+        memberi <m>(1+h)^n\geq1+nh</m>, sehingga
+        <m>a^n\leq1/(1+nh)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-37-answer">
+      <p>
+        Barisan <m>(a^n)</m> konvergen ke <m>0</m> untuk setiap
+        <m>0\leq a\lt1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-37-solution">
+      <p>
+        Jika <m>a=0</m>, semua suku bernilai nol. Jika
+        <m>0\lt a\lt1</m>, tulis <m>1/a=1+h</m> dengan <m>h\gt0</m>.
+        Untuk <m>\epsilon\gt0</m>, pilih <m>N</m> sehingga
+        <m>1/(1+Nh)\lt\epsilon</m>. Bagi <m>n\geq N</m>, ketaksamaan
+        Bernoulli memberi
+        <me>
+          0\leq a^n=\frac{1}{(1+h)^n}
+          \leq\frac{1}{1+nh}\leq\frac{1}{1+Nh}\lt\epsilon.
+        </me>
+        Ini tepat definisi <m>a^n\to0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-38">
+    <title>Konvergensi titik demi titik bukan konvergensi seragam</title>
+    <statement>
+      <p>
+        Untuk <m>f_n(x)=x^n</m> pada <m>[0,1]</m>, tentukan apakah
+        <m>f_n</m> konvergen dalam metrik supremum ke fungsi yang nol pada
+        <m>[0,1)</m> dan satu di <m>1</m>. Rubrik: hitung supremum selisih,
+        bukan hanya limit pada setiap titik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-38-hint">
+      <p>
+        Pada <m>x=1</m> selisihnya nol, tetapi untuk <m>x\lt1</m> selisihnya
+        <m>x^n</m>. Seberapa besar supremum <m>x^n</m> ketika
+        <m>0\leq x\lt1</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-38-answer">
+      <p>
+        Tidak. Untuk setiap <m>n</m>, jarak supremum dari <m>f_n</m> ke
+        fungsi calon limit itu sama dengan <m>1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-38-solution">
+      <p>
+        Jika <m>x\lt1</m>, fungsi calon limit bernilai nol sehingga
+        <m>|f_n(x)-f(x)|=x^n</m>; pada <m>x=1</m> selisihnya nol. Walaupun
+        nilai <m>1</m> tidak dicapai pada interval setengah terbuka
+        <m>[0,1)</m>, nilai <m>x^n</m> dapat dibuat sedekat apa pun dengan
+        <m>1</m> dengan memilih <m>x</m> cukup dekat ke <m>1</m>. Jadi
+        <me>d(f_n,f)=\sup_{x\in[0,1]}|f_n(x)-f(x)|=1</me>
+        untuk setiap <m>n</m>. Jarak itu tidak menuju nol, maka tidak ada
+        konvergensi dalam metrik supremum.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-39">
+    <title>Limit dalam metrik integral</title>
+    <statement>
+      <p>
+        Pandang kembali <m>f_n(x)=x^n</m>, kini di <m>C[0,1]</m> dengan
+        metrik integral. Tentukan apakah barisan memiliki limit di ruang itu.
+        Rubrik: uji fungsi nol yang kontinu dengan menghitung integral secara
+        tepat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-39-hint">
+      <p>
+        Hitung <m>d(f_n,0)=\int_0^1x^n\,dx</m>. Limit titik demi titik yang
+        tak kontinu bukan calon dalam <m>C[0,1]</m>, tetapi metrik integral
+        dapat memiliki limit lain pada satu titik yang berbeda.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-39-answer">
+      <p>
+        Ya. Dalam metrik integral, <m>f_n</m> konvergen ke fungsi nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-39-solution">
+      <p>
+        Fungsi nol berada dalam <m>C[0,1]</m>. Karena <m>x^n\geq0</m>,
+        <me>
+          d(f_n,0)=\int_0^1|x^n-0|\,dx
+          =\int_0^1x^n\,dx=\frac{1}{n+1}\longrightarrow0.
+        </me>
+        Jadi <m>f_n\to0</m> dalam metrik integral. Tidak ada konflik dengan
+        limit titik demi titik yang bernilai satu di <m>1</m>: perubahan pada
+        satu titik tidak memengaruhi integral, sedangkan metrik supremum peka
+        terhadap nilai-nilai yang mendekati titik itu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-40">
+    <title>Barisan menurun dan infimum</title>
+    <statement>
+      <p>
+        Nilai pernyataan bahwa barisan real yang menurun dan terbatas di bawah
+        konvergen ke infimum himpunan sukunya. Rubrik: gunakan sifat penentu
+        infimum untuk menemukan satu suku di bawah <m>L+\epsilon</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-40-hint">
+      <p>
+        Tulis <m>L=\inf\{a_n:n\in\Z^+\}</m>. Ada <m>N</m> dengan
+        <m>a_N\lt L+\epsilon</m>; kemotonan mengendalikan semua suku sesudahnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-40-answer">
+      <p>
+        Pernyataan benar: barisan tersebut konvergen ke infimum himpunan
+        semua sukunya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-40-solution">
+      <p>
+        Karena <m>L</m> batas bawah, <m>L\leq a_n</m> bagi semua <m>n</m>.
+        Untuk <m>\epsilon\gt0</m>, bilangan <m>L+\epsilon</m> bukan batas
+        bawah; maka ada <m>N</m> dengan <m>a_N\lt L+\epsilon</m>. Karena
+        barisan menurun, bagi <m>n\geq N</m> berlaku
+        <m>L\leq a_n\leq a_N\lt L+\epsilon</m>. Dengan demikian
+        <m>|a_n-L|\lt\epsilon</m>, sehingga <m>a_n\to L</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-41">
+    <title>Membangun barisan dari perpotongan bola</title>
+    <statement>
+      <p>
+        Nilai pernyataan: jika setiap bola <m>B(a,r)</m> bertemu
+        subhimpunan tak kosong <m>A</m>, maka ada barisan di <m>A</m> yang
+        konvergen ke <m>a</m>. Rubrik: pilih satu titik dari bola berjari-jari
+        <m>1/n</m> untuk setiap <m>n</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-41-hint">
+      <p>
+        Pilih <m>a_n\in A\cap B(a,1/n)</m>. Definisi bola langsung memberi
+        batas atas untuk <m>d(a_n,a)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-41-answer">
+      <p>
+        Pernyataan benar; pilihan <m>a_n\in A\cap B(a,1/n)</m> menghasilkan
+        barisan yang konvergen ke <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-41-solution">
+      <p>
+        Hipotesis menjamin bahwa <m>A\cap B(a,1/n)</m> tidak kosong untuk
+        setiap <m>n</m>. Pilih <m>a_n</m> dari perpotongan itu. Maka
+        <m>d(a_n,a)\lt1/n</m>. Untuk <m>\epsilon\gt0</m>, pilih
+        <m>N\gt1/\epsilon</m>. Jika <m>n\geq N</m>, maka
+        <m>d(a_n,a)\lt1/n\leq1/N\lt\epsilon</m>. Jadi barisan yang seluruh
+        sukunya berada di <m>A</m> tersebut konvergen ke <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-42">
+    <title>Membandingkan supremum dan infimum</title>
+    <statement>
+      <p>
+        Nilai pernyataan bahwa <m>\sup(S)\leq\inf(R)</m> apabila setiap
+        unsur <m>S</m> tidak melebihi setiap unsur <m>R</m>. Rubrik: baca
+        setiap unsur <m>R</m> sebagai batas atas <m>S</m>, lalu balikkan
+        peran batas itu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-42-hint">
+      <p>
+        Untuk setiap <m>y\in R</m>, berlaku <m>\sup(S)\leq y</m>. Artinya,
+        <m>\sup(S)</m> sendiri merupakan batas bawah bagi <m>R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-42-answer">
+      <p>
+        Pernyataan benar: syarat urutan memaksa
+        <m>\sup(S)\leq\inf(R)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-42-solution">
+      <p>
+        Tetapkan <m>y\in R</m>. Karena <m>x\leq y</m> untuk semua
+        <m>x\in S</m>, bilangan <m>y</m> adalah batas atas <m>S</m>;
+        sehingga <m>\sup(S)\leq y</m>. Ini berlaku bagi setiap
+        <m>y\in R</m>, jadi <m>\sup(S)</m> adalah batas bawah <m>R</m>.
+        Karena <m>\inf(R)</m> adalah batas bawah terbesar, diperoleh
+        <m>\sup(S)\leq\inf(R)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-43">
+    <title>Menguji klaim limit dalam metrik pecahan</title>
+    <statement>
+      <p>
+        Nilai klaim bahwa <m>(1/n)</m> menuju <m>0</m> dalam metrik pada
+        pecahan rasional bentuk paling sederhana yang membandingkan pembilang
+        dan penyebut. Rubrik: tulis representasi paling sederhana bagi
+        <m>1/n</m> dan <m>0</m>, lalu hitung jaraknya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-43-hint">
+      <p>
+        Gunakan <m>1/n</m> dan <m>0/1</m>. Metrik memberi maksimum antara
+        selisih pembilang dan selisih penyebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-43-answer">
+      <p>
+        Klaim salah, sebab <m>d(1/n,0)=\max\{1,n-1\}</m>, yang tidak menuju
+        nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-43-solution">
+      <p>
+        Pecahan <m>1/n</m> sudah dalam bentuk paling sederhana dan nol ditulis
+        sebagai <m>0/1</m>. Maka
+        <me>
+          d\left(\frac1n,0\right)
+          =\max\{|1-0|,|n-1|\}=\max\{1,n-1\}.
+        </me>
+        Nilai ini sekurang-kurangnya <m>1</m> untuk semua <m>n</m>, bahkan
+        bertambah tanpa batas. Karena jarak ke calon limit tidak menuju nol,
+        barisan tersebut tidak konvergen ke <m>0</m> dalam metrik ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-44">
+    <title>Konvergensi dalam metrik diskret</title>
+    <statement>
+      <p>
+        Nilai pernyataan bahwa barisan dalam ruang bermetrik diskret konvergen
+        tepat ketika barisan itu pada akhirnya konstan. Rubrik: untuk satu
+        arah pilih toleransi yang lebih kecil dari <m>1</m>; arah sebaliknya
+        mengikuti definisi secara langsung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-44-hint">
+      <p>
+        Jika <m>a_n\to a</m>, gunakan <m>\epsilon=1/2</m>. Dalam metrik
+        diskret, ketaksamaan <m>d(a_n,a)\lt1/2</m> memaksa
+        <m>a_n=a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-44-answer">
+      <p>
+        Pernyataan benar: barisan konvergen dalam metrik diskret jika dan hanya
+        jika pada akhirnya semua sukunya sama dengan limitnya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-44-solution">
+      <p>
+        Andaikan <m>a_n\to a</m>. Untuk <m>\epsilon=1/2</m>, ada
+        <m>N</m> sehingga <m>d(a_n,a)\lt1/2</m> bagi semua
+        <m>n\geq N</m>. Jarak diskret hanya bernilai nol atau satu, maka
+        harus <m>d(a_n,a)=0</m>, yakni <m>a_n=a</m>, sesudah <m>N</m>.
+        Sebaliknya, jika <m>a_n=a</m> sesudah suatu ambang, maka bagi setiap
+        <m>\epsilon\gt0</m> jarak <m>d(a_n,a)=0\lt\epsilon</m> sesudah
+        ambang tersebut. Jadi barisan konvergen ke <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

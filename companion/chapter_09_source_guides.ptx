@@ -1,0 +1,660 @@
+<section xml:id="o003-c90-ch09-source-guides" xml:lang="id-ID">
+  <title>Panduan konsep dan tugas sumber</title>
+
+  <p>
+    Enam belas panduan berikut mengikuti urutan sumber: tiga tugas eksplorasi
+    pada Pendahuluan, empat langkah pembuktian ketunggalan limit, lima langkah
+    arah balik teorema, dan empat
+    tugas tentang fungsi <m>\sin(1/x)</m>. Kerjakan dahulu butir pada bab
+    utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap
+    pernyataan di bawah memparafrasakan sasaran sumber dan memberi rubrik
+    keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang
+    tersedia di bawah Creative Commons Attribution 4.0 International
+    (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch09-guide-01">
+    <title>Barisan kebalikan dalam garis Euklides</title>
+    <statement>
+      <p>
+        Pada tugas pertama eksplorasi Pendahuluan, buktikan dari definisi
+        bahwa barisan <m>(1/n)</m> konvergen ke <m>0</m> dalam
+        <m>(\R,d_E)</m>. Rubrik: mulai dengan <m>\epsilon\gt0</m>, pilih
+        satu bilangan bulat positif <m>N</m>, dan periksa pertidaksamaan
+        jarak untuk setiap <m>n\geq N</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-01-hint">
+      <p>
+        Tahap 1: sederhanakan <m>d_E(1/n,0)</m>. Tahap 2: gunakan sifat
+        Archimedes untuk memilih <m>N\gt1/\epsilon</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-01-answer">
+      <p>
+        Barisan <m>(1/n)</m> konvergen ke <m>0</m>; pilihan
+        <m>N\gt1/\epsilon</m> memenuhi definisi limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-01-solution">
+      <p>
+        Ambil <m>\epsilon\gt0</m>. Menurut sifat Archimedes, ada
+        <m>N\in\Z^+</m> dengan <m>N\gt1/\epsilon</m>. Jika
+        <m>n\geq N</m>, maka
+        <me>
+          d_E(1/n,0)=|1/n|=1/n\leq1/N\lt\epsilon.
+        </me>
+        Jadi, untuk setiap toleransi positif terdapat indeks awal yang membuat
+        semua suku sesudahnya berada dalam bola yang diminta. Inilah tepat
+        definisi <m>1/n\to0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-02">
+    <title>Konvergensi dalam metrik taksi</title>
+    <statement>
+      <p>
+        Pada tugas kedua eksplorasi Pendahuluan, tentukan limit barisan
+        <m>a_n=(1/n,1/(n+1))</m> dalam <m>(\R^2,d_T)</m> dan buktikan
+        klaim tersebut langsung dari definisi. Rubrik: ajukan titik kandidat,
+        hitung jarak taksi, lalu pilih <m>N</m> yang mengendalikan kedua
+        koordinat sekaligus.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-02-hint">
+      <p>
+        Tahap 1: kedua koordinat menuju <m>0</m>, jadi uji <m>(0,0)</m>.
+        Tahap 2: gunakan
+        <m>1/n+1/(n+1)\lt2/n</m> dan pilih
+        <m>N\gt2/\epsilon</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-02-answer">
+      <p>
+        Ya. Barisan tersebut konvergen ke <m>(0,0)</m> dalam metrik taksi.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-02-solution">
+      <p>
+        Ambil <m>\epsilon\gt0</m> dan pilih
+        <m>N\in\Z^+</m> sehingga <m>N\gt2/\epsilon</m>. Untuk
+        <m>n\geq N</m>,
+        <me>
+          d_T(a_n,(0,0))
+          =\left|\frac1n\right|+\left|\frac1{n+1}\right|
+          \lt\frac2n\leq\frac2N\lt\epsilon.
+        </me>
+        Pilihan <m>N</m> hanya bergantung pada <m>\epsilon</m>, dan
+        pertidaksamaan berlaku bagi seluruh ekor barisan. Karena itu
+        <m>a_n\to(0,0)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-03">
+    <title>Barisan yang tidak konvergen dalam metrik diskret</title>
+    <statement>
+      <p>
+        Pada tugas ketiga eksplorasi Pendahuluan, tentukan apakah
+        <m>b_n=(2n,n^2)</m> konvergen dalam <m>\R^2</m> yang dilengkapi
+        metrik diskret. Rubrik: gunakan sebuah toleransi yang lebih kecil
+        daripada <m>1</m>, jelaskan akibatnya bagi ekor barisan, lalu
+        bandingkan dengan bentuk eksplisit <m>b_n</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-03-hint">
+      <p>
+        Tahap 1: dalam metrik diskret,
+        <m>d(x,L)\lt1/2</m> memaksa <m>x=L</m>. Tahap 2: periksa apakah
+        <m>(2n,n^2)</m> pada akhirnya konstan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-03-answer">
+      <p>
+        Tidak. Barisan <m>(b_n)</m> divergen dalam metrik diskret karena
+        tidak pernah menjadi konstan pada suatu ekor.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-03-solution">
+      <p>
+        Andaikan <m>b_n\to L</m> untuk suatu <m>L\in\R^2</m>. Terapkan
+        definisi limit dengan <m>\epsilon=1/2</m>. Harus ada
+        <m>N\in\Z^+</m> sehingga <m>d(b_n,L)\lt1/2</m> bagi setiap
+        <m>n\geq N</m>. Nilai metrik diskret hanya <m>0</m> atau <m>1</m>,
+        sehingga ketaksamaan itu memaksa <m>b_n=L</m> bagi seluruh
+        <m>n\geq N</m>. Namun koordinat pertama <m>b_n</m> adalah
+        <m>2n</m>, jadi <m>b_n\neq b_{n+1}</m> untuk setiap <m>n</m>.
+        Kontradiksi ini menunjukkan bahwa limit tidak ada.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-04">
+    <title>Indeks untuk limit pertama</title>
+    <statement>
+      <p>
+        Pada langkah pertama kegiatan ketunggalan limit, jelaskan mengapa
+        asumsi <m>a_n\to a</m> menghasilkan bilangan bulat positif
+        <m>N</m> dengan
+        <m>d(a_n,a)\lt\epsilon/2</m> untuk semua <m>n\geq N</m>.
+        Rubrik: tunjukkan definisi yang dipakai dan toleransi yang
+        disubstitusikan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-04-hint">
+      <p>
+        Tahap 1: karena <m>\epsilon\gt0</m>, juga
+        <m>\epsilon/2\gt0</m>. Tahap 2: masukkan
+        <m>\epsilon/2</m> sebagai toleransi dalam definisi
+        <m>a_n\to a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-04-answer">
+      <p>
+        Pernyataan itu merupakan definisi konvergensi <m>a_n\to a</m> yang
+        diterapkan pada toleransi positif <m>\epsilon/2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-04-solution">
+      <p>
+        Definisi <m>a_n\to a</m> menyatakan bahwa untuk setiap
+        <m>\eta\gt0</m> terdapat <m>N\in\Z^+</m> sehingga
+        <m>d(a_n,a)\lt\eta</m> apabila <m>n\geq N</m>. Ambil
+        <m>\eta=\epsilon/2</m>, yang positif. Maka definisi langsung memberi
+        <m>N</m> dengan sifat yang diminta. Indeks ini boleh bergantung pada
+        <m>\epsilon</m>, tetapi tidak pada <m>n</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-05">
+    <title>Indeks untuk limit kedua</title>
+    <statement>
+      <p>
+        Pada langkah kedua kegiatan ketunggalan limit, jelaskan mengapa
+        asumsi <m>a_n\to a'</m> menghasilkan bilangan bulat positif
+        <m>N'</m> dengan
+        <m>d(a_n,a')\lt\epsilon/2</m> untuk semua <m>n\geq N'</m>.
+        Rubrik: terapkan definisi pada limit yang kedua tanpa menganggap
+        bahwa indeksnya harus sama dengan indeks untuk <m>a</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-05-hint">
+      <p>
+        Tahap 1: gunakan kembali toleransi <m>\epsilon/2</m>. Tahap 2:
+        definisi konvergensi boleh menghasilkan indeks baru <m>N'</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-05-answer">
+      <p>
+        Pernyataan itu mengikuti dari <m>a_n\to a'</m> dengan mengambil
+        toleransi <m>\epsilon/2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-05-solution">
+      <p>
+        Karena <m>a_n\to a'</m>, untuk setiap <m>\eta\gt0</m> ada
+        <m>N'\in\Z^+</m> sehingga
+        <m>d(a_n,a')\lt\eta</m> bagi semua <m>n\geq N'</m>. Pilih
+        <m>\eta=\epsilon/2</m>. Kita memperoleh indeks <m>N'</m> yang
+        diperlukan. Tidak ada alasan bahwa <m>N=N'</m>; langkah berikutnya
+        akan menyatukan kedua ambang tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-06">
+    <title>Menyatukan dua ambang indeks</title>
+    <statement>
+      <p>
+        Pada langkah ketiga kegiatan ketunggalan limit, tetapkan
+        <m>m=\max\{N,N'\}</m> dan tentukan apa yang dapat disimpulkan tentang
+        <m>d(a_m,a)</m> serta <m>d(a_m,a')</m>. Rubrik: hubungkan definisi
+        maksimum dengan kedua syarat ekor yang telah diperoleh.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-06-hint">
+      <p>
+        Tahap 1: dari definisi maksimum, <m>m\geq N</m> dan
+        <m>m\geq N'</m>. Tahap 2: terapkan masing-masing kesimpulan hanya
+        pada ambang yang sesuai.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-06-answer">
+      <p>
+        Kedua pertidaksamaan berlaku sekaligus:
+        <m>d(a_m,a)\lt\epsilon/2</m> dan
+        <m>d(a_m,a')\lt\epsilon/2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-06-solution">
+      <p>
+        Karena <m>m=\max\{N,N'\}</m>, berlaku <m>m\geq N</m>. Sifat yang
+        berasal dari <m>a_n\to a</m> karenanya memberi
+        <m>d(a_m,a)\lt\epsilon/2</m>. Demikian pula <m>m\geq N'</m>, maka
+        sifat yang berasal dari <m>a_n\to a'</m> memberi
+        <m>d(a_m,a')\lt\epsilon/2</m>. Pemilihan maksimum memungkinkan satu
+        suku barisan memenuhi kedua kendali secara bersamaan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-07">
+    <title>Menuntaskan ketunggalan limit</title>
+    <statement>
+      <p>
+        Pada langkah terakhir kegiatan ketunggalan limit, gunakan
+        ketaksamaan segitiga untuk memperoleh
+        <m>d(a,a')\lt\epsilon</m>, lalu jelaskan mengapa hal itu memaksa
+        <m>a=a'</m>. Rubrik: tulis rantai pertidaksamaan dan tutup argumen
+        yang memakai <m>\epsilon\gt0</m> sebarang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-07-hint">
+      <p>
+        Tahap 1: sisipkan titik <m>a_m</m> di antara <m>a</m> dan
+        <m>a'</m>. Tahap 2: jika <m>d(a,a')\gt0</m>, coba pilih
+        <m>\epsilon=d(a,a')/2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-07-answer">
+      <p>
+        Ketaksamaan segitiga memberi
+        <m>d(a,a')\lt\epsilon</m> untuk setiap <m>\epsilon\gt0</m>; maka
+        <m>d(a,a')=0</m> dan sifat definit positif metrik memberi
+        <m>a=a'</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-07-solution">
+      <p>
+        Dengan suku <m>a_m</m> dari langkah sebelumnya,
+        <me>
+          d(a,a')\leq d(a,a_m)+d(a_m,a')
+          \lt\frac{\epsilon}{2}+\frac{\epsilon}{2}
+          =\epsilon.
+        </me>
+        Ini berlaku untuk setiap <m>\epsilon\gt0</m>. Andaikan
+        <m>r=d(a,a')\gt0</m>; memilih <m>\epsilon=r/2</m> akan memberi
+        <m>r\lt r/2</m>, suatu kontradiksi. Jadi <m>d(a,a')=0</m>, dan
+        aksioma metrik menyatakan <m>a=a'</m>. Dengan demikian limit barisan
+        dalam ruang metrik bersifat tunggal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-08">
+    <title>Meniadakan definisi kekontinuan</title>
+    <statement>
+      <p>
+        Pada langkah pertama arah balik teorema, andaikan <m>f</m> tidak
+        kontinu di <m>a</m> dan tuliskan bentuk berkuantor yang diperoleh.
+        Rubrik: nyatakan satu toleransi keluaran positif yang tetap, lalu
+        untuk setiap radius masukan hasilkan sebuah titik yang melanggar
+        implikasi kekontinuan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-08-hint">
+      <p>
+        Tahap 1: mulai dari
+        <m>\forall\epsilon\gt0\,\exists\delta\gt0\,\forall x</m>.
+        Tahap 2: ketika meniadakan implikasi, syarat jarak masukan menjadi
+        benar dan kesimpulan jarak keluaran menjadi salah.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-08-answer">
+      <p>
+        Ada <m>\epsilon_0\gt0</m> sehingga untuk setiap
+        <m>\delta\gt0</m> terdapat <m>x\in X</m> dengan
+        <m>d_X(x,a)\lt\delta</m> dan
+        <m>d_Y(f(x),f(a))\geq\epsilon_0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-08-solution">
+      <p>
+        Kekontinuan di <m>a</m> berarti
+        <me>
+          \forall\epsilon\gt0\ \exists\delta\gt0\ \forall x\in X,\quad
+          d_X(x,a)\lt\delta\Rightarrow
+          d_Y(f(x),f(a))\lt\epsilon.
+        </me>
+        Penyangkalannya adalah
+        <me>
+          \exists\epsilon_0\gt0\ \forall\delta\gt0\ \exists x\in X,\quad
+          d_X(x,a)\lt\delta\ \text{ dan }\
+          d_Y(f(x),f(a))\geq\epsilon_0.
+        </me>
+        Toleransi <m>\epsilon_0</m> dipilih sekali dan kemudian tetap;
+        titik pelanggar boleh bergantung pada <m>\delta</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-09">
+    <title>Memilih ambang bilangan bulat</title>
+    <statement>
+      <p>
+        Pada sublangkah pertama konstruksi barisan penyangkal, jelaskan
+        mengapa terdapat <m>K\in\Z^+</m> dengan
+        <m>1/K\lt\epsilon_0</m>, untuk toleransi tetap
+        <m>\epsilon_0\gt0</m> dari ketakkontinuan. Rubrik: sebutkan sifat
+        bilangan real yang menjamin pilihan tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-09-hint">
+      <p>
+        Tahap 1: ubah sasaran menjadi <m>K\gt1/\epsilon_0</m>. Tahap 2:
+        gunakan sifat Archimedes untuk menemukan bilangan bulat positif yang
+        lebih besar daripada bilangan real itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-09-answer">
+      <p>
+        Sifat Archimedes memberi <m>K\in\Z^+</m> dengan
+        <m>K\gt1/\epsilon_0</m>, sehingga
+        <m>1/K\lt\epsilon_0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-09-solution">
+      <p>
+        Karena <m>\epsilon_0\gt0</m>, bilangan
+        <m>1/\epsilon_0</m> terdefinisi. Sifat Archimedes menyatakan bahwa
+        untuk setiap bilangan real terdapat bilangan bulat positif yang lebih
+        besar daripadanya. Pilih
+        <m>K\in\Z^+</m> dengan <m>K\gt1/\epsilon_0</m>. Membalik kedua
+        bilangan positif membalik arah pertidaksamaan, sehingga
+        <m>1/K\lt\epsilon_0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-10">
+    <title>Memilih suku-suku penyangkal</title>
+    <statement>
+      <p>
+        Pada sublangkah kedua konstruksi, untuk setiap <m>k\gt K</m>
+        jelaskan mengapa dapat dipilih
+        <m>a_k\in B(a,1/k)</m> dengan
+        <m>d_Y(f(a_k),f(a))\geq\epsilon_0</m>. Rubrik: terapkan bentuk
+        berkuantor ketakkontinuan pada satu radius positif yang bergantung
+        pada <m>k</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-10-hint">
+      <p>
+        Tahap 1: untuk setiap <m>k\in\Z^+</m>, bilangan
+        <m>\delta_k=1/k</m> positif. Tahap 2: substitusikan
+        <m>\delta=\delta_k</m> ke pernyataan panduan 08.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-10-answer">
+      <p>
+        Negasi kekontinuan, diterapkan dengan <m>\delta=1/k</m>, menjamin
+        titik <m>a_k</m> yang berada dalam <m>B(a,1/k)</m> tetapi citranya
+        berjarak sekurang-kurangnya <m>\epsilon_0</m> dari <m>f(a)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-10-solution">
+      <p>
+        Untuk <m>k\gt K</m>, ambil <m>\delta=1/k\gt0</m>. Dari bentuk
+        ketakkontinuan diperoleh suatu <m>a_k\in X</m> yang memenuhi
+        <me>
+          d_X(a_k,a)\lt1/k
+          \quad\text{dan}\quad
+          d_Y(f(a_k),f(a))\geq\epsilon_0.
+        </me>
+        Ketaksamaan pertama persis berarti
+        <m>a_k\in B(a,1/k)</m>. Pilihan boleh berbeda untuk setiap
+        <m>k</m>; bersama-sama pilihan itu membentuk ekor barisan yang
+        dibutuhkan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-11">
+    <title>Membuktikan barisan penyangkal menuju titik pusat</title>
+    <statement>
+      <p>
+        Pada sublangkah ketiga konstruksi, pilih sembarang
+        <m>a_k\in B(a,1/k)</m> untuk <m>k\leq K</m>, lalu buktikan bahwa
+        barisan lengkap <m>(a_n)</m> konvergen ke <m>a</m>. Rubrik: mulai
+        dengan toleransi baru, pilih indeks awal, dan gunakan kendali
+        <m>d_X(a_n,a)\lt1/n</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-11-hint">
+      <p>
+        Tahap 1: untuk <m>\eta\gt0</m>, pilih
+        <m>N\gt\max\{K,1/\eta\}</m>. Tahap 2: bagi <m>n\geq N</m>,
+        bandingkan <m>1/n</m> dengan <m>1/N</m> dan <m>\eta</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-11-answer">
+      <p>
+        Ya. Karena <m>d_X(a_n,a)\lt1/n</m> dan <m>1/n\to0</m>, berlaku
+        <m>a_n\to a</m>; pilihan berhingga untuk <m>n\leq K</m> tidak
+        memengaruhi limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-11-solution">
+      <p>
+        Ambil <m>\eta\gt0</m>. Pilih
+        <m>N\in\Z^+</m> dengan
+        <m>N\gt\max\{K,1/\eta\}</m>. Untuk setiap <m>n\geq N</m>, konstruksi
+        memberi <m>a_n\in B(a,1/n)</m>, sehingga
+        <me>
+          d_X(a_n,a)\lt\frac1n\leq\frac1N\lt\eta.
+        </me>
+        Jadi definisi limit terpenuhi dan <m>a_n\to a</m>. Suku-suku awal
+        hanya memastikan bahwa fungsi <m>n\mapsto a_n</m> terdefinisi untuk
+        seluruh <m>n\in\Z^+</m>; jumlah suku awal yang berhingga tidak
+        menentukan konvergensi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-12">
+    <title>Kontradiksi pada barisan citra</title>
+    <statement>
+      <p>
+        Pada sublangkah terakhir konstruksi, jelaskan mengapa
+        <m>f(a_n)</m> tidak konvergen ke <m>f(a)</m>, kemudian tarik
+        kesimpulan tentang asumsi bahwa <m>f</m> tidak kontinu di
+        <m>a</m>. Rubrik: gunakan toleransi keluaran tetap
+        <m>\epsilon_0</m> dan hubungkan hasilnya dengan hipotesis
+        sekuensial.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-12-hint">
+      <p>
+        Tahap 1: untuk setiap <m>n\gt K</m>,
+        <m>d_Y(f(a_n),f(a))\geq\epsilon_0</m>. Tahap 2: bandingkan fakta ini
+        dengan syarat limit pada toleransi <m>\epsilon_0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-12-answer">
+      <p>
+        Barisan citra gagal masuk dan tetap berada dalam bola
+        <m>B(f(a),\epsilon_0)</m>. Ini bertentangan dengan hipotesis bahwa
+        setiap <m>a_n\to a</m> menghasilkan <m>f(a_n)\to f(a)</m>; karena
+        itu <m>f</m> harus kontinu di <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-12-solution">
+      <p>
+        Untuk seluruh <m>n\gt K</m>, konstruksi memenuhi
+        <m>d_Y(f(a_n),f(a))\geq\epsilon_0</m>. Karena itu, berapa pun indeks
+        awal yang dipilih, ada suku setelah indeks tersebut yang tidak
+        berjarak kurang dari <m>\epsilon_0</m> terhadap <m>f(a)</m>.
+        Definisi <m>f(a_n)\to f(a)</m> gagal. Di sisi lain, panduan 11
+        menunjukkan <m>a_n\to a</m>. Ini menyangkal hipotesis sekuensial
+        yang diasumsikan benar bagi setiap barisan. Maka asumsi sementara
+        bahwa <m>f</m> tidak kontinu di <m>a</m> salah, sehingga
+        <m>f</m> kontinu di <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-13">
+    <title>Intuisi grafik untuk osilasi di dekat nol</title>
+    <statement>
+      <p>
+        Pada tugas pertama kegiatan tentang
+        <m>f(x)=\sin(1/x)</m> untuk <m>x\neq0</m> dan <m>f(0)=0</m>,
+        gambarkan grafik pada interval kecil di sekitar <m>0</m> dan catat
+        intuisi Anda tentang keberadaan limit di <m>0</m>. Rubrik: gambarkan
+        osilasi yang semakin rapat, jelaskan pengamatan dengan kata-kata, dan
+        nyatakan secara jujur bahwa grafik sendiri bukan bukti formal.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-13-hint">
+      <p>
+        Tahap 1: plot dengan beberapa jendela yang makin sempit dan cukup
+        banyak titik sampel. Tahap 2: perhatikan apakah nilai fungsi
+        mengerucut ke satu tinggi atau terus mendekati banyak tinggi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-13-answer">
+      <p>
+        Intuisi yang didukung grafik adalah bahwa limit di <m>0</m> tidak
+        ada: grafik terus berosilasi antara nilai dekat <m>-1</m> dan
+        <m>1</m> seberapa pun sempit jendelanya. Tugas ini menerima penjelasan
+        intuitif lain yang jujur terhadap gambar.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-13-solution">
+      <p>
+        Rubrik lengkap meminta grafik yang memperlihatkan amplitudo tetap
+        sekitar <m>1</m> dan frekuensi osilasi yang meningkat ketika
+        <m>x\to0</m>. Penjelasan yang baik menyatakan bahwa tidak tampak satu
+        nilai yang didekati semua keluaran. Pengamatan ini bukan bukti:
+        resolusi gambar dan pemilihan sampel dapat menipu. Butir-butir
+        berikutnya mengubah intuisi itu menjadi penyangkal sekuensial dengan
+        memilih titik yang nilainya tepat <m>1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-14">
+    <title>Menyelesaikan persamaan nilai maksimum sinus</title>
+    <statement>
+      <p>
+        Pada tugas kedua kegiatan tentang <m>\sin(1/x)</m>, tentukan semua
+        masukan <m>x</m> yang memenuhi <m>f(x)=1</m>. Rubrik: selesaikan
+        dahulu persamaan sinus untuk <m>1/x</m>, balikkan hasilnya, dan
+        periksa nilai khusus <m>x=0</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-14-hint">
+      <p>
+        Tahap 1: <m>\sin t=1</m> tepat ketika
+        <m>t=\pi/2+2\pi j</m> untuk <m>j\in\Z</m>. Tahap 2: substitusikan
+        <m>t=1/x</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-14-answer">
+      <p>
+        Semua dan hanya masukan
+        <m>x=1/(\pi/2+2\pi j)=2/((4j+1)\pi)</m>, dengan
+        <m>j\in\Z</m>, memenuhi <m>f(x)=1</m>. Titik <m>x=0</m> tidak
+        termasuk karena <m>f(0)=0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-14-solution">
+      <p>
+        Untuk <m>x\neq0</m>, persamaan <m>f(x)=1</m> setara dengan
+        <m>\sin(1/x)=1</m>. Solusi umum <m>\sin t=1</m> adalah
+        <m>t=\pi/2+2\pi j</m>, <m>j\in\Z</m>. Karena penyebut ini tidak nol
+        bagi bilangan bulat <m>j</m>, pembalikan sah dan memberi
+        <me>
+          x=\frac{1}{\pi/2+2\pi j}
+           =\frac{2}{(4j+1)\pi},\qquad j\in\Z.
+        </me>
+        Substitusi kembali menghasilkan
+        <m>\sin(\pi/2+2\pi j)=1</m>. Sementara itu, definisi bercabang
+        menetapkan <m>f(0)=0</m>, jadi <m>0</m> bukan solusi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-15">
+    <title>Membangun barisan yang citranya tetap satu</title>
+    <statement>
+      <p>
+        Pada tugas ketiga kegiatan tentang <m>\sin(1/x)</m>, gunakan
+        himpunan solusi sebelumnya untuk membangun barisan
+        <m>a_n\to0</m> dengan <m>f(a_n)=1</m> bagi setiap <m>n</m>.
+        Rubrik: berikan rumus eksplisit, buktikan limit masukan, dan
+        verifikasi nilai fungsi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-15-hint">
+      <p>
+        Tahap 1: pilih parameter bilangan bulat <m>j=n</m> dalam panduan 14.
+        Tahap 2: penyebut tumbuh tanpa batas, sedangkan
+        <m>1/a_n=2\pi n+\pi/2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-15-answer">
+      <p>
+        Salah satu pilihan adalah
+        <m>a_n=2/((4n+1)\pi)</m> untuk <m>n\in\Z^+</m>. Barisan ini menuju
+        <m>0</m> dan memenuhi <m>f(a_n)=1</m> untuk setiap <m>n</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-15-solution">
+      <p>
+        Tetapkan
+        <m>a_n=2/((4n+1)\pi)</m>. Karena penyebut positif dan menuju tak
+        hingga, <m>a_n\to0</m>. Secara langsung, untuk
+        <m>\epsilon\gt0</m>, pilih <m>N</m> cukup besar sehingga
+        <m>2/((4N+1)\pi)\lt\epsilon</m>; maka
+        <m>0\lt a_n\leq a_N\lt\epsilon</m> bagi <m>n\geq N</m>. Selain itu,
+        <me>
+          f(a_n)=\sin(1/a_n)
+          =\sin\left(2\pi n+\frac{\pi}{2}\right)=1.
+        </me>
+        Jadi rumus tersebut memenuhi kedua syarat yang diminta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch09-guide-16">
+    <title>Menyangkal kekontinuan dengan satu barisan</title>
+    <statement>
+      <p>
+        Pada tugas terakhir kegiatan tentang <m>\sin(1/x)</m>, gunakan
+        barisan dari butir sebelumnya untuk menentukan kekontinuan
+        <m>f</m> di <m>0</m>. Rubrik: bandingkan limit barisan masukan,
+        limit barisan citra, dan nilai <m>f(0)</m>, lalu terapkan teorema
+        pencirian sekuensial dengan arah logis yang benar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch09-guide-16-hint">
+      <p>
+        Tahap 1: <m>a_n\to0</m>, tetapi barisan
+        <m>(f(a_n))</m> konstan bernilai <m>1</m>. Tahap 2: bandingkan
+        <m>\lim f(a_n)</m> dengan <m>f(0)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch09-guide-16-answer">
+      <p>
+        Fungsi <m>f</m> tidak kontinu di <m>0</m>, sebab
+        <m>a_n\to0</m> tetapi <m>f(a_n)\to1\neq0=f(0)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch09-guide-16-solution">
+      <p>
+        Panduan 15 memberi barisan <m>a_n\to0</m> dengan
+        <m>f(a_n)=1</m> untuk semua <m>n</m>. Maka
+        <m>\lim f(a_n)=1</m>, sedangkan definisi fungsi memberi
+        <m>f(0)=0</m>. Jika <m>f</m> kontinu di <m>0</m>, teorema
+        pencirian sekuensial akan memaksa setiap barisan yang menuju
+        <m>0</m> mempunyai citra yang menuju <m>f(0)</m>. Barisan ini
+        melanggar keharusan tersebut, jadi <m>f</m> tidak kontinu di
+        <m>0</m>. Satu barisan penyangkal sudah cukup; tidak perlu memeriksa
+        semua barisan.
+      </p>
+    </solution>
+  </exercise>
+</section>
