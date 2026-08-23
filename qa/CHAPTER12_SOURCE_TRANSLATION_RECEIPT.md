@@ -20,15 +20,15 @@ pending.
 ## Translation QA
 
 `repo/qa/CHAPTER12_SOURCE_QA.json` (SHA-256
-`6919e508cd81df33f1a9226f2409d7ac88620cfdba69cccbf86ea3ab901f2df0`) passes
+`a6d260d2110e713db8ef69e9afe54a57e0ef7f0830f41d05279cb9967b6c6aca`) passes
 fail-closed structural comparison:
 25 IDs, 14 xrefs (one explicitly approved external target,
 `chap_Product_topology`), 78 learner prompt units (73 atomic plus five
 grouping units), 13 exercises, 5 hints, 0 source answers, and 0 source
 solutions. The nine translated files have combined SHA-256
-`a773f83e8f119e5fc62a7b56e1107bc1489f6fd4e14652d126f0276e346884f0`.
+`ce64a4bdde0de700eeb5fe6f084b4882b5845ebc6246055a2cfdad354bdf0a3f`.
 
-Seven source-critical repairs are explicitly ledgered and approved by the QA
+Nine source-critical repairs are explicitly ledgered and approved by the QA
 receipt: O003-C131 corrects the neighborhood ball's center from the source's
 literal `X` to the introduced point `a`; O003-C132 restores the integer-set
 macro `\Z` in one exercise formula; O003-C136 restores the closing set brace
@@ -37,8 +37,10 @@ circular scope wording in the basis theorem proof; O003-C138 makes the
 discrete-topology basis task's intended topology explicit; and O003-C139 and
 O003-C140 replace the source's metric symbol `d` with the topology symbol
 `\tau` where the theorem and follow-up activity explicitly assume an arbitrary
-topological space. All identifiers, topology, xrefs, image reference, and
-remaining mathematics are retained.
+topological space; O003-C141 normalizes the repeated Zariski spelling in the
+exercise text, and O003-C142 closes the malformed finite-topology set entry
+`{a,b,c,}` as `{a,b,c}`. All identifiers, topology, xrefs, image reference,
+and remaining mathematics are retained.
 
 The Indonesian terms are frozen in O003-T142–O003-T153, including *basis untuk
 topologi*, *topologi indiskret*, *topologi kofinit*, *termetriskan*, *topologi

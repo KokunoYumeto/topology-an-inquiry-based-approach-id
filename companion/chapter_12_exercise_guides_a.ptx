@@ -1,0 +1,454 @@
+<section xml:id="o003-c90-ch12-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Sepuluh panduan berikut mengikuti urutan sumber pada
+    <em>sec_top_space_exer.ptx</em>: dua tugas pembuka, empat tugas pada
+    latihan <em>ex_aZ_top</em>, dan empat tugas pertama pada latihan koset
+    aritmetika. Materi ini adalah komponen pendamping asli untuk belajar
+    mandiri, bukan jawaban dari penulis sumber. Setiap panduan menyediakan
+    petunjuk bertahap, jawaban singkat, solusi lengkap, dan rubrik pemeriksaan;
+    komponen ini diterbitkan terpisah di bawah CC BY 4.0.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-01">
+    <title>Semua gabungan koleksi pembangkit</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan tanpa ID pada awal
+        <em>sec_top_space_exer.ptx</em>, tugas pertama. Untuk
+        <m>X=\{a,b,c\}</m> dan
+        <m>S=\{\{a\},\{c\},\{a,b\},\{b,c\}\}</m>, tentukan koleksi semua
+        gabungan subkoleksi dari <m>S</m>. Gabungan subkoleksi kosong juga
+        harus diperhitungkan.
+        <em>Rubrik.</em> Daftar harus memuat setiap hasil yang berbeda tepat
+        satu kali dan tidak boleh memasukkan himpunan yang tidak dapat
+        diperoleh.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-01-hint">
+      <p>
+        Beri nama keempat anggota <m>S</m>, lalu mulai dari gabungan kosong
+        dan gabungan satu anggota. Setelah itu periksa kapan dua anggota
+        menghubungkan <m>a</m>, <m>b</m>, dan <m>c</m> menjadi seluruh
+        <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-01-answer">
+      <p>
+        Koleksinya adalah
+        <m>
+          \{\emptyset,\{a\},\{c\},\{a,b\},\{b,c\},\{a,c\},X\}
+        </m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-01-solution">
+      <p>
+        Tuliskan <m>A=\{a\}</m>, <m>C=\{c\}</m>,
+        <m>AB=\{a,b\}</m>, dan <m>BC=\{b,c\}</m>. Gabungan kosong
+        menghasilkan <m>\emptyset</m>. Gabungan satu anggota menghasilkan
+        <m>A,C,AB,BC</m>. Gabungan <m>A\cup C</m> menghasilkan
+        <m>\{a,c\}</m>. Setiap gabungan yang memuat <m>AB</m> dan
+        <m>BC</m>, atau yang memuat salah satu dari keduanya bersama anggota
+        yang melengkapi titik yang hilang, menghasilkan
+        <m>X=\{a,b,c\}</m>. Tidak ada hasil lain: setiap gabungan adalah
+        subhimpunan <m>X</m>, dan pemeriksaan seluruh pola keanggotaan
+        <m>A,C,AB,BC</m> hanya menghasilkan tujuh himpunan yang tercantum.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-02">
+    <title>Mengapa koleksi gabungan itu bukan topologi</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan pembuka pada
+        <em>sec_top_space_exer.ptx</em>, tugas kedua. Dengan
+        <m>S=\{\{a\},\{c\},\{a,b\},\{b,c\}\}</m>, jelaskan mengapa koleksi
+        semua gabungan anggota <m>S</m>, setelah ditambah himpunan kosong,
+        bukan topologi pada <m>X=\{a,b,c\}</m>. Sebutkan aksioma basis yang
+        gagal.
+        <em>Rubrik.</em> Berikan satu irisan eksplisit dan hubungkan kegagalan
+        itu dengan syarat perpotongan basis, bukan hanya dengan pernyataan
+        bahwa daftar tersebut "kurang".
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-02-hint">
+      <p>
+        Bandingkan dua anggota basis <m>\{a,b\}</m> dan <m>\{b,c\}</m>.
+        Titik <m>b</m> berada di irisan keduanya. Tanyakan apakah ada
+        anggota <m>S</m> yang memuat <m>b</m> dan sekaligus terkandung dalam
+        irisan tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-02-answer">
+      <p>
+        Koleksi itu bukan topologi karena
+        <m>\{a,b\}\cap\{b,c\}=\{b\}</m> tidak termasuk koleksi semua
+        gabungan tersebut. Syarat perpotongan basis gagal pada titik
+        <m>b</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-02-solution">
+      <p>
+        Jika <m>\mathcal U</m> adalah semua gabungan subkoleksi dari
+        <m>S</m>, maka <m>\{a,b\}</m> dan <m>\{b,c\}</m> sendiri berada di
+        <m>\mathcal U</m>. Namun
+        <me>\{a,b\}\cap\{b,c\}=\{b\}.</me>
+        Himpunan <m>\{b\}</m> tidak dapat ditulis sebagai gabungan anggota
+        <m>S</m>: setiap anggota <m>S</m> yang memuat <m>b</m> juga memuat
+        <m>a</m> atau <m>c</m>. Maka <m>\mathcal U</m> tidak tertutup
+        terhadap irisan berhingga dan bukan topologi.
+      </p>
+      <p>
+        Dilihat langsung dari dua aksioma basis, masalahnya adalah: untuk
+        <m>B_1=\{a,b\}</m>, <m>B_2=\{b,c\}</m>, dan
+        <m>b\in B_1\cap B_2</m>, tidak ada <m>B_3\in S</m> dengan
+        <m>b\in B_3\subseteq\{b\}</m>. Jadi syarat perpotongan basis memang
+        gagal, persis pada titik <m>b</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-03">
+    <title>Basis kelipatan bilangan bulat</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_aZ_top</em>, tugas pertama.
+        Untuk setiap <m>a\in\Z</m>, tetapkan
+        <m>a\Z=\{ka\mid k\in\Z\}</m>. Buktikan bahwa
+        <m>\mathcal B=\{a\Z\mid a\in\Z\}</m> merupakan basis untuk suatu
+        topologi <m>\tau</m> pada <m>\Z</m>.
+        <em>Rubrik.</em> Verifikasi cakupan dan syarat irisan basis, termasuk
+        kasus <m>a=0</m> dan tanda negatif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-03-hint">
+      <p>
+        Gunakan <m>a\Z=(-a)\Z</m>. Untuk <m>m,n\neq0</m>, irisan dua
+        himpunan kelipatan adalah kelipatan dari
+        <m>\operatorname{lcm}(|m|,|n|)</m>; jika salah satu bilangan nol,
+        hitung irisan itu secara langsung.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-03-answer">
+      <p>
+        Cakupan diberikan oleh <m>1\Z=\Z</m>. Selain itu,
+        <m>m\Z\cap n\Z=\operatorname{lcm}(|m|,|n|)\Z</m> untuk
+        <m>m,n\neq0</m>, sedangkan jika salah satunya nol, irisan tersebut
+        adalah <m>\{0\}=0\Z</m>. Jadi syarat basis terpenuhi.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-03-solution">
+      <p>
+        Pertama, setiap bilangan bulat berada dalam suatu anggota
+        <m>\mathcal B</m>, karena <m>\Z=1\Z</m>. Sekarang ambil
+        <m>B_1=m\Z</m> dan <m>B_2=n\Z</m>. Jika <m>m=0</m> atau
+        <m>n=0</m>, maka irisan keduanya adalah <m>\{0\}=0\Z</m>, kecuali
+        kedua-duanya nol yang memberi hasil sama. Jika keduanya tidak nol,
+        tanda tidak berpengaruh dan aritmetika pembagi memberi
+        <me>
+          m\Z\cap n\Z=\operatorname{lcm}(|m|,|n|)\Z.
+        </me>
+        Jadi irisan itu sendiri merupakan anggota <m>\mathcal B</m>.
+        Khususnya, untuk setiap <m>x</m> di irisan, anggota basis tersebut
+        menjadi <m>B_3</m> dengan
+        <m>x\in B_3\subseteq B_1\cap B_2</m>. Kedua syarat basis terpenuhi,
+        sehingga <m>\mathcal B</m> membangkitkan topologi <m>\tau</m> pada
+        <m>\Z</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-04">
+    <title>Bilangan bulat positif tidak terbuka</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_aZ_top</em>, tugas kedua. Dalam ruang
+        <m>(\Z,\tau)</m> dari panduan sebelumnya, tentukan apakah
+        <m>\Z^+=\{1,2,3,\ldots\}</m> terbuka.
+        <em>Rubrik.</em> Jika tidak terbuka, pilih satu titik di dalamnya dan
+        buktikan bahwa tidak ada anggota basis yang mengelilingi titik itu
+        dan tetap berada di dalam <m>\Z^+</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-04-hint">
+      <p>
+        Setiap anggota basis yang memuat bilangan positif <m>n</m> juga
+        memuat <m>0</m> dan <m>-n</m>. Bandingkan hal itu dengan syarat
+        keterbukaan melalui basis.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-04-answer">
+      <p>
+        Tidak. Himpunan <m>\Z^+</m> tidak terbuka dalam <m>\tau</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-04-solution">
+      <p>
+        Ambil, misalnya, <m>1\in\Z^+</m>. Setiap anggota basis berbentuk
+        <m>a\Z</m> yang memuat <m>1</m> harus memiliki <m>a=\pm1</m>,
+        sebab <m>a</m> membagi <m>1</m>. Maka anggota itu adalah seluruh
+        <m>\Z</m>, yang jelas tidak terkandung dalam <m>\Z^+</m>. Bahkan
+        secara umum, jika <m>n\in\Z^+</m> dan <m>n\in a\Z</m>, maka
+        <m>0,-n\in a\Z</m>, sehingga <m>a\Z</m> tidak mungkin menjadi
+        subhimpunan <m>\Z^+</m>. Kriteria keterbukaan melalui basis gagal
+        pada setiap titik positif; jadi <m>\Z^+</m> tidak terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-05">
+    <title>Bilangan bulat ganjil tidak terbuka</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_aZ_top</em>, tugas ketiga. Tentukan
+        apakah himpunan semua bilangan bulat ganjil terbuka dalam
+        <m>(\Z,\tau)</m>.
+        <em>Rubrik.</em> Berikan argumen basis pada satu titik ganjil, bukan
+        hanya menunjukkan bahwa himpunan tersebut bukan anggota basis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-05-hint">
+      <p>
+        Setiap himpunan <m>a\Z</m> memuat <m>0</m>. Apa yang terjadi jika
+        anggota basis itu memuat suatu bilangan ganjil tetapi harus tetap
+        berada di dalam himpunan ganjil?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-05-answer">
+      <p>
+        Tidak. Himpunan bilangan ganjil tidak terbuka karena setiap lingkungan
+        basis dari titik ganjil juga memuat bilangan genap <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-05-solution">
+      <p>
+        Misalkan <m>O</m> adalah himpunan bilangan ganjil dan ambil
+        <m>n\in O</m>. Jika <m>a\Z</m> adalah anggota basis yang memuat
+        <m>n</m>, maka <m>0\in a\Z</m> karena <m>0=a\cdot0</m>. Akan tetapi
+        <m>0</m> bukan bilangan ganjil, sehingga
+        <m>a\Z\not\subseteq O</m>. Tidak ada lingkungan basis yang memenuhi
+        syarat keterbukaan di <m>n</m>. Maka <m>O</m> tidak terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-06">
+    <title>Satu himpunan terbuka dengan ekor kelipatan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_aZ_top</em>, tugas keempat. Tentukan
+        apakah
+        <m>O=\{0\}\cup\{x\in\Z\mid |x|\geq5\}</m> terbuka dalam
+        <m>(\Z,\tau)</m>.
+        <em>Rubrik.</em> Untuk jawaban positif, tuliskan O sebagai gabungan
+        anggota basis; untuk jawaban negatif, tunjukkan titik yang gagal.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-06-hint">
+      <p>
+        Untuk titik <m>0</m> gunakan <m>0\Z</m>. Untuk titik <m>x</m>
+        dengan <m>|x|\geq5</m>, coba gunakan <m>x\Z</m> sendiri dan
+        periksa besar setiap kelipatan tak nolnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-06-answer">
+      <p>
+        Ya. Berlaku
+        <me>
+          O=0\Z\ \cup\ \bigcup_{\substack{x\in\Z\\ |x|\geq5}}x\Z,
+        </me>
+        sehingga <m>O</m> terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-06-solution">
+      <p>
+        Himpunan <m>0\Z=\{0\}</m> adalah anggota basis. Jika
+        <m>x\in\Z</m> memenuhi <m>|x|\geq5</m>, maka <m>x\in x\Z</m>.
+        Setiap elemen tak nol dari <m>x\Z</m> berbentuk <m>kx</m> dengan
+        <m>|k|\geq1</m>, sehingga
+        <m>|kx|=|k|\,|x|\geq|x|\geq5</m>; elemen nolnya adalah <m>0</m>.
+        Karena itu <m>x\Z\subseteq O</m>. Sebaliknya, setiap elemen O
+        termasuk salah satu himpunan dalam gabungan di atas. Jadi persamaan
+        gabungan tersebut benar, dan karena setiap suku adalah anggota basis,
+        <m>O</m> terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-07">
+    <title>Basis dari kelas-kelas residu</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan koset setelah <em>ex_aZ_top</em>,
+        tugas pembuktian pertama. Untuk <m>a,b\in\Z</m> dengan
+        <m>a\neq0</m>, tetapkan
+        <m>A_{a,b}=a\Z+b=\{ak+b\mid k\in\Z\}</m>. Buktikan bahwa
+        <m>\mathcal C=\{A_{a,b}\mid a,b\in\Z,\ a\neq0\}</m> merupakan basis
+        untuk suatu topologi pada <m>\Z</m>.
+        <em>Rubrik.</em> Tunjukkan cakupan dan konstruksi anggota basis yang
+        berada di dalam setiap irisan yang relevan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-07-hint">
+      <p>
+        Cakupan dapat memakai <m>A_{1,0}=\Z</m>. Jika
+        <m>x\in A_{a_1,b_1}\cap A_{a_2,b_2}</m>, pertimbangkan
+        <m>A_{a_1a_2,x}</m> dan tuliskan bentuk umum elemennya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-07-answer">
+      <p>
+        Untuk titik <m>x</m> di irisan dua anggota basis,
+        <m>A_{a_1a_2,x}\subseteq A_{a_1,b_1}\cap A_{a_2,b_2}</m> dan memuat
+        <m>x</m>. Bersama <m>A_{1,0}=\Z</m>, ini membuktikan kedua aksioma
+        basis.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-07-solution">
+      <p>
+        Karena <m>A_{1,0}=\Z</m>, setiap bilangan bulat tercakup oleh
+        anggota <m>\mathcal C</m>. Sekarang ambil
+        <m>B_1=A_{a_1,b_1}</m>, <m>B_2=A_{a_2,b_2}</m>, dan
+        <m>x\in B_1\cap B_2</m>. Untuk setiap
+        <m>y\in A_{a_1a_2,x}</m>, ada <m>k\in\Z</m> dengan
+        <m>y=x+a_1a_2k</m>. Karena <m>x\in B_1</m>, ada
+        <m>r\in\Z</m> sehingga <m>x=a_1r+b_1</m>. Maka
+        <me>y=a_1(r+a_2k)+b_1\in A_{a_1,b_1}.</me>
+        Dengan cara yang sama, dari <m>x=a_2s+b_2</m> diperoleh
+        <me>y=a_2(s+a_1k)+b_2\in A_{a_2,b_2}.</me>
+        Jadi <m>y\in B_1\cap B_2</m>. Selain itu,
+        <m>x\in A_{a_1a_2,x}</m> dan <m>a_1a_2\neq0</m>. Syarat irisan
+        basis terpenuhi, sehingga <m>\mathcal C</m> adalah basis.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-08">
+    <title>Fungsi yang menukar pasangan berurutan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan koset, sublatihan yang
+        mendefinisikan <m>f</m>. Misalkan
+        <m>f:\Z\to\Z</m> diberikan oleh
+        <m>f(n)=n+(-1)^n</m>. Buktikan bahwa <m>f</m> bijektif.
+        <em>Rubrik.</em> Berikan argumen injektif dan surjektif, atau buktikan
+        secara sah bahwa <m>f</m> adalah involusi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-08-hint">
+      <p>
+        Hitung rumus terpisah untuk <m>n</m> genap dan <m>n</m> ganjil.
+        Perhatikan pasangan <m>(2k,2k+1)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-08-answer">
+      <p>
+        Jika <m>n</m> genap, <m>f(n)=n+1</m>; jika <m>n</m> ganjil,
+        <m>f(n)=n-1</m>. Karena itu <m>f(f(n))=n</m> untuk setiap
+        <m>n</m>, sehingga <m>f</m> adalah bijeksi.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-08-solution">
+      <p>
+        Untuk <m>n=2k</m>, berlaku
+        <m>f(2k)=2k+1</m>. Untuk <m>n=2k+1</m>, berlaku
+        <m>f(2k+1)=2k</m>. Jadi <m>f</m> menukar kedua anggota setiap
+        pasangan <m>\{2k,2k+1\}</m>. Menerapkan <m>f</m> dua kali mengembalikan
+        setiap bilangan:
+        <me>f(f(n))=n\qquad(n\in\Z).</me>
+        Jika <m>f(u)=f(v)</m>, terapkan <m>f</m> pada kedua ruas untuk
+        mendapatkan <m>u=v</m>, jadi <m>f</m> injektif. Untuk setiap
+        <m>y\in\Z</m>, ambil <m>n=f(y)</m>; maka
+        <m>f(n)=f(f(y))=y</m>, jadi <m>f</m> surjektif. Dengan demikian
+        <m>f</m> bijektif dan sekaligus memenuhi <m>f^{-1}=f</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-09">
+    <title>Citra himpunan terbuka di bawah f</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan koset, sublatihan citra. Dengan
+        topologi yang dibangkitkan oleh
+        <m>A_{a,b}=a\Z+b</m>, tentukan apakah <m>f(O)</m> terbuka setiap kali
+        <m>O</m> terbuka, untuk <m>f(n)=n+(-1)^n</m>.
+        <em>Rubrik.</em> Cukup memeriksa citra setiap anggota basis, tetapi
+        kasus <m>a</m> genap dan ganjil harus dibedakan dan ditulis eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-09-hint">
+      <p>
+        Jika <m>a</m> genap, semua <m>ak+b</m> memiliki paritas yang sama.
+        Jika <m>a</m> ganjil, pisahkan <m>k=2j</m> dan <m>k=2j+1</m>;
+        masing-masing bagian akan menjadi kelas residu dengan langkah
+        <m>2a</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-09-answer">
+      <p>
+        Ya. Citra setiap <m>A_{a,b}</m> adalah satu atau dua anggota basis
+        (digabungkan), sehingga citra gabungan terbuka juga terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-09-solution">
+      <p>
+        Tetapkan <m>\varepsilon=(-1)^b</m>. Jika <m>a</m> genap, maka
+        <m>ak+b</m> selalu berparitas <m>b</m>, sehingga
+        <me>f(A_{a,b})=A_{a,b+\varepsilon}.</me>
+        Jika <m>a</m> ganjil, untuk <m>k=2j</m> diperoleh
+        <m>f(2aj+b)=2aj+b+\varepsilon</m>, sedangkan untuk
+        <m>k=2j+1</m> (yang paritasnya berlawanan) diperoleh
+        <m>f(2aj+a+b)=2aj+a+b-\varepsilon</m>. Oleh karena itu
+        <me>
+          f(A_{a,b})=A_{2a,b+\varepsilon}\cup A_{2a,a+b-\varepsilon}.
+        </me>
+        Semua himpunan di ruas kanan merupakan anggota basis
+        <m>\mathcal C</m>, jadi citra setiap anggota basis terbuka. Setiap
+        himpunan terbuka <m>O</m> adalah gabungan anggota basis; karena citra
+        menghormati gabungan,
+        <m>f(O)=\bigcup_{\substack{B\in\mathcal C\\ B\subseteq O}}f(B)</m>
+        merupakan gabungan himpunan terbuka. Jadi <m>f(O)</m> terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-a-10">
+    <title>Prapeta himpunan terbuka di bawah f</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan koset, sublatihan prapeta. Untuk
+        <m>f(n)=n+(-1)^n</m>, tentukan apakah <m>f^{-1}(U)</m> terbuka setiap
+        kali <m>U</m> terbuka dalam <m>(\Z,\tau)</m>.
+        <em>Rubrik.</em> Nyatakan prapeta f secara tepat dan hubungkan
+        kesimpulan dengan hasil tentang citra pada panduan sebelumnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-a-10-hint">
+      <p>
+        Dari panduan bijektivitas, <m>f^{-1}=f</m>. Jadi prapeta <m>U</m>
+        sama dengan citra <m>U</m> di bawah fungsi yang sama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-a-10-answer">
+      <p>
+        Ya. Karena <m>f</m> involutif, berlaku
+        <m>f^{-1}(U)=f(U)</m>; panduan citra menunjukkan himpunan ini terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-a-10-solution">
+      <p>
+        Kita telah membuktikan bahwa <m>f(f(n))=n</m> untuk setiap
+        <m>n\in\Z</m>. Jadi fungsi inversnya adalah fungsi itu sendiri:
+        <m>f^{-1}=f</m>. Ambil <m>U</m> terbuka. Maka
+        <me>f^{-1}(U)=f(U).</me>
+        Pada panduan sebelumnya, citra setiap himpunan terbuka di bawah
+        <m>f</m> dibuktikan terbuka dengan memeriksa citra anggota basis.
+        Karena itu <m>f^{-1}(U)</m> terbuka. Bahkan, <m>f</m> adalah
+        homeomorfisme involutif untuk topologi ini.
+      </p>
+    </solution>
+  </exercise>
+</section>

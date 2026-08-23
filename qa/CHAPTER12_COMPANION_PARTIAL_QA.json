@@ -22,13 +22,13 @@
   },
   "source_qa": {
     "path": "repo/qa/CHAPTER12_SOURCE_QA.json",
-    "sha256": "6919e508cd81df33f1a9226f2409d7ac88620cfdba69cccbf86ea3ab901f2df0",
+    "sha256": "a6d260d2110e713db8ef69e9afe54a57e0ef7f0830f41d05279cb9967b6c6aca",
     "status": "pass"
   },
   "source_corrections": {
     "path": "00_control/SOURCE_CORRECTIONS.csv",
-    "sha256": "f44fb220a5cbf9d28c509d889501e07c9c7128686d2b47d3ccf9cd4f7afaea66",
-    "chapter12_ids": ["O003-C131", "O003-C132", "O003-C133", "O003-C134", "O003-C135", "O003-C136", "O003-C137", "O003-C138", "O003-C139", "O003-C140"]
+    "sha256": "21f679d8708e065f6cee28773722a9644cdcf0ce0428bc1e4f08b35b3cfaa3bb",
+    "chapter12_ids": ["O003-C131", "O003-C132", "O003-C133", "O003-C134", "O003-C135", "O003-C136", "O003-C137", "O003-C138", "O003-C139", "O003-C140", "O003-C141", "O003-C142"]
   },
   "companion_files": [
     {
@@ -39,7 +39,7 @@
     {
       "path": "repo/companion/chapter_12_topological_spaces_self_study.ptx",
       "bytes": 1347,
-      "sha256": "712e61acf02fbebd8346762d9182b19621ca0c59f0140ea3b18ca35b5a2690e3"
+      "sha256": "6e4767dbb407a3d33d722fbd704397a2184a883fd0e10ad635efe96edff37230"
     },
     {
       "path": "repo/companion/chapter_12_source_guides_b.ptx",
@@ -65,22 +65,27 @@
       "path": "repo/companion/chapter_12_source_guides_f.ptx",
       "bytes": 15112,
       "sha256": "428317e5d74981441740499418d311abb986c6e971782f6b00fd8214639531f0"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_a.ptx",
+      "bytes": 19258,
+      "sha256": "ff23ffa0a7f268007faff8dd48e0059500ac900cf5d2f14156cbc9b4f34fbfd9"
     }
   ],
   "coverage": {
-    "source_prompt_guides": 31,
-    "source_prompt_guides_pending": 47,
+    "source_prompt_guides": 41,
+    "source_prompt_guides_pending": 37,
     "mastery_checks": 0,
     "mastery_checks_pending": "to be authored after the source-prompt guides",
-    "covered_source_context": ["sec_top_space_intro", "act_TS_limits1", "act_top_basis", "act_Basis", "basis_final_activity", "sec_neighborhood_top_space", "sec_interior_set_top"],
-    "covered_atomic_prompt_units": 31,
+    "covered_source_context": ["sec_top_space_intro", "act_TS_limits1", "act_top_basis", "act_Basis", "basis_final_activity", "sec_neighborhood_top_space", "sec_interior_set_top", "sec_top_space_exer"],
+    "covered_atomic_prompt_units": 41,
     "covered_grouping_prompt_units": 0,
     "covered_surfaces": {
-      "statement": 31,
-      "hint": 31,
-      "answer": 31,
-      "solution": 31,
-      "total": 124
+      "statement": 41,
+      "hint": 41,
+      "answer": 41,
+      "solution": 41,
+      "total": 164
     }
   },
   "entries": [
@@ -114,16 +119,40 @@
     {"id":"o003-c90-ch12-guide-28","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-03","source_line":80,"title":"Interior pada topologi komplemen berhingga","surfaces":["o003-c90-ch12-guide-28-statement","o003-c90-ch12-guide-28-hint","o003-c90-ch12-guide-28-answer","o003-c90-ch12-guide-28-solution"]},
     {"id":"o003-c90-ch12-guide-29","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-04","source_line":92,"title":"Interior pada topologi hingga yang diberikan","surfaces":["o003-c90-ch12-guide-29-statement","o003-c90-ch12-guide-29-hint","o003-c90-ch12-guide-29-answer","o003-c90-ch12-guide-29-solution"]},
     {"id":"o003-c90-ch12-guide-30","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-05","source_line":157,"title":"Menetapkan sasaran teorema interior","surfaces":["o003-c90-ch12-guide-30-statement","o003-c90-ch12-guide-30-hint","o003-c90-ch12-guide-30-answer","o003-c90-ch12-guide-30-solution"]},
-    {"id":"o003-c90-ch12-guide-31","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-06","source_line":164,"title":"Membuktikan kemaksimalan interior","surfaces":["o003-c90-ch12-guide-31-statement","o003-c90-ch12-guide-31-hint","o003-c90-ch12-guide-31-answer","o003-c90-ch12-guide-31-solution"]}
+    {"id":"o003-c90-ch12-guide-31","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-06","source_line":164,"title":"Membuktikan kemaksimalan interior","surfaces":["o003-c90-ch12-guide-31-statement","o003-c90-ch12-guide-31-hint","o003-c90-ch12-guide-31-answer","o003-c90-ch12-guide-31-solution"]},
+    {"id":"o003-c90-ch12-exer-a-01","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-opening-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":10,"title":"Semua gabungan koleksi pembangkit","surfaces":["o003-c90-ch12-exer-a-01-statement","o003-c90-ch12-exer-a-01-hint","o003-c90-ch12-exer-a-01-answer","o003-c90-ch12-exer-a-01-solution"]},
+    {"id":"o003-c90-ch12-exer-a-02","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-opening-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":17,"title":"Mengapa koleksi gabungan itu bukan topologi","surfaces":["o003-c90-ch12-exer-a-02-statement","o003-c90-ch12-exer-a-02-hint","o003-c90-ch12-exer-a-02-answer","o003-c90-ch12-exer-a-02-solution"]},
+    {"id":"o003-c90-ch12-exer-a-03","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":34,"title":"Basis kelipatan bilangan bulat","surfaces":["o003-c90-ch12-exer-a-03-statement","o003-c90-ch12-exer-a-03-hint","o003-c90-ch12-exer-a-03-answer","o003-c90-ch12-exer-a-03-solution"]},
+    {"id":"o003-c90-ch12-exer-a-04","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":46,"title":"Bilangan bulat positif tidak terbuka","surfaces":["o003-c90-ch12-exer-a-04-statement","o003-c90-ch12-exer-a-04-hint","o003-c90-ch12-exer-a-04-answer","o003-c90-ch12-exer-a-04-solution"]},
+    {"id":"o003-c90-ch12-exer-a-05","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-03","source_file":"repo/source/sec_top_space_exer.ptx","source_line":53,"title":"Bilangan bulat ganjil tidak terbuka","surfaces":["o003-c90-ch12-exer-a-05-statement","o003-c90-ch12-exer-a-05-hint","o003-c90-ch12-exer-a-05-answer","o003-c90-ch12-exer-a-05-solution"]},
+    {"id":"o003-c90-ch12-exer-a-06","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-04","source_file":"repo/source/sec_top_space_exer.ptx","source_line":60,"title":"Satu himpunan terbuka dengan ekor kelipatan","surfaces":["o003-c90-ch12-exer-a-06-statement","o003-c90-ch12-exer-a-06-hint","o003-c90-ch12-exer-a-06-answer","o003-c90-ch12-exer-a-06-solution"]},
+    {"id":"o003-c90-ch12-exer-a-07","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":75,"title":"Basis dari kelas-kelas residu","surfaces":["o003-c90-ch12-exer-a-07-statement","o003-c90-ch12-exer-a-07-hint","o003-c90-ch12-exer-a-07-answer","o003-c90-ch12-exer-a-07-solution"]},
+    {"id":"o003-c90-ch12-exer-a-08","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":93,"title":"Fungsi yang menukar pasangan berurutan","surfaces":["o003-c90-ch12-exer-a-08-statement","o003-c90-ch12-exer-a-08-hint","o003-c90-ch12-exer-a-08-answer","o003-c90-ch12-exer-a-08-solution"]},
+    {"id":"o003-c90-ch12-exer-a-09","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-03","source_file":"repo/source/sec_top_space_exer.ptx","source_line":100,"title":"Citra himpunan terbuka di bawah f","surfaces":["o003-c90-ch12-exer-a-09-statement","o003-c90-ch12-exer-a-09-hint","o003-c90-ch12-exer-a-09-answer","o003-c90-ch12-exer-a-09-solution"]},
+    {"id":"o003-c90-ch12-exer-a-10","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-04","source_file":"repo/source/sec_top_space_exer.ptx","source_line":108,"title":"Prapeta himpunan terbuka di bawah f","surfaces":["o003-c90-ch12-exer-a-10-statement","o003-c90-ch12-exer-a-10-hint","o003-c90-ch12-exer-a-10-answer","o003-c90-ch12-exer-a-10-solution"]}
   ],
   "validation": {
     "xml_parse": "pass",
-    "all_thirty_one_entries_have_statement_hint_answer_solution": true,
+    "schema_validation": {
+      "exercise_guides_a": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_A_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "4e77adcaeddc074e984c428dc521d7a3c30e62e259ae067340a101ba45b598df",
+        "status": "pass"
+      },
+      "companion_wrapper": {
+        "path": "repo/qa/CHAPTER12_COMPANION_WRAPPER_SCHEMA_QA.json",
+        "bytes": 1172,
+        "sha256": "a92169ee4e48e2bcbfe1520918a65cf7ba8d971c1acfcbd3f028e198b560edaf",
+        "status": "pass"
+      }
+    },
+    "all_covered_entries_have_statement_hint_answer_solution": true,
     "source_and_companion_ids_are_disjoint": true,
     "complete_reader_boundary": false,
     "cumulative_build": "not run; partial companion is not admitted",
     "blocking_gaps": [
-      "47 source prompt units still need staged support",
+      "37 source prompt units still need staged support",
       "five grouping tasks and all mastery checks remain",
       "complete stable-ID backend and cumulative HTML/PDF build remain pending"
     ]
