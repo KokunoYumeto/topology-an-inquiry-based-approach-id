@@ -1,0 +1,71 @@
+<section xml:id="o003-c90-ch12-source-guides-b" xml:lang="id-ID">
+  <title>Panduan topologi komplemen berhingga</title>
+
+  <p>
+    Dua panduan berikut mengikuti kegiatan <m>act_TS_limits1</m> pada
+    bagian <xref ref="sec_exam_top" text="title"/>. Panduan ini
+    ditulis mandiri sebagai komponen CC BY 4.0 yang terpisah dari turunan
+    GVSU; pengenal tugas lokal ditambahkan karena tugas sumber tidak memiliki
+    <m>xml:id</m>.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-guide-09">
+    <title>Membuktikan topologi komplemen berhingga</title>
+    <statement><p>
+      Misalkan <m>X</m> suatu himpunan dan
+      <m>\tau_{FC}=\{\emptyset\}\cup\{O\subseteq X: X\setminus O
+      \text{ berhingga}\}</m>. Buktikan bahwa <m>\tau_{FC}</m> merupakan
+      topologi pada <m>X</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-09-hint"><p>
+      Periksa <m>X</m> dan <m>\emptyset</m> terlebih dahulu. Untuk gabungan,
+      gunakan bahwa komplemen gabungan adalah irisan komplemen; untuk irisan
+      berhingga, gunakan bahwa komplemennya adalah gabungan berhingga.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-09-answer"><p>
+      Ya. <m>\tau_{FC}</m> memuat <m>X</m> dan <m>\emptyset</m>, tertutup
+      terhadap gabungan sebarang, dan tertutup terhadap irisan berhingga.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-09-solution"><p>
+      Karena <m>X\setminus X=\emptyset</m> berhingga, maka
+      <m>X\in\tau_{FC}</m>; himpunan kosong dimasukkan berdasarkan definisi.
+      Ambil keluarga <m>\{O_i\}_{i\in I}</m> dalam <m>\tau_{FC}</m>. Jika
+      semua anggotanya kosong, gabungannya kosong. Jika ada anggota tak
+      kosong, pilih satu, katakan <m>O_{i_0}</m>. Untuk semua anggota tak
+      kosong, setiap <m>X\setminus O_i</m> berhingga dan
+      <m>X\setminus\bigcup_i O_i=\bigcap_i(X\setminus O_i)</m> merupakan
+      subhimpunan dari <m>X\setminus O_{i_0}</m>, sehingga berhingga. Jadi
+      gabungan sebarang tetap berada dalam <m>\tau_{FC}</m>.
+    </p><p>
+      Untuk <m>O_1,\ldots,O_n\in\tau_{FC}</m>, jika salah satunya kosong,
+      irisannya kosong. Jika semuanya tidak kosong, maka
+      <m>X\setminus\bigcap_{k=1}^n O_k=\bigcup_{k=1}^n(X\setminus O_k)</m>
+      adalah gabungan berhingga dari himpunan berhingga, jadi berhingga.
+      Dengan demikian ketiga aksioma topologi terpenuhi.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-10">
+    <title>Ketika topologi komplemen berhingga menjadi diskret</title>
+    <statement><p>
+      Jelaskan mengapa <m>\tau_{FC}</m> merupakan topologi diskret ketika
+      <m>X</m> berhingga.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-10-hint"><p>
+      Untuk setiap <m>O\subseteq X</m>, komplemen <m>X\setminus O</m> adalah
+      subhimpunan dari himpunan berhingga.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-10-answer"><p>
+      Setiap subhimpunan <m>O</m> memiliki komplemen berhingga, sehingga
+      <m>\tau_{FC}=\mathcal P(X)</m>, yaitu topologi diskret.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-10-solution"><p>
+      Jika <m>X</m> berhingga dan <m>O\subseteq X</m>, maka
+      <m>X\setminus O</m> juga berhingga. Jadi setiap subhimpunan <m>O</m>
+      memenuhi syarat definisi topologi komplemen berhingga dan termasuk dalam
+      <m>\tau_{FC}</m>. Sebaliknya, semua anggota <m>\tau_{FC}</m> adalah
+      subhimpunan <m>X</m>. Maka <m>\tau_{FC}=\mathcal P(X)</m>, persis
+      topologi diskret.
+    </p></solution>
+  </exercise>
+</section>
