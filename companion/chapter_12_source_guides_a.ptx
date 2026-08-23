@@ -1,0 +1,228 @@
+<section xml:id="o003-c90-ch12-source-guides-a" xml:lang="id-ID">
+  <title>Panduan ruang topologi: definisi dan contoh awal</title>
+
+  <p>
+    Delapan panduan pertama ini mengikuti kegiatan eksplorasi pada bagian
+    pendahuluan Bab 12. Kerjakan butir sumber terlebih dahulu, lalu buka
+    petunjuk, jawaban, dan solusi secara bertahap. Panduan ini ditulis mandiri
+    untuk edisi ini sebagai komponen CC BY 4.0 yang terpisah dari turunan
+    GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-guide-01">
+    <title>Uji tiga aksioma topologi</title>
+    <statement><p>
+      Uji <m>\tau=\{a,b\}</m> pada <m>X=\{a,b,c\}</m> terhadap ketiga aksioma
+      topologi. Nyatakan aksioma pertama yang gagal.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-01-hint"><p>
+      Aksioma pertama meminta <m>X</m> dan <m>\emptyset</m> menjadi anggota
+      <m>\tau</m>; periksa ini sebelum memeriksa gabungan atau irisan.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-01-answer"><p>
+      Dengan pembacaan literal, <m>\tau=\{a,b\}</m> bahkan bukan koleksi
+      himpunan bagian dari <m>X</m>; ia memuat titik, bukan himpunan bagian.
+      Jika yang dimaksud adalah <m>\tau=\{\{a,b\}\}</m>, koleksi itu juga
+      bukan topologi karena <m>X</m> dan <m>\emptyset</m> belum termasuk.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-01-solution"><p>
+      Definisi mensyaratkan bahwa setiap anggota <m>\tau</m> adalah subhimpunan
+      dari <m>X</m>. Pada tulisan literal, <m>a</m> dan <m>b</m> adalah titik,
+      sehingga ada ambiguitas tipe sebelum aksioma topologi diperiksa. Untuk
+      pembacaan yang lazim dimaksudkan dalam kegiatan ini, ambil
+      <m>\tau_0=\{\{a,b\}\}</m>. Aksioma pertama lalu gagal karena
+      <m>\emptyset\notin\tau_0</m> dan
+      <m>X=\{a,b,c\}\notin\tau_0</m>. Penutupan paling kecil yang memuat
+      <m>\{a,b\}</m> adalah
+      <m>\{\emptyset,\{a,b\},X\}</m>.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-02">
+    <title>Menutup koleksi hingga menjadi topologi</title>
+    <statement><p>
+      Untuk <m>X=\{a,b,c,d\}</m> dan
+      <m>\tau=\{\{a\},\{b\},\{a,b\}\}</m>, tentukan tambahan minimum agar
+      koleksi tersebut menjadi topologi pada <m>X</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-02-hint"><p>
+      Tambahkan dulu <m>\emptyset</m> dan <m>X</m>. Kemudian tutup terhadap
+      gabungan dan irisan; gabungan dua singleton yang sudah ada adalah
+      <m>\{a,b\}</m>, sedangkan elemen <m>c,d</m> belum muncul.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-02-answer"><p>
+      Tambahan minimum adalah <m>\emptyset</m> dan
+      <m>X=\{a,b,c,d\}</m>; hasilnya
+      <m>\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-02-solution"><p>
+      Aksioma pertama memaksa dua tambahan tersebut. Setelah keduanya
+      ditambahkan, gabungan dan irisan dari <m>\{a\},\{b\},\{a,b\},X</m>
+      tetap berada dalam koleksi, dan gabungan dengan himpunan kosong tidak
+      menambah elemen. Jadi koleksi itu topologi. Karena masing-masing
+      tambahan dipaksa oleh aksioma pertama, tidak ada pilihan yang lebih
+      kecil.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-03">
+    <title>Memeriksa gabungan dan irisan berhingga</title>
+    <statement><p>
+      Periksa koleksi
+      <m>\{\emptyset,\{a\},\{b\},\{d\},\{a,b\},\{a,d\},X\}</m> pada
+      <m>X=\{a,b,c,d\}</m>, lalu tentukan tambahan minimum jika diperlukan.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-03-hint"><p>
+      Cari gabungan dua himpunan yang menghasilkan himpunan baru, khususnya
+      <m>\{b\}\cup\{d\}</m> dan <m>\{a,b\}\cup\{a,d\}</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-03-answer"><p>
+      Koleksi itu bukan topologi; paling tidak perlu menambahkan
+      <m>\{b,d\}</m> dan <m>\{a,b,d\}</m>, setelah itu gabungan dan irisan
+      tertutup.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-03-solution"><p>
+      Karena <m>\{b\}</m> dan <m>\{d\}</m> terbuka, gabungannya
+      <m>\{b,d\}</m> harus terbuka. Kemudian
+      <m>\{a,b\}\cup\{a,d\}=\{a,b,d\}</m> juga harus ditambahkan.
+      Dengan dua tambahan itu, gabungan sebarang dari anggota koleksi hanya
+      menghasilkan anggota yang sudah tercantum atau <m>X</m>, dan irisan
+      berhingga juga tercantum (misalnya
+      <m>\{a,b,d\}\cap\{a,d\}=\{a,d\}</m>). Jadi dua tambahan tersebut
+      cukup dan keduanya dipaksa oleh penutupan terhadap gabungan.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-04">
+    <title>Mencari gabungan yang hilang</title>
+    <statement><p>
+      Periksa
+      <m>\{\emptyset,\{a\},\{b\},\{c\},\{d\},\{a,b\},\{a,c\},\{a,d\},
+      \{b,d\},\{c,d\},X\}</m> pada <m>X=\{a,b,c,d\}</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-04-hint"><p>
+      Setelah menemukan <m>\{a,b\}\cup\{a,c\}=\{a,b,c\}</m>, periksa
+      juga gabungan dengan <m>\{b,d\}</m>, <m>\{c,d\}</m>, dan singleton
+      yang tersedia. Daftarkan semua himpunan baru yang dipaksa sebelum
+      menyimpulkan bahwa penutupan sudah lengkap.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-04-answer"><p>
+      Bukan topologi. Penutupan terhadap gabungan memaksa penambahan tepat
+      lima himpunan yang belum tercantum:
+      <m>\{b,c\}</m>, <m>\{a,b,c\}</m>, <m>\{a,b,d\}</m>,
+      <m>\{a,c,d\}</m>, dan <m>\{b,c,d\}</m>. Setelah semuanya ditambahkan,
+      koleksinya adalah <m>\mathcal P(X)</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-04-solution"><p>
+      Koleksi awal memuat semua singleton dan pasangan
+      <m>\{a,b\},\{a,c\},\{a,d\},\{b,d\},\{c,d\}</m>. Gabungan
+      <m>\{a\}\cup\{b\}=\{a,b\}</m> dan
+      <m>\{a\}\cup\{c\}=\{a,c\}</m> sudah ada, tetapi
+      <m>\{b\}\cup\{c\}=\{b,c\}</m> memaksa pasangan yang hilang.
+      Selanjutnya gabungan pasangan dengan singleton memaksa keempat
+      himpunan tiga unsur
+      <m>\{a,b,c\},\{a,b,d\},\{a,c,d\},\{b,c,d\}</m>. Dengan lima
+      tambahan itu semua 16 subhimpunan <m>X</m> hadir, sehingga koleksi
+      menjadi topologi diskret <m>\mathcal P(X)</m>. Karena setiap tambahan
+      muncul sebagai gabungan anggota yang sudah diwajibkan, kelimanya
+      memang minimum.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-05">
+    <title>Koleksi subhimpunan berhingga dan uji gabungan tak berhingga</title>
+    <statement><p>
+      Misalkan <m>F</m> koleksi semua subhimpunan berhingga <m>\R</m> dan
+      <m>\tau=\{\emptyset,\R\}\cup F</m>. Tentukan apakah <m>\tau</m> topologi.
+      Tuliskan terlebih dahulu tiga anggota <m>F</m> dan tiga himpunan yang
+      bukan anggota <m>F</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-05-hint"><p>
+      Ambil dua singleton berbeda. Gabungan berhingga tetap berhingga, tetapi
+      gabungan tak berhingga dari singleton berbeda dapat menjadi tak berhingga
+      dan bukan <m>\R</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-05-answer"><p>
+      Contoh anggota <m>F</m> adalah <m>\emptyset</m>, <m>\{0\}</m>, dan
+      <m>\{0,1\}</m>. Contoh yang bukan anggota <m>F</m> adalah
+      <m>\R</m>, <m>\Z</m>, dan <m>[0,1]</m>. Koleksi <m>\tau</m> bukan
+      topologi pada <m>\R</m>; gabungan tak berhingga
+      <m>\bigcup_{n\geq1}\{n\}=\Z^+</m> tidak berhingga dan bukan <m>\R</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-05-solution"><p>
+      Himpunan kosong dan <m>\R</m> ada, dan irisan berhingga anggota tetap
+      anggota. Namun topologi menuntut gabungan sebarang. Himpunan
+      <m>U_n=\{n\}</m> berada dalam <m>F</m> untuk setiap <m>n\geq1</m>,
+      sedangkan gabungannya <m>\Z^+</m> tak berhingga dan merupakan proper
+      subset dari <m>\R</m>; karenanya <m>\Z^+\notin\tau</m>. Aksioma gabungan
+      gagal. Ini berbeda dari topologi komplemen berhingga, yang memasukkan
+      himpunan dengan komplemen berhingga, bukan semua himpunan berhingga.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-06">
+    <title>Topologi tiga elemen pada bilangan real</title>
+    <statement><p>
+      Uji <m>\tau=\{\emptyset,\R,\{0\}\}</m> terhadap aksioma topologi.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-06-hint"><p>
+      Semua gabungan anggota koleksi hanya menghasilkan salah satu dari tiga
+      himpunan; periksa pula semua irisan berhingga.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-06-answer"><p>
+      Ya. Koleksi tersebut merupakan topologi pada <m>\R</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-06-solution"><p>
+      <m>\emptyset</m> dan <m>\R</m> tercantum. Gabungan sebarang keluarga
+      yang mengandung <m>\R</m> adalah <m>\R</m>; jika tidak, gabungannya
+      adalah <m>\emptyset</m> atau <m>\{0\}</m>. Irisan berhingga memiliki
+      pola yang sama: irisan dengan <m>\emptyset</m> kosong, irisan dengan
+      <m>\R</m> tidak mengubah himpunan, dan
+      <m>\{0\}\cap\{0\}=\{0\}</m>. Semua hasil berada dalam <m>\tau</m>.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-07">
+    <title>Topologi indiskret</title>
+    <statement><p>
+      Untuk himpunan sembarang <m>X</m>, uji
+      <m>\tau=\{\emptyset,X\}</m> sebagai topologi.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-07-hint"><p>
+      Hanya ada dua anggota; daftar semua kemungkinan gabungan dan irisan
+      berhingga.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-07-answer"><p>
+      Ya. Ini adalah topologi indiskret pada <m>X</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-07-solution"><p>
+      Aksioma pertama benar. Gabungan keluarga yang seluruhnya kosong adalah
+      kosong; jika sedikitnya satu anggota adalah <m>X</m>, gabungannya
+      <m>X</m>. Untuk irisan berhingga, adanya anggota kosong memberi
+      kosong, sedangkan irisan beberapa salinan <m>X</m> tetap <m>X</m>.
+      Jadi ketiga aksioma terpenuhi.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-08">
+    <title>Topologi diskret</title>
+    <statement><p>
+      Untuk himpunan sembarang <m>X</m>, uji koleksi semua subhimpunan
+      <m>X</m> sebagai topologi.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-08-hint"><p>
+      Gabungan atau irisan dari subhimpunan <m>X</m> tetap merupakan
+      subhimpunan <m>X</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-08-answer"><p>
+      Ya. Koleksi semua subhimpunan adalah topologi diskret.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-08-solution"><p>
+      Himpunan kosong dan <m>X</m> termasuk dalam koleksi kuasa
+      <m>\mathcal P(X)</m>. Jika setiap <m>U_i\subseteq X</m>, maka
+      <m>\bigcup_iU_i\subseteq X</m>; demikian pula irisan berhingga
+      <m>\bigcap_{j=1}^nU_j\subseteq X</m>. Jadi koleksi kuasa tertutup
+      terhadap operasi yang disyaratkan dan merupakan topologi diskret.
+    </p></solution>
+  </exercise>
+</section>
