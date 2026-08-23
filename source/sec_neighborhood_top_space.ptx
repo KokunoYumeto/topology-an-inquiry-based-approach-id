@@ -1,42 +1,42 @@
 <section xml:id="sec_neighborhood_top_space">
-  <title>Neighborhoods in Topological Spaces</title>
+  <title>Lingkungan dalam Ruang Topologi</title>
   <p>
-    Recall that we defined a neighborhood of a point <m>a</m> in a metric space to be a subset of the space that contains an open ball centered at <m>X</m>.
-    Every open ball is an open set,
-    so we can extend the idea of neighborhood to topological spaces.
+    Ingat bahwa dalam ruang metrik kita mendefinisikan lingkungan suatu titik <m>a</m> sebagai subhimpunan ruang yang memuat bola terbuka berpusat di <m>a</m>.
+    Setiap bola terbuka merupakan himpunan terbuka,
+    sehingga gagasan lingkungan dapat diperluas ke ruang topologi.
   </p>
 
   <definition>
-    <idx><h>neighborhood in a topological space</h></idx>
+    <idx><h>lingkungan dalam ruang topologi</h></idx>
     <statement>
       <p>
-        Let <m>(X, \tau)</m> be a topological space, and let <m>a \in X</m>.
-        A subset <m>N</m> of <m>X</m> is a <term>neighborhood</term> of <m>a</m> if <m>N</m> contains an open set that contains <m>a</m>.
+        Misalkan <m>(X, \tau)</m> suatu ruang topologi dan <m>a \in X</m>.
+        Subhimpunan <m>N</m> dari <m>X</m> merupakan <term>lingkungan</term> dari <m>a</m> jika <m>N</m> memuat suatu himpunan terbuka yang memuat <m>a</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    Let's look at some examples.
+    Mari kita lihat beberapa contoh.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>X = \{a,b,c,d\}</m> and let <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
+      Misalkan <m>X = \{a,b,c,d\}</m> dan <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Find all of the neighborhoods of the point <m>a</m>.
+            Tentukan semua lingkungan titik <m>a</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Find all of the neighborhoods of the point <m>c</m>.
+            Tentukan semua lingkungan titik <m>c</m>.
           </p>
         </statement>
       </task>
@@ -44,31 +44,31 @@
   </activity>
 
   <p>
-    In metric spaces,
-    an open set was a neighborhood of each of its points.
-    This is also true in topological spaces.
+    Dalam ruang metrik,
+    suatu himpunan terbuka merupakan lingkungan dari setiap titiknya.
+    Hal ini juga berlaku dalam ruang topologi.
   </p>
 
   <theorem>
     <statement>
       <p>
-        Let <m>(X, \tau)</m> be a topological space.
-        A subset <m>O</m> of <m>X</m> is open if and only if <m>O</m> is a neighborhood of each of its points.
+        Misalkan <m>(X, \tau)</m> suatu ruang topologi.
+        Subhimpunan <m>O</m> dari <m>X</m> terbuka jika dan hanya jika <m>O</m> merupakan lingkungan dari setiap titiknya.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>(X, \tau)</m> be a topological space,
-      and let <m>O</m> be a subset of <m>X</m>.
-      First we demonstrate that if <m>O</m> is open,
-      then <m>O</m> is a neighborhood of each of its points.
-      Assume that <m>O</m> is an open set, and let <m>a \in O</m>.
-      Then <m>O</m> contains the open set <m>O</m> that contains <m>a</m>,
-      so <m>O</m> is a neighborhood of <m>a</m>.
+      Misalkan <m>(X, \tau)</m> suatu ruang topologi,
+      dan misalkan <m>O</m> subhimpunan dari <m>X</m>.
+      Pertama-tama kita tunjukkan bahwa jika <m>O</m> terbuka,
+      maka <m>O</m> merupakan lingkungan dari setiap titiknya.
+      Andaikan <m>O</m> himpunan terbuka dan <m>a \in O</m>.
+      Himpunan <m>O</m> memuat himpunan terbuka <m>O</m> yang memuat <m>a</m>,
+      sehingga <m>O</m> merupakan lingkungan dari <m>a</m>.
     </p>
     <p>
-      The reverse containment is the subject of the next activity.
+      Arah sebaliknya menjadi pokok kegiatan berikutnya.
     </p>
   </proof>
   </theorem>
@@ -76,30 +76,30 @@
   <activity>
    <introduction>
     <p>
-      Let <m>(X, \tau)</m> be a topological space.
-      Let <m>O</m> be a subset of <m>X</m>.
-      Assume <m>O</m> is a neighborhood of each of its points.
+      Misalkan <m>(X, \tau)</m> suatu ruang topologi.
+      Misalkan <m>O</m> subhimpunan dari <m>X</m>.
+      Andaikan <m>O</m> merupakan lingkungan dari setiap titiknya.
     </p>
    </introduction>
       <task>
         <statement>
           <p>
-            What do we need to do to show that <m>O</m> is an open set?
+            Apa yang perlu kita lakukan untuk menunjukkan bahwa <m>O</m> merupakan himpunan terbuka?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>a \in O</m>.
-            Why must there exist an open set <m>O_a</m> such that <m>a \in O_a \subseteq O</m>?
+            Misalkan <m>a \in O</m>.
+            Mengapa harus ada himpunan terbuka <m>O_a</m> sedemikian sehingga <m>a \in O_a \subseteq O</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Complete the proof that <m>O</m> is an open set.
+            Lengkapi pembuktian bahwa <m>O</m> merupakan himpunan terbuka.
           </p>
         </statement>
       </task>

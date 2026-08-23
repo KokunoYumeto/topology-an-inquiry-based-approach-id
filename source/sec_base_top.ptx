@@ -1,174 +1,174 @@
 <section xml:id="sec_base_top">
-  <title>Bases for Topologies</title>
+  <title>Basis untuk Topologi</title>
   <p>
-    It can be difficult to completely describe the open sets in a topology.
-    Instead, we can describe the topology using a collection of sets that generate the topology.
-    For example,
-    if <m>(X,d)</m> is a metric space then the collection of open sets in <m>X</m> forms a topology on <m>X</m>,
-    called the <term>metric</term> topology.
-    We also saw that in a metric space,
-    every open set in <m>X</m> is a union of open balls.
-    For that reason we called the collection of open balls a <term>basis</term>
-    for the open sets in <m>X</m>.
-    We can do the same thing in any topological space.
-    As a non-trivial example,
-    an interesting topology defined on the positive integers is due to S.W. Golomb.
-    One can use this topology to prove that there are infinitely many primes.
-    This topology also makes the positive integers into a connected Hausdorff space
-    (more on these concepts later).
-    The Golomb topology is defined as follows.
-    If <m>a</m> and <m>b</m> are coprime integers in <m>\Z^+</m>
-    (that is, <m>a</m> and <m>b</m> have no common positive factors other than 1 so that the greatest common divisor of <m>a</m> and <m>b</m> is <m>1</m>),
-    let
+    Menjelaskan secara lengkap himpunan terbuka dalam suatu topologi dapat sulit.
+    Sebagai gantinya, kita dapat menjelaskan topologi menggunakan koleksi himpunan yang membangkitkan topologi tersebut.
+    Sebagai contoh,
+    jika <m>(X,d)</m> merupakan ruang metrik, maka koleksi himpunan terbuka dalam <m>X</m> membentuk topologi pada <m>X</m>,
+    yang disebut topologi <term>metrik</term>.
+    Kita juga telah melihat bahwa dalam ruang metrik,
+    setiap himpunan terbuka dalam <m>X</m> merupakan gabungan bola-bola terbuka.
+    Karena itu kita menyebut koleksi bola terbuka sebagai <term>basis</term>
+    untuk himpunan-himpunan terbuka dalam <m>X</m>.
+    Hal yang sama dapat kita lakukan dalam ruang topologi mana pun.
+    Sebagai contoh yang tidak sepele,
+    suatu topologi menarik yang didefinisikan pada bilangan bulat positif diperkenalkan oleh S.W. Golomb.
+    Topologi ini dapat digunakan untuk membuktikan bahwa terdapat tak berhingga banyak bilangan prima.
+    Topologi ini juga menjadikan bilangan bulat positif sebagai ruang Hausdorff terhubung
+    (konsep-konsep ini akan dibahas lebih lanjut nanti).
+    Topologi Golomb didefinisikan sebagai berikut.
+    Jika <m>a</m> dan <m>b</m> merupakan bilangan bulat koprima dalam <m>\Z^+</m>
+    (yaitu, <m>a</m> dan <m>b</m> tidak memiliki faktor positif bersama selain 1 sehingga pembagi persekutuan terbesar <m>a</m> dan <m>b</m> adalah <m>1</m>),
+    misalkan
     <me>
       B_{a,b} = \{a+bn \mid n \geq 0\}
     </me>.
   </p>
   <p>
-    <idx><h>Golomb space</h></idx>
-    The collection of sets <m>B_{a,b}</m> is a basis for the Golomb topology,
-    and the topological space <m>(\Z^+, \tau)</m> is called the <term>Golomb space</term>.
+    <idx><h>ruang Golomb</h></idx>
+    Koleksi himpunan <m>B_{a,b}</m> merupakan basis untuk topologi Golomb,
+    dan ruang topologi <m>(\Z^+, \tau)</m> disebut <term>ruang Golomb</term>.
         
-    It is an exercise in number theory to prove that the sets <m>B_{a,b}</m> form a basis for a topology,
-    so we will not go into the details.
+    Membuktikan bahwa himpunan-himpunan <m>B_{a,b}</m> membentuk basis suatu topologi merupakan latihan dalam teori bilangan,
+    sehingga kita tidak membahas rinciannya.
   </p>
 
   <activity xml:id="act_top_basis">
     <p>
-      Let <m>X = \{a,b,c,d\}</m> and let <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{c,d\}, \{a,c,d\}, \{b,c,d\},X)</m>.
-      You may assume that <m>\tau</m> is a topology on <m>X</m>.
-      Explain why any nonempty open set in the topological space
-      <m>(X, \tau)</m> can be written in terms of arbitrary unions and finite intersections of <m>\{a\}</m>,
-      <m>\{b\}</m>, and <m>\{c,d\}</m>.
+      Misalkan <m>X = \{a,b,c,d\}</m> dan <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{c,d\}, \{a,c,d\}, \{b,c,d\},X)</m>.
+      Anda boleh mengasumsikan bahwa <m>\tau</m> merupakan topologi pada <m>X</m>.
+      Jelaskan mengapa setiap himpunan terbuka tak kosong dalam ruang topologi
+      <m>(X, \tau)</m> dapat ditulis menggunakan gabungan sebarang dan irisan berhingga dari <m>\{a\}</m>,
+      <m>\{b\}</m>, dan <m>\{c,d\}</m>.
     </p>
   </activity>
 
   <p>
-    <xref ref="act_top_basis"/> shows that,
-    just like the open balls in a metric space,
-    a topology can have a collection of subsets whose unions make up all of the open sets in the topology.
-    We do need to take a little care, though.
-    A basis will generate the collection of open sets for a topology,
-    so the basis sets we start with should themselves be open sets.
-    In addition,
-    every element in the topological space should be an element of one of the basis sets,
-    and since the basis elements are to produce all of the open sets in the topology,
-    every set in the topology
-    (except the empty set)
-    should be a union of sets in a basis.
-    It also must be the case that we can ensure that any finite intersection of sets in the topology remains a set in the topology when we write the sets in the topology in terms of the sets in a basis.
-    To make the last two conditions happen,
-    we will see that it is enough to insist that for any point in the intersection of basis elements,
-    there is another basis element in that intersection that contains the point.
-    This is summarized in <xref ref="thm_Basis"/>.
+    <xref ref="act_top_basis"/> menunjukkan bahwa,
+    seperti bola-bola terbuka dalam ruang metrik,
+    suatu topologi dapat memiliki koleksi subhimpunan yang gabungannya membentuk semua himpunan terbuka dalam topologi tersebut.
+    Namun kita perlu sedikit berhati-hati.
+    Suatu basis akan membangkitkan koleksi himpunan terbuka untuk sebuah topologi,
+    sehingga himpunan-himpunan basis yang kita gunakan harus merupakan himpunan terbuka.
+    Selain itu,
+    setiap elemen dalam ruang topologi harus menjadi elemen dari salah satu himpunan basis,
+    dan karena elemen-elemen basis harus menghasilkan semua himpunan terbuka dalam topologi,
+    setiap himpunan dalam topologi
+    (kecuali himpunan kosong)
+    harus merupakan gabungan himpunan-himpunan dalam suatu basis.
+    Kita juga harus dapat memastikan bahwa setiap irisan berhingga himpunan dalam topologi tetap merupakan himpunan dalam topologi ketika kita menulis himpunan-himpunan tersebut dalam istilah himpunan basis.
+    Untuk menjamin dua syarat terakhir,
+    akan kita lihat bahwa cukup mensyaratkan: untuk setiap titik dalam irisan elemen-elemen basis,
+    terdapat elemen basis lain di dalam irisan tersebut yang memuat titik itu.
+    Hal ini dirangkum dalam <xref ref="thm_Basis"/>.
   </p>
 
   <theorem xml:id="thm_Basis">
     <statement>
       <p>
-        Let <m>X</m> be a set and let <m>\B</m> be a collection of subsets of <m>X</m> such that
+        Misalkan <m>X</m> suatu himpunan dan <m>\B</m> koleksi subhimpunan dari <m>X</m> sedemikian sehingga
         <ol>
           <li>
             <p>
-              For each <m>x \in X</m>,
-              there is a set in <m>\B</m> that contains <m>x</m>.
+              Untuk setiap <m>x \in X</m>,
+              terdapat himpunan dalam <m>\B</m> yang memuat <m>x</m>.
             </p>
           </li>
           <li>
             <p>
-              If <m>x \in X</m> is an element of
-              <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
-              then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+              Jika <m>x \in X</m> merupakan elemen dari
+              <m>B_1 \cap B_2</m> untuk suatu <m>B_1, B_2 \in \B</m>,
+              maka terdapat himpunan <m>B_3 \in \B</m> sedemikian sehingga <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
             </p>
           </li>
         </ol>
       </p>
       <p>
-        Then the set <m>\tau</m> that consists of the empty set and unions of elements of <m>\B</m> is a topology on <m>X</m>.
+        Maka himpunan <m>\tau</m> yang terdiri dari himpunan kosong dan gabungan elemen-elemen <m>\B</m> merupakan topologi pada <m>X</m>.
       </p>
     </statement>
   </theorem>
 
   <p>
-    Before we prove <xref ref="thm_Basis"/>,
-    we will need to know one fact about the set <m>\B</m>.
+    Sebelum membuktikan <xref ref="thm_Basis"/>,
+    kita perlu mengetahui satu fakta tentang himpunan <m>\B</m>.
   </p>
 
   <activity xml:id="act_Basis">
     <introduction>
     <p>
-      Let <m>X</m> be a set and <m>\B</m> a collection of subsets of <m>X</m> such that
+      Misalkan <m>X</m> suatu himpunan dan <m>\B</m> koleksi subhimpunan dari <m>X</m> sedemikian sehingga
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            For each <m>x \in X</m>,
-            there is a set in <m>\B</m> that contains <m>x</m>.
+            Untuk setiap <m>x \in X</m>,
+            terdapat himpunan dalam <m>\B</m> yang memuat <m>x</m>.
           </p>
         </statement>
       </task>
       <task>
         <introduction>
           <p>
-            If <m>x \in X</m> is an element of
-            <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
-            then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+            Jika <m>x \in X</m> merupakan elemen dari
+            <m>B_1 \cap B_2</m> untuk suatu <m>B_1, B_2 \in \B</m>,
+            maka terdapat himpunan <m>B_3 \in \B</m> sedemikian sehingga <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
           </p>
           <p>
-            Let <m>B_1</m>, <m>B_2</m>, <m>\ldots</m>,
-      <m>B_n</m> be in <m>\B</m>.
-      Our goal in this activity is to extend property 2 and show that if <m>x \in \bigcap_{1 \leq k \leq n} B_k</m>,
-      then there is a set <m>B \in \B</m> such that <m>x \in B</m> and <m>B \subseteq \bigcap_{1 \leq k \leq n} B_k</m>.
+            Misalkan <m>B_1</m>, <m>B_2</m>, <m>\ldots</m>,
+      <m>B_n</m> merupakan anggota <m>\B</m>.
+      Tujuan kegiatan ini adalah memperluas sifat 2 dan menunjukkan bahwa jika <m>x \in \bigcap_{1 \leq k \leq n} B_k</m>,
+      maka terdapat himpunan <m>B \in \B</m> sedemikian sehingga <m>x \in B</m> dan <m>B \subseteq \bigcap_{1 \leq k \leq n} B_k</m>.
           </p>
         </introduction>
         <task>
           <statement>
             <p>
-              Since the statement we want to prove depends on a positive integer <m>n</m>,
-      we will use mathematical induction.
-      Explain why the <m>n=1</m> and <m>n=2</m> cases are true.
+      Karena pernyataan yang ingin kita buktikan bergantung pada bilangan bulat positif <m>n</m>,
+      kita akan menggunakan induksi matematika.
+      Jelaskan mengapa kasus <m>n=1</m> dan <m>n=2</m> benar.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              What is the inductive hypothesis and what do we want to prove in the inductive step?
+            Apa hipotesis induksinya dan apa yang ingin kita buktikan pada langkah induksi?
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Use the inductive hypothesis and condition 2 to complete the proof of the following lemma.
+              Gunakan hipotesis induksi dan kondisi 2 untuk melengkapi pembuktian lema berikut.
             </p>
           </statement>
           <lemma xml:id="lem_Basis">
       <statement>
         <p>
-          Let <m>X</m> be a set and <m>\B</m> a collection of subsets of <m>X</m> such that
+          Misalkan <m>X</m> suatu himpunan dan <m>\B</m> koleksi subhimpunan dari <m>X</m> sedemikian sehingga
           <ol>
             <li>
               <p>
-                For each <m>x \in X</m>,
-                there is a set in <m>\B</m> that contains <m>x</m>.
+                Untuk setiap <m>x \in X</m>,
+                terdapat himpunan dalam <m>\B</m> yang memuat <m>x</m>.
               </p>
             </li>
             <li>
               <p>
-                If <m>x \in X</m> is an element of
-                <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
-                then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+                Jika <m>x \in X</m> merupakan elemen dari
+                <m>B_1 \cap B_2</m> untuk suatu <m>B_1, B_2 \in \B</m>,
+                maka terdapat himpunan <m>B_3 \in \B</m> sedemikian sehingga <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
               </p>
             </li>
           </ol>
         </p>
         <p>
-          Let <m>B_1</m>, <m>B_2</m>, <m>\ldots</m>,
-          <m>B_n</m> be in <m>\B</m>.
-          If <m>x \in \bigcap_{1 \leq k \leq n} B_k</m>,
-          then there is a set <m>B \in \B</m> such that <m>x \in B</m> and <m>B \subseteq \bigcap_{1 \leq k \leq n} B_k</m>.
+          Misalkan <m>B_1</m>, <m>B_2</m>, <m>\ldots</m>,
+          <m>B_n</m> merupakan anggota <m>\B</m>.
+          Jika <m>x \in \bigcap_{1 \leq k \leq n} B_k</m>,
+          maka terdapat himpunan <m>B \in \B</m> sedemikian sehingga <m>x \in B</m> dan <m>B \subseteq \bigcap_{1 \leq k \leq n} B_k</m>.
         </p>
       </statement>
     </lemma>
@@ -177,83 +177,83 @@
  </activity>
 
   <p>
-    Now we can prove <xref ref="thm_Basis"/>.
+    Sekarang kita dapat membuktikan <xref ref="thm_Basis"/>.
   </p>
 
   <proof>
     <p>
-      Let <m>X</m> be a topological space,
-      and let <m>\B</m> and <m>\tau</m> satisfy the given conditions.
-      By definition, <m>\emptyset \in \tau</m>.
-      For each <m>x \in X</m> there is a set
-      <m>B_x \in \B</m> such that <m>x \in B_x</m>.
-      Then <m>X = \bigcup_{x \in X} B_x</m>, and <m>X \in \tau</m>.
-      To complete our proof that <m>\tau</m> is a topology on <m>X</m>,
-      we need to demonstrate that <m>\tau</m> is closed under arbitrary unions and finite intersections.
-      We first consider unions.
-      Let <m>\{U_{\alpha}\}</m> be a collection of sets in <m>\tau</m> for <m>\alpha</m> in some indexing set <m>I</m>.
-      By definition,
-      each <m>U_{\alpha}</m> is empty or is a union of elements of <m>\B</m>.
-      So either <m>U = \bigcup_{\alpha \in I} U_{\alpha}</m> is empty,
-      or is a union of sets in <m>\B</m>.
-      Thus, <m>U \in \tau</m> and <m>\tau</m> is closed under arbitrary unions.
+      Misalkan <m>X</m> suatu ruang topologi,
+      dan misalkan <m>\B</m> serta <m>\tau</m> memenuhi kondisi yang diberikan.
+      Berdasarkan definisi, <m>\emptyset \in \tau</m>.
+      Untuk setiap <m>x \in X</m> terdapat himpunan
+      <m>B_x \in \B</m> sedemikian sehingga <m>x \in B_x</m>.
+      Maka <m>X = \bigcup_{x \in X} B_x</m>, dan <m>X \in \tau</m>.
+      Untuk melengkapi pembuktian bahwa <m>\tau</m> merupakan topologi pada <m>X</m>,
+      kita perlu menunjukkan bahwa <m>\tau</m> tertutup terhadap gabungan sebarang dan irisan berhingga.
+      Kita pertimbangkan gabungan terlebih dahulu.
+      Misalkan <m>\{U_{\alpha}\}</m> koleksi himpunan dalam <m>\tau</m> untuk <m>\alpha</m> pada suatu himpunan pengindeks <m>I</m>.
+      Berdasarkan definisi,
+      setiap <m>U_{\alpha}</m> kosong atau merupakan gabungan elemen-elemen <m>\B</m>.
+      Jadi <m>U = \bigcup_{\alpha \in I} U_{\alpha}</m> kosong,
+      atau merupakan gabungan himpunan-himpunan dalam <m>\B</m>.
+      Dengan demikian, <m>U \in \tau</m> dan <m>\tau</m> tertutup terhadap gabungan sebarang.
     </p>
     <p>
-      Now we show that <m>\tau</m> is closed under finite intersections.
-      Let <m>n</m> be a positive integer and let
-      <m>\{U_{k}\}</m> a collection of sets in <m>\tau</m> for <m>1 \leq k \leq n</m>.
-      Let <m>U = U_1 \cap U_2 \cap \cdots \cap U_n</m>.
-      If <m>U_k = \emptyset</m> for any <m>k</m>,
-      then <m>U = \emptyset</m> is in <m>\tau</m>.
-      So suppose that <m>U_k \neq \emptyset</m> for each <m>k</m> between <m>1</m> and <m>n</m>.
-      Let <m>x \in U</m>.
-      Then <m>x \in U_k</m> for each <m>k</m>.
-      For every <m>m</m> between <m>1</m> and <m>n</m>,
-      the fact that <m>U_m</m> is a union of elements in <m>\B</m> implies that there exists
-      <m>B_m \subseteq U_m</m> with <m>x \in B_m</m>.
-      Thus, <m>x \in \bigcap_{1 \leq m \leq n} B_m</m>.
+      Sekarang kita tunjukkan bahwa <m>\tau</m> tertutup terhadap irisan berhingga.
+      Misalkan <m>n</m> bilangan bulat positif dan
+      <m>\{U_{k}\}</m> koleksi himpunan dalam <m>\tau</m> untuk <m>1 \leq k \leq n</m>.
+      Misalkan <m>U = U_1 \cap U_2 \cap \cdots \cap U_n</m>.
+      Jika <m>U_k = \emptyset</m> untuk suatu <m>k</m>,
+      maka <m>U = \emptyset</m> merupakan anggota <m>\tau</m>.
+      Jadi anggap <m>U_k \neq \emptyset</m> untuk setiap <m>k</m> antara <m>1</m> dan <m>n</m>.
+      Misalkan <m>x \in U</m>.
+      Maka <m>x \in U_k</m> untuk setiap <m>k</m>.
+      Untuk setiap <m>m</m> antara <m>1</m> dan <m>n</m>,
+      fakta bahwa <m>U_m</m> merupakan gabungan elemen-elemen dalam <m>\B</m> menyiratkan adanya
+      <m>B_m \subseteq U_m</m> dengan <m>x \in B_m</m>.
+      Jadi, <m>x \in \bigcap_{1 \leq m \leq n} B_m</m>.
     </p>
     <p>
       <xref ref="lem_Basis"/>
-      shows that there is a set <m>B_x \in \B</m> such that
-      <m>x \in B_x</m> and <m>B_x \subseteq \bigcap_{1 \leq m \leq n} B_m \subseteq \bigcap_{1 \leq m \leq n} U_m = U</m>.
-      Since <m>x</m> is an arbitrary element of <m>U</m>,
-      we must have <m>U \subseteq \bigcup_{x \in U} B_x</m>.
-      But each <m>B_x</m> is subset of <m>U</m>,
-      so <m>\bigcup_{x \in U} B_x \subseteq U</m>.
-      It follows that
+      menunjukkan bahwa terdapat himpunan <m>B_x \in \B</m> sedemikian sehingga
+      <m>x \in B_x</m> dan <m>B_x \subseteq \bigcap_{1 \leq m \leq n} B_m \subseteq \bigcap_{1 \leq m \leq n} U_m = U</m>.
+      Karena <m>x</m> merupakan elemen sebarang dari <m>U</m>,
+      kita harus memiliki <m>U \subseteq \bigcup_{x \in U} B_x</m>.
+      Namun setiap <m>B_x</m> merupakan subhimpunan dari <m>U</m>,
+      sehingga <m>\bigcup_{x \in U} B_x \subseteq U</m>.
+      Akibatnya,
       <me>
         U = \bigcup_{x \in U} B_x
       </me>
-      and <m>U \in \tau</m>.
-      Therefore, <m>\tau</m> is a topology on <m>X</m>.
+      dan <m>U \in \tau</m>.
+      Jadi, <m>\tau</m> merupakan topologi pada <m>X</m>.
     </p>
   </proof>
 
   <p>
-    Any collection <m>\B</m> of sets as given in <xref ref="thm_Basis"/> is given a special name.
+    Setiap koleksi <m>\B</m> himpunan seperti yang diberikan dalam <xref ref="thm_Basis"/> memiliki nama khusus.
   </p>
 
   <definition xml:id="def_basis_topology">
-  <idx><h>basis</h><h>for a topology</h></idx>
+  <idx><h>basis</h><h>untuk topologi</h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a set.
-        A set <m>\B</m> is a <term>basis for a topology</term>
-        (or just a <term>basis</term>)
-        on <m>X</m> if
+        Misalkan <m>X</m> suatu himpunan.
+        Himpunan <m>\B</m> merupakan <term>basis untuk suatu topologi</term>
+        (atau cukup disebut <term>basis</term>)
+        pada <m>X</m> jika
         <ol>
           <li>
             <p>
-              For each <m>x \in X</m>,
-              there is a set in <m>\B</m> that contains <m>x</m>.
+              Untuk setiap <m>x \in X</m>,
+              terdapat himpunan dalam <m>\B</m> yang memuat <m>x</m>.
             </p>
           </li>
           <li>
             <p>
-              If <m>x \in X</m> is an element of
-              <m>B_1 \cap B_2</m> for some <m>B_1, B_2 \in \B</m>,
-              then there is a set <m>B_3 \in \B</m> such that <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
+              Jika <m>x \in X</m> merupakan elemen dari
+              <m>B_1 \cap B_2</m> untuk suatu <m>B_1, B_2 \in \B</m>,
+              maka terdapat himpunan <m>B_3 \in \B</m> sedemikian sehingga <m>x \in B_3 \subseteq B_1 \cap B_2</m>.
             </p>
           </li>
         </ol>
@@ -262,35 +262,35 @@
   </definition>
 
   <p>
-    <idx><h>basis</h><h>elements</h></idx>
-    <idx><h>basic open set</h></idx>
-    The elements of a basis <m>\B</m> are called <term>basis elements</term>
+    <idx><h>basis</h><h>elemen</h></idx>
+    <idx><h>himpunan terbuka dasar</h></idx>
+    Elemen-elemen suatu basis <m>\B</m> disebut <term>elemen basis</term>
         
-    or the <term>basic open sets</term>.
+    atau <term>himpunan terbuka dasar</term>.
         
-    A basis for a topology on a set <m>X</m> defines a topology on <m>X</m> as shown in <xref ref="thm_Basis"/>.
+    Basis untuk topologi pada himpunan <m>X</m> mendefinisikan topologi pada <m>X</m> seperti ditunjukkan dalam <xref ref="thm_Basis"/>.
   </p>
   <p>
-    Note that because of property (1) of <xref ref="def_basis_topology"/>,
-    the union of the sets in the basis must contain <m>X</m>.
-    In other words, the sets in a basis cover the space.
-    The second property ensures that if a point is in the intersection of two basic open sets,
-    then there is a smaller basic open set that contains <m>x</m>.
+    Perhatikan bahwa karena sifat (1) dari <xref ref="def_basis_topology"/>,
+    gabungan himpunan-himpunan dalam basis harus memuat <m>X</m>.
+    Dengan kata lain, himpunan-himpunan dalam basis menutupi ruang tersebut.
+    Sifat kedua memastikan bahwa jika suatu titik berada dalam irisan dua himpunan terbuka dasar,
+    maka terdapat himpunan terbuka dasar yang lebih kecil yang memuat <m>x</m>.
   </p>
 
   <definition>
-  <idx><h>topology generated by a basis</h></idx>
+  <idx><h>topologi yang dibangkitkan oleh basis</h></idx>
     <statement>
       <p>
-        Let <m>\B</m> be a basis for a topology on a set <m>X</m>.
-        The <term>topology <m>\tau</m> generated by <m>\B</m></term> contains the empty set and all arbitrary unions of basis elements.
+        Misalkan <m>\B</m> suatu basis untuk topologi pada himpunan <m>X</m>.
+        <term>Topologi <m>\tau</m> yang dibangkitkan oleh <m>\B</m></term> memuat himpunan kosong dan semua gabungan sebarang elemen basis.
       </p>
     </statement>
   </definition>
 
   <p>
-    When the topology for a space <m>X</m> is clear from the context,
-    we also call a basis for the topology a basis for <m>X</m>.
+    Jika topologi untuk ruang <m>X</m> sudah jelas dari konteks,
+    kita juga menyebut basis topologi tersebut sebagai basis untuk <m>X</m>.
   </p>
 
   <activity>
@@ -298,32 +298,32 @@
       <task>
         <introduction>
           <p>
-            Let <m>X=\{a,b,c,d,e,f\}</m> and <m>\tau= \{\emptyset, \{a\}, \{c,d\},\{a,c,d\}, \{b,c,d,e,f\}, X \}</m>.
+            Misalkan <m>X=\{a,b,c,d,e,f\}</m> dan <m>\tau= \{\emptyset, \{a\}, \{c,d\},\{a,c,d\}, \{b,c,d,e,f\}, X \}</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Is the set
+                  Apakah himpunan
                   <me>
                     \mathcal{B}  = \{\{a\},\{a,c,d\} \}
                   </me>
-                  a basis for <m>\tau</m>?
-                  If not, add the smallest number of sets that you can to
-                  <m>\mathcal{B}</m> to make a basis for this topology.
+                  merupakan basis untuk <m>\tau</m>?
+                  Jika bukan, tambahkan sesedikit mungkin himpunan ke
+                  <m>\mathcal{B}</m> agar menjadi basis untuk topologi ini.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Is the set
+                  Apakah himpunan
                   <me>
                     \mathcal{B}  = \{\{a\},\{c,d\},\{b,c,d,e,f\} \}
                   </me>
-                  a basis for <m>\tau</m>?
-                  If not, add the smallest number of sets that you can to
-                  <m>\mathcal{B}</m> to make a basis for this topology.
+                  merupakan basis untuk <m>\tau</m>?
+                  Jika bukan, tambahkan sesedikit mungkin himpunan ke
+                  <m>\mathcal{B}</m> agar menjadi basis untuk topologi ini.
                 </p>
               </statement>
             </task>
@@ -332,18 +332,18 @@
       <task>
         <statement>
           <p>
-            Let <m>X=\{a,b,c\}</m> and let <m>X</m> have the discrete topology
-            (the topology consisting of all subsets of <m>X</m>).
-            Is <m>\mathcal{B} = \{\{a\},\{c\},\{a,b\},\{b,c\} \}</m> a basis for <m>\tau</m> in the the discrete topology?
-            If not, add the smallest number of sets that you can to
-            <m>\mathcal{B}</m> to make a basis for this topology.
+          Misalkan <m>X=\{a,b,c\}</m> dan <m>X</m> memiliki topologi diskret
+            (topologi yang terdiri dari semua subhimpunan <m>X</m>).
+            Apakah <m>\mathcal{B} = \{\{a\},\{c\},\{a,b\},\{b,c\} \}</m> merupakan basis untuk <m>\tau</m> dalam topologi diskret?
+            Jika bukan, tambahkan sesedikit mungkin himpunan ke
+            <m>\mathcal{B}</m> agar menjadi basis untuk topologi ini.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Find a basis for the discrete topology on any set <m>X</m>.
+            Tentukan basis untuk topologi diskret pada sembarang himpunan <m>X</m>.
           </p>
         </statement>
       </task>

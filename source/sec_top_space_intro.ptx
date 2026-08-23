@@ -1,42 +1,42 @@
 <section xml:id="sec_top_space_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    Many of the properties that we introduced in metric spaces (continuity,
-    limit points,
-    boundary) could be phrased in terms of the open sets in the space.
-    With that in mind,
-    we can broaden our concept of space by eliminating the metric and just defining the opens sets in the space.
-    This produces what are called <term>topological spaces</term>.
+    Banyak sifat yang telah kita perkenalkan pada ruang metrik (kekontinuan,
+    titik limit,
+    dan batas) dapat dirumuskan dalam istilah himpunan terbuka pada ruang tersebut.
+    Dengan pemikiran itu,
+    kita dapat memperluas konsep ruang dengan menghilangkan metrik dan cukup mendefinisikan himpunan terbuka pada ruang tersebut.
+    Hasilnya adalah apa yang disebut <term>ruang topologi</term>.
   </p>
   <p>
-    Recall that the open sets in a metric space satisfied certain properties,
-    including that the arbitrary union of open sets is open and any finite intersection of opens sets is open.
-    We will now take these properties as our axioms in defining topological spaces.
+    Ingat bahwa himpunan terbuka dalam ruang metrik memenuhi sifat-sifat tertentu,
+    antara lain gabungan sebarang himpunan terbuka adalah terbuka dan irisan berhingga himpunan terbuka adalah terbuka.
+    Sekarang kita gunakan sifat-sifat ini sebagai aksioma untuk mendefinisikan ruang topologi.
   </p>
 
   <definition>
-  <idx><h>topology</h></idx>
+  <idx><h>topologi</h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a nonempty set.
-        A set <m>\tau</m><fn>
-        The symbol <m>\tau</m> is the Greek lowercase letter tau.
-        </fn> of subsets of <m>X</m> is said to be a <term>topology</term>
-        on <m>X</m> if
+        Misalkan <m>X</m> suatu himpunan tak kosong.
+        Suatu himpunan <m>\tau</m><fn>
+        Simbol <m>\tau</m> adalah huruf Yunani tau kecil.
+        </fn> yang terdiri dari subhimpunan-subhimpunan <m>X</m> disebut <term>topologi</term>
+        pada <m>X</m> jika
         <ol>
           <li>
             <p>
-              <m>X</m> and <m>\emptyset</m> belong to <m>\tau</m>,
+              <m>X</m> dan <m>\emptyset</m> merupakan anggota <m>\tau</m>,
             </p>
           </li>
           <li>
             <p>
-              any union of sets in <m>\tau</m> is a set in <m>\tau</m>, and
+              gabungan sebarang himpunan-himpunan dalam <m>\tau</m> merupakan himpunan dalam <m>\tau</m>, dan
             </p>
           </li>
           <li>
             <p>
-              any finite intersection of sets in <m>\tau</m> is a set in <m>\tau</m>.
+              irisan berhingga sebarang himpunan dalam <m>\tau</m> merupakan himpunan dalam <m>\tau</m>.
             </p>
           </li>
         </ol>
@@ -45,18 +45,18 @@
   </definition>
 
   <p>
-    <idx><h>topological space</h></idx>
-    <idx><h>open sets in a topological space</h></idx>
-    A <term>topological space</term>
+    <idx><h>ruang topologi</h></idx>
+    <idx><h>himpunan terbuka dalam ruang topologi</h></idx>
+    Suatu <term>ruang topologi</term>
         
-    is then any set on which a topology is defined.
-    If <m>X</m> is the space and <m>\tau</m> a topology on <m>X</m>,
-    we denote the topological space as <m>(X, \tau)</m>.
-    The elements of <m>\tau</m> are called the
-    <term>open sets</term> in the topological space.
-    When the topology is clear from the context,
-    we simple refer to <m>X</m> as the topological space.
-    Some examples are in order.
+    adalah himpunan apa pun yang dilengkapi dengan suatu topologi.
+    Jika <m>X</m> adalah ruangnya dan <m>\tau</m> topologi pada <m>X</m>,
+    kita menyatakan ruang topologi tersebut sebagai <m>(X, \tau)</m>.
+    Elemen-elemen <m>\tau</m> disebut
+    <term>himpunan terbuka</term> dalam ruang topologi.
+    Jika topologinya sudah jelas dari konteks,
+    kita cukup menyebut <m>X</m> sebagai ruang topologi.
+    Berikut beberapa contoh.
   </p>
 
   <exploration>
@@ -64,86 +64,86 @@
       <task>
         <statement>
           <p>
-            Suppose <m>X = \{ a, b, c\}</m>.
-            Is the set <m>\tau = \{a,b\}</m> a topology on <m>X</m>?
-            Justify your response.
+            Misalkan <m>X = \{ a, b, c\}</m>.
+            Apakah himpunan <m>\tau = \{a,b\}</m> merupakan topologi pada <m>X</m>?
+            Berikan justifikasi.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Suppose <m>X= \{a,b,c,d\}</m>.
-            Is the collection of subsets consisting of
-            <m>\tau = \{ \{a\}, \{b\}, \{a,b\} \}</m> a topology on <m>X</m>?
-            Justify your response.
-            If not, what is the smallest collection of subsets of <m>X</m> that need to be added to <m>\tau</m> to make <m>\tau</m> a topology on <m>X</m>?
+            Misalkan <m>X= \{a,b,c,d\}</m>.
+            Apakah koleksi subhimpunan yang terdiri dari
+            <m>\tau = \{ \{a\}, \{b\}, \{a,b\} \}</m> merupakan topologi pada <m>X</m>?
+            Berikan justifikasi.
+            Jika bukan, koleksi subhimpunan terkecil apa dari <m>X</m> yang perlu ditambahkan ke <m>\tau</m> agar <m>\tau</m> menjadi topologi pada <m>X</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Suppose <m>X= \{a,b,c,d\}</m>.
-            Is the collection of subsets consisting of
+            Misalkan <m>X= \{a,b,c,d\}</m>.
+            Apakah koleksi subhimpunan yang terdiri dari
             <me>
               \tau = \{\emptyset, \{a\}, \{b\}, \{d\}, \{a,b\}, \{a,d\}, X \}
             </me>
-            a topology on <m>X</m>?
-            Justify your response.
-            If not, what is the smallest collection of subsets of <m>X</m> that need to be added to <m>\tau</m> to make <m>\tau</m> a topology on <m>X</m>?.
+            merupakan topologi pada <m>X</m>?
+            Berikan justifikasi.
+            Jika bukan, koleksi subhimpunan terkecil apa dari <m>X</m> yang perlu ditambahkan ke <m>\tau</m> agar <m>\tau</m> menjadi topologi pada <m>X</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Suppose <m>X= \{a,b,c,d\}</m>.
-            Is the collection of subsets consisting of
+            Misalkan <m>X= \{a,b,c,d\}</m>.
+            Apakah koleksi subhimpunan yang terdiri dari
             <me>
               \tau = \{\emptyset, \{a\}, \{b\}, \{c\}, \{d\}, \{a,b\}, \{a,c\}, \{a,d\}, \{b, d\}, \{c,d\}, X \}
             </me>
-            a topology on <m>X</m>?
-            Justify your response.
-            If not, what is the smallest collection of subsets of <m>X</m> that need to be added to <m>\tau</m> to make <m>\tau</m> a topology on <m>X</m>?
+            merupakan topologi pada <m>X</m>?
+            Berikan justifikasi.
+            Jika bukan, koleksi subhimpunan terkecil apa dari <m>X</m> yang perlu ditambahkan ke <m>\tau</m> agar <m>\tau</m> menjadi topologi pada <m>X</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>F</m> be the collection of finite subsets of <m>\R</m>.
-            Let <m>\tau = \{\emptyset, \R\} \cup F</m>.
-            First, list three members of <m>F</m> and three sets that are not in <m>F</m>.
-            Next, is <m>\tau</m> a topology on <m>\R</m>?
-            Justify your response.
+            Misalkan <m>F</m> adalah koleksi subhimpunan berhingga dari <m>\R</m>.
+            Misalkan <m>\tau = \{\emptyset, \R\} \cup F</m>.
+            Pertama, tuliskan tiga anggota <m>F</m> dan tiga himpunan yang bukan anggota <m>F</m>.
+            Selanjutnya, apakah <m>\tau</m> merupakan topologi pada <m>\R</m>?
+            Berikan justifikasi.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>\tau = \{\emptyset, \R, \{0\} \}</m>.
-            Is <m>\tau</m> a topology on <m>\R</m>?
-            Justify your response.
+            Misalkan <m>\tau = \{\emptyset, \R, \{0\} \}</m>.
+            Apakah <m>\tau</m> merupakan topologi pada <m>\R</m>?
+            Berikan justifikasi.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>X</m> be a set and let <m>\tau = \{\emptyset, X\}</m>.
-            Is <m>\tau</m> a topology on <m>X</m>?
-            Justify your response.
+            Misalkan <m>X</m> suatu himpunan dan <m>\tau = \{\emptyset, X\}</m>.
+            Apakah <m>\tau</m> merupakan topologi pada <m>X</m>?
+            Berikan justifikasi.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>X</m> be a set and let <m>\tau</m> be the collection of all subsets of <m>X</m>.
-            Is <m>\tau</m> a topology on <m>X</m>?
-            Justify your response.
+            Misalkan <m>X</m> suatu himpunan dan <m>\tau</m> koleksi semua subhimpunan <m>X</m>.
+            Apakah <m>\tau</m> merupakan topologi pada <m>X</m>?
+            Berikan justifikasi.
           </p>
         </statement>
       </task>

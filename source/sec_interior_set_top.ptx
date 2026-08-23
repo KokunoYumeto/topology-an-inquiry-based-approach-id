@@ -1,53 +1,53 @@
 <section xml:id="sec_interior_set_top">
-  <title>The Interior of a Set in a Topological Space</title>
+  <title>Interior Himpunan dalam Ruang Topologi</title>
   <p>
-    We have seen that topologies define the open sets in a topological space.
-    As in metric spaces,
-    open sets can be characterized in terms of their interior points.
-    We defined interior points in metric spaces in terms of neighborhoods <mdash/> the same holds true in topological spaces.
+    Kita telah melihat bahwa topologi mendefinisikan himpunan terbuka dalam ruang topologi.
+    Seperti pada ruang metrik,
+    himpunan terbuka dapat dicirikan melalui titik-titik interiornya.
+    Dalam ruang metrik kita mendefinisikan titik interior dalam istilah lingkungan <mdash/> hal yang sama berlaku dalam ruang topologi.
   </p>
 
   <definition>
-  <idx><h>interior point</h></idx>
+  <idx><h>titik interior</h></idx>
     <statement>
       <p>
-        Let <m>A</m> be a subset of a topological space <m>X</m>.
-        A point <m>a \in A</m> is an <term>interior point</term>
-        of <m>A</m> if <m>A</m> is a neighborhood of <m>a</m>.
+        Misalkan <m>A</m> subhimpunan dari ruang topologi <m>X</m>.
+        Titik <m>a \in A</m> merupakan <term>titik interior</term>
+        dari <m>A</m> jika <m>A</m> merupakan lingkungan dari <m>a</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    Remember that a set is a neighborhood of a point if the set contains an open set that contains the point.
-    By definition,
-    every open set is a neighborhood of each of its points,
-    so every point of an open set <m>O</m> is an interior point of <m>O</m>.
-    Conversely, if every point of a set <m>O</m> is an interior point,
-    then <m>O</m> is a neighborhood of each of its points and is open.
-    This argument is summarized in the next theorem.
+    Ingat bahwa suatu himpunan merupakan lingkungan suatu titik jika himpunan tersebut memuat himpunan terbuka yang memuat titik itu.
+    Berdasarkan definisi,
+    setiap himpunan terbuka merupakan lingkungan dari setiap titiknya,
+    sehingga setiap titik dari himpunan terbuka <m>O</m> merupakan titik interior <m>O</m>.
+    Sebaliknya, jika setiap titik suatu himpunan <m>O</m> merupakan titik interior,
+    maka <m>O</m> merupakan lingkungan dari setiap titiknya dan bersifat terbuka.
+    Argumen ini dirangkum dalam teorema berikut.
   </p>
 
   <theorem>
     <statement>
       <p>
-        Let <m>X</m> be a topological space.
-        A subset <m>O</m> of <m>X</m> is open if and only if every point of <m>O</m> is an interior point of <m>O</m>.
+        Misalkan <m>X</m> suatu ruang topologi.
+        Subhimpunan <m>O</m> dari <m>X</m> terbuka jika dan hanya jika setiap titik <m>O</m> merupakan titik interior <m>O</m>.
       </p>
     </statement>
   </theorem>
 
   <p>
-    The collection of interior points in a set form a subset of that set,
-    called the <term>interior</term> of the set.
+    Koleksi titik interior dalam suatu himpunan membentuk subhimpunan dari himpunan tersebut,
+    yang disebut <term>interior</term> himpunan itu.
   </p>
 
   <definition>
     <statement>
       <p>
-        The <term>interior</term> of a subset <m>A</m> of a topological space <m>X</m> is the set
+        <term>Interior</term> subhimpunan <m>A</m> dari ruang topologi <m>X</m> adalah himpunan
         <me>
-          \Int(A) = \{a \in A \mid a \text{ is an interior point of }  A\}
+          \Int(A) = \{a \in A \mid a \text{ merupakan titik interior dari } A\}
         </me>.
       </p>
     </statement>
@@ -58,49 +58,48 @@
       <task>
         <statement>
           <p>
-            Consider <m>(\R, \tau)</m>, where <m>\tau</m> is the standard topology
-            (by standard in this situation,
-            we mean the metric topology determined by the Euclidean metric).
-            Let <m>A=(-\infty,0)\cup (1,2]\cup \{3\}</m> in <m>\R</m>.
-            What is <m>\Int(A)</m>?
-            What is the largest open subset of <m>\R</m> contained in <m>A</m>?
+            Pertimbangkan <m>(\R, \tau)</m>, dengan <m>\tau</m> topologi standar
+            (dalam konteks ini, standar berarti topologi metrik yang ditentukan oleh metrik Euklides).
+            Misalkan <m>A=(-\infty,0)\cup (1,2]\cup \{3\}</m> di <m>\R</m>.
+            Berapakah <m>\Int(A)</m>?
+            Apa subhimpunan terbuka terbesar dari <m>\R</m> yang terkandung dalam <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Consider <m>(\R, \tau)</m>, where <m>\tau</m> is the discrete topology
-            (the one where all subsets are open).
-            Let <m>A=(-\infty,0) \cup (1,2] \cup \{3\}</m> in <m>\R</m>.
-            What is <m>\Int(A)</m>?
-            What is the largest open subset of <m>\R</m> contained in <m>A</m>?
+            Pertimbangkan <m>(\R, \tau)</m>, dengan <m>\tau</m> topologi diskret
+            (topologi yang semua subhimpunannya terbuka).
+            Misalkan <m>A=(-\infty,0) \cup (1,2] \cup \{3\}</m> di <m>\R</m>.
+            Berapakah <m>\Int(A)</m>?
+            Apa subhimpunan terbuka terbesar dari <m>\R</m> yang terkandung dalam <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Consider <m>(\R, \tau)</m>,
-            where <m>\tau</m> is the finite complement topology
-            (the one where the open sets are the empty set along with all subsets <m>O</m> of <m>\R</m> such that <m>\R \setminus O</m> is finite).
-            Let <m>A=(-\infty,0) \cup (1,2] \cup \{3\}</m> in <m>\R</m>.
-            What is <m>\Int(A)</m>?
-            What is the largest open subset of <m>\R</m> contained in <m>A</m>?
+            Pertimbangkan <m>(\R, \tau)</m>,
+            dengan <m>\tau</m> topologi komplemen berhingga
+            (topologi yang himpunan terbukanya adalah himpunan kosong serta semua subhimpunan <m>O</m> dari <m>\R</m> sedemikian sehingga <m>\R \setminus O</m> berhingga).
+            Misalkan <m>A=(-\infty,0) \cup (1,2] \cup \{3\}</m> di <m>\R</m>.
+            Berapakah <m>\Int(A)</m>?
+            Apa subhimpunan terbuka terbesar dari <m>\R</m> yang terkandung dalam <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>X = \{a,b,c,d\}</m> and let
+            Misalkan <m>X = \{a,b,c,d\}</m> dan
             <me>
               \tau = \{\emptyset, \{a\}, \{a,b\}, \{c\}, \{d\}, \{c,d\}, \{a,c,d\}, \{a,c\}, \{a,d\}, \{a,b,c\}, \{a,b,d\}, X\}
             </me>.
-            Assume that <m>\tau</m> is a topology on <m>X</m>.
-            Let <m>A = \{b,c,d\}</m>.
-            What is <m>\Int(A)</m>?
-            What is the largest open subset of <m>X</m> contained in <m>A</m>?
+            andaikan <m>\tau</m> merupakan topologi pada <m>X</m>.
+            Misalkan <m>A = \{b,c,d\}</m>.
+            Berapakah <m>\Int(A)</m>?
+            Apa subhimpunan terbuka terbesar dari <m>X</m> yang terkandung dalam <m>A</m>?
           </p>
         </statement>
       </task>
@@ -108,42 +107,42 @@
   </activity>
 
   <p>
-    One might expect that the interior of a set is an open set,
-    as it was in metric spaces.
-    This is true, but we can say even more.
-    In <xref ref="act_interior"/>
-    we saw that in our examples that <m>\Int(A)</m> was the largest open subset of <m>X</m> contained in <m>A</m>.
-    That this is always true is the subject of the next theorem.
+    Kita mungkin mengharapkan bahwa interior suatu himpunan merupakan himpunan terbuka,
+    sebagaimana dalam ruang metrik.
+    Hal ini benar, tetapi kita dapat menyatakan lebih banyak.
+    Dalam <xref ref="act_interior"/>
+    kita melihat bahwa pada contoh-contoh kita <m>\Int(A)</m> merupakan subhimpunan terbuka terbesar dari <m>X</m> yang terkandung dalam <m>A</m>.
+    Bahwa hal ini selalu benar merupakan pokok teorema berikutnya.
   </p>
 
   <theorem xml:id="thm_Interior">
     <statement>
       <p>
-        Let <m>(X,d)</m> be a topological space,
-        and let <m>A</m> be a subset of <m>X</m>.
-        The interior of <m>A</m> is the largest open subset of <m>X</m> contained in <m>A</m>.
+        Misalkan <m>(X,d)</m> suatu ruang topologi,
+        dan misalkan <m>A</m> subhimpunan dari <m>X</m>.
+        Interior <m>A</m> merupakan subhimpunan terbuka terbesar dari <m>X</m> yang terkandung dalam <m>A</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a topological space,
-      and let <m>A</m> be a subset of <m>X</m>.
-      We need to prove that <m>\Int(A)</m> is an open set in <m>X</m>,
-      and that <m>\Int(A)</m> is the largest open subset of <m>X</m> contained in <m>A</m>.
-      First we demonstrate that <m>\Int(A)</m> is an open set.
-      Let <m>a \in \Int(A)</m>.
-      Then <m>a</m> is an interior point of <m>A</m>,
-      so <m>A</m> is a neighborhood of <m>a</m>.
-      This implies that there exists an open set <m>O</m> containing <m>a</m> so that <m>O \subseteq A</m>.
-      But <m>O</m> is a neighborhood of each of its points,
-      so every point in <m>O</m> is an interior point of <m>A</m>.
-      It follows that <m>O \subseteq \Int(A)</m>.
-      Thus, <m>\Int(A)</m> is a neighborhood of each of its points and,
-      consequently, <m>\Int(A)</m> is an open set.
+      Misalkan <m>X</m> suatu ruang topologi,
+      dan misalkan <m>A</m> subhimpunan dari <m>X</m>.
+      Kita perlu membuktikan bahwa <m>\Int(A)</m> merupakan himpunan terbuka dalam <m>X</m>,
+      dan bahwa <m>\Int(A)</m> merupakan subhimpunan terbuka terbesar dari <m>X</m> yang terkandung dalam <m>A</m>.
+      Pertama-tama kita tunjukkan bahwa <m>\Int(A)</m> terbuka.
+      Misalkan <m>a \in \Int(A)</m>.
+      Maka <m>a</m> merupakan titik interior <m>A</m>,
+      sehingga <m>A</m> merupakan lingkungan <m>a</m>.
+      Ini berarti terdapat himpunan terbuka <m>O</m> yang memuat <m>a</m> sedemikian sehingga <m>O \subseteq A</m>.
+      Namun <m>O</m> merupakan lingkungan dari setiap titiknya,
+      sehingga setiap titik dalam <m>O</m> merupakan titik interior <m>A</m>.
+      Jadi <m>O \subseteq \Int(A)</m>.
+      Dengan demikian, <m>\Int(A)</m> merupakan lingkungan dari setiap titiknya dan,
+      akibatnya, <m>\Int(A)</m> merupakan himpunan terbuka.
     </p>
     <p>
-      The proof that <m>\Int(A)</m> is the largest open subset of <m>X</m> contained in <m>A</m> is left for the next activity.
+      Pembuktian bahwa <m>\Int(A)</m> merupakan subhimpunan terbuka terbesar dari <m>X</m> yang terkandung dalam <m>A</m> diserahkan pada kegiatan berikutnya.
     </p>
   </proof>
   </theorem>
@@ -151,24 +150,24 @@
   <activity>
     <introduction>
     <p>
-      Let <m>(X,d)</m> be a topological space,
-      and let <m>A</m> be a subset of <m>X</m>.
+      Misalkan <m>(X,d)</m> suatu ruang topologi,
+      dan misalkan <m>A</m> subhimpunan dari <m>X</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What will we have to show to prove that <m>\Int(A)</m> is the largest open subset of <m>X</m> contained in <m>A</m>?
+            Apa yang harus kita tunjukkan untuk membuktikan bahwa <m>\Int(A)</m> merupakan subhimpunan terbuka terbesar dari <m>X</m> yang terkandung dalam <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Suppose that <m>O</m> is an open subset of <m>X</m> that is contained in <m>A</m>,
-            and let <m>x \in O</m>.
-            What does the fact that <m>O</m> is open tell us?
-            Then complete the proof that <m>O \subseteq \Int(A)</m>.
+            Misalkan <m>O</m> subhimpunan terbuka dari <m>X</m> yang terkandung dalam <m>A</m>,
+            dan misalkan <m>x \in O</m>.
+            Apa yang diberitahukan oleh fakta bahwa <m>O</m> terbuka?
+            Kemudian lengkapi pembuktian bahwa <m>O \subseteq \Int(A)</m>.
           </p>
         </statement>
       </task>
@@ -176,13 +175,13 @@
   </activity>
 
   <p>
-    One consequence of <xref ref="thm_Interior"/> is the following.
+    Salah satu konsekuensi dari <xref ref="thm_Interior"/> adalah sebagai berikut.
   </p>
 
   <corollary>
     <statement>
       <p>
-        A subset <m>O</m> of a topological space <m>X</m> is open if and only if <m>O = \Int(O)</m>.
+        Subhimpunan <m>O</m> dari ruang topologi <m>X</m> terbuka jika dan hanya jika <m>O = \Int(O)</m>.
       </p>
     </statement>
   </corollary>

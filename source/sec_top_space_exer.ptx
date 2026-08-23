@@ -3,23 +3,23 @@
   <exercise>
     <introduction>
       <p>
-        You may wonder why we can't define a basis for a topology on a set <m>X</m> to be any collection of subsets whose union is <m>X</m>.
-        Consider the example of <m>X = \{a,b,c\}</m> and <m>S = \{\{a\}, \{c\}, \{a,b\}, \{b,c\}\}</m>.
+        Anda mungkin bertanya mengapa kita tidak dapat mendefinisikan basis topologi pada himpunan <m>X</m> sebagai sembarang koleksi subhimpunan yang gabungannya adalah <m>X</m>.
+        Pertimbangkan contoh <m>X = \{a,b,c\}</m> dan <m>S = \{\{a\}, \{c\}, \{a,b\}, \{b,c\}\}</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Determine the collection of all of the unions of elements of <m>S</m>.
+              Tentukan koleksi semua gabungan elemen-elemen <m>S</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Explain why the collection of unions of the elements of <m>S</m>,
-              along with the empty set, is not a topology on <m>X</m>.
-              What property of a basis is not satisfied?
+              Jelaskan mengapa koleksi gabungan elemen-elemen <m>S</m>,
+              bersama dengan himpunan kosong, bukan topologi pada <m>X</m>.
+              Sifat basis yang mana yang tidak terpenuhi?
             </p>
           </statement>
         </task>
@@ -28,39 +28,39 @@
   <exercise xml:id="ex_aZ_top">
     <introduction>
       <p>
-        For each integer <m>a</m>, let <m>a\Z = \{ka \mid k \in \Z\}</m>. That is, <m>a\Z</m> is the set of all integer multiples of <m>a</m>.
+        Untuk setiap bilangan bulat <m>a</m>, misalkan <m>a\Z = \{ka \mid k \in \Z\}</m>. Artinya, <m>a\Z</m> adalah himpunan semua kelipatan bilangan bulat dari <m>a</m>.
       </p>
     </introduction>
     <task>
       <statement>
         <p>
-          Show that <m>\{a\Z \mid a \in \Z\}</m> is a basis for a topology <m>\tau</m> on <m>\Z</m>.
+          Tunjukkan bahwa <m>\{a\Z \mid a \in \Z\}</m> merupakan basis untuk topologi <m>\tau</m> pada <m>\Z</m>.
         </p>
       </statement>
       <hint>
         <p>
-          What set is <m>m\Z \cap n\Z</m>?
+          Himpunan apakah <m>m\Z \cap n\Z</m>?
         </p>
       </hint>
     </task>
     <task>
       <statement>
         <p>
-          Is the set of positive integers an open set in the topological space <m>(\Z, \tau)</m>? Explain.
+          Apakah himpunan bilangan bulat positif merupakan himpunan terbuka dalam ruang topologi <m>(\Z, \tau)</m>? Jelaskan.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Is the set of odd integers open in the topological space <m>(\Z, \tau)</m>? Explain.
+          Apakah himpunan bilangan bulat ganjil terbuka dalam ruang topologi <m>(\Z, \tau)</m>? Jelaskan.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Is the set <m>\{0\} \cup \{x \in Z \mid |x| \geq 5\}</m> open in the topological space <m>(\Z, \tau)</m>? Explain.
+          Apakah himpunan <m>\{0\} \cup \{x \in \Z \mid |x| \geq 5\}</m> terbuka dalam ruang topologi <m>(\Z, \tau)</m>? Jelaskan.
         </p>
       </statement>
     </task>
@@ -69,53 +69,53 @@
   <exercise>
     <introduction>
       <p>
-        This exercise is a generalization of <xref ref="ex_aZ_top"/>. Let <m>a</m> and <m>b</m> be integers with <m>a \neq 0</m>. Let <m>A_{a,b} = a\Z+b = \{ak + b \mid k \in \Z\}</m>.
+        Latihan ini merupakan generalisasi dari <xref ref="ex_aZ_top"/>. Misalkan <m>a</m> dan <m>b</m> bilangan bulat dengan <m>a \neq 0</m>. Misalkan <m>A_{a,b} = a\Z+b = \{ak + b \mid k \in \Z\}</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>\{A_{a,b} \mid a, b \in \Z, a \neq 0\}</m> is a basis for a topology <m>\tau</m> on <m>\Z</m>.
+              Tunjukkan bahwa <m>\{A_{a,b} \mid a, b \in \Z, a \neq 0\}</m> merupakan basis untuk topologi <m>\tau</m> pada <m>\Z</m>.
             </p>
           </statement>
           <hint>
                 <p>
-                  If <m>B_1 = A_{a_1,b_1}</m> and <m>B_2 = A_{a_2,b_2}</m>, and if <m>x \in B_1 \cap B_2</m>, what can we say about <m>A_{a_1a_2,x}</m>?
+                  Jika <m>B_1 = A_{a_1,b_1}</m> dan <m>B_2 = A_{a_2,b_2}</m>, serta <m>x \in B_1 \cap B_2</m>, apa yang dapat kita katakan tentang <m>A_{a_1a_2,x}</m>?
                 </p>
               </hint>
         </task>
         <task>
           <introduction>
             <p>
-              Let <m>f : \Z \to \Z</m> be defined by <m>f(n) = n + (-1)^n</m>.
+              Misalkan <m>f : \Z \to \Z</m> didefinisikan oleh <m>f(n) = n + (-1)^n</m>.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Prove that <m>f</m> is a bijection.
+                    Buktikan bahwa <m>f</m> merupakan bijeksi.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    If <m>O</m> is an open set in <m>\Z</m>,
-                    is <m>f(O)</m> an open set?
+                    Jika <m>O</m> merupakan himpunan terbuka dalam <m>\Z</m>,
+                    apakah <m>f(O)</m> merupakan himpunan terbuka?
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    If <m>U</m> is an open set in <m>\Z</m>,
-                    is <m>f^{-1}(U)</m> an open set?
+                    Jika <m>U</m> merupakan himpunan terbuka dalam <m>\Z</m>,
+                    apakah <m>f^{-1}(U)</m> merupakan himpunan terbuka?
                     
                   </p>
                 </statement>
                 <hint>
                       <p>
-                        What is <m>f^{-1}</m>?
+                        Apakah <m>f^{-1}</m>?
                       </p>
                     </hint>
               </task>
@@ -126,23 +126,23 @@
   <exercise xml:id="ex_coarse_topology_example">
     <introduction>
       <p>
-        Let <m>\B = \{(-x,x) \mid x \in \R^+\}</m>.
+        Misalkan <m>\B = \{(-x,x) \mid x \in \R^+\}</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>\B</m> is a basis for a topology <m>\tau</m> on <m>\R</m>.
+              Tunjukkan bahwa <m>\B</m> merupakan basis untuk topologi <m>\tau</m> pada <m>\R</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Every basis set is open in <m>(\R, \tau_E)</m>.
-              So we can ask it the topology <m>\tau</m> is different than the Euclidean topology generated by all open intervals in <m>\R</m>.
-              Show that there are intervals of the form <m>(a,b)</m> that are open in
-              <m>(\R, d_E)</m> that are not open sets in <m>\tau</m>.
+              Setiap himpunan basis terbuka dalam <m>(\R, \tau_E)</m>.
+              Jadi kita dapat menanyakan apakah topologi <m>\tau</m> berbeda dari topologi Euklides yang dibangkitkan oleh semua interval terbuka dalam <m>\R</m>.
+              Tunjukkan bahwa terdapat interval berbentuk <m>(a,b)</m> yang terbuka dalam
+              <m>(\R, d_E)</m> tetapi bukan himpunan terbuka dalam <m>\tau</m>.
             </p>
           </statement>
         </task>
@@ -151,25 +151,25 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>X = \{a,b,c\}</m>,
-        and let <m>\tau_1 = \{\emptyset, \{a\}, \{a,b,c\}\}</m> and <m>\tau_2 = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{a,b,c\}\}</m>.
-        Both <m>\tau_1</m> and <m>\tau_2</m> are topologies in <m>X</m>,
-        but every element in <m>\tau_1</m> is also an element in <m>\tau_2</m>.
-        Then this happens we say that <m>\tau_1</m> is a weaker topology than <m>\tau_2</m>.
-        <xref ref="ex_coarse_topology_example"></xref> provides an example.
-        More formally,
+        Misalkan <m>X = \{a,b,c\}</m>,
+        dan misalkan <m>\tau_1 = \{\emptyset, \{a\}, \{a,b,c\}\}</m> serta <m>\tau_2 = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{a,b,c\}\}</m>.
+        Baik <m>\tau_1</m> maupun <m>\tau_2</m> merupakan topologi pada <m>X</m>,
+        tetapi setiap elemen dalam <m>\tau_1</m> juga merupakan elemen dalam <m>\tau_2</m>.
+        Jika hal ini terjadi, kita mengatakan bahwa <m>\tau_1</m> merupakan topologi yang lebih lemah daripada <m>\tau_2</m>.
+        <xref ref="ex_coarse_topology_example"></xref> memberikan sebuah contoh.
+        Secara formal,
       </p>
         <definition xml:id="def_weaker_topologies">
           <statement>
             <p>
-              Let <m>\tau_1</m> and <m>\tau_2</m> be two topologies on a set <m>X</m>.
-              If <m>\tau_1 \subseteq \tau_2</m>,
-              then <m>\tau_1</m> is a <term>coarser</term>
-              (or <term>weaker</term>)
-              topology than <m>\tau_2</m>.
-              We also say that <m>\tau_2</m> is a <term>finer</term>
-              (or <term>stronger</term>)
-              topology than <m>\tau_1</m>.
+              Misalkan <m>\tau_1</m> dan <m>\tau_2</m> dua topologi pada himpunan <m>X</m>.
+              Jika <m>\tau_1 \subseteq \tau_2</m>,
+              maka <m>\tau_1</m> merupakan topologi yang <term>lebih kasar</term>
+              (atau <term>lebih lemah</term>)
+              daripada <m>\tau_2</m>.
+              Kita juga mengatakan bahwa <m>\tau_2</m> merupakan topologi yang <term>lebih halus</term>
+              (atau <term>lebih kuat</term>)
+              daripada <m>\tau_1</m>.
             </p>
           </statement>
         </definition>
@@ -178,92 +178,92 @@
       <task>
         <statement>
           <p>
-            What is the weakest topology on any set?
+            Apa topologi paling lemah pada suatu himpunan?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            What is the strongest topology on any set?
+            Apa topologi paling kuat pada suatu himpunan?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If a topology on <m>X</m> contains all single point sets,
-            then every subset is open and our our topology is the discrete topology.
-            Also, if a topology on <m>X</m> contains all two-point sets,
-            then if <m>x</m>, <m>y</m>,
-            and <m>z</m> are in <m>X</m> it follows that
-            <m>\{x,y\} \cap \{x,z\} = \{x\}</m> is in the topology and we again have the.discrete topology.
-            Consider the topology
+            Jika suatu topologi pada <m>X</m> memuat semua himpunan satu titik,
+            maka setiap subhimpunan terbuka dan topologi kita adalah topologi diskret.
+            Selain itu, jika suatu topologi pada <m>X</m> memuat semua himpunan dua titik,
+            maka untuk <m>x</m>, <m>y</m>,
+            dan <m>z</m> dalam <m>X</m> berlaku
+            <m>\{x,y\} \cap \{x,z\} = \{x\}</m> merupakan anggota topologi dan sekali lagi kita memperoleh topologi diskret.
+            Pertimbangkan topologi
             <me>
               \sigma = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{a,c\}, X\}
             </me>.
-            The only sets not in <m>\sigma</m> are <m>\{c\}</m> and <m>\{b,c\}</m>,
-            but adding either set to <m>\sigma</m> will produce the discrete topology.
-            So <m>\sigma</m> is a strongest topology possible other than the discrete topology.
+            Satu-satunya himpunan yang bukan anggota <m>\sigma</m> adalah <m>\{c\}</m> dan <m>\{b,c\}</m>,
+            tetapi menambahkan salah satu himpunan tersebut ke <m>\sigma</m> akan menghasilkan topologi diskret.
+            Jadi <m>\sigma</m> merupakan topologi paling kuat yang mungkin selain topologi diskret.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>X = \{a,b,c\}</m>.
-            Are there any topologies <m>\sigma</m> on <m>X</m> such that <m>\sigma</m> is not the discrete topology but there are no stronger topologies on <m>X</m> other than the discrete topology?
-            Explain.
+            Misalkan <m>X = \{a,b,c\}</m>.
+            Adakah topologi <m>\sigma</m> pada <m>X</m> sedemikian sehingga <m>\sigma</m> bukan topologi diskret tetapi tidak ada topologi yang lebih kuat pada <m>X</m> selain topologi diskret?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>X = \{a,b,c\}</m>.
-            Are there any topologies <m>\gamma</m> on <m>X</m> such that <m>\gamma</m> is not the indiscrete topology but there are no weaker topologies on <m>X</m> other than the indiscrete topology?
-            Explain.
+            Misalkan <m>X = \{a,b,c\}</m>.
+            Adakah topologi <m>\gamma</m> pada <m>X</m> sedemikian sehingga <m>\gamma</m> bukan topologi indiskret tetapi tidak ada topologi yang lebih lemah pada <m>X</m> selain topologi indiskret?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <introduction>
           <p>
-            In general, there may be many different bases for a given topology,
-            and two different bases can have the same cardinality.
-            This is not the case for finite topological space.
-            Let <m>X</m> be a finite set and let <m>\tau</m> be a topology on <m>X</m>.
-            In this exercise we will show that there is a minimal basis for the topology <m>\tau</m>.
-            That is, there is a basis <m>\B_{\text{ min } }</m> of <m>\tau</m> such that if <m>\B</m> is any other basis for <m>\tau</m>,
-            then <m>\B_{\text{ min } } \subseteq \B</m>.
+            Secara umum, mungkin terdapat banyak basis berbeda untuk suatu topologi,
+            dan dua basis yang berbeda dapat memiliki kardinalitas yang sama.
+            Hal ini tidak berlaku untuk ruang topologi berhingga.
+            Misalkan <m>X</m> himpunan berhingga dan <m>\tau</m> topologi pada <m>X</m>.
+            Dalam latihan ini kita akan menunjukkan bahwa terdapat basis minimal untuk topologi <m>\tau</m>.
+            Artinya, terdapat basis <m>\B_{\text{ min } }</m> dari <m>\tau</m> sedemikian sehingga jika <m>\B</m> adalah basis lain untuk <m>\tau</m>,
+            maka <m>\B_{\text{ min } } \subseteq \B</m>.
           </p>
         </introduction>
           <task>
             <statement>
               <p>
-                If <m>x \in X</m>, let <m>U_x</m> be the intersection of all open sets that contain <m>x</m>. Explain why <m>U_x</m> is an open set.
+                Jika <m>x \in X</m>, misalkan <m>U_x</m> adalah irisan semua himpunan terbuka yang memuat <m>x</m>. Jelaskan mengapa <m>U_x</m> merupakan himpunan terbuka.
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Let <m>\B_{\text{min}} = \{U_x \mid x \in X\}</m>. Show that <m>\B_{\text{min}}</m> is a basis for <m>\tau</m>.
+                Misalkan <m>\B_{\text{min}} = \{U_x \mid x \in X\}</m>. Tunjukkan bahwa <m>\B_{\text{min}}</m> merupakan basis untuk <m>\tau</m>.
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Show that if <m>\B</m> is a basis for <m>\tau</m>, then <m>\B_{\text{min}} \subseteq \B</m>.
+                Tunjukkan bahwa jika <m>\B</m> merupakan basis untuk <m>\tau</m>, maka <m>\B_{\text{min}} \subseteq \B</m>.
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Let <m>X = \{a,b,c,d\}</m> and let 
-                <me>\tau = \{\emptyset, \{a\}, \{a, b\}, \{a, c\}, \{a, b, c\}, \{a, d\}, \{a, b, d\}, \{a, c, d\}, \{a, b, c, d\}\}</me>. You may assume that <m>\tau</m> is a topology on <m>X</m>. Find the unique minimal basis for <m>\tau</m>.
+                Misalkan <m>X = \{a,b,c,d\}</m> dan
+                <me>\tau = \{\emptyset, \{a\}, \{a, b\}, \{a, c\}, \{a, b, c\}, \{a, d\}, \{a, b, d\}, \{a, c, d\}, \{a, b, c, d\}\}</me>. Anda boleh mengasumsikan bahwa <m>\tau</m> merupakan topologi pada <m>X</m>. Tentukan basis minimal tunggal untuk <m>\tau</m>.
               </p>
             </statement>
           </task>
@@ -271,11 +271,11 @@
       <task>
         <statement>
           <p>
-            Below is a list of <m>9</m> distinct topologies on <m>X = \{a,b,c\}</m>.
-            Each topology lies in one or more sequences of topologies ordered by coarseness.
-            For each topology <m>\tau</m>,
-            list the longest sequence(s) of topologies that start
-            <m>\{\emptyset, X\} \subset \tau</m>, ordered by coarseness.
+            Berikut adalah daftar <m>9</m> topologi berbeda pada <m>X = \{a,b,c\}</m>.
+            Setiap topologi berada dalam satu atau lebih urutan topologi yang disusun menurut kekasaran.
+            Untuk setiap topologi <m>\tau</m>,
+            tuliskan urutan topologi terpanjang yang dimulai dari
+            <m>\{\emptyset, X\} \subset \tau</m>, disusun menurut kekasaran.
           
             <ol marker="1">
               <li>
@@ -325,7 +325,7 @@
               </li>
               <li>
                 <p>
-                  the discrete topology
+                  topologi diskret
                 </p>
               </li>
             </ol>
@@ -337,32 +337,32 @@
   <exercise>
     <introduction>
       <p>
-        Find all of the topologies on <m>X</m> if
+        Tentukan semua topologi pada <m>X</m> jika
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              <m>X</m> is a single point set
+            <m>X</m> merupakan himpunan satu titik
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              <m>X</m> is a two point set
+            <m>X</m> merupakan himpunan dua titik
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              <m>X</m> is a three point set.
+            <m>X</m> merupakan himpunan tiga titik.
             </p>
           </statement>
           <hint>
                 <p>
-                  there are 29 distinct topologies
+                  terdapat 29 topologi berbeda
                 </p>
               </hint>
         </task>
@@ -371,9 +371,9 @@
   <exercise>
     <statement>
       <p>
-        For each <m>n \in \Z^+</m>, let <m>O_n = \{n, n+1, n+2, \ldots\}</m>.
-        Let <m>\tau = \{\emptyset, O_1, O_2, O_3, \ldots\}</m>.
-        Show that <m>(\Z^+, \tau)</m> is a topological space.
+        Untuk setiap <m>n \in \Z^+</m>, misalkan <m>O_n = \{n, n+1, n+2, \ldots\}</m>.
+        Misalkan <m>\tau = \{\emptyset, O_1, O_2, O_3, \ldots\}</m>.
+        Tunjukkan bahwa <m>(\Z^+, \tau)</m> merupakan ruang topologi.
       </p>
     </statement>
   </exercise>
@@ -381,11 +381,11 @@
   <exercise>
     <statement>
       <p>
-        Let <m>A, B</m> be two subsets in a topological space <m>X</m>.
-        What can you say about the relationships between
-        <m>\Int(A\cap B), \Int(A\cup B)</m> and <m>\Int(A)\cap \Int(B), \Int(A)\cup \Int(B)</m>,
-        respectively?
-        Verify your results.
+        Misalkan <m>A, B</m> dua subhimpunan dalam ruang topologi <m>X</m>.
+        Apa yang dapat Anda katakan tentang hubungan antara
+        <m>\Int(A\cap B), \Int(A\cup B)</m> dan <m>\Int(A)\cap \Int(B), \Int(A)\cup \Int(B)</m>,
+        masing-masing pasangan tersebut?
+        Verifikasi hasil Anda.
       </p>
     </statement>
   </exercise>
@@ -393,27 +393,27 @@
   <exercise xml:id="ex_particular_point_topology">
     <statement>
       <p>
-        Let <m>X</m> be a nonempty set and let <m>p</m> be an element in <m>X</m>.
-        Let <m>\tau_p</m> be the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+        Misalkan <m>X</m> himpunan tak kosong dan <m>p</m> elemen dalam <m>X</m>.
+        Misalkan <m>\tau_p</m> koleksi subhimpunan <m>X</m> yang terdiri dari <m>\emptyset</m>,
         <m>X</m>,
-        and all of the subsets of <m>X</m> that contain <m>p</m>.
-        Show that <m>\tau_p</m> is a topology on <m>X</m>. (This topology is called the
-        <term>particular point topology</term>).
-    <idx><h>topology</h><h>particular point</h></idx>
+        dan semua subhimpunan <m>X</m> yang memuat <m>p</m>.
+        Tunjukkan bahwa <m>\tau_p</m> merupakan topologi pada <m>X</m>. (Topologi ini disebut
+         <term>topologi titik tertentu</term>).
+    <idx><h>topologi</h><h>titik tertentu</h></idx>
 </p>
     </statement>
   </exercise>
 
   <exercise xml:id="ex_excluded_point_topology">
-  <idx><h>topology</h><h>excluded point</h></idx>
+  <idx><h>topologi</h><h>titik yang dikecualikan</h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a nonempty set and let <m>p</m> be an element in <m>X</m>.
-        Let <m>\tau_{\overline{p}}</m> be the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+        Misalkan <m>X</m> himpunan tak kosong dan <m>p</m> elemen dalam <m>X</m>.
+        Misalkan <m>\tau_{\overline{p}}</m> koleksi subhimpunan <m>X</m> yang terdiri dari <m>\emptyset</m>,
         <m>X</m>,
-        and all of the subsets of <m>X</m> that do not contain <m>p</m>.
-        Show that <m>\tau_{\overline{p}}</m> is a topology on <m>X</m>. (This topology is called the
-        <term>excluded point topology</term>.)
+        dan semua subhimpunan <m>X</m> yang tidak memuat <m>p</m>.
+        Tunjukkan bahwa <m>\tau_{\overline{p}}</m> merupakan topologi pada <m>X</m>. (Topologi ini disebut
+        <term>topologi titik yang dikecualikan</term>.)
       </p>
     </statement>
   </exercise>
@@ -421,46 +421,46 @@
   <exercise xml:id="ex_digital_line_topology">
     <introduction>
       <p>
-        One application of topology is in digital image displays,
-        such as a computer screen.
-        A digital image display is a rectangular array of pixels and can be modeled using a digital plane.
-        In this exercise we consider a simplification of the digital plane <mdash/> the digital line <mdash/> which we consider as an infinite length one-dimensional collection of pixels.
-        For each <m>n \in \Z</m> we define
+        Salah satu penerapan topologi adalah pada tampilan citra digital,
+        seperti layar komputer.
+        Tampilan citra digital merupakan susunan persegi panjang piksel dan dapat dimodelkan menggunakan bidang digital.
+        Dalam latihan ini kita mempertimbangkan penyederhanaan bidang digital <mdash/> garis digital <mdash/> yang kita pandang sebagai koleksi piksel satu dimensi dengan panjang tak berhingga.
+        Untuk setiap <m>n \in \Z</m> kita definisikan
         <me>
-          B(n) = \begin{cases}\{n\}  \amp \text{ if \(n\) is odd } , \\ \{n-1,n,n+1\}  \amp \text{ if \(n\) is even } . \end{cases}
+          B(n) = \begin{cases}\{n\}  \amp \text{ jika \(n\) ganjil } , \\ \{n-1,n,n+1\}  \amp \text{ jika \(n\) genap } . \end{cases}
         </me>
-        The sets <m>B(n)</m> are illustrated in <xref ref="F_Digital_line"/>.
+        Himpunan-himpunan <m>B(n)</m> diilustrasikan dalam <xref ref="F_Digital_line"/>.
       </p>
         <figure xml:id="F_Digital_line">
-          <caption>The digital line topology.</caption>
+          <caption>Topologi garis digital.</caption>
           <image width="90%" source="Digital_line"/>
         </figure>
       <p>
-        In this exercise we explore the collection <m>\B = \{B(n)\}</m>.
+        Dalam latihan ini kita mengeksplorasi koleksi <m>\B = \{B(n)\}</m>.
       </p>
     </introduction>
         <task>
-        <idx><h>digital line topology</h></idx>
+        <idx><h>topologi garis digital</h></idx>
           <statement>
             <p>
-              Show that the collection <m>\B = \{B(n)\}</m> is a basis for a topology on <m>\Z</m>. (The resulting topology is called the
-              <term>digital line topology</term>
+              Tunjukkan bahwa koleksi <m>\B = \{B(n)\}</m> merupakan basis untuk topologi pada <m>\Z</m>. (Topologi yang dihasilkan disebut
+              <term>topologi garis digital</term>
               <m>\tau_{dl}</m>.<fn>
-              This digital line topology has applications in digital processing <mdash/> see
+              Topologi garis digital ini memiliki penerapan dalam pemrosesan digital <mdash/> lihat
               <pubtitle>Introduction to Topology: Pure and Applied</pubtitle>
-              by Colin Adams and Robert Franzosa , Pearson Education, Inc., 2008,  Sections 1.4 and 11.3.
-              The set <m>\Z</m> with the digital line topology is called the <term>digital line</term>.
-              </fn> The digital line models a one-dimensional array of pixels,
-              where the even integers are the pixels and the odd integers are boundaries between the pixels.
-              Information about the <term>digital plane</term>
-              can be found in <xref ref="chap_Product_topology"/>.)
+              oleh Colin Adams dan Robert Franzosa, Pearson Education, Inc., 2008, Bagian 1.4 dan 11.3.
+              Himpunan <m>\Z</m> dengan topologi garis digital disebut <term>garis digital</term>.
+              </fn> Garis digital memodelkan susunan piksel satu dimensi,
+              dengan bilangan bulat genap sebagai piksel dan bilangan bulat ganjil sebagai batas antar piksel.
+              Informasi tentang <term>bidang digital</term>
+              dapat ditemukan dalam <xref ref="chap_Product_topology"/>.)
             </p>
           </statement>
         </task>
         <task>
           <introduction>
             <p>
-              Determine which of the following sets are open in the digital line topology:
+              Tentukan himpunan mana dari himpunan-himpunan berikut yang terbuka dalam topologi garis digital:
             </p>
           </introduction>
               <task>
@@ -501,7 +501,7 @@
               <task>
                 <statement>
                   <p>
-                    The set of odd integers.
+                    Himpunan bilangan bulat ganjil.
                   </p>
                 </statement>
               </task>
@@ -512,68 +512,67 @@
   <exercise xml:id="ex_TS_Zariski">
     <introduction>
       <p>
-        Let <m>n</m> be a positive integer and let
-        <m>\mathcal{P}_n</m> be the collection of all polynomials in <m>n</m> real variables <m>x_1</m>,
+        Misalkan <m>n</m> bilangan bulat positif dan
+        <m>\mathcal{P}_n</m> koleksi semua polinom dalam <m>n</m> variabel real <m>x_1</m>,
         <m>x_2</m>, <m>\ldots</m>, <m>x_n</m>.
-        As a specific example, the polynomial
+        Sebagai contoh khusus, polinom
         <me>
           f(x_1,x_2,x_3) = 2x_1x_3 + 5x_1x_2^2x_3^4 - x_2 + 10x_1^5x_3
         </me>
-        is in <m>\mathcal{P}_3</m>.
-        If <m>f(x_1, x_2, \ldots, x_n)</m> is in <m>\mathcal{P}_n</m>,
-        let <m>Z(f)</m> be the set of zeros of the polynomial <m>f</m>.
-        That is,
+        merupakan anggota <m>\mathcal{P}_3</m>.
+        Jika <m>f(x_1, x_2, \ldots, x_n)</m> merupakan anggota <m>\mathcal{P}_n</m>,
+        misalkan <m>Z(f)</m> himpunan nol polinom <m>f</m>.
+        Artinya,
         <me>
           Z(f) = \{(x_1, x_2, \ldots, x_n) \mid f(x_1,x_2, \ldots, x_n) = 0\}
         </me>.
-        Note that <m>Z(f)</m> is a subset of <m>\R^n</m>.
-        For example, if <m>n=2</m> and
-        <m>f(x_1,x_2) = x_1^2 - x_2</m> then <m>Z(f)</m> is the set of ordered pairs in <m>\R^2</m> satisfying
-        <m>x_1^2-x_2 = 0</m>, or <m>x_2 = x_1^2</m>.
-        This is the graph of the parabola <m>y=x^2</m> in the plane.
+        Perhatikan bahwa <m>Z(f)</m> merupakan subhimpunan dari <m>\R^n</m>.
+        Sebagai contoh, jika <m>n=2</m> dan
+        <m>f(x_1,x_2) = x_1^2 - x_2</m>, maka <m>Z(f)</m> adalah himpunan pasangan terurut dalam <m>\R^2</m> yang memenuhi
+        <m>x_1^2-x_2 = 0</m>, atau <m>x_2 = x_1^2</m>.
+        Ini adalah grafik parabola <m>y=x^2</m> pada bidang.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Describe <m>Z(f)</m> in <m>\R^2</m> if <m>f(x_1,x_2) = x_1^2 - 1</m>.
+              Deskripsikan <m>Z(f)</m> dalam <m>\R^2</m> jika <m>f(x_1,x_2) = x_1^2 - 1</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>E</m> is a set of polynomials in <m>\mathcal{P}_n</m>,
-              we let <m>Z(E) = \bigcap_{f \in E} Z(f)</m> be the set of common zeros of all of the polynomials in <m>E</m>.
-              Describe <m>Z(E)</m> if <m>E = \{x_1+x_2+x_3, x_1-x_2-x_3, 3x_1+x_2+x_3\}</m> in <m>\R^3</m>.
+              Jika <m>E</m> merupakan himpunan polinom dalam <m>\mathcal{P}_n</m>,
+              kita definisikan <m>Z(E) = \bigcap_{f \in E} Z(f)</m> sebagai himpunan nol bersama semua polinom dalam <m>E</m>.
+              Deskripsikan <m>Z(E)</m> jika <m>E = \{x_1+x_2+x_3, x_1-x_2-x_3, 3x_1+x_2+x_3\}</m> dalam <m>\R^3</m>.
             </p>
           </statement>
         </task>
         <task>
-        <idx><h>Zariski topology</h></idx>
-        <idx><h>topology</h><h>Zariski</h></idx>
+        <idx><h>topologi Zariski</h></idx>
+        <idx><h>topologi</h><h>Zariski</h></idx>
           <statement>
             <p>
-              Let <m>\mathcal{B}</m> be the set of complements of the sets <m>Z(f)</m> for <m>f \in \mathcal{P}_n</m>.
-              Show that <m>\mathcal{B}</m> is a basis for a topology on <m>\R^n</m>.
-              The resulting topology is called the <term>Zariski</term>
-              topology.
-            </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
-            <p>
-              Is the set <m>S = \{(x_1,x_2) \in \R^2 \mid x_1 = 0 \text{ or } x_2 = 0\}</m> an open set in <m>\R^2</m> with the Zariski topology?
-              Explain.
+              Misalkan <m>\mathcal{B}</m> himpunan komplemen dari himpunan-himpunan <m>Z(f)</m> untuk <m>f \in \mathcal{P}_n</m>.
+              Tunjukkan bahwa <m>\mathcal{B}</m> merupakan basis untuk topologi pada <m>\R^n</m>.
+              Topologi yang dihasilkan disebut topologi <term>Zariski</term>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Explain why the Zariski topology when <m>n=1</m> is just the cofinite topology on <m>\R</m>.
-              That is, show that every set that is open in the cofinite topology is open in the Zariski topology and that every set that is open in the Zaariski topology is open in the cofinite topology.
+              Apakah himpunan <m>S = \{(x_1,x_2) \in \R^2 \mid x_1 = 0 \text{ atau } x_2 = 0\}</m> merupakan himpunan terbuka dalam <m>\R^2</m> dengan topologi Zariski?
+              Jelaskan.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Jelaskan mengapa topologi Zariski ketika <m>n=1</m> sama dengan topologi kofinit pada <m>\R</m>.
+              Artinya, tunjukkan bahwa setiap himpunan yang terbuka dalam topologi kofinit terbuka dalam topologi Zariski dan setiap himpunan yang terbuka dalam topologi Zariski terbuka dalam topologi kofinit.
             </p>
           </statement>
         </task>
@@ -582,30 +581,30 @@
   <exercise>
     <introduction>
       <p>
-        For each of the following, answer true if the statement is always true.
-        If the statement is only sometimes true or never true,
-        answer false and provide a concrete example to illustrate that the statement is false.
-        If a statement is true, explain why.
+        Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar.
+        Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar,
+        jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              The set <m>\{\emptyset, \{a,b\}, \{a,b,d,f\}, \{d,f\},X\}</m> is a topology on the set <m>X = \{a,b,c,d,e,f\}</m>.
+              Himpunan <m>\{\emptyset, \{a,b\}, \{a,b,d,f\}, \{d,f\},X\}</m> merupakan topologi pada himpunan <m>X = \{a,b,c,d,e,f\}</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              The set <m>\Z</m> is an open subset of <m>\R</m> using the finite complement topology <m>\tau_{FC}</m> on <m>\R</m>.
+              Himpunan <m>\Z</m> merupakan subhimpunan terbuka dari <m>\R</m> menggunakan topologi komplemen berhingga <m>\tau_{FC}</m> pada <m>\R</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              The set <m>\mathcal{B} = \{\{b\},\{c\}, \{a,b\}, \{b,c,d\}\}</m> is a basis for the topology <m>\tau</m> on the set <m>X = \{a,b,c,d\}</m>, where
+              Himpunan <m>\mathcal{B} = \{\{b\},\{c\}, \{a,b\}, \{b,c,d\}\}</m> merupakan basis untuk topologi <m>\tau</m> pada himpunan <m>X = \{a,b,c,d\}</m>, dengan
               <me>
                 \tau = \{\emptyset, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,b,c\}, \{b,c,d\}, X\}
               </me>.
@@ -615,18 +614,18 @@
         <task>
           <statement>
             <p>
-              Let <m>X</m> be a nonempty set.
-              If <m>\tau</m> is the discrete topology,
-              then the topological set <m>(X,\tau)</m> is metrizable.
+              Misalkan <m>X</m> himpunan tak kosong.
+              Jika <m>\tau</m> merupakan topologi diskret,
+              maka ruang topologi <m>(X,\tau)</m> termetriskan.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              The point <m>b</m> is an interior point of the subset
-              <m>A = \{a,b,d\}</m> in the topological space <m>(X,\tau)</m>,
-              where <m>X = \{a,b,c,d\}</m> and
+              Titik <m>b</m> merupakan titik interior dari subhimpunan
+              <m>A = \{a,b,d\}</m> dalam ruang topologi <m>(X,\tau)</m>,
+              dengan <m>X = \{a,b,c,d\}</m> dan
               <me>
                 \tau = \{\emptyset, \{a\}, \{a,b\}, \{c\}, \{d\}, \{c,d\}, \{a,c,d\}, \{a,c\}, \{a,d\}, \{a,b,c,\}, \{a,b,d\}, X\}
               </me>.
@@ -636,16 +635,16 @@
         <task>
           <statement>
             <p>
-              If <m>\tau_1</m> and <m>\tau_2</m> are topologies on a space <m>X</m>,
-              then <m>\tau_1 \cup \tau_2</m> is also a topology on <m>X</m>.
+              Jika <m>\tau_1</m> dan <m>\tau_2</m> merupakan topologi pada ruang <m>X</m>,
+              maka <m>\tau_1 \cup \tau_2</m> juga merupakan topologi pada <m>X</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>\tau_1</m> and <m>\tau_2</m> are topologies on a space <m>X</m>,
-              then <m>\tau_1 \cap \tau_2</m> is also a topology on <m>X</m>.
+              Jika <m>\tau_1</m> dan <m>\tau_2</m> merupakan topologi pada ruang <m>X</m>,
+              maka <m>\tau_1 \cap \tau_2</m> juga merupakan topologi pada <m>X</m>.
             </p>
           </statement>
         </task>
