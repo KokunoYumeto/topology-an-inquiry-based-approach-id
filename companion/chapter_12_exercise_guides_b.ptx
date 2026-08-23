@@ -1,0 +1,572 @@
+<section xml:id="o003-c90-ch12-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian kedua</title>
+
+  <p>
+    Sepuluh panduan berikut meneruskan urutan tugas dalam
+    <em>sec_top_space_exer.ptx</em> tepat setelah panduan
+    <em>o003-c90-ch12-exer-a-10</em>: dua tugas tentang basis interval
+    berpusat di nol, lima tugas tentang kekasaran topologi pada tiga titik,
+    lalu tiga tugas pertama tentang basis minimal ruang hingga. Setiap
+    panduan adalah komponen pendamping asli berbahasa Indonesia yang
+    diterbitkan di bawah CC BY 4.0; isinya bukan teks, terjemahan resmi,
+    atau jawaban resmi GVSU, melainkan penjelasan baru untuk belajar
+    mandiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-01">
+    <title>Basis interval berpusat di nol</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan berjudul
+        <em>ex_coarse_topology_example</em>, tugas pertama (baris sumber
+        126--138). Misalkan
+        <m>\mathcal B=\{(-r,r)\mid r\in\R^+\}</m>. Tunjukkan bahwa
+        <m>\mathcal B</m> merupakan basis untuk suatu topologi
+        <m>\tau</m> pada <m>\R</m>.
+        <em>Rubrik.</em> Periksa cakupan <m>\R</m> dan syarat irisan basis
+        untuk dua interval, termasuk pilihan anggota basis yang memuat setiap
+        titik irisan. Panduan ini adalah materi pendamping asli CC BY 4.0,
+        bukan materi atau solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-01-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk <m>x\in\R</m>, pilih radius positif yang
+        lebih besar daripada <m>|x|</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Tulis irisan dua anggota sebagai interval dengan
+        radius yang lebih kecil.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Gunakan interval irisan itu sendiri sebagai
+        anggota basis ketiga untuk setiap titik di dalam irisan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-01-answer">
+      <p>
+        Ya. Setiap <m>x\in\R</m> berada dalam
+        <m>(-(|x|+1),|x|+1)</m>, dan
+        <m>(-r_1,r_1)\cap(-r_2,r_2)=(-\min(r_1,r_2),\min(r_1,r_2))</m>
+        kembali merupakan anggota <m>\mathcal B</m>. Jadi <m>\mathcal B</m>
+        memenuhi kedua aksioma basis.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-01-solution">
+      <p>
+        Ambil sembarang <m>x\in\R</m>. Dengan
+        <m>r=|x|+1>0</m>, berlaku <m>-r&lt;x&lt;r</m>, sehingga
+        <m>x\in(-r,r)\in\mathcal B</m>. Ini membuktikan bahwa gabungan
+        anggota basis mencakup seluruh <m>\R</m>.
+      </p>
+      <p>
+        Selanjutnya, misalkan
+        <m>B_1=(-r_1,r_1)</m> dan <m>B_2=(-r_2,r_2)</m> dengan
+        <m>r_1,r_2>0</m>, dan ambil <m>x\in B_1\cap B_2</m>. Jika
+        <m>r_3=\min(r_1,r_2)>0</m>, maka
+        <me>B_1\cap B_2=(-r_3,r_3).</me>
+        Interval ini adalah anggota <m>\mathcal B</m>, memuat <m>x</m>, dan
+        terkandung dalam <m>B_1\cap B_2</m> (bahkan sama dengannya).
+        Kedua syarat basis terpenuhi, sehingga <m>\mathcal B</m>
+        membangkitkan topologi <m>\tau</m> pada <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-02">
+    <title>Interval Euklides yang tidak terbuka</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_coarse_topology_example</em>, tugas
+        kedua (baris sumber 139--148). Setiap anggota basis
+        <m>\mathcal B=\{(-r,r)\mid r\in\R^+\}</m> terbuka dalam topologi
+        Euklides <m>\tau_E</m>. Tunjukkan bahwa ada interval
+        <m>(a,b)</m> yang terbuka dalam <m>(\R,d_E)</m> tetapi bukan
+        himpunan terbuka dalam topologi <m>\tau</m> yang dibangkitkan
+        <m>\mathcal B</m>.
+        <em>Rubrik.</em> Berikan interval konkret dan alasan yang berlaku
+        untuk semua gabungan anggota basis. Ini adalah panduan orisinal CC BY
+        4.0, bukan teks atau solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-02-hint">
+      <p>
+        <em>Tahap 1.</em> Perhatikan bahwa setiap interval basis
+        <m>(-r,r)</m> memuat titik <m>0</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Maka setiap gabungan basis yang tidak kosong juga
+        memuat <m>0</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Pilih interval Euklides tak kosong yang seluruhnya
+        berada di sisi kanan <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-02-answer">
+      <p>
+        Contohnya adalah <m>(1,2)</m>. Interval ini terbuka dalam topologi
+        Euklides, tetapi bukan terbuka dalam <m>\tau</m> karena tidak memuat
+        <m>0</m>, sedangkan setiap himpunan <m>\tau</m>-terbuka yang tidak
+        kosong memuat <m>0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-02-solution">
+      <p>
+        Untuk setiap <m>r>0</m>, interval <m>(-r,r)</m> adalah interval
+        terbuka Euklides, sehingga semua anggota <m>\mathcal B</m> memang
+        terbuka dalam <m>\tau_E</m>. Setiap himpunan terbuka dalam
+        <m>\tau</m> merupakan gabungan anggota <m>\mathcal B</m>. Bila
+        gabungan itu tidak kosong, pilih salah satu sukunya; suku tersebut
+        memuat <m>0</m>, sehingga gabungannya juga memuat <m>0</m>.
+      </p>
+      <p>
+        Interval <m>(1,2)</m> terbuka untuk metrik Euklides, tetapi
+        <m>0\notin(1,2)</m>. Karena itu interval tersebut tidak mungkin
+        merupakan gabungan tak kosong anggota <m>\mathcal B</m>, dan jelas
+        bukan gabungan kosong. Jadi <m>(1,2)\notin\tau</m>, yang
+        membuktikan bahwa <m>\tau</m> berbeda (lebih kasar) dari topologi
+        Euklides.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-03">
+    <title>Topologi paling lemah</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan tentang topologi lebih kasar dan
+        lebih halus, tugas pertama (baris sumber 178--184). Apa topologi
+        paling lemah pada suatu himpunan <m>X</m>? Jelaskan urutan inklusi
+        yang dimaksud. Panduan ini merupakan materi pendamping baru berlisensi
+        CC BY 4.0, bukan jawaban atau terjemahan resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-03-hint">
+      <p>
+        <em>Tahap 1.</em> Ingat dua himpunan yang wajib ada dalam setiap
+        topologi pada <m>X</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Bentuk koleksi yang hanya memuat dua himpunan wajib
+        itu, lalu cek tiga aksioma topologi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-03-answer">
+      <p>
+        Topologi paling lemah adalah topologi indiskret
+        <m>\tau_{\mathrm{ind}}=\{\emptyset,X\}</m>. Ia merupakan subkoleksi
+        dari setiap topologi pada <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-03-solution">
+      <p>
+        Aksioma topologi mengharuskan <m>\emptyset</m> dan <m>X</m> menjadi
+        terbuka. Koleksi
+        <me>\tau_{\mathrm{ind}}=\{\emptyset,X\}</me>
+        tertutup terhadap gabungan sebarang (gabungan yang tidak kosong
+        adalah <m>X</m>) dan irisan berhingga, sehingga memang merupakan
+        topologi. Jika <m>\tau</m> topologi apa pun pada <m>X</m>, kedua
+        himpunan tersebut berada di <m>\tau</m>; maka
+        <m>\tau_{\mathrm{ind}}\subseteq\tau</m>. Dalam urutan berdasarkan
+        inklusi koleksi terbuka, inilah topologi paling lemah, yang juga
+        disebut topologi indiskret atau trivial.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-04">
+    <title>Topologi paling kuat</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan tentang topologi lebih kasar dan
+        lebih halus, tugas kedua (baris sumber 185--191). Apa topologi paling
+        kuat pada suatu himpunan <m>X</m>? Nyatakan semua himpunan terbukanya.
+        Ini adalah panduan pendamping asli CC BY 4.0 untuk latihan sumber,
+        bukan materi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-04-hint">
+      <p>
+        <em>Tahap 1.</em> Tidak ada topologi pada <m>X</m> yang dapat memuat
+        himpunan di luar <m>\mathcal P(X)</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Periksa bahwa koleksi semua subhimpunan sendiri
+        memenuhi penutupan gabungan dan irisan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-04-answer">
+      <p>
+        Topologi paling kuat adalah topologi diskret
+        <m>\tau_{\mathrm{dis}}=\mathcal P(X)</m>, yaitu koleksi semua
+        subhimpunan <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-04-solution">
+      <p>
+        Koleksi <m>\mathcal P(X)</m> memuat <m>\emptyset</m> dan <m>X</m>,
+        setiap gabungan sebarang subkoleksi anggotanya masih merupakan
+        subhimpunan <m>X</m>, dan setiap irisan berhingga juga demikian.
+        Jadi <m>\mathcal P(X)</m> adalah topologi, disebut topologi diskret.
+        Untuk topologi apa pun <m>\tau</m> pada <m>X</m>, setiap anggota
+        <m>\tau</m> sudah merupakan subhimpunan <m>X</m>, sehingga
+        <m>\tau\subseteq\mathcal P(X)</m>. Oleh karena itu tidak ada
+        topologi yang lebih kuat daripada topologi diskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-05">
+    <title>Topologi maksimal yang bukan diskret</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan tentang topologi lebih kasar dan
+        lebih halus, tugas yang menampilkan
+        <m>\sigma=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},X\}</m>
+        pada <m>X=\{a,b,c\}</m> (baris sumber 192--210). Verifikasi bahwa
+        <m>\sigma</m> adalah topologi dan bahwa menambahkan salah satu
+        himpunan yang hilang langsung menghasilkan topologi diskret.
+        Panduan ini adalah penjelasan orisinal CC BY 4.0, bukan teks atau
+        solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-05-hint">
+      <p>
+        <em>Tahap 1.</em> Dari enam anggota <m>\sigma</m>, cek gabungan dan
+        irisan pasangan yang berpotensi baru, khususnya
+        <m>\{a,b\}\cap\{a,c\}</m> dan
+        <m>\{a\}\cup\{b\}</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Karena <m>\mathcal P(X)</m> memiliki delapan
+        himpunan, identifikasi dua subhimpunan yang belum ada.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Jika salah satu dari dua himpunan itu ditambahkan,
+        gunakan gabungan atau irisan dengan anggota yang sudah ada untuk
+        memperoleh yang lain dan semua singleton.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-05-answer">
+      <p>
+        <m>\sigma</m> adalah topologi. Subhimpunan yang hilang hanyalah
+        <m>\{c\}</m> dan <m>\{b,c\}</m>; menambahkan salah satunya memaksa
+        keduanya, sehingga diperoleh <m>\mathcal P(X)</m>, topologi diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-05-solution">
+      <p>
+        Koleksi <m>\sigma</m> memuat <m>\emptyset</m> dan <m>X</m>. Gabungan
+        dua anggota nontrivial hanya memberi anggota yang sudah tercantum
+        atau <m>X</m>; misalnya
+        <m>\{a\}\cup\{b\}=\{a,b\}</m>,
+        <m>\{a\}\cup\{a,c\}=\{a,c\}</m>, dan
+        <m>\{b\}\cup\{a,c\}=X</m>. Irisan pasangan juga tetap di dalam
+        <m>\sigma</m>; contoh yang menentukan adalah
+        <m>\{a,b\}\cap\{a,c\}=\{a\}</m> dan
+        <m>\{b\}\cap\{a,c\}=\emptyset</m>. Karena koleksi berhingga,
+        pemeriksaan pasangan ini menjamin penutupan gabungan sebarang dan
+        irisan berhingga. Jadi <m>\sigma</m> merupakan topologi.
+      </p>
+      <p>
+        Delapan subhimpunan <m>X</m> adalah
+        <m>\emptyset,X,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\}</m>;
+        yang belum ada di <m>\sigma</m> ialah <m>\{c\}</m> dan
+        <m>\{b,c\}</m>. Jika <m>\{c\}</m> ditambahkan, gabungan dengan
+        <m>\{b\}</m> memberi <m>\{b,c\}</m>. Jika <m>\{b,c\}</m> yang
+        ditambahkan, irisan dengan <m>\{a,c\}</m> memberi <m>\{c\}</m>.
+        Setelah <m>\{c\}</m> tersedia, gabungan dengan singleton
+        <m>\{a\}</m> dan <m>\{b\}</m> menghasilkan semua subhimpunan yang
+        belum tercantum. Maka setiap topologi yang memuat <m>\sigma</m>
+        secara ketat adalah <m>\mathcal P(X)</m>, sehingga
+        <m>\sigma</m> maksimal di antara topologi-topologi non-diskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-06">
+    <title>Adakah topologi maksimal non-diskret?</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan tentang topologi lebih kasar dan
+        lebih halus, pertanyaan eksistensi pertama (baris sumber 211--219).
+        Untuk <m>X=\{a,b,c\}</m>, apakah ada topologi <m>\sigma</m> yang
+        bukan diskret tetapi tidak memiliki topologi yang lebih kuat selain
+        topologi diskret? Jawab dengan contoh dan pembuktian.
+        Ini panduan pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-06-hint">
+      <p>
+        <em>Tahap 1.</em> Mulai dengan koleksi enam himpunan yang hanya
+        kehilangan <m>\{c\}</m> dan <m>\{b,c\}</m> dari
+        <m>\mathcal P(X)</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Verifikasi koleksi itu topologi dan bukan diskret.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Setiap perluasan ketat harus menambahkan salah satu
+        dari dua himpunan yang hilang; tunjukkan bahwa penambahan itu
+        memaksa seluruh <m>\mathcal P(X)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-06-answer">
+      <p>
+        Ada. Contoh
+        <m>\sigma=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},X\}</m>
+        bukan diskret, dan setiap topologi yang lebih kuat daripadanya adalah
+        <m>\mathcal P(X)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-06-solution">
+      <p>
+        Koleksi yang dipilih adalah topologi karena gabungan dan irisan
+        anggotanya tetap berada di dalam koleksi (contoh kuncinya
+        <m>\{a,b\}\cap\{a,c\}=\{a\}</m> dan
+        <m>\{b\}\cup\{a,c\}=X</m>). Koleksi itu bukan diskret sebab
+        <m>\{c\}</m> tidak terbuka.
+      </p>
+      <p>
+        Misalkan <m>\rho</m> topologi dengan
+        <m>\sigma\subsetneq\rho</m>. Karena hanya dua subhimpunan
+        <m>X</m> yang tidak berada di <m>\sigma</m>, yaitu
+        <m>\{c\}</m> dan <m>\{b,c\}</m>, koleksi <m>\rho</m> memuat salah
+        satunya. Jika memuat <m>\{c\}</m>, gabungan dengan <m>\{b\}</m>
+        memberi <m>\{b,c\}</m>; jika memuat <m>\{b,c\}</m>, irisan dengan
+        <m>\{a,c\}</m> memberi <m>\{c\}</m>. Dengan kedua himpunan itu,
+        semua delapan subhimpunan <m>X</m> terbuka. Jadi
+        <m>\rho=\mathcal P(X)</m>, membuktikan eksistensi topologi maksimal
+        non-diskret tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-07">
+    <title>Topologi minimal non-indiskret</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan tentang topologi lebih kasar dan
+        lebih halus, pertanyaan eksistensi kedua (baris sumber 220--228).
+        Untuk <m>X=\{a,b,c\}</m>, apakah ada topologi <m>\gamma</m> yang
+        bukan indiskret tetapi tidak memiliki topologi yang lebih lemah selain
+        topologi indiskret? Berikan contoh. Penjelasan ini merupakan materi
+        orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-07-hint">
+      <p>
+        <em>Tahap 1.</em> Agar topologi tidak indiskret, tambahkan tepat satu
+        subhimpunan tak kosong dan bukan <m>X</m> ke
+        <m>\{\emptyset,X\}</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Cek bahwa koleksi tiga himpunan itu tetap tertutup
+        terhadap gabungan dan irisan.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Setiap subtopologi yang lebih lemah harus
+        menghapus satu-satunya himpunan tambahan tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-07-answer">
+      <p>
+        Ada, misalnya
+        <m>\gamma=\{\emptyset,\{a\},X\}</m>. Topologi ini bukan indiskret,
+        sedangkan satu-satunya topologi yang benar-benar lebih lemah darinya
+        adalah <m>\{\emptyset,X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-07-solution">
+      <p>
+        Koleksi <m>\gamma=\{\emptyset,\{a\},X\}</m> memuat dua himpunan
+        wajib. Gabungan dua anggota mana pun dan irisan berhingga dua anggota
+        tetap menghasilkan salah satu dari tiga himpunan itu, jadi
+        <m>\gamma</m> adalah topologi. Karena <m>\{a\}</m> terbuka,
+        topologi ini bukan topologi indiskret.
+      </p>
+      <p>
+        Jika <m>\rho\subsetneq\gamma</m> juga topologi pada <m>X</m>, maka
+        <m>\rho</m> harus tetap memuat <m>\emptyset</m> dan <m>X</m>.
+        Satu-satunya anggota <m>\gamma</m> yang dapat dihilangkan adalah
+        <m>\{a\}</m>, sehingga <m>\rho=\{\emptyset,X\}</m>. Jadi tidak ada
+        topologi yang lebih lemah selain topologi indiskret, sesuai yang
+        diminta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-08">
+    <title>Keterbukaan himpunan lingkungan minimal</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan basis minimal untuk ruang hingga,
+        tugas pertama (baris sumber 230--247). Misalkan <m>X</m> berhingga,
+        <m>\tau</m> topologi pada <m>X</m>, dan untuk setiap <m>x\in X</m>
+        tetapkan <m>U_x</m> sebagai irisan semua himpunan terbuka yang
+        memuat <m>x</m>. Jelaskan mengapa <m>U_x</m> terbuka.
+        Panduan ini adalah komponen pendamping asli CC BY 4.0, bukan jawaban
+        resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-08-hint">
+      <p>
+        <em>Tahap 1.</em> Keluarga himpunan terbuka yang memuat <m>x</m>
+        tidak kosong karena memuat <m>X</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan bahwa <m>X</m> berhingga untuk menyimpulkan
+        bahwa <m>\tau\subseteq\mathcal P(X)</m> juga berhingga.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Irisan yang semula tampak tak berhingga sebenarnya
+        adalah irisan berhingga, lalu pakai aksioma topologi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-08-answer">
+      <p>
+        <m>U_x</m> terbuka karena hanya merupakan irisan berhingga dari
+        himpunan-himpunan terbuka dalam <m>\tau</m> yang memuat <m>x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-08-solution">
+      <p>
+        Definisikan
+        <m>\mathcal N_x=\{U\in\tau\mid x\in U\}</m>. Keluarga ini tidak
+        kosong sebab <m>X\in\mathcal N_x</m>. Karena <m>X</m> berhingga,
+        himpunan kuasanya <m>\mathcal P(X)</m> berhingga; akibatnya
+        <m>\mathcal N_x</m> juga berhingga, katakanlah
+        <m>\mathcal N_x=\{U_1,\ldots,U_k\}</m>. Maka
+        <me>U_x=U_1\cap\cdots\cap U_k.</me>
+        Aksioma topologi menyatakan irisan berhingga himpunan terbuka
+        terbuka, sehingga <m>U_x\in\tau</m>. (Keluarga ini selalu memuat
+        setidaknya satu anggota, jadi tidak perlu memakai konvensi irisan
+        kosong.)
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-09">
+    <title>Basis minimal dari lingkungan terkecil</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan basis minimal untuk ruang hingga,
+        tugas kedua (baris sumber 248--254). Dengan
+        <m>U_x</m> seperti pada panduan sebelumnya, misalkan
+        <m>\mathcal B_{\min}=\{U_x\mid x\in X\}</m>. Tunjukkan bahwa
+        <m>\mathcal B_{\min}</m> merupakan basis untuk <m>\tau</m>.
+        Ini materi pendamping orisinal CC BY 4.0, bukan teks atau solusi
+        resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-09-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk cakupan, periksa langsung bahwa
+        <m>x\in U_x</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>y\in U_x\cap U_z</m>, ingat bahwa
+        <m>U_x</m> dan <m>U_z</m> adalah himpunan terbuka yang memuat
+        <m>y</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Definisi <m>U_y</m> lalu memberi inklusi yang
+        diperlukan untuk syarat irisan basis.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-09-answer">
+      <p>
+        Setiap <m>x</m> berada dalam <m>U_x</m>. Jika
+        <m>y\in U_x\cap U_z</m>, maka
+        <m>y\in U_y\subseteq U_x\cap U_z</m>. Jadi
+        <m>\mathcal B_{\min}</m> memenuhi cakupan dan syarat irisan basis.
+        Lebih jauh, untuk setiap <m>U\in\tau</m> berlaku
+        <m>U=\bigcup_{x\in U}U_x</m>, sehingga basis ini menghasilkan tepat
+        topologi <m>\tau</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-09-solution">
+      <p>
+        Dari panduan sebelumnya, setiap <m>U_x</m> terbuka. Selain itu,
+        <m>x</m> termasuk dalam setiap himpunan yang diiris dalam definisi
+        <m>U_x</m>, sehingga <m>x\in U_x</m>; keluarga
+        <m>\mathcal B_{\min}</m> mencakup <m>X</m>.
+      </p>
+      <p>
+        Ambil dua anggota basis <m>U_x,U_z</m> dan titik
+        <m>y\in U_x\cap U_z</m>. Kedua himpunan tersebut terbuka dan memuat
+        <m>y</m>. Karena <m>U_y</m> adalah irisan semua himpunan terbuka
+        yang memuat <m>y</m>, ia terkandung dalam masing-masingnya:
+        <me>y\in U_y\subseteq U_x\cap U_z.</me>
+        Dengan demikian syarat irisan basis terpenuhi. Untuk memastikan
+        bahwa topologi yang dibangkitkan tepat <m>\tau</m>, ambil
+        <m>U\in\tau</m>. Setiap <m>x\in U</m> memiliki <m>U</m> sebagai
+        salah satu lingkungan terbuka dalam irisan definisi <m>U_x</m>,
+        sehingga <m>U_x\subseteq U</m>. Sebaliknya <m>x\in U_x</m>, maka
+        <me>U=\bigcup_{x\in U}U_x.</me>
+        Jadi setiap himpunan terbuka dalam <m>\tau</m> merupakan gabungan
+        anggota <m>\mathcal B_{\min}</m>; bersama keterbukaan setiap
+        <m>U_x</m>, ini membuktikan bahwa <m>\mathcal B_{\min}</m> adalah
+        basis untuk <m>\tau</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-b-10">
+    <title>Minimalitas basis hingga</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan basis minimal untuk ruang hingga,
+        tugas ketiga (baris sumber 255--261). Tunjukkan bahwa jika
+        <m>\mathcal B</m> merupakan basis untuk <m>\tau</m>, maka
+        <m>\mathcal B_{\min}\subseteq\mathcal B</m>, dengan
+        <m>\mathcal B_{\min}=\{U_x\mid x\in X\}</m>. Panduan pembuktian ini
+        adalah karya pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-b-10-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk setiap <m>x</m>, karena <m>U_x</m> terbuka,
+        pilih <m>B_x\in\mathcal B</m> dengan
+        <m>x\in B_x\subseteq U_x</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Definisi <m>U_x</m> sebagai irisan semua lingkungan
+        terbuka memuat inklusi balik <m>U_x\subseteq B_x</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Kedua inklusi memaksa <m>B_x=U_x</m>; lakukan ini
+        untuk semua <m>x\in X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-b-10-answer">
+      <p>
+        Untuk setiap <m>x\in X</m> ada <m>B_x\in\mathcal B</m> dengan
+        <m>x\in B_x\subseteq U_x</m>. Karena <m>B_x</m> juga terbuka dan
+        memuat <m>x</m>, berlaku <m>U_x\subseteq B_x</m>. Jadi
+        <m>B_x=U_x\in\mathcal B</m>, dan
+        <m>\mathcal B_{\min}\subseteq\mathcal B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-b-10-solution">
+      <p>
+        Ambil sembarang <m>x\in X</m>. Hasil panduan sebelumnya memberi
+        <m>U_x\in\tau</m>. Karena <m>\mathcal B</m> adalah basis untuk
+        <m>\tau</m>, setiap himpunan terbuka adalah gabungan anggota basis;
+        khususnya ada <m>B_x\in\mathcal B</m> sedemikian sehingga
+        <m>x\in B_x\subseteq U_x</m>.
+      </p>
+      <p>
+        Namun <m>B_x</m> sendiri merupakan himpunan terbuka yang memuat
+        <m>x</m>. Dalam irisan definisi
+        <m>U_x=\bigcap\{U\in\tau\mid x\in U\}</m>, salah satu faktor
+        adalah <m>B_x</m>; karenanya <m>U_x\subseteq B_x</m>. Bersama
+        inklusi sebelumnya diperoleh <m>U_x=B_x</m>, sehingga
+        <m>U_x\in\mathcal B</m>. Karena <m>x</m> sebarang, semua anggota
+        <m>\mathcal B_{\min}</m> berada dalam <m>\mathcal B</m>, seperti
+        yang harus dibuktikan.
+      </p>
+    </solution>
+  </exercise>
+</section>
