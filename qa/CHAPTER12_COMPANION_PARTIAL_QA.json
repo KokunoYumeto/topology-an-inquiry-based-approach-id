@@ -22,13 +22,13 @@
   },
   "source_qa": {
     "path": "repo/qa/CHAPTER12_SOURCE_QA.json",
-    "sha256": "4e591f9bc6bd8c011972493cc9935a025fafa129b3c0039030b3857ef881c203",
+    "sha256": "6919e508cd81df33f1a9226f2409d7ac88620cfdba69cccbf86ea3ab901f2df0",
     "status": "pass"
   },
   "source_corrections": {
     "path": "00_control/SOURCE_CORRECTIONS.csv",
-    "sha256": "f8deb57801aa5b685078e006d8de8bcad22660a8693b3cbb69c1edf5f2866a36",
-    "chapter12_ids": ["O003-C131", "O003-C132", "O003-C133", "O003-C134", "O003-C135", "O003-C136", "O003-C137", "O003-C138"]
+    "sha256": "f44fb220a5cbf9d28c509d889501e07c9c7128686d2b47d3ccf9cd4f7afaea66",
+    "chapter12_ids": ["O003-C131", "O003-C132", "O003-C133", "O003-C134", "O003-C135", "O003-C136", "O003-C137", "O003-C138", "O003-C139", "O003-C140"]
   },
   "companion_files": [
     {
@@ -38,8 +38,8 @@
     },
     {
       "path": "repo/companion/chapter_12_topological_spaces_self_study.ptx",
-      "bytes": 1291,
-      "sha256": "8e0b923b10ce3c91c39e10d832fe1bf980ab3588e8401bc10a1c57032e6909e9"
+      "bytes": 1347,
+      "sha256": "712e61acf02fbebd8346762d9182b19621ca0c59f0140ea3b18ca35b5a2690e3"
     },
     {
       "path": "repo/companion/chapter_12_source_guides_b.ptx",
@@ -60,22 +60,27 @@
       "path": "repo/companion/chapter_12_source_guides_e.ptx",
       "bytes": 9905,
       "sha256": "06eadd23dc0daf06027643b76bca5ce0b3092ae215b17f7b4a19446f6c9bb1fa"
+    },
+    {
+      "path": "repo/companion/chapter_12_source_guides_f.ptx",
+      "bytes": 15112,
+      "sha256": "428317e5d74981441740499418d311abb986c6e971782f6b00fd8214639531f0"
     }
   ],
   "coverage": {
-    "source_prompt_guides": 25,
-    "source_prompt_guides_pending": 53,
+    "source_prompt_guides": 31,
+    "source_prompt_guides_pending": 47,
     "mastery_checks": 0,
     "mastery_checks_pending": "to be authored after the source-prompt guides",
-    "covered_source_context": ["sec_top_space_intro", "act_TS_limits1", "act_top_basis", "act_Basis", "basis_final_activity", "sec_neighborhood_top_space"],
-    "covered_atomic_prompt_units": 25,
+    "covered_source_context": ["sec_top_space_intro", "act_TS_limits1", "act_top_basis", "act_Basis", "basis_final_activity", "sec_neighborhood_top_space", "sec_interior_set_top"],
+    "covered_atomic_prompt_units": 31,
     "covered_grouping_prompt_units": 0,
     "covered_surfaces": {
-      "statement": 25,
-      "hint": 25,
-      "answer": 25,
-      "solution": 25,
-      "total": 100
+      "statement": 31,
+      "hint": 31,
+      "answer": 31,
+      "solution": 31,
+      "total": 124
     }
   },
   "entries": [
@@ -103,16 +108,22 @@
     {"id":"o003-c90-ch12-guide-22","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-02","source_line":36,"title":"Menentukan semua lingkungan titik c","surfaces":["o003-c90-ch12-guide-22-statement","o003-c90-ch12-guide-22-hint","o003-c90-ch12-guide-22-answer","o003-c90-ch12-guide-22-solution"]},
     {"id":"o003-c90-ch12-guide-23","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-03","source_line":84,"title":"Mengubah lingkungan setiap titik menjadi keterbukaan","surfaces":["o003-c90-ch12-guide-23-statement","o003-c90-ch12-guide-23-hint","o003-c90-ch12-guide-23-answer","o003-c90-ch12-guide-23-solution"]},
     {"id":"o003-c90-ch12-guide-24","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-04","source_line":91,"title":"Mengapa himpunan O_a harus ada","surfaces":["o003-c90-ch12-guide-24-statement","o003-c90-ch12-guide-24-hint","o003-c90-ch12-guide-24-answer","o003-c90-ch12-guide-24-solution"]},
-    {"id":"o003-c90-ch12-guide-25","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-05","source_line":99,"title":"Menyelesaikan pembuktian karakterisasi himpunan terbuka","surfaces":["o003-c90-ch12-guide-25-statement","o003-c90-ch12-guide-25-hint","o003-c90-ch12-guide-25-answer","o003-c90-ch12-guide-25-solution"]}
+    {"id":"o003-c90-ch12-guide-25","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-05","source_line":99,"title":"Menyelesaikan pembuktian karakterisasi himpunan terbuka","surfaces":["o003-c90-ch12-guide-25-statement","o003-c90-ch12-guide-25-hint","o003-c90-ch12-guide-25-answer","o003-c90-ch12-guide-25-solution"]},
+    {"id":"o003-c90-ch12-guide-26","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-01","source_line":58,"title":"Interior pada topologi standar di garis real","surfaces":["o003-c90-ch12-guide-26-statement","o003-c90-ch12-guide-26-hint","o003-c90-ch12-guide-26-answer","o003-c90-ch12-guide-26-solution"]},
+    {"id":"o003-c90-ch12-guide-27","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-02","source_line":69,"title":"Interior pada topologi diskret","surfaces":["o003-c90-ch12-guide-27-statement","o003-c90-ch12-guide-27-hint","o003-c90-ch12-guide-27-answer","o003-c90-ch12-guide-27-solution"]},
+    {"id":"o003-c90-ch12-guide-28","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-03","source_line":80,"title":"Interior pada topologi komplemen berhingga","surfaces":["o003-c90-ch12-guide-28-statement","o003-c90-ch12-guide-28-hint","o003-c90-ch12-guide-28-answer","o003-c90-ch12-guide-28-solution"]},
+    {"id":"o003-c90-ch12-guide-29","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-04","source_line":92,"title":"Interior pada topologi hingga yang diberikan","surfaces":["o003-c90-ch12-guide-29-statement","o003-c90-ch12-guide-29-hint","o003-c90-ch12-guide-29-answer","o003-c90-ch12-guide-29-solution"]},
+    {"id":"o003-c90-ch12-guide-30","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-05","source_line":157,"title":"Menetapkan sasaran teorema interior","surfaces":["o003-c90-ch12-guide-30-statement","o003-c90-ch12-guide-30-hint","o003-c90-ch12-guide-30-answer","o003-c90-ch12-guide-30-solution"]},
+    {"id":"o003-c90-ch12-guide-31","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-06","source_line":164,"title":"Membuktikan kemaksimalan interior","surfaces":["o003-c90-ch12-guide-31-statement","o003-c90-ch12-guide-31-hint","o003-c90-ch12-guide-31-answer","o003-c90-ch12-guide-31-solution"]}
   ],
   "validation": {
     "xml_parse": "pass",
-    "all_twenty_five_entries_have_statement_hint_answer_solution": true,
+    "all_thirty_one_entries_have_statement_hint_answer_solution": true,
     "source_and_companion_ids_are_disjoint": true,
     "complete_reader_boundary": false,
     "cumulative_build": "not run; partial companion is not admitted",
     "blocking_gaps": [
-      "53 source prompt units still need staged support",
+      "47 source prompt units still need staged support",
       "five grouping tasks and all mastery checks remain",
       "complete stable-ID backend and cumulative HTML/PDF build remain pending"
     ]

@@ -19,21 +19,26 @@ pending.
 
 ## Translation QA
 
-`repo/qa/CHAPTER12_SOURCE_QA.json` passes fail-closed structural comparison:
+`repo/qa/CHAPTER12_SOURCE_QA.json` (SHA-256
+`6919e508cd81df33f1a9226f2409d7ac88620cfdba69cccbf86ea3ab901f2df0`) passes
+fail-closed structural comparison:
 25 IDs, 14 xrefs (one explicitly approved external target,
 `chap_Product_topology`), 78 learner prompt units (73 atomic plus five
 grouping units), 13 exercises, 5 hints, 0 source answers, and 0 source
 solutions. The nine translated files have combined SHA-256
-`0b46ccb1faf914baf6cd1ccad155c7f1116bed58e1ecfe7196a8c08b811a5ea7`.
+`a773f83e8f119e5fc62a7b56e1107bc1489f6fd4e14652d126f0276e346884f0`.
 
-Five source-critical repairs are explicitly ledgered and approved by the QA
+Seven source-critical repairs are explicitly ledgered and approved by the QA
 receipt: O003-C131 corrects the neighborhood ball's center from the source's
 literal `X` to the introduced point `a`; O003-C132 restores the integer-set
 macro `\Z` in one exercise formula; O003-C136 restores the closing set brace
 in the finite topology displayed in `sec_base_top.ptx`; O003-C137 removes
-circular scope wording in the basis theorem proof; and O003-C138 makes the
-discrete-topology basis task's intended topology explicit. All identifiers,
-topology, xrefs, image reference, and remaining mathematics are retained.
+circular scope wording in the basis theorem proof; O003-C138 makes the
+discrete-topology basis task's intended topology explicit; and O003-C139 and
+O003-C140 replace the source's metric symbol `d` with the topology symbol
+`\tau` where the theorem and follow-up activity explicitly assume an arbitrary
+topological space. All identifiers, topology, xrefs, image reference, and
+remaining mathematics are retained.
 
 The Indonesian terms are frozen in O003-T142–O003-T153, including *basis untuk
 topologi*, *topologi indiskret*, *topologi kofinit*, *termetriskan*, *topologi

@@ -1,0 +1,283 @@
+<section xml:id="o003-c90-ch12-source-guides-f" xml:lang="id-ID">
+  <title>Panduan interior dalam ruang topologi</title>
+
+  <p>
+    Enam panduan berikut mengikuti, dalam urutan sumber, empat tugas pada
+    kegiatan interior dan dua tugas pada kegiatan pembuktian sesudahnya dalam
+    bagian <xref ref="sec_interior_set_top" text="title"/>. Tugas sumber
+    tidak memiliki <m>xml:id</m>, sehingga pengenal lokal yang stabil diberikan
+    di sini. Panduan ini merupakan komponen CC BY 4.0 orisinal yang terpisah
+    dari prosa turunan GVSU. Sumber mencetak pasangan <m>(X,d)</m> pada
+    pernyataan teorema interior; karena argumennya hanya memakai struktur
+    topologi, panduan ini menuliskannya sebagai <m>(X,\tau)</m>.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-guide-26">
+    <title>Interior pada topologi standar di garis real</title>
+    <statement><p>
+      Pertimbangkan <m>(\R,\tau)</m> dengan topologi standar, dan ambil
+      <m>A=(-\infty,0)\cup(1,2]\cup\{3\}</m>. Tentukan
+      <m>\Int(A)</m> dan subhimpunan terbuka terbesar dari <m>\R</m> yang
+      terkandung dalam <m>A</m>.
+      <em>Rubrik.</em> Pisahkan tiga bagian <m>A</m>, periksa titik ujung
+      <m>2</m> dan singleton <m>\{3\}</m>, lalu jelaskan mengapa hasilnya
+      memang terbuka dan maksimal.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-26-hint"><p>
+      <em>Petunjuk 1.</em> Himpunan <m>(-\infty,0)</m> sudah terbuka. Di dalam
+      <m>(1,2]</m>, titik-titik yang memiliki interval terbuka kecil seluruhnya
+      berada di dalam <m>A</m> adalah titik-titik di <m>(1,2)</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Setiap interval terbuka di sekitar <m>2</m> memuat
+      bilangan lebih besar dari <m>2</m>. Jika interval di sekitar <m>3</m>
+      berjari-jari <m>r\gt0</m>, titik <m>3+r/2</m> berada di interval itu tetapi
+      tidak berada dalam <m>A</m>. Gunakan ini untuk menyingkirkan kedua titik
+      tersebut dari interior.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-26-answer"><p>
+      <m>\Int(A)=(-\infty,0)\cup(1,2)</m>. Himpunan terbuka terbesar yang
+      terkandung dalam <m>A</m> adalah himpunan yang sama.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-26-solution"><p>
+      Bagian <m>(-\infty,0)</m> merupakan himpunan terbuka. Jika
+      <m>x\in(1,2)</m>, pilih jari-jari positif yang lebih kecil daripada
+      <m>\min\{x-1,2-x\}</m>; interval yang dihasilkan berada di dalam
+      <m>(1,2]\subseteq A</m>, sehingga setiap titik tersebut interior.
+      Sebaliknya, untuk titik <m>2</m>, setiap interval terbuka yang memuat
+      <m>2</m> juga memuat titik-titik yang lebih besar dari <m>2</m>, yang tidak
+      berada di <m>A</m>. Jadi <m>2</m> bukan titik interior. Demikian pula,
+      jika <m>r\gt0</m> dan <m>(3-r,3+r)</m> adalah interval terbuka di sekitar
+      <m>3</m>, maka
+      <m>3+r/2</m> berada dalam interval itu tetapi tidak berada dalam
+      <m>A</m>; maka <m>3</m> bukan titik interior. Titik <m>0</m> dan
+      <m>1</m> tidak termasuk <m>A</m>. Dengan demikian
+      <m>\Int(A)=(-\infty,0)\cup(1,2)</m>, yang terbuka sebagai gabungan dua
+      himpunan terbuka. Setiap himpunan terbuka yang terkandung dalam
+      <m>A</m> hanya dapat memuat titik-titik interior, sehingga terkandung
+      dalam hasil ini; hasil tersebut adalah yang terbesar.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan 1 poin untuk bagian pertama, 1 poin
+      untuk menghapus titik ujung dan singleton dengan alasan lingkungan, 1
+      poin untuk hasil interior, dan 1 poin untuk argumen keterbukaan serta
+      kemaksimalan.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-27">
+    <title>Interior pada topologi diskret</title>
+    <statement><p>
+      Pertimbangkan <m>(\R,\tau)</m> dengan topologi diskret dan
+      <m>A=(-\infty,0)\cup(1,2]\cup\{3\}</m>. Tentukan
+      <m>\Int(A)</m> dan subhimpunan terbuka terbesar dari <m>\R</m> yang
+      terkandung dalam <m>A</m>.
+      <em>Rubrik.</em> Gunakan fakta bahwa setiap singleton, dan karenanya
+      setiap subhimpunan, terbuka dalam topologi diskret.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-27-hint"><p>
+      <em>Petunjuk 1.</em> Dalam topologi diskret, untuk setiap
+      <m>x\in A</m> himpunan <m>\{x\}</m> adalah terbuka dan berada di dalam
+      <m>A</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Tulis <m>A</m> sebagai gabungan singleton dari
+      titik-titiknya, lalu bandingkan dengan definisi interior.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-27-answer"><p>
+      <m>\Int(A)=A</m>, dan <m>A</m> sendiri merupakan subhimpunan terbuka
+      terbesar yang terkandung dalam <m>A</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-27-solution"><p>
+      Karena topologinya diskret, setiap subhimpunan <m>U\subseteq\R</m>
+      terbuka. Khususnya, untuk setiap <m>x\in A</m>, singleton
+      <m>\{x\}</m> terbuka, memuat <m>x</m>, dan terkandung dalam <m>A</m>.
+      Jadi setiap titik <m>A</m> merupakan titik interior. Sebaliknya,
+      interior selalu merupakan subhimpunan dari <m>A</m> menurut definisi.
+      Maka <m>\Int(A)=A</m>. Karena <m>A</m> terbuka dan jelas merupakan
+      subhimpunan dari dirinya sendiri, tidak ada subhimpunan terbuka di
+      dalam <m>A</m> yang lebih besar daripada <m>A</m>.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan 1 poin untuk menyatakan semua
+      subhimpunan terbuka, 1 poin untuk menunjukkan singleton di sekitar
+      setiap titik, dan 1 poin untuk kesimpulan interior serta kemaksimalan.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-28">
+    <title>Interior pada topologi komplemen berhingga</title>
+    <statement><p>
+      Pertimbangkan <m>(\R,\tau)</m> dengan topologi komplemen berhingga dan
+      <m>A=(-\infty,0)\cup(1,2]\cup\{3\}</m>. Tentukan
+      <m>\Int(A)</m> dan subhimpunan terbuka terbesar dari <m>\R</m> yang
+      terkandung dalam <m>A</m>.
+      <em>Rubrik.</em> Periksa ukuran komplemen <m>\R\setminus A</m> dan
+      jelaskan mengapa tidak ada himpunan terbuka tak kosong yang dapat
+      berada di dalam <m>A</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-28-hint"><p>
+      <em>Petunjuk 1.</em> Himpunan terbuka tak kosong dalam topologi ini
+      mempunyai komplemen berhingga. Tulis sebagian komplemen <m>A</m> untuk
+      melihat bahwa komplemennya tak berhingga.
+    </p><p>
+      <em>Petunjuk 2.</em> Jika <m>O\subseteq A</m>, maka
+      <m>\R\setminus A\subseteq\R\setminus O</m>. Bandingkan inklusi ini
+      dengan syarat komplemen berhingga untuk <m>O</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-28-answer"><p>
+      <m>\Int(A)=\emptyset</m>. Satu-satunya subhimpunan terbuka dari
+      <m>\R</m> yang terkandung dalam <m>A</m> adalah <m>\emptyset</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-28-solution"><p>
+      Komplemen <m>A</m> memuat, misalnya,
+      <m>[0,1]\cup(2,3)\cup(3,\infty)</m>, sehingga
+      <m>\R\setminus A</m> tak berhingga. Andaikan <m>O</m> adalah himpunan
+      terbuka tak kosong dengan <m>O\subseteq A</m>. Dalam topologi komplemen
+      berhingga, <m>\R\setminus O</m> harus berhingga. Namun dari
+      <m>O\subseteq A</m> diperoleh
+      <m>\R\setminus A\subseteq\R\setminus O</m>; ruas kiri tak berhingga,
+      sehingga ruas kanan juga tak berhingga, suatu kontradiksi. Jadi tidak
+      ada himpunan terbuka tak kosong di dalam <m>A</m>. Himpunan kosong
+      selalu terbuka, maka gabungan seluruh himpunan terbuka yang terkandung
+      dalam <m>A</m>, yakni interiornya, adalah <m>\emptyset</m>.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan 1 poin untuk menunjukkan komplemen
+      tak berhingga, 1 poin untuk inklusi komplemen yang benar, dan 1 poin
+      untuk kontradiksi komplemen berhingga serta kesimpulan.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-29">
+    <title>Interior pada topologi hingga yang diberikan</title>
+    <statement><p>
+      Misalkan <m>X=\{a,b,c,d\}</m> dan
+      <m>\tau=\{\emptyset,\{a\},\{a,b\},\{c\},\{d\},\{c,d\},
+      \{a,c,d\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},X\}</m>.
+      Andaikan <m>\tau</m> merupakan topologi pada <m>X</m>, dan ambil
+      <m>A=\{b,c,d\}</m>. Tentukan <m>\Int(A)</m> dan subhimpunan terbuka
+      terbesar dari <m>X</m> yang terkandung dalam <m>A</m>.
+      <em>Rubrik.</em> Daftar semua anggota <m>\tau</m> yang berada di dalam
+      <m>A</m>, lalu ambil gabungannya; jelaskan secara khusus mengapa
+      <m>b</m> tidak termasuk.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-29-hint"><p>
+      <em>Petunjuk 1.</em> Dari daftar topologi, cari himpunan terbuka yang
+      hanya menggunakan titik-titik <m>b,c,d</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Himpunan terbuka yang memuat <m>b</m> dalam daftar
+      selalu juga memuat <m>a</m>. Periksa titik <m>c</m> dan <m>d</m> dengan
+      singletonnya.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-29-answer"><p>
+      Anggota topologi yang terkandung dalam <m>A</m> adalah
+      <m>\emptyset,\{c\},\{d\},\{c,d\}</m>. Jadi
+      <m>\Int(A)=\{c,d\}</m>, yang juga merupakan subhimpunan terbuka
+      terbesar di dalam <m>A</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-29-solution"><p>
+      Periksa daftar <m>\tau</m> satu per satu. Himpunan yang tidak memuat
+      <m>a</m> dan seluruhnya berada di dalam <m>A</m> hanyalah
+      <m>\emptyset</m>, <m>\{c\}</m>, <m>\{d\}</m>, dan <m>\{c,d\}</m>.
+      Gabungan semua himpunan tersebut adalah <m>\{c,d\}</m>, dan himpunan
+      itu sendiri terbuka. Titik <m>c</m> dan <m>d</m> interior karena
+      masing-masing mempunyai lingkungan terbuka singleton yang berada di
+      dalam <m>A</m>. Sebaliknya, setiap anggota <m>\tau</m> yang memuat
+      <m>b</m> adalah <m>\{a,b\}</m>, <m>\{a,b,c\}</m>,
+      <m>\{a,b,d\}</m>, atau <m>X</m>; semuanya memuat <m>a\notin A</m>.
+      Karena itu <m>b</m> bukan titik interior. Maka
+      <m>\Int(A)=\{c,d\}</m>, dan argumen daftar tersebut juga membuktikan
+      kemaksimalannya.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan 1 poin untuk daftar anggota terbuka
+      yang terkandung dalam <m>A</m>, 1 poin untuk alasan bahwa <m>b</m> gagal,
+      dan 1 poin untuk gabungan, interior, serta klaim terbesar.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-30">
+    <title>Menetapkan sasaran teorema interior</title>
+    <statement><p>
+      Misalkan <m>(X,\tau)</m> ruang topologi dan <m>A\subseteq X</m>.
+      Apa saja yang harus ditunjukkan untuk membuktikan bahwa
+      <m>\Int(A)</m> merupakan subhimpunan terbuka terbesar dari <m>X</m>
+      yang terkandung dalam <m>A</m>?
+      <em>Rubrik.</em> Bedakan sifat “terbuka”, “berada di dalam <m>A</m>”,
+      dan sifat “terbesar” sebagai pernyataan universal tentang setiap
+      himpunan terbuka lain.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-30-hint"><p>
+      <em>Petunjuk 1.</em> Pecah kata “terbesar” menjadi dua syarat: objek
+      yang diusulkan harus memenuhi sifat yang diminta, dan setiap objek lain
+      dengan sifat itu harus berada di dalamnya.
+    </p><p>
+      <em>Petunjuk 2.</em> Gunakan definisi interior untuk syarat inklusi
+      <m>\Int(A)\subseteq A</m>; yang tersisa adalah keterbukaan dan
+      perbandingan dengan sembarang <m>O\in\tau</m> yang memenuhi
+      <m>O\subseteq A</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-30-answer"><p>
+      Tunjukkan tiga hal: <m>\Int(A)</m> terbuka; secara definisi
+      <m>\Int(A)\subseteq A</m>; dan untuk setiap himpunan terbuka
+      <m>O\subseteq X</m> dengan <m>O\subseteq A</m> berlaku
+      <m>O\subseteq\Int(A)</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-30-solution"><p>
+      Pernyataan “subhimpunan terbuka terbesar dari <m>X</m> yang terkandung
+      dalam <m>A</m>” berarti pertama-tama bahwa objek tersebut adalah
+      subhimpunan <m>A</m> dan terbuka dalam <m>X</m>. Inklusi
+      <m>\Int(A)\subseteq A</m> langsung mengikuti definisi
+      <m>\Int(A)=\{a\in A\mid a\text{ merupakan titik interior dari }A\}</m>;
+      keterbukaan adalah bagian yang perlu dibuktikan dari definisi lingkungan.
+      Terakhir, “terbesar” berarti bahwa setiap <m>O\in\tau</m> dengan
+      <m>O\subseteq A</m> harus memenuhi <m>O\subseteq\Int(A)</m>. Ketiga
+      syarat ini bersama-sama tepat menyatakan klaim teorema, tanpa perlu
+      mengasumsikan bahwa <m>X</m> memiliki metrik.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan masing-masing 1 poin untuk
+      keterbukaan, inklusi ke dalam <m>A</m>, dan kondisi universal yang
+      menyatakan kemaksimalan.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-31">
+    <title>Membuktikan kemaksimalan interior</title>
+    <statement><p>
+      Misalkan <m>O</m> merupakan subhimpunan terbuka dari ruang topologi
+      <m>X</m> dan <m>O\subseteq A</m>. Jika <m>x\in O</m>, apa yang
+      diberitahukan oleh keterbukaan <m>O</m>, dan bagaimana fakta itu
+      melengkapi pembuktian <m>O\subseteq\Int(A)</m>?
+      <em>Rubrik.</em> Hubungkan keterbukaan dengan definisi lingkungan,
+      gunakan inklusi <m>O\subseteq A</m>, lalu simpulkan untuk titik
+      sembarang.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-31-hint"><p>
+      <em>Petunjuk 1.</em> Karena <m>x\in O</m> dan <m>O</m> terbuka,
+      himpunan <m>O</m> sendiri adalah lingkungan dari <m>x</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Lingkungan terbuka <m>O</m> yang memenuhi
+      <m>O\subseteq A</m> adalah saksi langsung bahwa <m>x</m> merupakan
+      titik interior <m>A</m>. Ulangi untuk semua <m>x\in O</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-31-answer"><p>
+      Keterbukaan memberi bahwa <m>O</m> adalah lingkungan dari setiap
+      <m>x\in O</m>. Bersama <m>O\subseteq A</m>, ini menunjukkan bahwa setiap
+      <m>x\in O</m> merupakan titik interior <m>A</m>; oleh karena itu
+      <m>O\subseteq\Int(A)</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-31-solution"><p>
+      Ambil titik sembarang <m>x\in O</m>. Karena <m>O\in\tau</m> dan
+      <m>x\in O</m>, definisi lingkungan menyatakan bahwa <m>O</m> merupakan
+      lingkungan dari <m>x</m>: kita dapat memilih himpunan terbuka <m>O</m>
+      itu sendiri, dengan <m>x\in O\subseteq O</m>. Selain itu,
+      hipotesis memberi <m>O\subseteq A</m>. Jadi ada himpunan terbuka yang
+      memuat <m>x</m> dan terkandung dalam <m>A</m>, tepatnya <m>O</m>;
+      menurut definisi, <m>x</m> adalah titik interior dari <m>A</m> dan
+      <m>x\in\Int(A)</m>. Karena <m>x</m> dipilih sembarang, setiap titik
+      <m>O</m> berada di <m>\Int(A)</m>, sehingga
+      <m>O\subseteq\Int(A)</m>. Inilah syarat kemaksimalan yang melengkapi
+      pembuktian teorema interior.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan 1 poin untuk memakai keterbukaan
+      <m>O</m> sebagai lingkungan, 1 poin untuk memakai
+      <m>O\subseteq A</m>, dan 1 poin untuk memperluas argumen dari titik
+      sembarang menjadi inklusi himpunan.
+    </p></solution>
+  </exercise>
+</section>
