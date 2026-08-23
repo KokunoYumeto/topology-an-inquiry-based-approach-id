@@ -1,0 +1,41 @@
+<section xml:id="o003-c90-ch12-source-guides-d" xml:lang="id-ID">
+  <title>Panduan ruang topologi yang bukan ruang metrik</title>
+
+  <p>
+    Panduan ini mengikuti kegiatan langsung pada bagian
+    <xref ref="sec_metric_top_space" text="title"/>. Uraian dan solusi
+    ditulis mandiri sebagai komponen CC BY 4.0 yang terpisah dari turunan
+    GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-guide-20">
+    <title>Ruang topologi yang tidak dapat dimetriskan</title>
+    <statement><p>
+      Misalkan <m>X=\{a,b,c,e\}</m> dan
+      <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>. Jelaskan mengapa
+      tidak ada metrik <m>d:X\times X\to\R</m> yang topologi metriknya tepat
+      <m>\tau</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-20-hint"><p>
+      Andaikan metrik tersebut ada. Perhatikan bola terbuka berpusat di
+      <m>c</m> dengan jari-jari kurang dari jarak antara <m>c</m> dan
+      <m>e</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-20-answer"><p>
+      Tidak mungkin. Dalam topologi <m>\tau</m>, satu-satunya himpunan terbuka
+      yang memuat <m>c</m> adalah <m>X</m>, tetapi setiap metrik memisahkan
+      <m>c</m> dan <m>e</m> dengan bola terbuka yang tidak memuat <m>e</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-20-solution"><p>
+      Andaikan ada metrik <m>d</m> yang menghasilkan tepat <m>\tau</m>.
+      Karena <m>c\neq e</m>, maka <m>\delta=d(c,e)&gt;0</m>. Ambil
+      <m>r=\delta/2</m>. Bola metrik
+      <m>B_d(c,r)=\{x\in X:d(c,x)&lt;r\}</m> memuat <m>c</m>, tetapi tidak
+      memuat <m>e</m>, sebab <m>d(c,e)=\delta&gt;r</m>. Bola ini harus menjadi
+      himpunan terbuka dalam topologi metrik, sehingga harus menjadi anggota
+      <m>\tau</m>. Namun dari daftar <m>\tau</m>, satu-satunya himpunan terbuka
+      yang memuat <m>c</m> adalah <m>X</m>, dan <m>X</m> juga memuat <m>e</m>.
+      Kontradiksi. Jadi <m>\tau</m> bukan topologi yang termetriskan.
+    </p></solution>
+  </exercise>
+</section>

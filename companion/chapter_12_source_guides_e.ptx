@@ -1,0 +1,197 @@
+<section xml:id="o003-c90-ch12-source-guides-e" xml:lang="id-ID">
+  <title>Panduan lingkungan dalam ruang topologi</title>
+
+  <p>
+    Lima panduan berikut mengikuti dua kegiatan pada bagian
+    <xref ref="sec_neighborhood_top_space" text="title"/>. Pengenal tugas
+    lokal ditambahkan karena tugas sumber tidak memiliki <m>xml:id</m>.
+    Panduan ini merupakan komponen CC BY 4.0 orisinal yang terpisah dari
+    prosa turunan GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-guide-21">
+    <title>Menentukan semua lingkungan titik <m>a</m></title>
+    <statement><p>
+      Misalkan <m>X=\{a,b,c,d\}</m> dan
+      <m>\tau={\emptyset,\{a\},\{b\},\{a,b\},X\}</m>.
+      Tentukan semua lingkungan titik <m>a</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-21-hint"><p>
+      <em>Petunjuk 1.</em> Gunakan definisi: suatu himpunan <m>N</m> adalah
+      lingkungan <m>a</m> jika ada himpunan terbuka <m>U</m> dengan
+      <m>a\in U\subseteq N</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Daftar himpunan terbuka yang memuat <m>a</m>.
+      Perhatikan bahwa <m>\{a\}</m> adalah salah satunya.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-21-answer"><p>
+      Semua lingkungannya adalah semua subhimpunan <m>N\subseteq X</m> yang
+      memuat <m>a</m>:
+      <m>\{a\},\{a,b\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},
+      \{a,c,d\},X</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-21-solution"><p>
+      Himpunan terbuka yang memuat <m>a</m> adalah
+      <m>\{a\}</m>, <m>\{a,b\}</m>, dan <m>X</m>. Jika <m>N</m> memuat
+      <m>a</m>, maka <m>\{a\}\subseteq N</m>; karena <m>\{a\}</m> terbuka
+      dan memuat <m>a</m>, definisi langsung menyatakan bahwa <m>N</m> adalah
+      lingkungan <m>a</m>. Sebaliknya, setiap lingkungan <m>N</m> harus memuat
+      suatu himpunan terbuka yang memuat <m>a</m>, sehingga khususnya
+      <m>a\in N</m>. Jadi lingkungan titik <m>a</m> tepat merupakan delapan
+      subhimpunan <m>X</m> yang tercantum dalam jawaban.
+    </p><p>
+      <em>Rubrik penilaian.</em> Jawaban lengkap (3 poin) menyebutkan
+      kriteria <m>a\in N</m> dan seluruh delapan himpunan; jawaban yang
+      mencantumkan kriteria tetapi melewatkan satu atau lebih himpunan
+      memperoleh 2 poin; daftar tanpa alasan memperoleh 1 poin.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-22">
+    <title>Menentukan semua lingkungan titik <m>c</m></title>
+    <statement><p>
+      Dengan <m>X</m> dan <m>\tau</m> seperti pada Panduan 21, tentukan semua
+      lingkungan titik <m>c</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-22-hint"><p>
+      <em>Petunjuk 1.</em> Cari semua anggota <m>\tau</m> yang memuat
+      <m>c</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Lingkungan harus memuat salah satu himpunan terbuka
+      yang memuat <m>c</m>, bukan sekadar memuat <m>c</m> sendiri.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-22-answer"><p>
+      Satu-satunya lingkungan titik <m>c</m> adalah <m>X</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-22-solution"><p>
+      Dari daftar topologi, satu-satunya himpunan terbuka yang memuat
+      <m>c</m> adalah <m>X</m>. Jika <m>N</m> merupakan lingkungan <m>c</m>,
+      definisi mengharuskan ada himpunan terbuka <m>U</m> dengan
+      <m>c\in U\subseteq N</m>. Hanya mungkin <m>U=X</m>, sehingga
+      <m>X\subseteq N\subseteq X</m> dan akhirnya <m>N=X</m>. Sebaliknya,
+      <m>X</m> memang lingkungan setiap titik karena <m>X</m> terbuka.
+    </p><p>
+      <em>Rubrik penilaian.</em> Tiga poin diberikan bila jawaban menyatakan
+      <m>X</m> dan mengaitkannya dengan fakta bahwa <m>X</m> adalah satu-satunya
+      himpunan terbuka yang memuat <m>c</m>; satu poin diberikan untuk daftar
+      yang benar tanpa penjelasan.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-23">
+    <title>Mengubah lingkungan setiap titik menjadi keterbukaan</title>
+    <statement><p>
+      Misalkan <m>(X,\tau)</m> suatu ruang topologi dan <m>O\subseteq X</m>.
+      Andaikan <m>O</m> merupakan lingkungan dari setiap titiknya. Apa yang
+      perlu dilakukan untuk menunjukkan bahwa <m>O</m> merupakan himpunan
+      terbuka?
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-23-hint"><p>
+      <em>Petunjuk 1.</em> Untuk setiap <m>a\in O</m>, terapkan definisi
+      lingkungan pada <m>O</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Kumpulkan himpunan-himpunan terbuka yang diperoleh
+      menjadi gabungan; tunjukkan kedua inklusi untuk gabungan tersebut.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-23-answer"><p>
+      Untuk setiap <m>a\in O</m>, pilih himpunan terbuka <m>O_a</m> dengan
+      <m>a\in O_a\subseteq O</m>. Lalu buktikan
+      <m>O=\bigcup_{a\in O}O_a</m>. Gabungan sebarang himpunan terbuka adalah
+      terbuka, sehingga <m>O</m> terbuka.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-23-solution"><p>
+      Karena <m>O</m> adalah lingkungan setiap titiknya, untuk setiap
+      <m>a\in O</m> ada himpunan terbuka <m>O_a</m> yang memenuhi
+      <m>a\in O_a\subseteq O</m>. Definisikan
+      <m>U=\bigcup_{a\in O}O_a</m>. Setiap <m>O_a</m> berada di dalam
+      <m>O</m>, jadi <m>U\subseteq O</m>. Sebaliknya, setiap <m>a\in O</m>
+      berada dalam <m>O_a\subseteq U</m>, jadi <m>O\subseteq U</m>.
+      Maka <m>O=U</m>. Karena <m>U</m> merupakan gabungan sebarang anggota
+      <m>\tau</m>, aksioma topologi memberi <m>U\in\tau</m>, dan akibatnya
+      <m>O</m> terbuka. Jika <m>O=\emptyset</m>, gabungan kosong tersebut
+      adalah <m>\emptyset</m>, yang juga terbuka.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan 1 poin untuk pemilihan satu
+      <m>O_a</m> per titik, 1 poin untuk kedua inklusi, dan 1 poin untuk
+      penggunaan aksioma gabungan sebarang (termasuk kasus kosong).
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-24">
+    <title>Mengapa himpunan <m>O_a</m> harus ada</title>
+    <statement><p>
+      Dalam situasi Panduan 23, ambil <m>a\in O</m>. Mengapa harus ada
+      himpunan terbuka <m>O_a</m> sedemikian sehingga
+      <m>a\in O_a\subseteq O</m>?
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-24-hint"><p>
+      <em>Petunjuk 1.</em> Tulis ulang arti kalimat “<m>O</m> merupakan
+      lingkungan dari <m>a</m>” menggunakan kuantor dan inklusi.
+    </p><p>
+      <em>Petunjuk 2.</em> Ganti nama himpunan terbuka yang dijamin definisi
+      itu dengan simbol <m>O_a</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-24-answer"><p>
+      Berdasarkan definisi lingkungan, karena <m>O</m> merupakan lingkungan
+      <m>a</m>, ada himpunan terbuka <m>U</m> dengan
+      <m>a\in U\subseteq O</m>. Ambil <m>O_a=U</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-24-solution"><p>
+      Definisi menyatakan bahwa <m>N</m> adalah lingkungan <m>a</m> tepat
+      ketika ada <m>U\in\tau</m> sehingga <m>a\in U\subseteq N</m>.
+      Terapkan pernyataan ini dengan <m>N=O</m>. Hipotesis Panduan 23
+      mengatakan bahwa penerapan itu sah untuk setiap <m>a\in O</m>, jadi
+      diperoleh <m>U_a\in\tau</m> dengan
+      <m>a\in U_a\subseteq O</m>. Menamai ulang <m>U_a</m> sebagai
+      <m>O_a</m> menghasilkan tepat himpunan yang diperlukan; nama itu hanya
+      mengingatkan bahwa pilihannya dapat bergantung pada titik <m>a</m>.
+    </p><p>
+      <em>Rubrik penilaian.</em> Jawaban penuh (3 poin) menyebutkan bahwa
+      hipotesis berlaku untuk setiap <m>a\in O</m>, menyatakan
+      <m>U_a\in\tau</m>, dan menuliskan dua inklusi yang benar.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-25">
+    <title>Menyelesaikan pembuktian karakterisasi himpunan terbuka</title>
+    <statement><p>
+      Lengkapi pembuktian: jika <m>O</m> merupakan lingkungan dari setiap
+      titiknya dalam ruang topologi <m>(X,\tau)</m>, maka <m>O</m> merupakan
+      himpunan terbuka.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-25-hint"><p>
+      <em>Petunjuk 1.</em> Untuk tiap <m>a\in O</m>, pilih <m>O_a</m> terbuka
+      dengan <m>a\in O_a\subseteq O</m>.
+    </p><p>
+      <em>Petunjuk 2.</em> Tunjukkan
+      <m>\bigcup_{a\in O}O_a\subseteq O</m> dan inklusi sebaliknya.
+      Kemudian gunakan penutupan <m>\tau</m> terhadap gabungan sebarang.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-25-answer"><p>
+      Untuk setiap <m>a\in O</m>, definisi lingkungan memberi himpunan
+      terbuka <m>O_a</m> dengan <m>a\in O_a\subseteq O</m>. Karena itu
+      <m>O=\bigcup_{a\in O}O_a</m>, dan gabungan tersebut terbuka. Jadi
+      <m>O\in\tau</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-25-solution"><p>
+      Untuk arah yang belum dibuktikan, andaikan <m>O</m> merupakan
+      lingkungan dari setiap titik <m>a\in O</m>. Maka untuk setiap titik
+      tersebut terdapat <m>O_a\in\tau</m> sehingga
+      <m>a\in O_a\subseteq O</m>. Letakkan
+      <m>U=\bigcup_{a\in O}O_a</m>. Dari inklusi <m>O_a\subseteq O</m> untuk
+      semua <m>a</m>, diperoleh <m>U\subseteq O</m>. Jika <m>a\in O</m>,
+      maka <m>a\in O_a\subseteq U</m>, sehingga <m>O\subseteq U</m>.
+      Jadi <m>O=U</m>. Aksioma topologi menyatakan bahwa gabungan sebarang
+      anggota <m>\tau</m> adalah anggota <m>\tau</m>, maka <m>U\in\tau</m>
+      dan <m>O\in\tau</m>. Untuk <m>O=\emptyset</m>, indeks gabungan kosong
+      memberi <m>U=\emptyset\in\tau</m>, sehingga argumen tetap berlaku.
+      Bersama arah pertama pada teorema sumber—himpunan terbuka merupakan
+      lingkungan setiap titiknya—ini menyelesaikan karakterisasi tersebut.
+    </p><p>
+      <em>Rubrik penilaian.</em> Berikan 1 poin untuk menghubungkan hipotesis
+      dengan pilihan <m>O_a</m>, 1 poin untuk kesetaraan gabungan, 1 poin
+      untuk aksioma gabungan, dan 1 poin untuk menyebutkan arah pertama atau
+      menangani kasus <m>O=\emptyset</m>.
+    </p></solution>
+  </exercise>
+</section>
