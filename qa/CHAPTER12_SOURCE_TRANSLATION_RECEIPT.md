@@ -23,8 +23,9 @@ pending.
 `a6d260d2110e713db8ef69e9afe54a57e0ef7f0830f41d05279cb9967b6c6aca`) passes
 fail-closed structural comparison:
 25 IDs, 14 xrefs (one explicitly approved external target,
-`chap_Product_topology`), 78 learner prompt units (73 atomic plus five
-grouping units), 13 exercises, 5 hints, 0 source answers, and 0 source
+`chap_Product_topology`), 79 learner-response units (73 atomic task prompts,
+six direct prompts, and five non-response grouping task nodes), 13 exercises,
+5 hints, 0 source answers, and 0 source
 solutions. The nine translated files have combined SHA-256
 `ce64a4bdde0de700eeb5fe6f084b4882b5845ebc6246055a2cfdad354bdf0a3f`.
 
@@ -46,3 +47,8 @@ The Indonesian terms are frozen in O003-T142–O003-T153, including *basis untuk
 topologi*, *topologi indiskret*, *topologi kofinit*, *termetriskan*, *topologi
 garis digital*, and *topologi Zariski*. The complete staged companion and
 stable-ID backend must be produced before Chapter 12 can be admitted.
+
+The denominator supersedes the earlier 78-unit census: the upstream
+`act_top_basis` question is encoded directly in an activity body paragraph,
+not in a child `task` or `statement`, but it is still an independent learner
+prompt and already has guide `o003-c90-ch12-guide-11`.

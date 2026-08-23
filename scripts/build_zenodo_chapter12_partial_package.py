@@ -3,7 +3,7 @@
 
 The reader remains the verified Chapters 1-11 PDF/HTML boundary.  The source
 archive is advanced with the translated Chapter 12 closure and the partial
-41-of-78 companion/backend checkpoint; no completion claim is made.
+51-of-79 companion/backend checkpoint; no completion claim is made.
 """
 
 from __future__ import annotations
@@ -155,9 +155,9 @@ def write_manifest(source_zip: dict[str, object]) -> Path:
                 "chapter": 12,
                 "title": "Ruang Topologi",
                 "source_files": 9,
-                "source_prompt_units": 78,
+                "source_prompt_units": 79,
                 "companion_prompt_units_covered": 51,
-                "companion_prompt_units_pending": 27,
+                "companion_prompt_units_pending": 28,
                 "companion_surfaces": 204,
                 "status": "partial_not_admitted",
             },
@@ -173,7 +173,7 @@ def write_manifest(source_zip: dict[str, object]) -> Path:
                 "bytes": 2_200_204,
                 "sha256": "d7cadeb10e6525568a90340bceadbc77dc1e5620053e257e8b3126acb8ce01f3",
             },
-            "audit_sha256": "5fec6d8cf2e37e3616024a257c8c10b9a37e38ee7d1778960c1ecbde2555034f",
+            "audit_sha256": "c2e802466fa0b01b68db53362f98219c0a7e1758e58f9beec1759e8a8977ebbf",
         },
         "source_checkpoint": {
             "translated_combined_sha256": "ce64a4bdde0de700eeb5fe6f084b4882b5845ebc6246055a2cfdad354bdf0a3f",
