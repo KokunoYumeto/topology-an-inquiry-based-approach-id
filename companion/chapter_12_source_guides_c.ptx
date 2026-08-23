@@ -1,0 +1,275 @@
+<section xml:id="o003-c90-ch12-source-guides-c" xml:lang="id-ID">
+  <title>Panduan basis untuk topologi</title>
+
+  <p>
+    Sembilan panduan berikut mengikuti kegiatan basis dalam source order.
+    Pengenal panduan bersifat netral-lokal dan materi ini merupakan komponen
+    CC BY 4.0 orisinal, bukan prosa Schlicker/GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-guide-11">
+    <title>Membangkitkan topologi dari tiga himpunan dasar</title>
+    <statement><p>
+      Untuk <m>X=\{a,b,c,d\}</m> dan
+      <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{c,d\},\{a,c,d\},
+      \{b,c,d\},X\}</m>, jelaskan mengapa setiap himpunan terbuka tak
+      kosong dapat dibentuk dari gabungan sebarang dan irisan berhingga dari
+      <m>\{a\}</m>, <m>\{b\}</m>, dan <m>\{c,d\}</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-11-hint"><p>
+      Namai tiga himpunan tersebut <m>A</m>, <m>B</m>, dan <m>C</m>. Daftar
+      delapan kemungkinan gabungan, termasuk gabungan kosong, lalu periksa
+      irisan pasangan yang berbeda.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-11-answer"><p>
+      Dengan <m>A=\{a\}</m>, <m>B=\{b\}</m>, dan <m>C=\{c,d\}</m>, gabungan
+      dari subkeluarga <m>\{A,B,C\}</m> menghasilkan tepat
+      <m>\emptyset,A,B,C,A\cup B,A\cup C,B\cup C,A\cup B\cup C</m>, yaitu
+      semua anggota <m>\tau</m>. Irisan pasangan yang berbeda kosong dan
+      irisan suatu himpunan dengan dirinya sendiri tetap himpunan itu.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-11-solution"><p>
+      Ambil <m>A=\{a\}</m>, <m>B=\{b\}</m>, dan <m>C=\{c,d\}</m>.
+      Delapan gabungan subkeluarga adalah
+      <m>\emptyset</m>, <m>A</m>, <m>B</m>, <m>C</m>,
+      <m>A\cup B=\{a,b\}</m>, <m>A\cup C=\{a,c,d\}</m>,
+      <m>B\cup C=\{b,c,d\}</m>, dan
+      <m>A\cup B\cup C=X</m>. Ini persis delapan anggota <m>\tau</m>, sehingga
+      setiap himpunan terbuka tak kosong (bahkan himpunan kosong juga) adalah
+      gabungan elemen-elemen dasar. Selain itu, karena ketiga himpunan saling
+      lepas, irisan dua elemen dasar yang berbeda adalah <m>\emptyset</m>,
+      sedangkan irisan berulang tidak mengubah elemen tersebut. Jadi operasi
+      irisan berhingga tidak menghasilkan himpunan di luar daftar.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-12">
+    <title>Syarat penutupan basis: menutupi ruang</title>
+    <statement><p>
+      Nyatakan dan jelaskan kondisi pertama pada definisi basis untuk koleksi
+      <m>\B</m> subhimpunan dari <m>X</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-12-hint"><p>
+      Kondisi tersebut harus berlaku untuk setiap titik <m>x</m> di ruang,
+      bukan hanya untuk titik-titik pada beberapa elemen basis.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-12-answer"><p>
+      Untuk setiap <m>x\in X</m> terdapat <m>B\in\B</m> dengan
+      <m>x\in B</m>; ekuivalen dengan <m>\bigcup_{B\in\B}B=X</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-12-solution"><p>
+      Kondisi pertama adalah
+      <m>\forall x\in X\;\exists B_x\in\B\text{ sehingga }x\in B_x</m>.
+      Karena setiap titik berada dalam sedikitnya satu elemen basis, gabungan
+      seluruh elemen <m>\B</m> menutupi <m>X</m>. Tanpa kondisi ini, gabungan
+      elemen basis tidak mungkin menghasilkan himpunan terbuka <m>X</m> dan
+      koleksi tersebut tidak dapat membangkitkan topologi pada ruang itu.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-13">
+    <title>Kasus dasar induksi untuk irisan basis</title>
+    <statement><p>
+      Jelaskan mengapa kasus <m>n=1</m> dan <m>n=2</m> benar dalam pernyataan:
+      jika <m>x\in\bigcap_{k=1}^nB_k</m>, maka ada
+      <m>B\in\B</m> dengan <m>x\in B\subseteq\bigcap_{k=1}^nB_k</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-13-hint"><p>
+      Untuk satu himpunan, pilih himpunan itu sendiri. Untuk dua himpunan,
+      gunakan langsung kondisi kedua definisi basis.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-13-answer"><p>
+      Untuk <m>n=1</m>, ambil <m>B=B_1</m>. Untuk <m>n=2</m>, kondisi kedua
+      memberi <m>B_3\in\B</m> dengan
+      <m>x\in B_3\subseteq B_1\cap B_2</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-13-solution"><p>
+      Jika <m>n=1</m>, hipotesis berarti <m>x\in B_1</m>; pilihan
+      <m>B=B_1</m> memenuhi <m>x\in B</m> dan
+      <m>B\subseteq B_1=\bigcap_{k=1}^1B_k</m>. Jika <m>n=2</m>, hipotesis
+      berarti <m>x\in B_1\cap B_2</m>. Kondisi kedua secara tepat
+      menyediakan <m>B_3</m> yang memuat <m>x</m> dan berada di dalam irisan
+      tersebut. Kedua kasus dasar selesai.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-14">
+    <title>Merumuskan hipotesis dan target induksi</title>
+    <statement><p>
+      Tuliskan hipotesis induksi dan target pada langkah induksi untuk
+      memperluas pernyataan irisan basis dari <m>k</m> ke <m>k+1</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-14-hint"><p>
+      Bekukan sebuah bilangan bulat <m>k\geq2</m>. Hipotesis harus berlaku
+      untuk <m>B_1,\ldots,B_k</m>; target menambahkan <m>B_{k+1}</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-14-answer"><p>
+      Hipotesisnya: untuk setiap <m>x\in\bigcap_{i=1}^kB_i</m> ada
+      <m>C\in\B</m> dengan <m>x\in C\subseteq\bigcap_{i=1}^kB_i</m>.
+      Targetnya: untuk setiap
+      <m>x\in\bigcap_{i=1}^{k+1}B_i</m> ada
+      <m>D\in\B</m> dengan <m>x\in D\subseteq\bigcap_{i=1}^{k+1}B_i</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-14-solution"><p>
+      Dalam langkah induksi, anggap hasil yang diinginkan sudah benar untuk
+      setiap irisan hingga <m>k</m> elemen basis. Jadi, bila
+      <m>x</m> berada di semua <m>B_1,\ldots,B_k</m>, tersedia satu
+      <m>C</m> yang memuat <m>x</m> dan memenuhi
+      <m>C\subseteq\bigcap_{i=1}^kB_i</m>. Yang harus dibuktikan adalah versi
+      sama untuk <m>B_1,\ldots,B_k,B_{k+1}</m>; setelah itu kondisi kedua dapat
+      diterapkan pada <m>C</m> dan <m>B_{k+1}</m>.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-15">
+    <title>Menyelesaikan lemma irisan berhingga</title>
+    <statement><p>
+      Gunakan hipotesis induksi dan kondisi kedua untuk melengkapi pembuktian
+      lemma: jika <m>x\in\bigcap_{k=1}^nB_k</m>, maka ada
+      <m>B\in\B</m> dengan <m>x\in B\subseteq\bigcap_{k=1}^nB_k</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-15-hint"><p>
+      Terapkan hipotesis induksi pada <m>B_1,\ldots,B_k</m> untuk memperoleh
+      <m>C</m>, lalu gunakan kondisi kedua pada <m>C</m> dan
+      <m>B_{k+1}</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-15-answer"><p>
+      Dari hipotesis induksi ambil <m>C\in\B</m> dengan
+      <m>x\in C\subseteq\bigcap_{i=1}^kB_i</m>. Karena juga
+      <m>x\in B_{k+1}</m>, kondisi kedua menghasilkan
+      <m>D\in\B</m> dengan
+      <m>x\in D\subseteq C\cap B_{k+1}\subseteq\bigcap_{i=1}^{k+1}B_i</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-15-solution"><p>
+      Buktikan dengan induksi pada <m>n</m>. Kasus <m>n=1</m> dan
+      <m>n=2</m> adalah Panduan 13. Anggap pernyataan benar sampai
+      <m>n=k</m>, dan ambil <m>x\in\bigcap_{i=1}^{k+1}B_i</m>. Maka
+      <m>x\in\bigcap_{i=1}^{k}B_i</m>; hipotesis induksi memberi
+      <m>C\in\B</m> dengan
+      <m>x\in C\subseteq\bigcap_{i=1}^{k}B_i</m>. Karena
+      <m>x\in C\cap B_{k+1}</m>, kondisi kedua basis memberi
+      <m>D\in\B</m> sedemikian sehingga
+      <m>x\in D\subseteq C\cap B_{k+1}</m>. Rantai inklusi
+      <m>D\subseteq C\cap B_{k+1}\subseteq\bigcap_{i=1}^{k+1}B_i</m>
+      menyelesaikan langkah induksi dan lemma.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-16">
+    <title>Melengkapi basis pertama pada topologi hingga</title>
+    <statement><p>
+      Untuk <m>X=\{a,b,c,d,e,f\}</m> dan
+      <m>\tau=\{\emptyset,\{a\},\{c,d\},\{a,c,d\},\{b,c,d,e,f\},X\}</m>,
+      uji <m>\mathcal B=\{\{a\},\{a,c,d\}\}</m>. Jika bukan basis,
+      tambahkan sesedikit mungkin himpunan agar menjadi basis untuk
+      <m>\tau</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-16-hint"><p>
+      Basis harus menutupi titik <m>b,e,f</m> dan harus dapat menghasilkan
+      setiap himpunan terbuka nonkosong sebagai gabungan. Periksa pula
+      himpunan <m>\{c,d\}</m> yang hanya memiliki satu subhimpunan terbuka
+      nonkosong di dalamnya.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-16-answer"><p>
+      Bukan basis. Tambahkan tepat dua himpunan,
+      <m>\{c,d\}</m> dan <m>\{b,c,d,e,f\}</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-16-solution"><p>
+      Himpunan <m>\{c,d\}</m> wajib ditambahkan: satu-satunya anggota
+      <m>\tau</m> yang dapat membentuknya sebagai gabungan himpunan terbuka
+      yang berada di dalamnya adalah dirinya sendiri. Himpunan
+      <m>\{b,c,d,e,f\}</m> juga wajib, karena titik <m>b,e,f</m> tidak berada
+      dalam generator awal dan satu-satunya anggota <m>\tau</m> yang memuat
+      ketiganya tanpa memuat <m>a</m> adalah himpunan tersebut. Dengan kedua
+      tambahan itu, gabungan generator menghasilkan semua anggota <m>\tau</m>:
+      <m>\{a\}</m>, <m>\{c,d\}</m>, <m>\{a,c,d\}</m>,
+      <m>\{b,c,d,e,f\}</m>, dan <m>X</m>. Irisan takkosong generator juga
+      dapat diperhalus oleh generator: misalnya irisan
+      <m>\{a,c,d\}\cap\{b,c,d,e,f\}=\{c,d\}</m>. Jadi dua tambahan cukup
+      dan, dari argumen keharusan di atas, minimum.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-17">
+    <title>Menguji basis kedua pada topologi hingga</title>
+    <statement><p>
+      Uji apakah
+      <m>\mathcal B=\{\{a\},\{c,d\},\{b,c,d,e,f\}\}</m> merupakan basis
+      untuk topologi <m>\tau</m> pada Panduan 16.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-17-hint"><p>
+      Periksa penutupan liputan, daftar semua gabungan generator, lalu
+      periksa irisan pasangan yang tidak kosong.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-17-answer"><p>
+      Ya. Koleksi tersebut menutupi <m>X</m>, gabungannya menghasilkan tepat
+      <m>\tau</m>, dan setiap irisan pasangan takkosong sudah memiliki
+      penyempurnaan basis di dalamnya.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-17-solution"><p>
+      Tulis <m>A=\{a\}</m>, <m>C=\{c,d\}</m>, dan
+      <m>L=\{b,c,d,e,f\}</m>. Gabungan <m>A\cup C\cup L=X</m>, sehingga
+      liputan terpenuhi. Semua gabungan subkeluarga adalah
+      <m>\emptyset,A,C,L,A\cup C=\{a,c,d\},A\cup L=X,
+      C\cup L=L,X</m>, tepat anggota <m>\tau</m>. Irisan berbeda yang
+      tidak kosong hanya <m>C\cap L=C</m>; irisan lain kosong, dan irisan
+      dengan dirinya sendiri tetap generator. Karena itu kedua kondisi basis
+      terpenuhi.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-18">
+    <title>Menambahkan singleton pada topologi diskret tiga titik</title>
+    <statement><p>
+      Misalkan <m>X=\{a,b,c\}</m> dengan topologi diskret. Uji
+      <m>\mathcal B=\{\{a\},\{c\},\{a,b\},\{b,c\}\}</m> dan tambahkan
+      sesedikit mungkin himpunan jika diperlukan.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-18-hint"><p>
+      Cari irisan <m>\{a,b\}\cap\{b,c\}</m>. Kondisi kedua basis meminta
+      sebuah elemen basis yang memuat titik hasil irisan dan berada di
+      dalamnya.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-18-answer"><p>
+      Koleksi awal bukan basis. Tambahkan tepat <m>\{b\}</m>; hasilnya
+      menjadi basis untuk topologi diskret.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-18-solution"><p>
+      Koleksi awal menutupi <m>X</m>, tetapi
+      <m>\{a,b\}\cap\{b,c\}=\{b\}</m>. Tidak ada elemen awal yang memuat
+      <m>b</m> dan sekaligus merupakan subhimpunan dari <m>\{b\}</m>, sehingga
+      kondisi kedua gagal. Setelah <m>\{b\}</m> ditambahkan, semua titik
+      memiliki singleton dan semua irisan pasangan dapat diperhalus oleh
+      singleton yang sesuai. Karena topologi diskret memuat setiap
+      subhimpunan dan setiap subhimpunan merupakan gabungan singleton,
+      koleksi baru membangkitkan tepat topologi diskret. Satu tambahan
+      diperlukan dan cukup.
+    </p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-guide-19">
+    <title>Basis singleton untuk topologi diskret</title>
+    <statement><p>
+      Tentukan sebuah basis untuk topologi diskret pada himpunan sembarang
+      <m>X</m>.
+    </p></statement>
+    <hint xml:id="o003-c90-ch12-guide-19-hint"><p>
+      Gunakan semua singleton yang mungkin, satu untuk setiap titik
+      <m>x\in X</m>.
+    </p></hint>
+    <answer xml:id="o003-c90-ch12-guide-19-answer"><p>
+      Basisnya adalah <m>\mathcal B=\{\{x\}:x\in X\}</m>.
+    </p></answer>
+    <solution xml:id="o003-c90-ch12-guide-19-solution"><p>
+      Setiap <m>x\in X</m> berada dalam singletonnya sendiri, sehingga
+      liputan terpenuhi. Irisan dua singleton adalah kosong atau singleton,
+      dan pada kasus takkosong singleton itu sendiri menjadi penyempurnaan
+      basis. Setiap subhimpunan <m>U\subseteq X</m> dapat ditulis sebagai
+      <m>U=\bigcup_{x\in U}\{x\}</m>, termasuk gabungan kosong untuk
+      <m>U=\emptyset</m>. Jadi koleksi singleton membangkitkan semua
+      subhimpunan, yaitu topologi diskret. Untuk <m>X=\emptyset</m>, koleksi
+      kosong memenuhi kondisi secara vakum dan membangkitkan
+      <m>\{\emptyset\}</m>.
+    </p></solution>
+  </exercise>
+</section>

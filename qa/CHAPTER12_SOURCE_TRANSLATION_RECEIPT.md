@@ -24,13 +24,16 @@ pending.
 `chap_Product_topology`), 78 learner prompt units (73 atomic plus five
 grouping units), 13 exercises, 5 hints, 0 source answers, and 0 source
 solutions. The nine translated files have combined SHA-256
-`d42badd8918f6c4bc92f23654f8e62204886be82de5fac05bbdf9a75efde75d9`.
+`0b46ccb1faf914baf6cd1ccad155c7f1116bed58e1ecfe7196a8c08b811a5ea7`.
 
-Two source-critical repairs are explicitly ledgered and approved by the QA
+Five source-critical repairs are explicitly ledgered and approved by the QA
 receipt: O003-C131 corrects the neighborhood ball's center from the source's
 literal `X` to the introduced point `a`; O003-C132 restores the integer-set
-macro `\Z` in one exercise formula. All identifiers, topology, xrefs, image
-reference, and remaining mathematics are retained.
+macro `\Z` in one exercise formula; O003-C136 restores the closing set brace
+in the finite topology displayed in `sec_base_top.ptx`; O003-C137 removes
+circular scope wording in the basis theorem proof; and O003-C138 makes the
+discrete-topology basis task's intended topology explicit. All identifiers,
+topology, xrefs, image reference, and remaining mathematics are retained.
 
 The Indonesian terms are frozen in O003-T142–O003-T153, including *basis untuk
 topologi*, *topologi indiskret*, *topologi kofinit*, *termetriskan*, *topologi

@@ -22,13 +22,13 @@
   },
   "source_qa": {
     "path": "repo/qa/CHAPTER12_SOURCE_QA.json",
-    "sha256": "8826b0e7c31631822b2ee6bffbe18d55bae74dddddcfcd163afe8ef2faa82ffc",
+    "sha256": "4e591f9bc6bd8c011972493cc9935a025fafa129b3c0039030b3857ef881c203",
     "status": "pass"
   },
   "source_corrections": {
     "path": "00_control/SOURCE_CORRECTIONS.csv",
-    "sha256": "31acbe16683cad374ebe5a7e1906192654cc4dbfc496b982c537f0f509186af0",
-    "chapter12_ids": ["O003-C131", "O003-C132", "O003-C133", "O003-C134", "O003-C135"]
+    "sha256": "f8deb57801aa5b685078e006d8de8bcad22660a8693b3cbb69c1edf5f2866a36",
+    "chapter12_ids": ["O003-C131", "O003-C132", "O003-C133", "O003-C134", "O003-C135", "O003-C136", "O003-C137", "O003-C138"]
   },
   "companion_files": [
     {
@@ -38,29 +38,34 @@
     },
     {
       "path": "repo/companion/chapter_12_topological_spaces_self_study.ptx",
-      "bytes": 1123,
-      "sha256": "7b7a9c6b2bcf5b6d61d17f7fa74ba15b6e224a96c72a713c6e8157ac2ab7fcc0"
+      "bytes": 1179,
+      "sha256": "cf0acae537b6fe613def6060c272aa569a0a9e4b86f26690327904e96070e8f1"
     },
     {
       "path": "repo/companion/chapter_12_source_guides_b.ptx",
       "bytes": 3512,
       "sha256": "4057b932d6487d78761231ff2805500f41f8517167a653a11c35cf3472df4fe1"
+    },
+    {
+      "path": "repo/companion/chapter_12_source_guides_c.ptx",
+      "bytes": 13501,
+      "sha256": "9084c125cd02e716fef82116c7c7e38369235d77e1f7b3b7630a0d684ca1eb96"
     }
   ],
   "coverage": {
-    "source_prompt_guides": 10,
-    "source_prompt_guides_pending": 68,
+    "source_prompt_guides": 19,
+    "source_prompt_guides_pending": 59,
     "mastery_checks": 0,
     "mastery_checks_pending": "to be authored after the source-prompt guides",
-    "covered_source_context": ["sec_top_space_intro", "act_TS_limits1"],
-    "covered_atomic_prompt_units": 10,
+    "covered_source_context": ["sec_top_space_intro", "act_TS_limits1", "act_top_basis", "act_Basis", "basis_final_activity"],
+    "covered_atomic_prompt_units": 19,
     "covered_grouping_prompt_units": 0,
     "covered_surfaces": {
-      "statement": 10,
-      "hint": 10,
-      "answer": 10,
-      "solution": 10,
-      "total": 40
+      "statement": 19,
+      "hint": 19,
+      "answer": 19,
+      "solution": 19,
+      "total": 76
     }
   },
   "entries": [
@@ -73,11 +78,20 @@
     {"id":"o003-c90-ch12-guide-07","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-07","source_line":133,"title":"Topologi indiskret","surfaces":["o003-c90-ch12-guide-07-statement","o003-c90-ch12-guide-07-hint","o003-c90-ch12-guide-07-answer","o003-c90-ch12-guide-07-solution"]},
     {"id":"o003-c90-ch12-guide-08","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-08","source_line":142,"title":"Topologi diskret","surfaces":["o003-c90-ch12-guide-08-statement","o003-c90-ch12-guide-08-hint","o003-c90-ch12-guide-08-answer","o003-c90-ch12-guide-08-solution"]},
     {"id":"o003-c90-ch12-guide-09","source_anchor":"o003-gvsu-ch12-act_TS_limits1-prompt-01","source_line":52,"title":"Membuktikan topologi komplemen berhingga","surfaces":["o003-c90-ch12-guide-09-statement","o003-c90-ch12-guide-09-hint","o003-c90-ch12-guide-09-answer","o003-c90-ch12-guide-09-solution"]},
-    {"id":"o003-c90-ch12-guide-10","source_anchor":"o003-gvsu-ch12-act_TS_limits1-prompt-02","source_line":62,"title":"Ketika topologi komplemen berhingga menjadi diskret","surfaces":["o003-c90-ch12-guide-10-statement","o003-c90-ch12-guide-10-hint","o003-c90-ch12-guide-10-answer","o003-c90-ch12-guide-10-solution"]}
+    {"id":"o003-c90-ch12-guide-10","source_anchor":"o003-gvsu-ch12-act_TS_limits1-prompt-02","source_line":62,"title":"Ketika topologi komplemen berhingga menjadi diskret","surfaces":["o003-c90-ch12-guide-10-statement","o003-c90-ch12-guide-10-hint","o003-c90-ch12-guide-10-answer","o003-c90-ch12-guide-10-solution"]},
+    {"id":"o003-c90-ch12-guide-11","source_anchor":"o003-gvsu-ch12-act_top_basis-prompt-01","source_line":40,"title":"Membangkitkan topologi dari tiga himpunan dasar","surfaces":["o003-c90-ch12-guide-11-statement","o003-c90-ch12-guide-11-hint","o003-c90-ch12-guide-11-answer","o003-c90-ch12-guide-11-solution"]},
+    {"id":"o003-c90-ch12-guide-12","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-01","source_line":106,"title":"Syarat penutupan basis: menutupi ruang","surfaces":["o003-c90-ch12-guide-12-statement","o003-c90-ch12-guide-12-hint","o003-c90-ch12-guide-12-answer","o003-c90-ch12-guide-12-solution"]},
+    {"id":"o003-c90-ch12-guide-13","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-02","source_line":128,"title":"Kasus dasar induksi untuk irisan basis","surfaces":["o003-c90-ch12-guide-13-statement","o003-c90-ch12-guide-13-hint","o003-c90-ch12-guide-13-answer","o003-c90-ch12-guide-13-solution"]},
+    {"id":"o003-c90-ch12-guide-14","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-03","source_line":137,"title":"Merumuskan hipotesis dan target induksi","surfaces":["o003-c90-ch12-guide-14-statement","o003-c90-ch12-guide-14-hint","o003-c90-ch12-guide-14-answer","o003-c90-ch12-guide-14-solution"]},
+    {"id":"o003-c90-ch12-guide-15","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-04","source_line":144,"title":"Menyelesaikan lemma irisan berhingga","surfaces":["o003-c90-ch12-guide-15-statement","o003-c90-ch12-guide-15-hint","o003-c90-ch12-guide-15-answer","o003-c90-ch12-guide-15-solution"]},
+    {"id":"o003-c90-ch12-guide-16","source_anchor":"o003-gvsu-ch12-basis-final-prompt-01","source_line":307,"title":"Melengkapi basis pertama pada topologi hingga","surfaces":["o003-c90-ch12-guide-16-statement","o003-c90-ch12-guide-16-hint","o003-c90-ch12-guide-16-answer","o003-c90-ch12-guide-16-solution"]},
+    {"id":"o003-c90-ch12-guide-17","source_anchor":"o003-gvsu-ch12-basis-final-prompt-02","source_line":320,"title":"Menguji basis kedua pada topologi hingga","surfaces":["o003-c90-ch12-guide-17-statement","o003-c90-ch12-guide-17-hint","o003-c90-ch12-guide-17-answer","o003-c90-ch12-guide-17-solution"]},
+    {"id":"o003-c90-ch12-guide-18","source_anchor":"o003-gvsu-ch12-basis-final-prompt-03","source_line":335,"title":"Menambahkan singleton pada topologi diskret tiga titik","surfaces":["o003-c90-ch12-guide-18-statement","o003-c90-ch12-guide-18-hint","o003-c90-ch12-guide-18-answer","o003-c90-ch12-guide-18-solution"]},
+    {"id":"o003-c90-ch12-guide-19","source_anchor":"o003-gvsu-ch12-basis-final-prompt-04","source_line":346,"title":"Basis singleton untuk topologi diskret","surfaces":["o003-c90-ch12-guide-19-statement","o003-c90-ch12-guide-19-hint","o003-c90-ch12-guide-19-answer","o003-c90-ch12-guide-19-solution"]}
   ],
   "validation": {
     "xml_parse": "pass",
-    "all_ten_entries_have_statement_hint_answer_solution": true,
+    "all_nineteen_entries_have_statement_hint_answer_solution": true,
     "source_and_companion_ids_are_disjoint": true,
     "complete_reader_boundary": false,
     "cumulative_build": "not run; partial companion is not admitted",
