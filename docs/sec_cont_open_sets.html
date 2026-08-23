@@ -86,7 +86,7 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-10-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–10 — Himpunan, Fungsi, Ruang Metrik, Himpunan Terbuka dan Tertutup, Barisan, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-11-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1–11 — Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, Hasil Kali, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -220,10 +220,10 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch10-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch11-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Himpunan Terbuka dan Tertutup, serta Barisan</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
@@ -331,6 +331,16 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_closed_set_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap_metric_subspaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Subruang dan Hasil Kali Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sub_metric_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_closed_sub.html" class="internal"><span class="title">Himpunan Terbuka dan Tertutup di Subruang</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_metric.html" class="internal"><span class="title">Hasil Kali Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_metric_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_metric_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -426,6 +436,16 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch10-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 10</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch11-companion.html" class="internal"><span class="codenumber">K</span> <span class="title">Pendamping Mandiri Bab 11: Subruang dan Hasil Kali Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch11-source-guides-a.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-source-guides-b.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan lanjutan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 11</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 </ul>
 </li>
@@ -452,16 +472,15 @@ window.MathJax = {
 <div class="para" id="p-890">Apa yang dinyatakan oleh hipotesis kita mengenai <span class="process-math">\(f^{-1}(B(f(a), \epsilon))\)</span> dalam <span class="process-math">\(X\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-370"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="p-891">Mengapa <span class="process-math">\(f^{-1}(N)\)</span> merupakan lingkungan bagi <span class="process-math">\(a\text{?}\)</span> Bagaimana hal ini menunjukkan bahwa <span class="process-math">\(f\)</span> merupakan fungsi kontinu?</div></article></article><div class="para" id="p-892">Ingatlah bahwa setiap himpunan terbuka merupakan gabungan bola-bola terbuka. Jadi, kita dapat menyederhanakan pembuktian kekontinuan fungsi dalam ruang metrik dengan hanya menggunakan bola terbuka alih-alih himpunan terbuka sebarang. Aktivitas berikut memberikan perinciannya.</div>
-<article class="activity project-like" id="act_continuity_balls"><h3 class="heading">
+<div class="para" id="p-893">Dalam aktivitas berikut, kita membuktikan akibat berikut dari <a href="" class="xref" data-knowl="./knowl/thm_Open_continuity.html" title="Teorema 8.5">Teorema 8.5</a>.</div>
+<article class="corollary theorem-like" id="cor_continuity_balls"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">8.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-894">Suatu fungsi <span class="process-math">\(f\)</span> dari ruang metrik <span class="process-math">\((X,d_X)\)</span> ke ruang metrik <span class="process-math">\((Y,d_Y)\)</span> kontinu jika dan hanya jika <span class="process-math">\(f^{-1}(B)\)</span> terbuka dalam <span class="process-math">\(X\)</span> setiap kali <span class="process-math">\(B\)</span> merupakan bola terbuka dalam <span class="process-math">\(Y\text{.}\)</span>
+</div></article><article class="activity project-like" id="act_continuity_balls"><h3 class="heading">
 <span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">8.6</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-101">
-<div class="para" id="p-893">Dalam aktivitas ini, kita membuktikan akibat berikut dari <a href="" class="xref" data-knowl="./knowl/thm_Open_continuity.html" title="Teorema 8.5">Teorema 8.5</a>.</div> <article class="corollary theorem-like" id="cor_continuity_balls"><h4 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">8.6</span><span class="period">.</span>
-</h4>
-<div class="para" id="p-894">Suatu fungsi <span class="process-math">\(f\)</span> dari ruang metrik <span class="process-math">\((X,d_X)\)</span> ke ruang metrik <span class="process-math">\((Y,d_Y)\)</span> kontinu jika dan hanya jika <span class="process-math">\(f^{-1}(B)\)</span> terbuka dalam <span class="process-math">\(X\)</span> setiap kali <span class="process-math">\(B\)</span> merupakan bola terbuka dalam <span class="process-math">\(Y\text{.}\)</span>
-</div></article> <div class="para" id="p-895">Untuk menyiapkan pembuktiannya, misalkan <span class="process-math">\((X,d_X)\)</span> dan <span class="process-math">\((Y,d_Y)\)</span> ruang-ruang metrik, dan misalkan <span class="process-math">\(f: X \to Y\)</span> suatu fungsi.</div>
-</div>
+<div class="introduction" id="introduction-101"><div class="para" id="p-895">Untuk menyiapkan pembuktiannya, misalkan <span class="process-math">\((X,d_X)\)</span> dan <span class="process-math">\((Y,d_Y)\)</span> ruang-ruang metrik, dan misalkan <span class="process-math">\(f: X \to Y\)</span> suatu fungsi.</div></div>
 <article class="task exercise-like" id="task-371"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="p-896">Karena akibat ini merupakan pernyataan bikondisional, kita perlu membuktikan kedua implikasinya. Pertama, asumsikan bahwa <span class="process-math">\(f\)</span> kontinu. Gunakan <a href="" class="xref" data-knowl="./knowl/thm_Open_continuity.html" title="Teorema 8.5">Teorema 8.5</a> untuk menjelaskan mengapa <span class="process-math">\(f^{-1}(B)\)</span> terbuka dalam <span class="process-math">\(X\)</span> setiap kali <span class="process-math">\(B\)</span> merupakan bola terbuka dalam <span class="process-math">\(Y\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-372"><h4 class="heading"><span class="codenumber">(b)</span></h4>

@@ -3,27 +3,27 @@
   <exercise>
     <introduction>
       <p>
-        Determine if the following sets <m>S</m> are open in the subspace <m>A</m> of the topological space <m>(\R, d_E)</m>.
+        Tentukan apakah himpunan-himpunan <m>S</m> berikut terbuka dalam subruang <m>A</m> dari ruang metrik <m>(\R, d_E)</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              <m>S = [1,2)</m> in <m>A = [1,3]</m>
+              <m>S = [1,2)</m> dalam <m>A = [1,3]</m>
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              <m>S = \{1, 2\}</m> in <m>A = \Q</m>
+              <m>S = \{1, 2\}</m> dalam <m>A = \Q</m>
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              <m>S = \{1,2\}</m> in <m>A = \Z</m>
+              <m>S = \{1,2\}</m> dalam <m>A = \Z</m>
             </p>
           </statement>
         </task>
@@ -32,9 +32,9 @@
   <exercise>
     <statement>
       <p>
-        Let <m>O</m> be an open set in a metric space <m>(X,d)</m>.
-        Show that a subset <m>U</m> of <m>O</m> is open in
-        <m>(O, d|_O)</m> if and only if <m>U</m> is open in <m>(X,d)</m>.
+        Misalkan <m>O</m> suatu himpunan terbuka dalam ruang metrik <m>(X,d)</m>.
+        Tunjukkan bahwa suatu subhimpunan <m>U</m> dari <m>O</m> terbuka dalam
+        <m>(O, d|_{O \times O})</m> jika dan hanya jika <m>U</m> terbuka dalam <m>(X,d)</m>.
       </p>
     </statement>
   </exercise>
@@ -42,12 +42,12 @@
   <exercise>
     <statement>
       <p>
-        Let <m>(X,d_X)</m> and <m>(Y, d_Y)</m> be metric spaces,
-        and let <m>f : X \to Y</m> be a continuous function.
-        If <m>A</m> is a subspace of <m>X</m>,
-        must the restriction <m>f|_A</m> of <m>f</m> to <m>A</m> mapping <m>A</m> to <m>Y</m> be continuous?
-        Give a proof that the restriction is continuous,
-        or an example to show that the restriction need not be continuous.
+        Misalkan <m>(X,d_X)</m> dan <m>(Y, d_Y)</m> ruang-ruang metrik,
+        dan misalkan <m>f : X \to Y</m> suatu fungsi kontinu.
+        Jika <m>A</m> merupakan subruang dari <m>X</m>,
+        apakah pembatasan <m>f|_A</m> dari <m>f</m> pada <m>A</m> yang memetakan <m>A</m> ke <m>Y</m> harus kontinu?
+        Berikan bukti bahwa pembatasan tersebut kontinu,
+        atau berikan suatu contoh yang menunjukkan bahwa pembatasan tersebut tidak harus kontinu.
       </p>
     </statement>
   </exercise>
@@ -55,9 +55,9 @@
   <exercise xml:id="ex_relatively_closed_ms">
     <statement>
       <p>
-        Prove <xref ref="thm_relatively_closed_ms"/>.
-        That is, let <m>(X,d)</m> be a metric space and <m>A</m> a subset of <m>X</m>.
-        Prove that a subset <m>C_A</m> of <m>A</m> is closed in <m>A</m> if and only if there is a closed set <m>C_X</m> in <m>X</m> so that <m>C_A = C_X \cap A</m>.
+        Buktikan <xref ref="thm_relatively_closed_ms"/>.
+        Artinya, misalkan <m>(X,d)</m> suatu ruang metrik dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+        Buktikan bahwa suatu subhimpunan <m>C_A</m> dari <m>A</m> tertutup dalam <m>A</m> jika dan hanya jika terdapat suatu himpunan tertutup <m>C_X</m> dalam <m>X</m> sedemikian sehingga <m>C_A = C_X \cap A</m>.
       </p>
     </statement>
   </exercise>
@@ -65,13 +65,13 @@
   <exercise>
     <statement>
       <p>
-        Let <m>(X,d_X)</m> and <m>(Y,d_Y)</m> be metric spaces.
-        Prove or disprove:
-        the function <m>d: X \times Y \to \R</m> defined by
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> ruang-ruang metrik.
+        Buktikan atau sangkal:
+        fungsi <m>d: (X \times Y) \times (X \times Y) \to \R</m> yang didefinisikan oleh
         <me>
           d((x_1,y_1), (x_2,y_2)) = d_X(x_1,x_2) + d_Y(y_1,y_2)
         </me>
-        is a metric on <m>X \times Y</m>.
+        merupakan suatu metrik pada <m>X \times Y</m>.
       </p>
     </statement>
   </exercise>
@@ -79,14 +79,14 @@
   <exercise xml:id="ex_prod_metric">
     <statement>
       <p>
-        Let <m>(X_i, d_i)</m> be metric spaces for <m>i</m> from <m>1</m> to some positive integer <m>n</m>.
-        Let <m>d: \prod_{i=1}^n X_i \to \R</m> be defined
+        Misalkan <m>(X_i, d_i)</m> merupakan ruang metrik untuk <m>i</m> dari <m>1</m> sampai suatu bilangan bulat positif <m>n</m>.
+        Misalkan <m>X = \prod_{i=1}^n X_i,\ d: X \times X \to \R</m> didefinisikan oleh
         <me>
           d(x,y) = \sqrt{\sum_{i=1}^n d_i(x_i,y_i)^2}
         </me>
-        when <m>x = (x_1, x_2, \ldots,
-        x_n)</m> and <m>y = (y_1, y_2, \ldots, y_n)</m> are in <m>X</m>.
-        Show that <m>d</m> is a metric on <m>\prod_{i=1}^n X_i</m>.
+        apabila <m>x = (x_1, x_2, \ldots,
+        x_n)</m> dan <m>y = (y_1, y_2, \ldots, y_n)</m> berada dalam <m>X</m>.
+        Tunjukkan bahwa <m>d</m> merupakan suatu metrik pada <m>\prod_{i=1}^n X_i</m>.
       </p>
     </statement>
   </exercise>
@@ -94,80 +94,80 @@
   <exercise xml:id="ex_Subspace_monotone_convergence">
     <statement>
       <p>
-        Let <m>(x_n)</m> be a non-decreasing sequence of real numbers that is bounded above.
-        That is, <m>x_n \leq x_{n+1}</m> for every <m>n</m> and there is a positive real number <m>K</m> such that <m>x_n \leq K</m> for every <m>n</m>.
-        Show that the sequence <m>(x_n)</m> converges.
+        Misalkan <m>(x_n)</m> suatu barisan bilangan real yang tak menurun dan terbatas di atas.
+        Artinya, <m>x_n \leq x_{n+1}</m> untuk setiap <m>n</m> dan terdapat bilangan real positif <m>K</m> sedemikian sehingga <m>x_n \leq K</m> untuk setiap <m>n</m>.
+        Tunjukkan bahwa barisan <m>(x_n)</m> konvergen.
       </p>
     </statement>
   </exercise>
 
   <exercise>
-  <idx><h>Hilbert space</h></idx>
+  <idx><h>ruang Hilbert</h></idx>
     <introduction>
       <p>
-        It is possible to consider infinite products as metric spaces.
-        One important example is a Hilbert space
+        Hasil kali tak hingga dapat dipandang sebagai ruang metrik.
+        Salah satu contoh penting adalah ruang Hilbert
           
-        <m>H</m>, which consists of all infinite sequences <m>(x_n)</m> where
-        <m>x_n \in \R</m> for every <m>n</m> and <m>\sum_{k = 1}^{\infty} x_k^2</m> is finite.
-        Hilbert space has important applications in physics,
-        particularly in quantum mechanics.
+        <m>H</m>, yang terdiri atas semua barisan tak hingga <m>(x_n)</m> dengan
+        <m>x_n \in \R</m> untuk setiap <m>n</m> dan <m>\sum_{k = 1}^{\infty} x_k^2</m> berhingga.
+        Ruang Hilbert memiliki penerapan penting dalam fisika,
+        khususnya dalam mekanika kuantum.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Give two distinct elements in <m>H</m> and one infinite sequence that is not in <m>H</m>.
-              Explain your examples.
+              Berikan dua unsur berbeda dalam <m>H</m> dan satu barisan tak hingga yang tidak berada dalam <m>H</m>.
+              Jelaskan contoh-contoh Anda.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              We define the norm of an element <m>x = (x_n)</m> in <m>H</m> as
+              Kita mendefinisikan norma suatu unsur <m>x = (x_n)</m> dalam <m>H</m> sebagai
               <me>
                 \lVert x\rVert = \sqrt{\sum_{k=1}^{\infty} x_k^2}
               </me>.
-              From this norm we can define a distance between elements <m>x = (x_n)</m> and
-              <m>y = (y_n)</m> in <m>H</m> as follows:
+              Dari norma ini, kita dapat mendefinisikan jarak antara unsur-unsur <m>x = (x_n)</m> dan
+              <m>y = (y_n)</m> dalam <m>H</m> sebagai berikut:
               <me>
                 d(x,y) = \lVert x-y \rVert
               </me>,
-              where <m>x-y = (x_n-y_n)</m>.
-              Another way to write <m>d</m> is
+              dengan <m>x-y = (x_n-y_n)</m>.
+              Cara lain untuk menuliskan <m>d</m> adalah
               <me>
                 d(x,y) = \sqrt{\sum_{k=1}^{\infty} (x_k-y_k)^2}
               </me>.
-              One potential problem with this function <m>d</m> is that we need to know that if <m>x</m> and <m>y</m> are in <m>H</m>,
-              then <m>x-y \in H</m>.
-              That is, show that if <m>\sum_{k=1}^{\infty} x_k^2</m> and <m>\sum_{k=1}^{\infty} y_k^2</m> are finite,
-              then <m>\sum_{k=1}^{\infty} (x_k-y_k)^2</m> is also finite.
+              Salah satu potensi masalah dengan fungsi <m>d</m> ini adalah bahwa kita perlu mengetahui: jika <m>x</m> dan <m>y</m> berada dalam <m>H</m>,
+              maka <m>x-y \in H</m>.
+              Artinya, tunjukkan bahwa jika <m>\sum_{k=1}^{\infty} x_k^2</m> dan <m>\sum_{k=1}^{\infty} y_k^2</m> berhingga,
+              maka <m>\sum_{k=1}^{\infty} (x_k-y_k)^2</m> juga berhingga.
               
             </p>
           </statement>
           <hint>
                 <p>
-                  Consider a finite sum and use <xref ref="ex_Subspace_monotone_convergence"/>.
+                  Tinjaulah suatu jumlah berhingga dan gunakan <xref ref="ex_Subspace_monotone_convergence"/>.
                 </p>
               </hint>
         </task>
         <task>
           <statement>
             <p>
-              Show that <m>d</m> is a metric on <m>H</m>.
+              Tunjukkan bahwa <m>d</m> merupakan suatu metrik pada <m>H</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>E^m = \{(x_n) \in H \mid x_k = 0 \text{ for } k > m\}</m>.
-              Let <m>f: E^m \to \R^m</m> be defined by <m>f((x_n)_{n=1}^{\infty}) = (x_n)_{n=1}^m</m>.
-              Show that <m>f</m> is a bijection such that
+              Misalkan <m>E^m = \{(x_n) \in H \mid x_k = 0 \text{ untuk } k > m\}</m>.
+              Misalkan <m>f: E^m \to \R^m</m> didefinisikan oleh <m>f((x_n)_{n=1}^{\infty}) = (x_n)_{n=1}^m</m>.
+              Tunjukkan bahwa <m>f</m> merupakan bijeksi sedemikian sehingga
               <m>d((x_n), (y_n)) = d_E(f((x_n)),
-              f((y_n)))</m> for any elements <m>(x_n)</m>, <m>(y_n)</m> in <m>H</m>.
-              So <m>E^m</m> is essentially the same as <m>\R^m</m> and so we can consider the space <m>\R^m</m> as embedded in <m>H</m> as a subspace of <m>H</m> for every <m>m \in \Z^+</m>.
+              f((y_n)))</m> untuk sebarang unsur <m>(x_n)</m>, <m>(y_n)</m> dalam <m>E^m</m>.
+              Jadi, <m>E^m</m> pada dasarnya sama dengan <m>\R^m</m>, sehingga kita dapat memandang ruang <m>\R^m</m> tertanam dalam <m>H</m> sebagai suatu subruang dari <m>H</m> untuk setiap <m>m \in \Z^+</m>.
             </p>
           </statement>
         </task>
@@ -176,71 +176,71 @@
   <exercise>
     <introduction>
       <p>
-        For each of the following, answer true if the statement is always true.
-        If the statement is only sometimes true or never true,
-        answer false and provide a concrete example to illustrate that the statement is false.
-        If a statement is true, explain why.
+        Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar.
+        Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar,
+        jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              If <m>d</m> is the discrete metric on a metric space <m>X</m>,
-              then for any subspace <m>A</m> of <m>X</m>,
-              the restriction of <m>d</m> to <m>A</m> is the discrete metric.
+              Jika <m>d</m> merupakan metrik diskret pada ruang metrik <m>X</m>,
+              maka untuk sebarang subruang <m>A</m> dari <m>X</m>,
+              pembatasan <m>d</m> pada <m>A</m> merupakan metrik diskret.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>d</m> is a metric on a space <m>X</m> that is not the discrete metric,
-              and if <m>A</m> is a subset of <m>X</m>,
-              then <m>d|_A</m> cannot be the discrete metric.
+              Jika <m>d</m> merupakan metrik pada ruang <m>X</m> yang bukan metrik diskret,
+              dan jika <m>A</m> merupakan subhimpunan dari <m>X</m>,
+              maka <m>d|_A</m> tidak mungkin merupakan metrik diskret.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>A</m> be a subspace of a metric space <m>(X,d)</m>.
-              If a sequence <m>(a_n)</m> is in <m>A</m> and
-              <m>\lim a_n = a</m> for some <m>a \in A</m>,
-              then <m>\lim a_n = a</m> in <m>X</m>.
+              Misalkan <m>A</m> suatu subruang dari ruang metrik <m>(X,d)</m>.
+              Jika suatu barisan <m>(a_n)</m> berada dalam <m>A</m> dan
+              <m>\lim a_n = a</m> untuk suatu <m>a \in A</m>,
+              maka <m>\lim a_n = a</m> dalam <m>X</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>A</m> be a subspace of a metric space <m>(X,d)</m>.
-              If a sequence <m>(a_n)</m> is in <m>A</m> and
-              <m>\lim a_n = a</m> for some <m>a \in X</m>,
-              then <m>\lim a_n = a</m> in <m>A</m>.
+              Misalkan <m>A</m> suatu subruang dari ruang metrik <m>(X,d)</m>.
+              Jika suatu barisan <m>(a_n)</m> berada dalam <m>A</m> dan
+              <m>\lim a_n = a</m> untuk suatu <m>a \in X</m>,
+              maka <m>\lim a_n = a</m> dalam <m>A</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>(X,d_X)</m> and <m>(Y, d_Y)</m> are metric spaces,
-              then the function <m>d: X \times Y \to \R</m> defined by
+              Jika <m>(X,d_X)</m> dan <m>(Y, d_Y)</m> merupakan ruang-ruang metrik,
+              maka fungsi <m>d: (X \times Y) \times (X \times Y) \to \R</m> yang didefinisikan oleh
               <me>
                 d((x_1,y_1), (x_2,y_2)) = \max\{d_X(x_1,x_2), d_Y(y_1,y_2)\}
               </me>
-              is a metric on <m>X \times Y</m>.
+              merupakan suatu metrik pada <m>X \times Y</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>(X,d_X)</m> and <m>(Y, d_Y)</m> are metric spaces,
-              then the function <m>d: X \times Y \to \R</m> defined by
+              Jika <m>(X,d_X)</m> dan <m>(Y, d_Y)</m> merupakan ruang-ruang metrik,
+              maka fungsi <m>d: (X \times Y) \times (X \times Y) \to \R</m> yang didefinisikan oleh
               <me>
                 d((x_1,y_1), (x_2,y_2)) = d_X(x_1,x_2)d_Y(y_1,y_2)
               </me>
-              is a metric on <m>X \times Y</m>.
+              merupakan suatu metrik pada <m>X \times Y</m>.
             </p>
           </statement>
         </task>

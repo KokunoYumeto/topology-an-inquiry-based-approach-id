@@ -1,0 +1,490 @@
+<section xml:id="o003-c90-ch11-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian pertama</title>
+
+  <p>
+    Sepuluh panduan berikut mengikuti, dalam urutan baca, sepuluh perintah
+    atomik pertama pada latihan penutup Bab 11. Uraian ini merupakan materi
+    pendamping asli untuk belajar mandiri, bukan jawaban dari penulis karya
+    sumber, dan tersedia di bawah lisensi Creative Commons Atribusi 4.0
+    Internasional (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch11-guide-17">
+    <title>Keterbukaan relatif interval <m>[1,2)</m></title>
+    <statement>
+      <p>
+        Dalam subruang <m>A=[1,3]</m> dari <m>(\R,d_E)</m>, tentukan apakah
+        <m>S=[1,2)</m> terbuka dalam <m>A</m>.
+        <em>Rubrik.</em> Jawaban harus menyatakan suatu himpunan terbuka di
+        ruang ambien yang irisannya dengan <m>A</m> tepat sama dengan
+        <m>S</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-17-hint">
+      <p>
+        Gunakan pencirian keterbukaan subruang: cari himpunan terbuka
+        <m>O\subseteq\R</m> sedemikian sehingga <m>S=A\cap O</m>. Interval
+        terbuka dengan ujung kanan <m>2</m> dapat dipilih agar juga memuat
+        titik <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-17-answer">
+      <p>
+        Ya. Himpunan <m>S=[1,2)</m> terbuka secara relatif dalam
+        <m>A=[1,3]</m> karena <m>S=A\cap(0,2)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-17-solution">
+      <p>
+        Interval <m>O=(0,2)</m> terbuka dalam <m>(\R,d_E)</m>. Selain itu,
+        <me>
+          A\cap O=[1,3]\cap(0,2)=[1,2)=S.
+        </me>
+        Berdasarkan pencirian himpunan terbuka dalam subruang, irisan suatu
+        himpunan terbuka di ruang ambien dengan <m>A</m> terbuka dalam
+        <m>A</m>. Jadi <m>S</m> terbuka dalam <m>A</m>, walaupun <m>S</m>
+        tidak terbuka dalam <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-18">
+    <title>Keterbukaan relatif dua titik dalam <m>\Q</m></title>
+    <statement>
+      <p>
+        Dalam subruang <m>A=\Q</m> dari <m>(\R,d_E)</m>, tentukan apakah
+        <m>S=\{1,2\}</m> terbuka dalam <m>A</m>.
+        <em>Rubrik.</em> Jika jawabannya negatif, tunjukkan bahwa
+        sekurang-kurangnya satu titik <m>S</m> tidak mempunyai bola subruang yang
+        termuat dalam <m>S</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-18-hint">
+      <p>
+        Ambil sebarang <m>r\gt0</m>. Dengan memilih bilangan bulat positif
+        <m>n</m> yang cukup besar, titik rasional <m>1+1/n</m> dapat dibuat
+        berada dalam <m>B_{\Q}(1,r)</m> tanpa sama dengan <m>1</m> atau
+        <m>2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-18-answer">
+      <p>
+        Tidak. Setiap bola terbuka dalam <m>\Q</m> yang berpusat di
+        <m>1</m> memuat bilangan rasional selain <m>1</m> dan <m>2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-18-solution">
+      <p>
+        Andaikan <m>r\gt0</m>. Pilih <m>n\in\Z^+</m> sedemikian sehingga
+        <m>1/n\lt\min\{r,1/2\}</m>, dan tetapkan <m>q=1+1/n</m>. Maka
+        <m>q\in\Q</m>, <m>d_E(q,1)=1/n\lt r</m>, sehingga
+        <m>q\in B_{\Q}(1,r)</m>. Akan tetapi, pilihan
+        <m>1/n\lt1/2</m> menjamin <m>1\lt q\lt3/2</m>; jadi
+        <m>q\notin\{1,2\}</m>. Karena argumen ini berlaku bagi setiap
+        <m>r\gt0</m>, tidak ada bola terbuka dalam <m>\Q</m> yang berpusat
+        di <m>1</m> dan termuat dalam <m>S</m>. Maka <m>S</m> tidak terbuka
+        dalam subruang <m>\Q</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-19">
+    <title>Keterbukaan relatif dua titik dalam <m>\Z</m></title>
+    <statement>
+      <p>
+        Dalam subruang <m>A=\Z</m> dari <m>(\R,d_E)</m>, tentukan apakah
+        <m>S=\{1,2\}</m> terbuka dalam <m>A</m>.
+        <em>Rubrik.</em> Tunjukkan secara eksplisit bahwa setiap titik
+        <m>S</m> mempunyai bola subruang yang termuat dalam <m>S</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-19-hint">
+      <p>
+        Dua bilangan bulat berbeda berjarak sekurang-kurangnya <m>1</m>.
+        Tinjau bola berjari-jari <m>1/2</m> dalam subruang <m>\Z</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-19-answer">
+      <p>
+        Ya. Dalam metrik subruang pada <m>\Z</m>, berlaku
+        <m>B_{\Z}(1,1/2)=\{1\}</m> dan
+        <m>B_{\Z}(2,1/2)=\{2\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-19-solution">
+      <p>
+        Jika <m>k,\ell\in\Z</m> dan <m>k\neq\ell</m>, maka
+        <m>|k-\ell|\geq1</m>. Karena itu, satu-satunya bilangan bulat dalam
+        bola ambien <m>(k-1/2,k+1/2)</m> adalah <m>k</m>, sehingga
+        <m>B_{\Z}(k,1/2)=\{k\}</m>. Khususnya,
+        <me>
+          S=B_{\Z}(1,1/2)\cup B_{\Z}(2,1/2).
+        </me>
+        Setiap bola pada ruas kanan terbuka dalam <m>\Z</m>; gabungannya
+        juga terbuka. Jadi <m>S</m> terbuka dalam subruang <m>\Z</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-20">
+    <title>Keterbukaan di dalam subruang terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>O</m> terbuka dalam ruang metrik <m>(X,d)</m> dan
+        <m>U\subseteq O</m>. Buktikan bahwa <m>U</m> terbuka dalam
+        <m>(O,d|_{O\times O})</m> jika dan hanya jika <m>U</m> terbuka dalam
+        <m>(X,d)</m>.
+        <em>Rubrik.</em> Kedua implikasi harus dibuktikan; nyatakan dengan
+        jelas tempat digunakannya hipotesis bahwa <m>O</m> terbuka dalam
+        <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-20-hint">
+      <p>
+        <em>Arah pertama.</em> Jika <m>U</m> terbuka dalam <m>O</m>, tuliskan
+        <m>U=O\cap V</m> untuk suatu <m>V</m> yang terbuka dalam <m>X</m>.
+      </p>
+      <p>
+        <em>Arah kedua.</em> Jika <m>U</m> terbuka dalam <m>X</m>, gunakan
+        kesamaan sederhana <m>U=O\cap U</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-20-answer">
+      <p>
+        Ekuivalensi benar. Pada arah yang tidak otomatis bagi subruang
+        sebarang, keterbukaan <m>O</m> membuat irisan <m>O\cap V</m> terbuka
+        dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-20-solution">
+      <p>
+        Andaikan <m>U</m> terbuka dalam subruang <m>O</m>. Berdasarkan
+        pencirian keterbukaan relatif, terdapat himpunan terbuka
+        <m>V\subseteq X</m> dengan <m>U=O\cap V</m>. Hipotesis menyatakan
+        bahwa <m>O</m> terbuka dalam <m>X</m>; karena irisan berhingga
+        himpunan-himpunan terbuka bersifat terbuka, <m>U=O\cap V</m>
+        terbuka dalam <m>X</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>U</m> terbuka dalam <m>X</m>. Karena
+        <m>U\subseteq O</m>, berlaku <m>U=O\cap U</m>. Himpunan kedua pada
+        irisan ini terbuka dalam <m>X</m>, sehingga pencirian keterbukaan
+        relatif menunjukkan bahwa <m>U</m> terbuka dalam subruang
+        <m>O</m>. Kedua implikasi telah terbukti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-21">
+    <title>Kekontinuan pembatasan fungsi</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,d_X)\to(Y,d_Y)</m> kontinu dan <m>A</m> suatu
+        subruang dari <m>X</m>. Tentukan apakah pembatasan
+        <m>f|_A:A\to Y</m> harus kontinu, lalu buktikan jawaban Anda.
+        <em>Rubrik.</em> Bukti harus memperhitungkan topologi subruang pada
+        <m>A</m>, bukan sekadar menyatakan bahwa rumus fungsinya tidak
+        berubah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-21-hint">
+      <p>
+        Untuk himpunan terbuka <m>V\subseteq Y</m>, bandingkan
+        <m>(f|_A)^{-1}(V)</m> dengan <m>f^{-1}(V)</m>. Prapeta yang pertama
+        merupakan irisan yang kedua dengan <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-21-answer">
+      <p>
+        Ya. Pembatasan fungsi kontinu pada sebarang subruang domain selalu
+        kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-21-solution">
+      <p>
+        Ambil sebarang himpunan terbuka <m>V</m> dalam <m>Y</m>. Karena
+        <m>f:X\to Y</m> kontinu, <m>f^{-1}(V)</m> terbuka dalam <m>X</m>.
+        Dari definisi pembatasan fungsi,
+        <me>
+          (f|_A)^{-1}(V)=A\cap f^{-1}(V).
+        </me>
+        Ruas kanan terbuka dalam subruang <m>A</m>. Jadi prapeta setiap
+        himpunan terbuka di <m>Y</m> di bawah <m>f|_A</m> terbuka dalam
+        domain <m>A</m>. Pencirian kekontinuan melalui himpunan terbuka
+        membuktikan bahwa <m>f|_A:A\to Y</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-22">
+    <title>Himpunan tertutup relatif</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik dan <m>A\subseteq X</m>.
+        Buktikan bahwa <m>C_A\subseteq A</m> tertutup dalam <m>A</m> jika
+        dan hanya jika terdapat himpunan tertutup <m>C_X</m> dalam
+        <m>X</m> sedemikian sehingga <m>C_A=C_X\cap A</m>.
+        <em>Rubrik.</em> Buktikan kedua arah dengan menggunakan komplemen
+        relatif dan pencirian himpunan terbuka dalam subruang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-22-hint">
+      <p>
+        <em>Arah maju.</em> Karena <m>A\setminus C_A</m> terbuka dalam
+        <m>A</m>, tuliskan <m>A\setminus C_A=A\cap O_X</m> untuk suatu
+        <m>O_X</m> terbuka dalam <m>X</m>, lalu ambil
+        <m>C_X=X\setminus O_X</m>.
+      </p>
+      <p>
+        <em>Arah balik.</em> Ambil komplemen relatif dari
+        <m>C_A=A\cap C_X</m> di dalam <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-22-answer">
+      <p>
+        Ekuivalensi benar. Himpunan tertutup relatif tepat merupakan irisan
+        subruang dengan suatu himpunan tertutup di ruang ambien.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-22-solution">
+      <p>
+        Andaikan <m>C_A</m> tertutup dalam <m>A</m>. Maka
+        <m>A\setminus C_A</m> terbuka dalam <m>A</m>. Ada himpunan terbuka
+        <m>O_X</m> dalam <m>X</m> sedemikian sehingga
+        <m>A\setminus C_A=A\cap O_X</m>. Tetapkan
+        <m>C_X=X\setminus O_X</m>; himpunan <m>C_X</m> tertutup dalam
+        <m>X</m>. Dengan mengambil komplemen relatif di dalam <m>A</m>,
+        diperoleh
+        <me>
+          C_A=A\setminus(A\cap O_X)=A\cap(X\setminus O_X)=A\cap C_X.
+        </me>
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>C_A=A\cap C_X</m> untuk suatu himpunan
+        tertutup <m>C_X</m> dalam <m>X</m>. Komplemen
+        <m>X\setminus C_X</m> terbuka dalam <m>X</m>, dan
+        <me>
+          A\setminus C_A=A\cap(X\setminus C_X).
+        </me>
+        Ruas kanan terbuka dalam subruang <m>A</m>. Jadi komplemen relatif
+        <m>C_A</m> terbuka dalam <m>A</m>, yang berarti <m>C_A</m> tertutup
+        dalam <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-23">
+    <title>Metrik jumlah pada ruang hasil kali</title>
+    <statement>
+      <p>
+        Untuk ruang metrik <m>(X,d_X)</m> dan <m>(Y,d_Y)</m>, definisikan
+        <m>d:(X\times Y)\times(X\times Y)\to\R</m> dengan
+        <me>
+          d((x_1,y_1),(x_2,y_2))=d_X(x_1,x_2)+d_Y(y_1,y_2).
+        </me>
+        Buktikan atau sangkal bahwa <m>d</m> merupakan metrik pada
+        <m>X\times Y</m>.
+        <em>Rubrik.</em> Periksa keempat aksioma metrik dan tuliskan langkah
+        pertidaksamaan segitiga secara eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-23-hint">
+      <p>
+        Ketaknegatifan dan simetri diwarisi dari kedua metrik koordinat.
+        Suatu jumlah dua bilangan tak negatif bernilai nol tepat ketika
+        keduanya nol. Untuk pertidaksamaan segitiga, terapkan aksioma
+        tersebut sekali pada <m>d_X</m> dan sekali pada <m>d_Y</m>, lalu
+        jumlahkan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-23-answer">
+      <p>
+        Klaim benar. Fungsi <m>d</m> adalah metrik pada <m>X\times Y</m>;
+        metrik ini sering disebut metrik hasil kali berbentuk jumlah.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-23-solution">
+      <p>
+        Tuliskan <m>p=(x_1,y_1)</m> dan <m>q=(x_2,y_2)</m>. Karena
+        <m>d_X</m> dan <m>d_Y</m> tak negatif, <m>d(p,q)\geq0</m>. Selain
+        itu, <m>d(p,q)=0</m> jika dan hanya jika kedua sukunya nol, yakni
+        jika dan hanya jika <m>x_1=x_2</m> dan <m>y_1=y_2</m>; kondisi ini
+        ekuivalen dengan <m>p=q</m>. Simetri kedua metrik koordinat memberi
+        <m>d(p,q)=d(q,p)</m>.
+      </p>
+      <p>
+        Untuk <m>r=(x_3,y_3)</m>, pertidaksamaan segitiga pada setiap
+        koordinat memberikan
+        <md>
+          <mrow>d(p,r)
+          \amp=d_X(x_1,x_3)+d_Y(y_1,y_3)</mrow>
+          <mrow>\amp\leq d_X(x_1,x_2)+d_X(x_2,x_3)
+          +d_Y(y_1,y_2)+d_Y(y_2,y_3)</mrow>
+          <mrow>\amp=d(p,q)+d(q,r).</mrow>
+        </md>
+        Jadi semua aksioma metrik terpenuhi dan <m>d</m> merupakan metrik
+        pada <m>X\times Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-24">
+    <title>Metrik Euklides pada hasil kali berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>(X_i,d_i)</m> ruang metrik untuk
+        <m>1\leq i\leq n</m>, tetapkan <m>X=\prod_{i=1}^nX_i</m>, dan
+        definisikan <m>d:X\times X\to\R</m> dengan
+        <me>
+          d(x,y)=\sqrt{\sum_{i=1}^n d_i(x_i,y_i)^2}.
+        </me>
+        Buktikan bahwa <m>d</m> merupakan metrik pada <m>X</m>.
+        <em>Rubrik.</em> Selain tiga aksioma langsung, bukti harus
+        membenarkan pertidaksamaan segitiga menggunakan pertidaksamaan
+        Cauchy-Schwarz atau bentuk ekuivalen pertidaksamaan Minkowski.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-24-hint">
+      <p>
+        Untuk <m>x,y,z\in X</m>, tetapkan
+        <m>a_i=d_i(x_i,y_i)</m>, <m>b_i=d_i(y_i,z_i)</m>, dan
+        <m>c_i=d_i(x_i,z_i)</m>. Maka <m>c_i\leq a_i+b_i</m>. Kembangkan
+        <m>\sum_i(a_i+b_i)^2</m> dan gunakan Cauchy-Schwarz pada
+        <m>\sum_i a_ib_i</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-24-answer">
+      <p>
+        Fungsi <m>d</m> adalah metrik pada hasil kali berhingga
+        <m>X=\prod_{i=1}^nX_i</m>. Pertidaksamaan segitiganya adalah
+        pertidaksamaan Minkowski bagi vektor jarak koordinat.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-24-solution">
+      <p>
+        Ketaknegatifan jelas dari definisi. Nilai <m>d(x,y)</m> sama dengan
+        nol jika dan hanya jika <m>d_i(x_i,y_i)=0</m> untuk setiap
+        <m>i</m>, yang terjadi jika dan hanya jika <m>x_i=y_i</m> untuk
+        setiap <m>i</m>, yakni <m>x=y</m>. Simetri setiap <m>d_i</m>
+        langsung memberikan <m>d(x,y)=d(y,x)</m>.
+      </p>
+      <p>
+        Sekarang ambil <m>x,y,z\in X</m> dan gunakan notasi
+        <m>a_i,b_i,c_i</m> dari petunjuk. Pertidaksamaan segitiga pada
+        <m>X_i</m> memberi <m>c_i\leq a_i+b_i</m>. Karena semua bilangan
+        ini tak negatif dan, berdasarkan Cauchy-Schwarz,
+        <me>
+          \sum_{i=1}^n a_ib_i
+          \leq\sqrt{\sum_{i=1}^n a_i^2}\sqrt{\sum_{i=1}^n b_i^2},
+        </me>
+        kita memperoleh
+        <md>
+          <mrow>d(x,z)^2=\sum_{i=1}^n c_i^2
+          \amp\leq\sum_{i=1}^n(a_i+b_i)^2</mrow>
+          <mrow>\amp=\sum_{i=1}^n a_i^2
+          +2\sum_{i=1}^n a_ib_i+\sum_{i=1}^n b_i^2</mrow>
+          <mrow>\amp\leq
+          \left(\sqrt{\sum_{i=1}^n a_i^2}
+          +\sqrt{\sum_{i=1}^n b_i^2}\right)^2</mrow>
+          <mrow>\amp=(d(x,y)+d(y,z))^2.</mrow>
+        </md>
+        Kedua ruas terakhir tak negatif, sehingga pengambilan akar kuadrat
+        memberi <m>d(x,z)\leq d(x,y)+d(y,z)</m>. Jadi <m>d</m> memenuhi
+        seluruh aksioma metrik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-25">
+    <title>Teorema konvergensi monoton</title>
+    <statement>
+      <p>
+        Misalkan <m>(x_n)</m> suatu barisan bilangan real yang tak menurun
+        dan terbatas di atas. Buktikan bahwa <m>(x_n)</m> konvergen.
+        <em>Rubrik.</em> Identifikasi kandidat limit melalui supremum dan
+        verifikasi langsung definisi epsilon bagi konvergensi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-25-hint">
+      <p>
+        Tetapkan <m>L=\sup\{x_n\mid n\in\Z^+\}</m>. Untuk
+        <m>\epsilon\gt0</m>, bilangan <m>L-\epsilon</m> bukan batas atas
+        himpunan suku barisan. Setelah menemukan <m>x_N\gt L-\epsilon</m>,
+        gunakan sifat tak menurun.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-25-answer">
+      <p>
+        Barisan tersebut konvergen ke supremum himpunan suku-sukunya:
+        <m>\lim x_n=\sup\{x_n\mid n\in\Z^+\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-25-solution">
+      <p>
+        Himpunan <m>S=\{x_n\mid n\in\Z^+\}</m> tidak kosong dan terbatas
+        di atas. Berdasarkan kelengkapan bilangan real, terdapat
+        <m>L=\sup S</m>. Ambil <m>\epsilon\gt0</m>. Karena
+        <m>L-\epsilon\lt L</m>, bilangan <m>L-\epsilon</m> bukan batas atas
+        <m>S</m>. Jadi terdapat <m>N\in\Z^+</m> dengan
+        <m>x_N\gt L-\epsilon</m>.
+      </p>
+      <p>
+        Jika <m>n\geq N</m>, sifat tak menurun memberi
+        <m>x_N\leq x_n</m>, sedangkan sifat <m>L</m> sebagai batas atas
+        memberi <m>x_n\leq L</m>. Maka
+        <me>
+          L-\epsilon\lt x_N\leq x_n\leq L,
+        </me>
+        sehingga <m>|x_n-L|=L-x_n\lt\epsilon</m>. Ini berlaku bagi setiap
+        <m>n\geq N</m>, jadi definisi konvergensi memberikan
+        <m>x_n\to L</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-26">
+    <title>Contoh dan noncontoh dalam ruang Hilbert</title>
+    <statement>
+      <p>
+        Untuk ruang Hilbert
+        <m>H=\{(x_n)\mid x_n\in\R,\ \sum_{n=1}^{\infty}x_n^2\lt\infty\}</m>,
+        berikan dua unsur berbeda dari <m>H</m> dan satu barisan tak hingga
+        yang tidak berada dalam <m>H</m>. Jelaskan setiap pilihan.
+        <em>Rubrik.</em> Hitung atau tentukan perilaku deret kuadrat untuk
+        ketiga barisan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-26-hint">
+      <p>
+        Mulailah dengan barisan nol dan barisan yang hanya mempunyai satu
+        suku tak nol. Untuk noncontoh, pilih barisan yang semua sukunya sama
+        dengan <m>1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-26-answer">
+      <p>
+        Contoh yang memenuhi adalah <m>u=(0,0,0,\ldots)</m> dan
+        <m>v=(1,0,0,\ldots)</m>. Noncontohnya adalah
+        <m>w=(1,1,1,\ldots)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-26-solution">
+      <p>
+        Untuk <m>u_n=0</m> bagi semua <m>n</m>, berlaku
+        <m>\sum_{n=1}^{\infty}u_n^2=0</m>; jadi <m>u\in H</m>. Untuk
+        <m>v_1=1</m> dan <m>v_n=0</m> bila <m>n\geq2</m>, berlaku
+        <m>\sum_{n=1}^{\infty}v_n^2=1</m>; jadi <m>v\in H</m>. Kedua
+        barisan berbeda karena suku pertamanya berbeda.
+      </p>
+      <p>
+        Untuk <m>w_n=1</m> bagi semua <m>n</m>, jumlah parsial deret
+        kuadratnya adalah
+        <m>\sum_{n=1}^{N}w_n^2=N</m>, yang tidak terbatas ketika
+        <m>N\to\infty</m>. Karena itu
+        <m>\sum_{n=1}^{\infty}w_n^2</m> divergen dan
+        <m>w\notin H</m>. Jadi <m>w</m> merupakan barisan tak hingga yang
+        bukan unsur <m>H</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,0 +1,494 @@
+<section xml:id="o003-c90-ch11-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan lanjutan</title>
+
+  <p>
+    Sembilan panduan berikut mendampingi tiga tugas terakhir tentang ruang
+    Hilbert dan enam butir benar-salah penutup pada latihan Bab 11, yakni
+    panduan bernomor 27–35 dalam urutan seluruh bab. Kerjakan dahulu latihan
+    sumber. Buka petunjuk, jawaban, dan solusi secara bertahap hanya setelah
+    Anda mencoba menyusun argumen sendiri. Pernyataan di bawah
+    memparafrasakan sasaran latihan, sedangkan solusinya merupakan uraian asli
+    yang ditulis untuk edisi ini dan tersedia sebagai komponen terpisah di
+    bawah Creative Commons Attribution 4.0 International (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch11-guide-27">
+    <title>Ketertutupan ruang barisan terhadap pengurangan</title>
+    <statement>
+      <p>
+        Misalkan <m>H</m> terdiri atas semua barisan real
+        <m>x=(x_n)</m> yang memenuhi
+        <m>\sum_{k=1}^{\infty}x_k^2\lt\infty</m>. Untuk
+        <m>x,y\in H</m>, buktikan bahwa <m>x-y\in H</m>. Rubrik: berikan
+        pertidaksamaan suku demi suku, terapkan pada jumlah parsial, lalu
+        jelaskan mengapa deret kuadrat selisih benar-benar konvergen.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-27-hint">
+      <p>
+        Tahap 1: gunakan
+        <m>(u-v)^2\leq 2u^2+2v^2</m>. Tahap 2: jumlahkan hingga indeks
+        <m>N</m>; jumlah parsial di ruas kiri tak menurun dan mempunyai batas
+        atas yang tidak bergantung pada <m>N</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-27-answer">
+      <p>
+        Berlaku <m>x-y\in H</m>, sebab
+        <m>\sum (x_k-y_k)^2\leq 2\sum x_k^2+2\sum y_k^2\lt\infty</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-27-solution">
+      <p>
+        Untuk bilangan real <m>u</m> dan <m>v</m>, pertidaksamaan
+        <m>(u+v)^2\geq0</m> memberi <m>-2uv\leq u^2+v^2</m>. Karena itu
+        <me>
+          (u-v)^2=u^2-2uv+v^2\leq 2u^2+2v^2.
+        </me>
+        Terapkan pertidaksamaan ini dengan <m>u=x_k</m> dan <m>v=y_k</m>.
+        Untuk setiap <m>N\in\Z^+</m>, jumlah parsial
+        <m>S_N=\sum_{k=1}^{N}(x_k-y_k)^2</m> memenuhi
+        <me>
+          0\leq S_N
+          \leq 2\sum_{k=1}^{N}x_k^2+2\sum_{k=1}^{N}y_k^2
+          \leq 2\sum_{k=1}^{\infty}x_k^2
+          +2\sum_{k=1}^{\infty}y_k^2.
+        </me>
+      </p>
+      <p>
+        Barisan <m>(S_N)</m> tak menurun karena setiap suku yang ditambahkan
+        taknegatif. Ruas paling kanan merupakan bilangan real berhingga karena
+        <m>x,y\in H</m>. Jadi <m>(S_N)</m> tak menurun dan terbatas di atas,
+        sehingga konvergen. Dengan demikian
+        <m>\sum_{k=1}^{\infty}(x_k-y_k)^2</m> berhingga. Menurut definisi
+        <m>H</m>, hal ini tepat berarti <m>x-y\in H</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-28">
+    <title>Metrik yang diinduksi oleh norma jumlah kuadrat</title>
+    <statement>
+      <p>
+        Pada ruang <m>H</m> dari panduan sebelumnya, definisikan
+        <m>\lVert x\rVert=(\sum_{k=1}^{\infty}x_k^2)^{1/2}</m> dan
+        <m>d(x,y)=\lVert x-y\rVert</m>. Buktikan bahwa <m>d</m> merupakan
+        metrik pada <m>H</m>. Rubrik: periksa keterdefinisian, definit positif,
+        simetri, dan pertidaksamaan segitiga; untuk syarat terakhir, buktikan
+        pertidaksamaan pada jumlah parsial dengan Cauchy–Schwarz lalu ambil limit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-28-hint">
+      <p>
+        Tahap 1: panduan 27 menjamin <m>x-y\in H</m>. Tahap 2: untuk
+        <m>a_k=x_k-y_k</m> dan <m>b_k=y_k-z_k</m>, terapkan
+        Cauchy–Schwarz berhingga pada
+        <m>\sum_{k=1}^{N}(a_k+b_k)^2</m>, kemudian biarkan
+        <m>N\to\infty</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-28-answer">
+      <p>
+        Fungsi <m>d</m> merupakan metrik. Sifat selain pertidaksamaan segitiga
+        mengikuti langsung dari jumlah kuadrat, sedangkan pertidaksamaan
+        segitiga adalah pertidaksamaan Minkowski yang diperoleh dari
+        Cauchy–Schwarz pada jumlah parsial.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-28-solution">
+      <p>
+        Panduan 27 menunjukkan bahwa <m>x-y\in H</m> untuk setiap
+        <m>x,y\in H</m>, jadi <m>d(x,y)</m> terdefinisi dan berhingga. Jelas
+        <m>d(x,y)\geq0</m>. Jika <m>d(x,y)=0</m>, maka
+        <m>\sum_{k=1}^{\infty}(x_k-y_k)^2=0</m>. Semua sukunya taknegatif,
+        sehingga setiap suku harus nol dan <m>x_k=y_k</m> untuk semua
+        <m>k</m>; jadi <m>x=y</m>. Implikasi sebaliknya langsung berlaku.
+        Selain itu,
+        <me>
+          d(x,y)=\left(\sum_{k=1}^{\infty}(x_k-y_k)^2\right)^{1/2}
+          =\left(\sum_{k=1}^{\infty}(y_k-x_k)^2\right)^{1/2}=d(y,x),
+        </me>
+        sehingga <m>d</m> simetris.
+      </p>
+      <p>
+        Tinggal membuktikan pertidaksamaan segitiga. Ambil
+        <m>x,y,z\in H</m>, lalu tetapkan
+        <m>a_k=x_k-y_k</m> dan <m>b_k=y_k-z_k</m>. Untuk setiap
+        <m>N</m>, definisikan
+        <me>
+          A_N=\sqrt{\sum_{k=1}^{N}a_k^2},\qquad
+          B_N=\sqrt{\sum_{k=1}^{N}b_k^2}.
+        </me>
+        Cauchy–Schwarz berhingga memberi
+        <m>\sum_{k=1}^{N}a_kb_k\leq A_NB_N</m>. Oleh sebab itu
+        <md>
+          <mrow>
+            \sum_{k=1}^{N}(x_k-z_k)^2
+            \amp=\sum_{k=1}^{N}(a_k+b_k)^2
+          </mrow>
+          <mrow>
+            \amp=A_N^2+2\sum_{k=1}^{N}a_kb_k+B_N^2
+          </mrow>
+          <mrow>
+            \amp\leq A_N^2+2A_NB_N+B_N^2=(A_N+B_N)^2.
+          </mrow>
+        </md>
+        Setelah mengambil akar kuadrat taknegatif, diperoleh
+        <me>
+          \sqrt{\sum_{k=1}^{N}(x_k-z_k)^2}\leq A_N+B_N.
+        </me>
+      </p>
+      <p>
+        Ketika <m>N\to\infty</m>, ketiga jumlah parsial kuadrat tersebut
+        konvergen ke deret yang mendefinisikan normanya. Kekontinuan fungsi
+        akar kuadrat memberikan
+        <me>
+          d(x,z)=\lVert x-z\rVert
+          \leq\lVert x-y\rVert+\lVert y-z\rVert
+          =d(x,y)+d(y,z).
+        </me>
+        Jadi keempat aksioma metrik terpenuhi dan <m>d</m> merupakan metrik
+        pada <m>H</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-29">
+    <title>Ruang E pangkat m sebagai salinan isometrik ruang Euklides</title>
+    <statement>
+      <p>
+        Untuk <m>m\in\Z^+</m>, definisikan
+        <m>E^m=\{(x_n)\in H\mid x_k=0\text{ untuk }k\gt m\}</m> dan
+        <m>f:E^m\to\R^m</m> dengan
+        <m>f((x_n))=(x_1,\ldots,x_m)</m>. Buktikan bahwa <m>f</m> bijektif
+        dan, untuk setiap <m>x,y\in E^m</m>, berlaku
+        <m>d(x,y)=d_E(f(x),f(y))</m>. Rubrik: buktikan injektivitas,
+        surjektivitas melalui perluasan berekor nol, dan kesamaan jarak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-29-hint">
+      <p>
+        Tahap 1: unsur <m>E^m</m> sepenuhnya ditentukan oleh <m>m</m>
+        koordinat pertamanya. Tahap 2: perluas setiap vektor di <m>\R^m</m>
+        dengan nol untuk semua indeks yang lebih besar dari <m>m</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-29-answer">
+      <p>
+        Fungsi <m>f</m> bijektif dan mempertahankan jarak. Inversnya mengirim
+        <m>(u_1,\ldots,u_m)</m> ke barisan
+        <m>(u_1,\ldots,u_m,0,0,\ldots)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-29-solution">
+      <p>
+        Jika <m>f(x)=f(y)</m> untuk <m>x,y\in E^m</m>, maka
+        <m>x_k=y_k</m> untuk <m>1\leq k\leq m</m>. Untuk <m>k\gt m</m>,
+        definisi <m>E^m</m> memberi <m>x_k=y_k=0</m>. Jadi <m>x=y</m> dan
+        <m>f</m> injektif.
+      </p>
+      <p>
+        Sebaliknya, ambil sembarang <m>u=(u_1,\ldots,u_m)\in\R^m</m> dan
+        bentuk barisan
+        <m>\widetilde u=(u_1,\ldots,u_m,0,0,\ldots)</m>. Jumlah kuadrat
+        koordinatnya hanya mempunyai paling banyak <m>m</m> suku taknol, jadi
+        berhingga; dengan demikian <m>\widetilde u\in E^m</m>. Karena
+        <m>f(\widetilde u)=u</m>, fungsi <m>f</m> surjektif. Maka <m>f</m>
+        bijektif.
+      </p>
+      <p>
+        Akhirnya, untuk <m>x,y\in E^m</m>, semua koordinat keduanya setelah
+        indeks <m>m</m> bernilai nol. Oleh karena itu
+        <md>
+          <mrow>
+            d(x,y)^2
+            \amp=\sum_{k=1}^{\infty}(x_k-y_k)^2
+          </mrow>
+          <mrow>
+            \amp=\sum_{k=1}^{m}(x_k-y_k)^2
+            =d_E(f(x),f(y))^2.
+          </mrow>
+        </md>
+        Kedua jarak taknegatif, sehingga pengambilan akar memberi
+        <m>d(x,y)=d_E(f(x),f(y))</m>. Jadi <m>f</m> merupakan bijeksi yang
+        mempertahankan jarak, dan <m>E^m</m> adalah salinan isometrik
+        <m>\R^m</m> di dalam <m>H</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-30">
+    <title>Pembatasan metrik diskret tetap diskret</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>d</m> adalah metrik diskret pada
+        <m>X</m>, maka untuk setiap subruang <m>A\subseteq X</m>, metrik
+        pembatasan <m>d_A</m> juga merupakan metrik diskret pada <m>A</m>.
+        Berikan bukti atau contoh tandingan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-30-hint">
+      <p>
+        Tulis rumus nilai metrik diskret untuk dua titik <m>a,b\in A</m>.
+        Pembatasan mengubah domain, bukan nilai pada pasangan tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-30-answer">
+      <p>
+        Benar. Pada <m>A</m>, jarak tetap nol untuk dua titik yang sama dan
+        satu untuk dua titik yang berbeda.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-30-solution">
+      <p>
+        Metrik diskret pada <m>X</m> memenuhi
+        <me>
+          d(x,y)=
+          \begin{cases}
+            0, &amp; x=y,\\
+            1, &amp; x\neq y.
+          \end{cases}
+        </me>
+        Untuk <m>a,b\in A</m>, metrik subruang didefinisikan oleh
+        <m>d_A(a,b)=d(a,b)</m>. Karena itu <m>d_A(a,b)=0</m> jika
+        <m>a=b</m> dan <m>d_A(a,b)=1</m> jika <m>a\neq b</m>. Ini tepat
+        rumus metrik diskret pada <m>A</m>, sehingga pernyataannya benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-31">
+    <title>Subruang diskret dari metrik yang tidak diskret</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>d</m> bukan metrik diskret pada
+        <m>X</m>, maka pembatasannya pada setiap subhimpunan
+        <m>A\subseteq X</m> juga tidak mungkin menjadi metrik diskret.
+        Berikan contoh tandingan konkret jika klaim ini salah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-31-hint">
+      <p>
+        Ambil metrik Euklides pada <m>\R</m>, lalu pilih subhimpunan dua titik
+        yang jarak antartitiknya tepat satu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-31-answer">
+      <p>
+        Salah. Metrik Euklides pada <m>\R</m> tidak diskret, tetapi
+        pembatasannya pada <m>A=\{0,1\}</m> adalah metrik diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-31-solution">
+      <p>
+        Ambil <m>X=\R</m> dengan <m>d_E(x,y)=|x-y|</m>. Metrik ini bukan
+        metrik diskret; misalnya, <m>d_E(0,2)=2</m>, sedangkan metrik diskret
+        akan memberi jarak satu kepada setiap pasangan titik berbeda.
+        Sekarang ambil <m>A=\{0,1\}</m>. Pada <m>A</m>, satu-satunya pasangan
+        titik berbeda adalah <m>0</m> dan <m>1</m>, dan
+        <m>d_E(0,1)=d_E(1,0)=1</m>. Jarak titik ke dirinya sendiri tetap nol.
+        Jadi <m>d_E|_{A\times A}</m> tepat merupakan metrik diskret pada
+        <m>A</m>. Contoh ini menyangkal klaim universal tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-32">
+    <title>Konvergensi subruang mengimplikasikan konvergensi ambien</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>A</m> subruang dari
+        <m>(X,d)</m>, barisan <m>(a_n)</m> di <m>A</m> konvergen ke
+        <m>a\in A</m> dalam metrik subruang, maka barisan yang sama konvergen
+        ke <m>a</m> dalam <m>X</m>. Buktikan keputusan Anda dari definisi
+        epsilon.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-32-hint">
+      <p>
+        Bandingkan <m>d_A(a_n,a)</m> dengan <m>d(a_n,a)</m>. Nilainya sama
+        untuk semua pasangan titik yang berada di <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-32-answer">
+      <p>
+        Benar. Metrik subruang dan metrik ambien memberikan jarak yang sama
+        pada <m>a_n</m> dan <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-32-solution">
+      <p>
+        Ambil sembarang <m>\epsilon\gt0</m>. Karena <m>a_n\to a</m> di
+        <m>A</m>, terdapat <m>N\in\Z^+</m> sehingga untuk setiap
+        <m>n\geq N</m>,
+        <m>d_A(a_n,a)\lt\epsilon</m>. Namun metrik subruang adalah
+        pembatasan metrik ambien, sehingga
+        <m>d_A(a_n,a)=d(a_n,a)</m>. Akibatnya
+        <m>d(a_n,a)\lt\epsilon</m> untuk setiap <m>n\geq N</m>. Ini tepat
+        definisi <m>a_n\to a</m> dalam <m>X</m>. Jadi pernyataannya benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-33">
+    <title>Limit ambien yang berada di luar subruang</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>(a_n)</m> adalah barisan di
+        subruang <m>A\subseteq X</m> dan konvergen dalam <m>X</m> ke suatu
+        <m>a\in X</m>, maka barisan itu selalu konvergen ke <m>a</m> dalam
+        <m>A</m>. Jika salah, tunjukkan secara eksplisit hipotesis yang hilang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-33-hint">
+      <p>
+        Pilih subruang yang tidak tertutup, misalnya <m>A=(0,1)</m> di
+        <m>\R</m>, dan bangun barisan dalam <m>A</m> yang menuju salah satu
+        titik ujungnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-33-answer">
+      <p>
+        Salah. Dalam <m>A=(0,1)\subset\R</m>, barisan
+        <m>a_n=1/(n+1)</m> konvergen di <m>\R</m> ke <m>0</m>, tetapi
+        <m>0\notin A</m> sehingga tidak dapat menjadi limit di ruang
+        <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-33-solution">
+      <p>
+        Ambil <m>X=(\R,d_E)</m>, <m>A=(0,1)</m>, dan
+        <m>a_n=1/(n+1)</m>. Untuk setiap <m>n\in\Z^+</m>, berlaku
+        <m>0\lt a_n\lt1</m>, jadi seluruh suku berada di <m>A</m>. Untuk
+        <m>\epsilon\gt0</m>, pilih <m>N\in\Z^+</m> dengan
+        <m>N+1\gt1/\epsilon</m>. Jika <m>n\geq N</m>, maka
+        <me>
+          d_E(a_n,0)=\frac{1}{n+1}\leq\frac{1}{N+1}\lt\epsilon.
+        </me>
+        Jadi <m>a_n\to0</m> dalam <m>X</m>.
+      </p>
+      <p>
+        Akan tetapi, konvergensi dalam ruang metrik <m>A</m> harus mempunyai
+        titik limit yang merupakan unsur <m>A</m>. Karena <m>0\notin A</m>,
+        ungkapan “konvergen ke <m>0</m> dalam <m>A</m>” tidak memenuhi
+        definisi limit di ruang tersebut. Hipotesis yang hilang adalah
+        <m>a\in A</m>. Jika hipotesis itu ditambahkan, metrik pembatasan
+        memberikan kesetaraan antara konvergensi di <m>A</m> dan konvergensi
+        ambien ke titik tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-34">
+    <title>Maksimum dua jarak sebagai metrik hasil kali</title>
+    <statement>
+      <p>
+        Untuk ruang metrik <m>(X,d_X)</m> dan <m>(Y,d_Y)</m>, tentukan benar
+        atau salah bahwa fungsi
+        <me>
+          D((x_1,y_1),(x_2,y_2))
+          =\max\{d_X(x_1,x_2),d_Y(y_1,y_2)\}
+        </me>
+        merupakan metrik pada <m>X\times Y</m>. Rubrik: periksa seluruh
+        aksioma dan buktikan langkah maksimum yang diperlukan dalam
+        pertidaksamaan segitiga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-34-hint">
+      <p>
+        Untuk tiga titik hasil kali, tetapkan
+        <md>
+          <mrow>M_1 \amp= \max\{d_X(x_1,x_2),d_Y(y_1,y_2)\},</mrow>
+          <mrow>M_2 \amp= \max\{d_X(x_2,x_3),d_Y(y_2,y_3)\}.</mrow>
+        </md>
+        Masing-masing jumlah jarak koordinat paling besar <m>M_1+M_2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-34-answer">
+      <p>
+        Benar. Maksimum dua metrik koordinat memenuhi definit positif,
+        simetri, dan pertidaksamaan segitiga pada <m>X\times Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-34-solution">
+      <p>
+        Fungsi <m>D</m> taknegatif karena kedua jarak koordinat taknegatif.
+        Selain itu, <m>D((x_1,y_1),(x_2,y_2))=0</m> jika dan hanya jika kedua
+        jarak koordinat nol, yaitu jika dan hanya jika
+        <m>x_1=x_2</m> dan <m>y_1=y_2</m>. Ini ekuivalen dengan kesamaan dua
+        pasangan terurut. Simetri <m>D</m> mengikuti simetri <m>d_X</m> dan
+        <m>d_Y</m>.
+      </p>
+      <p>
+        Untuk pertidaksamaan segitiga, ambil
+        <m>p_i=(x_i,y_i)\in X\times Y</m> bagi <m>i=1,2,3</m>, lalu tetapkan
+        <me>
+          M_1=D(p_1,p_2),\qquad M_2=D(p_2,p_3).
+        </me>
+        Dari definisi maksimum dan pertidaksamaan segitiga koordinat,
+        <md>
+          <mrow>
+            d_X(x_1,x_3)
+            \amp\leq d_X(x_1,x_2)+d_X(x_2,x_3)
+            \leq M_1+M_2,
+          </mrow>
+          <mrow>
+            d_Y(y_1,y_3)
+            \amp\leq d_Y(y_1,y_2)+d_Y(y_2,y_3)
+            \leq M_1+M_2.
+          </mrow>
+        </md>
+        Karena kedua bilangan di dalam maksimum yang mendefinisikan
+        <m>D(p_1,p_3)</m> paling besar <m>M_1+M_2</m>, diperoleh
+        <me>
+          D(p_1,p_3)\leq M_1+M_2=D(p_1,p_2)+D(p_2,p_3).
+        </me>
+        Jadi <m>D</m> memenuhi semua aksioma metrik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-35">
+    <title>Hasil kali dua jarak gagal memisahkan titik</title>
+    <statement>
+      <p>
+        Untuk ruang metrik <m>(X,d_X)</m> dan <m>(Y,d_Y)</m>, tentukan benar
+        atau salah bahwa
+        <me>
+          D((x_1,y_1),(x_2,y_2))
+          =d_X(x_1,x_2)d_Y(y_1,y_2)
+        </me>
+        selalu merupakan metrik pada <m>X\times Y</m>. Jika salah, tunjukkan
+        aksioma yang gagal dengan dua titik konkret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-35-hint">
+      <p>
+        Pilih dua titik hasil kali yang mempunyai koordinat pertama sama,
+        tetapi koordinat kedua berbeda. Apa yang terjadi pada faktor jarak
+        pertama?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-35-answer">
+      <p>
+        Salah. Pada <m>\R\times\R</m>, titik <m>(0,0)</m> dan <m>(0,1)</m>
+        berbeda, tetapi rumus tersebut memberi jarak nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-35-solution">
+      <p>
+        Ambil <m>X=Y=\R</m> dengan metrik Euklides. Tetapkan
+        <m>p=(0,0)</m> dan <m>q=(0,1)</m>. Kedua titik berbeda karena
+        koordinat keduanya berbeda. Namun
+        <me>
+          D(p,q)=d_E(0,0)d_E(0,1)=0\cdot1=0.
+        </me>
+        Jadi <m>D(p,q)=0</m> tidak memaksa <m>p=q</m>. Aksioma definit
+        positif gagal, sehingga rumus hasil kali ini bukan metrik pada
+        <m>\R\times\R</m>. Satu contoh tersebut cukup menyangkal pernyataan
+        universal; kegagalan ini pula yang memotivasi penggunaan jumlah,
+        maksimum, atau akar jumlah kuadrat untuk metrik hasil kali.
+      </p>
+    </solution>
+  </exercise>
+</section>

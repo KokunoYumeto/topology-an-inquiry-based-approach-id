@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Ambil <span class="process-math">\(x\in\Int(A)\cap\Int(B)\text{.}\)</span> Ada <span class="process-math">\(r_A,r_B\gt0\)</span> sedemikian sehingga <span class="process-math">\(B(x,r_A)\subseteq A\)</span> dan <span class="process-math">\(B(x,r_B)\subseteq B\text{.}\)</span> Tetapkan <span class="process-math">\(r=\min\{r_A,r_B\}\gt0\text{.}\)</span> Jika <span class="process-math">\(y\in B(x,r)\text{,}\)</span> maka <span class="process-math">\(d(x,y)\lt r\leq r_A\)</span> dan <span class="process-math">\(d(x,y)\lt r\leq r_B\text{.}\)</span> Jadi <span class="process-math">\(y\in A\cap B\text{.}\)</span> Maka <span class="process-math">\(B(x,r)\subseteq A\cap B\text{,}\)</span> sehingga <span class="process-math">\(x\in\Int(A\cap B)\text{.}\)</span> Inklusi itu benar; bersama perintah sebelumnya, bahkan diperoleh <span class="process-math">\(\Int(A\cap B)=\Int(A)\cap\Int(B)\text{.}\)</span>
+<div class="para logical">
+<div class="para">Ambil <span class="process-math">\(p=(x,y)\in A\)</span> dan tetapkan <span class="process-math">\(r=\min\{x-1,3-x,y,1-y\}\gt0\text{.}\)</span> Jika <span class="process-math">\(q=(u,v)\in B_{d_T}(p,r)\text{,}\)</span> maka</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|u-x|+|v-y|=d_T(p,q)\lt r.
+\end{equation*}
 </div>
-<span class="incontext"><a href="o003-c90-ch08-exercise-guides-b.html#p-2755" class="internal">in-context</a></span>
+<div class="para">Kedua suku tak negatif, sehingga masing-masing kurang daripada <span class="process-math">\(r\text{.}\)</span> Seperti pada metrik Euklides, batas <span class="process-math">\(|u-x|\lt r\)</span> memberi <span class="process-math">\(1\lt u\lt3\text{,}\)</span> sedangkan <span class="process-math">\(|v-y|\lt r\)</span> memberi <span class="process-math">\(0\lt v\lt1\text{.}\)</span> Jadi <span class="process-math">\(q\in A\text{.}\)</span> Dengan demikian <span class="process-math">\(B_{d_T}(p,r)\subseteq A\)</span> dan <span class="process-math">\(A\)</span> terbuka dalam metrik taksi.</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch08-exercise-guides-a.html#p-2755" class="internal">in-context</a></span>
 </body>
 </html>

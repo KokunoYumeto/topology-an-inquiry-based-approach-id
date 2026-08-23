@@ -1,15 +1,15 @@
 <section xml:id="sec_prod_metric">
-  <title>Products of Metric Spaces</title>
+  <title>Hasil Kali Ruang Metrik</title>
   <p>
-    If we have two metric spaces <m>(X, d_1)</m> and <m>(X_2 ,d_2)</m>, we might wonder if we can make the set <m>X_1 \times X_2</m> into a metric space. A natural approach might be to define a function <m>d : (X_1 \times X_2) \times (X_1 \times X_2) \to \R</m> by 
+    Jika kita memiliki dua ruang metrik <m>(X_1, d_1)</m> dan <m>(X_2 ,d_2)</m>, kita mungkin bertanya apakah himpunan <m>X_1 \times X_2</m> dapat dijadikan ruang metrik. Pendekatan yang wajar adalah mendefinisikan fungsi <m>d : (X_1 \times X_2) \times (X_1 \times X_2) \to \R</m> dengan 
 <me>d((x,y),(u,v)) = d_1(x,u)d_2(y,v)</me>
-for <m>(x,y)</m> and <m>(u,v)</m> in <m>X_1 \times X_2</m>. However, this <m>d</m> does not define a metric. For example, if <m>x \in X_1</m> and <m>y \neq v</m> in <m>X_2</m>, then <m>d((x,y),(x,v)) = 0</m> even though <m>(x,y) \neq (x,v)</m>. To make a metric, we can take a clue from the Euclidean metric on <m>\R \times \R</m>. On <m>\R</m>, the metric has the form <m>d_1(x,y) = |x-y|</m>, while on <m>\R^2</m> the metric  is 
+untuk <m>(x,y)</m> dan <m>(u,v)</m> dalam <m>X_1 \times X_2</m>. Namun, <m>d</m> ini tidak mendefinisikan suatu metrik. Sebagai contoh, jika <m>x \in X_1</m> dan <m>y \neq v</m> dalam <m>X_2</m>, maka <m>d((x,y),(x,v)) = 0</m> meskipun <m>(x,y) \neq (x,v)</m>. Untuk membentuk suatu metrik, kita dapat mengambil petunjuk dari metrik Euklides pada <m>\R \times \R</m>. Pada <m>\R</m>, metrik tersebut berbentuk <m>d_1(x,y) = |x-y|</m>, sedangkan pada <m>\R^2</m> metriknya adalah 
 <md><mrow>d_E((x_1,x_2), (y_1,y_2)) \amp = \sqrt{ (x_1-y_1)^2 + (x_2-y_2)^2}</mrow>
 <mrow> \amp = \sqrt{d_1(x_1,y_1)^2 + d_1(x_2,y_2)^2}</mrow></md>.
 
   </p>
   <p>
-    So on <m>(X, d_1)</m> and <m>(X_2 ,d_2)</m> we could consider defining <m>d : (X_1 \times X_2) \times (X_1 \times X_2) \to \R</m> by
+    Jadi, pada <m>(X_1, d_1)</m> dan <m>(X_2 ,d_2)</m> kita dapat mempertimbangkan untuk mendefinisikan <m>d : (X_1 \times X_2) \times (X_1 \times X_2) \to \R</m> dengan
     
     <men xml:id="eq_product_metric">
       d((x_1,x_2), (y_1,y_2)) = \sqrt{ d_1(x_1,y_1)^2 + d_2(x_2,y_2)^2}
@@ -21,14 +21,14 @@ for <m>(x,y)</m> and <m>(u,v)</m> in <m>X_1 \times X_2</m>. However, this <m>d</
 <activity xml:id="act_metric_space_products">
   <introduction>
     <p>
-      In this activity we verify some of the properties that make <m>d</m> as defined in <xref ref="eq_product_metric"/> a metric. Let <m>x=(x_1,x_2)</m> and <m>y=(y_1,y_2)</m> be in <m>X_1 \times X_2</m>
+      Dalam aktivitas ini, kita memverifikasi beberapa sifat yang menjadikan <m>d</m>, sebagaimana didefinisikan dalam <xref ref="eq_product_metric"/>, suatu metrik. Misalkan <m>x=(x_1,x_2)</m> dan <m>y=(y_1,y_2)</m> berada dalam <m>X_1 \times X_2</m>
     </p>
   </introduction>
 
   <task>
     <statement>
       <p>
-        Explain why <m>d(x,y)</m> is greater than or equal to <m>0</m>.
+        Jelaskan mengapa <m>d(x,y)</m> lebih besar daripada atau sama dengan <m>0</m>.
       </p>
     </statement>
   </task>
@@ -36,7 +36,7 @@ for <m>(x,y)</m> and <m>(u,v)</m> in <m>X_1 \times X_2</m>. However, this <m>d</
   <task>
     <statement>
       <p>
-        Explain why <m>d(x,y) = d(y,x)</m>. 
+        Jelaskan mengapa <m>d(x,y) = d(y,x)</m>. 
       </p>
     </statement>
   </task>
@@ -44,7 +44,7 @@ for <m>(x,y)</m> and <m>(u,v)</m> in <m>X_1 \times X_2</m>. However, this <m>d</
   <task>
     <statement>
       <p>
-        Explain why <m>d(x,y) = 0</m> if and only if <m>x = y</m>.
+        Jelaskan mengapa <m>d(x,y) = 0</m> jika dan hanya jika <m>x = y</m>.
       </p>
     </statement>
   </task>
@@ -52,74 +52,76 @@ for <m>(x,y)</m> and <m>(u,v)</m> in <m>X_1 \times X_2</m>. However, this <m>d</
 </activity>
 
 <p>
-  <xref ref="act_metric_space_products"/> provides three of the four items that are necessary to prove that <m>d</m> as defined in <xref ref="eq_product_metric"/> is a metric. We verify the last property, the triangle inequality, now. 
+  <xref ref="act_metric_space_products"/> memberikan tiga dari empat sifat yang diperlukan untuk membuktikan bahwa <m>d</m>, sebagaimana didefinisikan dalam <xref ref="eq_product_metric"/>, merupakan suatu metrik. Sekarang kita memverifikasi sifat terakhir, yaitu pertidaksamaan segitiga. 
 </p>
 
 <p>
-  Let <m>x</m> and <m>y</m> be defined as in <xref ref="act_metric_space_products"/>, and let <m>z = (z_1, z_2)</m> be in <m>X_1 \times X_2</m>. Then
+  Misalkan <m>x</m> dan <m>y</m> didefinisikan seperti dalam <xref ref="act_metric_space_products"/>, dan misalkan <m>z = (z_1, z_2)</m> berada dalam <m>X_1 \times X_2</m>. Maka
   <md>
 <mrow> d(x,z)^2 \amp =  d_1(x_1,z_1)^2 + d_2(x_2,z_2)^2 </mrow>
 	<mrow> \amp \leq \left(d_1(x_1,y_1) + d_1(y_1,z_1)\right)^2 + \left(d_2(x_2,y_2) + d_2(y_2,z_2)\right)^2 </mrow>
 	<mrow> \amp = \left(d_1(x_1,y_1)^2 + d_2(x_2,y_2)^2\right) + 2\left(d_1(x_1,y_1)d_1(y_1,z_1) + d_2(x_2,y_2)d_2(y_2,z_2) \right) </mrow>
 	<mrow> \amp \qquad + \left(d_1(y_1,z_1)^2 + d_2(y_2,z_2)^2\right)</mrow>
 	<mrow> \amp = d(x,y)^2 + 2\left(d_1(x_1,y_1)d_1(y_1,z_1) + d_2(x_2,y_2)d_2(y_2,z_2)\right) + d(y,z)^2 </mrow>
-	<mrow> \amp \leq d(x,y)^2 + d(y,z)^2</mrow>
+	<mrow> \amp \leq d(x,y)^2 + 2d(x,y)d(y,z) + d(y,z)^2</mrow>
 </md>.
 
-Since all terms are non-negative we conclude that 
+Pertidaksamaan terakhir mengikuti dari pertidaksamaan Cauchy–Schwarz yang
+diterapkan pada pasangan jarak koordinat. Karena semua suku tak negatif, kita
+menyimpulkan bahwa 
 
 <md>
-<mrow>d(x,z) \leq \sqrt{d(x,y)^2 + d(y,z)^2} \amp \leq \sqrt{d(x,y)^2 + 2 d(x,y)d(y,z) + d(y,z)^2} </mrow>
+<mrow>d(x,z) \amp \leq \sqrt{d(x,y)^2 + 2 d(x,y)d(y,z) + d(y,z)^2} </mrow>
 	<mrow>\amp = \sqrt{\left(d(x,y)+d(y,z)\right)^2} </mrow>
 	<mrow>\amp = d(x,y) + d(y,z)</mrow>
   </md>.
 </p>
 
 <p>
-  We conclude that <m>d</m> as defined in <xref ref="eq_product_metric"/> is a metric on <m>X_1 \times X_2</m>, and so we can make the product of any two metric spaces into a metric space.  
+  Kita menyimpulkan bahwa <m>d</m>, sebagaimana didefinisikan dalam <xref ref="eq_product_metric"/>, merupakan suatu metrik pada <m>X_1 \times X_2</m>. Dengan demikian, kita dapat menjadikan hasil kali sebarang dua ruang metrik sebagai ruang metrik.  
 </p>
 <p>
-In the next activity we consider products of open balls and open sets in products of metric spaces.
+Dalam aktivitas berikutnya, kita meninjau hasil kali bola-bola terbuka dan himpunan-himpunan terbuka dalam hasil kali ruang metrik.
 </p>
 
   <activity xml:id="act_ms_product_open">
     <introduction>
     <p>
-      Let <m>X_1 = [1,2]</m> and
-      <m>X_2 = [3,4]</m> as subspaces of <m>\R^2</m> using the Euclidean metric.
+      Misalkan <m>X_1 = [1,2]</m> dan
+      <m>X_2 = [3,4]</m> sebagai subruang dari <m>\R</m> dengan menggunakan metrik Euklides.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Explain in detail what the product space <m>X_1 \times X_2</m> looks like.
+            Jelaskan secara terperinci seperti apa ruang hasil kali <m>X_1 \times X_2</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If <m>B_1</m> is an open ball in <m>X_1</m> and <m>B_2</m> is an open ball in <m>X_2</m>,
-            is <m>B_1 \times B_2</m> an open ball in <m>X_1 \times X_2</m>?
-            Explain.
+            Jika <m>B_1</m> merupakan bola terbuka dalam <m>X_1</m> dan <m>B_2</m> merupakan bola terbuka dalam <m>X_2</m>,
+            apakah <m>B_1 \times B_2</m> merupakan bola terbuka dalam <m>X_1 \times X_2</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If <m>B_1</m> is an open ball in <m>X_1</m> and <m>B_2</m> is an open ball in <m>X_2</m>,
-            is <m>B_1 \times B_2</m> an open set in <m>X_1 \times X_2</m>?
-            Explain.
+            Jika <m>B_1</m> merupakan bola terbuka dalam <m>X_1</m> dan <m>B_2</m> merupakan bola terbuka dalam <m>X_2</m>,
+            apakah <m>B_1 \times B_2</m> merupakan himpunan terbuka dalam <m>X_1 \times X_2</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Find, if possible, an open subset of
-            <m>X_1 \times X_2</m> that is not of the form
-            <m>O_1 \times O_2</m> where <m>O_1</m> is open in <m>X_1</m> and <m>O_2</m> is open in <m>X_2</m>.
+            Jika mungkin, temukan suatu subhimpunan terbuka dari
+            <m>X_1 \times X_2</m> yang tidak berbentuk
+            <m>O_1 \times O_2</m>, dengan <m>O_1</m> terbuka dalam <m>X_1</m> dan <m>O_2</m> terbuka dalam <m>X_2</m>.
           </p>
         </statement>
       </task>
@@ -128,43 +130,43 @@ In the next activity we consider products of open balls and open sets in product
 
   <p>
     <xref ref="act_ms_product_open"/>
-    shows that open sets in a product are more complicated than just products of open sets in the factors.
-    We will return to product later when we consider topological spaces.
+    menunjukkan bahwa himpunan-himpunan terbuka dalam suatu hasil kali lebih rumit daripada sekadar hasil kali himpunan-himpunan terbuka dalam ruang-ruang faktornya.
+    Kita akan kembali membahas hasil kali ketika meninjau ruang topologi nanti.
   </p>
   <p>
-    We conclude with one final comment about products.
-    We can make the Cartesian product of any number of metric spaces into a metric space with the same construction we used for the product of two spaces.
+    Kita menutup bagian ini dengan satu komentar terakhir mengenai hasil kali.
+    Kita dapat menjadikan hasil kali Kartesius dari sebarang banyaknya ruang metrik yang berhingga sebagai ruang metrik dengan konstruksi yang sama seperti yang kita gunakan untuk hasil kali dua ruang.
   </p>
 
   <definition>
-    <idx><h>product metric space</h></idx>
+    <idx><h>ruang metrik hasil kali</h></idx>
     <statement>
       <p>
-        Let <m>(X_i, d_i)</m> be metric spaces for <m>i</m> from <m>1</m> to some positive integer <m>n</m>.
-        The <term>product metric space</term>
-        <m>(X,d)</m> is the Cartesian product
+        Misalkan <m>(X_i, d_i)</m> merupakan ruang metrik untuk <m>i</m> dari <m>1</m> sampai suatu bilangan bulat positif <m>n</m>.
+        <term>Ruang metrik hasil kali</term>
+        <m>(X,d)</m> adalah hasil kali Kartesius
         <me>
           X = X_1 \times X_2 \times \cdots \times X_n = \prod_{i=1}^n X_i
         </me>
-        with metric <m>d</m> defined by
+        dengan metrik <m>d</m> yang didefinisikan oleh
         <me>
           d(x,y) = \sqrt{\sum_{i=1}^n d_i(x_i,y_i)^2}
         </me>
-        when <m>x = (x_1, x_2, \ldots,
-        x_n)</m> and <m>y = (y_1, y_2, \ldots, y_n)</m> are in <m>X</m>.
+        apabila <m>x = (x_1, x_2, \ldots,
+        x_n)</m> dan <m>y = (y_1, y_2, \ldots, y_n)</m> berada dalam <m>X</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    <idx><h>product metric</h></idx>
-    <idx><h>coordinate space</h></idx>
-    <idx><h>factor space</h></idx>
-    The metric <m>d</m> is called the <term>product metric</term> 
-    and the spaces <m>(X_i,d_i)</m> are called the <term>coordinate</term>
-    or <term>factor</term>
-    spaces of <m>(X,d)</m>.
-    The proof that <m>d</m> is a metric is essentially the same as in the <m>n=2</m> case,
-    and is left to <xref ref="ex_prod_metric"/>.
+    <idx><h>metrik hasil kali</h></idx>
+    <idx><h>ruang koordinat</h></idx>
+    <idx><h>ruang faktor</h></idx>
+    Metrik <m>d</m> disebut <term>metrik hasil kali</term>,
+    sedangkan ruang-ruang <m>(X_i,d_i)</m> disebut ruang <term>koordinat</term>
+    atau ruang <term>faktor</term>
+    dari <m>(X,d)</m>.
+    Pembuktian bahwa <m>d</m> merupakan suatu metrik pada dasarnya sama seperti dalam kasus <m>n=2</m>,
+    dan diserahkan kepada <xref ref="ex_prod_metric"/>.
   </p>
 </section>

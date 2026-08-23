@@ -1,0 +1,405 @@
+<section xml:id="o003-c90-ch11-source-guides-b" xml:lang="id-ID">
+  <title>Panduan konsep dan tugas sumber, bagian kedua</title>
+
+  <p>
+    Tujuh panduan berikut mengikuti tepat tujuh tugas sumber tentang hasil kali
+    ruang metrik: tiga pemeriksaan aksioma metrik dan empat tugas tentang
+    geometri serta keterbukaan pada hasil kali. Kerjakan dahulu butir pada bab
+    utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap
+    pernyataan memparafrasakan sasaran sumber dan menyertakan rubrik
+    keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang
+    tersedia di bawah Creative Commons Attribution 4.0 International
+    (CC BY 4.0).
+  </p>
+
+  <exercise xml:id="o003-c90-ch11-guide-10">
+    <title>Nilai metrik hasil kali tak negatif</title>
+    <statement>
+      <p>
+        Untuk <m>x=(x_1,x_2)</m> dan <m>y=(y_1,y_2)</m> dalam
+        <m>X_1\times X_2</m>, jelaskan mengapa
+        <me>
+          d(x,y)=\sqrt{d_1(x_1,y_1)^2+d_2(x_2,y_2)^2}
+        </me>
+        selalu lebih besar daripada atau sama dengan <m>0</m>. Rubrik:
+        gunakan kodomain metrik faktor, penguadratan, penjumlahan, dan akar
+        kuadrat utama secara berurutan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-10-hint">
+      <p>
+        Tahap 1: setiap jarak <m>d_i(x_i,y_i)</m> merupakan bilangan real tak
+        negatif. Tahap 2: tentukan tanda jumlah kuadratnya dan tanda akar
+        kuadrat utama dari jumlah tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-10-answer">
+      <p>
+        Kedua suku kuadrat tak negatif, sehingga jumlahnya tak negatif dan
+        akar kuadrat utamanya juga tak negatif. Jadi <m>d(x,y)\geq0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-10-solution">
+      <p>
+        Karena <m>d_1</m> dan <m>d_2</m> merupakan metrik,
+        <m>d_1(x_1,y_1)\geq0</m> dan <m>d_2(x_2,y_2)\geq0</m>. Khususnya,
+        <m>d_1(x_1,y_1)^2\geq0</m> dan
+        <m>d_2(x_2,y_2)^2\geq0</m>, sehingga
+        <me>
+          d_1(x_1,y_1)^2+d_2(x_2,y_2)^2\geq0.
+        </me>
+        Simbol akar kuadrat menyatakan akar utama yang tak negatif. Maka
+        <m>d(x,y)\geq0</m> untuk setiap pasangan <m>x,y</m>. Argumen ini juga
+        menunjukkan bahwa rumus tersebut bernilai real pada seluruh domain
+        <m>(X_1\times X_2)^2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-11">
+    <title>Simetri metrik hasil kali</title>
+    <statement>
+      <p>
+        Buktikan bahwa metrik hasil kali memenuhi <m>d(x,y)=d(y,x)</m>.
+        Rubrik: terapkan simetri secara terpisah pada <m>d_1</m> dan
+        <m>d_2</m>, lalu substitusikan kedua kesamaan itu ke dalam rumus
+        hasil kali.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-11-hint">
+      <p>
+        Tahap 1: tuliskan
+        <m>d_1(x_1,y_1)=d_1(y_1,x_1)</m> dan
+        <m>d_2(x_2,y_2)=d_2(y_2,x_2)</m>. Tahap 2: bandingkan rumus untuk
+        <m>d(x,y)</m> dan <m>d(y,x)</m> suku demi suku.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-11-answer">
+      <p>
+        Simetri kedua metrik faktor membuat kedua kuadrat dalam rumus tidak
+        berubah ketika <m>x</m> dan <m>y</m> dipertukarkan. Karena itu
+        <m>d(x,y)=d(y,x)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-11-solution">
+      <p>
+        Dengan simetri <m>d_1</m> dan <m>d_2</m>, kita memperoleh
+        <md>
+          <mrow>d(x,y)
+          \,\amp=\sqrt{d_1(x_1,y_1)^2+d_2(x_2,y_2)^2}</mrow>
+          <mrow>
+          \,\amp=\sqrt{d_1(y_1,x_1)^2+d_2(y_2,x_2)^2}</mrow>
+          <mrow>
+          \,\amp=d(y,x).</mrow>
+        </md>
+        Jadi pertukaran kedua titik tidak mengubah jarak hasil kali, tepat
+        seperti yang disyaratkan oleh aksioma simetri.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-12">
+    <title>Definit positif dan pertidaksamaan segitiga</title>
+    <statement>
+      <p>
+        Jelaskan mengapa <m>d(x,y)=0</m> jika dan hanya jika <m>x=y</m>.
+        Rubrik: gunakan fakta bahwa jumlah dua kuadrat tak negatif bernilai
+        nol tepat ketika kedua sukunya nol, lalu terapkan definit positif pada
+        setiap metrik faktor. Setelah itu, tutup pemeriksaan metrik dengan
+        langkah Cauchy–Schwarz yang benar bagi pertidaksamaan segitiga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-12-hint">
+      <p>
+        Tahap 1: kuadratkan kesamaan <m>d(x,y)=0</m> dan simpulkan
+        <m>d_1(x_1,y_1)=d_2(x_2,y_2)=0</m>. Tahap 2: bagi pertidaksamaan
+        segitiga, tetapkan <m>a_i=d_i(x_i,y_i)</m> dan
+        <m>b_i=d_i(y_i,z_i)</m>, kemudian batasi
+        <m>a_1b_1+a_2b_2</m> dengan Cauchy–Schwarz.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-12-answer">
+      <p>
+        Berlaku <m>d(x,y)=0</m> tepat ketika kedua jarak koordinat nol, yaitu
+        tepat ketika <m>x_1=y_1</m> dan <m>x_2=y_2</m>, atau <m>x=y</m>.
+        Cauchy–Schwarz memberi suku silang paling besar
+        <m>d(x,y)d(y,z)</m>, sehingga
+        <m>d(x,z)\leq d(x,y)+d(y,z)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-12-solution">
+      <p>
+        Jika <m>x=y</m>, maka <m>x_1=y_1</m> dan <m>x_2=y_2</m>. Kedua jarak
+        koordinat nol, sehingga <m>d(x,y)=0</m>. Sebaliknya, jika
+        <m>d(x,y)=0</m>, maka
+        <me>
+          d_1(x_1,y_1)^2+d_2(x_2,y_2)^2=0.
+        </me>
+        Kedua suku tak negatif, jadi masing-masing harus nol. Definit positif
+        metrik faktor memberi <m>x_1=y_1</m> dan <m>x_2=y_2</m>. Maka
+        <m>x=(x_1,x_2)=(y_1,y_2)=y</m>.
+      </p>
+      <p>
+        Untuk melengkapi verifikasi, ambil <m>z=(z_1,z_2)</m> dan tulis
+        <m>a_i=d_i(x_i,y_i)</m> serta <m>b_i=d_i(y_i,z_i)</m>. Pertidaksamaan
+        segitiga di setiap faktor memberi
+        <m>d_i(x_i,z_i)\leq a_i+b_i</m>. Oleh karena semua suku tak negatif,
+        <md>
+          <mrow>d(x,z)^2
+          \,\amp\leq(a_1+b_1)^2+(a_2+b_2)^2</mrow>
+          <mrow>
+          \,\amp=(a_1^2+a_2^2)+2(a_1b_1+a_2b_2)
+          +(b_1^2+b_2^2).</mrow>
+        </md>
+      </p>
+      <p>
+        Pertidaksamaan Cauchy–Schwarz yang diterapkan pada pasangan
+        <m>(a_1,a_2)</m> dan <m>(b_1,b_2)</m> memberikan
+        <me>
+          a_1b_1+a_2b_2
+          \leq\sqrt{a_1^2+a_2^2}\sqrt{b_1^2+b_2^2}
+          =d(x,y)d(y,z).
+        </me>
+        Jadi
+        <me>
+          d(x,z)^2
+          \leq d(x,y)^2+2d(x,y)d(y,z)+d(y,z)^2
+          =\bigl(d(x,y)+d(y,z)\bigr)^2.
+        </me>
+        Kedua ruas berakar tak negatif; mengambil akar kuadrat menghasilkan
+        <m>d(x,z)\leq d(x,y)+d(y,z)</m>. Langkah Cauchy–Schwarz ini membatasi
+        suku silang dengan hasil kali kedua norma; suku silang tersebut tidak
+        boleh dihilangkan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-13">
+    <title>Geometri ruang hasil kali dua interval</title>
+    <statement>
+      <p>
+        Misalkan <m>X_1=[1,2]</m> dan <m>X_2=[3,4]</m>, masing-masing sebagai
+        subruang dari <m>\R</m> dengan metrik Euklides. Jelaskan secara rinci
+        ruang hasil kali <m>X_1\times X_2</m> dan metrik hasil kalinya.
+        Rubrik: gambarkan himpunan titik, nyatakan apakah sisi-sisinya termasuk,
+        sederhanakan rumus jarak, dan jelaskan bentuk bola jauh dari serta dekat
+        batas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-13-hint">
+      <p>
+        Tahap 1: unsur hasil kali adalah pasangan <m>(x_1,x_2)</m> dengan
+        <m>1\leq x_1\leq2</m> dan <m>3\leq x_2\leq4</m>. Tahap 2: substitusikan
+        <m>d_1(s,t)=|s-t|</m> dan <m>d_2(s,t)=|s-t|</m> ke rumus metrik hasil
+        kali.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-13-answer">
+      <p>
+        Hasil kalinya adalah persegi tertutup
+        <m>[1,2]\times[3,4]</m> di bidang. Metrik hasil kalinya sama dengan
+        pembatasan metrik Euklides bidang, sehingga bola relatif adalah irisan
+        cakram terbuka Euklides dengan persegi tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-13-solution">
+      <p>
+        Secara himpunan,
+        <me>
+          X_1\times X_2
+          =\{(s,t)\in\R^2\mid1\leq s\leq2,
+          \ 3\leq t\leq4\}.
+        </me>
+        Jadi bentuknya persegi dengan keempat sisi dan keempat titik sudut
+        termasuk. Untuk <m>p=(s,t)</m> dan <m>q=(u,v)</m>, metrik hasil kali
+        ialah
+        <me>
+          d(p,q)=\sqrt{|s-u|^2+|t-v|^2}
+          =\sqrt{(s-u)^2+(t-v)^2},
+        </me>
+        tepat metrik Euklides bidang yang dibatasi ke persegi.
+      </p>
+      <p>
+        Karena ruangnya hanya persegi tersebut, bola
+        <m>B_{X_1\times X_2}(p,r)</m> adalah cakram Euklides terbuka berpusat
+        di <m>p</m> yang dipotong dengan <m>[1,2]\times[3,4]</m>. Jika cakram
+        tidak mencapai sisi, bola tampak bulat penuh; dekat sisi atau sudut,
+        bagian di luar ruang dibuang. Keterbukaan selalu dihitung relatif
+        terhadap ruang hasil kali ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-14">
+    <title>Hasil kali bola umumnya bukan bola metrik hasil kali</title>
+    <statement>
+      <p>
+        Jika <m>B_1</m> bola terbuka di <m>X_1</m> dan <m>B_2</m> bola
+        terbuka di <m>X_2</m>, tentukan apakah <m>B_1\times B_2</m> harus
+        menjadi satu bola terbuka bagi metrik hasil kali. Rubrik: bedakan
+        bentuk persegi panjang dari cakram, berikan pilihan bola faktor yang
+        konkret, dan buktikan bahwa tidak ada pusat serta radius yang membuat
+        kedua himpunan itu sama.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-14-hint">
+      <p>
+        Tahap 1: ambil
+        <m>B_1=B_{X_1}(3/2,1/4)</m> dan
+        <m>B_2=B_{X_2}(7/2,1/4)</m>. Tahap 2: hasil kalinya adalah persegi
+        terbuka; irisan horizontal dan vertikal melalui pusat memaksa radius
+        calon bola menjadi <m>1/4</m>, tetapi titik-titik dekat sudut persegi
+        berjarak lebih dari <m>1/4</m> dari pusat.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-14-answer">
+      <p>
+        Tidak harus. Pada contoh tersebut,
+        <m>B_1\times B_2=(5/4,7/4)\times(13/4,15/4)</m> adalah persegi
+        terbuka, bukan bola bagi metrik hasil kali Euklides. Hasil kali bola dapat
+        menjadi bola dalam kasus khusus, tetapi tidak secara umum.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-14-solution">
+      <p>
+        Kedua bola yang diberikan tidak terpotong oleh batas ruang faktornya,
+        sehingga
+        <me>
+          P=B_1\times B_2
+          =(5/4,7/4)\times(13/4,15/4).
+        </me>
+        Himpunan <m>P</m> adalah persegi terbuka berpusat di
+        <m>c=(3/2,7/2)</m>. Andaikan <m>P=B(w,R)</m> untuk suatu pusat
+        <m>w=(w_1,w_2)</m>. Karena <m>w\in P</m>, irisan <m>P</m> dengan garis
+        horizontal melalui <m>w</m> adalah interval
+        <m>(5/4,7/4)\times\{w_2\}</m>. Irisan bola dengan garis yang sama
+        adalah <m>(w_1-R,w_1+R)\times\{w_2\}</m>. Kesamaan kedua irisan
+        memaksa <m>w_1=3/2</m> dan <m>R=1/4</m>. Dengan cara yang sama,
+        irisan vertikal memaksa <m>w_2=7/2</m>. Jadi pusat dan radius calon
+        bola haruslah <m>c</m> dan <m>1/4</m>.
+      </p>
+      <p>
+        Namun titik <m>p=(17/10,37/10)</m> berada di <m>P</m>, sedangkan
+        <me>
+          d(c,p)=\sqrt{(1/5)^2+(1/5)^2}=\frac{\sqrt2}{5}
+          \gt\frac14.
+        </me>
+        Jadi <m>p</m> tidak berada di bola berpusat <m>c</m> berjari-jari
+        <m>1/4</m>, suatu kontradiksi. Dengan demikian, hasil kali dua bola
+        terbuka tidak harus merupakan satu bola terbuka dalam metrik hasil
+        kali. Perbedaannya ialah syarat hasil kali membatasi setiap koordinat
+        secara terpisah, sedangkan bola hasil kali membatasi jumlah kuadrat
+        jarak koordinat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-15">
+    <title>Hasil kali bola tetap merupakan himpunan terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>B_i=B_{X_i}(c_i,r_i)</m> untuk <m>i=1,2</m>. Buktikan
+        bahwa <m>B_1\times B_2</m> merupakan himpunan terbuka di
+        <m>X_1\times X_2</m>, meskipun panduan 14 menunjukkan bahwa himpunan
+        itu umumnya bukan satu bola. Rubrik: pada titik sebarang dalam hasil kali,
+        hitung sisa radius di kedua faktor dan pilih radius bola hasil kali yang
+        dikendalikan oleh sisa terkecil.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-15-hint">
+      <p>
+        Tahap 1: untuk <m>x=(x_1,x_2)\in B_1\times B_2</m>, tetapkan
+        <m>\epsilon_i=r_i-d_i(x_i,c_i)\gt0</m>. Tahap 2: pilih
+        <m>\epsilon=\min\{\epsilon_1,\epsilon_2\}</m> dan gunakan
+        <m>d_i(x_i,y_i)\leq d(x,y)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-15-answer">
+      <p>
+        Ya. Setiap titik <m>x\in B_1\times B_2</m> mempunyai bola hasil kali
+        berjari-jari
+        <m>\min\{r_1-d_1(x_1,c_1),r_2-d_2(x_2,c_2)\}</m> yang termuat dalam
+        <m>B_1\times B_2</m>. Jadi hasil kali tersebut terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-15-solution">
+      <p>
+        Ambil <m>x=(x_1,x_2)\in B_1\times B_2</m>. Karena
+        <m>d_i(x_i,c_i)\lt r_i</m>, bilangan
+        <m>\epsilon_i=r_i-d_i(x_i,c_i)</m> positif. Tetapkan
+        <m>\epsilon=\min\{\epsilon_1,\epsilon_2\}\gt0</m>. Jika
+        <m>y=(y_1,y_2)</m> memenuhi <m>d(x,y)\lt\epsilon</m>, maka untuk
+        <m>i=1,2</m>,
+        <me>
+          d_i(x_i,y_i)
+          \leq\sqrt{d_1(x_1,y_1)^2+d_2(x_2,y_2)^2}
+          =d(x,y)\lt\epsilon\leq\epsilon_i.
+        </me>
+      </p>
+      <p>
+        Pertidaksamaan segitiga di faktor ke-<m>i</m> sekarang memberi
+        <me>
+          d_i(y_i,c_i)
+          \leq d_i(y_i,x_i)+d_i(x_i,c_i)
+          \lt\epsilon_i+d_i(x_i,c_i)=r_i.
+        </me>
+        Jadi <m>y_i\in B_i</m> untuk kedua koordinat, sehingga
+        <m>y\in B_1\times B_2</m>. Dengan demikian,
+        <m>B(x,\epsilon)\subseteq B_1\times B_2</m>, dan hasil kali itu terbuka.
+        Secara geometris, himpunan terbuka tidak harus berupa satu bola; ia
+        cukup menjadi gabungan bola-bola yang lebih kecil.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-16">
+    <title>Himpunan terbuka yang bukan satu hasil kali berbentuk persegi panjang</title>
+    <statement>
+      <p>
+        Temukan suatu subhimpunan terbuka dari
+        <m>X_1\times X_2=[1,2]\times[3,4]</m> yang tidak dapat ditulis sebagai
+        <m>O_1\times O_2</m> dengan <m>O_i</m> terbuka di <m>X_i</m>.
+        Rubrik: gunakan satu bola hasil kali yang tidak menyentuh batas, lalu
+        pilih dua titik di dalamnya yang titik silang koordinatnya berada di
+        luar bola.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-16-hint">
+      <p>
+        Tahap 1: ambil
+        <m>U=B((3/2,7/2),1/4)</m>. Tahap 2: uji
+        <m>p=(17/10,7/2)</m>, <m>q=(3/2,37/10)</m>, dan titik silang
+        <m>s=(17/10,37/10)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-16-answer">
+      <p>
+        Bola terbuka <m>U=B((3/2,7/2),1/4)</m> adalah contoh yang diminta.
+        Titik <m>p</m> dan <m>q</m> pada petunjuk berada di <m>U</m>, tetapi
+        titik silang <m>s</m> tidak; sifat ini mustahil bagi satu hasil kali
+        <m>O_1\times O_2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-16-solution">
+      <p>
+        Bola <m>U=B((3/2,7/2),1/4)</m> terbuka menurut definisi dan seluruhnya
+        berada di bagian dalam persegi hasil kali. Kedua titik
+        <m>p=(17/10,7/2)</m> dan <m>q=(3/2,37/10)</m> masing-masing berjarak
+        <m>1/5\lt1/4</m> dari pusat, sehingga <m>p,q\in U</m>. Untuk titik
+        silang <m>s=(17/10,37/10)</m>, berlaku
+        <me>
+          d\bigl((3/2,7/2),s\bigr)=\frac{\sqrt2}{5}\gt\frac14,
+        </me>
+        sehingga <m>s\notin U</m>.
+      </p>
+      <p>
+        Andaikan <m>U=O_1\times O_2</m>. Dari <m>p\in U</m> diperoleh
+        <m>17/10\in O_1</m> dan <m>7/2\in O_2</m>; dari <m>q\in U</m>
+        diperoleh <m>3/2\in O_1</m> dan <m>37/10\in O_2</m>. Maka definisi
+        hasil kali memaksa <m>s=(17/10,37/10)\in O_1\times O_2=U</m>,
+        bertentangan dengan perhitungan jarak. Jadi <m>U</m> terbuka tetapi
+        tidak berbentuk satu hasil kali dari himpunan-himpunan terbuka pada ruang faktor.
+      </p>
+    </solution>
+  </exercise>
+</section>

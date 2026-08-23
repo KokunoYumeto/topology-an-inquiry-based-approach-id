@@ -1,0 +1,365 @@
+<section xml:id="o003-c90-ch11-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 11</title>
+
+  <p>
+    Delapan pemeriksaan berikut memadukan gagasan subruang, himpunan relatif,
+    dan metrik hasil kali. Materi ini ditulis secara mandiri untuk komponen
+    pendamping berlisensi CC BY 4.0. Cobalah setiap soal sebelum membuka
+    petunjuk; jawaban menyatakan hasil, sedangkan solusi memberi penutupan
+    matematis lengkap.
+  </p>
+
+  <exercise xml:id="o003-c90-ch11-mastery-01">
+    <title>Merekonstruksi himpunan terbuka relatif</title>
+    <statement>
+      <p>
+        Dalam <m>X=\R</m>, ambil <m>A=[0,1]\cup\{2\}</m> dan
+        <m>U=[0,1/2)</m>. Buktikan langsung bahwa <m>U</m> terbuka di
+        <m>A</m>, lalu berikan suatu himpunan terbuka <m>O</m> di <m>X</m>
+        dengan <m>U=A\cap O</m>. Apakah <m>U</m> terbuka di <m>X</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-01-hint">
+      <p>
+        Untuk <m>x\in U</m>, pilih radius yang lebih kecil daripada jarak
+        <m>x</m> ke <m>1/2</m>. Untuk representasi ambien, coba sebuah interval
+        yang ujung kirinya negatif.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-01-answer">
+      <p>
+        Himpunan <m>U</m> terbuka di <m>A</m> dan
+        <m>U=A\cap(-1,1/2)</m>. Himpunan itu tidak terbuka di <m>X=\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-01-solution">
+      <p>
+        Ambil <m>x\in U</m> dan tetapkan <m>r=(1/2-x)/2\gt0</m>. Jika
+        <m>y\in B_A(x,r)</m>, maka <m>y\in A</m> dan
+        <m>y\lt x+r\lt1/2</m>; jadi <m>y\in[0,1/2)=U</m>. Dengan demikian
+        setiap titik <m>U</m> memiliki bola relatif yang termuat dalam
+        <m>U</m>. Selain itu,
+        <m>A\cap(-1,1/2)=[0,1/2)=U</m>, sedangkan <m>(-1,1/2)</m> terbuka di
+        <m>\R</m>. Namun, setiap bola ambien yang berpusat di <m>0</m> memuat
+        bilangan negatif, sehingga tidak termuat dalam <m>U</m>. Maka
+        <m>U</m> tidak terbuka di <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-mastery-02">
+    <title>Dua arah pencirian tertutup relatif</title>
+    <statement>
+      <p>
+        Misalkan <m>A\subseteq X</m>, dengan <m>X</m> ruang metrik. Buktikan
+        langsung bahwa <m>C_A\subseteq A</m> tertutup di <m>A</m> jika dan
+        hanya jika terdapat himpunan tertutup <m>C_X</m> di <m>X</m> sehingga
+        <m>C_A=A\cap C_X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-02-hint">
+      <p>
+        Gunakan komplemen relatif <m>A\setminus C_A</m> dan pencirian
+        himpunan terbuka relatif sebagai <m>A\cap O_X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-02-answer">
+      <p>
+        Jika <m>A\setminus C_A=A\cap O_X</m>, ambil
+        <m>C_X=X\setminus O_X</m>. Untuk arah sebaliknya, komplemen relatif
+        <m>A\setminus(A\cap C_X)=A\cap(X\setminus C_X)</m> terbuka di
+        <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-02-solution">
+      <p>
+        Andaikan <m>C_A</m> tertutup di <m>A</m>. Maka
+        <m>U_A=A\setminus C_A</m> terbuka di <m>A</m>, sehingga terdapat
+        <m>O_X</m> terbuka di <m>X</m> dengan <m>U_A=A\cap O_X</m>. Tetapkan
+        <m>C_X=X\setminus O_X</m>; himpunan <m>C_X</m> tertutup dan
+        <me>
+          A\cap C_X=A\cap(X\setminus O_X)
+          =A\setminus(A\cap O_X)=A\setminus U_A=C_A.
+        </me>
+        Sebaliknya, jika <m>C_A=A\cap C_X</m> dengan <m>C_X</m> tertutup,
+        maka <m>O_X=X\setminus C_X</m> terbuka dan
+        <m>A\setminus C_A=A\cap O_X</m> terbuka di <m>A</m>. Jadi
+        <m>C_A</m> tertutup di <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-mastery-03">
+    <title>Pembatasan fungsi kontinu</title>
+    <statement>
+      <p>
+        Jika <m>f:X\to Y</m> kontinu dan <m>A\subseteq X</m> diberi metrik
+        subruang, buktikan bahwa <m>f|_A:A\to Y</m> kontinu dengan dua cara:
+        memakai prapeta himpunan terbuka dan memakai definisi epsilon-delta.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-03-hint">
+      <p>
+        Untuk himpunan terbuka <m>V\subseteq Y</m>, bandingkan
+        <m>(f|_A)^{-1}(V)</m> dengan <m>f^{-1}(V)</m>. Dalam argumen metrik,
+        ingat bahwa <m>d_A</m> sama dengan <m>d_X</m> pada pasangan titik di
+        <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-03-answer">
+      <p>
+        Fungsi <m>f|_A</m> selalu kontinu. Prapetanya memenuhi
+        <m>(f|_A)^{-1}(V)=A\cap f^{-1}(V)</m>, dan delta yang bekerja untuk
+        <m>f</m> di suatu titik <m>a\in A</m> juga bekerja untuk
+        <m>f|_A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-03-solution">
+      <p>
+        Jika <m>V</m> terbuka di <m>Y</m>, kekontinuan <m>f</m> membuat
+        <m>f^{-1}(V)</m> terbuka di <m>X</m>. Identitas
+        <m>(f|_A)^{-1}(V)=A\cap f^{-1}(V)</m> menunjukkan bahwa prapeta itu
+        terbuka di <m>A</m>; jadi <m>f|_A</m> kontinu.
+      </p>
+      <p>
+        Untuk bukti epsilon-delta, ambil <m>a\in A</m> dan <m>\epsilon\gt0</m>.
+        Pilih <m>\delta\gt0</m> dari kekontinuan <m>f</m> di <m>a</m>. Jika
+        <m>x\in A</m> dan <m>d_A(x,a)\lt\delta</m>, maka
+        <m>d_X(x,a)=d_A(x,a)\lt\delta</m>, sehingga
+        <m>d_Y(f|_A(x),f|_A(a))\lt\epsilon</m>. Ini membuktikan kekontinuan
+        pembatasan pada setiap titik <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-mastery-04">
+    <title>Tiga metrik pada hasil kali dua ruang</title>
+    <statement>
+      <p>
+        Untuk ruang metrik <m>(X,d_X)</m> dan <m>(Y,d_Y)</m>, definisikan pada
+        <m>X\times Y</m>
+        <me>
+          d_2=\sqrt{d_X^2+d_Y^2},\qquad
+          d_1=d_X+d_Y,\qquad d_\infty=\max\{d_X,d_Y\}.
+        </me>
+        Buktikan bahwa ketiganya menginduksi himpunan terbuka yang sama.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-04-hint">
+      <p>
+        Buktikan pertidaksamaan titik demi titik
+        <m>d_\infty\leq d_2\leq d_1\leq2d_\infty</m>, lalu bandingkan bola
+        dengan radius yang diskalakan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-04-answer">
+      <p>
+        Karena <m>d_\infty\leq d_2\leq d_1\leq2d_\infty</m>, setiap bola untuk
+        salah satu metrik memuat bola yang cukup kecil untuk setiap metrik
+        lain. Jadi ketiga topologinya sama.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-04-solution">
+      <p>
+        Tulis <m>a=d_X(x_1,x_2)\geq0</m> dan
+        <m>b=d_Y(y_1,y_2)\geq0</m>. Jelas
+        <m>\max\{a,b\}\leq\sqrt{a^2+b^2}\leq a+b</m>, dan
+        <m>a+b\leq2\max\{a,b\}</m>. Maka
+        <me>d_\infty\leq d_2\leq d_1\leq2d_\infty.</me>
+        Dari sini,
+        <m>B_{d_1}(p,r)\subseteq B_{d_2}(p,r)\subseteq
+        B_{d_\infty}(p,r)</m>, sedangkan
+        <m>B_{d_\infty}(p,r/2)\subseteq B_{d_1}(p,r)</m>. Siklus inklusi
+        tersebut menyediakan, di setiap titik dan untuk setiap bola pada
+        salah satu metrik, bola metrik lain yang termuat di dalamnya. Oleh
+        karena itu ketiga metrik menentukan keluarga himpunan terbuka yang
+        sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-mastery-05">
+    <title>Persegi panjang terbuka dan bola hasil kali</title>
+    <statement>
+      <p>
+        Pada hasil kali dengan metrik <m>d_2</m>, buktikan untuk
+        <m>p=(x,y)</m> dan <m>r\gt0</m> bahwa
+        <me>
+          B_X(x,r/\sqrt2)\times B_Y(y,r/\sqrt2)\subseteq B_{d_2}(p,r)
+          \subseteq B_X(x,r)\times B_Y(y,r).
+        </me>
+        Jelaskan mengapa hasil kali dua bola terbuka selalu terbuka tetapi
+        umumnya bukan satu bola <m>d_2</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-05-hint">
+      <p>
+        Gunakan kuadrat jarak. Untuk klaim terakhir, gambar cakram Euklides dan
+        persegi panjang terbuka di <m>\R^2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-05-answer">
+      <p>
+        Kedua inklusi berlaku. Hasil kali bola memuat bola hasil kali kecil di
+        sekitar setiap titiknya, jadi terbuka; dalam <m>\R^2</m> bentuknya
+        persegi panjang, bukan cakram, sehingga biasanya bukan satu bola.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-05-solution">
+      <p>
+        Jika <m>d_X(x,u)\lt r/\sqrt2</m> dan
+        <m>d_Y(y,v)\lt r/\sqrt2</m>, maka
+        <m>d_2(p,(u,v))^2\lt r^2/2+r^2/2=r^2</m>; ini memberi inklusi kiri.
+        Jika <m>d_2(p,(u,v))\lt r</m>, masing-masing suku taknegatif
+        <m>d_X(x,u)^2</m> dan <m>d_Y(y,v)^2</m> lebih kecil daripada
+        <m>r^2</m>, sehingga kedua jarak koordinat lebih kecil daripada
+        <m>r</m>; ini memberi inklusi kanan.
+      </p>
+      <p>
+        Untuk titik di <m>B_X(x,r_1)\times B_Y(y,r_2)</m>, pilih sisa radius
+        positif pada kedua koordinat dan gunakan minimum yang diskalakan untuk
+        mendapatkan bola <m>d_2</m> di dalam hasil kali tersebut. Jadi hasil
+        kalinya terbuka. Di <m>\R^2</m>, hasil kali interval terbuka mempunyai
+        sisi lurus dan sudut batas, sedangkan bola <m>d_2</m> berbentuk cakram;
+        keduanya tidak sama kecuali dalam kasus degenerat yang tidak terjadi
+        untuk radius positif.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-mastery-06">
+    <title>Pertidaksamaan segitiga pada hasil kali berhingga</title>
+    <statement>
+      <p>
+        Untuk <m>X=\prod_{i=1}^nX_i</m>, definisikan
+        <m>d(x,y)=\sqrt{\sum_{i=1}^n d_i(x_i,y_i)^2}</m>. Buktikan
+        pertidaksamaan segitiga bagi <m>d</m> dengan menyatakan secara jelas
+        tempat penggunaan Cauchy–Schwarz.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-06-hint">
+      <p>
+        Tetapkan <m>a_i=d_i(x_i,y_i)</m> dan
+        <m>b_i=d_i(y_i,z_i)</m>. Kuadratkan batas
+        <m>d_i(x_i,z_i)\leq a_i+b_i</m> dan jumlahkan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-06-answer">
+      <p>
+        Cauchy–Schwarz memberi
+        <m>\sum a_ib_i\leq(\sum a_i^2)^{1/2}(\sum b_i^2)^{1/2}</m>, sehingga
+        <m>d(x,z)^2\leq(d(x,y)+d(y,z))^2</m> dan karenanya
+        <m>d(x,z)\leq d(x,y)+d(y,z)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-06-solution">
+      <p>
+        Dari pertidaksamaan segitiga di setiap faktor,
+        <m>d_i(x_i,z_i)\leq a_i+b_i</m>. Karena semua suku taknegatif,
+        <md>
+          <mrow>d(x,z)^2 \amp\leq \sum_{i=1}^n(a_i+b_i)^2</mrow>
+          <mrow>\amp=\sum a_i^2+2\sum a_ib_i+\sum b_i^2</mrow>
+          <mrow>\amp\leq\sum a_i^2+2\sqrt{\sum a_i^2}\sqrt{\sum b_i^2}+\sum b_i^2</mrow>
+          <mrow>\amp=(d(x,y)+d(y,z))^2.</mrow>
+        </md>
+          Pertidaksamaan kedua adalah tepat penggunaan Cauchy–Schwarz. Mengambil
+        akar kuadrat yang taknegatif menghasilkan pertidaksamaan segitiga.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-mastery-07">
+    <title>Penutupan ruang barisan kuadrat-terjumlah</title>
+    <statement>
+      <p>
+        Misalkan <m>H</m> terdiri atas barisan real <m>x=(x_n)</m> dengan
+        <m>\sum x_n^2\lt\infty</m>. Buktikan bahwa <m>x-y\in H</m> jika
+        <m>x,y\in H</m>, dan jelaskan mengapa
+        <m>d(x,y)=\sqrt{\sum(x_n-y_n)^2}</m> merupakan metrik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-07-hint">
+      <p>
+        Gunakan <m>(a-b)^2\leq2a^2+2b^2</m> untuk penutupan. Definit positif
+        dan simetri langsung; pertidaksamaan segitiga diperoleh dengan
+        Cauchy–Schwarz pada jumlah parsial lalu melewatkan limit.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-07-answer">
+      <p>
+          Pertidaksamaan
+        <m>\sum(x_n-y_n)^2\leq2\sum x_n^2+2\sum y_n^2\lt\infty</m> memberi
+          penutupan. Norma kuadrat-terjumlah memenuhi pertidaksamaan Minkowski,
+        sehingga jarak selisih tersebut memenuhi semua aksioma metrik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-07-solution">
+      <p>
+        Untuk setiap <m>n</m>,
+        <m>(x_n-y_n)^2\leq2x_n^2+2y_n^2</m>. Menjumlahkan memberi batas
+        berhingga, jadi <m>x-y\in H</m> dan <m>d</m> terdefinisi. Jelas
+        <m>d(x,y)\geq0</m>, simetris, dan bernilai nol tepat ketika
+        <m>x_n=y_n</m> untuk setiap <m>n</m>.
+      </p>
+      <p>
+        Untuk jumlah parsial hingga, perluas
+        <m>\sum_{n=1}^N((x_n-y_n)+(y_n-z_n))^2</m>. Cauchy–Schwarz pada suku
+          silang memberi pertidaksamaan Minkowski
+        <me>
+          \left(\sum_{n=1}^N(x_n-z_n)^2\right)^{1/2}
+          \leq\left(\sum_{n=1}^N(x_n-y_n)^2\right)^{1/2}
+          +\left(\sum_{n=1}^N(y_n-z_n)^2\right)^{1/2}.
+        </me>
+        Ketiga jumlah parsial naik menuju jumlah tak hingganya. Melewatkan
+        <m>N\to\infty</m> menghasilkan
+        <m>d(x,z)\leq d(x,y)+d(y,z)</m>. Jadi <m>d</m> adalah metrik pada
+        <m>H</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-mastery-08">
+    <title>Konvergensi di subruang dan ruang ambien</title>
+    <statement>
+      <p>
+        Misalkan <m>A\subseteq X</m> adalah subruang metrik dan
+        <m>(a_n)</m> barisan di <m>A</m>. Buktikan bahwa untuk
+        <m>a\in A</m>, barisan tersebut konvergen ke <m>a</m> di <m>A</m>
+        jika dan hanya jika konvergen ke <m>a</m> di <m>X</m>. Berikan contoh
+        yang menunjukkan mengapa syarat <m>a\in A</m> tidak boleh dibuang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-mastery-08-hint">
+      <p>
+        Bandingkan langsung <m>d_A(a_n,a)</m> dan <m>d_X(a_n,a)</m>. Untuk
+        contoh, gunakan <m>A=(0,1)</m> dan barisan yang menuju <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-mastery-08-answer">
+      <p>
+        Untuk <m>a\in A</m>, kedua definisi identik karena
+        <m>d_A(a_n,a)=d_X(a_n,a)</m>. Barisan <m>a_n=1/(n+1)</m> berada di
+        <m>A=(0,1)</m> dan konvergen ke <m>0</m> di <m>X=\R</m>, tetapi tidak
+        mempunyai limit <m>0</m> di <m>A</m> karena <m>0\notin A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-mastery-08-solution">
+      <p>
+        Ambil <m>a\in A</m>. Untuk setiap <m>n</m>, metrik subruang memenuhi
+        <m>d_A(a_n,a)=d_X(a_n,a)</m>. Karena itu, bagi setiap
+        <m>\epsilon\gt0</m>, keberadaan <m>N</m> sehingga
+        <m>n\geq N</m> mengakibatkan <m>d_A(a_n,a)\lt\epsilon</m> ekuivalen
+        persis dengan syarat yang sama menggunakan <m>d_X</m>. Maka
+        konvergensi ke titik <m>a\in A</m> sama di kedua ruang.
+      </p>
+      <p>
+        Dalam <m>X=\R</m>, tetapkan <m>A=(0,1)</m> dan
+        <m>a_n=1/(n+1)</m>. Semua suku berada di <m>A</m> dan
+        <m>a_n\to0</m> di <m>X</m>. Akan tetapi, pernyataan “konvergen ke
+        <m>0</m> di <m>A</m>” tidak berlaku karena limit suatu barisan di ruang
+        <m>A</m> harus merupakan unsur <m>A</m>, sedangkan <m>0\notin A</m>.
+        Contoh ini menunjukkan peran tepat syarat <m>a\in A</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,0 +1,439 @@
+<section xml:id="o003-c90-ch11-source-guides-a" xml:lang="id-ID">
+  <title>Panduan konsep dan tugas sumber, bagian pertama</title>
+
+  <p>
+    Sembilan panduan berikut mengikuti seluruh tugas sumber dalam pendahuluan
+    subruang dan bagian tentang himpunan terbuka serta tertutup di subruang:
+    enam tugas pendahuluan dan tiga langkah implikasi sebaliknya. Kerjakan
+    dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara
+    bertahap. Setiap pernyataan memparafrasakan sasaran sumber dan menyertakan
+    rubrik keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang
+    tersedia di bawah Creative Commons Attribution 4.0 International
+    (CC BY 4.0).
+  </p>
+
+  <p>
+    Sepanjang panduan ini, bola <m>B_A(a,r)</m> dihitung dengan metrik
+    pembatasan pada <m>A</m>, sedangkan <m>B_X(a,r)</m> dihitung di ruang
+    ambien <m>X</m>. Keterbukaan di <m>A</m> dan keterbukaan di <m>X</m>
+    karena itu selalu dibedakan secara eksplisit.
+  </p>
+
+  <exercise xml:id="o003-c90-ch11-guide-01">
+    <title>Metrik pembatasan pada subhimpunan</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik dan <m>A\subseteq X</m>. Untuk
+        <m>a_1,a_2\in A</m>, definisikan
+        <m>d'(a_1,a_2)=d(a_1,a_2)</m>. Buktikan bahwa <m>d'</m> merupakan
+        metrik pada <m>A</m>. Rubrik: periksa kodomain, definit positif,
+        simetri, dan pertidaksamaan segitiga; jelaskan mengapa sifat-sifat itu
+        tetap berlaku setelah domain dipersempit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-01-hint">
+      <p>
+        Tahap 1: ambil <m>a_1,a_2,a_3\in A</m>; ketiganya juga unsur
+        <m>X</m>. Tahap 2: tuliskan setiap aksioma untuk <m>d'</m>, lalu ganti
+        setiap nilai <m>d'</m> dengan nilai <m>d</m> yang sama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-01-answer">
+      <p>
+        Fungsi <m>d'</m> adalah metrik pada <m>A</m> karena semua aksioma
+        metrik diwarisi langsung dari <m>d</m>. Jadi <m>(A,d')=(A,d_A)</m>
+        merupakan subruang metrik dari <m>(X,d)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-01-solution">
+      <p>
+        Karena <m>d</m> bernilai real taknegatif, demikian pula
+        <m>d'(a_1,a_2)=d(a_1,a_2)</m>. Selanjutnya,
+        <m>d'(a_1,a_2)=0</m> jika dan hanya jika
+        <m>d(a_1,a_2)=0</m>, yang menurut definit positif bagi <m>d</m>
+        ekuivalen dengan <m>a_1=a_2</m>. Simetri memberi
+        <me>
+          d'(a_1,a_2)=d(a_1,a_2)=d(a_2,a_1)=d'(a_2,a_1).
+        </me>
+      </p>
+      <p>
+        Untuk <m>a_1,a_2,a_3\in A</m>, pertidaksamaan segitiga bagi
+        <m>d</m> di <m>X</m> memberi
+        <me>
+          d'(a_1,a_3)=d(a_1,a_3)
+          \leq d(a_1,a_2)+d(a_2,a_3)
+          =d'(a_1,a_2)+d'(a_2,a_3).
+        </me>
+        Jadi keempat syarat metrik terpenuhi pada <m>A</m>. Walaupun
+        <m>d</m> dan <m>d'</m> mempunyai nilai yang sama pada pasangan titik
+        di <m>A</m>, keduanya merupakan fungsi berbeda karena domain
+        <m>d'</m> ialah <m>A\times A</m>, bukan <m>X\times X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-02">
+    <title>Interval setengah terbuka dalam ruang ambien dan subruang</title>
+    <statement>
+      <p>
+        Ambil <m>X=(\R,d_E)</m>, <m>A=[0,1]</m>, dan
+        <m>0\lt a\lt1</m>. Tentukan secara terpisah apakah
+        <m>[0,a)</m> terbuka di <m>X</m> dan apakah himpunan yang sama terbuka
+        di subruang <m>A</m>. Rubrik: uji titik <m>0</m> menggunakan bola
+        ambien, lalu untuk setiap titik di <m>[0,a)</m> bangun bola relatif
+        yang tetap berada dalam himpunan tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-02-hint">
+      <p>
+        Tahap 1: setiap bola di <m>\R</m> yang berpusat di <m>0</m> memuat
+        bilangan negatif. Tahap 2: jika <m>x\in[0,a)</m>, coba radius
+        <m>r=(a-x)/2</m> untuk bola <m>B_A(x,r)</m> dalam subruang.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-02-answer">
+      <p>
+        Himpunan <m>[0,a)</m> tidak terbuka di <m>X=\R</m>, tetapi terbuka
+        di subruang <m>A=[0,1]</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-02-solution">
+      <p>
+        Di ruang ambien <m>X</m>, titik <m>0\in[0,a)</m> tidak mempunyai
+        bola terbuka yang termuat dalam <m>[0,a)</m>. Memang, untuk setiap
+        <m>r\gt0</m>, titik <m>-r/2</m> berada di
+        <m>B_X(0,r)</m> tetapi tidak berada di <m>[0,a)</m>. Jadi
+        <m>[0,a)</m> tidak terbuka di <m>X</m>.
+      </p>
+      <p>
+        Sekarang ambil sembarang <m>x\in[0,a)</m> dan tetapkan
+        <m>r=(a-x)/2\gt0</m>. Jika <m>y\in B_A(x,r)</m>, maka
+        <m>y\in A</m>, sehingga <m>y\geq0</m>, dan
+        <me>
+          y\lt x+r=x+\frac{a-x}{2}=\frac{a+x}{2}\lt a.
+        </me>
+        Maka <m>y\in[0,a)</m>, sehingga
+        <m>B_A(x,r)\subseteq[0,a)</m>. Setiap titik himpunan mempunyai bola
+        relatif seperti itu; karena itu <m>[0,a)</m> terbuka di <m>A</m>.
+        Perbedaan jawaban muncul karena bola subruang dipotong oleh
+        <m>A</m> dan tidak memuat bilangan negatif.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-03">
+    <title>Semua subhimpunan bilangan bulat terbuka secara relatif</title>
+    <statement>
+      <p>
+        Pandang <m>A=\Z</m> sebagai subruang dari <m>(\R,d_E)</m>. Tentukan
+        semua subhimpunan <m>A</m> yang terbuka di <m>A</m>. Rubrik: hitung
+        bola subruang berjari-jari kurang dari <m>1</m> di setiap bilangan
+        bulat, lalu tangani subhimpunan sebarang dan himpunan kosong.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-03-hint">
+      <p>
+        Tahap 1: untuk <m>n\in\Z</m>, tentukan
+        <m>B_A(n,1/2)</m>. Tahap 2: nyatakan subhimpunan
+        <m>S\subseteq A</m> sebagai gabungan bola-bola satu titik tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-03-answer">
+      <p>
+        Setiap subhimpunan <m>S\subseteq\Z</m>, termasuk
+        <m>\emptyset</m>, terbuka di subruang <m>\Z</m>. Dengan demikian,
+        metrik terinduksi pada <m>\Z</m> menghasilkan topologi diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-03-solution">
+      <p>
+        Jika <m>n\in\Z</m>, setiap bilangan bulat lain berjarak sedikitnya
+        <m>1</m> dari <m>n</m>. Karena itu
+        <me>
+          B_A(n,1/2)=B_{\R}(n,1/2)\cap\Z=\{n\}.
+        </me>
+        Untuk subhimpunan tak kosong <m>S\subseteq\Z</m>, berlaku
+        <me>
+          S=\bigcup_{n\in S}B_A(n,1/2),
+        </me>
+        sehingga <m>S</m> merupakan gabungan bola-bola terbuka di <m>A</m>
+        dan karenanya terbuka di <m>A</m>. Himpunan kosong terbuka menurut
+        definisi. Jadi seluruh himpunan kuasa <m>\Z</m> adalah keluarga
+        himpunan terbuka subruang ini; sebagai akibat tambahan, setiap
+        subhimpunan juga tertutup karena komplemennya terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-04">
+    <title>Sumbu horizontal tertutup di bidang Euklides</title>
+    <statement>
+      <p>
+        Dalam <m>X=(\R^2,d_E)</m>, misalkan
+        <m>A=\{(x,0)\mid x\in\R\}</m>. Buktikan bahwa <m>A</m> tertutup di
+        <m>X</m>. Rubrik: ambil titik sebarang di luar sumbu, pilih radius
+        dari jarak vertikalnya ke sumbu, dan buktikan bahwa bola itu tidak
+        memotong <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-04-hint">
+      <p>
+        Tahap 1: tulis titik luar sebagai <m>p=(u,v)</m> dengan
+        <m>v\neq0</m>. Tahap 2: gunakan <m>r=|v|/2</m> dan fakta bahwa jarak
+        Euklides dari <m>p</m> ke setiap titik sumbu sedikitnya <m>|v|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-04-answer">
+      <p>
+        Untuk setiap <m>p=(u,v)\notin A</m>, bola
+        <m>B_X(p,|v|/2)</m> termuat dalam <m>X\setminus A</m>. Jadi
+        <m>X\setminus A</m> terbuka dan <m>A</m> tertutup di <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-04-solution">
+      <p>
+        Ambil <m>p=(u,v)\in X\setminus A</m>. Karena <m>p</m> tidak berada
+        pada sumbu horizontal, <m>v\neq0</m>, sehingga
+        <m>r=|v|/2\gt0</m>. Untuk setiap <m>q=(s,0)\in A</m>,
+        <me>
+          d_E(p,q)=\sqrt{(u-s)^2+v^2}\geq |v|\gt r.
+        </me>
+        Jadi tidak ada titik <m>A</m> di <m>B_X(p,r)</m>, atau
+        <m>B_X(p,r)\subseteq X\setminus A</m>. Karena setiap titik komplemen
+        mempunyai bola ambien yang termuat dalam komplemen,
+        <m>X\setminus A</m> terbuka. Berdasarkan definisi, <m>A</m> tertutup
+        di <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-05">
+    <title>Segmen terbuka sebagai himpunan terbuka di sumbu</title>
+    <statement>
+      <p>
+        Dengan <m>A=\{(x,0)\mid x\in\R\}</m> dan
+        <m>Z=\{(x,0)\mid0\lt x\lt1\}</m>, buktikan bahwa <m>Z</m> terbuka
+        di subruang <m>A</m>. Rubrik: untuk titik sebarang <m>(x,0)\in Z</m>,
+        pilih radius positif yang lebih kecil daripada jaraknya ke kedua
+        ujung dan uji setiap titik bola relatif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-05-hint">
+      <p>
+        Tahap 1: ambil
+        <m>r=\frac12\min\{x,1-x\}</m>. Tahap 2: jika
+        <m>(y,0)\in B_A((x,0),r)</m>, gunakan <m>|y-x|\lt r</m> untuk
+        membuktikan <m>0\lt y\lt1</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-05-answer">
+      <p>
+        Setiap <m>(x,0)\in Z</m> mempunyai bola relatif
+        <m>B_A((x,0),\frac12\min\{x,1-x\})</m> yang termuat dalam
+        <m>Z</m>. Maka <m>Z</m> terbuka di <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-05-solution">
+      <p>
+        Ambil <m>p=(x,0)\in Z</m>. Karena <m>0\lt x\lt1</m>, bilangan
+        <m>r=\frac12\min\{x,1-x\}</m> positif. Jika
+        <m>q=(y,0)\in B_A(p,r)</m>, maka
+        <m>|y-x|=d_E(p,q)\lt r</m>. Karena <m>r\leq x/2</m>, kita memperoleh
+        <m>y\gt x-r\geq x/2\gt0</m>. Karena
+        <m>r\leq(1-x)/2</m>, kita juga memperoleh
+        <m>y\lt x+r\leq(1+x)/2\lt1</m>. Jadi <m>q\in Z</m>, sehingga
+        <m>B_A(p,r)\subseteq Z</m>. Konstruksi ini berlaku di setiap titik
+        <m>Z</m>; oleh sebab itu <m>Z</m> terbuka di subruang <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-06">
+    <title>Segmen sumbu tidak terbuka di bidang</title>
+    <statement>
+      <p>
+        Untuk himpunan <m>Z</m> pada panduan 5, tentukan apakah <m>Z</m>
+        terbuka di ruang ambien <m>X=\R^2</m> dan buktikan keputusan Anda.
+        Rubrik: ambil titik di <m>Z</m> dan radius sebarang, lalu temukan titik
+        di dalam bola ambien yang keluar dari sumbu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-06-hint">
+      <p>
+        Tahap 1: gunakan <m>p=(1/2,0)\in Z</m>. Tahap 2: untuk
+        <m>r\gt0</m>, periksa titik <m>q=(1/2,r/2)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-06-answer">
+      <p>
+        Himpunan <m>Z</m> tidak terbuka di <m>X=\R^2</m>. Setiap bola
+        ambien yang berpusat di <m>(1/2,0)</m> memuat titik di luar sumbu dan
+        karena itu tidak termuat dalam <m>Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-06-solution">
+      <p>
+        Titik <m>p=(1/2,0)</m> berada di <m>Z</m>. Ambil radius sebarang
+        <m>r\gt0</m> dan tetapkan <m>q=(1/2,r/2)</m>. Jaraknya ialah
+        <me>
+          d_E(p,q)=r/2\lt r,
+        </me>
+        sehingga <m>q\in B_X(p,r)</m>. Namun koordinat kedua <m>q</m> tidak
+        nol, jadi <m>q\notin A</m> dan khususnya <m>q\notin Z</m>. Dengan
+        demikian, tidak ada bola terbuka di <m>X</m> yang berpusat di
+        <m>p</m> dan termuat dalam <m>Z</m>. Maka <m>Z</m> tidak terbuka di
+        <m>X</m>, meskipun panduan 5 membuktikan bahwa <m>Z</m> terbuka di
+        subruang <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-07">
+    <title>Bola ambien dari keterbukaan himpunan pemotong</title>
+    <statement>
+      <p>
+        Misalkan <m>A\subseteq X</m>, <m>O_X</m> terbuka di ruang metrik
+        <m>X</m>, dan <m>O_A=A\cap O_X</m>. Untuk <m>a\in O_A</m>, buktikan
+        bahwa terdapat <m>\delta\gt0</m> dengan
+        <m>B_X(a,\delta)\subseteq O_X</m>. Rubrik: uraikan keanggotaan dalam
+        irisan, lalu terapkan definisi keterbukaan di ruang ambien yang tepat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-07-hint">
+      <p>
+        Tahap 1: dari <m>a\in A\cap O_X</m>, simpulkan dua fakta keanggotaan.
+        Tahap 2: hanya fakta <m>a\in O_X</m> dan keterbukaan <m>O_X</m> di
+        <m>X</m> yang diperlukan untuk memperoleh bola ambien.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-07-answer">
+      <p>
+        Karena <m>a\in O_A=A\cap O_X</m>, berlaku <m>a\in O_X</m>. Karena
+        <m>O_X</m> terbuka di <m>X</m>, ada <m>\delta\gt0</m> sehingga
+        <m>B_X(a,\delta)\subseteq O_X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-07-solution">
+      <p>
+        Keanggotaan <m>a\in A\cap O_X</m> berarti sekaligus
+        <m>a\in A</m> dan <m>a\in O_X</m>. Definisi himpunan terbuka di
+        <m>X</m> menyatakan bahwa setiap titik <m>O_X</m> menjadi pusat suatu
+        bola terbuka ambien yang termuat di <m>O_X</m>. Oleh karena itu,
+        terdapat <m>\delta\gt0</m> dengan
+        <m>B_X(a,\delta)\subseteq O_X</m>. Pada tahap ini bolanya berada di
+        <m>X</m>; kita belum menyatakan bahwa bola itu merupakan bola di
+        subruang <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-08">
+    <title>Memotong bola ambien menjadi bola subruang</title>
+    <statement>
+      <p>
+        Lanjutkan panduan 7. Sumber meminta kandidat bola terbuka di <m>A</m>
+        yang berpusat di <m>a</m> dan termuat dalam <m>A</m>. Identifikasi
+        kandidat itu dan buktikan pernyataan yang lebih kuat yang diperlukan
+        oleh pembuktian, yaitu bahwa bola tersebut termuat dalam <m>O_A</m>.
+        Rubrik: gunakan definisi metrik pembatasan untuk membuktikan kesamaan
+        bola, lalu gunakan dua inklusi yang sudah diketahui.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-08-hint">
+      <p>
+        Tahap 1: kandidatnya adalah <m>B_A(a,\delta)</m> dan
+        <m>B_A(a,\delta)=A\cap B_X(a,\delta)</m>. Tahap 2: gabungkan
+        <m>B_X(a,\delta)\subseteq O_X</m> dengan
+        <m>O_A=A\cap O_X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-08-answer">
+      <p>
+        Kandidatnya ialah
+        <m>B_A(a,\delta)=A\cap B_X(a,\delta)</m>. Karena bola ambien termuat
+        dalam <m>O_X</m>, berlaku
+        <m>B_A(a,\delta)\subseteq A\cap O_X=O_A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-08-solution">
+      <p>
+        Karena <m>d_A</m> adalah pembatasan <m>d</m> ke <m>A\times A</m>,
+        untuk setiap <m>x\in A</m> berlaku
+        <me>
+          x\in B_A(a,\delta)
+          \iff d_A(x,a)\lt\delta
+          \iff d(x,a)\lt\delta
+          \iff x\in B_X(a,\delta).
+        </me>
+        Dengan tetap mengingat syarat <m>x\in A</m>, ekuivalensi ini memberi
+        <m>B_A(a,\delta)=A\cap B_X(a,\delta)</m>.
+      </p>
+      <p>
+        Panduan 7 memberi <m>B_X(a,\delta)\subseteq O_X</m>. Maka
+        <me>
+          B_A(a,\delta)
+          =A\cap B_X(a,\delta)
+          \subseteq A\cap O_X
+          =O_A.
+        </me>
+        Jadi kandidat itu bukan hanya termuat dalam <m>A</m>, sebagaimana
+        diminta secara harfiah oleh tugas sumber, melainkan termuat dalam
+        <m>O_A</m>. Inklusi yang lebih kuat inilah yang diperlukan untuk
+        membuktikan keterbukaan <m>O_A</m> di <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch11-guide-09">
+    <title>Menyelesaikan implikasi sebaliknya</title>
+    <statement>
+      <p>
+        Dari panduan 7 dan 8, tarik kesimpulan tentang <m>O_A</m> sebagai
+        subhimpunan dari subruang <m>A</m>, lalu nyatakan implikasi sebaliknya
+        yang telah dibuktikan. Rubrik: kuantifikasikan argumen untuk setiap
+        <m>a\in O_A</m> dan sebutkan ruang tempat setiap bola serta setiap
+        keterbukaan dihitung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch11-guide-09-hint">
+      <p>
+        Tahap 1: untuk setiap <m>a\in O_A</m>, panduan sebelumnya menghasilkan
+        <m>\delta_a\gt0</m> dengan
+        <m>B_A(a,\delta_a)\subseteq O_A</m>. Tahap 2: cocokkan pernyataan ini
+        dengan definisi himpunan terbuka di ruang metrik <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch11-guide-09-answer">
+      <p>
+        Himpunan <m>O_A</m> terbuka di <m>A</m>. Jadi, jika
+        <m>O_A=A\cap O_X</m> untuk suatu <m>O_X</m> yang terbuka di <m>X</m>,
+        maka <m>O_A</m> terbuka dalam topologi subruang <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch11-guide-09-solution">
+      <p>
+        Ambil sembarang <m>a\in O_A</m>. Karena <m>a\in O_X</m> dan
+        <m>O_X</m> terbuka di <m>X</m>, panduan 7 memberi
+        <m>\delta_a\gt0</m> dengan
+        <m>B_X(a,\delta_a)\subseteq O_X</m>. Panduan 8 kemudian memberi
+        <me>
+          B_A(a,\delta_a)
+          =A\cap B_X(a,\delta_a)
+          \subseteq A\cap O_X
+          =O_A.
+        </me>
+        Jadi setiap titik <m>O_A</m> mempunyai bola terbuka di <m>A</m> yang
+        termuat dalam <m>O_A</m>. Menurut definisi, <m>O_A</m> terbuka di
+        <m>A</m>. Ini membuktikan implikasi sebaliknya dari karakterisasi
+        himpunan terbuka dalam subruang.
+      </p>
+      <p>
+        Untuk membaca arah maju karakterisasi tersebut dengan lingkup yang
+        tepat, radius <m>\delta_a</m> hanya perlu dipilih, dan hanya dijamin
+        ada, bagi <m>a\in O_A</m>; tidak diperlukan pilihan bagi semua
+        <m>a\in A</m>. Pembedaan kuantor ini juga menjaga agar keterbukaan di
+        <m>A</m> tidak tertukar dengan keterbukaan di <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

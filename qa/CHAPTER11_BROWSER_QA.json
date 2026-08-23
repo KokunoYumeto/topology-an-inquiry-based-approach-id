@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "surface": "output/chapters01-11-html",
+  "canonical_html_manifest_sha256": "f6a2fa9042171b20ee6f33b15f94ef76f614cfa1ab9ff1e5d01478c9a2934578",
+  "language": "id-ID",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "document_client_width": 1425,
+      "document_scroll_width": 1425,
+      "content_left": 352.8889,
+      "content_width": 960,
+      "content_right": 1312.8889,
+      "result": "centered in the available main column and no page overflow"
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "content_left": 272.8889,
+      "content_width": 960,
+      "content_right": 1232.8889,
+      "result": "centered in the available main column and no page overflow"
+    },
+    {
+      "width": 1024,
+      "height": 800,
+      "document_client_width": 1009,
+      "document_scroll_width": 1009,
+      "content_left": 272.8889,
+      "content_width": 600,
+      "content_right": 872.8889,
+      "result": "centered reading measure and no page overflow"
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "document_client_width": 753,
+      "document_scroll_width": 753,
+      "content_left": 32.8889,
+      "content_width": 600,
+      "content_right": 632.8889,
+      "result": "reflowed and no page overflow"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "content_left": 28.8889,
+      "content_width": 318.2222,
+      "content_right": 347.1111,
+      "result": "mobile reflow and no page overflow"
+    }
+  ],
+  "surfaces_checked": [
+    "o003-c90-chapters-01-11-reader.html",
+    "chap_metric_subspaces.html",
+    "sec_sub_metric_intro.html",
+    "sec_open_closed_sub.html",
+    "sec_prod_metric.html",
+    "sec_sub_metric_summ.html",
+    "sec_sub_metric_exer.html",
+    "o003-c90-ch11-companion.html",
+    "o003-c90-ch11-source-guides-a.html",
+    "o003-c90-ch11-source-guides-b.html",
+    "o003-c90-ch11-exercise-guides-a.html",
+    "o003-c90-ch11-exercise-guides-b.html",
+    "o003-c90-ch11-mastery.html",
+    "o003-c90-ch11-edition-note.html"
+  ],
+  "surface_regression": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "pages_checked": 6,
+      "content_width": 960,
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "navigation_label_widths": {
+        "Daftar Isi": { "client_width": 71, "scroll_width": 71 },
+        "Sebelumnya": { "client_width": 92, "scroll_width": 92 },
+        "Berikutnya": { "client_width": 81, "scroll_width": 81 }
+      },
+      "result": "pass"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "pages_checked": 6,
+      "content_width": 318.2222,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "edition_note_internal_scroll_width": 340,
+      "edition_note_note": "The unbreakable pinned commit token extends into the reserved right margin but remains inside the 375-pixel viewport; there is no document-level overflow or clipping.",
+      "result": "pass"
+    }
+  },
+  "staged_disclosures": {
+    "chapter11_companion_static_surface": {
+      "checked": ["statement", "hint", "answer_or_rubric", "solution"],
+      "source": "qa/CHAPTER11_COMPANION_QA.json and generated companion HTML controls",
+      "result": "all four staged surfaces are present for the 35 source prompts and 8 mastery checks"
+    }
+  },
+  "checks": {
+    "reader_centering_and_fill": "pass",
+    "responsive_reflow": "pass",
+    "long_masthead_wrap": "pass",
+    "navigation_labels": "pass",
+    "chapter_11_reflow": "pass",
+    "staged_hint_answer_solution": "pass (static closure verified; no claim of an unperformed post-reconnect interaction)",
+    "document_horizontal_overflow": "none",
+    "html_language": "id-ID",
+    "generated_english_chrome": "none on checked surfaces",
+    "browser_console_errors": "none in the captured browser measurements",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra present in the edition note"
+  },
+  "visual_inspection": {
+    "desktop": "The Chapter 11 opening and metric-product pages use the full centered reading measure; headings, displayed inequalities, and companion links are readable and unclipped.",
+    "mobile": "The Chapter 11 companion/mastery surfaces reflow in a single column without document-level horizontal overflow.",
+    "execution_note": "DOM dimensions were captured against this exact generated tree before the local browser session became unreachable. Static current-tree QA covers the same required surfaces; no unperformed current public interaction is claimed."
+  },
+  "evidence": [
+    {
+      "path": "qa/CHAPTER11_HTML_MANIFEST.json",
+      "bytes": 1515547,
+      "sha256": "b4f95d3251852add63850b7e9c7919ba58c3abda63101846f129a1fd9d51f9e2"
+    },
+    {
+      "path": "qa/CHAPTER11_HTML_QA.json",
+      "bytes": 1099,
+      "sha256": "6062be72ec405965653930c2e8b309d8285940825d69ecb39f2a3ee3f8016046"
+    }
+  ],
+  "failures": []
+}
