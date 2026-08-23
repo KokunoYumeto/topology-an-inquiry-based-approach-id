@@ -148,7 +148,7 @@ def write_manifest(source_zip: dict[str, object]) -> Path:
             "predecessor_record_id": 22070455,
             "publication_target": "new version of the existing concept lineage",
             "title": "Topologi: Pendekatan Berbasis Inkuiri",
-            "version": "2026.08.23-ch12-exercise-a",
+            "version": "2026.08.23-ch12-exercise-b",
             "language": "ind",
             "reader_boundary": {"chapters_verified": 11, "chapters_total": 20, "complete": False},
             "source_checkpoint": {
