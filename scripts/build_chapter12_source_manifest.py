@@ -73,6 +73,7 @@ HTML_RUN_1 = "qa/CHAPTER12_HTML_MANIFEST_RUN1.json"
 HTML_RUN_2 = "qa/CHAPTER12_HTML_MANIFEST_RUN2.json"
 HTML_QA = "qa/CHAPTER12_HTML_QA.json"
 BROWSER_QA = "qa/CHAPTER12_BROWSER_QA.json"
+ASSET_PDF_QA = "qa/CHAPTER12_ASSET_PDF_METADATA_QA.json"
 PDF_RECEIPTS = {
     "deterministic_run_1": "qa/CHAPTER12_PDF_RUN1_HASH.json",
     "deterministic_run_2": "qa/CHAPTER12_PDF_RUN2_HASH.json",
@@ -388,7 +389,8 @@ def build_manifest() -> dict[str, Any]:
         raise RuntimeError("Chapter 12 PDF visual QA has no positive page count")
     qa_paths = [
         SOURCE_QA, COMPANION_QA, SCHEMA_QA, HTML_MANIFEST, HTML_RUN_1,
-        HTML_RUN_2, HTML_QA, BROWSER_QA, *PDF_RECEIPTS.values(), *DOCS_RECEIPTS,
+        HTML_RUN_2, HTML_QA, BROWSER_QA, ASSET_PDF_QA,
+        *PDF_RECEIPTS.values(), *DOCS_RECEIPTS,
     ]
     qa_rows: dict[str, dict[str, object]] = {}
     for relative in qa_paths:
@@ -450,10 +452,11 @@ def build_manifest() -> dict[str, Any]:
     manifest = {
         "schema_version": 1,
         "status": "pass",
-        "partial": False,
+        "partial": True,
+        "boundary_complete": True,
         "pending_evidence": [],
         "boundary": BOUNDARY,
-        "admission_status": "complete_admitted_cumulative_reader",
+        "admission_status": "partial_checkpoint_admitted",
         "lane": "O003/C90",
         "locale": "id-ID",
         "prior_admission": {"path": f"repo/{PRIOR_MANIFEST}", **identity(ROOT / PRIOR_MANIFEST)},
@@ -505,6 +508,7 @@ def build_manifest() -> dict[str, Any]:
                 "qa": qa_rows[HTML_QA],
                 "browser_qa": {**qa_rows[BROWSER_QA], "status": "pass", "evidence": evidence_rows},
             },
+            "standalone_pdf_asset_metadata_qa": qa_rows[ASSET_PDF_QA],
             "pdf": {
                 **pdf_row,
                 "status": "pass",
@@ -536,8 +540,12 @@ def build_manifest() -> dict[str, Any]:
             "Whole-book figure-provenance and complete-edition closure remain later gates.",
         ],
     }
-    if "partial" in json.dumps(manifest.get("admission_status")):
-        raise RuntimeError("partial admission language leaked into final status")
+    if (
+        manifest.get("partial") is not True
+        or manifest.get("boundary_complete") is not True
+        or manifest.get("admission_status") != "partial_checkpoint_admitted"
+    ):
+        raise RuntimeError("Chapter 12 checkpoint scope is not represented truthfully")
     return manifest
 
 

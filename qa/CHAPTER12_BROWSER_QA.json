@@ -3,7 +3,7 @@
   "checked_at": "2026-08-24",
   "status": "pass",
   "surface": "output/chapters01-12-html",
-  "canonical_html_manifest_sha256": "bb8cb02b6bcb928b9adaa8bcd2207a7e887efa3ebded3b303132a6998a059907",
+  "canonical_html_manifest_sha256": "2fabac1179b4a079a98ea699ac4a7bc7b041e2e4cd903b08df8a2d1ca9d174aa",
   "language": "id-ID",
   "viewports": [
     {
@@ -128,16 +128,22 @@
     "desktop": "The corrected Chapter 12 guide, mastery surface, edition note, reader front page, and forward-boundary page fill the available main column; headings, prose, formulas, and navigation are unclipped.",
     "mobile": "The 390-pixel reader masthead and contents reflow cleanly. The corrected guide and mastery exercise each opened statement, hint, answer, and complete solution in a 375-pixel document with no horizontal overflow."
   },
+  "post_browser_metadata_sanitation": {
+    "scope": "20 standalone figure PDFs whose legacy upstream Info fields contained absolute author-workstation paths",
+    "change": "removed PDF Info/XMP metadata only; page count, boxes, rotations, and decoded content streams remained identical",
+    "visual_regression": "all 20 before/after 150-dpi Poppler PNG pairs have identical SHA-256 values",
+    "reader_effect": "none; the two clean HTML builds after sanitation are byte-identical and the previously inspected HTML/CSS/JS surfaces did not change"
+  },
   "evidence": [
     {
       "path": "qa/CHAPTER12_HTML_MANIFEST.json",
-      "bytes": 1781762,
-      "sha256": "e669bddb1dc6b871b309dd13fafd3c2fafabfd91b23c7708bc9adff46e17cad9"
+      "bytes": 1781758,
+      "sha256": "9f7eb1d6526f7b0608d10ebf7c5ca20dfa2a4bf94b5d9a37a369cfbdebf24029"
     },
     {
       "path": "qa/CHAPTER12_HTML_QA.json",
       "bytes": 1648,
-      "sha256": "824142ac7c25b3e4ad80227e8933633ef970d188dc3b3136940986b5d4b8d364"
+      "sha256": "7facb1fa8bdc11a357db672a5c5925cbe4c041422070fd298e4fc216aef7df6f"
     }
   ],
   "failures": []

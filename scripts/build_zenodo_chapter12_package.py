@@ -10,12 +10,15 @@ inputs without creating package artifacts.
 from __future__ import annotations
 
 import argparse
+from io import BytesIO
 import json
 from pathlib import Path, PurePosixPath
 import shutil
 
 from build_zenodo_chapter11_package import (
+    PdfReader,
     assert_pdf_privacy,
+    assert_public_text,
     assert_sanitized,
     deterministic_zip,
     digest,
@@ -62,6 +65,7 @@ REQUIRED_INVENTORY = {
     "repo/qa/CHAPTER12_HTML_MANIFEST.json",
     "repo/qa/CHAPTER12_HTML_QA.json",
     "repo/qa/CHAPTER12_BROWSER_QA.json",
+    "repo/qa/CHAPTER12_ASSET_PDF_METADATA_QA.json",
     "repo/qa/CHAPTER12_PDF_VISUAL_QA.json",
     "repo/qa/CHAPTER12_BUILD_QA.md",
 }
@@ -74,6 +78,32 @@ def is_historical_partial_path(value: str) -> bool:
         or "chapter12_companion_partial" in name
         or name == "build_zenodo_chapter12_partial_package.py"
     )
+
+
+def assert_pdf_payload_privacy(name: str, data: bytes) -> None:
+    """Inspect metadata for every PDF carried inside either release ZIP."""
+    reader = PdfReader(BytesIO(data))
+    metadata = reader.metadata
+    if metadata is not None:
+        assert_public_text(
+            f"{name} metadata",
+            "\n".join(str(value) for value in metadata.values()),
+        )
+    root = reader.trailer.get("/Root")
+    if root is None:
+        return
+    metadata_stream = root.get_object().get("/Metadata")
+    if metadata_stream is None:
+        return
+    payload = metadata_stream.get_object().get_data()
+    if payload.startswith((b"\xff\xfe", b"\xfe\xff")):
+        text = payload.decode("utf-16")
+    elif b"\x00" in payload[:128]:
+        encoding = "utf-16-be" if payload[:1] == b"\x00" else "utf-16-le"
+        text = payload.decode(encoding)
+    else:
+        text = payload.decode("utf-8-sig")
+    assert_public_text(f"{name} XMP", text)
 
 
 def html_entries(
@@ -98,6 +128,8 @@ def html_entries(
             raise RuntimeError(f"HTML file differs from manifest: {relative}")
         archive_name = safe_archive_name(f"reader/{relative.as_posix()}")
         assert_sanitized(archive_name, data)
+        if relative.suffix.casefold() == ".pdf":
+            assert_pdf_payload_privacy(archive_name, data)
         entries[archive_name] = data
         total += len(data)
     if total != expected_html["bytes"]:
@@ -178,6 +210,8 @@ def source_entries(source_manifest: dict[str, object]) -> dict[str, bytes]:
             manifest_path,
         )
         archive_name, data = file_entry(f"{prefix}/{manifest_path}", disk_path)
+        if disk_path.suffix.casefold() == ".pdf":
+            assert_pdf_payload_privacy(archive_name, data)
         entries[archive_name] = data
 
     archive_row = require_dict(source_manifest.get("package_authority_archive"), "authority archive")
@@ -207,12 +241,13 @@ def validate_inputs() -> tuple[dict[str, object], dict[str, object], dict[str, o
     source_manifest = read_json(SOURCE_MANIFEST)
     if (
         source_manifest.get("status") != "pass"
-        or source_manifest.get("partial") is not False
+        or source_manifest.get("partial") is not True
+        or source_manifest.get("boundary_complete") is not True
         or source_manifest.get("pending_evidence") != []
         or source_manifest.get("boundary") != BOUNDARY
-        or source_manifest.get("admission_status") != "complete_admitted_cumulative_reader"
+        or source_manifest.get("admission_status") != "partial_checkpoint_admitted"
     ):
-        raise RuntimeError("source manifest is not a full admitted Chapter 12 boundary")
+        raise RuntimeError("source manifest is not a truthful admitted Chapter 12 checkpoint")
     provenance = require_dict(source_manifest.get("production_provenance"), "production provenance")
     if provenance.get("tool") != MODEL:
         raise RuntimeError("source manifest model provenance changed")
@@ -292,7 +327,8 @@ def main() -> int:
     if args.check_only:
         print(json.dumps({
             "status": "pass",
-            "partial": False,
+            "partial": True,
+            "boundary_complete": True,
             "boundary": BOUNDARY,
             "pdf_pages": pages,
             "html_entries": len(html_payload),
@@ -333,9 +369,10 @@ def main() -> int:
     package_manifest = {
         "schema_version": 1,
         "status": "pass",
-        "partial": False,
+        "partial": True,
+        "boundary_complete": True,
         "boundary": BOUNDARY,
-        "admission_status": "complete_admitted_cumulative_reader",
+        "admission_status": "partial_checkpoint_admitted",
         "record": {
             "concept_doi": args.concept_doi,
             "predecessor_record_id": args.predecessor_record_id,
@@ -382,7 +419,7 @@ def main() -> int:
             "zip_deterministic_double_build": "pass",
             "textual_privacy_scan": "private-name, common absolute/local-path, and credential markers absent",
             "binary_credential_marker_scan": "pass",
-            "pdf_metadata_and_xmp_privacy_scan": "pass",
+            "pdf_metadata_and_xmp_privacy_scan": "all standalone and packaged PDFs pass",
             "raw_build_logs_included": False,
             "source_inventory_identity_validation": "pass",
             "historical_partial_package_used": False,
@@ -400,7 +437,8 @@ def main() -> int:
         raise RuntimeError(f"final package output set differs: {sorted(actual_names)}")
     print(json.dumps({
         "status": "pass",
-        "partial": False,
+        "partial": True,
+        "boundary_complete": True,
         "output_directory": output.name,
         "files": [*file_rows, {"path": MANIFEST_NAME, **identity(manifest_target), "role": "package manifest"}],
     }, ensure_ascii=False, indent=2, sort_keys=True))

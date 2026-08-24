@@ -85,21 +85,31 @@ and MiKTeX 26.5.
 
 Two clean corrected HTML builds produced byte-identical manifests. The
 canonical generated tree has 10,873 files, 10,762 HTML documents, and
-27,819,097 bytes; its canonical tree identity is
-`bb8cb02b6bcb928b9adaa8bcd2207a7e887efa3ebded3b303132a6998a059907`.
-Each 1,781,762-byte manifest file has SHA-256
-`e669bddb1dc6b871b309dd13fafd3c2fafabfd91b23c7708bc9adff46e17cad9`.
+27,780,876 bytes; its canonical tree identity is
+`2fabac1179b4a079a98ea699ac4a7bc7b041e2e4cd903b08df8a2d1ca9d174aa`.
+Each 1,781,758-byte manifest file has SHA-256
+`9f7eb1d6526f7b0608d10ebf7c5ca20dfa2a4bf94b5d9a37a369cfbdebf24029`.
 `CHAPTER12_HTML_QA.json` is 1,648 bytes / SHA-256
-`824142ac7c25b3e4ad80227e8933633ef970d188dc3b3136940986b5d4b8d364`,
+`7facb1fa8bdc11a357db672a5c5925cbe4c041422070fd298e4fc216aef7df6f`,
 checking 40,853 local links/assets and 40 image references with zero failures.
+
+Twenty legacy upstream figure PDFs carried absolute author-workstation paths
+in their PDF Info fields. The edition working copies now omit Info/XMP
+metadata while preserving each page count, box, rotation, and decoded content
+stream. Poppler renders at 150 dpi produced byte-identical PNGs before and
+after sanitation for all 20 figures. The pinned upstream archive remains the
+unaltered source witness, and the release-package gate now inspects metadata
+for every standalone and ZIP-contained PDF rather than only the reader PDF.
+The 15,384-byte asset receipt has SHA-256
+`7133da5332aefb493bc655d36e9cdf863fa7ebe23118ea8f38750b19b5b7bac7`.
 
 Live browser checks covered 1440, 1280, 1024, 768, and 390 CSS-pixel widths.
 The main column fills the available reading area, `lang="id-ID"` and localized
 chrome remain intact, and no checked page has document-level horizontal
 overflow. The corrected neighborhood guide and a mastery check each opened
 their statement, hint, answer, and complete solution on a 390-pixel viewport.
-The 5,456-byte browser receipt has SHA-256
-`37928b691e9a774b9a30c643eb26b2256fc50a181c8a5d265e7e699dcfdb63c9`.
+The 6,011-byte browser receipt has SHA-256
+`8a41225783f80c80238252d8ee3a2d73a3ba8138558e2bdc51732d5101bbe7e0`.
 
 ## Deterministic PDF and visual inspection
 
@@ -128,15 +138,15 @@ The PDF is not tagged; HTML remains the primary accessible surface.
 
 The non-destructive `docs/` overlay retains historical reader entry points and
 earlier PDFs while adding the complete Chapters 1-12 reader and the primary
-328-page PDF. It contains 10,893 files (10,770 HTML), totaling 43,041,899
-bytes. The detailed manifest is 1,785,458 bytes / SHA-256
-`7ba1fe88625f324160bdee352569bf075664e2534d0510f0e36656ad16865880`;
+328-page PDF. It contains 10,893 files (10,770 HTML), totaling 43,003,678
+bytes. The detailed manifest is 1,785,454 bytes / SHA-256
+`cb8b3669780fe1a810b55cec6574e5a618cd0e65767e8b3cc5cfdc01d654cf2a`;
 the compact manifest is 828 bytes / SHA-256
-`2920678917033a2ee09813391b541d39f8035e542a154f6235899b830ed2d836`;
+`bf7c1b0318ba3a2adb3cd119bf8b675a070522265a09196deeb91ad70d1f3ba0`;
 the canonical tree identity is
-`a749d168442288e488962f6bccc75031976b902a8025a57c78a51f330cfbc865`.
+`9eec3dc1fbafba38b0256a8d8e0f96a49e6db48f0f18eb94e4a4ecb0f9f541fa`.
 `CHAPTER12_DOCS_QA.json` is 1,110 bytes / SHA-256
-`bd656103c65515b2b8e8a8d96c04154775bccfd0c90a2967cbd3d5be41151d0a`,
+`3a699b8afef5583dd93661bf898c93b8ffad217e4b92404beda8e354747ea20f`,
 checking 42,105 links/assets and 40 images with zero failures. The primary
 download is the verified 328-page PDF above.
 

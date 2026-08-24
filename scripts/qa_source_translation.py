@@ -40,6 +40,25 @@ def normalized_math(node: etree._Element) -> str:
     return " ".join(value.split())
 
 
+def subtree_topology_signature(
+    root: etree._Element,
+) -> list[tuple[str, tuple[tuple[str, str], ...], int]]:
+    """Return preorder tags/attributes plus parent indices for one subtree."""
+    signature: list[tuple[str, tuple[tuple[str, str], ...], int]] = []
+
+    def visit(node: etree._Element, parent_index: int) -> None:
+        node_index = len(signature)
+        signature.append(
+            (local_name(node), tuple(sorted(node.attrib.items())), parent_index)
+        )
+        for child in node:
+            if isinstance(child.tag, str):
+                visit(child, node_index)
+
+    visit(root, -1)
+    return signature
+
+
 def hash_file(path: Path) -> dict[str, object]:
     data = path.read_bytes()
     return {
@@ -73,6 +92,20 @@ def main() -> int:
         action="append",
         default=[],
         metavar="FILE:ZERO_BASED_TRANSLATED_START:ELEMENT_COUNT:ZERO_BASED_AUTHORITY_START:ROOT_TAG",
+    )
+    parser.add_argument(
+        "--allow-cross-file-element-block-move",
+        action="append",
+        default=[],
+        metavar=(
+            "SOURCE_FILE:ZERO_BASED_AUTHORITY_START:ELEMENT_COUNT:"
+            "TARGET_FILE:ZERO_BASED_TRANSLATED_START:ROOT_TAG"
+        ),
+        help=(
+            "Approve one complete authority subtree moved to another translated "
+            "file. The subtree's element/attribute topology, xml:id values, and "
+            "protected mathematics/code must be retained; prose may be localized."
+        ),
     )
     parser.add_argument(
         "--allow-element-shell-move",
@@ -137,6 +170,46 @@ def main() -> int:
             raise SystemExit(f"invalid --allow-element-insertion: {specification}")
         insertion_allowances.setdefault(file_name, []).append((index, tag, specification))
     observed_element_insertions: list[dict[str, object]] = []
+    cross_file_move_allowances: list[dict[str, object]] = []
+    for ordinal, specification in enumerate(args.allow_cross_file_element_block_move):
+        try:
+            (
+                source_file,
+                authority_start_text,
+                count_text,
+                target_file,
+                translated_start_text,
+                root_tag,
+            ) = specification.rsplit(":", 5)
+            authority_start = int(authority_start_text)
+            count = int(count_text)
+            translated_start = int(translated_start_text)
+        except (ValueError, TypeError):
+            raise SystemExit(
+                f"invalid --allow-cross-file-element-block-move: {specification}"
+            )
+        if (
+            not source_file
+            or not target_file
+            or not root_tag
+            or count <= 0
+        ):
+            raise SystemExit(
+                f"invalid --allow-cross-file-element-block-move: {specification}"
+            )
+        cross_file_move_allowances.append(
+            {
+                "ordinal": ordinal,
+                "key": specification,
+                "source_file": source_file,
+                "authority_start": authority_start,
+                "element_count": count,
+                "target_file": target_file,
+                "translated_start": translated_start,
+                "root_tag": root_tag,
+            }
+        )
+    observed_cross_file_element_block_moves: list[dict[str, object]] = []
     move_allowances: dict[str, list[tuple[int, int, int, str, str]]] = {}
     for specification in args.allow_element_block_move:
         try:
@@ -168,6 +241,10 @@ def main() -> int:
         )
     observed_element_shell_moves: list[dict[str, object]] = []
 
+    parsed_files: dict[
+        str,
+        tuple[Path, Path, etree._Element, etree._Element],
+    ] = {}
     for name in args.files:
         authority_path = (authority_root / name).resolve(strict=True)
         translated_path = (translated_root / name).resolve(strict=True)
@@ -184,9 +261,251 @@ def main() -> int:
         except (etree.XMLSyntaxError, OSError) as exc:
             failures.append(f"XML parse failure in {name}: {exc}")
             continue
+        parsed_files[name] = (
+            authority_path,
+            translated_path,
+            authority_root_node,
+            translated_root_node,
+        )
 
-        authority_elements = elements(authority_root_node)
-        translated_elements = elements(translated_root_node)
+    colliding_cross_file_allowances: set[int] = set()
+    for left_index, left in enumerate(cross_file_move_allowances):
+        left_source_file = str(left["source_file"])
+        left_target_file = str(left["target_file"])
+        left_source_identity: object = left_source_file
+        left_target_identity: object = left_target_file
+        if left_source_file in parsed_files:
+            left_source_identity = parsed_files[left_source_file][0].relative_to(
+                authority_root
+            )
+        if left_target_file in parsed_files:
+            left_target_identity = parsed_files[left_target_file][1].relative_to(
+                translated_root
+            )
+        if left_source_identity == left_target_identity:
+            failures.append(
+                "cross-file element-block-move uses the same source and target file: "
+                f"{left['key']}"
+            )
+            colliding_cross_file_allowances.add(int(left["ordinal"]))
+        for right in cross_file_move_allowances[left_index + 1:]:
+            right_source_file = str(right["source_file"])
+            right_target_file = str(right["target_file"])
+            right_source_identity: object = right_source_file
+            right_target_identity: object = right_target_file
+            if right_source_file in parsed_files:
+                right_source_identity = parsed_files[right_source_file][0].relative_to(
+                    authority_root
+                )
+            if right_target_file in parsed_files:
+                right_target_identity = parsed_files[right_target_file][1].relative_to(
+                    translated_root
+                )
+            source_overlap = (
+                left_source_identity == right_source_identity
+                and int(left["authority_start"])
+                < int(right["authority_start"]) + int(right["element_count"])
+                and int(right["authority_start"])
+                < int(left["authority_start"]) + int(left["element_count"])
+            )
+            target_overlap = (
+                left_target_identity == right_target_identity
+                and int(left["translated_start"])
+                < int(right["translated_start"]) + int(right["element_count"])
+                and int(right["translated_start"])
+                < int(left["translated_start"]) + int(left["element_count"])
+            )
+            if source_overlap or target_overlap:
+                collision_kinds = []
+                if source_overlap:
+                    collision_kinds.append("authority-source")
+                if target_overlap:
+                    collision_kinds.append("translated-target")
+                failures.append(
+                    "colliding cross-file element-block-move allowances "
+                    f"({'+'.join(collision_kinds)}): {left['key']} ; {right['key']}"
+                )
+                colliding_cross_file_allowances.update(
+                    {int(left["ordinal"]), int(right["ordinal"])}
+                )
+
+    removed_authority_indices: dict[str, set[int]] = {}
+    removed_translated_indices: dict[str, set[int]] = {}
+    for allowance in cross_file_move_allowances:
+        ordinal = int(allowance["ordinal"])
+        specification = str(allowance["key"])
+        if ordinal in colliding_cross_file_allowances:
+            continue
+        source_file = str(allowance["source_file"])
+        target_file = str(allowance["target_file"])
+        authority_start = int(allowance["authority_start"])
+        translated_start = int(allowance["translated_start"])
+        count = int(allowance["element_count"])
+        expected_root_tag = str(allowance["root_tag"])
+        if source_file not in parsed_files:
+            failures.append(
+                "cross-file element-block-move source is not a parsed input file: "
+                f"{specification}"
+            )
+            continue
+        if target_file not in parsed_files:
+            failures.append(
+                "cross-file element-block-move target is not a parsed input file: "
+                f"{specification}"
+            )
+            continue
+
+        source_authority_elements = elements(parsed_files[source_file][2])
+        target_translated_elements = elements(parsed_files[target_file][3])
+        if (
+            authority_start < 0
+            or authority_start + count > len(source_authority_elements)
+        ):
+            failures.append(
+                "cross-file element-block-move authority range out of bounds: "
+                f"{specification}"
+            )
+            continue
+        if (
+            translated_start < 0
+            or translated_start + count > len(target_translated_elements)
+        ):
+            failures.append(
+                "cross-file element-block-move translated range out of bounds: "
+                f"{specification}"
+            )
+            continue
+
+        authority_block = source_authority_elements[
+            authority_start:authority_start + count
+        ]
+        translated_block = target_translated_elements[
+            translated_start:translated_start + count
+        ]
+        authority_subtree = elements(authority_block[0])
+        translated_subtree = elements(translated_block[0])
+        if len(authority_subtree) != count or any(
+            actual is not expected
+            for actual, expected in zip(authority_block, authority_subtree)
+        ):
+            failures.append(
+                "cross-file element-block-move authority range is not one complete "
+                f"subtree: {specification}"
+            )
+            continue
+        if len(translated_subtree) != count or any(
+            actual is not expected
+            for actual, expected in zip(translated_block, translated_subtree)
+        ):
+            failures.append(
+                "cross-file element-block-move translated range is not one complete "
+                f"subtree: {specification}"
+            )
+            continue
+        authority_root_tag = local_name(authority_block[0])
+        translated_root_tag = local_name(translated_block[0])
+        if (
+            authority_root_tag != expected_root_tag
+            or translated_root_tag != expected_root_tag
+        ):
+            failures.append(
+                "cross-file element-block-move root mismatch: "
+                f"{specification}; authority={authority_root_tag}, "
+                f"translated={translated_root_tag}"
+            )
+            continue
+
+        authority_signature = subtree_topology_signature(authority_block[0])
+        translated_signature = subtree_topology_signature(translated_block[0])
+        if authority_signature != translated_signature:
+            failures.append(
+                "cross-file element-block-move subtree topology/attributes differ "
+                f"from authority: {specification}"
+            )
+            continue
+        authority_ids = [node.get(XML_ID) for node in authority_block if node.get(XML_ID)]
+        translated_ids = [node.get(XML_ID) for node in translated_block if node.get(XML_ID)]
+        if authority_ids != translated_ids:
+            failures.append(
+                "cross-file element-block-move xml:id sequence differs from "
+                f"authority: {specification}"
+            )
+            continue
+        authority_math = [
+            (local_name(node), normalized_math(node))
+            for node in authority_block
+            if local_name(node) in MATH_TAGS
+        ]
+        translated_math = [
+            (local_name(node), normalized_math(node))
+            for node in translated_block
+            if local_name(node) in MATH_TAGS
+        ]
+        if authority_math != translated_math:
+            failures.append(
+                "cross-file element-block-move protected mathematics differs from "
+                f"authority: {specification}"
+            )
+            continue
+        authority_code = [
+            (local_name(node), serialized(node))
+            for node in authority_block
+            if local_name(node) in PROTECTED_TAGS
+        ]
+        translated_code = [
+            (local_name(node), serialized(node))
+            for node in translated_block
+            if local_name(node) in PROTECTED_TAGS
+        ]
+        if authority_code != translated_code:
+            failures.append(
+                "cross-file element-block-move protected code differs from "
+                f"authority: {specification}"
+            )
+            continue
+
+        removed_authority_indices.setdefault(source_file, set()).update(
+            range(authority_start, authority_start + count)
+        )
+        removed_translated_indices.setdefault(target_file, set()).update(
+            range(translated_start, translated_start + count)
+        )
+        target_payload = serialized(translated_block[0]).encode("utf-8")
+        observed_cross_file_element_block_moves.append(
+            {
+                "key": specification,
+                "source_file": source_file,
+                "source_authority_start": authority_start,
+                "element_count": count,
+                "target_file": target_file,
+                "target_translated_start": translated_start,
+                "root_tag": expected_root_tag,
+                "xml_id": translated_block[0].get(XML_ID),
+                "target_serialized_sha256": hashlib.sha256(target_payload).hexdigest(),
+            }
+        )
+
+    for name in args.files:
+        if name not in parsed_files:
+            continue
+        (
+            authority_path,
+            translated_path,
+            authority_root_node,
+            translated_root_node,
+        ) = parsed_files[name]
+        all_authority_elements = elements(authority_root_node)
+        all_translated_elements = elements(translated_root_node)
+        authority_elements = [
+            node
+            for index, node in enumerate(all_authority_elements)
+            if index not in removed_authority_indices.get(name, set())
+        ]
+        translated_elements = [
+            node
+            for index, node in enumerate(all_translated_elements)
+            if index not in removed_translated_indices.get(name, set())
+        ]
         authority_tags = [local_name(node) for node in authority_elements]
         translated_tags = [local_name(node) for node in translated_elements]
         authority_attributes = [sorted(node.attrib.items()) for node in authority_elements]
@@ -423,19 +742,27 @@ def main() -> int:
         if authority_protected != translated_protected:
             failures.append(f"protected code changed: {name}")
 
-        ids = [node.get(XML_ID) for node in translated_elements if node.get(XML_ID)]
-        refs = [node.get("ref") for node in translated_elements if local_name(node) == "xref" and node.get("ref")]
+        ids = [node.get(XML_ID) for node in all_translated_elements if node.get(XML_ID)]
+        refs = [
+            node.get("ref")
+            for node in all_translated_elements
+            if local_name(node) == "xref" and node.get("ref")
+        ]
         all_ids.extend(ids)
         all_refs.extend(refs)
-        tag_counts = Counter(translated_tags)
+        complete_translated_tags = [local_name(node) for node in all_translated_elements]
+        complete_translated_math = [
+            node for node in all_translated_elements if local_name(node) in MATH_TAGS
+        ]
+        tag_counts = Counter(complete_translated_tags)
         rows.append({
             "file": name,
             "authority": hash_file(authority_path),
             "translated": hash_file(translated_path),
-            "elements": len(translated_elements),
+            "elements": len(all_translated_elements),
             "ids": len(ids),
             "xrefs": len(refs),
-            "math": len(translated_math),
+            "math": len(complete_translated_math),
             "tasks": tag_counts["task"],
             "activities_and_explorations": tag_counts["activity"] + tag_counts["exploration"],
             "exercises": tag_counts["exercise"],
@@ -468,6 +795,26 @@ def main() -> int:
     )
     if unused_insertion_allowances:
         failures.append(f"unused element-insertion allowances: {unused_insertion_allowances}")
+    requested_cross_file_move_counts = Counter(
+        args.allow_cross_file_element_block_move
+    )
+    observed_cross_file_move_counts = Counter(
+        str(row["key"]) for row in observed_cross_file_element_block_moves
+    )
+    for specification, requested_count in sorted(
+        requested_cross_file_move_counts.items()
+    ):
+        observed_count = observed_cross_file_move_counts.get(specification, 0)
+        if requested_count != 1:
+            failures.append(
+                "cross-file element-block-move allowance must be specified exactly "
+                f"once: {specification}; requested {requested_count} times"
+            )
+        if observed_count != 1:
+            failures.append(
+                "cross-file element-block-move allowance was not used exactly once: "
+                f"{specification}; observed {observed_count} times"
+            )
     unused_move_allowances = sorted(
         set(args.allow_element_block_move)
         - {str(row["key"]) for row in observed_element_block_moves}
@@ -489,7 +836,7 @@ def main() -> int:
         combined.update((translated_root / name).read_bytes())
 
     report = {
-        "schema_version": 3,
+        "schema_version": 4,
         "status": "pass" if not failures else "fail",
         "files": rows,
         "combined_translated_sha256": combined.hexdigest(),
@@ -499,6 +846,9 @@ def main() -> int:
         "approved_external_xref_targets": observed_external_xrefs,
         "approved_math_changes": observed_allowed_math_changes,
         "approved_element_insertions": observed_element_insertions,
+        "approved_cross_file_element_block_moves": (
+            observed_cross_file_element_block_moves
+        ),
         "approved_element_block_moves": observed_element_block_moves,
         "approved_element_shell_moves": observed_element_shell_moves,
         "approved_attribute_changes": observed_attribute_changes,
