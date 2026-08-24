@@ -226,9 +226,6 @@ def source_entries(source_manifest: dict[str, object]) -> dict[str, bytes]:
         },
         "manifest-declared authority archive",
     )
-    archive_name, data = file_entry(f"{prefix}/{expected_archive_path}", AUTHORITY_ARCHIVE)
-    entries[archive_name] = data
-
     manifest_name = f"{prefix}/repo/qa/CHAPTER12_SOURCE_MANIFEST.json"
     archive_name, data = file_entry(manifest_name, SOURCE_MANIFEST)
     if archive_name in entries:
@@ -362,7 +359,7 @@ def main() -> int:
     file_rows = [
         {"path": PDF_NAME, **identity(pdf_target), "role": f"{pages}-page Indonesian cumulative Chapters 1-12 reader PDF"},
         {**html_zip, "role": "admitted cumulative Chapters 1-12 HTML reader and rights notes"},
-        {**source_zip, "role": "editable Chapters 1-12 source, companions, final backend, build code, authority archive, and sanitized QA"},
+        {**source_zip, "role": "editable Chapters 1-12 source, companions, final backend, build code, authority identity, and sanitized QA"},
         {"path": LICENSES_NAME, **identity(licenses_target), "role": "collection component-rights map"},
         {"path": COMPANION_RIGHTS_NAME, **identity(rights_target), "role": "original companion rights and attribution"},
     ]
@@ -388,7 +385,12 @@ def main() -> int:
             "institution": "Grand Valley State University",
             "commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
             "tree": "7df245934eedb7174d5ff8af18afff5a7abdde78",
-            "archive": {"path": AUTHORITY_ARCHIVE.name, **identity(AUTHORITY_ARCHIVE)},
+            "archive": {
+                "path": AUTHORITY_ARCHIVE.name,
+                **identity(AUTHORITY_ARCHIVE),
+                "public_source_package_included": False,
+                "omission_reason": "legacy upstream PDF metadata contains absolute author-workstation paths",
+            },
         },
         "reader": {
             "pdf": {"pages": pages, **identity(PDF)},
@@ -411,6 +413,7 @@ def main() -> int:
             "This is a verified 12-of-20 admitted boundary, not the complete edition.",
             "HTML is the primary accessible surface unless the admitted PDF receipt reports tagging.",
             "Whole-book figure-provenance and complete-edition closure remain later gates.",
+            "The unmodified upstream archive is hash-bound but omitted from the public source ZIP because 20 original PDF metadata dictionaries retain legacy absolute author-workstation paths.",
         ],
         "files": file_rows,
         "package_validation": {
@@ -422,6 +425,8 @@ def main() -> int:
             "pdf_metadata_and_xmp_privacy_scan": "all standalone and packaged PDFs pass",
             "raw_build_logs_included": False,
             "source_inventory_identity_validation": "pass",
+            "authority_archive_identity_validation": "pass; exact local bytes retained and hash-bound",
+            "raw_authority_archive_publicly_included": False,
             "historical_partial_package_used": False,
         },
     }

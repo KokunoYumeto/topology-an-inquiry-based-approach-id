@@ -102,6 +102,11 @@ unaltered source witness, and the release-package gate now inspects metadata
 for every standalone and ZIP-contained PDF rather than only the reader PDF.
 The 15,384-byte asset receipt has SHA-256
 `7133da5332aefb493bc655d36e9cdf863fa7ebe23118ea8f38750b19b5b7bac7`.
+The byte-preserving upstream archive itself is retained locally and bound by
+its official commit, tree, byte count, and SHA-256. It is intentionally omitted
+from the public source ZIP because those same 20 original PDF metadata
+dictionaries retain the legacy paths; the archive is not silently rewritten
+or falsely represented as privacy-clean.
 
 Live browser checks covered 1440, 1280, 1024, 768, and 390 CSS-pixel widths.
 The main column fills the available reading area, `lang="id-ID"` and localized

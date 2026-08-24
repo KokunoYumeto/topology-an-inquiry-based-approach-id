@@ -446,7 +446,17 @@ def build_manifest() -> dict[str, Any]:
         row for row in inventory if str(row["path"]).startswith("repo/backend/")
     ]
 
-    authority_archive = {"path": f"authority/archives/{AUTHORITY_ARCHIVE.name}", **identity(AUTHORITY_ARCHIVE)}
+    authority_archive = {
+        "path": f"authority/archives/{AUTHORITY_ARCHIVE.name}",
+        **identity(AUTHORITY_ARCHIVE),
+        "public_source_package_included": False,
+        "omission_reason": (
+            "The byte-preserving upstream archive contains legacy absolute "
+            "author-workstation paths in 20 PDF metadata dictionaries; its exact "
+            "identity and official commit/tree remain bound here without publicly "
+            "redistributing those metadata bytes."
+        ),
+    }
     prior_archive = require_dict(prior.get("package_authority_archive"), "prior authority archive")
     assert_identity("authority archive", prior_archive, authority_archive)
     manifest = {
