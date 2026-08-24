@@ -1,0 +1,331 @@
+<section xml:id="o003-c90-ch12-exercise-guides-f" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian keenam</title>
+
+  <p>
+    Lima panduan berikut mengikuti latihan topologi Zariski
+    <em>ex_TS_Zariski</em> dalam <em>sec_top_space_exer.ptx</em>, baris sumber
+    512--579. Setiap panduan adalah komponen pendamping asli berbahasa
+    Indonesia yang diterbitkan di bawah CC BY 4.0. Panduan ini bukan teks,
+    terjemahan resmi, atau jawaban resmi GVSU; pernyataan sumber diringkas
+    hanya untuk memasangkan bantuan belajar dengan tugas yang tepat.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-exer-f-01">
+    <title>Himpunan nol berupa dua garis vertikal</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_TS_Zariski</em>, tugas pertama (baris
+        sumber 536--542). Deskripsikan <m>Z(f)</m> dalam <m>\R^2</m> untuk
+        <m>f(x_1,x_2)=x_1^2-1</m>.
+        <em>Rubrik.</em> Selesaikan persamaan nol dan jelaskan peran kedua
+        koordinat secara geometris. Panduan ini adalah materi pendamping asli
+        CC BY 4.0, bukan materi atau solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-f-01-hint">
+      <p>
+        <em>Tahap 1.</em> Faktorkan <m>x_1^2-1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Persamaan tersebut tidak membatasi <m>x_2</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Gambarkan setiap nilai yang mungkin untuk
+        <m>x_1</m> dengan <m>x_2</m> bebas.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-f-01-answer">
+      <p>
+        Himpunan nolnya adalah
+        <me>Z(f)=\{(-1,t)\mid t\in\R\}\cup\{(1,t)\mid t\in\R\}.</me>
+        Jadi <m>Z(f)</m> merupakan gabungan dua garis vertikal
+        <m>x_1=-1</m> dan <m>x_1=1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-f-01-solution">
+      <p>
+        Sebuah titik <m>(x_1,x_2)\in\R^2</m> berada dalam <m>Z(f)</m> tepat
+        ketika
+        <me>x_1^2-1=(x_1-1)(x_1+1)=0.</me>
+        Karena <m>\R</m> tidak mempunyai pembagi nol, kondisi ini ekuivalen
+        dengan <m>x_1=1</m> atau <m>x_1=-1</m>. Variabel <m>x_2</m> sama sekali
+        tidak muncul dalam persamaan, sehingga nilainya boleh berupa sembarang
+        <m>t\in\R</m>. Oleh sebab itu
+        <me>Z(f)=\{(-1,t):t\in\R\}\cup\{(1,t):t\in\R\},</me>
+        yaitu dua garis vertikal yang sejajar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-f-02">
+    <title>Garis nol bersama tiga polinom linear</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_TS_Zariski</em>, tugas kedua (baris
+        sumber 543--551). Dalam <m>\R^3</m>, deskripsikan <m>Z(E)</m> untuk
+        <me>E=\{x_1+x_2+x_3,\ x_1-x_2-x_3,\ 3x_1+x_2+x_3\}.</me>
+        <em>Rubrik.</em> Selesaikan ketiga persamaan secara bersamaan,
+        parametrisasikan seluruh himpunan solusi, dan periksa kembali setiap
+        persamaan. Ini adalah panduan pendamping asli CC BY 4.0, bukan materi
+        atau solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-f-02-hint">
+      <p>
+        <em>Tahap 1.</em> Jumlahkan persamaan pertama dan kedua untuk
+        menentukan <m>x_1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Substitusikan nilai itu ke persamaan pertama untuk
+        memperoleh hubungan antara <m>x_2</m> dan <m>x_3</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Gunakan satu parameter bebas dan pastikan persamaan
+        ketiga tidak menambahkan syarat baru.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-f-02-answer">
+      <p>
+        Himpunan nol bersama tersebut adalah garis
+        <me>Z(E)=\{(0,t,-t)\mid t\in\R\}.</me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-f-02-solution">
+      <p>
+        Titik <m>(x_1,x_2,x_3)</m> berada dalam <m>Z(E)</m> tepat ketika
+        memenuhi
+        <me>
+          x_1+x_2+x_3=0,\qquad
+          x_1-x_2-x_3=0,\qquad
+          3x_1+x_2+x_3=0.
+        </me>
+        Menjumlahkan dua persamaan pertama menghasilkan <m>2x_1=0</m>, jadi
+        <m>x_1=0</m>. Persamaan pertama lalu menjadi <m>x_2+x_3=0</m>, atau
+        <m>x_3=-x_2</m>.
+      </p>
+      <p>
+        Tetapkan <m>t=x_2</m>. Semua calon solusi berbentuk
+        <m>(0,t,-t)</m>. Substitusi ke persamaan ketiga memberi
+        <m>3(0)+t-t=0</m>, sehingga tidak ada syarat tambahan. Sebaliknya,
+        setiap titik <m>(0,t,-t)</m> membuat ketiga polinom bernilai nol.
+        Dengan demikian, <m>Z(E)=\{(0,t,-t)\mid t\in\R\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-f-03">
+    <title>Komplemen himpunan nol sebagai basis</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_TS_Zariski</em>, tugas ketiga (baris
+        sumber 552--563). Untuk <m>f\in\mathcal P_n</m>, tulis
+        <m>D(f)=\R^n\setminus Z(f)</m>. Buktikan bahwa
+        <m>\mathcal B=\{D(f)\mid f\in\mathcal P_n\}</m> merupakan basis bagi
+        suatu topologi pada <m>\R^n</m>.
+        <em>Rubrik.</em> Buktikan bahwa anggota basis mencakup seluruh ruang
+        dan bahwa irisan dua anggota basis memenuhi syarat irisan basis.
+        Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau
+        solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-f-03-hint">
+      <p>
+        <em>Tahap 1.</em> Hitung himpunan nol polinom konstan <m>1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk dua polinom <m>f,g</m>, sebuah titik gagal
+        berada dalam <m>Z(f)</m> dan <m>Z(g)</m> tepat ketika hasil kali
+        <m>f(x)g(x)</m> tidak nol.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Simpulkan identitas
+        <m>D(f)\cap D(g)=D(fg)</m>; identitas ini lebih kuat daripada syarat
+        irisan yang diminta dalam definisi basis.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-f-03-answer">
+      <p>
+        Karena <m>Z(1)=\emptyset</m>, berlaku <m>D(1)=\R^n</m>, sehingga
+        anggota <m>\mathcal B</m> mencakup seluruh ruang. Selain itu,
+        <me>D(f)\cap D(g)=D(fg)\in\mathcal B.</me>
+        Jadi <m>\mathcal B</m> memenuhi kedua aksioma basis.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-f-03-solution">
+      <p>
+        Polinom konstan <m>1</m> tidak mempunyai titik nol. Karena itu
+        <m>Z(1)=\emptyset</m> dan
+        <m>D(1)=\R^n\setminus\emptyset=\R^n</m>. Khususnya, setiap titik
+        <m>x\in\R^n</m> berada dalam setidaknya satu anggota
+        <m>\mathcal B</m>.
+      </p>
+      <p>
+        Ambil <m>D(f),D(g)\in\mathcal B</m>. Untuk setiap
+        <m>x\in\R^n</m>,
+        <md>
+          <mrow>x\in D(f)\cap D(g)</mrow>
+          <mrow>\Longleftrightarrow f(x)\neq0\text{ dan }g(x)\neq0</mrow>
+          <mrow>\Longleftrightarrow f(x)g(x)\neq0</mrow>
+          <mrow>\Longleftrightarrow x\in D(fg).</mrow>
+        </md>
+        Ekuivalensi tengah menggunakan fakta bahwa <m>\R</m> tidak mempunyai
+        pembagi nol. Karena <m>fg\in\mathcal P_n</m>, himpunan
+        <m>D(fg)</m> adalah anggota <m>\mathcal B</m>. Jadi untuk setiap titik
+        dalam irisan dua anggota basis terdapat anggota basis yang memuat
+        titik itu dan terkandung dalam irisan tersebut; bahkan anggota itu
+        sama dengan seluruh irisan. Maka <m>\mathcal B</m> merupakan basis
+        bagi topologi Zariski pada <m>\R^n</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-f-04">
+    <title>Sumbu koordinat tidak terbuka secara Zariski</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_TS_Zariski</em>, tugas keempat (baris
+        sumber 564--571). Dalam <m>\R^2</m> dengan topologi Zariski, tentukan
+        apakah
+        <me>S=\{(x_1,x_2)\in\R^2\mid x_1=0\text{ atau }x_2=0\}</me>
+        terbuka, dan buktikan jawaban Anda.
+        <em>Rubrik.</em> Jangan menyimpulkan “tidak terbuka” hanya karena
+        <m>S</m> tertutup. Gunakan anggota basis <m>D(f)</m> di sekitar titik
+        asal dan sifat polinom yang memiliki tak berhingga banyak akar.
+        Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau
+        solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-f-04-hint">
+      <p>
+        <em>Tahap 1.</em> Andaikan <m>S</m> terbuka. Karena
+        <m>(0,0)\in S</m> dan himpunan <m>D(f)</m> membentuk basis, akan ada
+        <m>f</m> dengan <m>(0,0)\in D(f)\subseteq S</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Inklusi tersebut memaksa <m>f(x,y)=0</m> untuk
+        semua <m>x\neq0</m> dan <m>y\neq0</m>, tetapi
+        <m>f(0,0)\neq0</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Tetapkan dahulu <m>y\neq0</m> dan pandang
+        <m>f(x,y)</m> sebagai polinom satu variabel dalam <m>x</m>. Setelah
+        itu tetapkan <m>x</m> dan gunakan argumen yang sama dalam variabel
+        <m>y</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-f-04-answer">
+      <p>
+        Tidak. Jika <m>S</m> terbuka, suatu lingkungan basis
+        <m>D(f)</m> dari <m>(0,0)</m> harus terkandung dalam <m>S</m>. Hal ini
+        memaksa <m>f</m> lenyap pada semua titik dengan kedua koordinat tidak
+        nol, sehingga argumen akar polinom satu variabel memaksa <m>f</m>
+        menjadi polinom nol. Itu bertentangan dengan
+        <m>(0,0)\in D(f)</m>, yang mensyaratkan <m>f(0,0)\neq0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-f-04-solution">
+      <p>
+        Andaikan, untuk memperoleh kontradiksi, bahwa <m>S</m> terbuka.
+        Titik asal berada dalam <m>S</m>. Karena himpunan-himpunan
+        <m>D(f)</m> merupakan basis, terdapat <m>f\in\mathcal P_2</m> dengan
+        <me>(0,0)\in D(f)\subseteq S.</me>
+        Keanggotaan pertama berarti <m>f(0,0)\neq0</m>. Sementara itu, bila
+        <m>x\neq0</m> dan <m>y\neq0</m>, titik <m>(x,y)</m> tidak berada pada
+        salah satu sumbu, sehingga <m>(x,y)\notin S</m> dan karenanya
+        <m>(x,y)\notin D(f)</m>. Jadi
+        <m>f(x,y)=0</m> untuk semua <m>x\neq0</m> dan <m>y\neq0</m>.
+      </p>
+      <p>
+        Tetapkan sembarang <m>y_0\neq0</m>. Polinom satu variabel
+        <m>p_{y_0}(x)=f(x,y_0)</m> bernilai nol untuk setiap
+        <m>x\in\R\setminus\{0\}</m>. Karena polinom satu variabel tak nol
+        hanya mempunyai berhingga banyak akar, <m>p_{y_0}</m> harus merupakan
+        polinom nol. Maka <m>f(x,y_0)=0</m> untuk setiap <m>x\in\R</m> dan
+        setiap <m>y_0\neq0</m>.
+      </p>
+      <p>
+        Sekarang tetapkan sembarang <m>x_0\in\R</m>. Polinom satu variabel
+        <m>q_{x_0}(y)=f(x_0,y)</m> bernilai nol untuk semua
+        <m>y\neq0</m>, sehingga ia juga polinom nol. Khususnya
+        <m>f(x_0,0)=0</m>. Karena <m>x_0</m> sebarang, <m>f</m> bernilai nol
+        di seluruh <m>\R^2</m>, termasuk <m>f(0,0)=0</m>. Ini bertentangan
+        dengan <m>f(0,0)\neq0</m>. Jadi <m>S</m> tidak terbuka dalam topologi
+        Zariski. Fakta tambahan bahwa <m>S=Z(x_1x_2)</m> memang menunjukkan
+        bahwa <m>S</m> tertutup, tetapi fakta itu sendiri bukan alasan
+        ketidakterbukaannya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-f-05">
+    <title>Topologi Zariski pada garis adalah topologi kofinit</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> <em>ex_TS_Zariski</em>, tugas kelima (baris
+        sumber 572--579). Buktikan bahwa topologi Zariski pada <m>\R</m>
+        sama dengan topologi kofinit: setiap himpunan terbuka Zariski harus
+        terbuka kofinit dan sebaliknya.
+        <em>Rubrik.</em> Tangani polinom nol, polinom tak nol, himpunan terbuka
+        kosong, dan komplemen berhingga sebarang. Panduan ini adalah karya
+        pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-f-05-hint">
+      <p>
+        <em>Tahap 1.</em> Himpunan nol polinom satu variabel tak nol di
+        <m>\R</m> berhingga, sedangkan <m>D(0)=\emptyset</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gabungan tak kosong dari himpunan-himpunan kofinit
+        tetap kofinit karena komplemen gabungan terkandung dalam komplemen
+        salah satu sukunya.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Jika <m>F\subseteq\R</m> berhingga, bangun polinom
+        yang himpunan akarnya tepat <m>F</m> dengan mengalikan faktor
+        <m>x-a</m> untuk <m>a\in F</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-f-05-answer">
+      <p>
+        Setiap anggota basis Zariski <m>D(f)</m> adalah kosong bila
+        <m>f=0</m>, atau mempunyai komplemen berhingga bila <m>f\neq0</m>.
+        Sebaliknya, untuk setiap himpunan berhingga <m>F\subseteq\R</m>,
+        polinom <m>p_F(x)=\prod_{a\in F}(x-a)</m> memenuhi
+        <m>\R\setminus F=D(p_F)</m>. Karena itu kedua koleksi himpunan terbuka
+        sama.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-f-05-solution">
+      <p>
+        Mula-mula ambil anggota basis Zariski <m>D(f)</m>. Jika <m>f</m>
+        adalah polinom nol, maka <m>Z(f)=\R</m> dan
+        <m>D(f)=\emptyset</m>. Jika <m>f</m> tak nol, teorema akar polinom
+        satu variabel menyatakan bahwa <m>Z(f)</m> berhingga, sehingga
+        <m>D(f)=\R\setminus Z(f)</m> bersifat kofinit.
+      </p>
+      <p>
+        Himpunan terbuka Zariski adalah gabungan anggota-anggota basis itu.
+        Gabungan kosong adalah <m>\emptyset</m>. Jika sebuah gabungan tidak
+        kosong, pilih satu anggota basis tak kosong <m>D(f_0)</m> di dalam
+        gabungan tersebut. Komplemen seluruh gabungan terkandung dalam
+        <m>\R\setminus D(f_0)=Z(f_0)</m>, yang berhingga. Jadi setiap himpunan
+        terbuka Zariski adalah kosong atau kofinit, dan karenanya terbuka dalam
+        topologi kofinit.
+      </p>
+      <p>
+        Sebaliknya, misalkan <m>U</m> terbuka kofinit. Kasus
+        <m>U=\emptyset</m> sudah diberikan oleh <m>D(0)</m>. Jika
+        <m>U=\R\setminus F</m> untuk suatu himpunan berhingga <m>F</m>,
+        definisikan
+        <me>p_F(x)=\prod_{a\in F}(x-a).</me>
+        Bila <m>F=\emptyset</m>, hasil kali kosong adalah <m>1</m> dan
+        <m>D(p_F)=\R</m>. Bila <m>F</m> tak kosong, tepat titik-titik
+        <m>a\in F</m> yang menjadi akar <m>p_F</m>, sehingga
+        <m>Z(p_F)=F</m> dan <m>D(p_F)=\R\setminus F=U</m>. Jadi setiap
+        himpunan terbuka kofinit adalah terbuka Zariski. Kedua topologi
+        tersebut sama.
+      </p>
+    </solution>
+  </exercise>
+</section>

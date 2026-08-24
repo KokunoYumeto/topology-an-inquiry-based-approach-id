@@ -1,0 +1,468 @@
+<section xml:id="o003-c90-ch12-exercise-guides-c" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian ketiga</title>
+
+  <p>
+    Lima panduan berikut meneruskan urutan tugas dalam
+    <em>sec_top_space_exer.ptx</em> tepat setelah panduan
+    <em>o003-c90-ch12-exer-b-10</em>. Panduan pertama menyelesaikan latihan
+    basis minimal ruang hingga, panduan kedua membahas rantai topologi yang
+    ditampilkan sumber, dan tiga panduan terakhir mencacah topologi pada
+    himpunan berlabel dengan satu, dua, dan tiga titik. Setiap panduan adalah
+    komponen pendamping asli berbahasa Indonesia yang diterbitkan terpisah di
+    bawah CC BY 4.0; isinya bukan teks, terjemahan resmi, atau jawaban resmi
+    GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-exer-c-01">
+    <title>Basis minimal pada empat titik</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan basis minimal untuk ruang hingga,
+        tugas keempat (baris sumber 262--269). Misalkan
+        <m>X=\{a,b,c,d\}</m> dan
+        <me>
+          \tau=\{\emptyset,\{a\},\{a,b\},\{a,c\},\{a,b,c\},
+          \{a,d\},\{a,b,d\},\{a,c,d\},X\}.
+        </me>
+        Dengan menganggap <m>\tau</m> suatu topologi, tentukan basis minimal
+        tunggalnya.
+        <em>Rubrik.</em> Hitung lingkungan terbuka terkecil setiap titik,
+        tunjukkan bahwa koleksinya membangkitkan semua anggota <m>\tau</m>,
+        dan jelaskan mengapa setiap basis lain harus memuatnya. Panduan ini
+        merupakan materi pendamping asli CC BY 4.0, bukan solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-c-01-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk setiap <m>x\in X</m>, iriskan semua anggota
+        <m>\tau</m> yang memuat <m>x</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Perhatikan bahwa setiap himpunan terbuka tak kosong
+        memuat <m>a</m>; titik <m>b,c,d</m> masing-masing dapat dipisahkan
+        dari dua titik lainnya.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Gunakan hasil ruang hingga: lingkungan terbuka
+        terkecil <m>U_x</m> harus menjadi anggota setiap basis untuk topologi
+        tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-c-01-answer">
+      <p>
+        Basis minimal tunggalnya adalah
+        <me>
+          \mathcal B_{\min}=\{\{a\},\{a,b\},\{a,c\},\{a,d\}\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-c-01-solution">
+      <p>
+        Lingkungan terbuka terkecil titik <m>a</m> adalah
+        <m>U_a=\{a\}</m>. Semua himpunan terbuka yang memuat <m>b</m> juga
+        memuat <m>a</m>, dan <m>\{a,b\}</m> sendiri terbuka, sehingga
+        <m>U_b=\{a,b\}</m>. Dengan alasan yang sama,
+        <m>U_c=\{a,c\}</m> dan <m>U_d=\{a,d\}</m>. Jadi koleksi lingkungan
+        terkecil itu tepat
+        <me>
+          \mathcal B_{\min}=\{U_a,U_b,U_c,U_d\}
+          =\{\{a\},\{a,b\},\{a,c\},\{a,d\}\}.
+        </me>
+      </p>
+      <p>
+        Gabungan kosong menghasilkan <m>\emptyset</m>. Setiap anggota
+        <m>\tau</m> yang lain berbentuk <m>\{a\}\cup S</m> untuk suatu
+        <m>S\subseteq\{b,c,d\}</m>; himpunan itu diperoleh dengan mengambil
+        <m>U_a</m> bila <m>S=\emptyset</m>, atau dengan menggabungkan
+        <m>U_x</m> untuk <m>x\in S</m>. Maka koleksi tersebut membangkitkan
+        tepat <m>\tau</m>. Untuk basis apa pun <m>\mathcal B</m> bagi
+        <m>\tau</m>, keterbukaan <m>U_x</m> memberi anggota basis
+        <m>B_x</m> dengan <m>x\in B_x\subseteq U_x</m>. Karena <m>U_x</m>
+        terkandung dalam setiap lingkungan terbuka titik <m>x</m>, juga
+        <m>U_x\subseteq B_x</m>; jadi <m>B_x=U_x</m>. Dengan demikian semua
+        empat anggota di atas wajib berada dalam setiap basis, yang
+        membuktikan minimalitas sekaligus ketunggalannya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-c-02">
+    <title>Rantai terpanjang topologi yang ditampilkan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas terakhir pada latihan basis minimal
+        (baris sumber 271--334). Sumber menyebut <m>9</m> topologi tetapi
+        menampilkan sepuluh entri. Di sini entri pertama ditafsirkan sebagai
+        akar indiskret dan entri 2--10 sebagai sembilan topologi sasaran;
+        tidak ada entri yang dibuang. Untuk <m>X=\{a,b,c\}</m>, beri label
+        <me>
+          \begin{aligned}
+          \tau_1&amp;=\{\emptyset,X\},\\
+          \tau_2&amp;=\{\emptyset,\{a\},X\},\\
+          \tau_3&amp;=\{\emptyset,\{a,b\},X\},\\
+          \tau_4&amp;=\{\emptyset,\{a\},\{a,b\},X\},\\
+          \tau_5&amp;=\{\emptyset,\{a\},\{b,c\},X\},\\
+          \tau_6&amp;=\{\emptyset,\{a\},\{b\},\{a,b\},X\},\\
+          \tau_7&amp;=\{\emptyset,\{b\},\{a,b\},\{b,c\},X\},\\
+          \tau_8&amp;=\{\emptyset,\{b\},\{c\},\{b,c\},\{a,c\},X\},\\
+          \tau_9&amp;=\{\emptyset,\{a\},\{b\},\{a,b\},\{b,c\},X\},\\
+          \tau_{10}&amp;=\mathcal P(X).
+          \end{aligned}
+        </me>
+        Untuk setiap sasaran <m>\tau_2,\ldots,\tau_{10}</m>, tuliskan semua
+        rantai terpanjang yang dimulai pada <m>\tau_1</m> dan berakhir pada
+        sasaran itu, dengan urutan berdasarkan inklusi koleksi terbuka.
+        <em>Rubrik.</em> Setiap inklusi harus ketat; tunjukkan pula mengapa
+        tidak ada rantai yang lebih panjang di dalam sepuluh entri yang
+        ditampilkan. Ini adalah rekonstruksi pendamping asli CC BY 4.0, bukan
+        pembetulan atau solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-c-02-hint">
+      <p>
+        <em>Tahap 1.</em> Pandang setiap <m>\tau_i</m> sebagai himpunan yang
+        anggotanya sendiri adalah himpunan terbuka. Buat panah hanya jika
+        <m>\tau_i\subsetneq\tau_j</m> dan tidak ada entri yang ditampilkan
+        di antara keduanya.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Entri <m>\tau_4</m> menerima panah dari
+        <m>\tau_2</m> dan <m>\tau_3</m>; setelah itu jalur terpanjang menuju
+        <m>\tau_6</m>, <m>\tau_9</m>, dan topologi diskret menjadi terlihat.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Untuk membuktikan maksimalitas panjang, hitung
+        secara rekursif jumlah simpul terbesar pada jalur dari
+        <m>\tau_1</m> ke setiap simpul melalui relasi penutup tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-c-02-answer">
+      <p>
+        Semua rantai terpanjang dalam daftar adalah sebagai berikut:
+        <ol marker="1">
+        <li><p><m>\tau_2</m>: <m>\tau_1\subsetneq\tau_2</m>.</p></li>
+        <li><p><m>\tau_3</m>: <m>\tau_1\subsetneq\tau_3</m>.</p></li>
+        <li>
+          <p>
+            <m>\tau_4</m>:
+            <m>\tau_1\subsetneq\tau_2\subsetneq\tau_4</m> dan
+            <m>\tau_1\subsetneq\tau_3\subsetneq\tau_4</m>.
+          </p>
+        </li>
+        <li><p><m>\tau_5</m>: <m>\tau_1\subsetneq\tau_2\subsetneq\tau_5</m>.</p></li>
+        <li>
+          <p>
+            <m>\tau_6</m>:
+            <m>\tau_1\subsetneq\tau_2\subsetneq\tau_4\subsetneq\tau_6</m>
+            dan
+            <m>\tau_1\subsetneq\tau_3\subsetneq\tau_4\subsetneq\tau_6</m>.
+          </p>
+        </li>
+        <li><p><m>\tau_7</m>: <m>\tau_1\subsetneq\tau_3\subsetneq\tau_7</m>.</p></li>
+        <li><p><m>\tau_8</m>: <m>\tau_1\subsetneq\tau_8</m>.</p></li>
+        <li>
+          <p>
+            <m>\tau_9</m>:
+            <m>\tau_1\subsetneq\tau_2\subsetneq\tau_4\subsetneq\tau_6\subsetneq\tau_9</m>
+            dan
+            <m>\tau_1\subsetneq\tau_3\subsetneq\tau_4\subsetneq\tau_6\subsetneq\tau_9</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\tau_{10}</m>:
+            <m>\tau_1\subsetneq\tau_2\subsetneq\tau_4\subsetneq\tau_6\subsetneq\tau_9\subsetneq\tau_{10}</m>
+            dan
+            <m>\tau_1\subsetneq\tau_3\subsetneq\tau_4\subsetneq\tau_6\subsetneq\tau_9\subsetneq\tau_{10}</m>.
+          </p>
+        </li>
+        </ol>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-c-02-solution">
+      <p>
+        Setelah semua pasangan diuji dengan inklusi koleksi terbuka, relasi
+        penutup di dalam daftar ini adalah
+        <me>
+          \begin{aligned}
+          \tau_1&amp;\prec\tau_2,\tau_3,\tau_8,\\
+          \tau_2&amp;\prec\tau_4,\tau_5,\\
+          \tau_3&amp;\prec\tau_4,\tau_7,\\
+          \tau_4&amp;\prec\tau_6,\\
+          \tau_5,\tau_6,\tau_7&amp;\prec\tau_9,\\
+          \tau_8,\tau_9&amp;\prec\tau_{10}.
+          \end{aligned}
+        </me>
+        Misalnya, <m>\tau_4\subsetneq\tau_6</m> karena satu-satunya terbuka
+        baru adalah <m>\{b\}</m>, sedangkan
+        <m>\tau_6\subsetneq\tau_9</m> karena terbuka baru berikutnya adalah
+        <m>\{b,c\}</m>. Sebaliknya, tidak ada panah
+        <m>\tau_8\to\tau_9</m>: <m>\{c\}</m> dan <m>\{a,c\}</m> berada di
+        <m>\tau_8</m> tetapi tidak di <m>\tau_9</m>.
+      </p>
+      <p>
+        Panjang maksimum (dalam jumlah simpul) dari <m>\tau_1</m> berturut-
+        turut adalah <m>2</m> untuk <m>\tau_2,\tau_3,\tau_8</m>, <m>3</m>
+        untuk <m>\tau_4,\tau_5,\tau_7</m>, <m>4</m> untuk <m>\tau_6</m>,
+        <m>5</m> untuk <m>\tau_9</m>, dan <m>6</m> untuk
+        <m>\tau_{10}</m>. Menelusuri semua pendahulu yang mencapai maksimum
+        tersebut memberi tepat rantai-rantai pada jawaban. Karena setiap
+        inklusi ketat di dalam poset hingga harus melewati relasi penutup,
+        perhitungan ini sekaligus membuktikan bahwa tidak ada rantai dalam
+        sepuluh entri yang lebih panjang.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-c-03">
+    <title>Semua topologi pada himpunan satu titik</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan pencacahan topologi, tugas pertama
+        (baris sumber 337--349). Tentukan semua topologi pada himpunan satu
+        titik <m>X=\{a\}</m>.
+        <em>Rubrik.</em> Nyatakan koleksinya dan jelaskan mengapa tidak ada
+        pilihan lain. Panduan ini adalah materi pendamping asli CC BY 4.0,
+        bukan solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-c-03-hint">
+      <p>
+        <em>Tahap 1.</em> Daftarkan seluruh anggota <m>\mathcal P(X)</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Kedua anggota itu wajib berada dalam setiap
+        topologi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-c-03-answer">
+      <p>
+        Satu-satunya topologi adalah
+        <m>\tau=\{\emptyset,\{a\}\}=\{\emptyset,X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-c-03-solution">
+      <p>
+        Himpunan <m>X=\{a\}</m> hanya mempunyai dua subhimpunan, yaitu
+        <m>\emptyset</m> dan <m>X</m>. Aksioma topologi mewajibkan keduanya
+        terbuka, sehingga setiap topologi harus sama dengan
+        <m>\{\emptyset,X\}</m>. Koleksi ini memang tertutup terhadap semua
+        gabungan dan irisan berhingga, jadi ia benar-benar topologi dan tidak
+        ada kemungkinan lain.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-c-04">
+    <title>Semua topologi pada himpunan dua titik berlabel</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan pencacahan topologi, tugas kedua
+        (baris sumber 350--356). Tentukan semua topologi pada himpunan
+        berlabel <m>X=\{a,b\}</m>.
+        <em>Rubrik.</em> Daftarkan keempat koleksi secara eksplisit dan
+        buktikan bahwa daftar itu lengkap. Materi pendamping ini asli dan
+        berlisensi CC BY 4.0; ia bukan solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-c-04-hint">
+      <p>
+        <em>Tahap 1.</em> Selain <m>\emptyset</m> dan <m>X</m>, hanya ada dua
+        calon himpunan terbuka: <m>\{a\}</m> dan <m>\{b\}</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Pilih tidak satu pun, tepat salah satu, atau
+        keduanya. Setiap pilihan memenuhi aksioma topologi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-c-04-answer">
+      <p>
+        Keempat topologi pada <m>X=\{a,b\}</m> adalah
+        <me>
+          \begin{aligned}
+          &amp;\{\emptyset,X\},\\
+          &amp;\{\emptyset,\{a\},X\},\\
+          &amp;\{\emptyset,\{b\},X\},\\
+          &amp;\{\emptyset,\{a\},\{b\},X\}=\mathcal P(X).
+          \end{aligned}
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-c-04-solution">
+      <p>
+        Setiap topologi harus memuat <m>\emptyset</m> dan <m>X</m>. Dua
+        subhimpunan lain hanyalah <m>\{a\}</m> dan <m>\{b\}</m>, sehingga
+        ada paling banyak empat pilihan untuk keluarga terbuka tambahan:
+        tidak satu pun, hanya <m>\{a\}</m>, hanya <m>\{b\}</m>, atau
+        keduanya. Tiga pilihan pertama jelas tertutup terhadap gabungan dan
+        irisan. Pada pilihan terakhir,
+        <m>\{a\}\cup\{b\}=X</m> dan
+        <m>\{a\}\cap\{b\}=\emptyset</m>, jadi aksioma juga terpenuhi.
+        Keempat pilihan pada jawaban dengan demikian merupakan topologi, dan
+        daftar kandidat subhimpunan tadi membuktikan bahwa tidak ada yang
+        terlewat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-c-05">
+    <title>Semua 29 topologi pada himpunan tiga titik berlabel</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> latihan pencacahan topologi, tugas ketiga
+        (baris sumber 357--368). Tentukan semua topologi pada himpunan
+        berlabel <m>X=\{a,b,c\}</m>. Pencacahan harus membedakan topologi
+        yang diperoleh dengan menukar label, bukan hanya kelas
+        homeomorfismenya.
+        <em>Rubrik.</em> Daftarkan seluruh 29 koleksi, verifikasi pola
+        penutupan gabungan dan irisan, dan berikan argumen kelengkapan yang
+        mengecualikan keluarga lain. Ini merupakan solusi pendamping asli CC
+        BY 4.0, bukan solusi resmi GVSU.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-c-05-hint">
+      <p>
+        <em>Tahap 1.</em> Singkatlah enam subhimpunan tak kosong dan bukan
+        seluruh <m>X</m> sebagai
+        <m>A=\{a\}, B=\{b\}, C=\{c\}, AB=\{a,b\}, AC=\{a,c\}, BC=\{b,c\}</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Kelompokkan topologi menurut banyaknya anggota
+        selain <m>\emptyset</m> dan <m>X</m>. Untuk dua anggota tambahan,
+        pasangan yang mungkin harus saling termuat atau saling berkomplemen.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Banyak keluarga yang mungkin untuk
+        <m>0,1,2,3,4,5,6</m> anggota tambahan berturut-turut adalah
+        <m>1,6,9,6,6,0,1</m>. Jumlahnya <m>29</m>; tuliskan setiap hasil
+        berlabel, bukan hanya satu wakil tiap pola.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-c-05-answer">
+      <p>
+        Gunakan singkatan
+        <m>A=\{a\}</m>, <m>B=\{b\}</m>, <m>C=\{c\}</m>,
+        <m>AB=\{a,b\}</m>, <m>AC=\{a,c\}</m>, dan
+        <m>BC=\{b,c\}</m>. Semua daftar berikut juga memuat
+        <m>\emptyset</m> dan <m>X</m> seperti yang dituliskan; setiap baris
+        adalah satu topologi yang berbeda.
+      </p>
+      <p>
+        <em>Dua himpunan terbuka (1 topologi):</em>
+        <me>\{\emptyset,X\}.</me>
+      </p>
+      <p>
+        <em>Tiga himpunan terbuka (6 topologi):</em>
+        <me>
+          \begin{gathered}
+          \{\emptyset,A,X\},\quad \{\emptyset,B,X\},\quad
+          \{\emptyset,C,X\},\\
+          \{\emptyset,AB,X\},\quad \{\emptyset,AC,X\},\quad
+          \{\emptyset,BC,X\}.
+          \end{gathered}
+        </me>
+      </p>
+      <p>
+        <em>Empat himpunan terbuka (9 topologi):</em>
+        <me>
+          \begin{gathered}
+          \{\emptyset,A,AB,X\},\quad
+          \{\emptyset,A,AC,X\},\quad
+          \{\emptyset,A,BC,X\},\\
+          \{\emptyset,B,AB,X\},\quad
+          \{\emptyset,B,AC,X\},\quad
+          \{\emptyset,B,BC,X\},\\
+          \{\emptyset,C,AB,X\},\quad
+          \{\emptyset,C,AC,X\},\quad
+          \{\emptyset,C,BC,X\}.
+          \end{gathered}
+        </me>
+      </p>
+      <p>
+        <em>Lima himpunan terbuka (6 topologi):</em>
+        <me>
+          \begin{gathered}
+          \{\emptyset,A,B,AB,X\},\quad
+          \{\emptyset,A,C,AC,X\},\quad
+          \{\emptyset,B,C,BC,X\},\\
+          \{\emptyset,A,AB,AC,X\},\quad
+          \{\emptyset,B,AB,BC,X\},\quad
+          \{\emptyset,C,AC,BC,X\}.
+          \end{gathered}
+        </me>
+      </p>
+      <p>
+        <em>Enam himpunan terbuka (6 topologi):</em>
+        <me>
+          \begin{gathered}
+          \{\emptyset,A,B,AB,AC,X\},\quad
+          \{\emptyset,A,B,AB,BC,X\},\\
+          \{\emptyset,A,C,AB,AC,X\},\quad
+          \{\emptyset,A,C,AC,BC,X\},\\
+          \{\emptyset,B,C,AB,BC,X\},\quad
+          \{\emptyset,B,C,AC,BC,X\}.
+          \end{gathered}
+        </me>
+      </p>
+      <p>
+        Tidak ada topologi dengan tepat tujuh himpunan terbuka. Dengan
+        delapan himpunan terbuka terdapat tepat satu, yaitu topologi diskret:
+        <me>\{\emptyset,A,B,C,AB,AC,BC,X\}=\mathcal P(X).</me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-c-05-solution">
+      <p>
+        Setiap topologi memuat <m>\emptyset</m> dan <m>X</m>. Karena itu
+        cukup memilih suatu keluarga
+        <m>\mathcal F\subseteq\{A,B,C,AB,AC,BC\}</m> yang tertutup terhadap
+        setiap gabungan atau irisan yang hasilnya masih merupakan himpunan
+        tak kosong dan bukan <m>X</m>. Kita klasifikasikan menurut
+        <m>k=|\mathcal F|</m>.
+      </p>
+      <p>
+        Untuk <m>k=0</m> ada satu pilihan, dan untuk <m>k=1</m> setiap satu
+        dari enam himpunan dapat dipilih, jadi ada enam. Untuk <m>k=2</m>,
+        dua anggota harus bersarang atau saling berkomplemen. Jika keduanya
+        tidak bersarang dan bukan komplemen, irisan atau gabungannya memberi
+        anggota nontrivial ketiga yang wajib ditambahkan. Ada enam pasangan
+        bersarang (sebuah singleton di dalam salah satu dari dua pasangan
+        yang memuatnya) dan tiga pasangan komplemen, sehingga diperoleh
+        sembilan keluarga empat-terbuka yang tercantum.
+      </p>
+      <p>
+        Untuk <m>k=3</m>, penutupan menyisakan dua pola. Pola pertama memuat
+        dua singleton dan gabungannya, yakni
+        <m>\{A,B,AB\}</m> beserta dua hasil permutasi label. Pola kedua
+        memuat satu singleton dan dua pasangan yang memuatnya, yakni
+        <m>\{A,AB,AC\}</m> beserta dua hasil permutasi. Jadi ada enam.
+        Memulai dari pasangan komplemen dan menambahkan anggota ketiga tidak
+        menghasilkan pola lain: gabungan atau irisan dengan anggota ketiga
+        memaksa anggota keempat.
+      </p>
+      <p>
+        Untuk <m>k=4</m>, penutupan memaksa dua singleton yang dipilih,
+        gabungan keduanya, serta tepat satu dari dua pasangan yang
+        menghubungkan titik ketiga dengan salah satu singleton tersebut.
+        Pilihan pasangan singleton ada tiga dan pilihan pasangan tambahan
+        ada dua, sehingga ada enam keluarga; keenamnya dituliskan pada
+        kelompok enam-terbuka. Pemeriksaan gabungan dan irisan langsung
+        menunjukkan bahwa setiap keluarga dalam kelompok <m>k=0,1,2,3,4</m>
+        memang tertutup.
+      </p>
+      <p>
+        Untuk <m>k=5</m>, tepat satu dari enam himpunan nontrivial hilang.
+        Jika yang hilang singleton, irisan dua pasangan yang memuat titik itu
+        memaksanya terbuka; misalnya <m>AB\cap AC=A</m>. Jika yang hilang
+        pasangan dua titik, gabungan kedua singletonnya memaksanya terbuka;
+        misalnya <m>A\cup B=AB</m>. Maka <m>k=5</m> mustahil. Untuk
+        <m>k=6</m> diperoleh satu-satunya topologi diskret. Dengan demikian
+        banyaknya topologi adalah
+        <me>1+6+9+6+6+0+1=29.</me>
+        Klasifikasi ini mencakup setiap subkeluarga yang mungkin, sedangkan
+        daftar pada jawaban memuat tepat sebanyak itu tanpa pengulangan.
+        Jadi daftar tersebut lengkap untuk himpunan berlabel
+        <m>\{a,b,c\}</m>, bukan sekadar sembilan kelas hingga homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+</section>

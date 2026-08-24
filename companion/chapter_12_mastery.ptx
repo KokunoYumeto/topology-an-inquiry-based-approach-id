@@ -1,0 +1,585 @@
+<section xml:id="o003-c90-ch12-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 12</title>
+
+  <p>
+    Delapan pemeriksaan berikut memadukan aksioma topologi, basis,
+    lingkungan, interior, dan ketermetrikan dalam persoalan baru yang tidak
+    mengulang tugas sumber. Materi ini ditulis secara mandiri dalam bahasa
+    Indonesia untuk komponen pendamping berlisensi CC BY 4.0; materi ini
+    bukan teks, terjemahan, atau solusi resmi GVSU. Cobalah setiap soal
+    sebelum membuka petunjuk. Jawaban menyatakan hasil utama, sedangkan
+    solusi memberikan penutupan matematis lengkap.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-mastery-01">
+    <title>Mengapa irisan hanya berhingga</title>
+    <statement>
+      <p>
+        Jelaskan mengapa irisan setiap koleksi berhingga himpunan terbuka
+        dalam ruang topologi tetap terbuka. Kemudian, dalam <m>\R</m> dengan
+        topologi Euklides, tetapkan
+        <m>U_n=(-1/n,1/n)</m> untuk <m>n\in\Z^+</m>. Tentukan
+        <m>\bigcap_{n=1}^{\infty}U_n</m> dan buktikan bahwa hasilnya tidak
+        terbuka. Jelaskan peran contoh ini dalam aksioma topologi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-01-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan aksioma irisan berhingga secara langsung;
+        bila aksioma dinyatakan hanya untuk dua himpunan, gunakan induksi.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Titik <m>0</m> berada dalam semua <m>U_n</m>. Untuk
+        <m>x\neq0</m>, pilih <m>n</m> sehingga <m>1/n\lt|x|</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Uji apakah ada interval terbuka berpusat di
+        <m>0</m> yang termuat dalam himpunan satu titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-01-answer">
+      <p>
+        Irisan berhingga terbuka berdasarkan aksioma topologi, tetapi
+        <me>\bigcap_{n=1}^{\infty}(-1/n,1/n)=\{0\},</me>
+        yang tidak terbuka dalam topologi Euklides. Jadi “berhingga” dalam
+        aksioma irisan tidak dapat diganti dengan “sebarang”.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-01-solution">
+      <p>
+        Aksioma topologi menyatakan bahwa irisan berhingga anggota topologi
+        kembali menjadi anggota topologi. Jika versi aksioma yang digunakan
+        hanya menyebut dua himpunan, kasus <m>k</m> himpunan mengikuti dengan
+        induksi: andaikan irisan <m>k</m> himpunan terbuka bersifat terbuka,
+        lalu iriskan hasil itu dengan himpunan terbuka ke-<m>k+1</m>. Irisan
+        keluarga kosong adalah seluruh ruang, yang juga terbuka.
+      </p>
+      <p>
+        Jelas <m>0\in U_n</m> untuk setiap <m>n</m>. Sebaliknya, ambil
+        <m>x\neq0</m>. Berdasarkan sifat Archimedes, terdapat
+        <m>n\in\Z^+</m> dengan <m>n>1/|x|</m>, sehingga
+        <m>1/n\lt|x|</m>. Maka <m>x\notin(-1/n,1/n)</m>. Jadi satu-satunya
+        titik yang berada dalam semua <m>U_n</m> adalah <m>0</m>.
+      </p>
+      <p>
+        Himpunan <m>\{0\}</m> tidak terbuka dalam topologi Euklides. Untuk
+        setiap <m>r>0</m>, interval <m>(-r,r)</m> memuat, misalnya,
+        <m>r/2\neq0</m>, sehingga tidak terkandung dalam <m>\{0\}</m>.
+        Dengan demikian irisan terhitung himpunan terbuka dapat gagal
+        terbuka. Contoh ini menunjukkan bahwa pembatasan pada irisan
+        berhingga merupakan bagian esensial dari definisi topologi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-mastery-02">
+    <title>Geometri global topologi kofinit</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> himpunan tak berhingga dan
+        <m>\tau_{FC}</m> topologi kofinit pada <m>X</m>. Buktikan bahwa setiap
+        dua himpunan terbuka tak kosong beririsan. Untuk setiap
+        <m>A\subseteq X</m>, tentukan <m>\Int(A)</m>. Akhirnya, buktikan bahwa
+        <m>\tau_{FC}</m> bukan topologi diskret dan bukan topologi indiskret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-02-hint">
+      <p>
+        <em>Tahap 1.</em> Komplemen irisan dua himpunan adalah gabungan kedua
+        komplemennya. Gabungan dua himpunan berhingga tetap berhingga.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>A</m> memuat himpunan terbuka tak kosong
+        <m>O</m>, bandingkan <m>X\setminus A</m> dengan
+        <m>X\setminus O</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Bandingkan keterbukaan <m>\{x\}</m> dan
+        <m>X\setminus\{x\}</m> untuk sembarang <m>x\in X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-02-answer">
+      <p>
+        Dua himpunan terbuka kofinit tak kosong selalu beririsan. Selain itu,
+        <me>
+          \Int(A)=\begin{cases}
+            A &amp; \text{jika }A=\emptyset\text{ atau }X\setminus A\text{ berhingga},\\
+            \emptyset &amp; \text{selain itu}.
+          \end{cases}
+        </me>
+        Topologi ini bukan diskret karena himpunan satu titik tidak terbuka,
+        dan bukan indiskret karena <m>X\setminus\{x\}</m> merupakan himpunan
+        terbuka sejati.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-02-solution">
+      <p>
+        Ambil dua himpunan terbuka tak kosong <m>U,V</m>. Komplemen
+        <m>X\setminus U</m> dan <m>X\setminus V</m> berhingga. Hukum De Morgan
+        memberi
+        <me>X\setminus(U\cap V)=(X\setminus U)\cup(X\setminus V),</me>
+        sehingga komplemen <m>U\cap V</m> berhingga. Jika
+        <m>U\cap V=\emptyset</m>, komplemennya adalah seluruh <m>X</m>, yang
+        akan berhingga; ini bertentangan dengan hipotesis. Jadi
+        <m>U\cap V\neq\emptyset</m>.
+      </p>
+      <p>
+        Jika <m>A=\emptyset</m> atau <m>X\setminus A</m> berhingga, maka
+        <m>A</m> sendiri terbuka dan karenanya <m>\Int(A)=A</m>. Sekarang
+        andaikan <m>A</m> tidak terbuka. Bila terdapat himpunan terbuka tak
+        kosong <m>O\subseteq A</m>, maka
+        <m>X\setminus A\subseteq X\setminus O</m>. Ruas kanan berhingga,
+        sehingga <m>X\setminus A</m> juga berhingga dan <m>A</m> terbuka,
+        sebuah kontradiksi. Jadi tidak ada himpunan terbuka tak kosong di
+        dalam <m>A</m>, dan <m>\Int(A)=\emptyset</m>.
+      </p>
+      <p>
+        Untuk <m>x\in X</m>, komplemen <m>\{x\}</m> tak berhingga, sehingga
+        <m>\{x\}</m> tidak terbuka; maka topologi tidak diskret. Sebaliknya,
+        <m>X\setminus\{x\}</m> mempunyai komplemen berhingga dan merupakan
+        himpunan terbuka yang bukan <m>\emptyset</m> maupun <m>X</m>. Jadi
+        topologi juga tidak indiskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-mastery-03">
+    <title>Kehalusan mengubah data lokal</title>
+    <statement>
+      <p>
+        Misalkan <m>\tau_1</m> dan <m>\tau_2</m> topologi pada <m>X</m>
+        dengan <m>\tau_1\subseteq\tau_2</m>. Untuk setiap
+        <m>A\subseteq X</m>, buktikan
+        <m>\Int_{\tau_1}(A)\subseteq\Int_{\tau_2}(A)</m>. Untuk setiap
+        <m>x\in X</m>, buktikan pula bahwa setiap lingkungan
+        <m>\tau_1</m> dari <m>x</m> adalah lingkungan <m>\tau_2</m> dari
+        <m>x</m>. Berikan satu contoh yang membuat kedua inklusi tersebut
+        ketat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-03-hint">
+      <p>
+        <em>Tahap 1.</em> Interior <m>\tau_1</m> dari <m>A</m> adalah
+        himpunan <m>\tau_1</m>-terbuka yang terkandung dalam <m>A</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Sebuah lingkungan memuat suatu himpunan terbuka
+        yang memuat titik pusatnya. Gunakan inklusi topologi pada himpunan
+        terbuka saksi tersebut.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Pada himpunan dengan sedikitnya dua titik,
+        bandingkan topologi indiskret dan diskret untuk himpunan satu titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-03-answer">
+      <p>
+        Topologi yang lebih halus mempunyai interior yang lebih besar dan
+        lebih banyak lingkungan:
+        <m>\Int_{\tau_1}(A)\subseteq\Int_{\tau_2}(A)</m> dan
+        <m>\mathcal N_{\tau_1}(x)\subseteq\mathcal N_{\tau_2}(x)</m>.
+        Kedua inklusi ketat untuk topologi indiskret dan diskret dengan
+        <m>A=\{x\}</m> pada ruang yang memiliki sedikitnya dua titik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-03-solution">
+      <p>
+        Himpunan <m>\Int_{\tau_1}(A)</m> bersifat
+        <m>\tau_1</m>-terbuka dan terkandung dalam <m>A</m>. Karena
+        <m>\tau_1\subseteq\tau_2</m>, himpunan itu juga
+        <m>\tau_2</m>-terbuka. Interior <m>\tau_2</m> adalah himpunan
+        <m>\tau_2</m>-terbuka terbesar di dalam <m>A</m>, sehingga
+        <m>\Int_{\tau_1}(A)\subseteq\Int_{\tau_2}(A)</m>.
+      </p>
+      <p>
+        Jika <m>N</m> merupakan lingkungan <m>\tau_1</m> dari <m>x</m>, ada
+        <m>O\in\tau_1</m> dengan <m>x\in O\subseteq N</m>. Inklusi topologi
+        memberi <m>O\in\tau_2</m>, sehingga himpunan terbuka yang sama
+        membuktikan bahwa <m>N</m> adalah lingkungan <m>\tau_2</m> dari
+        <m>x</m>.
+      </p>
+      <p>
+        Ambil <m>X</m> dengan sedikitnya dua titik, pilih <m>x\in X</m>, dan
+        tetapkan <m>\tau_1=\{\emptyset,X\}</m> serta
+        <m>\tau_2=\mathcal P(X)</m>. Untuk <m>A=\{x\}</m>, berlaku
+        <m>\Int_{\tau_1}(A)=\emptyset</m> tetapi
+        <m>\Int_{\tau_2}(A)=\{x\}</m>. Himpunan <m>\{x\}</m> sendiri adalah
+        lingkungan <m>\tau_2</m> dari <m>x</m>, tetapi bukan lingkungan
+        <m>\tau_1</m>, sebab satu-satunya himpunan
+        <m>\tau_1</m>-terbuka yang memuat <m>x</m> adalah <m>X</m>, yang
+        tidak terkandung dalam <m>\{x\}</m>. Jadi kedua inklusi dapat ketat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-mastery-04">
+    <title>Dua basis, satu topologi</title>
+    <statement>
+      <p>
+        Misalkan <m>\mathcal B</m> dan <m>\mathcal C</m> basis pada himpunan
+        <m>X</m>. Buktikan bahwa keduanya membangkitkan topologi yang sama jika
+        dan hanya jika berlaku dua syarat pemurnian lokal berikut:
+        <ol>
+          <li>
+            <p>
+              untuk setiap <m>x\in B\in\mathcal B</m>, terdapat
+              <m>C\in\mathcal C</m> dengan <m>x\in C\subseteq B</m>;
+            </p>
+          </li>
+          <li>
+            <p>
+              untuk setiap <m>x\in C\in\mathcal C</m>, terdapat
+              <m>B\in\mathcal B</m> dengan <m>x\in B\subseteq C</m>.
+            </p>
+          </li>
+        </ol>
+        Kemudian gunakan kriteria ini untuk membuktikan bahwa semua interval
+        terbuka <m>(a,b)</m> dan semua interval terbuka
+        <m>(p,q)</m> dengan <m>p,q\in\Q</m> membangkitkan topologi Euklides
+        yang sama pada <m>\R</m>. Verifikasi bahwa koleksi kedua memang basis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-04-hint">
+      <p>
+        <em>Tahap 1.</em> Jika syarat pemurnian dari
+        <m>\mathcal B</m> ke <m>\mathcal C</m> berlaku, tulis setiap
+        <m>B\in\mathcal B</m> sebagai gabungan elemen-elemen
+        <m>\mathcal C</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk arah perlu, ingat bahwa anggota basis terbuka
+        dalam topologi yang dibangkitkannya dan gunakan pencirian terbuka
+        dengan elemen basis di sekitar setiap titik.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Gunakan kerapatan <m>\Q</m> untuk memilih
+        <m>a\lt p\lt x\lt q\lt b</m> ketika <m>x\in(a,b)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-04-answer">
+      <p>
+        Pemurnian lokal dua arah ekuivalen dengan kesamaan topologi yang
+        dibangkitkan. Interval berujung rasional membentuk basis, dan setiap
+        interval real dapat dimurnikan di setiap titik oleh interval berujung
+        rasional. Arah sebaliknya langsung karena setiap interval berujung
+        rasional juga interval terbuka real. Jadi kedua basis menghasilkan
+        topologi Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-04-solution">
+      <p>
+        Andaikan syarat pertama berlaku. Untuk setiap <m>B\in\mathcal B</m>
+        dan setiap <m>x\in B</m>, pilih <m>C_x\in\mathcal C</m> dengan
+        <m>x\in C_x\subseteq B</m>. Maka
+        <m>B=\bigcup_{x\in B}C_x</m>, sehingga setiap anggota
+        <m>\mathcal B</m> terbuka dalam topologi yang dibangkitkan
+        <m>\mathcal C</m>. Setiap himpunan terbuka yang dibangkitkan
+        <m>\mathcal B</m> adalah gabungan anggota <m>\mathcal B</m>, jadi
+        juga terbuka dalam topologi <m>\mathcal C</m>. Dengan demikian
+        <m>\tau_{\mathcal B}\subseteq\tau_{\mathcal C}</m>. Syarat kedua
+        memberi inklusi balik dengan argumen yang sama.
+      </p>
+      <p>
+        Sebaliknya, andaikan
+        <m>\tau_{\mathcal B}=\tau_{\mathcal C}</m>. Jika
+        <m>x\in B\in\mathcal B</m>, himpunan <m>B</m> terbuka dalam topologi
+        <m>\mathcal C</m>. Karena <m>\mathcal C</m> basis, ada
+        <m>C\in\mathcal C</m> dengan <m>x\in C\subseteq B</m>. Ini memberi
+        syarat pertama; menukar peran kedua basis memberi syarat kedua.
+      </p>
+      <p>
+        Sekarang tetapkan
+        <m>\mathcal B_E=\{(a,b)\mid a,b\in\R,\ a\lt b\}</m> dan
+        <m>\mathcal B_{\Q}=\{(p,q)\mid p,q\in\Q,\ p\lt q\}</m>. Setiap
+        <m>x\in\R</m> berada dalam interval berujung rasional karena terdapat
+        <m>p,q\in\Q</m> dengan <m>p\lt x\lt q</m>. Jika <m>x</m> berada dalam
+        irisan dua interval berujung rasional, kerapatan bilangan rasional
+        menyediakan <m>r,s\in\Q</m> sehingga
+        <m>\max(p_1,p_2)\lt r\lt x\lt s\lt\min(q_1,q_2)</m>. Maka
+        <m>x\in(r,s)</m> dan interval ini terkandung dalam irisan. Jadi
+        <m>\mathcal B_{\Q}</m> adalah basis.
+      </p>
+      <p>
+        Karena <m>\mathcal B_{\Q}\subseteq\mathcal B_E</m>, setiap anggota
+        basis rasional sudah merupakan anggota basis Euklides. Sebaliknya,
+        jika <m>x\in(a,b)</m>, pilih bilangan rasional <m>p,q</m> dengan
+        <m>a\lt p\lt x\lt q\lt b</m>. Maka
+        <m>x\in(p,q)\subseteq(a,b)</m>. Kriteria pemurnian lokal dua arah
+        membuktikan bahwa kedua basis membangkitkan topologi yang sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-mastery-05">
+    <title>Interior dibaca langsung dari basis</title>
+    <statement>
+      <p>
+        Misalkan <m>\mathcal B</m> basis untuk topologi pada <m>X</m> dan
+        <m>A\subseteq X</m>. Buktikan rumus
+        <me>\Int(A)=\bigcup\{B\in\mathcal B\mid B\subseteq A\}.</me>
+        Kemudian gunakan basis interval berujung rasional pada <m>\R</m> untuk
+        menghitung interior <m>A=[0,1]\cup\{2\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-05-hint">
+      <p>
+        <em>Tahap 1.</em> Gabungan semua elemen basis yang termuat dalam
+        <m>A</m> adalah himpunan terbuka yang termuat dalam <m>A</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>x\in\Int(A)</m>, gunakan sifat basis pada
+        himpunan terbuka <m>\Int(A)</m> untuk menemukan elemen basis yang
+        memuat <m>x</m> dan termuat dalam <m>A</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Titik-titik <m>(0,1)</m> mempunyai interval kecil
+        berujung rasional di dalam <m>A</m>; uji secara terpisah titik
+        <m>0,1,2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-05-answer">
+      <p>
+        Interior adalah tepat gabungan semua elemen basis yang terkandung
+        dalam himpunan tersebut. Untuk <m>A=[0,1]\cup\{2\}</m> dalam topologi
+        Euklides,
+        <me>\Int(A)=(0,1).</me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-05-solution">
+      <p>
+        Tetapkan
+        <m>U=\bigcup\{B\in\mathcal B\mid B\subseteq A\}</m>. Himpunan
+        <m>U</m> terbuka sebagai gabungan elemen basis dan memenuhi
+        <m>U\subseteq A</m>. Karena <m>\Int(A)</m> adalah himpunan terbuka
+        terbesar yang terkandung dalam <m>A</m>, diperoleh
+        <m>U\subseteq\Int(A)</m>.
+      </p>
+      <p>
+        Sebaliknya, ambil <m>x\in\Int(A)</m>. Interior itu terbuka, dan
+        <m>\mathcal B</m> adalah basis, sehingga terdapat
+        <m>B_x\in\mathcal B</m> dengan
+        <m>x\in B_x\subseteq\Int(A)\subseteq A</m>. Maka <m>B_x</m> muncul
+        dalam gabungan yang mendefinisikan <m>U</m>, sehingga
+        <m>x\in U</m>. Jadi <m>\Int(A)\subseteq U</m>, dan kedua inklusi
+        membuktikan rumus tersebut.
+      </p>
+      <p>
+        Untuk setiap <m>x\in(0,1)</m>, kerapatan <m>\Q</m> memberi
+        <m>p,q\in\Q</m> dengan <m>0\lt p\lt x\lt q\lt1</m>. Maka interval
+        basis <m>(p,q)</m> memuat <m>x</m> dan termuat dalam <m>A</m>. Jadi
+        <m>(0,1)\subseteq\Int(A)</m>. Tidak ada interval terbuka yang memuat
+        <m>0</m> atau <m>1</m> dan tetap termuat dalam <m>[0,1]</m>, sedangkan
+        setiap interval terbuka yang memuat <m>2</m> juga memuat titik selain
+        <m>2</m> di luar <m>A</m>. Titik di luar <m>A</m> tentu bukan titik
+        interior. Karena itu <m>\Int(A)=(0,1)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-mastery-06">
+    <title>Metrik terpotong, topologi tetap</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik dan definisikan
+        <m>\rho(x,y)=\min\{1,d(x,y)\}</m>. Buktikan bahwa <m>\rho</m>
+        merupakan metrik pada <m>X</m> dan bahwa <m>d</m> serta <m>\rho</m>
+        membangkitkan topologi yang sama. Jelaskan informasi jarak apa yang
+        hilang ketika <m>d</m> diganti oleh <m>\rho</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-06-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk pertidaksamaan segitiga, gunakan
+        <m>d(x,z)\leq d(x,y)+d(y,z)</m> dan buktikan
+        <m>\min\{1,a+b\}\leq\min\{1,a\}+\min\{1,b\}</m> bagi
+        <m>a,b\geq0</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>0\lt r\leq1</m>, bandingkan langsung
+        <m>B_d(x,r)</m> dan <m>B_\rho(x,r)</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Dalam pembuktian keterbukaan, selalu perkecil
+        radius menjadi paling besar <m>1/2</m> sebelum membandingkan bola.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-06-answer">
+      <p>
+        Fungsi <m>\rho</m> memenuhi semua aksioma metrik. Untuk
+        <m>0\lt r\leq1</m>, berlaku
+        <m>B_\rho(x,r)=B_d(x,r)</m>; karena bola beradius kecil membentuk
+        basis lokal, kedua metrik menghasilkan topologi yang sama. Pemotongan
+        menghapus perbedaan semua jarak yang semula lebih besar daripada atau
+        sama dengan <m>1</m>, tetapi tidak mengubah struktur terbuka lokal.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-06-solution">
+      <p>
+        Jelas <m>\rho(x,y)\geq0</m>, simetris, dan
+        <m>\rho(x,y)=0</m> tepat ketika <m>d(x,y)=0</m>, yakni ketika
+        <m>x=y</m>. Untuk pertidaksamaan segitiga, tulis
+        <m>a=d(x,y)</m> dan <m>b=d(y,z)</m>. Dari pertidaksamaan segitiga bagi
+        <m>d</m>,
+        <me>
+          \rho(x,z)\leq\min\{1,a+b\}
+          \leq\min\{1,a\}+\min\{1,b\}.
+        </me>
+        Untuk membuktikan pertidaksamaan kedua, jika <m>a\geq1</m> atau
+        <m>b\geq1</m>, ruas kanan sedikitnya <m>1</m>, sedangkan ruas kiri
+        paling besar <m>1</m>. Jika <m>a,b\lt1</m>, ruas kanan adalah
+        <m>a+b</m> dan ruas kiri paling besar <m>a+b</m>. Jadi
+        <m>\rho(x,z)\leq\rho(x,y)+\rho(y,z)</m>, dan <m>\rho</m> merupakan
+        metrik.
+      </p>
+      <p>
+        Untuk <m>0\lt r\leq1</m>, kondisi
+        <m>\rho(x,y)\lt r</m> ekuivalen dengan <m>d(x,y)\lt r</m>. Memang,
+        bila minimum <m>\min\{1,d(x,y)\}</m> lebih kecil daripada
+        <m>r\leq1</m>, nilai minimum itu tidak mungkin berasal dari <m>1</m>;
+        arah sebaliknya langsung. Jadi
+        <m>B_\rho(x,r)=B_d(x,r)</m> untuk semua radius tersebut.
+      </p>
+      <p>
+        Jika <m>U</m> terbuka terhadap <m>d</m> dan <m>x\in U</m>, pilih
+        <m>\epsilon>0</m> dengan <m>B_d(x,\epsilon)\subseteq U</m>, lalu
+        tetapkan <m>r=\min\{\epsilon,1/2\}</m>. Bola
+        <m>B_\rho(x,r)=B_d(x,r)</m> termuat dalam <m>U</m>, sehingga <m>U</m>
+        terbuka terhadap <m>\rho</m>. Argumen yang sama dengan peran metrik
+        ditukar memberi arah balik. Maka topologinya sama. Namun setiap jarak
+        <m>d(x,y)\geq1</m> menjadi tepat <m>1</m> di bawah <m>\rho</m>; data
+        jarak skala besar itu hilang meskipun data keterbukaan lokal tetap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-mastery-07">
+    <title>Ruang hingga termetriskan harus diskret</title>
+    <statement>
+      <p>
+        Buktikan bahwa topologi yang diinduksi oleh metrik apa pun pada
+        himpunan hingga <m>X</m> adalah topologi diskret. Kemudian konstruksikan
+        metrik yang menginduksi topologi diskret dan simpulkan bahwa suatu
+        topologi pada himpunan hingga termetriskan jika dan hanya jika
+        topologi itu diskret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-07-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk <m>x\in X</m> dengan
+        <m>X\setminus\{x\}\neq\emptyset</m>, ambil minimum jarak positif dari
+        <m>x</m> ke semua titik lain.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Bola dengan radius setengah minimum tersebut hanya
+        memuat <m>x</m>. Gunakan gabungan himpunan satu titik untuk menangani
+        subhimpunan sebarang.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Untuk arah sebaliknya, gunakan metrik yang bernilai
+        <m>0</m> pada pasangan titik yang sama dan <m>1</m> pada pasangan titik
+        yang berbeda.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-07-answer">
+      <p>
+        Pada himpunan hingga, setiap titik mempunyai jarak positif minimum ke
+        titik-titik lain, sehingga setiap himpunan satu titik terbuka dan
+        topologinya diskret. Sebaliknya, metrik diskret menginduksi topologi
+        diskret. Jadi topologi hingga termetriskan tepat ketika diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-07-solution">
+      <p>
+        Misalkan <m>d</m> metrik pada himpunan hingga <m>X</m>. Jika
+        <m>X=\emptyset</m> atau <m>X=\{x\}</m>, topologinya langsung diskret.
+        Jika <m>X</m> mempunyai lebih dari satu titik, untuk setiap
+        <m>x\in X</m> himpunan berhingga
+        <m>\{d(x,y)\mid y\in X,\ y\neq x\}</m> terdiri atas bilangan positif
+        dan karena itu mempunyai minimum positif <m>\delta_x</m>. Bola
+        <m>B_d(x,\delta_x/2)</m> tidak dapat memuat titik <m>y\neq x</m>, jadi
+        bola itu sama dengan <m>\{x\}</m>.
+      </p>
+      <p>
+        Dengan demikian setiap himpunan satu titik terbuka. Setiap
+        <m>A\subseteq X</m> adalah gabungan
+        <m>A=\bigcup_{x\in A}\{x\}</m>, sehingga setiap subhimpunan terbuka.
+        Topologi metrik tersebut adalah topologi diskret. Akibatnya, topologi
+        nondiskret pada himpunan hingga tidak mungkin diinduksi oleh metrik.
+      </p>
+      <p>
+        Untuk arah sebaliknya, definisikan
+        <me>
+          d_{\mathrm{disc}}(x,y)=
+          \begin{cases}0 &amp; \text{jika }x=y,\\1 &amp; \text{jika }x\neq y.
+          \end{cases}
+        </me>
+        Ini merupakan metrik, dan
+        <m>B_{d_{\mathrm{disc}}}(x,1/2)=\{x\}</m>. Maka semua himpunan satu
+        titik, dan selanjutnya semua subhimpunan, terbuka. Jadi topologi
+        diskret memang termetriskan, yang melengkapi ekuivalensi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-mastery-08">
+    <title>Lingkungan menentukan topologi</title>
+    <statement>
+      <p>
+        Misalkan <m>\tau</m> dan <m>\sigma</m> dua topologi pada himpunan
+        <m>X</m>. Untuk setiap <m>x\in X</m>, andaikan sebuah subhimpunan
+        <m>N\subseteq X</m> merupakan lingkungan <m>\tau</m> dari <m>x</m>
+        jika dan hanya jika ia merupakan lingkungan <m>\sigma</m> dari
+        <m>x</m>. Buktikan bahwa <m>\tau=\sigma</m>. Dengan kata lain,
+        seluruh data lingkungan menentukan topologi secara tunggal.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-mastery-08-hint">
+      <p>
+        <em>Tahap 1.</em> Ambil <m>U\in\tau</m>. Untuk setiap <m>x\in U</m>,
+        himpunan <m>U</m> sendiri merupakan lingkungan <m>\tau</m> dari
+        <m>x</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan hipotesis untuk memilih himpunan
+        <m>\sigma</m>-terbuka <m>V_x</m> dengan
+        <m>x\in V_x\subseteq U</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Tulis <m>U</m> sebagai gabungan semua
+        <m>V_x</m>, lalu ulangi argumen dengan peran kedua topologi ditukar.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-mastery-08-answer">
+      <p>
+        Setiap <m>U\in\tau</m> merupakan lingkungan <m>\sigma</m> dari setiap
+        titiknya, sehingga <m>U</m> adalah gabungan himpunan-himpunan
+        <m>\sigma</m>-terbuka dan karenanya <m>U\in\sigma</m>. Ini memberi
+        <m>\tau\subseteq\sigma</m>; simetri memberi inklusi balik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-mastery-08-solution">
+      <p>
+        Ambil sembarang <m>U\in\tau</m>. Untuk setiap <m>x\in U</m>, himpunan
+        <m>U</m> adalah himpunan <m>\tau</m>-terbuka yang memuat <m>x</m>,
+        sehingga <m>U</m> merupakan lingkungan <m>\tau</m> dari <m>x</m>.
+        Berdasarkan hipotesis, <m>U</m> juga merupakan lingkungan
+        <m>\sigma</m> dari <m>x</m>. Oleh definisi lingkungan, terdapat
+        <m>V_x\in\sigma</m> dengan <m>x\in V_x\subseteq U</m>.
+      </p>
+      <p>
+        Setiap <m>V_x</m> termuat dalam <m>U</m>, sedangkan setiap titik
+        <m>x\in U</m> berada dalam <m>V_x</m>. Karena itu
+        <me>U=\bigcup_{x\in U}V_x.</me>
+        Gabungan sebarang himpunan <m>\sigma</m>-terbuka bersifat
+        <m>\sigma</m>-terbuka, sehingga <m>U\in\sigma</m>. Maka
+        <m>\tau\subseteq\sigma</m>.
+      </p>
+      <p>
+        Hipotesis kesamaan lingkungan bersifat simetris. Mengulangi argumen
+        dengan <m>\tau</m> dan <m>\sigma</m> ditukar menghasilkan
+        <m>\sigma\subseteq\tau</m>. Oleh sebab itu <m>\tau=\sigma</m>, jadi
+        data semua lingkungan memang menentukan topologi secara unik.
+      </p>
+    </solution>
+  </exercise>
+</section>

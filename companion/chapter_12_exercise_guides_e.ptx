@@ -1,0 +1,363 @@
+<section xml:id="o003-c90-ch12-exercise-guides-e" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian kelima</title>
+
+  <p>
+    Tujuh panduan berikut mendampingi latihan
+    <em>ex_digital_line_topology</em> dalam
+    <em>sec_top_space_exer.ptx</em>: pembuktian bahwa koleksi yang diberikan
+    merupakan basis, lalu enam pemeriksaan keterbukaan. Tugas pada baris
+    sumber 460 hanya mengelompokkan keenam pemeriksaan tersebut dan tidak
+    dihitung sebagai soal tersendiri. Setiap panduan menyediakan petunjuk
+    bertahap, jawaban singkat, solusi lengkap, dan rubrik pemeriksaan.
+  </p>
+  <p>
+    Seluruh bagian ini adalah komponen pendamping asli berbahasa Indonesia
+    yang diterbitkan secara terpisah di bawah CC BY 4.0. Bagian ini bukan
+    teks, terjemahan resmi, atau kumpulan solusi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-exer-e-01">
+    <title>Koleksi lingkungan dasar pada garis digital</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em>
+        <em>ex_digital_line_topology</em>, tugas pertama (baris sumber
+        442--458). Untuk setiap <m>n\in\Z</m>, definisikan
+        <me>
+          B(n)=\begin{cases}
+          \{n\} \amp \text{jika (n) ganjil},\\
+          \{n-1,n,n+1\} \amp \text{jika (n) genap}.
+          \end{cases}
+        </me>
+        Tunjukkan bahwa
+        <m>\mathcal B=\{B(n)\mid n\in\Z\}</m> merupakan basis untuk suatu
+        topologi pada <m>\Z</m>.
+        <em>Rubrik.</em> Buktikan baik syarat cakupan maupun syarat irisan
+        basis. Dalam kasus irisan, pisahkan kemungkinan bahwa titik yang
+        dipilih ganjil atau genap.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-e-01-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk setiap <m>x\in\Z</m>, perhatikan bahwa
+        <m>x\in B(x)</m> tanpa bergantung pada paritasnya.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>x</m> ganjil dan
+        <m>x\in B(m)\cap B(n)</m>, gunakan
+        <m>B(x)=\{x\}</m> sebagai lingkungan dasar yang lebih kecil.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Jika <m>x</m> genap, buktikan terlebih dahulu
+        bahwa satu-satunya anggota <m>\mathcal B</m> yang memuat <m>x</m>
+        adalah <m>B(x)</m> sendiri.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-e-01-answer">
+      <p>
+        Ya. Koleksi <m>\mathcal B</m> mencakup <m>\Z</m>. Untuk titik ganjil
+        dalam irisan dua anggota basis, singletonnya memperhalus irisan;
+        untuk titik genap, kedua anggota basis yang beririsan di titik itu
+        harus sama-sama <m>B(x)</m>. Jadi kedua syarat basis terpenuhi.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-e-01-solution">
+      <p>
+        Ambil sembarang <m>x\in\Z</m>. Jika <m>x</m> ganjil, maka
+        <m>B(x)=\{x\}</m>; jika <m>x</m> genap, maka
+        <m>B(x)=\{x-1,x,x+1\}</m>. Dalam kedua kasus
+        <m>x\in B(x)</m>. Karena itu gabungan seluruh anggota
+        <m>\mathcal B</m> adalah <m>\Z</m>.
+      </p>
+      <p>
+        Sekarang misalkan <m>x\in B(m)\cap B(n)</m>. Jika <m>x</m> ganjil,
+        pilih <m>B(x)=\{x\}</m>. Jelas
+        <me>x\in B(x)\subseteq B(m)\cap B(n).</me>
+        Jika <m>x</m> genap, anggota basis yang memuat <m>x</m> tidak dapat
+        berpusat di bilangan ganjil, sebab anggota seperti itu merupakan
+        singleton ganjil. Bila pusatnya genap, dua titik selain pusat pada
+        <m>B(m)=\{m-1,m,m+1\}</m> adalah ganjil. Oleh karena <m>x</m>
+        genap dan <m>x\in B(m)</m>, haruslah <m>x=m</m>. Dengan cara yang
+        sama, <m>x=n</m>. Jadi
+        <m>B(m)=B(x)=B(n)</m>, dan <m>B(x)</m> terkandung dalam irisan.
+        Syarat irisan basis pun terpenuhi. Maka <m>\mathcal B</m>
+        membangkitkan topologi garis digital <m>\tau_{dl}</m> pada
+        <m>\Z</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-e-02">
+    <title>Apakah singleton nol terbuka?</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em>
+        <em>ex_digital_line_topology</em>, pemeriksaan keterbukaan pertama
+        (baris sumber 466--472). Tentukan apakah <m>\{0\}</m> terbuka dalam
+        topologi garis digital <m>\tau_{dl}</m>.
+        <em>Rubrik.</em> Periksa lingkungan dasar yang mungkin memuat titik
+        genap <m>0</m>; jangan menyimpulkan hanya dari fakta bahwa
+        <m>\{0\}</m> adalah singleton.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-e-02-hint">
+      <p>
+        <em>Tahap 1.</em> Karena <m>0</m> genap,
+        <m>B(0)=\{-1,0,1\}</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan pembuktian basis di atas untuk memastikan
+        bahwa tidak ada anggota basis lain yang memuat <m>0</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Terapkan kriteria: untuk setiap titik suatu
+        himpunan terbuka harus ada anggota basis yang memuat titik itu dan
+        terkandung dalam himpunan tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-e-02-answer">
+      <p>
+        Tidak. Satu-satunya anggota basis yang memuat <m>0</m> adalah
+        <m>B(0)=\{-1,0,1\}</m>, dan himpunan ini tidak terkandung dalam
+        <m>\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-e-02-solution">
+      <p>
+        Andaikan <m>\{0\}</m> terbuka. Karena <m>0\in\{0\}</m>, kriteria
+        basis mengharuskan suatu <m>B(n)</m> dengan
+        <m>0\in B(n)\subseteq\{0\}</m>. Pusat <m>n</m> tidak mungkin
+        ganjil, sebab dalam hal itu <m>B(n)=\{n\}</m> dan persamaan
+        <m>n=0</m> akan membuat <m>n</m> genap. Jika <m>n</m> genap, titik
+        genap yang berada dalam <m>\{n-1,n,n+1\}</m> hanyalah <m>n</m>,
+        sehingga <m>n=0</m>. Jadi satu-satunya kemungkinan adalah
+        <m>B(0)=\{-1,0,1\}</m>. Karena
+        <m>B(0)\nsubseteq\{0\}</m>, anggota basis yang diperlukan tidak
+        ada. Maka <m>\{0\}</m> tidak terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-e-03">
+    <title>Apakah singleton satu terbuka?</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em>
+        <em>ex_digital_line_topology</em>, pemeriksaan keterbukaan kedua
+        (baris sumber 473--479). Tentukan apakah <m>\{1\}</m> terbuka dalam
+        <m>\tau_{dl}</m>.
+        <em>Rubrik.</em> Nyatakan anggota basis yang tepat dan tampilkan
+        himpunan sebagai gabungan anggota basis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-e-03-hint">
+      <p>
+        <em>Tahap 1.</em> Tentukan paritas <m>1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Substitusikan <m>n=1</m> ke dalam definisi
+        <m>B(n)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-e-03-answer">
+      <p>
+        Ya. Karena <m>1</m> ganjil, berlaku
+        <m>\{1\}=B(1)</m>, sehingga <m>\{1\}</m> merupakan anggota basis
+        dan karenanya terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-e-03-solution">
+      <p>
+        Bilangan <m>1</m> ganjil, jadi definisi garis digital memberikan
+        <me>B(1)=\{1\}.</me>
+        Setiap anggota basis terbuka dalam topologi yang dibangkitkannya.
+        Secara ekuivalen, <m>\{1\}</m> adalah gabungan satu anggota basis,
+        yaitu <m>\bigcup\{B(1)\}</m>. Dengan demikian
+        <m>\{1\}\in\tau_{dl}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-e-04">
+    <title>Apakah dua titik genap terbuka?</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em>
+        <em>ex_digital_line_topology</em>, pemeriksaan keterbukaan ketiga
+        (baris sumber 480--486). Tentukan apakah <m>\{0,2\}</m> terbuka
+        dalam <m>\tau_{dl}</m>.
+        <em>Rubrik.</em> Cukup temukan satu titik dalam himpunan yang tidak
+        mempunyai lingkungan dasar yang terkandung di dalamnya, tetapi
+        nyatakan lingkungan tersebut secara eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-e-04-hint">
+      <p>
+        <em>Tahap 1.</em> Mulailah dari titik <m>0</m> yang berada dalam
+        himpunan.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Satu-satunya lingkungan dasar yang memuat
+        <m>0</m> adalah <m>B(0)=\{-1,0,1\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-e-04-answer">
+      <p>
+        Tidak. Titik <m>0</m> berada dalam <m>\{0,2\}</m>, tetapi
+        <m>B(0)=\{-1,0,1\}</m> tidak terkandung dalam <m>\{0,2\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-e-04-solution">
+      <p>
+        Himpunan <m>U=\{0,2\}</m> memuat titik genap <m>0</m>. Seperti pada
+        panduan sebelumnya, satu-satunya anggota basis yang memuat
+        <m>0</m> adalah
+        <m>B(0)=\{-1,0,1\}</m>. Akan tetapi <m>-1</m> dan <m>1</m> tidak
+        berada dalam <m>U</m>, sehingga <m>B(0)\nsubseteq U</m>. Jadi tidak
+        ada anggota basis <m>B</m> dengan
+        <m>0\in B\subseteq U</m>. Kriteria keterbukaan gagal pada titik
+        <m>0</m>, sehingga <m>\{0,2\}</m> tidak terbuka. (Kegagalan serupa
+        juga terjadi pada titik genap <m>2</m>.)
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-e-05">
+    <title>Blok berhingga yang terbuka</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em>
+        <em>ex_digital_line_topology</em>, pemeriksaan keterbukaan keempat
+        (baris sumber 487--493). Tentukan apakah
+        <m>\{1,2,3,4,5\}</m> terbuka dalam <m>\tau_{dl}</m>.
+        <em>Rubrik.</em> Nyatakan himpunan tersebut sebagai gabungan
+        eksplisit anggota basis dan verifikasi kedua anggota basis yang
+        digunakan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-e-05-hint">
+      <p>
+        <em>Tahap 1.</em> Titik genap dalam himpunan adalah <m>2</m> dan
+        <m>4</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Hitung <m>B(2)</m> dan <m>B(4)</m>, lalu ambil
+        gabungannya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-e-05-answer">
+      <p>
+        Ya, karena
+        <m>\{1,2,3,4,5\}=B(2)\cup B(4)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-e-05-solution">
+      <p>
+        Karena <m>2</m> dan <m>4</m> genap, definisi basis memberi
+        <me>B(2)=\{1,2,3\},\qquad B(4)=\{3,4,5\}.</me>
+        Oleh karena itu
+        <me>B(2)\cup B(4)=\{1,2,3,4,5\}.</me>
+        Ruas kanan adalah gabungan anggota basis, sehingga terbuka dalam
+        topologi yang dibangkitkan oleh <m>\mathcal B</m>. Dengan demikian
+        <m>\{1,2,3,4,5\}\in\tau_{dl}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-e-06">
+    <title>Bilangan bulat positif</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em>
+        <em>ex_digital_line_topology</em>, pemeriksaan keterbukaan kelima
+        (baris sumber 494--500). Dengan konvensi buku
+        <m>\Z^+=\{1,2,3,\ldots\}</m>, tentukan apakah <m>\Z^+</m> terbuka
+        dalam <m>\tau_{dl}</m>.
+        <em>Rubrik.</em> Konvensi bahwa <m>0\notin\Z^+</m> harus dinyatakan;
+        berikan representasi gabungan basis yang mencakup tepat semua
+        bilangan bulat positif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-e-06-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk setiap <m>k\geq 1</m>, hitung
+        <m>B(2k)</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Periksa bahwa gabungan semua
+        <m>B(2k)</m> untuk <m>k\geq 1</m> tidak memuat <m>0</m> atau
+        bilangan negatif.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Tunjukkan bahwa setiap bilangan positif, baik
+        genap maupun ganjil, muncul dalam sedikitnya satu anggota gabungan
+        tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-e-06-answer">
+      <p>
+        Ya. Untuk konvensi <m>\Z^+=\{1,2,3,\ldots\}</m>, berlaku
+        <m>\Z^+=\bigcup_{k\geq 1}B(2k)</m>, sehingga <m>\Z^+</m> terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-e-06-solution">
+      <p>
+        Di sini <m>\Z^+</m> berarti <m>\{1,2,3,\ldots\}</m>, jadi tidak
+        memuat <m>0</m>. Untuk <m>k\geq 1</m>, bilangan <m>2k</m> genap dan
+        <me>B(2k)=\{2k-1,2k,2k+1\}.</me>
+        Semua bilangan dalam himpunan ini positif. Sebaliknya, setiap
+        bilangan positif genap berbentuk <m>2k</m> dan berada dalam
+        <m>B(2k)</m>. Setiap bilangan positif ganjil berbentuk
+        <m>2k-1</m> untuk suatu <m>k\geq 1</m> dan juga berada dalam
+        <m>B(2k)</m>. Maka
+        <me>\Z^+=\bigcup_{k\geq 1}B(2k).</me>
+        Karena gabungan sebarang anggota basis terbuka, <m>\Z^+</m>
+        terbuka dalam <m>\tau_{dl}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-e-07">
+    <title>Himpunan semua bilangan bulat ganjil</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em>
+        <em>ex_digital_line_topology</em>, pemeriksaan keterbukaan keenam
+        (baris sumber 501--507). Tentukan apakah himpunan semua bilangan
+        bulat ganjil terbuka dalam <m>\tau_{dl}</m>.
+        <em>Rubrik.</em> Gunakan definisi <m>B(n)</m> untuk pusat ganjil dan
+        tuliskan kesetaraan gabungan basis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-e-07-hint">
+      <p>
+        <em>Tahap 1.</em> Bila <m>n</m> ganjil, maka
+        <m>B(n)=\{n\}</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Ambil gabungan singleton tersebut atas semua
+        bilangan bulat ganjil <m>n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-e-07-answer">
+      <p>
+        Ya. Himpunan bilangan bulat ganjil adalah
+        <m>\bigcup_{n\text{ ganjil}}B(n)</m>, yaitu gabungan anggota basis.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-e-07-solution">
+      <p>
+        Misalkan
+        <m>G=\{n\in\Z\mid n\text{ ganjil}\}</m>. Untuk setiap
+        <m>n\in G</m>, definisi basis memberikan
+        <m>B(n)=\{n\}</m>. Karena itu
+        <me>G=\bigcup_{n\in G}B(n).</me>
+        Gabungan di ruas kanan hanya memuat titik ganjil karena setiap
+        sukunya singleton ganjil, dan setiap titik ganjil muncul sebagai
+        pusat salah satu suku. Jadi kesetaraan tersebut tepat. Karena
+        <m>G</m> merupakan gabungan anggota basis, <m>G</m> terbuka dalam
+        topologi garis digital.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch11-edition-note",
+  "id": "o003-c90-ch12-edition-note",
   "level": "1",
-  "url": "o003-c90-ch11-edition-note.html",
+  "url": "o003-c90-ch12-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat sebelas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat dua belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
 },
 {
   "id": "sec_sets_intro",
@@ -3347,6 +3347,501 @@ var ptx_lunr_docs = [
   "number": "9",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan metrik diskret pada ruang metrik , maka untuk sebarang subruang dari , pembatasan pada merupakan metrik diskret.   Jika merupakan metrik pada ruang yang bukan metrik diskret, dan jika merupakan subhimpunan dari , maka tidak mungkin merupakan metrik diskret.   Misalkan suatu subruang dari ruang metrik . Jika suatu barisan berada dalam dan untuk suatu , maka dalam .   Misalkan suatu subruang dari ruang metrik . Jika suatu barisan berada dalam dan untuk suatu , maka dalam .   Jika dan merupakan ruang-ruang metrik, maka fungsi yang didefinisikan oleh merupakan suatu metrik pada .   Jika dan merupakan ruang-ruang metrik, maka fungsi yang didefinisikan oleh merupakan suatu metrik pada .  "
+},
+{
+  "id": "sec_top_space_intro",
+  "level": "1",
+  "url": "sec_top_space_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Banyak sifat yang telah kita perkenalkan pada ruang metrik (kekontinuan, titik limit, dan batas) dapat dirumuskan dalam istilah himpunan terbuka pada ruang tersebut. Dengan pemikiran itu, kita dapat memperluas konsep ruang dengan menghilangkan metrik dan cukup mendefinisikan himpunan terbuka pada ruang tersebut. Hasilnya adalah apa yang disebut ruang topologi .  Ingat bahwa himpunan terbuka dalam ruang metrik memenuhi sifat-sifat tertentu, antara lain gabungan sebarang himpunan terbuka adalah terbuka dan irisan berhingga himpunan terbuka adalah terbuka. Sekarang kita gunakan sifat-sifat ini sebagai aksioma untuk mendefinisikan ruang topologi.   topologi   Misalkan suatu himpunan tak kosong. Suatu himpunan Simbol adalah huruf Yunani tau kecil. yang terdiri dari subhimpunan-subhimpunan disebut topologi pada jika    dan merupakan anggota ,    gabungan sebarang himpunan-himpunan dalam merupakan himpunan dalam , dan    irisan berhingga sebarang himpunan dalam merupakan himpunan dalam .        ruang topologi  himpunan terbuka dalam ruang topologi Suatu ruang topologi adalah himpunan apa pun yang dilengkapi dengan suatu topologi. Jika adalah ruangnya dan topologi pada , kita menyatakan ruang topologi tersebut sebagai . Elemen-elemen disebut himpunan terbuka dalam ruang topologi. Jika topologinya sudah jelas dari konteks, kita cukup menyebut sebagai ruang topologi. Berikut beberapa contoh.    Misalkan . Apakah himpunan merupakan topologi pada ? Berikan justifikasi.    Misalkan . Apakah koleksi subhimpunan yang terdiri dari merupakan topologi pada ? Berikan justifikasi. Jika bukan, koleksi subhimpunan terkecil apa dari yang perlu ditambahkan ke agar menjadi topologi pada ?    Misalkan . Apakah koleksi subhimpunan yang terdiri dari merupakan topologi pada ? Berikan justifikasi. Jika bukan, koleksi subhimpunan terkecil apa dari yang perlu ditambahkan ke agar menjadi topologi pada ?    Misalkan . Apakah koleksi subhimpunan yang terdiri dari merupakan topologi pada ? Berikan justifikasi. Jika bukan, koleksi subhimpunan terkecil apa dari yang perlu ditambahkan ke agar menjadi topologi pada ?    Misalkan adalah koleksi subhimpunan berhingga dari . Misalkan . Pertama, tuliskan tiga anggota dan tiga himpunan yang bukan anggota . Selanjutnya, apakah merupakan topologi pada ? Berikan justifikasi.    Misalkan . Apakah merupakan topologi pada ? Berikan justifikasi.    Misalkan suatu himpunan dan . Apakah merupakan topologi pada ? Berikan justifikasi.    Misalkan suatu himpunan dan koleksi semua subhimpunan . Apakah merupakan topologi pada ? Berikan justifikasi.    "
+},
+{
+  "id": "p-1321",
+  "level": "2",
+  "url": "sec_top_space_intro.html#p-1321",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ruang topologi "
+},
+{
+  "id": "definition-37",
+  "level": "2",
+  "url": "sec_top_space_intro.html#definition-37",
+  "type": "Definisi",
+  "number": "12.1",
+  "title": "",
+  "body": " topologi   Misalkan suatu himpunan tak kosong. Suatu himpunan Simbol adalah huruf Yunani tau kecil. yang terdiri dari subhimpunan-subhimpunan disebut topologi pada jika    dan merupakan anggota ,    gabungan sebarang himpunan-himpunan dalam merupakan himpunan dalam , dan    irisan berhingga sebarang himpunan dalam merupakan himpunan dalam .      "
+},
+{
+  "id": "p-1327",
+  "level": "2",
+  "url": "sec_top_space_intro.html#p-1327",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ruang topologi himpunan terbuka "
+},
+{
+  "id": "exploration-12",
+  "level": "2",
+  "url": "sec_top_space_intro.html#exploration-12",
+  "type": "Aktivitas Persiapan",
+  "number": "12.1",
+  "title": "",
+  "body": "  Misalkan . Apakah himpunan merupakan topologi pada ? Berikan justifikasi.    Misalkan . Apakah koleksi subhimpunan yang terdiri dari merupakan topologi pada ? Berikan justifikasi. Jika bukan, koleksi subhimpunan terkecil apa dari yang perlu ditambahkan ke agar menjadi topologi pada ?    Misalkan . Apakah koleksi subhimpunan yang terdiri dari merupakan topologi pada ? Berikan justifikasi. Jika bukan, koleksi subhimpunan terkecil apa dari yang perlu ditambahkan ke agar menjadi topologi pada ?    Misalkan . Apakah koleksi subhimpunan yang terdiri dari merupakan topologi pada ? Berikan justifikasi. Jika bukan, koleksi subhimpunan terkecil apa dari yang perlu ditambahkan ke agar menjadi topologi pada ?    Misalkan adalah koleksi subhimpunan berhingga dari . Misalkan . Pertama, tuliskan tiga anggota dan tiga himpunan yang bukan anggota . Selanjutnya, apakah merupakan topologi pada ? Berikan justifikasi.    Misalkan . Apakah merupakan topologi pada ? Berikan justifikasi.    Misalkan suatu himpunan dan . Apakah merupakan topologi pada ? Berikan justifikasi.    Misalkan suatu himpunan dan koleksi semua subhimpunan . Apakah merupakan topologi pada ? Berikan justifikasi.   "
+},
+{
+  "id": "sec_exam_top",
+  "level": "1",
+  "url": "sec_exam_top.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Contoh-Contoh Topologi",
+  "body": " Contoh-Contoh Topologi  Dalam kegiatan pendahuluan kita telah melihat beberapa contoh topologi. Misalkan suatu himpunan tak kosong.   topologi diskret  Topologi yang terdiri dari semua subhimpunan disebut topologi diskret .    topologi indiskret  Topologi adalah topologi indiskret .    topologi metrik  Jika merupakan ruang metrik, maka koleksi yang terdiri dari gabungan semua bola terbuka merupakan topologi yang disebut topologi metrik . Hasil ini memberi tahu kita bahwa setiap ruang metrik merupakan ruang topologi di bawah topologi metrik. Kelak kita akan melihat bahwa tidak setiap ruang topologi merupakan ruang metrik.     Topologi diskret dan indiskret dapat didefinisikan pada himpunan apa pun dan sering digunakan untuk membuat contoh. Topologi lain yang dapat didefinisikan pada himpunan apa pun dibahas dalam kegiatan berikutnya.     Misalkan suatu himpunan dan terdiri dari himpunan kosong beserta semua subhimpunan dari sedemikian sehingga berhingga.    Buktikan bahwa merupakan topologi pada . (Topologi disebut topologi komplemen berhingga topologi komplemen berhingga atau topologi kofinit . topologi kofinit     Jelaskan mengapa merupakan topologi diskret ketika berhingga.    "
+},
+{
+  "id": "p-1336",
+  "level": "2",
+  "url": "sec_exam_top.html#p-1336",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "topologi diskret topologi indiskret topologi metrik "
+},
+{
+  "id": "act_TS_limits1",
+  "level": "2",
+  "url": "sec_exam_top.html#act_TS_limits1",
+  "type": "Kegiatan",
+  "number": "12.2",
+  "title": "",
+  "body": "  Misalkan suatu himpunan dan terdiri dari himpunan kosong beserta semua subhimpunan dari sedemikian sehingga berhingga.    Buktikan bahwa merupakan topologi pada . (Topologi disebut topologi komplemen berhingga topologi komplemen berhingga atau topologi kofinit . topologi kofinit     Jelaskan mengapa merupakan topologi diskret ketika berhingga.   "
+},
+{
+  "id": "sec_base_top",
+  "level": "1",
+  "url": "sec_base_top.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Basis untuk Topologi",
+  "body": " Basis untuk Topologi  Menjelaskan secara lengkap himpunan terbuka dalam suatu topologi dapat sulit. Sebagai gantinya, kita dapat menjelaskan topologi menggunakan koleksi himpunan yang membangkitkan topologi tersebut. Sebagai contoh, jika merupakan ruang metrik, maka koleksi himpunan terbuka dalam membentuk topologi pada , yang disebut topologi metrik . Kita juga telah melihat bahwa dalam ruang metrik, setiap himpunan terbuka dalam merupakan gabungan bola-bola terbuka. Karena itu kita menyebut koleksi bola terbuka sebagai basis untuk himpunan-himpunan terbuka dalam . Hal yang sama dapat kita lakukan dalam ruang topologi mana pun. Sebagai contoh yang tidak sepele, suatu topologi menarik yang didefinisikan pada bilangan bulat positif diperkenalkan oleh S.W. Golomb. Topologi ini dapat digunakan untuk membuktikan bahwa terdapat tak berhingga banyak bilangan prima. Topologi ini juga menjadikan bilangan bulat positif sebagai ruang Hausdorff terhubung (konsep-konsep ini akan dibahas lebih lanjut nanti). Topologi Golomb didefinisikan sebagai berikut. Jika dan merupakan bilangan bulat koprima dalam (yaitu, dan tidak memiliki faktor positif bersama selain 1 sehingga pembagi persekutuan terbesar dan adalah ), misalkan .   ruang Golomb Koleksi himpunan merupakan basis untuk topologi Golomb, dan ruang topologi disebut ruang Golomb . Membuktikan bahwa himpunan-himpunan membentuk basis suatu topologi merupakan latihan dalam teori bilangan, sehingga kita tidak membahas rinciannya.   Misalkan dan . Anda boleh mengasumsikan bahwa merupakan topologi pada . Jelaskan mengapa setiap himpunan terbuka tak kosong dalam ruang topologi dapat ditulis menggunakan gabungan sebarang dan irisan berhingga dari , , dan .    menunjukkan bahwa, seperti bola-bola terbuka dalam ruang metrik, suatu topologi dapat memiliki koleksi subhimpunan yang gabungannya membentuk semua himpunan terbuka dalam topologi tersebut. Namun kita perlu sedikit berhati-hati. Suatu basis akan membangkitkan koleksi himpunan terbuka untuk sebuah topologi, sehingga himpunan-himpunan basis yang kita gunakan harus merupakan himpunan terbuka. Selain itu, setiap elemen dalam ruang topologi harus menjadi elemen dari salah satu himpunan basis, dan karena elemen-elemen basis harus menghasilkan semua himpunan terbuka dalam topologi, setiap himpunan dalam topologi (kecuali himpunan kosong) harus merupakan gabungan himpunan-himpunan dalam suatu basis. Kita juga harus dapat memastikan bahwa setiap irisan berhingga himpunan dalam topologi tetap merupakan himpunan dalam topologi ketika kita menulis himpunan-himpunan tersebut dalam istilah himpunan basis. Untuk menjamin dua syarat terakhir, akan kita lihat bahwa cukup mensyaratkan: untuk setiap titik dalam irisan elemen-elemen basis, terdapat elemen basis lain di dalam irisan tersebut yang memuat titik itu. Hal ini dirangkum dalam .    Misalkan suatu himpunan dan koleksi subhimpunan dari sedemikian sehingga   Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .     Maka himpunan yang terdiri dari himpunan kosong dan gabungan elemen-elemen merupakan topologi pada .    Sebelum membuktikan , kita perlu mengetahui satu fakta tentang himpunan .    Misalkan suatu himpunan dan koleksi subhimpunan dari sedemikian sehingga    Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .  Misalkan , , , merupakan anggota . Tujuan kegiatan ini adalah memperluas sifat 2 dan menunjukkan bahwa jika , maka terdapat himpunan sedemikian sehingga dan .   Karena pernyataan yang ingin kita buktikan bergantung pada bilangan bulat positif , kita akan menggunakan induksi matematika. Jelaskan mengapa kasus dan benar.   Apa hipotesis induksinya dan apa yang ingin kita buktikan pada langkah induksi?   Gunakan hipotesis induksi dan kondisi 2 untuk melengkapi pembuktian lema yang dicantumkan setelah kegiatan ini.    Sekarang kita dapat membuktikan .    Misalkan suatu himpunan dan koleksi subhimpunan dari sedemikian sehingga   Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .     Misalkan , , , merupakan anggota . Jika , maka terdapat himpunan sedemikian sehingga dan .     Misalkan suatu himpunan, dan misalkan serta memenuhi kondisi yang diberikan. Berdasarkan definisi, . Untuk setiap terdapat himpunan sedemikian sehingga . Maka , dan . Untuk melengkapi pembuktian bahwa merupakan topologi pada , kita perlu menunjukkan bahwa tertutup terhadap gabungan sebarang dan irisan berhingga. Kita pertimbangkan gabungan terlebih dahulu. Misalkan koleksi himpunan dalam untuk pada suatu himpunan pengindeks . Berdasarkan definisi, setiap kosong atau merupakan gabungan elemen-elemen . Jadi kosong, atau merupakan gabungan himpunan-himpunan dalam . Dengan demikian, dan tertutup terhadap gabungan sebarang.  Sekarang kita tunjukkan bahwa tertutup terhadap irisan berhingga. Misalkan bilangan bulat positif dan koleksi himpunan dalam untuk . Misalkan . Jika untuk suatu , maka merupakan anggota . Jadi anggap untuk setiap antara dan . Misalkan . Maka untuk setiap . Untuk setiap antara dan , fakta bahwa merupakan gabungan elemen-elemen dalam menyiratkan adanya dengan . Jadi, .   menunjukkan bahwa terdapat himpunan sedemikian sehingga dan . Karena merupakan elemen sebarang dari , kita harus memiliki . Namun setiap merupakan subhimpunan dari , sehingga . Akibatnya, dan . Jadi, merupakan topologi pada .   Setiap koleksi himpunan seperti yang diberikan dalam memiliki nama khusus.   basis untuk topologi   Misalkan suatu himpunan. Himpunan merupakan basis untuk suatu topologi (atau cukup disebut basis ) pada jika   Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .        basis elemen  himpunan terbuka dasar Elemen-elemen suatu basis disebut elemen basis atau himpunan terbuka dasar . Basis untuk topologi pada himpunan mendefinisikan topologi pada seperti ditunjukkan dalam .  Perhatikan bahwa karena sifat (1) dari , gabungan himpunan-himpunan dalam basis harus memuat . Dengan kata lain, himpunan-himpunan dalam basis menutupi ruang tersebut. Sifat kedua memastikan bahwa jika suatu titik berada dalam irisan dua himpunan terbuka dasar, maka terdapat himpunan terbuka dasar yang lebih kecil yang memuat .   topologi yang dibangkitkan oleh basis   Misalkan suatu basis untuk topologi pada himpunan . Topologi yang dibangkitkan oleh memuat himpunan kosong dan semua gabungan sebarang elemen basis.    Jika topologi untuk ruang sudah jelas dari konteks, kita juga menyebut basis topologi tersebut sebagai basis untuk .    Misalkan dan .   Apakah himpunan merupakan basis untuk ? Jika bukan, tambahkan sesedikit mungkin himpunan ke agar menjadi basis untuk topologi ini.   Apakah himpunan merupakan basis untuk ? Jika bukan, tambahkan sesedikit mungkin himpunan ke agar menjadi basis untuk topologi ini.    Misalkan dan memiliki topologi diskret (topologi yang terdiri dari semua subhimpunan ). Apakah merupakan basis untuk topologi diskret pada ? Jika bukan, tambahkan sesedikit mungkin himpunan ke agar menjadi basis untuk topologi ini.    Tentukan basis untuk topologi diskret pada sembarang himpunan .    "
+},
+{
+  "id": "p-1344",
+  "level": "2",
+  "url": "sec_base_top.html#p-1344",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "metrik basis "
+},
+{
+  "id": "p-1345",
+  "level": "2",
+  "url": "sec_base_top.html#p-1345",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ruang Golomb "
+},
+{
+  "id": "act_top_basis",
+  "level": "2",
+  "url": "sec_base_top.html#act_top_basis",
+  "type": "Kegiatan",
+  "number": "12.3",
+  "title": "",
+  "body": " Misalkan dan . Anda boleh mengasumsikan bahwa merupakan topologi pada . Jelaskan mengapa setiap himpunan terbuka tak kosong dalam ruang topologi dapat ditulis menggunakan gabungan sebarang dan irisan berhingga dari , , dan .  "
+},
+{
+  "id": "thm_Basis",
+  "level": "2",
+  "url": "sec_base_top.html#thm_Basis",
+  "type": "Teorema",
+  "number": "12.2",
+  "title": "",
+  "body": "  Misalkan suatu himpunan dan koleksi subhimpunan dari sedemikian sehingga   Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .     Maka himpunan yang terdiri dari himpunan kosong dan gabungan elemen-elemen merupakan topologi pada .   "
+},
+{
+  "id": "act_Basis",
+  "level": "2",
+  "url": "sec_base_top.html#act_Basis",
+  "type": "Kegiatan",
+  "number": "12.4",
+  "title": "",
+  "body": "  Misalkan suatu himpunan dan koleksi subhimpunan dari sedemikian sehingga    Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .  Misalkan , , , merupakan anggota . Tujuan kegiatan ini adalah memperluas sifat 2 dan menunjukkan bahwa jika , maka terdapat himpunan sedemikian sehingga dan .   Karena pernyataan yang ingin kita buktikan bergantung pada bilangan bulat positif , kita akan menggunakan induksi matematika. Jelaskan mengapa kasus dan benar.   Apa hipotesis induksinya dan apa yang ingin kita buktikan pada langkah induksi?   Gunakan hipotesis induksi dan kondisi 2 untuk melengkapi pembuktian lema yang dicantumkan setelah kegiatan ini.   "
+},
+{
+  "id": "lem_Basis",
+  "level": "2",
+  "url": "sec_base_top.html#lem_Basis",
+  "type": "Lema",
+  "number": "12.3",
+  "title": "",
+  "body": "  Misalkan suatu himpunan dan koleksi subhimpunan dari sedemikian sehingga   Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .     Misalkan , , , merupakan anggota . Jika , maka terdapat himpunan sedemikian sehingga dan .   "
+},
+{
+  "id": "proof-17",
+  "level": "2",
+  "url": "sec_base_top.html#proof-17",
+  "type": "Bukti",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan suatu himpunan, dan misalkan serta memenuhi kondisi yang diberikan. Berdasarkan definisi, . Untuk setiap terdapat himpunan sedemikian sehingga . Maka , dan . Untuk melengkapi pembuktian bahwa merupakan topologi pada , kita perlu menunjukkan bahwa tertutup terhadap gabungan sebarang dan irisan berhingga. Kita pertimbangkan gabungan terlebih dahulu. Misalkan koleksi himpunan dalam untuk pada suatu himpunan pengindeks . Berdasarkan definisi, setiap kosong atau merupakan gabungan elemen-elemen . Jadi kosong, atau merupakan gabungan himpunan-himpunan dalam . Dengan demikian, dan tertutup terhadap gabungan sebarang.  Sekarang kita tunjukkan bahwa tertutup terhadap irisan berhingga. Misalkan bilangan bulat positif dan koleksi himpunan dalam untuk . Misalkan . Jika untuk suatu , maka merupakan anggota . Jadi anggap untuk setiap antara dan . Misalkan . Maka untuk setiap . Untuk setiap antara dan , fakta bahwa merupakan gabungan elemen-elemen dalam menyiratkan adanya dengan . Jadi, .   menunjukkan bahwa terdapat himpunan sedemikian sehingga dan . Karena merupakan elemen sebarang dari , kita harus memiliki . Namun setiap merupakan subhimpunan dari , sehingga . Akibatnya, dan . Jadi, merupakan topologi pada .  "
+},
+{
+  "id": "def_basis_topology",
+  "level": "2",
+  "url": "sec_base_top.html#def_basis_topology",
+  "type": "Definisi",
+  "number": "12.4",
+  "title": "",
+  "body": " basis untuk topologi   Misalkan suatu himpunan. Himpunan merupakan basis untuk suatu topologi (atau cukup disebut basis ) pada jika   Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .      "
+},
+{
+  "id": "p-1372",
+  "level": "2",
+  "url": "sec_base_top.html#p-1372",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "elemen basis himpunan terbuka dasar "
+},
+{
+  "id": "definition-39",
+  "level": "2",
+  "url": "sec_base_top.html#definition-39",
+  "type": "Definisi",
+  "number": "12.5",
+  "title": "",
+  "body": " topologi yang dibangkitkan oleh basis   Misalkan suatu basis untuk topologi pada himpunan . Topologi yang dibangkitkan oleh memuat himpunan kosong dan semua gabungan sebarang elemen basis.   "
+},
+{
+  "id": "activity-57",
+  "level": "2",
+  "url": "sec_base_top.html#activity-57",
+  "type": "Kegiatan",
+  "number": "12.5",
+  "title": "",
+  "body": "  Misalkan dan .   Apakah himpunan merupakan basis untuk ? Jika bukan, tambahkan sesedikit mungkin himpunan ke agar menjadi basis untuk topologi ini.   Apakah himpunan merupakan basis untuk ? Jika bukan, tambahkan sesedikit mungkin himpunan ke agar menjadi basis untuk topologi ini.    Misalkan dan memiliki topologi diskret (topologi yang terdiri dari semua subhimpunan ). Apakah merupakan basis untuk topologi diskret pada ? Jika bukan, tambahkan sesedikit mungkin himpunan ke agar menjadi basis untuk topologi ini.    Tentukan basis untuk topologi diskret pada sembarang himpunan .   "
+},
+{
+  "id": "sec_metric_top_space",
+  "level": "1",
+  "url": "sec_metric_top_space.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ruang Metrik dan Ruang Topologi",
+  "body": " Ruang Metrik dan Ruang Topologi  topologi metrik  Setiap ruang metrik merupakan ruang topologi, dengan topologi berupa koleksi himpunan terbuka yang ditentukan oleh metrik. Topologi ini disebut topologi metrik . Pertanyaan alami adalah apakah setiap ruang topologi merupakan ruang metrik. Artinya, diberikan suatu ruang topologi, dapatkah kita mendefinisikan metrik pada ruang tersebut sehingga himpunan-himpunan terbukanya tepat sama dengan himpunan dalam topologinya? Sebagai contoh, setiap ruang dengan topologi diskret merupakan ruang metrik dengan metrik diskret.    Misalkan dan . Jelaskan mengapa tidak mungkin ada metrik sedemikian sehingga himpunan terbuka dalam topologi metrik adalah himpunan-himpunan dalam .    Andaikan metrik tersebut ada dan pertimbangkan bola-bola terbuka yang berpusat di .     ruang topologi termetriskan Kita menyimpulkan bahwa setiap ruang metrik merupakan ruang topologi, tetapi tidak setiap ruang topologi merupakan ruang metrik. Ruang topologi yang dapat direalisasikan sebagai ruang metrik disebut termetriskan .  "
+},
+{
+  "id": "p-1381",
+  "level": "2",
+  "url": "sec_metric_top_space.html#p-1381",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "topologi metrik "
+},
+{
+  "id": "activity-58",
+  "level": "2",
+  "url": "sec_metric_top_space.html#activity-58",
+  "type": "Kegiatan",
+  "number": "12.6",
+  "title": "",
+  "body": "  Misalkan dan . Jelaskan mengapa tidak mungkin ada metrik sedemikian sehingga himpunan terbuka dalam topologi metrik adalah himpunan-himpunan dalam .    Andaikan metrik tersebut ada dan pertimbangkan bola-bola terbuka yang berpusat di .   "
+},
+{
+  "id": "p-1384",
+  "level": "2",
+  "url": "sec_metric_top_space.html#p-1384",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "termetriskan "
+},
+{
+  "id": "sec_neighborhood_top_space",
+  "level": "1",
+  "url": "sec_neighborhood_top_space.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Lingkungan dalam Ruang Topologi",
+  "body": " Lingkungan dalam Ruang Topologi  Ingat bahwa dalam ruang metrik kita mendefinisikan lingkungan suatu titik sebagai subhimpunan ruang yang memuat bola terbuka berpusat di . Setiap bola terbuka merupakan himpunan terbuka, sehingga gagasan lingkungan dapat diperluas ke ruang topologi.   lingkungan dalam ruang topologi   Misalkan suatu ruang topologi dan . Subhimpunan dari merupakan lingkungan dari jika memuat suatu himpunan terbuka yang memuat .    Mari kita lihat beberapa contoh.    Misalkan dan .    Tentukan semua lingkungan titik .    Tentukan semua lingkungan titik .    Dalam ruang metrik, suatu himpunan terbuka merupakan lingkungan dari setiap titiknya. Hal ini juga berlaku dalam ruang topologi.    Misalkan suatu ruang topologi. Subhimpunan dari terbuka jika dan hanya jika merupakan lingkungan dari setiap titiknya.    Misalkan suatu ruang topologi, dan misalkan subhimpunan dari . Pertama-tama kita tunjukkan bahwa jika terbuka, maka merupakan lingkungan dari setiap titiknya. Andaikan himpunan terbuka dan . Himpunan memuat himpunan terbuka yang memuat , sehingga merupakan lingkungan dari .  Arah sebaliknya menjadi pokok kegiatan berikutnya.      Misalkan suatu ruang topologi. Misalkan subhimpunan dari . Andaikan merupakan lingkungan dari setiap titiknya.    Apa yang perlu kita lakukan untuk menunjukkan bahwa merupakan himpunan terbuka?    Misalkan . Mengapa harus ada himpunan terbuka sedemikian sehingga ?    Lengkapi pembuktian bahwa merupakan himpunan terbuka.    "
+},
+{
+  "id": "definition-40",
+  "level": "2",
+  "url": "sec_neighborhood_top_space.html#definition-40",
+  "type": "Definisi",
+  "number": "12.6",
+  "title": "",
+  "body": " lingkungan dalam ruang topologi   Misalkan suatu ruang topologi dan . Subhimpunan dari merupakan lingkungan dari jika memuat suatu himpunan terbuka yang memuat .   "
+},
+{
+  "id": "activity-59",
+  "level": "2",
+  "url": "sec_neighborhood_top_space.html#activity-59",
+  "type": "Kegiatan",
+  "number": "12.7",
+  "title": "",
+  "body": "  Misalkan dan .    Tentukan semua lingkungan titik .    Tentukan semua lingkungan titik .   "
+},
+{
+  "id": "theorem-33",
+  "level": "2",
+  "url": "sec_neighborhood_top_space.html#theorem-33",
+  "type": "Teorema",
+  "number": "12.7",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi. Subhimpunan dari terbuka jika dan hanya jika merupakan lingkungan dari setiap titiknya.    Misalkan suatu ruang topologi, dan misalkan subhimpunan dari . Pertama-tama kita tunjukkan bahwa jika terbuka, maka merupakan lingkungan dari setiap titiknya. Andaikan himpunan terbuka dan . Himpunan memuat himpunan terbuka yang memuat , sehingga merupakan lingkungan dari .  Arah sebaliknya menjadi pokok kegiatan berikutnya.   "
+},
+{
+  "id": "activity-60",
+  "level": "2",
+  "url": "sec_neighborhood_top_space.html#activity-60",
+  "type": "Kegiatan",
+  "number": "12.8",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi. Misalkan subhimpunan dari . Andaikan merupakan lingkungan dari setiap titiknya.    Apa yang perlu kita lakukan untuk menunjukkan bahwa merupakan himpunan terbuka?    Misalkan . Mengapa harus ada himpunan terbuka sedemikian sehingga ?    Lengkapi pembuktian bahwa merupakan himpunan terbuka.   "
+},
+{
+  "id": "sec_interior_set_top",
+  "level": "1",
+  "url": "sec_interior_set_top.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Interior Himpunan dalam Ruang Topologi",
+  "body": " Interior Himpunan dalam Ruang Topologi  Kita telah melihat bahwa topologi mendefinisikan himpunan terbuka dalam ruang topologi. Seperti pada ruang metrik, himpunan terbuka dapat dicirikan melalui titik-titik interiornya. Dalam ruang metrik kita mendefinisikan titik interior dalam istilah lingkungan hal yang sama berlaku dalam ruang topologi.   titik interior   Misalkan subhimpunan dari ruang topologi . Titik merupakan titik interior dari jika merupakan lingkungan dari .    Ingat bahwa suatu himpunan merupakan lingkungan suatu titik jika himpunan tersebut memuat himpunan terbuka yang memuat titik itu. Berdasarkan definisi, setiap himpunan terbuka merupakan lingkungan dari setiap titiknya, sehingga setiap titik dari himpunan terbuka merupakan titik interior . Sebaliknya, jika setiap titik suatu himpunan merupakan titik interior, maka merupakan lingkungan dari setiap titiknya dan bersifat terbuka. Argumen ini dirangkum dalam teorema berikut.    Misalkan suatu ruang topologi. Subhimpunan dari terbuka jika dan hanya jika setiap titik merupakan titik interior .    Koleksi titik interior dalam suatu himpunan membentuk subhimpunan dari himpunan tersebut, yang disebut interior himpunan itu.     Interior subhimpunan dari ruang topologi adalah himpunan .      Pertimbangkan , dengan topologi standar (dalam konteks ini, standar berarti topologi metrik yang ditentukan oleh metrik Euklides). Misalkan di . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?    Pertimbangkan , dengan topologi diskret (topologi yang semua subhimpunannya terbuka). Misalkan di . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?    Pertimbangkan , dengan topologi komplemen berhingga (topologi yang himpunan terbukanya adalah himpunan kosong serta semua subhimpunan dari sedemikian sehingga berhingga). Misalkan di . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?    Misalkan dan . andaikan merupakan topologi pada . Misalkan . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?    Kita mungkin mengharapkan bahwa interior suatu himpunan merupakan himpunan terbuka, sebagaimana dalam ruang metrik. Hal ini benar, tetapi kita dapat menyatakan lebih banyak. Dalam kita melihat bahwa pada contoh-contoh kita merupakan subhimpunan terbuka terbesar dari yang terkandung dalam . Bahwa hal ini selalu benar merupakan pokok teorema berikutnya.    Misalkan suatu ruang topologi, dan misalkan subhimpunan dari . Interior merupakan subhimpunan terbuka terbesar dari yang terkandung dalam .    Misalkan suatu ruang topologi, dan misalkan subhimpunan dari . Kita perlu membuktikan bahwa merupakan himpunan terbuka dalam , dan bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam . Pertama-tama kita tunjukkan bahwa terbuka. Misalkan . Maka merupakan titik interior , sehingga merupakan lingkungan . Ini berarti terdapat himpunan terbuka yang memuat sedemikian sehingga . Namun merupakan lingkungan dari setiap titiknya, sehingga setiap titik dalam merupakan titik interior . Jadi . Dengan demikian, merupakan lingkungan dari setiap titiknya dan, akibatnya, merupakan himpunan terbuka.  Pembuktian bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam diserahkan pada kegiatan berikutnya.      Misalkan suatu ruang topologi, dan misalkan subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam ?    Misalkan subhimpunan terbuka dari yang terkandung dalam , dan misalkan . Apa yang diberitahukan oleh fakta bahwa terbuka? Kemudian lengkapi pembuktian bahwa .    Salah satu konsekuensi dari adalah sebagai berikut.    Subhimpunan dari ruang topologi terbuka jika dan hanya jika .    "
+},
+{
+  "id": "definition-41",
+  "level": "2",
+  "url": "sec_interior_set_top.html#definition-41",
+  "type": "Definisi",
+  "number": "12.8",
+  "title": "",
+  "body": " titik interior   Misalkan subhimpunan dari ruang topologi . Titik merupakan titik interior dari jika merupakan lingkungan dari .   "
+},
+{
+  "id": "theorem-34",
+  "level": "2",
+  "url": "sec_interior_set_top.html#theorem-34",
+  "type": "Teorema",
+  "number": "12.9",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi. Subhimpunan dari terbuka jika dan hanya jika setiap titik merupakan titik interior .   "
+},
+{
+  "id": "p-1403",
+  "level": "2",
+  "url": "sec_interior_set_top.html#p-1403",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "interior "
+},
+{
+  "id": "definition-42",
+  "level": "2",
+  "url": "sec_interior_set_top.html#definition-42",
+  "type": "Definisi",
+  "number": "12.10",
+  "title": "",
+  "body": "   Interior subhimpunan dari ruang topologi adalah himpunan .   "
+},
+{
+  "id": "act_interior",
+  "level": "2",
+  "url": "sec_interior_set_top.html#act_interior",
+  "type": "Kegiatan",
+  "number": "12.9",
+  "title": "",
+  "body": "  Pertimbangkan , dengan topologi standar (dalam konteks ini, standar berarti topologi metrik yang ditentukan oleh metrik Euklides). Misalkan di . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?    Pertimbangkan , dengan topologi diskret (topologi yang semua subhimpunannya terbuka). Misalkan di . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?    Pertimbangkan , dengan topologi komplemen berhingga (topologi yang himpunan terbukanya adalah himpunan kosong serta semua subhimpunan dari sedemikian sehingga berhingga). Misalkan di . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?    Misalkan dan . andaikan merupakan topologi pada . Misalkan . Berapakah ? Apa subhimpunan terbuka terbesar dari yang terkandung dalam ?   "
+},
+{
+  "id": "thm_Interior",
+  "level": "2",
+  "url": "sec_interior_set_top.html#thm_Interior",
+  "type": "Teorema",
+  "number": "12.11",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi, dan misalkan subhimpunan dari . Interior merupakan subhimpunan terbuka terbesar dari yang terkandung dalam .    Misalkan suatu ruang topologi, dan misalkan subhimpunan dari . Kita perlu membuktikan bahwa merupakan himpunan terbuka dalam , dan bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam . Pertama-tama kita tunjukkan bahwa terbuka. Misalkan . Maka merupakan titik interior , sehingga merupakan lingkungan . Ini berarti terdapat himpunan terbuka yang memuat sedemikian sehingga . Namun merupakan lingkungan dari setiap titiknya, sehingga setiap titik dalam merupakan titik interior . Jadi . Dengan demikian, merupakan lingkungan dari setiap titiknya dan, akibatnya, merupakan himpunan terbuka.  Pembuktian bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam diserahkan pada kegiatan berikutnya.   "
+},
+{
+  "id": "activity-62",
+  "level": "2",
+  "url": "sec_interior_set_top.html#activity-62",
+  "type": "Kegiatan",
+  "number": "12.10",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi, dan misalkan subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam ?    Misalkan subhimpunan terbuka dari yang terkandung dalam , dan misalkan . Apa yang diberitahukan oleh fakta bahwa terbuka? Kemudian lengkapi pembuktian bahwa .   "
+},
+{
+  "id": "corollary-6",
+  "level": "2",
+  "url": "sec_interior_set_top.html#corollary-6",
+  "type": "Corollary",
+  "number": "12.12",
+  "title": "",
+  "body": "  Subhimpunan dari ruang topologi terbuka jika dan hanya jika .   "
+},
+{
+  "id": "sec_top_space_summ",
+  "level": "1",
+  "url": "sec_top_space_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan    Misalkan dan dua topologi pada himpunan . Jika , maka merupakan topologi yang lebih kasar (atau lebih lemah ) daripada . Kita juga mengatakan bahwa merupakan topologi yang lebih halus (atau lebih kuat ) daripada .    Gagasan-gagasan penting yang kita bahas dalam bagian ini meliputi hal-hal berikut.   Topologi pada himpunan adalah koleksi subhimpunan terbuka dari . Secara lebih khusus, himpunan yang terdiri dari subhimpunan suatu himpunan merupakan topologi pada jika    dan merupakan anggota ,    gabungan sebarang himpunan dalam merupakan himpunan dalam , dan    irisan berhingga sebarang himpunan dalam merupakan himpunan dalam .   Ruang topologi adalah himpunan yang dilengkapi dengan topologi pada himpunan tersebut.    Gabungan sebarang himpunan terbuka adalah terbuka dan irisan berhingga himpunan terbuka adalah terbuka dalam ruang topologi.    Menjelaskan secara lengkap himpunan terbuka dalam suatu topologi dapat sulit, dan bekerja dengan himpunan terbuka sebarang juga dapat sulit. Jika suatu koleksi himpunan yang lebih sederhana membangkitkan topologi, koleksi himpunan sederhana tersebut merupakan basis untuk topologi itu. Secara lebih formal, himpunan merupakan basis untuk topologi pada himpunan jika   Untuk setiap , terdapat himpunan dalam yang memuat .    Jika merupakan elemen dari untuk suatu , maka terdapat himpunan sedemikian sehingga .       Subhimpunan dari ruang topologi merupakan lingkungan titik jika terdapat himpunan terbuka yang terkandung dalam sedemikian sehingga .    Titik dalam subhimpunan dari ruang topologi merupakan titik interior jika merupakan lingkungan . Interior himpunan adalah koleksi semua titik interior .    Subhimpunan dari ruang topologi terbuka jika dan hanya jika sama dengan interiornya.     "
+},
+{
+  "id": "def_weaker_topologies",
+  "level": "2",
+  "url": "sec_top_space_summ.html#def_weaker_topologies",
+  "type": "Definisi",
+  "number": "12.13",
+  "title": "",
+  "body": "  Misalkan dan dua topologi pada himpunan . Jika , maka merupakan topologi yang lebih kasar (atau lebih lemah ) daripada . Kita juga mengatakan bahwa merupakan topologi yang lebih halus (atau lebih kuat ) daripada .   "
+},
+{
+  "id": "sec_top_space_exer",
+  "level": "1",
+  "url": "sec_top_space_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Anda mungkin bertanya mengapa kita tidak dapat mendefinisikan basis topologi pada himpunan sebagai sembarang koleksi subhimpunan yang gabungannya adalah . Pertimbangkan contoh dan .   Tentukan koleksi semua gabungan elemen-elemen .   Jelaskan mengapa koleksi gabungan elemen-elemen , bersama dengan himpunan kosong, bukan topologi pada . Sifat basis yang mana yang tidak terpenuhi?    Untuk setiap bilangan bulat , misalkan . Artinya, adalah himpunan semua kelipatan bilangan bulat dari .   Tunjukkan bahwa merupakan basis untuk topologi pada .   Himpunan apakah ?   Apakah himpunan bilangan bulat positif merupakan himpunan terbuka dalam ruang topologi ? Jelaskan.   Apakah himpunan bilangan bulat ganjil terbuka dalam ruang topologi ? Jelaskan.   Apakah himpunan terbuka dalam ruang topologi ? Jelaskan.    Latihan ini merupakan generalisasi dari . Misalkan dan bilangan bulat dengan . Misalkan .   Tunjukkan bahwa merupakan basis untuk topologi pada .   Jika dan , serta , apa yang dapat kita katakan tentang ?   Misalkan didefinisikan oleh .   Buktikan bahwa merupakan bijeksi.   Jika merupakan himpunan terbuka dalam , apakah merupakan himpunan terbuka?   Jika merupakan himpunan terbuka dalam , apakah merupakan himpunan terbuka?   Apakah ?    Misalkan .   Tunjukkan bahwa merupakan basis untuk topologi pada .   Setiap himpunan basis terbuka dalam . Jadi kita dapat menanyakan apakah topologi berbeda dari topologi Euklides yang dibangkitkan oleh semua interval terbuka dalam . Tunjukkan bahwa terdapat interval berbentuk yang terbuka dalam tetapi bukan himpunan terbuka dalam .    Misalkan , dan misalkan serta . Baik maupun merupakan topologi pada , tetapi setiap elemen dalam juga merupakan elemen dalam . Jika hal ini terjadi, kita mengatakan bahwa merupakan topologi yang lebih lemah daripada . memberikan sebuah contoh. Gunakan definisi formal pada bagian ringkasan dalam tugas-tugas berikut.   Apa topologi paling lemah pada suatu himpunan?   Apa topologi paling kuat pada suatu himpunan?   Jika suatu topologi pada memuat semua himpunan satu titik, maka setiap subhimpunan terbuka dan topologi kita adalah topologi diskret. Selain itu, jika suatu topologi pada memuat semua himpunan dua titik, maka untuk , , dan dalam berlaku merupakan anggota topologi dan sekali lagi kita memperoleh topologi diskret. Pertimbangkan topologi . Satu-satunya himpunan yang bukan anggota adalah dan , tetapi menambahkan salah satu himpunan tersebut ke akan menghasilkan topologi diskret. Jadi merupakan topologi paling kuat yang mungkin selain topologi diskret.   Misalkan . Adakah topologi pada sedemikian sehingga bukan topologi diskret tetapi tidak ada topologi yang lebih kuat pada selain topologi diskret? Jelaskan.   Misalkan . Adakah topologi pada sedemikian sehingga bukan topologi indiskret tetapi tidak ada topologi yang lebih lemah pada selain topologi indiskret? Jelaskan.   Secara umum, mungkin terdapat banyak basis berbeda untuk suatu topologi, dan dua basis yang berbeda dapat memiliki kardinalitas yang sama. Hal ini tidak berlaku untuk ruang topologi berhingga. Misalkan himpunan berhingga dan topologi pada . Dalam latihan ini kita akan menunjukkan bahwa terdapat basis minimal untuk topologi . Artinya, terdapat basis dari sedemikian sehingga jika adalah basis lain untuk , maka .   Jika , misalkan adalah irisan semua himpunan terbuka yang memuat . Jelaskan mengapa merupakan himpunan terbuka.   Misalkan . Tunjukkan bahwa merupakan basis untuk .   Tunjukkan bahwa jika merupakan basis untuk , maka .   Misalkan dan . Anda boleh mengasumsikan bahwa merupakan topologi pada . Tentukan basis minimal tunggal untuk .   Sebanyak topologi sasaran yang berbeda pada dicantumkan setelah topologi indiskret sebagai titik awal. Setiap topologi sasaran berada dalam satu atau lebih urutan topologi yang disusun menurut kekasaran. Untuk setiap topologi pada butir 2--10, tuliskan urutan topologi terpanjang yang dimulai dari , disusun menurut kekasaran.                                                topologi diskret       Tentukan semua topologi pada jika    merupakan himpunan satu titik    merupakan himpunan dua titik    merupakan himpunan tiga titik.   terdapat 29 topologi berbeda    Untuk setiap , misalkan . Misalkan . Tunjukkan bahwa merupakan ruang topologi.    Misalkan dua subhimpunan dalam ruang topologi . Apa yang dapat Anda katakan tentang hubungan antara dan , masing-masing pasangan tersebut? Verifikasi hasil Anda.    Misalkan himpunan tak kosong dan elemen dalam . Misalkan koleksi subhimpunan yang terdiri dari , , dan semua subhimpunan yang memuat . Tunjukkan bahwa merupakan topologi pada . (Topologi ini disebut topologi titik tertentu ). topologi titik tertentu    topologi titik yang dikecualikan  Misalkan himpunan tak kosong dan elemen dalam . Misalkan koleksi subhimpunan yang terdiri dari , , dan semua subhimpunan yang tidak memuat . Tunjukkan bahwa merupakan topologi pada . (Topologi ini disebut topologi titik yang dikecualikan .)    Salah satu penerapan topologi adalah pada tampilan citra digital, seperti layar komputer. Tampilan citra digital merupakan susunan persegi panjang piksel dan dapat dimodelkan menggunakan bidang digital. Dalam latihan ini kita mempertimbangkan penyederhanaan bidang digital garis digital yang kita pandang sebagai koleksi piksel satu dimensi dengan panjang tak berhingga. Untuk setiap kita definisikan Himpunan-himpunan diilustrasikan dalam .   Topologi garis digital.    Dalam latihan ini kita mengeksplorasi koleksi .  topologi garis digital  Tunjukkan bahwa koleksi merupakan basis untuk topologi pada . (Topologi yang dihasilkan disebut topologi garis digital  . Topologi garis digital ini memiliki penerapan dalam pemrosesan digital lihat Introduction to Topology: Pure and Applied oleh Colin Adams dan Robert Franzosa, Pearson Education, Inc., 2008, Bagian 1.4 dan 11.3. Himpunan dengan topologi garis digital disebut garis digital . Garis digital memodelkan susunan piksel satu dimensi, dengan bilangan bulat genap sebagai piksel dan bilangan bulat ganjil sebagai batas antar piksel. Informasi tentang bidang digital dapat ditemukan dalam .)   Tentukan himpunan mana dari himpunan-himpunan berikut yang terbuka dalam topologi garis digital:                       Himpunan bilangan bulat ganjil.    Misalkan bilangan bulat positif dan koleksi semua polinom dalam variabel real , , , . Sebagai contoh khusus, polinom merupakan anggota . Jika merupakan anggota , misalkan himpunan nol polinom . Artinya, . Perhatikan bahwa merupakan subhimpunan dari . Sebagai contoh, jika dan , maka adalah himpunan pasangan terurut dalam yang memenuhi , atau . Ini adalah grafik parabola pada bidang.   Deskripsikan dalam jika .   Jika merupakan himpunan polinom dalam , kita definisikan sebagai himpunan nol bersama semua polinom dalam . Deskripsikan jika dalam .  topologi Zariski topologi Zariski  Misalkan himpunan komplemen dari himpunan-himpunan untuk . Tunjukkan bahwa merupakan basis untuk topologi pada . Topologi yang dihasilkan disebut topologi Zariski .   Apakah himpunan merupakan himpunan terbuka dalam dengan topologi Zariski? Jelaskan.   Jelaskan mengapa topologi Zariski ketika sama dengan topologi kofinit pada . Artinya, tunjukkan bahwa setiap himpunan yang terbuka dalam topologi kofinit terbuka dalam topologi Zariski dan setiap himpunan yang terbuka dalam topologi Zariski terbuka dalam topologi kofinit.    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Himpunan merupakan topologi pada himpunan .   Himpunan merupakan subhimpunan terbuka dari menggunakan topologi komplemen berhingga pada .   Himpunan merupakan basis untuk topologi pada himpunan , dengan .   Misalkan himpunan tak kosong. Jika merupakan topologi diskret, maka ruang topologi termetriskan.   Titik merupakan titik interior dari subhimpunan dalam ruang topologi , dengan dan .   Jika dan merupakan topologi pada ruang , maka juga merupakan topologi pada .   Jika dan merupakan topologi pada ruang , maka juga merupakan topologi pada .   "
+},
+{
+  "id": "exercise-126",
+  "level": "2",
+  "url": "sec_top_space_exer.html#exercise-126",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Anda mungkin bertanya mengapa kita tidak dapat mendefinisikan basis topologi pada himpunan sebagai sembarang koleksi subhimpunan yang gabungannya adalah . Pertimbangkan contoh dan .   Tentukan koleksi semua gabungan elemen-elemen .   Jelaskan mengapa koleksi gabungan elemen-elemen , bersama dengan himpunan kosong, bukan topologi pada . Sifat basis yang mana yang tidak terpenuhi?  "
+},
+{
+  "id": "ex_aZ_top",
+  "level": "2",
+  "url": "sec_top_space_exer.html#ex_aZ_top",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Untuk setiap bilangan bulat , misalkan . Artinya, adalah himpunan semua kelipatan bilangan bulat dari .   Tunjukkan bahwa merupakan basis untuk topologi pada .   Himpunan apakah ?   Apakah himpunan bilangan bulat positif merupakan himpunan terbuka dalam ruang topologi ? Jelaskan.   Apakah himpunan bilangan bulat ganjil terbuka dalam ruang topologi ? Jelaskan.   Apakah himpunan terbuka dalam ruang topologi ? Jelaskan.  "
+},
+{
+  "id": "exercise-128",
+  "level": "2",
+  "url": "sec_top_space_exer.html#exercise-128",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Latihan ini merupakan generalisasi dari . Misalkan dan bilangan bulat dengan . Misalkan .   Tunjukkan bahwa merupakan basis untuk topologi pada .   Jika dan , serta , apa yang dapat kita katakan tentang ?   Misalkan didefinisikan oleh .   Buktikan bahwa merupakan bijeksi.   Jika merupakan himpunan terbuka dalam , apakah merupakan himpunan terbuka?   Jika merupakan himpunan terbuka dalam , apakah merupakan himpunan terbuka?   Apakah ?  "
+},
+{
+  "id": "ex_coarse_topology_example",
+  "level": "2",
+  "url": "sec_top_space_exer.html#ex_coarse_topology_example",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan .   Tunjukkan bahwa merupakan basis untuk topologi pada .   Setiap himpunan basis terbuka dalam . Jadi kita dapat menanyakan apakah topologi berbeda dari topologi Euklides yang dibangkitkan oleh semua interval terbuka dalam . Tunjukkan bahwa terdapat interval berbentuk yang terbuka dalam tetapi bukan himpunan terbuka dalam .  "
+},
+{
+  "id": "exercise-130",
+  "level": "2",
+  "url": "sec_top_space_exer.html#exercise-130",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Misalkan , dan misalkan serta . Baik maupun merupakan topologi pada , tetapi setiap elemen dalam juga merupakan elemen dalam . Jika hal ini terjadi, kita mengatakan bahwa merupakan topologi yang lebih lemah daripada . memberikan sebuah contoh. Gunakan definisi formal pada bagian ringkasan dalam tugas-tugas berikut.   Apa topologi paling lemah pada suatu himpunan?   Apa topologi paling kuat pada suatu himpunan?   Jika suatu topologi pada memuat semua himpunan satu titik, maka setiap subhimpunan terbuka dan topologi kita adalah topologi diskret. Selain itu, jika suatu topologi pada memuat semua himpunan dua titik, maka untuk , , dan dalam berlaku merupakan anggota topologi dan sekali lagi kita memperoleh topologi diskret. Pertimbangkan topologi . Satu-satunya himpunan yang bukan anggota adalah dan , tetapi menambahkan salah satu himpunan tersebut ke akan menghasilkan topologi diskret. Jadi merupakan topologi paling kuat yang mungkin selain topologi diskret.   Misalkan . Adakah topologi pada sedemikian sehingga bukan topologi diskret tetapi tidak ada topologi yang lebih kuat pada selain topologi diskret? Jelaskan.   Misalkan . Adakah topologi pada sedemikian sehingga bukan topologi indiskret tetapi tidak ada topologi yang lebih lemah pada selain topologi indiskret? Jelaskan.   Secara umum, mungkin terdapat banyak basis berbeda untuk suatu topologi, dan dua basis yang berbeda dapat memiliki kardinalitas yang sama. Hal ini tidak berlaku untuk ruang topologi berhingga. Misalkan himpunan berhingga dan topologi pada . Dalam latihan ini kita akan menunjukkan bahwa terdapat basis minimal untuk topologi . Artinya, terdapat basis dari sedemikian sehingga jika adalah basis lain untuk , maka .   Jika , misalkan adalah irisan semua himpunan terbuka yang memuat . Jelaskan mengapa merupakan himpunan terbuka.   Misalkan . Tunjukkan bahwa merupakan basis untuk .   Tunjukkan bahwa jika merupakan basis untuk , maka .   Misalkan dan . Anda boleh mengasumsikan bahwa merupakan topologi pada . Tentukan basis minimal tunggal untuk .   Sebanyak topologi sasaran yang berbeda pada dicantumkan setelah topologi indiskret sebagai titik awal. Setiap topologi sasaran berada dalam satu atau lebih urutan topologi yang disusun menurut kekasaran. Untuk setiap topologi pada butir 2--10, tuliskan urutan topologi terpanjang yang dimulai dari , disusun menurut kekasaran.                                                topologi diskret     "
+},
+{
+  "id": "exercise-131",
+  "level": "2",
+  "url": "sec_top_space_exer.html#exercise-131",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Tentukan semua topologi pada jika    merupakan himpunan satu titik    merupakan himpunan dua titik    merupakan himpunan tiga titik.   terdapat 29 topologi berbeda  "
+},
+{
+  "id": "exercise-132",
+  "level": "2",
+  "url": "sec_top_space_exer.html#exercise-132",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Untuk setiap , misalkan . Misalkan . Tunjukkan bahwa merupakan ruang topologi.  "
+},
+{
+  "id": "exercise-133",
+  "level": "2",
+  "url": "sec_top_space_exer.html#exercise-133",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Misalkan dua subhimpunan dalam ruang topologi . Apa yang dapat Anda katakan tentang hubungan antara dan , masing-masing pasangan tersebut? Verifikasi hasil Anda.  "
+},
+{
+  "id": "ex_particular_point_topology",
+  "level": "2",
+  "url": "sec_top_space_exer.html#ex_particular_point_topology",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan himpunan tak kosong dan elemen dalam . Misalkan koleksi subhimpunan yang terdiri dari , , dan semua subhimpunan yang memuat . Tunjukkan bahwa merupakan topologi pada . (Topologi ini disebut topologi titik tertentu ). topologi titik tertentu   "
+},
+{
+  "id": "ex_excluded_point_topology",
+  "level": "2",
+  "url": "sec_top_space_exer.html#ex_excluded_point_topology",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": "topologi titik yang dikecualikan  Misalkan himpunan tak kosong dan elemen dalam . Misalkan koleksi subhimpunan yang terdiri dari , , dan semua subhimpunan yang tidak memuat . Tunjukkan bahwa merupakan topologi pada . (Topologi ini disebut topologi titik yang dikecualikan .)  "
+},
+{
+  "id": "ex_digital_line_topology",
+  "level": "2",
+  "url": "sec_top_space_exer.html#ex_digital_line_topology",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Salah satu penerapan topologi adalah pada tampilan citra digital, seperti layar komputer. Tampilan citra digital merupakan susunan persegi panjang piksel dan dapat dimodelkan menggunakan bidang digital. Dalam latihan ini kita mempertimbangkan penyederhanaan bidang digital garis digital yang kita pandang sebagai koleksi piksel satu dimensi dengan panjang tak berhingga. Untuk setiap kita definisikan Himpunan-himpunan diilustrasikan dalam .   Topologi garis digital.    Dalam latihan ini kita mengeksplorasi koleksi .  topologi garis digital  Tunjukkan bahwa koleksi merupakan basis untuk topologi pada . (Topologi yang dihasilkan disebut topologi garis digital  . Topologi garis digital ini memiliki penerapan dalam pemrosesan digital lihat Introduction to Topology: Pure and Applied oleh Colin Adams dan Robert Franzosa, Pearson Education, Inc., 2008, Bagian 1.4 dan 11.3. Himpunan dengan topologi garis digital disebut garis digital . Garis digital memodelkan susunan piksel satu dimensi, dengan bilangan bulat genap sebagai piksel dan bilangan bulat ganjil sebagai batas antar piksel. Informasi tentang bidang digital dapat ditemukan dalam .)   Tentukan himpunan mana dari himpunan-himpunan berikut yang terbuka dalam topologi garis digital:                       Himpunan bilangan bulat ganjil.  "
+},
+{
+  "id": "ex_TS_Zariski",
+  "level": "2",
+  "url": "sec_top_space_exer.html#ex_TS_Zariski",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Misalkan bilangan bulat positif dan koleksi semua polinom dalam variabel real , , , . Sebagai contoh khusus, polinom merupakan anggota . Jika merupakan anggota , misalkan himpunan nol polinom . Artinya, . Perhatikan bahwa merupakan subhimpunan dari . Sebagai contoh, jika dan , maka adalah himpunan pasangan terurut dalam yang memenuhi , atau . Ini adalah grafik parabola pada bidang.   Deskripsikan dalam jika .   Jika merupakan himpunan polinom dalam , kita definisikan sebagai himpunan nol bersama semua polinom dalam . Deskripsikan jika dalam .  topologi Zariski topologi Zariski  Misalkan himpunan komplemen dari himpunan-himpunan untuk . Tunjukkan bahwa merupakan basis untuk topologi pada . Topologi yang dihasilkan disebut topologi Zariski .   Apakah himpunan merupakan himpunan terbuka dalam dengan topologi Zariski? Jelaskan.   Jelaskan mengapa topologi Zariski ketika sama dengan topologi kofinit pada . Artinya, tunjukkan bahwa setiap himpunan yang terbuka dalam topologi kofinit terbuka dalam topologi Zariski dan setiap himpunan yang terbuka dalam topologi Zariski terbuka dalam topologi kofinit.  "
+},
+{
+  "id": "exercise-138",
+  "level": "2",
+  "url": "sec_top_space_exer.html#exercise-138",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Himpunan merupakan topologi pada himpunan .   Himpunan merupakan subhimpunan terbuka dari menggunakan topologi komplemen berhingga pada .   Himpunan merupakan basis untuk topologi pada himpunan , dengan .   Misalkan himpunan tak kosong. Jika merupakan topologi diskret, maka ruang topologi termetriskan.   Titik merupakan titik interior dari subhimpunan dalam ruang topologi , dengan dan .   Jika dan merupakan topologi pada ruang , maka juga merupakan topologi pada .   Jika dan merupakan topologi pada ruang , maka juga merupakan topologi pada .  "
+},
+{
+  "id": "chap_Product_topology",
+  "level": "1",
+  "url": "chap_Product_topology.html",
+  "type": "Bab",
+  "number": "13",
+  "title": "Hasil Kali Ruang Topologi: batas produksi berikutnya",
+  "body": " Hasil Kali Ruang Topologi: batas produksi berikutnya  Bab hasil kali ruang topologi belum termasuk dalam batas terverifikasi Bab 1–12 ini. Tautan dari Bab 12 dipertahankan agar hubungan sumber tetap jelas; isi lengkapnya akan menggantikan halaman penanda ini pada batas produksi berikutnya.  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -8099,6 +8594,915 @@ var ptx_lunr_docs = [
   "number": "K.43",
   "title": "Konvergensi di subruang dan ruang ambien.",
   "body": "Konvergensi di subruang dan ruang ambien  Misalkan adalah subruang metrik dan barisan di . Buktikan bahwa untuk , barisan tersebut konvergen ke di jika dan hanya jika konvergen ke di . Berikan contoh yang menunjukkan mengapa syarat tidak boleh dibuang.   Bandingkan langsung dan . Untuk contoh, gunakan dan barisan yang menuju .   Untuk , kedua definisi identik karena . Barisan berada di dan konvergen ke di , tetapi tidak mempunyai limit di karena .   Ambil . Untuk setiap , metrik subruang memenuhi . Karena itu, bagi setiap , keberadaan sehingga mengakibatkan ekuivalen persis dengan syarat yang sama menggunakan . Maka konvergensi ke titik sama di kedua ruang.  Dalam , tetapkan dan . Semua suku berada di dan di . Akan tetapi, pernyataan “konvergen ke di ” tidak berlaku karena limit suatu barisan di ruang harus merupakan unsur , sedangkan . Contoh ini menunjukkan peran tepat syarat .  "
+},
+{
+  "id": "o003-c90-ch12-source-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch12-source-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan ruang topologi: definisi dan contoh awal",
+  "body": " Panduan ruang topologi: definisi dan contoh awal  Delapan panduan pertama ini mengikuti kegiatan eksplorasi pada bagian pendahuluan Bab 12. Kerjakan butir sumber terlebih dahulu, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Panduan ini ditulis mandiri untuk edisi ini sebagai komponen CC BY 4.0 yang terpisah dari turunan GVSU.  Uji tiga aksioma topologi Uji pada terhadap ketiga aksioma topologi. Nyatakan aksioma pertama yang gagal. Aksioma pertama meminta dan menjadi anggota ; periksa ini sebelum memeriksa gabungan atau irisan. Dengan pembacaan literal, bahkan bukan koleksi himpunan bagian dari ; ia memuat titik, bukan himpunan bagian. Jika yang dimaksud adalah , koleksi itu juga bukan topologi karena dan belum termasuk. Definisi mensyaratkan bahwa setiap anggota adalah subhimpunan dari . Pada tulisan literal, dan adalah titik, sehingga ada ambiguitas tipe sebelum aksioma topologi diperiksa. Untuk pembacaan yang lazim dimaksudkan dalam kegiatan ini, ambil . Aksioma pertama lalu gagal karena dan . Penutupan paling kecil yang memuat adalah .  Menutup koleksi hingga menjadi topologi Untuk dan , tentukan tambahan minimum agar koleksi tersebut menjadi topologi pada . Tambahkan dulu dan . Kemudian tutup terhadap gabungan dan irisan; gabungan dua singleton yang sudah ada adalah , sedangkan elemen belum muncul. Tambahan minimum adalah dan ; hasilnya . Aksioma pertama memaksa dua tambahan tersebut. Setelah keduanya ditambahkan, gabungan dan irisan dari tetap berada dalam koleksi, dan gabungan dengan himpunan kosong tidak menambah elemen. Jadi koleksi itu topologi. Karena masing-masing tambahan dipaksa oleh aksioma pertama, tidak ada pilihan yang lebih kecil.  Memeriksa gabungan dan irisan berhingga Periksa koleksi pada , lalu tentukan tambahan minimum jika diperlukan. Cari gabungan dua himpunan yang menghasilkan himpunan baru, khususnya dan . Koleksi itu bukan topologi; paling tidak perlu menambahkan dan , setelah itu gabungan dan irisan tertutup. Karena dan terbuka, gabungannya harus terbuka. Kemudian juga harus ditambahkan. Dengan dua tambahan itu, gabungan sebarang dari anggota koleksi hanya menghasilkan anggota yang sudah tercantum atau , dan irisan berhingga juga tercantum (misalnya ). Jadi dua tambahan tersebut cukup dan keduanya dipaksa oleh penutupan terhadap gabungan.  Mencari gabungan yang hilang Periksa pada . Setelah menemukan , periksa juga gabungan dengan , , dan singleton yang tersedia. Daftarkan semua himpunan baru yang dipaksa sebelum menyimpulkan bahwa penutupan sudah lengkap. Bukan topologi. Penutupan terhadap gabungan memaksa penambahan tepat lima himpunan yang belum tercantum: , , , , dan . Setelah semuanya ditambahkan, koleksinya adalah . Koleksi awal memuat semua singleton dan pasangan . Gabungan dan sudah ada, tetapi memaksa pasangan yang hilang. Selanjutnya gabungan pasangan dengan singleton memaksa keempat himpunan tiga unsur . Dengan lima tambahan itu semua 16 subhimpunan hadir, sehingga koleksi menjadi topologi diskret . Karena setiap tambahan muncul sebagai gabungan anggota yang sudah diwajibkan, kelimanya memang minimum.  Koleksi subhimpunan berhingga dan uji gabungan tak berhingga Misalkan koleksi semua subhimpunan berhingga dan . Tentukan apakah topologi. Tuliskan terlebih dahulu tiga anggota dan tiga himpunan yang bukan anggota . Ambil dua singleton berbeda. Gabungan berhingga tetap berhingga, tetapi gabungan tak berhingga dari singleton berbeda dapat menjadi tak berhingga dan bukan . Contoh anggota adalah , , dan . Contoh yang bukan anggota adalah , , dan . Koleksi bukan topologi pada ; gabungan tak berhingga tidak berhingga dan bukan . Himpunan kosong dan ada, dan irisan berhingga anggota tetap anggota. Namun topologi menuntut gabungan sebarang. Himpunan berada dalam untuk setiap , sedangkan gabungannya tak berhingga dan merupakan proper subset dari ; karenanya . Aksioma gabungan gagal. Ini berbeda dari topologi komplemen berhingga, yang memasukkan himpunan dengan komplemen berhingga, bukan semua himpunan berhingga.  Topologi tiga elemen pada bilangan real Uji terhadap aksioma topologi. Semua gabungan anggota koleksi hanya menghasilkan salah satu dari tiga himpunan; periksa pula semua irisan berhingga. Ya. Koleksi tersebut merupakan topologi pada .  dan tercantum. Gabungan sebarang keluarga yang mengandung adalah ; jika tidak, gabungannya adalah atau . Irisan berhingga memiliki pola yang sama: irisan dengan kosong, irisan dengan tidak mengubah himpunan, dan . Semua hasil berada dalam .  Topologi indiskret Untuk himpunan sembarang , uji sebagai topologi. Hanya ada dua anggota; daftar semua kemungkinan gabungan dan irisan berhingga. Ya. Ini adalah topologi indiskret pada . Aksioma pertama benar. Gabungan keluarga yang seluruhnya kosong adalah kosong; jika sedikitnya satu anggota adalah , gabungannya . Untuk irisan berhingga, adanya anggota kosong memberi kosong, sedangkan irisan beberapa salinan tetap . Jadi ketiga aksioma terpenuhi.  Topologi diskret Untuk himpunan sembarang , uji koleksi semua subhimpunan sebagai topologi. Gabungan atau irisan dari subhimpunan tetap merupakan subhimpunan . Ya. Koleksi semua subhimpunan adalah topologi diskret. Himpunan kosong dan termasuk dalam koleksi kuasa . Jika setiap , maka ; demikian pula irisan berhingga . Jadi koleksi kuasa tertutup terhadap operasi yang disyaratkan dan merupakan topologi diskret.  "
+},
+{
+  "id": "o003-c90-ch12-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-01",
+  "type": "Pemeriksaan",
+  "number": "L.1",
+  "title": "Uji tiga aksioma topologi.",
+  "body": "Uji tiga aksioma topologi Uji pada terhadap ketiga aksioma topologi. Nyatakan aksioma pertama yang gagal. Aksioma pertama meminta dan menjadi anggota ; periksa ini sebelum memeriksa gabungan atau irisan. Dengan pembacaan literal, bahkan bukan koleksi himpunan bagian dari ; ia memuat titik, bukan himpunan bagian. Jika yang dimaksud adalah , koleksi itu juga bukan topologi karena dan belum termasuk. Definisi mensyaratkan bahwa setiap anggota adalah subhimpunan dari . Pada tulisan literal, dan adalah titik, sehingga ada ambiguitas tipe sebelum aksioma topologi diperiksa. Untuk pembacaan yang lazim dimaksudkan dalam kegiatan ini, ambil . Aksioma pertama lalu gagal karena dan . Penutupan paling kecil yang memuat adalah . "
+},
+{
+  "id": "o003-c90-ch12-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-02",
+  "type": "Pemeriksaan",
+  "number": "L.2",
+  "title": "Menutup koleksi hingga menjadi topologi.",
+  "body": "Menutup koleksi hingga menjadi topologi Untuk dan , tentukan tambahan minimum agar koleksi tersebut menjadi topologi pada . Tambahkan dulu dan . Kemudian tutup terhadap gabungan dan irisan; gabungan dua singleton yang sudah ada adalah , sedangkan elemen belum muncul. Tambahan minimum adalah dan ; hasilnya . Aksioma pertama memaksa dua tambahan tersebut. Setelah keduanya ditambahkan, gabungan dan irisan dari tetap berada dalam koleksi, dan gabungan dengan himpunan kosong tidak menambah elemen. Jadi koleksi itu topologi. Karena masing-masing tambahan dipaksa oleh aksioma pertama, tidak ada pilihan yang lebih kecil. "
+},
+{
+  "id": "o003-c90-ch12-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-03",
+  "type": "Pemeriksaan",
+  "number": "L.3",
+  "title": "Memeriksa gabungan dan irisan berhingga.",
+  "body": "Memeriksa gabungan dan irisan berhingga Periksa koleksi pada , lalu tentukan tambahan minimum jika diperlukan. Cari gabungan dua himpunan yang menghasilkan himpunan baru, khususnya dan . Koleksi itu bukan topologi; paling tidak perlu menambahkan dan , setelah itu gabungan dan irisan tertutup. Karena dan terbuka, gabungannya harus terbuka. Kemudian juga harus ditambahkan. Dengan dua tambahan itu, gabungan sebarang dari anggota koleksi hanya menghasilkan anggota yang sudah tercantum atau , dan irisan berhingga juga tercantum (misalnya ). Jadi dua tambahan tersebut cukup dan keduanya dipaksa oleh penutupan terhadap gabungan. "
+},
+{
+  "id": "o003-c90-ch12-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-04",
+  "type": "Pemeriksaan",
+  "number": "L.4",
+  "title": "Mencari gabungan yang hilang.",
+  "body": "Mencari gabungan yang hilang Periksa pada . Setelah menemukan , periksa juga gabungan dengan , , dan singleton yang tersedia. Daftarkan semua himpunan baru yang dipaksa sebelum menyimpulkan bahwa penutupan sudah lengkap. Bukan topologi. Penutupan terhadap gabungan memaksa penambahan tepat lima himpunan yang belum tercantum: , , , , dan . Setelah semuanya ditambahkan, koleksinya adalah . Koleksi awal memuat semua singleton dan pasangan . Gabungan dan sudah ada, tetapi memaksa pasangan yang hilang. Selanjutnya gabungan pasangan dengan singleton memaksa keempat himpunan tiga unsur . Dengan lima tambahan itu semua 16 subhimpunan hadir, sehingga koleksi menjadi topologi diskret . Karena setiap tambahan muncul sebagai gabungan anggota yang sudah diwajibkan, kelimanya memang minimum. "
+},
+{
+  "id": "o003-c90-ch12-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-05",
+  "type": "Pemeriksaan",
+  "number": "L.5",
+  "title": "Koleksi subhimpunan berhingga dan uji gabungan tak berhingga.",
+  "body": "Koleksi subhimpunan berhingga dan uji gabungan tak berhingga Misalkan koleksi semua subhimpunan berhingga dan . Tentukan apakah topologi. Tuliskan terlebih dahulu tiga anggota dan tiga himpunan yang bukan anggota . Ambil dua singleton berbeda. Gabungan berhingga tetap berhingga, tetapi gabungan tak berhingga dari singleton berbeda dapat menjadi tak berhingga dan bukan . Contoh anggota adalah , , dan . Contoh yang bukan anggota adalah , , dan . Koleksi bukan topologi pada ; gabungan tak berhingga tidak berhingga dan bukan . Himpunan kosong dan ada, dan irisan berhingga anggota tetap anggota. Namun topologi menuntut gabungan sebarang. Himpunan berada dalam untuk setiap , sedangkan gabungannya tak berhingga dan merupakan proper subset dari ; karenanya . Aksioma gabungan gagal. Ini berbeda dari topologi komplemen berhingga, yang memasukkan himpunan dengan komplemen berhingga, bukan semua himpunan berhingga. "
+},
+{
+  "id": "o003-c90-ch12-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-06",
+  "type": "Pemeriksaan",
+  "number": "L.6",
+  "title": "Topologi tiga elemen pada bilangan real.",
+  "body": "Topologi tiga elemen pada bilangan real Uji terhadap aksioma topologi. Semua gabungan anggota koleksi hanya menghasilkan salah satu dari tiga himpunan; periksa pula semua irisan berhingga. Ya. Koleksi tersebut merupakan topologi pada .  dan tercantum. Gabungan sebarang keluarga yang mengandung adalah ; jika tidak, gabungannya adalah atau . Irisan berhingga memiliki pola yang sama: irisan dengan kosong, irisan dengan tidak mengubah himpunan, dan . Semua hasil berada dalam . "
+},
+{
+  "id": "o003-c90-ch12-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-07",
+  "type": "Pemeriksaan",
+  "number": "L.7",
+  "title": "Topologi indiskret.",
+  "body": "Topologi indiskret Untuk himpunan sembarang , uji sebagai topologi. Hanya ada dua anggota; daftar semua kemungkinan gabungan dan irisan berhingga. Ya. Ini adalah topologi indiskret pada . Aksioma pertama benar. Gabungan keluarga yang seluruhnya kosong adalah kosong; jika sedikitnya satu anggota adalah , gabungannya . Untuk irisan berhingga, adanya anggota kosong memberi kosong, sedangkan irisan beberapa salinan tetap . Jadi ketiga aksioma terpenuhi. "
+},
+{
+  "id": "o003-c90-ch12-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-a.html#o003-c90-ch12-guide-08",
+  "type": "Pemeriksaan",
+  "number": "L.8",
+  "title": "Topologi diskret.",
+  "body": "Topologi diskret Untuk himpunan sembarang , uji koleksi semua subhimpunan sebagai topologi. Gabungan atau irisan dari subhimpunan tetap merupakan subhimpunan . Ya. Koleksi semua subhimpunan adalah topologi diskret. Himpunan kosong dan termasuk dalam koleksi kuasa . Jika setiap , maka ; demikian pula irisan berhingga . Jadi koleksi kuasa tertutup terhadap operasi yang disyaratkan dan merupakan topologi diskret. "
+},
+{
+  "id": "o003-c90-ch12-source-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch12-source-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan topologi komplemen berhingga",
+  "body": " Panduan topologi komplemen berhingga  Dua panduan berikut mengikuti kegiatan pada bagian . Panduan ini ditulis mandiri sebagai komponen CC BY 4.0 yang terpisah dari turunan GVSU; pengenal tugas lokal ditambahkan karena tugas sumber tidak memiliki .  Membuktikan topologi komplemen berhingga Misalkan suatu himpunan dan . Buktikan bahwa merupakan topologi pada . Periksa dan terlebih dahulu. Untuk gabungan, gunakan bahwa komplemen gabungan adalah irisan komplemen; untuk irisan berhingga, gunakan bahwa komplemennya adalah gabungan berhingga. Ya. memuat dan , tertutup terhadap gabungan sebarang, dan tertutup terhadap irisan berhingga. Karena berhingga, maka ; himpunan kosong dimasukkan berdasarkan definisi. Ambil keluarga dalam . Jika semua anggotanya kosong, gabungannya kosong. Jika ada anggota tak kosong, pilih satu, katakan . Untuk semua anggota tak kosong, setiap berhingga dan merupakan subhimpunan dari , sehingga berhingga. Jadi gabungan sebarang tetap berada dalam . Untuk , jika salah satunya kosong, irisannya kosong. Jika semuanya tidak kosong, maka adalah gabungan berhingga dari himpunan berhingga, jadi berhingga. Dengan demikian ketiga aksioma topologi terpenuhi.  Ketika topologi komplemen berhingga menjadi diskret Jelaskan mengapa merupakan topologi diskret ketika berhingga. Untuk setiap , komplemen adalah subhimpunan dari himpunan berhingga. Setiap subhimpunan memiliki komplemen berhingga, sehingga , yaitu topologi diskret. Jika berhingga dan , maka juga berhingga. Jadi setiap subhimpunan memenuhi syarat definisi topologi komplemen berhingga dan termasuk dalam . Sebaliknya, semua anggota adalah subhimpunan . Maka , persis topologi diskret.  "
+},
+{
+  "id": "o003-c90-ch12-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-b.html#o003-c90-ch12-guide-09",
+  "type": "Pemeriksaan",
+  "number": "L.9",
+  "title": "Membuktikan topologi komplemen berhingga.",
+  "body": "Membuktikan topologi komplemen berhingga Misalkan suatu himpunan dan . Buktikan bahwa merupakan topologi pada . Periksa dan terlebih dahulu. Untuk gabungan, gunakan bahwa komplemen gabungan adalah irisan komplemen; untuk irisan berhingga, gunakan bahwa komplemennya adalah gabungan berhingga. Ya. memuat dan , tertutup terhadap gabungan sebarang, dan tertutup terhadap irisan berhingga. Karena berhingga, maka ; himpunan kosong dimasukkan berdasarkan definisi. Ambil keluarga dalam . Jika semua anggotanya kosong, gabungannya kosong. Jika ada anggota tak kosong, pilih satu, katakan . Untuk semua anggota tak kosong, setiap berhingga dan merupakan subhimpunan dari , sehingga berhingga. Jadi gabungan sebarang tetap berada dalam . Untuk , jika salah satunya kosong, irisannya kosong. Jika semuanya tidak kosong, maka adalah gabungan berhingga dari himpunan berhingga, jadi berhingga. Dengan demikian ketiga aksioma topologi terpenuhi. "
+},
+{
+  "id": "o003-c90-ch12-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-b.html#o003-c90-ch12-guide-10",
+  "type": "Pemeriksaan",
+  "number": "L.10",
+  "title": "Ketika topologi komplemen berhingga menjadi diskret.",
+  "body": "Ketika topologi komplemen berhingga menjadi diskret Jelaskan mengapa merupakan topologi diskret ketika berhingga. Untuk setiap , komplemen adalah subhimpunan dari himpunan berhingga. Setiap subhimpunan memiliki komplemen berhingga, sehingga , yaitu topologi diskret. Jika berhingga dan , maka juga berhingga. Jadi setiap subhimpunan memenuhi syarat definisi topologi komplemen berhingga dan termasuk dalam . Sebaliknya, semua anggota adalah subhimpunan . Maka , persis topologi diskret. "
+},
+{
+  "id": "o003-c90-ch12-source-guides-c",
+  "level": "1",
+  "url": "o003-c90-ch12-source-guides-c.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan basis untuk topologi",
+  "body": " Panduan basis untuk topologi  Sembilan panduan berikut mengikuti kegiatan basis dalam source order. Pengenal panduan bersifat netral-lokal dan materi ini merupakan komponen CC BY 4.0 orisinal, bukan prosa Schlicker\/GVSU.  Membangkitkan topologi dari tiga himpunan dasar Untuk dan , jelaskan mengapa setiap himpunan terbuka tak kosong dapat dibentuk dari gabungan sebarang dan irisan berhingga dari , , dan . Namai tiga himpunan tersebut , , dan . Daftar delapan kemungkinan gabungan, termasuk gabungan kosong, lalu periksa irisan pasangan yang berbeda. Dengan , , dan , gabungan dari subkeluarga menghasilkan tepat , yaitu semua anggota . Irisan pasangan yang berbeda kosong dan irisan suatu himpunan dengan dirinya sendiri tetap himpunan itu. Ambil , , dan . Delapan gabungan subkeluarga adalah , , , , , , , dan . Ini persis delapan anggota , sehingga setiap himpunan terbuka tak kosong (bahkan himpunan kosong juga) adalah gabungan elemen-elemen dasar. Selain itu, karena ketiga himpunan saling lepas, irisan dua elemen dasar yang berbeda adalah , sedangkan irisan berulang tidak mengubah elemen tersebut. Jadi operasi irisan berhingga tidak menghasilkan himpunan di luar daftar.  Syarat penutupan basis: menutupi ruang Nyatakan dan jelaskan kondisi pertama pada definisi basis untuk koleksi subhimpunan dari . Kondisi tersebut harus berlaku untuk setiap titik di ruang, bukan hanya untuk titik-titik pada beberapa elemen basis. Untuk setiap terdapat dengan ; ekuivalen dengan . Kondisi pertama adalah . Karena setiap titik berada dalam sedikitnya satu elemen basis, gabungan seluruh elemen menutupi . Tanpa kondisi ini, gabungan elemen basis tidak mungkin menghasilkan himpunan terbuka dan koleksi tersebut tidak dapat membangkitkan topologi pada ruang itu.  Kasus dasar induksi untuk irisan basis Jelaskan mengapa kasus dan benar dalam pernyataan: jika , maka ada dengan . Untuk satu himpunan, pilih himpunan itu sendiri. Untuk dua himpunan, gunakan langsung kondisi kedua definisi basis. Untuk , ambil . Untuk , kondisi kedua memberi dengan . Jika , hipotesis berarti ; pilihan memenuhi dan . Jika , hipotesis berarti . Kondisi kedua secara tepat menyediakan yang memuat dan berada di dalam irisan tersebut. Kedua kasus dasar selesai.  Merumuskan hipotesis dan target induksi Tuliskan hipotesis induksi dan target pada langkah induksi untuk memperluas pernyataan irisan basis dari ke . Bekukan sebuah bilangan bulat . Hipotesis harus berlaku untuk ; target menambahkan . Hipotesisnya: untuk setiap ada dengan . Targetnya: untuk setiap ada dengan . Dalam langkah induksi, anggap hasil yang diinginkan sudah benar untuk setiap irisan hingga elemen basis. Jadi, bila berada di semua , tersedia satu yang memuat dan memenuhi . Yang harus dibuktikan adalah versi sama untuk ; setelah itu kondisi kedua dapat diterapkan pada dan .  Menyelesaikan lemma irisan berhingga Gunakan hipotesis induksi dan kondisi kedua untuk melengkapi pembuktian lemma: jika , maka ada dengan . Terapkan hipotesis induksi pada untuk memperoleh , lalu gunakan kondisi kedua pada dan . Dari hipotesis induksi ambil dengan . Karena juga , kondisi kedua menghasilkan dengan . Buktikan dengan induksi pada . Kasus dan adalah Panduan 13. Anggap pernyataan benar sampai , dan ambil . Maka ; hipotesis induksi memberi dengan . Karena , kondisi kedua basis memberi sedemikian sehingga . Rantai inklusi menyelesaikan langkah induksi dan lemma.  Melengkapi basis pertama pada topologi hingga Untuk dan , uji . Jika bukan basis, tambahkan sesedikit mungkin himpunan agar menjadi basis untuk . Basis harus menutupi titik dan harus dapat menghasilkan setiap himpunan terbuka nonkosong sebagai gabungan. Periksa pula himpunan yang hanya memiliki satu subhimpunan terbuka nonkosong di dalamnya. Bukan basis. Tambahkan tepat dua himpunan, dan . Himpunan wajib ditambahkan: satu-satunya anggota yang dapat membentuknya sebagai gabungan himpunan terbuka yang berada di dalamnya adalah dirinya sendiri. Himpunan juga wajib, karena titik tidak berada dalam generator awal dan satu-satunya anggota yang memuat ketiganya tanpa memuat adalah himpunan tersebut. Dengan kedua tambahan itu, gabungan generator menghasilkan semua anggota : , , , , dan . Irisan takkosong generator juga dapat diperhalus oleh generator: misalnya irisan . Jadi dua tambahan cukup dan, dari argumen keharusan di atas, minimum.  Menguji basis kedua pada topologi hingga Uji apakah merupakan basis untuk topologi pada Panduan 16. Periksa penutupan liputan, daftar semua gabungan generator, lalu periksa irisan pasangan yang tidak kosong. Ya. Koleksi tersebut menutupi , gabungannya menghasilkan tepat , dan setiap irisan pasangan takkosong sudah memiliki penyempurnaan basis di dalamnya. Tulis , , dan . Gabungan , sehingga liputan terpenuhi. Semua gabungan subkeluarga adalah , tepat anggota . Irisan berbeda yang tidak kosong hanya ; irisan lain kosong, dan irisan dengan dirinya sendiri tetap generator. Karena itu kedua kondisi basis terpenuhi.  Menambahkan singleton pada topologi diskret tiga titik Misalkan dengan topologi diskret. Uji dan tambahkan sesedikit mungkin himpunan jika diperlukan. Cari irisan . Kondisi kedua basis meminta sebuah elemen basis yang memuat titik hasil irisan dan berada di dalamnya. Koleksi awal bukan basis. Tambahkan tepat ; hasilnya menjadi basis untuk topologi diskret. Koleksi awal menutupi , tetapi . Tidak ada elemen awal yang memuat dan sekaligus merupakan subhimpunan dari , sehingga kondisi kedua gagal. Setelah ditambahkan, semua titik memiliki singleton dan semua irisan pasangan dapat diperhalus oleh singleton yang sesuai. Karena topologi diskret memuat setiap subhimpunan dan setiap subhimpunan merupakan gabungan singleton, koleksi baru membangkitkan tepat topologi diskret. Satu tambahan diperlukan dan cukup.  Basis singleton untuk topologi diskret Tentukan sebuah basis untuk topologi diskret pada himpunan sembarang . Gunakan semua singleton yang mungkin, satu untuk setiap titik . Basisnya adalah . Setiap berada dalam singletonnya sendiri, sehingga liputan terpenuhi. Irisan dua singleton adalah kosong atau singleton, dan pada kasus takkosong singleton itu sendiri menjadi penyempurnaan basis. Setiap subhimpunan dapat ditulis sebagai , termasuk gabungan kosong untuk . Jadi koleksi singleton membangkitkan semua subhimpunan, yaitu topologi diskret. Untuk , koleksi kosong memenuhi kondisi secara vakum dan membangkitkan .  "
+},
+{
+  "id": "o003-c90-ch12-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-11",
+  "type": "Pemeriksaan",
+  "number": "L.11",
+  "title": "Membangkitkan topologi dari tiga himpunan dasar.",
+  "body": "Membangkitkan topologi dari tiga himpunan dasar Untuk dan , jelaskan mengapa setiap himpunan terbuka tak kosong dapat dibentuk dari gabungan sebarang dan irisan berhingga dari , , dan . Namai tiga himpunan tersebut , , dan . Daftar delapan kemungkinan gabungan, termasuk gabungan kosong, lalu periksa irisan pasangan yang berbeda. Dengan , , dan , gabungan dari subkeluarga menghasilkan tepat , yaitu semua anggota . Irisan pasangan yang berbeda kosong dan irisan suatu himpunan dengan dirinya sendiri tetap himpunan itu. Ambil , , dan . Delapan gabungan subkeluarga adalah , , , , , , , dan . Ini persis delapan anggota , sehingga setiap himpunan terbuka tak kosong (bahkan himpunan kosong juga) adalah gabungan elemen-elemen dasar. Selain itu, karena ketiga himpunan saling lepas, irisan dua elemen dasar yang berbeda adalah , sedangkan irisan berulang tidak mengubah elemen tersebut. Jadi operasi irisan berhingga tidak menghasilkan himpunan di luar daftar. "
+},
+{
+  "id": "o003-c90-ch12-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-12",
+  "type": "Pemeriksaan",
+  "number": "L.12",
+  "title": "Syarat penutupan basis: menutupi ruang.",
+  "body": "Syarat penutupan basis: menutupi ruang Nyatakan dan jelaskan kondisi pertama pada definisi basis untuk koleksi subhimpunan dari . Kondisi tersebut harus berlaku untuk setiap titik di ruang, bukan hanya untuk titik-titik pada beberapa elemen basis. Untuk setiap terdapat dengan ; ekuivalen dengan . Kondisi pertama adalah . Karena setiap titik berada dalam sedikitnya satu elemen basis, gabungan seluruh elemen menutupi . Tanpa kondisi ini, gabungan elemen basis tidak mungkin menghasilkan himpunan terbuka dan koleksi tersebut tidak dapat membangkitkan topologi pada ruang itu. "
+},
+{
+  "id": "o003-c90-ch12-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-13",
+  "type": "Pemeriksaan",
+  "number": "L.13",
+  "title": "Kasus dasar induksi untuk irisan basis.",
+  "body": "Kasus dasar induksi untuk irisan basis Jelaskan mengapa kasus dan benar dalam pernyataan: jika , maka ada dengan . Untuk satu himpunan, pilih himpunan itu sendiri. Untuk dua himpunan, gunakan langsung kondisi kedua definisi basis. Untuk , ambil . Untuk , kondisi kedua memberi dengan . Jika , hipotesis berarti ; pilihan memenuhi dan . Jika , hipotesis berarti . Kondisi kedua secara tepat menyediakan yang memuat dan berada di dalam irisan tersebut. Kedua kasus dasar selesai. "
+},
+{
+  "id": "o003-c90-ch12-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-14",
+  "type": "Pemeriksaan",
+  "number": "L.14",
+  "title": "Merumuskan hipotesis dan target induksi.",
+  "body": "Merumuskan hipotesis dan target induksi Tuliskan hipotesis induksi dan target pada langkah induksi untuk memperluas pernyataan irisan basis dari ke . Bekukan sebuah bilangan bulat . Hipotesis harus berlaku untuk ; target menambahkan . Hipotesisnya: untuk setiap ada dengan . Targetnya: untuk setiap ada dengan . Dalam langkah induksi, anggap hasil yang diinginkan sudah benar untuk setiap irisan hingga elemen basis. Jadi, bila berada di semua , tersedia satu yang memuat dan memenuhi . Yang harus dibuktikan adalah versi sama untuk ; setelah itu kondisi kedua dapat diterapkan pada dan . "
+},
+{
+  "id": "o003-c90-ch12-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-15",
+  "type": "Pemeriksaan",
+  "number": "L.15",
+  "title": "Menyelesaikan lemma irisan berhingga.",
+  "body": "Menyelesaikan lemma irisan berhingga Gunakan hipotesis induksi dan kondisi kedua untuk melengkapi pembuktian lemma: jika , maka ada dengan . Terapkan hipotesis induksi pada untuk memperoleh , lalu gunakan kondisi kedua pada dan . Dari hipotesis induksi ambil dengan . Karena juga , kondisi kedua menghasilkan dengan . Buktikan dengan induksi pada . Kasus dan adalah Panduan 13. Anggap pernyataan benar sampai , dan ambil . Maka ; hipotesis induksi memberi dengan . Karena , kondisi kedua basis memberi sedemikian sehingga . Rantai inklusi menyelesaikan langkah induksi dan lemma. "
+},
+{
+  "id": "o003-c90-ch12-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-16",
+  "type": "Pemeriksaan",
+  "number": "L.16",
+  "title": "Melengkapi basis pertama pada topologi hingga.",
+  "body": "Melengkapi basis pertama pada topologi hingga Untuk dan , uji . Jika bukan basis, tambahkan sesedikit mungkin himpunan agar menjadi basis untuk . Basis harus menutupi titik dan harus dapat menghasilkan setiap himpunan terbuka nonkosong sebagai gabungan. Periksa pula himpunan yang hanya memiliki satu subhimpunan terbuka nonkosong di dalamnya. Bukan basis. Tambahkan tepat dua himpunan, dan . Himpunan wajib ditambahkan: satu-satunya anggota yang dapat membentuknya sebagai gabungan himpunan terbuka yang berada di dalamnya adalah dirinya sendiri. Himpunan juga wajib, karena titik tidak berada dalam generator awal dan satu-satunya anggota yang memuat ketiganya tanpa memuat adalah himpunan tersebut. Dengan kedua tambahan itu, gabungan generator menghasilkan semua anggota : , , , , dan . Irisan takkosong generator juga dapat diperhalus oleh generator: misalnya irisan . Jadi dua tambahan cukup dan, dari argumen keharusan di atas, minimum. "
+},
+{
+  "id": "o003-c90-ch12-guide-17",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-17",
+  "type": "Pemeriksaan",
+  "number": "L.17",
+  "title": "Menguji basis kedua pada topologi hingga.",
+  "body": "Menguji basis kedua pada topologi hingga Uji apakah merupakan basis untuk topologi pada Panduan 16. Periksa penutupan liputan, daftar semua gabungan generator, lalu periksa irisan pasangan yang tidak kosong. Ya. Koleksi tersebut menutupi , gabungannya menghasilkan tepat , dan setiap irisan pasangan takkosong sudah memiliki penyempurnaan basis di dalamnya. Tulis , , dan . Gabungan , sehingga liputan terpenuhi. Semua gabungan subkeluarga adalah , tepat anggota . Irisan berbeda yang tidak kosong hanya ; irisan lain kosong, dan irisan dengan dirinya sendiri tetap generator. Karena itu kedua kondisi basis terpenuhi. "
+},
+{
+  "id": "o003-c90-ch12-guide-18",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-18",
+  "type": "Pemeriksaan",
+  "number": "L.18",
+  "title": "Menambahkan singleton pada topologi diskret tiga titik.",
+  "body": "Menambahkan singleton pada topologi diskret tiga titik Misalkan dengan topologi diskret. Uji dan tambahkan sesedikit mungkin himpunan jika diperlukan. Cari irisan . Kondisi kedua basis meminta sebuah elemen basis yang memuat titik hasil irisan dan berada di dalamnya. Koleksi awal bukan basis. Tambahkan tepat ; hasilnya menjadi basis untuk topologi diskret. Koleksi awal menutupi , tetapi . Tidak ada elemen awal yang memuat dan sekaligus merupakan subhimpunan dari , sehingga kondisi kedua gagal. Setelah ditambahkan, semua titik memiliki singleton dan semua irisan pasangan dapat diperhalus oleh singleton yang sesuai. Karena topologi diskret memuat setiap subhimpunan dan setiap subhimpunan merupakan gabungan singleton, koleksi baru membangkitkan tepat topologi diskret. Satu tambahan diperlukan dan cukup. "
+},
+{
+  "id": "o003-c90-ch12-guide-19",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-c.html#o003-c90-ch12-guide-19",
+  "type": "Pemeriksaan",
+  "number": "L.19",
+  "title": "Basis singleton untuk topologi diskret.",
+  "body": "Basis singleton untuk topologi diskret Tentukan sebuah basis untuk topologi diskret pada himpunan sembarang . Gunakan semua singleton yang mungkin, satu untuk setiap titik . Basisnya adalah . Setiap berada dalam singletonnya sendiri, sehingga liputan terpenuhi. Irisan dua singleton adalah kosong atau singleton, dan pada kasus takkosong singleton itu sendiri menjadi penyempurnaan basis. Setiap subhimpunan dapat ditulis sebagai , termasuk gabungan kosong untuk . Jadi koleksi singleton membangkitkan semua subhimpunan, yaitu topologi diskret. Untuk , koleksi kosong memenuhi kondisi secara vakum dan membangkitkan . "
+},
+{
+  "id": "o003-c90-ch12-source-guides-d",
+  "level": "1",
+  "url": "o003-c90-ch12-source-guides-d.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan ruang topologi yang bukan ruang metrik",
+  "body": " Panduan ruang topologi yang bukan ruang metrik  Panduan ini mengikuti kegiatan langsung pada bagian . Uraian dan solusi ditulis mandiri sebagai komponen CC BY 4.0 yang terpisah dari turunan GVSU.  Ruang topologi yang tidak dapat dimetriskan Misalkan dan . Jelaskan mengapa tidak ada metrik yang topologi metriknya tepat . Andaikan metrik tersebut ada. Perhatikan bola terbuka berpusat di dengan jari-jari kurang dari jarak antara dan . Tidak mungkin. Dalam topologi , satu-satunya himpunan terbuka yang memuat adalah , tetapi setiap metrik memisahkan dan dengan bola terbuka yang tidak memuat . Andaikan ada metrik yang menghasilkan tepat . Karena , maka . Ambil . Bola metrik memuat , tetapi tidak memuat , sebab . Bola ini harus menjadi himpunan terbuka dalam topologi metrik, sehingga harus menjadi anggota . Namun dari daftar , satu-satunya himpunan terbuka yang memuat adalah , dan juga memuat . Kontradiksi. Jadi bukan topologi yang termetriskan.  "
+},
+{
+  "id": "o003-c90-ch12-guide-20",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-d.html#o003-c90-ch12-guide-20",
+  "type": "Pemeriksaan",
+  "number": "L.20",
+  "title": "Ruang topologi yang tidak dapat dimetriskan.",
+  "body": "Ruang topologi yang tidak dapat dimetriskan Misalkan dan . Jelaskan mengapa tidak ada metrik yang topologi metriknya tepat . Andaikan metrik tersebut ada. Perhatikan bola terbuka berpusat di dengan jari-jari kurang dari jarak antara dan . Tidak mungkin. Dalam topologi , satu-satunya himpunan terbuka yang memuat adalah , tetapi setiap metrik memisahkan dan dengan bola terbuka yang tidak memuat . Andaikan ada metrik yang menghasilkan tepat . Karena , maka . Ambil . Bola metrik memuat , tetapi tidak memuat , sebab . Bola ini harus menjadi himpunan terbuka dalam topologi metrik, sehingga harus menjadi anggota . Namun dari daftar , satu-satunya himpunan terbuka yang memuat adalah , dan juga memuat . Kontradiksi. Jadi bukan topologi yang termetriskan. "
+},
+{
+  "id": "o003-c90-ch12-source-guides-e",
+  "level": "1",
+  "url": "o003-c90-ch12-source-guides-e.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan lingkungan dalam ruang topologi",
+  "body": " Panduan lingkungan dalam ruang topologi  Lima panduan berikut mengikuti dua kegiatan pada bagian . Pengenal tugas lokal ditambahkan karena tugas sumber tidak memiliki . Panduan ini merupakan komponen CC BY 4.0 orisinal yang terpisah dari prosa turunan GVSU.  Menentukan semua lingkungan titik Misalkan dan . Tentukan semua lingkungan titik .  Petunjuk 1. Gunakan definisi: suatu himpunan adalah lingkungan jika ada himpunan terbuka dengan .  Petunjuk 2. Daftar himpunan terbuka yang memuat . Perhatikan bahwa adalah salah satunya. Semua lingkungannya adalah semua subhimpunan yang memuat . Himpunan terbuka yang memuat adalah , , dan . Jika memuat , maka ; karena terbuka dan memuat , definisi langsung menyatakan bahwa adalah lingkungan . Sebaliknya, setiap lingkungan harus memuat suatu himpunan terbuka yang memuat , sehingga khususnya . Jadi lingkungan titik tepat merupakan delapan subhimpunan yang tercantum dalam jawaban.  Rubrik penilaian. Jawaban lengkap (3 poin) menyebutkan kriteria dan seluruh delapan himpunan; jawaban yang mencantumkan kriteria tetapi melewatkan satu atau lebih himpunan memperoleh 2 poin; daftar tanpa alasan memperoleh 1 poin.  Menentukan semua lingkungan titik Dengan dan seperti pada Panduan 21, tentukan semua lingkungan titik .  Petunjuk 1. Cari semua anggota yang memuat .  Petunjuk 2. Lingkungan harus memuat salah satu himpunan terbuka yang memuat , bukan sekadar memuat sendiri. Satu-satunya lingkungan titik adalah . Dari daftar topologi, satu-satunya himpunan terbuka yang memuat adalah . Jika merupakan lingkungan , definisi mengharuskan ada himpunan terbuka dengan . Hanya mungkin , sehingga dan akhirnya . Sebaliknya, memang lingkungan setiap titik karena terbuka.  Rubrik penilaian. Tiga poin diberikan bila jawaban menyatakan dan mengaitkannya dengan fakta bahwa adalah satu-satunya himpunan terbuka yang memuat ; satu poin diberikan untuk daftar yang benar tanpa penjelasan.  Mengubah lingkungan setiap titik menjadi keterbukaan Misalkan suatu ruang topologi dan . Andaikan merupakan lingkungan dari setiap titiknya. Apa yang perlu dilakukan untuk menunjukkan bahwa merupakan himpunan terbuka?  Petunjuk 1. Untuk setiap , terapkan definisi lingkungan pada .  Petunjuk 2. Kumpulkan himpunan-himpunan terbuka yang diperoleh menjadi gabungan; tunjukkan kedua inklusi untuk gabungan tersebut. Untuk setiap , pilih himpunan terbuka dengan . Lalu buktikan . Gabungan sebarang himpunan terbuka adalah terbuka, sehingga terbuka. Karena adalah lingkungan setiap titiknya, untuk setiap ada himpunan terbuka yang memenuhi . Definisikan . Setiap berada di dalam , jadi . Sebaliknya, setiap berada dalam , jadi . Maka . Karena merupakan gabungan sebarang anggota , aksioma topologi memberi , dan akibatnya terbuka. Jika , gabungan kosong tersebut adalah , yang juga terbuka.  Rubrik penilaian. Berikan 1 poin untuk pemilihan satu per titik, 1 poin untuk kedua inklusi, dan 1 poin untuk penggunaan aksioma gabungan sebarang (termasuk kasus kosong).  Mengapa himpunan harus ada Dalam situasi Panduan 23, ambil . Mengapa harus ada himpunan terbuka sedemikian sehingga ?  Petunjuk 1. Tulis ulang arti kalimat “ merupakan lingkungan dari ” menggunakan kuantor dan inklusi.  Petunjuk 2. Ganti nama himpunan terbuka yang dijamin definisi itu dengan simbol . Berdasarkan definisi lingkungan, karena merupakan lingkungan , ada himpunan terbuka dengan . Ambil . Definisi menyatakan bahwa adalah lingkungan tepat ketika ada sehingga . Terapkan pernyataan ini dengan . Hipotesis Panduan 23 mengatakan bahwa penerapan itu sah untuk setiap , jadi diperoleh dengan . Menamai ulang sebagai menghasilkan tepat himpunan yang diperlukan; nama itu hanya mengingatkan bahwa pilihannya dapat bergantung pada titik .  Rubrik penilaian. Jawaban penuh (3 poin) menyebutkan bahwa hipotesis berlaku untuk setiap , menyatakan , dan menuliskan dua inklusi yang benar.  Menyelesaikan pembuktian karakterisasi himpunan terbuka Lengkapi pembuktian: jika merupakan lingkungan dari setiap titiknya dalam ruang topologi , maka merupakan himpunan terbuka.  Petunjuk 1. Untuk tiap , pilih terbuka dengan .  Petunjuk 2. Tunjukkan dan inklusi sebaliknya. Kemudian gunakan penutupan terhadap gabungan sebarang. Untuk setiap , definisi lingkungan memberi himpunan terbuka dengan . Karena itu , dan gabungan tersebut terbuka. Jadi . Untuk arah yang belum dibuktikan, andaikan merupakan lingkungan dari setiap titik . Maka untuk setiap titik tersebut terdapat sehingga . Letakkan . Dari inklusi untuk semua , diperoleh . Jika , maka , sehingga . Jadi . Aksioma topologi menyatakan bahwa gabungan sebarang anggota adalah anggota , maka dan . Untuk , indeks gabungan kosong memberi , sehingga argumen tetap berlaku. Bersama arah pertama pada teorema sumber—himpunan terbuka merupakan lingkungan setiap titiknya—ini menyelesaikan karakterisasi tersebut.  Rubrik penilaian. Berikan 1 poin untuk menghubungkan hipotesis dengan pilihan , 1 poin untuk kesetaraan gabungan, 1 poin untuk aksioma gabungan, dan 1 poin untuk menyebutkan arah pertama atau menangani kasus .  "
+},
+{
+  "id": "o003-c90-ch12-guide-21",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-e.html#o003-c90-ch12-guide-21",
+  "type": "Pemeriksaan",
+  "number": "L.21",
+  "title": "Menentukan semua lingkungan titik <span class=\"process-math\">\\(a\\)<\/span>.",
+  "body": "Menentukan semua lingkungan titik Misalkan dan . Tentukan semua lingkungan titik .  Petunjuk 1. Gunakan definisi: suatu himpunan adalah lingkungan jika ada himpunan terbuka dengan .  Petunjuk 2. Daftar himpunan terbuka yang memuat . Perhatikan bahwa adalah salah satunya. Semua lingkungannya adalah semua subhimpunan yang memuat . Himpunan terbuka yang memuat adalah , , dan . Jika memuat , maka ; karena terbuka dan memuat , definisi langsung menyatakan bahwa adalah lingkungan . Sebaliknya, setiap lingkungan harus memuat suatu himpunan terbuka yang memuat , sehingga khususnya . Jadi lingkungan titik tepat merupakan delapan subhimpunan yang tercantum dalam jawaban.  Rubrik penilaian. Jawaban lengkap (3 poin) menyebutkan kriteria dan seluruh delapan himpunan; jawaban yang mencantumkan kriteria tetapi melewatkan satu atau lebih himpunan memperoleh 2 poin; daftar tanpa alasan memperoleh 1 poin. "
+},
+{
+  "id": "o003-c90-ch12-guide-22",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-e.html#o003-c90-ch12-guide-22",
+  "type": "Pemeriksaan",
+  "number": "L.22",
+  "title": "Menentukan semua lingkungan titik <span class=\"process-math\">\\(c\\)<\/span>.",
+  "body": "Menentukan semua lingkungan titik Dengan dan seperti pada Panduan 21, tentukan semua lingkungan titik .  Petunjuk 1. Cari semua anggota yang memuat .  Petunjuk 2. Lingkungan harus memuat salah satu himpunan terbuka yang memuat , bukan sekadar memuat sendiri. Satu-satunya lingkungan titik adalah . Dari daftar topologi, satu-satunya himpunan terbuka yang memuat adalah . Jika merupakan lingkungan , definisi mengharuskan ada himpunan terbuka dengan . Hanya mungkin , sehingga dan akhirnya . Sebaliknya, memang lingkungan setiap titik karena terbuka.  Rubrik penilaian. Tiga poin diberikan bila jawaban menyatakan dan mengaitkannya dengan fakta bahwa adalah satu-satunya himpunan terbuka yang memuat ; satu poin diberikan untuk daftar yang benar tanpa penjelasan. "
+},
+{
+  "id": "o003-c90-ch12-guide-23",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-e.html#o003-c90-ch12-guide-23",
+  "type": "Pemeriksaan",
+  "number": "L.23",
+  "title": "Mengubah lingkungan setiap titik menjadi keterbukaan.",
+  "body": "Mengubah lingkungan setiap titik menjadi keterbukaan Misalkan suatu ruang topologi dan . Andaikan merupakan lingkungan dari setiap titiknya. Apa yang perlu dilakukan untuk menunjukkan bahwa merupakan himpunan terbuka?  Petunjuk 1. Untuk setiap , terapkan definisi lingkungan pada .  Petunjuk 2. Kumpulkan himpunan-himpunan terbuka yang diperoleh menjadi gabungan; tunjukkan kedua inklusi untuk gabungan tersebut. Untuk setiap , pilih himpunan terbuka dengan . Lalu buktikan . Gabungan sebarang himpunan terbuka adalah terbuka, sehingga terbuka. Karena adalah lingkungan setiap titiknya, untuk setiap ada himpunan terbuka yang memenuhi . Definisikan . Setiap berada di dalam , jadi . Sebaliknya, setiap berada dalam , jadi . Maka . Karena merupakan gabungan sebarang anggota , aksioma topologi memberi , dan akibatnya terbuka. Jika , gabungan kosong tersebut adalah , yang juga terbuka.  Rubrik penilaian. Berikan 1 poin untuk pemilihan satu per titik, 1 poin untuk kedua inklusi, dan 1 poin untuk penggunaan aksioma gabungan sebarang (termasuk kasus kosong). "
+},
+{
+  "id": "o003-c90-ch12-guide-24",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-e.html#o003-c90-ch12-guide-24",
+  "type": "Pemeriksaan",
+  "number": "L.24",
+  "title": "Mengapa himpunan <span class=\"process-math\">\\(O_a\\)<\/span> harus ada.",
+  "body": "Mengapa himpunan harus ada Dalam situasi Panduan 23, ambil . Mengapa harus ada himpunan terbuka sedemikian sehingga ?  Petunjuk 1. Tulis ulang arti kalimat “ merupakan lingkungan dari ” menggunakan kuantor dan inklusi.  Petunjuk 2. Ganti nama himpunan terbuka yang dijamin definisi itu dengan simbol . Berdasarkan definisi lingkungan, karena merupakan lingkungan , ada himpunan terbuka dengan . Ambil . Definisi menyatakan bahwa adalah lingkungan tepat ketika ada sehingga . Terapkan pernyataan ini dengan . Hipotesis Panduan 23 mengatakan bahwa penerapan itu sah untuk setiap , jadi diperoleh dengan . Menamai ulang sebagai menghasilkan tepat himpunan yang diperlukan; nama itu hanya mengingatkan bahwa pilihannya dapat bergantung pada titik .  Rubrik penilaian. Jawaban penuh (3 poin) menyebutkan bahwa hipotesis berlaku untuk setiap , menyatakan , dan menuliskan dua inklusi yang benar. "
+},
+{
+  "id": "o003-c90-ch12-guide-25",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-e.html#o003-c90-ch12-guide-25",
+  "type": "Pemeriksaan",
+  "number": "L.25",
+  "title": "Menyelesaikan pembuktian karakterisasi himpunan terbuka.",
+  "body": "Menyelesaikan pembuktian karakterisasi himpunan terbuka Lengkapi pembuktian: jika merupakan lingkungan dari setiap titiknya dalam ruang topologi , maka merupakan himpunan terbuka.  Petunjuk 1. Untuk tiap , pilih terbuka dengan .  Petunjuk 2. Tunjukkan dan inklusi sebaliknya. Kemudian gunakan penutupan terhadap gabungan sebarang. Untuk setiap , definisi lingkungan memberi himpunan terbuka dengan . Karena itu , dan gabungan tersebut terbuka. Jadi . Untuk arah yang belum dibuktikan, andaikan merupakan lingkungan dari setiap titik . Maka untuk setiap titik tersebut terdapat sehingga . Letakkan . Dari inklusi untuk semua , diperoleh . Jika , maka , sehingga . Jadi . Aksioma topologi menyatakan bahwa gabungan sebarang anggota adalah anggota , maka dan . Untuk , indeks gabungan kosong memberi , sehingga argumen tetap berlaku. Bersama arah pertama pada teorema sumber—himpunan terbuka merupakan lingkungan setiap titiknya—ini menyelesaikan karakterisasi tersebut.  Rubrik penilaian. Berikan 1 poin untuk menghubungkan hipotesis dengan pilihan , 1 poin untuk kesetaraan gabungan, 1 poin untuk aksioma gabungan, dan 1 poin untuk menyebutkan arah pertama atau menangani kasus . "
+},
+{
+  "id": "o003-c90-ch12-source-guides-f",
+  "level": "1",
+  "url": "o003-c90-ch12-source-guides-f.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan interior dalam ruang topologi",
+  "body": " Panduan interior dalam ruang topologi  Enam panduan berikut mengikuti, dalam urutan sumber, empat tugas pada kegiatan interior dan dua tugas pada kegiatan pembuktian sesudahnya dalam bagian . Tugas sumber tidak memiliki , sehingga pengenal lokal yang stabil diberikan di sini. Panduan ini merupakan komponen CC BY 4.0 orisinal yang terpisah dari prosa turunan GVSU. Sumber mencetak pasangan pada pernyataan teorema interior; karena argumennya hanya memakai struktur topologi, panduan ini menuliskannya sebagai .  Interior pada topologi standar di garis real Pertimbangkan dengan topologi standar, dan ambil . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Pisahkan tiga bagian , periksa titik ujung dan singleton , lalu jelaskan mengapa hasilnya memang terbuka dan maksimal.  Petunjuk 1. Himpunan sudah terbuka. Di dalam , titik-titik yang memiliki interval terbuka kecil seluruhnya berada di dalam adalah titik-titik di .  Petunjuk 2. Setiap interval terbuka di sekitar memuat bilangan lebih besar dari . Jika interval di sekitar berjari-jari , titik berada di interval itu tetapi tidak berada dalam . Gunakan ini untuk menyingkirkan kedua titik tersebut dari interior.  . Himpunan terbuka terbesar yang terkandung dalam adalah himpunan yang sama. Bagian merupakan himpunan terbuka. Jika , pilih jari-jari positif yang lebih kecil daripada ; interval yang dihasilkan berada di dalam , sehingga setiap titik tersebut interior. Sebaliknya, untuk titik , setiap interval terbuka yang memuat juga memuat titik-titik yang lebih besar dari , yang tidak berada di . Jadi bukan titik interior. Demikian pula, jika dan adalah interval terbuka di sekitar , maka berada dalam interval itu tetapi tidak berada dalam ; maka bukan titik interior. Titik dan tidak termasuk . Dengan demikian , yang terbuka sebagai gabungan dua himpunan terbuka. Setiap himpunan terbuka yang terkandung dalam hanya dapat memuat titik-titik interior, sehingga terkandung dalam hasil ini; hasil tersebut adalah yang terbesar.  Rubrik penilaian. Berikan 1 poin untuk bagian pertama, 1 poin untuk menghapus titik ujung dan singleton dengan alasan lingkungan, 1 poin untuk hasil interior, dan 1 poin untuk argumen keterbukaan serta kemaksimalan.  Interior pada topologi diskret Pertimbangkan dengan topologi diskret dan . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Gunakan fakta bahwa setiap singleton, dan karenanya setiap subhimpunan, terbuka dalam topologi diskret.  Petunjuk 1. Dalam topologi diskret, untuk setiap himpunan adalah terbuka dan berada di dalam .  Petunjuk 2. Tulis sebagai gabungan singleton dari titik-titiknya, lalu bandingkan dengan definisi interior.  , dan sendiri merupakan subhimpunan terbuka terbesar yang terkandung dalam . Karena topologinya diskret, setiap subhimpunan terbuka. Khususnya, untuk setiap , singleton terbuka, memuat , dan terkandung dalam . Jadi setiap titik merupakan titik interior. Sebaliknya, interior selalu merupakan subhimpunan dari menurut definisi. Maka . Karena terbuka dan jelas merupakan subhimpunan dari dirinya sendiri, tidak ada subhimpunan terbuka di dalam yang lebih besar daripada .  Rubrik penilaian. Berikan 1 poin untuk menyatakan semua subhimpunan terbuka, 1 poin untuk menunjukkan singleton di sekitar setiap titik, dan 1 poin untuk kesimpulan interior serta kemaksimalan.  Interior pada topologi komplemen berhingga Pertimbangkan dengan topologi komplemen berhingga dan . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Periksa ukuran komplemen dan jelaskan mengapa tidak ada himpunan terbuka tak kosong yang dapat berada di dalam .  Petunjuk 1. Himpunan terbuka tak kosong dalam topologi ini mempunyai komplemen berhingga. Tulis sebagian komplemen untuk melihat bahwa komplemennya tak berhingga.  Petunjuk 2. Jika , maka . Bandingkan inklusi ini dengan syarat komplemen berhingga untuk .  . Satu-satunya subhimpunan terbuka dari yang terkandung dalam adalah . Komplemen memuat, misalnya, , sehingga tak berhingga. Andaikan adalah himpunan terbuka tak kosong dengan . Dalam topologi komplemen berhingga, harus berhingga. Namun dari diperoleh ; ruas kiri tak berhingga, sehingga ruas kanan juga tak berhingga, suatu kontradiksi. Jadi tidak ada himpunan terbuka tak kosong di dalam . Himpunan kosong selalu terbuka, maka gabungan seluruh himpunan terbuka yang terkandung dalam , yakni interiornya, adalah .  Rubrik penilaian. Berikan 1 poin untuk menunjukkan komplemen tak berhingga, 1 poin untuk inklusi komplemen yang benar, dan 1 poin untuk kontradiksi komplemen berhingga serta kesimpulan.  Interior pada topologi hingga yang diberikan Misalkan dan . Andaikan merupakan topologi pada , dan ambil . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Daftar semua anggota yang berada di dalam , lalu ambil gabungannya; jelaskan secara khusus mengapa tidak termasuk.  Petunjuk 1. Dari daftar topologi, cari himpunan terbuka yang hanya menggunakan titik-titik .  Petunjuk 2. Himpunan terbuka yang memuat dalam daftar selalu juga memuat . Periksa titik dan dengan singletonnya. Anggota topologi yang terkandung dalam adalah . Jadi , yang juga merupakan subhimpunan terbuka terbesar di dalam . Periksa daftar satu per satu. Himpunan yang tidak memuat dan seluruhnya berada di dalam hanyalah , , , dan . Gabungan semua himpunan tersebut adalah , dan himpunan itu sendiri terbuka. Titik dan interior karena masing-masing mempunyai lingkungan terbuka singleton yang berada di dalam . Sebaliknya, setiap anggota yang memuat adalah , , , atau ; semuanya memuat . Karena itu bukan titik interior. Maka , dan argumen daftar tersebut juga membuktikan kemaksimalannya.  Rubrik penilaian. Berikan 1 poin untuk daftar anggota terbuka yang terkandung dalam , 1 poin untuk alasan bahwa gagal, dan 1 poin untuk gabungan, interior, serta klaim terbesar.  Menetapkan sasaran teorema interior Misalkan ruang topologi dan . Apa saja yang harus ditunjukkan untuk membuktikan bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam ? Rubrik. Bedakan sifat “terbuka”, “berada di dalam ”, dan sifat “terbesar” sebagai pernyataan universal tentang setiap himpunan terbuka lain.  Petunjuk 1. Pecah kata “terbesar” menjadi dua syarat: objek yang diusulkan harus memenuhi sifat yang diminta, dan setiap objek lain dengan sifat itu harus berada di dalamnya.  Petunjuk 2. Gunakan definisi interior untuk syarat inklusi ; yang tersisa adalah keterbukaan dan perbandingan dengan sembarang yang memenuhi . Tunjukkan tiga hal: terbuka; secara definisi ; dan untuk setiap himpunan terbuka dengan berlaku . Pernyataan “subhimpunan terbuka terbesar dari yang terkandung dalam ” berarti pertama-tama bahwa objek tersebut adalah subhimpunan dan terbuka dalam . Inklusi langsung mengikuti definisi ; keterbukaan adalah bagian yang perlu dibuktikan dari definisi lingkungan. Terakhir, “terbesar” berarti bahwa setiap dengan harus memenuhi . Ketiga syarat ini bersama-sama tepat menyatakan klaim teorema, tanpa perlu mengasumsikan bahwa memiliki metrik.  Rubrik penilaian. Berikan masing-masing 1 poin untuk keterbukaan, inklusi ke dalam , dan kondisi universal yang menyatakan kemaksimalan.  Membuktikan kemaksimalan interior Misalkan merupakan subhimpunan terbuka dari ruang topologi dan . Jika , apa yang diberitahukan oleh keterbukaan , dan bagaimana fakta itu melengkapi pembuktian ? Rubrik. Hubungkan keterbukaan dengan definisi lingkungan, gunakan inklusi , lalu simpulkan untuk titik sembarang.  Petunjuk 1. Karena dan terbuka, himpunan sendiri adalah lingkungan dari .  Petunjuk 2. Lingkungan terbuka yang memenuhi adalah saksi langsung bahwa merupakan titik interior . Ulangi untuk semua . Keterbukaan memberi bahwa adalah lingkungan dari setiap . Bersama , ini menunjukkan bahwa setiap merupakan titik interior ; oleh karena itu . Ambil titik sembarang . Karena dan , definisi lingkungan menyatakan bahwa merupakan lingkungan dari : kita dapat memilih himpunan terbuka itu sendiri, dengan . Selain itu, hipotesis memberi . Jadi ada himpunan terbuka yang memuat dan terkandung dalam , tepatnya ; menurut definisi, adalah titik interior dari dan . Karena dipilih sembarang, setiap titik berada di , sehingga . Inilah syarat kemaksimalan yang melengkapi pembuktian teorema interior.  Rubrik penilaian. Berikan 1 poin untuk memakai keterbukaan sebagai lingkungan, 1 poin untuk memakai , dan 1 poin untuk memperluas argumen dari titik sembarang menjadi inklusi himpunan.  "
+},
+{
+  "id": "o003-c90-ch12-guide-26",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-f.html#o003-c90-ch12-guide-26",
+  "type": "Pemeriksaan",
+  "number": "L.26",
+  "title": "Interior pada topologi standar di garis real.",
+  "body": "Interior pada topologi standar di garis real Pertimbangkan dengan topologi standar, dan ambil . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Pisahkan tiga bagian , periksa titik ujung dan singleton , lalu jelaskan mengapa hasilnya memang terbuka dan maksimal.  Petunjuk 1. Himpunan sudah terbuka. Di dalam , titik-titik yang memiliki interval terbuka kecil seluruhnya berada di dalam adalah titik-titik di .  Petunjuk 2. Setiap interval terbuka di sekitar memuat bilangan lebih besar dari . Jika interval di sekitar berjari-jari , titik berada di interval itu tetapi tidak berada dalam . Gunakan ini untuk menyingkirkan kedua titik tersebut dari interior.  . Himpunan terbuka terbesar yang terkandung dalam adalah himpunan yang sama. Bagian merupakan himpunan terbuka. Jika , pilih jari-jari positif yang lebih kecil daripada ; interval yang dihasilkan berada di dalam , sehingga setiap titik tersebut interior. Sebaliknya, untuk titik , setiap interval terbuka yang memuat juga memuat titik-titik yang lebih besar dari , yang tidak berada di . Jadi bukan titik interior. Demikian pula, jika dan adalah interval terbuka di sekitar , maka berada dalam interval itu tetapi tidak berada dalam ; maka bukan titik interior. Titik dan tidak termasuk . Dengan demikian , yang terbuka sebagai gabungan dua himpunan terbuka. Setiap himpunan terbuka yang terkandung dalam hanya dapat memuat titik-titik interior, sehingga terkandung dalam hasil ini; hasil tersebut adalah yang terbesar.  Rubrik penilaian. Berikan 1 poin untuk bagian pertama, 1 poin untuk menghapus titik ujung dan singleton dengan alasan lingkungan, 1 poin untuk hasil interior, dan 1 poin untuk argumen keterbukaan serta kemaksimalan. "
+},
+{
+  "id": "o003-c90-ch12-guide-27",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-f.html#o003-c90-ch12-guide-27",
+  "type": "Pemeriksaan",
+  "number": "L.27",
+  "title": "Interior pada topologi diskret.",
+  "body": "Interior pada topologi diskret Pertimbangkan dengan topologi diskret dan . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Gunakan fakta bahwa setiap singleton, dan karenanya setiap subhimpunan, terbuka dalam topologi diskret.  Petunjuk 1. Dalam topologi diskret, untuk setiap himpunan adalah terbuka dan berada di dalam .  Petunjuk 2. Tulis sebagai gabungan singleton dari titik-titiknya, lalu bandingkan dengan definisi interior.  , dan sendiri merupakan subhimpunan terbuka terbesar yang terkandung dalam . Karena topologinya diskret, setiap subhimpunan terbuka. Khususnya, untuk setiap , singleton terbuka, memuat , dan terkandung dalam . Jadi setiap titik merupakan titik interior. Sebaliknya, interior selalu merupakan subhimpunan dari menurut definisi. Maka . Karena terbuka dan jelas merupakan subhimpunan dari dirinya sendiri, tidak ada subhimpunan terbuka di dalam yang lebih besar daripada .  Rubrik penilaian. Berikan 1 poin untuk menyatakan semua subhimpunan terbuka, 1 poin untuk menunjukkan singleton di sekitar setiap titik, dan 1 poin untuk kesimpulan interior serta kemaksimalan. "
+},
+{
+  "id": "o003-c90-ch12-guide-28",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-f.html#o003-c90-ch12-guide-28",
+  "type": "Pemeriksaan",
+  "number": "L.28",
+  "title": "Interior pada topologi komplemen berhingga.",
+  "body": "Interior pada topologi komplemen berhingga Pertimbangkan dengan topologi komplemen berhingga dan . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Periksa ukuran komplemen dan jelaskan mengapa tidak ada himpunan terbuka tak kosong yang dapat berada di dalam .  Petunjuk 1. Himpunan terbuka tak kosong dalam topologi ini mempunyai komplemen berhingga. Tulis sebagian komplemen untuk melihat bahwa komplemennya tak berhingga.  Petunjuk 2. Jika , maka . Bandingkan inklusi ini dengan syarat komplemen berhingga untuk .  . Satu-satunya subhimpunan terbuka dari yang terkandung dalam adalah . Komplemen memuat, misalnya, , sehingga tak berhingga. Andaikan adalah himpunan terbuka tak kosong dengan . Dalam topologi komplemen berhingga, harus berhingga. Namun dari diperoleh ; ruas kiri tak berhingga, sehingga ruas kanan juga tak berhingga, suatu kontradiksi. Jadi tidak ada himpunan terbuka tak kosong di dalam . Himpunan kosong selalu terbuka, maka gabungan seluruh himpunan terbuka yang terkandung dalam , yakni interiornya, adalah .  Rubrik penilaian. Berikan 1 poin untuk menunjukkan komplemen tak berhingga, 1 poin untuk inklusi komplemen yang benar, dan 1 poin untuk kontradiksi komplemen berhingga serta kesimpulan. "
+},
+{
+  "id": "o003-c90-ch12-guide-29",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-f.html#o003-c90-ch12-guide-29",
+  "type": "Pemeriksaan",
+  "number": "L.29",
+  "title": "Interior pada topologi hingga yang diberikan.",
+  "body": "Interior pada topologi hingga yang diberikan Misalkan dan . Andaikan merupakan topologi pada , dan ambil . Tentukan dan subhimpunan terbuka terbesar dari yang terkandung dalam . Rubrik. Daftar semua anggota yang berada di dalam , lalu ambil gabungannya; jelaskan secara khusus mengapa tidak termasuk.  Petunjuk 1. Dari daftar topologi, cari himpunan terbuka yang hanya menggunakan titik-titik .  Petunjuk 2. Himpunan terbuka yang memuat dalam daftar selalu juga memuat . Periksa titik dan dengan singletonnya. Anggota topologi yang terkandung dalam adalah . Jadi , yang juga merupakan subhimpunan terbuka terbesar di dalam . Periksa daftar satu per satu. Himpunan yang tidak memuat dan seluruhnya berada di dalam hanyalah , , , dan . Gabungan semua himpunan tersebut adalah , dan himpunan itu sendiri terbuka. Titik dan interior karena masing-masing mempunyai lingkungan terbuka singleton yang berada di dalam . Sebaliknya, setiap anggota yang memuat adalah , , , atau ; semuanya memuat . Karena itu bukan titik interior. Maka , dan argumen daftar tersebut juga membuktikan kemaksimalannya.  Rubrik penilaian. Berikan 1 poin untuk daftar anggota terbuka yang terkandung dalam , 1 poin untuk alasan bahwa gagal, dan 1 poin untuk gabungan, interior, serta klaim terbesar. "
+},
+{
+  "id": "o003-c90-ch12-guide-30",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-f.html#o003-c90-ch12-guide-30",
+  "type": "Pemeriksaan",
+  "number": "L.30",
+  "title": "Menetapkan sasaran teorema interior.",
+  "body": "Menetapkan sasaran teorema interior Misalkan ruang topologi dan . Apa saja yang harus ditunjukkan untuk membuktikan bahwa merupakan subhimpunan terbuka terbesar dari yang terkandung dalam ? Rubrik. Bedakan sifat “terbuka”, “berada di dalam ”, dan sifat “terbesar” sebagai pernyataan universal tentang setiap himpunan terbuka lain.  Petunjuk 1. Pecah kata “terbesar” menjadi dua syarat: objek yang diusulkan harus memenuhi sifat yang diminta, dan setiap objek lain dengan sifat itu harus berada di dalamnya.  Petunjuk 2. Gunakan definisi interior untuk syarat inklusi ; yang tersisa adalah keterbukaan dan perbandingan dengan sembarang yang memenuhi . Tunjukkan tiga hal: terbuka; secara definisi ; dan untuk setiap himpunan terbuka dengan berlaku . Pernyataan “subhimpunan terbuka terbesar dari yang terkandung dalam ” berarti pertama-tama bahwa objek tersebut adalah subhimpunan dan terbuka dalam . Inklusi langsung mengikuti definisi ; keterbukaan adalah bagian yang perlu dibuktikan dari definisi lingkungan. Terakhir, “terbesar” berarti bahwa setiap dengan harus memenuhi . Ketiga syarat ini bersama-sama tepat menyatakan klaim teorema, tanpa perlu mengasumsikan bahwa memiliki metrik.  Rubrik penilaian. Berikan masing-masing 1 poin untuk keterbukaan, inklusi ke dalam , dan kondisi universal yang menyatakan kemaksimalan. "
+},
+{
+  "id": "o003-c90-ch12-guide-31",
+  "level": "2",
+  "url": "o003-c90-ch12-source-guides-f.html#o003-c90-ch12-guide-31",
+  "type": "Pemeriksaan",
+  "number": "L.31",
+  "title": "Membuktikan kemaksimalan interior.",
+  "body": "Membuktikan kemaksimalan interior Misalkan merupakan subhimpunan terbuka dari ruang topologi dan . Jika , apa yang diberitahukan oleh keterbukaan , dan bagaimana fakta itu melengkapi pembuktian ? Rubrik. Hubungkan keterbukaan dengan definisi lingkungan, gunakan inklusi , lalu simpulkan untuk titik sembarang.  Petunjuk 1. Karena dan terbuka, himpunan sendiri adalah lingkungan dari .  Petunjuk 2. Lingkungan terbuka yang memenuhi adalah saksi langsung bahwa merupakan titik interior . Ulangi untuk semua . Keterbukaan memberi bahwa adalah lingkungan dari setiap . Bersama , ini menunjukkan bahwa setiap merupakan titik interior ; oleh karena itu . Ambil titik sembarang . Karena dan , definisi lingkungan menyatakan bahwa merupakan lingkungan dari : kita dapat memilih himpunan terbuka itu sendiri, dengan . Selain itu, hipotesis memberi . Jadi ada himpunan terbuka yang memuat dan terkandung dalam , tepatnya ; menurut definisi, adalah titik interior dari dan . Karena dipilih sembarang, setiap titik berada di , sehingga . Inilah syarat kemaksimalan yang melengkapi pembuktian teorema interior.  Rubrik penilaian. Berikan 1 poin untuk memakai keterbukaan sebagai lingkungan, 1 poin untuk memakai , dan 1 poin untuk memperluas argumen dari titik sembarang menjadi inklusi himpunan. "
+},
+{
+  "id": "o003-c90-ch12-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch12-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian pertama",
+  "body": " Panduan latihan sumber, bagian pertama  Sepuluh panduan berikut mengikuti urutan sumber pada sec_top_space_exer.ptx : dua tugas pembuka, empat tugas pada latihan ex_aZ_top , dan empat tugas pertama pada latihan koset aritmetika. Materi ini adalah komponen pendamping asli untuk belajar mandiri, bukan jawaban dari penulis sumber. Setiap panduan menyediakan petunjuk bertahap, jawaban singkat, solusi lengkap, dan rubrik pemeriksaan; komponen ini diterbitkan terpisah di bawah CC BY 4.0.  Semua gabungan koleksi pembangkit   Jangkar sumber: latihan tanpa ID pada awal sec_top_space_exer.ptx , tugas pertama. Untuk dan , tentukan koleksi semua gabungan subkoleksi dari . Gabungan subkoleksi kosong juga harus diperhitungkan. Rubrik. Daftar harus memuat setiap hasil yang berbeda tepat satu kali dan tidak boleh memasukkan himpunan yang tidak dapat diperoleh.   Beri nama keempat anggota , lalu mulai dari gabungan kosong dan gabungan satu anggota. Setelah itu periksa kapan dua anggota menghubungkan , , dan menjadi seluruh .   Koleksinya adalah .   Tuliskan , , , dan . Gabungan kosong menghasilkan . Gabungan satu anggota menghasilkan . Gabungan menghasilkan . Setiap gabungan yang memuat dan , atau yang memuat salah satu dari keduanya bersama anggota yang melengkapi titik yang hilang, menghasilkan . Tidak ada hasil lain: setiap gabungan adalah subhimpunan , dan pemeriksaan seluruh pola keanggotaan hanya menghasilkan tujuh himpunan yang tercantum.   Mengapa koleksi gabungan itu bukan topologi   Jangkar sumber: latihan pembuka pada sec_top_space_exer.ptx , tugas kedua. Dengan , jelaskan mengapa koleksi semua gabungan anggota , setelah ditambah himpunan kosong, bukan topologi pada . Sebutkan aksioma basis yang gagal. Rubrik. Berikan satu irisan eksplisit dan hubungkan kegagalan itu dengan syarat perpotongan basis, bukan hanya dengan pernyataan bahwa daftar tersebut \"kurang\".   Bandingkan dua anggota basis dan . Titik berada di irisan keduanya. Tanyakan apakah ada anggota yang memuat dan sekaligus terkandung dalam irisan tersebut.   Koleksi itu bukan topologi karena tidak termasuk koleksi semua gabungan tersebut. Syarat perpotongan basis gagal pada titik .   Jika adalah semua gabungan subkoleksi dari , maka dan sendiri berada di . Namun Himpunan tidak dapat ditulis sebagai gabungan anggota : setiap anggota yang memuat juga memuat atau . Maka tidak tertutup terhadap irisan berhingga dan bukan topologi.  Dilihat langsung dari dua aksioma basis, masalahnya adalah: untuk , , dan , tidak ada dengan . Jadi syarat perpotongan basis memang gagal, persis pada titik .   Basis kelipatan bilangan bulat   Jangkar sumber:  ex_aZ_top , tugas pertama. Untuk setiap , tetapkan . Buktikan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Verifikasi cakupan dan syarat irisan basis, termasuk kasus dan tanda negatif.   Gunakan . Untuk , irisan dua himpunan kelipatan adalah kelipatan dari ; jika salah satu bilangan nol, hitung irisan itu secara langsung.   Cakupan diberikan oleh . Selain itu, untuk , sedangkan jika salah satunya nol, irisan tersebut adalah . Jadi syarat basis terpenuhi.   Pertama, setiap bilangan bulat berada dalam suatu anggota , karena . Sekarang ambil dan . Jika atau , maka irisan keduanya adalah , kecuali kedua-duanya nol yang memberi hasil sama. Jika keduanya tidak nol, tanda tidak berpengaruh dan aritmetika pembagi memberi Jadi irisan itu sendiri merupakan anggota . Khususnya, untuk setiap di irisan, anggota basis tersebut menjadi dengan . Kedua syarat basis terpenuhi, sehingga membangkitkan topologi pada .   Bilangan bulat positif tidak terbuka   Jangkar sumber:  ex_aZ_top , tugas kedua. Dalam ruang dari panduan sebelumnya, tentukan apakah terbuka. Rubrik. Jika tidak terbuka, pilih satu titik di dalamnya dan buktikan bahwa tidak ada anggota basis yang mengelilingi titik itu dan tetap berada di dalam .   Setiap anggota basis yang memuat bilangan positif juga memuat dan . Bandingkan hal itu dengan syarat keterbukaan melalui basis.   Tidak. Himpunan tidak terbuka dalam .   Ambil, misalnya, . Setiap anggota basis berbentuk yang memuat harus memiliki , sebab membagi . Maka anggota itu adalah seluruh , yang jelas tidak terkandung dalam . Bahkan secara umum, jika dan , maka , sehingga tidak mungkin menjadi subhimpunan . Kriteria keterbukaan melalui basis gagal pada setiap titik positif; jadi tidak terbuka.   Bilangan bulat ganjil tidak terbuka   Jangkar sumber:  ex_aZ_top , tugas ketiga. Tentukan apakah himpunan semua bilangan bulat ganjil terbuka dalam . Rubrik. Berikan argumen basis pada satu titik ganjil, bukan hanya menunjukkan bahwa himpunan tersebut bukan anggota basis.   Setiap himpunan memuat . Apa yang terjadi jika anggota basis itu memuat suatu bilangan ganjil tetapi harus tetap berada di dalam himpunan ganjil?   Tidak. Himpunan bilangan ganjil tidak terbuka karena setiap lingkungan basis dari titik ganjil juga memuat bilangan genap .   Misalkan adalah himpunan bilangan ganjil dan ambil . Jika adalah anggota basis yang memuat , maka karena . Akan tetapi bukan bilangan ganjil, sehingga . Tidak ada lingkungan basis yang memenuhi syarat keterbukaan di . Maka tidak terbuka.   Satu himpunan terbuka dengan ekor kelipatan   Jangkar sumber:  ex_aZ_top , tugas keempat. Tentukan apakah terbuka dalam . Rubrik. Untuk jawaban positif, tuliskan O sebagai gabungan anggota basis; untuk jawaban negatif, tunjukkan titik yang gagal.   Untuk titik gunakan . Untuk titik dengan , coba gunakan sendiri dan periksa besar setiap kelipatan tak nolnya.   Ya. Berlaku sehingga terbuka.   Himpunan adalah anggota basis. Jika memenuhi , maka . Setiap elemen tak nol dari berbentuk dengan , sehingga ; elemen nolnya adalah . Karena itu . Sebaliknya, setiap elemen O termasuk salah satu himpunan dalam gabungan di atas. Jadi persamaan gabungan tersebut benar, dan karena setiap suku adalah anggota basis, terbuka.   Basis dari kelas-kelas residu   Jangkar sumber: latihan koset setelah ex_aZ_top , tugas pembuktian pertama. Untuk dengan , tetapkan . Buktikan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Tunjukkan cakupan dan konstruksi anggota basis yang berada di dalam setiap irisan yang relevan.   Cakupan dapat memakai . Jika , pertimbangkan dan tuliskan bentuk umum elemennya.   Untuk titik di irisan dua anggota basis, dan memuat . Bersama , ini membuktikan kedua aksioma basis.   Karena , setiap bilangan bulat tercakup oleh anggota . Sekarang ambil , , dan . Untuk setiap , ada dengan . Karena , ada sehingga . Maka Dengan cara yang sama, dari diperoleh Jadi . Selain itu, dan . Syarat irisan basis terpenuhi, sehingga adalah basis.   Fungsi yang menukar pasangan berurutan   Jangkar sumber: latihan koset, sublatihan yang mendefinisikan . Misalkan diberikan oleh . Buktikan bahwa bijektif. Rubrik. Berikan argumen injektif dan surjektif, atau buktikan secara sah bahwa adalah involusi.   Hitung rumus terpisah untuk genap dan ganjil. Perhatikan pasangan .   Jika genap, ; jika ganjil, . Karena itu untuk setiap , sehingga adalah bijeksi.   Untuk , berlaku . Untuk , berlaku . Jadi menukar kedua anggota setiap pasangan . Menerapkan dua kali mengembalikan setiap bilangan: Jika , terapkan pada kedua ruas untuk mendapatkan , jadi injektif. Untuk setiap , ambil ; maka , jadi surjektif. Dengan demikian bijektif dan sekaligus memenuhi .   Citra himpunan terbuka di bawah f   Jangkar sumber: latihan koset, sublatihan citra. Dengan topologi yang dibangkitkan oleh , tentukan apakah terbuka setiap kali terbuka, untuk . Rubrik. Cukup memeriksa citra setiap anggota basis, tetapi kasus genap dan ganjil harus dibedakan dan ditulis eksplisit.   Jika genap, semua memiliki paritas yang sama. Jika ganjil, pisahkan dan ; masing-masing bagian akan menjadi kelas residu dengan langkah .   Ya. Citra setiap adalah satu atau dua anggota basis (digabungkan), sehingga citra gabungan terbuka juga terbuka.   Tetapkan . Jika genap, maka selalu berparitas , sehingga Jika ganjil, untuk diperoleh , sedangkan untuk (yang paritasnya berlawanan) diperoleh . Oleh karena itu Semua himpunan di ruas kanan merupakan anggota basis , jadi citra setiap anggota basis terbuka. Setiap himpunan terbuka adalah gabungan anggota basis; karena citra menghormati gabungan, merupakan gabungan himpunan terbuka. Jadi terbuka.   Prapeta himpunan terbuka di bawah f   Jangkar sumber: latihan koset, sublatihan prapeta. Untuk , tentukan apakah terbuka setiap kali terbuka dalam . Rubrik. Nyatakan prapeta f secara tepat dan hubungkan kesimpulan dengan hasil tentang citra pada panduan sebelumnya.   Dari panduan bijektivitas, . Jadi prapeta sama dengan citra di bawah fungsi yang sama.   Ya. Karena involutif, berlaku ; panduan citra menunjukkan himpunan ini terbuka.   Kita telah membuktikan bahwa untuk setiap . Jadi fungsi inversnya adalah fungsi itu sendiri: . Ambil terbuka. Maka Pada panduan sebelumnya, citra setiap himpunan terbuka di bawah dibuktikan terbuka dengan memeriksa citra anggota basis. Karena itu terbuka. Bahkan, adalah homeomorfisme involutif untuk topologi ini.   "
+},
+{
+  "id": "o003-c90-ch12-exer-a-01",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-01",
+  "type": "Pemeriksaan",
+  "number": "L.32",
+  "title": "Semua gabungan koleksi pembangkit.",
+  "body": "Semua gabungan koleksi pembangkit   Jangkar sumber: latihan tanpa ID pada awal sec_top_space_exer.ptx , tugas pertama. Untuk dan , tentukan koleksi semua gabungan subkoleksi dari . Gabungan subkoleksi kosong juga harus diperhitungkan. Rubrik. Daftar harus memuat setiap hasil yang berbeda tepat satu kali dan tidak boleh memasukkan himpunan yang tidak dapat diperoleh.   Beri nama keempat anggota , lalu mulai dari gabungan kosong dan gabungan satu anggota. Setelah itu periksa kapan dua anggota menghubungkan , , dan menjadi seluruh .   Koleksinya adalah .   Tuliskan , , , dan . Gabungan kosong menghasilkan . Gabungan satu anggota menghasilkan . Gabungan menghasilkan . Setiap gabungan yang memuat dan , atau yang memuat salah satu dari keduanya bersama anggota yang melengkapi titik yang hilang, menghasilkan . Tidak ada hasil lain: setiap gabungan adalah subhimpunan , dan pemeriksaan seluruh pola keanggotaan hanya menghasilkan tujuh himpunan yang tercantum.  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-02",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-02",
+  "type": "Pemeriksaan",
+  "number": "L.33",
+  "title": "Mengapa koleksi gabungan itu bukan topologi.",
+  "body": "Mengapa koleksi gabungan itu bukan topologi   Jangkar sumber: latihan pembuka pada sec_top_space_exer.ptx , tugas kedua. Dengan , jelaskan mengapa koleksi semua gabungan anggota , setelah ditambah himpunan kosong, bukan topologi pada . Sebutkan aksioma basis yang gagal. Rubrik. Berikan satu irisan eksplisit dan hubungkan kegagalan itu dengan syarat perpotongan basis, bukan hanya dengan pernyataan bahwa daftar tersebut \"kurang\".   Bandingkan dua anggota basis dan . Titik berada di irisan keduanya. Tanyakan apakah ada anggota yang memuat dan sekaligus terkandung dalam irisan tersebut.   Koleksi itu bukan topologi karena tidak termasuk koleksi semua gabungan tersebut. Syarat perpotongan basis gagal pada titik .   Jika adalah semua gabungan subkoleksi dari , maka dan sendiri berada di . Namun Himpunan tidak dapat ditulis sebagai gabungan anggota : setiap anggota yang memuat juga memuat atau . Maka tidak tertutup terhadap irisan berhingga dan bukan topologi.  Dilihat langsung dari dua aksioma basis, masalahnya adalah: untuk , , dan , tidak ada dengan . Jadi syarat perpotongan basis memang gagal, persis pada titik .  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-03",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-03",
+  "type": "Pemeriksaan",
+  "number": "L.34",
+  "title": "Basis kelipatan bilangan bulat.",
+  "body": "Basis kelipatan bilangan bulat   Jangkar sumber:  ex_aZ_top , tugas pertama. Untuk setiap , tetapkan . Buktikan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Verifikasi cakupan dan syarat irisan basis, termasuk kasus dan tanda negatif.   Gunakan . Untuk , irisan dua himpunan kelipatan adalah kelipatan dari ; jika salah satu bilangan nol, hitung irisan itu secara langsung.   Cakupan diberikan oleh . Selain itu, untuk , sedangkan jika salah satunya nol, irisan tersebut adalah . Jadi syarat basis terpenuhi.   Pertama, setiap bilangan bulat berada dalam suatu anggota , karena . Sekarang ambil dan . Jika atau , maka irisan keduanya adalah , kecuali kedua-duanya nol yang memberi hasil sama. Jika keduanya tidak nol, tanda tidak berpengaruh dan aritmetika pembagi memberi Jadi irisan itu sendiri merupakan anggota . Khususnya, untuk setiap di irisan, anggota basis tersebut menjadi dengan . Kedua syarat basis terpenuhi, sehingga membangkitkan topologi pada .  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-04",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-04",
+  "type": "Pemeriksaan",
+  "number": "L.35",
+  "title": "Bilangan bulat positif tidak terbuka.",
+  "body": "Bilangan bulat positif tidak terbuka   Jangkar sumber:  ex_aZ_top , tugas kedua. Dalam ruang dari panduan sebelumnya, tentukan apakah terbuka. Rubrik. Jika tidak terbuka, pilih satu titik di dalamnya dan buktikan bahwa tidak ada anggota basis yang mengelilingi titik itu dan tetap berada di dalam .   Setiap anggota basis yang memuat bilangan positif juga memuat dan . Bandingkan hal itu dengan syarat keterbukaan melalui basis.   Tidak. Himpunan tidak terbuka dalam .   Ambil, misalnya, . Setiap anggota basis berbentuk yang memuat harus memiliki , sebab membagi . Maka anggota itu adalah seluruh , yang jelas tidak terkandung dalam . Bahkan secara umum, jika dan , maka , sehingga tidak mungkin menjadi subhimpunan . Kriteria keterbukaan melalui basis gagal pada setiap titik positif; jadi tidak terbuka.  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-05",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-05",
+  "type": "Pemeriksaan",
+  "number": "L.36",
+  "title": "Bilangan bulat ganjil tidak terbuka.",
+  "body": "Bilangan bulat ganjil tidak terbuka   Jangkar sumber:  ex_aZ_top , tugas ketiga. Tentukan apakah himpunan semua bilangan bulat ganjil terbuka dalam . Rubrik. Berikan argumen basis pada satu titik ganjil, bukan hanya menunjukkan bahwa himpunan tersebut bukan anggota basis.   Setiap himpunan memuat . Apa yang terjadi jika anggota basis itu memuat suatu bilangan ganjil tetapi harus tetap berada di dalam himpunan ganjil?   Tidak. Himpunan bilangan ganjil tidak terbuka karena setiap lingkungan basis dari titik ganjil juga memuat bilangan genap .   Misalkan adalah himpunan bilangan ganjil dan ambil . Jika adalah anggota basis yang memuat , maka karena . Akan tetapi bukan bilangan ganjil, sehingga . Tidak ada lingkungan basis yang memenuhi syarat keterbukaan di . Maka tidak terbuka.  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-06",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-06",
+  "type": "Pemeriksaan",
+  "number": "L.37",
+  "title": "Satu himpunan terbuka dengan ekor kelipatan.",
+  "body": "Satu himpunan terbuka dengan ekor kelipatan   Jangkar sumber:  ex_aZ_top , tugas keempat. Tentukan apakah terbuka dalam . Rubrik. Untuk jawaban positif, tuliskan O sebagai gabungan anggota basis; untuk jawaban negatif, tunjukkan titik yang gagal.   Untuk titik gunakan . Untuk titik dengan , coba gunakan sendiri dan periksa besar setiap kelipatan tak nolnya.   Ya. Berlaku sehingga terbuka.   Himpunan adalah anggota basis. Jika memenuhi , maka . Setiap elemen tak nol dari berbentuk dengan , sehingga ; elemen nolnya adalah . Karena itu . Sebaliknya, setiap elemen O termasuk salah satu himpunan dalam gabungan di atas. Jadi persamaan gabungan tersebut benar, dan karena setiap suku adalah anggota basis, terbuka.  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-07",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-07",
+  "type": "Pemeriksaan",
+  "number": "L.38",
+  "title": "Basis dari kelas-kelas residu.",
+  "body": "Basis dari kelas-kelas residu   Jangkar sumber: latihan koset setelah ex_aZ_top , tugas pembuktian pertama. Untuk dengan , tetapkan . Buktikan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Tunjukkan cakupan dan konstruksi anggota basis yang berada di dalam setiap irisan yang relevan.   Cakupan dapat memakai . Jika , pertimbangkan dan tuliskan bentuk umum elemennya.   Untuk titik di irisan dua anggota basis, dan memuat . Bersama , ini membuktikan kedua aksioma basis.   Karena , setiap bilangan bulat tercakup oleh anggota . Sekarang ambil , , dan . Untuk setiap , ada dengan . Karena , ada sehingga . Maka Dengan cara yang sama, dari diperoleh Jadi . Selain itu, dan . Syarat irisan basis terpenuhi, sehingga adalah basis.  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-08",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-08",
+  "type": "Pemeriksaan",
+  "number": "L.39",
+  "title": "Fungsi yang menukar pasangan berurutan.",
+  "body": "Fungsi yang menukar pasangan berurutan   Jangkar sumber: latihan koset, sublatihan yang mendefinisikan . Misalkan diberikan oleh . Buktikan bahwa bijektif. Rubrik. Berikan argumen injektif dan surjektif, atau buktikan secara sah bahwa adalah involusi.   Hitung rumus terpisah untuk genap dan ganjil. Perhatikan pasangan .   Jika genap, ; jika ganjil, . Karena itu untuk setiap , sehingga adalah bijeksi.   Untuk , berlaku . Untuk , berlaku . Jadi menukar kedua anggota setiap pasangan . Menerapkan dua kali mengembalikan setiap bilangan: Jika , terapkan pada kedua ruas untuk mendapatkan , jadi injektif. Untuk setiap , ambil ; maka , jadi surjektif. Dengan demikian bijektif dan sekaligus memenuhi .  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-09",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-09",
+  "type": "Pemeriksaan",
+  "number": "L.40",
+  "title": "Citra himpunan terbuka di bawah f.",
+  "body": "Citra himpunan terbuka di bawah f   Jangkar sumber: latihan koset, sublatihan citra. Dengan topologi yang dibangkitkan oleh , tentukan apakah terbuka setiap kali terbuka, untuk . Rubrik. Cukup memeriksa citra setiap anggota basis, tetapi kasus genap dan ganjil harus dibedakan dan ditulis eksplisit.   Jika genap, semua memiliki paritas yang sama. Jika ganjil, pisahkan dan ; masing-masing bagian akan menjadi kelas residu dengan langkah .   Ya. Citra setiap adalah satu atau dua anggota basis (digabungkan), sehingga citra gabungan terbuka juga terbuka.   Tetapkan . Jika genap, maka selalu berparitas , sehingga Jika ganjil, untuk diperoleh , sedangkan untuk (yang paritasnya berlawanan) diperoleh . Oleh karena itu Semua himpunan di ruas kanan merupakan anggota basis , jadi citra setiap anggota basis terbuka. Setiap himpunan terbuka adalah gabungan anggota basis; karena citra menghormati gabungan, merupakan gabungan himpunan terbuka. Jadi terbuka.  "
+},
+{
+  "id": "o003-c90-ch12-exer-a-10",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-a.html#o003-c90-ch12-exer-a-10",
+  "type": "Pemeriksaan",
+  "number": "L.41",
+  "title": "Prapeta himpunan terbuka di bawah f.",
+  "body": "Prapeta himpunan terbuka di bawah f   Jangkar sumber: latihan koset, sublatihan prapeta. Untuk , tentukan apakah terbuka setiap kali terbuka dalam . Rubrik. Nyatakan prapeta f secara tepat dan hubungkan kesimpulan dengan hasil tentang citra pada panduan sebelumnya.   Dari panduan bijektivitas, . Jadi prapeta sama dengan citra di bawah fungsi yang sama.   Ya. Karena involutif, berlaku ; panduan citra menunjukkan himpunan ini terbuka.   Kita telah membuktikan bahwa untuk setiap . Jadi fungsi inversnya adalah fungsi itu sendiri: . Ambil terbuka. Maka Pada panduan sebelumnya, citra setiap himpunan terbuka di bawah dibuktikan terbuka dengan memeriksa citra anggota basis. Karena itu terbuka. Bahkan, adalah homeomorfisme involutif untuk topologi ini.  "
+},
+{
+  "id": "o003-c90-ch12-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch12-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian kedua",
+  "body": " Panduan latihan sumber, bagian kedua  Sepuluh panduan berikut meneruskan urutan tugas dalam sec_top_space_exer.ptx tepat setelah panduan o003-c90-ch12-exer-a-10 : dua tugas tentang basis interval berpusat di nol, lima tugas tentang kekasaran topologi pada tiga titik, lalu tiga tugas pertama tentang basis minimal ruang hingga. Setiap panduan adalah komponen pendamping asli berbahasa Indonesia yang diterbitkan di bawah CC BY 4.0; isinya bukan teks, terjemahan resmi, atau jawaban resmi GVSU, melainkan penjelasan baru untuk belajar mandiri.  Basis interval berpusat di nol   Jangkar sumber: latihan berjudul ex_coarse_topology_example , tugas pertama (baris sumber 126--138). Misalkan . Tunjukkan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Periksa cakupan dan syarat irisan basis untuk dua interval, termasuk pilihan anggota basis yang memuat setiap titik irisan. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Untuk , pilih radius positif yang lebih besar daripada .   Tahap 2. Tulis irisan dua anggota sebagai interval dengan radius yang lebih kecil.   Tahap 3. Gunakan interval irisan itu sendiri sebagai anggota basis ketiga untuk setiap titik di dalam irisan.   Ya. Setiap berada dalam , dan kembali merupakan anggota . Jadi memenuhi kedua aksioma basis.   Ambil sembarang . Dengan , berlaku , sehingga . Ini membuktikan bahwa gabungan anggota basis mencakup seluruh .  Selanjutnya, misalkan dan dengan , dan ambil . Jika , maka Interval ini adalah anggota , memuat , dan terkandung dalam (bahkan sama dengannya). Kedua syarat basis terpenuhi, sehingga membangkitkan topologi pada .   Interval Euklides yang tidak terbuka   Jangkar sumber:  ex_coarse_topology_example , tugas kedua (baris sumber 139--148). Setiap anggota basis terbuka dalam topologi Euklides . Tunjukkan bahwa ada interval yang terbuka dalam tetapi bukan himpunan terbuka dalam topologi yang dibangkitkan . Rubrik. Berikan interval konkret dan alasan yang berlaku untuk semua gabungan anggota basis. Ini adalah panduan orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Perhatikan bahwa setiap interval basis memuat titik .   Tahap 2. Maka setiap gabungan basis yang tidak kosong juga memuat .   Tahap 3. Pilih interval Euklides tak kosong yang seluruhnya berada di sisi kanan .   Contohnya adalah . Interval ini terbuka dalam topologi Euklides, tetapi bukan terbuka dalam karena tidak memuat , sedangkan setiap himpunan -terbuka yang tidak kosong memuat .   Untuk setiap , interval adalah interval terbuka Euklides, sehingga semua anggota memang terbuka dalam . Setiap himpunan terbuka dalam merupakan gabungan anggota . Bila gabungan itu tidak kosong, pilih salah satu sukunya; suku tersebut memuat , sehingga gabungannya juga memuat .  Interval terbuka untuk metrik Euklides, tetapi . Karena itu interval tersebut tidak mungkin merupakan gabungan tak kosong anggota , dan jelas bukan gabungan kosong. Jadi , yang membuktikan bahwa berbeda (lebih kasar) dari topologi Euklides.   Topologi paling lemah   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, tugas pertama (baris sumber 178--184). Apa topologi paling lemah pada suatu himpunan ? Jelaskan urutan inklusi yang dimaksud. Panduan ini merupakan materi pendamping baru berlisensi CC BY 4.0, bukan jawaban atau terjemahan resmi GVSU.    Tahap 1. Ingat dua himpunan yang wajib ada dalam setiap topologi pada .   Tahap 2. Bentuk koleksi yang hanya memuat dua himpunan wajib itu, lalu cek tiga aksioma topologi.   Topologi paling lemah adalah topologi indiskret . Ia merupakan subkoleksi dari setiap topologi pada .   Aksioma topologi mengharuskan dan menjadi terbuka. Koleksi tertutup terhadap gabungan sebarang (gabungan yang tidak kosong adalah ) dan irisan berhingga, sehingga memang merupakan topologi. Jika topologi apa pun pada , kedua himpunan tersebut berada di ; maka . Dalam urutan berdasarkan inklusi koleksi terbuka, inilah topologi paling lemah, yang juga disebut topologi indiskret atau trivial.   Topologi paling kuat   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, tugas kedua (baris sumber 185--191). Apa topologi paling kuat pada suatu himpunan ? Nyatakan semua himpunan terbukanya. Ini adalah panduan pendamping asli CC BY 4.0 untuk latihan sumber, bukan materi resmi GVSU.    Tahap 1. Tidak ada topologi pada yang dapat memuat himpunan di luar .   Tahap 2. Periksa bahwa koleksi semua subhimpunan sendiri memenuhi penutupan gabungan dan irisan.   Topologi paling kuat adalah topologi diskret , yaitu koleksi semua subhimpunan .   Koleksi memuat dan , setiap gabungan sebarang subkoleksi anggotanya masih merupakan subhimpunan , dan setiap irisan berhingga juga demikian. Jadi adalah topologi, disebut topologi diskret. Untuk topologi apa pun pada , setiap anggota sudah merupakan subhimpunan , sehingga . Oleh karena itu tidak ada topologi yang lebih kuat daripada topologi diskret.   Topologi maksimal yang bukan diskret   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, tugas yang menampilkan pada (baris sumber 192--210). Verifikasi bahwa adalah topologi dan bahwa menambahkan salah satu himpunan yang hilang langsung menghasilkan topologi diskret. Panduan ini adalah penjelasan orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Dari enam anggota , cek gabungan dan irisan pasangan yang berpotensi baru, khususnya dan .   Tahap 2. Karena memiliki delapan himpunan, identifikasi dua subhimpunan yang belum ada.   Tahap 3. Jika salah satu dari dua himpunan itu ditambahkan, gunakan gabungan atau irisan dengan anggota yang sudah ada untuk memperoleh yang lain dan semua singleton.    adalah topologi. Subhimpunan yang hilang hanyalah dan ; menambahkan salah satunya memaksa keduanya, sehingga diperoleh , topologi diskret.   Koleksi memuat dan . Gabungan dua anggota nontrivial hanya memberi anggota yang sudah tercantum atau ; misalnya , , dan . Irisan pasangan juga tetap di dalam ; contoh yang menentukan adalah dan . Karena koleksi berhingga, pemeriksaan pasangan ini menjamin penutupan gabungan sebarang dan irisan berhingga. Jadi merupakan topologi.  Delapan subhimpunan adalah ; yang belum ada di ialah dan . Jika ditambahkan, gabungan dengan memberi . Jika yang ditambahkan, irisan dengan memberi . Setelah tersedia, gabungan dengan singleton dan menghasilkan semua subhimpunan yang belum tercantum. Maka setiap topologi yang memuat secara ketat adalah , sehingga maksimal di antara topologi-topologi non-diskret.   Adakah topologi maksimal non-diskret?   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, pertanyaan eksistensi pertama (baris sumber 211--219). Untuk , apakah ada topologi yang bukan diskret tetapi tidak memiliki topologi yang lebih kuat selain topologi diskret? Jawab dengan contoh dan pembuktian. Ini panduan pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.    Tahap 1. Mulai dengan koleksi enam himpunan yang hanya kehilangan dan dari .   Tahap 2. Verifikasi koleksi itu topologi dan bukan diskret.   Tahap 3. Setiap perluasan ketat harus menambahkan salah satu dari dua himpunan yang hilang; tunjukkan bahwa penambahan itu memaksa seluruh .   Ada. Contoh bukan diskret, dan setiap topologi yang lebih kuat daripadanya adalah .   Koleksi yang dipilih adalah topologi karena gabungan dan irisan anggotanya tetap berada di dalam koleksi (contoh kuncinya dan ). Koleksi itu bukan diskret sebab tidak terbuka.  Misalkan topologi dengan . Karena hanya dua subhimpunan yang tidak berada di , yaitu dan , koleksi memuat salah satunya. Jika memuat , gabungan dengan memberi ; jika memuat , irisan dengan memberi . Dengan kedua himpunan itu, semua delapan subhimpunan terbuka. Jadi , membuktikan eksistensi topologi maksimal non-diskret tersebut.   Topologi minimal non-indiskret   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, pertanyaan eksistensi kedua (baris sumber 220--228). Untuk , apakah ada topologi yang bukan indiskret tetapi tidak memiliki topologi yang lebih lemah selain topologi indiskret? Berikan contoh. Penjelasan ini merupakan materi orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Agar topologi tidak indiskret, tambahkan tepat satu subhimpunan tak kosong dan bukan ke .   Tahap 2. Cek bahwa koleksi tiga himpunan itu tetap tertutup terhadap gabungan dan irisan.   Tahap 3. Setiap subtopologi yang lebih lemah harus menghapus satu-satunya himpunan tambahan tersebut.   Ada, misalnya . Topologi ini bukan indiskret, sedangkan satu-satunya topologi yang benar-benar lebih lemah darinya adalah .   Koleksi memuat dua himpunan wajib. Gabungan dua anggota mana pun dan irisan berhingga dua anggota tetap menghasilkan salah satu dari tiga himpunan itu, jadi adalah topologi. Karena terbuka, topologi ini bukan topologi indiskret.  Jika juga topologi pada , maka harus tetap memuat dan . Satu-satunya anggota yang dapat dihilangkan adalah , sehingga . Jadi tidak ada topologi yang lebih lemah selain topologi indiskret, sesuai yang diminta.   Keterbukaan himpunan lingkungan minimal   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas pertama (baris sumber 230--247). Misalkan berhingga, topologi pada , dan untuk setiap tetapkan sebagai irisan semua himpunan terbuka yang memuat . Jelaskan mengapa terbuka. Panduan ini adalah komponen pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.    Tahap 1. Keluarga himpunan terbuka yang memuat tidak kosong karena memuat .   Tahap 2. Gunakan bahwa berhingga untuk menyimpulkan bahwa juga berhingga.   Tahap 3. Irisan yang semula tampak tak berhingga sebenarnya adalah irisan berhingga, lalu pakai aksioma topologi.    terbuka karena hanya merupakan irisan berhingga dari himpunan-himpunan terbuka dalam yang memuat .   Definisikan . Keluarga ini tidak kosong sebab . Karena berhingga, himpunan kuasanya berhingga; akibatnya juga berhingga, katakanlah . Maka Aksioma topologi menyatakan irisan berhingga himpunan terbuka terbuka, sehingga . (Keluarga ini selalu memuat setidaknya satu anggota, jadi tidak perlu memakai konvensi irisan kosong.)   Basis minimal dari lingkungan terkecil   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas kedua (baris sumber 248--254). Dengan seperti pada panduan sebelumnya, misalkan . Tunjukkan bahwa merupakan basis untuk . Ini materi pendamping orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Untuk cakupan, periksa langsung bahwa .   Tahap 2. Jika , ingat bahwa dan adalah himpunan terbuka yang memuat .   Tahap 3. Definisi lalu memberi inklusi yang diperlukan untuk syarat irisan basis.   Setiap berada dalam . Jika , maka . Jadi memenuhi cakupan dan syarat irisan basis. Lebih jauh, untuk setiap berlaku , sehingga basis ini menghasilkan tepat topologi .   Dari panduan sebelumnya, setiap terbuka. Selain itu, termasuk dalam setiap himpunan yang diiris dalam definisi , sehingga ; keluarga mencakup .  Ambil dua anggota basis dan titik . Kedua himpunan tersebut terbuka dan memuat . Karena adalah irisan semua himpunan terbuka yang memuat , ia terkandung dalam masing-masingnya: Dengan demikian syarat irisan basis terpenuhi. Untuk memastikan bahwa topologi yang dibangkitkan tepat , ambil . Setiap memiliki sebagai salah satu lingkungan terbuka dalam irisan definisi , sehingga . Sebaliknya , maka Jadi setiap himpunan terbuka dalam merupakan gabungan anggota ; bersama keterbukaan setiap , ini membuktikan bahwa adalah basis untuk .   Minimalitas basis hingga   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas ketiga (baris sumber 255--261). Tunjukkan bahwa jika merupakan basis untuk , maka , dengan . Panduan pembuktian ini adalah karya pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.    Tahap 1. Untuk setiap , karena terbuka, pilih dengan .   Tahap 2. Definisi sebagai irisan semua lingkungan terbuka memuat inklusi balik .   Tahap 3. Kedua inklusi memaksa ; lakukan ini untuk semua .   Untuk setiap ada dengan . Karena juga terbuka dan memuat , berlaku . Jadi , dan .   Ambil sembarang . Hasil panduan sebelumnya memberi . Karena adalah basis untuk , setiap himpunan terbuka adalah gabungan anggota basis; khususnya ada sedemikian sehingga .  Namun sendiri merupakan himpunan terbuka yang memuat . Dalam irisan definisi , salah satu faktor adalah ; karenanya . Bersama inklusi sebelumnya diperoleh , sehingga . Karena sebarang, semua anggota berada dalam , seperti yang harus dibuktikan.   "
+},
+{
+  "id": "o003-c90-ch12-exer-b-01",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-01",
+  "type": "Pemeriksaan",
+  "number": "L.42",
+  "title": "Basis interval berpusat di nol.",
+  "body": "Basis interval berpusat di nol   Jangkar sumber: latihan berjudul ex_coarse_topology_example , tugas pertama (baris sumber 126--138). Misalkan . Tunjukkan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Periksa cakupan dan syarat irisan basis untuk dua interval, termasuk pilihan anggota basis yang memuat setiap titik irisan. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Untuk , pilih radius positif yang lebih besar daripada .   Tahap 2. Tulis irisan dua anggota sebagai interval dengan radius yang lebih kecil.   Tahap 3. Gunakan interval irisan itu sendiri sebagai anggota basis ketiga untuk setiap titik di dalam irisan.   Ya. Setiap berada dalam , dan kembali merupakan anggota . Jadi memenuhi kedua aksioma basis.   Ambil sembarang . Dengan , berlaku , sehingga . Ini membuktikan bahwa gabungan anggota basis mencakup seluruh .  Selanjutnya, misalkan dan dengan , dan ambil . Jika , maka Interval ini adalah anggota , memuat , dan terkandung dalam (bahkan sama dengannya). Kedua syarat basis terpenuhi, sehingga membangkitkan topologi pada .  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-02",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-02",
+  "type": "Pemeriksaan",
+  "number": "L.43",
+  "title": "Interval Euklides yang tidak terbuka.",
+  "body": "Interval Euklides yang tidak terbuka   Jangkar sumber:  ex_coarse_topology_example , tugas kedua (baris sumber 139--148). Setiap anggota basis terbuka dalam topologi Euklides . Tunjukkan bahwa ada interval yang terbuka dalam tetapi bukan himpunan terbuka dalam topologi yang dibangkitkan . Rubrik. Berikan interval konkret dan alasan yang berlaku untuk semua gabungan anggota basis. Ini adalah panduan orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Perhatikan bahwa setiap interval basis memuat titik .   Tahap 2. Maka setiap gabungan basis yang tidak kosong juga memuat .   Tahap 3. Pilih interval Euklides tak kosong yang seluruhnya berada di sisi kanan .   Contohnya adalah . Interval ini terbuka dalam topologi Euklides, tetapi bukan terbuka dalam karena tidak memuat , sedangkan setiap himpunan -terbuka yang tidak kosong memuat .   Untuk setiap , interval adalah interval terbuka Euklides, sehingga semua anggota memang terbuka dalam . Setiap himpunan terbuka dalam merupakan gabungan anggota . Bila gabungan itu tidak kosong, pilih salah satu sukunya; suku tersebut memuat , sehingga gabungannya juga memuat .  Interval terbuka untuk metrik Euklides, tetapi . Karena itu interval tersebut tidak mungkin merupakan gabungan tak kosong anggota , dan jelas bukan gabungan kosong. Jadi , yang membuktikan bahwa berbeda (lebih kasar) dari topologi Euklides.  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-03",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-03",
+  "type": "Pemeriksaan",
+  "number": "L.44",
+  "title": "Topologi paling lemah.",
+  "body": "Topologi paling lemah   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, tugas pertama (baris sumber 178--184). Apa topologi paling lemah pada suatu himpunan ? Jelaskan urutan inklusi yang dimaksud. Panduan ini merupakan materi pendamping baru berlisensi CC BY 4.0, bukan jawaban atau terjemahan resmi GVSU.    Tahap 1. Ingat dua himpunan yang wajib ada dalam setiap topologi pada .   Tahap 2. Bentuk koleksi yang hanya memuat dua himpunan wajib itu, lalu cek tiga aksioma topologi.   Topologi paling lemah adalah topologi indiskret . Ia merupakan subkoleksi dari setiap topologi pada .   Aksioma topologi mengharuskan dan menjadi terbuka. Koleksi tertutup terhadap gabungan sebarang (gabungan yang tidak kosong adalah ) dan irisan berhingga, sehingga memang merupakan topologi. Jika topologi apa pun pada , kedua himpunan tersebut berada di ; maka . Dalam urutan berdasarkan inklusi koleksi terbuka, inilah topologi paling lemah, yang juga disebut topologi indiskret atau trivial.  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-04",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-04",
+  "type": "Pemeriksaan",
+  "number": "L.45",
+  "title": "Topologi paling kuat.",
+  "body": "Topologi paling kuat   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, tugas kedua (baris sumber 185--191). Apa topologi paling kuat pada suatu himpunan ? Nyatakan semua himpunan terbukanya. Ini adalah panduan pendamping asli CC BY 4.0 untuk latihan sumber, bukan materi resmi GVSU.    Tahap 1. Tidak ada topologi pada yang dapat memuat himpunan di luar .   Tahap 2. Periksa bahwa koleksi semua subhimpunan sendiri memenuhi penutupan gabungan dan irisan.   Topologi paling kuat adalah topologi diskret , yaitu koleksi semua subhimpunan .   Koleksi memuat dan , setiap gabungan sebarang subkoleksi anggotanya masih merupakan subhimpunan , dan setiap irisan berhingga juga demikian. Jadi adalah topologi, disebut topologi diskret. Untuk topologi apa pun pada , setiap anggota sudah merupakan subhimpunan , sehingga . Oleh karena itu tidak ada topologi yang lebih kuat daripada topologi diskret.  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-05",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-05",
+  "type": "Pemeriksaan",
+  "number": "L.46",
+  "title": "Topologi maksimal yang bukan diskret.",
+  "body": "Topologi maksimal yang bukan diskret   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, tugas yang menampilkan pada (baris sumber 192--210). Verifikasi bahwa adalah topologi dan bahwa menambahkan salah satu himpunan yang hilang langsung menghasilkan topologi diskret. Panduan ini adalah penjelasan orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Dari enam anggota , cek gabungan dan irisan pasangan yang berpotensi baru, khususnya dan .   Tahap 2. Karena memiliki delapan himpunan, identifikasi dua subhimpunan yang belum ada.   Tahap 3. Jika salah satu dari dua himpunan itu ditambahkan, gunakan gabungan atau irisan dengan anggota yang sudah ada untuk memperoleh yang lain dan semua singleton.    adalah topologi. Subhimpunan yang hilang hanyalah dan ; menambahkan salah satunya memaksa keduanya, sehingga diperoleh , topologi diskret.   Koleksi memuat dan . Gabungan dua anggota nontrivial hanya memberi anggota yang sudah tercantum atau ; misalnya , , dan . Irisan pasangan juga tetap di dalam ; contoh yang menentukan adalah dan . Karena koleksi berhingga, pemeriksaan pasangan ini menjamin penutupan gabungan sebarang dan irisan berhingga. Jadi merupakan topologi.  Delapan subhimpunan adalah ; yang belum ada di ialah dan . Jika ditambahkan, gabungan dengan memberi . Jika yang ditambahkan, irisan dengan memberi . Setelah tersedia, gabungan dengan singleton dan menghasilkan semua subhimpunan yang belum tercantum. Maka setiap topologi yang memuat secara ketat adalah , sehingga maksimal di antara topologi-topologi non-diskret.  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-06",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-06",
+  "type": "Pemeriksaan",
+  "number": "L.47",
+  "title": "Adakah topologi maksimal non-diskret?",
+  "body": "Adakah topologi maksimal non-diskret?   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, pertanyaan eksistensi pertama (baris sumber 211--219). Untuk , apakah ada topologi yang bukan diskret tetapi tidak memiliki topologi yang lebih kuat selain topologi diskret? Jawab dengan contoh dan pembuktian. Ini panduan pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.    Tahap 1. Mulai dengan koleksi enam himpunan yang hanya kehilangan dan dari .   Tahap 2. Verifikasi koleksi itu topologi dan bukan diskret.   Tahap 3. Setiap perluasan ketat harus menambahkan salah satu dari dua himpunan yang hilang; tunjukkan bahwa penambahan itu memaksa seluruh .   Ada. Contoh bukan diskret, dan setiap topologi yang lebih kuat daripadanya adalah .   Koleksi yang dipilih adalah topologi karena gabungan dan irisan anggotanya tetap berada di dalam koleksi (contoh kuncinya dan ). Koleksi itu bukan diskret sebab tidak terbuka.  Misalkan topologi dengan . Karena hanya dua subhimpunan yang tidak berada di , yaitu dan , koleksi memuat salah satunya. Jika memuat , gabungan dengan memberi ; jika memuat , irisan dengan memberi . Dengan kedua himpunan itu, semua delapan subhimpunan terbuka. Jadi , membuktikan eksistensi topologi maksimal non-diskret tersebut.  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-07",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-07",
+  "type": "Pemeriksaan",
+  "number": "L.48",
+  "title": "Topologi minimal non-indiskret.",
+  "body": "Topologi minimal non-indiskret   Jangkar sumber: latihan tentang topologi lebih kasar dan lebih halus, pertanyaan eksistensi kedua (baris sumber 220--228). Untuk , apakah ada topologi yang bukan indiskret tetapi tidak memiliki topologi yang lebih lemah selain topologi indiskret? Berikan contoh. Penjelasan ini merupakan materi orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Agar topologi tidak indiskret, tambahkan tepat satu subhimpunan tak kosong dan bukan ke .   Tahap 2. Cek bahwa koleksi tiga himpunan itu tetap tertutup terhadap gabungan dan irisan.   Tahap 3. Setiap subtopologi yang lebih lemah harus menghapus satu-satunya himpunan tambahan tersebut.   Ada, misalnya . Topologi ini bukan indiskret, sedangkan satu-satunya topologi yang benar-benar lebih lemah darinya adalah .   Koleksi memuat dua himpunan wajib. Gabungan dua anggota mana pun dan irisan berhingga dua anggota tetap menghasilkan salah satu dari tiga himpunan itu, jadi adalah topologi. Karena terbuka, topologi ini bukan topologi indiskret.  Jika juga topologi pada , maka harus tetap memuat dan . Satu-satunya anggota yang dapat dihilangkan adalah , sehingga . Jadi tidak ada topologi yang lebih lemah selain topologi indiskret, sesuai yang diminta.  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-08",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-08",
+  "type": "Pemeriksaan",
+  "number": "L.49",
+  "title": "Keterbukaan himpunan lingkungan minimal.",
+  "body": "Keterbukaan himpunan lingkungan minimal   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas pertama (baris sumber 230--247). Misalkan berhingga, topologi pada , dan untuk setiap tetapkan sebagai irisan semua himpunan terbuka yang memuat . Jelaskan mengapa terbuka. Panduan ini adalah komponen pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.    Tahap 1. Keluarga himpunan terbuka yang memuat tidak kosong karena memuat .   Tahap 2. Gunakan bahwa berhingga untuk menyimpulkan bahwa juga berhingga.   Tahap 3. Irisan yang semula tampak tak berhingga sebenarnya adalah irisan berhingga, lalu pakai aksioma topologi.    terbuka karena hanya merupakan irisan berhingga dari himpunan-himpunan terbuka dalam yang memuat .   Definisikan . Keluarga ini tidak kosong sebab . Karena berhingga, himpunan kuasanya berhingga; akibatnya juga berhingga, katakanlah . Maka Aksioma topologi menyatakan irisan berhingga himpunan terbuka terbuka, sehingga . (Keluarga ini selalu memuat setidaknya satu anggota, jadi tidak perlu memakai konvensi irisan kosong.)  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-09",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-09",
+  "type": "Pemeriksaan",
+  "number": "L.50",
+  "title": "Basis minimal dari lingkungan terkecil.",
+  "body": "Basis minimal dari lingkungan terkecil   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas kedua (baris sumber 248--254). Dengan seperti pada panduan sebelumnya, misalkan . Tunjukkan bahwa merupakan basis untuk . Ini materi pendamping orisinal CC BY 4.0, bukan teks atau solusi resmi GVSU.    Tahap 1. Untuk cakupan, periksa langsung bahwa .   Tahap 2. Jika , ingat bahwa dan adalah himpunan terbuka yang memuat .   Tahap 3. Definisi lalu memberi inklusi yang diperlukan untuk syarat irisan basis.   Setiap berada dalam . Jika , maka . Jadi memenuhi cakupan dan syarat irisan basis. Lebih jauh, untuk setiap berlaku , sehingga basis ini menghasilkan tepat topologi .   Dari panduan sebelumnya, setiap terbuka. Selain itu, termasuk dalam setiap himpunan yang diiris dalam definisi , sehingga ; keluarga mencakup .  Ambil dua anggota basis dan titik . Kedua himpunan tersebut terbuka dan memuat . Karena adalah irisan semua himpunan terbuka yang memuat , ia terkandung dalam masing-masingnya: Dengan demikian syarat irisan basis terpenuhi. Untuk memastikan bahwa topologi yang dibangkitkan tepat , ambil . Setiap memiliki sebagai salah satu lingkungan terbuka dalam irisan definisi , sehingga . Sebaliknya , maka Jadi setiap himpunan terbuka dalam merupakan gabungan anggota ; bersama keterbukaan setiap , ini membuktikan bahwa adalah basis untuk .  "
+},
+{
+  "id": "o003-c90-ch12-exer-b-10",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-b.html#o003-c90-ch12-exer-b-10",
+  "type": "Pemeriksaan",
+  "number": "L.51",
+  "title": "Minimalitas basis hingga.",
+  "body": "Minimalitas basis hingga   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas ketiga (baris sumber 255--261). Tunjukkan bahwa jika merupakan basis untuk , maka , dengan . Panduan pembuktian ini adalah karya pendamping asli CC BY 4.0, bukan jawaban resmi GVSU.    Tahap 1. Untuk setiap , karena terbuka, pilih dengan .   Tahap 2. Definisi sebagai irisan semua lingkungan terbuka memuat inklusi balik .   Tahap 3. Kedua inklusi memaksa ; lakukan ini untuk semua .   Untuk setiap ada dengan . Karena juga terbuka dan memuat , berlaku . Jadi , dan .   Ambil sembarang . Hasil panduan sebelumnya memberi . Karena adalah basis untuk , setiap himpunan terbuka adalah gabungan anggota basis; khususnya ada sedemikian sehingga .  Namun sendiri merupakan himpunan terbuka yang memuat . Dalam irisan definisi , salah satu faktor adalah ; karenanya . Bersama inklusi sebelumnya diperoleh , sehingga . Karena sebarang, semua anggota berada dalam , seperti yang harus dibuktikan.  "
+},
+{
+  "id": "o003-c90-ch12-exercise-guides-c",
+  "level": "1",
+  "url": "o003-c90-ch12-exercise-guides-c.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian ketiga",
+  "body": " Panduan latihan sumber, bagian ketiga  Lima panduan berikut meneruskan urutan tugas dalam sec_top_space_exer.ptx tepat setelah panduan o003-c90-ch12-exer-b-10 . Panduan pertama menyelesaikan latihan basis minimal ruang hingga, panduan kedua membahas rantai topologi yang ditampilkan sumber, dan tiga panduan terakhir mencacah topologi pada himpunan berlabel dengan satu, dua, dan tiga titik. Setiap panduan adalah komponen pendamping asli berbahasa Indonesia yang diterbitkan terpisah di bawah CC BY 4.0; isinya bukan teks, terjemahan resmi, atau jawaban resmi GVSU.  Basis minimal pada empat titik   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas keempat (baris sumber 262--269). Misalkan dan Dengan menganggap suatu topologi, tentukan basis minimal tunggalnya. Rubrik. Hitung lingkungan terbuka terkecil setiap titik, tunjukkan bahwa koleksinya membangkitkan semua anggota , dan jelaskan mengapa setiap basis lain harus memuatnya. Panduan ini merupakan materi pendamping asli CC BY 4.0, bukan solusi resmi GVSU.    Tahap 1. Untuk setiap , iriskan semua anggota yang memuat .   Tahap 2. Perhatikan bahwa setiap himpunan terbuka tak kosong memuat ; titik masing-masing dapat dipisahkan dari dua titik lainnya.   Tahap 3. Gunakan hasil ruang hingga: lingkungan terbuka terkecil harus menjadi anggota setiap basis untuk topologi tersebut.   Basis minimal tunggalnya adalah    Lingkungan terbuka terkecil titik adalah . Semua himpunan terbuka yang memuat juga memuat , dan sendiri terbuka, sehingga . Dengan alasan yang sama, dan . Jadi koleksi lingkungan terkecil itu tepat   Gabungan kosong menghasilkan . Setiap anggota yang lain berbentuk untuk suatu ; himpunan itu diperoleh dengan mengambil bila , atau dengan menggabungkan untuk . Maka koleksi tersebut membangkitkan tepat . Untuk basis apa pun bagi , keterbukaan memberi anggota basis dengan . Karena terkandung dalam setiap lingkungan terbuka titik , juga ; jadi . Dengan demikian semua empat anggota di atas wajib berada dalam setiap basis, yang membuktikan minimalitas sekaligus ketunggalannya.   Rantai terpanjang topologi yang ditampilkan   Jangkar sumber: tugas terakhir pada latihan basis minimal (baris sumber 271--334). Sumber menyebut topologi tetapi menampilkan sepuluh entri. Di sini entri pertama ditafsirkan sebagai akar indiskret dan entri 2--10 sebagai sembilan topologi sasaran; tidak ada entri yang dibuang. Untuk , beri label Untuk setiap sasaran , tuliskan semua rantai terpanjang yang dimulai pada dan berakhir pada sasaran itu, dengan urutan berdasarkan inklusi koleksi terbuka. Rubrik. Setiap inklusi harus ketat; tunjukkan pula mengapa tidak ada rantai yang lebih panjang di dalam sepuluh entri yang ditampilkan. Ini adalah rekonstruksi pendamping asli CC BY 4.0, bukan pembetulan atau solusi resmi GVSU.    Tahap 1. Pandang setiap sebagai himpunan yang anggotanya sendiri adalah himpunan terbuka. Buat panah hanya jika dan tidak ada entri yang ditampilkan di antara keduanya.   Tahap 2. Entri menerima panah dari dan ; setelah itu jalur terpanjang menuju , , dan topologi diskret menjadi terlihat.   Tahap 3. Untuk membuktikan maksimalitas panjang, hitung secara rekursif jumlah simpul terbesar pada jalur dari ke setiap simpul melalui relasi penutup tersebut.   Semua rantai terpanjang dalam daftar adalah sebagai berikut:  : .  : .    : dan .   : .    : dan .   : .  : .    : dan .     : dan .      Setelah semua pasangan diuji dengan inklusi koleksi terbuka, relasi penutup di dalam daftar ini adalah Misalnya, karena satu-satunya terbuka baru adalah , sedangkan karena terbuka baru berikutnya adalah . Sebaliknya, tidak ada panah : dan berada di tetapi tidak di .  Panjang maksimum (dalam jumlah simpul) dari berturut- turut adalah untuk , untuk , untuk , untuk , dan untuk . Menelusuri semua pendahulu yang mencapai maksimum tersebut memberi tepat rantai-rantai pada jawaban. Karena setiap inklusi ketat di dalam poset hingga harus melewati relasi penutup, perhitungan ini sekaligus membuktikan bahwa tidak ada rantai dalam sepuluh entri yang lebih panjang.   Semua topologi pada himpunan satu titik   Jangkar sumber: latihan pencacahan topologi, tugas pertama (baris sumber 337--349). Tentukan semua topologi pada himpunan satu titik . Rubrik. Nyatakan koleksinya dan jelaskan mengapa tidak ada pilihan lain. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan solusi resmi GVSU.    Tahap 1. Daftarkan seluruh anggota .   Tahap 2. Kedua anggota itu wajib berada dalam setiap topologi.   Satu-satunya topologi adalah .   Himpunan hanya mempunyai dua subhimpunan, yaitu dan . Aksioma topologi mewajibkan keduanya terbuka, sehingga setiap topologi harus sama dengan . Koleksi ini memang tertutup terhadap semua gabungan dan irisan berhingga, jadi ia benar-benar topologi dan tidak ada kemungkinan lain.   Semua topologi pada himpunan dua titik berlabel   Jangkar sumber: latihan pencacahan topologi, tugas kedua (baris sumber 350--356). Tentukan semua topologi pada himpunan berlabel . Rubrik. Daftarkan keempat koleksi secara eksplisit dan buktikan bahwa daftar itu lengkap. Materi pendamping ini asli dan berlisensi CC BY 4.0; ia bukan solusi resmi GVSU.    Tahap 1. Selain dan , hanya ada dua calon himpunan terbuka: dan .   Tahap 2. Pilih tidak satu pun, tepat salah satu, atau keduanya. Setiap pilihan memenuhi aksioma topologi.   Keempat topologi pada adalah    Setiap topologi harus memuat dan . Dua subhimpunan lain hanyalah dan , sehingga ada paling banyak empat pilihan untuk keluarga terbuka tambahan: tidak satu pun, hanya , hanya , atau keduanya. Tiga pilihan pertama jelas tertutup terhadap gabungan dan irisan. Pada pilihan terakhir, dan , jadi aksioma juga terpenuhi. Keempat pilihan pada jawaban dengan demikian merupakan topologi, dan daftar kandidat subhimpunan tadi membuktikan bahwa tidak ada yang terlewat.   Semua 29 topologi pada himpunan tiga titik berlabel   Jangkar sumber: latihan pencacahan topologi, tugas ketiga (baris sumber 357--368). Tentukan semua topologi pada himpunan berlabel . Pencacahan harus membedakan topologi yang diperoleh dengan menukar label, bukan hanya kelas homeomorfismenya. Rubrik. Daftarkan seluruh 29 koleksi, verifikasi pola penutupan gabungan dan irisan, dan berikan argumen kelengkapan yang mengecualikan keluarga lain. Ini merupakan solusi pendamping asli CC BY 4.0, bukan solusi resmi GVSU.    Tahap 1. Singkatlah enam subhimpunan tak kosong dan bukan seluruh sebagai .   Tahap 2. Kelompokkan topologi menurut banyaknya anggota selain dan . Untuk dua anggota tambahan, pasangan yang mungkin harus saling termuat atau saling berkomplemen.   Tahap 3. Banyak keluarga yang mungkin untuk anggota tambahan berturut-turut adalah . Jumlahnya ; tuliskan setiap hasil berlabel, bukan hanya satu wakil tiap pola.   Gunakan singkatan , , , , , dan . Semua daftar berikut juga memuat dan seperti yang dituliskan; setiap baris adalah satu topologi yang berbeda.   Dua himpunan terbuka (1 topologi):     Tiga himpunan terbuka (6 topologi):     Empat himpunan terbuka (9 topologi):     Lima himpunan terbuka (6 topologi):     Enam himpunan terbuka (6 topologi):    Tidak ada topologi dengan tepat tujuh himpunan terbuka. Dengan delapan himpunan terbuka terdapat tepat satu, yaitu topologi diskret:    Setiap topologi memuat dan . Karena itu cukup memilih suatu keluarga yang tertutup terhadap setiap gabungan atau irisan yang hasilnya masih merupakan himpunan tak kosong dan bukan . Kita klasifikasikan menurut .  Untuk ada satu pilihan, dan untuk setiap satu dari enam himpunan dapat dipilih, jadi ada enam. Untuk , dua anggota harus bersarang atau saling berkomplemen. Jika keduanya tidak bersarang dan bukan komplemen, irisan atau gabungannya memberi anggota nontrivial ketiga yang wajib ditambahkan. Ada enam pasangan bersarang (sebuah singleton di dalam salah satu dari dua pasangan yang memuatnya) dan tiga pasangan komplemen, sehingga diperoleh sembilan keluarga empat-terbuka yang tercantum.  Untuk , penutupan menyisakan dua pola. Pola pertama memuat dua singleton dan gabungannya, yakni beserta dua hasil permutasi label. Pola kedua memuat satu singleton dan dua pasangan yang memuatnya, yakni beserta dua hasil permutasi. Jadi ada enam. Memulai dari pasangan komplemen dan menambahkan anggota ketiga tidak menghasilkan pola lain: gabungan atau irisan dengan anggota ketiga memaksa anggota keempat.  Untuk , penutupan memaksa dua singleton yang dipilih, gabungan keduanya, serta tepat satu dari dua pasangan yang menghubungkan titik ketiga dengan salah satu singleton tersebut. Pilihan pasangan singleton ada tiga dan pilihan pasangan tambahan ada dua, sehingga ada enam keluarga; keenamnya dituliskan pada kelompok enam-terbuka. Pemeriksaan gabungan dan irisan langsung menunjukkan bahwa setiap keluarga dalam kelompok memang tertutup.  Untuk , tepat satu dari enam himpunan nontrivial hilang. Jika yang hilang singleton, irisan dua pasangan yang memuat titik itu memaksanya terbuka; misalnya . Jika yang hilang pasangan dua titik, gabungan kedua singletonnya memaksanya terbuka; misalnya . Maka mustahil. Untuk diperoleh satu-satunya topologi diskret. Dengan demikian banyaknya topologi adalah Klasifikasi ini mencakup setiap subkeluarga yang mungkin, sedangkan daftar pada jawaban memuat tepat sebanyak itu tanpa pengulangan. Jadi daftar tersebut lengkap untuk himpunan berlabel , bukan sekadar sembilan kelas hingga homeomorfisme.   "
+},
+{
+  "id": "o003-c90-ch12-exer-c-01",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-c.html#o003-c90-ch12-exer-c-01",
+  "type": "Pemeriksaan",
+  "number": "L.52",
+  "title": "Basis minimal pada empat titik.",
+  "body": "Basis minimal pada empat titik   Jangkar sumber: latihan basis minimal untuk ruang hingga, tugas keempat (baris sumber 262--269). Misalkan dan Dengan menganggap suatu topologi, tentukan basis minimal tunggalnya. Rubrik. Hitung lingkungan terbuka terkecil setiap titik, tunjukkan bahwa koleksinya membangkitkan semua anggota , dan jelaskan mengapa setiap basis lain harus memuatnya. Panduan ini merupakan materi pendamping asli CC BY 4.0, bukan solusi resmi GVSU.    Tahap 1. Untuk setiap , iriskan semua anggota yang memuat .   Tahap 2. Perhatikan bahwa setiap himpunan terbuka tak kosong memuat ; titik masing-masing dapat dipisahkan dari dua titik lainnya.   Tahap 3. Gunakan hasil ruang hingga: lingkungan terbuka terkecil harus menjadi anggota setiap basis untuk topologi tersebut.   Basis minimal tunggalnya adalah    Lingkungan terbuka terkecil titik adalah . Semua himpunan terbuka yang memuat juga memuat , dan sendiri terbuka, sehingga . Dengan alasan yang sama, dan . Jadi koleksi lingkungan terkecil itu tepat   Gabungan kosong menghasilkan . Setiap anggota yang lain berbentuk untuk suatu ; himpunan itu diperoleh dengan mengambil bila , atau dengan menggabungkan untuk . Maka koleksi tersebut membangkitkan tepat . Untuk basis apa pun bagi , keterbukaan memberi anggota basis dengan . Karena terkandung dalam setiap lingkungan terbuka titik , juga ; jadi . Dengan demikian semua empat anggota di atas wajib berada dalam setiap basis, yang membuktikan minimalitas sekaligus ketunggalannya.  "
+},
+{
+  "id": "o003-c90-ch12-exer-c-02",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-c.html#o003-c90-ch12-exer-c-02",
+  "type": "Pemeriksaan",
+  "number": "L.53",
+  "title": "Rantai terpanjang topologi yang ditampilkan.",
+  "body": "Rantai terpanjang topologi yang ditampilkan   Jangkar sumber: tugas terakhir pada latihan basis minimal (baris sumber 271--334). Sumber menyebut topologi tetapi menampilkan sepuluh entri. Di sini entri pertama ditafsirkan sebagai akar indiskret dan entri 2--10 sebagai sembilan topologi sasaran; tidak ada entri yang dibuang. Untuk , beri label Untuk setiap sasaran , tuliskan semua rantai terpanjang yang dimulai pada dan berakhir pada sasaran itu, dengan urutan berdasarkan inklusi koleksi terbuka. Rubrik. Setiap inklusi harus ketat; tunjukkan pula mengapa tidak ada rantai yang lebih panjang di dalam sepuluh entri yang ditampilkan. Ini adalah rekonstruksi pendamping asli CC BY 4.0, bukan pembetulan atau solusi resmi GVSU.    Tahap 1. Pandang setiap sebagai himpunan yang anggotanya sendiri adalah himpunan terbuka. Buat panah hanya jika dan tidak ada entri yang ditampilkan di antara keduanya.   Tahap 2. Entri menerima panah dari dan ; setelah itu jalur terpanjang menuju , , dan topologi diskret menjadi terlihat.   Tahap 3. Untuk membuktikan maksimalitas panjang, hitung secara rekursif jumlah simpul terbesar pada jalur dari ke setiap simpul melalui relasi penutup tersebut.   Semua rantai terpanjang dalam daftar adalah sebagai berikut:  : .  : .    : dan .   : .    : dan .   : .  : .    : dan .     : dan .      Setelah semua pasangan diuji dengan inklusi koleksi terbuka, relasi penutup di dalam daftar ini adalah Misalnya, karena satu-satunya terbuka baru adalah , sedangkan karena terbuka baru berikutnya adalah . Sebaliknya, tidak ada panah : dan berada di tetapi tidak di .  Panjang maksimum (dalam jumlah simpul) dari berturut- turut adalah untuk , untuk , untuk , untuk , dan untuk . Menelusuri semua pendahulu yang mencapai maksimum tersebut memberi tepat rantai-rantai pada jawaban. Karena setiap inklusi ketat di dalam poset hingga harus melewati relasi penutup, perhitungan ini sekaligus membuktikan bahwa tidak ada rantai dalam sepuluh entri yang lebih panjang.  "
+},
+{
+  "id": "o003-c90-ch12-exer-c-03",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-c.html#o003-c90-ch12-exer-c-03",
+  "type": "Pemeriksaan",
+  "number": "L.54",
+  "title": "Semua topologi pada himpunan satu titik.",
+  "body": "Semua topologi pada himpunan satu titik   Jangkar sumber: latihan pencacahan topologi, tugas pertama (baris sumber 337--349). Tentukan semua topologi pada himpunan satu titik . Rubrik. Nyatakan koleksinya dan jelaskan mengapa tidak ada pilihan lain. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan solusi resmi GVSU.    Tahap 1. Daftarkan seluruh anggota .   Tahap 2. Kedua anggota itu wajib berada dalam setiap topologi.   Satu-satunya topologi adalah .   Himpunan hanya mempunyai dua subhimpunan, yaitu dan . Aksioma topologi mewajibkan keduanya terbuka, sehingga setiap topologi harus sama dengan . Koleksi ini memang tertutup terhadap semua gabungan dan irisan berhingga, jadi ia benar-benar topologi dan tidak ada kemungkinan lain.  "
+},
+{
+  "id": "o003-c90-ch12-exer-c-04",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-c.html#o003-c90-ch12-exer-c-04",
+  "type": "Pemeriksaan",
+  "number": "L.55",
+  "title": "Semua topologi pada himpunan dua titik berlabel.",
+  "body": "Semua topologi pada himpunan dua titik berlabel   Jangkar sumber: latihan pencacahan topologi, tugas kedua (baris sumber 350--356). Tentukan semua topologi pada himpunan berlabel . Rubrik. Daftarkan keempat koleksi secara eksplisit dan buktikan bahwa daftar itu lengkap. Materi pendamping ini asli dan berlisensi CC BY 4.0; ia bukan solusi resmi GVSU.    Tahap 1. Selain dan , hanya ada dua calon himpunan terbuka: dan .   Tahap 2. Pilih tidak satu pun, tepat salah satu, atau keduanya. Setiap pilihan memenuhi aksioma topologi.   Keempat topologi pada adalah    Setiap topologi harus memuat dan . Dua subhimpunan lain hanyalah dan , sehingga ada paling banyak empat pilihan untuk keluarga terbuka tambahan: tidak satu pun, hanya , hanya , atau keduanya. Tiga pilihan pertama jelas tertutup terhadap gabungan dan irisan. Pada pilihan terakhir, dan , jadi aksioma juga terpenuhi. Keempat pilihan pada jawaban dengan demikian merupakan topologi, dan daftar kandidat subhimpunan tadi membuktikan bahwa tidak ada yang terlewat.  "
+},
+{
+  "id": "o003-c90-ch12-exer-c-05",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-c.html#o003-c90-ch12-exer-c-05",
+  "type": "Pemeriksaan",
+  "number": "L.56",
+  "title": "Semua 29 topologi pada himpunan tiga titik berlabel.",
+  "body": "Semua 29 topologi pada himpunan tiga titik berlabel   Jangkar sumber: latihan pencacahan topologi, tugas ketiga (baris sumber 357--368). Tentukan semua topologi pada himpunan berlabel . Pencacahan harus membedakan topologi yang diperoleh dengan menukar label, bukan hanya kelas homeomorfismenya. Rubrik. Daftarkan seluruh 29 koleksi, verifikasi pola penutupan gabungan dan irisan, dan berikan argumen kelengkapan yang mengecualikan keluarga lain. Ini merupakan solusi pendamping asli CC BY 4.0, bukan solusi resmi GVSU.    Tahap 1. Singkatlah enam subhimpunan tak kosong dan bukan seluruh sebagai .   Tahap 2. Kelompokkan topologi menurut banyaknya anggota selain dan . Untuk dua anggota tambahan, pasangan yang mungkin harus saling termuat atau saling berkomplemen.   Tahap 3. Banyak keluarga yang mungkin untuk anggota tambahan berturut-turut adalah . Jumlahnya ; tuliskan setiap hasil berlabel, bukan hanya satu wakil tiap pola.   Gunakan singkatan , , , , , dan . Semua daftar berikut juga memuat dan seperti yang dituliskan; setiap baris adalah satu topologi yang berbeda.   Dua himpunan terbuka (1 topologi):     Tiga himpunan terbuka (6 topologi):     Empat himpunan terbuka (9 topologi):     Lima himpunan terbuka (6 topologi):     Enam himpunan terbuka (6 topologi):    Tidak ada topologi dengan tepat tujuh himpunan terbuka. Dengan delapan himpunan terbuka terdapat tepat satu, yaitu topologi diskret:    Setiap topologi memuat dan . Karena itu cukup memilih suatu keluarga yang tertutup terhadap setiap gabungan atau irisan yang hasilnya masih merupakan himpunan tak kosong dan bukan . Kita klasifikasikan menurut .  Untuk ada satu pilihan, dan untuk setiap satu dari enam himpunan dapat dipilih, jadi ada enam. Untuk , dua anggota harus bersarang atau saling berkomplemen. Jika keduanya tidak bersarang dan bukan komplemen, irisan atau gabungannya memberi anggota nontrivial ketiga yang wajib ditambahkan. Ada enam pasangan bersarang (sebuah singleton di dalam salah satu dari dua pasangan yang memuatnya) dan tiga pasangan komplemen, sehingga diperoleh sembilan keluarga empat-terbuka yang tercantum.  Untuk , penutupan menyisakan dua pola. Pola pertama memuat dua singleton dan gabungannya, yakni beserta dua hasil permutasi label. Pola kedua memuat satu singleton dan dua pasangan yang memuatnya, yakni beserta dua hasil permutasi. Jadi ada enam. Memulai dari pasangan komplemen dan menambahkan anggota ketiga tidak menghasilkan pola lain: gabungan atau irisan dengan anggota ketiga memaksa anggota keempat.  Untuk , penutupan memaksa dua singleton yang dipilih, gabungan keduanya, serta tepat satu dari dua pasangan yang menghubungkan titik ketiga dengan salah satu singleton tersebut. Pilihan pasangan singleton ada tiga dan pilihan pasangan tambahan ada dua, sehingga ada enam keluarga; keenamnya dituliskan pada kelompok enam-terbuka. Pemeriksaan gabungan dan irisan langsung menunjukkan bahwa setiap keluarga dalam kelompok memang tertutup.  Untuk , tepat satu dari enam himpunan nontrivial hilang. Jika yang hilang singleton, irisan dua pasangan yang memuat titik itu memaksanya terbuka; misalnya . Jika yang hilang pasangan dua titik, gabungan kedua singletonnya memaksanya terbuka; misalnya . Maka mustahil. Untuk diperoleh satu-satunya topologi diskret. Dengan demikian banyaknya topologi adalah Klasifikasi ini mencakup setiap subkeluarga yang mungkin, sedangkan daftar pada jawaban memuat tepat sebanyak itu tanpa pengulangan. Jadi daftar tersebut lengkap untuk himpunan berlabel , bukan sekadar sembilan kelas hingga homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch12-exercise-guides-d",
+  "level": "1",
+  "url": "o003-c90-ch12-exercise-guides-d.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian keempat",
+  "body": " Panduan latihan sumber, bagian keempat  Empat panduan berikut mengikuti empat latihan mandiri pada sec_top_space_exer.ptx , baris sumber 371--419: topologi ekor, hukum interior, topologi titik tertentu, dan topologi titik yang dikecualikan. Setiap panduan adalah komponen pendamping asli berbahasa Indonesia yang diterbitkan di bawah CC BY 4.0. Panduan ini bukan teks, terjemahan resmi, atau jawaban resmi GVSU; pernyataan sumber diringkas hanya agar pembaca dapat memasangkan panduan dengan latihan yang tepat.  Topologi ekor pada bilangan bulat positif   Jangkar sumber: latihan tanpa ID pada baris sumber 371--379. Untuk setiap , definisikan , lalu tetapkan . Buktikan bahwa merupakan ruang topologi. Rubrik. Periksa dan seluruh ruang, gabungan sebarang (termasuk gabungan kosong), serta irisan berhingga. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Perhatikan bahwa dan bahwa tepat ketika .   Tahap 2. Untuk keluarga tak kosong himpunan ekor, lihat himpunan indeksnya. Setiap subhimpunan tak kosong dari mempunyai anggota terkecil.   Tahap 3. Untuk irisan sejumlah berhingga himpunan ekor, gunakan indeks terbesar. Pisahkan kasus ketika salah satu faktor adalah .   Ya. Gabungan tak kosong dari himpunan-himpunan adalah , dengan indeks terkecil yang muncul. Irisan keluarga berhingga tak kosong yang hanya terdiri atas himpunan ekor adalah , dengan indeks terbesar yang muncul. Kasus kosong dan kasus yang melibatkan juga tetap berada dalam .   Pertama, menurut definisi dan . Jadi kedua himpunan yang diwajibkan oleh aksioma topologi sudah tersedia.  Ambil keluarga sebarang . Jika keluarga itu tidak memuat satu pun himpunan ekor, maka gabungannya adalah . Jika tak kosong, prinsip urutan baik memberi . Karena untuk setiap , dan sendiri muncul dalam keluarga, berlaku Ini juga mencakup keluarga yang mungkin memuat , yang tidak mengubah gabungan.  Untuk irisan berhingga, bila salah satu faktor adalah , hasilnya . Jika semua faktor berbentuk dengan , ambil . Sifat bersarang himpunan ekor memberi Irisan keluarga kosong adalah seluruh ruang . Jadi tertutup terhadap gabungan sebarang dan irisan berhingga; akibatnya adalah ruang topologi.   Interior irisan dan gabungan   Jangkar sumber: latihan tanpa ID pada baris sumber 381--391. Untuk subhimpunan dari ruang topologi , tentukan hubungan antara dan , serta antara dan . Verifikasi kedua hubungan tersebut. Rubrik. Nyatakan arah setiap inklusi, buktikan semua klaim universal, dan berikan contoh konkret bila kesamaan tidak selalu berlaku. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Gunakan fakta bahwa interior suatu himpunan adalah himpunan terbuka terbesar yang terkandung di dalam himpunan tersebut.   Tahap 2. Untuk irisan, buktikan dua inklusi: irisan dua interior merupakan himpunan terbuka di dalam , sedangkan setiap himpunan terbuka di dalam juga berada di dalam kedua interior.   Tahap 3. Untuk gabungan, satu inklusi langsung berlaku. Untuk menguji inklusi balik, dalam dengan topologi biasa pertimbangkan bilangan rasional dan irasional.   Selalu berlaku dan Inklusi kedua dapat ketat. Dalam dengan topologi Euklides, ambil dan . Kedua interior di ruas kiri kosong, tetapi .   Himpunan terbuka sebagai irisan berhingga dua himpunan terbuka, dan himpunan itu terkandung dalam . Karena adalah himpunan terbuka terbesar di dalam , diperoleh .  Sebaliknya, terbuka dan terkandung baik dalam maupun dalam . Oleh sifat maksimal interior, dan . Jadi , yang bersama inklusi pertama membuktikan kesamaan.  Selanjutnya, terbuka dan terkandung dalam . Maka . Kesamaan tidak selalu berlaku: setiap interval terbuka tak kosong di memuat bilangan rasional dan irasional. Karena itu . Namun , sehingga interior gabungannya adalah . Dengan demikian inklusi tersebut dapat ketat.   Topologi titik tertentu   Jangkar sumber: latihan ex_particular_point_topology pada baris sumber 393--405. Misalkan tak kosong dan . Koleksi terdiri atas , , dan semua subhimpunan yang memuat . Buktikan bahwa merupakan topologi pada . Rubrik. Verifikasi kedua himpunan wajib, gabungan sebarang, dan irisan berhingga, termasuk kasus keluarga kosong. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Himpunan dan sudah masuk menurut definisi.   Tahap 2. Bila suatu gabungan anggota tidak kosong, pilih satu anggota keluarga yang tidak kosong dan tanyakan apakah gabungannya memuat .   Tahap 3. Untuk irisan berhingga, pisahkan kasus adanya faktor . Jika tidak ada, setiap faktor memuat .   Ya. Setiap gabungan anggota adalah kosong atau memuat . Setiap irisan berhingga anggotanya adalah kosong bila salah satu faktor kosong, dan jika tidak, tetap memuat . Semua hasil tersebut kembali berada dalam .   Menurut definisi, dan . Ambil keluarga sebarang . Jika semua anggotanya kosong, atau jika sendiri kosong, gabungannya adalah . Jika tidak, ada anggota tak kosong . Setiap anggota tak kosong memuat , sehingga dan karenanya . Jadi gabungan tersebut juga anggota .  Sekarang ambil sejumlah berhingga anggota . Jika salah satunya , irisannya adalah . Jika tidak, setiap faktor memuat , sehingga irisannya memuat dan termasuk dalam . Irisan keluarga kosong adalah , yang juga berada dalam . Dengan demikian semua aksioma topologi dipenuhi, jadi adalah topologi titik tertentu pada .   Topologi titik yang dikecualikan   Jangkar sumber: latihan ex_excluded_point_topology pada baris sumber 407--419. Misalkan tak kosong dan . Koleksi terdiri atas , , dan semua subhimpunan yang tidak memuat . Buktikan bahwa merupakan topologi pada . Rubrik. Untuk gabungan dan irisan, pisahkan secara eksplisit kasus yang melibatkan ; jangan menyamakan argumen ini dengan argumen topologi titik tertentu. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Bila sebuah keluarga anggota memuat , gabungannya langsung . Bila tidak, tak satu pun anggotanya memuat .   Tahap 2. Dalam irisan berhingga, faktor dapat diabaikan. Jika tersisa faktor yang tidak memuat , irisannya juga tidak memuat .   Tahap 3. Periksa secara terpisah gabungan kosong dan irisan kosong.   Ya. Gabungan anggota koleksi itu adalah bila salah satu anggotanya ; jika tidak, gabungannya tetap tidak memuat . Irisan berhingga semua faktor adalah ; bila ada faktor lain, irisannya tidak memuat . Jadi semua operasi yang diwajibkan tetap menghasilkan anggota .   Koleksi tersebut memuat dan menurut definisi. Ambil keluarga sebarang . Jika , maka . Jika , setiap anggota keluarga tidak memuat , sehingga gabungannya juga tidak memuat . Gabungan keluarga kosong adalah . Dalam semua kasus, .  Untuk irisan berhingga, jika semua faktor adalah , hasilnya . Jika ada faktor yang bukan , maka ; karena irisan seluruh faktor terkandung dalam , irisan itu juga tidak memuat . Kasus adanya faktor memberi hasil , dan irisan keluarga kosong adalah . Jadi koleksi tertutup terhadap irisan berhingga dan memenuhi semua aksioma topologi. Inilah topologi titik yang dikecualikan pada .   "
+},
+{
+  "id": "o003-c90-ch12-exer-d-01",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-d.html#o003-c90-ch12-exer-d-01",
+  "type": "Pemeriksaan",
+  "number": "L.57",
+  "title": "Topologi ekor pada bilangan bulat positif.",
+  "body": "Topologi ekor pada bilangan bulat positif   Jangkar sumber: latihan tanpa ID pada baris sumber 371--379. Untuk setiap , definisikan , lalu tetapkan . Buktikan bahwa merupakan ruang topologi. Rubrik. Periksa dan seluruh ruang, gabungan sebarang (termasuk gabungan kosong), serta irisan berhingga. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Perhatikan bahwa dan bahwa tepat ketika .   Tahap 2. Untuk keluarga tak kosong himpunan ekor, lihat himpunan indeksnya. Setiap subhimpunan tak kosong dari mempunyai anggota terkecil.   Tahap 3. Untuk irisan sejumlah berhingga himpunan ekor, gunakan indeks terbesar. Pisahkan kasus ketika salah satu faktor adalah .   Ya. Gabungan tak kosong dari himpunan-himpunan adalah , dengan indeks terkecil yang muncul. Irisan keluarga berhingga tak kosong yang hanya terdiri atas himpunan ekor adalah , dengan indeks terbesar yang muncul. Kasus kosong dan kasus yang melibatkan juga tetap berada dalam .   Pertama, menurut definisi dan . Jadi kedua himpunan yang diwajibkan oleh aksioma topologi sudah tersedia.  Ambil keluarga sebarang . Jika keluarga itu tidak memuat satu pun himpunan ekor, maka gabungannya adalah . Jika tak kosong, prinsip urutan baik memberi . Karena untuk setiap , dan sendiri muncul dalam keluarga, berlaku Ini juga mencakup keluarga yang mungkin memuat , yang tidak mengubah gabungan.  Untuk irisan berhingga, bila salah satu faktor adalah , hasilnya . Jika semua faktor berbentuk dengan , ambil . Sifat bersarang himpunan ekor memberi Irisan keluarga kosong adalah seluruh ruang . Jadi tertutup terhadap gabungan sebarang dan irisan berhingga; akibatnya adalah ruang topologi.  "
+},
+{
+  "id": "o003-c90-ch12-exer-d-02",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-d.html#o003-c90-ch12-exer-d-02",
+  "type": "Pemeriksaan",
+  "number": "L.58",
+  "title": "Interior irisan dan gabungan.",
+  "body": "Interior irisan dan gabungan   Jangkar sumber: latihan tanpa ID pada baris sumber 381--391. Untuk subhimpunan dari ruang topologi , tentukan hubungan antara dan , serta antara dan . Verifikasi kedua hubungan tersebut. Rubrik. Nyatakan arah setiap inklusi, buktikan semua klaim universal, dan berikan contoh konkret bila kesamaan tidak selalu berlaku. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Gunakan fakta bahwa interior suatu himpunan adalah himpunan terbuka terbesar yang terkandung di dalam himpunan tersebut.   Tahap 2. Untuk irisan, buktikan dua inklusi: irisan dua interior merupakan himpunan terbuka di dalam , sedangkan setiap himpunan terbuka di dalam juga berada di dalam kedua interior.   Tahap 3. Untuk gabungan, satu inklusi langsung berlaku. Untuk menguji inklusi balik, dalam dengan topologi biasa pertimbangkan bilangan rasional dan irasional.   Selalu berlaku dan Inklusi kedua dapat ketat. Dalam dengan topologi Euklides, ambil dan . Kedua interior di ruas kiri kosong, tetapi .   Himpunan terbuka sebagai irisan berhingga dua himpunan terbuka, dan himpunan itu terkandung dalam . Karena adalah himpunan terbuka terbesar di dalam , diperoleh .  Sebaliknya, terbuka dan terkandung baik dalam maupun dalam . Oleh sifat maksimal interior, dan . Jadi , yang bersama inklusi pertama membuktikan kesamaan.  Selanjutnya, terbuka dan terkandung dalam . Maka . Kesamaan tidak selalu berlaku: setiap interval terbuka tak kosong di memuat bilangan rasional dan irasional. Karena itu . Namun , sehingga interior gabungannya adalah . Dengan demikian inklusi tersebut dapat ketat.  "
+},
+{
+  "id": "o003-c90-ch12-exer-d-03",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-d.html#o003-c90-ch12-exer-d-03",
+  "type": "Pemeriksaan",
+  "number": "L.59",
+  "title": "Topologi titik tertentu.",
+  "body": "Topologi titik tertentu   Jangkar sumber: latihan ex_particular_point_topology pada baris sumber 393--405. Misalkan tak kosong dan . Koleksi terdiri atas , , dan semua subhimpunan yang memuat . Buktikan bahwa merupakan topologi pada . Rubrik. Verifikasi kedua himpunan wajib, gabungan sebarang, dan irisan berhingga, termasuk kasus keluarga kosong. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Himpunan dan sudah masuk menurut definisi.   Tahap 2. Bila suatu gabungan anggota tidak kosong, pilih satu anggota keluarga yang tidak kosong dan tanyakan apakah gabungannya memuat .   Tahap 3. Untuk irisan berhingga, pisahkan kasus adanya faktor . Jika tidak ada, setiap faktor memuat .   Ya. Setiap gabungan anggota adalah kosong atau memuat . Setiap irisan berhingga anggotanya adalah kosong bila salah satu faktor kosong, dan jika tidak, tetap memuat . Semua hasil tersebut kembali berada dalam .   Menurut definisi, dan . Ambil keluarga sebarang . Jika semua anggotanya kosong, atau jika sendiri kosong, gabungannya adalah . Jika tidak, ada anggota tak kosong . Setiap anggota tak kosong memuat , sehingga dan karenanya . Jadi gabungan tersebut juga anggota .  Sekarang ambil sejumlah berhingga anggota . Jika salah satunya , irisannya adalah . Jika tidak, setiap faktor memuat , sehingga irisannya memuat dan termasuk dalam . Irisan keluarga kosong adalah , yang juga berada dalam . Dengan demikian semua aksioma topologi dipenuhi, jadi adalah topologi titik tertentu pada .  "
+},
+{
+  "id": "o003-c90-ch12-exer-d-04",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-d.html#o003-c90-ch12-exer-d-04",
+  "type": "Pemeriksaan",
+  "number": "L.60",
+  "title": "Topologi titik yang dikecualikan.",
+  "body": "Topologi titik yang dikecualikan   Jangkar sumber: latihan ex_excluded_point_topology pada baris sumber 407--419. Misalkan tak kosong dan . Koleksi terdiri atas , , dan semua subhimpunan yang tidak memuat . Buktikan bahwa merupakan topologi pada . Rubrik. Untuk gabungan dan irisan, pisahkan secara eksplisit kasus yang melibatkan ; jangan menyamakan argumen ini dengan argumen topologi titik tertentu. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Bila sebuah keluarga anggota memuat , gabungannya langsung . Bila tidak, tak satu pun anggotanya memuat .   Tahap 2. Dalam irisan berhingga, faktor dapat diabaikan. Jika tersisa faktor yang tidak memuat , irisannya juga tidak memuat .   Tahap 3. Periksa secara terpisah gabungan kosong dan irisan kosong.   Ya. Gabungan anggota koleksi itu adalah bila salah satu anggotanya ; jika tidak, gabungannya tetap tidak memuat . Irisan berhingga semua faktor adalah ; bila ada faktor lain, irisannya tidak memuat . Jadi semua operasi yang diwajibkan tetap menghasilkan anggota .   Koleksi tersebut memuat dan menurut definisi. Ambil keluarga sebarang . Jika , maka . Jika , setiap anggota keluarga tidak memuat , sehingga gabungannya juga tidak memuat . Gabungan keluarga kosong adalah . Dalam semua kasus, .  Untuk irisan berhingga, jika semua faktor adalah , hasilnya . Jika ada faktor yang bukan , maka ; karena irisan seluruh faktor terkandung dalam , irisan itu juga tidak memuat . Kasus adanya faktor memberi hasil , dan irisan keluarga kosong adalah . Jadi koleksi tertutup terhadap irisan berhingga dan memenuhi semua aksioma topologi. Inilah topologi titik yang dikecualikan pada .  "
+},
+{
+  "id": "o003-c90-ch12-exercise-guides-e",
+  "level": "1",
+  "url": "o003-c90-ch12-exercise-guides-e.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian kelima",
+  "body": " Panduan latihan sumber, bagian kelima  Tujuh panduan berikut mendampingi latihan ex_digital_line_topology dalam sec_top_space_exer.ptx : pembuktian bahwa koleksi yang diberikan merupakan basis, lalu enam pemeriksaan keterbukaan. Tugas pada baris sumber 460 hanya mengelompokkan keenam pemeriksaan tersebut dan tidak dihitung sebagai soal tersendiri. Setiap panduan menyediakan petunjuk bertahap, jawaban singkat, solusi lengkap, dan rubrik pemeriksaan.  Seluruh bagian ini adalah komponen pendamping asli berbahasa Indonesia yang diterbitkan secara terpisah di bawah CC BY 4.0. Bagian ini bukan teks, terjemahan resmi, atau kumpulan solusi resmi GVSU.  Koleksi lingkungan dasar pada garis digital   Jangkar sumber:  ex_digital_line_topology , tugas pertama (baris sumber 442--458). Untuk setiap , definisikan Tunjukkan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Buktikan baik syarat cakupan maupun syarat irisan basis. Dalam kasus irisan, pisahkan kemungkinan bahwa titik yang dipilih ganjil atau genap.    Tahap 1. Untuk setiap , perhatikan bahwa tanpa bergantung pada paritasnya.   Tahap 2. Jika ganjil dan , gunakan sebagai lingkungan dasar yang lebih kecil.   Tahap 3. Jika genap, buktikan terlebih dahulu bahwa satu-satunya anggota yang memuat adalah sendiri.   Ya. Koleksi mencakup . Untuk titik ganjil dalam irisan dua anggota basis, singletonnya memperhalus irisan; untuk titik genap, kedua anggota basis yang beririsan di titik itu harus sama-sama . Jadi kedua syarat basis terpenuhi.   Ambil sembarang . Jika ganjil, maka ; jika genap, maka . Dalam kedua kasus . Karena itu gabungan seluruh anggota adalah .  Sekarang misalkan . Jika ganjil, pilih . Jelas Jika genap, anggota basis yang memuat tidak dapat berpusat di bilangan ganjil, sebab anggota seperti itu merupakan singleton ganjil. Bila pusatnya genap, dua titik selain pusat pada adalah ganjil. Oleh karena genap dan , haruslah . Dengan cara yang sama, . Jadi , dan terkandung dalam irisan. Syarat irisan basis pun terpenuhi. Maka membangkitkan topologi garis digital pada .   Apakah singleton nol terbuka?   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan pertama (baris sumber 466--472). Tentukan apakah terbuka dalam topologi garis digital . Rubrik. Periksa lingkungan dasar yang mungkin memuat titik genap ; jangan menyimpulkan hanya dari fakta bahwa adalah singleton.    Tahap 1. Karena genap, .   Tahap 2. Gunakan pembuktian basis di atas untuk memastikan bahwa tidak ada anggota basis lain yang memuat .   Tahap 3. Terapkan kriteria: untuk setiap titik suatu himpunan terbuka harus ada anggota basis yang memuat titik itu dan terkandung dalam himpunan tersebut.   Tidak. Satu-satunya anggota basis yang memuat adalah , dan himpunan ini tidak terkandung dalam .   Andaikan terbuka. Karena , kriteria basis mengharuskan suatu dengan . Pusat tidak mungkin ganjil, sebab dalam hal itu dan persamaan akan membuat genap. Jika genap, titik genap yang berada dalam hanyalah , sehingga . Jadi satu-satunya kemungkinan adalah . Karena , anggota basis yang diperlukan tidak ada. Maka tidak terbuka.   Apakah singleton satu terbuka?   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan kedua (baris sumber 473--479). Tentukan apakah terbuka dalam . Rubrik. Nyatakan anggota basis yang tepat dan tampilkan himpunan sebagai gabungan anggota basis.    Tahap 1. Tentukan paritas .   Tahap 2. Substitusikan ke dalam definisi .   Ya. Karena ganjil, berlaku , sehingga merupakan anggota basis dan karenanya terbuka.   Bilangan ganjil, jadi definisi garis digital memberikan Setiap anggota basis terbuka dalam topologi yang dibangkitkannya. Secara ekuivalen, adalah gabungan satu anggota basis, yaitu . Dengan demikian .   Apakah dua titik genap terbuka?   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan ketiga (baris sumber 480--486). Tentukan apakah terbuka dalam . Rubrik. Cukup temukan satu titik dalam himpunan yang tidak mempunyai lingkungan dasar yang terkandung di dalamnya, tetapi nyatakan lingkungan tersebut secara eksplisit.    Tahap 1. Mulailah dari titik yang berada dalam himpunan.   Tahap 2. Satu-satunya lingkungan dasar yang memuat adalah .   Tidak. Titik berada dalam , tetapi tidak terkandung dalam .   Himpunan memuat titik genap . Seperti pada panduan sebelumnya, satu-satunya anggota basis yang memuat adalah . Akan tetapi dan tidak berada dalam , sehingga . Jadi tidak ada anggota basis dengan . Kriteria keterbukaan gagal pada titik , sehingga tidak terbuka. (Kegagalan serupa juga terjadi pada titik genap .)   Blok berhingga yang terbuka   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan keempat (baris sumber 487--493). Tentukan apakah terbuka dalam . Rubrik. Nyatakan himpunan tersebut sebagai gabungan eksplisit anggota basis dan verifikasi kedua anggota basis yang digunakan.    Tahap 1. Titik genap dalam himpunan adalah dan .   Tahap 2. Hitung dan , lalu ambil gabungannya.   Ya, karena .   Karena dan genap, definisi basis memberi Oleh karena itu Ruas kanan adalah gabungan anggota basis, sehingga terbuka dalam topologi yang dibangkitkan oleh . Dengan demikian .   Bilangan bulat positif   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan kelima (baris sumber 494--500). Dengan konvensi buku , tentukan apakah terbuka dalam . Rubrik. Konvensi bahwa harus dinyatakan; berikan representasi gabungan basis yang mencakup tepat semua bilangan bulat positif.    Tahap 1. Untuk setiap , hitung .   Tahap 2. Periksa bahwa gabungan semua untuk tidak memuat atau bilangan negatif.   Tahap 3. Tunjukkan bahwa setiap bilangan positif, baik genap maupun ganjil, muncul dalam sedikitnya satu anggota gabungan tersebut.   Ya. Untuk konvensi , berlaku , sehingga terbuka.   Di sini berarti , jadi tidak memuat . Untuk , bilangan genap dan Semua bilangan dalam himpunan ini positif. Sebaliknya, setiap bilangan positif genap berbentuk dan berada dalam . Setiap bilangan positif ganjil berbentuk untuk suatu dan juga berada dalam . Maka Karena gabungan sebarang anggota basis terbuka, terbuka dalam .   Himpunan semua bilangan bulat ganjil   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan keenam (baris sumber 501--507). Tentukan apakah himpunan semua bilangan bulat ganjil terbuka dalam . Rubrik. Gunakan definisi untuk pusat ganjil dan tuliskan kesetaraan gabungan basis.    Tahap 1. Bila ganjil, maka .   Tahap 2. Ambil gabungan singleton tersebut atas semua bilangan bulat ganjil .   Ya. Himpunan bilangan bulat ganjil adalah , yaitu gabungan anggota basis.   Misalkan . Untuk setiap , definisi basis memberikan . Karena itu Gabungan di ruas kanan hanya memuat titik ganjil karena setiap sukunya singleton ganjil, dan setiap titik ganjil muncul sebagai pusat salah satu suku. Jadi kesetaraan tersebut tepat. Karena merupakan gabungan anggota basis, terbuka dalam topologi garis digital.   "
+},
+{
+  "id": "o003-c90-ch12-exer-e-01",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-e.html#o003-c90-ch12-exer-e-01",
+  "type": "Pemeriksaan",
+  "number": "L.61",
+  "title": "Koleksi lingkungan dasar pada garis digital.",
+  "body": "Koleksi lingkungan dasar pada garis digital   Jangkar sumber:  ex_digital_line_topology , tugas pertama (baris sumber 442--458). Untuk setiap , definisikan Tunjukkan bahwa merupakan basis untuk suatu topologi pada . Rubrik. Buktikan baik syarat cakupan maupun syarat irisan basis. Dalam kasus irisan, pisahkan kemungkinan bahwa titik yang dipilih ganjil atau genap.    Tahap 1. Untuk setiap , perhatikan bahwa tanpa bergantung pada paritasnya.   Tahap 2. Jika ganjil dan , gunakan sebagai lingkungan dasar yang lebih kecil.   Tahap 3. Jika genap, buktikan terlebih dahulu bahwa satu-satunya anggota yang memuat adalah sendiri.   Ya. Koleksi mencakup . Untuk titik ganjil dalam irisan dua anggota basis, singletonnya memperhalus irisan; untuk titik genap, kedua anggota basis yang beririsan di titik itu harus sama-sama . Jadi kedua syarat basis terpenuhi.   Ambil sembarang . Jika ganjil, maka ; jika genap, maka . Dalam kedua kasus . Karena itu gabungan seluruh anggota adalah .  Sekarang misalkan . Jika ganjil, pilih . Jelas Jika genap, anggota basis yang memuat tidak dapat berpusat di bilangan ganjil, sebab anggota seperti itu merupakan singleton ganjil. Bila pusatnya genap, dua titik selain pusat pada adalah ganjil. Oleh karena genap dan , haruslah . Dengan cara yang sama, . Jadi , dan terkandung dalam irisan. Syarat irisan basis pun terpenuhi. Maka membangkitkan topologi garis digital pada .  "
+},
+{
+  "id": "o003-c90-ch12-exer-e-02",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-e.html#o003-c90-ch12-exer-e-02",
+  "type": "Pemeriksaan",
+  "number": "L.62",
+  "title": "Apakah singleton nol terbuka?",
+  "body": "Apakah singleton nol terbuka?   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan pertama (baris sumber 466--472). Tentukan apakah terbuka dalam topologi garis digital . Rubrik. Periksa lingkungan dasar yang mungkin memuat titik genap ; jangan menyimpulkan hanya dari fakta bahwa adalah singleton.    Tahap 1. Karena genap, .   Tahap 2. Gunakan pembuktian basis di atas untuk memastikan bahwa tidak ada anggota basis lain yang memuat .   Tahap 3. Terapkan kriteria: untuk setiap titik suatu himpunan terbuka harus ada anggota basis yang memuat titik itu dan terkandung dalam himpunan tersebut.   Tidak. Satu-satunya anggota basis yang memuat adalah , dan himpunan ini tidak terkandung dalam .   Andaikan terbuka. Karena , kriteria basis mengharuskan suatu dengan . Pusat tidak mungkin ganjil, sebab dalam hal itu dan persamaan akan membuat genap. Jika genap, titik genap yang berada dalam hanyalah , sehingga . Jadi satu-satunya kemungkinan adalah . Karena , anggota basis yang diperlukan tidak ada. Maka tidak terbuka.  "
+},
+{
+  "id": "o003-c90-ch12-exer-e-03",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-e.html#o003-c90-ch12-exer-e-03",
+  "type": "Pemeriksaan",
+  "number": "L.63",
+  "title": "Apakah singleton satu terbuka?",
+  "body": "Apakah singleton satu terbuka?   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan kedua (baris sumber 473--479). Tentukan apakah terbuka dalam . Rubrik. Nyatakan anggota basis yang tepat dan tampilkan himpunan sebagai gabungan anggota basis.    Tahap 1. Tentukan paritas .   Tahap 2. Substitusikan ke dalam definisi .   Ya. Karena ganjil, berlaku , sehingga merupakan anggota basis dan karenanya terbuka.   Bilangan ganjil, jadi definisi garis digital memberikan Setiap anggota basis terbuka dalam topologi yang dibangkitkannya. Secara ekuivalen, adalah gabungan satu anggota basis, yaitu . Dengan demikian .  "
+},
+{
+  "id": "o003-c90-ch12-exer-e-04",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-e.html#o003-c90-ch12-exer-e-04",
+  "type": "Pemeriksaan",
+  "number": "L.64",
+  "title": "Apakah dua titik genap terbuka?",
+  "body": "Apakah dua titik genap terbuka?   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan ketiga (baris sumber 480--486). Tentukan apakah terbuka dalam . Rubrik. Cukup temukan satu titik dalam himpunan yang tidak mempunyai lingkungan dasar yang terkandung di dalamnya, tetapi nyatakan lingkungan tersebut secara eksplisit.    Tahap 1. Mulailah dari titik yang berada dalam himpunan.   Tahap 2. Satu-satunya lingkungan dasar yang memuat adalah .   Tidak. Titik berada dalam , tetapi tidak terkandung dalam .   Himpunan memuat titik genap . Seperti pada panduan sebelumnya, satu-satunya anggota basis yang memuat adalah . Akan tetapi dan tidak berada dalam , sehingga . Jadi tidak ada anggota basis dengan . Kriteria keterbukaan gagal pada titik , sehingga tidak terbuka. (Kegagalan serupa juga terjadi pada titik genap .)  "
+},
+{
+  "id": "o003-c90-ch12-exer-e-05",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-e.html#o003-c90-ch12-exer-e-05",
+  "type": "Pemeriksaan",
+  "number": "L.65",
+  "title": "Blok berhingga yang terbuka.",
+  "body": "Blok berhingga yang terbuka   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan keempat (baris sumber 487--493). Tentukan apakah terbuka dalam . Rubrik. Nyatakan himpunan tersebut sebagai gabungan eksplisit anggota basis dan verifikasi kedua anggota basis yang digunakan.    Tahap 1. Titik genap dalam himpunan adalah dan .   Tahap 2. Hitung dan , lalu ambil gabungannya.   Ya, karena .   Karena dan genap, definisi basis memberi Oleh karena itu Ruas kanan adalah gabungan anggota basis, sehingga terbuka dalam topologi yang dibangkitkan oleh . Dengan demikian .  "
+},
+{
+  "id": "o003-c90-ch12-exer-e-06",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-e.html#o003-c90-ch12-exer-e-06",
+  "type": "Pemeriksaan",
+  "number": "L.66",
+  "title": "Bilangan bulat positif.",
+  "body": "Bilangan bulat positif   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan kelima (baris sumber 494--500). Dengan konvensi buku , tentukan apakah terbuka dalam . Rubrik. Konvensi bahwa harus dinyatakan; berikan representasi gabungan basis yang mencakup tepat semua bilangan bulat positif.    Tahap 1. Untuk setiap , hitung .   Tahap 2. Periksa bahwa gabungan semua untuk tidak memuat atau bilangan negatif.   Tahap 3. Tunjukkan bahwa setiap bilangan positif, baik genap maupun ganjil, muncul dalam sedikitnya satu anggota gabungan tersebut.   Ya. Untuk konvensi , berlaku , sehingga terbuka.   Di sini berarti , jadi tidak memuat . Untuk , bilangan genap dan Semua bilangan dalam himpunan ini positif. Sebaliknya, setiap bilangan positif genap berbentuk dan berada dalam . Setiap bilangan positif ganjil berbentuk untuk suatu dan juga berada dalam . Maka Karena gabungan sebarang anggota basis terbuka, terbuka dalam .  "
+},
+{
+  "id": "o003-c90-ch12-exer-e-07",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-e.html#o003-c90-ch12-exer-e-07",
+  "type": "Pemeriksaan",
+  "number": "L.67",
+  "title": "Himpunan semua bilangan bulat ganjil.",
+  "body": "Himpunan semua bilangan bulat ganjil   Jangkar sumber:  ex_digital_line_topology , pemeriksaan keterbukaan keenam (baris sumber 501--507). Tentukan apakah himpunan semua bilangan bulat ganjil terbuka dalam . Rubrik. Gunakan definisi untuk pusat ganjil dan tuliskan kesetaraan gabungan basis.    Tahap 1. Bila ganjil, maka .   Tahap 2. Ambil gabungan singleton tersebut atas semua bilangan bulat ganjil .   Ya. Himpunan bilangan bulat ganjil adalah , yaitu gabungan anggota basis.   Misalkan . Untuk setiap , definisi basis memberikan . Karena itu Gabungan di ruas kanan hanya memuat titik ganjil karena setiap sukunya singleton ganjil, dan setiap titik ganjil muncul sebagai pusat salah satu suku. Jadi kesetaraan tersebut tepat. Karena merupakan gabungan anggota basis, terbuka dalam topologi garis digital.  "
+},
+{
+  "id": "o003-c90-ch12-exercise-guides-f",
+  "level": "1",
+  "url": "o003-c90-ch12-exercise-guides-f.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian keenam",
+  "body": " Panduan latihan sumber, bagian keenam  Lima panduan berikut mengikuti latihan topologi Zariski ex_TS_Zariski dalam sec_top_space_exer.ptx , baris sumber 512--579. Setiap panduan adalah komponen pendamping asli berbahasa Indonesia yang diterbitkan di bawah CC BY 4.0. Panduan ini bukan teks, terjemahan resmi, atau jawaban resmi GVSU; pernyataan sumber diringkas hanya untuk memasangkan bantuan belajar dengan tugas yang tepat.  Himpunan nol berupa dua garis vertikal   Jangkar sumber:  ex_TS_Zariski , tugas pertama (baris sumber 536--542). Deskripsikan dalam untuk . Rubrik. Selesaikan persamaan nol dan jelaskan peran kedua koordinat secara geometris. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Faktorkan .   Tahap 2. Persamaan tersebut tidak membatasi .   Tahap 3. Gambarkan setiap nilai yang mungkin untuk dengan bebas.   Himpunan nolnya adalah Jadi merupakan gabungan dua garis vertikal dan .   Sebuah titik berada dalam tepat ketika Karena tidak mempunyai pembagi nol, kondisi ini ekuivalen dengan atau . Variabel sama sekali tidak muncul dalam persamaan, sehingga nilainya boleh berupa sembarang . Oleh sebab itu yaitu dua garis vertikal yang sejajar.   Garis nol bersama tiga polinom linear   Jangkar sumber:  ex_TS_Zariski , tugas kedua (baris sumber 543--551). Dalam , deskripsikan untuk  Rubrik. Selesaikan ketiga persamaan secara bersamaan, parametrisasikan seluruh himpunan solusi, dan periksa kembali setiap persamaan. Ini adalah panduan pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Jumlahkan persamaan pertama dan kedua untuk menentukan .   Tahap 2. Substitusikan nilai itu ke persamaan pertama untuk memperoleh hubungan antara dan .   Tahap 3. Gunakan satu parameter bebas dan pastikan persamaan ketiga tidak menambahkan syarat baru.   Himpunan nol bersama tersebut adalah garis    Titik berada dalam tepat ketika memenuhi Menjumlahkan dua persamaan pertama menghasilkan , jadi . Persamaan pertama lalu menjadi , atau .  Tetapkan . Semua calon solusi berbentuk . Substitusi ke persamaan ketiga memberi , sehingga tidak ada syarat tambahan. Sebaliknya, setiap titik membuat ketiga polinom bernilai nol. Dengan demikian, .   Komplemen himpunan nol sebagai basis   Jangkar sumber:  ex_TS_Zariski , tugas ketiga (baris sumber 552--563). Untuk , tulis . Buktikan bahwa merupakan basis bagi suatu topologi pada . Rubrik. Buktikan bahwa anggota basis mencakup seluruh ruang dan bahwa irisan dua anggota basis memenuhi syarat irisan basis. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Hitung himpunan nol polinom konstan .   Tahap 2. Untuk dua polinom , sebuah titik gagal berada dalam dan tepat ketika hasil kali tidak nol.   Tahap 3. Simpulkan identitas ; identitas ini lebih kuat daripada syarat irisan yang diminta dalam definisi basis.   Karena , berlaku , sehingga anggota mencakup seluruh ruang. Selain itu, Jadi memenuhi kedua aksioma basis.   Polinom konstan tidak mempunyai titik nol. Karena itu dan . Khususnya, setiap titik berada dalam setidaknya satu anggota .  Ambil . Untuk setiap , Ekuivalensi tengah menggunakan fakta bahwa tidak mempunyai pembagi nol. Karena , himpunan adalah anggota . Jadi untuk setiap titik dalam irisan dua anggota basis terdapat anggota basis yang memuat titik itu dan terkandung dalam irisan tersebut; bahkan anggota itu sama dengan seluruh irisan. Maka merupakan basis bagi topologi Zariski pada .   Sumbu koordinat tidak terbuka secara Zariski   Jangkar sumber:  ex_TS_Zariski , tugas keempat (baris sumber 564--571). Dalam dengan topologi Zariski, tentukan apakah terbuka, dan buktikan jawaban Anda. Rubrik. Jangan menyimpulkan “tidak terbuka” hanya karena tertutup. Gunakan anggota basis di sekitar titik asal dan sifat polinom yang memiliki tak berhingga banyak akar. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Andaikan terbuka. Karena dan himpunan membentuk basis, akan ada dengan .   Tahap 2. Inklusi tersebut memaksa untuk semua dan , tetapi .   Tahap 3. Tetapkan dahulu dan pandang sebagai polinom satu variabel dalam . Setelah itu tetapkan dan gunakan argumen yang sama dalam variabel .   Tidak. Jika terbuka, suatu lingkungan basis dari harus terkandung dalam . Hal ini memaksa lenyap pada semua titik dengan kedua koordinat tidak nol, sehingga argumen akar polinom satu variabel memaksa menjadi polinom nol. Itu bertentangan dengan , yang mensyaratkan .   Andaikan, untuk memperoleh kontradiksi, bahwa terbuka. Titik asal berada dalam . Karena himpunan-himpunan merupakan basis, terdapat dengan Keanggotaan pertama berarti . Sementara itu, bila dan , titik tidak berada pada salah satu sumbu, sehingga dan karenanya . Jadi untuk semua dan .  Tetapkan sembarang . Polinom satu variabel bernilai nol untuk setiap . Karena polinom satu variabel tak nol hanya mempunyai berhingga banyak akar, harus merupakan polinom nol. Maka untuk setiap dan setiap .  Sekarang tetapkan sembarang . Polinom satu variabel bernilai nol untuk semua , sehingga ia juga polinom nol. Khususnya . Karena sebarang, bernilai nol di seluruh , termasuk . Ini bertentangan dengan . Jadi tidak terbuka dalam topologi Zariski. Fakta tambahan bahwa memang menunjukkan bahwa tertutup, tetapi fakta itu sendiri bukan alasan ketidakterbukaannya.   Topologi Zariski pada garis adalah topologi kofinit   Jangkar sumber:  ex_TS_Zariski , tugas kelima (baris sumber 572--579). Buktikan bahwa topologi Zariski pada sama dengan topologi kofinit: setiap himpunan terbuka Zariski harus terbuka kofinit dan sebaliknya. Rubrik. Tangani polinom nol, polinom tak nol, himpunan terbuka kosong, dan komplemen berhingga sebarang. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Himpunan nol polinom satu variabel tak nol di berhingga, sedangkan .   Tahap 2. Gabungan tak kosong dari himpunan-himpunan kofinit tetap kofinit karena komplemen gabungan terkandung dalam komplemen salah satu sukunya.   Tahap 3. Jika berhingga, bangun polinom yang himpunan akarnya tepat dengan mengalikan faktor untuk .   Setiap anggota basis Zariski adalah kosong bila , atau mempunyai komplemen berhingga bila . Sebaliknya, untuk setiap himpunan berhingga , polinom memenuhi . Karena itu kedua koleksi himpunan terbuka sama.   Mula-mula ambil anggota basis Zariski . Jika adalah polinom nol, maka dan . Jika tak nol, teorema akar polinom satu variabel menyatakan bahwa berhingga, sehingga bersifat kofinit.  Himpunan terbuka Zariski adalah gabungan anggota-anggota basis itu. Gabungan kosong adalah . Jika sebuah gabungan tidak kosong, pilih satu anggota basis tak kosong di dalam gabungan tersebut. Komplemen seluruh gabungan terkandung dalam , yang berhingga. Jadi setiap himpunan terbuka Zariski adalah kosong atau kofinit, dan karenanya terbuka dalam topologi kofinit.  Sebaliknya, misalkan terbuka kofinit. Kasus sudah diberikan oleh . Jika untuk suatu himpunan berhingga , definisikan Bila , hasil kali kosong adalah dan . Bila tak kosong, tepat titik-titik yang menjadi akar , sehingga dan . Jadi setiap himpunan terbuka kofinit adalah terbuka Zariski. Kedua topologi tersebut sama.   "
+},
+{
+  "id": "o003-c90-ch12-exer-f-01",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-f.html#o003-c90-ch12-exer-f-01",
+  "type": "Pemeriksaan",
+  "number": "L.68",
+  "title": "Himpunan nol berupa dua garis vertikal.",
+  "body": "Himpunan nol berupa dua garis vertikal   Jangkar sumber:  ex_TS_Zariski , tugas pertama (baris sumber 536--542). Deskripsikan dalam untuk . Rubrik. Selesaikan persamaan nol dan jelaskan peran kedua koordinat secara geometris. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Faktorkan .   Tahap 2. Persamaan tersebut tidak membatasi .   Tahap 3. Gambarkan setiap nilai yang mungkin untuk dengan bebas.   Himpunan nolnya adalah Jadi merupakan gabungan dua garis vertikal dan .   Sebuah titik berada dalam tepat ketika Karena tidak mempunyai pembagi nol, kondisi ini ekuivalen dengan atau . Variabel sama sekali tidak muncul dalam persamaan, sehingga nilainya boleh berupa sembarang . Oleh sebab itu yaitu dua garis vertikal yang sejajar.  "
+},
+{
+  "id": "o003-c90-ch12-exer-f-02",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-f.html#o003-c90-ch12-exer-f-02",
+  "type": "Pemeriksaan",
+  "number": "L.69",
+  "title": "Garis nol bersama tiga polinom linear.",
+  "body": "Garis nol bersama tiga polinom linear   Jangkar sumber:  ex_TS_Zariski , tugas kedua (baris sumber 543--551). Dalam , deskripsikan untuk  Rubrik. Selesaikan ketiga persamaan secara bersamaan, parametrisasikan seluruh himpunan solusi, dan periksa kembali setiap persamaan. Ini adalah panduan pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Jumlahkan persamaan pertama dan kedua untuk menentukan .   Tahap 2. Substitusikan nilai itu ke persamaan pertama untuk memperoleh hubungan antara dan .   Tahap 3. Gunakan satu parameter bebas dan pastikan persamaan ketiga tidak menambahkan syarat baru.   Himpunan nol bersama tersebut adalah garis    Titik berada dalam tepat ketika memenuhi Menjumlahkan dua persamaan pertama menghasilkan , jadi . Persamaan pertama lalu menjadi , atau .  Tetapkan . Semua calon solusi berbentuk . Substitusi ke persamaan ketiga memberi , sehingga tidak ada syarat tambahan. Sebaliknya, setiap titik membuat ketiga polinom bernilai nol. Dengan demikian, .  "
+},
+{
+  "id": "o003-c90-ch12-exer-f-03",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-f.html#o003-c90-ch12-exer-f-03",
+  "type": "Pemeriksaan",
+  "number": "L.70",
+  "title": "Komplemen himpunan nol sebagai basis.",
+  "body": "Komplemen himpunan nol sebagai basis   Jangkar sumber:  ex_TS_Zariski , tugas ketiga (baris sumber 552--563). Untuk , tulis . Buktikan bahwa merupakan basis bagi suatu topologi pada . Rubrik. Buktikan bahwa anggota basis mencakup seluruh ruang dan bahwa irisan dua anggota basis memenuhi syarat irisan basis. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Hitung himpunan nol polinom konstan .   Tahap 2. Untuk dua polinom , sebuah titik gagal berada dalam dan tepat ketika hasil kali tidak nol.   Tahap 3. Simpulkan identitas ; identitas ini lebih kuat daripada syarat irisan yang diminta dalam definisi basis.   Karena , berlaku , sehingga anggota mencakup seluruh ruang. Selain itu, Jadi memenuhi kedua aksioma basis.   Polinom konstan tidak mempunyai titik nol. Karena itu dan . Khususnya, setiap titik berada dalam setidaknya satu anggota .  Ambil . Untuk setiap , Ekuivalensi tengah menggunakan fakta bahwa tidak mempunyai pembagi nol. Karena , himpunan adalah anggota . Jadi untuk setiap titik dalam irisan dua anggota basis terdapat anggota basis yang memuat titik itu dan terkandung dalam irisan tersebut; bahkan anggota itu sama dengan seluruh irisan. Maka merupakan basis bagi topologi Zariski pada .  "
+},
+{
+  "id": "o003-c90-ch12-exer-f-04",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-f.html#o003-c90-ch12-exer-f-04",
+  "type": "Pemeriksaan",
+  "number": "L.71",
+  "title": "Sumbu koordinat tidak terbuka secara Zariski.",
+  "body": "Sumbu koordinat tidak terbuka secara Zariski   Jangkar sumber:  ex_TS_Zariski , tugas keempat (baris sumber 564--571). Dalam dengan topologi Zariski, tentukan apakah terbuka, dan buktikan jawaban Anda. Rubrik. Jangan menyimpulkan “tidak terbuka” hanya karena tertutup. Gunakan anggota basis di sekitar titik asal dan sifat polinom yang memiliki tak berhingga banyak akar. Panduan ini adalah materi pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Andaikan terbuka. Karena dan himpunan membentuk basis, akan ada dengan .   Tahap 2. Inklusi tersebut memaksa untuk semua dan , tetapi .   Tahap 3. Tetapkan dahulu dan pandang sebagai polinom satu variabel dalam . Setelah itu tetapkan dan gunakan argumen yang sama dalam variabel .   Tidak. Jika terbuka, suatu lingkungan basis dari harus terkandung dalam . Hal ini memaksa lenyap pada semua titik dengan kedua koordinat tidak nol, sehingga argumen akar polinom satu variabel memaksa menjadi polinom nol. Itu bertentangan dengan , yang mensyaratkan .   Andaikan, untuk memperoleh kontradiksi, bahwa terbuka. Titik asal berada dalam . Karena himpunan-himpunan merupakan basis, terdapat dengan Keanggotaan pertama berarti . Sementara itu, bila dan , titik tidak berada pada salah satu sumbu, sehingga dan karenanya . Jadi untuk semua dan .  Tetapkan sembarang . Polinom satu variabel bernilai nol untuk setiap . Karena polinom satu variabel tak nol hanya mempunyai berhingga banyak akar, harus merupakan polinom nol. Maka untuk setiap dan setiap .  Sekarang tetapkan sembarang . Polinom satu variabel bernilai nol untuk semua , sehingga ia juga polinom nol. Khususnya . Karena sebarang, bernilai nol di seluruh , termasuk . Ini bertentangan dengan . Jadi tidak terbuka dalam topologi Zariski. Fakta tambahan bahwa memang menunjukkan bahwa tertutup, tetapi fakta itu sendiri bukan alasan ketidakterbukaannya.  "
+},
+{
+  "id": "o003-c90-ch12-exer-f-05",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-f.html#o003-c90-ch12-exer-f-05",
+  "type": "Pemeriksaan",
+  "number": "L.72",
+  "title": "Topologi Zariski pada garis adalah topologi kofinit.",
+  "body": "Topologi Zariski pada garis adalah topologi kofinit   Jangkar sumber:  ex_TS_Zariski , tugas kelima (baris sumber 572--579). Buktikan bahwa topologi Zariski pada sama dengan topologi kofinit: setiap himpunan terbuka Zariski harus terbuka kofinit dan sebaliknya. Rubrik. Tangani polinom nol, polinom tak nol, himpunan terbuka kosong, dan komplemen berhingga sebarang. Panduan ini adalah karya pendamping asli CC BY 4.0, bukan materi atau solusi resmi GVSU.    Tahap 1. Himpunan nol polinom satu variabel tak nol di berhingga, sedangkan .   Tahap 2. Gabungan tak kosong dari himpunan-himpunan kofinit tetap kofinit karena komplemen gabungan terkandung dalam komplemen salah satu sukunya.   Tahap 3. Jika berhingga, bangun polinom yang himpunan akarnya tepat dengan mengalikan faktor untuk .   Setiap anggota basis Zariski adalah kosong bila , atau mempunyai komplemen berhingga bila . Sebaliknya, untuk setiap himpunan berhingga , polinom memenuhi . Karena itu kedua koleksi himpunan terbuka sama.   Mula-mula ambil anggota basis Zariski . Jika adalah polinom nol, maka dan . Jika tak nol, teorema akar polinom satu variabel menyatakan bahwa berhingga, sehingga bersifat kofinit.  Himpunan terbuka Zariski adalah gabungan anggota-anggota basis itu. Gabungan kosong adalah . Jika sebuah gabungan tidak kosong, pilih satu anggota basis tak kosong di dalam gabungan tersebut. Komplemen seluruh gabungan terkandung dalam , yang berhingga. Jadi setiap himpunan terbuka Zariski adalah kosong atau kofinit, dan karenanya terbuka dalam topologi kofinit.  Sebaliknya, misalkan terbuka kofinit. Kasus sudah diberikan oleh . Jika untuk suatu himpunan berhingga , definisikan Bila , hasil kali kosong adalah dan . Bila tak kosong, tepat titik-titik yang menjadi akar , sehingga dan . Jadi setiap himpunan terbuka kofinit adalah terbuka Zariski. Kedua topologi tersebut sama.  "
+},
+{
+  "id": "o003-c90-ch12-exercise-guides-g",
+  "level": "1",
+  "url": "o003-c90-ch12-exercise-guides-g.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan sumber, bagian ketujuh",
+  "body": " Panduan latihan sumber, bagian ketujuh  Tujuh panduan berikut mendampingi latihan benar-salah pada sec_top_space_exer.ptx , baris sumber 581--651. Setiap jawaban benar disertai pembuktian, sedangkan setiap jawaban salah disertai contoh tandingan konkret. Panduan ini merupakan komponen asli CC BY 4.0 yang terpisah; panduan ini bukan materi, terjemahan resmi, atau solusi resmi Steven Schlicker maupun GVSU.  Koleksi lima himpunan   Jangkar sumber: tugas pada baris sumber 591--596. Tentukan benar atau salah: koleksi merupakan topologi pada . Rubrik. Periksa kedua himpunan wajib serta semua hasil gabungan dan irisan yang tidak langsung sepele.   Tahap 1. Namai dan .  Tahap 2. Amati bahwa dan .  Tahap 3. Setiap anggota selain adalah salah satu dari .   Benar. Koleksi itu tertutup terhadap gabungan sebarang dan irisan berhingga.   Koleksi memuat dan . Dengan notasi pada petunjuk, empat anggota selain membentuk topologi partisi pada : gabungan yang mungkin adalah , dan irisan yang mungkin juga salah satu dari keempat himpunan itu karena . Menambahkan tidak menimbulkan hasil baru: gabungan yang memuat adalah , sedangkan irisan dengan tidak mengubah faktor lainnya. Jadi semua gabungan sebarang dan irisan berhingga tetap berada dalam koleksi. Pernyataan benar.   Bilangan bulat dalam topologi kofinit   Jangkar sumber: tugas pada baris sumber 598--603. Tentukan benar atau salah: terbuka dalam yang diberi topologi komplemen berhingga. Rubrik. Gunakan definisi topologi kofinit dan tampilkan sifat komplemen yang menentukan jawaban.   Tahap 1. Himpunan terbuka tak kosong dalam topologi ini harus mempunyai komplemen berhingga.  Tahap 2. Periksa kardinalitas .   Salah. Komplemen tidak berhingga.   Dalam topologi kofinit pada , sebuah himpunan terbuka tepat ketika himpunan itu kosong atau komplemennya berhingga. Himpunan tidak kosong, sedangkan tidak berhingga; misalnya, semua bilangan untuk termasuk di dalamnya. Jadi bukan himpunan terbuka dan pernyataan salah.   Menguji basis yang diberikan   Jangkar sumber: tugas pada baris sumber 605--613. Tentukan benar atau salah: pada , koleksi merupakan basis untuk topologi . Rubrik. Verifikasi bahwa gabungan anggota basis menghasilkan tepat semua anggota , atau gunakan syarat basis dan identifikasi topologi yang dibangkitkan.   Tahap 1. Keempat himpunan basis menutupi .  Tahap 2. Irisan yang perlu diperhatikan adalah dan .  Tahap 3. Daftarkan semua gabungan berbeda dari anggota .   Benar. Gabungan anggota menghasilkan tepat delapan himpunan dalam daftar .   Koleksi menutupi , sebab . Untuk dua anggota basis yang beririsan dan titik pada irisannya, terdapat anggota basis yang memuat titik itu dan berada di dalam irisan: semua kasus inklusi langsung bersifat sepele, sedangkan irisan tak-sepele mengecil menjadi atau , yang keduanya anggota basis. Jadi memang basis suatu topologi.  Gabungan-gabungan berbeda yang dihasilkan adalah , , , , , , , dan . Daftar ini tepat sama dengan . Maka pernyataan benar.   Ruang diskret selalu termetriskan   Jangkar sumber: tugas pada baris sumber 615--622. Tentukan benar atau salah: jika tak kosong dan adalah topologi diskret, maka termetriskan. Rubrik. Berikan metrik eksplisit dan buktikan bahwa setiap subhimpunan terbuka dalam topologi metriknya.   Tahap 1. Gunakan metrik diskret: jarak nol untuk titik yang sama dan satu untuk titik yang berbeda.  Tahap 2. Bola berjari-jari di sekitar adalah .   Benar. Metrik diskret menghasilkan topologi diskret.   Definisikan jika dan jika . Fungsi ini memenuhi aksioma metrik. Untuk pertidaksamaan segitiga, jika ruas kiri nol; jika , paling sedikit satu dari atau berlaku, sehingga ruas kanan sekurang-kurangnya . Untuk setiap , berlaku . Jadi setiap singleton terbuka, dan setiap subhimpunan adalah gabungan singleton , sehingga terbuka. Topologi metrik yang dihasilkan adalah topologi diskret . Pernyataan benar.   Titik interior dalam ruang berhingga   Jangkar sumber: tugas pada baris sumber 624--634. Tentukan benar atau salah: adalah titik interior dari dalam , dengan dan  Rubrik. Tunjukkan satu lingkungan terbuka dari yang seluruhnya berada di dalam , atau buktikan bahwa lingkungan semacam itu tidak ada.   Tahap 1. Cari anggota daftar topologi yang memuat .  Tahap 2. Bandingkan dengan .   Benar, karena dan terbuka.   Menurut daftar pada soal, adalah himpunan terbuka. Himpunan ini memuat dan memenuhi . Jadi ada lingkungan terbuka dari yang terkandung dalam . Berdasarkan definisi titik interior, ; pernyataan benar.   Gabungan dua topologi   Jangkar sumber: tugas pada baris sumber 636--642. Tentukan benar atau salah: jika dan topologi pada , maka selalu topologi pada . Rubrik. Jika salah, berikan dua topologi eksplisit dan satu operasi topologi yang gagal pada gabungannya.   Tahap 1. Ambil .  Tahap 2. Bandingkan dan .  Tahap 3. Uji gabungan himpunan terbuka dan .   Salah. Dalam contoh pada petunjuk, dan berada dalam gabungan kedua topologi, tetapi tidak.   Pada , masing-masing koleksi dan adalah topologi: hanya ada satu himpunan terbuka tak-sepele di masing-masing koleksi, sehingga aksioma gabungan dan irisan langsung terpenuhi. Namun memuat dan tetapi tidak memuat gabungannya . Koleksi itu tidak tertutup terhadap gabungan dan bukan topologi. Jadi pernyataan salah.   Irisan dua topologi   Jangkar sumber: tugas pada baris sumber 644--650. Tentukan benar atau salah: jika dan topologi pada , maka selalu topologi pada . Rubrik. Verifikasi ketiga aksioma untuk himpunan yang menjadi anggota kedua topologi sekaligus.   Tahap 1. Kedua topologi memuat dan .  Tahap 2. Jika setiap berada dalam kedua topologi, maka gabungannya berada di mana?  Tahap 3. Terapkan argumen yang sama pada irisan berhingga.   Benar. Setiap aksioma topologi diwarisi oleh irisan koleksi kedua topologi.   Karena dan , kedua himpunan itu berada dalam . Ambil keluarga sebarang . Setiap berada dalam dan ; karena keduanya topologi, berada dalam keduanya, jadi berada dalam irisannya. Demikian pula, irisan berhingga anggota berada dalam masing-masing topologi dan karenanya dalam . Semua aksioma dipenuhi, jadi pernyataan benar.   "
+},
+{
+  "id": "o003-c90-ch12-exer-g-01",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-g.html#o003-c90-ch12-exer-g-01",
+  "type": "Pemeriksaan",
+  "number": "L.73",
+  "title": "Koleksi lima himpunan.",
+  "body": "Koleksi lima himpunan   Jangkar sumber: tugas pada baris sumber 591--596. Tentukan benar atau salah: koleksi merupakan topologi pada . Rubrik. Periksa kedua himpunan wajib serta semua hasil gabungan dan irisan yang tidak langsung sepele.   Tahap 1. Namai dan .  Tahap 2. Amati bahwa dan .  Tahap 3. Setiap anggota selain adalah salah satu dari .   Benar. Koleksi itu tertutup terhadap gabungan sebarang dan irisan berhingga.   Koleksi memuat dan . Dengan notasi pada petunjuk, empat anggota selain membentuk topologi partisi pada : gabungan yang mungkin adalah , dan irisan yang mungkin juga salah satu dari keempat himpunan itu karena . Menambahkan tidak menimbulkan hasil baru: gabungan yang memuat adalah , sedangkan irisan dengan tidak mengubah faktor lainnya. Jadi semua gabungan sebarang dan irisan berhingga tetap berada dalam koleksi. Pernyataan benar.  "
+},
+{
+  "id": "o003-c90-ch12-exer-g-02",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-g.html#o003-c90-ch12-exer-g-02",
+  "type": "Pemeriksaan",
+  "number": "L.74",
+  "title": "Bilangan bulat dalam topologi kofinit.",
+  "body": "Bilangan bulat dalam topologi kofinit   Jangkar sumber: tugas pada baris sumber 598--603. Tentukan benar atau salah: terbuka dalam yang diberi topologi komplemen berhingga. Rubrik. Gunakan definisi topologi kofinit dan tampilkan sifat komplemen yang menentukan jawaban.   Tahap 1. Himpunan terbuka tak kosong dalam topologi ini harus mempunyai komplemen berhingga.  Tahap 2. Periksa kardinalitas .   Salah. Komplemen tidak berhingga.   Dalam topologi kofinit pada , sebuah himpunan terbuka tepat ketika himpunan itu kosong atau komplemennya berhingga. Himpunan tidak kosong, sedangkan tidak berhingga; misalnya, semua bilangan untuk termasuk di dalamnya. Jadi bukan himpunan terbuka dan pernyataan salah.  "
+},
+{
+  "id": "o003-c90-ch12-exer-g-03",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-g.html#o003-c90-ch12-exer-g-03",
+  "type": "Pemeriksaan",
+  "number": "L.75",
+  "title": "Menguji basis yang diberikan.",
+  "body": "Menguji basis yang diberikan   Jangkar sumber: tugas pada baris sumber 605--613. Tentukan benar atau salah: pada , koleksi merupakan basis untuk topologi . Rubrik. Verifikasi bahwa gabungan anggota basis menghasilkan tepat semua anggota , atau gunakan syarat basis dan identifikasi topologi yang dibangkitkan.   Tahap 1. Keempat himpunan basis menutupi .  Tahap 2. Irisan yang perlu diperhatikan adalah dan .  Tahap 3. Daftarkan semua gabungan berbeda dari anggota .   Benar. Gabungan anggota menghasilkan tepat delapan himpunan dalam daftar .   Koleksi menutupi , sebab . Untuk dua anggota basis yang beririsan dan titik pada irisannya, terdapat anggota basis yang memuat titik itu dan berada di dalam irisan: semua kasus inklusi langsung bersifat sepele, sedangkan irisan tak-sepele mengecil menjadi atau , yang keduanya anggota basis. Jadi memang basis suatu topologi.  Gabungan-gabungan berbeda yang dihasilkan adalah , , , , , , , dan . Daftar ini tepat sama dengan . Maka pernyataan benar.  "
+},
+{
+  "id": "o003-c90-ch12-exer-g-04",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-g.html#o003-c90-ch12-exer-g-04",
+  "type": "Pemeriksaan",
+  "number": "L.76",
+  "title": "Ruang diskret selalu termetriskan.",
+  "body": "Ruang diskret selalu termetriskan   Jangkar sumber: tugas pada baris sumber 615--622. Tentukan benar atau salah: jika tak kosong dan adalah topologi diskret, maka termetriskan. Rubrik. Berikan metrik eksplisit dan buktikan bahwa setiap subhimpunan terbuka dalam topologi metriknya.   Tahap 1. Gunakan metrik diskret: jarak nol untuk titik yang sama dan satu untuk titik yang berbeda.  Tahap 2. Bola berjari-jari di sekitar adalah .   Benar. Metrik diskret menghasilkan topologi diskret.   Definisikan jika dan jika . Fungsi ini memenuhi aksioma metrik. Untuk pertidaksamaan segitiga, jika ruas kiri nol; jika , paling sedikit satu dari atau berlaku, sehingga ruas kanan sekurang-kurangnya . Untuk setiap , berlaku . Jadi setiap singleton terbuka, dan setiap subhimpunan adalah gabungan singleton , sehingga terbuka. Topologi metrik yang dihasilkan adalah topologi diskret . Pernyataan benar.  "
+},
+{
+  "id": "o003-c90-ch12-exer-g-05",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-g.html#o003-c90-ch12-exer-g-05",
+  "type": "Pemeriksaan",
+  "number": "L.77",
+  "title": "Titik interior dalam ruang berhingga.",
+  "body": "Titik interior dalam ruang berhingga   Jangkar sumber: tugas pada baris sumber 624--634. Tentukan benar atau salah: adalah titik interior dari dalam , dengan dan  Rubrik. Tunjukkan satu lingkungan terbuka dari yang seluruhnya berada di dalam , atau buktikan bahwa lingkungan semacam itu tidak ada.   Tahap 1. Cari anggota daftar topologi yang memuat .  Tahap 2. Bandingkan dengan .   Benar, karena dan terbuka.   Menurut daftar pada soal, adalah himpunan terbuka. Himpunan ini memuat dan memenuhi . Jadi ada lingkungan terbuka dari yang terkandung dalam . Berdasarkan definisi titik interior, ; pernyataan benar.  "
+},
+{
+  "id": "o003-c90-ch12-exer-g-06",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-g.html#o003-c90-ch12-exer-g-06",
+  "type": "Pemeriksaan",
+  "number": "L.78",
+  "title": "Gabungan dua topologi.",
+  "body": "Gabungan dua topologi   Jangkar sumber: tugas pada baris sumber 636--642. Tentukan benar atau salah: jika dan topologi pada , maka selalu topologi pada . Rubrik. Jika salah, berikan dua topologi eksplisit dan satu operasi topologi yang gagal pada gabungannya.   Tahap 1. Ambil .  Tahap 2. Bandingkan dan .  Tahap 3. Uji gabungan himpunan terbuka dan .   Salah. Dalam contoh pada petunjuk, dan berada dalam gabungan kedua topologi, tetapi tidak.   Pada , masing-masing koleksi dan adalah topologi: hanya ada satu himpunan terbuka tak-sepele di masing-masing koleksi, sehingga aksioma gabungan dan irisan langsung terpenuhi. Namun memuat dan tetapi tidak memuat gabungannya . Koleksi itu tidak tertutup terhadap gabungan dan bukan topologi. Jadi pernyataan salah.  "
+},
+{
+  "id": "o003-c90-ch12-exer-g-07",
+  "level": "2",
+  "url": "o003-c90-ch12-exercise-guides-g.html#o003-c90-ch12-exer-g-07",
+  "type": "Pemeriksaan",
+  "number": "L.79",
+  "title": "Irisan dua topologi.",
+  "body": "Irisan dua topologi   Jangkar sumber: tugas pada baris sumber 644--650. Tentukan benar atau salah: jika dan topologi pada , maka selalu topologi pada . Rubrik. Verifikasi ketiga aksioma untuk himpunan yang menjadi anggota kedua topologi sekaligus.   Tahap 1. Kedua topologi memuat dan .  Tahap 2. Jika setiap berada dalam kedua topologi, maka gabungannya berada di mana?  Tahap 3. Terapkan argumen yang sama pada irisan berhingga.   Benar. Setiap aksioma topologi diwarisi oleh irisan koleksi kedua topologi.   Karena dan , kedua himpunan itu berada dalam . Ambil keluarga sebarang . Setiap berada dalam dan ; karena keduanya topologi, berada dalam keduanya, jadi berada dalam irisannya. Demikian pula, irisan berhingga anggota berada dalam masing-masing topologi dan karenanya dalam . Semua aksioma dipenuhi, jadi pernyataan benar.  "
+},
+{
+  "id": "o003-c90-ch12-mastery",
+  "level": "1",
+  "url": "o003-c90-ch12-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 12",
+  "body": " Pemeriksaan penguasaan Bab 12  Delapan pemeriksaan berikut memadukan aksioma topologi, basis, lingkungan, interior, dan ketermetrikan dalam persoalan baru yang tidak mengulang tugas sumber. Materi ini ditulis secara mandiri dalam bahasa Indonesia untuk komponen pendamping berlisensi CC BY 4.0; materi ini bukan teks, terjemahan, atau solusi resmi GVSU. Cobalah setiap soal sebelum membuka petunjuk. Jawaban menyatakan hasil utama, sedangkan solusi memberikan penutupan matematis lengkap.  Mengapa irisan hanya berhingga  Jelaskan mengapa irisan setiap koleksi berhingga himpunan terbuka dalam ruang topologi tetap terbuka. Kemudian, dalam dengan topologi Euklides, tetapkan untuk . Tentukan dan buktikan bahwa hasilnya tidak terbuka. Jelaskan peran contoh ini dalam aksioma topologi.    Tahap 1. Gunakan aksioma irisan berhingga secara langsung; bila aksioma dinyatakan hanya untuk dua himpunan, gunakan induksi.   Tahap 2. Titik berada dalam semua . Untuk , pilih sehingga .   Tahap 3. Uji apakah ada interval terbuka berpusat di yang termuat dalam himpunan satu titik.   Irisan berhingga terbuka berdasarkan aksioma topologi, tetapi yang tidak terbuka dalam topologi Euklides. Jadi “berhingga” dalam aksioma irisan tidak dapat diganti dengan “sebarang”.   Aksioma topologi menyatakan bahwa irisan berhingga anggota topologi kembali menjadi anggota topologi. Jika versi aksioma yang digunakan hanya menyebut dua himpunan, kasus himpunan mengikuti dengan induksi: andaikan irisan himpunan terbuka bersifat terbuka, lalu iriskan hasil itu dengan himpunan terbuka ke- . Irisan keluarga kosong adalah seluruh ruang, yang juga terbuka.  Jelas untuk setiap . Sebaliknya, ambil . Berdasarkan sifat Archimedes, terdapat dengan , sehingga . Maka . Jadi satu-satunya titik yang berada dalam semua adalah .  Himpunan tidak terbuka dalam topologi Euklides. Untuk setiap , interval memuat, misalnya, , sehingga tidak terkandung dalam . Dengan demikian irisan terhitung himpunan terbuka dapat gagal terbuka. Contoh ini menunjukkan bahwa pembatasan pada irisan berhingga merupakan bagian esensial dari definisi topologi.   Geometri global topologi kofinit  Misalkan himpunan tak berhingga dan topologi kofinit pada . Buktikan bahwa setiap dua himpunan terbuka tak kosong beririsan. Untuk setiap , tentukan . Akhirnya, buktikan bahwa bukan topologi diskret dan bukan topologi indiskret.    Tahap 1. Komplemen irisan dua himpunan adalah gabungan kedua komplemennya. Gabungan dua himpunan berhingga tetap berhingga.   Tahap 2. Jika memuat himpunan terbuka tak kosong , bandingkan dengan .   Tahap 3. Bandingkan keterbukaan dan untuk sembarang .   Dua himpunan terbuka kofinit tak kosong selalu beririsan. Selain itu, Topologi ini bukan diskret karena himpunan satu titik tidak terbuka, dan bukan indiskret karena merupakan himpunan terbuka sejati.   Ambil dua himpunan terbuka tak kosong . Komplemen dan berhingga. Hukum De Morgan memberi sehingga komplemen berhingga. Jika , komplemennya adalah seluruh , yang akan berhingga; ini bertentangan dengan hipotesis. Jadi .  Jika atau berhingga, maka sendiri terbuka dan karenanya . Sekarang andaikan tidak terbuka. Bila terdapat himpunan terbuka tak kosong , maka . Ruas kanan berhingga, sehingga juga berhingga dan terbuka, sebuah kontradiksi. Jadi tidak ada himpunan terbuka tak kosong di dalam , dan .  Untuk , komplemen tak berhingga, sehingga tidak terbuka; maka topologi tidak diskret. Sebaliknya, mempunyai komplemen berhingga dan merupakan himpunan terbuka yang bukan maupun . Jadi topologi juga tidak indiskret.   Kehalusan mengubah data lokal  Misalkan dan topologi pada dengan . Untuk setiap , buktikan . Untuk setiap , buktikan pula bahwa setiap lingkungan dari adalah lingkungan dari . Berikan satu contoh yang membuat kedua inklusi tersebut ketat.    Tahap 1. Interior dari adalah himpunan -terbuka yang terkandung dalam .   Tahap 2. Sebuah lingkungan memuat suatu himpunan terbuka yang memuat titik pusatnya. Gunakan inklusi topologi pada himpunan terbuka saksi tersebut.   Tahap 3. Pada himpunan dengan sedikitnya dua titik, bandingkan topologi indiskret dan diskret untuk himpunan satu titik.   Topologi yang lebih halus mempunyai interior yang lebih besar dan lebih banyak lingkungan: dan . Kedua inklusi ketat untuk topologi indiskret dan diskret dengan pada ruang yang memiliki sedikitnya dua titik.   Himpunan bersifat -terbuka dan terkandung dalam . Karena , himpunan itu juga -terbuka. Interior adalah himpunan -terbuka terbesar di dalam , sehingga .  Jika merupakan lingkungan dari , ada dengan . Inklusi topologi memberi , sehingga himpunan terbuka yang sama membuktikan bahwa adalah lingkungan dari .  Ambil dengan sedikitnya dua titik, pilih , dan tetapkan serta . Untuk , berlaku tetapi . Himpunan sendiri adalah lingkungan dari , tetapi bukan lingkungan , sebab satu-satunya himpunan -terbuka yang memuat adalah , yang tidak terkandung dalam . Jadi kedua inklusi dapat ketat.   Dua basis, satu topologi  Misalkan dan basis pada himpunan . Buktikan bahwa keduanya membangkitkan topologi yang sama jika dan hanya jika berlaku dua syarat pemurnian lokal berikut:   untuk setiap , terdapat dengan ;    untuk setiap , terdapat dengan .   Kemudian gunakan kriteria ini untuk membuktikan bahwa semua interval terbuka dan semua interval terbuka dengan membangkitkan topologi Euklides yang sama pada . Verifikasi bahwa koleksi kedua memang basis.    Tahap 1. Jika syarat pemurnian dari ke berlaku, tulis setiap sebagai gabungan elemen-elemen .   Tahap 2. Untuk arah perlu, ingat bahwa anggota basis terbuka dalam topologi yang dibangkitkannya dan gunakan pencirian terbuka dengan elemen basis di sekitar setiap titik.   Tahap 3. Gunakan kerapatan untuk memilih ketika .   Pemurnian lokal dua arah ekuivalen dengan kesamaan topologi yang dibangkitkan. Interval berujung rasional membentuk basis, dan setiap interval real dapat dimurnikan di setiap titik oleh interval berujung rasional. Arah sebaliknya langsung karena setiap interval berujung rasional juga interval terbuka real. Jadi kedua basis menghasilkan topologi Euklides.   Andaikan syarat pertama berlaku. Untuk setiap dan setiap , pilih dengan . Maka , sehingga setiap anggota terbuka dalam topologi yang dibangkitkan . Setiap himpunan terbuka yang dibangkitkan adalah gabungan anggota , jadi juga terbuka dalam topologi . Dengan demikian . Syarat kedua memberi inklusi balik dengan argumen yang sama.  Sebaliknya, andaikan . Jika , himpunan terbuka dalam topologi . Karena basis, ada dengan . Ini memberi syarat pertama; menukar peran kedua basis memberi syarat kedua.  Sekarang tetapkan dan . Setiap berada dalam interval berujung rasional karena terdapat dengan . Jika berada dalam irisan dua interval berujung rasional, kerapatan bilangan rasional menyediakan sehingga . Maka dan interval ini terkandung dalam irisan. Jadi adalah basis.  Karena , setiap anggota basis rasional sudah merupakan anggota basis Euklides. Sebaliknya, jika , pilih bilangan rasional dengan . Maka . Kriteria pemurnian lokal dua arah membuktikan bahwa kedua basis membangkitkan topologi yang sama.   Interior dibaca langsung dari basis  Misalkan basis untuk topologi pada dan . Buktikan rumus Kemudian gunakan basis interval berujung rasional pada untuk menghitung interior .    Tahap 1. Gabungan semua elemen basis yang termuat dalam adalah himpunan terbuka yang termuat dalam .   Tahap 2. Jika , gunakan sifat basis pada himpunan terbuka untuk menemukan elemen basis yang memuat dan termuat dalam .   Tahap 3. Titik-titik mempunyai interval kecil berujung rasional di dalam ; uji secara terpisah titik .   Interior adalah tepat gabungan semua elemen basis yang terkandung dalam himpunan tersebut. Untuk dalam topologi Euklides,    Tetapkan . Himpunan terbuka sebagai gabungan elemen basis dan memenuhi . Karena adalah himpunan terbuka terbesar yang terkandung dalam , diperoleh .  Sebaliknya, ambil . Interior itu terbuka, dan adalah basis, sehingga terdapat dengan . Maka muncul dalam gabungan yang mendefinisikan , sehingga . Jadi , dan kedua inklusi membuktikan rumus tersebut.  Untuk setiap , kerapatan memberi dengan . Maka interval basis memuat dan termuat dalam . Jadi . Tidak ada interval terbuka yang memuat atau dan tetap termuat dalam , sedangkan setiap interval terbuka yang memuat juga memuat titik selain di luar . Titik di luar tentu bukan titik interior. Karena itu .   Metrik terpotong, topologi tetap  Misalkan ruang metrik dan definisikan . Buktikan bahwa merupakan metrik pada dan bahwa serta membangkitkan topologi yang sama. Jelaskan informasi jarak apa yang hilang ketika diganti oleh .    Tahap 1. Untuk pertidaksamaan segitiga, gunakan dan buktikan bagi .   Tahap 2. Jika , bandingkan langsung dan .   Tahap 3. Dalam pembuktian keterbukaan, selalu perkecil radius menjadi paling besar sebelum membandingkan bola.   Fungsi memenuhi semua aksioma metrik. Untuk , berlaku ; karena bola beradius kecil membentuk basis lokal, kedua metrik menghasilkan topologi yang sama. Pemotongan menghapus perbedaan semua jarak yang semula lebih besar daripada atau sama dengan , tetapi tidak mengubah struktur terbuka lokal.   Jelas , simetris, dan tepat ketika , yakni ketika . Untuk pertidaksamaan segitiga, tulis dan . Dari pertidaksamaan segitiga bagi , Untuk membuktikan pertidaksamaan kedua, jika atau , ruas kanan sedikitnya , sedangkan ruas kiri paling besar . Jika , ruas kanan adalah dan ruas kiri paling besar . Jadi , dan merupakan metrik.  Untuk , kondisi ekuivalen dengan . Memang, bila minimum lebih kecil daripada , nilai minimum itu tidak mungkin berasal dari ; arah sebaliknya langsung. Jadi untuk semua radius tersebut.  Jika terbuka terhadap dan , pilih dengan , lalu tetapkan . Bola termuat dalam , sehingga terbuka terhadap . Argumen yang sama dengan peran metrik ditukar memberi arah balik. Maka topologinya sama. Namun setiap jarak menjadi tepat di bawah ; data jarak skala besar itu hilang meskipun data keterbukaan lokal tetap.   Ruang hingga termetriskan harus diskret  Buktikan bahwa topologi yang diinduksi oleh metrik apa pun pada himpunan hingga adalah topologi diskret. Kemudian konstruksikan metrik yang menginduksi topologi diskret dan simpulkan bahwa suatu topologi pada himpunan hingga termetriskan jika dan hanya jika topologi itu diskret.    Tahap 1. Untuk dengan , ambil minimum jarak positif dari ke semua titik lain.   Tahap 2. Bola dengan radius setengah minimum tersebut hanya memuat . Gunakan gabungan himpunan satu titik untuk menangani subhimpunan sebarang.   Tahap 3. Untuk arah sebaliknya, gunakan metrik yang bernilai pada pasangan titik yang sama dan pada pasangan titik yang berbeda.   Pada himpunan hingga, setiap titik mempunyai jarak positif minimum ke titik-titik lain, sehingga setiap himpunan satu titik terbuka dan topologinya diskret. Sebaliknya, metrik diskret menginduksi topologi diskret. Jadi topologi hingga termetriskan tepat ketika diskret.   Misalkan metrik pada himpunan hingga . Jika atau , topologinya langsung diskret. Jika mempunyai lebih dari satu titik, untuk setiap himpunan berhingga terdiri atas bilangan positif dan karena itu mempunyai minimum positif . Bola tidak dapat memuat titik , jadi bola itu sama dengan .  Dengan demikian setiap himpunan satu titik terbuka. Setiap adalah gabungan , sehingga setiap subhimpunan terbuka. Topologi metrik tersebut adalah topologi diskret. Akibatnya, topologi nondiskret pada himpunan hingga tidak mungkin diinduksi oleh metrik.  Untuk arah sebaliknya, definisikan Ini merupakan metrik, dan . Maka semua himpunan satu titik, dan selanjutnya semua subhimpunan, terbuka. Jadi topologi diskret memang termetriskan, yang melengkapi ekuivalensi.   Lingkungan menentukan topologi  Misalkan dan dua topologi pada himpunan . Untuk setiap , andaikan sebuah subhimpunan merupakan lingkungan dari jika dan hanya jika ia merupakan lingkungan dari . Buktikan bahwa . Dengan kata lain, seluruh data lingkungan menentukan topologi secara tunggal.    Tahap 1. Ambil . Untuk setiap , himpunan sendiri merupakan lingkungan dari .   Tahap 2. Gunakan hipotesis untuk memilih himpunan -terbuka dengan .   Tahap 3. Tulis sebagai gabungan semua , lalu ulangi argumen dengan peran kedua topologi ditukar.   Setiap merupakan lingkungan dari setiap titiknya, sehingga adalah gabungan himpunan-himpunan -terbuka dan karenanya . Ini memberi ; simetri memberi inklusi balik.   Ambil sembarang . Untuk setiap , himpunan adalah himpunan -terbuka yang memuat , sehingga merupakan lingkungan dari . Berdasarkan hipotesis, juga merupakan lingkungan dari . Oleh definisi lingkungan, terdapat dengan .  Setiap termuat dalam , sedangkan setiap titik berada dalam . Karena itu Gabungan sebarang himpunan -terbuka bersifat -terbuka, sehingga . Maka .  Hipotesis kesamaan lingkungan bersifat simetris. Mengulangi argumen dengan dan ditukar menghasilkan . Oleh sebab itu , jadi data semua lingkungan memang menentukan topologi secara unik.   "
+},
+{
+  "id": "o003-c90-ch12-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "L.80",
+  "title": "Mengapa irisan hanya berhingga.",
+  "body": "Mengapa irisan hanya berhingga  Jelaskan mengapa irisan setiap koleksi berhingga himpunan terbuka dalam ruang topologi tetap terbuka. Kemudian, dalam dengan topologi Euklides, tetapkan untuk . Tentukan dan buktikan bahwa hasilnya tidak terbuka. Jelaskan peran contoh ini dalam aksioma topologi.    Tahap 1. Gunakan aksioma irisan berhingga secara langsung; bila aksioma dinyatakan hanya untuk dua himpunan, gunakan induksi.   Tahap 2. Titik berada dalam semua . Untuk , pilih sehingga .   Tahap 3. Uji apakah ada interval terbuka berpusat di yang termuat dalam himpunan satu titik.   Irisan berhingga terbuka berdasarkan aksioma topologi, tetapi yang tidak terbuka dalam topologi Euklides. Jadi “berhingga” dalam aksioma irisan tidak dapat diganti dengan “sebarang”.   Aksioma topologi menyatakan bahwa irisan berhingga anggota topologi kembali menjadi anggota topologi. Jika versi aksioma yang digunakan hanya menyebut dua himpunan, kasus himpunan mengikuti dengan induksi: andaikan irisan himpunan terbuka bersifat terbuka, lalu iriskan hasil itu dengan himpunan terbuka ke- . Irisan keluarga kosong adalah seluruh ruang, yang juga terbuka.  Jelas untuk setiap . Sebaliknya, ambil . Berdasarkan sifat Archimedes, terdapat dengan , sehingga . Maka . Jadi satu-satunya titik yang berada dalam semua adalah .  Himpunan tidak terbuka dalam topologi Euklides. Untuk setiap , interval memuat, misalnya, , sehingga tidak terkandung dalam . Dengan demikian irisan terhitung himpunan terbuka dapat gagal terbuka. Contoh ini menunjukkan bahwa pembatasan pada irisan berhingga merupakan bagian esensial dari definisi topologi.  "
+},
+{
+  "id": "o003-c90-ch12-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "L.81",
+  "title": "Geometri global topologi kofinit.",
+  "body": "Geometri global topologi kofinit  Misalkan himpunan tak berhingga dan topologi kofinit pada . Buktikan bahwa setiap dua himpunan terbuka tak kosong beririsan. Untuk setiap , tentukan . Akhirnya, buktikan bahwa bukan topologi diskret dan bukan topologi indiskret.    Tahap 1. Komplemen irisan dua himpunan adalah gabungan kedua komplemennya. Gabungan dua himpunan berhingga tetap berhingga.   Tahap 2. Jika memuat himpunan terbuka tak kosong , bandingkan dengan .   Tahap 3. Bandingkan keterbukaan dan untuk sembarang .   Dua himpunan terbuka kofinit tak kosong selalu beririsan. Selain itu, Topologi ini bukan diskret karena himpunan satu titik tidak terbuka, dan bukan indiskret karena merupakan himpunan terbuka sejati.   Ambil dua himpunan terbuka tak kosong . Komplemen dan berhingga. Hukum De Morgan memberi sehingga komplemen berhingga. Jika , komplemennya adalah seluruh , yang akan berhingga; ini bertentangan dengan hipotesis. Jadi .  Jika atau berhingga, maka sendiri terbuka dan karenanya . Sekarang andaikan tidak terbuka. Bila terdapat himpunan terbuka tak kosong , maka . Ruas kanan berhingga, sehingga juga berhingga dan terbuka, sebuah kontradiksi. Jadi tidak ada himpunan terbuka tak kosong di dalam , dan .  Untuk , komplemen tak berhingga, sehingga tidak terbuka; maka topologi tidak diskret. Sebaliknya, mempunyai komplemen berhingga dan merupakan himpunan terbuka yang bukan maupun . Jadi topologi juga tidak indiskret.  "
+},
+{
+  "id": "o003-c90-ch12-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "L.82",
+  "title": "Kehalusan mengubah data lokal.",
+  "body": "Kehalusan mengubah data lokal  Misalkan dan topologi pada dengan . Untuk setiap , buktikan . Untuk setiap , buktikan pula bahwa setiap lingkungan dari adalah lingkungan dari . Berikan satu contoh yang membuat kedua inklusi tersebut ketat.    Tahap 1. Interior dari adalah himpunan -terbuka yang terkandung dalam .   Tahap 2. Sebuah lingkungan memuat suatu himpunan terbuka yang memuat titik pusatnya. Gunakan inklusi topologi pada himpunan terbuka saksi tersebut.   Tahap 3. Pada himpunan dengan sedikitnya dua titik, bandingkan topologi indiskret dan diskret untuk himpunan satu titik.   Topologi yang lebih halus mempunyai interior yang lebih besar dan lebih banyak lingkungan: dan . Kedua inklusi ketat untuk topologi indiskret dan diskret dengan pada ruang yang memiliki sedikitnya dua titik.   Himpunan bersifat -terbuka dan terkandung dalam . Karena , himpunan itu juga -terbuka. Interior adalah himpunan -terbuka terbesar di dalam , sehingga .  Jika merupakan lingkungan dari , ada dengan . Inklusi topologi memberi , sehingga himpunan terbuka yang sama membuktikan bahwa adalah lingkungan dari .  Ambil dengan sedikitnya dua titik, pilih , dan tetapkan serta . Untuk , berlaku tetapi . Himpunan sendiri adalah lingkungan dari , tetapi bukan lingkungan , sebab satu-satunya himpunan -terbuka yang memuat adalah , yang tidak terkandung dalam . Jadi kedua inklusi dapat ketat.  "
+},
+{
+  "id": "o003-c90-ch12-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "L.83",
+  "title": "Dua basis, satu topologi.",
+  "body": "Dua basis, satu topologi  Misalkan dan basis pada himpunan . Buktikan bahwa keduanya membangkitkan topologi yang sama jika dan hanya jika berlaku dua syarat pemurnian lokal berikut:   untuk setiap , terdapat dengan ;    untuk setiap , terdapat dengan .   Kemudian gunakan kriteria ini untuk membuktikan bahwa semua interval terbuka dan semua interval terbuka dengan membangkitkan topologi Euklides yang sama pada . Verifikasi bahwa koleksi kedua memang basis.    Tahap 1. Jika syarat pemurnian dari ke berlaku, tulis setiap sebagai gabungan elemen-elemen .   Tahap 2. Untuk arah perlu, ingat bahwa anggota basis terbuka dalam topologi yang dibangkitkannya dan gunakan pencirian terbuka dengan elemen basis di sekitar setiap titik.   Tahap 3. Gunakan kerapatan untuk memilih ketika .   Pemurnian lokal dua arah ekuivalen dengan kesamaan topologi yang dibangkitkan. Interval berujung rasional membentuk basis, dan setiap interval real dapat dimurnikan di setiap titik oleh interval berujung rasional. Arah sebaliknya langsung karena setiap interval berujung rasional juga interval terbuka real. Jadi kedua basis menghasilkan topologi Euklides.   Andaikan syarat pertama berlaku. Untuk setiap dan setiap , pilih dengan . Maka , sehingga setiap anggota terbuka dalam topologi yang dibangkitkan . Setiap himpunan terbuka yang dibangkitkan adalah gabungan anggota , jadi juga terbuka dalam topologi . Dengan demikian . Syarat kedua memberi inklusi balik dengan argumen yang sama.  Sebaliknya, andaikan . Jika , himpunan terbuka dalam topologi . Karena basis, ada dengan . Ini memberi syarat pertama; menukar peran kedua basis memberi syarat kedua.  Sekarang tetapkan dan . Setiap berada dalam interval berujung rasional karena terdapat dengan . Jika berada dalam irisan dua interval berujung rasional, kerapatan bilangan rasional menyediakan sehingga . Maka dan interval ini terkandung dalam irisan. Jadi adalah basis.  Karena , setiap anggota basis rasional sudah merupakan anggota basis Euklides. Sebaliknya, jika , pilih bilangan rasional dengan . Maka . Kriteria pemurnian lokal dua arah membuktikan bahwa kedua basis membangkitkan topologi yang sama.  "
+},
+{
+  "id": "o003-c90-ch12-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "L.84",
+  "title": "Interior dibaca langsung dari basis.",
+  "body": "Interior dibaca langsung dari basis  Misalkan basis untuk topologi pada dan . Buktikan rumus Kemudian gunakan basis interval berujung rasional pada untuk menghitung interior .    Tahap 1. Gabungan semua elemen basis yang termuat dalam adalah himpunan terbuka yang termuat dalam .   Tahap 2. Jika , gunakan sifat basis pada himpunan terbuka untuk menemukan elemen basis yang memuat dan termuat dalam .   Tahap 3. Titik-titik mempunyai interval kecil berujung rasional di dalam ; uji secara terpisah titik .   Interior adalah tepat gabungan semua elemen basis yang terkandung dalam himpunan tersebut. Untuk dalam topologi Euklides,    Tetapkan . Himpunan terbuka sebagai gabungan elemen basis dan memenuhi . Karena adalah himpunan terbuka terbesar yang terkandung dalam , diperoleh .  Sebaliknya, ambil . Interior itu terbuka, dan adalah basis, sehingga terdapat dengan . Maka muncul dalam gabungan yang mendefinisikan , sehingga . Jadi , dan kedua inklusi membuktikan rumus tersebut.  Untuk setiap , kerapatan memberi dengan . Maka interval basis memuat dan termuat dalam . Jadi . Tidak ada interval terbuka yang memuat atau dan tetap termuat dalam , sedangkan setiap interval terbuka yang memuat juga memuat titik selain di luar . Titik di luar tentu bukan titik interior. Karena itu .  "
+},
+{
+  "id": "o003-c90-ch12-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "L.85",
+  "title": "Metrik terpotong, topologi tetap.",
+  "body": "Metrik terpotong, topologi tetap  Misalkan ruang metrik dan definisikan . Buktikan bahwa merupakan metrik pada dan bahwa serta membangkitkan topologi yang sama. Jelaskan informasi jarak apa yang hilang ketika diganti oleh .    Tahap 1. Untuk pertidaksamaan segitiga, gunakan dan buktikan bagi .   Tahap 2. Jika , bandingkan langsung dan .   Tahap 3. Dalam pembuktian keterbukaan, selalu perkecil radius menjadi paling besar sebelum membandingkan bola.   Fungsi memenuhi semua aksioma metrik. Untuk , berlaku ; karena bola beradius kecil membentuk basis lokal, kedua metrik menghasilkan topologi yang sama. Pemotongan menghapus perbedaan semua jarak yang semula lebih besar daripada atau sama dengan , tetapi tidak mengubah struktur terbuka lokal.   Jelas , simetris, dan tepat ketika , yakni ketika . Untuk pertidaksamaan segitiga, tulis dan . Dari pertidaksamaan segitiga bagi , Untuk membuktikan pertidaksamaan kedua, jika atau , ruas kanan sedikitnya , sedangkan ruas kiri paling besar . Jika , ruas kanan adalah dan ruas kiri paling besar . Jadi , dan merupakan metrik.  Untuk , kondisi ekuivalen dengan . Memang, bila minimum lebih kecil daripada , nilai minimum itu tidak mungkin berasal dari ; arah sebaliknya langsung. Jadi untuk semua radius tersebut.  Jika terbuka terhadap dan , pilih dengan , lalu tetapkan . Bola termuat dalam , sehingga terbuka terhadap . Argumen yang sama dengan peran metrik ditukar memberi arah balik. Maka topologinya sama. Namun setiap jarak menjadi tepat di bawah ; data jarak skala besar itu hilang meskipun data keterbukaan lokal tetap.  "
+},
+{
+  "id": "o003-c90-ch12-mastery-07",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-07",
+  "type": "Pemeriksaan",
+  "number": "L.86",
+  "title": "Ruang hingga termetriskan harus diskret.",
+  "body": "Ruang hingga termetriskan harus diskret  Buktikan bahwa topologi yang diinduksi oleh metrik apa pun pada himpunan hingga adalah topologi diskret. Kemudian konstruksikan metrik yang menginduksi topologi diskret dan simpulkan bahwa suatu topologi pada himpunan hingga termetriskan jika dan hanya jika topologi itu diskret.    Tahap 1. Untuk dengan , ambil minimum jarak positif dari ke semua titik lain.   Tahap 2. Bola dengan radius setengah minimum tersebut hanya memuat . Gunakan gabungan himpunan satu titik untuk menangani subhimpunan sebarang.   Tahap 3. Untuk arah sebaliknya, gunakan metrik yang bernilai pada pasangan titik yang sama dan pada pasangan titik yang berbeda.   Pada himpunan hingga, setiap titik mempunyai jarak positif minimum ke titik-titik lain, sehingga setiap himpunan satu titik terbuka dan topologinya diskret. Sebaliknya, metrik diskret menginduksi topologi diskret. Jadi topologi hingga termetriskan tepat ketika diskret.   Misalkan metrik pada himpunan hingga . Jika atau , topologinya langsung diskret. Jika mempunyai lebih dari satu titik, untuk setiap himpunan berhingga terdiri atas bilangan positif dan karena itu mempunyai minimum positif . Bola tidak dapat memuat titik , jadi bola itu sama dengan .  Dengan demikian setiap himpunan satu titik terbuka. Setiap adalah gabungan , sehingga setiap subhimpunan terbuka. Topologi metrik tersebut adalah topologi diskret. Akibatnya, topologi nondiskret pada himpunan hingga tidak mungkin diinduksi oleh metrik.  Untuk arah sebaliknya, definisikan Ini merupakan metrik, dan . Maka semua himpunan satu titik, dan selanjutnya semua subhimpunan, terbuka. Jadi topologi diskret memang termetriskan, yang melengkapi ekuivalensi.  "
+},
+{
+  "id": "o003-c90-ch12-mastery-08",
+  "level": "2",
+  "url": "o003-c90-ch12-mastery.html#o003-c90-ch12-mastery-08",
+  "type": "Pemeriksaan",
+  "number": "L.87",
+  "title": "Lingkungan menentukan topologi.",
+  "body": "Lingkungan menentukan topologi  Misalkan dan dua topologi pada himpunan . Untuk setiap , andaikan sebuah subhimpunan merupakan lingkungan dari jika dan hanya jika ia merupakan lingkungan dari . Buktikan bahwa . Dengan kata lain, seluruh data lingkungan menentukan topologi secara tunggal.    Tahap 1. Ambil . Untuk setiap , himpunan sendiri merupakan lingkungan dari .   Tahap 2. Gunakan hipotesis untuk memilih himpunan -terbuka dengan .   Tahap 3. Tulis sebagai gabungan semua , lalu ulangi argumen dengan peran kedua topologi ditukar.   Setiap merupakan lingkungan dari setiap titiknya, sehingga adalah gabungan himpunan-himpunan -terbuka dan karenanya . Ini memberi ; simetri memberi inklusi balik.   Ambil sembarang . Untuk setiap , himpunan adalah himpunan -terbuka yang memuat , sehingga merupakan lingkungan dari . Berdasarkan hipotesis, juga merupakan lingkungan dari . Oleh definisi lingkungan, terdapat dengan .  Setiap termuat dalam , sedangkan setiap titik berada dalam . Karena itu Gabungan sebarang himpunan -terbuka bersifat -terbuka, sehingga . Maka .  Hipotesis kesamaan lingkungan bersifat simetris. Mengulangi argumen dengan dan ditukar menghasilkan . Oleh sebab itu , jadi data semua lingkungan memang menentukan topologi secara unik.  "
 },
 {
   "id": "index-1",

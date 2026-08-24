@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24",
+  "status": "pass",
+  "surface": "output/chapters01-12-html",
+  "canonical_html_manifest_sha256": "bb8cb02b6bcb928b9adaa8bcd2207a7e887efa3ebded3b303132a6998a059907",
+  "language": "id-ID",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "document_scroll_width": 1425,
+      "main_left": 240,
+      "main_width": 1185,
+      "main_right": 1425,
+      "result": "fills the available desktop main column with no horizontal overflow"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "document_scroll_width": 1265,
+      "main_left": 240,
+      "main_width": 1025,
+      "main_right": 1265,
+      "result": "fills the available desktop main column with no horizontal overflow"
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "document_scroll_width": 1009,
+      "main_left": 240,
+      "main_width": 769,
+      "main_right": 1009,
+      "result": "fills the available main column with no horizontal overflow"
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "document_scroll_width": 753,
+      "main_left": 0,
+      "main_width": 753,
+      "main_right": 753,
+      "result": "single-column reflow with no horizontal overflow"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "document_scroll_width": 375,
+      "main_left": 0,
+      "main_width": 375,
+      "main_right": 375,
+      "result": "mobile single-column reflow with no horizontal overflow"
+    }
+  ],
+  "surfaces_checked": [
+    "o003-c90-chapters-01-12-reader.html",
+    "o003-c90-ch12-source-guides-e.html",
+    "o003-c90-ch12-mastery.html",
+    "chap_Product_topology.html",
+    "o003-c90-ch12-edition-note.html"
+  ],
+  "surface_regression": {
+    "desktop": {
+      "widths": [1440, 1280, 1024],
+      "pages_checked": 5,
+      "result": "page fill, localized navigation, mathematics, and reading measure pass without clipping or document overflow"
+    },
+    "tablet_and_mobile": {
+      "widths": [768, 390],
+      "pages_checked": 5,
+      "result": "masthead, navigation, long mathematics, and staged content reflow to the viewport without clipping or document overflow"
+    }
+  },
+  "staged_disclosures": {
+    "chapter_12_neighborhood_guide_live_interaction": {
+      "exercise": "o003-c90-ch12-guide-21",
+      "checked": [
+        "collapsed exercise",
+        "statement expansion",
+        "hint expansion",
+        "answer expansion",
+        "solution expansion"
+      ],
+      "open_knowl_outputs": 4,
+      "mobile_document_scroll_width": 375,
+      "result": "all controls reveal the corrected Indonesian mathematics and reflow without horizontal overflow"
+    },
+    "chapter_12_mastery_live_interaction": {
+      "exercise": "o003-c90-ch12-mastery-01",
+      "checked": [
+        "collapsed exercise",
+        "statement expansion",
+        "hint expansion",
+        "answer expansion",
+        "solution expansion"
+      ],
+      "open_knowl_outputs": 4,
+      "mobile_document_scroll_width": 375,
+      "result": "all controls reveal the intended Indonesian surface without horizontal overflow"
+    },
+    "static_closure": {
+      "source_prompt_entries": 79,
+      "mastery_entries": 8,
+      "staged_surfaces": 348,
+      "source": "qa/CHAPTER12_COMPANION_QA.json and generated companion HTML controls",
+      "result": "pass"
+    }
+  },
+  "checks": {
+    "reader_centering_and_fill": "pass",
+    "responsive_reflow": "pass",
+    "long_masthead_wrap": "pass",
+    "navigation_labels": "pass",
+    "chapter_12_reflow": "pass",
+    "corrected_neighborhood_set_display": "pass in live mobile and desktop rendering",
+    "forward_reference_placeholder": "pass; Chapter 13 resolves to an explicit Indonesian next-boundary page",
+    "staged_hint_answer_solution": "pass by live interaction and static closure",
+    "document_horizontal_overflow": "none on checked pages and viewports",
+    "html_language": "id-ID",
+    "generated_english_chrome": "none on checked surfaces",
+    "browser_console_errors": "none",
+    "browser_console_warnings": "only the known MathJax component-version warnings for [tex]/newcommand and [pretext]/mathjaxknowl3.js",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra appears once in the edition note",
+    "rights_and_nonendorsement": "edition note visibly preserves GVSU identity, CC BY-NC-SA 3.0, separate CC BY 4.0 companion rights, and no-official-endorsement wording",
+    "offline_dependency_status": "not closed at this partial boundary; the external host census remains explicit in CHAPTER12_HTML_QA.json and whole-edition offline closure remains required"
+  },
+  "visual_inspection": {
+    "desktop": "The corrected Chapter 12 guide, mastery surface, edition note, reader front page, and forward-boundary page fill the available main column; headings, prose, formulas, and navigation are unclipped.",
+    "mobile": "The 390-pixel reader masthead and contents reflow cleanly. The corrected guide and mastery exercise each opened statement, hint, answer, and complete solution in a 375-pixel document with no horizontal overflow."
+  },
+  "evidence": [
+    {
+      "path": "qa/CHAPTER12_HTML_MANIFEST.json",
+      "bytes": 1781762,
+      "sha256": "e669bddb1dc6b871b309dd13fafd3c2fafabfd91b23c7708bc9adff46e17cad9"
+    },
+    {
+      "path": "qa/CHAPTER12_HTML_QA.json",
+      "bytes": 1648,
+      "sha256": "824142ac7c25b3e4ad80227e8933633ef970d188dc3b3136940986b5d4b8d364"
+    }
+  ],
+  "failures": []
+}

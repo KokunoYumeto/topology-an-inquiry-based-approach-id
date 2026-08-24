@@ -108,6 +108,9 @@ def main() -> int:
     except Exception:
         outline_nodes = []
     outlines = flatten_outlines(reader, outline_nodes)
+    outline_replacement_titles = [
+        row for row in outlines if "\ufffd" in str(row.get("title", ""))
+    ]
 
     names = dereference(root.get("/Names", {})) or {}
     mark_info = dereference(root.get("/MarkInfo", {})) or {}
@@ -139,6 +142,7 @@ def main() -> int:
         "outlines": {
             "count": len(outlines),
             "max_depth": max((row["depth"] for row in outlines), default=0),
+            "replacement_character_titles": outline_replacement_titles,
             "entries": outlines,
         },
         "annotations": {
@@ -181,6 +185,8 @@ def main() -> int:
         )
     if relative_uri_targets:
         failures.append("relative URI annotation remains")
+    if outline_replacement_titles:
+        failures.append("outline title contains a replacement character")
     report["failures"] = failures
     report["caveats"] = caveats
     report["status"] = "pass" if not failures else "fail"

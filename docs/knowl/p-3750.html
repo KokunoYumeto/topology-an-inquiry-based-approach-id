@@ -13,16 +13,25 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">Andaikan <span class="process-math">\(C_A\)</span> tertutup di <span class="process-math">\(A\text{.}\)</span> Maka <span class="process-math">\(U_A=A\setminus C_A\)</span> terbuka di <span class="process-math">\(A\text{,}\)</span> sehingga terdapat <span class="process-math">\(O_X\)</span> terbuka di <span class="process-math">\(X\)</span> dengan <span class="process-math">\(U_A=A\cap O_X\text{.}\)</span> Tetapkan <span class="process-math">\(C_X=X\setminus O_X\text{;}\)</span> himpunan <span class="process-math">\(C_X\)</span> tertutup dan</div>
+<div class="para">Gunakan rumus batas dan dualitas interior–tutupan:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A\cap C_X=A\cap(X\setminus O_X)
-=A\setminus(A\cap O_X)=A\setminus U_A=C_A.
+\Bdry(A)=\overline A\cap\overline{X\setminus A}
+=\overline A\cap(X\setminus\Int(A))
+=\overline A\setminus\Int(A).
 \end{equation*}
 </div>
-<div class="para">Sebaliknya, jika <span class="process-math">\(C_A=A\cap C_X\)</span> dengan <span class="process-math">\(C_X\)</span> tertutup, maka <span class="process-math">\(O_X=X\setminus C_X\)</span> terbuka dan <span class="process-math">\(A\setminus C_A=A\cap O_X\)</span> terbuka di <span class="process-math">\(A\text{.}\)</span> Jadi <span class="process-math">\(C_A\)</span> tertutup di <span class="process-math">\(A\text{.}\)</span>
+<div class="para">Selanjutnya,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Bdry(X\setminus A)
+=\overline{X\setminus A}\cap\overline{X\setminus(X\setminus A)}
+=\overline{X\setminus A}\cap\overline A
+=\Bdry(A).
+\end{equation*}
 </div>
+<div class="para">Kesamaan terakhir hanya menggunakan sifat komutatif irisan.</div>
 </div>
-<span class="incontext"><a href="o003-c90-ch11-mastery.html#p-3750" class="internal">in-context</a></span>
+<span class="incontext"><a href="o003-c90-ch10-mastery.html#p-3750" class="internal">in-context</a></span>
 </body>
 </html>

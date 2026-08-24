@@ -17,7 +17,11 @@ import re
 from typing import Any
 
 from PIL import Image
-from pypdf import PdfReader
+
+try:
+    from PyPDF2 import PdfReader
+except ModuleNotFoundError:  # pragma: no cover - runtime-dependent fallback
+    from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +30,7 @@ RENDER_DIR = ROOT / "tmp/pdfs/chapter11-render"
 OUTPUT = ROOT / "qa/CHAPTER11_PDF_VISUAL_QA.json"
 PDF_RELATIVE = "output/chapters01-11-pdf/chapters_01_11_reader.pdf"
 RENDER_PATTERN = "tmp/pdfs/chapter11-render/page-NNN.png"
+BOUNDARY_LABEL = "Chapter 11"
 PAGE_NAME = re.compile(r"page-(\d{3})\.png\Z")
 
 INK_THRESHOLD = 220
@@ -72,7 +77,7 @@ def pdf_facts(path: Path) -> dict[str, Any]:
     reader = PdfReader(str(path))
     if reader.is_encrypted:
         if reader.decrypt("") == 0:
-            raise RuntimeError("Chapter 11 PDF is encrypted and cannot be inspected")
+            raise RuntimeError(f"{BOUNDARY_LABEL} PDF is encrypted and cannot be inspected")
     sizes: list[list[int | float]] = []
     rotations: list[int] = []
     for page in reader.pages:
@@ -119,11 +124,11 @@ def page_files() -> list[tuple[int, Path]]:
     all_files = sorted(path for path in RENDER_DIR.iterdir() if path.is_file())
     unexpected = [path.name for path in all_files if PAGE_NAME.fullmatch(path.name) is None]
     if unexpected:
-        raise RuntimeError(f"unexpected files in Chapter 11 render directory: {unexpected[:8]}")
+        raise RuntimeError(f"unexpected files in {BOUNDARY_LABEL} render directory: {unexpected[:8]}")
     numbered = [(int(PAGE_NAME.fullmatch(path.name).group(1)), path) for path in all_files]
     numbers = [number for number, _ in numbered]
     if len(numbers) != len(set(numbers)):
-        raise RuntimeError("duplicate physical page numbers in Chapter 11 render")
+        raise RuntimeError(f"duplicate physical page numbers in {BOUNDARY_LABEL} render")
     return sorted(numbered)
 
 
@@ -193,7 +198,7 @@ def stable_render_snapshot(
     if [(number, path.name) for number, path in current] != [
         (number, path.name) for number, path in numbered
     ]:
-        raise RuntimeError("Chapter 11 render file closure changed during analysis")
+        raise RuntimeError(f"{BOUNDARY_LABEL} render file closure changed during analysis")
     for number, path in current:
         stat = path.stat()
         expected = snapshots[path.name]
@@ -237,12 +242,12 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     if not PDF.is_file():
-        raise SystemExit(f"missing Chapter 11 PDF: {PDF_RELATIVE}")
+        raise SystemExit(f"missing {BOUNDARY_LABEL} PDF: {PDF_RELATIVE}")
     numbered = page_files()
     if not numbered:
-        raise SystemExit(f"no rendered Chapter 11 pages at {RENDER_PATTERN}")
+        raise SystemExit(f"no rendered {BOUNDARY_LABEL} pages at {RENDER_PATTERN}")
     if args.build_log is None and not args.check_only:
-        raise SystemExit("--build-log is required when writing CHAPTER11_PDF_VISUAL_QA.json")
+        raise SystemExit(f"--build-log is required when writing {OUTPUT.name}")
 
     build_log: Path | None = None
     if args.build_log is not None:
@@ -251,7 +256,7 @@ def main() -> int:
             build_log = ROOT / build_log
         repo_relative(build_log)
         if not build_log.is_file():
-            raise SystemExit(f"missing Chapter 11 build log: {repo_relative(build_log)}")
+            raise SystemExit(f"missing {BOUNDARY_LABEL} build log: {repo_relative(build_log)}")
 
     pdf_stat_before = PDF.stat()
     pdf_row = identity(PDF)
@@ -289,9 +294,9 @@ def main() -> int:
         PDF.stat().st_size != pdf_stat_before.st_size
         or PDF.stat().st_mtime_ns != pdf_stat_before.st_mtime_ns
     ):
-        raise RuntimeError("Chapter 11 PDF changed during visual analysis")
+        raise RuntimeError(f"{BOUNDARY_LABEL} PDF changed during visual analysis")
     if build_log is not None and identity(build_log) != log_row:
-        raise RuntimeError("Chapter 11 build log changed during visual analysis")
+        raise RuntimeError(f"{BOUNDARY_LABEL} build log changed during visual analysis")
 
     blank_pages = [
         int(row["physical_page"])
@@ -425,7 +430,7 @@ def main() -> int:
     temporary.replace(OUTPUT)
     summary.update(
         {
-            "output": "qa/CHAPTER11_PDF_VISUAL_QA.json",
+            "output": repo_relative(OUTPUT),
             "output_bytes": OUTPUT.stat().st_size,
             "output_sha256": sha256(OUTPUT),
         }

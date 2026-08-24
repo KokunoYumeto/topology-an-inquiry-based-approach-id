@@ -1,0 +1,274 @@
+<section xml:id="o003-c90-ch12-exercise-guides-g" xml:lang="id-ID">
+  <title>Panduan latihan sumber, bagian ketujuh</title>
+
+  <p>
+    Tujuh panduan berikut mendampingi latihan benar-salah pada
+    <em>sec_top_space_exer.ptx</em>, baris sumber 581--651. Setiap jawaban
+    benar disertai pembuktian, sedangkan setiap jawaban salah disertai
+    contoh tandingan konkret. Panduan ini merupakan komponen asli CC BY 4.0
+    yang terpisah; panduan ini bukan materi, terjemahan resmi, atau solusi
+    resmi Steven Schlicker maupun GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch12-exer-g-01">
+    <title>Koleksi lima himpunan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas pada baris sumber 591--596. Tentukan
+        benar atau salah: koleksi
+        <m>\{\emptyset,\{a,b\},\{a,b,d,f\},\{d,f\},X\}</m> merupakan
+        topologi pada <m>X=\{a,b,c,d,e,f\}</m>.
+        <em>Rubrik.</em> Periksa kedua himpunan wajib serta semua hasil
+        gabungan dan irisan yang tidak langsung sepele.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-g-01-hint">
+      <p><em>Tahap 1.</em> Namai <m>A=\{a,b\}</m> dan <m>B=\{d,f\}</m>.</p>
+      <p><em>Tahap 2.</em> Amati bahwa <m>A\cap B=\emptyset</m> dan
+        <m>A\cup B=\{a,b,d,f\}</m>.</p>
+      <p><em>Tahap 3.</em> Setiap anggota selain <m>X</m> adalah salah satu
+        dari <m>\emptyset,A,B,A\cup B</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-g-01-answer">
+      <p>Benar. Koleksi itu tertutup terhadap gabungan sebarang dan irisan
+        berhingga.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-g-01-solution">
+      <p>
+        Koleksi memuat <m>\emptyset</m> dan <m>X</m>. Dengan notasi pada
+        petunjuk, empat anggota selain <m>X</m> membentuk topologi partisi
+        pada <m>A\cup B</m>: gabungan yang mungkin adalah
+        <m>\emptyset,A,B,A\cup B</m>, dan irisan yang mungkin juga salah satu
+        dari keempat himpunan itu karena <m>A\cap B=\emptyset</m>. Menambahkan
+        <m>X</m> tidak menimbulkan hasil baru: gabungan yang memuat <m>X</m>
+        adalah <m>X</m>, sedangkan irisan dengan <m>X</m> tidak mengubah
+        faktor lainnya. Jadi semua gabungan sebarang dan irisan berhingga
+        tetap berada dalam koleksi. Pernyataan benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-g-02">
+    <title>Bilangan bulat dalam topologi kofinit</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas pada baris sumber 598--603. Tentukan
+        benar atau salah: <m>\Z</m> terbuka dalam <m>\R</m> yang diberi
+        topologi komplemen berhingga.
+        <em>Rubrik.</em> Gunakan definisi topologi kofinit dan tampilkan
+        sifat komplemen yang menentukan jawaban.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-g-02-hint">
+      <p><em>Tahap 1.</em> Himpunan terbuka tak kosong dalam topologi ini
+        harus mempunyai komplemen berhingga.</p>
+      <p><em>Tahap 2.</em> Periksa kardinalitas <m>\R\setminus\Z</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-g-02-answer">
+      <p>Salah. Komplemen <m>\R\setminus\Z</m> tidak berhingga.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-g-02-solution">
+      <p>
+        Dalam topologi kofinit pada <m>\R</m>, sebuah himpunan terbuka tepat
+        ketika himpunan itu kosong atau komplemennya berhingga. Himpunan
+        <m>\Z</m> tidak kosong, sedangkan <m>\R\setminus\Z</m> tidak berhingga;
+        misalnya, semua bilangan <m>n+\tfrac12</m> untuk <m>n\in\Z</m>
+        termasuk di dalamnya. Jadi <m>\Z</m> bukan himpunan terbuka dan
+        pernyataan salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-g-03">
+    <title>Menguji basis yang diberikan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas pada baris sumber 605--613. Tentukan
+        benar atau salah: pada <m>X=\{a,b,c,d\}</m>, koleksi
+        <m>\mathcal B=\{\{b\},\{c\},\{a,b\},\{b,c,d\}\}</m> merupakan basis
+        untuk topologi
+        <m>\tau=\{\emptyset,\{b\},\{c\},\{a,b\},\{b,c\},\{a,b,c\},\{b,c,d\},X\}</m>.
+        <em>Rubrik.</em> Verifikasi bahwa gabungan anggota basis menghasilkan
+        tepat semua anggota <m>\tau</m>, atau gunakan syarat basis dan
+        identifikasi topologi yang dibangkitkan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-g-03-hint">
+      <p><em>Tahap 1.</em> Keempat himpunan basis menutupi <m>X</m>.</p>
+      <p><em>Tahap 2.</em> Irisan yang perlu diperhatikan adalah
+        <m>\{a,b\}\cap\{b,c,d\}=\{b\}</m> dan
+        <m>\{c\}\cap\{b,c,d\}=\{c\}</m>.</p>
+      <p><em>Tahap 3.</em> Daftarkan semua gabungan berbeda dari anggota
+        <m>\mathcal B</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-g-03-answer">
+      <p>Benar. Gabungan anggota <m>\mathcal B</m> menghasilkan tepat delapan
+        himpunan dalam daftar <m>\tau</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-g-03-solution">
+      <p>
+        Koleksi <m>\mathcal B</m> menutupi <m>X</m>, sebab
+        <m>\{a,b\}\cup\{b,c,d\}=X</m>. Untuk dua anggota basis yang
+        beririsan dan titik pada irisannya, terdapat anggota basis yang
+        memuat titik itu dan berada di dalam irisan: semua kasus inklusi
+        langsung bersifat sepele, sedangkan irisan tak-sepele mengecil menjadi
+        <m>\{b\}</m> atau <m>\{c\}</m>, yang keduanya anggota basis. Jadi
+        <m>\mathcal B</m> memang basis suatu topologi.
+      </p>
+      <p>
+        Gabungan-gabungan berbeda yang dihasilkan adalah
+        <m>\emptyset</m>, <m>\{b\}</m>, <m>\{c\}</m>, <m>\{a,b\}</m>,
+        <m>\{b,c\}</m>, <m>\{a,b,c\}</m>, <m>\{b,c,d\}</m>, dan <m>X</m>.
+        Daftar ini tepat sama dengan <m>\tau</m>. Maka pernyataan benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-g-04">
+    <title>Ruang diskret selalu termetriskan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas pada baris sumber 615--622. Tentukan
+        benar atau salah: jika <m>X</m> tak kosong dan <m>\tau</m> adalah
+        topologi diskret, maka <m>(X,\tau)</m> termetriskan.
+        <em>Rubrik.</em> Berikan metrik eksplisit dan buktikan bahwa setiap
+        subhimpunan terbuka dalam topologi metriknya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-g-04-hint">
+      <p><em>Tahap 1.</em> Gunakan metrik diskret: jarak nol untuk titik yang
+        sama dan satu untuk titik yang berbeda.</p>
+      <p><em>Tahap 2.</em> Bola berjari-jari <m>1/2</m> di sekitar <m>x</m>
+        adalah <m>\{x\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-g-04-answer">
+      <p>Benar. Metrik diskret menghasilkan topologi diskret.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-g-04-solution">
+      <p>
+        Definisikan <m>d(x,y)=0</m> jika <m>x=y</m> dan <m>d(x,y)=1</m> jika
+        <m>x\ne y</m>. Fungsi ini memenuhi aksioma metrik. Untuk
+        pertidaksamaan segitiga, jika <m>x=z</m> ruas kiri nol; jika
+        <m>x\ne z</m>, paling sedikit satu dari <m>x\ne y</m> atau
+        <m>y\ne z</m> berlaku, sehingga ruas kanan sekurang-kurangnya
+        <m>1=d(x,z)</m>. Untuk setiap <m>x\in X</m>, berlaku
+        <m>B_d(x,1/2)=\{x\}</m>. Jadi setiap singleton terbuka, dan setiap
+        subhimpunan <m>A\subseteq X</m> adalah gabungan singleton
+        <m>\bigcup_{x\in A}\{x\}</m>, sehingga terbuka. Topologi metrik yang
+        dihasilkan adalah topologi diskret <m>\tau</m>. Pernyataan benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-g-05">
+    <title>Titik interior dalam ruang berhingga</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas pada baris sumber 624--634. Tentukan
+        benar atau salah: <m>b</m> adalah titik interior dari
+        <m>A=\{a,b,d\}</m> dalam <m>(X,\tau)</m>, dengan
+        <m>X=\{a,b,c,d\}</m> dan
+        <me>
+          \tau=\{\emptyset,\{a\},\{a,b\},\{c\},\{d\},\{c,d\},
+          \{a,c,d\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},X\}.
+        </me>
+        <em>Rubrik.</em> Tunjukkan satu lingkungan terbuka dari <m>b</m> yang
+        seluruhnya berada di dalam <m>A</m>, atau buktikan bahwa lingkungan
+        semacam itu tidak ada.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-g-05-hint">
+      <p><em>Tahap 1.</em> Cari anggota daftar topologi yang memuat <m>b</m>.</p>
+      <p><em>Tahap 2.</em> Bandingkan <m>\{a,b\}</m> dengan <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-g-05-answer">
+      <p>Benar, karena <m>b\in\{a,b\}\subseteq A</m> dan
+        <m>\{a,b\}</m> terbuka.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-g-05-solution">
+      <p>
+        Menurut daftar <m>\tau</m> pada soal, <m>U=\{a,b\}</m> adalah
+        himpunan terbuka. Himpunan ini memuat <m>b</m> dan memenuhi
+        <m>U\subseteq\{a,b,d\}=A</m>. Jadi ada lingkungan terbuka dari
+        <m>b</m> yang terkandung dalam <m>A</m>. Berdasarkan definisi titik
+        interior, <m>b\in\Int(A)</m>; pernyataan benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-g-06">
+    <title>Gabungan dua topologi</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas pada baris sumber 636--642. Tentukan
+        benar atau salah: jika <m>\tau_1</m> dan <m>\tau_2</m> topologi pada
+        <m>X</m>, maka <m>\tau_1\cup\tau_2</m> selalu topologi pada <m>X</m>.
+        <em>Rubrik.</em> Jika salah, berikan dua topologi eksplisit dan satu
+        operasi topologi yang gagal pada gabungannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-g-06-hint">
+      <p><em>Tahap 1.</em> Ambil <m>X=\{a,b,c\}</m>.</p>
+      <p><em>Tahap 2.</em> Bandingkan
+        <m>\tau_1=\{\emptyset,X,\{a\}\}</m> dan
+        <m>\tau_2=\{\emptyset,X,\{b\}\}</m>.</p>
+      <p><em>Tahap 3.</em> Uji gabungan himpunan terbuka <m>\{a\}</m> dan
+        <m>\{b\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-g-06-answer">
+      <p>Salah. Dalam contoh pada petunjuk, <m>\{a\}</m> dan <m>\{b\}</m>
+        berada dalam gabungan kedua topologi, tetapi <m>\{a,b\}</m> tidak.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-g-06-solution">
+      <p>
+        Pada <m>X=\{a,b,c\}</m>, masing-masing koleksi
+        <m>\tau_1=\{\emptyset,X,\{a\}\}</m> dan
+        <m>\tau_2=\{\emptyset,X,\{b\}\}</m> adalah topologi: hanya ada satu
+        himpunan terbuka tak-sepele di masing-masing koleksi, sehingga aksioma
+        gabungan dan irisan langsung terpenuhi. Namun
+        <m>\tau_1\cup\tau_2=\{\emptyset,X,\{a\},\{b\}\}</m> memuat
+        <m>\{a\}</m> dan <m>\{b\}</m> tetapi tidak memuat gabungannya
+        <m>\{a,b\}</m>. Koleksi itu tidak tertutup terhadap gabungan dan bukan
+        topologi. Jadi pernyataan salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch12-exer-g-07">
+    <title>Irisan dua topologi</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> tugas pada baris sumber 644--650. Tentukan
+        benar atau salah: jika <m>\tau_1</m> dan <m>\tau_2</m> topologi pada
+        <m>X</m>, maka <m>\tau_1\cap\tau_2</m> selalu topologi pada <m>X</m>.
+        <em>Rubrik.</em> Verifikasi ketiga aksioma untuk himpunan yang menjadi
+        anggota kedua topologi sekaligus.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch12-exer-g-07-hint">
+      <p><em>Tahap 1.</em> Kedua topologi memuat <m>\emptyset</m> dan
+        <m>X</m>.</p>
+      <p><em>Tahap 2.</em> Jika setiap <m>U_i</m> berada dalam kedua topologi,
+        maka gabungannya berada di mana?</p>
+      <p><em>Tahap 3.</em> Terapkan argumen yang sama pada irisan berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch12-exer-g-07-answer">
+      <p>Benar. Setiap aksioma topologi diwarisi oleh irisan koleksi kedua
+        topologi.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch12-exer-g-07-solution">
+      <p>
+        Karena <m>\emptyset,X\in\tau_1</m> dan
+        <m>\emptyset,X\in\tau_2</m>, kedua himpunan itu berada dalam
+        <m>\tau_1\cap\tau_2</m>. Ambil keluarga sebarang
+        <m>\{U_i\}_{i\in I}\subseteq\tau_1\cap\tau_2</m>. Setiap
+        <m>U_i</m> berada dalam <m>\tau_1</m> dan <m>\tau_2</m>; karena
+        keduanya topologi, <m>\bigcup_{i\in I}U_i</m> berada dalam keduanya,
+        jadi berada dalam irisannya. Demikian pula, irisan berhingga anggota
+        <m>\tau_1\cap\tau_2</m> berada dalam masing-masing topologi dan
+        karenanya dalam <m>\tau_1\cap\tau_2</m>. Semua aksioma dipenuhi, jadi
+        pernyataan benar.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -3,13 +3,13 @@
 Edisi Bahasa Indonesia yang sedang diproduksi dari *Topology: An Inquiry-Based
 Approach* karya Steven Schlicker, Grand Valley State University.
 
-**Baca batas GitHub publik terbaru (Bab 1-11):**
+**Baca batas GitHub publik terbaru (Bab 1-12):**
 
 https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/
 
-**Unduh PDF Bab 1-11 (276 halaman):**
+**Unduh PDF Bab 1-12 (328 halaman):**
 
-https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-11-id.pdf
+https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-12-id.pdf
 
 **Arsip Zenodo dalam satu riwayat versi:**
 
@@ -17,7 +17,7 @@ https://doi.org/10.5281/zenodo.22059894
 
 ## Status
 
-Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 11 dari
+Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 12 dari
 20 bab:
 
 - Bab 1, *Himpunan*;
@@ -31,18 +31,19 @@ Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 11 dari
 - Bab 9, *Barisan di Ruang Metrik*;
 - Bab 10, *Himpunan Tertutup dalam Ruang Metrik*;
 - Bab 11, *Subruang dan Hasil Kali Ruang Metrik*;
-- pendamping belajar mandiri orisinal untuk kesebelas bab, dengan petunjuk,
+- Bab 12, *Ruang Topologi*;
+- pendamping belajar mandiri orisinal untuk kedua belas bab, dengan petunjuk,
   jawaban, rubrik, dan solusi bertahap;
 - laboratorium epsilon-delta orisinal yang dapat digunakan secara luring untuk
   menggantikan kebergantungan aplet Bab 6 yang tidak terarsipkan; dan
 - backend modular netral-lokal untuk provenance, istilah, latihan, solusi,
   koreksi sumber, hak komponen, dan status QA.
 
-Batas Bab 1-11 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
+Batas Bab 1-12 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
 audit matematika
 pendamping, dua pembangunan HTML deterministik, dua pembangunan PDF ketat,
 pemeriksaan tautan/aset, reflow desktop/seluler, interaksi petunjuk, dan
-inspeksi visual seluruh 276 halaman. Kolom baca desktop menggunakan lebar 960
+inspeksi visual seluruh 328 halaman. Kolom baca desktop menggunakan lebar 960
 px dan terpusat di panel utama; versi seluler mengalir ulang tanpa luapan
 horizontal. Ini bukan klaim bahwa edisi 20 bab sudah selesai.
 
@@ -79,8 +80,8 @@ institusi, atau kontributor manusia yang dipertahankan di seluruh edisi.
 - `docs/` - byte pembaca publik untuk GitHub Pages.
 
 Manifest kumulatif yang mengikat batas ini adalah
-`qa/CHAPTER11_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
-`qa/CHAPTER11_BUILD_QA.md`.
+`qa/CHAPTER12_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
+`qa/CHAPTER12_BUILD_QA.md`.
 
 ## Membangun batas saat ini
 
@@ -88,9 +89,9 @@ Lingkungan yang direkam memakai Python 3.12.13, PreTeXt 1.7.5,
 setuptools 75.8.0, dan MiKTeX 26.5.
 
 ```text
-pretext build chapters01-11-html --clean
-python scripts/finalize_chapter01_html.py output/chapters01-11-html --manifest qa/CHAPTER11_HTML_MANIFEST.json
-python scripts/build_pretext_pdf_strict.py chapters01-11-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTER11_PDF_RUN2.log --expect-pdf output/chapters01-11-pdf/chapters_01_11_reader.pdf --source-date-epoch 1692057600
+pretext build chapters01-12-html --clean
+python scripts/finalize_chapter01_html.py output/chapters01-12-html --manifest qa/CHAPTER12_HTML_MANIFEST.json
+python scripts/build_pretext_pdf_strict.py chapters01-12-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTER12_PDF_RUN2.log --expect-pdf output/chapters01-12-pdf/chapters_01_12_reader.pdf --source-date-epoch 1692057600
 ```
 
 HTML saat ini masih memanggil beberapa dependensi runtime jarak jauh dari

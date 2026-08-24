@@ -13,17 +13,14 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">Untuk bilangan real <span class="process-math">\(u,v\text{,}\)</span> kedua ruas tak negatif dan <span class="process-math">\(u^2+v^2\leq(|u|+|v|)^2\text{,}\)</span> sehingga <span class="process-math">\(\sqrt{u^2+v^2}\leq|u|+|v|\text{.}\)</span> Karena itu</div>
+<div class="para">Untuk awalan sepanjang <span class="process-math">\(i\)</span> dan <span class="process-math">\(j\text{,}\)</span> definisikan <span class="process-math">\(D(i,j)\)</span> sebagai jarak keduanya. Nilai batasnya <span class="process-math">\(D(i,0)=i\)</span> dan <span class="process-math">\(D(0,j)=j\text{.}\)</span> Jika huruf terakhir sama, letakkan <span class="process-math">\(\epsilon_{ij}=0\text{;}\)</span> jika berbeda, letakkan <span class="process-math">\(\epsilon_{ij}=1\text{.}\)</span> Meninjau operasi terakhir memberi rekurensi</div>
 <div class="displaymath process-math">
 \begin{equation*}
-d_E(c,q)
-\leq |q_1-c_1|+|q_2-c_2|
-&lt; \frac{\varepsilon}{2}+\frac{\varepsilon}{2}
-=\varepsilon.
+D(i,j)=\min\{D(i-1,j)+1,\ D(i,j-1)+1,\ D(i-1,j-1)+\epsilon_{ij}\}.
 \end{equation*}
 </div>
-<div class="para">Maka <span class="process-math">\(q\in B_{d_E}(c,\varepsilon)\text{,}\)</span> dan kedua koordinat <span class="process-math">\(q\)</span> rasional sebagaimana diminta.</div>
+<div class="para">Argumen berdasarkan operasi terakhir menunjukkan bahwa setiap urutan edit masuk ke salah satu dari tiga kasus ini; karena itu, tabel tersebut memberi batas bawah sekaligus batas atas.</div>
 </div>
-<span class="incontext"><a href="o003-c90-ch05-exercise-guides-b.html#p-1998" class="internal">in-context</a></span>
+<span class="incontext"><a href="o003-c90-ch04-source-task-guides.html#p-1998" class="internal">in-context</a></span>
 </body>
 </html>

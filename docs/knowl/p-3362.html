@@ -12,7 +12,25 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Untuk <span class="process-math">\(A=\{1/n\mid n\in\Z^+\}\subseteq\R\text{,}\)</span> tentukan interior, batas, titik limit, dan titik terasingnya, lalu putuskan apakah <span class="process-math">\(A\)</span> terbuka atau tertutup. <em class="emphasis">Rubrik.</em> Perlakukan <span class="process-math">\(0\)</span> secara terpisah dan tunjukkan secara eksplisit bahwa setiap <span class="process-math">\(1/n\)</span> dapat dipisahkan dari semua suku lainnya.</div>
-<span class="incontext"><a href="o003-c90-ch10-exercise-guides-a.html#p-3362" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Untuk <span class="process-math">\(g_n(x)=x/n\text{,}\)</span> karena <span class="process-math">\(0\leq x\leq1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_\infty(g_n,0)
+=\sup_{x\in[0,1]}\left|\frac{x}{n}\right|
+=\frac1n\longrightarrow0.
+\end{equation*}
+</div>
+<div class="para">Jadi <span class="process-math">\(g_n\to0\)</span> dalam metrik supremum. Secara umum, jika <span class="process-math">\(d_\infty(f_n,f)\to0\)</span> dan <span class="process-math">\(x\in[0,1]\)</span> ditetapkan, maka</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|f_n(x)-f(x)|\leq
+\sup_{t\in[0,1]}|f_n(t)-f(t)|=d_\infty(f_n,f)\longrightarrow0.
+\end{equation*}
+</div>
+<div class="para">Maka <span class="process-math">\(f_n(x)\to f(x)\)</span> pada setiap titik <span class="process-math">\(x\text{.}\)</span> Contoh <span class="process-math">\(x^n\)</span> menunjukkan bahwa implikasi sebaliknya tidak berlaku.</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch09-mastery.html#p-3362" class="internal">in-context</a></span>
 </body>
 </html>

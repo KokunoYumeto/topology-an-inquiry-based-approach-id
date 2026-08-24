@@ -1,0 +1,2766 @@
+{
+  "schema_version": 1,
+  "status": "companion_complete_reader_admission_pending",
+  "unit": {
+    "id": "o003-c90-ch12-topological-spaces",
+    "title": "Ruang Topologi",
+    "sequence": 12
+  },
+  "rights_boundary": {
+    "source_derivative": "CC BY-NC-SA 3.0 conservative treatment",
+    "companion_component": "CC BY 4.0 separate original component",
+    "non_endorsement": "The companion is not authored by Steven Schlicker or Grand Valley State University."
+  },
+  "authority": {
+    "audit": "00_control/CHAPTER12_AUTHORITY_AUDIT.md",
+    "audit_sha256": "c2e802466fa0b01b68db53362f98219c0a7e1758e58f9beec1759e8a8977ebbf",
+    "commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+    "ordered_sha256": "dde360d7ec1d62d22d5a5afdbaad2055665d57b67e2b4aac6ae43636b84fda47",
+    "canonical_prompt_mapping_sha256": "ac30b9909de52371d5f0b44987246fd718bd90a100c3681f5b4db72290e95836",
+    "line_locator_contract": {
+      "authority_root": "authority/gvsu-pinned/topology-0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+      "file_field": "authority_source_file",
+      "line_field": "authority_line",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "structured_locator_field": "authority_locator",
+      "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+      "meaning": "one-based exact carrier-start line in the pinned authority source at the stated commit"
+    },
+    "source_file_count": 9,
+    "source_prompt_total": 79,
+    "atomic_prompt_total": 73,
+    "direct_prompt_total": 6,
+    "grouping_node_total": 5
+  },
+  "source_qa": {
+    "path": "repo/qa/CHAPTER12_SOURCE_QA.json",
+    "bytes": 8016,
+    "sha256": "6839eb6a1dd73aac8c288c3dd8da4abafbba8f8b051847c49fa59895be6f4cdc",
+    "status": "pass"
+  },
+  "source_corrections": {
+    "path": "00_control/SOURCE_CORRECTIONS.csv",
+    "sha256": "b0bb730106e3db7fcfcbafd9a9911190aeb293174cf72a62e27f3a865e091563",
+    "chapter12_ids": [
+      "O003-C131",
+      "O003-C132",
+      "O003-C133",
+      "O003-C134",
+      "O003-C135",
+      "O003-C136",
+      "O003-C137",
+      "O003-C138",
+      "O003-C139",
+      "O003-C140",
+      "O003-C141",
+      "O003-C142",
+      "O003-C143",
+      "O003-C144",
+      "O003-C145"
+    ]
+  },
+  "companion_files": [
+    {
+      "path": "repo/companion/chapter_12_source_guides_a.ptx",
+      "bytes": 10968,
+      "sha256": "45f6356654553cd8a8ed589dc4559743e8dbf452d5a47fba5d8dcd2ff4f408f6"
+    },
+    {
+      "path": "repo/companion/chapter_12_source_guides_b.ptx",
+      "bytes": 3512,
+      "sha256": "4057b932d6487d78761231ff2805500f41f8517167a653a11c35cf3472df4fe1"
+    },
+    {
+      "path": "repo/companion/chapter_12_source_guides_c.ptx",
+      "bytes": 13501,
+      "sha256": "9084c125cd02e716fef82116c7c7e38369235d77e1f7b3b7630a0d684ca1eb96"
+    },
+    {
+      "path": "repo/companion/chapter_12_source_guides_d.ptx",
+      "bytes": 1981,
+      "sha256": "c1baa20c9cdadf1ae1e895cbe653d014c1ed681ef7b4667c80705e0aab0523e1"
+    },
+    {
+      "path": "repo/companion/chapter_12_source_guides_e.ptx",
+      "bytes": 9971,
+      "sha256": "c306d966367d5fa9c34acb09ecb49df5791cc0c394afced8f92963c7124787fc"
+    },
+    {
+      "path": "repo/companion/chapter_12_source_guides_f.ptx",
+      "bytes": 15112,
+      "sha256": "428317e5d74981441740499418d311abb986c6e971782f6b00fd8214639531f0"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_a.ptx",
+      "bytes": 19258,
+      "sha256": "ff23ffa0a7f268007faff8dd48e0059500ac900cf5d2f14156cbc9b4f34fbfd9"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_b.ptx",
+      "bytes": 24516,
+      "sha256": "8ee81c49d743ad79ad3281d7d17747c36424dc5fd6c1208db835a8c7e318fb9d"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_c.ptx",
+      "bytes": 19941,
+      "sha256": "0eb5f81b0074f478e8dc1b84bee9daf32646c91707254a0ab8ce68f19e618590"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_d.ptx",
+      "bytes": 13252,
+      "sha256": "013b89bc5d31b0647d8d08e2e5dc91db395c471a0c42257a9062da2aa173e7b3"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_e.ptx",
+      "bytes": 14286,
+      "sha256": "5d77869520a634c8f8827e4840a30d3ffa5b31f95bb0c6e6aeae16788adabb6f"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_f.ptx",
+      "bytes": 14465,
+      "sha256": "035ca470164ef40550f0e3d34fc36e6155f5b403e57d28a990c1b972356f6ffe"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_g.ptx",
+      "bytes": 12630,
+      "sha256": "cc1e01188ac5338297defa5efac744d4c78b3652139dc3658155e1048a97bd09"
+    },
+    {
+      "path": "repo/companion/chapter_12_mastery.ptx",
+      "bytes": 26202,
+      "sha256": "caf3460a07977682cf6a5ed6959fff7b1e892a0ce930f39b658c1467d0a9a9d5"
+    },
+    {
+      "path": "repo/companion/chapter_12_topological_spaces_self_study.ptx",
+      "bytes": 2057,
+      "sha256": "4d57e83f5de28377a32ffd3f1766f97f9f37e3add2e8e748598d48d688db24dc"
+    }
+  ],
+  "coverage": {
+    "source_prompt_guides": 79,
+    "source_prompt_guides_pending": 0,
+    "mastery_checks": 8,
+    "mastery_checks_pending": 0,
+    "mastery_surfaces": {
+      "statement": 8,
+      "hint": 8,
+      "answer": 8,
+      "solution": 8,
+      "total": 32
+    },
+    "covered_source_context": [
+      "sec_top_space_intro",
+      "act_TS_limits1",
+      "act_top_basis",
+      "act_Basis",
+      "basis_final_activity",
+      "sec_metric_top_space",
+      "sec_neighborhood_top_space",
+      "sec_interior_set_top",
+      "sec_top_space_exer"
+    ],
+    "covered_atomic_prompt_units": 73,
+    "covered_direct_prompt_units": 6,
+    "covered_grouping_prompt_units": 0,
+    "grouping_nodes_mapped": 5,
+    "covered_surfaces": {
+      "statement": 79,
+      "hint": 79,
+      "answer": 79,
+      "solution": 79,
+      "total": 316
+    },
+    "total_companion_entries": 87,
+    "total_staged_surfaces": 348
+  },
+  "entries": [
+    {
+      "sequence": 1,
+      "id": "o003-c90-ch12-guide-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 64,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 64,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "aa64bd7c0bdfa5e041521721d606d538cf8074455dc05691aa0be6f638f7350a"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-01",
+      "title": "Uji tiga aksioma topologi",
+      "surfaces": [
+        "o003-c90-ch12-guide-01",
+        "o003-c90-ch12-guide-01-hint",
+        "o003-c90-ch12-guide-01-answer",
+        "o003-c90-ch12-guide-01-solution"
+      ]
+    },
+    {
+      "sequence": 2,
+      "id": "o003-c90-ch12-guide-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 73,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 73,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "f6495bd44904770b5f935e749b77add532320b41b6cdbbf94900e85abb38d1ed"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-02",
+      "title": "Menutup koleksi hingga menjadi topologi",
+      "surfaces": [
+        "o003-c90-ch12-guide-02",
+        "o003-c90-ch12-guide-02-hint",
+        "o003-c90-ch12-guide-02-answer",
+        "o003-c90-ch12-guide-02-solution"
+      ]
+    },
+    {
+      "sequence": 3,
+      "id": "o003-c90-ch12-guide-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 84,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 84,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "9bac1b5993af59e18a10ac0b09d571f5c43c871a324fbad7c281e2901be7d76c"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-03",
+      "title": "Memeriksa gabungan dan irisan berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-03",
+        "o003-c90-ch12-guide-03-hint",
+        "o003-c90-ch12-guide-03-answer",
+        "o003-c90-ch12-guide-03-solution"
+      ]
+    },
+    {
+      "sequence": 4,
+      "id": "o003-c90-ch12-guide-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 98,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 98,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "ec084711166282500433575490d5aabbd5d6b062cae0fdb114d78ff6d253aa63"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-04",
+      "title": "Mencari gabungan yang hilang",
+      "surfaces": [
+        "o003-c90-ch12-guide-04",
+        "o003-c90-ch12-guide-04-hint",
+        "o003-c90-ch12-guide-04-answer",
+        "o003-c90-ch12-guide-04-solution"
+      ]
+    },
+    {
+      "sequence": 5,
+      "id": "o003-c90-ch12-guide-05",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-05",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 112,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 112,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[5]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "4106985077e0b905264f7e2ec380c0977fd6abd92a76c1d6368e6a3571e47acf"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-05",
+      "title": "Koleksi subhimpunan berhingga dan uji gabungan tak berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-05",
+        "o003-c90-ch12-guide-05-hint",
+        "o003-c90-ch12-guide-05-answer",
+        "o003-c90-ch12-guide-05-solution"
+      ]
+    },
+    {
+      "sequence": 6,
+      "id": "o003-c90-ch12-guide-06",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-06",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 123,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 123,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[6]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "f916685f57cce03a7f640f7a35094199ec04f4262fa691c8bca086a66f8fdcbd"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-06",
+      "title": "Topologi tiga elemen pada bilangan real",
+      "surfaces": [
+        "o003-c90-ch12-guide-06",
+        "o003-c90-ch12-guide-06-hint",
+        "o003-c90-ch12-guide-06-answer",
+        "o003-c90-ch12-guide-06-solution"
+      ]
+    },
+    {
+      "sequence": 7,
+      "id": "o003-c90-ch12-guide-07",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-07",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 132,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 132,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[7]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "abb3f1e1a5d6bd7c610234ebc0a1855b8f2021612103ad919b81160cf50d6664"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-07",
+      "title": "Topologi indiskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-07",
+        "o003-c90-ch12-guide-07-hint",
+        "o003-c90-ch12-guide-07-answer",
+        "o003-c90-ch12-guide-07-solution"
+      ]
+    },
+    {
+      "sequence": 8,
+      "id": "o003-c90-ch12-guide-08",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-08",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_intro.ptx",
+      "authority_line": 141,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_intro.ptx",
+        "authority_line": 141,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_intro",
+        "xpath": "/section/exploration/task[8]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "814a631b7bf91beed3f6073effdd9e10b3eaae0ab6900dbe4ecd1d026a39090a"
+      },
+      "companion_file": "companion/chapter_12_source_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-08",
+      "title": "Topologi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-08",
+        "o003-c90-ch12-guide-08-hint",
+        "o003-c90-ch12-guide-08-answer",
+        "o003-c90-ch12-guide-08-solution"
+      ]
+    },
+    {
+      "sequence": 9,
+      "id": "o003-c90-ch12-guide-09",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-act_TS_limits1-prompt-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_exam_top.ptx",
+      "authority_line": 49,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_exam_top.ptx",
+        "authority_line": 49,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_TS_limits1",
+        "xpath": "/section/activity/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "f5ea183dda13245491d63492a2a4e71cb7b39882aafd166f211718b5d75c2da1"
+      },
+      "companion_file": "companion/chapter_12_source_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-09",
+      "title": "Membuktikan topologi komplemen berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-09",
+        "o003-c90-ch12-guide-09-hint",
+        "o003-c90-ch12-guide-09-answer",
+        "o003-c90-ch12-guide-09-solution"
+      ]
+    },
+    {
+      "sequence": 10,
+      "id": "o003-c90-ch12-guide-10",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-act_TS_limits1-prompt-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_exam_top.ptx",
+      "authority_line": 59,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_exam_top.ptx",
+        "authority_line": 59,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_TS_limits1",
+        "xpath": "/section/activity/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "b6cd42757c6f3c1a0c50e4c771edc8de086c34ceb721de6152de4fb2af2021b2"
+      },
+      "companion_file": "companion/chapter_12_source_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-10",
+      "title": "Ketika topologi komplemen berhingga menjadi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-10",
+        "o003-c90-ch12-guide-10-hint",
+        "o003-c90-ch12-guide-10-answer",
+        "o003-c90-ch12-guide-10-solution"
+      ]
+    },
+    {
+      "sequence": 11,
+      "id": "o003-c90-ch12-guide-11",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-act_top_basis-prompt-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 36,
+      "prompt_carrier": "direct_body",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 36,
+        "element_tag": "activity",
+        "nearest_ancestor_or_self_xml_id": "act_top_basis",
+        "xpath": "/section/activity[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "54a319ae98d346ed2d822df27fe54389c7c087d5b6a74bb626523a14dee10838"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-11",
+      "title": "Membangkitkan topologi dari tiga himpunan dasar",
+      "surfaces": [
+        "o003-c90-ch12-guide-11",
+        "o003-c90-ch12-guide-11-hint",
+        "o003-c90-ch12-guide-11-answer",
+        "o003-c90-ch12-guide-11-solution"
+      ]
+    },
+    {
+      "sequence": 12,
+      "id": "o003-c90-ch12-guide-12",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 103,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 103,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_Basis",
+        "xpath": "/section/activity[2]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "db82410670c4f7b04a6c613b2a8e5dcddbb9f090cf57ffe442bf18f53a0513ee"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-12",
+      "title": "Syarat penutupan basis: menutupi ruang",
+      "surfaces": [
+        "o003-c90-ch12-guide-12",
+        "o003-c90-ch12-guide-12-hint",
+        "o003-c90-ch12-guide-12-answer",
+        "o003-c90-ch12-guide-12-solution"
+      ]
+    },
+    {
+      "sequence": 13,
+      "id": "o003-c90-ch12-guide-13",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 125,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 125,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_Basis",
+        "xpath": "/section/activity[2]/task[2]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "b8bbc34f646cda54854eb4812e4468a19d09a1d52705763ca11c1c1727180bdc"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-13",
+      "title": "Kasus dasar induksi untuk irisan basis",
+      "surfaces": [
+        "o003-c90-ch12-guide-13",
+        "o003-c90-ch12-guide-13-hint",
+        "o003-c90-ch12-guide-13-answer",
+        "o003-c90-ch12-guide-13-solution"
+      ]
+    },
+    {
+      "sequence": 14,
+      "id": "o003-c90-ch12-guide-14",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 134,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 134,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_Basis",
+        "xpath": "/section/activity[2]/task[2]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "2cc1b1986d495f3d0bc5bdc628ad549981ab88f539da0ff56832d5e57624f97d"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-14",
+      "title": "Merumuskan hipotesis dan target induksi",
+      "surfaces": [
+        "o003-c90-ch12-guide-14",
+        "o003-c90-ch12-guide-14-hint",
+        "o003-c90-ch12-guide-14-answer",
+        "o003-c90-ch12-guide-14-solution"
+      ]
+    },
+    {
+      "sequence": 15,
+      "id": "o003-c90-ch12-guide-15",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 141,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 141,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_Basis",
+        "xpath": "/section/activity[2]/task[2]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "a2ec4837273decc72bec77a9ca4ae6b7f4e20a8a1c03c68dae639282fa99c82c"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-15",
+      "title": "Menyelesaikan lemma irisan berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-15",
+        "o003-c90-ch12-guide-15-hint",
+        "o003-c90-ch12-guide-15-answer",
+        "o003-c90-ch12-guide-15-solution"
+      ]
+    },
+    {
+      "sequence": 16,
+      "id": "o003-c90-ch12-guide-16",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 304,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 304,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_base_top",
+        "xpath": "/section/activity[3]/task[1]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "0fbaabad88c0e1058151629c4cace9ce928680e87ed428d1ee05a5f30800ce98"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-16",
+      "title": "Melengkapi basis pertama pada topologi hingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-16",
+        "o003-c90-ch12-guide-16-hint",
+        "o003-c90-ch12-guide-16-answer",
+        "o003-c90-ch12-guide-16-solution"
+      ]
+    },
+    {
+      "sequence": 17,
+      "id": "o003-c90-ch12-guide-17",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 317,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 317,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_base_top",
+        "xpath": "/section/activity[3]/task[1]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "4fd851ce30de1b5fb7bc7a319f72e53bca008822cf72788d2f4ce4ee78cdd9e6"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-17",
+      "title": "Menguji basis kedua pada topologi hingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-17",
+        "o003-c90-ch12-guide-17-hint",
+        "o003-c90-ch12-guide-17-answer",
+        "o003-c90-ch12-guide-17-solution"
+      ]
+    },
+    {
+      "sequence": 18,
+      "id": "o003-c90-ch12-guide-18",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 332,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 332,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_base_top",
+        "xpath": "/section/activity[3]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "d39db41b2a484d4dc5fb004c27a4279f5f77bc91286d01c0bd0e8e3f8d604540"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-18",
+      "title": "Menambahkan singleton pada topologi diskret tiga titik",
+      "surfaces": [
+        "o003-c90-ch12-guide-18",
+        "o003-c90-ch12-guide-18-hint",
+        "o003-c90-ch12-guide-18-answer",
+        "o003-c90-ch12-guide-18-solution"
+      ]
+    },
+    {
+      "sequence": 19,
+      "id": "o003-c90-ch12-guide-19",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_base_top.ptx",
+      "authority_line": 343,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_base_top.ptx",
+        "authority_line": 343,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_base_top",
+        "xpath": "/section/activity[3]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "754f6302cf24a09ff4de72335284425011520611c835445e4402e1acb54fa7fc"
+      },
+      "companion_file": "companion/chapter_12_source_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-19",
+      "title": "Basis singleton untuk topologi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-19",
+        "o003-c90-ch12-guide-19-hint",
+        "o003-c90-ch12-guide-19-answer",
+        "o003-c90-ch12-guide-19-solution"
+      ]
+    },
+    {
+      "sequence": 20,
+      "id": "o003-c90-ch12-guide-20",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_metric_top_space-prompt-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_metric_top_space.ptx",
+      "authority_line": 16,
+      "prompt_carrier": "direct_statement",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_metric_top_space.ptx",
+        "authority_line": 16,
+        "element_tag": "statement",
+        "nearest_ancestor_or_self_xml_id": "sec_metric_top_space",
+        "xpath": "/section/activity/statement",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "0e28ee475caa0f6d9f3b2d97a987d31063b398c68406274b56da38d536f95a17"
+      },
+      "companion_file": "companion/chapter_12_source_guides_d.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-20",
+      "title": "Ruang topologi yang tidak dapat dimetriskan",
+      "surfaces": [
+        "o003-c90-ch12-guide-20",
+        "o003-c90-ch12-guide-20-hint",
+        "o003-c90-ch12-guide-20-answer",
+        "o003-c90-ch12-guide-20-solution"
+      ]
+    },
+    {
+      "sequence": 21,
+      "id": "o003-c90-ch12-guide-21",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+      "authority_line": 29,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+        "authority_line": 29,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_neighborhood_top_space",
+        "xpath": "/section/activity[1]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "351f500776fbc95a3cf8fef367a39ca75490fb79379c5b8994aa702e2ebb4eef"
+      },
+      "companion_file": "companion/chapter_12_source_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-21",
+      "title": "Menentukan semua lingkungan titik a",
+      "surfaces": [
+        "o003-c90-ch12-guide-21",
+        "o003-c90-ch12-guide-21-hint",
+        "o003-c90-ch12-guide-21-answer",
+        "o003-c90-ch12-guide-21-solution"
+      ]
+    },
+    {
+      "sequence": 22,
+      "id": "o003-c90-ch12-guide-22",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+      "authority_line": 36,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+        "authority_line": 36,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_neighborhood_top_space",
+        "xpath": "/section/activity[1]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "ac8a2f77bc8886b556fd893a9f4f0aabede67f9e85b903524158f4c676de9d3e"
+      },
+      "companion_file": "companion/chapter_12_source_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-22",
+      "title": "Menentukan semua lingkungan titik c",
+      "surfaces": [
+        "o003-c90-ch12-guide-22",
+        "o003-c90-ch12-guide-22-hint",
+        "o003-c90-ch12-guide-22-answer",
+        "o003-c90-ch12-guide-22-solution"
+      ]
+    },
+    {
+      "sequence": 23,
+      "id": "o003-c90-ch12-guide-23",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+      "authority_line": 84,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+        "authority_line": 84,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_neighborhood_top_space",
+        "xpath": "/section/activity[2]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "f19333bac4629eaf9947bae4c06c91ef1b55e3b4d21ba3eefbfea7c4b4feb69c"
+      },
+      "companion_file": "companion/chapter_12_source_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-23",
+      "title": "Mengubah lingkungan setiap titik menjadi keterbukaan",
+      "surfaces": [
+        "o003-c90-ch12-guide-23",
+        "o003-c90-ch12-guide-23-hint",
+        "o003-c90-ch12-guide-23-answer",
+        "o003-c90-ch12-guide-23-solution"
+      ]
+    },
+    {
+      "sequence": 24,
+      "id": "o003-c90-ch12-guide-24",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+      "authority_line": 91,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+        "authority_line": 91,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_neighborhood_top_space",
+        "xpath": "/section/activity[2]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "22293e431c0d9d2fe36309dcc4caada69cf70aca9363bff3cf3d32d4b9a616f6"
+      },
+      "companion_file": "companion/chapter_12_source_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-24",
+      "title": "Mengapa himpunan O_a harus ada",
+      "surfaces": [
+        "o003-c90-ch12-guide-24",
+        "o003-c90-ch12-guide-24-hint",
+        "o003-c90-ch12-guide-24-answer",
+        "o003-c90-ch12-guide-24-solution"
+      ]
+    },
+    {
+      "sequence": 25,
+      "id": "o003-c90-ch12-guide-25",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-05",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+      "authority_line": 99,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_neighborhood_top_space.ptx",
+        "authority_line": 99,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_neighborhood_top_space",
+        "xpath": "/section/activity[2]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "16e45a3d33592677b5e001255cdddd10cae90ca6b2911d1bf69decbe48674b53"
+      },
+      "companion_file": "companion/chapter_12_source_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-25",
+      "title": "Menyelesaikan pembuktian karakterisasi himpunan terbuka",
+      "surfaces": [
+        "o003-c90-ch12-guide-25",
+        "o003-c90-ch12-guide-25-hint",
+        "o003-c90-ch12-guide-25-answer",
+        "o003-c90-ch12-guide-25-solution"
+      ]
+    },
+    {
+      "sequence": 26,
+      "id": "o003-c90-ch12-guide-26",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_interior_set_top.ptx",
+      "authority_line": 58,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_interior_set_top.ptx",
+        "authority_line": 58,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_interior",
+        "xpath": "/section/activity[1]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "0aaee311cb15c51731ed7fdca090696893bde3162cfc239a28322cca097c0358"
+      },
+      "companion_file": "companion/chapter_12_source_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-26",
+      "title": "Interior pada topologi standar di garis real",
+      "surfaces": [
+        "o003-c90-ch12-guide-26",
+        "o003-c90-ch12-guide-26-hint",
+        "o003-c90-ch12-guide-26-answer",
+        "o003-c90-ch12-guide-26-solution"
+      ]
+    },
+    {
+      "sequence": 27,
+      "id": "o003-c90-ch12-guide-27",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_interior_set_top.ptx",
+      "authority_line": 70,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_interior_set_top.ptx",
+        "authority_line": 70,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_interior",
+        "xpath": "/section/activity[1]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "4c8442af31ea4b4f0c8efc229d01a44598036d885f878020df1b9dfbcf695f9a"
+      },
+      "companion_file": "companion/chapter_12_source_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-27",
+      "title": "Interior pada topologi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-27",
+        "o003-c90-ch12-guide-27-hint",
+        "o003-c90-ch12-guide-27-answer",
+        "o003-c90-ch12-guide-27-solution"
+      ]
+    },
+    {
+      "sequence": 28,
+      "id": "o003-c90-ch12-guide-28",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_interior_set_top.ptx",
+      "authority_line": 81,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_interior_set_top.ptx",
+        "authority_line": 81,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_interior",
+        "xpath": "/section/activity[1]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "9a268840ec5b1f7ed35d0192263afa774e2642c79dc55354f0a221baf5789fc9"
+      },
+      "companion_file": "companion/chapter_12_source_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-28",
+      "title": "Interior pada topologi komplemen berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-28",
+        "o003-c90-ch12-guide-28-hint",
+        "o003-c90-ch12-guide-28-answer",
+        "o003-c90-ch12-guide-28-solution"
+      ]
+    },
+    {
+      "sequence": 29,
+      "id": "o003-c90-ch12-guide-29",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_interior_set_top.ptx",
+      "authority_line": 93,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_interior_set_top.ptx",
+        "authority_line": 93,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "act_interior",
+        "xpath": "/section/activity[1]/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "b8c63c3cee264226a09a27c41ddc8867e285f54ae29dcd560c60973b5625cfb4"
+      },
+      "companion_file": "companion/chapter_12_source_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-29",
+      "title": "Interior pada topologi hingga yang diberikan",
+      "surfaces": [
+        "o003-c90-ch12-guide-29",
+        "o003-c90-ch12-guide-29-hint",
+        "o003-c90-ch12-guide-29-answer",
+        "o003-c90-ch12-guide-29-solution"
+      ]
+    },
+    {
+      "sequence": 30,
+      "id": "o003-c90-ch12-guide-30",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-05",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_interior_set_top.ptx",
+      "authority_line": 158,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_interior_set_top.ptx",
+        "authority_line": 158,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_interior_set_top",
+        "xpath": "/section/activity[2]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "b26af771d76a1bbe48903d85a689ade147451a765bb5c4450b458ad025b92f1a"
+      },
+      "companion_file": "companion/chapter_12_source_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-30",
+      "title": "Menetapkan sasaran teorema interior",
+      "surfaces": [
+        "o003-c90-ch12-guide-30",
+        "o003-c90-ch12-guide-30-hint",
+        "o003-c90-ch12-guide-30-answer",
+        "o003-c90-ch12-guide-30-solution"
+      ]
+    },
+    {
+      "sequence": 31,
+      "id": "o003-c90-ch12-guide-31",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-06",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_interior_set_top.ptx",
+      "authority_line": 165,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_interior_set_top.ptx",
+        "authority_line": 165,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_interior_set_top",
+        "xpath": "/section/activity[2]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "42459fa7903b65e2a0202d73f80ae69547e07d9c529e5c64c730694e54eeeff9"
+      },
+      "companion_file": "companion/chapter_12_source_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-guide-31",
+      "title": "Membuktikan kemaksimalan interior",
+      "surfaces": [
+        "o003-c90-ch12-guide-31",
+        "o003-c90-ch12-guide-31-hint",
+        "o003-c90-ch12-guide-31-answer",
+        "o003-c90-ch12-guide-31-solution"
+      ]
+    },
+    {
+      "sequence": 32,
+      "id": "o003-c90-ch12-exer-a-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-opening-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 10,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 10,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[1]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "9b28a3ee8d587f029966953d28cbb6e265903d1be05aa3f6853929e76e246c9b"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-01",
+      "title": "Semua gabungan koleksi pembangkit",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-01",
+        "o003-c90-ch12-exer-a-01-hint",
+        "o003-c90-ch12-exer-a-01-answer",
+        "o003-c90-ch12-exer-a-01-solution"
+      ]
+    },
+    {
+      "sequence": 33,
+      "id": "o003-c90-ch12-exer-a-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-opening-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 17,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 17,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[1]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "71f66e7fd7e072962e76c0a6c82c53381e448e4cad76da9d9a06d8f9d334b889"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-02",
+      "title": "Mengapa koleksi gabungan itu bukan topologi",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-02",
+        "o003-c90-ch12-exer-a-02-hint",
+        "o003-c90-ch12-exer-a-02-answer",
+        "o003-c90-ch12-exer-a-02-solution"
+      ]
+    },
+    {
+      "sequence": 34,
+      "id": "o003-c90-ch12-exer-a-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 34,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 34,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_aZ_top",
+        "xpath": "/exercises/exercise[2]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "354dd5c2bcd407e9c065a04186c8cffc0ad674c3c1edaa4deac8e4551a5e8dc1"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-03",
+      "title": "Basis kelipatan bilangan bulat",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-03",
+        "o003-c90-ch12-exer-a-03-hint",
+        "o003-c90-ch12-exer-a-03-answer",
+        "o003-c90-ch12-exer-a-03-solution"
+      ]
+    },
+    {
+      "sequence": 35,
+      "id": "o003-c90-ch12-exer-a-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 46,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 46,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_aZ_top",
+        "xpath": "/exercises/exercise[2]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "3ceca3e0b3c498974689875bc4ffaa65835d80f00fe5abc74dca7a08e52931fd"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-04",
+      "title": "Bilangan bulat positif tidak terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-04",
+        "o003-c90-ch12-exer-a-04-hint",
+        "o003-c90-ch12-exer-a-04-answer",
+        "o003-c90-ch12-exer-a-04-solution"
+      ]
+    },
+    {
+      "sequence": 36,
+      "id": "o003-c90-ch12-exer-a-05",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 53,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 53,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_aZ_top",
+        "xpath": "/exercises/exercise[2]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "d6e199b88b11afc576d487bcfcb98591cd94464d324a83452a931d7a81a5769f"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-05",
+      "title": "Bilangan bulat ganjil tidak terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-05",
+        "o003-c90-ch12-exer-a-05-hint",
+        "o003-c90-ch12-exer-a-05-answer",
+        "o003-c90-ch12-exer-a-05-solution"
+      ]
+    },
+    {
+      "sequence": 37,
+      "id": "o003-c90-ch12-exer-a-06",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 60,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 60,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_aZ_top",
+        "xpath": "/exercises/exercise[2]/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "5bafb0b0555a2e097ad796d32354bb8d31b904639d0f6e1d49cdeda01701df8e"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-06",
+      "title": "Satu himpunan terbuka dengan ekor kelipatan",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-06",
+        "o003-c90-ch12-exer-a-06-hint",
+        "o003-c90-ch12-exer-a-06-answer",
+        "o003-c90-ch12-exer-a-06-solution"
+      ]
+    },
+    {
+      "sequence": 38,
+      "id": "o003-c90-ch12-exer-a-07",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 75,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 75,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[3]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "e36e1edc549934eb5224d616b8044c61f4707d842b25f0be9bd209ec0e6f4bb3"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-07",
+      "title": "Basis dari kelas-kelas residu",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-07",
+        "o003-c90-ch12-exer-a-07-hint",
+        "o003-c90-ch12-exer-a-07-answer",
+        "o003-c90-ch12-exer-a-07-solution"
+      ]
+    },
+    {
+      "sequence": 39,
+      "id": "o003-c90-ch12-exer-a-08",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 93,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 93,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[3]/task[2]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "88d1802eebe6d0e22f0ecc813ea29fefff7aa132883cba8d75e7314ec20572a8"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-08",
+      "title": "Fungsi yang menukar pasangan berurutan",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-08",
+        "o003-c90-ch12-exer-a-08-hint",
+        "o003-c90-ch12-exer-a-08-answer",
+        "o003-c90-ch12-exer-a-08-solution"
+      ]
+    },
+    {
+      "sequence": 40,
+      "id": "o003-c90-ch12-exer-a-09",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 100,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 100,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[3]/task[2]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "673cb1664498e9d4a7570db295b16ca5e4350a7c43014a59f11e5b5a9061b3fe"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-09",
+      "title": "Citra himpunan terbuka di bawah f",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-09",
+        "o003-c90-ch12-exer-a-09-hint",
+        "o003-c90-ch12-exer-a-09-answer",
+        "o003-c90-ch12-exer-a-09-solution"
+      ]
+    },
+    {
+      "sequence": 41,
+      "id": "o003-c90-ch12-exer-a-10",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 108,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 108,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[3]/task[2]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "50142828edc6ef889f62af8c780277f086d5109a84347e889190e75dcabe4ef5"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_a.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-a-10",
+      "title": "Prapeta himpunan terbuka di bawah f",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-10",
+        "o003-c90-ch12-exer-a-10-hint",
+        "o003-c90-ch12-exer-a-10-answer",
+        "o003-c90-ch12-exer-a-10-solution"
+      ]
+    },
+    {
+      "sequence": 42,
+      "id": "o003-c90-ch12-exer-b-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_coarse_topology_example-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 132,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 132,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_coarse_topology_example",
+        "xpath": "/exercises/exercise[4]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "9025cb8fd751008d694f9b2c1cc5cf5f8a5d92e2edcb49feeaeebec5e60286c3"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-01",
+      "title": "Basis interval berpusat di nol",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-01",
+        "o003-c90-ch12-exer-b-01-hint",
+        "o003-c90-ch12-exer-b-01-answer",
+        "o003-c90-ch12-exer-b-01-solution"
+      ]
+    },
+    {
+      "sequence": 43,
+      "id": "o003-c90-ch12-exer-b-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_coarse_topology_example-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 139,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 139,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_coarse_topology_example",
+        "xpath": "/exercises/exercise[4]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "34d08826fba56effa745512314a7000a9f57f53bd72ebe5d22e070d0b42c6ac7"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-02",
+      "title": "Interval Euklides yang tidak terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-02",
+        "o003-c90-ch12-exer-b-02-hint",
+        "o003-c90-ch12-exer-b-02-answer",
+        "o003-c90-ch12-exer-b-02-solution"
+      ]
+    },
+    {
+      "sequence": 44,
+      "id": "o003-c90-ch12-exer-b-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 178,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 178,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "121036da79e888f3a417fadf773c891fba75368cbdbe616a3a0eb054bbece1d8"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-03",
+      "title": "Topologi paling lemah",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-03",
+        "o003-c90-ch12-exer-b-03-hint",
+        "o003-c90-ch12-exer-b-03-answer",
+        "o003-c90-ch12-exer-b-03-solution"
+      ]
+    },
+    {
+      "sequence": 45,
+      "id": "o003-c90-ch12-exer-b-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 185,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 185,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "81e52ebcb34a0d3dbe884fe3af0b086b75f62e057d0adf3ba1acf0afca92dcb3"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-04",
+      "title": "Topologi paling kuat",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-04",
+        "o003-c90-ch12-exer-b-04-hint",
+        "o003-c90-ch12-exer-b-04-answer",
+        "o003-c90-ch12-exer-b-04-solution"
+      ]
+    },
+    {
+      "sequence": 46,
+      "id": "o003-c90-ch12-exer-b-05",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 192,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 192,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "f66fe0637237e4c9de308b26a90b26843edbf0a612c421a0611234ee40eb908c"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-05",
+      "title": "Topologi maksimal yang bukan diskret",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-05",
+        "o003-c90-ch12-exer-b-05-hint",
+        "o003-c90-ch12-exer-b-05-answer",
+        "o003-c90-ch12-exer-b-05-solution"
+      ]
+    },
+    {
+      "sequence": 47,
+      "id": "o003-c90-ch12-exer-b-06",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 211,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 211,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "e2e1656b2304efdc79a1ade84011d104a9ff7b679851c48692cd7169b8093ae4"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-06",
+      "title": "Adakah topologi maksimal non-diskret?",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-06",
+        "o003-c90-ch12-exer-b-06-hint",
+        "o003-c90-ch12-exer-b-06-answer",
+        "o003-c90-ch12-exer-b-06-solution"
+      ]
+    },
+    {
+      "sequence": 48,
+      "id": "o003-c90-ch12-exer-b-07",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-05",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 220,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 220,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[5]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "89f8125602b13ff46db83e04d4ffcf41438812cfef7da196133c40ecc6e7094a"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-07",
+      "title": "Topologi minimal non-indiskret",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-07",
+        "o003-c90-ch12-exer-b-07-hint",
+        "o003-c90-ch12-exer-b-07-answer",
+        "o003-c90-ch12-exer-b-07-solution"
+      ]
+    },
+    {
+      "sequence": 49,
+      "id": "o003-c90-ch12-exer-b-08",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 241,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 241,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[6]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "e92485d7a8e1ab8bc92121960c4222b03e0595a275621dc4222e2e4f47ed467f"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-08",
+      "title": "Keterbukaan himpunan lingkungan minimal",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-08",
+        "o003-c90-ch12-exer-b-08-hint",
+        "o003-c90-ch12-exer-b-08-answer",
+        "o003-c90-ch12-exer-b-08-solution"
+      ]
+    },
+    {
+      "sequence": 50,
+      "id": "o003-c90-ch12-exer-b-09",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 248,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 248,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[6]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "74b72e232914a616be88b31f83df20623cb329397fedf231ac6c5e2334676cbf"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-09",
+      "title": "Basis minimal dari lingkungan terkecil",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-09",
+        "o003-c90-ch12-exer-b-09-hint",
+        "o003-c90-ch12-exer-b-09-answer",
+        "o003-c90-ch12-exer-b-09-solution"
+      ]
+    },
+    {
+      "sequence": 51,
+      "id": "o003-c90-ch12-exer-b-10",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 255,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 255,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[6]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "81ff1ac2a885cbd8087e6ff7cd746cbbb9b2ff0edede6ffde88f4b2b27dc2ba1"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_b.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-b-10",
+      "title": "Minimalitas basis hingga",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-10",
+        "o003-c90-ch12-exer-b-10-hint",
+        "o003-c90-ch12-exer-b-10-answer",
+        "o003-c90-ch12-exer-b-10-solution"
+      ]
+    },
+    {
+      "sequence": 52,
+      "id": "o003-c90-ch12-exer-c-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 262,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 262,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[6]/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "850a929258ecf738a479490eb48af7724a7061b9898c5f7153c92ef378e5472e"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-c-01",
+      "title": "Basis minimal pada empat titik",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-01",
+        "o003-c90-ch12-exer-c-01-hint",
+        "o003-c90-ch12-exer-c-01-answer",
+        "o003-c90-ch12-exer-c-01-solution"
+      ]
+    },
+    {
+      "sequence": 53,
+      "id": "o003-c90-ch12-exer-c-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-topology_chains-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 271,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 271,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[5]/task[7]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "9fb5ad4725c8f8e31260a59ecc6dcb5faf0ef9b03003ad85388aa4b691c331b2"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-c-02",
+      "title": "Rantai terpanjang topologi yang ditampilkan",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-02",
+        "o003-c90-ch12-exer-c-02-hint",
+        "o003-c90-ch12-exer-c-02-answer",
+        "o003-c90-ch12-exer-c-02-solution"
+      ]
+    },
+    {
+      "sequence": 54,
+      "id": "o003-c90-ch12-exer-c-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_topologies-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 343,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 343,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[6]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "3545257afdd87b637bd52f61ce26e4ad4ac9b9b4c529c6f5609b0989cae49746"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-c-03",
+      "title": "Semua topologi pada himpunan satu titik",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-03",
+        "o003-c90-ch12-exer-c-03-hint",
+        "o003-c90-ch12-exer-c-03-answer",
+        "o003-c90-ch12-exer-c-03-solution"
+      ]
+    },
+    {
+      "sequence": 55,
+      "id": "o003-c90-ch12-exer-c-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_topologies-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 350,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 350,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[6]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "8254721235ce803ac76702e6ff2c421d0611997ef1176eb91bd4193b6beb8c9f"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-c-04",
+      "title": "Semua topologi pada himpunan dua titik berlabel",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-04",
+        "o003-c90-ch12-exer-c-04-hint",
+        "o003-c90-ch12-exer-c-04-answer",
+        "o003-c90-ch12-exer-c-04-solution"
+      ]
+    },
+    {
+      "sequence": 56,
+      "id": "o003-c90-ch12-exer-c-05",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_topologies-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 357,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 357,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[6]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "5e2613381135a9e24419b87b8b04126697dc4bcda6017df999776316e9e10f39"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_c.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-c-05",
+      "title": "Semua 29 topologi pada himpunan tiga titik berlabel",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-05",
+        "o003-c90-ch12-exer-c-05-hint",
+        "o003-c90-ch12-exer-c-05-answer",
+        "o003-c90-ch12-exer-c-05-solution"
+      ]
+    },
+    {
+      "sequence": 57,
+      "id": "o003-c90-ch12-exer-d-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-tail_topology-direct-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 372,
+      "prompt_carrier": "direct_statement",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 372,
+        "element_tag": "statement",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[7]/statement",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "30299794cdfae50744a91c6ef5cb7c5907b8be3e55d14414368f0fd8861413ed"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_d.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-d-01",
+      "title": "Topologi ekor pada bilangan bulat positif",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-01",
+        "o003-c90-ch12-exer-d-01-hint",
+        "o003-c90-ch12-exer-d-01-answer",
+        "o003-c90-ch12-exer-d-01-solution"
+      ]
+    },
+    {
+      "sequence": 58,
+      "id": "o003-c90-ch12-exer-d-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-interior_laws-direct-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 382,
+      "prompt_carrier": "direct_statement",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 382,
+        "element_tag": "statement",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[8]/statement",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "54a3cd38b396fd17c75be2eb0cb5b640da3b3b00ddca92606ceee98952673705"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_d.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-d-02",
+      "title": "Interior irisan dan gabungan",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-02",
+        "o003-c90-ch12-exer-d-02-hint",
+        "o003-c90-ch12-exer-d-02-answer",
+        "o003-c90-ch12-exer-d-02-solution"
+      ]
+    },
+    {
+      "sequence": 59,
+      "id": "o003-c90-ch12-exer-d-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_particular_point_topology-direct-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 394,
+      "prompt_carrier": "direct_statement",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 394,
+        "element_tag": "statement",
+        "nearest_ancestor_or_self_xml_id": "ex_particular_point_topology",
+        "xpath": "/exercises/exercise[9]/statement",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "f41a7bdb8927e7adc7c9fb4089f662f5a22c99dd8ea3aecd6c1d1133f497180e"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_d.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-d-03",
+      "title": "Topologi titik tertentu",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-03",
+        "o003-c90-ch12-exer-d-03-hint",
+        "o003-c90-ch12-exer-d-03-answer",
+        "o003-c90-ch12-exer-d-03-solution"
+      ]
+    },
+    {
+      "sequence": 60,
+      "id": "o003-c90-ch12-exer-d-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_excluded_point_topology-direct-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 409,
+      "prompt_carrier": "direct_statement",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 409,
+        "element_tag": "statement",
+        "nearest_ancestor_or_self_xml_id": "ex_excluded_point_topology",
+        "xpath": "/exercises/exercise[10]/statement",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "827b3c110af4f6b20decf47dd55f66fdf7cd6ad439b90d5c34fd49da350f475d"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_d.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-d-04",
+      "title": "Topologi titik yang dikecualikan",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-04",
+        "o003-c90-ch12-exer-d-04-hint",
+        "o003-c90-ch12-exer-d-04-answer",
+        "o003-c90-ch12-exer-d-04-solution"
+      ]
+    },
+    {
+      "sequence": 61,
+      "id": "o003-c90-ch12-exer-e-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 442,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 442,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_digital_line_topology",
+        "xpath": "/exercises/exercise[11]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "8d8cdb64868e6b042a793849ef674e46f0a7aa18a8baa9a7206da1867e1e546c"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-e-01",
+      "title": "Koleksi lingkungan dasar pada garis digital",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-01",
+        "o003-c90-ch12-exer-e-01-hint",
+        "o003-c90-ch12-exer-e-01-answer",
+        "o003-c90-ch12-exer-e-01-solution"
+      ]
+    },
+    {
+      "sequence": 62,
+      "id": "o003-c90-ch12-exer-e-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 466,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 466,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_digital_line_topology",
+        "xpath": "/exercises/exercise[11]/task[2]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "d59d95dfeb3c1e2469e3e9e177c2810cd8bbcf6de4921d621a523f26030ad773"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-e-02",
+      "title": "Apakah singleton nol terbuka?",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-02",
+        "o003-c90-ch12-exer-e-02-hint",
+        "o003-c90-ch12-exer-e-02-answer",
+        "o003-c90-ch12-exer-e-02-solution"
+      ]
+    },
+    {
+      "sequence": 63,
+      "id": "o003-c90-ch12-exer-e-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 473,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 473,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_digital_line_topology",
+        "xpath": "/exercises/exercise[11]/task[2]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "27d15ddde69a51c91d41f18649675e7f70f0a8955c147c795c68901e992e4f8f"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-e-03",
+      "title": "Apakah singleton satu terbuka?",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-03",
+        "o003-c90-ch12-exer-e-03-hint",
+        "o003-c90-ch12-exer-e-03-answer",
+        "o003-c90-ch12-exer-e-03-solution"
+      ]
+    },
+    {
+      "sequence": 64,
+      "id": "o003-c90-ch12-exer-e-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 480,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 480,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_digital_line_topology",
+        "xpath": "/exercises/exercise[11]/task[2]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "6978658c1ff914008d5fe37e0f08b8a73e469a52a975ccc7833401ae7ec5df48"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-e-04",
+      "title": "Apakah dua titik genap terbuka?",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-04",
+        "o003-c90-ch12-exer-e-04-hint",
+        "o003-c90-ch12-exer-e-04-answer",
+        "o003-c90-ch12-exer-e-04-solution"
+      ]
+    },
+    {
+      "sequence": 65,
+      "id": "o003-c90-ch12-exer-e-05",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 487,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 487,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_digital_line_topology",
+        "xpath": "/exercises/exercise[11]/task[2]/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "3c0ac1082009bb6820113bad1a600455b89add09f7bb6bf96c1d7196432ef572"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-e-05",
+      "title": "Blok berhingga yang terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-05",
+        "o003-c90-ch12-exer-e-05-hint",
+        "o003-c90-ch12-exer-e-05-answer",
+        "o003-c90-ch12-exer-e-05-solution"
+      ]
+    },
+    {
+      "sequence": 66,
+      "id": "o003-c90-ch12-exer-e-06",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-05",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 494,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 494,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_digital_line_topology",
+        "xpath": "/exercises/exercise[11]/task[2]/task[5]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "da81e7e30fd6d8e213de624a8045592b6df32805fcd73e73ec67e1ba2616fcd0"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-e-06",
+      "title": "Bilangan bulat positif",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-06",
+        "o003-c90-ch12-exer-e-06-hint",
+        "o003-c90-ch12-exer-e-06-answer",
+        "o003-c90-ch12-exer-e-06-solution"
+      ]
+    },
+    {
+      "sequence": 67,
+      "id": "o003-c90-ch12-exer-e-07",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-06",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 501,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 501,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_digital_line_topology",
+        "xpath": "/exercises/exercise[11]/task[2]/task[6]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "b803d3b69c6443ff65cef0948b62147b5f691371ffe51b617b9a9b8f068a10a6"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_e.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-e-07",
+      "title": "Himpunan semua bilangan bulat ganjil",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-07",
+        "o003-c90-ch12-exer-e-07-hint",
+        "o003-c90-ch12-exer-e-07-answer",
+        "o003-c90-ch12-exer-e-07-solution"
+      ]
+    },
+    {
+      "sequence": 68,
+      "id": "o003-c90-ch12-exer-f-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 536,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 536,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_TS_Zariski",
+        "xpath": "/exercises/exercise[12]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "a7ae2df71e4bb4388ac9c9c074ce880adea83ce7ae4c38cc7516a6fd3747364e"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-f-01",
+      "title": "Himpunan nol berupa dua garis vertikal",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-01",
+        "o003-c90-ch12-exer-f-01-hint",
+        "o003-c90-ch12-exer-f-01-answer",
+        "o003-c90-ch12-exer-f-01-solution"
+      ]
+    },
+    {
+      "sequence": 69,
+      "id": "o003-c90-ch12-exer-f-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 543,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 543,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_TS_Zariski",
+        "xpath": "/exercises/exercise[12]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "4db8bfe87c4b409687b61c238e1acb684559860e9f0313955be9f5e5988ac546"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-f-02",
+      "title": "Garis nol bersama tiga polinom linear",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-02",
+        "o003-c90-ch12-exer-f-02-hint",
+        "o003-c90-ch12-exer-f-02-answer",
+        "o003-c90-ch12-exer-f-02-solution"
+      ]
+    },
+    {
+      "sequence": 70,
+      "id": "o003-c90-ch12-exer-f-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 552,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 552,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_TS_Zariski",
+        "xpath": "/exercises/exercise[12]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "582f302ec67a572129554012381b7b2e4b0715556ebd19e14192372507c97b53"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-f-03",
+      "title": "Komplemen himpunan nol sebagai basis",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-03",
+        "o003-c90-ch12-exer-f-03-hint",
+        "o003-c90-ch12-exer-f-03-answer",
+        "o003-c90-ch12-exer-f-03-solution"
+      ]
+    },
+    {
+      "sequence": 71,
+      "id": "o003-c90-ch12-exer-f-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 564,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 564,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_TS_Zariski",
+        "xpath": "/exercises/exercise[12]/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "e39fd951c521bf9e0eb347f8be9533f9e7044af36a8fec421f802987a5161ab3"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-f-04",
+      "title": "Sumbu koordinat tidak terbuka secara Zariski",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-04",
+        "o003-c90-ch12-exer-f-04-hint",
+        "o003-c90-ch12-exer-f-04-answer",
+        "o003-c90-ch12-exer-f-04-solution"
+      ]
+    },
+    {
+      "sequence": 72,
+      "id": "o003-c90-ch12-exer-f-05",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-05",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 572,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 572,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "ex_TS_Zariski",
+        "xpath": "/exercises/exercise[12]/task[5]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "d09eafa9a50bb3182bfc5cdf21294d22c3566808c163872e9bc19a0caf4ce228"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_f.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-f-05",
+      "title": "Topologi Zariski pada garis adalah topologi kofinit",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-05",
+        "o003-c90-ch12-exer-f-05-hint",
+        "o003-c90-ch12-exer-f-05-answer",
+        "o003-c90-ch12-exer-f-05-solution"
+      ]
+    },
+    {
+      "sequence": 73,
+      "id": "o003-c90-ch12-exer-g-01",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-01",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 591,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 591,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[13]/task[1]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "61dc838b734a5925f4a038e8e949988f05b77dc0871b64f44a8b636d88e04378"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_g.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-g-01",
+      "title": "Koleksi lima himpunan",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-01",
+        "o003-c90-ch12-exer-g-01-hint",
+        "o003-c90-ch12-exer-g-01-answer",
+        "o003-c90-ch12-exer-g-01-solution"
+      ]
+    },
+    {
+      "sequence": 74,
+      "id": "o003-c90-ch12-exer-g-02",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-02",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 598,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 598,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[13]/task[2]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "96a7cfff080389c4d12d148fef05f8be26deaf5c8df5f34c209fcaf0f9dd313f"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_g.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-g-02",
+      "title": "Bilangan bulat dalam topologi kofinit",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-02",
+        "o003-c90-ch12-exer-g-02-hint",
+        "o003-c90-ch12-exer-g-02-answer",
+        "o003-c90-ch12-exer-g-02-solution"
+      ]
+    },
+    {
+      "sequence": 75,
+      "id": "o003-c90-ch12-exer-g-03",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-03",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 605,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 605,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[13]/task[3]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "b45ff93dfedc1c1a6e2bc74b5404e7f0e25180b0d6bf4c1b3df312929da82fdd"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_g.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-g-03",
+      "title": "Menguji basis yang diberikan",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-03",
+        "o003-c90-ch12-exer-g-03-hint",
+        "o003-c90-ch12-exer-g-03-answer",
+        "o003-c90-ch12-exer-g-03-solution"
+      ]
+    },
+    {
+      "sequence": 76,
+      "id": "o003-c90-ch12-exer-g-04",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-04",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 615,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 615,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[13]/task[4]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "ee414dc965ac9081a85a5d664d84491b9c719ffafa7e3bf64a9a9477ab46c0e8"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_g.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-g-04",
+      "title": "Ruang diskret selalu termetriskan",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-04",
+        "o003-c90-ch12-exer-g-04-hint",
+        "o003-c90-ch12-exer-g-04-answer",
+        "o003-c90-ch12-exer-g-04-solution"
+      ]
+    },
+    {
+      "sequence": 77,
+      "id": "o003-c90-ch12-exer-g-05",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-05",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 624,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 624,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[13]/task[5]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "c860fab7c93766c7487644f4eb3d2a5bd730ca856371e638e5500793c98e5b4b"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_g.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-g-05",
+      "title": "Titik interior dalam ruang berhingga",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-05",
+        "o003-c90-ch12-exer-g-05-hint",
+        "o003-c90-ch12-exer-g-05-answer",
+        "o003-c90-ch12-exer-g-05-solution"
+      ]
+    },
+    {
+      "sequence": 78,
+      "id": "o003-c90-ch12-exer-g-06",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-06",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 636,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 636,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[13]/task[6]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "0f93d7cba5bceeb45278628336b7ccf0579ac3fa7023c11f65e36f17a5f4e90c"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_g.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-g-06",
+      "title": "Gabungan dua topologi",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-06",
+        "o003-c90-ch12-exer-g-06-hint",
+        "o003-c90-ch12-exer-g-06-answer",
+        "o003-c90-ch12-exer-g-06-solution"
+      ]
+    },
+    {
+      "sequence": 79,
+      "id": "o003-c90-ch12-exer-g-07",
+      "entry_type": "source_prompt_guide",
+      "license": "CC BY 4.0",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-07",
+      "source_anchor_kind": "synthetic_locale_neutral_alias",
+      "authority_source_file": "source/sec_top_space_exer.ptx",
+      "authority_line": 644,
+      "prompt_carrier": "atomic_task",
+      "authority_locator": {
+        "authority_commit": "0c2d8f614ef87aa00de373f3418146c2f1d13bb9",
+        "authority_source_file": "source/sec_top_space_exer.ptx",
+        "authority_line": 644,
+        "element_tag": "task",
+        "nearest_ancestor_or_self_xml_id": "sec_top_space_exer",
+        "xpath": "/exercises/exercise[13]/task[7]",
+        "subtree_hash_contract": "sha256-c14n-1.0-with-comments",
+        "subtree_sha256": "d51482792080c24f2488a435c716614c241d109c155054be2207fa4c92324bf8"
+      },
+      "companion_file": "companion/chapter_12_exercise_guides_g.ptx",
+      "companion_anchor": "o003-c90-ch12-exer-g-07",
+      "title": "Irisan dua topologi",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-07",
+        "o003-c90-ch12-exer-g-07-hint",
+        "o003-c90-ch12-exer-g-07-answer",
+        "o003-c90-ch12-exer-g-07-solution"
+      ]
+    },
+    {
+      "sequence": 80,
+      "id": "o003-c90-ch12-mastery-01",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-01",
+      "title": "Mengapa irisan hanya berhingga",
+      "surfaces": [
+        "o003-c90-ch12-mastery-01",
+        "o003-c90-ch12-mastery-01-hint",
+        "o003-c90-ch12-mastery-01-answer",
+        "o003-c90-ch12-mastery-01-solution"
+      ]
+    },
+    {
+      "sequence": 81,
+      "id": "o003-c90-ch12-mastery-02",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-02",
+      "title": "Geometri global topologi kofinit",
+      "surfaces": [
+        "o003-c90-ch12-mastery-02",
+        "o003-c90-ch12-mastery-02-hint",
+        "o003-c90-ch12-mastery-02-answer",
+        "o003-c90-ch12-mastery-02-solution"
+      ]
+    },
+    {
+      "sequence": 82,
+      "id": "o003-c90-ch12-mastery-03",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-03",
+      "title": "Kehalusan mengubah data lokal",
+      "surfaces": [
+        "o003-c90-ch12-mastery-03",
+        "o003-c90-ch12-mastery-03-hint",
+        "o003-c90-ch12-mastery-03-answer",
+        "o003-c90-ch12-mastery-03-solution"
+      ]
+    },
+    {
+      "sequence": 83,
+      "id": "o003-c90-ch12-mastery-04",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-04",
+      "title": "Dua basis, satu topologi",
+      "surfaces": [
+        "o003-c90-ch12-mastery-04",
+        "o003-c90-ch12-mastery-04-hint",
+        "o003-c90-ch12-mastery-04-answer",
+        "o003-c90-ch12-mastery-04-solution"
+      ]
+    },
+    {
+      "sequence": 84,
+      "id": "o003-c90-ch12-mastery-05",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-05",
+      "title": "Interior dibaca langsung dari basis",
+      "surfaces": [
+        "o003-c90-ch12-mastery-05",
+        "o003-c90-ch12-mastery-05-hint",
+        "o003-c90-ch12-mastery-05-answer",
+        "o003-c90-ch12-mastery-05-solution"
+      ]
+    },
+    {
+      "sequence": 85,
+      "id": "o003-c90-ch12-mastery-06",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-06",
+      "title": "Metrik terpotong, topologi tetap",
+      "surfaces": [
+        "o003-c90-ch12-mastery-06",
+        "o003-c90-ch12-mastery-06-hint",
+        "o003-c90-ch12-mastery-06-answer",
+        "o003-c90-ch12-mastery-06-solution"
+      ]
+    },
+    {
+      "sequence": 86,
+      "id": "o003-c90-ch12-mastery-07",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-07",
+      "title": "Ruang hingga termetriskan harus diskret",
+      "surfaces": [
+        "o003-c90-ch12-mastery-07",
+        "o003-c90-ch12-mastery-07-hint",
+        "o003-c90-ch12-mastery-07-answer",
+        "o003-c90-ch12-mastery-07-solution"
+      ]
+    },
+    {
+      "sequence": 87,
+      "id": "o003-c90-ch12-mastery-08",
+      "entry_type": "original_mastery",
+      "license": "CC BY 4.0",
+      "origin": "original_companion_content",
+      "companion_file": "companion/chapter_12_mastery.ptx",
+      "companion_anchor": "o003-c90-ch12-mastery-08",
+      "title": "Lingkungan menentukan topologi",
+      "surfaces": [
+        "o003-c90-ch12-mastery-08",
+        "o003-c90-ch12-mastery-08-hint",
+        "o003-c90-ch12-mastery-08-answer",
+        "o003-c90-ch12-mastery-08-solution"
+      ]
+    }
+  ],
+  "validation": {
+    "xml_parse": "pass",
+    "schema_validation": {
+      "exercise_guides_a": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_A_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "4e77adcaeddc074e984c428dc521d7a3c30e62e259ae067340a101ba45b598df",
+        "status": "pass"
+      },
+      "exercise_guides_b": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_B_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "495fb9c12b7cf3d9840aeeff34ba02b97b8fb093f6813b176c678754ca32c0bb",
+        "status": "pass"
+      },
+      "exercise_guides_c": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_C_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "6489e3baf351675be9b0451e8e9f1b19c08659d2b95a7ca70b8942f95abc4858",
+        "status": "pass"
+      },
+      "exercise_guides_d": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_D_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "128bc9b8a93cf66207b55c3d281eedf07cf392817f7ca4491d6c8b665a96a37c",
+        "status": "pass"
+      },
+      "exercise_guides_e": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_E_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "3b13d0f8a1104e04fc93149db9f2bea66eea3eb5de911966c7c89a1700c055a0",
+        "status": "pass"
+      },
+      "exercise_guides_f": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_F_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "e70b8c4e48a9138d1f0fd49f7cfaaf93f8f1ac448c066f60630a9ebe09d3332d",
+        "status": "pass"
+      },
+      "exercise_guides_g": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_G_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "7df5b15ad812efa5a8e156c248b473084ef8ff381af9251f45036eefdbe576b1",
+        "status": "pass"
+      },
+      "companion_wrapper": {
+        "path": "repo/qa/CHAPTER12_COMPANION_WRAPPER_SCHEMA_QA.json",
+        "bytes": 1527,
+        "sha256": "410ca4ae50080a15f2a8f2a1e39492ab8f816c865bd33aa456f08c4222ccedc3",
+        "status": "pass"
+      },
+      "mastery": {
+        "path": "repo/qa/CHAPTER12_MASTERY_SCHEMA_QA.json",
+        "bytes": 776,
+        "sha256": "3db4fff067e33774dc8690386744423c8620866813a65170d67b1ec00c3d7d0a",
+        "status": "pass"
+      }
+    },
+    "all_covered_entries_have_statement_hint_answer_solution": true,
+    "source_and_companion_ids_are_disjoint": true,
+    "complete_reader_boundary": false,
+    "cumulative_build": "not run; reader admission still requires a cumulative build",
+    "blocking_gaps": [
+      "complete cumulative HTML/PDF build and reader admission remain pending"
+    ],
+    "complete_companion_boundary": true
+  },
+  "provenance": {
+    "tool": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "instruction": "Produced at the user's direction; source-author, institutional, and human-contributor credits remain unchanged."
+  },
+  "backend": {
+    "prompt_map": {
+      "path": "repo/backend/chapter_12_source_prompt_map.csv",
+      "bytes": 47950,
+      "sha256": "0deb6ece6d5bf8a6152b934843ab65252fc082f7de5419f1acb6df090307a4c5"
+    },
+    "grouping_nodes": {
+      "path": "repo/backend/chapter_12_grouping_nodes.json",
+      "bytes": 4940,
+      "sha256": "37801610bced290913f8e7e93004b5f4c1d5ecbdda2bb230ee5c60de9059e39e"
+    },
+    "aliases": {
+      "path": "repo/backend/chapter_12_entry_aliases.csv",
+      "bytes": 23206,
+      "sha256": "4a8e979717fcc9db27d408980db5e9ec7d222b28aa0823a5cf8483b1095c5c10"
+    }
+  },
+  "companion_complete": true,
+  "reader_admission_pending": true
+}
