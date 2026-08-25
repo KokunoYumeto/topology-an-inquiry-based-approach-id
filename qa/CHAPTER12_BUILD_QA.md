@@ -1,6 +1,6 @@
 # Chapters 1-12 cumulative build and QA receipt
 
-Verified: 2026-08-24 (Europe/Berlin)
+Verified: 2026-08-25 (Europe/Berlin)
 
 Boundary: O003/C90 Bahasa Indonesia, the complete GVSU Chapter 12 boundary
 through *Ruang Topologi*, together with its separately licensed original
@@ -18,12 +18,14 @@ completion modules are finished.
   `d7cadeb10e6525568a90340bceadbc77dc1e5620053e257e8b3126acb8ce01f3`.
 - Chapter 12 closes over nine translated source files in frozen order. Their
   translated combined SHA-256 is
-  `a8d8a40bced406d284d94a6b9549f6b143453fafae4d862a890959b7b980cfdb`.
-  `CHAPTER12_SOURCE_QA.json` is 8,016 bytes / SHA-256
-  `6839eb6a1dd73aac8c288c3dd8da4abafbba8f8b051847c49fa59895be6f4cdc`;
+  `0783fc2b8c6cb123225496c5171b20c9297f0a9c13b1ac9a99c99fcf7dee61fc`.
+  `CHAPTER12_SOURCE_QA.json` is 8,274 bytes / SHA-256
+  `a4bb46a5f8a2b043b59324b888fec1f16441b31cbcd4ad3fa21ff0354facd89a`;
   status `pass`, 25 IDs, 14 resolving xrefs, no missing targets, and one active
-  image. The explicit Chapter 13 forward reference resolves to an Indonesian
-  next-boundary page rather than a broken or untranslated target.
+  image. The retained forward reference to Product Topology is visibly labeled
+  Bab 20 and resolves to a localized unnumbered *Kolofon*. That page identifies
+  source-order Chapter 13 as *Himpunan Tertutup dalam Ruang Topologi* rather
+  than misnumbering Product Topology as Chapter 13.
 - Fifteen boundary repairs are ledgered as O003-C131 through O003-C145. Twelve
   are source-critical repairs and three apply to the companion guides. The
   fail-closed source comparison records the exact protected-math changes and
@@ -38,9 +40,11 @@ package. The permitted fallback therefore uses four frozen Indonesian primary
 PDF witnesses whose actual terminology was re-inspected. It supports the
 current forms including `ruang topologi`, `basis untuk topologi`, `himpunan
 terbuka`, `topologi indiskret`, `topologi diskret`, `lingkungan`, `interior`,
-and `hasil kali`; no Chapter 12 term change was justified. The audit is 3,165
+and `hasil kali`; the corrected terminology pass also standardizes
+`ketaksamaan`, `produk`, `elemen`, and the set-theoretic use of `irisan`, while
+retaining the genuinely geometric use of `perpotongan`. The audit is 4,525
 bytes / SHA-256
-`1edaf330d2b494ad188dd52b47a69dc30e30a2aa73fc1286c17b2fbf3fc8c94a`.
+`732b03e504a8f6ffed52112d8306a6d084dba588c7e8da0ad0c79b2e1325064e`.
 The glossary is 15,274 bytes / SHA-256
 `312a904248cc6349ef3d3462ad851af767ea4f7761d7747b373f635f389a52b1`.
 The exact model provenance is `OpenAI Codex gpt-5.6-sol, Ultra`; author,
@@ -54,13 +58,13 @@ institutional, source, and human-contributor credits remain intact.
   87 entries with 87 statements, 87 hints, 87 answers or rubrics, and 87
   complete solutions: 348 staged surfaces. Five grouping nodes are mapped
   separately and are not double-counted as prompt units.
-- `CHAPTER12_COMPANION_QA.json` is 115,942 bytes / SHA-256
-  `ae9ce8ce60539d2a907a51d86394f9ee394ca38f64285faae02c37f4f5115740`.
+- `CHAPTER12_COMPANION_QA.json` is 115,941 bytes / SHA-256
+  `666d1938373c180a524a58be6d2ed37172ddf29be6ea025a2b076479d73d1f50`.
   Its pre-build `reader_admission_pending` flag is discharged by the
   deterministic reader, docs, and visual evidence in this receipt; the
   companion closure itself is complete.
 - The stable-ID backend manifest is 116,133 bytes / SHA-256
-  `c80c517b69e87b79e02f799980bc5a48fdef76b1b9b27f9fe6bddf1ee843b21e`.
+  `a3879dc648a8e870751ad57cf6691e37a5be543999c10f0ebb103324d9e43a77`.
   The 23,206-byte alias table, 47,950-byte prompt map, and 4,940-byte grouping
   map have SHA-256 values
   `4a8e979717fcc9db27d408980db5e9ec7d222b28aa0823a5cf8483b1095c5c10`,
@@ -70,12 +74,12 @@ institutional, source, and human-contributor credits remain intact.
 
 ## Schema and pinned runtime
 
-The 6,770-byte cumulative wrapper has SHA-256
-`70916b283254c6810bf4a6dd29f73276835e236fbdb4a0c595c52efd9d841d75`.
+The 6,944-byte cumulative wrapper has SHA-256
+`1b0b4b77887c016aa88ac3ec9b779796e539d95974382e12b0668477ebe6fc61`.
 Its 139-file local XInclude closure passes the pinned PreTeXt RelaxNG schema
 with zero diagnostics. `CHAPTER12_CUMULATIVE_SCHEMA_QA.json` is 6,764 bytes /
 SHA-256
-`c6355b4974baafb4f376d1c4b99efbf4debea891743ec15e54fe5628f863bd8d`.
+`f758da7bd8195b1c2d13d8279e874ef1f6013d2f31b4f0a8b1051b515f7f7bcd`.
 The recorded runtime is Python 3.12.13, PreTeXt 1.7.5, setuptools 75.8.0,
 resource commit `9bce7e55911fb14e3e6e362bfa78bd6431c38597`, pinned schema SHA-256
 `fb9632a81f16d94068e463df4efcaf0c7ffa9e20555abde9aea2f1dc52888ca0`,
@@ -83,14 +87,17 @@ and MiKTeX 26.5.
 
 ## Deterministic HTML and live reader behavior
 
-Two clean corrected HTML builds produced byte-identical manifests. The
-canonical generated tree has 10,873 files, 10,762 HTML documents, and
-27,780,876 bytes; its canonical tree identity is
-`2fabac1179b4a079a98ea699ac4a7bc7b041e2e4cd903b08df8a2d1ca9d174aa`.
-Each 1,781,758-byte manifest file has SHA-256
-`9f7eb1d6526f7b0608d10ebf7c5ca20dfa2a4bf94b5d9a37a369cfbdebf24029`.
+Two clean corrected HTML builds produced byte-identical canonical manifests.
+The canonical generated tree has 10,873 files, 10,762 HTML documents, and
+27,769,203 bytes; its canonical tree identity is
+`ef6819b209faab95f8f74ea80a632a4b50a4e3616e96036de4dc053e093cb0a3`.
+The canonical manifest is 1,781,955 bytes / SHA-256
+`44144e15e4b4c57ce2d731877bb4252a8cf5d778b23210ba4236698b7e3c957d`;
+the labeled run-one and run-two manifests are 1,781,961 bytes with SHA-256
+`1a7e42747308ef2128fd8f52bc5506b51c7c1595c93bb89d3128826f89ba57fe`
+and `2d6f4475d6fa20ed3e717395d81d73fe26527cd06e5d3e9d43b5c46a3b4c1c43`.
 `CHAPTER12_HTML_QA.json` is 1,648 bytes / SHA-256
-`7facb1fa8bdc11a357db672a5c5925cbe4c041422070fd298e4fc216aef7df6f`,
+`e67557af727811212b18a88e695f1349823cf7c70fd572bdb16dd1ca10244f17`,
 checking 40,853 local links/assets and 40 image references with zero failures.
 
 Twenty legacy upstream figure PDFs carried absolute author-workstation paths
@@ -113,45 +120,47 @@ The main column fills the available reading area, `lang="id-ID"` and localized
 chrome remain intact, and no checked page has document-level horizontal
 overflow. The corrected neighborhood guide and a mastery check each opened
 their statement, hint, answer, and complete solution on a 390-pixel viewport.
-The 6,011-byte browser receipt has SHA-256
-`8a41225783f80c80238252d8ee3a2d73a3ba8138558e2bdc51732d5101bbe7e0`.
+The 5,449-byte browser receipt has SHA-256
+`3fd947d783ef6bd6a6ea06db3b21655ce76818913d9145bf43fbab9798150d9e`.
 
 ## Deterministic PDF and visual inspection
 
-Two strict clean builds emitted the same 328-page US-Letter PDF: 2,707,451
+Two strict clean builds emitted the same 328-page US-Letter PDF: 2,707,175
 bytes, SHA-256
-`6ce855a593d0a90bc5f8932bc1969f9acede1b348d28aa2b427280f3b060b49a`.
+`2cb491eb69ebf24e829a1877417023b79b619c887dd43e94afe8b57e369bdcdd`.
 The run receipts have SHA-256 values
-`12ef3e92f9c3b984ed85a199b8881e3bfed78bf3f53c23f60a9fb08b4d037da6`
-and `d5e26171d2eb1eab0930911d9e04b62282c76eb9c5d46d28f67d0700971c7aef`.
-The 7,041-byte structure receipt has SHA-256
-`11ae7a6a5e129236cd81221839aa7a3be44a2b7ba8a063694f799c8df01183a6`:
-31 outline entries, zero replacement-character titles, zero relative URI
-targets, and zero failures.
+`47b2246bfdc43a1463fd40382e6b43e82c062098ec80b4d4b243f20c85b6f7de`
+and `f5ff089bf245f3212cc44a1d9c7380c06c3eef582165ec37926d3a0d96e01c93`.
+Their strict build logs are 121,738 bytes each, with SHA-256
+`d741c61970ac5fbb857fd039d211679665930c2675a2aafcd094f9b196eaec1c`
+and `2a40e0d2dd2976d46051cd9848324b2c3f6e855ee4fdbbc529448ecb70200f91`.
+The 6,891-byte structure receipt has SHA-256
+`ab5d74b881faa049c9054e3b08a6e4f644c7ea84679ff368f92e00fc5f9bc35a`:
+30 outline entries, 298 link annotations, zero replacement-character titles,
+zero relative URI targets, and zero failures.
 
 All 328 pages were freshly rendered at 120 dpi with Poppler `pdftoppm 24.04.0`
-and inspected in 28 contact sheets, with full-size review of the sparse divider,
-the corrected neighborhood answer, dense basis/interior pages, and mastery
-case expressions. Page 3 is the intentional blank verso and page 125 is the
-intentional appendix divider. There are zero unexpected blank pages, zero
+and inspected in 28 contact sheets, with direct review of the corrected dense
+exercise page and final *Kolofon*. Page 3 is the intentional blank verso and
+page 124 is the sparse appendix heading. There are zero unexpected blank pages, zero
 edge-touching pages, and no clipping, overlap, broken formula, or unreadable
-glyph. The 220,959-byte visual receipt has SHA-256
-`a53b5007a42c2d36be56d687062898599083517e48f0afc986814be39d1561c0`.
+glyph. The 220,965-byte visual receipt has SHA-256
+`357aa0579548e9395a781737799e948896a2533345f2c95d1482c00be53cf5c2`.
 The PDF is not tagged; HTML remains the primary accessible surface.
 
 ## GitHub Pages publication tree
 
 The non-destructive `docs/` overlay retains historical reader entry points and
 earlier PDFs while adding the complete Chapters 1-12 reader and the primary
-328-page PDF. It contains 10,893 files (10,770 HTML), totaling 43,003,678
-bytes. The detailed manifest is 1,785,454 bytes / SHA-256
-`cb8b3669780fe1a810b55cec6574e5a618cd0e65767e8b3cc5cfdc01d654cf2a`;
+328-page PDF. It contains 10,893 files (10,770 HTML), totaling 42,991,729
+bytes. The detailed manifest is 1,785,668 bytes / SHA-256
+`35ad2e38da37fed38ba9aebdbe42e49712c0105513ea38bdcbee967785b40041`;
 the compact manifest is 828 bytes / SHA-256
-`bf7c1b0318ba3a2adb3cd119bf8b675a070522265a09196deeb91ad70d1f3ba0`;
+`a11c17c1cd269b5b1b20f3fb5719ba8d4acef3a413832ca14c1781324318633a`;
 the canonical tree identity is
-`9eec3dc1fbafba38b0256a8d8e0f96a49e6db48f0f18eb94e4a4ecb0f9f541fa`.
-`CHAPTER12_DOCS_QA.json` is 1,110 bytes / SHA-256
-`3a699b8afef5583dd93661bf898c93b8ffad217e4b92404beda8e354747ea20f`,
+`7d0f24e03fb7373f87dfe6b472fecface5f30918c11bd225403cbb63607739b0`.
+`CHAPTER12_DOCS_QA.json` is 1,016 bytes / SHA-256
+`884daa1b0a393113d11c61b6759c497f3fd0b26377a4fd0ba9c97228f5516c7d`,
 checking 42,105 links/assets and 40 images with zero failures. The primary
 download is the verified 328-page PDF above.
 

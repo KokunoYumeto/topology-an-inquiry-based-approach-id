@@ -1,13 +1,13 @@
 # Chapter 12 source-translation checkpoint
 
-Verified: 2026-08-23 (Europe/Berlin)
+Verified: 2026-08-25 (Europe/Berlin)
 
-This is a source/translation checkpoint, not an admitted reader boundary.
-Chapters 1–11 remain the latest complete cumulative reader release. Chapter 12
-(*Ruang Topologi*) is translated across its exact nine-file direct XInclude
-closure. All staged source-prompt support and eight original mastery checks
-are now authored; the final backend freeze, cumulative reader build, and
-publication remain pending.
+This receipt freezes the final Chapter 12 source translation used by the
+corrected cumulative Chapters 1–12 reader. Chapter 12 (*Ruang Topologi*) is
+translated across its exact nine-file direct XInclude closure. Its companion,
+stable-ID backend, deterministic HTML/PDF build, responsive reader, PDF
+structure, and all-page visual gates now pass; publication of this corrected
+12-of-20 partial checkpoint remains the next gate.
 
 ## Frozen authority
 
@@ -21,14 +21,14 @@ publication remain pending.
 ## Translation QA
 
 `repo/qa/CHAPTER12_SOURCE_QA.json` (SHA-256
-`6839eb6a1dd73aac8c288c3dd8da4abafbba8f8b051847c49fa59895be6f4cdc`) passes
+`a4bb46a5f8a2b043b59324b888fec1f16441b31cbcd4ad3fa21ff0354facd89a`) passes
 fail-closed structural comparison:
 25 IDs, 14 xrefs (one explicitly approved external target,
 `chap_Product_topology`), 79 learner-response units (73 atomic task prompts,
 six direct prompts, and five non-response grouping task nodes), 13 exercises,
 5 hints, 0 source answers, and 0 source
 solutions. The nine translated files have combined SHA-256
-`a8d8a40bced406d284d94a6b9549f6b143453fafae4d862a890959b7b980cfdb`.
+`0783fc2b8c6cb123225496c5171b20c9297f0a9c13b1ac9a99c99fcf7dee61fc`.
 
 Twelve source-critical repairs are explicitly ledgered and approved by the QA
 receipt: O003-C131 corrects the neighborhood ball's center from the source's
@@ -56,8 +56,9 @@ schema with zero diagnostics.
 The Indonesian terms are frozen in O003-T142–O003-T153, including *basis untuk
 topologi*, *topologi indiskret*, *topologi kofinit*, *termetriskan*, *topologi
 garis digital*, and *topologi Zariski*. The staged companion is authored; its
-final stable-ID/backend freeze and cumulative reader gates remain before
-Chapter 12 can be admitted.
+final stable-ID/backend and cumulative reader gates pass. The terminology
+audit is 4,525 bytes / SHA-256
+`732b03e504a8f6ffed52112d8306a6d084dba588c7e8da0ad0c79b2e1325064e`.
 
 The denominator supersedes the earlier 78-unit census: the upstream
 `act_top_basis` question is encoded directly in an activity body paragraph,
@@ -67,3 +68,9 @@ statement, hint, answer, and complete solution/rubric support; the eight
 mastery checks likewise have complete staged support. Those companion
 surfaces remain a separate CC BY 4.0 component and are not represented as
 upstream GVSU prose.
+
+The source's forward target `chap_Product_topology` is retained with the
+visible label *Bab 20*. The corrected reader's unnumbered *Kolofon* explains
+that Product Topology is Chapter 20 in the frozen source order and that the
+next production unit is Chapter 13, *Himpunan Tertutup dalam Ruang Topologi*;
+it no longer misrepresents Product Topology as Chapter 13.

@@ -1,11 +1,12 @@
 # Chapter 12 companion and backend closure
 
-Verified: 2026-08-23 (Europe/Berlin)
+Verified: 2026-08-25 (Europe/Berlin)
 
-Status: **complete authored companion; cumulative reader admission pending**.
+Status: **complete authored companion; corrected cumulative reader gates pass;
+publication pending**.
 This receipt proves the complete Chapter 12 self-study component and its
-machine-readable mappings. It does not claim that the cumulative HTML/PDF
-reader has passed its build and visual gates.
+machine-readable mappings. The corrected cumulative HTML/PDF and visual gates
+are independently bound in `qa/CHAPTER12_BUILD_QA.md`.
 
 ## Authority, source, and terminology
 
@@ -14,16 +15,19 @@ reader has passed its build and visual gates.
 - Authority closure: 9 files / 59,268 bytes; ordered SHA-256
   `dde360d7ec1d62d22d5a5afdbaad2055665d57b67e2b4aac6ae43636b84fda47`.
 - Translated nine-file closure combined SHA-256:
-  `a8d8a40bced406d284d94a6b9549f6b143453fafae4d862a890959b7b980cfdb`.
-- `qa/CHAPTER12_SOURCE_QA.json`: 8,016 bytes; SHA-256
-  `6839eb6a1dd73aac8c288c3dd8da4abafbba8f8b051847c49fa59895be6f4cdc`;
+  `0783fc2b8c6cb123225496c5171b20c9297f0a9c13b1ac9a99c99fcf7dee61fc`.
+- `qa/CHAPTER12_SOURCE_QA.json`: 8,274 bytes; SHA-256
+  `a4bb46a5f8a2b043b59324b888fec1f16441b31cbcd4ad3fa21ff0354facd89a`;
   schema version 4, status `pass`, zero failures. It proves seven approved
   source-critical math repairs, one same-file intact subtree move, one
   cross-file intact subtree move, 25 IDs, 14 resolving xrefs, and the single
-  intentionally external Chapter 13 target.
+  intentionally external `chap_Product_topology` target, which is Chapter 20
+  in the pinned source order.
 - The cumulative Chapters 1--12 wrapper resolves that forward target to an
-  explicit Indonesian next-boundary placeholder; no broken reader xref is
-  accepted and no untranslated Chapter 13 prose is imported.
+  unnumbered Indonesian *Kolofon* that labels it as Bab 20; no broken reader
+  xref is accepted, no untranslated Chapter 20 prose is imported, and Product
+  Topology is not misnumbered as Chapter 13. Contiguous production proceeds
+  with Chapter 13, `chap_Closed_sets_topology.ptx`.
 - The bounded official-arXiv search found no suitable Indonesian-language
   point-set-topology TeX package. Direct re-inspection of the Universitas
   Terbuka and Badrulfalah--Joebaedi--Irianingsih primary PDF witnesses supports
@@ -43,8 +47,8 @@ reader has passed its build and visual gates.
   nodes and are not counted again as learner responses; all child IDs resolve.
 - Eight original synthesis/mastery exercises each contain exactly one
   statement, hint, answer, and complete solution: 32 further surfaces.
-- `companion/chapter_12_mastery.ptx`: 26,202 bytes; SHA-256
-  `caf3460a07977682cf6a5ed6959fff7b1e892a0ce930f39b658c1467d0a9a9d5`;
+- `companion/chapter_12_mastery.ptx`: 26,195 bytes; SHA-256
+  `545209bd8a1016de5725ed8156453c7a21dfcf28675ef8fdcde9d0265cf392c9`;
   8 exercises and 33/33 unique IDs. Independent review found all eight
   mathematically and linguistically sound, including the basis-refinement and
   truncated-metric proofs and the infinite, empty, and singleton edge cases.
@@ -53,7 +57,7 @@ reader has passed its build and visual gates.
   Its exact 15-file XInclude closure expands to 3,689 elements and passes the
   pinned PreTeXt 1.7.5 RelaxNG schema with zero diagnostics.
 - Mastery schema receipt: `qa/CHAPTER12_MASTERY_SCHEMA_QA.json`, 776 bytes,
-  SHA-256 `3db4fff067e33774dc8690386744423c8620866813a65170d67b1ec00c3d7d0a`.
+  SHA-256 `733b313254ac75d68caebb9066f7423a80cefa3378a20c5bc6f46a494b20e391`.
 - Wrapper schema receipt: `qa/CHAPTER12_COMPANION_WRAPPER_SCHEMA_QA.json`,
   1,527 bytes, SHA-256
   `410ca4ae50080a15f2a8f2a1e39492ab8f816c865bd33aa456f08c4222ccedc3`.
@@ -75,8 +79,8 @@ component alongside the conservatively CC BY-NC-SA 3.0 GVSU derivative.
 |---|---:|---|
 | `backend/chapter_12_source_prompt_map.csv` | 47,950 | `0deb6ece6d5bf8a6152b934843ab65252fc082f7de5419f1acb6df090307a4c5` |
 | `backend/chapter_12_grouping_nodes.json` | 4,940 | `37801610bced290913f8e7e93004b5f4c1d5ecbdda2bb230ee5c60de9059e39e` |
-| `backend/chapter_12_companion_manifest.json` | 116,133 | `c80c517b69e87b79e02f799980bc5a48fdef76b1b9b27f9fe6bddf1ee843b21e` |
-| `qa/CHAPTER12_COMPANION_QA.json` | 115,942 | `ae9ce8ce60539d2a907a51d86394f9ee394ca38f64285faae02c37f4f5115740` |
+| `backend/chapter_12_companion_manifest.json` | 116,133 | `a3879dc648a8e870751ad57cf6691e37a5be543999c10f0ebb103324d9e43a77` |
+| `qa/CHAPTER12_COMPANION_QA.json` | 115,941 | `666d1938373c180a524a58be6d2ed37172ddf29be6ea025a2b076479d73d1f50` |
 | `backend/chapter_12_entry_aliases.csv` | 23,206 | `4a8e979717fcc9db27d408980db5e9ec7d222b28aa0823a5cf8483b1095c5c10` |
 
 The final mapping contains 79 source entries plus eight explicitly original
@@ -96,9 +100,10 @@ artifacts are never write targets and preserved their exact prior hashes.
 
 ## Remaining admission work
 
-The cumulative Chapters 1--12 reader must still pass deterministic HTML and
-strict PDF builds, complete local-link and ID/xref closure, responsive and
-staged-disclosure browser checks, accessibility and rights/provenance checks,
-PDF structure, all-page raster inspection, package validation, publication,
-and anonymous byte/hash readback. Chapter 11 therefore remains the latest
-admitted public reader until those deterministic gates close.
+The corrected cumulative Chapters 1--12 reader now passes deterministic HTML
+and strict byte-identical PDF builds, complete local-link closure, responsive
+and staged-disclosure browser checks, rights/provenance checks, PDF structure,
+and all-page raster inspection. HTML remains the primary accessible surface
+because the partial-boundary PDF is untagged. Package validation, publication
+in the existing GitHub and Zenodo lineages, and anonymous byte/hash readback
+remain before the public cursor can advance from Chapter 11 to Chapter 12.

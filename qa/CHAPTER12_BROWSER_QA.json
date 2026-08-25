@@ -1,110 +1,55 @@
 {
-  "schema_version": 1,
-  "checked_at": "2026-08-24",
+  "schema_version": 2,
+  "checked_at": "2026-08-25",
   "status": "pass",
   "surface": "output/chapters01-12-html",
-  "canonical_html_manifest_sha256": "2fabac1179b4a079a98ea699ac4a7bc7b041e2e4cd903b08df8a2d1ca9d174aa",
+  "canonical_html_manifest_sha256": "ef6819b209faab95f8f74ea80a632a4b50a4e3616e96036de4dc053e093cb0a3",
   "language": "id-ID",
+  "served_root_byte_identity": {
+    "path": "o003-c90-chapters-01-12-reader.html",
+    "local_bytes": 42988,
+    "served_bytes": 42988,
+    "local_sha256": "0bdc9a88d9b59cd545280a1ba8ccfa970e4a926f20f3a06f910d20fa11a66c77",
+    "served_sha256": "0bdc9a88d9b59cd545280a1ba8ccfa970e4a926f20f3a06f910d20fa11a66c77"
+  },
   "viewports": [
-    {
-      "width": 1440,
-      "height": 1000,
-      "document_scroll_width": 1425,
-      "main_left": 240,
-      "main_width": 1185,
-      "main_right": 1425,
-      "result": "fills the available desktop main column with no horizontal overflow"
-    },
-    {
-      "width": 1280,
-      "height": 900,
-      "document_scroll_width": 1265,
-      "main_left": 240,
-      "main_width": 1025,
-      "main_right": 1265,
-      "result": "fills the available desktop main column with no horizontal overflow"
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "document_scroll_width": 1009,
-      "main_left": 240,
-      "main_width": 769,
-      "main_right": 1009,
-      "result": "fills the available main column with no horizontal overflow"
-    },
-    {
-      "width": 768,
-      "height": 900,
-      "document_scroll_width": 753,
-      "main_left": 0,
-      "main_width": 753,
-      "main_right": 753,
-      "result": "single-column reflow with no horizontal overflow"
-    },
-    {
-      "width": 390,
-      "height": 844,
-      "document_scroll_width": 375,
-      "main_left": 0,
-      "main_width": 375,
-      "main_right": 375,
-      "result": "mobile single-column reflow with no horizontal overflow"
-    }
+    {"width": 1440, "height": 900, "document_client_width": 1425, "document_scroll_width": 1425, "main_left": 240, "main_width": 1185, "main_right": 1425, "result": "fills the available desktop main column with no horizontal overflow"},
+    {"width": 1280, "height": 900, "document_client_width": 1265, "document_scroll_width": 1265, "main_left": 240, "main_width": 1025, "main_right": 1265, "result": "fills the available desktop main column with no horizontal overflow"},
+    {"width": 1024, "height": 900, "document_client_width": 1009, "document_scroll_width": 1009, "main_left": 240, "main_width": 769, "main_right": 1009, "result": "fills the available main column with no horizontal overflow"},
+    {"width": 768, "height": 900, "document_client_width": 753, "document_scroll_width": 753, "main_left": 0, "main_width": 753, "main_right": 753, "result": "single-column reflow with no horizontal overflow"},
+    {"width": 390, "height": 900, "document_client_width": 375, "document_scroll_width": 375, "main_left": 0, "main_width": 375, "main_right": 375, "result": "mobile single-column reflow with no horizontal overflow"}
   ],
-  "surfaces_checked": [
+  "surfaces_checked_at_every_width": [
     "o003-c90-chapters-01-12-reader.html",
-    "o003-c90-ch12-source-guides-e.html",
-    "o003-c90-ch12-mastery.html",
+    "sec_top_space_exer.html",
     "chap_Product_topology.html",
-    "o003-c90-ch12-edition-note.html"
+    "o003-c90-ch12-mastery.html"
   ],
   "surface_regression": {
-    "desktop": {
-      "widths": [1440, 1280, 1024],
-      "pages_checked": 5,
-      "result": "page fill, localized navigation, mathematics, and reading measure pass without clipping or document overflow"
-    },
-    "tablet_and_mobile": {
-      "widths": [768, 390],
-      "pages_checked": 5,
-      "result": "masthead, navigation, long mathematics, and staged content reflow to the viewport without clipping or document overflow"
-    }
+    "page_width_checks": 20,
+    "desktop": {"widths": [1440, 1280, 1024], "result": "page fill, localized navigation, mathematics and reading measure pass without clipping or document overflow"},
+    "tablet_and_mobile": {"widths": [768, 390], "result": "masthead, navigation, exercise mathematics, colophon and staged content reflow without clipping or document overflow"}
+  },
+  "chapter_order_semantics": {
+    "source_exercise_page": "sec_top_space_exer.html",
+    "visible_forward_link_text": "Bab 20",
+    "visible_forward_link_href": "chap_Product_topology.html",
+    "target_page_title": "Kolofon",
+    "target_text": "Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1–12 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 13, Himpunan Tertutup dalam Ruang Topologi; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.",
+    "result": "pass; Product Topology is not misnumbered as Chapter 13"
   },
   "staged_disclosures": {
-    "chapter_12_neighborhood_guide_live_interaction": {
-      "exercise": "o003-c90-ch12-guide-21",
-      "checked": [
-        "collapsed exercise",
-        "statement expansion",
-        "hint expansion",
-        "answer expansion",
-        "solution expansion"
-      ],
-      "open_knowl_outputs": 4,
-      "mobile_document_scroll_width": 375,
-      "result": "all controls reveal the corrected Indonesian mathematics and reflow without horizontal overflow"
-    },
     "chapter_12_mastery_live_interaction": {
       "exercise": "o003-c90-ch12-mastery-01",
-      "checked": [
-        "collapsed exercise",
-        "statement expansion",
-        "hint expansion",
-        "answer expansion",
-        "solution expansion"
-      ],
+      "viewport": {"width": 390, "height": 900},
+      "checked": ["collapsed exercise", "statement expansion", "hint expansion", "answer expansion", "solution expansion"],
+      "active_controls": ["Petunjuk.", "Jawaban.", "Solusi."],
       "open_knowl_outputs": 4,
       "mobile_document_scroll_width": 375,
+      "mobile_document_client_width": 375,
       "result": "all controls reveal the intended Indonesian surface without horizontal overflow"
     },
-    "static_closure": {
-      "source_prompt_entries": 79,
-      "mastery_entries": 8,
-      "staged_surfaces": 348,
-      "source": "qa/CHAPTER12_COMPANION_QA.json and generated companion HTML controls",
-      "result": "pass"
-    }
+    "static_closure": {"source_prompt_entries": 79, "mastery_entries": 8, "staged_surfaces": 348, "source": "qa/CHAPTER12_COMPANION_QA.json and generated companion HTML controls", "result": "pass"}
   },
   "checks": {
     "reader_centering_and_fill": "pass",
@@ -112,39 +57,23 @@
     "long_masthead_wrap": "pass",
     "navigation_labels": "pass",
     "chapter_12_reflow": "pass",
-    "corrected_neighborhood_set_display": "pass in live mobile and desktop rendering",
-    "forward_reference_placeholder": "pass; Chapter 13 resolves to an explicit Indonesian next-boundary page",
+    "localized_colophon": "pass",
+    "forward_reference": "pass; visible Bab 20 link resolves to localized Kolofon and names Chapter 13 Closed Sets as the next production unit",
     "staged_hint_answer_solution": "pass by live interaction and static closure",
-    "document_horizontal_overflow": "none on checked pages and viewports",
+    "document_horizontal_overflow": "none on 20 page-width combinations",
     "html_language": "id-ID",
     "generated_english_chrome": "none on checked surfaces",
     "browser_console_errors": "none",
-    "browser_console_warnings": "only the known MathJax component-version warnings for [tex]/newcommand and [pretext]/mathjaxknowl3.js",
-    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra appears once in the edition note",
-    "rights_and_nonendorsement": "edition note visibly preserves GVSU identity, CC BY-NC-SA 3.0, separate CC BY 4.0 companion rights, and no-official-endorsement wording",
-    "offline_dependency_status": "not closed at this partial boundary; the external host census remains explicit in CHAPTER12_HTML_QA.json and whole-edition offline closure remains required"
+    "browser_console_warnings": "only known MathJax component-version warnings for [tex]/newcommand and [pretext]/mathjaxknowl3.js",
+    "offline_dependency_status": "not closed at this partial boundary; the external-host census remains explicit and whole-edition offline closure remains required"
   },
   "visual_inspection": {
-    "desktop": "The corrected Chapter 12 guide, mastery surface, edition note, reader front page, and forward-boundary page fill the available main column; headings, prose, formulas, and navigation are unclipped.",
-    "mobile": "The 390-pixel reader masthead and contents reflow cleanly. The corrected guide and mastery exercise each opened statement, hint, answer, and complete solution in a 375-pixel document with no horizontal overflow."
-  },
-  "post_browser_metadata_sanitation": {
-    "scope": "20 standalone figure PDFs whose legacy upstream Info fields contained absolute author-workstation paths",
-    "change": "removed PDF Info/XMP metadata only; page count, boxes, rotations, and decoded content streams remained identical",
-    "visual_regression": "all 20 before/after 150-dpi Poppler PNG pairs have identical SHA-256 values",
-    "reader_effect": "none; the two clean HTML builds after sanitation are byte-identical and the previously inspected HTML/CSS/JS surfaces did not change"
+    "desktop": "At 1440 pixels the contents rail remains distinct and the main reader fills the remaining page width; headings, prose and navigation are unclipped.",
+    "mobile": "At 390 pixels the mastery statement and simultaneously opened Petunjuk, Jawaban and Solusi panels are legible, reflowed and free of horizontal overflow."
   },
   "evidence": [
-    {
-      "path": "qa/CHAPTER12_HTML_MANIFEST.json",
-      "bytes": 1781758,
-      "sha256": "9f7eb1d6526f7b0608d10ebf7c5ca20dfa2a4bf94b5d9a37a369cfbdebf24029"
-    },
-    {
-      "path": "qa/CHAPTER12_HTML_QA.json",
-      "bytes": 1648,
-      "sha256": "7facb1fa8bdc11a357db672a5c5925cbe4c041422070fd298e4fc216aef7df6f"
-    }
+    {"path": "qa/CHAPTER12_HTML_MANIFEST.json", "bytes": 1781955, "sha256": "44144e15e4b4c57ce2d731877bb4252a8cf5d778b23210ba4236698b7e3c957d"},
+    {"path": "qa/CHAPTER12_HTML_QA.json", "bytes": 1648, "sha256": "e67557af727811212b18a88e695f1349823cf7c70fd572bdb16dd1ca10244f17"}
   ],
   "failures": []
 }
