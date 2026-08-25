@@ -1,16 +1,16 @@
 <section xml:id="sec_separation_ax">
-  <title>Separation Axioms</title>
+  <title>Aksioma Separasi</title>
   <p>
-    As we have seen,
-    sequences in topological spaces do not generally behave as we would expect them to.
-    As a result,
-    we look for conditions on topological spaces under which sequences do exhibit some regular behavior.
-    In our preview activity we saw that it is possible in a topological space that single point sets do not have to be closed.
-    In <xref ref="act_TS_limits2"/>,
-    we also saw that limits of sequences in topological spaces are not necessarily unique.
-    This type of behavior limits the results that one can prove about such spaces.
-    As a result,
-    we define classes of topological spaces whose behaviors are closer to what our intuition suggests.
+    Seperti telah kita lihat,
+    barisan dalam ruang topologi pada umumnya tidak berperilaku seperti yang kita harapkan.
+    Oleh karena itu,
+    kita mencari syarat pada ruang topologi yang membuat barisan menunjukkan perilaku yang lebih teratur.
+    Dalam kegiatan pendahuluan, kita melihat bahwa dalam ruang topologi, himpunan beranggota tunggal tidak harus tertutup.
+    Dalam <xref ref="act_TS_limits2"/>,
+    kita juga melihat bahwa limit barisan dalam ruang topologi tidak harus tunggal.
+    Perilaku seperti ini membatasi hasil yang dapat dibuktikan tentang ruang tersebut.
+    Oleh karena itu,
+    kita mendefinisikan kelas-kelas ruang topologi yang perilakunya lebih mendekati intuisi kita.
   </p>
 
   <activity xml:id="act_Hausdorff">
@@ -18,21 +18,21 @@
       <task>
         <introduction>
           <p>
-            Consider a metric space <m>(X,d)</m>,
-            and let <m>x</m> and <m>y</m> be distinct points in <m>X</m>.
+            Tinjau suatu ruang metrik <m>(X,d)</m>,
+            dan misalkan <m>x</m> dan <m>y</m> titik-titik berbeda dalam <m>X</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Explain why <m>x</m> and <m>y</m> cannot both be limits of the same sequence if we can find disjoint open balls <m>B(x,r)</m> centered at <m>x</m> and <m>B(y,s)</m> centered at <m>y</m> such that <m>B_x \cap B_y = \emptyset</m>.
+                  Jelaskan mengapa <m>x</m> dan <m>y</m> tidak mungkin sekaligus menjadi limit dari barisan yang sama jika terdapat bola terbuka saling lepas <m>B(x,r)</m> yang berpusat di <m>x</m> dan <m>B(y,s)</m> yang berpusat di <m>y</m> sedemikian sehingga <m>B(x,r) \cap B(y,s) = \emptyset</m>.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Now show that we can find disjoint open balls <m>B(x,r)</m> centered at <m>x</m> and <m>B(y,s)</m> centered at <m>y</m> such that <m>B(x,s) \cap B(y,r) = \emptyset</m>.
+                  Sekarang, tunjukkan bahwa kita dapat menemukan bola terbuka saling lepas <m>B(x,r)</m> yang berpusat di <m>x</m> dan <m>B(y,s)</m> yang berpusat di <m>y</m> sedemikian sehingga <m>B(x,r) \cap B(y,s) = \emptyset</m>.
                 </p>
               </statement>
             </task>
@@ -40,13 +40,13 @@
       <task>
         <statement>
           <p>
-            Return to our example from <xref ref="act_TS_limits2"/>
-            with <m>X = \{a, b, c\}</m> and topology
+            Kembali ke contoh dalam <xref ref="act_TS_limits2"/>
+            dengan <m>X = \{a, b, c\}</m> dan topologi
             <me>
               \tau~=~\{\emptyset, \{c\}, \{a, c\}, \{b, c\}, X\}
             </me>.
-            We saw that every point in <m>X</m> is a limit of the constant sequence <m>(c)</m>.
-            If <m>x \neq c</m> in <m>X</m>, Explain why there are no disjoint open sets <m>O_x</m> containing <m>x</m> and <m>O_c</m> containing <m>c</m>.
+            Kita telah melihat bahwa setiap titik dalam <m>X</m> merupakan limit dari barisan konstan <m>(c)</m>.
+            Jika <m>x \neq c</m> dalam <m>X</m>, jelaskan mengapa tidak ada himpunan terbuka saling lepas <m>O_x</m> yang memuat <m>x</m> dan <m>O_c</m> yang memuat <m>c</m>.
           </p>
         </statement>
       </task>
@@ -54,30 +54,30 @@
   </activity>
 
   <p>
-    It is the fact as described in <xref ref="act_Hausdorff"/>
-    that we can separate disjoint points by disjoint open sets that separates metric spaces from other spaces where limits are not unique.
-    If we restrict ourselves to spaces where we can separate points like this,
-    then we might expect to have unique limits.
-    Such spaces are called <term>Hausdorff</term> spaces.
+    Fakta yang diuraikan dalam <xref ref="act_Hausdorff"/>,
+    yakni bahwa titik-titik berbeda dapat dipisahkan dengan himpunan terbuka saling lepas, membedakan ruang metrik dari ruang lain yang limitnya tidak tunggal.
+    Jika kita membatasi perhatian pada ruang yang titik-titiknya dapat dipisahkan dengan cara ini,
+    kita dapat mengharapkan limit yang tunggal.
+    Ruang seperti itu disebut ruang <term>Hausdorff</term>.
   </p>
 
   <definition>
-  <idx><h>Hausdoff space</h></idx>
+  <idx><h>ruang Hausdorff</h></idx>
     <statement>
       <p>
-        A topological space <m>X</m> is a <term>Hausdorff</term>
-        space if for each pair <m>x</m>,
-        <m>y</m> of distinct points in <m>X</m>,
-        there exists open sets <m>O_x</m> of <m>x</m> and <m>O_y</m> of <m>y</m> such that <m>O_x \cap O_y = \emptyset</m>.
+        Suatu ruang topologi <m>X</m> disebut ruang <term>Hausdorff</term>
+        jika untuk setiap pasangan titik berbeda <m>x</m>,
+        <m>y</m> dalam <m>X</m>,
+        terdapat himpunan terbuka <m>O_x</m> yang memuat <m>x</m> dan <m>O_y</m> yang memuat <m>y</m> sedemikian sehingga <m>O_x \cap O_y = \emptyset</m>.
       </p>
     </statement>
   </definition>
 
   <p>
     <xref ref="act_Hausdorff"/>
-    shows that every metric space is a Hausdorff space.
-    Once we start imposing conditions on topological spaces,
-    we restrict the number of spaces we consider.
+    menunjukkan bahwa setiap ruang metrik merupakan ruang Hausdorff.
+    Ketika kita mulai memberlakukan syarat pada ruang topologi,
+    kita membatasi ruang-ruang yang kita pertimbangkan.
   </p>
 
   <activity>
@@ -85,26 +85,26 @@
       <task>
         <statement>
           <p>
-            Let <m>X</m> be any set and <m>\tau</m> the discrete topology.
-            Is <m>(X, \tau)</m> Hausdorff?
-            Justify your answer.
+            Misalkan <m>X</m> sebarang himpunan dan <m>\tau</m> topologi diskret.
+            Apakah <m>(X, \tau)</m> Hausdorff?
+            Berikan alasan untuk jawaban Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>(X, \tau)</m> be a Hausdorff topological space with <m>X = \{x, x_1, x_2, \ldots,
-            x_n\}</m> a finite set.
-            Is <m>\{x\}</m> an open set?
-            Explain.
-            What does this say about the topology <m>\tau</m>?
+            Misalkan <m>(X, \tau)</m> suatu ruang topologi Hausdorff dengan <m>X = \{x, x_1, x_2, \ldots,
+            x_n\}</m> suatu himpunan berhingga.
+            Apakah <m>\{x\}</m> merupakan himpunan terbuka?
+            Jelaskan.
+            Apa yang dapat disimpulkan tentang topologi <m>\tau</m>?
             
           </p>
         </statement>
         <hint>
               <p>
-                Is <m>x</m> a limit point of <m>\{x_1, x_2, \ldots, x_n\}</m>?
+                Apakah <m>x</m> merupakan titik limit dari <m>\{x_1, x_2, \ldots, x_n\}</m>?
               </p>
             </hint>
       </task>
@@ -114,43 +114,43 @@
   <example xml:id="exp_K_topology">
     <statement>
       <p>
-        There are examples of Hausdorff spaces that are not the standard metric spaces.
-        For example, Let <m>K = \left\{\frac{1}{k} \mid k \text{ is a positive integer } \right\}</m>.
-        We use <m>K</m> to make a topology on <m>\R</m> with basis all open intervals of the form <m>(a,b)</m> and all sets of the form <m>(a,b) \setminus K</m>,
-        where <m>a \lt b</m> are real numbers.
-        This topology adds the extra intervals of the form
-        <m>(a,b) \setminus K</m> to the standard open intervals to make a new topology.
-        This topology is known as the <m>K</m>-topology on <m>\R</m>.
-        Just as in <m>(\R, d_E)</m>,
-        if <m>x</m> and <m>y</m> are distinct real numbers we can separate <m>x</m> and <m>y</m> with open intervals.
+        Terdapat contoh ruang Hausdorff yang bukan ruang metrik baku.
+        Sebagai contoh, misalkan <m>K = \left\{\frac{1}{k} \mid k \text{ adalah bilangan bulat positif } \right\}</m>.
+        Kita menggunakan <m>K</m> untuk membentuk topologi pada <m>\R</m> dengan basis yang terdiri atas semua interval terbuka berbentuk <m>(a,b)</m> dan semua himpunan berbentuk <m>(a,b) \setminus K</m>,
+        dengan <m>a \lt b</m> bilangan-bilangan real.
+        Topologi ini menambahkan himpunan-himpunan berbentuk
+        <m>(a,b) \setminus K</m> pada interval terbuka baku untuk membentuk topologi baru.
+        Topologi ini dikenal sebagai topologi <m>K</m> pada <m>\R</m>.
+        Seperti dalam <m>(\R, d_E)</m>,
+        jika <m>x</m> dan <m>y</m> bilangan-bilangan real berbeda, kita dapat memisahkan <m>x</m> dan <m>y</m> dengan interval terbuka.
       </p>
     </statement>
   </example>
 
   <p>
-    The reason we defined Hausdorff spaces is because they have familiar properties,
-    as the next theorems illustrate.
+    Kita mendefinisikan ruang Hausdorff karena ruang tersebut memiliki sifat-sifat yang akrab,
+    seperti yang diperlihatkan oleh teorema-teorema berikut.
   </p>
 
   <theorem>
     <statement>
       <p>
-        Each single point subset of a Hausdorff topological space is closed.
+        Setiap subhimpunan beranggota tunggal dari ruang topologi Hausdorff merupakan himpunan tertutup.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a Hausdorff topological space,
-      and let <m>A = \{a\}</m> for some <m>a \in X</m>.
-      To show that <m>A</m> is closed,
-      we prove that <m>X \setminus A</m> is open.
-      Let <m>x \in X \setminus A</m>.
-      Then <m>x \neq a</m>.
-      So there exist open sets <m>O_x</m> containing <m>x</m> and <m>O_a</m> containing <m>a</m> such that <m>O_x \cap O_a = \emptyset</m>.
-      So <m>a \notin O_x</m> and <m>O_x \subseteq X \setminus A</m>.
-      Thus, every point of <m>X \setminus A</m> is an interior point and <m>X \setminus A</m> is an open set.
-      This verifies that <m>A</m> is a closed set.
+      Misalkan <m>X</m> suatu ruang topologi Hausdorff,
+      dan misalkan <m>A = \{a\}</m> untuk suatu <m>a \in X</m>.
+      Untuk menunjukkan bahwa <m>A</m> tertutup,
+      kita buktikan bahwa <m>X \setminus A</m> terbuka.
+      Misalkan <m>x \in X \setminus A</m>.
+      Maka <m>x \neq a</m>.
+      Jadi, terdapat himpunan terbuka <m>O_x</m> yang memuat <m>x</m> dan <m>O_a</m> yang memuat <m>a</m> sedemikian sehingga <m>O_x \cap O_a = \emptyset</m>.
+      Karena itu, <m>a \notin O_x</m> dan <m>O_x \subseteq X \setminus A</m>.
+      Dengan demikian, setiap titik dalam <m>X \setminus A</m> merupakan titik interior dan <m>X \setminus A</m> merupakan himpunan terbuka.
+      Hal ini membuktikan bahwa <m>A</m> merupakan himpunan tertutup.
     </p>
   </proof>
   </theorem>
@@ -158,97 +158,96 @@
   <theorem>
     <statement>
       <p>
-        A sequence of points in a Hausdorff topological space can have at most one limit in the space.
+        Suatu barisan titik-titik dalam ruang topologi Hausdorff memiliki paling banyak satu limit dalam ruang tersebut.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a Hausdorff topological space,
-      and let <m>(x_n)</m> be a sequence in <m>X</m>.
-      Suppose <m>(x_n)</m> converges to <m>a \in X</m> and to <m>b \in X</m>.
-      Suppose <m>a \neq b</m>.
-      Then there exist open sets <m>O_a</m> of <m>a</m> and <m>O_b</m> of <m>b</m> such that <m>O_a \cap O_b = \emptyset</m>.
-      But the fact that <m>(x_n)</m> converges to <m>a</m> implies that there is a positive integer <m>N</m> such that
-      <m>x_n \in O_a</m> for all <m>n \geq N</m>.
-      But then <m>x_n \notin O_b</m> for any <m>n \geq N</m>.
-      This contradicts the fact that <m>(x_n)</m> converges to <m>b</m>.
-      We conclude that <m>a=b</m> and that the sequence <m>(x_n)</m> can have at most one limit in <m>X</m>.
+      Misalkan <m>X</m> suatu ruang topologi Hausdorff,
+      dan misalkan <m>(x_n)</m> suatu barisan dalam <m>X</m>.
+      Andaikan <m>(x_n)</m> konvergen ke <m>a \in X</m> dan ke <m>b \in X</m>.
+      Andaikan <m>a \neq b</m>.
+      Maka terdapat himpunan terbuka <m>O_a</m> yang memuat <m>a</m> dan <m>O_b</m> yang memuat <m>b</m> sedemikian sehingga <m>O_a \cap O_b = \emptyset</m>.
+      Karena <m>(x_n)</m> konvergen ke <m>a</m>, terdapat bilangan bulat positif <m>N</m> sedemikian sehingga
+      <m>x_n \in O_a</m> untuk semua <m>n \geq N</m>.
+      Namun, hal ini mengakibatkan <m>x_n \notin O_b</m> untuk setiap <m>n \geq N</m>.
+      Hal tersebut bertentangan dengan fakta bahwa <m>(x_n)</m> konvergen ke <m>b</m>.
+      Jadi, <m>a=b</m> dan barisan <m>(x_n)</m> memiliki paling banyak satu limit dalam <m>X</m>.
     </p>
   </proof>
   </theorem>
 
   <p>
-    Hausdorff spaces are important because we can separate distinct points with disjoint open sets.
-    It is also of interest to consider what other types of objects we can separate with disjoint open sets.
-    For example,
-    the indiscrete topology is quite bad in the sense that its open sets can't distinguish between distinct points.
-    That is, if <m>x</m> and <m>y</m> are distinct points in a space with the indiscrete topology,
-    then every open set that contains <m>x</m> also contains <m>y</m>.
-    By contrast,
-    in a Hausdorff space we can separate distinct points with disjoint open sets.
-    This is an example of what is called a
-    <q>separation</q>
-    property.
-    Other types of separation properties describe different types of topological spaces.
-    These separation properties determine what kind of objects we can separate with disjoint open sets <mdash/> e.g., points,
-    points and closed sets, closed sets and closed sets.
-    The following are the most widely used separation properties.
-    These properties rule out kinds of unwelcome properties that a topological space might have.
-    For example,
-    recall that limits of sequences are unique in Hausdorff spaces.
-    (We traditionally call these separation properties
-    <q>axioms</q>
-    because we generally assume that our topological spaces have these properties.
-    However, these are not axioms in the usual sense of the word,
-    but rather properties.)
+    Ruang Hausdorff penting karena kita dapat memisahkan titik-titik berbeda dengan himpunan terbuka saling lepas.
+    Kita juga perlu mempertimbangkan jenis objek lain yang dapat dipisahkan dengan himpunan terbuka saling lepas.
+    Sebagai contoh,
+    topologi indiskret cukup buruk dalam arti bahwa himpunan-himpunan terbukanya tidak dapat membedakan titik-titik yang berbeda.
+    Artinya, jika <m>x</m> dan <m>y</m> titik-titik berbeda dalam ruang dengan topologi indiskret,
+    setiap himpunan terbuka yang memuat <m>x</m> juga memuat <m>y</m>.
+    Sebaliknya,
+    dalam ruang Hausdorff kita dapat memisahkan titik-titik berbeda dengan himpunan terbuka saling lepas.
+    Ini merupakan contoh sifat
+    <q>separasi</q>.
+    Jenis sifat separasi lainnya mencirikan jenis ruang topologi yang berbeda.
+    Sifat-sifat separasi ini menentukan jenis objek yang dapat kita pisahkan dengan himpunan terbuka saling lepas <mdash/> misalnya, titik;
+    titik dan himpunan tertutup; serta dua himpunan tertutup.
+    Berikut adalah sifat-sifat separasi yang paling umum digunakan.
+    Sifat-sifat ini menyingkirkan jenis perilaku yang tidak diinginkan dalam ruang topologi.
+    Sebagai contoh,
+    ingat bahwa limit barisan bersifat tunggal dalam ruang Hausdorff.
+    (Secara tradisional, sifat-sifat separasi ini disebut
+    <q>aksioma</q>
+    karena kita umumnya mengandaikan bahwa ruang topologi kita memiliki sifat-sifat tersebut.
+    Namun, sifat-sifat ini bukan aksioma dalam arti yang lazim,
+    melainkan sifat.)
   </p>
 
   <definition>
-  <idx><h><m>T_1</m>-space</h></idx>
-<idx><h>Frechet space</h></idx>
-<idx><h><m>T_2</m>-space</h></idx>
-<idx><h><m>T_3</m>-space</h></idx>
-<idx><h>normal topological space</h></idx>
-<idx><h><m>T_4</m>-space</h></idx>
+  <idx><h>ruang <m>T_1</m></h></idx>
+<idx><h>ruang Fréchet</h></idx>
+<idx><h>ruang <m>T_2</m></h></idx>
+<idx><h>ruang <m>T_3</m></h></idx>
+<idx><h>ruang normal</h></idx>
+<idx><h>ruang <m>T_4</m></h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a topological space.
+        Misalkan <m>X</m> suatu ruang topologi.
         <ol>
           <li>
             <p>
-              The space <m>X</m> is a <term><term>T</term><m>_1</m>-space</term>
-              or <term>Frechet space</term>
-              if for every <m>x\neq y</m> in <m>X</m>,
-              there exist an open set <m>U</m> containing <m>y</m> such that <m>x \notin U</m>.
+              Ruang <m>X</m> disebut <term>ruang <term>T</term><m>_1</m></term>
+              atau <term>ruang Fréchet</term>
+              jika untuk setiap <m>x\neq y</m> dalam <m>X</m>,
+              terdapat himpunan terbuka <m>U</m> yang memuat <m>y</m> sedemikian sehingga <m>x \notin U</m>.
             </p>
           </li>
           <li>
             <p>
-              The space <m>X</m> is a <term><term>T</term><m>_2</m>-space</term>
+              Ruang <m>X</m> disebut <term>ruang <term>T</term><m>_2</m></term>
                 
-              or a <term>Hausdorff space</term> if for every <m>x\neq y</m> in <m>X</m>,
-              there exist disjoint open sets <m>U</m> and <m>V</m> such that <m>x\in U</m> and <m>y\in V</m>.
+              atau <term>ruang Hausdorff</term> jika untuk setiap <m>x\neq y</m> dalam <m>X</m>,
+              terdapat himpunan terbuka saling lepas <m>U</m> dan <m>V</m> sedemikian sehingga <m>x\in U</m> dan <m>y\in V</m>.
             </p>
           </li>
           <li>
             <p>
-              The space <m>X</m> is <term>regular</term><idx><h>regular topological space</h></idx> if for each closed set <m>C</m> of <m>X</m> and each point <m>x \in X \setminus C</m>,
-              there exists disjoint open sets <m>U</m> and <m>V</m> in <m>X</m> such that <m>C \subseteq U</m> and <m>x \in V</m>.
-              The space <m>X</m> is a <term><term>T</term><m>_3</m>-space</term>
+              Ruang <m>X</m> disebut <term>reguler</term><idx><h>ruang reguler</h></idx> jika untuk setiap himpunan tertutup <m>C</m> dalam <m>X</m> dan setiap titik <m>x \in X \setminus C</m>,
+              terdapat himpunan terbuka saling lepas <m>U</m> dan <m>V</m> dalam <m>X</m> sedemikian sehingga <m>C \subseteq U</m> dan <m>x \in V</m>.
+              Ruang <m>X</m> disebut <term>ruang <term>T</term><m>_3</m></term>
                 
-              or a <term>regular Hausdorff space</term>
-              if <m>X</m> is a regular <m>T_1</m> space.
+              atau <term>ruang Hausdorff reguler</term>
+              jika <m>X</m> merupakan ruang reguler <m>T_1</m>.
             </p>
           </li>
           <li>
             <p>
-              The space <m>X</m> is a <term>normal</term> space if for each pair <m>C</m> and <m>D</m> of disjoint closed subsets of <m>X</m> there exist disjoint open sets <m>U</m> and <m>V</m> such that
-              <m>C \subseteq U</m> and <m>D \subseteq V</m>.
-              The space <m>X</m> is a <term>T<m>_4</m>-space</term>
+              Ruang <m>X</m> disebut ruang <term>normal</term> jika untuk setiap pasangan subhimpunan tertutup saling lepas <m>C</m> dan <m>D</m> dari <m>X</m>, terdapat himpunan terbuka saling lepas <m>U</m> dan <m>V</m> sedemikian sehingga
+              <m>C \subseteq U</m> dan <m>D \subseteq V</m>.
+              Ruang <m>X</m> disebut <term>ruang T<m>_4</m></term>
                 
-              or a <term>normal Hausdorff space</term>
-              if <m>X</m> is a normal <m>T_1</m> space.
+              atau <term>ruang Hausdorff normal</term>
+              jika <m>X</m> merupakan ruang normal <m>T_1</m>.
             </p>
           </li>
         </ol>
@@ -257,37 +256,37 @@
   </definition>
 
   <p>
-    <xref ref="ex_Metric_space_regular"/> shows that every metric space is both regular and normal. The use of the variable <m>T</m> comes from the German
+    <xref ref="ex_Metric_space_regular"/> menunjukkan bahwa setiap ruang metrik bersifat reguler sekaligus normal. Penggunaan huruf <m>T</m> berasal dari istilah bahasa Jerman
     <q>Trennungsaxiome</q>
-    for separation axioms.
-    Note again that these are not technically axioms, but rather properties.
-    An interesting question is why we insist that <m>T_3</m> and <m>T_4</m>-spaces also be <m>T_1</m>.
-    We want these axioms to provide more separation as the index increases.
-    Consider a space <m>X</m> with the indiscrete topology.
-    In this space, nothing is separated.
-    However, this space is vacuously regular and normal.
-    To avoid this seeming incongruity,
-    we insist on working only with <m>T_1</m> spaces.
-    Note that a space with the indiscrete topology is not <m>T_1</m>.
+  untuk aksioma separasi.
+    Sekali lagi, perhatikan bahwa secara teknis sifat-sifat ini bukan aksioma, melainkan sifat.
+    Pertanyaan yang menarik adalah mengapa kita mensyaratkan ruang <m>T_3</m> dan <m>T_4</m> juga merupakan ruang <m>T_1</m>.
+    Kita ingin aksioma-aksioma ini memberikan pemisahan yang lebih kuat ketika indeksnya bertambah.
+    Tinjau suatu ruang <m>X</m> dengan topologi indiskret.
+    Dalam ruang ini, tidak ada yang terpisahkan.
+    Namun, ruang ini bersifat reguler dan normal secara trivial.
+    Untuk menghindari ketidakselarasan ini,
+    kita membatasi perhatian pada ruang <m>T_1</m>.
+    Perhatikan bahwa ruang dengan topologi indiskret bukan ruang <m>T_1</m>.
   </p>
   <p>
-    It is the case that every <m>T_4</m>-space is <m>T_3</m>,
-    every <m>T_3</m>-space is <m>T_2</m>,
-    and every <m>T_2</m>-space is <m>T_1</m>.
-    Verification of these statements are left to <xref ref="ex_T_1_2_3"/>.
-    These properties are also all different.
-    That is, there are <m>T_1</m>-spaces that are not <m>T_2</m> and <m>T_2</m>-spaces that are not <m>T_3</m>.
-    These problems are given in <xref ref="ex_not_T_1_2_3"/>.
-    The fact that there are <m>T_3</m>-spaces that are not <m>T_4</m> is a bit difficult.
-    An example is the <term>Niemytzki plane</term>.
-    The Niemytzki plane is the upper half plane <m>X = \{(x,y) \in \R^2 \mid y \geq 0\}</m>.
-    Let <m>L</m> be the boundary of <m>X</m>.
-    That is, <m>L = \{(x,y) \in \R^2 \mid y = 0\}</m>.
-    A basis for the topology on <m>X</m> consists of the standard open disks centered at points with <m>y \gt 0</m> along with the open disks in
-    <m>X \setminus L</m> that are tangent to <m>L</m> together with their points of tangency.
-    We won't verify that the Niemytzki plane is <m>T_3</m> but not <m>T_4</m>.
-    The interested reader can find an accessible proof in the article
+    Setiap ruang <m>T_4</m> merupakan ruang <m>T_3</m>,
+    setiap ruang <m>T_3</m> merupakan ruang <m>T_2</m>,
+    dan setiap ruang <m>T_2</m> merupakan ruang <m>T_1</m>.
+    Pembuktian pernyataan-pernyataan ini diserahkan kepada <xref ref="ex_T_1_2_3"/>.
+    Sifat-sifat ini juga berbeda satu sama lain.
+    Artinya, terdapat ruang <m>T_1</m> yang bukan ruang <m>T_2</m> dan ruang <m>T_2</m> yang bukan ruang <m>T_3</m>.
+    Soal-soal tersebut diberikan dalam <xref ref="ex_not_T_1_2_3"/>.
+    Fakta bahwa terdapat ruang <m>T_3</m> yang bukan ruang <m>T_4</m> sedikit lebih sulit.
+    Salah satu contohnya adalah <term>bidang Niemytzki</term>.
+    Bidang Niemytzki adalah setengah bidang atas <m>X = \{(x,y) \in \R^2 \mid y \geq 0\}</m>.
+    Misalkan <m>L</m> batas Euklides dari <m>X</m> dalam bidang koordinat.
+    Artinya, <m>L = \{(x,y) \in \R^2 \mid y = 0\}</m>.
+    Suatu basis untuk topologi pada <m>X</m> terdiri atas cakram terbuka baku yang berpusat di titik-titik dengan <m>y \gt 0</m> dan seluruhnya berada di atas garis batas, beserta cakram terbuka dalam
+    <m>X \setminus L</m> yang menyinggung <m>L</m> bersama titik singgung masing-masing.
+    Kita tidak akan membuktikan bahwa bidang Niemytzki merupakan ruang <m>T_3</m> tetapi bukan ruang <m>T_4</m>.
+    Pembaca yang berminat dapat menemukan pembuktian yang mudah diikuti dalam artikel
     <q>Another Proof that the Niemytzki Plane is not Normal</q>
-    by David H. Vetterlein in the <pubtitle>Pi Mu Epsilon Journal</pubtitle>, Vol. 10, No. 2 (SPRING 1995), pp. 119-121.
+    karya David H. Vetterlein dalam <pubtitle>Pi Mu Epsilon Journal</pubtitle>, Vol. 10, No. 2 (SPRING 1995), hlm. 119–121.
   </p>
 </section>

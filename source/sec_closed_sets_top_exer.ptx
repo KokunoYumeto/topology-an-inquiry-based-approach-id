@@ -3,8 +3,8 @@
   <exercise>
     <statement>
       <p>
-        Determine exactly which finite topological spaces are Hausdorff.
-        Prove your result.
+        Tentukan dengan tepat ruang topologi berhingga mana saja yang merupakan ruang Hausdorff.
+        Buktikan hasil Anda.
       </p>
     </statement>
   </exercise>
@@ -12,8 +12,8 @@
   <exercise>
     <statement>
       <p>
-        Let <m>(X, \tau)</m> be a topological space and let <m>A</m> be a subset of <m>X</m>.
-        Prove that <m>\overline{A} = A \cup \Bdry(A)</m>.
+        Misalkan <m>(X, \tau)</m> suatu ruang topologi dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+        Buktikan bahwa <m>\overline{A} = A \cup \Bdry(A)</m>.
       </p>
     </statement>
   </exercise>
@@ -21,8 +21,8 @@
   <exercise>
     <statement>
       <p>
-        Let <m>A</m> a subset of a topological space.
-        Prove that <m>\Bdry(A) = \emptyset</m> if and only if <m>A</m> is open and closed.
+        Misalkan <m>A</m> suatu subhimpunan dari suatu ruang topologi.
+        Buktikan bahwa <m>\Bdry(A) = \emptyset</m> jika dan hanya jika <m>A</m> terbuka sekaligus tertutup.
       </p>
     </statement>
   </exercise>
@@ -30,131 +30,98 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>X</m> be a nonempty set with at least two elements and let <m>p</m> be a fixed element in <m>X</m>.
-        Let <m>\tau_p</m> be the particular point topology and
-        <m>\tau_{\overline{p}}</m> the excluded point topology on <m>X</m>.
-        That is
+        Misalkan <m>X</m> suatu himpunan tak kosong dengan sedikitnya dua unsur dan <m>p</m> suatu unsur tetap di <m>X</m>.
+        Misalkan <m>\tau_p</m> topologi titik tertentu dan
+        <m>\tau_{\overline{p}}</m> topologi titik yang dikecualikan pada <m>X</m>.
+        Artinya,
         <ul>
           <li>
             <p>
-              <m>\tau_{p}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>\tau_{p}</m> adalah koleksi subhimpunan dari <m>X</m> yang terdiri dari <m>\emptyset</m>,
               <m>X</m>,
-              and all of the subsets of <m>X</m> that contain <m>p</m>.
+              dan semua subhimpunan dari <m>X</m> yang memuat <m>p</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\tau_{\overline{p}}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>\tau_{\overline{p}}</m> adalah koleksi subhimpunan dari <m>X</m> yang terdiri dari <m>\emptyset</m>,
               <m>X</m>,
-              and all of the subsets of <m>X</m> that do not contain <m>p</m>.
+              dan semua subhimpunan dari <m>X</m> yang tidak memuat <m>p</m>.
             </p>
           </li>
         </ul>
       
-      That the particular point and excluded point topologies are topologies is the subject of <xref ref="ex_particular_point_topology"/> and <xref ref="ex_excluded_point_topology"/>.
-      Let <m>A = (0,1]</m> be a subset of <m>\R</m>.
-      Find, with proof, <m>\overline{A}</m>,
-      <m>\Int(A)</m>, and <m>\Bdry(A)</m> when
+      Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan <xref ref="ex_particular_point_topology"/> dan <xref ref="ex_excluded_point_topology"/>.
+      Misalkan <m>A = (0,1]</m> suatu subhimpunan dari <m>\R</m>.
+      Tentukan, disertai bukti, <m>\overline{A}</m>,
+      <m>\Int(A)</m>, dan <m>\Bdry(A)</m> ketika
       </p>
     </introduction>
       <task>
         <statement>
           <p>
-            <m>\R</m> has the topology <m>\tau_{p}</m> with <m>p = 0</m>
+            <m>\R</m> memiliki topologi <m>\tau_{p}</m> dengan <m>p = 0</m>
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>\R</m> has the topology <m>\tau_{\overline{p}}</m> with <m>p = 0</m>.
+            <m>\R</m> memiliki topologi <m>\tau_{\overline{p}}</m> dengan <m>p = 0</m>.
           </p>
         </statement>
       </task>
   </exercise>
 
   <exercise xml:id="ex_Closed_Sets_Sorgenfrey">
-  <idx><h>topology</h><h>lower limit</h></idx>
-  <idx><h>Sorgenfrey line</h></idx>
+  <idx><h>topologi</h><h>limit bawah</h></idx>
+  <idx><h>garis Sorgenfrey</h></idx>
     <introduction>
       <p>
-        Let <m>\B = \{[a,b) \mid a \lt b \text{ in } \R\}</m>.
+        Misalkan <m>\B = \{[a,b) \mid a \lt b \text{ di } \R\}</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>\B</m> is a basis for a topology <m>\tau_{\ell \ell}</m> on <m>\R</m>.
-              This topology is called the <term>lower limit</term> topology on <m>\R</m>.
-              The line <m>\R</m> with the topology
-              <m>\tau_{\ell \ell}</m> is sometimes called the
-              <term>Sorgenfrey line</term>
+              Tunjukkan bahwa <m>\B</m> merupakan basis untuk topologi <m>\tau_{\ell \ell}</m> pada <m>\R</m>.
+              Topologi ini disebut topologi <term>limit bawah</term> pada <m>\R</m>.
+              Garis <m>\R</m> dengan topologi
+              <m>\tau_{\ell \ell}</m> kadang-kadang disebut
+              <term>garis Sorgenfrey</term>
     
-              (after the mathematician Robert Sorgenfrey).
+              (dinamai menurut matematikawan Robert Sorgenfrey).
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Show that every open interval <m>(a,b)</m> is also an open set in the lower limit topology.
+              Tunjukkan bahwa setiap interval terbuka <m>(a,b)</m> juga merupakan himpunan terbuka dalam topologi limit bawah.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>\tau_1</m> and <m>\tau_2</m> are topologies on a set <m>X</m> such that <m>\tau_1 \subseteq \tau_2</m>,
-              then <m>\tau_1</m> is said to be a <term>coarser</term>
-              topology that <m>\tau_2</m>,
-              or <m>\tau_2</m> is a <term>finer</term>
-              topology that <m>\tau_1</m>.
-              Part (b) shows that the lower limit topology may be a finer topology than the Euclidean metric topology.
-              Determine if this is true,
-              that the lower limit topology is actually a finer topology than the Euclidean metric topology on <m>\R</m>.
-              Justify your answer.
+              Jika <m>\tau_1</m> dan <m>\tau_2</m> merupakan topologi pada suatu himpunan <m>X</m> sedemikian sehingga <m>\tau_1 \subseteq \tau_2</m>,
+              maka <m>\tau_1</m> dikatakan sebagai topologi yang <term>lebih kasar</term>
+              daripada <m>\tau_2</m>,
+              atau <m>\tau_2</m> dikatakan sebagai topologi yang <term>lebih halus</term>
+              daripada <m>\tau_1</m>.
+              Bagian (b) menunjukkan bahwa topologi limit bawah mungkin lebih halus daripada topologi metrik Euklides.
+              Tentukan apakah hal ini benar,
+              yaitu apakah topologi limit bawah benar-benar lebih halus daripada topologi metrik Euklides pada <m>\R</m>.
+              Berikan alasan untuk jawaban Anda.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Let <m>a \lt b</m> be in <m>\R</m>.
-              Is the set <m>[a,b)</m> clopen in <m>(\R, \tau_{\ell \ell})</m>?
-              Prove your answer.
-            </p>
-          </statement>
-        </task>
-  </exercise>
-
-  <exercise>
-    <introduction>
-      <p>
-        A subset <m>A</m> of a topological space <m>X</m> is said to be <term>dense</term>
-        in <m>X</m> if <m>\overline{A} = X</m>.
-      </p>
-    </introduction>
-        <task>
-          <statement>
-            <p>
-              Show that <m>\Q</m> is dense in <m>\R</m> using the Euclidean metric topology.
-            </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
-            <p>
-              Is <m>\Z</m> dense in <m>\R</m> using the Euclidean metric topology?
-              Prove your answer.
-            </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
-            <p>
-              Let <m>A</m> be a subset of a topological space <m>A</m>.
-              Prove that <m>A</m> is dense in <m>X</m> if and only if
-              <m>A \cap O \neq \emptyset</m> for every open set <m>O</m>.
+              Misalkan <m>a \lt b</m>, dengan kedua bilangan tersebut merupakan unsur <m>\R</m>.
+              Apakah himpunan <m>[a,b)</m> merupakan himpunan buka-tutup (clopen) dalam <m>(\R, \tau_{\ell \ell})</m>?
+              Buktikan jawaban Anda.
             </p>
           </statement>
         </task>
@@ -163,22 +130,55 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>X</m> be a topological space and let <m>A</m> be a subset of <m>X</m>.
+        Suatu subhimpunan <m>A</m> dari ruang topologi <m>X</m> dikatakan <term>rapat</term>
+        dalam <m>X</m> jika <m>\overline{A} = X</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that the sets <m>\Int(A)</m>,
-              <m>\Bdry(A)</m>, and <m>\Int(A^c)</m> are mutually disjoint
-              (that is, the intersection of any two of these sets is empty).
+              Tunjukkan bahwa <m>\Q</m> rapat dalam <m>\R</m> dengan topologi metrik Euklides.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Prove that <m>X = \Int(A) \cup \Bdry(A) \cup \Int(A^c)</m>.
+              Apakah <m>\Z</m> rapat dalam <m>\R</m> dengan topologi metrik Euklides?
+              Buktikan jawaban Anda.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Misalkan <m>A</m> suatu subhimpunan dari ruang topologi <m>X</m>.
+              Buktikan bahwa <m>A</m> rapat dalam <m>X</m> jika dan hanya jika
+              <m>A \cap O \neq \emptyset</m> untuk setiap himpunan terbuka tak kosong <m>O</m>.
+            </p>
+          </statement>
+        </task>
+  </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        Misalkan <m>X</m> suatu ruang topologi dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+      </p>
+    </introduction>
+        <task>
+          <statement>
+            <p>
+              Tunjukkan bahwa himpunan-himpunan <m>\Int(A)</m>,
+              <m>\Bdry(A)</m>, dan <m>\Int(A^c)</m> saling lepas
+              (artinya, irisan sebarang dua himpunan tersebut adalah kosong).
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Buktikan bahwa <m>X = \Int(A) \cup \Bdry(A) \cup \Int(A^c)</m>.
             </p>
           </statement>
         </task>
@@ -187,7 +187,7 @@
   <exercise xml:id="ex_Closed_sets_Hausdorff_subspace">
     <statement>
       <p>
-        Prove that a subspace of a Hausdorff space is a Hausdorff space.
+        Buktikan bahwa subruang dari suatu ruang Hausdorff juga merupakan ruang Hausdorff.
       </p>
     </statement>
   </exercise>
@@ -195,42 +195,42 @@
   <exercise>
     <introduction>
       <p>
-        Let <m>X</m> be a nonempty set with at least two elements and let <m>p</m> be a fixed element in <m>X</m>.
-        Let <m>\tau_p</m> be the particular point topology and
-        <m>\tau_{\overline{p}}</m> the excluded point topology on <m>X</m>.
-        That is
+        Misalkan <m>X</m> suatu himpunan tak kosong dengan sedikitnya dua unsur dan <m>p</m> suatu unsur tetap di <m>X</m>.
+        Misalkan <m>\tau_p</m> topologi titik tertentu dan
+        <m>\tau_{\overline{p}}</m> topologi titik yang dikecualikan pada <m>X</m>.
+        Artinya,
         <ul>
           <li>
             <p>
-              <m>\tau_{p}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>\tau_{p}</m> adalah koleksi subhimpunan dari <m>X</m> yang terdiri dari <m>\emptyset</m>,
               <m>X</m>,
-              and all of the subsets of <m>X</m> that contain <m>p</m>.
+              dan semua subhimpunan dari <m>X</m> yang memuat <m>p</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\tau_{\overline{p}}</m> is the collection of subsets of <m>X</m> consisting of <m>\emptyset</m>,
+              <m>\tau_{\overline{p}}</m> adalah koleksi subhimpunan dari <m>X</m> yang terdiri dari <m>\emptyset</m>,
               <m>X</m>,
-              and all of the subsets of <m>X</m> that do not contain <m>p</m>.
+              dan semua subhimpunan dari <m>X</m> yang tidak memuat <m>p</m>.
             </p>
           </li>
         </ul>
       
-      That the particular point and excluded point topologies are topologies is the subject of <xref ref="ex_particular_point_topology"/> and <xref ref="ex_excluded_point_topology"/>.
-      Determine, with proof, if <m>X</m> is a Hausdorff space when
+      Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan <xref ref="ex_particular_point_topology"/> dan <xref ref="ex_excluded_point_topology"/>.
+      Tentukan, disertai bukti, apakah <m>X</m> merupakan ruang Hausdorff ketika
       </p>
     </introduction>
       <task>
         <statement>
           <p>
-            <m>X</m> has the topology <m>\tau_{p}</m>
+            <m>X</m> memiliki topologi <m>\tau_{p}</m>
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>X</m> has the topology <m>\tau_{\overline{p}}</m>.
+            <m>X</m> memiliki topologi <m>\tau_{\overline{p}}</m>.
           </p>
         </statement>
       </task>
@@ -239,7 +239,7 @@
   <exercise xml:id="ex_TS_Closed_boundary">
     <statement>
       <p>
-        Prove that a subset <m>C</m> of a topological space <m>X</m> is closed if and only if <m>C</m> contains its boundary.
+        Buktikan bahwa suatu subhimpunan <m>C</m> dari ruang topologi <m>X</m> tertutup jika dan hanya jika <m>C</m> memuat batasnya.
       </p>
     </statement>
   </exercise>
@@ -247,15 +247,15 @@
   <exercise>
     <introduction>
       <p>
-        Recall that a point <m>a</m> in a subset <m>A</m> of a metric space <m>X</m> is an isolated point of <m>A</m> if there is a neighborhood <m>N</m> of <m>a</m> in <m>X</m> such that <m>N \cap A = \{a\}</m>.
-        We can make the same definition in any topological space.
+        Ingat bahwa suatu titik <m>a</m> dalam subhimpunan <m>A</m> dari ruang metrik <m>X</m> merupakan titik terasing dari <m>A</m> jika terdapat lingkungan <m>N</m> dari <m>a</m> di <m>X</m> sedemikian sehingga <m>N \cap A = \{a\}</m>.
+        Kita dapat membuat definisi yang sama dalam sebarang ruang topologi.
       </p>
         <definition>
           <statement>
             <p>
-              A point <m>a</m> in a subset <m>A</m> of a topological space <m>X</m> is an isolated point of <m>A</m>
-          <idx><h>isolated point</h></idx>
-              if there is a neighborhood <m>N</m> of <m>a</m> such that <m>N \cap A = \{a\}</m>.
+              Suatu titik <m>a</m> dalam subhimpunan <m>A</m> dari ruang topologi <m>X</m> merupakan titik terasing dari <m>A</m>
+          <idx><h>titik terasing</h></idx>
+              jika terdapat lingkungan <m>N</m> dari <m>a</m> sedemikian sehingga <m>N \cap A = \{a\}</m>.
             </p>
           </statement>
         </definition>
@@ -263,18 +263,18 @@
         <task>
           <statement>
             <p>
-              If <m>A</m> is a subset of a topological space <m>X</m>,
-              prove that a point <m>a \in A</m> is an isolated point of <m>A</m> if and only if <m>\{a\}</m> is an open set in <m>A</m>.
+              Jika <m>A</m> suatu subhimpunan dari ruang topologi <m>X</m>,
+              buktikan bahwa suatu titik <m>a \in A</m> merupakan titik terasing dari <m>A</m> jika dan hanya jika <m>\{a\}</m> merupakan himpunan terbuka di <m>A</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              We proved that in a metric space every boundary point of a set <m>A</m> is either a limit point or an isolated point of <m>A</m>.
-              (See <xref ref="ex_MS_boundary_limit_isolated"/>.)
-              Is the same statement true in a topological space?
-              Prove your answer.
+              Kita telah membuktikan bahwa dalam ruang metrik, setiap titik batas dari suatu himpunan <m>A</m> merupakan titik limit atau titik terasing dari <m>A</m>.
+              (Lihat <xref ref="ex_MS_boundary_limit_isolated"/>.)
+              Apakah pernyataan yang sama berlaku dalam ruang topologi?
+              Buktikan jawaban Anda.
             </p>
           </statement>
         </task>
@@ -283,29 +283,29 @@
   <exercise>
     <introduction>
       <p>
-        For each integer <m>a</m>, let <m>a\Z = \{ka \mid k \in \Z\}</m>.
-        That is, <m>a\Z</m> is the set of all integer multiples of <m>a</m>.
-        That <m>\{a\Z \mid a \in \Z\}</m> is a basis for a topology <m>\tau</m> on <m>\Z</m> is the topic of Exercise (ex_aZ_top).
-        In this exercise work in the topological space <m>(\Z, \tau)</m>
+        Untuk setiap bilangan bulat <m>a</m>, misalkan <m>a\Z = \{ka \mid k \in \Z\}</m>.
+        Artinya, <m>a\Z</m> adalah himpunan semua kelipatan bulat dari <m>a</m>.
+        Fakta bahwa <m>\{a\Z \mid a \in \Z\}</m> merupakan basis untuk topologi <m>\tau</m> pada <m>\Z</m> dibahas dalam <xref ref="ex_aZ_top"/>.
+        Dalam latihan ini, bekerjalah pada ruang topologi <m>(\Z, \tau)</m>
       </p>
     </introduction>
         <task>
           <introduction>
             <p>
-              Let <m>A = \mathbb{E}</m>, the set of even integers.
+              Misalkan <m>A = \mathbb{E}</m>, yaitu himpunan bilangan bulat genap.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Find, with justification, <m>\Int(A)</m>.
+                    Tentukan, disertai alasan, <m>\Int(A)</m>.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Find, with justification, <m>\overline{A}</m>.
+                    Tentukan, disertai alasan, <m>\overline{A}</m>.
                   </p>
                 </statement>
               </task>
@@ -313,21 +313,21 @@
         <task>
           <introduction>
             <p>
-              Let <m>B = \mathbb{N} = \{n \in \Z \mid n \geq 1\}</m>.
-              That is, <m>\mathbb{N}</m> is the set of natural numbers.
+              Misalkan <m>B = \mathbb{N} = \{n \in \Z \mid n \geq 1\}</m>.
+              Artinya, <m>\mathbb{N}</m> adalah himpunan bilangan asli.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Find, with justification, <m>\Int(B)</m>.
+                    Tentukan, disertai alasan, <m>\Int(B)</m>.
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Find, with justification, <m>\overline{B}</m>.
+                    Tentukan, disertai alasan, <m>\overline{B}</m>.
                   </p>
                 </statement>
               </task>
@@ -338,40 +338,40 @@
   <exercise>
     <introduction>
       <p>
-        Consider the Double Origin topology<idx><h>topology</h><h>Double Origin</h></idx> defined as follows.
-        Let <m>X = \R^2 \cup \{0^*\}</m>,
-        where <m>0^*</m> is considered as a point that is not in <m>\R^2</m>
-        (<m>0^*</m> is our double origin).
-        As a basis for the open sets,
-        we use the standard open balls for every point except <m>0</m> and <m>0^*</m>.
-        For the point <m>0</m>, we define open sets to be
+        Perhatikan topologi Titik Asal Ganda<idx><h>topologi</h><h>Titik Asal Ganda</h></idx> yang didefinisikan sebagai berikut.
+        Misalkan <m>X = \R^2 \cup \{0^*\}</m>,
+        dengan <m>0^*</m> dipandang sebagai titik yang tidak berada di <m>\R^2</m>
+        (<m>0^*</m> adalah titik asal ganda kita).
+        Sebagai basis untuk himpunan terbuka,
+        kita gunakan bola-bola terbuka standar untuk setiap titik selain <m>0</m> dan <m>0^*</m>.
+        Untuk setiap nilai parameter yang positif, pada titik <m>0</m> kita definisikan himpunan-himpunan terbukanya sebagai
         <me>
           N(0,r) = \left\{(x,y) \in \R^2 \mid x^2+y^2 \lt  \frac{1}{r^2}, y \gt 0\right\}  \cup \{0\}
         </me>
-        and for <m>0^*</m> we define open sets to be
+        dan untuk setiap nilai parameter yang positif, pada titik <m>0^*</m> kita definisikan himpunan-himpunan terbukanya sebagai
         <me>
           N(0^*, r) =  \left\{(x,y) \in \R^2 \mid x^2+y^2 \lt  \frac{1}{r^2}, y \lt  0\right\}  \cup \{0^*\}
         </me>.
-        So <m>N(0,r)</m> is the top half of a disk of radius
-        <m>\frac{1}{r}</m> centered at the origin,
-        excluding the <m>y</m>-axis but including the origin,
-        and <m>N(0^*,r)</m> is the bottom half of a disk of radius
-        <m>\frac{1}{r}</m> centered at the origin,
-        excluding the <m>y</m>-axis and including the point <m>0^*</m>.
+        Jadi, <m>N(0,r)</m> adalah setengah bagian atas dari cakram berjari-jari
+        <m>\frac{1}{r}</m> yang berpusat di titik asal,
+        dengan sumbu <m>x</m> dikecualikan tetapi titik asal disertakan,
+        sedangkan <m>N(0^*,r)</m> adalah setengah bagian bawah dari cakram berjari-jari
+        <m>\frac{1}{r}</m> yang berpusat di titik asal,
+        dengan sumbu <m>x</m> dikecualikan dan titik <m>0^*</m> disertakan.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that the collection of sets described as a basis for the Double Origin topology is actually a basis for a topology.
+              Tunjukkan bahwa koleksi himpunan yang dijelaskan sebagai basis untuk topologi Titik Asal Ganda benar-benar merupakan basis untuk suatu topologi.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Is <m>X</m> with the Double Origin topology Hausdorff?
-              Prove your answer.
+              Apakah <m>X</m> dengan topologi Titik Asal Ganda merupakan ruang Hausdorff?
+              Buktikan jawaban Anda.
             </p>
           </statement>
         </task>
@@ -382,16 +382,16 @@
       <task>
         <statement>
           <p>
-            Show that finite sets are closed in <m>\R^n</m> with the Zariski topology.
+            Tunjukkan bahwa setiap himpunan berhingga merupakan himpunan tertutup dalam <m>\R^n</m> dengan topologi Zariski.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Show that <m>\R^n</m> with the Zariski topology is not Hausdorff. (<xref ref="ex_TS_Zariski"/>
-            shows that a basis for the Zariski topology on <m>\R^n</m> is the collection of sets of the form <m>\R^n \setminus Z(f)</m>,
-            where <m>Z(f)</m> is the set of zeros of the polynomial <m>f</m> in <m>n</m> variables.)
+            Tunjukkan bahwa <m>\R^n</m> dengan topologi Zariski bukan ruang Hausdorff. (<xref ref="ex_TS_Zariski"/>
+            menunjukkan bahwa suatu basis untuk topologi Zariski pada <m>\R^n</m> adalah koleksi himpunan berbentuk <m>\R^n \setminus Z(f)</m>,
+            dengan <m>Z(f)</m> adalah himpunan nol dari polinom <m>f</m> dalam <m>n</m> variabel.)
           </p>
         </statement>
       </task>
@@ -400,34 +400,34 @@
   <exercise>
     <introduction>
       <p>
-        Consider the digital line topology
-        <m>\tau_{dl}</m> on <m>\Z</m> with basis <m>\{B(n)\}</m>, where
+        Perhatikan topologi garis digital
+        <m>\tau_{dl}</m> pada <m>\Z</m> dengan basis <m>\{B(n)\}</m>, dengan
         <me>
-          B(n) = \begin{cases}\{n\}  \amp \text{ if \(n\) is an odd integer } , \\ \{n-1,n,n+1\}  \amp \text{ if \(n\) is an even integer } . \end{cases}
+          B(n) = \begin{cases}\{n\}  \amp \text{ jika \(n\) ganjil } , \\ \{n-1,n,n+1\}  \amp \text{ jika \(n\) genap } . \end{cases}
         </me>
       </p>
     </introduction>
         <task>
           <introduction>
             <p>
-              Let <m>A = \{-1,0,1\}</m> of <m>(\Z, \tau_{dl})</m>.
+              Misalkan <m>A = \{-1,0,1\}</m> suatu subhimpunan dari <m>(\Z, \tau_{dl})</m>.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Find the limit points and boundary points of <m>A</m>.
-                    Prove your conjectures.
-                    Is every limit point of <m>A</m> a boundary point of <m>A</m>?
-                    Is every boundary point of <m>A</m> a limit point of <m>A</m>?
+                    Tentukan titik-titik limit dan titik-titik batas dari <m>A</m>.
+                    Buktikan dugaan Anda.
+                    Apakah setiap titik limit dari <m>A</m> merupakan titik batas dari <m>A</m>?
+                    Apakah setiap titik batas dari <m>A</m> merupakan titik limit dari <m>A</m>?
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Find <m>\overline{A}</m> and write
-                    <m>X \setminus \overline{A}</m> as a union of open sets.
+                    Tentukan <m>\overline{A}</m> dan tuliskan
+                    <m>\Z \setminus \overline{A}</m> sebagai gabungan himpunan-himpunan terbuka.
                   </p>
                 </statement>
               </task>
@@ -435,24 +435,24 @@
         <task>
           <introduction>
             <p>
-              Now consider the subset <m>B = \{0\}</m> of <m>(\Z, \tau_{dl})</m>.
+              Sekarang perhatikan subhimpunan <m>B = \{0\}</m> dari <m>(\Z, \tau_{dl})</m>.
             </p>
           </introduction>
               <task>
                 <statement>
                   <p>
-                    Find the limit points and boundary points of <m>B</m>.
-                    Prove your conjectures.
-                    Is every limit point of <m>B</m> a boundary point of <m>B</m>?
-                    Is every boundary point of <m>B</m> a limit point of <m>B</m>?
+                    Tentukan titik-titik limit dan titik-titik batas dari <m>B</m>.
+                    Buktikan dugaan Anda.
+                    Apakah setiap titik limit dari <m>B</m> merupakan titik batas dari <m>B</m>?
+                    Apakah setiap titik batas dari <m>B</m> merupakan titik limit dari <m>B</m>?
                   </p>
                 </statement>
               </task>
               <task>
                 <statement>
                   <p>
-                    Find <m>\overline{B}</m> and write
-                    <m>X \setminus \overline{B}</m> as a union of open sets.
+                    Tentukan <m>\overline{B}</m> dan tuliskan
+                    <m>\Z \setminus \overline{B}</m> sebagai gabungan himpunan-himpunan terbuka.
                   </p>
                 </statement>
               </task>
@@ -463,20 +463,20 @@
   <exercise xml:id="ex_Metric_space_regular">
     <introduction>
       <p>
-        Let <m>(X,d)</m> be a metric space. Recall from <xref ref="ex_distance_pt_to_set"/> in <xref ref="chap_closed_sets"/>, that if <m>C</m> is a closed subset of a metric space <m>X</m> and <m>x</m> is an element of <m>X \setminus C</m>, then <m>d(x,C) = 0</m> if and only if <m>x \in C</m>. Use this idea to do the following.
+        Misalkan <m>(X,d)</m> suatu ruang metrik. Ingat dari <xref ref="ex_distance_pt_to_set"/> dalam <xref ref="chap_closed_sets"/> bahwa jika <m>C</m> suatu subhimpunan tertutup tak kosong dari ruang metrik <m>X</m> dan <m>x</m> suatu unsur dari <m>X</m>, maka <m>d(x,C) = 0</m> jika dan hanya jika <m>x \in C</m>. Gunakan gagasan ini untuk mengerjakan hal-hal berikut.
       </p>
     </introduction>
     <task>
       <statement>
         <p>
-          Prove that every metric space is regular.
+          Buktikan bahwa setiap ruang metrik bersifat reguler.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Prove that every metric space is a normal space.
+          Buktikan bahwa setiap ruang metrik merupakan ruang normal.
         </p>
       </statement>
     </task>
@@ -486,25 +486,25 @@
   <exercise>
     <introduction>
       <p>
-        Let  <m>K = \left\{\frac{1}{k} \mid k \text{ is a positive integer} \right\}</m>. Let <m>\B</m> be the collection of all open intervals of the form <m>(a,b)</m> and all sets of the form <m>(a,b) \setminus K</m>, where <m>a \lt b</m> are real numbers as in <xref ref="exp_K_topology"/>.  That <m>\B</m> generates a topology <m>\tau_K</m> on <m>\R</m> follows from the fact that <m>\tau_K</m> is finer than the Euclidean topology.
+        Misalkan <m>K = \left\{\frac{1}{k} \mid k \text{ adalah bilangan bulat positif} \right\}</m>. Misalkan <m>\B</m> koleksi semua interval terbuka berbentuk <m>(a,b)</m> dan semua himpunan berbentuk <m>(a,b) \setminus K</m>, dengan <m>a \lt b</m> bilangan real seperti dalam <xref ref="exp_K_topology"/>. Koleksi <m>\B</m> merupakan basis bagi topologi <m>\tau_K</m> pada <m>\R</m>. Karena koleksi ini memuat semua interval terbuka biasa, <m>\tau_K</m> lebih halus daripada topologi Euklides.
       </p>
     </introduction>
     <task>
       <statement>
         <p>
-          Show that <m>(\R, \tau_K)</m> is a Hausdorff space.
+          Tunjukkan bahwa <m>(\R, \tau_K)</m> merupakan ruang Hausdorff.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          <xref ref="ex_Metric_space_regular"/> shows that every metric space is regular. In this part of the exercise, show that <m>(R, \tau_K)</m> is not a regular space. We can conclude that <m>(\R, \tau_K)</m> is not metrizable.
+          <xref ref="ex_Metric_space_regular"/> menunjukkan bahwa setiap ruang metrik bersifat reguler. Pada bagian latihan ini, tunjukkan bahwa <m>(\R, \tau_K)</m> bukan ruang reguler. Kita dapat menyimpulkan bahwa <m>(\R, \tau_K)</m> tidak termetriskan.
         </p>
       </statement>
       <hint>
         <p>
-          Consider <m>0</m> and <m>K</m>.
+          Perhatikan <m>0</m> dan <m>K</m>.
         </p>
       </hint>
     </task>
@@ -516,16 +516,16 @@
       <task>
         <statement>
           <p>
-            Prove that a topological space <m>X</m> is <m>T_1</m> if and only if each singleton set is closed.
+            Buktikan bahwa suatu ruang topologi <m>X</m> merupakan ruang <m>T_1</m> jika dan hanya jika setiap himpunan beranggota tunggal bersifat tertutup.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Show that every <m>T_2</m>-space is <m>T_1</m>,
-            that every <m>T_3</m>-space is <m>T_2</m>,
-            and that every <m>T_4</m>-space is <m>T_3</m>.
+            Tunjukkan bahwa setiap ruang <m>T_2</m> merupakan ruang <m>T_1</m>,
+            setiap ruang <m>T_3</m> merupakan ruang <m>T_2</m>,
+            dan setiap ruang <m>T_4</m> merupakan ruang <m>T_3</m>.
           </p>
         </statement>
       </task>
@@ -534,23 +534,23 @@
   <exercise xml:id="ex_not_T_1_2_3">
     <introduction>
       <p>
-        In this exercise we illustrate spaces that are <m>T_1</m> but not <m>T_2</m> and <m>T_2</m> but not <m>T_3</m>.
+        Dalam latihan ini, kita memberikan contoh ruang yang merupakan ruang <m>T_1</m> tetapi bukan ruang <m>T_2</m>, serta ruang <m>T_2</m> yang bukan ruang <m>T_3</m>.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Show that <m>\R</m> with the finite complement topology is <m>T_1</m> but not <m>T_2</m>.
+              Tunjukkan bahwa <m>\R</m> dengan topologi komplemen berhingga merupakan ruang <m>T_1</m> tetapi bukan ruang <m>T_2</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Define the space <m>\R_K</m> as in <xref ref="exp_K_topology"/>
-              to be the set of reals with topology <m>\tau</m> with a basis that consists of the standard open intervals in <m>\R</m> along with all sets of the form <m>(a,b) \setminus K</m>,
-              where <m>(a,b)</m> is any open interval and <m>K = \left\{\frac{1}{k} \mid k \in \Z^+\right\}</m>.
-              Show that <m>\R_K</m> is <m>T_2</m> but not <m>T_3</m>.
+              Definisikan ruang <m>\R_K</m> seperti dalam <xref ref="exp_K_topology"/>
+              sebagai himpunan bilangan real dengan topologi <m>\tau</m> yang memiliki basis berupa interval-interval terbuka standar dalam <m>\R</m> beserta semua himpunan berbentuk <m>(a,b) \setminus K</m>,
+              dengan <m>(a,b)</m> sebarang interval terbuka dan <m>K = \left\{\frac{1}{k} \mid k \in \Z^+\right\}</m>.
+              Tunjukkan bahwa <m>\R_K</m> merupakan ruang <m>T_2</m> tetapi bukan ruang <m>T_3</m>.
             </p>
           </statement>
         </task>
@@ -559,57 +559,57 @@
   <exercise>
     <introduction>
       <p>
-        For each of the following, answer true if the statement is always true.
-        If the statement is only sometimes true or never true,
-        answer false and provide a concrete example to illustrate that the statement is false.
-        If a statement is true, explain why.
+        Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar.
+        Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar,
+        jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah.
+        Jika suatu pernyataan benar, jelaskan alasannya.
       </p>
     </introduction>
         <task>
           <statement>
             <p>
-              Every limit point of a subset <m>A</m> of a topological space <m>X</m> is also a boundary point of <m>A</m>.
+              Setiap titik limit dari suatu subhimpunan <m>A</m> dari ruang topologi <m>X</m> juga merupakan titik batas dari <m>A</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Every boundary point of a subset <m>A</m> of a topological space <m>X</m> is also a limit point of <m>A</m>.
+              Setiap titik batas dari suatu subhimpunan <m>A</m> dari ruang topologi <m>X</m> juga merupakan titik limit dari <m>A</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>X</m> is a topological space and
-              <m>A \subseteq X</m> such that <m>\Int(A)=\overline{A}</m>,
-              then <m>A</m> is both open and closed.
+              Jika <m>X</m> suatu ruang topologi dan
+              <m>A \subseteq X</m> sedemikian sehingga <m>\Int(A)=\overline{A}</m>,
+              maka <m>A</m> terbuka sekaligus tertutup.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>X</m> is a topological space and <m>A</m> and <m>B</m> are subsets of <m>X</m> with
-              <m>\overline{A}=\overline{B}</m> and <m>\Int(A) = \Int(B)</m>,
-              then <m>A = B</m>.
+              Jika <m>X</m> suatu ruang topologi dan <m>A</m> serta <m>B</m> merupakan subhimpunan dari <m>X</m> dengan
+              <m>\overline{A}=\overline{B}</m> dan <m>\Int(A) = \Int(B)</m>,
+              maka <m>A = B</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>A</m> and <m>B</m> are subsets of a topological space <m>X</m>,
-              then <m>\overline{A \cap B} = \overline{A} \cap \overline{B}</m>.
+              Jika <m>A</m> dan <m>B</m> merupakan subhimpunan dari ruang topologi <m>X</m>,
+              maka <m>\overline{A \cap B} = \overline{A} \cap \overline{B}</m>.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              If <m>A</m> and <m>B</m> are subsets of a topological space <m>X</m>,
-              then <m>\overline{A \cup B} = \overline{A} \cup \overline{B}</m>.
+              Jika <m>A</m> dan <m>B</m> merupakan subhimpunan dari ruang topologi <m>X</m>,
+              maka <m>\overline{A \cup B} = \overline{A} \cup \overline{B}</m>.
             </p>
           </statement>
         </task>
