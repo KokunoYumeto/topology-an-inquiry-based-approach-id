@@ -1,51 +1,50 @@
 <section xml:id="sec_metric_equiv">
-  <title>Metric Equivalence</title>
+  <title>Ekuivalensi Metrik</title>
   <p>
-    We have seen that we can make a set into a metric space with different metrics.
-    For example, the spaces <m>(\R^2, d_E)</m>, <m>(\R^2, d_T)</m>,
-    <m>(\R^2, d_M)</m>, and <m>(\R^2, d)</m> are all metric spaces,
-    where <m>d_E</m> is the Euclidean metric,
-    <m>d_T</m> the taxicab metric,
-    <m>d_M</m> the max metric, and <m>d</m> the discrete metric.
-    But are these metric spaces really
-    <q>different</q>
-    metric spaces?
-    What do we mean by
-    <q>different</q>?
+    Kita telah melihat bahwa sebuah himpunan dapat dijadikan ruang metrik dengan berbagai metrik.
+    Sebagai contoh, ruang-ruang <m>(\R^2, d_E)</m>, <m>(\R^2, d_T)</m>,
+    <m>(\R^2, d_M)</m>, dan <m>(\R^2, d)</m> semuanya merupakan ruang metrik,
+    dengan <m>d_E</m> sebagai metrik Euklides,
+    <m>d_T</m> sebagai metrik taksi,
+    <m>d_M</m> sebagai metrik maksimum, dan <m>d</m> sebagai metrik diskret.
+    Namun, apakah ruang-ruang metrik ini benar-benar merupakan ruang metrik yang
+    <q>berbeda</q>?
+    Apa yang kita maksud dengan
+    <q>berbeda</q>?
   </p>
 
   <activity>
     <introduction>
     <p>
-      We might consider two metric spaces <m>(X, d_X)</m> and
-      <m>(Y, d_Y)</m> to be equivalent if we can find a bijection between the two sets <m>X</m> and <m>Y</m> that preserves the metric properties.
-      That is, find a bijective function <m>f : X \to Y</m> such that
+      Kita dapat menganggap dua ruang metrik <m>(X, d_X)</m> dan
+      <m>(Y, d_Y)</m> ekuivalen jika terdapat bijeksi antara kedua himpunan <m>X</m> dan <m>Y</m> yang mempertahankan sifat-sifat metriknya.
+      Artinya, kita mencari suatu fungsi bijektif <m>f : X \to Y</m> sedemikian sehingga
       <m>d_X(a,b) = d_Y(f(a),
-      f(b))</m> for all <m>a,b \in X</m>.
-      In other words, <m>f</m> preserves distances.
+      f(b))</m> untuk semua <m>a,b \in X</m>.
+      Dengan kata lain, <m>f</m> mempertahankan jarak.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Let <m>X = ((0,1), d_X)</m> and <m>Y = ((0,2), d_Y)</m>,
-            with both <m>d_X</m> and <m>d_Y</m> the Euclidean metric.
-            Is it possible to find a bijection
-            <m>f : X \to Y</m> that preserves the metric properties?
-            Explain.
+            Misalkan <m>X = ((0,1), d_X)</m> dan <m>Y = ((0,2), d_Y)</m>,
+            dengan <m>d_X</m> dan <m>d_Y</m> keduanya merupakan metrik Euklides.
+            Apakah mungkin menemukan suatu bijeksi
+            <m>f : X \to Y</m> yang mempertahankan sifat-sifat metrik?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Now let <m>X = ((0,1), d_X)</m> and <m>Y = ((0,2), d_Y)</m>,
-            where <m>d_X</m> is defined by
-            <m>d_X(a,b) = 2 | a-b |</m> and <m>d_Y = d_E</m>.
-            You may assume that <m>d_X</m> is a metric.
-            Is it possible to find a bijection
-            <m>f : X \to Y</m> that preserves the metric properties?
-            Explain.
+            Sekarang misalkan <m>X = ((0,1), d_X)</m> dan <m>Y = ((0,2), d_Y)</m>,
+            dengan <m>d_X</m> didefinisikan oleh
+            <m>d_X(a,b) = 2 | a-b |</m> dan <m>d_Y = d_E</m>.
+            Anda boleh mengasumsikan bahwa <m>d_X</m> merupakan suatu metrik.
+            Apakah mungkin menemukan suatu bijeksi
+            <m>f : X \to Y</m> yang mempertahankan sifat-sifat metrik?
+            Jelaskan.
           </p>
         </statement>
       </task>
@@ -53,75 +52,75 @@
   </activity>
 
   <p>
-    If there is a bijection between metric spaces that preserves distances,
-    we say that the metric spaces are
-    <term>metrically equivalent</term>.
+    Jika terdapat bijeksi antara dua ruang metrik yang mempertahankan jarak,
+    kita mengatakan bahwa kedua ruang metrik tersebut
+    <term>ekuivalen secara metrik</term>.
   </p>
 
   <definition xml:id="def_MS_metric_equivalence">
-  <idx><h>metrically equivalent</h></idx>
+  <idx><h>ekuivalen secara metrik</h></idx>
     <statement>
       <p>
-        Two metric spaces <m>(X,d_X)</m> and <m>(Y,d_Y)</m> are <term>metrically equivalent</term>
+        Dua ruang metrik <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> <term>ekuivalen secara metrik</term>
             
-        if there is a bijection <m>f : X \to Y</m> such that
+        jika terdapat bijeksi <m>f : X \to Y</m> sedemikian sehingga
         <me>
           d_X(x,y) = d_Y(f(x),f(y))
         </me>
-        for all <m>x,y \in X</m>.
+        untuk semua <m>x,y \in X</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    Because <m>f</m> is a bijection,
-    it will also be the case in <xref ref="def_MS_metric_equivalence"/> that
+    Karena <m>f</m> merupakan bijeksi,
+    dalam <xref ref="def_MS_metric_equivalence"/> juga berlaku bahwa
     <me>
       d_Y(u,v) = d_X(f^{-1}(u), f^{-1}(v))
     </me>
-    for all <m>u</m> and <m>v</m> in <m>Y</m>.
-    The proof is left for <xref ref="ex_isometry_reverse"/>.
+    untuk semua <m>u</m> dan <m>v</m> dalam <m>Y</m>.
+    Pembuktiannya diserahkan kepada <xref ref="ex_isometry_reverse"/>.
   </p>
   <p>
-    Any function <m>f</m> that preserves distances
-    (like the one in <xref ref="def_MS_metric_equivalence"/>)
-    is called an <term>isometry</term>.
+    Setiap fungsi bijektif <m>f</m> yang mempertahankan jarak
+    (seperti fungsi dalam <xref ref="def_MS_metric_equivalence"/>)
+    disebut suatu <term>isometri</term>.
   </p>
 
   <definition>
-  <idx><h>isometry</h></idx>
+  <idx><h>isometri</h></idx>
     <statement>
       <p>
-        A function <m>f</m> from a metric space <m>(X,d_X)</m> to a metric space <m>(Y, d_Y)</m> is an <term>isometry</term>
-        if <m>f</m> is a bijection and
+        Suatu fungsi <m>f</m> dari ruang metrik <m>(X,d_X)</m> ke ruang metrik <m>(Y, d_Y)</m> merupakan <term>isometri</term>
+        jika <m>f</m> bijektif dan
         <men xml:id="eq_distance_preserving">
           d_Y(f(a),f(b)) = d_X(a,b)
         </men>
-        for all <m>a, b \in X</m>.
+        untuk semua <m>a, b \in X</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    Metric equivalence is a very strong type of equivalence <mdash/> the existence of an isometry does not allow for much flexibility since distances must be preserved.
-    From a topological perspective,
-    we are only concerned about the open sets <mdash/> there are no distances.
-    The open unit ball in <m>(\R^2, d_E)</m> and the open ball in <m>(\R^2, d_M)</m>
-    (where <m>d_E</m> is the Euclidean metric and <m>d_M</m> is the max metric)
-    are not that different as we can see in <xref ref="F_Equivalence"/>.
-    If we don't worry about preserving distances,
-    we can stretch the open ball <m>B_E = B((0,0),1)</m> in
-    <m>(\R^2, d_E)</m> along the lines <m>y=x</m> and <m>y=-x</m> uniformly in a way to mold it onto the unit ball
-    <m>B_M = B((0,0),1)</m> in <m>(\R^2, d_M)</m>.
-    The important thing is that this stretching will preserve the open sets.
-    This is a much more forgiving type of equivalence and maintains the central idea of topology that we have discussed <mdash/> what properties of a space are not altered by stretching and bending the space.
-    This type of equivalence that allows us to manipulate a space without fundamentally changing the open sets is called
-    <term>topological equivalence</term>.
+    Ekuivalensi metrik merupakan jenis ekuivalensi yang sangat kuat <mdash/> keberadaan suatu isometri tidak memberi banyak keluwesan karena jarak harus dipertahankan.
+    Dari sudut pandang topologi,
+    kita hanya memperhatikan himpunan-himpunan terbuka <mdash/> tidak ada jarak.
+    Bola satuan terbuka dalam <m>(\R^2, d_E)</m> dan bola satuan terbuka dalam <m>(\R^2, d_M)</m>
+    (dengan <m>d_E</m> sebagai metrik Euklides dan <m>d_M</m> sebagai metrik maksimum)
+    tidak terlalu berbeda, sebagaimana dapat kita lihat dalam <xref ref="F_Equivalence"/>.
+    Jika kita tidak perlu mempertahankan jarak,
+    kita dapat meregangkan bola terbuka <m>B_E = B((0,0),1)</m> dalam
+    <m>(\R^2, d_E)</m> secara seragam sepanjang garis <m>y=x</m> dan <m>y=-x</m> sehingga bentuknya menjadi bola satuan
+    <m>B_M = B((0,0),1)</m> dalam <m>(\R^2, d_M)</m>.
+    Hal yang penting ialah peregangan ini mempertahankan himpunan-himpunan terbuka.
+    Jenis ekuivalensi ini jauh lebih luwes dan mempertahankan gagasan utama topologi yang telah kita bahas <mdash/> sifat-sifat ruang apa yang tidak berubah ketika ruang tersebut diregangkan dan dilengkungkan.
+    Jenis ekuivalensi yang memungkinkan kita memanipulasi suatu ruang tanpa mengubah himpunan-himpunan terbukanya secara mendasar disebut
+    <term>ekuivalensi topologis</term>.
   </p>
 
   <figure xml:id="F_Equivalence">
-    <caption>The open unit balls in <m>(\R^2, d_E)</m> and <m>(\R^2, d_M)</m>.</caption>
-    <image width="70%" source="Equivalence"/>
+    <caption>Bola-bola satuan terbuka dalam <m>(\R^2, d_E)</m> dan <m>(\R^2, d_M)</m>.</caption>
+    <image width="70%" source="Equivalence"><description>Dua bidang koordinat berdampingan. Di kiri, bola satuan terbuka dalam (ℝ², d_E) berupa cakram biru muda berpusat di titik asal dengan batas lingkaran biru putus-putus. Di kanan, bola satuan terbuka dalam (ℝ², d_M) berupa persegi biru muda berpusat di titik asal, dengan sisi x = ±1 dan y = ±1 serta batas biru putus-putus. Garis putus-putus menandai bahwa batas tidak termasuk.</description></image>
   </figure>
 
 </section>
