@@ -1,52 +1,52 @@
 <section xml:id="sec_set_boundary">
-  <title>The Boundary of a Set</title>
+  <title>Batas Suatu Himpunan</title>
   <p>
-    In addition to limit points, we also defined boundary points in metric spaces.
-    Recall that a boundary point of a set <m>A</m> in a metric space <m>X</m> could be considered to be any point in <m>\overline{A} \cap \overline{X \setminus A}</m>.
-    We make the same definition in a topological space.
+    Selain titik limit, kita juga telah mendefinisikan titik batas dalam ruang metrik.
+    Ingat bahwa titik batas dari suatu himpunan <m>A</m> dalam ruang metrik <m>X</m> dapat dipandang sebagai sebarang titik dalam <m>\overline{A} \cap \overline{X \setminus A}</m>.
+    Kita menggunakan definisi yang sama dalam ruang topologi.
   </p>
 
   <definition>
-  <idx><h>boundary point in a topological space</h></idx>
-  <idx><h>boundary in a topological space</h></idx>
+  <idx><h>titik batas dalam ruang topologi</h></idx>
+  <idx><h>batas dalam ruang topologi</h></idx>
     <statement>
       <p>
-        Let <m>(X, \tau)</m> be a topological space,
-        and let <m>A</m> be a subset of <m>X</m>.
-        A <term>boundary point</term> of <m>A</m> is a point <m>x \in X</m> such that every neighborhood of <m>x</m> contains a point in <m>A</m> and a point in <m>X \setminus A</m>.
-        The <term>boundary</term> of <m>A</m> is the set
+        Misalkan <m>(X, \tau)</m> suatu ruang topologi,
+        dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m>.
+        Suatu <term>titik batas</term> dari <m>A</m> adalah titik <m>x \in X</m> sedemikian sehingga setiap lingkungan dari <m>x</m> memuat suatu titik di <m>A</m> dan suatu titik di <m>X \setminus A</m>.
+        <term>Batas</term> dari <m>A</m> adalah himpunan
         <me>
-          \Bdry(A) = \{x \in X \mid x \text{ is a boundary point of }  A\}
+          \Bdry(A) = \{x \in X \mid x \text{ adalah titik batas dari }  A\}
         </me>.
       </p>
     </statement>
   </definition>
 
   <p>
-    As with metric spaces,
-    the boundary points of a set <m>A</m> are those points that are
-    <q>between</q>
-    <m>A</m> and its complement.
+    Seperti dalam ruang metrik,
+    titik-titik batas suatu himpunan <m>A</m> adalah titik-titik yang berada
+    <q>di antara</q>
+    <m>A</m> dan komplemennya.
   </p>
 
   <activity xml:id="act_TS_bl_examples">
     <introduction>
     <p>
-      Find the boundaries of the following sets
+      Tentukan batas dari himpunan-himpunan berikut.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            <m>\{c,d\}</m> in <m>(X, \tau)</m> with
-            <m>X= \{a,b,c,d\}</m> and <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
+            <m>\{c,d\}</m> dalam <m>(X, \tau)</m> dengan
+            <m>X= \{a,b,c,d\}</m> dan <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>\{a,b\}</m> in the set <m>X= \{a,b,c,d,e,f\}</m> with topology
+            <m>\{a,b\}</m> dalam himpunan <m>X= \{a,b,c,d,e,f\}</m> dengan topologi
             <me>
               \tau= \{\emptyset,\{b\}, \{a,b,c\},\{d,e,f\},\{b,d,e,f\}, X\}
             </me>.
@@ -56,15 +56,15 @@
       <task>
         <statement>
           <p>
-            <m>\{a,b\} \subset X</m> where
-            <m>X = \{a,b,c\}</m> in the discrete topology.
+            <m>\{a,b\} \subset X</m>, dengan
+            <m>X = \{a,b,c\}</m> yang dilengkapi topologi diskret.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>\Z</m> in <m>\R</m> with the finite complement topology <m>\tau_{FC}</m>.
+            <m>\Z</m> dalam <m>\R</m> yang dilengkapi topologi komplemen berhingga <m>\tau_{FC}</m>.
           </p>
         </statement>
       </task>
@@ -72,20 +72,20 @@
   </activity>
 
   <p>
-    Just as with metric spaces,
-    we can characterize the closed sets as the sets that contain their boundary.
+    Seperti dalam ruang metrik,
+    kita dapat mencirikan himpunan tertutup sebagai himpunan yang memuat batasnya.
   </p>
 
   <theorem xml:id="thm_TS_Closed_boundary">
     <statement>
       <p>
-        A subset <m>C</m> of a topological space <m>X</m> is closed if and only if <m>C</m> contains its boundary.
+        Suatu subhimpunan <m>C</m> dari ruang topologi <m>X</m> tertutup jika dan hanya jika <m>C</m> memuat batasnya.
       </p>
     </statement>
   </theorem>
   
   <p>
-    The proof of <xref ref="thm_TS_Closed_boundary"/>
-    is left to <xref ref="ex_TS_Closed_boundary"/>.
+    Pembuktian <xref ref="thm_TS_Closed_boundary"/>
+    diserahkan kepada <xref ref="ex_TS_Closed_boundary"/>.
   </p>
 </section>

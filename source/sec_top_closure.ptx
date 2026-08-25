@@ -1,15 +1,15 @@
 <section xml:id="sec_top_closure">
-  <title>Closure in Topological Spaces</title>
+  <title>Tutupan dalam Ruang Topologi</title>
   <p>
-    Once we have a definition of limit point,
-    we can define the closure of a set just as we did in metric spaces.
+    Setelah memiliki definisi titik limit,
+    kita dapat mendefinisikan tutupan suatu himpunan seperti yang kita lakukan dalam ruang metrik.
   </p>
 
   <definition>
-  <idx><h>closure in topological spaces</h></idx>
+  <idx><h>tutupan dalam ruang topologi</h></idx>
     <statement>
       <p>
-        The <term>closure</term> of a subset <m>A</m> of a topological space <m>X</m> is the set
+        <term>Tutupan</term> dari suatu subhimpunan <m>A</m> dari ruang topologi <m>X</m> adalah himpunan
         <me>
           \overline{A} = A \cup A'
         </me>.
@@ -18,47 +18,47 @@
   </definition>
 
   <p>
-    In other words,
-    the closure of a set is the collection of the elements of the set and the limit points of the set.
-    The following theorem is the analog of the theorem in metric spaces about closures.
+    Dengan kata lain,
+    tutupan suatu himpunan terdiri atas elemen-elemen himpunan tersebut beserta titik-titik limitnya.
+    Teorema berikut merupakan padanan teorema tentang tutupan dalam ruang metrik.
   </p>
 
   <theorem xml:id="thm_TS_closure_closed">
     <statement>
       <p>
-        Let <m>X</m> be a topological space and <m>A</m> a subset of <m>X</m>.
-        The closure of a <m>A</m> is a closed set.
-        Moreover, the closure of <m>A</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>.
+        Misalkan <m>X</m> suatu ruang topologi dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+        Tutupan <m>A</m> merupakan himpunan tertutup.
+        Selain itu, tutupan <m>A</m> merupakan subhimpunan tertutup terkecil dari <m>X</m> yang memuat <m>A</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> be a topological space and <m>A</m> a subset of <m>X</m>.
-      To prove that <m>\overline{A}</m> is a closed set,
-      we will prove that <m>\overline{A}</m> contains its limit points.
-      Let <m>x \in \overline{A}'</m>.
-      To show that <m>x \in \overline{A}</m>,
-      we proceed by contradiction and assume that <m>x \notin \overline{A}</m>.
-      This implies that <m>x \notin A</m> and <m>x \notin A'</m>.
-      Since <m>x \notin A'</m>,
-      there exists a neighborhood <m>N</m> of <m>x</m> that contains no points of <m>A</m> other than <m>x</m>.
-      But <m>A \subseteq \overline{A}</m> and <m>x \notin \overline{A}</m>,
-      so it follows that <m>N \cap A = \emptyset</m>.
-      This implies that there is an open set
-      <m>O \subseteq N</m> centered at <m>x</m> so that <m>O \cap A = \emptyset</m>.
-      The fact that <m>x \in \overline{A}'</m> means that
-      <m>O \cap \overline{A}</m> contains a point <m>y</m> in
-      <m>\overline{A}</m> different from <m>x</m>.
-      Since <m>O \cap A = \emptyset</m>,
-      we must have <m>y \in A'</m>.
-      But the fact that <m>O</m> is a neighborhood of <m>y</m> means that <m>O</m> must contain a point of <m>A</m> different than <m>y</m>,
-      which contradicts the fact that <m>O \cap A = \emptyset</m>.
-      We conclude that <m>x \in \overline{A}</m> and <m>\overline{A}' \subseteq \overline{A}</m>.
-      This shows that <m>\overline{A}</m> is a closed set.
+      Misalkan <m>X</m> suatu ruang topologi dan <m>A</m> suatu subhimpunan dari <m>X</m>.
+      Untuk membuktikan bahwa <m>\overline{A}</m> merupakan himpunan tertutup,
+      kita akan membuktikan bahwa <m>\overline{A}</m> memuat titik-titik limitnya.
+      Misalkan <m>x \in \overline{A}'</m>.
+      Untuk menunjukkan bahwa <m>x \in \overline{A}</m>,
+      kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa <m>x \notin \overline{A}</m>.
+      Hal ini mengakibatkan <m>x \notin A</m> dan <m>x \notin A'</m>.
+      Karena <m>x \notin A'</m>,
+      terdapat suatu lingkungan <m>N</m> dari <m>x</m> yang tidak memuat titik di <m>A</m> selain <m>x</m>.
+      Namun, <m>A \subseteq \overline{A}</m> dan <m>x \notin \overline{A}</m>,
+      sehingga <m>N \cap A = \emptyset</m>.
+      Akibatnya, terdapat himpunan terbuka
+      <m>O \subseteq N</m> yang memuat <m>x</m> dan memenuhi <m>O \cap A = \emptyset</m>.
+      Karena <m>x \in \overline{A}'</m>,
+      <m>O \cap \overline{A}</m> memuat suatu titik <m>y</m> di
+      <m>\overline{A}</m> yang berbeda dari <m>x</m>.
+      Karena <m>O \cap A = \emptyset</m>,
+      haruslah <m>y \in A'</m>.
+      Namun, karena <m>O</m> merupakan lingkungan dari <m>y</m>, himpunan <m>O</m> harus memuat suatu titik di <m>A</m> yang berbeda dari <m>y</m>.
+      Hal ini bertentangan dengan <m>O \cap A = \emptyset</m>.
+      Jadi, <m>x \in \overline{A}</m> dan <m>\overline{A}' \subseteq \overline{A}</m>.
+      Dengan demikian, <m>\overline{A}</m> merupakan himpunan tertutup.
     </p>
     <p>
-      The proof that <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m> is left for the next activity.
+      Pembuktian bahwa <m>\overline{A}</m> merupakan subhimpunan tertutup terkecil dari <m>X</m> yang memuat <m>A</m> diserahkan kepada kegiatan berikutnya.
     </p>
   </proof>
   </theorem>
@@ -66,38 +66,38 @@
   <activity>
     <introduction>
     <p>
-      Let <m>(X,d)</m> be a topological space,
-      and let <m>A</m> be a subset of <m>X</m>.
+      Misalkan <m>(X,\tau)</m> suatu ruang topologi,
+      dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What will we have to show to prove that
-            <m>\overline{A}</m> is the smallest closed subset of <m>X</m> that contains <m>A</m>?
+            Apa yang harus kita tunjukkan untuk membuktikan bahwa
+            <m>\overline{A}</m> merupakan subhimpunan tertutup terkecil dari <m>X</m> yang memuat <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Suppose that <m>C</m> is a closed subset of <m>X</m> that contains <m>A</m>.
-            To show that <m>\overline{A} \subseteq C</m>,
-            why is it enough to demonstrate that <m>A' \subseteq C</m>?
+            Andaikan <m>C</m> suatu subhimpunan tertutup dari <m>X</m> yang memuat <m>A</m>.
+            Untuk menunjukkan bahwa <m>\overline{A} \subseteq C</m>,
+            mengapa cukup menunjukkan bahwa <m>A' \subseteq C</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If <m>x \in A'</m>, what can we say about <m>x</m>?
+            Jika <m>x \in A'</m>, apa yang dapat kita simpulkan tentang <m>x</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Complete the proof that <m>\overline{A} \subseteq C</m>.
+            Lengkapilah pembuktian bahwa <m>\overline{A} \subseteq C</m>.
           </p>
         </statement>
       </task>
@@ -105,13 +105,13 @@
   </activity>
 
   <p>
-    One consequence of <xref ref="thm_TS_closure_closed"/> is the following.
+    Salah satu akibat <xref ref="thm_TS_closure_closed"/> adalah sebagai berikut.
   </p>
   
   <corollary>
     <statement>
       <p>
-        A subset <m>C</m> of a topological space <m>X</m> is closed if and only if <m>C = \overline{C}</m>.
+        Suatu subhimpunan <m>C</m> dari ruang topologi <m>X</m> tertutup jika dan hanya jika <m>C = \overline{C}</m>.
       </p>
     </statement>
   </corollary>

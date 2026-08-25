@@ -1,34 +1,33 @@
 <section xml:id="sec_union_inter_closed">
-  <title>Unions and Intersections of Closed Sets</title>
-  <idx><h>clopen set in a topological space</h></idx>
+  <title>Gabungan dan Irisan Himpunan Tertutup</title>
+  <idx><h>himpunan buka-tutup dalam ruang topologi</h></idx>
   <p>
-    Now we have defined open and closed sets in topological spaces.
-    In our preview activity we saw that a set can be both open and closed.
-    As we did in metric spaces,
-    we will call any set that is both open and closed a
-    <term>clopen</term>
-    (for closed-open)
-    set.
+    Sekarang kita telah mendefinisikan himpunan terbuka dan tertutup dalam ruang topologi.
+    Dalam kegiatan pendahuluan, kita melihat bahwa suatu himpunan dapat sekaligus terbuka dan tertutup.
+    Seperti yang kita lakukan pada ruang metrik,
+    setiap himpunan yang sekaligus terbuka dan tertutup akan kita sebut himpunan
+    <term>buka-tutup</term>
+    (clopen, gabungan kata closed-open).
   </p>
   <p>
-    By definition,
-    any union and any finite intersection of open sets in a topological space is open,
-    so the fact that closed sets are complements of open sets implies the following theorem.
+    Berdasarkan definisi,
+    sebarang gabungan dan setiap irisan berhingga himpunan terbuka dalam ruang topologi bersifat terbuka.
+    Karena himpunan tertutup merupakan komplemen himpunan terbuka, kita memperoleh teorema berikut.
   </p>
 
   <theorem xml:id="thm_closed_TS">
     <statement>
       <p>
-        Let <m>X</m> be a topological space.
+        Misalkan <m>X</m> suatu ruang topologi.
         <ol>
           <li>
             <p>
-              Any intersection of closed sets in <m>X</m> is a closed set in <m>X</m>.
+              Sebarang irisan himpunan-himpunan tertutup dalam <m>X</m> merupakan himpunan tertutup dalam <m>X</m>.
             </p>
           </li>
           <li>
             <p>
-              Any finite union of closed sets in <m>X</m> is a closed set in <m>X</m>.
+              Setiap gabungan berhingga himpunan-himpunan tertutup dalam <m>X</m> merupakan himpunan tertutup dalam <m>X</m>.
             </p>
           </li>
         </ol>
@@ -37,62 +36,62 @@
   
   <proof>
     <p>
-      Let <m>X</m> be a topological space.
-      To prove part 1, assume that
-      <m>C_{\alpha}</m> is a collection of closed set in <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m>.
-      Then
+      Misalkan <m>X</m> suatu ruang topologi.
+      Untuk membuktikan bagian 1, andaikan
+      <m>C_{\alpha}</m> merupakan himpunan tertutup dalam <m>X</m> untuk setiap <m>\alpha</m> dalam suatu himpunan indeks <m>I</m>.
+      Maka
       <me>
         X \setminus \bigcap_{\alpha \in I} C_{\alpha} = \bigcup_{\alpha \in I} X \setminus C_{\alpha}
       </me>.
     </p>
     <p>
-      The latter is an arbitrary union of open sets and so it an open set.
-      By definition, then,
-      <m>\bigcap_{\alpha \in I} C_{\alpha}</m> is a closed set.
+      Ruas kanan merupakan gabungan sebarang himpunan-himpunan terbuka, sehingga ruas tersebut terbuka.
+      Oleh karena itu, berdasarkan definisi,
+      <m>\bigcap_{\alpha \in I} C_{\alpha}</m> merupakan himpunan tertutup.
     </p>
     <p>
-      For part 2, assume that <m>C_1</m>,
+      Untuk bagian 2, andaikan <m>C_1</m>,
       <m>C_2</m>, <m>\ldots</m>,
-      <m>C_n</m> are closed sets in <m>X</m> for some <m>n \in \Z^+</m>.
-      To show that <m>C = \bigcap_{k=1}^n C_k</m> is a closed set,
-      we will show that <m>X \setminus C</m> is an open set.
-      Now
+      <m>C_n</m> merupakan himpunan-himpunan tertutup dalam <m>X</m> untuk suatu <m>n \in \Z^+</m>.
+      Untuk menunjukkan bahwa <m>C = \bigcup_{k=1}^n C_k</m> merupakan himpunan tertutup,
+      kita akan menunjukkan bahwa <m>X \setminus C</m> merupakan himpunan terbuka.
+      Sekarang,
       <me>
-        X \setminus \bigcup_{\alpha \in I} C_{\alpha} = \bigcap_{\alpha \in I} X \setminus C_{\alpha}
+        X \setminus \bigcup_{k=1}^n C_k = \bigcap_{k=1}^n (X \setminus C_k)
       </me>
-      is a finite intersection of open sets, and so is an open set.
-      Therefore, <m>\bigcup_{\alpha \in I} C_{\alpha}</m> is a closed set.
+      merupakan irisan berhingga himpunan-himpunan terbuka, sehingga bersifat terbuka.
+      Dengan demikian, <m>\bigcup_{k=1}^n C_k</m> merupakan himpunan tertutup.
     </p>
   </proof>
   </theorem>
 
   <p>
     <xref ref="thm_closed_TS"/>
-    tells us that any intersection of closed sets is closed,
-    but only finite unions of closed sets are closed.
-    How do we know that non-finite unions of closed sets aren't necessarily closed?
+    menyatakan bahwa sebarang irisan himpunan-himpunan tertutup bersifat tertutup,
+    sedangkan hanya gabungan berhingga himpunan-himpunan tertutup yang dijamin tertutup.
+    Bagaimana kita mengetahui bahwa gabungan tak berhingga himpunan-himpunan tertutup belum tentu tertutup?
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>\Z</m> be a topological space with the finite complement topology <m>\tau_{FC}</m>.
-      That is, a non-empty set <m>O</m> is open in <m>\Z</m> if <m>\Z \setminus O</m> is finite.
+      Misalkan <m>\Z</m> suatu ruang topologi dengan topologi komplemen berhingga <m>\tau_{FC}</m>.
+      Artinya, suatu himpunan tak kosong <m>O</m> terbuka dalam <m>\Z</m> jika <m>\Z \setminus O</m> berhingga.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            What must be true about the cardinality of the closed sets in <m>(\Z, \tau_{FC})</m>?
+            Apa yang harus berlaku bagi kardinalitas himpunan-himpunan tertutup dalam <m>(\Z, \tau_{FC})</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>C_n = \{2, 3, \ldots, n\}</m>.
-            Is the set <m>\bigcup_{n \geq 3} C_n</m> a closed set in <m>(\Z, \tau_{FC})</m>?
-            Explain.
+            Misalkan <m>C_n = \{2, 3, \ldots, n\}</m>.
+            Apakah himpunan <m>\bigcup_{n \geq 3} C_n</m> tertutup dalam <m>(\Z, \tau_{FC})</m>?
+            Jelaskan.
           </p>
         </statement>
       </task>

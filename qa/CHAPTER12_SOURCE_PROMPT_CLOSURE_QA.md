@@ -3,7 +3,7 @@
 Verified: 2026-08-25 (Europe/Berlin)
 
 Status: **complete authored companion; corrected cumulative reader gates pass;
-publication pending**.
+GitHub and Zenodo publication/readback complete**.
 This receipt proves the complete Chapter 12 self-study component and its
 machine-readable mappings. The corrected cumulative HTML/PDF and visual gates
 are independently bound in `qa/CHAPTER12_BUILD_QA.md`.
@@ -98,12 +98,18 @@ Three consecutive deterministic refreshes reproduced every live identity. The
 script also proves that the historical `.partial` manifest, QA, and alias
 artifacts are never write targets and preserved their exact prior hashes.
 
-## Remaining admission work
+## Public admission and remaining corpus work
 
-The corrected cumulative Chapters 1--12 reader now passes deterministic HTML
-and strict byte-identical PDF builds, complete local-link closure, responsive
-and staged-disclosure browser checks, rights/provenance checks, PDF structure,
-and all-page raster inspection. HTML remains the primary accessible surface
-because the partial-boundary PDF is untagged. Package validation, publication
-in the existing GitHub and Zenodo lineages, and anonymous byte/hash readback
-remain before the public cursor can advance from Chapter 11 to Chapter 12.
+The corrected cumulative Chapters 1--12 reader passes deterministic HTML and
+strict byte-identical PDF builds, complete local-link closure, responsive and
+staged-disclosure browser checks, rights/provenance checks, PDF structure, and
+all-page raster inspection. HTML remains the primary accessible surface because
+the partial-boundary PDF is untagged. The verified boundary was pushed at
+content commit `081d5e046bbf46cdcb7c58e09d507368745bf794`; its publication receipts
+were pushed at commit `e7658123e11f0ddc207df3ad5684e88f32970885`.
+Anonymous GitHub Pages readback reproduced the exact reader bytes. Zenodo record
+`22097044`, DOI `10.5281/zenodo.22097044`, version
+`2026.08.25-bab01-12-r1`, reproduced all six release files exactly and is the
+latest version in concept `10.5281/zenodo.22059894`. Chapter 12 is therefore
+admitted and public. Chapters 13--20, the original C90 completion modules,
+whole-book offline closure, figure-provenance closure, and PDF tagging remain.
