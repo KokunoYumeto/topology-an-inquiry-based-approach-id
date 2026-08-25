@@ -1,0 +1,445 @@
+<section xml:id="o003-c90-ch13-exercise-guides-e" xml:lang="id-ID">
+  <title>Panduan latihan Bab 13, bagian kelima</title>
+  <p>
+    Bagian ini memberi dukungan bertahap untuk prompt latihan 36 sampai 45
+    menurut peta prompt sumber Bab 13.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-01">
+    <title>Topologi <m>K</m> tidak reguler</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 36. Untuk
+        <m>K=\{1/k\mid k\text{ bilangan bulat positif}\}</m>, topologi
+        <m>\tau_K</m> pada <m>\R</m> mempunyai basis semua interval
+        <m>(a,b)</m> dan semua himpunan <m>(a,b)\setminus K</m>. Buktikan
+        bahwa <m>(\R,\tau_K)</m> tidak reguler dan simpulkan bahwa ruang itu
+        tidak termetriskan.
+        <em>Rubrik:</em> buktikan bahwa <m>K</m> tertutup, lalu tunjukkan
+        bahwa titik <m>0\notin K</m> tidak dapat dipisahkan dari <m>K</m>
+        oleh himpunan terbuka saling lepas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-01-hint">
+      <p>
+        Setiap lingkungan <m>0</m> memuat
+        <m>(-\epsilon,\epsilon)\setminus K</m>. Lingkungan terbuka dari
+        <m>1/n\in K</m> harus memuat interval terbuka biasa di sekitar
+        <m>1/n</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-01-answer">
+      <p>
+        Ruang <m>(\R,\tau_K)</m> tidak reguler, sebab <m>0</m> dan himpunan
+        tertutup <m>K</m> tidak mempunyai lingkungan terbuka saling lepas.
+        Karena setiap ruang metrik reguler, ruang ini tidak termetriskan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-01-solution">
+      <p>
+        Komplemen <m>\R\setminus K</m> terbuka: jika <m>x\notin K</m>,
+        himpunan basis <m>(x-1,x+1)\setminus K</m> memuat <m>x</m> dan
+        termuat dalam komplemen. Jadi <m>K</m> tertutup, sedangkan
+        <m>0\notin K</m>.
+      </p>
+      <p>
+        Ambil sebarang lingkungan terbuka <m>U</m> dari <m>0</m>. Dari bentuk
+        basis, ada <m>\epsilon\gt0</m> sehingga
+        <m>(-\epsilon,\epsilon)\setminus K\subseteq U</m>. Ambil sebarang
+        himpunan terbuka <m>V</m> yang memuat <m>K</m>. Pilih <m>n</m>
+        cukup besar sehingga <m>0\lt1/n\lt\epsilon/2</m>. Karena
+        <m>1/n\in V\cap K</m>, himpunan <m>V</m> memuat unsur basis yang
+        mengandung <m>1/n</m>. Unsur ini harus interval terbuka biasa:
+        himpunan berbentuk <m>(a,b)\setminus K</m> tidak memuat titik
+        <m>K</m>. Interval tersebut beririsan dengan
+        <m>(-\epsilon,\epsilon)\setminus K</m>, misalnya pada suatu titik
+        irasional yang cukup dekat dengan <m>1/n</m>. Maka
+        <m>U\cap V\neq\emptyset</m>.
+      </p>
+      <p>
+        Jadi titik <m>0</m> dan himpunan tertutup <m>K</m> tidak dapat
+        dipisahkan, sehingga ruang ini tidak reguler. Jika topologi tersebut
+        berasal dari suatu metrik, ruangnya harus reguler; kontradiksi. Maka
+        <m>(\R,\tau_K)</m> tidak termetriskan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-02">
+    <title>Karakterisasi ruang <m>T_1</m> dengan himpunan beranggota tunggal tertutup</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 37 dalam latihan
+        <em>ex_T_1_2_3</em>. Buktikan bahwa ruang topologi <m>X</m> bersifat
+        <m>T_1</m> jika dan hanya jika setiap himpunan beranggota tunggal
+        bersifat tertutup.
+        <em>Rubrik:</em> buktikan kedua arah menggunakan pasangan titik
+        berbeda dan komplemen himpunan beranggota tunggal.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-02-hint">
+      <p>
+        Jika <m>X</m> bersifat <m>T_1</m>, untuk setiap
+        <m>y\neq x</m> pilih himpunan terbuka yang memuat <m>y</m> tetapi
+        tidak memuat <m>x</m>, lalu gabungkan semuanya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-02-answer">
+      <p>
+        Ruang <m>X</m> bersifat <m>T_1</m> tepat ketika setiap himpunan
+        beranggota tunggal <m>\{x\}</m> bersifat tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-02-solution">
+      <p>
+        Andaikan <m>X</m> bersifat <m>T_1</m> dan tetapkan <m>x\in X</m>.
+        Untuk setiap <m>y\neq x</m>, ada himpunan terbuka <m>U_y</m> yang
+        memuat <m>y</m> tetapi tidak memuat <m>x</m>. Maka
+        <m>X\setminus\{x\}=\bigcup_{y\neq x}U_y</m> terbuka, sehingga
+        <m>\{x\}</m> tertutup.
+      </p>
+      <p>
+        Sebaliknya, andaikan setiap himpunan beranggota tunggal bersifat
+        tertutup. Untuk dua titik berbeda <m>x,y</m>, himpunan
+        <m>X\setminus\{y\}</m> terbuka, memuat
+        <m>x</m>, dan tidak memuat <m>y</m>; demikian pula
+        <m>X\setminus\{x\}</m> memuat <m>y</m> tetapi tidak memuat
+        <m>x</m>. Inilah syarat <m>T_1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-03">
+    <title>Hierarki aksioma pemisahan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 38 dalam latihan
+        <em>ex_T_1_2_3</em>. Tunjukkan bahwa setiap ruang <m>T_2</m>
+        merupakan ruang <m>T_1</m>, setiap ruang <m>T_3</m> merupakan ruang
+        <m>T_2</m>, dan setiap ruang <m>T_4</m> merupakan ruang <m>T_3</m>.
+        <em>Rubrik:</em> jelaskan ketiga implikasi dari definisi: Hausdorff,
+        reguler bersama <m>T_1</m>, dan normal bersama <m>T_1</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-03-hint">
+      <p>
+        Untuk <m>T_2\Rightarrow T_1</m>, buktikan bahwa himpunan beranggota
+        tunggal bersifat tertutup. Untuk dua implikasi berikutnya, pisahkan satu
+        titik dari himpunan beranggota tunggal yang tertutup, lalu pisahkan
+        himpunan tersebut dari himpunan tertutup lain.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-03-answer">
+      <p>
+        Berlaku rantai implikasi
+        <m>T_4\Rightarrow T_3\Rightarrow T_2\Rightarrow T_1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-03-solution">
+      <p>
+        Jika <m>X</m> bersifat <m>T_2</m> dan <m>x\in X</m>, untuk setiap
+        <m>y\neq x</m> ada lingkungan terbuka <m>V_y</m> dari <m>y</m> yang
+        saling lepas dengan suatu lingkungan terbuka dari <m>x</m>; khususnya
+        <m>x\notin V_y</m>. Gabungan semua <m>V_y</m> adalah
+        <m>X\setminus\{x\}</m>, jadi himpunan beranggota tunggal bersifat
+        tertutup dan <m>X</m> bersifat <m>T_1</m>.
+      </p>
+      <p>
+        Jika <m>X</m> bersifat <m>T_3</m>, ruang itu <m>T_1</m> dan reguler.
+        Untuk <m>x\neq y</m>, himpunan beranggota tunggal <m>\{y\}</m>
+        bersifat tertutup. Regularitas memisahkan <m>x</m> dari <m>\{y\}</m>
+        dengan himpunan terbuka saling
+        lepas, sehingga <m>X</m> bersifat <m>T_2</m>.
+      </p>
+      <p>
+        Jika <m>X</m> bersifat <m>T_4</m>, ruang itu <m>T_1</m> dan normal.
+        Untuk titik <m>x</m> di luar himpunan tertutup <m>C</m>, himpunan
+        beranggota tunggal <m>\{x\}</m> juga bersifat tertutup. Normalitas memisahkan
+        <m>\{x\}</m> dan <m>C</m> dengan himpunan terbuka saling lepas.
+        Maka <m>X</m> reguler dan <m>T_1</m>, yaitu bersifat <m>T_3</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-04">
+    <title>Topologi komplemen berhingga: <m>T_1</m>, bukan <m>T_2</m></title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 39 dalam latihan
+        <em>ex_not_T_1_2_3</em>. Buktikan bahwa <m>\R</m> dengan topologi
+        komplemen berhingga merupakan ruang <m>T_1</m>, tetapi bukan ruang
+        <m>T_2</m>.
+        <em>Rubrik:</em> gunakan ketertutupan himpunan beranggota tunggal untuk bagian
+        <m>T_1</m> dan sifat irisan dua himpunan terbuka tak kosong untuk
+        menyangkal <m>T_2</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-04-hint">
+      <p>
+        Komplemen setiap himpunan beranggota tunggal terbuka karena himpunan itu
+        berhingga.
+        Selain itu, komplemen irisan dua himpunan terbuka kofinit adalah
+        gabungan dua himpunan berhingga.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-04-answer">
+      <p>
+        Garis nyata bertopologi komplemen berhingga bersifat <m>T_1</m>,
+        tetapi tidak Hausdorff dan karena itu bukan <m>T_2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-04-solution">
+      <p>
+        Untuk setiap <m>x\in\R</m>, himpunan beranggota tunggal <m>\{x\}</m>
+        tertutup karena
+        komplemennya terbuka menurut definisi topologi komplemen berhingga.
+        Jadi ruang itu bersifat <m>T_1</m>.
+      </p>
+      <p>
+        Jika <m>U,V</m> terbuka dan tak kosong, maka <m>U^c</m> dan
+        <m>V^c</m> berhingga. Karena
+        <m>(U\cap V)^c=U^c\cup V^c</m> berhingga sedangkan <m>\R</m> tak
+        berhingga, irisan <m>U\cap V</m> tidak mungkin kosong. Jadi tidak ada
+        dua lingkungan terbuka tak kosong yang saling lepas. Dua titik berbeda
+        tidak dapat dipisahkan, sehingga ruang itu bukan <m>T_2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-05">
+    <title>Ruang <m>\R_K</m>: <m>T_2</m>, tetapi bukan <m>T_3</m></title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 40 dalam latihan
+        <em>ex_not_T_1_2_3</em>. Definisikan
+        <m>K=\{1/k\mid k\in\Z^+\}</m> dan beri <m>\R_K=\R</m> topologi
+        dengan basis semua interval terbuka biasa serta semua
+        <m>(a,b)\setminus K</m>. Buktikan bahwa <m>\R_K</m> bersifat
+        <m>T_2</m>, tetapi bukan <m>T_3</m>.
+        <em>Rubrik:</em> buktikan sifat Hausdorff dari kehalusan topologi dan
+        ulangi pemisahan gagal antara <m>0</m> dan himpunan tertutup
+        <m>K</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-05-hint">
+      <p>
+        Topologi ini lebih halus daripada topologi Euklides. Untuk kegagalan
+        regularitas, setiap lingkungan <m>0</m> memuat interval kecil yang
+        dikurangi <m>K</m>, sedangkan lingkungan titik <m>1/n</m> memuat
+        interval biasa.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-05-answer">
+      <p>
+        Ruang <m>\R_K</m> bersifat <m>T_2</m>, tetapi tidak reguler; karena
+        itu ruang tersebut bukan <m>T_3</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-05-solution">
+      <p>
+        Semua interval Euklides terbuka juga terbuka dalam <m>\R_K</m>.
+        Lingkungan Euklides saling lepas yang memisahkan dua bilangan real
+        berbeda tetap terbuka dalam topologi ini. Jadi <m>\R_K</m> Hausdorff,
+        yaitu bersifat <m>T_2</m>.
+      </p>
+      <p>
+        Himpunan <m>K</m> tertutup karena
+        <m>\R\setminus K</m> merupakan gabungan himpunan basis berbentuk
+        <m>(a,b)\setminus K</m>, dan <m>0\notin K</m>. Ambil lingkungan
+        terbuka <m>U</m> dari <m>0</m> dan lingkungan terbuka <m>V</m> dari
+        <m>K</m>. Ada <m>\epsilon\gt0</m> dengan
+        <m>(-\epsilon,\epsilon)\setminus K\subseteq U</m>. Pilih
+        <m>1/n\lt\epsilon/2</m>. Karena <m>V</m> memuat <m>1/n\in K</m>,
+        <m>V</m> memuat interval terbuka biasa di sekitar <m>1/n</m>; interval
+        itu bertemu <m>(-\epsilon,\epsilon)\setminus K</m>. Maka
+        <m>U\cap V\neq\emptyset</m>. Jadi <m>0</m> dan himpunan tertutup
+        <m>K</m> tidak dapat dipisahkan, sehingga <m>\R_K</m> tidak reguler
+        dan bukan <m>T_3</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-06">
+    <title>Apakah setiap titik limit merupakan titik batas?</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 41. Nilai pernyataan: “Setiap titik
+        limit dari suatu subhimpunan <m>A</m> dalam ruang topologi <m>X</m> juga
+        merupakan titik batas <m>A</m>.”
+        <em>Rubrik:</em> jika salah, berikan ruang, himpunan, dan titik konkret,
+        lalu verifikasi definisi titik limit dan kegagalan definisi titik
+        batas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-06-hint">
+      <p>
+        Titik interior suatu himpunan dapat sekaligus menjadi titik limit.
+        Uji <m>0</m> dalam <m>A=(-1,1)\subseteq\R</m> dengan topologi
+        Euklides.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-06-answer">
+      <p>
+        Salah. Pada <m>\R</m> Euklides, <m>0</m> adalah titik limit
+        <m>A=(-1,1)</m>, tetapi bukan titik batas <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-06-solution">
+      <p>
+        Setiap lingkungan Euklides dari <m>0</m> memuat titik
+        <m>A\setminus\{0\}</m>, sehingga <m>0</m> merupakan titik limit
+        <m>A=(-1,1)</m>. Namun <m>(-\tfrac12,\tfrac12)</m> adalah lingkungan
+        <m>0</m> yang termuat seluruhnya dalam <m>A</m>, sehingga tidak
+        bertemu <m>A^c</m>. Jadi <m>0\notin\Bdry(A)</m>. Contoh ini
+        menyangkal pernyataan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-07">
+    <title>Apakah setiap titik batas merupakan titik limit?</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 42. Nilai pernyataan: “Setiap titik
+        batas dari suatu subhimpunan <m>A</m> dalam ruang topologi <m>X</m> juga
+        merupakan titik limit <m>A</m>.”
+        <em>Rubrik:</em> jika salah, berikan titik batas yang terasing dan
+        periksa kedua definisi secara langsung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-07-hint">
+      <p>
+        Pertimbangkan himpunan beranggota tunggal <m>A=\{0\}</m> dalam garis
+        nyata Euklides.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-07-answer">
+      <p>
+        Salah. Dalam <m>\R</m> Euklides, <m>0\in\Bdry(\{0\})</m>, tetapi
+        <m>0</m> bukan titik limit <m>\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-07-solution">
+      <p>
+        Setiap lingkungan <m>0</m> bertemu <m>A=\{0\}</m> di <m>0</m> dan
+        juga memuat bilangan real bukan nol, sehingga bertemu <m>A^c</m>.
+        Maka <m>0\in\Bdry(A)</m>. Akan tetapi
+        <m>A\setminus\{0\}=\emptyset</m>, jadi tidak ada lingkungan yang dapat
+        bertemu himpunan tersebut. Dengan demikian <m>0</m> bukan titik limit
+        <m>A</m>, dan pernyataan itu salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-08">
+    <title>Kesamaan interior dan penutupan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 43. Nilai pernyataan: jika
+        <m>A\subseteq X</m> dan
+        <m>\Int(A)=\overline{A}</m>, maka <m>A</m> terbuka sekaligus
+        tertutup.
+        <em>Rubrik:</em> gunakan dua inklusi universal yang menempatkan
+        <m>A</m> di antara interior dan penutupannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-08-hint">
+      <p>
+        Selalu berlaku
+        <m>\Int(A)\subseteq A\subseteq\overline{A}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-08-answer">
+      <p>
+        Benar. Kondisi tersebut memaksa
+        <m>\Int(A)=A=\overline{A}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-08-solution">
+      <p>
+        Untuk setiap subhimpunan <m>A</m>, berlaku
+        <m>\Int(A)\subseteq A\subseteq\overline{A}</m>. Jika kedua ujungnya
+        sama, semua himpunan dalam rantai inklusi itu sama:
+        <m>\Int(A)=A=\overline{A}</m>. Kesamaan
+        <m>A=\Int(A)</m> menyatakan bahwa <m>A</m> terbuka, sedangkan
+        <m>A=\overline{A}</m> menyatakan bahwa <m>A</m> tertutup. Jadi
+        pernyataan benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-09">
+    <title>Interior dan penutupan tidak menentukan himpunan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 44. Nilai pernyataan: jika
+        <m>\overline{A}=\overline{B}</m> dan
+        <m>\Int(A)=\Int(B)</m>, maka <m>A=B</m>.
+        <em>Rubrik:</em> jika salah, berikan dua himpunan berbeda dalam ruang
+        konkret dan hitung kedua interior serta kedua penutupannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-09-hint">
+      <p>
+        Dalam <m>\R</m> Euklides, bandingkan bilangan rasional dengan bilangan
+        irasional.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-09-answer">
+      <p>
+        Salah. Ambil <m>A=\Q</m> dan <m>B=\R\setminus\Q</m> dalam
+        <m>\R</m> Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-09-solution">
+      <p>
+        Himpunan rasional dan irasional keduanya rapat dalam <m>\R</m>, sebab
+        setiap interval terbuka memuat bilangan dari kedua jenis. Jadi
+        <m>\overline{A}=\overline{B}=\R</m>. Tidak ada interval terbuka yang
+        seluruhnya rasional atau seluruhnya irasional, sehingga
+        <m>\Int(A)=\Int(B)=\emptyset</m>. Namun
+        <m>A\neq B</m>—bahkan keduanya saling lepas. Maka kesamaan interior
+        dan penutupan tidak menentukan himpunan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-e-10">
+    <title>Penutupan tidak selalu mempertahankan irisan</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 45. Nilai pernyataan
+        <m>\overline{A\cap B}=\overline{A}\cap\overline{B}</m> untuk
+        sebarang subhimpunan <m>A,B</m> dari ruang topologi <m>X</m>.
+        <em>Rubrik:</em> jika salah, berikan dua himpunan konkret dan hitung
+        kedua ruas; sebutkan inklusi yang selalu benar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-e-10-hint">
+      <p>
+        Dalam <m>\R</m> Euklides, gunakan <m>A=(0,1)</m> dan
+        <m>B=(1,2)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-e-10-answer">
+      <p>
+        Salah. Untuk <m>A=(0,1)</m> dan <m>B=(1,2)</m>,
+        <m>\overline{A\cap B}=\emptyset</m>, tetapi
+        <m>\overline{A}\cap\overline{B}=\{1\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-e-10-solution">
+      <p>
+        Kedua interval tersebut tidak beririsan, sehingga
+        <m>A\cap B=\emptyset</m> dan
+        <m>\overline{A\cap B}=\emptyset</m>. Di sisi lain,
+        <m>\overline{A}=[0,1]</m> dan <m>\overline{B}=[1,2]</m>, sehingga
+        <m>\overline{A}\cap\overline{B}=\{1\}</m>. Jadi kesamaan yang
+        dinyatakan salah. Inklusi
+        <m>\overline{A\cap B}\subseteq\overline{A}\cap\overline{B}</m>
+        selalu benar karena <m>A\cap B\subseteq A</m> dan
+        <m>A\cap B\subseteq B</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

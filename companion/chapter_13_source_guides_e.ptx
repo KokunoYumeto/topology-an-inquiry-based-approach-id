@@ -1,0 +1,128 @@
+<section xml:id="o003-c90-ch13-source-guides-e" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Menentukan Batas Himpunan</title>
+
+  <p>
+    Sebuah titik berada pada batas <m>A</m> jika setiap lingkungan terbukanya
+    bertemu dengan <m>A</m> dan juga dengan <m>X\setminus A</m>.
+    Secara ekuivalen,
+    <m>\Bdry(A)=\overline{A}\setminus\Int(A)</m>.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-guide-22">
+    <title>Batas pada Topologi Berhingga Pertama</title>
+    <statement>
+      <p>
+        Tentukan batas <m>A=\{c,d\}</m> dalam
+        <m>X=\{a,b,c,d\}</m> dengan
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-22-hint">
+      <p><em>Tahap 1.</em> Titik <m>a</m> dan <m>b</m> masing-masing memiliki lingkungan beranggota tunggal yang tidak bertemu <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Satu-satunya lingkungan terbuka yang memuat <m>c</m> atau <m>d</m> adalah <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Uji apakah <m>X</m> bertemu dengan <m>A</m> dan komplemennya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-22-answer">
+      <p><m>\Bdry(A)=\{c,d\}</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-22-solution">
+      <p>
+        Lingkungan <m>\{a\}</m> dan <m>\{b\}</m> tidak bertemu <m>A</m>,
+        sehingga <m>a</m> dan <m>b</m> bukan titik batas. Setiap lingkungan
+        dari <m>c</m> atau <m>d</m> adalah <m>X</m>. Himpunan <m>X</m>
+        bertemu <m>A=\{c,d\}</m> dan
+        <m>X\setminus A=\{a,b\}</m>. Jadi <m>c</m> dan <m>d</m> adalah
+        titik batas, sehingga <m>\Bdry(A)=\{c,d\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-23">
+    <title>Batas pada Topologi Berhingga Kedua</title>
+    <statement>
+      <p>
+        Tentukan batas <m>A=\{a,b\}</m> dalam
+        <m>X=\{a,b,c,d,e,f\}</m> dengan
+        <me>
+          \tau=\{\emptyset,\{b\},\{a,b,c\},\{d,e,f\},\{b,d,e,f\},X\}.
+        </me>
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-23-hint">
+      <p><em>Tahap 1.</em> Lingkungan <m>\{b\}</m> tidak bertemu <m>X\setminus A</m>.</p>
+      <p><em>Tahap 2.</em> Lingkungan <m>\{d,e,f\}</m> tidak bertemu <m>A</m>.</p>
+      <p><em>Tahap 3.</em> Periksa <m>a</m> dan <m>c</m> menggunakan lingkungan <m>\{a,b,c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-23-answer">
+      <p><m>\Bdry(A)=\{a,c\}</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-23-solution">
+      <p>
+        Himpunan <m>\{b\}</m> adalah lingkungan dari <m>b</m> yang seluruhnya
+        berada dalam <m>A</m>, jadi <m>b</m> bukan titik batas.
+        Himpunan <m>\{d,e,f\}</m> adalah lingkungan dari masing-masing
+        <m>d,e,f</m> dan tidak bertemu <m>A</m>, sehingga ketiganya bukan
+        titik batas. Setiap lingkungan dari <m>a</m> atau <m>c</m> memuat
+        <m>\{a,b,c\}</m>, yang bertemu <m>A</m> pada <m>a</m> atau <m>b</m>
+        dan bertemu <m>X\setminus A</m> pada <m>c</m>. Karena itu,
+        <m>\Bdry(A)=\{a,c\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-24">
+    <title>Batas pada Ruang Diskret</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m> dilengkapi topologi diskret.
+        Tentukan batas <m>A=\{a,b\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-24-hint">
+      <p><em>Tahap 1.</em> Setiap titik <m>x\in X</m> memiliki lingkungan terbuka <m>\{x\}</m>.</p>
+      <p><em>Tahap 2.</em> Jika <m>x\in A</m>, lingkungan itu tidak bertemu komplemen <m>A</m>.</p>
+      <p><em>Tahap 3.</em> Jika <m>x\notin A</m>, lingkungan itu tidak bertemu <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-24-answer">
+      <p><m>\Bdry(A)=\emptyset</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-24-solution">
+      <p>
+        Untuk <m>x\in A</m>, lingkungan <m>\{x\}</m> tidak bertemu
+        <m>X\setminus A</m>. Untuk <m>x\in X\setminus A</m>, lingkungan
+        <m>\{x\}</m> tidak bertemu <m>A</m>. Jadi tidak ada titik yang setiap
+        lingkungannya bertemu kedua sisi. Dengan demikian,
+        <m>\Bdry(A)=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-25">
+    <title>Batas Bilangan Bulat dalam Topologi Komplemen Berhingga</title>
+    <statement>
+      <p>
+        Lengkapi <m>\R</m> dengan topologi komplemen berhingga
+        <m>\tau_{FC}</m>. Tentukan batas subhimpunan <m>\Z\subset\R</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-25-hint">
+      <p><em>Tahap 1.</em> Setiap lingkungan terbuka tak kosong dalam topologi ini memiliki komplemen berhingga.</p>
+      <p><em>Tahap 2.</em> Baik <m>\Z</m> maupun <m>\R\setminus\Z</m> merupakan himpunan tak berhingga.</p>
+      <p><em>Tahap 3.</em> Himpunan yang berkomplemen berhingga tidak dapat menghindari seluruh anggota salah satu himpunan tak berhingga tersebut.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-25-answer">
+      <p>Setiap bilangan real adalah titik batas; <m>\Bdry(\Z)=\R</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-25-solution">
+      <p>
+        Ambil sebarang <m>x\in\R</m> dan sebarang lingkungan terbuka
+        <m>O</m> dari <m>x</m>. Komplemen <m>\R\setminus O</m> berhingga.
+        Karena <m>\Z</m> tak berhingga, <m>O</m> harus bertemu <m>\Z</m>.
+        Karena <m>\R\setminus\Z</m> juga tak berhingga, <m>O</m> harus bertemu
+        <m>\R\setminus\Z</m>. Jadi setiap lingkungan dari setiap <m>x</m>
+        bertemu kedua sisi, sehingga setiap <m>x\in\R</m> merupakan titik
+        batas dan <m>\Bdry(\Z)=\R</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

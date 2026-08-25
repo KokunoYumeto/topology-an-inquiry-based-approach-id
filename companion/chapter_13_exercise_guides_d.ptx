@@ -1,0 +1,472 @@
+<section xml:id="o003-c90-ch13-exercise-guides-d" xml:lang="id-ID">
+  <title>Panduan latihan Bab 13, bagian keempat</title>
+  <p>
+    Bagian ini memberi dukungan bertahap untuk prompt latihan 26 sampai 35
+    menurut peta prompt sumber Bab 13.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-01">
+    <title>Sifat Hausdorff topologi Titik Asal Ganda</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 26. Pada
+        <m>X=\R^2\cup\{0^*\}</m>, kandidat basis memuat bola-bola Euklides
+        yang berpusat di titik biasa dan, untuk <m>r\gt0</m>, himpunan
+      <me>
+        N(0,r)=\{(x,y)\in\R^2\mid x^2+y^2\lt1/r^2,\ y\gt0\}\cup\{0\}
+      </me>
+        serta
+      <me>
+        N(0^*,r)=\{(x,y)\in\R^2\mid x^2+y^2\lt1/r^2,\ y\lt0\}\cup\{0^*\}
+      </me>
+        Tentukan apakah topologi Titik Asal Ganda ini Hausdorff dan buktikan
+        jawaban.
+        <em>Rubrik:</em> pisahkan semua jenis pasangan: dua titik biasa,
+        kedua titik asal, dan satu titik asal dengan satu titik biasa.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-01-hint">
+      <p>
+        Lingkungan khusus kedua titik asal berada pada setengah bidang yang
+        berlawanan. Untuk titik biasa <m>q</m>, pilih radius yang lebih kecil
+        daripada sebagian tetap dari <m>\|q\|</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-01-answer">
+      <p>
+        Ya, topologi Titik Asal Ganda yang diberikan merupakan ruang
+        Hausdorff.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-01-solution">
+      <p>
+        Dua titik biasa yang berbeda dapat dipisahkan oleh bola Euklides kecil
+        yang saling lepas dan tidak berpusat di titik asal. Titik <m>0</m> dan
+        <m>0^*</m> dipisahkan oleh <m>N(0,r)</m> dan
+        <m>N(0^*,s)</m>, sebab yang pertama hanya memuat titik planar dengan
+        <m>y\gt0</m> beserta <m>0</m>, sedangkan yang kedua hanya memuat titik
+        planar dengan <m>y\lt0</m> beserta <m>0^*</m>.
+      </p>
+      <p>
+        Tinggal pasangan satu titik asal dan titik biasa
+        <m>q\in\R^2\setminus\{0\}</m>. Tetapkan
+        <m>\delta=\|q\|\gt0</m>. Pilih <m>r</m> dengan
+        <m>1/r\lt\delta/3</m>. Bola Euklides
+        <m>B(q,\delta/3)</m> terpisah dari cakram berjari-jari
+        <m>1/r</m> di sekitar <m>0</m>, sehingga terpisah dari
+        <m>N(0,r)</m>; argumen yang sama memakai <m>N(0^*,r)</m> untuk
+        <m>0^*</m>. Semua pasangan titik berbeda mempunyai lingkungan terbuka
+        saling lepas, jadi ruang itu Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-02">
+    <title>Himpunan berhingga bersifat tertutup dalam topologi Zariski</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 27. Buktikan bahwa setiap himpunan
+        berhingga merupakan himpunan tertutup dalam <m>\R^n</m> dengan
+        topologi Zariski.
+        <em>Rubrik:</em> realisasikan himpunan beranggota tunggal sebagai
+        himpunan nol polinom dan gunakan kestabilan himpunan tertutup terhadap
+        gabungan berhingga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-02-hint">
+      <p>
+        Untuk <m>a=(a_1,\ldots,a_n)</m>, pertimbangkan
+        <m>f_a(x)=\sum_{i=1}^n(x_i-a_i)^2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-02-answer">
+      <p>
+        Setiap himpunan beranggota tunggal, dan karenanya setiap gabungan
+        berhingga himpunan-himpunan demikian, merupakan himpunan tertutup Zariski.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-02-solution">
+      <p>
+        Untuk <m>a=(a_1,\ldots,a_n)\in\R^n</m>, definisikan
+        <m>f_a(x_1,\ldots,x_n)=\sum_{i=1}^n(x_i-a_i)^2</m>. Karena bekerja
+        di atas <m>\R</m>, berlaku <m>f_a(x)=0</m> jika dan hanya jika
+        <m>x_i=a_i</m> untuk setiap <m>i</m>. Jadi
+        <m>Z(f_a)=\{a\}</m>, sehingga setiap himpunan beranggota tunggal
+        merupakan himpunan tertutup Zariski.
+        Jika <m>F=\{a^{(1)},\ldots,a^{(m)}\}</m>, maka <m>F</m> adalah
+        gabungan berhingga himpunan-himpunan beranggota tunggal yang tertutup
+        dan karena itu tertutup.
+        Himpunan kosong juga tertutup, misalnya sebagai
+        <m>Z(1)=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-03">
+    <title>Topologi Zariski bukan Hausdorff</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 28. Untuk <m>n\geq1</m>, buktikan
+        bahwa <m>\R^n</m> dengan topologi Zariski bukan Hausdorff. Gunakan
+        basis yang terdiri dari
+        <m>D(f)=\R^n\setminus Z(f)</m>, dengan <m>f</m> polinom dalam
+        <m>n</m> variabel.
+        <em>Rubrik:</em> buktikan bahwa dua himpunan terbuka Zariski tak kosong
+        selalu beririsan, lalu terapkan pada dua titik berbeda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-03-hint">
+      <p>
+        Jika <m>D(f)</m> dan <m>D(g)</m> tak kosong, maka <m>f</m> dan
+        <m>g</m> bukan polinom nol dan
+        <m>D(f)\cap D(g)=D(fg)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-03-answer">
+      <p>
+        Untuk <m>n\geq1</m>, ruang Zariski <m>\R^n</m> bukan Hausdorff;
+        bahkan setiap dua himpunan terbuka tak kosongnya beririsan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-03-solution">
+      <p>
+        Ambil himpunan terbuka Zariski tak kosong <m>U,V</m>. Masing-masing
+        memuat unsur basis tak kosong, katakan <m>D(f)\subseteq U</m> dan
+        <m>D(g)\subseteq V</m>. Karena kedua unsur basis tak kosong,
+        <m>f</m> dan <m>g</m> bukan polinom nol. Gelanggang polinom
+        <m>\R[x_1,\ldots,x_n]</m> merupakan daerah integral, sehingga
+        <m>fg</m> bukan polinom nol. Polinom real bukan nol tidak lenyap di
+        seluruh <m>\R^n</m>; akibatnya <m>D(fg)</m> tak kosong. Karena
+        <m>D(fg)=D(f)\cap D(g)</m>, diperoleh
+        <m>U\cap V\neq\emptyset</m>.
+      </p>
+      <p>
+        Untuk <m>n\geq1</m>, ruang <m>\R^n</m> mempunyai dua titik berbeda.
+        Jika ruang itu Hausdorff, kedua titik tersebut mempunyai lingkungan
+        terbuka tak kosong yang saling lepas, bertentangan dengan hasil di
+        atas. Jadi ruang Zariski ini bukan Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-04">
+    <title>Titik limit dan titik batas himpunan tiga titik pada garis digital</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 29. Pada
+        <m>(\Z,\tau_{dl})</m>, basisnya diberikan oleh
+      <me>
+        B(n) = \begin{cases}\{n\}  \amp \text{ jika \(n\) ganjil } , \\ \{n-1,n,n+1\}  \amp \text{ jika \(n\) genap } . \end{cases}
+      </me>
+        Untuk <m>A=\{-1,0,1\}</m>, tentukan titik limit dan titik batas
+        <m>A</m>. Tentukan pula apakah setiap titik limit merupakan titik batas
+        dan apakah setiap titik batas merupakan titik limit.
+        <em>Rubrik:</em> uji lingkungan basis minimal di titik ganjil dan
+        genap, serta jawab kedua implikasi secara terpisah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-04-hint">
+      <p>
+        Titik ganjil mempunyai lingkungan beranggota tunggal. Untuk titik genap
+        <m>n</m>, cukup uji <m>B(n)=\{n-1,n,n+1\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-04-answer">
+      <p>
+        Himpunan titik limit <m>A</m> adalah <m>\{-2,0,2\}</m>, sedangkan
+        <m>\Bdry(A)=\{-2,2\}</m>. Jadi tidak setiap titik limit merupakan
+        titik batas, tetapi setiap titik batas <m>A</m> merupakan titik limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-04-solution">
+      <p>
+        Setiap titik ganjil <m>n</m> mempunyai lingkungan terbuka
+        <m>\{n\}</m>, sehingga tidak ada titik ganjil yang menjadi titik limit
+        <m>A</m>. Untuk titik genap, lingkungan basis minimalnya adalah
+        <m>B(n)</m>. Himpunan ini bertemu <m>A\setminus\{n\}</m> tepat untuk
+        <m>n=-2,0,2</m>: pada <m>-2</m> pertemuannya memuat <m>-1</m>,
+        pada <m>0</m> memuat <m>-1</m> dan <m>1</m>, dan pada <m>2</m>
+        memuat <m>1</m>. Jadi titik limitnya adalah <m>\{-2,0,2\}</m>.
+      </p>
+      <p>
+        Untuk menjadi titik batas, lingkungan minimal harus bertemu
+        <m>A</m> dan <m>A^c</m>. Himpunan <m>B(-2)</m> dan <m>B(2)</m>
+        memenuhi kedua syarat. Sebaliknya, <m>B(0)=A</m> tidak bertemu
+        <m>A^c</m>, sedangkan himpunan beranggota tunggal di <m>-1</m> dan <m>1</m> juga
+        termuat dalam <m>A</m>; semua lingkungan minimal lainnya tidak
+        bertemu <m>A</m>. Maka <m>\Bdry(A)=\{-2,2\}</m>. Titik <m>0</m>
+        menyangkal implikasi dari titik limit ke titik batas, sedangkan kedua
+        titik batas yang ada memang titik limit.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-05">
+    <title>Penutupan himpunan tiga titik pada garis digital</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 30. Pada garis digital dengan basis
+        <m>B(n)=\{n\}</m> untuk <m>n</m> ganjil dan
+        <m>B(n)=\{n-1,n,n+1\}</m> untuk <m>n</m> genap, ambil
+        <m>A=\{-1,0,1\}</m>. Tentukan <m>\overline{A}</m> dan tuliskan
+        <m>\Z\setminus\overline{A}</m> sebagai gabungan himpunan terbuka.
+        <em>Rubrik:</em> hitung penutupan melalui lingkungan basis dan berikan
+        formula gabungan yang benar-benar menutupi seluruh komplemen.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-05-hint">
+      <p>
+        Gabungkan <m>A</m> dengan titik limit yang ditemukan sebelumnya.
+        Untuk komplemennya, perhatikan himpunan <m>B(2k)</m> ketika
+        <m>|k|\geq2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-05-answer">
+      <p>
+        <m>\overline{A}=\{-2,-1,0,1,2\}</m>, dan
+      <me>
+        \Z\setminus\overline{A}
+        =\bigcup_{\substack{k\in\Z\\|k|\geq2}}B(2k)
+      </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-05-solution">
+      <p>
+        Titik <m>A</m> tentu berada dalam penutupannya. Di luar <m>A</m>,
+        tepat <m>-2</m> dan <m>2</m> yang setiap lingkungan basisnya bertemu
+        <m>A</m>. Jadi
+        <m>\overline{A}=\{-2,-1,0,1,2\}</m>. Komplemennya adalah semua
+        bilangan bulat dengan nilai mutlak sedikitnya <m>3</m>. Untuk
+        <m>|k|\geq2</m>, himpunan basis
+        <m>B(2k)=\{2k-1,2k,2k+1\}</m> termuat dalam komplemen. Sebaliknya,
+        setiap bilangan bulat bernilai mutlak sedikitnya <m>3</m> berada dalam
+        salah satu himpunan tersebut. Karena setiap <m>B(2k)</m> terbuka,
+        formula gabungan pada jawaban juga membuktikan bahwa komplemen
+        penutupan terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-06">
+    <title>Titik limit dan titik batas himpunan beranggota tunggal pada garis digital</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 31. Pada garis digital dengan basis
+        <m>B(n)=\{n\}</m> untuk <m>n</m> ganjil dan
+        <m>B(n)=\{n-1,n,n+1\}</m> untuk <m>n</m> genap, ambil
+        <m>B=\{0\}</m>. Tentukan titik limit dan titik batas <m>B</m>, lalu
+        putuskan kedua implikasi antara kedua jenis titik tersebut.
+        <em>Rubrik:</em> uji <m>B(n)</m> di titik genap dan lingkungan beranggota
+        tunggal di titik ganjil; implikasi vakum harus disebutkan sebagai vakum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-06-hint">
+      <p>
+        Tidak ada lingkungan yang dapat bertemu
+        <m>B\setminus\{0\}=\emptyset</m> di <m>0</m>. Namun
+        <m>B(0)=\{-1,0,1\}</m> bertemu <m>B</m> dan <m>B^c</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-06-answer">
+      <p>
+        Himpunan titik limit <m>B</m> kosong dan
+        <m>\Bdry(B)=\{0\}</m>. Karena itu setiap titik limit merupakan titik
+        batas secara vakum, tetapi tidak setiap titik batas merupakan titik
+        limit.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-06-solution">
+      <p>
+        Titik ganjil mempunyai lingkungan beranggota tunggal, jadi bukan titik limit
+        <m>B</m>. Untuk titik genap <m>n\neq0</m>, himpunan
+        <m>B(n)=\{n-1,n,n+1\}</m> tidak memuat <m>0</m>; untuk
+        <m>n=0</m>, tidak mungkin ada pertemuan dengan
+        <m>B\setminus\{0\}=\emptyset</m>. Jadi <m>B</m> tidak mempunyai
+        titik limit.
+      </p>
+      <p>
+        Lingkungan minimal <m>B(0)=\{-1,0,1\}</m> bertemu <m>B</m> di
+        <m>0</m> dan bertemu <m>B^c</m> di <m>-1,1</m>, sehingga
+        <m>0\in\Bdry(B)</m>. Setiap titik lain mempunyai lingkungan basis
+        yang tidak memuat <m>0</m>, sehingga bukan titik batas. Maka
+        <m>\Bdry(B)=\{0\}</m>, yang memberi kedua jawaban implikasi tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-07">
+    <title>Penutupan himpunan beranggota tunggal pada garis digital</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 32. Pada topologi garis digital yang
+        sama, ambil <m>B=\{0\}</m>. Tentukan <m>\overline{B}</m> dan
+        tuliskan <m>\Z\setminus\overline{B}</m> sebagai gabungan
+        himpunan-himpunan terbuka.
+        <em>Rubrik:</em> verifikasi penutupan melalui lingkungan dan beri
+        gabungan terbuka yang mencakup titik ganjil serta genap tak nol.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-07-hint">
+      <p>
+        Gunakan himpunan terbuka beranggota tunggal pada titik ganjil dan
+        <m>B(n)</m> pada titik genap <m>n\neq0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-07-answer">
+      <p>
+        <m>\overline{B}=\{0\}</m>, dan
+      <me>
+        \Z\setminus\overline{B}
+        =\left(\bigcup_{\substack{n\in\Z\\n\text{ ganjil}}}\{n\}\right)
+        \cup
+        \left(\bigcup_{\substack{n\in\Z\setminus\{0\}\\n\text{ genap}}}B(n)\right)
+      </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-07-solution">
+      <p>
+        Titik <m>0</m> berada dalam penutupan <m>B</m>. Jika <m>n</m>
+        ganjil, lingkungan terbuka <m>\{n\}</m> tidak bertemu <m>B</m>.
+        Jika <m>n</m> genap dan tak nol, maka <m>|n|\geq2</m> dan
+        <m>B(n)=\{n-1,n,n+1\}</m> juga tidak memuat <m>0</m>. Jadi setiap
+        titik selain <m>0</m> mempunyai lingkungan terbuka yang menghindari
+        <m>B</m>, sehingga <m>\overline{B}=\{0\}</m>. Gabungan pada jawaban
+        memuat tepat semua titik ganjil dan semua titik genap tak nol; setiap
+        sukunya merupakan unsur terbuka, sehingga merupakan penyajian terbuka
+        dari komplemen.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-08">
+    <title>Setiap ruang metrik bersifat reguler</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 33 dalam latihan
+        <em>ex_Metric_space_regular</em>. Untuk ruang metrik <m>(X,d)</m>,
+        buktikan bahwa ruang tersebut reguler. Anda boleh menggunakan fakta
+        bahwa untuk himpunan tertutup tak kosong <m>C</m> dan
+        <m>x\notin C</m>, berlaku <m>d(x,C)\gt0</m>.
+        <em>Rubrik:</em> pisahkan titik dari himpunan tertutup dengan dua
+        himpunan terbuka saling lepas; sertakan sifat <m>T_1</m> jika definisi
+        reguler yang digunakan mensyaratkannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-08-hint">
+      <p>
+        Ambil <m>\delta=d(x,C)</m>, lalu bandingkan
+        <m>B(x,\delta/3)</m> dengan gabungan bola
+        <m>B(c,\delta/3)</m> untuk <m>c\in C</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-08-answer">
+      <p>
+        Setiap ruang metrik bersifat reguler: titik di luar himpunan tertutup dapat
+        dipisahkan dari himpunan tersebut oleh lingkungan terbuka saling lepas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-08-solution">
+      <p>
+        Misalkan <m>C</m> tertutup dan <m>x\notin C</m>. Jika <m>C</m>
+        kosong, pemisahan langsung. Jika tidak, tetapkan
+        <m>\delta=d(x,C)\gt0</m>. Definisikan
+        <m>U=B(x,\delta/3)</m> dan
+        <m>V=\bigcup_{c\in C}B(c,\delta/3)</m>. Keduanya terbuka,
+        <m>x\in U</m>, dan <m>C\subseteq V</m>. Jika
+        <m>z\in U\cap V</m>, ada <m>c\in C</m> dengan
+        <m>d(z,c)\lt\delta/3</m>, sehingga
+        <m>d(x,c)\leq d(x,z)+d(z,c)\lt2\delta/3</m>. Ini bertentangan dengan
+        <m>\delta\leq d(x,c)</m>. Maka <m>U\cap V=\emptyset</m>.
+      </p>
+      <p>
+        Selain itu, setiap himpunan beranggota tunggal bersifat tertutup dalam
+        ruang metrik: untuk <m>y\neq x</m>, bola <m>B(y,d(x,y)/2)</m>
+        menghindari <m>x</m>,
+        sehingga <m>X\setminus\{x\}</m> terbuka. Jadi pembuktian memenuhi pula
+        konvensi bahwa ruang reguler harus bersifat <m>T_1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-09">
+    <title>Setiap ruang metrik bersifat normal</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 34 dalam latihan
+        <em>ex_Metric_space_regular</em>. Buktikan bahwa setiap ruang metrik
+        merupakan ruang normal.
+        <em>Rubrik:</em> untuk dua himpunan tertutup saling lepas, konstruksi
+        harus tetap bekerja ketika jarak global antara kedua himpunan adalah
+        nol.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-09-hint">
+      <p>
+        Untuk himpunan tertutup saling lepas <m>C,D</m>, gunakan
+        <m>U=\{x\mid d(x,C)\lt d(x,D)\}</m> dan tukar <m>C,D</m> untuk
+        mendefinisikan <m>V</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-09-answer">
+      <p>
+        Setiap ruang metrik bersifat normal; dua himpunan tertutup saling lepas selalu
+        mempunyai lingkungan terbuka yang saling lepas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-09-solution">
+      <p>
+        Misalkan <m>C,D</m> tertutup dan saling lepas; kasus ketika salah satunya
+        kosong bersifat langsung. Fungsi jarak ke himpunan bersifat Lipschitz dan
+        karenanya kontinu. Jadi himpunan
+      <me>
+        U=\{x\in X\mid d(x,C)\lt d(x,D)\},\qquad
+        V=\{x\in X\mid d(x,D)\lt d(x,C)\}
+      </me>
+        terbuka. Jika <m>c\in C</m>, maka <m>d(c,C)=0</m> dan
+        <m>d(c,D)\gt0</m> karena <m>D</m> tertutup serta <m>c\notin D</m>;
+        jadi <m>C\subseteq U</m>. Demikian pula <m>D\subseteq V</m>.
+        Ketaksamaan yang mendefinisikan <m>U</m> dan <m>V</m> tidak mungkin
+        berlaku sekaligus, sehingga <m>U\cap V=\emptyset</m>. Ruang metrik
+        juga <m>T_1</m>, maka syarat normal terpenuhi di bawah kedua konvensi
+        umum.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-d-10">
+    <title>Topologi <m>K</m> bersifat Hausdorff</title>
+    <statement>
+      <p>
+        <em>Jangkar sumber:</em> prompt 35. Misalkan
+        <m>K=\{1/k\mid k\text{ bilangan bulat positif}\}</m>, dan
+        <m>\tau_K</m> mempunyai basis yang terdiri dari semua interval terbuka
+        <m>(a,b)</m> serta semua <m>(a,b)\setminus K</m>. Buktikan bahwa
+        <m>(\R,\tau_K)</m> Hausdorff.
+        <em>Rubrik:</em> gunakan hubungan antara <m>\tau_K</m> dan topologi
+        Euklides atau konstruksi lingkungan terpisah secara langsung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-d-10-hint">
+      <p>
+        Setiap himpunan terbuka Euklides tetap terbuka dalam
+        <m>\tau_K</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-d-10-answer">
+      <p>
+        Ya, <m>(\R,\tau_K)</m> merupakan ruang Hausdorff.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-d-10-solution">
+      <p>
+        Basis <m>\tau_K</m> memuat semua interval terbuka biasa, sehingga
+        <m>\tau_K</m> lebih halus daripada topologi Euklides. Untuk
+        <m>x\neq y</m>, pilih interval Euklides terbuka saling lepas
+        <m>U</m> dan <m>V</m> yang masing-masing memuat <m>x</m> dan
+        <m>y</m>. Kedua interval itu juga terbuka dalam <m>\tau_K</m>.
+        Jadi pasangan titik berbeda dapat dipisahkan dalam topologi
+        <m>\tau_K</m>, dan ruang tersebut Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+</section>

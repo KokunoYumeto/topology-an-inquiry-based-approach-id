@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch12-edition-note",
+  "id": "o003-c90-ch13-edition-note",
   "level": "1",
-  "url": "o003-c90-ch12-edition-note.html",
+  "url": "o003-c90-ch13-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat dua belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat tiga belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
 },
 {
   "id": "sec_sets_intro",
@@ -3833,6 +3833,519 @@ var ptx_lunr_docs = [
   "number": "13",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Himpunan merupakan topologi pada himpunan .   Himpunan merupakan subhimpunan terbuka dari menggunakan topologi komplemen berhingga pada .   Himpunan merupakan basis untuk topologi pada himpunan , dengan .   Misalkan himpunan tak kosong. Jika merupakan topologi diskret, maka ruang topologi termetriskan.   Titik merupakan titik interior dari subhimpunan dalam ruang topologi , dengan dan .   Jika dan merupakan topologi pada ruang , maka juga merupakan topologi pada .   Jika dan merupakan topologi pada ruang , maka juga merupakan topologi pada .  "
+},
+{
+  "id": "sec_closed_sets_top_intro",
+  "level": "1",
+  "url": "sec_closed_sets_top_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Kita telah mendefinisikan himpunan tertutup di ruang metrik sebagai komplemen dari suatu himpunan terbuka. Karena topologi didefinisikan menggunakan himpunan-himpunan terbuka, definisi yang sama dapat kita gunakan untuk himpunan tertutup dalam ruang topologi. Setelah memiliki definisi himpunan tertutup, kita dapat menanyakan apakah titik limit, batas, dan tutupan dapat didefinisikan dalam ruang topologi, serta apakah gagasan-gagasan ini memiliki sifat-sifat yang bersesuaian di ruang topologi.   himpunan tertutup dalam ruang topologi   Suatu subhimpunan dari ruang topologi disebut tertutup jika komplemennya, , terbuka.      Daftarkan semua himpunan tertutup dalam ruang topologi yang diberikan.    dengan dan .    dengan dan .    dengan dan .    dengan dan . (Apa nama topologi ini?)    dengan dan (topologi ini disebut topologi indiskret atau trivial ).    Dengan menggunakan contoh-contoh pada bagian (1), temukan (jika mungkin) suatu himpunan yang   sekaligus tertutup dan terbuka (jika mungkin, temukan yang bukan seluruh ruang ataupun himpunan kosong)   tertutup tetapi tidak terbuka   terbuka tetapi tidak tertutup   tidak terbuka dan tidak tertutup    Dalam dengan metrik Euklides, setiap himpunan beranggota tunggal bersifat tertutup. Apakah sifat ini berlaku dalam ruang topologi , dengan dan ? Jelaskan.    "
+},
+{
+  "id": "definition-44",
+  "level": "2",
+  "url": "sec_closed_sets_top_intro.html#definition-44",
+  "type": "Definisi",
+  "number": "13.1",
+  "title": "",
+  "body": " himpunan tertutup dalam ruang topologi   Suatu subhimpunan dari ruang topologi disebut tertutup jika komplemennya, , terbuka.   "
+},
+{
+  "id": "exploration-13",
+  "level": "2",
+  "url": "sec_closed_sets_top_intro.html#exploration-13",
+  "type": "Aktivitas Persiapan",
+  "number": "13.1",
+  "title": "",
+  "body": "  Daftarkan semua himpunan tertutup dalam ruang topologi yang diberikan.    dengan dan .    dengan dan .    dengan dan .    dengan dan . (Apa nama topologi ini?)    dengan dan (topologi ini disebut topologi indiskret atau trivial ).    Dengan menggunakan contoh-contoh pada bagian (1), temukan (jika mungkin) suatu himpunan yang   sekaligus tertutup dan terbuka (jika mungkin, temukan yang bukan seluruh ruang ataupun himpunan kosong)   tertutup tetapi tidak terbuka   terbuka tetapi tidak tertutup   tidak terbuka dan tidak tertutup    Dalam dengan metrik Euklides, setiap himpunan beranggota tunggal bersifat tertutup. Apakah sifat ini berlaku dalam ruang topologi , dengan dan ? Jelaskan.   "
+},
+{
+  "id": "sec_union_inter_closed",
+  "level": "1",
+  "url": "sec_union_inter_closed.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Gabungan dan Irisan Himpunan Tertutup",
+  "body": " Gabungan dan Irisan Himpunan Tertutup  himpunan buka-tutup dalam ruang topologi  Sekarang kita telah mendefinisikan himpunan terbuka dan tertutup dalam ruang topologi. Dalam kegiatan pendahuluan, kita melihat bahwa suatu himpunan dapat sekaligus terbuka dan tertutup. Seperti yang kita lakukan pada ruang metrik, setiap himpunan yang sekaligus terbuka dan tertutup akan kita sebut himpunan buka-tutup (clopen, gabungan kata closed-open).  Berdasarkan definisi, sebarang gabungan dan setiap irisan berhingga himpunan terbuka dalam ruang topologi bersifat terbuka. Karena himpunan tertutup merupakan komplemen himpunan terbuka, kita memperoleh teorema berikut.    Misalkan suatu ruang topologi.   Sebarang irisan himpunan-himpunan tertutup dalam merupakan himpunan tertutup dalam .    Setiap gabungan berhingga himpunan-himpunan tertutup dalam merupakan himpunan tertutup dalam .       Misalkan suatu ruang topologi. Untuk membuktikan bagian 1, andaikan merupakan himpunan tertutup dalam untuk setiap dalam suatu himpunan indeks . Maka .  Ruas kanan merupakan gabungan sebarang himpunan-himpunan terbuka, sehingga ruas tersebut terbuka. Oleh karena itu, berdasarkan definisi, merupakan himpunan tertutup.  Untuk bagian 2, andaikan , , , merupakan himpunan-himpunan tertutup dalam untuk suatu . Untuk menunjukkan bahwa merupakan himpunan tertutup, kita akan menunjukkan bahwa merupakan himpunan terbuka. Sekarang, merupakan irisan berhingga himpunan-himpunan terbuka, sehingga bersifat terbuka. Dengan demikian, merupakan himpunan tertutup.     menyatakan bahwa sebarang irisan himpunan-himpunan tertutup bersifat tertutup, sedangkan hanya gabungan berhingga himpunan-himpunan tertutup yang dijamin tertutup. Bagaimana kita mengetahui bahwa gabungan tak berhingga himpunan-himpunan tertutup belum tentu tertutup?    Misalkan suatu ruang topologi dengan topologi komplemen berhingga . Artinya, suatu himpunan tak kosong terbuka dalam jika berhingga.    Apa yang harus berlaku bagi kardinalitas himpunan-himpunan tertutup dalam ?    Misalkan . Apakah himpunan tertutup dalam ? Jelaskan.    "
+},
+{
+  "id": "p-1529",
+  "level": "2",
+  "url": "sec_union_inter_closed.html#p-1529",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "buka-tutup "
+},
+{
+  "id": "thm_closed_TS",
+  "level": "2",
+  "url": "sec_union_inter_closed.html#thm_closed_TS",
+  "type": "Teorema",
+  "number": "13.2",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi.   Sebarang irisan himpunan-himpunan tertutup dalam merupakan himpunan tertutup dalam .    Setiap gabungan berhingga himpunan-himpunan tertutup dalam merupakan himpunan tertutup dalam .       Misalkan suatu ruang topologi. Untuk membuktikan bagian 1, andaikan merupakan himpunan tertutup dalam untuk setiap dalam suatu himpunan indeks . Maka .  Ruas kanan merupakan gabungan sebarang himpunan-himpunan terbuka, sehingga ruas tersebut terbuka. Oleh karena itu, berdasarkan definisi, merupakan himpunan tertutup.  Untuk bagian 2, andaikan , , , merupakan himpunan-himpunan tertutup dalam untuk suatu . Untuk menunjukkan bahwa merupakan himpunan tertutup, kita akan menunjukkan bahwa merupakan himpunan terbuka. Sekarang, merupakan irisan berhingga himpunan-himpunan terbuka, sehingga bersifat terbuka. Dengan demikian, merupakan himpunan tertutup.   "
+},
+{
+  "id": "activity-63",
+  "level": "2",
+  "url": "sec_union_inter_closed.html#activity-63",
+  "type": "Kegiatan",
+  "number": "13.2",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi dengan topologi komplemen berhingga . Artinya, suatu himpunan tak kosong terbuka dalam jika berhingga.    Apa yang harus berlaku bagi kardinalitas himpunan-himpunan tertutup dalam ?    Misalkan . Apakah himpunan tertutup dalam ? Jelaskan.   "
+},
+{
+  "id": "sec_limit_points",
+  "level": "1",
+  "url": "sec_limit_points.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Titik Limit dan Barisan dalam Ruang Topologi",
+  "body": " Titik Limit dan Barisan dalam Ruang Topologi  Ingat bahwa kita mendefinisikan titik limit dari suatu himpunan dalam ruang metrik sebagai titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di yang berbeda dari . Karena kita telah mendefinisikan lingkungan dalam ruang topologi, definisi yang sama dapat kita gunakan.   titik limit dalam ruang topologi   Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari . Suatu titik limit dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di yang berbeda dari .     himpunan turunan Himpunan yang terdiri atas titik-titik limit dari disebut himpunan turunan dari .    Tentukan titik-titik limit dari himpunan-himpunan berikut.     dalam dengan dan      dalam himpunan dengan topologi .     , dengan yang dilengkapi topologi diskret.     , dengan topologi pada yang memiliki basis , dengan (Topologi ini disebut topologi garis digital dan memiliki penerapan dalam pemrosesan digital. Fakta bahwa koleksi merupakan basis untuk suatu topologi pada dibahas dalam .)    Dalam ruang metrik, suatu himpunan tertutup jika dan hanya jika memuat semua titik limitnya. Karena itu, hasil yang bersesuaian dalam ruang topologi semestinya tidak mengejutkan.    Misalkan suatu subhimpunan dari ruang topologi , dan misalkan himpunan titik-titik limit dari . Maka tertutup jika dan hanya jika .    Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari . Pertama, andaikan tertutup dan tunjukkan bahwa memuat semua titik limitnya. Misalkan suatu titik limit dari . Kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa . Maka , dan himpunan ini terbuka. Artinya, terdapat suatu lingkungan (yaitu ) dari yang tidak memuat satu pun titik di . Hal ini bertentangan dengan fakta bahwa merupakan titik limit dari . Jadi, , sehingga memuat semua titik limitnya.  Sebaliknya, andaikan memuat semua titik limitnya. Untuk menunjukkan bahwa tertutup, kita buktikan bahwa terbuka. Kita kembali menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa tidak terbuka. Maka terdapat sedemikian sehingga tidak ada lingkungan dari yang seluruhnya termuat dalam . Akibatnya, setiap lingkungan dari memuat suatu titik di , sehingga merupakan titik limit dari . Dengan demikian, , bertentangan dengan fakta bahwa . Jadi, terbuka dan tertutup.    Dalam ruang metrik, kita melihat bahwa titik limit suatu himpunan merupakan limit dari suatu barisan titik-titik dalam himpunan tersebut. Untuk menyelidiki gagasan ini dalam ruang topologi, kita mendefinisikan barisan dengan cara yang sama seperti dalam ruang metrik.   barisan dalam ruang topologi   Suatu barisan dalam ruang topologi adalah fungsi ke .    Kita menggunakan notasi dan istilah barisan yang sama seperti dalam ruang metrik: kita menuliskan untuk menyatakan suatu barisan , dengan untuk setiap . Kekonvergenan dalam ruang topologi tidak dapat kita definisikan menggunakan metrik, tetapi dapat kita definisikan menggunakan himpunan terbuka. Ingat bahwa suatu barisan dalam ruang metrik konvergen ke titik di ruang tersebut jika, untuk setiap , terdapat bilangan bulat positif sedemikian sehingga untuk semua . Dengan kata lain, setiap bola terbuka yang berpusat di memuat semua suku barisan setelah suatu indeks tertentu. Kita dapat mengganti bola terbuka dengan himpunan terbuka untuk memperoleh definisi kekonvergenan yang serupa dalam ruang topologi.   barisan konvergen dalam ruang topologi   Suatu barisan dalam ruang topologi  konvergen ke titik jika, untuk setiap himpunan terbuka yang memuat , terdapat bilangan bulat positif sedemikian sehingga untuk semua .     limit barisan dalam ruang topologi Jika suatu barisan konvergen ke titik , kita menyebut suatu limit dari barisan .    Dalam ruang metrik, limit barisan bersifat tunggal. Kita dapat menanyakan apakah hasil yang sama berlaku dalam ruang topologi. Tinjau ruang topologi , dengan dan . Tentukan semua limit dari setiap barisan konstan dalam .   Hasil menunjukkan bahwa perilaku barisan dalam ruang topologi tidak selalu sesuai dengan yang kita harapkan. Akibatnya, barisan tidak memainkan peran sepenting perannya dalam ruang metrik. Meskipun demikian, konsep titik limit tetap penting, demikian pula gagasan batas dan tutupan dalam ruang topologi.  "
+},
+{
+  "id": "definition-45",
+  "level": "2",
+  "url": "sec_limit_points.html#definition-45",
+  "type": "Definisi",
+  "number": "13.3",
+  "title": "",
+  "body": " titik limit dalam ruang topologi   Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari . Suatu titik limit dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di yang berbeda dari .   "
+},
+{
+  "id": "p-1543",
+  "level": "2",
+  "url": "sec_limit_points.html#p-1543",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "himpunan turunan "
+},
+{
+  "id": "activity-64",
+  "level": "2",
+  "url": "sec_limit_points.html#activity-64",
+  "type": "Kegiatan",
+  "number": "13.3",
+  "title": "",
+  "body": "  Tentukan titik-titik limit dari himpunan-himpunan berikut.     dalam dengan dan      dalam himpunan dengan topologi .     , dengan yang dilengkapi topologi diskret.     , dengan topologi pada yang memiliki basis , dengan (Topologi ini disebut topologi garis digital dan memiliki penerapan dalam pemrosesan digital. Fakta bahwa koleksi merupakan basis untuk suatu topologi pada dibahas dalam .)   "
+},
+{
+  "id": "thm_TS_closed_limitpoints",
+  "level": "2",
+  "url": "sec_limit_points.html#thm_TS_closed_limitpoints",
+  "type": "Teorema",
+  "number": "13.4",
+  "title": "",
+  "body": "  Misalkan suatu subhimpunan dari ruang topologi , dan misalkan himpunan titik-titik limit dari . Maka tertutup jika dan hanya jika .    Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari . Pertama, andaikan tertutup dan tunjukkan bahwa memuat semua titik limitnya. Misalkan suatu titik limit dari . Kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa . Maka , dan himpunan ini terbuka. Artinya, terdapat suatu lingkungan (yaitu ) dari yang tidak memuat satu pun titik di . Hal ini bertentangan dengan fakta bahwa merupakan titik limit dari . Jadi, , sehingga memuat semua titik limitnya.  Sebaliknya, andaikan memuat semua titik limitnya. Untuk menunjukkan bahwa tertutup, kita buktikan bahwa terbuka. Kita kembali menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa tidak terbuka. Maka terdapat sedemikian sehingga tidak ada lingkungan dari yang seluruhnya termuat dalam . Akibatnya, setiap lingkungan dari memuat suatu titik di , sehingga merupakan titik limit dari . Dengan demikian, , bertentangan dengan fakta bahwa . Jadi, terbuka dan tertutup.   "
+},
+{
+  "id": "definition-46",
+  "level": "2",
+  "url": "sec_limit_points.html#definition-46",
+  "type": "Definisi",
+  "number": "13.5",
+  "title": "",
+  "body": " barisan dalam ruang topologi   Suatu barisan dalam ruang topologi adalah fungsi ke .   "
+},
+{
+  "id": "definition-47",
+  "level": "2",
+  "url": "sec_limit_points.html#definition-47",
+  "type": "Definisi",
+  "number": "13.6",
+  "title": "",
+  "body": " barisan konvergen dalam ruang topologi   Suatu barisan dalam ruang topologi  konvergen ke titik jika, untuk setiap himpunan terbuka yang memuat , terdapat bilangan bulat positif sedemikian sehingga untuk semua .   "
+},
+{
+  "id": "p-1557",
+  "level": "2",
+  "url": "sec_limit_points.html#p-1557",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "limit "
+},
+{
+  "id": "act_TS_limits2",
+  "level": "2",
+  "url": "sec_limit_points.html#act_TS_limits2",
+  "type": "Kegiatan",
+  "number": "13.4",
+  "title": "",
+  "body": " Dalam ruang metrik, limit barisan bersifat tunggal. Kita dapat menanyakan apakah hasil yang sama berlaku dalam ruang topologi. Tinjau ruang topologi , dengan dan . Tentukan semua limit dari setiap barisan konstan dalam .  "
+},
+{
+  "id": "sec_top_closure",
+  "level": "1",
+  "url": "sec_top_closure.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Tutupan dalam Ruang Topologi",
+  "body": " Tutupan dalam Ruang Topologi  Setelah memiliki definisi titik limit, kita dapat mendefinisikan tutupan suatu himpunan seperti yang kita lakukan dalam ruang metrik.   tutupan dalam ruang topologi    Tutupan dari suatu subhimpunan dari ruang topologi adalah himpunan .    Dengan kata lain, tutupan suatu himpunan terdiri atas elemen-elemen himpunan tersebut beserta titik-titik limitnya. Teorema berikut merupakan padanan teorema tentang tutupan dalam ruang metrik.    Misalkan suatu ruang topologi dan suatu subhimpunan dari . Tutupan merupakan himpunan tertutup. Selain itu, tutupan merupakan subhimpunan tertutup terkecil dari yang memuat .    Misalkan suatu ruang topologi dan suatu subhimpunan dari . Untuk membuktikan bahwa merupakan himpunan tertutup, kita akan membuktikan bahwa memuat titik-titik limitnya. Misalkan . Untuk menunjukkan bahwa , kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa . Hal ini mengakibatkan dan . Karena , terdapat suatu lingkungan dari yang tidak memuat titik di selain . Namun, dan , sehingga . Akibatnya, terdapat himpunan terbuka yang memuat dan memenuhi . Karena , memuat suatu titik di yang berbeda dari . Karena , haruslah . Namun, karena merupakan lingkungan dari , himpunan harus memuat suatu titik di yang berbeda dari . Hal ini bertentangan dengan . Jadi, dan . Dengan demikian, merupakan himpunan tertutup.  Pembuktian bahwa merupakan subhimpunan tertutup terkecil dari yang memuat diserahkan kepada kegiatan berikutnya.      Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan tertutup terkecil dari yang memuat ?    Andaikan suatu subhimpunan tertutup dari yang memuat . Untuk menunjukkan bahwa , mengapa cukup menunjukkan bahwa ?    Jika , apa yang dapat kita simpulkan tentang ?    Lengkapilah pembuktian bahwa .    Salah satu akibat adalah sebagai berikut.    Suatu subhimpunan dari ruang topologi tertutup jika dan hanya jika .    "
+},
+{
+  "id": "definition-48",
+  "level": "2",
+  "url": "sec_top_closure.html#definition-48",
+  "type": "Definisi",
+  "number": "13.7",
+  "title": "",
+  "body": " tutupan dalam ruang topologi    Tutupan dari suatu subhimpunan dari ruang topologi adalah himpunan .   "
+},
+{
+  "id": "thm_TS_closure_closed",
+  "level": "2",
+  "url": "sec_top_closure.html#thm_TS_closure_closed",
+  "type": "Teorema",
+  "number": "13.8",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi dan suatu subhimpunan dari . Tutupan merupakan himpunan tertutup. Selain itu, tutupan merupakan subhimpunan tertutup terkecil dari yang memuat .    Misalkan suatu ruang topologi dan suatu subhimpunan dari . Untuk membuktikan bahwa merupakan himpunan tertutup, kita akan membuktikan bahwa memuat titik-titik limitnya. Misalkan . Untuk menunjukkan bahwa , kita menggunakan pembuktian dengan kontradiksi dan mengandaikan bahwa . Hal ini mengakibatkan dan . Karena , terdapat suatu lingkungan dari yang tidak memuat titik di selain . Namun, dan , sehingga . Akibatnya, terdapat himpunan terbuka yang memuat dan memenuhi . Karena , memuat suatu titik di yang berbeda dari . Karena , haruslah . Namun, karena merupakan lingkungan dari , himpunan harus memuat suatu titik di yang berbeda dari . Hal ini bertentangan dengan . Jadi, dan . Dengan demikian, merupakan himpunan tertutup.  Pembuktian bahwa merupakan subhimpunan tertutup terkecil dari yang memuat diserahkan kepada kegiatan berikutnya.   "
+},
+{
+  "id": "activity-66",
+  "level": "2",
+  "url": "sec_top_closure.html#activity-66",
+  "type": "Kegiatan",
+  "number": "13.5",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari .    Apa yang harus kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan tertutup terkecil dari yang memuat ?    Andaikan suatu subhimpunan tertutup dari yang memuat . Untuk menunjukkan bahwa , mengapa cukup menunjukkan bahwa ?    Jika , apa yang dapat kita simpulkan tentang ?    Lengkapilah pembuktian bahwa .   "
+},
+{
+  "id": "corollary-7",
+  "level": "2",
+  "url": "sec_top_closure.html#corollary-7",
+  "type": "Corollary",
+  "number": "13.9",
+  "title": "",
+  "body": "  Suatu subhimpunan dari ruang topologi tertutup jika dan hanya jika .   "
+},
+{
+  "id": "sec_set_boundary",
+  "level": "1",
+  "url": "sec_set_boundary.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Batas Suatu Himpunan",
+  "body": " Batas Suatu Himpunan  Selain titik limit, kita juga telah mendefinisikan titik batas dalam ruang metrik. Ingat bahwa titik batas dari suatu himpunan dalam ruang metrik dapat dipandang sebagai sebarang titik dalam . Kita menggunakan definisi yang sama dalam ruang topologi.   titik batas dalam ruang topologi  batas dalam ruang topologi   Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari . Suatu titik batas dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di dan suatu titik di . Batas dari adalah himpunan .    Seperti dalam ruang metrik, titik-titik batas suatu himpunan adalah titik-titik yang berada di antara  dan komplemennya.    Tentukan batas dari himpunan-himpunan berikut.     dalam dengan dan .     dalam himpunan dengan topologi .     , dengan yang dilengkapi topologi diskret.     dalam yang dilengkapi topologi komplemen berhingga .    Seperti dalam ruang metrik, kita dapat mencirikan himpunan tertutup sebagai himpunan yang memuat batasnya.    Suatu subhimpunan dari ruang topologi tertutup jika dan hanya jika memuat batasnya.    Pembuktian diserahkan kepada .  "
+},
+{
+  "id": "definition-49",
+  "level": "2",
+  "url": "sec_set_boundary.html#definition-49",
+  "type": "Definisi",
+  "number": "13.10",
+  "title": "",
+  "body": " titik batas dalam ruang topologi  batas dalam ruang topologi   Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari . Suatu titik batas dari adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di dan suatu titik di . Batas dari adalah himpunan .   "
+},
+{
+  "id": "act_TS_bl_examples",
+  "level": "2",
+  "url": "sec_set_boundary.html#act_TS_bl_examples",
+  "type": "Kegiatan",
+  "number": "13.6",
+  "title": "",
+  "body": "  Tentukan batas dari himpunan-himpunan berikut.     dalam dengan dan .     dalam himpunan dengan topologi .     , dengan yang dilengkapi topologi diskret.     dalam yang dilengkapi topologi komplemen berhingga .   "
+},
+{
+  "id": "thm_TS_Closed_boundary",
+  "level": "2",
+  "url": "sec_set_boundary.html#thm_TS_Closed_boundary",
+  "type": "Teorema",
+  "number": "13.11",
+  "title": "",
+  "body": "  Suatu subhimpunan dari ruang topologi tertutup jika dan hanya jika memuat batasnya.   "
+},
+{
+  "id": "sec_separation_ax",
+  "level": "1",
+  "url": "sec_separation_ax.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Aksioma Separasi",
+  "body": " Aksioma Separasi  Seperti telah kita lihat, barisan dalam ruang topologi pada umumnya tidak berperilaku seperti yang kita harapkan. Oleh karena itu, kita mencari syarat pada ruang topologi yang membuat barisan menunjukkan perilaku yang lebih teratur. Dalam kegiatan pendahuluan, kita melihat bahwa dalam ruang topologi, himpunan beranggota tunggal tidak harus tertutup. Dalam , kita juga melihat bahwa limit barisan dalam ruang topologi tidak harus tunggal. Perilaku seperti ini membatasi hasil yang dapat dibuktikan tentang ruang tersebut. Oleh karena itu, kita mendefinisikan kelas-kelas ruang topologi yang perilakunya lebih mendekati intuisi kita.    Tinjau suatu ruang metrik , dan misalkan dan titik-titik berbeda dalam .   Jelaskan mengapa dan tidak mungkin sekaligus menjadi limit dari barisan yang sama jika terdapat bola terbuka saling lepas yang berpusat di dan yang berpusat di sedemikian sehingga .   Sekarang, tunjukkan bahwa kita dapat menemukan bola terbuka saling lepas yang berpusat di dan yang berpusat di sedemikian sehingga .    Kembali ke contoh dalam dengan dan topologi . Kita telah melihat bahwa setiap titik dalam merupakan limit dari barisan konstan . Jika dalam , jelaskan mengapa tidak ada himpunan terbuka saling lepas yang memuat dan yang memuat .    Fakta yang diuraikan dalam , yakni bahwa titik-titik berbeda dapat dipisahkan dengan himpunan terbuka saling lepas, membedakan ruang metrik dari ruang lain yang limitnya tidak tunggal. Jika kita membatasi perhatian pada ruang yang titik-titiknya dapat dipisahkan dengan cara ini, kita dapat mengharapkan limit yang tunggal. Ruang seperti itu disebut ruang Hausdorff .   ruang Hausdorff   Suatu ruang topologi disebut ruang Hausdorff jika untuk setiap pasangan titik berbeda , dalam , terdapat himpunan terbuka yang memuat dan yang memuat sedemikian sehingga .     menunjukkan bahwa setiap ruang metrik merupakan ruang Hausdorff. Ketika kita mulai memberlakukan syarat pada ruang topologi, kita membatasi ruang-ruang yang kita pertimbangkan.    Misalkan sebarang himpunan dan topologi diskret. Apakah Hausdorff? Berikan alasan untuk jawaban Anda.    Misalkan suatu ruang topologi Hausdorff dengan suatu himpunan berhingga. Apakah merupakan himpunan terbuka? Jelaskan. Apa yang dapat disimpulkan tentang topologi ?   Apakah merupakan titik limit dari ?      Terdapat contoh ruang Hausdorff yang bukan ruang metrik baku. Sebagai contoh, misalkan . Kita menggunakan untuk membentuk topologi pada dengan basis yang terdiri atas semua interval terbuka berbentuk dan semua himpunan berbentuk , dengan bilangan-bilangan real. Topologi ini menambahkan himpunan-himpunan berbentuk pada interval terbuka baku untuk membentuk topologi baru. Topologi ini dikenal sebagai topologi pada . Seperti dalam , jika dan bilangan-bilangan real berbeda, kita dapat memisahkan dan dengan interval terbuka.    Kita mendefinisikan ruang Hausdorff karena ruang tersebut memiliki sifat-sifat yang akrab, seperti yang diperlihatkan oleh teorema-teorema berikut.    Setiap subhimpunan beranggota tunggal dari ruang topologi Hausdorff merupakan himpunan tertutup.    Misalkan suatu ruang topologi Hausdorff, dan misalkan untuk suatu . Untuk menunjukkan bahwa tertutup, kita buktikan bahwa terbuka. Misalkan . Maka . Jadi, terdapat himpunan terbuka yang memuat dan yang memuat sedemikian sehingga . Karena itu, dan . Dengan demikian, setiap titik dalam merupakan titik interior dan merupakan himpunan terbuka. Hal ini membuktikan bahwa merupakan himpunan tertutup.      Suatu barisan titik-titik dalam ruang topologi Hausdorff memiliki paling banyak satu limit dalam ruang tersebut.    Misalkan suatu ruang topologi Hausdorff, dan misalkan suatu barisan dalam . Andaikan konvergen ke dan ke . Andaikan . Maka terdapat himpunan terbuka yang memuat dan yang memuat sedemikian sehingga . Karena konvergen ke , terdapat bilangan bulat positif sedemikian sehingga untuk semua . Namun, hal ini mengakibatkan untuk setiap . Hal tersebut bertentangan dengan fakta bahwa konvergen ke . Jadi, dan barisan memiliki paling banyak satu limit dalam .    Ruang Hausdorff penting karena kita dapat memisahkan titik-titik berbeda dengan himpunan terbuka saling lepas. Kita juga perlu mempertimbangkan jenis objek lain yang dapat dipisahkan dengan himpunan terbuka saling lepas. Sebagai contoh, topologi indiskret cukup buruk dalam arti bahwa himpunan-himpunan terbukanya tidak dapat membedakan titik-titik yang berbeda. Artinya, jika dan titik-titik berbeda dalam ruang dengan topologi indiskret, setiap himpunan terbuka yang memuat juga memuat . Sebaliknya, dalam ruang Hausdorff kita dapat memisahkan titik-titik berbeda dengan himpunan terbuka saling lepas. Ini merupakan contoh sifat separasi . Jenis sifat separasi lainnya mencirikan jenis ruang topologi yang berbeda. Sifat-sifat separasi ini menentukan jenis objek yang dapat kita pisahkan dengan himpunan terbuka saling lepas misalnya, titik; titik dan himpunan tertutup; serta dua himpunan tertutup. Berikut adalah sifat-sifat separasi yang paling umum digunakan. Sifat-sifat ini menyingkirkan jenis perilaku yang tidak diinginkan dalam ruang topologi. Sebagai contoh, ingat bahwa limit barisan bersifat tunggal dalam ruang Hausdorff. (Secara tradisional, sifat-sifat separasi ini disebut aksioma karena kita umumnya mengandaikan bahwa ruang topologi kita memiliki sifat-sifat tersebut. Namun, sifat-sifat ini bukan aksioma dalam arti yang lazim, melainkan sifat.)   ruang  ruang Fréchet  ruang  ruang  ruang normal  ruang   Misalkan suatu ruang topologi.   Ruang disebut ruang T atau ruang Fréchet jika untuk setiap dalam , terdapat himpunan terbuka yang memuat sedemikian sehingga .    Ruang disebut ruang T atau ruang Hausdorff jika untuk setiap dalam , terdapat himpunan terbuka saling lepas dan sedemikian sehingga dan .    Ruang disebut reguler ruang reguler jika untuk setiap himpunan tertutup dalam dan setiap titik , terdapat himpunan terbuka saling lepas dan dalam sedemikian sehingga dan . Ruang disebut ruang T atau ruang Hausdorff reguler jika merupakan ruang reguler .    Ruang disebut ruang normal jika untuk setiap pasangan subhimpunan tertutup saling lepas dan dari , terdapat himpunan terbuka saling lepas dan sedemikian sehingga dan . Ruang disebut ruang T atau ruang Hausdorff normal jika merupakan ruang normal .        menunjukkan bahwa setiap ruang metrik bersifat reguler sekaligus normal. Penggunaan huruf berasal dari istilah bahasa Jerman Trennungsaxiome untuk aksioma separasi. Sekali lagi, perhatikan bahwa secara teknis sifat-sifat ini bukan aksioma, melainkan sifat. Pertanyaan yang menarik adalah mengapa kita mensyaratkan ruang dan juga merupakan ruang . Kita ingin aksioma-aksioma ini memberikan pemisahan yang lebih kuat ketika indeksnya bertambah. Tinjau suatu ruang dengan topologi indiskret. Dalam ruang ini, tidak ada yang terpisahkan. Namun, ruang ini bersifat reguler dan normal secara trivial. Untuk menghindari ketidakselarasan ini, kita membatasi perhatian pada ruang . Perhatikan bahwa ruang dengan topologi indiskret bukan ruang .  Setiap ruang merupakan ruang , setiap ruang merupakan ruang , dan setiap ruang merupakan ruang . Pembuktian pernyataan-pernyataan ini diserahkan kepada . Sifat-sifat ini juga berbeda satu sama lain. Artinya, terdapat ruang yang bukan ruang dan ruang yang bukan ruang . Soal-soal tersebut diberikan dalam . Fakta bahwa terdapat ruang yang bukan ruang sedikit lebih sulit. Salah satu contohnya adalah bidang Niemytzki . Bidang Niemytzki adalah setengah bidang atas . Misalkan batas Euklides dari dalam bidang koordinat. Artinya, . Suatu basis untuk topologi pada terdiri atas cakram terbuka baku yang berpusat di titik-titik dengan dan seluruhnya berada di atas garis batas, beserta cakram terbuka dalam yang menyinggung bersama titik singgung masing-masing. Kita tidak akan membuktikan bahwa bidang Niemytzki merupakan ruang tetapi bukan ruang . Pembaca yang berminat dapat menemukan pembuktian yang mudah diikuti dalam artikel Another Proof that the Niemytzki Plane is not Normal karya David H. Vetterlein dalam Pi Mu Epsilon Journal , Vol. 10, No. 2 (SPRING 1995), hlm. 119–121.  "
+},
+{
+  "id": "act_Hausdorff",
+  "level": "2",
+  "url": "sec_separation_ax.html#act_Hausdorff",
+  "type": "Kegiatan",
+  "number": "13.7",
+  "title": "",
+  "body": "  Tinjau suatu ruang metrik , dan misalkan dan titik-titik berbeda dalam .   Jelaskan mengapa dan tidak mungkin sekaligus menjadi limit dari barisan yang sama jika terdapat bola terbuka saling lepas yang berpusat di dan yang berpusat di sedemikian sehingga .   Sekarang, tunjukkan bahwa kita dapat menemukan bola terbuka saling lepas yang berpusat di dan yang berpusat di sedemikian sehingga .    Kembali ke contoh dalam dengan dan topologi . Kita telah melihat bahwa setiap titik dalam merupakan limit dari barisan konstan . Jika dalam , jelaskan mengapa tidak ada himpunan terbuka saling lepas yang memuat dan yang memuat .   "
+},
+{
+  "id": "p-1589",
+  "level": "2",
+  "url": "sec_separation_ax.html#p-1589",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Hausdorff "
+},
+{
+  "id": "definition-50",
+  "level": "2",
+  "url": "sec_separation_ax.html#definition-50",
+  "type": "Definisi",
+  "number": "13.12",
+  "title": "",
+  "body": " ruang Hausdorff   Suatu ruang topologi disebut ruang Hausdorff jika untuk setiap pasangan titik berbeda , dalam , terdapat himpunan terbuka yang memuat dan yang memuat sedemikian sehingga .   "
+},
+{
+  "id": "activity-69",
+  "level": "2",
+  "url": "sec_separation_ax.html#activity-69",
+  "type": "Kegiatan",
+  "number": "13.8",
+  "title": "",
+  "body": "  Misalkan sebarang himpunan dan topologi diskret. Apakah Hausdorff? Berikan alasan untuk jawaban Anda.    Misalkan suatu ruang topologi Hausdorff dengan suatu himpunan berhingga. Apakah merupakan himpunan terbuka? Jelaskan. Apa yang dapat disimpulkan tentang topologi ?   Apakah merupakan titik limit dari ?   "
+},
+{
+  "id": "exp_K_topology",
+  "level": "2",
+  "url": "sec_separation_ax.html#exp_K_topology",
+  "type": "Contoh",
+  "number": "13.13",
+  "title": "",
+  "body": "  Terdapat contoh ruang Hausdorff yang bukan ruang metrik baku. Sebagai contoh, misalkan . Kita menggunakan untuk membentuk topologi pada dengan basis yang terdiri atas semua interval terbuka berbentuk dan semua himpunan berbentuk , dengan bilangan-bilangan real. Topologi ini menambahkan himpunan-himpunan berbentuk pada interval terbuka baku untuk membentuk topologi baru. Topologi ini dikenal sebagai topologi pada . Seperti dalam , jika dan bilangan-bilangan real berbeda, kita dapat memisahkan dan dengan interval terbuka.   "
+},
+{
+  "id": "theorem-40",
+  "level": "2",
+  "url": "sec_separation_ax.html#theorem-40",
+  "type": "Teorema",
+  "number": "13.14",
+  "title": "",
+  "body": "  Setiap subhimpunan beranggota tunggal dari ruang topologi Hausdorff merupakan himpunan tertutup.    Misalkan suatu ruang topologi Hausdorff, dan misalkan untuk suatu . Untuk menunjukkan bahwa tertutup, kita buktikan bahwa terbuka. Misalkan . Maka . Jadi, terdapat himpunan terbuka yang memuat dan yang memuat sedemikian sehingga . Karena itu, dan . Dengan demikian, setiap titik dalam merupakan titik interior dan merupakan himpunan terbuka. Hal ini membuktikan bahwa merupakan himpunan tertutup.   "
+},
+{
+  "id": "theorem-41",
+  "level": "2",
+  "url": "sec_separation_ax.html#theorem-41",
+  "type": "Teorema",
+  "number": "13.15",
+  "title": "",
+  "body": "  Suatu barisan titik-titik dalam ruang topologi Hausdorff memiliki paling banyak satu limit dalam ruang tersebut.    Misalkan suatu ruang topologi Hausdorff, dan misalkan suatu barisan dalam . Andaikan konvergen ke dan ke . Andaikan . Maka terdapat himpunan terbuka yang memuat dan yang memuat sedemikian sehingga . Karena konvergen ke , terdapat bilangan bulat positif sedemikian sehingga untuk semua . Namun, hal ini mengakibatkan untuk setiap . Hal tersebut bertentangan dengan fakta bahwa konvergen ke . Jadi, dan barisan memiliki paling banyak satu limit dalam .   "
+},
+{
+  "id": "definition-51",
+  "level": "2",
+  "url": "sec_separation_ax.html#definition-51",
+  "type": "Definisi",
+  "number": "13.16",
+  "title": "",
+  "body": " ruang  ruang Fréchet  ruang  ruang  ruang normal  ruang   Misalkan suatu ruang topologi.   Ruang disebut ruang T atau ruang Fréchet jika untuk setiap dalam , terdapat himpunan terbuka yang memuat sedemikian sehingga .    Ruang disebut ruang T atau ruang Hausdorff jika untuk setiap dalam , terdapat himpunan terbuka saling lepas dan sedemikian sehingga dan .    Ruang disebut reguler ruang reguler jika untuk setiap himpunan tertutup dalam dan setiap titik , terdapat himpunan terbuka saling lepas dan dalam sedemikian sehingga dan . Ruang disebut ruang T atau ruang Hausdorff reguler jika merupakan ruang reguler .    Ruang disebut ruang normal jika untuk setiap pasangan subhimpunan tertutup saling lepas dan dari , terdapat himpunan terbuka saling lepas dan sedemikian sehingga dan . Ruang disebut ruang T atau ruang Hausdorff normal jika merupakan ruang normal .      "
+},
+{
+  "id": "p-1608",
+  "level": "2",
+  "url": "sec_separation_ax.html#p-1608",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "bidang Niemytzki "
+},
+{
+  "id": "sec_closed_sets_top_summ",
+  "level": "1",
+  "url": "sec_closed_sets_top_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan-gagasan penting yang telah kita bahas dalam bagian ini meliputi hal-hal berikut.   Suatu subhimpunan dari ruang topologi tertutup jika terbuka.    Sebarang irisan himpunan-himpunan tertutup bersifat tertutup, sedangkan gabungan berhingga himpunan-himpunan tertutup juga bersifat tertutup.    Suatu barisan dalam ruang topologi adalah fungsi ke .    Suatu barisan dalam ruang topologi konvergen ke titik dalam jika untuk setiap himpunan terbuka yang memuat , terdapat bilangan bulat positif sedemikian sehingga untuk semua .    Jika suatu barisan dalam ruang topologi konvergen ke titik , maka merupakan suatu limit dari barisan .    Suatu titik limit dari subhimpunan dari ruang topologi adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di yang berbeda dari . Suatu subhimpunan dari ruang topologi tertutup jika dan hanya jika memuat semua titik limitnya.    Suatu titik batas dari subhimpunan dari ruang topologi adalah titik sedemikian sehingga setiap lingkungan dari memuat suatu titik di dan suatu titik di . Batas dari adalah himpunan . Suatu subhimpunan dari tertutup jika dan hanya jika memuat batasnya.    Suatu ruang topologi disebut Hausdorff jika titik-titik berbeda dapat dipisahkan oleh himpunan-himpunan terbuka dalam ruang tersebut. Artinya, untuk setiap pasangan titik berbeda dan dalam , terdapat himpunan terbuka yang memuat dan yang memuat sedemikian sehingga . Ruang Hausdorff penting karena barisan memiliki limit tunggal di dalamnya dan setiap himpunan beranggota tunggal bersifat tertutup.    Aksioma separasi menjelaskan jenis objek yang dapat dipisahkan oleh himpunan terbuka.   Dalam ruang , kita dapat memisahkan dua titik berbeda dengan satu himpunan terbuka. Artinya, untuk titik-titik berbeda dan dalam suatu ruang topologi yang bersifat , yaitu , terdapat himpunan terbuka yang memisahkan dari dalam arti bahwa , tetapi .    Dalam ruang  , kita dapat memisahkan titik secara lebih tegas. Artinya, jika dan merupakan titik-titik berbeda dalam , terdapat himpunan terbuka dan yang saling lepas sedemikian sehingga dan .    Dalam ruang  , kita dapat memisahkan suatu titik dari himpunan tertutup yang tidak memuat titik tersebut. Artinya, jika merupakan subhimpunan tertutup dari dan merupakan suatu titik yang tidak berada dalam , terdapat himpunan terbuka dan dalam yang saling lepas sedemikian sehingga dan .    Dalam ruang  , kita dapat memisahkan himpunan-himpunan tertutup yang saling lepas. Artinya, jika dan merupakan dua subhimpunan tertutup dari dan saling lepas, terdapat himpunan terbuka dan yang saling lepas sedemikian sehingga dan .        "
+},
+{
+  "id": "sec_closed_sets_top_exer",
+  "level": "1",
+  "url": "sec_closed_sets_top_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Tentukan dengan tepat ruang topologi berhingga mana saja yang merupakan ruang Hausdorff. Buktikan hasil Anda.    Misalkan suatu ruang topologi dan suatu subhimpunan dari . Buktikan bahwa .    Misalkan suatu subhimpunan dari suatu ruang topologi. Buktikan bahwa jika dan hanya jika terbuka sekaligus tertutup.    Misalkan suatu himpunan tak kosong dengan sedikitnya dua unsur dan suatu unsur tetap di . Misalkan topologi titik tertentu dan topologi titik yang dikecualikan pada . Artinya,    adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang memuat .     adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan dan . Misalkan suatu subhimpunan dari . Tentukan, disertai bukti, , , dan ketika    memiliki topologi dengan     memiliki topologi dengan .   topologi limit bawah garis Sorgenfrey  Misalkan .   Tunjukkan bahwa merupakan basis untuk topologi pada . Topologi ini disebut topologi limit bawah pada . Garis dengan topologi kadang-kadang disebut garis Sorgenfrey (dinamai menurut matematikawan Robert Sorgenfrey).   Tunjukkan bahwa setiap interval terbuka juga merupakan himpunan terbuka dalam topologi limit bawah.   Jika dan merupakan topologi pada suatu himpunan sedemikian sehingga , maka dikatakan sebagai topologi yang lebih kasar daripada , atau dikatakan sebagai topologi yang lebih halus daripada . Bagian (b) menunjukkan bahwa topologi limit bawah mungkin lebih halus daripada topologi metrik Euklides. Tentukan apakah hal ini benar, yaitu apakah topologi limit bawah benar-benar lebih halus daripada topologi metrik Euklides pada . Berikan alasan untuk jawaban Anda.   Misalkan , dengan kedua bilangan tersebut merupakan unsur . Apakah himpunan merupakan himpunan buka-tutup (clopen) dalam ? Buktikan jawaban Anda.    Suatu subhimpunan dari ruang topologi dikatakan rapat dalam jika .   Tunjukkan bahwa rapat dalam dengan topologi metrik Euklides.   Apakah rapat dalam dengan topologi metrik Euklides? Buktikan jawaban Anda.   Misalkan suatu subhimpunan dari ruang topologi . Buktikan bahwa rapat dalam jika dan hanya jika untuk setiap himpunan terbuka tak kosong .    Misalkan suatu ruang topologi dan suatu subhimpunan dari .   Tunjukkan bahwa himpunan-himpunan , , dan saling lepas (artinya, irisan sebarang dua himpunan tersebut adalah kosong).   Buktikan bahwa .    Buktikan bahwa subruang dari suatu ruang Hausdorff juga merupakan ruang Hausdorff.    Misalkan suatu himpunan tak kosong dengan sedikitnya dua unsur dan suatu unsur tetap di . Misalkan topologi titik tertentu dan topologi titik yang dikecualikan pada . Artinya,    adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang memuat .     adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan dan . Tentukan, disertai bukti, apakah merupakan ruang Hausdorff ketika    memiliki topologi     memiliki topologi .    Buktikan bahwa suatu subhimpunan dari ruang topologi tertutup jika dan hanya jika memuat batasnya.    Ingat bahwa suatu titik dalam subhimpunan dari ruang metrik merupakan titik terasing dari jika terdapat lingkungan dari di sedemikian sehingga . Kita dapat membuat definisi yang sama dalam sebarang ruang topologi.  Definisi. Suatu titik dalam subhimpunan dari ruang topologi merupakan titik terasing dari  titik terasing jika terdapat lingkungan dari sedemikian sehingga .   Jika suatu subhimpunan dari ruang topologi , buktikan bahwa suatu titik merupakan titik terasing dari jika dan hanya jika merupakan himpunan terbuka di .   Kita telah membuktikan bahwa dalam ruang metrik, setiap titik batas dari suatu himpunan merupakan titik limit atau titik terasing dari . (Lihat .) Apakah pernyataan yang sama berlaku dalam ruang topologi? Buktikan jawaban Anda.    Untuk setiap bilangan bulat , misalkan . Artinya, adalah himpunan semua kelipatan bulat dari . Fakta bahwa merupakan basis untuk topologi pada dibahas dalam . Dalam latihan ini, bekerjalah pada ruang topologi    Misalkan , yaitu himpunan bilangan bulat genap.   Tentukan, disertai alasan, .   Tentukan, disertai alasan, .   Misalkan . Artinya, adalah himpunan bilangan asli.   Tentukan, disertai alasan, .   Tentukan, disertai alasan, .    Perhatikan topologi Titik Asal Ganda topologi Titik Asal Ganda yang didefinisikan sebagai berikut. Misalkan , dengan dipandang sebagai titik yang tidak berada di ( adalah titik asal ganda kita). Sebagai basis untuk himpunan terbuka, kita gunakan bola-bola terbuka standar untuk setiap titik selain dan . Untuk setiap nilai parameter yang positif, pada titik kita definisikan himpunan-himpunan terbukanya sebagai dan untuk setiap nilai parameter yang positif, pada titik kita definisikan himpunan-himpunan terbukanya sebagai . Jadi, adalah setengah bagian atas dari cakram berjari-jari yang berpusat di titik asal, dengan sumbu dikecualikan tetapi titik asal disertakan, sedangkan adalah setengah bagian bawah dari cakram berjari-jari yang berpusat di titik asal, dengan sumbu dikecualikan dan titik disertakan.   Tunjukkan bahwa koleksi himpunan yang dijelaskan sebagai basis untuk topologi Titik Asal Ganda benar-benar merupakan basis untuk suatu topologi.   Apakah dengan topologi Titik Asal Ganda merupakan ruang Hausdorff? Buktikan jawaban Anda.    Tunjukkan bahwa setiap himpunan berhingga merupakan himpunan tertutup dalam dengan topologi Zariski.   Tunjukkan bahwa dengan topologi Zariski bukan ruang Hausdorff. ( menunjukkan bahwa suatu basis untuk topologi Zariski pada adalah koleksi himpunan berbentuk , dengan adalah himpunan nol dari polinom dalam variabel.)    Perhatikan topologi garis digital pada dengan basis , dengan    Misalkan suatu subhimpunan dari .   Tentukan titik-titik limit dan titik-titik batas dari . Buktikan dugaan Anda. Apakah setiap titik limit dari merupakan titik batas dari ? Apakah setiap titik batas dari merupakan titik limit dari ?   Tentukan dan tuliskan sebagai gabungan himpunan-himpunan terbuka.   Sekarang perhatikan subhimpunan dari .   Tentukan titik-titik limit dan titik-titik batas dari . Buktikan dugaan Anda. Apakah setiap titik limit dari merupakan titik batas dari ? Apakah setiap titik batas dari merupakan titik limit dari ?   Tentukan dan tuliskan sebagai gabungan himpunan-himpunan terbuka.    Misalkan suatu ruang metrik. Ingat dari dalam bahwa jika suatu subhimpunan tertutup tak kosong dari ruang metrik dan suatu unsur dari , maka jika dan hanya jika . Gunakan gagasan ini untuk mengerjakan hal-hal berikut.   Buktikan bahwa setiap ruang metrik bersifat reguler.   Buktikan bahwa setiap ruang metrik merupakan ruang normal.    Misalkan . Misalkan koleksi semua interval terbuka berbentuk dan semua himpunan berbentuk , dengan bilangan real seperti dalam . Koleksi merupakan basis bagi topologi pada . Karena koleksi ini memuat semua interval terbuka biasa, lebih halus daripada topologi Euklides.   Tunjukkan bahwa merupakan ruang Hausdorff.    menunjukkan bahwa setiap ruang metrik bersifat reguler. Pada bagian latihan ini, tunjukkan bahwa bukan ruang reguler. Kita dapat menyimpulkan bahwa tidak termetriskan.   Perhatikan dan .    Buktikan bahwa suatu ruang topologi merupakan ruang jika dan hanya jika setiap himpunan beranggota tunggal bersifat tertutup.   Tunjukkan bahwa setiap ruang merupakan ruang , setiap ruang merupakan ruang , dan setiap ruang merupakan ruang .    Dalam latihan ini, kita memberikan contoh ruang yang merupakan ruang tetapi bukan ruang , serta ruang yang bukan ruang .   Tunjukkan bahwa dengan topologi komplemen berhingga merupakan ruang tetapi bukan ruang .   Definisikan ruang seperti dalam sebagai himpunan bilangan real dengan topologi yang memiliki basis berupa interval-interval terbuka standar dalam beserta semua himpunan berbentuk , dengan sebarang interval terbuka dan . Tunjukkan bahwa merupakan ruang tetapi bukan ruang .    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Setiap titik limit dari suatu subhimpunan dari ruang topologi juga merupakan titik batas dari .   Setiap titik batas dari suatu subhimpunan dari ruang topologi juga merupakan titik limit dari .   Jika suatu ruang topologi dan sedemikian sehingga , maka terbuka sekaligus tertutup.   Jika suatu ruang topologi dan serta merupakan subhimpunan dari dengan dan , maka .   Jika dan merupakan subhimpunan dari ruang topologi , maka .   Jika dan merupakan subhimpunan dari ruang topologi , maka .   "
+},
+{
+  "id": "exercise-139",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-139",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Tentukan dengan tepat ruang topologi berhingga mana saja yang merupakan ruang Hausdorff. Buktikan hasil Anda.  "
+},
+{
+  "id": "exercise-140",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-140",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan suatu ruang topologi dan suatu subhimpunan dari . Buktikan bahwa .  "
+},
+{
+  "id": "exercise-141",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-141",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan suatu subhimpunan dari suatu ruang topologi. Buktikan bahwa jika dan hanya jika terbuka sekaligus tertutup.  "
+},
+{
+  "id": "exercise-142",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-142",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan suatu himpunan tak kosong dengan sedikitnya dua unsur dan suatu unsur tetap di . Misalkan topologi titik tertentu dan topologi titik yang dikecualikan pada . Artinya,    adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang memuat .     adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan dan . Misalkan suatu subhimpunan dari . Tentukan, disertai bukti, , , dan ketika    memiliki topologi dengan     memiliki topologi dengan .  "
+},
+{
+  "id": "ex_Closed_Sets_Sorgenfrey",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#ex_Closed_Sets_Sorgenfrey",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": "topologi limit bawah garis Sorgenfrey  Misalkan .   Tunjukkan bahwa merupakan basis untuk topologi pada . Topologi ini disebut topologi limit bawah pada . Garis dengan topologi kadang-kadang disebut garis Sorgenfrey (dinamai menurut matematikawan Robert Sorgenfrey).   Tunjukkan bahwa setiap interval terbuka juga merupakan himpunan terbuka dalam topologi limit bawah.   Jika dan merupakan topologi pada suatu himpunan sedemikian sehingga , maka dikatakan sebagai topologi yang lebih kasar daripada , atau dikatakan sebagai topologi yang lebih halus daripada . Bagian (b) menunjukkan bahwa topologi limit bawah mungkin lebih halus daripada topologi metrik Euklides. Tentukan apakah hal ini benar, yaitu apakah topologi limit bawah benar-benar lebih halus daripada topologi metrik Euklides pada . Berikan alasan untuk jawaban Anda.   Misalkan , dengan kedua bilangan tersebut merupakan unsur . Apakah himpunan merupakan himpunan buka-tutup (clopen) dalam ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-144",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-144",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Suatu subhimpunan dari ruang topologi dikatakan rapat dalam jika .   Tunjukkan bahwa rapat dalam dengan topologi metrik Euklides.   Apakah rapat dalam dengan topologi metrik Euklides? Buktikan jawaban Anda.   Misalkan suatu subhimpunan dari ruang topologi . Buktikan bahwa rapat dalam jika dan hanya jika untuk setiap himpunan terbuka tak kosong .  "
+},
+{
+  "id": "exercise-145",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-145",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Misalkan suatu ruang topologi dan suatu subhimpunan dari .   Tunjukkan bahwa himpunan-himpunan , , dan saling lepas (artinya, irisan sebarang dua himpunan tersebut adalah kosong).   Buktikan bahwa .  "
+},
+{
+  "id": "ex_Closed_sets_Hausdorff_subspace",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#ex_Closed_sets_Hausdorff_subspace",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Buktikan bahwa subruang dari suatu ruang Hausdorff juga merupakan ruang Hausdorff.  "
+},
+{
+  "id": "exercise-147",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-147",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan suatu himpunan tak kosong dengan sedikitnya dua unsur dan suatu unsur tetap di . Misalkan topologi titik tertentu dan topologi titik yang dikecualikan pada . Artinya,    adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang memuat .     adalah koleksi subhimpunan dari yang terdiri dari , , dan semua subhimpunan dari yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan dan . Tentukan, disertai bukti, apakah merupakan ruang Hausdorff ketika    memiliki topologi     memiliki topologi .  "
+},
+{
+  "id": "ex_TS_Closed_boundary",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#ex_TS_Closed_boundary",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Buktikan bahwa suatu subhimpunan dari ruang topologi tertutup jika dan hanya jika memuat batasnya.  "
+},
+{
+  "id": "exercise-149",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-149",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Ingat bahwa suatu titik dalam subhimpunan dari ruang metrik merupakan titik terasing dari jika terdapat lingkungan dari di sedemikian sehingga . Kita dapat membuat definisi yang sama dalam sebarang ruang topologi.  Definisi. Suatu titik dalam subhimpunan dari ruang topologi merupakan titik terasing dari  titik terasing jika terdapat lingkungan dari sedemikian sehingga .   Jika suatu subhimpunan dari ruang topologi , buktikan bahwa suatu titik merupakan titik terasing dari jika dan hanya jika merupakan himpunan terbuka di .   Kita telah membuktikan bahwa dalam ruang metrik, setiap titik batas dari suatu himpunan merupakan titik limit atau titik terasing dari . (Lihat .) Apakah pernyataan yang sama berlaku dalam ruang topologi? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-150",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-150",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Untuk setiap bilangan bulat , misalkan . Artinya, adalah himpunan semua kelipatan bulat dari . Fakta bahwa merupakan basis untuk topologi pada dibahas dalam . Dalam latihan ini, bekerjalah pada ruang topologi    Misalkan , yaitu himpunan bilangan bulat genap.   Tentukan, disertai alasan, .   Tentukan, disertai alasan, .   Misalkan . Artinya, adalah himpunan bilangan asli.   Tentukan, disertai alasan, .   Tentukan, disertai alasan, .  "
+},
+{
+  "id": "exercise-151",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-151",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Perhatikan topologi Titik Asal Ganda topologi Titik Asal Ganda yang didefinisikan sebagai berikut. Misalkan , dengan dipandang sebagai titik yang tidak berada di ( adalah titik asal ganda kita). Sebagai basis untuk himpunan terbuka, kita gunakan bola-bola terbuka standar untuk setiap titik selain dan . Untuk setiap nilai parameter yang positif, pada titik kita definisikan himpunan-himpunan terbukanya sebagai dan untuk setiap nilai parameter yang positif, pada titik kita definisikan himpunan-himpunan terbukanya sebagai . Jadi, adalah setengah bagian atas dari cakram berjari-jari yang berpusat di titik asal, dengan sumbu dikecualikan tetapi titik asal disertakan, sedangkan adalah setengah bagian bawah dari cakram berjari-jari yang berpusat di titik asal, dengan sumbu dikecualikan dan titik disertakan.   Tunjukkan bahwa koleksi himpunan yang dijelaskan sebagai basis untuk topologi Titik Asal Ganda benar-benar merupakan basis untuk suatu topologi.   Apakah dengan topologi Titik Asal Ganda merupakan ruang Hausdorff? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-152",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-152",
+  "type": "Latihan",
+  "number": "14",
+  "title": "",
+  "body": " Tunjukkan bahwa setiap himpunan berhingga merupakan himpunan tertutup dalam dengan topologi Zariski.   Tunjukkan bahwa dengan topologi Zariski bukan ruang Hausdorff. ( menunjukkan bahwa suatu basis untuk topologi Zariski pada adalah koleksi himpunan berbentuk , dengan adalah himpunan nol dari polinom dalam variabel.)  "
+},
+{
+  "id": "exercise-153",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-153",
+  "type": "Latihan",
+  "number": "15",
+  "title": "",
+  "body": " Perhatikan topologi garis digital pada dengan basis , dengan    Misalkan suatu subhimpunan dari .   Tentukan titik-titik limit dan titik-titik batas dari . Buktikan dugaan Anda. Apakah setiap titik limit dari merupakan titik batas dari ? Apakah setiap titik batas dari merupakan titik limit dari ?   Tentukan dan tuliskan sebagai gabungan himpunan-himpunan terbuka.   Sekarang perhatikan subhimpunan dari .   Tentukan titik-titik limit dan titik-titik batas dari . Buktikan dugaan Anda. Apakah setiap titik limit dari merupakan titik batas dari ? Apakah setiap titik batas dari merupakan titik limit dari ?   Tentukan dan tuliskan sebagai gabungan himpunan-himpunan terbuka.  "
+},
+{
+  "id": "ex_Metric_space_regular",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#ex_Metric_space_regular",
+  "type": "Latihan",
+  "number": "16",
+  "title": "",
+  "body": " Misalkan suatu ruang metrik. Ingat dari dalam bahwa jika suatu subhimpunan tertutup tak kosong dari ruang metrik dan suatu unsur dari , maka jika dan hanya jika . Gunakan gagasan ini untuk mengerjakan hal-hal berikut.   Buktikan bahwa setiap ruang metrik bersifat reguler.   Buktikan bahwa setiap ruang metrik merupakan ruang normal.  "
+},
+{
+  "id": "exercise-155",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-155",
+  "type": "Latihan",
+  "number": "17",
+  "title": "",
+  "body": " Misalkan . Misalkan koleksi semua interval terbuka berbentuk dan semua himpunan berbentuk , dengan bilangan real seperti dalam . Koleksi merupakan basis bagi topologi pada . Karena koleksi ini memuat semua interval terbuka biasa, lebih halus daripada topologi Euklides.   Tunjukkan bahwa merupakan ruang Hausdorff.    menunjukkan bahwa setiap ruang metrik bersifat reguler. Pada bagian latihan ini, tunjukkan bahwa bukan ruang reguler. Kita dapat menyimpulkan bahwa tidak termetriskan.   Perhatikan dan .  "
+},
+{
+  "id": "ex_T_1_2_3",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#ex_T_1_2_3",
+  "type": "Latihan",
+  "number": "18",
+  "title": "",
+  "body": " Buktikan bahwa suatu ruang topologi merupakan ruang jika dan hanya jika setiap himpunan beranggota tunggal bersifat tertutup.   Tunjukkan bahwa setiap ruang merupakan ruang , setiap ruang merupakan ruang , dan setiap ruang merupakan ruang .  "
+},
+{
+  "id": "ex_not_T_1_2_3",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#ex_not_T_1_2_3",
+  "type": "Latihan",
+  "number": "19",
+  "title": "",
+  "body": " Dalam latihan ini, kita memberikan contoh ruang yang merupakan ruang tetapi bukan ruang , serta ruang yang bukan ruang .   Tunjukkan bahwa dengan topologi komplemen berhingga merupakan ruang tetapi bukan ruang .   Definisikan ruang seperti dalam sebagai himpunan bilangan real dengan topologi yang memiliki basis berupa interval-interval terbuka standar dalam beserta semua himpunan berbentuk , dengan sebarang interval terbuka dan . Tunjukkan bahwa merupakan ruang tetapi bukan ruang .  "
+},
+{
+  "id": "exercise-158",
+  "level": "2",
+  "url": "sec_closed_sets_top_exer.html#exercise-158",
+  "type": "Latihan",
+  "number": "20",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Setiap titik limit dari suatu subhimpunan dari ruang topologi juga merupakan titik batas dari .   Setiap titik batas dari suatu subhimpunan dari ruang topologi juga merupakan titik limit dari .   Jika suatu ruang topologi dan sedemikian sehingga , maka terbuka sekaligus tertutup.   Jika suatu ruang topologi dan serta merupakan subhimpunan dari dengan dan , maka .   Jika dan merupakan subhimpunan dari ruang topologi , maka .   Jika dan merupakan subhimpunan dari ruang topologi , maka .  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -9496,6 +10009,879 @@ var ptx_lunr_docs = [
   "body": "Lingkungan menentukan topologi  Misalkan dan dua topologi pada himpunan . Untuk setiap , andaikan sebuah subhimpunan merupakan lingkungan dari jika dan hanya jika ia merupakan lingkungan dari . Buktikan bahwa . Dengan kata lain, seluruh data lingkungan menentukan topologi secara tunggal.    Tahap 1. Ambil . Untuk setiap , himpunan sendiri merupakan lingkungan dari .   Tahap 2. Gunakan hipotesis untuk memilih himpunan -terbuka dengan .   Tahap 3. Tulis sebagai gabungan semua , lalu ulangi argumen dengan peran kedua topologi ditukar.   Setiap merupakan lingkungan dari setiap titiknya, sehingga adalah gabungan himpunan-himpunan -terbuka dan karenanya . Ini memberi ; simetri memberi inklusi balik.   Ambil sembarang . Untuk setiap , himpunan adalah himpunan -terbuka yang memuat , sehingga merupakan lingkungan dari . Berdasarkan hipotesis, juga merupakan lingkungan dari . Oleh definisi lingkungan, terdapat dengan .  Setiap termuat dalam , sedangkan setiap titik berada dalam . Karena itu Gabungan sebarang himpunan -terbuka bersifat -terbuka, sehingga . Maka .  Hipotesis kesamaan lingkungan bersifat simetris. Mengulangi argumen dengan dan ditukar menghasilkan . Oleh sebab itu , jadi data semua lingkungan memang menentukan topologi secara unik.  "
 },
 {
+  "id": "o003-c90-ch13-source-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch13-source-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Mengenali Himpunan Tertutup",
+  "body": " Panduan Belajar Mandiri: Mengenali Himpunan Tertutup  Panduan ini mendampingi pertanyaan nonlatihan pada bagian pendahuluan himpunan tertutup. Gunakan fakta bahwa suatu subhimpunan bersifat tertutup tepat ketika komplemennya terbuka.  Himpunan Tertutup pada Ruang Berhingga Pertama  Misalkan dan . Daftarkan semua himpunan tertutup dalam .   Tahap 1. Ambil setiap himpunan terbuka .  Tahap 2. Hitung komplemennya .  Tahap 3. Hilangkan pengulangan dan periksa bahwa daftar memuat serta .   Himpunan tertutupnya ialah , , , , dan .   Komplemen dari berturut-turut adalah . Karena himpunan tertutup adalah komplemen himpunan terbuka, kelima himpunan tersebut merupakan seluruh daftar himpunan tertutup.   Himpunan Tertutup pada Ruang Berhingga Kedua  Misalkan dan . Daftarkan semua himpunan tertutup dalam .   Tahap 1. Pasangkan setiap anggota dengan komplemennya dalam .  Tahap 2. Perhatikan secara khusus komplemen dan .  Tahap 3. Pastikan tidak menukar peran himpunan terbuka dengan himpunan tertutup.   Himpunan tertutupnya ialah , , , , , dan .   Komplemen keenam himpunan terbuka, dalam urutan yang diberikan, adalah , , , , , dan . Inilah seluruh himpunan tertutup karena setiap himpunan tertutup harus muncul sebagai komplemen salah satu anggota .   Himpunan Tertutup pada Topologi Tiga Anggota  Pada , diberikan . Daftarkan semua himpunan tertutup.   Tahap 1. Ada tepat tiga himpunan terbuka yang perlu diperiksa.  Tahap 2. Komplemen dalam adalah .  Tahap 3. Sertakan komplemen dan komplemen .   Himpunan tertutupnya tepat , , dan .   Komplemen adalah , komplemen adalah , dan komplemen adalah . Tidak ada himpunan tertutup lain karena tidak ada himpunan terbuka lain dalam .   Semua Subhimpunan pada Topologi Diskret  Misalkan dan . Daftarkan semua himpunan tertutup dan tentukan nama topologi ini.   Tahap 1. Bandingkan daftar dengan himpunan kuasa .  Tahap 2. Komplemen setiap subhimpunan dari juga merupakan subhimpunan dari .  Tahap 3. Ingat nama topologi yang menjadikan setiap subhimpunan terbuka.   Semua delapan subhimpunan dari tertutup. Topologi tersebut adalah topologi diskret.   Daftar yang diberikan sama dengan , sehingga setiap subhimpunan terbuka. Komplemen setiap subhimpunan juga berada dalam ; akibatnya setiap subhimpunan juga tertutup. Sifat bahwa semua subhimpunan terbuka mencirikan topologi diskret.   Himpunan Tertutup pada Topologi Indiskret  Misalkan dan , yaitu topologi indiskret atau trivial. Daftarkan semua himpunan tertutup.   Tahap 1. Hanya ada dua himpunan terbuka.  Tahap 2. Kedua himpunan itu saling berkomplemen.  Tahap 3. Tidak ada komplemen lain yang dapat menghasilkan himpunan tertutup tambahan.   Himpunan tertutupnya hanya dan .   Komplemen adalah , sedangkan komplemen adalah . Karena keduanya merupakan satu-satunya himpunan terbuka, keduanya pula merupakan satu-satunya himpunan tertutup.   Menemukan Himpunan Buka-Tutup Tak Trivial  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang sekaligus terbuka dan tertutup, tetapi bukan ataupun seluruh ruang.   Tahap 1. Sebuah himpunan terbuka juga tertutup tepat ketika komplemennya terbuka.  Tahap 2. Periksa ruang kedua, yang memiliki dan komplemennya sebagai anggota topologi.  Tahap 3. Satu contoh sah sudah cukup; ruang diskret juga menyediakan banyak contoh.   Dalam ruang kedua, merupakan contoh karena dan .   Keanggotaan menunjukkan bahwa terbuka. Karena komplemennya, , juga terbuka, tertutup. Himpunan ini tidak kosong dan tidak sama dengan , sehingga memenuhi semua syarat. Jawaban lain dinilai benar apabila keterbukaan himpunan dan keterbukaan komplemennya diperiksa dalam ruang yang sama.   Menemukan Himpunan Tertutup yang Tidak Terbuka  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tertutup tetapi tidak terbuka.   Tahap 1. Cari himpunan yang tidak tercantum dalam topologi.  Tahap 2. Periksa apakah komplemennya justru tercantum dalam topologi.  Tahap 3. Pada ruang pertama, perhatikan komplemen .   Dalam ruang pertama, tertutup tetapi tidak terbuka.   Himpunan tidak termasuk dalam , jadi tidak terbuka. Namun, komplemennya adalah , sehingga tertutup. Contoh lain dapat diterima jika kedua pemeriksaan ini diberikan.   Menemukan Himpunan Terbuka yang Tidak Tertutup  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang terbuka tetapi tidak tertutup.   Tahap 1. Pilih anggota topologi yang bukan ataupun .  Tahap 2. Hitung komplemennya.  Tahap 3. Jika komplemen itu tidak terbuka, himpunan semula tidak tertutup.   Dalam ruang pertama, terbuka tetapi tidak tertutup.   Himpunan tercantum dalam , jadi terbuka. Komplemennya adalah , yang tidak tercantum dalam . Karena komplemennya tidak terbuka, tidak tertutup.   Menemukan Himpunan yang Tidak Terbuka dan Tidak Tertutup  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tidak terbuka dan juga tidak tertutup.   Tahap 1. Agar tidak terbuka, himpunan tidak boleh berada dalam .  Tahap 2. Agar tidak tertutup, komplemennya juga tidak boleh berada dalam .  Tahap 3. Uji pada ruang pertama.   Dalam ruang pertama, tidak terbuka dan tidak tertutup.   Himpunan tidak berada dalam topologi ruang pertama, sehingga tidak terbuka. Komplemennya adalah , yang juga tidak berada dalam topologi. Jadi tidak tertutup. Argumen yang lengkap untuk contoh lain harus memeriksa kedua ketidakanggotaan tersebut.   Apakah Setiap Himpunan Beranggota Tunggal Tertutup?  Dalam ruang Euklides, setiap himpunan beranggota tunggal tertutup. Tentukan apakah hal itu tetap berlaku untuk dengan , dan jelaskan.   Tahap 1. Uji masing-masing dari melalui komplemennya.  Tahap 2. Komplemen adalah .  Tahap 3. Bandingkan dengan daftar anggota .   Tidak. Himpunan tidak tertutup, sedangkan dan tertutup.   Komplemen adalah , yang tidak terbuka; maka tidak tertutup. Sebaliknya, dan keduanya berada dalam . Jadi dua himpunan beranggota tunggal terakhir tertutup. Satu contoh kegagalan, yaitu , cukup untuk menyangkal pernyataan umum.   "
+},
+{
+  "id": "o003-c90-ch13-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-01",
+  "type": "Pemeriksaan",
+  "number": "M.1",
+  "title": "Himpunan Tertutup pada Ruang Berhingga Pertama.",
+  "body": "Himpunan Tertutup pada Ruang Berhingga Pertama  Misalkan dan . Daftarkan semua himpunan tertutup dalam .   Tahap 1. Ambil setiap himpunan terbuka .  Tahap 2. Hitung komplemennya .  Tahap 3. Hilangkan pengulangan dan periksa bahwa daftar memuat serta .   Himpunan tertutupnya ialah , , , , dan .   Komplemen dari berturut-turut adalah . Karena himpunan tertutup adalah komplemen himpunan terbuka, kelima himpunan tersebut merupakan seluruh daftar himpunan tertutup.  "
+},
+{
+  "id": "o003-c90-ch13-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-02",
+  "type": "Pemeriksaan",
+  "number": "M.2",
+  "title": "Himpunan Tertutup pada Ruang Berhingga Kedua.",
+  "body": "Himpunan Tertutup pada Ruang Berhingga Kedua  Misalkan dan . Daftarkan semua himpunan tertutup dalam .   Tahap 1. Pasangkan setiap anggota dengan komplemennya dalam .  Tahap 2. Perhatikan secara khusus komplemen dan .  Tahap 3. Pastikan tidak menukar peran himpunan terbuka dengan himpunan tertutup.   Himpunan tertutupnya ialah , , , , , dan .   Komplemen keenam himpunan terbuka, dalam urutan yang diberikan, adalah , , , , , dan . Inilah seluruh himpunan tertutup karena setiap himpunan tertutup harus muncul sebagai komplemen salah satu anggota .  "
+},
+{
+  "id": "o003-c90-ch13-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-03",
+  "type": "Pemeriksaan",
+  "number": "M.3",
+  "title": "Himpunan Tertutup pada Topologi Tiga Anggota.",
+  "body": "Himpunan Tertutup pada Topologi Tiga Anggota  Pada , diberikan . Daftarkan semua himpunan tertutup.   Tahap 1. Ada tepat tiga himpunan terbuka yang perlu diperiksa.  Tahap 2. Komplemen dalam adalah .  Tahap 3. Sertakan komplemen dan komplemen .   Himpunan tertutupnya tepat , , dan .   Komplemen adalah , komplemen adalah , dan komplemen adalah . Tidak ada himpunan tertutup lain karena tidak ada himpunan terbuka lain dalam .  "
+},
+{
+  "id": "o003-c90-ch13-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-04",
+  "type": "Pemeriksaan",
+  "number": "M.4",
+  "title": "Semua Subhimpunan pada Topologi Diskret.",
+  "body": "Semua Subhimpunan pada Topologi Diskret  Misalkan dan . Daftarkan semua himpunan tertutup dan tentukan nama topologi ini.   Tahap 1. Bandingkan daftar dengan himpunan kuasa .  Tahap 2. Komplemen setiap subhimpunan dari juga merupakan subhimpunan dari .  Tahap 3. Ingat nama topologi yang menjadikan setiap subhimpunan terbuka.   Semua delapan subhimpunan dari tertutup. Topologi tersebut adalah topologi diskret.   Daftar yang diberikan sama dengan , sehingga setiap subhimpunan terbuka. Komplemen setiap subhimpunan juga berada dalam ; akibatnya setiap subhimpunan juga tertutup. Sifat bahwa semua subhimpunan terbuka mencirikan topologi diskret.  "
+},
+{
+  "id": "o003-c90-ch13-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-05",
+  "type": "Pemeriksaan",
+  "number": "M.5",
+  "title": "Himpunan Tertutup pada Topologi Indiskret.",
+  "body": "Himpunan Tertutup pada Topologi Indiskret  Misalkan dan , yaitu topologi indiskret atau trivial. Daftarkan semua himpunan tertutup.   Tahap 1. Hanya ada dua himpunan terbuka.  Tahap 2. Kedua himpunan itu saling berkomplemen.  Tahap 3. Tidak ada komplemen lain yang dapat menghasilkan himpunan tertutup tambahan.   Himpunan tertutupnya hanya dan .   Komplemen adalah , sedangkan komplemen adalah . Karena keduanya merupakan satu-satunya himpunan terbuka, keduanya pula merupakan satu-satunya himpunan tertutup.  "
+},
+{
+  "id": "o003-c90-ch13-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-06",
+  "type": "Pemeriksaan",
+  "number": "M.6",
+  "title": "Menemukan Himpunan Buka-Tutup Tak Trivial.",
+  "body": "Menemukan Himpunan Buka-Tutup Tak Trivial  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang sekaligus terbuka dan tertutup, tetapi bukan ataupun seluruh ruang.   Tahap 1. Sebuah himpunan terbuka juga tertutup tepat ketika komplemennya terbuka.  Tahap 2. Periksa ruang kedua, yang memiliki dan komplemennya sebagai anggota topologi.  Tahap 3. Satu contoh sah sudah cukup; ruang diskret juga menyediakan banyak contoh.   Dalam ruang kedua, merupakan contoh karena dan .   Keanggotaan menunjukkan bahwa terbuka. Karena komplemennya, , juga terbuka, tertutup. Himpunan ini tidak kosong dan tidak sama dengan , sehingga memenuhi semua syarat. Jawaban lain dinilai benar apabila keterbukaan himpunan dan keterbukaan komplemennya diperiksa dalam ruang yang sama.  "
+},
+{
+  "id": "o003-c90-ch13-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-07",
+  "type": "Pemeriksaan",
+  "number": "M.7",
+  "title": "Menemukan Himpunan Tertutup yang Tidak Terbuka.",
+  "body": "Menemukan Himpunan Tertutup yang Tidak Terbuka  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tertutup tetapi tidak terbuka.   Tahap 1. Cari himpunan yang tidak tercantum dalam topologi.  Tahap 2. Periksa apakah komplemennya justru tercantum dalam topologi.  Tahap 3. Pada ruang pertama, perhatikan komplemen .   Dalam ruang pertama, tertutup tetapi tidak terbuka.   Himpunan tidak termasuk dalam , jadi tidak terbuka. Namun, komplemennya adalah , sehingga tertutup. Contoh lain dapat diterima jika kedua pemeriksaan ini diberikan.  "
+},
+{
+  "id": "o003-c90-ch13-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-08",
+  "type": "Pemeriksaan",
+  "number": "M.8",
+  "title": "Menemukan Himpunan Terbuka yang Tidak Tertutup.",
+  "body": "Menemukan Himpunan Terbuka yang Tidak Tertutup  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang terbuka tetapi tidak tertutup.   Tahap 1. Pilih anggota topologi yang bukan ataupun .  Tahap 2. Hitung komplemennya.  Tahap 3. Jika komplemen itu tidak terbuka, himpunan semula tidak tertutup.   Dalam ruang pertama, terbuka tetapi tidak tertutup.   Himpunan tercantum dalam , jadi terbuka. Komplemennya adalah , yang tidak tercantum dalam . Karena komplemennya tidak terbuka, tidak tertutup.  "
+},
+{
+  "id": "o003-c90-ch13-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-09",
+  "type": "Pemeriksaan",
+  "number": "M.9",
+  "title": "Menemukan Himpunan yang Tidak Terbuka dan Tidak Tertutup.",
+  "body": "Menemukan Himpunan yang Tidak Terbuka dan Tidak Tertutup  Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tidak terbuka dan juga tidak tertutup.   Tahap 1. Agar tidak terbuka, himpunan tidak boleh berada dalam .  Tahap 2. Agar tidak tertutup, komplemennya juga tidak boleh berada dalam .  Tahap 3. Uji pada ruang pertama.   Dalam ruang pertama, tidak terbuka dan tidak tertutup.   Himpunan tidak berada dalam topologi ruang pertama, sehingga tidak terbuka. Komplemennya adalah , yang juga tidak berada dalam topologi. Jadi tidak tertutup. Argumen yang lengkap untuk contoh lain harus memeriksa kedua ketidakanggotaan tersebut.  "
+},
+{
+  "id": "o003-c90-ch13-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-a.html#o003-c90-ch13-guide-10",
+  "type": "Pemeriksaan",
+  "number": "M.10",
+  "title": "Apakah Setiap Himpunan Beranggota Tunggal Tertutup?",
+  "body": "Apakah Setiap Himpunan Beranggota Tunggal Tertutup?  Dalam ruang Euklides, setiap himpunan beranggota tunggal tertutup. Tentukan apakah hal itu tetap berlaku untuk dengan , dan jelaskan.   Tahap 1. Uji masing-masing dari melalui komplemennya.  Tahap 2. Komplemen adalah .  Tahap 3. Bandingkan dengan daftar anggota .   Tidak. Himpunan tidak tertutup, sedangkan dan tertutup.   Komplemen adalah , yang tidak terbuka; maka tidak tertutup. Sebaliknya, dan keduanya berada dalam . Jadi dua himpunan beranggota tunggal terakhir tertutup. Satu contoh kegagalan, yaitu , cukup untuk menyangkal pernyataan umum.  "
+},
+{
+  "id": "o003-c90-ch13-source-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch13-source-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Gabungan Himpunan Tertutup",
+  "body": " Panduan Belajar Mandiri: Gabungan Himpunan Tertutup  Panduan ini menggunakan topologi komplemen berhingga pada : suatu himpunan tak kosong terbuka tepat ketika komplemennya berhingga.  Kardinalitas Himpunan Tertutup  Dalam , tentukan apa yang harus berlaku bagi kardinalitas setiap himpunan tertutup.   Tahap 1. Misalkan tertutup; maka terbuka.  Tahap 2. Pisahkan kasus dari kasus komplemennya tak kosong.  Tahap 3. Pada kasus kedua, terapkan definisi topologi komplemen berhingga kepada .   Setiap himpunan tertutup adalah berhingga atau sama dengan seluruh . Sebaliknya, setiap subhimpunan berhingga dan sendiri memang tertutup.   Jika , maka tertutup karena komplemennya terbuka. Jika , himpunan tak kosong. Karena tertutup, terbuka; definisi lalu menyatakan bahwa berhingga. Sebaliknya, jika berhingga, maka tak kosong dan berkomplemen berhingga, sehingga terbuka. Jadi tertutup.   Gabungan Tak Berhingga Dapat Gagal Tertutup  Untuk , misalkan . Tentukan apakah tertutup dalam , dan jelaskan.   Tahap 1. Tuliskan secara eksplisit anggota gabungan tersebut.  Tahap 2. Tentukan apakah gabungan itu berhingga dan apakah sama dengan .  Tahap 3. Gunakan klasifikasi himpunan tertutup pada topologi komplemen berhingga.   Tidak. Gabungannya adalah , suatu subhimpunan tak berhingga yang bukan seluruh .   Setiap bilangan bulat berada dalam untuk suatu , sedangkan tidak ada bilangan bulat kurang dari yang berada dalam salah satu . Maka Himpunan ini tak berhingga dan merupakan subhimpunan sejati dari . Karena himpunan tertutup sejati dalam topologi komplemen berhingga harus berhingga, gabungan tersebut tidak tertutup. Contoh ini juga menunjukkan mengapa ketertutupan hanya dijamin untuk gabungan berhingga dari himpunan-himpunan tertutup.   "
+},
+{
+  "id": "o003-c90-ch13-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-b.html#o003-c90-ch13-guide-11",
+  "type": "Pemeriksaan",
+  "number": "M.11",
+  "title": "Kardinalitas Himpunan Tertutup.",
+  "body": "Kardinalitas Himpunan Tertutup  Dalam , tentukan apa yang harus berlaku bagi kardinalitas setiap himpunan tertutup.   Tahap 1. Misalkan tertutup; maka terbuka.  Tahap 2. Pisahkan kasus dari kasus komplemennya tak kosong.  Tahap 3. Pada kasus kedua, terapkan definisi topologi komplemen berhingga kepada .   Setiap himpunan tertutup adalah berhingga atau sama dengan seluruh . Sebaliknya, setiap subhimpunan berhingga dan sendiri memang tertutup.   Jika , maka tertutup karena komplemennya terbuka. Jika , himpunan tak kosong. Karena tertutup, terbuka; definisi lalu menyatakan bahwa berhingga. Sebaliknya, jika berhingga, maka tak kosong dan berkomplemen berhingga, sehingga terbuka. Jadi tertutup.  "
+},
+{
+  "id": "o003-c90-ch13-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-b.html#o003-c90-ch13-guide-12",
+  "type": "Pemeriksaan",
+  "number": "M.12",
+  "title": "Gabungan Tak Berhingga Dapat Gagal Tertutup.",
+  "body": "Gabungan Tak Berhingga Dapat Gagal Tertutup  Untuk , misalkan . Tentukan apakah tertutup dalam , dan jelaskan.   Tahap 1. Tuliskan secara eksplisit anggota gabungan tersebut.  Tahap 2. Tentukan apakah gabungan itu berhingga dan apakah sama dengan .  Tahap 3. Gunakan klasifikasi himpunan tertutup pada topologi komplemen berhingga.   Tidak. Gabungannya adalah , suatu subhimpunan tak berhingga yang bukan seluruh .   Setiap bilangan bulat berada dalam untuk suatu , sedangkan tidak ada bilangan bulat kurang dari yang berada dalam salah satu . Maka Himpunan ini tak berhingga dan merupakan subhimpunan sejati dari . Karena himpunan tertutup sejati dalam topologi komplemen berhingga harus berhingga, gabungan tersebut tidak tertutup. Contoh ini juga menunjukkan mengapa ketertutupan hanya dijamin untuk gabungan berhingga dari himpunan-himpunan tertutup.  "
+},
+{
+  "id": "o003-c90-ch13-source-guides-c",
+  "level": "1",
+  "url": "o003-c90-ch13-source-guides-c.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Titik Limit dan Limit Barisan",
+  "body": " Panduan Belajar Mandiri: Titik Limit dan Limit Barisan  Untuk menentukan titik limit suatu himpunan , uji apakah setiap lingkungan terbuka dari titik yang sedang diperiksa bertemu dengan pada suatu titik lain. Jika sebuah basis diberikan, cukup menguji lingkungan-lingkungan basis yang memuat titik tersebut.  Titik Limit pada Topologi Berhingga Pertama  Tentukan semua titik limit dari dalam dengan .   Tahap 1. Cari lingkungan terbuka terkecil yang tersedia untuk masing-masing titik.  Tahap 2. Titik memiliki lingkungan , dan titik memiliki lingkungan .  Tahap 3. Satu-satunya lingkungan terbuka yang memuat atau adalah .   Himpunan titik limitnya adalah .   Lingkungan tidak bertemu , sehingga bukan titik limit. Demikian pula, menunjukkan bahwa bukan titik limit. Setiap lingkungan terbuka dari adalah , dan memuat titik . Jadi titik limit. Dengan menukar peran dan , diperoleh bahwa juga titik limit.   Titik Limit pada Topologi Berhingga Kedua  Tentukan semua titik limit dari dalam dengan    Tahap 1. Gunakan untuk menguji dan untuk menguji .  Tahap 2. Setiap lingkungan terbuka dari memuat .  Tahap 3. Setiap lingkungan terbuka dari memuat paling sedikit satu titik dari .   Himpunan titik limitnya adalah .   Lingkungan terbuka tidak memuat titik , jadi bukan titik limit. Himpunan adalah lingkungan dari masing-masing dan tidak bertemu , sehingga ketiga titik itu bukan titik limit. Setiap lingkungan dari memuat dan karenanya memuat . Setiap lingkungan dari juga memuat , sehingga bertemu . Jadi tepat dan merupakan titik limit.   Titik Limit pada Ruang Diskret  Misalkan dilengkapi topologi diskret. Tentukan semua titik limit dari .   Tahap 1. Dalam topologi diskret, setiap himpunan beranggota tunggal terbuka.  Tahap 2. Untuk setiap , gunakan sebagai lingkungan uji.  Tahap 3. Periksa irisan .   Tidak ada titik limit; .   Untuk setiap , himpunan adalah lingkungan terbuka dari . Lingkungan ini tidak memuat titik mana pun dari . Jadi setiap titik memiliki satu lingkungan yang menggagalkan syarat titik limit, sehingga .   Titik Limit pada Topologi Garis Digital  Pada , misalkan memiliki basis , dengan Tentukan semua titik limit dari .   Tahap 1. Setiap bilangan ganjil memiliki lingkungan basis beranggota tunggal.  Tahap 2. Jika genap, satu-satunya anggota basis yang memuat adalah .  Tahap 3. Cari semua bilangan genap untuk mana bertemu .   Himpunan titik limitnya adalah .   Jika ganjil, lingkungan tidak bertemu ; jadi tidak ada titik ganjil yang merupakan titik limit. Jika genap, cukup menguji . Untuk , himpunan ini bertemu , masing-masing pada , pada atau , dan pada . Untuk setiap bilangan genap lain, tidak bertemu . Maka tepat merupakan titik limit.   Limit Barisan Konstan Dapat Tidak Tunggal  Tinjau dengan . Tentukan semua limit dari masing-masing barisan konstan , , dan .   Tahap 1. Barisan konstan konvergen ke tepat ketika setiap lingkungan terbuka dari memuat .  Tahap 2. Gunakan lingkungan untuk menguji konvergensi ke .  Tahap 3. Perhatikan bahwa setiap himpunan terbuka tak kosong dalam memuat .   Barisan hanya berlimit ; barisan hanya berlimit ; barisan berlimit , , dan .   Lingkungan terbuka terkecil yang relevan bagi adalah , bagi adalah , dan bagi adalah . Setiap lingkungan dari memuat dan , sehingga dan konvergen ke . Setiap lingkungan dari memuat dan , sehingga dan konvergen ke . Hanya yang akhirnya berada dalam lingkungan , sehingga hanya yang konvergen ke . Jika hasil dikelompokkan menurut barisannya, diperoleh daftar pada jawaban.   "
+},
+{
+  "id": "o003-c90-ch13-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-c.html#o003-c90-ch13-guide-13",
+  "type": "Pemeriksaan",
+  "number": "M.13",
+  "title": "Titik Limit pada Topologi Berhingga Pertama.",
+  "body": "Titik Limit pada Topologi Berhingga Pertama  Tentukan semua titik limit dari dalam dengan .   Tahap 1. Cari lingkungan terbuka terkecil yang tersedia untuk masing-masing titik.  Tahap 2. Titik memiliki lingkungan , dan titik memiliki lingkungan .  Tahap 3. Satu-satunya lingkungan terbuka yang memuat atau adalah .   Himpunan titik limitnya adalah .   Lingkungan tidak bertemu , sehingga bukan titik limit. Demikian pula, menunjukkan bahwa bukan titik limit. Setiap lingkungan terbuka dari adalah , dan memuat titik . Jadi titik limit. Dengan menukar peran dan , diperoleh bahwa juga titik limit.  "
+},
+{
+  "id": "o003-c90-ch13-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-c.html#o003-c90-ch13-guide-14",
+  "type": "Pemeriksaan",
+  "number": "M.14",
+  "title": "Titik Limit pada Topologi Berhingga Kedua.",
+  "body": "Titik Limit pada Topologi Berhingga Kedua  Tentukan semua titik limit dari dalam dengan    Tahap 1. Gunakan untuk menguji dan untuk menguji .  Tahap 2. Setiap lingkungan terbuka dari memuat .  Tahap 3. Setiap lingkungan terbuka dari memuat paling sedikit satu titik dari .   Himpunan titik limitnya adalah .   Lingkungan terbuka tidak memuat titik , jadi bukan titik limit. Himpunan adalah lingkungan dari masing-masing dan tidak bertemu , sehingga ketiga titik itu bukan titik limit. Setiap lingkungan dari memuat dan karenanya memuat . Setiap lingkungan dari juga memuat , sehingga bertemu . Jadi tepat dan merupakan titik limit.  "
+},
+{
+  "id": "o003-c90-ch13-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-c.html#o003-c90-ch13-guide-15",
+  "type": "Pemeriksaan",
+  "number": "M.15",
+  "title": "Titik Limit pada Ruang Diskret.",
+  "body": "Titik Limit pada Ruang Diskret  Misalkan dilengkapi topologi diskret. Tentukan semua titik limit dari .   Tahap 1. Dalam topologi diskret, setiap himpunan beranggota tunggal terbuka.  Tahap 2. Untuk setiap , gunakan sebagai lingkungan uji.  Tahap 3. Periksa irisan .   Tidak ada titik limit; .   Untuk setiap , himpunan adalah lingkungan terbuka dari . Lingkungan ini tidak memuat titik mana pun dari . Jadi setiap titik memiliki satu lingkungan yang menggagalkan syarat titik limit, sehingga .  "
+},
+{
+  "id": "o003-c90-ch13-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-c.html#o003-c90-ch13-guide-16",
+  "type": "Pemeriksaan",
+  "number": "M.16",
+  "title": "Titik Limit pada Topologi Garis Digital.",
+  "body": "Titik Limit pada Topologi Garis Digital  Pada , misalkan memiliki basis , dengan Tentukan semua titik limit dari .   Tahap 1. Setiap bilangan ganjil memiliki lingkungan basis beranggota tunggal.  Tahap 2. Jika genap, satu-satunya anggota basis yang memuat adalah .  Tahap 3. Cari semua bilangan genap untuk mana bertemu .   Himpunan titik limitnya adalah .   Jika ganjil, lingkungan tidak bertemu ; jadi tidak ada titik ganjil yang merupakan titik limit. Jika genap, cukup menguji . Untuk , himpunan ini bertemu , masing-masing pada , pada atau , dan pada . Untuk setiap bilangan genap lain, tidak bertemu . Maka tepat merupakan titik limit.  "
+},
+{
+  "id": "o003-c90-ch13-guide-17",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-c.html#o003-c90-ch13-guide-17",
+  "type": "Pemeriksaan",
+  "number": "M.17",
+  "title": "Limit Barisan Konstan Dapat Tidak Tunggal.",
+  "body": "Limit Barisan Konstan Dapat Tidak Tunggal  Tinjau dengan . Tentukan semua limit dari masing-masing barisan konstan , , dan .   Tahap 1. Barisan konstan konvergen ke tepat ketika setiap lingkungan terbuka dari memuat .  Tahap 2. Gunakan lingkungan untuk menguji konvergensi ke .  Tahap 3. Perhatikan bahwa setiap himpunan terbuka tak kosong dalam memuat .   Barisan hanya berlimit ; barisan hanya berlimit ; barisan berlimit , , dan .   Lingkungan terbuka terkecil yang relevan bagi adalah , bagi adalah , dan bagi adalah . Setiap lingkungan dari memuat dan , sehingga dan konvergen ke . Setiap lingkungan dari memuat dan , sehingga dan konvergen ke . Hanya yang akhirnya berada dalam lingkungan , sehingga hanya yang konvergen ke . Jika hasil dikelompokkan menurut barisannya, diperoleh daftar pada jawaban.  "
+},
+{
+  "id": "o003-c90-ch13-source-guides-d",
+  "level": "1",
+  "url": "o003-c90-ch13-source-guides-d.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Tutupan sebagai Himpunan Tertutup Terkecil",
+  "body": " Panduan Belajar Mandiri: Tutupan sebagai Himpunan Tertutup Terkecil  Pada seluruh panduan ini, adalah ruang topologi, , dan menyatakan himpunan titik limit .  Makna “Tertutup Terkecil”  Nyatakan tepat apa saja yang harus dibuktikan untuk menunjukkan bahwa adalah subhimpunan tertutup terkecil dari yang memuat .   Tahap 1. Pisahkan syarat “tertutup”, “memuat ”, dan “terkecil”.  Tahap 2. “Terkecil” diukur dengan relasi inklusi, bukan dengan kardinalitas.  Tahap 3. Kuantifikasikan syarat terakhir terhadap setiap himpunan tertutup lain yang memuat .   Harus dibuktikan bahwa , tertutup, dan untuk setiap himpunan tertutup dengan berlaku .   Dua syarat pertama menyatakan bahwa sendiri merupakan salah satu subhimpunan tertutup yang memuat . Syarat ketiga menyatakan bahwa subhimpunan itu termuat dalam setiap calon lain. Karena urutan yang digunakan adalah inklusi, ketiga syarat tersebut tepat mengungkapkan bahwa adalah subhimpunan tertutup terkecil yang memuat .   Mengurangi Inklusi Tutupan ke Titik Limit  Andaikan tertutup dan . Jelaskan mengapa, untuk membuktikan , cukup membuktikan .   Tahap 1. Gunakan identitas .  Tahap 2. Salah satu dari dua bagian gabungan itu sudah diketahui termuat dalam .  Tahap 3. Gunakan fakta bahwa gabungan dua subhimpunan dari tetap merupakan subhimpunan dari .   Karena dan sudah diketahui, satu-satunya inklusi yang masih perlu dibuktikan adalah .   Jika , maka kedua himpunan dan termuat dalam . Oleh karena itu, . Identitas kemudian memberikan . Tidak diperlukan syarat tambahan terhadap titik-titik karena inklusinya sudah menjadi asumsi.   Menempatkan Titik Limit di dalam Himpunan Tertutup  Andaikan tertutup, , dan . Tentukan apa yang dapat disimpulkan tentang , beserta alasannya.   Tahap 1. Andaikan sebaliknya bahwa .  Tahap 2. Karena tertutup, adalah lingkungan terbuka dari .  Tahap 3. Bandingkan lingkungan itu dengan syarat dan inklusi .   Harus berlaku .   Andaikan . Maka terbuka dan memuat . Karena , lingkungan ini tidak bertemu , sehingga tentu tidak bertemu . Hal itu bertentangan dengan , yang mengharuskan setiap lingkungan dari memuat suatu titik selain . Jadi .   Pembuktian Lengkap Sifat Minimal Tutupan  Lengkapilah pembuktian bahwa jika adalah subhimpunan tertutup dari yang memuat , maka . Sertakan kaitannya dengan pernyataan bahwa merupakan himpunan tertutup terkecil yang memuat .   Tahap 1. Ambil sebarang .  Tahap 2. Jika , gunakan ; jika , gunakan komplemen terbuka untuk memperoleh kontradiksi bila .  Tahap 3. Gabungkan inklusi ini dengan fakta bahwa tertutup dan memuat .   Setiap berada dalam atau ; kedua kasus memberi . Jadi .   Ambil sebarang . Jika , maka karena . Jika tetapi , himpunan merupakan lingkungan terbuka dari yang tidak bertemu . Ini bertentangan dengan definisi titik limit. Maka dalam kasus kedua pun . Jadi .  Selain itu, langsung dari , dan tertutup. Karena termuat dalam setiap himpunan tertutup yang memuat , tutupan itu adalah himpunan tertutup terkecil yang memuat .   "
+},
+{
+  "id": "o003-c90-ch13-guide-18",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-d.html#o003-c90-ch13-guide-18",
+  "type": "Pemeriksaan",
+  "number": "M.18",
+  "title": "Makna “Tertutup Terkecil”.",
+  "body": "Makna “Tertutup Terkecil”  Nyatakan tepat apa saja yang harus dibuktikan untuk menunjukkan bahwa adalah subhimpunan tertutup terkecil dari yang memuat .   Tahap 1. Pisahkan syarat “tertutup”, “memuat ”, dan “terkecil”.  Tahap 2. “Terkecil” diukur dengan relasi inklusi, bukan dengan kardinalitas.  Tahap 3. Kuantifikasikan syarat terakhir terhadap setiap himpunan tertutup lain yang memuat .   Harus dibuktikan bahwa , tertutup, dan untuk setiap himpunan tertutup dengan berlaku .   Dua syarat pertama menyatakan bahwa sendiri merupakan salah satu subhimpunan tertutup yang memuat . Syarat ketiga menyatakan bahwa subhimpunan itu termuat dalam setiap calon lain. Karena urutan yang digunakan adalah inklusi, ketiga syarat tersebut tepat mengungkapkan bahwa adalah subhimpunan tertutup terkecil yang memuat .  "
+},
+{
+  "id": "o003-c90-ch13-guide-19",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-d.html#o003-c90-ch13-guide-19",
+  "type": "Pemeriksaan",
+  "number": "M.19",
+  "title": "Mengurangi Inklusi Tutupan ke Titik Limit.",
+  "body": "Mengurangi Inklusi Tutupan ke Titik Limit  Andaikan tertutup dan . Jelaskan mengapa, untuk membuktikan , cukup membuktikan .   Tahap 1. Gunakan identitas .  Tahap 2. Salah satu dari dua bagian gabungan itu sudah diketahui termuat dalam .  Tahap 3. Gunakan fakta bahwa gabungan dua subhimpunan dari tetap merupakan subhimpunan dari .   Karena dan sudah diketahui, satu-satunya inklusi yang masih perlu dibuktikan adalah .   Jika , maka kedua himpunan dan termuat dalam . Oleh karena itu, . Identitas kemudian memberikan . Tidak diperlukan syarat tambahan terhadap titik-titik karena inklusinya sudah menjadi asumsi.  "
+},
+{
+  "id": "o003-c90-ch13-guide-20",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-d.html#o003-c90-ch13-guide-20",
+  "type": "Pemeriksaan",
+  "number": "M.20",
+  "title": "Menempatkan Titik Limit di dalam Himpunan Tertutup.",
+  "body": "Menempatkan Titik Limit di dalam Himpunan Tertutup  Andaikan tertutup, , dan . Tentukan apa yang dapat disimpulkan tentang , beserta alasannya.   Tahap 1. Andaikan sebaliknya bahwa .  Tahap 2. Karena tertutup, adalah lingkungan terbuka dari .  Tahap 3. Bandingkan lingkungan itu dengan syarat dan inklusi .   Harus berlaku .   Andaikan . Maka terbuka dan memuat . Karena , lingkungan ini tidak bertemu , sehingga tentu tidak bertemu . Hal itu bertentangan dengan , yang mengharuskan setiap lingkungan dari memuat suatu titik selain . Jadi .  "
+},
+{
+  "id": "o003-c90-ch13-guide-21",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-d.html#o003-c90-ch13-guide-21",
+  "type": "Pemeriksaan",
+  "number": "M.21",
+  "title": "Pembuktian Lengkap Sifat Minimal Tutupan.",
+  "body": "Pembuktian Lengkap Sifat Minimal Tutupan  Lengkapilah pembuktian bahwa jika adalah subhimpunan tertutup dari yang memuat , maka . Sertakan kaitannya dengan pernyataan bahwa merupakan himpunan tertutup terkecil yang memuat .   Tahap 1. Ambil sebarang .  Tahap 2. Jika , gunakan ; jika , gunakan komplemen terbuka untuk memperoleh kontradiksi bila .  Tahap 3. Gabungkan inklusi ini dengan fakta bahwa tertutup dan memuat .   Setiap berada dalam atau ; kedua kasus memberi . Jadi .   Ambil sebarang . Jika , maka karena . Jika tetapi , himpunan merupakan lingkungan terbuka dari yang tidak bertemu . Ini bertentangan dengan definisi titik limit. Maka dalam kasus kedua pun . Jadi .  Selain itu, langsung dari , dan tertutup. Karena termuat dalam setiap himpunan tertutup yang memuat , tutupan itu adalah himpunan tertutup terkecil yang memuat .  "
+},
+{
+  "id": "o003-c90-ch13-source-guides-e",
+  "level": "1",
+  "url": "o003-c90-ch13-source-guides-e.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Menentukan Batas Himpunan",
+  "body": " Panduan Belajar Mandiri: Menentukan Batas Himpunan  Sebuah titik berada pada batas jika setiap lingkungan terbukanya bertemu dengan dan juga dengan . Secara ekuivalen, .  Batas pada Topologi Berhingga Pertama  Tentukan batas dalam dengan .   Tahap 1. Titik dan masing-masing memiliki lingkungan beranggota tunggal yang tidak bertemu .  Tahap 2. Satu-satunya lingkungan terbuka yang memuat atau adalah .  Tahap 3. Uji apakah bertemu dengan dan komplemennya.   .   Lingkungan dan tidak bertemu , sehingga dan bukan titik batas. Setiap lingkungan dari atau adalah . Himpunan bertemu dan . Jadi dan adalah titik batas, sehingga .   Batas pada Topologi Berhingga Kedua  Tentukan batas dalam dengan    Tahap 1. Lingkungan tidak bertemu .  Tahap 2. Lingkungan tidak bertemu .  Tahap 3. Periksa dan menggunakan lingkungan .   .   Himpunan adalah lingkungan dari yang seluruhnya berada dalam , jadi bukan titik batas. Himpunan adalah lingkungan dari masing-masing dan tidak bertemu , sehingga ketiganya bukan titik batas. Setiap lingkungan dari atau memuat , yang bertemu pada atau dan bertemu pada . Karena itu, .   Batas pada Ruang Diskret  Misalkan dilengkapi topologi diskret. Tentukan batas .   Tahap 1. Setiap titik memiliki lingkungan terbuka .  Tahap 2. Jika , lingkungan itu tidak bertemu komplemen .  Tahap 3. Jika , lingkungan itu tidak bertemu .   .   Untuk , lingkungan tidak bertemu . Untuk , lingkungan tidak bertemu . Jadi tidak ada titik yang setiap lingkungannya bertemu kedua sisi. Dengan demikian, .   Batas Bilangan Bulat dalam Topologi Komplemen Berhingga  Lengkapi dengan topologi komplemen berhingga . Tentukan batas subhimpunan .   Tahap 1. Setiap lingkungan terbuka tak kosong dalam topologi ini memiliki komplemen berhingga.  Tahap 2. Baik maupun merupakan himpunan tak berhingga.  Tahap 3. Himpunan yang berkomplemen berhingga tidak dapat menghindari seluruh anggota salah satu himpunan tak berhingga tersebut.   Setiap bilangan real adalah titik batas; .   Ambil sebarang dan sebarang lingkungan terbuka dari . Komplemen berhingga. Karena tak berhingga, harus bertemu . Karena juga tak berhingga, harus bertemu . Jadi setiap lingkungan dari setiap bertemu kedua sisi, sehingga setiap merupakan titik batas dan .   "
+},
+{
+  "id": "o003-c90-ch13-guide-22",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-e.html#o003-c90-ch13-guide-22",
+  "type": "Pemeriksaan",
+  "number": "M.22",
+  "title": "Batas pada Topologi Berhingga Pertama.",
+  "body": "Batas pada Topologi Berhingga Pertama  Tentukan batas dalam dengan .   Tahap 1. Titik dan masing-masing memiliki lingkungan beranggota tunggal yang tidak bertemu .  Tahap 2. Satu-satunya lingkungan terbuka yang memuat atau adalah .  Tahap 3. Uji apakah bertemu dengan dan komplemennya.   .   Lingkungan dan tidak bertemu , sehingga dan bukan titik batas. Setiap lingkungan dari atau adalah . Himpunan bertemu dan . Jadi dan adalah titik batas, sehingga .  "
+},
+{
+  "id": "o003-c90-ch13-guide-23",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-e.html#o003-c90-ch13-guide-23",
+  "type": "Pemeriksaan",
+  "number": "M.23",
+  "title": "Batas pada Topologi Berhingga Kedua.",
+  "body": "Batas pada Topologi Berhingga Kedua  Tentukan batas dalam dengan    Tahap 1. Lingkungan tidak bertemu .  Tahap 2. Lingkungan tidak bertemu .  Tahap 3. Periksa dan menggunakan lingkungan .   .   Himpunan adalah lingkungan dari yang seluruhnya berada dalam , jadi bukan titik batas. Himpunan adalah lingkungan dari masing-masing dan tidak bertemu , sehingga ketiganya bukan titik batas. Setiap lingkungan dari atau memuat , yang bertemu pada atau dan bertemu pada . Karena itu, .  "
+},
+{
+  "id": "o003-c90-ch13-guide-24",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-e.html#o003-c90-ch13-guide-24",
+  "type": "Pemeriksaan",
+  "number": "M.24",
+  "title": "Batas pada Ruang Diskret.",
+  "body": "Batas pada Ruang Diskret  Misalkan dilengkapi topologi diskret. Tentukan batas .   Tahap 1. Setiap titik memiliki lingkungan terbuka .  Tahap 2. Jika , lingkungan itu tidak bertemu komplemen .  Tahap 3. Jika , lingkungan itu tidak bertemu .   .   Untuk , lingkungan tidak bertemu . Untuk , lingkungan tidak bertemu . Jadi tidak ada titik yang setiap lingkungannya bertemu kedua sisi. Dengan demikian, .  "
+},
+{
+  "id": "o003-c90-ch13-guide-25",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-e.html#o003-c90-ch13-guide-25",
+  "type": "Pemeriksaan",
+  "number": "M.25",
+  "title": "Batas Bilangan Bulat dalam Topologi Komplemen Berhingga.",
+  "body": "Batas Bilangan Bulat dalam Topologi Komplemen Berhingga  Lengkapi dengan topologi komplemen berhingga . Tentukan batas subhimpunan .   Tahap 1. Setiap lingkungan terbuka tak kosong dalam topologi ini memiliki komplemen berhingga.  Tahap 2. Baik maupun merupakan himpunan tak berhingga.  Tahap 3. Himpunan yang berkomplemen berhingga tidak dapat menghindari seluruh anggota salah satu himpunan tak berhingga tersebut.   Setiap bilangan real adalah titik batas; .   Ambil sebarang dan sebarang lingkungan terbuka dari . Komplemen berhingga. Karena tak berhingga, harus bertemu . Karena juga tak berhingga, harus bertemu . Jadi setiap lingkungan dari setiap bertemu kedua sisi, sehingga setiap merupakan titik batas dan .  "
+},
+{
+  "id": "o003-c90-ch13-source-guides-f",
+  "level": "1",
+  "url": "o003-c90-ch13-source-guides-f.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Aksioma Separasi dan Ruang Hausdorff",
+  "body": " Panduan Belajar Mandiri: Aksioma Separasi dan Ruang Hausdorff  Panduan ini mengembangkan alasan di balik sifat Hausdorff: titik-titik berbeda dapat ditempatkan dalam himpunan terbuka yang saling lepas.  Lingkungan Saling Lepas Memaksa Limit Tunggal  Dalam ruang metrik , misalkan . Jelaskan mengapa dan tidak dapat sekaligus menjadi limit dari barisan yang sama apabila terdapat bola terbuka saling lepas dan dengan .   Tahap 1. Andaikan suatu barisan konvergen ke dan ke .  Tahap 2. Konvergensi ke masing-masing titik membuat suku-suku barisan akhirnya berada dalam masing-masing bola.  Tahap 3. Gunakan indeks yang lebih besar dari kedua ambang konvergensi.   Setelah suatu indeks tertentu, setiap suku harus berada sekaligus dalam kedua bola, bertentangan dengan irisan kedua bola yang kosong.   Andaikan dan . Karena lingkungan dari , terdapat sehingga untuk setiap . Demikian pula, terdapat sehingga untuk setiap . Untuk , diperoleh , padahal irisan itu kosong. Kontradiksi ini menunjukkan bahwa kedua titik tidak dapat menjadi limit dari barisan yang sama.   Membangun Bola Terbuka Saling Lepas  Dalam ruang metrik , misalkan . Tunjukkan bahwa terdapat sehingga bola terbuka dan saling lepas.   Tahap 1. Tetapkan ; karena , maka .  Tahap 2. Pilih kedua jari-jari lebih kecil daripada , misalnya .  Tahap 3. Jika suatu titik berada dalam kedua bola, terapkan ketaksamaan segitiga.   Pilihan menghasilkan .   Misalkan dan pilih . Jika ada , ketaksamaan segitiga memberikan yang mustahil. Jadi tidak ada titik dalam irisan kedua bola, sehingga bola-bola tersebut saling lepas.   Mengapa Contoh Tiga Titik Bukan Hausdorff  Kembali ke ruang pada : dan . Untuk , jelaskan mengapa tidak ada himpunan terbuka saling lepas dan yang masing-masing memuat dan .   Tahap 1. Daftarkan himpunan terbuka tak kosong yang memuat dan yang memuat .  Tahap 2. Perhatikan satu titik yang berada dalam setiap himpunan terbuka tak kosong pada topologi ini.  Tahap 3. Tunjukkan bahwa titik tersebut harus berada dalam .   Setiap himpunan terbuka tak kosong memuat . Karena itu, , sehingga irisan tersebut tidak pernah kosong.   Jika , setiap himpunan terbuka yang memuat adalah atau ; keduanya memuat . Jika , setiap himpunan terbuka yang memuat adalah atau ; keduanya juga memuat . Sementara itu, setiap tentu memuat . Jadi dalam kedua kasus , sehingga pasangan lingkungan terbuka saling lepas tidak ada.   Topologi Diskret Selalu Hausdorff  Misalkan sebarang himpunan dan topologi diskret pada . Tentukan apakah Hausdorff dan berikan alasannya.   Tahap 1. Ambil dua titik berbeda .  Tahap 2. Dalam topologi diskret, setiap subhimpunan, khususnya himpunan beranggota tunggal, terbuka.  Tahap 3. Gunakan dan sebagai lingkungan pemisah.   Ya, setiap ruang diskret adalah ruang Hausdorff.   Untuk titik berbeda , himpunan dan terbuka dalam topologi diskret. Keduanya masing-masing memuat dan , serta . Jadi syarat Hausdorff terpenuhi. Jika memiliki kurang dari dua titik, syarat tersebut terpenuhi secara trivial.   Ruang Hausdorff Berhingga Bersifat Diskret  Misalkan Hausdorff dan berhingga. Tentukan apakah terbuka dan simpulkan bentuk .   Tahap 1. Untuk setiap , gunakan sifat Hausdorff untuk memilih lingkungan terbuka dari yang tidak memuat .  Tahap 2. Ambil irisan berhingga .  Tahap 3. Setelah setiap himpunan beranggota tunggal diketahui terbuka, tuliskan sebarang subhimpunan sebagai gabungannya.   Ya, terbuka. Karena argumen berlaku untuk setiap , semua himpunan beranggota tunggal terbuka dan ; jadi topologinya diskret.   Untuk setiap , sifat Hausdorff memberikan himpunan terbuka saling lepas dan dengan dan . Karena keduanya saling lepas, . Irisan berhingga terbuka dan memuat . Untuk setiap , himpunan termuat dalam , sehingga tidak memuat . Jadi .  Titik dipilih sebarang, maka setiap himpunan beranggota tunggal dalam terbuka. Setiap subhimpunan adalah gabungan himpunan-himpunan beranggota tunggal , sehingga terbuka. Dengan demikian dan ruang tersebut diskret.   "
+},
+{
+  "id": "o003-c90-ch13-guide-26",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-f.html#o003-c90-ch13-guide-26",
+  "type": "Pemeriksaan",
+  "number": "M.26",
+  "title": "Lingkungan Saling Lepas Memaksa Limit Tunggal.",
+  "body": "Lingkungan Saling Lepas Memaksa Limit Tunggal  Dalam ruang metrik , misalkan . Jelaskan mengapa dan tidak dapat sekaligus menjadi limit dari barisan yang sama apabila terdapat bola terbuka saling lepas dan dengan .   Tahap 1. Andaikan suatu barisan konvergen ke dan ke .  Tahap 2. Konvergensi ke masing-masing titik membuat suku-suku barisan akhirnya berada dalam masing-masing bola.  Tahap 3. Gunakan indeks yang lebih besar dari kedua ambang konvergensi.   Setelah suatu indeks tertentu, setiap suku harus berada sekaligus dalam kedua bola, bertentangan dengan irisan kedua bola yang kosong.   Andaikan dan . Karena lingkungan dari , terdapat sehingga untuk setiap . Demikian pula, terdapat sehingga untuk setiap . Untuk , diperoleh , padahal irisan itu kosong. Kontradiksi ini menunjukkan bahwa kedua titik tidak dapat menjadi limit dari barisan yang sama.  "
+},
+{
+  "id": "o003-c90-ch13-guide-27",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-f.html#o003-c90-ch13-guide-27",
+  "type": "Pemeriksaan",
+  "number": "M.27",
+  "title": "Membangun Bola Terbuka Saling Lepas.",
+  "body": "Membangun Bola Terbuka Saling Lepas  Dalam ruang metrik , misalkan . Tunjukkan bahwa terdapat sehingga bola terbuka dan saling lepas.   Tahap 1. Tetapkan ; karena , maka .  Tahap 2. Pilih kedua jari-jari lebih kecil daripada , misalnya .  Tahap 3. Jika suatu titik berada dalam kedua bola, terapkan ketaksamaan segitiga.   Pilihan menghasilkan .   Misalkan dan pilih . Jika ada , ketaksamaan segitiga memberikan yang mustahil. Jadi tidak ada titik dalam irisan kedua bola, sehingga bola-bola tersebut saling lepas.  "
+},
+{
+  "id": "o003-c90-ch13-guide-28",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-f.html#o003-c90-ch13-guide-28",
+  "type": "Pemeriksaan",
+  "number": "M.28",
+  "title": "Mengapa Contoh Tiga Titik Bukan Hausdorff.",
+  "body": "Mengapa Contoh Tiga Titik Bukan Hausdorff  Kembali ke ruang pada : dan . Untuk , jelaskan mengapa tidak ada himpunan terbuka saling lepas dan yang masing-masing memuat dan .   Tahap 1. Daftarkan himpunan terbuka tak kosong yang memuat dan yang memuat .  Tahap 2. Perhatikan satu titik yang berada dalam setiap himpunan terbuka tak kosong pada topologi ini.  Tahap 3. Tunjukkan bahwa titik tersebut harus berada dalam .   Setiap himpunan terbuka tak kosong memuat . Karena itu, , sehingga irisan tersebut tidak pernah kosong.   Jika , setiap himpunan terbuka yang memuat adalah atau ; keduanya memuat . Jika , setiap himpunan terbuka yang memuat adalah atau ; keduanya juga memuat . Sementara itu, setiap tentu memuat . Jadi dalam kedua kasus , sehingga pasangan lingkungan terbuka saling lepas tidak ada.  "
+},
+{
+  "id": "o003-c90-ch13-guide-29",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-f.html#o003-c90-ch13-guide-29",
+  "type": "Pemeriksaan",
+  "number": "M.29",
+  "title": "Topologi Diskret Selalu Hausdorff.",
+  "body": "Topologi Diskret Selalu Hausdorff  Misalkan sebarang himpunan dan topologi diskret pada . Tentukan apakah Hausdorff dan berikan alasannya.   Tahap 1. Ambil dua titik berbeda .  Tahap 2. Dalam topologi diskret, setiap subhimpunan, khususnya himpunan beranggota tunggal, terbuka.  Tahap 3. Gunakan dan sebagai lingkungan pemisah.   Ya, setiap ruang diskret adalah ruang Hausdorff.   Untuk titik berbeda , himpunan dan terbuka dalam topologi diskret. Keduanya masing-masing memuat dan , serta . Jadi syarat Hausdorff terpenuhi. Jika memiliki kurang dari dua titik, syarat tersebut terpenuhi secara trivial.  "
+},
+{
+  "id": "o003-c90-ch13-guide-30",
+  "level": "2",
+  "url": "o003-c90-ch13-source-guides-f.html#o003-c90-ch13-guide-30",
+  "type": "Pemeriksaan",
+  "number": "M.30",
+  "title": "Ruang Hausdorff Berhingga Bersifat Diskret.",
+  "body": "Ruang Hausdorff Berhingga Bersifat Diskret  Misalkan Hausdorff dan berhingga. Tentukan apakah terbuka dan simpulkan bentuk .   Tahap 1. Untuk setiap , gunakan sifat Hausdorff untuk memilih lingkungan terbuka dari yang tidak memuat .  Tahap 2. Ambil irisan berhingga .  Tahap 3. Setelah setiap himpunan beranggota tunggal diketahui terbuka, tuliskan sebarang subhimpunan sebagai gabungannya.   Ya, terbuka. Karena argumen berlaku untuk setiap , semua himpunan beranggota tunggal terbuka dan ; jadi topologinya diskret.   Untuk setiap , sifat Hausdorff memberikan himpunan terbuka saling lepas dan dengan dan . Karena keduanya saling lepas, . Irisan berhingga terbuka dan memuat . Untuk setiap , himpunan termuat dalam , sehingga tidak memuat . Jadi .  Titik dipilih sebarang, maka setiap himpunan beranggota tunggal dalam terbuka. Setiap subhimpunan adalah gabungan himpunan-himpunan beranggota tunggal , sehingga terbuka. Dengan demikian dan ruang tersebut diskret.  "
+},
+{
+  "id": "o003-c90-ch13-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch13-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 13, bagian pertama",
+  "body": " Panduan latihan Bab 13, bagian pertama  Bagian ini memberi dukungan bertahap untuk sepuluh unit soal mandiri pertama pada latihan tentang himpunan tertutup dan batas. Urutannya mengikuti urutan soal yang dilihat pembaca pada sumber.  Ruang Hausdorff berhingga   Acuan sumber: latihan 1. Tentukan dengan tepat ruang topologi berhingga mana yang Hausdorff, lalu buktikan karakterisasi tersebut. Rubrik: jawaban lengkap harus membuktikan kedua arah dan menjelaskan tempat digunakannya keberhinggaan.   Tetapkan . Untuk setiap , gunakan sifat Hausdorff untuk memilih lingkungan terbuka saling lepas bagi dan , kemudian iriskan semua lingkungan yang memuat .   Tepat ruang diskret berhingga yang Hausdorff. Dengan kata lain, suatu ruang topologi berhingga Hausdorff jika dan hanya jika topologinya adalah topologi diskret.   Andaikan berhingga dan Hausdorff. Tetapkan . Untuk setiap , pilih himpunan terbuka dan dengan , , serta . Karena hanya ada berhingga banyak , himpunan terbuka. Himpunan ini memuat dan tidak memuat satu pun , sehingga . Jadi setiap singleton terbuka, dan setiap subhimpunan terbuka sebagai gabungan singleton. Topologinya diskret.  Sebaliknya, dalam ruang diskret, dua titik berbeda dan mempunyai lingkungan terbuka saling lepas dan . Jadi ruang itu Hausdorff. Argumen ini juga mencakup ruang kosong dan ruang satu titik, dengan syarat pemisahan terpenuhi secara vakum.   Tutupan sebagai himpunan beserta batasnya   Acuan sumber: latihan 2. Untuk ruang topologi dan , buktikan . Rubrik: setiap inklusi harus dibuktikan dari sifat lingkungan tutupan dan batas, bukan hanya dari gambar intuitif.   Untuk inklusi yang tidak langsung, ambil . Setiap lingkungannya sudah bertemu ; mengapa lingkungan yang sama pasti bertemu ?   Identitas tersebut berlaku untuk setiap subhimpunan dalam setiap ruang topologi.   Jelas . Jika , setiap lingkungan bertemu ; maka . Jadi .  Sebaliknya, ambil . Jika , maka . Jika , setiap lingkungan bertemu karena , dan juga bertemu karena lingkungan itu memuat . Jadi . Ini membuktikan inklusi sebaliknya dan karenanya kesamaan.   Batas kosong dan himpunan buka-tutup   Acuan sumber: latihan 3. Untuk di suatu ruang topologi, buktikan bahwa jika dan hanya jika terbuka sekaligus tertutup. Rubrik: kedua implikasi harus menangani dan komplemennya secara eksplisit.   Jika tidak ada titik batas, setiap titik di mempunyai lingkungan yang gagal bertemu salah satu dari dan . Karena lingkungan itu memuat titik tersebut, tentukan sisi mana yang dapat dihindarinya.    tepat ketika dan keduanya terbuka; ini setara dengan terbuka sekaligus tertutup.   Andaikan . Jika , maka bukan titik batas. Ada lingkungan terbuka dari yang tidak bertemu , sebab setiap lingkungan otomatis bertemu di . Jadi dan terbuka. Dengan argumen yang sama untuk setiap , himpunan terbuka. Maka juga tertutup.  Sebaliknya, andaikan dan terbuka. Titik dalam mempunyai lingkungan yang tidak bertemu , sedangkan titik dalam mempunyai lingkungan yang tidak bertemu . Tidak ada titik yang setiap lingkungannya bertemu kedua sisi, sehingga .   Interval dalam topologi titik tertentu   Acuan sumber: latihan 4, tugas pertama. Pada dengan topologi titik tertentu , , dan , tentukan , , serta . Rubrik: setiap nilai harus disertai alasan berdasarkan bentuk himpunan terbuka atau tertutup dalam .   Setiap himpunan terbuka tak kosong memuat , sedangkan tidak memuat . Periksa juga apakah terbuka.    , , dan .   Karena setiap himpunan terbuka tak kosong dalam memuat , tidak ada himpunan terbuka tak kosong yang termuat dalam . Jadi . Komplemen memuat , sehingga terbuka dan tertutup. Maka . Akhirnya, .   Interval dalam topologi titik yang dikecualikan   Acuan sumber: latihan 4, tugas kedua. Pada dengan topologi titik yang dikecualikan , , dan , tentukan , , serta . Rubrik: jawaban harus membenarkan keterbukaan dan menjelaskan satu-satunya titik tambahan dalam tutupannya.   Himpunan yang tidak memuat terbuka. Himpunan tertutup tak kosong yang bukan seluruh ruang harus memuat .    , , dan .   Karena , himpunan terbuka, sehingga . Himpunan tertutup: komplemennya tidak memuat , jadi terbuka. Setiap himpunan tertutup yang memuat harus pula memuat , karena setiap himpunan tertutup tak kosong memuat . Oleh sebab itu, . Maka .   Basis topologi limit bawah   Acuan sumber: latihan tentang garis Sorgenfrey, tugas pertama. Untuk , buktikan bahwa merupakan basis bagi suatu topologi pada . Rubrik: verifikasi harus mencakup sifat menutupi ruang dan syarat irisan dua unsur basis.   Untuk , pertimbangkan interval basis yang berawal di dan berakhir di .   Ya. Koleksi interval setengah terbuka tersebut menutupi dan memenuhi aksioma irisan basis, sehingga menentukan topologi limit bawah .   Setiap berada dalam , jadi menutupi . Sekarang ambil . Karena dan , berlaku . Unsur basis memuat dan memenuhi . Kedua aksioma basis terpenuhi, maka gabungan sebarang unsur membentuk topologi .   Interval Euklides terbuka pada garis Sorgenfrey   Acuan sumber: latihan tentang garis Sorgenfrey, tugas kedua. Buktikan bahwa setiap interval Euklides terbuka dalam topologi limit bawah. Rubrik: tampilkan sebagai gabungan unsur basis atau berikan unsur basis lokal di setiap titiknya.   Untuk setiap , interval merupakan unsur basis dan termuat dalam .   Setiap terbuka dalam .   Jika , maka , , dan . Dengan demikian setiap titik dalam mempunyai lingkungan basis yang termuat di dalamnya. Secara setara, , sehingga terbuka dalam topologi limit bawah.   Perbandingan topologi limit bawah dan topologi Euklides   Acuan sumber: latihan tentang garis Sorgenfrey, tugas ketiga. Tentukan apakah topologi limit bawah pada benar-benar lebih halus daripada topologi metrik Euklides, dan berikan alasan. Rubrik: buktikan inklusi kedua topologi dan berikan satu saksi bahwa inklusi itu ketat.   Gunakan keterbukaan semua interval untuk satu inklusi. Lalu uji apakah terbuka dalam topologi Euklides.   Ya. Topologi Euklides termuat secara ketat dalam topologi limit bawah.   Setiap interval basis Euklides terbuka dalam . Karena setiap himpunan terbuka Euklides merupakan gabungan interval seperti itu, diperoleh . Inklusi ini ketat: adalah unsur basis topologi limit bawah, tetapi tidak terbuka dalam topologi Euklides karena tidak ada interval Euklides yang memuat dan sekaligus termuat dalam . Jadi .   Interval basis yang buka-tutup   Acuan sumber: latihan tentang garis Sorgenfrey, tugas keempat. Untuk , tentukan apakah buka-tutup dalam , lalu buktikan jawaban. Rubrik: buktikan keterbukaan himpunan dan komplemennya.   Himpunan sendiri adalah unsur basis. Tulis komplemennya sebagai dan cari lingkungan basis bagi setiap titik pada kedua bagian tersebut.   Ya, setiap dengan buka-tutup dalam garis Sorgenfrey.   Karena merupakan unsur basis, himpunan itu terbuka. Komplemennya adalah . Jika , maka merupakan lingkungan basis yang termuat dalam . Jika , maka merupakan lingkungan basis yang termuat dalam . Jadi komplemen terbuka, sehingga juga tertutup dan karenanya buka-tutup.   Kerapatan bilangan rasional   Acuan sumber: latihan tentang himpunan rapat, tugas pertama. Buktikan bahwa rapat dalam dengan topologi metrik Euklides. Rubrik: tunjukkan bahwa setiap himpunan terbuka Euklides tak kosong bertemu ; jika menggunakan kerapatan aritmetis , berikan pembenaran singkat.   Setiap himpunan terbuka tak kosong memuat suatu interval . Pilih cukup besar sehingga , lalu cari bilangan bulat di antara dan .    ; jadi rapat dalam Euklides.   Ambil himpunan terbuka tak kosong . Ada dan interval dengan . Pilih bilangan asli sehingga . Karena interval panjangnya lebih dari , ada dengan . Maka . Jadi setiap himpunan terbuka tak kosong bertemu , yang setara dengan .   "
+},
+{
+  "id": "o003-c90-ch13-exer-a-01",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-01",
+  "type": "Pemeriksaan",
+  "number": "M.31",
+  "title": "Ruang Hausdorff berhingga.",
+  "body": "Ruang Hausdorff berhingga   Acuan sumber: latihan 1. Tentukan dengan tepat ruang topologi berhingga mana yang Hausdorff, lalu buktikan karakterisasi tersebut. Rubrik: jawaban lengkap harus membuktikan kedua arah dan menjelaskan tempat digunakannya keberhinggaan.   Tetapkan . Untuk setiap , gunakan sifat Hausdorff untuk memilih lingkungan terbuka saling lepas bagi dan , kemudian iriskan semua lingkungan yang memuat .   Tepat ruang diskret berhingga yang Hausdorff. Dengan kata lain, suatu ruang topologi berhingga Hausdorff jika dan hanya jika topologinya adalah topologi diskret.   Andaikan berhingga dan Hausdorff. Tetapkan . Untuk setiap , pilih himpunan terbuka dan dengan , , serta . Karena hanya ada berhingga banyak , himpunan terbuka. Himpunan ini memuat dan tidak memuat satu pun , sehingga . Jadi setiap singleton terbuka, dan setiap subhimpunan terbuka sebagai gabungan singleton. Topologinya diskret.  Sebaliknya, dalam ruang diskret, dua titik berbeda dan mempunyai lingkungan terbuka saling lepas dan . Jadi ruang itu Hausdorff. Argumen ini juga mencakup ruang kosong dan ruang satu titik, dengan syarat pemisahan terpenuhi secara vakum.  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-02",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-02",
+  "type": "Pemeriksaan",
+  "number": "M.32",
+  "title": "Tutupan sebagai himpunan beserta batasnya.",
+  "body": "Tutupan sebagai himpunan beserta batasnya   Acuan sumber: latihan 2. Untuk ruang topologi dan , buktikan . Rubrik: setiap inklusi harus dibuktikan dari sifat lingkungan tutupan dan batas, bukan hanya dari gambar intuitif.   Untuk inklusi yang tidak langsung, ambil . Setiap lingkungannya sudah bertemu ; mengapa lingkungan yang sama pasti bertemu ?   Identitas tersebut berlaku untuk setiap subhimpunan dalam setiap ruang topologi.   Jelas . Jika , setiap lingkungan bertemu ; maka . Jadi .  Sebaliknya, ambil . Jika , maka . Jika , setiap lingkungan bertemu karena , dan juga bertemu karena lingkungan itu memuat . Jadi . Ini membuktikan inklusi sebaliknya dan karenanya kesamaan.  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-03",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-03",
+  "type": "Pemeriksaan",
+  "number": "M.33",
+  "title": "Batas kosong dan himpunan buka-tutup.",
+  "body": "Batas kosong dan himpunan buka-tutup   Acuan sumber: latihan 3. Untuk di suatu ruang topologi, buktikan bahwa jika dan hanya jika terbuka sekaligus tertutup. Rubrik: kedua implikasi harus menangani dan komplemennya secara eksplisit.   Jika tidak ada titik batas, setiap titik di mempunyai lingkungan yang gagal bertemu salah satu dari dan . Karena lingkungan itu memuat titik tersebut, tentukan sisi mana yang dapat dihindarinya.    tepat ketika dan keduanya terbuka; ini setara dengan terbuka sekaligus tertutup.   Andaikan . Jika , maka bukan titik batas. Ada lingkungan terbuka dari yang tidak bertemu , sebab setiap lingkungan otomatis bertemu di . Jadi dan terbuka. Dengan argumen yang sama untuk setiap , himpunan terbuka. Maka juga tertutup.  Sebaliknya, andaikan dan terbuka. Titik dalam mempunyai lingkungan yang tidak bertemu , sedangkan titik dalam mempunyai lingkungan yang tidak bertemu . Tidak ada titik yang setiap lingkungannya bertemu kedua sisi, sehingga .  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-04",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-04",
+  "type": "Pemeriksaan",
+  "number": "M.34",
+  "title": "Interval dalam topologi titik tertentu.",
+  "body": "Interval dalam topologi titik tertentu   Acuan sumber: latihan 4, tugas pertama. Pada dengan topologi titik tertentu , , dan , tentukan , , serta . Rubrik: setiap nilai harus disertai alasan berdasarkan bentuk himpunan terbuka atau tertutup dalam .   Setiap himpunan terbuka tak kosong memuat , sedangkan tidak memuat . Periksa juga apakah terbuka.    , , dan .   Karena setiap himpunan terbuka tak kosong dalam memuat , tidak ada himpunan terbuka tak kosong yang termuat dalam . Jadi . Komplemen memuat , sehingga terbuka dan tertutup. Maka . Akhirnya, .  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-05",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-05",
+  "type": "Pemeriksaan",
+  "number": "M.35",
+  "title": "Interval dalam topologi titik yang dikecualikan.",
+  "body": "Interval dalam topologi titik yang dikecualikan   Acuan sumber: latihan 4, tugas kedua. Pada dengan topologi titik yang dikecualikan , , dan , tentukan , , serta . Rubrik: jawaban harus membenarkan keterbukaan dan menjelaskan satu-satunya titik tambahan dalam tutupannya.   Himpunan yang tidak memuat terbuka. Himpunan tertutup tak kosong yang bukan seluruh ruang harus memuat .    , , dan .   Karena , himpunan terbuka, sehingga . Himpunan tertutup: komplemennya tidak memuat , jadi terbuka. Setiap himpunan tertutup yang memuat harus pula memuat , karena setiap himpunan tertutup tak kosong memuat . Oleh sebab itu, . Maka .  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-06",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-06",
+  "type": "Pemeriksaan",
+  "number": "M.36",
+  "title": "Basis topologi limit bawah.",
+  "body": "Basis topologi limit bawah   Acuan sumber: latihan tentang garis Sorgenfrey, tugas pertama. Untuk , buktikan bahwa merupakan basis bagi suatu topologi pada . Rubrik: verifikasi harus mencakup sifat menutupi ruang dan syarat irisan dua unsur basis.   Untuk , pertimbangkan interval basis yang berawal di dan berakhir di .   Ya. Koleksi interval setengah terbuka tersebut menutupi dan memenuhi aksioma irisan basis, sehingga menentukan topologi limit bawah .   Setiap berada dalam , jadi menutupi . Sekarang ambil . Karena dan , berlaku . Unsur basis memuat dan memenuhi . Kedua aksioma basis terpenuhi, maka gabungan sebarang unsur membentuk topologi .  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-07",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-07",
+  "type": "Pemeriksaan",
+  "number": "M.37",
+  "title": "Interval Euklides terbuka pada garis Sorgenfrey.",
+  "body": "Interval Euklides terbuka pada garis Sorgenfrey   Acuan sumber: latihan tentang garis Sorgenfrey, tugas kedua. Buktikan bahwa setiap interval Euklides terbuka dalam topologi limit bawah. Rubrik: tampilkan sebagai gabungan unsur basis atau berikan unsur basis lokal di setiap titiknya.   Untuk setiap , interval merupakan unsur basis dan termuat dalam .   Setiap terbuka dalam .   Jika , maka , , dan . Dengan demikian setiap titik dalam mempunyai lingkungan basis yang termuat di dalamnya. Secara setara, , sehingga terbuka dalam topologi limit bawah.  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-08",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-08",
+  "type": "Pemeriksaan",
+  "number": "M.38",
+  "title": "Perbandingan topologi limit bawah dan topologi Euklides.",
+  "body": "Perbandingan topologi limit bawah dan topologi Euklides   Acuan sumber: latihan tentang garis Sorgenfrey, tugas ketiga. Tentukan apakah topologi limit bawah pada benar-benar lebih halus daripada topologi metrik Euklides, dan berikan alasan. Rubrik: buktikan inklusi kedua topologi dan berikan satu saksi bahwa inklusi itu ketat.   Gunakan keterbukaan semua interval untuk satu inklusi. Lalu uji apakah terbuka dalam topologi Euklides.   Ya. Topologi Euklides termuat secara ketat dalam topologi limit bawah.   Setiap interval basis Euklides terbuka dalam . Karena setiap himpunan terbuka Euklides merupakan gabungan interval seperti itu, diperoleh . Inklusi ini ketat: adalah unsur basis topologi limit bawah, tetapi tidak terbuka dalam topologi Euklides karena tidak ada interval Euklides yang memuat dan sekaligus termuat dalam . Jadi .  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-09",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-09",
+  "type": "Pemeriksaan",
+  "number": "M.39",
+  "title": "Interval basis yang buka-tutup.",
+  "body": "Interval basis yang buka-tutup   Acuan sumber: latihan tentang garis Sorgenfrey, tugas keempat. Untuk , tentukan apakah buka-tutup dalam , lalu buktikan jawaban. Rubrik: buktikan keterbukaan himpunan dan komplemennya.   Himpunan sendiri adalah unsur basis. Tulis komplemennya sebagai dan cari lingkungan basis bagi setiap titik pada kedua bagian tersebut.   Ya, setiap dengan buka-tutup dalam garis Sorgenfrey.   Karena merupakan unsur basis, himpunan itu terbuka. Komplemennya adalah . Jika , maka merupakan lingkungan basis yang termuat dalam . Jika , maka merupakan lingkungan basis yang termuat dalam . Jadi komplemen terbuka, sehingga juga tertutup dan karenanya buka-tutup.  "
+},
+{
+  "id": "o003-c90-ch13-exer-a-10",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-a.html#o003-c90-ch13-exer-a-10",
+  "type": "Pemeriksaan",
+  "number": "M.40",
+  "title": "Kerapatan bilangan rasional.",
+  "body": "Kerapatan bilangan rasional   Acuan sumber: latihan tentang himpunan rapat, tugas pertama. Buktikan bahwa rapat dalam dengan topologi metrik Euklides. Rubrik: tunjukkan bahwa setiap himpunan terbuka Euklides tak kosong bertemu ; jika menggunakan kerapatan aritmetis , berikan pembenaran singkat.   Setiap himpunan terbuka tak kosong memuat suatu interval . Pilih cukup besar sehingga , lalu cari bilangan bulat di antara dan .    ; jadi rapat dalam Euklides.   Ambil himpunan terbuka tak kosong . Ada dan interval dengan . Pilih bilangan asli sehingga . Karena interval panjangnya lebih dari , ada dengan . Maka . Jadi setiap himpunan terbuka tak kosong bertemu , yang setara dengan .  "
+},
+{
+  "id": "o003-c90-ch13-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch13-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 13, bagian kedua",
+  "body": " Panduan latihan Bab 13, bagian kedua  Bagian ini melanjutkan urutan sumber dengan unit soal mandiri 11 sampai 20. Setiap jawaban singkat diikuti pembuktian atau rubrik penilaian yang dapat digunakan secara mandiri.  Bilangan bulat tidak rapat dalam garis nyata   Acuan sumber: latihan tentang himpunan rapat, tugas kedua. Tentukan apakah rapat dalam dengan topologi metrik Euklides, dan buktikan jawaban. Rubrik: berikan suatu himpunan terbuka tak kosong yang tidak bertemu , atau hitung tutupan .   Cari interval terbuka yang terletak ketat di antara dua bilangan bulat berurutan.   Tidak. Misalnya, adalah himpunan terbuka tak kosong yang tidak bertemu .   Interval terbuka dan tak kosong dalam topologi Euklides, tetapi tidak memuat bilangan bulat. Jika rapat, setiap himpunan terbuka tak kosong harus bertemu . Contoh tandingan ini menunjukkan bahwa tidak rapat. Bahkan , sebab untuk setiap dapat dipilih interval terbuka kecil di sekitar yang tidak memuat bilangan bulat.   Kriteria himpunan rapat melalui himpunan terbuka   Acuan sumber: latihan tentang himpunan rapat, tugas ketiga, dengan ruang latar . Untuk , buktikan bahwa rapat dalam jika dan hanya jika untuk setiap himpunan terbuka tak kosong . Rubrik: buktikan kedua arah dan pertahankan kuantor “setiap himpunan terbuka tak kosong”.   Untuk satu arah, andaikan ada himpunan terbuka tak kosong yang tidak bertemu . Untuk arah lain, uji setiap lingkungan dari titik sebarang .   Kriteria itu benar: tepat ketika setiap himpunan terbuka tak kosong di bertemu .   Andaikan . Jika ada himpunan terbuka tak kosong dengan , pilih . Himpunan adalah lingkungan terbuka yang tidak bertemu , bertentangan dengan . Jadi setiap seperti itu bertemu .  Sebaliknya, andaikan setiap himpunan terbuka tak kosong bertemu . Ambil dan sebarang lingkungan dari . Ada himpunan terbuka dengan . Karena tak kosong, , sehingga . Maka . Karena sebarang, .   Tiga daerah yang saling lepas   Acuan sumber: latihan dekomposisi ruang, tugas pertama. Untuk , buktikan bahwa , , dan saling lepas. Rubrik: periksa ketiga irisan berpasangan, baik secara langsung maupun melalui satu argumen yang mencakup semuanya.   Titik interior mempunyai lingkungan yang termuat dalam ; lingkungan ini tidak dapat bertemu . Bandingkan hal tersebut dengan definisi titik batas.   Ketiga himpunan tersebut saling lepas: setiap irisan dari dua himpunan yang berbeda di antaranya adalah kosong.   Karena , jelas . Jika , ada lingkungan terbuka dari . Lingkungan ini tidak bertemu , sehingga . Jadi . Demikian pula, jika , ada lingkungan yang tidak bertemu , sehingga . Jadi irisan pasangan terakhir juga kosong.   Dekomposisi ruang oleh interior dan batas   Acuan sumber: latihan dekomposisi ruang, tugas kedua. Buktikan . Rubrik: klasifikasikan titik sebarang dan jelaskan mengapa titik di luar kedua interior harus merupakan titik batas.   Ambil yang tidak termasuk maupun . Apa yang dapat disimpulkan tentang pertemuan setiap lingkungannya dengan dan ?   Setiap titik di berada tepat di salah satu dari , , dan ; khususnya, gabungan ketiganya adalah .   Ambil . Jika atau , pernyataan langsung berlaku. Andaikan tidak berada di salah satu pun dari kedua interior tersebut. Karena , tidak ada lingkungan yang termuat dalam ; jadi setiap lingkungan bertemu . Karena , setiap lingkungan juga bertemu . Maka . Jadi ketiga himpunan itu menutupi ; bersama hasil tugas sebelumnya, ketiganya bahkan membentuk partisi.   Sifat Hausdorff diwariskan kepada subruang   Acuan sumber: latihan tentang subruang Hausdorff. Buktikan bahwa setiap subruang dari ruang Hausdorff juga Hausdorff. Rubrik: mulai dari dua titik berbeda dalam subruang dan hasilkan lingkungan terbuka subruang yang saling lepas.   Jika dan terbuka di , maka dan terbuka dalam topologi subruang.   Ya. Sifat Hausdorff diwariskan kepada subruang.   Misalkan subruang dari ruang Hausdorff , dan ambil titik berbeda . Karena Hausdorff, ada himpunan terbuka dengan , , dan . Himpunan dan terbuka di , masing-masing memuat dan , serta saling lepas. Jadi Hausdorff.   Sifat Hausdorff topologi titik tertentu   Acuan sumber: latihan tentang topologi titik, tugas pertama. Misalkan tak kosong dengan sedikitnya dua unsur, , dan topologi titik tertentu. Tentukan apakah Hausdorff. Rubrik: pilih sepasang titik yang relevan dan analisis semua lingkungan tak kosongnya.   Setiap himpunan terbuka tak kosong memuat titik tertentu . Dapatkah dua himpunan terbuka tak kosong saling lepas?   Tidak. Jika , topologi titik tertentu bukan Hausdorff.   Pilih . Setiap lingkungan terbuka dari tak kosong dan memuat . Setiap lingkungan terbuka dari juga tak kosong, sehingga menurut definisi , himpunan memuat . Jadi untuk setiap pilihan . Titik berbeda dan tidak dapat dipisahkan oleh lingkungan terbuka saling lepas; maka ruang itu tidak Hausdorff.   Sifat Hausdorff topologi titik yang dikecualikan   Acuan sumber: latihan tentang topologi titik, tugas kedua. Misalkan tak kosong dengan sedikitnya dua unsur, , dan topologi titik yang dikecualikan. Tentukan apakah Hausdorff. Rubrik: identifikasi seluruh lingkungan terbuka dan gunakan titik lain sebagai pasangan uji.   Dalam topologi ini, satu-satunya himpunan terbuka yang memuat adalah .   Tidak. Jika , topologi titik yang dikecualikan bukan Hausdorff.   Pilih . Satu-satunya lingkungan terbuka dari adalah , karena semua himpunan terbuka sejati tidak memuat . Setiap lingkungan terbuka dari memenuhi . Jadi dan tidak mempunyai lingkungan terbuka saling lepas, sehingga ruang tersebut tidak Hausdorff.   Himpunan tertutup memuat batasnya   Acuan sumber: latihan tentang batas dan ketertutupan. Untuk , buktikan bahwa tertutup jika dan hanya jika memuat batasnya. Rubrik: buktikan kedua implikasi dan kaitkan kondisi dengan tutupan .   Gunakan identitas dari latihan sebelumnya.    tertutup tepat ketika .   Jika tertutup, maka . Karena , diperoleh . Sebaliknya, jika , maka . Suatu himpunan sama dengan tutupannya jika dan hanya jika tertutup, jadi tertutup.   Titik terasing dan singleton terbuka dalam subruang   Acuan sumber: latihan tentang titik terasing, tugas pertama. Untuk dan , buktikan bahwa titik terasing dari jika dan hanya jika terbuka dalam subruang . Rubrik: kedua arah harus menerjemahkan secara tepat antara lingkungan di dan himpunan terbuka dalam topologi subruang.   Himpunan terbuka dalam berbentuk untuk suatu terbuka di . Dari lingkungan yang tidak harus terbuka, ambil himpunan terbuka yang termuat di dalamnya.   Keduanya setara: terasing dalam tepat ketika singleton terbuka dalam .   Jika terasing dalam , ada lingkungan dari dengan . Pilih himpunan terbuka di dengan . Maka , sehingga terbuka dalam subruang .  Sebaliknya, jika terbuka dalam , ada himpunan terbuka dengan . Himpunan adalah lingkungan di yang beririsan dengan hanya di . Jadi titik terasing dari .   Klasifikasi titik batas dalam ruang topologi   Acuan sumber: latihan tentang titik terasing, tugas kedua. Tentukan apakah dalam sebarang ruang topologi setiap titik batas dari merupakan titik limit atau titik terasing dari , lalu buktikan jawaban. Rubrik: jawaban dinilai dari pembagian kasus dan , serta penggunaan definisi titik limit dan titik terasing tanpa mengandaikan metrik.   Jika titik batas tidak berada di , setiap pertemuan lingkungan dengan otomatis terjadi di titik selain . Jika , tanyakan apakah semua lingkungan bertemu .   Ya. Dalam setiap ruang topologi, setiap titik batas adalah titik limit atau titik terasing .   Ambil . Jika , setiap lingkungan bertemu , dan setiap titik pertemuan berbeda dari . Jadi setiap lingkungan bertemu , sehingga adalah titik limit.  Sekarang andaikan . Jika setiap lingkungan bertemu , maka titik limit. Jika tidak, ada lingkungan dari dengan . Karena , diperoleh , sehingga titik terasing. Pembuktian ini hanya memakai definisi lingkungan dan berlaku tanpa asumsi metrik.   "
+},
+{
+  "id": "o003-c90-ch13-exer-b-01",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-01",
+  "type": "Pemeriksaan",
+  "number": "M.41",
+  "title": "Bilangan bulat tidak rapat dalam garis nyata.",
+  "body": "Bilangan bulat tidak rapat dalam garis nyata   Acuan sumber: latihan tentang himpunan rapat, tugas kedua. Tentukan apakah rapat dalam dengan topologi metrik Euklides, dan buktikan jawaban. Rubrik: berikan suatu himpunan terbuka tak kosong yang tidak bertemu , atau hitung tutupan .   Cari interval terbuka yang terletak ketat di antara dua bilangan bulat berurutan.   Tidak. Misalnya, adalah himpunan terbuka tak kosong yang tidak bertemu .   Interval terbuka dan tak kosong dalam topologi Euklides, tetapi tidak memuat bilangan bulat. Jika rapat, setiap himpunan terbuka tak kosong harus bertemu . Contoh tandingan ini menunjukkan bahwa tidak rapat. Bahkan , sebab untuk setiap dapat dipilih interval terbuka kecil di sekitar yang tidak memuat bilangan bulat.  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-02",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-02",
+  "type": "Pemeriksaan",
+  "number": "M.42",
+  "title": "Kriteria himpunan rapat melalui himpunan terbuka.",
+  "body": "Kriteria himpunan rapat melalui himpunan terbuka   Acuan sumber: latihan tentang himpunan rapat, tugas ketiga, dengan ruang latar . Untuk , buktikan bahwa rapat dalam jika dan hanya jika untuk setiap himpunan terbuka tak kosong . Rubrik: buktikan kedua arah dan pertahankan kuantor “setiap himpunan terbuka tak kosong”.   Untuk satu arah, andaikan ada himpunan terbuka tak kosong yang tidak bertemu . Untuk arah lain, uji setiap lingkungan dari titik sebarang .   Kriteria itu benar: tepat ketika setiap himpunan terbuka tak kosong di bertemu .   Andaikan . Jika ada himpunan terbuka tak kosong dengan , pilih . Himpunan adalah lingkungan terbuka yang tidak bertemu , bertentangan dengan . Jadi setiap seperti itu bertemu .  Sebaliknya, andaikan setiap himpunan terbuka tak kosong bertemu . Ambil dan sebarang lingkungan dari . Ada himpunan terbuka dengan . Karena tak kosong, , sehingga . Maka . Karena sebarang, .  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-03",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-03",
+  "type": "Pemeriksaan",
+  "number": "M.43",
+  "title": "Tiga daerah yang saling lepas.",
+  "body": "Tiga daerah yang saling lepas   Acuan sumber: latihan dekomposisi ruang, tugas pertama. Untuk , buktikan bahwa , , dan saling lepas. Rubrik: periksa ketiga irisan berpasangan, baik secara langsung maupun melalui satu argumen yang mencakup semuanya.   Titik interior mempunyai lingkungan yang termuat dalam ; lingkungan ini tidak dapat bertemu . Bandingkan hal tersebut dengan definisi titik batas.   Ketiga himpunan tersebut saling lepas: setiap irisan dari dua himpunan yang berbeda di antaranya adalah kosong.   Karena , jelas . Jika , ada lingkungan terbuka dari . Lingkungan ini tidak bertemu , sehingga . Jadi . Demikian pula, jika , ada lingkungan yang tidak bertemu , sehingga . Jadi irisan pasangan terakhir juga kosong.  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-04",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-04",
+  "type": "Pemeriksaan",
+  "number": "M.44",
+  "title": "Dekomposisi ruang oleh interior dan batas.",
+  "body": "Dekomposisi ruang oleh interior dan batas   Acuan sumber: latihan dekomposisi ruang, tugas kedua. Buktikan . Rubrik: klasifikasikan titik sebarang dan jelaskan mengapa titik di luar kedua interior harus merupakan titik batas.   Ambil yang tidak termasuk maupun . Apa yang dapat disimpulkan tentang pertemuan setiap lingkungannya dengan dan ?   Setiap titik di berada tepat di salah satu dari , , dan ; khususnya, gabungan ketiganya adalah .   Ambil . Jika atau , pernyataan langsung berlaku. Andaikan tidak berada di salah satu pun dari kedua interior tersebut. Karena , tidak ada lingkungan yang termuat dalam ; jadi setiap lingkungan bertemu . Karena , setiap lingkungan juga bertemu . Maka . Jadi ketiga himpunan itu menutupi ; bersama hasil tugas sebelumnya, ketiganya bahkan membentuk partisi.  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-05",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-05",
+  "type": "Pemeriksaan",
+  "number": "M.45",
+  "title": "Sifat Hausdorff diwariskan kepada subruang.",
+  "body": "Sifat Hausdorff diwariskan kepada subruang   Acuan sumber: latihan tentang subruang Hausdorff. Buktikan bahwa setiap subruang dari ruang Hausdorff juga Hausdorff. Rubrik: mulai dari dua titik berbeda dalam subruang dan hasilkan lingkungan terbuka subruang yang saling lepas.   Jika dan terbuka di , maka dan terbuka dalam topologi subruang.   Ya. Sifat Hausdorff diwariskan kepada subruang.   Misalkan subruang dari ruang Hausdorff , dan ambil titik berbeda . Karena Hausdorff, ada himpunan terbuka dengan , , dan . Himpunan dan terbuka di , masing-masing memuat dan , serta saling lepas. Jadi Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-06",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-06",
+  "type": "Pemeriksaan",
+  "number": "M.46",
+  "title": "Sifat Hausdorff topologi titik tertentu.",
+  "body": "Sifat Hausdorff topologi titik tertentu   Acuan sumber: latihan tentang topologi titik, tugas pertama. Misalkan tak kosong dengan sedikitnya dua unsur, , dan topologi titik tertentu. Tentukan apakah Hausdorff. Rubrik: pilih sepasang titik yang relevan dan analisis semua lingkungan tak kosongnya.   Setiap himpunan terbuka tak kosong memuat titik tertentu . Dapatkah dua himpunan terbuka tak kosong saling lepas?   Tidak. Jika , topologi titik tertentu bukan Hausdorff.   Pilih . Setiap lingkungan terbuka dari tak kosong dan memuat . Setiap lingkungan terbuka dari juga tak kosong, sehingga menurut definisi , himpunan memuat . Jadi untuk setiap pilihan . Titik berbeda dan tidak dapat dipisahkan oleh lingkungan terbuka saling lepas; maka ruang itu tidak Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-07",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-07",
+  "type": "Pemeriksaan",
+  "number": "M.47",
+  "title": "Sifat Hausdorff topologi titik yang dikecualikan.",
+  "body": "Sifat Hausdorff topologi titik yang dikecualikan   Acuan sumber: latihan tentang topologi titik, tugas kedua. Misalkan tak kosong dengan sedikitnya dua unsur, , dan topologi titik yang dikecualikan. Tentukan apakah Hausdorff. Rubrik: identifikasi seluruh lingkungan terbuka dan gunakan titik lain sebagai pasangan uji.   Dalam topologi ini, satu-satunya himpunan terbuka yang memuat adalah .   Tidak. Jika , topologi titik yang dikecualikan bukan Hausdorff.   Pilih . Satu-satunya lingkungan terbuka dari adalah , karena semua himpunan terbuka sejati tidak memuat . Setiap lingkungan terbuka dari memenuhi . Jadi dan tidak mempunyai lingkungan terbuka saling lepas, sehingga ruang tersebut tidak Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-08",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-08",
+  "type": "Pemeriksaan",
+  "number": "M.48",
+  "title": "Himpunan tertutup memuat batasnya.",
+  "body": "Himpunan tertutup memuat batasnya   Acuan sumber: latihan tentang batas dan ketertutupan. Untuk , buktikan bahwa tertutup jika dan hanya jika memuat batasnya. Rubrik: buktikan kedua implikasi dan kaitkan kondisi dengan tutupan .   Gunakan identitas dari latihan sebelumnya.    tertutup tepat ketika .   Jika tertutup, maka . Karena , diperoleh . Sebaliknya, jika , maka . Suatu himpunan sama dengan tutupannya jika dan hanya jika tertutup, jadi tertutup.  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-09",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-09",
+  "type": "Pemeriksaan",
+  "number": "M.49",
+  "title": "Titik terasing dan singleton terbuka dalam subruang.",
+  "body": "Titik terasing dan singleton terbuka dalam subruang   Acuan sumber: latihan tentang titik terasing, tugas pertama. Untuk dan , buktikan bahwa titik terasing dari jika dan hanya jika terbuka dalam subruang . Rubrik: kedua arah harus menerjemahkan secara tepat antara lingkungan di dan himpunan terbuka dalam topologi subruang.   Himpunan terbuka dalam berbentuk untuk suatu terbuka di . Dari lingkungan yang tidak harus terbuka, ambil himpunan terbuka yang termuat di dalamnya.   Keduanya setara: terasing dalam tepat ketika singleton terbuka dalam .   Jika terasing dalam , ada lingkungan dari dengan . Pilih himpunan terbuka di dengan . Maka , sehingga terbuka dalam subruang .  Sebaliknya, jika terbuka dalam , ada himpunan terbuka dengan . Himpunan adalah lingkungan di yang beririsan dengan hanya di . Jadi titik terasing dari .  "
+},
+{
+  "id": "o003-c90-ch13-exer-b-10",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-b.html#o003-c90-ch13-exer-b-10",
+  "type": "Pemeriksaan",
+  "number": "M.50",
+  "title": "Klasifikasi titik batas dalam ruang topologi.",
+  "body": "Klasifikasi titik batas dalam ruang topologi   Acuan sumber: latihan tentang titik terasing, tugas kedua. Tentukan apakah dalam sebarang ruang topologi setiap titik batas dari merupakan titik limit atau titik terasing dari , lalu buktikan jawaban. Rubrik: jawaban dinilai dari pembagian kasus dan , serta penggunaan definisi titik limit dan titik terasing tanpa mengandaikan metrik.   Jika titik batas tidak berada di , setiap pertemuan lingkungan dengan otomatis terjadi di titik selain . Jika , tanyakan apakah semua lingkungan bertemu .   Ya. Dalam setiap ruang topologi, setiap titik batas adalah titik limit atau titik terasing .   Ambil . Jika , setiap lingkungan bertemu , dan setiap titik pertemuan berbeda dari . Jadi setiap lingkungan bertemu , sehingga adalah titik limit.  Sekarang andaikan . Jika setiap lingkungan bertemu , maka titik limit. Jika tidak, ada lingkungan dari dengan . Karena , diperoleh , sehingga titik terasing. Pembuktian ini hanya memakai definisi lingkungan dan berlaku tanpa asumsi metrik.  "
+},
+{
+  "id": "o003-c90-ch13-exercise-guides-c",
+  "level": "1",
+  "url": "o003-c90-ch13-exercise-guides-c.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 13, bagian ketiga",
+  "body": " Panduan latihan Bab 13, bagian ketiga  Bagian ini mencakup unit soal mandiri 21 sampai 25 dalam urutan sumber. Dua tugas induk yang hanya mengelompokkan subsoal tidak dihitung sebagai unit tersendiri.  Interior bilangan bulat genap dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal pertama. Di sini dan adalah himpunan bilangan bulat genap. Tentukan . Rubrik: nilai interior harus disertai unsur basis yang membuktikan keterbukaan setiap titik kandidat.   Perhatikan bahwa sendiri merupakan salah satu unsur basis.    .   Karena , himpunan merupakan unsur basis topologi , sehingga terbuka. Interior suatu himpunan terbuka adalah himpunan itu sendiri. Jadi .   Tutupan bilangan bulat genap dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal kedua. Tentukan . Rubrik: uji lingkungan titik sebarang di dan gunakan satu titik yang termuat dalam setiap unsur basis.   Setiap unsur basis memuat , dan .    ; himpunan bilangan bulat genap rapat dalam topologi ini.   Ambil dan sebarang lingkungan dari . Ada unsur basis dengan . Setiap memuat , dan . Jadi . Karena ini berlaku untuk setiap , semua titik berada dalam tutupan , sehingga .   Interior bilangan asli dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal pertama. Tentukan . Rubrik: jelaskan mengapa tidak satu pun lingkungan terbuka tak kosong dapat termuat dalam .   Setiap unsur basis, dan karenanya setiap himpunan terbuka tak kosong, memuat , sedangkan .    .   Setiap unsur basis memuat . Karena setiap himpunan terbuka tak kosong adalah gabungan tak kosong dari unsur-unsur basis, setiap himpunan terbuka tak kosong juga memuat . Namun . Jadi tidak ada himpunan terbuka tak kosong yang termuat dalam , dan akibatnya .   Tutupan bilangan asli dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal kedua. Tentukan . Rubrik: tangani dan setiap secara terpisah; untuk titik tak nol, buktikan bahwa setiap lingkungan basisnya bertemu .   Singleton adalah unsur basis. Jika dan , maka dan .    .   Karena adalah lingkungan terbuka yang tidak bertemu , titik tidak berada dalam . Sekarang ambil dan sebarang lingkungan dari . Pilih unsur basis dengan . Karena , harus berlaku . Bilangan positif merupakan kelipatan bulat dari , sehingga . Jadi setiap berada dalam . Kesimpulannya, .   Verifikasi basis topologi Titik Asal Ganda   Acuan sumber: latihan topologi Titik Asal Ganda, tugas pertama. Misalkan , dengan . Koleksi kandidat basis terdiri dari bola-bola terbuka Euklides standar yang berpusat di setiap titik selain dan , bersama, untuk setiap , dan Buktikan bahwa koleksi tersebut benar-benar merupakan basis bagi suatu topologi pada . Rubrik: verifikasi harus membuktikan sifat menutupi dan, untuk titik di irisan dua kandidat unsur basis, menghasilkan unsur basis yang lebih kecil. Kasus titik biasa, , dan harus terlihat.   Jauh dari kedua titik asal, semua bagian planar kandidat basis terbuka secara Euklides. Pada atau , besarkan parameter agar jari-jari mengecil dan masuk ke dalam kedua himpunan yang sedang diiriskan.   Ya. Koleksi itu menutupi dan memenuhi syarat irisan basis, sehingga menentukan topologi Titik Asal Ganda.   Koleksi tersebut menutupi : titik berada dalam setiap , titik berada dalam setiap , dan setiap berada dalam bola Euklides yang berpusat di .  Ambil dua unsur kandidat basis dan . Jika , bagian planar setiap yang memuat terbuka secara Euklides di sekitar . Karena itu ada bola Euklides cukup kecil yang berpusat di , memuat , dan termuat dalam . Bola ini merupakan unsur kandidat basis.  Jika , kedua harus berbentuk . Dengan , berlaku .  Terakhir, misalkan . Unsur kandidat basis yang memuat dapat berupa atau bola Euklides biasa yang juga memuat . Setiap bola biasa di antara memuat suatu cakram Euklides berjari-jari yang berpusat di . Pilih sedemikian sehingga untuk setiap bola biasa yang muncul, dan untuk setiap himpunan khusus yang muncul. Maka . Jadi aksioma irisan basis terpenuhi dalam semua kasus, dan koleksi itu merupakan basis.   "
+},
+{
+  "id": "o003-c90-ch13-exer-c-01",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-c.html#o003-c90-ch13-exer-c-01",
+  "type": "Pemeriksaan",
+  "number": "M.51",
+  "title": "Interior bilangan bulat genap dalam topologi kelipatan.",
+  "body": "Interior bilangan bulat genap dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal pertama. Di sini dan adalah himpunan bilangan bulat genap. Tentukan . Rubrik: nilai interior harus disertai unsur basis yang membuktikan keterbukaan setiap titik kandidat.   Perhatikan bahwa sendiri merupakan salah satu unsur basis.    .   Karena , himpunan merupakan unsur basis topologi , sehingga terbuka. Interior suatu himpunan terbuka adalah himpunan itu sendiri. Jadi .  "
+},
+{
+  "id": "o003-c90-ch13-exer-c-02",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-c.html#o003-c90-ch13-exer-c-02",
+  "type": "Pemeriksaan",
+  "number": "M.52",
+  "title": "Tutupan bilangan bulat genap dalam topologi kelipatan.",
+  "body": "Tutupan bilangan bulat genap dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal kedua. Tentukan . Rubrik: uji lingkungan titik sebarang di dan gunakan satu titik yang termuat dalam setiap unsur basis.   Setiap unsur basis memuat , dan .    ; himpunan bilangan bulat genap rapat dalam topologi ini.   Ambil dan sebarang lingkungan dari . Ada unsur basis dengan . Setiap memuat , dan . Jadi . Karena ini berlaku untuk setiap , semua titik berada dalam tutupan , sehingga .  "
+},
+{
+  "id": "o003-c90-ch13-exer-c-03",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-c.html#o003-c90-ch13-exer-c-03",
+  "type": "Pemeriksaan",
+  "number": "M.53",
+  "title": "Interior bilangan asli dalam topologi kelipatan.",
+  "body": "Interior bilangan asli dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal pertama. Tentukan . Rubrik: jelaskan mengapa tidak satu pun lingkungan terbuka tak kosong dapat termuat dalam .   Setiap unsur basis, dan karenanya setiap himpunan terbuka tak kosong, memuat , sedangkan .    .   Setiap unsur basis memuat . Karena setiap himpunan terbuka tak kosong adalah gabungan tak kosong dari unsur-unsur basis, setiap himpunan terbuka tak kosong juga memuat . Namun . Jadi tidak ada himpunan terbuka tak kosong yang termuat dalam , dan akibatnya .  "
+},
+{
+  "id": "o003-c90-ch13-exer-c-04",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-c.html#o003-c90-ch13-exer-c-04",
+  "type": "Pemeriksaan",
+  "number": "M.54",
+  "title": "Tutupan bilangan asli dalam topologi kelipatan.",
+  "body": "Tutupan bilangan asli dalam topologi kelipatan   Acuan sumber: latihan pada dengan basis , kelompok , subsoal kedua. Tentukan . Rubrik: tangani dan setiap secara terpisah; untuk titik tak nol, buktikan bahwa setiap lingkungan basisnya bertemu .   Singleton adalah unsur basis. Jika dan , maka dan .    .   Karena adalah lingkungan terbuka yang tidak bertemu , titik tidak berada dalam . Sekarang ambil dan sebarang lingkungan dari . Pilih unsur basis dengan . Karena , harus berlaku . Bilangan positif merupakan kelipatan bulat dari , sehingga . Jadi setiap berada dalam . Kesimpulannya, .  "
+},
+{
+  "id": "o003-c90-ch13-exer-c-05",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-c.html#o003-c90-ch13-exer-c-05",
+  "type": "Pemeriksaan",
+  "number": "M.55",
+  "title": "Verifikasi basis topologi Titik Asal Ganda.",
+  "body": "Verifikasi basis topologi Titik Asal Ganda   Acuan sumber: latihan topologi Titik Asal Ganda, tugas pertama. Misalkan , dengan . Koleksi kandidat basis terdiri dari bola-bola terbuka Euklides standar yang berpusat di setiap titik selain dan , bersama, untuk setiap , dan Buktikan bahwa koleksi tersebut benar-benar merupakan basis bagi suatu topologi pada . Rubrik: verifikasi harus membuktikan sifat menutupi dan, untuk titik di irisan dua kandidat unsur basis, menghasilkan unsur basis yang lebih kecil. Kasus titik biasa, , dan harus terlihat.   Jauh dari kedua titik asal, semua bagian planar kandidat basis terbuka secara Euklides. Pada atau , besarkan parameter agar jari-jari mengecil dan masuk ke dalam kedua himpunan yang sedang diiriskan.   Ya. Koleksi itu menutupi dan memenuhi syarat irisan basis, sehingga menentukan topologi Titik Asal Ganda.   Koleksi tersebut menutupi : titik berada dalam setiap , titik berada dalam setiap , dan setiap berada dalam bola Euklides yang berpusat di .  Ambil dua unsur kandidat basis dan . Jika , bagian planar setiap yang memuat terbuka secara Euklides di sekitar . Karena itu ada bola Euklides cukup kecil yang berpusat di , memuat , dan termuat dalam . Bola ini merupakan unsur kandidat basis.  Jika , kedua harus berbentuk . Dengan , berlaku .  Terakhir, misalkan . Unsur kandidat basis yang memuat dapat berupa atau bola Euklides biasa yang juga memuat . Setiap bola biasa di antara memuat suatu cakram Euklides berjari-jari yang berpusat di . Pilih sedemikian sehingga untuk setiap bola biasa yang muncul, dan untuk setiap himpunan khusus yang muncul. Maka . Jadi aksioma irisan basis terpenuhi dalam semua kasus, dan koleksi itu merupakan basis.  "
+},
+{
+  "id": "o003-c90-ch13-exercise-guides-d",
+  "level": "1",
+  "url": "o003-c90-ch13-exercise-guides-d.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 13, bagian keempat",
+  "body": " Panduan latihan Bab 13, bagian keempat  Bagian ini memberi dukungan bertahap untuk prompt latihan 26 sampai 35 menurut peta prompt sumber Bab 13.  Sifat Hausdorff topologi Titik Asal Ganda   Jangkar sumber: prompt 26. Pada , kandidat basis memuat bola-bola Euklides yang berpusat di titik biasa dan, untuk , himpunan serta Tentukan apakah topologi Titik Asal Ganda ini Hausdorff dan buktikan jawaban. Rubrik: pisahkan semua jenis pasangan: dua titik biasa, kedua titik asal, dan satu titik asal dengan satu titik biasa.   Lingkungan khusus kedua titik asal berada pada setengah bidang yang berlawanan. Untuk titik biasa , pilih radius yang lebih kecil daripada sebagian tetap dari .   Ya, topologi Titik Asal Ganda yang diberikan merupakan ruang Hausdorff.   Dua titik biasa yang berbeda dapat dipisahkan oleh bola Euklides kecil yang saling lepas dan tidak berpusat di titik asal. Titik dan dipisahkan oleh dan , sebab yang pertama hanya memuat titik planar dengan beserta , sedangkan yang kedua hanya memuat titik planar dengan beserta .  Tinggal pasangan satu titik asal dan titik biasa . Tetapkan . Pilih dengan . Bola Euklides terpisah dari cakram berjari-jari di sekitar , sehingga terpisah dari ; argumen yang sama memakai untuk . Semua pasangan titik berbeda mempunyai lingkungan terbuka saling lepas, jadi ruang itu Hausdorff.   Himpunan berhingga bersifat tertutup dalam topologi Zariski   Jangkar sumber: prompt 27. Buktikan bahwa setiap himpunan berhingga merupakan himpunan tertutup dalam dengan topologi Zariski. Rubrik: realisasikan himpunan beranggota tunggal sebagai himpunan nol polinom dan gunakan kestabilan himpunan tertutup terhadap gabungan berhingga.   Untuk , pertimbangkan .   Setiap himpunan beranggota tunggal, dan karenanya setiap gabungan berhingga himpunan-himpunan demikian, merupakan himpunan tertutup Zariski.   Untuk , definisikan . Karena bekerja di atas , berlaku jika dan hanya jika untuk setiap . Jadi , sehingga setiap himpunan beranggota tunggal merupakan himpunan tertutup Zariski. Jika , maka adalah gabungan berhingga himpunan-himpunan beranggota tunggal yang tertutup dan karena itu tertutup. Himpunan kosong juga tertutup, misalnya sebagai .   Topologi Zariski bukan Hausdorff   Jangkar sumber: prompt 28. Untuk , buktikan bahwa dengan topologi Zariski bukan Hausdorff. Gunakan basis yang terdiri dari , dengan polinom dalam variabel. Rubrik: buktikan bahwa dua himpunan terbuka Zariski tak kosong selalu beririsan, lalu terapkan pada dua titik berbeda.   Jika dan tak kosong, maka dan bukan polinom nol dan .   Untuk , ruang Zariski bukan Hausdorff; bahkan setiap dua himpunan terbuka tak kosongnya beririsan.   Ambil himpunan terbuka Zariski tak kosong . Masing-masing memuat unsur basis tak kosong, katakan dan . Karena kedua unsur basis tak kosong, dan bukan polinom nol. Gelanggang polinom merupakan daerah integral, sehingga bukan polinom nol. Polinom real bukan nol tidak lenyap di seluruh ; akibatnya tak kosong. Karena , diperoleh .  Untuk , ruang mempunyai dua titik berbeda. Jika ruang itu Hausdorff, kedua titik tersebut mempunyai lingkungan terbuka tak kosong yang saling lepas, bertentangan dengan hasil di atas. Jadi ruang Zariski ini bukan Hausdorff.   Titik limit dan titik batas himpunan tiga titik pada garis digital   Jangkar sumber: prompt 29. Pada , basisnya diberikan oleh Untuk , tentukan titik limit dan titik batas . Tentukan pula apakah setiap titik limit merupakan titik batas dan apakah setiap titik batas merupakan titik limit. Rubrik: uji lingkungan basis minimal di titik ganjil dan genap, serta jawab kedua implikasi secara terpisah.   Titik ganjil mempunyai lingkungan beranggota tunggal. Untuk titik genap , cukup uji .   Himpunan titik limit adalah , sedangkan . Jadi tidak setiap titik limit merupakan titik batas, tetapi setiap titik batas merupakan titik limit.   Setiap titik ganjil mempunyai lingkungan terbuka , sehingga tidak ada titik ganjil yang menjadi titik limit . Untuk titik genap, lingkungan basis minimalnya adalah . Himpunan ini bertemu tepat untuk : pada pertemuannya memuat , pada memuat dan , dan pada memuat . Jadi titik limitnya adalah .  Untuk menjadi titik batas, lingkungan minimal harus bertemu dan . Himpunan dan memenuhi kedua syarat. Sebaliknya, tidak bertemu , sedangkan himpunan beranggota tunggal di dan juga termuat dalam ; semua lingkungan minimal lainnya tidak bertemu . Maka . Titik menyangkal implikasi dari titik limit ke titik batas, sedangkan kedua titik batas yang ada memang titik limit.   Penutupan himpunan tiga titik pada garis digital   Jangkar sumber: prompt 30. Pada garis digital dengan basis untuk ganjil dan untuk genap, ambil . Tentukan dan tuliskan sebagai gabungan himpunan terbuka. Rubrik: hitung penutupan melalui lingkungan basis dan berikan formula gabungan yang benar-benar menutupi seluruh komplemen.   Gabungkan dengan titik limit yang ditemukan sebelumnya. Untuk komplemennya, perhatikan himpunan ketika .    , dan    Titik tentu berada dalam penutupannya. Di luar , tepat dan yang setiap lingkungan basisnya bertemu . Jadi . Komplemennya adalah semua bilangan bulat dengan nilai mutlak sedikitnya . Untuk , himpunan basis termuat dalam komplemen. Sebaliknya, setiap bilangan bulat bernilai mutlak sedikitnya berada dalam salah satu himpunan tersebut. Karena setiap terbuka, formula gabungan pada jawaban juga membuktikan bahwa komplemen penutupan terbuka.   Titik limit dan titik batas himpunan beranggota tunggal pada garis digital   Jangkar sumber: prompt 31. Pada garis digital dengan basis untuk ganjil dan untuk genap, ambil . Tentukan titik limit dan titik batas , lalu putuskan kedua implikasi antara kedua jenis titik tersebut. Rubrik: uji di titik genap dan lingkungan beranggota tunggal di titik ganjil; implikasi vakum harus disebutkan sebagai vakum.   Tidak ada lingkungan yang dapat bertemu di . Namun bertemu dan .   Himpunan titik limit kosong dan . Karena itu setiap titik limit merupakan titik batas secara vakum, tetapi tidak setiap titik batas merupakan titik limit.   Titik ganjil mempunyai lingkungan beranggota tunggal, jadi bukan titik limit . Untuk titik genap , himpunan tidak memuat ; untuk , tidak mungkin ada pertemuan dengan . Jadi tidak mempunyai titik limit.  Lingkungan minimal bertemu di dan bertemu di , sehingga . Setiap titik lain mempunyai lingkungan basis yang tidak memuat , sehingga bukan titik batas. Maka , yang memberi kedua jawaban implikasi tersebut.   Penutupan himpunan beranggota tunggal pada garis digital   Jangkar sumber: prompt 32. Pada topologi garis digital yang sama, ambil . Tentukan dan tuliskan sebagai gabungan himpunan-himpunan terbuka. Rubrik: verifikasi penutupan melalui lingkungan dan beri gabungan terbuka yang mencakup titik ganjil serta genap tak nol.   Gunakan himpunan terbuka beranggota tunggal pada titik ganjil dan pada titik genap .    , dan    Titik berada dalam penutupan . Jika ganjil, lingkungan terbuka tidak bertemu . Jika genap dan tak nol, maka dan juga tidak memuat . Jadi setiap titik selain mempunyai lingkungan terbuka yang menghindari , sehingga . Gabungan pada jawaban memuat tepat semua titik ganjil dan semua titik genap tak nol; setiap sukunya merupakan unsur terbuka, sehingga merupakan penyajian terbuka dari komplemen.   Setiap ruang metrik bersifat reguler   Jangkar sumber: prompt 33 dalam latihan ex_Metric_space_regular . Untuk ruang metrik , buktikan bahwa ruang tersebut reguler. Anda boleh menggunakan fakta bahwa untuk himpunan tertutup tak kosong dan , berlaku . Rubrik: pisahkan titik dari himpunan tertutup dengan dua himpunan terbuka saling lepas; sertakan sifat jika definisi reguler yang digunakan mensyaratkannya.   Ambil , lalu bandingkan dengan gabungan bola untuk .   Setiap ruang metrik bersifat reguler: titik di luar himpunan tertutup dapat dipisahkan dari himpunan tersebut oleh lingkungan terbuka saling lepas.   Misalkan tertutup dan . Jika kosong, pemisahan langsung. Jika tidak, tetapkan . Definisikan dan . Keduanya terbuka, , dan . Jika , ada dengan , sehingga . Ini bertentangan dengan . Maka .  Selain itu, setiap himpunan beranggota tunggal bersifat tertutup dalam ruang metrik: untuk , bola menghindari , sehingga terbuka. Jadi pembuktian memenuhi pula konvensi bahwa ruang reguler harus bersifat .   Setiap ruang metrik bersifat normal   Jangkar sumber: prompt 34 dalam latihan ex_Metric_space_regular . Buktikan bahwa setiap ruang metrik merupakan ruang normal. Rubrik: untuk dua himpunan tertutup saling lepas, konstruksi harus tetap bekerja ketika jarak global antara kedua himpunan adalah nol.   Untuk himpunan tertutup saling lepas , gunakan dan tukar untuk mendefinisikan .   Setiap ruang metrik bersifat normal; dua himpunan tertutup saling lepas selalu mempunyai lingkungan terbuka yang saling lepas.   Misalkan tertutup dan saling lepas; kasus ketika salah satunya kosong bersifat langsung. Fungsi jarak ke himpunan bersifat Lipschitz dan karenanya kontinu. Jadi himpunan terbuka. Jika , maka dan karena tertutup serta ; jadi . Demikian pula . Ketaksamaan yang mendefinisikan dan tidak mungkin berlaku sekaligus, sehingga . Ruang metrik juga , maka syarat normal terpenuhi di bawah kedua konvensi umum.   Topologi bersifat Hausdorff   Jangkar sumber: prompt 35. Misalkan , dan mempunyai basis yang terdiri dari semua interval terbuka serta semua . Buktikan bahwa Hausdorff. Rubrik: gunakan hubungan antara dan topologi Euklides atau konstruksi lingkungan terpisah secara langsung.   Setiap himpunan terbuka Euklides tetap terbuka dalam .   Ya, merupakan ruang Hausdorff.   Basis memuat semua interval terbuka biasa, sehingga lebih halus daripada topologi Euklides. Untuk , pilih interval Euklides terbuka saling lepas dan yang masing-masing memuat dan . Kedua interval itu juga terbuka dalam . Jadi pasangan titik berbeda dapat dipisahkan dalam topologi , dan ruang tersebut Hausdorff.   "
+},
+{
+  "id": "o003-c90-ch13-exer-d-01",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-01",
+  "type": "Pemeriksaan",
+  "number": "M.56",
+  "title": "Sifat Hausdorff topologi Titik Asal Ganda.",
+  "body": "Sifat Hausdorff topologi Titik Asal Ganda   Jangkar sumber: prompt 26. Pada , kandidat basis memuat bola-bola Euklides yang berpusat di titik biasa dan, untuk , himpunan serta Tentukan apakah topologi Titik Asal Ganda ini Hausdorff dan buktikan jawaban. Rubrik: pisahkan semua jenis pasangan: dua titik biasa, kedua titik asal, dan satu titik asal dengan satu titik biasa.   Lingkungan khusus kedua titik asal berada pada setengah bidang yang berlawanan. Untuk titik biasa , pilih radius yang lebih kecil daripada sebagian tetap dari .   Ya, topologi Titik Asal Ganda yang diberikan merupakan ruang Hausdorff.   Dua titik biasa yang berbeda dapat dipisahkan oleh bola Euklides kecil yang saling lepas dan tidak berpusat di titik asal. Titik dan dipisahkan oleh dan , sebab yang pertama hanya memuat titik planar dengan beserta , sedangkan yang kedua hanya memuat titik planar dengan beserta .  Tinggal pasangan satu titik asal dan titik biasa . Tetapkan . Pilih dengan . Bola Euklides terpisah dari cakram berjari-jari di sekitar , sehingga terpisah dari ; argumen yang sama memakai untuk . Semua pasangan titik berbeda mempunyai lingkungan terbuka saling lepas, jadi ruang itu Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-02",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-02",
+  "type": "Pemeriksaan",
+  "number": "M.57",
+  "title": "Himpunan berhingga bersifat tertutup dalam topologi Zariski.",
+  "body": "Himpunan berhingga bersifat tertutup dalam topologi Zariski   Jangkar sumber: prompt 27. Buktikan bahwa setiap himpunan berhingga merupakan himpunan tertutup dalam dengan topologi Zariski. Rubrik: realisasikan himpunan beranggota tunggal sebagai himpunan nol polinom dan gunakan kestabilan himpunan tertutup terhadap gabungan berhingga.   Untuk , pertimbangkan .   Setiap himpunan beranggota tunggal, dan karenanya setiap gabungan berhingga himpunan-himpunan demikian, merupakan himpunan tertutup Zariski.   Untuk , definisikan . Karena bekerja di atas , berlaku jika dan hanya jika untuk setiap . Jadi , sehingga setiap himpunan beranggota tunggal merupakan himpunan tertutup Zariski. Jika , maka adalah gabungan berhingga himpunan-himpunan beranggota tunggal yang tertutup dan karena itu tertutup. Himpunan kosong juga tertutup, misalnya sebagai .  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-03",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-03",
+  "type": "Pemeriksaan",
+  "number": "M.58",
+  "title": "Topologi Zariski bukan Hausdorff.",
+  "body": "Topologi Zariski bukan Hausdorff   Jangkar sumber: prompt 28. Untuk , buktikan bahwa dengan topologi Zariski bukan Hausdorff. Gunakan basis yang terdiri dari , dengan polinom dalam variabel. Rubrik: buktikan bahwa dua himpunan terbuka Zariski tak kosong selalu beririsan, lalu terapkan pada dua titik berbeda.   Jika dan tak kosong, maka dan bukan polinom nol dan .   Untuk , ruang Zariski bukan Hausdorff; bahkan setiap dua himpunan terbuka tak kosongnya beririsan.   Ambil himpunan terbuka Zariski tak kosong . Masing-masing memuat unsur basis tak kosong, katakan dan . Karena kedua unsur basis tak kosong, dan bukan polinom nol. Gelanggang polinom merupakan daerah integral, sehingga bukan polinom nol. Polinom real bukan nol tidak lenyap di seluruh ; akibatnya tak kosong. Karena , diperoleh .  Untuk , ruang mempunyai dua titik berbeda. Jika ruang itu Hausdorff, kedua titik tersebut mempunyai lingkungan terbuka tak kosong yang saling lepas, bertentangan dengan hasil di atas. Jadi ruang Zariski ini bukan Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-04",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-04",
+  "type": "Pemeriksaan",
+  "number": "M.59",
+  "title": "Titik limit dan titik batas himpunan tiga titik pada garis digital.",
+  "body": "Titik limit dan titik batas himpunan tiga titik pada garis digital   Jangkar sumber: prompt 29. Pada , basisnya diberikan oleh Untuk , tentukan titik limit dan titik batas . Tentukan pula apakah setiap titik limit merupakan titik batas dan apakah setiap titik batas merupakan titik limit. Rubrik: uji lingkungan basis minimal di titik ganjil dan genap, serta jawab kedua implikasi secara terpisah.   Titik ganjil mempunyai lingkungan beranggota tunggal. Untuk titik genap , cukup uji .   Himpunan titik limit adalah , sedangkan . Jadi tidak setiap titik limit merupakan titik batas, tetapi setiap titik batas merupakan titik limit.   Setiap titik ganjil mempunyai lingkungan terbuka , sehingga tidak ada titik ganjil yang menjadi titik limit . Untuk titik genap, lingkungan basis minimalnya adalah . Himpunan ini bertemu tepat untuk : pada pertemuannya memuat , pada memuat dan , dan pada memuat . Jadi titik limitnya adalah .  Untuk menjadi titik batas, lingkungan minimal harus bertemu dan . Himpunan dan memenuhi kedua syarat. Sebaliknya, tidak bertemu , sedangkan himpunan beranggota tunggal di dan juga termuat dalam ; semua lingkungan minimal lainnya tidak bertemu . Maka . Titik menyangkal implikasi dari titik limit ke titik batas, sedangkan kedua titik batas yang ada memang titik limit.  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-05",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-05",
+  "type": "Pemeriksaan",
+  "number": "M.60",
+  "title": "Penutupan himpunan tiga titik pada garis digital.",
+  "body": "Penutupan himpunan tiga titik pada garis digital   Jangkar sumber: prompt 30. Pada garis digital dengan basis untuk ganjil dan untuk genap, ambil . Tentukan dan tuliskan sebagai gabungan himpunan terbuka. Rubrik: hitung penutupan melalui lingkungan basis dan berikan formula gabungan yang benar-benar menutupi seluruh komplemen.   Gabungkan dengan titik limit yang ditemukan sebelumnya. Untuk komplemennya, perhatikan himpunan ketika .    , dan    Titik tentu berada dalam penutupannya. Di luar , tepat dan yang setiap lingkungan basisnya bertemu . Jadi . Komplemennya adalah semua bilangan bulat dengan nilai mutlak sedikitnya . Untuk , himpunan basis termuat dalam komplemen. Sebaliknya, setiap bilangan bulat bernilai mutlak sedikitnya berada dalam salah satu himpunan tersebut. Karena setiap terbuka, formula gabungan pada jawaban juga membuktikan bahwa komplemen penutupan terbuka.  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-06",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-06",
+  "type": "Pemeriksaan",
+  "number": "M.61",
+  "title": "Titik limit dan titik batas himpunan beranggota tunggal pada garis digital.",
+  "body": "Titik limit dan titik batas himpunan beranggota tunggal pada garis digital   Jangkar sumber: prompt 31. Pada garis digital dengan basis untuk ganjil dan untuk genap, ambil . Tentukan titik limit dan titik batas , lalu putuskan kedua implikasi antara kedua jenis titik tersebut. Rubrik: uji di titik genap dan lingkungan beranggota tunggal di titik ganjil; implikasi vakum harus disebutkan sebagai vakum.   Tidak ada lingkungan yang dapat bertemu di . Namun bertemu dan .   Himpunan titik limit kosong dan . Karena itu setiap titik limit merupakan titik batas secara vakum, tetapi tidak setiap titik batas merupakan titik limit.   Titik ganjil mempunyai lingkungan beranggota tunggal, jadi bukan titik limit . Untuk titik genap , himpunan tidak memuat ; untuk , tidak mungkin ada pertemuan dengan . Jadi tidak mempunyai titik limit.  Lingkungan minimal bertemu di dan bertemu di , sehingga . Setiap titik lain mempunyai lingkungan basis yang tidak memuat , sehingga bukan titik batas. Maka , yang memberi kedua jawaban implikasi tersebut.  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-07",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-07",
+  "type": "Pemeriksaan",
+  "number": "M.62",
+  "title": "Penutupan himpunan beranggota tunggal pada garis digital.",
+  "body": "Penutupan himpunan beranggota tunggal pada garis digital   Jangkar sumber: prompt 32. Pada topologi garis digital yang sama, ambil . Tentukan dan tuliskan sebagai gabungan himpunan-himpunan terbuka. Rubrik: verifikasi penutupan melalui lingkungan dan beri gabungan terbuka yang mencakup titik ganjil serta genap tak nol.   Gunakan himpunan terbuka beranggota tunggal pada titik ganjil dan pada titik genap .    , dan    Titik berada dalam penutupan . Jika ganjil, lingkungan terbuka tidak bertemu . Jika genap dan tak nol, maka dan juga tidak memuat . Jadi setiap titik selain mempunyai lingkungan terbuka yang menghindari , sehingga . Gabungan pada jawaban memuat tepat semua titik ganjil dan semua titik genap tak nol; setiap sukunya merupakan unsur terbuka, sehingga merupakan penyajian terbuka dari komplemen.  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-08",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-08",
+  "type": "Pemeriksaan",
+  "number": "M.63",
+  "title": "Setiap ruang metrik bersifat reguler.",
+  "body": "Setiap ruang metrik bersifat reguler   Jangkar sumber: prompt 33 dalam latihan ex_Metric_space_regular . Untuk ruang metrik , buktikan bahwa ruang tersebut reguler. Anda boleh menggunakan fakta bahwa untuk himpunan tertutup tak kosong dan , berlaku . Rubrik: pisahkan titik dari himpunan tertutup dengan dua himpunan terbuka saling lepas; sertakan sifat jika definisi reguler yang digunakan mensyaratkannya.   Ambil , lalu bandingkan dengan gabungan bola untuk .   Setiap ruang metrik bersifat reguler: titik di luar himpunan tertutup dapat dipisahkan dari himpunan tersebut oleh lingkungan terbuka saling lepas.   Misalkan tertutup dan . Jika kosong, pemisahan langsung. Jika tidak, tetapkan . Definisikan dan . Keduanya terbuka, , dan . Jika , ada dengan , sehingga . Ini bertentangan dengan . Maka .  Selain itu, setiap himpunan beranggota tunggal bersifat tertutup dalam ruang metrik: untuk , bola menghindari , sehingga terbuka. Jadi pembuktian memenuhi pula konvensi bahwa ruang reguler harus bersifat .  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-09",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-09",
+  "type": "Pemeriksaan",
+  "number": "M.64",
+  "title": "Setiap ruang metrik bersifat normal.",
+  "body": "Setiap ruang metrik bersifat normal   Jangkar sumber: prompt 34 dalam latihan ex_Metric_space_regular . Buktikan bahwa setiap ruang metrik merupakan ruang normal. Rubrik: untuk dua himpunan tertutup saling lepas, konstruksi harus tetap bekerja ketika jarak global antara kedua himpunan adalah nol.   Untuk himpunan tertutup saling lepas , gunakan dan tukar untuk mendefinisikan .   Setiap ruang metrik bersifat normal; dua himpunan tertutup saling lepas selalu mempunyai lingkungan terbuka yang saling lepas.   Misalkan tertutup dan saling lepas; kasus ketika salah satunya kosong bersifat langsung. Fungsi jarak ke himpunan bersifat Lipschitz dan karenanya kontinu. Jadi himpunan terbuka. Jika , maka dan karena tertutup serta ; jadi . Demikian pula . Ketaksamaan yang mendefinisikan dan tidak mungkin berlaku sekaligus, sehingga . Ruang metrik juga , maka syarat normal terpenuhi di bawah kedua konvensi umum.  "
+},
+{
+  "id": "o003-c90-ch13-exer-d-10",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-d.html#o003-c90-ch13-exer-d-10",
+  "type": "Pemeriksaan",
+  "number": "M.65",
+  "title": "Topologi <span class=\"process-math\">\\(K\\)<\/span> bersifat Hausdorff.",
+  "body": "Topologi bersifat Hausdorff   Jangkar sumber: prompt 35. Misalkan , dan mempunyai basis yang terdiri dari semua interval terbuka serta semua . Buktikan bahwa Hausdorff. Rubrik: gunakan hubungan antara dan topologi Euklides atau konstruksi lingkungan terpisah secara langsung.   Setiap himpunan terbuka Euklides tetap terbuka dalam .   Ya, merupakan ruang Hausdorff.   Basis memuat semua interval terbuka biasa, sehingga lebih halus daripada topologi Euklides. Untuk , pilih interval Euklides terbuka saling lepas dan yang masing-masing memuat dan . Kedua interval itu juga terbuka dalam . Jadi pasangan titik berbeda dapat dipisahkan dalam topologi , dan ruang tersebut Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch13-exercise-guides-e",
+  "level": "1",
+  "url": "o003-c90-ch13-exercise-guides-e.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 13, bagian kelima",
+  "body": " Panduan latihan Bab 13, bagian kelima  Bagian ini memberi dukungan bertahap untuk prompt latihan 36 sampai 45 menurut peta prompt sumber Bab 13.  Topologi tidak reguler   Jangkar sumber: prompt 36. Untuk , topologi pada mempunyai basis semua interval dan semua himpunan . Buktikan bahwa tidak reguler dan simpulkan bahwa ruang itu tidak termetriskan. Rubrik: buktikan bahwa tertutup, lalu tunjukkan bahwa titik tidak dapat dipisahkan dari oleh himpunan terbuka saling lepas.   Setiap lingkungan memuat . Lingkungan terbuka dari harus memuat interval terbuka biasa di sekitar .   Ruang tidak reguler, sebab dan himpunan tertutup tidak mempunyai lingkungan terbuka saling lepas. Karena setiap ruang metrik reguler, ruang ini tidak termetriskan.   Komplemen terbuka: jika , himpunan basis memuat dan termuat dalam komplemen. Jadi tertutup, sedangkan .  Ambil sebarang lingkungan terbuka dari . Dari bentuk basis, ada sehingga . Ambil sebarang himpunan terbuka yang memuat . Pilih cukup besar sehingga . Karena , himpunan memuat unsur basis yang mengandung . Unsur ini harus interval terbuka biasa: himpunan berbentuk tidak memuat titik . Interval tersebut beririsan dengan , misalnya pada suatu titik irasional yang cukup dekat dengan . Maka .  Jadi titik dan himpunan tertutup tidak dapat dipisahkan, sehingga ruang ini tidak reguler. Jika topologi tersebut berasal dari suatu metrik, ruangnya harus reguler; kontradiksi. Maka tidak termetriskan.   Karakterisasi ruang dengan himpunan beranggota tunggal tertutup   Jangkar sumber: prompt 37 dalam latihan ex_T_1_2_3 . Buktikan bahwa ruang topologi bersifat jika dan hanya jika setiap himpunan beranggota tunggal bersifat tertutup. Rubrik: buktikan kedua arah menggunakan pasangan titik berbeda dan komplemen himpunan beranggota tunggal.   Jika bersifat , untuk setiap pilih himpunan terbuka yang memuat tetapi tidak memuat , lalu gabungkan semuanya.   Ruang bersifat tepat ketika setiap himpunan beranggota tunggal bersifat tertutup.   Andaikan bersifat dan tetapkan . Untuk setiap , ada himpunan terbuka yang memuat tetapi tidak memuat . Maka terbuka, sehingga tertutup.  Sebaliknya, andaikan setiap himpunan beranggota tunggal bersifat tertutup. Untuk dua titik berbeda , himpunan terbuka, memuat , dan tidak memuat ; demikian pula memuat tetapi tidak memuat . Inilah syarat .   Hierarki aksioma pemisahan   Jangkar sumber: prompt 38 dalam latihan ex_T_1_2_3 . Tunjukkan bahwa setiap ruang merupakan ruang , setiap ruang merupakan ruang , dan setiap ruang merupakan ruang . Rubrik: jelaskan ketiga implikasi dari definisi: Hausdorff, reguler bersama , dan normal bersama .   Untuk , buktikan bahwa himpunan beranggota tunggal bersifat tertutup. Untuk dua implikasi berikutnya, pisahkan satu titik dari himpunan beranggota tunggal yang tertutup, lalu pisahkan himpunan tersebut dari himpunan tertutup lain.   Berlaku rantai implikasi .   Jika bersifat dan , untuk setiap ada lingkungan terbuka dari yang saling lepas dengan suatu lingkungan terbuka dari ; khususnya . Gabungan semua adalah , jadi himpunan beranggota tunggal bersifat tertutup dan bersifat .  Jika bersifat , ruang itu dan reguler. Untuk , himpunan beranggota tunggal bersifat tertutup. Regularitas memisahkan dari dengan himpunan terbuka saling lepas, sehingga bersifat .  Jika bersifat , ruang itu dan normal. Untuk titik di luar himpunan tertutup , himpunan beranggota tunggal juga bersifat tertutup. Normalitas memisahkan dan dengan himpunan terbuka saling lepas. Maka reguler dan , yaitu bersifat .   Topologi komplemen berhingga: , bukan   Jangkar sumber: prompt 39 dalam latihan ex_not_T_1_2_3 . Buktikan bahwa dengan topologi komplemen berhingga merupakan ruang , tetapi bukan ruang . Rubrik: gunakan ketertutupan himpunan beranggota tunggal untuk bagian dan sifat irisan dua himpunan terbuka tak kosong untuk menyangkal .   Komplemen setiap himpunan beranggota tunggal terbuka karena himpunan itu berhingga. Selain itu, komplemen irisan dua himpunan terbuka kofinit adalah gabungan dua himpunan berhingga.   Garis nyata bertopologi komplemen berhingga bersifat , tetapi tidak Hausdorff dan karena itu bukan .   Untuk setiap , himpunan beranggota tunggal tertutup karena komplemennya terbuka menurut definisi topologi komplemen berhingga. Jadi ruang itu bersifat .  Jika terbuka dan tak kosong, maka dan berhingga. Karena berhingga sedangkan tak berhingga, irisan tidak mungkin kosong. Jadi tidak ada dua lingkungan terbuka tak kosong yang saling lepas. Dua titik berbeda tidak dapat dipisahkan, sehingga ruang itu bukan .   Ruang : , tetapi bukan   Jangkar sumber: prompt 40 dalam latihan ex_not_T_1_2_3 . Definisikan dan beri topologi dengan basis semua interval terbuka biasa serta semua . Buktikan bahwa bersifat , tetapi bukan . Rubrik: buktikan sifat Hausdorff dari kehalusan topologi dan ulangi pemisahan gagal antara dan himpunan tertutup .   Topologi ini lebih halus daripada topologi Euklides. Untuk kegagalan regularitas, setiap lingkungan memuat interval kecil yang dikurangi , sedangkan lingkungan titik memuat interval biasa.   Ruang bersifat , tetapi tidak reguler; karena itu ruang tersebut bukan .   Semua interval Euklides terbuka juga terbuka dalam . Lingkungan Euklides saling lepas yang memisahkan dua bilangan real berbeda tetap terbuka dalam topologi ini. Jadi Hausdorff, yaitu bersifat .  Himpunan tertutup karena merupakan gabungan himpunan basis berbentuk , dan . Ambil lingkungan terbuka dari dan lingkungan terbuka dari . Ada dengan . Pilih . Karena memuat , memuat interval terbuka biasa di sekitar ; interval itu bertemu . Maka . Jadi dan himpunan tertutup tidak dapat dipisahkan, sehingga tidak reguler dan bukan .   Apakah setiap titik limit merupakan titik batas?   Jangkar sumber: prompt 41. Nilai pernyataan: “Setiap titik limit dari suatu subhimpunan dalam ruang topologi juga merupakan titik batas .” Rubrik: jika salah, berikan ruang, himpunan, dan titik konkret, lalu verifikasi definisi titik limit dan kegagalan definisi titik batas.   Titik interior suatu himpunan dapat sekaligus menjadi titik limit. Uji dalam dengan topologi Euklides.   Salah. Pada Euklides, adalah titik limit , tetapi bukan titik batas .   Setiap lingkungan Euklides dari memuat titik , sehingga merupakan titik limit . Namun adalah lingkungan yang termuat seluruhnya dalam , sehingga tidak bertemu . Jadi . Contoh ini menyangkal pernyataan.   Apakah setiap titik batas merupakan titik limit?   Jangkar sumber: prompt 42. Nilai pernyataan: “Setiap titik batas dari suatu subhimpunan dalam ruang topologi juga merupakan titik limit .” Rubrik: jika salah, berikan titik batas yang terasing dan periksa kedua definisi secara langsung.   Pertimbangkan himpunan beranggota tunggal dalam garis nyata Euklides.   Salah. Dalam Euklides, , tetapi bukan titik limit .   Setiap lingkungan bertemu di dan juga memuat bilangan real bukan nol, sehingga bertemu . Maka . Akan tetapi , jadi tidak ada lingkungan yang dapat bertemu himpunan tersebut. Dengan demikian bukan titik limit , dan pernyataan itu salah.   Kesamaan interior dan penutupan   Jangkar sumber: prompt 43. Nilai pernyataan: jika dan , maka terbuka sekaligus tertutup. Rubrik: gunakan dua inklusi universal yang menempatkan di antara interior dan penutupannya.   Selalu berlaku .   Benar. Kondisi tersebut memaksa .   Untuk setiap subhimpunan , berlaku . Jika kedua ujungnya sama, semua himpunan dalam rantai inklusi itu sama: . Kesamaan menyatakan bahwa terbuka, sedangkan menyatakan bahwa tertutup. Jadi pernyataan benar.   Interior dan penutupan tidak menentukan himpunan   Jangkar sumber: prompt 44. Nilai pernyataan: jika dan , maka . Rubrik: jika salah, berikan dua himpunan berbeda dalam ruang konkret dan hitung kedua interior serta kedua penutupannya.   Dalam Euklides, bandingkan bilangan rasional dengan bilangan irasional.   Salah. Ambil dan dalam Euklides.   Himpunan rasional dan irasional keduanya rapat dalam , sebab setiap interval terbuka memuat bilangan dari kedua jenis. Jadi . Tidak ada interval terbuka yang seluruhnya rasional atau seluruhnya irasional, sehingga . Namun —bahkan keduanya saling lepas. Maka kesamaan interior dan penutupan tidak menentukan himpunan.   Penutupan tidak selalu mempertahankan irisan   Jangkar sumber: prompt 45. Nilai pernyataan untuk sebarang subhimpunan dari ruang topologi . Rubrik: jika salah, berikan dua himpunan konkret dan hitung kedua ruas; sebutkan inklusi yang selalu benar.   Dalam Euklides, gunakan dan .   Salah. Untuk dan , , tetapi .   Kedua interval tersebut tidak beririsan, sehingga dan . Di sisi lain, dan , sehingga . Jadi kesamaan yang dinyatakan salah. Inklusi selalu benar karena dan .   "
+},
+{
+  "id": "o003-c90-ch13-exer-e-01",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-01",
+  "type": "Pemeriksaan",
+  "number": "M.66",
+  "title": "Topologi <span class=\"process-math\">\\(K\\)<\/span> tidak reguler.",
+  "body": "Topologi tidak reguler   Jangkar sumber: prompt 36. Untuk , topologi pada mempunyai basis semua interval dan semua himpunan . Buktikan bahwa tidak reguler dan simpulkan bahwa ruang itu tidak termetriskan. Rubrik: buktikan bahwa tertutup, lalu tunjukkan bahwa titik tidak dapat dipisahkan dari oleh himpunan terbuka saling lepas.   Setiap lingkungan memuat . Lingkungan terbuka dari harus memuat interval terbuka biasa di sekitar .   Ruang tidak reguler, sebab dan himpunan tertutup tidak mempunyai lingkungan terbuka saling lepas. Karena setiap ruang metrik reguler, ruang ini tidak termetriskan.   Komplemen terbuka: jika , himpunan basis memuat dan termuat dalam komplemen. Jadi tertutup, sedangkan .  Ambil sebarang lingkungan terbuka dari . Dari bentuk basis, ada sehingga . Ambil sebarang himpunan terbuka yang memuat . Pilih cukup besar sehingga . Karena , himpunan memuat unsur basis yang mengandung . Unsur ini harus interval terbuka biasa: himpunan berbentuk tidak memuat titik . Interval tersebut beririsan dengan , misalnya pada suatu titik irasional yang cukup dekat dengan . Maka .  Jadi titik dan himpunan tertutup tidak dapat dipisahkan, sehingga ruang ini tidak reguler. Jika topologi tersebut berasal dari suatu metrik, ruangnya harus reguler; kontradiksi. Maka tidak termetriskan.  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-02",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-02",
+  "type": "Pemeriksaan",
+  "number": "M.67",
+  "title": "Karakterisasi ruang <span class=\"process-math\">\\(T_1\\)<\/span> dengan himpunan beranggota tunggal tertutup.",
+  "body": "Karakterisasi ruang dengan himpunan beranggota tunggal tertutup   Jangkar sumber: prompt 37 dalam latihan ex_T_1_2_3 . Buktikan bahwa ruang topologi bersifat jika dan hanya jika setiap himpunan beranggota tunggal bersifat tertutup. Rubrik: buktikan kedua arah menggunakan pasangan titik berbeda dan komplemen himpunan beranggota tunggal.   Jika bersifat , untuk setiap pilih himpunan terbuka yang memuat tetapi tidak memuat , lalu gabungkan semuanya.   Ruang bersifat tepat ketika setiap himpunan beranggota tunggal bersifat tertutup.   Andaikan bersifat dan tetapkan . Untuk setiap , ada himpunan terbuka yang memuat tetapi tidak memuat . Maka terbuka, sehingga tertutup.  Sebaliknya, andaikan setiap himpunan beranggota tunggal bersifat tertutup. Untuk dua titik berbeda , himpunan terbuka, memuat , dan tidak memuat ; demikian pula memuat tetapi tidak memuat . Inilah syarat .  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-03",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-03",
+  "type": "Pemeriksaan",
+  "number": "M.68",
+  "title": "Hierarki aksioma pemisahan.",
+  "body": "Hierarki aksioma pemisahan   Jangkar sumber: prompt 38 dalam latihan ex_T_1_2_3 . Tunjukkan bahwa setiap ruang merupakan ruang , setiap ruang merupakan ruang , dan setiap ruang merupakan ruang . Rubrik: jelaskan ketiga implikasi dari definisi: Hausdorff, reguler bersama , dan normal bersama .   Untuk , buktikan bahwa himpunan beranggota tunggal bersifat tertutup. Untuk dua implikasi berikutnya, pisahkan satu titik dari himpunan beranggota tunggal yang tertutup, lalu pisahkan himpunan tersebut dari himpunan tertutup lain.   Berlaku rantai implikasi .   Jika bersifat dan , untuk setiap ada lingkungan terbuka dari yang saling lepas dengan suatu lingkungan terbuka dari ; khususnya . Gabungan semua adalah , jadi himpunan beranggota tunggal bersifat tertutup dan bersifat .  Jika bersifat , ruang itu dan reguler. Untuk , himpunan beranggota tunggal bersifat tertutup. Regularitas memisahkan dari dengan himpunan terbuka saling lepas, sehingga bersifat .  Jika bersifat , ruang itu dan normal. Untuk titik di luar himpunan tertutup , himpunan beranggota tunggal juga bersifat tertutup. Normalitas memisahkan dan dengan himpunan terbuka saling lepas. Maka reguler dan , yaitu bersifat .  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-04",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-04",
+  "type": "Pemeriksaan",
+  "number": "M.69",
+  "title": "Topologi komplemen berhingga: <span class=\"process-math\">\\(T_1\\text{,}\\)<\/span> bukan <span class=\"process-math\">\\(T_2\\)<\/span>.",
+  "body": "Topologi komplemen berhingga: , bukan   Jangkar sumber: prompt 39 dalam latihan ex_not_T_1_2_3 . Buktikan bahwa dengan topologi komplemen berhingga merupakan ruang , tetapi bukan ruang . Rubrik: gunakan ketertutupan himpunan beranggota tunggal untuk bagian dan sifat irisan dua himpunan terbuka tak kosong untuk menyangkal .   Komplemen setiap himpunan beranggota tunggal terbuka karena himpunan itu berhingga. Selain itu, komplemen irisan dua himpunan terbuka kofinit adalah gabungan dua himpunan berhingga.   Garis nyata bertopologi komplemen berhingga bersifat , tetapi tidak Hausdorff dan karena itu bukan .   Untuk setiap , himpunan beranggota tunggal tertutup karena komplemennya terbuka menurut definisi topologi komplemen berhingga. Jadi ruang itu bersifat .  Jika terbuka dan tak kosong, maka dan berhingga. Karena berhingga sedangkan tak berhingga, irisan tidak mungkin kosong. Jadi tidak ada dua lingkungan terbuka tak kosong yang saling lepas. Dua titik berbeda tidak dapat dipisahkan, sehingga ruang itu bukan .  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-05",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-05",
+  "type": "Pemeriksaan",
+  "number": "M.70",
+  "title": "Ruang <span class=\"process-math\">\\(\\R_K\\text{:}\\)<\/span> <span class=\"process-math\">\\(T_2\\text{,}\\)<\/span> tetapi bukan <span class=\"process-math\">\\(T_3\\)<\/span>.",
+  "body": "Ruang : , tetapi bukan   Jangkar sumber: prompt 40 dalam latihan ex_not_T_1_2_3 . Definisikan dan beri topologi dengan basis semua interval terbuka biasa serta semua . Buktikan bahwa bersifat , tetapi bukan . Rubrik: buktikan sifat Hausdorff dari kehalusan topologi dan ulangi pemisahan gagal antara dan himpunan tertutup .   Topologi ini lebih halus daripada topologi Euklides. Untuk kegagalan regularitas, setiap lingkungan memuat interval kecil yang dikurangi , sedangkan lingkungan titik memuat interval biasa.   Ruang bersifat , tetapi tidak reguler; karena itu ruang tersebut bukan .   Semua interval Euklides terbuka juga terbuka dalam . Lingkungan Euklides saling lepas yang memisahkan dua bilangan real berbeda tetap terbuka dalam topologi ini. Jadi Hausdorff, yaitu bersifat .  Himpunan tertutup karena merupakan gabungan himpunan basis berbentuk , dan . Ambil lingkungan terbuka dari dan lingkungan terbuka dari . Ada dengan . Pilih . Karena memuat , memuat interval terbuka biasa di sekitar ; interval itu bertemu . Maka . Jadi dan himpunan tertutup tidak dapat dipisahkan, sehingga tidak reguler dan bukan .  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-06",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-06",
+  "type": "Pemeriksaan",
+  "number": "M.71",
+  "title": "Apakah setiap titik limit merupakan titik batas?",
+  "body": "Apakah setiap titik limit merupakan titik batas?   Jangkar sumber: prompt 41. Nilai pernyataan: “Setiap titik limit dari suatu subhimpunan dalam ruang topologi juga merupakan titik batas .” Rubrik: jika salah, berikan ruang, himpunan, dan titik konkret, lalu verifikasi definisi titik limit dan kegagalan definisi titik batas.   Titik interior suatu himpunan dapat sekaligus menjadi titik limit. Uji dalam dengan topologi Euklides.   Salah. Pada Euklides, adalah titik limit , tetapi bukan titik batas .   Setiap lingkungan Euklides dari memuat titik , sehingga merupakan titik limit . Namun adalah lingkungan yang termuat seluruhnya dalam , sehingga tidak bertemu . Jadi . Contoh ini menyangkal pernyataan.  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-07",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-07",
+  "type": "Pemeriksaan",
+  "number": "M.72",
+  "title": "Apakah setiap titik batas merupakan titik limit?",
+  "body": "Apakah setiap titik batas merupakan titik limit?   Jangkar sumber: prompt 42. Nilai pernyataan: “Setiap titik batas dari suatu subhimpunan dalam ruang topologi juga merupakan titik limit .” Rubrik: jika salah, berikan titik batas yang terasing dan periksa kedua definisi secara langsung.   Pertimbangkan himpunan beranggota tunggal dalam garis nyata Euklides.   Salah. Dalam Euklides, , tetapi bukan titik limit .   Setiap lingkungan bertemu di dan juga memuat bilangan real bukan nol, sehingga bertemu . Maka . Akan tetapi , jadi tidak ada lingkungan yang dapat bertemu himpunan tersebut. Dengan demikian bukan titik limit , dan pernyataan itu salah.  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-08",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-08",
+  "type": "Pemeriksaan",
+  "number": "M.73",
+  "title": "Kesamaan interior dan penutupan.",
+  "body": "Kesamaan interior dan penutupan   Jangkar sumber: prompt 43. Nilai pernyataan: jika dan , maka terbuka sekaligus tertutup. Rubrik: gunakan dua inklusi universal yang menempatkan di antara interior dan penutupannya.   Selalu berlaku .   Benar. Kondisi tersebut memaksa .   Untuk setiap subhimpunan , berlaku . Jika kedua ujungnya sama, semua himpunan dalam rantai inklusi itu sama: . Kesamaan menyatakan bahwa terbuka, sedangkan menyatakan bahwa tertutup. Jadi pernyataan benar.  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-09",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-09",
+  "type": "Pemeriksaan",
+  "number": "M.74",
+  "title": "Interior dan penutupan tidak menentukan himpunan.",
+  "body": "Interior dan penutupan tidak menentukan himpunan   Jangkar sumber: prompt 44. Nilai pernyataan: jika dan , maka . Rubrik: jika salah, berikan dua himpunan berbeda dalam ruang konkret dan hitung kedua interior serta kedua penutupannya.   Dalam Euklides, bandingkan bilangan rasional dengan bilangan irasional.   Salah. Ambil dan dalam Euklides.   Himpunan rasional dan irasional keduanya rapat dalam , sebab setiap interval terbuka memuat bilangan dari kedua jenis. Jadi . Tidak ada interval terbuka yang seluruhnya rasional atau seluruhnya irasional, sehingga . Namun —bahkan keduanya saling lepas. Maka kesamaan interior dan penutupan tidak menentukan himpunan.  "
+},
+{
+  "id": "o003-c90-ch13-exer-e-10",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-e.html#o003-c90-ch13-exer-e-10",
+  "type": "Pemeriksaan",
+  "number": "M.75",
+  "title": "Penutupan tidak selalu mempertahankan irisan.",
+  "body": "Penutupan tidak selalu mempertahankan irisan   Jangkar sumber: prompt 45. Nilai pernyataan untuk sebarang subhimpunan dari ruang topologi . Rubrik: jika salah, berikan dua himpunan konkret dan hitung kedua ruas; sebutkan inklusi yang selalu benar.   Dalam Euklides, gunakan dan .   Salah. Untuk dan , , tetapi .   Kedua interval tersebut tidak beririsan, sehingga dan . Di sisi lain, dan , sehingga . Jadi kesamaan yang dinyatakan salah. Inklusi selalu benar karena dan .  "
+},
+{
+  "id": "o003-c90-ch13-exercise-guides-f",
+  "level": "1",
+  "url": "o003-c90-ch13-exercise-guides-f.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 13, bagian keenam",
+  "body": " Panduan latihan Bab 13, bagian keenam  Bagian ini memuat tepat prompt latihan terakhir, yaitu prompt 46 menurut peta prompt sumber Bab 13.  Penutupan mempertahankan gabungan berhingga   Jangkar sumber: prompt 46. Nilai pernyataan untuk sebarang subhimpunan dari ruang topologi . Rubrik: buktikan kedua inklusi menggunakan monotonisitas penutupan dan sifat gabungan berhingga himpunan tertutup.   Himpunan tertutup dan memuat . Untuk inklusi sebaliknya, gunakan dan .   Benar. Penutupan dari gabungan dua himpunan sama dengan gabungan kedua penutupannya.   Dari dan , monotonisitas penutupan memberi dan . Maka .  Sebaliknya, dan tertutup, sehingga gabungan berhingga tertutup. Gabungan ini memuat . Karena adalah himpunan tertutup terkecil yang memuat , diperoleh . Kedua inklusi membuktikan kesamaan.   "
+},
+{
+  "id": "o003-c90-ch13-exer-f-01",
+  "level": "2",
+  "url": "o003-c90-ch13-exercise-guides-f.html#o003-c90-ch13-exer-f-01",
+  "type": "Pemeriksaan",
+  "number": "M.76",
+  "title": "Penutupan mempertahankan gabungan berhingga.",
+  "body": "Penutupan mempertahankan gabungan berhingga   Jangkar sumber: prompt 46. Nilai pernyataan untuk sebarang subhimpunan dari ruang topologi . Rubrik: buktikan kedua inklusi menggunakan monotonisitas penutupan dan sifat gabungan berhingga himpunan tertutup.   Himpunan tertutup dan memuat . Untuk inklusi sebaliknya, gunakan dan .   Benar. Penutupan dari gabungan dua himpunan sama dengan gabungan kedua penutupannya.   Dari dan , monotonisitas penutupan memberi dan . Maka .  Sebaliknya, dan tertutup, sehingga gabungan berhingga tertutup. Gabungan ini memuat . Karena adalah himpunan tertutup terkecil yang memuat , diperoleh . Kedua inklusi membuktikan kesamaan.  "
+},
+{
+  "id": "o003-c90-ch13-mastery",
+  "level": "1",
+  "url": "o003-c90-ch13-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 13",
+  "body": " Pemeriksaan penguasaan Bab 13  Delapan pemeriksaan berikut memadukan himpunan tertutup, titik limit, tutupan, batas, kerapatan, dan aksioma separasi dalam persoalan baru. Materi ini ditulis mandiri dalam bahasa Indonesia untuk komponen pendamping berlisensi CC BY 4.0; materi ini bukan teks, terjemahan, atau solusi resmi GVSU. Kerjakan setiap soal sebelum membuka petunjuk. Jawaban menyatakan hasil utama, sedangkan solusi memberikan uraian matematis lengkap.  Aljabar himpunan tertutup dan syarat gabungan berhingga  Dalam ruang topologi , buktikan langsung dari hukum De Morgan bahwa irisan sebarang himpunan tertutup dan gabungan berhingga himpunan tertutup bersifat tertutup. Kemudian, dalam dengan topologi Euklides, gunakan untuk menunjukkan bahwa gabungan terhitung himpunan tertutup tidak harus tertutup.    Tahap 1. Ambil komplemen dan tukar irisan dengan gabungan.   Tahap 2. Untuk kasus berhingga, gunakan bahwa irisan berhingga himpunan terbuka tetap terbuka.   Tahap 3. Tentukan titik limit dari yang tidak termasuk di dalamnya.   Jika semua tertutup, maka terbuka. Untuk , komplemen gabungannya adalah irisan berhingga komplemen yang terbuka. Namun, tidak memuat titik limitnya , sehingga tidak tertutup.   Misalkan keluarga himpunan tertutup. Setiap terbuka, sehingga terbuka. Jadi irisannya tertutup. Jika tertutup, maka terbuka karena hanya merupakan irisan berhingga. Jadi gabungan berhingga tersebut tertutup.  Setiap adalah himpunan beranggota tunggal, maka tertutup dalam . Tetapkan . Setiap lingkungan Euklides dari memuat untuk semua yang cukup besar, sehingga merupakan titik limit dari . Akan tetapi . Karena himpunan tertutup harus memuat semua titik limitnya, tidak tertutup. Dengan demikian kata “berhingga” tidak dapat dihapus dari teorema gabungan.   Tutupan sebagai himpunan tertutup terkecil  Untuk , misalkan Buktikan bahwa . Turunkan dari hasil ini bahwa mengakibatkan dan bahwa .    Tahap 1. Irisan pada definisi tertutup dan memuat .   Tahap 2. Setiap himpunan tertutup yang memuat juga memuat semua titik limit .   Tahap 3. Gunakan sifat minimal yang baru dibuktikan, bukan perhitungan titik demi titik.    adalah himpunan tertutup terkecil yang memuat , dan sifat yang sama mencirikan ; jadi keduanya sama. Monotonisitas dan idempotensi tutupan langsung mengikuti sifat minimal ini.   Keluarga pada definisi tidak kosong karena memuat . Irisan sebarang himpunan tertutup bersifat tertutup, sehingga tertutup; setiap himpunan dalam keluarga itu memuat , maka . Jadi adalah salah satu himpunan tertutup yang memuat .  Jika tertutup dan , ambil . Setiap lingkungan bertemu , sehingga . Karena tertutup, berlaku , jadi . Karena terdiri atas beserta titik-titik limitnya, berlaku . Ini benar untuk setiap dalam keluarga tersebut, jadi . Sebaliknya, sendiri tertutup dan memuat , sehingga muncul dalam keluarga yang diiris dan memberi .  Jika , setiap himpunan tertutup yang memuat juga memuat . Khususnya adalah himpunan tertutup yang memuat , maka minimalitas memberi . Karena sudah tertutup, himpunan tertutup terkecil yang memuatnya adalah dirinya sendiri. Jadi .   Tiga wajah batas  Untuk , buktikan identitas Gunakan identitas ini untuk membuktikan bahwa tertutup, bahwa , dan bahwa jika dan hanya jika buka-tutup.    Tahap 1. Titik batas adalah titik yang setiap lingkungannya bertemu dan komplemennya.   Tahap 2. Gunakan .   Tahap 3. Jika batas kosong, bandingkan dengan dan .   Kedua rumus mengikuti langsung dari pencirian lingkungan. Batas tertutup karena merupakan irisan dua himpunan tertutup; rumusnya simetris terhadap dan komplemennya. Batas kosong tepat ketika , yaitu ketika sekaligus terbuka dan tertutup.   Titik berada dalam jika dan hanya jika setiap lingkungan bertemu . Demikian pula, jika dan hanya jika setiap lingkungannya bertemu . Kedua syarat berlaku sekaligus tepat ketika merupakan titik batas . Maka .  Sebuah titik tidak berada dalam tepat ketika setiap lingkungannya bertemu . Jadi , dan Bentuk irisan membuktikan ketertutupan. Menukar dengan komplemennya hanya menukar kedua faktor, sehingga batasnya sama.  Jika buka-tutup, maka , jadi batasnya kosong. Sebaliknya, jika batas kosong, maka , sehingga . Selalu berlaku ; ketiganya karena itu sama. Persamaan menyatakan bahwa terbuka, dan menyatakan bahwa tertutup.   Ketunggalan limit dan alasan Hausdorff diperlukan  Buktikan bahwa barisan dalam ruang Hausdorff memiliki paling banyak satu limit. Kemudian ambil dengan topologi indiskret dan tunjukkan bahwa setiap barisan dalam konvergen ke sekaligus ke . Jelaskan tepat di mana bukti pertama gagal pada contoh kedua.    Tahap 1. Jika dua limit berbeda, pisahkan keduanya dengan dua himpunan terbuka yang saling lepas.   Tahap 2. Setelah suatu indeks tertentu, suku barisan harus berada dalam kedua himpunan terbuka tersebut.   Tahap 3. Dalam topologi indiskret, satu-satunya himpunan terbuka yang memuat sebuah titik adalah .   Dua limit berbeda dalam ruang Hausdorff akan mempunyai lingkungan terbuka saling lepas, sedangkan ekor barisan harus berada dalam keduanya, sebuah kontradiksi. Dalam ruang indiskret, setiap lingkungan terbuka yang relevan adalah , sehingga syarat konvergensi terpenuhi untuk setiap titik dan pemisahan yang diperlukan tidak ada.   Andaikan konvergen ke dua titik berbeda dan dalam ruang Hausdorff. Ada himpunan terbuka saling lepas dengan dan . Konvergensi ke memberi sehingga untuk . Konvergensi ke memberi sehingga untuk . Jika , maka , bertentangan dengan .  Sekarang gunakan topologi pada . Satu-satunya himpunan terbuka yang memuat adalah , dan setiap suku setiap barisan berada dalam . Jadi definisi konvergensi ke dipenuhi, bahkan dengan indeks sejak suku pertama. Argumen yang sama berlaku untuk . Bukti ketunggalan gagal tepat pada langkah memilih lingkungan terbuka saling lepas bagi dan ; ruang indiskret bukan Hausdorff.   tidak menjamin sifat Hausdorff  Misalkan himpunan tak berhingga dengan topologi komplemen berhingga. Buktikan bahwa merupakan ruang , tetapi bukan ruang Hausdorff. Nyatakan pula apa yang terjadi pada barisan konstan dalam ruang ini.    Tahap 1. Ruang bersifat jika setiap himpunan beranggota tunggal tertutup.   Tahap 2. Dua himpunan terbuka tak kosong dalam topologi komplemen berhingga tidak dapat saling lepas.   Tahap 3. Uji konvergensi barisan yang semua sukunya sama dengan terhadap lingkungan titik yang tidak memuat .   Setiap himpunan beranggota tunggal tertutup, maka ruang dengan topologi komplemen berhingga bersifat . Dua himpunan terbuka tak kosong selalu beririsan, sehingga dua titik berbeda tidak dapat dipisahkan secara Hausdorff. Walaupun ruang tidak Hausdorff, barisan konstan pada hanya konvergen ke karena sifat menyediakan lingkungan setiap yang mengecualikan .   Untuk setiap , komplemen mempunyai komplemen berhingga, sehingga terbuka dalam topologi komplemen berhingga. Maka tertutup. Karena ini berlaku untuk semua , ruang tersebut bersifat .  Jika dan terbuka tak kosong, komplemen keduanya berhingga. Andaikan . Hukum De Morgan memberi , gabungan dua himpunan berhingga. Ini akan membuat berhingga, sebuah kontradiksi. Jadi tidak ada dua himpunan terbuka tak kosong yang saling lepas, dan ruang tidak Hausdorff.  Barisan konstan jelas konvergen ke . Untuk , himpunan adalah lingkungan terbuka dari yang tidak memuat satu pun suku barisan. Maka barisan tidak konvergen ke . Jadi kegagalan Hausdorff tidak dengan sendirinya memaksa setiap barisan mempunyai banyak limit.   Garis Sorgenfrey lebih halus secara ketat  Pada , misalkan topologi Euklides dan topologi limit bawah dengan basis semua interval . Buktikan bahwa lebih halus secara ketat daripada . Buktikan pula bahwa setiap interval basis bersifat buka-tutup dalam .    Tahap 1. Untuk , pilih interval setengah terbuka kecil yang memuat dan tetap berada dalam .   Tahap 2. Himpunan terbuka dalam topologi limit bawah tetapi bukan dalam topologi Euklides.   Tahap 3. Tulis komplemen sebagai gabungan dua himpunan yang terbuka dalam topologi limit bawah.   Setiap interval Euklides merupakan gabungan interval basis limit bawah, sehingga . Inklusi ketat karena tidak terbuka dalam topologi Euklides. Selain itu, dan kedua ruas di kanan terbuka dalam topologi limit bawah; maka juga tertutup.   Ambil interval Euklides dan . Karena , interval basis memuat dan berada dalam . Jadi setiap titik mempunyai anggota basis limit bawah yang berada di dalam interval tersebut. Maka setiap interval Euklides terbuka dalam , dan akibatnya .  Himpunan sendiri merupakan anggota basis, sehingga terbuka dalam . Himpunan itu tidak terbuka dalam topologi Euklides: setiap interval Euklides yang memuat juga memuat bilangan negatif. Jadi inklusi topologi bersifat ketat.  Untuk interval basis umum, . Kita mempunyai dan . Keduanya gabungan anggota basis, jadi terbuka. Komplemen terbuka, sehingga tertutup sekaligus terbuka.   Tiga pencirian kerapatan  Untuk , buktikan ekuivalensi berikut:  rapat dalam ;  ;  setiap himpunan terbuka tak kosong dalam beririsan dengan .  Gunakan hasil ini untuk membuktikan bahwa rapat dalam bertopologi Euklides, sedangkan tidak.    Tahap 1. Gunakan definisi “rapat” dan pencirian tutupan melalui lingkungan.   Tahap 2. Jika ada himpunan terbuka tak kosong yang tidak bertemu , pilih satu titik di dalamnya.   Tahap 3. Gunakan kerapatan bilangan rasional dalam setiap interval real; untuk , cari interval terbuka di antara dua bilangan bulat berturutan.   Kerapatan didefinisikan oleh . Persamaan ini berlaku tepat ketika setiap lingkungan dari setiap titik dalam bertemu , yang ekuivalen dengan tidak adanya himpunan terbuka tak kosong yang menghindari . Setiap interval terbuka real memuat bilangan rasional, tetapi tidak memuat bilangan bulat.   Pernyataan pertama dan kedua sama menurut definisi kerapatan. Andaikan dan terbuka tak kosong. Pilih . Karena , setiap lingkungan , khususnya , bertemu . Jadi .  Sebaliknya, andaikan setiap himpunan terbuka tak kosong bertemu . Untuk sembarang , setiap lingkungan dari memuat himpunan terbuka tak kosong dengan . Hipotesis memberi , maka . Jadi . Karena sembarang, .  Setiap himpunan terbuka tak kosong dalam topologi Euklides memuat interval terbuka tak kosong, dan setiap interval demikian memuat bilangan rasional. Maka rapat dalam . Sebaliknya, interval terbuka tidak bertemu . Pencirian ketiga menunjukkan bahwa tidak rapat.   Ruang metrik bersifat reguler dan normal  Misalkan ruang metrik. Pertama, untuk himpunan tertutup tak kosong dan , bangun dua himpunan terbuka saling lepas yang masing-masing memuat dan . Kemudian, untuk dua himpunan tertutup tak kosong dan saling lepas , gunakan fungsi jarak ke himpunan untuk membuktikan bahwa bersifat normal. Tangani kasus salah satu himpunan kosong secara terpisah dan jelaskan mengapa tidak aman mengandaikan .    Tahap 1. Karena tertutup dan , . Bandingkan bola berjari-jari di dengan gabungan bola yang sesuai di titik-titik .   Tahap 2. Untuk normalitas, tetapkan dan .   Tahap 3. Fungsi kontinu dan bahkan Lipschitz. Carilah contoh dua himpunan tertutup saling lepas yang makin mendekat di tak hingga.   Ruang metrik bersifat reguler dengan memisahkan dan menggunakan jarak positif . Untuk normalitas, himpunan dan di atas terbuka, saling lepas, dan masing-masing memuat dan . Dua himpunan tertutup saling lepas dapat mempunyai jarak infimum nol, jadi satu jari-jari seragam tidak selalu tersedia.   Karena tertutup dan , pencirian jarak ke himpunan memberi . Tetapkan dan . Keduanya terbuka, , dan . Jika , ada dengan dan . Ketaksamaan segitiga memberi , bertentangan dengan definisi . Maka , dan ruang bersifat reguler.  Jika salah satu dari kosong, pisahkan keduanya dengan dan . Untuk dua himpunan tertutup tak kosong dan saling lepas , fungsi kontinu karena masing-masing fungsi jarak kontinu. Maka dan terbuka dan jelas saling lepas. Jika , maka , sedangkan karena tertutup dan . Jadi . Dengan cara yang sama, . Ini membuktikan normalitas.  Tidak selalu berlaku . Dalam , ambil dan . Kedua himpunan tertutup dan saling lepas, tetapi jarak antara dan menuju nol. Jadi pemisahan normal harus memakai jarak titik-ke-himpunan yang berubah terhadap titik, bukan satu jarak global positif.   "
+},
+{
+  "id": "o003-c90-ch13-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "M.77",
+  "title": "Aljabar himpunan tertutup dan syarat gabungan berhingga.",
+  "body": "Aljabar himpunan tertutup dan syarat gabungan berhingga  Dalam ruang topologi , buktikan langsung dari hukum De Morgan bahwa irisan sebarang himpunan tertutup dan gabungan berhingga himpunan tertutup bersifat tertutup. Kemudian, dalam dengan topologi Euklides, gunakan untuk menunjukkan bahwa gabungan terhitung himpunan tertutup tidak harus tertutup.    Tahap 1. Ambil komplemen dan tukar irisan dengan gabungan.   Tahap 2. Untuk kasus berhingga, gunakan bahwa irisan berhingga himpunan terbuka tetap terbuka.   Tahap 3. Tentukan titik limit dari yang tidak termasuk di dalamnya.   Jika semua tertutup, maka terbuka. Untuk , komplemen gabungannya adalah irisan berhingga komplemen yang terbuka. Namun, tidak memuat titik limitnya , sehingga tidak tertutup.   Misalkan keluarga himpunan tertutup. Setiap terbuka, sehingga terbuka. Jadi irisannya tertutup. Jika tertutup, maka terbuka karena hanya merupakan irisan berhingga. Jadi gabungan berhingga tersebut tertutup.  Setiap adalah himpunan beranggota tunggal, maka tertutup dalam . Tetapkan . Setiap lingkungan Euklides dari memuat untuk semua yang cukup besar, sehingga merupakan titik limit dari . Akan tetapi . Karena himpunan tertutup harus memuat semua titik limitnya, tidak tertutup. Dengan demikian kata “berhingga” tidak dapat dihapus dari teorema gabungan.  "
+},
+{
+  "id": "o003-c90-ch13-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "M.78",
+  "title": "Tutupan sebagai himpunan tertutup terkecil.",
+  "body": "Tutupan sebagai himpunan tertutup terkecil  Untuk , misalkan Buktikan bahwa . Turunkan dari hasil ini bahwa mengakibatkan dan bahwa .    Tahap 1. Irisan pada definisi tertutup dan memuat .   Tahap 2. Setiap himpunan tertutup yang memuat juga memuat semua titik limit .   Tahap 3. Gunakan sifat minimal yang baru dibuktikan, bukan perhitungan titik demi titik.    adalah himpunan tertutup terkecil yang memuat , dan sifat yang sama mencirikan ; jadi keduanya sama. Monotonisitas dan idempotensi tutupan langsung mengikuti sifat minimal ini.   Keluarga pada definisi tidak kosong karena memuat . Irisan sebarang himpunan tertutup bersifat tertutup, sehingga tertutup; setiap himpunan dalam keluarga itu memuat , maka . Jadi adalah salah satu himpunan tertutup yang memuat .  Jika tertutup dan , ambil . Setiap lingkungan bertemu , sehingga . Karena tertutup, berlaku , jadi . Karena terdiri atas beserta titik-titik limitnya, berlaku . Ini benar untuk setiap dalam keluarga tersebut, jadi . Sebaliknya, sendiri tertutup dan memuat , sehingga muncul dalam keluarga yang diiris dan memberi .  Jika , setiap himpunan tertutup yang memuat juga memuat . Khususnya adalah himpunan tertutup yang memuat , maka minimalitas memberi . Karena sudah tertutup, himpunan tertutup terkecil yang memuatnya adalah dirinya sendiri. Jadi .  "
+},
+{
+  "id": "o003-c90-ch13-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "M.79",
+  "title": "Tiga wajah batas.",
+  "body": "Tiga wajah batas  Untuk , buktikan identitas Gunakan identitas ini untuk membuktikan bahwa tertutup, bahwa , dan bahwa jika dan hanya jika buka-tutup.    Tahap 1. Titik batas adalah titik yang setiap lingkungannya bertemu dan komplemennya.   Tahap 2. Gunakan .   Tahap 3. Jika batas kosong, bandingkan dengan dan .   Kedua rumus mengikuti langsung dari pencirian lingkungan. Batas tertutup karena merupakan irisan dua himpunan tertutup; rumusnya simetris terhadap dan komplemennya. Batas kosong tepat ketika , yaitu ketika sekaligus terbuka dan tertutup.   Titik berada dalam jika dan hanya jika setiap lingkungan bertemu . Demikian pula, jika dan hanya jika setiap lingkungannya bertemu . Kedua syarat berlaku sekaligus tepat ketika merupakan titik batas . Maka .  Sebuah titik tidak berada dalam tepat ketika setiap lingkungannya bertemu . Jadi , dan Bentuk irisan membuktikan ketertutupan. Menukar dengan komplemennya hanya menukar kedua faktor, sehingga batasnya sama.  Jika buka-tutup, maka , jadi batasnya kosong. Sebaliknya, jika batas kosong, maka , sehingga . Selalu berlaku ; ketiganya karena itu sama. Persamaan menyatakan bahwa terbuka, dan menyatakan bahwa tertutup.  "
+},
+{
+  "id": "o003-c90-ch13-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "M.80",
+  "title": "Ketunggalan limit dan alasan Hausdorff diperlukan.",
+  "body": "Ketunggalan limit dan alasan Hausdorff diperlukan  Buktikan bahwa barisan dalam ruang Hausdorff memiliki paling banyak satu limit. Kemudian ambil dengan topologi indiskret dan tunjukkan bahwa setiap barisan dalam konvergen ke sekaligus ke . Jelaskan tepat di mana bukti pertama gagal pada contoh kedua.    Tahap 1. Jika dua limit berbeda, pisahkan keduanya dengan dua himpunan terbuka yang saling lepas.   Tahap 2. Setelah suatu indeks tertentu, suku barisan harus berada dalam kedua himpunan terbuka tersebut.   Tahap 3. Dalam topologi indiskret, satu-satunya himpunan terbuka yang memuat sebuah titik adalah .   Dua limit berbeda dalam ruang Hausdorff akan mempunyai lingkungan terbuka saling lepas, sedangkan ekor barisan harus berada dalam keduanya, sebuah kontradiksi. Dalam ruang indiskret, setiap lingkungan terbuka yang relevan adalah , sehingga syarat konvergensi terpenuhi untuk setiap titik dan pemisahan yang diperlukan tidak ada.   Andaikan konvergen ke dua titik berbeda dan dalam ruang Hausdorff. Ada himpunan terbuka saling lepas dengan dan . Konvergensi ke memberi sehingga untuk . Konvergensi ke memberi sehingga untuk . Jika , maka , bertentangan dengan .  Sekarang gunakan topologi pada . Satu-satunya himpunan terbuka yang memuat adalah , dan setiap suku setiap barisan berada dalam . Jadi definisi konvergensi ke dipenuhi, bahkan dengan indeks sejak suku pertama. Argumen yang sama berlaku untuk . Bukti ketunggalan gagal tepat pada langkah memilih lingkungan terbuka saling lepas bagi dan ; ruang indiskret bukan Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch13-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "M.81",
+  "title": "<span class=\"process-math\">\\(T_1\\)<\/span> tidak menjamin sifat Hausdorff.",
+  "body": "tidak menjamin sifat Hausdorff  Misalkan himpunan tak berhingga dengan topologi komplemen berhingga. Buktikan bahwa merupakan ruang , tetapi bukan ruang Hausdorff. Nyatakan pula apa yang terjadi pada barisan konstan dalam ruang ini.    Tahap 1. Ruang bersifat jika setiap himpunan beranggota tunggal tertutup.   Tahap 2. Dua himpunan terbuka tak kosong dalam topologi komplemen berhingga tidak dapat saling lepas.   Tahap 3. Uji konvergensi barisan yang semua sukunya sama dengan terhadap lingkungan titik yang tidak memuat .   Setiap himpunan beranggota tunggal tertutup, maka ruang dengan topologi komplemen berhingga bersifat . Dua himpunan terbuka tak kosong selalu beririsan, sehingga dua titik berbeda tidak dapat dipisahkan secara Hausdorff. Walaupun ruang tidak Hausdorff, barisan konstan pada hanya konvergen ke karena sifat menyediakan lingkungan setiap yang mengecualikan .   Untuk setiap , komplemen mempunyai komplemen berhingga, sehingga terbuka dalam topologi komplemen berhingga. Maka tertutup. Karena ini berlaku untuk semua , ruang tersebut bersifat .  Jika dan terbuka tak kosong, komplemen keduanya berhingga. Andaikan . Hukum De Morgan memberi , gabungan dua himpunan berhingga. Ini akan membuat berhingga, sebuah kontradiksi. Jadi tidak ada dua himpunan terbuka tak kosong yang saling lepas, dan ruang tidak Hausdorff.  Barisan konstan jelas konvergen ke . Untuk , himpunan adalah lingkungan terbuka dari yang tidak memuat satu pun suku barisan. Maka barisan tidak konvergen ke . Jadi kegagalan Hausdorff tidak dengan sendirinya memaksa setiap barisan mempunyai banyak limit.  "
+},
+{
+  "id": "o003-c90-ch13-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "M.82",
+  "title": "Garis Sorgenfrey lebih halus secara ketat.",
+  "body": "Garis Sorgenfrey lebih halus secara ketat  Pada , misalkan topologi Euklides dan topologi limit bawah dengan basis semua interval . Buktikan bahwa lebih halus secara ketat daripada . Buktikan pula bahwa setiap interval basis bersifat buka-tutup dalam .    Tahap 1. Untuk , pilih interval setengah terbuka kecil yang memuat dan tetap berada dalam .   Tahap 2. Himpunan terbuka dalam topologi limit bawah tetapi bukan dalam topologi Euklides.   Tahap 3. Tulis komplemen sebagai gabungan dua himpunan yang terbuka dalam topologi limit bawah.   Setiap interval Euklides merupakan gabungan interval basis limit bawah, sehingga . Inklusi ketat karena tidak terbuka dalam topologi Euklides. Selain itu, dan kedua ruas di kanan terbuka dalam topologi limit bawah; maka juga tertutup.   Ambil interval Euklides dan . Karena , interval basis memuat dan berada dalam . Jadi setiap titik mempunyai anggota basis limit bawah yang berada di dalam interval tersebut. Maka setiap interval Euklides terbuka dalam , dan akibatnya .  Himpunan sendiri merupakan anggota basis, sehingga terbuka dalam . Himpunan itu tidak terbuka dalam topologi Euklides: setiap interval Euklides yang memuat juga memuat bilangan negatif. Jadi inklusi topologi bersifat ketat.  Untuk interval basis umum, . Kita mempunyai dan . Keduanya gabungan anggota basis, jadi terbuka. Komplemen terbuka, sehingga tertutup sekaligus terbuka.  "
+},
+{
+  "id": "o003-c90-ch13-mastery-07",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-07",
+  "type": "Pemeriksaan",
+  "number": "M.83",
+  "title": "Tiga pencirian kerapatan.",
+  "body": "Tiga pencirian kerapatan  Untuk , buktikan ekuivalensi berikut:  rapat dalam ;  ;  setiap himpunan terbuka tak kosong dalam beririsan dengan .  Gunakan hasil ini untuk membuktikan bahwa rapat dalam bertopologi Euklides, sedangkan tidak.    Tahap 1. Gunakan definisi “rapat” dan pencirian tutupan melalui lingkungan.   Tahap 2. Jika ada himpunan terbuka tak kosong yang tidak bertemu , pilih satu titik di dalamnya.   Tahap 3. Gunakan kerapatan bilangan rasional dalam setiap interval real; untuk , cari interval terbuka di antara dua bilangan bulat berturutan.   Kerapatan didefinisikan oleh . Persamaan ini berlaku tepat ketika setiap lingkungan dari setiap titik dalam bertemu , yang ekuivalen dengan tidak adanya himpunan terbuka tak kosong yang menghindari . Setiap interval terbuka real memuat bilangan rasional, tetapi tidak memuat bilangan bulat.   Pernyataan pertama dan kedua sama menurut definisi kerapatan. Andaikan dan terbuka tak kosong. Pilih . Karena , setiap lingkungan , khususnya , bertemu . Jadi .  Sebaliknya, andaikan setiap himpunan terbuka tak kosong bertemu . Untuk sembarang , setiap lingkungan dari memuat himpunan terbuka tak kosong dengan . Hipotesis memberi , maka . Jadi . Karena sembarang, .  Setiap himpunan terbuka tak kosong dalam topologi Euklides memuat interval terbuka tak kosong, dan setiap interval demikian memuat bilangan rasional. Maka rapat dalam . Sebaliknya, interval terbuka tidak bertemu . Pencirian ketiga menunjukkan bahwa tidak rapat.  "
+},
+{
+  "id": "o003-c90-ch13-mastery-08",
+  "level": "2",
+  "url": "o003-c90-ch13-mastery.html#o003-c90-ch13-mastery-08",
+  "type": "Pemeriksaan",
+  "number": "M.84",
+  "title": "Ruang metrik bersifat reguler dan normal.",
+  "body": "Ruang metrik bersifat reguler dan normal  Misalkan ruang metrik. Pertama, untuk himpunan tertutup tak kosong dan , bangun dua himpunan terbuka saling lepas yang masing-masing memuat dan . Kemudian, untuk dua himpunan tertutup tak kosong dan saling lepas , gunakan fungsi jarak ke himpunan untuk membuktikan bahwa bersifat normal. Tangani kasus salah satu himpunan kosong secara terpisah dan jelaskan mengapa tidak aman mengandaikan .    Tahap 1. Karena tertutup dan , . Bandingkan bola berjari-jari di dengan gabungan bola yang sesuai di titik-titik .   Tahap 2. Untuk normalitas, tetapkan dan .   Tahap 3. Fungsi kontinu dan bahkan Lipschitz. Carilah contoh dua himpunan tertutup saling lepas yang makin mendekat di tak hingga.   Ruang metrik bersifat reguler dengan memisahkan dan menggunakan jarak positif . Untuk normalitas, himpunan dan di atas terbuka, saling lepas, dan masing-masing memuat dan . Dua himpunan tertutup saling lepas dapat mempunyai jarak infimum nol, jadi satu jari-jari seragam tidak selalu tersedia.   Karena tertutup dan , pencirian jarak ke himpunan memberi . Tetapkan dan . Keduanya terbuka, , dan . Jika , ada dengan dan . Ketaksamaan segitiga memberi , bertentangan dengan definisi . Maka , dan ruang bersifat reguler.  Jika salah satu dari kosong, pisahkan keduanya dengan dan . Untuk dua himpunan tertutup tak kosong dan saling lepas , fungsi kontinu karena masing-masing fungsi jarak kontinu. Maka dan terbuka dan jelas saling lepas. Jika , maka , sedangkan karena tertutup dan . Jadi . Dengan cara yang sama, . Ini membuktikan normalitas.  Tidak selalu berlaku . Dalam , ambil dan . Kedua himpunan tertutup dan saling lepas, tetapi jarak antara dan menuju nol. Jadi pemisahan normal harus memakai jarak titik-ke-himpunan yang berubah terhadap titik, bukan satu jarak global positif.  "
+},
+{
   "id": "index-1",
   "level": "1",
   "url": "index-1.html",
@@ -9511,7 +10897,7 @@ var ptx_lunr_docs = [
   "type": "Kolofon",
   "number": "",
   "title": "Kolofon",
-  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1–12 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 13, Himpunan Tertutup dalam Ruang Topologi ; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
+  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1-13 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 14, Kontinuitas dalam Ruang Topologi ; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
 }
 ]
 

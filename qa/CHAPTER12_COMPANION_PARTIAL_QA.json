@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "partial_not_admitted",
+  "status": "source_prompt_closure_complete_mastery_pending",
   "unit": {
     "id": "o003-c90-ch12-topological-spaces",
     "title": "Ruang Topologi",
@@ -23,24 +23,34 @@
   },
   "source_qa": {
     "path": "repo/qa/CHAPTER12_SOURCE_QA.json",
-    "sha256": "a6d260d2110e713db8ef69e9afe54a57e0ef7f0830f41d05279cb9967b6c6aca",
+    "bytes": 7177,
+    "sha256": "512d164cc788de93cc01b51bffdb225ac849eb50356bdbb2168d297a018bd2a3",
     "status": "pass"
   },
   "source_corrections": {
     "path": "00_control/SOURCE_CORRECTIONS.csv",
-    "sha256": "21f679d8708e065f6cee28773722a9644cdcf0ce0428bc1e4f08b35b3cfaa3bb",
-    "chapter12_ids": ["O003-C131", "O003-C132", "O003-C133", "O003-C134", "O003-C135", "O003-C136", "O003-C137", "O003-C138", "O003-C139", "O003-C140", "O003-C141", "O003-C142"]
+    "sha256": "0f49f6354b794f6af564d71a45f57afd728cc4c0a637fb7e2abcb69503c8cb85",
+    "chapter12_ids": [
+      "O003-C131",
+      "O003-C132",
+      "O003-C133",
+      "O003-C134",
+      "O003-C135",
+      "O003-C136",
+      "O003-C137",
+      "O003-C138",
+      "O003-C139",
+      "O003-C140",
+      "O003-C141",
+      "O003-C142",
+      "O003-C143"
+    ]
   },
   "companion_files": [
     {
       "path": "repo/companion/chapter_12_source_guides_a.ptx",
       "bytes": 10968,
       "sha256": "45f6356654553cd8a8ed589dc4559743e8dbf452d5a47fba5d8dcd2ff4f408f6"
-    },
-    {
-      "path": "repo/companion/chapter_12_topological_spaces_self_study.ptx",
-      "bytes": 1347,
-      "sha256": "43860007d31cdf90613fc2371ea1f28f5adfca3dcd263bdda94a38aa45ad9d66"
     },
     {
       "path": "repo/companion/chapter_12_source_guides_b.ptx",
@@ -76,77 +86,1173 @@
       "path": "repo/companion/chapter_12_exercise_guides_b.ptx",
       "bytes": 24516,
       "sha256": "8ee81c49d743ad79ad3281d7d17747c36424dc5fd6c1208db835a8c7e318fb9d"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_c.ptx",
+      "bytes": 19941,
+      "sha256": "0eb5f81b0074f478e8dc1b84bee9daf32646c91707254a0ab8ce68f19e618590"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_d.ptx",
+      "bytes": 13252,
+      "sha256": "013b89bc5d31b0647d8d08e2e5dc91db395c471a0c42257a9062da2aa173e7b3"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_e.ptx",
+      "bytes": 14286,
+      "sha256": "5d77869520a634c8f8827e4840a30d3ffa5b31f95bb0c6e6aeae16788adabb6f"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_f.ptx",
+      "bytes": 14465,
+      "sha256": "035ca470164ef40550f0e3d34fc36e6155f5b403e57d28a990c1b972356f6ffe"
+    },
+    {
+      "path": "repo/companion/chapter_12_exercise_guides_g.ptx",
+      "bytes": 12630,
+      "sha256": "cc1e01188ac5338297defa5efac744d4c78b3652139dc3658155e1048a97bd09"
+    },
+    {
+      "path": "repo/companion/chapter_12_topological_spaces_self_study.ptx",
+      "bytes": 1918,
+      "sha256": "de30a2b0376e2525b2bf79baf3fe78d3b3d32a261ad11e515d063735b44d6bc1"
     }
   ],
   "coverage": {
-    "source_prompt_guides": 51,
-    "source_prompt_guides_pending": 28,
+    "source_prompt_guides": 79,
+    "source_prompt_guides_pending": 0,
     "mastery_checks": 0,
     "mastery_checks_pending": "to be authored after the source-prompt guides",
-    "covered_source_context": ["sec_top_space_intro", "act_TS_limits1", "act_top_basis", "act_Basis", "basis_final_activity", "sec_neighborhood_top_space", "sec_interior_set_top", "sec_top_space_exer"],
-    "covered_atomic_prompt_units": 49,
-    "covered_direct_prompt_units": 2,
+    "covered_source_context": [
+      "sec_top_space_intro",
+      "act_TS_limits1",
+      "act_top_basis",
+      "act_Basis",
+      "basis_final_activity",
+      "sec_metric_top_space",
+      "sec_neighborhood_top_space",
+      "sec_interior_set_top",
+      "sec_top_space_exer"
+    ],
+    "covered_atomic_prompt_units": 73,
+    "covered_direct_prompt_units": 6,
     "covered_grouping_prompt_units": 0,
+    "grouping_nodes_mapped": 5,
     "covered_surfaces": {
-      "statement": 51,
-      "hint": 51,
-      "answer": 51,
-      "solution": 51,
-      "total": 204
+      "statement": 79,
+      "hint": 79,
+      "answer": 79,
+      "solution": 79,
+      "total": 316
     }
   },
   "entries": [
-    {"id":"o003-c90-ch12-guide-01","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-01","source_line":65,"title":"Uji tiga aksioma topologi","surfaces":["o003-c90-ch12-guide-01-statement","o003-c90-ch12-guide-01-hint","o003-c90-ch12-guide-01-answer","o003-c90-ch12-guide-01-solution"]},
-    {"id":"o003-c90-ch12-guide-02","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-02","source_line":74,"title":"Menutup koleksi hingga menjadi topologi","surfaces":["o003-c90-ch12-guide-02-statement","o003-c90-ch12-guide-02-hint","o003-c90-ch12-guide-02-answer","o003-c90-ch12-guide-02-solution"]},
-    {"id":"o003-c90-ch12-guide-03","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-03","source_line":85,"title":"Memeriksa gabungan dan irisan berhingga","surfaces":["o003-c90-ch12-guide-03-statement","o003-c90-ch12-guide-03-hint","o003-c90-ch12-guide-03-answer","o003-c90-ch12-guide-03-solution"]},
-    {"id":"o003-c90-ch12-guide-04","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-04","source_line":99,"title":"Mencari gabungan yang hilang","surfaces":["o003-c90-ch12-guide-04-statement","o003-c90-ch12-guide-04-hint","o003-c90-ch12-guide-04-answer","o003-c90-ch12-guide-04-solution"]},
-    {"id":"o003-c90-ch12-guide-05","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-05","source_line":113,"title":"Koleksi subhimpunan berhingga dan uji gabungan tak berhingga","surfaces":["o003-c90-ch12-guide-05-statement","o003-c90-ch12-guide-05-hint","o003-c90-ch12-guide-05-answer","o003-c90-ch12-guide-05-solution"]},
-    {"id":"o003-c90-ch12-guide-06","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-06","source_line":124,"title":"Topologi tiga elemen pada bilangan real","surfaces":["o003-c90-ch12-guide-06-statement","o003-c90-ch12-guide-06-hint","o003-c90-ch12-guide-06-answer","o003-c90-ch12-guide-06-solution"]},
-    {"id":"o003-c90-ch12-guide-07","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-07","source_line":133,"title":"Topologi indiskret","surfaces":["o003-c90-ch12-guide-07-statement","o003-c90-ch12-guide-07-hint","o003-c90-ch12-guide-07-answer","o003-c90-ch12-guide-07-solution"]},
-    {"id":"o003-c90-ch12-guide-08","source_anchor":"o003-gvsu-ch12-sec_top_space_intro-prompt-08","source_line":142,"title":"Topologi diskret","surfaces":["o003-c90-ch12-guide-08-statement","o003-c90-ch12-guide-08-hint","o003-c90-ch12-guide-08-answer","o003-c90-ch12-guide-08-solution"]},
-    {"id":"o003-c90-ch12-guide-09","source_anchor":"o003-gvsu-ch12-act_TS_limits1-prompt-01","source_line":52,"title":"Membuktikan topologi komplemen berhingga","surfaces":["o003-c90-ch12-guide-09-statement","o003-c90-ch12-guide-09-hint","o003-c90-ch12-guide-09-answer","o003-c90-ch12-guide-09-solution"]},
-    {"id":"o003-c90-ch12-guide-10","source_anchor":"o003-gvsu-ch12-act_TS_limits1-prompt-02","source_line":62,"title":"Ketika topologi komplemen berhingga menjadi diskret","surfaces":["o003-c90-ch12-guide-10-statement","o003-c90-ch12-guide-10-hint","o003-c90-ch12-guide-10-answer","o003-c90-ch12-guide-10-solution"]},
-    {"id":"o003-c90-ch12-guide-11","source_anchor":"o003-gvsu-ch12-act_top_basis-prompt-01","source_line":40,"title":"Membangkitkan topologi dari tiga himpunan dasar","surfaces":["o003-c90-ch12-guide-11-statement","o003-c90-ch12-guide-11-hint","o003-c90-ch12-guide-11-answer","o003-c90-ch12-guide-11-solution"]},
-    {"id":"o003-c90-ch12-guide-12","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-01","source_line":106,"title":"Syarat penutupan basis: menutupi ruang","surfaces":["o003-c90-ch12-guide-12-statement","o003-c90-ch12-guide-12-hint","o003-c90-ch12-guide-12-answer","o003-c90-ch12-guide-12-solution"]},
-    {"id":"o003-c90-ch12-guide-13","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-02","source_line":128,"title":"Kasus dasar induksi untuk irisan basis","surfaces":["o003-c90-ch12-guide-13-statement","o003-c90-ch12-guide-13-hint","o003-c90-ch12-guide-13-answer","o003-c90-ch12-guide-13-solution"]},
-    {"id":"o003-c90-ch12-guide-14","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-03","source_line":137,"title":"Merumuskan hipotesis dan target induksi","surfaces":["o003-c90-ch12-guide-14-statement","o003-c90-ch12-guide-14-hint","o003-c90-ch12-guide-14-answer","o003-c90-ch12-guide-14-solution"]},
-    {"id":"o003-c90-ch12-guide-15","source_anchor":"o003-gvsu-ch12-act_Basis-prompt-04","source_line":144,"title":"Menyelesaikan lemma irisan berhingga","surfaces":["o003-c90-ch12-guide-15-statement","o003-c90-ch12-guide-15-hint","o003-c90-ch12-guide-15-answer","o003-c90-ch12-guide-15-solution"]},
-    {"id":"o003-c90-ch12-guide-16","source_anchor":"o003-gvsu-ch12-basis-final-prompt-01","source_line":307,"title":"Melengkapi basis pertama pada topologi hingga","surfaces":["o003-c90-ch12-guide-16-statement","o003-c90-ch12-guide-16-hint","o003-c90-ch12-guide-16-answer","o003-c90-ch12-guide-16-solution"]},
-    {"id":"o003-c90-ch12-guide-17","source_anchor":"o003-gvsu-ch12-basis-final-prompt-02","source_line":320,"title":"Menguji basis kedua pada topologi hingga","surfaces":["o003-c90-ch12-guide-17-statement","o003-c90-ch12-guide-17-hint","o003-c90-ch12-guide-17-answer","o003-c90-ch12-guide-17-solution"]},
-    {"id":"o003-c90-ch12-guide-18","source_anchor":"o003-gvsu-ch12-basis-final-prompt-03","source_line":335,"title":"Menambahkan singleton pada topologi diskret tiga titik","surfaces":["o003-c90-ch12-guide-18-statement","o003-c90-ch12-guide-18-hint","o003-c90-ch12-guide-18-answer","o003-c90-ch12-guide-18-solution"]},
-    {"id":"o003-c90-ch12-guide-19","source_anchor":"o003-gvsu-ch12-basis-final-prompt-04","source_line":346,"title":"Basis singleton untuk topologi diskret","surfaces":["o003-c90-ch12-guide-19-statement","o003-c90-ch12-guide-19-hint","o003-c90-ch12-guide-19-answer","o003-c90-ch12-guide-19-solution"]},
-    {"id":"o003-c90-ch12-guide-20","source_anchor":"o003-gvsu-ch12-sec_metric_top_space-prompt-01","source_line":14,"title":"Ruang topologi yang tidak dapat dimetriskan","surfaces":["o003-c90-ch12-guide-20-statement","o003-c90-ch12-guide-20-hint","o003-c90-ch12-guide-20-answer","o003-c90-ch12-guide-20-solution"]},
-    {"id":"o003-c90-ch12-guide-21","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-01","source_line":29,"title":"Menentukan semua lingkungan titik a","surfaces":["o003-c90-ch12-guide-21-statement","o003-c90-ch12-guide-21-hint","o003-c90-ch12-guide-21-answer","o003-c90-ch12-guide-21-solution"]},
-    {"id":"o003-c90-ch12-guide-22","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-02","source_line":36,"title":"Menentukan semua lingkungan titik c","surfaces":["o003-c90-ch12-guide-22-statement","o003-c90-ch12-guide-22-hint","o003-c90-ch12-guide-22-answer","o003-c90-ch12-guide-22-solution"]},
-    {"id":"o003-c90-ch12-guide-23","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-03","source_line":84,"title":"Mengubah lingkungan setiap titik menjadi keterbukaan","surfaces":["o003-c90-ch12-guide-23-statement","o003-c90-ch12-guide-23-hint","o003-c90-ch12-guide-23-answer","o003-c90-ch12-guide-23-solution"]},
-    {"id":"o003-c90-ch12-guide-24","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-04","source_line":91,"title":"Mengapa himpunan O_a harus ada","surfaces":["o003-c90-ch12-guide-24-statement","o003-c90-ch12-guide-24-hint","o003-c90-ch12-guide-24-answer","o003-c90-ch12-guide-24-solution"]},
-    {"id":"o003-c90-ch12-guide-25","source_anchor":"o003-gvsu-ch12-sec_neighborhood_top_space-task-05","source_line":99,"title":"Menyelesaikan pembuktian karakterisasi himpunan terbuka","surfaces":["o003-c90-ch12-guide-25-statement","o003-c90-ch12-guide-25-hint","o003-c90-ch12-guide-25-answer","o003-c90-ch12-guide-25-solution"]},
-    {"id":"o003-c90-ch12-guide-26","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-01","source_line":58,"title":"Interior pada topologi standar di garis real","surfaces":["o003-c90-ch12-guide-26-statement","o003-c90-ch12-guide-26-hint","o003-c90-ch12-guide-26-answer","o003-c90-ch12-guide-26-solution"]},
-    {"id":"o003-c90-ch12-guide-27","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-02","source_line":69,"title":"Interior pada topologi diskret","surfaces":["o003-c90-ch12-guide-27-statement","o003-c90-ch12-guide-27-hint","o003-c90-ch12-guide-27-answer","o003-c90-ch12-guide-27-solution"]},
-    {"id":"o003-c90-ch12-guide-28","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-03","source_line":80,"title":"Interior pada topologi komplemen berhingga","surfaces":["o003-c90-ch12-guide-28-statement","o003-c90-ch12-guide-28-hint","o003-c90-ch12-guide-28-answer","o003-c90-ch12-guide-28-solution"]},
-    {"id":"o003-c90-ch12-guide-29","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-04","source_line":92,"title":"Interior pada topologi hingga yang diberikan","surfaces":["o003-c90-ch12-guide-29-statement","o003-c90-ch12-guide-29-hint","o003-c90-ch12-guide-29-answer","o003-c90-ch12-guide-29-solution"]},
-    {"id":"o003-c90-ch12-guide-30","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-05","source_line":157,"title":"Menetapkan sasaran teorema interior","surfaces":["o003-c90-ch12-guide-30-statement","o003-c90-ch12-guide-30-hint","o003-c90-ch12-guide-30-answer","o003-c90-ch12-guide-30-solution"]},
-    {"id":"o003-c90-ch12-guide-31","source_anchor":"o003-gvsu-ch12-sec_interior_set_top-task-06","source_line":164,"title":"Membuktikan kemaksimalan interior","surfaces":["o003-c90-ch12-guide-31-statement","o003-c90-ch12-guide-31-hint","o003-c90-ch12-guide-31-answer","o003-c90-ch12-guide-31-solution"]},
-    {"id":"o003-c90-ch12-exer-a-01","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-opening-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":10,"title":"Semua gabungan koleksi pembangkit","surfaces":["o003-c90-ch12-exer-a-01-statement","o003-c90-ch12-exer-a-01-hint","o003-c90-ch12-exer-a-01-answer","o003-c90-ch12-exer-a-01-solution"]},
-    {"id":"o003-c90-ch12-exer-a-02","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-opening-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":17,"title":"Mengapa koleksi gabungan itu bukan topologi","surfaces":["o003-c90-ch12-exer-a-02-statement","o003-c90-ch12-exer-a-02-hint","o003-c90-ch12-exer-a-02-answer","o003-c90-ch12-exer-a-02-solution"]},
-    {"id":"o003-c90-ch12-exer-a-03","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":34,"title":"Basis kelipatan bilangan bulat","surfaces":["o003-c90-ch12-exer-a-03-statement","o003-c90-ch12-exer-a-03-hint","o003-c90-ch12-exer-a-03-answer","o003-c90-ch12-exer-a-03-solution"]},
-    {"id":"o003-c90-ch12-exer-a-04","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":46,"title":"Bilangan bulat positif tidak terbuka","surfaces":["o003-c90-ch12-exer-a-04-statement","o003-c90-ch12-exer-a-04-hint","o003-c90-ch12-exer-a-04-answer","o003-c90-ch12-exer-a-04-solution"]},
-    {"id":"o003-c90-ch12-exer-a-05","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-03","source_file":"repo/source/sec_top_space_exer.ptx","source_line":53,"title":"Bilangan bulat ganjil tidak terbuka","surfaces":["o003-c90-ch12-exer-a-05-statement","o003-c90-ch12-exer-a-05-hint","o003-c90-ch12-exer-a-05-answer","o003-c90-ch12-exer-a-05-solution"]},
-    {"id":"o003-c90-ch12-exer-a-06","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-04","source_file":"repo/source/sec_top_space_exer.ptx","source_line":60,"title":"Satu himpunan terbuka dengan ekor kelipatan","surfaces":["o003-c90-ch12-exer-a-06-statement","o003-c90-ch12-exer-a-06-hint","o003-c90-ch12-exer-a-06-answer","o003-c90-ch12-exer-a-06-solution"]},
-    {"id":"o003-c90-ch12-exer-a-07","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":75,"title":"Basis dari kelas-kelas residu","surfaces":["o003-c90-ch12-exer-a-07-statement","o003-c90-ch12-exer-a-07-hint","o003-c90-ch12-exer-a-07-answer","o003-c90-ch12-exer-a-07-solution"]},
-    {"id":"o003-c90-ch12-exer-a-08","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":93,"title":"Fungsi yang menukar pasangan berurutan","surfaces":["o003-c90-ch12-exer-a-08-statement","o003-c90-ch12-exer-a-08-hint","o003-c90-ch12-exer-a-08-answer","o003-c90-ch12-exer-a-08-solution"]},
-    {"id":"o003-c90-ch12-exer-a-09","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-03","source_file":"repo/source/sec_top_space_exer.ptx","source_line":100,"title":"Citra himpunan terbuka di bawah f","surfaces":["o003-c90-ch12-exer-a-09-statement","o003-c90-ch12-exer-a-09-hint","o003-c90-ch12-exer-a-09-answer","o003-c90-ch12-exer-a-09-solution"]},
-    {"id":"o003-c90-ch12-exer-a-10","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-coset-f-task-04","source_file":"repo/source/sec_top_space_exer.ptx","source_line":108,"title":"Prapeta himpunan terbuka di bawah f","surfaces":["o003-c90-ch12-exer-a-10-statement","o003-c90-ch12-exer-a-10-hint","o003-c90-ch12-exer-a-10-answer","o003-c90-ch12-exer-a-10-solution"]},
-    {"id":"o003-c90-ch12-exer-b-01","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_coarse_topology_example-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":132,"title":"Basis interval berpusat di nol","surfaces":["o003-c90-ch12-exer-b-01-statement","o003-c90-ch12-exer-b-01-hint","o003-c90-ch12-exer-b-01-answer","o003-c90-ch12-exer-b-01-solution"]},
-    {"id":"o003-c90-ch12-exer-b-02","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-ex_coarse_topology_example-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":139,"title":"Interval Euklides yang tidak terbuka","surfaces":["o003-c90-ch12-exer-b-02-statement","o003-c90-ch12-exer-b-02-hint","o003-c90-ch12-exer-b-02-answer","o003-c90-ch12-exer-b-02-solution"]},
-    {"id":"o003-c90-ch12-exer-b-03","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":178,"title":"Topologi paling lemah","surfaces":["o003-c90-ch12-exer-b-03-statement","o003-c90-ch12-exer-b-03-hint","o003-c90-ch12-exer-b-03-answer","o003-c90-ch12-exer-b-03-solution"]},
-    {"id":"o003-c90-ch12-exer-b-04","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":185,"title":"Topologi paling kuat","surfaces":["o003-c90-ch12-exer-b-04-statement","o003-c90-ch12-exer-b-04-hint","o003-c90-ch12-exer-b-04-answer","o003-c90-ch12-exer-b-04-solution"]},
-    {"id":"o003-c90-ch12-exer-b-05","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-03","source_file":"repo/source/sec_top_space_exer.ptx","source_line":192,"title":"Topologi maksimal yang bukan diskret","surfaces":["o003-c90-ch12-exer-b-05-statement","o003-c90-ch12-exer-b-05-hint","o003-c90-ch12-exer-b-05-answer","o003-c90-ch12-exer-b-05-solution"]},
-    {"id":"o003-c90-ch12-exer-b-06","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-04","source_file":"repo/source/sec_top_space_exer.ptx","source_line":211,"title":"Adakah topologi maksimal non-diskret?","surfaces":["o003-c90-ch12-exer-b-06-statement","o003-c90-ch12-exer-b-06-hint","o003-c90-ch12-exer-b-06-answer","o003-c90-ch12-exer-b-06-solution"]},
-    {"id":"o003-c90-ch12-exer-b-07","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-05","source_file":"repo/source/sec_top_space_exer.ptx","source_line":220,"title":"Topologi minimal non-indiskret","surfaces":["o003-c90-ch12-exer-b-07-statement","o003-c90-ch12-exer-b-07-hint","o003-c90-ch12-exer-b-07-answer","o003-c90-ch12-exer-b-07-solution"]},
-    {"id":"o003-c90-ch12-exer-b-08","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-01","source_file":"repo/source/sec_top_space_exer.ptx","source_line":241,"title":"Keterbukaan himpunan lingkungan minimal","surfaces":["o003-c90-ch12-exer-b-08-statement","o003-c90-ch12-exer-b-08-hint","o003-c90-ch12-exer-b-08-answer","o003-c90-ch12-exer-b-08-solution"]},
-    {"id":"o003-c90-ch12-exer-b-09","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-02","source_file":"repo/source/sec_top_space_exer.ptx","source_line":248,"title":"Basis minimal dari lingkungan terkecil","surfaces":["o003-c90-ch12-exer-b-09-statement","o003-c90-ch12-exer-b-09-hint","o003-c90-ch12-exer-b-09-answer","o003-c90-ch12-exer-b-09-solution"]},
-    {"id":"o003-c90-ch12-exer-b-10","source_anchor":"o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-03","source_file":"repo/source/sec_top_space_exer.ptx","source_line":255,"title":"Minimalitas basis hingga","surfaces":["o003-c90-ch12-exer-b-10-statement","o003-c90-ch12-exer-b-10-hint","o003-c90-ch12-exer-b-10-answer","o003-c90-ch12-exer-b-10-solution"]}
+    {
+      "id": "o003-c90-ch12-guide-01",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-01",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 65,
+      "prompt_carrier": "atomic_task",
+      "title": "Uji tiga aksioma topologi",
+      "surfaces": [
+        "o003-c90-ch12-guide-01-statement",
+        "o003-c90-ch12-guide-01-hint",
+        "o003-c90-ch12-guide-01-answer",
+        "o003-c90-ch12-guide-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-02",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-02",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 74,
+      "prompt_carrier": "atomic_task",
+      "title": "Menutup koleksi hingga menjadi topologi",
+      "surfaces": [
+        "o003-c90-ch12-guide-02-statement",
+        "o003-c90-ch12-guide-02-hint",
+        "o003-c90-ch12-guide-02-answer",
+        "o003-c90-ch12-guide-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-03",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-03",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 85,
+      "prompt_carrier": "atomic_task",
+      "title": "Memeriksa gabungan dan irisan berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-03-statement",
+        "o003-c90-ch12-guide-03-hint",
+        "o003-c90-ch12-guide-03-answer",
+        "o003-c90-ch12-guide-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-04",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-04",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 99,
+      "prompt_carrier": "atomic_task",
+      "title": "Mencari gabungan yang hilang",
+      "surfaces": [
+        "o003-c90-ch12-guide-04-statement",
+        "o003-c90-ch12-guide-04-hint",
+        "o003-c90-ch12-guide-04-answer",
+        "o003-c90-ch12-guide-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-05",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-05",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 113,
+      "prompt_carrier": "atomic_task",
+      "title": "Koleksi subhimpunan berhingga dan uji gabungan tak berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-05-statement",
+        "o003-c90-ch12-guide-05-hint",
+        "o003-c90-ch12-guide-05-answer",
+        "o003-c90-ch12-guide-05-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-06",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-06",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 124,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi tiga elemen pada bilangan real",
+      "surfaces": [
+        "o003-c90-ch12-guide-06-statement",
+        "o003-c90-ch12-guide-06-hint",
+        "o003-c90-ch12-guide-06-answer",
+        "o003-c90-ch12-guide-06-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-07",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-07",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 133,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi indiskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-07-statement",
+        "o003-c90-ch12-guide-07-hint",
+        "o003-c90-ch12-guide-07-answer",
+        "o003-c90-ch12-guide-07-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-08",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_intro-prompt-08",
+      "source_file": "repo/source/sec_top_space_intro.ptx",
+      "source_line": 142,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-08-statement",
+        "o003-c90-ch12-guide-08-hint",
+        "o003-c90-ch12-guide-08-answer",
+        "o003-c90-ch12-guide-08-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-09",
+      "source_anchor": "o003-gvsu-ch12-act_TS_limits1-prompt-01",
+      "source_file": "repo/source/sec_exam_top.ptx",
+      "source_line": 52,
+      "prompt_carrier": "atomic_task",
+      "title": "Membuktikan topologi komplemen berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-09-statement",
+        "o003-c90-ch12-guide-09-hint",
+        "o003-c90-ch12-guide-09-answer",
+        "o003-c90-ch12-guide-09-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-10",
+      "source_anchor": "o003-gvsu-ch12-act_TS_limits1-prompt-02",
+      "source_file": "repo/source/sec_exam_top.ptx",
+      "source_line": 62,
+      "prompt_carrier": "atomic_task",
+      "title": "Ketika topologi komplemen berhingga menjadi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-10-statement",
+        "o003-c90-ch12-guide-10-hint",
+        "o003-c90-ch12-guide-10-answer",
+        "o003-c90-ch12-guide-10-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-11",
+      "source_anchor": "o003-gvsu-ch12-act_top_basis-prompt-01",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 40,
+      "prompt_carrier": "direct_body",
+      "title": "Membangkitkan topologi dari tiga himpunan dasar",
+      "surfaces": [
+        "o003-c90-ch12-guide-11-statement",
+        "o003-c90-ch12-guide-11-hint",
+        "o003-c90-ch12-guide-11-answer",
+        "o003-c90-ch12-guide-11-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-12",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-01",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 106,
+      "prompt_carrier": "atomic_task",
+      "title": "Syarat penutupan basis: menutupi ruang",
+      "surfaces": [
+        "o003-c90-ch12-guide-12-statement",
+        "o003-c90-ch12-guide-12-hint",
+        "o003-c90-ch12-guide-12-answer",
+        "o003-c90-ch12-guide-12-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-13",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-02",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 128,
+      "prompt_carrier": "atomic_task",
+      "title": "Kasus dasar induksi untuk irisan basis",
+      "surfaces": [
+        "o003-c90-ch12-guide-13-statement",
+        "o003-c90-ch12-guide-13-hint",
+        "o003-c90-ch12-guide-13-answer",
+        "o003-c90-ch12-guide-13-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-14",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-03",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 137,
+      "prompt_carrier": "atomic_task",
+      "title": "Merumuskan hipotesis dan target induksi",
+      "surfaces": [
+        "o003-c90-ch12-guide-14-statement",
+        "o003-c90-ch12-guide-14-hint",
+        "o003-c90-ch12-guide-14-answer",
+        "o003-c90-ch12-guide-14-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-15",
+      "source_anchor": "o003-gvsu-ch12-act_Basis-prompt-04",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 144,
+      "prompt_carrier": "atomic_task",
+      "title": "Menyelesaikan lemma irisan berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-15-statement",
+        "o003-c90-ch12-guide-15-hint",
+        "o003-c90-ch12-guide-15-answer",
+        "o003-c90-ch12-guide-15-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-16",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-01",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 307,
+      "prompt_carrier": "atomic_task",
+      "title": "Melengkapi basis pertama pada topologi hingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-16-statement",
+        "o003-c90-ch12-guide-16-hint",
+        "o003-c90-ch12-guide-16-answer",
+        "o003-c90-ch12-guide-16-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-17",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-02",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 320,
+      "prompt_carrier": "atomic_task",
+      "title": "Menguji basis kedua pada topologi hingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-17-statement",
+        "o003-c90-ch12-guide-17-hint",
+        "o003-c90-ch12-guide-17-answer",
+        "o003-c90-ch12-guide-17-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-18",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-03",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 335,
+      "prompt_carrier": "atomic_task",
+      "title": "Menambahkan singleton pada topologi diskret tiga titik",
+      "surfaces": [
+        "o003-c90-ch12-guide-18-statement",
+        "o003-c90-ch12-guide-18-hint",
+        "o003-c90-ch12-guide-18-answer",
+        "o003-c90-ch12-guide-18-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-19",
+      "source_anchor": "o003-gvsu-ch12-basis-final-prompt-04",
+      "source_file": "repo/source/sec_base_top.ptx",
+      "source_line": 346,
+      "prompt_carrier": "atomic_task",
+      "title": "Basis singleton untuk topologi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-19-statement",
+        "o003-c90-ch12-guide-19-hint",
+        "o003-c90-ch12-guide-19-answer",
+        "o003-c90-ch12-guide-19-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-20",
+      "source_anchor": "o003-gvsu-ch12-sec_metric_top_space-prompt-01",
+      "source_file": "repo/source/sec_metric_top_space.ptx",
+      "source_line": 14,
+      "prompt_carrier": "direct_statement",
+      "title": "Ruang topologi yang tidak dapat dimetriskan",
+      "surfaces": [
+        "o003-c90-ch12-guide-20-statement",
+        "o003-c90-ch12-guide-20-hint",
+        "o003-c90-ch12-guide-20-answer",
+        "o003-c90-ch12-guide-20-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-21",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-01",
+      "source_file": "repo/source/sec_neighborhood_top_space.ptx",
+      "source_line": 29,
+      "prompt_carrier": "atomic_task",
+      "title": "Menentukan semua lingkungan titik a",
+      "surfaces": [
+        "o003-c90-ch12-guide-21-statement",
+        "o003-c90-ch12-guide-21-hint",
+        "o003-c90-ch12-guide-21-answer",
+        "o003-c90-ch12-guide-21-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-22",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-02",
+      "source_file": "repo/source/sec_neighborhood_top_space.ptx",
+      "source_line": 36,
+      "prompt_carrier": "atomic_task",
+      "title": "Menentukan semua lingkungan titik c",
+      "surfaces": [
+        "o003-c90-ch12-guide-22-statement",
+        "o003-c90-ch12-guide-22-hint",
+        "o003-c90-ch12-guide-22-answer",
+        "o003-c90-ch12-guide-22-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-23",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-03",
+      "source_file": "repo/source/sec_neighborhood_top_space.ptx",
+      "source_line": 84,
+      "prompt_carrier": "atomic_task",
+      "title": "Mengubah lingkungan setiap titik menjadi keterbukaan",
+      "surfaces": [
+        "o003-c90-ch12-guide-23-statement",
+        "o003-c90-ch12-guide-23-hint",
+        "o003-c90-ch12-guide-23-answer",
+        "o003-c90-ch12-guide-23-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-24",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-04",
+      "source_file": "repo/source/sec_neighborhood_top_space.ptx",
+      "source_line": 91,
+      "prompt_carrier": "atomic_task",
+      "title": "Mengapa himpunan O_a harus ada",
+      "surfaces": [
+        "o003-c90-ch12-guide-24-statement",
+        "o003-c90-ch12-guide-24-hint",
+        "o003-c90-ch12-guide-24-answer",
+        "o003-c90-ch12-guide-24-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-25",
+      "source_anchor": "o003-gvsu-ch12-sec_neighborhood_top_space-task-05",
+      "source_file": "repo/source/sec_neighborhood_top_space.ptx",
+      "source_line": 99,
+      "prompt_carrier": "atomic_task",
+      "title": "Menyelesaikan pembuktian karakterisasi himpunan terbuka",
+      "surfaces": [
+        "o003-c90-ch12-guide-25-statement",
+        "o003-c90-ch12-guide-25-hint",
+        "o003-c90-ch12-guide-25-answer",
+        "o003-c90-ch12-guide-25-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-26",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-01",
+      "source_file": "repo/source/sec_interior_set_top.ptx",
+      "source_line": 58,
+      "prompt_carrier": "atomic_task",
+      "title": "Interior pada topologi standar di garis real",
+      "surfaces": [
+        "o003-c90-ch12-guide-26-statement",
+        "o003-c90-ch12-guide-26-hint",
+        "o003-c90-ch12-guide-26-answer",
+        "o003-c90-ch12-guide-26-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-27",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-02",
+      "source_file": "repo/source/sec_interior_set_top.ptx",
+      "source_line": 69,
+      "prompt_carrier": "atomic_task",
+      "title": "Interior pada topologi diskret",
+      "surfaces": [
+        "o003-c90-ch12-guide-27-statement",
+        "o003-c90-ch12-guide-27-hint",
+        "o003-c90-ch12-guide-27-answer",
+        "o003-c90-ch12-guide-27-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-28",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-03",
+      "source_file": "repo/source/sec_interior_set_top.ptx",
+      "source_line": 80,
+      "prompt_carrier": "atomic_task",
+      "title": "Interior pada topologi komplemen berhingga",
+      "surfaces": [
+        "o003-c90-ch12-guide-28-statement",
+        "o003-c90-ch12-guide-28-hint",
+        "o003-c90-ch12-guide-28-answer",
+        "o003-c90-ch12-guide-28-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-29",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-04",
+      "source_file": "repo/source/sec_interior_set_top.ptx",
+      "source_line": 92,
+      "prompt_carrier": "atomic_task",
+      "title": "Interior pada topologi hingga yang diberikan",
+      "surfaces": [
+        "o003-c90-ch12-guide-29-statement",
+        "o003-c90-ch12-guide-29-hint",
+        "o003-c90-ch12-guide-29-answer",
+        "o003-c90-ch12-guide-29-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-30",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-05",
+      "source_file": "repo/source/sec_interior_set_top.ptx",
+      "source_line": 157,
+      "prompt_carrier": "atomic_task",
+      "title": "Menetapkan sasaran teorema interior",
+      "surfaces": [
+        "o003-c90-ch12-guide-30-statement",
+        "o003-c90-ch12-guide-30-hint",
+        "o003-c90-ch12-guide-30-answer",
+        "o003-c90-ch12-guide-30-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-guide-31",
+      "source_anchor": "o003-gvsu-ch12-sec_interior_set_top-task-06",
+      "source_file": "repo/source/sec_interior_set_top.ptx",
+      "source_line": 164,
+      "prompt_carrier": "atomic_task",
+      "title": "Membuktikan kemaksimalan interior",
+      "surfaces": [
+        "o003-c90-ch12-guide-31-statement",
+        "o003-c90-ch12-guide-31-hint",
+        "o003-c90-ch12-guide-31-answer",
+        "o003-c90-ch12-guide-31-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-01",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-opening-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 10,
+      "prompt_carrier": "atomic_task",
+      "title": "Semua gabungan koleksi pembangkit",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-01-statement",
+        "o003-c90-ch12-exer-a-01-hint",
+        "o003-c90-ch12-exer-a-01-answer",
+        "o003-c90-ch12-exer-a-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-02",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-opening-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 17,
+      "prompt_carrier": "atomic_task",
+      "title": "Mengapa koleksi gabungan itu bukan topologi",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-02-statement",
+        "o003-c90-ch12-exer-a-02-hint",
+        "o003-c90-ch12-exer-a-02-answer",
+        "o003-c90-ch12-exer-a-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-03",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 34,
+      "prompt_carrier": "atomic_task",
+      "title": "Basis kelipatan bilangan bulat",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-03-statement",
+        "o003-c90-ch12-exer-a-03-hint",
+        "o003-c90-ch12-exer-a-03-answer",
+        "o003-c90-ch12-exer-a-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-04",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 46,
+      "prompt_carrier": "atomic_task",
+      "title": "Bilangan bulat positif tidak terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-04-statement",
+        "o003-c90-ch12-exer-a-04-hint",
+        "o003-c90-ch12-exer-a-04-answer",
+        "o003-c90-ch12-exer-a-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-05",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 53,
+      "prompt_carrier": "atomic_task",
+      "title": "Bilangan bulat ganjil tidak terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-05-statement",
+        "o003-c90-ch12-exer-a-05-hint",
+        "o003-c90-ch12-exer-a-05-answer",
+        "o003-c90-ch12-exer-a-05-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-06",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_aZ_top-task-04",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 60,
+      "prompt_carrier": "atomic_task",
+      "title": "Satu himpunan terbuka dengan ekor kelipatan",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-06-statement",
+        "o003-c90-ch12-exer-a-06-hint",
+        "o003-c90-ch12-exer-a-06-answer",
+        "o003-c90-ch12-exer-a-06-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-07",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 75,
+      "prompt_carrier": "atomic_task",
+      "title": "Basis dari kelas-kelas residu",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-07-statement",
+        "o003-c90-ch12-exer-a-07-hint",
+        "o003-c90-ch12-exer-a-07-answer",
+        "o003-c90-ch12-exer-a-07-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-08",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 93,
+      "prompt_carrier": "atomic_task",
+      "title": "Fungsi yang menukar pasangan berurutan",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-08-statement",
+        "o003-c90-ch12-exer-a-08-hint",
+        "o003-c90-ch12-exer-a-08-answer",
+        "o003-c90-ch12-exer-a-08-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-09",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 100,
+      "prompt_carrier": "atomic_task",
+      "title": "Citra himpunan terbuka di bawah f",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-09-statement",
+        "o003-c90-ch12-exer-a-09-hint",
+        "o003-c90-ch12-exer-a-09-answer",
+        "o003-c90-ch12-exer-a-09-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-a-10",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-coset-f-task-04",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 108,
+      "prompt_carrier": "atomic_task",
+      "title": "Prapeta himpunan terbuka di bawah f",
+      "surfaces": [
+        "o003-c90-ch12-exer-a-10-statement",
+        "o003-c90-ch12-exer-a-10-hint",
+        "o003-c90-ch12-exer-a-10-answer",
+        "o003-c90-ch12-exer-a-10-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-01",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_coarse_topology_example-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 132,
+      "prompt_carrier": "atomic_task",
+      "title": "Basis interval berpusat di nol",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-01-statement",
+        "o003-c90-ch12-exer-b-01-hint",
+        "o003-c90-ch12-exer-b-01-answer",
+        "o003-c90-ch12-exer-b-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-02",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-ex_coarse_topology_example-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 139,
+      "prompt_carrier": "atomic_task",
+      "title": "Interval Euklides yang tidak terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-02-statement",
+        "o003-c90-ch12-exer-b-02-hint",
+        "o003-c90-ch12-exer-b-02-answer",
+        "o003-c90-ch12-exer-b-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-03",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 178,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi paling lemah",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-03-statement",
+        "o003-c90-ch12-exer-b-03-hint",
+        "o003-c90-ch12-exer-b-03-answer",
+        "o003-c90-ch12-exer-b-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-04",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 185,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi paling kuat",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-04-statement",
+        "o003-c90-ch12-exer-b-04-hint",
+        "o003-c90-ch12-exer-b-04-answer",
+        "o003-c90-ch12-exer-b-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-05",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 192,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi maksimal yang bukan diskret",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-05-statement",
+        "o003-c90-ch12-exer-b-05-hint",
+        "o003-c90-ch12-exer-b-05-answer",
+        "o003-c90-ch12-exer-b-05-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-06",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-04",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 211,
+      "prompt_carrier": "atomic_task",
+      "title": "Adakah topologi maksimal non-diskret?",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-06-statement",
+        "o003-c90-ch12-exer-b-06-hint",
+        "o003-c90-ch12-exer-b-06-answer",
+        "o003-c90-ch12-exer-b-06-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-07",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-weaker_topologies-task-05",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 220,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi minimal non-indiskret",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-07-statement",
+        "o003-c90-ch12-exer-b-07-hint",
+        "o003-c90-ch12-exer-b-07-answer",
+        "o003-c90-ch12-exer-b-07-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-08",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 241,
+      "prompt_carrier": "atomic_task",
+      "title": "Keterbukaan himpunan lingkungan minimal",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-08-statement",
+        "o003-c90-ch12-exer-b-08-hint",
+        "o003-c90-ch12-exer-b-08-answer",
+        "o003-c90-ch12-exer-b-08-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-09",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 248,
+      "prompt_carrier": "atomic_task",
+      "title": "Basis minimal dari lingkungan terkecil",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-09-statement",
+        "o003-c90-ch12-exer-b-09-hint",
+        "o003-c90-ch12-exer-b-09-answer",
+        "o003-c90-ch12-exer-b-09-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-b-10",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 255,
+      "prompt_carrier": "atomic_task",
+      "title": "Minimalitas basis hingga",
+      "surfaces": [
+        "o003-c90-ch12-exer-b-10-statement",
+        "o003-c90-ch12-exer-b-10-hint",
+        "o003-c90-ch12-exer-b-10-answer",
+        "o003-c90-ch12-exer-b-10-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-c-01",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_minimal_basis-task-04",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 262,
+      "prompt_carrier": "atomic_task",
+      "title": "Basis minimal pada empat titik",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-01-statement",
+        "o003-c90-ch12-exer-c-01-hint",
+        "o003-c90-ch12-exer-c-01-answer",
+        "o003-c90-ch12-exer-c-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-c-02",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-topology_chains-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 271,
+      "prompt_carrier": "atomic_task",
+      "title": "Rantai terpanjang topologi yang ditampilkan",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-02-statement",
+        "o003-c90-ch12-exer-c-02-hint",
+        "o003-c90-ch12-exer-c-02-answer",
+        "o003-c90-ch12-exer-c-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-c-03",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_topologies-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 343,
+      "prompt_carrier": "atomic_task",
+      "title": "Semua topologi pada himpunan satu titik",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-03-statement",
+        "o003-c90-ch12-exer-c-03-hint",
+        "o003-c90-ch12-exer-c-03-answer",
+        "o003-c90-ch12-exer-c-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-c-04",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_topologies-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 350,
+      "prompt_carrier": "atomic_task",
+      "title": "Semua topologi pada himpunan dua titik berlabel",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-04-statement",
+        "o003-c90-ch12-exer-c-04-hint",
+        "o003-c90-ch12-exer-c-04-answer",
+        "o003-c90-ch12-exer-c-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-c-05",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-finite_topologies-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 357,
+      "prompt_carrier": "atomic_task",
+      "title": "Semua 29 topologi pada himpunan tiga titik berlabel",
+      "surfaces": [
+        "o003-c90-ch12-exer-c-05-statement",
+        "o003-c90-ch12-exer-c-05-hint",
+        "o003-c90-ch12-exer-c-05-answer",
+        "o003-c90-ch12-exer-c-05-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-d-01",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-tail_topology-direct-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 371,
+      "prompt_carrier": "direct_statement",
+      "title": "Topologi ekor pada bilangan bulat positif",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-01-statement",
+        "o003-c90-ch12-exer-d-01-hint",
+        "o003-c90-ch12-exer-d-01-answer",
+        "o003-c90-ch12-exer-d-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-d-02",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-interior_laws-direct-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 381,
+      "prompt_carrier": "direct_statement",
+      "title": "Interior irisan dan gabungan",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-02-statement",
+        "o003-c90-ch12-exer-d-02-hint",
+        "o003-c90-ch12-exer-d-02-answer",
+        "o003-c90-ch12-exer-d-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-d-03",
+      "source_anchor": "o003-gvsu-ch12-ex_particular_point_topology-direct-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 393,
+      "prompt_carrier": "direct_statement",
+      "title": "Topologi titik tertentu",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-03-statement",
+        "o003-c90-ch12-exer-d-03-hint",
+        "o003-c90-ch12-exer-d-03-answer",
+        "o003-c90-ch12-exer-d-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-d-04",
+      "source_anchor": "o003-gvsu-ch12-ex_excluded_point_topology-direct-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 407,
+      "prompt_carrier": "direct_statement",
+      "title": "Topologi titik yang dikecualikan",
+      "surfaces": [
+        "o003-c90-ch12-exer-d-04-statement",
+        "o003-c90-ch12-exer-d-04-hint",
+        "o003-c90-ch12-exer-d-04-answer",
+        "o003-c90-ch12-exer-d-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-e-01",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 442,
+      "prompt_carrier": "atomic_task",
+      "title": "Koleksi lingkungan dasar pada garis digital",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-01-statement",
+        "o003-c90-ch12-exer-e-01-hint",
+        "o003-c90-ch12-exer-e-01-answer",
+        "o003-c90-ch12-exer-e-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-e-02",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 466,
+      "prompt_carrier": "atomic_task",
+      "title": "Apakah singleton nol terbuka?",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-02-statement",
+        "o003-c90-ch12-exer-e-02-hint",
+        "o003-c90-ch12-exer-e-02-answer",
+        "o003-c90-ch12-exer-e-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-e-03",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 473,
+      "prompt_carrier": "atomic_task",
+      "title": "Apakah singleton satu terbuka?",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-03-statement",
+        "o003-c90-ch12-exer-e-03-hint",
+        "o003-c90-ch12-exer-e-03-answer",
+        "o003-c90-ch12-exer-e-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-e-04",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 480,
+      "prompt_carrier": "atomic_task",
+      "title": "Apakah dua titik genap terbuka?",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-04-statement",
+        "o003-c90-ch12-exer-e-04-hint",
+        "o003-c90-ch12-exer-e-04-answer",
+        "o003-c90-ch12-exer-e-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-e-05",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-04",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 487,
+      "prompt_carrier": "atomic_task",
+      "title": "Blok berhingga yang terbuka",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-05-statement",
+        "o003-c90-ch12-exer-e-05-hint",
+        "o003-c90-ch12-exer-e-05-answer",
+        "o003-c90-ch12-exer-e-05-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-e-06",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-05",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 494,
+      "prompt_carrier": "atomic_task",
+      "title": "Bilangan bulat positif",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-06-statement",
+        "o003-c90-ch12-exer-e-06-hint",
+        "o003-c90-ch12-exer-e-06-answer",
+        "o003-c90-ch12-exer-e-06-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-e-07",
+      "source_anchor": "o003-gvsu-ch12-ex_digital_line_topology-open_sets-task-06",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 501,
+      "prompt_carrier": "atomic_task",
+      "title": "Himpunan semua bilangan bulat ganjil",
+      "surfaces": [
+        "o003-c90-ch12-exer-e-07-statement",
+        "o003-c90-ch12-exer-e-07-hint",
+        "o003-c90-ch12-exer-e-07-answer",
+        "o003-c90-ch12-exer-e-07-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-f-01",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 536,
+      "prompt_carrier": "atomic_task",
+      "title": "Himpunan nol berupa dua garis vertikal",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-01-statement",
+        "o003-c90-ch12-exer-f-01-hint",
+        "o003-c90-ch12-exer-f-01-answer",
+        "o003-c90-ch12-exer-f-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-f-02",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 543,
+      "prompt_carrier": "atomic_task",
+      "title": "Garis nol bersama tiga polinom linear",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-02-statement",
+        "o003-c90-ch12-exer-f-02-hint",
+        "o003-c90-ch12-exer-f-02-answer",
+        "o003-c90-ch12-exer-f-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-f-03",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 552,
+      "prompt_carrier": "atomic_task",
+      "title": "Komplemen himpunan nol sebagai basis",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-03-statement",
+        "o003-c90-ch12-exer-f-03-hint",
+        "o003-c90-ch12-exer-f-03-answer",
+        "o003-c90-ch12-exer-f-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-f-04",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-04",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 564,
+      "prompt_carrier": "atomic_task",
+      "title": "Sumbu koordinat tidak terbuka secara Zariski",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-04-statement",
+        "o003-c90-ch12-exer-f-04-hint",
+        "o003-c90-ch12-exer-f-04-answer",
+        "o003-c90-ch12-exer-f-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-f-05",
+      "source_anchor": "o003-gvsu-ch12-ex_TS_Zariski-task-05",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 572,
+      "prompt_carrier": "atomic_task",
+      "title": "Topologi Zariski pada garis adalah topologi kofinit",
+      "surfaces": [
+        "o003-c90-ch12-exer-f-05-statement",
+        "o003-c90-ch12-exer-f-05-hint",
+        "o003-c90-ch12-exer-f-05-answer",
+        "o003-c90-ch12-exer-f-05-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-g-01",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-01",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 591,
+      "prompt_carrier": "atomic_task",
+      "title": "Koleksi lima himpunan",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-01-statement",
+        "o003-c90-ch12-exer-g-01-hint",
+        "o003-c90-ch12-exer-g-01-answer",
+        "o003-c90-ch12-exer-g-01-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-g-02",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-02",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 598,
+      "prompt_carrier": "atomic_task",
+      "title": "Bilangan bulat dalam topologi kofinit",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-02-statement",
+        "o003-c90-ch12-exer-g-02-hint",
+        "o003-c90-ch12-exer-g-02-answer",
+        "o003-c90-ch12-exer-g-02-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-g-03",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-03",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 605,
+      "prompt_carrier": "atomic_task",
+      "title": "Menguji basis yang diberikan",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-03-statement",
+        "o003-c90-ch12-exer-g-03-hint",
+        "o003-c90-ch12-exer-g-03-answer",
+        "o003-c90-ch12-exer-g-03-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-g-04",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-04",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 615,
+      "prompt_carrier": "atomic_task",
+      "title": "Ruang diskret selalu termetriskan",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-04-statement",
+        "o003-c90-ch12-exer-g-04-hint",
+        "o003-c90-ch12-exer-g-04-answer",
+        "o003-c90-ch12-exer-g-04-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-g-05",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-05",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 624,
+      "prompt_carrier": "atomic_task",
+      "title": "Titik interior dalam ruang berhingga",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-05-statement",
+        "o003-c90-ch12-exer-g-05-hint",
+        "o003-c90-ch12-exer-g-05-answer",
+        "o003-c90-ch12-exer-g-05-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-g-06",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-06",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 636,
+      "prompt_carrier": "atomic_task",
+      "title": "Gabungan dua topologi",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-06-statement",
+        "o003-c90-ch12-exer-g-06-hint",
+        "o003-c90-ch12-exer-g-06-answer",
+        "o003-c90-ch12-exer-g-06-solution"
+      ]
+    },
+    {
+      "id": "o003-c90-ch12-exer-g-07",
+      "source_anchor": "o003-gvsu-ch12-sec_top_space_exer-true_false-task-07",
+      "source_file": "repo/source/sec_top_space_exer.ptx",
+      "source_line": 644,
+      "prompt_carrier": "atomic_task",
+      "title": "Irisan dua topologi",
+      "surfaces": [
+        "o003-c90-ch12-exer-g-07-statement",
+        "o003-c90-ch12-exer-g-07-hint",
+        "o003-c90-ch12-exer-g-07-answer",
+        "o003-c90-ch12-exer-g-07-solution"
+      ]
+    }
   ],
   "validation": {
     "xml_parse": "pass",
@@ -159,8 +1265,8 @@
       },
       "companion_wrapper": {
         "path": "repo/qa/CHAPTER12_COMPANION_WRAPPER_SCHEMA_QA.json",
-        "bytes": 1224,
-        "sha256": "cc948004ed2e8cca6704cfecc7ccabc61462ba67af0cb06addcbd18b1364dc33",
+        "bytes": 1485,
+        "sha256": "0a1534b9fa788060c0fe09ee7c9b3736d238eac38abe8996323fa9b5465b98cd",
         "status": "pass"
       },
       "exercise_guides_b": {
@@ -168,20 +1274,61 @@
         "bytes": 796,
         "sha256": "495fb9c12b7cf3d9840aeeff34ba02b97b8fb093f6813b176c678754ca32c0bb",
         "status": "pass"
+      },
+      "exercise_guides_c": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_C_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "6489e3baf351675be9b0451e8e9f1b19c08659d2b95a7ca70b8942f95abc4858",
+        "status": "pass"
+      },
+      "exercise_guides_d": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_D_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "128bc9b8a93cf66207b55c3d281eedf07cf392817f7ca4491d6c8b665a96a37c",
+        "status": "pass"
+      },
+      "exercise_guides_e": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_E_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "3b13d0f8a1104e04fc93149db9f2bea66eea3eb5de911966c7c89a1700c055a0",
+        "status": "pass"
+      },
+      "exercise_guides_f": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_F_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "e70b8c4e48a9138d1f0fd49f7cfaaf93f8f1ac448c066f60630a9ebe09d3332d",
+        "status": "pass"
+      },
+      "exercise_guides_g": {
+        "path": "repo/qa/CHAPTER12_EXERCISE_GUIDES_G_SCHEMA_QA.json",
+        "bytes": 796,
+        "sha256": "7df5b15ad812efa5a8e156c248b473084ef8ff381af9251f45036eefdbe576b1",
+        "status": "pass"
       }
     },
     "all_covered_entries_have_statement_hint_answer_solution": true,
     "source_and_companion_ids_are_disjoint": true,
     "complete_reader_boundary": false,
-    "cumulative_build": "not run; partial companion is not admitted",
+    "cumulative_build": "not run; source-prompt closure still requires mastery and reader admission",
     "blocking_gaps": [
-      "28 source prompt units still need staged support",
-      "five non-response grouping task nodes still need parent/child backend mappings, and all mastery checks remain",
-      "complete stable-ID backend and cumulative HTML/PDF build remain pending"
+      "all mastery checks remain",
+      "complete cumulative HTML/PDF build and reader admission remain pending"
     ]
   },
   "provenance": {
     "tool": "OpenAI Codex gpt-5.6-sol, Ultra",
     "instruction": "Produced at the user's direction; source-author, institutional, and human-contributor credits remain unchanged."
+  },
+  "backend": {
+    "prompt_map": {
+      "path": "repo/backend/chapter_12_source_prompt_map.csv",
+      "bytes": 11494,
+      "sha256": "e9ba35bf8043155028a9770eb745f443bc4f98b02a4376cca96bf51662c257a2"
+    },
+    "grouping_nodes": {
+      "path": "repo/backend/chapter_12_grouping_nodes.json",
+      "bytes": 1785,
+      "sha256": "476390ee9334d77020a430640cba31e98c76a3c7413f45d112e4651eb979ca32"
+    }
   }
 }

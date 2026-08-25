@@ -1,0 +1,148 @@
+<section xml:id="o003-c90-ch13-source-guides-d" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Tutupan sebagai Himpunan Tertutup Terkecil</title>
+
+  <p>
+    Pada seluruh panduan ini, <m>(X,\tau)</m> adalah ruang topologi,
+    <m>A\subseteq X</m>, dan <m>A'</m> menyatakan himpunan titik limit
+    <m>A</m>.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-guide-18">
+    <title>Makna “Tertutup Terkecil”</title>
+    <statement>
+      <p>
+        Nyatakan tepat apa saja yang harus dibuktikan untuk menunjukkan bahwa
+        <m>\overline{A}</m> adalah subhimpunan tertutup terkecil dari
+        <m>X</m> yang memuat <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-18-hint">
+      <p><em>Tahap 1.</em> Pisahkan syarat “tertutup”, “memuat <m>A</m>”, dan “terkecil”.</p>
+      <p><em>Tahap 2.</em> “Terkecil” diukur dengan relasi inklusi, bukan dengan kardinalitas.</p>
+      <p><em>Tahap 3.</em> Kuantifikasikan syarat terakhir terhadap setiap himpunan tertutup lain yang memuat <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-18-answer">
+      <p>
+        Harus dibuktikan bahwa <m>A\subseteq\overline{A}</m>,
+        <m>\overline{A}</m> tertutup, dan untuk setiap himpunan tertutup
+        <m>C</m> dengan <m>A\subseteq C</m> berlaku
+        <m>\overline{A}\subseteq C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-18-solution">
+      <p>
+        Dua syarat pertama menyatakan bahwa <m>\overline{A}</m> sendiri
+        merupakan salah satu subhimpunan tertutup yang memuat <m>A</m>.
+        Syarat ketiga menyatakan bahwa subhimpunan itu termuat dalam setiap
+        calon lain. Karena urutan yang digunakan adalah inklusi, ketiga syarat
+        tersebut tepat mengungkapkan bahwa <m>\overline{A}</m> adalah
+        subhimpunan tertutup terkecil yang memuat <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-19">
+    <title>Mengurangi Inklusi Tutupan ke Titik Limit</title>
+    <statement>
+      <p>
+        Andaikan <m>C</m> tertutup dan <m>A\subseteq C</m>.
+        Jelaskan mengapa, untuk membuktikan
+        <m>\overline{A}\subseteq C</m>, cukup membuktikan
+        <m>A'\subseteq C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-19-hint">
+      <p><em>Tahap 1.</em> Gunakan identitas <m>\overline{A}=A\cup A'</m>.</p>
+      <p><em>Tahap 2.</em> Salah satu dari dua bagian gabungan itu sudah diketahui termuat dalam <m>C</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan fakta bahwa gabungan dua subhimpunan dari <m>C</m> tetap merupakan subhimpunan dari <m>C</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-19-answer">
+      <p>
+        Karena <m>\overline{A}=A\cup A'</m> dan <m>A\subseteq C</m> sudah
+        diketahui, satu-satunya inklusi yang masih perlu dibuktikan adalah
+        <m>A'\subseteq C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-19-solution">
+      <p>
+        Jika <m>A'\subseteq C</m>, maka kedua himpunan <m>A</m> dan
+        <m>A'</m> termuat dalam <m>C</m>. Oleh karena itu,
+        <m>A\cup A'\subseteq C</m>. Identitas
+        <m>\overline{A}=A\cup A'</m> kemudian memberikan
+        <m>\overline{A}\subseteq C</m>. Tidak diperlukan syarat tambahan
+        terhadap titik-titik <m>A</m> karena inklusinya sudah menjadi asumsi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-20">
+    <title>Menempatkan Titik Limit di dalam Himpunan Tertutup</title>
+    <statement>
+      <p>
+        Andaikan <m>C</m> tertutup, <m>A\subseteq C</m>, dan
+        <m>x\in A'</m>. Tentukan apa yang dapat disimpulkan tentang
+        <m>x</m>, beserta alasannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-20-hint">
+      <p><em>Tahap 1.</em> Andaikan sebaliknya bahwa <m>x\notin C</m>.</p>
+      <p><em>Tahap 2.</em> Karena <m>C</m> tertutup, <m>X\setminus C</m> adalah lingkungan terbuka dari <m>x</m>.</p>
+      <p><em>Tahap 3.</em> Bandingkan lingkungan itu dengan syarat <m>x\in A'</m> dan inklusi <m>A\subseteq C</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-20-answer">
+      <p>Harus berlaku <m>x\in C</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-20-solution">
+      <p>
+        Andaikan <m>x\notin C</m>. Maka <m>X\setminus C</m> terbuka dan
+        memuat <m>x</m>. Karena <m>A\subseteq C</m>, lingkungan ini tidak
+        bertemu <m>A</m>, sehingga tentu tidak bertemu
+        <m>A\setminus\{x\}</m>. Hal itu bertentangan dengan
+        <m>x\in A'</m>, yang mengharuskan setiap lingkungan dari <m>x</m>
+        memuat suatu titik <m>A</m> selain <m>x</m>. Jadi <m>x\in C</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-21">
+    <title>Pembuktian Lengkap Sifat Minimal Tutupan</title>
+    <statement>
+      <p>
+        Lengkapilah pembuktian bahwa jika <m>C</m> adalah subhimpunan tertutup
+        dari <m>X</m> yang memuat <m>A</m>, maka
+        <m>\overline{A}\subseteq C</m>. Sertakan kaitannya dengan pernyataan
+        bahwa <m>\overline{A}</m> merupakan himpunan tertutup terkecil yang
+        memuat <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-21-hint">
+      <p><em>Tahap 1.</em> Ambil sebarang <m>x\in\overline{A}=A\cup A'</m>.</p>
+      <p><em>Tahap 2.</em> Jika <m>x\in A</m>, gunakan <m>A\subseteq C</m>; jika <m>x\in A'</m>, gunakan komplemen terbuka <m>X\setminus C</m> untuk memperoleh kontradiksi bila <m>x\notin C</m>.</p>
+      <p><em>Tahap 3.</em> Gabungkan inklusi ini dengan fakta bahwa <m>\overline{A}</m> tertutup dan memuat <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-21-answer">
+      <p>
+        Setiap <m>x\in\overline{A}</m> berada dalam <m>A</m> atau
+        <m>A'</m>; kedua kasus memberi <m>x\in C</m>. Jadi
+        <m>\overline{A}\subseteq C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-21-solution">
+      <p>
+        Ambil sebarang <m>x\in\overline{A}=A\cup A'</m>. Jika <m>x\in A</m>,
+        maka <m>x\in C</m> karena <m>A\subseteq C</m>. Jika <m>x\in A'</m>
+        tetapi <m>x\notin C</m>, himpunan <m>X\setminus C</m> merupakan
+        lingkungan terbuka dari <m>x</m> yang tidak bertemu <m>A</m>.
+        Ini bertentangan dengan definisi titik limit. Maka dalam kasus kedua
+        pun <m>x\in C</m>. Jadi <m>\overline{A}\subseteq C</m>.
+      </p>
+      <p>
+        Selain itu, <m>A\subseteq\overline{A}</m> langsung dari
+        <m>\overline{A}=A\cup A'</m>, dan <m>\overline{A}</m> tertutup.
+        Karena <m>\overline{A}</m> termuat dalam setiap himpunan tertutup
+        <m>C</m> yang memuat <m>A</m>, tutupan itu adalah himpunan
+        tertutup terkecil yang memuat <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

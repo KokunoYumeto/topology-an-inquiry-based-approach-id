@@ -1,0 +1,173 @@
+<section xml:id="o003-c90-ch13-source-guides-c" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Titik Limit dan Limit Barisan</title>
+
+  <p>
+    Untuk menentukan titik limit suatu himpunan <m>A</m>, uji apakah setiap
+    lingkungan terbuka dari titik yang sedang diperiksa bertemu dengan
+    <m>A</m> pada suatu titik lain. Jika sebuah basis diberikan, cukup menguji
+    lingkungan-lingkungan basis yang memuat titik tersebut.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-guide-13">
+    <title>Titik Limit pada Topologi Berhingga Pertama</title>
+    <statement>
+      <p>
+        Tentukan semua titik limit dari <m>A=\{c,d\}</m> dalam
+        <m>X=\{a,b,c,d\}</m> dengan
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-13-hint">
+      <p><em>Tahap 1.</em> Cari lingkungan terbuka terkecil yang tersedia untuk masing-masing titik.</p>
+      <p><em>Tahap 2.</em> Titik <m>a</m> memiliki lingkungan <m>\{a\}</m>, dan titik <m>b</m> memiliki lingkungan <m>\{b\}</m>.</p>
+      <p><em>Tahap 3.</em> Satu-satunya lingkungan terbuka yang memuat <m>c</m> atau <m>d</m> adalah <m>X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-13-answer">
+      <p>Himpunan titik limitnya adalah <m>A'=\{c,d\}</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-13-solution">
+      <p>
+        Lingkungan <m>\{a\}</m> tidak bertemu <m>A</m>, sehingga <m>a</m>
+        bukan titik limit. Demikian pula, <m>\{b\}</m> menunjukkan bahwa
+        <m>b</m> bukan titik limit. Setiap lingkungan terbuka dari <m>c</m>
+        adalah <m>X</m>, dan <m>X</m> memuat titik <m>d\in A\setminus\{c\}</m>.
+        Jadi <m>c</m> titik limit. Dengan menukar peran <m>c</m> dan <m>d</m>,
+        diperoleh bahwa <m>d</m> juga titik limit.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-14">
+    <title>Titik Limit pada Topologi Berhingga Kedua</title>
+    <statement>
+      <p>
+        Tentukan semua titik limit dari <m>A=\{a,b\}</m> dalam
+        <m>X=\{a,b,c,d,e,f\}</m> dengan
+        <me>
+          \tau=\{\emptyset,\{b\},\{a,b,c\},\{d,e,f\},\{b,d,e,f\},X\}.
+        </me>
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-14-hint">
+      <p><em>Tahap 1.</em> Gunakan <m>\{b\}</m> untuk menguji <m>b</m> dan <m>\{d,e,f\}</m> untuk menguji <m>d,e,f</m>.</p>
+      <p><em>Tahap 2.</em> Setiap lingkungan terbuka dari <m>a</m> memuat <m>b</m>.</p>
+      <p><em>Tahap 3.</em> Setiap lingkungan terbuka dari <m>c</m> memuat paling sedikit satu titik dari <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-14-answer">
+      <p>Himpunan titik limitnya adalah <m>A'=\{a,c\}</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-14-solution">
+      <p>
+        Lingkungan terbuka <m>\{b\}</m> tidak memuat titik
+        <m>A\setminus\{b\}=\{a\}</m>, jadi <m>b</m> bukan titik limit.
+        Himpunan <m>\{d,e,f\}</m> adalah lingkungan dari masing-masing
+        <m>d,e,f</m> dan tidak bertemu <m>A</m>, sehingga ketiga titik itu
+        bukan titik limit. Setiap lingkungan dari <m>a</m> memuat
+        <m>\{a,b,c\}</m> dan karenanya memuat <m>b\neq a</m>. Setiap lingkungan
+        dari <m>c</m> juga memuat <m>\{a,b,c\}</m>, sehingga bertemu
+        <m>A</m>. Jadi tepat <m>a</m> dan <m>c</m> merupakan titik limit.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-15">
+    <title>Titik Limit pada Ruang Diskret</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m> dilengkapi topologi diskret.
+        Tentukan semua titik limit dari <m>A=\{a,b\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-15-hint">
+      <p><em>Tahap 1.</em> Dalam topologi diskret, setiap himpunan beranggota tunggal terbuka.</p>
+      <p><em>Tahap 2.</em> Untuk setiap <m>x\in X</m>, gunakan <m>\{x\}</m> sebagai lingkungan uji.</p>
+      <p><em>Tahap 3.</em> Periksa irisan <m>\{x\}\cap(A\setminus\{x\})</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-15-answer">
+      <p>Tidak ada titik limit; <m>A'=\emptyset</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-15-solution">
+      <p>
+        Untuk setiap <m>x\in X</m>, himpunan <m>\{x\}</m> adalah lingkungan
+        terbuka dari <m>x</m>. Lingkungan ini tidak memuat titik mana pun dari
+        <m>A\setminus\{x\}</m>. Jadi setiap titik memiliki satu lingkungan
+        yang menggagalkan syarat titik limit, sehingga <m>A'=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-16">
+    <title>Titik Limit pada Topologi Garis Digital</title>
+    <statement>
+      <p>
+        Pada <m>\Z</m>, misalkan <m>\tau</m> memiliki basis
+        <m>\{B(n)\mid n\in\Z\}</m>, dengan
+        <me>
+          B(n)=
+          \begin{cases}
+            \{n\} \amp \text{jika \(n\) ganjil},\\
+            \{n-1,n,n+1\} \amp \text{jika \(n\) genap}.
+          \end{cases}
+        </me>
+        Tentukan semua titik limit dari <m>A=\{-1,0,1\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-16-hint">
+      <p><em>Tahap 1.</em> Setiap bilangan ganjil memiliki lingkungan basis beranggota tunggal.</p>
+      <p><em>Tahap 2.</em> Jika <m>n</m> genap, satu-satunya anggota basis yang memuat <m>n</m> adalah <m>B(n)=\{n-1,n,n+1\}</m>.</p>
+      <p><em>Tahap 3.</em> Cari semua bilangan genap <m>n</m> untuk mana <m>B(n)</m> bertemu <m>A\setminus\{n\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-16-answer">
+      <p>Himpunan titik limitnya adalah <m>A'=\{-2,0,2\}</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-16-solution">
+      <p>
+        Jika <m>n</m> ganjil, lingkungan <m>B(n)=\{n\}</m> tidak bertemu
+        <m>A\setminus\{n\}</m>; jadi tidak ada titik ganjil yang merupakan
+        titik limit. Jika <m>n</m> genap, cukup menguji
+        <m>B(n)=\{n-1,n,n+1\}</m>. Untuk <m>n=-2,0,2</m>, himpunan ini
+        bertemu <m>A\setminus\{n\}</m>, masing-masing pada <m>-1</m>,
+        pada <m>-1</m> atau <m>1</m>, dan pada <m>1</m>. Untuk setiap bilangan
+        genap lain, <m>B(n)</m> tidak bertemu <m>A</m>. Maka tepat
+        <m>-2,0,2</m> merupakan titik limit.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-17">
+    <title>Limit Barisan Konstan Dapat Tidak Tunggal</title>
+    <statement>
+      <p>
+        Tinjau <m>X=\{a,b,c\}</m> dengan
+        <m>\tau=\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}</m>.
+        Tentukan semua limit dari masing-masing barisan konstan
+        <m>(a)</m>, <m>(b)</m>, dan <m>(c)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-17-hint">
+      <p><em>Tahap 1.</em> Barisan konstan <m>(p)</m> konvergen ke <m>x</m> tepat ketika setiap lingkungan terbuka dari <m>x</m> memuat <m>p</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan lingkungan <m>\{c\}</m> untuk menguji konvergensi ke <m>c</m>.</p>
+      <p><em>Tahap 3.</em> Perhatikan bahwa setiap himpunan terbuka tak kosong dalam <m>\tau</m> memuat <m>c</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-17-answer">
+      <p>
+        Barisan <m>(a)</m> hanya berlimit <m>a</m>; barisan <m>(b)</m> hanya
+        berlimit <m>b</m>; barisan <m>(c)</m> berlimit <m>a</m>, <m>b</m>,
+        dan <m>c</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-17-solution">
+      <p>
+        Lingkungan terbuka terkecil yang relevan bagi <m>a</m> adalah
+        <m>\{a,c\}</m>, bagi <m>b</m> adalah <m>\{b,c\}</m>, dan bagi
+        <m>c</m> adalah <m>\{c\}</m>. Setiap lingkungan dari <m>a</m> memuat
+        <m>a</m> dan <m>c</m>, sehingga <m>(a)</m> dan <m>(c)</m> konvergen
+        ke <m>a</m>. Setiap lingkungan dari <m>b</m> memuat <m>b</m> dan
+        <m>c</m>, sehingga <m>(b)</m> dan <m>(c)</m> konvergen ke <m>b</m>.
+        Hanya <m>(c)</m> yang akhirnya berada dalam lingkungan <m>\{c\}</m>,
+        sehingga hanya <m>(c)</m> yang konvergen ke <m>c</m>. Jika hasil
+        dikelompokkan menurut barisannya, diperoleh daftar pada jawaban.
+      </p>
+    </solution>
+  </exercise>
+</section>

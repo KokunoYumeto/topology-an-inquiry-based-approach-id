@@ -1,0 +1,80 @@
+<section xml:id="o003-c90-ch13-source-guides-b" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Gabungan Himpunan Tertutup</title>
+
+  <p>
+    Panduan ini menggunakan topologi komplemen berhingga
+    <m>\tau_{FC}</m> pada <m>\Z</m>: suatu himpunan tak kosong terbuka tepat
+    ketika komplemennya berhingga.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-guide-11">
+    <title>Kardinalitas Himpunan Tertutup</title>
+    <statement>
+      <p>
+        Dalam <m>(\Z,\tau_{FC})</m>, tentukan apa yang harus berlaku bagi
+        kardinalitas setiap himpunan tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-11-hint">
+      <p><em>Tahap 1.</em> Misalkan <m>C</m> tertutup; maka <m>\Z\setminus C</m> terbuka.</p>
+      <p><em>Tahap 2.</em> Pisahkan kasus <m>\Z\setminus C=\emptyset</m> dari kasus komplemennya tak kosong.</p>
+      <p><em>Tahap 3.</em> Pada kasus kedua, terapkan definisi topologi komplemen berhingga kepada <m>\Z\setminus C</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-11-answer">
+      <p>
+        Setiap himpunan tertutup adalah berhingga atau sama dengan seluruh
+        <m>\Z</m>. Sebaliknya, setiap subhimpunan berhingga dan <m>\Z</m>
+        sendiri memang tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-11-solution">
+      <p>
+        Jika <m>C=\Z</m>, maka <m>C</m> tertutup karena komplemennya
+        <m>\emptyset</m> terbuka. Jika <m>C\neq\Z</m>, himpunan
+        <m>O=\Z\setminus C</m> tak kosong. Karena <m>C</m> tertutup,
+        <m>O</m> terbuka; definisi <m>\tau_{FC}</m> lalu menyatakan bahwa
+        <m>\Z\setminus O=C</m> berhingga. Sebaliknya, jika <m>C</m>
+        berhingga, maka <m>\Z\setminus C</m> tak kosong dan berkomplemen
+        berhingga, sehingga terbuka. Jadi <m>C</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-12">
+    <title>Gabungan Tak Berhingga Dapat Gagal Tertutup</title>
+    <statement>
+      <p>
+        Untuk <m>n\geq 3</m>, misalkan
+        <m>C_n=\{2,3,\ldots,n\}</m>. Tentukan apakah
+        <m>\bigcup_{n\geq 3}C_n</m> tertutup dalam
+        <m>(\Z,\tau_{FC})</m>, dan jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-12-hint">
+      <p><em>Tahap 1.</em> Tuliskan secara eksplisit anggota gabungan tersebut.</p>
+      <p><em>Tahap 2.</em> Tentukan apakah gabungan itu berhingga dan apakah sama dengan <m>\Z</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan klasifikasi himpunan tertutup pada topologi komplemen berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-12-answer">
+      <p>
+        Tidak. Gabungannya adalah <m>\{2,3,4,\ldots\}</m>, suatu subhimpunan
+        tak berhingga yang bukan seluruh <m>\Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-12-solution">
+      <p>
+        Setiap bilangan bulat <m>k\geq 2</m> berada dalam <m>C_n</m> untuk
+        suatu <m>n\geq\max\{3,k\}</m>, sedangkan tidak ada bilangan bulat
+        kurang dari <m>2</m> yang berada dalam salah satu <m>C_n</m>. Maka
+        <me>
+          \bigcup_{n\geq 3}C_n=\{k\in\Z\mid k\geq 2\}.
+        </me>
+        Himpunan ini tak berhingga dan merupakan subhimpunan sejati dari
+        <m>\Z</m>. Karena himpunan tertutup sejati dalam topologi komplemen
+        berhingga harus berhingga, gabungan tersebut tidak tertutup. Contoh ini
+        juga menunjukkan mengapa ketertutupan hanya dijamin untuk gabungan
+        berhingga dari himpunan-himpunan tertutup.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-25",
+  "status": "pass",
+  "surface": "output/chapters01-13-html",
+  "canonical_html_manifest_sha256": "d79425dbc64176d50ecfcc1ffc926940244bb4d08a5446a341a018bb3bfed28c",
+  "language": "id-ID",
+  "served_root_byte_identity": {
+    "path": "o003-c90-chapters-01-13-reader.html",
+    "local_bytes": 46881,
+    "served_bytes": 46881,
+    "local_sha256": "4d17ef1cc5c6b3a3fb8b1d0d84fa5ffbae47176c2877a3ddadd94ee210fe9ddd",
+    "served_sha256": "4d17ef1cc5c6b3a3fb8b1d0d84fa5ffbae47176c2877a3ddadd94ee210fe9ddd"
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "document_client_width": 1425,
+      "document_scroll_width": 1425,
+      "main_left": 240,
+      "main_width": 1185,
+      "main_right": 1425,
+      "content_left": 353,
+      "content_width": 960,
+      "result": "desktop reader fills the available main column and centers the 960-pixel reading measure without horizontal overflow"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "main_left": 240,
+      "main_width": 1025,
+      "main_right": 1265,
+      "content_left": 273,
+      "content_width": 960,
+      "result": "desktop reader fills the available main column and centers the 960-pixel reading measure without horizontal overflow"
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "document_client_width": 1009,
+      "document_scroll_width": 1009,
+      "main_left": 240,
+      "main_width": 769,
+      "main_right": 1009,
+      "content_left": 273,
+      "content_width": 600,
+      "result": "reader fills the available main column and centers the 600-pixel reading measure without horizontal overflow"
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "document_client_width": 753,
+      "document_scroll_width": 753,
+      "main_left": 0,
+      "main_width": 753,
+      "main_right": 753,
+      "content_left": 33,
+      "content_width": 600,
+      "result": "single-column reflow with centered content and no horizontal overflow"
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "main_left": 0,
+      "main_width": 375,
+      "main_right": 375,
+      "content_left": 29,
+      "content_width": 318,
+      "result": "mobile single-column reflow with centered content and no horizontal overflow"
+    }
+  ],
+  "surfaces_checked": [
+    "frontmatter-1.html at 1440, 1280, 1024, 768, and 390 pixels",
+    "chap_Closed_sets_topology.html at 1440 pixels",
+    "o003-c90-ch13-source-guides-a.html at 390 pixels"
+  ],
+  "surface_regression": {
+    "page_width_checks": 7,
+    "desktop": {
+      "widths": [1440, 1280, 1024],
+      "result": "page fill, centered reading measure, localized navigation, Chapter 13 heading and mathematics pass without clipping or document overflow"
+    },
+    "tablet_and_mobile": {
+      "widths": [768, 390],
+      "result": "masthead, navigation, Chapter 13 companion mathematics and staged content reflow without clipping or document overflow"
+    }
+  },
+  "chapter_13_semantics": {
+    "book_heading": "Topologi: Pendekatan Berbasis Inkuiri: Bab 1-13 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Himpunan Tertutup, serta Pendamping Belajar Mandiri",
+    "book_link": "o003-c90-chapters-01-13-reader.html",
+    "edition_note_link": "o003-c90-ch13-edition-note.html",
+    "chapter_heading": "Bab 13 Himpunan Tertutup dalam Ruang Topologi",
+    "chapter_page": "chap_Closed_sets_topology.html",
+    "chapter_13_navigation_links_on_frontmatter": 9,
+    "result": "pass; the cumulative reader exposes Chapter 13 and contains no Chapter 12-only book or edition-note target"
+  },
+  "staged_disclosures": {
+    "chapter_13_live_interaction": {
+      "exercise": "o003-c90-ch13-guide-01",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "checked": [
+        "collapsed exercise",
+        "statement expansion",
+        "hint expansion",
+        "answer expansion",
+        "solution expansion"
+      ],
+      "active_controls": [
+        "Petunjuk.",
+        "Jawaban.",
+        "Solusi."
+      ],
+      "visible_outputs_after_expansion": 4,
+      "mobile_document_scroll_width": 375,
+      "mobile_document_client_width": 375,
+      "result": "all controls reveal their intended Indonesian surfaces and remain legible without horizontal overflow"
+    },
+    "static_closure": {
+      "source_prompt_entries": 76,
+      "mastery_entries": 8,
+      "staged_surfaces": 336,
+      "source": "qa/CHAPTER13_COMPANION_QA.json and generated companion HTML controls",
+      "result": "pass"
+    }
+  },
+  "checks": {
+    "reader_centering_and_fill": "pass",
+    "responsive_reflow": "pass",
+    "long_masthead_wrap": "pass",
+    "navigation_labels": "pass",
+    "chapter_13_reflow": "pass",
+    "chapter_13_navigation_and_identity": "pass",
+    "staged_hint_answer_solution": "pass by live interaction and static closure",
+    "document_horizontal_overflow": "none on seven page-width combinations",
+    "html_language": "id-ID",
+    "generated_english_chrome": "none on checked surfaces",
+    "browser_console_errors": "none",
+    "browser_console_warnings": "only known MathJax component-version warnings for [tex]/newcommand and [pretext]/mathjaxknowl3.js",
+    "offline_dependency_status": "not closed at this partial boundary; the external-host census remains explicit and whole-edition offline closure remains required"
+  },
+  "visual_inspection": {
+    "desktop": "At 1440 pixels the contents rail remains distinct and the Chapter 13 reader fills the remaining page width; headings, guiding questions, mathematics and navigation are unclipped.",
+    "mobile": "At 390 pixels the masthead and study checkpoint wrap cleanly; the opened Petunjuk, Jawaban and Solusi panels remain centered, legible and free of horizontal overflow."
+  },
+  "evidence": [
+    {
+      "path": "qa/CHAPTER13_HTML_MANIFEST.json",
+      "bytes": 2029759,
+      "sha256": "3f31ee677035759eedf7eb3b4cc0aa7edf007610efe2724ceabe7d209ff0cd21"
+    },
+    {
+      "path": "qa/CHAPTER13_HTML_QA.json",
+      "bytes": 829,
+      "sha256": "559c91b2fb336990ec69f08c2d790ee479c1efbb12d75fa7f4a82967d268a977"
+    },
+    {
+      "path": "qa/CHAPTER13_COMPANION_QA.json",
+      "bytes": 4139,
+      "sha256": "5cd319c435b09e6c9bfec3df1f19c27005e9731e489b59f5c977e8e74b764c6d"
+    }
+  ],
+  "failures": []
+}

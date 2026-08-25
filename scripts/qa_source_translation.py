@@ -88,6 +88,18 @@ def main() -> int:
         metavar="FILE:ZERO_BASED_TRANSLATED_INDEX:TAG",
     )
     parser.add_argument(
+        "--allow-authority-shell-removal",
+        action="append",
+        default=[],
+        metavar="FILE:ZERO_BASED_AUTHORITY_INDEX:TAG",
+        help=(
+            "Remove one invalid ancestor shell from the authority-side flattened "
+            "element comparison while retaining and comparing every descendant, "
+            "attribute, identifier, protected-math, and code surface. Indices are "
+            "evaluated after any approved cross-file removal."
+        ),
+    )
+    parser.add_argument(
         "--allow-element-block-move",
         action="append",
         default=[],
@@ -170,6 +182,23 @@ def main() -> int:
             raise SystemExit(f"invalid --allow-element-insertion: {specification}")
         insertion_allowances.setdefault(file_name, []).append((index, tag, specification))
     observed_element_insertions: list[dict[str, object]] = []
+    shell_removal_allowances: dict[str, list[tuple[int, str, str]]] = {}
+    for specification in args.allow_authority_shell_removal:
+        try:
+            file_name, index_text, tag = specification.rsplit(":", 2)
+            index = int(index_text)
+        except (ValueError, TypeError):
+            raise SystemExit(
+                f"invalid --allow-authority-shell-removal: {specification}"
+            )
+        if index < 0 or not tag:
+            raise SystemExit(
+                f"invalid --allow-authority-shell-removal: {specification}"
+            )
+        shell_removal_allowances.setdefault(file_name, []).append(
+            (index, tag, specification)
+        )
+    observed_authority_shell_removals: list[dict[str, object]] = []
     cross_file_move_allowances: list[dict[str, object]] = []
     for ordinal, specification in enumerate(args.allow_cross_file_element_block_move):
         try:
@@ -506,9 +535,43 @@ def main() -> int:
             for index, node in enumerate(all_translated_elements)
             if index not in removed_translated_indices.get(name, set())
         ]
-        authority_tags = [local_name(node) for node in authority_elements]
+        adjusted_authority_elements = list(authority_elements)
+        for index, expected_tag, specification in sorted(
+            shell_removal_allowances.get(name, []), reverse=True
+        ):
+            if index < 0 or index >= len(authority_elements):
+                failures.append(
+                    f"authority-shell-removal allowance index out of range: {specification}"
+                )
+                continue
+            actual_tag = local_name(authority_elements[index])
+            if actual_tag != expected_tag:
+                failures.append(
+                    f"authority-shell-removal tag mismatch: {specification}; got {actual_tag}"
+                )
+                continue
+            node = authority_elements[index]
+            observed_authority_shell_removals.append(
+                {
+                    "key": specification,
+                    "file": name,
+                    "authority_element_index": index,
+                    "element": actual_tag,
+                    "source_line": node.sourceline,
+                    "descendant_element_count": sum(
+                        1
+                        for child in node.iterdescendants()
+                        if isinstance(child.tag, str)
+                    ),
+                    "descendants_retained_in_comparison": True,
+                }
+            )
+            adjusted_authority_elements.pop(index)
+        authority_tags = [local_name(node) for node in adjusted_authority_elements]
         translated_tags = [local_name(node) for node in translated_elements]
-        authority_attributes = [sorted(node.attrib.items()) for node in authority_elements]
+        authority_attributes = [
+            sorted(node.attrib.items()) for node in adjusted_authority_elements
+        ]
         translated_attributes = [sorted(node.attrib.items()) for node in translated_elements]
         adjusted_translated_elements = list(translated_elements)
         for index, expected_tag, specification in sorted(
@@ -532,7 +595,7 @@ def main() -> int:
             if start < 0 or start + count > len(adjusted_translated_elements):
                 failures.append(f"element-block-move translated range out of bounds: {specification}")
                 continue
-            if authority_start < 0 or authority_start + count > len(authority_elements):
+            if authority_start < 0 or authority_start + count > len(adjusted_authority_elements):
                 failures.append(f"element-block-move authority range out of bounds: {specification}")
                 continue
             if start == authority_start:
@@ -558,7 +621,7 @@ def main() -> int:
                     f"element-block-move does not select exactly one retained subtree: {specification}"
                 )
                 continue
-            authority_block = authority_elements[authority_start:authority_start + count]
+            authority_block = adjusted_authority_elements[authority_start:authority_start + count]
             authority_subtree = [
                 node
                 for node in authority_block[0].iter()
@@ -598,7 +661,7 @@ def main() -> int:
             if start < 0 or start + count > len(adjusted_translated_elements):
                 failures.append(f"element-shell-move translated range out of bounds: {specification}")
                 continue
-            if authority_start < 0 or authority_start + count > len(authority_elements):
+            if authority_start < 0 or authority_start + count > len(adjusted_authority_elements):
                 failures.append(f"element-shell-move authority range out of bounds: {specification}")
                 continue
             if start == authority_start:
@@ -624,7 +687,7 @@ def main() -> int:
                     f"element-shell-move does not select exactly one retained ancestor shell: {specification}"
                 )
                 continue
-            authority_root = authority_elements[authority_start]
+            authority_root = adjusted_authority_elements[authority_start]
             authority_subtree = [
                 node for node in authority_root.iter() if isinstance(node.tag, str)
             ]
@@ -632,7 +695,7 @@ def main() -> int:
             if len(authority_prefix) != count or any(
                 actual is not expected
                 for actual, expected in zip(
-                    authority_elements[authority_start:authority_start + count],
+                    adjusted_authority_elements[authority_start:authority_start + count],
                     authority_prefix,
                 )
             ):
@@ -711,7 +774,11 @@ def main() -> int:
         elif authority_attributes != adjusted_translated_attributes:
             failures.append(f"attribute sequence changed: {name}")
 
-        authority_math = [normalized_math(node) for node in authority_elements if local_name(node) in MATH_TAGS]
+        authority_math = [
+            normalized_math(node)
+            for node in adjusted_authority_elements
+            if local_name(node) in MATH_TAGS
+        ]
         translated_math = [
             normalized_math(node)
             for node in adjusted_translated_elements
@@ -733,7 +800,11 @@ def main() -> int:
                     "translated": translated_value,
                 })
 
-        authority_protected = [serialized(node) for node in authority_elements if local_name(node) in PROTECTED_TAGS]
+        authority_protected = [
+            serialized(node)
+            for node in adjusted_authority_elements
+            if local_name(node) in PROTECTED_TAGS
+        ]
         translated_protected = [
             serialized(node)
             for node in adjusted_translated_elements
@@ -795,6 +866,15 @@ def main() -> int:
     )
     if unused_insertion_allowances:
         failures.append(f"unused element-insertion allowances: {unused_insertion_allowances}")
+    unused_shell_removal_allowances = sorted(
+        set(args.allow_authority_shell_removal)
+        - {str(row["key"]) for row in observed_authority_shell_removals}
+    )
+    if unused_shell_removal_allowances:
+        failures.append(
+            "unused authority-shell-removal allowances: "
+            f"{unused_shell_removal_allowances}"
+        )
     requested_cross_file_move_counts = Counter(
         args.allow_cross_file_element_block_move
     )
@@ -836,7 +916,7 @@ def main() -> int:
         combined.update((translated_root / name).read_bytes())
 
     report = {
-        "schema_version": 4,
+        "schema_version": 5,
         "status": "pass" if not failures else "fail",
         "files": rows,
         "combined_translated_sha256": combined.hexdigest(),
@@ -846,6 +926,7 @@ def main() -> int:
         "approved_external_xref_targets": observed_external_xrefs,
         "approved_math_changes": observed_allowed_math_changes,
         "approved_element_insertions": observed_element_insertions,
+        "approved_authority_shell_removals": observed_authority_shell_removals,
         "approved_cross_file_element_block_moves": (
             observed_cross_file_element_block_moves
         ),

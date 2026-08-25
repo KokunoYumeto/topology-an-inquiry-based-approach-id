@@ -1,0 +1,408 @@
+<section xml:id="o003-c90-ch13-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan Bab 13, bagian pertama</title>
+  <p>
+    Bagian ini memberi dukungan bertahap untuk sepuluh unit soal mandiri pertama
+    pada latihan tentang himpunan tertutup dan batas. Urutannya mengikuti urutan
+    soal yang dilihat pembaca pada sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-01">
+    <title>Ruang Hausdorff berhingga</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan 1. Tentukan dengan tepat ruang topologi
+        berhingga mana yang Hausdorff, lalu buktikan karakterisasi tersebut.
+        <em>Rubrik:</em> jawaban lengkap harus membuktikan kedua arah dan
+        menjelaskan tempat digunakannya keberhinggaan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-01-hint">
+      <p>
+        Tetapkan <m>x\in X</m>. Untuk setiap <m>y\neq x</m>, gunakan sifat
+        Hausdorff untuk memilih lingkungan terbuka saling lepas bagi <m>x</m>
+        dan <m>y</m>, kemudian iriskan semua lingkungan yang memuat <m>x</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-01-answer">
+      <p>
+        Tepat ruang diskret berhingga yang Hausdorff. Dengan kata lain, suatu
+        ruang topologi berhingga Hausdorff jika dan hanya jika topologinya
+        adalah topologi diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-01-solution">
+      <p>
+        Andaikan <m>X</m> berhingga dan Hausdorff. Tetapkan <m>x\in X</m>.
+        Untuk setiap <m>y\in X\setminus\{x\}</m>, pilih himpunan terbuka
+        <m>U_y</m> dan <m>V_y</m> dengan <m>x\in U_y</m>,
+        <m>y\in V_y</m>, serta <m>U_y\cap V_y=\emptyset</m>. Karena hanya ada
+        berhingga banyak <m>y</m>, himpunan
+        <m>U=\bigcap_{y\neq x}U_y</m> terbuka. Himpunan ini memuat <m>x</m>
+        dan tidak memuat satu pun <m>y\neq x</m>, sehingga
+        <m>U=\{x\}</m>. Jadi setiap singleton terbuka, dan setiap subhimpunan
+        <m>X</m> terbuka sebagai gabungan singleton. Topologinya diskret.
+      </p>
+      <p>
+        Sebaliknya, dalam ruang diskret, dua titik berbeda <m>x</m> dan
+        <m>y</m> mempunyai lingkungan terbuka saling lepas <m>\{x\}</m> dan
+        <m>\{y\}</m>. Jadi ruang itu Hausdorff. Argumen ini juga mencakup ruang
+        kosong dan ruang satu titik, dengan syarat pemisahan terpenuhi secara
+        vakum.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-02">
+    <title>Tutupan sebagai himpunan beserta batasnya</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan 2. Untuk ruang topologi
+        <m>(X,\tau)</m> dan <m>A\subseteq X</m>, buktikan
+        <m>\overline{A}=A\cup\Bdry(A)</m>.
+        <em>Rubrik:</em> setiap inklusi harus dibuktikan dari sifat lingkungan
+        tutupan dan batas, bukan hanya dari gambar intuitif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-02-hint">
+      <p>
+        Untuk inklusi yang tidak langsung, ambil
+        <m>x\in\overline{A}\setminus A</m>. Setiap lingkungannya sudah bertemu
+        <m>A</m>; mengapa lingkungan yang sama pasti bertemu <m>A^c</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-02-answer">
+      <p>
+        Identitas tersebut berlaku untuk setiap subhimpunan dalam setiap ruang
+        topologi.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-02-solution">
+      <p>
+        Jelas <m>A\subseteq\overline{A}</m>. Jika
+        <m>x\in\Bdry(A)</m>, setiap lingkungan <m>x</m> bertemu <m>A</m>;
+        maka <m>x\in\overline{A}</m>. Jadi
+        <m>A\cup\Bdry(A)\subseteq\overline{A}</m>.
+      </p>
+      <p>
+        Sebaliknya, ambil <m>x\in\overline{A}</m>. Jika <m>x\in A</m>, maka
+        <m>x\in A\cup\Bdry(A)</m>. Jika <m>x\notin A</m>, setiap lingkungan
+        <m>x</m> bertemu <m>A</m> karena <m>x\in\overline{A}</m>, dan juga
+        bertemu <m>A^c</m> karena lingkungan itu memuat
+        <m>x\in A^c</m>. Jadi <m>x\in\Bdry(A)</m>. Ini membuktikan inklusi
+        sebaliknya dan karenanya kesamaan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-03">
+    <title>Batas kosong dan himpunan buka-tutup</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan 3. Untuk <m>A</m> di suatu ruang
+        topologi, buktikan bahwa <m>\Bdry(A)=\emptyset</m> jika dan hanya jika
+        <m>A</m> terbuka sekaligus tertutup.
+        <em>Rubrik:</em> kedua implikasi harus menangani <m>A</m> dan
+        komplemennya secara eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-03-hint">
+      <p>
+        Jika tidak ada titik batas, setiap titik di <m>A</m> mempunyai lingkungan
+        yang gagal bertemu salah satu dari <m>A</m> dan <m>A^c</m>. Karena
+        lingkungan itu memuat titik tersebut, tentukan sisi mana yang dapat
+        dihindarinya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-03-answer">
+      <p>
+        <m>\Bdry(A)=\emptyset</m> tepat ketika <m>A</m> dan <m>A^c</m>
+        keduanya terbuka; ini setara dengan <m>A</m> terbuka sekaligus tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-03-solution">
+      <p>
+        Andaikan <m>\Bdry(A)=\emptyset</m>. Jika <m>x\in A</m>, maka
+        <m>x</m> bukan titik batas. Ada lingkungan terbuka <m>U</m> dari
+        <m>x</m> yang tidak bertemu <m>A^c</m>, sebab setiap lingkungan
+        otomatis bertemu <m>A</m> di <m>x</m>. Jadi <m>U\subseteq A</m> dan
+        <m>A</m> terbuka. Dengan argumen yang sama untuk setiap
+        <m>x\in A^c</m>, himpunan <m>A^c</m> terbuka. Maka <m>A</m> juga
+        tertutup.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>A</m> dan <m>A^c</m> terbuka. Titik dalam
+        <m>A</m> mempunyai lingkungan <m>A</m> yang tidak bertemu
+        <m>A^c</m>, sedangkan titik dalam <m>A^c</m> mempunyai lingkungan
+        <m>A^c</m> yang tidak bertemu <m>A</m>. Tidak ada titik yang setiap
+        lingkungannya bertemu kedua sisi, sehingga
+        <m>\Bdry(A)=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-04">
+    <title>Interval dalam topologi titik tertentu</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan 4, tugas pertama. Pada
+        <m>\R</m> dengan topologi titik tertentu <m>\tau_p</m>,
+        <m>p=0</m>, dan <m>A=(0,1]</m>, tentukan
+        <m>\overline{A}</m>, <m>\Int(A)</m>, serta <m>\Bdry(A)</m>.
+        <em>Rubrik:</em> setiap nilai harus disertai alasan berdasarkan bentuk
+        himpunan terbuka atau tertutup dalam <m>\tau_p</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-04-hint">
+      <p>
+        Setiap himpunan terbuka tak kosong memuat <m>0</m>, sedangkan
+        <m>A</m> tidak memuat <m>0</m>. Periksa juga apakah <m>A^c</m>
+        terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-04-answer">
+      <p>
+        <m>\Int(A)=\emptyset</m>,
+        <m>\overline{A}=A=(0,1]</m>, dan
+        <m>\Bdry(A)=A=(0,1]</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-04-solution">
+      <p>
+        Karena setiap himpunan terbuka tak kosong dalam <m>\tau_p</m> memuat
+        <m>0</m>, tidak ada himpunan terbuka tak kosong yang termuat dalam
+        <m>A</m>. Jadi <m>\Int(A)=\emptyset</m>. Komplemen <m>A^c</m>
+        memuat <m>0</m>, sehingga <m>A^c</m> terbuka dan <m>A</m> tertutup.
+        Maka <m>\overline{A}=A</m>. Akhirnya,
+        <m>\Bdry(A)=\overline{A}\setminus\Int(A)=A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-05">
+    <title>Interval dalam topologi titik yang dikecualikan</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan 4, tugas kedua. Pada
+        <m>\R</m> dengan topologi titik yang dikecualikan
+        <m>\tau_{\overline p}</m>, <m>p=0</m>, dan <m>A=(0,1]</m>,
+        tentukan <m>\overline{A}</m>, <m>\Int(A)</m>, serta
+        <m>\Bdry(A)</m>.
+        <em>Rubrik:</em> jawaban harus membenarkan keterbukaan <m>A</m> dan
+        menjelaskan satu-satunya titik tambahan dalam tutupannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-05-hint">
+      <p>
+        Himpunan yang tidak memuat <m>0</m> terbuka. Himpunan tertutup tak
+        kosong yang bukan seluruh ruang harus memuat <m>0</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-05-answer">
+      <p>
+        <m>\Int(A)=A=(0,1]</m>,
+        <m>\overline{A}=A\cup\{0\}=[0,1]</m>, dan
+        <m>\Bdry(A)=\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-05-solution">
+      <p>
+        Karena <m>0\notin A</m>, himpunan <m>A</m> terbuka, sehingga
+        <m>\Int(A)=A</m>. Himpunan <m>A\cup\{0\}</m> tertutup: komplemennya
+        tidak memuat <m>0</m>, jadi terbuka. Setiap himpunan tertutup yang
+        memuat <m>A</m> harus pula memuat <m>0</m>, karena setiap himpunan
+        tertutup tak kosong memuat <m>0</m>. Oleh sebab itu,
+        <m>\overline{A}=A\cup\{0\}=[0,1]</m>. Maka
+        <m>\Bdry(A)=\overline{A}\setminus\Int(A)=\{0\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-06">
+    <title>Basis topologi limit bawah</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang garis Sorgenfrey, tugas pertama.
+        Untuk
+        <m>\B=\{[a,b)\mid a\lt b\text{ di }\R\}</m>, buktikan bahwa
+        <m>\B</m> merupakan basis bagi suatu topologi
+        <m>\tau_{\ell\ell}</m> pada <m>\R</m>.
+        <em>Rubrik:</em> verifikasi harus mencakup sifat menutupi ruang dan
+        syarat irisan dua unsur basis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-06-hint">
+      <p>
+        Untuk <m>x\in[a,b)\cap[c,d)</m>, pertimbangkan interval basis yang
+        berawal di <m>x</m> dan berakhir di
+        <m>\min\{b,d\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-06-answer">
+      <p>
+        Ya. Koleksi interval setengah terbuka tersebut menutupi <m>\R</m> dan
+        memenuhi aksioma irisan basis, sehingga menentukan topologi limit
+        bawah <m>\tau_{\ell\ell}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-06-solution">
+      <p>
+        Setiap <m>x\in\R</m> berada dalam <m>[x,x+1)</m>, jadi
+        <m>\B</m> menutupi <m>\R</m>. Sekarang ambil
+        <m>x\in[a,b)\cap[c,d)</m>. Karena <m>x\lt b</m> dan
+        <m>x\lt d</m>, berlaku <m>x\lt e=\min\{b,d\}</m>. Unsur basis
+        <m>[x,e)</m> memuat <m>x</m> dan memenuhi
+        <m>[x,e)\subseteq[a,b)\cap[c,d)</m>. Kedua aksioma basis terpenuhi,
+        maka gabungan sebarang unsur <m>\B</m> membentuk topologi
+        <m>\tau_{\ell\ell}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-07">
+    <title>Interval Euklides terbuka pada garis Sorgenfrey</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang garis Sorgenfrey, tugas kedua.
+        Buktikan bahwa setiap interval Euklides
+        <m>(a,b)</m> terbuka dalam topologi limit bawah.
+        <em>Rubrik:</em> tampilkan <m>(a,b)</m> sebagai gabungan unsur basis
+        atau berikan unsur basis lokal di setiap titiknya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-07-hint">
+      <p>
+        Untuk setiap <m>x\in(a,b)</m>, interval <m>[x,b)</m> merupakan unsur
+        basis dan termuat dalam <m>(a,b)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-07-answer">
+      <p>
+        Setiap <m>(a,b)</m> terbuka dalam <m>\tau_{\ell\ell}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-07-solution">
+      <p>
+        Jika <m>x\in(a,b)</m>, maka <m>[x,b)\in\B</m>,
+        <m>x\in[x,b)</m>, dan <m>[x,b)\subseteq(a,b)</m>. Dengan demikian
+        setiap titik dalam <m>(a,b)</m> mempunyai lingkungan basis yang termuat di
+        dalamnya. Secara setara,
+        <m>(a,b)=\bigcup_{x\in(a,b)}[x,b)</m>, sehingga <m>(a,b)</m>
+        terbuka dalam topologi limit bawah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-08">
+    <title>Perbandingan topologi limit bawah dan topologi Euklides</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang garis Sorgenfrey, tugas ketiga.
+        Tentukan apakah topologi limit bawah pada <m>\R</m>
+        benar-benar lebih halus daripada topologi metrik Euklides, dan berikan
+        alasan.
+        <em>Rubrik:</em> buktikan inklusi kedua topologi dan berikan satu
+        saksi bahwa inklusi itu ketat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-08-hint">
+      <p>
+        Gunakan keterbukaan semua interval <m>(a,b)</m> untuk satu inklusi.
+        Lalu uji apakah <m>[0,1)</m> terbuka dalam topologi Euklides.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-08-answer">
+      <p>
+        Ya. Topologi Euklides termuat secara ketat dalam topologi limit bawah.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-08-solution">
+      <p>
+        Setiap interval basis Euklides <m>(a,b)</m> terbuka dalam
+        <m>\tau_{\ell\ell}</m>. Karena setiap himpunan terbuka Euklides
+        merupakan gabungan interval seperti itu, diperoleh
+        <m>\tau_{\mathrm{E}}\subseteq\tau_{\ell\ell}</m>. Inklusi ini ketat:
+        <m>[0,1)</m> adalah unsur basis topologi limit bawah, tetapi tidak
+        terbuka dalam topologi Euklides karena tidak ada interval Euklides yang
+        memuat <m>0</m> dan sekaligus termuat dalam <m>[0,1)</m>. Jadi
+        <m>\tau_{\mathrm{E}}\subsetneq\tau_{\ell\ell}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-09">
+    <title>Interval basis yang buka-tutup</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang garis Sorgenfrey, tugas keempat.
+        Untuk <m>a\lt b</m>, tentukan apakah
+        <m>[a,b)</m> buka-tutup dalam <m>(\R,\tau_{\ell\ell})</m>, lalu
+        buktikan jawaban.
+        <em>Rubrik:</em> buktikan keterbukaan himpunan dan komplemennya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-09-hint">
+      <p>
+        Himpunan <m>[a,b)</m> sendiri adalah unsur basis. Tulis komplemennya
+        sebagai <m>(-\infty,a)\cup[b,\infty)</m> dan cari lingkungan basis
+        bagi setiap titik pada kedua bagian tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-09-answer">
+      <p>
+        Ya, setiap <m>[a,b)</m> dengan <m>a\lt b</m> buka-tutup dalam garis
+        Sorgenfrey.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-09-solution">
+      <p>
+        Karena <m>[a,b)</m> merupakan unsur basis, himpunan itu terbuka.
+        Komplemennya adalah <m>(-\infty,a)\cup[b,\infty)</m>. Jika
+        <m>x\lt a</m>, maka <m>[x,a)</m> merupakan lingkungan basis yang
+        termuat dalam <m>(-\infty,a)</m>. Jika <m>x\geq b</m>, maka
+        <m>[x,x+1)</m> merupakan lingkungan basis yang termuat dalam
+        <m>[b,\infty)</m>. Jadi komplemen <m>[a,b)</m> terbuka, sehingga
+        <m>[a,b)</m> juga tertutup dan karenanya buka-tutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-a-10">
+    <title>Kerapatan bilangan rasional</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang himpunan rapat, tugas
+        pertama. Buktikan bahwa <m>\Q</m> rapat dalam <m>\R</m> dengan
+        topologi metrik Euklides.
+        <em>Rubrik:</em> tunjukkan bahwa setiap himpunan terbuka Euklides tak
+        kosong bertemu <m>\Q</m>; jika menggunakan kerapatan aritmetis
+        <m>\Q</m>, berikan pembenaran singkat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-a-10-hint">
+      <p>
+        Setiap himpunan terbuka tak kosong memuat suatu interval
+        <m>(a,b)</m>. Pilih <m>n\in\mathbb{N}</m> cukup besar sehingga
+        <m>n(b-a)\gt 1</m>, lalu cari bilangan bulat di antara <m>na</m> dan
+        <m>nb</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-a-10-answer">
+      <p>
+        <m>\overline{\Q}=\R</m>; jadi <m>\Q</m> rapat dalam
+        <m>\R</m> Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-a-10-solution">
+      <p>
+        Ambil himpunan terbuka tak kosong <m>O\subseteq\R</m>. Ada
+        <m>x\in O</m> dan interval <m>(a,b)</m> dengan
+        <m>x\in(a,b)\subseteq O</m>. Pilih bilangan asli <m>n</m> sehingga
+        <m>n(b-a)\gt 1</m>. Karena interval <m>(na,nb)</m> panjangnya lebih
+        dari <m>1</m>, ada <m>m\in\Z</m> dengan <m>na\lt m\lt nb</m>.
+        Maka <m>m/n\in\Q\cap(a,b)\subseteq\Q\cap O</m>. Jadi setiap himpunan
+        terbuka tak kosong bertemu <m>\Q</m>, yang setara dengan
+        <m>\overline{\Q}=\R</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

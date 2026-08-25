@@ -61,15 +61,17 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
 <!--
 The stock display-size chapter/appendix format may hyphenate Indonesian words
-inside large titles.  Permit ordinary line breaks at spaces, but disallow
-intra-word title breaks.  This leaves body hyphenation unchanged.
+inside large titles or retain an overfull justified line rather than breaking
+at an earlier space.  Use a ragged right title measure, permit ordinary line
+breaks at spaces, and disallow intra-word title breaks.  This leaves body
+hyphenation unchanged.
 -->
 <xsl:template name="titlesec-chapter-style">
   <xsl:text>\titleformat{\chapter}[display]&#xa;</xsl:text>
-  <xsl:text>{\divisionfont\huge\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000}{\divisionnameptx\space\thechapter}{20pt}{\Huge\hyphenpenalty=10000\exhyphenpenalty=10000 #1}&#xa;</xsl:text>
+  <xsl:text>{\divisionfont\huge\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000}{\divisionnameptx\space\thechapter}{20pt}{\Huge\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000 #1}&#xa;</xsl:text>
   <xsl:text>[{\Large\authorsptx}]&#xa;</xsl:text>
   <xsl:text>\titleformat{name=\chapter,numberless}[display]&#xa;</xsl:text>
-  <xsl:text>{\divisionfont\huge\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000}{}{0pt}{\hyphenpenalty=10000\exhyphenpenalty=10000 #1}&#xa;</xsl:text>
+  <xsl:text>{\divisionfont\huge\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000}{}{0pt}{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000 #1}&#xa;</xsl:text>
   <xsl:text>[{\Large\authorsptx}]&#xa;</xsl:text>
   <xsl:text>\titlespacing*{\chapter}{0pt}{50pt}{40pt}&#xa;</xsl:text>
 </xsl:template>

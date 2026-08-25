@@ -1,0 +1,543 @@
+<section xml:id="o003-c90-ch13-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 13</title>
+
+  <p>
+    Delapan pemeriksaan berikut memadukan himpunan tertutup, titik limit,
+    tutupan, batas, kerapatan, dan aksioma separasi dalam persoalan baru.
+    Materi ini ditulis mandiri dalam bahasa Indonesia untuk komponen
+    pendamping berlisensi CC BY 4.0; materi ini bukan teks, terjemahan, atau
+    solusi resmi GVSU. Kerjakan setiap soal sebelum membuka petunjuk. Jawaban
+    menyatakan hasil utama, sedangkan solusi memberikan uraian matematis lengkap.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-mastery-01">
+    <title>Aljabar himpunan tertutup dan syarat gabungan berhingga</title>
+    <statement>
+      <p>
+        Dalam ruang topologi <m>X</m>, buktikan langsung dari hukum De Morgan
+        bahwa irisan sebarang himpunan tertutup dan gabungan berhingga
+        himpunan tertutup bersifat tertutup. Kemudian, dalam <m>\R</m> dengan
+        topologi Euklides, gunakan <m>C_n=\{1/n\}</m> untuk menunjukkan bahwa
+        gabungan terhitung himpunan tertutup tidak harus tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-01-hint">
+      <p>
+        <em>Tahap 1.</em> Ambil komplemen dan tukar irisan dengan gabungan.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk kasus berhingga, gunakan bahwa irisan
+        berhingga himpunan terbuka tetap terbuka.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Tentukan titik limit dari
+        <m>\{1,1/2,1/3,\ldots\}</m> yang tidak termasuk di dalamnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-01-answer">
+      <p>
+        Jika semua <m>C_\alpha</m> tertutup, maka
+        <m>X\setminus\bigcap_\alpha C_\alpha=\bigcup_\alpha(X\setminus C_\alpha)</m>
+        terbuka. Untuk <m>C_1,\ldots,C_n</m>, komplemen gabungannya adalah
+        irisan berhingga komplemen yang terbuka. Namun,
+        <m>\bigcup_{n\geq1}C_n=\{1/n:n\geq1\}</m> tidak memuat titik
+        limitnya <m>0</m>, sehingga tidak tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-01-solution">
+      <p>
+        Misalkan <m>\{C_\alpha\}_{\alpha\in I}</m> keluarga himpunan
+        tertutup. Setiap <m>X\setminus C_\alpha</m> terbuka, sehingga
+        <me>
+          X\setminus\bigcap_{\alpha\in I}C_\alpha
+          =\bigcup_{\alpha\in I}(X\setminus C_\alpha)
+        </me>
+        terbuka. Jadi irisannya tertutup. Jika <m>C_1,\ldots,C_n</m>
+        tertutup, maka
+        <me>
+          X\setminus\bigcup_{k=1}^{n}C_k
+          =\bigcap_{k=1}^{n}(X\setminus C_k)
+        </me>
+        terbuka karena hanya merupakan irisan berhingga. Jadi gabungan
+        berhingga tersebut tertutup.
+      </p>
+      <p>
+        Setiap <m>C_n</m> adalah himpunan beranggota tunggal, maka tertutup dalam
+        <m>\R</m>. Tetapkan <m>C=\bigcup_{n\geq1}C_n</m>. Setiap lingkungan
+        Euklides dari <m>0</m> memuat <m>1/n</m> untuk semua <m>n</m> yang
+        cukup besar, sehingga <m>0</m> merupakan titik limit dari <m>C</m>.
+        Akan tetapi <m>0\notin C</m>. Karena himpunan tertutup harus memuat
+        semua titik limitnya, <m>C</m> tidak tertutup. Dengan demikian kata
+        “berhingga” tidak dapat dihapus dari teorema gabungan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-mastery-02">
+    <title>Tutupan sebagai himpunan tertutup terkecil</title>
+    <statement>
+      <p>
+        Untuk <m>A\subseteq X</m>, misalkan
+        <me>
+          F_A=\bigcap\{C\subseteq X\mid C\text{ tertutup dan }A\subseteq C\}.
+        </me>
+        Buktikan bahwa <m>F_A=\overline A</m>. Turunkan dari hasil ini bahwa
+        <m>A\subseteq B</m> mengakibatkan
+        <m>\overline A\subseteq\overline B</m> dan bahwa
+        <m>\overline{\overline A}=\overline A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-02-hint">
+      <p>
+        <em>Tahap 1.</em> Irisan pada definisi <m>F_A</m> tertutup dan memuat
+        <m>A</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Setiap himpunan tertutup yang memuat <m>A</m> juga
+        memuat semua titik limit <m>A</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Gunakan sifat minimal yang baru dibuktikan, bukan
+        perhitungan titik demi titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-02-answer">
+      <p>
+        <m>F_A</m> adalah himpunan tertutup terkecil yang memuat <m>A</m>, dan
+        sifat yang sama mencirikan <m>\overline A</m>; jadi keduanya sama.
+        Monotonisitas dan idempotensi tutupan langsung mengikuti sifat
+        minimal ini.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-02-solution">
+      <p>
+        Keluarga pada definisi <m>F_A</m> tidak kosong karena memuat <m>X</m>.
+        Irisan sebarang himpunan tertutup bersifat tertutup, sehingga
+        <m>F_A</m> tertutup; setiap himpunan dalam keluarga itu memuat <m>A</m>, maka
+        <m>A\subseteq F_A</m>. Jadi <m>F_A</m> adalah salah satu himpunan
+        tertutup yang memuat <m>A</m>.
+      </p>
+      <p>
+        Jika <m>C</m> tertutup dan <m>A\subseteq C</m>, ambil
+        <m>x\in A'</m>. Setiap lingkungan <m>x</m> bertemu
+        <m>A\setminus\{x\}\subseteq C\setminus\{x\}</m>, sehingga
+        <m>x\in C'</m>. Karena <m>C</m> tertutup, berlaku
+        <m>C'\subseteq C</m>, jadi <m>x\in C</m>. Karena
+        <m>\overline A</m> terdiri atas <m>A</m> beserta titik-titik limitnya,
+        berlaku <m>\overline A\subseteq C</m>. Ini benar untuk setiap
+        <m>C</m> dalam keluarga tersebut, jadi
+        <m>\overline A\subseteq F_A</m>. Sebaliknya,
+        <m>\overline A</m> sendiri tertutup dan memuat <m>A</m>, sehingga
+        muncul dalam keluarga yang diiris dan memberi
+        <m>F_A\subseteq\overline A</m>.
+      </p>
+      <p>
+        Jika <m>A\subseteq B</m>, setiap himpunan tertutup yang memuat
+        <m>B</m> juga memuat <m>A</m>. Khususnya <m>\overline B</m> adalah
+        himpunan tertutup yang memuat <m>A</m>, maka minimalitas memberi
+        <m>\overline A\subseteq\overline B</m>. Karena
+        <m>\overline A</m> sudah tertutup, himpunan tertutup terkecil yang
+        memuatnya adalah dirinya sendiri. Jadi
+        <m>\overline{\overline A}=\overline A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-mastery-03">
+    <title>Tiga wajah batas</title>
+    <statement>
+      <p>
+        Untuk <m>A\subseteq X</m>, buktikan identitas
+        <me>
+          \Bdry(A)=\overline A\cap\overline{X\setminus A}
+          =\overline A\setminus\Int(A).
+        </me>
+        Gunakan identitas ini untuk membuktikan bahwa <m>\Bdry(A)</m>
+        tertutup, bahwa <m>\Bdry(A)=\Bdry(X\setminus A)</m>, dan bahwa
+        <m>\Bdry(A)=\emptyset</m> jika dan hanya jika <m>A</m> buka-tutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-03-hint">
+      <p>
+        <em>Tahap 1.</em> Titik batas adalah titik yang setiap lingkungannya
+        bertemu <m>A</m> dan komplemennya.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan
+        <m>X\setminus\Int(A)=\overline{X\setminus A}</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Jika batas kosong, bandingkan
+        <m>\overline A</m> dengan <m>\Int(A)</m> dan <m>A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-03-answer">
+      <p>
+        Kedua rumus mengikuti langsung dari pencirian lingkungan. Batas
+        tertutup karena merupakan irisan dua himpunan tertutup; rumusnya
+        simetris terhadap <m>A</m> dan komplemennya. Batas kosong tepat ketika
+        <m>\overline A=\Int(A)=A</m>, yaitu ketika <m>A</m> sekaligus terbuka
+        dan tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-03-solution">
+      <p>
+        Titik <m>x</m> berada dalam <m>\overline A</m> jika dan hanya jika
+        setiap lingkungan <m>x</m> bertemu <m>A</m>. Demikian pula,
+        <m>x\in\overline{X\setminus A}</m> jika dan hanya jika setiap
+        lingkungannya bertemu <m>X\setminus A</m>. Kedua syarat berlaku
+        sekaligus tepat ketika <m>x</m> merupakan titik batas <m>A</m>.
+        Maka
+        <m>\Bdry(A)=\overline A\cap\overline{X\setminus A}</m>.
+      </p>
+      <p>
+        Sebuah titik tidak berada dalam <m>\Int(A)</m> tepat ketika setiap
+        lingkungannya bertemu <m>X\setminus A</m>. Jadi
+        <m>X\setminus\Int(A)=\overline{X\setminus A}</m>, dan
+        <me>
+          \overline A\cap\overline{X\setminus A}
+          =\overline A\cap(X\setminus\Int(A))
+          =\overline A\setminus\Int(A).
+        </me>
+        Bentuk irisan membuktikan ketertutupan. Menukar <m>A</m> dengan
+        komplemennya hanya menukar kedua faktor, sehingga batasnya sama.
+      </p>
+      <p>
+        Jika <m>A</m> buka-tutup, maka
+        <m>\overline A=A=\Int(A)</m>, jadi batasnya kosong. Sebaliknya, jika
+        batas kosong, maka
+        <m>\overline A\setminus\Int(A)=\emptyset</m>, sehingga
+        <m>\overline A\subseteq\Int(A)</m>. Selalu berlaku
+        <m>\Int(A)\subseteq A\subseteq\overline A</m>; ketiganya karena itu
+        sama. Persamaan <m>A=\Int(A)</m> menyatakan bahwa <m>A</m> terbuka,
+        dan <m>A=\overline A</m> menyatakan bahwa <m>A</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-mastery-04">
+    <title>Ketunggalan limit dan alasan Hausdorff diperlukan</title>
+    <statement>
+      <p>
+        Buktikan bahwa barisan dalam ruang Hausdorff memiliki paling banyak
+        satu limit. Kemudian ambil <m>X=\{p,q\}</m> dengan topologi
+        indiskret dan tunjukkan bahwa setiap barisan dalam <m>X</m> konvergen
+        ke <m>p</m> sekaligus ke <m>q</m>. Jelaskan tepat di mana bukti pertama
+        gagal pada contoh kedua.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-04-hint">
+      <p>
+        <em>Tahap 1.</em> Jika dua limit berbeda, pisahkan keduanya dengan dua
+        himpunan terbuka yang saling lepas.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Setelah suatu indeks tertentu, suku barisan harus
+        berada dalam kedua himpunan terbuka tersebut.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Dalam topologi indiskret, satu-satunya himpunan
+        terbuka yang memuat sebuah titik adalah <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-04-answer">
+      <p>
+        Dua limit berbeda dalam ruang Hausdorff akan mempunyai lingkungan
+        terbuka saling lepas, sedangkan ekor barisan harus berada dalam
+        keduanya, sebuah kontradiksi. Dalam ruang indiskret, setiap lingkungan
+        terbuka yang relevan adalah <m>X</m>, sehingga syarat konvergensi
+        terpenuhi untuk setiap titik dan pemisahan yang diperlukan tidak ada.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-04-solution">
+      <p>
+        Andaikan <m>(x_n)</m> konvergen ke dua titik berbeda <m>x</m> dan
+        <m>y</m> dalam ruang Hausdorff. Ada himpunan terbuka saling lepas
+        <m>U,V</m> dengan <m>x\in U</m> dan <m>y\in V</m>. Konvergensi ke
+        <m>x</m> memberi <m>N_U</m> sehingga <m>x_n\in U</m> untuk
+        <m>n\geq N_U</m>. Konvergensi ke <m>y</m> memberi <m>N_V</m> sehingga
+        <m>x_n\in V</m> untuk <m>n\geq N_V</m>. Jika
+        <m>n\geq\max\{N_U,N_V\}</m>, maka <m>x_n\in U\cap V</m>, bertentangan
+        dengan <m>U\cap V=\emptyset</m>.
+      </p>
+      <p>
+        Sekarang gunakan topologi <m>\{\emptyset,X\}</m> pada
+        <m>X=\{p,q\}</m>. Satu-satunya himpunan terbuka yang memuat <m>p</m>
+        adalah <m>X</m>, dan setiap suku setiap barisan berada dalam <m>X</m>.
+        Jadi definisi konvergensi ke <m>p</m> dipenuhi, bahkan dengan indeks
+        sejak suku pertama. Argumen yang sama berlaku untuk <m>q</m>. Bukti
+        ketunggalan gagal tepat pada langkah memilih lingkungan terbuka
+        saling lepas bagi <m>p</m> dan <m>q</m>; ruang indiskret bukan
+        Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-mastery-05">
+    <title><m>T_1</m> tidak menjamin sifat Hausdorff</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> himpunan tak berhingga dengan topologi komplemen berhingga.
+        Buktikan bahwa <m>X</m> merupakan ruang <m>T_1</m>, tetapi bukan ruang
+        Hausdorff. Nyatakan pula apa yang terjadi pada barisan konstan dalam
+        ruang ini.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-05-hint">
+      <p>
+        <em>Tahap 1.</em> Ruang bersifat <m>T_1</m> jika setiap himpunan
+        beranggota tunggal tertutup.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Dua himpunan terbuka tak kosong dalam topologi
+        komplemen berhingga tidak dapat saling lepas.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Uji konvergensi barisan yang semua sukunya sama
+        dengan <m>x</m> terhadap lingkungan titik <m>y\neq x</m> yang tidak
+        memuat <m>x</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-05-answer">
+      <p>
+        Setiap himpunan beranggota tunggal tertutup, maka ruang dengan topologi
+        komplemen berhingga bersifat <m>T_1</m>. Dua himpunan terbuka tak kosong
+        selalu beririsan, sehingga
+        dua titik berbeda tidak dapat dipisahkan secara Hausdorff. Walaupun
+        ruang tidak Hausdorff, barisan konstan pada <m>x</m> hanya konvergen ke
+        <m>x</m> karena sifat <m>T_1</m> menyediakan lingkungan setiap
+        <m>y\neq x</m> yang mengecualikan <m>x</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-05-solution">
+      <p>
+        Untuk setiap <m>x\in X</m>, komplemen <m>X\setminus\{x\}</m>
+        mempunyai komplemen berhingga, sehingga terbuka dalam topologi
+        komplemen berhingga. Maka <m>\{x\}</m> tertutup. Karena ini berlaku untuk semua
+        <m>x</m>, ruang tersebut bersifat <m>T_1</m>.
+      </p>
+      <p>
+        Jika <m>U</m> dan <m>V</m> terbuka tak kosong, komplemen keduanya
+        berhingga. Andaikan <m>U\cap V=\emptyset</m>. Hukum De Morgan memberi
+        <m>X=(X\setminus U)\cup(X\setminus V)</m>, gabungan dua himpunan
+        berhingga. Ini akan membuat <m>X</m> berhingga, sebuah kontradiksi.
+        Jadi tidak ada dua himpunan terbuka tak kosong yang saling lepas, dan
+        ruang tidak Hausdorff.
+      </p>
+      <p>
+        Barisan konstan <m>x_n=x</m> jelas konvergen ke <m>x</m>. Untuk
+        <m>y\neq x</m>, himpunan <m>X\setminus\{x\}</m> adalah lingkungan
+        terbuka dari <m>y</m> yang tidak memuat satu pun suku barisan. Maka
+        barisan tidak konvergen ke <m>y</m>. Jadi kegagalan Hausdorff tidak
+        dengan sendirinya memaksa setiap barisan mempunyai banyak limit.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-mastery-06">
+    <title>Garis Sorgenfrey lebih halus secara ketat</title>
+    <statement>
+      <p>
+        Pada <m>\R</m>, misalkan <m>\tau_E</m> topologi Euklides dan
+        <m>\tau_{\ell\ell}</m> topologi limit bawah dengan basis semua interval
+        <m>[a,b)</m>. Buktikan bahwa <m>\tau_{\ell\ell}</m> lebih halus secara
+        ketat daripada <m>\tau_E</m>. Buktikan pula
+        bahwa setiap interval basis <m>[a,b)</m> bersifat buka-tutup dalam
+        <m>\tau_{\ell\ell}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-06-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk <m>x\in(a,b)</m>, pilih interval setengah
+        terbuka kecil yang memuat <m>x</m> dan tetap berada dalam
+        <m>(a,b)</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Himpunan <m>[0,1)</m> terbuka dalam topologi limit
+        bawah tetapi bukan dalam topologi Euklides.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Tulis komplemen <m>[a,b)</m> sebagai gabungan dua
+        himpunan yang terbuka dalam topologi limit bawah.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-06-answer">
+      <p>
+        Setiap interval Euklides merupakan gabungan interval basis limit
+        bawah, sehingga <m>\tau_E\subseteq\tau_{\ell\ell}</m>. Inklusi ketat
+        karena <m>[0,1)</m> tidak terbuka dalam topologi Euklides. Selain itu,
+        <me>\R\setminus[a,b)=(-\infty,a)\cup[b,\infty),</me>
+        dan kedua ruas di kanan terbuka dalam topologi limit bawah; maka
+        <m>[a,b)</m> juga tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-06-solution">
+      <p>
+        Ambil interval Euklides <m>(a,b)</m> dan <m>x\in(a,b)</m>. Karena
+        <m>x\lt b</m>, interval basis <m>[x,b)</m> memuat <m>x</m> dan berada
+        dalam <m>(a,b)</m>. Jadi setiap titik <m>(a,b)</m> mempunyai anggota
+        basis limit bawah yang berada di dalam interval tersebut. Maka setiap
+        interval Euklides terbuka dalam <m>\tau_{\ell\ell}</m>, dan akibatnya
+        <m>\tau_E\subseteq\tau_{\ell\ell}</m>.
+      </p>
+      <p>
+        Himpunan <m>[0,1)</m> sendiri merupakan anggota basis, sehingga
+        terbuka dalam <m>\tau_{\ell\ell}</m>. Himpunan itu tidak terbuka dalam
+        topologi Euklides:
+        setiap interval Euklides yang memuat <m>0</m> juga memuat bilangan
+        negatif. Jadi inklusi topologi bersifat ketat.
+      </p>
+      <p>
+        Untuk interval basis umum,
+        <m>\R\setminus[a,b)=(-\infty,a)\cup[b,\infty)</m>. Kita mempunyai
+        <m>(-\infty,a)=\bigcup_{x\lt a}[x,a)</m> dan
+        <m>[b,\infty)=\bigcup_{n\geq1}[b,b+n)</m>. Keduanya gabungan anggota
+        basis, jadi terbuka. Komplemen <m>[a,b)</m> terbuka, sehingga
+        <m>[a,b)</m> tertutup sekaligus terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-mastery-07">
+    <title>Tiga pencirian kerapatan</title>
+    <statement>
+      <p>
+        Untuk <m>A\subseteq X</m>, buktikan ekuivalensi berikut:
+        <ol>
+          <li><p><m>A</m> rapat dalam <m>X</m>;</p></li>
+          <li><p><m>\overline A=X</m>;</p></li>
+          <li><p>setiap himpunan terbuka tak kosong dalam <m>X</m> beririsan dengan <m>A</m>.</p></li>
+        </ol>
+        Gunakan hasil ini untuk membuktikan bahwa <m>\Q</m> rapat dalam
+        <m>\R</m> bertopologi Euklides, sedangkan <m>\Z</m> tidak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-07-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan definisi “rapat” dan pencirian tutupan
+        melalui lingkungan.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika ada himpunan terbuka tak kosong yang tidak
+        bertemu <m>A</m>, pilih satu titik di dalamnya.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Gunakan kerapatan bilangan rasional dalam setiap
+        interval real; untuk <m>\Z</m>, cari interval terbuka di antara dua
+        bilangan bulat berturutan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-07-answer">
+      <p>
+        Kerapatan didefinisikan oleh <m>\overline A=X</m>. Persamaan ini
+        berlaku tepat ketika setiap lingkungan dari setiap titik dalam
+        <m>X</m> bertemu <m>A</m>, yang ekuivalen dengan tidak adanya himpunan terbuka
+        tak kosong yang menghindari <m>A</m>. Setiap interval terbuka real
+        memuat bilangan rasional, tetapi <m>(1/4,3/4)</m> tidak memuat bilangan
+        bulat.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-07-solution">
+      <p>
+        Pernyataan pertama dan kedua sama menurut definisi kerapatan. Andaikan
+        <m>\overline A=X</m> dan <m>O</m> terbuka tak kosong. Pilih
+        <m>x\in O</m>. Karena <m>x\in\overline A</m>, setiap lingkungan
+        <m>x</m>, khususnya <m>O</m>, bertemu <m>A</m>. Jadi
+        <m>O\cap A\neq\emptyset</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan setiap himpunan terbuka tak kosong bertemu
+        <m>A</m>. Untuk sembarang <m>x\in X</m>, setiap lingkungan <m>N</m>
+        dari <m>x</m> memuat himpunan terbuka tak kosong <m>O</m> dengan
+        <m>x\in O\subseteq N</m>. Hipotesis memberi
+        <m>O\cap A\neq\emptyset</m>, maka <m>N\cap A\neq\emptyset</m>.
+        Jadi <m>x\in\overline A</m>. Karena <m>x</m> sembarang,
+        <m>\overline A=X</m>.
+      </p>
+      <p>
+        Setiap himpunan terbuka tak kosong dalam topologi Euklides memuat
+        interval terbuka tak kosong, dan setiap interval demikian memuat
+        bilangan rasional. Maka <m>\Q</m> rapat dalam <m>\R</m>. Sebaliknya,
+        interval terbuka <m>(1/4,3/4)</m> tidak bertemu <m>\Z</m>. Pencirian
+        ketiga menunjukkan bahwa <m>\Z</m> tidak rapat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-mastery-08">
+    <title>Ruang metrik bersifat reguler dan normal</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik. Pertama, untuk himpunan tertutup tak
+        kosong <m>C</m> dan <m>x\notin C</m>, bangun dua himpunan terbuka saling
+        lepas yang masing-masing memuat <m>x</m> dan <m>C</m>. Kemudian, untuk
+        dua himpunan tertutup tak kosong dan saling lepas <m>A,B</m>, gunakan
+        fungsi jarak ke himpunan untuk membuktikan bahwa <m>X</m> bersifat
+        normal. Tangani kasus salah satu himpunan kosong secara terpisah dan
+        jelaskan mengapa tidak aman mengandaikan <m>d(A,B)\gt 0</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-mastery-08-hint">
+      <p>
+        <em>Tahap 1.</em> Karena <m>C</m> tertutup dan <m>x\notin C</m>,
+        <m>\delta=d(x,C)\gt 0</m>. Bandingkan bola berjari-jari
+        <m>\delta/3</m> di <m>x</m> dengan gabungan bola yang sesuai di
+        titik-titik <m>C</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk normalitas, tetapkan
+        <m>U=\{z:d(z,A)\lt d(z,B)\}</m> dan
+        <m>V=\{z:d(z,B)\lt d(z,A)\}</m>.
+      </p>
+      <p>
+        <em>Tahap 3.</em> Fungsi <m>z\mapsto d(z,A)</m> kontinu dan bahkan
+        Lipschitz. Carilah contoh dua himpunan tertutup saling lepas yang
+        makin mendekat di tak hingga.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-mastery-08-answer">
+      <p>
+        Ruang metrik bersifat reguler dengan memisahkan <m>x</m> dan <m>C</m>
+        menggunakan jarak positif <m>d(x,C)</m>. Untuk normalitas, himpunan
+        <m>U</m> dan <m>V</m> di atas terbuka, saling lepas, dan masing-masing
+        memuat <m>A</m> dan <m>B</m>. Dua himpunan tertutup saling lepas dapat
+        mempunyai jarak infimum nol, jadi satu jari-jari seragam tidak selalu
+        tersedia.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-mastery-08-solution">
+      <p>
+        Karena <m>C</m> tertutup dan <m>x\notin C</m>, pencirian jarak ke
+        himpunan memberi <m>\delta=d(x,C)\gt 0</m>. Tetapkan
+        <m>U=B(x,\delta/3)</m> dan
+        <m>V=\bigcup_{c\in C}B(c,\delta/3)</m>. Keduanya terbuka,
+        <m>x\in U</m>, dan <m>C\subseteq V</m>. Jika <m>z\in U\cap V</m>,
+        ada <m>c\in C</m> dengan
+        <m>d(x,z)\lt\delta/3</m> dan <m>d(z,c)\lt\delta/3</m>. Ketaksamaan
+        segitiga memberi <m>d(x,c)\lt 2\delta/3\lt\delta</m>, bertentangan
+        dengan definisi <m>\delta</m>. Maka <m>U\cap V=\emptyset</m>, dan
+        ruang bersifat reguler.
+      </p>
+      <p>
+        Jika salah satu dari <m>A,B</m> kosong, pisahkan keduanya dengan
+        <m>\emptyset</m> dan <m>X</m>. Untuk dua himpunan tertutup tak kosong
+        dan saling lepas <m>A,B</m>, fungsi
+        <m>f(z)=d(z,A)-d(z,B)</m> kontinu karena masing-masing fungsi jarak
+        kontinu. Maka <m>U=f^{-1}((-\infty,0))</m> dan
+        <m>V=f^{-1}((0,\infty))</m> terbuka dan jelas saling lepas. Jika
+        <m>a\in A</m>, maka <m>d(a,A)=0</m>, sedangkan
+        <m>d(a,B)\gt 0</m> karena <m>B</m> tertutup dan <m>a\notin B</m>.
+        Jadi <m>a\in U</m>. Dengan cara yang sama, <m>B\subseteq V</m>.
+        Ini membuktikan normalitas.
+      </p>
+      <p>
+        Tidak selalu berlaku <m>d(A,B)\gt 0</m>. Dalam <m>\R^2</m>, ambil
+        <m>A=\{(t,0):t\geq1\}</m> dan
+        <m>B=\{(t,1/t):t\geq1\}</m>. Kedua himpunan tertutup dan saling
+        lepas, tetapi jarak antara <m>(t,0)</m> dan <m>(t,1/t)</m> menuju nol.
+        Jadi pemisahan normal harus memakai jarak titik-ke-himpunan yang
+        berubah terhadap titik, bukan satu jarak global positif.
+      </p>
+    </solution>
+  </exercise>
+</section>

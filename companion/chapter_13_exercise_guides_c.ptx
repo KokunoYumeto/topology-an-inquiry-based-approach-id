@@ -1,0 +1,232 @@
+<section xml:id="o003-c90-ch13-exercise-guides-c" xml:lang="id-ID">
+  <title>Panduan latihan Bab 13, bagian ketiga</title>
+  <p>
+    Bagian ini mencakup unit soal mandiri 21 sampai 25 dalam urutan sumber.
+    Dua tugas induk yang hanya mengelompokkan subsoal tidak dihitung sebagai
+    unit tersendiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-exer-c-01">
+    <title>Interior bilangan bulat genap dalam topologi kelipatan</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan pada
+        <m>(\Z,\tau)</m> dengan basis
+        <m>\{a\Z\mid a\in\Z\}</m>, kelompok <m>A=\mathbb{E}</m>, subsoal
+        pertama. Di sini
+        <m>a\Z=\{ka\mid k\in\Z\}</m> dan <m>\mathbb{E}=2\Z</m> adalah
+        himpunan bilangan bulat genap. Tentukan <m>\Int(A)</m>.
+        <em>Rubrik:</em> nilai interior harus disertai unsur basis yang
+        membuktikan keterbukaan setiap titik kandidat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-c-01-hint">
+      <p>
+        Perhatikan bahwa <m>A=2\Z</m> sendiri merupakan salah satu unsur
+        basis.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-c-01-answer">
+      <p>
+        <m>\Int(A)=A=2\Z=\mathbb{E}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-c-01-solution">
+      <p>
+        Karena <m>2\in\Z</m>, himpunan <m>2\Z</m> merupakan unsur basis
+        topologi <m>\tau</m>, sehingga <m>A=2\Z</m> terbuka. Interior suatu
+        himpunan terbuka adalah himpunan itu sendiri. Jadi
+        <m>\Int(A)=A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-c-02">
+    <title>Tutupan bilangan bulat genap dalam topologi kelipatan</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan pada
+        <m>(\Z,\tau)</m> dengan basis
+        <m>\{a\Z\mid a\in\Z\}</m>, kelompok <m>A=\mathbb{E}=2\Z</m>,
+        subsoal kedua. Tentukan <m>\overline{A}</m>.
+        <em>Rubrik:</em> uji lingkungan titik sebarang di <m>\Z</m> dan
+        gunakan satu titik yang termuat dalam setiap unsur basis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-c-02-hint">
+      <p>
+        Setiap unsur basis <m>a\Z</m> memuat <m>0</m>, dan
+        <m>0\in A</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-c-02-answer">
+      <p>
+        <m>\overline{A}=\Z</m>; himpunan bilangan bulat genap rapat dalam
+        topologi ini.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-c-02-solution">
+      <p>
+        Ambil <m>x\in\Z</m> dan sebarang lingkungan <m>U</m> dari
+        <m>x</m>. Ada unsur basis <m>a\Z</m> dengan
+        <m>x\in a\Z\subseteq U</m>. Setiap <m>a\Z</m> memuat <m>0</m>, dan
+        <m>0\in 2\Z=A</m>. Jadi <m>U\cap A\neq\emptyset</m>. Karena ini
+        berlaku untuk setiap <m>x\in\Z</m>, semua titik berada dalam
+        tutupan <m>A</m>, sehingga <m>\overline{A}=\Z</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-c-03">
+    <title>Interior bilangan asli dalam topologi kelipatan</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan pada
+        <m>(\Z,\tau)</m> dengan basis
+        <m>\{a\Z\mid a\in\Z\}</m>, kelompok
+        <m>B=\mathbb{N}=\{n\in\Z\mid n\geq1\}</m>, subsoal pertama.
+        Tentukan <m>\Int(B)</m>.
+        <em>Rubrik:</em> jelaskan mengapa tidak satu pun lingkungan terbuka tak
+        kosong dapat termuat dalam <m>B</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-c-03-hint">
+      <p>
+        Setiap unsur basis, dan karenanya setiap himpunan terbuka tak kosong,
+        memuat <m>0</m>, sedangkan <m>0\notin B</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-c-03-answer">
+      <p>
+        <m>\Int(B)=\emptyset</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-c-03-solution">
+      <p>
+        Setiap unsur basis <m>a\Z</m> memuat <m>0</m>. Karena setiap himpunan
+        terbuka tak kosong adalah gabungan tak kosong dari unsur-unsur basis, setiap
+        himpunan terbuka tak kosong juga memuat <m>0</m>. Namun
+        <m>0\notin B</m>. Jadi tidak ada himpunan terbuka tak kosong yang
+        termuat dalam <m>B</m>, dan akibatnya
+        <m>\Int(B)=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-c-04">
+    <title>Tutupan bilangan asli dalam topologi kelipatan</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan pada
+        <m>(\Z,\tau)</m> dengan basis
+        <m>\{a\Z\mid a\in\Z\}</m>, kelompok
+        <m>B=\mathbb{N}=\{n\in\Z\mid n\geq1\}</m>, subsoal kedua.
+        Tentukan <m>\overline{B}</m>.
+        <em>Rubrik:</em> tangani <m>0</m> dan setiap
+        <m>x\neq0</m> secara terpisah; untuk titik tak nol, buktikan bahwa
+        setiap lingkungan basisnya bertemu <m>B</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-c-04-hint">
+      <p>
+        Singleton <m>\{0\}=0\Z</m> adalah unsur basis. Jika
+        <m>x\neq0</m> dan <m>x\in a\Z</m>, maka <m>a\neq0</m> dan
+        <m>|a|\in a\Z\cap\mathbb{N}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-c-04-answer">
+      <p>
+        <m>\overline{B}=\Z\setminus\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-c-04-solution">
+      <p>
+        Karena <m>0\Z=\{0\}</m> adalah lingkungan terbuka <m>0</m> yang
+        tidak bertemu <m>B</m>, titik <m>0</m> tidak berada dalam
+        <m>\overline{B}</m>. Sekarang ambil <m>x\neq0</m> dan sebarang
+        lingkungan <m>U</m> dari <m>x</m>. Pilih unsur basis <m>a\Z</m>
+        dengan <m>x\in a\Z\subseteq U</m>. Karena <m>x\neq0</m>, harus
+        berlaku <m>a\neq0</m>. Bilangan positif <m>|a|</m> merupakan
+        kelipatan bulat dari <m>a</m>, sehingga
+        <m>|a|\in a\Z\cap B\subseteq U\cap B</m>. Jadi setiap
+        <m>x\neq0</m> berada dalam <m>\overline{B}</m>. Kesimpulannya,
+        <m>\overline{B}=\Z\setminus\{0\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-c-05">
+    <title>Verifikasi basis topologi Titik Asal Ganda</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan topologi Titik Asal Ganda, tugas
+        pertama. Misalkan <m>X=\R^2\cup\{0^*\}</m>, dengan
+        <m>0^*\notin\R^2</m>. Koleksi kandidat basis terdiri dari bola-bola
+        terbuka Euklides standar yang berpusat di setiap titik selain
+        <m>0</m> dan <m>0^*</m>, bersama, untuk setiap <m>r\gt0</m>,
+      <me>
+        N(0,r) = \left\{(x,y) \in \R^2 \mid x^2+y^2 \lt  \frac{1}{r^2}, y \gt 0\right\}  \cup \{0\}
+      </me>
+        dan
+      <me>
+        N(0^*, r) =  \left\{(x,y) \in \R^2 \mid x^2+y^2 \lt  \frac{1}{r^2}, y \lt  0\right\}  \cup \{0^*\}
+      </me>
+        Buktikan bahwa koleksi tersebut benar-benar merupakan basis bagi suatu
+        topologi pada <m>X</m>.
+        <em>Rubrik:</em> verifikasi harus membuktikan sifat menutupi
+        <m>X</m> dan, untuk titik di irisan dua kandidat unsur basis,
+        menghasilkan unsur basis yang lebih kecil. Kasus titik biasa,
+        <m>0</m>, dan <m>0^*</m> harus terlihat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-c-05-hint">
+      <p>
+        Jauh dari kedua titik asal, semua bagian planar kandidat basis terbuka
+        secara Euklides. Pada <m>0</m> atau <m>0^*</m>, besarkan parameter
+        <m>r</m> agar jari-jari <m>1/r</m> mengecil dan masuk ke dalam kedua
+        himpunan yang sedang diiriskan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-c-05-answer">
+      <p>
+        Ya. Koleksi itu menutupi <m>X</m> dan memenuhi syarat irisan basis,
+        sehingga menentukan topologi Titik Asal Ganda.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-c-05-solution">
+      <p>
+        Koleksi tersebut menutupi <m>X</m>: titik <m>0</m> berada dalam setiap
+        <m>N(0,r)</m>, titik <m>0^*</m> berada dalam setiap
+        <m>N(0^*,r)</m>, dan setiap <m>q\in\R^2\setminus\{0\}</m> berada
+        dalam bola Euklides yang berpusat di <m>q</m>.
+      </p>
+      <p>
+        Ambil dua unsur kandidat basis <m>B_1,B_2</m> dan
+        <m>q\in B_1\cap B_2</m>. Jika
+        <m>q\in\R^2\setminus\{0\}</m>, bagian planar setiap <m>B_i</m> yang
+        memuat <m>q</m> terbuka secara Euklides di sekitar <m>q</m>.
+        Karena itu ada bola Euklides cukup kecil yang berpusat di <m>q</m>,
+        memuat <m>q</m>, dan termuat dalam <m>B_1\cap B_2</m>. Bola ini
+        merupakan unsur kandidat basis.
+      </p>
+      <p>
+        Jika <m>q=0^*</m>, kedua <m>B_i</m> harus berbentuk
+        <m>N(0^*,r_i)</m>. Dengan
+        <m>t=\max\{r_1,r_2\}</m>, berlaku
+        <m>0^*\in N(0^*,t)\subseteq B_1\cap B_2</m>.
+      </p>
+      <p>
+        Terakhir, misalkan <m>q=0</m>. Unsur kandidat basis yang memuat
+        <m>0</m> dapat berupa <m>N(0,r)</m> atau bola Euklides biasa yang
+        juga memuat <m>0</m>. Setiap bola biasa di antara <m>B_1,B_2</m>
+        memuat suatu cakram Euklides berjari-jari
+        <m>\epsilon_i\gt0</m> yang berpusat di <m>0</m>. Pilih
+        <m>t\gt0</m> sedemikian sehingga <m>1/t\leq\epsilon_i</m> untuk
+        setiap bola biasa yang muncul, dan <m>t\geq r_i</m> untuk setiap
+        himpunan khusus <m>N(0,r_i)</m> yang muncul. Maka
+        <m>0\in N(0,t)\subseteq B_1\cap B_2</m>. Jadi aksioma irisan basis
+        terpenuhi dalam semua kasus, dan koleksi itu merupakan basis.
+      </p>
+    </solution>
+  </exercise>
+</section>

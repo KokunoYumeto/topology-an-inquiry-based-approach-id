@@ -1,0 +1,402 @@
+<section xml:id="o003-c90-ch13-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan Bab 13, bagian kedua</title>
+  <p>
+    Bagian ini melanjutkan urutan sumber dengan unit soal mandiri 11 sampai 20.
+    Setiap jawaban singkat diikuti pembuktian atau rubrik penilaian yang dapat
+    digunakan secara mandiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-01">
+    <title>Bilangan bulat tidak rapat dalam garis nyata</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang himpunan rapat, tugas kedua.
+        Tentukan apakah <m>\Z</m> rapat dalam <m>\R</m> dengan topologi metrik
+        Euklides, dan buktikan jawaban.
+        <em>Rubrik:</em> berikan suatu himpunan terbuka tak kosong yang tidak
+        bertemu <m>\Z</m>, atau hitung tutupan <m>\Z</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-01-hint">
+      <p>
+        Cari interval terbuka yang terletak ketat di antara dua bilangan bulat
+        berurutan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-01-answer">
+      <p>
+        Tidak. Misalnya, <m>(1/4,3/4)</m> adalah himpunan terbuka tak kosong
+        yang tidak bertemu <m>\Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-01-solution">
+      <p>
+        Interval <m>(1/4,3/4)</m> terbuka dan tak kosong dalam topologi
+        Euklides, tetapi tidak memuat bilangan bulat. Jika <m>\Z</m> rapat,
+        setiap himpunan terbuka tak kosong harus bertemu <m>\Z</m>. Contoh
+        tandingan ini menunjukkan bahwa <m>\Z</m> tidak rapat. Bahkan
+        <m>\overline{\Z}=\Z</m>, sebab untuk setiap <m>x\notin\Z</m> dapat
+        dipilih interval terbuka kecil di sekitar <m>x</m> yang tidak memuat
+        bilangan bulat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-02">
+    <title>Kriteria himpunan rapat melalui himpunan terbuka</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang himpunan rapat, tugas ketiga,
+        dengan ruang latar <m>X</m>. Untuk <m>A\subseteq X</m>, buktikan
+        bahwa <m>A</m> rapat dalam <m>X</m> jika dan hanya jika
+        <m>A\cap O\neq\emptyset</m> untuk setiap himpunan terbuka tak kosong
+        <m>O\subseteq X</m>.
+        <em>Rubrik:</em> buktikan kedua arah dan pertahankan kuantor
+        “setiap himpunan terbuka tak kosong”.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-02-hint">
+      <p>
+        Untuk satu arah, andaikan ada himpunan terbuka tak kosong yang tidak
+        bertemu <m>A</m>. Untuk arah lain, uji setiap lingkungan dari titik
+        sebarang <m>x\in X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-02-answer">
+      <p>
+        Kriteria itu benar: <m>\overline{A}=X</m> tepat ketika setiap himpunan
+        terbuka tak kosong di <m>X</m> bertemu <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-02-solution">
+      <p>
+        Andaikan <m>\overline{A}=X</m>. Jika ada himpunan terbuka tak kosong
+        <m>O</m> dengan <m>O\cap A=\emptyset</m>, pilih <m>x\in O</m>.
+        Himpunan <m>O</m> adalah lingkungan terbuka <m>x</m> yang tidak
+        bertemu <m>A</m>, bertentangan dengan
+        <m>x\in\overline{A}</m>. Jadi setiap <m>O</m> seperti itu bertemu
+        <m>A</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan setiap himpunan terbuka tak kosong bertemu
+        <m>A</m>. Ambil <m>x\in X</m> dan sebarang lingkungan <m>N</m> dari
+        <m>x</m>. Ada himpunan terbuka <m>O</m> dengan
+        <m>x\in O\subseteq N</m>. Karena <m>O</m> tak kosong,
+        <m>O\cap A\neq\emptyset</m>, sehingga <m>N\cap A\neq\emptyset</m>.
+        Maka <m>x\in\overline{A}</m>. Karena <m>x</m> sebarang,
+        <m>\overline{A}=X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-03">
+    <title>Tiga daerah yang saling lepas</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan dekomposisi ruang, tugas pertama.
+        Untuk <m>A\subseteq X</m>, buktikan bahwa
+        <m>\Int(A)</m>, <m>\Bdry(A)</m>, dan <m>\Int(A^c)</m> saling lepas.
+        <em>Rubrik:</em> periksa ketiga irisan berpasangan, baik secara langsung
+        maupun melalui satu argumen yang mencakup semuanya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-03-hint">
+      <p>
+        Titik interior <m>A</m> mempunyai lingkungan yang termuat dalam
+        <m>A</m>; lingkungan ini tidak dapat bertemu <m>A^c</m>. Bandingkan
+        hal tersebut dengan definisi titik batas.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-03-answer">
+      <p>
+        Ketiga himpunan tersebut saling lepas: setiap irisan dari dua himpunan
+        yang berbeda di antaranya adalah kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-03-solution">
+      <p>
+        Karena <m>A\cap A^c=\emptyset</m>, jelas
+        <m>\Int(A)\cap\Int(A^c)=\emptyset</m>. Jika
+        <m>x\in\Int(A)</m>, ada lingkungan terbuka <m>U\subseteq A</m> dari
+        <m>x</m>. Lingkungan ini tidak bertemu <m>A^c</m>, sehingga
+        <m>x\notin\Bdry(A)</m>. Jadi
+        <m>\Int(A)\cap\Bdry(A)=\emptyset</m>. Demikian pula, jika
+        <m>x\in\Int(A^c)</m>, ada lingkungan <m>x</m> yang tidak bertemu
+        <m>A</m>, sehingga <m>x\notin\Bdry(A)</m>. Jadi irisan pasangan
+        terakhir juga kosong.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-04">
+    <title>Dekomposisi ruang oleh interior dan batas</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan dekomposisi ruang, tugas kedua.
+        Buktikan
+        <m>X=\Int(A)\cup\Bdry(A)\cup\Int(A^c)</m>.
+        <em>Rubrik:</em> klasifikasikan titik sebarang <m>x\in X</m> dan
+        jelaskan mengapa titik di luar kedua interior harus merupakan titik
+        batas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-04-hint">
+      <p>
+        Ambil <m>x</m> yang tidak termasuk <m>\Int(A)</m> maupun
+        <m>\Int(A^c)</m>. Apa yang dapat disimpulkan tentang pertemuan setiap
+        lingkungannya dengan <m>A</m> dan <m>A^c</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-04-answer">
+      <p>
+        Setiap titik di <m>X</m> berada tepat di salah satu dari
+        <m>\Int(A)</m>, <m>\Bdry(A)</m>, dan <m>\Int(A^c)</m>; khususnya,
+        gabungan ketiganya adalah <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-04-solution">
+      <p>
+        Ambil <m>x\in X</m>. Jika <m>x\in\Int(A)</m> atau
+        <m>x\in\Int(A^c)</m>, pernyataan langsung berlaku. Andaikan
+        <m>x</m> tidak berada di salah satu pun dari kedua interior tersebut. Karena
+        <m>x\notin\Int(A)</m>, tidak ada lingkungan <m>x</m> yang termuat
+        dalam <m>A</m>; jadi setiap lingkungan <m>x</m> bertemu
+        <m>A^c</m>. Karena <m>x\notin\Int(A^c)</m>, setiap lingkungan
+        <m>x</m> juga bertemu <m>A</m>. Maka
+        <m>x\in\Bdry(A)</m>. Jadi ketiga himpunan itu menutupi <m>X</m>;
+        bersama hasil tugas sebelumnya, ketiganya bahkan membentuk partisi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-05">
+    <title>Sifat Hausdorff diwariskan kepada subruang</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang subruang Hausdorff. Buktikan
+        bahwa setiap subruang dari ruang Hausdorff juga Hausdorff.
+        <em>Rubrik:</em> mulai dari dua titik berbeda dalam subruang dan
+        hasilkan lingkungan terbuka subruang yang saling lepas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-05-hint">
+      <p>
+        Jika <m>Y\subseteq X</m> dan <m>U,V</m> terbuka di <m>X</m>, maka
+        <m>U\cap Y</m> dan <m>V\cap Y</m> terbuka dalam topologi subruang.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-05-answer">
+      <p>
+        Ya. Sifat Hausdorff diwariskan kepada subruang.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-05-solution">
+      <p>
+        Misalkan <m>Y</m> subruang dari ruang Hausdorff <m>X</m>, dan ambil
+        titik berbeda <m>y_1,y_2\in Y</m>. Karena <m>X</m> Hausdorff, ada
+        himpunan terbuka <m>U,V\subseteq X</m> dengan
+        <m>y_1\in U</m>, <m>y_2\in V</m>, dan
+        <m>U\cap V=\emptyset</m>. Himpunan <m>U\cap Y</m> dan
+        <m>V\cap Y</m> terbuka di <m>Y</m>, masing-masing memuat
+        <m>y_1</m> dan <m>y_2</m>, serta saling lepas. Jadi <m>Y</m>
+        Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-06">
+    <title>Sifat Hausdorff topologi titik tertentu</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang topologi titik, tugas pertama.
+        Misalkan <m>X</m> tak kosong dengan sedikitnya dua unsur, <m>p\in X</m>,
+        dan <m>\tau_p</m> topologi titik tertentu. Tentukan apakah
+        <m>(X,\tau_p)</m> Hausdorff.
+        <em>Rubrik:</em> pilih sepasang titik yang relevan dan analisis semua
+        lingkungan tak kosongnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-06-hint">
+      <p>
+        Setiap himpunan terbuka tak kosong memuat titik tertentu <m>p</m>.
+        Dapatkah dua himpunan terbuka tak kosong saling lepas?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-06-answer">
+      <p>
+        Tidak. Jika <m>|X|\geq2</m>, topologi titik tertentu bukan Hausdorff.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-06-solution">
+      <p>
+        Pilih <m>q\in X\setminus\{p\}</m>. Setiap lingkungan terbuka
+        <m>U</m> dari <m>p</m> tak kosong dan memuat <m>p</m>. Setiap
+        lingkungan terbuka <m>V</m> dari <m>q</m> juga tak kosong, sehingga
+        menurut definisi <m>\tau_p</m>, himpunan <m>V</m> memuat <m>p</m>.
+        Jadi <m>p\in U\cap V</m> untuk setiap pilihan <m>U,V</m>. Titik
+        berbeda <m>p</m> dan <m>q</m> tidak dapat dipisahkan oleh lingkungan
+        terbuka saling lepas; maka ruang itu tidak Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-07">
+    <title>Sifat Hausdorff topologi titik yang dikecualikan</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang topologi titik, tugas kedua.
+        Misalkan <m>X</m> tak kosong dengan sedikitnya dua unsur, <m>p\in X</m>,
+        dan <m>\tau_{\overline p}</m> topologi titik yang dikecualikan.
+        Tentukan apakah <m>(X,\tau_{\overline p})</m> Hausdorff.
+        <em>Rubrik:</em> identifikasi seluruh lingkungan terbuka <m>p</m> dan
+        gunakan titik lain sebagai pasangan uji.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-07-hint">
+      <p>
+        Dalam topologi ini, satu-satunya himpunan terbuka yang memuat
+        <m>p</m> adalah <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-07-answer">
+      <p>
+        Tidak. Jika <m>|X|\geq2</m>, topologi titik yang dikecualikan bukan
+        Hausdorff.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-07-solution">
+      <p>
+        Pilih <m>q\in X\setminus\{p\}</m>. Satu-satunya lingkungan terbuka
+        dari <m>p</m> adalah <m>X</m>, karena semua himpunan terbuka sejati
+        tidak memuat <m>p</m>. Setiap lingkungan terbuka <m>V</m> dari
+        <m>q</m> memenuhi <m>X\cap V=V\neq\emptyset</m>. Jadi <m>p</m> dan
+        <m>q</m> tidak mempunyai lingkungan terbuka saling lepas, sehingga
+        ruang tersebut tidak Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-08">
+    <title>Himpunan tertutup memuat batasnya</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang batas dan ketertutupan.
+        Untuk <m>C\subseteq X</m>, buktikan bahwa <m>C</m> tertutup jika dan
+        hanya jika <m>C</m> memuat batasnya.
+        <em>Rubrik:</em> buktikan kedua implikasi dan kaitkan kondisi
+        <m>\Bdry(C)\subseteq C</m> dengan tutupan <m>C</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-08-hint">
+      <p>
+        Gunakan identitas <m>\overline{C}=C\cup\Bdry(C)</m> dari latihan
+        sebelumnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-08-answer">
+      <p>
+        <m>C</m> tertutup tepat ketika
+        <m>\Bdry(C)\subseteq C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-08-solution">
+      <p>
+        Jika <m>C</m> tertutup, maka <m>\overline{C}=C</m>. Karena
+        <m>\Bdry(C)\subseteq\overline{C}</m>, diperoleh
+        <m>\Bdry(C)\subseteq C</m>. Sebaliknya, jika
+        <m>\Bdry(C)\subseteq C</m>, maka
+        <m>\overline{C}=C\cup\Bdry(C)=C</m>. Suatu himpunan sama dengan
+        tutupannya jika dan hanya jika tertutup, jadi <m>C</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-09">
+    <title>Titik terasing dan singleton terbuka dalam subruang</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang titik terasing, tugas pertama.
+        Untuk <m>A\subseteq X</m> dan <m>a\in A</m>, buktikan bahwa
+        <m>a</m> titik terasing dari <m>A</m> jika dan hanya jika
+        <m>\{a\}</m> terbuka dalam subruang <m>A</m>.
+        <em>Rubrik:</em> kedua arah harus menerjemahkan secara tepat antara
+        lingkungan di <m>X</m> dan himpunan terbuka dalam topologi subruang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-09-hint">
+      <p>
+        Himpunan terbuka dalam <m>A</m> berbentuk <m>O\cap A</m> untuk suatu
+        <m>O</m> terbuka di <m>X</m>. Dari lingkungan yang tidak harus terbuka,
+        ambil himpunan terbuka yang termuat di dalamnya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-09-answer">
+      <p>
+        Keduanya setara: <m>a</m> terasing dalam <m>A</m> tepat ketika
+        singleton <m>\{a\}</m> terbuka dalam <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-09-solution">
+      <p>
+        Jika <m>a</m> terasing dalam <m>A</m>, ada lingkungan <m>N</m> dari
+        <m>a</m> dengan <m>N\cap A=\{a\}</m>. Pilih himpunan terbuka
+        <m>O</m> di <m>X</m> dengan <m>a\in O\subseteq N</m>. Maka
+        <m>O\cap A=\{a\}</m>, sehingga <m>\{a\}</m> terbuka dalam
+        subruang <m>A</m>.
+      </p>
+      <p>
+        Sebaliknya, jika <m>\{a\}</m> terbuka dalam <m>A</m>, ada himpunan
+        terbuka <m>O\subseteq X</m> dengan <m>O\cap A=\{a\}</m>. Himpunan
+        <m>O</m> adalah lingkungan <m>a</m> di <m>X</m> yang beririsan
+        dengan <m>A</m> hanya di <m>a</m>. Jadi <m>a</m> titik terasing dari
+        <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-exer-b-10">
+    <title>Klasifikasi titik batas dalam ruang topologi</title>
+    <statement>
+      <p>
+        <em>Acuan sumber:</em> latihan tentang titik terasing, tugas kedua.
+        Tentukan apakah dalam sebarang ruang topologi setiap titik batas dari
+        <m>A</m> merupakan titik limit atau titik terasing dari <m>A</m>, lalu
+        buktikan jawaban.
+        <em>Rubrik:</em> jawaban dinilai dari pembagian kasus
+        <m>x\in A</m> dan <m>x\notin A</m>, serta penggunaan definisi titik
+        limit dan titik terasing tanpa mengandaikan metrik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-exer-b-10-hint">
+      <p>
+        Jika titik batas <m>x</m> tidak berada di <m>A</m>, setiap pertemuan
+        lingkungan dengan <m>A</m> otomatis terjadi di titik selain
+        <m>x</m>. Jika <m>x\in A</m>, tanyakan apakah semua lingkungan
+        bertemu <m>A\setminus\{x\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-exer-b-10-answer">
+      <p>
+        Ya. Dalam setiap ruang topologi, setiap titik batas <m>A</m> adalah
+        titik limit <m>A</m> atau titik terasing <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-exer-b-10-solution">
+      <p>
+        Ambil <m>x\in\Bdry(A)</m>. Jika <m>x\notin A</m>, setiap lingkungan
+        <m>x</m> bertemu <m>A</m>, dan setiap titik pertemuan berbeda dari
+        <m>x</m>. Jadi setiap lingkungan bertemu
+        <m>A\setminus\{x\}</m>, sehingga <m>x</m> adalah titik limit.
+      </p>
+      <p>
+        Sekarang andaikan <m>x\in A</m>. Jika setiap lingkungan <m>x</m>
+        bertemu <m>A\setminus\{x\}</m>, maka <m>x</m> titik limit. Jika tidak,
+        ada lingkungan <m>N</m> dari <m>x</m> dengan
+        <m>N\cap(A\setminus\{x\})=\emptyset</m>. Karena <m>x\in N\cap A</m>,
+        diperoleh <m>N\cap A=\{x\}</m>, sehingga <m>x</m> titik terasing.
+        Pembuktian ini hanya memakai definisi lingkungan dan berlaku tanpa
+        asumsi metrik.
+      </p>
+    </solution>
+  </exercise>
+</section>

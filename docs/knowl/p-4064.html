@@ -12,8 +12,29 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Dengan <span class="process-math">\(X\)</span> dan <span class="process-math">\(\tau\)</span> seperti pada Panduan 21, tentukan semua lingkungan titik <span class="process-math">\(c\text{.}\)</span>
+<div class="para logical">
+<div class="para">Sekarang ambil <span class="process-math">\(x,y,z\in X\)</span> dan gunakan notasi <span class="process-math">\(a_i,b_i,c_i\)</span> dari petunjuk. Pertidaksamaan segitiga pada <span class="process-math">\(X_i\)</span> memberi <span class="process-math">\(c_i\leq a_i+b_i\text{.}\)</span> Karena semua bilangan ini tak negatif dan, berdasarkan Cauchy-Schwarz,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^n a_ib_i
+\leq\sqrt{\sum_{i=1}^n a_i^2}\sqrt{\sum_{i=1}^n b_i^2},
+\end{equation*}
 </div>
-<span class="incontext"><a href="o003-c90-ch12-source-guides-e.html#p-4064" class="internal">in-context</a></span>
+<div class="para">kita memperoleh</div>
+<div class="displaymath process-math">
+\begin{align*}
+d(x,z)^2=\sum_{i=1}^n c_i^2
+\amp\leq\sum_{i=1}^n(a_i+b_i)^2\\
+\amp=\sum_{i=1}^n a_i^2
++2\sum_{i=1}^n a_ib_i+\sum_{i=1}^n b_i^2\\
+\amp\leq
+\left(\sqrt{\sum_{i=1}^n a_i^2}
++\sqrt{\sum_{i=1}^n b_i^2}\right)^2\\
+\amp=(d(x,y)+d(y,z))^2.
+\end{align*}
+</div>
+<div class="para">Kedua ruas terakhir tak negatif, sehingga pengambilan akar kuadrat memberi <span class="process-math">\(d(x,z)\leq d(x,y)+d(y,z)\text{.}\)</span> Jadi <span class="process-math">\(d\)</span> memenuhi seluruh aksioma metrik.</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch11-exercise-guides-a.html#p-4064" class="internal">in-context</a></span>
 </body>
 </html>

@@ -28,15 +28,15 @@ Approach* at commit `0c2d8f614ef87aa00de373f3418146c2f1d13bb9`, tree
 | 6 | `repo/source/sec_set_boundary.ptx` | 2,879 | `34bc5f2f4fe11ded3170153e584f8227c29fd8f9ff52290288eb5bdd4aec6049` |
 | 7 | `repo/source/sec_separation_ax.ptx` | 13,982 | `745bf02dfb66a8f1fbbc0703cf6b11bcd1ed0d2ad567c5b64d4dd47d0641f9d7` |
 | 8 | `repo/source/sec_closed_sets_top_summ.ptx` | 4,667 | `051a4372cff499464c2ae67be8eecd67829bdb5baeafb2083e34b9cf73a0125a` |
-| 9 | `repo/source/sec_closed_sets_top_exer.ptx` | 22,788 | `d4ae3e0d376a0baaccf788748d5ffc2320ec6a292e6ac7f100b072e65d9cb06b` |
+| 9 | `repo/source/sec_closed_sets_top_exer.ptx` | 22,700 | `bf42ce40bdd1e4a59cd8209526bd347206ae3201daa98d0e822ca5ea91da97fb` |
 
 The QA script's ordered translated identity is SHA-256
-`9b8a851c97b6f9a0b3ca82a991a6a535ff08eac32dee6a51f3ef0f859eea5b65`.
+`d15a1182cd12f84eb54ade92316de6f6d281936294fe5120c8f282406e371253`.
 
 ## Fail-closed checks
 
-`repo/qa/CHAPTER13_SOURCE_QA.json` is 8,343 bytes / SHA-256
-`a329cfa487fa51f932308c06bc67a37ed118f31663acccddb9313d8e88619889`.
+`repo/qa/CHAPTER13_SOURCE_QA.json` is 8,988 bytes / SHA-256
+`45ef76db9669c9840f4ca71d4af53089051a4dd7f8858f81078964577314f8ba`.
 It passes with zero failures and proves:
 
 - all nine files parse as XML;
@@ -45,8 +45,10 @@ It passes with zero failures and proves:
 - all 25 translated xrefs resolve against the explicit chapter plus eight
   admitted external targets;
 - element, attribute, ID, and protected-math order is identical except for one
-  approved repair that converts a printed raw ID to a resolving `xref` and 13
-  specifically approved protected-math corrections;
+  approved repair that converts a printed raw ID to a resolving `xref`, 13
+  specifically approved protected-math corrections, and removal of two invalid
+  ancestor shells (`definition` and `statement`) while retaining and comparing
+  every descendant of the definition as a schema-valid labeled paragraph;
 - translated TeX `text` payloads change only reader-visible language;
 - the 76-prompt denominator is unchanged: 70 leaf task prompts plus six direct
   prompt carriers, with seven grouping task nodes retained separately.
@@ -57,9 +59,9 @@ are deliberate terminology/bibliographic data.
 
 ## Corrections and terminology
 
-Source repairs O003-C146 through O003-C160 are recorded in
-`00_control/SOURCE_CORRECTIONS.csv` (62,833 bytes / SHA-256
-`7db6a08b254a326a75d82e715bf7e0432c20d59ebe67ee9f367aacfedd304e5c`).
+Source repairs O003-C146 through O003-C161 are recorded in
+`00_control/SOURCE_CORRECTIONS.csv` (63,397 bytes / SHA-256
+`1c33b5f2710d0af037087cf3bed8fdd0af58f9efba6f40ef1073401a1b170746`).
 They repair only deterministic notation, variable, cross-reference,
 quantifier, geometric-description, and definition defects; no new theorem or
 hypothesis is silently introduced.
@@ -74,11 +76,12 @@ fallback, decisions, and the normalization to `aksioma separasi` and `ruang
 reguler`. Repository and reader metadata retain the explicit production model
 identity `OpenAI Codex gpt-5.6-sol, Ultra` without displacing source authorship.
 
-## Next action
+## Current integration state and next action
 
-Generate the exact 76-row prompt map and seven grouping relationships, author
-all staged statement/hint/answer/solution support plus eight original mastery
-checks, build the deterministic five-file backend transaction, then integrate
-the cumulative Chapters 1–13 reader for pinned-schema, HTML/PDF, link,
-responsive, accessibility, structure, visual, publication, and anonymous
-readback gates.
+The exact 76-row prompt map, seven grouping relationships, 76 staged source
+guides, and eight original mastery checks are now complete. Their 84 entries
+and 336 staged surfaces pass deterministic companion regeneration; both the
+companion wrapper and cumulative Chapters 1-13 source pass the pinned schema.
+The remaining boundary work is deterministic HTML/PDF, link, responsive,
+accessibility, structure, all-page visual, packaging, publication, and
+anonymous-readback QA.

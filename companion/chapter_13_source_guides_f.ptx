@@ -1,0 +1,186 @@
+<section xml:id="o003-c90-ch13-source-guides-f" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Aksioma Separasi dan Ruang Hausdorff</title>
+
+  <p>
+    Panduan ini mengembangkan alasan di balik sifat Hausdorff: titik-titik
+    berbeda dapat ditempatkan dalam himpunan terbuka yang saling lepas.
+  </p>
+
+  <exercise xml:id="o003-c90-ch13-guide-26">
+    <title>Lingkungan Saling Lepas Memaksa Limit Tunggal</title>
+    <statement>
+      <p>
+        Dalam ruang metrik <m>(X,d)</m>, misalkan <m>x\neq y</m>.
+        Jelaskan mengapa <m>x</m> dan <m>y</m> tidak dapat sekaligus menjadi
+        limit dari barisan yang sama apabila terdapat bola terbuka saling lepas
+        <m>B(x,r)</m> dan <m>B(y,s)</m> dengan
+        <m>B(x,r)\cap B(y,s)=\emptyset</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-26-hint">
+      <p><em>Tahap 1.</em> Andaikan suatu barisan <m>(z_n)</m> konvergen ke <m>x</m> dan ke <m>y</m>.</p>
+      <p><em>Tahap 2.</em> Konvergensi ke masing-masing titik membuat suku-suku barisan akhirnya berada dalam masing-masing bola.</p>
+      <p><em>Tahap 3.</em> Gunakan indeks yang lebih besar dari kedua ambang konvergensi.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-26-answer">
+      <p>
+        Setelah suatu indeks tertentu, setiap suku harus berada sekaligus dalam
+        kedua bola, bertentangan dengan irisan kedua bola yang kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-26-solution">
+      <p>
+        Andaikan <m>z_n\to x</m> dan <m>z_n\to y</m>. Karena
+        <m>B(x,r)</m> lingkungan dari <m>x</m>, terdapat <m>N_x</m> sehingga
+        <m>z_n\in B(x,r)</m> untuk setiap <m>n\geq N_x</m>. Demikian pula,
+        terdapat <m>N_y</m> sehingga <m>z_n\in B(y,s)</m> untuk setiap
+        <m>n\geq N_y</m>. Untuk
+        <m>n\geq\max\{N_x,N_y\}</m>, diperoleh
+        <m>z_n\in B(x,r)\cap B(y,s)</m>, padahal irisan itu kosong.
+        Kontradiksi ini menunjukkan bahwa kedua titik tidak dapat menjadi
+        limit dari barisan yang sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-27">
+    <title>Membangun Bola Terbuka Saling Lepas</title>
+    <statement>
+      <p>
+        Dalam ruang metrik <m>(X,d)</m>, misalkan <m>x\neq y</m>.
+        Tunjukkan bahwa terdapat <m>r,s\gt 0</m> sehingga bola terbuka
+        <m>B(x,r)</m> dan <m>B(y,s)</m> saling lepas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-27-hint">
+      <p><em>Tahap 1.</em> Tetapkan <m>\delta=d(x,y)</m>; karena <m>x\neq y</m>, maka <m>\delta\gt 0</m>.</p>
+      <p><em>Tahap 2.</em> Pilih kedua jari-jari lebih kecil daripada <m>\delta/2</m>, misalnya <m>r=s=\delta/3</m>.</p>
+      <p><em>Tahap 3.</em> Jika suatu titik berada dalam kedua bola, terapkan ketaksamaan segitiga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-27-answer">
+      <p>
+        Pilihan <m>r=s=d(x,y)/3</m> menghasilkan
+        <m>B(x,r)\cap B(y,s)=\emptyset</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-27-solution">
+      <p>
+        Misalkan <m>\delta=d(x,y)\gt 0</m> dan pilih
+        <m>r=s=\delta/3</m>. Jika ada
+        <m>z\in B(x,r)\cap B(y,s)</m>, ketaksamaan segitiga memberikan
+        <me>
+          \delta=d(x,y)\leq d(x,z)+d(z,y)\lt r+s=\frac{2\delta}{3},
+        </me>
+        yang mustahil. Jadi tidak ada titik dalam irisan kedua bola, sehingga
+        bola-bola tersebut saling lepas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-28">
+    <title>Mengapa Contoh Tiga Titik Bukan Hausdorff</title>
+    <statement>
+      <p>
+        Kembali ke ruang pada <xref ref="act_TS_limits2"/>:
+        <m>X=\{a,b,c\}</m> dan
+        <m>\tau=\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}</m>.
+        Untuk <m>x\neq c</m>, jelaskan mengapa tidak ada himpunan terbuka
+        saling lepas <m>O_x</m> dan <m>O_c</m> yang masing-masing memuat
+        <m>x</m> dan <m>c</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-28-hint">
+      <p><em>Tahap 1.</em> Daftarkan himpunan terbuka tak kosong yang memuat <m>a</m> dan yang memuat <m>b</m>.</p>
+      <p><em>Tahap 2.</em> Perhatikan satu titik yang berada dalam setiap himpunan terbuka tak kosong pada topologi ini.</p>
+      <p><em>Tahap 3.</em> Tunjukkan bahwa titik tersebut harus berada dalam <m>O_x\cap O_c</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-28-answer">
+      <p>
+        Setiap himpunan terbuka tak kosong memuat <m>c</m>. Karena itu,
+        <m>c\in O_x\cap O_c</m>, sehingga irisan tersebut tidak pernah kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-28-solution">
+      <p>
+        Jika <m>x=a</m>, setiap himpunan terbuka yang memuat <m>x</m> adalah
+        <m>\{a,c\}</m> atau <m>X</m>; keduanya memuat <m>c</m>. Jika
+        <m>x=b</m>, setiap himpunan terbuka yang memuat <m>x</m> adalah
+        <m>\{b,c\}</m> atau <m>X</m>; keduanya juga memuat <m>c</m>.
+        Sementara itu, setiap <m>O_c</m> tentu memuat <m>c</m>. Jadi dalam
+        kedua kasus <m>c\in O_x\cap O_c</m>, sehingga pasangan lingkungan
+        terbuka saling lepas tidak ada.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-29">
+    <title>Topologi Diskret Selalu Hausdorff</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> sebarang himpunan dan <m>\tau</m> topologi diskret
+        pada <m>X</m>. Tentukan apakah <m>(X,\tau)</m> Hausdorff dan berikan
+        alasannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-29-hint">
+      <p><em>Tahap 1.</em> Ambil dua titik berbeda <m>x,y\in X</m>.</p>
+      <p><em>Tahap 2.</em> Dalam topologi diskret, setiap subhimpunan, khususnya himpunan beranggota tunggal, terbuka.</p>
+      <p><em>Tahap 3.</em> Gunakan <m>\{x\}</m> dan <m>\{y\}</m> sebagai lingkungan pemisah.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-29-answer">
+      <p>Ya, setiap ruang diskret adalah ruang Hausdorff.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-29-solution">
+      <p>
+        Untuk titik berbeda <m>x,y\in X</m>, himpunan <m>\{x\}</m> dan
+        <m>\{y\}</m> terbuka dalam topologi diskret. Keduanya masing-masing
+        memuat <m>x</m> dan <m>y</m>, serta
+        <m>\{x\}\cap\{y\}=\emptyset</m>. Jadi syarat Hausdorff terpenuhi.
+        Jika <m>X</m> memiliki kurang dari dua titik, syarat tersebut terpenuhi
+        secara trivial.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch13-guide-30">
+    <title>Ruang Hausdorff Berhingga Bersifat Diskret</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau)</m> Hausdorff dan
+        <m>X=\{x,x_1,x_2,\ldots,x_n\}</m> berhingga.
+        Tentukan apakah <m>\{x\}</m> terbuka dan simpulkan bentuk
+        <m>\tau</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch13-guide-30-hint">
+      <p><em>Tahap 1.</em> Untuk setiap <m>i</m>, gunakan sifat Hausdorff untuk memilih lingkungan terbuka <m>U_i</m> dari <m>x</m> yang tidak memuat <m>x_i</m>.</p>
+      <p><em>Tahap 2.</em> Ambil irisan berhingga <m>U=\bigcap_{i=1}^{n}U_i</m>.</p>
+      <p><em>Tahap 3.</em> Setelah setiap himpunan beranggota tunggal diketahui terbuka, tuliskan sebarang subhimpunan sebagai gabungannya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch13-guide-30-answer">
+      <p>
+        Ya, <m>\{x\}</m> terbuka. Karena argumen berlaku untuk setiap
+        <m>x\in X</m>, semua himpunan beranggota tunggal terbuka dan
+        <m>\tau=\mathcal P(X)</m>; jadi topologinya diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch13-guide-30-solution">
+      <p>
+        Untuk setiap <m>i=1,\ldots,n</m>, sifat Hausdorff memberikan himpunan
+        terbuka saling lepas <m>U_i</m> dan <m>V_i</m> dengan
+        <m>x\in U_i</m> dan <m>x_i\in V_i</m>. Karena keduanya saling lepas,
+        <m>x_i\notin U_i</m>. Irisan berhingga
+        <m>U=\bigcap_{i=1}^{n}U_i</m> terbuka dan memuat <m>x</m>. Untuk setiap
+        <m>i</m>, himpunan <m>U</m> termuat dalam <m>U_i</m>, sehingga tidak
+        memuat <m>x_i</m>. Jadi <m>U=\{x\}</m>.
+      </p>
+      <p>
+        Titik <m>x</m> dipilih sebarang, maka setiap himpunan beranggota
+        tunggal dalam <m>X</m> terbuka. Setiap subhimpunan <m>A\subseteq X</m>
+        adalah gabungan himpunan-himpunan beranggota tunggal
+        <m>A=\bigcup_{a\in A}\{a\}</m>, sehingga terbuka. Dengan demikian
+        <m>\tau=\mathcal P(X)</m> dan ruang tersebut diskret.
+      </p>
+    </solution>
+  </exercise>
+</section>
