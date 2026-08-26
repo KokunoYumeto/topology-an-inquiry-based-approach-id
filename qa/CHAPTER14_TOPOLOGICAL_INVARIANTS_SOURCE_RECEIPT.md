@@ -22,7 +22,7 @@ section are translated contiguously. The new file is:
 
 | File | Bytes | SHA-256 |
 |---|---:|---|
-| `source/sec_top_invar.ptx` | 1,870 | `f17c8dcf9985e2dd80f324132bd25c3f0bdb4bc98ec90b158936ff310ea64f24` |
+| `source/sec_top_invar.ptx` | 1,875 | `8c7ed840c32b92735995b0874e53f306ebb5cec691b608fa44464e924f447e92` |
 
 It covers the invariant/property definition and all five classification tasks
 for indiscrete, discrete, finite-complement, membership, and cardinality
@@ -31,12 +31,12 @@ properties. No assets or interactive surfaces occur in this file.
 ## Fail-closed source and schema QA
 
 `qa/CHAPTER14_SOURCE_THROUGH_TOPOLOGICAL_INVARIANTS_QA.json` is 5,681 bytes /
-SHA-256 `84d723542287ac40324131bb12f2bdb0ce447f839aecd8c8fd405629d230dc26`;
+SHA-256 `f98512c23921b7c294d880ab812428f8215971fb0585073fbc0a5a9e1a895de2`;
 status `pass`, zero failures. Across the six translated files it compares 576
 elements, 308 protected math nodes, 14 XML IDs, 12 xrefs, 27 task nodes, and
 six activity/exploration containers. Their framed combined translated
 SHA-256 is
-`3c92ca41e62058c2d3185c846590ebbb5f8763667e7408bec3bdc473c91c5d4c`.
+`bb4347a6328eaf0b5bafa7dde12ef6398cad199763667ca24442552dce6065d8`.
 
 All external xrefs resolve in the frozen cumulative source. A bounded
 reader-visible English-residue scan found no English prose; narrow
@@ -44,7 +44,7 @@ reader-visible English-residue scan found no English prose; narrow
 
 `qa/CHAPTER14_CUMULATIVE_SCHEMA_THROUGH_TOPOLOGICAL_INVARIANTS_QA.json` is
 2,193 bytes / SHA-256
-`9049643a4dda54216e24b640357c5a72d3d2e0992d8dd4c7bd67741e9a536451`.
+`6b17634fae55016342eceb616ac2cbcdb331c88a9fd40307afd94f0ac7b2b83f`.
 The in-memory cumulative Chapters 1-14 tree has 37,709 expanded elements and
 validates with zero diagnostics under Python 3.12.13, PreTeXt 1.7.5, lxml
 4.9.4, schema SHA-256
@@ -56,13 +56,14 @@ and resource commit `9bce7e55911fb14e3e6e362bfa78bd6431c38597`.
 Rows O003-T190 through O003-T194 bind *topological invariant*, *topological
 property*, *indiscrete topology*, *discrete topology*, and *finite complement
 topology*. The complete terminology ledger is 20,053 bytes / SHA-256
-`a73465b827b19c88d712d87322eeed506f946cb4a62444504c10e6e80eb02996`.
+`51fa85741a48f48bc869b5b5e9ab66933155787619ac6c32872b9a6fda70498e`.
 
-Repair O003-C173 corrects the source activity's singular “homeomorphic space”
-when it compares two named spaces; the Indonesian wording is plural and keeps
+Repairs O003-C173 and O003-C174 correct the source activity's singular
+“homeomorphic space” when it compares two named spaces and normalize the
+established spelling *indiskret*. The Indonesian wording is plural and keeps
 the intended classification question unchanged. The complete correction
-ledger is 68,921 bytes / SHA-256
-`ca0033cb3ae609a2d7a07bf9dc367a39326c714d1d029ee3f726baede2b57875`.
+ledger is 69,298 bytes / SHA-256
+`e69b79a54e916a2205bc608af98245f443bc1ff9c18c2d4b848ec80a6b0f7b06`.
 
 The translated section preserves its one ID, 13 math nodes, five atomic tasks,
 two index entries, and all source topology. No accessibility or asset addition
