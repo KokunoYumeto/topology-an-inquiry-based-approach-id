@@ -1,76 +1,76 @@
 <section xml:id="sec_relations">
-  <title>Relations</title>
+  <title>Relasi</title>
   <p>
-    We use the word
-    <q>equivalent</q>
-    deliberately when talking about metric or topological equivalence.
-    Recall that equivalence is a word used with relations,
-    and that a relation is a way to compare two elements from a set.
-    We are familiar with many relations on sets,
-    <q><m>\lt</m></q>,
-    <q><m>=</m></q>,
+    Kita menggunakan kata
+    <q>ekuivalen</q>
+    secara sengaja ketika membahas ekuivalensi metrik atau topologis.
+    Ingat bahwa ekuivalensi merupakan istilah yang digunakan untuk relasi,
+    dan bahwa relasi merupakan cara membandingkan dua elemen dari suatu himpunan.
+    Kita mengenal banyak relasi pada himpunan,
+    misalnya <q><m>\lt</m></q>,
+    <q><m>=</m></q>, dan
     <q><m>\geq</m></q>
-    on the integers, for example.
+    pada bilangan bulat.
   </p>
 
   <definition>
-  <idx><h>relation</h></idx>
+  <idx><h>relasi</h></idx>
     <statement>
       <p>
-        A <term>relation</term>
-        on a set <m>S</m> is a subset <m>R</m> of <m>S \times S</m>.
+        Suatu <term>relasi</term>
+        pada himpunan <m>S</m> adalah subhimpunan <m>R</m> dari <m>S \times S</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    For example, the subset <m>R = \{(a,a) \mid a \in \Z \}</m> of
-    <m>\Z \times \Z</m> is the relation we call equals.
-    If <m>R</m> is a relation on a set <m>S</m>,
-    we usually suppress the set notation and write <m>a \sim b</m> if
-    <m>(a,b) \in R</m> and say that <m>a</m> is related to <m>b</m>.
-    In this case we often refer to <m>\sim</m> as the relation instead of the set <m>R</m>.
-    Sometimes we use familiar symbols for special relations.
-    For example,
-    we write <m>a = b</m> if <m>(a,b) \in R = \{(a,a) \mid a \in \Z \}</m>.
+    Sebagai contoh, subhimpunan <m>R = \{(a,a) \mid a \in \Z \}</m> dari
+    <m>\Z \times \Z</m> adalah relasi yang kita sebut relasi kesamaan.
+    Jika <m>R</m> merupakan relasi pada himpunan <m>S</m>,
+    biasanya kita menghilangkan notasi himpunannya dan menulis <m>a \sim b</m> jika
+    <m>(a,b) \in R</m>, lalu mengatakan bahwa <m>a</m> berelasi dengan <m>b</m>.
+    Dalam hal ini, kita sering menyebut <m>\sim</m> sebagai relasinya, bukan himpunan <m>R</m>.
+    Kadang-kadang kita menggunakan simbol yang sudah dikenal untuk relasi khusus.
+    Sebagai contoh,
+    kita menulis <m>a = b</m> jika <m>(a,b) \in R = \{(a,a) \mid a \in \Z \}</m>.
   </p>
   <p>
-    When discussing relations,
-    there are three specific properties that we consider.
+    Dalam membahas relasi,
+    ada tiga sifat khusus yang kita pertimbangkan.
     <ul>
       <li>
         <p>
-          A relation <m>\sim</m> on a set <m>S</m> is <term>reflexive</term>
-          if <m>a \sim a</m> for all <m>a \in S</m>.
+          Suatu relasi <m>\sim</m> pada himpunan <m>S</m> bersifat <term>refleksif</term>
+          jika <m>a \sim a</m> untuk semua <m>a \in S</m>.
         </p>
       </li>
       <li>
         <p>
-          A relation <m>\sim</m> on a set <m>S</m> is <term>symmetric</term>
-          if whenever <m>a \sim b</m> in <m>S</m> we also have <m>b \sim a</m>.
+          Suatu relasi <m>\sim</m> pada himpunan <m>S</m> bersifat <term>simetris</term>
+          jika, untuk setiap pilihan elemen a dan b, berlaku <m>a \sim b</m> dengan a dan b berada dalam <m>S</m>, maka kita juga memperoleh <m>b \sim a</m>.
         </p>
       </li>
       <li>
         <p>
-          A relation <m>\sim</m> on a set <m>S</m> is <term>transitive</term>
-          if whenever <m>a \sim b</m> and
-          <m>b \sim c</m> in <m>S</m> we also have <m>a \sim c</m>.
+          Suatu relasi <m>\sim</m> pada himpunan <m>S</m> bersifat <term>transitif</term>
+          jika, untuk setiap pilihan elemen a, b, dan c, berlaku <m>a \sim b</m> dan
+          <m>b \sim c</m> dengan a, b, dan c berada dalam <m>S</m>, maka kita juga memperoleh <m>a \sim c</m>.
         </p>
       </li>
     </ul>
   </p>
   <p>
-    When we use the word
-    <q>equivalence</q>, we are referring to an equivalence relation.
+    Ketika kita menggunakan kata
+    <q>ekuivalensi</q>, yang dimaksud adalah suatu relasi ekuivalensi.
   </p>
 
   <definition>
-  <idx><h>equivalence relation</h></idx>
+  <idx><h>relasi ekuivalensi</h></idx>
     <statement>
       <p>
-        An <term>equivalence relation</term>
-        is a relation on a set that is reflexive,
-        symmetric, and transitive.
+        Suatu <term>relasi ekuivalensi</term>
+        adalah relasi pada suatu himpunan yang refleksif,
+        simetris, dan transitif.
       </p>
     </statement>
   </definition>
@@ -79,24 +79,28 @@
       <task>
         <statement>
           <p>
-            Explain why metric equivalence is an equivalence relation.
+            Jelaskan mengapa ekuivalensi metrik merupakan relasi ekuivalensi
+            pada setiap himpunan terpilih yang terdiri atas ruang-ruang metrik.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Explain why topological equivalence is an equivalence relation.
+            Jelaskan mengapa ekuivalensi topologis merupakan relasi ekuivalensi
+            pada setiap himpunan terpilih yang terdiri atas ruang-ruang topologi.
           </p>
         </statement>
       </task>
     
   </activity>
   <p>
-    Equivalence relations are important because an equivalence relation on a set <m>S</m> partitions the set into a disjoint union of equivalence classes.
-    Since topological equivalence is an equivalence relation,
-    we can treat the spaces that are topologically equivalent to each other as being essentially the same space from a topological perspective.
-    Under the relation of homeomorphism we call the equivalence classes
-    <term>homeomorphism</term> classes.
+    Relasi ekuivalensi penting karena relasi ekuivalensi pada suatu himpunan <m>S</m>
+    mempartisi himpunan tersebut menjadi gabungan saling lepas dari kelas-kelas ekuivalensi.
+    Karena ekuivalensi topologis merupakan relasi ekuivalensi,
+    kita dapat memperlakukan ruang-ruang yang ekuivalen secara topologis satu sama lain
+    sebagai ruang yang pada dasarnya sama dari sudut pandang topologi.
+    Berdasarkan relasi homeomorfisme, kelas-kelas ekuivalensi tersebut disebut
+    kelas <term>homeomorfisme</term>.
   </p>
 </section>
