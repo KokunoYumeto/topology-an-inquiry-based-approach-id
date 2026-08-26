@@ -1,121 +1,107 @@
 <section xml:id="sec_sub">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    We have seen that a subset <m>A</m> of a metric space <m>(X,d_X)</m> is a subspace of <m>X</m> using the restriction of the metric <m>d_X</m> to <m>A</m>.
-    We do not have a metric in general topological spaces,
-    so that approach can't be duplicated.
-    But, we proved that the open sets in a subspace <m>A</m> of a metric space <m>(X,d_X)</m> are exactly the intersections of open sets in <m>X</m> with <m>A</m>.
-    That idea can be transferred to topological spaces.
+    Kita telah melihat bahwa suatu subhimpunan <m>A</m> dari ruang metrik <m>(X,d_X)</m> menjadi subruang dari <m>X</m> ketika dibekali pembatasan metrik <m>d_X</m> pada <m>A</m>.
+    Pada ruang topologi umum kita tidak memiliki metrik,
+    sehingga pendekatan tersebut tidak dapat diterapkan dengan cara yang sama.
+    Namun, kita telah membuktikan bahwa himpunan terbuka dalam subruang <m>A</m> dari ruang metrik <m>(X,d_X)</m> tepat berupa irisan himpunan terbuka dalam <m>X</m> dengan <m>A</m>.
+    Gagasan ini dapat dialihkan ke ruang topologi.
   </p>
   <p>
-    To make a subspace <m>A</m> of a topological space
-    <m>(X,\tau)</m> into a topological space,
-    we need to define a topology on <m>A</m>.
+    Untuk menjadikan suatu subhimpunan <m>A</m> dari ruang topologi
+    <m>(X,\tau)</m> sebagai ruang topologi,
+    kita perlu mendefinisikan topologi pada <m>A</m>.
   </p>
+
+  <figure xml:id="F_Subspace_open">
+    <caption>Calon himpunan terbuka dalam suatu subruang.</caption>
+    <image width="50%" source="Subspace_open"><description>Sebuah persegi panjang besar berlabel X memuat persegi panjang berarsir ungu berlabel A. Sebuah lingkaran putus-putus berlabel O beririsan dengan sisi kiri A; bagian irisannya dengan A menggambarkan himpunan O irisan A yang terbuka relatif dalam subruang A.</description></image>
+  </figure>
 
   <exploration>
   <introduction>
     <p>
-      Let <m>(X, \tau)</m> be a topological space and <m>A</m> a nonempty subset of <m>X</m>.
-      It is reasonable to use the open sets in <m>X</m> to define open sets in <m>A</m>.
-      More specifically,
-      we might consider a subset <m>O_A</m> of <m>A</m> to be open in <m>A</m> if <m>O_A</m> is the intersection of <m>A</m> with some open set in <m>X</m>,
-      as illustrated in <xref ref="F_Subspace_open"/>.
-      With this in mind we define <m>\tau_A</m> as
+      Misalkan <m>(X, \tau)</m> suatu ruang topologi dan <m>A</m> suatu subhimpunan tak kosong dari <m>X</m>.
+      Masuk akal untuk menggunakan himpunan terbuka dalam <m>X</m> guna mendefinisikan himpunan terbuka dalam <m>A</m>.
+      Lebih khusus,
+      kita dapat menganggap suatu subhimpunan <m>O_A</m> dari <m>A</m> terbuka dalam <m>A</m> jika <m>O_A</m> merupakan irisan <m>A</m> dengan suatu himpunan terbuka dalam <m>X</m>,
+      seperti diilustrasikan dalam <xref ref="F_Subspace_open"/>.
+      Dengan gagasan ini, kita mendefinisikan <m>\tau_A</m> sebagai
       <me>
         \tau_A = \{O \cap A \mid O \in \tau\}
       </me>.
     </p>
 
-    <figure xml:id="F_Subspace_open">
-      <caption>A potentially open subset in a subspace.</caption>
-      <image width="50%" source="Subspace_open"/>
-    </figure>
-    
     </introduction>
     <task xml:id="act_TS_subspace">
       <statement>
         <p>
-          Show that <m>\tau_A</m> is a topology on <m>A</m>.
-          The result of item (1) is that any subset of a topological space
-          <m>(X,\tau)</m> is also a topological space with topology <m>\tau_A</m>.
+          Tunjukkan bahwa <m>\tau_A</m> merupakan topologi pada <m>A</m>.
+          Hasil di atas menunjukkan bahwa setiap subhimpunan tak kosong dari suatu ruang topologi
+          <m>(X,\tau)</m> juga merupakan ruang topologi dengan topologi <m>\tau_A</m>.
         </p>
-          <definition xml:id="def_TS_subspace">
-          <idx><h>subspace of a topological space</h></idx>
-            <statement>
-              <p>
-                Let <m>(X,\tau)</m> be a topological space.
-                A <term>subspace</term> of
-                <m>(X,\tau)</m> is a nonempty subset <m>A</m> of <m>X</m> together with the topology
-                <me>
-                  \tau_A = \{O \cap A \mid O \in \tau\}
-                </me>.
-              </p>
-            </statement>
-          </definition>
-     
       </statement>
     </task>
     <task>
       <introduction>
         <p>
-          For each of the following,
-          <m>X</m> is a topological space and <m>\tau</m> is a topology on <m>X</m>.
+          Pada setiap butir berikut,
+          <m>X</m> adalah ruang topologi dan <m>\tau</m> merupakan topologi pada <m>X</m>.
         </p>
       </introduction>
           <task>
             <statement>
               <p>
-                Let <m>X= \{a,b,c,d\}</m> and <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
-                Consider the subset <m>A=\{b,c\}</m> and list the open sets in the subspace topology <m>\tau_A</m>.
-                Now consider <m>Z = \{a,b\}</m>.
-                What is the name of the subspace topology <m>\tau_Z</m> on this subset of <m>X</m>?
+                Misalkan <m>X= \{a,b,c,d\}</m> dan <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a,b\}, X \}</m>.
+                Perhatikan subhimpunan <m>A=\{b,c\}</m> dan daftarkan himpunan terbuka dalam topologi subruang <m>\tau_A</m>.
+                Sekarang perhatikan <m>Z = \{a,b\}</m>.
+                Apa nama topologi subruang <m>\tau_Z</m> pada subhimpunan dari <m>X</m> ini?
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Consider <m>X=\R</m> with <m>\tau</m> the indiscrete topology.
-                What are the open sets in the subspace topology on <m>[1,2]</m>?
-                Now generalize to any nonempty set in the indiscrete topology.
+                Perhatikan <m>X=\R</m> dengan <m>\tau</m> topologi indiskret.
+                Apa saja himpunan terbuka dalam topologi subruang pada <m>[1,2]</m>?
+                Sekarang generalisasikan hasilnya untuk sebarang himpunan tak kosong dalam topologi indiskret.
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Let <m>X = \{a,b,c,d,e,f,g,h,i\}</m> with <m>\tau</m> the discrete topology.
-                What are the open sets in the subspace topology on <m>\{a,b,d\}</m>.
-                Now generalize to any nonempty set in the discrete topology.
+                Misalkan <m>X = \{a,b,c,d,e,f,g,h,i\}</m> dengan <m>\tau</m> topologi diskret.
+                Apa saja himpunan terbuka dalam topologi subruang pada <m>\{a,b,d\}</m>?
+                Sekarang generalisasikan hasilnya untuk sebarang himpunan tak kosong dalam topologi diskret.
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Let <m>X= \{a,b,c,d,e,f\}</m> with <m>\tau = \{\emptyset,\{a\}, \{c,d\}, \{a,c,d\}, \{b,c,d,e,f\}, X\}</m>.
-                What are the open sets in the subspace <m>A = \{a, b, e\}</m>?
-                Is every open set in <m>A</m> an open set in <m>X</m>?
-                Explain.
+                Misalkan <m>X= \{a,b,c,d,e,f\}</m> dengan <m>\tau = \{\emptyset,\{a\}, \{c,d\}, \{a,c,d\}, \{b,c,d,e,f\}, X\}</m>.
+                Apa saja himpunan terbuka dalam subruang <m>A = \{a, b, e\}</m>?
+                Apakah setiap himpunan terbuka dalam <m>A</m> juga terbuka dalam <m>X</m>?
+                Jelaskan.
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Let <m>X=\Z</m> with <m>\tau = \tau_{FC}</m> the finite complement topology.
-                What are the open sets in the subspace topology on <m>A = \{0,19, 37, 5284\}</m>?
-                Can you generalize this to the subspace topology on any finite subset of <m>\Z</m>?
+                Misalkan <m>X=\Z</m> dengan <m>\tau = \tau_{FC}</m> topologi komplemen berhingga.
+                Apa saja himpunan terbuka dalam topologi subruang pada <m>A = \{0,19, 37, 5284\}</m>?
+                Dapatkah Anda menggeneralisasikan hasil ini untuk topologi subruang pada sebarang subhimpunan berhingga dari <m>\Z</m>?
               </p>
             </statement>
           </task>
           <task>
             <statement>
               <p>
-                Let <m>X=\Z</m> with <m>\tau = \tau_{FC}</m> the finite complement topology.
-                What are the open sets in the subspace topology on the even integers?
-                Can you generalize this to the subspace topology on any infinite subset of <m>\Z</m>?
+                Misalkan <m>X=\Z</m> dengan <m>\tau = \tau_{FC}</m> topologi komplemen berhingga.
+                Apa saja himpunan terbuka dalam topologi subruang pada himpunan bilangan bulat genap?
+                Dapatkah Anda menggeneralisasikan hasil ini untuk topologi subruang pada sebarang subhimpunan tak berhingga dari <m>\Z</m>?
               </p>
             </statement>
           </task>
@@ -123,4 +109,18 @@
       </task>
     
   </exploration>
+
+  <definition xml:id="def_TS_subspace">
+    <idx><h>subruang dari ruang topologi</h></idx>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau)</m> suatu ruang topologi.
+        Suatu <term>subruang</term> dari
+        <m>(X,\tau)</m> adalah subhimpunan tak kosong <m>A</m> dari <m>X</m> yang dibekali topologi
+        <me>
+          \tau_A = \{O \cap A \mid O \in \tau\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
 </section>
