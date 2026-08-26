@@ -27,7 +27,7 @@ Chapters 1-14 HTML/PDF reader.
 
 | Path | Bytes | SHA-256 |
 |---|---:|---|
-| `companion/chapter_14_source_guides_a.ptx` | 18,206 | `00c7c6d8524a5ec9e9db834805a3422eed2b8904ea026e19b93dab38a5b2c307` |
+| `companion/chapter_14_source_guides_a.ptx` | 18,289 | `eefc238570215fa78232030cc5cb7026f83a02edfd54308f5de314382c40d0aa` |
 | `companion/chapter_14_source_guides_b.ptx` | 18,389 | `d5593e324e3dd4a087811ffc5290f64988ab8111541ba24df1c81afaeba9722f` |
 | `companion/chapter_14_source_guides_c.ptx` | 7,081 | `c4119fdba67c549309a5965805d57d193e4080405f37884131d81fcfb5ee439c` |
 | `companion/chapter_14_exercise_guides_a.ptx` | 17,806 | `ac772355a15b250b6e1a1e7223b9059dfa010a766d7d44313b349a170e0a610a` |
@@ -45,6 +45,12 @@ eight literal tab corruptions of `\tau_X` and `\tau_Y` in guides 01-04; no
 other wrong-prompt, grouping, or mathematical defect remained. A separate
 review passed all eight mastery solutions after two Indonesian copy edits.
 
+The cumulative PDF visual gate subsequently exposed physical-page clipping in
+guide 02. Its two topology definitions were changed from one overlong inline
+expression to two display equations. This is a mathematically equivalent
+layout repair: it supersedes the prior companion file and manifest hashes in
+this receipt, but does not alter the already public companion checkpoint.
+
 ## Deterministic backend and schema gates
 
 Two immediate refresh runs, one write and one read-only check, reproduced:
@@ -54,15 +60,18 @@ Two immediate refresh runs, one write and one read-only check, reproduced:
 | `backend/chapter_14_source_prompt_map.csv` | 47,375 | `377e3251cafb42f5e307cf163a0b302529250f453adf6f5962890923273b9884` |
 | `backend/chapter_14_grouping_nodes.json` | 2,984 | `d3204860900770fa814007b4e4db8e859caa0a5a479bbb54a00d56cd239d7e13` |
 | `backend/chapter_14_entry_aliases.csv` | 23,073 | `84996bf9180ad0dac064ebe3d12f75c97445f2565ff1f603c759cc3f97656d5e` |
-| `backend/chapter_14_companion_manifest.json` | 159,465 | `c1ee9cbdd35df611da2857d681d1cb2dde0217e027c2f3ba7898433acab911cd` |
-| `qa/CHAPTER14_COMPANION_QA.json` | 4,547 | `5842feebaa5e819b8843d8368c3a4d8c50c440a9418bb51650edae37622cef49` |
+| `backend/chapter_14_companion_manifest.json` | 159,465 | `3520fb2096b959236229dce4512e1ad749cad945fd54d0bea92c50afee0f0300` |
+| `qa/CHAPTER14_COMPANION_QA.json` | 4,547 | `26137f716d00fb44afadbc4c2e7f181bb1cc521a3bac801f68722926ac1dee1f` |
 
 Pinned PreTeXt 1.7.5 RelaxNG validation reports zero diagnostics for the
 mastery file, complete companion wrapper, and cumulative Chapters 1-14
-wrapper. Their receipts have SHA-256 values
-`9708d74673e4c1b6179656f2f3ed07c4a235cbee871e63d8b209fafe82beef8a`,
-`c574f10d3b2a0c0360e3f13d0e4b83d26aae5ba9806e682cea49e0e6df600389`,
-and `45303693f982c12c9196e8942eb2fd7cb221a7788e1cc5bb653fbe9012eee19a`.
+wrapper. The exact schema-receipt identities are:
+
+| Receipt | Bytes | SHA-256 |
+|---|---:|---|
+| `qa/CHAPTER14_COMPANION_WRAPPER_SCHEMA_QA.json` | 1,339 | `c574f10d3b2a0c0360e3f13d0e4b83d26aae5ba9806e682cea49e0e6df600389` |
+| `qa/CHAPTER14_MASTERY_SCHEMA_QA.json` | 776 | `9708d74673e4c1b6179656f2f3ed07c4a235cbee871e63d8b209fafe82beef8a` |
+| `qa/CHAPTER14_CUMULATIVE_SCHEMA_QA.json` | 8,741 | `45303693f982c12c9196e8942eb2fd7cb221a7788e1cc5bb653fbe9012eee19a` |
 
 The translated GVSU source remains conservatively CC BY-NC-SA 3.0. The
 independently authored companion remains a separately identified CC BY 4.0

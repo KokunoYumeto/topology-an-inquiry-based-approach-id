@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch13-edition-note",
+  "id": "o003-c90-ch14-edition-note",
   "level": "1",
-  "url": "o003-c90-ch13-edition-note.html",
+  "url": "o003-c90-ch14-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat tiga belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat empat belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
 },
 {
   "id": "sec_sets_intro",
@@ -4346,6 +4346,429 @@ var ptx_lunr_docs = [
   "number": "20",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Setiap titik limit dari suatu subhimpunan dari ruang topologi juga merupakan titik batas dari .   Setiap titik batas dari suatu subhimpunan dari ruang topologi juga merupakan titik limit dari .   Jika suatu ruang topologi dan sedemikian sehingga , maka terbuka sekaligus tertutup.   Jika suatu ruang topologi dan serta merupakan subhimpunan dari dengan dan , maka .   Jika dan merupakan subhimpunan dari ruang topologi , maka .   Jika dan merupakan subhimpunan dari ruang topologi , maka .  "
+},
+{
+  "id": "sec_cont_top_intro",
+  "level": "1",
+  "url": "sec_cont_top_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pengantar",
+  "body": " Pengantar  Ingatlah bahwa kita dapat mencirikan suatu fungsi dari ruang metrik ke ruang metrik sebagai kontinu di jika merupakan lingkungan bagi dalam setiap kali merupakan lingkungan bagi dalam . Kita telah mendefinisikan lingkungan dalam ruang topologi, sehingga pencirian ini dapat kita gunakan sebagai definisi fungsi kontinu dari satu ruang topologi ke ruang topologi lain.   kekontinuan dalam ruang topologi   Suatu fungsi dari ruang topologi ke ruang topologi  kontinu di suatu titik  jika merupakan lingkungan bagi dalam setiap kali merupakan lingkungan bagi dalam . Fungsi kontinu jika  kontinu di setiap titik dalam .    Kita telah melihat bahwa dalam ruang metrik, kekontinuan dapat dicirikan secara berguna dalam kaitannya dengan himpunan terbuka. Tidak mengherankan bahwa pencirian yang sama berlaku dalam ruang topologi. Untuk aktivitas ini, Anda boleh mengasumsikan hasil (versi ruang topologi dari untuk ruang metrik).    Misalkan suatu fungsi dari ruang topologi ke ruang topologi . Maka kontinu jika dan hanya jika merupakan himpunan terbuka dalam setiap kali merupakan himpunan terbuka dalam .      Misalkan dan misalkan . Definisikan dengan .   Apakah kontinu di ?   Apakah suatu fungsi kontinu?    Misalkan dan misalkan . Definisikan dengan , , .   Tunjukkan bahwa merupakan fungsi kontinu.   Meskipun kontinu, himpunan belum tentu terbuka ketika himpunan asal dipilih sebagai himpunan terbuka dalam . Temukan contoh demikian untuk fungsi ini.    Fungsi yang memiliki sifat bahwa terbuka setiap kali terbuka dalam disebut pemetaan terbuka .  Terdapat definisi serupa bagi pemetaan tertutup .    Misalkan dan . Definisikan dengan . Di titik mana saja kontinu? Apakah suatu fungsi kontinu?    Misalkan , dengan dan merupakan topologi komplemen berhingga. Apakah suatu fungsi kontinu? Jika tidak kontinu, berikan satu titik tertentu tempat tidak kontinu. Jelaskan.    Misalkan , dengan dan merupakan topologi komplemen berhingga. Apakah suatu fungsi kontinu? Jika tidak kontinu, berikan satu titik tertentu tempat tidak kontinu. Jelaskan.    Kadang-kadang lebih mudah menunjukkan bahwa suatu fungsi yang memetakan ruang topologi ke ruang topologi kontinu dengan menggunakan suatu basis alih-alih semua himpunan terbuka. Misalkan suatu basis untuk topologi pada . Apakah benar bahwa jika terbuka untuk setiap , maka kontinu? Buktikan hasil Anda.     fungsi terbuka  pemetaan terbuka   Misalkan suatu fungsi dari ruang topologi ke ruang topologi . Maka merupakan pemetaan terbuka jika terbuka dalam setiap kali terbuka dalam .    Untuk melengkapi pengantar bagian ini, kita membuktikan . Kita membuktikan satu arah sekarang dan membiarkan Anda membuktikan arah lainnya dalam aktivitas berikut.  Misalkan suatu fungsi dari ruang topologi ke ruang topologi . Pertama, asumsikan bahwa kontinu dan tunjukkan bahwa merupakan himpunan terbuka dalam setiap kali merupakan himpunan terbuka dalam . Misalkan suatu himpunan terbuka dalam . Untuk menunjukkan bahwa terbuka dalam , kita akan menunjukkan bahwa merupakan lingkungan bagi setiap titiknya. Misalkan . Maka . Karena merupakan himpunan terbuka, merupakan lingkungan bagi . Kekontinuan berarti bahwa merupakan lingkungan bagi . Jadi, merupakan lingkungan bagi setiap titiknya dan merupakan himpunan terbuka.    Sekarang kita membuktikan implikasi yang tersisa dalam . Artinya, misalkan suatu fungsi dari ruang topologi ke ruang topologi , dan asumsikan bahwa terbuka setiap kali terbuka dalam . Kita akan membuktikan bahwa merupakan fungsi kontinu.    Menurut definisi, apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan fungsi kontinu?    Misalkan dan andaikan suatu lingkungan bagi dalam . Apa yang dapat kita simpulkan dari fakta bahwa merupakan lingkungan?    Gunakan asumsi mengenai dalam aktivitas ini untuk menjelaskan mengapa merupakan lingkungan bagi dalam .    Jelaskan bagaimana kita telah menunjukkan bahwa merupakan fungsi kontinu.    Teorema berikut merupakan analog topologis dari . Pembuktiannya diserahkan kepada .    Misalkan suatu fungsi dari ruang topologi ke ruang topologi . Maka kontinu jika dan hanya jika tertutup dalam setiap kali merupakan himpunan tertutup dalam .    "
+},
+{
+  "id": "def_Continuity_topology",
+  "level": "2",
+  "url": "sec_cont_top_intro.html#def_Continuity_topology",
+  "type": "Definisi",
+  "number": "14.1",
+  "title": "",
+  "body": " kekontinuan dalam ruang topologi   Suatu fungsi dari ruang topologi ke ruang topologi  kontinu di suatu titik  jika merupakan lingkungan bagi dalam setiap kali merupakan lingkungan bagi dalam . Fungsi kontinu jika  kontinu di setiap titik dalam .   "
+},
+{
+  "id": "thm_PA_TS_Open_continuity",
+  "level": "2",
+  "url": "sec_cont_top_intro.html#thm_PA_TS_Open_continuity",
+  "type": "Teorema",
+  "number": "14.2",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang topologi ke ruang topologi . Maka kontinu jika dan hanya jika merupakan himpunan terbuka dalam setiap kali merupakan himpunan terbuka dalam .   "
+},
+{
+  "id": "exploration-14",
+  "level": "2",
+  "url": "sec_cont_top_intro.html#exploration-14",
+  "type": "Aktivitas Persiapan",
+  "number": "14.1",
+  "title": "",
+  "body": "  Misalkan dan misalkan . Definisikan dengan .   Apakah kontinu di ?   Apakah suatu fungsi kontinu?    Misalkan dan misalkan . Definisikan dengan , , .   Tunjukkan bahwa merupakan fungsi kontinu.   Meskipun kontinu, himpunan belum tentu terbuka ketika himpunan asal dipilih sebagai himpunan terbuka dalam . Temukan contoh demikian untuk fungsi ini.    Fungsi yang memiliki sifat bahwa terbuka setiap kali terbuka dalam disebut pemetaan terbuka .  Terdapat definisi serupa bagi pemetaan tertutup .    Misalkan dan . Definisikan dengan . Di titik mana saja kontinu? Apakah suatu fungsi kontinu?    Misalkan , dengan dan merupakan topologi komplemen berhingga. Apakah suatu fungsi kontinu? Jika tidak kontinu, berikan satu titik tertentu tempat tidak kontinu. Jelaskan.    Misalkan , dengan dan merupakan topologi komplemen berhingga. Apakah suatu fungsi kontinu? Jika tidak kontinu, berikan satu titik tertentu tempat tidak kontinu. Jelaskan.    Kadang-kadang lebih mudah menunjukkan bahwa suatu fungsi yang memetakan ruang topologi ke ruang topologi kontinu dengan menggunakan suatu basis alih-alih semua himpunan terbuka. Misalkan suatu basis untuk topologi pada . Apakah benar bahwa jika terbuka untuk setiap , maka kontinu? Buktikan hasil Anda.   "
+},
+{
+  "id": "definition-53",
+  "level": "2",
+  "url": "sec_cont_top_intro.html#definition-53",
+  "type": "Definisi",
+  "number": "14.3",
+  "title": "",
+  "body": " fungsi terbuka  pemetaan terbuka   Misalkan suatu fungsi dari ruang topologi ke ruang topologi . Maka merupakan pemetaan terbuka jika terbuka dalam setiap kali terbuka dalam .   "
+},
+{
+  "id": "activity-70",
+  "level": "2",
+  "url": "sec_cont_top_intro.html#activity-70",
+  "type": "Kegiatan",
+  "number": "14.2",
+  "title": "",
+  "body": "  Sekarang kita membuktikan implikasi yang tersisa dalam . Artinya, misalkan suatu fungsi dari ruang topologi ke ruang topologi , dan asumsikan bahwa terbuka setiap kali terbuka dalam . Kita akan membuktikan bahwa merupakan fungsi kontinu.    Menurut definisi, apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan fungsi kontinu?    Misalkan dan andaikan suatu lingkungan bagi dalam . Apa yang dapat kita simpulkan dari fakta bahwa merupakan lingkungan?    Gunakan asumsi mengenai dalam aktivitas ini untuk menjelaskan mengapa merupakan lingkungan bagi dalam .    Jelaskan bagaimana kita telah menunjukkan bahwa merupakan fungsi kontinu.   "
+},
+{
+  "id": "thm_closed_sets_continuity_TS",
+  "level": "2",
+  "url": "sec_cont_top_intro.html#thm_closed_sets_continuity_TS",
+  "type": "Teorema",
+  "number": "14.4",
+  "title": "",
+  "body": "  Misalkan suatu fungsi dari ruang topologi ke ruang topologi . Maka kontinu jika dan hanya jika tertutup dalam setiap kali merupakan himpunan tertutup dalam .   "
+},
+{
+  "id": "sec_metric_equiv",
+  "level": "1",
+  "url": "sec_metric_equiv.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ekuivalensi Metrik",
+  "body": " Ekuivalensi Metrik  Kita telah melihat bahwa sebuah himpunan dapat dijadikan ruang metrik dengan berbagai metrik. Sebagai contoh, ruang-ruang , , , dan semuanya merupakan ruang metrik, dengan sebagai metrik Euklides, sebagai metrik taksi, sebagai metrik maksimum, dan sebagai metrik diskret. Namun, apakah ruang-ruang metrik ini benar-benar merupakan ruang metrik yang berbeda ? Apa yang kita maksud dengan berbeda ?    Kita dapat menganggap dua ruang metrik dan ekuivalen jika terdapat bijeksi antara kedua himpunan dan yang mempertahankan sifat-sifat metriknya. Artinya, kita mencari suatu fungsi bijektif sedemikian sehingga untuk semua . Dengan kata lain, mempertahankan jarak.    Misalkan dan , dengan dan keduanya merupakan metrik Euklides. Apakah mungkin menemukan suatu bijeksi yang mempertahankan sifat-sifat metrik? Jelaskan.    Sekarang misalkan dan , dengan didefinisikan oleh dan . Anda boleh mengasumsikan bahwa merupakan suatu metrik. Apakah mungkin menemukan suatu bijeksi yang mempertahankan sifat-sifat metrik? Jelaskan.    Jika terdapat bijeksi antara dua ruang metrik yang mempertahankan jarak, kita mengatakan bahwa kedua ruang metrik tersebut ekuivalen secara metrik .   ekuivalen secara metrik   Dua ruang metrik dan  ekuivalen secara metrik jika terdapat bijeksi sedemikian sehingga untuk semua .    Karena merupakan bijeksi, dalam juga berlaku bahwa untuk semua dan dalam . Pembuktiannya diserahkan kepada .  Setiap fungsi bijektif yang mempertahankan jarak (seperti fungsi dalam ) disebut suatu isometri .   isometri   Suatu fungsi dari ruang metrik ke ruang metrik merupakan isometri jika bijektif dan untuk semua .    Ekuivalensi metrik merupakan jenis ekuivalensi yang sangat kuat keberadaan suatu isometri tidak memberi banyak keluwesan karena jarak harus dipertahankan. Dari sudut pandang topologi, kita hanya memperhatikan himpunan-himpunan terbuka tidak ada jarak. Bola satuan terbuka dalam dan bola satuan terbuka dalam (dengan sebagai metrik Euklides dan sebagai metrik maksimum) tidak terlalu berbeda, sebagaimana dapat kita lihat dalam . Jika kita tidak perlu mempertahankan jarak, kita dapat meregangkan bola terbuka dalam secara seragam sepanjang garis dan sehingga bentuknya menjadi bola satuan dalam . Hal yang penting ialah peregangan ini mempertahankan himpunan-himpunan terbuka. Jenis ekuivalensi ini jauh lebih luwes dan mempertahankan gagasan utama topologi yang telah kita bahas sifat-sifat ruang apa yang tidak berubah ketika ruang tersebut diregangkan dan dilengkungkan. Jenis ekuivalensi yang memungkinkan kita memanipulasi suatu ruang tanpa mengubah himpunan-himpunan terbukanya secara mendasar disebut ekuivalensi topologis .   Bola-bola satuan terbuka dalam dan .  Dua bidang koordinat berdampingan. Di kiri, bola satuan terbuka dalam (ℝ², d_E) berupa cakram biru muda berpusat di titik asal dengan batas lingkaran biru putus-putus. Di kanan, bola satuan terbuka dalam (ℝ², d_M) berupa persegi biru muda berpusat di titik asal, dengan sisi x = ±1 dan y = ±1 serta batas biru putus-putus. Garis putus-putus menandai bahwa batas tidak termasuk.   "
+},
+{
+  "id": "activity-71",
+  "level": "2",
+  "url": "sec_metric_equiv.html#activity-71",
+  "type": "Kegiatan",
+  "number": "14.3",
+  "title": "",
+  "body": "  Kita dapat menganggap dua ruang metrik dan ekuivalen jika terdapat bijeksi antara kedua himpunan dan yang mempertahankan sifat-sifat metriknya. Artinya, kita mencari suatu fungsi bijektif sedemikian sehingga untuk semua . Dengan kata lain, mempertahankan jarak.    Misalkan dan , dengan dan keduanya merupakan metrik Euklides. Apakah mungkin menemukan suatu bijeksi yang mempertahankan sifat-sifat metrik? Jelaskan.    Sekarang misalkan dan , dengan didefinisikan oleh dan . Anda boleh mengasumsikan bahwa merupakan suatu metrik. Apakah mungkin menemukan suatu bijeksi yang mempertahankan sifat-sifat metrik? Jelaskan.   "
+},
+{
+  "id": "p-1726",
+  "level": "2",
+  "url": "sec_metric_equiv.html#p-1726",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ekuivalen secara metrik "
+},
+{
+  "id": "def_MS_metric_equivalence",
+  "level": "2",
+  "url": "sec_metric_equiv.html#def_MS_metric_equivalence",
+  "type": "Definisi",
+  "number": "14.5",
+  "title": "",
+  "body": " ekuivalen secara metrik   Dua ruang metrik dan  ekuivalen secara metrik jika terdapat bijeksi sedemikian sehingga untuk semua .   "
+},
+{
+  "id": "p-1729",
+  "level": "2",
+  "url": "sec_metric_equiv.html#p-1729",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "isometri "
+},
+{
+  "id": "definition-55",
+  "level": "2",
+  "url": "sec_metric_equiv.html#definition-55",
+  "type": "Definisi",
+  "number": "14.6",
+  "title": "",
+  "body": " isometri   Suatu fungsi dari ruang metrik ke ruang metrik merupakan isometri jika bijektif dan untuk semua .   "
+},
+{
+  "id": "p-1731",
+  "level": "2",
+  "url": "sec_metric_equiv.html#p-1731",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ekuivalensi topologis "
+},
+{
+  "id": "F_Equivalence",
+  "level": "2",
+  "url": "sec_metric_equiv.html#F_Equivalence",
+  "type": "Gambar",
+  "number": "14.7",
+  "title": "",
+  "body": " Bola-bola satuan terbuka dalam dan .  Dua bidang koordinat berdampingan. Di kiri, bola satuan terbuka dalam (ℝ², d_E) berupa cakram biru muda berpusat di titik asal dengan batas lingkaran biru putus-putus. Di kanan, bola satuan terbuka dalam (ℝ², d_M) berupa persegi biru muda berpusat di titik asal, dengan sisi x = ±1 dan y = ±1 serta batas biru putus-putus. Garis putus-putus menandai bahwa batas tidak termasuk.  "
+},
+{
+  "id": "sec_top_equiv",
+  "level": "1",
+  "url": "sec_top_equiv.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ekuivalensi Topologis",
+  "body": " Ekuivalensi Topologis  Apabila kita dapat mendeformasi suatu himpunan menjadi himpunan lain tanpa melubanginya, kita memandang kedua himpunan tersebut ekuivalen dari sudut pandang topologi. Deformasi itu harus bijektif agar kedua himpunan memiliki jumlah elemen yang sama, kontinu agar prapeta himpunan terbuka tetap terbuka, dan juga harus kontinu agar citra himpunan terbuka tetap terbuka. Fungsi seperti itu memberikan korespondensi satu-satu antara himpunan-himpunan terbuka dalam kedua ruang. Hal ini membawa kita pada definisi berikut.   ekuivalen secara topologis   Dua ruang topologi dan  ekuivalen secara topologis jika terdapat bijeksi kontinu sedemikian sehingga juga kontinu.    Ekuivalensi metrik selalu mengakibatkan ekuivalensi topologis (dengan menggunakan topologi yang diinduksi oleh metrik), dan pembuktiannya diserahkan kepada . Jadi, ekuivalensi metrik merupakan syarat yang lebih kuat daripada ekuivalensi topologis.  Fungsi (atau ) dalam disebut homeomorfisme .   homeomorfisme   Misalkan dan merupakan ruang topologi. Suatu fungsi merupakan homeomorfisme jika adalah bijeksi kontinu dan juga kontinu.     ruang-ruang homeomorfik Jika terdapat homeomorfisme dari ke , kita mengatakan bahwa ruang dan merupakan ruang topologi yang homeomorfik .  Menunjukkan secara langsung bahwa dua ruang metrik homeomorfik dapat menjadi sulit, tetapi terdapat syarat cukup yang lebih mudah diperiksa dalam ruang metrik. Jika merupakan homeomorfisme dari ruang metrik ke ruang metrik , sifat homeomorfisme mempertahankan struktur topologis dari ke , tetapi tidak dengan sendirinya menjamin kehalusan ataupun batas global pada distorsi jarak hal itu memerlukan syarat tambahan yang lebih kuat. Kita dapat meminta agar distorsi jarak dibatasi dalam kedua arah. Salah satu batas tersebut berbentuk: terdapat konstanta sedemikian sehingga untuk setiap . Teorema berikut menyatakan bahwa batas dua arah seperti ini merupakan syarat cukup bagi ekuivalensi topologis ketika kita bekerja pada himpunan dasar yang sama.    Misalkan suatu himpunan yang dilengkapi dengan dua metrik dan . Jika terdapat konstanta positif dan sedemikian sehingga untuk semua , maka ekuivalen secara topologis dengan .    Misalkan suatu himpunan yang dilengkapi dengan dua metrik dan . Andaikan terdapat konstanta positif dan sedemikian sehingga untuk semua . Misalkan merupakan pemetaan identitas. Artinya, untuk semua . Kita akan membuktikan bahwa merupakan homeomorfisme. Kita tahu bahwa adalah bijeksi, sehingga kita hanya perlu memverifikasi bahwa dan kontinu. Ambil dan . Pilih . Andaikan sedemikian sehingga . Maka .  Jadi, kontinu. Argumen yang sama menunjukkan bahwa juga kontinu. Oleh karena itu, merupakan homeomorfisme antara dan .      Apakah dan ekuivalen secara topologis? Jelaskan.    Apakah dan ekuivalen secara topologis? Jelaskan.    Apakah Anda menduga bahwa dan ekuivalen secara topologis? Jelaskan tanpa melakukan perhitungan ataupun perbandingan.    "
+},
+{
+  "id": "def_MS_topological_equivalence",
+  "level": "2",
+  "url": "sec_top_equiv.html#def_MS_topological_equivalence",
+  "type": "Definisi",
+  "number": "14.8",
+  "title": "",
+  "body": " ekuivalen secara topologis   Dua ruang topologi dan  ekuivalen secara topologis jika terdapat bijeksi kontinu sedemikian sehingga juga kontinu.   "
+},
+{
+  "id": "p-1735",
+  "level": "2",
+  "url": "sec_top_equiv.html#p-1735",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "homeomorfisme "
+},
+{
+  "id": "def_Homeomorphism",
+  "level": "2",
+  "url": "sec_top_equiv.html#def_Homeomorphism",
+  "type": "Definisi",
+  "number": "14.9",
+  "title": "",
+  "body": " homeomorfisme   Misalkan dan merupakan ruang topologi. Suatu fungsi merupakan homeomorfisme jika adalah bijeksi kontinu dan juga kontinu.   "
+},
+{
+  "id": "p-1737",
+  "level": "2",
+  "url": "sec_top_equiv.html#p-1737",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "homeomorfik "
+},
+{
+  "id": "theorem-44",
+  "level": "2",
+  "url": "sec_top_equiv.html#theorem-44",
+  "type": "Teorema",
+  "number": "14.10",
+  "title": "",
+  "body": "  Misalkan suatu himpunan yang dilengkapi dengan dua metrik dan . Jika terdapat konstanta positif dan sedemikian sehingga untuk semua , maka ekuivalen secara topologis dengan .    Misalkan suatu himpunan yang dilengkapi dengan dua metrik dan . Andaikan terdapat konstanta positif dan sedemikian sehingga untuk semua . Misalkan merupakan pemetaan identitas. Artinya, untuk semua . Kita akan membuktikan bahwa merupakan homeomorfisme. Kita tahu bahwa adalah bijeksi, sehingga kita hanya perlu memverifikasi bahwa dan kontinu. Ambil dan . Pilih . Andaikan sedemikian sehingga . Maka .  Jadi, kontinu. Argumen yang sama menunjukkan bahwa juga kontinu. Oleh karena itu, merupakan homeomorfisme antara dan .   "
+},
+{
+  "id": "activity-72",
+  "level": "2",
+  "url": "sec_top_equiv.html#activity-72",
+  "type": "Kegiatan",
+  "number": "14.4",
+  "title": "",
+  "body": "  Apakah dan ekuivalen secara topologis? Jelaskan.    Apakah dan ekuivalen secara topologis? Jelaskan.    Apakah Anda menduga bahwa dan ekuivalen secara topologis? Jelaskan tanpa melakukan perhitungan ataupun perbandingan.   "
+},
+{
+  "id": "sec_relations",
+  "level": "1",
+  "url": "sec_relations.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Relasi",
+  "body": " Relasi  Kita menggunakan kata ekuivalen secara sengaja ketika membahas ekuivalensi metrik atau topologis. Ingat bahwa ekuivalensi merupakan istilah yang digunakan untuk relasi, dan bahwa relasi merupakan cara membandingkan dua elemen dari suatu himpunan. Kita mengenal banyak relasi pada himpunan, misalnya , , dan pada bilangan bulat.   relasi   Suatu relasi pada himpunan adalah subhimpunan dari .    Sebagai contoh, subhimpunan dari adalah relasi yang kita sebut relasi kesamaan. Jika merupakan relasi pada himpunan , biasanya kita menghilangkan notasi himpunannya dan menulis jika , lalu mengatakan bahwa berelasi dengan . Dalam hal ini, kita sering menyebut sebagai relasinya, bukan himpunan . Kadang-kadang kita menggunakan simbol yang sudah dikenal untuk relasi khusus. Sebagai contoh, kita menulis jika .  Dalam membahas relasi, ada tiga sifat khusus yang kita pertimbangkan.   Suatu relasi pada himpunan bersifat refleksif jika untuk semua .    Suatu relasi pada himpunan bersifat simetris jika, untuk setiap pilihan elemen a dan b, berlaku dengan a dan b berada dalam , maka kita juga memperoleh .    Suatu relasi pada himpunan bersifat transitif jika, untuk setiap pilihan elemen a, b, dan c, berlaku dan dengan a, b, dan c berada dalam , maka kita juga memperoleh .     Ketika kita menggunakan kata ekuivalensi , yang dimaksud adalah suatu relasi ekuivalensi.   relasi ekuivalensi   Suatu relasi ekuivalensi adalah relasi pada suatu himpunan yang refleksif, simetris, dan transitif.      Jelaskan mengapa ekuivalensi metrik merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang metrik.    Jelaskan mengapa ekuivalensi topologis merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang topologi.    Relasi ekuivalensi penting karena relasi ekuivalensi pada suatu himpunan mempartisi himpunan tersebut menjadi gabungan saling lepas dari kelas-kelas ekuivalensi. Karena ekuivalensi topologis merupakan relasi ekuivalensi, kita dapat memperlakukan ruang-ruang yang ekuivalen secara topologis satu sama lain sebagai ruang yang pada dasarnya sama dari sudut pandang topologi. Berdasarkan relasi homeomorfisme, kelas-kelas ekuivalensi tersebut disebut kelas homeomorfisme .  "
+},
+{
+  "id": "definition-58",
+  "level": "2",
+  "url": "sec_relations.html#definition-58",
+  "type": "Definisi",
+  "number": "14.11",
+  "title": "",
+  "body": " relasi   Suatu relasi pada himpunan adalah subhimpunan dari .   "
+},
+{
+  "id": "p-1748",
+  "level": "2",
+  "url": "sec_relations.html#p-1748",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "refleksif simetris transitif "
+},
+{
+  "id": "definition-59",
+  "level": "2",
+  "url": "sec_relations.html#definition-59",
+  "type": "Definisi",
+  "number": "14.12",
+  "title": "",
+  "body": " relasi ekuivalensi   Suatu relasi ekuivalensi adalah relasi pada suatu himpunan yang refleksif, simetris, dan transitif.   "
+},
+{
+  "id": "activity-73",
+  "level": "2",
+  "url": "sec_relations.html#activity-73",
+  "type": "Kegiatan",
+  "number": "14.5",
+  "title": "",
+  "body": "  Jelaskan mengapa ekuivalensi metrik merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang metrik.    Jelaskan mengapa ekuivalensi topologis merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang topologi.   "
+},
+{
+  "id": "p-1756",
+  "level": "2",
+  "url": "sec_relations.html#p-1756",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "homeomorfisme "
+},
+{
+  "id": "sec_top_invar",
+  "level": "1",
+  "url": "sec_top_invar.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Invarian Topologis",
+  "body": " Invarian Topologis  Ruang topologi yang homeomorfik pada dasarnya sama dari sudut pandang topologi, dan memiliki banyak sifat yang sama, meskipun tidak semuanya. Sifat-sifat yang sama tersebut disebut invarian topologis atau sifat topologis .   sifat topologis  invarian topologis   Suatu sifat dari ruang topologi merupakan sifat topologis (atau invarian topologis ) jika setiap ruang topologi yang homeomorfik dengan memiliki sifat yang sama.      Manakah dari sifat-sifat berikut yang merupakan invarian topologis? Artinya, untuk ruang topologi dan , jika dan merupakan dua ruang yang homeomorfik dan memiliki sifat tersebut, apakah juga harus memiliki sifat tersebut?     memiliki topologi indiskret     memiliki topologi diskret     memiliki topologi komplemen hingga     memuat bilangan 2     memuat tepat 13 elemen    "
+},
+{
+  "id": "p-1757",
+  "level": "2",
+  "url": "sec_top_invar.html#p-1757",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "invarian topologis sifat topologis "
+},
+{
+  "id": "definition-60",
+  "level": "2",
+  "url": "sec_top_invar.html#definition-60",
+  "type": "Definisi",
+  "number": "14.13",
+  "title": "",
+  "body": " sifat topologis  invarian topologis   Suatu sifat dari ruang topologi merupakan sifat topologis (atau invarian topologis ) jika setiap ruang topologi yang homeomorfik dengan memiliki sifat yang sama.   "
+},
+{
+  "id": "activity-74",
+  "level": "2",
+  "url": "sec_top_invar.html#activity-74",
+  "type": "Kegiatan",
+  "number": "14.6",
+  "title": "",
+  "body": "  Manakah dari sifat-sifat berikut yang merupakan invarian topologis? Artinya, untuk ruang topologi dan , jika dan merupakan dua ruang yang homeomorfik dan memiliki sifat tersebut, apakah juga harus memiliki sifat tersebut?     memiliki topologi indiskret     memiliki topologi diskret     memiliki topologi komplemen hingga     memuat bilangan 2     memuat tepat 13 elemen   "
+},
+{
+  "id": "sec_cont_top_summ",
+  "level": "1",
+  "url": "sec_cont_top_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan penting yang kita bahas dalam bagian ini meliputi hal-hal berikut.   Suatu fungsi dari ruang topologi ke ruang topologi bersifat kontinu jika merupakan himpunan terbuka dalam setiap kali merupakan himpunan terbuka dalam .    Dua ruang metrik dan ekuivalen secara metrik jika terdapat bijeksi sedemikian sehingga untuk semua dan . Artinya, dan ekuivalen secara metrik jika terdapat isometri dari ke sedemikian sehingga juga merupakan isometri. Ekuivalensi topologis merupakan syarat yang lebih lemah. Dua ruang topologi dan ekuivalen secara topologis jika terdapat fungsi kontinu dari ke sedemikian sehingga juga kontinu. Dengan kata lain, dan ekuivalen secara topologis jika terdapat homeomorfisme antara dan .    Homeomorfisme antara ruang topologi dan adalah fungsi kontinu dari ke sedemikian sehingga juga kontinu. Dua ruang topologi dan homeomorfik jika terdapat homeomorfisme .    Invarian topologis adalah sifat apa pun yang dimiliki ruang topologi dan juga harus dimiliki oleh setiap ruang topologi yang homeomorfik dengan . Kadang-kadang kita dapat menggunakan invarian topologis untuk menentukan bahwa dua ruang topologi tidak homeomorfik.     "
+},
+{
+  "id": "sec_cont_top_exer",
+  "level": "1",
+  "url": "sec_cont_top_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik, dan misalkan suatu bijeksi sedemikian sehingga untuk semua . Buktikan bahwa untuk semua dan dalam .    Misalkan dan merupakan ruang topologi, dan misalkan suatu homeomorfisme. Misalkan suatu himpunan bagian dari .   Jika merupakan titik limit dari , apakah harus merupakan titik limit dari ? Buktikan jawaban Anda.   Jika merupakan titik interior dari , apakah harus merupakan titik interior dari ? Buktikan jawaban Anda.   Jika merupakan titik batas dari , apakah harus merupakan titik batas dari ? Buktikan jawaban Anda.    Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik. Tunjukkan bahwa dan ekuivalen secara topologis jika menggunakan topologi metriknya.    Buktikan bahwa jika dan merupakan ruang topologi, dan suatu fungsi, maka kontinu jika dan hanya jika merupakan himpunan tertutup dalam setiap kali merupakan himpunan tertutup dalam .    Misalkan , , dan merupakan ruang topologi.   Misalkan dan merupakan fungsi kontinu. Buktikan bahwa merupakan fungsi kontinu.    mungkin berguna di sini.   Misalkan suatu homeomorfisme. Misalkan suatu fungsi dari ke dan misalkan suatu fungsi dari ke .   Buktikan bahwa kontinu jika dan hanya jika kontinu.   Buktikan bahwa kontinu jika dan hanya jika kontinu.    Misalkan dengan topologi .   Temukan fungsi yang kontinu tepat di satu titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.   Temukan fungsi yang kontinu tepat di dua titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.   Temukan fungsi yang kontinu tepat di tiga titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.    Pertimbangkan dan yang dilengkapi topologi Euklides. Misalkan suatu fungsi dan misalkan merupakan grafik dari . Perhatikan bahwa merupakan subruang dari dan menjadi ruang topologi dengan topologi subruang.   Tunjukkan bahwa jika merupakan fungsi kontinu, maka homeomorfik dengan .   Jika syarat bahwa kontinu dihilangkan, apakah tetap berlaku bahwa homeomorfik dengan ? Buktikan konjektur Anda.    Misalkan suatu himpunan tak kosong dan suatu elemen tetap dalam . Misalkan merupakan topologi titik tertentu dan merupakan topologi titik yang dikecualikan pada . Artinya,    merupakan koleksi himpunan bagian dari yang terdiri atas , , dan semua himpunan bagian dari yang memuat .     merupakan koleksi himpunan bagian dari yang terdiri atas , , dan semua himpunan bagian dari yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan dan .   Misalkan suatu titik tetap dalam . Apakah fungsi identitas yang didefinisikan oleh untuk semua merupakan homeomorfisme dari ke ? Buktikan jawaban Anda.   Apakah homeomorfik dengan ketika titik khususnya ? Buktikan jawaban Anda.    Ruang topologi  tertanam dalam ruang topologi jika terdapat homeomorfisme dari ke suatu subruang dari . Homeomorfisme tersebut disebut suatu pembenaman .   Tunjukkan bahwa jika merupakan interval terbuka dengan topologi metrik Euklides, maka dapat ditanamkan dalam ruang topologi dengan topologi metrik Euklides.   Tunjukkan bahwa terdapat ruang topologi dan yang tidak homeomorfik, tetapi dapat ditanamkan dalam dan dapat ditanamkan dalam .    Misalkan suatu himpunan dengan dua elemen.   Temukan semua topologi yang berbeda pada . Jelaskan pula bagaimana Anda tahu bahwa semua topologi telah teridentifikasi.   Tentukan kelas-kelas homeomorfisme yang berbeda dari ruang topologi pada himpunan dua elemen. Berikan justifikasi atas jawaban Anda.    Misalkan . Terdapat 29 topologi berbeda pada , yang ditunjukkan di bawah. Tentukan banyaknya kelas homeomorfisme yang berbeda untuk 29 topologi ini dan identifikasi elemen-elemen setiap kelas homeomorfisme. Berikan justifikasi untuk jawaban Anda.                                                                                                                   topologi diskret    Tunjukkan bahwa sifat merupakan sifat topologis untuk setiap . (Lihat untuk definisi aksioma pemisahan.)    Untuk setiap pernyataan berikut, jawab benar jika pernyataan tersebut selalu benar. Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar, jawab salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan fungsi kontinu antara ruang topologi dan , maka untuk setiap himpunan bagian terbuka dari , terbuka dalam .   Jika merupakan topologi komplemen hingga, maka yang memetakan ke bersifat kontinu.   Jika merupakan fungsi bijektif antara ruang topologi dan , dan untuk setiap himpunan bagian terbuka dari , terbuka dalam , maka merupakan homeomorfisme.   Jika dan merupakan ruang topologi dengan topologi diskret, dan jika merupakan bijeksi, maka ruang dan homeomorfik.   Misalkan suatu himpunan dan serta merupakan relasi ekuivalensi pada . Maka juga merupakan relasi ekuivalensi pada .   Misalkan suatu himpunan dan serta merupakan relasi ekuivalensi pada . Maka juga merupakan relasi ekuivalensi pada .   "
+},
+{
+  "id": "ex_isometry_reverse",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#ex_isometry_reverse",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik, dan misalkan suatu bijeksi sedemikian sehingga untuk semua . Buktikan bahwa untuk semua dan dalam .  "
+},
+{
+  "id": "exercise-160",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-160",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan dan merupakan ruang topologi, dan misalkan suatu homeomorfisme. Misalkan suatu himpunan bagian dari .   Jika merupakan titik limit dari , apakah harus merupakan titik limit dari ? Buktikan jawaban Anda.   Jika merupakan titik interior dari , apakah harus merupakan titik interior dari ? Buktikan jawaban Anda.   Jika merupakan titik batas dari , apakah harus merupakan titik batas dari ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "ex_me_implies_te",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#ex_me_implies_te",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik. Tunjukkan bahwa dan ekuivalen secara topologis jika menggunakan topologi metriknya.  "
+},
+{
+  "id": "ex_closed_sets_continuity_TS",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#ex_closed_sets_continuity_TS",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Buktikan bahwa jika dan merupakan ruang topologi, dan suatu fungsi, maka kontinu jika dan hanya jika merupakan himpunan tertutup dalam setiap kali merupakan himpunan tertutup dalam .  "
+},
+{
+  "id": "exercise-163",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-163",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Misalkan , , dan merupakan ruang topologi.   Misalkan dan merupakan fungsi kontinu. Buktikan bahwa merupakan fungsi kontinu.    mungkin berguna di sini.   Misalkan suatu homeomorfisme. Misalkan suatu fungsi dari ke dan misalkan suatu fungsi dari ke .   Buktikan bahwa kontinu jika dan hanya jika kontinu.   Buktikan bahwa kontinu jika dan hanya jika kontinu.  "
+},
+{
+  "id": "exercise-164",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-164",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Misalkan dengan topologi .   Temukan fungsi yang kontinu tepat di satu titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.   Temukan fungsi yang kontinu tepat di dua titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.   Temukan fungsi yang kontinu tepat di tiga titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.  "
+},
+{
+  "id": "exercise-165",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-165",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Pertimbangkan dan yang dilengkapi topologi Euklides. Misalkan suatu fungsi dan misalkan merupakan grafik dari . Perhatikan bahwa merupakan subruang dari dan menjadi ruang topologi dengan topologi subruang.   Tunjukkan bahwa jika merupakan fungsi kontinu, maka homeomorfik dengan .   Jika syarat bahwa kontinu dihilangkan, apakah tetap berlaku bahwa homeomorfik dengan ? Buktikan konjektur Anda.  "
+},
+{
+  "id": "exercise-166",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-166",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Misalkan suatu himpunan tak kosong dan suatu elemen tetap dalam . Misalkan merupakan topologi titik tertentu dan merupakan topologi titik yang dikecualikan pada . Artinya,    merupakan koleksi himpunan bagian dari yang terdiri atas , , dan semua himpunan bagian dari yang memuat .     merupakan koleksi himpunan bagian dari yang terdiri atas , , dan semua himpunan bagian dari yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik yang dikecualikan merupakan topologi menjadi pokok bahasan dan .   Misalkan suatu titik tetap dalam . Apakah fungsi identitas yang didefinisikan oleh untuk semua merupakan homeomorfisme dari ke ? Buktikan jawaban Anda.   Apakah homeomorfik dengan ketika titik khususnya ? Buktikan jawaban Anda.  "
+},
+{
+  "id": "exercise-167",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-167",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Ruang topologi  tertanam dalam ruang topologi jika terdapat homeomorfisme dari ke suatu subruang dari . Homeomorfisme tersebut disebut suatu pembenaman .   Tunjukkan bahwa jika merupakan interval terbuka dengan topologi metrik Euklides, maka dapat ditanamkan dalam ruang topologi dengan topologi metrik Euklides.   Tunjukkan bahwa terdapat ruang topologi dan yang tidak homeomorfik, tetapi dapat ditanamkan dalam dan dapat ditanamkan dalam .  "
+},
+{
+  "id": "exercise-168",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-168",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Misalkan suatu himpunan dengan dua elemen.   Temukan semua topologi yang berbeda pada . Jelaskan pula bagaimana Anda tahu bahwa semua topologi telah teridentifikasi.   Tentukan kelas-kelas homeomorfisme yang berbeda dari ruang topologi pada himpunan dua elemen. Berikan justifikasi atas jawaban Anda.  "
+},
+{
+  "id": "exercise-169",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-169",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Misalkan . Terdapat 29 topologi berbeda pada , yang ditunjukkan di bawah. Tentukan banyaknya kelas homeomorfisme yang berbeda untuk 29 topologi ini dan identifikasi elemen-elemen setiap kelas homeomorfisme. Berikan justifikasi untuk jawaban Anda.                                                                                                                   topologi diskret  "
+},
+{
+  "id": "exercise-170",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-170",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Tunjukkan bahwa sifat merupakan sifat topologis untuk setiap . (Lihat untuk definisi aksioma pemisahan.)  "
+},
+{
+  "id": "exercise-171",
+  "level": "2",
+  "url": "sec_cont_top_exer.html#exercise-171",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawab benar jika pernyataan tersebut selalu benar. Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar, jawab salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan fungsi kontinu antara ruang topologi dan , maka untuk setiap himpunan bagian terbuka dari , terbuka dalam .   Jika merupakan topologi komplemen hingga, maka yang memetakan ke bersifat kontinu.   Jika merupakan fungsi bijektif antara ruang topologi dan , dan untuk setiap himpunan bagian terbuka dari , terbuka dalam , maka merupakan homeomorfisme.   Jika dan merupakan ruang topologi dengan topologi diskret, dan jika merupakan bijeksi, maka ruang dan homeomorfik.   Misalkan suatu himpunan dan serta merupakan relasi ekuivalensi pada . Maka juga merupakan relasi ekuivalensi pada .   Misalkan suatu himpunan dan serta merupakan relasi ekuivalensi pada . Maka juga merupakan relasi ekuivalensi pada .  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -10882,6 +11305,897 @@ var ptx_lunr_docs = [
   "body": "Ruang metrik bersifat reguler dan normal  Misalkan ruang metrik. Pertama, untuk himpunan tertutup tak kosong dan , bangun dua himpunan terbuka saling lepas yang masing-masing memuat dan . Kemudian, untuk dua himpunan tertutup tak kosong dan saling lepas , gunakan fungsi jarak ke himpunan untuk membuktikan bahwa bersifat normal. Tangani kasus salah satu himpunan kosong secara terpisah dan jelaskan mengapa tidak aman mengandaikan .    Tahap 1. Karena tertutup dan , . Bandingkan bola berjari-jari di dengan gabungan bola yang sesuai di titik-titik .   Tahap 2. Untuk normalitas, tetapkan dan .   Tahap 3. Fungsi kontinu dan bahkan Lipschitz. Carilah contoh dua himpunan tertutup saling lepas yang makin mendekat di tak hingga.   Ruang metrik bersifat reguler dengan memisahkan dan menggunakan jarak positif . Untuk normalitas, himpunan dan di atas terbuka, saling lepas, dan masing-masing memuat dan . Dua himpunan tertutup saling lepas dapat mempunyai jarak infimum nol, jadi satu jari-jari seragam tidak selalu tersedia.   Karena tertutup dan , pencirian jarak ke himpunan memberi . Tetapkan dan . Keduanya terbuka, , dan . Jika , ada dengan dan . Ketaksamaan segitiga memberi , bertentangan dengan definisi . Maka , dan ruang bersifat reguler.  Jika salah satu dari kosong, pisahkan keduanya dengan dan . Untuk dua himpunan tertutup tak kosong dan saling lepas , fungsi kontinu karena masing-masing fungsi jarak kontinu. Maka dan terbuka dan jelas saling lepas. Jika , maka , sedangkan karena tertutup dan . Jadi . Dengan cara yang sama, . Ini membuktikan normalitas.  Tidak selalu berlaku . Dalam , ambil dan . Kedua himpunan tertutup dan saling lepas, tetapi jarak antara dan menuju nol. Jadi pemisahan normal harus memakai jarak titik-ke-himpunan yang berubah terhadap titik, bukan satu jarak global positif.  "
 },
 {
+  "id": "o003-c90-ch14-source-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch14-source-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Pengantar Kekontinuan Topologis",
+  "body": " Panduan Belajar Mandiri: Pengantar Kekontinuan Topologis  Sepuluh panduan ini mendampingi tugas-tugas awal tentang fungsi kontinu, pemetaan terbuka, dan pemetaan tertutup. Kerjakan dahulu butir pada bab utama, lalu gunakan petunjuk, jawaban, dan solusi secara bertahap. Materi ini ditulis secara terpisah sebagai konten pendamping CC BY 4.0.  Kekontinuan di Titik 4  Misalkan dan . Definisikan dengan . Apakah kontinu di ?   Tahap 1. Hitung .  Tahap 2. Daftarkan himpunan terbuka dalam yang memuat .  Tahap 3. Ambil prapeta dari himpunan terbuka tersebut dan uji apakah hasilnya merupakan lingkungan bagi .   Ya. Fungsi kontinu di .   Kita mempunyai . Satu-satunya himpunan terbuka dalam yang memuat adalah sendiri. Karena setiap lingkungan bagi harus memuat suatu himpunan terbuka yang memuat , satu-satunya lingkungan bagi juga . Prapetanya adalah , dan merupakan lingkungan bagi . Jadi syarat kekontinuan di terpenuhi.   Menguji Kekontinuan pada Seluruh Ruang  Misalkan dua ruang topologi berikut diberikan:  Untuk yang diberikan oleh , tentukan apakah merupakan fungsi kontinu.   Tahap 1. Gunakan pencirian melalui prapeta setiap himpunan terbuka dalam kodomain.  Tahap 2. Pilih himpunan terbuka dalam .  Tahap 3. Hitung dan bandingkan dengan daftar anggota .   Tidak. Himpunan terbuka dalam , tetapi tidak terbuka dalam .   Pencirian kekontinuan mensyaratkan agar prapeta setiap himpunan terbuka dalam terbuka dalam . Karena dan tidak ada titik lain yang dipetakan ke , berlaku . Himpunan tidak tercantum dalam . Satu kegagalan ini sudah membuktikan bahwa tidak kontinu, meskipun fungsi tersebut kontinu di titik seperti pada panduan sebelumnya.   Membuktikan Kekontinuan pada Ruang Berhingga  Misalkan dan . Definisikan melalui , , dan . Tunjukkan bahwa kontinu.   Tahap 1. Karena berhingga, periksa keempat anggota satu per satu.  Tahap 2. Hitung khususnya dan .  Tahap 3. Pastikan seluruh prapeta yang diperoleh merupakan anggota .   Fungsi kontinu karena prapeta berturut-turut adalah , semuanya terbuka dalam .   Himpunan terbuka dalam kodomain tepat , , , dan . Dari nilai-nilai fungsi diperoleh , , , dan . Keempat hasil tersebut berada dalam . Oleh karena itu, pencirian melalui prapeta himpunan terbuka menunjukkan bahwa kontinu.   Fungsi Kontinu yang Bukan Pemetaan Terbuka  Misalkan dan . Untuk fungsi kontinu dengan , , dan , temukan suatu himpunan terbuka dalam yang citranya tidak terbuka dalam .   Tahap 1. Pilih salah satu himpunan beranggota tunggal yang terbuka dalam .  Tahap 2. Hitung citra .  Tahap 3. Bandingkan citra itu dengan daftar anggota .   Ambil . Himpunan ini terbuka dalam , sedangkan tidak terbuka dalam .   Karena , himpunan terbuka. Nilai memberi . Akan tetapi, bukan salah satu dari , sehingga tidak terbuka dalam . Contoh ini juga memperlihatkan bahwa kekontinuan mengatur prapeta himpunan terbuka, bukan menjamin citra himpunan terbuka selalu terbuka.   Merumuskan Pemetaan Tertutup  Suatu fungsi disebut pemetaan terbuka jika terbuka dalam setiap kali terbuka dalam . Tuliskan definisi yang serupa bagi pemetaan tertutup .   Tahap 1. Ganti jenis himpunan yang diuji dalam domain.  Tahap 2. Ganti pula sifat yang harus dimiliki citranya dalam kodomain.  Tahap 3. Tetap gunakan citra , bukan prapeta .   Fungsi merupakan pemetaan tertutup jika tertutup dalam untuk setiap himpunan tertutup dalam .   Definisi analog diperoleh dengan mengganti kata “terbuka” oleh “tertutup” pada domain dan kodomain: untuk setiap , jika tertutup dalam , maka harus tertutup dalam . Penggunaan citra langsung penting; persyaratan mengenai prapeta himpunan tertutup merupakan pencirian kekontinuan, bukan definisi pemetaan tertutup.   Menentukan Titik-Titik Kekontinuan  Misalkan dan . Definisikan dengan . Di titik mana saja kontinu? Apakah merupakan fungsi kontinu?   Tahap 1. Buat daftar nilai .  Tahap 2. Untuk setiap titik , periksa prapeta himpunan-himpunan terbuka yang memuat .  Tahap 3. Perhatikan saat menguji titik dan saat menguji titik .   Fungsi kontinu tepat di titik , , dan . Fungsi tersebut tidak kontinu pada seluruh karena gagal kontinu di dan .   Nilai fungsi berturut-turut adalah , , , , dan . Untuk memeriksa kekontinuan di suatu titik, cukup memeriksa prapeta setiap himpunan terbuka yang memuat nilai fungsi di titik itu.  Di , himpunan terbuka tak trivial yang memuat adalah dan . Prapetanya masing-masing dan . Himpunan pertama merupakan lingkungan bagi karena memuat himpunan terbuka , sedangkan himpunan kedua terbuka. Jadi kontinu di . Satu-satunya himpunan terbuka yang memuat adalah ; karena dan , fungsi kontinu di dan .  Di , himpunan terbuka memuat , tetapi bukan lingkungan bagi . Di , himpunan terbuka memuat , tetapi bukan lingkungan bagi . Maka titik-titik kekontinuan tepat , sehingga bukan fungsi kontinu.   Identitas dari Topologi Komplemen Berhingga  Misalkan diberikan oleh , dengan topologi komplemen berhingga. Apakah kontinu? Jika tidak, berikan satu titik tertentu tempat tidak kontinu dan jelaskan.   Tahap 1. Pada dengan metrik Euklides, setiap himpunan beranggota tunggal terbuka.  Tahap 2. Uji lingkungan dari .  Tahap 3. Tentukan apakah merupakan lingkungan bagi dalam topologi komplemen berhingga.   Fungsi tidak kontinu di ; bahkan, fungsi ini tidak kontinu di titik mana pun dalam .   Dalam , bola berjari-jari di sekitar adalah , sehingga merupakan lingkungan terbuka bagi . Prapetanya adalah . Himpunan ini bukan lingkungan bagi dalam : setiap himpunan terbuka tak kosong dalam topologi tersebut mempunyai komplemen berhingga dan karena itu tidak dapat termuat dalam . Jadi tidak kontinu di . Argumen yang sama dengan berlaku untuk setiap , sehingga tidak ada titik kekontinuan.   Identitas Menuju Topologi Komplemen Berhingga  Misalkan diberikan oleh , dengan topologi komplemen berhingga. Apakah kontinu? Jika tidak, berikan satu titik tertentu tempat tidak kontinu dan jelaskan.   Tahap 1. Topologi yang diinduksi oleh pada adalah topologi diskret.  Tahap 2. Untuk setiap , gunakan sifat fungsi identitas untuk menghitung .  Tahap 3. Tanyakan apakah subhimpunan hasil prapeta selalu terbuka dalam domain diskret.   Ya. Fungsi identitas kontinu.   Setiap himpunan beranggota tunggal terbuka dalam , misalnya sebagai bola berjari-jari . Karena setiap subhimpunan merupakan gabungan himpunan beranggota tunggal, topologi domain bersifat diskret. Sekarang ambil sembarang . Karena fungsi identitas, , dan subhimpunan ini terbuka dalam domain diskret. Jadi prapeta setiap himpunan terbuka dalam kodomain terbuka dalam domain, sehingga kontinu.   Menguji Kekontinuan dengan Basis  Misalkan dan misalkan suatu basis bagi topologi pada . Apakah syarat bahwa terbuka dalam untuk setiap cukup untuk menyimpulkan bahwa kontinu? Buktikan jawaban Anda.   Tahap 1. Ambil sembarang himpunan terbuka dalam .  Tahap 2. Nyatakan sebagai gabungan anggota-anggota basis yang termuat di dalamnya.  Tahap 3. Gunakan fakta bahwa prapeta mempertahankan gabungan dan bahwa gabungan himpunan terbuka tetap terbuka.   Ya. Setiap himpunan terbuka merupakan gabungan anggota basis, sehingga prapetanya merupakan gabungan prapeta anggota basis yang terbuka.   Ambil sembarang . Sifat basis memberi untuk suatu keluarga dengan . Prapeta mempertahankan gabungan, jadi Menurut asumsi, setiap terbuka dalam ; gabungannya juga terbuka. Dengan demikian prapeta setiap himpunan terbuka dalam terbuka dalam , sehingga pencirian kekontinuan menyatakan bahwa kontinu.   Sasaran Pembuktian Kekontinuan  Misalkan dan asumsikan bahwa terbuka dalam setiap kali terbuka dalam . Menurut definisi, apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan fungsi kontinu?   Tahap 1. Ingat bahwa kekontinuan fungsi berarti kekontinuan di setiap titik domain.  Tahap 2. Pilih sembarang dan sembarang lingkungan bagi .  Tahap 3. Nyatakan sifat lingkungan yang harus dipenuhi oleh .   Perlu ditunjukkan bahwa untuk setiap dan setiap lingkungan bagi dalam , himpunan merupakan lingkungan bagi dalam .   Definisi menyatakan bahwa kontinu di tepat ketika prapeta setiap lingkungan bagi merupakan lingkungan bagi . Karena yang hendak dibuktikan adalah kekontinuan fungsi pada seluruh domain, ambil secara sembarang, lalu ambil sembarang lingkungan bagi . Sasaran pembuktiannya adalah menunjukkan bahwa merupakan lingkungan bagi . Jika sasaran ini tercapai untuk pilihan sembarang tersebut, kontinu di setiap titik dan karena itu merupakan fungsi kontinu.   "
+},
+{
+  "id": "o003-c90-ch14-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-01",
+  "type": "Pemeriksaan",
+  "number": "N.1",
+  "title": "Kekontinuan di Titik 4.",
+  "body": "Kekontinuan di Titik 4  Misalkan dan . Definisikan dengan . Apakah kontinu di ?   Tahap 1. Hitung .  Tahap 2. Daftarkan himpunan terbuka dalam yang memuat .  Tahap 3. Ambil prapeta dari himpunan terbuka tersebut dan uji apakah hasilnya merupakan lingkungan bagi .   Ya. Fungsi kontinu di .   Kita mempunyai . Satu-satunya himpunan terbuka dalam yang memuat adalah sendiri. Karena setiap lingkungan bagi harus memuat suatu himpunan terbuka yang memuat , satu-satunya lingkungan bagi juga . Prapetanya adalah , dan merupakan lingkungan bagi . Jadi syarat kekontinuan di terpenuhi.  "
+},
+{
+  "id": "o003-c90-ch14-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-02",
+  "type": "Pemeriksaan",
+  "number": "N.2",
+  "title": "Menguji Kekontinuan pada Seluruh Ruang.",
+  "body": "Menguji Kekontinuan pada Seluruh Ruang  Misalkan dua ruang topologi berikut diberikan:  Untuk yang diberikan oleh , tentukan apakah merupakan fungsi kontinu.   Tahap 1. Gunakan pencirian melalui prapeta setiap himpunan terbuka dalam kodomain.  Tahap 2. Pilih himpunan terbuka dalam .  Tahap 3. Hitung dan bandingkan dengan daftar anggota .   Tidak. Himpunan terbuka dalam , tetapi tidak terbuka dalam .   Pencirian kekontinuan mensyaratkan agar prapeta setiap himpunan terbuka dalam terbuka dalam . Karena dan tidak ada titik lain yang dipetakan ke , berlaku . Himpunan tidak tercantum dalam . Satu kegagalan ini sudah membuktikan bahwa tidak kontinu, meskipun fungsi tersebut kontinu di titik seperti pada panduan sebelumnya.  "
+},
+{
+  "id": "o003-c90-ch14-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-03",
+  "type": "Pemeriksaan",
+  "number": "N.3",
+  "title": "Membuktikan Kekontinuan pada Ruang Berhingga.",
+  "body": "Membuktikan Kekontinuan pada Ruang Berhingga  Misalkan dan . Definisikan melalui , , dan . Tunjukkan bahwa kontinu.   Tahap 1. Karena berhingga, periksa keempat anggota satu per satu.  Tahap 2. Hitung khususnya dan .  Tahap 3. Pastikan seluruh prapeta yang diperoleh merupakan anggota .   Fungsi kontinu karena prapeta berturut-turut adalah , semuanya terbuka dalam .   Himpunan terbuka dalam kodomain tepat , , , dan . Dari nilai-nilai fungsi diperoleh , , , dan . Keempat hasil tersebut berada dalam . Oleh karena itu, pencirian melalui prapeta himpunan terbuka menunjukkan bahwa kontinu.  "
+},
+{
+  "id": "o003-c90-ch14-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-04",
+  "type": "Pemeriksaan",
+  "number": "N.4",
+  "title": "Fungsi Kontinu yang Bukan Pemetaan Terbuka.",
+  "body": "Fungsi Kontinu yang Bukan Pemetaan Terbuka  Misalkan dan . Untuk fungsi kontinu dengan , , dan , temukan suatu himpunan terbuka dalam yang citranya tidak terbuka dalam .   Tahap 1. Pilih salah satu himpunan beranggota tunggal yang terbuka dalam .  Tahap 2. Hitung citra .  Tahap 3. Bandingkan citra itu dengan daftar anggota .   Ambil . Himpunan ini terbuka dalam , sedangkan tidak terbuka dalam .   Karena , himpunan terbuka. Nilai memberi . Akan tetapi, bukan salah satu dari , sehingga tidak terbuka dalam . Contoh ini juga memperlihatkan bahwa kekontinuan mengatur prapeta himpunan terbuka, bukan menjamin citra himpunan terbuka selalu terbuka.  "
+},
+{
+  "id": "o003-c90-ch14-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-05",
+  "type": "Pemeriksaan",
+  "number": "N.5",
+  "title": "Merumuskan Pemetaan Tertutup.",
+  "body": "Merumuskan Pemetaan Tertutup  Suatu fungsi disebut pemetaan terbuka jika terbuka dalam setiap kali terbuka dalam . Tuliskan definisi yang serupa bagi pemetaan tertutup .   Tahap 1. Ganti jenis himpunan yang diuji dalam domain.  Tahap 2. Ganti pula sifat yang harus dimiliki citranya dalam kodomain.  Tahap 3. Tetap gunakan citra , bukan prapeta .   Fungsi merupakan pemetaan tertutup jika tertutup dalam untuk setiap himpunan tertutup dalam .   Definisi analog diperoleh dengan mengganti kata “terbuka” oleh “tertutup” pada domain dan kodomain: untuk setiap , jika tertutup dalam , maka harus tertutup dalam . Penggunaan citra langsung penting; persyaratan mengenai prapeta himpunan tertutup merupakan pencirian kekontinuan, bukan definisi pemetaan tertutup.  "
+},
+{
+  "id": "o003-c90-ch14-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-06",
+  "type": "Pemeriksaan",
+  "number": "N.6",
+  "title": "Menentukan Titik-Titik Kekontinuan.",
+  "body": "Menentukan Titik-Titik Kekontinuan  Misalkan dan . Definisikan dengan . Di titik mana saja kontinu? Apakah merupakan fungsi kontinu?   Tahap 1. Buat daftar nilai .  Tahap 2. Untuk setiap titik , periksa prapeta himpunan-himpunan terbuka yang memuat .  Tahap 3. Perhatikan saat menguji titik dan saat menguji titik .   Fungsi kontinu tepat di titik , , dan . Fungsi tersebut tidak kontinu pada seluruh karena gagal kontinu di dan .   Nilai fungsi berturut-turut adalah , , , , dan . Untuk memeriksa kekontinuan di suatu titik, cukup memeriksa prapeta setiap himpunan terbuka yang memuat nilai fungsi di titik itu.  Di , himpunan terbuka tak trivial yang memuat adalah dan . Prapetanya masing-masing dan . Himpunan pertama merupakan lingkungan bagi karena memuat himpunan terbuka , sedangkan himpunan kedua terbuka. Jadi kontinu di . Satu-satunya himpunan terbuka yang memuat adalah ; karena dan , fungsi kontinu di dan .  Di , himpunan terbuka memuat , tetapi bukan lingkungan bagi . Di , himpunan terbuka memuat , tetapi bukan lingkungan bagi . Maka titik-titik kekontinuan tepat , sehingga bukan fungsi kontinu.  "
+},
+{
+  "id": "o003-c90-ch14-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-07",
+  "type": "Pemeriksaan",
+  "number": "N.7",
+  "title": "Identitas dari Topologi Komplemen Berhingga.",
+  "body": "Identitas dari Topologi Komplemen Berhingga  Misalkan diberikan oleh , dengan topologi komplemen berhingga. Apakah kontinu? Jika tidak, berikan satu titik tertentu tempat tidak kontinu dan jelaskan.   Tahap 1. Pada dengan metrik Euklides, setiap himpunan beranggota tunggal terbuka.  Tahap 2. Uji lingkungan dari .  Tahap 3. Tentukan apakah merupakan lingkungan bagi dalam topologi komplemen berhingga.   Fungsi tidak kontinu di ; bahkan, fungsi ini tidak kontinu di titik mana pun dalam .   Dalam , bola berjari-jari di sekitar adalah , sehingga merupakan lingkungan terbuka bagi . Prapetanya adalah . Himpunan ini bukan lingkungan bagi dalam : setiap himpunan terbuka tak kosong dalam topologi tersebut mempunyai komplemen berhingga dan karena itu tidak dapat termuat dalam . Jadi tidak kontinu di . Argumen yang sama dengan berlaku untuk setiap , sehingga tidak ada titik kekontinuan.  "
+},
+{
+  "id": "o003-c90-ch14-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-08",
+  "type": "Pemeriksaan",
+  "number": "N.8",
+  "title": "Identitas Menuju Topologi Komplemen Berhingga.",
+  "body": "Identitas Menuju Topologi Komplemen Berhingga  Misalkan diberikan oleh , dengan topologi komplemen berhingga. Apakah kontinu? Jika tidak, berikan satu titik tertentu tempat tidak kontinu dan jelaskan.   Tahap 1. Topologi yang diinduksi oleh pada adalah topologi diskret.  Tahap 2. Untuk setiap , gunakan sifat fungsi identitas untuk menghitung .  Tahap 3. Tanyakan apakah subhimpunan hasil prapeta selalu terbuka dalam domain diskret.   Ya. Fungsi identitas kontinu.   Setiap himpunan beranggota tunggal terbuka dalam , misalnya sebagai bola berjari-jari . Karena setiap subhimpunan merupakan gabungan himpunan beranggota tunggal, topologi domain bersifat diskret. Sekarang ambil sembarang . Karena fungsi identitas, , dan subhimpunan ini terbuka dalam domain diskret. Jadi prapeta setiap himpunan terbuka dalam kodomain terbuka dalam domain, sehingga kontinu.  "
+},
+{
+  "id": "o003-c90-ch14-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-09",
+  "type": "Pemeriksaan",
+  "number": "N.9",
+  "title": "Menguji Kekontinuan dengan Basis.",
+  "body": "Menguji Kekontinuan dengan Basis  Misalkan dan misalkan suatu basis bagi topologi pada . Apakah syarat bahwa terbuka dalam untuk setiap cukup untuk menyimpulkan bahwa kontinu? Buktikan jawaban Anda.   Tahap 1. Ambil sembarang himpunan terbuka dalam .  Tahap 2. Nyatakan sebagai gabungan anggota-anggota basis yang termuat di dalamnya.  Tahap 3. Gunakan fakta bahwa prapeta mempertahankan gabungan dan bahwa gabungan himpunan terbuka tetap terbuka.   Ya. Setiap himpunan terbuka merupakan gabungan anggota basis, sehingga prapetanya merupakan gabungan prapeta anggota basis yang terbuka.   Ambil sembarang . Sifat basis memberi untuk suatu keluarga dengan . Prapeta mempertahankan gabungan, jadi Menurut asumsi, setiap terbuka dalam ; gabungannya juga terbuka. Dengan demikian prapeta setiap himpunan terbuka dalam terbuka dalam , sehingga pencirian kekontinuan menyatakan bahwa kontinu.  "
+},
+{
+  "id": "o003-c90-ch14-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-a.html#o003-c90-ch14-guide-10",
+  "type": "Pemeriksaan",
+  "number": "N.10",
+  "title": "Sasaran Pembuktian Kekontinuan.",
+  "body": "Sasaran Pembuktian Kekontinuan  Misalkan dan asumsikan bahwa terbuka dalam setiap kali terbuka dalam . Menurut definisi, apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan fungsi kontinu?   Tahap 1. Ingat bahwa kekontinuan fungsi berarti kekontinuan di setiap titik domain.  Tahap 2. Pilih sembarang dan sembarang lingkungan bagi .  Tahap 3. Nyatakan sifat lingkungan yang harus dipenuhi oleh .   Perlu ditunjukkan bahwa untuk setiap dan setiap lingkungan bagi dalam , himpunan merupakan lingkungan bagi dalam .   Definisi menyatakan bahwa kontinu di tepat ketika prapeta setiap lingkungan bagi merupakan lingkungan bagi . Karena yang hendak dibuktikan adalah kekontinuan fungsi pada seluruh domain, ambil secara sembarang, lalu ambil sembarang lingkungan bagi . Sasaran pembuktiannya adalah menunjukkan bahwa merupakan lingkungan bagi . Jika sasaran ini tercapai untuk pilihan sembarang tersebut, kontinu di setiap titik dan karena itu merupakan fungsi kontinu.  "
+},
+{
+  "id": "o003-c90-ch14-source-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch14-source-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Kekontinuan dan Ekuivalensi",
+  "body": " Panduan Belajar Mandiri: Kekontinuan dan Ekuivalensi  Panduan ini mendampingi pertanyaan nonlatihan tentang pembuktian kekontinuan, ekuivalensi metrik dan topologis, serta relasi ekuivalensi. Pada setiap soal, perhatikan dengan cermat sifat yang harus dipertahankan oleh fungsi yang digunakan.  Menafsirkan Suatu Lingkungan  Misalkan suatu fungsi dan andaikan terbuka dalam setiap kali terbuka dalam . Misalkan dan andaikan suatu lingkungan bagi dalam . Apa yang dapat disimpulkan dari fakta bahwa merupakan lingkungan?   Tahap 1. Ingat definisi lingkungan suatu titik dalam ruang topologi.  Tahap 2. Cari suatu himpunan terbuka yang berada di antara titik dan himpunan .  Tahap 3. Nyatakan kesimpulan itu sebagai rantai keanggotaan dan inklusi.   Terdapat himpunan terbuka dalam sedemikian sehingga .   Menurut definisi, suatu himpunan merupakan lingkungan bagi sebuah titik jika himpunan itu memuat suatu himpunan terbuka yang memuat titik tersebut. Karena merupakan lingkungan bagi , ada dengan dan . Pada tahap ini belum perlu disimpulkan bahwa sendiri terbuka.   Prapeta Suatu Lingkungan  Misalkan suatu fungsi yang memenuhi: terbuka dalam untuk setiap himpunan terbuka dalam . Jika dan merupakan lingkungan bagi , jelaskan mengapa merupakan lingkungan bagi dalam .   Tahap 1. Pilih terbuka dengan .  Tahap 2. Terapkan asumsi soal kepada , bukan langsung kepada .  Tahap 3. Ambil prapeta pada rantai .   Himpunan memuat himpunan terbuka yang memuat ; karena itu merupakan lingkungan bagi .   Karena merupakan lingkungan bagi , terdapat dengan . Asumsi mengenai memberikan . Selain itu, menyiratkan , sedangkan menyiratkan . Jadi memuat suatu himpunan terbuka yang memuat , tepat seperti yang disyaratkan oleh definisi lingkungan bagi .   Menyelesaikan Bukti Kekontinuan  Misalkan suatu fungsi dan andaikan prapeta setiap himpunan terbuka dalam terbuka dalam . Untuk setiap dan setiap lingkungan bagi , telah ditunjukkan bahwa merupakan lingkungan bagi . Jelaskan bagaimana hal ini menunjukkan bahwa merupakan fungsi kontinu.   Tahap 1. Bandingkan kesimpulan yang telah diperoleh dengan definisi kontinu di .  Tahap 2. Perhatikan bahwa dipilih secara sebarang.  Tahap 3. Gunakan definisi kontinu pada seluruh ruang .   Kesimpulan tersebut membuktikan bahwa kontinu di setiap ; oleh karena itu kontinu pada .   Untuk titik sebarang , prapeta setiap lingkungan bagi telah terbukti merupakan lingkungan bagi . Ini persis definisi bahwa kontinu di . Karena pilihan tidak dibatasi, pernyataan itu berlaku pada setiap titik . Jadi kontinu. Dengan demikian, bersama arah sebaliknya, diperoleh pencirian bahwa kontinu jika dan hanya jika prapeta setiap himpunan terbuka dalam terbuka dalam .   Dua Interval dengan Metrik Euklides  Misalkan dan , dengan dan keduanya metrik Euklides. Apakah mungkin menemukan bijeksi yang mempertahankan sifat-sifat metrik, yaitu memenuhi untuk semua ? Jelaskan.   Tahap 1. Andaikan bijeksi yang mempertahankan jarak itu ada.  Tahap 2. Pilih dua titik dalam yang jaraknya lebih besar daripada .  Tahap 3. Gunakan surjektivitas untuk mengambil prapeta kedua titik tersebut dalam .   Tidak. Setiap dua titik dalam berjarak kurang dari , sedangkan memiliki pasangan titik yang berjarak lebih dari .   Andaikan terdapat bijeksi yang mempertahankan jarak. Ambil, misalnya, dan dalam . Karena surjektif, terdapat dengan dan . Pelestarian jarak akan memberikan Namun, untuk semua . Kontradiksi ini menunjukkan bahwa tidak ada bijeksi yang mempertahankan jarak; kedua ruang tersebut tidak ekuivalen secara metrik.   Menyesuaikan Metrik dengan Peregangan  Misalkan dan , dengan dan . Anda boleh mengasumsikan bahwa merupakan suatu metrik. Apakah mungkin menemukan bijeksi yang mempertahankan sifat-sifat metrik? Jelaskan.   Tahap 1. Cari fungsi sederhana yang memetakan tepat ke .  Tahap 2. Periksa secara terpisah bahwa fungsi tersebut bijektif.  Tahap 3. Hitung dan bandingkan dengan .   Ya. Fungsi adalah bijeksi dari ke dan mempertahankan jarak.   Definisikan dengan . Fungsi ini injektif, dan untuk setiap berlaku serta , sehingga surjektif. Untuk semua , Jadi merupakan isometri, dan kedua ruang tersebut ekuivalen secara metrik.   Topologi Metrik Taksi dan Metrik Maksimum  Apakah dan ekuivalen secara topologis? Jelaskan.   Tahap 1. Gunakan pemetaan identitas pada himpunan dasar .  Tahap 2. Untuk dua titik, tuliskan jarak taksi sebagai jumlah dua selisih koordinat mutlak dan jarak maksimum sebagai nilai terbesar di antaranya.  Tahap 3. Batasi masing-masing jarak dengan kelipatan tetap dari jarak lainnya.   Ya. Pemetaan identitas merupakan homeomorfisme karena untuk semua .   Tuliskan , , dan . Maka dan . Karena setiap tidak melebihi nilai maksimumnya, Jadi kedua metrik saling membatasi dengan konstanta positif dan . Teorema perbandingan metrik kemudian menunjukkan bahwa pemetaan identitas dari salah satu ruang ke ruang lainnya dan inversnya kontinu. Karena pemetaan identitas juga bijektif, ia merupakan homeomorfisme. Jadi kedua ruang itu ekuivalen secara topologis.   Topologi Metrik Euklides dan Metrik Taksi  Apakah dan ekuivalen secara topologis? Jelaskan.   Tahap 1. Gunakan pemetaan identitas pada .  Tahap 2. Terapkan .  Tahap 3. Untuk arah sebaliknya, kuadratkan dan gunakan .   Ya. Untuk semua berlaku , sehingga pemetaan identitas merupakan homeomorfisme.   Misalkan selisih koordinat dan adalah dan . Ketaksamaan pertama mengikuti dari . Selanjutnya, sehingga . Oleh karena itu, Teorema perbandingan metrik menjamin bahwa pemetaan identitas dan inversnya kontinu. Pemetaan ini bijektif, maka merupakan homeomorfisme; kedua ruang itu ekuivalen secara topologis.   Dugaan untuk Metrik Euklides dan Metrik Maksimum  Apakah Anda menduga bahwa dan ekuivalen secara topologis? Jelaskan tanpa melakukan perhitungan ataupun perbandingan.   Tahap 1. Bayangkan bentuk bola terbuka untuk kedua metrik tersebut.  Tahap 2. Tanyakan apakah cakram terbuka dapat dideformasi menjadi persegi terbuka tanpa merobek atau merekatkan bidang.  Tahap 3. Ingat bahwa topologi memperhatikan struktur himpunan terbuka, bukan nilai jarak yang persis.   Ya. Secara geometris, lingkungan berbentuk cakram dan lingkungan berbentuk persegi menggambarkan struktur terbuka yang sama pada bidang.   Dugaan yang wajar adalah bahwa kedua ruang tersebut ekuivalen secara topologis. Bola terbuka metrik Euklides tampak sebagai cakram, sedangkan bola terbuka metrik maksimum tampak sebagai persegi dengan sisi sejajar sumbu. Cakram dapat diregangkan menjadi persegi, dan sebaliknya, tanpa membuat lubang, merobek, atau merekatkan bidang. Perubahan bentuk ini tidak mengubah gagasan bahwa setiap titik memiliki lingkungan terbuka yang dapat dibuat sekecil yang diinginkan. Karena ekuivalensi topologis mengabaikan nilai jarak yang tepat dan mempertahankan struktur terbuka, gambaran tersebut mendukung jawaban ya. Ini merupakan penjelasan kualitatif sebagaimana diminta; pembuktian formal dapat diberikan secara terpisah melalui pemetaan identitas.   Ekuivalensi Metrik sebagai Relasi Ekuivalensi  Jelaskan mengapa ekuivalensi metrik merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang metrik.   Tahap 1. Untuk sifat refleksif, gunakan pemetaan identitas suatu ruang metrik.  Tahap 2. Untuk sifat simetris, ambil invers suatu isometri.  Tahap 3. Untuk sifat transitif, komposisikan dua isometri.   Relasi ini refleksif, simetris, dan transitif: pemetaan identitas adalah isometri, invers isometri adalah isometri, dan komposisi isometri juga merupakan isometri.   Pada suatu himpunan ruang-ruang metrik, definisikan jika terdapat isometri dari ke . Untuk setiap ruang , pemetaan identitas bijektif dan memenuhi ; jadi dan relasi ini refleksif.  Jika suatu isometri, maka bijektif. Untuk , tuliskan dan . Pelestarian jarak oleh memberikan Jadi isometri dan relasi ini simetris.  Terakhir, jika dan isometri, maka bijektif dan, untuk semua , Jadi isometri dan relasi ini transitif. Ketiga sifat tersebut membuktikan bahwa ekuivalensi metrik merupakan relasi ekuivalensi.   Ekuivalensi Topologis sebagai Relasi Ekuivalensi  Jelaskan mengapa ekuivalensi topologis merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang topologi.   Tahap 1. Tunjukkan bahwa pemetaan identitas merupakan homeomorfisme.  Tahap 2. Tukar arah suatu homeomorfisme dengan mengambil inversnya.  Tahap 3. Gunakan kekontinuan komposisi untuk dua homeomorfisme berurutan.   Relasi ini refleksif, simetris, dan transitif: identitas adalah homeomorfisme, invers homeomorfisme adalah homeomorfisme, dan komposisi homeomorfisme juga merupakan homeomorfisme.   Pada suatu himpunan ruang-ruang topologi, definisikan jika terdapat homeomorfisme . Pemetaan identitas adalah bijeksi kontinu dan inversnya adalah sendiri, yang juga kontinu. Jadi ; relasi ini refleksif.  Jika homeomorfisme, definisinya menyatakan bahwa kontinu. Pemetaan bijektif, dan inversnya, yaitu , juga kontinu. Maka merupakan homeomorfisme, sehingga relasi ini simetris.  Jika dan homeomorfisme, komposisi bijektif dan kontinu. Inversnya adalah , yang kontinu sebagai komposisi dua fungsi kontinu. Jadi merupakan homeomorfisme dan relasi ini transitif. Oleh karena itu, ekuivalensi topologis merupakan relasi ekuivalensi.   "
+},
+{
+  "id": "o003-c90-ch14-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-11",
+  "type": "Pemeriksaan",
+  "number": "N.11",
+  "title": "Menafsirkan Suatu Lingkungan.",
+  "body": "Menafsirkan Suatu Lingkungan  Misalkan suatu fungsi dan andaikan terbuka dalam setiap kali terbuka dalam . Misalkan dan andaikan suatu lingkungan bagi dalam . Apa yang dapat disimpulkan dari fakta bahwa merupakan lingkungan?   Tahap 1. Ingat definisi lingkungan suatu titik dalam ruang topologi.  Tahap 2. Cari suatu himpunan terbuka yang berada di antara titik dan himpunan .  Tahap 3. Nyatakan kesimpulan itu sebagai rantai keanggotaan dan inklusi.   Terdapat himpunan terbuka dalam sedemikian sehingga .   Menurut definisi, suatu himpunan merupakan lingkungan bagi sebuah titik jika himpunan itu memuat suatu himpunan terbuka yang memuat titik tersebut. Karena merupakan lingkungan bagi , ada dengan dan . Pada tahap ini belum perlu disimpulkan bahwa sendiri terbuka.  "
+},
+{
+  "id": "o003-c90-ch14-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-12",
+  "type": "Pemeriksaan",
+  "number": "N.12",
+  "title": "Prapeta Suatu Lingkungan.",
+  "body": "Prapeta Suatu Lingkungan  Misalkan suatu fungsi yang memenuhi: terbuka dalam untuk setiap himpunan terbuka dalam . Jika dan merupakan lingkungan bagi , jelaskan mengapa merupakan lingkungan bagi dalam .   Tahap 1. Pilih terbuka dengan .  Tahap 2. Terapkan asumsi soal kepada , bukan langsung kepada .  Tahap 3. Ambil prapeta pada rantai .   Himpunan memuat himpunan terbuka yang memuat ; karena itu merupakan lingkungan bagi .   Karena merupakan lingkungan bagi , terdapat dengan . Asumsi mengenai memberikan . Selain itu, menyiratkan , sedangkan menyiratkan . Jadi memuat suatu himpunan terbuka yang memuat , tepat seperti yang disyaratkan oleh definisi lingkungan bagi .  "
+},
+{
+  "id": "o003-c90-ch14-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-13",
+  "type": "Pemeriksaan",
+  "number": "N.13",
+  "title": "Menyelesaikan Bukti Kekontinuan.",
+  "body": "Menyelesaikan Bukti Kekontinuan  Misalkan suatu fungsi dan andaikan prapeta setiap himpunan terbuka dalam terbuka dalam . Untuk setiap dan setiap lingkungan bagi , telah ditunjukkan bahwa merupakan lingkungan bagi . Jelaskan bagaimana hal ini menunjukkan bahwa merupakan fungsi kontinu.   Tahap 1. Bandingkan kesimpulan yang telah diperoleh dengan definisi kontinu di .  Tahap 2. Perhatikan bahwa dipilih secara sebarang.  Tahap 3. Gunakan definisi kontinu pada seluruh ruang .   Kesimpulan tersebut membuktikan bahwa kontinu di setiap ; oleh karena itu kontinu pada .   Untuk titik sebarang , prapeta setiap lingkungan bagi telah terbukti merupakan lingkungan bagi . Ini persis definisi bahwa kontinu di . Karena pilihan tidak dibatasi, pernyataan itu berlaku pada setiap titik . Jadi kontinu. Dengan demikian, bersama arah sebaliknya, diperoleh pencirian bahwa kontinu jika dan hanya jika prapeta setiap himpunan terbuka dalam terbuka dalam .  "
+},
+{
+  "id": "o003-c90-ch14-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-14",
+  "type": "Pemeriksaan",
+  "number": "N.14",
+  "title": "Dua Interval dengan Metrik Euklides.",
+  "body": "Dua Interval dengan Metrik Euklides  Misalkan dan , dengan dan keduanya metrik Euklides. Apakah mungkin menemukan bijeksi yang mempertahankan sifat-sifat metrik, yaitu memenuhi untuk semua ? Jelaskan.   Tahap 1. Andaikan bijeksi yang mempertahankan jarak itu ada.  Tahap 2. Pilih dua titik dalam yang jaraknya lebih besar daripada .  Tahap 3. Gunakan surjektivitas untuk mengambil prapeta kedua titik tersebut dalam .   Tidak. Setiap dua titik dalam berjarak kurang dari , sedangkan memiliki pasangan titik yang berjarak lebih dari .   Andaikan terdapat bijeksi yang mempertahankan jarak. Ambil, misalnya, dan dalam . Karena surjektif, terdapat dengan dan . Pelestarian jarak akan memberikan Namun, untuk semua . Kontradiksi ini menunjukkan bahwa tidak ada bijeksi yang mempertahankan jarak; kedua ruang tersebut tidak ekuivalen secara metrik.  "
+},
+{
+  "id": "o003-c90-ch14-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-15",
+  "type": "Pemeriksaan",
+  "number": "N.15",
+  "title": "Menyesuaikan Metrik dengan Peregangan.",
+  "body": "Menyesuaikan Metrik dengan Peregangan  Misalkan dan , dengan dan . Anda boleh mengasumsikan bahwa merupakan suatu metrik. Apakah mungkin menemukan bijeksi yang mempertahankan sifat-sifat metrik? Jelaskan.   Tahap 1. Cari fungsi sederhana yang memetakan tepat ke .  Tahap 2. Periksa secara terpisah bahwa fungsi tersebut bijektif.  Tahap 3. Hitung dan bandingkan dengan .   Ya. Fungsi adalah bijeksi dari ke dan mempertahankan jarak.   Definisikan dengan . Fungsi ini injektif, dan untuk setiap berlaku serta , sehingga surjektif. Untuk semua , Jadi merupakan isometri, dan kedua ruang tersebut ekuivalen secara metrik.  "
+},
+{
+  "id": "o003-c90-ch14-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-16",
+  "type": "Pemeriksaan",
+  "number": "N.16",
+  "title": "Topologi Metrik Taksi dan Metrik Maksimum.",
+  "body": "Topologi Metrik Taksi dan Metrik Maksimum  Apakah dan ekuivalen secara topologis? Jelaskan.   Tahap 1. Gunakan pemetaan identitas pada himpunan dasar .  Tahap 2. Untuk dua titik, tuliskan jarak taksi sebagai jumlah dua selisih koordinat mutlak dan jarak maksimum sebagai nilai terbesar di antaranya.  Tahap 3. Batasi masing-masing jarak dengan kelipatan tetap dari jarak lainnya.   Ya. Pemetaan identitas merupakan homeomorfisme karena untuk semua .   Tuliskan , , dan . Maka dan . Karena setiap tidak melebihi nilai maksimumnya, Jadi kedua metrik saling membatasi dengan konstanta positif dan . Teorema perbandingan metrik kemudian menunjukkan bahwa pemetaan identitas dari salah satu ruang ke ruang lainnya dan inversnya kontinu. Karena pemetaan identitas juga bijektif, ia merupakan homeomorfisme. Jadi kedua ruang itu ekuivalen secara topologis.  "
+},
+{
+  "id": "o003-c90-ch14-guide-17",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-17",
+  "type": "Pemeriksaan",
+  "number": "N.17",
+  "title": "Topologi Metrik Euklides dan Metrik Taksi.",
+  "body": "Topologi Metrik Euklides dan Metrik Taksi  Apakah dan ekuivalen secara topologis? Jelaskan.   Tahap 1. Gunakan pemetaan identitas pada .  Tahap 2. Terapkan .  Tahap 3. Untuk arah sebaliknya, kuadratkan dan gunakan .   Ya. Untuk semua berlaku , sehingga pemetaan identitas merupakan homeomorfisme.   Misalkan selisih koordinat dan adalah dan . Ketaksamaan pertama mengikuti dari . Selanjutnya, sehingga . Oleh karena itu, Teorema perbandingan metrik menjamin bahwa pemetaan identitas dan inversnya kontinu. Pemetaan ini bijektif, maka merupakan homeomorfisme; kedua ruang itu ekuivalen secara topologis.  "
+},
+{
+  "id": "o003-c90-ch14-guide-18",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-18",
+  "type": "Pemeriksaan",
+  "number": "N.18",
+  "title": "Dugaan untuk Metrik Euklides dan Metrik Maksimum.",
+  "body": "Dugaan untuk Metrik Euklides dan Metrik Maksimum  Apakah Anda menduga bahwa dan ekuivalen secara topologis? Jelaskan tanpa melakukan perhitungan ataupun perbandingan.   Tahap 1. Bayangkan bentuk bola terbuka untuk kedua metrik tersebut.  Tahap 2. Tanyakan apakah cakram terbuka dapat dideformasi menjadi persegi terbuka tanpa merobek atau merekatkan bidang.  Tahap 3. Ingat bahwa topologi memperhatikan struktur himpunan terbuka, bukan nilai jarak yang persis.   Ya. Secara geometris, lingkungan berbentuk cakram dan lingkungan berbentuk persegi menggambarkan struktur terbuka yang sama pada bidang.   Dugaan yang wajar adalah bahwa kedua ruang tersebut ekuivalen secara topologis. Bola terbuka metrik Euklides tampak sebagai cakram, sedangkan bola terbuka metrik maksimum tampak sebagai persegi dengan sisi sejajar sumbu. Cakram dapat diregangkan menjadi persegi, dan sebaliknya, tanpa membuat lubang, merobek, atau merekatkan bidang. Perubahan bentuk ini tidak mengubah gagasan bahwa setiap titik memiliki lingkungan terbuka yang dapat dibuat sekecil yang diinginkan. Karena ekuivalensi topologis mengabaikan nilai jarak yang tepat dan mempertahankan struktur terbuka, gambaran tersebut mendukung jawaban ya. Ini merupakan penjelasan kualitatif sebagaimana diminta; pembuktian formal dapat diberikan secara terpisah melalui pemetaan identitas.  "
+},
+{
+  "id": "o003-c90-ch14-guide-19",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-19",
+  "type": "Pemeriksaan",
+  "number": "N.19",
+  "title": "Ekuivalensi Metrik sebagai Relasi Ekuivalensi.",
+  "body": "Ekuivalensi Metrik sebagai Relasi Ekuivalensi  Jelaskan mengapa ekuivalensi metrik merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang metrik.   Tahap 1. Untuk sifat refleksif, gunakan pemetaan identitas suatu ruang metrik.  Tahap 2. Untuk sifat simetris, ambil invers suatu isometri.  Tahap 3. Untuk sifat transitif, komposisikan dua isometri.   Relasi ini refleksif, simetris, dan transitif: pemetaan identitas adalah isometri, invers isometri adalah isometri, dan komposisi isometri juga merupakan isometri.   Pada suatu himpunan ruang-ruang metrik, definisikan jika terdapat isometri dari ke . Untuk setiap ruang , pemetaan identitas bijektif dan memenuhi ; jadi dan relasi ini refleksif.  Jika suatu isometri, maka bijektif. Untuk , tuliskan dan . Pelestarian jarak oleh memberikan Jadi isometri dan relasi ini simetris.  Terakhir, jika dan isometri, maka bijektif dan, untuk semua , Jadi isometri dan relasi ini transitif. Ketiga sifat tersebut membuktikan bahwa ekuivalensi metrik merupakan relasi ekuivalensi.  "
+},
+{
+  "id": "o003-c90-ch14-guide-20",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-b.html#o003-c90-ch14-guide-20",
+  "type": "Pemeriksaan",
+  "number": "N.20",
+  "title": "Ekuivalensi Topologis sebagai Relasi Ekuivalensi.",
+  "body": "Ekuivalensi Topologis sebagai Relasi Ekuivalensi  Jelaskan mengapa ekuivalensi topologis merupakan relasi ekuivalensi pada setiap himpunan terpilih yang terdiri atas ruang-ruang topologi.   Tahap 1. Tunjukkan bahwa pemetaan identitas merupakan homeomorfisme.  Tahap 2. Tukar arah suatu homeomorfisme dengan mengambil inversnya.  Tahap 3. Gunakan kekontinuan komposisi untuk dua homeomorfisme berurutan.   Relasi ini refleksif, simetris, dan transitif: identitas adalah homeomorfisme, invers homeomorfisme adalah homeomorfisme, dan komposisi homeomorfisme juga merupakan homeomorfisme.   Pada suatu himpunan ruang-ruang topologi, definisikan jika terdapat homeomorfisme . Pemetaan identitas adalah bijeksi kontinu dan inversnya adalah sendiri, yang juga kontinu. Jadi ; relasi ini refleksif.  Jika homeomorfisme, definisinya menyatakan bahwa kontinu. Pemetaan bijektif, dan inversnya, yaitu , juga kontinu. Maka merupakan homeomorfisme, sehingga relasi ini simetris.  Jika dan homeomorfisme, komposisi bijektif dan kontinu. Inversnya adalah , yang kontinu sebagai komposisi dua fungsi kontinu. Jadi merupakan homeomorfisme dan relasi ini transitif. Oleh karena itu, ekuivalensi topologis merupakan relasi ekuivalensi.  "
+},
+{
+  "id": "o003-c90-ch14-source-guides-c",
+  "level": "1",
+  "url": "o003-c90-ch14-source-guides-c.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Invarian Topologis",
+  "body": " Panduan Belajar Mandiri: Invarian Topologis  Panduan ini mendampingi lima pertanyaan klasifikasi tentang sifat yang dipertahankan oleh homeomorfisme. Gunakan bahwa homeomorfisme adalah bijeksi yang memadankan himpunan terbuka pada kedua arah.  Topologi Indiskret  Tentukan apakah sifat “ memiliki topologi indiskret” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Misalkan suatu homeomorfisme.  Tahap 2. Ambil sebarang himpunan terbuka dalam dan periksa .  Tahap 3. Gunakan bahwa satu-satunya himpunan terbuka dalam adalah dan .   Ya. Topologi indiskret merupakan invarian topologis.   Misalkan suatu homeomorfisme dan memiliki topologi indiskret. Jika terbuka dalam , kekontinuan memberi terbuka dalam . Jadi atau . Karena bijektif, masing-masing kemungkinan memberi atau . Dengan demikian juga memiliki topologi indiskret.   Topologi Diskret  Tentukan apakah sifat “ memiliki topologi diskret” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Ambil sebarang .  Tahap 2. Karena diskret, terbuka dalam .  Tahap 3. Gunakan kekontinuan , atau fakta bahwa homeomorfisme merupakan pemetaan terbuka.   Ya. Topologi diskret merupakan invarian topologis.   Misalkan suatu homeomorfisme dan diskret. Untuk sebarang , prapeta adalah himpunan bagian dari , sehingga terbuka. Karena fungsi invers kontinu, prapeta himpunan terbuka di bawah , yaitu , terbuka dalam . Jadi setiap himpunan bagian dari terbuka dan diskret.   Topologi Komplemen Hingga  Tentukan apakah sifat “ memiliki topologi komplemen hingga” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Ingat bahwa himpunan tak kosong terbuka tepat ketika komplemennya berhingga.  Tahap 2. Bijeksi memadankan komplemen: .  Tahap 3. Bijeksi mempertahankan keberhinggaan dan homeomorfisme memadankan himpunan terbuka.   Ya. Topologi komplemen hingga merupakan invarian topologis.   Misalkan suatu homeomorfisme dan memiliki topologi komplemen hingga. Untuk , himpunan terbuka dalam tepat ketika terbuka dalam . Jika , hal ini ekuivalen dengan keberhinggaan . Bijektivitas memberi , sehingga kondisi itu ekuivalen dengan keberhinggaan . Jadi himpunan terbuka pada tepat merupakan dan himpunan dengan komplemen berhingga.   Keanggotaan Bilangan Dua  Tentukan apakah sifat “himpunan dasar memuat bilangan ” merupakan invarian topologis. Berikan bukti atau contoh penyangkal.   Tahap 1. Topologi tidak bergantung pada nama elemen himpunan dasar.  Tahap 2. Bandingkan dua ruang satu titik.  Tahap 3. Gunakan satu-satunya bijeksi antara dan .   Tidak. Keanggotaan elemen bernama bukan invarian topologis.   Ambil dan , masing-masing dengan topologi satu-satunya dan . Fungsi dengan adalah homeomorfisme, sebab setiap fungsi antara dua ruang satu titik bersifat kontinu pada kedua arah. Namun sedangkan . Jadi sifat tersebut tidak dipertahankan oleh homeomorfisme.   Tepat Tiga Belas Elemen  Tentukan apakah sifat “ memuat tepat elemen” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Setiap homeomorfisme merupakan bijeksi.  Tahap 2. Bijeksi mempertahankan kardinalitas.  Tahap 3. Topologi khusus pada kedua ruang tidak diperlukan.   Ya. Memiliki tepat elemen merupakan invarian topologis.   Jika suatu homeomorfisme, maka adalah bijeksi. Apabila memiliki tepat elemen, pembatasan kodomain dan injektivitas-surjektivitas menunjukkan bahwa juga memiliki tepat elemen. Jadi sifat kardinalitas ini dipertahankan oleh setiap homeomorfisme.   "
+},
+{
+  "id": "o003-c90-ch14-guide-21",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-c.html#o003-c90-ch14-guide-21",
+  "type": "Pemeriksaan",
+  "number": "N.21",
+  "title": "Topologi Indiskret.",
+  "body": "Topologi Indiskret  Tentukan apakah sifat “ memiliki topologi indiskret” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Misalkan suatu homeomorfisme.  Tahap 2. Ambil sebarang himpunan terbuka dalam dan periksa .  Tahap 3. Gunakan bahwa satu-satunya himpunan terbuka dalam adalah dan .   Ya. Topologi indiskret merupakan invarian topologis.   Misalkan suatu homeomorfisme dan memiliki topologi indiskret. Jika terbuka dalam , kekontinuan memberi terbuka dalam . Jadi atau . Karena bijektif, masing-masing kemungkinan memberi atau . Dengan demikian juga memiliki topologi indiskret.  "
+},
+{
+  "id": "o003-c90-ch14-guide-22",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-c.html#o003-c90-ch14-guide-22",
+  "type": "Pemeriksaan",
+  "number": "N.22",
+  "title": "Topologi Diskret.",
+  "body": "Topologi Diskret  Tentukan apakah sifat “ memiliki topologi diskret” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Ambil sebarang .  Tahap 2. Karena diskret, terbuka dalam .  Tahap 3. Gunakan kekontinuan , atau fakta bahwa homeomorfisme merupakan pemetaan terbuka.   Ya. Topologi diskret merupakan invarian topologis.   Misalkan suatu homeomorfisme dan diskret. Untuk sebarang , prapeta adalah himpunan bagian dari , sehingga terbuka. Karena fungsi invers kontinu, prapeta himpunan terbuka di bawah , yaitu , terbuka dalam . Jadi setiap himpunan bagian dari terbuka dan diskret.  "
+},
+{
+  "id": "o003-c90-ch14-guide-23",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-c.html#o003-c90-ch14-guide-23",
+  "type": "Pemeriksaan",
+  "number": "N.23",
+  "title": "Topologi Komplemen Hingga.",
+  "body": "Topologi Komplemen Hingga  Tentukan apakah sifat “ memiliki topologi komplemen hingga” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Ingat bahwa himpunan tak kosong terbuka tepat ketika komplemennya berhingga.  Tahap 2. Bijeksi memadankan komplemen: .  Tahap 3. Bijeksi mempertahankan keberhinggaan dan homeomorfisme memadankan himpunan terbuka.   Ya. Topologi komplemen hingga merupakan invarian topologis.   Misalkan suatu homeomorfisme dan memiliki topologi komplemen hingga. Untuk , himpunan terbuka dalam tepat ketika terbuka dalam . Jika , hal ini ekuivalen dengan keberhinggaan . Bijektivitas memberi , sehingga kondisi itu ekuivalen dengan keberhinggaan . Jadi himpunan terbuka pada tepat merupakan dan himpunan dengan komplemen berhingga.  "
+},
+{
+  "id": "o003-c90-ch14-guide-24",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-c.html#o003-c90-ch14-guide-24",
+  "type": "Pemeriksaan",
+  "number": "N.24",
+  "title": "Keanggotaan Bilangan Dua.",
+  "body": "Keanggotaan Bilangan Dua  Tentukan apakah sifat “himpunan dasar memuat bilangan ” merupakan invarian topologis. Berikan bukti atau contoh penyangkal.   Tahap 1. Topologi tidak bergantung pada nama elemen himpunan dasar.  Tahap 2. Bandingkan dua ruang satu titik.  Tahap 3. Gunakan satu-satunya bijeksi antara dan .   Tidak. Keanggotaan elemen bernama bukan invarian topologis.   Ambil dan , masing-masing dengan topologi satu-satunya dan . Fungsi dengan adalah homeomorfisme, sebab setiap fungsi antara dua ruang satu titik bersifat kontinu pada kedua arah. Namun sedangkan . Jadi sifat tersebut tidak dipertahankan oleh homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch14-guide-25",
+  "level": "2",
+  "url": "o003-c90-ch14-source-guides-c.html#o003-c90-ch14-guide-25",
+  "type": "Pemeriksaan",
+  "number": "N.25",
+  "title": "Tepat Tiga Belas Elemen.",
+  "body": "Tepat Tiga Belas Elemen  Tentukan apakah sifat “ memuat tepat elemen” merupakan invarian topologis. Buktikan jawaban Anda.   Tahap 1. Setiap homeomorfisme merupakan bijeksi.  Tahap 2. Bijeksi mempertahankan kardinalitas.  Tahap 3. Topologi khusus pada kedua ruang tidak diperlukan.   Ya. Memiliki tepat elemen merupakan invarian topologis.   Jika suatu homeomorfisme, maka adalah bijeksi. Apabila memiliki tepat elemen, pembatasan kodomain dan injektivitas-surjektivitas menunjukkan bahwa juga memiliki tepat elemen. Jadi sifat kardinalitas ini dipertahankan oleh setiap homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch14-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch14-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 14, bagian pertama",
+  "body": " Panduan latihan Bab 14, bagian pertama  Bagian ini memberi dukungan bertahap untuk sepuluh unit soal mandiri pertama pada latihan tentang ekuivalensi metrik, homeomorfisme, dan kekontinuan. Urutannya mengikuti urutan soal pada sumber; uraian jawaban dan solusi di sini merupakan materi pendamping yang ditulis secara terpisah.  Isometri juga mempertahankan jarak pada arah invers  Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik, dan misalkan suatu bijeksi sedemikian sehingga untuk semua . Buktikan bahwa untuk semua dan dalam .   Untuk , tetapkan dan , lalu terapkan persamaan pelestarian jarak kepada dan .   Persamaan tersebut berlaku karena dan .   Ambil sebarang . Karena bijektif, dan terdefinisi dan berada dalam . Gunakan sifat pelestarian jarak pada pasangan : Karena dan sebarang, persamaan berlaku untuk semua pasangan titik dalam . Jadi invers isometri itu juga mempertahankan jarak.   Homeomorfisme mempertahankan titik limit  Misalkan dan merupakan ruang topologi, suatu homeomorfisme, dan . Jika merupakan titik limit dari , apakah harus merupakan titik limit dari ? Buktikan jawaban Anda.   Ambil lingkungan sebarang bagi . Prapetanya adalah lingkungan bagi ; gunakan sifat titik limit, kemudian gunakan keinjektifan untuk mempertahankan ketaksamaan titik.   Ya. Setiap lingkungan bagi memuat suatu titik yang berbeda dari .   Ambil lingkungan sebarang bagi dalam . Karena kontinu, merupakan lingkungan bagi . Titik adalah titik limit , sehingga terdapat dengan dan . Akibatnya, . Karena suatu homeomorfisme adalah injektif, memberikan . Jadi setiap lingkungan bagi bertemu . Menurut definisi, merupakan titik limit dari .   Homeomorfisme mempertahankan titik interior  Misalkan dan merupakan ruang topologi, suatu homeomorfisme, dan . Jika merupakan titik interior dari , apakah harus merupakan titik interior dari ? Buktikan jawaban Anda.   Pilih himpunan terbuka dengan . Jelaskan mengapa terbuka.   Ya. Homeomorfisme membawa lingkungan terbuka yang termuat dalam ke lingkungan terbuka yang termuat dalam .   Karena merupakan titik interior , terdapat himpunan terbuka dengan . Invers kontinu, sehingga prapeta himpunan terbuka di bawah terbuka dalam . Prapeta ini adalah Selain itu, . Jadi memuat lingkungan terbuka dari , yang berarti merupakan titik interior dari .   Homeomorfisme mempertahankan titik batas  Misalkan dan merupakan ruang topologi, suatu homeomorfisme, dan . Jika merupakan titik batas dari , apakah harus merupakan titik batas dari ? Buktikan jawaban Anda.   Untuk lingkungan bagi , lingkungan bagi bertemu dan . Gunakan keinjektifan untuk menentukan citra titik dari komplemen itu.   Ya. Setiap lingkungan bagi bertemu dan .   Ambil lingkungan sebarang bagi . Kekontinuan membuat menjadi lingkungan bagi . Karena titik batas , terdapat dan . Maka .  Di sisi lain, tetapi . Memang, jika untuk suatu , keinjektifan akan memberikan , bertentangan dengan . Jadi . Setiap lingkungan bertemu kedua dan komplemennya; dengan demikian merupakan titik batas dari .   Ekuivalensi metrik mengakibatkan ekuivalensi topologis  Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik. Tunjukkan bahwa dan ekuivalen secara topologis jika menggunakan topologi metriknya.   Ambil isometri . Dalam pembuktian - untuk maupun , pilihan sudah cukup.   Setiap isometri adalah homeomorfisme terhadap topologi yang diinduksi oleh metrik; jadi kedua ruang tersebut ekuivalen secara topologis.   Ekuivalensi metrik menyediakan bijeksi dengan untuk semua . Tetapkan dan . Jika dengan , maka Jadi kontinu di setiap .  Karena bijektif, inversnya terdefinisi. Untuk semua , pelestarian jarak pada arah invers memberikan . Argumen yang sama, kembali dengan , menunjukkan bahwa kontinu. Dengan demikian adalah bijeksi kontinu dengan invers kontinu, yaitu homeomorfisme antara topologi-topologi metrik pada dan .   Pencirian kekontinuan melalui himpunan tertutup  Misalkan dan merupakan ruang topologi, dan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika merupakan himpunan tertutup dalam setiap kali merupakan himpunan tertutup dalam .   Gunakan kesamaan dan ubah himpunan tertutup menjadi komplemen himpunan terbuka pada kedua arah bukti.   Pernyataan itu benar: pencirian prapeta himpunan tertutup setara dengan pencirian prapeta himpunan terbuka karena prapeta mempertahankan komplemen.   Andaikan kontinu dan ambil himpunan tertutup . Himpunan terbuka, sehingga terbuka dalam . Akan tetapi, Jadi komplemen terbuka, dan karenanya tertutup dalam .  Sebaliknya, andaikan prapeta setiap himpunan tertutup dalam tertutup dalam . Ambil himpunan terbuka . Komplemennya tertutup, sehingga tertutup. Maka terbuka dalam . Prapeta setiap himpunan terbuka dalam dengan demikian terbuka dalam , yang membuktikan kekontinuan .   Komposisi fungsi kontinu  Misalkan , , dan merupakan ruang topologi. Misalkan dan merupakan fungsi kontinu. Buktikan bahwa merupakan fungsi kontinu.   Untuk himpunan terbuka , gunakan dan terapkan kekontinuan kedua fungsi secara berurutan.   Komposisi kontinu karena prapeta setiap himpunan terbuka di bawah komposisi itu terbuka dalam .   Ambil sebarang himpunan terbuka . Karena kontinu, terbuka dalam . Karena kontinu, terbuka dalam . Identitas prapeta komposisi memberikan Jadi prapeta setiap himpunan terbuka dalam di bawah terbuka dalam . Berdasarkan pencirian kekontinuan dengan himpunan terbuka, kontinu.   Menguji kekontinuan setelah prakomposisi dengan homeomorfisme  Misalkan , , dan merupakan ruang topologi. Misalkan suatu homeomorfisme dan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika kontinu.   Satu arah mengikuti kekontinuan komposisi. Untuk arah sebaliknya, tuliskan .   Kedua pernyataan setara karena dan kontinu, sedangkan komposisi fungsi-fungsi kontinu selalu kontinu.   Jika kontinu, maka juga kontinu karena merupakan homeomorfisme. Oleh teorema komposisi, kontinu.  Sebaliknya, andaikan kontinu. Invers kontinu menurut definisi homeomorfisme. Karena bijektif, Ruas kiri adalah komposisi dua fungsi kontinu, sehingga kontinu. Kedua implikasi membuktikan ekuivalensi yang diminta.   Menguji kekontinuan setelah pascakomposisi dengan homeomorfisme  Misalkan , , dan merupakan ruang topologi. Misalkan suatu homeomorfisme dan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika kontinu.   Satu arah menggunakan komposisi . Untuk arah sebaliknya, susun kembali .   Kedua pernyataan setara karena komposisi dengan homeomorfisme dapat dibatalkan secara kontinu menggunakan .   Jika kontinu, kekontinuan menunjukkan bahwa komposisi kontinu.  Sebaliknya, andaikan kontinu. Karena homeomorfisme, kontinu. Selain itu, Jadi adalah komposisi dua fungsi kontinu dan karenanya kontinu. Ini membuktikan kedua arah pernyataan.   Kontinu tepat di satu titik pada ruang berhingga  Misalkan dengan topologi . Temukan fungsi yang kontinu tepat di satu titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.   Perhatikan bahwa dan terbuka. Tentukan apa akibatnya bagi kekontinuan sebarang fungsi pada titik dan di domain.   Fungsi seperti itu tidak ada. Setiap fungsi kontinu setidaknya di dua titik, yaitu dan .   Titik terisolasi karena singleton terbuka. Ambil sebarang fungsi dan sebarang lingkungan bagi . Karena , berlaku . Dengan demikian memuat himpunan terbuka , sehingga merupakan lingkungan bagi . Menurut definisi, kontinu di .  Argumen yang sama berlaku bagi , sebab juga terbuka. Jadi, apa pun nilai-nilai fungsi , fungsi itu selalu kontinu di dan . Akibatnya tidak mungkin ada fungsi dari ke yang kontinu tepat di satu titik.   "
+},
+{
+  "id": "o003-c90-ch14-exer-a-01",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-01",
+  "type": "Pemeriksaan",
+  "number": "N.26",
+  "title": "Isometri juga mempertahankan jarak pada arah invers.",
+  "body": "Isometri juga mempertahankan jarak pada arah invers  Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik, dan misalkan suatu bijeksi sedemikian sehingga untuk semua . Buktikan bahwa untuk semua dan dalam .   Untuk , tetapkan dan , lalu terapkan persamaan pelestarian jarak kepada dan .   Persamaan tersebut berlaku karena dan .   Ambil sebarang . Karena bijektif, dan terdefinisi dan berada dalam . Gunakan sifat pelestarian jarak pada pasangan : Karena dan sebarang, persamaan berlaku untuk semua pasangan titik dalam . Jadi invers isometri itu juga mempertahankan jarak.  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-02",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-02",
+  "type": "Pemeriksaan",
+  "number": "N.27",
+  "title": "Homeomorfisme mempertahankan titik limit.",
+  "body": "Homeomorfisme mempertahankan titik limit  Misalkan dan merupakan ruang topologi, suatu homeomorfisme, dan . Jika merupakan titik limit dari , apakah harus merupakan titik limit dari ? Buktikan jawaban Anda.   Ambil lingkungan sebarang bagi . Prapetanya adalah lingkungan bagi ; gunakan sifat titik limit, kemudian gunakan keinjektifan untuk mempertahankan ketaksamaan titik.   Ya. Setiap lingkungan bagi memuat suatu titik yang berbeda dari .   Ambil lingkungan sebarang bagi dalam . Karena kontinu, merupakan lingkungan bagi . Titik adalah titik limit , sehingga terdapat dengan dan . Akibatnya, . Karena suatu homeomorfisme adalah injektif, memberikan . Jadi setiap lingkungan bagi bertemu . Menurut definisi, merupakan titik limit dari .  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-03",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-03",
+  "type": "Pemeriksaan",
+  "number": "N.28",
+  "title": "Homeomorfisme mempertahankan titik interior.",
+  "body": "Homeomorfisme mempertahankan titik interior  Misalkan dan merupakan ruang topologi, suatu homeomorfisme, dan . Jika merupakan titik interior dari , apakah harus merupakan titik interior dari ? Buktikan jawaban Anda.   Pilih himpunan terbuka dengan . Jelaskan mengapa terbuka.   Ya. Homeomorfisme membawa lingkungan terbuka yang termuat dalam ke lingkungan terbuka yang termuat dalam .   Karena merupakan titik interior , terdapat himpunan terbuka dengan . Invers kontinu, sehingga prapeta himpunan terbuka di bawah terbuka dalam . Prapeta ini adalah Selain itu, . Jadi memuat lingkungan terbuka dari , yang berarti merupakan titik interior dari .  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-04",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-04",
+  "type": "Pemeriksaan",
+  "number": "N.29",
+  "title": "Homeomorfisme mempertahankan titik batas.",
+  "body": "Homeomorfisme mempertahankan titik batas  Misalkan dan merupakan ruang topologi, suatu homeomorfisme, dan . Jika merupakan titik batas dari , apakah harus merupakan titik batas dari ? Buktikan jawaban Anda.   Untuk lingkungan bagi , lingkungan bagi bertemu dan . Gunakan keinjektifan untuk menentukan citra titik dari komplemen itu.   Ya. Setiap lingkungan bagi bertemu dan .   Ambil lingkungan sebarang bagi . Kekontinuan membuat menjadi lingkungan bagi . Karena titik batas , terdapat dan . Maka .  Di sisi lain, tetapi . Memang, jika untuk suatu , keinjektifan akan memberikan , bertentangan dengan . Jadi . Setiap lingkungan bertemu kedua dan komplemennya; dengan demikian merupakan titik batas dari .  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-05",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-05",
+  "type": "Pemeriksaan",
+  "number": "N.30",
+  "title": "Ekuivalensi metrik mengakibatkan ekuivalensi topologis.",
+  "body": "Ekuivalensi metrik mengakibatkan ekuivalensi topologis  Misalkan dan merupakan ruang metrik yang ekuivalen secara metrik. Tunjukkan bahwa dan ekuivalen secara topologis jika menggunakan topologi metriknya.   Ambil isometri . Dalam pembuktian - untuk maupun , pilihan sudah cukup.   Setiap isometri adalah homeomorfisme terhadap topologi yang diinduksi oleh metrik; jadi kedua ruang tersebut ekuivalen secara topologis.   Ekuivalensi metrik menyediakan bijeksi dengan untuk semua . Tetapkan dan . Jika dengan , maka Jadi kontinu di setiap .  Karena bijektif, inversnya terdefinisi. Untuk semua , pelestarian jarak pada arah invers memberikan . Argumen yang sama, kembali dengan , menunjukkan bahwa kontinu. Dengan demikian adalah bijeksi kontinu dengan invers kontinu, yaitu homeomorfisme antara topologi-topologi metrik pada dan .  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-06",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-06",
+  "type": "Pemeriksaan",
+  "number": "N.31",
+  "title": "Pencirian kekontinuan melalui himpunan tertutup.",
+  "body": "Pencirian kekontinuan melalui himpunan tertutup  Misalkan dan merupakan ruang topologi, dan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika merupakan himpunan tertutup dalam setiap kali merupakan himpunan tertutup dalam .   Gunakan kesamaan dan ubah himpunan tertutup menjadi komplemen himpunan terbuka pada kedua arah bukti.   Pernyataan itu benar: pencirian prapeta himpunan tertutup setara dengan pencirian prapeta himpunan terbuka karena prapeta mempertahankan komplemen.   Andaikan kontinu dan ambil himpunan tertutup . Himpunan terbuka, sehingga terbuka dalam . Akan tetapi, Jadi komplemen terbuka, dan karenanya tertutup dalam .  Sebaliknya, andaikan prapeta setiap himpunan tertutup dalam tertutup dalam . Ambil himpunan terbuka . Komplemennya tertutup, sehingga tertutup. Maka terbuka dalam . Prapeta setiap himpunan terbuka dalam dengan demikian terbuka dalam , yang membuktikan kekontinuan .  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-07",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-07",
+  "type": "Pemeriksaan",
+  "number": "N.32",
+  "title": "Komposisi fungsi kontinu.",
+  "body": "Komposisi fungsi kontinu  Misalkan , , dan merupakan ruang topologi. Misalkan dan merupakan fungsi kontinu. Buktikan bahwa merupakan fungsi kontinu.   Untuk himpunan terbuka , gunakan dan terapkan kekontinuan kedua fungsi secara berurutan.   Komposisi kontinu karena prapeta setiap himpunan terbuka di bawah komposisi itu terbuka dalam .   Ambil sebarang himpunan terbuka . Karena kontinu, terbuka dalam . Karena kontinu, terbuka dalam . Identitas prapeta komposisi memberikan Jadi prapeta setiap himpunan terbuka dalam di bawah terbuka dalam . Berdasarkan pencirian kekontinuan dengan himpunan terbuka, kontinu.  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-08",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-08",
+  "type": "Pemeriksaan",
+  "number": "N.33",
+  "title": "Menguji kekontinuan setelah prakomposisi dengan homeomorfisme.",
+  "body": "Menguji kekontinuan setelah prakomposisi dengan homeomorfisme  Misalkan , , dan merupakan ruang topologi. Misalkan suatu homeomorfisme dan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika kontinu.   Satu arah mengikuti kekontinuan komposisi. Untuk arah sebaliknya, tuliskan .   Kedua pernyataan setara karena dan kontinu, sedangkan komposisi fungsi-fungsi kontinu selalu kontinu.   Jika kontinu, maka juga kontinu karena merupakan homeomorfisme. Oleh teorema komposisi, kontinu.  Sebaliknya, andaikan kontinu. Invers kontinu menurut definisi homeomorfisme. Karena bijektif, Ruas kiri adalah komposisi dua fungsi kontinu, sehingga kontinu. Kedua implikasi membuktikan ekuivalensi yang diminta.  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-09",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-09",
+  "type": "Pemeriksaan",
+  "number": "N.34",
+  "title": "Menguji kekontinuan setelah pascakomposisi dengan homeomorfisme.",
+  "body": "Menguji kekontinuan setelah pascakomposisi dengan homeomorfisme  Misalkan , , dan merupakan ruang topologi. Misalkan suatu homeomorfisme dan suatu fungsi. Buktikan bahwa kontinu jika dan hanya jika kontinu.   Satu arah menggunakan komposisi . Untuk arah sebaliknya, susun kembali .   Kedua pernyataan setara karena komposisi dengan homeomorfisme dapat dibatalkan secara kontinu menggunakan .   Jika kontinu, kekontinuan menunjukkan bahwa komposisi kontinu.  Sebaliknya, andaikan kontinu. Karena homeomorfisme, kontinu. Selain itu, Jadi adalah komposisi dua fungsi kontinu dan karenanya kontinu. Ini membuktikan kedua arah pernyataan.  "
+},
+{
+  "id": "o003-c90-ch14-exer-a-10",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-a.html#o003-c90-ch14-exer-a-10",
+  "type": "Pemeriksaan",
+  "number": "N.35",
+  "title": "Kontinu tepat di satu titik pada ruang berhingga.",
+  "body": "Kontinu tepat di satu titik pada ruang berhingga  Misalkan dengan topologi . Temukan fungsi yang kontinu tepat di satu titik, atau tunjukkan bahwa fungsi seperti itu tidak ada.   Perhatikan bahwa dan terbuka. Tentukan apa akibatnya bagi kekontinuan sebarang fungsi pada titik dan di domain.   Fungsi seperti itu tidak ada. Setiap fungsi kontinu setidaknya di dua titik, yaitu dan .   Titik terisolasi karena singleton terbuka. Ambil sebarang fungsi dan sebarang lingkungan bagi . Karena , berlaku . Dengan demikian memuat himpunan terbuka , sehingga merupakan lingkungan bagi . Menurut definisi, kontinu di .  Argumen yang sama berlaku bagi , sebab juga terbuka. Jadi, apa pun nilai-nilai fungsi , fungsi itu selalu kontinu di dan . Akibatnya tidak mungkin ada fungsi dari ke yang kontinu tepat di satu titik.  "
+},
+{
+  "id": "o003-c90-ch14-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch14-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 14, bagian kedua",
+  "body": " Panduan latihan Bab 14, bagian kedua  Bagian ini mengikuti urutan sumber untuk sepuluh unit soal mandiri berikutnya. Setiap unit menyajikan petunjuk bertahap, jawaban singkat, dan pembuktian lengkap yang dapat diperiksa secara mandiri.  Fungsi yang kontinu tepat di dua titik   Acuan soal sumber: pada dengan , temukan fungsi yang kontinu tepat di dua titik, atau buktikan bahwa fungsi seperti itu tidak ada.   Lingkungan terbuka terkecil dari berturut-turut adalah . Pada ruang berhingga ini, kontinu di tepat ketika citra lingkungan terkecil termuat dalam lingkungan terkecil .   Ambil dan . Fungsi ini kontinu tepat di dan .   Tuliskan untuk lingkungan terbuka terkecil . Karena topologi ini berhingga, , , , dan ; kriteria kontinuitas di satu titik adalah .  Untuk fungsi yang diberikan, dan , sehingga kontinu di dan . Di pihak lain, dan . Jadi tidak kontinu di maupun , dan tepat dua titik kontinuitas telah diperoleh.   Fungsi yang kontinu tepat di tiga titik   Acuan soal sumber: untuk ruang dan topologi , temukan fungsi yang kontinu tepat di tiga titik, atau buktikan bahwa fungsi seperti itu tidak ada.   Gunakan lagi lingkungan terkecil , , , dan . Memetakan suatu titik ke memudahkan kontinuitas di titik itu karena .   Ambil dan . Fungsi ini kontinu tepat di .   Kriteria memberikan dan . Selain itu, . Jadi kontinu di .  Akan tetapi, , sedangkan . Inklusi yang diperlukan gagal, sehingga tidak kontinu di . Dengan demikian tepat tiga titik kontinuitas diperoleh.   Grafik fungsi kontinu homeomorfik dengan garis   Acuan soal sumber: untuk fungsi kontinu , buktikan bahwa grafik , dengan topologi subruang dari , homeomorfik dengan bertopologi Euklides.   Gunakan pemetaan . Inversnya pada adalah pembatasan proyeksi koordinat pertama.   Ya. Pemetaan dengan adalah suatu homeomorfisme.   Pemetaan kontinu karena kedua fungsi koordinatnya, yakni identitas dan , kontinu. Definisi grafik menunjukkan bahwa memetakan ke secara bijektif. Inversnya adalah , yaitu pembatasan proyeksi kontinu pada subruang . Karena dan inversnya kontinu, merupakan homeomorfisme.   Grafik fungsi tak kontinu tidak selalu berupa garis   Acuan soal sumber: jika syarat kontinuitas pada dihilangkan, tentukan apakah grafik tetap harus homeomorfik dengan , dan buktikan konjektur Anda.   Cari fungsi loncatan yang grafiknya terpisah menjadi dua bagian pada dua ketinggian yang berbeda. Bandingkan keterhubungan grafik itu dengan keterhubungan .   Tidak. Fungsi untuk dan untuk mempunyai grafik tak terhubung, jadi grafiknya tidak homeomorfik dengan .   Untuk fungsi tersebut, tuliskan dan . Maka , dan kedua bagian itu tak kosong. Himpunan adalah irisan grafik dengan himpunan terbuka , sedangkan adalah irisan grafik dengan himpunan terbuka . Jadi dan merupakan himpunan terbuka yang saling lepas dalam dan membentuk pemisahan grafik. Karena terhubung sedangkan tidak, keduanya tidak homeomorfik.   Identitas antara dua topologi titik khusus   Acuan soal sumber: tetapkan . Tentukan apakah fungsi identitas merupakan homeomorfisme dari topologi titik tertentu ke topologi titik yang dikecualikan , dan buktikan jawaban Anda.   Uji prapeta himpunan . Himpunan itu terbuka dalam topologi titik yang dikecualikan, tetapi bagaimana statusnya dalam topologi titik tertentu?   Bukan. Fungsi identitas tersebut bahkan tidak kontinu.   Himpunan tidak memuat , sehingga terbuka dalam . Karena adalah identitas, . Namun tak kosong, bukan seluruh , dan tidak memuat ; oleh karena itu tidak terbuka dalam . Prapeta suatu himpunan terbuka gagal menjadi terbuka, maka tidak kontinu dan tidak mungkin menjadi homeomorfisme.   Dua topologi titik khusus tidak homeomorfik   Acuan soal sumber: ketika titik khususnya , tentukan apakah homeomorfik dengan , dan buktikan jawaban Anda.   Hitung singleton yang tertutup dalam masing-masing ruang. Sifat “singleton ini tertutup” dipertahankan oleh homeomorfisme.   Tidak. Dalam topologi titik tertentu semua singleton selain tertutup, sedangkan dalam topologi titik yang dikecualikan hanya yang tertutup.   Dalam , singleton tertutup tepat ketika komplemennya terbuka. Jika , komplemen itu memuat dan karenanya terbuka; jika , komplemennya tak kosong dan tidak memuat , sehingga tidak terbuka. Jadi semua singleton kecuali tertutup.  Sebaliknya, dalam , komplemen tidak memuat dan terbuka. Untuk , himpunan memuat tetapi bukan seluruh ruang, sehingga tidak terbuka. Maka hanya yang merupakan singleton tertutup. Homeomorfisme memberikan bijeksi antara singleton tertutup, sedangkan kedua ruang memiliki jumlah singleton tertutup yang berbeda. Karena itu tidak ada homeomorfisme di antara keduanya.   Membenamkan interval terbuka dalam garis nyata   Acuan soal sumber: tunjukkan bahwa interval terbuka bertopologi Euklides dapat ditanamkan dalam bertopologi Euklides.   Perhatikan pemetaan inklusi dan topologi subruang pada citranya.   Pemetaan inklusi adalah pembenaman .   Citra inklusi adalah subruang dari . Topologi pada domain memang topologi subruang Euklides itu. Jadi bijektif, kontinu, dan inversnya adalah identitas pada , yang juga kontinu. Dengan demikian merupakan homeomorfisme ke suatu subruang dari , sehingga merupakan pembenaman.   Saling tertanam tanpa homeomorfisme   Acuan soal sumber: berikan ruang topologi dan yang tidak homeomorfik, tetapi dapat ditanamkan dalam dan dapat ditanamkan dalam .   Bandingkan dan . Untuk membedakan keduanya, periksa keterhubungan ruang setelah satu titik dihapus.   Ambil dan dengan topologi subruang dari . Keduanya saling tertanam, tetapi tidak homeomorfik.   Inklusi adalah pembenaman. Pemetaan yang diberikan oleh merupakan homeomorfisme dari ke subruang , sehingga juga suatu pembenaman.  Akan tetapi, setiap titik merupakan titik pemutus: tidak terhubung. Di ruang , titik bukan titik pemutus karena terhubung. Jika ada homeomorfisme , pembatasannya akan memberi homeomorfisme dari ke , bertentangan dengan keterhubungan ruang pertama dan ketakterhubungan ruang kedua. Jadi dan tidak homeomorfik.   Semua topologi pada himpunan dua elemen   Acuan soal sumber: untuk , temukan semua topologi yang berbeda pada dan jelaskan mengapa daftarnya lengkap.   Setiap topologi wajib memuat dan . Satu-satunya himpunan bagian lain adalah dan ; pertimbangkan apakah tidak satu pun, tepat satu, atau keduanya dimasukkan.   Tepat ada empat topologi: , , , dan .   Karena hanya memiliki empat himpunan bagian, sesudah dan yang wajib dimasukkan, keputusan yang tersisa hanyalah memasukkan atau tidak memasukkan masing-masing dari dan . Keempat pilihan itu menghasilkan daftar pada jawaban. Masing-masing daftar tertutup terhadap gabungan sebarang dan irisan berhingga. Tidak ada himpunan bagian lain yang dapat ditambahkan, sehingga daftar tersebut lengkap.   Kelas homeomorfisme ruang dua elemen   Acuan soal sumber: tentukan kelas-kelas homeomorfisme yang berbeda di antara semua ruang topologi pada himpunan , dan berikan justifikasi.   Bandingkan jumlah himpunan terbuka. Untuk dua topologi yang masing-masing mempunyai tepat satu singleton terbuka, uji bijeksi yang menukar dan .   Ada tiga kelas: topologi indiskret, topologi diskret, dan satu kelas Sierpiński yang memuat kedua topologi dengan tepat satu singleton terbuka.   Homeomorfisme menginduksi bijeksi antara koleksi himpunan terbuka, sehingga jumlah himpunan terbuka dipertahankan. Topologi indiskret mempunyai dua himpunan terbuka, topologi diskret mempunyai empat, dan masing-masing topologi serta mempunyai tiga. Karena itu tiga jenis jumlah tersebut tidak mungkin saling homeomorfik. Bijeksi yang menukar dan membawa singleton terbuka pada topologi pertama ke singleton terbuka pada topologi kedua; dan inversnya membawa himpunan terbuka ke himpunan terbuka. Jadi kedua topologi tiga-himpunan itu homeomorfik dan seluruh daftar terbagi menjadi tepat tiga kelas.   "
+},
+{
+  "id": "o003-c90-ch14-exer-b-01",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-01",
+  "type": "Pemeriksaan",
+  "number": "N.36",
+  "title": "Fungsi yang kontinu tepat di dua titik.",
+  "body": "Fungsi yang kontinu tepat di dua titik   Acuan soal sumber: pada dengan , temukan fungsi yang kontinu tepat di dua titik, atau buktikan bahwa fungsi seperti itu tidak ada.   Lingkungan terbuka terkecil dari berturut-turut adalah . Pada ruang berhingga ini, kontinu di tepat ketika citra lingkungan terkecil termuat dalam lingkungan terkecil .   Ambil dan . Fungsi ini kontinu tepat di dan .   Tuliskan untuk lingkungan terbuka terkecil . Karena topologi ini berhingga, , , , dan ; kriteria kontinuitas di satu titik adalah .  Untuk fungsi yang diberikan, dan , sehingga kontinu di dan . Di pihak lain, dan . Jadi tidak kontinu di maupun , dan tepat dua titik kontinuitas telah diperoleh.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-02",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-02",
+  "type": "Pemeriksaan",
+  "number": "N.37",
+  "title": "Fungsi yang kontinu tepat di tiga titik.",
+  "body": "Fungsi yang kontinu tepat di tiga titik   Acuan soal sumber: untuk ruang dan topologi , temukan fungsi yang kontinu tepat di tiga titik, atau buktikan bahwa fungsi seperti itu tidak ada.   Gunakan lagi lingkungan terkecil , , , dan . Memetakan suatu titik ke memudahkan kontinuitas di titik itu karena .   Ambil dan . Fungsi ini kontinu tepat di .   Kriteria memberikan dan . Selain itu, . Jadi kontinu di .  Akan tetapi, , sedangkan . Inklusi yang diperlukan gagal, sehingga tidak kontinu di . Dengan demikian tepat tiga titik kontinuitas diperoleh.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-03",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-03",
+  "type": "Pemeriksaan",
+  "number": "N.38",
+  "title": "Grafik fungsi kontinu homeomorfik dengan garis.",
+  "body": "Grafik fungsi kontinu homeomorfik dengan garis   Acuan soal sumber: untuk fungsi kontinu , buktikan bahwa grafik , dengan topologi subruang dari , homeomorfik dengan bertopologi Euklides.   Gunakan pemetaan . Inversnya pada adalah pembatasan proyeksi koordinat pertama.   Ya. Pemetaan dengan adalah suatu homeomorfisme.   Pemetaan kontinu karena kedua fungsi koordinatnya, yakni identitas dan , kontinu. Definisi grafik menunjukkan bahwa memetakan ke secara bijektif. Inversnya adalah , yaitu pembatasan proyeksi kontinu pada subruang . Karena dan inversnya kontinu, merupakan homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-04",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-04",
+  "type": "Pemeriksaan",
+  "number": "N.39",
+  "title": "Grafik fungsi tak kontinu tidak selalu berupa garis.",
+  "body": "Grafik fungsi tak kontinu tidak selalu berupa garis   Acuan soal sumber: jika syarat kontinuitas pada dihilangkan, tentukan apakah grafik tetap harus homeomorfik dengan , dan buktikan konjektur Anda.   Cari fungsi loncatan yang grafiknya terpisah menjadi dua bagian pada dua ketinggian yang berbeda. Bandingkan keterhubungan grafik itu dengan keterhubungan .   Tidak. Fungsi untuk dan untuk mempunyai grafik tak terhubung, jadi grafiknya tidak homeomorfik dengan .   Untuk fungsi tersebut, tuliskan dan . Maka , dan kedua bagian itu tak kosong. Himpunan adalah irisan grafik dengan himpunan terbuka , sedangkan adalah irisan grafik dengan himpunan terbuka . Jadi dan merupakan himpunan terbuka yang saling lepas dalam dan membentuk pemisahan grafik. Karena terhubung sedangkan tidak, keduanya tidak homeomorfik.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-05",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-05",
+  "type": "Pemeriksaan",
+  "number": "N.40",
+  "title": "Identitas antara dua topologi titik khusus.",
+  "body": "Identitas antara dua topologi titik khusus   Acuan soal sumber: tetapkan . Tentukan apakah fungsi identitas merupakan homeomorfisme dari topologi titik tertentu ke topologi titik yang dikecualikan , dan buktikan jawaban Anda.   Uji prapeta himpunan . Himpunan itu terbuka dalam topologi titik yang dikecualikan, tetapi bagaimana statusnya dalam topologi titik tertentu?   Bukan. Fungsi identitas tersebut bahkan tidak kontinu.   Himpunan tidak memuat , sehingga terbuka dalam . Karena adalah identitas, . Namun tak kosong, bukan seluruh , dan tidak memuat ; oleh karena itu tidak terbuka dalam . Prapeta suatu himpunan terbuka gagal menjadi terbuka, maka tidak kontinu dan tidak mungkin menjadi homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-06",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-06",
+  "type": "Pemeriksaan",
+  "number": "N.41",
+  "title": "Dua topologi titik khusus tidak homeomorfik.",
+  "body": "Dua topologi titik khusus tidak homeomorfik   Acuan soal sumber: ketika titik khususnya , tentukan apakah homeomorfik dengan , dan buktikan jawaban Anda.   Hitung singleton yang tertutup dalam masing-masing ruang. Sifat “singleton ini tertutup” dipertahankan oleh homeomorfisme.   Tidak. Dalam topologi titik tertentu semua singleton selain tertutup, sedangkan dalam topologi titik yang dikecualikan hanya yang tertutup.   Dalam , singleton tertutup tepat ketika komplemennya terbuka. Jika , komplemen itu memuat dan karenanya terbuka; jika , komplemennya tak kosong dan tidak memuat , sehingga tidak terbuka. Jadi semua singleton kecuali tertutup.  Sebaliknya, dalam , komplemen tidak memuat dan terbuka. Untuk , himpunan memuat tetapi bukan seluruh ruang, sehingga tidak terbuka. Maka hanya yang merupakan singleton tertutup. Homeomorfisme memberikan bijeksi antara singleton tertutup, sedangkan kedua ruang memiliki jumlah singleton tertutup yang berbeda. Karena itu tidak ada homeomorfisme di antara keduanya.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-07",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-07",
+  "type": "Pemeriksaan",
+  "number": "N.42",
+  "title": "Membenamkan interval terbuka dalam garis nyata.",
+  "body": "Membenamkan interval terbuka dalam garis nyata   Acuan soal sumber: tunjukkan bahwa interval terbuka bertopologi Euklides dapat ditanamkan dalam bertopologi Euklides.   Perhatikan pemetaan inklusi dan topologi subruang pada citranya.   Pemetaan inklusi adalah pembenaman .   Citra inklusi adalah subruang dari . Topologi pada domain memang topologi subruang Euklides itu. Jadi bijektif, kontinu, dan inversnya adalah identitas pada , yang juga kontinu. Dengan demikian merupakan homeomorfisme ke suatu subruang dari , sehingga merupakan pembenaman.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-08",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-08",
+  "type": "Pemeriksaan",
+  "number": "N.43",
+  "title": "Saling tertanam tanpa homeomorfisme.",
+  "body": "Saling tertanam tanpa homeomorfisme   Acuan soal sumber: berikan ruang topologi dan yang tidak homeomorfik, tetapi dapat ditanamkan dalam dan dapat ditanamkan dalam .   Bandingkan dan . Untuk membedakan keduanya, periksa keterhubungan ruang setelah satu titik dihapus.   Ambil dan dengan topologi subruang dari . Keduanya saling tertanam, tetapi tidak homeomorfik.   Inklusi adalah pembenaman. Pemetaan yang diberikan oleh merupakan homeomorfisme dari ke subruang , sehingga juga suatu pembenaman.  Akan tetapi, setiap titik merupakan titik pemutus: tidak terhubung. Di ruang , titik bukan titik pemutus karena terhubung. Jika ada homeomorfisme , pembatasannya akan memberi homeomorfisme dari ke , bertentangan dengan keterhubungan ruang pertama dan ketakterhubungan ruang kedua. Jadi dan tidak homeomorfik.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-09",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-09",
+  "type": "Pemeriksaan",
+  "number": "N.44",
+  "title": "Semua topologi pada himpunan dua elemen.",
+  "body": "Semua topologi pada himpunan dua elemen   Acuan soal sumber: untuk , temukan semua topologi yang berbeda pada dan jelaskan mengapa daftarnya lengkap.   Setiap topologi wajib memuat dan . Satu-satunya himpunan bagian lain adalah dan ; pertimbangkan apakah tidak satu pun, tepat satu, atau keduanya dimasukkan.   Tepat ada empat topologi: , , , dan .   Karena hanya memiliki empat himpunan bagian, sesudah dan yang wajib dimasukkan, keputusan yang tersisa hanyalah memasukkan atau tidak memasukkan masing-masing dari dan . Keempat pilihan itu menghasilkan daftar pada jawaban. Masing-masing daftar tertutup terhadap gabungan sebarang dan irisan berhingga. Tidak ada himpunan bagian lain yang dapat ditambahkan, sehingga daftar tersebut lengkap.  "
+},
+{
+  "id": "o003-c90-ch14-exer-b-10",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-b.html#o003-c90-ch14-exer-b-10",
+  "type": "Pemeriksaan",
+  "number": "N.45",
+  "title": "Kelas homeomorfisme ruang dua elemen.",
+  "body": "Kelas homeomorfisme ruang dua elemen   Acuan soal sumber: tentukan kelas-kelas homeomorfisme yang berbeda di antara semua ruang topologi pada himpunan , dan berikan justifikasi.   Bandingkan jumlah himpunan terbuka. Untuk dua topologi yang masing-masing mempunyai tepat satu singleton terbuka, uji bijeksi yang menukar dan .   Ada tiga kelas: topologi indiskret, topologi diskret, dan satu kelas Sierpiński yang memuat kedua topologi dengan tepat satu singleton terbuka.   Homeomorfisme menginduksi bijeksi antara koleksi himpunan terbuka, sehingga jumlah himpunan terbuka dipertahankan. Topologi indiskret mempunyai dua himpunan terbuka, topologi diskret mempunyai empat, dan masing-masing topologi serta mempunyai tiga. Karena itu tiga jenis jumlah tersebut tidak mungkin saling homeomorfik. Bijeksi yang menukar dan membawa singleton terbuka pada topologi pertama ke singleton terbuka pada topologi kedua; dan inversnya membawa himpunan terbuka ke himpunan terbuka. Jadi kedua topologi tiga-himpunan itu homeomorfik dan seluruh daftar terbagi menjadi tepat tiga kelas.  "
+},
+{
+  "id": "o003-c90-ch14-exercise-guides-c",
+  "level": "1",
+  "url": "o003-c90-ch14-exercise-guides-c.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 14, bagian ketiga",
+  "body": " Panduan latihan Bab 14, bagian ketiga  Bagian ini mendampingi butir latihan 21 sampai 30 dalam urutan sumber, yaitu sepuluh topologi pertama dalam tugas klasifikasi 29 topologi pada . Notasi di bawah mengikuti urutan daftar pada bab utama. Dukungan belajar ini ditulis secara terpisah sebagai konten pendamping CC BY 4.0.  Kelas topologi indiskret  Dalam daftar 29 topologi pada , pertimbangkan topologi pertama . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Homeomorfisme mempertahankan banyaknya himpunan terbuka. Hitung anggota , lalu cari topologi lain dalam daftar yang mempunyai jumlah yang sama.   Kelas homeomorfisme hanya beranggotakan sendiri.   Topologi mempunyai tepat dua himpunan terbuka, yaitu dan . Setiap homeomorfisme membawa koleksi himpunan terbuka secara bijektif ke koleksi himpunan terbuka, sehingga ruang yang homeomorfik dengan juga harus mempunyai tepat dua himpunan terbuka. Di antara 29 topologi yang diberikan, hanya yang mempunyai sifat ini. Jadi kelasnya adalah . Setiap permutasi merupakan automorfisme ruang indiskret ini, tetapi tidak menghasilkan topologi lain dalam daftar.   Satu himpunan terbuka beranggota dua: kasus pertama  Dalam daftar 29 topologi pada , pertimbangkan topologi kedua . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Relabel titik-titik . Kardinalitas satu-satunya himpunan terbuka yang tak kosong dan proper harus tetap dua.   Kelasnya adalah , dengan himpunan terbuka proper tak kosong masing-masing , , dan .   Tiga topologi yang dimaksud adalah , , dan . Pertukaran dan membawa ke , sedangkan pertukaran dan membawa ke . Karena permutasi ini membawa seluruh koleksi himpunan terbuka ke koleksi pasangannya, keduanya merupakan homeomorfisme.  Sebaliknya, ruang yang homeomorfik dengan harus mempunyai tepat tiga himpunan terbuka dan satu-satunya himpunan terbuka proper tak kosong harus beranggota dua. Dalam daftar sumber, tepat yang memenuhi kedua invarian ini. Jadi tidak ada anggota kelas yang terlewat.   Satu himpunan terbuka beranggota dua: kasus kedua  Dalam daftar 29 topologi pada , pertimbangkan topologi ketiga . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Suatu permutasi dapat mengirim subhimpunan dua elemen ke sembarang subhimpunan dua elemen lain dari .   Kelasnya adalah , yaitu topologi dengan tepat satu himpunan terbuka proper tak kosong yang beranggota dua.   Anggota kelas tersebut ialah , , dan . Pertukaran dengan mengirim ke , dan pertukaran dengan mengirim ke . Jadi ketiganya saling homeomorfik melalui pelabelan ulang titik.  Banyaknya himpunan terbuka dan kardinalitas masing-masing himpunan terbuka dipertahankan oleh homeomorfisme. Karena mempunyai tepat tiga himpunan terbuka dengan pola kardinalitas , setiap anggota kelasnya dalam daftar harus mempunyai pola yang sama. Hanya ketiga topologi di atas yang demikian, sehingga daftar kelas tersebut lengkap.   Satu himpunan terbuka beranggota dua: kasus ketiga  Dalam daftar 29 topologi pada , pertimbangkan topologi keempat . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Bandingkan struktur topologi, bukan nama titik. Ada tiga pilihan subhimpunan beranggota dua dalam himpunan tiga elemen.   Kelas homeomorfisme adalah .   Selain , kelas ini memuat dan . Pertukaran dengan membawa ke , sedangkan pertukaran dengan membawanya ke . Kedua permutasi membawa ke dan ke , sehingga memberi homeomorfisme yang diperlukan.  Setiap topologi yang homeomorfik dengan harus memiliki tepat satu himpunan terbuka proper tak kosong, dan himpunan itu harus beranggota dua. Tiga pilihan yang tercantum di atas menghabiskan semua subhimpunan dua elemen dari ; karena itu kelasnya lengkap.   Satu singleton terbuka: kasus pertama  Dalam daftar 29 topologi pada , pertimbangkan topologi kelima . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Kirim titik tunggal yang terbuka ke , , atau . Kardinalitas himpunan terbuka proper membedakan kelas ini dari kelas .   Kelasnya adalah , dengan singleton terbuka masing-masing , , dan .   Ketiga topologi tersebut adalah , , dan . Pertukaran dengan mengirim ke ; pertukaran dengan mengirimnya ke . Maka ketiganya homeomorfik.  Suatu anggota lain dari kelas harus mempunyai tepat tiga himpunan terbuka dengan satu-satunya himpunan proper tak kosong berukuran satu. Ada tepat tiga pilihan singleton pada , dan semuanya sudah muncul di atas. Topologi tidak termasuk karena himpunan terbuka propernya berukuran dua, suatu invarian di bawah homeomorfisme.   Satu singleton terbuka: kasus kedua  Dalam daftar 29 topologi pada , pertimbangkan topologi keenam . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Pertukaran dan memindahkan singleton terbuka ke ; pertukaran dan memindahkannya ke .   Kelas homeomorfisme adalah .   Kelas yang diklaim terdiri dari , , dan . Pertukaran dengan membawa ke , dan pertukaran dengan membawanya ke . Jadi ketiganya saling homeomorfik.  Homeomorfisme mempertahankan jumlah himpunan terbuka beserta kardinalitasnya. Topologi memiliki pola ; dalam daftar 29 topologi, tepat tiga topologi di atas yang mempunyai pola tersebut. Maka tidak ada anggota kelas lainnya.   Satu singleton terbuka: kasus ketiga  Dalam daftar 29 topologi pada , pertimbangkan topologi ketujuh . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Nama titik tidak bersifat topologis. Relabel sebagai atau , lalu gunakan ukuran singleton sebagai invarian.   Kelas homeomorfisme adalah .   Selain , kelas ini memuat dan . Pertukaran dengan memberi homeomorfisme dari ke , sedangkan pertukaran dengan memberi homeomorfisme ke .  Setiap topologi yang homeomorfik dengan harus mempunyai tepat satu himpunan terbuka proper tak kosong, dan himpunan itu harus berupa singleton. Ketiga singleton pada sudah menghasilkan tiga topologi yang tercantum. Dengan demikian kelas tersebut lengkap.   Rantai singleton–himpunan dua elemen: kasus pertama  Dalam daftar 29 topologi pada , pertimbangkan topologi kedelapan . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Catat bukan hanya ukuran dua himpunan terbuka proper, tetapi juga relasi . Hitung semua pasangan dengan dan .   Kelasnya adalah . Keenamnya mempunyai empat himpunan terbuka yang membentuk rantai dengan dan .   Keenam anggota kelas, dalam urutan sumber, adalah , , , , , dan .  Masing-masing ditentukan oleh suatu bendera terurut , dengan singleton terbuka dan himpunan terbuka beranggota dua. Setiap bendera seperti itu dapat dibawa ke bendera lain oleh permutasi ; permutasi tersebut membawa keempat himpunan terbuka ke keempat himpunan terbuka pasangannya, sehingga merupakan homeomorfisme. Sebagai contoh, pertukaran dan membawa ke .  Untuk kelengkapan, ada tiga pilihan bagi . Setelah dipilih, ada dua pilihan bagi yang memuatnya. Jadi terdapat tepat bendera, dan keenamnya sudah tercantum. Relasi ketercakupan serta kardinalitas dipertahankan oleh homeomorfisme, sehingga tidak ada topologi dengan struktur lain yang dapat masuk ke kelas ini.   Rantai singleton–himpunan dua elemen: kasus kedua  Dalam daftar 29 topologi pada , pertimbangkan topologi kesembilan . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Struktur pentingnya adalah bendera . Relabel pasangan “titik singleton, titik kedua dalam himpunan dua elemen” dengan semua kemungkinan.   Kelas homeomorfisme adalah .   Seluruh anggotanya ialah , , , , , dan . Pertukaran dengan , misalnya, mengirim ke .  Secara umum, pilih gambar singleton ; ada tiga pilihan. Lalu pilih gambar titik yang menambah singleton itu menjadi himpunan dua elemen; ada dua pilihan tersisa. Setiap pilihan menentukan permutasi yang membawa ke salah satu dari enam topologi di atas. Sebaliknya, suatu homeomorfisme harus mempertahankan pola empat himpunan terbuka dan rantai kardinalitas . Karena semua kemungkinan sudah terdaftar, kelas ini lengkap.   Singleton dan komplemennya yang sama-sama terbuka  Dalam daftar 29 topologi pada , pertimbangkan topologi kesepuluh . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Kedua himpunan terbuka proper tak kosong saling lepas dan saling berkomplemen. Pilih titik mana yang menjadi singleton terbuka.   Kelasnya adalah , yaitu topologi yang terdiri dari , suatu singleton, komplemen singleton tersebut, dan .   Ketiga anggota kelas adalah , , dan . Pertukaran dengan membawa ke , dan pertukaran dengan membawanya ke . Jadi ketiganya saling homeomorfik.  Dalam , dua himpunan terbuka proper tak kosong mempunyai ukuran satu dan dua, tetapi keduanya saling lepas; dengan demikian masing-masing adalah komplemen yang lain. Relasi ini dipertahankan oleh homeomorfisme. Ada tepat tiga pilihan singleton dalam , dan setiap pilihan menentukan komplemennya secara tunggal, sehingga hanya tiga topologi di atas yang mungkin. Ini juga membedakan kelas tersebut dari kelas , tempat singleton justru termuat dalam himpunan terbuka beranggota dua.   "
+},
+{
+  "id": "o003-c90-ch14-exer-c-01",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-01",
+  "type": "Pemeriksaan",
+  "number": "N.46",
+  "title": "Kelas topologi indiskret.",
+  "body": "Kelas topologi indiskret  Dalam daftar 29 topologi pada , pertimbangkan topologi pertama . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Homeomorfisme mempertahankan banyaknya himpunan terbuka. Hitung anggota , lalu cari topologi lain dalam daftar yang mempunyai jumlah yang sama.   Kelas homeomorfisme hanya beranggotakan sendiri.   Topologi mempunyai tepat dua himpunan terbuka, yaitu dan . Setiap homeomorfisme membawa koleksi himpunan terbuka secara bijektif ke koleksi himpunan terbuka, sehingga ruang yang homeomorfik dengan juga harus mempunyai tepat dua himpunan terbuka. Di antara 29 topologi yang diberikan, hanya yang mempunyai sifat ini. Jadi kelasnya adalah . Setiap permutasi merupakan automorfisme ruang indiskret ini, tetapi tidak menghasilkan topologi lain dalam daftar.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-02",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-02",
+  "type": "Pemeriksaan",
+  "number": "N.47",
+  "title": "Satu himpunan terbuka beranggota dua: kasus pertama.",
+  "body": "Satu himpunan terbuka beranggota dua: kasus pertama  Dalam daftar 29 topologi pada , pertimbangkan topologi kedua . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Relabel titik-titik . Kardinalitas satu-satunya himpunan terbuka yang tak kosong dan proper harus tetap dua.   Kelasnya adalah , dengan himpunan terbuka proper tak kosong masing-masing , , dan .   Tiga topologi yang dimaksud adalah , , dan . Pertukaran dan membawa ke , sedangkan pertukaran dan membawa ke . Karena permutasi ini membawa seluruh koleksi himpunan terbuka ke koleksi pasangannya, keduanya merupakan homeomorfisme.  Sebaliknya, ruang yang homeomorfik dengan harus mempunyai tepat tiga himpunan terbuka dan satu-satunya himpunan terbuka proper tak kosong harus beranggota dua. Dalam daftar sumber, tepat yang memenuhi kedua invarian ini. Jadi tidak ada anggota kelas yang terlewat.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-03",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-03",
+  "type": "Pemeriksaan",
+  "number": "N.48",
+  "title": "Satu himpunan terbuka beranggota dua: kasus kedua.",
+  "body": "Satu himpunan terbuka beranggota dua: kasus kedua  Dalam daftar 29 topologi pada , pertimbangkan topologi ketiga . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Suatu permutasi dapat mengirim subhimpunan dua elemen ke sembarang subhimpunan dua elemen lain dari .   Kelasnya adalah , yaitu topologi dengan tepat satu himpunan terbuka proper tak kosong yang beranggota dua.   Anggota kelas tersebut ialah , , dan . Pertukaran dengan mengirim ke , dan pertukaran dengan mengirim ke . Jadi ketiganya saling homeomorfik melalui pelabelan ulang titik.  Banyaknya himpunan terbuka dan kardinalitas masing-masing himpunan terbuka dipertahankan oleh homeomorfisme. Karena mempunyai tepat tiga himpunan terbuka dengan pola kardinalitas , setiap anggota kelasnya dalam daftar harus mempunyai pola yang sama. Hanya ketiga topologi di atas yang demikian, sehingga daftar kelas tersebut lengkap.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-04",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-04",
+  "type": "Pemeriksaan",
+  "number": "N.49",
+  "title": "Satu himpunan terbuka beranggota dua: kasus ketiga.",
+  "body": "Satu himpunan terbuka beranggota dua: kasus ketiga  Dalam daftar 29 topologi pada , pertimbangkan topologi keempat . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Bandingkan struktur topologi, bukan nama titik. Ada tiga pilihan subhimpunan beranggota dua dalam himpunan tiga elemen.   Kelas homeomorfisme adalah .   Selain , kelas ini memuat dan . Pertukaran dengan membawa ke , sedangkan pertukaran dengan membawanya ke . Kedua permutasi membawa ke dan ke , sehingga memberi homeomorfisme yang diperlukan.  Setiap topologi yang homeomorfik dengan harus memiliki tepat satu himpunan terbuka proper tak kosong, dan himpunan itu harus beranggota dua. Tiga pilihan yang tercantum di atas menghabiskan semua subhimpunan dua elemen dari ; karena itu kelasnya lengkap.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-05",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-05",
+  "type": "Pemeriksaan",
+  "number": "N.50",
+  "title": "Satu singleton terbuka: kasus pertama.",
+  "body": "Satu singleton terbuka: kasus pertama  Dalam daftar 29 topologi pada , pertimbangkan topologi kelima . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Kirim titik tunggal yang terbuka ke , , atau . Kardinalitas himpunan terbuka proper membedakan kelas ini dari kelas .   Kelasnya adalah , dengan singleton terbuka masing-masing , , dan .   Ketiga topologi tersebut adalah , , dan . Pertukaran dengan mengirim ke ; pertukaran dengan mengirimnya ke . Maka ketiganya homeomorfik.  Suatu anggota lain dari kelas harus mempunyai tepat tiga himpunan terbuka dengan satu-satunya himpunan proper tak kosong berukuran satu. Ada tepat tiga pilihan singleton pada , dan semuanya sudah muncul di atas. Topologi tidak termasuk karena himpunan terbuka propernya berukuran dua, suatu invarian di bawah homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-06",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-06",
+  "type": "Pemeriksaan",
+  "number": "N.51",
+  "title": "Satu singleton terbuka: kasus kedua.",
+  "body": "Satu singleton terbuka: kasus kedua  Dalam daftar 29 topologi pada , pertimbangkan topologi keenam . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Pertukaran dan memindahkan singleton terbuka ke ; pertukaran dan memindahkannya ke .   Kelas homeomorfisme adalah .   Kelas yang diklaim terdiri dari , , dan . Pertukaran dengan membawa ke , dan pertukaran dengan membawanya ke . Jadi ketiganya saling homeomorfik.  Homeomorfisme mempertahankan jumlah himpunan terbuka beserta kardinalitasnya. Topologi memiliki pola ; dalam daftar 29 topologi, tepat tiga topologi di atas yang mempunyai pola tersebut. Maka tidak ada anggota kelas lainnya.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-07",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-07",
+  "type": "Pemeriksaan",
+  "number": "N.52",
+  "title": "Satu singleton terbuka: kasus ketiga.",
+  "body": "Satu singleton terbuka: kasus ketiga  Dalam daftar 29 topologi pada , pertimbangkan topologi ketujuh . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan berikan justifikasi.   Nama titik tidak bersifat topologis. Relabel sebagai atau , lalu gunakan ukuran singleton sebagai invarian.   Kelas homeomorfisme adalah .   Selain , kelas ini memuat dan . Pertukaran dengan memberi homeomorfisme dari ke , sedangkan pertukaran dengan memberi homeomorfisme ke .  Setiap topologi yang homeomorfik dengan harus mempunyai tepat satu himpunan terbuka proper tak kosong, dan himpunan itu harus berupa singleton. Ketiga singleton pada sudah menghasilkan tiga topologi yang tercantum. Dengan demikian kelas tersebut lengkap.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-08",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-08",
+  "type": "Pemeriksaan",
+  "number": "N.53",
+  "title": "Rantai singleton–himpunan dua elemen: kasus pertama.",
+  "body": "Rantai singleton–himpunan dua elemen: kasus pertama  Dalam daftar 29 topologi pada , pertimbangkan topologi kedelapan . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Catat bukan hanya ukuran dua himpunan terbuka proper, tetapi juga relasi . Hitung semua pasangan dengan dan .   Kelasnya adalah . Keenamnya mempunyai empat himpunan terbuka yang membentuk rantai dengan dan .   Keenam anggota kelas, dalam urutan sumber, adalah , , , , , dan .  Masing-masing ditentukan oleh suatu bendera terurut , dengan singleton terbuka dan himpunan terbuka beranggota dua. Setiap bendera seperti itu dapat dibawa ke bendera lain oleh permutasi ; permutasi tersebut membawa keempat himpunan terbuka ke keempat himpunan terbuka pasangannya, sehingga merupakan homeomorfisme. Sebagai contoh, pertukaran dan membawa ke .  Untuk kelengkapan, ada tiga pilihan bagi . Setelah dipilih, ada dua pilihan bagi yang memuatnya. Jadi terdapat tepat bendera, dan keenamnya sudah tercantum. Relasi ketercakupan serta kardinalitas dipertahankan oleh homeomorfisme, sehingga tidak ada topologi dengan struktur lain yang dapat masuk ke kelas ini.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-09",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-09",
+  "type": "Pemeriksaan",
+  "number": "N.54",
+  "title": "Rantai singleton–himpunan dua elemen: kasus kedua.",
+  "body": "Rantai singleton–himpunan dua elemen: kasus kedua  Dalam daftar 29 topologi pada , pertimbangkan topologi kesembilan . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Struktur pentingnya adalah bendera . Relabel pasangan “titik singleton, titik kedua dalam himpunan dua elemen” dengan semua kemungkinan.   Kelas homeomorfisme adalah .   Seluruh anggotanya ialah , , , , , dan . Pertukaran dengan , misalnya, mengirim ke .  Secara umum, pilih gambar singleton ; ada tiga pilihan. Lalu pilih gambar titik yang menambah singleton itu menjadi himpunan dua elemen; ada dua pilihan tersisa. Setiap pilihan menentukan permutasi yang membawa ke salah satu dari enam topologi di atas. Sebaliknya, suatu homeomorfisme harus mempertahankan pola empat himpunan terbuka dan rantai kardinalitas . Karena semua kemungkinan sudah terdaftar, kelas ini lengkap.  "
+},
+{
+  "id": "o003-c90-ch14-exer-c-10",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-c.html#o003-c90-ch14-exer-c-10",
+  "type": "Pemeriksaan",
+  "number": "N.55",
+  "title": "Singleton dan komplemennya yang sama-sama terbuka.",
+  "body": "Singleton dan komplemennya yang sama-sama terbuka  Dalam daftar 29 topologi pada , pertimbangkan topologi kesepuluh . Tentukan seluruh anggota kelas homeomorfisme yang memuat dan buktikan bahwa daftar tersebut lengkap.   Kedua himpunan terbuka proper tak kosong saling lepas dan saling berkomplemen. Pilih titik mana yang menjadi singleton terbuka.   Kelasnya adalah , yaitu topologi yang terdiri dari , suatu singleton, komplemen singleton tersebut, dan .   Ketiga anggota kelas adalah , , dan . Pertukaran dengan membawa ke , dan pertukaran dengan membawanya ke . Jadi ketiganya saling homeomorfik.  Dalam , dua himpunan terbuka proper tak kosong mempunyai ukuran satu dan dua, tetapi keduanya saling lepas; dengan demikian masing-masing adalah komplemen yang lain. Relasi ini dipertahankan oleh homeomorfisme. Ada tepat tiga pilihan singleton dalam , dan setiap pilihan menentukan komplemennya secara tunggal, sehingga hanya tiga topologi di atas yang mungkin. Ini juga membedakan kelas tersebut dari kelas , tempat singleton justru termuat dalam himpunan terbuka beranggota dua.  "
+},
+{
+  "id": "o003-c90-ch14-exercise-guides-d",
+  "level": "1",
+  "url": "o003-c90-ch14-exercise-guides-d.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 14, bagian keempat",
+  "body": " Panduan latihan Bab 14, bagian keempat  Bagian ini mendampingi sepuluh topologi berikutnya dalam klasifikasi 29 topologi pada . Dua topologi pada himpunan berhingga ini homeomorfik tepat ketika suatu permutasi titik membawa seluruh keluarga himpunan terbuka yang satu ke keluarga yang lain. Klasifikasi lengkap menghasilkan sembilan kelas homeomorfisme; panduan berikut mengidentifikasi orbit permutasi untuk setiap topologi dalam blok ini. Uraian pendamping ini ditulis secara terpisah.  Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Catat bahwa dua himpunan terbuka tak trivial mempunyai ukuran dan , dan singleton itu termuat dalam doubleton. Relabeli pasangan titik terurut yang menentukan rantai tersebut.   Kelasnya terdiri atas enam topologi , , , , , dan .   Topologi ini mempunyai tepat satu singleton terbuka, yaitu , dan tepat satu doubleton terbuka, yaitu ; selain itu . Secara umum, setiap relabelingnya berbentuk dengan dan . Ada pasangan terurut seperti itu, dan keenam pilihannya memberikan persis enam topologi dalam jawaban.  Untuk dua pasangan terurut dan , pilih permutasi yang mengirim ke , ke , dan titik sisanya ke titik sisanya. Permutasi itu mengirim setiap anggota ke anggota yang bersesuaian dalam , sehingga merupakan homeomorfisme. Sebaliknya, homeomorfisme mempertahankan ukuran himpunan terbuka dan relasi inklusi. Jadi citra singleton terbuka harus tetap termuat dalam citra doubleton terbuka, dan tidak ada topologi di luar enam bentuk tersebut yang dapat masuk ke kelas ini.   Singleton terbuka dan komplemennya  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Kedua himpunan terbuka tak trivial saling berkomplemen. Pilih titik mana yang menjadi satu-satunya singleton terbuka, lalu permutasikan ketiga kemungkinan pilihan itu.   Kelasnya terdiri atas , , dan .   Topologi yang diberikan mempunyai tepat satu singleton terbuka dan satu doubleton terbuka , dan keduanya saling lepas serta saling berkomplemen. Setiap relabeling mempunyai bentuk dengan . Tiga pilihan untuk menghasilkan tepat tiga topologi yang tercantum dalam jawaban.  Jika , setiap permutasi yang mengirim ke juga mengirim komplemen ke komplemen ; jadi permutasi itu merupakan homeomorfisme dari ke . Sebaliknya, homeomorfisme harus mengirim singleton terbuka yang unik ke singleton terbuka yang unik dan mempertahankan komplemen. Karena itu orbit ini tidak memiliki anggota lain. Secara khusus, kelas ini berbeda dari kelas rantai, sebab di sini singleton tidak termuat dalam doubleton terbuka.   Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Pandang sebagai titik pertama dan sebagai titik kedua dalam pasangan terurut yang menghasilkan .   Kelasnya terdiri atas enam topologi , , , , , dan .   Di luar dan , topologi ini mempunyai rantai . Relabeling sebarang ditentukan oleh citra titik dan citra titik ; keduanya harus berbeda. Karena ada enam pasangan terurut titik berbeda, orbit relabelingnya adalah keenam topologi dalam jawaban. Misalnya, pertukaran dengan mengirim topologi ini ke .  Setiap pasangan terurut dapat dikirim ke pasangan lain oleh suatu permutasi , dan permutasi itu membawa singleton serta doubleton pembentuk rantai ke singleton serta doubleton sasaran. Sebaliknya, banyaknya himpunan terbuka dari setiap ukuran dan inklusi singleton ke doubleton dipertahankan oleh homeomorfisme. Maka hanya keenam topologi rantai tersebut yang berada dalam kelas yang sama.   Singleton dan doubleton komplemennya  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Himpunan adalah satu-satunya singleton terbuka, sedangkan . Relabeli titik khusus .   Kelasnya terdiri atas , , dan .   Topologi ini berbentuk . Jika suatu permutasi mengirim ke , citra topologinya adalah . Untuk , diperoleh tepat tiga topologi dalam jawaban, dan setiap permutasi tersebut adalah homeomorfisme ke citranya.  Tidak ada anggota lain dalam kelas ini. Memang, homeomorfisme mempertahankan fakta bahwa terdapat tepat satu singleton terbuka dan tepat satu doubleton terbuka, serta bahwa keduanya saling berkomplemen. Ciri ini menentukan tiga topologi di antara daftar 29 topologi.   Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Topologi ini ditentukan oleh pasangan terurut . Tentukan semua citra pasangan itu di bawah keenam permutasi .   Kelasnya terdiri atas enam topologi , , , , , dan .   Dua himpunan terbuka tak trivial membentuk rantai . Untuk permutasi , citra topologi adalah Pasangan dapat menjadi pasangan terurut mana pun dari dua titik berbeda. Enam kemungkinan itu menghasilkan persis enam topologi yang dicantumkan dalam jawaban, sehingga semuanya homeomorfik.  Sebarang homeomorfisme harus mengirim satu-satunya singleton terbuka ke singleton terbuka dan satu-satunya doubleton terbuka ke doubleton terbuka, sekaligus mempertahankan inklusinya. Oleh sebab itu citranya harus tetap berbentuk dengan . Tidak ada topologi lain dalam orbit ini.   Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Relabeling ditentukan oleh citra , yang membentuk singleton, dan citra , yang melengkapi singleton menjadi doubleton.   Kelasnya terdiri atas enam topologi , , , , , dan .   Topologi yang diberikan mempunyai pola . Jika suatu permutasi , polanya berubah menjadi . Keenam kemungkinan pasangan terurut menghasilkan keenam topologi dalam jawaban. Sebaliknya, setiap pasangan terurut titik berbeda dapat dicapai oleh suatu permutasi, sehingga keenamnya memang homeomorfik.  Banyaknya himpunan terbuka menurut ukuran adalah untuk ukuran , dan singleton terbukanya termuat dalam doubleton terbuka. Ukuran serta inklusi dipertahankan oleh setiap homeomorfisme. Ciri-ciri ini memaksa setiap anggota kelas berbentuk rantai yang sama, sehingga daftar enam anggota itu lengkap.   Singleton pusat dalam dua doubleton terbuka  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Titik dikenali secara topologis sebagai singleton terbuka yang merupakan irisan kedua doubleton terbuka. Relabeli titik khusus ini.   Kelasnya terdiri atas , , dan .   Untuk setiap , dengan sebagai dua titik lain, definisikan Topologi pada soal adalah . Permutasi yang mengirim ke mengirim kedua titik sisanya ke dalam suatu urutan dan membawa ke . Jadi tiga topologi dalam jawaban semuanya homeomorfik.  Dalam setiap terdapat tepat satu singleton terbuka dan tepat dua doubleton terbuka; kedua doubleton itu beririsan tepat pada singleton tersebut. Homeomorfisme mempertahankan ukuran dan irisan, sehingga harus mengirim titik khusus ke titik khusus pada topologi sasaran. Hanya ada tiga pilihan bagi titik itu, maka ketiga topologi yang terdaftar membentuk seluruh kelas.   Singleton pusat dalam dua doubleton terbuka  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Kedua doubleton terbuka beririsan pada . Gunakan citra titik irisan itu untuk menentukan seluruh orbit permutasi.   Kelasnya terdiri atas , , dan .   Topologi ini mempunyai singleton terbuka unik dan kedua doubleton yang memuatnya. Jika permutasi mengirim ke , maka citra kedua doubleton adalah dua doubleton yang memuat . Jadi citra topologinya ialah , dengan . Tiga pilihan menghasilkan persis tiga topologi dalam jawaban.  Sebaliknya, setiap pilihan titik pusat dapat dicapai oleh suatu permutasi, sehingga ketiganya homeomorfik. Sebuah homeomorfisme harus mempertahankan adanya satu singleton terbuka, dua doubleton terbuka, dan fakta bahwa irisan kedua doubleton adalah singleton itu. Karena struktur tersebut hanya bergantung pada pilihan titik pusat, tidak ada anggota kelas tambahan.   Singleton pusat dalam dua doubleton terbuka  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Relabeli , satu-satunya titik yang singletonnya terbuka dan yang terletak dalam kedua doubleton terbuka.   Kelasnya terdiri atas , , dan .   Topologi ini adalah . Permutasi yang mengirim ke atau mengirimnya masing-masing ke dua topologi lain dalam jawaban. Sebagai contoh, pertukaran dan menghasilkan , yang sama dengan anggota pertama karena urutan penulisan himpunan terbuka tidak penting.  Singleton terbuka unik merupakan irisan dari dua doubleton terbuka. Ciri tersebut dipertahankan oleh setiap homeomorfisme dan menentukan satu titik pusat. Karena hanya ada tiga pilihan titik pusat, orbitnya berukuran tiga dan tepat sama dengan daftar pada jawaban.   Dua singleton terbuka dan gabungannya  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Topologi ini ditentukan oleh pasangan tak terurut titik yang singletonnya terbuka. Ada berapa subhimpunan dua elemen dalam ?   Kelasnya terdiri atas , , dan .   Untuk subhimpunan dua elemen , definisikan Topologi pada soal adalah . Sebuah permutasi mengirimnya ke . Terdapat pilihan untuk , yang menghasilkan tepat tiga topologi dalam jawaban. Karena setiap dua subhimpunan berukuran dua dapat saling dikirim oleh suatu permutasi, ketiganya homeomorfik.  Sebuah homeomorfisme harus mempertahankan fakta bahwa terdapat tepat dua singleton terbuka dan bahwa gabungan keduanya adalah satu-satunya doubleton terbuka. Karena struktur itu sepenuhnya menentukan pasangan tak terurut , setiap anggota kelas harus berbentuk . Maka daftar tiga anggota tersebut lengkap. Kelas ini berbeda dari kelas tiga anggota sebelumnya, yang hanya mempunyai satu singleton terbuka dan dua doubleton terbuka.   "
+},
+{
+  "id": "o003-c90-ch14-exer-d-01",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-01",
+  "type": "Pemeriksaan",
+  "number": "N.56",
+  "title": "Kelas rantai dari singleton <span class=\"process-math\">\\(\\{b\\}\\)<\/span> ke <span class=\"process-math\">\\(\\{a,b\\}\\)<\/span>.",
+  "body": "Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Catat bahwa dua himpunan terbuka tak trivial mempunyai ukuran dan , dan singleton itu termuat dalam doubleton. Relabeli pasangan titik terurut yang menentukan rantai tersebut.   Kelasnya terdiri atas enam topologi , , , , , dan .   Topologi ini mempunyai tepat satu singleton terbuka, yaitu , dan tepat satu doubleton terbuka, yaitu ; selain itu . Secara umum, setiap relabelingnya berbentuk dengan dan . Ada pasangan terurut seperti itu, dan keenam pilihannya memberikan persis enam topologi dalam jawaban.  Untuk dua pasangan terurut dan , pilih permutasi yang mengirim ke , ke , dan titik sisanya ke titik sisanya. Permutasi itu mengirim setiap anggota ke anggota yang bersesuaian dalam , sehingga merupakan homeomorfisme. Sebaliknya, homeomorfisme mempertahankan ukuran himpunan terbuka dan relasi inklusi. Jadi citra singleton terbuka harus tetap termuat dalam citra doubleton terbuka, dan tidak ada topologi di luar enam bentuk tersebut yang dapat masuk ke kelas ini.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-02",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-02",
+  "type": "Pemeriksaan",
+  "number": "N.57",
+  "title": "Singleton terbuka dan komplemennya.",
+  "body": "Singleton terbuka dan komplemennya  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Kedua himpunan terbuka tak trivial saling berkomplemen. Pilih titik mana yang menjadi satu-satunya singleton terbuka, lalu permutasikan ketiga kemungkinan pilihan itu.   Kelasnya terdiri atas , , dan .   Topologi yang diberikan mempunyai tepat satu singleton terbuka dan satu doubleton terbuka , dan keduanya saling lepas serta saling berkomplemen. Setiap relabeling mempunyai bentuk dengan . Tiga pilihan untuk menghasilkan tepat tiga topologi yang tercantum dalam jawaban.  Jika , setiap permutasi yang mengirim ke juga mengirim komplemen ke komplemen ; jadi permutasi itu merupakan homeomorfisme dari ke . Sebaliknya, homeomorfisme harus mengirim singleton terbuka yang unik ke singleton terbuka yang unik dan mempertahankan komplemen. Karena itu orbit ini tidak memiliki anggota lain. Secara khusus, kelas ini berbeda dari kelas rantai, sebab di sini singleton tidak termuat dalam doubleton terbuka.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-03",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-03",
+  "type": "Pemeriksaan",
+  "number": "N.58",
+  "title": "Kelas rantai dari singleton <span class=\"process-math\">\\(\\{b\\}\\)<\/span> ke <span class=\"process-math\">\\(\\{b,c\\}\\)<\/span>.",
+  "body": "Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Pandang sebagai titik pertama dan sebagai titik kedua dalam pasangan terurut yang menghasilkan .   Kelasnya terdiri atas enam topologi , , , , , dan .   Di luar dan , topologi ini mempunyai rantai . Relabeling sebarang ditentukan oleh citra titik dan citra titik ; keduanya harus berbeda. Karena ada enam pasangan terurut titik berbeda, orbit relabelingnya adalah keenam topologi dalam jawaban. Misalnya, pertukaran dengan mengirim topologi ini ke .  Setiap pasangan terurut dapat dikirim ke pasangan lain oleh suatu permutasi , dan permutasi itu membawa singleton serta doubleton pembentuk rantai ke singleton serta doubleton sasaran. Sebaliknya, banyaknya himpunan terbuka dari setiap ukuran dan inklusi singleton ke doubleton dipertahankan oleh homeomorfisme. Maka hanya keenam topologi rantai tersebut yang berada dalam kelas yang sama.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-04",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-04",
+  "type": "Pemeriksaan",
+  "number": "N.59",
+  "title": "Singleton <span class=\"process-math\">\\(\\{c\\}\\)<\/span> dan doubleton komplemennya.",
+  "body": "Singleton dan doubleton komplemennya  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Himpunan adalah satu-satunya singleton terbuka, sedangkan . Relabeli titik khusus .   Kelasnya terdiri atas , , dan .   Topologi ini berbentuk . Jika suatu permutasi mengirim ke , citra topologinya adalah . Untuk , diperoleh tepat tiga topologi dalam jawaban, dan setiap permutasi tersebut adalah homeomorfisme ke citranya.  Tidak ada anggota lain dalam kelas ini. Memang, homeomorfisme mempertahankan fakta bahwa terdapat tepat satu singleton terbuka dan tepat satu doubleton terbuka, serta bahwa keduanya saling berkomplemen. Ciri ini menentukan tiga topologi di antara daftar 29 topologi.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-05",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-05",
+  "type": "Pemeriksaan",
+  "number": "N.60",
+  "title": "Kelas rantai dari singleton <span class=\"process-math\">\\(\\{c\\}\\)<\/span> ke <span class=\"process-math\">\\(\\{a,c\\}\\)<\/span>.",
+  "body": "Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Topologi ini ditentukan oleh pasangan terurut . Tentukan semua citra pasangan itu di bawah keenam permutasi .   Kelasnya terdiri atas enam topologi , , , , , dan .   Dua himpunan terbuka tak trivial membentuk rantai . Untuk permutasi , citra topologi adalah Pasangan dapat menjadi pasangan terurut mana pun dari dua titik berbeda. Enam kemungkinan itu menghasilkan persis enam topologi yang dicantumkan dalam jawaban, sehingga semuanya homeomorfik.  Sebarang homeomorfisme harus mengirim satu-satunya singleton terbuka ke singleton terbuka dan satu-satunya doubleton terbuka ke doubleton terbuka, sekaligus mempertahankan inklusinya. Oleh sebab itu citranya harus tetap berbentuk dengan . Tidak ada topologi lain dalam orbit ini.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-06",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-06",
+  "type": "Pemeriksaan",
+  "number": "N.61",
+  "title": "Kelas rantai dari singleton <span class=\"process-math\">\\(\\{c\\}\\)<\/span> ke <span class=\"process-math\">\\(\\{b,c\\}\\)<\/span>.",
+  "body": "Kelas rantai dari singleton ke  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Relabeling ditentukan oleh citra , yang membentuk singleton, dan citra , yang melengkapi singleton menjadi doubleton.   Kelasnya terdiri atas enam topologi , , , , , dan .   Topologi yang diberikan mempunyai pola . Jika suatu permutasi , polanya berubah menjadi . Keenam kemungkinan pasangan terurut menghasilkan keenam topologi dalam jawaban. Sebaliknya, setiap pasangan terurut titik berbeda dapat dicapai oleh suatu permutasi, sehingga keenamnya memang homeomorfik.  Banyaknya himpunan terbuka menurut ukuran adalah untuk ukuran , dan singleton terbukanya termuat dalam doubleton terbuka. Ukuran serta inklusi dipertahankan oleh setiap homeomorfisme. Ciri-ciri ini memaksa setiap anggota kelas berbentuk rantai yang sama, sehingga daftar enam anggota itu lengkap.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-07",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-07",
+  "type": "Pemeriksaan",
+  "number": "N.62",
+  "title": "Singleton pusat <span class=\"process-math\">\\(\\{a\\}\\)<\/span> dalam dua doubleton terbuka.",
+  "body": "Singleton pusat dalam dua doubleton terbuka  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Titik dikenali secara topologis sebagai singleton terbuka yang merupakan irisan kedua doubleton terbuka. Relabeli titik khusus ini.   Kelasnya terdiri atas , , dan .   Untuk setiap , dengan sebagai dua titik lain, definisikan Topologi pada soal adalah . Permutasi yang mengirim ke mengirim kedua titik sisanya ke dalam suatu urutan dan membawa ke . Jadi tiga topologi dalam jawaban semuanya homeomorfik.  Dalam setiap terdapat tepat satu singleton terbuka dan tepat dua doubleton terbuka; kedua doubleton itu beririsan tepat pada singleton tersebut. Homeomorfisme mempertahankan ukuran dan irisan, sehingga harus mengirim titik khusus ke titik khusus pada topologi sasaran. Hanya ada tiga pilihan bagi titik itu, maka ketiga topologi yang terdaftar membentuk seluruh kelas.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-08",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-08",
+  "type": "Pemeriksaan",
+  "number": "N.63",
+  "title": "Singleton pusat <span class=\"process-math\">\\(\\{b\\}\\)<\/span> dalam dua doubleton terbuka.",
+  "body": "Singleton pusat dalam dua doubleton terbuka  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Kedua doubleton terbuka beririsan pada . Gunakan citra titik irisan itu untuk menentukan seluruh orbit permutasi.   Kelasnya terdiri atas , , dan .   Topologi ini mempunyai singleton terbuka unik dan kedua doubleton yang memuatnya. Jika permutasi mengirim ke , maka citra kedua doubleton adalah dua doubleton yang memuat . Jadi citra topologinya ialah , dengan . Tiga pilihan menghasilkan persis tiga topologi dalam jawaban.  Sebaliknya, setiap pilihan titik pusat dapat dicapai oleh suatu permutasi, sehingga ketiganya homeomorfik. Sebuah homeomorfisme harus mempertahankan adanya satu singleton terbuka, dua doubleton terbuka, dan fakta bahwa irisan kedua doubleton adalah singleton itu. Karena struktur tersebut hanya bergantung pada pilihan titik pusat, tidak ada anggota kelas tambahan.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-09",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-09",
+  "type": "Pemeriksaan",
+  "number": "N.64",
+  "title": "Singleton pusat <span class=\"process-math\">\\(\\{c\\}\\)<\/span> dalam dua doubleton terbuka.",
+  "body": "Singleton pusat dalam dua doubleton terbuka  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Relabeli , satu-satunya titik yang singletonnya terbuka dan yang terletak dalam kedua doubleton terbuka.   Kelasnya terdiri atas , , dan .   Topologi ini adalah . Permutasi yang mengirim ke atau mengirimnya masing-masing ke dua topologi lain dalam jawaban. Sebagai contoh, pertukaran dan menghasilkan , yang sama dengan anggota pertama karena urutan penulisan himpunan terbuka tidak penting.  Singleton terbuka unik merupakan irisan dari dua doubleton terbuka. Ciri tersebut dipertahankan oleh setiap homeomorfisme dan menentukan satu titik pusat. Karena hanya ada tiga pilihan titik pusat, orbitnya berukuran tiga dan tepat sama dengan daftar pada jawaban.  "
+},
+{
+  "id": "o003-c90-ch14-exer-d-10",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-d.html#o003-c90-ch14-exer-d-10",
+  "type": "Pemeriksaan",
+  "number": "N.65",
+  "title": "Dua singleton terbuka dan gabungannya.",
+  "body": "Dua singleton terbuka dan gabungannya  Misalkan . Dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme yang memuat , identifikasi semua anggotanya, dan berikan justifikasi.   Topologi ini ditentukan oleh pasangan tak terurut titik yang singletonnya terbuka. Ada berapa subhimpunan dua elemen dalam ?   Kelasnya terdiri atas , , dan .   Untuk subhimpunan dua elemen , definisikan Topologi pada soal adalah . Sebuah permutasi mengirimnya ke . Terdapat pilihan untuk , yang menghasilkan tepat tiga topologi dalam jawaban. Karena setiap dua subhimpunan berukuran dua dapat saling dikirim oleh suatu permutasi, ketiganya homeomorfik.  Sebuah homeomorfisme harus mempertahankan fakta bahwa terdapat tepat dua singleton terbuka dan bahwa gabungan keduanya adalah satu-satunya doubleton terbuka. Karena struktur itu sepenuhnya menentukan pasangan tak terurut , setiap anggota kelas harus berbentuk . Maka daftar tiga anggota tersebut lengkap. Kelas ini berbeda dari kelas tiga anggota sebelumnya, yang hanya mempunyai satu singleton terbuka dan dua doubleton terbuka.  "
+},
+{
+  "id": "o003-c90-ch14-exercise-guides-e",
+  "level": "1",
+  "url": "o003-c90-ch14-exercise-guides-e.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 14, bagian kelima",
+  "body": " Panduan latihan Bab 14, bagian kelima  Sembilan unit pertama melanjutkan soal klasifikasi semua topologi pada . Tuliskan untuk topologi ke- dalam urutan sumber. Sebagai acuan bagi pembuktian di bawah, dan . Pelabelan ulang ketiga titik menghasilkan partisi orbit Jadi, terdapat tepat sembilan kelas homeomorfisme. Daftar ini dapat diperiksa tanpa menebak: dua topologi pada himpunan berhingga yang sama homeomorfik tepat ketika suatu permutasi titik membawa seluruh koleksi himpunan terbuka yang satu ke koleksi yang lain.  Topologi ke-21 pada tiga titik   Acuan soal sumber: dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme dari dan berikan justifikasi.   Bandingkan dengan dan tukarkan label dan . Untuk memastikan kelasnya tidak lebih besar, hitung banyak himpunan terbuka beranggota satu dan beranggota dua.   Topologi berada dalam kelas .   Permutasi yang menetapkan dan menukar dengan membawa himpunan terbuka dari berturut-turut ke . Jadi permutasi itu merupakan homeomorfisme dari ke . Setiap topologi dalam orbit ini mempunyai tepat lima himpunan terbuka: dua singleton terbuka dan satu himpunan terbuka beranggota dua, selain dan . Pemeriksaan daftar 29 topologi menunjukkan bahwa hanya nomor 20, 21, dan 22 yang mempunyai profil tersebut. Maka kelas yang dinyatakan di atas tepat.   Topologi ke-22 pada tiga titik   Acuan soal sumber: tentukan kelas homeomorfisme dari dalam daftar 29 topologi pada .   Terapkan perlabelan ulang , , dan pada .   Topologi berada dalam kelas .   Siklus , , membawa ke , sehingga membawa tepat ke . Jadi kedua ruang homeomorfik. Seperti pada unit sebelumnya, profil kardinalitas himpunan terbukanya adalah dua singleton dan satu pasangan, dengan total lima himpunan terbuka. Nomor 20, 21, dan 22 adalah seluruh topologi dalam daftar yang memiliki profil ini, sehingga tidak ada anggota kelas lain.   Topologi ke-23 dan orbit enam elemennya   Acuan soal sumber: tentukan kelas homeomorfisme dari di antara 29 topologi pada .   Terapkan keenam permutasi . Citra yang berbeda adalah tepat topologi nomor 23 sampai 28.   Kelasnya adalah .   Setiap permutasi titik menghasilkan homeomorfisme dari ke ruang yang koleksi himpunan terbukanya merupakan citra . Keenam permutasi menghasilkan enam koleksi berbeda, yakni nomor 23 sampai 28. Masing-masing mempunyai tepat enam himpunan terbuka, dengan dua singleton dan dua himpunan beranggota dua selain dan . Dalam daftar 29 topologi, hanya keenam topologi tersebut yang mempunyai enam himpunan terbuka. Karena homeomorfisme mempertahankan banyaknya himpunan terbuka, tidak ada topologi lain yang dapat masuk ke orbit ini. Jadi kelas yang dituliskan pada jawaban tepat.   Topologi ke-24 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Tukarkan dan dalam sambil menetapkan .   Topologi ini berada dalam kelas .   Transposisi membawa himpunan terbuka tak trivial dari ke , yaitu tepat himpunan terbuka tak trivial . Maka transposisi itu adalah homeomorfisme. Seluruh orbitnya adalah nomor 23–28; orbit tersebut lengkap karena keenamnya adalah satu-satunya topologi dalam daftar yang memiliki enam himpunan terbuka.   Topologi ke-25 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Tukarkan dan dalam .   Topologi ini berada dalam kelas .   Transposisi membawa ke . Jadi citra adalah , dan permutasi itu merupakan homeomorfisme. Kelengkapan kelas nomor 23–28 kembali mengikuti fakta bahwa keenam topologi inilah seluruh topologi dengan enam himpunan terbuka dalam daftar.   Topologi ke-26 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Pada , terapkan permutasi , , dan .   Topologi ini berada dalam kelas .   Permutasi , , membawa singleton terbuka ke dan membawa pasangan terbuka ke . Karena itu koleksi citranya adalah tepat . Argumen jumlah himpunan terbuka menunjukkan bahwa orbit nomor 23–28 ini tidak mempunyai anggota tambahan.   Topologi ke-27 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Gunakan siklus , , pada .   Topologi ini berada dalam kelas .   Siklus yang diberikan membawa ke . Maka siklus itu memetakan ke dan merupakan homeomorfisme. Keenam topologi nomor 23–28 membentuk seluruh kelas karena semuanya, dan hanya mereka, mempunyai enam himpunan terbuka dalam daftar.   Topologi ke-28 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Tukarkan dan dalam sambil menetapkan .   Topologi ini berada dalam kelas .   Transposisi membawa ke . Ini adalah koleksi himpunan terbuka tak trivial , sehingga transposisi tersebut merupakan homeomorfisme dari . Argumen jumlah himpunan terbuka membuktikan bahwa kelasnya tepat nomor 23–28.   Topologi ke-29: ruang diskret   Acuan soal sumber: tentukan kelas homeomorfisme topologi diskret pada di antara 29 topologi yang terdaftar.   Banyaknya himpunan terbuka dipertahankan oleh homeomorfisme. Berapa banyak himpunan terbuka dalam topologi diskret pada tiga titik?   Kelasnya hanya dalam daftar ini.   Topologi diskret pada tiga titik memuat semua himpunan bagian sebagai himpunan terbuka. Homeomorfisme membawa koleksi himpunan terbuka secara bijektif ke koleksi himpunan terbuka ruang sasaran, sehingga ruang yang homeomorfik dengannya juga harus mempunyai delapan himpunan terbuka. Di antara 29 topologi pada himpunan tetap , hanya yang mempunyai delapan himpunan terbuka. Jadi orbitnya merupakan singleton.   Aksioma separasi merupakan sifat topologis   Acuan soal sumber: tunjukkan bahwa sifat merupakan sifat topologis untuk setiap indeks yang didefinisikan dalam teks, yakni .   Jika homeomorfisme, maka membawa himpunan terbuka ke himpunan terbuka dan himpunan tertutup ke himpunan tertutup. Tarik titik atau himpunan tertutup di kembali ke , gunakan sifat separasi di , lalu ambil citra lingkungan yang diperoleh.   Benar. Homeomorfisme mempertahankan sifat , Hausdorff ( ), reguler, dan normal; karena itu ia juga mempertahankan gabungan syarat yang mendefinisikan dan .   Misalkan suatu homeomorfisme. Karena kontinu, membawa setiap himpunan terbuka di ke himpunan terbuka di . Dengan mengambil komplemen, juga membawa himpunan tertutup ke himpunan tertutup.  Jika bersifat dan di , terapkan sifat pada . Citra oleh dari himpunan terbuka pemisah yang diperoleh memberikan himpunan terbuka di yang memuat satu titik tetapi tidak memuat titik lainnya. Jika bersifat , cara yang sama membawa dua lingkungan terbuka saling lepas di ke dua lingkungan terbuka saling lepas di .  Selanjutnya, andaikan reguler. Untuk himpunan tertutup dan titik , himpunan tertutup dan . Pisahkan keduanya dengan himpunan terbuka saling lepas di ; citranya adalah himpunan terbuka saling lepas di yang memuat dan . Jadi reguler. Jika normal, tarik kembali dua himpunan tertutup saling lepas di , pisahkan keduanya di , lalu ambil citra himpunan terbuka pemisah. Ini membuktikan bahwa normal.  Menurut definisi sumber, berarti reguler sekaligus , dan berarti normal sekaligus . Karena setiap komponen syarat dipertahankan, dan juga dipertahankan. Menerapkan argumen yang sama pada homeomorfisme invers memberi implikasi sebaliknya. Jadi untuk setiap , bersifat jika dan hanya jika bersifat ; inilah arti sifat topologis.   "
+},
+{
+  "id": "o003-c90-ch14-exer-e-01",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-01",
+  "type": "Pemeriksaan",
+  "number": "N.66",
+  "title": "Topologi ke-21 pada tiga titik.",
+  "body": "Topologi ke-21 pada tiga titik   Acuan soal sumber: dalam klasifikasi 29 topologi pada , tentukan kelas homeomorfisme dari dan berikan justifikasi.   Bandingkan dengan dan tukarkan label dan . Untuk memastikan kelasnya tidak lebih besar, hitung banyak himpunan terbuka beranggota satu dan beranggota dua.   Topologi berada dalam kelas .   Permutasi yang menetapkan dan menukar dengan membawa himpunan terbuka dari berturut-turut ke . Jadi permutasi itu merupakan homeomorfisme dari ke . Setiap topologi dalam orbit ini mempunyai tepat lima himpunan terbuka: dua singleton terbuka dan satu himpunan terbuka beranggota dua, selain dan . Pemeriksaan daftar 29 topologi menunjukkan bahwa hanya nomor 20, 21, dan 22 yang mempunyai profil tersebut. Maka kelas yang dinyatakan di atas tepat.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-02",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-02",
+  "type": "Pemeriksaan",
+  "number": "N.67",
+  "title": "Topologi ke-22 pada tiga titik.",
+  "body": "Topologi ke-22 pada tiga titik   Acuan soal sumber: tentukan kelas homeomorfisme dari dalam daftar 29 topologi pada .   Terapkan perlabelan ulang , , dan pada .   Topologi berada dalam kelas .   Siklus , , membawa ke , sehingga membawa tepat ke . Jadi kedua ruang homeomorfik. Seperti pada unit sebelumnya, profil kardinalitas himpunan terbukanya adalah dua singleton dan satu pasangan, dengan total lima himpunan terbuka. Nomor 20, 21, dan 22 adalah seluruh topologi dalam daftar yang memiliki profil ini, sehingga tidak ada anggota kelas lain.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-03",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-03",
+  "type": "Pemeriksaan",
+  "number": "N.68",
+  "title": "Topologi ke-23 dan orbit enam elemennya.",
+  "body": "Topologi ke-23 dan orbit enam elemennya   Acuan soal sumber: tentukan kelas homeomorfisme dari di antara 29 topologi pada .   Terapkan keenam permutasi . Citra yang berbeda adalah tepat topologi nomor 23 sampai 28.   Kelasnya adalah .   Setiap permutasi titik menghasilkan homeomorfisme dari ke ruang yang koleksi himpunan terbukanya merupakan citra . Keenam permutasi menghasilkan enam koleksi berbeda, yakni nomor 23 sampai 28. Masing-masing mempunyai tepat enam himpunan terbuka, dengan dua singleton dan dua himpunan beranggota dua selain dan . Dalam daftar 29 topologi, hanya keenam topologi tersebut yang mempunyai enam himpunan terbuka. Karena homeomorfisme mempertahankan banyaknya himpunan terbuka, tidak ada topologi lain yang dapat masuk ke orbit ini. Jadi kelas yang dituliskan pada jawaban tepat.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-04",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-04",
+  "type": "Pemeriksaan",
+  "number": "N.69",
+  "title": "Topologi ke-24 pada orbit enam elemen.",
+  "body": "Topologi ke-24 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Tukarkan dan dalam sambil menetapkan .   Topologi ini berada dalam kelas .   Transposisi membawa himpunan terbuka tak trivial dari ke , yaitu tepat himpunan terbuka tak trivial . Maka transposisi itu adalah homeomorfisme. Seluruh orbitnya adalah nomor 23–28; orbit tersebut lengkap karena keenamnya adalah satu-satunya topologi dalam daftar yang memiliki enam himpunan terbuka.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-05",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-05",
+  "type": "Pemeriksaan",
+  "number": "N.70",
+  "title": "Topologi ke-25 pada orbit enam elemen.",
+  "body": "Topologi ke-25 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Tukarkan dan dalam .   Topologi ini berada dalam kelas .   Transposisi membawa ke . Jadi citra adalah , dan permutasi itu merupakan homeomorfisme. Kelengkapan kelas nomor 23–28 kembali mengikuti fakta bahwa keenam topologi inilah seluruh topologi dengan enam himpunan terbuka dalam daftar.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-06",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-06",
+  "type": "Pemeriksaan",
+  "number": "N.71",
+  "title": "Topologi ke-26 pada orbit enam elemen.",
+  "body": "Topologi ke-26 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Pada , terapkan permutasi , , dan .   Topologi ini berada dalam kelas .   Permutasi , , membawa singleton terbuka ke dan membawa pasangan terbuka ke . Karena itu koleksi citranya adalah tepat . Argumen jumlah himpunan terbuka menunjukkan bahwa orbit nomor 23–28 ini tidak mempunyai anggota tambahan.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-07",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-07",
+  "type": "Pemeriksaan",
+  "number": "N.72",
+  "title": "Topologi ke-27 pada orbit enam elemen.",
+  "body": "Topologi ke-27 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Gunakan siklus , , pada .   Topologi ini berada dalam kelas .   Siklus yang diberikan membawa ke . Maka siklus itu memetakan ke dan merupakan homeomorfisme. Keenam topologi nomor 23–28 membentuk seluruh kelas karena semuanya, dan hanya mereka, mempunyai enam himpunan terbuka dalam daftar.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-08",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-08",
+  "type": "Pemeriksaan",
+  "number": "N.73",
+  "title": "Topologi ke-28 pada orbit enam elemen.",
+  "body": "Topologi ke-28 pada orbit enam elemen   Acuan soal sumber: klasifikasikan hingga homeomorfisme.   Tukarkan dan dalam sambil menetapkan .   Topologi ini berada dalam kelas .   Transposisi membawa ke . Ini adalah koleksi himpunan terbuka tak trivial , sehingga transposisi tersebut merupakan homeomorfisme dari . Argumen jumlah himpunan terbuka membuktikan bahwa kelasnya tepat nomor 23–28.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-09",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-09",
+  "type": "Pemeriksaan",
+  "number": "N.74",
+  "title": "Topologi ke-29: ruang diskret.",
+  "body": "Topologi ke-29: ruang diskret   Acuan soal sumber: tentukan kelas homeomorfisme topologi diskret pada di antara 29 topologi yang terdaftar.   Banyaknya himpunan terbuka dipertahankan oleh homeomorfisme. Berapa banyak himpunan terbuka dalam topologi diskret pada tiga titik?   Kelasnya hanya dalam daftar ini.   Topologi diskret pada tiga titik memuat semua himpunan bagian sebagai himpunan terbuka. Homeomorfisme membawa koleksi himpunan terbuka secara bijektif ke koleksi himpunan terbuka ruang sasaran, sehingga ruang yang homeomorfik dengannya juga harus mempunyai delapan himpunan terbuka. Di antara 29 topologi pada himpunan tetap , hanya yang mempunyai delapan himpunan terbuka. Jadi orbitnya merupakan singleton.  "
+},
+{
+  "id": "o003-c90-ch14-exer-e-10",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-e.html#o003-c90-ch14-exer-e-10",
+  "type": "Pemeriksaan",
+  "number": "N.75",
+  "title": "Aksioma separasi merupakan sifat topologis.",
+  "body": "Aksioma separasi merupakan sifat topologis   Acuan soal sumber: tunjukkan bahwa sifat merupakan sifat topologis untuk setiap indeks yang didefinisikan dalam teks, yakni .   Jika homeomorfisme, maka membawa himpunan terbuka ke himpunan terbuka dan himpunan tertutup ke himpunan tertutup. Tarik titik atau himpunan tertutup di kembali ke , gunakan sifat separasi di , lalu ambil citra lingkungan yang diperoleh.   Benar. Homeomorfisme mempertahankan sifat , Hausdorff ( ), reguler, dan normal; karena itu ia juga mempertahankan gabungan syarat yang mendefinisikan dan .   Misalkan suatu homeomorfisme. Karena kontinu, membawa setiap himpunan terbuka di ke himpunan terbuka di . Dengan mengambil komplemen, juga membawa himpunan tertutup ke himpunan tertutup.  Jika bersifat dan di , terapkan sifat pada . Citra oleh dari himpunan terbuka pemisah yang diperoleh memberikan himpunan terbuka di yang memuat satu titik tetapi tidak memuat titik lainnya. Jika bersifat , cara yang sama membawa dua lingkungan terbuka saling lepas di ke dua lingkungan terbuka saling lepas di .  Selanjutnya, andaikan reguler. Untuk himpunan tertutup dan titik , himpunan tertutup dan . Pisahkan keduanya dengan himpunan terbuka saling lepas di ; citranya adalah himpunan terbuka saling lepas di yang memuat dan . Jadi reguler. Jika normal, tarik kembali dua himpunan tertutup saling lepas di , pisahkan keduanya di , lalu ambil citra himpunan terbuka pemisah. Ini membuktikan bahwa normal.  Menurut definisi sumber, berarti reguler sekaligus , dan berarti normal sekaligus . Karena setiap komponen syarat dipertahankan, dan juga dipertahankan. Menerapkan argumen yang sama pada homeomorfisme invers memberi implikasi sebaliknya. Jadi untuk setiap , bersifat jika dan hanya jika bersifat ; inilah arti sifat topologis.  "
+},
+{
+  "id": "o003-c90-ch14-exercise-guides-f",
+  "level": "1",
+  "url": "o003-c90-ch14-exercise-guides-f.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 14, bagian keenam",
+  "body": " Panduan latihan Bab 14, bagian keenam  Enam panduan terakhir ini mengikuti butir latihan 51 sampai 56 dalam urutan sumber. Untuk setiap pernyataan, “benar” berarti selalu benar; jawaban “salah” harus disertai contoh penyangkal konkret. Dukungan belajar ini ditulis secara terpisah sebagai konten pendamping CC BY 4.0.  Fungsi kontinu belum tentu terbuka  Tentukan benar atau salah: jika merupakan fungsi kontinu antara ruang topologi dan , maka terbuka dalam untuk setiap himpunan terbuka dalam . Berikan bukti atau contoh penyangkal sesuai jawaban Anda.   Kekontinuan mengatur prapeta himpunan terbuka, bukan citranya. Pertimbangkan fungsi konstan pada dengan topologi biasa.   Salah. Fungsi konstan , , kontinu, tetapi citra himpunan terbuka adalah singleton , yang tidak terbuka dalam .   Beri domain dan kodomain topologi Euklides, lalu definisikan untuk setiap . Untuk setiap himpunan terbuka , prapeta sama dengan jika , dan sama dengan jika . Kedua kemungkinan itu terbuka, sehingga kontinu.  Namun, untuk himpunan terbuka berlaku . Singleton ini tidak terbuka dalam topologi Euklides pada . Jadi fungsi kontinu tidak harus merupakan pemetaan terbuka, dan pernyataan tersebut salah.   Fungsi kuadrat pada topologi komplemen berhingga  Misalkan topologi komplemen berhingga pada . Tentukan benar atau salah: fungsi yang diberikan oleh bersifat kontinu. Jelaskan jawaban Anda.   Jika terbuka tak kosong, tulis dengan berhingga. Setiap persamaan mempunyai paling banyak dua penyelesaian real.   Benar. Prapeta setiap himpunan berhingga di bawah berhingga, sehingga prapeta setiap himpunan terbuka komplemen berhingga kembali terbuka.   Prapeta adalah , jadi cukup memeriksa himpunan terbuka tak kosong. Ambil tak kosong. Ada himpunan berhingga sehingga . Karena prapeta mempertahankan komplemen, Untuk setiap , serat mempunyai paling banyak dua anggota. Maka , sebagai gabungan berhingga dari serat-serat tersebut, juga berhingga. Akibatnya mempunyai komplemen berhingga dan terbuka dalam domain. Prapeta setiap himpunan terbuka dengan demikian terbuka, jadi kontinu dan pernyataannya benar.   Pemetaan terbuka bijektif belum tentu homeomorfisme  Tentukan benar atau salah: jika bijektif dan terbuka dalam untuk setiap himpunan terbuka dalam , maka merupakan homeomorfisme. Berikan bukti atau contoh penyangkal sesuai jawaban Anda.   Kebijektifan dan sifat terbuka menjamin kekontinuan , tetapi belum menjamin kekontinuan . Bandingkan topologi indiskret dan diskret pada himpunan dua elemen yang sama.   Salah. Identitas dari himpunan dua elemen bertopologi indiskret ke himpunan yang sama bertopologi diskret bersifat bijektif dan terbuka, tetapi tidak kontinu.   Ambil , , dan . Definisikan sebagai fungsi identitas. Fungsi ini bijektif. Himpunan terbuka dalam hanya dan ; citranya di bawah adalah dan , yang keduanya terbuka dalam ruang diskret . Jadi merupakan pemetaan terbuka.  Meskipun demikian, terbuka dalam , sedangkan tidak terbuka dalam . Maka tidak kontinu dan karena itu bukan homeomorfisme. Contoh ini menunjukkan bahwa asumsi pada pernyataan hanya membuat fungsi invers kontinu; kekontinuan fungsi asal masih dapat gagal.   Bijeksi antara ruang diskret  Tentukan benar atau salah: jika dan merupakan ruang topologi diskret dan bijektif, maka dan homeomorfik. Jelaskan jawaban Anda.   Dalam ruang diskret, setiap subhimpunan terbuka. Periksa kekontinuan dan fungsi inversnya langsung dari definisi melalui prapeta.   Benar. Setiap bijeksi antara dua ruang diskret kontinu dan mempunyai invers yang juga kontinu, sehingga merupakan homeomorfisme.   Ambil sembarang himpunan terbuka . Prapetanya adalah suatu subhimpunan , dan setiap subhimpunan terbuka karena topologi diskret. Jadi kontinu. Karena bijektif, terdapat fungsi invers . Untuk setiap himpunan terbuka , prapeta di bawah adalah , yang merupakan suatu subhimpunan dan karenanya terbuka dalam topologi diskret . Jadi juga kontinu. Dengan demikian merupakan homeomorfisme, sehingga pernyataan tersebut benar.   Irisan dua relasi ekuivalensi  Misalkan suatu himpunan dan serta relasi ekuivalensi pada . Tentukan benar atau salah: juga merupakan relasi ekuivalensi pada . Jelaskan jawaban Anda.   Periksa sifat refleksif, simetris, dan transitif satu per satu. Jika suatu pasangan berada dalam irisan, pasangan itu berada dalam kedua relasi.   Benar. Irisan mewarisi sifat refleksif, simetris, dan transitif dari kedua relasi ekuivalensi tersebut.   Untuk refleksivitas, ambil . Karena dan refleksif, dan . Jadi .  Untuk simetri, andaikan . Pasangan itu berada dalam dan . Simetri masing-masing relasi memberi dan , sehingga .  Untuk transitivitas, andaikan dan . Kedua pasangan berada dalam masing-masing . Karena setiap transitif, dan ; maka . Ketiga syarat relasi ekuivalensi terpenuhi, jadi pernyataannya benar.   Gabungan dua relasi ekuivalensi  Misalkan suatu himpunan dan serta relasi ekuivalensi pada . Tentukan benar atau salah: juga merupakan relasi ekuivalensi pada . Berikan bukti atau contoh penyangkal sesuai jawaban Anda.   Pada , ambil satu relasi yang menyatukan dengan dan relasi lain yang menyatukan dengan . Uji transitivitas gabungannya.   Salah. Gabungan dua relasi ekuivalensi tetap refleksif dan simetris, tetapi dapat gagal transitif.   Ambil dan definisikan serta Relasi adalah relasi ekuivalensi dari partisi , sedangkan berasal dari partisi . Jadi keduanya memang relasi ekuivalensi.  Dalam gabungan , berlaku dan . Namun . Dengan demikian gabungan tersebut tidak transitif dan bukan relasi ekuivalensi. Satu contoh penyangkal ini membuktikan bahwa pernyataan umum tersebut salah.   "
+},
+{
+  "id": "o003-c90-ch14-exer-f-01",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-f.html#o003-c90-ch14-exer-f-01",
+  "type": "Pemeriksaan",
+  "number": "N.76",
+  "title": "Fungsi kontinu belum tentu terbuka.",
+  "body": "Fungsi kontinu belum tentu terbuka  Tentukan benar atau salah: jika merupakan fungsi kontinu antara ruang topologi dan , maka terbuka dalam untuk setiap himpunan terbuka dalam . Berikan bukti atau contoh penyangkal sesuai jawaban Anda.   Kekontinuan mengatur prapeta himpunan terbuka, bukan citranya. Pertimbangkan fungsi konstan pada dengan topologi biasa.   Salah. Fungsi konstan , , kontinu, tetapi citra himpunan terbuka adalah singleton , yang tidak terbuka dalam .   Beri domain dan kodomain topologi Euklides, lalu definisikan untuk setiap . Untuk setiap himpunan terbuka , prapeta sama dengan jika , dan sama dengan jika . Kedua kemungkinan itu terbuka, sehingga kontinu.  Namun, untuk himpunan terbuka berlaku . Singleton ini tidak terbuka dalam topologi Euklides pada . Jadi fungsi kontinu tidak harus merupakan pemetaan terbuka, dan pernyataan tersebut salah.  "
+},
+{
+  "id": "o003-c90-ch14-exer-f-02",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-f.html#o003-c90-ch14-exer-f-02",
+  "type": "Pemeriksaan",
+  "number": "N.77",
+  "title": "Fungsi kuadrat pada topologi komplemen berhingga.",
+  "body": "Fungsi kuadrat pada topologi komplemen berhingga  Misalkan topologi komplemen berhingga pada . Tentukan benar atau salah: fungsi yang diberikan oleh bersifat kontinu. Jelaskan jawaban Anda.   Jika terbuka tak kosong, tulis dengan berhingga. Setiap persamaan mempunyai paling banyak dua penyelesaian real.   Benar. Prapeta setiap himpunan berhingga di bawah berhingga, sehingga prapeta setiap himpunan terbuka komplemen berhingga kembali terbuka.   Prapeta adalah , jadi cukup memeriksa himpunan terbuka tak kosong. Ambil tak kosong. Ada himpunan berhingga sehingga . Karena prapeta mempertahankan komplemen, Untuk setiap , serat mempunyai paling banyak dua anggota. Maka , sebagai gabungan berhingga dari serat-serat tersebut, juga berhingga. Akibatnya mempunyai komplemen berhingga dan terbuka dalam domain. Prapeta setiap himpunan terbuka dengan demikian terbuka, jadi kontinu dan pernyataannya benar.  "
+},
+{
+  "id": "o003-c90-ch14-exer-f-03",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-f.html#o003-c90-ch14-exer-f-03",
+  "type": "Pemeriksaan",
+  "number": "N.78",
+  "title": "Pemetaan terbuka bijektif belum tentu homeomorfisme.",
+  "body": "Pemetaan terbuka bijektif belum tentu homeomorfisme  Tentukan benar atau salah: jika bijektif dan terbuka dalam untuk setiap himpunan terbuka dalam , maka merupakan homeomorfisme. Berikan bukti atau contoh penyangkal sesuai jawaban Anda.   Kebijektifan dan sifat terbuka menjamin kekontinuan , tetapi belum menjamin kekontinuan . Bandingkan topologi indiskret dan diskret pada himpunan dua elemen yang sama.   Salah. Identitas dari himpunan dua elemen bertopologi indiskret ke himpunan yang sama bertopologi diskret bersifat bijektif dan terbuka, tetapi tidak kontinu.   Ambil , , dan . Definisikan sebagai fungsi identitas. Fungsi ini bijektif. Himpunan terbuka dalam hanya dan ; citranya di bawah adalah dan , yang keduanya terbuka dalam ruang diskret . Jadi merupakan pemetaan terbuka.  Meskipun demikian, terbuka dalam , sedangkan tidak terbuka dalam . Maka tidak kontinu dan karena itu bukan homeomorfisme. Contoh ini menunjukkan bahwa asumsi pada pernyataan hanya membuat fungsi invers kontinu; kekontinuan fungsi asal masih dapat gagal.  "
+},
+{
+  "id": "o003-c90-ch14-exer-f-04",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-f.html#o003-c90-ch14-exer-f-04",
+  "type": "Pemeriksaan",
+  "number": "N.79",
+  "title": "Bijeksi antara ruang diskret.",
+  "body": "Bijeksi antara ruang diskret  Tentukan benar atau salah: jika dan merupakan ruang topologi diskret dan bijektif, maka dan homeomorfik. Jelaskan jawaban Anda.   Dalam ruang diskret, setiap subhimpunan terbuka. Periksa kekontinuan dan fungsi inversnya langsung dari definisi melalui prapeta.   Benar. Setiap bijeksi antara dua ruang diskret kontinu dan mempunyai invers yang juga kontinu, sehingga merupakan homeomorfisme.   Ambil sembarang himpunan terbuka . Prapetanya adalah suatu subhimpunan , dan setiap subhimpunan terbuka karena topologi diskret. Jadi kontinu. Karena bijektif, terdapat fungsi invers . Untuk setiap himpunan terbuka , prapeta di bawah adalah , yang merupakan suatu subhimpunan dan karenanya terbuka dalam topologi diskret . Jadi juga kontinu. Dengan demikian merupakan homeomorfisme, sehingga pernyataan tersebut benar.  "
+},
+{
+  "id": "o003-c90-ch14-exer-f-05",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-f.html#o003-c90-ch14-exer-f-05",
+  "type": "Pemeriksaan",
+  "number": "N.80",
+  "title": "Irisan dua relasi ekuivalensi.",
+  "body": "Irisan dua relasi ekuivalensi  Misalkan suatu himpunan dan serta relasi ekuivalensi pada . Tentukan benar atau salah: juga merupakan relasi ekuivalensi pada . Jelaskan jawaban Anda.   Periksa sifat refleksif, simetris, dan transitif satu per satu. Jika suatu pasangan berada dalam irisan, pasangan itu berada dalam kedua relasi.   Benar. Irisan mewarisi sifat refleksif, simetris, dan transitif dari kedua relasi ekuivalensi tersebut.   Untuk refleksivitas, ambil . Karena dan refleksif, dan . Jadi .  Untuk simetri, andaikan . Pasangan itu berada dalam dan . Simetri masing-masing relasi memberi dan , sehingga .  Untuk transitivitas, andaikan dan . Kedua pasangan berada dalam masing-masing . Karena setiap transitif, dan ; maka . Ketiga syarat relasi ekuivalensi terpenuhi, jadi pernyataannya benar.  "
+},
+{
+  "id": "o003-c90-ch14-exer-f-06",
+  "level": "2",
+  "url": "o003-c90-ch14-exercise-guides-f.html#o003-c90-ch14-exer-f-06",
+  "type": "Pemeriksaan",
+  "number": "N.81",
+  "title": "Gabungan dua relasi ekuivalensi.",
+  "body": "Gabungan dua relasi ekuivalensi  Misalkan suatu himpunan dan serta relasi ekuivalensi pada . Tentukan benar atau salah: juga merupakan relasi ekuivalensi pada . Berikan bukti atau contoh penyangkal sesuai jawaban Anda.   Pada , ambil satu relasi yang menyatukan dengan dan relasi lain yang menyatukan dengan . Uji transitivitas gabungannya.   Salah. Gabungan dua relasi ekuivalensi tetap refleksif dan simetris, tetapi dapat gagal transitif.   Ambil dan definisikan serta Relasi adalah relasi ekuivalensi dari partisi , sedangkan berasal dari partisi . Jadi keduanya memang relasi ekuivalensi.  Dalam gabungan , berlaku dan . Namun . Dengan demikian gabungan tersebut tidak transitif dan bukan relasi ekuivalensi. Satu contoh penyangkal ini membuktikan bahwa pernyataan umum tersebut salah.  "
+},
+{
+  "id": "o003-c90-ch14-mastery",
+  "level": "1",
+  "url": "o003-c90-ch14-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 14",
+  "body": " Pemeriksaan penguasaan Bab 14  Delapan pemeriksaan berikut memadukan kekontinuan, pemetaan terbuka dan tertutup, kesetaraan metrik, isometri, homeomorfisme, relasi ekuivalensi, dan invarian topologis dalam persoalan baru. Materi ini ditulis mandiri dalam bahasa Indonesia untuk komponen pendamping berlisensi CC BY 4.0; materi ini bukan teks, terjemahan, atau solusi resmi GVSU. Kerjakan setiap soal sebelum membuka petunjuk.  Dua pencirian kekontinuan  Misalkan fungsi antara ruang topologi. Buktikan bahwa dua pernyataan berikut ekuivalen: (i) kontinu di setiap titik menurut definisi lingkungan; (ii) untuk setiap himpunan terbuka , prapeta terbuka dalam .   Tahap 1. Untuk arah (i) ke (ii), mulai dari suatu .  Tahap 2. Gunakan kekontinuan di untuk memperoleh himpunan terbuka yang berada di dalam prapeta.  Tahap 3. Untuk arah sebaliknya, masukkan himpunan terbuka di antara dan lingkungannya.   Kekontinuan titik demi titik membuat setiap titik prapeta suatu himpunan terbuka menjadi titik interior prapeta tersebut. Sebaliknya, prapeta terbuka dari suatu himpunan terbuka yang berada di dalam lingkungan menjadi lingkungan yang berada di dalam prapeta lingkungan semula.   Andaikan kontinu di setiap titik dan terbuka dalam . Untuk , himpunan merupakan lingkungan . Kekontinuan di menyatakan bahwa merupakan lingkungan . Jadi ada himpunan terbuka dengan . Karena ini berlaku bagi setiap , berlaku sehingga prapeta tersebut terbuka.  Sebaliknya, andaikan prapeta setiap himpunan terbuka bersifat terbuka. Ambil dan lingkungan dari . Ada himpunan terbuka dengan . Maka terbuka, memuat , dan berada di dalam . Jadi merupakan lingkungan . Dengan demikian kontinu di , dan tadi sembarang.   Komposisi dan pembatasan fungsi kontinu  Misalkan dan kontinu. Buktikan bahwa kontinu. Jika diberi topologi subruang, buktikan pula bahwa pembatasan kontinu.   Tahap 1. Hitung prapeta .  Tahap 2. Untuk pembatasan, hitung .  Tahap 3. Ingat bentuk umum himpunan terbuka dalam topologi subruang.   Untuk terbuka dalam , prapeta komposisi adalah , yang terbuka. Untuk terbuka dalam , prapeta di bawah pembatasan adalah , yang terbuka dalam .   Ambil himpunan terbuka . Karena kontinu, terbuka dalam . Karena kontinu, terbuka dalam . Identitas kemudian membuktikan kekontinuan komposisi.  Untuk pembatasan, jika terbuka, maka Himpunan terbuka dalam . Menurut definisi topologi subruang, irisannya dengan terbuka dalam . Maka kontinu.   Bijeksi kontinu belum tentu homeomorfisme  Ambil himpunan dengan sedikitnya dua elemen. Misalkan adalah bertopologi diskret dan adalah bertopologi indiskret. Tunjukkan bahwa fungsi identitas kontinu dan bijektif, tetapi bukan homeomorfisme. Kemudian buktikan bahwa bijeksi kontinu merupakan homeomorfisme jika dan hanya jika merupakan pemetaan terbuka; tunjukkan bahwa kondisi “terbuka” dapat diganti dengan “tertutup”.   Tahap 1. Periksa hanya dua himpunan terbuka pada kodomain indiskret.  Tahap 2. Hubungkan kekontinuan dengan prapeta di bawah .  Tahap 3. Untuk bijeksi, citra komplemen adalah komplemen citra.   Identitas dari ruang diskret ke ruang indiskret kontinu, tetapi inversnya tidak kontinu karena suatu himpunan bagian sejati tak kosong terbuka di dan tidak terbuka di . Bagi bijeksi, kekontinuan invers tepat berarti bahwa citra setiap himpunan terbuka terbuka; dengan mengambil komplemen, hal ini ekuivalen dengan citra setiap himpunan tertutup bersifat tertutup.   Satu-satunya himpunan terbuka dalam adalah dan ; prapetanya di bawah identitas adalah himpunan yang sama dan keduanya terbuka dalam . Jadi identitas tersebut kontinu dan jelas bijektif. Pilih yang tak kosong dan sejati. Himpunan terbuka dalam , tetapi prapetanya di bawah fungsi invers, yaitu , tidak terbuka dalam . Jadi invers tidak kontinu dan fungsi bukan homeomorfisme.  Sekarang misalkan bijektif dan kontinu. Untuk setiap , berlaku . Karena itu kontinu jika dan hanya jika terbuka untuk setiap terbuka, yakni jika dan hanya jika merupakan pemetaan terbuka.  Jika tertutup, bijektivitas memberi . Dengan mengambil komplemen, citra semua himpunan terbuka terbuka jika dan hanya jika citra semua himpunan tertutup tertutup. Jadi syarat pemetaan terbuka dapat diganti dengan syarat pemetaan tertutup.   Perbandingan metrik dan topologi yang sama  Misalkan dan metrik pada himpunan . Jika ada konstanta sehingga untuk semua , buktikan bahwa kedua metrik menginduksi topologi yang sama. Lalu, pada , tetapkan . Buktikan bahwa memang metrik dan menginduksi topologi Euklides, walaupun tidak ada batas bawah global dengan .   Tahap 1. Bandingkan , , dan .  Tahap 2. Fungsi naik dan subaditif; lalu pecahkan untuk .  Tahap 3. Biarkan menuju tak hingga untuk menguji batas bawah global.   Inklusi bola dan memberi topologi yang sama. Fungsi naik dan subaditif, sehingga komposisinya dengan metrik Euklides merupakan metrik. Jika , maka . Namun rasio menuju nol.   Jika , maka ; jadi . Jika , maka , sehingga ; jadi . Di setiap titik, setiap bola dari salah satu metrik memuat bola dari metrik lain. Karena bola membentuk basis, topologi yang diinduksi sama.  Untuk contoh pada , tetapkan untuk . Sifat tak negatif, simetri, dan pemisahan titik bagi langsung mengikuti sifat nilai mutlak. Fungsi naik. Selain itu, untuk , Maka ketaksamaan segitiga bagi nilai mutlak, sifat naik, dan subaditivitas memberi . Jadi memang metrik.  Sekarang tulis . Jika , maka Jadi , dengan metrik Euklides. Sebaliknya, untuk setiap , pilihan memberi . Maka kedua keluarga bola menghasilkan topologi yang sama.  Andaikan ada dengan untuk semua pasangan. Untuk dan , pembagian oleh memberi . Ruas kanan menuju nol ketika menuju tak hingga, sebuah kontradiksi. Jadi perbandingan dua arah dengan konstanta global cukup, tetapi bukan syarat perlu bagi kesamaan topologi.   Isometri sebagai homeomorfisme pada citranya  Misalkan memenuhi untuk semua . Buktikan bahwa injektif dan merupakan homeomorfisme dari ke subruang . Simpulkan bahwa isometri surjektif adalah homeomorfisme, lalu jelaskan mengapa inklusi tidak menjadi homeomorfisme ke walaupun merupakan isometri pada metrik Euklides.   Tahap 1. Jika , bandingkan jaraknya.  Tahap 2. Hitung citra bola di dalam subruang .  Tahap 3. Homeomorfisme ke seluruh kodomain harus surjektif.   Pelestarian jarak membuat injektif dan memadankan setiap bola di dengan bola subruang berjari-jari sama di . Karena itu dan inversnya pada citra kontinu. Inklusi tidak surjektif, jadi bukan homeomorfisme ke seluruh .   Jika , maka , sehingga . Jadi injektif. Beri metrik subruang dari . Untuk setiap dan , pelestarian jarak dan definisi citra memberi Maka memadankan basis bola pada dengan basis bola pada . Akibatnya kontinu dan terbuka; sebagai bijeksi ke citranya, inversnya juga kontinu. Jadi merupakan homeomorfisme ke .  Jika surjektif, maka , sehingga hasil tadi langsung memberi homeomorfisme . Inklusi mempertahankan jarak Euklides, tetapi citranya hanya , bukan seluruh . Ia adalah homeomorfisme dari ke subruang , bukan homeomorfisme ke kodomain .   Relasi ekuivalensi yang ditentukan oleh suatu surjeksi  Misalkan surjektif dan definisikan jika dan hanya jika . Buktikan bahwa merupakan relasi ekuivalensi, bahwa kelas tepat sama dengan serat , dan bahwa aturan menentukan bijeksi .   Tahap 1. Gunakan refleksivitas, simetri, dan transitivitas kesamaan di .  Tahap 2. Buktikan aturan bagi tidak bergantung pada wakil kelas.  Tahap 3. Gunakan surjektivitas untuk surjektivitas .   Kesamaan nilai mewarisi ketiga sifat relasi ekuivalensi. Definisi kelas memberi . Kesamaan kelas menjamin terdefinisi dengan baik dan injektif, sedangkan surjektivitas memberi surjektivitas .   Untuk setiap , berlaku , maka . Jika , maka ; simetri kesamaan memberi , maka . Jika dan , maka , sehingga . Jadi relasi ekuivalensi.  Menurut definisi, Jika , maka , sehingga . Karena itu nilai tidak bergantung pada wakil dan aturan tersebut terdefinisi dengan baik.  Jika , maka , sehingga dan ; jadi injektif. Untuk setiap , surjektivitas memberi dengan . Maka , jadi surjektif dan karena itu bijektif.   Homeomorfisme memadankan seluruh topologi  Misalkan homeomorfisme. Buktikan bahwa aturan merupakan bijeksi dari keluarga himpunan terbuka pada ke keluarga himpunan terbuka pada dan mempertahankan gabungan sebarang serta irisan berhingga. Simpulkan bahwa banyaknya himpunan terbuka merupakan invarian topologis. Gunakan hasil itu untuk membuktikan bahwa tiga topologi pada , yaitu topologi indiskret, topologi , dan topologi diskret, saling tidak homeomorfik.   Tahap 1. Gunakan kekontinuan invers untuk menunjukkan bahwa terbuka.  Tahap 2. Citra di bawah fungsi selalu mempertahankan gabungan; bijektivitas diperlukan untuk irisan.  Tahap 3. Hitung banyaknya himpunan terbuka pada ketiga ruang dua titik.   Homeomorfisme dan inversnya mengirim himpunan terbuka ke himpunan terbuka, sehingga keduanya memberikan bijeksi antara dua topologi. Bijeksi tersebut mempertahankan operasi himpunan yang diminta. Ketiga ruang dua titik memiliki berturut-turut 2, 3, dan 4 himpunan terbuka, sehingga tidak ada dua yang homeomorfik.   Jika terbuka dalam , maka terbuka dalam karena kontinu. Sebaliknya, setiap himpunan terbuka dalam adalah citra dari himpunan terbuka dalam . Jadi aturan citra bersifat surjektif pada keluarga himpunan terbuka; injektivitasnya mengikuti injektivitas atau keberadaan aturan invers .  Untuk sebarang keluarga , selalu berlaku . Karena injektif, untuk keluarga berhingga juga berlaku . Maka struktur topologi, termasuk kardinalitas keluarga himpunan terbuka, dipertahankan.  Topologi indiskret pada memiliki dua himpunan terbuka. Topologi memiliki tiga, sedangkan topologi diskret memiliki empat. Karena jumlah ini berbeda pada setiap pasangan, tidak ada homeomorfisme di antara pasangan mana pun.   Ruang terbatas yang homeomorfik dengan garis real  Buktikan bahwa fungsi merupakan homeomorfisme dengan topologi Euklides. Tulis inversnya secara eksplisit. Jelaskan mengapa contoh ini menunjukkan bahwa “terbatas sebagai himpunan bagian dari dengan metrik Euklides” bukan invarian topologis.   Tahap 1. Peta linear memadankan dengan .  Tahap 2. Fungsi tangen kontinu dan naik ketat pada interval tersebut.  Tahap 3. Gunakan fungsi arctangen untuk menulis invers kontinu.   Fungsi bijektif dan kontinu, dengan invers yang kontinu. Jadi homeomorfik dengan , walaupun yang pertama terbatas dan yang kedua tidak terbatas dalam metrik Euklides.   Peta merupakan bijeksi kontinu dari ke , dengan invers kontinu . Pada interval , fungsi tangen kontinu, naik ketat, dan nilainya menuju serta di kedua ujung. Karena itu tangen merupakan bijeksi ke . Komposisinya dengan adalah , sehingga bijektif dan kontinu.  Menyelesaikan memberi Fungsi arctangen kontinu pada , maka invers tersebut kontinu. Jadi homeomorfisme. Himpunan terbatas dalam metrik Euklides, sedangkan tidak. Homeomorfisme tidak mempertahankan ukuran jarak atau kedudukan suatu ruang sebagai himpunan bagian dari ruang metrik luar. Maka keterbatasan Euklides semacam itu bukan sifat topologis.   "
+},
+{
+  "id": "o003-c90-ch14-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "N.82",
+  "title": "Dua pencirian kekontinuan.",
+  "body": "Dua pencirian kekontinuan  Misalkan fungsi antara ruang topologi. Buktikan bahwa dua pernyataan berikut ekuivalen: (i) kontinu di setiap titik menurut definisi lingkungan; (ii) untuk setiap himpunan terbuka , prapeta terbuka dalam .   Tahap 1. Untuk arah (i) ke (ii), mulai dari suatu .  Tahap 2. Gunakan kekontinuan di untuk memperoleh himpunan terbuka yang berada di dalam prapeta.  Tahap 3. Untuk arah sebaliknya, masukkan himpunan terbuka di antara dan lingkungannya.   Kekontinuan titik demi titik membuat setiap titik prapeta suatu himpunan terbuka menjadi titik interior prapeta tersebut. Sebaliknya, prapeta terbuka dari suatu himpunan terbuka yang berada di dalam lingkungan menjadi lingkungan yang berada di dalam prapeta lingkungan semula.   Andaikan kontinu di setiap titik dan terbuka dalam . Untuk , himpunan merupakan lingkungan . Kekontinuan di menyatakan bahwa merupakan lingkungan . Jadi ada himpunan terbuka dengan . Karena ini berlaku bagi setiap , berlaku sehingga prapeta tersebut terbuka.  Sebaliknya, andaikan prapeta setiap himpunan terbuka bersifat terbuka. Ambil dan lingkungan dari . Ada himpunan terbuka dengan . Maka terbuka, memuat , dan berada di dalam . Jadi merupakan lingkungan . Dengan demikian kontinu di , dan tadi sembarang.  "
+},
+{
+  "id": "o003-c90-ch14-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "N.83",
+  "title": "Komposisi dan pembatasan fungsi kontinu.",
+  "body": "Komposisi dan pembatasan fungsi kontinu  Misalkan dan kontinu. Buktikan bahwa kontinu. Jika diberi topologi subruang, buktikan pula bahwa pembatasan kontinu.   Tahap 1. Hitung prapeta .  Tahap 2. Untuk pembatasan, hitung .  Tahap 3. Ingat bentuk umum himpunan terbuka dalam topologi subruang.   Untuk terbuka dalam , prapeta komposisi adalah , yang terbuka. Untuk terbuka dalam , prapeta di bawah pembatasan adalah , yang terbuka dalam .   Ambil himpunan terbuka . Karena kontinu, terbuka dalam . Karena kontinu, terbuka dalam . Identitas kemudian membuktikan kekontinuan komposisi.  Untuk pembatasan, jika terbuka, maka Himpunan terbuka dalam . Menurut definisi topologi subruang, irisannya dengan terbuka dalam . Maka kontinu.  "
+},
+{
+  "id": "o003-c90-ch14-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "N.84",
+  "title": "Bijeksi kontinu belum tentu homeomorfisme.",
+  "body": "Bijeksi kontinu belum tentu homeomorfisme  Ambil himpunan dengan sedikitnya dua elemen. Misalkan adalah bertopologi diskret dan adalah bertopologi indiskret. Tunjukkan bahwa fungsi identitas kontinu dan bijektif, tetapi bukan homeomorfisme. Kemudian buktikan bahwa bijeksi kontinu merupakan homeomorfisme jika dan hanya jika merupakan pemetaan terbuka; tunjukkan bahwa kondisi “terbuka” dapat diganti dengan “tertutup”.   Tahap 1. Periksa hanya dua himpunan terbuka pada kodomain indiskret.  Tahap 2. Hubungkan kekontinuan dengan prapeta di bawah .  Tahap 3. Untuk bijeksi, citra komplemen adalah komplemen citra.   Identitas dari ruang diskret ke ruang indiskret kontinu, tetapi inversnya tidak kontinu karena suatu himpunan bagian sejati tak kosong terbuka di dan tidak terbuka di . Bagi bijeksi, kekontinuan invers tepat berarti bahwa citra setiap himpunan terbuka terbuka; dengan mengambil komplemen, hal ini ekuivalen dengan citra setiap himpunan tertutup bersifat tertutup.   Satu-satunya himpunan terbuka dalam adalah dan ; prapetanya di bawah identitas adalah himpunan yang sama dan keduanya terbuka dalam . Jadi identitas tersebut kontinu dan jelas bijektif. Pilih yang tak kosong dan sejati. Himpunan terbuka dalam , tetapi prapetanya di bawah fungsi invers, yaitu , tidak terbuka dalam . Jadi invers tidak kontinu dan fungsi bukan homeomorfisme.  Sekarang misalkan bijektif dan kontinu. Untuk setiap , berlaku . Karena itu kontinu jika dan hanya jika terbuka untuk setiap terbuka, yakni jika dan hanya jika merupakan pemetaan terbuka.  Jika tertutup, bijektivitas memberi . Dengan mengambil komplemen, citra semua himpunan terbuka terbuka jika dan hanya jika citra semua himpunan tertutup tertutup. Jadi syarat pemetaan terbuka dapat diganti dengan syarat pemetaan tertutup.  "
+},
+{
+  "id": "o003-c90-ch14-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "N.85",
+  "title": "Perbandingan metrik dan topologi yang sama.",
+  "body": "Perbandingan metrik dan topologi yang sama  Misalkan dan metrik pada himpunan . Jika ada konstanta sehingga untuk semua , buktikan bahwa kedua metrik menginduksi topologi yang sama. Lalu, pada , tetapkan . Buktikan bahwa memang metrik dan menginduksi topologi Euklides, walaupun tidak ada batas bawah global dengan .   Tahap 1. Bandingkan , , dan .  Tahap 2. Fungsi naik dan subaditif; lalu pecahkan untuk .  Tahap 3. Biarkan menuju tak hingga untuk menguji batas bawah global.   Inklusi bola dan memberi topologi yang sama. Fungsi naik dan subaditif, sehingga komposisinya dengan metrik Euklides merupakan metrik. Jika , maka . Namun rasio menuju nol.   Jika , maka ; jadi . Jika , maka , sehingga ; jadi . Di setiap titik, setiap bola dari salah satu metrik memuat bola dari metrik lain. Karena bola membentuk basis, topologi yang diinduksi sama.  Untuk contoh pada , tetapkan untuk . Sifat tak negatif, simetri, dan pemisahan titik bagi langsung mengikuti sifat nilai mutlak. Fungsi naik. Selain itu, untuk , Maka ketaksamaan segitiga bagi nilai mutlak, sifat naik, dan subaditivitas memberi . Jadi memang metrik.  Sekarang tulis . Jika , maka Jadi , dengan metrik Euklides. Sebaliknya, untuk setiap , pilihan memberi . Maka kedua keluarga bola menghasilkan topologi yang sama.  Andaikan ada dengan untuk semua pasangan. Untuk dan , pembagian oleh memberi . Ruas kanan menuju nol ketika menuju tak hingga, sebuah kontradiksi. Jadi perbandingan dua arah dengan konstanta global cukup, tetapi bukan syarat perlu bagi kesamaan topologi.  "
+},
+{
+  "id": "o003-c90-ch14-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "N.86",
+  "title": "Isometri sebagai homeomorfisme pada citranya.",
+  "body": "Isometri sebagai homeomorfisme pada citranya  Misalkan memenuhi untuk semua . Buktikan bahwa injektif dan merupakan homeomorfisme dari ke subruang . Simpulkan bahwa isometri surjektif adalah homeomorfisme, lalu jelaskan mengapa inklusi tidak menjadi homeomorfisme ke walaupun merupakan isometri pada metrik Euklides.   Tahap 1. Jika , bandingkan jaraknya.  Tahap 2. Hitung citra bola di dalam subruang .  Tahap 3. Homeomorfisme ke seluruh kodomain harus surjektif.   Pelestarian jarak membuat injektif dan memadankan setiap bola di dengan bola subruang berjari-jari sama di . Karena itu dan inversnya pada citra kontinu. Inklusi tidak surjektif, jadi bukan homeomorfisme ke seluruh .   Jika , maka , sehingga . Jadi injektif. Beri metrik subruang dari . Untuk setiap dan , pelestarian jarak dan definisi citra memberi Maka memadankan basis bola pada dengan basis bola pada . Akibatnya kontinu dan terbuka; sebagai bijeksi ke citranya, inversnya juga kontinu. Jadi merupakan homeomorfisme ke .  Jika surjektif, maka , sehingga hasil tadi langsung memberi homeomorfisme . Inklusi mempertahankan jarak Euklides, tetapi citranya hanya , bukan seluruh . Ia adalah homeomorfisme dari ke subruang , bukan homeomorfisme ke kodomain .  "
+},
+{
+  "id": "o003-c90-ch14-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "N.87",
+  "title": "Relasi ekuivalensi yang ditentukan oleh suatu surjeksi.",
+  "body": "Relasi ekuivalensi yang ditentukan oleh suatu surjeksi  Misalkan surjektif dan definisikan jika dan hanya jika . Buktikan bahwa merupakan relasi ekuivalensi, bahwa kelas tepat sama dengan serat , dan bahwa aturan menentukan bijeksi .   Tahap 1. Gunakan refleksivitas, simetri, dan transitivitas kesamaan di .  Tahap 2. Buktikan aturan bagi tidak bergantung pada wakil kelas.  Tahap 3. Gunakan surjektivitas untuk surjektivitas .   Kesamaan nilai mewarisi ketiga sifat relasi ekuivalensi. Definisi kelas memberi . Kesamaan kelas menjamin terdefinisi dengan baik dan injektif, sedangkan surjektivitas memberi surjektivitas .   Untuk setiap , berlaku , maka . Jika , maka ; simetri kesamaan memberi , maka . Jika dan , maka , sehingga . Jadi relasi ekuivalensi.  Menurut definisi, Jika , maka , sehingga . Karena itu nilai tidak bergantung pada wakil dan aturan tersebut terdefinisi dengan baik.  Jika , maka , sehingga dan ; jadi injektif. Untuk setiap , surjektivitas memberi dengan . Maka , jadi surjektif dan karena itu bijektif.  "
+},
+{
+  "id": "o003-c90-ch14-mastery-07",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-07",
+  "type": "Pemeriksaan",
+  "number": "N.88",
+  "title": "Homeomorfisme memadankan seluruh topologi.",
+  "body": "Homeomorfisme memadankan seluruh topologi  Misalkan homeomorfisme. Buktikan bahwa aturan merupakan bijeksi dari keluarga himpunan terbuka pada ke keluarga himpunan terbuka pada dan mempertahankan gabungan sebarang serta irisan berhingga. Simpulkan bahwa banyaknya himpunan terbuka merupakan invarian topologis. Gunakan hasil itu untuk membuktikan bahwa tiga topologi pada , yaitu topologi indiskret, topologi , dan topologi diskret, saling tidak homeomorfik.   Tahap 1. Gunakan kekontinuan invers untuk menunjukkan bahwa terbuka.  Tahap 2. Citra di bawah fungsi selalu mempertahankan gabungan; bijektivitas diperlukan untuk irisan.  Tahap 3. Hitung banyaknya himpunan terbuka pada ketiga ruang dua titik.   Homeomorfisme dan inversnya mengirim himpunan terbuka ke himpunan terbuka, sehingga keduanya memberikan bijeksi antara dua topologi. Bijeksi tersebut mempertahankan operasi himpunan yang diminta. Ketiga ruang dua titik memiliki berturut-turut 2, 3, dan 4 himpunan terbuka, sehingga tidak ada dua yang homeomorfik.   Jika terbuka dalam , maka terbuka dalam karena kontinu. Sebaliknya, setiap himpunan terbuka dalam adalah citra dari himpunan terbuka dalam . Jadi aturan citra bersifat surjektif pada keluarga himpunan terbuka; injektivitasnya mengikuti injektivitas atau keberadaan aturan invers .  Untuk sebarang keluarga , selalu berlaku . Karena injektif, untuk keluarga berhingga juga berlaku . Maka struktur topologi, termasuk kardinalitas keluarga himpunan terbuka, dipertahankan.  Topologi indiskret pada memiliki dua himpunan terbuka. Topologi memiliki tiga, sedangkan topologi diskret memiliki empat. Karena jumlah ini berbeda pada setiap pasangan, tidak ada homeomorfisme di antara pasangan mana pun.  "
+},
+{
+  "id": "o003-c90-ch14-mastery-08",
+  "level": "2",
+  "url": "o003-c90-ch14-mastery.html#o003-c90-ch14-mastery-08",
+  "type": "Pemeriksaan",
+  "number": "N.89",
+  "title": "Ruang terbatas yang homeomorfik dengan garis real.",
+  "body": "Ruang terbatas yang homeomorfik dengan garis real  Buktikan bahwa fungsi merupakan homeomorfisme dengan topologi Euklides. Tulis inversnya secara eksplisit. Jelaskan mengapa contoh ini menunjukkan bahwa “terbatas sebagai himpunan bagian dari dengan metrik Euklides” bukan invarian topologis.   Tahap 1. Peta linear memadankan dengan .  Tahap 2. Fungsi tangen kontinu dan naik ketat pada interval tersebut.  Tahap 3. Gunakan fungsi arctangen untuk menulis invers kontinu.   Fungsi bijektif dan kontinu, dengan invers yang kontinu. Jadi homeomorfik dengan , walaupun yang pertama terbatas dan yang kedua tidak terbatas dalam metrik Euklides.   Peta merupakan bijeksi kontinu dari ke , dengan invers kontinu . Pada interval , fungsi tangen kontinu, naik ketat, dan nilainya menuju serta di kedua ujung. Karena itu tangen merupakan bijeksi ke . Komposisinya dengan adalah , sehingga bijektif dan kontinu.  Menyelesaikan memberi Fungsi arctangen kontinu pada , maka invers tersebut kontinu. Jadi homeomorfisme. Himpunan terbatas dalam metrik Euklides, sedangkan tidak. Homeomorfisme tidak mempertahankan ukuran jarak atau kedudukan suatu ruang sebagai himpunan bagian dari ruang metrik luar. Maka keterbatasan Euklides semacam itu bukan sifat topologis.  "
+},
+{
   "id": "index-1",
   "level": "1",
   "url": "index-1.html",
@@ -10897,7 +12211,7 @@ var ptx_lunr_docs = [
   "type": "Kolofon",
   "number": "",
   "title": "Kolofon",
-  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1-13 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 14, Kontinuitas dalam Ruang Topologi ; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
+  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1-14 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 15, Subruang ; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
 }
 ]
 

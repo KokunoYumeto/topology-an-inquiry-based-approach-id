@@ -3,13 +3,13 @@
 Edisi Bahasa Indonesia yang sedang diproduksi dari *Topology: An Inquiry-Based
 Approach* karya Steven Schlicker, Grand Valley State University.
 
-**Baca batas GitHub publik terbaru (Bab 1-13):**
+**Baca batas GitHub publik terbaru (Bab 1-14):**
 
 https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/
 
-**Unduh PDF Bab 1-13 (368 halaman):**
+**Unduh PDF Bab 1-14 (407 halaman):**
 
-https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-13-id.pdf
+https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-14-id.pdf
 
 **Arsip Zenodo dalam satu riwayat versi:**
 
@@ -17,7 +17,7 @@ https://doi.org/10.5281/zenodo.22059894
 
 ## Status
 
-Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 13 dari
+Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 14 dari
 20 bab:
 
 - Bab 1, *Himpunan*;
@@ -33,20 +33,22 @@ Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 13 dari
 - Bab 11, *Subruang dan Hasil Kali Ruang Metrik*;
 - Bab 12, *Ruang Topologi*;
 - Bab 13, *Himpunan Tertutup dalam Ruang Topologi*;
-- pendamping belajar mandiri orisinal untuk ketiga belas bab, dengan petunjuk,
+- Bab 14, *Kekontinuan dan Homeomorfisme*;
+- pendamping belajar mandiri orisinal untuk keempat belas bab, dengan petunjuk,
   jawaban, rubrik, dan solusi bertahap;
 - laboratorium epsilon-delta orisinal yang dapat digunakan secara luring untuk
   menggantikan kebergantungan aplet Bab 6 yang tidak terarsipkan; dan
 - backend modular netral-lokal untuk provenance, istilah, latihan, solusi,
   koreksi sumber, hak komponen, dan status QA.
 
-Batas Bab 1-13 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
+Batas Bab 1-14 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
 audit matematika
 pendamping, dua pembangunan HTML deterministik, dua pembangunan PDF ketat,
 pemeriksaan tautan/aset, reflow desktop/seluler, interaksi petunjuk, dan
-inspeksi visual seluruh 368 halaman. Kolom baca desktop menggunakan lebar 960
-px dan terpusat di panel utama; versi seluler mengalir ulang tanpa luapan
-horizontal. Ini bukan klaim bahwa edisi 20 bab sudah selesai.
+inspeksi visual seluruh 407 halaman. Kolom baca menggunakan ukuran 960 px pada
+desktop lebar dan 600 px pada desktop ringkas/tablet, selalu terpusat di panel
+utama; versi seluler mengalir ulang tanpa luapan horizontal. Ini bukan klaim
+bahwa edisi 20 bab sudah selesai.
 
 ## Sumber resmi yang dibekukan
 
@@ -81,8 +83,8 @@ institusi, atau kontributor manusia yang dipertahankan di seluruh edisi.
 - `docs/` - byte pembaca publik untuk GitHub Pages.
 
 Manifest kumulatif yang mengikat batas ini adalah
-`qa/CHAPTER13_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
-`qa/CHAPTER13_BUILD_QA.md`.
+`qa/CHAPTER14_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
+`qa/CHAPTER14_BUILD_QA.md`.
 
 ## Membangun batas saat ini
 
@@ -90,9 +92,9 @@ Lingkungan yang direkam memakai Python 3.12.13, PreTeXt 1.7.5,
 setuptools 75.8.0, dan MiKTeX 26.5.
 
 ```text
-pretext build chapters01-13-html --clean
-python scripts/finalize_chapter01_html.py output/chapters01-13-html --manifest qa/CHAPTER13_HTML_MANIFEST.json
-python scripts/build_pretext_pdf_strict.py chapters01-13-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTER13_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-13-pdf/chapters_01_13_reader.pdf --source-date-epoch 1692057600
+pretext build chapters01-14-html --clean
+python scripts/finalize_chapter01_html.py output/chapters01-14-html --manifest qa/CHAPTER14_HTML_MANIFEST.json
+python scripts/build_pretext_pdf_strict.py chapters01-14-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTER14_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-14-pdf/chapters_01_14_reader.pdf --source-date-epoch 1692057600
 ```
 
 HTML saat ini masih memanggil beberapa dependensi runtime jarak jauh dari

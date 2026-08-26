@@ -43,6 +43,23 @@
 }
 
 /*
+ * Between the stock desktop and mobile breakpoints, PreTeXt fixes the reading
+ * measure at 600 px but leaves it anchored to the left padding of the main
+ * pane.  Centre that measure in the actual available pane so 1024 px desktop
+ * and 768 px tablet readers do not carry a large unused strip on the right.
+ * The compact phone layout below 600 px remains untouched.
+ */
+@media (min-width: 600px) and (max-width: 1199px) {
+  .pretext .ptx-page > .ptx-main > .ptx-content,
+  .pretext .ptx-page > .ptx-main > .ptx-content-footer {
+    width: min(600px, 100%);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
  * The stock navigation controls are sized for the shorter English labels
  * “Prev” and “Next”.  Indonesian “Sebelumnya” and “Berikutnya” otherwise
  * clip inside both the top tree controls and the reading-column footer.
