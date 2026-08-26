@@ -1,0 +1,438 @@
+<section xml:id="o003-c90-ch14-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan Bab 14, bagian pertama</title>
+  <p>
+    Bagian ini memberi dukungan bertahap untuk sepuluh unit soal mandiri pertama
+    pada latihan tentang ekuivalensi metrik, homeomorfisme, dan kekontinuan.
+    Urutannya mengikuti urutan soal pada sumber; uraian jawaban dan solusi di
+    sini merupakan materi pendamping yang ditulis secara terpisah.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-01">
+    <title>Isometri juga mempertahankan jarak pada arah invers</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> merupakan ruang metrik yang
+        ekuivalen secara metrik, dan misalkan <m>f:X\to Y</m> suatu bijeksi
+        sedemikian sehingga
+        <me>
+          d_X(x,y)=d_Y(f(x),f(y))
+        </me>
+        untuk semua <m>x,y\in X</m>. Buktikan bahwa
+        <me>
+          d_Y(u,v)=d_X(f^{-1}(u),f^{-1}(v))
+        </me>
+        untuk semua <m>u</m> dan <m>v</m> dalam <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-01-hint">
+      <p>
+        Untuk <m>u,v\in Y</m>, tetapkan <m>x=f^{-1}(u)</m> dan
+        <m>y=f^{-1}(v)</m>, lalu terapkan persamaan pelestarian jarak kepada
+        <m>x</m> dan <m>y</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-01-answer">
+      <p>
+        Persamaan tersebut berlaku karena <m>f(f^{-1}(u))=u</m> dan
+        <m>f(f^{-1}(v))=v</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-01-solution">
+      <p>
+        Ambil sebarang <m>u,v\in Y</m>. Karena <m>f</m> bijektif,
+        <m>x=f^{-1}(u)</m> dan <m>y=f^{-1}(v)</m> terdefinisi dan berada dalam
+        <m>X</m>. Gunakan sifat pelestarian jarak pada pasangan <m>x,y</m>:
+        <me>
+          d_X(f^{-1}(u),f^{-1}(v))
+          =d_Y(f(f^{-1}(u)),f(f^{-1}(v)))
+          =d_Y(u,v).
+        </me>
+        Karena <m>u</m> dan <m>v</m> sebarang, persamaan berlaku untuk semua
+        pasangan titik dalam <m>Y</m>. Jadi invers isometri itu juga
+        mempertahankan jarak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-02">
+    <title>Homeomorfisme mempertahankan titik limit</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> dan <m>(Y,\tau_Y)</m> merupakan ruang
+        topologi, <m>f:X\to Y</m> suatu homeomorfisme, dan
+        <m>A\subseteq X</m>. Jika <m>x</m> merupakan titik limit dari
+        <m>A</m>, apakah <m>f(x)</m> harus merupakan titik limit dari
+        <m>f(A)</m>? Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-02-hint">
+      <p>
+        Ambil lingkungan sebarang <m>V</m> bagi <m>f(x)</m>. Prapetanya adalah
+        lingkungan bagi <m>x</m>; gunakan sifat titik limit, kemudian gunakan
+        keinjektifan <m>f</m> untuk mempertahankan ketaksamaan titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-02-answer">
+      <p>
+        Ya. Setiap lingkungan bagi <m>f(x)</m> memuat suatu titik
+        <m>f(A)</m> yang berbeda dari <m>f(x)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-02-solution">
+      <p>
+        Ambil lingkungan sebarang <m>V</m> bagi <m>f(x)</m> dalam <m>Y</m>.
+        Karena <m>f</m> kontinu, <m>f^{-1}(V)</m> merupakan lingkungan bagi
+        <m>x</m>. Titik <m>x</m> adalah titik limit <m>A</m>, sehingga terdapat
+        <m>a\in A</m> dengan <m>a\neq x</m> dan
+        <m>a\in f^{-1}(V)</m>. Akibatnya,
+        <m>f(a)\in f(A)\cap V</m>. Karena suatu homeomorfisme adalah injektif,
+        <m>a\neq x</m> memberikan <m>f(a)\neq f(x)</m>. Jadi setiap lingkungan
+        <m>V</m> bagi <m>f(x)</m> bertemu
+        <m>f(A)\setminus\{f(x)\}</m>. Menurut definisi, <m>f(x)</m> merupakan
+        titik limit dari <m>f(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-03">
+    <title>Homeomorfisme mempertahankan titik interior</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> dan <m>(Y,\tau_Y)</m> merupakan ruang
+        topologi, <m>f:X\to Y</m> suatu homeomorfisme, dan
+        <m>A\subseteq X</m>. Jika <m>x</m> merupakan titik interior dari
+        <m>A</m>, apakah <m>f(x)</m> harus merupakan titik interior dari
+        <m>f(A)</m>? Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-03-hint">
+      <p>
+        Pilih himpunan terbuka <m>U</m> dengan <m>x\in U\subseteq A</m>.
+        Jelaskan mengapa <m>f(U)=(f^{-1})^{-1}(U)</m> terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-03-answer">
+      <p>
+        Ya. Homeomorfisme membawa lingkungan terbuka yang termuat dalam
+        <m>A</m> ke lingkungan terbuka yang termuat dalam <m>f(A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-03-solution">
+      <p>
+        Karena <m>x</m> merupakan titik interior <m>A</m>, terdapat himpunan
+        terbuka <m>U\subseteq X</m> dengan <m>x\in U\subseteq A</m>.
+        Invers <m>f^{-1}:Y\to X</m> kontinu, sehingga prapeta himpunan terbuka
+        <m>U</m> di bawah <m>f^{-1}</m> terbuka dalam <m>Y</m>. Prapeta ini
+        adalah
+        <me>
+          (f^{-1})^{-1}(U)=f(U).
+        </me>
+        Selain itu, <m>f(x)\in f(U)\subseteq f(A)</m>. Jadi <m>f(A)</m>
+        memuat lingkungan terbuka <m>f(U)</m> dari <m>f(x)</m>, yang berarti
+        <m>f(x)</m> merupakan titik interior dari <m>f(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-04">
+    <title>Homeomorfisme mempertahankan titik batas</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> dan <m>(Y,\tau_Y)</m> merupakan ruang
+        topologi, <m>f:X\to Y</m> suatu homeomorfisme, dan
+        <m>A\subseteq X</m>. Jika <m>x</m> merupakan titik batas dari
+        <m>A</m>, apakah <m>f(x)</m> harus merupakan titik batas dari
+        <m>f(A)</m>? Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-04-hint">
+      <p>
+        Untuk lingkungan <m>V</m> bagi <m>f(x)</m>, lingkungan
+        <m>f^{-1}(V)</m> bagi <m>x</m> bertemu <m>A</m> dan <m>X\setminus A</m>.
+        Gunakan keinjektifan untuk menentukan citra titik dari komplemen itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-04-answer">
+      <p>
+        Ya. Setiap lingkungan bagi <m>f(x)</m> bertemu <m>f(A)</m> dan
+        <m>Y\setminus f(A)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-04-solution">
+      <p>
+        Ambil lingkungan sebarang <m>V</m> bagi <m>f(x)</m>. Kekontinuan
+        <m>f</m> membuat <m>f^{-1}(V)</m> menjadi lingkungan bagi <m>x</m>.
+        Karena <m>x</m> titik batas <m>A</m>, terdapat
+        <m>a\in f^{-1}(V)\cap A</m> dan
+        <m>b\in f^{-1}(V)\cap(X\setminus A)</m>. Maka
+        <m>f(a)\in V\cap f(A)</m>.
+      </p>
+      <p>
+        Di sisi lain, <m>f(b)\in V</m> tetapi <m>f(b)\notin f(A)</m>.
+        Memang, jika <m>f(b)=f(c)</m> untuk suatu <m>c\in A</m>, keinjektifan
+        <m>f</m> akan memberikan <m>b=c\in A</m>, bertentangan dengan
+        <m>b\notin A</m>. Jadi <m>f(b)\in V\cap(Y\setminus f(A))</m>.
+        Setiap lingkungan <m>V</m> bertemu kedua <m>f(A)</m> dan komplemennya;
+        dengan demikian <m>f(x)</m> merupakan titik batas dari <m>f(A)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-05">
+    <title>Ekuivalensi metrik mengakibatkan ekuivalensi topologis</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d_X)</m> dan <m>(Y,d_Y)</m> merupakan ruang metrik yang
+        ekuivalen secara metrik. Tunjukkan bahwa <m>X</m> dan <m>Y</m>
+        ekuivalen secara topologis jika menggunakan topologi metriknya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-05-hint">
+      <p>
+        Ambil isometri <m>f:X\to Y</m>. Dalam pembuktian
+        <m>\epsilon</m>-<m>\delta</m> untuk <m>f</m> maupun <m>f^{-1}</m>,
+        pilihan <m>\delta=\epsilon</m> sudah cukup.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-05-answer">
+      <p>
+        Setiap isometri adalah homeomorfisme terhadap topologi yang diinduksi
+        oleh metrik; jadi kedua ruang tersebut ekuivalen secara topologis.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-05-solution">
+      <p>
+        Ekuivalensi metrik menyediakan bijeksi <m>f:X\to Y</m> dengan
+        <m>d_Y(f(x),f(y))=d_X(x,y)</m> untuk semua <m>x,y\in X</m>.
+        Tetapkan <m>x\in X</m> dan <m>\epsilon\gt 0</m>. Jika
+        <m>d_X(x,y)\lt\delta</m> dengan <m>\delta=\epsilon</m>, maka
+        <me>
+          d_Y(f(x),f(y))=d_X(x,y)\lt\epsilon.
+        </me>
+        Jadi <m>f</m> kontinu di setiap <m>x</m>.
+      </p>
+      <p>
+        Karena <m>f</m> bijektif, inversnya terdefinisi. Untuk semua
+        <m>u,v\in Y</m>, pelestarian jarak pada arah invers memberikan
+        <m>d_X(f^{-1}(u),f^{-1}(v))=d_Y(u,v)</m>. Argumen yang sama, kembali
+        dengan <m>\delta=\epsilon</m>, menunjukkan bahwa <m>f^{-1}</m>
+        kontinu. Dengan demikian <m>f</m> adalah bijeksi kontinu dengan invers
+        kontinu, yaitu homeomorfisme antara topologi-topologi metrik pada
+        <m>X</m> dan <m>Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-06">
+    <title>Pencirian kekontinuan melalui himpunan tertutup</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> dan <m>(Y,\tau_Y)</m> merupakan ruang
+        topologi, dan <m>f:X\to Y</m> suatu fungsi. Buktikan bahwa <m>f</m>
+        kontinu jika dan hanya jika <m>f^{-1}(C)</m> merupakan himpunan
+        tertutup dalam <m>X</m> setiap kali <m>C</m> merupakan himpunan
+        tertutup dalam <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-06-hint">
+      <p>
+        Gunakan kesamaan
+        <m>f^{-1}(Y\setminus B)=X\setminus f^{-1}(B)</m> dan ubah himpunan
+        tertutup menjadi komplemen himpunan terbuka pada kedua arah bukti.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-06-answer">
+      <p>
+        Pernyataan itu benar: pencirian prapeta himpunan tertutup setara dengan
+        pencirian prapeta himpunan terbuka karena prapeta mempertahankan
+        komplemen.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-06-solution">
+      <p>
+        Andaikan <m>f</m> kontinu dan ambil himpunan tertutup <m>C\subseteq Y</m>.
+        Himpunan <m>Y\setminus C</m> terbuka, sehingga
+        <m>f^{-1}(Y\setminus C)</m> terbuka dalam <m>X</m>. Akan tetapi,
+        <me>
+          f^{-1}(Y\setminus C)=X\setminus f^{-1}(C).
+        </me>
+        Jadi komplemen <m>f^{-1}(C)</m> terbuka, dan karenanya
+        <m>f^{-1}(C)</m> tertutup dalam <m>X</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan prapeta setiap himpunan tertutup dalam <m>Y</m>
+        tertutup dalam <m>X</m>. Ambil himpunan terbuka <m>O\subseteq Y</m>.
+        Komplemennya <m>C=Y\setminus O</m> tertutup, sehingga
+        <m>f^{-1}(C)</m> tertutup. Maka
+        <me>
+          f^{-1}(O)=f^{-1}(Y\setminus C)=X\setminus f^{-1}(C)
+        </me>
+        terbuka dalam <m>X</m>. Prapeta setiap himpunan terbuka dalam
+        <m>Y</m> dengan demikian terbuka dalam <m>X</m>, yang membuktikan
+        kekontinuan <m>f</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-07">
+    <title>Komposisi fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m>, <m>(Y,\tau_Y)</m>, dan
+        <m>(Z,\tau_Z)</m> merupakan ruang topologi. Misalkan
+        <m>f:X\to Y</m> dan <m>g:Y\to Z</m> merupakan fungsi kontinu.
+        Buktikan bahwa <m>g\circ f:X\to Z</m> merupakan fungsi kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-07-hint">
+      <p>
+        Untuk himpunan terbuka <m>O\subseteq Z</m>, gunakan
+        <m>(g\circ f)^{-1}(O)=f^{-1}(g^{-1}(O))</m> dan terapkan kekontinuan
+        kedua fungsi secara berurutan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-07-answer">
+      <p>
+        Komposisi <m>g\circ f</m> kontinu karena prapeta setiap himpunan
+        terbuka di bawah komposisi itu terbuka dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-07-solution">
+      <p>
+        Ambil sebarang himpunan terbuka <m>O\subseteq Z</m>. Karena <m>g</m>
+        kontinu, <m>g^{-1}(O)</m> terbuka dalam <m>Y</m>. Karena <m>f</m>
+        kontinu, <m>f^{-1}(g^{-1}(O))</m> terbuka dalam <m>X</m>. Identitas
+        prapeta komposisi memberikan
+        <me>
+          (g\circ f)^{-1}(O)=f^{-1}(g^{-1}(O)).
+        </me>
+        Jadi prapeta setiap himpunan terbuka dalam <m>Z</m> di bawah
+        <m>g\circ f</m> terbuka dalam <m>X</m>. Berdasarkan pencirian
+        kekontinuan dengan himpunan terbuka, <m>g\circ f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-08">
+    <title>Menguji kekontinuan setelah prakomposisi dengan homeomorfisme</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m>, <m>(Y,\tau_Y)</m>, dan
+        <m>(Z,\tau_Z)</m> merupakan ruang topologi. Misalkan
+        <m>f:(X,\tau_X)\to(Y,\tau_Y)</m> suatu homeomorfisme dan
+        <m>h:(Y,\tau_Y)\to(Z,\tau_Z)</m> suatu fungsi. Buktikan bahwa
+        <m>h</m> kontinu jika dan hanya jika <m>h\circ f</m> kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-08-hint">
+      <p>
+        Satu arah mengikuti kekontinuan komposisi. Untuk arah sebaliknya,
+        tuliskan <m>h=(h\circ f)\circ f^{-1}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-08-answer">
+      <p>
+        Kedua pernyataan setara karena <m>f</m> dan <m>f^{-1}</m> kontinu,
+        sedangkan komposisi fungsi-fungsi kontinu selalu kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-08-solution">
+      <p>
+        Jika <m>h</m> kontinu, maka <m>f</m> juga kontinu karena merupakan
+        homeomorfisme. Oleh teorema komposisi, <m>h\circ f:X\to Z</m>
+        kontinu.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>h\circ f</m> kontinu. Invers
+        <m>f^{-1}:Y\to X</m> kontinu menurut definisi homeomorfisme. Karena
+        <m>f</m> bijektif,
+        <me>
+          (h\circ f)\circ f^{-1}=h\circ(f\circ f^{-1})=h.
+        </me>
+        Ruas kiri adalah komposisi dua fungsi kontinu, sehingga <m>h</m>
+        kontinu. Kedua implikasi membuktikan ekuivalensi yang diminta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-09">
+    <title>Menguji kekontinuan setelah pascakomposisi dengan homeomorfisme</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m>, <m>(Y,\tau_Y)</m>, dan
+        <m>(Z,\tau_Z)</m> merupakan ruang topologi. Misalkan
+        <m>f:(X,\tau_X)\to(Y,\tau_Y)</m> suatu homeomorfisme dan
+        <m>k:(Z,\tau_Z)\to(X,\tau_X)</m> suatu fungsi. Buktikan bahwa
+        <m>k</m> kontinu jika dan hanya jika <m>f\circ k</m> kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-09-hint">
+      <p>
+        Satu arah menggunakan komposisi <m>f\circ k</m>. Untuk arah sebaliknya,
+        susun kembali <m>k=f^{-1}\circ(f\circ k)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-09-answer">
+      <p>
+        Kedua pernyataan setara karena komposisi dengan homeomorfisme dapat
+        dibatalkan secara kontinu menggunakan <m>f^{-1}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-09-solution">
+      <p>
+        Jika <m>k</m> kontinu, kekontinuan <m>f</m> menunjukkan bahwa komposisi
+        <m>f\circ k:Z\to Y</m> kontinu.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>f\circ k</m> kontinu. Karena <m>f</m>
+        homeomorfisme, <m>f^{-1}:Y\to X</m> kontinu. Selain itu,
+        <me>
+          f^{-1}\circ(f\circ k)=(f^{-1}\circ f)\circ k=k.
+        </me>
+        Jadi <m>k</m> adalah komposisi dua fungsi kontinu dan karenanya
+        kontinu. Ini membuktikan kedua arah pernyataan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-a-10">
+    <title>Kontinu tepat di satu titik pada ruang berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d\}</m> dengan topologi
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{b,d\},\{a,b,d\},X\}</m>.
+        Temukan fungsi <m>f:X\to X</m> yang kontinu tepat di satu titik,
+        atau tunjukkan bahwa fungsi seperti itu tidak ada.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-a-10-hint">
+      <p>
+        Perhatikan bahwa <m>\{a\}</m> dan <m>\{b\}</m> terbuka. Tentukan apa
+        akibatnya bagi kekontinuan sebarang fungsi pada titik <m>a</m> dan
+        <m>b</m> di domain.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-a-10-answer">
+      <p>
+        Fungsi seperti itu tidak ada. Setiap fungsi <m>f:X\to X</m> kontinu
+        setidaknya di dua titik, yaitu <m>a</m> dan <m>b</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-a-10-solution">
+      <p>
+        Titik <m>a</m> terisolasi karena singleton <m>\{a\}</m> terbuka.
+        Ambil sebarang fungsi <m>f:X\to X</m> dan sebarang lingkungan
+        <m>N</m> bagi <m>f(a)</m>. Karena <m>f(a)\in N</m>, berlaku
+        <m>a\in f^{-1}(N)</m>. Dengan demikian <m>f^{-1}(N)</m> memuat
+        himpunan terbuka <m>\{a\}</m>, sehingga merupakan lingkungan bagi
+        <m>a</m>. Menurut definisi, <m>f</m> kontinu di <m>a</m>.
+      </p>
+      <p>
+        Argumen yang sama berlaku bagi <m>b</m>, sebab <m>\{b\}</m> juga
+        terbuka. Jadi, apa pun nilai-nilai fungsi <m>f</m>, fungsi itu selalu
+        kontinu di <m>a</m> dan <m>b</m>. Akibatnya tidak mungkin ada fungsi
+        dari <m>X</m> ke <m>X</m> yang kontinu tepat di satu titik.
+      </p>
+    </solution>
+  </exercise>
+</section>

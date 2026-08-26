@@ -1,0 +1,397 @@
+<section xml:id="o003-c90-ch14-exercise-guides-e" xml:lang="id-ID">
+  <title>Panduan latihan Bab 14, bagian kelima</title>
+  <p>
+    Sembilan unit pertama melanjutkan soal klasifikasi semua topologi pada
+    <m>X=\{a,b,c\}</m>. Tuliskan <m>\tau_k</m> untuk topologi ke-<m>k</m>
+    dalam urutan sumber. Sebagai acuan bagi pembuktian di bawah,
+    <m>\tau_{20}=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m> dan
+    <m>\tau_{23}=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},X\}</m>.
+    Pelabelan ulang ketiga titik menghasilkan partisi orbit
+    <me>
+      \{1\},\ \{2,3,4\},\ \{5,6,7\},\ \{8,9,11,13,15,16\},\
+      \{10,12,14\},\ \{17,18,19\},\ \{20,21,22\},\
+      \{23,24,25,26,27,28\},\ \{29\}.
+    </me>
+    Jadi, terdapat tepat sembilan kelas homeomorfisme. Daftar ini dapat
+    diperiksa tanpa menebak: dua topologi pada himpunan berhingga yang sama
+    homeomorfik tepat ketika suatu permutasi titik membawa seluruh koleksi
+    himpunan terbuka yang satu ke koleksi yang lain.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-01">
+    <title>Topologi ke-21 pada tiga titik</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> dalam klasifikasi 29 topologi pada
+        <m>X=\{a,b,c\}</m>, tentukan kelas homeomorfisme dari
+        <m>\tau_{21}=\{\emptyset,\{a\},\{c\},\{a,c\},X\}</m> dan
+        berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-01-hint">
+      <p>
+        Bandingkan dengan <m>\tau_{20}</m> dan tukarkan label <m>b</m> dan
+        <m>c</m>. Untuk memastikan kelasnya tidak lebih besar, hitung banyak
+        himpunan terbuka beranggota satu dan beranggota dua.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-01-answer">
+      <p>
+        Topologi <m>\tau_{21}</m> berada dalam kelas
+        <m>\{\tau_{20},\tau_{21},\tau_{22}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-01-solution">
+      <p>
+        Permutasi yang menetapkan <m>a</m> dan menukar <m>b</m> dengan
+        <m>c</m> membawa himpunan terbuka <m>\{a\},\{b\},\{a,b\}</m> dari
+        <m>\tau_{20}</m> berturut-turut ke
+        <m>\{a\},\{c\},\{a,c\}</m>. Jadi permutasi itu merupakan
+        homeomorfisme dari <m>\tau_{20}</m> ke <m>\tau_{21}</m>.
+        Setiap topologi dalam orbit ini mempunyai tepat lima himpunan terbuka:
+        dua singleton terbuka dan satu himpunan terbuka beranggota dua, selain
+        <m>\emptyset</m> dan <m>X</m>. Pemeriksaan daftar 29 topologi
+        menunjukkan bahwa hanya nomor 20, 21, dan 22 yang mempunyai profil
+        tersebut. Maka kelas yang dinyatakan di atas tepat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-02">
+    <title>Topologi ke-22 pada tiga titik</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> tentukan kelas homeomorfisme dari
+        <m>\tau_{22}=\{\emptyset,\{b\},\{c\},\{b,c\},X\}</m> dalam daftar
+        29 topologi pada <m>X=\{a,b,c\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-02-hint">
+      <p>
+        Terapkan perlabelan ulang <m>a\mapsto b</m>, <m>b\mapsto c</m>, dan
+        <m>c\mapsto a</m> pada <m>\tau_{20}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-02-answer">
+      <p>
+        Topologi <m>\tau_{22}</m> berada dalam kelas
+        <m>\{\tau_{20},\tau_{21},\tau_{22}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-02-solution">
+      <p>
+        Siklus <m>a\mapsto b</m>, <m>b\mapsto c</m>, <m>c\mapsto a</m>
+        membawa <m>\{a\},\{b\},\{a,b\}</m> ke
+        <m>\{b\},\{c\},\{b,c\}</m>, sehingga membawa <m>\tau_{20}</m>
+        tepat ke <m>\tau_{22}</m>. Jadi kedua ruang homeomorfik. Seperti pada
+        unit sebelumnya, profil kardinalitas himpunan terbukanya adalah dua
+        singleton dan satu pasangan, dengan total lima himpunan terbuka.
+        Nomor 20, 21, dan 22 adalah seluruh topologi dalam daftar yang memiliki
+        profil ini, sehingga tidak ada anggota kelas lain.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-03">
+    <title>Topologi ke-23 dan orbit enam elemennya</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> tentukan kelas homeomorfisme dari
+        <m>\tau_{23}=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},X\}</m>
+        di antara 29 topologi pada <m>X=\{a,b,c\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-03-hint">
+      <p>
+        Terapkan keenam permutasi <m>a,b,c</m>. Citra yang berbeda adalah
+        tepat topologi nomor 23 sampai 28.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-03-answer">
+      <p>
+        Kelasnya adalah
+        <m>\{\tau_{23},\tau_{24},\tau_{25},\tau_{26},\tau_{27},\tau_{28}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-03-solution">
+      <p>
+        Setiap permutasi titik menghasilkan homeomorfisme dari
+        <m>(X,\tau_{23})</m> ke ruang yang koleksi himpunan terbukanya merupakan
+        citra <m>\tau_{23}</m>. Keenam permutasi menghasilkan enam koleksi
+        berbeda, yakni nomor 23 sampai 28. Masing-masing mempunyai tepat enam
+        himpunan terbuka, dengan dua singleton dan dua himpunan beranggota dua
+        selain <m>\emptyset</m> dan <m>X</m>. Dalam daftar 29 topologi, hanya
+        keenam topologi tersebut yang mempunyai enam himpunan terbuka. Karena
+        homeomorfisme mempertahankan banyaknya himpunan terbuka, tidak ada
+        topologi lain yang dapat masuk ke orbit ini. Jadi kelas yang dituliskan
+        pada jawaban tepat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-04">
+    <title>Topologi ke-24 pada orbit enam elemen</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> klasifikasikan
+        <m>\tau_{24}=\{\emptyset,\{a\},\{b\},\{a,b\},\{b,c\},X\}</m>
+        hingga homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-04-hint">
+      <p>
+        Tukarkan <m>a</m> dan <m>b</m> dalam <m>\tau_{23}</m> sambil
+        menetapkan <m>c</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-04-answer">
+      <p>
+        Topologi ini berada dalam kelas
+        <m>\{\tau_{23},\tau_{24},\tau_{25},\tau_{26},\tau_{27},\tau_{28}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-04-solution">
+      <p>
+        Transposisi <m>a\leftrightarrow b</m> membawa himpunan terbuka tak
+        trivial <m>\{a\},\{b\},\{a,b\},\{a,c\}</m> dari
+        <m>\tau_{23}</m> ke
+        <m>\{b\},\{a\},\{a,b\},\{b,c\}</m>, yaitu tepat himpunan terbuka tak
+        trivial <m>\tau_{24}</m>. Maka transposisi itu adalah homeomorfisme.
+        Seluruh orbitnya adalah nomor 23–28; orbit tersebut lengkap karena
+        keenamnya adalah satu-satunya topologi dalam daftar yang memiliki
+        enam himpunan terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-05">
+    <title>Topologi ke-25 pada orbit enam elemen</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> klasifikasikan
+        <m>\tau_{25}=\{\emptyset,\{a\},\{c\},\{a,c\},\{a,b\},X\}</m>
+        hingga homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-05-hint">
+      <p>
+        Tukarkan <m>b</m> dan <m>c</m> dalam <m>\tau_{23}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-05-answer">
+      <p>
+        Topologi ini berada dalam kelas
+        <m>\{\tau_{23},\tau_{24},\tau_{25},\tau_{26},\tau_{27},\tau_{28}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-05-solution">
+      <p>
+        Transposisi <m>b\leftrightarrow c</m> membawa
+        <m>\{a\},\{b\},\{a,b\},\{a,c\}</m> ke
+        <m>\{a\},\{c\},\{a,c\},\{a,b\}</m>. Jadi citra
+        <m>\tau_{23}</m> adalah <m>\tau_{25}</m>, dan permutasi itu merupakan
+        homeomorfisme. Kelengkapan kelas nomor 23–28 kembali mengikuti fakta
+        bahwa keenam topologi inilah seluruh topologi dengan enam himpunan
+        terbuka dalam daftar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-06">
+    <title>Topologi ke-26 pada orbit enam elemen</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> klasifikasikan
+        <m>\tau_{26}=\{\emptyset,\{a\},\{c\},\{a,c\},\{b,c\},X\}</m>
+        hingga homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-06-hint">
+      <p>
+        Pada <m>\tau_{23}</m>, terapkan permutasi
+        <m>a\mapsto c</m>, <m>b\mapsto a</m>, dan <m>c\mapsto b</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-06-answer">
+      <p>
+        Topologi ini berada dalam kelas
+        <m>\{\tau_{23},\tau_{24},\tau_{25},\tau_{26},\tau_{27},\tau_{28}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-06-solution">
+      <p>
+        Permutasi <m>a\mapsto c</m>, <m>b\mapsto a</m>,
+        <m>c\mapsto b</m> membawa singleton terbuka
+        <m>\{a\},\{b\}</m> ke <m>\{c\},\{a\}</m> dan membawa pasangan
+        terbuka <m>\{a,b\},\{a,c\}</m> ke
+        <m>\{a,c\},\{b,c\}</m>. Karena itu koleksi citranya adalah tepat
+        <m>\tau_{26}</m>. Argumen jumlah himpunan terbuka menunjukkan bahwa
+        orbit nomor 23–28 ini tidak mempunyai anggota tambahan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-07">
+    <title>Topologi ke-27 pada orbit enam elemen</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> klasifikasikan
+        <m>\tau_{27}=\{\emptyset,\{b\},\{c\},\{b,c\},\{a,b\},X\}</m>
+        hingga homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-07-hint">
+      <p>
+        Gunakan siklus <m>a\mapsto b</m>, <m>b\mapsto c</m>,
+        <m>c\mapsto a</m> pada <m>\tau_{23}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-07-answer">
+      <p>
+        Topologi ini berada dalam kelas
+        <m>\{\tau_{23},\tau_{24},\tau_{25},\tau_{26},\tau_{27},\tau_{28}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-07-solution">
+      <p>
+        Siklus yang diberikan membawa
+        <m>\{a\},\{b\},\{a,b\},\{a,c\}</m> ke
+        <m>\{b\},\{c\},\{b,c\},\{a,b\}</m>. Maka siklus itu memetakan
+        <m>\tau_{23}</m> ke <m>\tau_{27}</m> dan merupakan homeomorfisme.
+        Keenam topologi nomor 23–28 membentuk seluruh kelas karena semuanya,
+        dan hanya mereka, mempunyai enam himpunan terbuka dalam daftar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-08">
+    <title>Topologi ke-28 pada orbit enam elemen</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> klasifikasikan
+        <m>\tau_{28}=\{\emptyset,\{b\},\{c\},\{b,c\},\{a,c\},X\}</m>
+        hingga homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-08-hint">
+      <p>
+        Tukarkan <m>a</m> dan <m>c</m> dalam <m>\tau_{23}</m> sambil
+        menetapkan <m>b</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-08-answer">
+      <p>
+        Topologi ini berada dalam kelas
+        <m>\{\tau_{23},\tau_{24},\tau_{25},\tau_{26},\tau_{27},\tau_{28}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-08-solution">
+      <p>
+        Transposisi <m>a\leftrightarrow c</m> membawa
+        <m>\{a\},\{b\},\{a,b\},\{a,c\}</m> ke
+        <m>\{c\},\{b\},\{b,c\},\{a,c\}</m>. Ini adalah koleksi himpunan
+        terbuka tak trivial <m>\tau_{28}</m>, sehingga transposisi tersebut
+        merupakan homeomorfisme dari <m>\tau_{23}</m>. Argumen jumlah himpunan
+        terbuka membuktikan bahwa kelasnya tepat nomor 23–28.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-09">
+    <title>Topologi ke-29: ruang diskret</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> tentukan kelas homeomorfisme topologi
+        diskret <m>\tau_{29}=\mathcal P(X)</m> pada
+        <m>X=\{a,b,c\}</m> di antara 29 topologi yang terdaftar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-09-hint">
+      <p>
+        Banyaknya himpunan terbuka dipertahankan oleh homeomorfisme. Berapa
+        banyak himpunan terbuka dalam topologi diskret pada tiga titik?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-09-answer">
+      <p>
+        Kelasnya hanya <m>\{\tau_{29}\}</m> dalam daftar ini.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-09-solution">
+      <p>
+        Topologi diskret pada tiga titik memuat semua
+        <m>2^3=8</m> himpunan bagian sebagai himpunan terbuka. Homeomorfisme
+        membawa koleksi himpunan terbuka secara bijektif ke koleksi himpunan
+        terbuka ruang sasaran, sehingga ruang yang homeomorfik dengannya juga
+        harus mempunyai delapan himpunan terbuka. Di antara 29 topologi pada
+        himpunan tetap <m>X</m>, hanya <m>\tau_{29}=\mathcal P(X)</m> yang
+        mempunyai delapan himpunan terbuka. Jadi orbitnya merupakan singleton.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-e-10">
+    <title>Aksioma separasi merupakan sifat topologis</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> tunjukkan bahwa sifat <m>T_i</m> merupakan
+        sifat topologis untuk setiap indeks <m>i</m> yang didefinisikan dalam
+        teks, yakni <m>i=1,2,3,4</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-e-10-hint">
+      <p>
+        Jika <m>h:X\to Y</m> homeomorfisme, maka <m>h</m> membawa himpunan
+        terbuka ke himpunan terbuka dan himpunan tertutup ke himpunan tertutup.
+        Tarik titik atau himpunan tertutup di <m>Y</m> kembali ke <m>X</m>,
+        gunakan sifat separasi di <m>X</m>, lalu ambil citra lingkungan yang
+        diperoleh.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-e-10-answer">
+      <p>
+        Benar. Homeomorfisme mempertahankan sifat <m>T_1</m>, Hausdorff
+        (<m>T_2</m>), reguler, dan normal; karena itu ia juga mempertahankan
+        gabungan syarat yang mendefinisikan <m>T_3</m> dan <m>T_4</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-e-10-solution">
+      <p>
+        Misalkan <m>h:X\to Y</m> suatu homeomorfisme. Karena <m>h^{-1}</m>
+        kontinu, <m>h</m> membawa setiap himpunan terbuka di <m>X</m> ke
+        himpunan terbuka di <m>Y</m>. Dengan mengambil komplemen, <m>h</m>
+        juga membawa himpunan tertutup ke himpunan tertutup.
+      </p>
+      <p>
+        Jika <m>X</m> bersifat <m>T_1</m> dan <m>y_1\neq y_2</m> di <m>Y</m>,
+        terapkan sifat <m>T_1</m> pada
+        <m>h^{-1}(y_1)\neq h^{-1}(y_2)</m>. Citra oleh <m>h</m> dari himpunan
+        terbuka pemisah yang diperoleh memberikan himpunan terbuka di
+        <m>Y</m> yang memuat satu titik tetapi tidak memuat titik lainnya.
+        Jika <m>X</m> bersifat <m>T_2</m>, cara yang sama membawa dua
+        lingkungan terbuka saling lepas di <m>X</m> ke dua lingkungan terbuka
+        saling lepas di <m>Y</m>.
+      </p>
+      <p>
+        Selanjutnya, andaikan <m>X</m> reguler. Untuk himpunan tertutup
+        <m>C\subseteq Y</m> dan titik <m>y\notin C</m>, himpunan
+        <m>h^{-1}(C)</m> tertutup dan <m>h^{-1}(y)\notin h^{-1}(C)</m>.
+        Pisahkan keduanya dengan himpunan terbuka saling lepas di <m>X</m>;
+        citranya adalah himpunan terbuka saling lepas di <m>Y</m> yang memuat
+        <m>C</m> dan <m>y</m>. Jadi <m>Y</m> reguler. Jika <m>X</m> normal,
+        tarik kembali dua himpunan tertutup saling lepas di <m>Y</m>, pisahkan
+        keduanya di <m>X</m>, lalu ambil citra himpunan terbuka pemisah. Ini
+        membuktikan bahwa <m>Y</m> normal.
+      </p>
+      <p>
+        Menurut definisi sumber, <m>T_3</m> berarti reguler sekaligus
+        <m>T_1</m>, dan <m>T_4</m> berarti normal sekaligus <m>T_1</m>.
+        Karena setiap komponen syarat dipertahankan, <m>T_3</m> dan <m>T_4</m>
+        juga dipertahankan. Menerapkan argumen yang sama pada homeomorfisme
+        invers <m>h^{-1}</m> memberi implikasi sebaliknya. Jadi untuk setiap
+        <m>i=1,2,3,4</m>, <m>X</m> bersifat <m>T_i</m> jika dan hanya jika
+        <m>Y</m> bersifat <m>T_i</m>; inilah arti sifat topologis.
+      </p>
+    </solution>
+  </exercise>
+</section>

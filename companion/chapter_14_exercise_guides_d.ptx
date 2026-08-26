@@ -1,0 +1,490 @@
+<section xml:id="o003-c90-ch14-exercise-guides-d" xml:lang="id-ID">
+  <title>Panduan latihan Bab 14, bagian keempat</title>
+  <p>
+    Bagian ini mendampingi sepuluh topologi berikutnya dalam klasifikasi 29
+    topologi pada <m>X=\{a,b,c\}</m>. Dua topologi pada himpunan berhingga ini
+    homeomorfik tepat ketika suatu permutasi titik membawa seluruh keluarga
+    himpunan terbuka yang satu ke keluarga yang lain. Klasifikasi lengkap
+    menghasilkan sembilan kelas homeomorfisme; panduan berikut mengidentifikasi
+    orbit permutasi untuk setiap topologi dalam blok ini. Uraian pendamping ini
+    ditulis secara terpisah.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-01">
+    <title>Kelas rantai dari singleton <m>\{b\}</m> ke <m>\{a,b\}</m></title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{b\},\{a,b\},X\}</m>, identifikasi semua
+        anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-01-hint">
+      <p>
+        Catat bahwa dua himpunan terbuka tak trivial mempunyai ukuran
+        <m>1</m> dan <m>2</m>, dan singleton itu termuat dalam doubleton.
+        Relabeli pasangan titik terurut yang menentukan rantai tersebut.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-01-answer">
+      <p>
+        Kelasnya terdiri atas enam topologi
+        <m>\{\emptyset,\{a\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{a\},\{a,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{b,c\},X\}</m>,
+        <m>\{\emptyset,\{c\},\{a,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-01-solution">
+      <p>
+        Topologi ini mempunyai tepat satu singleton terbuka, yaitu
+        <m>\{b\}</m>, dan tepat satu doubleton terbuka, yaitu
+        <m>\{a,b\}</m>; selain itu <m>\{b\}\subset\{a,b\}</m>. Secara umum,
+        setiap relabelingnya berbentuk
+        <me>
+          \tau_{x,y}=\{\emptyset,\{x\},\{x,y\},X\},
+        </me>
+        dengan <m>x,y\in X</m> dan <m>x\neq y</m>. Ada
+        <m>3\cdot2=6</m> pasangan terurut seperti itu, dan keenam pilihannya
+        memberikan persis enam topologi dalam jawaban.
+      </p>
+      <p>
+        Untuk dua pasangan terurut <m>(x,y)</m> dan <m>(x',y')</m>, pilih
+        permutasi yang mengirim <m>x</m> ke <m>x'</m>, <m>y</m> ke
+        <m>y'</m>, dan titik sisanya ke titik sisanya. Permutasi itu mengirim
+        setiap anggota <m>\tau_{x,y}</m> ke anggota yang bersesuaian dalam
+        <m>\tau_{x',y'}</m>, sehingga merupakan homeomorfisme. Sebaliknya,
+        homeomorfisme mempertahankan ukuran himpunan terbuka dan relasi inklusi.
+        Jadi citra singleton terbuka harus tetap termuat dalam citra doubleton
+        terbuka, dan tidak ada topologi di luar enam bentuk tersebut yang dapat
+        masuk ke kelas ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-02">
+    <title>Singleton terbuka dan komplemennya</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{b\},\{a,c\},X\}</m>, identifikasi semua
+        anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-02-hint">
+      <p>
+        Kedua himpunan terbuka tak trivial saling berkomplemen. Pilih titik
+        mana yang menjadi satu-satunya singleton terbuka, lalu permutasikan
+        ketiga kemungkinan pilihan itu.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-02-answer">
+      <p>
+        Kelasnya terdiri atas
+        <m>\{\emptyset,\{a\},\{b,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{a,b\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-02-solution">
+      <p>
+        Topologi yang diberikan mempunyai tepat satu singleton terbuka
+        <m>\{b\}</m> dan satu doubleton terbuka <m>\{a,c\}</m>, dan keduanya
+        saling lepas serta saling berkomplemen. Setiap relabeling mempunyai
+        bentuk
+        <me>
+          \sigma_x=\{\emptyset,\{x\},X\setminus\{x\},X\},
+        </me>
+        dengan <m>x\in X</m>. Tiga pilihan untuk <m>x</m> menghasilkan tepat
+        tiga topologi yang tercantum dalam jawaban.
+      </p>
+      <p>
+        Jika <m>x,x'\in X</m>, setiap permutasi yang mengirim <m>x</m> ke
+        <m>x'</m> juga mengirim komplemen <m>\{x\}</m> ke komplemen
+        <m>\{x'\}</m>; jadi permutasi itu merupakan homeomorfisme dari
+        <m>\sigma_x</m> ke <m>\sigma_{x'}</m>. Sebaliknya, homeomorfisme harus
+        mengirim singleton terbuka yang unik ke singleton terbuka yang unik dan
+        mempertahankan komplemen. Karena itu orbit ini tidak memiliki anggota
+        lain. Secara khusus, kelas ini berbeda dari kelas rantai, sebab di sini
+        singleton tidak termuat dalam doubleton terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-03">
+    <title>Kelas rantai dari singleton <m>\{b\}</m> ke <m>\{b,c\}</m></title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{b\},\{b,c\},X\}</m>, identifikasi semua
+        anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-03-hint">
+      <p>
+        Pandang <m>b</m> sebagai titik pertama dan <m>c</m> sebagai titik kedua
+        dalam pasangan terurut yang menghasilkan
+        <m>\{\emptyset,\{x\},\{x,y\},X\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-03-answer">
+      <p>
+        Kelasnya terdiri atas enam topologi
+        <m>\{\emptyset,\{a\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{a\},\{a,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{b,c\},X\}</m>,
+        <m>\{\emptyset,\{c\},\{a,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-03-solution">
+      <p>
+        Di luar <m>\emptyset</m> dan <m>X</m>, topologi ini mempunyai rantai
+        <m>\{b\}\subset\{b,c\}</m>. Relabeling sebarang ditentukan oleh citra
+        titik <m>b</m> dan citra titik <m>c</m>; keduanya harus berbeda.
+        Karena ada enam pasangan terurut titik berbeda, orbit relabelingnya
+        adalah keenam topologi dalam jawaban. Misalnya, pertukaran <m>a</m>
+        dengan <m>c</m> mengirim topologi ini ke
+        <m>\{\emptyset,\{b\},\{a,b\},X\}</m>.
+      </p>
+      <p>
+        Setiap pasangan terurut dapat dikirim ke pasangan lain oleh suatu
+        permutasi <m>X</m>, dan permutasi itu membawa singleton serta
+        doubleton pembentuk rantai ke singleton serta doubleton sasaran.
+        Sebaliknya, banyaknya himpunan terbuka dari setiap ukuran dan inklusi
+        singleton ke doubleton dipertahankan oleh homeomorfisme. Maka hanya
+        keenam topologi rantai tersebut yang berada dalam kelas yang sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-04">
+    <title>Singleton <m>\{c\}</m> dan doubleton komplemennya</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{c\},\{a,b\},X\}</m>, identifikasi semua
+        anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-04-hint">
+      <p>
+        Himpunan <m>\{c\}</m> adalah satu-satunya singleton terbuka, sedangkan
+        <m>\{a,b\}=X\setminus\{c\}</m>. Relabeli titik khusus <m>c</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-04-answer">
+      <p>
+        Kelasnya terdiri atas
+        <m>\{\emptyset,\{a\},\{b,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{a,b\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-04-solution">
+      <p>
+        Topologi ini berbentuk
+        <m>\sigma_c=\{\emptyset,\{c\},X\setminus\{c\},X\}</m>. Jika suatu
+        permutasi mengirim <m>c</m> ke <m>x\in X</m>, citra topologinya adalah
+        <m>\sigma_x=\{\emptyset,\{x\},X\setminus\{x\},X\}</m>. Untuk
+        <m>x=a,b,c</m>, diperoleh tepat tiga topologi dalam jawaban, dan setiap
+        permutasi tersebut adalah homeomorfisme ke citranya.
+      </p>
+      <p>
+        Tidak ada anggota lain dalam kelas ini. Memang, homeomorfisme
+        mempertahankan fakta bahwa terdapat tepat satu singleton terbuka dan
+        tepat satu doubleton terbuka, serta bahwa keduanya saling berkomplemen.
+        Ciri ini menentukan tiga topologi <m>\sigma_x</m> di antara daftar 29
+        topologi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-05">
+    <title>Kelas rantai dari singleton <m>\{c\}</m> ke <m>\{a,c\}</m></title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{c\},\{a,c\},X\}</m>, identifikasi semua
+        anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-05-hint">
+      <p>
+        Topologi ini ditentukan oleh pasangan terurut <m>(c,a)</m>. Tentukan
+        semua citra pasangan itu di bawah keenam permutasi <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-05-answer">
+      <p>
+        Kelasnya terdiri atas enam topologi
+        <m>\{\emptyset,\{a\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{a\},\{a,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{b,c\},X\}</m>,
+        <m>\{\emptyset,\{c\},\{a,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-05-solution">
+      <p>
+        Dua himpunan terbuka tak trivial membentuk rantai
+        <m>\{c\}\subset\{a,c\}</m>. Untuk permutasi <m>p:X\to X</m>, citra
+        topologi adalah
+        <me>
+          p(\tau)=\{\emptyset,\{p(c)\},\{p(a),p(c)\},X\}.
+        </me>
+        Pasangan <m>(p(c),p(a))</m> dapat menjadi pasangan terurut mana pun
+        dari dua titik berbeda. Enam kemungkinan itu menghasilkan persis enam
+        topologi yang dicantumkan dalam jawaban, sehingga semuanya homeomorfik.
+      </p>
+      <p>
+        Sebarang homeomorfisme harus mengirim satu-satunya singleton terbuka ke
+        singleton terbuka dan satu-satunya doubleton terbuka ke doubleton
+        terbuka, sekaligus mempertahankan inklusinya. Oleh sebab itu citranya
+        harus tetap berbentuk
+        <m>\{\emptyset,\{x\},\{x,y\},X\}</m> dengan <m>x\neq y</m>.
+        Tidak ada topologi lain dalam orbit ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-06">
+    <title>Kelas rantai dari singleton <m>\{c\}</m> ke <m>\{b,c\}</m></title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{c\},\{b,c\},X\}</m>, identifikasi semua
+        anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-06-hint">
+      <p>
+        Relabeling ditentukan oleh citra <m>c</m>, yang membentuk singleton,
+        dan citra <m>b</m>, yang melengkapi singleton menjadi doubleton.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-06-answer">
+      <p>
+        Kelasnya terdiri atas enam topologi
+        <m>\{\emptyset,\{a\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{a\},\{a,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{b,c\},X\}</m>,
+        <m>\{\emptyset,\{c\},\{a,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-06-solution">
+      <p>
+        Topologi yang diberikan mempunyai pola
+        <m>\emptyset\subset\{c\}\subset\{b,c\}\subset X</m>. Jika
+        <m>p</m> suatu permutasi <m>X</m>, polanya berubah menjadi
+        <m>\emptyset\subset\{p(c)\}\subset\{p(b),p(c)\}\subset X</m>.
+        Keenam kemungkinan pasangan terurut <m>(p(c),p(b))</m> menghasilkan
+        keenam topologi dalam jawaban. Sebaliknya, setiap pasangan terurut
+        titik berbeda dapat dicapai oleh suatu permutasi, sehingga keenamnya
+        memang homeomorfik.
+      </p>
+      <p>
+        Banyaknya himpunan terbuka menurut ukuran adalah
+        <m>(1,1,1,1)</m> untuk ukuran <m>0,1,2,3</m>, dan singleton terbukanya
+        termuat dalam doubleton terbuka. Ukuran serta inklusi dipertahankan oleh
+        setiap homeomorfisme. Ciri-ciri ini memaksa setiap anggota kelas
+        berbentuk rantai yang sama, sehingga daftar enam anggota itu lengkap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-07">
+    <title>Singleton pusat <m>\{a\}</m> dalam dua doubleton terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{a\},\{a,b\},\{a,c\},X\}</m>, identifikasi
+        semua anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-07-hint">
+      <p>
+        Titik <m>a</m> dikenali secara topologis sebagai singleton terbuka yang
+        merupakan irisan kedua doubleton terbuka. Relabeli titik khusus ini.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-07-answer">
+      <p>
+        Kelasnya terdiri atas
+        <m>\{\emptyset,\{a\},\{a,b\},\{a,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,b\},\{b,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-07-solution">
+      <p>
+        Untuk setiap <m>x\in X</m>, dengan <m>y,z</m> sebagai dua titik lain,
+        definisikan
+        <me>
+          \rho_x=\{\emptyset,\{x\},\{x,y\},\{x,z\},X\}.
+        </me>
+        Topologi pada soal adalah <m>\rho_a</m>. Permutasi yang mengirim
+        <m>a</m> ke <m>x</m> mengirim kedua titik sisanya ke <m>y,z</m> dalam
+        suatu urutan dan membawa <m>\rho_a</m> ke <m>\rho_x</m>. Jadi tiga
+        topologi dalam jawaban semuanya homeomorfik.
+      </p>
+      <p>
+        Dalam setiap <m>\rho_x</m> terdapat tepat satu singleton terbuka dan
+        tepat dua doubleton terbuka; kedua doubleton itu beririsan tepat pada
+        singleton tersebut. Homeomorfisme mempertahankan ukuran dan irisan,
+        sehingga harus mengirim titik khusus <m>x</m> ke titik khusus pada
+        topologi sasaran. Hanya ada tiga pilihan bagi titik itu, maka ketiga
+        topologi yang terdaftar membentuk seluruh kelas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-08">
+    <title>Singleton pusat <m>\{b\}</m> dalam dua doubleton terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{b\},\{a,b\},\{b,c\},X\}</m>, identifikasi
+        semua anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-08-hint">
+      <p>
+        Kedua doubleton terbuka beririsan pada <m>\{b\}</m>. Gunakan citra
+        titik irisan itu untuk menentukan seluruh orbit permutasi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-08-answer">
+      <p>
+        Kelasnya terdiri atas
+        <m>\{\emptyset,\{a\},\{a,b\},\{a,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,b\},\{b,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-08-solution">
+      <p>
+        Topologi ini mempunyai singleton terbuka unik <m>\{b\}</m> dan kedua
+        doubleton yang memuatnya. Jika permutasi <m>p</m> mengirim <m>b</m> ke
+        <m>x</m>, maka citra kedua doubleton adalah dua doubleton yang memuat
+        <m>x</m>. Jadi citra topologinya ialah
+        <m>\rho_x=\{\emptyset,\{x\},\{x,y\},\{x,z\},X\}</m>, dengan
+        <m>\{y,z\}=X\setminus\{x\}</m>. Tiga pilihan <m>x=a,b,c</m>
+        menghasilkan persis tiga topologi dalam jawaban.
+      </p>
+      <p>
+        Sebaliknya, setiap pilihan titik pusat dapat dicapai oleh suatu
+        permutasi, sehingga ketiganya homeomorfik. Sebuah homeomorfisme harus
+        mempertahankan adanya satu singleton terbuka, dua doubleton terbuka,
+        dan fakta bahwa irisan kedua doubleton adalah singleton itu. Karena
+        struktur tersebut hanya bergantung pada pilihan titik pusat, tidak ada
+        anggota kelas tambahan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-09">
+    <title>Singleton pusat <m>\{c\}</m> dalam dua doubleton terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}</m>, identifikasi
+        semua anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-09-hint">
+      <p>
+        Relabeli <m>c</m>, satu-satunya titik yang singletonnya terbuka dan
+        yang terletak dalam kedua doubleton terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-09-answer">
+      <p>
+        Kelasnya terdiri atas
+        <m>\{\emptyset,\{a\},\{a,b\},\{a,c\},X\}</m>,
+        <m>\{\emptyset,\{b\},\{a,b\},\{b,c\},X\}</m>, dan
+        <m>\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-09-solution">
+      <p>
+        Topologi ini adalah
+        <m>\rho_c=\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}</m>. Permutasi yang
+        mengirim <m>c</m> ke <m>a</m> atau <m>b</m> mengirimnya masing-masing
+        ke dua topologi lain dalam jawaban. Sebagai contoh, pertukaran
+        <m>a</m> dan <m>c</m> menghasilkan
+        <m>\{\emptyset,\{a\},\{a,c\},\{a,b\},X\}</m>, yang sama dengan
+        anggota pertama karena urutan penulisan himpunan terbuka tidak penting.
+      </p>
+      <p>
+        Singleton terbuka unik merupakan irisan dari dua doubleton terbuka.
+        Ciri tersebut dipertahankan oleh setiap homeomorfisme dan menentukan
+        satu titik pusat. Karena hanya ada tiga pilihan titik pusat, orbitnya
+        berukuran tiga dan tepat sama dengan daftar pada jawaban.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-d-10">
+    <title>Dua singleton terbuka dan gabungannya</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c\}</m>. Dalam klasifikasi 29 topologi pada
+        <m>X</m>, tentukan kelas homeomorfisme yang memuat
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>, identifikasi semua
+        anggotanya, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-d-10-hint">
+      <p>
+        Topologi ini ditentukan oleh pasangan tak terurut titik yang
+        singletonnya terbuka. Ada berapa subhimpunan dua elemen dalam <m>X</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-d-10-answer">
+      <p>
+        Kelasnya terdiri atas
+        <m>\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>,
+        <m>\{\emptyset,\{a\},\{c\},\{a,c\},X\}</m>, dan
+        <m>\{\emptyset,\{b\},\{c\},\{b,c\},X\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-d-10-solution">
+      <p>
+        Untuk subhimpunan dua elemen <m>S=\{x,y\}\subset X</m>, definisikan
+        <me>
+          \eta_S=\{\emptyset,\{x\},\{y\},S,X\}.
+        </me>
+        Topologi pada soal adalah <m>\eta_{\{a,b\}}</m>. Sebuah permutasi
+        <m>p</m> mengirimnya ke <m>\eta_{p(S)}</m>. Terdapat
+        <m>\binom{3}{2}=3</m> pilihan untuk <m>S</m>, yang menghasilkan tepat
+        tiga topologi dalam jawaban. Karena setiap dua subhimpunan berukuran
+        dua dapat saling dikirim oleh suatu permutasi, ketiganya homeomorfik.
+      </p>
+      <p>
+        Sebuah homeomorfisme harus mempertahankan fakta bahwa terdapat tepat
+        dua singleton terbuka dan bahwa gabungan keduanya adalah satu-satunya
+        doubleton terbuka. Karena struktur itu sepenuhnya menentukan pasangan
+        tak terurut <m>S</m>, setiap anggota kelas harus berbentuk
+        <m>\eta_S</m>. Maka daftar tiga anggota tersebut lengkap. Kelas ini
+        berbeda dari kelas tiga anggota sebelumnya, yang hanya mempunyai satu
+        singleton terbuka dan dua doubleton terbuka.
+      </p>
+    </solution>
+  </exercise>
+</section>

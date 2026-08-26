@@ -1,0 +1,460 @@
+<section xml:id="o003-c90-ch14-exercise-guides-c" xml:lang="id-ID">
+  <title>Panduan latihan Bab 14, bagian ketiga</title>
+
+  <p>
+    Bagian ini mendampingi butir latihan 21 sampai 30 dalam urutan sumber,
+    yaitu sepuluh topologi pertama dalam tugas klasifikasi 29 topologi pada
+    <m>X=\{a,b,c\}</m>. Notasi <m>\tau_1,\ldots,\tau_{29}</m> di bawah
+    mengikuti urutan daftar pada bab utama. Dukungan belajar ini ditulis
+    secara terpisah sebagai konten pendamping CC BY 4.0.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-01">
+    <title>Kelas topologi indiskret</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi pertama
+        <m>\tau_1=\{\emptyset,X\}</m>. Tentukan seluruh anggota kelas
+        homeomorfisme yang memuat <m>\tau_1</m> dan buktikan bahwa daftar
+        tersebut lengkap.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-01-hint">
+      <p>
+        Homeomorfisme mempertahankan banyaknya himpunan terbuka. Hitung anggota
+        <m>\tau_1</m>, lalu cari topologi lain dalam daftar yang mempunyai
+        jumlah yang sama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-01-answer">
+      <p>
+        Kelas homeomorfisme <m>\tau_1</m> hanya beranggotakan
+        <m>\tau_1</m> sendiri.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-01-solution">
+      <p>
+        Topologi <m>\tau_1</m> mempunyai tepat dua himpunan terbuka, yaitu
+        <m>\emptyset</m> dan <m>X</m>. Setiap homeomorfisme membawa koleksi
+        himpunan terbuka secara bijektif ke koleksi himpunan terbuka, sehingga
+        ruang yang homeomorfik dengan <m>(X,\tau_1)</m> juga harus mempunyai
+        tepat dua himpunan terbuka. Di antara 29 topologi yang diberikan,
+        hanya <m>\tau_1</m> yang mempunyai sifat ini. Jadi kelasnya adalah
+        <m>\{\tau_1\}</m>. Setiap permutasi <m>X</m> merupakan automorfisme
+        ruang indiskret ini, tetapi tidak menghasilkan topologi lain dalam
+        daftar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-02">
+    <title>Satu himpunan terbuka beranggota dua: kasus pertama</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi kedua
+        <m>\tau_2=\{\emptyset,\{a,b\},X\}</m>. Tentukan seluruh anggota
+        kelas homeomorfisme yang memuat <m>\tau_2</m> dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-02-hint">
+      <p>
+        Relabel titik-titik <m>a,b,c</m>. Kardinalitas satu-satunya himpunan
+        terbuka yang tak kosong dan proper harus tetap dua.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-02-answer">
+      <p>
+        Kelasnya adalah <m>\{\tau_2,\tau_3,\tau_4\}</m>, dengan himpunan
+        terbuka proper tak kosong masing-masing <m>\{a,b\}</m>,
+        <m>\{a,c\}</m>, dan <m>\{b,c\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-02-solution">
+      <p>
+        Tiga topologi yang dimaksud adalah
+        <m>\tau_2=\{\emptyset,\{a,b\},X\}</m>,
+        <m>\tau_3=\{\emptyset,\{a,c\},X\}</m>, dan
+        <m>\tau_4=\{\emptyset,\{b,c\},X\}</m>. Pertukaran <m>b</m> dan
+        <m>c</m> membawa <m>\tau_2</m> ke <m>\tau_3</m>, sedangkan pertukaran
+        <m>a</m> dan <m>c</m> membawa <m>\tau_2</m> ke <m>\tau_4</m>.
+        Karena permutasi ini membawa seluruh koleksi himpunan terbuka ke
+        koleksi pasangannya, keduanya merupakan homeomorfisme.
+      </p>
+      <p>
+        Sebaliknya, ruang yang homeomorfik dengan <m>\tau_2</m> harus
+        mempunyai tepat tiga himpunan terbuka dan satu-satunya himpunan
+        terbuka proper tak kosong harus beranggota dua. Dalam daftar sumber,
+        tepat <m>\tau_2,\tau_3,\tau_4</m> yang memenuhi kedua invarian ini.
+        Jadi tidak ada anggota kelas yang terlewat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-03">
+    <title>Satu himpunan terbuka beranggota dua: kasus kedua</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi ketiga
+        <m>\tau_3=\{\emptyset,\{a,c\},X\}</m>. Tentukan seluruh anggota
+        kelas homeomorfisme yang memuat <m>\tau_3</m> dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-03-hint">
+      <p>
+        Suatu permutasi dapat mengirim subhimpunan dua elemen
+        <m>\{a,c\}</m> ke sembarang subhimpunan dua elemen lain dari
+        <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-03-answer">
+      <p>
+        Kelasnya adalah <m>\{\tau_2,\tau_3,\tau_4\}</m>, yaitu topologi
+        dengan tepat satu himpunan terbuka proper tak kosong yang beranggota
+        dua.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-03-solution">
+      <p>
+        Anggota kelas tersebut ialah
+        <m>\tau_2=\{\emptyset,\{a,b\},X\}</m>,
+        <m>\tau_3=\{\emptyset,\{a,c\},X\}</m>, dan
+        <m>\tau_4=\{\emptyset,\{b,c\},X\}</m>. Pertukaran <m>b</m> dengan
+        <m>c</m> mengirim <m>\tau_3</m> ke <m>\tau_2</m>, dan pertukaran
+        <m>a</m> dengan <m>b</m> mengirim <m>\tau_3</m> ke <m>\tau_4</m>.
+        Jadi ketiganya saling homeomorfik melalui pelabelan ulang titik.
+      </p>
+      <p>
+        Banyaknya himpunan terbuka dan kardinalitas masing-masing himpunan
+        terbuka dipertahankan oleh homeomorfisme. Karena <m>\tau_3</m>
+        mempunyai tepat tiga himpunan terbuka dengan pola kardinalitas
+        <m>0,2,3</m>, setiap anggota kelasnya dalam daftar harus mempunyai
+        pola yang sama. Hanya ketiga topologi di atas yang demikian, sehingga
+        daftar kelas tersebut lengkap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-04">
+    <title>Satu himpunan terbuka beranggota dua: kasus ketiga</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi keempat
+        <m>\tau_4=\{\emptyset,\{b,c\},X\}</m>. Tentukan seluruh anggota
+        kelas homeomorfisme yang memuat <m>\tau_4</m> dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-04-hint">
+      <p>
+        Bandingkan struktur topologi, bukan nama titik. Ada tiga pilihan
+        subhimpunan beranggota dua dalam himpunan tiga elemen.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-04-answer">
+      <p>
+        Kelas homeomorfisme <m>\tau_4</m> adalah
+        <m>\{\tau_2,\tau_3,\tau_4\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-04-solution">
+      <p>
+        Selain <m>\tau_4=\{\emptyset,\{b,c\},X\}</m>, kelas ini memuat
+        <m>\tau_2=\{\emptyset,\{a,b\},X\}</m> dan
+        <m>\tau_3=\{\emptyset,\{a,c\},X\}</m>. Pertukaran <m>a</m> dengan
+        <m>c</m> membawa <m>\{b,c\}</m> ke <m>\{a,b\}</m>, sedangkan
+        pertukaran <m>a</m> dengan <m>b</m> membawanya ke <m>\{a,c\}</m>.
+        Kedua permutasi membawa <m>\emptyset</m> ke <m>\emptyset</m> dan
+        <m>X</m> ke <m>X</m>, sehingga memberi homeomorfisme yang diperlukan.
+      </p>
+      <p>
+        Setiap topologi yang homeomorfik dengan <m>\tau_4</m> harus memiliki
+        tepat satu himpunan terbuka proper tak kosong, dan himpunan itu harus
+        beranggota dua. Tiga pilihan yang tercantum di atas menghabiskan semua
+        subhimpunan dua elemen dari <m>X</m>; karena itu kelasnya lengkap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-05">
+    <title>Satu singleton terbuka: kasus pertama</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi kelima
+        <m>\tau_5=\{\emptyset,\{a\},X\}</m>. Tentukan seluruh anggota kelas
+        homeomorfisme yang memuat <m>\tau_5</m> dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-05-hint">
+      <p>
+        Kirim titik tunggal yang terbuka ke <m>a</m>, <m>b</m>, atau <m>c</m>.
+        Kardinalitas himpunan terbuka proper membedakan kelas ini dari kelas
+        <m>\tau_2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-05-answer">
+      <p>
+        Kelasnya adalah <m>\{\tau_5,\tau_6,\tau_7\}</m>, dengan singleton
+        terbuka masing-masing <m>\{a\}</m>, <m>\{b\}</m>, dan <m>\{c\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-05-solution">
+      <p>
+        Ketiga topologi tersebut adalah
+        <m>\tau_5=\{\emptyset,\{a\},X\}</m>,
+        <m>\tau_6=\{\emptyset,\{b\},X\}</m>, dan
+        <m>\tau_7=\{\emptyset,\{c\},X\}</m>. Pertukaran <m>a</m> dengan
+        <m>b</m> mengirim <m>\tau_5</m> ke <m>\tau_6</m>; pertukaran
+        <m>a</m> dengan <m>c</m> mengirimnya ke <m>\tau_7</m>. Maka ketiganya
+        homeomorfik.
+      </p>
+      <p>
+        Suatu anggota lain dari kelas harus mempunyai tepat tiga himpunan
+        terbuka dengan satu-satunya himpunan proper tak kosong berukuran satu.
+        Ada tepat tiga pilihan singleton pada <m>X</m>, dan semuanya sudah
+        muncul di atas. Topologi <m>\tau_2,\tau_3,\tau_4</m> tidak termasuk
+        karena himpunan terbuka propernya berukuran dua, suatu invarian di
+        bawah homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-06">
+    <title>Satu singleton terbuka: kasus kedua</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi keenam
+        <m>\tau_6=\{\emptyset,\{b\},X\}</m>. Tentukan seluruh anggota kelas
+        homeomorfisme yang memuat <m>\tau_6</m> dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-06-hint">
+      <p>
+        Pertukaran <m>a</m> dan <m>b</m> memindahkan singleton terbuka ke
+        <m>\{a\}</m>; pertukaran <m>b</m> dan <m>c</m> memindahkannya ke
+        <m>\{c\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-06-answer">
+      <p>
+        Kelas homeomorfisme <m>\tau_6</m> adalah
+        <m>\{\tau_5,\tau_6,\tau_7\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-06-solution">
+      <p>
+        Kelas yang diklaim terdiri dari
+        <m>\tau_5=\{\emptyset,\{a\},X\}</m>,
+        <m>\tau_6=\{\emptyset,\{b\},X\}</m>, dan
+        <m>\tau_7=\{\emptyset,\{c\},X\}</m>. Pertukaran <m>a</m> dengan
+        <m>b</m> membawa <m>\tau_6</m> ke <m>\tau_5</m>, dan pertukaran
+        <m>b</m> dengan <m>c</m> membawanya ke <m>\tau_7</m>. Jadi ketiganya
+        saling homeomorfik.
+      </p>
+      <p>
+        Homeomorfisme mempertahankan jumlah himpunan terbuka beserta
+        kardinalitasnya. Topologi <m>\tau_6</m> memiliki pola
+        <m>0,1,3</m>; dalam daftar 29 topologi, tepat tiga topologi di atas
+        yang mempunyai pola tersebut. Maka tidak ada anggota kelas lainnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-07">
+    <title>Satu singleton terbuka: kasus ketiga</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi ketujuh
+        <m>\tau_7=\{\emptyset,\{c\},X\}</m>. Tentukan seluruh anggota kelas
+        homeomorfisme yang memuat <m>\tau_7</m> dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-07-hint">
+      <p>
+        Nama titik tidak bersifat topologis. Relabel <m>c</m> sebagai
+        <m>a</m> atau <m>b</m>, lalu gunakan ukuran singleton sebagai invarian.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-07-answer">
+      <p>
+        Kelas homeomorfisme <m>\tau_7</m> adalah
+        <m>\{\tau_5,\tau_6,\tau_7\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-07-solution">
+      <p>
+        Selain <m>\tau_7=\{\emptyset,\{c\},X\}</m>, kelas ini memuat
+        <m>\tau_5=\{\emptyset,\{a\},X\}</m> dan
+        <m>\tau_6=\{\emptyset,\{b\},X\}</m>. Pertukaran <m>a</m> dengan
+        <m>c</m> memberi homeomorfisme dari <m>\tau_7</m> ke
+        <m>\tau_5</m>, sedangkan pertukaran <m>b</m> dengan <m>c</m> memberi
+        homeomorfisme ke <m>\tau_6</m>.
+      </p>
+      <p>
+        Setiap topologi yang homeomorfik dengan <m>\tau_7</m> harus mempunyai
+        tepat satu himpunan terbuka proper tak kosong, dan himpunan itu harus
+        berupa singleton. Ketiga singleton pada <m>X</m> sudah menghasilkan
+        tiga topologi yang tercantum. Dengan demikian kelas tersebut lengkap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-08">
+    <title>Rantai singleton–himpunan dua elemen: kasus pertama</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi kedelapan
+        <m>\tau_8=\{\emptyset,\{a\},\{a,b\},X\}</m>. Tentukan seluruh
+        anggota kelas homeomorfisme yang memuat <m>\tau_8</m> dan buktikan
+        bahwa daftar tersebut lengkap.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-08-hint">
+      <p>
+        Catat bukan hanya ukuran dua himpunan terbuka proper, tetapi juga
+        relasi <m>\{a\}\subsetneq\{a,b\}</m>. Hitung semua pasangan
+        <m>S\subsetneq D</m> dengan <m>|S|=1</m> dan <m>|D|=2</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-08-answer">
+      <p>
+        Kelasnya adalah
+        <m>\{\tau_8,\tau_9,\tau_{11},\tau_{13},\tau_{15},\tau_{16}\}</m>.
+        Keenamnya mempunyai empat himpunan terbuka yang membentuk rantai
+        <m>\emptyset\subsetneq S\subsetneq D\subsetneq X</m> dengan
+        <m>|S|=1</m> dan <m>|D|=2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-08-solution">
+      <p>
+        Keenam anggota kelas, dalam urutan sumber, adalah
+        <m>\tau_8=\{\emptyset,\{a\},\{a,b\},X\}</m>,
+        <m>\tau_9=\{\emptyset,\{a\},\{a,c\},X\}</m>,
+        <m>\tau_{11}=\{\emptyset,\{b\},\{a,b\},X\}</m>,
+        <m>\tau_{13}=\{\emptyset,\{b\},\{b,c\},X\}</m>,
+        <m>\tau_{15}=\{\emptyset,\{c\},\{a,c\},X\}</m>, dan
+        <m>\tau_{16}=\{\emptyset,\{c\},\{b,c\},X\}</m>.
+      </p>
+      <p>
+        Masing-masing ditentukan oleh suatu bendera terurut
+        <m>S\subsetneq D</m>, dengan <m>S</m> singleton terbuka dan
+        <m>D</m> himpunan terbuka beranggota dua. Setiap bendera seperti itu
+        dapat dibawa ke bendera lain oleh permutasi <m>X</m>; permutasi
+        tersebut membawa keempat himpunan terbuka ke keempat himpunan terbuka
+        pasangannya, sehingga merupakan homeomorfisme. Sebagai contoh,
+        pertukaran <m>b</m> dan <m>c</m> membawa <m>\tau_8</m> ke
+        <m>\tau_9</m>.
+      </p>
+      <p>
+        Untuk kelengkapan, ada tiga pilihan bagi <m>S</m>. Setelah <m>S</m>
+        dipilih, ada dua pilihan bagi <m>D</m> yang memuatnya. Jadi terdapat
+        tepat <m>3\cdot2=6</m> bendera, dan keenamnya sudah tercantum. Relasi
+        ketercakupan serta kardinalitas dipertahankan oleh homeomorfisme,
+        sehingga tidak ada topologi dengan struktur lain yang dapat masuk ke
+        kelas ini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-09">
+    <title>Rantai singleton–himpunan dua elemen: kasus kedua</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi kesembilan
+        <m>\tau_9=\{\emptyset,\{a\},\{a,c\},X\}</m>. Tentukan seluruh
+        anggota kelas homeomorfisme yang memuat <m>\tau_9</m> dan buktikan
+        bahwa daftar tersebut lengkap.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-09-hint">
+      <p>
+        Struktur pentingnya adalah bendera
+        <m>\{a\}\subsetneq\{a,c\}</m>. Relabel pasangan “titik singleton,
+        titik kedua dalam himpunan dua elemen” dengan semua kemungkinan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-09-answer">
+      <p>
+        Kelas homeomorfisme <m>\tau_9</m> adalah
+        <m>\{\tau_8,\tau_9,\tau_{11},\tau_{13},\tau_{15},\tau_{16}\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-09-solution">
+      <p>
+        Seluruh anggotanya ialah
+        <m>\tau_8=\{\emptyset,\{a\},\{a,b\},X\}</m>,
+        <m>\tau_9=\{\emptyset,\{a\},\{a,c\},X\}</m>,
+        <m>\tau_{11}=\{\emptyset,\{b\},\{a,b\},X\}</m>,
+        <m>\tau_{13}=\{\emptyset,\{b\},\{b,c\},X\}</m>,
+        <m>\tau_{15}=\{\emptyset,\{c\},\{a,c\},X\}</m>, dan
+        <m>\tau_{16}=\{\emptyset,\{c\},\{b,c\},X\}</m>.
+        Pertukaran <m>b</m> dengan <m>c</m>, misalnya, mengirim
+        <m>\tau_9</m> ke <m>\tau_8</m>.
+      </p>
+      <p>
+        Secara umum, pilih gambar singleton <m>\{a\}</m>; ada tiga pilihan.
+        Lalu pilih gambar titik <m>c</m> yang menambah singleton itu menjadi
+        himpunan dua elemen; ada dua pilihan tersisa. Setiap pilihan menentukan
+        permutasi yang membawa <m>\tau_9</m> ke salah satu dari enam topologi
+        di atas. Sebaliknya, suatu homeomorfisme harus mempertahankan pola
+        empat himpunan terbuka dan rantai kardinalitas <m>0,1,2,3</m>.
+        Karena semua <m>3\cdot2=6</m> kemungkinan sudah terdaftar, kelas ini
+        lengkap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-c-10">
+    <title>Singleton dan komplemennya yang sama-sama terbuka</title>
+    <statement>
+      <p>
+        Dalam daftar 29 topologi pada <m>X=\{a,b,c\}</m>, pertimbangkan
+        topologi kesepuluh
+        <m>\tau_{10}=\{\emptyset,\{a\},\{b,c\},X\}</m>. Tentukan seluruh
+        anggota kelas homeomorfisme yang memuat <m>\tau_{10}</m> dan buktikan
+        bahwa daftar tersebut lengkap.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-c-10-hint">
+      <p>
+        Kedua himpunan terbuka proper tak kosong saling lepas dan saling
+        berkomplemen. Pilih titik mana yang menjadi singleton terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-c-10-answer">
+      <p>
+        Kelasnya adalah <m>\{\tau_{10},\tau_{12},\tau_{14}\}</m>, yaitu
+        topologi yang terdiri dari <m>\emptyset</m>, suatu singleton,
+        komplemen singleton tersebut, dan <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-c-10-solution">
+      <p>
+        Ketiga anggota kelas adalah
+        <m>\tau_{10}=\{\emptyset,\{a\},\{b,c\},X\}</m>,
+        <m>\tau_{12}=\{\emptyset,\{b\},\{a,c\},X\}</m>, dan
+        <m>\tau_{14}=\{\emptyset,\{c\},\{a,b\},X\}</m>. Pertukaran
+        <m>a</m> dengan <m>b</m> membawa <m>\tau_{10}</m> ke
+        <m>\tau_{12}</m>, dan pertukaran <m>a</m> dengan <m>c</m>
+        membawanya ke <m>\tau_{14}</m>. Jadi ketiganya saling homeomorfik.
+      </p>
+      <p>
+        Dalam <m>\tau_{10}</m>, dua himpunan terbuka proper tak kosong
+        mempunyai ukuran satu dan dua, tetapi keduanya saling lepas; dengan
+        demikian masing-masing adalah komplemen yang lain. Relasi ini
+        dipertahankan oleh homeomorfisme. Ada tepat tiga pilihan singleton
+        dalam <m>X</m>, dan setiap pilihan menentukan komplemennya secara
+        tunggal, sehingga hanya tiga topologi di atas yang mungkin. Ini juga
+        membedakan kelas tersebut dari kelas <m>\tau_8</m>, tempat singleton
+        justru termuat dalam himpunan terbuka beranggota dua.
+      </p>
+    </solution>
+  </exercise>
+</section>

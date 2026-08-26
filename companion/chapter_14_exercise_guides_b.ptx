@@ -1,0 +1,403 @@
+<section xml:id="o003-c90-ch14-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan Bab 14, bagian kedua</title>
+  <p>
+    Bagian ini mengikuti urutan sumber untuk sepuluh unit soal mandiri berikutnya.
+    Setiap unit menyajikan petunjuk bertahap, jawaban singkat, dan pembuktian
+    lengkap yang dapat diperiksa secara mandiri.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-01">
+    <title>Fungsi yang kontinu tepat di dua titik</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> pada
+        <m>X=\{a,b,c,d\}</m> dengan
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{b,d\},\{a,b,d\},X\}</m>,
+        temukan fungsi <m>f:X\to X</m> yang kontinu tepat di dua titik, atau
+        buktikan bahwa fungsi seperti itu tidak ada.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-01-hint">
+      <p>
+        Lingkungan terbuka terkecil dari <m>a,b,c,d</m> berturut-turut adalah
+        <m>\{a\},\{b\},X,\{b,d\}</m>. Pada ruang berhingga ini, <m>f</m>
+        kontinu di <m>x</m> tepat ketika citra lingkungan terkecil <m>x</m>
+        termuat dalam lingkungan terkecil <m>f(x)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-01-answer">
+      <p>
+        Ambil <m>f(a)=f(b)=f(c)=a</m> dan <m>f(d)=b</m>. Fungsi ini kontinu
+        tepat di <m>a</m> dan <m>b</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-01-solution">
+      <p>
+        Tuliskan <m>N_x</m> untuk lingkungan terbuka terkecil <m>x</m>. Karena
+        topologi ini berhingga,
+        <m>N_a=\{a\}</m>, <m>N_b=\{b\}</m>, <m>N_c=X</m>, dan
+        <m>N_d=\{b,d\}</m>; kriteria kontinuitas di satu titik adalah
+        <m>f(N_x)\subseteq N_{f(x)}</m>.
+      </p>
+      <p>
+        Untuk fungsi yang diberikan,
+        <m>f(N_a)=\{a\}\subseteq N_a</m> dan
+        <m>f(N_b)=\{a\}\subseteq N_a</m>, sehingga <m>f</m> kontinu di
+        <m>a</m> dan <m>b</m>. Di pihak lain,
+        <m>f(N_c)=\{a,b\}\nsubseteq N_a</m> dan
+        <m>f(N_d)=\{a,b\}\nsubseteq N_b</m>. Jadi <m>f</m> tidak kontinu di
+        <m>c</m> maupun <m>d</m>, dan tepat dua titik kontinuitas telah
+        diperoleh.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-02">
+    <title>Fungsi yang kontinu tepat di tiga titik</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> untuk ruang
+        <m>X=\{a,b,c,d\}</m> dan topologi
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{b,d\},\{a,b,d\},X\}</m>,
+        temukan fungsi <m>f:X\to X</m> yang kontinu tepat di tiga titik, atau
+        buktikan bahwa fungsi seperti itu tidak ada.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-02-hint">
+      <p>
+        Gunakan lagi lingkungan terkecil
+        <m>N_a=\{a\}</m>, <m>N_b=\{b\}</m>, <m>N_c=X</m>, dan
+        <m>N_d=\{b,d\}</m>. Memetakan suatu titik ke <m>c</m> memudahkan
+        kontinuitas di titik itu karena <m>N_c=X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-02-answer">
+      <p>
+        Ambil <m>f(a)=f(b)=f(c)=a</m> dan <m>f(d)=c</m>. Fungsi ini kontinu
+        tepat di <m>a,b,d</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-02-solution">
+      <p>
+        Kriteria <m>f(N_x)\subseteq N_{f(x)}</m> memberikan
+        <m>f(N_a)=\{a\}\subseteq N_a</m> dan
+        <m>f(N_b)=\{a\}\subseteq N_a</m>. Selain itu,
+        <m>f(N_d)=f(\{b,d\})=\{a,c\}\subseteq N_c=X</m>. Jadi <m>f</m>
+        kontinu di <m>a,b,d</m>.
+      </p>
+      <p>
+        Akan tetapi, <m>f(N_c)=f(X)=\{a,c\}</m>, sedangkan
+        <m>N_{f(c)}=N_a=\{a\}</m>. Inklusi yang diperlukan gagal, sehingga
+        <m>f</m> tidak kontinu di <m>c</m>. Dengan demikian tepat tiga titik
+        kontinuitas diperoleh.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-03">
+    <title>Grafik fungsi kontinu homeomorfik dengan garis</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> untuk fungsi kontinu
+        <m>f:\R\to\R</m>, buktikan bahwa grafik
+        <m>\Gamma_f=\{(x,f(x))\mid x\in\R\}</m>, dengan topologi subruang
+        dari <m>\R^2</m>, homeomorfik dengan <m>\R</m> bertopologi Euklides.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-03-hint">
+      <p>
+        Gunakan pemetaan <m>g(x)=(x,f(x))</m>. Inversnya pada
+        <m>\Gamma_f</m> adalah pembatasan proyeksi koordinat pertama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-03-answer">
+      <p>
+        Ya. Pemetaan <m>g:\R\to\Gamma_f</m> dengan
+        <m>g(x)=(x,f(x))</m> adalah suatu homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-03-solution">
+      <p>
+        Pemetaan <m>g(x)=(x,f(x))</m> kontinu karena kedua fungsi
+        koordinatnya, yakni identitas dan <m>f</m>, kontinu. Definisi grafik
+        menunjukkan bahwa <m>g</m> memetakan <m>\R</m> ke
+        <m>\Gamma_f</m> secara bijektif. Inversnya adalah
+        <m>g^{-1}=\pi_1|_{\Gamma_f}</m>, yaitu pembatasan proyeksi kontinu
+        <m>\pi_1:\R^2\to\R</m> pada subruang <m>\Gamma_f</m>. Karena
+        <m>g</m> dan inversnya kontinu, <m>g</m> merupakan homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-04">
+    <title>Grafik fungsi tak kontinu tidak selalu berupa garis</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> jika syarat kontinuitas pada
+        <m>f:\R\to\R</m> dihilangkan, tentukan apakah grafik
+        <m>\Gamma_f</m> tetap harus homeomorfik dengan <m>\R</m>, dan
+        buktikan konjektur Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-04-hint">
+      <p>
+        Cari fungsi loncatan yang grafiknya terpisah menjadi dua bagian pada
+        dua ketinggian yang berbeda. Bandingkan keterhubungan grafik itu dengan
+        keterhubungan <m>\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-04-answer">
+      <p>
+        Tidak. Fungsi <m>f(x)=0</m> untuk <m>x\leq 0</m> dan
+        <m>f(x)=1</m> untuk <m>x&gt;0</m> mempunyai grafik tak terhubung, jadi
+        grafiknya tidak homeomorfik dengan <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-04-solution">
+      <p>
+        Untuk fungsi tersebut, tuliskan
+        <m>A=\{(x,0)\mid x\leq0\}</m> dan
+        <m>B=\{(x,1)\mid x&gt;0\}</m>. Maka
+        <m>\Gamma_f=A\mathbin{\dot\cup}B</m>, dan kedua bagian itu tak kosong.
+        Himpunan <m>A</m> adalah irisan grafik dengan himpunan terbuka
+        <m>\{(x,y)\in\R^2\mid y&lt;1/2\}</m>, sedangkan <m>B</m> adalah
+        irisan grafik dengan himpunan terbuka
+        <m>\{(x,y)\in\R^2\mid y&gt;1/2\}</m>. Jadi <m>A</m> dan <m>B</m>
+        merupakan himpunan terbuka yang saling lepas dalam <m>\Gamma_f</m>
+        dan membentuk pemisahan grafik. Karena <m>\R</m> terhubung sedangkan
+        <m>\Gamma_f</m> tidak, keduanya tidak homeomorfik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-05">
+    <title>Identitas antara dua topologi titik khusus</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> tetapkan <m>p\in\R</m>. Tentukan apakah
+        fungsi identitas <m>i(x)=x</m> merupakan homeomorfisme dari topologi
+        titik tertentu <m>(\R,\tau_p)</m> ke topologi titik yang dikecualikan
+        <m>(\R,\tau_{\overline p})</m>, dan buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-05-hint">
+      <p>
+        Uji prapeta himpunan <m>\R\setminus\{p\}</m>. Himpunan itu terbuka
+        dalam topologi titik yang dikecualikan, tetapi bagaimana statusnya
+        dalam topologi titik tertentu?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-05-answer">
+      <p>
+        Bukan. Fungsi identitas tersebut bahkan tidak kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-05-solution">
+      <p>
+        Himpunan <m>U=\R\setminus\{p\}</m> tidak memuat <m>p</m>, sehingga
+        <m>U</m> terbuka dalam <m>\tau_{\overline p}</m>. Karena <m>i</m>
+        adalah identitas, <m>i^{-1}(U)=U</m>. Namun <m>U</m> tak kosong,
+        bukan seluruh <m>\R</m>, dan tidak memuat <m>p</m>; oleh karena itu
+        <m>U</m> tidak terbuka dalam <m>\tau_p</m>. Prapeta suatu himpunan
+        terbuka gagal menjadi terbuka, maka <m>i</m> tidak kontinu dan tidak
+        mungkin menjadi homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-06">
+    <title>Dua topologi titik khusus tidak homeomorfik</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> ketika titik khususnya <m>p=0</m>,
+        tentukan apakah <m>(\R,\tau_p)</m> homeomorfik dengan
+        <m>(\R,\tau_{\overline p})</m>, dan buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-06-hint">
+      <p>
+        Hitung singleton yang tertutup dalam masing-masing ruang. Sifat
+        “singleton ini tertutup” dipertahankan oleh homeomorfisme.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-06-answer">
+      <p>
+        Tidak. Dalam topologi titik tertentu semua singleton selain
+        <m>\{p\}</m> tertutup, sedangkan dalam topologi titik yang dikecualikan
+        hanya <m>\{p\}</m> yang tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-06-solution">
+      <p>
+        Dalam <m>(\R,\tau_p)</m>, singleton <m>\{x\}</m> tertutup tepat
+        ketika komplemennya terbuka. Jika <m>x\neq p</m>, komplemen itu
+        memuat <m>p</m> dan karenanya terbuka; jika <m>x=p</m>, komplemennya
+        tak kosong dan tidak memuat <m>p</m>, sehingga tidak terbuka. Jadi
+        semua singleton kecuali <m>\{p\}</m> tertutup.
+      </p>
+      <p>
+        Sebaliknya, dalam <m>(\R,\tau_{\overline p})</m>, komplemen
+        <m>\{p\}</m> tidak memuat <m>p</m> dan terbuka. Untuk
+        <m>x\neq p</m>, himpunan <m>\R\setminus\{x\}</m> memuat <m>p</m>
+        tetapi bukan seluruh ruang, sehingga tidak terbuka. Maka hanya
+        <m>\{p\}</m> yang merupakan singleton tertutup. Homeomorfisme
+        memberikan bijeksi antara singleton tertutup, sedangkan kedua ruang
+        memiliki jumlah singleton tertutup yang berbeda. Karena itu tidak ada
+        homeomorfisme di antara keduanya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-07">
+    <title>Membenamkan interval terbuka dalam garis nyata</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> tunjukkan bahwa interval terbuka
+        <m>X=(0,1)</m> bertopologi Euklides dapat ditanamkan dalam
+        <m>\R</m> bertopologi Euklides.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-07-hint">
+      <p>
+        Perhatikan pemetaan inklusi <m>j:(0,1)\to\R</m> dan topologi subruang
+        pada citranya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-07-answer">
+      <p>
+        Pemetaan inklusi <m>j(x)=x</m> adalah pembenaman
+        <m>(0,1)\hookrightarrow\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-07-solution">
+      <p>
+        Citra inklusi adalah subruang <m>(0,1)</m> dari <m>\R</m>. Topologi
+        pada domain memang topologi subruang Euklides itu. Jadi
+        <m>j:(0,1)\to j((0,1))</m> bijektif, kontinu, dan inversnya adalah
+        identitas pada <m>(0,1)</m>, yang juga kontinu. Dengan demikian
+        <m>j</m> merupakan homeomorfisme ke suatu subruang dari <m>\R</m>,
+        sehingga merupakan pembenaman.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-08">
+    <title>Saling tertanam tanpa homeomorfisme</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> berikan ruang topologi <m>A</m> dan
+        <m>B</m> yang tidak homeomorfik, tetapi <m>A</m> dapat ditanamkan
+        dalam <m>B</m> dan <m>B</m> dapat ditanamkan dalam <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-08-hint">
+      <p>
+        Bandingkan <m>A=(0,1)</m> dan <m>B=(0,1]</m>. Untuk membedakan
+        keduanya, periksa keterhubungan ruang setelah satu titik dihapus.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-08-answer">
+      <p>
+        Ambil <m>A=(0,1)</m> dan <m>B=(0,1]</m> dengan topologi subruang dari
+        <m>\R</m>. Keduanya saling tertanam, tetapi tidak homeomorfik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-08-solution">
+      <p>
+        Inklusi <m>A\hookrightarrow B</m> adalah pembenaman. Pemetaan
+        <m>h:B\to A</m> yang diberikan oleh <m>h(x)=(x+1)/3</m> merupakan
+        homeomorfisme dari <m>B</m> ke subruang
+        <m>(1/3,2/3]\subseteq A</m>, sehingga juga suatu pembenaman.
+      </p>
+      <p>
+        Akan tetapi, setiap titik <m>x\in A</m> merupakan titik pemutus:
+        <m>A\setminus\{x\}=(0,x)\cup(x,1)</m> tidak terhubung. Di ruang
+        <m>B</m>, titik <m>1</m> bukan titik pemutus karena
+        <m>B\setminus\{1\}=(0,1)</m> terhubung. Jika ada homeomorfisme
+        <m>q:B\to A</m>, pembatasannya akan memberi homeomorfisme dari
+        <m>B\setminus\{1\}</m> ke <m>A\setminus\{q(1)\}</m>, bertentangan
+        dengan keterhubungan ruang pertama dan ketakterhubungan ruang kedua.
+        Jadi <m>A</m> dan <m>B</m> tidak homeomorfik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-09">
+    <title>Semua topologi pada himpunan dua elemen</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> untuk <m>X=\{a,b\}</m>, temukan semua
+        topologi yang berbeda pada <m>X</m> dan jelaskan mengapa daftarnya
+        lengkap.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-09-hint">
+      <p>
+        Setiap topologi wajib memuat <m>\emptyset</m> dan <m>X</m>. Satu-satunya
+        himpunan bagian lain adalah <m>\{a\}</m> dan <m>\{b\}</m>; pertimbangkan
+        apakah tidak satu pun, tepat satu, atau keduanya dimasukkan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-09-answer">
+      <p>
+        Tepat ada empat topologi:
+        <m>\{\emptyset,X\}</m>,
+        <m>\{\emptyset,\{a\},X\}</m>,
+        <m>\{\emptyset,\{b\},X\}</m>, dan
+        <m>\{\emptyset,\{a\},\{b\},X\}=\mathcal P(X)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-09-solution">
+      <p>
+        Karena <m>X</m> hanya memiliki empat himpunan bagian, sesudah
+        <m>\emptyset</m> dan <m>X</m> yang wajib dimasukkan, keputusan yang
+        tersisa hanyalah memasukkan atau tidak memasukkan masing-masing dari
+        <m>\{a\}</m> dan <m>\{b\}</m>. Keempat pilihan itu menghasilkan daftar
+        pada jawaban. Masing-masing daftar tertutup terhadap gabungan sebarang
+        dan irisan berhingga. Tidak ada himpunan bagian lain yang dapat
+        ditambahkan, sehingga daftar tersebut lengkap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-b-10">
+    <title>Kelas homeomorfisme ruang dua elemen</title>
+    <statement>
+      <p>
+        <em>Acuan soal sumber:</em> tentukan kelas-kelas homeomorfisme yang
+        berbeda di antara semua ruang topologi pada himpunan
+        <m>X=\{a,b\}</m>, dan berikan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-b-10-hint">
+      <p>
+        Bandingkan jumlah himpunan terbuka. Untuk dua topologi yang masing-masing
+        mempunyai tepat satu singleton terbuka, uji bijeksi yang menukar
+        <m>a</m> dan <m>b</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-b-10-answer">
+      <p>
+        Ada tiga kelas: topologi indiskret, topologi diskret, dan satu kelas
+        Sierpiński yang memuat kedua topologi dengan tepat satu singleton
+        terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-b-10-solution">
+      <p>
+        Homeomorfisme menginduksi bijeksi antara koleksi himpunan terbuka,
+        sehingga jumlah himpunan terbuka dipertahankan. Topologi indiskret
+        mempunyai dua himpunan terbuka, topologi diskret mempunyai empat, dan
+        masing-masing topologi
+        <m>\{\emptyset,\{a\},X\}</m> serta
+        <m>\{\emptyset,\{b\},X\}</m> mempunyai tiga. Karena itu tiga jenis
+        jumlah tersebut tidak mungkin saling homeomorfik. Bijeksi
+        <m>s:X\to X</m> yang menukar <m>a</m> dan <m>b</m> membawa singleton
+        terbuka pada topologi pertama ke singleton terbuka pada topologi kedua;
+        <m>s</m> dan inversnya membawa himpunan terbuka ke himpunan terbuka.
+        Jadi kedua topologi tiga-himpunan itu homeomorfik dan seluruh daftar
+        terbagi menjadi tepat tiga kelas.
+      </p>
+    </solution>
+  </exercise>
+</section>

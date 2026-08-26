@@ -1,0 +1,442 @@
+<section xml:id="o003-c90-ch14-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 14</title>
+
+  <p>
+    Delapan pemeriksaan berikut memadukan kekontinuan, pemetaan terbuka dan
+    tertutup, kesetaraan metrik, isometri, homeomorfisme, relasi ekuivalensi,
+    dan invarian topologis dalam persoalan baru. Materi ini ditulis mandiri
+    dalam bahasa Indonesia untuk komponen pendamping berlisensi CC BY 4.0;
+    materi ini bukan teks, terjemahan, atau solusi resmi GVSU. Kerjakan setiap
+    soal sebelum membuka petunjuk.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-mastery-01">
+    <title>Dua pencirian kekontinuan</title>
+    <statement>
+      <p>
+        Misalkan <m>f:X\to Y</m> fungsi antara ruang topologi. Buktikan bahwa
+        dua pernyataan berikut ekuivalen: (i) <m>f</m> kontinu di setiap titik
+        menurut definisi lingkungan; (ii) untuk setiap himpunan terbuka
+        <m>V\subseteq Y</m>, prapeta <m>f^{-1}(V)</m> terbuka dalam <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-01-hint">
+      <p><em>Tahap 1.</em> Untuk arah (i) ke (ii), mulai dari suatu <m>x\in f^{-1}(V)</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan kekontinuan di <m>x</m> untuk memperoleh himpunan terbuka yang berada di dalam prapeta.</p>
+      <p><em>Tahap 3.</em> Untuk arah sebaliknya, masukkan himpunan terbuka di antara <m>f(x)</m> dan lingkungannya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-01-answer">
+      <p>
+        Kekontinuan titik demi titik membuat setiap titik prapeta suatu
+        himpunan terbuka menjadi titik interior prapeta tersebut. Sebaliknya,
+        prapeta terbuka dari suatu himpunan terbuka yang berada di dalam
+        lingkungan <m>f(x)</m> menjadi lingkungan <m>x</m> yang berada di
+        dalam prapeta lingkungan semula.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-01-solution">
+      <p>
+        Andaikan <m>f</m> kontinu di setiap titik dan <m>V</m> terbuka dalam
+        <m>Y</m>. Untuk <m>x\in f^{-1}(V)</m>, himpunan <m>V</m> merupakan
+        lingkungan <m>f(x)</m>. Kekontinuan di <m>x</m> menyatakan bahwa
+        <m>f^{-1}(V)</m> merupakan lingkungan <m>x</m>. Jadi ada himpunan
+        terbuka <m>U_x</m> dengan
+        <m>x\in U_x\subseteq f^{-1}(V)</m>. Karena ini berlaku bagi setiap
+        <m>x\in f^{-1}(V)</m>, berlaku
+        <me>f^{-1}(V)=\bigcup_{x\in f^{-1}(V)}U_x,</me>
+        sehingga prapeta tersebut terbuka.
+      </p>
+      <p>
+        Sebaliknya, andaikan prapeta setiap himpunan terbuka bersifat terbuka.
+        Ambil <m>x\in X</m> dan lingkungan <m>N</m> dari <m>f(x)</m>. Ada
+        himpunan terbuka <m>V</m> dengan
+        <m>f(x)\in V\subseteq N</m>. Maka <m>f^{-1}(V)</m> terbuka, memuat
+        <m>x</m>, dan berada di dalam <m>f^{-1}(N)</m>. Jadi
+        <m>f^{-1}(N)</m> merupakan lingkungan <m>x</m>. Dengan demikian
+        <m>f</m> kontinu di <m>x</m>, dan <m>x</m> tadi sembarang.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-mastery-02">
+    <title>Komposisi dan pembatasan fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>f:X\to Y</m> dan <m>g:Y\to Z</m> kontinu. Buktikan bahwa
+        <m>g\circ f:X\to Z</m> kontinu. Jika <m>A\subseteq X</m> diberi
+        topologi subruang, buktikan pula bahwa pembatasan
+        <m>f|_A:A\to Y</m> kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-02-hint">
+      <p><em>Tahap 1.</em> Hitung prapeta <m>(g\circ f)^{-1}(W)</m>.</p>
+      <p><em>Tahap 2.</em> Untuk pembatasan, hitung <m>(f|_A)^{-1}(V)</m>.</p>
+      <p><em>Tahap 3.</em> Ingat bentuk umum himpunan terbuka dalam topologi subruang.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-02-answer">
+      <p>
+        Untuk <m>W</m> terbuka dalam <m>Z</m>, prapeta komposisi adalah
+        <m>f^{-1}(g^{-1}(W))</m>, yang terbuka. Untuk <m>V</m> terbuka dalam
+        <m>Y</m>, prapeta di bawah pembatasan adalah
+        <m>A\cap f^{-1}(V)</m>, yang terbuka dalam <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-02-solution">
+      <p>
+        Ambil himpunan terbuka <m>W\subseteq Z</m>. Karena <m>g</m> kontinu,
+        <m>g^{-1}(W)</m> terbuka dalam <m>Y</m>. Karena <m>f</m> kontinu,
+        <m>f^{-1}(g^{-1}(W))</m> terbuka dalam <m>X</m>. Identitas
+        <me>(g\circ f)^{-1}(W)=f^{-1}(g^{-1}(W))</me>
+        kemudian membuktikan kekontinuan komposisi.
+      </p>
+      <p>
+        Untuk pembatasan, jika <m>V\subseteq Y</m> terbuka, maka
+        <me>(f|_A)^{-1}(V)=A\cap f^{-1}(V).</me>
+        Himpunan <m>f^{-1}(V)</m> terbuka dalam <m>X</m>. Menurut definisi
+        topologi subruang, irisannya dengan <m>A</m> terbuka dalam <m>A</m>.
+        Maka <m>f|_A</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-mastery-03">
+    <title>Bijeksi kontinu belum tentu homeomorfisme</title>
+    <statement>
+      <p>
+        Ambil himpunan <m>S</m> dengan sedikitnya dua elemen. Misalkan
+        <m>S_d</m> adalah <m>S</m> bertopologi diskret dan <m>S_i</m> adalah
+        <m>S</m> bertopologi indiskret. Tunjukkan bahwa fungsi identitas
+        <m>\operatorname{id}:S_d\to S_i</m> kontinu dan bijektif, tetapi bukan
+        homeomorfisme. Kemudian buktikan bahwa bijeksi kontinu
+        <m>f:X\to Y</m> merupakan homeomorfisme jika dan hanya jika <m>f</m>
+        merupakan pemetaan terbuka; tunjukkan bahwa kondisi “terbuka” dapat
+        diganti dengan “tertutup”.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-03-hint">
+      <p><em>Tahap 1.</em> Periksa hanya dua himpunan terbuka pada kodomain indiskret.</p>
+      <p><em>Tahap 2.</em> Hubungkan kekontinuan <m>f^{-1}</m> dengan prapeta di bawah <m>f^{-1}</m>.</p>
+      <p><em>Tahap 3.</em> Untuk bijeksi, citra komplemen adalah komplemen citra.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-03-answer">
+      <p>
+        Identitas dari ruang diskret ke ruang indiskret kontinu, tetapi
+        inversnya tidak kontinu karena suatu himpunan bagian sejati tak kosong
+        terbuka di <m>S_d</m> dan tidak terbuka di <m>S_i</m>. Bagi bijeksi,
+        kekontinuan invers tepat berarti bahwa citra setiap himpunan terbuka
+        terbuka; dengan mengambil komplemen, hal ini ekuivalen dengan citra
+        setiap himpunan tertutup bersifat tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-03-solution">
+      <p>
+        Satu-satunya himpunan terbuka dalam <m>S_i</m> adalah
+        <m>\emptyset</m> dan <m>S</m>; prapetanya di bawah identitas adalah
+        himpunan yang sama dan keduanya terbuka dalam <m>S_d</m>. Jadi
+        identitas tersebut kontinu dan jelas bijektif. Pilih
+        <m>A\subset S</m> yang tak kosong dan sejati. Himpunan <m>A</m>
+        terbuka dalam <m>S_d</m>, tetapi prapetanya di bawah fungsi invers,
+        yaitu <m>A</m>, tidak terbuka dalam <m>S_i</m>. Jadi invers tidak
+        kontinu dan fungsi bukan homeomorfisme.
+      </p>
+      <p>
+        Sekarang misalkan <m>f:X\to Y</m> bijektif dan kontinu. Untuk setiap
+        <m>U\subseteq X</m>, berlaku
+        <m>(f^{-1})^{-1}(U)=f(U)</m>. Karena itu <m>f^{-1}</m> kontinu jika
+        dan hanya jika <m>f(U)</m> terbuka untuk setiap <m>U</m> terbuka,
+        yakni jika dan hanya jika <m>f</m> merupakan pemetaan terbuka.
+      </p>
+      <p>
+        Jika <m>C\subseteq X</m> tertutup, bijektivitas memberi
+        <m>f(X\setminus C)=Y\setminus f(C)</m>. Dengan mengambil komplemen,
+        citra semua himpunan terbuka terbuka jika dan hanya jika citra semua
+        himpunan tertutup tertutup. Jadi syarat pemetaan terbuka dapat diganti
+        dengan syarat pemetaan tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-mastery-04">
+    <title>Perbandingan metrik dan topologi yang sama</title>
+    <statement>
+      <p>
+        Misalkan <m>d</m> dan <m>e</m> metrik pada himpunan <m>X</m>. Jika ada
+        konstanta <m>c,C\gt0</m> sehingga
+        <me>c\,d(x,y)\leq e(x,y)\leq C\,d(x,y)</me>
+        untuk semua <m>x,y\in X</m>, buktikan bahwa kedua metrik menginduksi
+        topologi yang sama. Lalu, pada <m>\R</m>, tetapkan
+        <m>e(x,y)=|x-y|/(1+|x-y|)</m>. Buktikan bahwa <m>e</m> memang metrik
+        dan menginduksi topologi Euklides, walaupun tidak ada batas bawah
+        global <m>c|x-y|\leq e(x,y)</m> dengan <m>c\gt0</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-04-hint">
+      <p><em>Tahap 1.</em> Bandingkan <m>B_d(x,r/C)</m>, <m>B_e(x,r)</m>, dan <m>B_e(x,cr)</m>.</p>
+      <p><em>Tahap 2.</em> Fungsi <m>\phi(t)=t/(1+t)</m> naik dan subaditif; lalu pecahkan <m>\phi(t)\lt r</m> untuk <m>0\lt r\lt1</m>.</p>
+      <p><em>Tahap 3.</em> Biarkan <m>|x-y|</m> menuju tak hingga untuk menguji batas bawah global.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-04-answer">
+      <p>
+        Inklusi bola
+        <m>B_d(x,r/C)\subseteq B_e(x,r)</m> dan
+        <m>B_e(x,cr)\subseteq B_d(x,r)</m> memberi topologi yang sama. Fungsi
+        <m>\phi(t)=t/(1+t)</m> naik dan subaditif, sehingga komposisinya
+        dengan metrik Euklides merupakan metrik. Jika <m>0\lt r\lt1</m>, maka
+        <m>B_e(x,r)=B_d(x,r/(1-r))</m>. Namun rasio
+        <m>e(x,y)/|x-y|=1/(1+|x-y|)</m> menuju nol.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-04-solution">
+      <p>
+        Jika <m>d(x,y)\lt r/C</m>, maka
+        <m>e(x,y)\leq C d(x,y)\lt r</m>; jadi
+        <m>B_d(x,r/C)\subseteq B_e(x,r)</m>. Jika
+        <m>e(x,y)\lt cr</m>, maka
+        <m>c d(x,y)\leq e(x,y)\lt cr</m>, sehingga
+        <m>d(x,y)\lt r</m>; jadi
+        <m>B_e(x,cr)\subseteq B_d(x,r)</m>. Di setiap titik, setiap bola dari
+        salah satu metrik memuat bola dari metrik lain. Karena bola membentuk
+        basis, topologi yang diinduksi sama.
+      </p>
+      <p>
+        Untuk contoh pada <m>\R</m>, tetapkan <m>\phi(t)=t/(1+t)</m> untuk
+        <m>t\geq0</m>. Sifat tak negatif, simetri, dan pemisahan titik bagi
+        <m>e(x,y)=\phi(|x-y|)</m> langsung mengikuti sifat nilai mutlak.
+        Fungsi <m>\phi</m> naik. Selain itu, untuk <m>a,b\geq0</m>,
+        <me>
+          \phi(a)+\phi(b)-\phi(a+b)
+          =\frac{ab(2+a+b)}{(1+a)(1+b)(1+a+b)}\geq0.
+        </me>
+        Maka ketaksamaan segitiga bagi nilai mutlak, sifat naik, dan
+        subaditivitas memberi
+        <m>e(x,z)\leq e(x,y)+e(y,z)</m>. Jadi <m>e</m> memang metrik.
+      </p>
+      <p>
+        Sekarang tulis <m>t=|x-y|</m>. Jika
+        <m>0\lt r\lt1</m>, maka
+        <me>\frac{t}{1+t}\lt r\quad\Longleftrightarrow\quad t\lt\frac{r}{1-r}.</me>
+        Jadi <m>B_e(x,r)=B_d(x,r/(1-r))</m>, dengan <m>d</m> metrik Euklides.
+        Sebaliknya, untuk setiap <m>s\gt0</m>, pilihan
+        <m>r=s/(1+s)</m> memberi <m>B_d(x,s)=B_e(x,r)</m>. Maka kedua keluarga
+        bola menghasilkan topologi yang sama.
+      </p>
+      <p>
+        Andaikan ada <m>c\gt0</m> dengan
+        <m>c|x-y|\leq e(x,y)</m> untuk semua pasangan. Untuk
+        <m>x=0</m> dan <m>y=t\gt0</m>, pembagian oleh <m>t</m> memberi
+        <m>c\leq1/(1+t)</m>. Ruas kanan menuju nol ketika <m>t</m> menuju tak
+        hingga, sebuah kontradiksi. Jadi perbandingan dua arah dengan
+        konstanta global cukup, tetapi bukan syarat perlu bagi kesamaan
+        topologi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-mastery-05">
+    <title>Isometri sebagai homeomorfisme pada citranya</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,d_X)\to(Y,d_Y)</m> memenuhi
+        <m>d_Y(f(x),f(x'))=d_X(x,x')</m> untuk semua <m>x,x'\in X</m>.
+        Buktikan bahwa <m>f</m> injektif dan merupakan homeomorfisme dari
+        <m>X</m> ke subruang <m>f(X)</m>. Simpulkan bahwa isometri surjektif
+        adalah homeomorfisme, lalu jelaskan mengapa inklusi
+        <m>\Z\hookrightarrow\R</m> tidak menjadi homeomorfisme ke
+        <m>\R</m> walaupun merupakan isometri pada metrik Euklides.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-05-hint">
+      <p><em>Tahap 1.</em> Jika <m>f(x)=f(x')</m>, bandingkan jaraknya.</p>
+      <p><em>Tahap 2.</em> Hitung citra bola <m>B_{d_X}(x,r)</m> di dalam subruang <m>f(X)</m>.</p>
+      <p><em>Tahap 3.</em> Homeomorfisme ke seluruh kodomain harus surjektif.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-05-answer">
+      <p>
+        Pelestarian jarak membuat <m>f</m> injektif dan memadankan setiap bola
+        di <m>X</m> dengan bola subruang berjari-jari sama di <m>f(X)</m>.
+        Karena itu <m>f</m> dan inversnya pada citra kontinu. Inklusi
+        <m>\Z\hookrightarrow\R</m> tidak surjektif, jadi bukan homeomorfisme ke
+        seluruh <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-05-solution">
+      <p>
+        Jika <m>f(x)=f(x')</m>, maka
+        <m>d_X(x,x')=d_Y(f(x),f(x'))=0</m>, sehingga <m>x=x'</m>. Jadi
+        <m>f</m> injektif. Beri <m>f(X)</m> metrik subruang dari <m>Y</m>.
+        Untuk setiap <m>x\in X</m> dan <m>r\gt0</m>, pelestarian jarak dan
+        definisi citra memberi
+        <me>f(B_{d_X}(x,r))=B_{d_Y}(f(x),r)\cap f(X).</me>
+        Maka <m>f</m> memadankan basis bola pada <m>X</m> dengan basis bola
+        pada <m>f(X)</m>. Akibatnya <m>f:X\to f(X)</m> kontinu dan terbuka;
+        sebagai bijeksi ke citranya, inversnya juga kontinu. Jadi <m>f</m>
+        merupakan homeomorfisme ke <m>f(X)</m>.
+      </p>
+      <p>
+        Jika <m>f</m> surjektif, maka <m>f(X)=Y</m>, sehingga hasil tadi
+        langsung memberi homeomorfisme <m>X\to Y</m>. Inklusi
+        <m>i:\Z\hookrightarrow\R</m> mempertahankan jarak Euklides, tetapi
+        citranya hanya <m>\Z</m>, bukan seluruh <m>\R</m>. Ia adalah
+        homeomorfisme dari <m>\Z</m> ke subruang <m>\Z\subseteq\R</m>, bukan
+        homeomorfisme ke kodomain <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-mastery-06">
+    <title>Relasi ekuivalensi yang ditentukan oleh suatu surjeksi</title>
+    <statement>
+      <p>
+        Misalkan <m>q:X\to Y</m> surjektif dan definisikan
+        <m>x\sim x'</m> jika dan hanya jika <m>q(x)=q(x')</m>. Buktikan bahwa
+        <m>\sim</m> merupakan relasi ekuivalensi, bahwa kelas <m>[x]</m>
+        tepat sama dengan serat <m>q^{-1}(\{q(x)\})</m>, dan bahwa aturan
+        <m>\bar q([x])=q(x)</m> menentukan bijeksi
+        <m>\bar q:X/{\sim}\to Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-06-hint">
+      <p><em>Tahap 1.</em> Gunakan refleksivitas, simetri, dan transitivitas kesamaan di <m>Y</m>.</p>
+      <p><em>Tahap 2.</em> Buktikan aturan bagi <m>\bar q</m> tidak bergantung pada wakil kelas.</p>
+      <p><em>Tahap 3.</em> Gunakan surjektivitas <m>q</m> untuk surjektivitas <m>\bar q</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-06-answer">
+      <p>
+        Kesamaan nilai <m>q</m> mewarisi ketiga sifat relasi ekuivalensi.
+        Definisi kelas memberi <m>[x]=q^{-1}(\{q(x)\})</m>. Kesamaan kelas
+        menjamin <m>\bar q</m> terdefinisi dengan baik dan injektif, sedangkan
+        surjektivitas <m>q</m> memberi surjektivitas <m>\bar q</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-06-solution">
+      <p>
+        Untuk setiap <m>x\in X</m>, berlaku <m>q(x)=q(x)</m>, maka
+        <m>x\sim x</m>. Jika <m>x\sim x'</m>, maka
+        <m>q(x)=q(x')</m>; simetri kesamaan memberi <m>q(x')=q(x)</m>, maka
+        <m>x'\sim x</m>. Jika <m>x\sim x'</m> dan <m>x'\sim x''</m>, maka
+        <m>q(x)=q(x')=q(x'')</m>, sehingga <m>x\sim x''</m>. Jadi
+        <m>\sim</m> relasi ekuivalensi.
+      </p>
+      <p>
+        Menurut definisi,
+        <me>[x]=\{z\in X:q(z)=q(x)\}=q^{-1}(\{q(x)\}).</me>
+        Jika <m>[x]=[x']</m>, maka <m>x\sim x'</m>, sehingga
+        <m>q(x)=q(x')</m>. Karena itu nilai <m>\bar q([x])</m> tidak bergantung
+        pada wakil dan aturan tersebut terdefinisi dengan baik.
+      </p>
+      <p>
+        Jika <m>\bar q([x])=\bar q([x'])</m>, maka
+        <m>q(x)=q(x')</m>, sehingga <m>x\sim x'</m> dan <m>[x]=[x']</m>;
+        jadi <m>\bar q</m> injektif. Untuk setiap <m>y\in Y</m>, surjektivitas
+        <m>q</m> memberi <m>x\in X</m> dengan <m>q(x)=y</m>. Maka
+        <m>\bar q([x])=y</m>, jadi <m>\bar q</m> surjektif dan karena itu
+        bijektif.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-mastery-07">
+    <title>Homeomorfisme memadankan seluruh topologi</title>
+    <statement>
+      <p>
+        Misalkan <m>f:X\to Y</m> homeomorfisme. Buktikan bahwa aturan
+        <m>U\mapsto f(U)</m> merupakan bijeksi dari keluarga himpunan terbuka
+        pada <m>X</m> ke keluarga himpunan terbuka pada <m>Y</m> dan
+        mempertahankan gabungan sebarang serta irisan berhingga. Simpulkan
+        bahwa banyaknya himpunan terbuka merupakan invarian topologis. Gunakan
+        hasil itu untuk membuktikan bahwa tiga topologi pada
+        <m>\{0,1\}</m>, yaitu topologi indiskret, topologi
+        <m>\{\emptyset,\{1\},\{0,1\}\}</m>, dan topologi diskret, saling tidak
+        homeomorfik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-07-hint">
+      <p><em>Tahap 1.</em> Gunakan kekontinuan invers untuk menunjukkan bahwa <m>f</m> terbuka.</p>
+      <p><em>Tahap 2.</em> Citra di bawah fungsi selalu mempertahankan gabungan; bijektivitas diperlukan untuk irisan.</p>
+      <p><em>Tahap 3.</em> Hitung banyaknya himpunan terbuka pada ketiga ruang dua titik.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-07-answer">
+      <p>
+        Homeomorfisme dan inversnya mengirim himpunan terbuka ke himpunan
+        terbuka, sehingga keduanya memberikan bijeksi antara dua topologi.
+        Bijeksi tersebut mempertahankan operasi himpunan yang diminta. Ketiga
+        ruang dua titik memiliki berturut-turut 2, 3, dan 4 himpunan terbuka,
+        sehingga tidak ada dua yang homeomorfik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-07-solution">
+      <p>
+        Jika <m>U</m> terbuka dalam <m>X</m>, maka
+        <m>f(U)=(f^{-1})^{-1}(U)</m> terbuka dalam <m>Y</m> karena
+        <m>f^{-1}</m> kontinu. Sebaliknya, setiap himpunan terbuka <m>V</m>
+        dalam <m>Y</m> adalah citra <m>f(f^{-1}(V))</m> dari himpunan terbuka
+        <m>f^{-1}(V)</m> dalam <m>X</m>. Jadi aturan citra bersifat surjektif
+        pada keluarga himpunan terbuka; injektivitasnya mengikuti
+        injektivitas <m>f</m> atau keberadaan aturan invers
+        <m>V\mapsto f^{-1}(V)</m>.
+      </p>
+      <p>
+        Untuk sebarang keluarga <m>\{U_\alpha\}</m>, selalu berlaku
+        <m>f(\bigcup_\alpha U_\alpha)=\bigcup_\alpha f(U_\alpha)</m>.
+        Karena <m>f</m> injektif, untuk keluarga berhingga juga berlaku
+        <m>f(U_1\cap\cdots\cap U_n)=f(U_1)\cap\cdots\cap f(U_n)</m>.
+        Maka struktur topologi, termasuk kardinalitas keluarga himpunan
+        terbuka, dipertahankan.
+      </p>
+      <p>
+        Topologi indiskret pada <m>\{0,1\}</m> memiliki dua himpunan terbuka.
+        Topologi <m>\{\emptyset,\{1\},\{0,1\}\}</m> memiliki tiga, sedangkan
+        topologi diskret memiliki empat. Karena jumlah ini berbeda pada setiap
+        pasangan, tidak ada homeomorfisme di antara pasangan mana pun.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-mastery-08">
+    <title>Ruang terbatas yang homeomorfik dengan garis real</title>
+    <statement>
+      <p>
+        Buktikan bahwa fungsi
+        <me>h:(0,1)\to\R,\qquad h(x)=\tan\bigl(\pi(x-1/2)\bigr)</me>
+        merupakan homeomorfisme dengan topologi Euklides. Tulis inversnya
+        secara eksplisit. Jelaskan mengapa contoh ini menunjukkan bahwa
+        “terbatas sebagai himpunan bagian dari <m>\R</m> dengan metrik
+        Euklides” bukan invarian topologis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-mastery-08-hint">
+      <p><em>Tahap 1.</em> Peta linear <m>x\mapsto\pi(x-1/2)</m> memadankan <m>(0,1)</m> dengan <m>(-\pi/2,\pi/2)</m>.</p>
+      <p><em>Tahap 2.</em> Fungsi tangen kontinu dan naik ketat pada interval tersebut.</p>
+      <p><em>Tahap 3.</em> Gunakan fungsi arctangen untuk menulis invers kontinu.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-mastery-08-answer">
+      <p>
+        Fungsi <m>h</m> bijektif dan kontinu, dengan invers
+        <m>h^{-1}(y)=1/2+\arctan(y)/\pi</m> yang kontinu. Jadi <m>(0,1)</m>
+        homeomorfik dengan <m>\R</m>, walaupun yang pertama terbatas dan yang
+        kedua tidak terbatas dalam metrik Euklides.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-mastery-08-solution">
+      <p>
+        Peta <m>a(x)=\pi(x-1/2)</m> merupakan bijeksi kontinu dari
+        <m>(0,1)</m> ke <m>(-\pi/2,\pi/2)</m>, dengan invers kontinu
+        <m>a^{-1}(t)=1/2+t/\pi</m>. Pada interval
+        <m>(-\pi/2,\pi/2)</m>, fungsi tangen kontinu, naik ketat, dan nilainya
+        menuju <m>-\infty</m> serta <m>+\infty</m> di kedua ujung. Karena itu
+        tangen merupakan bijeksi ke <m>\R</m>. Komposisinya dengan <m>a</m>
+        adalah <m>h</m>, sehingga <m>h</m> bijektif dan kontinu.
+      </p>
+      <p>
+        Menyelesaikan <m>y=\tan(\pi(x-1/2))</m> memberi
+        <me>h^{-1}(y)=\frac12+\frac{1}{\pi}\arctan(y).</me>
+        Fungsi arctangen kontinu pada <m>\R</m>, maka invers tersebut kontinu.
+        Jadi <m>h</m> homeomorfisme. Himpunan <m>(0,1)</m> terbatas dalam
+        metrik Euklides, sedangkan <m>\R</m> tidak. Homeomorfisme tidak
+        mempertahankan ukuran jarak atau kedudukan suatu ruang sebagai
+        himpunan bagian dari ruang metrik luar. Maka keterbatasan Euklides
+        semacam itu bukan sifat topologis.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,0 +1,403 @@
+<section xml:id="o003-c90-ch14-source-guides-b" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Kekontinuan dan Ekuivalensi</title>
+
+  <p>
+    Panduan ini mendampingi pertanyaan nonlatihan tentang pembuktian kekontinuan,
+    ekuivalensi metrik dan topologis, serta relasi ekuivalensi.
+    Pada setiap soal, perhatikan dengan cermat sifat yang harus dipertahankan oleh
+    fungsi yang digunakan.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-guide-11">
+    <title>Menafsirkan Suatu Lingkungan</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,\tau_X)\to(Y,\tau_Y)</m> suatu fungsi dan andaikan
+        <m>f^{-1}(O)</m> terbuka dalam <m>X</m> setiap kali <m>O</m> terbuka
+        dalam <m>Y</m>. Misalkan <m>a\in X</m> dan andaikan <m>N</m> suatu
+        lingkungan bagi <m>f(a)</m> dalam <m>Y</m>. Apa yang dapat disimpulkan
+        dari fakta bahwa <m>N</m> merupakan lingkungan?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-11-hint">
+      <p><em>Tahap 1.</em> Ingat definisi lingkungan suatu titik dalam ruang topologi.</p>
+      <p><em>Tahap 2.</em> Cari suatu himpunan terbuka yang berada di antara titik <m>f(a)</m> dan himpunan <m>N</m>.</p>
+      <p><em>Tahap 3.</em> Nyatakan kesimpulan itu sebagai rantai keanggotaan dan inklusi.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-11-answer">
+      <p>
+        Terdapat himpunan terbuka <m>O</m> dalam <m>Y</m> sedemikian sehingga
+        <m>f(a)\in O\subseteq N</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-11-solution">
+      <p>
+        Menurut definisi, suatu himpunan merupakan lingkungan bagi sebuah titik
+        jika himpunan itu memuat suatu himpunan terbuka yang memuat titik tersebut.
+        Karena <m>N</m> merupakan lingkungan bagi <m>f(a)</m>, ada
+        <m>O\in\tau_Y</m> dengan <m>f(a)\in O</m> dan <m>O\subseteq N</m>.
+        Pada tahap ini belum perlu disimpulkan bahwa <m>N</m> sendiri terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-12">
+    <title>Prapeta Suatu Lingkungan</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,\tau_X)\to(Y,\tau_Y)</m> suatu fungsi yang memenuhi:
+        <m>f^{-1}(O)</m> terbuka dalam <m>X</m> untuk setiap himpunan terbuka
+        <m>O</m> dalam <m>Y</m>. Jika <m>a\in X</m> dan <m>N</m> merupakan
+        lingkungan bagi <m>f(a)</m>, jelaskan mengapa <m>f^{-1}(N)</m>
+        merupakan lingkungan bagi <m>a</m> dalam <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-12-hint">
+      <p><em>Tahap 1.</em> Pilih <m>O</m> terbuka dengan <m>f(a)\in O\subseteq N</m>.</p>
+      <p><em>Tahap 2.</em> Terapkan asumsi soal kepada <m>O</m>, bukan langsung kepada <m>N</m>.</p>
+      <p><em>Tahap 3.</em> Ambil prapeta pada rantai <m>f(a)\in O\subseteq N</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-12-answer">
+      <p>
+        Himpunan <m>f^{-1}(N)</m> memuat himpunan terbuka <m>f^{-1}(O)</m>
+        yang memuat <m>a</m>; karena itu <m>f^{-1}(N)</m> merupakan lingkungan
+        bagi <m>a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-12-solution">
+      <p>
+        Karena <m>N</m> merupakan lingkungan bagi <m>f(a)</m>, terdapat
+        <m>O\in\tau_Y</m> dengan <m>f(a)\in O\subseteq N</m>.
+        Asumsi mengenai <m>f</m> memberikan
+        <m>f^{-1}(O)\in\tau_X</m>. Selain itu, <m>f(a)\in O</m> menyiratkan
+        <m>a\in f^{-1}(O)</m>, sedangkan <m>O\subseteq N</m> menyiratkan
+        <m>f^{-1}(O)\subseteq f^{-1}(N)</m>. Jadi <m>f^{-1}(N)</m> memuat
+        suatu himpunan terbuka yang memuat <m>a</m>, tepat seperti yang
+        disyaratkan oleh definisi lingkungan bagi <m>a</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-13">
+    <title>Menyelesaikan Bukti Kekontinuan</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,\tau_X)\to(Y,\tau_Y)</m> suatu fungsi dan andaikan
+        prapeta setiap himpunan terbuka dalam <m>Y</m> terbuka dalam <m>X</m>.
+        Untuk setiap <m>a\in X</m> dan setiap lingkungan <m>N</m> bagi
+        <m>f(a)</m>, telah ditunjukkan bahwa <m>f^{-1}(N)</m> merupakan
+        lingkungan bagi <m>a</m>. Jelaskan bagaimana hal ini menunjukkan bahwa
+        <m>f</m> merupakan fungsi kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-13-hint">
+      <p><em>Tahap 1.</em> Bandingkan kesimpulan yang telah diperoleh dengan definisi kontinu di <m>a</m>.</p>
+      <p><em>Tahap 2.</em> Perhatikan bahwa <m>a</m> dipilih secara sebarang.</p>
+      <p><em>Tahap 3.</em> Gunakan definisi kontinu pada seluruh ruang <m>X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-13-answer">
+      <p>
+        Kesimpulan tersebut membuktikan bahwa <m>f</m> kontinu di setiap
+        <m>a\in X</m>; oleh karena itu <m>f</m> kontinu pada <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-13-solution">
+      <p>
+        Untuk titik sebarang <m>a\in X</m>, prapeta setiap lingkungan
+        <m>N</m> bagi <m>f(a)</m> telah terbukti merupakan lingkungan bagi
+        <m>a</m>. Ini persis definisi bahwa <m>f</m> kontinu di <m>a</m>.
+        Karena pilihan <m>a</m> tidak dibatasi, pernyataan itu berlaku pada
+        setiap titik <m>X</m>. Jadi <m>f</m> kontinu. Dengan demikian, bersama
+        arah sebaliknya, diperoleh pencirian bahwa <m>f</m> kontinu jika dan
+        hanya jika prapeta setiap himpunan terbuka dalam <m>Y</m> terbuka
+        dalam <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-14">
+    <title>Dua Interval dengan Metrik Euklides</title>
+    <statement>
+      <p>
+        Misalkan <m>X=((0,1),d_X)</m> dan <m>Y=((0,2),d_Y)</m>, dengan
+        <m>d_X</m> dan <m>d_Y</m> keduanya metrik Euklides. Apakah mungkin
+        menemukan bijeksi <m>f:X\to Y</m> yang mempertahankan sifat-sifat
+        metrik, yaitu memenuhi
+        <m>d_X(a,b)=d_Y(f(a),f(b))</m> untuk semua <m>a,b\in(0,1)</m>?
+        Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-14-hint">
+      <p><em>Tahap 1.</em> Andaikan bijeksi yang mempertahankan jarak itu ada.</p>
+      <p><em>Tahap 2.</em> Pilih dua titik dalam <m>(0,2)</m> yang jaraknya lebih besar daripada <m>1</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan surjektivitas untuk mengambil prapeta kedua titik tersebut dalam <m>(0,1)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-14-answer">
+      <p>
+        Tidak. Setiap dua titik dalam <m>(0,1)</m> berjarak kurang dari
+        <m>1</m>, sedangkan <m>(0,2)</m> memiliki pasangan titik yang
+        berjarak lebih dari <m>1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-14-solution">
+      <p>
+        Andaikan terdapat bijeksi <m>f:X\to Y</m> yang mempertahankan jarak.
+        Ambil, misalnya, <m>u=\frac14</m> dan <m>v=\frac74</m> dalam
+        <m>(0,2)</m>. Karena <m>f</m> surjektif, terdapat <m>a,b\in(0,1)</m>
+        dengan <m>f(a)=u</m> dan <m>f(b)=v</m>. Pelestarian jarak akan memberikan
+        <me>
+          |a-b|=d_X(a,b)=d_Y(f(a),f(b))=|u-v|=\frac32.
+        </me>
+        Namun, <m>|a-b|\lt 1</m> untuk semua <m>a,b\in(0,1)</m>. Kontradiksi
+        ini menunjukkan bahwa tidak ada bijeksi yang mempertahankan jarak;
+        kedua ruang tersebut tidak ekuivalen secara metrik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-15">
+    <title>Menyesuaikan Metrik dengan Peregangan</title>
+    <statement>
+      <p>
+        Misalkan <m>X=((0,1),d_X)</m> dan <m>Y=((0,2),d_Y)</m>, dengan
+        <m>d_X(a,b)=2|a-b|</m> dan <m>d_Y=d_E</m>. Anda boleh mengasumsikan
+        bahwa <m>d_X</m> merupakan suatu metrik. Apakah mungkin menemukan
+        bijeksi <m>f:X\to Y</m> yang mempertahankan sifat-sifat metrik?
+        Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-15-hint">
+      <p><em>Tahap 1.</em> Cari fungsi sederhana yang memetakan <m>(0,1)</m> tepat ke <m>(0,2)</m>.</p>
+      <p><em>Tahap 2.</em> Periksa secara terpisah bahwa fungsi tersebut bijektif.</p>
+      <p><em>Tahap 3.</em> Hitung <m>d_Y(f(a),f(b))</m> dan bandingkan dengan <m>d_X(a,b)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-15-answer">
+      <p>
+        Ya. Fungsi <m>f(x)=2x</m> adalah bijeksi dari <m>(0,1)</m> ke
+        <m>(0,2)</m> dan mempertahankan jarak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-15-solution">
+      <p>
+        Definisikan <m>f:(0,1)\to(0,2)</m> dengan <m>f(x)=2x</m>.
+        Fungsi ini injektif, dan untuk setiap <m>y\in(0,2)</m> berlaku
+        <m>y/2\in(0,1)</m> serta <m>f(y/2)=y</m>, sehingga <m>f</m> surjektif.
+        Untuk semua <m>a,b\in(0,1)</m>,
+        <me>
+          d_Y(f(a),f(b))=|2a-2b|=2|a-b|=d_X(a,b).
+        </me>
+        Jadi <m>f</m> merupakan isometri, dan kedua ruang tersebut ekuivalen
+        secara metrik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-16">
+    <title>Topologi Metrik Taksi dan Metrik Maksimum</title>
+    <statement>
+      <p>
+        Apakah <m>(\R^2,d_T)</m> dan <m>(\R^2,d_M)</m> ekuivalen secara
+        topologis? Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-16-hint">
+      <p><em>Tahap 1.</em> Gunakan pemetaan identitas pada himpunan dasar <m>\R^2</m>.</p>
+      <p><em>Tahap 2.</em> Untuk dua titik, tuliskan jarak taksi sebagai jumlah dua selisih koordinat mutlak dan jarak maksimum sebagai nilai terbesar di antaranya.</p>
+      <p><em>Tahap 3.</em> Batasi masing-masing jarak dengan kelipatan tetap dari jarak lainnya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-16-answer">
+      <p>
+        Ya. Pemetaan identitas merupakan homeomorfisme karena
+        <m>d_M(p,q)\leq d_T(p,q)\leq 2d_M(p,q)</m> untuk semua
+        <m>p,q\in\R^2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-16-solution">
+      <p>
+        Tuliskan <m>p=(p_1,p_2)</m>, <m>q=(q_1,q_2)</m>, dan
+        <m>r_i=|p_i-q_i|</m>. Maka
+        <m>d_T(p,q)=r_1+r_2</m> dan <m>d_M(p,q)=\max\{r_1,r_2\}</m>.
+        Karena setiap <m>r_i</m> tidak melebihi nilai maksimumnya,
+        <me>
+          d_M(p,q)\leq d_T(p,q)\leq 2d_M(p,q).
+        </me>
+        Jadi kedua metrik saling membatasi dengan konstanta positif
+        <m>1</m> dan <m>2</m>. Teorema perbandingan metrik kemudian menunjukkan
+        bahwa pemetaan identitas dari salah satu ruang ke ruang lainnya dan
+        inversnya kontinu. Karena pemetaan identitas juga bijektif, ia merupakan
+        homeomorfisme. Jadi kedua ruang itu ekuivalen secara topologis.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-17">
+    <title>Topologi Metrik Euklides dan Metrik Taksi</title>
+    <statement>
+      <p>
+        Apakah <m>(\R^2,d_E)</m> dan <m>(\R^2,d_T)</m> ekuivalen secara
+        topologis? Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-17-hint">
+      <p><em>Tahap 1.</em> Gunakan pemetaan identitas pada <m>\R^2</m>.</p>
+      <p><em>Tahap 2.</em> Terapkan <m>\sqrt{u^2+v^2}\leq |u|+|v|</m>.</p>
+      <p><em>Tahap 3.</em> Untuk arah sebaliknya, kuadratkan dan gunakan <m>2|uv|\leq u^2+v^2</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-17-answer">
+      <p>
+        Ya. Untuk semua <m>p,q\in\R^2</m> berlaku
+        <m>d_E(p,q)\leq d_T(p,q)\leq\sqrt{2}\,d_E(p,q)</m>, sehingga
+        pemetaan identitas merupakan homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-17-solution">
+      <p>
+        Misalkan selisih koordinat <m>p</m> dan <m>q</m> adalah <m>u</m> dan
+        <m>v</m>. Ketaksamaan pertama mengikuti dari
+        <m>\sqrt{u^2+v^2}\leq |u|+|v|</m>. Selanjutnya,
+        <me>
+          (|u|+|v|)^2=u^2+2|uv|+v^2\leq 2(u^2+v^2),
+        </me>
+        sehingga <m>|u|+|v|\leq\sqrt{2}\sqrt{u^2+v^2}</m>. Oleh karena itu,
+        <me>
+          d_E(p,q)\leq d_T(p,q)\leq\sqrt{2}\,d_E(p,q).
+        </me>
+        Teorema perbandingan metrik menjamin bahwa pemetaan identitas dan
+        inversnya kontinu. Pemetaan ini bijektif, maka merupakan homeomorfisme;
+        kedua ruang itu ekuivalen secara topologis.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-18">
+    <title>Dugaan untuk Metrik Euklides dan Metrik Maksimum</title>
+    <statement>
+      <p>
+        Apakah Anda menduga bahwa <m>(\R^2,d_E)</m> dan
+        <m>(\R^2,d_M)</m> ekuivalen secara topologis? Jelaskan tanpa melakukan
+        perhitungan ataupun perbandingan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-18-hint">
+      <p><em>Tahap 1.</em> Bayangkan bentuk bola terbuka untuk kedua metrik tersebut.</p>
+      <p><em>Tahap 2.</em> Tanyakan apakah cakram terbuka dapat dideformasi menjadi persegi terbuka tanpa merobek atau merekatkan bidang.</p>
+      <p><em>Tahap 3.</em> Ingat bahwa topologi memperhatikan struktur himpunan terbuka, bukan nilai jarak yang persis.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-18-answer">
+      <p>
+        Ya. Secara geometris, lingkungan berbentuk cakram dan lingkungan
+        berbentuk persegi menggambarkan struktur terbuka yang sama pada bidang.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-18-solution">
+      <p>
+        Dugaan yang wajar adalah bahwa kedua ruang tersebut ekuivalen secara
+        topologis. Bola terbuka metrik Euklides tampak sebagai cakram, sedangkan
+        bola terbuka metrik maksimum tampak sebagai persegi dengan sisi sejajar
+        sumbu. Cakram dapat diregangkan menjadi persegi, dan sebaliknya, tanpa
+        membuat lubang, merobek, atau merekatkan bidang. Perubahan bentuk ini
+        tidak mengubah gagasan bahwa setiap titik memiliki lingkungan terbuka
+        yang dapat dibuat sekecil yang diinginkan. Karena ekuivalensi topologis
+        mengabaikan nilai jarak yang tepat dan mempertahankan struktur terbuka,
+        gambaran tersebut mendukung jawaban ya. Ini merupakan penjelasan
+        kualitatif sebagaimana diminta; pembuktian formal dapat diberikan secara
+        terpisah melalui pemetaan identitas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-19">
+    <title>Ekuivalensi Metrik sebagai Relasi Ekuivalensi</title>
+    <statement>
+      <p>
+        Jelaskan mengapa ekuivalensi metrik merupakan relasi ekuivalensi pada
+        setiap himpunan terpilih yang terdiri atas ruang-ruang metrik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-19-hint">
+      <p><em>Tahap 1.</em> Untuk sifat refleksif, gunakan pemetaan identitas suatu ruang metrik.</p>
+      <p><em>Tahap 2.</em> Untuk sifat simetris, ambil invers suatu isometri.</p>
+      <p><em>Tahap 3.</em> Untuk sifat transitif, komposisikan dua isometri.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-19-answer">
+      <p>
+        Relasi ini refleksif, simetris, dan transitif: pemetaan identitas adalah
+        isometri, invers isometri adalah isometri, dan komposisi isometri juga
+        merupakan isometri.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-19-solution">
+      <p>
+        Pada suatu himpunan ruang-ruang metrik, definisikan <m>X\sim Y</m> jika
+        terdapat isometri dari <m>X</m> ke <m>Y</m>. Untuk setiap ruang
+        <m>(X,d_X)</m>, pemetaan identitas <m>i_X</m> bijektif dan memenuhi
+        <m>d_X(i_X(x),i_X(y))=d_X(x,y)</m>; jadi <m>X\sim X</m> dan relasi ini
+        refleksif.
+      </p>
+      <p>
+        Jika <m>f:X\to Y</m> suatu isometri, maka <m>f^{-1}:Y\to X</m>
+        bijektif. Untuk <m>u,v\in Y</m>, tuliskan <m>u=f(x)</m> dan
+        <m>v=f(y)</m>. Pelestarian jarak oleh <m>f</m> memberikan
+        <me>
+          d_X(f^{-1}(u),f^{-1}(v))=d_X(x,y)=d_Y(u,v).
+        </me>
+        Jadi <m>f^{-1}</m> isometri dan relasi ini simetris.
+      </p>
+      <p>
+        Terakhir, jika <m>f:X\to Y</m> dan <m>g:Y\to Z</m> isometri, maka
+        <m>g\circ f</m> bijektif dan, untuk semua <m>x,y\in X</m>,
+        <me>
+          d_Z(g(f(x)),g(f(y)))=d_Y(f(x),f(y))=d_X(x,y).
+        </me>
+        Jadi <m>g\circ f</m> isometri dan relasi ini transitif. Ketiga sifat
+        tersebut membuktikan bahwa ekuivalensi metrik merupakan relasi
+        ekuivalensi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-20">
+    <title>Ekuivalensi Topologis sebagai Relasi Ekuivalensi</title>
+    <statement>
+      <p>
+        Jelaskan mengapa ekuivalensi topologis merupakan relasi ekuivalensi pada
+        setiap himpunan terpilih yang terdiri atas ruang-ruang topologi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-20-hint">
+      <p><em>Tahap 1.</em> Tunjukkan bahwa pemetaan identitas merupakan homeomorfisme.</p>
+      <p><em>Tahap 2.</em> Tukar arah suatu homeomorfisme dengan mengambil inversnya.</p>
+      <p><em>Tahap 3.</em> Gunakan kekontinuan komposisi untuk dua homeomorfisme berurutan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-20-answer">
+      <p>
+        Relasi ini refleksif, simetris, dan transitif: identitas adalah
+        homeomorfisme, invers homeomorfisme adalah homeomorfisme, dan komposisi
+        homeomorfisme juga merupakan homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-20-solution">
+      <p>
+        Pada suatu himpunan ruang-ruang topologi, definisikan <m>X\sim Y</m>
+        jika terdapat homeomorfisme <m>f:X\to Y</m>. Pemetaan identitas
+        <m>i_X:X\to X</m> adalah bijeksi kontinu dan inversnya adalah
+        <m>i_X</m> sendiri, yang juga kontinu. Jadi <m>X\sim X</m>; relasi ini
+        refleksif.
+      </p>
+      <p>
+        Jika <m>f:X\to Y</m> homeomorfisme, definisinya menyatakan bahwa
+        <m>f^{-1}:Y\to X</m> kontinu. Pemetaan <m>f^{-1}</m> bijektif,
+        dan inversnya, yaitu <m>f</m>, juga kontinu. Maka <m>f^{-1}</m>
+        merupakan homeomorfisme, sehingga relasi ini simetris.
+      </p>
+      <p>
+        Jika <m>f:X\to Y</m> dan <m>g:Y\to Z</m> homeomorfisme, komposisi
+        <m>g\circ f:X\to Z</m> bijektif dan kontinu. Inversnya adalah
+        <m>(g\circ f)^{-1}=f^{-1}\circ g^{-1}</m>, yang kontinu sebagai
+        komposisi dua fungsi kontinu. Jadi <m>g\circ f</m> merupakan
+        homeomorfisme dan relasi ini transitif. Oleh karena itu, ekuivalensi
+        topologis merupakan relasi ekuivalensi.
+      </p>
+    </solution>
+  </exercise>
+</section>

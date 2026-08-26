@@ -1,0 +1,274 @@
+<section xml:id="o003-c90-ch14-exercise-guides-f" xml:lang="id-ID">
+  <title>Panduan latihan Bab 14, bagian keenam</title>
+
+  <p>
+    Enam panduan terakhir ini mengikuti butir latihan 51 sampai 56 dalam
+    urutan sumber. Untuk setiap pernyataan, “benar” berarti selalu benar;
+    jawaban “salah” harus disertai contoh penyangkal konkret. Dukungan belajar
+    ini ditulis secara terpisah sebagai konten pendamping CC BY 4.0.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-exer-f-01">
+    <title>Fungsi kontinu belum tentu terbuka</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>f:X\to Y</m> merupakan fungsi
+        kontinu antara ruang topologi <m>X</m> dan <m>Y</m>, maka
+        <m>f(U)</m> terbuka dalam <m>Y</m> untuk setiap himpunan terbuka
+        <m>U</m> dalam <m>X</m>. Berikan bukti atau contoh penyangkal sesuai
+        jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-f-01-hint">
+      <p>
+        Kekontinuan mengatur prapeta himpunan terbuka, bukan citranya.
+        Pertimbangkan fungsi konstan pada <m>\R</m> dengan topologi biasa.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-f-01-answer">
+      <p>
+        Salah. Fungsi konstan <m>f:\R\to\R</m>, <m>f(x)=0</m>, kontinu,
+        tetapi citra himpunan terbuka <m>(-1,1)</m> adalah singleton
+        <m>\{0\}</m>, yang tidak terbuka dalam <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-f-01-solution">
+      <p>
+        Beri domain dan kodomain <m>\R</m> topologi Euklides, lalu definisikan
+        <m>f(x)=0</m> untuk setiap <m>x\in\R</m>. Untuk setiap himpunan terbuka
+        <m>V\subseteq\R</m>, prapeta <m>f^{-1}(V)</m> sama dengan
+        <m>\R</m> jika <m>0\in V</m>, dan sama dengan <m>\emptyset</m> jika
+        <m>0\notin V</m>. Kedua kemungkinan itu terbuka, sehingga <m>f</m>
+        kontinu.
+      </p>
+      <p>
+        Namun, untuk himpunan terbuka <m>U=(-1,1)</m> berlaku
+        <m>f(U)=\{0\}</m>. Singleton ini tidak terbuka dalam topologi
+        Euklides pada <m>\R</m>. Jadi fungsi kontinu tidak harus merupakan
+        pemetaan terbuka, dan pernyataan tersebut salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-f-02">
+    <title>Fungsi kuadrat pada topologi komplemen berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>\tau_{FC}</m> topologi komplemen berhingga pada
+        <m>\R</m>. Tentukan benar atau salah: fungsi
+        <m>f:(\R,\tau_{FC})\to(\R,\tau_{FC})</m> yang diberikan oleh
+        <m>f(x)=x^2</m> bersifat kontinu. Jelaskan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-f-02-hint">
+      <p>
+        Jika <m>O</m> terbuka tak kosong, tulis
+        <m>O=\R\setminus F</m> dengan <m>F</m> berhingga. Setiap persamaan
+        <m>x^2=y</m> mempunyai paling banyak dua penyelesaian real.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-f-02-answer">
+      <p>
+        Benar. Prapeta setiap himpunan berhingga di bawah <m>x\mapsto x^2</m>
+        berhingga, sehingga prapeta setiap himpunan terbuka komplemen
+        berhingga kembali terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-f-02-solution">
+      <p>
+        Prapeta <m>\emptyset</m> adalah <m>\emptyset</m>, jadi cukup
+        memeriksa himpunan terbuka tak kosong. Ambil
+        <m>O\in\tau_{FC}</m> tak kosong. Ada himpunan berhingga
+        <m>F\subseteq\R</m> sehingga <m>O=\R\setminus F</m>. Karena
+        prapeta mempertahankan komplemen,
+        <me>
+          f^{-1}(O)=\R\setminus f^{-1}(F).
+        </me>
+        Untuk setiap <m>y\in F</m>, serat
+        <m>f^{-1}(\{y\})=\{x\in\R\mid x^2=y\}</m> mempunyai paling banyak
+        dua anggota. Maka <m>f^{-1}(F)</m>, sebagai gabungan berhingga dari
+        serat-serat tersebut, juga berhingga. Akibatnya
+        <m>f^{-1}(O)</m> mempunyai komplemen berhingga dan terbuka dalam
+        domain. Prapeta setiap himpunan terbuka dengan demikian terbuka, jadi
+        <m>f</m> kontinu dan pernyataannya benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-f-03">
+    <title>Pemetaan terbuka bijektif belum tentu homeomorfisme</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>f:X\to Y</m> bijektif dan
+        <m>f(U)</m> terbuka dalam <m>Y</m> untuk setiap himpunan terbuka
+        <m>U</m> dalam <m>X</m>, maka <m>f</m> merupakan homeomorfisme.
+        Berikan bukti atau contoh penyangkal sesuai jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-f-03-hint">
+      <p>
+        Kebijektifan dan sifat terbuka menjamin kekontinuan <m>f^{-1}</m>,
+        tetapi belum menjamin kekontinuan <m>f</m>. Bandingkan topologi
+        indiskret dan diskret pada himpunan dua elemen yang sama.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-f-03-answer">
+      <p>
+        Salah. Identitas dari himpunan dua elemen bertopologi indiskret ke
+        himpunan yang sama bertopologi diskret bersifat bijektif dan terbuka,
+        tetapi tidak kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-f-03-solution">
+      <p>
+        Ambil <m>S=\{0,1\}</m>,
+        <m>X=(S,\{\emptyset,S\})</m>, dan
+        <m>Y=(S,\mathcal P(S))</m>. Definisikan <m>f:X\to Y</m> sebagai
+        fungsi identitas. Fungsi ini bijektif. Himpunan terbuka dalam
+        <m>X</m> hanya <m>\emptyset</m> dan <m>S</m>; citranya di bawah
+        <m>f</m> adalah <m>\emptyset</m> dan <m>S</m>, yang keduanya terbuka
+        dalam ruang diskret <m>Y</m>. Jadi <m>f</m> merupakan pemetaan
+        terbuka.
+      </p>
+      <p>
+        Meskipun demikian, <m>\{0\}</m> terbuka dalam <m>Y</m>, sedangkan
+        <m>f^{-1}(\{0\})=\{0\}</m> tidak terbuka dalam <m>X</m>. Maka
+        <m>f</m> tidak kontinu dan karena itu bukan homeomorfisme. Contoh ini
+        menunjukkan bahwa asumsi pada pernyataan hanya membuat fungsi invers
+        kontinu; kekontinuan fungsi asal masih dapat gagal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-f-04">
+    <title>Bijeksi antara ruang diskret</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>X</m> dan <m>Y</m> merupakan ruang
+        topologi diskret dan <m>f:X\to Y</m> bijektif, maka <m>X</m> dan
+        <m>Y</m> homeomorfik. Jelaskan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-f-04-hint">
+      <p>
+        Dalam ruang diskret, setiap subhimpunan terbuka. Periksa kekontinuan
+        <m>f</m> dan fungsi inversnya langsung dari definisi melalui prapeta.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-f-04-answer">
+      <p>
+        Benar. Setiap bijeksi antara dua ruang diskret kontinu dan mempunyai
+        invers yang juga kontinu, sehingga merupakan homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-f-04-solution">
+      <p>
+        Ambil sembarang himpunan terbuka <m>V\subseteq Y</m>. Prapetanya
+        <m>f^{-1}(V)</m> adalah suatu subhimpunan <m>X</m>, dan setiap
+        subhimpunan <m>X</m> terbuka karena topologi <m>X</m> diskret. Jadi
+        <m>f</m> kontinu. Karena <m>f</m> bijektif, terdapat fungsi invers
+        <m>f^{-1}:Y\to X</m>. Untuk setiap himpunan terbuka
+        <m>U\subseteq X</m>, prapeta <m>U</m> di bawah <m>f^{-1}</m> adalah
+        <m>f(U)</m>, yang merupakan suatu subhimpunan <m>Y</m> dan karenanya
+        terbuka dalam topologi diskret <m>Y</m>. Jadi <m>f^{-1}</m> juga
+        kontinu. Dengan demikian <m>f</m> merupakan homeomorfisme, sehingga
+        pernyataan tersebut benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-f-05">
+    <title>Irisan dua relasi ekuivalensi</title>
+    <statement>
+      <p>
+        Misalkan <m>S</m> suatu himpunan dan <m>R_1</m> serta <m>R_2</m>
+        relasi ekuivalensi pada <m>S</m>. Tentukan benar atau salah:
+        <m>R=R_1\cap R_2</m> juga merupakan relasi ekuivalensi pada
+        <m>S</m>. Jelaskan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-f-05-hint">
+      <p>
+        Periksa sifat refleksif, simetris, dan transitif satu per satu. Jika
+        suatu pasangan berada dalam irisan, pasangan itu berada dalam kedua
+        relasi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-f-05-answer">
+      <p>
+        Benar. Irisan <m>R_1\cap R_2</m> mewarisi sifat refleksif, simetris,
+        dan transitif dari kedua relasi ekuivalensi tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-f-05-solution">
+      <p>
+        Untuk refleksivitas, ambil <m>x\in S</m>. Karena <m>R_1</m> dan
+        <m>R_2</m> refleksif, <m>(x,x)\in R_1</m> dan
+        <m>(x,x)\in R_2</m>. Jadi <m>(x,x)\in R_1\cap R_2=R</m>.
+      </p>
+      <p>
+        Untuk simetri, andaikan <m>(x,y)\in R</m>. Pasangan itu berada dalam
+        <m>R_1</m> dan <m>R_2</m>. Simetri masing-masing relasi memberi
+        <m>(y,x)\in R_1</m> dan <m>(y,x)\in R_2</m>, sehingga
+        <m>(y,x)\in R</m>.
+      </p>
+      <p>
+        Untuk transitivitas, andaikan <m>(x,y)\in R</m> dan
+        <m>(y,z)\in R</m>. Kedua pasangan berada dalam masing-masing
+        <m>R_i</m>. Karena setiap <m>R_i</m> transitif,
+        <m>(x,z)\in R_1</m> dan <m>(x,z)\in R_2</m>; maka
+        <m>(x,z)\in R</m>. Ketiga syarat relasi ekuivalensi terpenuhi, jadi
+        pernyataannya benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-exer-f-06">
+    <title>Gabungan dua relasi ekuivalensi</title>
+    <statement>
+      <p>
+        Misalkan <m>S</m> suatu himpunan dan <m>R_1</m> serta <m>R_2</m>
+        relasi ekuivalensi pada <m>S</m>. Tentukan benar atau salah:
+        <m>R=R_1\cup R_2</m> juga merupakan relasi ekuivalensi pada
+        <m>S</m>. Berikan bukti atau contoh penyangkal sesuai jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-exer-f-06-hint">
+      <p>
+        Pada <m>S=\{1,2,3\}</m>, ambil satu relasi yang menyatukan
+        <m>1</m> dengan <m>2</m> dan relasi lain yang menyatukan <m>2</m>
+        dengan <m>3</m>. Uji transitivitas gabungannya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-exer-f-06-answer">
+      <p>
+        Salah. Gabungan dua relasi ekuivalensi tetap refleksif dan simetris,
+        tetapi dapat gagal transitif.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-exer-f-06-solution">
+      <p>
+        Ambil <m>S=\{1,2,3\}</m> dan definisikan
+        <me>
+          R_1=\{(1,1),(2,2),(3,3),(1,2),(2,1)\}
+        </me>
+        serta
+        <me>
+          R_2=\{(1,1),(2,2),(3,3),(2,3),(3,2)\}.
+        </me>
+        Relasi <m>R_1</m> adalah relasi ekuivalensi dari partisi
+        <m>\{\{1,2\},\{3\}\}</m>, sedangkan <m>R_2</m> berasal dari
+        partisi <m>\{\{1\},\{2,3\}\}</m>. Jadi keduanya memang relasi
+        ekuivalensi.
+      </p>
+      <p>
+        Dalam gabungan <m>R_1\cup R_2</m>, berlaku
+        <m>(1,2)\in R_1\cup R_2</m> dan
+        <m>(2,3)\in R_1\cup R_2</m>. Namun
+        <m>(1,3)\notin R_1\cup R_2</m>. Dengan demikian gabungan tersebut
+        tidak transitif dan bukan relasi ekuivalensi. Satu contoh penyangkal
+        ini membuktikan bahwa pernyataan umum tersebut salah.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,0 +1,153 @@
+<section xml:id="o003-c90-ch14-source-guides-c" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Invarian Topologis</title>
+
+  <p>
+    Panduan ini mendampingi lima pertanyaan klasifikasi tentang sifat yang
+    dipertahankan oleh homeomorfisme. Gunakan bahwa homeomorfisme adalah
+    bijeksi yang memadankan himpunan terbuka pada kedua arah.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-guide-21">
+    <title>Topologi Indiskret</title>
+    <statement>
+      <p>
+        Tentukan apakah sifat “<m>X</m> memiliki topologi indiskret” merupakan
+        invarian topologis. Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-21-hint">
+      <p><em>Tahap 1.</em> Misalkan <m>f:X\to Y</m> suatu homeomorfisme.</p>
+      <p><em>Tahap 2.</em> Ambil sebarang himpunan terbuka <m>V</m> dalam <m>Y</m> dan periksa <m>f^{-1}(V)</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan bahwa satu-satunya himpunan terbuka dalam <m>X</m> adalah <m>\emptyset</m> dan <m>X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-21-answer">
+      <p>Ya. Topologi indiskret merupakan invarian topologis.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-21-solution">
+      <p>
+        Misalkan <m>f:X\to Y</m> suatu homeomorfisme dan <m>X</m> memiliki
+        topologi indiskret. Jika <m>V</m> terbuka dalam <m>Y</m>, kekontinuan
+        <m>f</m> memberi <m>f^{-1}(V)</m> terbuka dalam <m>X</m>. Jadi
+        <m>f^{-1}(V)=\emptyset</m> atau <m>f^{-1}(V)=X</m>. Karena <m>f</m>
+        bijektif, masing-masing kemungkinan memberi <m>V=\emptyset</m> atau
+        <m>V=Y</m>. Dengan demikian <m>Y</m> juga memiliki topologi indiskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-22">
+    <title>Topologi Diskret</title>
+    <statement>
+      <p>
+        Tentukan apakah sifat “<m>X</m> memiliki topologi diskret” merupakan
+        invarian topologis. Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-22-hint">
+      <p><em>Tahap 1.</em> Ambil sebarang <m>V\subseteq Y</m>.</p>
+      <p><em>Tahap 2.</em> Karena <m>X</m> diskret, <m>f^{-1}(V)</m> terbuka dalam <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan kekontinuan <m>f^{-1}</m>, atau fakta bahwa homeomorfisme merupakan pemetaan terbuka.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-22-answer">
+      <p>Ya. Topologi diskret merupakan invarian topologis.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-22-solution">
+      <p>
+        Misalkan <m>f:X\to Y</m> suatu homeomorfisme dan <m>X</m> diskret.
+        Untuk sebarang <m>V\subseteq Y</m>, prapeta <m>f^{-1}(V)</m> adalah
+        himpunan bagian dari <m>X</m>, sehingga terbuka. Karena fungsi invers
+        <m>f^{-1}:Y\to X</m> kontinu, prapeta himpunan terbuka
+        <m>f^{-1}(V)</m> di bawah <m>f^{-1}</m>, yaitu
+        <m>f(f^{-1}(V))=V</m>, terbuka dalam <m>Y</m>. Jadi setiap himpunan
+        bagian dari <m>Y</m> terbuka dan <m>Y</m> diskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-23">
+    <title>Topologi Komplemen Hingga</title>
+    <statement>
+      <p>
+        Tentukan apakah sifat “<m>X</m> memiliki topologi komplemen hingga”
+        merupakan invarian topologis. Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-23-hint">
+      <p><em>Tahap 1.</em> Ingat bahwa himpunan tak kosong terbuka tepat ketika komplemennya berhingga.</p>
+      <p><em>Tahap 2.</em> Bijeksi memadankan komplemen: <m>Y\setminus f(U)=f(X\setminus U)</m>.</p>
+      <p><em>Tahap 3.</em> Bijeksi mempertahankan keberhinggaan dan homeomorfisme memadankan himpunan terbuka.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-23-answer">
+      <p>Ya. Topologi komplemen hingga merupakan invarian topologis.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-23-solution">
+      <p>
+        Misalkan <m>f:X\to Y</m> suatu homeomorfisme dan <m>X</m> memiliki
+        topologi komplemen hingga. Untuk <m>V\subseteq Y</m>, himpunan
+        <m>V</m> terbuka dalam <m>Y</m> tepat ketika <m>f^{-1}(V)</m> terbuka
+        dalam <m>X</m>. Jika <m>V\ne\emptyset</m>, hal ini ekuivalen dengan
+        keberhinggaan <m>X\setminus f^{-1}(V)</m>. Bijektivitas memberi
+        <m>f(X\setminus f^{-1}(V))=Y\setminus V</m>, sehingga kondisi itu
+        ekuivalen dengan keberhinggaan <m>Y\setminus V</m>. Jadi himpunan
+        terbuka pada <m>Y</m> tepat merupakan <m>\emptyset</m> dan himpunan
+        dengan komplemen berhingga.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-24">
+    <title>Keanggotaan Bilangan Dua</title>
+    <statement>
+      <p>
+        Tentukan apakah sifat “himpunan dasar <m>X</m> memuat bilangan
+        <m>2</m>” merupakan invarian topologis. Berikan bukti atau contoh
+        penyangkal.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-24-hint">
+      <p><em>Tahap 1.</em> Topologi tidak bergantung pada nama elemen himpunan dasar.</p>
+      <p><em>Tahap 2.</em> Bandingkan dua ruang satu titik.</p>
+      <p><em>Tahap 3.</em> Gunakan satu-satunya bijeksi antara <m>\{2\}</m> dan <m>\{3\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-24-answer">
+      <p>Tidak. Keanggotaan elemen bernama <m>2</m> bukan invarian topologis.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-24-solution">
+      <p>
+        Ambil <m>X=\{2\}</m> dan <m>Y=\{3\}</m>, masing-masing dengan topologi
+        satu-satunya <m>\{\emptyset,X\}</m> dan <m>\{\emptyset,Y\}</m>.
+        Fungsi <m>f:X\to Y</m> dengan <m>f(2)=3</m> adalah homeomorfisme,
+        sebab setiap fungsi antara dua ruang satu titik bersifat kontinu pada
+        kedua arah. Namun <m>2\in X</m> sedangkan <m>2\notin Y</m>. Jadi sifat
+        tersebut tidak dipertahankan oleh homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-25">
+    <title>Tepat Tiga Belas Elemen</title>
+    <statement>
+      <p>
+        Tentukan apakah sifat “<m>X</m> memuat tepat <m>13</m> elemen”
+        merupakan invarian topologis. Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-25-hint">
+      <p><em>Tahap 1.</em> Setiap homeomorfisme merupakan bijeksi.</p>
+      <p><em>Tahap 2.</em> Bijeksi mempertahankan kardinalitas.</p>
+      <p><em>Tahap 3.</em> Topologi khusus pada kedua ruang tidak diperlukan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-25-answer">
+      <p>Ya. Memiliki tepat <m>13</m> elemen merupakan invarian topologis.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-25-solution">
+      <p>
+        Jika <m>f:X\to Y</m> suatu homeomorfisme, maka <m>f</m> adalah bijeksi.
+        Apabila <m>X</m> memiliki tepat <m>13</m> elemen, pembatasan kodomain dan
+        injektivitas-surjektivitas <m>f</m> menunjukkan bahwa <m>Y</m> juga
+        memiliki tepat <m>13</m> elemen. Jadi sifat kardinalitas ini
+        dipertahankan oleh setiap homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+</section>

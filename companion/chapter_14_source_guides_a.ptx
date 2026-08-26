@@ -1,0 +1,392 @@
+<section xml:id="o003-c90-ch14-source-guides-a" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Pengantar Kekontinuan Topologis</title>
+
+  <p>
+    Sepuluh panduan ini mendampingi tugas-tugas awal tentang fungsi kontinu,
+    pemetaan terbuka, dan pemetaan tertutup. Kerjakan dahulu butir pada bab
+    utama, lalu gunakan petunjuk, jawaban, dan solusi secara bertahap. Materi
+    ini ditulis secara terpisah sebagai konten pendamping CC BY 4.0.
+  </p>
+
+  <exercise xml:id="o003-c90-ch14-guide-01">
+    <title>Kekontinuan di Titik 4</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>(X,\tau_X)=(\{1,2,3,4\},
+        \{\emptyset,\{1\},\{2\},\{1,2\},X\})</m> dan
+        <m>(Y,\tau_Y)=(\{2,4,6,8\},
+        \{\emptyset,\{4\},\{6\},\{4,6\},Y\})</m>.
+        Definisikan <m>f:X\to Y</m> dengan <m>f(x)=2x</m>.
+        Apakah <m>f</m> kontinu di <m>4</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-01-hint">
+      <p><em>Tahap 1.</em> Hitung <m>f(4)</m>.</p>
+      <p><em>Tahap 2.</em> Daftarkan himpunan terbuka dalam <m>Y</m> yang memuat <m>f(4)</m>.</p>
+      <p><em>Tahap 3.</em> Ambil prapeta dari himpunan terbuka tersebut dan uji apakah hasilnya merupakan lingkungan bagi <m>4</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-01-answer">
+      <p>Ya. Fungsi <m>f</m> kontinu di <m>4</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-01-solution">
+      <p>
+        Kita mempunyai <m>f(4)=8</m>. Satu-satunya himpunan terbuka dalam
+        <m>Y</m> yang memuat <m>8</m> adalah <m>Y</m> sendiri. Karena setiap
+        lingkungan bagi <m>8</m> harus memuat suatu himpunan terbuka yang
+        memuat <m>8</m>, satu-satunya lingkungan bagi <m>8</m> juga
+        <m>Y</m>. Prapetanya adalah <m>f^{-1}(Y)=X</m>, dan <m>X</m>
+        merupakan lingkungan bagi <m>4</m>. Jadi syarat kekontinuan di
+        <m>4</m> terpenuhi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-02">
+    <title>Menguji Kekontinuan pada Seluruh Ruang</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>(X,\tau_X)=(\{1,2,3,4\},
+        \{\emptyset,\{1\},\{2\},\{1,2\},X\})</m> dan
+        <m>(Y,\tau_Y)=(\{2,4,6,8\},
+        \{\emptyset,\{4\},\{6\},\{4,6\},Y\})</m>.
+        Untuk <m>f:X\to Y</m> yang diberikan oleh <m>f(x)=2x</m>,
+        tentukan apakah <m>f</m> merupakan fungsi kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-02-hint">
+      <p><em>Tahap 1.</em> Gunakan pencirian melalui prapeta setiap himpunan terbuka dalam kodomain.</p>
+      <p><em>Tahap 2.</em> Pilih himpunan terbuka <m>\{6\}</m> dalam <m>Y</m>.</p>
+      <p><em>Tahap 3.</em> Hitung <m>f^{-1}(\{6\})</m> dan bandingkan dengan daftar anggota <m>\tau_X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-02-answer">
+      <p>
+        Tidak. Himpunan <m>\{6\}</m> terbuka dalam <m>Y</m>, tetapi
+        <m>f^{-1}(\{6\})=\{3\}</m> tidak terbuka dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-02-solution">
+      <p>
+        Pencirian kekontinuan mensyaratkan agar prapeta setiap himpunan
+        terbuka dalam <m>Y</m> terbuka dalam <m>X</m>. Karena <m>f(3)=6</m>
+        dan tidak ada titik lain yang dipetakan ke <m>6</m>, berlaku
+        <m>f^{-1}(\{6\})=\{3\}</m>. Himpunan <m>\{3\}</m> tidak tercantum
+        dalam <m>\tau_X</m>. Satu kegagalan ini sudah membuktikan bahwa
+        <m>f</m> tidak kontinu, meskipun fungsi tersebut kontinu di titik
+        <m>4</m> seperti pada panduan sebelumnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-03">
+    <title>Membuktikan Kekontinuan pada Ruang Berhingga</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>(X,\tau_X)=(\{1,2,3,4\},
+        \{\emptyset,\{1\},\{2\},\{1,2\},\{3,4\},X\})</m> dan
+        <m>(Y,\tau_Y)=(\{a,b,c\},
+        \{\emptyset,\{a\},\{a,c\},Y\})</m>.
+        Definisikan <m>f:X\to Y</m> melalui
+        <m>f(1)=a</m>, <m>f(2)=c</m>, dan <m>f(3)=f(4)=b</m>.
+        Tunjukkan bahwa <m>f</m> kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-03-hint">
+      <p><em>Tahap 1.</em> Karena <m>Y</m> berhingga, periksa keempat anggota <m>\tau_Y</m> satu per satu.</p>
+      <p><em>Tahap 2.</em> Hitung khususnya <m>f^{-1}(\{a\})</m> dan <m>f^{-1}(\{a,c\})</m>.</p>
+      <p><em>Tahap 3.</em> Pastikan seluruh prapeta yang diperoleh merupakan anggota <m>\tau_X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-03-answer">
+      <p>
+        Fungsi <m>f</m> kontinu karena prapeta
+        <m>\emptyset,\{a\},\{a,c\},Y</m> berturut-turut adalah
+        <m>\emptyset,\{1\},\{1,2\},X</m>, semuanya terbuka dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-03-solution">
+      <p>
+        Himpunan terbuka dalam kodomain tepat
+        <m>\emptyset</m>, <m>\{a\}</m>, <m>\{a,c\}</m>, dan <m>Y</m>.
+        Dari nilai-nilai fungsi diperoleh
+        <m>f^{-1}(\emptyset)=\emptyset</m>,
+        <m>f^{-1}(\{a\})=\{1\}</m>,
+        <m>f^{-1}(\{a,c\})=\{1,2\}</m>, dan
+        <m>f^{-1}(Y)=X</m>. Keempat hasil tersebut berada dalam
+        <m>\tau_X</m>. Oleh karena itu, pencirian melalui prapeta himpunan
+        terbuka menunjukkan bahwa <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-04">
+    <title>Fungsi Kontinu yang Bukan Pemetaan Terbuka</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>(X,\tau_X)=(\{1,2,3,4\},
+        \{\emptyset,\{1\},\{2\},\{1,2\},\{3,4\},X\})</m> dan
+        <m>(Y,\tau_Y)=(\{a,b,c\},
+        \{\emptyset,\{a\},\{a,c\},Y\})</m>.
+        Untuk fungsi kontinu <m>f:X\to Y</m> dengan
+        <m>f(1)=a</m>, <m>f(2)=c</m>, dan <m>f(3)=f(4)=b</m>,
+        temukan suatu himpunan terbuka <m>O</m> dalam <m>X</m> yang citranya
+        <m>f(O)</m> tidak terbuka dalam <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-04-hint">
+      <p><em>Tahap 1.</em> Pilih salah satu himpunan beranggota tunggal yang terbuka dalam <m>X</m>.</p>
+      <p><em>Tahap 2.</em> Hitung citra <m>f(\{2\})</m>.</p>
+      <p><em>Tahap 3.</em> Bandingkan citra itu dengan daftar anggota <m>\tau_Y</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-04-answer">
+      <p>
+        Ambil <m>O=\{2\}</m>. Himpunan ini terbuka dalam <m>X</m>, sedangkan
+        <m>f(O)=\{c\}</m> tidak terbuka dalam <m>Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-04-solution">
+      <p>
+        Karena <m>\{2\}\in\tau_X</m>, himpunan <m>O=\{2\}</m> terbuka.
+        Nilai <m>f(2)=c</m> memberi <m>f(O)=\{c\}</m>. Akan tetapi,
+        <m>\{c\}</m> bukan salah satu dari
+        <m>\emptyset,\{a\},\{a,c\},Y</m>, sehingga tidak terbuka dalam
+        <m>Y</m>. Contoh ini juga memperlihatkan bahwa kekontinuan mengatur
+        prapeta himpunan terbuka, bukan menjamin citra himpunan terbuka selalu
+        terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-05">
+    <title>Merumuskan Pemetaan Tertutup</title>
+    <statement>
+      <p>
+        Suatu fungsi <m>f:X\to Y</m> disebut <term>pemetaan terbuka</term>
+        jika <m>f(O)</m> terbuka dalam <m>Y</m> setiap kali <m>O</m> terbuka
+        dalam <m>X</m>. Tuliskan definisi yang serupa bagi
+        <term>pemetaan tertutup</term>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-05-hint">
+      <p><em>Tahap 1.</em> Ganti jenis himpunan yang diuji dalam domain.</p>
+      <p><em>Tahap 2.</em> Ganti pula sifat yang harus dimiliki citranya dalam kodomain.</p>
+      <p><em>Tahap 3.</em> Tetap gunakan citra <m>f(C)</m>, bukan prapeta <m>f^{-1}(C)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-05-answer">
+      <p>
+        Fungsi <m>f:X\to Y</m> merupakan pemetaan tertutup jika
+        <m>f(C)</m> tertutup dalam <m>Y</m> untuk setiap himpunan tertutup
+        <m>C</m> dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-05-solution">
+      <p>
+        Definisi analog diperoleh dengan mengganti kata “terbuka” oleh
+        “tertutup” pada domain dan kodomain: untuk setiap <m>C\subseteq X</m>,
+        jika <m>C</m> tertutup dalam <m>X</m>, maka <m>f(C)</m> harus tertutup
+        dalam <m>Y</m>. Penggunaan citra langsung <m>f(C)</m> penting;
+        persyaratan mengenai prapeta himpunan tertutup merupakan pencirian
+        kekontinuan, bukan definisi pemetaan tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-06">
+    <title>Menentukan Titik-Titik Kekontinuan</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{1,2,3,4,5\}</m> dan
+        <m>\tau=\{\emptyset,\{1\},\{3,5\},\{1,3,5\},X\}</m>.
+        Definisikan <m>f:X\to X</m> dengan
+        <m>f(x)=\la x-3\ra+1</m>. Di titik mana saja <m>f</m> kontinu?
+        Apakah <m>f</m> merupakan fungsi kontinu?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-06-hint">
+      <p><em>Tahap 1.</em> Buat daftar nilai <m>f(1),f(2),f(3),f(4),f(5)</m>.</p>
+      <p><em>Tahap 2.</em> Untuk setiap titik <m>x</m>, periksa prapeta himpunan-himpunan terbuka yang memuat <m>f(x)</m>.</p>
+      <p><em>Tahap 3.</em> Perhatikan <m>f^{-1}(\{1\})</m> saat menguji titik <m>3</m> dan <m>f^{-1}(\{3,5\})</m> saat menguji titik <m>5</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-06-answer">
+      <p>
+        Fungsi <m>f</m> kontinu tepat di titik <m>1</m>, <m>2</m>, dan
+        <m>4</m>. Fungsi tersebut tidak kontinu pada seluruh <m>X</m> karena
+        gagal kontinu di <m>3</m> dan <m>5</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-06-solution">
+      <p>
+        Nilai fungsi berturut-turut adalah
+        <m>f(1)=3</m>, <m>f(2)=2</m>, <m>f(3)=1</m>,
+        <m>f(4)=2</m>, dan <m>f(5)=3</m>. Untuk memeriksa kekontinuan di
+        suatu titik, cukup memeriksa prapeta setiap himpunan terbuka yang
+        memuat nilai fungsi di titik itu.
+      </p>
+      <p>
+        Di <m>1</m>, himpunan terbuka tak trivial yang memuat
+        <m>f(1)=3</m> adalah <m>\{3,5\}</m> dan <m>\{1,3,5\}</m>.
+        Prapetanya masing-masing <m>\{1,5\}</m> dan
+        <m>\{1,3,5\}</m>. Himpunan pertama merupakan lingkungan bagi
+        <m>1</m> karena memuat himpunan terbuka <m>\{1\}</m>, sedangkan
+        himpunan kedua terbuka. Jadi <m>f</m> kontinu di <m>1</m>.
+        Satu-satunya himpunan terbuka yang memuat <m>2</m> adalah <m>X</m>;
+        karena <m>f(2)=f(4)=2</m> dan <m>f^{-1}(X)=X</m>, fungsi kontinu di
+        <m>2</m> dan <m>4</m>.
+      </p>
+      <p>
+        Di <m>3</m>, himpunan terbuka <m>\{1\}</m> memuat
+        <m>f(3)=1</m>, tetapi <m>f^{-1}(\{1\})=\{3\}</m> bukan lingkungan
+        bagi <m>3</m>. Di <m>5</m>, himpunan terbuka <m>\{3,5\}</m> memuat
+        <m>f(5)=3</m>, tetapi <m>f^{-1}(\{3,5\})=\{1,5\}</m> bukan
+        lingkungan bagi <m>5</m>. Maka titik-titik kekontinuan tepat
+        <m>\{1,2,4\}</m>, sehingga <m>f</m> bukan fungsi kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-07">
+    <title>Identitas dari Topologi Komplemen Berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(\Z,\tau_{FC})\to(\Z,d_E)</m> diberikan oleh
+        <m>f(n)=n</m>, dengan <m>\tau_{FC}</m> topologi komplemen berhingga.
+        Apakah <m>f</m> kontinu? Jika tidak, berikan satu titik tertentu
+        tempat <m>f</m> tidak kontinu dan jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-07-hint">
+      <p><em>Tahap 1.</em> Pada <m>\Z</m> dengan metrik Euklides, setiap himpunan beranggota tunggal terbuka.</p>
+      <p><em>Tahap 2.</em> Uji lingkungan <m>\{0\}</m> dari <m>f(0)=0</m>.</p>
+      <p><em>Tahap 3.</em> Tentukan apakah <m>f^{-1}(\{0\})=\{0\}</m> merupakan lingkungan bagi <m>0</m> dalam topologi komplemen berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-07-answer">
+      <p>
+        Fungsi <m>f</m> tidak kontinu di <m>0</m>; bahkan, fungsi ini tidak
+        kontinu di titik mana pun dalam <m>\Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-07-solution">
+      <p>
+        Dalam <m>(\Z,d_E)</m>, bola berjari-jari <m>1/2</m> di sekitar
+        <m>0</m> adalah <m>\{0\}</m>, sehingga <m>\{0\}</m> merupakan
+        lingkungan terbuka bagi <m>f(0)=0</m>. Prapetanya adalah
+        <m>f^{-1}(\{0\})=\{0\}</m>. Himpunan ini bukan lingkungan bagi
+        <m>0</m> dalam <m>\tau_{FC}</m>: setiap himpunan terbuka tak kosong
+        dalam topologi tersebut mempunyai komplemen berhingga dan karena itu
+        tidak dapat termuat dalam <m>\{0\}</m>. Jadi <m>f</m> tidak kontinu
+        di <m>0</m>. Argumen yang sama dengan <m>\{n\}</m> berlaku untuk
+        setiap <m>n\in\Z</m>, sehingga tidak ada titik kekontinuan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-08">
+    <title>Identitas Menuju Topologi Komplemen Berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(\Z,d_E)\to(\Z,\tau_{FC})</m> diberikan oleh
+        <m>f(n)=n</m>, dengan <m>\tau_{FC}</m> topologi komplemen berhingga.
+        Apakah <m>f</m> kontinu? Jika tidak, berikan satu titik tertentu
+        tempat <m>f</m> tidak kontinu dan jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-08-hint">
+      <p><em>Tahap 1.</em> Topologi yang diinduksi oleh <m>d_E</m> pada <m>\Z</m> adalah topologi diskret.</p>
+      <p><em>Tahap 2.</em> Untuk setiap <m>O\in\tau_{FC}</m>, gunakan sifat fungsi identitas untuk menghitung <m>f^{-1}(O)</m>.</p>
+      <p><em>Tahap 3.</em> Tanyakan apakah subhimpunan hasil prapeta selalu terbuka dalam domain diskret.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-08-answer">
+      <p>Ya. Fungsi identitas <m>f:(\Z,d_E)\to(\Z,\tau_{FC})</m> kontinu.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-08-solution">
+      <p>
+        Setiap himpunan beranggota tunggal <m>\{n\}</m> terbuka dalam
+        <m>(\Z,d_E)</m>, misalnya sebagai bola berjari-jari <m>1/2</m>.
+        Karena setiap subhimpunan <m>\Z</m> merupakan gabungan himpunan
+        beranggota tunggal, topologi domain bersifat diskret. Sekarang ambil
+        sembarang <m>O\in\tau_{FC}</m>. Karena <m>f</m> fungsi identitas,
+        <m>f^{-1}(O)=O</m>, dan subhimpunan ini terbuka dalam domain diskret.
+        Jadi prapeta setiap himpunan terbuka dalam kodomain terbuka dalam
+        domain, sehingga <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-09">
+    <title>Menguji Kekontinuan dengan Basis</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,\tau_X)\to(Y,\tau_Y)</m> dan misalkan
+        <m>\B</m> suatu basis bagi topologi pada <m>Y</m>. Apakah syarat bahwa
+        <m>f^{-1}(B)</m> terbuka dalam <m>X</m> untuk setiap <m>B\in\B</m>
+        cukup untuk menyimpulkan bahwa <m>f</m> kontinu? Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-09-hint">
+      <p><em>Tahap 1.</em> Ambil sembarang himpunan terbuka <m>O</m> dalam <m>Y</m>.</p>
+      <p><em>Tahap 2.</em> Nyatakan <m>O</m> sebagai gabungan anggota-anggota basis yang termuat di dalamnya.</p>
+      <p><em>Tahap 3.</em> Gunakan fakta bahwa prapeta mempertahankan gabungan dan bahwa gabungan himpunan terbuka tetap terbuka.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-09-answer">
+      <p>
+        Ya. Setiap himpunan terbuka merupakan gabungan anggota basis, sehingga
+        prapetanya merupakan gabungan prapeta anggota basis yang terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-09-solution">
+      <p>
+        Ambil sembarang <m>O\in\tau_Y</m>. Sifat basis memberi
+        <m>O=\bigcup_{\alpha\in A}B_\alpha</m> untuk suatu keluarga
+        <m>B_\alpha\in\B</m> dengan <m>B_\alpha\subseteq O</m>. Prapeta
+        mempertahankan gabungan, jadi
+        <me>
+          f^{-1}(O)=f^{-1}\left(\bigcup_{\alpha\in A}B_\alpha\right)
+          =\bigcup_{\alpha\in A}f^{-1}(B_\alpha).
+        </me>
+        Menurut asumsi, setiap <m>f^{-1}(B_\alpha)</m> terbuka dalam
+        <m>X</m>; gabungannya juga terbuka. Dengan demikian prapeta setiap
+        himpunan terbuka dalam <m>Y</m> terbuka dalam <m>X</m>, sehingga
+        pencirian kekontinuan menyatakan bahwa <m>f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch14-guide-10">
+    <title>Sasaran Pembuktian Kekontinuan</title>
+    <statement>
+      <p>
+        Misalkan <m>f:(X,\tau_X)\to(Y,\tau_Y)</m> dan asumsikan bahwa
+        <m>f^{-1}(O)</m> terbuka dalam <m>X</m> setiap kali <m>O</m> terbuka
+        dalam <m>Y</m>. Menurut definisi, apa yang perlu ditunjukkan untuk
+        membuktikan bahwa <m>f</m> merupakan fungsi kontinu?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch14-guide-10-hint">
+      <p><em>Tahap 1.</em> Ingat bahwa kekontinuan fungsi berarti kekontinuan di setiap titik domain.</p>
+      <p><em>Tahap 2.</em> Pilih sembarang <m>a\in X</m> dan sembarang lingkungan <m>N</m> bagi <m>f(a)</m>.</p>
+      <p><em>Tahap 3.</em> Nyatakan sifat lingkungan yang harus dipenuhi oleh <m>f^{-1}(N)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch14-guide-10-answer">
+      <p>
+        Perlu ditunjukkan bahwa untuk setiap <m>a\in X</m> dan setiap
+        lingkungan <m>N</m> bagi <m>f(a)</m> dalam <m>Y</m>, himpunan
+        <m>f^{-1}(N)</m> merupakan lingkungan bagi <m>a</m> dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch14-guide-10-solution">
+      <p>
+        Definisi menyatakan bahwa <m>f</m> kontinu di <m>a</m> tepat ketika
+        prapeta setiap lingkungan bagi <m>f(a)</m> merupakan lingkungan bagi
+        <m>a</m>. Karena yang hendak dibuktikan adalah kekontinuan fungsi pada
+        seluruh domain, ambil <m>a\in X</m> secara sembarang, lalu ambil
+        sembarang lingkungan <m>N</m> bagi <m>f(a)</m>. Sasaran pembuktiannya
+        adalah menunjukkan bahwa <m>f^{-1}(N)</m> merupakan lingkungan bagi
+        <m>a</m>. Jika sasaran ini tercapai untuk pilihan sembarang tersebut,
+        <m>f</m> kontinu di setiap titik dan karena itu merupakan fungsi
+        kontinu.
+      </p>
+    </solution>
+  </exercise>
+</section>
