@@ -32,7 +32,7 @@ atomic tasks, six term surfaces, two index entries, and zero xrefs.
 ## Fail-closed source and schema QA
 
 `qa/CHAPTER14_SOURCE_THROUGH_RELATIONS_QA.json` is 5,110 bytes / SHA-256
-`5763104b22af86f8e6ae33bb5d9e07f89f862459a54cc73b2bc835427badff82`;
+`b097d6db49f9f3f977f306e906550115dad4efd537b8ff32112a3102a7885c31`;
 status `pass`, zero failures. Across the five translated files it compares
 531 elements, 295 protected math nodes, 13 XML IDs, 12 xrefs, 22 task nodes,
 and five activity/exploration containers. Their framed combined translated
@@ -47,7 +47,7 @@ cumulative source. A bounded reader-visible English-residue scan found no
 English prose; narrow `git diff --check` passes.
 
 `qa/CHAPTER14_CUMULATIVE_SCHEMA_THROUGH_RELATIONS_QA.json` is 2,193 bytes /
-SHA-256 `f5bb3774feba895ad74d2d91540b444592265388c47f1cc9fa7bad9161aea363`.
+SHA-256 `3c254fd48bbdb17719f38b6171e7047af4a2fa48b63dfa8a77de77c287ffcf94`.
 The in-memory cumulative Chapters 1-14 tree has 37,709 expanded elements and
 validates with zero diagnostics under Python 3.12.13, PreTeXt 1.7.5, lxml
 4.9.4, schema SHA-256
