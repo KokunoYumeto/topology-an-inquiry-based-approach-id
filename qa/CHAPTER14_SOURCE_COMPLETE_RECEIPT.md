@@ -26,7 +26,7 @@ attribution boundary changed.
 | `source/sec_relations.ptx` | 3,225 / `f9cd8ea92cae729689c75f48a3af4af3367f4721da519980ab85aa253064f1a8` | 3,791 / `76c082e1ec59a289178b1b72074fc8aeae35bf07569fad972acdb52fdd378ae3` |
 | `source/sec_top_invar.ptx` | 1,864 / `0f4cfb2cce3d0440c1beaa4baab5c8e1e53f8800889f49795afb9ac48a600587` | 1,875 / `8c7ed840c32b92735995b0874e53f306ebb5cec691b608fa44464e924f447e92` |
 | `source/sec_cont_top_summ.ptx` | 2,064 / `c2b097654aa77dbbcfa4925c220d97b935a515e7faf3cff255d0f372bb316b72` | 2,140 / `8e01cce0f31344b84c7504b540a9c5fe3879b4c3213704aa48975529743fc95a` |
-| `source/sec_cont_top_exer.ptx` | 16,970 / `37e57d20d49b097c2aaea3475b4c54328d40dadc876de7aff86d0aff51928fef` | 17,631 / `ecf66963c297000370bc59840e5a4df86d315064cf368a3211086a9fa08e9af` |
+| `source/sec_cont_top_exer.ptx` | 16,970 / `37e57d20d49b097c2aaea3475b4c54328d40dadc876de7aff86d0aff51928fef` | 17,631 / `8e8b5b734873f026aa890fb8befcfece57b8a67a09fb5293214514494c588493` |
 
 The closure preserves 19 XML IDs, 17 xrefs, 13 exercises, 80 task nodes and
 the authority's 81 learner-response units (including one direct prompt carrier).
@@ -36,16 +36,16 @@ asset or interactive surface occurs in the final exercise file.
 ## Fail-closed QA
 
 `qa/CHAPTER14_SOURCE_COMPLETE_QA.json` is 6,902 bytes / SHA-256
-`0f98393d44e530a511b1010ee0b5b4b0e5d5d1ec4087cc20a2399fac53b116d4`, status
+`120509adb21630235263555dc35019a88e9629e5ec8df3722c176b4670a8c4d4`, status
 `pass`, zero failures. The eight-file comparator passes 1,028 elements, 534
 protected math nodes, 19 IDs, 17 xrefs, 80 task nodes, 13 exercises, and six
 activity/exploration containers. The framed combined translated SHA-256 is
-`806d67e9a0b24ca5ba1b2c1a96417c46d43d488649909b27a5eacd3de4328e4b`.
+`bc2c94ae8d6cd579e9babdce2aaf3694268093cd1d3f0a57fc8c635f190029df`.
 All six intentionally external xrefs are explicitly allowed and resolve in the
 frozen cumulative source.
 
 `qa/CHAPTER14_CUMULATIVE_SCHEMA_COMPLETE_QA.json` is 2,193 bytes / SHA-256
-`067fb8a1b7d7f30905d146fe4682bd9f8e9075bb3c5c51ecc84b759355e6e5fc`, with
+`2e7e57e35fe488c8d8d2e2c48857258566391025a68f951291af42243fe0cadf`, with
 zero diagnostics. The cumulative Chapters 1-14 tree has 37,709 expanded
 elements and validates under Python 3.12.13, PreTeXt 1.7.5, lxml 4.9.4,
 schema SHA-256 `fb9632a81f16d94068e463df4efcaf0c7ffa9e20555abde9aea2f1dc52888ca0`,
@@ -61,11 +61,12 @@ dikecualikan*, *topologi diskret*, and *topologi komplemen hingga*. The complete
 terminology ledger is 20,054 bytes / SHA-256
 `51fa85741a48f48bc869b5b5e9ab66933155787619ac6c32872b9a6fda70498e`.
 
-Repairs O003-C175 through O003-C180 correct six unambiguous English grammar
-slips (three in the summary and three in the exercise prose) without changing
-any protected mathematics, IDs, xrefs, topology lists, or exercise intent. The
-complete correction ledger is 71,588 bytes / SHA-256
-`1a320ff3a40cade74ac9f44991884d246f843c30b09eb9d50110e5637892d945`.
+Repairs O003-C175 through O003-C181 correct six unambiguous English grammar
+slips (three in the summary and three in the exercise prose) and normalize the
+established `Euklides` spelling without changing any protected mathematics,
+IDs, xrefs, topology lists, or exercise intent. The complete correction ledger
+is 72,006 bytes / SHA-256
+`a7b535992326f5651f91f5a73630b88f6a09e2733e4e5adc82afe593f48fe23a`.
 
 ## Next gate
 
