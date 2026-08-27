@@ -1,0 +1,197 @@
+<section xml:id="o003-c90-ch15-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan Bab 15, bagian kedua</title>
+  <p>
+    Bagian ini menutup empat prompt latihan terakhir dalam urutan sumber.
+    Setiap pernyataan yang salah disertai contoh tandingan konkret. Materi
+    pendamping ini ditulis secara terpisah, dilisensikan dengan CC BY 4.0,
+    bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch15-exer-b-01">
+    <title>Subruang diskret di dalam ruang tak diskret</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>X</m> adalah ruang topologi yang
+        tidak memiliki topologi diskret, maka tidak ada subruang dari
+        <m>X</m> yang memiliki topologi diskret. Jika salah, berikan contoh
+        tandingan konkret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-b-01-hint">
+      <p>
+        Setiap ruang bertitik tunggal memiliki topologi diskret. Tempatkan
+        satu titik seperti itu sebagai subruang dari ruang sederhana yang
+        topologinya indiskret dan memiliki dua titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-b-01-answer">
+      <p>
+        Salah. Ruang dua titik indiskret tidak diskret, tetapi setiap
+        subruang bertitik tunggalnya diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-b-01-solution">
+      <p>
+        Ambil <m>X=\{0,1\}</m> dengan topologi indiskret
+        <m>\tau=\{\emptyset,X\}</m>. Topologi ini bukan topologi diskret,
+        sebab, misalnya, <m>\{0\}</m> tidak terbuka dalam <m>X</m>.
+        Sekarang ambil subruang <m>A=\{0\}</m>. Topologi subruang pada
+        <m>A</m> adalah
+        <me>
+          \{A\cap U\mid U\in\tau\}=\{\emptyset,A\},
+        </me>
+        yang merupakan topologi diskret pada himpunan bertitik tunggal
+        <m>A</m>. Jadi ruang tak diskret dapat memiliki subruang diskret, dan
+        pernyataan sumber salah.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-b-02">
+    <title>Citra kontinu dari ruang Hausdorff</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>f:X\to Y</m> fungsi kontinu,
+        <m>X</m> ruang Hausdorff, dan <m>f(X)</m> diberi topologi subruang
+        dari <m>Y</m>, maka <m>f(X)</m> harus Hausdorff. Jika salah, berikan
+        contoh tandingan konkret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-b-02-hint">
+      <p>
+        Ambil himpunan dua titik. Beri domain topologi diskret dan kodomain
+        topologi indiskret, lalu gunakan fungsi identitas pada himpunan yang
+        mendasarinya.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-b-02-answer">
+      <p>
+        Salah. Fungsi identitas dari ruang dua titik diskret ke ruang dua
+        titik indiskret kontinu dan surjektif, tetapi citranya tidak Hausdorff.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-b-02-solution">
+      <p>
+        Ambil himpunan <m>S=\{0,1\}</m>. Jadikan
+        <m>X=(S,\mathcal{P}(S))</m> ruang diskret dan
+        <m>Y=(S,\{\emptyset,S\})</m> ruang indiskret. Ruang <m>X</m>
+        Hausdorff karena singleton <m>\{0\}</m> dan <m>\{1\}</m> merupakan
+        lingkungan terbuka saling lepas bagi kedua titiknya. Definisikan
+        <m>f:X\to Y</m> dengan <m>f(s)=s</m>.
+      </p>
+      <p>
+        Satu-satunya himpunan terbuka dalam <m>Y</m> adalah
+        <m>\emptyset</m> dan <m>S</m>, dan prapetanya masing-masing adalah
+        <m>\emptyset</m> dan <m>X</m>. Jadi <m>f</m> kontinu. Fungsi ini
+        surjektif, sehingga <m>f(X)=Y</m>. Namun <m>Y</m> tidak Hausdorff:
+        satu-satunya himpunan terbuka tak kosong adalah seluruh <m>Y</m>,
+        sehingga titik <m>0</m> dan <m>1</m> tidak mempunyai lingkungan
+        terbuka saling lepas. Jadi kekontinuan saja tidak mempertahankan sifat
+        Hausdorff pada citra.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-b-03">
+    <title>Tutupan irisan dengan subruang</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>A</m> subruang dari ruang topologi
+        <m>X</m> dan <m>B\subseteq X</m>, maka
+        <me>
+          \operatorname{cl}_A(B\cap A)=\operatorname{cl}_X(B)\cap A,
+        </me>
+        dengan ruas kiri tutupan dalam <m>A</m> dan
+        <m>\operatorname{cl}_X(B)</m> tutupan dalam <m>X</m>. Jika salah, berikan
+        contoh tandingan konkret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-b-03-hint">
+      <p>
+        Carilah himpunan <m>B</m> di <m>\R</m> yang tidak bertemu
+        <m>A=\{0\}</m>, tetapi mempunyai <m>0</m> sebagai titik limit.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-b-03-answer">
+      <p>
+        Salah. Dalam <m>X=\R</m>, ambil <m>A=\{0\}</m> dan
+        <m>B=\{1/n\mid n=1,2,\ldots\}</m>. Ruas kiri kosong, sedangkan ruas
+        kanan adalah <m>\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-b-03-solution">
+      <p>
+        Beri <m>X=\R</m> topologi standar, dan tetapkan
+        <m>A=\{0\}</m> serta
+        <m>B=\{1/n\mid n=1,2,\ldots\}</m>. Karena <m>0\notin B</m>, berlaku
+        <m>B\cap A=\emptyset</m>. Tutupan himpunan kosong dalam subruang
+        <m>A</m> tetap kosong, sehingga
+        <me>
+          \operatorname{cl}_A(B\cap A)=\emptyset.
+        </me>
+      </p>
+      <p>
+        Di sisi lain, barisan <m>1/n</m> konvergen ke <m>0</m>, sehingga
+        <m>0\in\operatorname{cl}_{\R}(B)</m>. Bahkan
+        <m>\operatorname{cl}_{\R}(B)=B\cup\{0\}</m>, dan akibatnya
+        <me>
+          \operatorname{cl}_{\R}(B)\cap A=\{0\}.
+        </me>
+        Kedua ruas berbeda. Kegagalan terjadi karena titik-titik <m>B</m>
+        yang berada di luar <m>A</m> masih dapat berakumulasi pada titik dalam
+        <m>A</m>. Secara umum hanya inklusi
+        <m>\operatorname{cl}_A(B\cap A)\subseteq
+        \operatorname{cl}_X(B)\cap A</m> yang selalu berlaku.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-b-04">
+    <title>Interior irisan dengan subruang</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>A</m> subruang dari ruang topologi
+        <m>X</m> dan <m>C\subseteq X</m>, maka
+        <me>
+          \operatorname{Int}_A(C\cap A)=\operatorname{Int}_X(C)\cap A.
+        </me>
+        Jika salah, berikan contoh tandingan konkret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-b-04-hint">
+      <p>
+        Dalam <m>\R</m>, subruang bertitik tunggal terbuka di dalam dirinya
+        sendiri, meskipun singleton itu tidak mempunyai interior dalam
+        <m>\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-b-04-answer">
+      <p>
+        Salah. Untuk <m>X=\R</m> serta <m>A=C=\{0\}</m>, ruas kiri adalah
+        <m>\{0\}</m>, sedangkan ruas kanan kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-b-04-solution">
+      <p>
+        Beri <m>X=\R</m> topologi standar dan ambil
+        <m>A=C=\{0\}</m>. Karena <m>C\cap A=A</m> dan seluruh ruang selalu
+        terbuka dalam dirinya sendiri, interior <m>C\cap A</m> di dalam
+        subruang <m>A</m> adalah
+        <me>
+          \operatorname{Int}_A(C\cap A)=\operatorname{Int}_A(A)=A=\{0\}.
+        </me>
+        Namun singleton <m>\{0\}</m> tidak memuat interval terbuka apa pun
+        dalam <m>\R</m>, sehingga
+        <m>\operatorname{Int}_{\R}(C)=\emptyset</m>. Maka
+        <me>
+          \operatorname{Int}_{\R}(C)\cap A=\emptyset,
+        </me>
+        yang tidak sama dengan ruas kiri. Secara umum, inklusi yang selalu
+        benar justru
+        <m>\operatorname{Int}_X(C)\cap A\subseteq
+        \operatorname{Int}_A(C\cap A)</m>; keterbukaan relatif dapat membuat
+        ruas kanan pada inklusi ini lebih besar.
+      </p>
+    </solution>
+  </exercise>
+</section>

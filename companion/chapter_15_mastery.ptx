@@ -1,0 +1,451 @@
+<section xml:id="o003-c90-ch15-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan penguasaan Bab 15</title>
+
+  <p>
+    Delapan pemeriksaan berikut memadukan topologi subruang, keterbukaan dan
+    ketertutupan relatif, subruang bertingkat, basis, kekontinuan, tutupan,
+    homeomorfisme interval terbuka, serta sifat separasi dalam persoalan baru.
+    Materi ini ditulis mandiri dalam bahasa Indonesia untuk komponen
+    pendamping berlisensi CC BY 4.0; materi ini bukan teks, terjemahan, atau
+    solusi resmi GVSU. Kerjakan setiap soal sebelum membuka petunjuk.
+  </p>
+
+  <exercise xml:id="o003-c90-ch15-mastery-01">
+    <title>Topologi sebagai prapeta inklusi</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-01-statement">
+        Misalkan <m>(X,\tau)</m> ruang topologi, <m>A\subseteq X</m>, dan
+        <m>i:A\to X</m> fungsi inklusi. Definisikan
+        <me>
+          \tau_A=\{i^{-1}(O)\mid O\in\tau\}.
+        </me>
+        Buktikan langsung dari sifat prapeta bahwa <m>\tau_A</m> merupakan
+        topologi pada <m>A</m> dan bahwa
+        <m>\tau_A=\{O\cap A\mid O\in\tau\}</m>. Jelaskan pula apa yang terjadi
+        jika <m>A=\emptyset</m>, meskipun teks sumber memakai konvensi subruang
+        tak kosong.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-01-hint">
+      <p><em>Tahap 1.</em> Hitung prapeta <m>\emptyset</m> dan <m>X</m> di bawah <m>i</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan bahwa prapeta mempertahankan gabungan sebarang dan irisan berhingga.</p>
+      <p><em>Tahap 3.</em> Tuliskan <m>i^{-1}(O)</m> sebagai himpunan titik <m>A</m> yang juga berada dalam <m>O</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-01-answer">
+      <p>
+        Prapeta inklusi memenuhi <m>i^{-1}(O)=O\cap A</m>. Sifat-sifat umum
+        prapeta memberikan ketiga aksioma topologi. Untuk <m>A=\emptyset</m>,
+        keluarga yang diperoleh adalah <m>\{\emptyset\}</m>, yaitu topologi
+        tunggal pada himpunan kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-01-solution">
+      <p>
+        Karena <m>i(a)=a</m>, untuk setiap <m>O\subseteq X</m> berlaku
+        <m>i^{-1}(O)=\{a\in A\mid a\in O\}=O\cap A</m>. Selanjutnya,
+        <m>i^{-1}(\emptyset)=\emptyset</m> dan <m>i^{-1}(X)=A</m>, sehingga
+        <m>\emptyset,A\in\tau_A</m>. Untuk keluarga sebarang
+        <m>\{O_j\}_{j\in J}\subseteq\tau</m>,
+        <me>
+          \bigcup_{j\in J}i^{-1}(O_j)
+          =i^{-1}\!\left(\bigcup_{j\in J}O_j\right)\in\tau_A.
+        </me>
+        Untuk <m>O_1,O_2\in\tau</m>,
+        <me>
+          i^{-1}(O_1)\cap i^{-1}(O_2)=i^{-1}(O_1\cap O_2)\in\tau_A.
+        </me>
+        Jadi <m>\tau_A</m> adalah topologi dan rumus prapeta di atas
+        menunjukkan bahwa ia tepat merupakan topologi subruang. Jika
+        <m>A=\emptyset</m>, setiap irisan <m>O\cap A</m> sama dengan
+        <m>\emptyset</m>; jadi <m>\tau_A=\{\emptyset\}</m>. Fakta ini sah
+        secara matematis, tetapi edisi ini tetap menandai bahwa definisi sumber
+        membatasi istilah <term>subruang</term> pada subhimpunan tak kosong.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-mastery-02">
+    <title>Relatif terbuka, relatif tertutup, dan buka-tutup (klopen)</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-02-statement">
+        Misalkan <m>A</m> subruang dari <m>X</m>. Buktikan bahwa
+        <m>U\subseteq A</m> terbuka dalam <m>A</m> jika dan hanya jika
+        <m>U=A\cap O</m> untuk suatu himpunan terbuka <m>O</m> dalam <m>X</m>.
+        Turunkan dari hasil itu bahwa <m>F\subseteq A</m> tertutup dalam
+        <m>A</m> jika dan hanya jika <m>F=A\cap C</m> untuk suatu himpunan
+        tertutup <m>C</m> dalam <m>X</m>. Kemudian, untuk
+        <m>X=\R</m> bertopologi standar dan
+        <m>A=\{0\}\cup(1,2)</m>, tunjukkan bahwa <m>\{0\}</m> merupakan
+        himpunan buka-tutup (klopen) dalam
+        <m>A</m>, walaupun tidak terbuka dalam <m>\R</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-02-hint">
+      <p><em>Tahap 1.</em> Pernyataan tentang himpunan terbuka adalah definisi topologi subruang yang ditulis sebagai kesetaraan himpunan.</p>
+      <p><em>Tahap 2.</em> Ambil komplemen relatif dalam <m>A</m> dan gunakan hukum De Morgan.</p>
+      <p><em>Tahap 3.</em> Nyatakan <m>\{0\}</m> sebagai irisan <m>A</m> dengan satu himpunan terbuka dan satu himpunan tertutup di <m>\R</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-02-answer">
+      <p>
+        Karakterisasi terbuka mengikuti langsung dari definisi. Mengambil
+        komplemen memberi karakterisasi tertutup. Dalam contoh,
+        <m>\{0\}=A\cap(-1,1/2)</m> dan <m>\{0\}=A\cap\{0\}</m>, sehingga
+        <m>\{0\}</m> sekaligus relatif terbuka dan relatif tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-02-solution">
+      <p>
+        Menurut definisi topologi subruang, anggota-anggotanya tepat berupa
+        irisan <m>A\cap O</m> dengan <m>O</m> terbuka dalam <m>X</m>. Jadi
+        karakterisasi pertama berlaku dalam kedua arah. Sekarang andaikan
+        <m>F</m> tertutup dalam <m>A</m>. Maka <m>A\setminus F=A\cap O</m>
+        untuk suatu <m>O</m> terbuka dalam <m>X</m>. Dengan
+        <m>C=X\setminus O</m>, yang tertutup dalam <m>X</m>, diperoleh
+        <me>
+          F=A\setminus(A\cap O)=A\cap(X\setminus O)=A\cap C.
+        </me>
+        Sebaliknya, jika <m>F=A\cap C</m> dan <m>C</m> tertutup dalam
+        <m>X</m>, maka
+        <m>A\setminus F=A\cap(X\setminus C)</m> terbuka dalam <m>A</m>;
+        jadi <m>F</m> tertutup dalam <m>A</m>. Untuk contoh yang diberikan,
+        <m>\{0\}=A\cap(-1,1/2)</m> membuktikan keterbukaan relatif, sedangkan
+        <m>\{0\}=A\cap\{0\}</m> membuktikan ketertutupan relatif. Namun tidak
+        ada interval terbuka di <m>\R</m> yang memuat <m>0</m> dan seluruhnya
+        berada dalam <m>\{0\}</m>; jadi <m>\{0\}</m> tidak terbuka dalam
+        <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-mastery-03">
+    <title>Jejak topologi melalui subruang bertingkat</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-03-statement">
+        Misalkan <m>B\subseteq A\subseteq X</m> dan <m>X</m> bertopologi
+        <m>\tau</m>. Buktikan bahwa topologi yang diwarisi <m>B</m> langsung
+        dari <m>X</m> sama dengan topologi yang diwarisi <m>B</m> dari
+        subruang <m>A</m>. Tunjukkan pula bahwa setiap himpunan terbuka
+        <m>W</m> dalam <m>B</m> dapat ditulis sebagai <m>W=B\cap O</m> dengan
+        <m>O</m> terbuka dalam <m>X</m>, tetapi <m>O</m> tidak harus unik.
+        Berikan dua pilihan <m>O</m> untuk
+        <m>X=\R</m>, <m>A=[0,2)</m>, <m>B=\{0\}\cup(1,2)</m>, dan
+        <m>W=\{0\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-03-hint">
+      <p><em>Tahap 1.</em> Tuliskan himpunan terbuka dalam <m>A</m> sebagai <m>A\cap O</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan <m>B\subseteq A</m> untuk menyederhanakan <m>B\cap(A\cap O)</m>.</p>
+      <p><em>Tahap 3.</em> Pilih dua interval terbuka berbeda yang irisannya dengan <m>B</m> hanya memuat <m>0</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-03-answer">
+      <p>
+        Jejak dua tahap memberi
+        <m>B\cap(A\cap O)=B\cap O</m>, tepat seperti jejak langsung dari
+        <m>X</m>. Dalam contoh, baik <m>O=(-1,1/2)</m> maupun
+        <m>O'=(-2,3/4)</m> memenuhi <m>B\cap O=B\cap O'=\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-03-solution">
+      <p>
+        Himpunan terbuka dalam topologi yang diwarisi <m>B</m> dari <m>A</m>
+        berbentuk <m>B\cap V</m>, dengan <m>V</m> terbuka dalam <m>A</m>.
+        Karena <m>V=A\cap O</m> untuk suatu <m>O\in\tau</m>, dan karena
+        <m>B\subseteq A</m>,
+        <me>
+          B\cap V=B\cap(A\cap O)=(B\cap A)\cap O=B\cap O.
+        </me>
+        Ini adalah himpunan terbuka yang diwarisi langsung dari <m>X</m>.
+        Sebaliknya, setiap <m>B\cap O</m> dapat ditulis sebagai
+        <m>B\cap(A\cap O)</m>, dengan <m>A\cap O</m> terbuka dalam <m>A</m>.
+        Karena itu, kedua topologi tersebut sama. Representasi oleh <m>O</m> tidak
+        unik karena perilaku <m>O</m> di luar <m>B</m> tidak memengaruhi
+        irisannya dengan <m>B</m>. Pada contoh, interval
+        <m>(-1,1/2)</m> dan <m>(-2,3/4)</m> berbeda, tetapi keduanya memotong
+        <m>B=\{0\}\cup(1,2)</m> tepat pada <m>\{0\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-mastery-04">
+    <title>Basis terinduksi dan keterhitungan kedua</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-04-statement">
+        Misalkan <m>\mathcal{B}</m> basis untuk ruang topologi <m>X</m> dan
+        <m>A\subseteq X</m>. Buktikan bahwa
+        <me>
+          \mathcal{B}_A=\{B\cap A\mid B\in\mathcal{B},\ B\cap A\ne\emptyset\}
+        </me>
+        merupakan basis bagi <m>A</m>. Simpulkan bahwa setiap subruang dari
+        ruang berketerhitungan kedua juga berketerhitungan kedua. Terapkan
+        hasil ini pada
+        <m>A=\{0\}\cup\{1/n\mid n\in\N,\ n\ge 1\}</m> sebagai subruang
+        <m>\R</m>:
+        tunjukkan bahwa setiap <m>1/n</m> terisolasi dalam <m>A</m>, sedangkan
+        <m>0</m> tidak terisolasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-04-hint">
+      <p><em>Tahap 1.</em> Untuk <m>x\in U=A\cap O</m>, pilih unsur basis <m>B</m> dengan <m>x\in B\subseteq O</m>.</p>
+      <p><em>Tahap 2.</em> Citra suatu himpunan terhitung di bawah pemetaan <m>B\mapsto B\cap A</m> tetap paling banyak terhitung.</p>
+      <p><em>Tahap 3.</em> Pisahkan <m>1/n</m> dari suku-suku tetangganya dengan interval kecil, lalu gunakan bahwa <m>1/n\to0</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-04-answer">
+      <p>
+        Setiap lingkungan relatif <m>A\cap O</m> dari suatu titik memuat jejak
+        <m>A\cap B</m> dari unsur basis ambien yang sesuai. Jika
+        <m>\mathcal{B}</m> terhitung, keluarga jejaknya juga terhitung. Pada
+        subruang contoh, interval cukup kecil mengisolasi setiap <m>1/n</m>,
+        tetapi setiap lingkungan relatif dari <m>0</m> memuat tak berhingga
+        banyak titik <m>1/n</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-04-solution">
+      <p>
+        Ambil <m>U</m> terbuka dalam <m>A</m> dan <m>x\in U</m>. Ada
+        <m>O</m> terbuka dalam <m>X</m> dengan <m>U=A\cap O</m>. Karena
+        <m>\mathcal{B}</m> basis, ada <m>B\in\mathcal{B}</m> sehingga
+        <m>x\in B\subseteq O</m>. Maka
+        <m>x\in B\cap A\subseteq O\cap A=U</m>, dan <m>B\cap A</m> tidak
+        kosong. Jadi <m>\mathcal{B}_A</m> memenuhi kriteria basis. Jika
+        <m>\mathcal{B}</m> terhitung, membuang jejak kosong dan kemungkinan
+        pengulangan tidak dapat menghasilkan keluarga tak terhitung; karena
+        itu <m>\mathcal{B}_A</m> terhitung.
+      </p>
+      <p>
+        Untuk <m>n\gt1</m>, pilih interval terbuka yang berpusat di
+        <m>1/n</m> dan ujung-ujungnya berada secara ketat di antara
+        <m>1/(n+1)</m>, <m>1/n</m>, dan <m>1/(n-1)</m>. Irisannya dengan
+        <m>A</m> adalah <m>\{1/n\}</m>. Untuk <m>n=1</m>, misalnya
+        <m>(3/4,5/4)\cap A=\{1\}</m>. Jadi setiap <m>1/n</m> terisolasi.
+        Sebaliknya, ambil sebarang lingkungan relatif <m>U</m> dari <m>0</m>.
+        Ada himpunan terbuka <m>O\subseteq\R</m> dengan
+        <m>U=A\cap O</m> dan <m>0\in O</m>. Pilih <m>\epsilon\gt0</m> sehingga
+        <m>(-\epsilon,\epsilon)\subseteq O</m>. Sifat Archimedes memberi
+        <m>n</m> dengan <m>1/n\lt\epsilon</m>, sehingga
+        <m>1/n\in U\setminus\{0\}</m>. Jadi setiap lingkungan relatif dari
+        <m>0</m> memuat titik lain dari <m>A</m>, dan <m>\{0\}</m> tidak
+        terbuka dalam <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-mastery-05">
+    <title>Pembatasan kontinu membawa tutupan ke tutupan</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-05-statement">
+        Misalkan <m>f:X\to Y</m> kontinu, <m>A\subseteq X</m>, dan
+        <m>B\subseteq A</m>. Buktikan bahwa pembatasan
+        <m>f|_A:A\to Y</m> kontinu dan bahwa
+        <me>
+          (f|_A)\!\left(\overline{B}^{\,A}\right)
+          \subseteq \overline{f(B)}^{\,Y}.
+        </me>
+        Tunjukkan dengan <m>X=A=B=\R</m> dan <m>f(x)=e^x</m> bahwa inklusi
+        tersebut dapat ketat.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-05-hint">
+      <p><em>Tahap 1.</em> Hitung prapeta suatu himpunan terbuka di bawah <m>f|_A</m>.</p>
+      <p><em>Tahap 2.</em> Jika <m>x\in\overline{B}^{\,A}</m>, tarik kembali lingkungan terbuka dari <m>f(x)</m>.</p>
+      <p><em>Tahap 3.</em> Bandingkan <m>e^{\R}</m> dengan tutupannya dalam <m>\R</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-05-answer">
+      <p>
+        Prapeta oleh pembatasan adalah
+        <m>(f|_A)^{-1}(V)=A\cap f^{-1}(V)</m>, sehingga terbuka dalam
+        <m>A</m>. Setiap lingkungan <m>V</m> dari <m>f(x)</m> karena itu
+        menarik balik ke lingkungan relatif dari <m>x</m> yang bertemu
+        <m>B</m>. Untuk fungsi eksponensial, ruas kiri adalah
+        <m>(0,\infty)</m>, sedangkan ruas kanan <m>[0,\infty)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-05-solution">
+      <p>
+        Jika <m>V</m> terbuka dalam <m>Y</m>, kekontinuan <m>f</m> memberi
+        <m>f^{-1}(V)</m> terbuka dalam <m>X</m>. Karena
+        <m>(f|_A)^{-1}(V)=A\cap f^{-1}(V)</m>, prapeta itu terbuka dalam
+        <m>A</m>; jadi <m>f|_A</m> kontinu. Sekarang ambil
+        <m>x\in\overline{B}^{\,A}</m>. Untuk setiap lingkungan terbuka
+        <m>V</m> dari <m>f(x)</m>, himpunan
+        <m>(f|_A)^{-1}(V)</m> merupakan lingkungan relatif dari <m>x</m>.
+        Karena <m>x</m> berada dalam tutupan <m>B</m> di <m>A</m>, prapeta
+        itu bertemu <m>B</m>. Jadi <m>V</m> bertemu <m>f(B)</m>, yang berarti
+        <m>f(x)\in\overline{f(B)}^{\,Y}</m>. Ini membuktikan inklusi.
+      </p>
+      <p>
+        Untuk <m>X=A=B=\R</m>, berlaku
+        <m>\overline{B}^{\,A}=\R</m>. Fungsi <m>f(x)=e^x</m> kontinu dan
+        <m>f(\R)=(0,\infty)</m>, sehingga ruas kiri adalah
+        <m>(0,\infty)</m>. Tutupan himpunan itu dalam <m>\R</m> adalah
+        <m>[0,\infty)</m>; titik <m>0</m> menunjukkan bahwa inklusi dapat
+        ketat.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-mastery-06">
+    <title>Homeomorfisme eksplisit dari garis ke interval terbuka</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-06-statement">
+        Untuk bilangan real <m>a\lt b</m>, definisikan
+        <me>
+          h(x)=a+(b-a)\left(\frac12+\frac{1}{\pi}\arctan x\right).
+        </me>
+        Buktikan bahwa <m>h:\R\to(a,b)</m> merupakan homeomorfisme dengan
+        menuliskan inversnya secara eksplisit. Simpulkan bahwa
+        <m>U\subseteq(a,b)</m> terbuka dalam topologi subruang jika dan hanya
+        jika <m>h^{-1}(U)</m> terbuka dalam <m>\R</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-06-hint">
+      <p><em>Tahap 1.</em> Gunakan bahwa <m>\arctan</m> memetakan <m>\R</m> secara bijektif ke <m>(-\pi/2,\pi/2)</m>.</p>
+      <p><em>Tahap 2.</em> Selesaikan persamaan <m>y=h(x)</m> terhadap <m>x</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan kekontinuan <m>h</m> dan <m>h^{-1}</m> pada prapeta himpunan terbuka.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-06-answer">
+      <p>
+        Inversnya adalah
+        <m>h^{-1}(y)=\tan\!\left(\pi((y-a)/(b-a)-1/2)\right)</m>. Kedua
+        fungsi kontinu pada domainnya, sehingga <m>h</m> homeomorfisme dan
+        mempertahankan keterbukaan melalui prapeta.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-06-solution">
+      <p>
+        Fungsi <m>\arctan</m> kontinu, naik tegas, dan mempunyai citra
+        <m>(-\pi/2,\pi/2)</m>. Pemetaan afin
+        <m>t\mapsto a+(b-a)(1/2+t/\pi)</m> membawa interval itu secara
+        bijektif ke <m>(a,b)</m>. Jadi komposisinya, yaitu <m>h</m>, kontinu
+        dan bijektif. Dari <m>y=h(x)</m> diperoleh
+        <me>
+          x=\tan\!\left(\pi\left(\frac{y-a}{b-a}-\frac12\right)\right).
+        </me>
+        Argumen fungsi <m>\tan</m> berada dalam
+        <m>(-\pi/2,\pi/2)</m> ketika <m>y\in(a,b)</m>, sehingga rumus ini
+        mendefinisikan invers kontinu. Maka <m>h</m> adalah homeomorfisme.
+        Jika <m>U</m> terbuka dalam <m>(a,b)</m>, kekontinuan <m>h</m>
+        membuat <m>h^{-1}(U)</m> terbuka dalam <m>\R</m>. Sebaliknya, jika
+        <m>h^{-1}(U)</m> terbuka, maka
+        <m>U=(h^{-1})^{-1}(h^{-1}(U))</m> terbuka karena <m>h^{-1}</m>
+        kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-mastery-07">
+    <title>Pewarisan sifat Hausdorff dan reguler</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-07-statement">
+        Misalkan <m>A</m> subruang dari <m>X</m>. Buktikan bahwa jika
+        <m>X</m> Hausdorff, maka <m>A</m> Hausdorff. Selanjutnya, andaikan
+        <m>X</m> reguler dan <m>T_1</m>. Buktikan bahwa <m>A</m> juga reguler
+        dan <m>T_1</m>. Nyatakan dengan jelas bagaimana himpunan terbuka dan
+        tertutup ambien dipotong dengan <m>A</m> untuk menghasilkan saksi
+        separasi di subruang.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-07-hint">
+      <p><em>Tahap 1.</em> Pisahkan dua titik <m>A</m> dengan himpunan terbuka di <m>X</m>, lalu ambil jejaknya.</p>
+      <p><em>Tahap 2.</em> Tuliskan himpunan tertutup <m>F</m> dalam <m>A</m> sebagai <m>A\cap C</m> dengan <m>C</m> tertutup dalam <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Untuk sifat <m>T_1</m>, perhatikan bahwa setiap himpunan satu titik tertutup.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-07-answer">
+      <p>
+        Saksi terbuka yang saling lepas di <m>X</m> tetap terbuka dan saling
+        lepas setelah diiris dengan <m>A</m>. Untuk regularitas, wakili
+        <m>F=A\cap C</m>, pisahkan titik dari <m>C</m> di <m>X</m>, lalu ambil
+        jejak kedua lingkungan. Himpunan satu titik dalam <m>A</m> tertutup
+        karena merupakan irisan <m>A</m> dengan himpunan satu titik tertutup
+        dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-07-solution">
+      <p>
+        Ambil titik berbeda <m>x,y\in A</m>. Karena <m>X</m> Hausdorff, ada
+        himpunan terbuka saling lepas <m>U,V\subseteq X</m> dengan
+        <m>x\in U</m> dan <m>y\in V</m>. Himpunan <m>U\cap A</m> dan
+        <m>V\cap A</m> terbuka dalam <m>A</m>, memuat titik masing-masing,
+        dan tetap saling lepas. Jadi <m>A</m> Hausdorff.
+      </p>
+      <p>
+        Sekarang andaikan <m>X</m> reguler dan <m>T_1</m>. Ambil
+        <m>a\in A</m> dan <m>F</m> tertutup dalam <m>A</m> dengan
+        <m>a\notin F</m>. Ada <m>C</m> tertutup dalam <m>X</m> sehingga
+        <m>F=A\cap C</m>. Karena <m>a\in A</m> tetapi <m>a\notin F</m>, juga
+        <m>a\notin C</m>. Regularitas <m>X</m> memberi himpunan terbuka saling
+        lepas <m>U,V</m> dengan <m>a\in U</m> dan <m>C\subseteq V</m>.
+        Jejak <m>U\cap A</m> dan <m>V\cap A</m> memisahkan <m>a</m> dari
+        <m>F</m> dalam <m>A</m>. Terakhir, untuk setiap <m>a\in A</m>,
+        himpunan <m>\{a\}</m> tertutup dalam <m>X</m> karena <m>X</m>
+        bersifat <m>T_1</m>, dan
+        <m>\{a\}=A\cap\{a\}</m> tertutup dalam <m>A</m>. Jadi <m>A</m>
+        reguler dan <m>T_1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-mastery-08">
+    <title>Dua sangkalan terhadap intuisi subruang yang keliru</title>
+    <statement>
+      <p xml:id="o003-c90-ch15-mastery-08-statement">
+        Sanggah kedua pernyataan berikut dengan contoh konkret dan verifikasi
+        lengkap.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Jika ruang ambien tidak diskret, maka tidak ada subruang tak
+            kosongnya yang diskret.
+          </p>
+        </li>
+        <li>
+          <p>
+            Untuk setiap <m>A,C\subseteq X</m>, selalu berlaku
+            <m>\operatorname{Int}_A(C\cap A)
+            =A\cap\operatorname{Int}_X(C)</m>.
+          </p>
+        </li>
+      </ol>
+      <p>
+        Gunakan ruang metrik yang familiar agar kegagalan kedua klaim tampak
+        dari topologi subruangnya, bukan dari konstruksi eksotis.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-mastery-08-hint">
+      <p><em>Tahap 1.</em> Di <m>\R</m>, cari subhimpunan tak berhingga yang tiap titiknya dapat diisolasi oleh interval kecil.</p>
+      <p><em>Tahap 2.</em> Untuk klaim interior, pilih subruang satu titik yang tidak terbuka dalam ruang ambien.</p>
+      <p><em>Tahap 3.</em> Hitung kedua ruas secara terpisah dalam setiap contoh.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-mastery-08-answer">
+      <p>
+        Untuk klaim pertama, ambil <m>X=\R</m> dan <m>A=\Z</m>; topologi
+        subruang pada <m>\Z</m> diskret walaupun <m>\R</m> tidak diskret.
+        Untuk klaim kedua, ambil <m>X=\R</m> dan <m>A=C=\{0\}</m>. Interior
+        relatif ruas kiri adalah <m>\{0\}</m>, sedangkan interior ambien
+        <m>C</m> kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-mastery-08-solution">
+      <p>
+        Ruang <m>\R</m> dengan topologi standar tidak diskret karena, misalnya,
+        <m>\{0\}</m> tidak terbuka. Namun untuk setiap <m>n\in\Z</m>,
+        <me>
+          (n-1/3,n+1/3)\cap\Z=\{n\}.
+        </me>
+        Jadi setiap himpunan satu titik terbuka dalam subruang <m>\Z</m>.
+        Setiap subhimpunan <m>\Z</m> adalah gabungan himpunan-himpunan satu
+        titik tersebut, sehingga topologi subruang pada <m>\Z</m> diskret.
+        Ini menyanggah klaim pertama.
+      </p>
+      <p>
+        Untuk klaim kedua, ambil <m>X=\R</m> dan <m>A=C=\{0\}</m>. Sebagai
+        ruang satu titik, <m>A</m> mempunyai topologi
+        <m>\{\emptyset,A\}</m>. Karena itu
+        <m>\operatorname{Int}_A(C\cap A)=\operatorname{Int}_A(A)=A</m>.
+        Di sisi lain, <m>\operatorname{Int}_{\R}(C)=\emptyset</m>, sehingga
+        <m>A\cap\operatorname{Int}_{\R}(C)=\emptyset</m>. Kedua ruas berbeda,
+        dan klaim kedua juga salah.
+      </p>
+    </solution>
+  </exercise>
+</section>

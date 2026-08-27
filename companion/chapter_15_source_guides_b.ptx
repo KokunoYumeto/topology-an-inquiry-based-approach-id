@@ -1,0 +1,294 @@
+<section xml:id="o003-c90-ch15-source-guides-b" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Basis Subruang dan Interval Terbuka</title>
+
+  <p>
+    Enam panduan ini melanjutkan dukungan belajar mandiri Bab 15: satu
+    pembuktian basis terinduksi dan lima langkah pembuktian homeomorfisme
+    antara garis real dan interval terbuka. Gunakan petunjuk, jawaban, dan
+    solusi hanya setelah mencoba tugas utama secara mandiri.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch15-guide-11">
+    <title>Membuktikan Basis bagi Topologi Subruang</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau)</m> suatu ruang topologi dengan basis
+        <m>\B</m>, dan misalkan <m>A</m> suatu subruang dari <m>X</m>.
+        Untuk
+        <me>
+          \B_A=\{B\cap A\mid B\in\B\},
+        </me>
+        buktikan bahwa <m>\B_A</m> merupakan basis bagi topologi terinduksi
+        <m>\tau_A</m> pada <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-11-hint">
+      <p><em>Tahap 1.</em> Untuk <m>x\in A</m>, gunakan sifat basis <m>\B</m> untuk mencari <m>B\in\B</m> yang memuat <m>x</m>.</p>
+      <p><em>Tahap 2.</em> Jika <m>x\in(B_1\cap A)\cap(B_2\cap A)</m>, cari <m>B_3\in\B</m> dengan <m>x\in B_3\subseteq B_1\cap B_2</m>.</p>
+      <p><em>Tahap 3.</em> Tunjukkan pula bahwa setiap <m>A\cap O</m>, dengan <m>O</m> terbuka dalam <m>X</m>, merupakan gabungan anggota <m>\B_A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-11-answer">
+      <p>
+        Ya. Keluarga <m>\B_A</m> memenuhi kedua kriteria basis pada <m>A</m>,
+        dan gabungan anggota-anggotanya tepat menghasilkan seluruh himpunan
+        <m>A\cap O</m> dengan <m>O\in\tau</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-11-solution">
+      <p>
+        Pertama, ambil <m>x\in A</m>. Karena <m>\B</m> basis bagi <m>X</m>,
+        terdapat <m>B\in\B</m> dengan <m>x\in B</m>. Maka
+        <m>x\in B\cap A</m> dan <m>B\cap A\in\B_A</m>. Jadi anggota-anggota
+        <m>\B_A</m> menutupi <m>A</m>.
+      </p>
+      <p>
+        Kedua, andaikan
+        <m>x\in(B_1\cap A)\cap(B_2\cap A)</m>, dengan
+        <m>B_1,B_2\in\B</m>. Karena <m>x\in B_1\cap B_2</m>, sifat basis
+        <m>\B</m> menghasilkan <m>B_3\in\B</m> sedemikian sehingga
+        <m>x\in B_3\subseteq B_1\cap B_2</m>. Akibatnya,
+        <me>
+          x\in B_3\cap A
+          \subseteq(B_1\cap A)\cap(B_2\cap A),
+        </me>
+        dan <m>B_3\cap A\in\B_A</m>. Dengan demikian kedua kriteria basis
+        terpenuhi.
+      </p>
+      <p>
+        Masih perlu mengidentifikasi topologi yang dibangkitkan. Setiap
+        <m>B\in\B</m> terbuka dalam <m>X</m>, sehingga setiap
+        <m>B\cap A</m> terbuka relatif. Jadi topologi yang dibangkitkan
+        <m>\B_A</m> termuat dalam <m>\tau_A</m>. Sebaliknya, jika
+        <m>U\in\tau_A</m>, tulis <m>U=A\cap O</m> untuk suatu
+        <m>O\in\tau</m>. Karena <m>\B</m> basis, ada keluarga
+        <m>\{B_i\}_{i\in I}\subseteq\B</m> dengan
+        <m>O=\bigcup_{i\in I}B_i</m>. Maka
+        <me>
+          U=A\cap O=\bigcup_{i\in I}(A\cap B_i),
+        </me>
+        suatu gabungan anggota <m>\B_A</m>. Jadi topologi yang dibangkitkan
+        tepat <m>\tau_A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-12">
+    <title>Keterdefinisian Fungsi Tangen</title>
+    <statement>
+      <p>
+        Definisikan <m>f:(0,1)\to\R</m> dengan
+        <me>
+          f(x)=\tan\left(\pi\left(x-\frac12\right)\right).
+        </me>
+        Jelaskan mengapa rumus ini memetakan setiap <m>x\in(0,1)</m> ke
+        suatu bilangan real.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-12-hint">
+      <p><em>Tahap 1.</em> Tentukan rentang <m>x-\frac12</m> ketika <m>0\lt x\lt1</m>.</p>
+      <p><em>Tahap 2.</em> Kalikan pertidaksamaan tersebut dengan <m>\pi</m>.</p>
+      <p><em>Tahap 3.</em> Ingat pada interval mana fungsi tangen terdefinisi dan bernilai real.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-12-answer">
+      <p>
+        Jika <m>0\lt x\lt1</m>, maka
+        <m>-\frac{\pi}{2}\lt\pi(x-\frac12)\lt\frac{\pi}{2}</m>. Fungsi
+        tangen terdefinisi dan bernilai real pada interval tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-12-solution">
+      <p>
+        Dari <m>0\lt x\lt1</m> diperoleh
+        <m>-\frac12\lt x-\frac12\lt\frac12</m>, sehingga
+        <me>
+          -\frac{\pi}{2}
+          \lt\pi\left(x-\frac12\right)
+          \lt\frac{\pi}{2}.
+        </me>
+        Kosinus tidak nol pada interval terbuka
+        <m>(-\frac{\pi}{2},\frac{\pi}{2})</m>, maka tangen terdefinisi di
+        sana dan nilainya merupakan bilangan real. Jadi rumus tersebut
+        mendefinisikan fungsi <m>f:(0,1)\to\R</m> dengan baik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-13">
+    <title>Injektivitas Fungsi Tangen</title>
+    <statement>
+      <p>
+        Untuk
+        <m>f(x)=\tan(\pi(x-\frac12))</m> pada <m>(0,1)</m>, jelaskan
+        mengapa <m>f</m> merupakan injeksi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-13-hint">
+      <p><em>Tahap 1.</em> Fungsi <m>x\mapsto\pi(x-\frac12)</m> naik tegas pada <m>(0,1)</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan sifat monoton fungsi tangen pada <m>(-\frac{\pi}{2},\frac{\pi}{2})</m>.</p>
+      <p><em>Tahap 3.</em> Komposisi dua fungsi yang naik tegas juga naik tegas.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-13-answer">
+      <p>
+        Fungsi <m>f</m> naik tegas pada <m>(0,1)</m>, sehingga dua masukan
+        berbeda tidak mungkin mempunyai citra yang sama. Jadi <m>f</m>
+        injektif.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-13-solution">
+      <p>
+        Pemetaan afin <m>h(x)=\pi(x-\frac12)</m> naik tegas dan memetakan
+        <m>(0,1)</m> ke
+        <m>(-\frac{\pi}{2},\frac{\pi}{2})</m>. Pada interval terakhir,
+        fungsi tangen naik tegas. Jika <m>x_1\lt x_2</m>, maka
+        <me>
+          \pi\left(x_1-\frac12\right)
+          \lt\pi\left(x_2-\frac12\right)
+        </me>
+        dan karena itu <m>f(x_1)\lt f(x_2)</m>. Jadi <m>f</m> naik tegas,
+        yang menyiratkan bahwa <m>f(x_1)=f(x_2)</m> hanya mungkin jika
+        <m>x_1=x_2</m>. Maka <m>f</m> merupakan injeksi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-14">
+    <title>Surjektivitas Fungsi Tangen</title>
+    <statement>
+      <p>
+        Untuk
+        <m>f:(0,1)\to\R</m> yang diberikan oleh
+        <m>f(x)=\tan(\pi(x-\frac12))</m>, jelaskan mengapa <m>f</m>
+        merupakan surjeksi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-14-hint">
+      <p><em>Tahap 1.</em> Ambil bilangan real sebarang <m>y</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan <m>\arctan(y)\in(-\frac{\pi}{2},\frac{\pi}{2})</m>.</p>
+      <p><em>Tahap 3.</em> Selesaikan persamaan <m>y=\tan(\pi(x-\frac12))</m> terhadap <m>x</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-14-answer">
+      <p>
+        Untuk setiap <m>y\in\R</m>, ambil
+        <m>x=\frac12+\frac{1}{\pi}\arctan(y)</m>. Titik ini berada dalam
+        <m>(0,1)</m> dan memenuhi <m>f(x)=y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-14-solution">
+      <p>
+        Ambil sembarang <m>y\in\R</m>. Nilai utama
+        <m>\arctan(y)</m> berada dalam
+        <m>(-\frac{\pi}{2},\frac{\pi}{2})</m>. Oleh karena itu
+        <me>
+          x=\frac12+\frac{1}{\pi}\arctan(y)
+        </me>
+        memenuhi <m>0\lt x\lt1</m>. Substitusi memberi
+        <me>
+          f(x)=\tan\left(\pi\left(
+          \frac12+\frac{1}{\pi}\arctan(y)-\frac12
+          \right)\right)
+          =\tan(\arctan(y))=y.
+        </me>
+        Jadi setiap bilangan real mempunyai prapeta dalam <m>(0,1)</m>, dan
+        <m>f</m> surjektif.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-15">
+    <title>Kekontinuan Fungsi dan Inversnya</title>
+    <statement>
+      <p>
+        Untuk bijeksi
+        <m>f:(0,1)\to\R</m> yang diberikan oleh
+        <m>f(x)=\tan(\pi(x-\frac12))</m>, jelaskan mengapa <m>f</m> dan
+        <m>f^{-1}</m> kontinu terhadap topologi metrik Euklides.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-15-hint">
+      <p><em>Tahap 1.</em> Tulis <m>f</m> sebagai komposisi fungsi afin dan fungsi tangen.</p>
+      <p><em>Tahap 2.</em> Gunakan rumus prapeta dari panduan surjektivitas untuk menemukan <m>f^{-1}</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan teorema kalkulus bahwa fungsi elementer ini kontinu pada domain masing-masing dan komposisi fungsi kontinu tetap kontinu.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-15-answer">
+      <p>
+        Fungsi <m>f</m> kontinu sebagai komposisi fungsi kontinu, dan
+        <me>
+          f^{-1}(y)=\frac12+\frac{1}{\pi}\arctan(y)
+        </me>
+        juga kontinu pada seluruh <m>\R</m>. Jadi <m>f</m> adalah
+        homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-15-solution">
+      <p>
+        Pemetaan <m>x\mapsto\pi(x-\frac12)</m> kontinu pada <m>(0,1)</m>,
+        dan citranya termuat dalam
+        <m>(-\frac{\pi}{2},\frac{\pi}{2})</m>. Fungsi tangen kontinu pada
+        interval itu. Maka komposisinya, yaitu <m>f</m>, kontinu.
+      </p>
+      <p>
+        Dari penyelesaian persamaan <m>y=f(x)</m> diperoleh
+        <m>f^{-1}(y)=\frac12+\frac{1}{\pi}\arctan(y)</m>. Fungsi arctangen
+        kontinu pada seluruh <m>\R</m>, demikian pula operasi mengalikan
+        dengan <m>1/\pi</m> dan menambahkan <m>1/2</m>. Karena itu
+        <m>f^{-1}:\R\to(0,1)</m> kontinu. Kedua interval membawa topologi
+        yang diinduksi oleh metrik Euklides, sehingga kekontinuan kalkulus
+        tersebut adalah kekontinuan topologis yang dibutuhkan. Jadi
+        <m>f</m> merupakan homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-16">
+    <title>Homeomorfisme dari Interval Satuan ke Interval Terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>a,b\in\R</m> dengan <m>a\lt b</m>. Definisikan fungsi
+        <m>g:(0,1)\to(a,b)</m> dan buktikan bahwa <m>g</m> merupakan
+        homeomorfisme. Jelaskan bagaimana hasil ini, bersama homeomorfisme
+        antara <m>\R</m> dan <m>(0,1)</m>, menunjukkan bahwa <m>\R</m>
+        homeomorfik dengan <m>(a,b)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-16-hint">
+      <p><em>Tahap 1.</em> Gunakan pemetaan afin yang mengirim <m>0</m> ke <m>a</m> dan <m>1</m> ke <m>b</m>.</p>
+      <p><em>Tahap 2.</em> Temukan rumus inversnya dan gunakan <m>b-a\gt0</m>.</p>
+      <p><em>Tahap 3.</em> Komposisikan <m>g</m> dengan invers homeomorfisme <m>f:(0,1)\to\R</m> dari panduan sebelumnya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-16-answer">
+      <p>
+        Ambil <m>g(x)=a+(b-a)x</m>. Fungsi ini mempunyai invers
+        <m>g^{-1}(y)=\frac{y-a}{b-a}</m>; keduanya kontinu. Maka <m>g</m>
+        homeomorfisme, dan <m>g\circ f^{-1}:\R\to(a,b)</m> juga
+        homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-16-solution">
+      <p>
+        Definisikan <m>g(x)=a+(b-a)x</m>. Karena <m>b-a\gt0</m>, jika
+        <m>0\lt x\lt1</m>, maka
+        <m>a\lt a+(b-a)x\lt b</m>; jadi <m>g</m> memang memetakan
+        <m>(0,1)</m> ke <m>(a,b)</m>. Fungsi ini naik tegas, sehingga
+        injektif. Untuk setiap <m>y\in(a,b)</m>, titik
+        <m>x=(y-a)/(b-a)</m> berada dalam <m>(0,1)</m> dan memenuhi
+        <m>g(x)=y</m>, sehingga <m>g</m> juga surjektif.
+      </p>
+      <p>
+        Fungsi afin <m>g</m> kontinu, dan inversnya
+        <me>
+          g^{-1}(y)=\frac{y-a}{b-a}
+        </me>
+        juga afin dan kontinu. Jadi <m>g</m> merupakan homeomorfisme. Dari
+        panduan sebelumnya, <m>f:(0,1)\to\R</m> adalah homeomorfisme, maka
+        <m>f^{-1}:\R\to(0,1)</m> juga homeomorfisme. Komposisi
+        <m>g\circ f^{-1}:\R\to(a,b)</m> adalah homeomorfisme, sehingga
+        <m>\R</m> homeomorfik dengan setiap interval terbuka terbatas
+        <m>(a,b)</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

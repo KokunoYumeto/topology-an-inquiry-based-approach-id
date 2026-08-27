@@ -66,8 +66,26 @@ PROMPT_MAP_PATH = BACKEND / "chapter_15_source_prompt_map.csv"
 GROUPING_PATH = BACKEND / "chapter_15_grouping_nodes.json"
 OUTPUT_PATHS = (INVENTORY_PATH, PROMPT_MAP_PATH, GROUPING_PATH)
 
+PROMPT_MAP_PHASE_BOOTSTRAP = "bootstrap_support_pending"
+PROMPT_MAP_PHASE_COVERED = "companion_support_covered"
+
 XML_ID = base.XML_ID
 XI_NS = base.XI_NS
+
+
+def prompt_payload_with_support_status(prompt_payload: bytes, status: str) -> bytes:
+    """Return the same deterministic prompt map with one explicit support phase."""
+    if status not in {"pending", "covered"}:
+        raise SystemExit(f"unsupported Chapter 15 prompt-map phase status: {status}")
+    reader = csv.DictReader(io.StringIO(prompt_payload.decode("utf-8"), newline=""))
+    if tuple(reader.fieldnames or ()) != tuple(PROMPT_MAP_FIELDS):
+        raise SystemExit("prompt-map fields changed while deriving a support phase")
+    rows = list(reader)
+    if len(rows) != EXPECTED_PROMPT_TOTAL:
+        raise SystemExit("prompt-map row count changed while deriving a support phase")
+    for row in rows:
+        row["support_status"] = status
+    return base.csv_bytes(rows)
 
 
 def load_authority_closure() -> tuple[
@@ -353,6 +371,10 @@ def build_inventory() -> tuple[bytes, bytes, bytes, dict[str, Any]]:
         )
 
     prompt_payload = base.csv_bytes(prompt_rows)
+    covered_prompt_payload = prompt_payload_with_support_status(
+        prompt_payload,
+        "covered",
+    )
     grouping_payload = {
         "schema_version": 1,
         "unit": "o003-c90-ch15-subspaces",
@@ -502,9 +524,18 @@ def build_inventory() -> tuple[bytes, bytes, bytes, dict[str, Any]]:
         },
         "prompt_map": {
             "path": "backend/chapter_15_source_prompt_map.csv",
-            **base.identity_bytes(prompt_payload),
             "fields": list(PROMPT_MAP_FIELDS),
             "row_count": len(prompt_rows),
+            "phase_contract": {
+                PROMPT_MAP_PHASE_BOOTSTRAP: {
+                    "support_status": "pending",
+                    **base.identity_bytes(prompt_payload),
+                },
+                PROMPT_MAP_PHASE_COVERED: {
+                    "support_status": "covered",
+                    **base.identity_bytes(covered_prompt_payload),
+                },
+            },
         },
         "grouping_backend": {
             "path": "backend/chapter_15_grouping_nodes.json",
@@ -612,11 +643,24 @@ def verify_payloads(
         if row != expected_row:
             raise SystemExit(f"serialized CSV row differs for {entry['id']}")
 
+    covered_prompt_payload = prompt_payload_with_support_status(
+        prompt_payload,
+        "covered",
+    )
     if inventory["prompt_map"] != {
         "path": "backend/chapter_15_source_prompt_map.csv",
-        **base.identity_bytes(prompt_payload),
         "fields": list(PROMPT_MAP_FIELDS),
         "row_count": EXPECTED_PROMPT_TOTAL,
+        "phase_contract": {
+            PROMPT_MAP_PHASE_BOOTSTRAP: {
+                "support_status": "pending",
+                **base.identity_bytes(prompt_payload),
+            },
+            PROMPT_MAP_PHASE_COVERED: {
+                "support_status": "covered",
+                **base.identity_bytes(covered_prompt_payload),
+            },
+        },
     }:
         raise SystemExit("inventory prompt-map identity is inconsistent")
     if inventory["grouping_backend"] != {
@@ -633,18 +677,29 @@ def main() -> int:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="verify that all three existing outputs exactly match regeneration",
+        help=(
+            "verify the inventory and grouping bytes plus either the bootstrap-pending "
+            "or post-companion-covered deterministic prompt-map phase"
+        ),
     )
     arguments = parser.parse_args()
 
     inventory_payload, prompt_payload, grouping_payload, summary = build_inventory()
+    covered_prompt_payload = prompt_payload_with_support_status(
+        prompt_payload,
+        "covered",
+    )
     payloads = {
         INVENTORY_PATH: inventory_payload,
         PROMPT_MAP_PATH: prompt_payload,
         GROUPING_PATH: grouping_payload,
     }
+    prompt_map_phase = PROMPT_MAP_PHASE_BOOTSTRAP
     if arguments.check:
-        for path, expected in payloads.items():
+        for path, expected in (
+            (INVENTORY_PATH, inventory_payload),
+            (GROUPING_PATH, grouping_payload),
+        ):
             if not path.is_file():
                 raise SystemExit(f"generated output is missing: {path}")
             actual = path.read_bytes()
@@ -652,6 +707,18 @@ def main() -> int:
                 raise SystemExit(
                     f"generated output differs from deterministic regeneration: {path}"
                 )
+        if not PROMPT_MAP_PATH.is_file():
+            raise SystemExit(f"generated output is missing: {PROMPT_MAP_PATH}")
+        actual_prompt_payload = PROMPT_MAP_PATH.read_bytes()
+        if actual_prompt_payload == prompt_payload:
+            prompt_map_phase = PROMPT_MAP_PHASE_BOOTSTRAP
+        elif actual_prompt_payload == covered_prompt_payload:
+            prompt_map_phase = PROMPT_MAP_PHASE_COVERED
+        else:
+            raise SystemExit(
+                "generated prompt map matches neither deterministic support phase: "
+                f"{PROMPT_MAP_PATH}"
+            )
     else:
         for path in OUTPUT_PATHS:
             path.write_bytes(payloads[path])
@@ -660,11 +727,18 @@ def main() -> int:
                 raise SystemExit(f"written output failed byte-for-byte readback: {path}")
 
     summary["mode"] = "check" if arguments.check else "write"
+    summary["prompt_map_phase"] = prompt_map_phase
     summary["authority_ordered_sha256"] = FROZEN_ORDERED_SHA256
-    summary["outputs"] = {
-        path.relative_to(ROOT).as_posix(): base.identity_bytes(payloads[path])
-        for path in OUTPUT_PATHS
-    }
+    if arguments.check:
+        summary["outputs"] = {
+            path.relative_to(ROOT).as_posix(): base.identity_bytes(path.read_bytes())
+            for path in OUTPUT_PATHS
+        }
+    else:
+        summary["outputs"] = {
+            path.relative_to(ROOT).as_posix(): base.identity_bytes(payloads[path])
+            for path in OUTPUT_PATHS
+        }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 

@@ -1,0 +1,442 @@
+<section xml:id="o003-c90-ch15-source-guides-a" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Subruang dan Topologi Relatif I</title>
+
+  <p>
+    Sepuluh panduan ini mendampingi tugas-tugas awal Bab 15 tentang topologi
+    subruang, contoh-contoh berhingga, keterbukaan relatif, dan basis
+    terinduksi. Kerjakan dahulu butir pada bab utama, lalu buka petunjuk,
+    jawaban, dan solusi secara bertahap.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch15-guide-01">
+    <title>Membuktikan Aksioma Topologi Subruang</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau)</m> suatu ruang topologi dan <m>A</m> suatu
+        subhimpunan tak kosong dari <m>X</m>. Definisikan
+        <me>
+          \tau_A=\{O\cap A\mid O\in\tau\}.
+        </me>
+        Tunjukkan bahwa <m>\tau_A</m> merupakan topologi pada <m>A</m>.
+      </p>
+      <p>
+        <em>Catatan konvensi.</em> Buku sumber mensyaratkan subruang tidak
+        kosong. Banyak konvensi modern juga mengizinkan <m>A=\emptyset</m>
+        sebagai subruang, dengan topologi <m>\{\emptyset\}</m>; panduan ini
+        tetap mengikuti konvensi tak kosong dari buku sumber.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-01-hint">
+      <p><em>Tahap 1.</em> Nyatakan <m>\emptyset</m> dan <m>A</m> sebagai irisan <m>A</m> dengan anggota <m>\tau</m>.</p>
+      <p><em>Tahap 2.</em> Untuk <m>U_i=A\cap O_i</m>, distribusikan <m>A</m> terhadap gabungan <m>\bigcup_i O_i</m>.</p>
+      <p><em>Tahap 3.</em> Lakukan hal serupa untuk irisan berhingga dan gunakan aksioma topologi pada <m>\tau</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-01-answer">
+      <p>
+        Ya. Himpunan <m>\emptyset</m> dan <m>A</m> berada dalam <m>\tau_A</m>,
+        sedangkan gabungan sebarang dan irisan berhingga anggota
+        <m>\tau_A</m> kembali berbentuk <m>A\cap O</m> dengan
+        <m>O\in\tau</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-01-solution">
+      <p>
+        Karena <m>\emptyset,X\in\tau</m>, berlaku
+        <m>\emptyset=A\cap\emptyset\in\tau_A</m> dan
+        <m>A=A\cap X\in\tau_A</m>. Selanjutnya, misalkan
+        <m>U_i\in\tau_A</m> untuk setiap <m>i\in I</m>. Pilih
+        <m>O_i\in\tau</m> sehingga <m>U_i=A\cap O_i</m>. Hukum distributif
+        memberi
+        <me>
+          \bigcup_{i\in I}U_i
+          =\bigcup_{i\in I}(A\cap O_i)
+          =A\cap\left(\bigcup_{i\in I}O_i\right).
+        </me>
+        Karena <m>\bigcup_{i\in I}O_i\in\tau</m>, gabungan tersebut berada
+        dalam <m>\tau_A</m>.
+      </p>
+      <p>
+        Untuk irisan, jika <m>U=A\cap O</m> dan <m>V=A\cap P</m> dengan
+        <m>O,P\in\tau</m>, maka
+        <me>
+          U\cap V=A\cap(O\cap P).
+        </me>
+        Karena <m>O\cap P\in\tau</m>, berlaku <m>U\cap V\in\tau_A</m>.
+        Argumen yang sama, atau induksi, menangani setiap irisan berhingga.
+        Jadi ketiga aksioma topologi terpenuhi dan <m>\tau_A</m> merupakan
+        topologi pada <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-02">
+    <title>Dua Topologi Subruang Berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d\}</m> dan
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>. Untuk
+        <m>A=\{b,c\}</m>, daftarkan anggota topologi subruang
+        <m>\tau_A</m>. Kemudian ambil <m>Z=\{a,b\}</m>; tentukan
+        <m>\tau_Z</m> dan beri nama topologi tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-02-hint">
+      <p><em>Tahap 1.</em> Irisankan setiap anggota <m>\tau</m> dengan <m>A</m>, lalu hapus hasil yang berulang.</p>
+      <p><em>Tahap 2.</em> Ulangi prosedur yang sama untuk <m>Z</m>.</p>
+      <p><em>Tahap 3.</em> Bandingkan <m>\tau_Z</m> dengan himpunan kuasa <m>\mathcal{P}(Z)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-02-answer">
+      <p>
+        Diperoleh <m>\tau_A=\{\emptyset,\{b\},\{b,c\}\}</m> dan
+        <m>\tau_Z=\{\emptyset,\{a\},\{b\},\{a,b\}\}=\mathcal{P}(Z)</m>.
+        Jadi <m>\tau_Z</m> adalah topologi diskret pada <m>Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-02-solution">
+      <p>
+        Untuk <m>A=\{b,c\}</m>, irisan berturut-turut dari
+        <m>\emptyset,\{a\},\{b\},\{a,b\},X</m> dengan <m>A</m> adalah
+        <m>\emptyset,\emptyset,\{b\},\{b\},A</m>. Setelah menghapus
+        pengulangan, diperoleh
+        <m>\tau_A=\{\emptyset,\{b\},A\}</m>.
+      </p>
+      <p>
+        Untuk <m>Z=\{a,b\}</m>, irisan-irisan yang berbeda adalah
+        <m>\emptyset,\{a\},\{b\},Z</m>. Keempatnya tepat seluruh
+        subhimpunan dari himpunan beranggota dua <m>Z</m>. Dengan demikian
+        <m>\tau_Z=\mathcal{P}(Z)</m>, yaitu topologi diskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-03">
+    <title>Subruang dari Topologi Indiskret</title>
+    <statement>
+      <p>
+        Ambil <m>X=\R</m> dengan topologi indiskret
+        <m>\tau=\{\emptyset,\R\}</m>. Tentukan topologi subruang pada
+        <m>[1,2]</m>, lalu generalisasikan hasilnya untuk sebarang subhimpunan
+        tak kosong dari suatu ruang bertopologi indiskret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-03-hint">
+      <p><em>Tahap 1.</em> Hanya ada dua himpunan terbuka ambien yang perlu diiriskan dengan <m>[1,2]</m>.</p>
+      <p><em>Tahap 2.</em> Hitung <m>[1,2]\cap\emptyset</m> dan <m>[1,2]\cap\R</m>.</p>
+      <p><em>Tahap 3.</em> Ganti <m>[1,2]</m> oleh subhimpunan tak kosong sebarang <m>A\subseteq X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-03-answer">
+      <p>
+        Topologi subruang pada <m>[1,2]</m> adalah
+        <m>\{\emptyset,[1,2]\}</m>. Secara umum, setiap subruang tak kosong
+        <m>A</m> dari ruang indiskret mewarisi topologi indiskret
+        <m>\{\emptyset,A\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-03-solution">
+      <p>
+        Menurut definisi, anggota topologi subruang adalah irisan subruang
+        dengan anggota topologi ambien. Dalam kasus ini,
+        <m>[1,2]\cap\emptyset=\emptyset</m> dan
+        <m>[1,2]\cap\R=[1,2]</m>; tidak ada hasil lain. Jadi topologinya
+        <m>\{\emptyset,[1,2]\}</m>.
+      </p>
+      <p>
+        Jika ruang umum <m>X</m> bertopologi indiskret dan <m>A</m> adalah
+        subruang tak kosong, satu-satunya irisan yang mungkin ialah
+        <m>A\cap\emptyset=\emptyset</m> dan <m>A\cap X=A</m>. Karena itu
+        topologi subruang pada <m>A</m> juga indiskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-04">
+    <title>Subruang dari Topologi Diskret</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d,e,f,g,h,i\}</m> bertopologi diskret.
+        Tentukan topologi subruang pada <m>A=\{a,b,d\}</m>, lalu
+        generalisasikan hasilnya untuk sebarang subruang tak kosong dari ruang
+        diskret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-04-hint">
+      <p><em>Tahap 1.</em> Dalam topologi diskret, setiap subhimpunan dari <m>X</m> terbuka.</p>
+      <p><em>Tahap 2.</em> Untuk suatu <m>S\subseteq A</m>, pilih himpunan terbuka ambien yang irisannya dengan <m>A</m> tepat <m>S</m>.</p>
+      <p><em>Tahap 3.</em> Daftarkan seluruh delapan subhimpunan dari <m>A=\{a,b,d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-04-answer">
+      <p>
+        Topologi subruangnya adalah
+        <me>
+          \tau_A=\{\emptyset,\{a\},\{b\},\{d\},\{a,b\},\{a,d\},
+          \{b,d\},\{a,b,d\}\}=\mathcal{P}(A).
+        </me>
+        Setiap subruang tak kosong dari ruang diskret juga diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-04-solution">
+      <p>
+        Ambil sembarang <m>S\subseteq A</m>. Karena <m>X</m> diskret,
+        himpunan <m>S</m> sendiri terbuka sebagai subhimpunan dari <m>X</m>.
+        Selain itu, <m>A\cap S=S</m>. Jadi setiap subhimpunan <m>S</m> dari
+        <m>A</m> berada dalam <m>\tau_A</m>. Sebaliknya, setiap anggota
+        <m>\tau_A</m> tentu merupakan subhimpunan dari <m>A</m>. Maka
+        <m>\tau_A=\mathcal{P}(A)</m>, yang untuk <m>A=\{a,b,d\}</m> memberi
+        delapan himpunan yang tercantum pada jawaban. Argumen tersebut berlaku
+        untuk setiap subruang tak kosong dari ruang diskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-05">
+    <title>Keterbukaan Relatif Tidak Menjamin Keterbukaan Ambien</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d,e,f\}</m> dengan
+        <me>
+          \tau=\{\emptyset,\{a\},\{c,d\},\{a,c,d\},
+          \{b,c,d,e,f\},X\}.
+        </me>
+        Untuk subruang <m>A=\{a,b,e\}</m>, tentukan semua himpunan terbuka
+        dalam <m>A</m>. Apakah setiap himpunan tersebut juga terbuka dalam
+        <m>X</m>? Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-05-hint">
+      <p><em>Tahap 1.</em> Hitung <m>A\cap O</m> bagi keenam anggota <m>O\in\tau</m>.</p>
+      <p><em>Tahap 2.</em> Hapus hasil irisan yang berulang.</p>
+      <p><em>Tahap 3.</em> Bandingkan hasil yang tersisa satu per satu dengan daftar asli <m>\tau</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-05-answer">
+      <p>
+        Diperoleh <m>\tau_A=\{\emptyset,\{a\},\{b,e\},A\}</m>. Tidak
+        semuanya terbuka dalam <m>X</m>: <m>\{b,e\}</m> dan
+        <m>A=\{a,b,e\}</m> bukan anggota <m>\tau</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-05-solution">
+      <p>
+        Irisan <m>A</m> dengan anggota-anggota <m>\tau</m> berturut-turut
+        adalah
+        <m>\emptyset,\{a\},\emptyset,\{a\},\{b,e\},A</m>. Karena itu
+        himpunan terbuka yang berbeda dalam subruang tepat
+        <m>\emptyset,\{a\},\{b,e\},A</m>. Dua yang pertama juga terbuka
+        dalam <m>X</m>, sedangkan <m>\{b,e\}</m> dan <m>A</m> tidak tercantum
+        dalam <m>\tau</m>. Contoh ini menunjukkan bahwa “terbuka dalam
+        <m>A</m>” berarti terbuka relatif terhadap <m>A</m>, bukan harus
+        terbuka dalam ruang ambien <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-06">
+    <title>Subruang Berhingga dari Topologi Komplemen Berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\Z</m> bertopologi komplemen berhingga
+        <m>\tau_{FC}</m>, dan ambil
+        <m>A=\{0,19,37,5284\}</m>. Tentukan topologi subruang pada <m>A</m>
+        dan generalisasikan hasilnya untuk sebarang subruang berhingga tak
+        kosong dari <m>\Z</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-06-hint">
+      <p><em>Tahap 1.</em> Ambil sembarang <m>S\subseteq A</m>.</p>
+      <p><em>Tahap 2.</em> Himpunan <m>A\setminus S</m> berhingga; pertimbangkan himpunan ambien <m>O=\Z\setminus(A\setminus S)</m>.</p>
+      <p><em>Tahap 3.</em> Hitung <m>A\cap O</m> dan simpulkan apakah setiap subhimpunan <m>S</m> terbuka relatif.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-06-answer">
+      <p>
+        <m>\tau_A=\mathcal{P}(A)=\{S\mid S\subseteq A\}</m>, sehingga
+        topologi subruang pada <m>A</m> diskret. Secara umum, setiap subruang
+        berhingga tak kosong dari ruang komplemen berhingga adalah diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-06-solution">
+      <p>
+        Pilih sembarang <m>S\subseteq A</m>. Karena <m>A</m> berhingga,
+        <m>F=A\setminus S</m> juga berhingga. Himpunan
+        <m>O=\Z\setminus F</m> mempunyai komplemen berhingga, sehingga
+        <m>O\in\tau_{FC}</m>. Selanjutnya,
+        <me>
+          A\cap O=A\cap(\Z\setminus(A\setminus S))=S.
+        </me>
+        Jadi setiap subhimpunan <m>S</m> dari <m>A</m> terbuka dalam topologi
+        subruang. Dengan demikian <m>\tau_A=\mathcal{P}(A)</m>. Pembuktian
+        hanya menggunakan keberhinggaan <m>A</m>, sehingga berlaku bagi setiap
+        subruang berhingga tak kosong dari <m>\Z</m> bertopologi komplemen
+        berhingga.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-07">
+    <title>Subruang Tak Berhingga dari Topologi Komplemen Berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\Z</m> bertopologi komplemen berhingga
+        <m>\tau_{FC}</m>. Tentukan topologi subruang pada himpunan bilangan
+        bulat genap <m>A=2\Z</m>, lalu generalisasikan hasilnya untuk sebarang
+        subruang tak berhingga dari <m>\Z</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-07-hint">
+      <p><em>Tahap 1.</em> Jika <m>O=\Z\setminus F</m> dengan <m>F</m> berhingga, tulis <m>A\cap O</m> sebagai komplemen relatif di dalam <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Periksa bahwa komplemen relatif yang diperoleh selalu berhingga.</p>
+      <p><em>Tahap 3.</em> Untuk arah sebaliknya, mulai dengan <m>U\subseteq A</m> yang mempunyai komplemen berhingga dalam <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-07-answer">
+      <p>
+        Subruang <m>A=2\Z</m> mewarisi topologi komplemen berhingga:
+        himpunan terbukanya adalah <m>\emptyset</m> serta semua
+        <m>U\subseteq A</m> dengan <m>A\setminus U</m> berhingga. Hasil yang
+        sama berlaku untuk setiap subruang tak berhingga dari <m>\Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-07-solution">
+      <p>
+        Jika <m>O=\emptyset</m>, maka <m>A\cap O=\emptyset</m>. Jika
+        <m>O\ne\emptyset</m> terbuka dalam topologi komplemen berhingga,
+        tulis <m>O=\Z\setminus F</m> untuk suatu himpunan berhingga
+        <m>F\subseteq\Z</m>. Maka
+        <me>
+          A\cap O=A\setminus(A\cap F),
+        </me>
+        dan <m>A\cap F</m> berhingga. Jadi setiap himpunan terbuka relatif
+        yang tak kosong mempunyai komplemen berhingga dalam <m>A</m>.
+      </p>
+      <p>
+        Sebaliknya, misalkan <m>U\subseteq A</m> dan <m>A\setminus U</m>
+        berhingga. Ambil <m>F=A\setminus U</m> sebagai subhimpunan berhingga
+        dari <m>\Z</m>. Himpunan <m>O=\Z\setminus F</m> terbuka dalam
+        <m>\tau_{FC}</m>, dan <m>A\cap O=U</m>. Jadi topologi terinduksi pada
+        <m>A</m> tepat topologi komplemen berhingga. Tidak ada bagian argumen
+        yang khusus bagi bilangan genap selain ketakberhinggaan <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-08">
+    <title>Mendefinisikan Himpunan Tertutup Relatif</title>
+    <statement>
+      <p>
+        Misalkan <m>(A,\tau_A)</m> suatu subruang dari ruang topologi
+        <m>X</m>. Dengan menggunakan definisi himpunan tertutup melalui
+        komplemen, definisikan kapan suatu subhimpunan <m>C\subseteq A</m>
+        disebut <term>tertutup relatif</term> dalam <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-08-hint">
+      <p><em>Tahap 1.</em> Komplemen harus diambil terhadap ruang tempat keterbukaan diuji.</p>
+      <p><em>Tahap 2.</em> Ruang yang dimaksud sekarang adalah <m>A</m>, bukan <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Tuliskan syarat pada <m>A\setminus C</m> menggunakan <m>\tau_A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-08-answer">
+      <p>
+        Himpunan <m>C\subseteq A</m> tertutup relatif dalam <m>A</m> jika dan
+        hanya jika komplemen relatifnya <m>A\setminus C</m> berada dalam
+        <m>\tau_A</m>, yaitu terbuka relatif dalam <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-08-solution">
+      <p>
+        Definisi umum menyatakan bahwa suatu subhimpunan ruang topologi
+        tertutup jika komplemennya di dalam ruang tersebut terbuka. Karena
+        ruang yang sedang dipandang adalah <m>(A,\tau_A)</m>, komplemen
+        <m>C</m> bukan <m>X\setminus C</m>, melainkan
+        <m>A\setminus C</m>. Jadi
+        <me>
+          C\text{ tertutup relatif dalam }A
+          \quad\Longleftrightarrow\quad A\setminus C\in\tau_A.
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-09">
+    <title>Mencirikan Himpunan Tertutup Relatif</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> suatu subruang tak kosong dari ruang topologi
+        <m>X</m>. Buktikan bahwa <m>C\subseteq A</m> tertutup relatif dalam
+        <m>A</m> jika dan hanya jika terdapat himpunan tertutup
+        <m>F\subseteq X</m> sedemikian sehingga <m>C=A\cap F</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-09-hint">
+      <p><em>Tahap 1.</em> Jika <m>C</m> tertutup relatif, tulis <m>A\setminus C=A\cap O</m> untuk suatu <m>O</m> terbuka dalam <m>X</m>.</p>
+      <p><em>Tahap 2.</em> Ambil <m>F=X\setminus O</m> dan gunakan hukum De Morgan relatif terhadap <m>A</m>.</p>
+      <p><em>Tahap 3.</em> Untuk arah sebaliknya, mulai dari <m>C=A\cap F</m> dan periksa bahwa <m>A\setminus C</m> terbuka relatif.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-09-answer">
+      <p>
+        Pencirian tersebut benar. Komplemen relatif mengubah irisan dengan
+        himpunan terbuka ambien menjadi irisan dengan komplemen tertutupnya,
+        dan sebaliknya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-09-solution">
+      <p>
+        Andaikan <m>C</m> tertutup relatif dalam <m>A</m>. Maka
+        <m>A\setminus C</m> terbuka relatif, sehingga terdapat himpunan
+        terbuka <m>O</m> dalam <m>X</m> dengan
+        <m>A\setminus C=A\cap O</m>. Letakkan
+        <m>F=X\setminus O</m>. Himpunan <m>F</m> tertutup dalam <m>X</m>, dan
+        <me>
+          C=A\setminus(A\cap O)=A\cap(X\setminus O)=A\cap F.
+        </me>
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>C=A\cap F</m> untuk suatu himpunan tertutup
+        <m>F</m> dalam <m>X</m>. Karena <m>X\setminus F</m> terbuka dalam
+        <m>X</m>, berlaku
+        <me>
+          A\setminus C=A\setminus(A\cap F)=A\cap(X\setminus F),
+        </me>
+        yang terbuka relatif dalam <m>A</m>. Maka <m>C</m> tertutup relatif.
+        Kedua arah telah terbukti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-guide-10">
+    <title>Menentukan Calon Basis Subruang</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau)</m> suatu ruang topologi dengan basis
+        <m>\B</m>, dan misalkan <m>A</m> suatu subruang dari <m>X</m>.
+        Definisikan secara alami suatu koleksi <m>\B_A</m> yang menjadi calon
+        basis untuk topologi subruang pada <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-guide-10-hint">
+      <p><em>Tahap 1.</em> Himpunan terbuka relatif diperoleh dengan mengiriskan himpunan terbuka ambien dengan <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Ganti himpunan terbuka ambien umum oleh anggota basis <m>B\in\B</m>.</p>
+      <p><em>Tahap 3.</em> Kumpulkan semua irisan <m>B\cap A</m> tersebut dalam satu keluarga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-guide-10-answer">
+      <p>
+        Calon alaminya adalah
+        <me>
+          \B_A=\{B\cap A\mid B\in\B\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-guide-10-solution">
+      <p>
+        Karena setiap himpunan terbuka dalam <m>X</m> dibangun sebagai
+        gabungan anggota-anggota <m>\B</m>, irisan anggota basis dengan
+        <m>A</m> merupakan blok dasar alami bagi himpunan terbuka relatif.
+        Oleh sebab itu kita definisikan
+        <m>\B_A=\{B\cap A\mid B\in\B\}</m>. Irisan kosong tidak menimbulkan
+        masalah: jika muncul sebagai anggota koleksi, ia dapat dihapus tanpa
+        mengubah gabungan yang dihasilkan. Panduan berikutnya membuktikan
+        bahwa koleksi ini memang membangkitkan tepat topologi subruang.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch14-edition-note",
+  "id": "o003-c90-ch15-edition-note",
   "level": "1",
-  "url": "o003-c90-ch14-edition-note.html",
+  "url": "o003-c90-ch15-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat empat belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat lima belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
 },
 {
   "id": "sec_sets_intro",
@@ -4769,6 +4769,195 @@ var ptx_lunr_docs = [
   "number": "13",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawab benar jika pernyataan tersebut selalu benar. Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar, jawab salah dan berikan contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika merupakan fungsi kontinu antara ruang topologi dan , maka untuk setiap himpunan bagian terbuka dari , terbuka dalam .   Jika merupakan topologi komplemen hingga, maka yang memetakan ke bersifat kontinu.   Jika merupakan fungsi bijektif antara ruang topologi dan , dan untuk setiap himpunan bagian terbuka dari , terbuka dalam , maka merupakan homeomorfisme.   Jika dan merupakan ruang topologi dengan topologi diskret, dan jika merupakan bijeksi, maka ruang dan homeomorfik.   Misalkan suatu himpunan dan serta merupakan relasi ekuivalensi pada . Maka juga merupakan relasi ekuivalensi pada .   Misalkan suatu himpunan dan serta merupakan relasi ekuivalensi pada . Maka juga merupakan relasi ekuivalensi pada .  "
+},
+{
+  "id": "sec_sub",
+  "level": "1",
+  "url": "sec_sub.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Kita telah melihat bahwa suatu subhimpunan dari ruang metrik menjadi subruang dari ketika dibekali pembatasan metrik pada . Pada ruang topologi umum kita tidak memiliki metrik, sehingga pendekatan tersebut tidak dapat diterapkan dengan cara yang sama. Namun, kita telah membuktikan bahwa himpunan terbuka dalam subruang dari ruang metrik tepat berupa irisan himpunan terbuka dalam dengan . Gagasan ini dapat dialihkan ke ruang topologi.  Untuk menjadikan suatu subhimpunan dari ruang topologi sebagai ruang topologi, kita perlu mendefinisikan topologi pada .   Calon himpunan terbuka dalam suatu subruang.  Sebuah persegi panjang besar berlabel X memuat persegi panjang berarsir ungu berlabel A. Sebuah lingkaran putus-putus berlabel O beririsan dengan sisi kiri A; bagian irisannya dengan A menggambarkan himpunan O irisan A yang terbuka relatif dalam subruang A.     Misalkan suatu ruang topologi dan suatu subhimpunan tak kosong dari . Masuk akal untuk menggunakan himpunan terbuka dalam guna mendefinisikan himpunan terbuka dalam . Lebih khusus, kita dapat menganggap suatu subhimpunan dari terbuka dalam jika merupakan irisan dengan suatu himpunan terbuka dalam , seperti diilustrasikan dalam . Dengan gagasan ini, kita mendefinisikan sebagai .    Tunjukkan bahwa merupakan topologi pada . Hasil di atas menunjukkan bahwa setiap subhimpunan tak kosong dari suatu ruang topologi juga merupakan ruang topologi dengan topologi .    Pada setiap butir berikut, adalah ruang topologi dan merupakan topologi pada .   Misalkan dan . Perhatikan subhimpunan dan daftarkan himpunan terbuka dalam topologi subruang . Sekarang perhatikan . Apa nama topologi subruang pada subhimpunan dari ini?   Perhatikan dengan topologi indiskret. Apa saja himpunan terbuka dalam topologi subruang pada ? Sekarang generalisasikan hasilnya untuk sebarang himpunan tak kosong dalam topologi indiskret.   Misalkan dengan topologi diskret. Apa saja himpunan terbuka dalam topologi subruang pada ? Sekarang generalisasikan hasilnya untuk sebarang himpunan tak kosong dalam topologi diskret.   Misalkan dengan . Apa saja himpunan terbuka dalam subruang ? Apakah setiap himpunan terbuka dalam juga terbuka dalam ? Jelaskan.   Misalkan dengan topologi komplemen berhingga. Apa saja himpunan terbuka dalam topologi subruang pada ? Dapatkah Anda menggeneralisasikan hasil ini untuk topologi subruang pada sebarang subhimpunan berhingga dari ?   Misalkan dengan topologi komplemen berhingga. Apa saja himpunan terbuka dalam topologi subruang pada himpunan bilangan bulat genap? Dapatkah Anda menggeneralisasikan hasil ini untuk topologi subruang pada sebarang subhimpunan tak berhingga dari ?     subruang dari ruang topologi   Misalkan suatu ruang topologi. Suatu subruang dari adalah subhimpunan tak kosong dari yang dibekali topologi .    "
+},
+{
+  "id": "F_Subspace_open",
+  "level": "2",
+  "url": "sec_sub.html#F_Subspace_open",
+  "type": "Gambar",
+  "number": "15.1",
+  "title": "",
+  "body": " Calon himpunan terbuka dalam suatu subruang.  Sebuah persegi panjang besar berlabel X memuat persegi panjang berarsir ungu berlabel A. Sebuah lingkaran putus-putus berlabel O beririsan dengan sisi kiri A; bagian irisannya dengan A menggambarkan himpunan O irisan A yang terbuka relatif dalam subruang A.  "
+},
+{
+  "id": "exploration-15",
+  "level": "2",
+  "url": "sec_sub.html#exploration-15",
+  "type": "Aktivitas Persiapan",
+  "number": "15.1",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi dan suatu subhimpunan tak kosong dari . Masuk akal untuk menggunakan himpunan terbuka dalam guna mendefinisikan himpunan terbuka dalam . Lebih khusus, kita dapat menganggap suatu subhimpunan dari terbuka dalam jika merupakan irisan dengan suatu himpunan terbuka dalam , seperti diilustrasikan dalam . Dengan gagasan ini, kita mendefinisikan sebagai .    Tunjukkan bahwa merupakan topologi pada . Hasil di atas menunjukkan bahwa setiap subhimpunan tak kosong dari suatu ruang topologi juga merupakan ruang topologi dengan topologi .    Pada setiap butir berikut, adalah ruang topologi dan merupakan topologi pada .   Misalkan dan . Perhatikan subhimpunan dan daftarkan himpunan terbuka dalam topologi subruang . Sekarang perhatikan . Apa nama topologi subruang pada subhimpunan dari ini?   Perhatikan dengan topologi indiskret. Apa saja himpunan terbuka dalam topologi subruang pada ? Sekarang generalisasikan hasilnya untuk sebarang himpunan tak kosong dalam topologi indiskret.   Misalkan dengan topologi diskret. Apa saja himpunan terbuka dalam topologi subruang pada ? Sekarang generalisasikan hasilnya untuk sebarang himpunan tak kosong dalam topologi diskret.   Misalkan dengan . Apa saja himpunan terbuka dalam subruang ? Apakah setiap himpunan terbuka dalam juga terbuka dalam ? Jelaskan.   Misalkan dengan topologi komplemen berhingga. Apa saja himpunan terbuka dalam topologi subruang pada ? Dapatkah Anda menggeneralisasikan hasil ini untuk topologi subruang pada sebarang subhimpunan berhingga dari ?   Misalkan dengan topologi komplemen berhingga. Apa saja himpunan terbuka dalam topologi subruang pada himpunan bilangan bulat genap? Dapatkah Anda menggeneralisasikan hasil ini untuk topologi subruang pada sebarang subhimpunan tak berhingga dari ?   "
+},
+{
+  "id": "def_TS_subspace",
+  "level": "2",
+  "url": "sec_sub.html#def_TS_subspace",
+  "type": "Definisi",
+  "number": "15.2",
+  "title": "",
+  "body": " subruang dari ruang topologi   Misalkan suatu ruang topologi. Suatu subruang dari adalah subhimpunan tak kosong dari yang dibekali topologi .   "
+},
+{
+  "id": "sec_subspace_top",
+  "level": "1",
+  "url": "sec_subspace_top.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Topologi Subruang",
+  "body": " Topologi Subruang  topologi subruang  topologi terinduksi  topologi relatif  himpunan terbuka relatif  Dalam aktivitas pratinjau, kita melihat bahwa koleksi irisan antara himpunan-himpunan terbuka dalam suatu ruang topologi dan sebarang subhimpunan tak kosong dari membentuk suatu topologi pada . Dengan topologi tersebut, merupakan subruang dari .  Topologi dalam disebut topologi subruang , topologi terinduksi , atau topologi relatif . Dalam aktivitas pratinjau, kita melihat bahwa himpunan-himpunan yang terbuka dalam suatu subruang dari ruang topologi belum tentu terbuka dalam . Oleh karena itu, himpunan-himpunan dalam kita sebut terbuka relatif .  Setelah mendefinisikan himpunan terbuka relatif, selanjutnya kita dapat memikirkan cara mendefinisikan himpunan tertutup relatif.    Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari .   himpunan tertutup relatif  Ingat bahwa suatu subhimpunan dari ruang topologi tertutup jika komplemennya terbuka. Karena merupakan ruang topologi, bagaimana himpunan tertutup dalam didefinisikan? Himpunan semacam itu akan disebut tertutup relatif .    Ingat bahwa suatu subhimpunan dari terbuka relatif jika dan hanya jika untuk suatu subhimpunan terbuka dari . Berdasarkan hal ini, bagaimana menurut Anda hubungan antara himpunan tertutup relatif dalam dan suatu himpunan tertutup dalam ? Nyatakan dan buktikan sebuah teorema yang merumuskan hasil ini.    "
+},
+{
+  "id": "p-1856",
+  "level": "2",
+  "url": "sec_subspace_top.html#p-1856",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "topologi subruang topologi terinduksi topologi relatif terbuka relatif "
+},
+{
+  "id": "activity-75",
+  "level": "2",
+  "url": "sec_subspace_top.html#activity-75",
+  "type": "Kegiatan",
+  "number": "15.2",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi, dan misalkan suatu subhimpunan dari .   himpunan tertutup relatif  Ingat bahwa suatu subhimpunan dari ruang topologi tertutup jika komplemennya terbuka. Karena merupakan ruang topologi, bagaimana himpunan tertutup dalam didefinisikan? Himpunan semacam itu akan disebut tertutup relatif .    Ingat bahwa suatu subhimpunan dari terbuka relatif jika dan hanya jika untuk suatu subhimpunan terbuka dari . Berdasarkan hal ini, bagaimana menurut Anda hubungan antara himpunan tertutup relatif dalam dan suatu himpunan tertutup dalam ? Nyatakan dan buktikan sebuah teorema yang merumuskan hasil ini.   "
+},
+{
+  "id": "sec_base_sub",
+  "level": "1",
+  "url": "sec_base_sub.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Basis untuk Subruang",
+  "body": " Basis untuk Subruang  Ingat bahwa suatu basis untuk ruang topologi adalah koleksi himpunan yang membangkitkan semua himpunan terbuka melalui gabungan. Jika kita mempunyai basis untuk ruang topologi , dan jika merupakan subruang dari , kita dapat bertanya apakah basis dapat diperoleh dari secara alami.    Misalkan suatu ruang topologi dengan basis , dan misalkan suatu subruang dari .    Ada calon alami yang dapat dipertimbangkan sebagai basis untuk . Menurut Anda, bagaimana unsur-unsur dalam sebaiknya didefinisikan?    Ingat bahwa suatu himpunan merupakan basis untuk ruang topologi jika   Untuk setiap , terdapat suatu himpunan dalam yang memuat .    Jika merupakan unsur dari untuk tertentu, maka terdapat himpunan sedemikian sehingga .   Tunjukkan bahwa himpunan yang Anda peroleh pada (a) merupakan basis untuk topologi terinduksi pada .    "
+},
+{
+  "id": "activity-76",
+  "level": "2",
+  "url": "sec_base_sub.html#activity-76",
+  "type": "Kegiatan",
+  "number": "15.3",
+  "title": "",
+  "body": "  Misalkan suatu ruang topologi dengan basis , dan misalkan suatu subruang dari .    Ada calon alami yang dapat dipertimbangkan sebagai basis untuk . Menurut Anda, bagaimana unsur-unsur dalam sebaiknya didefinisikan?    Ingat bahwa suatu himpunan merupakan basis untuk ruang topologi jika   Untuk setiap , terdapat suatu himpunan dalam yang memuat .    Jika merupakan unsur dari untuk tertentu, maka terdapat himpunan sedemikian sehingga .   Tunjukkan bahwa himpunan yang Anda peroleh pada (a) merupakan basis untuk topologi terinduksi pada .   "
+},
+{
+  "id": "sec_open_int_rn",
+  "level": "1",
+  "url": "sec_open_int_rn.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Interval Terbuka dan <span class=\"process-math\">\\(\\R\\)<\/span>",
+  "body": " Interval Terbuka dan  Jika kita memandang homeomorfisme sebagai sesuatu yang memungkinkan kita meregangkan atau melengkungkan suatu ruang, masuk akal untuk membayangkan bahwa kita dapat meregangkan interval terbuka berbentuk tanpa batas ke kedua arah tanpa mengubah sifat himpunan-himpunan terbukanya. Dengan kata lain, kita patut menduga bahwa bertopologi standar homeomorfik dengan bertopologi subruang.    Misalkan dan bilangan real dengan . Untuk menunjukkan bahwa homeomorfik dengan , kita memerlukan bijeksi kontinu dari ke yang fungsi inversnya juga kontinu.    Pertama, kita tunjukkan bahwa dan homeomorfik dengan menggunakan topologi metrik Euklides. Definisikan dengan .   Jelaskan mengapa memetakan ke .   Jelaskan mengapa merupakan injeksi.   Jelaskan mengapa merupakan surjeksi.   Jelaskan mengapa dan kontinu.   Gunakan suatu hasil dari kalkulus.    Hasil dari (a) adalah bahwa dan merupakan ruang-ruang yang homeomorfik. Untuk melengkapi argumen bahwa homeomorfik dengan , definisikan fungsi dan jelaskan mengapa fungsi yang Anda peroleh merupakan homeomorfisme.    Dalam , Anda diminta menunjukkan bahwa juga homeomorfik dengan sebarang interval berbentuk atau . Selanjutnya kita akan menentukan apakah homeomorfik dengan interval berbentuk , , , atau .  "
+},
+{
+  "id": "activity-77",
+  "level": "2",
+  "url": "sec_open_int_rn.html#activity-77",
+  "type": "Kegiatan",
+  "number": "15.4",
+  "title": "",
+  "body": "  Misalkan dan bilangan real dengan . Untuk menunjukkan bahwa homeomorfik dengan , kita memerlukan bijeksi kontinu dari ke yang fungsi inversnya juga kontinu.    Pertama, kita tunjukkan bahwa dan homeomorfik dengan menggunakan topologi metrik Euklides. Definisikan dengan .   Jelaskan mengapa memetakan ke .   Jelaskan mengapa merupakan injeksi.   Jelaskan mengapa merupakan surjeksi.   Jelaskan mengapa dan kontinu.   Gunakan suatu hasil dari kalkulus.    Hasil dari (a) adalah bahwa dan merupakan ruang-ruang yang homeomorfik. Untuk melengkapi argumen bahwa homeomorfik dengan , definisikan fungsi dan jelaskan mengapa fungsi yang Anda peroleh merupakan homeomorfisme.   "
+},
+{
+  "id": "sec_sub_summ",
+  "level": "1",
+  "url": "sec_sub_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan penting yang telah kita bahas dalam bagian ini meliputi hal-hal berikut.   Subruang dari suatu ruang topologi adalah sebarang subhimpunan tak kosong dari ruang topologi tersebut yang dilengkapi dengan topologi subruang.    Subhimpunan terbuka dalam topologi subruang pada suatu subhimpunan dari ruang topologi adalah sebarang himpunan berbentuk , dengan suatu himpunan terbuka dalam .    Himpunan terbuka relatif adalah himpunan terbuka dalam suatu topologi subruang. Himpunan tertutup relatif adalah komplemen dari himpunan terbuka relatif dalam topologi subruang. Dengan kata lain, suatu himpunan tertutup relatif dalam subruang dari ruang topologi berbentuk , dengan suatu himpunan tertutup dalam .    Ruang topologi dengan topologi standar homeomorfik dengan setiap interval terbuka, dan juga dengan interval terbuka berbentuk atau untuk sebarang bilangan real dan .     "
+},
+{
+  "id": "sec_sub_exer",
+  "level": "1",
+  "url": "sec_sub_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": "  Misalkan dan ruang topologi dan suatu fungsi kontinu. Jika adalah subruang dari , buktikan bahwa pembatasan juga kontinu.    Misalkan suatu ruang topologi, suatu subruang dari , dan suatu subruang dari . Tunjukkan bahwa topologi subruang yang diwarisi dari sama dengan topologi subruang yang diwarisi dari .    Misalkan suatu subruang dari ruang topologi dan suatu subhimpunan dari .   Buktikan bahwa suatu titik dalam merupakan titik limit dari dalam topologi subruang pada jika dan hanya jika merupakan titik limit dari dalam topologi pada .   Buktikan bahwa tutupan dalam topologi subruang pada sama dengan , dengan tutupan dalam .    Tunjukkan bahwa , dengan topologi standar, homeomorfik dengan setiap interval berbentuk atau .    Misalkan suatu ruang topologi.   Misalkan suatu subhimpunan terbuka dari . Buktikan bahwa suatu subhimpunan dari terbuka dalam jika dan hanya jika terbuka dalam .   Misalkan suatu subhimpunan tertutup dari . Buktikan bahwa suatu subhimpunan dari tertutup dalam jika dan hanya jika tertutup dalam .    Suatu sifat ruang topologi disebut herediter jika sifat tersebut diwarisi oleh setiap subruang. Pernyataan formalnya adalah sebagai berikut. sifat herediter   Suatu sifat dari ruang topologi disebut herediter jika setiap subruang dari juga memiliki sifat .  Tunjukkan bahwa sifat , , dan bersifat herediter. (Aksioma separasi terdapat dalam .) Fakta bahwa tidak herediter agak sulit dibuktikan. Salah satu contohnya adalah papan Tychonoff (yang normal) dengan papan Tychonoff terhapus (yang tidak normal) sebagai subruang. Pembaca yang berminat dapat merujuk Counterexamples in Topology (2nd ed.) , karya Lynn Arthur Steen dan J. Arthur Seebach, Jr., Dover Publications, 1978.    Misalkan suatu homeomorfisme dari ruang topologi ke ruang topologi . Misalkan . Apakah subruang dari pasti homeomorfik dengan subruang dari ? Buktikan dugaan Anda.    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang memperlihatkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika memiliki topologi diskret, maka setiap subruang dari memiliki topologi diskret.   Jika adalah ruang topologi yang tidak memiliki topologi diskret, maka tidak ada subruang dari yang memiliki topologi diskret.   Jika adalah fungsi kontinu antara ruang topologi dan , dan merupakan ruang Hausdorff, maka subruang dari merupakan ruang Hausdorff.   Jika adalah subruang dari ruang topologi dan merupakan subhimpunan dari , maka tutupan dalam topologi subruang pada sama dengan , dengan tutupan dalam .   Jika adalah subruang dari ruang topologi dan merupakan subhimpunan dari , maka interior dalam topologi subruang pada sama dengan , dengan interior dalam .   "
+},
+{
+  "id": "exercise-172",
+  "level": "2",
+  "url": "sec_sub_exer.html#exercise-172",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Misalkan dan ruang topologi dan suatu fungsi kontinu. Jika adalah subruang dari , buktikan bahwa pembatasan juga kontinu.  "
+},
+{
+  "id": "exercise-173",
+  "level": "2",
+  "url": "sec_sub_exer.html#exercise-173",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Misalkan suatu ruang topologi, suatu subruang dari , dan suatu subruang dari . Tunjukkan bahwa topologi subruang yang diwarisi dari sama dengan topologi subruang yang diwarisi dari .  "
+},
+{
+  "id": "exercise-174",
+  "level": "2",
+  "url": "sec_sub_exer.html#exercise-174",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan suatu subruang dari ruang topologi dan suatu subhimpunan dari .   Buktikan bahwa suatu titik dalam merupakan titik limit dari dalam topologi subruang pada jika dan hanya jika merupakan titik limit dari dalam topologi pada .   Buktikan bahwa tutupan dalam topologi subruang pada sama dengan , dengan tutupan dalam .  "
+},
+{
+  "id": "ex_R_intervals",
+  "level": "2",
+  "url": "sec_sub_exer.html#ex_R_intervals",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Tunjukkan bahwa , dengan topologi standar, homeomorfik dengan setiap interval berbentuk atau .  "
+},
+{
+  "id": "exercise-176",
+  "level": "2",
+  "url": "sec_sub_exer.html#exercise-176",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Misalkan suatu ruang topologi.   Misalkan suatu subhimpunan terbuka dari . Buktikan bahwa suatu subhimpunan dari terbuka dalam jika dan hanya jika terbuka dalam .   Misalkan suatu subhimpunan tertutup dari . Buktikan bahwa suatu subhimpunan dari tertutup dalam jika dan hanya jika tertutup dalam .  "
+},
+{
+  "id": "exercise-177",
+  "level": "2",
+  "url": "sec_sub_exer.html#exercise-177",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Suatu sifat ruang topologi disebut herediter jika sifat tersebut diwarisi oleh setiap subruang. Pernyataan formalnya adalah sebagai berikut. sifat herediter   Suatu sifat dari ruang topologi disebut herediter jika setiap subruang dari juga memiliki sifat .  Tunjukkan bahwa sifat , , dan bersifat herediter. (Aksioma separasi terdapat dalam .) Fakta bahwa tidak herediter agak sulit dibuktikan. Salah satu contohnya adalah papan Tychonoff (yang normal) dengan papan Tychonoff terhapus (yang tidak normal) sebagai subruang. Pembaca yang berminat dapat merujuk Counterexamples in Topology (2nd ed.) , karya Lynn Arthur Steen dan J. Arthur Seebach, Jr., Dover Publications, 1978.  "
+},
+{
+  "id": "exercise-178",
+  "level": "2",
+  "url": "sec_sub_exer.html#exercise-178",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Misalkan suatu homeomorfisme dari ruang topologi ke ruang topologi . Misalkan . Apakah subruang dari pasti homeomorfik dengan subruang dari ? Buktikan dugaan Anda.  "
+},
+{
+  "id": "exercise-179",
+  "level": "2",
+  "url": "sec_sub_exer.html#exercise-179",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan contoh konkret yang memperlihatkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika memiliki topologi diskret, maka setiap subruang dari memiliki topologi diskret.   Jika adalah ruang topologi yang tidak memiliki topologi diskret, maka tidak ada subruang dari yang memiliki topologi diskret.   Jika adalah fungsi kontinu antara ruang topologi dan , dan merupakan ruang Hausdorff, maka subruang dari merupakan ruang Hausdorff.   Jika adalah subruang dari ruang topologi dan merupakan subhimpunan dari , maka tutupan dalam topologi subruang pada sama dengan , dengan tutupan dalam .   Jika adalah subruang dari ruang topologi dan merupakan subhimpunan dari , maka interior dalam topologi subruang pada sama dengan , dengan interior dalam .  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -12196,6 +12385,393 @@ var ptx_lunr_docs = [
   "body": "Ruang terbatas yang homeomorfik dengan garis real  Buktikan bahwa fungsi merupakan homeomorfisme dengan topologi Euklides. Tulis inversnya secara eksplisit. Jelaskan mengapa contoh ini menunjukkan bahwa “terbatas sebagai himpunan bagian dari dengan metrik Euklides” bukan invarian topologis.   Tahap 1. Peta linear memadankan dengan .  Tahap 2. Fungsi tangen kontinu dan naik ketat pada interval tersebut.  Tahap 3. Gunakan fungsi arctangen untuk menulis invers kontinu.   Fungsi bijektif dan kontinu, dengan invers yang kontinu. Jadi homeomorfik dengan , walaupun yang pertama terbatas dan yang kedua tidak terbatas dalam metrik Euklides.   Peta merupakan bijeksi kontinu dari ke , dengan invers kontinu . Pada interval , fungsi tangen kontinu, naik ketat, dan nilainya menuju serta di kedua ujung. Karena itu tangen merupakan bijeksi ke . Komposisinya dengan adalah , sehingga bijektif dan kontinu.  Menyelesaikan memberi Fungsi arctangen kontinu pada , maka invers tersebut kontinu. Jadi homeomorfisme. Himpunan terbatas dalam metrik Euklides, sedangkan tidak. Homeomorfisme tidak mempertahankan ukuran jarak atau kedudukan suatu ruang sebagai himpunan bagian dari ruang metrik luar. Maka keterbatasan Euklides semacam itu bukan sifat topologis.  "
 },
 {
+  "id": "o003-c90-ch15-source-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch15-source-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Subruang dan Topologi Relatif I",
+  "body": " Panduan Belajar Mandiri: Subruang dan Topologi Relatif I  Sepuluh panduan ini mendampingi tugas-tugas awal Bab 15 tentang topologi subruang, contoh-contoh berhingga, keterbukaan relatif, dan basis terinduksi. Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap.  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.  Membuktikan Aksioma Topologi Subruang  Misalkan suatu ruang topologi dan suatu subhimpunan tak kosong dari . Definisikan Tunjukkan bahwa merupakan topologi pada .   Catatan konvensi. Buku sumber mensyaratkan subruang tidak kosong. Banyak konvensi modern juga mengizinkan sebagai subruang, dengan topologi ; panduan ini tetap mengikuti konvensi tak kosong dari buku sumber.   Tahap 1. Nyatakan dan sebagai irisan dengan anggota .  Tahap 2. Untuk , distribusikan terhadap gabungan .  Tahap 3. Lakukan hal serupa untuk irisan berhingga dan gunakan aksioma topologi pada .   Ya. Himpunan dan berada dalam , sedangkan gabungan sebarang dan irisan berhingga anggota kembali berbentuk dengan .   Karena , berlaku dan . Selanjutnya, misalkan untuk setiap . Pilih sehingga . Hukum distributif memberi Karena , gabungan tersebut berada dalam .  Untuk irisan, jika dan dengan , maka Karena , berlaku . Argumen yang sama, atau induksi, menangani setiap irisan berhingga. Jadi ketiga aksioma topologi terpenuhi dan merupakan topologi pada .   Dua Topologi Subruang Berhingga  Misalkan dan . Untuk , daftarkan anggota topologi subruang . Kemudian ambil ; tentukan dan beri nama topologi tersebut.   Tahap 1. Irisankan setiap anggota dengan , lalu hapus hasil yang berulang.  Tahap 2. Ulangi prosedur yang sama untuk .  Tahap 3. Bandingkan dengan himpunan kuasa .   Diperoleh dan . Jadi adalah topologi diskret pada .   Untuk , irisan berturut-turut dari dengan adalah . Setelah menghapus pengulangan, diperoleh .  Untuk , irisan-irisan yang berbeda adalah . Keempatnya tepat seluruh subhimpunan dari himpunan beranggota dua . Dengan demikian , yaitu topologi diskret.   Subruang dari Topologi Indiskret  Ambil dengan topologi indiskret . Tentukan topologi subruang pada , lalu generalisasikan hasilnya untuk sebarang subhimpunan tak kosong dari suatu ruang bertopologi indiskret.   Tahap 1. Hanya ada dua himpunan terbuka ambien yang perlu diiriskan dengan .  Tahap 2. Hitung dan .  Tahap 3. Ganti oleh subhimpunan tak kosong sebarang .   Topologi subruang pada adalah . Secara umum, setiap subruang tak kosong dari ruang indiskret mewarisi topologi indiskret .   Menurut definisi, anggota topologi subruang adalah irisan subruang dengan anggota topologi ambien. Dalam kasus ini, dan ; tidak ada hasil lain. Jadi topologinya .  Jika ruang umum bertopologi indiskret dan adalah subruang tak kosong, satu-satunya irisan yang mungkin ialah dan . Karena itu topologi subruang pada juga indiskret.   Subruang dari Topologi Diskret  Misalkan bertopologi diskret. Tentukan topologi subruang pada , lalu generalisasikan hasilnya untuk sebarang subruang tak kosong dari ruang diskret.   Tahap 1. Dalam topologi diskret, setiap subhimpunan dari terbuka.  Tahap 2. Untuk suatu , pilih himpunan terbuka ambien yang irisannya dengan tepat .  Tahap 3. Daftarkan seluruh delapan subhimpunan dari .   Topologi subruangnya adalah Setiap subruang tak kosong dari ruang diskret juga diskret.   Ambil sembarang . Karena diskret, himpunan sendiri terbuka sebagai subhimpunan dari . Selain itu, . Jadi setiap subhimpunan dari berada dalam . Sebaliknya, setiap anggota tentu merupakan subhimpunan dari . Maka , yang untuk memberi delapan himpunan yang tercantum pada jawaban. Argumen tersebut berlaku untuk setiap subruang tak kosong dari ruang diskret.   Keterbukaan Relatif Tidak Menjamin Keterbukaan Ambien  Misalkan dengan Untuk subruang , tentukan semua himpunan terbuka dalam . Apakah setiap himpunan tersebut juga terbuka dalam ? Jelaskan.   Tahap 1. Hitung bagi keenam anggota .  Tahap 2. Hapus hasil irisan yang berulang.  Tahap 3. Bandingkan hasil yang tersisa satu per satu dengan daftar asli .   Diperoleh . Tidak semuanya terbuka dalam : dan bukan anggota .   Irisan dengan anggota-anggota berturut-turut adalah . Karena itu himpunan terbuka yang berbeda dalam subruang tepat . Dua yang pertama juga terbuka dalam , sedangkan dan tidak tercantum dalam . Contoh ini menunjukkan bahwa “terbuka dalam ” berarti terbuka relatif terhadap , bukan harus terbuka dalam ruang ambien .   Subruang Berhingga dari Topologi Komplemen Berhingga  Misalkan bertopologi komplemen berhingga , dan ambil . Tentukan topologi subruang pada dan generalisasikan hasilnya untuk sebarang subruang berhingga tak kosong dari .   Tahap 1. Ambil sembarang .  Tahap 2. Himpunan berhingga; pertimbangkan himpunan ambien .  Tahap 3. Hitung dan simpulkan apakah setiap subhimpunan terbuka relatif.    , sehingga topologi subruang pada diskret. Secara umum, setiap subruang berhingga tak kosong dari ruang komplemen berhingga adalah diskret.   Pilih sembarang . Karena berhingga, juga berhingga. Himpunan mempunyai komplemen berhingga, sehingga . Selanjutnya, Jadi setiap subhimpunan dari terbuka dalam topologi subruang. Dengan demikian . Pembuktian hanya menggunakan keberhinggaan , sehingga berlaku bagi setiap subruang berhingga tak kosong dari bertopologi komplemen berhingga.   Subruang Tak Berhingga dari Topologi Komplemen Berhingga  Misalkan bertopologi komplemen berhingga . Tentukan topologi subruang pada himpunan bilangan bulat genap , lalu generalisasikan hasilnya untuk sebarang subruang tak berhingga dari .   Tahap 1. Jika dengan berhingga, tulis sebagai komplemen relatif di dalam .  Tahap 2. Periksa bahwa komplemen relatif yang diperoleh selalu berhingga.  Tahap 3. Untuk arah sebaliknya, mulai dengan yang mempunyai komplemen berhingga dalam .   Subruang mewarisi topologi komplemen berhingga: himpunan terbukanya adalah serta semua dengan berhingga. Hasil yang sama berlaku untuk setiap subruang tak berhingga dari .   Jika , maka . Jika terbuka dalam topologi komplemen berhingga, tulis untuk suatu himpunan berhingga . Maka dan berhingga. Jadi setiap himpunan terbuka relatif yang tak kosong mempunyai komplemen berhingga dalam .  Sebaliknya, misalkan dan berhingga. Ambil sebagai subhimpunan berhingga dari . Himpunan terbuka dalam , dan . Jadi topologi terinduksi pada tepat topologi komplemen berhingga. Tidak ada bagian argumen yang khusus bagi bilangan genap selain ketakberhinggaan .   Mendefinisikan Himpunan Tertutup Relatif  Misalkan suatu subruang dari ruang topologi . Dengan menggunakan definisi himpunan tertutup melalui komplemen, definisikan kapan suatu subhimpunan disebut tertutup relatif dalam .   Tahap 1. Komplemen harus diambil terhadap ruang tempat keterbukaan diuji.  Tahap 2. Ruang yang dimaksud sekarang adalah , bukan .  Tahap 3. Tuliskan syarat pada menggunakan .   Himpunan tertutup relatif dalam jika dan hanya jika komplemen relatifnya berada dalam , yaitu terbuka relatif dalam .   Definisi umum menyatakan bahwa suatu subhimpunan ruang topologi tertutup jika komplemennya di dalam ruang tersebut terbuka. Karena ruang yang sedang dipandang adalah , komplemen bukan , melainkan . Jadi    Mencirikan Himpunan Tertutup Relatif  Misalkan suatu subruang tak kosong dari ruang topologi . Buktikan bahwa tertutup relatif dalam jika dan hanya jika terdapat himpunan tertutup sedemikian sehingga .   Tahap 1. Jika tertutup relatif, tulis untuk suatu terbuka dalam .  Tahap 2. Ambil dan gunakan hukum De Morgan relatif terhadap .  Tahap 3. Untuk arah sebaliknya, mulai dari dan periksa bahwa terbuka relatif.   Pencirian tersebut benar. Komplemen relatif mengubah irisan dengan himpunan terbuka ambien menjadi irisan dengan komplemen tertutupnya, dan sebaliknya.   Andaikan tertutup relatif dalam . Maka terbuka relatif, sehingga terdapat himpunan terbuka dalam dengan . Letakkan . Himpunan tertutup dalam , dan   Sebaliknya, andaikan untuk suatu himpunan tertutup dalam . Karena terbuka dalam , berlaku yang terbuka relatif dalam . Maka tertutup relatif. Kedua arah telah terbukti.   Menentukan Calon Basis Subruang  Misalkan suatu ruang topologi dengan basis , dan misalkan suatu subruang dari . Definisikan secara alami suatu koleksi yang menjadi calon basis untuk topologi subruang pada .   Tahap 1. Himpunan terbuka relatif diperoleh dengan mengiriskan himpunan terbuka ambien dengan .  Tahap 2. Ganti himpunan terbuka ambien umum oleh anggota basis .  Tahap 3. Kumpulkan semua irisan tersebut dalam satu keluarga.   Calon alaminya adalah    Karena setiap himpunan terbuka dalam dibangun sebagai gabungan anggota-anggota , irisan anggota basis dengan merupakan blok dasar alami bagi himpunan terbuka relatif. Oleh sebab itu kita definisikan . Irisan kosong tidak menimbulkan masalah: jika muncul sebagai anggota koleksi, ia dapat dihapus tanpa mengubah gabungan yang dihasilkan. Panduan berikutnya membuktikan bahwa koleksi ini memang membangkitkan tepat topologi subruang.   "
+},
+{
+  "id": "o003-c90-ch15-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-01",
+  "type": "Pemeriksaan",
+  "number": "O.1",
+  "title": "Membuktikan Aksioma Topologi Subruang.",
+  "body": "Membuktikan Aksioma Topologi Subruang  Misalkan suatu ruang topologi dan suatu subhimpunan tak kosong dari . Definisikan Tunjukkan bahwa merupakan topologi pada .   Catatan konvensi. Buku sumber mensyaratkan subruang tidak kosong. Banyak konvensi modern juga mengizinkan sebagai subruang, dengan topologi ; panduan ini tetap mengikuti konvensi tak kosong dari buku sumber.   Tahap 1. Nyatakan dan sebagai irisan dengan anggota .  Tahap 2. Untuk , distribusikan terhadap gabungan .  Tahap 3. Lakukan hal serupa untuk irisan berhingga dan gunakan aksioma topologi pada .   Ya. Himpunan dan berada dalam , sedangkan gabungan sebarang dan irisan berhingga anggota kembali berbentuk dengan .   Karena , berlaku dan . Selanjutnya, misalkan untuk setiap . Pilih sehingga . Hukum distributif memberi Karena , gabungan tersebut berada dalam .  Untuk irisan, jika dan dengan , maka Karena , berlaku . Argumen yang sama, atau induksi, menangani setiap irisan berhingga. Jadi ketiga aksioma topologi terpenuhi dan merupakan topologi pada .  "
+},
+{
+  "id": "o003-c90-ch15-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-02",
+  "type": "Pemeriksaan",
+  "number": "O.2",
+  "title": "Dua Topologi Subruang Berhingga.",
+  "body": "Dua Topologi Subruang Berhingga  Misalkan dan . Untuk , daftarkan anggota topologi subruang . Kemudian ambil ; tentukan dan beri nama topologi tersebut.   Tahap 1. Irisankan setiap anggota dengan , lalu hapus hasil yang berulang.  Tahap 2. Ulangi prosedur yang sama untuk .  Tahap 3. Bandingkan dengan himpunan kuasa .   Diperoleh dan . Jadi adalah topologi diskret pada .   Untuk , irisan berturut-turut dari dengan adalah . Setelah menghapus pengulangan, diperoleh .  Untuk , irisan-irisan yang berbeda adalah . Keempatnya tepat seluruh subhimpunan dari himpunan beranggota dua . Dengan demikian , yaitu topologi diskret.  "
+},
+{
+  "id": "o003-c90-ch15-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-03",
+  "type": "Pemeriksaan",
+  "number": "O.3",
+  "title": "Subruang dari Topologi Indiskret.",
+  "body": "Subruang dari Topologi Indiskret  Ambil dengan topologi indiskret . Tentukan topologi subruang pada , lalu generalisasikan hasilnya untuk sebarang subhimpunan tak kosong dari suatu ruang bertopologi indiskret.   Tahap 1. Hanya ada dua himpunan terbuka ambien yang perlu diiriskan dengan .  Tahap 2. Hitung dan .  Tahap 3. Ganti oleh subhimpunan tak kosong sebarang .   Topologi subruang pada adalah . Secara umum, setiap subruang tak kosong dari ruang indiskret mewarisi topologi indiskret .   Menurut definisi, anggota topologi subruang adalah irisan subruang dengan anggota topologi ambien. Dalam kasus ini, dan ; tidak ada hasil lain. Jadi topologinya .  Jika ruang umum bertopologi indiskret dan adalah subruang tak kosong, satu-satunya irisan yang mungkin ialah dan . Karena itu topologi subruang pada juga indiskret.  "
+},
+{
+  "id": "o003-c90-ch15-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-04",
+  "type": "Pemeriksaan",
+  "number": "O.4",
+  "title": "Subruang dari Topologi Diskret.",
+  "body": "Subruang dari Topologi Diskret  Misalkan bertopologi diskret. Tentukan topologi subruang pada , lalu generalisasikan hasilnya untuk sebarang subruang tak kosong dari ruang diskret.   Tahap 1. Dalam topologi diskret, setiap subhimpunan dari terbuka.  Tahap 2. Untuk suatu , pilih himpunan terbuka ambien yang irisannya dengan tepat .  Tahap 3. Daftarkan seluruh delapan subhimpunan dari .   Topologi subruangnya adalah Setiap subruang tak kosong dari ruang diskret juga diskret.   Ambil sembarang . Karena diskret, himpunan sendiri terbuka sebagai subhimpunan dari . Selain itu, . Jadi setiap subhimpunan dari berada dalam . Sebaliknya, setiap anggota tentu merupakan subhimpunan dari . Maka , yang untuk memberi delapan himpunan yang tercantum pada jawaban. Argumen tersebut berlaku untuk setiap subruang tak kosong dari ruang diskret.  "
+},
+{
+  "id": "o003-c90-ch15-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-05",
+  "type": "Pemeriksaan",
+  "number": "O.5",
+  "title": "Keterbukaan Relatif Tidak Menjamin Keterbukaan Ambien.",
+  "body": "Keterbukaan Relatif Tidak Menjamin Keterbukaan Ambien  Misalkan dengan Untuk subruang , tentukan semua himpunan terbuka dalam . Apakah setiap himpunan tersebut juga terbuka dalam ? Jelaskan.   Tahap 1. Hitung bagi keenam anggota .  Tahap 2. Hapus hasil irisan yang berulang.  Tahap 3. Bandingkan hasil yang tersisa satu per satu dengan daftar asli .   Diperoleh . Tidak semuanya terbuka dalam : dan bukan anggota .   Irisan dengan anggota-anggota berturut-turut adalah . Karena itu himpunan terbuka yang berbeda dalam subruang tepat . Dua yang pertama juga terbuka dalam , sedangkan dan tidak tercantum dalam . Contoh ini menunjukkan bahwa “terbuka dalam ” berarti terbuka relatif terhadap , bukan harus terbuka dalam ruang ambien .  "
+},
+{
+  "id": "o003-c90-ch15-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-06",
+  "type": "Pemeriksaan",
+  "number": "O.6",
+  "title": "Subruang Berhingga dari Topologi Komplemen Berhingga.",
+  "body": "Subruang Berhingga dari Topologi Komplemen Berhingga  Misalkan bertopologi komplemen berhingga , dan ambil . Tentukan topologi subruang pada dan generalisasikan hasilnya untuk sebarang subruang berhingga tak kosong dari .   Tahap 1. Ambil sembarang .  Tahap 2. Himpunan berhingga; pertimbangkan himpunan ambien .  Tahap 3. Hitung dan simpulkan apakah setiap subhimpunan terbuka relatif.    , sehingga topologi subruang pada diskret. Secara umum, setiap subruang berhingga tak kosong dari ruang komplemen berhingga adalah diskret.   Pilih sembarang . Karena berhingga, juga berhingga. Himpunan mempunyai komplemen berhingga, sehingga . Selanjutnya, Jadi setiap subhimpunan dari terbuka dalam topologi subruang. Dengan demikian . Pembuktian hanya menggunakan keberhinggaan , sehingga berlaku bagi setiap subruang berhingga tak kosong dari bertopologi komplemen berhingga.  "
+},
+{
+  "id": "o003-c90-ch15-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-07",
+  "type": "Pemeriksaan",
+  "number": "O.7",
+  "title": "Subruang Tak Berhingga dari Topologi Komplemen Berhingga.",
+  "body": "Subruang Tak Berhingga dari Topologi Komplemen Berhingga  Misalkan bertopologi komplemen berhingga . Tentukan topologi subruang pada himpunan bilangan bulat genap , lalu generalisasikan hasilnya untuk sebarang subruang tak berhingga dari .   Tahap 1. Jika dengan berhingga, tulis sebagai komplemen relatif di dalam .  Tahap 2. Periksa bahwa komplemen relatif yang diperoleh selalu berhingga.  Tahap 3. Untuk arah sebaliknya, mulai dengan yang mempunyai komplemen berhingga dalam .   Subruang mewarisi topologi komplemen berhingga: himpunan terbukanya adalah serta semua dengan berhingga. Hasil yang sama berlaku untuk setiap subruang tak berhingga dari .   Jika , maka . Jika terbuka dalam topologi komplemen berhingga, tulis untuk suatu himpunan berhingga . Maka dan berhingga. Jadi setiap himpunan terbuka relatif yang tak kosong mempunyai komplemen berhingga dalam .  Sebaliknya, misalkan dan berhingga. Ambil sebagai subhimpunan berhingga dari . Himpunan terbuka dalam , dan . Jadi topologi terinduksi pada tepat topologi komplemen berhingga. Tidak ada bagian argumen yang khusus bagi bilangan genap selain ketakberhinggaan .  "
+},
+{
+  "id": "o003-c90-ch15-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-08",
+  "type": "Pemeriksaan",
+  "number": "O.8",
+  "title": "Mendefinisikan Himpunan Tertutup Relatif.",
+  "body": "Mendefinisikan Himpunan Tertutup Relatif  Misalkan suatu subruang dari ruang topologi . Dengan menggunakan definisi himpunan tertutup melalui komplemen, definisikan kapan suatu subhimpunan disebut tertutup relatif dalam .   Tahap 1. Komplemen harus diambil terhadap ruang tempat keterbukaan diuji.  Tahap 2. Ruang yang dimaksud sekarang adalah , bukan .  Tahap 3. Tuliskan syarat pada menggunakan .   Himpunan tertutup relatif dalam jika dan hanya jika komplemen relatifnya berada dalam , yaitu terbuka relatif dalam .   Definisi umum menyatakan bahwa suatu subhimpunan ruang topologi tertutup jika komplemennya di dalam ruang tersebut terbuka. Karena ruang yang sedang dipandang adalah , komplemen bukan , melainkan . Jadi   "
+},
+{
+  "id": "o003-c90-ch15-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-09",
+  "type": "Pemeriksaan",
+  "number": "O.9",
+  "title": "Mencirikan Himpunan Tertutup Relatif.",
+  "body": "Mencirikan Himpunan Tertutup Relatif  Misalkan suatu subruang tak kosong dari ruang topologi . Buktikan bahwa tertutup relatif dalam jika dan hanya jika terdapat himpunan tertutup sedemikian sehingga .   Tahap 1. Jika tertutup relatif, tulis untuk suatu terbuka dalam .  Tahap 2. Ambil dan gunakan hukum De Morgan relatif terhadap .  Tahap 3. Untuk arah sebaliknya, mulai dari dan periksa bahwa terbuka relatif.   Pencirian tersebut benar. Komplemen relatif mengubah irisan dengan himpunan terbuka ambien menjadi irisan dengan komplemen tertutupnya, dan sebaliknya.   Andaikan tertutup relatif dalam . Maka terbuka relatif, sehingga terdapat himpunan terbuka dalam dengan . Letakkan . Himpunan tertutup dalam , dan   Sebaliknya, andaikan untuk suatu himpunan tertutup dalam . Karena terbuka dalam , berlaku yang terbuka relatif dalam . Maka tertutup relatif. Kedua arah telah terbukti.  "
+},
+{
+  "id": "o003-c90-ch15-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-a.html#o003-c90-ch15-guide-10",
+  "type": "Pemeriksaan",
+  "number": "O.10",
+  "title": "Menentukan Calon Basis Subruang.",
+  "body": "Menentukan Calon Basis Subruang  Misalkan suatu ruang topologi dengan basis , dan misalkan suatu subruang dari . Definisikan secara alami suatu koleksi yang menjadi calon basis untuk topologi subruang pada .   Tahap 1. Himpunan terbuka relatif diperoleh dengan mengiriskan himpunan terbuka ambien dengan .  Tahap 2. Ganti himpunan terbuka ambien umum oleh anggota basis .  Tahap 3. Kumpulkan semua irisan tersebut dalam satu keluarga.   Calon alaminya adalah    Karena setiap himpunan terbuka dalam dibangun sebagai gabungan anggota-anggota , irisan anggota basis dengan merupakan blok dasar alami bagi himpunan terbuka relatif. Oleh sebab itu kita definisikan . Irisan kosong tidak menimbulkan masalah: jika muncul sebagai anggota koleksi, ia dapat dihapus tanpa mengubah gabungan yang dihasilkan. Panduan berikutnya membuktikan bahwa koleksi ini memang membangkitkan tepat topologi subruang.  "
+},
+{
+  "id": "o003-c90-ch15-source-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch15-source-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Basis Subruang dan Interval Terbuka",
+  "body": " Panduan Belajar Mandiri: Basis Subruang dan Interval Terbuka  Enam panduan ini melanjutkan dukungan belajar mandiri Bab 15: satu pembuktian basis terinduksi dan lima langkah pembuktian homeomorfisme antara garis real dan interval terbuka. Gunakan petunjuk, jawaban, dan solusi hanya setelah mencoba tugas utama secara mandiri.  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.  Membuktikan Basis bagi Topologi Subruang  Misalkan suatu ruang topologi dengan basis , dan misalkan suatu subruang dari . Untuk buktikan bahwa merupakan basis bagi topologi terinduksi pada .   Tahap 1. Untuk , gunakan sifat basis untuk mencari yang memuat .  Tahap 2. Jika , cari dengan .  Tahap 3. Tunjukkan pula bahwa setiap , dengan terbuka dalam , merupakan gabungan anggota .   Ya. Keluarga memenuhi kedua kriteria basis pada , dan gabungan anggota-anggotanya tepat menghasilkan seluruh himpunan dengan .   Pertama, ambil . Karena basis bagi , terdapat dengan . Maka dan . Jadi anggota-anggota menutupi .  Kedua, andaikan , dengan . Karena , sifat basis menghasilkan sedemikian sehingga . Akibatnya, dan . Dengan demikian kedua kriteria basis terpenuhi.  Masih perlu mengidentifikasi topologi yang dibangkitkan. Setiap terbuka dalam , sehingga setiap terbuka relatif. Jadi topologi yang dibangkitkan termuat dalam . Sebaliknya, jika , tulis untuk suatu . Karena basis, ada keluarga dengan . Maka suatu gabungan anggota . Jadi topologi yang dibangkitkan tepat .   Keterdefinisian Fungsi Tangen  Definisikan dengan Jelaskan mengapa rumus ini memetakan setiap ke suatu bilangan real.   Tahap 1. Tentukan rentang ketika .  Tahap 2. Kalikan pertidaksamaan tersebut dengan .  Tahap 3. Ingat pada interval mana fungsi tangen terdefinisi dan bernilai real.   Jika , maka . Fungsi tangen terdefinisi dan bernilai real pada interval tersebut.   Dari diperoleh , sehingga Kosinus tidak nol pada interval terbuka , maka tangen terdefinisi di sana dan nilainya merupakan bilangan real. Jadi rumus tersebut mendefinisikan fungsi dengan baik.   Injektivitas Fungsi Tangen  Untuk pada , jelaskan mengapa merupakan injeksi.   Tahap 1. Fungsi naik tegas pada .  Tahap 2. Gunakan sifat monoton fungsi tangen pada .  Tahap 3. Komposisi dua fungsi yang naik tegas juga naik tegas.   Fungsi naik tegas pada , sehingga dua masukan berbeda tidak mungkin mempunyai citra yang sama. Jadi injektif.   Pemetaan afin naik tegas dan memetakan ke . Pada interval terakhir, fungsi tangen naik tegas. Jika , maka dan karena itu . Jadi naik tegas, yang menyiratkan bahwa hanya mungkin jika . Maka merupakan injeksi.   Surjektivitas Fungsi Tangen  Untuk yang diberikan oleh , jelaskan mengapa merupakan surjeksi.   Tahap 1. Ambil bilangan real sebarang .  Tahap 2. Gunakan .  Tahap 3. Selesaikan persamaan terhadap .   Untuk setiap , ambil . Titik ini berada dalam dan memenuhi .   Ambil sembarang . Nilai utama berada dalam . Oleh karena itu memenuhi . Substitusi memberi Jadi setiap bilangan real mempunyai prapeta dalam , dan surjektif.   Kekontinuan Fungsi dan Inversnya  Untuk bijeksi yang diberikan oleh , jelaskan mengapa dan kontinu terhadap topologi metrik Euklides.   Tahap 1. Tulis sebagai komposisi fungsi afin dan fungsi tangen.  Tahap 2. Gunakan rumus prapeta dari panduan surjektivitas untuk menemukan .  Tahap 3. Terapkan teorema kalkulus bahwa fungsi elementer ini kontinu pada domain masing-masing dan komposisi fungsi kontinu tetap kontinu.   Fungsi kontinu sebagai komposisi fungsi kontinu, dan juga kontinu pada seluruh . Jadi adalah homeomorfisme.   Pemetaan kontinu pada , dan citranya termuat dalam . Fungsi tangen kontinu pada interval itu. Maka komposisinya, yaitu , kontinu.  Dari penyelesaian persamaan diperoleh . Fungsi arctangen kontinu pada seluruh , demikian pula operasi mengalikan dengan dan menambahkan . Karena itu kontinu. Kedua interval membawa topologi yang diinduksi oleh metrik Euklides, sehingga kekontinuan kalkulus tersebut adalah kekontinuan topologis yang dibutuhkan. Jadi merupakan homeomorfisme.   Homeomorfisme dari Interval Satuan ke Interval Terbuka  Misalkan dengan . Definisikan fungsi dan buktikan bahwa merupakan homeomorfisme. Jelaskan bagaimana hasil ini, bersama homeomorfisme antara dan , menunjukkan bahwa homeomorfik dengan .   Tahap 1. Gunakan pemetaan afin yang mengirim ke dan ke .  Tahap 2. Temukan rumus inversnya dan gunakan .  Tahap 3. Komposisikan dengan invers homeomorfisme dari panduan sebelumnya.   Ambil . Fungsi ini mempunyai invers ; keduanya kontinu. Maka homeomorfisme, dan juga homeomorfisme.   Definisikan . Karena , jika , maka ; jadi memang memetakan ke . Fungsi ini naik tegas, sehingga injektif. Untuk setiap , titik berada dalam dan memenuhi , sehingga juga surjektif.  Fungsi afin kontinu, dan inversnya juga afin dan kontinu. Jadi merupakan homeomorfisme. Dari panduan sebelumnya, adalah homeomorfisme, maka juga homeomorfisme. Komposisi adalah homeomorfisme, sehingga homeomorfik dengan setiap interval terbuka terbatas .   "
+},
+{
+  "id": "o003-c90-ch15-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-b.html#o003-c90-ch15-guide-11",
+  "type": "Pemeriksaan",
+  "number": "O.11",
+  "title": "Membuktikan Basis bagi Topologi Subruang.",
+  "body": "Membuktikan Basis bagi Topologi Subruang  Misalkan suatu ruang topologi dengan basis , dan misalkan suatu subruang dari . Untuk buktikan bahwa merupakan basis bagi topologi terinduksi pada .   Tahap 1. Untuk , gunakan sifat basis untuk mencari yang memuat .  Tahap 2. Jika , cari dengan .  Tahap 3. Tunjukkan pula bahwa setiap , dengan terbuka dalam , merupakan gabungan anggota .   Ya. Keluarga memenuhi kedua kriteria basis pada , dan gabungan anggota-anggotanya tepat menghasilkan seluruh himpunan dengan .   Pertama, ambil . Karena basis bagi , terdapat dengan . Maka dan . Jadi anggota-anggota menutupi .  Kedua, andaikan , dengan . Karena , sifat basis menghasilkan sedemikian sehingga . Akibatnya, dan . Dengan demikian kedua kriteria basis terpenuhi.  Masih perlu mengidentifikasi topologi yang dibangkitkan. Setiap terbuka dalam , sehingga setiap terbuka relatif. Jadi topologi yang dibangkitkan termuat dalam . Sebaliknya, jika , tulis untuk suatu . Karena basis, ada keluarga dengan . Maka suatu gabungan anggota . Jadi topologi yang dibangkitkan tepat .  "
+},
+{
+  "id": "o003-c90-ch15-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-b.html#o003-c90-ch15-guide-12",
+  "type": "Pemeriksaan",
+  "number": "O.12",
+  "title": "Keterdefinisian Fungsi Tangen.",
+  "body": "Keterdefinisian Fungsi Tangen  Definisikan dengan Jelaskan mengapa rumus ini memetakan setiap ke suatu bilangan real.   Tahap 1. Tentukan rentang ketika .  Tahap 2. Kalikan pertidaksamaan tersebut dengan .  Tahap 3. Ingat pada interval mana fungsi tangen terdefinisi dan bernilai real.   Jika , maka . Fungsi tangen terdefinisi dan bernilai real pada interval tersebut.   Dari diperoleh , sehingga Kosinus tidak nol pada interval terbuka , maka tangen terdefinisi di sana dan nilainya merupakan bilangan real. Jadi rumus tersebut mendefinisikan fungsi dengan baik.  "
+},
+{
+  "id": "o003-c90-ch15-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-b.html#o003-c90-ch15-guide-13",
+  "type": "Pemeriksaan",
+  "number": "O.13",
+  "title": "Injektivitas Fungsi Tangen.",
+  "body": "Injektivitas Fungsi Tangen  Untuk pada , jelaskan mengapa merupakan injeksi.   Tahap 1. Fungsi naik tegas pada .  Tahap 2. Gunakan sifat monoton fungsi tangen pada .  Tahap 3. Komposisi dua fungsi yang naik tegas juga naik tegas.   Fungsi naik tegas pada , sehingga dua masukan berbeda tidak mungkin mempunyai citra yang sama. Jadi injektif.   Pemetaan afin naik tegas dan memetakan ke . Pada interval terakhir, fungsi tangen naik tegas. Jika , maka dan karena itu . Jadi naik tegas, yang menyiratkan bahwa hanya mungkin jika . Maka merupakan injeksi.  "
+},
+{
+  "id": "o003-c90-ch15-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-b.html#o003-c90-ch15-guide-14",
+  "type": "Pemeriksaan",
+  "number": "O.14",
+  "title": "Surjektivitas Fungsi Tangen.",
+  "body": "Surjektivitas Fungsi Tangen  Untuk yang diberikan oleh , jelaskan mengapa merupakan surjeksi.   Tahap 1. Ambil bilangan real sebarang .  Tahap 2. Gunakan .  Tahap 3. Selesaikan persamaan terhadap .   Untuk setiap , ambil . Titik ini berada dalam dan memenuhi .   Ambil sembarang . Nilai utama berada dalam . Oleh karena itu memenuhi . Substitusi memberi Jadi setiap bilangan real mempunyai prapeta dalam , dan surjektif.  "
+},
+{
+  "id": "o003-c90-ch15-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-b.html#o003-c90-ch15-guide-15",
+  "type": "Pemeriksaan",
+  "number": "O.15",
+  "title": "Kekontinuan Fungsi dan Inversnya.",
+  "body": "Kekontinuan Fungsi dan Inversnya  Untuk bijeksi yang diberikan oleh , jelaskan mengapa dan kontinu terhadap topologi metrik Euklides.   Tahap 1. Tulis sebagai komposisi fungsi afin dan fungsi tangen.  Tahap 2. Gunakan rumus prapeta dari panduan surjektivitas untuk menemukan .  Tahap 3. Terapkan teorema kalkulus bahwa fungsi elementer ini kontinu pada domain masing-masing dan komposisi fungsi kontinu tetap kontinu.   Fungsi kontinu sebagai komposisi fungsi kontinu, dan juga kontinu pada seluruh . Jadi adalah homeomorfisme.   Pemetaan kontinu pada , dan citranya termuat dalam . Fungsi tangen kontinu pada interval itu. Maka komposisinya, yaitu , kontinu.  Dari penyelesaian persamaan diperoleh . Fungsi arctangen kontinu pada seluruh , demikian pula operasi mengalikan dengan dan menambahkan . Karena itu kontinu. Kedua interval membawa topologi yang diinduksi oleh metrik Euklides, sehingga kekontinuan kalkulus tersebut adalah kekontinuan topologis yang dibutuhkan. Jadi merupakan homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch15-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch15-source-guides-b.html#o003-c90-ch15-guide-16",
+  "type": "Pemeriksaan",
+  "number": "O.16",
+  "title": "Homeomorfisme dari Interval Satuan ke Interval Terbuka.",
+  "body": "Homeomorfisme dari Interval Satuan ke Interval Terbuka  Misalkan dengan . Definisikan fungsi dan buktikan bahwa merupakan homeomorfisme. Jelaskan bagaimana hasil ini, bersama homeomorfisme antara dan , menunjukkan bahwa homeomorfik dengan .   Tahap 1. Gunakan pemetaan afin yang mengirim ke dan ke .  Tahap 2. Temukan rumus inversnya dan gunakan .  Tahap 3. Komposisikan dengan invers homeomorfisme dari panduan sebelumnya.   Ambil . Fungsi ini mempunyai invers ; keduanya kontinu. Maka homeomorfisme, dan juga homeomorfisme.   Definisikan . Karena , jika , maka ; jadi memang memetakan ke . Fungsi ini naik tegas, sehingga injektif. Untuk setiap , titik berada dalam dan memenuhi , sehingga juga surjektif.  Fungsi afin kontinu, dan inversnya juga afin dan kontinu. Jadi merupakan homeomorfisme. Dari panduan sebelumnya, adalah homeomorfisme, maka juga homeomorfisme. Komposisi adalah homeomorfisme, sehingga homeomorfik dengan setiap interval terbuka terbatas .  "
+},
+{
+  "id": "o003-c90-ch15-exercise-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch15-exercise-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 15, bagian pertama",
+  "body": " Panduan latihan Bab 15, bagian pertama  Bagian ini mengikuti urutan sumber untuk sepuluh prompt latihan pertama tentang subruang. Setiap pernyataan dibuat mandiri dan disertai petunjuk, jawaban atau rubrik pembuktian, serta solusi lengkap. Materi pendamping ini ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.  Pembatasan fungsi kontinu  Misalkan dan ruang topologi, fungsi kontinu, dan subruang dari . Buktikan bahwa pembatasan juga kontinu.   Ambil himpunan terbuka dalam . Tuliskan prapetanya di bawah pembatasan sebagai irisan dengan prapeta di bawah .   Untuk setiap yang terbuka dalam , berlaku , yang terbuka dalam topologi subruang pada .   Ambil sebarang himpunan terbuka . Karena kontinu, terbuka dalam . Untuk , titik berada dalam prapeta di bawah tepat ketika . Oleh karena itu, Irisan di ruas kanan terbuka dalam topologi subruang pada . Jadi prapeta setiap himpunan terbuka dalam terbuka dalam , sehingga kontinu.   Topologi subruang bersifat transitif  Misalkan ruang topologi, subruang dari , dan subruang dari . Tunjukkan bahwa topologi subruang yang diwarisi dari sama dengan topologi subruang yang diwarisi langsung dari .   Setiap himpunan terbuka dalam berbentuk untuk suatu yang terbuka dalam . Gunakan untuk menyederhanakan .   Kedua topologi tersebut terdiri tepat atas himpunan berbentuk , dengan terbuka dalam .   Himpunan terbuka dalam topologi yang diwarisi dari tepat ketika terdapat himpunan yang terbuka dalam sedemikian sehingga . Karena sendiri memakai topologi subruang dari , terdapat himpunan terbuka dengan . Maka sebab . Jadi terbuka dalam topologi subruang yang diwarisi langsung dari .  Sebaliknya, jika untuk suatu yang terbuka dalam , maka terbuka dalam dan . Jadi juga terbuka dalam topologi yang diwarisi dari . Kedua topologi itu sama.   Titik limit di dalam subruang  Misalkan subruang dari ruang topologi , , dan . Buktikan bahwa merupakan titik limit dari dalam topologi subruang pada jika dan hanya jika merupakan titik limit dari dalam topologi pada .   Lingkungan terbuka bagi dalam berbentuk , dengan terbuka dalam dan . Karena , bandingkan dengan .   Kedua kondisi titik limit setara: untuk setiap himpunan terbuka dalam yang memuat , kedua irisan yang relevan sama karena .   Andaikan dahulu titik limit dalam . Ambil sebarang lingkungan terbuka bagi dalam . Terdapat himpunan terbuka dalam dengan dan . Sifat titik limit dalam memberi suatu . Karena , titik juga berada dalam . Jadi titik limit dalam .  Sebaliknya, andaikan titik limit dalam . Untuk setiap himpunan terbuka yang memuat , himpunan adalah lingkungan terbuka bagi dalam . Maka terdapat , sehingga khususnya . Dengan demikian merupakan titik limit dalam .   Tutupan dalam subruang  Misalkan subruang dari ruang topologi dan . Buktikan bahwa tutupan dalam adalah dengan menyatakan tutupan dalam .   Gunakan pencirian tutupan melalui lingkungan. Untuk , lingkungan subruang berbentuk ; karena , berlaku .   Untuk setiap , setiap lingkungan dalam bertemu jika dan hanya jika setiap lingkungan dalam bertemu . Jadi keanggotaan dalam kedua ruas persamaan itu setara.   Ambil . Titik berada dalam tepat ketika setiap himpunan terbuka dalam yang memuat bertemu . Setiap himpunan semacam itu berbentuk , dengan terbuka dalam dan . Karena , Jadi semua lingkungan subruang bagi bertemu tepat ketika semua lingkungan terbuka bagi dalam bertemu . Kondisi terakhir setara dengan . Karena sejak awal , kita memperoleh jika dan hanya jika . Kesetaraan ini berlaku untuk setiap , sehingga kedua himpunan sama.   Garis bilangan real homeomorfik dengan sinar terbuka  Dengan topologi standar, buktikan bahwa homeomorfik dengan setiap interval berbentuk dan dengan setiap interval berbentuk , untuk .   Gunakan fungsi eksponensial untuk memperoleh nilai positif. Untuk sinar kanan tambahkan ; untuk sinar kiri kurangkan hasil eksponensial dari . Tuliskan invers masing-masing.   Homeomorfisme yang dapat dipakai adalah menuju dan menuju .   Tetapkan dan definisikan dengan . Fungsi ini kontinu dan bijektif karena kontinu serta memetakan secara bijektif ke . Inversnya adalah yang kontinu pada . Jadi merupakan homeomorfisme.  Demikian pula, untuk , definisikan dengan . Fungsi ini kontinu dan bijektif; inversnya kontinu pada . Maka juga merupakan homeomorfisme, dan klaim berlaku untuk semua dan .   Keterbukaan relatif di dalam himpunan terbuka  Misalkan ruang topologi, subhimpunan terbuka dari , dan . Buktikan bahwa terbuka dalam subruang jika dan hanya jika terbuka dalam .   Jika terbuka dalam , tuliskan untuk suatu yang terbuka dalam . Gunakan bahwa sendiri terbuka dalam .   Benar. Pada arah yang tidak langsung, merupakan irisan dua himpunan terbuka dalam ; arah sebaliknya langsung dari definisi topologi subruang.   Andaikan terbuka dalam subruang . Menurut definisi topologi subruang, terdapat himpunan terbuka sedemikian sehingga . Karena dan sama-sama terbuka dalam , irisan terbuka dalam .  Sebaliknya, andaikan terbuka dalam . Karena , kita mempunyai . Ruas kanan adalah irisan dengan suatu himpunan terbuka dalam , sehingga terbuka dalam topologi subruang pada .   Ketertutupan relatif di dalam himpunan tertutup  Misalkan ruang topologi, subhimpunan tertutup dari , dan . Buktikan bahwa tertutup dalam subruang jika dan hanya jika tertutup dalam .   Gunakan pencirian himpunan tertutup relatif: tertutup dalam tepat ketika untuk suatu yang tertutup dalam .   Benar. Jika , maka adalah irisan dua himpunan tertutup dalam ; arah sebaliknya memakai .   Andaikan tertutup dalam subruang . Pencirian himpunan tertutup dalam topologi subruang memberi suatu himpunan tertutup dengan . Karena juga tertutup dalam , irisan tertutup dalam .  Sebaliknya, andaikan tertutup dalam . Karena , berlaku . Jadi adalah irisan dengan suatu himpunan tertutup dalam , yang menurut pencirian topologi subruang berarti tertutup dalam .   Sifat herediter aksioma separasi , , dan  Suatu sifat ruang topologi disebut herediter jika setiap subruangnya juga memiliki sifat tersebut. Buktikan bahwa sifat , , dan semuanya herediter.  Catatan sumber: klaim yang serupa untuk tidak benar. Papan Tychonoff yang normal memiliki papan Tychonoff terhapus yang tidak normal sebagai subruang; sumber merujuk pembaca ke Counterexamples in Topology (2nd ed.) karya Lynn Arthur Steen dan J. Arthur Seebach, Jr. untuk contoh tersebut.   Untuk dan , iriskan himpunan terbuka pemisah dalam ruang ambien dengan subruangnya. Untuk , tuliskan himpunan tertutup dalam subruang sebagai dengan tertutup dalam ruang ambien, lalu pisahkan suatu titik dari .   Rubrik lengkap: buktikan secara terpisah bahwa pemisah terbuka untuk dua titik tetap menjadi pemisah setelah diiriskan dengan subruang; lalu buktikan bahwa keteraturan diwarisi menggunakan . Karena berarti reguler sekaligus , kedua bagiannya harus disebutkan.   Misalkan subruang dari . Pertama, andaikan merupakan ruang . Untuk titik berbeda , terdapat himpunan terbuka yang memuat tetapi tidak memuat . Himpunan terbuka dalam , memuat , dan tidak memuat . Jadi merupakan ruang .  Kedua, andaikan merupakan ruang . Untuk titik berbeda , pilih himpunan terbuka saling lepas dengan dan . Himpunan dan terbuka dalam , memuat titik masing-masing, dan tetap saling lepas. Maka merupakan ruang .  Terakhir, andaikan merupakan ruang ; jadi bersifat reguler dan . Bagian pertama telah menunjukkan bahwa bersifat . Ambil himpunan tertutup dalam dan titik . Ada himpunan tertutup dalam dengan . Karena tetapi , kita mempunyai . Keteraturan memberi himpunan terbuka saling lepas dalam dengan dan . Maka dan ; kedua himpunan itu terbuka dan saling lepas dalam . Jadi reguler. Karena juga , ruang adalah . Dengan demikian ketiga sifat tersebut herediter.   Homeomorfisme setelah menghapus titik yang bersesuaian  Misalkan suatu homeomorfisme antara ruang topologi dan , dan ambil . Tentukan apakah subruang harus homeomorfik dengan subruang , lalu buktikan jawaban Anda.   Pertimbangkan pembatasan . Gunakan keinjektifan dan kesurjektifan untuk menunjukkan bahwa citra tepat , lalu identifikasi invers sebagai pembatasan dari .   Ya. Homeomorfismenya adalah , dengan invers .   Definisikan . Jika , maka ; keinjektifan memberi . Jadi . Sebaliknya, untuk , kesurjektifan memberi suatu dengan . Titik ini bukan , sebab . Maka dan . Bersama keinjektifan yang diwarisi dari , hal ini membuktikan bahwa bijektif.  Pembatasan fungsi kontinu pada subruang kontinu, sehingga kontinu. Inversnya adalah pembatasan , yang juga kontinu karena kontinu. Jadi merupakan homeomorfisme antara dan .   Subruang dari ruang diskret  Tentukan benar atau salah: jika memiliki topologi diskret, maka setiap subruang dari juga memiliki topologi diskret. Jelaskan jawaban Anda.   Untuk membuktikan bahwa topologi pada diskret, ambil sebarang dan tunjukkan bahwa terbuka dalam topologi subruang.   Benar. Setiap terbuka dalam , sehingga terbuka dalam subruang .   Ambil subruang dan sebarang himpunan . Karena topologi diskret, setiap subhimpunan dari , termasuk , terbuka dalam . Kesamaan menunjukkan bahwa terbuka dalam topologi subruang pada . Karena setiap subhimpunan dari terbuka, topologi subruang pada adalah topologi diskret. Jadi pernyataan itu benar.   "
+},
+{
+  "id": "o003-c90-ch15-exer-a-01",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-01",
+  "type": "Pemeriksaan",
+  "number": "O.17",
+  "title": "Pembatasan fungsi kontinu.",
+  "body": "Pembatasan fungsi kontinu  Misalkan dan ruang topologi, fungsi kontinu, dan subruang dari . Buktikan bahwa pembatasan juga kontinu.   Ambil himpunan terbuka dalam . Tuliskan prapetanya di bawah pembatasan sebagai irisan dengan prapeta di bawah .   Untuk setiap yang terbuka dalam , berlaku , yang terbuka dalam topologi subruang pada .   Ambil sebarang himpunan terbuka . Karena kontinu, terbuka dalam . Untuk , titik berada dalam prapeta di bawah tepat ketika . Oleh karena itu, Irisan di ruas kanan terbuka dalam topologi subruang pada . Jadi prapeta setiap himpunan terbuka dalam terbuka dalam , sehingga kontinu.  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-02",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-02",
+  "type": "Pemeriksaan",
+  "number": "O.18",
+  "title": "Topologi subruang bersifat transitif.",
+  "body": "Topologi subruang bersifat transitif  Misalkan ruang topologi, subruang dari , dan subruang dari . Tunjukkan bahwa topologi subruang yang diwarisi dari sama dengan topologi subruang yang diwarisi langsung dari .   Setiap himpunan terbuka dalam berbentuk untuk suatu yang terbuka dalam . Gunakan untuk menyederhanakan .   Kedua topologi tersebut terdiri tepat atas himpunan berbentuk , dengan terbuka dalam .   Himpunan terbuka dalam topologi yang diwarisi dari tepat ketika terdapat himpunan yang terbuka dalam sedemikian sehingga . Karena sendiri memakai topologi subruang dari , terdapat himpunan terbuka dengan . Maka sebab . Jadi terbuka dalam topologi subruang yang diwarisi langsung dari .  Sebaliknya, jika untuk suatu yang terbuka dalam , maka terbuka dalam dan . Jadi juga terbuka dalam topologi yang diwarisi dari . Kedua topologi itu sama.  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-03",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-03",
+  "type": "Pemeriksaan",
+  "number": "O.19",
+  "title": "Titik limit di dalam subruang.",
+  "body": "Titik limit di dalam subruang  Misalkan subruang dari ruang topologi , , dan . Buktikan bahwa merupakan titik limit dari dalam topologi subruang pada jika dan hanya jika merupakan titik limit dari dalam topologi pada .   Lingkungan terbuka bagi dalam berbentuk , dengan terbuka dalam dan . Karena , bandingkan dengan .   Kedua kondisi titik limit setara: untuk setiap himpunan terbuka dalam yang memuat , kedua irisan yang relevan sama karena .   Andaikan dahulu titik limit dalam . Ambil sebarang lingkungan terbuka bagi dalam . Terdapat himpunan terbuka dalam dengan dan . Sifat titik limit dalam memberi suatu . Karena , titik juga berada dalam . Jadi titik limit dalam .  Sebaliknya, andaikan titik limit dalam . Untuk setiap himpunan terbuka yang memuat , himpunan adalah lingkungan terbuka bagi dalam . Maka terdapat , sehingga khususnya . Dengan demikian merupakan titik limit dalam .  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-04",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-04",
+  "type": "Pemeriksaan",
+  "number": "O.20",
+  "title": "Tutupan dalam subruang.",
+  "body": "Tutupan dalam subruang  Misalkan subruang dari ruang topologi dan . Buktikan bahwa tutupan dalam adalah dengan menyatakan tutupan dalam .   Gunakan pencirian tutupan melalui lingkungan. Untuk , lingkungan subruang berbentuk ; karena , berlaku .   Untuk setiap , setiap lingkungan dalam bertemu jika dan hanya jika setiap lingkungan dalam bertemu . Jadi keanggotaan dalam kedua ruas persamaan itu setara.   Ambil . Titik berada dalam tepat ketika setiap himpunan terbuka dalam yang memuat bertemu . Setiap himpunan semacam itu berbentuk , dengan terbuka dalam dan . Karena , Jadi semua lingkungan subruang bagi bertemu tepat ketika semua lingkungan terbuka bagi dalam bertemu . Kondisi terakhir setara dengan . Karena sejak awal , kita memperoleh jika dan hanya jika . Kesetaraan ini berlaku untuk setiap , sehingga kedua himpunan sama.  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-05",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-05",
+  "type": "Pemeriksaan",
+  "number": "O.21",
+  "title": "Garis bilangan real homeomorfik dengan sinar terbuka.",
+  "body": "Garis bilangan real homeomorfik dengan sinar terbuka  Dengan topologi standar, buktikan bahwa homeomorfik dengan setiap interval berbentuk dan dengan setiap interval berbentuk , untuk .   Gunakan fungsi eksponensial untuk memperoleh nilai positif. Untuk sinar kanan tambahkan ; untuk sinar kiri kurangkan hasil eksponensial dari . Tuliskan invers masing-masing.   Homeomorfisme yang dapat dipakai adalah menuju dan menuju .   Tetapkan dan definisikan dengan . Fungsi ini kontinu dan bijektif karena kontinu serta memetakan secara bijektif ke . Inversnya adalah yang kontinu pada . Jadi merupakan homeomorfisme.  Demikian pula, untuk , definisikan dengan . Fungsi ini kontinu dan bijektif; inversnya kontinu pada . Maka juga merupakan homeomorfisme, dan klaim berlaku untuk semua dan .  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-06",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-06",
+  "type": "Pemeriksaan",
+  "number": "O.22",
+  "title": "Keterbukaan relatif di dalam himpunan terbuka.",
+  "body": "Keterbukaan relatif di dalam himpunan terbuka  Misalkan ruang topologi, subhimpunan terbuka dari , dan . Buktikan bahwa terbuka dalam subruang jika dan hanya jika terbuka dalam .   Jika terbuka dalam , tuliskan untuk suatu yang terbuka dalam . Gunakan bahwa sendiri terbuka dalam .   Benar. Pada arah yang tidak langsung, merupakan irisan dua himpunan terbuka dalam ; arah sebaliknya langsung dari definisi topologi subruang.   Andaikan terbuka dalam subruang . Menurut definisi topologi subruang, terdapat himpunan terbuka sedemikian sehingga . Karena dan sama-sama terbuka dalam , irisan terbuka dalam .  Sebaliknya, andaikan terbuka dalam . Karena , kita mempunyai . Ruas kanan adalah irisan dengan suatu himpunan terbuka dalam , sehingga terbuka dalam topologi subruang pada .  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-07",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-07",
+  "type": "Pemeriksaan",
+  "number": "O.23",
+  "title": "Ketertutupan relatif di dalam himpunan tertutup.",
+  "body": "Ketertutupan relatif di dalam himpunan tertutup  Misalkan ruang topologi, subhimpunan tertutup dari , dan . Buktikan bahwa tertutup dalam subruang jika dan hanya jika tertutup dalam .   Gunakan pencirian himpunan tertutup relatif: tertutup dalam tepat ketika untuk suatu yang tertutup dalam .   Benar. Jika , maka adalah irisan dua himpunan tertutup dalam ; arah sebaliknya memakai .   Andaikan tertutup dalam subruang . Pencirian himpunan tertutup dalam topologi subruang memberi suatu himpunan tertutup dengan . Karena juga tertutup dalam , irisan tertutup dalam .  Sebaliknya, andaikan tertutup dalam . Karena , berlaku . Jadi adalah irisan dengan suatu himpunan tertutup dalam , yang menurut pencirian topologi subruang berarti tertutup dalam .  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-08",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-08",
+  "type": "Pemeriksaan",
+  "number": "O.24",
+  "title": "Sifat herediter aksioma separasi <span class=\"process-math\">\\(T_1\\text{,}\\)<\/span> <span class=\"process-math\">\\(T_2\\text{,}\\)<\/span> dan <span class=\"process-math\">\\(T_3\\)<\/span>.",
+  "body": "Sifat herediter aksioma separasi , , dan  Suatu sifat ruang topologi disebut herediter jika setiap subruangnya juga memiliki sifat tersebut. Buktikan bahwa sifat , , dan semuanya herediter.  Catatan sumber: klaim yang serupa untuk tidak benar. Papan Tychonoff yang normal memiliki papan Tychonoff terhapus yang tidak normal sebagai subruang; sumber merujuk pembaca ke Counterexamples in Topology (2nd ed.) karya Lynn Arthur Steen dan J. Arthur Seebach, Jr. untuk contoh tersebut.   Untuk dan , iriskan himpunan terbuka pemisah dalam ruang ambien dengan subruangnya. Untuk , tuliskan himpunan tertutup dalam subruang sebagai dengan tertutup dalam ruang ambien, lalu pisahkan suatu titik dari .   Rubrik lengkap: buktikan secara terpisah bahwa pemisah terbuka untuk dua titik tetap menjadi pemisah setelah diiriskan dengan subruang; lalu buktikan bahwa keteraturan diwarisi menggunakan . Karena berarti reguler sekaligus , kedua bagiannya harus disebutkan.   Misalkan subruang dari . Pertama, andaikan merupakan ruang . Untuk titik berbeda , terdapat himpunan terbuka yang memuat tetapi tidak memuat . Himpunan terbuka dalam , memuat , dan tidak memuat . Jadi merupakan ruang .  Kedua, andaikan merupakan ruang . Untuk titik berbeda , pilih himpunan terbuka saling lepas dengan dan . Himpunan dan terbuka dalam , memuat titik masing-masing, dan tetap saling lepas. Maka merupakan ruang .  Terakhir, andaikan merupakan ruang ; jadi bersifat reguler dan . Bagian pertama telah menunjukkan bahwa bersifat . Ambil himpunan tertutup dalam dan titik . Ada himpunan tertutup dalam dengan . Karena tetapi , kita mempunyai . Keteraturan memberi himpunan terbuka saling lepas dalam dengan dan . Maka dan ; kedua himpunan itu terbuka dan saling lepas dalam . Jadi reguler. Karena juga , ruang adalah . Dengan demikian ketiga sifat tersebut herediter.  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-09",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-09",
+  "type": "Pemeriksaan",
+  "number": "O.25",
+  "title": "Homeomorfisme setelah menghapus titik yang bersesuaian.",
+  "body": "Homeomorfisme setelah menghapus titik yang bersesuaian  Misalkan suatu homeomorfisme antara ruang topologi dan , dan ambil . Tentukan apakah subruang harus homeomorfik dengan subruang , lalu buktikan jawaban Anda.   Pertimbangkan pembatasan . Gunakan keinjektifan dan kesurjektifan untuk menunjukkan bahwa citra tepat , lalu identifikasi invers sebagai pembatasan dari .   Ya. Homeomorfismenya adalah , dengan invers .   Definisikan . Jika , maka ; keinjektifan memberi . Jadi . Sebaliknya, untuk , kesurjektifan memberi suatu dengan . Titik ini bukan , sebab . Maka dan . Bersama keinjektifan yang diwarisi dari , hal ini membuktikan bahwa bijektif.  Pembatasan fungsi kontinu pada subruang kontinu, sehingga kontinu. Inversnya adalah pembatasan , yang juga kontinu karena kontinu. Jadi merupakan homeomorfisme antara dan .  "
+},
+{
+  "id": "o003-c90-ch15-exer-a-10",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-a.html#o003-c90-ch15-exer-a-10",
+  "type": "Pemeriksaan",
+  "number": "O.26",
+  "title": "Subruang dari ruang diskret.",
+  "body": "Subruang dari ruang diskret  Tentukan benar atau salah: jika memiliki topologi diskret, maka setiap subruang dari juga memiliki topologi diskret. Jelaskan jawaban Anda.   Untuk membuktikan bahwa topologi pada diskret, ambil sebarang dan tunjukkan bahwa terbuka dalam topologi subruang.   Benar. Setiap terbuka dalam , sehingga terbuka dalam subruang .   Ambil subruang dan sebarang himpunan . Karena topologi diskret, setiap subhimpunan dari , termasuk , terbuka dalam . Kesamaan menunjukkan bahwa terbuka dalam topologi subruang pada . Karena setiap subhimpunan dari terbuka, topologi subruang pada adalah topologi diskret. Jadi pernyataan itu benar.  "
+},
+{
+  "id": "o003-c90-ch15-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch15-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 15, bagian kedua",
+  "body": " Panduan latihan Bab 15, bagian kedua  Bagian ini menutup empat prompt latihan terakhir dalam urutan sumber. Setiap pernyataan yang salah disertai contoh tandingan konkret. Materi pendamping ini ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.  Subruang diskret di dalam ruang tak diskret  Tentukan benar atau salah: jika adalah ruang topologi yang tidak memiliki topologi diskret, maka tidak ada subruang dari yang memiliki topologi diskret. Jika salah, berikan contoh tandingan konkret.   Setiap ruang bertitik tunggal memiliki topologi diskret. Tempatkan satu titik seperti itu sebagai subruang dari ruang sederhana yang topologinya indiskret dan memiliki dua titik.   Salah. Ruang dua titik indiskret tidak diskret, tetapi setiap subruang bertitik tunggalnya diskret.   Ambil dengan topologi indiskret . Topologi ini bukan topologi diskret, sebab, misalnya, tidak terbuka dalam . Sekarang ambil subruang . Topologi subruang pada adalah yang merupakan topologi diskret pada himpunan bertitik tunggal . Jadi ruang tak diskret dapat memiliki subruang diskret, dan pernyataan sumber salah.   Citra kontinu dari ruang Hausdorff  Tentukan benar atau salah: jika fungsi kontinu, ruang Hausdorff, dan diberi topologi subruang dari , maka harus Hausdorff. Jika salah, berikan contoh tandingan konkret.   Ambil himpunan dua titik. Beri domain topologi diskret dan kodomain topologi indiskret, lalu gunakan fungsi identitas pada himpunan yang mendasarinya.   Salah. Fungsi identitas dari ruang dua titik diskret ke ruang dua titik indiskret kontinu dan surjektif, tetapi citranya tidak Hausdorff.   Ambil himpunan . Jadikan ruang diskret dan ruang indiskret. Ruang Hausdorff karena singleton dan merupakan lingkungan terbuka saling lepas bagi kedua titiknya. Definisikan dengan .  Satu-satunya himpunan terbuka dalam adalah dan , dan prapetanya masing-masing adalah dan . Jadi kontinu. Fungsi ini surjektif, sehingga . Namun tidak Hausdorff: satu-satunya himpunan terbuka tak kosong adalah seluruh , sehingga titik dan tidak mempunyai lingkungan terbuka saling lepas. Jadi kekontinuan saja tidak mempertahankan sifat Hausdorff pada citra.   Tutupan irisan dengan subruang  Tentukan benar atau salah: jika subruang dari ruang topologi dan , maka dengan ruas kiri tutupan dalam dan tutupan dalam . Jika salah, berikan contoh tandingan konkret.   Carilah himpunan di yang tidak bertemu , tetapi mempunyai sebagai titik limit.   Salah. Dalam , ambil dan . Ruas kiri kosong, sedangkan ruas kanan adalah .   Beri topologi standar, dan tetapkan serta . Karena , berlaku . Tutupan himpunan kosong dalam subruang tetap kosong, sehingga   Di sisi lain, barisan konvergen ke , sehingga . Bahkan , dan akibatnya Kedua ruas berbeda. Kegagalan terjadi karena titik-titik yang berada di luar masih dapat berakumulasi pada titik dalam . Secara umum hanya inklusi yang selalu berlaku.   Interior irisan dengan subruang  Tentukan benar atau salah: jika subruang dari ruang topologi dan , maka Jika salah, berikan contoh tandingan konkret.   Dalam , subruang bertitik tunggal terbuka di dalam dirinya sendiri, meskipun singleton itu tidak mempunyai interior dalam .   Salah. Untuk serta , ruas kiri adalah , sedangkan ruas kanan kosong.   Beri topologi standar dan ambil . Karena dan seluruh ruang selalu terbuka dalam dirinya sendiri, interior di dalam subruang adalah Namun singleton tidak memuat interval terbuka apa pun dalam , sehingga . Maka yang tidak sama dengan ruas kiri. Secara umum, inklusi yang selalu benar justru ; keterbukaan relatif dapat membuat ruas kanan pada inklusi ini lebih besar.   "
+},
+{
+  "id": "o003-c90-ch15-exer-b-01",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-b.html#o003-c90-ch15-exer-b-01",
+  "type": "Pemeriksaan",
+  "number": "O.27",
+  "title": "Subruang diskret di dalam ruang tak diskret.",
+  "body": "Subruang diskret di dalam ruang tak diskret  Tentukan benar atau salah: jika adalah ruang topologi yang tidak memiliki topologi diskret, maka tidak ada subruang dari yang memiliki topologi diskret. Jika salah, berikan contoh tandingan konkret.   Setiap ruang bertitik tunggal memiliki topologi diskret. Tempatkan satu titik seperti itu sebagai subruang dari ruang sederhana yang topologinya indiskret dan memiliki dua titik.   Salah. Ruang dua titik indiskret tidak diskret, tetapi setiap subruang bertitik tunggalnya diskret.   Ambil dengan topologi indiskret . Topologi ini bukan topologi diskret, sebab, misalnya, tidak terbuka dalam . Sekarang ambil subruang . Topologi subruang pada adalah yang merupakan topologi diskret pada himpunan bertitik tunggal . Jadi ruang tak diskret dapat memiliki subruang diskret, dan pernyataan sumber salah.  "
+},
+{
+  "id": "o003-c90-ch15-exer-b-02",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-b.html#o003-c90-ch15-exer-b-02",
+  "type": "Pemeriksaan",
+  "number": "O.28",
+  "title": "Citra kontinu dari ruang Hausdorff.",
+  "body": "Citra kontinu dari ruang Hausdorff  Tentukan benar atau salah: jika fungsi kontinu, ruang Hausdorff, dan diberi topologi subruang dari , maka harus Hausdorff. Jika salah, berikan contoh tandingan konkret.   Ambil himpunan dua titik. Beri domain topologi diskret dan kodomain topologi indiskret, lalu gunakan fungsi identitas pada himpunan yang mendasarinya.   Salah. Fungsi identitas dari ruang dua titik diskret ke ruang dua titik indiskret kontinu dan surjektif, tetapi citranya tidak Hausdorff.   Ambil himpunan . Jadikan ruang diskret dan ruang indiskret. Ruang Hausdorff karena singleton dan merupakan lingkungan terbuka saling lepas bagi kedua titiknya. Definisikan dengan .  Satu-satunya himpunan terbuka dalam adalah dan , dan prapetanya masing-masing adalah dan . Jadi kontinu. Fungsi ini surjektif, sehingga . Namun tidak Hausdorff: satu-satunya himpunan terbuka tak kosong adalah seluruh , sehingga titik dan tidak mempunyai lingkungan terbuka saling lepas. Jadi kekontinuan saja tidak mempertahankan sifat Hausdorff pada citra.  "
+},
+{
+  "id": "o003-c90-ch15-exer-b-03",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-b.html#o003-c90-ch15-exer-b-03",
+  "type": "Pemeriksaan",
+  "number": "O.29",
+  "title": "Tutupan irisan dengan subruang.",
+  "body": "Tutupan irisan dengan subruang  Tentukan benar atau salah: jika subruang dari ruang topologi dan , maka dengan ruas kiri tutupan dalam dan tutupan dalam . Jika salah, berikan contoh tandingan konkret.   Carilah himpunan di yang tidak bertemu , tetapi mempunyai sebagai titik limit.   Salah. Dalam , ambil dan . Ruas kiri kosong, sedangkan ruas kanan adalah .   Beri topologi standar, dan tetapkan serta . Karena , berlaku . Tutupan himpunan kosong dalam subruang tetap kosong, sehingga   Di sisi lain, barisan konvergen ke , sehingga . Bahkan , dan akibatnya Kedua ruas berbeda. Kegagalan terjadi karena titik-titik yang berada di luar masih dapat berakumulasi pada titik dalam . Secara umum hanya inklusi yang selalu berlaku.  "
+},
+{
+  "id": "o003-c90-ch15-exer-b-04",
+  "level": "2",
+  "url": "o003-c90-ch15-exercise-guides-b.html#o003-c90-ch15-exer-b-04",
+  "type": "Pemeriksaan",
+  "number": "O.30",
+  "title": "Interior irisan dengan subruang.",
+  "body": "Interior irisan dengan subruang  Tentukan benar atau salah: jika subruang dari ruang topologi dan , maka Jika salah, berikan contoh tandingan konkret.   Dalam , subruang bertitik tunggal terbuka di dalam dirinya sendiri, meskipun singleton itu tidak mempunyai interior dalam .   Salah. Untuk serta , ruas kiri adalah , sedangkan ruas kanan kosong.   Beri topologi standar dan ambil . Karena dan seluruh ruang selalu terbuka dalam dirinya sendiri, interior di dalam subruang adalah Namun singleton tidak memuat interval terbuka apa pun dalam , sehingga . Maka yang tidak sama dengan ruas kiri. Secara umum, inklusi yang selalu benar justru ; keterbukaan relatif dapat membuat ruas kanan pada inklusi ini lebih besar.  "
+},
+{
+  "id": "o003-c90-ch15-mastery",
+  "level": "1",
+  "url": "o003-c90-ch15-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pemeriksaan penguasaan Bab 15",
+  "body": " Pemeriksaan penguasaan Bab 15  Delapan pemeriksaan berikut memadukan topologi subruang, keterbukaan dan ketertutupan relatif, subruang bertingkat, basis, kekontinuan, tutupan, homeomorfisme interval terbuka, serta sifat separasi dalam persoalan baru. Materi ini ditulis mandiri dalam bahasa Indonesia untuk komponen pendamping berlisensi CC BY 4.0; materi ini bukan teks, terjemahan, atau solusi resmi GVSU. Kerjakan setiap soal sebelum membuka petunjuk.  Topologi sebagai prapeta inklusi  Misalkan ruang topologi, , dan fungsi inklusi. Definisikan Buktikan langsung dari sifat prapeta bahwa merupakan topologi pada dan bahwa . Jelaskan pula apa yang terjadi jika , meskipun teks sumber memakai konvensi subruang tak kosong.   Tahap 1. Hitung prapeta dan di bawah .  Tahap 2. Gunakan bahwa prapeta mempertahankan gabungan sebarang dan irisan berhingga.  Tahap 3. Tuliskan sebagai himpunan titik yang juga berada dalam .   Prapeta inklusi memenuhi . Sifat-sifat umum prapeta memberikan ketiga aksioma topologi. Untuk , keluarga yang diperoleh adalah , yaitu topologi tunggal pada himpunan kosong.   Karena , untuk setiap berlaku . Selanjutnya, dan , sehingga . Untuk keluarga sebarang , Untuk , Jadi adalah topologi dan rumus prapeta di atas menunjukkan bahwa ia tepat merupakan topologi subruang. Jika , setiap irisan sama dengan ; jadi . Fakta ini sah secara matematis, tetapi edisi ini tetap menandai bahwa definisi sumber membatasi istilah subruang pada subhimpunan tak kosong.   Relatif terbuka, relatif tertutup, dan buka-tutup (klopen)  Misalkan subruang dari . Buktikan bahwa terbuka dalam jika dan hanya jika untuk suatu himpunan terbuka dalam . Turunkan dari hasil itu bahwa tertutup dalam jika dan hanya jika untuk suatu himpunan tertutup dalam . Kemudian, untuk bertopologi standar dan , tunjukkan bahwa merupakan himpunan buka-tutup (klopen) dalam , walaupun tidak terbuka dalam .   Tahap 1. Pernyataan tentang himpunan terbuka adalah definisi topologi subruang yang ditulis sebagai kesetaraan himpunan.  Tahap 2. Ambil komplemen relatif dalam dan gunakan hukum De Morgan.  Tahap 3. Nyatakan sebagai irisan dengan satu himpunan terbuka dan satu himpunan tertutup di .   Karakterisasi terbuka mengikuti langsung dari definisi. Mengambil komplemen memberi karakterisasi tertutup. Dalam contoh, dan , sehingga sekaligus relatif terbuka dan relatif tertutup.   Menurut definisi topologi subruang, anggota-anggotanya tepat berupa irisan dengan terbuka dalam . Jadi karakterisasi pertama berlaku dalam kedua arah. Sekarang andaikan tertutup dalam . Maka untuk suatu terbuka dalam . Dengan , yang tertutup dalam , diperoleh Sebaliknya, jika dan tertutup dalam , maka terbuka dalam ; jadi tertutup dalam . Untuk contoh yang diberikan, membuktikan keterbukaan relatif, sedangkan membuktikan ketertutupan relatif. Namun tidak ada interval terbuka di yang memuat dan seluruhnya berada dalam ; jadi tidak terbuka dalam .   Jejak topologi melalui subruang bertingkat  Misalkan dan bertopologi . Buktikan bahwa topologi yang diwarisi langsung dari sama dengan topologi yang diwarisi dari subruang . Tunjukkan pula bahwa setiap himpunan terbuka dalam dapat ditulis sebagai dengan terbuka dalam , tetapi tidak harus unik. Berikan dua pilihan untuk , , , dan .   Tahap 1. Tuliskan himpunan terbuka dalam sebagai .  Tahap 2. Gunakan untuk menyederhanakan .  Tahap 3. Pilih dua interval terbuka berbeda yang irisannya dengan hanya memuat .   Jejak dua tahap memberi , tepat seperti jejak langsung dari . Dalam contoh, baik maupun memenuhi .   Himpunan terbuka dalam topologi yang diwarisi dari berbentuk , dengan terbuka dalam . Karena untuk suatu , dan karena , Ini adalah himpunan terbuka yang diwarisi langsung dari . Sebaliknya, setiap dapat ditulis sebagai , dengan terbuka dalam . Karena itu, kedua topologi tersebut sama. Representasi oleh tidak unik karena perilaku di luar tidak memengaruhi irisannya dengan . Pada contoh, interval dan berbeda, tetapi keduanya memotong tepat pada .   Basis terinduksi dan keterhitungan kedua  Misalkan basis untuk ruang topologi dan . Buktikan bahwa merupakan basis bagi . Simpulkan bahwa setiap subruang dari ruang berketerhitungan kedua juga berketerhitungan kedua. Terapkan hasil ini pada sebagai subruang : tunjukkan bahwa setiap terisolasi dalam , sedangkan tidak terisolasi.   Tahap 1. Untuk , pilih unsur basis dengan .  Tahap 2. Citra suatu himpunan terhitung di bawah pemetaan tetap paling banyak terhitung.  Tahap 3. Pisahkan dari suku-suku tetangganya dengan interval kecil, lalu gunakan bahwa .   Setiap lingkungan relatif dari suatu titik memuat jejak dari unsur basis ambien yang sesuai. Jika terhitung, keluarga jejaknya juga terhitung. Pada subruang contoh, interval cukup kecil mengisolasi setiap , tetapi setiap lingkungan relatif dari memuat tak berhingga banyak titik .   Ambil terbuka dalam dan . Ada terbuka dalam dengan . Karena basis, ada sehingga . Maka , dan tidak kosong. Jadi memenuhi kriteria basis. Jika terhitung, membuang jejak kosong dan kemungkinan pengulangan tidak dapat menghasilkan keluarga tak terhitung; karena itu terhitung.  Untuk , pilih interval terbuka yang berpusat di dan ujung-ujungnya berada secara ketat di antara , , dan . Irisannya dengan adalah . Untuk , misalnya . Jadi setiap terisolasi. Sebaliknya, ambil sebarang lingkungan relatif dari . Ada himpunan terbuka dengan dan . Pilih sehingga . Sifat Archimedes memberi dengan , sehingga . Jadi setiap lingkungan relatif dari memuat titik lain dari , dan tidak terbuka dalam .   Pembatasan kontinu membawa tutupan ke tutupan  Misalkan kontinu, , dan . Buktikan bahwa pembatasan kontinu dan bahwa Tunjukkan dengan dan bahwa inklusi tersebut dapat ketat.   Tahap 1. Hitung prapeta suatu himpunan terbuka di bawah .  Tahap 2. Jika , tarik kembali lingkungan terbuka dari .  Tahap 3. Bandingkan dengan tutupannya dalam .   Prapeta oleh pembatasan adalah , sehingga terbuka dalam . Setiap lingkungan dari karena itu menarik balik ke lingkungan relatif dari yang bertemu . Untuk fungsi eksponensial, ruas kiri adalah , sedangkan ruas kanan .   Jika terbuka dalam , kekontinuan memberi terbuka dalam . Karena , prapeta itu terbuka dalam ; jadi kontinu. Sekarang ambil . Untuk setiap lingkungan terbuka dari , himpunan merupakan lingkungan relatif dari . Karena berada dalam tutupan di , prapeta itu bertemu . Jadi bertemu , yang berarti . Ini membuktikan inklusi.  Untuk , berlaku . Fungsi kontinu dan , sehingga ruas kiri adalah . Tutupan himpunan itu dalam adalah ; titik menunjukkan bahwa inklusi dapat ketat.   Homeomorfisme eksplisit dari garis ke interval terbuka  Untuk bilangan real , definisikan Buktikan bahwa merupakan homeomorfisme dengan menuliskan inversnya secara eksplisit. Simpulkan bahwa terbuka dalam topologi subruang jika dan hanya jika terbuka dalam .   Tahap 1. Gunakan bahwa memetakan secara bijektif ke .  Tahap 2. Selesaikan persamaan terhadap .  Tahap 3. Terapkan kekontinuan dan pada prapeta himpunan terbuka.   Inversnya adalah . Kedua fungsi kontinu pada domainnya, sehingga homeomorfisme dan mempertahankan keterbukaan melalui prapeta.   Fungsi kontinu, naik tegas, dan mempunyai citra . Pemetaan afin membawa interval itu secara bijektif ke . Jadi komposisinya, yaitu , kontinu dan bijektif. Dari diperoleh Argumen fungsi berada dalam ketika , sehingga rumus ini mendefinisikan invers kontinu. Maka adalah homeomorfisme. Jika terbuka dalam , kekontinuan membuat terbuka dalam . Sebaliknya, jika terbuka, maka terbuka karena kontinu.   Pewarisan sifat Hausdorff dan reguler  Misalkan subruang dari . Buktikan bahwa jika Hausdorff, maka Hausdorff. Selanjutnya, andaikan reguler dan . Buktikan bahwa juga reguler dan . Nyatakan dengan jelas bagaimana himpunan terbuka dan tertutup ambien dipotong dengan untuk menghasilkan saksi separasi di subruang.   Tahap 1. Pisahkan dua titik dengan himpunan terbuka di , lalu ambil jejaknya.  Tahap 2. Tuliskan himpunan tertutup dalam sebagai dengan tertutup dalam .  Tahap 3. Untuk sifat , perhatikan bahwa setiap himpunan satu titik tertutup.   Saksi terbuka yang saling lepas di tetap terbuka dan saling lepas setelah diiris dengan . Untuk regularitas, wakili , pisahkan titik dari di , lalu ambil jejak kedua lingkungan. Himpunan satu titik dalam tertutup karena merupakan irisan dengan himpunan satu titik tertutup dalam .   Ambil titik berbeda . Karena Hausdorff, ada himpunan terbuka saling lepas dengan dan . Himpunan dan terbuka dalam , memuat titik masing-masing, dan tetap saling lepas. Jadi Hausdorff.  Sekarang andaikan reguler dan . Ambil dan tertutup dalam dengan . Ada tertutup dalam sehingga . Karena tetapi , juga . Regularitas memberi himpunan terbuka saling lepas dengan dan . Jejak dan memisahkan dari dalam . Terakhir, untuk setiap , himpunan tertutup dalam karena bersifat , dan tertutup dalam . Jadi reguler dan .   Dua sangkalan terhadap intuisi subruang yang keliru  Sanggah kedua pernyataan berikut dengan contoh konkret dan verifikasi lengkap.    Jika ruang ambien tidak diskret, maka tidak ada subruang tak kosongnya yang diskret.    Untuk setiap , selalu berlaku .    Gunakan ruang metrik yang familiar agar kegagalan kedua klaim tampak dari topologi subruangnya, bukan dari konstruksi eksotis.   Tahap 1. Di , cari subhimpunan tak berhingga yang tiap titiknya dapat diisolasi oleh interval kecil.  Tahap 2. Untuk klaim interior, pilih subruang satu titik yang tidak terbuka dalam ruang ambien.  Tahap 3. Hitung kedua ruas secara terpisah dalam setiap contoh.   Untuk klaim pertama, ambil dan ; topologi subruang pada diskret walaupun tidak diskret. Untuk klaim kedua, ambil dan . Interior relatif ruas kiri adalah , sedangkan interior ambien kosong.   Ruang dengan topologi standar tidak diskret karena, misalnya, tidak terbuka. Namun untuk setiap , Jadi setiap himpunan satu titik terbuka dalam subruang . Setiap subhimpunan adalah gabungan himpunan-himpunan satu titik tersebut, sehingga topologi subruang pada diskret. Ini menyanggah klaim pertama.  Untuk klaim kedua, ambil dan . Sebagai ruang satu titik, mempunyai topologi . Karena itu . Di sisi lain, , sehingga . Kedua ruas berbeda, dan klaim kedua juga salah.   "
+},
+{
+  "id": "o003-c90-ch15-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "O.31",
+  "title": "Topologi sebagai prapeta inklusi.",
+  "body": "Topologi sebagai prapeta inklusi  Misalkan ruang topologi, , dan fungsi inklusi. Definisikan Buktikan langsung dari sifat prapeta bahwa merupakan topologi pada dan bahwa . Jelaskan pula apa yang terjadi jika , meskipun teks sumber memakai konvensi subruang tak kosong.   Tahap 1. Hitung prapeta dan di bawah .  Tahap 2. Gunakan bahwa prapeta mempertahankan gabungan sebarang dan irisan berhingga.  Tahap 3. Tuliskan sebagai himpunan titik yang juga berada dalam .   Prapeta inklusi memenuhi . Sifat-sifat umum prapeta memberikan ketiga aksioma topologi. Untuk , keluarga yang diperoleh adalah , yaitu topologi tunggal pada himpunan kosong.   Karena , untuk setiap berlaku . Selanjutnya, dan , sehingga . Untuk keluarga sebarang , Untuk , Jadi adalah topologi dan rumus prapeta di atas menunjukkan bahwa ia tepat merupakan topologi subruang. Jika , setiap irisan sama dengan ; jadi . Fakta ini sah secara matematis, tetapi edisi ini tetap menandai bahwa definisi sumber membatasi istilah subruang pada subhimpunan tak kosong.  "
+},
+{
+  "id": "o003-c90-ch15-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "O.32",
+  "title": "Relatif terbuka, relatif tertutup, dan buka-tutup (klopen).",
+  "body": "Relatif terbuka, relatif tertutup, dan buka-tutup (klopen)  Misalkan subruang dari . Buktikan bahwa terbuka dalam jika dan hanya jika untuk suatu himpunan terbuka dalam . Turunkan dari hasil itu bahwa tertutup dalam jika dan hanya jika untuk suatu himpunan tertutup dalam . Kemudian, untuk bertopologi standar dan , tunjukkan bahwa merupakan himpunan buka-tutup (klopen) dalam , walaupun tidak terbuka dalam .   Tahap 1. Pernyataan tentang himpunan terbuka adalah definisi topologi subruang yang ditulis sebagai kesetaraan himpunan.  Tahap 2. Ambil komplemen relatif dalam dan gunakan hukum De Morgan.  Tahap 3. Nyatakan sebagai irisan dengan satu himpunan terbuka dan satu himpunan tertutup di .   Karakterisasi terbuka mengikuti langsung dari definisi. Mengambil komplemen memberi karakterisasi tertutup. Dalam contoh, dan , sehingga sekaligus relatif terbuka dan relatif tertutup.   Menurut definisi topologi subruang, anggota-anggotanya tepat berupa irisan dengan terbuka dalam . Jadi karakterisasi pertama berlaku dalam kedua arah. Sekarang andaikan tertutup dalam . Maka untuk suatu terbuka dalam . Dengan , yang tertutup dalam , diperoleh Sebaliknya, jika dan tertutup dalam , maka terbuka dalam ; jadi tertutup dalam . Untuk contoh yang diberikan, membuktikan keterbukaan relatif, sedangkan membuktikan ketertutupan relatif. Namun tidak ada interval terbuka di yang memuat dan seluruhnya berada dalam ; jadi tidak terbuka dalam .  "
+},
+{
+  "id": "o003-c90-ch15-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "O.33",
+  "title": "Jejak topologi melalui subruang bertingkat.",
+  "body": "Jejak topologi melalui subruang bertingkat  Misalkan dan bertopologi . Buktikan bahwa topologi yang diwarisi langsung dari sama dengan topologi yang diwarisi dari subruang . Tunjukkan pula bahwa setiap himpunan terbuka dalam dapat ditulis sebagai dengan terbuka dalam , tetapi tidak harus unik. Berikan dua pilihan untuk , , , dan .   Tahap 1. Tuliskan himpunan terbuka dalam sebagai .  Tahap 2. Gunakan untuk menyederhanakan .  Tahap 3. Pilih dua interval terbuka berbeda yang irisannya dengan hanya memuat .   Jejak dua tahap memberi , tepat seperti jejak langsung dari . Dalam contoh, baik maupun memenuhi .   Himpunan terbuka dalam topologi yang diwarisi dari berbentuk , dengan terbuka dalam . Karena untuk suatu , dan karena , Ini adalah himpunan terbuka yang diwarisi langsung dari . Sebaliknya, setiap dapat ditulis sebagai , dengan terbuka dalam . Karena itu, kedua topologi tersebut sama. Representasi oleh tidak unik karena perilaku di luar tidak memengaruhi irisannya dengan . Pada contoh, interval dan berbeda, tetapi keduanya memotong tepat pada .  "
+},
+{
+  "id": "o003-c90-ch15-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "O.34",
+  "title": "Basis terinduksi dan keterhitungan kedua.",
+  "body": "Basis terinduksi dan keterhitungan kedua  Misalkan basis untuk ruang topologi dan . Buktikan bahwa merupakan basis bagi . Simpulkan bahwa setiap subruang dari ruang berketerhitungan kedua juga berketerhitungan kedua. Terapkan hasil ini pada sebagai subruang : tunjukkan bahwa setiap terisolasi dalam , sedangkan tidak terisolasi.   Tahap 1. Untuk , pilih unsur basis dengan .  Tahap 2. Citra suatu himpunan terhitung di bawah pemetaan tetap paling banyak terhitung.  Tahap 3. Pisahkan dari suku-suku tetangganya dengan interval kecil, lalu gunakan bahwa .   Setiap lingkungan relatif dari suatu titik memuat jejak dari unsur basis ambien yang sesuai. Jika terhitung, keluarga jejaknya juga terhitung. Pada subruang contoh, interval cukup kecil mengisolasi setiap , tetapi setiap lingkungan relatif dari memuat tak berhingga banyak titik .   Ambil terbuka dalam dan . Ada terbuka dalam dengan . Karena basis, ada sehingga . Maka , dan tidak kosong. Jadi memenuhi kriteria basis. Jika terhitung, membuang jejak kosong dan kemungkinan pengulangan tidak dapat menghasilkan keluarga tak terhitung; karena itu terhitung.  Untuk , pilih interval terbuka yang berpusat di dan ujung-ujungnya berada secara ketat di antara , , dan . Irisannya dengan adalah . Untuk , misalnya . Jadi setiap terisolasi. Sebaliknya, ambil sebarang lingkungan relatif dari . Ada himpunan terbuka dengan dan . Pilih sehingga . Sifat Archimedes memberi dengan , sehingga . Jadi setiap lingkungan relatif dari memuat titik lain dari , dan tidak terbuka dalam .  "
+},
+{
+  "id": "o003-c90-ch15-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "O.35",
+  "title": "Pembatasan kontinu membawa tutupan ke tutupan.",
+  "body": "Pembatasan kontinu membawa tutupan ke tutupan  Misalkan kontinu, , dan . Buktikan bahwa pembatasan kontinu dan bahwa Tunjukkan dengan dan bahwa inklusi tersebut dapat ketat.   Tahap 1. Hitung prapeta suatu himpunan terbuka di bawah .  Tahap 2. Jika , tarik kembali lingkungan terbuka dari .  Tahap 3. Bandingkan dengan tutupannya dalam .   Prapeta oleh pembatasan adalah , sehingga terbuka dalam . Setiap lingkungan dari karena itu menarik balik ke lingkungan relatif dari yang bertemu . Untuk fungsi eksponensial, ruas kiri adalah , sedangkan ruas kanan .   Jika terbuka dalam , kekontinuan memberi terbuka dalam . Karena , prapeta itu terbuka dalam ; jadi kontinu. Sekarang ambil . Untuk setiap lingkungan terbuka dari , himpunan merupakan lingkungan relatif dari . Karena berada dalam tutupan di , prapeta itu bertemu . Jadi bertemu , yang berarti . Ini membuktikan inklusi.  Untuk , berlaku . Fungsi kontinu dan , sehingga ruas kiri adalah . Tutupan himpunan itu dalam adalah ; titik menunjukkan bahwa inklusi dapat ketat.  "
+},
+{
+  "id": "o003-c90-ch15-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "O.36",
+  "title": "Homeomorfisme eksplisit dari garis ke interval terbuka.",
+  "body": "Homeomorfisme eksplisit dari garis ke interval terbuka  Untuk bilangan real , definisikan Buktikan bahwa merupakan homeomorfisme dengan menuliskan inversnya secara eksplisit. Simpulkan bahwa terbuka dalam topologi subruang jika dan hanya jika terbuka dalam .   Tahap 1. Gunakan bahwa memetakan secara bijektif ke .  Tahap 2. Selesaikan persamaan terhadap .  Tahap 3. Terapkan kekontinuan dan pada prapeta himpunan terbuka.   Inversnya adalah . Kedua fungsi kontinu pada domainnya, sehingga homeomorfisme dan mempertahankan keterbukaan melalui prapeta.   Fungsi kontinu, naik tegas, dan mempunyai citra . Pemetaan afin membawa interval itu secara bijektif ke . Jadi komposisinya, yaitu , kontinu dan bijektif. Dari diperoleh Argumen fungsi berada dalam ketika , sehingga rumus ini mendefinisikan invers kontinu. Maka adalah homeomorfisme. Jika terbuka dalam , kekontinuan membuat terbuka dalam . Sebaliknya, jika terbuka, maka terbuka karena kontinu.  "
+},
+{
+  "id": "o003-c90-ch15-mastery-07",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-07",
+  "type": "Pemeriksaan",
+  "number": "O.37",
+  "title": "Pewarisan sifat Hausdorff dan reguler.",
+  "body": "Pewarisan sifat Hausdorff dan reguler  Misalkan subruang dari . Buktikan bahwa jika Hausdorff, maka Hausdorff. Selanjutnya, andaikan reguler dan . Buktikan bahwa juga reguler dan . Nyatakan dengan jelas bagaimana himpunan terbuka dan tertutup ambien dipotong dengan untuk menghasilkan saksi separasi di subruang.   Tahap 1. Pisahkan dua titik dengan himpunan terbuka di , lalu ambil jejaknya.  Tahap 2. Tuliskan himpunan tertutup dalam sebagai dengan tertutup dalam .  Tahap 3. Untuk sifat , perhatikan bahwa setiap himpunan satu titik tertutup.   Saksi terbuka yang saling lepas di tetap terbuka dan saling lepas setelah diiris dengan . Untuk regularitas, wakili , pisahkan titik dari di , lalu ambil jejak kedua lingkungan. Himpunan satu titik dalam tertutup karena merupakan irisan dengan himpunan satu titik tertutup dalam .   Ambil titik berbeda . Karena Hausdorff, ada himpunan terbuka saling lepas dengan dan . Himpunan dan terbuka dalam , memuat titik masing-masing, dan tetap saling lepas. Jadi Hausdorff.  Sekarang andaikan reguler dan . Ambil dan tertutup dalam dengan . Ada tertutup dalam sehingga . Karena tetapi , juga . Regularitas memberi himpunan terbuka saling lepas dengan dan . Jejak dan memisahkan dari dalam . Terakhir, untuk setiap , himpunan tertutup dalam karena bersifat , dan tertutup dalam . Jadi reguler dan .  "
+},
+{
+  "id": "o003-c90-ch15-mastery-08",
+  "level": "2",
+  "url": "o003-c90-ch15-mastery.html#o003-c90-ch15-mastery-08",
+  "type": "Pemeriksaan",
+  "number": "O.38",
+  "title": "Dua sangkalan terhadap intuisi subruang yang keliru.",
+  "body": "Dua sangkalan terhadap intuisi subruang yang keliru  Sanggah kedua pernyataan berikut dengan contoh konkret dan verifikasi lengkap.    Jika ruang ambien tidak diskret, maka tidak ada subruang tak kosongnya yang diskret.    Untuk setiap , selalu berlaku .    Gunakan ruang metrik yang familiar agar kegagalan kedua klaim tampak dari topologi subruangnya, bukan dari konstruksi eksotis.   Tahap 1. Di , cari subhimpunan tak berhingga yang tiap titiknya dapat diisolasi oleh interval kecil.  Tahap 2. Untuk klaim interior, pilih subruang satu titik yang tidak terbuka dalam ruang ambien.  Tahap 3. Hitung kedua ruas secara terpisah dalam setiap contoh.   Untuk klaim pertama, ambil dan ; topologi subruang pada diskret walaupun tidak diskret. Untuk klaim kedua, ambil dan . Interior relatif ruas kiri adalah , sedangkan interior ambien kosong.   Ruang dengan topologi standar tidak diskret karena, misalnya, tidak terbuka. Namun untuk setiap , Jadi setiap himpunan satu titik terbuka dalam subruang . Setiap subhimpunan adalah gabungan himpunan-himpunan satu titik tersebut, sehingga topologi subruang pada diskret. Ini menyanggah klaim pertama.  Untuk klaim kedua, ambil dan . Sebagai ruang satu titik, mempunyai topologi . Karena itu . Di sisi lain, , sehingga . Kedua ruas berbeda, dan klaim kedua juga salah.  "
+},
+{
   "id": "index-1",
   "level": "1",
   "url": "index-1.html",
@@ -12211,7 +12787,7 @@ var ptx_lunr_docs = [
   "type": "Kolofon",
   "number": "",
   "title": "Kolofon",
-  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1-14 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 15, Subruang ; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
+  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1-15 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 16, Ruang Kuosien ; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
 }
 ]
 

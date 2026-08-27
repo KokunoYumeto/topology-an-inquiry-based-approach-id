@@ -1,0 +1,479 @@
+<section xml:id="o003-c90-ch15-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan Bab 15, bagian pertama</title>
+  <p>
+    Bagian ini mengikuti urutan sumber untuk sepuluh prompt latihan pertama
+    tentang subruang. Setiap pernyataan dibuat mandiri dan disertai petunjuk,
+    jawaban atau rubrik pembuktian, serta solusi lengkap. Materi pendamping ini
+    ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi
+    GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-01">
+    <title>Pembatasan fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> dan <m>Y</m> ruang topologi,
+        <m>f:X\to Y</m> fungsi kontinu, dan <m>A</m> subruang dari
+        <m>X</m>. Buktikan bahwa pembatasan
+        <m>f|_A:A\to Y</m> juga kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-01-hint">
+      <p>
+        Ambil himpunan terbuka <m>U</m> dalam <m>Y</m>. Tuliskan prapetanya
+        di bawah pembatasan sebagai irisan <m>A</m> dengan prapeta di bawah
+        <m>f</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-01-answer">
+      <p>
+        Untuk setiap <m>U</m> yang terbuka dalam <m>Y</m>, berlaku
+        <m>(f|_A)^{-1}(U)=A\cap f^{-1}(U)</m>, yang terbuka dalam topologi
+        subruang pada <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-01-solution">
+      <p>
+        Ambil sebarang himpunan terbuka <m>U\subseteq Y</m>. Karena
+        <m>f</m> kontinu, <m>f^{-1}(U)</m> terbuka dalam <m>X</m>. Untuk
+        <m>x\in A</m>, titik <m>x</m> berada dalam prapeta <m>U</m> di bawah
+        <m>f|_A</m> tepat ketika <m>x\in f^{-1}(U)</m>. Oleh karena itu,
+        <me>
+          (f|_A)^{-1}(U)=A\cap f^{-1}(U).
+        </me>
+        Irisan di ruas kanan terbuka dalam topologi subruang pada <m>A</m>.
+        Jadi prapeta setiap himpunan terbuka dalam <m>Y</m> terbuka dalam
+        <m>A</m>, sehingga <m>f|_A</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-02">
+    <title>Topologi subruang bersifat transitif</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi, <m>A</m> subruang dari <m>X</m>,
+        dan <m>B</m> subruang dari <m>A</m>. Tunjukkan bahwa topologi
+        subruang yang diwarisi <m>B</m> dari <m>A</m> sama dengan topologi
+        subruang yang diwarisi <m>B</m> langsung dari <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-02-hint">
+      <p>
+        Setiap himpunan terbuka dalam <m>A</m> berbentuk <m>A\cap U</m>
+        untuk suatu <m>U</m> yang terbuka dalam <m>X</m>. Gunakan
+        <m>B\subseteq A</m> untuk menyederhanakan
+        <m>B\cap(A\cap U)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-02-answer">
+      <p>
+        Kedua topologi tersebut terdiri tepat atas himpunan berbentuk
+        <m>B\cap U</m>, dengan <m>U</m> terbuka dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-02-solution">
+      <p>
+        Himpunan <m>W\subseteq B</m> terbuka dalam topologi yang diwarisi
+        dari <m>A</m> tepat ketika terdapat himpunan <m>V</m> yang terbuka
+        dalam <m>A</m> sedemikian sehingga <m>W=B\cap V</m>. Karena
+        <m>A</m> sendiri memakai topologi subruang dari <m>X</m>, terdapat
+        himpunan terbuka <m>U\subseteq X</m> dengan <m>V=A\cap U</m>.
+        Maka
+        <me>
+          W=B\cap V=B\cap A\cap U=B\cap U,
+        </me>
+        sebab <m>B\subseteq A</m>. Jadi <m>W</m> terbuka dalam topologi
+        subruang yang diwarisi <m>B</m> langsung dari <m>X</m>.
+      </p>
+      <p>
+        Sebaliknya, jika <m>W=B\cap U</m> untuk suatu <m>U</m> yang terbuka
+        dalam <m>X</m>, maka <m>A\cap U</m> terbuka dalam <m>A</m> dan
+        <m>W=B\cap(A\cap U)</m>. Jadi <m>W</m> juga terbuka dalam topologi
+        yang diwarisi <m>B</m> dari <m>A</m>. Kedua topologi itu sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-03">
+    <title>Titik limit di dalam subruang</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> subruang dari ruang topologi <m>X</m>,
+        <m>B\subseteq A</m>, dan <m>x\in A</m>. Buktikan bahwa <m>x</m>
+        merupakan titik limit dari <m>B</m> dalam topologi subruang pada
+        <m>A</m> jika dan hanya jika <m>x</m> merupakan titik limit dari
+        <m>B</m> dalam topologi pada <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-03-hint">
+      <p>
+        Lingkungan terbuka bagi <m>x</m> dalam <m>A</m> berbentuk
+        <m>A\cap U</m>, dengan <m>U</m> terbuka dalam <m>X</m> dan
+        <m>x\in U</m>. Karena <m>B\subseteq A</m>, bandingkan
+        <m>(A\cap U)\cap(B\setminus\{x\})</m> dengan
+        <m>U\cap(B\setminus\{x\})</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-03-answer">
+      <p>
+        Kedua kondisi titik limit setara: untuk setiap himpunan terbuka
+        <m>U</m> dalam <m>X</m> yang memuat <m>x</m>, kedua irisan yang
+        relevan sama karena <m>B\setminus\{x\}\subseteq A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-03-solution">
+      <p>
+        Andaikan dahulu <m>x</m> titik limit <m>B</m> dalam <m>X</m>. Ambil
+        sebarang lingkungan terbuka <m>N</m> bagi <m>x</m> dalam <m>A</m>.
+        Terdapat himpunan terbuka <m>U</m> dalam <m>X</m> dengan
+        <m>N=A\cap U</m> dan <m>x\in U</m>. Sifat titik limit dalam <m>X</m>
+        memberi suatu <m>b\in U\cap(B\setminus\{x\})</m>. Karena
+        <m>B\subseteq A</m>, titik <m>b</m> juga berada dalam <m>N</m>.
+        Jadi <m>x</m> titik limit <m>B</m> dalam <m>A</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>x</m> titik limit <m>B</m> dalam <m>A</m>.
+        Untuk setiap himpunan terbuka <m>U\subseteq X</m> yang memuat
+        <m>x</m>, himpunan <m>A\cap U</m> adalah lingkungan terbuka bagi
+        <m>x</m> dalam <m>A</m>. Maka terdapat
+        <m>b\in(A\cap U)\cap(B\setminus\{x\})</m>, sehingga khususnya
+        <m>b\in U\cap(B\setminus\{x\})</m>. Dengan demikian <m>x</m>
+        merupakan titik limit <m>B</m> dalam <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-04">
+    <title>Tutupan dalam subruang</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> subruang dari ruang topologi <m>X</m> dan
+        <m>B\subseteq A</m>. Buktikan bahwa tutupan <m>B</m> dalam
+        <m>A</m> adalah
+        <me>
+          \operatorname{cl}_A(B)=\operatorname{cl}_X(B)\cap A,
+        </me>
+        dengan <m>\operatorname{cl}_X(B)</m> menyatakan tutupan <m>B</m> dalam
+        <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-04-hint">
+      <p>
+        Gunakan pencirian tutupan melalui lingkungan. Untuk <m>x\in A</m>,
+        lingkungan subruang berbentuk <m>A\cap U</m>; karena
+        <m>B\subseteq A</m>, berlaku
+        <m>(A\cap U)\cap B=U\cap B</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-04-answer">
+      <p>
+        Untuk setiap <m>x\in A</m>, setiap lingkungan <m>x</m> dalam
+        <m>A</m> bertemu <m>B</m> jika dan hanya jika setiap lingkungan
+        <m>x</m> dalam <m>X</m> bertemu <m>B</m>. Jadi keanggotaan dalam kedua
+        ruas persamaan itu setara.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-04-solution">
+      <p>
+        Ambil <m>x\in A</m>. Titik <m>x</m> berada dalam
+        <m>\operatorname{cl}_A(B)</m> tepat ketika setiap himpunan terbuka
+        dalam <m>A</m> yang memuat <m>x</m> bertemu <m>B</m>. Setiap himpunan
+        semacam itu berbentuk <m>A\cap U</m>, dengan <m>U</m> terbuka dalam
+        <m>X</m> dan <m>x\in U</m>. Karena <m>B\subseteq A</m>,
+        <me>
+          (A\cap U)\cap B=U\cap B.
+        </me>
+        Jadi semua lingkungan subruang bagi <m>x</m> bertemu <m>B</m> tepat
+        ketika semua lingkungan terbuka bagi <m>x</m> dalam <m>X</m> bertemu
+        <m>B</m>. Kondisi terakhir setara dengan
+        <m>x\in\operatorname{cl}_X(B)</m>. Karena sejak awal <m>x\in A</m>, kita
+        memperoleh
+        <m>x\in\operatorname{cl}_A(B)</m> jika dan hanya jika
+        <m>x\in\operatorname{cl}_X(B)\cap A</m>. Kesetaraan ini berlaku untuk
+        setiap <m>x\in A</m>, sehingga kedua himpunan sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-05">
+    <title>Garis bilangan real homeomorfik dengan sinar terbuka</title>
+    <statement>
+      <p>
+        Dengan topologi standar, buktikan bahwa <m>\R</m> homeomorfik dengan
+        setiap interval berbentuk <m>(a,\infty)</m> dan dengan setiap interval
+        berbentuk <m>(-\infty,b)</m>, untuk <m>a,b\in\R</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-05-hint">
+      <p>
+        Gunakan fungsi eksponensial untuk memperoleh nilai positif. Untuk
+        sinar kanan tambahkan <m>a</m>; untuk sinar kiri kurangkan hasil
+        eksponensial dari <m>b</m>. Tuliskan invers masing-masing.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-05-answer">
+      <p>
+        Homeomorfisme yang dapat dipakai adalah
+        <m>F_a(x)=a+e^x</m> menuju <m>(a,\infty)</m> dan
+        <m>G_b(x)=b-e^x</m> menuju <m>(-\infty,b)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-05-solution">
+      <p>
+        Tetapkan <m>a\in\R</m> dan definisikan
+        <m>F_a:\R\to(a,\infty)</m> dengan <m>F_a(x)=a+e^x</m>. Fungsi ini
+        kontinu dan bijektif karena <m>e^x</m> kontinu serta memetakan
+        <m>\R</m> secara bijektif ke <m>(0,\infty)</m>. Inversnya adalah
+        <me>
+          F_a^{-1}(y)=\ln(y-a),
+        </me>
+        yang kontinu pada <m>(a,\infty)</m>. Jadi <m>F_a</m> merupakan
+        homeomorfisme.
+      </p>
+      <p>
+        Demikian pula, untuk <m>b\in\R</m>, definisikan
+        <m>G_b:\R\to(-\infty,b)</m> dengan <m>G_b(x)=b-e^x</m>. Fungsi ini
+        kontinu dan bijektif; inversnya
+        <me>
+          G_b^{-1}(y)=\ln(b-y)
+        </me>
+        kontinu pada <m>(-\infty,b)</m>. Maka <m>G_b</m> juga merupakan
+        homeomorfisme, dan klaim berlaku untuk semua <m>a</m> dan <m>b</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-06">
+    <title>Keterbukaan relatif di dalam himpunan terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi, <m>O</m> subhimpunan terbuka dari
+        <m>X</m>, dan <m>A\subseteq O</m>. Buktikan bahwa <m>A</m> terbuka
+        dalam subruang <m>O</m> jika dan hanya jika <m>A</m> terbuka dalam
+        <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-06-hint">
+      <p>
+        Jika <m>A</m> terbuka dalam <m>O</m>, tuliskan
+        <m>A=O\cap U</m> untuk suatu <m>U</m> yang terbuka dalam <m>X</m>.
+        Gunakan bahwa <m>O</m> sendiri terbuka dalam <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-06-answer">
+      <p>
+        Benar. Pada arah yang tidak langsung, <m>A=O\cap U</m> merupakan
+        irisan dua himpunan terbuka dalam <m>X</m>; arah sebaliknya langsung
+        dari definisi topologi subruang.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-06-solution">
+      <p>
+        Andaikan <m>A</m> terbuka dalam subruang <m>O</m>. Menurut definisi
+        topologi subruang, terdapat himpunan terbuka <m>U\subseteq X</m>
+        sedemikian sehingga <m>A=O\cap U</m>. Karena <m>O</m> dan <m>U</m>
+        sama-sama terbuka dalam <m>X</m>, irisan <m>A</m> terbuka dalam
+        <m>X</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>A</m> terbuka dalam <m>X</m>. Karena
+        <m>A\subseteq O</m>, kita mempunyai <m>A=O\cap A</m>. Ruas kanan
+        adalah irisan <m>O</m> dengan suatu himpunan terbuka dalam <m>X</m>,
+        sehingga <m>A</m> terbuka dalam topologi subruang pada <m>O</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-07">
+    <title>Ketertutupan relatif di dalam himpunan tertutup</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi, <m>C</m> subhimpunan tertutup dari
+        <m>X</m>, dan <m>B\subseteq C</m>. Buktikan bahwa <m>B</m> tertutup
+        dalam subruang <m>C</m> jika dan hanya jika <m>B</m> tertutup dalam
+        <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-07-hint">
+      <p>
+        Gunakan pencirian himpunan tertutup relatif: <m>B</m> tertutup dalam
+        <m>C</m> tepat ketika <m>B=C\cap F</m> untuk suatu <m>F</m> yang
+        tertutup dalam <m>X</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-07-answer">
+      <p>
+        Benar. Jika <m>B=C\cap F</m>, maka <m>B</m> adalah irisan dua
+        himpunan tertutup dalam <m>X</m>; arah sebaliknya memakai
+        <m>B=C\cap B</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-07-solution">
+      <p>
+        Andaikan <m>B</m> tertutup dalam subruang <m>C</m>. Pencirian
+        himpunan tertutup dalam topologi subruang memberi suatu himpunan
+        tertutup <m>F\subseteq X</m> dengan <m>B=C\cap F</m>. Karena
+        <m>C</m> juga tertutup dalam <m>X</m>, irisan <m>B</m> tertutup dalam
+        <m>X</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>B</m> tertutup dalam <m>X</m>. Karena
+        <m>B\subseteq C</m>, berlaku <m>B=C\cap B</m>. Jadi <m>B</m> adalah
+        irisan <m>C</m> dengan suatu himpunan tertutup dalam <m>X</m>, yang
+        menurut pencirian topologi subruang berarti <m>B</m> tertutup dalam
+        <m>C</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-08">
+    <title>Sifat herediter aksioma separasi <m>T_1</m>, <m>T_2</m>, dan <m>T_3</m></title>
+    <statement>
+      <p>
+        Suatu sifat ruang topologi disebut <em>herediter</em> jika setiap
+        subruangnya juga memiliki sifat tersebut. Buktikan bahwa sifat
+        <m>T_1</m>, <m>T_2</m>, dan <m>T_3</m> semuanya herediter.
+      </p>
+      <p>
+        Catatan sumber: klaim yang serupa untuk <m>T_4</m> tidak benar.
+        Papan Tychonoff yang normal memiliki papan Tychonoff terhapus yang
+        tidak normal sebagai subruang; sumber merujuk pembaca ke
+        <pubtitle>Counterexamples in Topology (2nd ed.)</pubtitle> karya
+        Lynn Arthur Steen dan J. Arthur Seebach, Jr. untuk contoh tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-08-hint">
+      <p>
+        Untuk <m>T_1</m> dan <m>T_2</m>, iriskan himpunan terbuka pemisah
+        dalam ruang ambien dengan subruangnya. Untuk <m>T_3</m>, tuliskan
+        himpunan tertutup <m>F</m> dalam subruang <m>A</m> sebagai
+        <m>F=A\cap C</m> dengan <m>C</m> tertutup dalam ruang ambien, lalu
+        pisahkan suatu titik <m>a\in A\setminus F</m> dari <m>C</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-08-answer">
+      <p>
+        Rubrik lengkap: buktikan secara terpisah bahwa pemisah terbuka untuk
+        dua titik tetap menjadi pemisah setelah diiriskan dengan subruang;
+        lalu buktikan bahwa keteraturan diwarisi menggunakan
+        <m>F=A\cap C</m>. Karena <m>T_3</m> berarti reguler sekaligus
+        <m>T_1</m>, kedua bagiannya harus disebutkan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-08-solution">
+      <p>
+        Misalkan <m>A</m> subruang dari <m>X</m>. Pertama, andaikan <m>X</m>
+        merupakan ruang <m>T_1</m>. Untuk titik berbeda <m>x,y\in A</m>,
+        terdapat himpunan terbuka <m>U\subseteq X</m> yang memuat <m>y</m>
+        tetapi tidak memuat <m>x</m>. Himpunan <m>A\cap U</m> terbuka dalam
+        <m>A</m>, memuat <m>y</m>, dan tidak memuat <m>x</m>. Jadi <m>A</m>
+        merupakan ruang <m>T_1</m>.
+      </p>
+      <p>
+        Kedua, andaikan <m>X</m> merupakan ruang <m>T_2</m>. Untuk titik
+        berbeda <m>x,y\in A</m>, pilih himpunan terbuka saling lepas
+        <m>U,V\subseteq X</m> dengan <m>x\in U</m> dan <m>y\in V</m>.
+        Himpunan <m>A\cap U</m> dan <m>A\cap V</m> terbuka dalam <m>A</m>,
+        memuat titik masing-masing, dan tetap saling lepas. Maka <m>A</m>
+        merupakan ruang <m>T_2</m>.
+      </p>
+      <p>
+        Terakhir, andaikan <m>X</m> merupakan ruang <m>T_3</m>; jadi
+        <m>X</m> bersifat reguler dan <m>T_1</m>. Bagian pertama telah
+        menunjukkan bahwa <m>A</m> bersifat <m>T_1</m>. Ambil himpunan
+        tertutup <m>F</m> dalam <m>A</m> dan titik
+        <m>a\in A\setminus F</m>. Ada himpunan tertutup <m>C</m> dalam
+        <m>X</m> dengan <m>F=A\cap C</m>. Karena <m>a\in A</m> tetapi
+        <m>a\notin F</m>, kita mempunyai <m>a\notin C</m>. Keteraturan
+        <m>X</m> memberi himpunan terbuka saling lepas <m>U,V</m> dalam
+        <m>X</m> dengan <m>C\subseteq U</m> dan <m>a\in V</m>. Maka
+        <m>F\subseteq A\cap U</m> dan <m>a\in A\cap V</m>; kedua himpunan
+        itu terbuka dan saling lepas dalam <m>A</m>. Jadi <m>A</m> reguler.
+        Karena <m>A</m> juga <m>T_1</m>, ruang <m>A</m> adalah <m>T_3</m>.
+        Dengan demikian ketiga sifat tersebut herediter.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-09">
+    <title>Homeomorfisme setelah menghapus titik yang bersesuaian</title>
+    <statement>
+      <p>
+        Misalkan <m>f:X\to Y</m> suatu homeomorfisme antara ruang topologi
+        <m>X</m> dan <m>Y</m>, dan ambil <m>a\in X</m>. Tentukan apakah
+        subruang <m>X'=X\setminus\{a\}</m> harus homeomorfik dengan subruang
+        <m>Y'=Y\setminus\{f(a)\}</m>, lalu buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-09-hint">
+      <p>
+        Pertimbangkan pembatasan <m>g=f|_{X'}</m>. Gunakan keinjektifan dan
+        kesurjektifan <m>f</m> untuk menunjukkan bahwa citra <m>g</m> tepat
+        <m>Y'</m>, lalu identifikasi invers <m>g</m> sebagai pembatasan dari
+        <m>f^{-1}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-09-answer">
+      <p>
+        Ya. Homeomorfismenya adalah
+        <m>f|_{X'}:X'\to Y'</m>, dengan invers
+        <m>f^{-1}|_{Y'}:Y'\to X'</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-09-solution">
+      <p>
+        Definisikan <m>g=f|_{X'}</m>. Jika <m>x\in X'</m>, maka
+        <m>x\neq a</m>; keinjektifan <m>f</m> memberi
+        <m>f(x)\neq f(a)</m>. Jadi <m>g(x)\in Y'</m>. Sebaliknya, untuk
+        <m>y\in Y'</m>, kesurjektifan <m>f</m> memberi suatu <m>x\in X</m>
+        dengan <m>f(x)=y</m>. Titik ini bukan <m>a</m>, sebab
+        <m>y\neq f(a)</m>. Maka <m>x\in X'</m> dan <m>g(x)=y</m>. Bersama
+        keinjektifan yang diwarisi dari <m>f</m>, hal ini membuktikan bahwa
+        <m>g:X'\to Y'</m> bijektif.
+      </p>
+      <p>
+        Pembatasan fungsi kontinu pada subruang kontinu, sehingga <m>g</m>
+        kontinu. Inversnya adalah pembatasan
+        <m>f^{-1}|_{Y'}:Y'\to X'</m>, yang juga kontinu karena <m>f^{-1}</m>
+        kontinu. Jadi <m>g</m> merupakan homeomorfisme antara <m>X'</m> dan
+        <m>Y'</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch15-exer-a-10">
+    <title>Subruang dari ruang diskret</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>X</m> memiliki topologi diskret,
+        maka setiap subruang <m>A</m> dari <m>X</m> juga memiliki topologi
+        diskret. Jelaskan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch15-exer-a-10-hint">
+      <p>
+        Untuk membuktikan bahwa topologi pada <m>A</m> diskret, ambil sebarang
+        <m>S\subseteq A</m> dan tunjukkan bahwa <m>S</m> terbuka dalam
+        topologi subruang.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch15-exer-a-10-answer">
+      <p>
+        Benar. Setiap <m>S\subseteq A</m> terbuka dalam <m>X</m>, sehingga
+        <m>S=A\cap S</m> terbuka dalam subruang <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch15-exer-a-10-solution">
+      <p>
+        Ambil subruang <m>A\subseteq X</m> dan sebarang himpunan
+        <m>S\subseteq A</m>. Karena topologi <m>X</m> diskret, setiap
+        subhimpunan dari <m>X</m>, termasuk <m>S</m>, terbuka dalam <m>X</m>.
+        Kesamaan <m>S=A\cap S</m> menunjukkan bahwa <m>S</m> terbuka dalam
+        topologi subruang pada <m>A</m>. Karena setiap subhimpunan <m>S</m>
+        dari <m>A</m> terbuka, topologi subruang pada <m>A</m> adalah topologi
+        diskret. Jadi pernyataan itu benar.
+      </p>
+    </solution>
+  </exercise>
+</section>
