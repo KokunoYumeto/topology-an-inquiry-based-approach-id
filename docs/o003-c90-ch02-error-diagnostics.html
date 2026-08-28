@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,22 +597,22 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch02-error-diagnostics"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Diagnostik kesalahan ringkas</span>
 </h2>
-<div class="para logical" id="p-2096"><dl class="description-list">
-<dt id="li-304">Mengabaikan kodomain</dt>
-<dd><div class="para" id="p-2097">Dua aturan yang sama dapat mempunyai sifat surjektif berbeda. Tulis tipe lengkap <span class="process-math">\(f:A\to B\)</span> sebelum menguji.</div></dd>
-<dt id="li-305">Menukar daerah hasil dan kodomain</dt>
-<dd><div class="para" id="p-2098">Daerah hasil adalah nilai yang benar-benar tercapai dan selalu merupakan subhimpunan kodomain.</div></dd>
-<dt id="li-306">Membaca komposisi dari kiri</dt>
-<dd><div class="para" id="p-2099">Pada <span class="process-math">\(g\circ f\text{,}\)</span> terapkan <span class="process-math">\(f\)</span> lebih dahulu; periksa bahwa keluarannya dapat menjadi masukan <span class="process-math">\(g\text{.}\)</span>
+<div class="para logical" id="p-2214"><dl class="description-list">
+<dt id="li-319">Mengabaikan kodomain</dt>
+<dd><div class="para" id="p-2215">Dua aturan yang sama dapat mempunyai sifat surjektif berbeda. Tulis tipe lengkap <span class="process-math">\(f:A\to B\)</span> sebelum menguji.</div></dd>
+<dt id="li-320">Menukar daerah hasil dan kodomain</dt>
+<dd><div class="para" id="p-2216">Daerah hasil adalah nilai yang benar-benar tercapai dan selalu merupakan subhimpunan kodomain.</div></dd>
+<dt id="li-321">Membaca komposisi dari kiri</dt>
+<dd><div class="para" id="p-2217">Pada <span class="process-math">\(g\circ f\text{,}\)</span> terapkan <span class="process-math">\(f\)</span> lebih dahulu; periksa bahwa keluarannya dapat menjadi masukan <span class="process-math">\(g\text{.}\)</span>
 </div></dd>
-<dt id="li-307">Menganggap simbol <span class="process-math">\(f^{-1}\)</span> selalu fungsi</dt>
-<dd><div class="para" id="p-2100">Relasi balik menjadi fungsi hanya untuk bijeksi; prapeta himpunan <span class="process-math">\(f^{-1}(B)\)</span> tetap terdefinisi tanpa bijektivitas.</div></dd>
-<dt id="li-308">Citra dan irisan</dt>
-<dd><div class="para" id="p-2101">Citra mempertahankan gabungan, tetapi untuk irisan hanya satu inklusi yang selalu benar; prapeta mempertahankan keduanya.</div></dd>
-<dt id="li-309">Membuktikan surjektivitas dengan satu contoh</dt>
-<dd><div class="para" id="p-2102">Mulai dari unsur sembarang kodomain dan bangun prapetanya.</div></dd>
-<dt id="li-310">Mengabaikan kasus kosong atau faktor tak kosong</dt>
-<dd><div class="para" id="p-2103">Periksa asumsi ketakosongan ketika memakai proyeksi, membatalkan hasil kali Kartesius, atau menafsirkan irisan keluarga kosong.</div></dd>
+<dt id="li-322">Menganggap simbol <span class="process-math">\(f^{-1}\)</span> selalu fungsi</dt>
+<dd><div class="para" id="p-2218">Relasi balik menjadi fungsi hanya untuk bijeksi; prapeta himpunan <span class="process-math">\(f^{-1}(B)\)</span> tetap terdefinisi tanpa bijektivitas.</div></dd>
+<dt id="li-323">Citra dan irisan</dt>
+<dd><div class="para" id="p-2219">Citra mempertahankan gabungan, tetapi untuk irisan hanya satu inklusi yang selalu benar; prapeta mempertahankan keduanya.</div></dd>
+<dt id="li-324">Membuktikan surjektivitas dengan satu contoh</dt>
+<dd><div class="para" id="p-2220">Mulai dari unsur sembarang kodomain dan bangun prapetanya.</div></dd>
+<dt id="li-325">Mengabaikan kasus kosong atau faktor tak kosong</dt>
+<dd><div class="para" id="p-2221">Periksa asumsi ketakosongan ketika memakai proyeksi, membatalkan hasil kali Kartesius, atau menafsirkan irisan keluarga kosong.</div></dd>
 </dl></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="o003-c90-ch02-mastery.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch02-exercise-guides.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>

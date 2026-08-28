@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,10 +597,10 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch11-source-guides-b"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Panduan konsep dan tugas sumber, bagian kedua</span>
 </h2>
-<div class="para" id="p-4200">Tujuh panduan berikut mengikuti tepat tujuh tugas sumber tentang hasil kali ruang metrik: tiga pemeriksaan aksioma metrik dan empat tugas tentang geometri serta keterbukaan pada hasil kali. Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap pernyataan memparafrasakan sasaran sumber dan menyertakan rubrik keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang tersedia di bawah Creative Commons Attribution 4.0 International (CC BY 4.0).</div>
+<div class="para" id="p-4318">Tujuh panduan berikut mengikuti tepat tujuh tugas sumber tentang hasil kali ruang metrik: tiga pemeriksaan aksioma metrik dan empat tugas tentang geometri serta keterbukaan pada hasil kali. Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan solusi secara bertahap. Setiap pernyataan memparafrasakan sasaran sumber dan menyertakan rubrik keberhasilan. Teks panduan asli ini merupakan komponen terpisah yang tersedia di bawah Creative Commons Attribution 4.0 International (CC BY 4.0).</div>
 <article class="exercise exercise-like" id="o003-c90-ch11-guide-10"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch11-guide-10"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">K.10</span><span class="period">.</span><span class="space"> </span><span class="title">Nilai metrik hasil kali tak negatif.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10"><article class="exercise exercise-like"><div class="para logical" id="p-4201">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10"><article class="exercise exercise-like"><div class="para logical" id="p-4319">
 <div class="para">Untuk <span class="process-math">\(x=(x_1,x_2)\)</span> dan <span class="process-math">\(y=(y_1,y_2)\)</span> dalam <span class="process-math">\(X_1\times X_2\text{,}\)</span> jelaskan mengapa</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -584,10 +610,10 @@ d(x,y)=\sqrt{d_1(x_1,y_1)^2+d_2(x_2,y_2)^2}
 <div class="para">selalu lebih besar daripada atau sama dengan <span class="process-math">\(0\text{.}\)</span> Rubrik: gunakan kodomain metrik faktor, penguadratan, penjumlahan, dan akar kuadrat utama secara berurutan.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-10-hint" id="o003-c90-ch11-guide-10-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10-hint"><div class="hint solution-like"><div class="para" id="p-4202">Tahap 1: setiap jarak <span class="process-math">\(d_i(x_i,y_i)\)</span> merupakan bilangan real tak negatif. Tahap 2: tentukan tanda jumlah kuadratnya dan tanda akar kuadrat utama dari jumlah tersebut.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-10-answer" id="o003-c90-ch11-guide-10-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10-answer"><div class="answer solution-like"><div class="para" id="p-4203">Kedua suku kuadrat tak negatif, sehingga jumlahnya tak negatif dan akar kuadrat utamanya juga tak negatif. Jadi <span class="process-math">\(d(x,y)\geq0\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-10-hint" id="o003-c90-ch11-guide-10-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10-hint"><div class="hint solution-like"><div class="para" id="p-4320">Tahap 1: setiap jarak <span class="process-math">\(d_i(x_i,y_i)\)</span> merupakan bilangan real tak negatif. Tahap 2: tentukan tanda jumlah kuadratnya dan tanda akar kuadrat utama dari jumlah tersebut.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-10-answer" id="o003-c90-ch11-guide-10-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10-answer"><div class="answer solution-like"><div class="para" id="p-4321">Kedua suku kuadrat tak negatif, sehingga jumlahnya tak negatif dan akar kuadrat utamanya juga tak negatif. Jadi <span class="process-math">\(d(x,y)\geq0\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-10-solution" id="o003-c90-ch11-guide-10-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10-solution"><div class="solution solution-like"><div class="para logical" id="p-4204">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-10-solution" id="o003-c90-ch11-guide-10-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-10-solution"><div class="solution solution-like"><div class="para logical" id="p-4322">
 <div class="para">Karena <span class="process-math">\(d_1\)</span> dan <span class="process-math">\(d_2\)</span> merupakan metrik, <span class="process-math">\(d_1(x_1,y_1)\geq0\)</span> dan <span class="process-math">\(d_2(x_2,y_2)\geq0\text{.}\)</span> Khususnya, <span class="process-math">\(d_1(x_1,y_1)^2\geq0\)</span> dan <span class="process-math">\(d_2(x_2,y_2)^2\geq0\text{,}\)</span> sehingga</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -600,12 +626,12 @@ d_1(x_1,y_1)^2+d_2(x_2,y_2)^2\geq0.
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch11-guide-11"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch11-guide-11"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">K.11</span><span class="period">.</span><span class="space"> </span><span class="title">Simetri metrik hasil kali.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11"><article class="exercise exercise-like"><div class="para" id="p-4205">Buktikan bahwa metrik hasil kali memenuhi <span class="process-math">\(d(x,y)=d(y,x)\text{.}\)</span> Rubrik: terapkan simetri secara terpisah pada <span class="process-math">\(d_1\)</span> dan <span class="process-math">\(d_2\text{,}\)</span> lalu substitusikan kedua kesamaan itu ke dalam rumus hasil kali.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11"><article class="exercise exercise-like"><div class="para" id="p-4323">Buktikan bahwa metrik hasil kali memenuhi <span class="process-math">\(d(x,y)=d(y,x)\text{.}\)</span> Rubrik: terapkan simetri secara terpisah pada <span class="process-math">\(d_1\)</span> dan <span class="process-math">\(d_2\text{,}\)</span> lalu substitusikan kedua kesamaan itu ke dalam rumus hasil kali.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-11-hint" id="o003-c90-ch11-guide-11-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11-hint"><div class="hint solution-like"><div class="para" id="p-4206">Tahap 1: tuliskan <span class="process-math">\(d_1(x_1,y_1)=d_1(y_1,x_1)\)</span> dan <span class="process-math">\(d_2(x_2,y_2)=d_2(y_2,x_2)\text{.}\)</span> Tahap 2: bandingkan rumus untuk <span class="process-math">\(d(x,y)\)</span> dan <span class="process-math">\(d(y,x)\)</span> suku demi suku.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-11-answer" id="o003-c90-ch11-guide-11-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11-answer"><div class="answer solution-like"><div class="para" id="p-4207">Simetri kedua metrik faktor membuat kedua kuadrat dalam rumus tidak berubah ketika <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> dipertukarkan. Karena itu <span class="process-math">\(d(x,y)=d(y,x)\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-11-hint" id="o003-c90-ch11-guide-11-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11-hint"><div class="hint solution-like"><div class="para" id="p-4324">Tahap 1: tuliskan <span class="process-math">\(d_1(x_1,y_1)=d_1(y_1,x_1)\)</span> dan <span class="process-math">\(d_2(x_2,y_2)=d_2(y_2,x_2)\text{.}\)</span> Tahap 2: bandingkan rumus untuk <span class="process-math">\(d(x,y)\)</span> dan <span class="process-math">\(d(y,x)\)</span> suku demi suku.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-11-answer" id="o003-c90-ch11-guide-11-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11-answer"><div class="answer solution-like"><div class="para" id="p-4325">Simetri kedua metrik faktor membuat kedua kuadrat dalam rumus tidak berubah ketika <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> dipertukarkan. Karena itu <span class="process-math">\(d(x,y)=d(y,x)\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-11-solution" id="o003-c90-ch11-guide-11-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11-solution"><div class="solution solution-like"><div class="para logical" id="p-4208">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-11-solution" id="o003-c90-ch11-guide-11-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-11-solution"><div class="solution solution-like"><div class="para logical" id="p-4326">
 <div class="para">Dengan simetri <span class="process-math">\(d_1\)</span> dan <span class="process-math">\(d_2\text{,}\)</span> kita memperoleh</div>
 <div class="displaymath process-math" id="md-58">
 \begin{align*}
@@ -620,13 +646,13 @@ d(x,y)
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch11-guide-12"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch11-guide-12"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">K.12</span><span class="period">.</span><span class="space"> </span><span class="title">Definit positif dan pertidaksamaan segitiga.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-12"><article class="exercise exercise-like"><div class="para" id="p-4209">Jelaskan mengapa <span class="process-math">\(d(x,y)=0\)</span> jika dan hanya jika <span class="process-math">\(x=y\text{.}\)</span> Rubrik: gunakan fakta bahwa jumlah dua kuadrat tak negatif bernilai nol tepat ketika kedua sukunya nol, lalu terapkan definit positif pada setiap metrik faktor. Setelah itu, tutup pemeriksaan metrik dengan langkah Cauchy–Schwarz yang benar bagi pertidaksamaan segitiga.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-12"><article class="exercise exercise-like"><div class="para" id="p-4327">Jelaskan mengapa <span class="process-math">\(d(x,y)=0\)</span> jika dan hanya jika <span class="process-math">\(x=y\text{.}\)</span> Rubrik: gunakan fakta bahwa jumlah dua kuadrat tak negatif bernilai nol tepat ketika kedua sukunya nol, lalu terapkan definit positif pada setiap metrik faktor. Setelah itu, tutup pemeriksaan metrik dengan langkah Cauchy–Schwarz yang benar bagi pertidaksamaan segitiga.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-12-hint" id="o003-c90-ch11-guide-12-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-12-hint"><div class="hint solution-like"><div class="para" id="p-4210">Tahap 1: kuadratkan kesamaan <span class="process-math">\(d(x,y)=0\)</span> dan simpulkan <span class="process-math">\(d_1(x_1,y_1)=d_2(x_2,y_2)=0\text{.}\)</span> Tahap 2: bagi pertidaksamaan segitiga, tetapkan <span class="process-math">\(a_i=d_i(x_i,y_i)\)</span> dan <span class="process-math">\(b_i=d_i(y_i,z_i)\text{,}\)</span> kemudian batasi <span class="process-math">\(a_1b_1+a_2b_2\)</span> dengan Cauchy–Schwarz.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-12-answer" id="o003-c90-ch11-guide-12-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-12-answer"><div class="answer solution-like"><div class="para" id="p-4211">Berlaku <span class="process-math">\(d(x,y)=0\)</span> tepat ketika kedua jarak koordinat nol, yaitu tepat ketika <span class="process-math">\(x_1=y_1\)</span> dan <span class="process-math">\(x_2=y_2\text{,}\)</span> atau <span class="process-math">\(x=y\text{.}\)</span> Cauchy–Schwarz memberi suku silang paling besar <span class="process-math">\(d(x,y)d(y,z)\text{,}\)</span> sehingga <span class="process-math">\(d(x,z)\leq d(x,y)+d(y,z)\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-12-hint" id="o003-c90-ch11-guide-12-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-12-hint"><div class="hint solution-like"><div class="para" id="p-4328">Tahap 1: kuadratkan kesamaan <span class="process-math">\(d(x,y)=0\)</span> dan simpulkan <span class="process-math">\(d_1(x_1,y_1)=d_2(x_2,y_2)=0\text{.}\)</span> Tahap 2: bagi pertidaksamaan segitiga, tetapkan <span class="process-math">\(a_i=d_i(x_i,y_i)\)</span> dan <span class="process-math">\(b_i=d_i(y_i,z_i)\text{,}\)</span> kemudian batasi <span class="process-math">\(a_1b_1+a_2b_2\)</span> dengan Cauchy–Schwarz.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-12-answer" id="o003-c90-ch11-guide-12-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-12-answer"><div class="answer solution-like"><div class="para" id="p-4329">Berlaku <span class="process-math">\(d(x,y)=0\)</span> tepat ketika kedua jarak koordinat nol, yaitu tepat ketika <span class="process-math">\(x_1=y_1\)</span> dan <span class="process-math">\(x_2=y_2\text{,}\)</span> atau <span class="process-math">\(x=y\text{.}\)</span> Cauchy–Schwarz memberi suku silang paling besar <span class="process-math">\(d(x,y)d(y,z)\text{,}\)</span> sehingga <span class="process-math">\(d(x,z)\leq d(x,y)+d(y,z)\text{.}\)</span>
 </div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-12-solution" id="o003-c90-ch11-guide-12-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-12-solution"><div class="solution solution-like">
-<div class="para logical" id="p-4212">
+<div class="para logical" id="p-4330">
 <div class="para">Jika <span class="process-math">\(x=y\text{,}\)</span> maka <span class="process-math">\(x_1=y_1\)</span> dan <span class="process-math">\(x_2=y_2\text{.}\)</span> Kedua jarak koordinat nol, sehingga <span class="process-math">\(d(x,y)=0\text{.}\)</span> Sebaliknya, jika <span class="process-math">\(d(x,y)=0\text{,}\)</span> maka</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -635,7 +661,7 @@ d_1(x_1,y_1)^2+d_2(x_2,y_2)^2=0.
 </div>
 <div class="para">Kedua suku tak negatif, jadi masing-masing harus nol. Definit positif metrik faktor memberi <span class="process-math">\(x_1=y_1\)</span> dan <span class="process-math">\(x_2=y_2\text{.}\)</span> Maka <span class="process-math">\(x=(x_1,x_2)=(y_1,y_2)=y\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-4213">
+</div> <div class="para logical" id="p-4331">
 <div class="para">Untuk melengkapi verifikasi, ambil <span class="process-math">\(z=(z_1,z_2)\)</span> dan tulis <span class="process-math">\(a_i=d_i(x_i,y_i)\)</span> serta <span class="process-math">\(b_i=d_i(y_i,z_i)\text{.}\)</span> Pertidaksamaan segitiga di setiap faktor memberi <span class="process-math">\(d_i(x_i,z_i)\leq a_i+b_i\text{.}\)</span> Oleh karena semua suku tak negatif,</div>
 <div class="displaymath process-math" id="md-59">
 \begin{align*}
@@ -645,7 +671,7 @@ d(x,z)^2
 +(b_1^2+b_2^2).
 \end{align*}
 </div>
-</div> <div class="para logical" id="p-4214">
+</div> <div class="para logical" id="p-4332">
 <div class="para">Pertidaksamaan Cauchy–Schwarz yang diterapkan pada pasangan <span class="process-math">\((a_1,a_2)\)</span> dan <span class="process-math">\((b_1,b_2)\)</span> memberikan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -668,12 +694,12 @@ d(x,z)^2
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch11-guide-13"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch11-guide-13"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">K.13</span><span class="period">.</span><span class="space"> </span><span class="title">Geometri ruang hasil kali dua interval.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-13"><article class="exercise exercise-like"><div class="para" id="p-4215">Misalkan <span class="process-math">\(X_1=[1,2]\)</span> dan <span class="process-math">\(X_2=[3,4]\text{,}\)</span> masing-masing sebagai subruang dari <span class="process-math">\(\R\)</span> dengan metrik Euklides. Jelaskan secara rinci ruang hasil kali <span class="process-math">\(X_1\times X_2\)</span> dan metrik hasil kalinya. Rubrik: gambarkan himpunan titik, nyatakan apakah sisi-sisinya termasuk, sederhanakan rumus jarak, dan jelaskan bentuk bola jauh dari serta dekat batas.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-13"><article class="exercise exercise-like"><div class="para" id="p-4333">Misalkan <span class="process-math">\(X_1=[1,2]\)</span> dan <span class="process-math">\(X_2=[3,4]\text{,}\)</span> masing-masing sebagai subruang dari <span class="process-math">\(\R\)</span> dengan metrik Euklides. Jelaskan secara rinci ruang hasil kali <span class="process-math">\(X_1\times X_2\)</span> dan metrik hasil kalinya. Rubrik: gambarkan himpunan titik, nyatakan apakah sisi-sisinya termasuk, sederhanakan rumus jarak, dan jelaskan bentuk bola jauh dari serta dekat batas.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-13-hint" id="o003-c90-ch11-guide-13-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-13-hint"><div class="hint solution-like"><div class="para" id="p-4216">Tahap 1: unsur hasil kali adalah pasangan <span class="process-math">\((x_1,x_2)\)</span> dengan <span class="process-math">\(1\leq x_1\leq2\)</span> dan <span class="process-math">\(3\leq x_2\leq4\text{.}\)</span> Tahap 2: substitusikan <span class="process-math">\(d_1(s,t)=|s-t|\)</span> dan <span class="process-math">\(d_2(s,t)=|s-t|\)</span> ke rumus metrik hasil kali.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-13-answer" id="o003-c90-ch11-guide-13-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-13-answer"><div class="answer solution-like"><div class="para" id="p-4217">Hasil kalinya adalah persegi tertutup <span class="process-math">\([1,2]\times[3,4]\)</span> di bidang. Metrik hasil kalinya sama dengan pembatasan metrik Euklides bidang, sehingga bola relatif adalah irisan cakram terbuka Euklides dengan persegi tersebut.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-13-hint" id="o003-c90-ch11-guide-13-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-13-hint"><div class="hint solution-like"><div class="para" id="p-4334">Tahap 1: unsur hasil kali adalah pasangan <span class="process-math">\((x_1,x_2)\)</span> dengan <span class="process-math">\(1\leq x_1\leq2\)</span> dan <span class="process-math">\(3\leq x_2\leq4\text{.}\)</span> Tahap 2: substitusikan <span class="process-math">\(d_1(s,t)=|s-t|\)</span> dan <span class="process-math">\(d_2(s,t)=|s-t|\)</span> ke rumus metrik hasil kali.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-13-answer" id="o003-c90-ch11-guide-13-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-13-answer"><div class="answer solution-like"><div class="para" id="p-4335">Hasil kalinya adalah persegi tertutup <span class="process-math">\([1,2]\times[3,4]\)</span> di bidang. Metrik hasil kalinya sama dengan pembatasan metrik Euklides bidang, sehingga bola relatif adalah irisan cakram terbuka Euklides dengan persegi tersebut.</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-13-solution" id="o003-c90-ch11-guide-13-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-13-solution"><div class="solution solution-like">
-<div class="para logical" id="p-4218">
+<div class="para logical" id="p-4336">
 <div class="para">Secara himpunan,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -690,17 +716,17 @@ d(p,q)=\sqrt{|s-u|^2+|t-v|^2}
 \end{equation*}
 </div>
 <div class="para">tepat metrik Euklides bidang yang dibatasi ke persegi.</div>
-</div> <div class="para" id="p-4219">Karena ruangnya hanya persegi tersebut, bola <span class="process-math">\(B_{X_1\times X_2}(p,r)\)</span> adalah cakram Euklides terbuka berpusat di <span class="process-math">\(p\)</span> yang dipotong dengan <span class="process-math">\([1,2]\times[3,4]\text{.}\)</span> Jika cakram tidak mencapai sisi, bola tampak bulat penuh; dekat sisi atau sudut, bagian di luar ruang dibuang. Keterbukaan selalu dihitung relatif terhadap ruang hasil kali ini.</div>
+</div> <div class="para" id="p-4337">Karena ruangnya hanya persegi tersebut, bola <span class="process-math">\(B_{X_1\times X_2}(p,r)\)</span> adalah cakram Euklides terbuka berpusat di <span class="process-math">\(p\)</span> yang dipotong dengan <span class="process-math">\([1,2]\times[3,4]\text{.}\)</span> Jika cakram tidak mencapai sisi, bola tampak bulat penuh; dekat sisi atau sudut, bagian di luar ruang dibuang. Keterbukaan selalu dihitung relatif terhadap ruang hasil kali ini.</div>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch11-guide-14"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch11-guide-14"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">K.14</span><span class="period">.</span><span class="space"> </span><span class="title">Hasil kali bola umumnya bukan bola metrik hasil kali.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-14"><article class="exercise exercise-like"><div class="para" id="p-4220">Jika <span class="process-math">\(B_1\)</span> bola terbuka di <span class="process-math">\(X_1\)</span> dan <span class="process-math">\(B_2\)</span> bola terbuka di <span class="process-math">\(X_2\text{,}\)</span> tentukan apakah <span class="process-math">\(B_1\times B_2\)</span> harus menjadi satu bola terbuka bagi metrik hasil kali. Rubrik: bedakan bentuk persegi panjang dari cakram, berikan pilihan bola faktor yang konkret, dan buktikan bahwa tidak ada pusat serta radius yang membuat kedua himpunan itu sama.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-14"><article class="exercise exercise-like"><div class="para" id="p-4338">Jika <span class="process-math">\(B_1\)</span> bola terbuka di <span class="process-math">\(X_1\)</span> dan <span class="process-math">\(B_2\)</span> bola terbuka di <span class="process-math">\(X_2\text{,}\)</span> tentukan apakah <span class="process-math">\(B_1\times B_2\)</span> harus menjadi satu bola terbuka bagi metrik hasil kali. Rubrik: bedakan bentuk persegi panjang dari cakram, berikan pilihan bola faktor yang konkret, dan buktikan bahwa tidak ada pusat serta radius yang membuat kedua himpunan itu sama.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-14-hint" id="o003-c90-ch11-guide-14-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-14-hint"><div class="hint solution-like"><div class="para" id="p-4221">Tahap 1: ambil <span class="process-math">\(B_1=B_{X_1}(3/2,1/4)\)</span> dan <span class="process-math">\(B_2=B_{X_2}(7/2,1/4)\text{.}\)</span> Tahap 2: hasil kalinya adalah persegi terbuka; irisan horizontal dan vertikal melalui pusat memaksa radius calon bola menjadi <span class="process-math">\(1/4\text{,}\)</span> tetapi titik-titik dekat sudut persegi berjarak lebih dari <span class="process-math">\(1/4\)</span> dari pusat.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-14-answer" id="o003-c90-ch11-guide-14-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-14-answer"><div class="answer solution-like"><div class="para" id="p-4222">Tidak harus. Pada contoh tersebut, <span class="process-math">\(B_1\times B_2=(5/4,7/4)\times(13/4,15/4)\)</span> adalah persegi terbuka, bukan bola bagi metrik hasil kali Euklides. Hasil kali bola dapat menjadi bola dalam kasus khusus, tetapi tidak secara umum.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-14-hint" id="o003-c90-ch11-guide-14-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-14-hint"><div class="hint solution-like"><div class="para" id="p-4339">Tahap 1: ambil <span class="process-math">\(B_1=B_{X_1}(3/2,1/4)\)</span> dan <span class="process-math">\(B_2=B_{X_2}(7/2,1/4)\text{.}\)</span> Tahap 2: hasil kalinya adalah persegi terbuka; irisan horizontal dan vertikal melalui pusat memaksa radius calon bola menjadi <span class="process-math">\(1/4\text{,}\)</span> tetapi titik-titik dekat sudut persegi berjarak lebih dari <span class="process-math">\(1/4\)</span> dari pusat.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-14-answer" id="o003-c90-ch11-guide-14-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-14-answer"><div class="answer solution-like"><div class="para" id="p-4340">Tidak harus. Pada contoh tersebut, <span class="process-math">\(B_1\times B_2=(5/4,7/4)\times(13/4,15/4)\)</span> adalah persegi terbuka, bukan bola bagi metrik hasil kali Euklides. Hasil kali bola dapat menjadi bola dalam kasus khusus, tetapi tidak secara umum.</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-14-solution" id="o003-c90-ch11-guide-14-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-14-solution"><div class="solution solution-like">
-<div class="para logical" id="p-4223">
+<div class="para logical" id="p-4341">
 <div class="para">Kedua bola yang diberikan tidak terpotong oleh batas ruang faktornya, sehingga</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -710,7 +736,7 @@ P=B_1\times B_2
 </div>
 <div class="para">Himpunan <span class="process-math">\(P\)</span> adalah persegi terbuka berpusat di <span class="process-math">\(c=(3/2,7/2)\text{.}\)</span> Andaikan <span class="process-math">\(P=B(w,R)\)</span> untuk suatu pusat <span class="process-math">\(w=(w_1,w_2)\text{.}\)</span> Karena <span class="process-math">\(w\in P\text{,}\)</span> irisan <span class="process-math">\(P\)</span> dengan garis horizontal melalui <span class="process-math">\(w\)</span> adalah interval <span class="process-math">\((5/4,7/4)\times\{w_2\}\text{.}\)</span> Irisan bola dengan garis yang sama adalah <span class="process-math">\((w_1-R,w_1+R)\times\{w_2\}\text{.}\)</span> Kesamaan kedua irisan memaksa <span class="process-math">\(w_1=3/2\)</span> dan <span class="process-math">\(R=1/4\text{.}\)</span> Dengan cara yang sama, irisan vertikal memaksa <span class="process-math">\(w_2=7/2\text{.}\)</span> Jadi pusat dan radius calon bola haruslah <span class="process-math">\(c\)</span> dan <span class="process-math">\(1/4\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-4224">
+</div> <div class="para logical" id="p-4342">
 <div class="para">Namun titik <span class="process-math">\(p=(17/10,37/10)\)</span> berada di <span class="process-math">\(P\text{,}\)</span> sedangkan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -724,13 +750,13 @@ d(c,p)=\sqrt{(1/5)^2+(1/5)^2}=\frac{\sqrt2}{5}
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch11-guide-15"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch11-guide-15"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">K.15</span><span class="period">.</span><span class="space"> </span><span class="title">Hasil kali bola tetap merupakan himpunan terbuka.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-15"><article class="exercise exercise-like"><div class="para" id="p-4225">Misalkan <span class="process-math">\(B_i=B_{X_i}(c_i,r_i)\)</span> untuk <span class="process-math">\(i=1,2\text{.}\)</span> Buktikan bahwa <span class="process-math">\(B_1\times B_2\)</span> merupakan himpunan terbuka di <span class="process-math">\(X_1\times X_2\text{,}\)</span> meskipun panduan 14 menunjukkan bahwa himpunan itu umumnya bukan satu bola. Rubrik: pada titik sebarang dalam hasil kali, hitung sisa radius di kedua faktor dan pilih radius bola hasil kali yang dikendalikan oleh sisa terkecil.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-15"><article class="exercise exercise-like"><div class="para" id="p-4343">Misalkan <span class="process-math">\(B_i=B_{X_i}(c_i,r_i)\)</span> untuk <span class="process-math">\(i=1,2\text{.}\)</span> Buktikan bahwa <span class="process-math">\(B_1\times B_2\)</span> merupakan himpunan terbuka di <span class="process-math">\(X_1\times X_2\text{,}\)</span> meskipun panduan 14 menunjukkan bahwa himpunan itu umumnya bukan satu bola. Rubrik: pada titik sebarang dalam hasil kali, hitung sisa radius di kedua faktor dan pilih radius bola hasil kali yang dikendalikan oleh sisa terkecil.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-15-hint" id="o003-c90-ch11-guide-15-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-15-hint"><div class="hint solution-like"><div class="para" id="p-4226">Tahap 1: untuk <span class="process-math">\(x=(x_1,x_2)\in B_1\times B_2\text{,}\)</span> tetapkan <span class="process-math">\(\epsilon_i=r_i-d_i(x_i,c_i)\gt0\text{.}\)</span> Tahap 2: pilih <span class="process-math">\(\epsilon=\min\{\epsilon_1,\epsilon_2\}\)</span> dan gunakan <span class="process-math">\(d_i(x_i,y_i)\leq d(x,y)\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-15-hint" id="o003-c90-ch11-guide-15-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-15-hint"><div class="hint solution-like"><div class="para" id="p-4344">Tahap 1: untuk <span class="process-math">\(x=(x_1,x_2)\in B_1\times B_2\text{,}\)</span> tetapkan <span class="process-math">\(\epsilon_i=r_i-d_i(x_i,c_i)\gt0\text{.}\)</span> Tahap 2: pilih <span class="process-math">\(\epsilon=\min\{\epsilon_1,\epsilon_2\}\)</span> dan gunakan <span class="process-math">\(d_i(x_i,y_i)\leq d(x,y)\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-15-answer" id="o003-c90-ch11-guide-15-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-15-answer"><div class="answer solution-like"><div class="para" id="p-4227">Ya. Setiap titik <span class="process-math">\(x\in B_1\times B_2\)</span> mempunyai bola hasil kali berjari-jari <span class="process-math">\(\min\{r_1-d_1(x_1,c_1),r_2-d_2(x_2,c_2)\}\)</span> yang termuat dalam <span class="process-math">\(B_1\times B_2\text{.}\)</span> Jadi hasil kali tersebut terbuka.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-15-answer" id="o003-c90-ch11-guide-15-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-15-answer"><div class="answer solution-like"><div class="para" id="p-4345">Ya. Setiap titik <span class="process-math">\(x\in B_1\times B_2\)</span> mempunyai bola hasil kali berjari-jari <span class="process-math">\(\min\{r_1-d_1(x_1,c_1),r_2-d_2(x_2,c_2)\}\)</span> yang termuat dalam <span class="process-math">\(B_1\times B_2\text{.}\)</span> Jadi hasil kali tersebut terbuka.</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-15-solution" id="o003-c90-ch11-guide-15-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-15-solution"><div class="solution solution-like">
-<div class="para logical" id="p-4228">
+<div class="para logical" id="p-4346">
 <div class="para">Ambil <span class="process-math">\(x=(x_1,x_2)\in B_1\times B_2\text{.}\)</span> Karena <span class="process-math">\(d_i(x_i,c_i)\lt r_i\text{,}\)</span> bilangan <span class="process-math">\(\epsilon_i=r_i-d_i(x_i,c_i)\)</span> positif. Tetapkan <span class="process-math">\(\epsilon=\min\{\epsilon_1,\epsilon_2\}\gt0\text{.}\)</span> Jika <span class="process-math">\(y=(y_1,y_2)\)</span> memenuhi <span class="process-math">\(d(x,y)\lt\epsilon\text{,}\)</span> maka untuk <span class="process-math">\(i=1,2\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -740,7 +766,7 @@ d_i(x_i,y_i)
 =d(x,y)\lt\epsilon\leq\epsilon_i.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-4229">
+</div> <div class="para logical" id="p-4347">
 <div class="para">Pertidaksamaan segitiga di faktor ke-<span class="process-math">\(i\)</span> sekarang memberi</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -755,14 +781,14 @@ d_i(y_i,c_i)
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch11-guide-16"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch11-guide-16"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">K.16</span><span class="period">.</span><span class="space"> </span><span class="title">Himpunan terbuka yang bukan satu hasil kali berbentuk persegi panjang.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-16"><article class="exercise exercise-like"><div class="para" id="p-4230">Temukan suatu subhimpunan terbuka dari <span class="process-math">\(X_1\times X_2=[1,2]\times[3,4]\)</span> yang tidak dapat ditulis sebagai <span class="process-math">\(O_1\times O_2\)</span> dengan <span class="process-math">\(O_i\)</span> terbuka di <span class="process-math">\(X_i\text{.}\)</span> Rubrik: gunakan satu bola hasil kali yang tidak menyentuh batas, lalu pilih dua titik di dalamnya yang titik silang koordinatnya berada di luar bola.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-16"><article class="exercise exercise-like"><div class="para" id="p-4348">Temukan suatu subhimpunan terbuka dari <span class="process-math">\(X_1\times X_2=[1,2]\times[3,4]\)</span> yang tidak dapat ditulis sebagai <span class="process-math">\(O_1\times O_2\)</span> dengan <span class="process-math">\(O_i\)</span> terbuka di <span class="process-math">\(X_i\text{.}\)</span> Rubrik: gunakan satu bola hasil kali yang tidak menyentuh batas, lalu pilih dua titik di dalamnya yang titik silang koordinatnya berada di luar bola.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-16-hint" id="o003-c90-ch11-guide-16-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-16-hint"><div class="hint solution-like"><div class="para" id="p-4231">Tahap 1: ambil <span class="process-math">\(U=B((3/2,7/2),1/4)\text{.}\)</span> Tahap 2: uji <span class="process-math">\(p=(17/10,7/2)\text{,}\)</span> <span class="process-math">\(q=(3/2,37/10)\text{,}\)</span> dan titik silang <span class="process-math">\(s=(17/10,37/10)\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch11-guide-16-hint" id="o003-c90-ch11-guide-16-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-16-hint"><div class="hint solution-like"><div class="para" id="p-4349">Tahap 1: ambil <span class="process-math">\(U=B((3/2,7/2),1/4)\text{.}\)</span> Tahap 2: uji <span class="process-math">\(p=(17/10,7/2)\text{,}\)</span> <span class="process-math">\(q=(3/2,37/10)\text{,}\)</span> dan titik silang <span class="process-math">\(s=(17/10,37/10)\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-16-answer" id="o003-c90-ch11-guide-16-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-16-answer"><div class="answer solution-like"><div class="para" id="p-4232">Bola terbuka <span class="process-math">\(U=B((3/2,7/2),1/4)\)</span> adalah contoh yang diminta. Titik <span class="process-math">\(p\)</span> dan <span class="process-math">\(q\)</span> pada petunjuk berada di <span class="process-math">\(U\text{,}\)</span> tetapi titik silang <span class="process-math">\(s\)</span> tidak; sifat ini mustahil bagi satu hasil kali <span class="process-math">\(O_1\times O_2\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch11-guide-16-answer" id="o003-c90-ch11-guide-16-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-16-answer"><div class="answer solution-like"><div class="para" id="p-4350">Bola terbuka <span class="process-math">\(U=B((3/2,7/2),1/4)\)</span> adalah contoh yang diminta. Titik <span class="process-math">\(p\)</span> dan <span class="process-math">\(q\)</span> pada petunjuk berada di <span class="process-math">\(U\text{,}\)</span> tetapi titik silang <span class="process-math">\(s\)</span> tidak; sifat ini mustahil bagi satu hasil kali <span class="process-math">\(O_1\times O_2\text{.}\)</span>
 </div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch11-guide-16-solution" id="o003-c90-ch11-guide-16-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch11-guide-16-solution"><div class="solution solution-like">
-<div class="para logical" id="p-4233">
+<div class="para logical" id="p-4351">
 <div class="para">Bola <span class="process-math">\(U=B((3/2,7/2),1/4)\)</span> terbuka menurut definisi dan seluruhnya berada di bagian dalam persegi hasil kali. Kedua titik <span class="process-math">\(p=(17/10,7/2)\)</span> dan <span class="process-math">\(q=(3/2,37/10)\)</span> masing-masing berjarak <span class="process-math">\(1/5\lt1/4\)</span> dari pusat, sehingga <span class="process-math">\(p,q\in U\text{.}\)</span> Untuk titik silang <span class="process-math">\(s=(17/10,37/10)\text{,}\)</span> berlaku</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -771,7 +797,7 @@ d\bigl((3/2,7/2),s\bigr)=\frac{\sqrt2}{5}\gt\frac14,
 </div>
 <div class="para">sehingga <span class="process-math">\(s\notin U\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-4234">Andaikan <span class="process-math">\(U=O_1\times O_2\text{.}\)</span> Dari <span class="process-math">\(p\in U\)</span> diperoleh <span class="process-math">\(17/10\in O_1\)</span> dan <span class="process-math">\(7/2\in O_2\text{;}\)</span> dari <span class="process-math">\(q\in U\)</span> diperoleh <span class="process-math">\(3/2\in O_1\)</span> dan <span class="process-math">\(37/10\in O_2\text{.}\)</span> Maka definisi hasil kali memaksa <span class="process-math">\(s=(17/10,37/10)\in O_1\times O_2=U\text{,}\)</span> bertentangan dengan perhitungan jarak. Jadi <span class="process-math">\(U\)</span> terbuka tetapi tidak berbentuk satu hasil kali dari himpunan-himpunan terbuka pada ruang faktor.</div>
+</div> <div class="para" id="p-4352">Andaikan <span class="process-math">\(U=O_1\times O_2\text{.}\)</span> Dari <span class="process-math">\(p\in U\)</span> diperoleh <span class="process-math">\(17/10\in O_1\)</span> dan <span class="process-math">\(7/2\in O_2\text{;}\)</span> dari <span class="process-math">\(q\in U\)</span> diperoleh <span class="process-math">\(3/2\in O_1\)</span> dan <span class="process-math">\(37/10\in O_2\text{.}\)</span> Maka definisi hasil kali memaksa <span class="process-math">\(s=(17/10,37/10)\in O_1\times O_2=U\text{,}\)</span> bertentangan dengan perhitungan jarak. Jadi <span class="process-math">\(U\)</span> terbuka tetapi tidak berbentuk satu hasil kali dari himpunan-himpunan terbuka pada ruang faktor.</div>
 </div></div>
 </div></article></div></section></div>
 <div class="ptx-content-footer">

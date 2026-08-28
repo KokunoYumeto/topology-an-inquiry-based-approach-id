@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,28 +597,28 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch13-source-guides-e"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Panduan Belajar Mandiri: Menentukan Batas Himpunan</span>
 </h2>
-<div class="para" id="p-5029">Sebuah titik berada pada batas <span class="process-math">\(A\)</span> jika setiap lingkungan terbukanya bertemu dengan <span class="process-math">\(A\)</span> dan juga dengan <span class="process-math">\(X\setminus A\text{.}\)</span> Secara ekuivalen, <span class="process-math">\(\Bdry(A)=\overline{A}\setminus\Int(A)\text{.}\)</span>
+<div class="para" id="p-5147">Sebuah titik berada pada batas <span class="process-math">\(A\)</span> jika setiap lingkungan terbukanya bertemu dengan <span class="process-math">\(A\)</span> dan juga dengan <span class="process-math">\(X\setminus A\text{.}\)</span> Secara ekuivalen, <span class="process-math">\(\Bdry(A)=\overline{A}\setminus\Int(A)\text{.}\)</span>
 </div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-22"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-22"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.22</span><span class="period">.</span><span class="space"> </span><span class="title">Batas pada Topologi Berhingga Pertama.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-22"><article class="exercise exercise-like"><div class="para" id="p-5030">Tentukan batas <span class="process-math">\(A=\{c,d\}\)</span> dalam <span class="process-math">\(X=\{a,b,c,d\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-22"><article class="exercise exercise-like"><div class="para" id="p-5148">Tentukan batas <span class="process-math">\(A=\{c,d\}\)</span> dalam <span class="process-math">\(X=\{a,b,c,d\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-22-hint" id="o003-c90-ch13-guide-22-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-22-hint"><div class="hint solution-like">
-<div class="para" id="p-5031">
+<div class="para" id="p-5149">
 <em class="emphasis">Tahap 1.</em> Titik <span class="process-math">\(a\)</span> dan <span class="process-math">\(b\)</span> masing-masing memiliki lingkungan beranggota tunggal yang tidak bertemu <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para" id="p-5032">
+</div> <div class="para" id="p-5150">
 <em class="emphasis">Tahap 2.</em> Satu-satunya lingkungan terbuka yang memuat <span class="process-math">\(c\)</span> atau <span class="process-math">\(d\)</span> adalah <span class="process-math">\(X\text{.}\)</span>
-</div> <div class="para" id="p-5033">
+</div> <div class="para" id="p-5151">
 <em class="emphasis">Tahap 3.</em> Uji apakah <span class="process-math">\(X\)</span> bertemu dengan <span class="process-math">\(A\)</span> dan komplemennya.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-22-answer" id="o003-c90-ch13-guide-22-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-22-answer"><div class="answer solution-like"><div class="para" id="p-5034"><span class="process-math">\(\Bdry(A)=\{c,d\}\text{.}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-22-solution" id="o003-c90-ch13-guide-22-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-22-solution"><div class="solution solution-like"><div class="para" id="p-5035">Lingkungan <span class="process-math">\(\{a\}\)</span> dan <span class="process-math">\(\{b\}\)</span> tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga <span class="process-math">\(a\)</span> dan <span class="process-math">\(b\)</span> bukan titik batas. Setiap lingkungan dari <span class="process-math">\(c\)</span> atau <span class="process-math">\(d\)</span> adalah <span class="process-math">\(X\text{.}\)</span> Himpunan <span class="process-math">\(X\)</span> bertemu <span class="process-math">\(A=\{c,d\}\)</span> dan <span class="process-math">\(X\setminus A=\{a,b\}\text{.}\)</span> Jadi <span class="process-math">\(c\)</span> dan <span class="process-math">\(d\)</span> adalah titik batas, sehingga <span class="process-math">\(\Bdry(A)=\{c,d\}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-22-answer" id="o003-c90-ch13-guide-22-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-22-answer"><div class="answer solution-like"><div class="para" id="p-5152"><span class="process-math">\(\Bdry(A)=\{c,d\}\text{.}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-22-solution" id="o003-c90-ch13-guide-22-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-22-solution"><div class="solution solution-like"><div class="para" id="p-5153">Lingkungan <span class="process-math">\(\{a\}\)</span> dan <span class="process-math">\(\{b\}\)</span> tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga <span class="process-math">\(a\)</span> dan <span class="process-math">\(b\)</span> bukan titik batas. Setiap lingkungan dari <span class="process-math">\(c\)</span> atau <span class="process-math">\(d\)</span> adalah <span class="process-math">\(X\text{.}\)</span> Himpunan <span class="process-math">\(X\)</span> bertemu <span class="process-math">\(A=\{c,d\}\)</span> dan <span class="process-math">\(X\setminus A=\{a,b\}\text{.}\)</span> Jadi <span class="process-math">\(c\)</span> dan <span class="process-math">\(d\)</span> adalah titik batas, sehingga <span class="process-math">\(\Bdry(A)=\{c,d\}\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-23"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-23"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.23</span><span class="period">.</span><span class="space"> </span><span class="title">Batas pada Topologi Berhingga Kedua.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-23"><article class="exercise exercise-like"><div class="para logical" id="p-5036">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-23"><article class="exercise exercise-like"><div class="para logical" id="p-5154">
 <div class="para">Tentukan batas <span class="process-math">\(A=\{a,b\}\)</span> dalam <span class="process-math">\(X=\{a,b,c,d,e,f\}\)</span> dengan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -602,50 +628,50 @@ window.MathJax = {
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-23-hint" id="o003-c90-ch13-guide-23-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-23-hint"><div class="hint solution-like">
-<div class="para" id="p-5037">
+<div class="para" id="p-5155">
 <em class="emphasis">Tahap 1.</em> Lingkungan <span class="process-math">\(\{b\}\)</span> tidak bertemu <span class="process-math">\(X\setminus A\text{.}\)</span>
-</div> <div class="para" id="p-5038">
+</div> <div class="para" id="p-5156">
 <em class="emphasis">Tahap 2.</em> Lingkungan <span class="process-math">\(\{d,e,f\}\)</span> tidak bertemu <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para" id="p-5039">
+</div> <div class="para" id="p-5157">
 <em class="emphasis">Tahap 3.</em> Periksa <span class="process-math">\(a\)</span> dan <span class="process-math">\(c\)</span> menggunakan lingkungan <span class="process-math">\(\{a,b,c\}\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-23-answer" id="o003-c90-ch13-guide-23-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-23-answer"><div class="answer solution-like"><div class="para" id="p-5040"><span class="process-math">\(\Bdry(A)=\{a,c\}\text{.}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-23-solution" id="o003-c90-ch13-guide-23-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-23-solution"><div class="solution solution-like"><div class="para" id="p-5041">Himpunan <span class="process-math">\(\{b\}\)</span> adalah lingkungan dari <span class="process-math">\(b\)</span> yang seluruhnya berada dalam <span class="process-math">\(A\text{,}\)</span> jadi <span class="process-math">\(b\)</span> bukan titik batas. Himpunan <span class="process-math">\(\{d,e,f\}\)</span> adalah lingkungan dari masing-masing <span class="process-math">\(d,e,f\)</span> dan tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga ketiganya bukan titik batas. Setiap lingkungan dari <span class="process-math">\(a\)</span> atau <span class="process-math">\(c\)</span> memuat <span class="process-math">\(\{a,b,c\}\text{,}\)</span> yang bertemu <span class="process-math">\(A\)</span> pada <span class="process-math">\(a\)</span> atau <span class="process-math">\(b\)</span> dan bertemu <span class="process-math">\(X\setminus A\)</span> pada <span class="process-math">\(c\text{.}\)</span> Karena itu, <span class="process-math">\(\Bdry(A)=\{a,c\}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-23-answer" id="o003-c90-ch13-guide-23-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-23-answer"><div class="answer solution-like"><div class="para" id="p-5158"><span class="process-math">\(\Bdry(A)=\{a,c\}\text{.}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-23-solution" id="o003-c90-ch13-guide-23-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-23-solution"><div class="solution solution-like"><div class="para" id="p-5159">Himpunan <span class="process-math">\(\{b\}\)</span> adalah lingkungan dari <span class="process-math">\(b\)</span> yang seluruhnya berada dalam <span class="process-math">\(A\text{,}\)</span> jadi <span class="process-math">\(b\)</span> bukan titik batas. Himpunan <span class="process-math">\(\{d,e,f\}\)</span> adalah lingkungan dari masing-masing <span class="process-math">\(d,e,f\)</span> dan tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga ketiganya bukan titik batas. Setiap lingkungan dari <span class="process-math">\(a\)</span> atau <span class="process-math">\(c\)</span> memuat <span class="process-math">\(\{a,b,c\}\text{,}\)</span> yang bertemu <span class="process-math">\(A\)</span> pada <span class="process-math">\(a\)</span> atau <span class="process-math">\(b\)</span> dan bertemu <span class="process-math">\(X\setminus A\)</span> pada <span class="process-math">\(c\text{.}\)</span> Karena itu, <span class="process-math">\(\Bdry(A)=\{a,c\}\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-24"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-24"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.24</span><span class="period">.</span><span class="space"> </span><span class="title">Batas pada Ruang Diskret.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-24"><article class="exercise exercise-like"><div class="para" id="p-5042">Misalkan <span class="process-math">\(X=\{a,b,c\}\)</span> dilengkapi topologi diskret. Tentukan batas <span class="process-math">\(A=\{a,b\}\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-24"><article class="exercise exercise-like"><div class="para" id="p-5160">Misalkan <span class="process-math">\(X=\{a,b,c\}\)</span> dilengkapi topologi diskret. Tentukan batas <span class="process-math">\(A=\{a,b\}\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-24-hint" id="o003-c90-ch13-guide-24-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-24-hint"><div class="hint solution-like">
-<div class="para" id="p-5043">
+<div class="para" id="p-5161">
 <em class="emphasis">Tahap 1.</em> Setiap titik <span class="process-math">\(x\in X\)</span> memiliki lingkungan terbuka <span class="process-math">\(\{x\}\text{.}\)</span>
-</div> <div class="para" id="p-5044">
+</div> <div class="para" id="p-5162">
 <em class="emphasis">Tahap 2.</em> Jika <span class="process-math">\(x\in A\text{,}\)</span> lingkungan itu tidak bertemu komplemen <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para" id="p-5045">
+</div> <div class="para" id="p-5163">
 <em class="emphasis">Tahap 3.</em> Jika <span class="process-math">\(x\notin A\text{,}\)</span> lingkungan itu tidak bertemu <span class="process-math">\(A\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-24-answer" id="o003-c90-ch13-guide-24-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-24-answer"><div class="answer solution-like"><div class="para" id="p-5046"><span class="process-math">\(\Bdry(A)=\emptyset\text{.}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-24-solution" id="o003-c90-ch13-guide-24-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-24-solution"><div class="solution solution-like"><div class="para" id="p-5047">Untuk <span class="process-math">\(x\in A\text{,}\)</span> lingkungan <span class="process-math">\(\{x\}\)</span> tidak bertemu <span class="process-math">\(X\setminus A\text{.}\)</span> Untuk <span class="process-math">\(x\in X\setminus A\text{,}\)</span> lingkungan <span class="process-math">\(\{x\}\)</span> tidak bertemu <span class="process-math">\(A\text{.}\)</span> Jadi tidak ada titik yang setiap lingkungannya bertemu kedua sisi. Dengan demikian, <span class="process-math">\(\Bdry(A)=\emptyset\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-24-answer" id="o003-c90-ch13-guide-24-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-24-answer"><div class="answer solution-like"><div class="para" id="p-5164"><span class="process-math">\(\Bdry(A)=\emptyset\text{.}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-24-solution" id="o003-c90-ch13-guide-24-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-24-solution"><div class="solution solution-like"><div class="para" id="p-5165">Untuk <span class="process-math">\(x\in A\text{,}\)</span> lingkungan <span class="process-math">\(\{x\}\)</span> tidak bertemu <span class="process-math">\(X\setminus A\text{.}\)</span> Untuk <span class="process-math">\(x\in X\setminus A\text{,}\)</span> lingkungan <span class="process-math">\(\{x\}\)</span> tidak bertemu <span class="process-math">\(A\text{.}\)</span> Jadi tidak ada titik yang setiap lingkungannya bertemu kedua sisi. Dengan demikian, <span class="process-math">\(\Bdry(A)=\emptyset\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-25"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-25"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.25</span><span class="period">.</span><span class="space"> </span><span class="title">Batas Bilangan Bulat dalam Topologi Komplemen Berhingga.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-25"><article class="exercise exercise-like"><div class="para" id="p-5048">Lengkapi <span class="process-math">\(\R\)</span> dengan topologi komplemen berhingga <span class="process-math">\(\tau_{FC}\text{.}\)</span> Tentukan batas subhimpunan <span class="process-math">\(\Z\subset\R\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-25"><article class="exercise exercise-like"><div class="para" id="p-5166">Lengkapi <span class="process-math">\(\R\)</span> dengan topologi komplemen berhingga <span class="process-math">\(\tau_{FC}\text{.}\)</span> Tentukan batas subhimpunan <span class="process-math">\(\Z\subset\R\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-25-hint" id="o003-c90-ch13-guide-25-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-25-hint"><div class="hint solution-like">
-<div class="para" id="p-5049">
-<em class="emphasis">Tahap 1.</em> Setiap lingkungan terbuka tak kosong dalam topologi ini memiliki komplemen berhingga.</div> <div class="para" id="p-5050">
-<em class="emphasis">Tahap 2.</em> Baik <span class="process-math">\(\Z\)</span> maupun <span class="process-math">\(\R\setminus\Z\)</span> merupakan himpunan tak berhingga.</div> <div class="para" id="p-5051">
+<div class="para" id="p-5167">
+<em class="emphasis">Tahap 1.</em> Setiap lingkungan terbuka tak kosong dalam topologi ini memiliki komplemen berhingga.</div> <div class="para" id="p-5168">
+<em class="emphasis">Tahap 2.</em> Baik <span class="process-math">\(\Z\)</span> maupun <span class="process-math">\(\R\setminus\Z\)</span> merupakan himpunan tak berhingga.</div> <div class="para" id="p-5169">
 <em class="emphasis">Tahap 3.</em> Himpunan yang berkomplemen berhingga tidak dapat menghindari seluruh anggota salah satu himpunan tak berhingga tersebut.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-25-answer" id="o003-c90-ch13-guide-25-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-25-answer"><div class="answer solution-like"><div class="para" id="p-5052">Setiap bilangan real adalah titik batas; <span class="process-math">\(\Bdry(\Z)=\R\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-25-answer" id="o003-c90-ch13-guide-25-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-25-answer"><div class="answer solution-like"><div class="para" id="p-5170">Setiap bilangan real adalah titik batas; <span class="process-math">\(\Bdry(\Z)=\R\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-25-solution" id="o003-c90-ch13-guide-25-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-25-solution"><div class="solution solution-like"><div class="para" id="p-5053">Ambil sebarang <span class="process-math">\(x\in\R\)</span> dan sebarang lingkungan terbuka <span class="process-math">\(O\)</span> dari <span class="process-math">\(x\text{.}\)</span> Komplemen <span class="process-math">\(\R\setminus O\)</span> berhingga. Karena <span class="process-math">\(\Z\)</span> tak berhingga, <span class="process-math">\(O\)</span> harus bertemu <span class="process-math">\(\Z\text{.}\)</span> Karena <span class="process-math">\(\R\setminus\Z\)</span> juga tak berhingga, <span class="process-math">\(O\)</span> harus bertemu <span class="process-math">\(\R\setminus\Z\text{.}\)</span> Jadi setiap lingkungan dari setiap <span class="process-math">\(x\)</span> bertemu kedua sisi, sehingga setiap <span class="process-math">\(x\in\R\)</span> merupakan titik batas dan <span class="process-math">\(\Bdry(\Z)=\R\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-25-solution" id="o003-c90-ch13-guide-25-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-25-solution"><div class="solution solution-like"><div class="para" id="p-5171">Ambil sebarang <span class="process-math">\(x\in\R\)</span> dan sebarang lingkungan terbuka <span class="process-math">\(O\)</span> dari <span class="process-math">\(x\text{.}\)</span> Komplemen <span class="process-math">\(\R\setminus O\)</span> berhingga. Karena <span class="process-math">\(\Z\)</span> tak berhingga, <span class="process-math">\(O\)</span> harus bertemu <span class="process-math">\(\Z\text{.}\)</span> Karena <span class="process-math">\(\R\setminus\Z\)</span> juga tak berhingga, <span class="process-math">\(O\)</span> harus bertemu <span class="process-math">\(\R\setminus\Z\text{.}\)</span> Jadi setiap lingkungan dari setiap <span class="process-math">\(x\)</span> bertemu kedua sisi, sehingga setiap <span class="process-math">\(x\in\R\)</span> merupakan titik batas dan <span class="process-math">\(\Bdry(\Z)=\R\text{.}\)</span>
 </div></div></div>
 </div></article></div></section></div>
 <div class="ptx-content-footer">

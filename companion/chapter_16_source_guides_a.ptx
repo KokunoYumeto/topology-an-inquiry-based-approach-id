@@ -1,0 +1,522 @@
+<section xml:id="o003-c90-ch16-source-guides-a" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Membangun Topologi Kuosien</title>
+
+  <p>
+    Sepuluh panduan ini mendampingi tugas-tugas awal Bab 16: menghitung suatu
+    topologi kuosien berhingga, memeriksa sifat universalnya, membuktikan
+    aksioma-aksioma topologi, dan menganalisis dua pemetaan dari garis real.
+    Kerjakan dahulu butir pada bab utama, lalu buka petunjuk, jawaban, dan
+    solusi secara bertahap.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch16-guide-01">
+    <title>Menghitung Topologi yang Ditentukan oleh Prapeta</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{1,2,3,4,5,6\}</m> dengan topologi
+        <me>
+          \tau=\{\emptyset,\{1,2\},\{4,6\},\{1,2,4,6\},X\},
+        </me>
+        dan misalkan <m>Y=\{a,b,c,d\}</m>. Definisikan surjeksi
+        <m>p:X\to Y</m> melalui
+        <me>
+          p(1)=b,\quad p(2)=a,\quad p(3)=c,\quad
+          p(4)=d,\quad p(5)=c,\quad p(6)=a.
+        </me>
+        Tentukan semua anggota
+        <m>\sigma=\{U\subseteq Y\mid p^{-1}(U)\in\tau\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-01-hint">
+      <p><em>Tahap 1.</em> Tuliskan keempat serat <m>p^{-1}(\{a\})</m>, <m>p^{-1}(\{b\})</m>, <m>p^{-1}(\{c\})</m>, dan <m>p^{-1}(\{d\})</m>.</p>
+      <p><em>Tahap 2.</em> Prapeta suatu subhimpunan <m>U\subseteq Y</m> harus berupa gabungan serat-serat utuh.</p>
+      <p><em>Tahap 3.</em> Periksa anggota <m>\tau</m> mana yang merupakan gabungan serat-serat utuh, lalu baca kembali subhimpunan <m>U</m> yang bersesuaian.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-01-answer">
+      <p>
+        Diperoleh
+        <m>\sigma=\{\emptyset,\{a,b,d\},Y\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-01-solution">
+      <p>
+        Serat-serat <m>p</m> adalah
+        <me>
+          p^{-1}(\{a\})=\{2,6\},\quad
+          p^{-1}(\{b\})=\{1\},\quad
+          p^{-1}(\{c\})=\{3,5\},\quad
+          p^{-1}(\{d\})=\{4\}.
+        </me>
+        Karena <m>p^{-1}(U)</m> selalu merupakan gabungan semua serat yang
+        berlabel anggota <m>U</m>, hanya anggota <m>\tau</m> yang memuat
+        setiap serat secara utuh yang mungkin menjadi prapeta seperti itu.
+      </p>
+      <p>
+        Himpunan <m>\{1,2\}</m> memuat <m>2</m> tetapi tidak memuat
+        <m>6</m>, sedangkan <m>\{4,6\}</m> memuat <m>6</m> tetapi tidak
+        memuat <m>2</m>; keduanya memotong serat <m>\{2,6\}</m> dan bukan
+        prapeta subhimpunan mana pun dari <m>Y</m>. Tiga anggota
+        <m>\tau</m> yang merupakan gabungan serat utuh adalah
+        <me>
+          \emptyset=p^{-1}(\emptyset),\qquad
+          \{1,2,4,6\}=p^{-1}(\{a,b,d\}),\qquad
+          X=p^{-1}(Y).
+        </me>
+        Jadi tepat ketiga subhimpunan yang disebutkan pada jawaban berada
+        dalam <m>\sigma</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-02">
+    <title>Memeriksa Topologi Kuosien Berhingga</title>
+    <statement>
+      <p>
+        Gunakan <m>X</m>, <m>Y</m>, <m>p</m>, dan <m>\tau</m> berikut:
+        <m>X=\{1,2,3,4,5,6\}</m>,
+        <m>Y=\{a,b,c,d\}</m>,
+        <me>
+          \tau=\{\emptyset,\{1,2\},\{4,6\},\{1,2,4,6\},X\},
+        </me>
+        serta
+        <m>p(1)=b</m>, <m>p(2)=a</m>, <m>p(3)=c</m>, <m>p(4)=d</m>,
+        <m>p(5)=c</m>, dan <m>p(6)=a</m>. Buktikan bahwa
+        <m>\sigma=\{U\subseteq Y\mid p^{-1}(U)\in\tau\}</m> merupakan
+        topologi pada <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-02-hint">
+      <p><em>Tahap 1.</em> Hitung dahulu <m>\sigma</m> secara eksplisit.</p>
+      <p><em>Tahap 2.</em> Periksa bahwa <m>\emptyset</m> dan <m>Y</m> berada dalam daftar tersebut.</p>
+      <p><em>Tahap 3.</em> Untuk keluarga tiga himpunan <m>\{\emptyset,S,Y\}</m>, analisis semua kemungkinan gabungan dan irisan berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-02-answer">
+      <p>
+        Perhitungan memberi <m>\sigma=\{\emptyset,\{a,b,d\},Y\}</m>.
+        Keluarga ini memuat himpunan kosong dan seluruh ruang serta tertutup
+        terhadap gabungan sebarang dan irisan berhingga, sehingga merupakan
+        topologi pada <m>Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-02-solution">
+      <p>
+        Dengan menghitung serat seperti pada tugas sebelumnya, diperoleh
+        <m>\sigma=\{\emptyset,S,Y\}</m>, dengan
+        <m>S=\{a,b,d\}</m>. Jelas <m>\emptyset,Y\in\sigma</m>.
+      </p>
+      <p>
+        Ambil keluarga sebarang anggota <m>\sigma</m>. Jika salah satu
+        anggotanya <m>Y</m>, gabungannya adalah <m>Y</m>. Jika tidak, tetapi
+        salah satu anggotanya <m>S</m>, gabungannya adalah <m>S</m>;
+        jika semua anggotanya kosong, gabungannya kosong. Jadi gabungan
+        sebarang tetap berada dalam <m>\sigma</m>. Untuk irisan berhingga,
+        kehadiran <m>\emptyset</m> menghasilkan <m>\emptyset</m>; tanpa
+        <m>\emptyset</m>, kehadiran <m>S</m> menghasilkan <m>S</m>; dan
+        irisan yang hanya melibatkan <m>Y</m> menghasilkan <m>Y</m>.
+        Dengan konvensi, irisan keluarga kosong adalah <m>Y</m>. Maka semua
+        aksioma topologi terpenuhi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-03">
+    <title>Kekontinuan Pemetaan Pembentuk Kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau)</m> dan fungsi surjektif <m>p:X\to Y</m>
+        seperti berikut:
+        <m>X=\{1,2,3,4,5,6\}</m>, <m>Y=\{a,b,c,d\}</m>,
+        <me>
+          \tau=\{\emptyset,\{1,2\},\{4,6\},\{1,2,4,6\},X\},
+        </me>
+        dan
+        <m>p(1)=b</m>, <m>p(2)=a</m>, <m>p(3)=c</m>, <m>p(4)=d</m>,
+        <m>p(5)=c</m>, <m>p(6)=a</m>. Beri <m>Y</m> topologi
+        <m>\sigma=\{U\subseteq Y\mid p^{-1}(U)\in\tau\}</m>. Jelaskan
+        mengapa <m>p:(X,\tau)\to(Y,\sigma)</m> kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-03-hint">
+      <p><em>Tahap 1.</em> Ingat definisi kekontinuan melalui prapeta himpunan terbuka.</p>
+      <p><em>Tahap 2.</em> Ambil sembarang <m>U\in\sigma</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan langsung syarat yang mendefinisikan keanggotaan <m>U</m> dalam <m>\sigma</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-03-answer">
+      <p>
+        Untuk setiap <m>U</m> yang terbuka dalam <m>(Y,\sigma)</m>, definisi
+        <m>\sigma</m> menjamin bahwa <m>p^{-1}(U)\in\tau</m>. Inilah tepat
+        syarat kekontinuan <m>p</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-03-solution">
+      <p>
+        Suatu fungsi antar-ruang topologi kontinu jika prapeta setiap
+        himpunan terbuka di kodomain terbuka di domain. Ambil sembarang
+        <m>U\in\sigma</m>. Persamaan yang mendefinisikan <m>\sigma</m>
+        menyatakan
+        <me>
+          U\in\sigma\quad\Longleftrightarrow\quad p^{-1}(U)\in\tau.
+        </me>
+        Jadi prapeta setiap himpunan terbuka di <m>Y</m> terbuka di
+        <m>X</m>. Karena itu <m>p:(X,\tau)\to(Y,\sigma)</m> kontinu. Tidak
+        diperlukan pemeriksaan tambahan terhadap titik-titik satu per satu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-04">
+    <title>Sifat Maksimal Topologi Kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{1,2,3,4,5,6\}</m> dengan topologi
+        <me>
+          \tau=\{\emptyset,\{1,2\},\{4,6\},\{1,2,4,6\},X\},
+        </me>
+        misalkan <m>Y=\{a,b,c,d\}</m>, dan definisikan surjeksi
+        <m>p:X\to Y</m> melalui
+        <m>p(1)=b</m>, <m>p(2)=a</m>, <m>p(3)=c</m>, <m>p(4)=d</m>,
+        <m>p(5)=c</m>, dan <m>p(6)=a</m>. Untuk
+        <me>
+          \sigma=\{U\subseteq Y\mid p^{-1}(U)\in\tau\}.
+        </me>
+        Buktikan bahwa <m>\sigma</m> adalah topologi terbesar pada <m>Y</m>
+        yang membuat <m>p</m> kontinu. Dengan kata lain, tunjukkan bahwa
+        setiap topologi <m>\sigma'</m> pada <m>Y</m> yang membuat <m>p</m>
+        kontinu memenuhi <m>\sigma'\subseteq\sigma</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-04-hint">
+      <p><em>Tahap 1.</em> Ambil topologi <m>\sigma'</m> yang membuat <m>p</m> kontinu dan pilih <m>U\in\sigma'</m>.</p>
+      <p><em>Tahap 2.</em> Terapkan definisi kekontinuan untuk menyimpulkan sesuatu tentang <m>p^{-1}(U)</m>.</p>
+      <p><em>Tahap 3.</em> Bandingkan kesimpulan itu dengan definisi <m>\sigma</m>; kemudian jelaskan apa yang terjadi jika <m>\sigma'</m> memuat anggota di luar <m>\sigma</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-04-answer">
+      <p>
+        Jika <m>p:(X,\tau)\to(Y,\sigma')</m> kontinu, maka setiap
+        <m>U\in\sigma'</m> mempunyai prapeta terbuka di <m>X</m>, sehingga
+        <m>U\in\sigma</m>. Jadi <m>\sigma'\subseteq\sigma</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-04-solution">
+      <p>
+        Misalkan <m>\sigma'</m> suatu topologi pada <m>Y</m> dan andaikan
+        <m>p:(X,\tau)\to(Y,\sigma')</m> kontinu. Untuk setiap
+        <m>U\in\sigma'</m>, kekontinuan memberi
+        <m>p^{-1}(U)\in\tau</m>. Berdasarkan definisi <m>\sigma</m>, kondisi
+        terakhir ekuivalen dengan <m>U\in\sigma</m>. Jadi setiap anggota
+        <m>\sigma'</m> juga anggota <m>\sigma</m>, yakni
+        <m>\sigma'\subseteq\sigma</m>.
+      </p>
+      <p>
+        Secara khusus, jika suatu topologi pada <m>Y</m> memuat
+        <m>\sigma</m> secara sejati, pilih himpunan terbuka
+        <m>U\notin\sigma</m> dari selisihnya. Maka
+        <m>p^{-1}(U)\notin\tau</m>, sehingga <m>p</m> tidak kontinu untuk
+        topologi yang lebih besar itu. Jadi “terbesar” di sini berarti
+        topologi paling halus di antara semua topologi pada <m>Y</m> yang
+        membuat <m>p</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-05">
+    <title>Dua Anggota Wajib Topologi Kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> suatu ruang topologi, <m>Y</m> suatu
+        himpunan, dan <m>p:X\to Y</m> suatu surjeksi. Untuk
+        <me>
+          \tau_Y=\{U\subseteq Y\mid p^{-1}(U)\in\tau_X\},
+        </me>
+        buktikan bahwa <m>\emptyset</m> dan <m>Y</m> merupakan anggota
+        <m>\tau_Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-05-hint">
+      <p><em>Tahap 1.</em> Hitung <m>p^{-1}(\emptyset)</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan surjektivitas untuk menghitung <m>p^{-1}(Y)</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan aksioma pertama topologi pada <m>\tau_X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-05-answer">
+      <p>
+        Karena <m>p^{-1}(\emptyset)=\emptyset\in\tau_X</m> dan, oleh
+        surjektivitas, <m>p^{-1}(Y)=X\in\tau_X</m>, berlaku
+        <m>\emptyset,Y\in\tau_Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-05-solution">
+      <p>
+        Tidak ada titik yang dipetakan ke anggota himpunan kosong, sehingga
+        <m>p^{-1}(\emptyset)=\emptyset</m>. Setiap topologi pada <m>X</m>
+        memuat <m>\emptyset</m>; maka definisi <m>\tau_Y</m> memberi
+        <m>\emptyset\in\tau_Y</m>.
+      </p>
+      <p>
+        Karena kodomain <m>p</m> adalah <m>Y</m>, sebenarnya
+        <m>p^{-1}(Y)=X</m> untuk setiap fungsi <m>p:X\to Y</m>; asumsi
+        surjektif diperlukan untuk konstruksi kuosien, tetapi tidak untuk
+        identitas ini. Aksioma topologi memberi <m>X\in\tau_X</m>, sehingga
+        <m>Y\in\tau_Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-06">
+    <title>Gabungan Sebarang dalam Topologi Kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> suatu ruang topologi,
+        <m>p:X\to Y</m> suatu surjeksi, dan
+        <m>\tau_Y=\{U\subseteq Y\mid p^{-1}(U)\in\tau_X\}</m>.
+        Jika <m>\{U_\beta\}_{\beta\in J}</m> suatu keluarga anggota
+        <m>\tau_Y</m>, buktikan bahwa
+        <m>\bigcup_{\beta\in J}U_\beta\in\tau_Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-06-hint">
+      <p><em>Tahap 1.</em> Untuk setiap <m>\beta</m>, terjemahkan <m>U_\beta\in\tau_Y</m> menjadi pernyataan tentang prapetanya.</p>
+      <p><em>Tahap 2.</em> Gunakan identitas bahwa prapeta mempertahankan gabungan sebarang.</p>
+      <p><em>Tahap 3.</em> Terapkan aksioma gabungan pada <m>\tau_X</m> dan kembali ke definisi <m>\tau_Y</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-06-answer">
+      <p>
+        Berlaku
+        <m>p^{-1}(\bigcup_\beta U_\beta)=\bigcup_\beta p^{-1}(U_\beta)</m>.
+        Ruas kanan terbuka dalam <m>X</m>, sehingga gabungan pada ruas kiri
+        merupakan anggota <m>\tau_Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-06-solution">
+      <p>
+        Karena <m>U_\beta\in\tau_Y</m>, untuk setiap
+        <m>\beta\in J</m> berlaku <m>p^{-1}(U_\beta)\in\tau_X</m>.
+        Prapeta berkomutasi dengan gabungan sebarang, jadi
+        <me>
+          p^{-1}\left(\bigcup_{\beta\in J}U_\beta\right)
+          =\bigcup_{\beta\in J}p^{-1}(U_\beta).
+        </me>
+        Ruas kanan adalah gabungan sebarang himpunan terbuka dalam
+        <m>X</m>, sehingga berada dalam <m>\tau_X</m>. Berdasarkan definisi
+        <m>\tau_Y</m>, hal ini tepat menyatakan bahwa
+        <m>\bigcup_{\beta\in J}U_\beta\in\tau_Y</m>. Argumen juga mencakup
+        <m>J=\emptyset</m>, ketika gabungannya kosong.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-07">
+    <title>Irisan Berhingga dalam Topologi Kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> suatu ruang topologi,
+        <m>p:X\to Y</m> suatu surjeksi, dan
+        <m>\tau_Y=\{U\subseteq Y\mid p^{-1}(U)\in\tau_X\}</m>.
+        Jika <m>J</m> berhingga dan
+        <m>U_\beta\in\tau_Y</m> untuk setiap <m>\beta\in J</m>, buktikan
+        bahwa <m>\bigcap_{\beta\in J}U_\beta\in\tau_Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-07-hint">
+      <p><em>Tahap 1.</em> Ubah keanggotaan setiap <m>U_\beta</m> menjadi keterbukaan <m>p^{-1}(U_\beta)</m>.</p>
+      <p><em>Tahap 2.</em> Prapeta juga mempertahankan irisan.</p>
+      <p><em>Tahap 3.</em> Di sinilah keberhinggaan <m>J</m> diperlukan untuk memakai aksioma topologi pada <m>\tau_X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-07-answer">
+      <p>
+        Karena
+        <m>p^{-1}(\bigcap_\beta U_\beta)=\bigcap_\beta p^{-1}(U_\beta)</m>
+        dan ruas kanan merupakan irisan berhingga himpunan terbuka, prapeta
+        irisan tersebut terbuka. Jadi irisannya berada dalam
+        <m>\tau_Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-07-solution">
+      <p>
+        Dari <m>U_\beta\in\tau_Y</m> diperoleh
+        <m>p^{-1}(U_\beta)\in\tau_X</m> untuk setiap <m>\beta\in J</m>.
+        Identitas prapeta memberi
+        <me>
+          p^{-1}\left(\bigcap_{\beta\in J}U_\beta\right)
+          =\bigcap_{\beta\in J}p^{-1}(U_\beta).
+        </me>
+        Karena <m>J</m> berhingga, ruas kanan terbuka dalam <m>X</m> oleh
+        aksioma irisan berhingga. Maka
+        <m>\bigcap_{\beta\in J}U_\beta\in\tau_Y</m>. Jika
+        <m>J=\emptyset</m>, kedua irisan masing-masing adalah <m>Y</m> dan
+        <m>X</m>, sehingga kesimpulan tetap benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-08">
+    <title>Menyimpulkan Aksioma Topologi</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> suatu ruang topologi, <m>Y</m> suatu
+        himpunan, dan <m>p:X\to Y</m> suatu surjeksi. Definisikan
+        <m>\tau_Y=\{U\subseteq Y\mid p^{-1}(U)\in\tau_X\}</m>.
+        Setelah diketahui bahwa <m>\emptyset,Y\in\tau_Y</m>, bahwa
+        <m>\tau_Y</m> tertutup terhadap gabungan sebarang, dan bahwa
+        <m>\tau_Y</m> tertutup terhadap irisan berhingga, simpulkan apa
+        yang dapat dikatakan tentang <m>\tau_Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-08-hint">
+      <p><em>Tahap 1.</em> Cocokkan ketiga fakta yang diberikan dengan definisi sebuah topologi.</p>
+      <p><em>Tahap 2.</em> Perhatikan bahwa semua anggota <m>\tau_Y</m> memang subhimpunan dari <m>Y</m>.</p>
+      <p><em>Tahap 3.</em> Nyatakan pula nama topologi yang dibentuk melalui suatu surjeksi dengan aturan prapeta ini.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-08-answer">
+      <p>
+        Ketiga aksioma terpenuhi, jadi <m>\tau_Y</m> merupakan topologi pada
+        <m>Y</m>. Topologi ini disebut topologi kuosien yang ditentukan oleh
+        <m>p</m> dan <m>\tau_X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-08-solution">
+      <p>
+        Sebuah koleksi subhimpunan dari <m>Y</m> adalah topologi tepat bila
+        memuat <m>\emptyset</m> dan <m>Y</m>, tertutup terhadap gabungan
+        sebarang, serta tertutup terhadap irisan berhingga. Semua syarat itu
+        telah diverifikasi untuk <m>\tau_Y</m>. Karena itu
+        <m>(Y,\tau_Y)</m> adalah ruang topologi. Konstruksi ini disebut
+        topologi kuosien pada <m>Y</m>; surjeksi <m>p</m> menjadi pemetaan
+        kuosien karena, menurut definisi,
+        <m>U</m> terbuka di <m>Y</m> jika dan hanya jika
+        <m>p^{-1}(U)</m> terbuka di <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-09">
+    <title>Topologi Kuosien dari Pemetaan Tanda</title>
+    <statement>
+      <p>
+        Beri <m>X=\R</m> topologi standar dan ambil
+        <m>Y=\{-1,0,1\}</m>. Definisikan surjeksi <m>p:X\to Y</m> dengan
+        <m>p(x)=1</m> untuk <m>x\gt0</m>, <m>p(0)=0</m>, dan
+        <m>p(x)=-1</m> untuk <m>x\lt0</m>. Tentukan semua himpunan terbuka
+        dalam topologi kuosien pada <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-09-hint">
+      <p><em>Tahap 1.</em> Ada hanya delapan subhimpunan <m>Y</m>; mulai dengan prapeta ketiga himpunan satu titik.</p>
+      <p><em>Tahap 2.</em> Prapeta mempertahankan gabungan, sehingga prapeta himpunan beranggota dua mudah diperoleh.</p>
+      <p><em>Tahap 3.</em> Tentukan prapeta mana yang terbuka dalam topologi standar pada <m>\R</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-09-answer">
+      <p>
+        Topologi kuosiennya adalah
+        <me>
+          \{\emptyset,\{-1\},\{1\},\{-1,1\},Y\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-09-solution">
+      <p>
+        Serat-seratnya ialah
+        <m>p^{-1}(\{-1\})=(-\infty,0)</m>,
+        <m>p^{-1}(\{0\})=\{0\}</m>, dan
+        <m>p^{-1}(\{1\})=(0,\infty)</m>. Karena itu prapeta delapan
+        subhimpunan <m>Y</m> adalah
+        <me>
+          \begin{aligned}
+          p^{-1}(\emptyset)\amp=\emptyset,
+          \amp p^{-1}(\{-1\})\amp=(-\infty,0),
+          \amp p^{-1}(\{0\})\amp=\{0\},\\
+          p^{-1}(\{1\})\amp=(0,\infty),
+          \amp p^{-1}(\{-1,0\})\amp=(-\infty,0],
+          \amp p^{-1}(\{0,1\})\amp=[0,\infty),\\
+          p^{-1}(\{-1,1\})\amp=\R\setminus\{0\},
+          \amp p^{-1}(Y)\amp=\R.
+          \end{aligned}
+        </me>
+      </p>
+      <p>
+        Di antara himpunan-himpunan tersebut, tepat
+        <m>\emptyset</m>, <m>(-\infty,0)</m>, <m>(0,\infty)</m>,
+        <m>\R\setminus\{0\}</m>, dan <m>\R</m> yang terbuka dalam
+        topologi standar. Subhimpunan <m>Y</m> yang bersesuaian memberi
+        daftar pada jawaban. Khususnya, <m>0</m> tidak mempunyai lingkungan
+        terbuka sejati di <m>Y</m>; setiap himpunan terbuka yang memuat
+        <m>0</m> harus sama dengan <m>Y</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-10">
+    <title>Topologi Melingkar dari Fungsi Bagian Pecahan</title>
+    <statement>
+      <p>
+        Beri <m>\R</m> topologi standar dan definisikan surjeksi
+        <m>p:\R\to[0,1)</m> dengan
+        <m>p(x)=x-\lfloor x\rfloor</m>. Ciri lengkap apakah yang harus
+        dipenuhi <m>U\subseteq[0,1)</m> agar
+        <m>p^{-1}(U)</m> terbuka dalam <m>\R</m>? Dengan demikian, tentukan
+        semua anggota topologi kuosien pada <m>[0,1)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-10-hint">
+      <p><em>Tahap 1.</em> Gunakan <m>p^{-1}(U)=\bigcup_{n\in\Z}(n+U)</m> dan periksa titik-titik dengan bagian pecahan di antara <m>0</m> dan <m>1</m>.</p>
+      <p><em>Tahap 2.</em> Jika <m>0\in U</m>, keterbukaan prapeta di setiap bilangan bulat memaksa <m>U</m> memuat bagian kecil di dekat <m>0</m> sekaligus bagian kecil di dekat <m>1</m>.</p>
+      <p><em>Tahap 3.</em> Buktikan arah sebaliknya dengan membangun lingkungan terbuka bagi setiap titik <m>x\in p^{-1}(U)</m>, dengan memisahkan kasus <m>p(x)=0</m> dan <m>p(x)\ne0</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-10-answer">
+      <p>
+        Suatu <m>U\subseteq[0,1)</m> terbuka kuosien jika dan hanya jika
+        setiap <m>y\in U\cap(0,1)</m> mempunyai selang terbuka kecil yang
+        termuat dalam <m>U</m>, dan, bila <m>0\in U</m>, terdapat
+        <m>\varepsilon\gt0</m> dengan
+        <m>[0,\varepsilon)\cup(1-\varepsilon,1)\subseteq U</m>.
+        Jadi lingkungan <m>0</m> harus “membungkus” kedua ujung interval.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-10-solution">
+      <p>
+        Untuk <m>U\subseteq[0,1)</m>, berlaku
+        <me>
+          p^{-1}(U)=\bigcup_{n\in\Z}(n+U),
+          \qquad n+U=\{n+u\mid u\in U\}.
+        </me>
+        Andaikan prapeta ini terbuka. Jika
+        <m>y\in U\cap(0,1)</m>, maka <m>y\in p^{-1}(U)</m>; ada
+        <m>\delta\gt0</m>, yang dapat diperkecil agar
+        <m>\delta\lt\min\{y,1-y\}</m>, sedemikian sehingga
+        <m>(y-\delta,y+\delta)\subseteq p^{-1}(U)</m>. Pada selang
+        <m>(0,1)</m>, fungsi <m>p</m> adalah identitas, sehingga selang itu
+        termuat dalam <m>U</m>.
+      </p>
+      <p>
+        Jika <m>0\in U</m>, maka <m>0\in p^{-1}(U)</m>. Keterbukaan
+        menghasilkan <m>\varepsilon\gt0</m>, yang dapat dipilih kurang dari
+        <m>1</m>, dengan
+        <m>(-\varepsilon,\varepsilon)\subseteq p^{-1}(U)</m>. Bagian
+        positif dipetakan ke <m>(0,\varepsilon)</m>, sedangkan untuk
+        <m>t\in(-\varepsilon,0)</m> berlaku <m>p(t)=1+t</m>. Jadi
+        <me>
+          [0,\varepsilon)\cup(1-\varepsilon,1)\subseteq U.
+        </me>
+        Kedua kondisi pada jawaban dengan demikian perlu.
+      </p>
+      <p>
+        Sebaliknya, andaikan kedua kondisi itu dipenuhi dan ambil
+        <m>x\in p^{-1}(U)</m>. Jika <m>p(x)=y\in(0,1)</m>, suatu selang kecil
+        di sekitar <m>y</m> yang termuat dalam <m>U</m>, setelah digeser oleh
+        bilangan bulat <m>\lfloor x\rfloor</m>, memberi lingkungan terbuka
+        bagi <m>x</m> yang termuat dalam <m>p^{-1}(U)</m>. Jika
+        <m>p(x)=0</m>, maka <m>x</m> bilangan bulat; syarat pembungkusan di
+        <m>0</m> membuat <m>(x-\varepsilon,x+\varepsilon)</m> termuat dalam
+        <m>p^{-1}(U)</m>, setelah <m>\varepsilon</m> diperkecil bila perlu.
+        Jadi setiap titik prapeta merupakan titik interior, sehingga
+        <m>p^{-1}(U)</m> terbuka. Ini membuktikan kecukupan dan melengkapi
+        pencirian semua himpunan terbuka kuosien. Topologi ini bukan topologi
+        subruang biasa pada <m>[0,1)</m>; secara topologis, titik dekat
+        <m>1</m> juga dekat dengan <m>0</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

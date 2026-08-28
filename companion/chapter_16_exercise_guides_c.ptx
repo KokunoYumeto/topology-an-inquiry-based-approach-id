@@ -1,0 +1,427 @@
+<section xml:id="o003-c90-ch16-exercise-guides-c" xml:lang="id-ID">
+  <title>Panduan latihan Bab 16, bagian ketiga</title>
+  <p>
+    Bagian ini mendampingi sepuluh prompt latihan kanonis ke-21 sampai ke-30,
+    dari model bidang proyektif real sampai retraksi. Kerjakan prompt pada bab
+    utama lebih dahulu, lalu gunakan dukungan bertahap ini.
+  </p>
+  <p>
+    Materi pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0,
+    bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-01">
+    <title>Bidang proyektif sebagai permukaan bola antipodal</title>
+    <statement>
+      <p>
+        Bidang proyektif real <m>\mathbb{R}P^2</m> adalah himpunan garis satu
+        dimensi melalui titik asal dalam <m>\R^3</m>. Berikan penjelasan
+        geometris yang meyakinkan bahwa ruang ini homeomorfik dengan
+        <m>S^2/\ssim</m>, dengan <m>x\sim-x</m> pada <m>S^2</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-01-hint">
+      <p><em>Tahap 1.</em> Potong setiap garis melalui asal dengan permukaan bola satuan.</p>
+      <p><em>Tahap 2.</em> Hitung berapa titik potong yang diperoleh dan bagaimana keduanya berhubungan.</p>
+      <p><em>Tahap 3.</em> Normalisasi vektor tak nol dan periksa bahwa penggantian wakil hanya mengganti tanda.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-01-answer">
+      <p>
+        Setiap garis melalui asal memotong <m>S^2</m> pada tepat sepasang titik
+        antipodal <m>\{u,-u\}</m>. Sebaliknya, setiap pasangan antipodal
+        menentukan satu garis. Korespondensi ini kontinu pada tingkat kuosien
+        dan memberikan homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-01-solution">
+      <p>
+        Untuk vektor tak nol <m>v\in\R^3</m>, garisnya adalah
+        <m>L_v=\{tv:t\in\R\}</m>. Normalisasi memberi
+        <m>u=v/\lVert v\rVert\in S^2</m>. Titik potong garis dengan
+        <m>S^2</m> tepat <m>u</m> dan <m>-u</m>. Jika <m>w=kv</m> dengan
+        <m>k\ne0</m>, normalisasi <m>w</m> menghasilkan <m>u</m> atau
+        <m>-u</m>; jadi kelas antipodal tidak bergantung pada vektor
+        pembangkit garis.
+      </p>
+      <p>
+        Sebaliknya, kelas <m>[u]=\{u,-u\}</m> menentukan garis
+        <m>\R u</m>. Kedua konstruksi saling invers. Pemetaan normalisasi dari
+        <m>\R^3\setminus\{0\}</m> ke <m>S^2</m> kontinu dan menghormati kelas
+        skalar, sehingga turun ke pemetaan kontinu pada kuosien. Konstruksi
+        invers juga berasal dari pemetaan kuosien <m>u\mapsto\R u</m>. Maka
+        korespondensi bijektif tersebut adalah homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-02">
+    <title>Dari hemisfer ke model cakram dan persegi</title>
+    <statement>
+      <p>
+        Mulai dari model <m>S^2/(x\sim-x)</m>. Jelaskan mengapa model itu
+        dapat diganti oleh hemisfer atas tertutup dengan pasangan titik
+        antipodal pada ekuator diidentifikasi, kemudian oleh cakram tertutup
+        dengan titik batas antipodal diidentifikasi. Gunakan model cakram
+        untuk menjelaskan model persegi dengan pasangan sisi berhadapan
+        diidentifikasi dalam arah berlawanan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-02-hint">
+      <p><em>Tahap 1.</em> Setiap pasangan antipodal di luar ekuator mempunyai tepat satu wakil di hemisfer atas.</p>
+      <p><em>Tahap 2.</em> Proyeksikan hemisfer ke bidang ekuator.</p>
+      <p><em>Tahap 3.</em> Bagi lingkaran batas cakram menjadi empat busur dan luruskan busur-busur itu menjadi sisi persegi.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-02-answer">
+      <p>
+        Interior hemisfer memberi satu wakil unik bagi setiap kelas, sedangkan
+        ekuator masih mempunyai pasangan antipodal. Proyeksi vertikal
+        mengubah hemisfer menjadi cakram dan ekuator menjadi batasnya. Ketika
+        batas dibagi menjadi empat busur, pasangan antipodal menjadi pasangan
+        sisi berhadapan dengan orientasi berlawanan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-02-solution">
+      <p>
+        Jika <m>(x,y,z)\in S^2</m> dan <m>z\ne0</m>, tepat satu dari titik itu
+        dan antipodalnya mempunyai koordinat <m>z>0</m>. Jadi setiap kelas
+        antipodal yang tidak menyentuh ekuator mempunyai tepat satu wakil di
+        interior hemisfer atas. Jika <m>z=0</m>, kedua wakil berada pada
+        ekuator dan tetap harus diidentifikasi.
+      </p>
+      <p>
+        Proyeksi <m>(x,y,z)\mapsto(x,y)</m> memetakan hemisfer atas tertutup
+        homeomorfik ke <m>D^2</m>. Ekuator menjadi <m>\partial D^2</m>, dan
+        pasangan <m>(x,y,0)</m> serta <m>(-x,-y,0)</m> menjadi pasangan
+        antipodal pada batas. Selanjutnya pilih empat titik batas yang
+        membagi lingkaran menjadi empat busur dan deformasi cakram menjadi
+        persegi. Antipodalitas memasangkan setiap busur dengan busur
+        berhadapan, tetapi parameter sepanjang busur berjalan terbalik. Maka
+        modelnya adalah persegi dengan kedua pasangan sisi berhadapan
+        direkatkan dalam arah berlawanan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-03">
+    <title>Mengenali pita Möbius di dalam bidang proyektif</title>
+    <statement>
+      <p>
+        Dalam model persegi <m>\mathbb{R}P^2</m> pada
+        <xref ref="F_projective_2"/>, sebuah pita diagonal diarsir dan
+        dipisahkan. Jelaskan mengapa kuosien pita itu, dengan identifikasi sisi
+        yang diwarisi dari persegi, merupakan pita Möbius.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-03-hint">
+      <p><em>Tahap 1.</em> Luruskan pita diagonal menjadi persegi panjang panjang dan sempit.</p>
+      <p><em>Tahap 2.</em> Ikuti anak panah pada kedua ujung pendek pita.</p>
+      <p><em>Tahap 3.</em> Bandingkan identifikasi ujung itu dengan model poligonal standar pita Möbius.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-03-answer">
+      <p>
+        Setelah diluruskan, pita menjadi persegi panjang yang kedua ujung
+        pendeknya diidentifikasi dengan orientasi berlawanan. Itulah model
+        kuosien standar pita Möbius.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-03-solution">
+      <p>
+        Potongan diagonal tidak mengubah topologi pita: melalui deformasi di
+        dalam persegi, daerah berarsir dapat diluruskan menjadi
+        <m>[0,1]\times[-\varepsilon,\varepsilon]</m>. Kedua ujung pendeknya
+        berasal dari bagian sisi berhadapan pada model persegi bidang
+        proyektif. Anak panah identifikasi menunjukkan bahwa
+        <m>(0,t)</m> dipasangkan dengan <m>(1,-t)</m>, bukan dengan
+        <m>(1,t)</m>. Kuosien persegi panjang menurut
+        <m>(0,t)\sim(1,-t)</m> tepat pita Möbius. Sisi panjang pita tidak
+        direkatkan satu sama lain dan menjadi satu komponen batas pita
+        Möbius.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-04">
+    <title>Sisa bidang proyektif adalah cakram</title>
+    <statement>
+      <p>
+        Dalam <xref ref="F_projective_3"/>, ruang <m>S</m> tersisa setelah
+        pita Möbius sebelumnya dipisahkan dari model persegi
+        <m>\mathbb{R}P^2</m>. Jelaskan homeomorfisme potong-dan-susun ulang
+        yang mengubah <m>S</m> menjadi cakram, lalu simpulkan bahwa
+        <m>\mathbb{R}P^2</m> diperoleh dengan merekatkan pita Möbius pada
+        cakram sepanjang batasnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-04-hint">
+      <p><em>Tahap 1.</em> Pindahkan salah satu daerah poligonal tanpa mengubah pasangan sisi berlabel sama.</p>
+      <p><em>Tahap 2.</em> Gunakan identifikasi sisi <m>a</m>, <m>b</m>, dan <m>c</m> untuk menyederhanakan batas.</p>
+      <p><em>Tahap 3.</em> Periksa bahwa sisi potongan <m>x</m> dan <m>y</m> membentuk satu lingkaran batas.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-04-answer">
+      <p>
+        Pemotongan dan penyusunan ulang poligon mempertahankan identifikasi
+        sisi dan menghasilkan cakram. Lingkaran batas cakram itu sama dengan
+        batas tunggal pita Möbius, sehingga merekatkan kedua batas
+        merekonstruksi bidang proyektif.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-04-solution">
+      <p>
+        Peta <m>f</m> pada gambar memindahkan salah satu komponen poligonal
+        melalui translasi dan rotasi, lalu menyambungkannya pada sisi yang
+        mempunyai label dan arah identifikasi sama. Operasi ini adalah
+        pemotongan sepanjang ruas dan perekatan kembali menurut peta linear,
+        sehingga menghasilkan ruang homeomorfik dengan <m>S</m>. Peta
+        <m>g</m> kemudian meluruskan sisi-sisi luar dan menggunakan pasangan
+        <m>a</m>, <m>b</m>, dan <m>c</m> untuk menutup sambungan yang bukan
+        bagian dari potongan pita. Hasil akhirnya adalah satu cakram.
+      </p>
+      <p>
+        Dua sisi potongan yang berlabel <m>x</m> dan <m>y</m> bersama-sama
+        menjadi lingkaran batas cakram. Pada sisi lain, kedua sisi panjang
+        pita persegi panjang menjadi satu lingkaran batas setelah ujung
+        pendeknya direkatkan berlawanan arah. Kedua lingkaran inilah bekas
+        antarmuka pemotongan. Merekatkannya kembali dengan korespondensi asal
+        merekonstruksi model persegi <m>\mathbb{R}P^2</m>. Jadi bidang
+        proyektif adalah gabungan sebuah pita Möbius dan sebuah cakram yang
+        direkatkan sepanjang batasnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-05">
+    <title>Kekontinuan dan surjektivitas fungsi jari-jari kuadrat</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\R^2</m>, <m>Y=[0,\infty)</m>, keduanya dengan topologi
+        standar, dan definisikan <m>f:X\to Y</m> dengan
+        <m>f(x,y)=x^2+y^2</m>. Buktikan bahwa <m>f</m> kontinu dan surjektif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-05-hint">
+      <p><em>Tahap 1.</em> Gunakan bahwa proyeksi koordinat, perkalian, dan penjumlahan mempertahankan kekontinuan.</p>
+      <p><em>Tahap 2.</em> Untuk <m>t\geq0</m>, cari satu titik pada sumbu <m>x</m> yang dipetakan ke <m>t</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-05-answer">
+      <p>
+        Fungsi <m>f</m> adalah polinom dalam dua koordinat, sehingga kontinu.
+        Untuk setiap <m>t\in[0,\infty)</m>, berlaku
+        <m>f(\sqrt t,0)=t</m>, sehingga <m>f</m> surjektif.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-05-solution">
+      <p>
+        Pemetaan koordinat <m>\pi_1(x,y)=x</m> dan
+        <m>\pi_2(x,y)=y</m> kontinu. Fungsi kuadrat pada <m>\R</m> kontinu,
+        dan jumlah fungsi kontinu kontinu. Maka
+        <m>f=\pi_1^2+\pi_2^2</m> kontinu sebagai fungsi ke <m>\R</m> dan juga
+        sebagai fungsi ke subruang <m>Y=[0,\infty)</m>, sebab citranya berada
+        dalam <m>Y</m>. Jika <m>t\in Y</m>, akar <m>\sqrt t</m> terdefinisi
+        dan <m>f(\sqrt t,0)=t</m>. Jadi setiap titik kodomain mempunyai
+        prapeta.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-06">
+    <title>Kuosien lingkaran sepusat homeomorfik dengan sinar</title>
+    <statement>
+      <p>
+        Untuk fungsi <m>f:\R^2\to[0,\infty)</m> dengan
+        <m>f(x,y)=x^2+y^2</m>, biarkan <m>X^*</m> menjadi kuosien serat:
+        dua titik ekuivalen jika mempunyai nilai <m>f</m> yang sama. Buktikan
+        bahwa fungsi terinduksi <m>\bar f:X^*\to[0,\infty)</m> merupakan
+        homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-06-hint">
+      <p><em>Tahap 1.</em> Serat untuk <m>t>0</m> adalah lingkaran berjari-jari <m>\sqrt t</m>; serat nol adalah titik asal.</p>
+      <p><em>Tahap 2.</em> Buktikan <m>f</m> terbuka relatif terhadap <m>[0,\infty)</m> dengan citra bola kecil.</p>
+      <p><em>Tahap 3.</em> Gunakan bahwa bijeksi kontinu yang terbuka adalah homeomorfisme.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-06-answer">
+      <p>
+        Fungsi <m>\bar f([(x,y)])=x^2+y^2</m> terdefinisi dengan baik dan
+        bijektif. Fungsi <m>f</m> kontinu dan terbuka, sehingga merupakan
+        pemetaan kuosien; sifat universal memberi kekontinuan
+        <m>\bar f</m>, dan keterbukaan <m>f</m> memberi keterbukaan
+        <m>\bar f</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-06-solution">
+      <p>
+        Kelas ekuivalensi tepat serat-serat <m>f</m>, sehingga rumus
+        <m>\bar f([(x,y)])=f(x,y)</m> terdefinisi dengan baik. Surjektivitas
+        <m>f</m> membuat <m>\bar f</m> surjektif, sedangkan kesamaan nilai
+        <m>\bar f</m> berarti kedua kelas berasal dari serat yang sama; jadi
+        <m>\bar f</m> injektif.
+      </p>
+      <p>
+        Tinggal membuktikan <m>f</m> terbuka. Ambil himpunan terbuka
+        <m>U\subseteq\R^2</m> dan titik <m>z=f(x_0,y_0)\in f(U)</m>. Pilih
+        bola kecil di sekitar <m>(x_0,y_0)</m> yang termuat dalam <m>U</m>.
+        Jika <m>(x_0,y_0)\ne(0,0)</m>, ruas radial kecil di dalam bola itu
+        menghasilkan selang terbuka di sekitar <m>z</m>. Jika titiknya asal,
+        bola berjari-jari <m>\varepsilon</m> menghasilkan
+        <m>[0,\varepsilon^2)</m>, yang terbuka relatif dalam
+        <m>[0,\infty)</m>. Jadi <m>f(U)</m> terbuka relatif dan <m>f</m>
+        pemetaan terbuka, maka pemetaan kuosien.
+      </p>
+      <p>
+        Jika <m>q:\R^2\to X^*</m> proyeksi kanonis, maka
+        <m>f=\bar f\circ q</m>. Sifat universal kuosien memberi kekontinuan
+        <m>\bar f</m>. Untuk <m>W</m> terbuka dalam <m>X^*</m>,
+        <m>q^{-1}(W)</m> terbuka dan
+        <m>\bar f(W)=f(q^{-1}(W))</m> terbuka. Jadi <m>\bar f</m> bijektif,
+        kontinu, dan terbuka; karena itu homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-07">
+    <title>Setiap ruang tak kosong mempunyai retrak satu titik</title>
+    <statement>
+      <p>
+        Buktikan bahwa setiap ruang topologi tak kosong <m>X</m> mempunyai
+        suatu subruang satu titik yang merupakan retrak dari <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-07-hint">
+      <p>Pilih <m>a\in X</m> dan pertimbangkan fungsi konstan <m>r:X\to\{a\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-07-answer">
+      <p>
+        Untuk suatu <m>a\in X</m>, fungsi <m>r(x)=a</m> kontinu dan memenuhi
+        <m>r(a)=a</m>; jadi <m>\{a\}</m> merupakan retrak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-07-solution">
+      <p>
+        Karena <m>X</m> tak kosong, pilih <m>a\in X</m>. Subruang
+        <m>\{a\}</m> mempunyai satu-satunya topologi
+        <m>\{\emptyset,\{a\}\}</m>. Fungsi <m>r:X\to\{a\}</m> yang
+        didefinisikan oleh <m>r(x)=a</m> kontinu: prapeta himpunan terbuka
+        hanya <m>\emptyset</m> atau <m>X</m>. Selain itu, pembatasan
+        <m>r</m> pada <m>\{a\}</m> adalah identitas karena <m>r(a)=a</m>.
+        Maka <m>r</m> retraksi dan <m>\{a\}</m> retrak dari <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-08">
+    <title>Retraksi garis real berlubang ke dua titik</title>
+    <statement>
+      <p>
+        Tunjukkan bahwa <m>\{-1,1\}</m> merupakan retrak dari
+        <m>\R\setminus\{0\}</m> dengan topologi subruang standar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-08-hint">
+      <p>Gunakan tanda bilangan: petakan komponen negatif ke <m>-1</m> dan komponen positif ke <m>1</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-08-answer">
+      <p>
+        Fungsi <m>r(x)=-1</m> untuk <m>x\lt0</m> dan <m>r(x)=1</m> untuk
+        <m>x\gt0</m> adalah retraksi yang dimaksud.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-08-solution">
+      <p>
+        Subruang <m>\{-1,1\}</m> diskret. Definisikan
+        <me>
+          r(x)=\begin{cases}-1 \amp x\lt0,\\ 1 \amp x\gt0.\end{cases}
+        </me>
+        Prapeta <m>\{-1\}</m> adalah <m>(-\infty,0)</m> dan prapeta
+        <m>\{1\}</m> adalah <m>(0,\infty)</m>; keduanya terbuka dalam
+        <m>\R\setminus\{0\}</m>. Jadi <m>r</m> kontinu. Selain itu,
+        <m>r(-1)=-1</m> dan <m>r(1)=1</m>, sehingga pembatasannya pada
+        <m>\{-1,1\}</m> adalah identitas. Maka <m>r</m> retraksi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-09">
+    <title>Setiap retraksi adalah pemetaan kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> subruang dari <m>X</m> dan
+        <m>r:X\to A</m> suatu retraksi. Buktikan bahwa <m>r</m> merupakan
+        pemetaan kuosien.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-09-hint">
+      <p>
+        Jika <m>i:A\hookrightarrow X</m> inklusi, maka
+        <m>r\circ i=\operatorname{id}_A</m>. Untuk <m>U\subseteq A</m>,
+        tulis <m>U=i^{-1}(r^{-1}(U))</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-09-answer">
+      <p>
+        Retraksi surjektif dan kontinu. Jika <m>r^{-1}(U)</m> terbuka dalam
+        <m>X</m>, maka <m>U=i^{-1}(r^{-1}(U))</m> terbuka dalam <m>A</m>.
+        Jadi keterbukaan di <m>A</m> tepat diuji oleh prapeta di bawah
+        <m>r</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-09-solution">
+      <p>
+        Karena <m>r(a)=a</m> untuk semua <m>a\in A</m>, fungsi <m>r</m>
+        surjektif. Kekontinuannya merupakan bagian definisi retraksi. Jadi jika
+        <m>U</m> terbuka dalam <m>A</m>, maka <m>r^{-1}(U)</m> terbuka dalam
+        <m>X</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>r^{-1}(U)</m> terbuka dalam <m>X</m> untuk
+        suatu <m>U\subseteq A</m>. Inklusi <m>i:A\hookrightarrow X</m>
+        kontinu dan <m>r\circ i=\operatorname{id}_A</m>. Karena itu
+        <me>
+          U=(r\circ i)^{-1}(U)=i^{-1}(r^{-1}(U))
+        </me>
+        terbuka dalam <m>A</m>. Maka <m>U</m> terbuka tepat ketika
+        <m>r^{-1}(U)</m> terbuka. Ini adalah kriteria pemetaan kuosien.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-c-10">
+    <title>Retrak dari ruang Hausdorff harus tertutup</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang Hausdorff dan <m>A</m> retrak dari <m>X</m>.
+        Buktikan bahwa <m>A</m> merupakan subhimpunan tertutup dari <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-c-10-hint">
+      <p><em>Tahap 1.</em> Jika <m>r:X\to A</m> retraksi dan <m>i:A\hookrightarrow X</m>, bentuk <m>F=i\circ r:X\to X</m>.</p>
+      <p><em>Tahap 2.</em> Tunjukkan bahwa <m>A=\{x\in X:F(x)=x\}</m>.</p>
+      <p><em>Tahap 3.</em> Dalam ruang Hausdorff, diagonal di <m>X\times X</m> tertutup.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-c-10-answer">
+      <p>
+        Himpunan <m>A</m> adalah himpunan titik tetap fungsi kontinu
+        <m>F=i\circ r</m>. Himpunan titik tetap itu merupakan prapeta diagonal
+        tertutup di <m>X\times X</m>, sehingga tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-c-10-solution">
+      <p>
+        Definisikan <m>F=i\circ r:X\to X</m>. Jika <m>a\in A</m>, maka
+        <m>F(a)=i(r(a))=a</m>. Sebaliknya, jika <m>F(x)=x</m>, maka
+        <m>x=i(r(x))</m> berada dalam <m>A</m>. Jadi himpunan titik tetap
+        <m>F</m> tepat <m>A</m>.
+      </p>
+      <p>
+        Pemetaan <m>G:X\to X\times X</m> yang diberikan oleh
+        <m>G(x)=(x,F(x))</m> kontinu. Karena <m>X</m> Hausdorff, diagonal
+        <m>\Delta_X=\{(x,x):x\in X\}</m> tertutup dalam <m>X\times X</m>.
+        Maka
+        <me>
+          A=G^{-1}(\Delta_X)
+        </me>
+        tertutup dalam <m>X</m> sebagai prapeta himpunan tertutup di bawah
+        fungsi kontinu.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -1,0 +1,578 @@
+<section xml:id="o003-c90-ch16-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan Bab 16, bagian kedua</title>
+  <p>
+    Bagian ini melanjutkan urutan fisik sumber untuk prompt latihan ke-11
+    sampai ke-20 tentang ruang kuosien. Setiap pernyataan dibuat mandiri dan
+    disertai petunjuk bertahap, jawaban atau rubrik pembuktian ringkas, serta
+    solusi lengkap. Bagian ini merupakan materi pendamping tidak resmi yang
+    ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi
+    GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-01">
+    <title>Homeomorfisme dua topologi kuosien berhingga</title>
+    <statement>
+      <p>
+        Pada <m>Y=\{a,b,c\}</m>, misalkan
+        <me>
+          \tau_p=\{\emptyset,\{a\},\{b,c\},Y\},\qquad
+          \tau_q=\{\emptyset,\{c\},\{a,b\},Y\}.
+        </me>
+        Tentukan apakah <m>(Y,\tau_p)</m> dan <m>(Y,\tau_q)</m>
+        homeomorfik. Jika ya, berikan suatu homeomorfisme tertentu dan
+        buktikan; jika tidak, berikan penghalang topologisnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-01-hint">
+      <p>
+        <em>Tahap 1.</em> Dalam masing-masing topologi, kenali satu-satunya
+        himpunan terbuka beranggota tunggal.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Petakan kedua bagian partisi terbuka
+        <m>\{a\}\mid\{b,c\}</m> untuk <m>\tau_p</m> ke bagian yang
+        bersesuaian <m>\{c\}\mid\{a,b\}</m> untuk <m>\tau_q</m>, lalu
+        periksa prapeta semua himpunan terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-01-answer">
+      <p>
+        Ya. Salah satu homeomorfisme ialah
+        <m>h(a)=c</m>, <m>h(b)=a</m>, dan <m>h(c)=b</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-01-solution">
+      <p>
+        Fungsi <m>h:Y\to Y</m> yang diberikan oleh
+        <m>h(a)=c</m>, <m>h(b)=a</m>, dan <m>h(c)=b</m> merupakan bijeksi.
+        Himpunan terbuka dalam kodomain <m>(Y,\tau_q)</m> mempunyai prapeta
+        <me>
+          h^{-1}(\emptyset)=\emptyset,\quad
+          h^{-1}(\{c\})=\{a\},\quad
+          h^{-1}(\{a,b\})=\{b,c\},\quad
+          h^{-1}(Y)=Y.
+        </me>
+        Semua prapeta ini berada dalam <m>\tau_p</m>, sehingga <m>h</m>
+        kontinu.
+      </p>
+      <p>
+        Citra himpunan-himpunan dalam <m>\tau_p</m> berturut-turut adalah
+        <m>\emptyset</m>, <m>\{c\}</m>, <m>\{a,b\}</m>, dan <m>Y</m>, yang
+        semuanya berada dalam <m>\tau_q</m>. Dengan kata lain, prapeta
+        himpunan terbuka di bawah <m>h^{-1}</m> juga terbuka, sehingga
+        <m>h^{-1}</m> kontinu. Maka <m>h</m> adalah homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-02">
+    <title>Menciutkan setiap penampang vertikal cakram</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>D^2=\{(s,t)\in\R^2\mid s^2+t^2\leq1\}</m> dengan topologi
+        standar. Definisikan <m>(s_1,t_1)\sim(s_2,t_2)</m> jika dan hanya
+        jika <m>s_1=s_2</m>. Deskripsikan ruang kuosien
+        <m>D^2/\ssim</m> sampai homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-02-hint">
+      <p>
+        <em>Tahap 1.</em> Setiap kelas ekuivalensi adalah penampang vertikal
+        cakram pada satu nilai koordinat pertama. Gunakan proyeksi
+        <m>P(s,t)=s</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Identifikasi citra proyeksi, lalu gunakan teorema
+        bahwa surjeksi kontinu dari ruang kompak ke ruang Hausdorff merupakan
+        pemetaan kuosien.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-02-answer">
+      <p>
+        Ruang kuosiennya homeomorfik dengan selang tertutup
+        <m>[-1,1]</m>, melalui peta yang mengirim kelas
+        <m>[(s,t)]</m> ke <m>s</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-02-solution">
+      <p>
+        Proyeksi <m>P:D^2\to[-1,1]</m>, <m>P(s,t)=s</m>, kontinu dan
+        surjektif. Dua titik mempunyai citra yang sama tepat ketika koordinat
+        pertamanya sama, sehingga serat-serat <m>P</m> tepat kelas-kelas
+        <m>\sim</m>.
+      </p>
+      <p>
+        Cakram <m>D^2</m> kompak dan selang <m>[-1,1]</m> Hausdorff. Karena
+        itu surjeksi kontinu <m>P</m> adalah pemetaan tertutup, dan setiap
+        surjeksi kontinu yang tertutup merupakan pemetaan kuosien. Peta
+        <m>P</m> menurunkan bijeksi
+        <m>\overline P:D^2/\ssim\to[-1,1]</m>. Karena <m>P</m> dan proyeksi
+        kanonik sama-sama pemetaan kuosien, bijeksi terinduksi ini adalah
+        homeomorfisme. Jadi penciutan setiap penampang vertikal menyisakan
+        tepat koordinat <m>s</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-03">
+    <title>Merekatkan pasangan batas dengan koordinat pertama yang sama</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>D^2=\{(s,t)\in\R^2\mid s^2+t^2\leq1\}</m> dan
+        <m>S^1=\partial D^2</m>. Ambil relasi ekuivalensi terkecil pada
+        <m>D^2</m> yang mengidentifikasi dua titik
+        <m>(s_1,t_1),(s_2,t_2)\in S^1</m> apabila <m>s_1=s_2</m>, tanpa
+        identifikasi tambahan. Deskripsikan ruang kuosien
+        <m>D^2/\ssim</m> sampai homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-03-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk <m>\lvert s\rvert\lt1</m>, normalkan
+        koordinat vertikal dengan
+        <m>u=t/\sqrt{1-s^2}\in[-1,1]</m>. Dua ujung <m>u=-1</m> dan
+        <m>u=1</m> harus menjadi sudut yang sama pada sebuah lingkaran.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Ketika <m>s</m> bergerak ke <m>-1</m> atau
+        <m>1</m>, kecilkan lingkaran itu menjadi sebuah kutub. Kenali ruang
+        yang merupakan suspensi sebuah lingkaran.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-03-answer">
+      <p>
+        Ruang kuosiennya homeomorfik dengan <m>S^2</m>. Pasangan titik pada
+        busur batas atas dan bawah menjadi satu meridian, sedangkan kedua
+        ujung horizontal cakram menjadi dua kutub.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-03-solution">
+      <p>
+        Untuk <m>\lvert s\rvert\lt1</m>, tetapkan
+        <m>u=t/\sqrt{1-s^2}</m> dan definisikan
+        <me>
+          F(s,t)=\bigl(\sqrt{1-s^2}\cos(\pi(u+1)),
+          \sqrt{1-s^2}\sin(\pi(u+1)),s\bigr).
+        </me>
+        Pada dua titik yang tersisa, definisikan
+        <m>F(-1,0)=(0,0,-1)</m> dan <m>F(1,0)=(0,0,1)</m>. Nilai <m>F</m>
+        selalu berada pada <m>S^2</m>. Fungsi ini kontinu pada bagian
+        <m>\lvert s\rvert\lt1</m>; di dekat <m>s=\pm1</m>, panjang gabungan
+        dua koordinat pertamanya adalah <m>\sqrt{1-s^2}</m>, sehingga fungsi
+        juga kontinu di kedua titik ujung.
+      </p>
+      <p>
+        Pada batas atas, <m>u=1</m> dan sudutnya <m>2\pi</m>; pada batas
+        bawah, <m>u=-1</m> dan sudutnya <m>0</m>. Jadi dua titik batas dengan
+        koordinat pertama yang sama mempunyai citra yang sama. Sebaliknya,
+        untuk <m>-1\lt u\lt1</m>, sudut berada secara unik dalam
+        <m>(0,2\pi)</m>; bersama koordinat ketiga <m>s</m>, ini menunjukkan
+        bahwa semua titik interior mempunyai serat tunggal. Kedua titik
+        dengan <m>s=\pm1</m> juga mempunyai citra berbeda. Maka serat-serat
+        <m>F</m> tepat kelas-kelas relasi yang diberikan. Rumus itu juga
+        menjangkau setiap garis lintang, sehingga <m>F</m> surjektif.
+      </p>
+      <p>
+        Fungsi <m>F</m> menurunkan bijeksi kontinu
+        <m>\overline F:D^2/\ssim\to S^2</m>. Domain kuosien kompak dan
+        <m>S^2</m> Hausdorff, jadi <m>\overline F</m> merupakan
+        homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-04">
+    <title>Mengidentifikasi pasangan antipodal di seluruh cakram</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>D^2=\{(s,t)\in\R^2\mid s^2+t^2\leq1\}</m>. Ambil relasi
+        ekuivalensi terkecil yang memuat setiap identifikasi
+        <m>x\sim -x</m> untuk <m>x\in D^2</m>, tanpa identifikasi tambahan.
+        Deskripsikan ruang kuosien <m>D^2/\ssim</m> sampai homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-04-hint">
+      <p>
+        <em>Tahap 1.</em> Identifikasikan <m>\R^2</m> dengan bidang kompleks.
+        Cari fungsi pada cakram yang bernilai sama pada <m>z</m> dan
+        <m>-z</m> serta tidak membuat pengulangan lain.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Periksa kesurjektifan dan serat fungsi tersebut,
+        lalu turunkan ke kuosien dan gunakan argumen kompak-ke-Hausdorff.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-04-answer">
+      <p>
+        Ruang kuosiennya kembali homeomorfik dengan <m>D^2</m>.
+        Homeomorfisme terinduksi oleh fungsi kompleks <m>z\mapsto z^2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-04-solution">
+      <p>
+        Pandang <m>D^2=\{z\in\mathbb C\mid\lvert z\rvert\leq1\}</m> dan
+        definisikan <m>F:D^2\to D^2</m> dengan <m>F(z)=z^2</m>. Fungsi ini
+        kontinu. Untuk setiap <m>w\in D^2</m>, suatu akar kuadrat <m>z</m>
+        mempunyai <m>\lvert z\rvert=\sqrt{\lvert w\rvert}\leq1</m>, sehingga
+        <m>F</m> surjektif.
+      </p>
+      <p>
+        Jika <m>F(z_1)=F(z_2)</m>, maka
+        <m>(z_1-z_2)(z_1+z_2)=0</m>, sehingga <m>z_2=z_1</m> atau
+        <m>z_2=-z_1</m>. Sebaliknya, <m>F(-z)=F(z)</m>. Jadi serat-serat
+        <m>F</m> tepat orbit <m>\{z,-z\}</m>, dengan orbit tunggal
+        <m>\{0\}</m>, yakni tepat kelas-kelas relasi yang diberikan.
+      </p>
+      <p>
+        Karena itu <m>F</m> menurunkan bijeksi kontinu
+        <m>\overline F:D^2/\ssim\to D^2</m>. Domain kuosien kompak dan
+        cakram target Hausdorff, sehingga <m>\overline F</m> adalah
+        homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-05">
+    <title>Interval titik pangkal dengan batang bersama</title>
+    <statement>
+      <p>
+        Misalkan <m>I=[0,1]</m>, <m>X=I\times I</m> dengan topologi standar,
+        dan definisikan
+        <m>(s_1,t_1)\sim(s_2,t_2)</m> jika dan hanya jika kedua titik sama
+        atau <m>t_1=t_2\gt0</m>. Deskripsikan himpunan kuosien
+        <m>X/\ssim</m> beserta topologi kuosiennya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-05-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk setiap tinggi positif <m>t</m>, seluruh
+        penampang <m>I\times\{t\}</m> menjadi satu titik, sedangkan semua
+        titik <m>(s,0)</m> tetap berlainan. Beri nama kedua jenis kelas ini.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Tuliskan prapeta suatu subhimpunan umum kuosien.
+        Uji keterbukaannya di titik bertinggi positif dan kemudian di titik
+        sisi bawah; perhatikan bahwa lingkungan setiap titik sisi bawah
+        memuat semua kelas dengan tinggi positif yang cukup kecil.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-05-answer">
+      <p>
+        Sebagai himpunan, kuosiennya adalah
+        <m>Q=\{b_s:s\in I\}\sqcup\{u_t:0\lt t\leq1\}</m>, dengan
+        <m>b_s=[(s,0)]</m> dan <m>u_t=[(s,t)]</m> untuk sebarang <m>s</m>.
+        Himpunan
+        <m>\{b_s:s\in A\}\cup\{u_t:t\in V\}</m> terbuka tepat ketika
+        <m>A</m> terbuka dalam <m>I</m>, <m>V</m> terbuka dalam
+        <m>(0,1]</m>, dan jika <m>A\neq\emptyset</m>, maka
+        <m>(0,\varepsilon)\subseteq V</m> untuk suatu <m>\varepsilon\gt0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-05-solution">
+      <p>
+        Untuk <m>t\gt0</m>, relasi menyatukan semua titik pada
+        <m>I\times\{t\}</m>; sebut kelas itu <m>u_t</m>. Klausul kesamaan
+        dalam definisi relasi menjamin bahwa pada tinggi nol setiap kelas
+        adalah singleton <m>b_s=[(s,0)]</m>. Jadi deskripsi himpunan
+        <m>Q</m> dalam jawaban benar dan tidak membuat identifikasi tambahan.
+      </p>
+      <p>
+        Misalkan <m>\pi:X\to Q</m> proyeksi kanonik. Setiap
+        <m>W\subseteq Q</m> dapat ditulis secara unik sebagai
+        <me>
+          W=W(A,V)=\{b_s:s\in A\}\cup\{u_t:t\in V\},
+        </me>
+        dengan <m>A\subseteq I</m> dan <m>V\subseteq(0,1]</m>. Prapetanya
+        adalah
+        <me>
+          \pi^{-1}(W)=(A\times\{0\})\cup(I\times V).
+        </me>
+      </p>
+      <p>
+        Jika prapeta ini terbuka dalam <m>I\times I</m>, pemeriksaan di
+        titik-titik dengan tinggi positif menunjukkan bahwa <m>V</m> terbuka
+        dalam <m>(0,1]</m>. Pemeriksaan di setiap <m>(s,0)</m> dengan
+        <m>s\in A</m> menunjukkan bahwa <m>A</m> terbuka dalam <m>I</m>.
+        Jika <m>A</m> tidak kosong, pilih satu <m>s\in A</m>. Sebuah
+        lingkungan persegi panjang relatif dari <m>(s,0)</m> yang termuat
+        dalam prapeta memaksa adanya <m>\varepsilon\gt0</m> dengan
+        <m>(0,\varepsilon)\subseteq V</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan ketiga kondisi tersebut dipenuhi. Titik dengan
+        tinggi dalam <m>V</m> mempunyai lingkungan produk di
+        <m>I\times V</m>. Jika <m>s\in A</m>, pilih lingkungan relatif
+        <m>J\subseteq A</m> bagi <m>s</m>; bila <m>A\neq\emptyset</m>, syarat
+        pada <m>V</m> membuat
+        <m>J\times[0,\varepsilon)</m> termuat dalam prapeta. Maka prapeta
+        terbuka. Definisi topologi kuosien sekarang memberikan tepat
+        pencirian dalam jawaban. Secara intuitif, terdapat satu interval
+        titik pangkal <m>b_s</m>, dan semua titik pangkal itu berbagi batang
+        tinggi positif yang sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-06">
+    <title>Kuosien dengan titik-titik pangkal yang tak dapat dipisahkan</title>
+    <statement>
+      <p>
+        Misalkan <m>I=[0,1]</m>, <m>X=I\times I</m>, dan
+        <m>(s_1,t_1)\sim(s_2,t_2)</m> tepat ketika kedua titik sama atau
+        <m>t_1=t_2\gt0</m>. Buktikan bahwa ruang kuosien
+        <m>X/\ssim</m> bukan ruang Hausdorff.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-06-hint">
+      <p>
+        <em>Tahap 1.</em> Pilih dua kelas berbeda pada sisi bawah, misalnya
+        <m>[(0,0)]</m> dan <m>[(1,0)]</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Tarik kembali sembarang lingkungan terbuka kedua
+        kelas itu ke persegi. Masing-masing prapeta memuat titik-titik pada
+        semua ketinggian positif yang cukup kecil; gunakan identifikasi
+        seluruh penampang horizontal untuk menemukan titik bersama di
+        kuosien.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-06-answer">
+      <p>
+        Rubrik pembuktian: tunjukkan bahwa setiap dua lingkungan terbuka dari
+        kelas <m>[(0,0)]</m> dan <m>[(1,0)]</m> beririsan pada suatu kelas
+        <m>[I\times\{t\}]</m> dengan <m>t\gt0</m> cukup kecil. Karena kedua
+        kelas bawah itu berbeda, aksioma Hausdorff gagal.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-06-solution">
+      <p>
+        Misalkan <m>\pi:X\to X/\ssim</m> adalah proyeksi kanonik dan tetapkan
+        <m>b_0=\pi(0,0)</m> serta <m>b_1=\pi(1,0)</m>. Kedua kelas ini berbeda,
+        sebab pada tinggi nol relasi hanya mengidentifikasi titik dengan
+        dirinya sendiri.
+      </p>
+      <p>
+        Ambil sembarang lingkungan terbuka <m>U</m> dari <m>b_0</m> dan
+        <m>V</m> dari <m>b_1</m> dalam ruang kuosien. Prapeta
+        <m>\pi^{-1}(U)</m> terbuka dan memuat <m>(0,0)</m>, sehingga terdapat
+        <m>\varepsilon_0\gt0</m> dengan
+        <m>(0,t)\in\pi^{-1}(U)</m> untuk setiap
+        <m>0\lt t\lt\varepsilon_0</m>. Demikian pula, terdapat
+        <m>\varepsilon_1\gt0</m> dengan
+        <m>(1,t)\in\pi^{-1}(V)</m> untuk setiap
+        <m>0\lt t\lt\varepsilon_1</m>.
+      </p>
+      <p>
+        Pilih <m>0\lt t\lt\min\{\varepsilon_0,\varepsilon_1\}</m>. Karena
+        <m>t\gt0</m>, berlaku <m>(0,t)\sim(1,t)</m>. Oleh karena itu satu
+        kelas yang sama, yaitu <m>\pi(0,t)=\pi(1,t)</m>, berada dalam
+        <m>U\cap V</m>. Jadi tidak ada lingkungan terbuka saling lepas bagi
+        <m>b_0</m> dan <m>b_1</m>. Ruang kuosien tersebut bukan Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-07">
+    <title>Kuosien topologi titik tertentu modulo tiga</title>
+    <statement>
+      <p>
+        Beri <m>\Z</m> topologi titik tertentu pada <m>p=1</m>: himpunan
+        terbukanya adalah <m>\emptyset</m> dan semua subhimpunan
+        <m>\Z</m> yang memuat <m>1</m>. Definisikan <m>x\sim y</m> jika dan
+        hanya jika <m>x\equiv y\pmod 3</m>. Deskripsikan
+        <m>\Z/\ssim</m> dan tentukan topologi kuosiennya dengan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-07-hint">
+      <p>
+        <em>Tahap 1.</em> Namai tiga kelas sisa sebagai
+        <m>C_0,C_1,C_2</m>. Tentukan kelas yang memuat titik istimewa
+        <m>1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk <m>U</m> tak kosong di kuosien, uji kapan
+        <m>\pi^{-1}(U)</m> memuat <m>1</m>. Terjemahkan syarat itu kembali
+        menjadi syarat pada <m>U</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-07-answer">
+      <p>
+        Kuosiennya adalah <m>Q=\{C_0,C_1,C_2\}</m>, dengan
+        <m>C_r=3\Z+r</m>. Topologi kuosiennya ialah topologi titik tertentu
+        pada <m>C_1</m>:
+        <me>
+          \{\emptyset,\{C_1\},\{C_0,C_1\},\{C_1,C_2\},Q\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-07-solution">
+      <p>
+        Kelas-kelas ekuivalensi kongruensi modulo <m>3</m> adalah
+        <m>C_0=3\Z</m>, <m>C_1=3\Z+1</m>, dan <m>C_2=3\Z+2</m>. Jadi
+        himpunan dasar kuosien adalah <m>Q=\{C_0,C_1,C_2\}</m>. Misalkan
+        <m>\pi:\Z\to Q</m> proyeksi kanonik.
+      </p>
+      <p>
+        Prapeta <m>\pi^{-1}(\emptyset)=\emptyset</m> terbuka. Untuk
+        <m>U\neq\emptyset</m>, prapeta <m>\pi^{-1}(U)</m> terbuka dalam
+        topologi titik tertentu tepat ketika memuat <m>1</m>. Karena
+        <m>1\in C_1</m>, syarat ini setara dengan <m>C_1\in U</m>. Jadi
+        himpunan terbuka kuosien adalah <m>\emptyset</m> bersama semua
+        subhimpunan <m>Q</m> yang memuat <m>C_1</m>, tepat seperti daftar
+        dalam jawaban.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-08">
+    <title>Kuosien topologi titik yang dikecualikan modulo tiga</title>
+    <statement>
+      <p>
+        Beri <m>\Z</m> topologi titik yang dikecualikan pada <m>p=1</m>:
+        himpunan terbukanya adalah <m>\Z</m> dan semua subhimpunan
+        <m>\Z</m> yang tidak memuat <m>1</m>. Definisikan <m>x\sim y</m>
+        jika dan hanya jika <m>x\equiv y\pmod 3</m>. Deskripsikan
+        <m>\Z/\ssim</m> dan tentukan topologi kuosiennya dengan justifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-08-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan lagi tiga kelas sisa
+        <m>C_0,C_1,C_2</m>, dengan <m>1\in C_1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Prapeta suatu himpunan sejati di kuosien terbuka
+        tepat ketika tidak memuat <m>1</m>. Ingat bahwa seluruh ruang tetap
+        terbuka sebagai pengecualian khusus.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-08-answer">
+      <p>
+        Untuk <m>Q=\{C_0,C_1,C_2\}</m>, topologi kuosiennya ialah topologi
+        titik yang dikecualikan pada <m>C_1</m>:
+        <me>
+          \{\emptyset,\{C_0\},\{C_2\},\{C_0,C_2\},Q\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-08-solution">
+      <p>
+        Seperti sebelumnya, kelas-kelas kuosien adalah
+        <m>C_r=3\Z+r</m> untuk <m>r=0,1,2</m>, dan <m>1\in C_1</m>.
+        Misalkan <m>\pi:\Z\to Q</m> adalah proyeksi kanonik.
+      </p>
+      <p>
+        Jika <m>U=Q</m>, maka <m>\pi^{-1}(U)=\Z</m>, yang terbuka. Jika
+        <m>U\subsetneq Q</m>, prapeta <m>\pi^{-1}(U)</m> terbuka tepat ketika
+        tidak memuat titik yang dikecualikan <m>1</m>. Hal ini setara dengan
+        <m>C_1\notin U</m>. Jadi semua subhimpunan dari
+        <m>\{C_0,C_2\}</m> terbuka, seluruh <m>Q</m> juga terbuka, dan tidak
+        ada himpunan lain yang terbuka. Daftarnya tepat seperti dalam
+        jawaban.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-09">
+    <title>Relasi skala pada bidang proyektif real</title>
+    <statement>
+      <p>
+        Pada <m>\R^3\setminus\{(0,0,0)\}</m>, definisikan
+        <m>x\sim_P y</m> jika dan hanya jika terdapat <m>k\in\R</m> dengan
+        <m>k\neq0</m> sedemikian sehingga <m>y=kx</m>. Buktikan bahwa
+        <m>\sim_P</m> merupakan relasi ekuivalensi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-09-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk refleksivitas gunakan skalar <m>1</m>; untuk
+        simetri, balik skalar tak nol yang diberikan.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk transitivitas, komposisikan dua penskalaan
+        dan pastikan hasil kali kedua skalarnya masih tak nol.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-09-answer">
+      <p>
+        Rubrik pembuktian: gunakan skalar <m>1</m>, <m>k^{-1}</m>, dan
+        hasil kali dua skalar tak nol untuk membuktikan refleksivitas,
+        simetri, dan transitivitas secara berurutan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-09-solution">
+      <p>
+        Untuk setiap <m>x\neq0</m>, berlaku <m>x=1x</m> dan <m>1\neq0</m>,
+        sehingga <m>x\sim_P x</m>. Jika <m>x\sim_P y</m>, ada
+        <m>k\neq0</m> dengan <m>y=kx</m>. Maka
+        <m>x=k^{-1}y</m>, dan <m>k^{-1}\neq0</m>, sehingga
+        <m>y\sim_P x</m>.
+      </p>
+      <p>
+        Jika <m>x\sim_P y</m> dan <m>y\sim_P z</m>, pilih skalar tak nol
+        <m>k</m> dan <m>\ell</m> sehingga <m>y=kx</m> dan
+        <m>z=\ell y</m>. Kemudian <m>z=(\ell k)x</m>, dan
+        <m>\ell k\neq0</m>. Jadi <m>x\sim_P z</m>. Ketiga aksioma relasi
+        ekuivalensi telah dipenuhi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-b-10">
+    <title>Unsur-unsur bidang proyektif real</title>
+    <statement>
+      <p>
+        Bidang proyektif real didefinisikan sebagai
+        <m>\mathbb{R}P^2=(\R^3\setminus\{0\})/\ssim_P</m>, dengan
+        <m>x\sim_P y</m> tepat ketika <m>y=kx</m> untuk suatu skalar real
+        tak nol <m>k</m>. Berikan deskripsi geometris yang tepat tentang
+        unsur-unsur <m>\mathbb{R}P^2</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-b-10-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk sebuah vektor tak nol <m>v</m>, gambarkan
+        semua kelipatan <m>kv</m> dengan <m>k\neq0</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Bandingkan kelas tersebut dengan subruang linear
+        <m>\operatorname{span}(v)</m>, lalu perhatikan bagaimana garis yang
+        sama berpotongan dengan bola satuan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-b-10-answer">
+      <p>
+        Setiap unsur <m>\mathbb{R}P^2</m> adalah satu garis linear melalui
+        titik asal dalam <m>\R^3</m>, atau secara ekuivalen satu arah tanpa
+        orientasi. Garis itu berpotongan dengan <m>S^2</m> pada sepasang
+        titik antipodal.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-b-10-solution">
+      <p>
+        Untuk <m>v\in\R^3\setminus\{0\}</m>, kelas ekuivalensinya adalah
+        <me>
+          [v]=\{kv\mid k\in\R,\ k\neq0\}
+          =\operatorname{span}(v)\setminus\{0\}.
+        </me>
+        Jadi kelas tersebut menentukan tepat satu subruang linear berdimensi
+        satu, yakni garis <m>\operatorname{span}(v)</m> melalui titik asal.
+      </p>
+      <p>
+        Sebaliknya, setiap garis linear <m>L</m> melalui titik asal memuat
+        suatu vektor tak nol <m>v</m>, dan semua vektor tak nol pada
+        <m>L</m> adalah kelipatan skalar tak nol dari <m>v</m>. Maka
+        <m>L\setminus\{0\}</m> adalah tepat satu kelas ekuivalensi. Dengan
+        demikian korespondensi <m>[v]\mapsto\operatorname{span}(v)</m>
+        merupakan bijeksi antara unsur-unsur <m>\mathbb{R}P^2</m> dan garis
+        linear melalui asal di <m>\R^3</m>. Setelah dinormalisasi ke panjang
+        satu, garis itu bertemu <m>S^2</m> pada <m>v/\lVert v\rVert</m> dan
+        antipodanya, sehingga satu titik proyektif juga dapat dipandang
+        sebagai satu pasangan antipodal atau satu arah tanpa orientasi.
+      </p>
+    </solution>
+  </exercise>
+</section>

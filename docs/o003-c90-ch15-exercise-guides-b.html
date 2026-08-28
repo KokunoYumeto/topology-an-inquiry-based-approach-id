@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,14 +597,14 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch15-exercise-guides-b"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Panduan latihan Bab 15, bagian kedua</span>
 </h2>
-<div class="para" id="p-6018">Bagian ini menutup empat prompt latihan terakhir dalam urutan sumber. Setiap pernyataan yang salah disertai contoh tandingan konkret. Materi pendamping ini ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.</div>
+<div class="para" id="p-6136">Bagian ini menutup empat prompt latihan terakhir dalam urutan sumber. Setiap pernyataan yang salah disertai contoh tandingan konkret. Materi pendamping ini ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.</div>
 <article class="exercise exercise-like" id="o003-c90-ch15-exer-b-01"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-exer-b-01"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.27</span><span class="period">.</span><span class="space"> </span><span class="title">Subruang diskret di dalam ruang tak diskret.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01"><article class="exercise exercise-like"><div class="para" id="p-6019">Tentukan benar atau salah: jika <span class="process-math">\(X\)</span> adalah ruang topologi yang tidak memiliki topologi diskret, maka tidak ada subruang dari <span class="process-math">\(X\)</span> yang memiliki topologi diskret. Jika salah, berikan contoh tandingan konkret.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01"><article class="exercise exercise-like"><div class="para" id="p-6137">Tentukan benar atau salah: jika <span class="process-math">\(X\)</span> adalah ruang topologi yang tidak memiliki topologi diskret, maka tidak ada subruang dari <span class="process-math">\(X\)</span> yang memiliki topologi diskret. Jika salah, berikan contoh tandingan konkret.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-01-hint" id="o003-c90-ch15-exer-b-01-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01-hint"><div class="hint solution-like"><div class="para" id="p-6020">Setiap ruang bertitik tunggal memiliki topologi diskret. Tempatkan satu titik seperti itu sebagai subruang dari ruang sederhana yang topologinya indiskret dan memiliki dua titik.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-01-answer" id="o003-c90-ch15-exer-b-01-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01-answer"><div class="answer solution-like"><div class="para" id="p-6021">Salah. Ruang dua titik indiskret tidak diskret, tetapi setiap subruang bertitik tunggalnya diskret.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-exer-b-01-solution" id="o003-c90-ch15-exer-b-01-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01-solution"><div class="solution solution-like"><div class="para logical" id="p-6022">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-01-hint" id="o003-c90-ch15-exer-b-01-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01-hint"><div class="hint solution-like"><div class="para" id="p-6138">Setiap ruang bertitik tunggal memiliki topologi diskret. Tempatkan satu titik seperti itu sebagai subruang dari ruang sederhana yang topologinya indiskret dan memiliki dua titik.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-01-answer" id="o003-c90-ch15-exer-b-01-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01-answer"><div class="answer solution-like"><div class="para" id="p-6139">Salah. Ruang dua titik indiskret tidak diskret, tetapi setiap subruang bertitik tunggalnya diskret.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-exer-b-01-solution" id="o003-c90-ch15-exer-b-01-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-01-solution"><div class="solution solution-like"><div class="para logical" id="p-6140">
 <div class="para">Ambil <span class="process-math">\(X=\{0,1\}\)</span> dengan topologi indiskret <span class="process-math">\(\tau=\{\emptyset,X\}\text{.}\)</span> Topologi ini bukan topologi diskret, sebab, misalnya, <span class="process-math">\(\{0\}\)</span> tidak terbuka dalam <span class="process-math">\(X\text{.}\)</span> Sekarang ambil subruang <span class="process-math">\(A=\{0\}\text{.}\)</span> Topologi subruang pada <span class="process-math">\(A\)</span> adalah</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -590,18 +616,18 @@ window.MathJax = {
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-exer-b-02"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-exer-b-02"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.28</span><span class="period">.</span><span class="space"> </span><span class="title">Citra kontinu dari ruang Hausdorff.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-02"><article class="exercise exercise-like"><div class="para" id="p-6023">Tentukan benar atau salah: jika <span class="process-math">\(f:X\to Y\)</span> fungsi kontinu, <span class="process-math">\(X\)</span> ruang Hausdorff, dan <span class="process-math">\(f(X)\)</span> diberi topologi subruang dari <span class="process-math">\(Y\text{,}\)</span> maka <span class="process-math">\(f(X)\)</span> harus Hausdorff. Jika salah, berikan contoh tandingan konkret.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-02"><article class="exercise exercise-like"><div class="para" id="p-6141">Tentukan benar atau salah: jika <span class="process-math">\(f:X\to Y\)</span> fungsi kontinu, <span class="process-math">\(X\)</span> ruang Hausdorff, dan <span class="process-math">\(f(X)\)</span> diberi topologi subruang dari <span class="process-math">\(Y\text{,}\)</span> maka <span class="process-math">\(f(X)\)</span> harus Hausdorff. Jika salah, berikan contoh tandingan konkret.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-02-hint" id="o003-c90-ch15-exer-b-02-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-02-hint"><div class="hint solution-like"><div class="para" id="p-6024">Ambil himpunan dua titik. Beri domain topologi diskret dan kodomain topologi indiskret, lalu gunakan fungsi identitas pada himpunan yang mendasarinya.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-02-answer" id="o003-c90-ch15-exer-b-02-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-02-answer"><div class="answer solution-like"><div class="para" id="p-6025">Salah. Fungsi identitas dari ruang dua titik diskret ke ruang dua titik indiskret kontinu dan surjektif, tetapi citranya tidak Hausdorff.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-02-hint" id="o003-c90-ch15-exer-b-02-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-02-hint"><div class="hint solution-like"><div class="para" id="p-6142">Ambil himpunan dua titik. Beri domain topologi diskret dan kodomain topologi indiskret, lalu gunakan fungsi identitas pada himpunan yang mendasarinya.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-02-answer" id="o003-c90-ch15-exer-b-02-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-02-answer"><div class="answer solution-like"><div class="para" id="p-6143">Salah. Fungsi identitas dari ruang dua titik diskret ke ruang dua titik indiskret kontinu dan surjektif, tetapi citranya tidak Hausdorff.</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-exer-b-02-solution" id="o003-c90-ch15-exer-b-02-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-02-solution"><div class="solution solution-like">
-<div class="para" id="p-6026">Ambil himpunan <span class="process-math">\(S=\{0,1\}\text{.}\)</span> Jadikan <span class="process-math">\(X=(S,\mathcal{P}(S))\)</span> ruang diskret dan <span class="process-math">\(Y=(S,\{\emptyset,S\})\)</span> ruang indiskret. Ruang <span class="process-math">\(X\)</span> Hausdorff karena singleton <span class="process-math">\(\{0\}\)</span> dan <span class="process-math">\(\{1\}\)</span> merupakan lingkungan terbuka saling lepas bagi kedua titiknya. Definisikan <span class="process-math">\(f:X\to Y\)</span> dengan <span class="process-math">\(f(s)=s\text{.}\)</span>
-</div> <div class="para" id="p-6027">Satu-satunya himpunan terbuka dalam <span class="process-math">\(Y\)</span> adalah <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(S\text{,}\)</span> dan prapetanya masing-masing adalah <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(X\text{.}\)</span> Jadi <span class="process-math">\(f\)</span> kontinu. Fungsi ini surjektif, sehingga <span class="process-math">\(f(X)=Y\text{.}\)</span> Namun <span class="process-math">\(Y\)</span> tidak Hausdorff: satu-satunya himpunan terbuka tak kosong adalah seluruh <span class="process-math">\(Y\text{,}\)</span> sehingga titik <span class="process-math">\(0\)</span> dan <span class="process-math">\(1\)</span> tidak mempunyai lingkungan terbuka saling lepas. Jadi kekontinuan saja tidak mempertahankan sifat Hausdorff pada citra.</div>
+<div class="para" id="p-6144">Ambil himpunan <span class="process-math">\(S=\{0,1\}\text{.}\)</span> Jadikan <span class="process-math">\(X=(S,\mathcal{P}(S))\)</span> ruang diskret dan <span class="process-math">\(Y=(S,\{\emptyset,S\})\)</span> ruang indiskret. Ruang <span class="process-math">\(X\)</span> Hausdorff karena singleton <span class="process-math">\(\{0\}\)</span> dan <span class="process-math">\(\{1\}\)</span> merupakan lingkungan terbuka saling lepas bagi kedua titiknya. Definisikan <span class="process-math">\(f:X\to Y\)</span> dengan <span class="process-math">\(f(s)=s\text{.}\)</span>
+</div> <div class="para" id="p-6145">Satu-satunya himpunan terbuka dalam <span class="process-math">\(Y\)</span> adalah <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(S\text{,}\)</span> dan prapetanya masing-masing adalah <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(X\text{.}\)</span> Jadi <span class="process-math">\(f\)</span> kontinu. Fungsi ini surjektif, sehingga <span class="process-math">\(f(X)=Y\text{.}\)</span> Namun <span class="process-math">\(Y\)</span> tidak Hausdorff: satu-satunya himpunan terbuka tak kosong adalah seluruh <span class="process-math">\(Y\text{,}\)</span> sehingga titik <span class="process-math">\(0\)</span> dan <span class="process-math">\(1\)</span> tidak mempunyai lingkungan terbuka saling lepas. Jadi kekontinuan saja tidak mempertahankan sifat Hausdorff pada citra.</div>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-exer-b-03"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-exer-b-03"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.29</span><span class="period">.</span><span class="space"> </span><span class="title">Tutupan irisan dengan subruang.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-03"><article class="exercise exercise-like"><div class="para logical" id="p-6028">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-03"><article class="exercise exercise-like"><div class="para logical" id="p-6146">
 <div class="para">Tentukan benar atau salah: jika <span class="process-math">\(A\)</span> subruang dari ruang topologi <span class="process-math">\(X\)</span> dan <span class="process-math">\(B\subseteq X\text{,}\)</span> maka</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -611,18 +637,18 @@ window.MathJax = {
 <div class="para">dengan ruas kiri tutupan dalam <span class="process-math">\(A\)</span> dan <span class="process-math">\(\operatorname{cl}_X(B)\)</span> tutupan dalam <span class="process-math">\(X\text{.}\)</span> Jika salah, berikan contoh tandingan konkret.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-03-hint" id="o003-c90-ch15-exer-b-03-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-03-hint"><div class="hint solution-like"><div class="para" id="p-6029">Carilah himpunan <span class="process-math">\(B\)</span> di <span class="process-math">\(\R\)</span> yang tidak bertemu <span class="process-math">\(A=\{0\}\text{,}\)</span> tetapi mempunyai <span class="process-math">\(0\)</span> sebagai titik limit.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-03-answer" id="o003-c90-ch15-exer-b-03-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-03-answer"><div class="answer solution-like"><div class="para" id="p-6030">Salah. Dalam <span class="process-math">\(X=\R\text{,}\)</span> ambil <span class="process-math">\(A=\{0\}\)</span> dan <span class="process-math">\(B=\{1/n\mid n=1,2,\ldots\}\text{.}\)</span> Ruas kiri kosong, sedangkan ruas kanan adalah <span class="process-math">\(\{0\}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-03-hint" id="o003-c90-ch15-exer-b-03-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-03-hint"><div class="hint solution-like"><div class="para" id="p-6147">Carilah himpunan <span class="process-math">\(B\)</span> di <span class="process-math">\(\R\)</span> yang tidak bertemu <span class="process-math">\(A=\{0\}\text{,}\)</span> tetapi mempunyai <span class="process-math">\(0\)</span> sebagai titik limit.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-03-answer" id="o003-c90-ch15-exer-b-03-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-03-answer"><div class="answer solution-like"><div class="para" id="p-6148">Salah. Dalam <span class="process-math">\(X=\R\text{,}\)</span> ambil <span class="process-math">\(A=\{0\}\)</span> dan <span class="process-math">\(B=\{1/n\mid n=1,2,\ldots\}\text{.}\)</span> Ruas kiri kosong, sedangkan ruas kanan adalah <span class="process-math">\(\{0\}\text{.}\)</span>
 </div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-exer-b-03-solution" id="o003-c90-ch15-exer-b-03-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-03-solution"><div class="solution solution-like">
-<div class="para logical" id="p-6031">
+<div class="para logical" id="p-6149">
 <div class="para">Beri <span class="process-math">\(X=\R\)</span> topologi standar, dan tetapkan <span class="process-math">\(A=\{0\}\)</span> serta <span class="process-math">\(B=\{1/n\mid n=1,2,\ldots\}\text{.}\)</span> Karena <span class="process-math">\(0\notin B\text{,}\)</span> berlaku <span class="process-math">\(B\cap A=\emptyset\text{.}\)</span> Tutupan himpunan kosong dalam subruang <span class="process-math">\(A\)</span> tetap kosong, sehingga</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \operatorname{cl}_A(B\cap A)=\emptyset.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-6032">
+</div> <div class="para logical" id="p-6150">
 <div class="para">Di sisi lain, barisan <span class="process-math">\(1/n\)</span> konvergen ke <span class="process-math">\(0\text{,}\)</span> sehingga <span class="process-math">\(0\in\operatorname{cl}_{\R}(B)\text{.}\)</span> Bahkan <span class="process-math">\(\operatorname{cl}_{\R}(B)=B\cup\{0\}\text{,}\)</span> dan akibatnya</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -636,7 +662,7 @@ window.MathJax = {
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-exer-b-04"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-exer-b-04"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.30</span><span class="period">.</span><span class="space"> </span><span class="title">Interior irisan dengan subruang.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04"><article class="exercise exercise-like"><div class="para logical" id="p-6033">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04"><article class="exercise exercise-like"><div class="para logical" id="p-6151">
 <div class="para">Tentukan benar atau salah: jika <span class="process-math">\(A\)</span> subruang dari ruang topologi <span class="process-math">\(X\)</span> dan <span class="process-math">\(C\subseteq X\text{,}\)</span> maka</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -646,10 +672,10 @@ window.MathJax = {
 <div class="para">Jika salah, berikan contoh tandingan konkret.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-04-hint" id="o003-c90-ch15-exer-b-04-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04-hint"><div class="hint solution-like"><div class="para" id="p-6034">Dalam <span class="process-math">\(\R\text{,}\)</span> subruang bertitik tunggal terbuka di dalam dirinya sendiri, meskipun singleton itu tidak mempunyai interior dalam <span class="process-math">\(\R\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-exer-b-04-hint" id="o003-c90-ch15-exer-b-04-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04-hint"><div class="hint solution-like"><div class="para" id="p-6152">Dalam <span class="process-math">\(\R\text{,}\)</span> subruang bertitik tunggal terbuka di dalam dirinya sendiri, meskipun singleton itu tidak mempunyai interior dalam <span class="process-math">\(\R\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-04-answer" id="o003-c90-ch15-exer-b-04-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04-answer"><div class="answer solution-like"><div class="para" id="p-6035">Salah. Untuk <span class="process-math">\(X=\R\)</span> serta <span class="process-math">\(A=C=\{0\}\text{,}\)</span> ruas kiri adalah <span class="process-math">\(\{0\}\text{,}\)</span> sedangkan ruas kanan kosong.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-exer-b-04-solution" id="o003-c90-ch15-exer-b-04-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04-solution"><div class="solution solution-like"><div class="para logical" id="p-6036">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-exer-b-04-answer" id="o003-c90-ch15-exer-b-04-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04-answer"><div class="answer solution-like"><div class="para" id="p-6153">Salah. Untuk <span class="process-math">\(X=\R\)</span> serta <span class="process-math">\(A=C=\{0\}\text{,}\)</span> ruas kiri adalah <span class="process-math">\(\{0\}\text{,}\)</span> sedangkan ruas kanan kosong.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-exer-b-04-solution" id="o003-c90-ch15-exer-b-04-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-exer-b-04-solution"><div class="solution solution-like"><div class="para logical" id="p-6154">
 <div class="para">Beri <span class="process-math">\(X=\R\)</span> topologi standar dan ambil <span class="process-math">\(A=C=\{0\}\text{.}\)</span> Karena <span class="process-math">\(C\cap A=A\)</span> dan seluruh ruang selalu terbuka dalam dirinya sendiri, interior <span class="process-math">\(C\cap A\)</span> di dalam subruang <span class="process-math">\(A\)</span> adalah</div>
 <div class="displaymath process-math">
 \begin{equation*}

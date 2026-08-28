@@ -1,0 +1,170 @@
+<section xml:id="o003-c90-ch16-exercise-guides-d" xml:lang="id-ID">
+  <title>Panduan latihan Bab 16, bagian keempat</title>
+  <p>
+    Bagian terakhir ini mendampingi enam kemunculan fisik dalam latihan
+    benar-salah. Dua pasangan pertama berulang persis dalam sumber. Karena itu
+    kemunculan pertama dan ketiga memakai panduan kanonis
+    <m>d01</m>, sedangkan kemunculan kedua dan keempat memakai panduan kanonis
+    <m>d02</m>. Dua prompt terakhir memakai <m>d03</m> dan <m>d04</m>. Semua
+    kemunculan tetap dipertahankan dalam bab utama dan dicatat dalam backend.
+  </p>
+  <p>
+    Materi pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0,
+    bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch16-exer-d-01">
+    <title>Topologi kuosien adalah topologi terbesar yang sesuai</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>p:X\to Y</m> suatu surjeksi dari
+        ruang topologi <m>X</m> ke himpunan tak kosong <m>Y</m>, topologi
+        kuosien pada <m>Y</m> merupakan topologi terbesar yang membuat
+        <m>p</m> kontinu. Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-d-01-hint">
+      <p>
+        Jika <m>\sigma</m> topologi pada <m>Y</m> yang membuat <m>p</m>
+        kontinu, uji setiap <m>U\in\sigma</m> terhadap syarat
+        <m>p^{-1}(U)</m> terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-d-01-answer">
+      <p>
+        Benar. Setiap topologi yang membuat <m>p</m> kontinu termuat dalam
+        topologi kuosien.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-d-01-solution">
+      <p>
+        Topologi kuosien adalah
+        <m>\tau_p=\{U\subseteq Y:p^{-1}(U)\text{ terbuka dalam }X\}</m>.
+        Definisi ini membuat <m>p</m> kontinu. Jika <m>\sigma</m> topologi lain
+        pada <m>Y</m> dan <m>p:(X,\tau)\to(Y,\sigma)</m> kontinu, maka untuk
+        setiap <m>U\in\sigma</m>, himpunan <m>p^{-1}(U)</m> terbuka dalam
+        <m>X</m>. Jadi <m>U\in\tau_p</m>, sehingga
+        <m>\sigma\subseteq\tau_p</m>. Pernyataan itu benar.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-d-02">
+    <title>Kuosien rasional-irasional pada selang satuan</title>
+    <statement>
+      <p>
+        Pada <m>X=[0,1]</m> dengan topologi Euklides, definisikan
+        <m>x\sim y</m> jika dan hanya jika keduanya rasional atau keduanya
+        irasional. Tentukan benar atau salah: ruang kuosien
+        <m>X/\ssim</m> adalah ruang dua titik dengan topologi indiskret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-d-02-hint">
+      <p><em>Tahap 1.</em> Ada tepat dua kelas ekuivalensi.</p>
+      <p><em>Tahap 2.</em> Uji apakah masing-masing kelas itu terbuka dalam <m>[0,1]</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-d-02-answer">
+      <p>
+        Benar. Kedua singleton dalam kuosien mempunyai prapeta yang rapat dan
+        tidak terbuka; jadi hanya himpunan kosong dan seluruh ruang yang
+        terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-d-02-solution">
+      <p>
+        Kelas-kelasnya adalah <m>Q=[0,1]\cap\mathbb{Q}</m> dan
+        <m>I=[0,1]\setminus\mathbb{Q}</m>. Jadi himpunan kuosien mempunyai dua
+        titik, yakni <m>Q</m> dan <m>I</m>. Menurut definisi topologi
+        kuosien, singleton <m>\{Q\}</m> terbuka tepat ketika <m>Q</m>
+        terbuka dalam <m>[0,1]</m>; hal ini salah karena setiap selang relatif
+        memuat bilangan irasional. Demikian pula <m>I</m> tidak terbuka karena
+        setiap selang relatif memuat bilangan rasional. Maka tidak ada
+        singleton terbuka. Himpunan kosong dan seluruh kuosien selalu terbuka,
+        sehingga topologinya tepat topologi indiskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-d-03">
+    <title>Citra himpunan terbuka tidak selalu terbuka</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: untuk setiap surjeksi kuosien
+        <m>p:X\to Y</m>, jika <m>U</m> terbuka dalam <m>X</m>, maka
+        <m>p(U)</m> terbuka dalam <m>Y</m>. Jika salah, berikan contoh
+        tandingan konkret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-d-03-hint">
+      <p>
+        Ambil proyeksi kanonis yang menciutkan selang <m>[0,1]</m> dalam
+        <m>\R</m> menjadi satu titik. Pilih himpunan terbuka yang bertemu
+        sebagian, tetapi tidak seluruh, kelas yang diciutkan.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-d-03-answer">
+      <p>
+        Salah. Untuk <m>p:\R\to\R/[0,1]</m> dan
+        <m>U=(-1,1/2)</m>, saturasi <m>p^{-1}(p(U))=(-1,1]</m> tidak terbuka;
+        karena itu <m>p(U)</m> tidak terbuka dalam kuosien.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-d-03-solution">
+      <p>
+        Definisikan relasi pada <m>\R</m> dengan semua titik <m>[0,1]</m>
+        berada dalam satu kelas dan setiap titik lain menjadi kelas singleton.
+        Biarkan <m>p:\R\to\R/[0,1]</m> proyeksi kanonis; menurut definisi,
+        <m>p</m> pemetaan kuosien. Himpunan <m>U=(-1,1/2)</m> terbuka dan
+        bertemu kelas <m>[0,1]</m>. Karena satu anggota kelas itu masuk
+        <m>U</m>, citra <m>p(U)</m> memuat titik kelas yang diciutkan, sehingga
+        prapetanya memuat seluruh <m>[0,1]</m>. Tepatnya,
+        <me>
+          p^{-1}(p(U))=(-1,1].
+        </me>
+        Himpunan ini tidak terbuka dalam <m>\R</m>. Menurut kriteria topologi
+        kuosien, <m>p(U)</m> tidak terbuka. Jadi pemetaan kuosien tidak harus
+        merupakan pemetaan terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-d-04">
+    <title>Definisi ruang kuosien dari relasi ekuivalensi</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>\sim</m> relasi ekuivalensi pada
+        ruang topologi <m>X</m>, maka ruang kuosien <m>X/\ssim</m> adalah
+        himpunan semua kelas ekuivalensi yang diberi topologi kuosien.
+        Jelaskan tanpa sekadar mengulang istilahnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-d-04-hint">
+      <p>
+        Tuliskan proyeksi kanonis <m>q(x)=[x]</m> dan kriteria keterbukaan
+        untuk <m>U\subseteq X/\ssim</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-d-04-answer">
+      <p>
+        Benar. Himpunan dasarnya adalah koleksi kelas <m>[x]</m>, dan
+        <m>U</m> didefinisikan terbuka tepat ketika
+        <m>q^{-1}(U)</m> terbuka dalam <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-d-04-solution">
+      <p>
+        Relasi ekuivalensi mempartisi <m>X</m> menjadi kelas-kelas yang saling
+        lepas. Himpunan semua kelas itu dinotasikan <m>X/\ssim</m>. Proyeksi
+        kanonis <m>q:X\to X/\ssim</m> diberikan oleh <m>q(x)=[x]</m> dan
+        bersifat surjektif. Topologi kuosien pada himpunan kelas didefinisikan
+        oleh
+        <me>
+          \tau_q=\{U\subseteq X/\ssim:q^{-1}(U)\text{ terbuka dalam }X\}.
+        </me>
+        Jadi pernyataan itu bukan klaim tambahan, melainkan konstruksi lengkap
+        ruang kuosien: objeknya adalah kelas-kelas dan topologinya adalah
+        topologi terbesar yang membuat proyeksi kanonis kontinu.
+      </p>
+    </solution>
+  </exercise>
+</section>

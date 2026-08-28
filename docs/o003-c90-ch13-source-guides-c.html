@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,27 +597,27 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch13-source-guides-c"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Panduan Belajar Mandiri: Titik Limit dan Limit Barisan</span>
 </h2>
-<div class="para" id="p-4972">Untuk menentukan titik limit suatu himpunan <span class="process-math">\(A\text{,}\)</span> uji apakah setiap lingkungan terbuka dari titik yang sedang diperiksa bertemu dengan <span class="process-math">\(A\)</span> pada suatu titik lain. Jika sebuah basis diberikan, cukup menguji lingkungan-lingkungan basis yang memuat titik tersebut.</div>
+<div class="para" id="p-5090">Untuk menentukan titik limit suatu himpunan <span class="process-math">\(A\text{,}\)</span> uji apakah setiap lingkungan terbuka dari titik yang sedang diperiksa bertemu dengan <span class="process-math">\(A\)</span> pada suatu titik lain. Jika sebuah basis diberikan, cukup menguji lingkungan-lingkungan basis yang memuat titik tersebut.</div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-13"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-13"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.13</span><span class="period">.</span><span class="space"> </span><span class="title">Titik Limit pada Topologi Berhingga Pertama.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-13"><article class="exercise exercise-like"><div class="para" id="p-4973">Tentukan semua titik limit dari <span class="process-math">\(A=\{c,d\}\)</span> dalam <span class="process-math">\(X=\{a,b,c,d\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-13"><article class="exercise exercise-like"><div class="para" id="p-5091">Tentukan semua titik limit dari <span class="process-math">\(A=\{c,d\}\)</span> dalam <span class="process-math">\(X=\{a,b,c,d\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-13-hint" id="o003-c90-ch13-guide-13-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-13-hint"><div class="hint solution-like">
-<div class="para" id="p-4974">
-<em class="emphasis">Tahap 1.</em> Cari lingkungan terbuka terkecil yang tersedia untuk masing-masing titik.</div> <div class="para" id="p-4975">
+<div class="para" id="p-5092">
+<em class="emphasis">Tahap 1.</em> Cari lingkungan terbuka terkecil yang tersedia untuk masing-masing titik.</div> <div class="para" id="p-5093">
 <em class="emphasis">Tahap 2.</em> Titik <span class="process-math">\(a\)</span> memiliki lingkungan <span class="process-math">\(\{a\}\text{,}\)</span> dan titik <span class="process-math">\(b\)</span> memiliki lingkungan <span class="process-math">\(\{b\}\text{.}\)</span>
-</div> <div class="para" id="p-4976">
+</div> <div class="para" id="p-5094">
 <em class="emphasis">Tahap 3.</em> Satu-satunya lingkungan terbuka yang memuat <span class="process-math">\(c\)</span> atau <span class="process-math">\(d\)</span> adalah <span class="process-math">\(X\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-13-answer" id="o003-c90-ch13-guide-13-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-13-answer"><div class="answer solution-like"><div class="para" id="p-4977">Himpunan titik limitnya adalah <span class="process-math">\(A'=\{c,d\}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-13-answer" id="o003-c90-ch13-guide-13-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-13-answer"><div class="answer solution-like"><div class="para" id="p-5095">Himpunan titik limitnya adalah <span class="process-math">\(A'=\{c,d\}\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-13-solution" id="o003-c90-ch13-guide-13-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-13-solution"><div class="solution solution-like"><div class="para" id="p-4978">Lingkungan <span class="process-math">\(\{a\}\)</span> tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga <span class="process-math">\(a\)</span> bukan titik limit. Demikian pula, <span class="process-math">\(\{b\}\)</span> menunjukkan bahwa <span class="process-math">\(b\)</span> bukan titik limit. Setiap lingkungan terbuka dari <span class="process-math">\(c\)</span> adalah <span class="process-math">\(X\text{,}\)</span> dan <span class="process-math">\(X\)</span> memuat titik <span class="process-math">\(d\in A\setminus\{c\}\text{.}\)</span> Jadi <span class="process-math">\(c\)</span> titik limit. Dengan menukar peran <span class="process-math">\(c\)</span> dan <span class="process-math">\(d\text{,}\)</span> diperoleh bahwa <span class="process-math">\(d\)</span> juga titik limit.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-13-solution" id="o003-c90-ch13-guide-13-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-13-solution"><div class="solution solution-like"><div class="para" id="p-5096">Lingkungan <span class="process-math">\(\{a\}\)</span> tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga <span class="process-math">\(a\)</span> bukan titik limit. Demikian pula, <span class="process-math">\(\{b\}\)</span> menunjukkan bahwa <span class="process-math">\(b\)</span> bukan titik limit. Setiap lingkungan terbuka dari <span class="process-math">\(c\)</span> adalah <span class="process-math">\(X\text{,}\)</span> dan <span class="process-math">\(X\)</span> memuat titik <span class="process-math">\(d\in A\setminus\{c\}\text{.}\)</span> Jadi <span class="process-math">\(c\)</span> titik limit. Dengan menukar peran <span class="process-math">\(c\)</span> dan <span class="process-math">\(d\text{,}\)</span> diperoleh bahwa <span class="process-math">\(d\)</span> juga titik limit.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-14"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-14"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.14</span><span class="period">.</span><span class="space"> </span><span class="title">Titik Limit pada Topologi Berhingga Kedua.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-14"><article class="exercise exercise-like"><div class="para logical" id="p-4979">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-14"><article class="exercise exercise-like"><div class="para logical" id="p-5097">
 <div class="para">Tentukan semua titik limit dari <span class="process-math">\(A=\{a,b\}\)</span> dalam <span class="process-math">\(X=\{a,b,c,d,e,f\}\)</span> dengan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -601,38 +627,38 @@ window.MathJax = {
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-14-hint" id="o003-c90-ch13-guide-14-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-14-hint"><div class="hint solution-like">
-<div class="para" id="p-4980">
+<div class="para" id="p-5098">
 <em class="emphasis">Tahap 1.</em> Gunakan <span class="process-math">\(\{b\}\)</span> untuk menguji <span class="process-math">\(b\)</span> dan <span class="process-math">\(\{d,e,f\}\)</span> untuk menguji <span class="process-math">\(d,e,f\text{.}\)</span>
-</div> <div class="para" id="p-4981">
+</div> <div class="para" id="p-5099">
 <em class="emphasis">Tahap 2.</em> Setiap lingkungan terbuka dari <span class="process-math">\(a\)</span> memuat <span class="process-math">\(b\text{.}\)</span>
-</div> <div class="para" id="p-4982">
+</div> <div class="para" id="p-5100">
 <em class="emphasis">Tahap 3.</em> Setiap lingkungan terbuka dari <span class="process-math">\(c\)</span> memuat paling sedikit satu titik dari <span class="process-math">\(A\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-14-answer" id="o003-c90-ch13-guide-14-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-14-answer"><div class="answer solution-like"><div class="para" id="p-4983">Himpunan titik limitnya adalah <span class="process-math">\(A'=\{a,c\}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-14-answer" id="o003-c90-ch13-guide-14-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-14-answer"><div class="answer solution-like"><div class="para" id="p-5101">Himpunan titik limitnya adalah <span class="process-math">\(A'=\{a,c\}\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-14-solution" id="o003-c90-ch13-guide-14-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-14-solution"><div class="solution solution-like"><div class="para" id="p-4984">Lingkungan terbuka <span class="process-math">\(\{b\}\)</span> tidak memuat titik <span class="process-math">\(A\setminus\{b\}=\{a\}\text{,}\)</span> jadi <span class="process-math">\(b\)</span> bukan titik limit. Himpunan <span class="process-math">\(\{d,e,f\}\)</span> adalah lingkungan dari masing-masing <span class="process-math">\(d,e,f\)</span> dan tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga ketiga titik itu bukan titik limit. Setiap lingkungan dari <span class="process-math">\(a\)</span> memuat <span class="process-math">\(\{a,b,c\}\)</span> dan karenanya memuat <span class="process-math">\(b\neq a\text{.}\)</span> Setiap lingkungan dari <span class="process-math">\(c\)</span> juga memuat <span class="process-math">\(\{a,b,c\}\text{,}\)</span> sehingga bertemu <span class="process-math">\(A\text{.}\)</span> Jadi tepat <span class="process-math">\(a\)</span> dan <span class="process-math">\(c\)</span> merupakan titik limit.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-14-solution" id="o003-c90-ch13-guide-14-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-14-solution"><div class="solution solution-like"><div class="para" id="p-5102">Lingkungan terbuka <span class="process-math">\(\{b\}\)</span> tidak memuat titik <span class="process-math">\(A\setminus\{b\}=\{a\}\text{,}\)</span> jadi <span class="process-math">\(b\)</span> bukan titik limit. Himpunan <span class="process-math">\(\{d,e,f\}\)</span> adalah lingkungan dari masing-masing <span class="process-math">\(d,e,f\)</span> dan tidak bertemu <span class="process-math">\(A\text{,}\)</span> sehingga ketiga titik itu bukan titik limit. Setiap lingkungan dari <span class="process-math">\(a\)</span> memuat <span class="process-math">\(\{a,b,c\}\)</span> dan karenanya memuat <span class="process-math">\(b\neq a\text{.}\)</span> Setiap lingkungan dari <span class="process-math">\(c\)</span> juga memuat <span class="process-math">\(\{a,b,c\}\text{,}\)</span> sehingga bertemu <span class="process-math">\(A\text{.}\)</span> Jadi tepat <span class="process-math">\(a\)</span> dan <span class="process-math">\(c\)</span> merupakan titik limit.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-15"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-15"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.15</span><span class="period">.</span><span class="space"> </span><span class="title">Titik Limit pada Ruang Diskret.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-15"><article class="exercise exercise-like"><div class="para" id="p-4985">Misalkan <span class="process-math">\(X=\{a,b,c\}\)</span> dilengkapi topologi diskret. Tentukan semua titik limit dari <span class="process-math">\(A=\{a,b\}\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-15"><article class="exercise exercise-like"><div class="para" id="p-5103">Misalkan <span class="process-math">\(X=\{a,b,c\}\)</span> dilengkapi topologi diskret. Tentukan semua titik limit dari <span class="process-math">\(A=\{a,b\}\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-15-hint" id="o003-c90-ch13-guide-15-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-15-hint"><div class="hint solution-like">
-<div class="para" id="p-4986">
-<em class="emphasis">Tahap 1.</em> Dalam topologi diskret, setiap himpunan beranggota tunggal terbuka.</div> <div class="para" id="p-4987">
-<em class="emphasis">Tahap 2.</em> Untuk setiap <span class="process-math">\(x\in X\text{,}\)</span> gunakan <span class="process-math">\(\{x\}\)</span> sebagai lingkungan uji.</div> <div class="para" id="p-4988">
+<div class="para" id="p-5104">
+<em class="emphasis">Tahap 1.</em> Dalam topologi diskret, setiap himpunan beranggota tunggal terbuka.</div> <div class="para" id="p-5105">
+<em class="emphasis">Tahap 2.</em> Untuk setiap <span class="process-math">\(x\in X\text{,}\)</span> gunakan <span class="process-math">\(\{x\}\)</span> sebagai lingkungan uji.</div> <div class="para" id="p-5106">
 <em class="emphasis">Tahap 3.</em> Periksa irisan <span class="process-math">\(\{x\}\cap(A\setminus\{x\})\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-15-answer" id="o003-c90-ch13-guide-15-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-15-answer"><div class="answer solution-like"><div class="para" id="p-4989">Tidak ada titik limit; <span class="process-math">\(A'=\emptyset\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-15-answer" id="o003-c90-ch13-guide-15-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-15-answer"><div class="answer solution-like"><div class="para" id="p-5107">Tidak ada titik limit; <span class="process-math">\(A'=\emptyset\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-15-solution" id="o003-c90-ch13-guide-15-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-15-solution"><div class="solution solution-like"><div class="para" id="p-4990">Untuk setiap <span class="process-math">\(x\in X\text{,}\)</span> himpunan <span class="process-math">\(\{x\}\)</span> adalah lingkungan terbuka dari <span class="process-math">\(x\text{.}\)</span> Lingkungan ini tidak memuat titik mana pun dari <span class="process-math">\(A\setminus\{x\}\text{.}\)</span> Jadi setiap titik memiliki satu lingkungan yang menggagalkan syarat titik limit, sehingga <span class="process-math">\(A'=\emptyset\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-15-solution" id="o003-c90-ch13-guide-15-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-15-solution"><div class="solution solution-like"><div class="para" id="p-5108">Untuk setiap <span class="process-math">\(x\in X\text{,}\)</span> himpunan <span class="process-math">\(\{x\}\)</span> adalah lingkungan terbuka dari <span class="process-math">\(x\text{.}\)</span> Lingkungan ini tidak memuat titik mana pun dari <span class="process-math">\(A\setminus\{x\}\text{.}\)</span> Jadi setiap titik memiliki satu lingkungan yang menggagalkan syarat titik limit, sehingga <span class="process-math">\(A'=\emptyset\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-16"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-16"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.16</span><span class="period">.</span><span class="space"> </span><span class="title">Titik Limit pada Topologi Garis Digital.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-16"><article class="exercise exercise-like"><div class="para logical" id="p-4991">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-16"><article class="exercise exercise-like"><div class="para logical" id="p-5109">
 <div class="para">Pada <span class="process-math">\(\Z\text{,}\)</span> misalkan <span class="process-math">\(\tau\)</span> memiliki basis <span class="process-math">\(\{B(n)\mid n\in\Z\}\text{,}\)</span> dengan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -648,34 +674,34 @@ B(n)=
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-16-hint" id="o003-c90-ch13-guide-16-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-16-hint"><div class="hint solution-like">
-<div class="para" id="p-4992">
-<em class="emphasis">Tahap 1.</em> Setiap bilangan ganjil memiliki lingkungan basis beranggota tunggal.</div> <div class="para" id="p-4993">
+<div class="para" id="p-5110">
+<em class="emphasis">Tahap 1.</em> Setiap bilangan ganjil memiliki lingkungan basis beranggota tunggal.</div> <div class="para" id="p-5111">
 <em class="emphasis">Tahap 2.</em> Jika <span class="process-math">\(n\)</span> genap, satu-satunya anggota basis yang memuat <span class="process-math">\(n\)</span> adalah <span class="process-math">\(B(n)=\{n-1,n,n+1\}\text{.}\)</span>
-</div> <div class="para" id="p-4994">
+</div> <div class="para" id="p-5112">
 <em class="emphasis">Tahap 3.</em> Cari semua bilangan genap <span class="process-math">\(n\)</span> untuk mana <span class="process-math">\(B(n)\)</span> bertemu <span class="process-math">\(A\setminus\{n\}\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-16-answer" id="o003-c90-ch13-guide-16-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-16-answer"><div class="answer solution-like"><div class="para" id="p-4995">Himpunan titik limitnya adalah <span class="process-math">\(A'=\{-2,0,2\}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-16-answer" id="o003-c90-ch13-guide-16-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-16-answer"><div class="answer solution-like"><div class="para" id="p-5113">Himpunan titik limitnya adalah <span class="process-math">\(A'=\{-2,0,2\}\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-16-solution" id="o003-c90-ch13-guide-16-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-16-solution"><div class="solution solution-like"><div class="para" id="p-4996">Jika <span class="process-math">\(n\)</span> ganjil, lingkungan <span class="process-math">\(B(n)=\{n\}\)</span> tidak bertemu <span class="process-math">\(A\setminus\{n\}\text{;}\)</span> jadi tidak ada titik ganjil yang merupakan titik limit. Jika <span class="process-math">\(n\)</span> genap, cukup menguji <span class="process-math">\(B(n)=\{n-1,n,n+1\}\text{.}\)</span> Untuk <span class="process-math">\(n=-2,0,2\text{,}\)</span> himpunan ini bertemu <span class="process-math">\(A\setminus\{n\}\text{,}\)</span> masing-masing pada <span class="process-math">\(-1\text{,}\)</span> pada <span class="process-math">\(-1\)</span> atau <span class="process-math">\(1\text{,}\)</span> dan pada <span class="process-math">\(1\text{.}\)</span> Untuk setiap bilangan genap lain, <span class="process-math">\(B(n)\)</span> tidak bertemu <span class="process-math">\(A\text{.}\)</span> Maka tepat <span class="process-math">\(-2,0,2\)</span> merupakan titik limit.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-16-solution" id="o003-c90-ch13-guide-16-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-16-solution"><div class="solution solution-like"><div class="para" id="p-5114">Jika <span class="process-math">\(n\)</span> ganjil, lingkungan <span class="process-math">\(B(n)=\{n\}\)</span> tidak bertemu <span class="process-math">\(A\setminus\{n\}\text{;}\)</span> jadi tidak ada titik ganjil yang merupakan titik limit. Jika <span class="process-math">\(n\)</span> genap, cukup menguji <span class="process-math">\(B(n)=\{n-1,n,n+1\}\text{.}\)</span> Untuk <span class="process-math">\(n=-2,0,2\text{,}\)</span> himpunan ini bertemu <span class="process-math">\(A\setminus\{n\}\text{,}\)</span> masing-masing pada <span class="process-math">\(-1\text{,}\)</span> pada <span class="process-math">\(-1\)</span> atau <span class="process-math">\(1\text{,}\)</span> dan pada <span class="process-math">\(1\text{.}\)</span> Untuk setiap bilangan genap lain, <span class="process-math">\(B(n)\)</span> tidak bertemu <span class="process-math">\(A\text{.}\)</span> Maka tepat <span class="process-math">\(-2,0,2\)</span> merupakan titik limit.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-17"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-17"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.17</span><span class="period">.</span><span class="space"> </span><span class="title">Limit Barisan Konstan Dapat Tidak Tunggal.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-17"><article class="exercise exercise-like"><div class="para" id="p-4997">Tinjau <span class="process-math">\(X=\{a,b,c\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}\text{.}\)</span> Tentukan semua limit dari masing-masing barisan konstan <span class="process-math">\((a)\text{,}\)</span> <span class="process-math">\((b)\text{,}\)</span> dan <span class="process-math">\((c)\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-17"><article class="exercise exercise-like"><div class="para" id="p-5115">Tinjau <span class="process-math">\(X=\{a,b,c\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{c\},\{a,c\},\{b,c\},X\}\text{.}\)</span> Tentukan semua limit dari masing-masing barisan konstan <span class="process-math">\((a)\text{,}\)</span> <span class="process-math">\((b)\text{,}\)</span> dan <span class="process-math">\((c)\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-17-hint" id="o003-c90-ch13-guide-17-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-17-hint"><div class="hint solution-like">
-<div class="para" id="p-4998">
+<div class="para" id="p-5116">
 <em class="emphasis">Tahap 1.</em> Barisan konstan <span class="process-math">\((p)\)</span> konvergen ke <span class="process-math">\(x\)</span> tepat ketika setiap lingkungan terbuka dari <span class="process-math">\(x\)</span> memuat <span class="process-math">\(p\text{.}\)</span>
-</div> <div class="para" id="p-4999">
+</div> <div class="para" id="p-5117">
 <em class="emphasis">Tahap 2.</em> Gunakan lingkungan <span class="process-math">\(\{c\}\)</span> untuk menguji konvergensi ke <span class="process-math">\(c\text{.}\)</span>
-</div> <div class="para" id="p-5000">
+</div> <div class="para" id="p-5118">
 <em class="emphasis">Tahap 3.</em> Perhatikan bahwa setiap himpunan terbuka tak kosong dalam <span class="process-math">\(\tau\)</span> memuat <span class="process-math">\(c\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-17-answer" id="o003-c90-ch13-guide-17-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-17-answer"><div class="answer solution-like"><div class="para" id="p-5001">Barisan <span class="process-math">\((a)\)</span> hanya berlimit <span class="process-math">\(a\text{;}\)</span> barisan <span class="process-math">\((b)\)</span> hanya berlimit <span class="process-math">\(b\text{;}\)</span> barisan <span class="process-math">\((c)\)</span> berlimit <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> dan <span class="process-math">\(c\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-17-answer" id="o003-c90-ch13-guide-17-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-17-answer"><div class="answer solution-like"><div class="para" id="p-5119">Barisan <span class="process-math">\((a)\)</span> hanya berlimit <span class="process-math">\(a\text{;}\)</span> barisan <span class="process-math">\((b)\)</span> hanya berlimit <span class="process-math">\(b\text{;}\)</span> barisan <span class="process-math">\((c)\)</span> berlimit <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> dan <span class="process-math">\(c\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-17-solution" id="o003-c90-ch13-guide-17-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-17-solution"><div class="solution solution-like"><div class="para" id="p-5002">Lingkungan terbuka terkecil yang relevan bagi <span class="process-math">\(a\)</span> adalah <span class="process-math">\(\{a,c\}\text{,}\)</span> bagi <span class="process-math">\(b\)</span> adalah <span class="process-math">\(\{b,c\}\text{,}\)</span> dan bagi <span class="process-math">\(c\)</span> adalah <span class="process-math">\(\{c\}\text{.}\)</span> Setiap lingkungan dari <span class="process-math">\(a\)</span> memuat <span class="process-math">\(a\)</span> dan <span class="process-math">\(c\text{,}\)</span> sehingga <span class="process-math">\((a)\)</span> dan <span class="process-math">\((c)\)</span> konvergen ke <span class="process-math">\(a\text{.}\)</span> Setiap lingkungan dari <span class="process-math">\(b\)</span> memuat <span class="process-math">\(b\)</span> dan <span class="process-math">\(c\text{,}\)</span> sehingga <span class="process-math">\((b)\)</span> dan <span class="process-math">\((c)\)</span> konvergen ke <span class="process-math">\(b\text{.}\)</span> Hanya <span class="process-math">\((c)\)</span> yang akhirnya berada dalam lingkungan <span class="process-math">\(\{c\}\text{,}\)</span> sehingga hanya <span class="process-math">\((c)\)</span> yang konvergen ke <span class="process-math">\(c\text{.}\)</span> Jika hasil dikelompokkan menurut barisannya, diperoleh daftar pada jawaban.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-17-solution" id="o003-c90-ch13-guide-17-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-17-solution"><div class="solution solution-like"><div class="para" id="p-5120">Lingkungan terbuka terkecil yang relevan bagi <span class="process-math">\(a\)</span> adalah <span class="process-math">\(\{a,c\}\text{,}\)</span> bagi <span class="process-math">\(b\)</span> adalah <span class="process-math">\(\{b,c\}\text{,}\)</span> dan bagi <span class="process-math">\(c\)</span> adalah <span class="process-math">\(\{c\}\text{.}\)</span> Setiap lingkungan dari <span class="process-math">\(a\)</span> memuat <span class="process-math">\(a\)</span> dan <span class="process-math">\(c\text{,}\)</span> sehingga <span class="process-math">\((a)\)</span> dan <span class="process-math">\((c)\)</span> konvergen ke <span class="process-math">\(a\text{.}\)</span> Setiap lingkungan dari <span class="process-math">\(b\)</span> memuat <span class="process-math">\(b\)</span> dan <span class="process-math">\(c\text{,}\)</span> sehingga <span class="process-math">\((b)\)</span> dan <span class="process-math">\((c)\)</span> konvergen ke <span class="process-math">\(b\text{.}\)</span> Hanya <span class="process-math">\((c)\)</span> yang akhirnya berada dalam lingkungan <span class="process-math">\(\{c\}\text{,}\)</span> sehingga hanya <span class="process-math">\((c)\)</span> yang konvergen ke <span class="process-math">\(c\text{.}\)</span> Jika hasil dikelompokkan menurut barisannya, diperoleh daftar pada jawaban.</div></div></div>
 </div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="o003-c90-ch13-source-guides-b.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch13-source-guides-d.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>

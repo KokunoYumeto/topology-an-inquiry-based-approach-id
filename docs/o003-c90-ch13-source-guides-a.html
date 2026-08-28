@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,160 +597,160 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch13-source-guides-a"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Panduan Belajar Mandiri: Mengenali Himpunan Tertutup</span>
 </h2>
-<div class="para" id="p-4898">Panduan ini mendampingi pertanyaan nonlatihan pada bagian pendahuluan himpunan tertutup. Gunakan fakta bahwa suatu subhimpunan bersifat tertutup tepat ketika komplemennya terbuka.</div>
+<div class="para" id="p-5016">Panduan ini mendampingi pertanyaan nonlatihan pada bagian pendahuluan himpunan tertutup. Gunakan fakta bahwa suatu subhimpunan bersifat tertutup tepat ketika komplemennya terbuka.</div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-01"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-01"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.1</span><span class="period">.</span><span class="space"> </span><span class="title">Himpunan Tertutup pada Ruang Berhingga Pertama.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-01"><article class="exercise exercise-like"><div class="para" id="p-4899">Misalkan <span class="process-math">\(X=\{a,b,c,d\}\)</span> dan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{.}\)</span> Daftarkan semua himpunan tertutup dalam <span class="process-math">\((X,\tau)\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-01"><article class="exercise exercise-like"><div class="para" id="p-5017">Misalkan <span class="process-math">\(X=\{a,b,c,d\}\)</span> dan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{.}\)</span> Daftarkan semua himpunan tertutup dalam <span class="process-math">\((X,\tau)\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-01-hint" id="o003-c90-ch13-guide-01-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-01-hint"><div class="hint solution-like">
-<div class="para" id="p-4900">
+<div class="para" id="p-5018">
 <em class="emphasis">Tahap 1.</em> Ambil setiap himpunan terbuka <span class="process-math">\(O\in\tau\text{.}\)</span>
-</div> <div class="para" id="p-4901">
+</div> <div class="para" id="p-5019">
 <em class="emphasis">Tahap 2.</em> Hitung komplemennya <span class="process-math">\(X\setminus O\text{.}\)</span>
-</div> <div class="para" id="p-4902">
+</div> <div class="para" id="p-5020">
 <em class="emphasis">Tahap 3.</em> Hilangkan pengulangan dan periksa bahwa daftar memuat <span class="process-math">\(\emptyset\)</span> serta <span class="process-math">\(X\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-01-answer" id="o003-c90-ch13-guide-01-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-01-answer"><div class="answer solution-like"><div class="para" id="p-4903">Himpunan tertutupnya ialah <span class="process-math">\(\emptyset\text{,}\)</span> <span class="process-math">\(\{c,d\}\text{,}\)</span> <span class="process-math">\(\{a,c,d\}\text{,}\)</span> <span class="process-math">\(\{b,c,d\}\text{,}\)</span> dan <span class="process-math">\(X\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-01-answer" id="o003-c90-ch13-guide-01-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-01-answer"><div class="answer solution-like"><div class="para" id="p-5021">Himpunan tertutupnya ialah <span class="process-math">\(\emptyset\text{,}\)</span> <span class="process-math">\(\{c,d\}\text{,}\)</span> <span class="process-math">\(\{a,c,d\}\text{,}\)</span> <span class="process-math">\(\{b,c,d\}\text{,}\)</span> dan <span class="process-math">\(X\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-01-solution" id="o003-c90-ch13-guide-01-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-01-solution"><div class="solution solution-like"><div class="para" id="p-4904">Komplemen dari <span class="process-math">\(\emptyset,\{a\},\{b\},\{a,b\},X\)</span> berturut-turut adalah <span class="process-math">\(X,\{b,c,d\},\{a,c,d\},\{c,d\},\emptyset\text{.}\)</span> Karena himpunan tertutup adalah komplemen himpunan terbuka, kelima himpunan tersebut merupakan seluruh daftar himpunan tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-01-solution" id="o003-c90-ch13-guide-01-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-01-solution"><div class="solution solution-like"><div class="para" id="p-5022">Komplemen dari <span class="process-math">\(\emptyset,\{a\},\{b\},\{a,b\},X\)</span> berturut-turut adalah <span class="process-math">\(X,\{b,c,d\},\{a,c,d\},\{c,d\},\emptyset\text{.}\)</span> Karena himpunan tertutup adalah komplemen himpunan terbuka, kelima himpunan tersebut merupakan seluruh daftar himpunan tertutup.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-02"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-02"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.2</span><span class="period">.</span><span class="space"> </span><span class="title">Himpunan Tertutup pada Ruang Berhingga Kedua.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-02"><article class="exercise exercise-like"><div class="para" id="p-4905">Misalkan <span class="process-math">\(X=\{a,b,c,d,e,f\}\)</span> dan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{c,d\},\{a,c,d\},\{b,c,d,e,f\},X\}\text{.}\)</span> Daftarkan semua himpunan tertutup dalam <span class="process-math">\((X,\tau)\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-02"><article class="exercise exercise-like"><div class="para" id="p-5023">Misalkan <span class="process-math">\(X=\{a,b,c,d,e,f\}\)</span> dan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{c,d\},\{a,c,d\},\{b,c,d,e,f\},X\}\text{.}\)</span> Daftarkan semua himpunan tertutup dalam <span class="process-math">\((X,\tau)\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-02-hint" id="o003-c90-ch13-guide-02-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-02-hint"><div class="hint solution-like">
-<div class="para" id="p-4906">
+<div class="para" id="p-5024">
 <em class="emphasis">Tahap 1.</em> Pasangkan setiap anggota <span class="process-math">\(\tau\)</span> dengan komplemennya dalam <span class="process-math">\(X\text{.}\)</span>
-</div> <div class="para" id="p-4907">
+</div> <div class="para" id="p-5025">
 <em class="emphasis">Tahap 2.</em> Perhatikan secara khusus komplemen <span class="process-math">\(\{c,d\}\)</span> dan <span class="process-math">\(\{a,c,d\}\text{.}\)</span>
-</div> <div class="para" id="p-4908">
+</div> <div class="para" id="p-5026">
 <em class="emphasis">Tahap 3.</em> Pastikan tidak menukar peran himpunan terbuka dengan himpunan tertutup.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-02-answer" id="o003-c90-ch13-guide-02-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-02-answer"><div class="answer solution-like"><div class="para" id="p-4909">Himpunan tertutupnya ialah <span class="process-math">\(\emptyset\text{,}\)</span> <span class="process-math">\(\{a\}\text{,}\)</span> <span class="process-math">\(\{b,e,f\}\text{,}\)</span> <span class="process-math">\(\{a,b,e,f\}\text{,}\)</span> <span class="process-math">\(\{b,c,d,e,f\}\text{,}\)</span> dan <span class="process-math">\(X\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-02-answer" id="o003-c90-ch13-guide-02-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-02-answer"><div class="answer solution-like"><div class="para" id="p-5027">Himpunan tertutupnya ialah <span class="process-math">\(\emptyset\text{,}\)</span> <span class="process-math">\(\{a\}\text{,}\)</span> <span class="process-math">\(\{b,e,f\}\text{,}\)</span> <span class="process-math">\(\{a,b,e,f\}\text{,}\)</span> <span class="process-math">\(\{b,c,d,e,f\}\text{,}\)</span> dan <span class="process-math">\(X\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-02-solution" id="o003-c90-ch13-guide-02-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-02-solution"><div class="solution solution-like"><div class="para" id="p-4910">Komplemen keenam himpunan terbuka, dalam urutan yang diberikan, adalah <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(\{b,c,d,e,f\}\text{,}\)</span> <span class="process-math">\(\{a,b,e,f\}\text{,}\)</span> <span class="process-math">\(\{b,e,f\}\text{,}\)</span> <span class="process-math">\(\{a\}\text{,}\)</span> dan <span class="process-math">\(\emptyset\text{.}\)</span> Inilah seluruh himpunan tertutup karena setiap himpunan tertutup harus muncul sebagai komplemen salah satu anggota <span class="process-math">\(\tau\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-02-solution" id="o003-c90-ch13-guide-02-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-02-solution"><div class="solution solution-like"><div class="para" id="p-5028">Komplemen keenam himpunan terbuka, dalam urutan yang diberikan, adalah <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(\{b,c,d,e,f\}\text{,}\)</span> <span class="process-math">\(\{a,b,e,f\}\text{,}\)</span> <span class="process-math">\(\{b,e,f\}\text{,}\)</span> <span class="process-math">\(\{a\}\text{,}\)</span> dan <span class="process-math">\(\emptyset\text{.}\)</span> Inilah seluruh himpunan tertutup karena setiap himpunan tertutup harus muncul sebagai komplemen salah satu anggota <span class="process-math">\(\tau\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-03"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-03"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.3</span><span class="period">.</span><span class="space"> </span><span class="title">Himpunan Tertutup pada Topologi Tiga Anggota.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-03"><article class="exercise exercise-like"><div class="para" id="p-4911">Pada <span class="process-math">\(X=\R\text{,}\)</span> diberikan <span class="process-math">\(\tau=\{\emptyset,\{0\},\R\}\text{.}\)</span> Daftarkan semua himpunan tertutup.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-03"><article class="exercise exercise-like"><div class="para" id="p-5029">Pada <span class="process-math">\(X=\R\text{,}\)</span> diberikan <span class="process-math">\(\tau=\{\emptyset,\{0\},\R\}\text{.}\)</span> Daftarkan semua himpunan tertutup.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-03-hint" id="o003-c90-ch13-guide-03-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-03-hint"><div class="hint solution-like">
-<div class="para" id="p-4912">
-<em class="emphasis">Tahap 1.</em> Ada tepat tiga himpunan terbuka yang perlu diperiksa.</div> <div class="para" id="p-4913">
+<div class="para" id="p-5030">
+<em class="emphasis">Tahap 1.</em> Ada tepat tiga himpunan terbuka yang perlu diperiksa.</div> <div class="para" id="p-5031">
 <em class="emphasis">Tahap 2.</em> Komplemen <span class="process-math">\(\{0\}\)</span> dalam <span class="process-math">\(\R\)</span> adalah <span class="process-math">\(\R\setminus\{0\}\text{.}\)</span>
-</div> <div class="para" id="p-4914">
+</div> <div class="para" id="p-5032">
 <em class="emphasis">Tahap 3.</em> Sertakan komplemen <span class="process-math">\(\emptyset\)</span> dan komplemen <span class="process-math">\(\R\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-03-answer" id="o003-c90-ch13-guide-03-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-03-answer"><div class="answer solution-like"><div class="para" id="p-4915">Himpunan tertutupnya tepat <span class="process-math">\(\emptyset\text{,}\)</span> <span class="process-math">\(\R\setminus\{0\}\text{,}\)</span> dan <span class="process-math">\(\R\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-03-answer" id="o003-c90-ch13-guide-03-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-03-answer"><div class="answer solution-like"><div class="para" id="p-5033">Himpunan tertutupnya tepat <span class="process-math">\(\emptyset\text{,}\)</span> <span class="process-math">\(\R\setminus\{0\}\text{,}\)</span> dan <span class="process-math">\(\R\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-03-solution" id="o003-c90-ch13-guide-03-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-03-solution"><div class="solution solution-like"><div class="para" id="p-4916">Komplemen <span class="process-math">\(\emptyset\)</span> adalah <span class="process-math">\(\R\text{,}\)</span> komplemen <span class="process-math">\(\{0\}\)</span> adalah <span class="process-math">\(\R\setminus\{0\}\text{,}\)</span> dan komplemen <span class="process-math">\(\R\)</span> adalah <span class="process-math">\(\emptyset\text{.}\)</span> Tidak ada himpunan tertutup lain karena tidak ada himpunan terbuka lain dalam <span class="process-math">\(\tau\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-03-solution" id="o003-c90-ch13-guide-03-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-03-solution"><div class="solution solution-like"><div class="para" id="p-5034">Komplemen <span class="process-math">\(\emptyset\)</span> adalah <span class="process-math">\(\R\text{,}\)</span> komplemen <span class="process-math">\(\{0\}\)</span> adalah <span class="process-math">\(\R\setminus\{0\}\text{,}\)</span> dan komplemen <span class="process-math">\(\R\)</span> adalah <span class="process-math">\(\emptyset\text{.}\)</span> Tidak ada himpunan tertutup lain karena tidak ada himpunan terbuka lain dalam <span class="process-math">\(\tau\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-04"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-04"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.4</span><span class="period">.</span><span class="space"> </span><span class="title">Semua Subhimpunan pada Topologi Diskret.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-04"><article class="exercise exercise-like"><div class="para" id="p-4917">Misalkan <span class="process-math">\(X=\{a,b,c\}\)</span> dan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},X\}\text{.}\)</span> Daftarkan semua himpunan tertutup dan tentukan nama topologi ini.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-04"><article class="exercise exercise-like"><div class="para" id="p-5035">Misalkan <span class="process-math">\(X=\{a,b,c\}\)</span> dan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},X\}\text{.}\)</span> Daftarkan semua himpunan tertutup dan tentukan nama topologi ini.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-04-hint" id="o003-c90-ch13-guide-04-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-04-hint"><div class="hint solution-like">
-<div class="para" id="p-4918">
+<div class="para" id="p-5036">
 <em class="emphasis">Tahap 1.</em> Bandingkan daftar <span class="process-math">\(\tau\)</span> dengan himpunan kuasa <span class="process-math">\(\mathcal P(X)\text{.}\)</span>
-</div> <div class="para" id="p-4919">
+</div> <div class="para" id="p-5037">
 <em class="emphasis">Tahap 2.</em> Komplemen setiap subhimpunan dari <span class="process-math">\(X\)</span> juga merupakan subhimpunan dari <span class="process-math">\(X\text{.}\)</span>
-</div> <div class="para" id="p-4920">
+</div> <div class="para" id="p-5038">
 <em class="emphasis">Tahap 3.</em> Ingat nama topologi yang menjadikan setiap subhimpunan terbuka.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-04-answer" id="o003-c90-ch13-guide-04-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-04-answer"><div class="answer solution-like"><div class="para" id="p-4921">Semua delapan subhimpunan dari <span class="process-math">\(X\)</span> tertutup. Topologi tersebut adalah topologi diskret.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-04-solution" id="o003-c90-ch13-guide-04-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-04-solution"><div class="solution solution-like"><div class="para" id="p-4922">Daftar yang diberikan sama dengan <span class="process-math">\(\mathcal P(X)\text{,}\)</span> sehingga setiap subhimpunan terbuka. Komplemen setiap subhimpunan juga berada dalam <span class="process-math">\(\mathcal P(X)=\tau\text{;}\)</span> akibatnya setiap subhimpunan juga tertutup. Sifat bahwa semua subhimpunan terbuka mencirikan topologi diskret.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-04-answer" id="o003-c90-ch13-guide-04-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-04-answer"><div class="answer solution-like"><div class="para" id="p-5039">Semua delapan subhimpunan dari <span class="process-math">\(X\)</span> tertutup. Topologi tersebut adalah topologi diskret.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-04-solution" id="o003-c90-ch13-guide-04-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-04-solution"><div class="solution solution-like"><div class="para" id="p-5040">Daftar yang diberikan sama dengan <span class="process-math">\(\mathcal P(X)\text{,}\)</span> sehingga setiap subhimpunan terbuka. Komplemen setiap subhimpunan juga berada dalam <span class="process-math">\(\mathcal P(X)=\tau\text{;}\)</span> akibatnya setiap subhimpunan juga tertutup. Sifat bahwa semua subhimpunan terbuka mencirikan topologi diskret.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-05"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-05"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.5</span><span class="period">.</span><span class="space"> </span><span class="title">Himpunan Tertutup pada Topologi Indiskret.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-05"><article class="exercise exercise-like"><div class="para" id="p-4923">Misalkan <span class="process-math">\(X=\Z^+\)</span> dan <span class="process-math">\(\tau=\{\emptyset,X\}\text{,}\)</span> yaitu topologi indiskret atau trivial. Daftarkan semua himpunan tertutup.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-05"><article class="exercise exercise-like"><div class="para" id="p-5041">Misalkan <span class="process-math">\(X=\Z^+\)</span> dan <span class="process-math">\(\tau=\{\emptyset,X\}\text{,}\)</span> yaitu topologi indiskret atau trivial. Daftarkan semua himpunan tertutup.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-05-hint" id="o003-c90-ch13-guide-05-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-05-hint"><div class="hint solution-like">
-<div class="para" id="p-4924">
-<em class="emphasis">Tahap 1.</em> Hanya ada dua himpunan terbuka.</div> <div class="para" id="p-4925">
-<em class="emphasis">Tahap 2.</em> Kedua himpunan itu saling berkomplemen.</div> <div class="para" id="p-4926">
+<div class="para" id="p-5042">
+<em class="emphasis">Tahap 1.</em> Hanya ada dua himpunan terbuka.</div> <div class="para" id="p-5043">
+<em class="emphasis">Tahap 2.</em> Kedua himpunan itu saling berkomplemen.</div> <div class="para" id="p-5044">
 <em class="emphasis">Tahap 3.</em> Tidak ada komplemen lain yang dapat menghasilkan himpunan tertutup tambahan.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-05-answer" id="o003-c90-ch13-guide-05-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-05-answer"><div class="answer solution-like"><div class="para" id="p-4927">Himpunan tertutupnya hanya <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(X=\Z^+\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-05-answer" id="o003-c90-ch13-guide-05-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-05-answer"><div class="answer solution-like"><div class="para" id="p-5045">Himpunan tertutupnya hanya <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(X=\Z^+\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-05-solution" id="o003-c90-ch13-guide-05-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-05-solution"><div class="solution solution-like"><div class="para" id="p-4928">Komplemen <span class="process-math">\(\emptyset\)</span> adalah <span class="process-math">\(X\text{,}\)</span> sedangkan komplemen <span class="process-math">\(X\)</span> adalah <span class="process-math">\(\emptyset\text{.}\)</span> Karena keduanya merupakan satu-satunya himpunan terbuka, keduanya pula merupakan satu-satunya himpunan tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-05-solution" id="o003-c90-ch13-guide-05-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-05-solution"><div class="solution solution-like"><div class="para" id="p-5046">Komplemen <span class="process-math">\(\emptyset\)</span> adalah <span class="process-math">\(X\text{,}\)</span> sedangkan komplemen <span class="process-math">\(X\)</span> adalah <span class="process-math">\(\emptyset\text{.}\)</span> Karena keduanya merupakan satu-satunya himpunan terbuka, keduanya pula merupakan satu-satunya himpunan tertutup.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-06"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-06"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.6</span><span class="period">.</span><span class="space"> </span><span class="title">Menemukan Himpunan Buka-Tutup Tak Trivial.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-06"><article class="exercise exercise-like"><div class="para" id="p-4929">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang sekaligus terbuka dan tertutup, tetapi bukan <span class="process-math">\(\emptyset\)</span> ataupun seluruh ruang.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-06"><article class="exercise exercise-like"><div class="para" id="p-5047">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang sekaligus terbuka dan tertutup, tetapi bukan <span class="process-math">\(\emptyset\)</span> ataupun seluruh ruang.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-06-hint" id="o003-c90-ch13-guide-06-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-06-hint"><div class="hint solution-like">
-<div class="para" id="p-4930">
-<em class="emphasis">Tahap 1.</em> Sebuah himpunan terbuka juga tertutup tepat ketika komplemennya terbuka.</div> <div class="para" id="p-4931">
-<em class="emphasis">Tahap 2.</em> Periksa ruang kedua, yang memiliki <span class="process-math">\(\{a\}\)</span> dan komplemennya sebagai anggota topologi.</div> <div class="para" id="p-4932">
+<div class="para" id="p-5048">
+<em class="emphasis">Tahap 1.</em> Sebuah himpunan terbuka juga tertutup tepat ketika komplemennya terbuka.</div> <div class="para" id="p-5049">
+<em class="emphasis">Tahap 2.</em> Periksa ruang kedua, yang memiliki <span class="process-math">\(\{a\}\)</span> dan komplemennya sebagai anggota topologi.</div> <div class="para" id="p-5050">
 <em class="emphasis">Tahap 3.</em> Satu contoh sah sudah cukup; ruang diskret juga menyediakan banyak contoh.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-06-answer" id="o003-c90-ch13-guide-06-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-06-answer"><div class="answer solution-like"><div class="para" id="p-4933">Dalam ruang kedua, <span class="process-math">\(\{a\}\)</span> merupakan contoh karena <span class="process-math">\(\{a\}\in\tau\)</span> dan <span class="process-math">\(X\setminus\{a\}=\{b,c,d,e,f\}\in\tau\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-06-answer" id="o003-c90-ch13-guide-06-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-06-answer"><div class="answer solution-like"><div class="para" id="p-5051">Dalam ruang kedua, <span class="process-math">\(\{a\}\)</span> merupakan contoh karena <span class="process-math">\(\{a\}\in\tau\)</span> dan <span class="process-math">\(X\setminus\{a\}=\{b,c,d,e,f\}\in\tau\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-06-solution" id="o003-c90-ch13-guide-06-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-06-solution"><div class="solution solution-like"><div class="para" id="p-4934">Keanggotaan <span class="process-math">\(\{a\}\in\tau\)</span> menunjukkan bahwa <span class="process-math">\(\{a\}\)</span> terbuka. Karena komplemennya, <span class="process-math">\(\{b,c,d,e,f\}\text{,}\)</span> juga terbuka, <span class="process-math">\(\{a\}\)</span> tertutup. Himpunan ini tidak kosong dan tidak sama dengan <span class="process-math">\(X\text{,}\)</span> sehingga memenuhi semua syarat. Jawaban lain dinilai benar apabila keterbukaan himpunan dan keterbukaan komplemennya diperiksa dalam ruang yang sama.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-06-solution" id="o003-c90-ch13-guide-06-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-06-solution"><div class="solution solution-like"><div class="para" id="p-5052">Keanggotaan <span class="process-math">\(\{a\}\in\tau\)</span> menunjukkan bahwa <span class="process-math">\(\{a\}\)</span> terbuka. Karena komplemennya, <span class="process-math">\(\{b,c,d,e,f\}\text{,}\)</span> juga terbuka, <span class="process-math">\(\{a\}\)</span> tertutup. Himpunan ini tidak kosong dan tidak sama dengan <span class="process-math">\(X\text{,}\)</span> sehingga memenuhi semua syarat. Jawaban lain dinilai benar apabila keterbukaan himpunan dan keterbukaan komplemennya diperiksa dalam ruang yang sama.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-07"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-07"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.7</span><span class="period">.</span><span class="space"> </span><span class="title">Menemukan Himpunan Tertutup yang Tidak Terbuka.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-07"><article class="exercise exercise-like"><div class="para" id="p-4935">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tertutup tetapi tidak terbuka.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-07"><article class="exercise exercise-like"><div class="para" id="p-5053">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tertutup tetapi tidak terbuka.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-07-hint" id="o003-c90-ch13-guide-07-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-07-hint"><div class="hint solution-like">
-<div class="para" id="p-4936">
-<em class="emphasis">Tahap 1.</em> Cari himpunan yang tidak tercantum dalam topologi.</div> <div class="para" id="p-4937">
-<em class="emphasis">Tahap 2.</em> Periksa apakah komplemennya justru tercantum dalam topologi.</div> <div class="para" id="p-4938">
+<div class="para" id="p-5054">
+<em class="emphasis">Tahap 1.</em> Cari himpunan yang tidak tercantum dalam topologi.</div> <div class="para" id="p-5055">
+<em class="emphasis">Tahap 2.</em> Periksa apakah komplemennya justru tercantum dalam topologi.</div> <div class="para" id="p-5056">
 <em class="emphasis">Tahap 3.</em> Pada ruang pertama, perhatikan komplemen <span class="process-math">\(\{a,b\}\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-07-answer" id="o003-c90-ch13-guide-07-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-07-answer"><div class="answer solution-like"><div class="para" id="p-4939">Dalam ruang pertama, <span class="process-math">\(\{c,d\}\)</span> tertutup tetapi tidak terbuka.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-07-solution" id="o003-c90-ch13-guide-07-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-07-solution"><div class="solution solution-like"><div class="para" id="p-4940">Himpunan <span class="process-math">\(\{c,d\}\)</span> tidak termasuk dalam <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{,}\)</span> jadi tidak terbuka. Namun, komplemennya adalah <span class="process-math">\(\{a,b\}\in\tau\text{,}\)</span> sehingga <span class="process-math">\(\{c,d\}\)</span> tertutup. Contoh lain dapat diterima jika kedua pemeriksaan ini diberikan.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-07-answer" id="o003-c90-ch13-guide-07-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-07-answer"><div class="answer solution-like"><div class="para" id="p-5057">Dalam ruang pertama, <span class="process-math">\(\{c,d\}\)</span> tertutup tetapi tidak terbuka.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-07-solution" id="o003-c90-ch13-guide-07-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-07-solution"><div class="solution solution-like"><div class="para" id="p-5058">Himpunan <span class="process-math">\(\{c,d\}\)</span> tidak termasuk dalam <span class="process-math">\(\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}\text{,}\)</span> jadi tidak terbuka. Namun, komplemennya adalah <span class="process-math">\(\{a,b\}\in\tau\text{,}\)</span> sehingga <span class="process-math">\(\{c,d\}\)</span> tertutup. Contoh lain dapat diterima jika kedua pemeriksaan ini diberikan.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-08"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-08"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.8</span><span class="period">.</span><span class="space"> </span><span class="title">Menemukan Himpunan Terbuka yang Tidak Tertutup.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-08"><article class="exercise exercise-like"><div class="para" id="p-4941">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang terbuka tetapi tidak tertutup.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-08"><article class="exercise exercise-like"><div class="para" id="p-5059">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang terbuka tetapi tidak tertutup.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-08-hint" id="o003-c90-ch13-guide-08-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-08-hint"><div class="hint solution-like">
-<div class="para" id="p-4942">
+<div class="para" id="p-5060">
 <em class="emphasis">Tahap 1.</em> Pilih anggota topologi yang bukan <span class="process-math">\(\emptyset\)</span> ataupun <span class="process-math">\(X\text{.}\)</span>
-</div> <div class="para" id="p-4943">
-<em class="emphasis">Tahap 2.</em> Hitung komplemennya.</div> <div class="para" id="p-4944">
+</div> <div class="para" id="p-5061">
+<em class="emphasis">Tahap 2.</em> Hitung komplemennya.</div> <div class="para" id="p-5062">
 <em class="emphasis">Tahap 3.</em> Jika komplemen itu tidak terbuka, himpunan semula tidak tertutup.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-08-answer" id="o003-c90-ch13-guide-08-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-08-answer"><div class="answer solution-like"><div class="para" id="p-4945">Dalam ruang pertama, <span class="process-math">\(\{a\}\)</span> terbuka tetapi tidak tertutup.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-08-solution" id="o003-c90-ch13-guide-08-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-08-solution"><div class="solution solution-like"><div class="para" id="p-4946">Himpunan <span class="process-math">\(\{a\}\)</span> tercantum dalam <span class="process-math">\(\tau\text{,}\)</span> jadi terbuka. Komplemennya adalah <span class="process-math">\(\{b,c,d\}\text{,}\)</span> yang tidak tercantum dalam <span class="process-math">\(\tau\text{.}\)</span> Karena komplemennya tidak terbuka, <span class="process-math">\(\{a\}\)</span> tidak tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-08-answer" id="o003-c90-ch13-guide-08-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-08-answer"><div class="answer solution-like"><div class="para" id="p-5063">Dalam ruang pertama, <span class="process-math">\(\{a\}\)</span> terbuka tetapi tidak tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-08-solution" id="o003-c90-ch13-guide-08-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-08-solution"><div class="solution solution-like"><div class="para" id="p-5064">Himpunan <span class="process-math">\(\{a\}\)</span> tercantum dalam <span class="process-math">\(\tau\text{,}\)</span> jadi terbuka. Komplemennya adalah <span class="process-math">\(\{b,c,d\}\text{,}\)</span> yang tidak tercantum dalam <span class="process-math">\(\tau\text{.}\)</span> Karena komplemennya tidak terbuka, <span class="process-math">\(\{a\}\)</span> tidak tertutup.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-09"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-09"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.9</span><span class="period">.</span><span class="space"> </span><span class="title">Menemukan Himpunan yang Tidak Terbuka dan Tidak Tertutup.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-09"><article class="exercise exercise-like"><div class="para" id="p-4947">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tidak terbuka dan juga tidak tertutup.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-09"><article class="exercise exercise-like"><div class="para" id="p-5065">Dengan menggunakan lima ruang topologi sebelumnya, temukan jika mungkin suatu himpunan yang tidak terbuka dan juga tidak tertutup.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-09-hint" id="o003-c90-ch13-guide-09-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-09-hint"><div class="hint solution-like">
-<div class="para" id="p-4948">
+<div class="para" id="p-5066">
 <em class="emphasis">Tahap 1.</em> Agar tidak terbuka, himpunan tidak boleh berada dalam <span class="process-math">\(\tau\text{.}\)</span>
-</div> <div class="para" id="p-4949">
+</div> <div class="para" id="p-5067">
 <em class="emphasis">Tahap 2.</em> Agar tidak tertutup, komplemennya juga tidak boleh berada dalam <span class="process-math">\(\tau\text{.}\)</span>
-</div> <div class="para" id="p-4950">
+</div> <div class="para" id="p-5068">
 <em class="emphasis">Tahap 3.</em> Uji <span class="process-math">\(\{a,c\}\)</span> pada ruang pertama.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-09-answer" id="o003-c90-ch13-guide-09-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-09-answer"><div class="answer solution-like"><div class="para" id="p-4951">Dalam ruang pertama, <span class="process-math">\(\{a,c\}\)</span> tidak terbuka dan tidak tertutup.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-09-solution" id="o003-c90-ch13-guide-09-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-09-solution"><div class="solution solution-like"><div class="para" id="p-4952">Himpunan <span class="process-math">\(\{a,c\}\)</span> tidak berada dalam topologi ruang pertama, sehingga tidak terbuka. Komplemennya adalah <span class="process-math">\(\{b,d\}\text{,}\)</span> yang juga tidak berada dalam topologi. Jadi <span class="process-math">\(\{a,c\}\)</span> tidak tertutup. Argumen yang lengkap untuk contoh lain harus memeriksa kedua ketidakanggotaan tersebut.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-09-answer" id="o003-c90-ch13-guide-09-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-09-answer"><div class="answer solution-like"><div class="para" id="p-5069">Dalam ruang pertama, <span class="process-math">\(\{a,c\}\)</span> tidak terbuka dan tidak tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-09-solution" id="o003-c90-ch13-guide-09-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-09-solution"><div class="solution solution-like"><div class="para" id="p-5070">Himpunan <span class="process-math">\(\{a,c\}\)</span> tidak berada dalam topologi ruang pertama, sehingga tidak terbuka. Komplemennya adalah <span class="process-math">\(\{b,d\}\text{,}\)</span> yang juga tidak berada dalam topologi. Jadi <span class="process-math">\(\{a,c\}\)</span> tidak tertutup. Argumen yang lengkap untuk contoh lain harus memeriksa kedua ketidakanggotaan tersebut.</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch13-guide-10"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch13-guide-10"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">M.10</span><span class="period">.</span><span class="space"> </span><span class="title">Apakah Setiap Himpunan Beranggota Tunggal Tertutup?</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-10"><article class="exercise exercise-like"><div class="para" id="p-4953">Dalam ruang Euklides, setiap himpunan beranggota tunggal tertutup. Tentukan apakah hal itu tetap berlaku untuk <span class="process-math">\(X=\{a,b,c\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{a,b\},\{a,c\},X\}\text{,}\)</span> dan jelaskan.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-10"><article class="exercise exercise-like"><div class="para" id="p-5071">Dalam ruang Euklides, setiap himpunan beranggota tunggal tertutup. Tentukan apakah hal itu tetap berlaku untuk <span class="process-math">\(X=\{a,b,c\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{a\},\{a,b\},\{a,c\},X\}\text{,}\)</span> dan jelaskan.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch13-guide-10-hint" id="o003-c90-ch13-guide-10-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-10-hint"><div class="hint solution-like">
-<div class="para" id="p-4954">
-<em class="emphasis">Tahap 1.</em> Uji masing-masing dari <span class="process-math">\(\{a\},\{b\},\{c\}\)</span> melalui komplemennya.</div> <div class="para" id="p-4955">
+<div class="para" id="p-5072">
+<em class="emphasis">Tahap 1.</em> Uji masing-masing dari <span class="process-math">\(\{a\},\{b\},\{c\}\)</span> melalui komplemennya.</div> <div class="para" id="p-5073">
 <em class="emphasis">Tahap 2.</em> Komplemen <span class="process-math">\(\{a\}\)</span> adalah <span class="process-math">\(\{b,c\}\text{.}\)</span>
-</div> <div class="para" id="p-4956">
+</div> <div class="para" id="p-5074">
 <em class="emphasis">Tahap 3.</em> Bandingkan <span class="process-math">\(\{b,c\}\)</span> dengan daftar anggota <span class="process-math">\(\tau\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-10-answer" id="o003-c90-ch13-guide-10-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-10-answer"><div class="answer solution-like"><div class="para" id="p-4957">Tidak. Himpunan <span class="process-math">\(\{a\}\)</span> tidak tertutup, sedangkan <span class="process-math">\(\{b\}\)</span> dan <span class="process-math">\(\{c\}\)</span> tertutup.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-10-solution" id="o003-c90-ch13-guide-10-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-10-solution"><div class="solution solution-like"><div class="para" id="p-4958">Komplemen <span class="process-math">\(\{a\}\)</span> adalah <span class="process-math">\(\{b,c\}\text{,}\)</span> yang tidak terbuka; maka <span class="process-math">\(\{a\}\)</span> tidak tertutup. Sebaliknya, <span class="process-math">\(X\setminus\{b\}=\{a,c\}\)</span> dan <span class="process-math">\(X\setminus\{c\}=\{a,b\}\)</span> keduanya berada dalam <span class="process-math">\(\tau\text{.}\)</span> Jadi dua himpunan beranggota tunggal terakhir tertutup. Satu contoh kegagalan, yaitu <span class="process-math">\(\{a\}\text{,}\)</span> cukup untuk menyangkal pernyataan umum.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch13-guide-10-answer" id="o003-c90-ch13-guide-10-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-10-answer"><div class="answer solution-like"><div class="para" id="p-5075">Tidak. Himpunan <span class="process-math">\(\{a\}\)</span> tidak tertutup, sedangkan <span class="process-math">\(\{b\}\)</span> dan <span class="process-math">\(\{c\}\)</span> tertutup.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch13-guide-10-solution" id="o003-c90-ch13-guide-10-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch13-guide-10-solution"><div class="solution solution-like"><div class="para" id="p-5076">Komplemen <span class="process-math">\(\{a\}\)</span> adalah <span class="process-math">\(\{b,c\}\text{,}\)</span> yang tidak terbuka; maka <span class="process-math">\(\{a\}\)</span> tidak tertutup. Sebaliknya, <span class="process-math">\(X\setminus\{b\}=\{a,c\}\)</span> dan <span class="process-math">\(X\setminus\{c\}=\{a,b\}\)</span> keduanya berada dalam <span class="process-math">\(\tau\text{.}\)</span> Jadi dua himpunan beranggota tunggal terakhir tertutup. Satu contoh kegagalan, yaitu <span class="process-math">\(\{a\}\text{,}\)</span> cukup untuk menyangkal pernyataan umum.</div></div></div>
 </div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="o003-c90-ch13-companion.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-ch13-source-guides-b.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>

@@ -36,6 +36,9 @@ The independently authored, dependency-free Chapter 6 epsilon-delta lab at
 replaces an unarchived external interactive dependency; it is not a copy of or
 claim to rights in the upstream GeoGebra object.
 
+The original reader icon at `assets/o003-favicon.svg` is likewise licensed
+under CC BY 4.0. It is an edition-interface asset, not an upstream GVSU figure.
+
 ## Software, transformations, fonts, and images
 
 Custom XSL files retain their embedded

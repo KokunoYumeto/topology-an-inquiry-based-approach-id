@@ -1,0 +1,430 @@
+<section xml:id="o003-c90-ch16-source-guides-b" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</title>
+
+  <p>
+    Delapan panduan ini melanjutkan pendamping Bab 16: satu kuosien berhingga,
+    empat identifikasi geometris, dan tiga langkah pembuktian teorema
+    faktorisasi melalui kelas ekuivalensi. Cobalah membangun argumen atau
+    gambarnya sendiri sebelum membuka setiap tahap bantuan.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch16-guide-11">
+    <title>Topologi pada Dua Kelas Ekuivalensi</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d,e,f\}</m> dengan topologi
+        <me>
+          \tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,b,c\},
+          \{a,b,c,d\},X\}.
+        </me>
+        Partisikan <m>X</m> menjadi kelas
+        <m>A=\{a,b,c\}</m> dan <m>B=\{d,e,f\}</m>, letakkan
+        <m>X^*=\{A,B\}</m>, dan definisikan proyeksi
+        <m>p:X\to X^*</m> dengan <m>p(x)=A</m> untuk <m>x\in A</m> serta
+        <m>p(x)=B</m> untuk <m>x\in B</m>. Tentukan topologi kuosien pada
+        <m>X^*</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-11-hint">
+      <p><em>Tahap 1.</em> Daftarkan keempat subhimpunan dari <m>X^*=\{A,B\}</m>.</p>
+      <p><em>Tahap 2.</em> Prapeta <m>\{A\}</m> dan <m>\{B\}</m> masing-masing adalah kelas yang namanya sama.</p>
+      <p><em>Tahap 3.</em> Bandingkan keempat prapeta dengan daftar anggota <m>\tau</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-11-answer">
+      <p>
+        Topologi kuosien pada <m>X^*</m> adalah
+        <m>\{\emptyset,\{A\},X^*\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-11-solution">
+      <p>
+        Keempat calon himpunan terbuka dan prapetanya adalah
+        <me>
+          p^{-1}(\emptyset)=\emptyset,\qquad
+          p^{-1}(\{A\})=A=\{a,b,c\},
+        </me>
+        <me>
+          p^{-1}(\{B\})=B=\{d,e,f\},\qquad
+          p^{-1}(X^*)=X.
+        </me>
+        Dari daftar <m>\tau</m>, himpunan <m>\emptyset</m>, <m>A</m>, dan
+        <m>X</m> terbuka, sedangkan <m>B</m> tidak terbuka. Berdasarkan
+        definisi topologi kuosien, tepat
+        <m>\emptyset</m>, <m>\{A\}</m>, dan <m>X^*</m> yang terbuka dalam
+        <m>X^*</m>. Ini adalah topologi Sierpiński dengan <m>A</m> sebagai
+        titik terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-12">
+    <title>Merekatkan Ujung Interval Menjadi Lingkaran</title>
+    <statement>
+      <p>
+        Beri <m>I=[0,1]</m> topologi standar. Ambil relasi ekuivalensi
+        terkecil yang mengidentifikasi <m>0</m> dengan <m>1</m> dan tidak
+        mengidentifikasi dua titik lain yang berbeda. Deskripsikan ruang
+        kuosien <m>I/\ssim</m> dan buktikan identifikasi tersebut dengan
+        suatu peta eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-12-hint">
+      <p><em>Tahap 1.</em> Bayangkan interval ditekuk sampai kedua ujungnya berimpit.</p>
+      <p><em>Tahap 2.</em> Gunakan <m>f(t)=(\cos(2\pi t),\sin(2\pi t))</m> dan tentukan kapan dua parameter mempunyai citra sama.</p>
+      <p><em>Tahap 3.</em> Faktorkan <m>f</m> melalui proyeksi kuosien; untuk inversnya, periksa busur lokal, khususnya busur yang melintasi titik <m>(1,0)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-12-answer">
+      <p>
+        Ruang <m>[0,1]/\ssim</m> homeomorfik dengan lingkaran satuan
+        <m>S^1=\{(u,v)\in\R^2\mid u^2+v^2=1\}</m>. Homeomorfismenya diberikan oleh
+        <m>[t]\mapsto(\cos(2\pi t),\sin(2\pi t))</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-12-solution">
+      <p>
+        Definisikan <m>f:I\to S^1</m> melalui
+        <m>f(t)=(\cos(2\pi t),\sin(2\pi t))</m>. Fungsi ini kontinu dan
+        surjektif. Untuk <m>s,t\in[0,1]</m>, persamaan <m>f(s)=f(t)</m>
+        berlaku tepat ketika <m>s=t</m> atau <m>\{s,t\}=\{0,1\}</m>.
+        Jadi serat-serat <m>f</m> tepat kelas-kelas relasi yang diberikan.
+        Jika <m>q:I\to I/\ssim</m> adalah proyeksi, rumus
+        <me>
+          \overline f([t])=f(t)
+        </me>
+        karena itu terdefinisi dengan baik dan menghasilkan bijeksi
+        <m>\overline f:I/\ssim\to S^1</m> dengan
+        <m>f=\overline f\circ q</m>.
+      </p>
+      <p>
+        Untuk setiap himpunan terbuka <m>O\subseteq S^1</m>, berlaku
+        <m>q^{-1}(\overline f^{-1}(O))=f^{-1}(O)</m>, dan ruas kanan terbuka
+        karena <m>f</m> kontinu. Definisi topologi kuosien lalu menunjukkan
+        bahwa <m>\overline f</m> kontinu.
+      </p>
+      <p>
+        Untuk melihat kekontinuan invers tanpa hanya mengandalkan gambar,
+        ambil <m>W</m> terbuka dalam <m>I/\ssim</m>. Himpunan
+        <m>q^{-1}(W)</m> terbuka relatif dalam <m>I</m> dan merupakan
+        gabungan kelas-kelas. Di sekitar setiap <m>t\in(0,1)</m>, pilih
+        selang kecil tempat <m>f</m> memetakan homeomorfik ke suatu busur
+        terbuka. Jika kelas ujung berada dalam <m>W</m>, keterbukaan dan
+        kejenuhan prapeta memberi dua ruas
+        <m>[0,\delta)</m> dan <m>(1-\varepsilon,1]</m>; citra gabungannya
+        memuat busur terbuka di sekitar <m>(1,0)</m>. Busur-busur ini
+        menunjukkan bahwa
+        <m>\overline f(W)=f(q^{-1}(W))</m> terbuka dalam <m>S^1</m>.
+        Jadi <m>\overline f</m> terbuka, inversnya kontinu, dan
+        <m>\overline f</m> adalah homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-13">
+    <title>Identifikasi dengan Setengah Puntiran</title>
+    <statement>
+      <p>
+        Pada persegi <m>I\times I</m>, ambil relasi ekuivalensi terkecil
+        yang memenuhi
+        <m>(x,0)\sim(1-x,1)</m> untuk setiap <m>x\in I</m>, sedangkan
+        titik-titik lain tidak diidentifikasi kecuali sebagaimana dipaksa
+        oleh aksioma relasi ekuivalensi. Deskripsikan ruang kuosiennya dan
+        jelaskan peran pembalikan <m>x\mapsto1-x</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-13-hint">
+      <p><em>Tahap 1.</em> Pandang koordinat <m>y</m> sebagai arah memanjang sebuah pita.</p>
+      <p><em>Tahap 2.</em> Sebelum merekatkan sisi <m>y=0</m> dan <m>y=1</m>, putar salah satu ujung setengah putaran agar <m>x</m> berpasangan dengan <m>1-x</m>.</p>
+      <p><em>Tahap 3.</em> Lacak kedua sisi <m>x=0</m> dan <m>x=1</m> setelah perekatan untuk memeriksa jumlah komponen batas.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-13-answer">
+      <p>
+        Ruang kuosien tersebut adalah pita Möbius. Pembalikan koordinat
+        melahirkan setengah puntiran; akibatnya kedua sisi panjang persegi
+        menyatu menjadi satu komponen batas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-13-solution">
+      <p>
+        Anggap <m>y</m> bergerak sepanjang pita dan
+        <m>s=2x-1\in[-1,1]</m> bergerak melintang. Ketika <m>y</m> bergerak
+        sekali dari <m>0</m> ke <m>1</m>, aturan perekatan mengganti
+        <m>s</m> dengan <m>-s</m>. Itulah setengah puntiran yang membedakan
+        pita Möbius dari tabung, tempat koordinat melintang tidak dibalik.
+      </p>
+      <p>
+        Identifikasi itu dapat diwujudkan secara eksplisit. Untuk
+        <m>\theta=2\pi y</m> dan <m>s=2x-1</m>, definisikan
+        <me>
+          F(x,y)=\left(
+          \left(2+\frac{s}{2}\cos\frac{\theta}{2}\right)\cos\theta,
+          \left(2+\frac{s}{2}\cos\frac{\theta}{2}\right)\sin\theta,
+          \frac{s}{2}\sin\frac{\theta}{2}
+          \right).
+        </me>
+        Pada <m>y=0</m> parameter melintangnya adalah <m>s</m>. Pada
+        <m>y=1</m>, pasangan <m>1-x</m> mempunyai parameter <m>-s</m> dan
+        faktor setengah sudut juga berubah tanda, sehingga
+        <m>F(x,0)=F(1-x,1)</m>. Selain pasangan yang diwajibkan ini, rumus
+        tersebut tidak menyamakan titik lain; rumus itu merupakan
+        parametrisasi standar pita Möbius tanpa perpotongan diri.
+      </p>
+      <p>
+        Karena <m>F</m> konstan tepat pada kelas-kelas tersebut, ia
+        menginduksi bijeksi kontinu dari ruang kuosien ke citra pita Möbius
+        di <m>\R^3</m>. Ruang kuosien itu kompak sebagai citra kontinu dari
+        persegi kompak, sedangkan <m>\R^3</m> Hausdorff; maka bijeksi kontinu
+        tersebut adalah homeomorfisme. Terakhir, lintasan batas
+        <m>x=0</m> tiba di <m>(0,1)\sim(1,0)</m>, lalu berlanjut sepanjang
+        sisi <m>x=1</m>. Jadi kedua sisi itu membentuk satu lingkaran batas,
+        sesuai ciri pita Möbius.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-14">
+    <title>Merekatkan Dua Pasang Sisi Menjadi Torus</title>
+    <statement>
+      <p>
+        Pada <m>I\times I</m>, ambil relasi ekuivalensi terkecil yang
+        mengidentifikasi <m>(x,0)</m> dengan <m>(x,1)</m> dan
+        <m>(0,y)</m> dengan <m>(1,y)</m> untuk semua <m>x,y\in I</m>.
+        Dengan demikian keempat sudut berada dalam satu kelas. Deskripsikan
+        ruang kuosien tersebut dan buktikan identifikasinya dengan suatu
+        peta eksplisit.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-14-hint">
+      <p><em>Tahap 1.</em> Merekatkan satu pasangan sisi yang berhadapan dengan arah sama menghasilkan tabung.</p>
+      <p><em>Tahap 2.</em> Rekatkan dua lingkaran batas tabung itu untuk mendapatkan permukaan tertutup.</p>
+      <p><em>Tahap 3.</em> Gunakan pasangan koordinat melingkar <m>(e^{2\pi i x},e^{2\pi i y})</m> untuk memeriksa kelas-kelas secara tepat.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-14-answer">
+      <p>
+        Ruang kuosiennya homeomorfik dengan torus
+        <m>S^1\times S^1</m>, dengan <m>S^1=\{z\in\C\mid |z|=1\}</m>.
+        Homeomorfisme kanonis mengirim
+        <m>[x,y]</m> ke <m>(e^{2\pi i x},e^{2\pi i y})</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-14-solution">
+      <p>
+        Definisikan
+        <me>
+          F:I^2\to S^1\times S^1,
+          \qquad F(x,y)=(e^{2\pi i x},e^{2\pi i y}).
+        </me>
+        Fungsi ini kontinu dan surjektif. Koordinat pertama sama tepat bila
+        nilai <m>x</m> sama atau merupakan pasangan ujung <m>0,1</m>;
+        pernyataan yang sama berlaku untuk koordinat kedua. Karena itu dua
+        titik mempunyai citra sama tepat bila keduanya berada dalam kelas
+        yang dibentuk oleh perekatan dua pasangan sisi tersebut. Secara
+        khusus, keempat sudut mempunyai citra <m>(1,1)</m>.
+      </p>
+      <p>
+        Maka <m>F</m> memfaktor menjadi bijeksi kontinu
+        <me>
+          \overline F:I^2/\ssim\ \longrightarrow S^1\times S^1,
+          \qquad \overline F([x,y])=F(x,y).
+        </me>
+        Domain adalah citra kontinu persegi kompak di bawah proyeksi
+        kuosien, sehingga kompak. Kodomain <m>S^1\times S^1</m> adalah
+        subruang Hausdorff dari <m>\R^4</m>. Teorema bijeksi kontinu dari
+        ruang kompak ke ruang Hausdorff menunjukkan bahwa
+        <m>\overline F</m> merupakan homeomorfisme. Jadi hasil perekatan
+        tepat torus; konstruksi tabung lalu merekatkan dua lingkaran
+        batasnya memberi gambaran geometris yang sama.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-15">
+    <title>Menciutkan Batas Persegi Menjadi Bola</title>
+    <statement>
+      <p>
+        Pada persegi <m>I^2=[0,1]^2</m>, ambil relasi ekuivalensi yang
+        mengidentifikasi semua titik batas <m>\partial I^2</m> menjadi satu
+        kelas dan membiarkan setiap titik interior sebagai kelas satu titik.
+        Deskripsikan ruang kuosien <m>I^2/\ssim</m> dan berikan pembenaran
+        matematis, bukan hanya gambar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-15-hint">
+      <p><em>Tahap 1.</em> Ganti persegi dengan cakram tertutup melalui homeomorfisme yang mengirim batas ke batas.</p>
+      <p><em>Tahap 2.</em> Dalam koordinat polar cakram, kirim jari-jari <m>r=0</m> ke kutub utara dan seluruh lingkaran <m>r=1</m> ke kutub selatan.</p>
+      <p><em>Tahap 3.</em> Periksa bahwa titik-titik dengan <m>0\leq r\lt1</m> tetap berbeda dan gunakan faktorisasi melalui kuosien.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-15-answer">
+      <p>
+        Ruang <m>I^2/\partial I^2</m> homeomorfik dengan permukaan bola
+        <m>S^2</m>. Kelas batas menjadi satu kutub, sedangkan cakram interior
+        menutupi bola tanpa kutub tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-15-solution">
+      <p>
+        Pertama, persegi homeomorfik dengan cakram tertutup
+        <m>D^2=\{u\in\R^2\mid\|u\|\leq1\}</m> melalui suatu homeomorfisme
+        yang membawa batas persegi ke lingkaran batas. Salah satu konstruksi
+        eksplisit diperoleh dengan memusatkan persegi menjadi
+        <m>[-1,1]^2</m> dan memetakan setiap sinar dari titik asal secara
+        linear: perpotongan sinar dengan batas persegi dikirim ke
+        perpotongan sinar yang sama dengan <m>S^1</m>. Jadi cukup menganalisis
+        <m>D^2/\partial D^2</m>.
+      </p>
+      <p>
+        Untuk <m>u\in D^2</m> dengan <m>r=\|u\|</m>, definisikan
+        <m>G(0)=(0,0,1)</m> dan, bila <m>u\ne0</m>,
+        <me>
+          G(u)=\left(
+          \frac{\sin(\pi r)}{r}u_1,
+          \frac{\sin(\pi r)}{r}u_2,
+          \cos(\pi r)
+          \right).
+        </me>
+        Limit <m>\sin(\pi r)/r\to\pi</m> menunjukkan kekontinuan di
+        <m>0</m>. Rumus tersebut bernilai dalam <m>S^2</m>. Untuk
+        <m>0\lt r\lt1</m>, ketinggian <m>\cos(\pi r)</m> menentukan
+        <m>r</m> secara unik dan dua koordinat pertama menentukan arah
+        <m>u/r</m>; jadi tidak ada dua titik interior berbeda yang
+        disamakan. Ketika <m>r=1</m>, seluruh batas dipetakan ke
+        <m>(0,0,-1)</m>. Setiap titik bola muncul untuk suatu
+        <m>0\leq r\leq1</m>, maka <m>G</m> surjektif dan serat-seratnya
+        tepat kelas yang diinginkan.
+      </p>
+      <p>
+        Dengan demikian <m>G</m> menginduksi bijeksi kontinu
+        <m>\overline G:D^2/\partial D^2\to S^2</m>. Domain kompak sebagai
+        citra kontinu cakram kompak dan <m>S^2</m> Hausdorff, sehingga
+        bijeksi kontinu ini merupakan homeomorfisme. Menggabungkannya dengan
+        homeomorfisme persegi-ke-cakram membuktikan
+        <m>I^2/\partial I^2\cong S^2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-16">
+    <title>Keterdefinisian Fungsi pada Kelas Ekuivalensi</title>
+    <statement>
+      <p>
+        Misalkan <m>\sim</m> relasi ekuivalensi pada himpunan <m>X</m>,
+        <m>p:X\to X/\ssim</m> proyeksi <m>p(x)=[x]</m>, dan
+        <m>f:X\to Y</m> suatu fungsi yang memenuhi
+        <m>f(x_1)=f(x_2)</m> setiap kali <m>x_1\sim x_2</m>. Buktikan bahwa
+        rumus <m>\overline f([x])=f(x)</m> mendefinisikan fungsi
+        <m>\overline f:X/\ssim\to Y</m> dengan baik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-16-hint">
+      <p><em>Tahap 1.</em> Satu kelas dapat mempunyai banyak wakil; ambil dua wakil <m>x_1</m> dan <m>x_2</m> dari kelas yang sama.</p>
+      <p><em>Tahap 2.</em> Terjemahkan persamaan <m>[x_1]=[x_2]</m> menjadi hubungan antara <m>x_1</m> dan <m>x_2</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan hipotesis bahwa <m>f</m> konstan pada setiap kelas ekuivalensi.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-16-answer">
+      <p>
+        Jika <m>[x_1]=[x_2]</m>, maka <m>x_1\sim x_2</m>, sehingga
+        <m>f(x_1)=f(x_2)</m>. Jadi nilai <m>\overline f([x])</m> tidak
+        bergantung pada wakil yang dipilih.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-16-solution">
+      <p>
+        Agar rumus pada kelas ekuivalensi terdefinisi dengan baik, dua wakil
+        dari kelas yang sama harus menghasilkan nilai yang sama. Ambil
+        <m>[x_1]=[x_2]</m>. Untuk relasi ekuivalensi, kesamaan kelas ini
+        ekuivalen dengan <m>x_1\sim x_2</m>. Hipotesis terhadap <m>f</m>
+        lalu memberi
+        <me>
+          \overline f([x_1])=f(x_1)=f(x_2)=\overline f([x_2]).
+        </me>
+        Karena setiap anggota <m>X/\ssim</m> adalah suatu kelas
+        <m>[x]</m>, rumus tersebut memberi tepat satu nilai di <m>Y</m>
+        untuk setiap masukan. Maka <m>\overline f</m> adalah fungsi yang
+        terdefinisi dengan baik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-17">
+    <title>Memverifikasi Persamaan Faktorisasi</title>
+    <statement>
+      <p>
+        Dengan asumsi yang sama, yaitu <m>p(x)=[x]</m> dan
+        <m>\overline f([x])=f(x)</m>, buktikan persamaan fungsi
+        <m>f=\overline f\circ p</m> dari <m>X</m> ke <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-17-hint">
+      <p><em>Tahap 1.</em> Dua fungsi sama jika nilainya sama pada setiap masukan.</p>
+      <p><em>Tahap 2.</em> Ambil <m>x\in X</m> dan hitung dahulu <m>p(x)</m>.</p>
+      <p><em>Tahap 3.</em> Masukkan kelas <m>[x]</m> itu ke definisi <m>\overline f</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-17-answer">
+      <p>
+        Untuk setiap <m>x\in X</m>,
+        <m>(\overline f\circ p)(x)=\overline f([x])=f(x)</m>. Jadi kedua
+        fungsi sama.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-17-solution">
+      <p>
+        Ambil sembarang <m>x\in X</m>. Definisi proyeksi kanonis memberi
+        <m>p(x)=[x]</m>. Oleh definisi fungsi terinduksi,
+        <me>
+          (\overline f\circ p)(x)
+          =\overline f(p(x))
+          =\overline f([x])
+          =f(x).
+        </me>
+        Kesamaan ini berlaku untuk setiap <m>x</m> dalam domain bersama
+        <m>X</m>. Maka <m>f</m> dan <m>\overline f\circ p</m> adalah fungsi
+        yang sama, yakni <m>f=\overline f\circ p</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-guide-18">
+    <title>Keunikan Fungsi yang Melalui Kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>\sim</m> relasi ekuivalensi pada <m>X</m>,
+        <m>p:X\to X/\ssim</m> proyeksi kanonis, dan
+        <m>f:X\to Y</m> konstan pada setiap kelas ekuivalensi. Fungsi
+        <m>\overline f([x])=f(x)</m> memenuhi
+        <m>f=\overline f\circ p</m>. Buktikan bahwa tidak ada fungsi lain
+        <m>g:X/\ssim\to Y</m> yang juga memenuhi <m>f=g\circ p</m> kecuali
+        <m>g=\overline f</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-guide-18-hint">
+      <p><em>Tahap 1.</em> Ambil kelas sebarang <m>[x]\in X/\ssim</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan <m>[x]=p(x)</m> untuk menulis <m>g([x])</m> sebagai nilai komposisi <m>g\circ p</m>.</p>
+      <p><em>Tahap 3.</em> Ganti komposisi itu dengan <m>f</m>, lalu bandingkan dengan definisi <m>\overline f</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-guide-18-answer">
+      <p>
+        Jika <m>f=g\circ p</m>, maka untuk setiap kelas <m>[x]</m>,
+        <m>g([x])=g(p(x))=f(x)=\overline f([x])</m>. Jadi
+        <m>g=\overline f</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-guide-18-solution">
+      <p>
+        Andaikan <m>g:X/\ssim\to Y</m> memenuhi <m>f=g\circ p</m>. Setiap
+        titik domain <m>X/\ssim</m> berbentuk <m>[x]</m> untuk suatu
+        <m>x\in X</m>. Pada titik sebarang itu,
+        <me>
+          g([x])=g(p(x))=(g\circ p)(x)=f(x)=\overline f([x]).
+        </me>
+        Jadi <m>g</m> dan <m>\overline f</m> mempunyai nilai sama pada
+        setiap anggota <m>X/\ssim</m>; akibatnya
+        <m>g=\overline f</m>. Bersama keberadaan yang dibuktikan oleh rumus
+        <m>\overline f([x])=f(x)</m>, ini menetapkan keunikan fungsi yang
+        memfaktorkan <m>f</m> melalui proyeksi kuosien.
+      </p>
+    </solution>
+  </exercise>
+</section>

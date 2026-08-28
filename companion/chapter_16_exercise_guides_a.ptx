@@ -1,0 +1,560 @@
+<section xml:id="o003-c90-ch16-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan latihan Bab 16, bagian pertama</title>
+  <p>
+    Bagian ini mengikuti urutan fisik sumber untuk sepuluh prompt latihan
+    pertama tentang ruang kuosien. Setiap pernyataan dibuat mandiri dan
+    disertai petunjuk bertahap, jawaban atau rubrik pembuktian ringkas, serta
+    solusi lengkap. Bagian ini merupakan materi pendamping tidak resmi yang
+    ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi
+    GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-01">
+    <title>Relasi serat suatu surjeksi</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi, <m>Y</m> suatu himpunan, dan
+        <m>p:X\to Y</m> suatu surjeksi. Pada <m>X</m>, definisikan
+        <m>x\sim_p y</m> jika dan hanya jika <m>p(x)=p(y)</m>. Buktikan
+        bahwa <m>\sim_p</m> merupakan relasi ekuivalensi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-01-hint">
+      <p>
+        <em>Tahap 1.</em> Periksa refleksivitas dengan membandingkan
+        <m>p(x)</m> dengan dirinya sendiri, lalu gunakan simetri kesamaan
+        untuk memeriksa simetri relasi.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk transitivitas, mulai dari
+        <m>p(x)=p(y)</m> dan <m>p(y)=p(z)</m>. Perhatikan bahwa
+        kesurjektifan tidak diperlukan untuk ketiga pemeriksaan ini.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-01-answer">
+      <p>
+        Rubrik pembuktian: tunjukkan secara terpisah refleksivitas, simetri,
+        dan transitivitas. Ketiganya mengikuti sifat-sifat kesamaan dalam
+        <m>Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-01-solution">
+      <p>
+        Untuk setiap <m>x\in X</m>, berlaku <m>p(x)=p(x)</m>, sehingga
+        <m>x\sim_p x</m>; jadi relasi ini refleksif. Jika
+        <m>x\sim_p y</m>, maka <m>p(x)=p(y)</m>. Simetri kesamaan memberi
+        <m>p(y)=p(x)</m>, sehingga <m>y\sim_p x</m>; jadi relasi ini
+        simetris.
+      </p>
+      <p>
+        Terakhir, jika <m>x\sim_p y</m> dan <m>y\sim_p z</m>, maka
+        <m>p(x)=p(y)</m> dan <m>p(y)=p(z)</m>. Transitivitas kesamaan
+        menghasilkan <m>p(x)=p(z)</m>, sehingga <m>x\sim_p z</m>. Dengan
+        demikian <m>\sim_p</m> refleksif, simetris, dan transitif, maka
+        merupakan relasi ekuivalensi. Kesurjektifan <m>p</m> memastikan
+        setiap unsur <m>Y</m> mempunyai serat, tetapi tidak dibutuhkan untuk
+        membuktikan ketiga sifat relasi tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-02">
+    <title>Topologi kuosien yang ditentukan oleh tanda bilangan real</title>
+    <statement>
+      <p>
+        Beri <m>\R</m> topologi standar dan definisikan surjeksi
+        <m>p:\R\to\{a,b,c\}</m> dengan
+        <me>
+          p(x)=\begin{cases}
+          a \amp \text{jika }x\lt 0,\\
+          b \amp \text{jika }x=0,\\
+          c \amp \text{jika }x\gt 0.
+          \end{cases}
+        </me>
+        Tentukan topologi kuosien pada <m>\{a,b,c\}</m> yang ditentukan oleh
+        <m>p</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-02-hint">
+      <p>
+        <em>Tahap 1.</em> Tuliskan serat <m>p^{-1}(\{a\})</m>,
+        <m>p^{-1}(\{b\})</m>, dan <m>p^{-1}(\{c\})</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Ada hanya delapan subhimpunan kodomain. Uji satu
+        per satu dengan definisi: <m>U</m> terbuka dalam topologi kuosien
+        tepat ketika <m>p^{-1}(U)</m> terbuka dalam <m>\R</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-02-answer">
+      <p>
+        Topologi kuosiennya adalah
+        <me>
+          \tau_p=\{\emptyset,\{a\},\{c\},\{a,c\},\{a,b,c\}\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-02-solution">
+      <p>
+        Ketiga seratnya ialah
+        <m>(-\infty,0)</m>, <m>\{0\}</m>, dan <m>(0,\infty)</m>, berturut-turut.
+        Prapeta <m>\emptyset</m> dan seluruh kodomain adalah
+        <m>\emptyset</m> dan <m>\R</m>, jadi keduanya terbuka. Selain itu,
+        <me>
+          p^{-1}(\{a\})=(-\infty,0),\qquad
+          p^{-1}(\{c\})=(0,\infty),
+        </me>
+        serta
+        <m>p^{-1}(\{a,c\})=\R\setminus\{0\}</m>; ketiga himpunan ini terbuka.
+      </p>
+      <p>
+        Subhimpunan lain yang masih perlu diuji mempunyai prapeta
+        <m>\{0\}</m>, <m>(-\infty,0]</m>, atau <m>[0,\infty)</m>, masing-masing
+        untuk <m>\{b\}</m>, <m>\{a,b\}</m>, atau <m>\{b,c\}</m>. Tidak satu
+        pun terbuka dalam topologi standar pada <m>\R</m>. Karena semua
+        delapan subhimpunan telah diperiksa, koleksi dalam jawaban tepat
+        merupakan topologi kuosien.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-03">
+    <title>Relasi translasi kisi pada bidang</title>
+    <statement>
+      <p>
+        Pada <m>\R^2</m>, definisikan
+        <m>(x_1,y_1)\sim(x_2,y_2)</m> jika dan hanya jika
+        <m>x_2-x_1\in\Z</m> dan <m>y_2-y_1\in\Z</m>. Buktikan bahwa
+        <m>\sim</m> merupakan relasi ekuivalensi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-03-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk refleksivitas dan simetri, gunakan bahwa
+        <m>0\in\Z</m> dan bahwa lawan suatu bilangan bulat tetap bilangan
+        bulat.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk transitivitas, jumlahkan selisih koordinat
+        dari pasangan pertama dan pasangan kedua.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-03-answer">
+      <p>
+        Rubrik pembuktian: verifikasi ketiga aksioma pada kedua koordinat;
+        gunakan ketertutupan <m>\Z</m> terhadap pengambilan lawan dan
+        penjumlahan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-03-solution">
+      <p>
+        Untuk <m>u=(x,y)\in\R^2</m>, kedua selisih koordinat
+        <m>x-x</m> dan <m>y-y</m> adalah <m>0\in\Z</m>, sehingga
+        <m>u\sim u</m>. Jika <m>u=(x_1,y_1)\sim v=(x_2,y_2)</m>, maka
+        <m>x_2-x_1</m> dan <m>y_2-y_1</m> bilangan bulat. Lawannya,
+        <m>x_1-x_2</m> dan <m>y_1-y_2</m>, juga bilangan bulat, sehingga
+        <m>v\sim u</m>.
+      </p>
+      <p>
+        Jika juga <m>v\sim w=(x_3,y_3)</m>, maka
+        <me>
+          x_3-x_1=(x_3-x_2)+(x_2-x_1)\in\Z
+        </me>
+        dan, dengan cara yang sama,
+        <m>y_3-y_1=(y_3-y_2)+(y_2-y_1)\in\Z</m>. Jadi <m>u\sim w</m>.
+        Relasi tersebut refleksif, simetris, dan transitif, maka merupakan
+        relasi ekuivalensi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-04">
+    <title>Kuosien bidang oleh translasi kisi</title>
+    <statement>
+      <p>
+        Pada <m>\R^2</m> dengan topologi standar, beri relasi ekuivalensi
+        <m>(x_1,y_1)\sim(x_2,y_2)</m> tepat ketika
+        <m>x_2-x_1\in\Z</m> dan <m>y_2-y_1\in\Z</m>. Kenali ruang kuosien
+        <m>\R^2/\ssim</m> dan jelaskan mengapa ruang yang Anda sebutkan
+        homeomorfik dengan kuosien tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-04-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan fungsi periodik
+        <m>q(t)=e^{2\pi i t}</m> dari <m>\R</m> ke <m>S^1</m>, lalu terapkan
+        fungsi itu pada kedua koordinat.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Periksa dua hal: serat fungsi hasil kali itu tepat
+        kelas-kelas <m>\sim</m>, dan fungsi tersebut merupakan pemetaan
+        kuosien. Untuk hal kedua, Anda dapat menunjukkan bahwa fungsi itu
+        terbuka.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-04-answer">
+      <p>
+        Ruang kuosiennya homeomorfik dengan torus
+        <m>S^1\times S^1</m>. Homeomorfisme terinduksi oleh
+        <m>F(x,y)=(e^{2\pi i x},e^{2\pi i y})</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-04-solution">
+      <p>
+        Definisikan
+        <m>F:\R^2\to S^1\times S^1</m> dengan
+        <m>F(x,y)=(e^{2\pi i x},e^{2\pi i y})</m>. Fungsi ini kontinu dan
+        surjektif. Kesamaan <m>F(x_1,y_1)=F(x_2,y_2)</m> berlaku tepat ketika
+        <m>x_2-x_1</m> dan <m>y_2-y_1</m> keduanya bilangan bulat. Jadi
+        serat-serat <m>F</m> tepat kelas-kelas ekuivalensi <m>\sim</m>.
+      </p>
+      <p>
+        Pemetaan <m>q:\R\to S^1</m>, <m>q(t)=e^{2\pi i t}</m>, terbuka:
+        di sekitar setiap titik suatu himpunan terbuka terdapat selang cukup
+        kecil yang dipetakan homeomorfik ke suatu busur terbuka. Karena
+        persegi panjang terbuka membentuk basis bagi <m>\R^2</m>, pemetaan
+        hasil kali <m>F=q\times q</m> juga terbuka. Setiap surjeksi kontinu
+        yang terbuka merupakan pemetaan kuosien.
+      </p>
+      <p>
+        Jika <m>\pi:\R^2\to\R^2/\ssim</m> adalah proyeksi kanonik, sifat
+        serat di atas menghasilkan bijeksi
+        <m>\overline F:\R^2/\ssim\to S^1\times S^1</m> dengan
+        <m>\overline F\circ\pi=F</m>. Karena <m>\pi</m> dan <m>F</m>
+        sama-sama pemetaan kuosien, suatu himpunan pada salah satu sisi
+        terbuka tepat ketika prapetanya di <m>\R^2</m> terbuka. Maka
+        <m>\overline F</m> dan inversnya kontinu. Jadi
+        <m>\overline F</m> adalah homeomorfisme ke torus.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-05">
+    <title>Surjeksi kontinu yang bukan pemetaan kuosien</title>
+    <statement>
+      <p>
+        Berikan contoh konkret suatu fungsi surjektif dan kontinu yang bukan
+        pemetaan kuosien, lalu buktikan bahwa contoh Anda mempunyai ketiga
+        sifat tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-05-hint">
+      <p>
+        <em>Tahap 1.</em> Pertimbangkan fungsi identitas pada satu himpunan
+        yang sama, tetapi beri domain topologi yang lebih halus daripada
+        topologi kodomain.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Agar fungsi identitas gagal menjadi pemetaan
+        kuosien, cari subhimpunan yang tidak terbuka di kodomain tetapi
+        prapetanya terbuka di domain.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-05-answer">
+      <p>
+        Salah satu contoh ialah
+        <m>\operatorname{id}:(\R,\tau_{\mathrm{diskret}})\to
+        (\R,\tau_{\mathrm{standar}})</m>. Fungsi ini kontinu dan bijektif,
+        tetapi bukan pemetaan kuosien.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-05-solution">
+      <p>
+        Ambil fungsi identitas
+        <m>f:(\R,\tau_{\mathrm{diskret}})\to
+        (\R,\tau_{\mathrm{standar}})</m>. Sebagai fungsi himpunan, <m>f</m>
+        adalah bijeksi, sehingga khususnya surjektif. Untuk setiap himpunan
+        terbuka standar <m>U</m>, prapeta <m>f^{-1}(U)=U</m> terbuka dalam
+        domain diskret. Maka <m>f</m> kontinu.
+      </p>
+      <p>
+        Namun, ambil <m>A=\{0\}</m>. Himpunan ini tidak terbuka dalam
+        kodomain bertopologi standar, sedangkan
+        <m>f^{-1}(A)=\{0\}</m> terbuka dalam domain diskret. Jika <m>f</m>
+        merupakan pemetaan kuosien, keterbukaan prapeta tersebut akan
+        memaksa <m>A</m> terbuka di kodomain. Kontradiksi ini menunjukkan
+        bahwa <m>f</m> bukan pemetaan kuosien.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-06">
+    <title>Menciutkan kedua ujung selang</title>
+    <statement>
+      <p>
+        Beri <m>X=[0,1]</m> topologi standar dan tetapkan
+        <m>A=\{0,1\}</m>. Pada <m>X</m>, definisikan <m>x\sim y</m> jika dan
+        hanya jika <m>x=y</m> atau kedua titik berada dalam <m>A</m>.
+        Deskripsikan ruang kuosien <m>X/A=X/\ssim</m> sampai homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-06-hint">
+      <p>
+        <em>Tahap 1.</em> Bayangkan kedua ujung selang direkatkan. Cari
+        fungsi kontinu dari <m>[0,1]</m> ke lingkaran yang mengambil nilai
+        sama tepat pada <m>0</m> dan <m>1</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Turunkan fungsi itu ke kuosien. Untuk membuktikan
+        bahwa bijeksi terinduksi adalah homeomorfisme, gunakan kekompakan
+        domain kuosien dan sifat Hausdorff target.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-06-answer">
+      <p>
+        Ruang <m>[0,1]/\{0,1\}</m> homeomorfik dengan <m>S^1</m>; pemetaannya
+        diinduksi oleh <m>t\mapsto e^{2\pi i t}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-06-solution">
+      <p>
+        Definisikan <m>F:[0,1]\to S^1</m> dengan
+        <m>F(t)=e^{2\pi i t}</m>. Fungsi ini kontinu dan surjektif. Pada
+        selang setengah terbuka <m>[0,1)</m> fungsi tersebut injektif, dan
+        satu-satunya pengulangan nilai pada seluruh <m>[0,1]</m> ialah
+        <m>F(0)=F(1)</m>. Jadi serat-serat <m>F</m> tepat kelas-kelas relasi
+        yang menciutkan <m>\{0,1\}</m> menjadi satu titik.
+      </p>
+      <p>
+        Karena <m>F</m> konstan pada setiap kelas, terdapat bijeksi kontinu
+        <m>\overline F:X/A\to S^1</m> yang memenuhi
+        <m>\overline F\circ\pi=F</m>, dengan <m>\pi</m> proyeksi kuosien.
+        Ruang <m>X/A</m> kompak sebagai citra kontinu ruang kompak
+        <m>[0,1]</m>, sedangkan <m>S^1</m> Hausdorff. Bijeksi kontinu dari
+        ruang kompak ke ruang Hausdorff adalah homeomorfisme. Maka
+        <m>X/A\cong S^1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-07">
+    <title>Menciutkan dua titik antipodal pada lingkaran</title>
+    <statement>
+      <p>
+        Misalkan <m>X=S^1=\{(x,y)\in\R^2\mid x^2+y^2=1\}</m> dan
+        <m>A=\{(-1,0),(1,0)\}</m>. Definisikan <m>u\sim v</m> jika dan hanya
+        jika <m>u=v</m> atau kedua titik berada dalam <m>A</m>. Deskripsikan
+        ruang kuosien <m>X/A</m> sampai homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-07-hint">
+      <p>
+        <em>Tahap 1.</em> Setelah kedua titik dalam <m>A</m> direkatkan,
+        perhatikan citra busur setengah lingkaran atas dan bawah secara
+        terpisah.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Parametrisasikan masing-masing busur tertutup oleh
+        suatu selang yang kedua ujungnya dipetakan ke titik rekat yang sama.
+        Gunakan argumen kompak-ke-Hausdorff untuk peta terinduksi.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-07-answer">
+      <p>
+        Ruang kuosiennya homeomorfik dengan buket dua lingkaran
+        <m>S^1\vee S^1</m>, yaitu ruang berbentuk angka delapan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-07-solution">
+      <p>
+        Tuliskan sebuah titik lingkaran sebagai
+        <m>(\cos\theta,\sin\theta)</m>, dengan <m>0\leq\theta\leq2\pi</m>.
+        Pandang <m>S^1\vee S^1</m> sebagai dua salinan lingkaran yang titik
+        <m>1</m>-nya direkatkan. Pada busur atas
+        <m>0\leq\theta\leq\pi</m>, petakan titik tersebut ke lingkaran
+        pertama melalui <m>e^{2i\theta}</m>. Pada busur bawah
+        <m>\pi\leq\theta\leq2\pi</m>, petakan ke lingkaran kedua melalui
+        <m>e^{2i(\theta-\pi)}</m>.
+      </p>
+      <p>
+        Kedua definisi kontinu dan sepakat pada titik-titik ujung busur
+        setelah titik <m>1</m> pada kedua lingkaran target direkatkan. Lemma
+        penempelan memberi fungsi kontinu dan surjektif
+        <m>F:S^1\to S^1\vee S^1</m>. Setiap titik di bagian dalam masing-masing
+        busur mempunyai citra unik. Titik-titik ujung kedua busur adalah tepat
+        <m>(1,0)</m> dan <m>(-1,0)</m>, dan keduanya dipetakan ke titik buket.
+        Jadi serat tak tunggal satu-satunya adalah <m>A</m>.
+      </p>
+      <p>
+        Fungsi <m>F</m> menurunkan bijeksi kontinu
+        <m>\overline F:X/A\to S^1\vee S^1</m>. Domainnya kompak dan targetnya
+        Hausdorff, sehingga bijeksi tersebut homeomorfisme. Secara geometris,
+        setiap busur setengah lingkaran menjadi satu lingkaran, dan keduanya
+        bertemu hanya pada titik hasil penciutan <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-08">
+    <title>Menciutkan batas cakram</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>D^2=\{(x,y)\in\R^2\mid x^2+y^2\leq1\}</m> dan
+        <m>S^1=\partial D^2</m>, keduanya dengan topologi standar yang
+        relevan. Definisikan <m>u\sim v</m> jika dan hanya jika
+        <m>u=v</m> atau <m>u,v\in S^1</m>. Deskripsikan ruang kuosien
+        <m>D^2/S^1</m> sampai homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-08-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan koordinat polar. Biarkan pusat cakram
+        menjadi satu kutub bola dan seluruh lingkaran batas menjadi kutub
+        yang lain.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Salah satu pilihan memakai garis lintang dengan
+        tinggi <m>\cos(\pi r)</m>. Periksa serat fungsi itu, lalu gunakan
+        kekompakan cakram dan sifat Hausdorff bola.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-08-answer">
+      <p>
+        Ruang <m>D^2/S^1</m> homeomorfik dengan bola dua dimensi
+        <m>S^2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-08-solution">
+      <p>
+        Untuk <m>0\leq r\leq1</m>, definisikan dalam koordinat polar
+        <me>
+          F(r\cos\theta,r\sin\theta)=
+          (\sin(\pi r)\cos\theta,
+          \sin(\pi r)\sin\theta,\cos(\pi r)).
+        </me>
+        Rumus ini tidak bergantung pada <m>\theta</m> ketika <m>r=0</m>, dan
+        kontinu juga di pusat karena dua koordinat pertamanya mempunyai
+        besar paling banyak <m>\sin(\pi r)</m>. Fungsi <m>F:D^2\to S^2</m>
+        kontinu dan surjektif.
+      </p>
+      <p>
+        Jika <m>0\leq r\lt1</m>, tinggi <m>\cos(\pi r)</m> menentukan
+        <m>r</m> secara unik; untuk <m>r\gt0</m>, dua koordinat pertama lalu
+        menentukan <m>\theta</m>. Jadi setiap titik bagian dalam cakram
+        mempunyai serat tunggal. Untuk <m>r=1</m>, semua nilai
+        <m>\theta</m> dipetakan ke kutub selatan <m>(0,0,-1)</m>. Dengan
+        demikian serat-serat <m>F</m> tepat kelas-kelas relasi yang
+        menciutkan <m>S^1</m>.
+      </p>
+      <p>
+        Maka <m>F</m> menurunkan bijeksi kontinu
+        <m>\overline F:D^2/S^1\to S^2</m>. Domain kuosien kompak sebagai
+        citra kontinu <m>D^2</m>, dan <m>S^2</m> Hausdorff. Oleh karena itu
+        <m>\overline F</m> merupakan homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-09">
+    <title>Topologi kuosien pertama pada himpunan tiga titik</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{1,2,3,4\}</m> diberi topologi
+        <me>
+          \tau=\{\emptyset,\{1\},\{2\},\{1,2\},\{3,4\},
+          \{2,3,4\},\{1,3,4\},X\}.
+        </me>
+        Untuk <m>Y=\{a,b,c\}</m>, definisikan surjeksi
+        <m>p:X\to Y</m> oleh
+        <m>p(1)=p(2)=a</m>, <m>p(3)=b</m>, dan <m>p(4)=c</m>. Tentukan
+        topologi kuosien <m>\tau_p</m> pada <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-09-hint">
+      <p>
+        <em>Tahap 1.</em> Serat-serat <m>p</m> adalah
+        <m>\{1,2\}</m>, <m>\{3\}</m>, dan <m>\{4\}</m>. Setiap prapeta
+        subhimpunan <m>Y</m> merupakan gabungan beberapa serat tersebut.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Bandingkan delapan gabungan serat dengan delapan
+        himpunan yang tercantum dalam <m>\tau</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-09-answer">
+      <p>
+        Topologi kuosiennya adalah
+        <me>
+          \tau_p=\{\emptyset,\{a\},\{b,c\},Y\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-09-solution">
+      <p>
+        Menurut definisi, <m>U\subseteq Y</m> berada dalam <m>\tau_p</m>
+        tepat ketika <m>p^{-1}(U)\in\tau</m>. Prapeta <m>\emptyset</m> dan
+        <m>Y</m> adalah <m>\emptyset</m> dan <m>X</m>. Selain itu,
+        <me>
+          p^{-1}(\{a\})=\{1,2\},\qquad
+          p^{-1}(\{b,c\})=\{3,4\},
+        </me>
+        dan kedua himpunan itu tercantum dalam <m>\tau</m>.
+      </p>
+      <p>
+        Empat subhimpunan tak trivial lainnya mempunyai prapeta
+        <m>\{3\}</m>, <m>\{4\}</m>, <m>\{1,2,3\}</m>, atau
+        <m>\{1,2,4\}</m>, masing-masing untuk <m>\{b\}</m>, <m>\{c\}</m>,
+        <m>\{a,b\}</m>, dan <m>\{a,c\}</m>. Tidak satu pun berada dalam
+        <m>\tau</m>. Jadi tidak ada himpunan terbuka kuosien lain, dan
+        <m>\tau_p=\{\emptyset,\{a\},\{b,c\},Y\}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-exer-a-10">
+    <title>Topologi kuosien kedua pada himpunan tiga titik</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{1,2,3,4\}</m> diberi topologi
+        <me>
+          \tau=\{\emptyset,\{1\},\{2\},\{1,2\},\{3,4\},
+          \{2,3,4\},\{1,3,4\},X\}.
+        </me>
+        Untuk <m>Y=\{a,b,c\}</m>, definisikan surjeksi
+        <m>q:X\to Y</m> oleh
+        <m>q(1)=q(2)=c</m>, <m>q(3)=b</m>, dan <m>q(4)=a</m>. Tentukan
+        topologi kuosien <m>\tau_q</m> pada <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-exer-a-10-hint">
+      <p>
+        <em>Tahap 1.</em> Tuliskan serat untuk <m>a</m>, <m>b</m>, dan
+        <m>c</m>, lalu bentuk seluruh gabungan serat yang mungkin.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan definisi topologi kuosien, bukan citra
+        himpunan terbuka: yang diuji adalah apakah <m>q^{-1}(U)</m> berada
+        dalam <m>\tau</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-exer-a-10-answer">
+      <p>
+        Topologi kuosiennya adalah
+        <me>
+          \tau_q=\{\emptyset,\{c\},\{a,b\},Y\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-exer-a-10-solution">
+      <p>
+        Serat-serat <m>q</m> adalah <m>q^{-1}(\{a\})=\{4\}</m>,
+        <m>q^{-1}(\{b\})=\{3\}</m>, dan
+        <m>q^{-1}(\{c\})=\{1,2\}</m>. Prapeta <m>\emptyset</m> dan
+        <m>Y</m> terbuka. Di antara subhimpunan sejati yang tidak kosong,
+        <me>
+          q^{-1}(\{c\})=\{1,2\}\in\tau,
+          \qquad q^{-1}(\{a,b\})=\{3,4\}\in\tau.
+        </me>
+      </p>
+      <p>
+        Prapeta <m>\{a\}</m>, <m>\{b\}</m>, <m>\{a,c\}</m>, dan
+        <m>\{b,c\}</m> berturut-turut adalah <m>\{4\}</m>, <m>\{3\}</m>,
+        <m>\{1,2,4\}</m>, dan <m>\{1,2,3\}</m>. Keempatnya tidak berada
+        dalam <m>\tau</m>. Dengan demikian tepat
+        <m>\emptyset</m>, <m>\{c\}</m>, <m>\{a,b\}</m>, dan <m>Y</m> yang
+        terbuka dalam topologi kuosien.
+      </p>
+    </solution>
+  </exercise>
+</section>

@@ -119,7 +119,7 @@ def local_name(node: etree._Element) -> str:
     return tag.rsplit("}", 1)[-1].lower()
 
 
-def transform(path: Path, check_only: bool) -> tuple[int, list[str]]:
+def transform(path: Path, root_directory: Path, check_only: bool) -> tuple[int, list[str]]:
     parser = html.HTMLParser(encoding="utf-8", remove_comments=False)
     tree = html.parse(str(path), parser=parser)
     root = tree.getroot()
@@ -129,6 +129,42 @@ def transform(path: Path, check_only: bool) -> tuple[int, list[str]]:
         changes += 1
     if root.get("xml:lang") != "id-ID":
         root.set("xml:lang", "id-ID")
+        changes += 1
+
+    # PreTeXt 1.7.5 emits no favicon declaration, so Chromium otherwise makes
+    # an implicit `/favicon.ico` request that fails on both the local reader
+    # and GitHub Pages.  Bind the original, local SVG icon explicitly.  This
+    # is deterministic and idempotent across cumulative reader boundaries.
+    favicon_target = root_directory / "external" / "o003-favicon.svg"
+    # PreTeXt's ``knowl`` documents are fragments injected into a root-level
+    # reader page, not independently navigated documents.  Their relative URLs
+    # therefore use the reader root as the runtime base.  Standalone HTML in
+    # other subdirectories (notably ``external``) uses its physical parent.
+    favicon_base = root_directory if path.parent.name == "knowl" else path.parent
+    favicon_href = os.path.relpath(favicon_target, start=favicon_base).replace(os.sep, "/")
+    favicon = root.xpath(
+        "//head/link[contains(concat(' ', normalize-space(@rel), ' '), ' icon ')]"
+    )
+    if favicon:
+        primary = favicon[0]
+        if primary.get("href") != favicon_href:
+            primary.set("href", favicon_href)
+            changes += 1
+        if primary.get("type") != "image/svg+xml":
+            primary.set("type", "image/svg+xml")
+            changes += 1
+        for duplicate in favicon[1:]:
+            duplicate.getparent().remove(duplicate)
+            changes += 1
+    else:
+        heads = root.xpath("//head")
+        if not heads:
+            raise ValueError(f"HTML document has no head element: {path}")
+        link = etree.Element("link")
+        link.set("rel", "icon")
+        link.set("href", favicon_href)
+        link.set("type", "image/svg+xml")
+        heads[0].append(link)
         changes += 1
 
     for node in root.iter():
@@ -268,7 +304,7 @@ def main() -> int:
     total_changes = 0
     residue: dict[str, list[str]] = {}
     for path in html_files:
-        changes, findings = transform(path, arguments.check_only)
+        changes, findings = transform(path, root, arguments.check_only)
         total_changes += changes
         if findings:
             residue[path.relative_to(root).as_posix()] = findings

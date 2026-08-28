@@ -9,10 +9,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Karena <span class="process-math">\(\emptyset\)</span> dan <span class="process-math">\(\R\)</span> sekaligus tertutup dan terbuka, sifat “tertutup” bukan negasi sifat “terbuka”. Selain itu, himpunan yang sama, <span class="process-math">\([0,1)\text{,}\)</span> tidak terbuka terhadap <span class="process-math">\(d_E\)</span> tetapi terbuka—bahkan bersifat clopen—terhadap <span class="process-math">\(d_D\text{.}\)</span> Jadi keterbukaan bergantung pada metrik yang dipasang pada himpunan dasar.</div>
-<span class="incontext"><a href="o003-c90-ch08-mastery.html#p-3494" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Ambil <span class="process-math">\(x\in\R\)</span> dan tuliskan <span class="process-math">\(t=|x-c|\geq0\text{.}\)</span> Jika <span class="process-math">\(0\lt\delta\lt1\text{,}\)</span> maka</div>
+<div class="displaymath process-math">
+\begin{gather*}
+d(x,c)\lt\delta\\
+\Longleftrightarrow \frac{t}{t+1}\lt\delta\\
+\Longleftrightarrow (1-\delta)t\lt\delta\\
+\Longleftrightarrow t\lt\frac{\delta}{1-\delta}.
+\end{gather*}
+</div>
+<div class="para">Jadi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B(c,\delta)=
+\left(c-\frac{\delta}{1-\delta},
+c+\frac{\delta}{1-\delta}\right)
+\quad(0\lt\delta\lt1).
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch08-exercise-guides-b.html#p-3494" class="internal">in-context</a></span>
 </body>
 </html>

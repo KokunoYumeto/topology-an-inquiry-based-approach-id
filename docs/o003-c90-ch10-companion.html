@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,7 +597,7 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="appendix" id="o003-c90-ch10-companion"><h2 class="heading">
 <span class="type">Lampiran</span> <span class="codenumber">J</span> <span class="title">Pendamping Mandiri Bab 10: Himpunan Tertutup dalam Ruang Metrik</span>
 </h2>
-<section class="introduction" id="introduction-230"><div class="para" id="p-3757">Komponen ini mendampingi Bab 10, bukan menggantikannya. Kerjakan dahulu eksplorasi, kegiatan, dan latihan pada bab utama, kemudian buka unsur <dfn class="terminology">petunjuk</dfn>, <dfn class="terminology">jawaban</dfn>, atau <dfn class="terminology">solusi</dfn> secara bertahap. Delapan puluh panduan mengikuti setiap butir sumber dalam urutan bacanya: empat puluh tiga tugas eksplorasi atau kegiatan dan tiga puluh tujuh perintah latihan. Delapan pemeriksaan penguasaan tambahan menguji pemindahan gagasan ke situasi baru.</div> <div class="para" id="p-3758">Seluruh uraian pendamping dan pemeriksaan penguasaan ini ditulis secara mandiri untuk edisi ini. Uraian tersebut bukan teks Steven Schlicker atau Grand Valley State University dan tidak menyalin ungkapan dari karya pembanding. Komponen asli ini memiliki identitas lisensi terpisah dan disediakan di bawah Creative Commons Attribution 4.0 International (CC BY 4.0). Terjemahan bab utama tetap merupakan turunan GVSU yang diperlakukan secara konservatif menurut CC BY-NC-SA 3.0.</div> <div class="para" id="p-3759">Jawaban memberi hasil langsung, sedangkan solusi memperlihatkan urutan definisi, konstruksi, atau contoh penyangkal yang diperlukan. Untuk pertanyaan yang sengaja bersifat terbuka, solusi berfungsi sebagai rubrik penilaian. Dengan demikian, pembelajar tetap melakukan penyelidikan sebelum melihat penutupan matematisnya.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="introduction-247"><div class="para" id="p-3875">Komponen ini mendampingi Bab 10, bukan menggantikannya. Kerjakan dahulu eksplorasi, kegiatan, dan latihan pada bab utama, kemudian buka unsur <dfn class="terminology">petunjuk</dfn>, <dfn class="terminology">jawaban</dfn>, atau <dfn class="terminology">solusi</dfn> secara bertahap. Delapan puluh panduan mengikuti setiap butir sumber dalam urutan bacanya: empat puluh tiga tugas eksplorasi atau kegiatan dan tiga puluh tujuh perintah latihan. Delapan pemeriksaan penguasaan tambahan menguji pemindahan gagasan ke situasi baru.</div> <div class="para" id="p-3876">Seluruh uraian pendamping dan pemeriksaan penguasaan ini ditulis secara mandiri untuk edisi ini. Uraian tersebut bukan teks Steven Schlicker atau Grand Valley State University dan tidak menyalin ungkapan dari karya pembanding. Komponen asli ini memiliki identitas lisensi terpisah dan disediakan di bawah Creative Commons Attribution 4.0 International (CC BY 4.0). Terjemahan bab utama tetap merupakan turunan GVSU yang diperlakukan secara konservatif menurut CC BY-NC-SA 3.0.</div> <div class="para" id="p-3877">Jawaban memberi hasil langsung, sedangkan solusi memperlihatkan urutan definisi, konstruksi, atau contoh penyangkal yang diperlukan. Untuk pertanyaan yang sengaja bersifat terbuka, solusi berfungsi sebagai rubrik penilaian. Dengan demikian, pembelajar tetap melakukan penyelidikan sebelum melihat penutupan matematisnya.</div></section><nav class="summary-links"><ul>
 <li><a href="o003-c90-ch10-source-guides-a.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></li>
 <li><a href="o003-c90-ch10-source-guides-b.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian kedua</span></a></li>
 <li><a href="o003-c90-ch10-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></li>

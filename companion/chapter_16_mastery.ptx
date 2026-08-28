@@ -1,0 +1,423 @@
+<section xml:id="o003-c90-ch16-mastery" xml:lang="id-ID">
+  <title>Uji Penguasaan Bab 16: Ruang Kuosien</title>
+
+  <p>
+    Delapan uji penguasaan ini mengintegrasikan konstruksi, sifat universal,
+    model geometris, dan contoh tandingan Bab 16. Kerjakan setiap pernyataan
+    sebelum membuka petunjuk, jawaban, dan solusi secara bertahap.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0,
+    bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch16-mastery-01">
+    <title>Membangun topologi kuosien dan membuktikan kemaksimalannya</title>
+    <statement>
+      <p>
+        Misalkan <m>p:X\to Y</m> suatu surjeksi dari ruang topologi
+        <m>(X,\tau)</m> ke suatu himpunan <m>Y</m>. Definisikan
+        <me>
+          \tau_p=\{U\subseteq Y\mid p^{-1}(U)\in\tau\}.
+        </me>
+        Buktikan bahwa <m>\tau_p</m> adalah topologi pada <m>Y</m>, bahwa
+        <m>p:(X,\tau)\to(Y,\tau_p)</m> kontinu, dan bahwa <m>\tau_p</m>
+        merupakan topologi terbesar pada <m>Y</m> yang membuat <m>p</m>
+        kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-01-hint">
+      <p><em>Tahap 1.</em> Gunakan prapeta <m>p^{-1}(\emptyset)</m> dan <m>p^{-1}(Y)</m>.</p>
+      <p><em>Tahap 2.</em> Prapeta mempertahankan gabungan sebarang dan irisan berhingga.</p>
+      <p><em>Tahap 3.</em> Jika topologi lain <m>\sigma</m> membuat <m>p</m> kontinu, uji setiap <m>U\in\sigma</m> terhadap definisi <m>\tau_p</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-01-answer">
+      <p>
+        Ketiga aksioma topologi mengikuti hukum prapeta. Kekontinuan
+        <m>p</m> berlaku langsung dari definisi. Jika <m>\sigma</m> juga
+        membuat <m>p</m> kontinu, maka setiap <m>U\in\sigma</m> memenuhi
+        <m>p^{-1}(U)\in\tau</m>, sehingga <m>\sigma\subseteq\tau_p</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-01-solution">
+      <p>
+        Karena <m>p^{-1}(\emptyset)=\emptyset</m> dan
+        <m>p^{-1}(Y)=X</m>, kedua himpunan wajib berada dalam
+        <m>\tau_p</m>. Jika <m>U_i\in\tau_p</m> untuk <m>i\in I</m>, maka
+        <me>
+          p^{-1}\left(\bigcup_{i\in I}U_i\right)
+          =\bigcup_{i\in I}p^{-1}(U_i)\in\tau,
+        </me>
+        sehingga gabungan itu berada dalam <m>\tau_p</m>. Jika
+        <m>U,V\in\tau_p</m>, maka
+        <me>
+          p^{-1}(U\cap V)=p^{-1}(U)\cap p^{-1}(V)\in\tau.
+        </me>
+        Induksi memberi penutupan terhadap irisan berhingga. Jadi
+        <m>\tau_p</m> adalah topologi.
+      </p>
+      <p>
+        Definisi <m>\tau_p</m> tepat menyatakan bahwa prapeta setiap himpunan
+        terbuka di kodomain terbuka dalam <m>X</m>; maka <m>p</m> kontinu.
+        Sekarang misalkan <m>\sigma</m> topologi pada <m>Y</m> yang juga
+        membuat <m>p</m> kontinu. Untuk setiap <m>U\in\sigma</m>, kekontinuan
+        memberi <m>p^{-1}(U)\in\tau</m>. Jadi <m>U\in\tau_p</m>, sehingga
+        <m>\sigma\subseteq\tau_p</m>. Inilah arti bahwa <m>\tau_p</m>
+        merupakan topologi terbesar yang dimaksud.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-mastery-02">
+    <title>Dari serat surjeksi ke kelas ekuivalensi</title>
+    <statement>
+      <p>
+        Untuk surjeksi <m>p:X\to Y</m>, definisikan <m>x\sim_p x'</m> jika
+        dan hanya jika <m>p(x)=p(x')</m>. Buktikan bahwa <m>\sim_p</m>
+        merupakan relasi ekuivalensi. Jika <m>q:X\to X/\ssim_p</m> adalah
+        proyeksi kanonis, buktikan bahwa
+        <m>h:X/\ssim_p\to Y</m> yang diberikan oleh
+        <m>h([x])=p(x)</m> merupakan bijeksi. Terakhir, jika kedua kodomain
+        diberi topologi kuosien yang ditentukan oleh <m>q</m> dan <m>p</m>,
+        buktikan bahwa <m>h</m> adalah homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-02-hint">
+      <p><em>Tahap 1.</em> Periksa refleksivitas, simetri, dan transitivitas melalui kesamaan nilai <m>p</m>.</p>
+      <p><em>Tahap 2.</em> Keterdefinisian <m>h</m> tepat memakai definisi <m>\sim_p</m>.</p>
+      <p><em>Tahap 3.</em> Untuk <m>U\subseteq Y</m>, bandingkan <m>q^{-1}(h^{-1}(U))</m> dengan <m>p^{-1}(U)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-02-answer">
+      <p>
+        Relasi tersebut mengelompokkan tepat titik-titik dalam serat yang
+        sama. Pemetaan <m>h</m> terdefinisi dengan baik dan bijektif, serta
+        memenuhi <m>h\circ q=p</m>. Identitas
+        <m>q^{-1}(h^{-1}(U))=p^{-1}(U)</m> menunjukkan bahwa <m>U</m> terbuka
+        tepat ketika <m>h^{-1}(U)</m> terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-02-solution">
+      <p>
+        Kesamaan <m>p(x)=p(x)</m> memberi refleksivitas. Jika
+        <m>p(x)=p(x')</m>, simetri kesamaan memberi <m>p(x')=p(x)</m>. Jika
+        <m>p(x)=p(x')</m> dan <m>p(x')=p(x'')</m>, transitivitas kesamaan
+        memberi <m>p(x)=p(x'')</m>. Jadi <m>\sim_p</m> relasi ekuivalensi.
+      </p>
+      <p>
+        Jika <m>[x]=[x']</m>, maka <m>x\sim_p x'</m> dan
+        <m>p(x)=p(x')</m>; karena itu rumus <m>h([x])=p(x)</m> tidak
+        bergantung pada wakil. Surjektivitas <m>p</m> memberi surjektivitas
+        <m>h</m>. Jika <m>h([x])=h([x'])</m>, maka
+        <m>p(x)=p(x')</m>, sehingga <m>[x]=[x']</m>; jadi <m>h</m> injektif.
+      </p>
+      <p>
+        Untuk setiap <m>U\subseteq Y</m>, berlaku
+        <me>
+          q^{-1}(h^{-1}(U))=(h\circ q)^{-1}(U)=p^{-1}(U).
+        </me>
+        Menurut definisi kedua topologi kuosien, ruas kanan terbuka dalam
+        <m>X</m> jika dan hanya jika <m>U</m> terbuka dalam <m>Y</m>, dan ruas
+        kiri terbuka dalam <m>X</m> jika dan hanya jika <m>h^{-1}(U)</m>
+        terbuka dalam <m>X/\ssim_p</m>. Jadi <m>U</m> terbuka tepat ketika
+        <m>h^{-1}(U)</m> terbuka. Bijeksi <m>h</m> beserta kesetaraan ini
+        adalah homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-mastery-03">
+    <title>Mengenali empat kuosien persegi</title>
+    <statement>
+      <p>
+        Ambil persegi satuan <m>I^2=[0,1]\times[0,1]</m>. Kenali ruang
+        kuosien yang diperoleh dalam masing-masing kasus berikut dan berikan
+        justifikasi geometris: (i) hanya sisi bawah dan atas direkatkan dengan
+        <m>(x,0)\sim(x,1)</m>; (ii) keduanya direkatkan berlawanan arah dengan
+        <m>(x,0)\sim(1-x,1)</m>; (iii) kedua pasangan sisi berhadapan
+        direkatkan searah; (iv) seluruh batas <m>\partial I^2</m> diciutkan
+        menjadi satu titik.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-03-hint">
+      <p><em>Tahap 1.</em> Gulung persegi tanpa atau dengan satu pembalikan.</p>
+      <p><em>Tahap 2.</em> Setelah satu pasangan sisi direkatkan menjadi silinder, rekatkan dua lingkaran batasnya untuk kasus (iii).</p>
+      <p><em>Tahap 3.</em> Pandang interior persegi sebagai cakram terbuka dan titik hasil penciutan batas sebagai titik tambahan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-03-answer">
+      <p>
+        Hasilnya berturut-turut adalah silinder, pita Möbius, torus, dan
+        permukaan bola <m>S^2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-03-solution">
+      <p>
+        Pada (i), setiap ruas horizontal tetap menjadi ruas, sedangkan kedua
+        ujung setiap ruas vertikal pada sisi bawah dan atas diidentifikasi.
+        Arah vertikal menjadi lingkaran, sehingga hasilnya homeomorfik dengan
+        <m>S^1\times I</m>, yaitu silinder.
+      </p>
+      <p>
+        Pada (ii), pembalikan <m>x\mapsto1-x</m> memberi satu puntiran sebelum
+        kedua sisi direkatkan. Inilah model poligonal pita Möbius. Pada (iii),
+        satu pasangan sisi terlebih dahulu menghasilkan silinder; dua
+        lingkaran batas silinder kemudian direkatkan dengan arah yang sama.
+        Hasilnya <m>S^1\times S^1</m>, yaitu torus.
+      </p>
+      <p>
+        Untuk (iv), persegi homeomorfik dengan cakram tertutup. Menciutkan
+        seluruh lingkaran batas menjadi satu titik memberi kompaktifikasi satu
+        titik dari cakram terbuka, yang homeomorfik dengan <m>S^2</m>. Secara
+        konkret, petakan interior secara radial ke permukaan bola tanpa satu
+        titik dan kirim seluruh batas ke titik yang tersisa.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-mastery-04">
+    <title>Faktorisasi himpunan melalui kuosien</title>
+    <statement>
+      <p>
+        Misalkan <m>\sim</m> relasi ekuivalensi pada himpunan <m>X</m> dan
+        <m>q:X\to X/\ssim</m> proyeksi kanonis. Jika fungsi
+        <m>f:X\to Z</m> memenuhi <m>x\sim y\Rightarrow f(x)=f(y)</m>,
+        buktikan bahwa terdapat tepat satu fungsi
+        <m>\bar f:X/\ssim\to Z</m> dengan <m>f=\bar f\circ q</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-04-hint">
+      <p><em>Tahap 1.</em> Definisikan <m>\bar f([x])=f(x)</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan hipotesis untuk membuktikan bahwa pilihan wakil tidak berpengaruh.</p>
+      <p><em>Tahap 3.</em> Untuk keunikan, evaluasi fungsi calon pada kelas <m>[x]=q(x)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-04-answer">
+      <p>
+        Fungsi tunggal tersebut adalah <m>\bar f([x])=f(x)</m>. Hipotesis
+        menjamin keterdefinisiannya, dan surjektivitas <m>q</m> memaksa setiap
+        faktorisasi lain mempunyai nilai yang sama pada semua kelas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-04-solution">
+      <p>
+        Definisikan <m>\bar f([x])=f(x)</m>. Jika <m>[x]=[y]</m>, maka
+        <m>x\sim y</m>, sehingga hipotesis memberi <m>f(x)=f(y)</m>. Jadi
+        <m>\bar f</m> terdefinisi dengan baik. Untuk setiap <m>x\in X</m>,
+        <me>
+          (\bar f\circ q)(x)=\bar f([x])=f(x),
+        </me>
+        sehingga <m>f=\bar f\circ q</m>.
+      </p>
+      <p>
+        Jika <m>g:X/\ssim\to Z</m> juga memenuhi <m>f=g\circ q</m>, ambil
+        sebarang kelas <m>[x]</m>. Karena setiap kelas mempunyai wakil,
+        <m>g([x])=g(q(x))=f(x)=\bar f([x])</m>. Maka <m>g=\bar f</m>, jadi
+        faktorisasi itu unik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-mastery-05">
+    <title>Sifat universal topologis</title>
+    <statement>
+      <p>
+        Dalam situasi uji sebelumnya, anggap <m>X</m> ruang topologi,
+        <m>X/\ssim</m> memakai topologi kuosien, dan <m>Z</m> ruang topologi.
+        Buktikan bahwa fungsi terinduksi <m>\bar f</m> kontinu jika dan hanya
+        jika <m>f=\bar f\circ q</m> kontinu. Tuliskan secara eksplisit
+        identitas prapeta yang membuat kedua ruang tempat prapeta itu berada
+        tidak tertukar.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-05-hint">
+      <p><em>Tahap 1.</em> Satu arah mengikuti komposisi fungsi kontinu.</p>
+      <p><em>Tahap 2.</em> Untuk himpunan terbuka <m>O\subseteq Z</m>, hitung <m>f^{-1}(O)</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan kriteria topologi kuosien pada himpunan <m>\bar f^{-1}(O)\subseteq X/\ssim</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-05-answer">
+      <p>
+        Identitas yang benar adalah
+        <m>f^{-1}(O)=q^{-1}(\bar f^{-1}(O))</m>. Karena <m>q</m> pemetaan
+        kuosien, keterbukaan ruas kanan sebagai prapeta di <m>X</m> tepat
+        menguji keterbukaan <m>\bar f^{-1}(O)</m> di <m>X/\ssim</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-05-solution">
+      <p>
+        Jika <m>\bar f</m> kontinu, maka <m>f=\bar f\circ q</m> kontinu
+        sebagai komposisi dua fungsi kontinu. Sebaliknya, andaikan <m>f</m>
+        kontinu dan ambil himpunan terbuka <m>O\subseteq Z</m>. Faktorisasi
+        memberi identitas bertipe benar
+        <me>
+          f^{-1}(O)=(\bar f\circ q)^{-1}(O)
+          =q^{-1}\left(\bar f^{-1}(O)\right).
+        </me>
+        Ruas kiri terbuka dalam <m>X</m> karena <m>f</m> kontinu. Definisi
+        topologi kuosien menyatakan bahwa suatu himpunan
+        <m>V\subseteq X/\ssim</m> terbuka tepat ketika <m>q^{-1}(V)</m>
+        terbuka dalam <m>X</m>. Terapkan ini pada
+        <m>V=\bar f^{-1}(O)</m>. Maka <m>\bar f^{-1}(O)</m> terbuka untuk
+        setiap <m>O</m> terbuka, sehingga <m>\bar f</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-mastery-06">
+    <title>Homeomorfisme antara garis modulo bilangan bulat dan lingkaran</title>
+    <statement>
+      <p>
+        Definisikan <m>f:\R\to S^1</m> dengan
+        <m>f(t)=(\cos(2\pi t),\sin(2\pi t))</m>, dan pada <m>\R</m>
+        definisikan <m>s\sim t</m> jika dan hanya jika
+        <m>s-t\in\Z</m>. Buktikan bahwa fungsi terinduksi
+        <m>\bar f:\R/\Z\to S^1</m> merupakan homeomorfisme. Jangan memakai
+        teorema “bijeksi kontinu dari ruang kompak ke ruang Hausdorff.”
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-06-hint">
+      <p><em>Tahap 1.</em> Periksa bahwa serat-serat <m>f</m> tepat kelas-kelas modulo <m>\Z</m>.</p>
+      <p><em>Tahap 2.</em> Buktikan <m>f</m> terbuka secara lokal dengan selang terbuka berpanjang kurang dari <m>1</m>.</p>
+      <p><em>Tahap 3.</em> Bijeksi kontinu yang terbuka mempunyai invers kontinu.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-06-answer">
+      <p>
+        Serat <m>f</m> adalah kelas modulo bilangan bulat, sehingga
+        <m>\bar f</m> bijektif. Fungsi <m>f</m> kontinu dan terbuka; karena
+        <m>f=\bar f\circ q</m>, sifat kuosien memberi kekontinuan
+        <m>\bar f</m>, sedangkan keterbukaan <m>f</m> memberi keterbukaan
+        <m>\bar f</m>. Jadi inversnya kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-06-solution">
+      <p>
+        Periodisitas fungsi sinus dan kosinus memberi
+        <m>f(s)=f(t)</m> jika dan hanya jika <m>s-t\in\Z</m>. Karena
+        <m>f</m> juga surjektif, faktorisasi melalui proyeksi
+        <m>q:\R\to\R/\Z</m> menghasilkan bijeksi
+        <m>\bar f([t])=f(t)</m>. Kekontinuan <m>f</m> dan sifat universal
+        topologi kuosien memberi kekontinuan <m>\bar f</m>.
+      </p>
+      <p>
+        Untuk membuktikan keterbukaan, ambil himpunan terbuka
+        <m>U\subseteq\R</m>. Di sekitar setiap <m>t\in U</m>, pilih selang
+        terbuka <m>J_t\subseteq U</m> dengan panjang kurang dari <m>1</m>.
+        Pembatasan <m>f|_{J_t}</m> memetakan <m>J_t</m> homeomorfik ke suatu
+        busur terbuka pada <m>S^1</m>. Karena
+        <me>
+          f(U)=\bigcup_{t\in U}f(J_t),
+        </me>
+        himpunan <m>f(U)</m> terbuka. Jika <m>W</m> terbuka dalam
+        <m>\R/\Z</m>, maka <m>q^{-1}(W)</m> terbuka dan
+        <m>\bar f(W)=f(q^{-1}(W))</m> terbuka. Jadi <m>\bar f</m> adalah
+        bijeksi kontinu yang terbuka, sehingga <m>\bar f^{-1}</m> kontinu.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-mastery-07">
+    <title>Tiga model bidang proyektif real</title>
+    <statement>
+      <p>
+        Tunjukkan hubungan homeomorfik antara tiga model
+        <m>\mathbb{R}P^2</m>: (i) garis-garis satu dimensi melalui titik asal
+        dalam <m>\R^3</m>; (ii) <m>S^2</m> dengan pasangan titik antipodal
+        diidentifikasi; dan (iii) cakram tertutup <m>D^2</m> dengan pasangan
+        titik antipodal pada batasnya diidentifikasi. Jelaskan mengapa hanya
+        titik-titik batas pada model cakram yang masih perlu diidentifikasi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-07-hint">
+      <p><em>Tahap 1.</em> Setiap garis melalui asal memotong <m>S^2</m> di tepat dua titik antipodal.</p>
+      <p><em>Tahap 2.</em> Pilih wakil setiap pasangan antipodal pada hemisfer atas tertutup.</p>
+      <p><em>Tahap 3.</em> Proyeksikan hemisfer itu ke cakram ekuator pada bidang <m>xy</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-07-answer">
+      <p>
+        Normalisasi vektor tak nol memotong setiap garis pada pasangan
+        <m>\{u,-u\}</m> di <m>S^2</m>. Setiap pasangan mempunyai satu wakil
+        di interior hemisfer atas, sedangkan pasangan pada ekuator mempunyai
+        dua wakil antipodal. Proyeksi hemisfer ke <m>D^2</m> menerjemahkan
+        tepat identifikasi ekuator itu menjadi identifikasi antipodal batas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-07-solution">
+      <p>
+        Suatu titik model (i) adalah garis <m>L=\{tv:t\in\R\}</m> untuk
+        vektor tak nol <m>v</m>. Garis itu memotong permukaan bola satuan di
+        dua titik <m>u=v/\lVert v\rVert</m> dan <m>-u</m>. Karena mengganti
+        vektor pembangkit tidak mengubah garis, model garis tepat merupakan
+        kuosien <m>S^2/(u\sim-u)</m>, yaitu model (ii).
+      </p>
+      <p>
+        Setiap kelas antipodal mempunyai wakil pada hemisfer atas tertutup
+        <m>H=\{(x,y,z)\in S^2:z\geq0\}</m>. Jika <m>z>0</m>, tepat satu dari
+        <m>u</m> dan <m>-u</m> berada dalam <m>H</m>. Jika <m>z=0</m>, kedua
+        titik berada pada ekuator dan tetap harus diidentifikasi. Proyeksi
+        <m>(x,y,z)\mapsto(x,y)</m> memetakan <m>H</m> homeomorfik ke cakram
+        tertutup <m>D^2</m>. Ekuator menjadi batas <m>S^1</m>, dan pasangan
+        antipodal ekuator menjadi pasangan <m>(x,y)</m> dan <m>(-x,-y)</m>
+        pada batas. Interior tidak memerlukan identifikasi tambahan. Jadi
+        model (ii) dan (iii) homeomorfik sebagai ruang kuosien.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch16-mastery-08">
+    <title>Pemetaan kuosien, retraksi, dan batas Hausdorff</title>
+    <statement>
+      <p>
+        Kerjakan tiga bagian berikut. (i) Jika <m>A\subseteq X</m> dan
+        <m>r:X\to A</m> adalah retraksi, buktikan bahwa <m>r</m> merupakan
+        pemetaan kuosien. (ii) Jika <m>X</m> Hausdorff, buktikan bahwa setiap
+        retrak <m>A</m> tertutup dalam <m>X</m>. (iii) Berikan contoh surjeksi
+        kontinu yang bukan pemetaan kuosien dan jelaskan kegagalannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch16-mastery-08-hint">
+      <p><em>Tahap 1.</em> Untuk <m>U\subseteq A</m>, gunakan inklusi <m>i:A\hookrightarrow X</m> dan identitas <m>r\circ i=\operatorname{id}_A</m>.</p>
+      <p><em>Tahap 2.</em> Retrak adalah himpunan titik tetap dari <m>i\circ r:X\to X</m>; gunakan diagonal tertutup di <m>X\times X</m>.</p>
+      <p><em>Tahap 3.</em> Bandingkan identitas dari garis real diskret ke garis real bertopologi standar.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch16-mastery-08-answer">
+      <p>
+        Retraksi adalah surjeksi kontinu dan keterbukaan <m>r^{-1}(U)</m>
+        memaksa keterbukaan <m>U=i^{-1}(r^{-1}(U))</m>. Dalam ruang
+        Hausdorff, himpunan titik tetap suatu fungsi kontinu tertutup. Contoh
+        tandingan pada (iii) adalah fungsi identitas dari <m>\R</m> diskret
+        ke <m>\R</m> standar: kontinu dan surjektif, tetapi topologi
+        kuosien yang diinduksinya adalah topologi diskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch16-mastery-08-solution">
+      <p>
+        Misalkan <m>U\subseteq A</m>. Jika <m>U</m> terbuka dalam <m>A</m>,
+        kekontinuan <m>r</m> memberi keterbukaan <m>r^{-1}(U)</m> dalam
+        <m>X</m>. Sebaliknya, jika <m>r^{-1}(U)</m> terbuka dalam <m>X</m>,
+        maka
+        <me>
+          U=(r\circ i)^{-1}(U)=i^{-1}(r^{-1}(U))
+        </me>
+        terbuka dalam topologi subruang pada <m>A</m>. Jadi <m>U</m> terbuka
+        tepat ketika prapetanya di bawah <m>r</m> terbuka; karena <m>r</m>
+        surjektif, <m>r</m> pemetaan kuosien.
+      </p>
+      <p>
+        Tuliskan <m>F=i\circ r:X\to X</m>. Karena <m>r(a)=a</m> bagi setiap
+        <m>a\in A</m> dan <m>r(x)\in A</m>, himpunan titik tetap <m>F</m>
+        tepat <m>A</m>. Pemetaan <m>x\mapsto(x,F(x))</m> kontinu dari
+        <m>X</m> ke <m>X\times X</m>. Karena <m>X</m> Hausdorff, diagonal
+        <m>\Delta_X=\{(x,x):x\in X\}</m> tertutup. Maka
+        <m>A=\{x:F(x)=x\}</m> adalah prapeta diagonal tersebut dan tertutup.
+      </p>
+      <p>
+        Terakhir, biarkan <m>X=\R</m> bertopologi diskret dan
+        <m>Y=\R</m> bertopologi standar, lalu ambil identitas himpunan
+        <m>p:X\to Y</m>. Setiap prapeta himpunan terbuka di <m>Y</m> terbuka
+        di <m>X</m>, jadi <m>p</m> kontinu dan jelas surjektif. Namun bagi
+        setiap <m>U\subseteq Y</m>, prapeta <m>p^{-1}(U)=U</m> terbuka dalam
+        <m>X</m>. Jadi topologi kuosien yang ditentukan <m>p</m> adalah
+        topologi diskret, lebih besar daripada topologi standar pada <m>Y</m>.
+        Karena topologi aktual kodomain bukan topologi kuosien itu, <m>p</m>
+        bukan pemetaan kuosien.
+      </p>
+    </solution>
+  </exercise>
+</section>

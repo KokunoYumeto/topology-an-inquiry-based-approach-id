@@ -82,11 +82,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
-</head>
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="o003-c90-chapters-01-15-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-15 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, serta Pendamping Belajar Mandiri</span></a></h1>
+<h1 class="heading"><a href="o003-c90-chapters-01-16-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Bab 1-16 - Himpunan, Fungsi, Ruang Metrik, Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Ruang Kuosien, serta Pendamping Belajar Mandiri</span></a></h1>
 <p class="byline">Steven Schlicker</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -203,12 +203,15 @@ window.MathJax = {
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\lub}{\text{lub}}
 \newcommand{\glb}{\text{glb}}
 \newcommand{\Int}{\text{Int}}
 \newcommand{\Bdry}{\text{Bdry}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
 \newcommand{\la}{\left|}
 \newcommand{\ra}{\right|}
 \newcommand{\lt}{&lt;}
@@ -221,7 +224,7 @@ window.MathJax = {
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch15-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-ch16-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
@@ -345,7 +348,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, dan Subruang</span></a></div>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, dan Ruang Kuosien</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
@@ -394,6 +397,17 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
 <li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +577,18 @@ window.MathJax = {
 <li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
 <li><div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="title">Kolofon</span></a></div></li>
 </ul>
@@ -571,11 +597,11 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-ch15-source-guides-b"><h2 class="heading hide-type">
 <span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Panduan Belajar Mandiri: Basis Subruang dan Interval Terbuka</span>
 </h2>
-<div class="para" id="p-5926">Enam panduan ini melanjutkan dukungan belajar mandiri Bab 15: satu pembuktian basis terinduksi dan lima langkah pembuktian homeomorfisme antara garis real dan interval terbuka. Gunakan petunjuk, jawaban, dan solusi hanya setelah mencoba tugas utama secara mandiri.</div>
-<div class="para" id="p-5927">Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.</div>
+<div class="para" id="p-6044">Enam panduan ini melanjutkan dukungan belajar mandiri Bab 15: satu pembuktian basis terinduksi dan lima langkah pembuktian homeomorfisme antara garis real dan interval terbuka. Gunakan petunjuk, jawaban, dan solusi hanya setelah mencoba tugas utama secara mandiri.</div>
+<div class="para" id="p-6045">Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.</div>
 <article class="exercise exercise-like" id="o003-c90-ch15-guide-11"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-guide-11"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.11</span><span class="period">.</span><span class="space"> </span><span class="title">Membuktikan Basis bagi Topologi Subruang.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-11"><article class="exercise exercise-like"><div class="para logical" id="p-5928">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-11"><article class="exercise exercise-like"><div class="para logical" id="p-6046">
 <div class="para">Misalkan <span class="process-math">\((X,\tau)\)</span> suatu ruang topologi dengan basis <span class="process-math">\(\B\text{,}\)</span> dan misalkan <span class="process-math">\(A\)</span> suatu subruang dari <span class="process-math">\(X\text{.}\)</span> Untuk</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -587,19 +613,19 @@ window.MathJax = {
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-guide-11-hint" id="o003-c90-ch15-guide-11-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-11-hint"><div class="hint solution-like">
-<div class="para" id="p-5929">
+<div class="para" id="p-6047">
 <em class="emphasis">Tahap 1.</em> Untuk <span class="process-math">\(x\in A\text{,}\)</span> gunakan sifat basis <span class="process-math">\(\B\)</span> untuk mencari <span class="process-math">\(B\in\B\)</span> yang memuat <span class="process-math">\(x\text{.}\)</span>
-</div> <div class="para" id="p-5930">
+</div> <div class="para" id="p-6048">
 <em class="emphasis">Tahap 2.</em> Jika <span class="process-math">\(x\in(B_1\cap A)\cap(B_2\cap A)\text{,}\)</span> cari <span class="process-math">\(B_3\in\B\)</span> dengan <span class="process-math">\(x\in B_3\subseteq B_1\cap B_2\text{.}\)</span>
-</div> <div class="para" id="p-5931">
+</div> <div class="para" id="p-6049">
 <em class="emphasis">Tahap 3.</em> Tunjukkan pula bahwa setiap <span class="process-math">\(A\cap O\text{,}\)</span> dengan <span class="process-math">\(O\)</span> terbuka dalam <span class="process-math">\(X\text{,}\)</span> merupakan gabungan anggota <span class="process-math">\(\B_A\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-11-answer" id="o003-c90-ch15-guide-11-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-11-answer"><div class="answer solution-like"><div class="para" id="p-5932">Ya. Keluarga <span class="process-math">\(\B_A\)</span> memenuhi kedua kriteria basis pada <span class="process-math">\(A\text{,}\)</span> dan gabungan anggota-anggotanya tepat menghasilkan seluruh himpunan <span class="process-math">\(A\cap O\)</span> dengan <span class="process-math">\(O\in\tau\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-11-answer" id="o003-c90-ch15-guide-11-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-11-answer"><div class="answer solution-like"><div class="para" id="p-6050">Ya. Keluarga <span class="process-math">\(\B_A\)</span> memenuhi kedua kriteria basis pada <span class="process-math">\(A\text{,}\)</span> dan gabungan anggota-anggotanya tepat menghasilkan seluruh himpunan <span class="process-math">\(A\cap O\)</span> dengan <span class="process-math">\(O\in\tau\text{.}\)</span>
 </div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-11-solution" id="o003-c90-ch15-guide-11-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-11-solution"><div class="solution solution-like">
-<div class="para" id="p-5933">Pertama, ambil <span class="process-math">\(x\in A\text{.}\)</span> Karena <span class="process-math">\(\B\)</span> basis bagi <span class="process-math">\(X\text{,}\)</span> terdapat <span class="process-math">\(B\in\B\)</span> dengan <span class="process-math">\(x\in B\text{.}\)</span> Maka <span class="process-math">\(x\in B\cap A\)</span> dan <span class="process-math">\(B\cap A\in\B_A\text{.}\)</span> Jadi anggota-anggota <span class="process-math">\(\B_A\)</span> menutupi <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para logical" id="p-5934">
+<div class="para" id="p-6051">Pertama, ambil <span class="process-math">\(x\in A\text{.}\)</span> Karena <span class="process-math">\(\B\)</span> basis bagi <span class="process-math">\(X\text{,}\)</span> terdapat <span class="process-math">\(B\in\B\)</span> dengan <span class="process-math">\(x\in B\text{.}\)</span> Maka <span class="process-math">\(x\in B\cap A\)</span> dan <span class="process-math">\(B\cap A\in\B_A\text{.}\)</span> Jadi anggota-anggota <span class="process-math">\(\B_A\)</span> menutupi <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para logical" id="p-6052">
 <div class="para">Kedua, andaikan <span class="process-math">\(x\in(B_1\cap A)\cap(B_2\cap A)\text{,}\)</span> dengan <span class="process-math">\(B_1,B_2\in\B\text{.}\)</span> Karena <span class="process-math">\(x\in B_1\cap B_2\text{,}\)</span> sifat basis <span class="process-math">\(\B\)</span> menghasilkan <span class="process-math">\(B_3\in\B\)</span> sedemikian sehingga <span class="process-math">\(x\in B_3\subseteq B_1\cap B_2\text{.}\)</span> Akibatnya,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -608,7 +634,7 @@ x\in B_3\cap A
 \end{equation*}
 </div>
 <div class="para">dan <span class="process-math">\(B_3\cap A\in\B_A\text{.}\)</span> Dengan demikian kedua kriteria basis terpenuhi.</div>
-</div> <div class="para logical" id="p-5935">
+</div> <div class="para logical" id="p-6053">
 <div class="para">Masih perlu mengidentifikasi topologi yang dibangkitkan. Setiap <span class="process-math">\(B\in\B\)</span> terbuka dalam <span class="process-math">\(X\text{,}\)</span> sehingga setiap <span class="process-math">\(B\cap A\)</span> terbuka relatif. Jadi topologi yang dibangkitkan <span class="process-math">\(\B_A\)</span> termuat dalam <span class="process-math">\(\tau_A\text{.}\)</span> Sebaliknya, jika <span class="process-math">\(U\in\tau_A\text{,}\)</span> tulis <span class="process-math">\(U=A\cap O\)</span> untuk suatu <span class="process-math">\(O\in\tau\text{.}\)</span> Karena <span class="process-math">\(\B\)</span> basis, ada keluarga <span class="process-math">\(\{B_i\}_{i\in I}\subseteq\B\)</span> dengan <span class="process-math">\(O=\bigcup_{i\in I}B_i\text{.}\)</span> Maka</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -622,7 +648,7 @@ U=A\cap O=\bigcup_{i\in I}(A\cap B_i),
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-guide-12"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-guide-12"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.12</span><span class="period">.</span><span class="space"> </span><span class="title">Keterdefinisian Fungsi Tangen.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-12"><article class="exercise exercise-like"><div class="para logical" id="p-5936">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-12"><article class="exercise exercise-like"><div class="para logical" id="p-6054">
 <div class="para">Definisikan <span class="process-math">\(f:(0,1)\to\R\)</span> dengan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -633,15 +659,15 @@ f(x)=\tan\left(\pi\left(x-\frac12\right)\right).
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-guide-12-hint" id="o003-c90-ch15-guide-12-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-12-hint"><div class="hint solution-like">
-<div class="para" id="p-5937">
+<div class="para" id="p-6055">
 <em class="emphasis">Tahap 1.</em> Tentukan rentang <span class="process-math">\(x-\frac12\)</span> ketika <span class="process-math">\(0\lt x\lt1\text{.}\)</span>
-</div> <div class="para" id="p-5938">
+</div> <div class="para" id="p-6056">
 <em class="emphasis">Tahap 2.</em> Kalikan pertidaksamaan tersebut dengan <span class="process-math">\(\pi\text{.}\)</span>
-</div> <div class="para" id="p-5939">
+</div> <div class="para" id="p-6057">
 <em class="emphasis">Tahap 3.</em> Ingat pada interval mana fungsi tangen terdefinisi dan bernilai real.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-12-answer" id="o003-c90-ch15-guide-12-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-12-answer"><div class="answer solution-like"><div class="para" id="p-5940">Jika <span class="process-math">\(0\lt x\lt1\text{,}\)</span> maka <span class="process-math">\(-\frac{\pi}{2}\lt\pi(x-\frac12)\lt\frac{\pi}{2}\text{.}\)</span> Fungsi tangen terdefinisi dan bernilai real pada interval tersebut.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-12-solution" id="o003-c90-ch15-guide-12-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-12-solution"><div class="solution solution-like"><div class="para logical" id="p-5941">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-12-answer" id="o003-c90-ch15-guide-12-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-12-answer"><div class="answer solution-like"><div class="para" id="p-6058">Jika <span class="process-math">\(0\lt x\lt1\text{,}\)</span> maka <span class="process-math">\(-\frac{\pi}{2}\lt\pi(x-\frac12)\lt\frac{\pi}{2}\text{.}\)</span> Fungsi tangen terdefinisi dan bernilai real pada interval tersebut.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-12-solution" id="o003-c90-ch15-guide-12-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-12-solution"><div class="solution solution-like"><div class="para logical" id="p-6059">
 <div class="para">Dari <span class="process-math">\(0\lt x\lt1\)</span> diperoleh <span class="process-math">\(-\frac12\lt x-\frac12\lt\frac12\text{,}\)</span> sehingga</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -655,18 +681,18 @@ f(x)=\tan\left(\pi\left(x-\frac12\right)\right).
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-guide-13"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-guide-13"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.13</span><span class="period">.</span><span class="space"> </span><span class="title">Injektivitas Fungsi Tangen.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-13"><article class="exercise exercise-like"><div class="para" id="p-5942">Untuk <span class="process-math">\(f(x)=\tan(\pi(x-\frac12))\)</span> pada <span class="process-math">\((0,1)\text{,}\)</span> jelaskan mengapa <span class="process-math">\(f\)</span> merupakan injeksi.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-13"><article class="exercise exercise-like"><div class="para" id="p-6060">Untuk <span class="process-math">\(f(x)=\tan(\pi(x-\frac12))\)</span> pada <span class="process-math">\((0,1)\text{,}\)</span> jelaskan mengapa <span class="process-math">\(f\)</span> merupakan injeksi.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-guide-13-hint" id="o003-c90-ch15-guide-13-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-13-hint"><div class="hint solution-like">
-<div class="para" id="p-5943">
+<div class="para" id="p-6061">
 <em class="emphasis">Tahap 1.</em> Fungsi <span class="process-math">\(x\mapsto\pi(x-\frac12)\)</span> naik tegas pada <span class="process-math">\((0,1)\text{.}\)</span>
-</div> <div class="para" id="p-5944">
+</div> <div class="para" id="p-6062">
 <em class="emphasis">Tahap 2.</em> Gunakan sifat monoton fungsi tangen pada <span class="process-math">\((-\frac{\pi}{2},\frac{\pi}{2})\text{.}\)</span>
-</div> <div class="para" id="p-5945">
+</div> <div class="para" id="p-6063">
 <em class="emphasis">Tahap 3.</em> Komposisi dua fungsi yang naik tegas juga naik tegas.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-13-answer" id="o003-c90-ch15-guide-13-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-13-answer"><div class="answer solution-like"><div class="para" id="p-5946">Fungsi <span class="process-math">\(f\)</span> naik tegas pada <span class="process-math">\((0,1)\text{,}\)</span> sehingga dua masukan berbeda tidak mungkin mempunyai citra yang sama. Jadi <span class="process-math">\(f\)</span> injektif.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-13-solution" id="o003-c90-ch15-guide-13-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-13-solution"><div class="solution solution-like"><div class="para logical" id="p-5947">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-13-answer" id="o003-c90-ch15-guide-13-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-13-answer"><div class="answer solution-like"><div class="para" id="p-6064">Fungsi <span class="process-math">\(f\)</span> naik tegas pada <span class="process-math">\((0,1)\text{,}\)</span> sehingga dua masukan berbeda tidak mungkin mempunyai citra yang sama. Jadi <span class="process-math">\(f\)</span> injektif.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-13-solution" id="o003-c90-ch15-guide-13-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-13-solution"><div class="solution solution-like"><div class="para logical" id="p-6065">
 <div class="para">Pemetaan afin <span class="process-math">\(h(x)=\pi(x-\frac12)\)</span> naik tegas dan memetakan <span class="process-math">\((0,1)\)</span> ke <span class="process-math">\((-\frac{\pi}{2},\frac{\pi}{2})\text{.}\)</span> Pada interval terakhir, fungsi tangen naik tegas. Jika <span class="process-math">\(x_1\lt x_2\text{,}\)</span> maka</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -679,20 +705,20 @@ f(x)=\tan\left(\pi\left(x-\frac12\right)\right).
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-guide-14"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-guide-14"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.14</span><span class="period">.</span><span class="space"> </span><span class="title">Surjektivitas Fungsi Tangen.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-14"><article class="exercise exercise-like"><div class="para" id="p-5948">Untuk <span class="process-math">\(f:(0,1)\to\R\)</span> yang diberikan oleh <span class="process-math">\(f(x)=\tan(\pi(x-\frac12))\text{,}\)</span> jelaskan mengapa <span class="process-math">\(f\)</span> merupakan surjeksi.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-14"><article class="exercise exercise-like"><div class="para" id="p-6066">Untuk <span class="process-math">\(f:(0,1)\to\R\)</span> yang diberikan oleh <span class="process-math">\(f(x)=\tan(\pi(x-\frac12))\text{,}\)</span> jelaskan mengapa <span class="process-math">\(f\)</span> merupakan surjeksi.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-guide-14-hint" id="o003-c90-ch15-guide-14-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-14-hint"><div class="hint solution-like">
-<div class="para" id="p-5949">
+<div class="para" id="p-6067">
 <em class="emphasis">Tahap 1.</em> Ambil bilangan real sebarang <span class="process-math">\(y\text{.}\)</span>
-</div> <div class="para" id="p-5950">
+</div> <div class="para" id="p-6068">
 <em class="emphasis">Tahap 2.</em> Gunakan <span class="process-math">\(\arctan(y)\in(-\frac{\pi}{2},\frac{\pi}{2})\text{.}\)</span>
-</div> <div class="para" id="p-5951">
+</div> <div class="para" id="p-6069">
 <em class="emphasis">Tahap 3.</em> Selesaikan persamaan <span class="process-math">\(y=\tan(\pi(x-\frac12))\)</span> terhadap <span class="process-math">\(x\text{.}\)</span>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-14-answer" id="o003-c90-ch15-guide-14-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-14-answer"><div class="answer solution-like"><div class="para" id="p-5952">Untuk setiap <span class="process-math">\(y\in\R\text{,}\)</span> ambil <span class="process-math">\(x=\frac12+\frac{1}{\pi}\arctan(y)\text{.}\)</span> Titik ini berada dalam <span class="process-math">\((0,1)\)</span> dan memenuhi <span class="process-math">\(f(x)=y\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-14-answer" id="o003-c90-ch15-guide-14-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-14-answer"><div class="answer solution-like"><div class="para" id="p-6070">Untuk setiap <span class="process-math">\(y\in\R\text{,}\)</span> ambil <span class="process-math">\(x=\frac12+\frac{1}{\pi}\arctan(y)\text{.}\)</span> Titik ini berada dalam <span class="process-math">\((0,1)\)</span> dan memenuhi <span class="process-math">\(f(x)=y\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-14-solution" id="o003-c90-ch15-guide-14-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-14-solution"><div class="solution solution-like"><div class="para logical" id="p-5953">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-14-solution" id="o003-c90-ch15-guide-14-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-14-solution"><div class="solution solution-like"><div class="para logical" id="p-6071">
 <div class="para">Ambil sembarang <span class="process-math">\(y\in\R\text{.}\)</span> Nilai utama <span class="process-math">\(\arctan(y)\)</span> berada dalam <span class="process-math">\((-\frac{\pi}{2},\frac{\pi}{2})\text{.}\)</span> Oleh karena itu</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -713,16 +739,16 @@ f(x)=\tan\left(\pi\left(
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-guide-15"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-guide-15"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.15</span><span class="period">.</span><span class="space"> </span><span class="title">Kekontinuan Fungsi dan Inversnya.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-15"><article class="exercise exercise-like"><div class="para" id="p-5954">Untuk bijeksi <span class="process-math">\(f:(0,1)\to\R\)</span> yang diberikan oleh <span class="process-math">\(f(x)=\tan(\pi(x-\frac12))\text{,}\)</span> jelaskan mengapa <span class="process-math">\(f\)</span> dan <span class="process-math">\(f^{-1}\)</span> kontinu terhadap topologi metrik Euklides.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-15"><article class="exercise exercise-like"><div class="para" id="p-6072">Untuk bijeksi <span class="process-math">\(f:(0,1)\to\R\)</span> yang diberikan oleh <span class="process-math">\(f(x)=\tan(\pi(x-\frac12))\text{,}\)</span> jelaskan mengapa <span class="process-math">\(f\)</span> dan <span class="process-math">\(f^{-1}\)</span> kontinu terhadap topologi metrik Euklides.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-guide-15-hint" id="o003-c90-ch15-guide-15-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-15-hint"><div class="hint solution-like">
-<div class="para" id="p-5955">
-<em class="emphasis">Tahap 1.</em> Tulis <span class="process-math">\(f\)</span> sebagai komposisi fungsi afin dan fungsi tangen.</div> <div class="para" id="p-5956">
+<div class="para" id="p-6073">
+<em class="emphasis">Tahap 1.</em> Tulis <span class="process-math">\(f\)</span> sebagai komposisi fungsi afin dan fungsi tangen.</div> <div class="para" id="p-6074">
 <em class="emphasis">Tahap 2.</em> Gunakan rumus prapeta dari panduan surjektivitas untuk menemukan <span class="process-math">\(f^{-1}\text{.}\)</span>
-</div> <div class="para" id="p-5957">
+</div> <div class="para" id="p-6075">
 <em class="emphasis">Tahap 3.</em> Terapkan teorema kalkulus bahwa fungsi elementer ini kontinu pada domain masing-masing dan komposisi fungsi kontinu tetap kontinu.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-15-answer" id="o003-c90-ch15-guide-15-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-15-answer"><div class="answer solution-like"><div class="para logical" id="p-5958">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-15-answer" id="o003-c90-ch15-guide-15-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-15-answer"><div class="answer solution-like"><div class="para logical" id="p-6076">
 <div class="para">Fungsi <span class="process-math">\(f\)</span> kontinu sebagai komposisi fungsi kontinu, dan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -732,25 +758,25 @@ f^{-1}(y)=\frac12+\frac{1}{\pi}\arctan(y)
 <div class="para">juga kontinu pada seluruh <span class="process-math">\(\R\text{.}\)</span> Jadi <span class="process-math">\(f\)</span> adalah homeomorfisme.</div>
 </div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-15-solution" id="o003-c90-ch15-guide-15-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-15-solution"><div class="solution solution-like">
-<div class="para" id="p-5959">Pemetaan <span class="process-math">\(x\mapsto\pi(x-\frac12)\)</span> kontinu pada <span class="process-math">\((0,1)\text{,}\)</span> dan citranya termuat dalam <span class="process-math">\((-\frac{\pi}{2},\frac{\pi}{2})\text{.}\)</span> Fungsi tangen kontinu pada interval itu. Maka komposisinya, yaitu <span class="process-math">\(f\text{,}\)</span> kontinu.</div> <div class="para" id="p-5960">Dari penyelesaian persamaan <span class="process-math">\(y=f(x)\)</span> diperoleh <span class="process-math">\(f^{-1}(y)=\frac12+\frac{1}{\pi}\arctan(y)\text{.}\)</span> Fungsi arctangen kontinu pada seluruh <span class="process-math">\(\R\text{,}\)</span> demikian pula operasi mengalikan dengan <span class="process-math">\(1/\pi\)</span> dan menambahkan <span class="process-math">\(1/2\text{.}\)</span> Karena itu <span class="process-math">\(f^{-1}:\R\to(0,1)\)</span> kontinu. Kedua interval membawa topologi yang diinduksi oleh metrik Euklides, sehingga kekontinuan kalkulus tersebut adalah kekontinuan topologis yang dibutuhkan. Jadi <span class="process-math">\(f\)</span> merupakan homeomorfisme.</div>
+<div class="para" id="p-6077">Pemetaan <span class="process-math">\(x\mapsto\pi(x-\frac12)\)</span> kontinu pada <span class="process-math">\((0,1)\text{,}\)</span> dan citranya termuat dalam <span class="process-math">\((-\frac{\pi}{2},\frac{\pi}{2})\text{.}\)</span> Fungsi tangen kontinu pada interval itu. Maka komposisinya, yaitu <span class="process-math">\(f\text{,}\)</span> kontinu.</div> <div class="para" id="p-6078">Dari penyelesaian persamaan <span class="process-math">\(y=f(x)\)</span> diperoleh <span class="process-math">\(f^{-1}(y)=\frac12+\frac{1}{\pi}\arctan(y)\text{.}\)</span> Fungsi arctangen kontinu pada seluruh <span class="process-math">\(\R\text{,}\)</span> demikian pula operasi mengalikan dengan <span class="process-math">\(1/\pi\)</span> dan menambahkan <span class="process-math">\(1/2\text{.}\)</span> Karena itu <span class="process-math">\(f^{-1}:\R\to(0,1)\)</span> kontinu. Kedua interval membawa topologi yang diinduksi oleh metrik Euklides, sehingga kekontinuan kalkulus tersebut adalah kekontinuan topologis yang dibutuhkan. Jadi <span class="process-math">\(f\)</span> merupakan homeomorfisme.</div>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="o003-c90-ch15-guide-16"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-ch15-guide-16"><h2 class="heading">
 <span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">O.16</span><span class="period">.</span><span class="space"> </span><span class="title">Homeomorfisme dari Interval Satuan ke Interval Terbuka.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-16"><article class="exercise exercise-like"><div class="para" id="p-5961">Misalkan <span class="process-math">\(a,b\in\R\)</span> dengan <span class="process-math">\(a\lt b\text{.}\)</span> Definisikan fungsi <span class="process-math">\(g:(0,1)\to(a,b)\)</span> dan buktikan bahwa <span class="process-math">\(g\)</span> merupakan homeomorfisme. Jelaskan bagaimana hasil ini, bersama homeomorfisme antara <span class="process-math">\(\R\)</span> dan <span class="process-math">\((0,1)\text{,}\)</span> menunjukkan bahwa <span class="process-math">\(\R\)</span> homeomorfik dengan <span class="process-math">\((a,b)\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-16"><article class="exercise exercise-like"><div class="para" id="p-6079">Misalkan <span class="process-math">\(a,b\in\R\)</span> dengan <span class="process-math">\(a\lt b\text{.}\)</span> Definisikan fungsi <span class="process-math">\(g:(0,1)\to(a,b)\)</span> dan buktikan bahwa <span class="process-math">\(g\)</span> merupakan homeomorfisme. Jelaskan bagaimana hasil ini, bersama homeomorfisme antara <span class="process-math">\(\R\)</span> dan <span class="process-math">\((0,1)\text{,}\)</span> menunjukkan bahwa <span class="process-math">\(\R\)</span> homeomorfik dengan <span class="process-math">\((a,b)\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-ch15-guide-16-hint" id="o003-c90-ch15-guide-16-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-16-hint"><div class="hint solution-like">
-<div class="para" id="p-5962">
+<div class="para" id="p-6080">
 <em class="emphasis">Tahap 1.</em> Gunakan pemetaan afin yang mengirim <span class="process-math">\(0\)</span> ke <span class="process-math">\(a\)</span> dan <span class="process-math">\(1\)</span> ke <span class="process-math">\(b\text{.}\)</span>
-</div> <div class="para" id="p-5963">
+</div> <div class="para" id="p-6081">
 <em class="emphasis">Tahap 2.</em> Temukan rumus inversnya dan gunakan <span class="process-math">\(b-a\gt0\text{.}\)</span>
-</div> <div class="para" id="p-5964">
+</div> <div class="para" id="p-6082">
 <em class="emphasis">Tahap 3.</em> Komposisikan <span class="process-math">\(g\)</span> dengan invers homeomorfisme <span class="process-math">\(f:(0,1)\to\R\)</span> dari panduan sebelumnya.</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-16-answer" id="o003-c90-ch15-guide-16-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-16-answer"><div class="answer solution-like"><div class="para" id="p-5965">Ambil <span class="process-math">\(g(x)=a+(b-a)x\text{.}\)</span> Fungsi ini mempunyai invers <span class="process-math">\(g^{-1}(y)=\frac{y-a}{b-a}\text{;}\)</span> keduanya kontinu. Maka <span class="process-math">\(g\)</span> homeomorfisme, dan <span class="process-math">\(g\circ f^{-1}:\R\to(a,b)\)</span> juga homeomorfisme.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-ch15-guide-16-answer" id="o003-c90-ch15-guide-16-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-16-answer"><div class="answer solution-like"><div class="para" id="p-6083">Ambil <span class="process-math">\(g(x)=a+(b-a)x\text{.}\)</span> Fungsi ini mempunyai invers <span class="process-math">\(g^{-1}(y)=\frac{y-a}{b-a}\text{;}\)</span> keduanya kontinu. Maka <span class="process-math">\(g\)</span> homeomorfisme, dan <span class="process-math">\(g\circ f^{-1}:\R\to(a,b)\)</span> juga homeomorfisme.</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-ch15-guide-16-solution" id="o003-c90-ch15-guide-16-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-ch15-guide-16-solution"><div class="solution solution-like">
-<div class="para" id="p-5966">Definisikan <span class="process-math">\(g(x)=a+(b-a)x\text{.}\)</span> Karena <span class="process-math">\(b-a\gt0\text{,}\)</span> jika <span class="process-math">\(0\lt x\lt1\text{,}\)</span> maka <span class="process-math">\(a\lt a+(b-a)x\lt b\text{;}\)</span> jadi <span class="process-math">\(g\)</span> memang memetakan <span class="process-math">\((0,1)\)</span> ke <span class="process-math">\((a,b)\text{.}\)</span> Fungsi ini naik tegas, sehingga injektif. Untuk setiap <span class="process-math">\(y\in(a,b)\text{,}\)</span> titik <span class="process-math">\(x=(y-a)/(b-a)\)</span> berada dalam <span class="process-math">\((0,1)\)</span> dan memenuhi <span class="process-math">\(g(x)=y\text{,}\)</span> sehingga <span class="process-math">\(g\)</span> juga surjektif.</div> <div class="para logical" id="p-5967">
+<div class="para" id="p-6084">Definisikan <span class="process-math">\(g(x)=a+(b-a)x\text{.}\)</span> Karena <span class="process-math">\(b-a\gt0\text{,}\)</span> jika <span class="process-math">\(0\lt x\lt1\text{,}\)</span> maka <span class="process-math">\(a\lt a+(b-a)x\lt b\text{;}\)</span> jadi <span class="process-math">\(g\)</span> memang memetakan <span class="process-math">\((0,1)\)</span> ke <span class="process-math">\((a,b)\text{.}\)</span> Fungsi ini naik tegas, sehingga injektif. Untuk setiap <span class="process-math">\(y\in(a,b)\text{,}\)</span> titik <span class="process-math">\(x=(y-a)/(b-a)\)</span> berada dalam <span class="process-math">\((0,1)\)</span> dan memenuhi <span class="process-math">\(g(x)=y\text{,}\)</span> sehingga <span class="process-math">\(g\)</span> juga surjektif.</div> <div class="para logical" id="p-6085">
 <div class="para">Fungsi afin <span class="process-math">\(g\)</span> kontinu, dan inversnya</div>
 <div class="displaymath process-math">
 \begin{equation*}
