@@ -1,22 +1,22 @@
 <section xml:id="sec_quotient_space">
-  <title>Quotient Spaces</title>
+  <title>Ruang Kuosien</title>
   <p>
-    As we saw in our preview activity,
-    if we have a surjection <m>p</m> from a topological space <m>(X,\tau)</m> to a set <m>Y</m>,
-    we were able to define a topology on <m>Y</m> by making the open sets the sets
-    <m>U \subseteq Y</m> such that <m>p^{-1}(U)</m> is open in <m>X</m>.
-    This is how we will create what is called the
-    <term>quotient topology</term>.
-    Before we can define the quotient topology,
-    we need to know that this construction always makes a topology.
+    Seperti yang kita lihat dalam aktivitas pendahuluan,
+    jika terdapat surjeksi <m>p</m> dari ruang topologi <m>(X,\tau)</m> ke suatu himpunan <m>Y</m>,
+    kita dapat mendefinisikan topologi pada <m>Y</m> dengan menetapkan himpunan-himpunan terbukanya sebagai semua himpunan
+    <m>U \subseteq Y</m> sedemikian sehingga <m>p^{-1}(U)</m> terbuka di <m>X</m>.
+    Dengan cara inilah kita membentuk apa yang disebut
+    <term>topologi kuosien</term>.
+    Sebelum mendefinisikan topologi kuosien,
+    kita perlu mengetahui bahwa konstruksi ini selalu menghasilkan suatu topologi.
   </p>
 
   <activity xml:id="act_quot_topology">
     <introduction>
     <p>
-      Let <m>(X,\tau_X)</m> be a topological space,
-      let <m>Y</m> be a set, and let <m>p: X \to Y</m> be a surjection.
-      Let
+      Misalkan <m>(X,\tau_X)</m> suatu ruang topologi,
+      <m>Y</m> suatu himpunan, dan <m>p: X \to Y</m> suatu surjeksi.
+      Misalkan
       <me>
         \tau_Y = \{U \subseteq Y \mid p^{-1}(U) \in \tau_X\}
       </me>.
@@ -25,28 +25,28 @@
       <task>
         <statement>
           <p>
-            Why are <m>\emptyset</m> and <m>Y</m> in <m>\tau_Y</m>?
+            Mengapa <m>\emptyset</m> dan <m>Y</m> merupakan anggota <m>\tau_Y</m>?
           </p>
         </statement>
       </task>
       <task>
         <introduction>
           <p>
-            Let <m>\left\{U_{\beta}\right\}</m> be a collection of sets in <m>\tau_Y</m> for <m>\beta</m> in some indexing set <m>J</m>.
+            Misalkan <m>\left\{U_{\beta}\right\}</m> suatu koleksi himpunan dalam <m>\tau_Y</m>, dengan <m>\beta</m> berada dalam suatu himpunan indeks <m>J</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Show that <m>\bigcup_{\beta \in J} U_{\beta}</m> is in <m>\tau_Y</m>.
+                  Tunjukkan bahwa <m>\bigcup_{\beta \in J} U_{\beta}</m> merupakan anggota <m>\tau_Y</m>.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  If <m>J</m> is finite,
-                  show that <m>\bigcap_{\beta \in J} U_{\beta}</m> is in <m>\tau_Y</m>.
+                  Jika <m>J</m> berhingga,
+                  tunjukkan bahwa <m>\bigcap_{\beta \in J} U_{\beta}</m> merupakan anggota <m>\tau_Y</m>.
                 </p>
               </statement>
             </task>
@@ -54,7 +54,7 @@
       <task>
         <statement>
           <p>
-            What conclusion can we draw about <m>\tau_Y</m>?
+            Kesimpulan apa yang dapat kita tarik mengenai <m>\tau_Y</m>?
           </p>
         </statement>
       </task>
@@ -63,22 +63,22 @@
 
   <p>
     <xref ref="act_quot_topology"/>
-    allows us to define the quotient topology.
+    memungkinkan kita mendefinisikan topologi kuosien.
   </p>
 
   <definition>
-  <idx><h>quotient topology</h></idx>
-<idx><h>quotient map</h></idx>
-<idx><h>quotient space</h></idx>
+  <idx><h>topologi kuosien</h></idx>
+<idx><h>pemetaan kuosien</h></idx>
+<idx><h>ruang kuosien</h></idx>
     <statement>
       <p>
-        Let <m>(X,\tau_X)</m> be a topological space,
-        let <m>Y</m> be a set, and let <m>p: X \to Y</m> be a surjection.
+        Misalkan <m>(X,\tau_X)</m> suatu ruang topologi,
+        <m>Y</m> suatu himpunan, dan <m>p: X \to Y</m> suatu surjeksi.
         <ol>
           <li>
             <p>
-              The <term>quotient topology</term>
-              on <m>Y</m> is the set
+              <term>Topologi kuosien</term>
+              pada <m>Y</m> adalah himpunan
               <me>
                 \{U \subseteq Y \mid p^{-1}(U) \in \tau_X\}
               </me>.
@@ -86,16 +86,16 @@
           </li>
           <li>
             <p>
-              Any function <m>p: X \to Y</m> is a <term>quotient map</term>
-              if <m>p</m> is surjective and for <m>U \subseteq Y</m>,
-              <m>U</m> is open in <m>Y</m> if and only if <m>p^{-1}(U)</m> is open in <m>X</m>.
+              Suatu fungsi <m>p: X \to Y</m> disebut <term>pemetaan kuosien</term>
+              jika <m>p</m> surjektif dan, untuk <m>U \subseteq Y</m>,
+              <m>U</m> terbuka di <m>Y</m> jika dan hanya jika <m>p^{-1}(U)</m> terbuka di <m>X</m>.
             </p>
           </li>
           <li>
             <p>
-              If <m>p: X \to Y</m> is a quotient map,
-              then the space <m>Y</m> is the <term>quotient space</term>
-              of <m>X</m> determined by <m>p</m>.
+              Jika <m>p: X \to Y</m> merupakan pemetaan kuosien,
+              maka ruang <m>Y</m> disebut <term>ruang kuosien</term>
+              dari <m>X</m> yang ditentukan oleh <m>p</m>.
             </p>
           </li>
         </ol>
@@ -107,38 +107,42 @@
       <task>
         <statement>
           <p>
-            Let <m>X=\R</m> with standard topology,
-            let <m>Y=\{-1,0,1\}</m>, and define <m>p:X \to Y</m> by
+            Misalkan <m>X=\R</m> dengan topologi standar,
+            <m>Y=\{-1,0,1\}</m>, dan definisikan <m>p:X \to Y</m> dengan
             <me>
               p(x) = \begin{cases}1\amp \text{ if }  x>0 \\ 0 \amp \text{ if }  x=0 \\ -1 \amp \text{ if }  x\lt 0. \end{cases}
             </me>
-            Find all of the open sets in the quotient topology.
+            Tentukan semua himpunan terbuka dalam topologi kuosien tersebut.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>X=\R</m> with standard topology,
-            let <m>Y=[0,1)</m>, and define <m>p:X \to Y</m> by
+            Misalkan <m>X=\R</m> dengan topologi standar,
+            <m>Y=[0,1)</m>, dan definisikan <m>p:X \to Y</m> dengan
             <me>
               p(x) = x-\lfloor x\rfloor
             </me>,
-            where <m>\lfloor x\rfloor</m> is the largest integer less than or equal to <m>x</m>, (For example <m>\lfloor 1.2 \rfloor = 1</m>,
-            and so <m>p(1.2) = 1.2 - 1 = 0.2</m>.
-            The function defined by <m>\lfloor x\rfloor</m> is also called the
-            <term>floor</term> function.
-            Be careful, note that <m>\lfloor -0.7 \rfloor = -1</m>.)  Determine the sets in the quotient topology.
+            dengan <m>\lfloor x\rfloor</m> menyatakan bilangan bulat terbesar yang kurang dari atau sama dengan <m>x</m>.
+            Sebagai contoh, <m>\lfloor 1.2 \rfloor = 1</m>,
+            sehingga <m>p(1.2) = 1.2 - 1 = 0.2</m>.
+            Fungsi yang didefinisikan oleh <m>\lfloor x\rfloor</m> disebut juga
+            <term>fungsi lantai</term>.
+            Perhatikan bahwa <m>\lfloor -0.7 \rfloor = -1</m>.
+            Tentukan semua himpunan dalam topologi kuosien tersebut.
             </p>
             <figure xml:id="F_floor">
-              <caption>The graph of <m>p(x) = x - \lfloor x\rfloor</m>.</caption>
-              <image width="50%" source="floor"/>
+              <caption>Grafik <m>p(x) = x - \lfloor x\rfloor</m>.</caption>
+              <image width="50%" source="floor">
+                <description>Grafik berbentuk gigi gergaji pada interval dari minus dua hingga dua. Pada setiap interval di antara dua bilangan bulat berurutan, sebuah ruas garis biru naik dari nilai nol menuju nilai satu; di setiap bilangan bulat grafik kembali ke nilai nol.</description>
+              </image>
             </figure>
           
         </statement>
         <hint>
               <p>
-                The graph of <m>p</m> on <m>[-2,2]</m> is shown in <xref ref="F_floor"/>.
+                Grafik <m>p</m> pada <m>[-2,2]</m> ditunjukkan dalam <xref ref="F_floor"/>.
               </p>
             </hint>
       </task>
@@ -146,79 +150,81 @@
   </activity>
 
   <p>
-    Another perspective of the quotient topology utilizes the fact that any equivalence relation <m>\sim</m> on a set <m>X</m> partitions <m>X</m> into a union of disjoint equivalence classes <m>[x] = \{y \in X \mid y \sim x\}</m>.
-    There is a natural surjection <m>q</m> from <m>X</m> to the space of equivalence classes given by <m>q(x) = [x]</m>.
-    We investigate this perspective in the next activity.
+    Sudut pandang lain terhadap topologi kuosien memanfaatkan fakta bahwa setiap relasi ekuivalensi <m>\sim</m> pada suatu himpunan <m>X</m> mempartisi <m>X</m> menjadi gabungan kelas-kelas ekuivalensi yang saling lepas, <m>[x] = \{y \in X \mid y \sim x\}</m>.
+    Terdapat surjeksi alami <m>q</m> dari <m>X</m> ke himpunan kelas-kelas ekuivalensi, yang diberikan oleh <m>q(x) = [x]</m>.
+    Kita menyelidiki sudut pandang ini dalam aktivitas berikut.
   </p>
 
   <activity xml:id="act_quotient_er">
     <p>
-      Let <m>X = \{a,b,c,d,e,f\}</m> and let <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a, b\}, \{a, b, c\}, \{a, b, c, d\}, X\}</m>.
-      Then <m>(X, \tau)</m> is a topological space.
-      Let <m>A = \{a, b, c\}</m> and <m>B = \{d,e,f\}</m>.
-      Define a relation <m>\sim</m> on <m>X</m> such that
-      <m>x \sim y</m> if <m>x</m> and <m>y</m> are both in <m>A</m> or both in <m>B</m>.
-      Assume that <m>\sim</m> is an equivalence relation.
-      The sets <m>A</m> and <m>B</m> are the equivalence classes for this relation.
-      That is <m>A = [a] = [b] = [c]</m> and <m>B = [d] = [e] = [f]</m>.
-      Let <m>X^* = \{A,B\}</m>.
-      Then we can define <m>p : X \to X^*</m> by sending <m>x \in X</m> to the set to which it belongs.
-      That is, <m>p(x) = [x]</m> for <m>x \in X</m>, or
+      Misalkan <m>X = \{a,b,c,d,e,f\}</m> dan <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a, b\}, \{a, b, c\}, \{a, b, c, d\}, X\}</m>.
+      Maka <m>(X, \tau)</m> merupakan ruang topologi.
+      Misalkan <m>A = \{a, b, c\}</m> dan <m>B = \{d,e,f\}</m>.
+      Definisikan relasi <m>\sim</m> pada <m>X</m> dengan
+      <m>x \sim y</m> jika <m>x</m> dan <m>y</m> keduanya berada dalam <m>A</m> atau keduanya berada dalam <m>B</m>.
+      Anggap bahwa <m>\sim</m> merupakan relasi ekuivalensi.
+      Himpunan <m>A</m> dan <m>B</m> adalah kelas-kelas ekuivalensi relasi ini.
+      Dengan kata lain, <m>A = [a] = [b] = [c]</m> dan <m>B = [d] = [e] = [f]</m>.
+      Misalkan <m>X^* = \{A,B\}</m>.
+      Kita kemudian dapat mendefinisikan <m>p : X \to X^*</m> dengan memetakan setiap <m>x \in X</m> ke himpunan yang memuatnya.
+      Dengan kata lain, <m>p(x) = [x]</m> untuk <m>x \in X</m>, atau
       <me>
         p(a) = A, p(b) = A, p(c) = A, p(d) = B, p(e) = B, \text{ and }  p(f) = B
       </me>.
     </p>
     <p>
-      Determine the sets in the quotient topology on <m>X^*</m>.
+      Tentukan himpunan-himpunan dalam topologi kuosien pada <m>X^*</m>.
     </p>
   </activity>
 
   <p>
-    The partition of <m>X</m> in <xref ref="act_quotient_er"/>
-    into the disjoint union of sets <m>A</m> and <m>B</m> defines an equivalence relation on <m>X</m> where
-    <m>x \sim y</m> if <m>x</m> and <m>y</m> are both in the same set <m>A</m> or <m>B</m>.
-    That is, <m>a \sim b \sim c</m> and <m>d \sim e \sim f</m>.
-    In this context,
-    the sets <m>A</m> and <m>B</m> are equivalence classes <mdash/> <m>A = [a]</m> and <m>B = [d]</m>,
-    where <m>[x]</m> is the equivalence class of <m>x</m>.
-    This leads to a general construction.
+    Partisi <m>X</m> dalam <xref ref="act_quotient_er"/>
+    menjadi gabungan saling lepas dari himpunan <m>A</m> dan <m>B</m> mendefinisikan relasi ekuivalensi pada <m>X</m>, dengan
+    <m>x \sim y</m> jika <m>x</m> dan <m>y</m> keduanya berada dalam himpunan yang sama, yakni <m>A</m> atau <m>B</m>.
+    Dengan kata lain, <m>a \sim b \sim c</m> dan <m>d \sim e \sim f</m>.
+    Dalam konteks ini,
+    himpunan <m>A</m> dan <m>B</m> merupakan kelas ekuivalensi <mdash/> <m>A = [a]</m> dan <m>B = [d]</m>,
+    dengan <m>[x]</m> menyatakan kelas ekuivalensi dari <m>x</m>.
+    Hal ini membawa kita pada konstruksi umum.
   </p>
   <p>
-    <idx><h>quotient space</h></idx>
-<idx><h>identification space</h></idx>
-    If <m>(X, \tau)</m> is a topological space and <m>\sim</m> is an equivalence relation on <m>X</m>,
-    we can let <m>X/\ssim</m> be the set of distinct equivalence classes of <m>X</m> under <m>\sim</m>.
-    Then <m>p: X \to X/\ssim</m> defined by
-    <m>p(x) = [x]</m> is a surjection and <m>X/\ssim</m> has the quotient topology.
-    The space <m>X/\ssim</m> is called a
-    <term>quotient space</term>.
-    The space <m>X/\ssim</m> is also called an
-    <term>identification</term> space
-    because the equivalence relation identifies points in the set to be thought of as the same.
-    This allows us to visualize quotient spaces as resulting from gluing or collapsing parts of the space <m>X</m>.
+    <idx><h>ruang kuosien</h></idx>
+<idx><h>ruang identifikasi</h></idx>
+    Jika <m>(X, \tau)</m> suatu ruang topologi dan <m>\sim</m> suatu relasi ekuivalensi pada <m>X</m>,
+    kita dapat mendefinisikan <m>X/\ssim</m> sebagai himpunan kelas-kelas ekuivalensi yang berbeda dari <m>X</m> terhadap <m>\sim</m>.
+    Maka <m>p: X \to X/\ssim</m> yang didefinisikan oleh
+    <m>p(x) = [x]</m> merupakan surjeksi dan <m>X/\ssim</m> memiliki topologi kuosien.
+    Ruang <m>X/\ssim</m> disebut
+    <term>ruang kuosien</term>.
+    Ruang <m>X/\ssim</m> disebut juga
+    <term>ruang identifikasi</term>
+    karena relasi ekuivalensinya mengidentifikasi titik-titik dalam himpunan tersebut agar dipandang sebagai titik yang sama.
+    Dengan demikian, kita dapat membayangkan ruang kuosien sebagai hasil perekatan atau penciutan bagian-bagian ruang <m>X</m>.
   </p>
 
   <figure xml:id="F_Quotient_tube">
-    <caption>A tube as the identification space <m>X/\ssim</m>.</caption>
-    <image width="90%" source="Cylinder_identification"/>
+    <caption>Sebuah tabung sebagai ruang identifikasi <m>X/\ssim</m>.</caption>
+    <image width="90%" source="Cylinder_identification">
+      <description>Tiga tahap pembentukan tabung. Panel pertama menunjukkan sebuah persegi dengan panah searah pada sisi atas dan bawah. Panel kedua menunjukkan kedua sisi itu didekatkan saat persegi digulung, dan panel ketiga menunjukkan tabung setelah sisi atas dan bawah diidentifikasi.</description>
+    </image>
   </figure>
 
   <example>
     <statement>
       <p>
-        Let <m>I = [0,1]</m> and let
-        <m>X = I \times I</m> with standard topology.
-        Define a relation <m>\sim</m> on <m>X</m> by <m>(x,y) \sim (x,y)</m> if
-        <m>0 \lt y \lt 1</m> and <m>0 \leq x \leq 1</m>,
-        <m>(x,0) \sim (x,1)</m> if <m>0 \leq x \leq 1</m>.
-        It is straightforward to show that <m>\sim</m> is an equivalence relation.
-        Let us consider what the identification space <m>X/\ssim</m> looks like.
-        The space <m>I \times I</m> is the unit square as shown in <xref ref="F_Quotient_tube"/>.
-        All points in the interior of the square are identified only with themselves.
-        However, the top side and bottom side are identified with each other in the same direction.
-        Think of <m>X</m> as a piece of paper.
-        We roll up the sides of the square to make the top and bottom sides coincide.
-        The result is that <m>X/\ssim</m> is the cylinder as shown in <xref ref="F_Quotient_tube"/>.
+        Misalkan <m>I = [0,1]</m> dan
+        <m>X = I \times I</m> dengan topologi standar.
+        Definisikan <m>\sim</m> sebagai relasi ekuivalensi pada <m>X</m> yang dibangkitkan oleh identifikasi <m>(x,y) \sim (x,y)</m> jika
+        <m>0 \lt y \lt 1</m> dan <m>0 \leq x \leq 1</m>,
+        serta <m>(x,0) \sim (x,1)</m> jika <m>0 \leq x \leq 1</m>.
+        Dengan konstruksi ini, <m>\sim</m> merupakan relasi ekuivalensi.
+        Mari kita perhatikan bentuk ruang identifikasi <m>X/\ssim</m>.
+        Ruang <m>I \times I</m> adalah persegi satuan seperti yang ditunjukkan dalam <xref ref="F_Quotient_tube"/>.
+        Setiap titik di bagian dalam persegi hanya diidentifikasi dengan dirinya sendiri.
+        Namun, sisi atas dan sisi bawah diidentifikasi satu sama lain dengan arah yang sama.
+        Bayangkan <m>X</m> sebagai selembar kertas.
+        Kita menggulung persegi itu hingga sisi atas dan sisi bawahnya berimpit.
+        Hasilnya, <m>X/\ssim</m> merupakan tabung seperti yang ditunjukkan dalam <xref ref="F_Quotient_tube"/>.
       </p>
     </statement>
   </example>
@@ -226,70 +232,78 @@
   <activity>
     <introduction>
     <p>
-      Quotient spaces can be difficult to describe.
-      This activity presents a few more examples.
+      Ruang kuosien dapat sulit dideskripsikan.
+      Aktivitas ini menyajikan beberapa contoh tambahan.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Let <m>X = [0, 1]</m> with standard topology and define an equivalence relation <m>\sim</m> on <m>X</m> by <m>0 \sim 1</m> and
-            <m>x \sim x</m> for all <m>x</m> not equal to <m>0</m> or <m>1</m>.
-            What does the quotient space <m>X/\ssim</m> look like?
+            Misalkan <m>X = [0, 1]</m> dengan topologi standar dan definisikan relasi ekuivalensi <m>\sim</m> pada <m>X</m> dengan <m>0 \sim 1</m> dan
+            <m>x \sim x</m> untuk setiap <m>x</m> yang tidak sama dengan <m>0</m> maupun <m>1</m>.
+            Seperti apakah bentuk ruang kuosien <m>X/\ssim</m>?
           </p>
             <figure xml:id="F_Quotients_activity">
-              <caption>From left to right: the identifications for parts (i), (ii), and (iii)</caption>
+              <caption>Dari kiri ke kanan: identifikasi untuk bagian (i), (ii), dan (iii)</caption>
               <sidebyside>
-              <image width="50%" source="Mobius_identification"/> 
-              <image width="50%" source="Torus_identification"/> 
-              <image width="50%" source="Quotient_sphere_1"/>
+              <image width="50%" source="Mobius_identification">
+                <description>Sebuah persegi dengan panah pada sisi atas mengarah ke kanan dan panah pada sisi bawah mengarah ke kiri, yang menunjukkan bahwa kedua sisi diidentifikasi dengan arah berlawanan.</description>
+              </image>
+              <image width="50%" source="Torus_identification">
+                <description>Sebuah persegi dengan panah-panah searah pada pasangan sisi atas dan bawah serta pada pasangan sisi kiri dan kanan, yang menunjukkan identifikasi berpasangan untuk membentuk torus.</description>
+              </image>
+              <image width="50%" source="Quotient_sphere_1">
+                <description>Sebuah persegi berarsir abu-abu dengan tanda yang sama di tengah keempat sisinya, yang menunjukkan bahwa seluruh titik batas diidentifikasi menjadi satu titik.</description>
+              </image>
               </sidebyside>
             </figure>
          
         </statement>
         <hint>
               <p>
-                Think about the relation <m>\sim</m> as gluing the points <m>0</m> and <m>1</m> together.
+                Pandang relasi <m>\sim</m> sebagai perekatan titik <m>0</m> dan <m>1</m>.
               </p>
             </hint>
       </task>
       <task>
         <introduction>
           <p>
-            Describe quotient spaces of
-            <m>X = I \times I</m> with standard topology given by the following equivalence relations <m>\sim</m>.
-            Depictions of the identifications are shown in <xref ref="F_Quotients_activity"/>.
-            (Here <m>I</m> is the closed interval <m>[0,1]</m>.)
+            Deskripsikan ruang-ruang kuosien dari
+            <m>X = I \times I</m> dengan topologi standar yang diperoleh dari relasi ekuivalensi <m>\sim</m> yang dibangkitkan oleh identifikasi berikut.
+            Gambaran identifikasinya ditunjukkan dalam <xref ref="F_Quotients_activity"/>.
+            (Di sini <m>I</m> adalah interval tertutup <m>[0,1]</m>.)
           </p>
         </introduction>
             <task>
+              <idx><h>pita M&#xf6;bius</h></idx>
               <statement>
                 <p>
-                  <m>(x, y) \sim (x,y)</m> if
-                  <m>0 \lt y \lt 1</m> and <m>0 \leq x \leq 1</m> and
-                  <m>(x,0) \sim (1-x,0)</m> when <m>0 \leq x \leq 1</m>.
+                  <m>(x, y) \sim (x,y)</m> jika
+                  <m>0 \lt y \lt 1</m> dan <m>0 \leq x \leq 1</m>, serta
+                  <m>(x,0) \sim (1-x,1)</m> jika <m>0 \leq x \leq 1</m>.
+                  (Ruang ini disebut pita M&#xf6;bius.)
                 </p>
               </statement>
             </task>
             <task>
-              <idx><h>M&#xf6;bius strip</h></idx>
+              <idx><h>torus</h></idx>
               <statement>
                 <p>
-                  <m>(x, y) \sim (x,y)</m> if
-                  <m>0 \lt x \lt 1</m> and <m>0 \lt y \lt 1</m>,
-                  <m>(x,0) \sim (x,1)</m> for <m>0 \lt x \lt 1</m>,
-                  <m>(0,y) \sim (1,y)</m> for <m>0 \lt y \lt 1</m>,
-                  and <m>(0,0) \sim (0,1) \sim (1,0) \sim(1,1)</m>. 
-                  (This space is called a M&#xf6;bius strip.)
+                  <m>(x, y) \sim (x,y)</m> jika
+                  <m>0 \lt x \lt 1</m> dan <m>0 \lt y \lt 1</m>,
+                  <m>(x,0) \sim (x,1)</m> untuk <m>0 \lt x \lt 1</m>,
+                  <m>(0,y) \sim (1,y)</m> untuk <m>0 \lt y \lt 1</m>,
+                  serta <m>(0,0) \sim (0,1) \sim (1,0) \sim(1,1)</m>.
+                  (Ruang ini disebut torus.)
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  <m>(x, y) \sim (x,y)</m> if
-                  <m>0 \lt x \lt 1</m> and <m>0 \lt y \lt 1</m> and
-                  <m>(x,y) \sim (u,v)</m> if <m>(x,y)</m> and <m>(u,v)</m> are boundary points.
+                  <m>(x, y) \sim (x,y)</m> jika
+                  <m>0 \lt x \lt 1</m> dan <m>0 \lt y \lt 1</m>, serta
+                  <m>(x,y) \sim (u,v)</m> jika <m>(x,y)</m> dan <m>(u,v)</m> merupakan titik batas.
                 </p>
               </statement>
             </task>
@@ -299,21 +313,23 @@
   </activity>
 
   <p>
-    <idx><h>Klein bottle</h></idx>
-    Many other interesting identification spaces can be made.
-    For example,
-    let <m>X = I \times I</m> and define <m>\sim</m> by <m>(x, y) \sim (x,y)</m> if
-    <m>0 \lt x \lt 1</m> and <m>0 \lt y \lt 1</m>,
-    <m>(0, y) \sim (1, y)</m> for <m>0 \lt y \lt 1</m>,
-    <m>(x,0) \sim (1-x,1)</m> for <m>0 \lt x \lt 1</m>.
-    This identification is illustrated in <xref ref="F_Klein_bottle"/>.
-    The resulting identification space <m>X/\ssim</m> is a Klein bottle.
-    A nice illustration of this can be seen at <url href="https://plus.maths.org/content/introducing-klein-bottle" visual="plus.maths.org/content/introducing-klein-bottle">maths.org</url>.
+    <idx><h>botol Klein</h></idx>
+    Banyak ruang identifikasi menarik lainnya dapat dibentuk.
+    Sebagai contoh,
+    misalkan <m>X = I \times I</m> dan definisikan <m>\sim</m> sebagai relasi ekuivalensi yang dibangkitkan oleh <m>(x, y) \sim (x,y)</m> jika
+    <m>0 \lt x \lt 1</m> dan <m>0 \lt y \lt 1</m>,
+    <m>(0, y) \sim (1, y)</m> untuk <m>0 \lt y \lt 1</m>, serta
+    <m>(x,0) \sim (1-x,1)</m> untuk <m>0 \lt x \lt 1</m>.
+    Identifikasi ini digambarkan dalam <xref ref="F_Klein_bottle"/>.
+    Ruang identifikasi <m>X/\ssim</m> yang dihasilkan adalah botol Klein.
+    Ilustrasi yang baik mengenai konstruksi ini dapat dilihat di <url href="https://plus.maths.org/content/introducing-klein-bottle" visual="plus.maths.org/content/introducing-klein-bottle">maths.org</url>.
   </p>
 
   <figure xml:id="F_Klein_bottle">
-    <caption>Identifications for the Klein Bottle.</caption>
-    <image width="40%" source="Klein_identification"/>
+    <caption>Identifikasi untuk botol Klein.</caption>
+    <image width="40%" source="Klein_identification">
+      <description>Sebuah persegi dengan panah pada sisi atas dan bawah mengarah ke kanan, sedangkan panah pada sisi kiri mengarah ke atas dan panah pada sisi kanan mengarah ke bawah. Panah-panah itu menunjukkan pasangan sisi yang diidentifikasi dan orientasinya.</description>
+    </image>
   </figure>
 
 </section>
