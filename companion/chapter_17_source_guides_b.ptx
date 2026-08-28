@@ -1,0 +1,639 @@
+<section xml:id="o003-c90-ch17-source-guides-b" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Kekompakan dan Pemetaan Kontinu</title>
+
+  <p>
+    Lima belas panduan ini melanjutkan urutan sumber Bab 17. Entri pertama
+    menutup penyelidikan tentang himpunan kompak, buka, dan tertutup; empat
+    entri berikutnya membuktikan bahwa citra kontinu himpunan kompak tetap
+    kompak; tujuh entri berikutnya membangun dua teorema tentang himpunan
+    tertutup dan kekompakan; satu entri menguji batas Teorema Heine-Borel;
+    dan dua entri terakhir memulai pembuktian teorema nilai ekstrem. Kerjakan
+    prompt pada bab utama sebelum membuka setiap tahap.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch17-guide-11">
+    <title>Kekompakan Tidak Memaksa Ketertutupan</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d\}</m> dengan topologi
+        <m>\tau=\{\emptyset,\{a\},\{b,c\},\{a,b,c\},X\}</m>. Jika <m>A</m>
+        merupakan subhimpunan kompak dari <m>X</m>, haruskah <m>A</m>
+        tertutup? Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-11-hint">
+      <p><em>Tahap 1.</em> Setiap subhimpunan <m>X</m> kompak karena <m>X</m> berhingga.</p>
+      <p><em>Tahap 2.</em> Pilih satu anggota <m>\tau</m> yang komplemennya tidak tercantum dalam <m>\tau</m>.</p>
+      <p><em>Tahap 3.</em> Ingat bahwa suatu himpunan tertutup tepat ketika komplemennya terbuka.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-11-answer">
+      <p>
+        Tidak. Sebagai contoh, <m>A=\{a\}</m> berhingga sehingga kompak,
+        tetapi <m>X\setminus A=\{b,c,d\}\notin\tau</m>. Jadi <m>A</m> tidak
+        tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-11-solution">
+      <p>
+        Ambil <m>A=\{a\}</m>. Setiap selimut buka bagi himpunan satu titik
+        mempunyai subselimut yang terdiri atas satu anggota, sehingga <m>A</m>
+        kompak. Agar <m>A</m> tertutup, komplemennya
+        <m>X\setminus A=\{b,c,d\}</m> harus terbuka. Daftar anggota
+        <m>\tau</m> tidak memuat <m>\{b,c,d\}</m>, sehingga komplemen itu
+        tidak terbuka dan <m>A</m> tidak tertutup. Kontraeksempel ini
+        membuktikan bahwa kekompakan saja tidak menjamin ketertutupan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-12">
+    <title>Memulai Bukti Kekompakan Citra</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> dan <m>(Y,\tau_Y)</m> ruang topologi,
+        <m>f:X\to Y</m> kontinu, dan <m>A</m> subhimpunan kompak dari
+        <m>X</m>. Apa yang perlu ditunjukkan untuk membuktikan bahwa
+        <m>f(A)</m> merupakan subhimpunan kompak dari <m>Y</m>? Dari mana
+        pembuktian dimulai?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-12-hint">
+      <p><em>Tahap 1.</em> Tulis definisi kekompakan dengan <m>f(A)</m> sebagai himpunan yang diselimuti.</p>
+      <p><em>Tahap 2.</em> Karena pernyataan berlaku bagi setiap selimut buka, ambil selimut buka sebarang <m>\{V_\alpha\}_{\alpha\in I}</m> bagi <m>f(A)</m>.</p>
+      <p><em>Tahap 3.</em> Sasaran akhirnya adalah memilih sejumlah berhingga indeks yang himpunan <m>V_\alpha</m>-nya masih menyelimuti <m>f(A)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-12-answer">
+      <p>
+        Ambil selimut buka sebarang
+        <m>\{V_\alpha\}_{\alpha\in I}</m> bagi <m>f(A)</m>. Kita harus
+        membuktikan bahwa terdapat indeks
+        <m>\alpha_1,\ldots,\alpha_n</m> dengan
+        <m>f(A)\subseteq\bigcup_{i=1}^nV_{\alpha_i}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-12-solution">
+      <p>
+        Definisi menyatakan bahwa <m>f(A)</m> kompak jika setiap selimut
+        bukanya mempunyai subselimut berhingga. Karena itu, tetapkan keluarga
+        sebarang <m>\mathcal V=\{V_\alpha\}_{\alpha\in I}</m> dengan setiap
+        <m>V_\alpha</m> terbuka dalam <m>Y</m> dan
+        <me>
+          f(A)\subseteq\bigcup_{\alpha\in I}V_\alpha.
+        </me>
+        Yang harus dihasilkan adalah himpunan indeks berhingga
+        <m>\{\alpha_1,\ldots,\alpha_n\}</m> yang memenuhi
+        <m>f(A)\subseteq\bigcup_{i=1}^nV_{\alpha_i}</m>. Kekompakan yang
+        diketahui berada pada <m>A</m>, jadi langkah berikutnya harus
+        mengubah <m>\mathcal V</m> menjadi selimut buka bagi <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-13">
+    <title>Menarik Selimut Buka melalui Prapeta</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau_X)</m> dan <m>(Y,\tau_Y)</m> ruang topologi,
+        <m>f:X\to Y</m> kontinu, <m>A\subseteq X</m> kompak, dan
+        <m>\{V_\alpha\}_{\alpha\in I}</m> selimut buka bagi <m>f(A)</m>
+        dalam <m>Y</m>. Bagaimana kita dapat menemukan selimut buka
+        <m>\{U_\alpha\}</m> bagi <m>A</m>? Verifikasikan bahwa keluarga yang
+        diusulkan benar-benar merupakan selimut buka bagi <m>A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-13-hint">
+      <p><em>Tahap 1.</em> Definisikan <m>U_\alpha=f^{-1}(V_\alpha)</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan kekontinuan <m>f</m> untuk membuktikan bahwa setiap <m>U_\alpha</m> terbuka dalam <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Untuk <m>a\in A</m>, letakkan <m>f(a)</m> dalam salah satu anggota selimut <m>f(A)</m>, lalu tarik kembali ke <m>a</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-13-answer">
+      <p>
+        Ambil <m>U_\alpha=f^{-1}(V_\alpha)</m>. Setiap <m>U_\alpha</m>
+        terbuka karena <m>f</m> kontinu. Jika <m>a\in A</m>, maka
+        <m>f(a)\in V_\alpha</m> untuk suatu <m>\alpha</m>, sehingga
+        <m>a\in U_\alpha</m>. Jadi keluarga prapeta itu menyelimuti <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-13-solution">
+      <p>
+        Untuk setiap <m>\alpha\in I</m>, definisikan
+        <m>U_\alpha=f^{-1}(V_\alpha)</m>. Karena <m>V_\alpha</m> terbuka
+        dalam <m>Y</m> dan <m>f</m> kontinu, <m>U_\alpha</m> terbuka dalam
+        <m>X</m>.
+      </p>
+      <p>
+        Ambil <m>a\in A</m>. Titik <m>f(a)</m> berada dalam <m>f(A)</m>,
+        sedangkan keluarga <m>\{V_\alpha\}</m> menyelimuti <m>f(A)</m>.
+        Jadi ada <m>\alpha\in I</m> dengan <m>f(a)\in V_\alpha</m>. Menurut
+        definisi prapeta, ini ekuivalen dengan
+        <m>a\in f^{-1}(V_\alpha)=U_\alpha</m>. Karena berlaku untuk setiap
+        <m>a\in A</m>, diperoleh
+        <m>A\subseteq\bigcup_{\alpha\in I}U_\alpha</m>. Maka
+        <m>\{U_\alpha\}</m> benar-benar selimut buka bagi <m>A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-14">
+    <title>Menggunakan Kekompakan Domain</title>
+    <statement>
+      <p>
+        Dalam situasi entri sebelumnya, apa yang diketahui tentang setiap
+        selimut buka bagi <m>A</m>, khususnya keluarga
+        <m>\{f^{-1}(V_\alpha)\}_{\alpha\in I}</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-14-hint">
+      <p><em>Tahap 1.</em> Gunakan hipotesis bahwa <m>A</m> kompak.</p>
+      <p><em>Tahap 2.</em> Pilih indeks berhingga <m>\alpha_1,\ldots,\alpha_n</m>.</p>
+      <p><em>Tahap 3.</em> Tuliskan pernyataan penyelimutan yang dihasilkan untuk <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-14-answer">
+      <p>
+        Kekompakan <m>A</m> menghasilkan indeks
+        <m>\alpha_1,\ldots,\alpha_n</m> sedemikian sehingga
+        <m>A\subseteq\bigcup_{i=1}^nf^{-1}(V_{\alpha_i})</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-14-solution">
+      <p>
+        Keluarga <m>\{f^{-1}(V_\alpha)\}_{\alpha\in I}</m> telah dibuktikan
+        sebagai selimut buka bagi <m>A</m>. Karena <m>A</m> kompak, keluarga
+        itu mempunyai subselimut berhingga. Jadi terdapat
+        <m>\alpha_1,\ldots,\alpha_n\in I</m> dengan
+        <me>
+          A\subseteq\bigcup_{i=1}^n f^{-1}(V_{\alpha_i}).
+        </me>
+        Kesimpulan ini masih dinyatakan di domain; langkah terakhir adalah
+        mengembalikannya kepada selimut semula di kodomain.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-15">
+    <title>Citra Kontinu Himpunan Kompak</title>
+    <statement>
+      <p>
+        Lengkapilah bukti: jika <m>f:X\to Y</m> kontinu dan <m>A</m>
+        subhimpunan kompak dari <m>X</m>, maka <m>f(A)</m> merupakan
+        subhimpunan kompak dari <m>Y</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-15-hint">
+      <p><em>Tahap 1.</em> Mulai dengan selimut buka sebarang <m>\{V_\alpha\}</m> bagi <m>f(A)</m>.</p>
+      <p><em>Tahap 2.</em> Tarik selimut itu melalui <m>f^{-1}</m> dan gunakan kekompakan <m>A</m> untuk memilih prapeta berhingga.</p>
+      <p><em>Tahap 3.</em> Jika <m>y\in f(A)</m>, tulis <m>y=f(a)</m> dan gunakan keanggotaan <m>a</m> dalam salah satu prapeta terpilih.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-15-answer">
+      <p>
+        Prapeta selimut buka sebarang bagi <m>f(A)</m> adalah selimut buka
+        bagi <m>A</m>. Subselimut berhingga prapeta yang diberikan oleh
+        kekompakan <m>A</m> menentukan subselimut berhingga dari selimut
+        semula bagi <m>f(A)</m>. Jadi <m>f(A)</m> kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-15-solution">
+      <p>
+        Ambil selimut buka sebarang
+        <m>\{V_\alpha\}_{\alpha\in I}</m> bagi <m>f(A)</m>. Kekontinuan
+        <m>f</m> membuat setiap <m>f^{-1}(V_\alpha)</m> terbuka dalam
+        <m>X</m>. Selain itu, keluarga prapeta tersebut menyelimuti <m>A</m>:
+        bagi <m>a\in A</m>, titik <m>f(a)</m> berada dalam suatu
+        <m>V_\alpha</m>, jadi <m>a\in f^{-1}(V_\alpha)</m>.
+      </p>
+      <p>
+        Karena <m>A</m> kompak, terdapat
+        <m>\alpha_1,\ldots,\alpha_n</m> dengan
+        <m>A\subseteq\bigcup_{i=1}^nf^{-1}(V_{\alpha_i})</m>. Ambil
+        <m>y\in f(A)</m> dan pilih <m>a\in A</m> dengan <m>y=f(a)</m>.
+        Titik <m>a</m> berada dalam suatu
+        <m>f^{-1}(V_{\alpha_i})</m>, sehingga
+        <m>y=f(a)\in V_{\alpha_i}</m>. Maka
+        <m>f(A)\subseteq\bigcup_{i=1}^nV_{\alpha_i}</m>. Kita telah
+        memperoleh subselimut berhingga dari selimut buka sebarang, sehingga
+        <m>f(A)</m> kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-16">
+    <title>Sasaran Bukti Ketertutupan</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> subhimpunan kompak dari ruang topologi Hausdorff
+        <m>X</m>. Untuk membuktikan bahwa <m>A</m> tertutup, kita
+        mempertimbangkan <m>X\setminus A</m>. Sifat apa yang harus dimiliki
+        <m>X\setminus A</m>, dan bagaimana sifat itu dapat dibuktikan?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-16-hint">
+      <p><em>Tahap 1.</em> Gunakan definisi himpunan tertutup melalui komplemennya.</p>
+      <p><em>Tahap 2.</em> Untuk menunjukkan suatu himpunan terbuka, ambil titik sebarang <m>x\in X\setminus A</m>.</p>
+      <p><em>Tahap 3.</em> Sasaran lokalnya adalah membangun himpunan buka <m>O_x</m> dengan <m>x\in O_x\subseteq X\setminus A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-16-answer">
+      <p>
+        Kita harus menunjukkan bahwa <m>X\setminus A</m> terbuka. Caranya,
+        untuk setiap <m>x\in X\setminus A</m>, bangun lingkungan buka
+        <m>O_x</m> yang memuat <m>x</m> dan tidak beririsan dengan <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-16-solution">
+      <p>
+        Berdasarkan definisi, <m>A</m> tertutup jika dan hanya jika
+        <m>X\setminus A</m> terbuka. Suatu subhimpunan <m>G\subseteq X</m>
+        terbuka jika setiap <m>x\in G</m> mempunyai lingkungan buka yang
+        termuat dalam <m>G</m>. Maka ambil <m>x\in X\setminus A</m> sebarang.
+        Cukup menemukan himpunan buka <m>O_x</m> sedemikian sehingga
+        <me>
+          x\in O_x\subseteq X\setminus A,
+        </me>
+        atau ekuivalen dengan itu, <m>O_x\cap A=\emptyset</m>. Sifat
+        Hausdorff akan memisahkan <m>x</m> dari setiap titik <m>A</m>, dan
+        kekompakan akan mereduksi semua pemisahan itu menjadi sejumlah
+        berhingga.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-17">
+    <title>Memisahkan Titik dari Setiap Titik Himpunan Kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> subhimpunan kompak dari ruang Hausdorff <m>X</m>,
+        <m>x\in X\setminus A</m>, dan andaikan <m>A</m> tak kosong. Mengapa
+        pengandaian tak kosong boleh dibuat? Untuk setiap <m>a\in A</m>,
+        mengapa terdapat himpunan buka saling lepas <m>O_{xa}</m> dan
+        <m>O_a</m> dengan <m>x\in O_{xa}</m> dan <m>a\in O_a</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-17-hint">
+      <p><em>Tahap 1.</em> Tangani dahulu kasus <m>A=\emptyset</m>.</p>
+      <p><em>Tahap 2.</em> Karena <m>x\notin A</m>, berlaku <m>x\ne a</m> untuk setiap <m>a\in A</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan definisi Hausdorff kepada pasangan titik berbeda <m>x</m> dan <m>a</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-17-answer">
+      <p>
+        Jika <m>A=\emptyset</m>, maka <m>A</m> sudah tertutup karena
+        komplemennya <m>X</m> terbuka. Jika <m>A\ne\emptyset</m>, setiap
+        <m>a\in A</m> berbeda dari <m>x</m>; sifat Hausdorff memberi
+        lingkungan buka saling lepas <m>O_{xa}\ni x</m> dan
+        <m>O_a\ni a</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-17-solution">
+      <p>
+        Kasus <m>A=\emptyset</m> tidak memerlukan konstruksi: himpunan kosong
+        tertutup dalam setiap ruang topologi karena
+        <m>X\setminus\emptyset=X</m> terbuka. Karena itu kita boleh
+        melanjutkan dengan asumsi <m>A\ne\emptyset</m>.
+      </p>
+      <p>
+        Tetapkan <m>a\in A</m>. Dari <m>x\in X\setminus A</m> diperoleh
+        <m>x\ne a</m>. Ruang <m>X</m> Hausdorff, sehingga untuk dua titik
+        berbeda tersebut terdapat himpunan buka <m>O_{xa}</m> dan <m>O_a</m>
+        yang memenuhi
+        <me>
+          x\in O_{xa},\qquad a\in O_a,qquad
+          O_{xa}\cap O_a=\emptyset.
+        </me>
+        Konstruksi ini dapat dilakukan untuk setiap <m>a\in A</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-18">
+    <title>Mereduksi Pemisahan dengan Kekompakan</title>
+    <statement>
+      <p>
+        Dalam konstruksi sebelumnya, mengapa terdapat bilangan bulat positif
+        <m>n</m> dan titik <m>a_1,\ldots,a_n\in A</m> sedemikian sehingga
+        <m>O_{a_1},\ldots,O_{a_n}</m> membentuk selimut buka bagi <m>A</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-18-hint">
+      <p><em>Tahap 1.</em> Setiap <m>a\in A</m> berada dalam himpunan buka <m>O_a</m>.</p>
+      <p><em>Tahap 2.</em> Karena itu, <m>\{O_a\mid a\in A\}</m> adalah selimut buka bagi <m>A</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan kekompakan <m>A</m> kepada selimut ini.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-18-answer">
+      <p>
+        Keluarga <m>\{O_a\mid a\in A\}</m> menyelimuti <m>A</m>. Karena
+        <m>A</m> kompak, terdapat subselimut berhingga
+        <m>O_{a_1},\ldots,O_{a_n}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-18-solution">
+      <p>
+        Untuk setiap <m>a\in A</m>, konstruksi Hausdorff menghasilkan
+        himpunan buka <m>O_a</m> yang memuat <m>a</m>. Maka
+        <me>
+          A\subseteq\bigcup_{a\in A}O_a,
+        </me>
+        sehingga keluarga <m>\{O_a\mid a\in A\}</m> merupakan selimut buka
+        bagi <m>A</m>. Kekompakan <m>A</m> menjamin adanya subselimut
+        berhingga. Jadi ada <m>a_1,\ldots,a_n\in A</m> dengan
+        <m>A\subseteq\bigcup_{i=1}^nO_{a_i}</m>. Karena pada tahap ini
+        <m>A</m> diasumsikan tak kosong, kita dapat mengambil
+        <m>n\in\Z^+</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-19">
+    <title>Himpunan Kompak dalam Ruang Hausdorff Tertutup</title>
+    <statement>
+      <p>
+        Dengan notasi sebelumnya, carilah subhimpunan terbuka dari
+        <m>X\setminus A</m> yang memuat <m>x</m>. Apa yang dapat disimpulkan
+        mengenai <m>A</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-19-hint">
+      <p><em>Tahap 1.</em> Gunakan irisan berhingga <m>O_x=\bigcap_{i=1}^nO_{xa_i}</m>.</p>
+      <p><em>Tahap 2.</em> Untuk <m>y\in A</m>, pilih <m>i</m> dengan <m>y\in O_{a_i}</m> dan gunakan <m>O_{xa_i}\cap O_{a_i}=\emptyset</m>.</p>
+      <p><em>Tahap 3.</em> Simpulkan bahwa setiap titik komplemen mempunyai lingkungan buka di dalam komplemen.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-19-answer">
+      <p>
+        Himpunan
+        <m>O_x=\bigcap_{i=1}^nO_{xa_i}</m> terbuka, memuat <m>x</m>, dan
+        tidak beririsan dengan <m>A</m>. Jadi <m>X\setminus A</m> terbuka dan
+        <m>A</m> tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-19-solution">
+      <p>
+        Definisikan
+        <me>
+          O_x=\bigcap_{i=1}^n O_{xa_i}.
+        </me>
+        Ini merupakan irisan berhingga himpunan buka, sehingga terbuka, dan
+        setiap <m>O_{xa_i}</m> memuat <m>x</m>, sehingga <m>x\in O_x</m>.
+      </p>
+      <p>
+        Ambil <m>y\in A</m>. Karena
+        <m>O_{a_1},\ldots,O_{a_n}</m> menyelimuti <m>A</m>, ada <m>i</m>
+        dengan <m>y\in O_{a_i}</m>. Di sisi lain,
+        <m>O_x\subseteq O_{xa_i}</m> dan
+        <m>O_{xa_i}\cap O_{a_i}=\emptyset</m>. Maka <m>y\notin O_x</m>.
+        Jadi <m>O_x\cap A=\emptyset</m>, atau
+        <m>O_x\subseteq X\setminus A</m>.
+      </p>
+      <p>
+        Titik <m>x\in X\setminus A</m> dipilih sebarang, sehingga setiap
+        titik komplemen memiliki lingkungan buka di dalam komplemen. Maka
+        <m>X\setminus A</m> terbuka dan <m>A</m> tertutup. Dengan demikian,
+        setiap subhimpunan kompak dari ruang Hausdorff merupakan himpunan
+        tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-20">
+    <title>Memulai Bukti Kekompakan Subhimpunan Tertutup</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi kompak dan <m>C</m> subhimpunan
+        tertutup dari <m>X</m>. Apa yang perlu dilakukan untuk membuktikan
+        bahwa <m>C</m> kompak?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-20-hint">
+      <p><em>Tahap 1.</em> Gunakan definisi kekompakan untuk <m>C</m>.</p>
+      <p><em>Tahap 2.</em> Ambil selimut buka sebarang <m>\{U_\alpha\}_{\alpha\in I}</m> bagi <m>C</m>.</p>
+      <p><em>Tahap 3.</em> Sasaran akhirnya adalah memilih sejumlah berhingga anggota keluarga itu yang masih menyelimuti <m>C</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-20-answer">
+      <p>
+        Ambil selimut buka sebarang
+        <m>\{U_\alpha\}_{\alpha\in I}</m> bagi <m>C</m> dan buktikan bahwa
+        selimut tersebut mempunyai subselimut berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-20-solution">
+      <p>
+        Untuk membuktikan kekompakan, kita tidak boleh memilih selimut yang
+        khusus. Ambil keluarga sebarang
+        <m>\mathcal U=\{U_\alpha\}_{\alpha\in I}</m> yang setiap anggotanya
+        terbuka dalam <m>X</m> dan memenuhi
+        <m>C\subseteq\bigcup_{\alpha\in I}U_\alpha</m>. Kita harus
+        menghasilkan indeks berhingga
+        <m>\alpha_1,\ldots,\alpha_n</m> dengan
+        <m>C\subseteq\bigcup_{i=1}^nU_{\alpha_i}</m>. Kekompakan yang
+        diketahui adalah kekompakan <m>X</m>, sehingga selimut bagi <m>C</m>
+        perlu diperluas menjadi selimut bagi <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-21">
+    <title>Memperluas Selimut dari Himpunan Tertutup</title>
+    <statement>
+      <p>
+        Misalkan <m>\{U_\alpha\}_{\alpha\in I}</m> selimut buka bagi
+        subhimpunan tertutup <m>C</m> dari ruang kompak <m>X</m>. Gunakan
+        selimut tersebut dan fakta bahwa <m>C</m> tertutup untuk membuat
+        selimut buka bagi <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-21-hint">
+      <p><em>Tahap 1.</em> Karena <m>C</m> tertutup, <m>X\setminus C</m> terbuka.</p>
+      <p><em>Tahap 2.</em> Tambahkan <m>X\setminus C</m> kepada keluarga <m>\{U_\alpha\}</m>.</p>
+      <p><em>Tahap 3.</em> Periksa secara terpisah titik yang berada dalam <m>C</m> dan titik yang berada di luar <m>C</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-21-answer">
+      <p>
+        Keluarga
+        <m>\{U_\alpha\}_{\alpha\in I}\cup\{X\setminus C\}</m> merupakan
+        selimut buka bagi <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-21-solution">
+      <p>
+        Karena <m>C</m> tertutup dalam <m>X</m>, komplemennya
+        <m>X\setminus C</m> terbuka. Setiap <m>x\in C</m> berada dalam suatu
+        <m>U_\alpha</m> karena keluarga semula menyelimuti <m>C</m>. Setiap
+        <m>x\in X\setminus C</m> berada dalam anggota tambahan
+        <m>X\setminus C</m>. Maka semua anggota keluarga
+        <me>
+          \mathcal V=\{U_\alpha\}_{\alpha\in I}
+          \cup\{X\setminus C\}
+        </me>
+        terbuka dan gabungannya memuat seluruh <m>X</m>. Jadi
+        <m>\mathcal V</m> adalah selimut buka bagi <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-22">
+    <title>Subhimpunan Tertutup dari Ruang Kompak</title>
+    <statement>
+      <p>
+        Gunakan fakta bahwa <m>X</m> kompak untuk menyelesaikan bukti bahwa
+        setiap subhimpunan tertutup <m>C</m> dari <m>X</m> kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-22-hint">
+      <p><em>Tahap 1.</em> Terapkan kekompakan <m>X</m> kepada selimut <m>\{U_\alpha\}\cup\{X\setminus C\}</m>.</p>
+      <p><em>Tahap 2.</em> Hapus <m>X\setminus C</m> dari subselimut berhingga yang diperoleh, jika himpunan itu terpilih.</p>
+      <p><em>Tahap 3.</em> Jelaskan mengapa anggota <m>U_\alpha</m> yang tersisa masih menyelimuti setiap titik <m>C</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-22-answer">
+      <p>
+        Kekompakan <m>X</m> memberi subselimut berhingga dari keluarga yang
+        diperluas. Setelah <m>X\setminus C</m> dibuang, anggota-anggota
+        <m>U_\alpha</m> yang tersisa tetap menyelimuti <m>C</m>. Jadi <m>C</m>
+        kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-22-solution">
+      <p>
+        Ambil selimut buka sebarang
+        <m>\{U_\alpha\}_{\alpha\in I}</m> bagi <m>C</m>. Keluarga
+        <m>\{U_\alpha\}_{\alpha\in I}\cup\{X\setminus C\}</m> adalah
+        selimut buka bagi <m>X</m>. Karena <m>X</m> kompak, ada subselimut
+        berhingga. Anggota-anggota subselimut itu selain mungkin
+        <m>X\setminus C</m> dapat ditulis
+        <m>U_{\alpha_1},\ldots,U_{\alpha_n}</m>.
+      </p>
+      <p>
+        Himpunan <m>X\setminus C</m> tidak memuat satu pun titik <m>C</m>.
+        Karena subselimut berhingga tadi menyelimuti <m>X</m>, setiap titik
+        <m>C</m> harus termuat dalam salah satu
+        <m>U_{\alpha_i}</m>. Jadi
+        <m>C\subseteq\bigcup_{i=1}^nU_{\alpha_i}</m>. Jika <m>C=\emptyset</m>,
+        subkeluarga kosong juga cukup. Dengan demikian setiap selimut buka
+        bagi <m>C</m> mempunyai subselimut berhingga, sehingga <m>C</m>
+        kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-23">
+    <title>Tertutup dan Terbatas Tidak Selalu Kompak</title>
+    <statement>
+      <p>
+        Subhimpunan <m>A</m> dari ruang metrik <m>(X,d)</m> disebut terbatas
+        jika terdapat bilangan real <m>M</m> sedemikian sehingga
+        <m>d(a_1,a_2)\leq M</m> untuk semua <m>a_1,a_2\in A</m>. Jelaskan
+        mengapa <m>\Z</m>, sebagai subhimpunan dari <m>(\R,d)</m> dengan
+        <m>d</m> metrik diskret, tertutup dan terbatas, tetapi tidak kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-23-hint">
+      <p><em>Tahap 1.</em> Dalam metrik diskret, <m>B(x,1/2)=\{x\}</m>; simpulkan sifat topologi setiap subhimpunan.</p>
+      <p><em>Tahap 2.</em> Untuk dua titik berbeda, jarak diskretnya <m>1</m>; pilih batas seragam bagi semua pasangan titik <m>\Z</m>.</p>
+      <p><em>Tahap 3.</em> Selimuti <m>\Z</m> dengan semua himpunan satu titik dan periksa subkeluarga berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-23-answer">
+      <p>
+        Topologi metrik diskret membuat setiap subhimpunan terbuka dan
+        tertutup, jadi <m>\Z</m> tertutup. Semua jarak antartitik paling besar
+        <m>1</m>, jadi <m>\Z</m> terbatas. Namun selimut buka
+        <m>\{\{n\}\mid n\in\Z\}</m> tidak mempunyai subselimut berhingga;
+        maka <m>\Z</m> tidak kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-23-solution">
+      <p>
+        Untuk metrik diskret,
+        <m>d(x,y)=0</m> jika <m>x=y</m> dan <m>d(x,y)=1</m> jika
+        <m>x\ne y</m>. Karena <m>B(x,1/2)=\{x\}</m>, setiap himpunan satu
+        titik terbuka, sehingga setiap subhimpunan merupakan gabungan
+        himpunan-himpunan satu titik dan terbuka. Komplemen setiap subhimpunan
+        juga terbuka. Khususnya, <m>\Z</m> tertutup dalam <m>(\R,d)</m>.
+      </p>
+      <p>
+        Untuk semua <m>m,n\in\Z</m>, berlaku <m>d(m,n)\leq1</m>. Jadi
+        definisi keterbatasan dipenuhi dengan <m>M=1</m>. Di sisi lain,
+        keluarga <m>\mathcal U=\{\{n\}\mid n\in\Z\}</m> terdiri atas
+        himpunan-himpunan buka dan menyelimuti <m>\Z</m>. Setiap subkeluarga
+        berhingga hanya menyelimuti sejumlah berhingga bilangan bulat, bukan
+        seluruh <m>\Z</m>. Maka <m>\mathcal U</m> tidak mempunyai subselimut
+        berhingga dan <m>\Z</m> tidak kompak. Jadi pencirian Heine-Borel tidak
+        berlaku untuk semua ruang metrik.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-24">
+    <title>Kekompakan Citra Fungsi Bernilai Real</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi kompak tak kosong dan
+        <m>f:X\to\R</m> fungsi kontinu. Apa yang dapat disimpulkan dari
+        kekontinuan <m>f</m> mengenai <m>f(X)</m> dalam <m>\R</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-24-hint">
+      <p><em>Tahap 1.</em> Terapkan teorema bahwa citra kontinu himpunan kompak bersifat kompak.</p>
+      <p><em>Tahap 2.</em> Gunakan ketakosongan <m>X</m> untuk menentukan apakah <m>f(X)</m> kosong.</p>
+      <p><em>Tahap 3.</em> Di <m>\R</m>, gunakan Teorema Heine-Borel untuk menerjemahkan kekompakan menjadi sifat tertutup dan terbatas.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-24-answer">
+      <p>
+        Himpunan <m>f(X)</m> kompak dan tak kosong. Oleh Teorema Heine-Borel,
+        <m>f(X)</m> tertutup dan terbatas dalam <m>\R</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-24-solution">
+      <p>
+        Ruang <m>X</m> kompak dan <m>f</m> kontinu, sehingga teorema citra
+        kontinu himpunan kompak menunjukkan bahwa <m>f(X)</m> kompak dalam
+        <m>\R</m>. Karena <m>X\ne\emptyset</m>, pilih <m>x_0\in X</m>;
+        kemudian <m>f(x_0)\in f(X)</m>, jadi <m>f(X)\ne\emptyset</m>.
+        Teorema Heine-Borel pada <m>\R</m> menyatakan bahwa himpunan kompak
+        tepat himpunan tertutup dan terbatas. Maka <m>f(X)</m> tertutup dan
+        terbatas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-25">
+    <title>Supremum Citra Dicapai</title>
+    <statement>
+      <p>
+        Dalam situasi sebelumnya, mengapa <m>f(X)</m> memiliki batas atas
+        terkecil <m>M</m>? Mengapa <m>M</m> harus merupakan unsur
+        <m>f(X)</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-25-hint">
+      <p><em>Tahap 1.</em> Himpunan <m>f(X)</m> tak kosong dan terbatas di atas; gunakan sifat kelengkapan <m>\R</m>.</p>
+      <p><em>Tahap 2.</em> Jika <m>M=\sup f(X)</m>, untuk setiap <m>\varepsilon\gt0</m> ada <m>y\in f(X)</m> dengan <m>M-\varepsilon\lt y\leq M</m>.</p>
+      <p><em>Tahap 3.</em> Jadi <m>M</m> berada dalam penutupan <m>f(X)</m>; gunakan ketertutupan <m>f(X)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-25-answer">
+      <p>
+        Ketakosongan dan keterbatasan <m>f(X)</m> menjamin adanya
+        <m>M=\sup f(X)</m>. Sifat supremum membuat setiap lingkungan <m>M</m>
+        beririsan dengan <m>f(X)</m>, sehingga
+        <m>M\in\overline{f(X)}</m>. Karena <m>f(X)</m> tertutup,
+        <m>M\in f(X)</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-25-solution">
+      <p>
+        Himpunan <m>f(X)</m> tak kosong dan terbatas, khususnya terbatas di
+        atas. Sifat batas atas terkecil bilangan real menghasilkan
+        <m>M=\sup f(X)\in\R</m>.
+      </p>
+      <p>
+        Untuk setiap <m>\varepsilon\gt0</m>, bilangan
+        <m>M-\varepsilon</m> bukan batas atas bagi <m>f(X)</m>; jika ia batas
+        atas, keminimalan <m>M</m> akan gagal. Maka terdapat
+        <m>y_\varepsilon\in f(X)</m> dengan
+        <m>M-\varepsilon\lt y_\varepsilon\leq M</m>. Jadi setiap lingkungan
+        buka dari <m>M</m> memuat titik <m>f(X)</m>, sehingga
+        <m>M\in\overline{f(X)}</m>. Himpunan <m>f(X)</m> tertutup, jadi sama
+        dengan penutupannya. Oleh sebab itu <m>M\in f(X)</m>; ekuivalen,
+        ada <m>x_M\in X</m> dengan <m>f(x_M)=M</m>.
+      </p>
+    </solution>
+  </exercise>
+</section>

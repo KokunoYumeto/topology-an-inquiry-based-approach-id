@@ -1,0 +1,448 @@
+<section xml:id="o003-c90-ch17-mastery" xml:lang="id-ID">
+  <title>Uji Penguasaan Bab 17: Kekompakan</title>
+
+  <p>
+    Delapan uji penguasaan ini menghubungkan definisi selimut buka,
+    sifat irisan berhingga, Teorema Heine–Borel, pemetaan kontinu,
+    hipotesis Hausdorff, metrik Hausdorff, dan sistem fungsi teriterasi.
+    Kerjakan setiap pernyataan sebelum membuka petunjuk, jawaban, dan solusi
+    secara bertahap.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0,
+    bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch17-mastery-01">
+    <title>Kekompakan dan sifat irisan berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi. Buktikan bahwa <m>X</m> kompak jika
+        dan hanya jika setiap keluarga <m>\mathcal F</m> himpunan tertutup yang
+        mempunyai sifat irisan berhingga memenuhi
+        <m>\bigcap_{F\in\mathcal F}F\ne\emptyset</m>. Di sini sifat irisan
+        berhingga berarti bahwa irisan setiap subkeluarga berhingga dan tak
+        kosong dari <m>\mathcal F</m> tidak kosong.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-01-hint">
+      <p><em>Tahap 1.</em> Ambil komplemen setiap himpunan tertutup.</p>
+      <p><em>Tahap 2.</em> Gunakan hukum De Morgan untuk menerjemahkan “irisan total kosong” menjadi “komplemen-komplemennya menutupi <m>X</m>”.</p>
+      <p><em>Tahap 3.</em> Perhatikan bahwa subselimut berhingga tepat bersesuaian dengan irisan berhingga yang kosong.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-01-answer">
+      <p>
+        Pernyataan itu benar. Dengan menuliskan <m>U_F=X\setminus F</m>,
+        kegagalan irisan total setara dengan fakta bahwa keluarga
+        <m>\{U_F\}</m> merupakan selimut buka, sedangkan kegagalan suatu
+        irisan berhingga setara dengan adanya subselimut berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-01-solution">
+      <p>
+        Andaikan <m>X</m> kompak dan <m>\mathcal F</m> mempunyai sifat irisan
+        berhingga. Jika <m>\bigcap_{F\in\mathcal F}F=\emptyset</m>, maka hukum
+        De Morgan memberi
+        <me>
+          X=X\setminus\bigcap_{F\in\mathcal F}F
+           =\bigcup_{F\in\mathcal F}(X\setminus F).
+        </me>
+        Jadi komplemen anggota <m>\mathcal F</m> membentuk selimut buka bagi
+        <m>X</m>. Kekompakan menghasilkan <m>F_1,\ldots,F_n\in\mathcal F</m>
+        dengan <m>X=\bigcup_{i=1}^n(X\setminus F_i)</m>. Sekali lagi menurut
+        hukum De Morgan, <m>\bigcap_{i=1}^nF_i=\emptyset</m>, bertentangan
+        dengan sifat irisan berhingga.
+      </p>
+      <p>
+        Sebaliknya, andaikan syarat irisan tersebut berlaku dan misalkan
+        <m>\mathcal U</m> suatu selimut buka bagi <m>X</m> tanpa subselimut
+        berhingga. Keluarga tertutup
+        <m>\mathcal F=\{X\setminus U:U\in\mathcal U\}</m> mempunyai sifat
+        irisan berhingga: irisan berhingga yang kosong akan mengatakan bahwa
+        himpunan-himpunan terbuka yang bersesuaian menutupi <m>X</m>. Namun
+        <m>\mathcal U</m> menutupi <m>X</m>, sehingga
+        <m>\bigcap_{F\in\mathcal F}F=\emptyset</m>. Ini bertentangan dengan
+        hipotesis, maka setiap selimut buka mempunyai subselimut berhingga.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-mastery-02">
+    <title>Citra kontinu dari ruang kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> kompak dan <m>f:X\to Y</m> kontinu. Buktikan bahwa
+        <m>f(X)</m>, dengan topologi subruang dari <m>Y</m>, kompak. Deduksikan
+        bahwa jika <m>f</m> juga surjektif, maka <m>Y</m> kompak, dan bahwa
+        kekompakan merupakan invarian topologi.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-02-hint">
+      <p><em>Tahap 1.</em> Mulailah dengan selimut buka <m>\{V_i\}</m> bagi <m>f(X)</m>.</p>
+      <p><em>Tahap 2.</em> Tarik setiap <m>V_i</m> kembali melalui pemetaan <m>f:X\to f(X)</m>.</p>
+      <p><em>Tahap 3.</em> Untuk invarian topologi, terapkan hasil tersebut pada suatu homeomorfisme.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-02-answer">
+      <p>
+        Prapeta selimut buka bagi <m>f(X)</m> menyelimuti <m>X</m>. Subselimut
+        berhingga bagi prapeta itu menghasilkan subselimut berhingga bagi
+        <m>f(X)</m>. Jika <m>f</m> surjektif, <m>f(X)=Y</m>; khususnya,
+        homeomorfisme mempertahankan kekompakan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-02-solution">
+      <p>
+        Ambil selimut buka <m>\{V_i:i\in I\}</m> bagi <m>f(X)</m>. Karena
+        setiap <m>V_i</m> terbuka dalam topologi subruang dan <m>f</m> yang
+        dipandang sebagai pemetaan ke <m>f(X)</m> tetap kontinu, setiap
+        <m>f^{-1}(V_i)</m> terbuka dalam <m>X</m>. Selain itu,
+        <m>\{f^{-1}(V_i):i\in I\}</m> menutupi <m>X</m>. Pilih indeks
+        <m>i_1,\ldots,i_n</m> sehingga prapeta-prapeta tersebut menutupi
+        <m>X</m>. Untuk setiap <m>y\in f(X)</m>, tulis <m>y=f(x)</m>.
+        Salah satu <m>f^{-1}(V_{i_k})</m> memuat <m>x</m>, sehingga
+        <m>y\in V_{i_k}</m>. Jadi <m>V_{i_1},\ldots,V_{i_n}</m> menutupi
+        <m>f(X)</m>, dan <m>f(X)</m> kompak.
+      </p>
+      <p>
+        Jika <m>f</m> surjektif, citra itu adalah <m>Y</m>. Jika
+        <m>h:X\to Y</m> homeomorfisme dan salah satu ruang kompak, maka
+        kekontinuan <m>h</m> atau <m>h^{-1}</m> memindahkan kekompakan ke
+        ruang yang lain. Karena itu kekompakan merupakan invarian topologi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-mastery-03">
+    <title>Merekonstruksi Teorema Heine–Borel</title>
+    <statement>
+      <p>
+        Buktikan bahwa subhimpunan <m>K\subseteq\R^n</m> kompak jika dan hanya
+        jika <m>K</m> tertutup dan terbatas. Anda boleh memakai fakta bahwa
+        setiap barisan kubus tertutup tak kosong yang menurun dan yang panjang
+        rusuknya menuju nol mempunyai irisan tak kosong, serta bahwa
+        subhimpunan tertutup dari ruang kompak adalah kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-03-hint">
+      <p><em>Tahap 1.</em> Untuk membuktikan kubus tertutup kompak, andaikan ada selimut buka tanpa subselimut berhingga dan bagi kubus menjadi <m>2^n</m> subkubus.</p>
+      <p><em>Tahap 2.</em> Pilih berulang kali satu subkubus yang juga tidak dapat ditutupi secara berhingga.</p>
+      <p><em>Tahap 3.</em> Untuk arah sebaliknya, gunakan fungsi koordinat atau bola-bola terbuka untuk memperoleh keterbatasan dan gunakan hipotesis Hausdorff pada <m>\R^n</m> untuk memperoleh ketertutupan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-03-answer">
+      <p>
+        Kubus tertutup dalam <m>\R^n</m> kompak melalui argumen pembagian
+        kubus bersarang. Himpunan tertutup dan terbatas terletak dalam suatu
+        kubus kompak dan tertutup di dalamnya, maka kompak. Sebaliknya,
+        subhimpunan kompak ruang Hausdorff tertutup, dan suatu tutup oleh
+        bola-bola berpusat di asal mempunyai subselimut berhingga sehingga
+        himpunan itu terbatas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-03-solution">
+      <p>
+        Pertama, misalkan suatu kubus tertutup <m>Q_0</m> mempunyai selimut
+        buka <m>\mathcal U</m> tanpa subselimut berhingga. Bagi
+        <m>Q_0</m> menjadi <m>2^n</m> kubus tertutup kongruen. Sedikitnya satu
+        di antaranya, sebut <m>Q_1</m>, tidak dapat ditutupi oleh berhingga
+        banyak anggota <m>\mathcal U</m>; jika semuanya dapat, gabungan
+        subselimut-subselimut berhingga itu akan menyelimuti <m>Q_0</m>.
+        Ulangi untuk memperoleh
+        <m>Q_0\supseteq Q_1\supseteq Q_2\supseteq\cdots</m>, dengan panjang
+        rusuk menuju nol dan setiap <m>Q_k</m> tidak mempunyai subselimut
+        berhingga dari <m>\mathcal U</m>.
+      </p>
+      <p>
+        Ambil <m>x\in\bigcap_{k\ge0}Q_k</m>. Ada <m>U\in\mathcal U</m>
+        dan <m>\epsilon&gt;0</m> dengan <m>x\in B_\epsilon(x)\subseteq U</m>.
+        Untuk <m>k</m> cukup besar, diameter <m>Q_k</m> lebih kecil daripada
+        <m>\epsilon</m>, sehingga <m>Q_k\subseteq U</m>. Ini memberi
+        subselimut satu himpunan bagi <m>Q_k</m>, sebuah kontradiksi. Jadi
+        setiap kubus tertutup kompak.
+      </p>
+      <p>
+        Jika <m>K</m> tertutup dan terbatas, maka <m>K\subseteq[-M,M]^n</m>
+        untuk suatu <m>M</m>. Kubus tersebut kompak, dan <m>K</m> tertutup di
+        dalamnya, sehingga <m>K</m> kompak. Sebaliknya, <m>\R^n</m> Hausdorff,
+        jadi setiap subhimpunan kompaknya tertutup. Keluarga
+        <m>\{B_m(0):m\in\Z^+\}</m> menyelimuti <m>K</m>; suatu subselimut
+        berhingga termuat dalam <m>B_M(0)</m> untuk nilai maksimum <m>M</m>
+        dari indeks yang terpilih. Maka <m>K</m> terbatas.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-mastery-04">
+    <title>Teorema nilai ekstrem pada ruang kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi kompak tak kosong dan
+        <m>f:X\to\R</m> kontinu. Buktikan bahwa terdapat <m>x_-,x_+\in X</m>
+        dengan <m>f(x_-)\le f(x)\le f(x_+)</m> untuk setiap <m>x\in X</m>.
+        Jelaskan tepat di mana ketakosongan <m>X</m> digunakan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-04-hint">
+      <p><em>Tahap 1.</em> Gunakan kekontinuan untuk menunjukkan bahwa <m>f(X)</m> kompak.</p>
+      <p><em>Tahap 2.</em> Terapkan Heine–Borel dalam <m>\R</m>, lalu ambil supremum dan infimum.</p>
+      <p><em>Tahap 3.</em> Gunakan ketertutupan <m>f(X)</m> untuk menunjukkan bahwa kedua batas itu benar-benar anggota citra.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-04-answer">
+      <p>
+        Citra <m>f(X)</m> kompak, sehingga tertutup dan terbatas dalam
+        <m>\R</m>. Karena citra itu tak kosong, supremum dan infimumnya ada;
+        ketertutupan membuat keduanya termasuk dalam <m>f(X)</m> dan karena
+        itu dicapai oleh titik-titik <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-04-solution">
+      <p>
+        Berdasarkan kekontinuan <m>f</m>, himpunan <m>f(X)</m> kompak. Menurut
+        Heine–Borel, <m>f(X)</m> tertutup dan terbatas dalam <m>\R</m>.
+        Ketakosongan <m>X</m> menjamin bahwa <m>f(X)</m> tak kosong, sehingga
+        bilangan
+        <m>a=\inf f(X)</m> dan <m>b=\sup f(X)</m> terdefinisi sebagai bilangan
+        real.
+      </p>
+      <p>
+        Untuk setiap <m>k\ge1</m>, sifat supremum memberi
+        <m>y_k\in f(X)</m> dengan <m>b-1/k&lt;y_k\le b</m>. Maka
+        <m>y_k\to b</m>. Karena <m>f(X)</m> tertutup, <m>b\in f(X)</m>.
+        Jadi ada <m>x_+\in X</m> dengan <m>f(x_+)=b</m>. Argumen yang sama
+        bagi infimum memberi <m>x_-\in X</m> dengan <m>f(x_-)=a</m>.
+        Definisi infimum dan supremum kemudian memberi
+        <m>f(x_-)\le f(x)\le f(x_+)</m> bagi setiap <m>x\in X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-mastery-05">
+    <title>Memisahkan titik dari himpunan kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang Hausdorff, <m>K\subseteq X</m> kompak, dan
+        <m>x\in X\setminus K</m>. Buktikan bahwa terdapat himpunan terbuka
+        <m>U,V\subseteq X</m> dengan <m>x\in U</m>, <m>K\subseteq V</m>, dan
+        <m>U\cap V=\emptyset</m>. Deduksikan bahwa setiap subhimpunan kompak
+        dari ruang Hausdorff tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-05-hint">
+      <p><em>Tahap 1.</em> Untuk setiap <m>y\in K</m>, pilih lingkungan terbuka saling lepas <m>U_y\ni x</m> dan <m>V_y\ni y</m>.</p>
+      <p><em>Tahap 2.</em> Ambil subselimut berhingga dari <m>\{V_y:y\in K\}</m>.</p>
+      <p><em>Tahap 3.</em> Iris lingkungan-lingkungan <m>U_y</m> yang bersesuaian dan gabungkan lingkungan-lingkungan <m>V_y</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-05-answer">
+      <p>
+        Pilih <m>y_1,\ldots,y_n</m> sehingga
+        <m>K\subseteq\bigcup_iV_{y_i}</m>. Maka
+        <m>U=\bigcap_iU_{y_i}</m> dan <m>V=\bigcup_iV_{y_i}</m> memenuhi
+        semua syarat. Karena setiap titik di luar <m>K</m> mempunyai
+        lingkungan terbuka yang tidak memotong <m>K</m>, komplemen
+        <m>K</m> terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-05-solution">
+      <p>
+        Untuk setiap <m>y\in K</m>, sifat Hausdorff memberi himpunan terbuka
+        <m>U_y,V_y</m> dengan <m>x\in U_y</m>, <m>y\in V_y</m>, dan
+        <m>U_y\cap V_y=\emptyset</m>. Keluarga <m>\{V_y:y\in K\}</m>
+        menutupi <m>K</m>. Karena <m>K</m> kompak, ada
+        <m>y_1,\ldots,y_n</m> sehingga
+        <m>K\subseteq V_{y_1}\cup\cdots\cup V_{y_n}</m>.
+      </p>
+      <p>
+        Tetapkan
+        <me>
+          U=U_{y_1}\cap\cdots\cap U_{y_n},\qquad
+          V=V_{y_1}\cup\cdots\cup V_{y_n}.
+        </me>
+        Keduanya terbuka, <m>x\in U</m>, dan <m>K\subseteq V</m>. Jika
+        <m>z\in U\cap V</m>, maka <m>z\in V_{y_i}</m> untuk suatu <m>i</m>,
+        sementara <m>z\in U\subseteq U_{y_i}</m>, bertentangan dengan
+        <m>U_{y_i}\cap V_{y_i}=\emptyset</m>. Jadi <m>U\cap V=\emptyset</m>.
+        Khususnya, setiap <m>x\notin K</m> mempunyai lingkungan terbuka
+        <m>U\subseteq X\setminus K</m>. Maka <m>X\setminus K</m> terbuka dan
+        <m>K</m> tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-mastery-06">
+    <title>Mengapa hipotesis Hausdorff tidak boleh dihapus</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> himpunan tak hingga dengan topologi kofinit: himpunan
+        terbukanya adalah <m>\emptyset</m> dan semua himpunan yang komplemennya
+        berhingga. Buktikan bahwa <m>X</m> kompak tetapi tidak Hausdorff.
+        Selanjutnya, pilih subhimpunan tak hingga sejati <m>A\subsetneq X</m>
+        dan tunjukkan bahwa <m>A</m> kompak sebagai subruang tetapi tidak
+        tertutup dalam <m>X</m> apabila <m>X\setminus A</m> juga tak hingga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-06-hint">
+      <p><em>Tahap 1.</em> Dari suatu selimut buka, pilih satu anggota tak kosong; hanya berhingga banyak titik yang belum terselimuti.</p>
+      <p><em>Tahap 2.</em> Dua himpunan terbuka tak kosong tidak mungkin saling lepas.</p>
+      <p><em>Tahap 3.</em> Topologi subruang pada <m>A</m> juga kofinit, sedangkan kriteria tertutup di <m>X</m> dapat dibaca dari komplemennya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-06-answer">
+      <p>
+        Satu anggota tak kosong dari selimut buka menyisakan hanya berhingga
+        banyak titik, yang dapat diselimuti oleh berhingga banyak anggota lain.
+        Dua himpunan terbuka tak kosong selalu beririsan karena gabungan dua
+        komplemen berhingga tetap berhingga. Subruang <m>A</m> bertopologi
+        kofinit sehingga kompak, tetapi <m>A</m> tidak tertutup jika
+        komplemennya tak hingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-06-solution">
+      <p>
+        Ambil selimut buka <m>\mathcal U</m> bagi <m>X</m> dan pilih
+        <m>U_0\in\mathcal U</m> yang tak kosong. Himpunan
+        <m>X\setminus U_0</m> berhingga. Untuk setiap titik pada komplemen itu,
+        pilih satu anggota <m>\mathcal U</m> yang memuatnya. Bersama
+        <m>U_0</m>, berhingga banyak pilihan ini menutupi <m>X</m>. Jadi
+        <m>X</m> kompak.
+      </p>
+      <p>
+        Jika <m>U,V</m> terbuka dan tak kosong, maka
+        <m>X\setminus(U\cap V)=(X\setminus U)\cup(X\setminus V)</m> berhingga.
+        Karena <m>X</m> tak hingga, <m>U\cap V</m> tidak kosong. Maka dua titik
+        berbeda tidak dapat mempunyai lingkungan terbuka saling lepas, dan
+        <m>X</m> tidak Hausdorff.
+      </p>
+      <p>
+        Himpunan terbuka tak kosong dalam subruang <m>A</m> berbentuk
+        <m>A\cap U</m>; komplemennya di <m>A</m> termuat dalam komplemen
+        berhingga <m>X\setminus U</m>. Sebaliknya, setiap komplemen berhingga
+        di <m>A</m> diperoleh dengan cara ini. Jadi <m>A</m> juga bertopologi
+        kofinit dan argumen pertama menunjukkan bahwa <m>A</m> kompak. Namun
+        jika <m>X\setminus A</m> tak hingga, komplemen itu bukan himpunan
+        terbuka tak kosong kofinit; akibatnya <m>A</m> tidak tertutup. Contoh
+        ini menunjukkan bahwa “kompak mengakibatkan tertutup” memerlukan
+        hipotesis Hausdorff pada ruang ambient.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-mastery-07">
+    <title>Metrik Hausdorff pada himpunan kompak</title>
+    <statement>
+      <p>
+        Untuk himpunan kompak tak kosong <m>A,B</m> dalam ruang metrik
+        <m>(X,d)</m>, definisikan
+        <me>
+          d_H(A,B)=\max\left\{
+          \sup_{a\in A}d(a,B),\ \sup_{b\in B}d(b,A)
+          \right\},
+          \qquad d(x,C)=\inf_{c\in C}d(x,c).
+        </me>
+        Buktikan bahwa <m>d_H</m> merupakan metrik pada koleksi semua
+        subhimpunan kompak tak kosong dari <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-07-hint">
+      <p><em>Tahap 1.</em> Simetri dan nonnegativitas langsung dari definisi.</p>
+      <p><em>Tahap 2.</em> Jika <m>d_H(A,B)=0</m>, gunakan ketertutupan himpunan kompak dalam ruang metrik untuk memperoleh kedua inklusi.</p>
+      <p><em>Tahap 3.</em> Untuk setiap <m>a\in A</m>, bandingkan <m>d(a,C)</m> dengan <m>d(a,b)+d(b,C)</m>, lalu ambil infimum dan supremum.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-07-answer">
+      <p>
+        Fungsi <m>d_H</m> nonnegatif dan simetris. Nilai nol memaksa
+        <m>A\subseteq B</m> dan <m>B\subseteq A</m>. Ketaksamaan
+        <m>d(a,C)\le d(a,B)+d_H(B,C)</m> dan pasangannya bagi titik-titik
+        <m>C</m> menghasilkan ketaksamaan segitiga setelah supremum diambil.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-07-solution">
+      <p>
+        Fungsi jarak-ke-himpunan <m>x\mapsto d(x,B)</m> kontinu, sehingga
+        terbatas pada himpunan kompak <m>A</m>; hal yang sama berlaku setelah
+        <m>A</m> dan <m>B</m> dipertukarkan. Jadi kedua supremum dalam definisi
+        bernilai hingga. Nonnegativitas jelas, dan pertukaran <m>A</m> dengan <m>B</m> tidak
+        mengubah maksimum, jadi <m>d_H(A,B)=d_H(B,A)</m>. Jika <m>A=B</m>,
+        semua jarak ke himpunan itu nol. Sebaliknya, jika <m>d_H(A,B)=0</m>,
+        maka <m>d(a,B)=0</m> untuk setiap <m>a\in A</m>. Himpunan kompak dalam
+        ruang metrik tertutup, sehingga <m>a\in B</m>. Jadi
+        <m>A\subseteq B</m>; secara simetris <m>B\subseteq A</m>.
+      </p>
+      <p>
+        Ambil himpunan kompak tak kosong <m>A,B,C</m>. Untuk
+        <m>a\in A</m>, <m>b\in B</m>, dan <m>c\in C</m>, ketaksamaan segitiga
+        memberi <m>d(a,c)\le d(a,b)+d(b,c)</m>. Dengan mengambil infimum
+        terhadap <m>c</m>, lalu memperkirakan
+        <m>d(b,C)\le d_H(B,C)</m>, diperoleh
+        <m>d(a,C)\le d(a,b)+d_H(B,C)</m>. Mengambil infimum terhadap
+        <m>b\in B</m> memberi
+        <m>d(a,C)\le d(a,B)+d_H(B,C)</m>. Setelah supremum terhadap
+        <m>a\in A</m>,
+        <me>
+          \sup_{a\in A}d(a,C)\le d_H(A,B)+d_H(B,C).
+        </me>
+        Argumen simetris memberi batas yang sama bagi
+        <m>\sup_{c\in C}d(c,A)</m>. Maksimum kedua ruas kiri itu adalah
+        <m>d_H(A,C)</m>, sehingga
+        <m>d_H(A,C)\le d_H(A,B)+d_H(B,C)</m>. Semua aksioma metrik terpenuhi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-mastery-08">
+    <title>Kontraksi himpunan dan atraktor unik</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik lengkap dan
+        <m>f_1,\ldots,f_N:X\to X</m> kontraksi dengan satu konstanta bersama
+        <m>0\le c&lt;1</m>. Pada koleksi <m>\mathcal K(X)</m> subhimpunan
+        kompak tak kosong, definisikan
+        <m>H(A)=\bigcup_{i=1}^N f_i(A)</m>. Buktikan bahwa
+        <m>d_H(H(A),H(B))\le c\,d_H(A,B)</m>. Dengan memakai kelengkapan
+        <m>(\mathcal K(X),d_H)</m> dan teorema titik tetap kontraksi, simpulkan
+        bahwa ada tepat satu atraktor <m>K</m> dengan <m>H(K)=K</m> dan bahwa
+        iterasi dari sembarang <m>A_0\in\mathcal K(X)</m> menuju <m>K</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-mastery-08-hint">
+      <p><em>Tahap 1.</em> Jika <m>x=f_i(a)</m>, dekati <m>a</m> oleh suatu titik <m>b\in B</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan <m>d(f_i(a),f_i(b))\le c\,d(a,b)</m> dan ambil infimum, supremum, serta maksimum.</p>
+      <p><em>Tahap 3.</em> Terapkan teorema titik tetap Banach pada pemetaan <m>H</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-mastery-08-answer">
+      <p>
+        Setiap titik <m>f_i(a)</m> dalam <m>H(A)</m> berjarak paling besar
+        <m>c\,d(a,B)</m> dari <m>H(B)</m>; arah sebaliknya simetris. Maka
+        <m>H</m> kontraksi berfaktor paling besar <m>c</m>. Kelengkapan
+        hiperruang dan teorema Banach memberi satu-satunya titik tetap
+        <m>K</m> serta konvergensi <m>H^n(A_0)\to K</m> dalam metrik Hausdorff.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-mastery-08-solution">
+      <p>
+        Ambil <m>x\in H(A)</m>. Ada <m>i</m> dan <m>a\in A</m> dengan
+        <m>x=f_i(a)</m>. Untuk setiap <m>\epsilon&gt;0</m>, pilih
+        <m>b\in B</m> sehingga <m>d(a,b)&lt;d(a,B)+\epsilon</m>. Karena
+        <m>f_i(b)\in H(B)</m>,
+        <me>
+          d(x,H(B))\le d(f_i(a),f_i(b))
+          \le c\,d(a,b)
+          &lt;c\bigl(d(a,B)+\epsilon\bigr).
+        </me>
+        Biarkan <m>\epsilon\downarrow0</m>. Maka
+        <m>d(x,H(B))\le c\,d(a,B)\le c\,d_H(A,B)</m>. Mengambil supremum
+        terhadap <m>x\in H(A)</m> memberi satu sisi definisi metrik Hausdorff.
+        Pertukaran <m>A</m> dan <m>B</m> memberi sisi lainnya, sehingga
+        <m>d_H(H(A),H(B))\le c\,d_H(A,B)</m>.
+      </p>
+      <p>
+        Gabungan berhingga citra kompak adalah kompak dan tak kosong, jadi
+        <m>H</m> memang memetakan <m>\mathcal K(X)</m> ke dirinya sendiri.
+        Dengan fakta yang diberikan bahwa <m>\mathcal K(X)</m> lengkap,
+        <m>H</m> adalah kontraksi pada ruang metrik lengkap. Teorema titik
+        tetap Banach menghasilkan tepat satu <m>K\in\mathcal K(X)</m> dengan
+        <m>H(K)=K</m>. Untuk setiap <m>A_0\in\mathcal K(X)</m>, barisan
+        <m>A_{n+1}=H(A_n)</m> memenuhi
+        <m>d_H(A_n,K)\le c^n d_H(A_0,K)</m> dan karena itu konvergen ke
+        <m>K</m>. Himpunan <m>K</m> ialah atraktor unik sistem fungsi tersebut.
+      </p>
+    </solution>
+  </exercise>
+</section>

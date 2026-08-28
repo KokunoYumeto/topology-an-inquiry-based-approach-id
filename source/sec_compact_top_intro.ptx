@@ -1,103 +1,103 @@
 <section xml:id="sec_compact_top_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    Closed and bounded intervals have important properties in calculus.
-    Recall, for example,
-    that every real-valued function that is continuous on a closed interval <m>[a, b]</m> attains a maximum and minimum value on that interval.
-    The question we want to address in this section is if there is a corresponding characterization for subsets of topological spaces that ensure that continuous real-valued functions with domains in topological spaces attain maximum and minimum values.
-    The property that we will develop is called compactness.
+    Interval tertutup dan terbatas memiliki sifat-sifat penting dalam kalkulus.
+    Ingat, misalnya,
+    bahwa setiap fungsi bernilai real yang kontinu pada interval tertutup <m>[a, b]</m> mencapai nilai maksimum dan minimum pada interval tersebut.
+    Pertanyaan yang hendak kita bahas dalam bagian ini adalah apakah terdapat pencirian yang bersesuaian bagi subhimpunan ruang topologi yang menjamin bahwa fungsi kontinu bernilai real dengan domain berupa ruang topologi mencapai nilai maksimum dan minimum.
+    Sifat yang akan kita kembangkan disebut kekompakan.
   </p>
   <p>
-    The word
-    <q>compact</q>
-    might bring to mind a notion of smallness,
-    but we need to be careful with the term.
-    We might think that the interval <m>(0, 0.5)</m> is small,
-    but <m>(0, 0.5)</m> is homeomorphic to <m>\R</m>, which is not small.
-    Similarly, we might think that the interval <m>[-10000, 10000]</m> is large,
-    but this interval is homeomorphic to the
-    <q>small</q>
-    interval <m>[-0.00001, 0.000001]</m>.
-    As a result,
-    the concept of compactness does not correspond to size,
-    but rather structure, in a way.
-    We will expand on this idea in this section.
+    Kata
+    <q>kompak</q>
+    mungkin mengingatkan kita pada gagasan tentang ukuran kecil,
+    tetapi kita perlu berhati-hati dengan istilah ini.
+    Kita mungkin menganggap interval <m>(0, 0.5)</m> kecil,
+    tetapi <m>(0, 0.5)</m> homeomorfik dengan <m>\R</m>, yang tidak kecil.
+    Demikian pula, kita mungkin menganggap interval <m>[-10000, 10000]</m> besar,
+    tetapi interval ini homeomorfik dengan interval
+    <q>kecil</q>
+    <m>[-0.00001, 0.000001]</m>.
+    Akibatnya,
+    konsep kekompakan tidak berkaitan dengan ukuran,
+    melainkan, dalam arti tertentu, dengan struktur.
+    Kita akan mengembangkan gagasan ini dalam bagian ini.
   </p>
   <p>
-    Since a topology defines open sets,
-    topological properties are often defined in terms of open sets.
-    Let us consider an example to see if we can tease out some of the details we will need to get a useful notion of compactness.
-    Consider the open interval <m>(0, 1)</m> in <m>\R</m>.
-    Suppose we write <m>(0, 1)</m> as a union of open balls.
-    For example,
-    let <m>O_n = \left(\frac{1}{n}, 1-\frac{1}{n}\right)</m> for <m>n \in \Z^+</m> and <m>n \geq 3</m>.
-    Notice that <m>(0, 1) \subseteq \bigcup_{n \geq 3} O_n</m>.
-    Any collection of open sets whose union contains <m>(0, 1)</m> is called an
-    <term>open cover</term> of <m>(0, 1)</m>.
-    Working with a larger number of sets is generally more complicated than working with a smaller number,
-    so it is reasonable to ask if we can reduce the number of sets in our open cover of <m>(0, 1)</m> and still cover <m>(0, 1)</m>.
-    In particular,
-    working with a finite collection of sets is preferable to working with an infinite number of sets
-    (we can exhaustively check all of the possibilities in a finite setting if necessary).
-    Notice that <m>O_n \subset O_{n+1}</m> for each <m>n</m>,
-    so we can eliminate many of the sets in this cover.
-    However, if we eliminate enough sets so that we are left with only finitely many,
-    then there will be a maximum value of <m>n</m> so that <m>O_n</m> remains in our collection.
-    But then <m>\frac{1}{2n}</m> will not be in the union of our remaining collection of sets.
-    As a result,
-    we cannot find a finite collection of the <m>O_n</m> whose union contains <m>(0, 1)</m>.
-    Note that there may be some collections of open sets that cover of <m>(0,1)</m> for which there is a finite subcollection of sets that also cover <m>(0,1)</m>.
-    For example,
-    if we let <m>U_n = \left(n-\frac{3}{4}, n+\frac{3}{4}\right)</m>,
-    then <m>(0,1) \subseteq \bigcup_{n \in \Z} U_n</m>,
-    and <m>(0,1) \subseteq U_{0} \cup U_1</m>.
-    The main point is that there is at least one collection of open sets that covers <m>(0,1)</m> for which there is no finite subcollection of sets that covers <m>(0,1)</m>.
+    Karena suatu topologi mendefinisikan himpunan-himpunan buka,
+    sifat topologi sering didefinisikan dengan menggunakan himpunan buka.
+    Mari kita telaah sebuah contoh untuk menyingkap beberapa perincian yang kita perlukan guna memperoleh gagasan kekompakan yang berguna.
+    Pertimbangkan interval terbuka <m>(0, 1)</m> dalam <m>\R</m>.
+    Misalkan kita menuliskan <m>(0, 1)</m> sebagai gabungan bola-bola terbuka.
+    Sebagai contoh,
+    misalkan <m>O_n = \left(\frac{1}{n}, 1-\frac{1}{n}\right)</m> untuk <m>n \in \Z^+</m> dan <m>n \geq 3</m>.
+    Perhatikan bahwa <m>(0, 1) \subseteq \bigcup_{n \geq 3} O_n</m>.
+    Setiap koleksi himpunan buka yang gabungannya memuat <m>(0, 1)</m> disebut
+    <term>selimut buka</term> bagi <m>(0, 1)</m>.
+    Bekerja dengan himpunan dalam jumlah besar pada umumnya lebih rumit daripada bekerja dengan himpunan dalam jumlah kecil,
+    sehingga wajar untuk menanyakan apakah kita dapat mengurangi banyaknya himpunan dalam selimut buka bagi <m>(0, 1)</m> dan tetap menyelimuti <m>(0, 1)</m>.
+    Secara khusus,
+    bekerja dengan koleksi himpunan berhingga lebih disukai daripada bekerja dengan himpunan dalam jumlah tak berhingga
+    (jika perlu, dalam keadaan berhingga kita dapat memeriksa semua kemungkinan satu per satu).
+    Perhatikan bahwa <m>O_n \subset O_{n+1}</m> untuk setiap <m>n</m>,
+    sehingga kita dapat menyingkirkan banyak himpunan dari selimut ini.
+    Namun, jika kita menyingkirkan cukup banyak himpunan hingga hanya tersisa sejumlah berhingga,
+    maka akan terdapat nilai maksimum <m>n</m> sedemikian sehingga <m>O_n</m> masih berada dalam koleksi kita.
+    Akan tetapi, <m>\frac{1}{2n}</m> tidak akan berada dalam gabungan koleksi himpunan yang tersisa.
+    Akibatnya,
+    kita tidak dapat menemukan koleksi berhingga dari himpunan-himpunan <m>O_n</m> yang gabungannya memuat <m>(0, 1)</m>.
+    Perhatikan bahwa mungkin terdapat koleksi himpunan buka yang menyelimuti <m>(0,1)</m> dan memiliki subkoleksi berhingga yang juga menyelimuti <m>(0,1)</m>.
+    Sebagai contoh,
+    jika kita menetapkan <m>U_n = \left(n-\frac{3}{4}, n+\frac{3}{4}\right)</m>,
+    maka <m>(0,1) \subseteq \bigcup_{n \in \Z} U_n</m>,
+    dan <m>(0,1) \subseteq U_{0} \cup U_1</m>.
+    Pokok utamanya adalah bahwa terdapat sekurang-kurangnya satu koleksi himpunan buka yang menyelimuti <m>(0,1)</m> tetapi tidak memiliki subkoleksi berhingga yang menyelimuti <m>(0,1)</m>.
   </p>
   <p>
-    Let's apply the same idea now to the set <m>[0, 1]</m>.
-    Suppose we extend our open cover <m>\{O_n\}</m> to be an open cover of the closed interval <m>[0, 1]</m> by including two additional open balls in <m>\R</m>:
-    <m>O_0 = B(0, 0.5)</m> and <m>O_1 = B(1, 0.5)</m>.
-    Now the sets <m>O_0</m>, <m>O_1</m>,
-    and <m>O_4</m> form a finite collection of sets that covers <m>[0, 1]</m>.
-    So even though the interval <m>[0, 1]</m> is
-    <q>larger</q>
-    than <m>(0, 1)</m> in the sense that
-    <m>(0, 1) \subset [0, 1]</m> we can represent <m>[0, 1]</m> in a more efficient
-    (that is finite)
-    way in terms of open sets than we can the interval <m>(0, 1)</m>.
-    This is the basic idea behind compactness.
+    Sekarang mari kita terapkan gagasan yang sama pada himpunan <m>[0, 1]</m>.
+    Misalkan kita memperluas selimut buka <m>\{O_n\}</m> menjadi selimut buka bagi interval tertutup <m>[0, 1]</m> dengan menambahkan dua bola terbuka dalam <m>\R</m>:
+    <m>O_0 = B(0, 0.5)</m> dan <m>O_1 = B(1, 0.5)</m>.
+    Sekarang himpunan-himpunan <m>O_0</m>, <m>O_1</m>,
+    dan <m>O_4</m> membentuk koleksi berhingga yang menyelimuti <m>[0, 1]</m>.
+    Jadi, meskipun interval <m>[0, 1]</m>
+    <q>lebih besar</q>
+    daripada <m>(0, 1)</m> dalam arti bahwa
+    <m>(0, 1) \subset [0, 1]</m>, kita dapat menyajikan <m>[0, 1]</m> secara lebih efisien
+    (yakni secara berhingga)
+    menggunakan himpunan buka daripada menyajikan interval <m>(0, 1)</m>.
+    Inilah gagasan dasar di balik kekompakan.
   </p>
 
   <definition xml:id="def_compact">
-    <idx><h>compact subset</h></idx>
+    <idx><h>subhimpunan kompak</h></idx>
     <statement>
       <p>
-        A subset <m>A</m> of a topological space <m>X</m> is <term>compact</term>
-        if for every set <m>I</m> and every family of open sets <m>\{O_{\alpha}\}</m> with
-        <m>\alpha \in I</m> such that <m>A \subseteq \bigcup_{\alpha \in I} O_{\alpha}</m>,
-        there exists a finite subfamily
-        <m>\{O_{\alpha_1}, O_{\alpha_2}, \ldots, O_{\alpha_n}\}</m> such that <m>A \subseteq \bigcup_{i = 1}^n O_{\alpha_i}</m>.
+        Suatu subhimpunan <m>A</m> dari ruang topologi <m>X</m> disebut <term>kompak</term>
+        jika untuk setiap himpunan <m>I</m> dan setiap keluarga himpunan buka <m>\{O_{\alpha}\}</m> dengan
+        <m>\alpha \in I</m> sedemikian sehingga <m>A \subseteq \bigcup_{\alpha \in I} O_{\alpha}</m>,
+        terdapat subkeluarga berhingga
+        <m>\{O_{\alpha_1}, O_{\alpha_2}, \ldots, O_{\alpha_n}\}</m> sedemikian sehingga <m>A \subseteq \bigcup_{i = 1}^n O_{\alpha_i}</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    If <m>(X,\tau)</m> is a topological space and <m>X</m> is a compact subset of <m>X</m>,
-    then we say that <m>X</m> is a <term>compact topological space</term>.
-    There is some terminology associated with <xref ref="def_compact"/>.
+    Jika <m>(X,\tau)</m> merupakan ruang topologi dan <m>X</m> merupakan subhimpunan kompak dari <m>X</m>,
+    maka kita mengatakan bahwa <m>X</m> merupakan <term>ruang topologi kompak</term>.
+    Ada beberapa istilah yang berkaitan dengan <xref ref="def_compact"/>.
   </p>
 
   <definition>
-  <idx><h>cover</h></idx>
-<idx><h>cover</h><h>open</h></idx>
+  <idx><h>selimut</h></idx>
+<idx><h>selimut</h><h>buka</h></idx>
     <statement>
       <p>
-        A <term>cover</term>
-        of a subset <m>A</m> of a topological space <m>X</m> is a collection
-        <m>\{S_{\alpha}\}</m> of subsets of <m>X</m> for <m>\alpha</m> in some indexing set <m>I</m> so that <m>A \subseteq \bigcup_{\alpha \in I} S_{\alpha}</m>.
-        In addition, if each set <m>S_{\alpha}</m> is an open set,
-        then the collection <m>\{S_{\alpha}\}</m> is an <term>open cover</term>
-        for <m>A</m>.
+        Suatu <term>selimut</term>
+        bagi subhimpunan <m>A</m> dari ruang topologi <m>X</m> adalah koleksi
+        <m>\{S_{\alpha}\}</m> subhimpunan-subhimpunan <m>X</m>, dengan <m>\alpha</m> berada dalam suatu himpunan indeks <m>I</m>, sedemikian sehingga <m>A \subseteq \bigcup_{\alpha \in I} S_{\alpha}</m>.
+        Selain itu, jika setiap himpunan <m>S_{\alpha}</m> merupakan himpunan buka,
+        maka koleksi <m>\{S_{\alpha}\}</m> merupakan <term>selimut buka</term>
+        bagi <m>A</m>.
       </p>
     </statement>
   </definition>
@@ -105,75 +105,75 @@
   <definition>
     <statement>
       <p>
-        A <term>subcover</term>
-        of a cover <m>\{S_{\alpha}\}_{\alpha \in I}</m> of a subset <m>A</m> of a topological space <m>X</m> is a collection
-        <m>\{S_{\beta}\}</m> for <m>\beta \in J</m>,
-        where <m>J</m> is a subset of <m>I</m> such that <m>A \subseteq \bigcup_{\beta \in J} S_{\beta}</m>.
-        In addition, if <m>J</m> is a finite set,
-        the subcover <m>\{S_{\beta}\}_{\beta \in J}</m> is a <term>finite subcover</term>
-        of <m>\{S_{\alpha}\}_{\alpha \in I}</m>.
+        Suatu <term>subselimut</term>
+        dari selimut <m>\{S_{\alpha}\}_{\alpha \in I}</m> bagi subhimpunan <m>A</m> dari ruang topologi <m>X</m> adalah koleksi
+        <m>\{S_{\beta}\}</m> untuk <m>\beta \in J</m>,
+        dengan <m>J</m> suatu subhimpunan dari <m>I</m> sedemikian sehingga <m>A \subseteq \bigcup_{\beta \in J} S_{\beta}</m>.
+        Selain itu, jika <m>J</m> merupakan himpunan berhingga,
+        subselimut <m>\{S_{\beta}\}_{\beta \in J}</m> merupakan <term>subselimut berhingga</term>
+        dari <m>\{S_{\alpha}\}_{\alpha \in I}</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    So the sets <m>O_0</m>, <m>O_1</m>,
-    and <m>O_4</m> in our previous example form a finite subcover of the open cover <m>\{O_n\}_{n \geq 3}</m>.
+    Jadi, himpunan-himpunan <m>O_0</m>, <m>O_1</m>,
+    dan <m>O_4</m> dalam contoh sebelumnya membentuk subselimut berhingga dari perluasan selimut buka <m>\{O_n\}_{n \geq 3}</m> yang dibahas sebelumnya.
   </p>
   <p>
-    Using the terminology we have now established,
-    we can restate the definition of compactness in the following way:
-    a subset <m>A</m> of a topological space <m>X</m> is compact if every open cover of <m>A</m> has a finite subcover of <m>A</m>.
+    Dengan menggunakan istilah yang baru saja kita tetapkan,
+    kita dapat menyatakan kembali definisi kekompakan sebagai berikut:
+    subhimpunan <m>A</m> dari ruang topologi <m>X</m> bersifat kompak jika setiap selimut buka bagi <m>A</m> memiliki subselimut berhingga bagi <m>A</m>.
   </p>
 
   <exploration>
     <introduction>
     <p>
-      Determine if the subset <m>A</m> of the topological space <m>X</m> is compact.
-      Either prove <m>A</m> is compact by starting with an arbitrary infinite cover and demonstrating that there is a finite subcover,
-      or find a specific infinite cover and prove that there is no finite subcover.
+      Tentukan apakah subhimpunan <m>A</m> dari ruang topologi <m>X</m> bersifat kompak.
+      Buktikan bahwa <m>A</m> kompak dengan memulai dari selimut tak berhingga sebarang dan menunjukkan bahwa terdapat subselimut berhingga,
+      atau temukan suatu selimut tak berhingga tertentu dan buktikan bahwa tidak ada subselimut berhingga.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            <m>A = \{-2, 3, e, \pi, 456875\}</m> in <m>X = \R</m> with the Euclidean topology.
-            Generalize this example.
+            <m>A = \{-2, 3, e, \pi, 456875\}</m> dalam <m>X = \R</m> dengan topologi Euklides.
+            Generalisasikan contoh ini.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>A = (0, 1]</m> in <m>X = \R</m> with the Euclidean topology.
+            <m>A = (0, 1]</m> dalam <m>X = \R</m> dengan topologi Euklides.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>A = \left\{\frac{1}{n} \mid n \in \Z^+\right\}</m> in <m>X = \R</m> with the Euclidean topology.
+            <m>A = \left\{\frac{1}{n} \mid n \in \Z^+\right\}</m> dalam <m>X = \R</m> dengan topologi Euklides.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>A = \Z^+</m> in <m>X = \R</m> with the Euclidean topology.
+            <m>A = \Z^+</m> dalam <m>X = \R</m> dengan topologi Euklides.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>A = \Z^+</m> in <m>X = \R</m> with the finite complement topology.
+            <m>A = \Z^+</m> dalam <m>X = \R</m> dengan topologi komplemen berhingga.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>A = \R</m> in <m>X = \R</m> with the Euclidean topology.
+            <m>A = \R</m> dalam <m>X = \R</m> dengan topologi Euklides.
           </p>
         </statement>
       </task>
@@ -181,15 +181,15 @@
   </exploration>
 
   <p>
-    There are two perspectives by which we can look at compactness.
-    If <m>(X,\tau_X)</m> is a topological space and <m>A</m> is a subset of <m>X</m>,
-    then <xref ref="def_compact"/>
-    tells us what it means for <m>A</m> to be compact as a subset of <m>X</m>.
-    From this perspective,
-    we use open sets in <m>X</m> to make open covers of <m>A</m>.
-    We can also consider <m>A</m> as a subspace of <m>X</m> using the subspace topology <m>\tau_A</m>.
-    From this perspective we can examine the compactness of <m>A</m> using relatively open sets for open covers.
-    <xref ref="ex_subspace_compact"/> tells us that these two perspectives are equivalent,
-    so we will use whatever perspective is appropriate for a given situation.
+    Ada dua sudut pandang yang dapat kita gunakan untuk menelaah kekompakan.
+    Jika <m>(X,\tau_X)</m> merupakan ruang topologi dan <m>A</m> merupakan subhimpunan dari <m>X</m>,
+    maka <xref ref="def_compact"/>
+    menjelaskan apa artinya <m>A</m> bersifat kompak sebagai subhimpunan dari <m>X</m>.
+    Dari sudut pandang ini,
+    kita menggunakan himpunan buka dalam <m>X</m> untuk membentuk selimut buka bagi <m>A</m>.
+    Kita juga dapat memandang <m>A</m> sebagai subruang dari <m>X</m> dengan menggunakan topologi subruang <m>\tau_A</m>.
+    Dari sudut pandang ini, kita dapat menelaah kekompakan <m>A</m> menggunakan himpunan terbuka relatif untuk membentuk selimut buka.
+    <xref ref="ex_subspace_compact"/> memberi tahu kita bahwa kedua sudut pandang ini ekuivalen,
+    sehingga kita akan menggunakan sudut pandang yang sesuai dengan situasi yang sedang dihadapi.
   </p>
 </section>

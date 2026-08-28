@@ -1,0 +1,665 @@
+<section xml:id="o003-c90-ch17-source-guides-c" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Nilai Ekstrem, Fraktal, dan Latihan Kekompakan</title>
+
+  <p>
+    Empat belas panduan ini mencakup kejadian prompt sumber 26 sampai 40.
+    Tujuh panduan pertama menutup teorema nilai ekstrem dan mengembangkan
+    metrik Hausdorff serta konstruksi segitiga Sierpinski. Tujuh panduan
+    berikutnya memulai latihan bab tentang topologi indiskret, perbandingan
+    topologi, dan operasi himpunan pada subhimpunan kompak. Kejadian sumber
+    ke-34 merupakan duplikat kejadian ke-33, sehingga keduanya diwakili oleh
+    satu entri kanonis <m>\text{o003-c90-ch17-exer-a-01}</m>.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch17-guide-26">
+    <title>Melengkapi Teorema Nilai Ekstrem</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi kompak tak kosong dan
+        <m>f:X\to\R</m> fungsi kontinu. Lengkapilah bukti bahwa <m>f</m>
+        mencapai nilai maksimum dan nilai minimum pada <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-26-hint">
+      <p><em>Tahap 1.</em> Gunakan kekontinuan untuk menunjukkan bahwa <m>f(X)</m> kompak dan gunakan ketakosongan <m>X</m>.</p>
+      <p><em>Tahap 2.</em> Terapkan Teorema Heine–Borel dan sifat kelengkapan <m>\R</m> kepada <m>f(X)</m>.</p>
+      <p><em>Tahap 3.</em> Tunjukkan bahwa supremum dan infimum <m>f(X)</m> berada dalam <m>f(X)</m>, lalu tarik keduanya kembali ke titik-titik domain.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-26-answer">
+      <p>
+        Citra <m>f(X)</m> kompak dan tak kosong, sehingga tertutup dan
+        terbatas dalam <m>\R</m>. Supremum serta infimumnya ada dan, karena
+        <m>f(X)</m> tertutup, keduanya merupakan anggota <m>f(X)</m>. Jadi
+        <m>f</m> mencapai maksimum dan minimumnya.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-26-solution">
+      <p>
+        Karena <m>X</m> kompak dan <m>f</m> kontinu, teorema citra kontinu
+        himpunan kompak menyatakan bahwa <m>f(X)</m> kompak dalam <m>\R</m>.
+        Ketakosongan <m>X</m> memberi suatu <m>x_0\in X</m>, sehingga
+        <m>f(x_0)\in f(X)</m> dan <m>f(X)</m> tak kosong. Menurut Teorema
+        Heine–Borel, <m>f(X)</m> tertutup dan terbatas.
+      </p>
+      <p>
+        Karena <m>f(X)</m> tak kosong dan terbatas di atas, bilangan
+        <m>M=\sup f(X)</m> ada. Untuk setiap <m>\varepsilon\gt0</m>, sifat
+        supremum memberi <m>y_\varepsilon\in f(X)</m> dengan
+        <m>M-\varepsilon\lt y_\varepsilon\leq M</m>. Maka setiap lingkungan
+        <m>M</m> beririsan dengan <m>f(X)</m>, sehingga
+        <m>M\in\overline{f(X)}=f(X)</m>. Ada <m>x_M\in X</m> dengan
+        <m>f(x_M)=M</m>, dan nilai ini merupakan maksimum <m>f</m>.
+      </p>
+      <p>
+        Dengan cara yang sama, keterbatasan di bawah menghasilkan
+        <m>m=\inf f(X)</m>. Sifat infimum menunjukkan
+        <m>m\in\overline{f(X)}=f(X)</m>, sehingga ada <m>x_m\in X</m> dengan
+        <m>f(x_m)=m</m>. Jadi <m>f</m> mencapai nilai maksimum dan minimum.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-27">
+    <title>Jarak Terarah Tidak Simetris</title>
+    <statement>
+      <p>
+        Untuk subhimpunan kompak tak kosong <m>A,B</m> dari ruang metrik,
+        definisikan
+        <m>d(A,B)=\max_{a\in A}\min_{b\in B}d(a,b)</m>. Berikan contoh
+        subhimpunan kompak <m>A,B\subseteq\R^n</m> dengan metrik Euklides
+        yang memenuhi <m>d(A,B)\ne d(B,A)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-27-hint">
+      <p><em>Tahap 1.</em> Cukup bekerja dalam <m>\R</m>.</p>
+      <p><em>Tahap 2.</em> Pilih satu himpunan yang termuat secara sejati dalam himpunan lainnya.</p>
+      <p><em>Tahap 3.</em> Coba <m>A=\{0\}</m> dan <m>B=\{0,1\}</m>, lalu hitung kedua maksimum secara langsung.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-27-answer">
+      <p>
+        Ambil <m>A=\{0\}</m> dan <m>B=\{0,1\}</m> dalam <m>\R</m>. Maka
+        <m>d(A,B)=0</m>, sedangkan <m>d(B,A)=1</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-27-solution">
+      <p>
+        Kedua himpunan berhingga, sehingga kompak. Untuk satu-satunya titik
+        <m>0\in A</m>, jaraknya ke <m>B</m> adalah
+        <m>\min\{|0-0|,|0-1|\}=0</m>. Karena itu <m>d(A,B)=0</m>.
+      </p>
+      <p>
+        Sebaliknya, jarak titik <m>0\in B</m> ke <m>A</m> adalah <m>0</m>,
+        sedangkan jarak titik <m>1\in B</m> ke <m>A</m> adalah <m>1</m>.
+        Oleh sebab itu
+        <me>
+          d(B,A)=\max\{0,1\}=1.
+        </me>
+        Jadi jarak terarah ini tidak simetris.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-28">
+    <title>Menghitung Tiga Jarak Hausdorff</title>
+    <statement>
+      <p>
+        Dalam <m>\R^2</m>, misalkan <m>A</m> lingkaran satuan berpusat di
+        titik asal, <m>B</m> garis luar persegi tersisip dengan titik sudut
+        <m>(1,0),(0,1),(-1,0),(0,-1)</m>, dan
+        <m>C=\{(1,0),(-1,0)\}</m>. Untuk
+        <m>h(P,Q)=\max\{d(P,Q),d(Q,P)\}</m>, tentukan
+        <m>h(A,B)</m>, <m>h(A,C)</m>, dan <m>h(B,C)</m>. Verifikasikan
+        <m>h(A,C)\leq h(A,B)+h(B,C)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-28-hint">
+      <p><em>Tahap 1.</em> Karena <m>C\subseteq A\cap B</m>, dua dari jarak terarah menuju <m>A</m> atau <m>B</m> langsung bernilai nol.</p>
+      <p><em>Tahap 2.</em> Pada setiap kuadran, sisi <m>B</m> terletak pada garis berbentuk <m>\pm x\pm y=1</m>; titik terjauh antara lingkaran dan sisi terjadi pada arah diagonal.</p>
+      <p><em>Tahap 3.</em> Untuk jarak menuju <m>C</m>, periksa titik <m>(0,1)</m> dan <m>(0,-1)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-28-answer">
+      <p>
+        Nilainya adalah
+        <m>h(A,B)=1-1/\sqrt2</m>,
+        <m>h(A,C)=\sqrt2</m>, dan <m>h(B,C)=\sqrt2</m>. Karena itu
+        <m>\sqrt2\leq(1-1/\sqrt2)+\sqrt2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-28-solution">
+      <p>
+        Di kuadran pertama, sisi persegi adalah ruas <m>x+y=1</m>. Untuk
+        <m>(x,y)\in A</m> di kuadran itu, jaraknya ke ruas tersebut adalah
+        <m>(x+y-1)/\sqrt2</m>; nilai maksimum terjadi saat
+        <m>x=y=1/\sqrt2</m> dan sama dengan
+        <m>1-1/\sqrt2</m>. Dengan simetri, ini memberi
+        <m>d(A,B)=1-1/\sqrt2</m>. Titik pada sisi persegi yang terjauh dari
+        lingkaran adalah titik tengah sisi, yang berjari-jari
+        <m>1/\sqrt2</m>; jaraknya ke lingkaran juga
+        <m>1-1/\sqrt2</m>. Jadi
+        <m>h(A,B)=1-1/\sqrt2</m>.
+      </p>
+      <p>
+        Karena <m>C\subseteq A</m>, berlaku <m>d(C,A)=0</m>. Untuk
+        <m>(x,y)\in A</m>, kuadrat jarak ke titik <m>(1,0)</m> dan
+        <m>(-1,0)</m> masing-masing adalah <m>2-2x</m> dan <m>2+2x</m>.
+        Jarak yang lebih kecil mempunyai kuadrat <m>2-2|x|</m>, yang
+        maksimum saat <m>x=0</m>. Maka <m>d(A,C)=\sqrt2</m> dan
+        <m>h(A,C)=\sqrt2</m>.
+      </p>
+      <p>
+        Demikian pula <m>C\subseteq B</m>, sehingga <m>d(C,B)=0</m>.
+        Titik-titik <m>(0,\pm1)</m> pada <m>B</m> berjarak <m>\sqrt2</m>
+        dari titik terdekat dalam <m>C</m>, dan tidak ada titik pada keempat
+        sisi yang berjarak lebih besar. Jadi <m>h(B,C)=\sqrt2</m>. Akhirnya,
+        <me>
+          h(A,C)=\sqrt2
+          \leq \left(1-\frac1{\sqrt2}\right)+\sqrt2
+          =h(A,B)+h(B,C).
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-29">
+    <title>Jarak Hausdorff Merupakan Metrik</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> ruang metrik dan <m>\mathcal H(X)</m> koleksi
+        semua subhimpunan kompak tak kosong dari <m>X</m>. Untuk
+        <m>A,B\in\mathcal H(X)</m>, tetapkan
+        <me>
+          d(A,B)=\max_{a\in A}\min_{b\in B}d(a,b),\qquad
+          h(A,B)=\max\{d(A,B),d(B,A)\}.
+        </me>
+        Buktikan bahwa <m>h</m> adalah metrik pada <m>\mathcal H(X)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-29-hint">
+      <p><em>Tahap 1.</em> Nonnegativitas dan simetri mengikuti definisi; untuk pemisahan, gunakan fakta bahwa subhimpunan kompak ruang metrik tertutup.</p>
+      <p><em>Tahap 2.</em> Untuk <m>a\in A</m>, pilih <m>b\in B</m> yang mencapai jarak dari <m>a</m> ke <m>B</m>.</p>
+      <p><em>Tahap 3.</em> Buktikan ketaksamaan terarah <m>d(A,C)\leq d(A,B)+d(B,C)</m>, lalu ulangi dengan arah terbalik dan ambil maksimum.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-29-answer">
+      <p>
+        <em>Rubrik.</em> Bukti lengkap harus memverifikasi nonnegativitas,
+        simetri, sifat <m>h(A,B)=0\iff A=B</m>, dan ketaksamaan segitiga.
+        Pada langkah terakhir, kedua ketaksamaan terarah harus digabungkan,
+        bukan mengasumsikan <m>d(A,B)</m> simetris.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-29-solution">
+      <p>
+        Jelas <m>h(A,B)\geq0</m> dan
+        <m>h(A,B)=h(B,A)</m>. Jika <m>A=B</m>, setiap titik mempunyai jarak
+        nol ke himpunan yang sama, sehingga <m>h(A,B)=0</m>. Sebaliknya,
+        andaikan <m>h(A,B)=0</m>. Untuk setiap <m>a\in A</m>, berlaku
+        <m>\min_{b\in B}d(a,b)=0</m>. Karena <m>B</m> kompak, minimum itu
+        dicapai; maka ada <m>b\in B</m> dengan <m>d(a,b)=0</m>, sehingga
+        <m>a=b</m> dan <m>A\subseteq B</m>. Argumen yang sama dari
+        <m>d(B,A)=0</m> memberi <m>B\subseteq A</m>. Jadi <m>A=B</m>.
+      </p>
+      <p>
+        Sekarang ambil <m>A,B,C\in\mathcal H(X)</m>. Untuk setiap
+        <m>a\in A</m>, kekompakan <m>B</m> memberi <m>b_a\in B</m> dengan
+        <m>d(a,b_a)=\min_{b\in B}d(a,b)</m>. Ketaksamaan segitiga pada
+        <m>X</m> memberi
+        <me>
+          d(a,C)\leq d(a,b_a)+d(b_a,C)
+          \leq d(a,B)+d(B,C)\leq d(A,B)+d(B,C).
+        </me>
+        Mengambil maksimum terhadap <m>a\in A</m> menghasilkan
+        <m>d(A,C)\leq d(A,B)+d(B,C)</m>.
+      </p>
+      <p>
+        Dengan menukar arah diperoleh
+        <m>d(C,A)\leq d(C,B)+d(B,A)</m>. Kedua ruas kanan masing-masing tidak
+        melebihi <m>h(A,B)+h(B,C)</m>. Karena itu
+        <me>
+          h(A,C)=\max\{d(A,C),d(C,A)\}\leq h(A,B)+h(B,C).
+        </me>
+        Semua aksioma metrik telah terpenuhi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-30">
+    <title>Jarak Antaraproksimasi Segitiga Sierpinski</title>
+    <statement>
+      <p>
+        Misalkan <m>S_0</m> garis luar segitiga sama sisi dengan panjang sisi
+        <m>1</m>. Pada setiap tahap, terapkan tiga kontraksi berfaktor
+        <m>1/2</m> yang menempatkan salinan pada ketiga titik sudut, dan
+        tetapkan <m>S_{k+1}</m> sebagai gabungan ketiga citra <m>S_k</m>.
+        Tentukan <m>h(S_0,S_1)</m> dan, untuk setiap
+        <m>k\in\Z^+</m>, tentukan <m>h(S_k,S_{k+1})</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-30-hint">
+      <p><em>Tahap 1.</em> Perhatikan bahwa <m>S_k\subseteq S_{k+1}</m>, sehingga hanya jarak dari garis baru menuju <m>S_k</m> yang perlu dihitung.</p>
+      <p><em>Tahap 2.</em> Pada tahap pertama, titik terjauh pada setiap sisi segitiga tengah adalah titik tengah sisi itu.</p>
+      <p><em>Tahap 3.</em> Setiap tahap berikutnya merupakan salinan berskala <m>2^{-k}</m> dari geometri tahap pertama.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-30-answer">
+      <p>
+        Berlaku
+        <m>h(S_0,S_1)=\sqrt3/8</m> dan
+        <m>h(S_k,S_{k+1})=\sqrt3/2^{k+3}</m> untuk <m>k\geq0</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-30-solution">
+      <p>
+        Ketiga salinan setengah ukuran mempertahankan seluruh batas luar
+        <m>S_0</m> dan menambahkan tiga sisi segitiga tengah. Jadi
+        <m>S_0\subseteq S_1</m> dan <m>d(S_0,S_1)=0</m>. Tinggi segitiga
+        sama sisi bersisi <m>1</m> adalah <m>\sqrt3/2</m>. Pada salah satu
+        sisi segitiga tengah, jarak menuju batas luar paling besar di titik
+        tengah sisi tersebut. Jarak titik itu ke salah satu dari dua sisi
+        luar terdekat adalah <m>\sqrt3/8</m>. Dengan simetri, tidak ada titik
+        baru yang lebih jauh. Maka <m>d(S_1,S_0)=\sqrt3/8</m> dan
+        <m>h(S_0,S_1)=\sqrt3/8</m>.
+      </p>
+      <p>
+        Secara induktif <m>S_k\subseteq S_{k+1}</m>. Perbedaan baru pada
+        tahap <m>k+1</m> muncul di dalam segitiga-segitiga bersisi
+        <m>2^{-k}</m>. Geometrinya sebangun dengan tahap pertama dengan
+        faktor skala <m>2^{-k}</m>. Jarak Hausdorff ikut berskala linear,
+        sehingga
+        <me>
+          h(S_k,S_{k+1})=2^{-k}\frac{\sqrt3}{8}
+          =\frac{\sqrt3}{2^{k+3}}.
+        </me>
+        Rumus ini juga menghasilkan nilai tahap pertama ketika <m>k=0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-31">
+    <title>Barisan Cauchy Rasional dengan Limit Irasional</title>
+    <statement>
+      <p>
+        Untuk <m>n\in\Z^+</m>, misalkan
+        <m>a_n=(1+1/n)^n</m>. Setiap <m>a_n</m> rasional. Jelaskan mengapa
+        suku-sukunya menjadi sedekat yang diinginkan satu sama lain tetapi
+        barisan tersebut tidak konvergen dalam <m>\Q</m>. Jelaskan pula
+        mengapa <m>(a_n)</m> konvergen dalam <m>\R</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-31-hint">
+      <p><em>Tahap 1.</em> Gunakan limit klasik <m>\lim_{n\to\infty}(1+1/n)^n=e</m>.</p>
+      <p><em>Tahap 2.</em> Setiap barisan yang konvergen dalam ruang metrik merupakan barisan Cauchy; metrik pada <m>\Q</m> adalah pembatasan metrik pada <m>\R</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan keirasionalan <m>e</m> dan keunikan limit dalam <m>\R</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-31-answer">
+      <p>
+        Barisan tersebut konvergen ke <m>e</m> dalam <m>\R</m>, sehingga
+        Cauchy. Karena <m>e\notin\Q</m>, ia tidak memiliki limit dalam
+        <m>\Q</m> meskipun semua sukunya rasional.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-31-solution">
+      <p>
+        Ekspansi binomial menunjukkan setiap <m>a_n</m> rasional, dan limit
+        klasik mendefinisikan bilangan Euler melalui
+        <me>
+          \lim_{n\to\infty}\left(1+\frac1n\right)^n=e.
+        </me>
+        Jadi <m>(a_n)</m> konvergen dalam <m>\R</m>. Setiap barisan konvergen
+        adalah Cauchy: untuk <m>\varepsilon\gt0</m>, pilih <m>N</m> sehingga
+        <m>|a_n-e|\lt\varepsilon/2</m> untuk <m>n\geq N</m>. Jika
+        <m>m,n\geq N</m>, maka
+        <m>|a_n-a_m|\leq|a_n-e|+|a_m-e|\lt\varepsilon</m>. Karena jarak pada
+        <m>\Q</m> sama dengan jarak yang diwarisi dari <m>\R</m>, barisan ini
+        juga Cauchy sebagai barisan dalam <m>\Q</m>.
+      </p>
+      <p>
+        Andaikan <m>(a_n)</m> konvergen dalam <m>\Q</m> ke suatu
+        <m>q\in\Q</m>. Penyertaan <m>\Q\subseteq\R</m> mempertahankan jarak,
+        sehingga barisan yang sama juga akan konvergen ke <m>q</m> dalam
+        <m>\R</m>. Keunikan limit dalam ruang metrik memaksa <m>q=e</m>,
+        bertentangan dengan fakta bahwa <m>e</m> irasional. Maka
+        <m>\Q</m> tidak memuat limit barisan Cauchy ini, sedangkan <m>\R</m>
+        memuatnya.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-32">
+    <title>Barisan Aproksimasi Sierpinski Bersifat Cauchy</title>
+    <statement>
+      <p>
+        Dengan konstruksi <m>(S_n)</m> sebelumnya dan metrik Hausdorff
+        <m>h</m>, tunjukkan bahwa <m>(S_n)</m> merupakan barisan Cauchy dalam
+        <m>\mathcal H(\R^2)</m>. Gunakan fakta bahwa
+        <m>h(S_k,S_{k+1})=\sqrt3/2^{k+3}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-32-hint">
+      <p><em>Tahap 1.</em> Untuk <m>m\gt n</m>, terapkan ketaksamaan segitiga berulang kali sepanjang <m>S_n,S_{n+1},\ldots,S_m</m>.</p>
+      <p><em>Tahap 2.</em> Batasi jumlah yang diperoleh dengan ekor deret geometri tak hingga.</p>
+      <p><em>Tahap 3.</em> Pilih <m>N</m> sehingga batas ekor tersebut lebih kecil daripada <m>\varepsilon</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-32-answer">
+      <p>
+        Untuk <m>m\gt n</m>,
+        <m>h(S_n,S_m)\lt\sqrt3/2^{n+2}</m>. Batas ini menuju nol ketika
+        <m>n\to\infty</m>, sehingga <m>(S_n)</m> merupakan barisan Cauchy.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-32-solution">
+      <p>
+        Jika <m>m\gt n</m>, ketaksamaan segitiga untuk metrik Hausdorff
+        memberi
+        <me>
+          h(S_n,S_m)\leq
+          \sum_{k=n}^{m-1}h(S_k,S_{k+1})
+          =\sum_{k=n}^{m-1}\frac{\sqrt3}{2^{k+3}}.
+        </me>
+        Jumlah berhingga ini lebih kecil daripada ekor deret geometri
+        tak hingga:
+        <me>
+          h(S_n,S_m)\lt
+          \sum_{k=n}^{\infty}\frac{\sqrt3}{2^{k+3}}
+          =\frac{\sqrt3}{2^{n+2}}.
+        </me>
+      </p>
+      <p>
+        Diberikan <m>\varepsilon\gt0</m>, pilih <m>N</m> sedemikian sehingga
+        <m>\sqrt3/2^{N+2}\lt\varepsilon</m>. Untuk setiap
+        <m>m,n\geq N</m>, andaikan tanpa kehilangan keumuman bahwa
+        <m>m\gt n</m>; ketaksamaan di atas memberi
+        <m>h(S_n,S_m)\lt\varepsilon</m>. Kasus <m>m=n</m> langsung. Jadi
+        <m>(S_n)</m> Cauchy dalam <m>\mathcal H(\R^2)</m>. Kelengkapan ruang
+        ini kemudian menjamin adanya limit kompak, yaitu segitiga
+        Sierpinski.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-01">
+    <title>Subhimpunan Kompak dalam Topologi Indiskret</title>
+    <statement>
+      <p>
+        Tentukan semua subhimpunan kompak dari ruang topologi <m>X</m>
+        dengan topologi indiskret <m>\{\emptyset,X\}</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-01-hint">
+      <p><em>Tahap 1.</em> Tangani subhimpunan kosong secara terpisah.</p>
+      <p><em>Tahap 2.</em> Jika <m>A\ne\emptyset</m>, tentukan satu-satunya himpunan buka yang dapat memuat titik <m>A</m>.</p>
+      <p><em>Tahap 3.</em> Periksa apa yang wajib termuat dalam setiap selimut buka bagi <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-01-answer">
+      <p>
+        Setiap subhimpunan <m>A\subseteq X</m> kompak dalam topologi
+        indiskret.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-01-solution">
+      <p>
+        Himpunan kosong kompak karena subkeluarga kosong merupakan
+        subselimut berhingga bagi setiap selimutnya. Sekarang ambil
+        <m>A\subseteq X</m> tak kosong dan suatu selimut buka
+        <m>\mathcal U</m> bagi <m>A</m>. Dalam topologi indiskret, satu-satunya
+        himpunan buka tak kosong adalah <m>X</m>. Karena selimut harus memuat
+        setiap titik <m>A</m>, keluarga <m>\mathcal U</m> harus memuat
+        <m>X</m>. Subkeluarga satu anggota <m>\{X\}</m> menyelimuti <m>A</m>.
+        Jadi setiap subhimpunan <m>X</m> kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-02">
+    <title>Kekompakan pada Topologi yang Lebih Halus atau Lebih Kasar</title>
+    <statement>
+      <p>
+        Misalkan <m>\tau_1</m> dan <m>\tau_2</m> topologi pada himpunan
+        <m>X</m> dengan <m>\tau_1\subseteq\tau_2</m>. Tentukan implikasi yang
+        benar antara kekompakan <m>(X,\tau_1)</m> dan kekompakan
+        <m>(X,\tau_2)</m>, dan berikan alasan atau kontraeksempel untuk
+        setiap arah.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-02-hint">
+      <p><em>Tahap 1.</em> Setiap himpunan <m>\tau_1</m>-buka juga <m>\tau_2</m>-buka.</p>
+      <p><em>Tahap 2.</em> Mulailah dari selimut yang memiliki lebih sedikit kemungkinan anggota buka.</p>
+      <p><em>Tahap 3.</em> Untuk menyangkal arah sebaliknya, bandingkan topologi indiskret dan diskret pada himpunan tak berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-02-answer">
+      <p>
+        Jika <m>(X,\tau_2)</m> kompak, maka <m>(X,\tau_1)</m> kompak.
+        Kebalikannya tidak selalu benar; pada himpunan tak berhingga,
+        topologi indiskret kompak sedangkan topologi diskret tidak kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-02-solution">
+      <p>
+        Andaikan <m>(X,\tau_2)</m> kompak. Setiap selimut buka
+        <m>\mathcal U</m> bagi <m>X</m> dalam topologi <m>\tau_1</m> juga
+        merupakan selimut buka dalam <m>\tau_2</m>, karena
+        <m>\tau_1\subseteq\tau_2</m>. Kekompakan terhadap <m>\tau_2</m>
+        memberi subselimut berhingga dari <m>\mathcal U</m>. Anggota-anggota
+        terpilih tetap <m>\tau_1</m>-buka, sehingga <m>(X,\tau_1)</m> kompak.
+      </p>
+      <p>
+        Untuk arah sebaliknya, ambil himpunan tak berhingga <m>X</m>,
+        <m>\tau_1=\{\emptyset,X\}</m>, dan <m>\tau_2=\mathcal P(X)</m>.
+        Topologi <m>\tau_1</m> lebih kasar dan <m>(X,\tau_1)</m> kompak karena
+        setiap selimut bagi <m>X</m> harus memuat <m>X</m>. Namun keluarga
+        semua singleton <m>\{\{x\}\mid x\in X\}</m> adalah selimut
+        <m>\tau_2</m>-buka tanpa subselimut berhingga. Jadi kekompakan pada
+        topologi yang lebih kasar tidak memaksa kekompakan pada topologi
+        yang lebih halus.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-03">
+    <title>Topologi yang Ditentukan oleh Bilangan Bulat Genap</title>
+    <statement>
+      <p>
+        Misalkan <m>\E</m> himpunan bilangan bulat genap dan
+        <m>\tau=\{\Z\}\cup\{O\mid O\subseteq\E\}</m>. Buktikan bahwa
+        <m>\tau</m> adalah suatu topologi pada <m>\Z</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-03-hint">
+      <p><em>Tahap 1.</em> Verifikasikan bahwa <m>\emptyset</m> dan <m>\Z</m> berada dalam <m>\tau</m>.</p>
+      <p><em>Tahap 2.</em> Dalam gabungan sebarang anggota <m>\tau</m>, pisahkan kasus ketika salah satu anggotanya adalah <m>\Z</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan pembagian kasus yang sama untuk irisan berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-03-answer">
+      <p>
+        Koleksi <m>\tau</m> memuat <m>\emptyset,\Z</m>, tertutup terhadap
+        gabungan sebarang, dan tertutup terhadap irisan berhingga; jadi
+        <m>\tau</m> adalah topologi pada <m>\Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-03-solution">
+      <p>
+        Karena <m>\emptyset\subseteq\E</m>, berlaku
+        <m>\emptyset\in\tau</m>; menurut definisi juga <m>\Z\in\tau</m>.
+        Ambil keluarga sebarang <m>\{U_\alpha\}_{\alpha\in I}\subseteq\tau</m>.
+        Jika suatu <m>U_\alpha=\Z</m>, gabungannya adalah <m>\Z</m> dan berada
+        dalam <m>\tau</m>. Jika tidak, setiap <m>U_\alpha\subseteq\E</m>, maka
+        <m>\bigcup_{\alpha\in I}U_\alpha\subseteq\E</m> dan gabungan itu juga
+        anggota <m>\tau</m>.
+      </p>
+      <p>
+        Untuk irisan berhingga <m>U_1\cap\cdots\cap U_n</m>, jika semua
+        <m>U_i=\Z</m>, irisannya adalah <m>\Z</m>. Jika setidaknya satu
+        anggota merupakan subhimpunan <m>\E</m>, seluruh irisan termuat
+        dalam anggota tersebut, sehingga merupakan subhimpunan <m>\E</m>
+        dan berada dalam <m>\tau</m>. Jadi ketiga aksioma topologi terpenuhi.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-04">
+    <title>Menentukan Semua Subhimpunan Kompak</title>
+    <statement>
+      <p>
+        Dalam ruang <m>(\Z,\tau)</m> dengan
+        <m>\tau=\{\Z\}\cup\{O\mid O\subseteq\E\}</m>, tentukan semua
+        subhimpunan kompak dan buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-04-hint">
+      <p><em>Tahap 1.</em> Jika suatu subhimpunan memuat bilangan ganjil, tentukan himpunan buka mana yang dapat memuat titik itu.</p>
+      <p><em>Tahap 2.</em> Jika subhimpunan termuat dalam <m>\E</m>, topologi subruangnya bersifat diskret.</p>
+      <p><em>Tahap 3.</em> Dalam ruang diskret, keluarga singleton menguji kekompakan himpunan tak berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-04-answer">
+      <p>
+        Subhimpunan <m>A\subseteq\Z</m> kompak tepat ketika <m>A</m>
+        berhingga atau <m>A</m> memuat setidaknya satu bilangan ganjil.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-04-solution">
+      <p>
+        Jika <m>A</m> memuat bilangan ganjil <m>q</m>, satu-satunya anggota
+        <m>\tau</m> yang memuat <m>q</m> adalah <m>\Z</m>, sebab semua anggota
+        lain termuat dalam <m>\E</m>. Maka setiap selimut buka bagi <m>A</m>
+        harus memuat <m>\Z</m>; subkeluarga <m>\{\Z\}</m> merupakan
+        subselimut berhingga. Jadi setiap subhimpunan yang memuat bilangan
+        ganjil kompak. Setiap subhimpunan berhingga juga kompak dalam
+        sebarang ruang topologi.
+      </p>
+      <p>
+        Tersisa kasus <m>A\subseteq\E</m> yang tak berhingga. Untuk setiap
+        <m>a\in A</m>, singleton <m>\{a\}</m> merupakan subhimpunan
+        <m>\E</m>, sehingga terbuka dalam <m>(\Z,\tau)</m>. Keluarga
+        <m>\{\{a\}\mid a\in A\}</m> menyelimuti <m>A</m>, tetapi setiap
+        subkeluarga berhingga hanya menyelimuti sejumlah berhingga titik.
+        Jadi <m>A</m> tidak kompak. Kedua arah membuktikan pencirian tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-05">
+    <title>Irisan Dua Subhimpunan Kompak Tidak Selalu Kompak</title>
+    <statement>
+      <p>
+        Buktikan atau sangkal pernyataan berikut: jika <m>A</m> dan <m>B</m>
+        adalah subhimpunan kompak dari ruang topologi <m>X</m>, maka
+        <m>A\cap B</m> juga kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-05-hint">
+      <p><em>Tahap 1.</em> Pernyataan menjadi benar dalam ruang Hausdorff, jadi carilah ruang non-Hausdorff.</p>
+      <p><em>Tahap 2.</em> Gunakan ruang <m>(\Z,\tau)</m> dari dua panduan sebelumnya.</p>
+      <p><em>Tahap 3.</em> Tambahkan bilangan ganjil yang berbeda kepada himpunan semua bilangan genap.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-05-answer">
+      <p>
+        Pernyataan salah. Dalam ruang di atas, ambil
+        <m>A=\E\cup\{1\}</m> dan <m>B=\E\cup\{3\}</m>. Keduanya kompak,
+        tetapi <m>A\cap B=\E</m> tidak kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-05-solution">
+      <p>
+        Gunakan <m>X=\Z</m> dengan
+        <m>\tau=\{\Z\}\cup\{O\mid O\subseteq\E\}</m>. Himpunan
+        <m>A=\E\cup\{1\}</m> memuat bilangan ganjil. Setiap selimut buka bagi
+        <m>A</m> harus memuat <m>\Z</m>, sehingga <m>A</m> kompak. Argumen
+        yang sama berlaku bagi <m>B=\E\cup\{3\}</m>.
+      </p>
+      <p>
+        Namun <m>A\cap B=\E</m>. Keluarga singleton
+        <m>\{\{2k\}\mid k\in\Z\}</m> merupakan selimut buka bagi <m>\E</m>,
+        sebab setiap singleton genap berada dalam <m>\tau</m>. Tidak ada
+        subkeluarga berhingga yang menyelimuti seluruh <m>\E</m>. Maka
+        <m>\E</m> tidak kompak, sehingga pernyataan umum tersebut tersangkal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-06">
+    <title>Gabungan Berhingga Subhimpunan Kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi. Buktikan bahwa gabungan dari
+        sejumlah berhingga subhimpunan kompak dari <m>X</m> merupakan
+        subhimpunan kompak dari <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-06-hint">
+      <p><em>Tahap 1.</em> Tulis gabungan sebagai <m>K=K_1\cup\cdots\cup K_n</m> dan ambil selimut buka sebarang bagi <m>K</m>.</p>
+      <p><em>Tahap 2.</em> Keluarga yang sama menyelimuti setiap <m>K_i</m>; gunakan kekompakan masing-masing.</p>
+      <p><em>Tahap 3.</em> Gabungkan semua subselimut berhingga yang diperoleh dan gunakan keberhinggaan jumlah indeks <m>i</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-06-answer">
+      <p>
+        Dari selimut buka bagi <m>K_1\cup\cdots\cup K_n</m>, pilih
+        subselimut berhingga untuk setiap <m>K_i</m>. Gabungan dari
+        sejumlah berhingga keluarga berhingga itu merupakan subselimut
+        berhingga bagi seluruh gabungan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-06-solution">
+      <p>
+        Misalkan <m>K_1,\ldots,K_n</m> subhimpunan kompak dari <m>X</m> dan
+        <m>\mathcal U</m> selimut buka sebarang bagi
+        <m>K=\bigcup_{i=1}^nK_i</m>. Untuk setiap <m>i</m>, keluarga
+        <m>\mathcal U</m> juga menyelimuti <m>K_i</m>. Kekompakan <m>K_i</m>
+        memberi subkeluarga berhingga
+        <m>\mathcal U_i\subseteq\mathcal U</m> yang menyelimuti <m>K_i</m>.
+      </p>
+      <p>
+        Keluarga <m>\mathcal V=\bigcup_{i=1}^n\mathcal U_i</m> berhingga,
+        karena merupakan gabungan dari sejumlah berhingga himpunan
+        berhingga. Jika <m>x\in K</m>, maka <m>x\in K_i</m> untuk suatu
+        <m>i</m>, sehingga <m>x</m> termuat dalam suatu anggota
+        <m>\mathcal U_i\subseteq\mathcal V</m>. Jadi <m>\mathcal V</m>
+        menyelimuti <m>K</m>. Karena selimut awal sebarang, <m>K</m> kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-07">
+    <title>Irisan Berhingga dalam Ruang Hausdorff</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang Hausdorff. Buktikan bahwa irisan dari
+        sejumlah berhingga subhimpunan kompak dari <m>X</m> merupakan
+        subhimpunan kompak dari <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-07-hint">
+      <p><em>Tahap 1.</em> Dalam ruang Hausdorff, setiap subhimpunan kompak tertutup.</p>
+      <p><em>Tahap 2.</em> Irisan berhingga himpunan tertutup tertutup dalam <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Pandang irisan tersebut sebagai subhimpunan tertutup dari salah satu himpunan kompak.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-07-answer">
+      <p>
+        Jika <m>K_1,\ldots,K_n</m> kompak, semuanya tertutup karena <m>X</m>
+        Hausdorff. Irisan <m>K_1\cap\cdots\cap K_n</m> tertutup dalam
+        <m>K_1</m>, sehingga kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-07-solution">
+      <p>
+        Misalkan <m>K_1,\ldots,K_n</m> subhimpunan kompak dari <m>X</m>,
+        dengan <m>n\geq1</m>. Karena <m>X</m> Hausdorff, setiap
+        <m>K_i</m> tertutup dalam <m>X</m>. Maka
+        <me>
+          K=\bigcap_{i=1}^nK_i
+        </me>
+        tertutup dalam <m>X</m>. Khususnya, <m>K=K_1\cap F</m> untuk
+        <m>F=\bigcap_{i=2}^nK_i</m> yang tertutup dalam <m>X</m>, sehingga
+        <m>K</m> tertutup dalam subruang <m>K_1</m>.
+      </p>
+      <p>
+        Subhimpunan tertutup dari ruang kompak bersifat kompak. Karena
+        <m>K_1</m> kompak dan <m>K</m> tertutup dalam <m>K_1</m>, maka
+        <m>K</m> kompak. Untuk <m>n=1</m>, kesimpulan adalah hipotesis itu
+        sendiri. Jadi setiap irisan dari sejumlah positif berhingga
+        subhimpunan kompak bersifat kompak.
+      </p>
+    </solution>
+  </exercise>
+</section>

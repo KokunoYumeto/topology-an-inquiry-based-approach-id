@@ -1,0 +1,581 @@
+<section xml:id="o003-c90-ch17-exercise-guides-d" xml:lang="id-ID">
+  <title>Panduan Latihan: Pemisahan, Kekompakan Lokal, dan Contoh Tandingan</title>
+
+  <p>
+    Lima belas panduan ini mendampingi entri kanonis 56–70 dalam backend
+    Bab 17. Kerjakan latihan pada bab utama terlebih dahulu, lalu buka
+    petunjuk, jawaban, dan solusi secara bertahap.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-03">
+    <title>Ruang Hausdorff kompak bersifat normal</title>
+    <statement>
+      <p>
+        Buktikan bahwa setiap ruang Hausdorff kompak <m>X</m> bersifat normal:
+        untuk setiap dua himpunan tertutup saling lepas <m>A,B\subseteq X</m>,
+        terdapat himpunan terbuka saling lepas <m>U,V</m> dengan
+        <m>A\subseteq U</m> dan <m>B\subseteq V</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-03-hint">
+      <p><em>Tahap 1.</em> Karena <m>A</m> dan <m>B</m> tertutup dalam ruang kompak, keduanya kompak.</p>
+      <p><em>Tahap 2.</em> Untuk setiap <m>a\in A</m>, pisahkan titik <m>a</m> dari himpunan kompak <m>B</m> dengan lingkungan terbuka <m>U_a,V_a</m>.</p>
+      <p><em>Tahap 3.</em> Ambil subselimut berhingga dari <m>\{U_a:a\in A\}</m>; gabungkan sisi <m>U_a</m> dan iris sisi <m>V_a</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-03-answer">
+      <p>
+        Pilih <m>a_1,\ldots,a_n</m> sehingga <m>A\subseteq\bigcup_iU_{a_i}</m>.
+        Maka <m>U=\bigcup_iU_{a_i}</m> dan <m>V=\bigcap_iV_{a_i}</m> terbuka,
+        memuat <m>A</m> dan <m>B</m>, serta saling lepas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-03-solution">
+      <p>
+        Himpunan <m>A</m> dan <m>B</m> kompak karena keduanya tertutup dalam
+        ruang kompak <m>X</m>. Untuk setiap <m>a\in A</m>, hasil pemisahan
+        titik dari himpunan kompak dalam ruang Hausdorff memberi himpunan
+        terbuka <m>U_a,V_a</m> dengan <m>a\in U_a</m>, <m>B\subseteq V_a</m>,
+        dan <m>U_a\cap V_a=\emptyset</m>.
+      </p>
+      <p>
+        Keluarga <m>\{U_a:a\in A\}</m> menyelimuti <m>A</m>. Pilih
+        <m>a_1,\ldots,a_n</m> sehingga <m>A\subseteq\bigcup_iU_{a_i}</m> dan
+        tetapkan
+        <m>U=\bigcup_iU_{a_i}</m>, <m>V=\bigcap_iV_{a_i}</m>. Karena irisan
+        yang membentuk <m>V</m> berhingga, <m>U</m> dan <m>V</m> terbuka.
+        Setiap <m>V_{a_i}</m> memuat <m>B</m>, maka <m>B\subseteq V</m>.
+        Jika suatu titik berada dalam <m>U\cap V</m>, titik itu berada dalam
+        suatu <m>U_{a_i}</m> sekaligus dalam <m>V\subseteq V_{a_i}</m>, sebuah
+        kontradiksi. Jadi <m>U\cap V=\emptyset</m> dan <m>X</m> normal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-04">
+    <title>Subhimpunan kompak dalam topologi titik tertentu</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> himpunan tak kosong, <m>p\in X</m>, dan
+        <m>\tau_p</m> topologi titik tertentu: himpunan terbuka tak kosong
+        adalah tepat subhimpunan yang memuat <m>p</m>. Tentukan, dengan bukti,
+        semua subhimpunan kompak <m>A\subseteq X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-04-hint">
+      <p><em>Tahap 1.</em> Setiap subhimpunan berhingga kompak dalam ruang topologi apa pun.</p>
+      <p><em>Tahap 2.</em> Jika <m>A</m> tak hingga, gunakan himpunan-himpunan terbuka <m>\{p,a\}</m> untuk <m>a\in A\setminus\{p\}</m>.</p>
+      <p><em>Tahap 3.</em> Jika <m>p\notin A</m>, tambahkan satu himpunan terbuka yang memuat satu titik tetap dari <m>A</m> bila diperlukan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-04-answer">
+      <p>
+        Subhimpunan kompaknya tepat subhimpunan berhingga dari <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-04-solution">
+      <p>
+        Setiap subhimpunan berhingga kompak. Sebaliknya, misalkan <m>A</m>
+        tak hingga. Jika <m>p\in A</m>, keluarga
+        <m>\{\{p,a\}:a\in A\setminus\{p\}\}</m> terdiri atas himpunan terbuka
+        dan menyelimuti <m>A</m>, tetapi gabungan berhingga anggotanya hanya
+        memuat berhingga banyak titik <m>A</m>.
+      </p>
+      <p>
+        Jika <m>p\notin A</m>, pilih <m>a_0\in A</m> dan gunakan keluarga
+        <m>\{\{p,a\}:a\in A\}</m>. Keluarga ini juga merupakan selimut buka
+        bagi <m>A</m> dan tidak mempunyai subselimut berhingga. Jadi tidak ada
+        subhimpunan tak hingga yang kompak, dan klasifikasinya tepat semua
+        subhimpunan berhingga.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-05">
+    <title>Subhimpunan kompak dalam topologi titik dikecualikan</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> himpunan tak kosong, <m>p\in X</m>, dan
+        <m>\tau_{\overline p}</m> topologi titik dikecualikan: himpunan
+        terbukanya adalah <m>\emptyset</m>, <m>X</m>, dan semua subhimpunan
+        yang tidak memuat <m>p</m>. Tentukan semua subhimpunan kompak
+        <m>A\subseteq X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-05-hint">
+      <p><em>Tahap 1.</em> Jika <m>p\in A</m>, setiap selimut buka bagi <m>A</m> harus memuat satu himpunan terbuka yang mengandung <m>p</m>.</p>
+      <p><em>Tahap 2.</em> Tentukan satu-satunya himpunan terbuka yang mengandung <m>p</m>.</p>
+      <p><em>Tahap 3.</em> Jika <m>p\notin A</m>, topologi subruang pada <m>A</m> bersifat diskret.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-05-answer">
+      <p>
+        Subhimpunan <m>A</m> kompak jika dan hanya jika <m>p\in A</m> atau
+        <m>A</m> berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-05-solution">
+      <p>
+        Jika <m>p\in A</m>, setiap selimut buka bagi <m>A</m> harus mempunyai
+        anggota yang memuat <m>p</m>. Dalam topologi ini, satu-satunya himpunan
+        terbuka yang memuat <m>p</m> adalah <m>X</m>. Anggota itu sendiri
+        menyelimuti <m>A</m>, sehingga <m>A</m> kompak. Setiap <m>A</m>
+        berhingga juga kompak, terlepas dari apakah <m>p\in A</m>.
+      </p>
+      <p>
+        Sekarang misalkan <m>p\notin A</m> dan <m>A</m> tak hingga. Setiap
+        subhimpunan <m>A</m> terbuka dalam <m>X</m>, sehingga topologi subruang
+        pada <m>A</m> diskret. Selimut oleh semua himpunan satu titik
+        <m>\{\{a\}:a\in A\}</m> tidak mempunyai subselimut berhingga. Maka
+        <m>A</m> tidak kompak. Kedua arah membuktikan klasifikasi tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-06">
+    <title>Himpunan satu titik dalam topologi komplemen berhingga</title>
+    <statement>
+      <p>
+        Pada <m>\Z</m> dengan topologi komplemen berhingga
+        <m>\tau_{FC}</m>, tunjukkan bahwa setiap himpunan satu titik tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-06-hint">
+      <p>Gunakan definisi himpunan tertutup melalui keterbukaan komplemennya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-06-answer">
+      <p>
+        Untuk setiap <m>n\in\Z</m>, komplemen <m>\Z\setminus\{n\}</m>
+        terbuka karena komplemennya berhingga. Jadi <m>\{n\}</m> tertutup.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-06-solution">
+      <p>
+        Berdasarkan definisi <m>\tau_{FC}</m>, suatu himpunan tak kosong
+        terbuka tepat ketika komplemennya berhingga. Komplemen dari
+        <m>\Z\setminus\{n\}</m> adalah himpunan satu titik <m>\{n\}</m>, yang
+        berhingga. Maka <m>\Z\setminus\{n\}</m> terbuka, sehingga
+        <m>\{n\}</m> tertutup. Argumen ini berlaku bagi setiap
+        <m>n\in\Z</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-07">
+    <title>Ruang kofinit tak hingga bukan Hausdorff</title>
+    <statement>
+      <p>
+        Jelaskan mengapa <m>(\Z,\tau_{FC})</m>, dengan topologi komplemen
+        berhingga, bukan ruang Hausdorff.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-07-hint">
+      <p>Hitung komplemen irisan dua himpunan terbuka tak kosong.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-07-answer">
+      <p>
+        Setiap dua himpunan terbuka tak kosong beririsan, sehingga dua titik
+        berbeda tidak dapat dipisahkan oleh lingkungan terbuka saling lepas.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-07-solution">
+      <p>
+        Jika <m>U,V</m> terbuka dan tak kosong, maka
+        <me>
+          \Z\setminus(U\cap V)=(\Z\setminus U)\cup(\Z\setminus V)
+        </me>
+        berhingga. Karena <m>\Z</m> tak hingga, <m>U\cap V</m> tidak mungkin
+        kosong. Jadi tidak ada dua lingkungan terbuka tak kosong yang saling
+        lepas. Khususnya, dua titik berbeda tidak dapat mempunyai lingkungan
+        seperti yang disyaratkan oleh aksioma Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-08">
+    <title>Dua lingkungan kofinit selalu beririsan</title>
+    <statement>
+      <p>
+        Misalkan <m>U</m> terbuka dalam <m>(\Z,\tau_{FC})</m> dan memuat
+        <m>0</m>, sedangkan <m>V</m> terbuka dan memuat <m>1</m>. Buktikan
+        bahwa <m>U\cap V\ne\emptyset</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-08-hint">
+      <p>Andaikan irisannya kosong dan gunakan bahwa gabungan dua himpunan berhingga tetap berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-08-answer">
+      <p>
+        Komplemen <m>U\cap V</m> berhingga, sedangkan komplemen himpunan
+        kosong adalah seluruh <m>\Z</m>, yang tak hingga. Maka irisan itu tidak
+        kosong.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-08-solution">
+      <p>
+        Karena <m>U</m> dan <m>V</m> tak kosong dan terbuka, kedua himpunan
+        <m>\Z\setminus U</m> dan <m>\Z\setminus V</m> berhingga. Hukum
+        De Morgan memberi
+        <me>
+          \Z\setminus(U\cap V)=(\Z\setminus U)\cup(\Z\setminus V),
+        </me>
+        dan ruas kanan berhingga. Jika <m>U\cap V=\emptyset</m>, komplemennya
+        adalah <m>\Z</m>, bertentangan dengan ketakterhinggaan <m>\Z</m>.
+        Jadi <m>U\cap V\ne\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-09">
+    <title>Bilangan genap: kompak tetapi tidak tertutup</title>
+    <statement>
+      <p>
+        Dalam <m>(\Z,\tau_{FC})</m>, tunjukkan bahwa himpunan bilangan bulat
+        genap <m>\E</m> kompak sebagai subruang tetapi tidak tertutup dalam
+        <m>\Z</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-09-hint">
+      <p><em>Tahap 1.</em> Tunjukkan bahwa topologi subruang pada <m>\E</m> juga merupakan topologi komplemen berhingga.</p>
+      <p><em>Tahap 2.</em> Dari selimut buka bagi <m>\E</m>, pilih satu anggota tak kosong dan selimuti sisa titik yang berhingga.</p>
+      <p><em>Tahap 3.</em> Periksa apakah komplemen <m>\E</m> terbuka dalam <m>\Z</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-09-answer">
+      <p>
+        Subruang <m>\E</m> bertopologi kofinit dan karena itu kompak. Himpunan
+        <m>\E</m> tidak tertutup karena komplemennya, himpunan bilangan ganjil,
+        bukan himpunan terbuka kofinit dalam <m>\Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-09-solution">
+      <p>
+        Jika <m>U\cap\E</m> terbuka dan tak kosong dalam subruang <m>\E</m>,
+        dengan <m>U</m> terbuka dalam <m>\Z</m>, maka
+        <m>\E\setminus(U\cap\E)=\E\cap(\Z\setminus U)</m> berhingga.
+        Sebaliknya, setiap subhimpunan <m>W\subseteq\E</m> yang berkomplemen
+        berhingga dalam <m>\E</m> dapat ditulis
+        <m>W=\E\cap(\Z\setminus(\E\setminus W))</m>, dan himpunan kedua pada
+        irisan itu terbuka dalam <m>\Z</m>. Jadi topologi subruangnya kofinit.
+      </p>
+      <p>
+        Dari selimut buka bagi <m>\E</m>, pilih satu anggota tak kosong.
+        Anggota itu menyisakan berhingga banyak titik <m>\E</m>; pilih satu
+        anggota selimut tambahan bagi setiap titik yang tersisa. Maka
+        <m>\E</m> kompak. Namun <m>\Z\setminus\E</m> adalah himpunan semua
+        bilangan ganjil. Komplemennya <m>\E</m> tak hingga, sehingga himpunan
+        ganjil itu tidak terbuka dalam topologi kofinit. Jadi <m>\E</m> tidak
+        tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-10">
+    <title>Memisahkan titik dari subhimpunan kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> Hausdorff, <m>A\subseteq X</m> kompak, dan
+        <m>x\in X\setminus A</m>. Buktikan bahwa terdapat himpunan terbuka
+        saling lepas <m>U,V</m> dengan <m>x\in U</m> dan <m>A\subseteq V</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-10-hint">
+      <p>Untuk setiap <m>a\in A</m>, pisahkan <m>x</m> dan <m>a</m>; lalu gunakan kekompakan <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-10-answer">
+      <p>
+        Pilih pasangan terbuka saling lepas <m>U_a\ni x</m> dan
+        <m>V_a\ni a</m>. Dari subselimut berhingga
+        <m>V_{a_1},\ldots,V_{a_n}</m>, gunakan
+        <m>U=\bigcap_iU_{a_i}</m> dan <m>V=\bigcup_iV_{a_i}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-10-solution">
+      <p>
+        Untuk setiap <m>a\in A</m>, sifat Hausdorff memberi himpunan terbuka
+        saling lepas <m>U_a,V_a</m> dengan <m>x\in U_a</m> dan
+        <m>a\in V_a</m>. Keluarga <m>\{V_a:a\in A\}</m> menyelimuti
+        <m>A</m>, maka ada <m>a_1,\ldots,a_n</m> sehingga
+        <m>A\subseteq\bigcup_iV_{a_i}</m>. Tetapkan
+        <m>U=\bigcap_iU_{a_i}</m> dan <m>V=\bigcup_iV_{a_i}</m>. Keduanya
+        terbuka, memuat objek yang diminta, dan saling lepas: titik dalam
+        <m>U\cap V</m> akan berada dalam suatu <m>V_{a_i}</m> sekaligus dalam
+        <m>U\subseteq U_{a_i}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-01">
+    <title>Memisahkan dua subhimpunan kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>A</m> dan <m>B</m> subhimpunan kompak saling lepas dari
+        ruang Hausdorff <m>X</m>. Buktikan bahwa terdapat himpunan terbuka
+        saling lepas <m>U,V</m> dengan <m>A\subseteq U</m> dan
+        <m>B\subseteq V</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-01-hint">
+      <p>Untuk setiap <m>a\in A</m>, terapkan hasil pemisahan titik dari himpunan kompak <m>B</m>, lalu gunakan kekompakan <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-01-answer">
+      <p>
+        Pisahkan setiap <m>a\in A</m> dari seluruh <m>B</m> dengan
+        <m>U_a,V_a</m>. Pilih berhingga banyak <m>U_a</m> yang menyelimuti
+        <m>A</m>; gabungan sisi <m>U_a</m> dan irisan sisi <m>V_a</m> adalah
+        lingkungan terbuka saling lepas yang diperlukan.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-01-solution">
+      <p>
+        Untuk setiap <m>a\in A</m>, hasil sebelumnya memberi himpunan terbuka
+        saling lepas <m>U_a,V_a</m> dengan <m>a\in U_a</m> dan
+        <m>B\subseteq V_a</m>. Karena <m>A</m> kompak, pilih
+        <m>a_1,\ldots,a_n</m> dengan
+        <m>A\subseteq U_{a_1}\cup\cdots\cup U_{a_n}</m>. Tetapkan
+        <me>
+          U=\bigcup_{i=1}^nU_{a_i},\qquad
+          V=\bigcap_{i=1}^nV_{a_i}.
+        </me>
+        Himpunan <m>U,V</m> terbuka, <m>A\subseteq U</m>, dan
+        <m>B\subseteq V</m>. Jika <m>z\in U\cap V</m>, maka untuk suatu
+        <m>i</m>, <m>z\in U_{a_i}</m> dan juga <m>z\in V\subseteq V_{a_i}</m>,
+        bertentangan dengan keterlepasan pasangan itu. Jadi
+        <m>U\cap V=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-02">
+    <title>Kekompakan ambient dan kekompakan subruang</title>
+    <statement>
+      <p>
+        Misalkan <m>A\subseteq(X,\tau_X)</m> dan <m>\tau_A</m> topologi
+        subruang pada <m>A</m>. Buktikan bahwa <m>A</m> kompak sebagai
+        subhimpunan dari <m>X</m> jika dan hanya jika
+        <m>(A,\tau_A)</m> merupakan ruang topologi kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-02-hint">
+      <p><em>Tahap 1.</em> Setiap himpunan terbuka dalam <m>A</m> berbentuk <m>A\cap U</m> untuk suatu <m>U</m> terbuka dalam <m>X</m>.</p>
+      <p><em>Tahap 2.</em> Batasi selimut ambient ke <m>A</m> untuk satu arah.</p>
+      <p><em>Tahap 3.</em> Pilih satu wakil terbuka ambient bagi setiap anggota selimut subruang untuk arah lainnya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-02-answer">
+      <p>
+        Kedua jenis selimut saling diterjemahkan melalui
+        <m>U\mapsto A\cap U</m>, dan pemilihan subselimut berhingga bertahan
+        dalam kedua arah.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-02-solution">
+      <p>
+        Andaikan <m>A</m> kompak sebagai subhimpunan <m>X</m>. Ambil selimut
+        <m>\{W_i:i\in I\}</m> bagi <m>A</m> oleh himpunan-himpunan yang terbuka
+        dalam topologi subruang. Untuk setiap <m>i</m>, pilih himpunan terbuka
+        <m>U_i\subseteq X</m> dengan <m>W_i=A\cap U_i</m>. Maka
+        <m>\{U_i:i\in I\}</m> menyelimuti <m>A</m> secara ambient, sehingga
+        berhingga banyak <m>U_i</m> cukup. Irisannya dengan <m>A</m> memberi
+        subselimut berhingga dari keluarga <m>W_i</m>.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>(A,\tau_A)</m> kompak dan ambil selimut
+        ambient <m>\{U_i:i\in I\}</m> bagi <m>A</m>. Keluarga
+        <m>\{A\cap U_i:i\in I\}</m> adalah selimut buka subruang, maka
+        mempunyai subselimut berhingga. Himpunan-himpunan ambient dengan
+        indeks yang sama menyelimuti <m>A</m>. Jadi kedua pengertian
+        kekompakan itu ekuivalen.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-03">
+    <title>Karakterisasi melalui sifat irisan berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi. Buktikan bahwa <m>X</m> kompak jika
+        dan hanya jika setiap keluarga himpunan tertutup
+        <m>\{F_\alpha\}_{\alpha\in I}</m> yang mempunyai sifat irisan
+        berhingga memenuhi <m>\bigcap_{\alpha\in I}F_\alpha\ne\emptyset</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-03-hint">
+      <p>Ambil komplemen seluruh anggota keluarga dan gunakan hukum De Morgan; subselimut berhingga tepat bersesuaian dengan irisan berhingga yang kosong.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-03-answer">
+      <p>
+        Komplemen mengubah keluarga tertutup bersifat irisan berhingga menjadi
+        keluarga terbuka yang tidak mempunyai subselimut berhingga, dan
+        mengubah irisan total kosong menjadi selimut bagi seluruh ruang.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-03-solution">
+      <p>
+        Andaikan <m>X</m> kompak dan keluarga tertutup <m>\{F_\alpha\}</m>
+        mempunyai sifat irisan berhingga. Jika irisan totalnya kosong, maka
+        <m>\{X\setminus F_\alpha\}</m> merupakan selimut buka bagi <m>X</m>.
+        Subselimut berhingga akan memberi
+        <m>\bigcap_{k=1}^nF_{\alpha_k}=\emptyset</m>, bertentangan dengan sifat
+        irisan berhingga. Maka irisan total tidak kosong.
+      </p>
+      <p>
+        Sebaliknya, andaikan syarat keluarga tertutup berlaku. Jika suatu
+        selimut buka <m>\{U_\alpha\}</m> tidak mempunyai subselimut berhingga,
+        maka himpunan-himpunan tertutup <m>F_\alpha=X\setminus U_\alpha</m>
+        mempunyai sifat irisan berhingga. Namun karena <m>\{U_\alpha\}</m>
+        menyelimuti <m>X</m>, hukum De Morgan memberi
+        <m>\bigcap_\alpha F_\alpha=\emptyset</m>, sebuah kontradiksi. Maka
+        setiap selimut buka mempunyai subselimut berhingga dan <m>X</m>
+        kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-04">
+    <title>Ruang Euklides bersifat kompak lokal</title>
+    <statement>
+      <p>
+        Dengan definisi bahwa setiap titik harus mempunyai lingkungan terbuka
+        yang tutupannya kompak, jelaskan mengapa <m>\R^n</m> kompak lokal
+        untuk setiap <m>n\in\Z^+</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-04-hint">
+      <p>Di sekitar <m>x\in\R^n</m>, gunakan bola terbuka berjari-jari satu dan Teorema Heine–Borel untuk tutupannya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-04-answer">
+      <p>
+        Bola <m>B_1(x)</m> terbuka, memuat <m>x</m>, dan tutupannya adalah bola
+        tertutup <m>\overline B_1(x)</m>, yang tertutup dan terbatas sehingga
+        kompak menurut Heine–Borel.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-04-solution">
+      <p>
+        Ambil sembarang <m>x\in\R^n</m> dan tetapkan
+        <m>O=B_1(x)=\{y:d_E(x,y)&lt;1\}</m>. Himpunan <m>O</m> terbuka dan
+        memuat <m>x</m>. Dalam topologi Euklides,
+        <m>\overline O=\{y:d_E(x,y)\le1\}</m>. Bola tertutup ini tertutup dan
+        terbatas dalam <m>\R^n</m>, maka kompak berdasarkan Teorema
+        Heine–Borel. Karena konstruksi berlaku pada setiap titik, <m>\R^n</m>
+        kompak lokal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-05">
+    <title>Setiap ruang kompak bersifat kompak lokal</title>
+    <statement>
+      <p>
+        Tunjukkan bahwa setiap ruang topologi kompak <m>X</m> bersifat kompak
+        lokal menurut definisi lingkungan terbuka dengan tutupan kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-05-hint">
+      <p>Untuk setiap <m>x\in X</m>, pilih lingkungan terbuka terbesar yang tersedia.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-05-answer">
+      <p>
+        Ambil <m>O=X</m>. Himpunan ini terbuka, memuat setiap <m>x</m>, dan
+        <m>\overline O=X</m> kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-05-solution">
+      <p>
+        Untuk sembarang <m>x\in X</m>, himpunan <m>O=X</m> adalah himpunan
+        terbuka yang memuat <m>x</m>. Tutupannya dalam <m>X</m> adalah
+        <m>\overline X=X</m>, yang kompak menurut hipotesis. Jadi syarat
+        kekompakan lokal terpenuhi pada setiap titik tanpa memerlukan aksioma
+        pemisahan tambahan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-06">
+    <title>Garis Sorgenfrey tidak kompak lokal</title>
+    <statement>
+      <p>
+        Misalkan garis Sorgenfrey adalah <m>\R</m> dengan basis
+        <m>\mathcal B=\{[a,b):a&lt;b\}</m>. Tunjukkan bahwa ruang ini Hausdorff
+        tetapi tidak kompak lokal.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-06-hint">
+      <p><em>Tahap 1.</em> Untuk <m>x&lt;y</m>, gunakan lingkungan basis <m>[x,y)</m> dan <m>[y,y+1)</m>.</p>
+      <p><em>Tahap 2.</em> Setiap lingkungan terbuka dari <m>x</m> memuat suatu <m>[x,b)</m> dengan <m>b&gt;x</m>.</p>
+      <p><em>Tahap 3.</em> Tunjukkan bahwa <m>[x,b)</m> tertutup tetapi tidak kompak dengan selimut menaik yang batas kanannya menuju <m>b</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-06-answer">
+      <p>
+        Dua titik dapat dipisahkan oleh interval basis saling lepas. Namun
+        setiap lingkungan <m>O\ni x</m> memuat subruang tertutup
+        <m>[x,b)</m> yang tidak kompak; karena itu <m>\overline O</m> tidak
+        mungkin kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-06-solution">
+      <p>
+        Jika <m>x&lt;y</m>, maka <m>[x,y)</m> dan <m>[y,y+1)</m> adalah himpunan
+        terbuka basis, masing-masing memuat <m>x</m> dan <m>y</m>, serta saling
+        lepas. Jadi garis Sorgenfrey Hausdorff.
+      </p>
+      <p>
+        Ambil lingkungan terbuka <m>O</m> dari <m>x</m>. Ada <m>b&gt;x</m>
+        dengan <m>[x,b)\subseteq O</m>. Himpunan <m>[x,b)</m> tertutup dalam
+        garis Sorgenfrey karena komplemennya
+        <m>(-\infty,x)\cup[b,\infty)</m> terbuka. Pilih bilangan bulat
+        <m>N_0</m> dengan <m>1/N_0&lt;b-x</m>. Keluarga
+        <me>
+          \left\{[x,b-1/n):n\ge N_0\right\}
+        </me>
+        adalah selimut buka bagi <m>[x,b)</m>, tetapi subkeluarga berhingga
+        mempunyai indeks maksimum <m>N</m> dan gabungannya hanya
+        <m>[x,b-1/N)</m>. Jadi <m>[x,b)</m> tidak kompak.
+      </p>
+      <p>
+        Jika <m>\overline O</m> kompak, maka subhimpunan
+        <m>[x,b)</m>, yang tertutup dalam <m>\overline O</m>, juga kompak,
+        sebuah kontradiksi. Tidak ada titik yang mempunyai lingkungan terbuka
+        dengan tutupan kompak, sehingga garis Sorgenfrey tidak kompak lokal.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-07">
+    <title>Bijeksi kontinu antara dua ruang kompak</title>
+    <statement>
+      <p>
+        Tentukan benar atau salah: jika <m>X</m> dan <m>Y</m> ruang topologi
+        kompak dan <m>f:X\to Y</m> bijeksi kontinu, maka <m>f</m> pasti suatu
+        homeomorfisme. Berikan bukti atau contoh tandingan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-07-hint">
+      <p>Uji pemetaan identitas pada himpunan dua titik yang domainnya diskret dan kodomainnya indiskret.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-07-answer">
+      <p>
+        Salah. Identitas dari ruang dua titik diskret ke ruang dua titik
+        indiskret adalah bijeksi kontinu antara ruang-ruang kompak, tetapi
+        inversnya tidak kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-07-solution">
+      <p>
+        Ambil <m>S=\{0,1\}</m>. Beri domain <m>X=S</m> topologi diskret dan
+        kodomain <m>Y=S</m> topologi indiskret <m>\{\emptyset,S\}</m>. Kedua
+        ruang kompak karena berhingga. Pemetaan identitas
+        <m>f:X\to Y</m> bijektif. Prapeta satu-satunya himpunan terbuka
+        kodomain adalah <m>\emptyset</m> dan <m>S</m>, keduanya terbuka dalam
+        <m>X</m>; jadi <m>f</m> kontinu.
+      </p>
+      <p>
+        Namun invers <m>f^{-1}:Y\to X</m> tidak kontinu: himpunan
+        <m>\{0\}</m> terbuka dalam kodomain <m>X</m> dari invers, sedangkan
+        prapetanya <m>\{0\}</m> tidak terbuka dalam <m>Y</m>. Hipotesis yang
+        hilang adalah sifat Hausdorff pada <m>Y</m>; dengan hipotesis itu,
+        bijeksi kontinu dari ruang kompak memang homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+</section>

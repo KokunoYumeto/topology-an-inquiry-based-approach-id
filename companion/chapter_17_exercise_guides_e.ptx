@@ -1,0 +1,269 @@
+<section xml:id="o003-c90-ch17-exercise-guides-e" xml:lang="id-ID">
+  <title>Panduan Latihan: Pernyataan Benar atau Salah tentang Kekompakan</title>
+
+  <p>
+    Enam panduan terakhir ini mempertahankan urutan pernyataan benar atau
+    salah pada sumber Bab 17. Untuk pernyataan yang benar, periksalah seluruh
+    hipotesis dalam bukti. Untuk pernyataan yang salah, telusuri secara
+    eksplisit setiap hipotesis pada contoh tandingan sebelum menyimpulkan.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-08">
+    <title>Subruang Tertutup dari Ruang Kompak</title>
+    <statement>
+      <p>
+        Jika <m>X</m> adalah suatu ruang topologi kompak,
+        maka setiap subruang tertutup dari <m>X</m> bersifat kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-08-hint">
+      <p><em>Tahap 1.</em> Ambil subruang tertutup <m>C\subseteq X</m> dan selimut buka subruang sebarang <m>\{W_\alpha\}</m> bagi <m>C</m>.</p>
+      <p><em>Tahap 2.</em> Tulis <m>W_\alpha=C\cap U_\alpha</m> untuk suatu <m>U_\alpha</m> yang terbuka dalam <m>X</m>, lalu tambahkan <m>X\setminus C</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan kekompakan <m>X</m> dan buang anggota <m>X\setminus C</m> dari subselimut berhingga yang diperoleh.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-08-answer">
+      <p>
+        <em>Benar.</em> Selimut buka subruang bagi <m>C</m>, setelah diwakili
+        oleh himpunan-himpunan buka dalam <m>X</m> dan ditambah
+        <m>X\setminus C</m>, menjadi selimut buka bagi <m>X</m>. Kekompakan
+        <m>X</m> menghasilkan subselimut berhingga bagi <m>C</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-08-solution">
+      <p>
+        Misalkan <m>C</m> subruang tertutup dari <m>X</m> dan
+        <m>\{W_\alpha\}_{\alpha\in I}</m> selimut buka sebarang bagi
+        <m>C</m> dalam topologi subruang. Untuk setiap <m>\alpha</m>, pilih
+        himpunan buka <m>U_\alpha\subseteq X</m> dengan
+        <m>W_\alpha=C\cap U_\alpha</m>. Karena <m>C</m> tertutup,
+        <m>X\setminus C</m> terbuka. Keluarga
+        <me>
+          \{U_\alpha\}_{\alpha\in I}\cup\{X\setminus C\}
+        </me>
+        menyelimuti <m>X</m>: titik dalam <m>C</m> diselimuti oleh suatu
+        <m>U_\alpha</m>, sedangkan titik di luar <m>C</m> diselimuti oleh
+        komplemen tersebut.
+      </p>
+      <p>
+        Kekompakan <m>X</m> memberi subselimut berhingga. Hapus
+        <m>X\setminus C</m> jika ia terpilih. Himpunan-himpunan
+        <m>U_{\alpha_1},\ldots,U_{\alpha_n}</m> yang tersisa masih
+        menyelimuti <m>C</m>, sebab <m>X\setminus C</m> tidak memuat titik
+        <m>C</m>. Maka
+        <m>W_{\alpha_i}=C\cap U_{\alpha_i}</m> untuk
+        <m>1\leq i\leq n</m> membentuk subselimut berhingga dari selimut
+        semula. Jadi <m>C</m> kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-09">
+    <title>Kodomain Kompak Tidak Cukup</title>
+    <statement>
+      <p>
+        Jika <m>X</m> adalah suatu ruang Hausdorff,
+        <m>Y</m> adalah suatu ruang kompak,
+        dan <m>f : X \to Y</m> adalah fungsi kontinu dan bijektif,
+        maka <m>f</m> adalah suatu homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-09-hint">
+      <p><em>Tahap 1.</em> Gunakan himpunan dua titik <m>S=\{0,1\}</m>.</p>
+      <p><em>Tahap 2.</em> Beri domain topologi diskret dan kodomain topologi indiskret, lalu periksa sifat Hausdorff, kompak, bijektif, dan kontinu untuk pemetaan identitas.</p>
+      <p><em>Tahap 3.</em> Uji kekontinuan invers dengan himpunan satu titik yang terbuka di ruang diskret.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-09-answer">
+      <p>
+        <em>Salah.</em> Identitas dari ruang dua titik diskret ke ruang dua
+        titik indiskret adalah bijeksi kontinu dari ruang Hausdorff ke ruang
+        kompak, tetapi inversnya tidak kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-09-solution">
+      <p>
+        Ambil <m>S=\{0,1\}</m>. Jadikan <m>X=S</m> ruang diskret dan
+        <m>Y=S</m> ruang indiskret dengan topologi
+        <m>\{\emptyset,S\}</m>. Ruang diskret <m>X</m> Hausdorff: dua titik
+        berbeda dipisahkan oleh singleton yang saling lepas. Ruang <m>Y</m>
+        kompak, baik karena berhingga maupun karena setiap selimut bukanya
+        harus memuat <m>S</m> sendiri.
+      </p>
+      <p>
+        Pemetaan identitas <m>f:X\to Y</m> bijektif. Prapeta kedua himpunan
+        terbuka kodomain, <m>\emptyset</m> dan <m>S</m>, terbuka dalam
+        <m>X</m>, jadi <m>f</m> kontinu. Namun invers
+        <m>f^{-1}:Y\to X</m> tidak kontinu: singleton <m>\{0\}</m> terbuka
+        dalam kodomain <m>X</m> dari invers, sedangkan prapetanya
+        <m>\{0\}</m> tidak terbuka dalam <m>Y</m>. Jadi <m>f</m> bukan
+        homeomorfisme. Hipotesis yang ditempatkan pada ruang yang keliru
+        adalah kekompakan: teorema yang benar memerlukan domain kompak dan
+        kodomain Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-d-10">
+    <title>Domain Kompak dan Kodomain Hausdorff</title>
+    <statement>
+      <p>
+        Jika <m>X</m> adalah suatu ruang kompak,
+        <m>Y</m> adalah suatu ruang Hausdorff,
+        dan <m>f : X \to Y</m> adalah bijeksi kontinu,
+        maka <m>f</m> adalah suatu homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-d-10-hint">
+      <p><em>Tahap 1.</em> Ambil himpunan tertutup <m>C\subseteq X</m>; sebagai subhimpunan tertutup dari ruang kompak, <m>C</m> kompak.</p>
+      <p><em>Tahap 2.</em> Citra kontinu <m>f(C)</m> kompak, dan subhimpunan kompak dari ruang Hausdorff tertutup.</p>
+      <p><em>Tahap 3.</em> Jadi <m>f</m> adalah pemetaan tertutup. Gunakan bijektivitas untuk menunjukkan bahwa <m>f^{-1}</m> kontinu.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-d-10-answer">
+      <p>
+        <em>Benar.</em> Pemetaan <m>f</m> membawa setiap himpunan tertutup di
+        <m>X</m> ke himpunan kompak, dan karena <m>Y</m> Hausdorff, citra itu
+        tertutup. Jadi <m>f</m> adalah bijeksi kontinu yang tertutup, sehingga
+        inversnya kontinu.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-d-10-solution">
+      <p>
+        Ambil sebarang himpunan tertutup <m>C\subseteq X</m>. Karena <m>X</m>
+        kompak, subhimpunan tertutup <m>C</m> kompak. Kekontinuan <m>f</m>
+        kemudian membuat <m>f(C)</m> kompak dalam <m>Y</m>. Setiap subhimpunan
+        kompak dari ruang Hausdorff tertutup, jadi <m>f(C)</m> tertutup dalam
+        <m>Y</m>. Dengan demikian <m>f</m> adalah pemetaan tertutup.
+      </p>
+      <p>
+        Karena <m>f</m> bijektif, invers <m>g=f^{-1}:Y\to X</m> terdefinisi.
+        Untuk setiap himpunan tertutup <m>C\subseteq X</m>, berlaku
+        <m>g^{-1}(C)=f(C)</m>, yang tertutup dalam <m>Y</m>. Jadi prapeta oleh
+        <m>g</m> dari setiap himpunan tertutup adalah tertutup; ini ekuivalen
+        dengan kekontinuan <m>g</m>. Maka <m>f</m> kontinu, bijektif, dan
+        mempunyai invers kontinu, sehingga <m>f</m> homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-e-01">
+    <title>Himpunan Tertutup dalam Ruang Metrik Tidak Selalu Kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>C</m> adalah subhimpunan tertutup dari suatu ruang metrik <m>(X, d)</m> dengan topologi metrik.
+        Maka <m>C</m> kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-e-01-hint">
+      <p><em>Tahap 1.</em> Ambil ruang metrik Euklides <m>X=\R</m> dan subhimpunan <m>C=\R</m>.</p>
+      <p><em>Tahap 2.</em> Seluruh ruang selalu tertutup dalam dirinya sendiri.</p>
+      <p><em>Tahap 3.</em> Gunakan selimut buka <m>\{(-n,n)\mid n\in\Z^+\}</m> untuk menguji kekompakan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-e-01-answer">
+      <p>
+        <em>Salah.</em> Dalam ruang metrik Euklides <m>X=\R</m>, himpunan
+        <m>C=\R</m> tertutup, tetapi tidak kompak; selimut buka
+        <m>\{(-n,n)\mid n\in\Z^+\}</m> tidak mempunyai subselimut berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-e-01-solution">
+      <p>
+        Beri <m>X=\R</m> metrik Euklides dan ambil <m>C=\R</m>. Himpunan
+        <m>C</m> tertutup dalam <m>X</m> karena komplemennya
+        <m>X\setminus C=\emptyset</m> terbuka.
+      </p>
+      <p>
+        Untuk <m>n\in\Z^+</m>, tetapkan <m>U_n=(-n,n)</m>. Setiap <m>U_n</m>
+        terbuka dan <m>\bigcup_{n=1}^{\infty}U_n=\R</m>, sehingga keluarga
+        tersebut menyelimuti <m>C</m>. Jika hanya berhingga banyak anggota
+        dipilih dan <m>N</m> adalah indeks terbesarnya, gabungannya sama
+        dengan <m>(-N,N)</m> dan tidak memuat, misalnya, titik <m>N</m>.
+        Jadi tidak ada subselimut berhingga dan <m>C</m> tidak kompak.
+        Ketertutupan saja dalam ruang metrik sebarang tidak cukup; dalam
+        ruang kompak, barulah setiap subhimpunan tertutup kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-e-02">
+    <title>Himpunan Kompak Tidak Selalu Tertutup</title>
+    <statement>
+      <p>
+        Jika <m>A</m> adalah subhimpunan kompak dari suatu ruang topologi <m>X</m>,
+        maka <m>A</m> adalah subhimpunan tertutup dari <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-e-02-hint">
+      <p><em>Tahap 1.</em> Gunakan himpunan dua titik <m>X=\{0,1\}</m> dengan topologi indiskret.</p>
+      <p><em>Tahap 2.</em> Setiap himpunan berhingga, khususnya <m>A=\{0\}</m>, kompak dalam ruang topologi apa pun.</p>
+      <p><em>Tahap 3.</em> Periksa apakah komplemen <m>X\setminus A=\{1\}</m> terbuka dalam topologi indiskret.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-e-02-answer">
+      <p>
+        <em>Salah.</em> Dalam ruang indiskret dua titik
+        <m>X=\{0,1\}</m>, singleton <m>A=\{0\}</m> kompak karena berhingga,
+        tetapi tidak tertutup karena komplemennya <m>\{1\}</m> tidak terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-e-02-solution">
+      <p>
+        Ambil <m>X=\{0,1\}</m> dengan topologi indiskret
+        <m>\tau=\{\emptyset,X\}</m>, dan ambil <m>A=\{0\}</m>. Himpunan
+        <m>A</m> kompak: dari selimut buka sebarang bagi singleton tersebut,
+        pilih satu anggota selimut yang memuat <m>0</m>; satu anggota itu
+        sudah merupakan subselimut berhingga.
+      </p>
+      <p>
+        Namun <m>X\setminus A=\{1\}</m> bukan anggota <m>\tau</m>, sehingga
+        komplemen <m>A</m> tidak terbuka. Jadi <m>A</m> tidak tertutup.
+        Pernyataan menjadi benar jika ruang ambient <m>X</m> Hausdorff, tetapi
+        hipotesis tersebut tidak diberikan di sini.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-e-03">
+    <title>Ruang Diskret Kompak Tepat Ketika Berhingga</title>
+    <statement>
+      <p>
+        Misalkan <m>(X,\tau)</m> adalah suatu ruang topologi dengan <m>\tau</m> topologi diskret.
+        Maka <m>X</m> kompak jika dan hanya jika <m>X</m> berhingga.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-e-03-hint">
+      <p><em>Tahap 1.</em> Jika <m>X</m> berhingga, gunakan fakta bahwa setiap himpunan berhingga bersifat kompak.</p>
+      <p><em>Tahap 2.</em> Untuk arah sebaliknya, dalam topologi diskret setiap singleton <m>\{x\}</m> terbuka.</p>
+      <p><em>Tahap 3.</em> Terapkan kekompakan kepada selimut <m>\{\{x\}\mid x\in X\}</m> dan tafsirkan keberadaan subselimut berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-e-03-answer">
+      <p>
+        <em>Benar.</em> Ruang berhingga selalu kompak. Sebaliknya, singleton
+        dalam ruang diskret membentuk selimut buka; jika ruang itu kompak,
+        berhingga banyak singleton harus menyelimuti seluruh <m>X</m>, sehingga
+        <m>X</m> berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-e-03-solution">
+      <p>
+        Andaikan dahulu <m>X</m> berhingga. Untuk selimut buka sebarang bagi
+        <m>X</m>, pilih satu anggota selimut yang memuat setiap titik. Karena
+        hanya ada berhingga banyak titik, pilihan ini menghasilkan
+        subselimut berhingga. Jadi <m>X</m> kompak; argumen juga mencakup
+        <m>X=\emptyset</m> dengan subselimut kosong.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>X</m> kompak dan <m>\tau</m> diskret. Setiap
+        singleton <m>\{x\}</m> terbuka, sehingga
+        <me>
+          \mathcal U=\{\{x\}\mid x\in X\}
+        </me>
+        merupakan selimut buka bagi <m>X</m>. Kekompakan memberi subselimut
+        berhingga <m>\{\{x_1\},\ldots,\{x_n\}\}</m>. Karena keluarga ini
+        menyelimuti <m>X</m>, berlaku <m>X=\{x_1,\ldots,x_n\}</m>, jadi
+        <m>X</m> berhingga. Kedua implikasi telah terbukti.
+      </p>
+    </solution>
+  </exercise>
+</section>

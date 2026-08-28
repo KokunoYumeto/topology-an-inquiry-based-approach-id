@@ -1,0 +1,747 @@
+<section xml:id="o003-c90-ch17-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan latihan Bab 17, bagian kedua</title>
+  <p>
+    Bagian ini mencakup urutan pemetaan kanonis 41 sampai 55 tentang
+    kekompakan. Setiap pernyataan dibuat mandiri dan disertai petunjuk
+    bertahap, jawaban atau rubrik pembuktian ringkas, serta solusi lengkap.
+    Bagian ini merupakan materi pendamping tidak resmi yang ditulis secara
+    terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi GVSU, dan
+    tidak menyiratkan dukungan penulis sumber.
+  </p>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-08">
+    <title>Subhimpunan kompak pada garis digital</title>
+    <statement>
+      <p>
+        Pada <m>\Z</m>, untuk setiap <m>n\in\Z</m> definisikan
+        <me>
+          B(n)=
+          \begin{cases}
+          \{n\}, \amp \text{jika }n\text{ ganjil},\\
+          \{n-1,n,n+1\}, \amp \text{jika }n\text{ genap}.
+          \end{cases}
+        </me>
+        Topologi garis digital adalah topologi yang mempunyai
+        <m>\B=\{B(n)\mid n\in\Z\}</m> sebagai basis. Tentukan tepat semua
+        subhimpunan kompak dari garis digital <m>\Z</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-08-hint">
+      <p>
+        <em>Tahap 1.</em> Perhatikan bahwa setiap <m>B(n)</m> berhingga dan
+        keluarga seluruh <m>B(n)</m> menyelimuti <m>\Z</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Batasi selimut basis tersebut pada suatu
+        subhimpunan tak berhingga <m>A</m>. Dapatkah gabungan berhingga
+        himpunan-himpunan basis yang berhingga menyelimuti <m>A</m>?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-08-answer">
+      <p>
+        Subhimpunan kompak dari garis digital tepat merupakan
+        subhimpunan-subhimpunan berhingga dari <m>\Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-08-solution">
+      <p>
+        Setiap himpunan berhingga dalam ruang topologi apa pun kompak:
+        dari suatu selimut buka, pilih satu anggota selimut untuk setiap
+        titik. Jadi setiap subhimpunan berhingga dari <m>\Z</m> kompak.
+      </p>
+      <p>
+        Sebaliknya, misalkan <m>A\subseteq\Z</m> tak berhingga. Karena
+        <m>n\in B(n)</m> untuk setiap <m>n</m>, keluarga
+        <m>\{A\cap B(n)\mid n\in\Z\}</m> merupakan selimut buka bagi
+        <m>A</m> dalam topologi subruang. Setiap <m>B(n)</m> mempunyai
+        paling banyak tiga unsur. Oleh karena itu, gabungan berhingga
+        anggota selimut tersebut hanya memuat berhingga banyak titik dan
+        tidak mungkin menyelimuti <m>A</m>. Jadi <m>A</m> tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-09">
+    <title>Basis interval bilangan bulat yang bersarang</title>
+    <statement>
+      <p>
+        Untuk setiap <m>n\in\Z^+</m>, definisikan
+        <m>I_n=(-n,n)\cap\Z</m>, yaitu himpunan bilangan bulat di dalam
+        interval <m>(-n,n)</m>. Buktikan bahwa
+        <m>\B=\{I_n\mid n\in\Z^+\}</m> merupakan basis bagi suatu topologi
+        <m>\tau</m> pada <m>\Z</m>, dan deskripsikan topologi yang
+        dihasilkannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-09-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk <m>z\in\Z</m>, pilih
+        <m>n\gt |z|</m>. Untuk dua anggota basis, hitung
+        <m>I_m\cap I_n</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Keluarga <m>I_1\subset I_2\subset\cdots</m>
+        bersarang. Gabungan suatu subkeluarga yang indeksnya terbatas
+        mempunyai indeks terbesar, sedangkan gabungan dengan indeks tak
+        terbatas adalah seluruh <m>\Z</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-09-answer">
+      <p>
+        Keluarga <m>\B</m> merupakan basis, dan
+        <me>
+          \tau=\{\emptyset,\Z\}\cup\{I_n\mid n\in\Z^+\}.
+        </me>
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-09-solution">
+      <p>
+        Jika <m>z\in\Z</m>, setiap bilangan bulat positif
+        <m>n\gt |z|</m> memenuhi <m>z\in I_n</m>. Jadi anggota-anggota
+        <m>\B</m> menyelimuti <m>\Z</m>. Selanjutnya,
+        <me>
+          I_m\cap I_n=I_{\min\{m,n\}}.
+        </me>
+        Maka, jika suatu titik berada dalam irisan dua anggota basis,
+        irisan itu sendiri merupakan anggota basis yang memuat titik
+        tersebut. Kedua syarat basis terpenuhi.
+      </p>
+      <p>
+        Karena himpunan-himpunan basis bersarang secara menaik, gabungan
+        subkeluarga tak kosong dengan himpunan indeks terbatas adalah
+        <m>I_N</m>, dengan <m>N</m> indeks terbesarnya. Jika himpunan
+        indeksnya tak terbatas, untuk setiap <m>z\in\Z</m> terdapat indeks
+        <m>n\gt |z|</m>, sehingga gabungannya adalah <m>\Z</m>. Dengan
+        menambahkan gabungan kosong, diperoleh tepat topologi dalam jawaban.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-a-10">
+    <title>Kekompakan interval bilangan bulat terkecil</title>
+    <statement>
+      <p>
+        Pada <m>\Z</m>, beri topologi <m>\tau</m> yang berbasis
+        <m>I_n=(-n,n)\cap\Z</m> untuk <m>n\in\Z^+</m>. Apakah
+        <m>I_2=(-2,2)\cap\Z=\{-1,0,1\}</m> kompak dalam topologi subruang?
+        Buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-a-10-hint">
+      <p>
+        <em>Tahap 1.</em> Hitung banyaknya unsur <m>I_2</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Dari suatu selimut buka bagi himpunan berhingga,
+        pilih satu anggota selimut untuk setiap titik.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-a-10-answer">
+      <p>
+        Ya. Himpunan <m>I_2=\{-1,0,1\}</m> kompak karena berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-a-10-solution">
+      <p>
+        Misalkan <m>\mathcal U</m> suatu selimut buka bagi <m>I_2</m>.
+        Pilih <m>U_{-1},U_0,U_1\in\mathcal U</m> yang masing-masing memuat
+        <m>-1</m>, <m>0</m>, dan <m>1</m>. Setelah anggota yang kebetulan
+        sama dihapus, paling banyak tiga himpunan ini masih menyelimuti
+        <m>I_2</m>. Jadi setiap selimut buka mempunyai subselimut berhingga,
+        sehingga <m>I_2</m> kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-01">
+    <title>Semua subhimpunan kompak dalam topologi interval bersarang</title>
+    <statement>
+      <p>
+        Pada <m>\Z</m>, misalkan <m>\tau</m> mempunyai basis
+        <m>I_n=(-n,n)\cap\Z</m> untuk <m>n\in\Z^+</m>. Tentukan tepat semua
+        subhimpunan kompak dari <m>(\Z,\tau)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-01-hint">
+      <p>
+        <em>Tahap 1.</em> Semua himpunan berhingga kompak.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk <m>A\subseteq\Z</m> tak berhingga, gunakan
+        selimut subruang <m>\{A\cap I_n\mid n\in\Z^+\}</m>. Setiap gabungan
+        berhingga keluarga bersarang ini berada dalam satu <m>I_N</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-01-answer">
+      <p>
+        Subhimpunan kompak dari <m>(\Z,\tau)</m> tepat merupakan
+        subhimpunan-subhimpunan berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-01-solution">
+      <p>
+        Setiap subhimpunan berhingga kompak dalam topologi subruang.
+        Sekarang misalkan <m>A\subseteq\Z</m> tak berhingga. Karena setiap
+        bilangan bulat berada dalam suatu <m>I_n</m>, keluarga
+        <m>\{A\cap I_n\mid n\in\Z^+\}</m> menyelimuti <m>A</m> dengan
+        himpunan-himpunan terbuka subruang.
+      </p>
+      <p>
+        Untuk indeks <m>n_1,\ldots,n_r</m>, ambil
+        <m>N=\max\{n_1,\ldots,n_r\}</m>. Karena keluarga <m>I_n</m>
+        bersarang, gabungan anggota-anggota yang dipilih termuat dalam
+        <m>A\cap I_N</m>. Himpunan <m>I_N</m> berhingga, sedangkan
+        <m>A</m> tak berhingga, sehingga gabungan itu tidak menyelimuti
+        <m>A</m>. Selimut tersebut tidak mempunyai subselimut berhingga;
+        jadi <m>A</m> tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-02">
+    <title>Citra tertutup di bawah fungsi kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi kompak, <m>Y</m> ruang Hausdorff,
+        dan <m>f:X\to Y</m> fungsi kontinu. Buktikan bahwa untuk setiap
+        subhimpunan tertutup <m>C\subseteq X</m>, citra <m>f(C)</m>
+        tertutup dalam <m>Y</m>. Dengan demikian, <m>f</m> merupakan
+        pemetaan tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-02-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan fakta bahwa subhimpunan tertutup dari
+        ruang kompak adalah kompak.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Citra kontinu dari himpunan kompak adalah kompak,
+        dan setiap subhimpunan kompak dari ruang Hausdorff adalah tertutup.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-02-answer">
+      <p>
+        Rubrik pembuktian: tunjukkan berturut-turut bahwa <m>C</m> kompak,
+        <m>f(C)</m> kompak, lalu <m>f(C)</m> tertutup dalam <m>Y</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-02-solution">
+      <p>
+        Ambil sembarang subhimpunan tertutup <m>C</m> dari <m>X</m>. Karena
+        <m>X</m> kompak, setiap subhimpunan tertutupnya kompak; jadi
+        <m>C</m> kompak. Kekontinuan <m>f</m> mengakibatkan citra
+        <m>f(C)</m> kompak dalam <m>Y</m>. Karena <m>Y</m> Hausdorff,
+        setiap subhimpunan kompak dari <m>Y</m> tertutup. Maka
+        <m>f(C)</m> tertutup. Hal ini berlaku untuk setiap <m>C</m>
+        tertutup, sehingga <m>f</m> adalah pemetaan tertutup.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-03">
+    <title>Bijeksi kontinu kompak-ke-Hausdorff</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang topologi kompak, <m>Y</m> ruang Hausdorff,
+        dan <m>f:X\to Y</m> bijeksi kontinu. Buktikan bahwa <m>f</m>
+        merupakan homeomorfisme.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-03-hint">
+      <p>
+        <em>Tahap 1.</em> Buktikan bahwa <m>f</m> memetakan setiap himpunan
+        tertutup dalam <m>X</m> ke himpunan tertutup dalam <m>Y</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan bijektivitas untuk menafsirkan
+        <m>f(C)</m> sebagai prapeta <m>C</m> di bawah <m>f^{-1}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-03-answer">
+      <p>
+        Fungsi <m>f</m> adalah bijeksi kontinu dan pemetaan tertutup;
+        karena itu inversnya kontinu, sehingga <m>f</m> merupakan
+        homeomorfisme.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-03-solution">
+      <p>
+        Jika <m>C\subseteq X</m> tertutup, maka <m>C</m> kompak. Citra
+        <m>f(C)</m> kompak karena <m>f</m> kontinu, dan <m>f(C)</m>
+        tertutup karena <m>Y</m> Hausdorff. Jadi <m>f</m> adalah pemetaan
+        tertutup.
+      </p>
+      <p>
+        Karena <m>f</m> bijektif, invers <m>f^{-1}:Y\to X</m> terdefinisi.
+        Untuk setiap himpunan tertutup <m>C\subseteq X</m>,
+        <me>
+          (f^{-1})^{-1}(C)=f(C),
+        </me>
+        dan ruas kanan tertutup dalam <m>Y</m>. Dengan kriteria prapeta
+        himpunan tertutup, <m>f^{-1}</m> kontinu. Jadi <m>f</m> dan
+        inversnya kontinu, sehingga <m>f</m> adalah homeomorfisme.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-04">
+    <title>Kekompakan domain tanpa syarat Hausdorff pada kodomain</title>
+    <statement>
+      <p>
+        Berikan contoh ruang topologi <m>X</m> dan <m>Y</m> serta bijeksi
+        kontinu <m>f:X\to Y</m> sedemikian sehingga <m>X</m> kompak, tetapi
+        <m>f</m> bukan homeomorfisme. Verifikasikan semua sifat yang
+        dinyatakan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-04-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan himpunan dua unsur. Beri domain topologi
+        diskret dan kodomain topologi indiskret.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Periksa kekompakan domain, kekontinuan fungsi
+        identitas, dan kegagalan kekontinuan invers pada suatu singleton.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-04-answer">
+      <p>
+        Ambil <m>X=\{0,1\}</m> dengan topologi diskret, <m>Y=\{0,1\}</m>
+        dengan topologi indiskret, dan <m>f=\operatorname{id}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-04-solution">
+      <p>
+        Ruang <m>X</m> kompak karena berhingga. Fungsi identitas
+        <m>f:X\to Y</m> jelas bijektif. Hanya <m>\emptyset</m> dan
+        <m>Y</m> yang terbuka dalam kodomain, dan prapetanya berturut-turut
+        <m>\emptyset</m> serta <m>X</m>, keduanya terbuka dalam domain.
+        Jadi <m>f</m> kontinu.
+      </p>
+      <p>
+        Akan tetapi, <m>\{0\}</m> terbuka dalam <m>X</m>, sedangkan
+        <m>(f^{-1})^{-1}(\{0\})=\{0\}</m> tidak terbuka dalam <m>Y</m>.
+        Maka <m>f^{-1}</m> tidak kontinu dan <m>f</m> bukan
+        homeomorfisme. Contoh ini juga memperlihatkan mengapa syarat
+        Hausdorff pada kodomain diperlukan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-05">
+    <title>Kodomain Hausdorff tanpa kekompakan domain</title>
+    <statement>
+      <p>
+        Berikan contoh ruang topologi <m>X</m> dan ruang Hausdorff
+        <m>Y</m> serta bijeksi kontinu <m>f:X\to Y</m> yang bukan
+        homeomorfisme. Verifikasikan semua sifat yang dinyatakan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-05-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan himpunan dasar <m>\R</m>. Beri domain
+        topologi diskret dan kodomain topologi Euklides.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Fungsi identitas dari topologi yang lebih halus
+        ke topologi yang lebih kasar kontinu. Uji inversnya pada singleton.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-05-answer">
+      <p>
+        Ambil <m>X=(\R,\tau_{\mathrm{diskret}})</m>,
+        <m>Y=(\R,\tau_E)</m>, dan <m>f=\operatorname{id}_{\R}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-05-solution">
+      <p>
+        Topologi Euklides pada <m>Y</m> bersifat Hausdorff. Fungsi identitas
+        <m>f:X\to Y</m> bijektif. Jika <m>U</m> terbuka dalam topologi
+        Euklides, maka <m>f^{-1}(U)=U</m> merupakan suatu subhimpunan
+        <m>\R</m>, sehingga terbuka dalam topologi diskret. Jadi <m>f</m>
+        kontinu.
+      </p>
+      <p>
+        Inversnya adalah fungsi identitas dari <m>Y</m> ke <m>X</m>.
+        Singleton <m>\{0\}</m> terbuka dalam <m>X</m>, tetapi prapetanya di
+        bawah <m>f^{-1}</m> adalah <m>\{0\}</m>, yang tidak terbuka dalam
+        topologi Euklides. Jadi invers tidak kontinu dan <m>f</m> bukan
+        homeomorfisme. Domain diskret tak berhingga ini memang tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-06">
+    <title>Himpunan tertutup dalam topologi Entah-Atau</title>
+    <statement>
+      <p>
+        Misalkan <m>X=[-1,1]</m>. Topologi Entah-Atau pada <m>X</m>
+        didefinisikan dengan menyatakan <m>U\subseteq X</m> terbuka jika
+        <m>0\notin U</m>, atau jika <m>(-1,1)\subseteq U</m>. Deskripsikan
+        semua subhimpunan tertutup nontrivial dari <m>X</m>, dengan
+        “nontrivial” berarti selain <m>\emptyset</m> dan <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-06-hint">
+      <p>
+        <em>Tahap 1.</em> Suatu <m>F\subseteq X</m> tertutup tepat ketika
+        <m>X\setminus F</m> terbuka. Pisahkan kasus <m>0\in F</m> dan
+        <m>0\notin F</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Jika <m>0\notin F</m>, komplemennya memuat
+        <m>0</m>; agar terbuka, komplemen itu harus memuat seluruh
+        <m>(-1,1)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-06-answer">
+      <p>
+        Subhimpunan tertutup nontrivial adalah semua subhimpunan sejati
+        <m>F\subsetneq X</m> yang memuat <m>0</m>, bersama
+        <m>\{-1\}</m>, <m>\{1\}</m>, dan <m>\{-1,1\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-06-solution">
+      <p>
+        Jika <m>0\in F</m>, maka <m>0\notin X\setminus F</m>. Menurut
+        definisi topologi, setiap subhimpunan yang tidak memuat <m>0</m>
+        terbuka, sehingga <m>X\setminus F</m> terbuka dan <m>F</m>
+        tertutup.
+      </p>
+      <p>
+        Jika <m>0\notin F</m>, komplemen <m>X\setminus F</m> memuat
+        <m>0</m>. Komplemen ini terbuka tepat ketika memuat
+        <m>(-1,1)</m>. Kondisi tersebut setara dengan
+        <m>F\subseteq X\setminus(-1,1)=\{-1,1\}</m>. Jadi semua himpunan
+        tertutup adalah semua subhimpunan yang memuat <m>0</m> bersama
+        semua subhimpunan <m>\{-1,1\}</m>. Setelah
+        <m>\emptyset</m> dan <m>X</m> dikeluarkan, diperoleh daftar dalam
+        jawaban.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-07">
+    <title>Kegagalan sifat Hausdorff pada topologi Entah-Atau</title>
+    <statement>
+      <p>
+        Pada <m>X=[-1,1]</m>, beri topologi Entah-Atau: suatu
+        <m>U\subseteq X</m> terbuka jika <m>0\notin U</m>, atau jika
+        <m>(-1,1)\subseteq U</m>. Tentukan apakah <m>X</m> Hausdorff dan
+        buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-07-hint">
+      <p>
+        <em>Tahap 1.</em> Pilih <m>y\in(-1,1)\setminus\{0\}</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Setiap lingkungan terbuka dari <m>0</m> harus
+        memuat seluruh <m>(-1,1)</m>, khususnya <m>y</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-07-answer">
+      <p>
+        Tidak. Titik <m>0</m> tidak dapat dipisahkan oleh lingkungan terbuka
+        saling lepas dari titik mana pun di
+        <m>(-1,1)\setminus\{0\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-07-solution">
+      <p>
+        Ambil <m>y\in(-1,1)\setminus\{0\}</m>. Misalkan <m>U</m> lingkungan
+        terbuka dari <m>0</m>. Karena <m>0\in U</m>, alternatif pertama
+        dalam definisi keterbukaan tidak berlaku; maka
+        <m>(-1,1)\subseteq U</m>, sehingga <m>y\in U</m>.
+      </p>
+      <p>
+        Setiap lingkungan terbuka <m>V</m> dari <m>y</m> juga memuat
+        <m>y</m>. Akibatnya <m>y\in U\cap V</m>, sehingga sembarang
+        lingkungan <m>U</m> dan <m>V</m> tersebut beririsan. Kedua titik
+        berbeda <m>0</m> dan <m>y</m> tidak dapat dipisahkan oleh himpunan
+        terbuka saling lepas. Jadi <m>X</m> bukan Hausdorff.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-08">
+    <title>Kekompakan topologi Entah-Atau</title>
+    <statement>
+      <p>
+        Pada <m>X=[-1,1]</m>, beri topologi Entah-Atau: suatu
+        <m>U\subseteq X</m> terbuka jika <m>0\notin U</m>, atau jika
+        <m>(-1,1)\subseteq U</m>. Tentukan apakah <m>X</m> kompak dan
+        buktikan jawaban Anda.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-08-hint">
+      <p>
+        <em>Tahap 1.</em> Dari suatu selimut buka, pilih satu anggota yang
+        memuat <m>0</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Anggota itu langsung menyelimuti
+        <m>(-1,1)</m>. Berapa banyak titik <m>X</m> yang mungkin masih
+        belum terselimuti?
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-08-answer">
+      <p>
+        Ya. Setiap selimut buka mempunyai subselimut dengan paling banyak
+        tiga anggota.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-08-solution">
+      <p>
+        Misalkan <m>\mathcal U</m> selimut buka bagi <m>X</m>. Karena
+        <m>0\in X</m>, terdapat <m>U_0\in\mathcal U</m> dengan
+        <m>0\in U_0</m>. Definisi topologi memaksa
+        <m>(-1,1)\subseteq U_0</m>. Jadi hanya kedua titik ujung
+        <m>-1</m> dan <m>1</m> yang mungkin belum terselimuti oleh
+        <m>U_0</m>.
+      </p>
+      <p>
+        Jika <m>-1</m> belum terselimuti, pilih satu anggota
+        <m>U_{-1}\in\mathcal U</m> yang memuatnya; lakukan hal yang sama
+        untuk <m>1</m> bila perlu. Keluarga yang terdiri dari
+        <m>U_0</m> dan paling banyak dua pilihan tambahan itu menyelimuti
+        seluruh <m>X</m>. Jadi <m>X</m> kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-09">
+    <title>Subhimpunan tak kompak dalam topologi Entah-Atau</title>
+    <statement>
+      <p>
+        Pada <m>X=[-1,1]</m>, beri topologi Entah-Atau: suatu
+        <m>U\subseteq X</m> terbuka jika <m>0\notin U</m>, atau jika
+        <m>(-1,1)\subseteq U</m>. Adakah subhimpunan <m>X</m> yang tidak
+        kompak? Berikan contoh, buktikan, dan jika mungkin klasifikasikan
+        semua subhimpunan kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-09-hint">
+      <p>
+        <em>Tahap 1.</em> Subruang <m>X\setminus\{0\}</m> bersifat diskret,
+        sebab setiap subhimpunannya tidak memuat <m>0</m> dan karena itu
+        terbuka dalam <m>X</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Untuk subhimpunan yang memuat <m>0</m>, ulangi
+        argumen satu anggota selimut yang menutupi seluruh
+        <m>(-1,1)</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-09-answer">
+      <p>
+        Ya. Misalnya <m>(0,1)</m> tidak kompak. Secara umum,
+        <m>A\subseteq X</m> kompak jika dan hanya jika <m>A</m> berhingga
+        atau <m>0\in A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-09-solution">
+      <p>
+        Jika <m>A</m> berhingga, maka <m>A</m> kompak. Jika
+        <m>0\in A</m>, ambil suatu selimut buka subruang bagi <m>A</m> dan
+        pilih anggota yang memuat <m>0</m>. Anggota ini berasal dari
+        himpunan terbuka di <m>X</m> yang memuat seluruh <m>(-1,1)</m>;
+        karena itu ia menyelimuti <m>A\cap(-1,1)</m>. Hanya titik ujung
+        <m>-1</m> dan <m>1</m> yang mungkin tersisa, sehingga paling banyak
+        dua anggota tambahan menghasilkan subselimut berhingga.
+      </p>
+      <p>
+        Sebaliknya, andaikan <m>A</m> tak berhingga dan <m>0\notin A</m>.
+        Setiap singleton <m>\{a\}</m> untuk <m>a\in A</m> tidak memuat
+        <m>0</m>, sehingga terbuka dalam <m>X</m> dan juga dalam <m>A</m>.
+        Selimut singleton <m>\{\{a\}\mid a\in A\}</m> tidak mempunyai
+        subselimut berhingga. Jadi <m>A</m> tidak kompak. Khususnya,
+        <m>(0,1)</m> merupakan contoh subhimpunan tak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-b-10">
+    <title>Ketakkompakan garis dengan topologi K</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>K=\{\frac1k\mid k\in\Z^+\}</m>. Topologi <m>K</m>,
+        dilambangkan <m>\tau_K</m>, pada <m>\R</m> mempunyai basis yang
+        terdiri atas semua interval terbuka <m>(a,b)</m> dan semua
+        <m>(a,b)\setminus K</m>, dengan <m>a\lt b</m>. Buktikan bahwa
+        <m>(\R,\tau_K)</m> tidak kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-b-10-hint">
+      <p>
+        <em>Tahap 1.</em> Setiap interval terbuka Euklides juga terbuka
+        dalam <m>\tau_K</m>; jadi topologi <m>K</m> lebih halus daripada
+        topologi Euklides.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan selimut
+        <m>\{(-n,n)\mid n\in\Z^+\}</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-b-10-answer">
+      <p>
+        Selimut buka <m>\{(-n,n)\mid n\in\Z^+\}</m> menyelimuti
+        <m>\R</m> tetapi tidak mempunyai subselimut berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-b-10-solution">
+      <p>
+        Setiap <m>(-n,n)</m> adalah interval terbuka biasa, sehingga
+        merupakan anggota basis topologi <m>K</m>. Keluarga
+        <m>\mathcal U=\{(-n,n)\mid n\in\Z^+\}</m> menyelimuti
+        <m>\R</m>, sebab untuk setiap <m>x\in\R</m> terdapat bilangan bulat
+        positif <m>n\gt |x|</m>.
+      </p>
+      <p>
+        Setiap subkeluarga berhingga mempunyai indeks terbesar
+        <m>N</m>. Karena interval-interval tersebut bersarang, gabungannya
+        hanyalah <m>(-N,N)</m>, yang tidak menyelimuti <m>\R</m>. Jadi
+        <m>\mathcal U</m> tidak mempunyai subselimut berhingga dan
+        <m>(\R,\tau_K)</m> tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-01">
+    <title>Subhimpunan yang memuat K tidak kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>K=\{\frac1k\mid k\in\Z^+\}</m> dan beri <m>\R</m>
+        topologi <m>K</m> yang berbasis interval <m>(a,b)</m> serta
+        himpunan <m>(a,b)\setminus K</m>. Buktikan bahwa setiap
+        <m>A\subseteq\R</m> yang memuat <m>K</m> tidak kompak sebagai
+        subruang. Simpulkan bahwa <m>[0,1]</m> tidak kompak dalam topologi
+        ini meskipun tertutup dan terbatas.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-01-hint">
+      <p>
+        <em>Tahap 1.</em> Gunakan himpunan terbuka
+        <m>G=\R\setminus K</m> dan
+        <me>
+          O_k=\left(\frac1k,2\right)\cup\bigl((-1,1)\setminus K\bigr),
+          \qquad k\in\Z^+.
+        </me>
+      </p>
+      <p>
+        <em>Tahap 2.</em> Setelah berhingga banyak <m>O_k</m> dipilih,
+        ambil <m>m</m> setidaknya sebesar semua indeks yang dipilih dan uji
+        apakah <m>1/m</m> terselimuti.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-01-answer">
+      <p>
+        Rubrik pembuktian: tunjukkan bahwa
+        <m>\{A\cap G\}\cup\{A\cap O_k\mid k\in\Z^+\}</m> merupakan
+        selimut buka bagi <m>A</m>, lalu gunakan suatu <m>1/m\in K</m>
+        untuk menggagalkan setiap subselimut berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-01-solution">
+      <p>
+        Himpunan <m>G=\R\setminus K</m> terbuka dalam topologi <m>K</m>,
+        karena
+        <m>G=\bigcup_{n\in\Z^+}((-n,n)\setminus K)</m>. Setiap
+        <m>O_k</m> juga terbuka: suku pertamanya adalah interval terbuka dan
+        suku keduanya anggota basis topologi <m>K</m>.
+      </p>
+      <p>
+        Misalkan <m>A\supseteq K</m>. Titik <m>A\setminus K</m> terselimuti
+        oleh <m>A\cap G</m>. Untuk <m>1/m\in K</m>, pilih
+        <m>k=m+1</m>; karena <m>1/k\lt1/m\lt2</m>, titik itu berada dalam
+        <m>A\cap O_k</m>. Jadi
+        <me>
+          \{A\cap G\}\cup\{A\cap O_k\mid k\in\Z^+\}
+        </me>
+        merupakan selimut buka subruang bagi <m>A</m>.
+      </p>
+      <p>
+        Subkeluarga berhingga tanpa satu pun himpunan <m>O_k</m> jelas
+        tidak menyelimuti <m>K</m>. Untuk sembarang subkeluarga berhingga
+        lainnya, misalkan <m>N</m> indeks terbesar di antara
+        himpunan-himpunan <m>O_k</m> yang dipilih. Pilih <m>m\geq N</m>.
+        Titik <m>1/m\in K\subseteq A</m> tidak berada
+        dalam <m>G</m>. Untuk setiap indeks terpilih <m>k\leq N\leq m</m>,
+        berlaku <m>1/m\leq1/k</m>, sehingga <m>1/m</m> tidak berada dalam
+        <m>(1/k,2)</m>; sebagai anggota <m>K</m>, titik itu juga tidak
+        berada dalam <m>(-1,1)\setminus K</m>. Jadi tidak ada subselimut
+        berhingga.
+      </p>
+      <p>
+        Himpunan <m>[0,1]</m> memuat <m>K</m>, sehingga tidak kompak.
+        Komplemennya <m>(-\infty,0)\cup(1,\infty)</m> terbuka dalam
+        topologi <m>K</m>, jadi <m>[0,1]</m> tertutup; himpunan ini juga
+        terbatas dalam arti biasa.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-exer-c-02">
+    <title>Memisahkan titik dari subhimpunan kompak</title>
+    <statement>
+      <p>
+        Misalkan <m>X</m> ruang Hausdorff, <m>C\subseteq X</m> subhimpunan
+        kompak, dan <m>x\in X\setminus C</m>. Buktikan bahwa terdapat
+        himpunan terbuka saling lepas <m>U,V\subseteq X</m> sedemikian
+        sehingga <m>x\in U</m> dan <m>C\subseteq V</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-exer-c-02-hint">
+      <p>
+        <em>Tahap 1.</em> Untuk setiap <m>c\in C</m>, gunakan sifat
+        Hausdorff untuk memilih himpunan terbuka saling lepas
+        <m>U_c\ni x</m> dan <m>V_c\ni c</m>.
+      </p>
+      <p>
+        <em>Tahap 2.</em> Gunakan kekompakan untuk memilih berhingga banyak
+        <m>V_c</m>. Ambil irisan pasangan-pasangan <m>U_c</m> dan gabungan
+        pasangan-pasangan <m>V_c</m>.
+      </p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-exer-c-02-answer">
+      <p>
+        Rubrik pembuktian: dari subselimut berhingga
+        <m>V_{c_1},\ldots,V_{c_n}</m> bagi <m>C</m>, ambil
+        <m>U=\bigcap_{i=1}^nU_{c_i}</m> dan
+        <m>V=\bigcup_{i=1}^nV_{c_i}</m>, lalu buktikan
+        <m>U\cap V=\emptyset</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-exer-c-02-solution">
+      <p>
+        Jika <m>C=\emptyset</m>, ambil <m>U=X</m> dan
+        <m>V=\emptyset</m>. Sekarang andaikan <m>C\neq\emptyset</m>.
+        Untuk setiap <m>c\in C</m>, titik <m>x</m> dan <m>c</m> berbeda.
+        Karena <m>X</m> Hausdorff, terdapat himpunan terbuka
+        <m>U_c</m> dan <m>V_c</m> dengan <m>x\in U_c</m>,
+        <m>c\in V_c</m>, dan <m>U_c\cap V_c=\emptyset</m>. Keluarga
+        <m>\{V_c\mid c\in C\}</m> merupakan selimut buka bagi <m>C</m>.
+      </p>
+      <p>
+        Kekompakan <m>C</m> memberi titik
+        <m>c_1,\ldots,c_n\in C</m> sedemikian sehingga
+        <m>C\subseteq\bigcup_{i=1}^nV_{c_i}</m>. Definisikan
+        <me>
+          U=\bigcap_{i=1}^nU_{c_i},
+          \qquad
+          V=\bigcup_{i=1}^nV_{c_i}.
+        </me>
+        Irisan berhingga <m>U</m> terbuka dan memuat <m>x</m>; gabungan
+        <m>V</m> terbuka dan memuat <m>C</m>.
+      </p>
+      <p>
+        Jika <m>y\in U\cap V</m>, maka <m>y\in V_{c_i}</m> untuk suatu
+        <m>i</m>. Karena <m>y\in U</m>, juga
+        <m>y\in U_{c_i}</m>, bertentangan dengan
+        <m>U_{c_i}\cap V_{c_i}=\emptyset</m>. Jadi
+        <m>U\cap V=\emptyset</m>, sebagaimana diperlukan.
+      </p>
+    </solution>
+  </exercise>
+</section>

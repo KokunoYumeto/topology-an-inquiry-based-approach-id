@@ -13,14 +13,17 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">Jika <span class="process-math">\(\mathcal U\)</span> adalah semua gabungan subkoleksi dari <span class="process-math">\(S\text{,}\)</span> maka <span class="process-math">\(\{a,b\}\)</span> dan <span class="process-math">\(\{b,c\}\)</span> sendiri berada di <span class="process-math">\(\mathcal U\text{.}\)</span> Namun</div>
+<div class="para">Dari pertidaksamaan segitiga di setiap faktor, <span class="process-math">\(d_i(x_i,z_i)\leq a_i+b_i\text{.}\)</span> Karena semua suku taknegatif,</div>
 <div class="displaymath process-math">
-\begin{equation*}
-\{a,b\}\cap\{b,c\}=\{b\}.
-\end{equation*}
+\begin{align*}
+d(x,z)^2 \amp\leq \sum_{i=1}^n(a_i+b_i)^2\\
+\amp=\sum a_i^2+2\sum a_ib_i+\sum b_i^2\\
+\amp\leq\sum a_i^2+2\sqrt{\sum a_i^2}\sqrt{\sum b_i^2}+\sum b_i^2\\
+\amp=(d(x,y)+d(y,z))^2.
+\end{align*}
 </div>
-<div class="para">Himpunan <span class="process-math">\(\{b\}\)</span> tidak dapat ditulis sebagai gabungan anggota <span class="process-math">\(S\text{:}\)</span> setiap anggota <span class="process-math">\(S\)</span> yang memuat <span class="process-math">\(b\)</span> juga memuat <span class="process-math">\(a\)</span> atau <span class="process-math">\(c\text{.}\)</span> Maka <span class="process-math">\(\mathcal U\)</span> tidak tertutup terhadap irisan berhingga dan bukan topologi.</div>
+<div class="para">Pertidaksamaan kedua adalah tepat penggunaan Cauchy–Schwarz. Mengambil akar kuadrat yang taknegatif menghasilkan pertidaksamaan segitiga.</div>
 </div>
-<span class="incontext"><a href="o003-c90-ch12-exercise-guides-a.html#p-4646" class="internal">in-context</a></span>
+<span class="incontext"><a href="o003-c90-ch11-mastery.html#p-4646" class="internal">in-context</a></span>
 </body>
 </html>

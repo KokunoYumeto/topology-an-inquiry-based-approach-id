@@ -1,0 +1,406 @@
+<section xml:id="o003-c90-ch17-source-guides-a" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Selimut Buka dan Kekompakan Dasar</title>
+
+  <p>
+    Sepuluh panduan pertama ini mengikuti urutan sumber Bab 17: enam
+    penyelidikan awal tentang kekompakan, lalu empat pertanyaan pertama
+    tentang hubungan kekompakan dengan himpunan buka dan himpunan tertutup.
+    Kerjakan dahulu prompt pada bab utama, lalu buka petunjuk, jawaban atau
+    rubrik, dan solusi secara bertahap.
+  </p>
+  <p>
+    Bab sumber mempertahankan 73 simpul tugas. Dua di antaranya hanya
+    mengelompokkan subprompt; setelah empat pernyataan langsung dan satu badan
+    kegiatan langsung ikut dihitung, backend memuat 76 kejadian prompt fisik
+    dan 75 entri dukungan kanonis. Kejadian ke-34 merupakan duplikat persis
+    dari kejadian ke-33 tentang subhimpunan kompak dalam topologi indiskret.
+    Keduanya tetap dipertahankan; kejadian kedua dipetakan secara transparan
+    sebagai alias ketika batch latihan yang memuatnya disusun.
+  </p>
+  <p>
+    Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0
+    dan bukan materi resmi GVSU.
+  </p>
+
+  <exercise xml:id="o003-c90-ch17-guide-01">
+    <title>Himpunan Berhingga Bersifat Kompak</title>
+    <statement>
+      <p>
+        Tentukan apakah
+        <m>A=\{-2,3,e,\pi,456875\}</m> dalam <m>X=\R</m> dengan topologi
+        Euklides bersifat kompak. Generalisasikan contoh ini.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-01-hint">
+      <p><em>Tahap 1.</em> Mulailah dengan selimut buka sebarang <m>\mathcal U</m> bagi <m>A</m>, bukan dengan selimut tertentu.</p>
+      <p><em>Tahap 2.</em> Untuk setiap titik dalam <m>A</m>, pilih satu anggota <m>\mathcal U</m> yang memuat titik tersebut.</p>
+      <p><em>Tahap 3.</em> Hitung banyaknya himpunan yang telah dipilih dan perhatikan bahwa argumen tidak memakai sifat khusus topologi Euklides.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-01-answer">
+      <p>
+        Himpunan <m>A</m> kompak. Secara umum, setiap subhimpunan berhingga
+        dari sebarang ruang topologi bersifat kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-01-solution">
+      <p>
+        Misalkan <m>\mathcal U</m> selimut buka sebarang bagi <m>A</m>. Untuk
+        setiap <m>a\in A</m>, pilih <m>U_a\in\mathcal U</m> dengan
+        <m>a\in U_a</m>. Karena <m>A</m> mempunyai lima anggota, keluarga
+        <me>
+          \{U_{-2},U_3,U_e,U_\pi,U_{456875}\}
+        </me>
+        berhingga dan masih menyelimuti <m>A</m>. Jika beberapa pilihan
+        menghasilkan himpunan buka yang sama, kita cukup menghapus
+        pengulangannya.
+      </p>
+      <p>
+        Argumen yang sama berlaku bagi setiap himpunan berhingga
+        <m>F=\{x_1,\ldots,x_n\}</m> dalam ruang topologi apa pun: pilih satu
+        anggota selimut yang memuat setiap <m>x_i</m>. Untuk
+        <m>F=\emptyset</m>, subkeluarga kosong sudah merupakan subselimut
+        berhingga. Jadi setiap subhimpunan berhingga bersifat kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-02">
+    <title>Interval Setengah Terbuka yang Tidak Kompak</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>A=(0,1]</m> dalam <m>X=\R</m> dengan topologi
+        Euklides bersifat kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-02-hint">
+      <p><em>Tahap 1.</em> Untuk membuktikan ketidakkompakan, cukup temukan satu selimut buka tanpa subselimut berhingga.</p>
+      <p><em>Tahap 2.</em> Pertimbangkan keluarga <m>U_n=(1/n,2)</m> untuk <m>n\geq 2</m>.</p>
+      <p><em>Tahap 3.</em> Dari subkeluarga berhingga, ambil indeks terbesar dan carilah titik <m>A</m> yang lebih kecil daripada batas kiri yang tersisa.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-02-answer">
+      <p>
+        Himpunan <m>(0,1]</m> tidak kompak dalam topologi Euklides. Keluarga
+        <m>\{(1/n,2)\mid n\geq2\}</m> adalah selimut buka tanpa subselimut
+        berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-02-solution">
+      <p>
+        Untuk setiap <m>x\in(0,1]</m>, sifat Archimedes memberi
+        <m>n\geq2</m> dengan <m>1/n\lt x</m>. Maka
+        <m>x\in U_n=(1/n,2)</m>, sehingga keluarga
+        <m>\mathcal U=\{U_n\mid n\geq2\}</m> menyelimuti <m>A</m> dan setiap
+        anggotanya terbuka dalam <m>\R</m>.
+      </p>
+      <p>
+        Ambil sebarang subkeluarga berhingga dan misalkan <m>N</m> indeks
+        terbesar yang dipilih. Karena keluarga ini menaik,
+        <m>U_n\subseteq U_N</m> untuk setiap indeks terpilih <m>n\leq N</m>.
+        Jadi gabungan subkeluarga itu sama dengan <m>U_N</m>. Namun
+        <m>1/(N+1)\in(0,1]</m> dan <m>1/(N+1)\notin U_N</m>. Tidak ada
+        subselimut berhingga, sehingga <m>A</m> tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-03">
+    <title>Barisan Tanpa Titik Limitnya</title>
+    <statement>
+      <p>
+        Tentukan apakah
+        <m>A=\{1/n\mid n\in\Z^+\}</m> dalam <m>X=\R</m> dengan topologi
+        Euklides bersifat kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-03-hint">
+      <p><em>Tahap 1.</em> Setiap titik <m>1/n</m> terisolasi dari titik-titik lain dalam <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan <m>U_1=(3/4,5/4)</m> dan, untuk <m>n\geq2</m>, gunakan <m>U_n=(1/(n+1),1/(n-1))</m>.</p>
+      <p><em>Tahap 3.</em> Hitung <m>U_n\cap A</m> dan tentukan berapa banyak titik <m>A</m> yang dapat diselimuti subkeluarga berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-03-answer">
+      <p>
+        Himpunan <m>A</m> tidak kompak. Terdapat selimut buka yang setiap
+        anggotanya memuat tepat satu titik <m>A</m>, sehingga tidak ada
+        subkeluarga berhingga yang dapat menyelimuti seluruh <m>A</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-03-solution">
+      <p>
+        Definisikan <m>U_1=(3/4,5/4)</m> dan
+        <me>
+          U_n=\left(\frac1{n+1},\frac1{n-1}\right)
+          \quad\text{untuk }n\geq2.
+        </me>
+        Setiap <m>U_n</m> terbuka dalam <m>\R</m> dan memuat <m>1/n</m>.
+        Karena barisan <m>(1/n)</m> menurun ketat, kedua titik bertetangga
+        <m>1/(n+1)</m> dan <m>1/(n-1)</m> berada tepat pada batas interval
+        untuk <m>n\geq2</m>; semua suku lain berada di luar. Demikian pula,
+        <m>U_1\cap A=\{1\}</m>. Jadi <m>U_n\cap A=\{1/n\}</m> untuk setiap
+        <m>n\geq1</m>.
+      </p>
+      <p>
+        Keluarga <m>\{U_n\mid n\in\Z^+\}</m> menyelimuti <m>A</m>. Setiap
+        subkeluarga berhingga hanya menyelimuti sejumlah berhingga titik
+        <m>A</m>, sedangkan <m>A</m> tak berhingga. Karena itu keluarga ini
+        tidak mempunyai subselimut berhingga dan <m>A</m> tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-04">
+    <title>Bilangan Bulat Positif dalam Topologi Euklides</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>A=\Z^+</m> dalam <m>X=\R</m> dengan topologi
+        Euklides bersifat kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-04-hint">
+      <p><em>Tahap 1.</em> Carilah interval terbuka kecil yang mengisolasi setiap bilangan bulat positif.</p>
+      <p><em>Tahap 2.</em> Gunakan <m>U_n=(n-1/3,n+1/3)</m> untuk <m>n\in\Z^+</m>.</p>
+      <p><em>Tahap 3.</em> Tunjukkan bahwa subkeluarga berhingga hanya dapat memuat sejumlah berhingga anggota <m>\Z^+</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-04-answer">
+      <p>
+        Himpunan <m>\Z^+</m> tidak kompak dalam topologi Euklides. Interval
+        <m>U_n=(n-1/3,n+1/3)</m> membentuk selimut buka tanpa subselimut
+        berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-04-solution">
+      <p>
+        Untuk setiap <m>n\in\Z^+</m>, interval
+        <m>U_n=(n-1/3,n+1/3)</m> terbuka dalam <m>\R</m> dan
+        <m>U_n\cap\Z^+=\{n\}</m>. Maka
+        <m>\mathcal U=\{U_n\mid n\in\Z^+\}</m> merupakan selimut buka bagi
+        <m>A</m>.
+      </p>
+      <p>
+        Gabungan sebarang subkeluarga berhingga dari <m>\mathcal U</m>
+        beririsan dengan <m>A</m> dalam sejumlah berhingga titik saja.
+        Karena <m>A</m> mempunyai tak berhingga banyak titik, gabungan itu
+        tidak dapat menyelimuti <m>A</m>. Jadi <m>A</m> tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-05">
+    <title>Bilangan Bulat Positif dalam Topologi Komplemen Berhingga</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>A=\Z^+</m> dalam <m>X=\R</m> dengan topologi
+        komplemen berhingga bersifat kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-05-hint">
+      <p><em>Tahap 1.</em> Ambil selimut buka sebarang bagi <m>A</m> dan pilih satu anggotanya yang memuat suatu titik <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Komplemen setiap himpunan buka tak kosong dalam topologi ini berhingga.</p>
+      <p><em>Tahap 3.</em> Setelah memilih himpunan buka pertama, pilih paling banyak satu anggota selimut tambahan untuk setiap titik <m>A</m> yang belum terselimuti.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-05-answer">
+      <p>
+        Himpunan <m>\Z^+</m> kompak dalam <m>\R</m> bertopologi komplemen
+        berhingga. Bahkan setiap subhimpunan ruang bertopologi komplemen
+        berhingga bersifat kompak.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-05-solution">
+      <p>
+        Misalkan <m>\mathcal U</m> selimut buka bagi <m>A=\Z^+</m>. Pilih
+        <m>U_0\in\mathcal U</m> yang memuat, misalnya, titik <m>1</m>. Karena
+        <m>U_0</m> tak kosong dan terbuka dalam topologi komplemen berhingga,
+        himpunan <m>\R\setminus U_0</m> berhingga. Akibatnya,
+        <m>A\setminus U_0\subseteq\R\setminus U_0</m> juga berhingga.
+      </p>
+      <p>
+        Untuk setiap titik <m>a\in A\setminus U_0</m>, pilih satu
+        <m>U_a\in\mathcal U</m> yang memuat <m>a</m>. Keluarga yang terdiri
+        atas <m>U_0</m> dan semua <m>U_a</m> tersebut berhingga serta
+        menyelimuti <m>A</m>. Jadi <m>A</m> kompak. Bukti ini berlaku tanpa
+        perubahan bagi setiap subhimpunan tak kosong; himpunan kosong kompak
+        secara langsung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-06">
+    <title>Garis Real Tidak Kompak</title>
+    <statement>
+      <p>
+        Tentukan apakah <m>A=\R</m> dalam <m>X=\R</m> dengan topologi
+        Euklides bersifat kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-06-hint">
+      <p><em>Tahap 1.</em> Selimuti garis real dengan interval terbuka yang makin membesar.</p>
+      <p><em>Tahap 2.</em> Ambil <m>U_n=(-n,n)</m> untuk <m>n\in\Z^+</m>.</p>
+      <p><em>Tahap 3.</em> Dalam setiap subkeluarga berhingga, gunakan indeks terbesar untuk menemukan titik real yang belum terselimuti.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-06-answer">
+      <p>
+        Garis real tidak kompak dalam topologi Euklides. Selimut buka
+        <m>\{(-n,n)\mid n\in\Z^+\}</m> tidak mempunyai subselimut berhingga.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-06-solution">
+      <p>
+        Setiap <m>x\in\R</m> berada dalam <m>(-n,n)</m> jika
+        <m>n\gt|x|</m>. Jadi keluarga
+        <m>\mathcal U=\{(-n,n)\mid n\in\Z^+\}</m> merupakan selimut buka
+        bagi <m>\R</m>.
+      </p>
+      <p>
+        Ambil subkeluarga berhingga dan misalkan <m>N</m> indeks terbesar
+        yang muncul. Karena interval-interval itu bersarang, gabungannya
+        termuat dalam <m>(-N,N)</m>. Titik <m>N</m>, misalnya, tidak berada
+        dalam gabungan tersebut. Maka tidak ada subselimut berhingga dan
+        <m>\R</m> tidak kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-07">
+    <title>Bukti Umum untuk Himpunan Berhingga</title>
+    <statement>
+      <p>
+        Jelaskan mengapa setiap subhimpunan berhingga dari suatu ruang
+        topologi pasti kompak.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-07-hint">
+      <p><em>Tahap 1.</em> Tulis subhimpunan berhingga sebagai <m>F=\{x_1,\ldots,x_n\}</m>.</p>
+      <p><em>Tahap 2.</em> Dari selimut buka sebarang, pilih satu himpunan buka yang memuat setiap <m>x_i</m>.</p>
+      <p><em>Tahap 3.</em> Jelaskan mengapa paling banyak <m>n</m> himpunan terpilih sudah menyelimuti <m>F</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-07-answer">
+      <p>
+        Dari selimut buka sebarang bagi himpunan berhingga beranggota
+        <m>n</m>, pilih satu anggota selimut untuk setiap titik. Paling banyak
+        <m>n</m> anggota terpilih dan semuanya bersama-sama menyelimuti
+        himpunan tersebut.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-07-solution">
+      <p>
+        Misalkan <m>F=\{x_1,\ldots,x_n\}</m> dan
+        <m>\mathcal U</m> selimut buka sebarang bagi <m>F</m>. Untuk setiap
+        <m>i\in\{1,\ldots,n\}</m>, karena <m>\mathcal U</m> menyelimuti
+        <m>F</m>, ada <m>U_i\in\mathcal U</m> dengan <m>x_i\in U_i</m>.
+        Keluarga <m>\{U_1,\ldots,U_n\}</m> berhingga dan menyelimuti setiap
+        titik <m>F</m>. Penghapusan pilihan yang sama tidak mengubah
+        gabungannya. Jika <m>F=\emptyset</m>, subkeluarga kosong cukup.
+        Karena selimut awal dipilih sebarang, <m>F</m> kompak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-08">
+    <title>Contoh Himpunan Kompak dan Terbuka</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d\}</m> dengan topologi
+        <m>\tau=\{\emptyset,\{a\},\{b,c\},\{a,b,c\},X\}</m>. Jika mungkin,
+        temukan suatu subhimpunan dari <m>X</m> yang kompak dan terbuka. Jika
+        subhimpunan semacam itu tidak ada, jelaskan alasannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-08-hint">
+      <p><em>Tahap 1.</em> Gunakan hasil bahwa setiap subhimpunan berhingga bersifat kompak.</p>
+      <p><em>Tahap 2.</em> Semua subhimpunan <m>X</m> berhingga karena <m>X</m> sendiri berhingga.</p>
+      <p><em>Tahap 3.</em> Pilih sebarang anggota <m>\tau</m>; untuk contoh nontrivial, hindari <m>\emptyset</m> dan <m>X</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-08-answer">
+      <p>
+        <em>Rubrik.</em> Jawaban lengkap menyebutkan suatu anggota
+        <m>\tau</m> dan membuktikan kekompakannya dari keberhinggaan. Sebagai
+        contoh, <m>\{a\}</m> kompak dan terbuka. Contoh lain yang sah adalah
+        <m>\{b,c\}</m>, <m>\{a,b,c\}</m>, <m>\emptyset</m>, atau <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-08-solution">
+      <p>
+        Ambil <m>A=\{a\}</m>. Daftar yang mendefinisikan topologi memuat
+        <m>\{a\}</m>, jadi <m>A</m> terbuka. Himpunan <m>A</m> berhingga,
+        sehingga setiap selimut bukanya mempunyai subselimut berhingga;
+        maka <m>A</m> kompak.
+      </p>
+      <p>
+        Contoh ini tidak unik. Karena <m>X</m> berhingga, setiap subhimpunan
+        <m>X</m> kompak. Oleh sebab itu, subhimpunan yang sekaligus kompak dan
+        terbuka tepat anggota-anggota <m>\tau</m>, yaitu
+        <m>\emptyset</m>, <m>\{a\}</m>, <m>\{b,c\}</m>,
+        <m>\{a,b,c\}</m>, dan <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-09">
+    <title>Kekompakan Tidak Memaksa Keterbukaan</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d\}</m> dengan topologi
+        <m>\tau=\{\emptyset,\{a\},\{b,c\},\{a,b,c\},X\}</m>. Jika <m>A</m>
+        merupakan subhimpunan kompak dari <m>X</m>, haruskah <m>A</m>
+        terbuka? Jelaskan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-09-hint">
+      <p><em>Tahap 1.</em> Dalam ruang berhingga ini, setiap subhimpunan kompak.</p>
+      <p><em>Tahap 2.</em> Bandingkan semua subhimpunan satu titik dengan daftar <m>\tau</m>.</p>
+      <p><em>Tahap 3.</em> Satu contoh kompak yang tidak berada dalam <m>\tau</m> cukup untuk menyangkal keharusan tersebut.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-09-answer">
+      <p>
+        Tidak. Sebagai contoh, <m>A=\{b\}</m> berhingga sehingga kompak,
+        tetapi <m>\{b\}\notin\tau</m>, sehingga tidak terbuka.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-09-solution">
+      <p>
+        Pilih <m>A=\{b\}</m>. Karena <m>A</m> berhingga, argumen pemilihan
+        satu anggota selimut untuk setiap titik menunjukkan bahwa <m>A</m>
+        kompak. Namun daftar anggota <m>\tau</m> tidak memuat <m>\{b\}</m>.
+        Jadi <m>A</m> tidak terbuka. Kontraeksempel ini membuktikan bahwa
+        kekompakan saja tidak mengharuskan suatu subhimpunan terbuka.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch17-guide-10">
+    <title>Contoh Himpunan Kompak dan Tertutup</title>
+    <statement>
+      <p>
+        Misalkan <m>X=\{a,b,c,d\}</m> dengan topologi
+        <m>\tau=\{\emptyset,\{a\},\{b,c\},\{a,b,c\},X\}</m>. Jika mungkin,
+        temukan suatu subhimpunan dari <m>X</m> yang kompak dan tertutup.
+        Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch17-guide-10-hint">
+      <p><em>Tahap 1.</em> Semua subhimpunan <m>X</m> kompak karena berhingga.</p>
+      <p><em>Tahap 2.</em> Ambil komplemen setiap anggota <m>\tau</m> untuk mendaftar himpunan tertutup.</p>
+      <p><em>Tahap 3.</em> Pilih salah satu himpunan tertutup nontrivial dari daftar tersebut.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch17-guide-10-answer">
+      <p>
+        <em>Rubrik.</em> Jawaban lengkap memberikan suatu himpunan yang
+        komplemennya berada dalam <m>\tau</m> dan menjelaskan kekompakannya
+        melalui keberhinggaan. Sebagai contoh, <m>\{d\}</m> kompak dan
+        tertutup karena <m>X\setminus\{d\}=\{a,b,c\}\in\tau</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch17-guide-10-solution">
+      <p>
+        Komplemen anggota-anggota <m>\tau</m> memberi seluruh himpunan
+        tertutup:
+        <me>
+          X,\quad \{b,c,d\},\quad \{a,d\},\quad \{d\},\quad \emptyset.
+        </me>
+        Setiap himpunan dalam daftar ini kompak karena merupakan subhimpunan
+        berhingga dari <m>X</m>. Secara khusus, <m>\{d\}</m> adalah contoh
+        nontrivial: komplemennya <m>\{a,b,c\}</m> terbuka, sehingga
+        <m>\{d\}</m> tertutup, dan keberhinggaannya menjamin kekompakan.
+      </p>
+    </solution>
+  </exercise>
+</section>

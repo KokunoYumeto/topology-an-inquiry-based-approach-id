@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "o003-c90-ch16-edition-note",
+  "id": "o003-c90-ch17-edition-note",
   "level": "1",
-  "url": "o003-c90-ch16-edition-note.html",
+  "url": "o003-c90-ch17-edition-note.html",
   "type": "Preface",
   "number": "",
   "title": "Catatan edisi Bahasa Indonesia",
-  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat enam belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
+  "body": " Catatan edisi Bahasa Indonesia  Unit pembaca kumulatif ini memuat tujuh belas bab pertama edisi Bahasa Indonesia Topology: An Inquiry-Based Approach . Sumber dibekukan pada commit resmi 0c2d8f614ef87aa00de373f3418146c2f1d13bb9 . Terjemahan, deskripsi aksesibilitas, perbaikan sumber yang dicatat, laboratorium epsilon-delta orisinal, dan pendamping belajar mandiri merupakan perubahan pada edisi ini; tidak ada dukungan resmi dari penulis atau Grand Valley State University yang dinyatakan ataupun tersirat.  Karya sumber diperlakukan secara konservatif menurut CC BY-NC-SA 3.0 karena metadata sumber tidak seragam tentang versi lisensi. Laboratorium dan materi pendamping baru merupakan komponen CC BY 4.0 yang terpisah dari turunan GVSU berlisensi CC BY-NC-SA 3.0. Kerjakan kegiatan dan latihan pada bab utama sebelum membuka petunjuk atau solusi pendamping.  Provenans produksi berbantuan model untuk edisi ini dicatat sebagai OpenAI Codex gpt-5.6-sol, Ultra . Identifikasi tersebut tidak menggantikan kredit penulis sumber, institusi, atau kontributor manusia.  "
 },
 {
   "id": "sec_sets_intro",
@@ -5291,6 +5291,492 @@ var ptx_lunr_docs = [
   "number": "13",
   "title": "",
   "body": " Untuk setiap pernyataan berikut, jawab “benar” jika pernyataan itu selalu benar. Jika pernyataan itu hanya kadang-kadang benar atau tidak pernah benar, jawab “salah” dan berikan contoh konkret yang menunjukkan bahwa pernyataan itu salah. Jika suatu pernyataan benar, jelaskan alasannya.   Misalkan suatu surjeksi dari ruang topologi ke himpunan tak kosong . Topologi kuosien pada merupakan topologi terbesar pada yang membuat kontinu.   Misalkan dengan topologi metrik Euklides dan definisikan relasi pada dengan jika dan hanya jika dan keduanya rasional atau keduanya irasional. Maka ruang kuosien merupakan ruang dua titik dengan topologi indiskret.   Misalkan suatu surjeksi dari ruang topologi ke himpunan tak kosong . Topologi kuosien pada merupakan topologi terbesar pada yang membuat kontinu.   Misalkan dengan topologi metrik Euklides dan definisikan relasi pada dengan jika dan hanya jika dan keduanya rasional atau keduanya irasional. Maka ruang kuosien merupakan ruang dua titik dengan topologi indiskret.   Jika suatu ruang topologi, suatu himpunan, dan suatu surjeksi, maka terbuka dalam topologi kuosien setiap kali terbuka dalam .   Jika suatu relasi ekuivalensi pada ruang topologi , maka ruang kuosien adalah himpunan semua kelas ekuivalensi dari yang diberi topologi kuosien.  "
+},
+{
+  "id": "sec_compact_top_intro",
+  "level": "1",
+  "url": "sec_compact_top_intro.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Pendahuluan",
+  "body": " Pendahuluan  Interval tertutup dan terbatas memiliki sifat-sifat penting dalam kalkulus. Ingat, misalnya, bahwa setiap fungsi bernilai real yang kontinu pada interval tertutup mencapai nilai maksimum dan minimum pada interval tersebut. Pertanyaan yang hendak kita bahas dalam bagian ini adalah apakah terdapat pencirian yang bersesuaian bagi subhimpunan ruang topologi yang menjamin bahwa fungsi kontinu bernilai real dengan domain berupa ruang topologi mencapai nilai maksimum dan minimum. Sifat yang akan kita kembangkan disebut kekompakan.  Kata kompak mungkin mengingatkan kita pada gagasan tentang ukuran kecil, tetapi kita perlu berhati-hati dengan istilah ini. Kita mungkin menganggap interval kecil, tetapi homeomorfik dengan , yang tidak kecil. Demikian pula, kita mungkin menganggap interval besar, tetapi interval ini homeomorfik dengan interval kecil  . Akibatnya, konsep kekompakan tidak berkaitan dengan ukuran, melainkan, dalam arti tertentu, dengan struktur. Kita akan mengembangkan gagasan ini dalam bagian ini.  Karena suatu topologi mendefinisikan himpunan-himpunan buka, sifat topologi sering didefinisikan dengan menggunakan himpunan buka. Mari kita telaah sebuah contoh untuk menyingkap beberapa perincian yang kita perlukan guna memperoleh gagasan kekompakan yang berguna. Pertimbangkan interval terbuka dalam . Misalkan kita menuliskan sebagai gabungan bola-bola terbuka. Sebagai contoh, misalkan untuk dan . Perhatikan bahwa . Setiap koleksi himpunan buka yang gabungannya memuat disebut selimut buka bagi . Bekerja dengan himpunan dalam jumlah besar pada umumnya lebih rumit daripada bekerja dengan himpunan dalam jumlah kecil, sehingga wajar untuk menanyakan apakah kita dapat mengurangi banyaknya himpunan dalam selimut buka bagi dan tetap menyelimuti . Secara khusus, bekerja dengan koleksi himpunan berhingga lebih disukai daripada bekerja dengan himpunan dalam jumlah tak berhingga (jika perlu, dalam keadaan berhingga kita dapat memeriksa semua kemungkinan satu per satu). Perhatikan bahwa untuk setiap , sehingga kita dapat menyingkirkan banyak himpunan dari selimut ini. Namun, jika kita menyingkirkan cukup banyak himpunan hingga hanya tersisa sejumlah berhingga, maka akan terdapat nilai maksimum sedemikian sehingga masih berada dalam koleksi kita. Akan tetapi, tidak akan berada dalam gabungan koleksi himpunan yang tersisa. Akibatnya, kita tidak dapat menemukan koleksi berhingga dari himpunan-himpunan yang gabungannya memuat . Perhatikan bahwa mungkin terdapat koleksi himpunan buka yang menyelimuti dan memiliki subkoleksi berhingga yang juga menyelimuti . Sebagai contoh, jika kita menetapkan , maka , dan . Pokok utamanya adalah bahwa terdapat sekurang-kurangnya satu koleksi himpunan buka yang menyelimuti tetapi tidak memiliki subkoleksi berhingga yang menyelimuti .  Sekarang mari kita terapkan gagasan yang sama pada himpunan . Misalkan kita memperluas selimut buka menjadi selimut buka bagi interval tertutup dengan menambahkan dua bola terbuka dalam : dan . Sekarang himpunan-himpunan , , dan membentuk koleksi berhingga yang menyelimuti . Jadi, meskipun interval  lebih besar daripada dalam arti bahwa , kita dapat menyajikan secara lebih efisien (yakni secara berhingga) menggunakan himpunan buka daripada menyajikan interval . Inilah gagasan dasar di balik kekompakan.   subhimpunan kompak   Suatu subhimpunan dari ruang topologi disebut kompak jika untuk setiap himpunan dan setiap keluarga himpunan buka dengan sedemikian sehingga , terdapat subkeluarga berhingga sedemikian sehingga .    Jika merupakan ruang topologi dan merupakan subhimpunan kompak dari , maka kita mengatakan bahwa merupakan ruang topologi kompak . Ada beberapa istilah yang berkaitan dengan .   selimut  selimut buka   Suatu selimut bagi subhimpunan dari ruang topologi adalah koleksi subhimpunan-subhimpunan , dengan berada dalam suatu himpunan indeks , sedemikian sehingga . Selain itu, jika setiap himpunan merupakan himpunan buka, maka koleksi merupakan selimut buka bagi .      Suatu subselimut dari selimut bagi subhimpunan dari ruang topologi adalah koleksi untuk , dengan suatu subhimpunan dari sedemikian sehingga . Selain itu, jika merupakan himpunan berhingga, subselimut merupakan subselimut berhingga dari .    Jadi, himpunan-himpunan , , dan dalam contoh sebelumnya membentuk subselimut berhingga dari perluasan selimut buka yang dibahas sebelumnya.  Dengan menggunakan istilah yang baru saja kita tetapkan, kita dapat menyatakan kembali definisi kekompakan sebagai berikut: subhimpunan dari ruang topologi bersifat kompak jika setiap selimut buka bagi memiliki subselimut berhingga bagi .    Tentukan apakah subhimpunan dari ruang topologi bersifat kompak. Buktikan bahwa kompak dengan memulai dari selimut tak berhingga sebarang dan menunjukkan bahwa terdapat subselimut berhingga, atau temukan suatu selimut tak berhingga tertentu dan buktikan bahwa tidak ada subselimut berhingga.     dalam dengan topologi Euklides. Generalisasikan contoh ini.     dalam dengan topologi Euklides.     dalam dengan topologi Euklides.     dalam dengan topologi Euklides.     dalam dengan topologi komplemen berhingga.     dalam dengan topologi Euklides.    Ada dua sudut pandang yang dapat kita gunakan untuk menelaah kekompakan. Jika merupakan ruang topologi dan merupakan subhimpunan dari , maka menjelaskan apa artinya bersifat kompak sebagai subhimpunan dari . Dari sudut pandang ini, kita menggunakan himpunan buka dalam untuk membentuk selimut buka bagi . Kita juga dapat memandang sebagai subruang dari dengan menggunakan topologi subruang . Dari sudut pandang ini, kita dapat menelaah kekompakan menggunakan himpunan terbuka relatif untuk membentuk selimut buka. memberi tahu kita bahwa kedua sudut pandang ini ekuivalen, sehingga kita akan menggunakan sudut pandang yang sesuai dengan situasi yang sedang dihadapi.  "
+},
+{
+  "id": "p-2026",
+  "level": "2",
+  "url": "sec_compact_top_intro.html#p-2026",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "selimut buka "
+},
+{
+  "id": "def_compact",
+  "level": "2",
+  "url": "sec_compact_top_intro.html#def_compact",
+  "type": "Definisi",
+  "number": "17.1",
+  "title": "",
+  "body": " subhimpunan kompak   Suatu subhimpunan dari ruang topologi disebut kompak jika untuk setiap himpunan dan setiap keluarga himpunan buka dengan sedemikian sehingga , terdapat subkeluarga berhingga sedemikian sehingga .   "
+},
+{
+  "id": "p-2029",
+  "level": "2",
+  "url": "sec_compact_top_intro.html#p-2029",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ruang topologi kompak "
+},
+{
+  "id": "definition-64",
+  "level": "2",
+  "url": "sec_compact_top_intro.html#definition-64",
+  "type": "Definisi",
+  "number": "17.2",
+  "title": "",
+  "body": " selimut  selimut buka   Suatu selimut bagi subhimpunan dari ruang topologi adalah koleksi subhimpunan-subhimpunan , dengan berada dalam suatu himpunan indeks , sedemikian sehingga . Selain itu, jika setiap himpunan merupakan himpunan buka, maka koleksi merupakan selimut buka bagi .   "
+},
+{
+  "id": "definition-65",
+  "level": "2",
+  "url": "sec_compact_top_intro.html#definition-65",
+  "type": "Definisi",
+  "number": "17.3",
+  "title": "",
+  "body": "  Suatu subselimut dari selimut bagi subhimpunan dari ruang topologi adalah koleksi untuk , dengan suatu subhimpunan dari sedemikian sehingga . Selain itu, jika merupakan himpunan berhingga, subselimut merupakan subselimut berhingga dari .   "
+},
+{
+  "id": "exploration-17",
+  "level": "2",
+  "url": "sec_compact_top_intro.html#exploration-17",
+  "type": "Aktivitas Persiapan",
+  "number": "17.1",
+  "title": "",
+  "body": "  Tentukan apakah subhimpunan dari ruang topologi bersifat kompak. Buktikan bahwa kompak dengan memulai dari selimut tak berhingga sebarang dan menunjukkan bahwa terdapat subselimut berhingga, atau temukan suatu selimut tak berhingga tertentu dan buktikan bahwa tidak ada subselimut berhingga.     dalam dengan topologi Euklides. Generalisasikan contoh ini.     dalam dengan topologi Euklides.     dalam dengan topologi Euklides.     dalam dengan topologi Euklides.     dalam dengan topologi komplemen berhingga.     dalam dengan topologi Euklides.   "
+},
+{
+  "id": "sec_compact_cont",
+  "level": "1",
+  "url": "sec_compact_cont.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Kekompakan dan Kekontinuan",
+  "body": " Kekompakan dan Kekontinuan  Dalam kegiatan pratinjau, kita telah mempelajari kekompakan padanan interval tertutup dalam bagi ruang topologi. Ingat bahwa suatu subhimpunan dari ruang topologi bersifat kompak jika setiap selimut buka bagi memiliki subselimut berhingga. Seperti yang akan kita lihat, definisi kekompakan tepat memenuhi apa yang kita perlukan untuk menjamin hasil sejenis berikut: fungsi kontinu bernilai real dengan domain berupa ruang topologi mencapai nilai maksimum dan minimum pada himpunan kompak.  Kita mungkin menduga bahwa himpunan kompak memiliki sifat-sifat tertentu, tetapi kita harus berhati-hati terhadap sifat yang kita andaikan.    Misalkan dan lengkapi dengan topologi .    Jelaskan mengapa setiap subhimpunan berhingga dari suatu ruang topologi pasti kompak.    Jika mungkin, temukan suatu subhimpunan dari yang kompak dan terbuka. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.    Jika merupakan subhimpunan kompak dari , haruskah terbuka? Jelaskan.    Jika mungkin, temukan suatu subhimpunan dari yang kompak dan tertutup. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.    Jika merupakan subhimpunan kompak dari , haruskah tertutup? Jelaskan.    Pesan dari adalah bahwa kekompakan itu sendiri tidak berkaitan dengan himpunan tertutup ataupun terbuka. Namun, kita akan melihat nanti bahwa dalam beberapa keadaan yang wajar, himpunan kompak dan himpunan tertutup saling berkaitan. Untuk saat ini, kita mengambil jalan memutar sejenak dan menanyakan apakah kekompakan merupakan sifat topologi.    Misalkan dan merupakan ruang topologi, serta misalkan kontinu. Andaikan merupakan subhimpunan kompak dari . Dalam kegiatan ini, kita ingin menentukan apakah harus merupakan subhimpunan kompak dari .    Apa yang perlu kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan kompak dari ? Dari mana kita mulai?    Jika kita mempunyai selimut buka bagi dalam , bagaimana kita dapat menemukan selimut buka bagi ? Pastikan untuk memverifikasi bahwa apa yang Anda nyatakan benar-benar merupakan selimut buka bagi .    Apa yang kita ketahui tentang setiap selimut buka bagi ?    Lengkapilah bukti teorema berikut.      Misalkan dan merupakan ruang topologi, serta misalkan kontinu. Jika merupakan subhimpunan kompak dari , maka merupakan subhimpunan kompak dari .    Salah satu akibat dari adalah bahwa kekompakan merupakan sifat topologi.    Misalkan f suatu homeomorfisme dari ke . Maka suatu subhimpunan dari kompak jika dan hanya jika kompak dalam .    "
+},
+{
+  "id": "act_compact_clopen",
+  "level": "2",
+  "url": "sec_compact_cont.html#act_compact_clopen",
+  "type": "Kegiatan",
+  "number": "17.2",
+  "title": "",
+  "body": "  Misalkan dan lengkapi dengan topologi .    Jelaskan mengapa setiap subhimpunan berhingga dari suatu ruang topologi pasti kompak.    Jika mungkin, temukan suatu subhimpunan dari yang kompak dan terbuka. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.    Jika merupakan subhimpunan kompak dari , haruskah terbuka? Jelaskan.    Jika mungkin, temukan suatu subhimpunan dari yang kompak dan tertutup. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.    Jika merupakan subhimpunan kompak dari , haruskah tertutup? Jelaskan.   "
+},
+{
+  "id": "act_compact_invariant",
+  "level": "2",
+  "url": "sec_compact_cont.html#act_compact_invariant",
+  "type": "Kegiatan",
+  "number": "17.3",
+  "title": "",
+  "body": "  Misalkan dan merupakan ruang topologi, serta misalkan kontinu. Andaikan merupakan subhimpunan kompak dari . Dalam kegiatan ini, kita ingin menentukan apakah harus merupakan subhimpunan kompak dari .    Apa yang perlu kita tunjukkan untuk membuktikan bahwa merupakan subhimpunan kompak dari ? Dari mana kita mulai?    Jika kita mempunyai selimut buka bagi dalam , bagaimana kita dapat menemukan selimut buka bagi ? Pastikan untuk memverifikasi bahwa apa yang Anda nyatakan benar-benar merupakan selimut buka bagi .    Apa yang kita ketahui tentang setiap selimut buka bagi ?    Lengkapilah bukti teorema berikut.   "
+},
+{
+  "id": "theorem-47",
+  "level": "2",
+  "url": "sec_compact_cont.html#theorem-47",
+  "type": "Teorema",
+  "number": "17.4",
+  "title": "",
+  "body": "  Misalkan dan merupakan ruang topologi, serta misalkan kontinu. Jika merupakan subhimpunan kompak dari , maka merupakan subhimpunan kompak dari .   "
+},
+{
+  "id": "corollary-8",
+  "level": "2",
+  "url": "sec_compact_cont.html#corollary-8",
+  "type": "Corollary",
+  "number": "17.5",
+  "title": "",
+  "body": "  Misalkan f suatu homeomorfisme dari ke . Maka suatu subhimpunan dari kompak jika dan hanya jika kompak dalam .   "
+},
+{
+  "id": "sec_compact_rn",
+  "level": "1",
+  "url": "sec_compact_rn.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Subhimpunan Kompak dari <span class=\"process-math\">\\(\\R^n\\)<\/span>",
+  "body": " Subhimpunan Kompak dari  Ruang metrik tidak kompak karena selimut buka tidak memiliki subselimut berhingga. Karena sebelumnya kita telah menunjukkan bahwa homeomorfik dengan subruang topologi , , dan untuk sebarang , kita menyimpulkan bahwa tidak ada interval terbuka yang kompak. Demikian pula, tidak ada interval setengah tertutup yang kompak. Bahkan, dalam bagian ini kita akan menunjukkan bahwa subhimpunan kompak dari tepat merupakan subhimpunan yang tertutup dan terbatas. Langkah pertamanya terdapat dalam aktivitas berikut.    Kita telah melihat bahwa himpunan kompak dapat berupa himpunan terbuka maupun tertutup. Namun, dalam keadaan tertentu himpunan kompak harus tertutup. Kita menyelidiki gagasan tersebut dalam aktivitas ini. Misalkan subhimpunan kompak dari suatu ruang topologi Hausdorff . Kita akan menelaah mengapa harus merupakan himpunan tertutup.    Untuk membuktikan bahwa merupakan himpunan tertutup, kita mempertimbangkan himpunan . Sifat apa yang harus dimiliki agar tertutup? Bagaimana kita membuktikan bahwa memiliki sifat tersebut?    Misalkan . Andaikan bahwa merupakan himpunan tak kosong (mengapa kita boleh membuat pengandaian ini)? Untuk setiap , mengapa harus terdapat himpunan-himpunan terbuka yang saling lepas dan dengan dan ?    Mengapa harus terdapat bilangan bulat positif dan unsur-unsur , , , di sedemikian sehingga himpunan-himpunan , , , membentuk selimut buka bagi ?    Sekarang carilah subhimpunan terbuka dari yang memuat . Apa yang dapat kita simpulkan mengenai ?    Hasil dari dirangkum dalam .    Jika merupakan subhimpunan kompak dari suatu ruang topologi Hausdorff, maka tertutup.     memberi tahu kita sesuatu mengenai subhimpunan kompak dari . Karena setiap ruang metrik merupakan ruang Hausdorff, kita dapat menyimpulkan korolari berikut.    Jika merupakan subhimpunan kompak dari , maka tertutup.    Untuk menggolongkan subhimpunan kompak dari sebagai subhimpunan yang tertutup dan terbatas, kita perlu membahas apa artinya suatu himpunan di bersifat terbatas. Gagasan dasarnya sederhana suatu subhimpunan dari terbatas jika tidak menjulur menuju tak hingga ke arah mana pun. Dengan kata lain, subhimpunan dari terbatas jika kita dapat membuat sebuah kotak di yang cukup besar untuk memuatnya. Hal ini menghasilkan definisi berikut.   subhimpunan terbatas dari   Subhimpunan dari disebut terbatas jika terdapat sedemikian sehingga , dengan .    Himpunan dalam disebut kubus standar berdimensi  berukuran M . Kubus standar berdimensi 3 berukuran ditunjukkan dalam .   Kubus standar berdimensi 3 .   Kubus standar tiga dimensi dengan beberapa rusuk tersembunyi berupa garis putus-putus. Dua titik sudut yang berhadapan berlabel dan , sehingga setiap koordinat berada di antara dan .    Fakta penting mengenai kubus standar berdimensi adalah bahwa kubus-kubus tersebut merupakan subhimpunan kompak dari . Kekompakan merupakan sifat yang rumit sulit untuk membuktikan suatu hasil yang berlaku bagi setiap selimut buka. Oleh karena itu, pembuktian cukup teknis, tetapi merupakan langkah penting dalam penggolongan subhimpunan kompak dari .    Misalkan . Kubus standar berdimensi berukuran merupakan subhimpunan kompak dari untuk setiap .    Kita membuktikannya dengan kontradiksi dan mengandaikan bahwa terdapat dan bilangan real positif sedemikian sehingga tidak kompak. Jadi, terdapat selimut buka , dengan berada dalam suatu himpunan indeks , bagi yang tidak memiliki subselimut berhingga. Ambil sehingga merupakan kubus berdimensi dengan panjang sisi . Bagi menjadi subkubus seragam dengan panjang sisi (ilustrasi untuk ditampilkan di sebelah kiri dalam ).   Kiri: . Tengah: . Kanan: Pelabelan titik-titik sudut.    Persegi dibagi menjadi empat persegi sama besar; persegi kanan atas dipilih sebagai untuk menggambarkan langkah pertama pemilihan subkubus.    Persegi dibagi menjadi empat bagian dengan di kanan atas; dibagi lagi menjadi empat bagian dan bagian kiri atas dipilih sebagai , sehingga memuat dan memuat .    Persegi bersarang , , dan dengan sudut kiri bawah masing-masing berlabel dan sudut kanan atas berlabel , untuk .     Misalkan salah satu subkubus tersebut. Koleksi merupakan selimut buka bagi dalam topologi subruang. Jika setiap selimut buka ini memiliki subselimut berhingga, maka kita dapat mengambil gabungan semua yang muncul dalam seluruh subselimut berhingga tersebut untuk memperoleh subselimut berhingga dari bagi . Karena selimut bagi tidak memiliki subselimut berhingga, kita menyimpulkan bahwa terdapat satu subkubus, , yang selimut bukanya tidak memiliki subselimut berhingga. Sekarang kita mengulangi proses tersebut dan membagi menjadi subkubus seragam dengan panjang sisi . Argumen yang sama menunjukkan bahwa terdapat subkubus dari yang selimut bukanya tidak memiliki subselimut berhingga (ilustrasi untuk kasus ditampilkan di tengah dalam ). Dengan melanjutkan proses ini secara induktif, kita memperoleh barisan kubus bersarang tak berhingga sedemikian sehingga untuk setiap , panjang sisi kubus adalah dan selimut buka bagi tidak memiliki subselimut berhingga. Sekarang kita tunjukkan bahwa .  Untuk , tuliskan . Artinya, pandang titik sebagai salah satu titik sudut bawah kubus dan titik sebagai titik sudut atas kubus berdimensi  (pelabelan untuk dan dari 1 sampai 3 ditampilkan di sebelah kanan dalam ). Ambil . Kita akan menunjukkan bahwa . Tetapkan . Kita perlu membuktikan bahwa .  Untuk setiap antara 1 dan , berlaku karena merupakan batas atas bagi semua . Karena kubus-kubus kita bersarang, berlaku untuk setiap dan . Karena merupakan batas atas terkecil dari semua , sifat bersama kebersarangan kubus menunjukkan bahwa setiap ujung kanan kubus juga membatasi seluruh barisan ujung kiri; jadi untuk setiap . Dengan demikian, dan . Ini menunjukkan bahwa untuk setiap . Akibatnya, dan tidak kosong. (Fakta bahwa panjang sisi kubus-kubus kita konvergen ke 0 mengakibatkan , tetapi untuk pembuktian ini kita hanya perlu mengetahui bahwa tidak kosong.)  Karena merupakan selimut bagi , harus terdapat sedemikian sehingga . Himpunan terbuka, sehingga terdapat sedemikian sehingga . Jarak maksimum antara titik-titik di adalah jarak antara titik-titik sudut dan , dengan setiap panjang bernilai . Menurut rumus jarak, jarak maksimum antara titik-titik di ini adalah .  Sekarang pilih sedemikian sehingga . Maka, jika , berlaku , sehingga . Jadi, . Namun, . Dengan demikian, koleksi merupakan subselimut dari bagi . Akan tetapi, hal ini bertentangan dengan fakta bahwa selimut buka tersebut tidak memiliki subselimut berhingga. Pengandaian yang membawa kita pada kontradiksi ini adalah bahwa tidak kompak, sehingga kita menyimpulkan bahwa kubus standar berdimensi berukuran merupakan subhimpunan kompak dari untuk setiap .    Salah satu konsekuensi adalah bahwa setiap interval tertutup di merupakan himpunan kompak. Namun, kita dapat mengatakan lebih banyak lagi subhimpunan kompak dari adalah subhimpunan yang tertutup dan terbatas. Untuk membuktikannya, kita memerlukan satu hasil perantara lagi mengenai subhimpunan tertutup dari ruang topologi kompak.    Misalkan ruang topologi kompak dan subhimpunan tertutup dari . Dalam aktivitas ini kita akan membuktikan bahwa kompak.    Apa yang perlu dilakukan untuk membuktikan bahwa kompak?    Gunakan selimut buka bagi dan fakta bahwa tertutup untuk membuat selimut buka bagi .    Gunakan fakta bahwa kompak untuk menyelesaikan pembuktian teorema berikut.      Misalkan ruang topologi kompak. Maka, setiap subhimpunan tertutup dari kompak.    Sekarang kita dapat membuktikan suatu hasil utama, yaitu bahwa subhimpunan kompak dari adalah subhimpunan yang tertutup dan terbatas. Hasil ini sedemikian penting sehingga diberi nama tersendiri.   Teorema Heine-Borel   Subhimpunan dari kompak jika dan hanya jika tertutup dan terbatas.    Misalkan subhimpunan dari . Andaikan bahwa tertutup dan terbatas. Karena terbatas, terdapat bilangan positif sedemikian sehingga . menunjukkan bahwa kompak, lalu menunjukkan bahwa kompak.  Untuk arah sebaliknya, andaikan bahwa merupakan subhimpunan kompak dari . Kita harus menunjukkan bahwa tertutup dan terbatas. Ruang merupakan ruang metrik sehingga merupakan ruang Hausdorff. kemudian menunjukkan bahwa tertutup. Untuk menyelesaikan pembuktian, kita perlu menunjukkan bahwa terbatas. Untuk setiap , ambil .  Artinya, merupakan kubus terbuka berukuran di . Selanjutnya, ambil untuk setiap . Karena , maka merupakan selimut buka bagi . Fakta bahwa kompak berarti terdapat koleksi berhingga , , , dari himpunan-himpunan dalam yang menyelimuti . Ambil . Maka untuk setiap , sehingga . Jadi, terbatas. Ini menyelesaikan pembuktian bahwa jika kompak di , maka tertutup dan terbatas.    Anda mungkin bertanya-tanya apakah Teorema Heine-Borel berlaku di setiap ruang metrik.   Subhimpunan dari ruang metrik disebut terbatas jika terdapat bilangan real sedemikian sehingga untuk semua . (Definisi ini ekuivalen dengan definisi subhimpunan terbatas dari yang diberikan sebelumnya, tetapi berlaku di setiap ruang metrik.) Jelaskan mengapa , sebagai subhimpunan dari , dengan metrik diskret, tertutup dan terbatas, tetapi tidak kompak.   "
+},
+{
+  "id": "act_metric_compact_closed",
+  "level": "2",
+  "url": "sec_compact_rn.html#act_metric_compact_closed",
+  "type": "Kegiatan",
+  "number": "17.4",
+  "title": "",
+  "body": "  Kita telah melihat bahwa himpunan kompak dapat berupa himpunan terbuka maupun tertutup. Namun, dalam keadaan tertentu himpunan kompak harus tertutup. Kita menyelidiki gagasan tersebut dalam aktivitas ini. Misalkan subhimpunan kompak dari suatu ruang topologi Hausdorff . Kita akan menelaah mengapa harus merupakan himpunan tertutup.    Untuk membuktikan bahwa merupakan himpunan tertutup, kita mempertimbangkan himpunan . Sifat apa yang harus dimiliki agar tertutup? Bagaimana kita membuktikan bahwa memiliki sifat tersebut?    Misalkan . Andaikan bahwa merupakan himpunan tak kosong (mengapa kita boleh membuat pengandaian ini)? Untuk setiap , mengapa harus terdapat himpunan-himpunan terbuka yang saling lepas dan dengan dan ?    Mengapa harus terdapat bilangan bulat positif dan unsur-unsur , , , di sedemikian sehingga himpunan-himpunan , , , membentuk selimut buka bagi ?    Sekarang carilah subhimpunan terbuka dari yang memuat . Apa yang dapat kita simpulkan mengenai ?   "
+},
+{
+  "id": "thm_metric_compact_closed",
+  "level": "2",
+  "url": "sec_compact_rn.html#thm_metric_compact_closed",
+  "type": "Teorema",
+  "number": "17.6",
+  "title": "",
+  "body": "  Jika merupakan subhimpunan kompak dari suatu ruang topologi Hausdorff, maka tertutup.   "
+},
+{
+  "id": "corollary-9",
+  "level": "2",
+  "url": "sec_compact_rn.html#corollary-9",
+  "type": "Corollary",
+  "number": "17.7",
+  "title": "",
+  "body": "  Jika merupakan subhimpunan kompak dari , maka tertutup.   "
+},
+{
+  "id": "def_n_cube",
+  "level": "2",
+  "url": "sec_compact_rn.html#def_n_cube",
+  "type": "Definisi",
+  "number": "17.8",
+  "title": "",
+  "body": " subhimpunan terbatas dari   Subhimpunan dari disebut terbatas jika terdapat sedemikian sehingga , dengan .   "
+},
+{
+  "id": "p-2071",
+  "level": "2",
+  "url": "sec_compact_rn.html#p-2071",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "kubus standar berdimensi berukuran M "
+},
+{
+  "id": "F_M_cube",
+  "level": "2",
+  "url": "sec_compact_rn.html#F_M_cube",
+  "type": "Gambar",
+  "number": "17.9",
+  "title": "",
+  "body": " Kubus standar berdimensi 3 .   Kubus standar tiga dimensi dengan beberapa rusuk tersembunyi berupa garis putus-putus. Dua titik sudut yang berhadapan berlabel dan , sehingga setiap koordinat berada di antara dan .   "
+},
+{
+  "id": "thm_Compact_cubes",
+  "level": "2",
+  "url": "sec_compact_rn.html#thm_Compact_cubes",
+  "type": "Teorema",
+  "number": "17.10",
+  "title": "",
+  "body": "  Misalkan . Kubus standar berdimensi berukuran merupakan subhimpunan kompak dari untuk setiap .    Kita membuktikannya dengan kontradiksi dan mengandaikan bahwa terdapat dan bilangan real positif sedemikian sehingga tidak kompak. Jadi, terdapat selimut buka , dengan berada dalam suatu himpunan indeks , bagi yang tidak memiliki subselimut berhingga. Ambil sehingga merupakan kubus berdimensi dengan panjang sisi . Bagi menjadi subkubus seragam dengan panjang sisi (ilustrasi untuk ditampilkan di sebelah kiri dalam ).   Kiri: . Tengah: . Kanan: Pelabelan titik-titik sudut.    Persegi dibagi menjadi empat persegi sama besar; persegi kanan atas dipilih sebagai untuk menggambarkan langkah pertama pemilihan subkubus.    Persegi dibagi menjadi empat bagian dengan di kanan atas; dibagi lagi menjadi empat bagian dan bagian kiri atas dipilih sebagai , sehingga memuat dan memuat .    Persegi bersarang , , dan dengan sudut kiri bawah masing-masing berlabel dan sudut kanan atas berlabel , untuk .     Misalkan salah satu subkubus tersebut. Koleksi merupakan selimut buka bagi dalam topologi subruang. Jika setiap selimut buka ini memiliki subselimut berhingga, maka kita dapat mengambil gabungan semua yang muncul dalam seluruh subselimut berhingga tersebut untuk memperoleh subselimut berhingga dari bagi . Karena selimut bagi tidak memiliki subselimut berhingga, kita menyimpulkan bahwa terdapat satu subkubus, , yang selimut bukanya tidak memiliki subselimut berhingga. Sekarang kita mengulangi proses tersebut dan membagi menjadi subkubus seragam dengan panjang sisi . Argumen yang sama menunjukkan bahwa terdapat subkubus dari yang selimut bukanya tidak memiliki subselimut berhingga (ilustrasi untuk kasus ditampilkan di tengah dalam ). Dengan melanjutkan proses ini secara induktif, kita memperoleh barisan kubus bersarang tak berhingga sedemikian sehingga untuk setiap , panjang sisi kubus adalah dan selimut buka bagi tidak memiliki subselimut berhingga. Sekarang kita tunjukkan bahwa .  Untuk , tuliskan . Artinya, pandang titik sebagai salah satu titik sudut bawah kubus dan titik sebagai titik sudut atas kubus berdimensi  (pelabelan untuk dan dari 1 sampai 3 ditampilkan di sebelah kanan dalam ). Ambil . Kita akan menunjukkan bahwa . Tetapkan . Kita perlu membuktikan bahwa .  Untuk setiap antara 1 dan , berlaku karena merupakan batas atas bagi semua . Karena kubus-kubus kita bersarang, berlaku untuk setiap dan . Karena merupakan batas atas terkecil dari semua , sifat bersama kebersarangan kubus menunjukkan bahwa setiap ujung kanan kubus juga membatasi seluruh barisan ujung kiri; jadi untuk setiap . Dengan demikian, dan . Ini menunjukkan bahwa untuk setiap . Akibatnya, dan tidak kosong. (Fakta bahwa panjang sisi kubus-kubus kita konvergen ke 0 mengakibatkan , tetapi untuk pembuktian ini kita hanya perlu mengetahui bahwa tidak kosong.)  Karena merupakan selimut bagi , harus terdapat sedemikian sehingga . Himpunan terbuka, sehingga terdapat sedemikian sehingga . Jarak maksimum antara titik-titik di adalah jarak antara titik-titik sudut dan , dengan setiap panjang bernilai . Menurut rumus jarak, jarak maksimum antara titik-titik di ini adalah .  Sekarang pilih sedemikian sehingga . Maka, jika , berlaku , sehingga . Jadi, . Namun, . Dengan demikian, koleksi merupakan subselimut dari bagi . Akan tetapi, hal ini bertentangan dengan fakta bahwa selimut buka tersebut tidak memiliki subselimut berhingga. Pengandaian yang membawa kita pada kontradiksi ini adalah bahwa tidak kompak, sehingga kita menyimpulkan bahwa kubus standar berdimensi berukuran merupakan subhimpunan kompak dari untuk setiap .   "
+},
+{
+  "id": "activity-86",
+  "level": "2",
+  "url": "sec_compact_rn.html#activity-86",
+  "type": "Kegiatan",
+  "number": "17.5",
+  "title": "",
+  "body": "  Misalkan ruang topologi kompak dan subhimpunan tertutup dari . Dalam aktivitas ini kita akan membuktikan bahwa kompak.    Apa yang perlu dilakukan untuk membuktikan bahwa kompak?    Gunakan selimut buka bagi dan fakta bahwa tertutup untuk membuat selimut buka bagi .    Gunakan fakta bahwa kompak untuk menyelesaikan pembuktian teorema berikut.   "
+},
+{
+  "id": "thm_closed_compact",
+  "level": "2",
+  "url": "sec_compact_rn.html#thm_closed_compact",
+  "type": "Teorema",
+  "number": "17.12",
+  "title": "",
+  "body": "  Misalkan ruang topologi kompak. Maka, setiap subhimpunan tertutup dari kompak.   "
+},
+{
+  "id": "theorem-51",
+  "level": "2",
+  "url": "sec_compact_rn.html#theorem-51",
+  "type": "Teorema",
+  "number": "17.13",
+  "title": "Teorema Heine-Borel.",
+  "body": " Teorema Heine-Borel   Subhimpunan dari kompak jika dan hanya jika tertutup dan terbatas.    Misalkan subhimpunan dari . Andaikan bahwa tertutup dan terbatas. Karena terbatas, terdapat bilangan positif sedemikian sehingga . menunjukkan bahwa kompak, lalu menunjukkan bahwa kompak.  Untuk arah sebaliknya, andaikan bahwa merupakan subhimpunan kompak dari . Kita harus menunjukkan bahwa tertutup dan terbatas. Ruang merupakan ruang metrik sehingga merupakan ruang Hausdorff. kemudian menunjukkan bahwa tertutup. Untuk menyelesaikan pembuktian, kita perlu menunjukkan bahwa terbatas. Untuk setiap , ambil .  Artinya, merupakan kubus terbuka berukuran di . Selanjutnya, ambil untuk setiap . Karena , maka merupakan selimut buka bagi . Fakta bahwa kompak berarti terdapat koleksi berhingga , , , dari himpunan-himpunan dalam yang menyelimuti . Ambil . Maka untuk setiap , sehingga . Jadi, terbatas. Ini menyelesaikan pembuktian bahwa jika kompak di , maka tertutup dan terbatas.   "
+},
+{
+  "id": "activity-87",
+  "level": "2",
+  "url": "sec_compact_rn.html#activity-87",
+  "type": "Kegiatan",
+  "number": "17.6",
+  "title": "",
+  "body": " Subhimpunan dari ruang metrik disebut terbatas jika terdapat bilangan real sedemikian sehingga untuk semua . (Definisi ini ekuivalen dengan definisi subhimpunan terbatas dari yang diberikan sebelumnya, tetapi berlaku di setiap ruang metrik.) Jelaskan mengapa , sebagai subhimpunan dari , dengan metrik diskret, tertutup dan terbatas, tetapi tidak kompak.  "
+},
+{
+  "id": "sec_compact_app",
+  "level": "1",
+  "url": "sec_compact_app.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Penerapan Kekompakan",
+  "body": " Penerapan Kekompakan  Seperti disebutkan pada awal bagian ini, kekompakan adalah sifat yang kita perlukan untuk memastikan bahwa fungsi kontinu dari ruang topologi kompak tak kosong ke mencapai nilai maksimum dan minimumnya.    Fungsi kontinu dari ruang topologi kompak tak kosong ke bilangan real mencapai nilai maksimum dan minimum.      Kegiatan berikut membuktikan teorema ini.    Misalkan merupakan ruang topologi kompak tak kosong dan merupakan fungsi kontinu. Apa yang dapat kita simpulkan dari kekontinuan mengenai dalam ?    Mengapa kita dapat menyimpulkan bahwa himpunan memiliki batas atas terkecil ? Mengapa harus merupakan unsur ?    Lengkapilah bukti .    "
+},
+{
+  "id": "thm_max_min",
+  "level": "2",
+  "url": "sec_compact_app.html#thm_max_min",
+  "type": "Teorema",
+  "number": "17.14",
+  "title": "",
+  "body": "  Fungsi kontinu dari ruang topologi kompak tak kosong ke bilangan real mencapai nilai maksimum dan minimum.   "
+},
+{
+  "id": "activity-88",
+  "level": "2",
+  "url": "sec_compact_app.html#activity-88",
+  "type": "Kegiatan",
+  "number": "17.7",
+  "title": "",
+  "body": "  Kegiatan berikut membuktikan teorema ini.    Misalkan merupakan ruang topologi kompak tak kosong dan merupakan fungsi kontinu. Apa yang dapat kita simpulkan dari kekontinuan mengenai dalam ?    Mengapa kita dapat menyimpulkan bahwa himpunan memiliki batas atas terkecil ? Mengapa harus merupakan unsur ?    Lengkapilah bukti .   "
+},
+{
+  "id": "sec_compact_top_summ",
+  "level": "1",
+  "url": "sec_compact_top_summ.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Ringkasan",
+  "body": " Ringkasan  Gagasan-gagasan penting yang kita bahas dalam bagian ini mencakup hal-hal berikut.   Selimut bagi subhimpunan dari ruang topologi adalah sebarang koleksi subhimpunan dari yang gabungannya memuat . Selimut buka adalah selimut yang terdiri atas himpunan-himpunan buka.    Subselimut dari suatu selimut bagi himpunan adalah subkoleksi dari selimut tersebut sedemikian sehingga gabungan himpunan-himpunan dalam subselimut itu juga memuat .    Subhimpunan dari ruang topologi bersifat kompak jika setiap selimut buka bagi memiliki subselimut berhingga.    Fungsi kontinu dari ruang topologi kompak tak kosong ke bilangan real harus mencapai nilai maksimum dan minimum.    Teorema Heine–Borel menyatakan bahwa subhimpunan kompak dari tepat merupakan subhimpunan yang tertutup dan terbatas.     "
+},
+{
+  "id": "sec_fractals",
+  "level": "1",
+  "url": "sec_fractals.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Penerapan Kekompakan: Fraktal",
+  "body": " Penerapan Kekompakan: Fraktal  Diperkenalkan oleh Felix Hausdorff pada awal abad ke-20 sebagai cara untuk mengukur jarak antara himpunan, metrik Hausdorff (juga disebut metrik Pompeiu-Hausdorff) sejak saat itu telah dipelajari secara luas dan memiliki banyak penerapan. Sebagai contoh, militer Amerika Serikat telah menggunakan jarak Hausdorff dalam prosedur pengenalan sasaran. Selain itu, metrik Hausdorff telah digunakan dalam pencocokan citra dan pengenalan visual oleh robot, kedokteran, analisis citra, dan astronomi.  Gagasan dasar dalam penerapan-penerapan ini adalah bahwa kita memerlukan suatu cara untuk membandingkan dua bentuk. Sebagai contoh, jika sebuah produsen perlu mengerjakan suatu produk tertentu dengan mesin berdasarkan sebuah templat, biasanya terdapat toleransi tertentu yang diperbolehkan. Jadi, produsen tersebut memerlukan suatu cara untuk membandingkan komponen-komponen hasil pengerjaan mesin dengan templat guna menentukan apakah toleransi tersebut telah dipenuhi atau dilampaui.  Metrik Hausdorff juga dikenal oleh para penggemar fraktal karena digunakan untuk mendeskripsikan kekonvergenan barisan himpunan kompak menuju atraktornya dalam sistem fungsi teriterasi. Beragamnya penerapan metrik ini menjadikannya layak untuk dipelajari.  Untuk mendefinisikan metrik Hausdorff, kita mulai dengan jarak dari sebuah titik dalam ruang metrik ke sebuah subhimpunan dari , yaitu .  Karena citra akan direpresentasikan sebagai himpunan kompak, kita membatasi pembahasan pada subhimpunan kompak dari suatu ruang metrik. Dalam kasus ini, infimum menjadi minimum dan kita memperoleh .  Sekarang kita memperluas gagasan tersebut untuk mendefinisikan jarak dari satu subhimpunan ke subhimpunan lainnya. Misalkan dan adalah subhimpunan kompak tak kosong dari . Untuk mencari jarak dari himpunan ke himpunan , tampaknya masuk akal untuk mempertimbangkan seberapa jauh setiap titik di dari himpunan . Dengan demikian, jarak dari ke seharusnya mengukur seberapa jauh kita harus bergerak dari sebarang titik di untuk mencapai .    Misalkan adalah ruang metrik dan misalkan dan adalah subhimpunan kompak tak kosong dari . Maka jarak dari ke adalah .    Catatan: karena dan kompak, dijamin ada.    Salah satu masalah pada sebagaimana dalam adalah bahwa tidak simetris. Carilah contoh subhimpunan kompak dan dari dengan metrik Euklides sedemikian sehingga .    Meskipun fungsi dalam bukan suatu metrik, kita dapat mendefinisikan jarak Hausdorff dalam kaitannya dengan sebagai berikut.   metrik Hausdorff   Misalkan adalah ruang metrik dan serta adalah subhimpunan kompak tak kosong dari . Maka jarak Hausdorff antara dan adalah .      Misalkan adalah lingkaran di yang berpusat di titik asal dan berjari-jari 1, misalkan adalah persegi yang tersisip di dalamnya, dan misalkan sebagaimana ditunjukkan dalam .   Himpunan , , dan .   Lingkaran berpusat di titik asal dan berjari-jari , dengan persegi tersisip sehingga keempat sudutnya terletak pada lingkaran. Himpunan terdiri atas dua titik yang berhadapan, dan .    Tentukan , , dan , serta verifikasikan bahwa .    Mungkin mengejutkan bahwa sebagaimana dalam ternyata benar-benar merupakan suatu metrik, tetapi memang demikian. Ruang yang mendasarinya adalah koleksi subhimpunan kompak tak kosong dari yang kita nyatakan dengan . Teorema berikut merangkum fakta tersebut.    Misalkan adalah ruang metrik. Fungsi jarak Hausdorff adalah suatu metrik pada .      Buktikan teorema di atas.    Salah satu penerapan menarik dari metrik Hausdorff terdapat dalam geometri fraktal. Anda mungkin mengenal objek seperti segitiga Sierpinski atau kurva Koch. Objek-objek ini merupakan limit dari barisan himpunan dalam . Kita mengilustrasikannya dengan segitiga Sierpinski. Mulailah dengan tiga titik , , dan yang membentuk simpul-simpul sebuah segitiga sama sisi . Untuk =1,2, atau 3, misalkan . Untuk =1,2, atau 3, kita mendefinisikan dengan . Maka , ketika diterapkan pada , memperkecil dengan faktor 1\/2 dan kemudian mentranslasikan citra sehingga simpul dari berimpit dengan simpul ke- dari citra . Pemetaan semacam itu disebut pemetaan kontraksi dengan faktor kontraksi sebesar . Definisikan sebagai . Maka adalah himpunan semua titik yang berada di pertengahan antara sebarang titik dalam dan , atau adalah sebuah segitiga yang berukuran setengah dari segitiga semula dan ditranslasikan ke simpul dari segitiga semula. Misalkan . Baik maupun ditunjukkan dalam . Kita dapat melanjutkan prosedur ini dengan mengganti dengan . Dengan kata lain, untuk = 1, 2, dan 3, misalkan . Kemudian misalkan . Gambar ditunjukkan dalam . Kita dapat melanjutkan prosedur ini, dengan mengganti dengan setiap kalinya. Gambar ditunjukkan dalam .   untuk sama dengan 0, 1, 2, dan 8.     Garis luar segitiga sama sisi , yaitu himpunan awal dengan tiga titik sudut , , dan .    Iterasi pertama : tiga salinan berskala satu per dua ditempatkan pada ketiga sudut segitiga semula, menyisakan satu celah segitiga terbalik di tengah.          Iterasi kedua : sembilan segitiga kecil membentuk pola bersarang dengan satu celah segitiga terbalik besar dan tiga celah yang lebih kecil.    Iterasi kedelapan : pola rapat segitiga-segitiga kecil dengan celah segitiga terbalik pada berbagai skala, sebagai pendekatan visual terhadap segitiga Sierpinski.          Untuk melanjutkan proses ini, kita perlu mengambil suatu limit. Namun, adalah himpunan dalam , sehingga limit tersebut diambil terhadap metrik Hausdorff.   Asumsikan panjang sisi adalah . Tentukan . Kemudian carilah untuk sebarang bilangan bulat positif .   Segitiga Sierpinski akan ada jika barisan konvergen ke suatu himpunan (yang akan menjadi segitiga Sierpinski). Pertanyaan mengenai kekonvergenan ini bukanlah pertanyaan yang sederhana.   Perhatikan barisan , dengan untuk . Perhatikan bahwa setiap adalah bilangan rasional. Jelaskan mengapa suku-suku dalam barisan ini menjadi sedekat yang diinginkan satu sama lain, tetapi barisan tersebut tidak konvergen dalam . Jelaskan mengapa barisan konvergen dalam .  barisan Cauchy  Suatu barisan dalam ruang metrik disebut barisan Cauchy jika untuk setiap terdapat sedemikian sehingga setiap kali . Setiap barisan konvergen merupakan barisan Cauchy. Ruang metrik dikatakan lengkap ruang metrik lengkap jika setiap barisan Cauchy dalam konvergen ke suatu elemen dalam . Sebagai contoh, lengkap, sedangkan tidak lengkap. Meskipun kita tidak akan membuktikannya, ruang metrik lengkap. Tunjukkan bahwa barisan merupakan barisan Cauchy dalam . Limit barisan ini adalah segitiga Sierpinski yang terkenal. Gambar dalam merupakan pendekatan yang dekat terhadap segitiga Sierpinski.    "
+},
+{
+  "id": "p-2110",
+  "level": "2",
+  "url": "sec_fractals.html#p-2110",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "sebarang "
+},
+{
+  "id": "def_AtoB",
+  "level": "2",
+  "url": "sec_fractals.html#def_AtoB",
+  "type": "Definisi",
+  "number": "17.15",
+  "title": "",
+  "body": "  Misalkan adalah ruang metrik dan misalkan dan adalah subhimpunan kompak tak kosong dari . Maka jarak dari ke adalah .   "
+},
+{
+  "id": "activity-89",
+  "level": "2",
+  "url": "sec_fractals.html#activity-89",
+  "type": "Kegiatan",
+  "number": "17.8",
+  "title": "",
+  "body": "  Salah satu masalah pada sebagaimana dalam adalah bahwa tidak simetris. Carilah contoh subhimpunan kompak dan dari dengan metrik Euklides sedemikian sehingga .   "
+},
+{
+  "id": "def_Hausdorff_distance",
+  "level": "2",
+  "url": "sec_fractals.html#def_Hausdorff_distance",
+  "type": "Definisi",
+  "number": "17.16",
+  "title": "",
+  "body": " metrik Hausdorff   Misalkan adalah ruang metrik dan serta adalah subhimpunan kompak tak kosong dari . Maka jarak Hausdorff antara dan adalah .   "
+},
+{
+  "id": "activity-90",
+  "level": "2",
+  "url": "sec_fractals.html#activity-90",
+  "type": "Kegiatan",
+  "number": "17.9",
+  "title": "",
+  "body": "  Misalkan adalah lingkaran di yang berpusat di titik asal dan berjari-jari 1, misalkan adalah persegi yang tersisip di dalamnya, dan misalkan sebagaimana ditunjukkan dalam .   Himpunan , , dan .   Lingkaran berpusat di titik asal dan berjari-jari , dengan persegi tersisip sehingga keempat sudutnya terletak pada lingkaran. Himpunan terdiri atas dua titik yang berhadapan, dan .    Tentukan , , dan , serta verifikasikan bahwa .   "
+},
+{
+  "id": "theorem-53",
+  "level": "2",
+  "url": "sec_fractals.html#theorem-53",
+  "type": "Teorema",
+  "number": "17.18",
+  "title": "",
+  "body": "  Misalkan adalah ruang metrik. Fungsi jarak Hausdorff adalah suatu metrik pada .   "
+},
+{
+  "id": "activity-91",
+  "level": "2",
+  "url": "sec_fractals.html#activity-91",
+  "type": "Kegiatan",
+  "number": "17.10",
+  "title": "",
+  "body": "  Buktikan teorema di atas.    Salah satu penerapan menarik dari metrik Hausdorff terdapat dalam geometri fraktal. Anda mungkin mengenal objek seperti segitiga Sierpinski atau kurva Koch. Objek-objek ini merupakan limit dari barisan himpunan dalam . Kita mengilustrasikannya dengan segitiga Sierpinski. Mulailah dengan tiga titik , , dan yang membentuk simpul-simpul sebuah segitiga sama sisi . Untuk =1,2, atau 3, misalkan . Untuk =1,2, atau 3, kita mendefinisikan dengan . Maka , ketika diterapkan pada , memperkecil dengan faktor 1\/2 dan kemudian mentranslasikan citra sehingga simpul dari berimpit dengan simpul ke- dari citra . Pemetaan semacam itu disebut pemetaan kontraksi dengan faktor kontraksi sebesar . Definisikan sebagai . Maka adalah himpunan semua titik yang berada di pertengahan antara sebarang titik dalam dan , atau adalah sebuah segitiga yang berukuran setengah dari segitiga semula dan ditranslasikan ke simpul dari segitiga semula. Misalkan . Baik maupun ditunjukkan dalam . Kita dapat melanjutkan prosedur ini dengan mengganti dengan . Dengan kata lain, untuk = 1, 2, dan 3, misalkan . Kemudian misalkan . Gambar ditunjukkan dalam . Kita dapat melanjutkan prosedur ini, dengan mengganti dengan setiap kalinya. Gambar ditunjukkan dalam .   untuk sama dengan 0, 1, 2, dan 8.     Garis luar segitiga sama sisi , yaitu himpunan awal dengan tiga titik sudut , , dan .    Iterasi pertama : tiga salinan berskala satu per dua ditempatkan pada ketiga sudut segitiga semula, menyisakan satu celah segitiga terbalik di tengah.          Iterasi kedua : sembilan segitiga kecil membentuk pola bersarang dengan satu celah segitiga terbalik besar dan tiga celah yang lebih kecil.    Iterasi kedelapan : pola rapat segitiga-segitiga kecil dengan celah segitiga terbalik pada berbagai skala, sebagai pendekatan visual terhadap segitiga Sierpinski.          Untuk melanjutkan proses ini, kita perlu mengambil suatu limit. Namun, adalah himpunan dalam , sehingga limit tersebut diambil terhadap metrik Hausdorff.   Asumsikan panjang sisi adalah . Tentukan . Kemudian carilah untuk sebarang bilangan bulat positif .   Segitiga Sierpinski akan ada jika barisan konvergen ke suatu himpunan (yang akan menjadi segitiga Sierpinski). Pertanyaan mengenai kekonvergenan ini bukanlah pertanyaan yang sederhana.   Perhatikan barisan , dengan untuk . Perhatikan bahwa setiap adalah bilangan rasional. Jelaskan mengapa suku-suku dalam barisan ini menjadi sedekat yang diinginkan satu sama lain, tetapi barisan tersebut tidak konvergen dalam . Jelaskan mengapa barisan konvergen dalam .  barisan Cauchy  Suatu barisan dalam ruang metrik disebut barisan Cauchy jika untuk setiap terdapat sedemikian sehingga setiap kali . Setiap barisan konvergen merupakan barisan Cauchy. Ruang metrik dikatakan lengkap ruang metrik lengkap jika setiap barisan Cauchy dalam konvergen ke suatu elemen dalam . Sebagai contoh, lengkap, sedangkan tidak lengkap. Meskipun kita tidak akan membuktikannya, ruang metrik lengkap. Tunjukkan bahwa barisan merupakan barisan Cauchy dalam . Limit barisan ini adalah segitiga Sierpinski yang terkenal. Gambar dalam merupakan pendekatan yang dekat terhadap segitiga Sierpinski.   "
+},
+{
+  "id": "sec_compact_top_exer",
+  "level": "1",
+  "url": "sec_compact_top_exer.html",
+  "type": "Latihan",
+  "number": "",
+  "title": "Latihan",
+  "body": " Latihan   Tentukan semua subhimpunan kompak dari suatu ruang topologi dengan topologi indiskret.   Tentukan semua subhimpunan kompak dari suatu ruang topologi dengan topologi indiskret.    Ingat kembali dari bahwa jika dan adalah dua topologi pada suatu himpunan sedemikian sehingga , maka disebut topologi yang lebih kasar (atau lebih lemah ) daripada , atau disebut topologi yang lebih halus (atau lebih kuat ) daripada . Dalam latihan ini, kita menyelidiki apakah kekompakan merupakan sifat yang diwariskan dari topologi yang lebih lemah ke topologi yang lebih kuat atau dari topologi yang lebih kuat ke topologi yang lebih lemah. Misalkan dan adalah dua topologi pada suatu himpunan . Jika , apakah kekompakan terhadap atau menyiratkan sesuatu, jika memang ada, mengenai kekompakan terhadap topologi yang lain? Berikan alasan untuk jawaban Anda.    Misalkan adalah himpunan bilangan bulat genap, dan misalkan . Artinya, adalah koleksi semua subhimpunan beserta .   Buktikan bahwa adalah suatu topologi pada .   Tentukan semua subhimpunan kompak dari . Verifikasikan jawaban Anda.   Buktikan atau sangkal: Jika dan adalah subhimpunan kompak dari suatu ruang topologi , maka juga merupakan subhimpunan kompak dari .    Misalkan adalah suatu ruang topologi   Buktikan bahwa gabungan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .   Dalam kita semestinya telah melihat bahwa irisan himpunan-himpunan kompak belum tentu kompak. Jika adalah Hausdorff, buktikan bahwa irisan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .    Tinjau dengan topologi garis digital (lihat ). Tentukan semua subhimpunan kompak dari .    Untuk setiap , misalkan adalah himpunan bilangan bulat dalam interval (lihat .)   Tunjukkan bahwa adalah suatu basis bagi sebuah topologi pada    Apakah subhimpunan kompak dalam topologi ini?   Tentukan semua subhimpunan kompak dari .    Misalkan dan adalah ruang-ruang topologi, dan misalkan adalah suatu fungsi.   Andaikan adalah fungsi kontinu, serta kompak dan Hausdorff. Buktikan bahwa jika adalah subhimpunan tertutup dari , maka adalah subhimpunan tertutup dari . (Dengan demikian, adalah fungsi tertutup .)   Gunakan Aktivitas 17.3, Aktivitas 17.4, dan Teorema 17.6.   Andaikan adalah bijeksi kontinu. Buktikan bahwa jika kompak dan Hausdorff, maka adalah suatu homeomorfisme.   Berikan suatu contoh ketika adalah bijeksi kontinu dan kompak, tetapi bukan suatu homeomorfisme.   Berikan suatu contoh ketika adalah bijeksi kontinu dan Hausdorff, tetapi bukan suatu homeomorfisme.    Topologi Entah-Atau pada interval memiliki sebagai himpunan-himpunan bukanya semua subhimpunan yang memuat dan setiap subhimpunan yang tidak memuat .   Deskripsikan subhimpunan-subhimpunan tertutup nontrivial dari .   Apakah merupakan ruang topologi Hausdorff? Jelaskan.   Apakah kompak? Buktikan jawaban Anda.   Adakah subhimpunan yang tidak kompak? Berikan alasan untuk jawaban Anda.    Misalkan . Misalkan adalah koleksi semua interval buka berbentuk dan semua himpunan berbentuk , dengan bilangan-bilangan real sebagaimana dalam . Misalkan adalah topologi yang dibangkitkan oleh .   Tunjukkan bahwa tidak kompak.   Bagaimana hubungan topologi- dengan topologi Euklides?   Tunjukkan bahwa setiap subhimpunan yang memuat bukan merupakan subhimpunan kompak dari . Secara khusus, meskipun merupakan subhimpunan tertutup dan terbatas dari dalam , kita mencatat bahwa tidak kompak.   Tinjau himpunan-himpunan untuk .    Misalkan adalah suatu ruang topologi.   Buktikan bahwa jika Hausdorff dan adalah subhimpunan kompak dari , maka untuk setiap terdapat himpunan-himpunan buka saling lepas dan sedemikian sehingga dan .   Buktikan bahwa jika adalah ruang Hausdorff kompak, maka normal.    Misalkan adalah himpunan tak kosong dan misalkan adalah suatu elemen tetap dalam . Misalkan adalah topologi titik tertentu dan adalah topologi titik dikecualikan pada . Artinya,    adalah koleksi subhimpunan yang terdiri atas , , dan semua subhimpunan yang memuat .     adalah koleksi subhimpunan yang terdiri atas , , dan semua subhimpunan yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik dikecualikan merupakan topologi dibahas dalam dan . Tentukan, disertai bukti, subhimpunan-subhimpunan kompak dari ketika    memiliki topologi titik tertentu     memiliki topologi titik dikecualikan .    Dalam latihan ini, kita menjumpai suatu ruang topologi non-Hausdorff yang setiap himpunan satu titiknya tertutup, dan yang subhimpunan kompaknya tidak harus tertutup. Tinjau himpunan dengan topologi komplemen berhingga .   Tunjukkan bahwa setiap himpunan satu titik tertutup.   Jelaskan mengapa bukan ruang Hausdorff.   Misalkan adalah suatu himpunan buka dalam yang memuat dan suatu himpunan buka dalam yang memuat . Jelaskan mengapa dan tidak mungkin saling lepas yaitu, harus tak kosong.   Tunjukkan bahwa subhimpunan yang terdiri atas bilangan-bilangan bulat genap adalah subhimpunan kompak dari yang tidak tertutup. Verifikasikan hasil Anda.    Misalkan adalah suatu ruang topologi Hausdorff.   Misalkan dan misalkan adalah subhimpunan kompak dari . Buktikan bahwa terdapat subhimpunan-subhimpunan buka saling lepas dan dari sedemikian sehingga dan .   Misalkan dan adalah subhimpunan-subhimpunan kompak saling lepas dari . Buktikan bahwa terdapat himpunan-himpunan buka saling lepas dan sedemikian sehingga dan .    Misalkan adalah suatu ruang topologi dan misalkan adalah subhimpunan dari . Misalkan adalah topologi subruang pada . Buktikan bahwa merupakan subhimpunan kompak dari jika dan hanya jika adalah ruang topologi kompak.    Misalkan adalah suatu ruang topologi. Suatu keluarga dari subhimpunan-subhimpunan dikatakan memiliki sifat irisan berhingga jika untuk setiap subhimpunan berhingga dari , . Buktikan bahwa kompak jika dan hanya jika untuk setiap keluarga dari subhimpunan-subhimpunan tertutup dari yang memiliki sifat irisan berhingga, berlaku .    Meskipun bukan ruang kompak, jika , maka sehingga setiap titik dalam termuat dalam suatu subhimpunan kompak dari . Jadi, jika kita memandang dari sudut pandang suatu titik dalam , ruang tampak kompak di sekitar titik tersebut. Inilah gagasan kekompakan lokal. Ruang kompak lokal penting dalam topologi umum ruang fungsi.  Definisi. Suatu ruang topologi bersifat kompak lokal  kompak lokal jika untuk setiap terdapat suatu himpunan buka sedemikian sehingga dan kompak.   Jelaskan mengapa kompak lokal untuk setiap .   Tunjukkan bahwa setiap ruang kompak bersifat kompak lokal.   Tinjau garis Sorgenfrey dari . Ingat bahwa garis Sorgenfrey adalah ruang dengan basis bagi topologinya. Tunjukkan bahwa garis Sorgenfrey adalah Hausdorff tetapi tidak kompak lokal.    Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan suatu contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika dan adalah ruang-ruang topologi kompak dan adalah bijeksi kontinu, maka adalah suatu homeomorfisme.   Jika adalah suatu ruang topologi kompak, maka setiap subruang tertutup dari bersifat kompak.   Jika adalah suatu ruang Hausdorff, adalah suatu ruang kompak, dan adalah fungsi kontinu dan bijektif, maka adalah suatu homeomorfisme.   Jika adalah suatu ruang kompak, adalah suatu ruang Hausdorff, dan adalah bijeksi kontinu, maka adalah suatu homeomorfisme.   Misalkan adalah subhimpunan tertutup dari suatu ruang metrik dengan topologi metrik. Maka kompak.   Jika adalah subhimpunan kompak dari suatu ruang topologi , maka adalah subhimpunan tertutup dari .   Misalkan adalah suatu ruang topologi dengan topologi diskret. Maka kompak jika dan hanya jika berhingga.   "
+},
+{
+  "id": "exercise-193",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-193",
+  "type": "Latihan",
+  "number": "1",
+  "title": "",
+  "body": " Tentukan semua subhimpunan kompak dari suatu ruang topologi dengan topologi indiskret.   Tentukan semua subhimpunan kompak dari suatu ruang topologi dengan topologi indiskret.  "
+},
+{
+  "id": "exercise-194",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-194",
+  "type": "Latihan",
+  "number": "2",
+  "title": "",
+  "body": " Ingat kembali dari bahwa jika dan adalah dua topologi pada suatu himpunan sedemikian sehingga , maka disebut topologi yang lebih kasar (atau lebih lemah ) daripada , atau disebut topologi yang lebih halus (atau lebih kuat ) daripada . Dalam latihan ini, kita menyelidiki apakah kekompakan merupakan sifat yang diwariskan dari topologi yang lebih lemah ke topologi yang lebih kuat atau dari topologi yang lebih kuat ke topologi yang lebih lemah. Misalkan dan adalah dua topologi pada suatu himpunan . Jika , apakah kekompakan terhadap atau menyiratkan sesuatu, jika memang ada, mengenai kekompakan terhadap topologi yang lain? Berikan alasan untuk jawaban Anda.  "
+},
+{
+  "id": "ex_intersection_not_compact",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#ex_intersection_not_compact",
+  "type": "Latihan",
+  "number": "3",
+  "title": "",
+  "body": " Misalkan adalah himpunan bilangan bulat genap, dan misalkan . Artinya, adalah koleksi semua subhimpunan beserta .   Buktikan bahwa adalah suatu topologi pada .   Tentukan semua subhimpunan kompak dari . Verifikasikan jawaban Anda.   Buktikan atau sangkal: Jika dan adalah subhimpunan kompak dari suatu ruang topologi , maka juga merupakan subhimpunan kompak dari .  "
+},
+{
+  "id": "exercise-196",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-196",
+  "type": "Latihan",
+  "number": "4",
+  "title": "",
+  "body": " Misalkan adalah suatu ruang topologi   Buktikan bahwa gabungan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .   Dalam kita semestinya telah melihat bahwa irisan himpunan-himpunan kompak belum tentu kompak. Jika adalah Hausdorff, buktikan bahwa irisan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .  "
+},
+{
+  "id": "exercise-197",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-197",
+  "type": "Latihan",
+  "number": "5",
+  "title": "",
+  "body": " Tinjau dengan topologi garis digital (lihat ). Tentukan semua subhimpunan kompak dari .  "
+},
+{
+  "id": "exercise-198",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-198",
+  "type": "Latihan",
+  "number": "6",
+  "title": "",
+  "body": " Untuk setiap , misalkan adalah himpunan bilangan bulat dalam interval (lihat .)   Tunjukkan bahwa adalah suatu basis bagi sebuah topologi pada    Apakah subhimpunan kompak dalam topologi ini?   Tentukan semua subhimpunan kompak dari .  "
+},
+{
+  "id": "exercise-199",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-199",
+  "type": "Latihan",
+  "number": "7",
+  "title": "",
+  "body": " Misalkan dan adalah ruang-ruang topologi, dan misalkan adalah suatu fungsi.   Andaikan adalah fungsi kontinu, serta kompak dan Hausdorff. Buktikan bahwa jika adalah subhimpunan tertutup dari , maka adalah subhimpunan tertutup dari . (Dengan demikian, adalah fungsi tertutup .)   Gunakan Aktivitas 17.3, Aktivitas 17.4, dan Teorema 17.6.   Andaikan adalah bijeksi kontinu. Buktikan bahwa jika kompak dan Hausdorff, maka adalah suatu homeomorfisme.   Berikan suatu contoh ketika adalah bijeksi kontinu dan kompak, tetapi bukan suatu homeomorfisme.   Berikan suatu contoh ketika adalah bijeksi kontinu dan Hausdorff, tetapi bukan suatu homeomorfisme.  "
+},
+{
+  "id": "exercise-200",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-200",
+  "type": "Latihan",
+  "number": "8",
+  "title": "",
+  "body": " Topologi Entah-Atau pada interval memiliki sebagai himpunan-himpunan bukanya semua subhimpunan yang memuat dan setiap subhimpunan yang tidak memuat .   Deskripsikan subhimpunan-subhimpunan tertutup nontrivial dari .   Apakah merupakan ruang topologi Hausdorff? Jelaskan.   Apakah kompak? Buktikan jawaban Anda.   Adakah subhimpunan yang tidak kompak? Berikan alasan untuk jawaban Anda.  "
+},
+{
+  "id": "ex_K_topology_compact",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#ex_K_topology_compact",
+  "type": "Latihan",
+  "number": "9",
+  "title": "",
+  "body": " Misalkan . Misalkan adalah koleksi semua interval buka berbentuk dan semua himpunan berbentuk , dengan bilangan-bilangan real sebagaimana dalam . Misalkan adalah topologi yang dibangkitkan oleh .   Tunjukkan bahwa tidak kompak.   Bagaimana hubungan topologi- dengan topologi Euklides?   Tunjukkan bahwa setiap subhimpunan yang memuat bukan merupakan subhimpunan kompak dari . Secara khusus, meskipun merupakan subhimpunan tertutup dan terbatas dari dalam , kita mencatat bahwa tidak kompak.   Tinjau himpunan-himpunan untuk .  "
+},
+{
+  "id": "ex_Compact_normal",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#ex_Compact_normal",
+  "type": "Latihan",
+  "number": "10",
+  "title": "",
+  "body": " Misalkan adalah suatu ruang topologi.   Buktikan bahwa jika Hausdorff dan adalah subhimpunan kompak dari , maka untuk setiap terdapat himpunan-himpunan buka saling lepas dan sedemikian sehingga dan .   Buktikan bahwa jika adalah ruang Hausdorff kompak, maka normal.  "
+},
+{
+  "id": "exercise-203",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-203",
+  "type": "Latihan",
+  "number": "11",
+  "title": "",
+  "body": " Misalkan adalah himpunan tak kosong dan misalkan adalah suatu elemen tetap dalam . Misalkan adalah topologi titik tertentu dan adalah topologi titik dikecualikan pada . Artinya,    adalah koleksi subhimpunan yang terdiri atas , , dan semua subhimpunan yang memuat .     adalah koleksi subhimpunan yang terdiri atas , , dan semua subhimpunan yang tidak memuat .   Fakta bahwa topologi titik tertentu dan topologi titik dikecualikan merupakan topologi dibahas dalam dan . Tentukan, disertai bukti, subhimpunan-subhimpunan kompak dari ketika    memiliki topologi titik tertentu     memiliki topologi titik dikecualikan .  "
+},
+{
+  "id": "exercise-204",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-204",
+  "type": "Latihan",
+  "number": "12",
+  "title": "",
+  "body": " Dalam latihan ini, kita menjumpai suatu ruang topologi non-Hausdorff yang setiap himpunan satu titiknya tertutup, dan yang subhimpunan kompaknya tidak harus tertutup. Tinjau himpunan dengan topologi komplemen berhingga .   Tunjukkan bahwa setiap himpunan satu titik tertutup.   Jelaskan mengapa bukan ruang Hausdorff.   Misalkan adalah suatu himpunan buka dalam yang memuat dan suatu himpunan buka dalam yang memuat . Jelaskan mengapa dan tidak mungkin saling lepas yaitu, harus tak kosong.   Tunjukkan bahwa subhimpunan yang terdiri atas bilangan-bilangan bulat genap adalah subhimpunan kompak dari yang tidak tertutup. Verifikasikan hasil Anda.  "
+},
+{
+  "id": "exercise-205",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-205",
+  "type": "Latihan",
+  "number": "13",
+  "title": "",
+  "body": " Misalkan adalah suatu ruang topologi Hausdorff.   Misalkan dan misalkan adalah subhimpunan kompak dari . Buktikan bahwa terdapat subhimpunan-subhimpunan buka saling lepas dan dari sedemikian sehingga dan .   Misalkan dan adalah subhimpunan-subhimpunan kompak saling lepas dari . Buktikan bahwa terdapat himpunan-himpunan buka saling lepas dan sedemikian sehingga dan .  "
+},
+{
+  "id": "ex_subspace_compact",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#ex_subspace_compact",
+  "type": "Latihan",
+  "number": "14",
+  "title": "",
+  "body": " Misalkan adalah suatu ruang topologi dan misalkan adalah subhimpunan dari . Misalkan adalah topologi subruang pada . Buktikan bahwa merupakan subhimpunan kompak dari jika dan hanya jika adalah ruang topologi kompak.  "
+},
+{
+  "id": "exercise-207",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-207",
+  "type": "Latihan",
+  "number": "15",
+  "title": "",
+  "body": " Misalkan adalah suatu ruang topologi. Suatu keluarga dari subhimpunan-subhimpunan dikatakan memiliki sifat irisan berhingga jika untuk setiap subhimpunan berhingga dari , . Buktikan bahwa kompak jika dan hanya jika untuk setiap keluarga dari subhimpunan-subhimpunan tertutup dari yang memiliki sifat irisan berhingga, berlaku .  "
+},
+{
+  "id": "exercise-208",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-208",
+  "type": "Latihan",
+  "number": "16",
+  "title": "",
+  "body": " Meskipun bukan ruang kompak, jika , maka sehingga setiap titik dalam termuat dalam suatu subhimpunan kompak dari . Jadi, jika kita memandang dari sudut pandang suatu titik dalam , ruang tampak kompak di sekitar titik tersebut. Inilah gagasan kekompakan lokal. Ruang kompak lokal penting dalam topologi umum ruang fungsi.  Definisi. Suatu ruang topologi bersifat kompak lokal  kompak lokal jika untuk setiap terdapat suatu himpunan buka sedemikian sehingga dan kompak.   Jelaskan mengapa kompak lokal untuk setiap .   Tunjukkan bahwa setiap ruang kompak bersifat kompak lokal.   Tinjau garis Sorgenfrey dari . Ingat bahwa garis Sorgenfrey adalah ruang dengan basis bagi topologinya. Tunjukkan bahwa garis Sorgenfrey adalah Hausdorff tetapi tidak kompak lokal.  "
+},
+{
+  "id": "exercise-209",
+  "level": "2",
+  "url": "sec_compact_top_exer.html#exercise-209",
+  "type": "Latihan",
+  "number": "17",
+  "title": "",
+  "body": " Untuk setiap pernyataan berikut, jawablah benar jika pernyataan tersebut selalu benar. Jika pernyataan tersebut hanya kadang-kadang benar atau tidak pernah benar, jawablah salah dan berikan suatu contoh konkret yang menunjukkan bahwa pernyataan tersebut salah. Jika suatu pernyataan benar, jelaskan alasannya.   Jika dan adalah ruang-ruang topologi kompak dan adalah bijeksi kontinu, maka adalah suatu homeomorfisme.   Jika adalah suatu ruang topologi kompak, maka setiap subruang tertutup dari bersifat kompak.   Jika adalah suatu ruang Hausdorff, adalah suatu ruang kompak, dan adalah fungsi kontinu dan bijektif, maka adalah suatu homeomorfisme.   Jika adalah suatu ruang kompak, adalah suatu ruang Hausdorff, dan adalah bijeksi kontinu, maka adalah suatu homeomorfisme.   Misalkan adalah subhimpunan tertutup dari suatu ruang metrik dengan topologi metrik. Maka kompak.   Jika adalah subhimpunan kompak dari suatu ruang topologi , maka adalah subhimpunan tertutup dari .   Misalkan adalah suatu ruang topologi dengan topologi diskret. Maka kompak jika dan hanya jika berhingga.  "
 },
 {
   "id": "o003-c90-ch01-activity-checkpoints",
@@ -13708,6 +14194,816 @@ var ptx_lunr_docs = [
   "body": "Pemetaan kuosien, retraksi, dan batas Hausdorff  Kerjakan tiga bagian berikut. (i) Jika dan adalah retraksi, buktikan bahwa merupakan pemetaan kuosien. (ii) Jika Hausdorff, buktikan bahwa setiap retrak tertutup dalam . (iii) Berikan contoh surjeksi kontinu yang bukan pemetaan kuosien dan jelaskan kegagalannya.   Tahap 1. Untuk , gunakan inklusi dan identitas .  Tahap 2. Retrak adalah himpunan titik tetap dari ; gunakan diagonal tertutup di .  Tahap 3. Bandingkan identitas dari garis real diskret ke garis real bertopologi standar.   Retraksi adalah surjeksi kontinu dan keterbukaan memaksa keterbukaan . Dalam ruang Hausdorff, himpunan titik tetap suatu fungsi kontinu tertutup. Contoh tandingan pada (iii) adalah fungsi identitas dari diskret ke standar: kontinu dan surjektif, tetapi topologi kuosien yang diinduksinya adalah topologi diskret.   Misalkan . Jika terbuka dalam , kekontinuan memberi keterbukaan dalam . Sebaliknya, jika terbuka dalam , maka terbuka dalam topologi subruang pada . Jadi terbuka tepat ketika prapetanya di bawah terbuka; karena surjektif, pemetaan kuosien.  Tuliskan . Karena bagi setiap dan , himpunan titik tetap tepat . Pemetaan kontinu dari ke . Karena Hausdorff, diagonal tertutup. Maka adalah prapeta diagonal tersebut dan tertutup.  Terakhir, biarkan bertopologi diskret dan bertopologi standar, lalu ambil identitas himpunan . Setiap prapeta himpunan terbuka di terbuka di , jadi kontinu dan jelas surjektif. Namun bagi setiap , prapeta terbuka dalam . Jadi topologi kuosien yang ditentukan adalah topologi diskret, lebih besar daripada topologi standar pada . Karena topologi aktual kodomain bukan topologi kuosien itu, bukan pemetaan kuosien.  "
 },
 {
+  "id": "o003-c90-ch17-source-guides-a",
+  "level": "1",
+  "url": "o003-c90-ch17-source-guides-a.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Selimut Buka dan Kekompakan Dasar",
+  "body": " Panduan Belajar Mandiri: Selimut Buka dan Kekompakan Dasar  Sepuluh panduan pertama ini mengikuti urutan sumber Bab 17: enam penyelidikan awal tentang kekompakan, lalu empat pertanyaan pertama tentang hubungan kekompakan dengan himpunan buka dan himpunan tertutup. Kerjakan dahulu prompt pada bab utama, lalu buka petunjuk, jawaban atau rubrik, dan solusi secara bertahap.  Bab sumber mempertahankan 73 simpul tugas. Dua di antaranya hanya mengelompokkan subprompt; setelah empat pernyataan langsung dan satu badan kegiatan langsung ikut dihitung, backend memuat 76 kejadian prompt fisik dan 75 entri dukungan kanonis. Kejadian ke-34 merupakan duplikat persis dari kejadian ke-33 tentang subhimpunan kompak dalam topologi indiskret. Keduanya tetap dipertahankan; kejadian kedua dipetakan secara transparan sebagai alias ketika batch latihan yang memuatnya disusun.  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.  Himpunan Berhingga Bersifat Kompak  Tentukan apakah dalam dengan topologi Euklides bersifat kompak. Generalisasikan contoh ini.   Tahap 1. Mulailah dengan selimut buka sebarang bagi , bukan dengan selimut tertentu.  Tahap 2. Untuk setiap titik dalam , pilih satu anggota yang memuat titik tersebut.  Tahap 3. Hitung banyaknya himpunan yang telah dipilih dan perhatikan bahwa argumen tidak memakai sifat khusus topologi Euklides.   Himpunan kompak. Secara umum, setiap subhimpunan berhingga dari sebarang ruang topologi bersifat kompak.   Misalkan selimut buka sebarang bagi . Untuk setiap , pilih dengan . Karena mempunyai lima anggota, keluarga berhingga dan masih menyelimuti . Jika beberapa pilihan menghasilkan himpunan buka yang sama, kita cukup menghapus pengulangannya.  Argumen yang sama berlaku bagi setiap himpunan berhingga dalam ruang topologi apa pun: pilih satu anggota selimut yang memuat setiap . Untuk , subkeluarga kosong sudah merupakan subselimut berhingga. Jadi setiap subhimpunan berhingga bersifat kompak.   Interval Setengah Terbuka yang Tidak Kompak  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Untuk membuktikan ketidakkompakan, cukup temukan satu selimut buka tanpa subselimut berhingga.  Tahap 2. Pertimbangkan keluarga untuk .  Tahap 3. Dari subkeluarga berhingga, ambil indeks terbesar dan carilah titik yang lebih kecil daripada batas kiri yang tersisa.   Himpunan tidak kompak dalam topologi Euklides. Keluarga adalah selimut buka tanpa subselimut berhingga.   Untuk setiap , sifat Archimedes memberi dengan . Maka , sehingga keluarga menyelimuti dan setiap anggotanya terbuka dalam .  Ambil sebarang subkeluarga berhingga dan misalkan indeks terbesar yang dipilih. Karena keluarga ini menaik, untuk setiap indeks terpilih . Jadi gabungan subkeluarga itu sama dengan . Namun dan . Tidak ada subselimut berhingga, sehingga tidak kompak.   Barisan Tanpa Titik Limitnya  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Setiap titik terisolasi dari titik-titik lain dalam .  Tahap 2. Gunakan dan, untuk , gunakan .  Tahap 3. Hitung dan tentukan berapa banyak titik yang dapat diselimuti subkeluarga berhingga.   Himpunan tidak kompak. Terdapat selimut buka yang setiap anggotanya memuat tepat satu titik , sehingga tidak ada subkeluarga berhingga yang dapat menyelimuti seluruh .   Definisikan dan Setiap terbuka dalam dan memuat . Karena barisan menurun ketat, kedua titik bertetangga dan berada tepat pada batas interval untuk ; semua suku lain berada di luar. Demikian pula, . Jadi untuk setiap .  Keluarga menyelimuti . Setiap subkeluarga berhingga hanya menyelimuti sejumlah berhingga titik , sedangkan tak berhingga. Karena itu keluarga ini tidak mempunyai subselimut berhingga dan tidak kompak.   Bilangan Bulat Positif dalam Topologi Euklides  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Carilah interval terbuka kecil yang mengisolasi setiap bilangan bulat positif.  Tahap 2. Gunakan untuk .  Tahap 3. Tunjukkan bahwa subkeluarga berhingga hanya dapat memuat sejumlah berhingga anggota .   Himpunan tidak kompak dalam topologi Euklides. Interval membentuk selimut buka tanpa subselimut berhingga.   Untuk setiap , interval terbuka dalam dan . Maka merupakan selimut buka bagi .  Gabungan sebarang subkeluarga berhingga dari beririsan dengan dalam sejumlah berhingga titik saja. Karena mempunyai tak berhingga banyak titik, gabungan itu tidak dapat menyelimuti . Jadi tidak kompak.   Bilangan Bulat Positif dalam Topologi Komplemen Berhingga  Tentukan apakah dalam dengan topologi komplemen berhingga bersifat kompak.   Tahap 1. Ambil selimut buka sebarang bagi dan pilih satu anggotanya yang memuat suatu titik .  Tahap 2. Komplemen setiap himpunan buka tak kosong dalam topologi ini berhingga.  Tahap 3. Setelah memilih himpunan buka pertama, pilih paling banyak satu anggota selimut tambahan untuk setiap titik yang belum terselimuti.   Himpunan kompak dalam bertopologi komplemen berhingga. Bahkan setiap subhimpunan ruang bertopologi komplemen berhingga bersifat kompak.   Misalkan selimut buka bagi . Pilih yang memuat, misalnya, titik . Karena tak kosong dan terbuka dalam topologi komplemen berhingga, himpunan berhingga. Akibatnya, juga berhingga.  Untuk setiap titik , pilih satu yang memuat . Keluarga yang terdiri atas dan semua tersebut berhingga serta menyelimuti . Jadi kompak. Bukti ini berlaku tanpa perubahan bagi setiap subhimpunan tak kosong; himpunan kosong kompak secara langsung.   Garis Real Tidak Kompak  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Selimuti garis real dengan interval terbuka yang makin membesar.  Tahap 2. Ambil untuk .  Tahap 3. Dalam setiap subkeluarga berhingga, gunakan indeks terbesar untuk menemukan titik real yang belum terselimuti.   Garis real tidak kompak dalam topologi Euklides. Selimut buka tidak mempunyai subselimut berhingga.   Setiap berada dalam jika . Jadi keluarga merupakan selimut buka bagi .  Ambil subkeluarga berhingga dan misalkan indeks terbesar yang muncul. Karena interval-interval itu bersarang, gabungannya termuat dalam . Titik , misalnya, tidak berada dalam gabungan tersebut. Maka tidak ada subselimut berhingga dan tidak kompak.   Bukti Umum untuk Himpunan Berhingga  Jelaskan mengapa setiap subhimpunan berhingga dari suatu ruang topologi pasti kompak.   Tahap 1. Tulis subhimpunan berhingga sebagai .  Tahap 2. Dari selimut buka sebarang, pilih satu himpunan buka yang memuat setiap .  Tahap 3. Jelaskan mengapa paling banyak himpunan terpilih sudah menyelimuti .   Dari selimut buka sebarang bagi himpunan berhingga beranggota , pilih satu anggota selimut untuk setiap titik. Paling banyak anggota terpilih dan semuanya bersama-sama menyelimuti himpunan tersebut.   Misalkan dan selimut buka sebarang bagi . Untuk setiap , karena menyelimuti , ada dengan . Keluarga berhingga dan menyelimuti setiap titik . Penghapusan pilihan yang sama tidak mengubah gabungannya. Jika , subkeluarga kosong cukup. Karena selimut awal dipilih sebarang, kompak.   Contoh Himpunan Kompak dan Terbuka  Misalkan dengan topologi . Jika mungkin, temukan suatu subhimpunan dari yang kompak dan terbuka. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.   Tahap 1. Gunakan hasil bahwa setiap subhimpunan berhingga bersifat kompak.  Tahap 2. Semua subhimpunan berhingga karena sendiri berhingga.  Tahap 3. Pilih sebarang anggota ; untuk contoh nontrivial, hindari dan .    Rubrik. Jawaban lengkap menyebutkan suatu anggota dan membuktikan kekompakannya dari keberhinggaan. Sebagai contoh, kompak dan terbuka. Contoh lain yang sah adalah , , , atau .   Ambil . Daftar yang mendefinisikan topologi memuat , jadi terbuka. Himpunan berhingga, sehingga setiap selimut bukanya mempunyai subselimut berhingga; maka kompak.  Contoh ini tidak unik. Karena berhingga, setiap subhimpunan kompak. Oleh sebab itu, subhimpunan yang sekaligus kompak dan terbuka tepat anggota-anggota , yaitu , , , , dan .   Kekompakan Tidak Memaksa Keterbukaan  Misalkan dengan topologi . Jika merupakan subhimpunan kompak dari , haruskah terbuka? Jelaskan.   Tahap 1. Dalam ruang berhingga ini, setiap subhimpunan kompak.  Tahap 2. Bandingkan semua subhimpunan satu titik dengan daftar .  Tahap 3. Satu contoh kompak yang tidak berada dalam cukup untuk menyangkal keharusan tersebut.   Tidak. Sebagai contoh, berhingga sehingga kompak, tetapi , sehingga tidak terbuka.   Pilih . Karena berhingga, argumen pemilihan satu anggota selimut untuk setiap titik menunjukkan bahwa kompak. Namun daftar anggota tidak memuat . Jadi tidak terbuka. Kontraeksempel ini membuktikan bahwa kekompakan saja tidak mengharuskan suatu subhimpunan terbuka.   Contoh Himpunan Kompak dan Tertutup  Misalkan dengan topologi . Jika mungkin, temukan suatu subhimpunan dari yang kompak dan tertutup. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.   Tahap 1. Semua subhimpunan kompak karena berhingga.  Tahap 2. Ambil komplemen setiap anggota untuk mendaftar himpunan tertutup.  Tahap 3. Pilih salah satu himpunan tertutup nontrivial dari daftar tersebut.    Rubrik. Jawaban lengkap memberikan suatu himpunan yang komplemennya berada dalam dan menjelaskan kekompakannya melalui keberhinggaan. Sebagai contoh, kompak dan tertutup karena .   Komplemen anggota-anggota memberi seluruh himpunan tertutup: Setiap himpunan dalam daftar ini kompak karena merupakan subhimpunan berhingga dari . Secara khusus, adalah contoh nontrivial: komplemennya terbuka, sehingga tertutup, dan keberhinggaannya menjamin kekompakan.   "
+},
+{
+  "id": "o003-c90-ch17-guide-01",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-01",
+  "type": "Pemeriksaan",
+  "number": "Q.1",
+  "title": "Himpunan Berhingga Bersifat Kompak.",
+  "body": "Himpunan Berhingga Bersifat Kompak  Tentukan apakah dalam dengan topologi Euklides bersifat kompak. Generalisasikan contoh ini.   Tahap 1. Mulailah dengan selimut buka sebarang bagi , bukan dengan selimut tertentu.  Tahap 2. Untuk setiap titik dalam , pilih satu anggota yang memuat titik tersebut.  Tahap 3. Hitung banyaknya himpunan yang telah dipilih dan perhatikan bahwa argumen tidak memakai sifat khusus topologi Euklides.   Himpunan kompak. Secara umum, setiap subhimpunan berhingga dari sebarang ruang topologi bersifat kompak.   Misalkan selimut buka sebarang bagi . Untuk setiap , pilih dengan . Karena mempunyai lima anggota, keluarga berhingga dan masih menyelimuti . Jika beberapa pilihan menghasilkan himpunan buka yang sama, kita cukup menghapus pengulangannya.  Argumen yang sama berlaku bagi setiap himpunan berhingga dalam ruang topologi apa pun: pilih satu anggota selimut yang memuat setiap . Untuk , subkeluarga kosong sudah merupakan subselimut berhingga. Jadi setiap subhimpunan berhingga bersifat kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-02",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-02",
+  "type": "Pemeriksaan",
+  "number": "Q.2",
+  "title": "Interval Setengah Terbuka yang Tidak Kompak.",
+  "body": "Interval Setengah Terbuka yang Tidak Kompak  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Untuk membuktikan ketidakkompakan, cukup temukan satu selimut buka tanpa subselimut berhingga.  Tahap 2. Pertimbangkan keluarga untuk .  Tahap 3. Dari subkeluarga berhingga, ambil indeks terbesar dan carilah titik yang lebih kecil daripada batas kiri yang tersisa.   Himpunan tidak kompak dalam topologi Euklides. Keluarga adalah selimut buka tanpa subselimut berhingga.   Untuk setiap , sifat Archimedes memberi dengan . Maka , sehingga keluarga menyelimuti dan setiap anggotanya terbuka dalam .  Ambil sebarang subkeluarga berhingga dan misalkan indeks terbesar yang dipilih. Karena keluarga ini menaik, untuk setiap indeks terpilih . Jadi gabungan subkeluarga itu sama dengan . Namun dan . Tidak ada subselimut berhingga, sehingga tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-03",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-03",
+  "type": "Pemeriksaan",
+  "number": "Q.3",
+  "title": "Barisan Tanpa Titik Limitnya.",
+  "body": "Barisan Tanpa Titik Limitnya  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Setiap titik terisolasi dari titik-titik lain dalam .  Tahap 2. Gunakan dan, untuk , gunakan .  Tahap 3. Hitung dan tentukan berapa banyak titik yang dapat diselimuti subkeluarga berhingga.   Himpunan tidak kompak. Terdapat selimut buka yang setiap anggotanya memuat tepat satu titik , sehingga tidak ada subkeluarga berhingga yang dapat menyelimuti seluruh .   Definisikan dan Setiap terbuka dalam dan memuat . Karena barisan menurun ketat, kedua titik bertetangga dan berada tepat pada batas interval untuk ; semua suku lain berada di luar. Demikian pula, . Jadi untuk setiap .  Keluarga menyelimuti . Setiap subkeluarga berhingga hanya menyelimuti sejumlah berhingga titik , sedangkan tak berhingga. Karena itu keluarga ini tidak mempunyai subselimut berhingga dan tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-04",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-04",
+  "type": "Pemeriksaan",
+  "number": "Q.4",
+  "title": "Bilangan Bulat Positif dalam Topologi Euklides.",
+  "body": "Bilangan Bulat Positif dalam Topologi Euklides  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Carilah interval terbuka kecil yang mengisolasi setiap bilangan bulat positif.  Tahap 2. Gunakan untuk .  Tahap 3. Tunjukkan bahwa subkeluarga berhingga hanya dapat memuat sejumlah berhingga anggota .   Himpunan tidak kompak dalam topologi Euklides. Interval membentuk selimut buka tanpa subselimut berhingga.   Untuk setiap , interval terbuka dalam dan . Maka merupakan selimut buka bagi .  Gabungan sebarang subkeluarga berhingga dari beririsan dengan dalam sejumlah berhingga titik saja. Karena mempunyai tak berhingga banyak titik, gabungan itu tidak dapat menyelimuti . Jadi tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-05",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-05",
+  "type": "Pemeriksaan",
+  "number": "Q.5",
+  "title": "Bilangan Bulat Positif dalam Topologi Komplemen Berhingga.",
+  "body": "Bilangan Bulat Positif dalam Topologi Komplemen Berhingga  Tentukan apakah dalam dengan topologi komplemen berhingga bersifat kompak.   Tahap 1. Ambil selimut buka sebarang bagi dan pilih satu anggotanya yang memuat suatu titik .  Tahap 2. Komplemen setiap himpunan buka tak kosong dalam topologi ini berhingga.  Tahap 3. Setelah memilih himpunan buka pertama, pilih paling banyak satu anggota selimut tambahan untuk setiap titik yang belum terselimuti.   Himpunan kompak dalam bertopologi komplemen berhingga. Bahkan setiap subhimpunan ruang bertopologi komplemen berhingga bersifat kompak.   Misalkan selimut buka bagi . Pilih yang memuat, misalnya, titik . Karena tak kosong dan terbuka dalam topologi komplemen berhingga, himpunan berhingga. Akibatnya, juga berhingga.  Untuk setiap titik , pilih satu yang memuat . Keluarga yang terdiri atas dan semua tersebut berhingga serta menyelimuti . Jadi kompak. Bukti ini berlaku tanpa perubahan bagi setiap subhimpunan tak kosong; himpunan kosong kompak secara langsung.  "
+},
+{
+  "id": "o003-c90-ch17-guide-06",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-06",
+  "type": "Pemeriksaan",
+  "number": "Q.6",
+  "title": "Garis Real Tidak Kompak.",
+  "body": "Garis Real Tidak Kompak  Tentukan apakah dalam dengan topologi Euklides bersifat kompak.   Tahap 1. Selimuti garis real dengan interval terbuka yang makin membesar.  Tahap 2. Ambil untuk .  Tahap 3. Dalam setiap subkeluarga berhingga, gunakan indeks terbesar untuk menemukan titik real yang belum terselimuti.   Garis real tidak kompak dalam topologi Euklides. Selimut buka tidak mempunyai subselimut berhingga.   Setiap berada dalam jika . Jadi keluarga merupakan selimut buka bagi .  Ambil subkeluarga berhingga dan misalkan indeks terbesar yang muncul. Karena interval-interval itu bersarang, gabungannya termuat dalam . Titik , misalnya, tidak berada dalam gabungan tersebut. Maka tidak ada subselimut berhingga dan tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-07",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-07",
+  "type": "Pemeriksaan",
+  "number": "Q.7",
+  "title": "Bukti Umum untuk Himpunan Berhingga.",
+  "body": "Bukti Umum untuk Himpunan Berhingga  Jelaskan mengapa setiap subhimpunan berhingga dari suatu ruang topologi pasti kompak.   Tahap 1. Tulis subhimpunan berhingga sebagai .  Tahap 2. Dari selimut buka sebarang, pilih satu himpunan buka yang memuat setiap .  Tahap 3. Jelaskan mengapa paling banyak himpunan terpilih sudah menyelimuti .   Dari selimut buka sebarang bagi himpunan berhingga beranggota , pilih satu anggota selimut untuk setiap titik. Paling banyak anggota terpilih dan semuanya bersama-sama menyelimuti himpunan tersebut.   Misalkan dan selimut buka sebarang bagi . Untuk setiap , karena menyelimuti , ada dengan . Keluarga berhingga dan menyelimuti setiap titik . Penghapusan pilihan yang sama tidak mengubah gabungannya. Jika , subkeluarga kosong cukup. Karena selimut awal dipilih sebarang, kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-08",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-08",
+  "type": "Pemeriksaan",
+  "number": "Q.8",
+  "title": "Contoh Himpunan Kompak dan Terbuka.",
+  "body": "Contoh Himpunan Kompak dan Terbuka  Misalkan dengan topologi . Jika mungkin, temukan suatu subhimpunan dari yang kompak dan terbuka. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.   Tahap 1. Gunakan hasil bahwa setiap subhimpunan berhingga bersifat kompak.  Tahap 2. Semua subhimpunan berhingga karena sendiri berhingga.  Tahap 3. Pilih sebarang anggota ; untuk contoh nontrivial, hindari dan .    Rubrik. Jawaban lengkap menyebutkan suatu anggota dan membuktikan kekompakannya dari keberhinggaan. Sebagai contoh, kompak dan terbuka. Contoh lain yang sah adalah , , , atau .   Ambil . Daftar yang mendefinisikan topologi memuat , jadi terbuka. Himpunan berhingga, sehingga setiap selimut bukanya mempunyai subselimut berhingga; maka kompak.  Contoh ini tidak unik. Karena berhingga, setiap subhimpunan kompak. Oleh sebab itu, subhimpunan yang sekaligus kompak dan terbuka tepat anggota-anggota , yaitu , , , , dan .  "
+},
+{
+  "id": "o003-c90-ch17-guide-09",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-09",
+  "type": "Pemeriksaan",
+  "number": "Q.9",
+  "title": "Kekompakan Tidak Memaksa Keterbukaan.",
+  "body": "Kekompakan Tidak Memaksa Keterbukaan  Misalkan dengan topologi . Jika merupakan subhimpunan kompak dari , haruskah terbuka? Jelaskan.   Tahap 1. Dalam ruang berhingga ini, setiap subhimpunan kompak.  Tahap 2. Bandingkan semua subhimpunan satu titik dengan daftar .  Tahap 3. Satu contoh kompak yang tidak berada dalam cukup untuk menyangkal keharusan tersebut.   Tidak. Sebagai contoh, berhingga sehingga kompak, tetapi , sehingga tidak terbuka.   Pilih . Karena berhingga, argumen pemilihan satu anggota selimut untuk setiap titik menunjukkan bahwa kompak. Namun daftar anggota tidak memuat . Jadi tidak terbuka. Kontraeksempel ini membuktikan bahwa kekompakan saja tidak mengharuskan suatu subhimpunan terbuka.  "
+},
+{
+  "id": "o003-c90-ch17-guide-10",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-a.html#o003-c90-ch17-guide-10",
+  "type": "Pemeriksaan",
+  "number": "Q.10",
+  "title": "Contoh Himpunan Kompak dan Tertutup.",
+  "body": "Contoh Himpunan Kompak dan Tertutup  Misalkan dengan topologi . Jika mungkin, temukan suatu subhimpunan dari yang kompak dan tertutup. Jika subhimpunan semacam itu tidak ada, jelaskan alasannya.   Tahap 1. Semua subhimpunan kompak karena berhingga.  Tahap 2. Ambil komplemen setiap anggota untuk mendaftar himpunan tertutup.  Tahap 3. Pilih salah satu himpunan tertutup nontrivial dari daftar tersebut.    Rubrik. Jawaban lengkap memberikan suatu himpunan yang komplemennya berada dalam dan menjelaskan kekompakannya melalui keberhinggaan. Sebagai contoh, kompak dan tertutup karena .   Komplemen anggota-anggota memberi seluruh himpunan tertutup: Setiap himpunan dalam daftar ini kompak karena merupakan subhimpunan berhingga dari . Secara khusus, adalah contoh nontrivial: komplemennya terbuka, sehingga tertutup, dan keberhinggaannya menjamin kekompakan.  "
+},
+{
+  "id": "o003-c90-ch17-source-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch17-source-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Kekompakan dan Pemetaan Kontinu",
+  "body": " Panduan Belajar Mandiri: Kekompakan dan Pemetaan Kontinu  Lima belas panduan ini melanjutkan urutan sumber Bab 17. Entri pertama menutup penyelidikan tentang himpunan kompak, buka, dan tertutup; empat entri berikutnya membuktikan bahwa citra kontinu himpunan kompak tetap kompak; tujuh entri berikutnya membangun dua teorema tentang himpunan tertutup dan kekompakan; satu entri menguji batas Teorema Heine-Borel; dan dua entri terakhir memulai pembuktian teorema nilai ekstrem. Kerjakan prompt pada bab utama sebelum membuka setiap tahap.  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.  Kekompakan Tidak Memaksa Ketertutupan  Misalkan dengan topologi . Jika merupakan subhimpunan kompak dari , haruskah tertutup? Jelaskan.   Tahap 1. Setiap subhimpunan kompak karena berhingga.  Tahap 2. Pilih satu anggota yang komplemennya tidak tercantum dalam .  Tahap 3. Ingat bahwa suatu himpunan tertutup tepat ketika komplemennya terbuka.   Tidak. Sebagai contoh, berhingga sehingga kompak, tetapi . Jadi tidak tertutup.   Ambil . Setiap selimut buka bagi himpunan satu titik mempunyai subselimut yang terdiri atas satu anggota, sehingga kompak. Agar tertutup, komplemennya harus terbuka. Daftar anggota tidak memuat , sehingga komplemen itu tidak terbuka dan tidak tertutup. Kontraeksempel ini membuktikan bahwa kekompakan saja tidak menjamin ketertutupan.   Memulai Bukti Kekompakan Citra  Misalkan dan ruang topologi, kontinu, dan subhimpunan kompak dari . Apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan subhimpunan kompak dari ? Dari mana pembuktian dimulai?   Tahap 1. Tulis definisi kekompakan dengan sebagai himpunan yang diselimuti.  Tahap 2. Karena pernyataan berlaku bagi setiap selimut buka, ambil selimut buka sebarang bagi .  Tahap 3. Sasaran akhirnya adalah memilih sejumlah berhingga indeks yang himpunan -nya masih menyelimuti .   Ambil selimut buka sebarang bagi . Kita harus membuktikan bahwa terdapat indeks dengan .   Definisi menyatakan bahwa kompak jika setiap selimut bukanya mempunyai subselimut berhingga. Karena itu, tetapkan keluarga sebarang dengan setiap terbuka dalam dan Yang harus dihasilkan adalah himpunan indeks berhingga yang memenuhi . Kekompakan yang diketahui berada pada , jadi langkah berikutnya harus mengubah menjadi selimut buka bagi .   Menarik Selimut Buka melalui Prapeta  Misalkan dan ruang topologi, kontinu, kompak, dan selimut buka bagi dalam . Bagaimana kita dapat menemukan selimut buka bagi ? Verifikasikan bahwa keluarga yang diusulkan benar-benar merupakan selimut buka bagi .   Tahap 1. Definisikan .  Tahap 2. Gunakan kekontinuan untuk membuktikan bahwa setiap terbuka dalam .  Tahap 3. Untuk , letakkan dalam salah satu anggota selimut , lalu tarik kembali ke .   Ambil . Setiap terbuka karena kontinu. Jika , maka untuk suatu , sehingga . Jadi keluarga prapeta itu menyelimuti .   Untuk setiap , definisikan . Karena terbuka dalam dan kontinu, terbuka dalam .  Ambil . Titik berada dalam , sedangkan keluarga menyelimuti . Jadi ada dengan . Menurut definisi prapeta, ini ekuivalen dengan . Karena berlaku untuk setiap , diperoleh . Maka benar-benar selimut buka bagi .   Menggunakan Kekompakan Domain  Dalam situasi entri sebelumnya, apa yang diketahui tentang setiap selimut buka bagi , khususnya keluarga ?   Tahap 1. Gunakan hipotesis bahwa kompak.  Tahap 2. Pilih indeks berhingga .  Tahap 3. Tuliskan pernyataan penyelimutan yang dihasilkan untuk .   Kekompakan menghasilkan indeks sedemikian sehingga .   Keluarga telah dibuktikan sebagai selimut buka bagi . Karena kompak, keluarga itu mempunyai subselimut berhingga. Jadi terdapat dengan Kesimpulan ini masih dinyatakan di domain; langkah terakhir adalah mengembalikannya kepada selimut semula di kodomain.   Citra Kontinu Himpunan Kompak  Lengkapilah bukti: jika kontinu dan subhimpunan kompak dari , maka merupakan subhimpunan kompak dari .   Tahap 1. Mulai dengan selimut buka sebarang bagi .  Tahap 2. Tarik selimut itu melalui dan gunakan kekompakan untuk memilih prapeta berhingga.  Tahap 3. Jika , tulis dan gunakan keanggotaan dalam salah satu prapeta terpilih.   Prapeta selimut buka sebarang bagi adalah selimut buka bagi . Subselimut berhingga prapeta yang diberikan oleh kekompakan menentukan subselimut berhingga dari selimut semula bagi . Jadi kompak.   Ambil selimut buka sebarang bagi . Kekontinuan membuat setiap terbuka dalam . Selain itu, keluarga prapeta tersebut menyelimuti : bagi , titik berada dalam suatu , jadi .  Karena kompak, terdapat dengan . Ambil dan pilih dengan . Titik berada dalam suatu , sehingga . Maka . Kita telah memperoleh subselimut berhingga dari selimut buka sebarang, sehingga kompak.   Sasaran Bukti Ketertutupan  Misalkan subhimpunan kompak dari ruang topologi Hausdorff . Untuk membuktikan bahwa tertutup, kita mempertimbangkan . Sifat apa yang harus dimiliki , dan bagaimana sifat itu dapat dibuktikan?   Tahap 1. Gunakan definisi himpunan tertutup melalui komplemennya.  Tahap 2. Untuk menunjukkan suatu himpunan terbuka, ambil titik sebarang .  Tahap 3. Sasaran lokalnya adalah membangun himpunan buka dengan .   Kita harus menunjukkan bahwa terbuka. Caranya, untuk setiap , bangun lingkungan buka yang memuat dan tidak beririsan dengan .   Berdasarkan definisi, tertutup jika dan hanya jika terbuka. Suatu subhimpunan terbuka jika setiap mempunyai lingkungan buka yang termuat dalam . Maka ambil sebarang. Cukup menemukan himpunan buka sedemikian sehingga atau ekuivalen dengan itu, . Sifat Hausdorff akan memisahkan dari setiap titik , dan kekompakan akan mereduksi semua pemisahan itu menjadi sejumlah berhingga.   Memisahkan Titik dari Setiap Titik Himpunan Kompak  Misalkan subhimpunan kompak dari ruang Hausdorff , , dan andaikan tak kosong. Mengapa pengandaian tak kosong boleh dibuat? Untuk setiap , mengapa terdapat himpunan buka saling lepas dan dengan dan ?   Tahap 1. Tangani dahulu kasus .  Tahap 2. Karena , berlaku untuk setiap .  Tahap 3. Terapkan definisi Hausdorff kepada pasangan titik berbeda dan .   Jika , maka sudah tertutup karena komplemennya terbuka. Jika , setiap berbeda dari ; sifat Hausdorff memberi lingkungan buka saling lepas dan .   Kasus tidak memerlukan konstruksi: himpunan kosong tertutup dalam setiap ruang topologi karena terbuka. Karena itu kita boleh melanjutkan dengan asumsi .  Tetapkan . Dari diperoleh . Ruang Hausdorff, sehingga untuk dua titik berbeda tersebut terdapat himpunan buka dan yang memenuhi Konstruksi ini dapat dilakukan untuk setiap .   Mereduksi Pemisahan dengan Kekompakan  Dalam konstruksi sebelumnya, mengapa terdapat bilangan bulat positif dan titik sedemikian sehingga membentuk selimut buka bagi ?   Tahap 1. Setiap berada dalam himpunan buka .  Tahap 2. Karena itu, adalah selimut buka bagi .  Tahap 3. Terapkan kekompakan kepada selimut ini.   Keluarga menyelimuti . Karena kompak, terdapat subselimut berhingga .   Untuk setiap , konstruksi Hausdorff menghasilkan himpunan buka yang memuat . Maka sehingga keluarga merupakan selimut buka bagi . Kekompakan menjamin adanya subselimut berhingga. Jadi ada dengan . Karena pada tahap ini diasumsikan tak kosong, kita dapat mengambil .   Himpunan Kompak dalam Ruang Hausdorff Tertutup  Dengan notasi sebelumnya, carilah subhimpunan terbuka dari yang memuat . Apa yang dapat disimpulkan mengenai ?   Tahap 1. Gunakan irisan berhingga .  Tahap 2. Untuk , pilih dengan dan gunakan .  Tahap 3. Simpulkan bahwa setiap titik komplemen mempunyai lingkungan buka di dalam komplemen.   Himpunan terbuka, memuat , dan tidak beririsan dengan . Jadi terbuka dan tertutup.   Definisikan Ini merupakan irisan berhingga himpunan buka, sehingga terbuka, dan setiap memuat , sehingga .  Ambil . Karena menyelimuti , ada dengan . Di sisi lain, dan . Maka . Jadi , atau .  Titik dipilih sebarang, sehingga setiap titik komplemen memiliki lingkungan buka di dalam komplemen. Maka terbuka dan tertutup. Dengan demikian, setiap subhimpunan kompak dari ruang Hausdorff merupakan himpunan tertutup.   Memulai Bukti Kekompakan Subhimpunan Tertutup  Misalkan ruang topologi kompak dan subhimpunan tertutup dari . Apa yang perlu dilakukan untuk membuktikan bahwa kompak?   Tahap 1. Gunakan definisi kekompakan untuk .  Tahap 2. Ambil selimut buka sebarang bagi .  Tahap 3. Sasaran akhirnya adalah memilih sejumlah berhingga anggota keluarga itu yang masih menyelimuti .   Ambil selimut buka sebarang bagi dan buktikan bahwa selimut tersebut mempunyai subselimut berhingga.   Untuk membuktikan kekompakan, kita tidak boleh memilih selimut yang khusus. Ambil keluarga sebarang yang setiap anggotanya terbuka dalam dan memenuhi . Kita harus menghasilkan indeks berhingga dengan . Kekompakan yang diketahui adalah kekompakan , sehingga selimut bagi perlu diperluas menjadi selimut bagi .   Memperluas Selimut dari Himpunan Tertutup  Misalkan selimut buka bagi subhimpunan tertutup dari ruang kompak . Gunakan selimut tersebut dan fakta bahwa tertutup untuk membuat selimut buka bagi .   Tahap 1. Karena tertutup, terbuka.  Tahap 2. Tambahkan kepada keluarga .  Tahap 3. Periksa secara terpisah titik yang berada dalam dan titik yang berada di luar .   Keluarga merupakan selimut buka bagi .   Karena tertutup dalam , komplemennya terbuka. Setiap berada dalam suatu karena keluarga semula menyelimuti . Setiap berada dalam anggota tambahan . Maka semua anggota keluarga terbuka dan gabungannya memuat seluruh . Jadi adalah selimut buka bagi .   Subhimpunan Tertutup dari Ruang Kompak  Gunakan fakta bahwa kompak untuk menyelesaikan bukti bahwa setiap subhimpunan tertutup dari kompak.   Tahap 1. Terapkan kekompakan kepada selimut .  Tahap 2. Hapus dari subselimut berhingga yang diperoleh, jika himpunan itu terpilih.  Tahap 3. Jelaskan mengapa anggota yang tersisa masih menyelimuti setiap titik .   Kekompakan memberi subselimut berhingga dari keluarga yang diperluas. Setelah dibuang, anggota-anggota yang tersisa tetap menyelimuti . Jadi kompak.   Ambil selimut buka sebarang bagi . Keluarga adalah selimut buka bagi . Karena kompak, ada subselimut berhingga. Anggota-anggota subselimut itu selain mungkin dapat ditulis .  Himpunan tidak memuat satu pun titik . Karena subselimut berhingga tadi menyelimuti , setiap titik harus termuat dalam salah satu . Jadi . Jika , subkeluarga kosong juga cukup. Dengan demikian setiap selimut buka bagi mempunyai subselimut berhingga, sehingga kompak.   Tertutup dan Terbatas Tidak Selalu Kompak  Subhimpunan dari ruang metrik disebut terbatas jika terdapat bilangan real sedemikian sehingga untuk semua . Jelaskan mengapa , sebagai subhimpunan dari dengan metrik diskret, tertutup dan terbatas, tetapi tidak kompak.   Tahap 1. Dalam metrik diskret, ; simpulkan sifat topologi setiap subhimpunan.  Tahap 2. Untuk dua titik berbeda, jarak diskretnya ; pilih batas seragam bagi semua pasangan titik .  Tahap 3. Selimuti dengan semua himpunan satu titik dan periksa subkeluarga berhingga.   Topologi metrik diskret membuat setiap subhimpunan terbuka dan tertutup, jadi tertutup. Semua jarak antartitik paling besar , jadi terbatas. Namun selimut buka tidak mempunyai subselimut berhingga; maka tidak kompak.   Untuk metrik diskret, jika dan jika . Karena , setiap himpunan satu titik terbuka, sehingga setiap subhimpunan merupakan gabungan himpunan-himpunan satu titik dan terbuka. Komplemen setiap subhimpunan juga terbuka. Khususnya, tertutup dalam .  Untuk semua , berlaku . Jadi definisi keterbatasan dipenuhi dengan . Di sisi lain, keluarga terdiri atas himpunan-himpunan buka dan menyelimuti . Setiap subkeluarga berhingga hanya menyelimuti sejumlah berhingga bilangan bulat, bukan seluruh . Maka tidak mempunyai subselimut berhingga dan tidak kompak. Jadi pencirian Heine-Borel tidak berlaku untuk semua ruang metrik.   Kekompakan Citra Fungsi Bernilai Real  Misalkan ruang topologi kompak tak kosong dan fungsi kontinu. Apa yang dapat disimpulkan dari kekontinuan mengenai dalam ?   Tahap 1. Terapkan teorema bahwa citra kontinu himpunan kompak bersifat kompak.  Tahap 2. Gunakan ketakosongan untuk menentukan apakah kosong.  Tahap 3. Di , gunakan Teorema Heine-Borel untuk menerjemahkan kekompakan menjadi sifat tertutup dan terbatas.   Himpunan kompak dan tak kosong. Oleh Teorema Heine-Borel, tertutup dan terbatas dalam .   Ruang kompak dan kontinu, sehingga teorema citra kontinu himpunan kompak menunjukkan bahwa kompak dalam . Karena , pilih ; kemudian , jadi . Teorema Heine-Borel pada menyatakan bahwa himpunan kompak tepat himpunan tertutup dan terbatas. Maka tertutup dan terbatas.   Supremum Citra Dicapai  Dalam situasi sebelumnya, mengapa memiliki batas atas terkecil ? Mengapa harus merupakan unsur ?   Tahap 1. Himpunan tak kosong dan terbatas di atas; gunakan sifat kelengkapan .  Tahap 2. Jika , untuk setiap ada dengan .  Tahap 3. Jadi berada dalam penutupan ; gunakan ketertutupan .   Ketakosongan dan keterbatasan menjamin adanya . Sifat supremum membuat setiap lingkungan beririsan dengan , sehingga . Karena tertutup, .   Himpunan tak kosong dan terbatas, khususnya terbatas di atas. Sifat batas atas terkecil bilangan real menghasilkan .  Untuk setiap , bilangan bukan batas atas bagi ; jika ia batas atas, keminimalan akan gagal. Maka terdapat dengan . Jadi setiap lingkungan buka dari memuat titik , sehingga . Himpunan tertutup, jadi sama dengan penutupannya. Oleh sebab itu ; ekuivalen, ada dengan .   "
+},
+{
+  "id": "o003-c90-ch17-guide-11",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-11",
+  "type": "Pemeriksaan",
+  "number": "Q.11",
+  "title": "Kekompakan Tidak Memaksa Ketertutupan.",
+  "body": "Kekompakan Tidak Memaksa Ketertutupan  Misalkan dengan topologi . Jika merupakan subhimpunan kompak dari , haruskah tertutup? Jelaskan.   Tahap 1. Setiap subhimpunan kompak karena berhingga.  Tahap 2. Pilih satu anggota yang komplemennya tidak tercantum dalam .  Tahap 3. Ingat bahwa suatu himpunan tertutup tepat ketika komplemennya terbuka.   Tidak. Sebagai contoh, berhingga sehingga kompak, tetapi . Jadi tidak tertutup.   Ambil . Setiap selimut buka bagi himpunan satu titik mempunyai subselimut yang terdiri atas satu anggota, sehingga kompak. Agar tertutup, komplemennya harus terbuka. Daftar anggota tidak memuat , sehingga komplemen itu tidak terbuka dan tidak tertutup. Kontraeksempel ini membuktikan bahwa kekompakan saja tidak menjamin ketertutupan.  "
+},
+{
+  "id": "o003-c90-ch17-guide-12",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-12",
+  "type": "Pemeriksaan",
+  "number": "Q.12",
+  "title": "Memulai Bukti Kekompakan Citra.",
+  "body": "Memulai Bukti Kekompakan Citra  Misalkan dan ruang topologi, kontinu, dan subhimpunan kompak dari . Apa yang perlu ditunjukkan untuk membuktikan bahwa merupakan subhimpunan kompak dari ? Dari mana pembuktian dimulai?   Tahap 1. Tulis definisi kekompakan dengan sebagai himpunan yang diselimuti.  Tahap 2. Karena pernyataan berlaku bagi setiap selimut buka, ambil selimut buka sebarang bagi .  Tahap 3. Sasaran akhirnya adalah memilih sejumlah berhingga indeks yang himpunan -nya masih menyelimuti .   Ambil selimut buka sebarang bagi . Kita harus membuktikan bahwa terdapat indeks dengan .   Definisi menyatakan bahwa kompak jika setiap selimut bukanya mempunyai subselimut berhingga. Karena itu, tetapkan keluarga sebarang dengan setiap terbuka dalam dan Yang harus dihasilkan adalah himpunan indeks berhingga yang memenuhi . Kekompakan yang diketahui berada pada , jadi langkah berikutnya harus mengubah menjadi selimut buka bagi .  "
+},
+{
+  "id": "o003-c90-ch17-guide-13",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-13",
+  "type": "Pemeriksaan",
+  "number": "Q.13",
+  "title": "Menarik Selimut Buka melalui Prapeta.",
+  "body": "Menarik Selimut Buka melalui Prapeta  Misalkan dan ruang topologi, kontinu, kompak, dan selimut buka bagi dalam . Bagaimana kita dapat menemukan selimut buka bagi ? Verifikasikan bahwa keluarga yang diusulkan benar-benar merupakan selimut buka bagi .   Tahap 1. Definisikan .  Tahap 2. Gunakan kekontinuan untuk membuktikan bahwa setiap terbuka dalam .  Tahap 3. Untuk , letakkan dalam salah satu anggota selimut , lalu tarik kembali ke .   Ambil . Setiap terbuka karena kontinu. Jika , maka untuk suatu , sehingga . Jadi keluarga prapeta itu menyelimuti .   Untuk setiap , definisikan . Karena terbuka dalam dan kontinu, terbuka dalam .  Ambil . Titik berada dalam , sedangkan keluarga menyelimuti . Jadi ada dengan . Menurut definisi prapeta, ini ekuivalen dengan . Karena berlaku untuk setiap , diperoleh . Maka benar-benar selimut buka bagi .  "
+},
+{
+  "id": "o003-c90-ch17-guide-14",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-14",
+  "type": "Pemeriksaan",
+  "number": "Q.14",
+  "title": "Menggunakan Kekompakan Domain.",
+  "body": "Menggunakan Kekompakan Domain  Dalam situasi entri sebelumnya, apa yang diketahui tentang setiap selimut buka bagi , khususnya keluarga ?   Tahap 1. Gunakan hipotesis bahwa kompak.  Tahap 2. Pilih indeks berhingga .  Tahap 3. Tuliskan pernyataan penyelimutan yang dihasilkan untuk .   Kekompakan menghasilkan indeks sedemikian sehingga .   Keluarga telah dibuktikan sebagai selimut buka bagi . Karena kompak, keluarga itu mempunyai subselimut berhingga. Jadi terdapat dengan Kesimpulan ini masih dinyatakan di domain; langkah terakhir adalah mengembalikannya kepada selimut semula di kodomain.  "
+},
+{
+  "id": "o003-c90-ch17-guide-15",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-15",
+  "type": "Pemeriksaan",
+  "number": "Q.15",
+  "title": "Citra Kontinu Himpunan Kompak.",
+  "body": "Citra Kontinu Himpunan Kompak  Lengkapilah bukti: jika kontinu dan subhimpunan kompak dari , maka merupakan subhimpunan kompak dari .   Tahap 1. Mulai dengan selimut buka sebarang bagi .  Tahap 2. Tarik selimut itu melalui dan gunakan kekompakan untuk memilih prapeta berhingga.  Tahap 3. Jika , tulis dan gunakan keanggotaan dalam salah satu prapeta terpilih.   Prapeta selimut buka sebarang bagi adalah selimut buka bagi . Subselimut berhingga prapeta yang diberikan oleh kekompakan menentukan subselimut berhingga dari selimut semula bagi . Jadi kompak.   Ambil selimut buka sebarang bagi . Kekontinuan membuat setiap terbuka dalam . Selain itu, keluarga prapeta tersebut menyelimuti : bagi , titik berada dalam suatu , jadi .  Karena kompak, terdapat dengan . Ambil dan pilih dengan . Titik berada dalam suatu , sehingga . Maka . Kita telah memperoleh subselimut berhingga dari selimut buka sebarang, sehingga kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-16",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-16",
+  "type": "Pemeriksaan",
+  "number": "Q.16",
+  "title": "Sasaran Bukti Ketertutupan.",
+  "body": "Sasaran Bukti Ketertutupan  Misalkan subhimpunan kompak dari ruang topologi Hausdorff . Untuk membuktikan bahwa tertutup, kita mempertimbangkan . Sifat apa yang harus dimiliki , dan bagaimana sifat itu dapat dibuktikan?   Tahap 1. Gunakan definisi himpunan tertutup melalui komplemennya.  Tahap 2. Untuk menunjukkan suatu himpunan terbuka, ambil titik sebarang .  Tahap 3. Sasaran lokalnya adalah membangun himpunan buka dengan .   Kita harus menunjukkan bahwa terbuka. Caranya, untuk setiap , bangun lingkungan buka yang memuat dan tidak beririsan dengan .   Berdasarkan definisi, tertutup jika dan hanya jika terbuka. Suatu subhimpunan terbuka jika setiap mempunyai lingkungan buka yang termuat dalam . Maka ambil sebarang. Cukup menemukan himpunan buka sedemikian sehingga atau ekuivalen dengan itu, . Sifat Hausdorff akan memisahkan dari setiap titik , dan kekompakan akan mereduksi semua pemisahan itu menjadi sejumlah berhingga.  "
+},
+{
+  "id": "o003-c90-ch17-guide-17",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-17",
+  "type": "Pemeriksaan",
+  "number": "Q.17",
+  "title": "Memisahkan Titik dari Setiap Titik Himpunan Kompak.",
+  "body": "Memisahkan Titik dari Setiap Titik Himpunan Kompak  Misalkan subhimpunan kompak dari ruang Hausdorff , , dan andaikan tak kosong. Mengapa pengandaian tak kosong boleh dibuat? Untuk setiap , mengapa terdapat himpunan buka saling lepas dan dengan dan ?   Tahap 1. Tangani dahulu kasus .  Tahap 2. Karena , berlaku untuk setiap .  Tahap 3. Terapkan definisi Hausdorff kepada pasangan titik berbeda dan .   Jika , maka sudah tertutup karena komplemennya terbuka. Jika , setiap berbeda dari ; sifat Hausdorff memberi lingkungan buka saling lepas dan .   Kasus tidak memerlukan konstruksi: himpunan kosong tertutup dalam setiap ruang topologi karena terbuka. Karena itu kita boleh melanjutkan dengan asumsi .  Tetapkan . Dari diperoleh . Ruang Hausdorff, sehingga untuk dua titik berbeda tersebut terdapat himpunan buka dan yang memenuhi Konstruksi ini dapat dilakukan untuk setiap .  "
+},
+{
+  "id": "o003-c90-ch17-guide-18",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-18",
+  "type": "Pemeriksaan",
+  "number": "Q.18",
+  "title": "Mereduksi Pemisahan dengan Kekompakan.",
+  "body": "Mereduksi Pemisahan dengan Kekompakan  Dalam konstruksi sebelumnya, mengapa terdapat bilangan bulat positif dan titik sedemikian sehingga membentuk selimut buka bagi ?   Tahap 1. Setiap berada dalam himpunan buka .  Tahap 2. Karena itu, adalah selimut buka bagi .  Tahap 3. Terapkan kekompakan kepada selimut ini.   Keluarga menyelimuti . Karena kompak, terdapat subselimut berhingga .   Untuk setiap , konstruksi Hausdorff menghasilkan himpunan buka yang memuat . Maka sehingga keluarga merupakan selimut buka bagi . Kekompakan menjamin adanya subselimut berhingga. Jadi ada dengan . Karena pada tahap ini diasumsikan tak kosong, kita dapat mengambil .  "
+},
+{
+  "id": "o003-c90-ch17-guide-19",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-19",
+  "type": "Pemeriksaan",
+  "number": "Q.19",
+  "title": "Himpunan Kompak dalam Ruang Hausdorff Tertutup.",
+  "body": "Himpunan Kompak dalam Ruang Hausdorff Tertutup  Dengan notasi sebelumnya, carilah subhimpunan terbuka dari yang memuat . Apa yang dapat disimpulkan mengenai ?   Tahap 1. Gunakan irisan berhingga .  Tahap 2. Untuk , pilih dengan dan gunakan .  Tahap 3. Simpulkan bahwa setiap titik komplemen mempunyai lingkungan buka di dalam komplemen.   Himpunan terbuka, memuat , dan tidak beririsan dengan . Jadi terbuka dan tertutup.   Definisikan Ini merupakan irisan berhingga himpunan buka, sehingga terbuka, dan setiap memuat , sehingga .  Ambil . Karena menyelimuti , ada dengan . Di sisi lain, dan . Maka . Jadi , atau .  Titik dipilih sebarang, sehingga setiap titik komplemen memiliki lingkungan buka di dalam komplemen. Maka terbuka dan tertutup. Dengan demikian, setiap subhimpunan kompak dari ruang Hausdorff merupakan himpunan tertutup.  "
+},
+{
+  "id": "o003-c90-ch17-guide-20",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-20",
+  "type": "Pemeriksaan",
+  "number": "Q.20",
+  "title": "Memulai Bukti Kekompakan Subhimpunan Tertutup.",
+  "body": "Memulai Bukti Kekompakan Subhimpunan Tertutup  Misalkan ruang topologi kompak dan subhimpunan tertutup dari . Apa yang perlu dilakukan untuk membuktikan bahwa kompak?   Tahap 1. Gunakan definisi kekompakan untuk .  Tahap 2. Ambil selimut buka sebarang bagi .  Tahap 3. Sasaran akhirnya adalah memilih sejumlah berhingga anggota keluarga itu yang masih menyelimuti .   Ambil selimut buka sebarang bagi dan buktikan bahwa selimut tersebut mempunyai subselimut berhingga.   Untuk membuktikan kekompakan, kita tidak boleh memilih selimut yang khusus. Ambil keluarga sebarang yang setiap anggotanya terbuka dalam dan memenuhi . Kita harus menghasilkan indeks berhingga dengan . Kekompakan yang diketahui adalah kekompakan , sehingga selimut bagi perlu diperluas menjadi selimut bagi .  "
+},
+{
+  "id": "o003-c90-ch17-guide-21",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-21",
+  "type": "Pemeriksaan",
+  "number": "Q.21",
+  "title": "Memperluas Selimut dari Himpunan Tertutup.",
+  "body": "Memperluas Selimut dari Himpunan Tertutup  Misalkan selimut buka bagi subhimpunan tertutup dari ruang kompak . Gunakan selimut tersebut dan fakta bahwa tertutup untuk membuat selimut buka bagi .   Tahap 1. Karena tertutup, terbuka.  Tahap 2. Tambahkan kepada keluarga .  Tahap 3. Periksa secara terpisah titik yang berada dalam dan titik yang berada di luar .   Keluarga merupakan selimut buka bagi .   Karena tertutup dalam , komplemennya terbuka. Setiap berada dalam suatu karena keluarga semula menyelimuti . Setiap berada dalam anggota tambahan . Maka semua anggota keluarga terbuka dan gabungannya memuat seluruh . Jadi adalah selimut buka bagi .  "
+},
+{
+  "id": "o003-c90-ch17-guide-22",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-22",
+  "type": "Pemeriksaan",
+  "number": "Q.22",
+  "title": "Subhimpunan Tertutup dari Ruang Kompak.",
+  "body": "Subhimpunan Tertutup dari Ruang Kompak  Gunakan fakta bahwa kompak untuk menyelesaikan bukti bahwa setiap subhimpunan tertutup dari kompak.   Tahap 1. Terapkan kekompakan kepada selimut .  Tahap 2. Hapus dari subselimut berhingga yang diperoleh, jika himpunan itu terpilih.  Tahap 3. Jelaskan mengapa anggota yang tersisa masih menyelimuti setiap titik .   Kekompakan memberi subselimut berhingga dari keluarga yang diperluas. Setelah dibuang, anggota-anggota yang tersisa tetap menyelimuti . Jadi kompak.   Ambil selimut buka sebarang bagi . Keluarga adalah selimut buka bagi . Karena kompak, ada subselimut berhingga. Anggota-anggota subselimut itu selain mungkin dapat ditulis .  Himpunan tidak memuat satu pun titik . Karena subselimut berhingga tadi menyelimuti , setiap titik harus termuat dalam salah satu . Jadi . Jika , subkeluarga kosong juga cukup. Dengan demikian setiap selimut buka bagi mempunyai subselimut berhingga, sehingga kompak.  "
+},
+{
+  "id": "o003-c90-ch17-guide-23",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-23",
+  "type": "Pemeriksaan",
+  "number": "Q.23",
+  "title": "Tertutup dan Terbatas Tidak Selalu Kompak.",
+  "body": "Tertutup dan Terbatas Tidak Selalu Kompak  Subhimpunan dari ruang metrik disebut terbatas jika terdapat bilangan real sedemikian sehingga untuk semua . Jelaskan mengapa , sebagai subhimpunan dari dengan metrik diskret, tertutup dan terbatas, tetapi tidak kompak.   Tahap 1. Dalam metrik diskret, ; simpulkan sifat topologi setiap subhimpunan.  Tahap 2. Untuk dua titik berbeda, jarak diskretnya ; pilih batas seragam bagi semua pasangan titik .  Tahap 3. Selimuti dengan semua himpunan satu titik dan periksa subkeluarga berhingga.   Topologi metrik diskret membuat setiap subhimpunan terbuka dan tertutup, jadi tertutup. Semua jarak antartitik paling besar , jadi terbatas. Namun selimut buka tidak mempunyai subselimut berhingga; maka tidak kompak.   Untuk metrik diskret, jika dan jika . Karena , setiap himpunan satu titik terbuka, sehingga setiap subhimpunan merupakan gabungan himpunan-himpunan satu titik dan terbuka. Komplemen setiap subhimpunan juga terbuka. Khususnya, tertutup dalam .  Untuk semua , berlaku . Jadi definisi keterbatasan dipenuhi dengan . Di sisi lain, keluarga terdiri atas himpunan-himpunan buka dan menyelimuti . Setiap subkeluarga berhingga hanya menyelimuti sejumlah berhingga bilangan bulat, bukan seluruh . Maka tidak mempunyai subselimut berhingga dan tidak kompak. Jadi pencirian Heine-Borel tidak berlaku untuk semua ruang metrik.  "
+},
+{
+  "id": "o003-c90-ch17-guide-24",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-24",
+  "type": "Pemeriksaan",
+  "number": "Q.24",
+  "title": "Kekompakan Citra Fungsi Bernilai Real.",
+  "body": "Kekompakan Citra Fungsi Bernilai Real  Misalkan ruang topologi kompak tak kosong dan fungsi kontinu. Apa yang dapat disimpulkan dari kekontinuan mengenai dalam ?   Tahap 1. Terapkan teorema bahwa citra kontinu himpunan kompak bersifat kompak.  Tahap 2. Gunakan ketakosongan untuk menentukan apakah kosong.  Tahap 3. Di , gunakan Teorema Heine-Borel untuk menerjemahkan kekompakan menjadi sifat tertutup dan terbatas.   Himpunan kompak dan tak kosong. Oleh Teorema Heine-Borel, tertutup dan terbatas dalam .   Ruang kompak dan kontinu, sehingga teorema citra kontinu himpunan kompak menunjukkan bahwa kompak dalam . Karena , pilih ; kemudian , jadi . Teorema Heine-Borel pada menyatakan bahwa himpunan kompak tepat himpunan tertutup dan terbatas. Maka tertutup dan terbatas.  "
+},
+{
+  "id": "o003-c90-ch17-guide-25",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-b.html#o003-c90-ch17-guide-25",
+  "type": "Pemeriksaan",
+  "number": "Q.25",
+  "title": "Supremum Citra Dicapai.",
+  "body": "Supremum Citra Dicapai  Dalam situasi sebelumnya, mengapa memiliki batas atas terkecil ? Mengapa harus merupakan unsur ?   Tahap 1. Himpunan tak kosong dan terbatas di atas; gunakan sifat kelengkapan .  Tahap 2. Jika , untuk setiap ada dengan .  Tahap 3. Jadi berada dalam penutupan ; gunakan ketertutupan .   Ketakosongan dan keterbatasan menjamin adanya . Sifat supremum membuat setiap lingkungan beririsan dengan , sehingga . Karena tertutup, .   Himpunan tak kosong dan terbatas, khususnya terbatas di atas. Sifat batas atas terkecil bilangan real menghasilkan .  Untuk setiap , bilangan bukan batas atas bagi ; jika ia batas atas, keminimalan akan gagal. Maka terdapat dengan . Jadi setiap lingkungan buka dari memuat titik , sehingga . Himpunan tertutup, jadi sama dengan penutupannya. Oleh sebab itu ; ekuivalen, ada dengan .  "
+},
+{
+  "id": "o003-c90-ch17-source-guides-c",
+  "level": "1",
+  "url": "o003-c90-ch17-source-guides-c.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Belajar Mandiri: Nilai Ekstrem, Fraktal, dan Latihan Kekompakan",
+  "body": " Panduan Belajar Mandiri: Nilai Ekstrem, Fraktal, dan Latihan Kekompakan  Empat belas panduan ini mencakup kejadian prompt sumber 26 sampai 40. Tujuh panduan pertama menutup teorema nilai ekstrem dan mengembangkan metrik Hausdorff serta konstruksi segitiga Sierpinski. Tujuh panduan berikutnya memulai latihan bab tentang topologi indiskret, perbandingan topologi, dan operasi himpunan pada subhimpunan kompak. Kejadian sumber ke-34 merupakan duplikat kejadian ke-33, sehingga keduanya diwakili oleh satu entri kanonis .  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.  Melengkapi Teorema Nilai Ekstrem  Misalkan ruang topologi kompak tak kosong dan fungsi kontinu. Lengkapilah bukti bahwa mencapai nilai maksimum dan nilai minimum pada .   Tahap 1. Gunakan kekontinuan untuk menunjukkan bahwa kompak dan gunakan ketakosongan .  Tahap 2. Terapkan Teorema Heine–Borel dan sifat kelengkapan kepada .  Tahap 3. Tunjukkan bahwa supremum dan infimum berada dalam , lalu tarik keduanya kembali ke titik-titik domain.   Citra kompak dan tak kosong, sehingga tertutup dan terbatas dalam . Supremum serta infimumnya ada dan, karena tertutup, keduanya merupakan anggota . Jadi mencapai maksimum dan minimumnya.   Karena kompak dan kontinu, teorema citra kontinu himpunan kompak menyatakan bahwa kompak dalam . Ketakosongan memberi suatu , sehingga dan tak kosong. Menurut Teorema Heine–Borel, tertutup dan terbatas.  Karena tak kosong dan terbatas di atas, bilangan ada. Untuk setiap , sifat supremum memberi dengan . Maka setiap lingkungan beririsan dengan , sehingga . Ada dengan , dan nilai ini merupakan maksimum .  Dengan cara yang sama, keterbatasan di bawah menghasilkan . Sifat infimum menunjukkan , sehingga ada dengan . Jadi mencapai nilai maksimum dan minimum.   Jarak Terarah Tidak Simetris  Untuk subhimpunan kompak tak kosong dari ruang metrik, definisikan . Berikan contoh subhimpunan kompak dengan metrik Euklides yang memenuhi .   Tahap 1. Cukup bekerja dalam .  Tahap 2. Pilih satu himpunan yang termuat secara sejati dalam himpunan lainnya.  Tahap 3. Coba dan , lalu hitung kedua maksimum secara langsung.   Ambil dan dalam . Maka , sedangkan .   Kedua himpunan berhingga, sehingga kompak. Untuk satu-satunya titik , jaraknya ke adalah . Karena itu .  Sebaliknya, jarak titik ke adalah , sedangkan jarak titik ke adalah . Oleh sebab itu Jadi jarak terarah ini tidak simetris.   Menghitung Tiga Jarak Hausdorff  Dalam , misalkan lingkaran satuan berpusat di titik asal, garis luar persegi tersisip dengan titik sudut , dan . Untuk , tentukan , , dan . Verifikasikan .   Tahap 1. Karena , dua dari jarak terarah menuju atau langsung bernilai nol.  Tahap 2. Pada setiap kuadran, sisi terletak pada garis berbentuk ; titik terjauh antara lingkaran dan sisi terjadi pada arah diagonal.  Tahap 3. Untuk jarak menuju , periksa titik dan .   Nilainya adalah , , dan . Karena itu .   Di kuadran pertama, sisi persegi adalah ruas . Untuk di kuadran itu, jaraknya ke ruas tersebut adalah ; nilai maksimum terjadi saat dan sama dengan . Dengan simetri, ini memberi . Titik pada sisi persegi yang terjauh dari lingkaran adalah titik tengah sisi, yang berjari-jari ; jaraknya ke lingkaran juga . Jadi .  Karena , berlaku . Untuk , kuadrat jarak ke titik dan masing-masing adalah dan . Jarak yang lebih kecil mempunyai kuadrat , yang maksimum saat . Maka dan .  Demikian pula , sehingga . Titik-titik pada berjarak dari titik terdekat dalam , dan tidak ada titik pada keempat sisi yang berjarak lebih besar. Jadi . Akhirnya,    Jarak Hausdorff Merupakan Metrik  Misalkan ruang metrik dan koleksi semua subhimpunan kompak tak kosong dari . Untuk , tetapkan Buktikan bahwa adalah metrik pada .   Tahap 1. Nonnegativitas dan simetri mengikuti definisi; untuk pemisahan, gunakan fakta bahwa subhimpunan kompak ruang metrik tertutup.  Tahap 2. Untuk , pilih yang mencapai jarak dari ke .  Tahap 3. Buktikan ketaksamaan terarah , lalu ulangi dengan arah terbalik dan ambil maksimum.    Rubrik. Bukti lengkap harus memverifikasi nonnegativitas, simetri, sifat , dan ketaksamaan segitiga. Pada langkah terakhir, kedua ketaksamaan terarah harus digabungkan, bukan mengasumsikan simetris.   Jelas dan . Jika , setiap titik mempunyai jarak nol ke himpunan yang sama, sehingga . Sebaliknya, andaikan . Untuk setiap , berlaku . Karena kompak, minimum itu dicapai; maka ada dengan , sehingga dan . Argumen yang sama dari memberi . Jadi .  Sekarang ambil . Untuk setiap , kekompakan memberi dengan . Ketaksamaan segitiga pada memberi Mengambil maksimum terhadap menghasilkan .  Dengan menukar arah diperoleh . Kedua ruas kanan masing-masing tidak melebihi . Karena itu Semua aksioma metrik telah terpenuhi.   Jarak Antaraproksimasi Segitiga Sierpinski  Misalkan garis luar segitiga sama sisi dengan panjang sisi . Pada setiap tahap, terapkan tiga kontraksi berfaktor yang menempatkan salinan pada ketiga titik sudut, dan tetapkan sebagai gabungan ketiga citra . Tentukan dan, untuk setiap , tentukan .   Tahap 1. Perhatikan bahwa , sehingga hanya jarak dari garis baru menuju yang perlu dihitung.  Tahap 2. Pada tahap pertama, titik terjauh pada setiap sisi segitiga tengah adalah titik tengah sisi itu.  Tahap 3. Setiap tahap berikutnya merupakan salinan berskala dari geometri tahap pertama.   Berlaku dan untuk .   Ketiga salinan setengah ukuran mempertahankan seluruh batas luar dan menambahkan tiga sisi segitiga tengah. Jadi dan . Tinggi segitiga sama sisi bersisi adalah . Pada salah satu sisi segitiga tengah, jarak menuju batas luar paling besar di titik tengah sisi tersebut. Jarak titik itu ke salah satu dari dua sisi luar terdekat adalah . Dengan simetri, tidak ada titik baru yang lebih jauh. Maka dan .  Secara induktif . Perbedaan baru pada tahap muncul di dalam segitiga-segitiga bersisi . Geometrinya sebangun dengan tahap pertama dengan faktor skala . Jarak Hausdorff ikut berskala linear, sehingga Rumus ini juga menghasilkan nilai tahap pertama ketika .   Barisan Cauchy Rasional dengan Limit Irasional  Untuk , misalkan . Setiap rasional. Jelaskan mengapa suku-sukunya menjadi sedekat yang diinginkan satu sama lain tetapi barisan tersebut tidak konvergen dalam . Jelaskan pula mengapa konvergen dalam .   Tahap 1. Gunakan limit klasik .  Tahap 2. Setiap barisan yang konvergen dalam ruang metrik merupakan barisan Cauchy; metrik pada adalah pembatasan metrik pada .  Tahap 3. Gunakan keirasionalan dan keunikan limit dalam .   Barisan tersebut konvergen ke dalam , sehingga Cauchy. Karena , ia tidak memiliki limit dalam meskipun semua sukunya rasional.   Ekspansi binomial menunjukkan setiap rasional, dan limit klasik mendefinisikan bilangan Euler melalui Jadi konvergen dalam . Setiap barisan konvergen adalah Cauchy: untuk , pilih sehingga untuk . Jika , maka . Karena jarak pada sama dengan jarak yang diwarisi dari , barisan ini juga Cauchy sebagai barisan dalam .  Andaikan konvergen dalam ke suatu . Penyertaan mempertahankan jarak, sehingga barisan yang sama juga akan konvergen ke dalam . Keunikan limit dalam ruang metrik memaksa , bertentangan dengan fakta bahwa irasional. Maka tidak memuat limit barisan Cauchy ini, sedangkan memuatnya.   Barisan Aproksimasi Sierpinski Bersifat Cauchy  Dengan konstruksi sebelumnya dan metrik Hausdorff , tunjukkan bahwa merupakan barisan Cauchy dalam . Gunakan fakta bahwa .   Tahap 1. Untuk , terapkan ketaksamaan segitiga berulang kali sepanjang .  Tahap 2. Batasi jumlah yang diperoleh dengan ekor deret geometri tak hingga.  Tahap 3. Pilih sehingga batas ekor tersebut lebih kecil daripada .   Untuk , . Batas ini menuju nol ketika , sehingga merupakan barisan Cauchy.   Jika , ketaksamaan segitiga untuk metrik Hausdorff memberi Jumlah berhingga ini lebih kecil daripada ekor deret geometri tak hingga:   Diberikan , pilih sedemikian sehingga . Untuk setiap , andaikan tanpa kehilangan keumuman bahwa ; ketaksamaan di atas memberi . Kasus langsung. Jadi Cauchy dalam . Kelengkapan ruang ini kemudian menjamin adanya limit kompak, yaitu segitiga Sierpinski.   Subhimpunan Kompak dalam Topologi Indiskret  Tentukan semua subhimpunan kompak dari ruang topologi dengan topologi indiskret .   Tahap 1. Tangani subhimpunan kosong secara terpisah.  Tahap 2. Jika , tentukan satu-satunya himpunan buka yang dapat memuat titik .  Tahap 3. Periksa apa yang wajib termuat dalam setiap selimut buka bagi .   Setiap subhimpunan kompak dalam topologi indiskret.   Himpunan kosong kompak karena subkeluarga kosong merupakan subselimut berhingga bagi setiap selimutnya. Sekarang ambil tak kosong dan suatu selimut buka bagi . Dalam topologi indiskret, satu-satunya himpunan buka tak kosong adalah . Karena selimut harus memuat setiap titik , keluarga harus memuat . Subkeluarga satu anggota menyelimuti . Jadi setiap subhimpunan kompak.   Kekompakan pada Topologi yang Lebih Halus atau Lebih Kasar  Misalkan dan topologi pada himpunan dengan . Tentukan implikasi yang benar antara kekompakan dan kekompakan , dan berikan alasan atau kontraeksempel untuk setiap arah.   Tahap 1. Setiap himpunan -buka juga -buka.  Tahap 2. Mulailah dari selimut yang memiliki lebih sedikit kemungkinan anggota buka.  Tahap 3. Untuk menyangkal arah sebaliknya, bandingkan topologi indiskret dan diskret pada himpunan tak berhingga.   Jika kompak, maka kompak. Kebalikannya tidak selalu benar; pada himpunan tak berhingga, topologi indiskret kompak sedangkan topologi diskret tidak kompak.   Andaikan kompak. Setiap selimut buka bagi dalam topologi juga merupakan selimut buka dalam , karena . Kekompakan terhadap memberi subselimut berhingga dari . Anggota-anggota terpilih tetap -buka, sehingga kompak.  Untuk arah sebaliknya, ambil himpunan tak berhingga , , dan . Topologi lebih kasar dan kompak karena setiap selimut bagi harus memuat . Namun keluarga semua singleton adalah selimut -buka tanpa subselimut berhingga. Jadi kekompakan pada topologi yang lebih kasar tidak memaksa kekompakan pada topologi yang lebih halus.   Topologi yang Ditentukan oleh Bilangan Bulat Genap  Misalkan himpunan bilangan bulat genap dan . Buktikan bahwa adalah suatu topologi pada .   Tahap 1. Verifikasikan bahwa dan berada dalam .  Tahap 2. Dalam gabungan sebarang anggota , pisahkan kasus ketika salah satu anggotanya adalah .  Tahap 3. Gunakan pembagian kasus yang sama untuk irisan berhingga.   Koleksi memuat , tertutup terhadap gabungan sebarang, dan tertutup terhadap irisan berhingga; jadi adalah topologi pada .   Karena , berlaku ; menurut definisi juga . Ambil keluarga sebarang . Jika suatu , gabungannya adalah dan berada dalam . Jika tidak, setiap , maka dan gabungan itu juga anggota .  Untuk irisan berhingga , jika semua , irisannya adalah . Jika setidaknya satu anggota merupakan subhimpunan , seluruh irisan termuat dalam anggota tersebut, sehingga merupakan subhimpunan dan berada dalam . Jadi ketiga aksioma topologi terpenuhi.   Menentukan Semua Subhimpunan Kompak  Dalam ruang dengan , tentukan semua subhimpunan kompak dan buktikan jawaban Anda.   Tahap 1. Jika suatu subhimpunan memuat bilangan ganjil, tentukan himpunan buka mana yang dapat memuat titik itu.  Tahap 2. Jika subhimpunan termuat dalam , topologi subruangnya bersifat diskret.  Tahap 3. Dalam ruang diskret, keluarga singleton menguji kekompakan himpunan tak berhingga.   Subhimpunan kompak tepat ketika berhingga atau memuat setidaknya satu bilangan ganjil.   Jika memuat bilangan ganjil , satu-satunya anggota yang memuat adalah , sebab semua anggota lain termuat dalam . Maka setiap selimut buka bagi harus memuat ; subkeluarga merupakan subselimut berhingga. Jadi setiap subhimpunan yang memuat bilangan ganjil kompak. Setiap subhimpunan berhingga juga kompak dalam sebarang ruang topologi.  Tersisa kasus yang tak berhingga. Untuk setiap , singleton merupakan subhimpunan , sehingga terbuka dalam . Keluarga menyelimuti , tetapi setiap subkeluarga berhingga hanya menyelimuti sejumlah berhingga titik. Jadi tidak kompak. Kedua arah membuktikan pencirian tersebut.   Irisan Dua Subhimpunan Kompak Tidak Selalu Kompak  Buktikan atau sangkal pernyataan berikut: jika dan adalah subhimpunan kompak dari ruang topologi , maka juga kompak.   Tahap 1. Pernyataan menjadi benar dalam ruang Hausdorff, jadi carilah ruang non-Hausdorff.  Tahap 2. Gunakan ruang dari dua panduan sebelumnya.  Tahap 3. Tambahkan bilangan ganjil yang berbeda kepada himpunan semua bilangan genap.   Pernyataan salah. Dalam ruang di atas, ambil dan . Keduanya kompak, tetapi tidak kompak.   Gunakan dengan . Himpunan memuat bilangan ganjil. Setiap selimut buka bagi harus memuat , sehingga kompak. Argumen yang sama berlaku bagi .  Namun . Keluarga singleton merupakan selimut buka bagi , sebab setiap singleton genap berada dalam . Tidak ada subkeluarga berhingga yang menyelimuti seluruh . Maka tidak kompak, sehingga pernyataan umum tersebut tersangkal.   Gabungan Berhingga Subhimpunan Kompak  Misalkan ruang topologi. Buktikan bahwa gabungan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .   Tahap 1. Tulis gabungan sebagai dan ambil selimut buka sebarang bagi .  Tahap 2. Keluarga yang sama menyelimuti setiap ; gunakan kekompakan masing-masing.  Tahap 3. Gabungkan semua subselimut berhingga yang diperoleh dan gunakan keberhinggaan jumlah indeks .   Dari selimut buka bagi , pilih subselimut berhingga untuk setiap . Gabungan dari sejumlah berhingga keluarga berhingga itu merupakan subselimut berhingga bagi seluruh gabungan.   Misalkan subhimpunan kompak dari dan selimut buka sebarang bagi . Untuk setiap , keluarga juga menyelimuti . Kekompakan memberi subkeluarga berhingga yang menyelimuti .  Keluarga berhingga, karena merupakan gabungan dari sejumlah berhingga himpunan berhingga. Jika , maka untuk suatu , sehingga termuat dalam suatu anggota . Jadi menyelimuti . Karena selimut awal sebarang, kompak.   Irisan Berhingga dalam Ruang Hausdorff  Misalkan ruang Hausdorff. Buktikan bahwa irisan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .   Tahap 1. Dalam ruang Hausdorff, setiap subhimpunan kompak tertutup.  Tahap 2. Irisan berhingga himpunan tertutup tertutup dalam .  Tahap 3. Pandang irisan tersebut sebagai subhimpunan tertutup dari salah satu himpunan kompak.   Jika kompak, semuanya tertutup karena Hausdorff. Irisan tertutup dalam , sehingga kompak.   Misalkan subhimpunan kompak dari , dengan . Karena Hausdorff, setiap tertutup dalam . Maka tertutup dalam . Khususnya, untuk yang tertutup dalam , sehingga tertutup dalam subruang .  Subhimpunan tertutup dari ruang kompak bersifat kompak. Karena kompak dan tertutup dalam , maka kompak. Untuk , kesimpulan adalah hipotesis itu sendiri. Jadi setiap irisan dari sejumlah positif berhingga subhimpunan kompak bersifat kompak.   "
+},
+{
+  "id": "o003-c90-ch17-guide-26",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-guide-26",
+  "type": "Pemeriksaan",
+  "number": "Q.26",
+  "title": "Melengkapi Teorema Nilai Ekstrem.",
+  "body": "Melengkapi Teorema Nilai Ekstrem  Misalkan ruang topologi kompak tak kosong dan fungsi kontinu. Lengkapilah bukti bahwa mencapai nilai maksimum dan nilai minimum pada .   Tahap 1. Gunakan kekontinuan untuk menunjukkan bahwa kompak dan gunakan ketakosongan .  Tahap 2. Terapkan Teorema Heine–Borel dan sifat kelengkapan kepada .  Tahap 3. Tunjukkan bahwa supremum dan infimum berada dalam , lalu tarik keduanya kembali ke titik-titik domain.   Citra kompak dan tak kosong, sehingga tertutup dan terbatas dalam . Supremum serta infimumnya ada dan, karena tertutup, keduanya merupakan anggota . Jadi mencapai maksimum dan minimumnya.   Karena kompak dan kontinu, teorema citra kontinu himpunan kompak menyatakan bahwa kompak dalam . Ketakosongan memberi suatu , sehingga dan tak kosong. Menurut Teorema Heine–Borel, tertutup dan terbatas.  Karena tak kosong dan terbatas di atas, bilangan ada. Untuk setiap , sifat supremum memberi dengan . Maka setiap lingkungan beririsan dengan , sehingga . Ada dengan , dan nilai ini merupakan maksimum .  Dengan cara yang sama, keterbatasan di bawah menghasilkan . Sifat infimum menunjukkan , sehingga ada dengan . Jadi mencapai nilai maksimum dan minimum.  "
+},
+{
+  "id": "o003-c90-ch17-guide-27",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-guide-27",
+  "type": "Pemeriksaan",
+  "number": "Q.27",
+  "title": "Jarak Terarah Tidak Simetris.",
+  "body": "Jarak Terarah Tidak Simetris  Untuk subhimpunan kompak tak kosong dari ruang metrik, definisikan . Berikan contoh subhimpunan kompak dengan metrik Euklides yang memenuhi .   Tahap 1. Cukup bekerja dalam .  Tahap 2. Pilih satu himpunan yang termuat secara sejati dalam himpunan lainnya.  Tahap 3. Coba dan , lalu hitung kedua maksimum secara langsung.   Ambil dan dalam . Maka , sedangkan .   Kedua himpunan berhingga, sehingga kompak. Untuk satu-satunya titik , jaraknya ke adalah . Karena itu .  Sebaliknya, jarak titik ke adalah , sedangkan jarak titik ke adalah . Oleh sebab itu Jadi jarak terarah ini tidak simetris.  "
+},
+{
+  "id": "o003-c90-ch17-guide-28",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-guide-28",
+  "type": "Pemeriksaan",
+  "number": "Q.28",
+  "title": "Menghitung Tiga Jarak Hausdorff.",
+  "body": "Menghitung Tiga Jarak Hausdorff  Dalam , misalkan lingkaran satuan berpusat di titik asal, garis luar persegi tersisip dengan titik sudut , dan . Untuk , tentukan , , dan . Verifikasikan .   Tahap 1. Karena , dua dari jarak terarah menuju atau langsung bernilai nol.  Tahap 2. Pada setiap kuadran, sisi terletak pada garis berbentuk ; titik terjauh antara lingkaran dan sisi terjadi pada arah diagonal.  Tahap 3. Untuk jarak menuju , periksa titik dan .   Nilainya adalah , , dan . Karena itu .   Di kuadran pertama, sisi persegi adalah ruas . Untuk di kuadran itu, jaraknya ke ruas tersebut adalah ; nilai maksimum terjadi saat dan sama dengan . Dengan simetri, ini memberi . Titik pada sisi persegi yang terjauh dari lingkaran adalah titik tengah sisi, yang berjari-jari ; jaraknya ke lingkaran juga . Jadi .  Karena , berlaku . Untuk , kuadrat jarak ke titik dan masing-masing adalah dan . Jarak yang lebih kecil mempunyai kuadrat , yang maksimum saat . Maka dan .  Demikian pula , sehingga . Titik-titik pada berjarak dari titik terdekat dalam , dan tidak ada titik pada keempat sisi yang berjarak lebih besar. Jadi . Akhirnya,   "
+},
+{
+  "id": "o003-c90-ch17-guide-29",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-guide-29",
+  "type": "Pemeriksaan",
+  "number": "Q.29",
+  "title": "Jarak Hausdorff Merupakan Metrik.",
+  "body": "Jarak Hausdorff Merupakan Metrik  Misalkan ruang metrik dan koleksi semua subhimpunan kompak tak kosong dari . Untuk , tetapkan Buktikan bahwa adalah metrik pada .   Tahap 1. Nonnegativitas dan simetri mengikuti definisi; untuk pemisahan, gunakan fakta bahwa subhimpunan kompak ruang metrik tertutup.  Tahap 2. Untuk , pilih yang mencapai jarak dari ke .  Tahap 3. Buktikan ketaksamaan terarah , lalu ulangi dengan arah terbalik dan ambil maksimum.    Rubrik. Bukti lengkap harus memverifikasi nonnegativitas, simetri, sifat , dan ketaksamaan segitiga. Pada langkah terakhir, kedua ketaksamaan terarah harus digabungkan, bukan mengasumsikan simetris.   Jelas dan . Jika , setiap titik mempunyai jarak nol ke himpunan yang sama, sehingga . Sebaliknya, andaikan . Untuk setiap , berlaku . Karena kompak, minimum itu dicapai; maka ada dengan , sehingga dan . Argumen yang sama dari memberi . Jadi .  Sekarang ambil . Untuk setiap , kekompakan memberi dengan . Ketaksamaan segitiga pada memberi Mengambil maksimum terhadap menghasilkan .  Dengan menukar arah diperoleh . Kedua ruas kanan masing-masing tidak melebihi . Karena itu Semua aksioma metrik telah terpenuhi.  "
+},
+{
+  "id": "o003-c90-ch17-guide-30",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-guide-30",
+  "type": "Pemeriksaan",
+  "number": "Q.30",
+  "title": "Jarak Antaraproksimasi Segitiga Sierpinski.",
+  "body": "Jarak Antaraproksimasi Segitiga Sierpinski  Misalkan garis luar segitiga sama sisi dengan panjang sisi . Pada setiap tahap, terapkan tiga kontraksi berfaktor yang menempatkan salinan pada ketiga titik sudut, dan tetapkan sebagai gabungan ketiga citra . Tentukan dan, untuk setiap , tentukan .   Tahap 1. Perhatikan bahwa , sehingga hanya jarak dari garis baru menuju yang perlu dihitung.  Tahap 2. Pada tahap pertama, titik terjauh pada setiap sisi segitiga tengah adalah titik tengah sisi itu.  Tahap 3. Setiap tahap berikutnya merupakan salinan berskala dari geometri tahap pertama.   Berlaku dan untuk .   Ketiga salinan setengah ukuran mempertahankan seluruh batas luar dan menambahkan tiga sisi segitiga tengah. Jadi dan . Tinggi segitiga sama sisi bersisi adalah . Pada salah satu sisi segitiga tengah, jarak menuju batas luar paling besar di titik tengah sisi tersebut. Jarak titik itu ke salah satu dari dua sisi luar terdekat adalah . Dengan simetri, tidak ada titik baru yang lebih jauh. Maka dan .  Secara induktif . Perbedaan baru pada tahap muncul di dalam segitiga-segitiga bersisi . Geometrinya sebangun dengan tahap pertama dengan faktor skala . Jarak Hausdorff ikut berskala linear, sehingga Rumus ini juga menghasilkan nilai tahap pertama ketika .  "
+},
+{
+  "id": "o003-c90-ch17-guide-31",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-guide-31",
+  "type": "Pemeriksaan",
+  "number": "Q.31",
+  "title": "Barisan Cauchy Rasional dengan Limit Irasional.",
+  "body": "Barisan Cauchy Rasional dengan Limit Irasional  Untuk , misalkan . Setiap rasional. Jelaskan mengapa suku-sukunya menjadi sedekat yang diinginkan satu sama lain tetapi barisan tersebut tidak konvergen dalam . Jelaskan pula mengapa konvergen dalam .   Tahap 1. Gunakan limit klasik .  Tahap 2. Setiap barisan yang konvergen dalam ruang metrik merupakan barisan Cauchy; metrik pada adalah pembatasan metrik pada .  Tahap 3. Gunakan keirasionalan dan keunikan limit dalam .   Barisan tersebut konvergen ke dalam , sehingga Cauchy. Karena , ia tidak memiliki limit dalam meskipun semua sukunya rasional.   Ekspansi binomial menunjukkan setiap rasional, dan limit klasik mendefinisikan bilangan Euler melalui Jadi konvergen dalam . Setiap barisan konvergen adalah Cauchy: untuk , pilih sehingga untuk . Jika , maka . Karena jarak pada sama dengan jarak yang diwarisi dari , barisan ini juga Cauchy sebagai barisan dalam .  Andaikan konvergen dalam ke suatu . Penyertaan mempertahankan jarak, sehingga barisan yang sama juga akan konvergen ke dalam . Keunikan limit dalam ruang metrik memaksa , bertentangan dengan fakta bahwa irasional. Maka tidak memuat limit barisan Cauchy ini, sedangkan memuatnya.  "
+},
+{
+  "id": "o003-c90-ch17-guide-32",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-guide-32",
+  "type": "Pemeriksaan",
+  "number": "Q.32",
+  "title": "Barisan Aproksimasi Sierpinski Bersifat Cauchy.",
+  "body": "Barisan Aproksimasi Sierpinski Bersifat Cauchy  Dengan konstruksi sebelumnya dan metrik Hausdorff , tunjukkan bahwa merupakan barisan Cauchy dalam . Gunakan fakta bahwa .   Tahap 1. Untuk , terapkan ketaksamaan segitiga berulang kali sepanjang .  Tahap 2. Batasi jumlah yang diperoleh dengan ekor deret geometri tak hingga.  Tahap 3. Pilih sehingga batas ekor tersebut lebih kecil daripada .   Untuk , . Batas ini menuju nol ketika , sehingga merupakan barisan Cauchy.   Jika , ketaksamaan segitiga untuk metrik Hausdorff memberi Jumlah berhingga ini lebih kecil daripada ekor deret geometri tak hingga:   Diberikan , pilih sedemikian sehingga . Untuk setiap , andaikan tanpa kehilangan keumuman bahwa ; ketaksamaan di atas memberi . Kasus langsung. Jadi Cauchy dalam . Kelengkapan ruang ini kemudian menjamin adanya limit kompak, yaitu segitiga Sierpinski.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-01",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-exer-a-01",
+  "type": "Pemeriksaan",
+  "number": "Q.33",
+  "title": "Subhimpunan Kompak dalam Topologi Indiskret.",
+  "body": "Subhimpunan Kompak dalam Topologi Indiskret  Tentukan semua subhimpunan kompak dari ruang topologi dengan topologi indiskret .   Tahap 1. Tangani subhimpunan kosong secara terpisah.  Tahap 2. Jika , tentukan satu-satunya himpunan buka yang dapat memuat titik .  Tahap 3. Periksa apa yang wajib termuat dalam setiap selimut buka bagi .   Setiap subhimpunan kompak dalam topologi indiskret.   Himpunan kosong kompak karena subkeluarga kosong merupakan subselimut berhingga bagi setiap selimutnya. Sekarang ambil tak kosong dan suatu selimut buka bagi . Dalam topologi indiskret, satu-satunya himpunan buka tak kosong adalah . Karena selimut harus memuat setiap titik , keluarga harus memuat . Subkeluarga satu anggota menyelimuti . Jadi setiap subhimpunan kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-02",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-exer-a-02",
+  "type": "Pemeriksaan",
+  "number": "Q.34",
+  "title": "Kekompakan pada Topologi yang Lebih Halus atau Lebih Kasar.",
+  "body": "Kekompakan pada Topologi yang Lebih Halus atau Lebih Kasar  Misalkan dan topologi pada himpunan dengan . Tentukan implikasi yang benar antara kekompakan dan kekompakan , dan berikan alasan atau kontraeksempel untuk setiap arah.   Tahap 1. Setiap himpunan -buka juga -buka.  Tahap 2. Mulailah dari selimut yang memiliki lebih sedikit kemungkinan anggota buka.  Tahap 3. Untuk menyangkal arah sebaliknya, bandingkan topologi indiskret dan diskret pada himpunan tak berhingga.   Jika kompak, maka kompak. Kebalikannya tidak selalu benar; pada himpunan tak berhingga, topologi indiskret kompak sedangkan topologi diskret tidak kompak.   Andaikan kompak. Setiap selimut buka bagi dalam topologi juga merupakan selimut buka dalam , karena . Kekompakan terhadap memberi subselimut berhingga dari . Anggota-anggota terpilih tetap -buka, sehingga kompak.  Untuk arah sebaliknya, ambil himpunan tak berhingga , , dan . Topologi lebih kasar dan kompak karena setiap selimut bagi harus memuat . Namun keluarga semua singleton adalah selimut -buka tanpa subselimut berhingga. Jadi kekompakan pada topologi yang lebih kasar tidak memaksa kekompakan pada topologi yang lebih halus.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-03",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-exer-a-03",
+  "type": "Pemeriksaan",
+  "number": "Q.35",
+  "title": "Topologi yang Ditentukan oleh Bilangan Bulat Genap.",
+  "body": "Topologi yang Ditentukan oleh Bilangan Bulat Genap  Misalkan himpunan bilangan bulat genap dan . Buktikan bahwa adalah suatu topologi pada .   Tahap 1. Verifikasikan bahwa dan berada dalam .  Tahap 2. Dalam gabungan sebarang anggota , pisahkan kasus ketika salah satu anggotanya adalah .  Tahap 3. Gunakan pembagian kasus yang sama untuk irisan berhingga.   Koleksi memuat , tertutup terhadap gabungan sebarang, dan tertutup terhadap irisan berhingga; jadi adalah topologi pada .   Karena , berlaku ; menurut definisi juga . Ambil keluarga sebarang . Jika suatu , gabungannya adalah dan berada dalam . Jika tidak, setiap , maka dan gabungan itu juga anggota .  Untuk irisan berhingga , jika semua , irisannya adalah . Jika setidaknya satu anggota merupakan subhimpunan , seluruh irisan termuat dalam anggota tersebut, sehingga merupakan subhimpunan dan berada dalam . Jadi ketiga aksioma topologi terpenuhi.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-04",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-exer-a-04",
+  "type": "Pemeriksaan",
+  "number": "Q.36",
+  "title": "Menentukan Semua Subhimpunan Kompak.",
+  "body": "Menentukan Semua Subhimpunan Kompak  Dalam ruang dengan , tentukan semua subhimpunan kompak dan buktikan jawaban Anda.   Tahap 1. Jika suatu subhimpunan memuat bilangan ganjil, tentukan himpunan buka mana yang dapat memuat titik itu.  Tahap 2. Jika subhimpunan termuat dalam , topologi subruangnya bersifat diskret.  Tahap 3. Dalam ruang diskret, keluarga singleton menguji kekompakan himpunan tak berhingga.   Subhimpunan kompak tepat ketika berhingga atau memuat setidaknya satu bilangan ganjil.   Jika memuat bilangan ganjil , satu-satunya anggota yang memuat adalah , sebab semua anggota lain termuat dalam . Maka setiap selimut buka bagi harus memuat ; subkeluarga merupakan subselimut berhingga. Jadi setiap subhimpunan yang memuat bilangan ganjil kompak. Setiap subhimpunan berhingga juga kompak dalam sebarang ruang topologi.  Tersisa kasus yang tak berhingga. Untuk setiap , singleton merupakan subhimpunan , sehingga terbuka dalam . Keluarga menyelimuti , tetapi setiap subkeluarga berhingga hanya menyelimuti sejumlah berhingga titik. Jadi tidak kompak. Kedua arah membuktikan pencirian tersebut.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-05",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-exer-a-05",
+  "type": "Pemeriksaan",
+  "number": "Q.37",
+  "title": "Irisan Dua Subhimpunan Kompak Tidak Selalu Kompak.",
+  "body": "Irisan Dua Subhimpunan Kompak Tidak Selalu Kompak  Buktikan atau sangkal pernyataan berikut: jika dan adalah subhimpunan kompak dari ruang topologi , maka juga kompak.   Tahap 1. Pernyataan menjadi benar dalam ruang Hausdorff, jadi carilah ruang non-Hausdorff.  Tahap 2. Gunakan ruang dari dua panduan sebelumnya.  Tahap 3. Tambahkan bilangan ganjil yang berbeda kepada himpunan semua bilangan genap.   Pernyataan salah. Dalam ruang di atas, ambil dan . Keduanya kompak, tetapi tidak kompak.   Gunakan dengan . Himpunan memuat bilangan ganjil. Setiap selimut buka bagi harus memuat , sehingga kompak. Argumen yang sama berlaku bagi .  Namun . Keluarga singleton merupakan selimut buka bagi , sebab setiap singleton genap berada dalam . Tidak ada subkeluarga berhingga yang menyelimuti seluruh . Maka tidak kompak, sehingga pernyataan umum tersebut tersangkal.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-06",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-exer-a-06",
+  "type": "Pemeriksaan",
+  "number": "Q.38",
+  "title": "Gabungan Berhingga Subhimpunan Kompak.",
+  "body": "Gabungan Berhingga Subhimpunan Kompak  Misalkan ruang topologi. Buktikan bahwa gabungan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .   Tahap 1. Tulis gabungan sebagai dan ambil selimut buka sebarang bagi .  Tahap 2. Keluarga yang sama menyelimuti setiap ; gunakan kekompakan masing-masing.  Tahap 3. Gabungkan semua subselimut berhingga yang diperoleh dan gunakan keberhinggaan jumlah indeks .   Dari selimut buka bagi , pilih subselimut berhingga untuk setiap . Gabungan dari sejumlah berhingga keluarga berhingga itu merupakan subselimut berhingga bagi seluruh gabungan.   Misalkan subhimpunan kompak dari dan selimut buka sebarang bagi . Untuk setiap , keluarga juga menyelimuti . Kekompakan memberi subkeluarga berhingga yang menyelimuti .  Keluarga berhingga, karena merupakan gabungan dari sejumlah berhingga himpunan berhingga. Jika , maka untuk suatu , sehingga termuat dalam suatu anggota . Jadi menyelimuti . Karena selimut awal sebarang, kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-07",
+  "level": "2",
+  "url": "o003-c90-ch17-source-guides-c.html#o003-c90-ch17-exer-a-07",
+  "type": "Pemeriksaan",
+  "number": "Q.39",
+  "title": "Irisan Berhingga dalam Ruang Hausdorff.",
+  "body": "Irisan Berhingga dalam Ruang Hausdorff  Misalkan ruang Hausdorff. Buktikan bahwa irisan dari sejumlah berhingga subhimpunan kompak dari merupakan subhimpunan kompak dari .   Tahap 1. Dalam ruang Hausdorff, setiap subhimpunan kompak tertutup.  Tahap 2. Irisan berhingga himpunan tertutup tertutup dalam .  Tahap 3. Pandang irisan tersebut sebagai subhimpunan tertutup dari salah satu himpunan kompak.   Jika kompak, semuanya tertutup karena Hausdorff. Irisan tertutup dalam , sehingga kompak.   Misalkan subhimpunan kompak dari , dengan . Karena Hausdorff, setiap tertutup dalam . Maka tertutup dalam . Khususnya, untuk yang tertutup dalam , sehingga tertutup dalam subruang .  Subhimpunan tertutup dari ruang kompak bersifat kompak. Karena kompak dan tertutup dalam , maka kompak. Untuk , kesimpulan adalah hipotesis itu sendiri. Jadi setiap irisan dari sejumlah positif berhingga subhimpunan kompak bersifat kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exercise-guides-b",
+  "level": "1",
+  "url": "o003-c90-ch17-exercise-guides-b.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan latihan Bab 17, bagian kedua",
+  "body": " Panduan latihan Bab 17, bagian kedua  Bagian ini mencakup urutan pemetaan kanonis 41 sampai 55 tentang kekompakan. Setiap pernyataan dibuat mandiri dan disertai petunjuk bertahap, jawaban atau rubrik pembuktian ringkas, serta solusi lengkap. Bagian ini merupakan materi pendamping tidak resmi yang ditulis secara terpisah, dilisensikan dengan CC BY 4.0, bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.  Subhimpunan kompak pada garis digital  Pada , untuk setiap definisikan Topologi garis digital adalah topologi yang mempunyai sebagai basis. Tentukan tepat semua subhimpunan kompak dari garis digital .    Tahap 1. Perhatikan bahwa setiap berhingga dan keluarga seluruh menyelimuti .   Tahap 2. Batasi selimut basis tersebut pada suatu subhimpunan tak berhingga . Dapatkah gabungan berhingga himpunan-himpunan basis yang berhingga menyelimuti ?   Subhimpunan kompak dari garis digital tepat merupakan subhimpunan-subhimpunan berhingga dari .   Setiap himpunan berhingga dalam ruang topologi apa pun kompak: dari suatu selimut buka, pilih satu anggota selimut untuk setiap titik. Jadi setiap subhimpunan berhingga dari kompak.  Sebaliknya, misalkan tak berhingga. Karena untuk setiap , keluarga merupakan selimut buka bagi dalam topologi subruang. Setiap mempunyai paling banyak tiga unsur. Oleh karena itu, gabungan berhingga anggota selimut tersebut hanya memuat berhingga banyak titik dan tidak mungkin menyelimuti . Jadi tidak kompak.   Basis interval bilangan bulat yang bersarang  Untuk setiap , definisikan , yaitu himpunan bilangan bulat di dalam interval . Buktikan bahwa merupakan basis bagi suatu topologi pada , dan deskripsikan topologi yang dihasilkannya.    Tahap 1. Untuk , pilih . Untuk dua anggota basis, hitung .   Tahap 2. Keluarga bersarang. Gabungan suatu subkeluarga yang indeksnya terbatas mempunyai indeks terbesar, sedangkan gabungan dengan indeks tak terbatas adalah seluruh .   Keluarga merupakan basis, dan    Jika , setiap bilangan bulat positif memenuhi . Jadi anggota-anggota menyelimuti . Selanjutnya, Maka, jika suatu titik berada dalam irisan dua anggota basis, irisan itu sendiri merupakan anggota basis yang memuat titik tersebut. Kedua syarat basis terpenuhi.  Karena himpunan-himpunan basis bersarang secara menaik, gabungan subkeluarga tak kosong dengan himpunan indeks terbatas adalah , dengan indeks terbesarnya. Jika himpunan indeksnya tak terbatas, untuk setiap terdapat indeks , sehingga gabungannya adalah . Dengan menambahkan gabungan kosong, diperoleh tepat topologi dalam jawaban.   Kekompakan interval bilangan bulat terkecil  Pada , beri topologi yang berbasis untuk . Apakah kompak dalam topologi subruang? Buktikan jawaban Anda.    Tahap 1. Hitung banyaknya unsur .   Tahap 2. Dari suatu selimut buka bagi himpunan berhingga, pilih satu anggota selimut untuk setiap titik.   Ya. Himpunan kompak karena berhingga.   Misalkan suatu selimut buka bagi . Pilih yang masing-masing memuat , , dan . Setelah anggota yang kebetulan sama dihapus, paling banyak tiga himpunan ini masih menyelimuti . Jadi setiap selimut buka mempunyai subselimut berhingga, sehingga kompak.   Semua subhimpunan kompak dalam topologi interval bersarang  Pada , misalkan mempunyai basis untuk . Tentukan tepat semua subhimpunan kompak dari .    Tahap 1. Semua himpunan berhingga kompak.   Tahap 2. Untuk tak berhingga, gunakan selimut subruang . Setiap gabungan berhingga keluarga bersarang ini berada dalam satu .   Subhimpunan kompak dari tepat merupakan subhimpunan-subhimpunan berhingga.   Setiap subhimpunan berhingga kompak dalam topologi subruang. Sekarang misalkan tak berhingga. Karena setiap bilangan bulat berada dalam suatu , keluarga menyelimuti dengan himpunan-himpunan terbuka subruang.  Untuk indeks , ambil . Karena keluarga bersarang, gabungan anggota-anggota yang dipilih termuat dalam . Himpunan berhingga, sedangkan tak berhingga, sehingga gabungan itu tidak menyelimuti . Selimut tersebut tidak mempunyai subselimut berhingga; jadi tidak kompak.   Citra tertutup di bawah fungsi kontinu  Misalkan ruang topologi kompak, ruang Hausdorff, dan fungsi kontinu. Buktikan bahwa untuk setiap subhimpunan tertutup , citra tertutup dalam . Dengan demikian, merupakan pemetaan tertutup.    Tahap 1. Gunakan fakta bahwa subhimpunan tertutup dari ruang kompak adalah kompak.   Tahap 2. Citra kontinu dari himpunan kompak adalah kompak, dan setiap subhimpunan kompak dari ruang Hausdorff adalah tertutup.   Rubrik pembuktian: tunjukkan berturut-turut bahwa kompak, kompak, lalu tertutup dalam .   Ambil sembarang subhimpunan tertutup dari . Karena kompak, setiap subhimpunan tertutupnya kompak; jadi kompak. Kekontinuan mengakibatkan citra kompak dalam . Karena Hausdorff, setiap subhimpunan kompak dari tertutup. Maka tertutup. Hal ini berlaku untuk setiap tertutup, sehingga adalah pemetaan tertutup.   Bijeksi kontinu kompak-ke-Hausdorff  Misalkan ruang topologi kompak, ruang Hausdorff, dan bijeksi kontinu. Buktikan bahwa merupakan homeomorfisme.    Tahap 1. Buktikan bahwa memetakan setiap himpunan tertutup dalam ke himpunan tertutup dalam .   Tahap 2. Gunakan bijektivitas untuk menafsirkan sebagai prapeta di bawah .   Fungsi adalah bijeksi kontinu dan pemetaan tertutup; karena itu inversnya kontinu, sehingga merupakan homeomorfisme.   Jika tertutup, maka kompak. Citra kompak karena kontinu, dan tertutup karena Hausdorff. Jadi adalah pemetaan tertutup.  Karena bijektif, invers terdefinisi. Untuk setiap himpunan tertutup , dan ruas kanan tertutup dalam . Dengan kriteria prapeta himpunan tertutup, kontinu. Jadi dan inversnya kontinu, sehingga adalah homeomorfisme.   Kekompakan domain tanpa syarat Hausdorff pada kodomain  Berikan contoh ruang topologi dan serta bijeksi kontinu sedemikian sehingga kompak, tetapi bukan homeomorfisme. Verifikasikan semua sifat yang dinyatakan.    Tahap 1. Gunakan himpunan dua unsur. Beri domain topologi diskret dan kodomain topologi indiskret.   Tahap 2. Periksa kekompakan domain, kekontinuan fungsi identitas, dan kegagalan kekontinuan invers pada suatu singleton.   Ambil dengan topologi diskret, dengan topologi indiskret, dan .   Ruang kompak karena berhingga. Fungsi identitas jelas bijektif. Hanya dan yang terbuka dalam kodomain, dan prapetanya berturut-turut serta , keduanya terbuka dalam domain. Jadi kontinu.  Akan tetapi, terbuka dalam , sedangkan tidak terbuka dalam . Maka tidak kontinu dan bukan homeomorfisme. Contoh ini juga memperlihatkan mengapa syarat Hausdorff pada kodomain diperlukan.   Kodomain Hausdorff tanpa kekompakan domain  Berikan contoh ruang topologi dan ruang Hausdorff serta bijeksi kontinu yang bukan homeomorfisme. Verifikasikan semua sifat yang dinyatakan.    Tahap 1. Gunakan himpunan dasar . Beri domain topologi diskret dan kodomain topologi Euklides.   Tahap 2. Fungsi identitas dari topologi yang lebih halus ke topologi yang lebih kasar kontinu. Uji inversnya pada singleton.   Ambil , , dan .   Topologi Euklides pada bersifat Hausdorff. Fungsi identitas bijektif. Jika terbuka dalam topologi Euklides, maka merupakan suatu subhimpunan , sehingga terbuka dalam topologi diskret. Jadi kontinu.  Inversnya adalah fungsi identitas dari ke . Singleton terbuka dalam , tetapi prapetanya di bawah adalah , yang tidak terbuka dalam topologi Euklides. Jadi invers tidak kontinu dan bukan homeomorfisme. Domain diskret tak berhingga ini memang tidak kompak.   Himpunan tertutup dalam topologi Entah-Atau  Misalkan . Topologi Entah-Atau pada didefinisikan dengan menyatakan terbuka jika , atau jika . Deskripsikan semua subhimpunan tertutup nontrivial dari , dengan “nontrivial” berarti selain dan .    Tahap 1. Suatu tertutup tepat ketika terbuka. Pisahkan kasus dan .   Tahap 2. Jika , komplemennya memuat ; agar terbuka, komplemen itu harus memuat seluruh .   Subhimpunan tertutup nontrivial adalah semua subhimpunan sejati yang memuat , bersama , , dan .   Jika , maka . Menurut definisi topologi, setiap subhimpunan yang tidak memuat terbuka, sehingga terbuka dan tertutup.  Jika , komplemen memuat . Komplemen ini terbuka tepat ketika memuat . Kondisi tersebut setara dengan . Jadi semua himpunan tertutup adalah semua subhimpunan yang memuat bersama semua subhimpunan . Setelah dan dikeluarkan, diperoleh daftar dalam jawaban.   Kegagalan sifat Hausdorff pada topologi Entah-Atau  Pada , beri topologi Entah-Atau: suatu terbuka jika , atau jika . Tentukan apakah Hausdorff dan buktikan jawaban Anda.    Tahap 1. Pilih .   Tahap 2. Setiap lingkungan terbuka dari harus memuat seluruh , khususnya .   Tidak. Titik tidak dapat dipisahkan oleh lingkungan terbuka saling lepas dari titik mana pun di .   Ambil . Misalkan lingkungan terbuka dari . Karena , alternatif pertama dalam definisi keterbukaan tidak berlaku; maka , sehingga .  Setiap lingkungan terbuka dari juga memuat . Akibatnya , sehingga sembarang lingkungan dan tersebut beririsan. Kedua titik berbeda dan tidak dapat dipisahkan oleh himpunan terbuka saling lepas. Jadi bukan Hausdorff.   Kekompakan topologi Entah-Atau  Pada , beri topologi Entah-Atau: suatu terbuka jika , atau jika . Tentukan apakah kompak dan buktikan jawaban Anda.    Tahap 1. Dari suatu selimut buka, pilih satu anggota yang memuat .   Tahap 2. Anggota itu langsung menyelimuti . Berapa banyak titik yang mungkin masih belum terselimuti?   Ya. Setiap selimut buka mempunyai subselimut dengan paling banyak tiga anggota.   Misalkan selimut buka bagi . Karena , terdapat dengan . Definisi topologi memaksa . Jadi hanya kedua titik ujung dan yang mungkin belum terselimuti oleh .  Jika belum terselimuti, pilih satu anggota yang memuatnya; lakukan hal yang sama untuk bila perlu. Keluarga yang terdiri dari dan paling banyak dua pilihan tambahan itu menyelimuti seluruh . Jadi kompak.   Subhimpunan tak kompak dalam topologi Entah-Atau  Pada , beri topologi Entah-Atau: suatu terbuka jika , atau jika . Adakah subhimpunan yang tidak kompak? Berikan contoh, buktikan, dan jika mungkin klasifikasikan semua subhimpunan kompak.    Tahap 1. Subruang bersifat diskret, sebab setiap subhimpunannya tidak memuat dan karena itu terbuka dalam .   Tahap 2. Untuk subhimpunan yang memuat , ulangi argumen satu anggota selimut yang menutupi seluruh .   Ya. Misalnya tidak kompak. Secara umum, kompak jika dan hanya jika berhingga atau .   Jika berhingga, maka kompak. Jika , ambil suatu selimut buka subruang bagi dan pilih anggota yang memuat . Anggota ini berasal dari himpunan terbuka di yang memuat seluruh ; karena itu ia menyelimuti . Hanya titik ujung dan yang mungkin tersisa, sehingga paling banyak dua anggota tambahan menghasilkan subselimut berhingga.  Sebaliknya, andaikan tak berhingga dan . Setiap singleton untuk tidak memuat , sehingga terbuka dalam dan juga dalam . Selimut singleton tidak mempunyai subselimut berhingga. Jadi tidak kompak. Khususnya, merupakan contoh subhimpunan tak kompak.   Ketakkompakan garis dengan topologi K  Misalkan . Topologi , dilambangkan , pada mempunyai basis yang terdiri atas semua interval terbuka dan semua , dengan . Buktikan bahwa tidak kompak.    Tahap 1. Setiap interval terbuka Euklides juga terbuka dalam ; jadi topologi lebih halus daripada topologi Euklides.   Tahap 2. Gunakan selimut .   Selimut buka menyelimuti tetapi tidak mempunyai subselimut berhingga.   Setiap adalah interval terbuka biasa, sehingga merupakan anggota basis topologi . Keluarga menyelimuti , sebab untuk setiap terdapat bilangan bulat positif .  Setiap subkeluarga berhingga mempunyai indeks terbesar . Karena interval-interval tersebut bersarang, gabungannya hanyalah , yang tidak menyelimuti . Jadi tidak mempunyai subselimut berhingga dan tidak kompak.   Subhimpunan yang memuat K tidak kompak  Misalkan dan beri topologi yang berbasis interval serta himpunan . Buktikan bahwa setiap yang memuat tidak kompak sebagai subruang. Simpulkan bahwa tidak kompak dalam topologi ini meskipun tertutup dan terbatas.    Tahap 1. Gunakan himpunan terbuka dan    Tahap 2. Setelah berhingga banyak dipilih, ambil setidaknya sebesar semua indeks yang dipilih dan uji apakah terselimuti.   Rubrik pembuktian: tunjukkan bahwa merupakan selimut buka bagi , lalu gunakan suatu untuk menggagalkan setiap subselimut berhingga.   Himpunan terbuka dalam topologi , karena . Setiap juga terbuka: suku pertamanya adalah interval terbuka dan suku keduanya anggota basis topologi .  Misalkan . Titik terselimuti oleh . Untuk , pilih ; karena , titik itu berada dalam . Jadi merupakan selimut buka subruang bagi .  Subkeluarga berhingga tanpa satu pun himpunan jelas tidak menyelimuti . Untuk sembarang subkeluarga berhingga lainnya, misalkan indeks terbesar di antara himpunan-himpunan yang dipilih. Pilih . Titik tidak berada dalam . Untuk setiap indeks terpilih , berlaku , sehingga tidak berada dalam ; sebagai anggota , titik itu juga tidak berada dalam . Jadi tidak ada subselimut berhingga.  Himpunan memuat , sehingga tidak kompak. Komplemennya terbuka dalam topologi , jadi tertutup; himpunan ini juga terbatas dalam arti biasa.   Memisahkan titik dari subhimpunan kompak  Misalkan ruang Hausdorff, subhimpunan kompak, dan . Buktikan bahwa terdapat himpunan terbuka saling lepas sedemikian sehingga dan .    Tahap 1. Untuk setiap , gunakan sifat Hausdorff untuk memilih himpunan terbuka saling lepas dan .   Tahap 2. Gunakan kekompakan untuk memilih berhingga banyak . Ambil irisan pasangan-pasangan dan gabungan pasangan-pasangan .   Rubrik pembuktian: dari subselimut berhingga bagi , ambil dan , lalu buktikan .   Jika , ambil dan . Sekarang andaikan . Untuk setiap , titik dan berbeda. Karena Hausdorff, terdapat himpunan terbuka dan dengan , , dan . Keluarga merupakan selimut buka bagi .  Kekompakan memberi titik sedemikian sehingga . Definisikan Irisan berhingga terbuka dan memuat ; gabungan terbuka dan memuat .  Jika , maka untuk suatu . Karena , juga , bertentangan dengan . Jadi , sebagaimana diperlukan.   "
+},
+{
+  "id": "o003-c90-ch17-exer-a-08",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-a-08",
+  "type": "Pemeriksaan",
+  "number": "Q.40",
+  "title": "Subhimpunan kompak pada garis digital.",
+  "body": "Subhimpunan kompak pada garis digital  Pada , untuk setiap definisikan Topologi garis digital adalah topologi yang mempunyai sebagai basis. Tentukan tepat semua subhimpunan kompak dari garis digital .    Tahap 1. Perhatikan bahwa setiap berhingga dan keluarga seluruh menyelimuti .   Tahap 2. Batasi selimut basis tersebut pada suatu subhimpunan tak berhingga . Dapatkah gabungan berhingga himpunan-himpunan basis yang berhingga menyelimuti ?   Subhimpunan kompak dari garis digital tepat merupakan subhimpunan-subhimpunan berhingga dari .   Setiap himpunan berhingga dalam ruang topologi apa pun kompak: dari suatu selimut buka, pilih satu anggota selimut untuk setiap titik. Jadi setiap subhimpunan berhingga dari kompak.  Sebaliknya, misalkan tak berhingga. Karena untuk setiap , keluarga merupakan selimut buka bagi dalam topologi subruang. Setiap mempunyai paling banyak tiga unsur. Oleh karena itu, gabungan berhingga anggota selimut tersebut hanya memuat berhingga banyak titik dan tidak mungkin menyelimuti . Jadi tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-09",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-a-09",
+  "type": "Pemeriksaan",
+  "number": "Q.41",
+  "title": "Basis interval bilangan bulat yang bersarang.",
+  "body": "Basis interval bilangan bulat yang bersarang  Untuk setiap , definisikan , yaitu himpunan bilangan bulat di dalam interval . Buktikan bahwa merupakan basis bagi suatu topologi pada , dan deskripsikan topologi yang dihasilkannya.    Tahap 1. Untuk , pilih . Untuk dua anggota basis, hitung .   Tahap 2. Keluarga bersarang. Gabungan suatu subkeluarga yang indeksnya terbatas mempunyai indeks terbesar, sedangkan gabungan dengan indeks tak terbatas adalah seluruh .   Keluarga merupakan basis, dan    Jika , setiap bilangan bulat positif memenuhi . Jadi anggota-anggota menyelimuti . Selanjutnya, Maka, jika suatu titik berada dalam irisan dua anggota basis, irisan itu sendiri merupakan anggota basis yang memuat titik tersebut. Kedua syarat basis terpenuhi.  Karena himpunan-himpunan basis bersarang secara menaik, gabungan subkeluarga tak kosong dengan himpunan indeks terbatas adalah , dengan indeks terbesarnya. Jika himpunan indeksnya tak terbatas, untuk setiap terdapat indeks , sehingga gabungannya adalah . Dengan menambahkan gabungan kosong, diperoleh tepat topologi dalam jawaban.  "
+},
+{
+  "id": "o003-c90-ch17-exer-a-10",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-a-10",
+  "type": "Pemeriksaan",
+  "number": "Q.42",
+  "title": "Kekompakan interval bilangan bulat terkecil.",
+  "body": "Kekompakan interval bilangan bulat terkecil  Pada , beri topologi yang berbasis untuk . Apakah kompak dalam topologi subruang? Buktikan jawaban Anda.    Tahap 1. Hitung banyaknya unsur .   Tahap 2. Dari suatu selimut buka bagi himpunan berhingga, pilih satu anggota selimut untuk setiap titik.   Ya. Himpunan kompak karena berhingga.   Misalkan suatu selimut buka bagi . Pilih yang masing-masing memuat , , dan . Setelah anggota yang kebetulan sama dihapus, paling banyak tiga himpunan ini masih menyelimuti . Jadi setiap selimut buka mempunyai subselimut berhingga, sehingga kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-01",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-01",
+  "type": "Pemeriksaan",
+  "number": "Q.43",
+  "title": "Semua subhimpunan kompak dalam topologi interval bersarang.",
+  "body": "Semua subhimpunan kompak dalam topologi interval bersarang  Pada , misalkan mempunyai basis untuk . Tentukan tepat semua subhimpunan kompak dari .    Tahap 1. Semua himpunan berhingga kompak.   Tahap 2. Untuk tak berhingga, gunakan selimut subruang . Setiap gabungan berhingga keluarga bersarang ini berada dalam satu .   Subhimpunan kompak dari tepat merupakan subhimpunan-subhimpunan berhingga.   Setiap subhimpunan berhingga kompak dalam topologi subruang. Sekarang misalkan tak berhingga. Karena setiap bilangan bulat berada dalam suatu , keluarga menyelimuti dengan himpunan-himpunan terbuka subruang.  Untuk indeks , ambil . Karena keluarga bersarang, gabungan anggota-anggota yang dipilih termuat dalam . Himpunan berhingga, sedangkan tak berhingga, sehingga gabungan itu tidak menyelimuti . Selimut tersebut tidak mempunyai subselimut berhingga; jadi tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-02",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-02",
+  "type": "Pemeriksaan",
+  "number": "Q.44",
+  "title": "Citra tertutup di bawah fungsi kontinu.",
+  "body": "Citra tertutup di bawah fungsi kontinu  Misalkan ruang topologi kompak, ruang Hausdorff, dan fungsi kontinu. Buktikan bahwa untuk setiap subhimpunan tertutup , citra tertutup dalam . Dengan demikian, merupakan pemetaan tertutup.    Tahap 1. Gunakan fakta bahwa subhimpunan tertutup dari ruang kompak adalah kompak.   Tahap 2. Citra kontinu dari himpunan kompak adalah kompak, dan setiap subhimpunan kompak dari ruang Hausdorff adalah tertutup.   Rubrik pembuktian: tunjukkan berturut-turut bahwa kompak, kompak, lalu tertutup dalam .   Ambil sembarang subhimpunan tertutup dari . Karena kompak, setiap subhimpunan tertutupnya kompak; jadi kompak. Kekontinuan mengakibatkan citra kompak dalam . Karena Hausdorff, setiap subhimpunan kompak dari tertutup. Maka tertutup. Hal ini berlaku untuk setiap tertutup, sehingga adalah pemetaan tertutup.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-03",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-03",
+  "type": "Pemeriksaan",
+  "number": "Q.45",
+  "title": "Bijeksi kontinu kompak-ke-Hausdorff.",
+  "body": "Bijeksi kontinu kompak-ke-Hausdorff  Misalkan ruang topologi kompak, ruang Hausdorff, dan bijeksi kontinu. Buktikan bahwa merupakan homeomorfisme.    Tahap 1. Buktikan bahwa memetakan setiap himpunan tertutup dalam ke himpunan tertutup dalam .   Tahap 2. Gunakan bijektivitas untuk menafsirkan sebagai prapeta di bawah .   Fungsi adalah bijeksi kontinu dan pemetaan tertutup; karena itu inversnya kontinu, sehingga merupakan homeomorfisme.   Jika tertutup, maka kompak. Citra kompak karena kontinu, dan tertutup karena Hausdorff. Jadi adalah pemetaan tertutup.  Karena bijektif, invers terdefinisi. Untuk setiap himpunan tertutup , dan ruas kanan tertutup dalam . Dengan kriteria prapeta himpunan tertutup, kontinu. Jadi dan inversnya kontinu, sehingga adalah homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-04",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-04",
+  "type": "Pemeriksaan",
+  "number": "Q.46",
+  "title": "Kekompakan domain tanpa syarat Hausdorff pada kodomain.",
+  "body": "Kekompakan domain tanpa syarat Hausdorff pada kodomain  Berikan contoh ruang topologi dan serta bijeksi kontinu sedemikian sehingga kompak, tetapi bukan homeomorfisme. Verifikasikan semua sifat yang dinyatakan.    Tahap 1. Gunakan himpunan dua unsur. Beri domain topologi diskret dan kodomain topologi indiskret.   Tahap 2. Periksa kekompakan domain, kekontinuan fungsi identitas, dan kegagalan kekontinuan invers pada suatu singleton.   Ambil dengan topologi diskret, dengan topologi indiskret, dan .   Ruang kompak karena berhingga. Fungsi identitas jelas bijektif. Hanya dan yang terbuka dalam kodomain, dan prapetanya berturut-turut serta , keduanya terbuka dalam domain. Jadi kontinu.  Akan tetapi, terbuka dalam , sedangkan tidak terbuka dalam . Maka tidak kontinu dan bukan homeomorfisme. Contoh ini juga memperlihatkan mengapa syarat Hausdorff pada kodomain diperlukan.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-05",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-05",
+  "type": "Pemeriksaan",
+  "number": "Q.47",
+  "title": "Kodomain Hausdorff tanpa kekompakan domain.",
+  "body": "Kodomain Hausdorff tanpa kekompakan domain  Berikan contoh ruang topologi dan ruang Hausdorff serta bijeksi kontinu yang bukan homeomorfisme. Verifikasikan semua sifat yang dinyatakan.    Tahap 1. Gunakan himpunan dasar . Beri domain topologi diskret dan kodomain topologi Euklides.   Tahap 2. Fungsi identitas dari topologi yang lebih halus ke topologi yang lebih kasar kontinu. Uji inversnya pada singleton.   Ambil , , dan .   Topologi Euklides pada bersifat Hausdorff. Fungsi identitas bijektif. Jika terbuka dalam topologi Euklides, maka merupakan suatu subhimpunan , sehingga terbuka dalam topologi diskret. Jadi kontinu.  Inversnya adalah fungsi identitas dari ke . Singleton terbuka dalam , tetapi prapetanya di bawah adalah , yang tidak terbuka dalam topologi Euklides. Jadi invers tidak kontinu dan bukan homeomorfisme. Domain diskret tak berhingga ini memang tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-06",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-06",
+  "type": "Pemeriksaan",
+  "number": "Q.48",
+  "title": "Himpunan tertutup dalam topologi Entah-Atau.",
+  "body": "Himpunan tertutup dalam topologi Entah-Atau  Misalkan . Topologi Entah-Atau pada didefinisikan dengan menyatakan terbuka jika , atau jika . Deskripsikan semua subhimpunan tertutup nontrivial dari , dengan “nontrivial” berarti selain dan .    Tahap 1. Suatu tertutup tepat ketika terbuka. Pisahkan kasus dan .   Tahap 2. Jika , komplemennya memuat ; agar terbuka, komplemen itu harus memuat seluruh .   Subhimpunan tertutup nontrivial adalah semua subhimpunan sejati yang memuat , bersama , , dan .   Jika , maka . Menurut definisi topologi, setiap subhimpunan yang tidak memuat terbuka, sehingga terbuka dan tertutup.  Jika , komplemen memuat . Komplemen ini terbuka tepat ketika memuat . Kondisi tersebut setara dengan . Jadi semua himpunan tertutup adalah semua subhimpunan yang memuat bersama semua subhimpunan . Setelah dan dikeluarkan, diperoleh daftar dalam jawaban.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-07",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-07",
+  "type": "Pemeriksaan",
+  "number": "Q.49",
+  "title": "Kegagalan sifat Hausdorff pada topologi Entah-Atau.",
+  "body": "Kegagalan sifat Hausdorff pada topologi Entah-Atau  Pada , beri topologi Entah-Atau: suatu terbuka jika , atau jika . Tentukan apakah Hausdorff dan buktikan jawaban Anda.    Tahap 1. Pilih .   Tahap 2. Setiap lingkungan terbuka dari harus memuat seluruh , khususnya .   Tidak. Titik tidak dapat dipisahkan oleh lingkungan terbuka saling lepas dari titik mana pun di .   Ambil . Misalkan lingkungan terbuka dari . Karena , alternatif pertama dalam definisi keterbukaan tidak berlaku; maka , sehingga .  Setiap lingkungan terbuka dari juga memuat . Akibatnya , sehingga sembarang lingkungan dan tersebut beririsan. Kedua titik berbeda dan tidak dapat dipisahkan oleh himpunan terbuka saling lepas. Jadi bukan Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-08",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-08",
+  "type": "Pemeriksaan",
+  "number": "Q.50",
+  "title": "Kekompakan topologi Entah-Atau.",
+  "body": "Kekompakan topologi Entah-Atau  Pada , beri topologi Entah-Atau: suatu terbuka jika , atau jika . Tentukan apakah kompak dan buktikan jawaban Anda.    Tahap 1. Dari suatu selimut buka, pilih satu anggota yang memuat .   Tahap 2. Anggota itu langsung menyelimuti . Berapa banyak titik yang mungkin masih belum terselimuti?   Ya. Setiap selimut buka mempunyai subselimut dengan paling banyak tiga anggota.   Misalkan selimut buka bagi . Karena , terdapat dengan . Definisi topologi memaksa . Jadi hanya kedua titik ujung dan yang mungkin belum terselimuti oleh .  Jika belum terselimuti, pilih satu anggota yang memuatnya; lakukan hal yang sama untuk bila perlu. Keluarga yang terdiri dari dan paling banyak dua pilihan tambahan itu menyelimuti seluruh . Jadi kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-09",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-09",
+  "type": "Pemeriksaan",
+  "number": "Q.51",
+  "title": "Subhimpunan tak kompak dalam topologi Entah-Atau.",
+  "body": "Subhimpunan tak kompak dalam topologi Entah-Atau  Pada , beri topologi Entah-Atau: suatu terbuka jika , atau jika . Adakah subhimpunan yang tidak kompak? Berikan contoh, buktikan, dan jika mungkin klasifikasikan semua subhimpunan kompak.    Tahap 1. Subruang bersifat diskret, sebab setiap subhimpunannya tidak memuat dan karena itu terbuka dalam .   Tahap 2. Untuk subhimpunan yang memuat , ulangi argumen satu anggota selimut yang menutupi seluruh .   Ya. Misalnya tidak kompak. Secara umum, kompak jika dan hanya jika berhingga atau .   Jika berhingga, maka kompak. Jika , ambil suatu selimut buka subruang bagi dan pilih anggota yang memuat . Anggota ini berasal dari himpunan terbuka di yang memuat seluruh ; karena itu ia menyelimuti . Hanya titik ujung dan yang mungkin tersisa, sehingga paling banyak dua anggota tambahan menghasilkan subselimut berhingga.  Sebaliknya, andaikan tak berhingga dan . Setiap singleton untuk tidak memuat , sehingga terbuka dalam dan juga dalam . Selimut singleton tidak mempunyai subselimut berhingga. Jadi tidak kompak. Khususnya, merupakan contoh subhimpunan tak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-b-10",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-b-10",
+  "type": "Pemeriksaan",
+  "number": "Q.52",
+  "title": "Ketakkompakan garis dengan topologi K.",
+  "body": "Ketakkompakan garis dengan topologi K  Misalkan . Topologi , dilambangkan , pada mempunyai basis yang terdiri atas semua interval terbuka dan semua , dengan . Buktikan bahwa tidak kompak.    Tahap 1. Setiap interval terbuka Euklides juga terbuka dalam ; jadi topologi lebih halus daripada topologi Euklides.   Tahap 2. Gunakan selimut .   Selimut buka menyelimuti tetapi tidak mempunyai subselimut berhingga.   Setiap adalah interval terbuka biasa, sehingga merupakan anggota basis topologi . Keluarga menyelimuti , sebab untuk setiap terdapat bilangan bulat positif .  Setiap subkeluarga berhingga mempunyai indeks terbesar . Karena interval-interval tersebut bersarang, gabungannya hanyalah , yang tidak menyelimuti . Jadi tidak mempunyai subselimut berhingga dan tidak kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-01",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-c-01",
+  "type": "Pemeriksaan",
+  "number": "Q.53",
+  "title": "Subhimpunan yang memuat K tidak kompak.",
+  "body": "Subhimpunan yang memuat K tidak kompak  Misalkan dan beri topologi yang berbasis interval serta himpunan . Buktikan bahwa setiap yang memuat tidak kompak sebagai subruang. Simpulkan bahwa tidak kompak dalam topologi ini meskipun tertutup dan terbatas.    Tahap 1. Gunakan himpunan terbuka dan    Tahap 2. Setelah berhingga banyak dipilih, ambil setidaknya sebesar semua indeks yang dipilih dan uji apakah terselimuti.   Rubrik pembuktian: tunjukkan bahwa merupakan selimut buka bagi , lalu gunakan suatu untuk menggagalkan setiap subselimut berhingga.   Himpunan terbuka dalam topologi , karena . Setiap juga terbuka: suku pertamanya adalah interval terbuka dan suku keduanya anggota basis topologi .  Misalkan . Titik terselimuti oleh . Untuk , pilih ; karena , titik itu berada dalam . Jadi merupakan selimut buka subruang bagi .  Subkeluarga berhingga tanpa satu pun himpunan jelas tidak menyelimuti . Untuk sembarang subkeluarga berhingga lainnya, misalkan indeks terbesar di antara himpunan-himpunan yang dipilih. Pilih . Titik tidak berada dalam . Untuk setiap indeks terpilih , berlaku , sehingga tidak berada dalam ; sebagai anggota , titik itu juga tidak berada dalam . Jadi tidak ada subselimut berhingga.  Himpunan memuat , sehingga tidak kompak. Komplemennya terbuka dalam topologi , jadi tertutup; himpunan ini juga terbatas dalam arti biasa.  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-02",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-b.html#o003-c90-ch17-exer-c-02",
+  "type": "Pemeriksaan",
+  "number": "Q.54",
+  "title": "Memisahkan titik dari subhimpunan kompak.",
+  "body": "Memisahkan titik dari subhimpunan kompak  Misalkan ruang Hausdorff, subhimpunan kompak, dan . Buktikan bahwa terdapat himpunan terbuka saling lepas sedemikian sehingga dan .    Tahap 1. Untuk setiap , gunakan sifat Hausdorff untuk memilih himpunan terbuka saling lepas dan .   Tahap 2. Gunakan kekompakan untuk memilih berhingga banyak . Ambil irisan pasangan-pasangan dan gabungan pasangan-pasangan .   Rubrik pembuktian: dari subselimut berhingga bagi , ambil dan , lalu buktikan .   Jika , ambil dan . Sekarang andaikan . Untuk setiap , titik dan berbeda. Karena Hausdorff, terdapat himpunan terbuka dan dengan , , dan . Keluarga merupakan selimut buka bagi .  Kekompakan memberi titik sedemikian sehingga . Definisikan Irisan berhingga terbuka dan memuat ; gabungan terbuka dan memuat .  Jika , maka untuk suatu . Karena , juga , bertentangan dengan . Jadi , sebagaimana diperlukan.  "
+},
+{
+  "id": "o003-c90-ch17-exercise-guides-d",
+  "level": "1",
+  "url": "o003-c90-ch17-exercise-guides-d.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Latihan: Pemisahan, Kekompakan Lokal, dan Contoh Tandingan",
+  "body": " Panduan Latihan: Pemisahan, Kekompakan Lokal, dan Contoh Tandingan  Lima belas panduan ini mendampingi entri kanonis 56–70 dalam backend Bab 17. Kerjakan latihan pada bab utama terlebih dahulu, lalu buka petunjuk, jawaban, dan solusi secara bertahap.  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.  Ruang Hausdorff kompak bersifat normal  Buktikan bahwa setiap ruang Hausdorff kompak bersifat normal: untuk setiap dua himpunan tertutup saling lepas , terdapat himpunan terbuka saling lepas dengan dan .   Tahap 1. Karena dan tertutup dalam ruang kompak, keduanya kompak.  Tahap 2. Untuk setiap , pisahkan titik dari himpunan kompak dengan lingkungan terbuka .  Tahap 3. Ambil subselimut berhingga dari ; gabungkan sisi dan iris sisi .   Pilih sehingga . Maka dan terbuka, memuat dan , serta saling lepas.   Himpunan dan kompak karena keduanya tertutup dalam ruang kompak . Untuk setiap , hasil pemisahan titik dari himpunan kompak dalam ruang Hausdorff memberi himpunan terbuka dengan , , dan .  Keluarga menyelimuti . Pilih sehingga dan tetapkan , . Karena irisan yang membentuk berhingga, dan terbuka. Setiap memuat , maka . Jika suatu titik berada dalam , titik itu berada dalam suatu sekaligus dalam , sebuah kontradiksi. Jadi dan normal.   Subhimpunan kompak dalam topologi titik tertentu  Misalkan himpunan tak kosong, , dan topologi titik tertentu: himpunan terbuka tak kosong adalah tepat subhimpunan yang memuat . Tentukan, dengan bukti, semua subhimpunan kompak .   Tahap 1. Setiap subhimpunan berhingga kompak dalam ruang topologi apa pun.  Tahap 2. Jika tak hingga, gunakan himpunan-himpunan terbuka untuk .  Tahap 3. Jika , tambahkan satu himpunan terbuka yang memuat satu titik tetap dari bila diperlukan.   Subhimpunan kompaknya tepat subhimpunan berhingga dari .   Setiap subhimpunan berhingga kompak. Sebaliknya, misalkan tak hingga. Jika , keluarga terdiri atas himpunan terbuka dan menyelimuti , tetapi gabungan berhingga anggotanya hanya memuat berhingga banyak titik .  Jika , pilih dan gunakan keluarga . Keluarga ini juga merupakan selimut buka bagi dan tidak mempunyai subselimut berhingga. Jadi tidak ada subhimpunan tak hingga yang kompak, dan klasifikasinya tepat semua subhimpunan berhingga.   Subhimpunan kompak dalam topologi titik dikecualikan  Misalkan himpunan tak kosong, , dan topologi titik dikecualikan: himpunan terbukanya adalah , , dan semua subhimpunan yang tidak memuat . Tentukan semua subhimpunan kompak .   Tahap 1. Jika , setiap selimut buka bagi harus memuat satu himpunan terbuka yang mengandung .  Tahap 2. Tentukan satu-satunya himpunan terbuka yang mengandung .  Tahap 3. Jika , topologi subruang pada bersifat diskret.   Subhimpunan kompak jika dan hanya jika atau berhingga.   Jika , setiap selimut buka bagi harus mempunyai anggota yang memuat . Dalam topologi ini, satu-satunya himpunan terbuka yang memuat adalah . Anggota itu sendiri menyelimuti , sehingga kompak. Setiap berhingga juga kompak, terlepas dari apakah .  Sekarang misalkan dan tak hingga. Setiap subhimpunan terbuka dalam , sehingga topologi subruang pada diskret. Selimut oleh semua himpunan satu titik tidak mempunyai subselimut berhingga. Maka tidak kompak. Kedua arah membuktikan klasifikasi tersebut.   Himpunan satu titik dalam topologi komplemen berhingga  Pada dengan topologi komplemen berhingga , tunjukkan bahwa setiap himpunan satu titik tertutup.   Gunakan definisi himpunan tertutup melalui keterbukaan komplemennya.   Untuk setiap , komplemen terbuka karena komplemennya berhingga. Jadi tertutup.   Berdasarkan definisi , suatu himpunan tak kosong terbuka tepat ketika komplemennya berhingga. Komplemen dari adalah himpunan satu titik , yang berhingga. Maka terbuka, sehingga tertutup. Argumen ini berlaku bagi setiap .   Ruang kofinit tak hingga bukan Hausdorff  Jelaskan mengapa , dengan topologi komplemen berhingga, bukan ruang Hausdorff.   Hitung komplemen irisan dua himpunan terbuka tak kosong.   Setiap dua himpunan terbuka tak kosong beririsan, sehingga dua titik berbeda tidak dapat dipisahkan oleh lingkungan terbuka saling lepas.   Jika terbuka dan tak kosong, maka berhingga. Karena tak hingga, tidak mungkin kosong. Jadi tidak ada dua lingkungan terbuka tak kosong yang saling lepas. Khususnya, dua titik berbeda tidak dapat mempunyai lingkungan seperti yang disyaratkan oleh aksioma Hausdorff.   Dua lingkungan kofinit selalu beririsan  Misalkan terbuka dalam dan memuat , sedangkan terbuka dan memuat . Buktikan bahwa .   Andaikan irisannya kosong dan gunakan bahwa gabungan dua himpunan berhingga tetap berhingga.   Komplemen berhingga, sedangkan komplemen himpunan kosong adalah seluruh , yang tak hingga. Maka irisan itu tidak kosong.   Karena dan tak kosong dan terbuka, kedua himpunan dan berhingga. Hukum De Morgan memberi dan ruas kanan berhingga. Jika , komplemennya adalah , bertentangan dengan ketakterhinggaan . Jadi .   Bilangan genap: kompak tetapi tidak tertutup  Dalam , tunjukkan bahwa himpunan bilangan bulat genap kompak sebagai subruang tetapi tidak tertutup dalam .   Tahap 1. Tunjukkan bahwa topologi subruang pada juga merupakan topologi komplemen berhingga.  Tahap 2. Dari selimut buka bagi , pilih satu anggota tak kosong dan selimuti sisa titik yang berhingga.  Tahap 3. Periksa apakah komplemen terbuka dalam .   Subruang bertopologi kofinit dan karena itu kompak. Himpunan tidak tertutup karena komplemennya, himpunan bilangan ganjil, bukan himpunan terbuka kofinit dalam .   Jika terbuka dan tak kosong dalam subruang , dengan terbuka dalam , maka berhingga. Sebaliknya, setiap subhimpunan yang berkomplemen berhingga dalam dapat ditulis , dan himpunan kedua pada irisan itu terbuka dalam . Jadi topologi subruangnya kofinit.  Dari selimut buka bagi , pilih satu anggota tak kosong. Anggota itu menyisakan berhingga banyak titik ; pilih satu anggota selimut tambahan bagi setiap titik yang tersisa. Maka kompak. Namun adalah himpunan semua bilangan ganjil. Komplemennya tak hingga, sehingga himpunan ganjil itu tidak terbuka dalam topologi kofinit. Jadi tidak tertutup.   Memisahkan titik dari subhimpunan kompak  Misalkan Hausdorff, kompak, dan . Buktikan bahwa terdapat himpunan terbuka saling lepas dengan dan .   Untuk setiap , pisahkan dan ; lalu gunakan kekompakan .   Pilih pasangan terbuka saling lepas dan . Dari subselimut berhingga , gunakan dan .   Untuk setiap , sifat Hausdorff memberi himpunan terbuka saling lepas dengan dan . Keluarga menyelimuti , maka ada sehingga . Tetapkan dan . Keduanya terbuka, memuat objek yang diminta, dan saling lepas: titik dalam akan berada dalam suatu sekaligus dalam .   Memisahkan dua subhimpunan kompak  Misalkan dan subhimpunan kompak saling lepas dari ruang Hausdorff . Buktikan bahwa terdapat himpunan terbuka saling lepas dengan dan .   Untuk setiap , terapkan hasil pemisahan titik dari himpunan kompak , lalu gunakan kekompakan .   Pisahkan setiap dari seluruh dengan . Pilih berhingga banyak yang menyelimuti ; gabungan sisi dan irisan sisi adalah lingkungan terbuka saling lepas yang diperlukan.   Untuk setiap , hasil sebelumnya memberi himpunan terbuka saling lepas dengan dan . Karena kompak, pilih dengan . Tetapkan Himpunan terbuka, , dan . Jika , maka untuk suatu , dan juga , bertentangan dengan keterlepasan pasangan itu. Jadi .   Kekompakan ambient dan kekompakan subruang  Misalkan dan topologi subruang pada . Buktikan bahwa kompak sebagai subhimpunan dari jika dan hanya jika merupakan ruang topologi kompak.   Tahap 1. Setiap himpunan terbuka dalam berbentuk untuk suatu terbuka dalam .  Tahap 2. Batasi selimut ambient ke untuk satu arah.  Tahap 3. Pilih satu wakil terbuka ambient bagi setiap anggota selimut subruang untuk arah lainnya.   Kedua jenis selimut saling diterjemahkan melalui , dan pemilihan subselimut berhingga bertahan dalam kedua arah.   Andaikan kompak sebagai subhimpunan . Ambil selimut bagi oleh himpunan-himpunan yang terbuka dalam topologi subruang. Untuk setiap , pilih himpunan terbuka dengan . Maka menyelimuti secara ambient, sehingga berhingga banyak cukup. Irisannya dengan memberi subselimut berhingga dari keluarga .  Sebaliknya, andaikan kompak dan ambil selimut ambient bagi . Keluarga adalah selimut buka subruang, maka mempunyai subselimut berhingga. Himpunan-himpunan ambient dengan indeks yang sama menyelimuti . Jadi kedua pengertian kekompakan itu ekuivalen.   Karakterisasi melalui sifat irisan berhingga  Misalkan ruang topologi. Buktikan bahwa kompak jika dan hanya jika setiap keluarga himpunan tertutup yang mempunyai sifat irisan berhingga memenuhi .   Ambil komplemen seluruh anggota keluarga dan gunakan hukum De Morgan; subselimut berhingga tepat bersesuaian dengan irisan berhingga yang kosong.   Komplemen mengubah keluarga tertutup bersifat irisan berhingga menjadi keluarga terbuka yang tidak mempunyai subselimut berhingga, dan mengubah irisan total kosong menjadi selimut bagi seluruh ruang.   Andaikan kompak dan keluarga tertutup mempunyai sifat irisan berhingga. Jika irisan totalnya kosong, maka merupakan selimut buka bagi . Subselimut berhingga akan memberi , bertentangan dengan sifat irisan berhingga. Maka irisan total tidak kosong.  Sebaliknya, andaikan syarat keluarga tertutup berlaku. Jika suatu selimut buka tidak mempunyai subselimut berhingga, maka himpunan-himpunan tertutup mempunyai sifat irisan berhingga. Namun karena menyelimuti , hukum De Morgan memberi , sebuah kontradiksi. Maka setiap selimut buka mempunyai subselimut berhingga dan kompak.   Ruang Euklides bersifat kompak lokal  Dengan definisi bahwa setiap titik harus mempunyai lingkungan terbuka yang tutupannya kompak, jelaskan mengapa kompak lokal untuk setiap .   Di sekitar , gunakan bola terbuka berjari-jari satu dan Teorema Heine–Borel untuk tutupannya.   Bola terbuka, memuat , dan tutupannya adalah bola tertutup , yang tertutup dan terbatas sehingga kompak menurut Heine–Borel.   Ambil sembarang dan tetapkan . Himpunan terbuka dan memuat . Dalam topologi Euklides, . Bola tertutup ini tertutup dan terbatas dalam , maka kompak berdasarkan Teorema Heine–Borel. Karena konstruksi berlaku pada setiap titik, kompak lokal.   Setiap ruang kompak bersifat kompak lokal  Tunjukkan bahwa setiap ruang topologi kompak bersifat kompak lokal menurut definisi lingkungan terbuka dengan tutupan kompak.   Untuk setiap , pilih lingkungan terbuka terbesar yang tersedia.   Ambil . Himpunan ini terbuka, memuat setiap , dan kompak.   Untuk sembarang , himpunan adalah himpunan terbuka yang memuat . Tutupannya dalam adalah , yang kompak menurut hipotesis. Jadi syarat kekompakan lokal terpenuhi pada setiap titik tanpa memerlukan aksioma pemisahan tambahan.   Garis Sorgenfrey tidak kompak lokal  Misalkan garis Sorgenfrey adalah dengan basis . Tunjukkan bahwa ruang ini Hausdorff tetapi tidak kompak lokal.   Tahap 1. Untuk , gunakan lingkungan basis dan .  Tahap 2. Setiap lingkungan terbuka dari memuat suatu dengan .  Tahap 3. Tunjukkan bahwa tertutup tetapi tidak kompak dengan selimut menaik yang batas kanannya menuju .   Dua titik dapat dipisahkan oleh interval basis saling lepas. Namun setiap lingkungan memuat subruang tertutup yang tidak kompak; karena itu tidak mungkin kompak.   Jika , maka dan adalah himpunan terbuka basis, masing-masing memuat dan , serta saling lepas. Jadi garis Sorgenfrey Hausdorff.  Ambil lingkungan terbuka dari . Ada dengan . Himpunan tertutup dalam garis Sorgenfrey karena komplemennya terbuka. Pilih bilangan bulat dengan . Keluarga adalah selimut buka bagi , tetapi subkeluarga berhingga mempunyai indeks maksimum dan gabungannya hanya . Jadi tidak kompak.  Jika kompak, maka subhimpunan , yang tertutup dalam , juga kompak, sebuah kontradiksi. Tidak ada titik yang mempunyai lingkungan terbuka dengan tutupan kompak, sehingga garis Sorgenfrey tidak kompak lokal.   Bijeksi kontinu antara dua ruang kompak  Tentukan benar atau salah: jika dan ruang topologi kompak dan bijeksi kontinu, maka pasti suatu homeomorfisme. Berikan bukti atau contoh tandingan.   Uji pemetaan identitas pada himpunan dua titik yang domainnya diskret dan kodomainnya indiskret.   Salah. Identitas dari ruang dua titik diskret ke ruang dua titik indiskret adalah bijeksi kontinu antara ruang-ruang kompak, tetapi inversnya tidak kontinu.   Ambil . Beri domain topologi diskret dan kodomain topologi indiskret . Kedua ruang kompak karena berhingga. Pemetaan identitas bijektif. Prapeta satu-satunya himpunan terbuka kodomain adalah dan , keduanya terbuka dalam ; jadi kontinu.  Namun invers tidak kontinu: himpunan terbuka dalam kodomain dari invers, sedangkan prapetanya tidak terbuka dalam . Hipotesis yang hilang adalah sifat Hausdorff pada ; dengan hipotesis itu, bijeksi kontinu dari ruang kompak memang homeomorfisme.   "
+},
+{
+  "id": "o003-c90-ch17-exer-c-03",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-03",
+  "type": "Pemeriksaan",
+  "number": "Q.55",
+  "title": "Ruang Hausdorff kompak bersifat normal.",
+  "body": "Ruang Hausdorff kompak bersifat normal  Buktikan bahwa setiap ruang Hausdorff kompak bersifat normal: untuk setiap dua himpunan tertutup saling lepas , terdapat himpunan terbuka saling lepas dengan dan .   Tahap 1. Karena dan tertutup dalam ruang kompak, keduanya kompak.  Tahap 2. Untuk setiap , pisahkan titik dari himpunan kompak dengan lingkungan terbuka .  Tahap 3. Ambil subselimut berhingga dari ; gabungkan sisi dan iris sisi .   Pilih sehingga . Maka dan terbuka, memuat dan , serta saling lepas.   Himpunan dan kompak karena keduanya tertutup dalam ruang kompak . Untuk setiap , hasil pemisahan titik dari himpunan kompak dalam ruang Hausdorff memberi himpunan terbuka dengan , , dan .  Keluarga menyelimuti . Pilih sehingga dan tetapkan , . Karena irisan yang membentuk berhingga, dan terbuka. Setiap memuat , maka . Jika suatu titik berada dalam , titik itu berada dalam suatu sekaligus dalam , sebuah kontradiksi. Jadi dan normal.  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-04",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-04",
+  "type": "Pemeriksaan",
+  "number": "Q.56",
+  "title": "Subhimpunan kompak dalam topologi titik tertentu.",
+  "body": "Subhimpunan kompak dalam topologi titik tertentu  Misalkan himpunan tak kosong, , dan topologi titik tertentu: himpunan terbuka tak kosong adalah tepat subhimpunan yang memuat . Tentukan, dengan bukti, semua subhimpunan kompak .   Tahap 1. Setiap subhimpunan berhingga kompak dalam ruang topologi apa pun.  Tahap 2. Jika tak hingga, gunakan himpunan-himpunan terbuka untuk .  Tahap 3. Jika , tambahkan satu himpunan terbuka yang memuat satu titik tetap dari bila diperlukan.   Subhimpunan kompaknya tepat subhimpunan berhingga dari .   Setiap subhimpunan berhingga kompak. Sebaliknya, misalkan tak hingga. Jika , keluarga terdiri atas himpunan terbuka dan menyelimuti , tetapi gabungan berhingga anggotanya hanya memuat berhingga banyak titik .  Jika , pilih dan gunakan keluarga . Keluarga ini juga merupakan selimut buka bagi dan tidak mempunyai subselimut berhingga. Jadi tidak ada subhimpunan tak hingga yang kompak, dan klasifikasinya tepat semua subhimpunan berhingga.  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-05",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-05",
+  "type": "Pemeriksaan",
+  "number": "Q.57",
+  "title": "Subhimpunan kompak dalam topologi titik dikecualikan.",
+  "body": "Subhimpunan kompak dalam topologi titik dikecualikan  Misalkan himpunan tak kosong, , dan topologi titik dikecualikan: himpunan terbukanya adalah , , dan semua subhimpunan yang tidak memuat . Tentukan semua subhimpunan kompak .   Tahap 1. Jika , setiap selimut buka bagi harus memuat satu himpunan terbuka yang mengandung .  Tahap 2. Tentukan satu-satunya himpunan terbuka yang mengandung .  Tahap 3. Jika , topologi subruang pada bersifat diskret.   Subhimpunan kompak jika dan hanya jika atau berhingga.   Jika , setiap selimut buka bagi harus mempunyai anggota yang memuat . Dalam topologi ini, satu-satunya himpunan terbuka yang memuat adalah . Anggota itu sendiri menyelimuti , sehingga kompak. Setiap berhingga juga kompak, terlepas dari apakah .  Sekarang misalkan dan tak hingga. Setiap subhimpunan terbuka dalam , sehingga topologi subruang pada diskret. Selimut oleh semua himpunan satu titik tidak mempunyai subselimut berhingga. Maka tidak kompak. Kedua arah membuktikan klasifikasi tersebut.  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-06",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-06",
+  "type": "Pemeriksaan",
+  "number": "Q.58",
+  "title": "Himpunan satu titik dalam topologi komplemen berhingga.",
+  "body": "Himpunan satu titik dalam topologi komplemen berhingga  Pada dengan topologi komplemen berhingga , tunjukkan bahwa setiap himpunan satu titik tertutup.   Gunakan definisi himpunan tertutup melalui keterbukaan komplemennya.   Untuk setiap , komplemen terbuka karena komplemennya berhingga. Jadi tertutup.   Berdasarkan definisi , suatu himpunan tak kosong terbuka tepat ketika komplemennya berhingga. Komplemen dari adalah himpunan satu titik , yang berhingga. Maka terbuka, sehingga tertutup. Argumen ini berlaku bagi setiap .  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-07",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-07",
+  "type": "Pemeriksaan",
+  "number": "Q.59",
+  "title": "Ruang kofinit tak hingga bukan Hausdorff.",
+  "body": "Ruang kofinit tak hingga bukan Hausdorff  Jelaskan mengapa , dengan topologi komplemen berhingga, bukan ruang Hausdorff.   Hitung komplemen irisan dua himpunan terbuka tak kosong.   Setiap dua himpunan terbuka tak kosong beririsan, sehingga dua titik berbeda tidak dapat dipisahkan oleh lingkungan terbuka saling lepas.   Jika terbuka dan tak kosong, maka berhingga. Karena tak hingga, tidak mungkin kosong. Jadi tidak ada dua lingkungan terbuka tak kosong yang saling lepas. Khususnya, dua titik berbeda tidak dapat mempunyai lingkungan seperti yang disyaratkan oleh aksioma Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-08",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-08",
+  "type": "Pemeriksaan",
+  "number": "Q.60",
+  "title": "Dua lingkungan kofinit selalu beririsan.",
+  "body": "Dua lingkungan kofinit selalu beririsan  Misalkan terbuka dalam dan memuat , sedangkan terbuka dan memuat . Buktikan bahwa .   Andaikan irisannya kosong dan gunakan bahwa gabungan dua himpunan berhingga tetap berhingga.   Komplemen berhingga, sedangkan komplemen himpunan kosong adalah seluruh , yang tak hingga. Maka irisan itu tidak kosong.   Karena dan tak kosong dan terbuka, kedua himpunan dan berhingga. Hukum De Morgan memberi dan ruas kanan berhingga. Jika , komplemennya adalah , bertentangan dengan ketakterhinggaan . Jadi .  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-09",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-09",
+  "type": "Pemeriksaan",
+  "number": "Q.61",
+  "title": "Bilangan genap: kompak tetapi tidak tertutup.",
+  "body": "Bilangan genap: kompak tetapi tidak tertutup  Dalam , tunjukkan bahwa himpunan bilangan bulat genap kompak sebagai subruang tetapi tidak tertutup dalam .   Tahap 1. Tunjukkan bahwa topologi subruang pada juga merupakan topologi komplemen berhingga.  Tahap 2. Dari selimut buka bagi , pilih satu anggota tak kosong dan selimuti sisa titik yang berhingga.  Tahap 3. Periksa apakah komplemen terbuka dalam .   Subruang bertopologi kofinit dan karena itu kompak. Himpunan tidak tertutup karena komplemennya, himpunan bilangan ganjil, bukan himpunan terbuka kofinit dalam .   Jika terbuka dan tak kosong dalam subruang , dengan terbuka dalam , maka berhingga. Sebaliknya, setiap subhimpunan yang berkomplemen berhingga dalam dapat ditulis , dan himpunan kedua pada irisan itu terbuka dalam . Jadi topologi subruangnya kofinit.  Dari selimut buka bagi , pilih satu anggota tak kosong. Anggota itu menyisakan berhingga banyak titik ; pilih satu anggota selimut tambahan bagi setiap titik yang tersisa. Maka kompak. Namun adalah himpunan semua bilangan ganjil. Komplemennya tak hingga, sehingga himpunan ganjil itu tidak terbuka dalam topologi kofinit. Jadi tidak tertutup.  "
+},
+{
+  "id": "o003-c90-ch17-exer-c-10",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-c-10",
+  "type": "Pemeriksaan",
+  "number": "Q.62",
+  "title": "Memisahkan titik dari subhimpunan kompak.",
+  "body": "Memisahkan titik dari subhimpunan kompak  Misalkan Hausdorff, kompak, dan . Buktikan bahwa terdapat himpunan terbuka saling lepas dengan dan .   Untuk setiap , pisahkan dan ; lalu gunakan kekompakan .   Pilih pasangan terbuka saling lepas dan . Dari subselimut berhingga , gunakan dan .   Untuk setiap , sifat Hausdorff memberi himpunan terbuka saling lepas dengan dan . Keluarga menyelimuti , maka ada sehingga . Tetapkan dan . Keduanya terbuka, memuat objek yang diminta, dan saling lepas: titik dalam akan berada dalam suatu sekaligus dalam .  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-01",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-d-01",
+  "type": "Pemeriksaan",
+  "number": "Q.63",
+  "title": "Memisahkan dua subhimpunan kompak.",
+  "body": "Memisahkan dua subhimpunan kompak  Misalkan dan subhimpunan kompak saling lepas dari ruang Hausdorff . Buktikan bahwa terdapat himpunan terbuka saling lepas dengan dan .   Untuk setiap , terapkan hasil pemisahan titik dari himpunan kompak , lalu gunakan kekompakan .   Pisahkan setiap dari seluruh dengan . Pilih berhingga banyak yang menyelimuti ; gabungan sisi dan irisan sisi adalah lingkungan terbuka saling lepas yang diperlukan.   Untuk setiap , hasil sebelumnya memberi himpunan terbuka saling lepas dengan dan . Karena kompak, pilih dengan . Tetapkan Himpunan terbuka, , dan . Jika , maka untuk suatu , dan juga , bertentangan dengan keterlepasan pasangan itu. Jadi .  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-02",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-d-02",
+  "type": "Pemeriksaan",
+  "number": "Q.64",
+  "title": "Kekompakan ambient dan kekompakan subruang.",
+  "body": "Kekompakan ambient dan kekompakan subruang  Misalkan dan topologi subruang pada . Buktikan bahwa kompak sebagai subhimpunan dari jika dan hanya jika merupakan ruang topologi kompak.   Tahap 1. Setiap himpunan terbuka dalam berbentuk untuk suatu terbuka dalam .  Tahap 2. Batasi selimut ambient ke untuk satu arah.  Tahap 3. Pilih satu wakil terbuka ambient bagi setiap anggota selimut subruang untuk arah lainnya.   Kedua jenis selimut saling diterjemahkan melalui , dan pemilihan subselimut berhingga bertahan dalam kedua arah.   Andaikan kompak sebagai subhimpunan . Ambil selimut bagi oleh himpunan-himpunan yang terbuka dalam topologi subruang. Untuk setiap , pilih himpunan terbuka dengan . Maka menyelimuti secara ambient, sehingga berhingga banyak cukup. Irisannya dengan memberi subselimut berhingga dari keluarga .  Sebaliknya, andaikan kompak dan ambil selimut ambient bagi . Keluarga adalah selimut buka subruang, maka mempunyai subselimut berhingga. Himpunan-himpunan ambient dengan indeks yang sama menyelimuti . Jadi kedua pengertian kekompakan itu ekuivalen.  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-03",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-d-03",
+  "type": "Pemeriksaan",
+  "number": "Q.65",
+  "title": "Karakterisasi melalui sifat irisan berhingga.",
+  "body": "Karakterisasi melalui sifat irisan berhingga  Misalkan ruang topologi. Buktikan bahwa kompak jika dan hanya jika setiap keluarga himpunan tertutup yang mempunyai sifat irisan berhingga memenuhi .   Ambil komplemen seluruh anggota keluarga dan gunakan hukum De Morgan; subselimut berhingga tepat bersesuaian dengan irisan berhingga yang kosong.   Komplemen mengubah keluarga tertutup bersifat irisan berhingga menjadi keluarga terbuka yang tidak mempunyai subselimut berhingga, dan mengubah irisan total kosong menjadi selimut bagi seluruh ruang.   Andaikan kompak dan keluarga tertutup mempunyai sifat irisan berhingga. Jika irisan totalnya kosong, maka merupakan selimut buka bagi . Subselimut berhingga akan memberi , bertentangan dengan sifat irisan berhingga. Maka irisan total tidak kosong.  Sebaliknya, andaikan syarat keluarga tertutup berlaku. Jika suatu selimut buka tidak mempunyai subselimut berhingga, maka himpunan-himpunan tertutup mempunyai sifat irisan berhingga. Namun karena menyelimuti , hukum De Morgan memberi , sebuah kontradiksi. Maka setiap selimut buka mempunyai subselimut berhingga dan kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-04",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-d-04",
+  "type": "Pemeriksaan",
+  "number": "Q.66",
+  "title": "Ruang Euklides bersifat kompak lokal.",
+  "body": "Ruang Euklides bersifat kompak lokal  Dengan definisi bahwa setiap titik harus mempunyai lingkungan terbuka yang tutupannya kompak, jelaskan mengapa kompak lokal untuk setiap .   Di sekitar , gunakan bola terbuka berjari-jari satu dan Teorema Heine–Borel untuk tutupannya.   Bola terbuka, memuat , dan tutupannya adalah bola tertutup , yang tertutup dan terbatas sehingga kompak menurut Heine–Borel.   Ambil sembarang dan tetapkan . Himpunan terbuka dan memuat . Dalam topologi Euklides, . Bola tertutup ini tertutup dan terbatas dalam , maka kompak berdasarkan Teorema Heine–Borel. Karena konstruksi berlaku pada setiap titik, kompak lokal.  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-05",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-d-05",
+  "type": "Pemeriksaan",
+  "number": "Q.67",
+  "title": "Setiap ruang kompak bersifat kompak lokal.",
+  "body": "Setiap ruang kompak bersifat kompak lokal  Tunjukkan bahwa setiap ruang topologi kompak bersifat kompak lokal menurut definisi lingkungan terbuka dengan tutupan kompak.   Untuk setiap , pilih lingkungan terbuka terbesar yang tersedia.   Ambil . Himpunan ini terbuka, memuat setiap , dan kompak.   Untuk sembarang , himpunan adalah himpunan terbuka yang memuat . Tutupannya dalam adalah , yang kompak menurut hipotesis. Jadi syarat kekompakan lokal terpenuhi pada setiap titik tanpa memerlukan aksioma pemisahan tambahan.  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-06",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-d-06",
+  "type": "Pemeriksaan",
+  "number": "Q.68",
+  "title": "Garis Sorgenfrey tidak kompak lokal.",
+  "body": "Garis Sorgenfrey tidak kompak lokal  Misalkan garis Sorgenfrey adalah dengan basis . Tunjukkan bahwa ruang ini Hausdorff tetapi tidak kompak lokal.   Tahap 1. Untuk , gunakan lingkungan basis dan .  Tahap 2. Setiap lingkungan terbuka dari memuat suatu dengan .  Tahap 3. Tunjukkan bahwa tertutup tetapi tidak kompak dengan selimut menaik yang batas kanannya menuju .   Dua titik dapat dipisahkan oleh interval basis saling lepas. Namun setiap lingkungan memuat subruang tertutup yang tidak kompak; karena itu tidak mungkin kompak.   Jika , maka dan adalah himpunan terbuka basis, masing-masing memuat dan , serta saling lepas. Jadi garis Sorgenfrey Hausdorff.  Ambil lingkungan terbuka dari . Ada dengan . Himpunan tertutup dalam garis Sorgenfrey karena komplemennya terbuka. Pilih bilangan bulat dengan . Keluarga adalah selimut buka bagi , tetapi subkeluarga berhingga mempunyai indeks maksimum dan gabungannya hanya . Jadi tidak kompak.  Jika kompak, maka subhimpunan , yang tertutup dalam , juga kompak, sebuah kontradiksi. Tidak ada titik yang mempunyai lingkungan terbuka dengan tutupan kompak, sehingga garis Sorgenfrey tidak kompak lokal.  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-07",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-d.html#o003-c90-ch17-exer-d-07",
+  "type": "Pemeriksaan",
+  "number": "Q.69",
+  "title": "Bijeksi kontinu antara dua ruang kompak.",
+  "body": "Bijeksi kontinu antara dua ruang kompak  Tentukan benar atau salah: jika dan ruang topologi kompak dan bijeksi kontinu, maka pasti suatu homeomorfisme. Berikan bukti atau contoh tandingan.   Uji pemetaan identitas pada himpunan dua titik yang domainnya diskret dan kodomainnya indiskret.   Salah. Identitas dari ruang dua titik diskret ke ruang dua titik indiskret adalah bijeksi kontinu antara ruang-ruang kompak, tetapi inversnya tidak kontinu.   Ambil . Beri domain topologi diskret dan kodomain topologi indiskret . Kedua ruang kompak karena berhingga. Pemetaan identitas bijektif. Prapeta satu-satunya himpunan terbuka kodomain adalah dan , keduanya terbuka dalam ; jadi kontinu.  Namun invers tidak kontinu: himpunan terbuka dalam kodomain dari invers, sedangkan prapetanya tidak terbuka dalam . Hipotesis yang hilang adalah sifat Hausdorff pada ; dengan hipotesis itu, bijeksi kontinu dari ruang kompak memang homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch17-exercise-guides-e",
+  "level": "1",
+  "url": "o003-c90-ch17-exercise-guides-e.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Panduan Latihan: Pernyataan Benar atau Salah tentang Kekompakan",
+  "body": " Panduan Latihan: Pernyataan Benar atau Salah tentang Kekompakan  Enam panduan terakhir ini mempertahankan urutan pernyataan benar atau salah pada sumber Bab 17. Untuk pernyataan yang benar, periksalah seluruh hipotesis dalam bukti. Untuk pernyataan yang salah, telusuri secara eksplisit setiap hipotesis pada contoh tandingan sebelum menyimpulkan.  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0 dan bukan materi resmi GVSU.  Subruang Tertutup dari Ruang Kompak  Jika adalah suatu ruang topologi kompak, maka setiap subruang tertutup dari bersifat kompak.   Tahap 1. Ambil subruang tertutup dan selimut buka subruang sebarang bagi .  Tahap 2. Tulis untuk suatu yang terbuka dalam , lalu tambahkan .  Tahap 3. Gunakan kekompakan dan buang anggota dari subselimut berhingga yang diperoleh.    Benar. Selimut buka subruang bagi , setelah diwakili oleh himpunan-himpunan buka dalam dan ditambah , menjadi selimut buka bagi . Kekompakan menghasilkan subselimut berhingga bagi .   Misalkan subruang tertutup dari dan selimut buka sebarang bagi dalam topologi subruang. Untuk setiap , pilih himpunan buka dengan . Karena tertutup, terbuka. Keluarga menyelimuti : titik dalam diselimuti oleh suatu , sedangkan titik di luar diselimuti oleh komplemen tersebut.  Kekompakan memberi subselimut berhingga. Hapus jika ia terpilih. Himpunan-himpunan yang tersisa masih menyelimuti , sebab tidak memuat titik . Maka untuk membentuk subselimut berhingga dari selimut semula. Jadi kompak.   Kodomain Kompak Tidak Cukup  Jika adalah suatu ruang Hausdorff, adalah suatu ruang kompak, dan adalah fungsi kontinu dan bijektif, maka adalah suatu homeomorfisme.   Tahap 1. Gunakan himpunan dua titik .  Tahap 2. Beri domain topologi diskret dan kodomain topologi indiskret, lalu periksa sifat Hausdorff, kompak, bijektif, dan kontinu untuk pemetaan identitas.  Tahap 3. Uji kekontinuan invers dengan himpunan satu titik yang terbuka di ruang diskret.    Salah. Identitas dari ruang dua titik diskret ke ruang dua titik indiskret adalah bijeksi kontinu dari ruang Hausdorff ke ruang kompak, tetapi inversnya tidak kontinu.   Ambil . Jadikan ruang diskret dan ruang indiskret dengan topologi . Ruang diskret Hausdorff: dua titik berbeda dipisahkan oleh singleton yang saling lepas. Ruang kompak, baik karena berhingga maupun karena setiap selimut bukanya harus memuat sendiri.  Pemetaan identitas bijektif. Prapeta kedua himpunan terbuka kodomain, dan , terbuka dalam , jadi kontinu. Namun invers tidak kontinu: singleton terbuka dalam kodomain dari invers, sedangkan prapetanya tidak terbuka dalam . Jadi bukan homeomorfisme. Hipotesis yang ditempatkan pada ruang yang keliru adalah kekompakan: teorema yang benar memerlukan domain kompak dan kodomain Hausdorff.   Domain Kompak dan Kodomain Hausdorff  Jika adalah suatu ruang kompak, adalah suatu ruang Hausdorff, dan adalah bijeksi kontinu, maka adalah suatu homeomorfisme.   Tahap 1. Ambil himpunan tertutup ; sebagai subhimpunan tertutup dari ruang kompak, kompak.  Tahap 2. Citra kontinu kompak, dan subhimpunan kompak dari ruang Hausdorff tertutup.  Tahap 3. Jadi adalah pemetaan tertutup. Gunakan bijektivitas untuk menunjukkan bahwa kontinu.    Benar. Pemetaan membawa setiap himpunan tertutup di ke himpunan kompak, dan karena Hausdorff, citra itu tertutup. Jadi adalah bijeksi kontinu yang tertutup, sehingga inversnya kontinu.   Ambil sebarang himpunan tertutup . Karena kompak, subhimpunan tertutup kompak. Kekontinuan kemudian membuat kompak dalam . Setiap subhimpunan kompak dari ruang Hausdorff tertutup, jadi tertutup dalam . Dengan demikian adalah pemetaan tertutup.  Karena bijektif, invers terdefinisi. Untuk setiap himpunan tertutup , berlaku , yang tertutup dalam . Jadi prapeta oleh dari setiap himpunan tertutup adalah tertutup; ini ekuivalen dengan kekontinuan . Maka kontinu, bijektif, dan mempunyai invers kontinu, sehingga homeomorfisme.   Himpunan Tertutup dalam Ruang Metrik Tidak Selalu Kompak  Misalkan adalah subhimpunan tertutup dari suatu ruang metrik dengan topologi metrik. Maka kompak.   Tahap 1. Ambil ruang metrik Euklides dan subhimpunan .  Tahap 2. Seluruh ruang selalu tertutup dalam dirinya sendiri.  Tahap 3. Gunakan selimut buka untuk menguji kekompakan.    Salah. Dalam ruang metrik Euklides , himpunan tertutup, tetapi tidak kompak; selimut buka tidak mempunyai subselimut berhingga.   Beri metrik Euklides dan ambil . Himpunan tertutup dalam karena komplemennya terbuka.  Untuk , tetapkan . Setiap terbuka dan , sehingga keluarga tersebut menyelimuti . Jika hanya berhingga banyak anggota dipilih dan adalah indeks terbesarnya, gabungannya sama dengan dan tidak memuat, misalnya, titik . Jadi tidak ada subselimut berhingga dan tidak kompak. Ketertutupan saja dalam ruang metrik sebarang tidak cukup; dalam ruang kompak, barulah setiap subhimpunan tertutup kompak.   Himpunan Kompak Tidak Selalu Tertutup  Jika adalah subhimpunan kompak dari suatu ruang topologi , maka adalah subhimpunan tertutup dari .   Tahap 1. Gunakan himpunan dua titik dengan topologi indiskret.  Tahap 2. Setiap himpunan berhingga, khususnya , kompak dalam ruang topologi apa pun.  Tahap 3. Periksa apakah komplemen terbuka dalam topologi indiskret.    Salah. Dalam ruang indiskret dua titik , singleton kompak karena berhingga, tetapi tidak tertutup karena komplemennya tidak terbuka.   Ambil dengan topologi indiskret , dan ambil . Himpunan kompak: dari selimut buka sebarang bagi singleton tersebut, pilih satu anggota selimut yang memuat ; satu anggota itu sudah merupakan subselimut berhingga.  Namun bukan anggota , sehingga komplemen tidak terbuka. Jadi tidak tertutup. Pernyataan menjadi benar jika ruang ambient Hausdorff, tetapi hipotesis tersebut tidak diberikan di sini.   Ruang Diskret Kompak Tepat Ketika Berhingga  Misalkan adalah suatu ruang topologi dengan topologi diskret. Maka kompak jika dan hanya jika berhingga.   Tahap 1. Jika berhingga, gunakan fakta bahwa setiap himpunan berhingga bersifat kompak.  Tahap 2. Untuk arah sebaliknya, dalam topologi diskret setiap singleton terbuka.  Tahap 3. Terapkan kekompakan kepada selimut dan tafsirkan keberadaan subselimut berhingga.    Benar. Ruang berhingga selalu kompak. Sebaliknya, singleton dalam ruang diskret membentuk selimut buka; jika ruang itu kompak, berhingga banyak singleton harus menyelimuti seluruh , sehingga berhingga.   Andaikan dahulu berhingga. Untuk selimut buka sebarang bagi , pilih satu anggota selimut yang memuat setiap titik. Karena hanya ada berhingga banyak titik, pilihan ini menghasilkan subselimut berhingga. Jadi kompak; argumen juga mencakup dengan subselimut kosong.  Sebaliknya, andaikan kompak dan diskret. Setiap singleton terbuka, sehingga merupakan selimut buka bagi . Kekompakan memberi subselimut berhingga . Karena keluarga ini menyelimuti , berlaku , jadi berhingga. Kedua implikasi telah terbukti.   "
+},
+{
+  "id": "o003-c90-ch17-exer-d-08",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-e.html#o003-c90-ch17-exer-d-08",
+  "type": "Pemeriksaan",
+  "number": "Q.70",
+  "title": "Subruang Tertutup dari Ruang Kompak.",
+  "body": "Subruang Tertutup dari Ruang Kompak  Jika adalah suatu ruang topologi kompak, maka setiap subruang tertutup dari bersifat kompak.   Tahap 1. Ambil subruang tertutup dan selimut buka subruang sebarang bagi .  Tahap 2. Tulis untuk suatu yang terbuka dalam , lalu tambahkan .  Tahap 3. Gunakan kekompakan dan buang anggota dari subselimut berhingga yang diperoleh.    Benar. Selimut buka subruang bagi , setelah diwakili oleh himpunan-himpunan buka dalam dan ditambah , menjadi selimut buka bagi . Kekompakan menghasilkan subselimut berhingga bagi .   Misalkan subruang tertutup dari dan selimut buka sebarang bagi dalam topologi subruang. Untuk setiap , pilih himpunan buka dengan . Karena tertutup, terbuka. Keluarga menyelimuti : titik dalam diselimuti oleh suatu , sedangkan titik di luar diselimuti oleh komplemen tersebut.  Kekompakan memberi subselimut berhingga. Hapus jika ia terpilih. Himpunan-himpunan yang tersisa masih menyelimuti , sebab tidak memuat titik . Maka untuk membentuk subselimut berhingga dari selimut semula. Jadi kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-09",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-e.html#o003-c90-ch17-exer-d-09",
+  "type": "Pemeriksaan",
+  "number": "Q.71",
+  "title": "Kodomain Kompak Tidak Cukup.",
+  "body": "Kodomain Kompak Tidak Cukup  Jika adalah suatu ruang Hausdorff, adalah suatu ruang kompak, dan adalah fungsi kontinu dan bijektif, maka adalah suatu homeomorfisme.   Tahap 1. Gunakan himpunan dua titik .  Tahap 2. Beri domain topologi diskret dan kodomain topologi indiskret, lalu periksa sifat Hausdorff, kompak, bijektif, dan kontinu untuk pemetaan identitas.  Tahap 3. Uji kekontinuan invers dengan himpunan satu titik yang terbuka di ruang diskret.    Salah. Identitas dari ruang dua titik diskret ke ruang dua titik indiskret adalah bijeksi kontinu dari ruang Hausdorff ke ruang kompak, tetapi inversnya tidak kontinu.   Ambil . Jadikan ruang diskret dan ruang indiskret dengan topologi . Ruang diskret Hausdorff: dua titik berbeda dipisahkan oleh singleton yang saling lepas. Ruang kompak, baik karena berhingga maupun karena setiap selimut bukanya harus memuat sendiri.  Pemetaan identitas bijektif. Prapeta kedua himpunan terbuka kodomain, dan , terbuka dalam , jadi kontinu. Namun invers tidak kontinu: singleton terbuka dalam kodomain dari invers, sedangkan prapetanya tidak terbuka dalam . Jadi bukan homeomorfisme. Hipotesis yang ditempatkan pada ruang yang keliru adalah kekompakan: teorema yang benar memerlukan domain kompak dan kodomain Hausdorff.  "
+},
+{
+  "id": "o003-c90-ch17-exer-d-10",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-e.html#o003-c90-ch17-exer-d-10",
+  "type": "Pemeriksaan",
+  "number": "Q.72",
+  "title": "Domain Kompak dan Kodomain Hausdorff.",
+  "body": "Domain Kompak dan Kodomain Hausdorff  Jika adalah suatu ruang kompak, adalah suatu ruang Hausdorff, dan adalah bijeksi kontinu, maka adalah suatu homeomorfisme.   Tahap 1. Ambil himpunan tertutup ; sebagai subhimpunan tertutup dari ruang kompak, kompak.  Tahap 2. Citra kontinu kompak, dan subhimpunan kompak dari ruang Hausdorff tertutup.  Tahap 3. Jadi adalah pemetaan tertutup. Gunakan bijektivitas untuk menunjukkan bahwa kontinu.    Benar. Pemetaan membawa setiap himpunan tertutup di ke himpunan kompak, dan karena Hausdorff, citra itu tertutup. Jadi adalah bijeksi kontinu yang tertutup, sehingga inversnya kontinu.   Ambil sebarang himpunan tertutup . Karena kompak, subhimpunan tertutup kompak. Kekontinuan kemudian membuat kompak dalam . Setiap subhimpunan kompak dari ruang Hausdorff tertutup, jadi tertutup dalam . Dengan demikian adalah pemetaan tertutup.  Karena bijektif, invers terdefinisi. Untuk setiap himpunan tertutup , berlaku , yang tertutup dalam . Jadi prapeta oleh dari setiap himpunan tertutup adalah tertutup; ini ekuivalen dengan kekontinuan . Maka kontinu, bijektif, dan mempunyai invers kontinu, sehingga homeomorfisme.  "
+},
+{
+  "id": "o003-c90-ch17-exer-e-01",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-e.html#o003-c90-ch17-exer-e-01",
+  "type": "Pemeriksaan",
+  "number": "Q.73",
+  "title": "Himpunan Tertutup dalam Ruang Metrik Tidak Selalu Kompak.",
+  "body": "Himpunan Tertutup dalam Ruang Metrik Tidak Selalu Kompak  Misalkan adalah subhimpunan tertutup dari suatu ruang metrik dengan topologi metrik. Maka kompak.   Tahap 1. Ambil ruang metrik Euklides dan subhimpunan .  Tahap 2. Seluruh ruang selalu tertutup dalam dirinya sendiri.  Tahap 3. Gunakan selimut buka untuk menguji kekompakan.    Salah. Dalam ruang metrik Euklides , himpunan tertutup, tetapi tidak kompak; selimut buka tidak mempunyai subselimut berhingga.   Beri metrik Euklides dan ambil . Himpunan tertutup dalam karena komplemennya terbuka.  Untuk , tetapkan . Setiap terbuka dan , sehingga keluarga tersebut menyelimuti . Jika hanya berhingga banyak anggota dipilih dan adalah indeks terbesarnya, gabungannya sama dengan dan tidak memuat, misalnya, titik . Jadi tidak ada subselimut berhingga dan tidak kompak. Ketertutupan saja dalam ruang metrik sebarang tidak cukup; dalam ruang kompak, barulah setiap subhimpunan tertutup kompak.  "
+},
+{
+  "id": "o003-c90-ch17-exer-e-02",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-e.html#o003-c90-ch17-exer-e-02",
+  "type": "Pemeriksaan",
+  "number": "Q.74",
+  "title": "Himpunan Kompak Tidak Selalu Tertutup.",
+  "body": "Himpunan Kompak Tidak Selalu Tertutup  Jika adalah subhimpunan kompak dari suatu ruang topologi , maka adalah subhimpunan tertutup dari .   Tahap 1. Gunakan himpunan dua titik dengan topologi indiskret.  Tahap 2. Setiap himpunan berhingga, khususnya , kompak dalam ruang topologi apa pun.  Tahap 3. Periksa apakah komplemen terbuka dalam topologi indiskret.    Salah. Dalam ruang indiskret dua titik , singleton kompak karena berhingga, tetapi tidak tertutup karena komplemennya tidak terbuka.   Ambil dengan topologi indiskret , dan ambil . Himpunan kompak: dari selimut buka sebarang bagi singleton tersebut, pilih satu anggota selimut yang memuat ; satu anggota itu sudah merupakan subselimut berhingga.  Namun bukan anggota , sehingga komplemen tidak terbuka. Jadi tidak tertutup. Pernyataan menjadi benar jika ruang ambient Hausdorff, tetapi hipotesis tersebut tidak diberikan di sini.  "
+},
+{
+  "id": "o003-c90-ch17-exer-e-03",
+  "level": "2",
+  "url": "o003-c90-ch17-exercise-guides-e.html#o003-c90-ch17-exer-e-03",
+  "type": "Pemeriksaan",
+  "number": "Q.75",
+  "title": "Ruang Diskret Kompak Tepat Ketika Berhingga.",
+  "body": "Ruang Diskret Kompak Tepat Ketika Berhingga  Misalkan adalah suatu ruang topologi dengan topologi diskret. Maka kompak jika dan hanya jika berhingga.   Tahap 1. Jika berhingga, gunakan fakta bahwa setiap himpunan berhingga bersifat kompak.  Tahap 2. Untuk arah sebaliknya, dalam topologi diskret setiap singleton terbuka.  Tahap 3. Terapkan kekompakan kepada selimut dan tafsirkan keberadaan subselimut berhingga.    Benar. Ruang berhingga selalu kompak. Sebaliknya, singleton dalam ruang diskret membentuk selimut buka; jika ruang itu kompak, berhingga banyak singleton harus menyelimuti seluruh , sehingga berhingga.   Andaikan dahulu berhingga. Untuk selimut buka sebarang bagi , pilih satu anggota selimut yang memuat setiap titik. Karena hanya ada berhingga banyak titik, pilihan ini menghasilkan subselimut berhingga. Jadi kompak; argumen juga mencakup dengan subselimut kosong.  Sebaliknya, andaikan kompak dan diskret. Setiap singleton terbuka, sehingga merupakan selimut buka bagi . Kekompakan memberi subselimut berhingga . Karena keluarga ini menyelimuti , berlaku , jadi berhingga. Kedua implikasi telah terbukti.  "
+},
+{
+  "id": "o003-c90-ch17-mastery",
+  "level": "1",
+  "url": "o003-c90-ch17-mastery.html",
+  "type": "Bagian",
+  "number": "",
+  "title": "Uji Penguasaan Bab 17: Kekompakan",
+  "body": " Uji Penguasaan Bab 17: Kekompakan  Delapan uji penguasaan ini menghubungkan definisi selimut buka, sifat irisan berhingga, Teorema Heine–Borel, pemetaan kontinu, hipotesis Hausdorff, metrik Hausdorff, dan sistem fungsi teriterasi. Kerjakan setiap pernyataan sebelum membuka petunjuk, jawaban, dan solusi secara bertahap.  Komponen pendamping ini ditulis secara terpisah di bawah lisensi CC BY 4.0, bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber.  Kekompakan dan sifat irisan berhingga  Misalkan ruang topologi. Buktikan bahwa kompak jika dan hanya jika setiap keluarga himpunan tertutup yang mempunyai sifat irisan berhingga memenuhi . Di sini sifat irisan berhingga berarti bahwa irisan setiap subkeluarga berhingga dan tak kosong dari tidak kosong.   Tahap 1. Ambil komplemen setiap himpunan tertutup.  Tahap 2. Gunakan hukum De Morgan untuk menerjemahkan “irisan total kosong” menjadi “komplemen-komplemennya menutupi ”.  Tahap 3. Perhatikan bahwa subselimut berhingga tepat bersesuaian dengan irisan berhingga yang kosong.   Pernyataan itu benar. Dengan menuliskan , kegagalan irisan total setara dengan fakta bahwa keluarga merupakan selimut buka, sedangkan kegagalan suatu irisan berhingga setara dengan adanya subselimut berhingga.   Andaikan kompak dan mempunyai sifat irisan berhingga. Jika , maka hukum De Morgan memberi Jadi komplemen anggota membentuk selimut buka bagi . Kekompakan menghasilkan dengan . Sekali lagi menurut hukum De Morgan, , bertentangan dengan sifat irisan berhingga.  Sebaliknya, andaikan syarat irisan tersebut berlaku dan misalkan suatu selimut buka bagi tanpa subselimut berhingga. Keluarga tertutup mempunyai sifat irisan berhingga: irisan berhingga yang kosong akan mengatakan bahwa himpunan-himpunan terbuka yang bersesuaian menutupi . Namun menutupi , sehingga . Ini bertentangan dengan hipotesis, maka setiap selimut buka mempunyai subselimut berhingga.   Citra kontinu dari ruang kompak  Misalkan kompak dan kontinu. Buktikan bahwa , dengan topologi subruang dari , kompak. Deduksikan bahwa jika juga surjektif, maka kompak, dan bahwa kekompakan merupakan invarian topologi.   Tahap 1. Mulailah dengan selimut buka bagi .  Tahap 2. Tarik setiap kembali melalui pemetaan .  Tahap 3. Untuk invarian topologi, terapkan hasil tersebut pada suatu homeomorfisme.   Prapeta selimut buka bagi menyelimuti . Subselimut berhingga bagi prapeta itu menghasilkan subselimut berhingga bagi . Jika surjektif, ; khususnya, homeomorfisme mempertahankan kekompakan.   Ambil selimut buka bagi . Karena setiap terbuka dalam topologi subruang dan yang dipandang sebagai pemetaan ke tetap kontinu, setiap terbuka dalam . Selain itu, menutupi . Pilih indeks sehingga prapeta-prapeta tersebut menutupi . Untuk setiap , tulis . Salah satu memuat , sehingga . Jadi menutupi , dan kompak.  Jika surjektif, citra itu adalah . Jika homeomorfisme dan salah satu ruang kompak, maka kekontinuan atau memindahkan kekompakan ke ruang yang lain. Karena itu kekompakan merupakan invarian topologi.   Merekonstruksi Teorema Heine–Borel  Buktikan bahwa subhimpunan kompak jika dan hanya jika tertutup dan terbatas. Anda boleh memakai fakta bahwa setiap barisan kubus tertutup tak kosong yang menurun dan yang panjang rusuknya menuju nol mempunyai irisan tak kosong, serta bahwa subhimpunan tertutup dari ruang kompak adalah kompak.   Tahap 1. Untuk membuktikan kubus tertutup kompak, andaikan ada selimut buka tanpa subselimut berhingga dan bagi kubus menjadi subkubus.  Tahap 2. Pilih berulang kali satu subkubus yang juga tidak dapat ditutupi secara berhingga.  Tahap 3. Untuk arah sebaliknya, gunakan fungsi koordinat atau bola-bola terbuka untuk memperoleh keterbatasan dan gunakan hipotesis Hausdorff pada untuk memperoleh ketertutupan.   Kubus tertutup dalam kompak melalui argumen pembagian kubus bersarang. Himpunan tertutup dan terbatas terletak dalam suatu kubus kompak dan tertutup di dalamnya, maka kompak. Sebaliknya, subhimpunan kompak ruang Hausdorff tertutup, dan suatu tutup oleh bola-bola berpusat di asal mempunyai subselimut berhingga sehingga himpunan itu terbatas.   Pertama, misalkan suatu kubus tertutup mempunyai selimut buka tanpa subselimut berhingga. Bagi menjadi kubus tertutup kongruen. Sedikitnya satu di antaranya, sebut , tidak dapat ditutupi oleh berhingga banyak anggota ; jika semuanya dapat, gabungan subselimut-subselimut berhingga itu akan menyelimuti . Ulangi untuk memperoleh , dengan panjang rusuk menuju nol dan setiap tidak mempunyai subselimut berhingga dari .  Ambil . Ada dan dengan . Untuk cukup besar, diameter lebih kecil daripada , sehingga . Ini memberi subselimut satu himpunan bagi , sebuah kontradiksi. Jadi setiap kubus tertutup kompak.  Jika tertutup dan terbatas, maka untuk suatu . Kubus tersebut kompak, dan tertutup di dalamnya, sehingga kompak. Sebaliknya, Hausdorff, jadi setiap subhimpunan kompaknya tertutup. Keluarga menyelimuti ; suatu subselimut berhingga termuat dalam untuk nilai maksimum dari indeks yang terpilih. Maka terbatas.   Teorema nilai ekstrem pada ruang kompak  Misalkan ruang topologi kompak tak kosong dan kontinu. Buktikan bahwa terdapat dengan untuk setiap . Jelaskan tepat di mana ketakosongan digunakan.   Tahap 1. Gunakan kekontinuan untuk menunjukkan bahwa kompak.  Tahap 2. Terapkan Heine–Borel dalam , lalu ambil supremum dan infimum.  Tahap 3. Gunakan ketertutupan untuk menunjukkan bahwa kedua batas itu benar-benar anggota citra.   Citra kompak, sehingga tertutup dan terbatas dalam . Karena citra itu tak kosong, supremum dan infimumnya ada; ketertutupan membuat keduanya termasuk dalam dan karena itu dicapai oleh titik-titik .   Berdasarkan kekontinuan , himpunan kompak. Menurut Heine–Borel, tertutup dan terbatas dalam . Ketakosongan menjamin bahwa tak kosong, sehingga bilangan dan terdefinisi sebagai bilangan real.  Untuk setiap , sifat supremum memberi dengan . Maka . Karena tertutup, . Jadi ada dengan . Argumen yang sama bagi infimum memberi dengan . Definisi infimum dan supremum kemudian memberi bagi setiap .   Memisahkan titik dari himpunan kompak  Misalkan ruang Hausdorff, kompak, dan . Buktikan bahwa terdapat himpunan terbuka dengan , , dan . Deduksikan bahwa setiap subhimpunan kompak dari ruang Hausdorff tertutup.   Tahap 1. Untuk setiap , pilih lingkungan terbuka saling lepas dan .  Tahap 2. Ambil subselimut berhingga dari .  Tahap 3. Iris lingkungan-lingkungan yang bersesuaian dan gabungkan lingkungan-lingkungan .   Pilih sehingga . Maka dan memenuhi semua syarat. Karena setiap titik di luar mempunyai lingkungan terbuka yang tidak memotong , komplemen terbuka.   Untuk setiap , sifat Hausdorff memberi himpunan terbuka dengan , , dan . Keluarga menutupi . Karena kompak, ada sehingga .  Tetapkan Keduanya terbuka, , dan . Jika , maka untuk suatu , sementara , bertentangan dengan . Jadi . Khususnya, setiap mempunyai lingkungan terbuka . Maka terbuka dan tertutup.   Mengapa hipotesis Hausdorff tidak boleh dihapus  Misalkan himpunan tak hingga dengan topologi kofinit: himpunan terbukanya adalah dan semua himpunan yang komplemennya berhingga. Buktikan bahwa kompak tetapi tidak Hausdorff. Selanjutnya, pilih subhimpunan tak hingga sejati dan tunjukkan bahwa kompak sebagai subruang tetapi tidak tertutup dalam apabila juga tak hingga.   Tahap 1. Dari suatu selimut buka, pilih satu anggota tak kosong; hanya berhingga banyak titik yang belum terselimuti.  Tahap 2. Dua himpunan terbuka tak kosong tidak mungkin saling lepas.  Tahap 3. Topologi subruang pada juga kofinit, sedangkan kriteria tertutup di dapat dibaca dari komplemennya.   Satu anggota tak kosong dari selimut buka menyisakan hanya berhingga banyak titik, yang dapat diselimuti oleh berhingga banyak anggota lain. Dua himpunan terbuka tak kosong selalu beririsan karena gabungan dua komplemen berhingga tetap berhingga. Subruang bertopologi kofinit sehingga kompak, tetapi tidak tertutup jika komplemennya tak hingga.   Ambil selimut buka bagi dan pilih yang tak kosong. Himpunan berhingga. Untuk setiap titik pada komplemen itu, pilih satu anggota yang memuatnya. Bersama , berhingga banyak pilihan ini menutupi . Jadi kompak.  Jika terbuka dan tak kosong, maka berhingga. Karena tak hingga, tidak kosong. Maka dua titik berbeda tidak dapat mempunyai lingkungan terbuka saling lepas, dan tidak Hausdorff.  Himpunan terbuka tak kosong dalam subruang berbentuk ; komplemennya di termuat dalam komplemen berhingga . Sebaliknya, setiap komplemen berhingga di diperoleh dengan cara ini. Jadi juga bertopologi kofinit dan argumen pertama menunjukkan bahwa kompak. Namun jika tak hingga, komplemen itu bukan himpunan terbuka tak kosong kofinit; akibatnya tidak tertutup. Contoh ini menunjukkan bahwa “kompak mengakibatkan tertutup” memerlukan hipotesis Hausdorff pada ruang ambient.   Metrik Hausdorff pada himpunan kompak  Untuk himpunan kompak tak kosong dalam ruang metrik , definisikan Buktikan bahwa merupakan metrik pada koleksi semua subhimpunan kompak tak kosong dari .   Tahap 1. Simetri dan nonnegativitas langsung dari definisi.  Tahap 2. Jika , gunakan ketertutupan himpunan kompak dalam ruang metrik untuk memperoleh kedua inklusi.  Tahap 3. Untuk setiap , bandingkan dengan , lalu ambil infimum dan supremum.   Fungsi nonnegatif dan simetris. Nilai nol memaksa dan . Ketaksamaan dan pasangannya bagi titik-titik menghasilkan ketaksamaan segitiga setelah supremum diambil.   Fungsi jarak-ke-himpunan kontinu, sehingga terbatas pada himpunan kompak ; hal yang sama berlaku setelah dan dipertukarkan. Jadi kedua supremum dalam definisi bernilai hingga. Nonnegativitas jelas, dan pertukaran dengan tidak mengubah maksimum, jadi . Jika , semua jarak ke himpunan itu nol. Sebaliknya, jika , maka untuk setiap . Himpunan kompak dalam ruang metrik tertutup, sehingga . Jadi ; secara simetris .  Ambil himpunan kompak tak kosong . Untuk , , dan , ketaksamaan segitiga memberi . Dengan mengambil infimum terhadap , lalu memperkirakan , diperoleh . Mengambil infimum terhadap memberi . Setelah supremum terhadap , Argumen simetris memberi batas yang sama bagi . Maksimum kedua ruas kiri itu adalah , sehingga . Semua aksioma metrik terpenuhi.   Kontraksi himpunan dan atraktor unik  Misalkan ruang metrik lengkap dan kontraksi dengan satu konstanta bersama . Pada koleksi subhimpunan kompak tak kosong, definisikan . Buktikan bahwa . Dengan memakai kelengkapan dan teorema titik tetap kontraksi, simpulkan bahwa ada tepat satu atraktor dengan dan bahwa iterasi dari sembarang menuju .   Tahap 1. Jika , dekati oleh suatu titik .  Tahap 2. Gunakan dan ambil infimum, supremum, serta maksimum.  Tahap 3. Terapkan teorema titik tetap Banach pada pemetaan .   Setiap titik dalam berjarak paling besar dari ; arah sebaliknya simetris. Maka kontraksi berfaktor paling besar . Kelengkapan hiperruang dan teorema Banach memberi satu-satunya titik tetap serta konvergensi dalam metrik Hausdorff.   Ambil . Ada dan dengan . Untuk setiap , pilih sehingga . Karena , Biarkan . Maka . Mengambil supremum terhadap memberi satu sisi definisi metrik Hausdorff. Pertukaran dan memberi sisi lainnya, sehingga .  Gabungan berhingga citra kompak adalah kompak dan tak kosong, jadi memang memetakan ke dirinya sendiri. Dengan fakta yang diberikan bahwa lengkap, adalah kontraksi pada ruang metrik lengkap. Teorema titik tetap Banach menghasilkan tepat satu dengan . Untuk setiap , barisan memenuhi dan karena itu konvergen ke . Himpunan ialah atraktor unik sistem fungsi tersebut.   "
+},
+{
+  "id": "o003-c90-ch17-mastery-01",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-01",
+  "type": "Pemeriksaan",
+  "number": "Q.76",
+  "title": "Kekompakan dan sifat irisan berhingga.",
+  "body": "Kekompakan dan sifat irisan berhingga  Misalkan ruang topologi. Buktikan bahwa kompak jika dan hanya jika setiap keluarga himpunan tertutup yang mempunyai sifat irisan berhingga memenuhi . Di sini sifat irisan berhingga berarti bahwa irisan setiap subkeluarga berhingga dan tak kosong dari tidak kosong.   Tahap 1. Ambil komplemen setiap himpunan tertutup.  Tahap 2. Gunakan hukum De Morgan untuk menerjemahkan “irisan total kosong” menjadi “komplemen-komplemennya menutupi ”.  Tahap 3. Perhatikan bahwa subselimut berhingga tepat bersesuaian dengan irisan berhingga yang kosong.   Pernyataan itu benar. Dengan menuliskan , kegagalan irisan total setara dengan fakta bahwa keluarga merupakan selimut buka, sedangkan kegagalan suatu irisan berhingga setara dengan adanya subselimut berhingga.   Andaikan kompak dan mempunyai sifat irisan berhingga. Jika , maka hukum De Morgan memberi Jadi komplemen anggota membentuk selimut buka bagi . Kekompakan menghasilkan dengan . Sekali lagi menurut hukum De Morgan, , bertentangan dengan sifat irisan berhingga.  Sebaliknya, andaikan syarat irisan tersebut berlaku dan misalkan suatu selimut buka bagi tanpa subselimut berhingga. Keluarga tertutup mempunyai sifat irisan berhingga: irisan berhingga yang kosong akan mengatakan bahwa himpunan-himpunan terbuka yang bersesuaian menutupi . Namun menutupi , sehingga . Ini bertentangan dengan hipotesis, maka setiap selimut buka mempunyai subselimut berhingga.  "
+},
+{
+  "id": "o003-c90-ch17-mastery-02",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-02",
+  "type": "Pemeriksaan",
+  "number": "Q.77",
+  "title": "Citra kontinu dari ruang kompak.",
+  "body": "Citra kontinu dari ruang kompak  Misalkan kompak dan kontinu. Buktikan bahwa , dengan topologi subruang dari , kompak. Deduksikan bahwa jika juga surjektif, maka kompak, dan bahwa kekompakan merupakan invarian topologi.   Tahap 1. Mulailah dengan selimut buka bagi .  Tahap 2. Tarik setiap kembali melalui pemetaan .  Tahap 3. Untuk invarian topologi, terapkan hasil tersebut pada suatu homeomorfisme.   Prapeta selimut buka bagi menyelimuti . Subselimut berhingga bagi prapeta itu menghasilkan subselimut berhingga bagi . Jika surjektif, ; khususnya, homeomorfisme mempertahankan kekompakan.   Ambil selimut buka bagi . Karena setiap terbuka dalam topologi subruang dan yang dipandang sebagai pemetaan ke tetap kontinu, setiap terbuka dalam . Selain itu, menutupi . Pilih indeks sehingga prapeta-prapeta tersebut menutupi . Untuk setiap , tulis . Salah satu memuat , sehingga . Jadi menutupi , dan kompak.  Jika surjektif, citra itu adalah . Jika homeomorfisme dan salah satu ruang kompak, maka kekontinuan atau memindahkan kekompakan ke ruang yang lain. Karena itu kekompakan merupakan invarian topologi.  "
+},
+{
+  "id": "o003-c90-ch17-mastery-03",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-03",
+  "type": "Pemeriksaan",
+  "number": "Q.78",
+  "title": "Merekonstruksi Teorema Heine–Borel.",
+  "body": "Merekonstruksi Teorema Heine–Borel  Buktikan bahwa subhimpunan kompak jika dan hanya jika tertutup dan terbatas. Anda boleh memakai fakta bahwa setiap barisan kubus tertutup tak kosong yang menurun dan yang panjang rusuknya menuju nol mempunyai irisan tak kosong, serta bahwa subhimpunan tertutup dari ruang kompak adalah kompak.   Tahap 1. Untuk membuktikan kubus tertutup kompak, andaikan ada selimut buka tanpa subselimut berhingga dan bagi kubus menjadi subkubus.  Tahap 2. Pilih berulang kali satu subkubus yang juga tidak dapat ditutupi secara berhingga.  Tahap 3. Untuk arah sebaliknya, gunakan fungsi koordinat atau bola-bola terbuka untuk memperoleh keterbatasan dan gunakan hipotesis Hausdorff pada untuk memperoleh ketertutupan.   Kubus tertutup dalam kompak melalui argumen pembagian kubus bersarang. Himpunan tertutup dan terbatas terletak dalam suatu kubus kompak dan tertutup di dalamnya, maka kompak. Sebaliknya, subhimpunan kompak ruang Hausdorff tertutup, dan suatu tutup oleh bola-bola berpusat di asal mempunyai subselimut berhingga sehingga himpunan itu terbatas.   Pertama, misalkan suatu kubus tertutup mempunyai selimut buka tanpa subselimut berhingga. Bagi menjadi kubus tertutup kongruen. Sedikitnya satu di antaranya, sebut , tidak dapat ditutupi oleh berhingga banyak anggota ; jika semuanya dapat, gabungan subselimut-subselimut berhingga itu akan menyelimuti . Ulangi untuk memperoleh , dengan panjang rusuk menuju nol dan setiap tidak mempunyai subselimut berhingga dari .  Ambil . Ada dan dengan . Untuk cukup besar, diameter lebih kecil daripada , sehingga . Ini memberi subselimut satu himpunan bagi , sebuah kontradiksi. Jadi setiap kubus tertutup kompak.  Jika tertutup dan terbatas, maka untuk suatu . Kubus tersebut kompak, dan tertutup di dalamnya, sehingga kompak. Sebaliknya, Hausdorff, jadi setiap subhimpunan kompaknya tertutup. Keluarga menyelimuti ; suatu subselimut berhingga termuat dalam untuk nilai maksimum dari indeks yang terpilih. Maka terbatas.  "
+},
+{
+  "id": "o003-c90-ch17-mastery-04",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-04",
+  "type": "Pemeriksaan",
+  "number": "Q.79",
+  "title": "Teorema nilai ekstrem pada ruang kompak.",
+  "body": "Teorema nilai ekstrem pada ruang kompak  Misalkan ruang topologi kompak tak kosong dan kontinu. Buktikan bahwa terdapat dengan untuk setiap . Jelaskan tepat di mana ketakosongan digunakan.   Tahap 1. Gunakan kekontinuan untuk menunjukkan bahwa kompak.  Tahap 2. Terapkan Heine–Borel dalam , lalu ambil supremum dan infimum.  Tahap 3. Gunakan ketertutupan untuk menunjukkan bahwa kedua batas itu benar-benar anggota citra.   Citra kompak, sehingga tertutup dan terbatas dalam . Karena citra itu tak kosong, supremum dan infimumnya ada; ketertutupan membuat keduanya termasuk dalam dan karena itu dicapai oleh titik-titik .   Berdasarkan kekontinuan , himpunan kompak. Menurut Heine–Borel, tertutup dan terbatas dalam . Ketakosongan menjamin bahwa tak kosong, sehingga bilangan dan terdefinisi sebagai bilangan real.  Untuk setiap , sifat supremum memberi dengan . Maka . Karena tertutup, . Jadi ada dengan . Argumen yang sama bagi infimum memberi dengan . Definisi infimum dan supremum kemudian memberi bagi setiap .  "
+},
+{
+  "id": "o003-c90-ch17-mastery-05",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-05",
+  "type": "Pemeriksaan",
+  "number": "Q.80",
+  "title": "Memisahkan titik dari himpunan kompak.",
+  "body": "Memisahkan titik dari himpunan kompak  Misalkan ruang Hausdorff, kompak, dan . Buktikan bahwa terdapat himpunan terbuka dengan , , dan . Deduksikan bahwa setiap subhimpunan kompak dari ruang Hausdorff tertutup.   Tahap 1. Untuk setiap , pilih lingkungan terbuka saling lepas dan .  Tahap 2. Ambil subselimut berhingga dari .  Tahap 3. Iris lingkungan-lingkungan yang bersesuaian dan gabungkan lingkungan-lingkungan .   Pilih sehingga . Maka dan memenuhi semua syarat. Karena setiap titik di luar mempunyai lingkungan terbuka yang tidak memotong , komplemen terbuka.   Untuk setiap , sifat Hausdorff memberi himpunan terbuka dengan , , dan . Keluarga menutupi . Karena kompak, ada sehingga .  Tetapkan Keduanya terbuka, , dan . Jika , maka untuk suatu , sementara , bertentangan dengan . Jadi . Khususnya, setiap mempunyai lingkungan terbuka . Maka terbuka dan tertutup.  "
+},
+{
+  "id": "o003-c90-ch17-mastery-06",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-06",
+  "type": "Pemeriksaan",
+  "number": "Q.81",
+  "title": "Mengapa hipotesis Hausdorff tidak boleh dihapus.",
+  "body": "Mengapa hipotesis Hausdorff tidak boleh dihapus  Misalkan himpunan tak hingga dengan topologi kofinit: himpunan terbukanya adalah dan semua himpunan yang komplemennya berhingga. Buktikan bahwa kompak tetapi tidak Hausdorff. Selanjutnya, pilih subhimpunan tak hingga sejati dan tunjukkan bahwa kompak sebagai subruang tetapi tidak tertutup dalam apabila juga tak hingga.   Tahap 1. Dari suatu selimut buka, pilih satu anggota tak kosong; hanya berhingga banyak titik yang belum terselimuti.  Tahap 2. Dua himpunan terbuka tak kosong tidak mungkin saling lepas.  Tahap 3. Topologi subruang pada juga kofinit, sedangkan kriteria tertutup di dapat dibaca dari komplemennya.   Satu anggota tak kosong dari selimut buka menyisakan hanya berhingga banyak titik, yang dapat diselimuti oleh berhingga banyak anggota lain. Dua himpunan terbuka tak kosong selalu beririsan karena gabungan dua komplemen berhingga tetap berhingga. Subruang bertopologi kofinit sehingga kompak, tetapi tidak tertutup jika komplemennya tak hingga.   Ambil selimut buka bagi dan pilih yang tak kosong. Himpunan berhingga. Untuk setiap titik pada komplemen itu, pilih satu anggota yang memuatnya. Bersama , berhingga banyak pilihan ini menutupi . Jadi kompak.  Jika terbuka dan tak kosong, maka berhingga. Karena tak hingga, tidak kosong. Maka dua titik berbeda tidak dapat mempunyai lingkungan terbuka saling lepas, dan tidak Hausdorff.  Himpunan terbuka tak kosong dalam subruang berbentuk ; komplemennya di termuat dalam komplemen berhingga . Sebaliknya, setiap komplemen berhingga di diperoleh dengan cara ini. Jadi juga bertopologi kofinit dan argumen pertama menunjukkan bahwa kompak. Namun jika tak hingga, komplemen itu bukan himpunan terbuka tak kosong kofinit; akibatnya tidak tertutup. Contoh ini menunjukkan bahwa “kompak mengakibatkan tertutup” memerlukan hipotesis Hausdorff pada ruang ambient.  "
+},
+{
+  "id": "o003-c90-ch17-mastery-07",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-07",
+  "type": "Pemeriksaan",
+  "number": "Q.82",
+  "title": "Metrik Hausdorff pada himpunan kompak.",
+  "body": "Metrik Hausdorff pada himpunan kompak  Untuk himpunan kompak tak kosong dalam ruang metrik , definisikan Buktikan bahwa merupakan metrik pada koleksi semua subhimpunan kompak tak kosong dari .   Tahap 1. Simetri dan nonnegativitas langsung dari definisi.  Tahap 2. Jika , gunakan ketertutupan himpunan kompak dalam ruang metrik untuk memperoleh kedua inklusi.  Tahap 3. Untuk setiap , bandingkan dengan , lalu ambil infimum dan supremum.   Fungsi nonnegatif dan simetris. Nilai nol memaksa dan . Ketaksamaan dan pasangannya bagi titik-titik menghasilkan ketaksamaan segitiga setelah supremum diambil.   Fungsi jarak-ke-himpunan kontinu, sehingga terbatas pada himpunan kompak ; hal yang sama berlaku setelah dan dipertukarkan. Jadi kedua supremum dalam definisi bernilai hingga. Nonnegativitas jelas, dan pertukaran dengan tidak mengubah maksimum, jadi . Jika , semua jarak ke himpunan itu nol. Sebaliknya, jika , maka untuk setiap . Himpunan kompak dalam ruang metrik tertutup, sehingga . Jadi ; secara simetris .  Ambil himpunan kompak tak kosong . Untuk , , dan , ketaksamaan segitiga memberi . Dengan mengambil infimum terhadap , lalu memperkirakan , diperoleh . Mengambil infimum terhadap memberi . Setelah supremum terhadap , Argumen simetris memberi batas yang sama bagi . Maksimum kedua ruas kiri itu adalah , sehingga . Semua aksioma metrik terpenuhi.  "
+},
+{
+  "id": "o003-c90-ch17-mastery-08",
+  "level": "2",
+  "url": "o003-c90-ch17-mastery.html#o003-c90-ch17-mastery-08",
+  "type": "Pemeriksaan",
+  "number": "Q.83",
+  "title": "Kontraksi himpunan dan atraktor unik.",
+  "body": "Kontraksi himpunan dan atraktor unik  Misalkan ruang metrik lengkap dan kontraksi dengan satu konstanta bersama . Pada koleksi subhimpunan kompak tak kosong, definisikan . Buktikan bahwa . Dengan memakai kelengkapan dan teorema titik tetap kontraksi, simpulkan bahwa ada tepat satu atraktor dengan dan bahwa iterasi dari sembarang menuju .   Tahap 1. Jika , dekati oleh suatu titik .  Tahap 2. Gunakan dan ambil infimum, supremum, serta maksimum.  Tahap 3. Terapkan teorema titik tetap Banach pada pemetaan .   Setiap titik dalam berjarak paling besar dari ; arah sebaliknya simetris. Maka kontraksi berfaktor paling besar . Kelengkapan hiperruang dan teorema Banach memberi satu-satunya titik tetap serta konvergensi dalam metrik Hausdorff.   Ambil . Ada dan dengan . Untuk setiap , pilih sehingga . Karena , Biarkan . Maka . Mengambil supremum terhadap memberi satu sisi definisi metrik Hausdorff. Pertukaran dan memberi sisi lainnya, sehingga .  Gabungan berhingga citra kompak adalah kompak dan tak kosong, jadi memang memetakan ke dirinya sendiri. Dengan fakta yang diberikan bahwa lengkap, adalah kontraksi pada ruang metrik lengkap. Teorema titik tetap Banach menghasilkan tepat satu dengan . Untuk setiap , barisan memenuhi dan karena itu konvergen ke . Himpunan ialah atraktor unik sistem fungsi tersebut.  "
+},
+{
   "id": "index-1",
   "level": "1",
   "url": "index-1.html",
@@ -13723,7 +15019,7 @@ var ptx_lunr_docs = [
   "type": "Kolofon",
   "number": "",
   "title": "Kolofon",
-  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1-16 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 17; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
+  "body": " Rujukan maju ke Bab 20. Hasil kali ruang topologi dibahas pada Bab 20 dalam urutan sumber dan belum termasuk dalam batas terverifikasi Bab 1-17 ini. Tautan maju dari Bab 12 dipertahankan agar hubungan sumber tetap jelas. Produksi berlanjut menurut urutan sumber dengan Bab 18; isi lengkap Bab 20 akan menggantikan catatan ini ketika batas tersebut tercapai.  "
 }
 ]
 

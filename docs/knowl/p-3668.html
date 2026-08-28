@@ -12,8 +12,26 @@
 <link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Rubrik lengkap meminta grafik yang memperlihatkan amplitudo tetap sekitar <span class="process-math">\(1\)</span> dan frekuensi osilasi yang meningkat ketika <span class="process-math">\(x\to0\text{.}\)</span> Penjelasan yang baik menyatakan bahwa tidak tampak satu nilai yang didekati semua keluaran. Pengamatan ini bukan bukti: resolusi gambar dan pemilihan sampel dapat menipu. Butir-butir berikutnya mengubah intuisi itu menjadi penyangkal sekuensial dengan memilih titik yang nilainya tepat <span class="process-math">\(1\text{.}\)</span>
+<div class="para logical">
+<div class="para">Ambil <span class="process-math">\(x\in\R\)</span> dan tuliskan <span class="process-math">\(t=|x-c|\geq0\text{.}\)</span> Jika <span class="process-math">\(0\lt\delta\lt1\text{,}\)</span> maka</div>
+<div class="displaymath process-math">
+\begin{gather*}
+d(x,c)\lt\delta\\
+\Longleftrightarrow \frac{t}{t+1}\lt\delta\\
+\Longleftrightarrow (1-\delta)t\lt\delta\\
+\Longleftrightarrow t\lt\frac{\delta}{1-\delta}.
+\end{gather*}
 </div>
-<span class="incontext"><a href="o003-c90-ch09-source-guides.html#p-3668" class="internal">in-context</a></span>
+<div class="para">Jadi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B(c,\delta)=
+\left(c-\frac{\delta}{1-\delta},
+c+\frac{\delta}{1-\delta}\right)
+\quad(0\lt\delta\lt1).
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="o003-c90-ch08-exercise-guides-b.html#p-3668" class="internal">in-context</a></span>
 </body>
 </html>

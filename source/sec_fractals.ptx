@@ -1,56 +1,56 @@
 <section xml:id="sec_fractals">
-  <title>An Application of Compactness: Fractals</title>
+  <title>Penerapan Kekompakan: Fraktal</title>
   <p>
-    Introduced by Felix Hausdorff in the early 20th century as a way to measure the distance between sets,
-    the Hausdorff metric
-    (also called the Pompeiu-Hausdorff metric)
-    has since been widely studied and has many applications.
-    For example,
-    the United States military has used the Hausdorff distance in target recognition procedures.
-    In addition,
-    the Hausdorff metric has been used in image matching and visual recognition by robots,
-    medicine, image analysis, and astronomy.
+    Diperkenalkan oleh Felix Hausdorff pada awal abad ke-20 sebagai cara untuk mengukur jarak antara himpunan,
+    metrik Hausdorff
+    (juga disebut metrik Pompeiu-Hausdorff)
+    sejak saat itu telah dipelajari secara luas dan memiliki banyak penerapan.
+    Sebagai contoh,
+    militer Amerika Serikat telah menggunakan jarak Hausdorff dalam prosedur pengenalan sasaran.
+    Selain itu,
+    metrik Hausdorff telah digunakan dalam pencocokan citra dan pengenalan visual oleh robot,
+    kedokteran, analisis citra, dan astronomi.
   </p>
   <p>
-    The basic idea in these applications is that we need a way to compare two shapes.
-    For example,
-    if a manufacturer needs to mill a specific product based on a template,
-    there is usually some tolerance that is allowed.
-    So the manufacturer needs a way to compare the milled parts to the template to determine if the tolerance has been met or exceeded.
+    Gagasan dasar dalam penerapan-penerapan ini adalah bahwa kita memerlukan suatu cara untuk membandingkan dua bentuk.
+    Sebagai contoh,
+    jika sebuah produsen perlu mengerjakan suatu produk tertentu dengan mesin berdasarkan sebuah templat,
+    biasanya terdapat toleransi tertentu yang diperbolehkan.
+    Jadi, produsen tersebut memerlukan suatu cara untuk membandingkan komponen-komponen hasil pengerjaan mesin dengan templat guna menentukan apakah toleransi tersebut telah dipenuhi atau dilampaui.
   </p>
   <p>
-    The Hausdorff metric is also familiar to fractal aficionados for describing the convergence of sequences of compact sets to their attractors in iterated function systems.
-    The variety of applications of this metric make it one that is worth studying.
+    Metrik Hausdorff juga dikenal oleh para penggemar fraktal karena digunakan untuk mendeskripsikan kekonvergenan barisan himpunan kompak menuju atraktornya dalam sistem fungsi teriterasi.
+    Beragamnya penerapan metrik ini menjadikannya layak untuk dipelajari.
   </p>
   <p>
-    To define the Hausdorff metric,
-    we begin with the distance from a point <m>x</m> in a metric space <m>X</m> to a subset <m>A</m> of <m>X</m> as
+    Untuk mendefinisikan metrik Hausdorff,
+    kita mulai dengan jarak dari sebuah titik <m>x</m> dalam ruang metrik <m>X</m> ke sebuah subhimpunan <m>A</m> dari <m>X</m>, yaitu
     <me>
       d(x,A) = \inf\{d(x,a) \mid a \in A\}
     </me>.
   </p>
   <p>
-    Since images will be represented as compact sets,
-    we restrict ourselves to compact subsets of a metric space.
-    In this case the infimum becomes a minimum and we have
+    Karena citra akan direpresentasikan sebagai himpunan kompak,
+    kita membatasi pembahasan pada subhimpunan kompak dari suatu ruang metrik.
+    Dalam kasus ini, infimum menjadi minimum dan kita memperoleh
     <me>
       d(x,A) = \min\{d(x,a) \mid a \in A\}
     </me>.
   </p>
   <p>
-    We now extend that idea to define the distance from one subset of <m>X</m> to another.
-    Let <m>A</m> and <m>B</m> be nonempty compact subsets of <m>X</m>.
-    To find the distance from the set <m>A</m> to the set <m>B</m>,
-    it seems reasonable to consider how far each point in <m>A</m> is from the set <m>B</m>.
-    Then the distance from <m>A</m> to <m>B</m> should measure how far we have to travel to get from <term>any</term>
-    point in <m>A</m> to <m>B</m>.
+    Sekarang kita memperluas gagasan tersebut untuk mendefinisikan jarak dari satu subhimpunan <m>X</m> ke subhimpunan lainnya.
+    Misalkan <m>A</m> dan <m>B</m> adalah subhimpunan kompak tak kosong dari <m>X</m>.
+    Untuk mencari jarak dari himpunan <m>A</m> ke himpunan <m>B</m>,
+    tampaknya masuk akal untuk mempertimbangkan seberapa jauh setiap titik di <m>A</m> dari himpunan <m>B</m>.
+    Dengan demikian, jarak dari <m>A</m> ke <m>B</m> seharusnya mengukur seberapa jauh kita harus bergerak dari <term>sebarang</term>
+    titik di <m>A</m> untuk mencapai <m>B</m>.
   </p>
 
   <definition xml:id="def_AtoB">
     <statement>
       <p>
-        Let <m>(X,d)</m> be a metric space and let <m>A</m> and <m>B</m> be nonempty compact subsets of <m>X</m>.
-        Then <term>distance <m>d(A,B)</m> from <m>A</m> to <m>B</m></term> is
+        Misalkan <m>(X,d)</m> adalah ruang metrik dan misalkan <m>A</m> dan <m>B</m> adalah subhimpunan kompak tak kosong dari <m>X</m>.
+        Maka <term>jarak <m>d(A,B)</m> dari <m>A</m> ke <m>B</m></term> adalah
         <me>
           d(A,B) = \max_{a \in A} \left\{ \min_{b \in B} \{d(a,b)\} \right\}
         </me>.
@@ -59,117 +59,132 @@
   </definition>
 
   <p>
-    Note: since <m>A</m> and <m>B</m> are compact,
-    <m>d(A,B)</m> is guaranteed to exist.
+    Catatan: karena <m>A</m> dan <m>B</m> kompak,
+    <m>d(A,B)</m> dijamin ada.
   </p>
 
   <activity>
-    
-      <task>
-        <statement>
-          <p>
-            A problem with <m>d</m> as in <xref ref="def_AtoB"/>
-            is that <m>d</m> is not symmetric.
-            Find examples of compact subsets <m>A</m> and <m>B</m> of <m>\R^n</m> with the Euclidean metric such that <m>d(A,B) \neq d(B,A)</m>.
-          </p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Even though the function <m>d</m> in <xref ref="def_AtoB"/> is not a metric,
-            we can define the Hausdorff distance  in terms of <m>d</m> as follows.
-          </p>
-            <definition xml:id="def_Hausdorff_distance">
-              <idx><h>metric</h><h>Hausdorff</h></idx>
-              <statement>
-                <p>
-                  Let <m>(X,d)</m> be a metric space and <m>A</m> and <m>B</m> nonempty compact subsets of <m>X</m>.
-                  Then <term>Hausdorff distance between <m>A</m> and <m>B</m></term>
-              
-                  is
-                  <me>
-                    h(A,B) = \max\{d(A,B), d(B,A)\}
-                  </me>.
-                </p>
-              </statement>
-            </definition>
-            <p>
-            Let <m>A</m> be the circle in <m>\R^2</m> centered at the origin with radius 1, let <m>B</m> be the inscribed square,
-            and let <m>C = \{(1,0), (-1,0)\}</m> as shown in <xref ref="F_Hausdorff_Example"/>.
-          </p>
-            <figure xml:id="F_Hausdorff_Example">
-              <caption>Sets <m>A</m>, <m>B</m>, and <m>C</m>.</caption>
-              <image width="50%" source="HM_Example"/>
-            </figure>
-            <p>
-            Determine <m>h(A,B)</m>, <m>h(A,C)</m>, and <m>h(B,C)</m>,
-            and verify that <m>h(A,C) \leq h(A,B) + h(B,C)</m>.
-          </p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-            It may be surprising that <m>h</m> as in <xref ref="def_Hausdorff_distance"/>
-            is actually a metric, but it is.
-            The underlying space is the collection of nonempty compact subsets of <m>X</m> which we denote at <m>\mathcal{H}(X)</m>.
-            Prove the following theorem.
-          </p>
-            <theorem>
-              <statement>
-                <p>
-                  Let <m>X</m> be a metric space.
-                  The Hausdorff distance function is a metric on <m>\mathcal{H}(X)</m>.
-                </p>
-              </statement>
-            </theorem>
-          
-        </statement>
-      </task>
+    <task>
+      <statement>
+        <p>
+          Salah satu masalah pada <m>d</m> sebagaimana dalam <xref ref="def_AtoB"/>
+          adalah bahwa <m>d</m> tidak simetris.
+          Carilah contoh subhimpunan kompak <m>A</m> dan <m>B</m> dari <m>\R^n</m> dengan metrik Euklides sedemikian sehingga <m>d(A,B) \neq d(B,A)</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    Meskipun fungsi <m>d</m> dalam <xref ref="def_AtoB"/> bukan suatu metrik,
+    kita dapat mendefinisikan jarak Hausdorff dalam kaitannya dengan <m>d</m> sebagai berikut.
+  </p>
+
+  <definition xml:id="def_Hausdorff_distance">
+    <idx><h>metrik</h><h>Hausdorff</h></idx>
+    <statement>
+      <p>
+        Misalkan <m>(X,d)</m> adalah ruang metrik dan <m>A</m> serta <m>B</m> adalah subhimpunan kompak tak kosong dari <m>X</m>.
+        Maka <term>jarak Hausdorff antara <m>A</m> dan <m>B</m></term> adalah
+        <me>
+          h(A,B) = \max\{d(A,B), d(B,A)\}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <task>
+      <statement>
+        <p>
+          Misalkan <m>A</m> adalah lingkaran di <m>\R^2</m> yang berpusat di titik asal dan berjari-jari 1, misalkan <m>B</m> adalah persegi yang tersisip di dalamnya,
+          dan misalkan <m>C = \{(1,0), (-1,0)\}</m> sebagaimana ditunjukkan dalam <xref ref="F_Hausdorff_Example"/>.
+        </p>
+        <figure xml:id="F_Hausdorff_Example">
+          <caption>Himpunan <m>A</m>, <m>B</m>, dan <m>C</m>.</caption>
+          <image width="50%" source="HM_Example">
+            <description>Lingkaran <m>A</m> berpusat di titik asal dan berjari-jari <m>1</m>, dengan persegi <m>B</m> tersisip sehingga keempat sudutnya terletak pada lingkaran. Himpunan <m>C</m> terdiri atas dua titik yang berhadapan, <m>(-1,0)</m> dan <m>(1,0)</m>.</description>
+          </image>
+        </figure>
+        <p>
+          Tentukan <m>h(A,B)</m>, <m>h(A,C)</m>, dan <m>h(B,C)</m>,
+          serta verifikasikan bahwa <m>h(A,C) \leq h(A,B) + h(B,C)</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    Mungkin mengejutkan bahwa <m>h</m> sebagaimana dalam <xref ref="def_Hausdorff_distance"/>
+    ternyata benar-benar merupakan suatu metrik, tetapi memang demikian.
+    Ruang yang mendasarinya adalah koleksi subhimpunan kompak tak kosong dari <m>X</m> yang kita nyatakan dengan <m>\mathcal{H}(X)</m>.
+    Teorema berikut merangkum fakta tersebut.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Misalkan <m>X</m> adalah ruang metrik.
+        Fungsi jarak Hausdorff adalah suatu metrik pada <m>\mathcal{H}(X)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    <task>
+      <statement>
+        <p>
+          Buktikan teorema di atas.
+        </p>
+      </statement>
+    </task>
       <task>
         <introduction>
           <p>
-            One fun application of the Hausdorff metric is in fractal geometry.
-            You may be familiar with objects like the Sierpinski triangle or the Koch curve.
-            These objects are limits of sequences of sets in <m>\mathcal{H}(\R^2)</m>.
-            We illustrate with the Sierpinski triangle.
-            Start with three points <m>v_1</m>, <m>v_2</m>,
-            and <m>v_3</m> that form the vertices of an equilateral triangle  <m>S_0</m>.
-            For <m>i</m>=1,2, or 3, let <m>v_i = \begin{bmatrix}a_i \\ b_i \end{bmatrix}</m>.
-            For <m>i</m>=1,2, or 3, we define <m>\omega_i : \R^2 \to \R^2</m> by
+            Salah satu penerapan menarik dari metrik Hausdorff terdapat dalam geometri fraktal.
+            Anda mungkin mengenal objek seperti segitiga Sierpinski atau kurva Koch.
+            Objek-objek ini merupakan limit dari barisan himpunan dalam <m>\mathcal{H}(\R^2)</m>.
+            Kita mengilustrasikannya dengan segitiga Sierpinski.
+            Mulailah dengan tiga titik <m>v_1</m>, <m>v_2</m>,
+            dan <m>v_3</m> yang membentuk simpul-simpul sebuah segitiga sama sisi <m>S_0</m>.
+            Untuk <m>i</m>=1,2, atau 3, misalkan <m>v_i = \begin{bmatrix}a_i \\ b_i \end{bmatrix}</m>.
+            Untuk <m>i</m>=1,2, atau 3, kita mendefinisikan <m>\omega_i : \R^2 \to \R^2</m> dengan
             <me>
-              \omega_i\left(\begin{bmatrix}x \\ y \end{bmatrix} \right) = \begin{bmatrix}\frac{1}{2} \amp  0 \\ 0 \amp  \frac{1}{2} \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix}  + \begin{bmatrix}a_i \\ b_i \end{bmatrix}
+              \omega_i\left(\begin{bmatrix}x \\ y \end{bmatrix} \right) = \begin{bmatrix}\frac{1}{2} \amp  0 \\ 0 \amp  \frac{1}{2} \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix}  + \frac{1}{2}\begin{bmatrix}a_i \\ b_i\end{bmatrix}
             </me>.
-            Then <m>\omega_i</m>, when applied to <m>S_0</m>,
-            contracts <m>S_0</m> by a factor of 2 and then translates the image of <m>S_0</m> so that the
-            <m>i^{\text{ th } }</m> vertex of <m>S_0</m> and the <m>i</m>th vertex of the image of <m>S_0</m> coincide.
-            Such a map is called a <term>contraction mapping</term>
-            with <term>contraction factor</term>
-            equal to <m>\frac{1}{2}</m>.
-            Define <m>S_{1,i}</m> to be <m>\omega_i(S_0)</m>.
-            Then <m>S_{1,i}</m>  is the set of all points half way between any point in <m>S_0</m>  and  <m>v_i</m>,
-            or <m>S_{1,i}</m> is a triangle half the size of the original translated to the
-            <m>i^{\text{ th } }</m> vertex of the original.
-            Let <m>S_1 = \bigcup_{i=1}^3 S_{1,i}</m>.
-            Both <m>S_0</m> and <m>S_1</m> are shown in <xref ref="F_Sierpinski"/>.
-            We can continue this procedure replacing <m>S_0</m> with <m>S_1</m>.
-            In other words,
-            for <m>i</m> = 1, 2, and 3, let <m>S_{2,i} = \omega_i(S_1)</m>.
-            Then let <m>S_2 = \bigcup_{i=1}^3 S_{2,i}</m>.
-            A picture of <m>S_2</m> is shown in <xref ref="F_Sierpinski"/>.
-            We can continue this procedure,
-            each time replacing <m>S_{j-1}</m> with <m>S_j</m>.
-            A picture of <m>S_8</m> is shown in <xref ref="F_Sierpinski"/>.
+            Maka <m>\omega_i</m>, ketika diterapkan pada <m>S_0</m>,
+            memperkecil <m>S_0</m> dengan faktor 1/2 dan kemudian mentranslasikan citra <m>S_0</m> sehingga
+            simpul <m>i^{\text{ ke- } }</m> dari <m>S_0</m> berimpit dengan simpul ke-<m>i</m> dari citra <m>S_0</m>.
+            Pemetaan semacam itu disebut <term>pemetaan kontraksi</term>
+            dengan <term>faktor kontraksi</term>
+            sebesar <m>\frac{1}{2}</m>.
+            Definisikan <m>S_{1,i}</m> sebagai <m>\omega_i(S_0)</m>.
+            Maka <m>S_{1,i}</m> adalah himpunan semua titik yang berada di pertengahan antara sebarang titik dalam <m>S_0</m> dan <m>v_i</m>,
+            atau <m>S_{1,i}</m> adalah sebuah segitiga yang berukuran setengah dari segitiga semula dan ditranslasikan ke
+            simpul <m>i^{\text{ ke- } }</m> dari segitiga semula.
+            Misalkan <m>S_1 = \bigcup_{i=1}^3 S_{1,i}</m>.
+            Baik <m>S_0</m> maupun <m>S_1</m> ditunjukkan dalam <xref ref="F_Sierpinski"/>.
+            Kita dapat melanjutkan prosedur ini dengan mengganti <m>S_0</m> dengan <m>S_1</m>.
+            Dengan kata lain,
+            untuk <m>i</m> = 1, 2, dan 3, misalkan <m>S_{2,i} = \omega_i(S_1)</m>.
+            Kemudian misalkan <m>S_2 = \bigcup_{i=1}^3 S_{2,i}</m>.
+            Gambar <m>S_2</m> ditunjukkan dalam <xref ref="F_Sierpinski"/>.
+            Kita dapat melanjutkan prosedur ini,
+            dengan mengganti <m>S_{j-1}</m> dengan <m>S_j</m> setiap kalinya.
+            Gambar <m>S_8</m> ditunjukkan dalam <xref ref="F_Sierpinski"/>.
           </p>
 
           <figure xml:id="F_Sierpinski">
-            <caption><m>S_i</m> for <m>i</m> equal to 0, 1, 2, and 8.</caption>
+            <caption><m>S_i</m> untuk <m>i</m> sama dengan 0, 1, 2, dan 8.</caption>
 
             <sbsgroup>
           <sidebyside>
-            <image width="50%" source="S0"/>
-            <image width="50%" source="S1"/>
+            <image width="50%" source="S0">
+              <description>Garis luar segitiga sama sisi <m>S_0</m>, yaitu himpunan awal dengan tiga titik sudut <m>v_1</m>, <m>v_2</m>, dan <m>v_3</m>.</description>
+            </image>
+            <image width="50%" source="S1">
+              <description>Iterasi pertama <m>S_1</m>: tiga salinan <m>S_0</m> berskala satu per dua ditempatkan pada ketiga sudut segitiga semula, menyisakan satu celah segitiga terbalik di tengah.</description>
+            </image>
           </sidebyside>
 
           <sidebyside>
@@ -178,8 +193,12 @@
           </sidebyside>
 
           <sidebyside>
-            <image width="50%" source="S2"/>
-            <image width="50%" source="S8"/>
+            <image width="50%" source="S2">
+              <description>Iterasi kedua <m>S_2</m>: sembilan segitiga kecil membentuk pola bersarang dengan satu celah segitiga terbalik besar dan tiga celah yang lebih kecil.</description>
+            </image>
+            <image width="50%" source="S8">
+              <description>Iterasi kedelapan <m>S_8</m>: pola rapat segitiga-segitiga kecil dengan celah segitiga terbalik pada berbagai skala, sebagai pendekatan visual terhadap segitiga Sierpinski.</description>
+            </image>
           </sidebyside>
 
           <sidebyside>
@@ -191,60 +210,60 @@
           </figure>
             
           <p>
-            To continue this process, we need to take a limit.
-            But the <m>S_i</m> are sets in <m>\mathcal{H}(\R^2)</m>,
-            so the limit is taken with respect to the Hausdorff metric.
+            Untuk melanjutkan proses ini, kita perlu mengambil suatu limit.
+            Namun, <m>S_i</m> adalah himpunan dalam <m>\mathcal{H}(\R^2)</m>,
+            sehingga limit tersebut diambil terhadap metrik Hausdorff.
           </p>
         </introduction>
           <task>
             <statement>
               <p>
-                Assume that the length of a side of <m>S_0</m> is <m>1</m>.
-                Determine <m>h(S_0,S_1)</m>.
-                Then find <m>h(S_k, S_{k+1})</m> for an arbitrary positive integer <m>k</m>.
+                Asumsikan panjang sisi <m>S_0</m> adalah <m>1</m>.
+                Tentukan <m>h(S_0,S_1)</m>.
+                Kemudian carilah <m>h(S_k, S_{k+1})</m> untuk sebarang bilangan bulat positif <m>k</m>.
               </p>
             </statement>
           </task>
           <task>
             <introduction>
               <p>
-                The Sierpinski triangle will exist if the sequence <m>(S_n)</m> converges to a set <m>S</m>
-                (which would be the Sierpinski triangle).
-                The question of convergence is not a trivial one.
+                Segitiga Sierpinski akan ada jika barisan <m>(S_n)</m> konvergen ke suatu himpunan <m>S</m>
+                (yang akan menjadi segitiga Sierpinski).
+                Pertanyaan mengenai kekonvergenan ini bukanlah pertanyaan yang sederhana.
               </p>
             </introduction>
               <task>
                 <statement>
                   <p>
-                    Consider the sequence <m>(a_n)</m>,
-                    where <m>a_n = \left(1+\frac{1}{n}\right)^n</m> for <m>n \in \Z^+</m>.
-                    Note that each <m>a_n</m> is a rational number.
-                    Explain why the terms in this sequence get arbitrarily close together,
-                    but the sequence does not converge in <m>\Q</m>.
-                    Explain why the sequence <m>(a_n)</m> converges in <m>\R</m>.
+                    Perhatikan barisan <m>(a_n)</m>,
+                    dengan <m>a_n = \left(1+\frac{1}{n}\right)^n</m> untuk <m>n \in \Z^+</m>.
+                    Perhatikan bahwa setiap <m>a_n</m> adalah bilangan rasional.
+                    Jelaskan mengapa suku-suku dalam barisan ini menjadi sedekat yang diinginkan satu sama lain,
+                    tetapi barisan tersebut tidak konvergen dalam <m>\Q</m>.
+                    Jelaskan mengapa barisan <m>(a_n)</m> konvergen dalam <m>\R</m>.
                   </p>
                 </statement>
               </task>
               <task>
-              <idx><h>Cauchy sequence</h></idx>
+              <idx><h>barisan Cauchy</h></idx>
                 <statement>
                   <p>
-                    A sequence <m>(x_n)</m> in a metric space <m>(X,d)</m> is a
-                    <term>Cauchy sequence</term>
+                    Suatu barisan <m>(x_n)</m> dalam ruang metrik <m>(X,d)</m> disebut
+                    <term>barisan Cauchy</term>
               
-                    if given <m>\epsilon \gt 0</m> there exists <m>N \in \Z^+</m> such that
-                    <m>d(x_n, x_m) \lt \epsilon</m> whenever <m>n, m \geq N</m>.
-                    Every convergent sequence is a Cauchy sequence.
-                    A metric space <m>X</m> is said to be
-                    <term>complete</term><idx><h>metric space</h><h>complete</h></idx> if every Cauchy sequence in <m>X</m> converges to an element in <m>X</m>.
-                    For example,
-                    <m>(\R, d_E)</m> is complete while <m>(\Q, d_E)</m> is not.
-                    Although we will not prove it,
-                    the metric space <m>(\mathcal{H}(\R^2), h)</m> is complete.
-                    Show that the sequence <m>(S_n)</m> is a Cauchy sequence in <m>\mathcal{H}(\R^2)</m>.
-                    The limit of this sequence is the famous Sierpinski triangle.
-                    The picture of <m>S_8</m> in <xref ref="F_Sierpinski"/>
-                    is a close approximation of the Sierpinski triangle.
+                    jika untuk setiap <m>\epsilon \gt 0</m> terdapat <m>N \in \Z^+</m> sedemikian sehingga
+                    <m>d(x_n, x_m) \lt \epsilon</m> setiap kali <m>n, m \geq N</m>.
+                    Setiap barisan konvergen merupakan barisan Cauchy.
+                    Ruang metrik <m>X</m> dikatakan
+                    <term>lengkap</term><idx><h>ruang metrik</h><h>lengkap</h></idx> jika setiap barisan Cauchy dalam <m>X</m> konvergen ke suatu elemen dalam <m>X</m>.
+                    Sebagai contoh,
+                    <m>(\R, d_E)</m> lengkap, sedangkan <m>(\Q, d_E)</m> tidak lengkap.
+                    Meskipun kita tidak akan membuktikannya,
+                    ruang metrik <m>(\mathcal{H}(\R^2), h)</m> lengkap.
+                    Tunjukkan bahwa barisan <m>(S_n)</m> merupakan barisan Cauchy dalam <m>\mathcal{H}(\R^2)</m>.
+                    Limit barisan ini adalah segitiga Sierpinski yang terkenal.
+                    Gambar <m>S_8</m> dalam <xref ref="F_Sierpinski"/>
+                    merupakan pendekatan yang dekat terhadap segitiga Sierpinski.
                   </p>
                 </statement>
               </task>
