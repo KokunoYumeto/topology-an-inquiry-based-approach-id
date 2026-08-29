@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch19-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan Latihan Bab 19 B</title>
+  <p>Delapan entri ini menutup denominator latihan Bab 19. Karya pendamping asli ini berlisensi CC BY 4.0 dan bukan solusi resmi GVSU. Provenans model: <c>OpenAI Codex gpt-5.6-sol, Ultra</c>.</p>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-01">
+    <title>Terhubung dan lokal terhubung lintasan</title>
+    <statement><p>Buktikan bahwa ruang topologi yang terhubung dan terhubung lintasan secara lokal harus terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-01-hint"><p>Komponen lintasan ruang lokal terhubung lintasan bersifat buka. Komplemen satu komponen adalah gabungan komponen-komponen lain.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-01-answer"><p>Setiap komponen lintasan buka dan tertutup; keterhubungan memaksa hanya ada satu komponen lintasan.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-01-solution"><p>Karena <m>X</m> lokal terhubung lintasan, setiap komponen lintasan <m>P</m> terbuka. Komponen-komponen lintasan mempartisi <m>X</m>, sehingga <m>X\setminus P</m> adalah gabungan komponen lintasan lain dan juga terbuka. Jadi <m>P</m> buka-tertutup. Jika ada lebih dari satu komponen lintasan, suatu <m>P</m> akan menjadi himpunan buka-tertutup taktrivial, bertentangan dengan keterhubungan <m>X</m>. Maka <m>X</m> hanya mempunyai satu komponen lintasan dan terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-02">
+    <title>Subhimpunan terhubung lintasan dalam topologi titik tertentu</title>
+    <statement><p>Misalkan <m>X</m> takkosong, <m>p\in X</m>, dan himpunan buka takkosong dalam topologi titik tertentu adalah semua himpunan yang memuat <m>p</m>. Tentukan semua subhimpunan terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-02-hint"><p>Subruang yang tidak memuat <m>p</m> bersifat diskret. Jika subruang memuat <m>p</m>, hubungkan setiap titik ke <m>p</m> dengan fungsi langkah.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-02-answer"><p>Subhimpunan <m>A</m> terhubung lintasan tepat bila <m>p\in A</m> atau <m>|A|\leq1</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-02-solution"><p>Jika <m>p\notin A</m>, setiap <m>B\subseteq A</m> dapat ditulis sebagai <m>A\cap(B\cup\{p\})</m>, sehingga topologi subruang pada <m>A</m> diskret. Subruang diskret terhubung lintasan tepat bila mempunyai paling banyak satu titik.</p><p>Jika <m>p\in A</m> dan <m>x\in A</m>, definisikan lintasan <m>r(0)=x</m>, <m>r(t)=p</m> untuk <m>t&gt;0</m>. Prapeta setiap himpunan buka yang memuat <m>p</m> adalah seluruh domain atau <m>(0,1]</m>, keduanya buka relatif. Jadi <m>x</m> dapat dihubungkan ke <m>p</m>; membalik dan menempelkan lintasan menghubungkan setiap dua titik dalam <m>A</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-03">
+    <title>Subhimpunan terhubung lintasan dalam topologi titik dikecualikan</title>
+    <statement><p>Misalkan himpunan buka sejati pada <m>X</m> adalah semua subhimpunan yang tidak memuat titik tetap <m>p</m>. Tentukan semua subhimpunan terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-03-hint"><p>Jika <m>p\notin A</m>, topologi subruang diskret. Jika <m>p\in A</m>, gunakan fungsi langkah yang prapeta himpunan buka tanpa <m>p</m> berupa interval setengah terbuka.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-03-answer"><p>Sekali lagi, tepat subhimpunan <m>A</m> dengan <m>p\in A</m> atau <m>|A|\leq1</m> yang terhubung lintasan.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-03-solution"><p>Jika <m>p\notin A</m>, setiap subset <m>A</m> terbuka dalam <m>X</m>, sehingga <m>A</m> diskret dan terhubung lintasan hanya untuk kardinalitas paling banyak satu. Jika <m>p\in A</m>, untuk <m>x\in A\setminus\{p\}</m> definisikan <m>r(t)=x</m> untuk <m>t&lt;1</m> dan <m>r(1)=p</m>. Setiap himpunan buka sejati tidak memuat <m>p</m>; prapetanya kosong atau <m>[0,1)</m>, yang terbuka relatif. Jadi <m>r</m> lintasan <m>x\leadsto p</m>. Pembalikan dan penempelan menghubungkan setiap pasangan titik.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-04">
+    <title>Benar atau salah: semua subruang</title>
+    <statement><p>Nilai pernyataan: “Jika <m>X</m> terhubung lintasan, setiap subruang dari <m>X</m> terhubung lintasan.”</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-04-hint"><p>Ambil dua titik sebagai subruang garis real.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-04-answer"><p>Salah.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-04-solution"><p>Ruang <m>\R</m> terhubung lintasan. Subruang <m>A=\{0,1\}</m> mempunyai topologi diskret. Citra kontinu interval <m>[0,1]</m> harus terhubung, sedangkan satu-satunya subhimpunan terhubung dari <m>A</m> adalah singleton. Jadi tidak ada lintasan dari <m>0</m> ke <m>1</m>, dan <m>A</m> tidak terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-05">
+    <title>Benar atau salah: irisan</title>
+    <statement><p>Nilai pernyataan: “Irisan dua subruang terhubung lintasan selalu terhubung lintasan.”</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-05-hint"><p>Iris sebuah lingkaran dengan diameternya.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-05-answer"><p>Salah.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-05-solution"><p>Dalam <m>\R^2</m>, ambil lingkaran satuan <m>A=S^1</m> dan ruas diameter <m>B=[-1,1]\times\{0\}</m>. Keduanya terhubung lintasan: lingkaran dapat diparameterkan oleh busur dan ruas oleh interpolasi linear. Namun <m>A\cap B=\{(-1,0),(1,0)\}</m>, subruang diskret dua titik, sehingga tidak terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-06">
+    <title>Benar atau salah: lintasan dalam ruang diskret</title>
+    <statement><p>Nilai secara literal pernyataan: “Dalam ruang diskret tidak ada lintasan dari <m>a</m> ke <m>b</m>.” Jelaskan pula versi untuk <m>a\ne b</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-06-hint"><p>Jika <m>a=b</m>, ada lintasan konstan. Jika <m>a\ne b</m>, gunakan keterhubungan citra interval.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-06-answer"><p>Pernyataan literal salah karena kasus <m>a=b</m>. Untuk titik berbeda, pernyataannya benar.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-06-solution"><p>Jika <m>a=b</m>, fungsi konstan <m>p(t)=a</m> adalah lintasan, sehingga klaim tanpa syarat tidak selalu benar. Jika <m>a\ne b</m> dan ada lintasan <m>p</m>, citra <m>p([0,1])</m> harus terhubung sebagai citra kontinu interval terhubung. Setiap subruang dari ruang diskret diskret, dan subruang diskret terhubung hanya bila mempunyai paling banyak satu titik. Karena citra memuat <m>a</m> dan <m>b</m>, timbul kontradiksi.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-07">
+    <title>Benar atau salah: banyak komponen lintasan</title>
+    <statement><p>Nilai pernyataan: “Ruang kompak yang terhubung lintasan secara lokal hanya mempunyai berhingga banyak komponen lintasan.”</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-07-hint"><p>Komponen lintasan terbuka dan bersama-sama membentuk selimut buka ruang.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-07-answer"><p>Benar.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-07-solution"><p>Dalam ruang lokal terhubung lintasan, setiap komponen lintasan terbuka. Semua komponen lintasan mempartisi dan menutupi <m>X</m>, jadi membentuk selimut buka. Kekompakan memberi subselimut berhingga. Karena komponen-komponen berbeda saling lepas dan takkosong, komponen yang tidak terpilih tidak dapat ditutupi oleh komponen terpilih. Maka subselimut berhingga itu harus memuat semua komponen; jumlahnya berhingga.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-b-08">
+    <title>Benar atau salah: lokal lintasan mengakibatkan lokal terhubung</title>
+    <statement><p>Nilai pernyataan: “Setiap ruang yang terhubung lintasan secara lokal adalah terhubung secara lokal.”</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-b-08-hint"><p>Setiap himpunan terhubung lintasan adalah terhubung.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-b-08-answer"><p>Benar.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-b-08-solution"><p>Ambil titik <m>x</m> dan lingkungan <m>N</m>. Keterhubungan lintasan lokal memberi lingkungan buka <m>U</m> dengan <m>x\in U\subseteq N</m> dan <m>U</m> terhubung lintasan. Setiap ruang terhubung lintasan terhubung, sehingga <m>U</m> adalah lingkungan buka terhubung di dalam <m>N</m>. Ini berlaku di setiap titik, jadi ruang lokal terhubung.</p></solution>
+  </exercise>
+</section>

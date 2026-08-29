@@ -1,0 +1,471 @@
+<section xml:id="o003-c90-completion-countability" xml:lang="id-ID">
+  <title>Keterhitungan, Kepadatan, dan Sifat Lindelöf</title>
+
+  <introduction>
+    <p>
+      Topologi tidak selalu mempunyai daftar lingkungan atau basis yang dapat
+      ditangani secara berurutan. Modul ini membedakan keterhitungan lokal dari
+      keterhitungan global, lalu menghubungkannya dengan himpunan padat dan
+      subselimut terhitung. Istilah <em>basis lokal</em> dan
+      <em>aksioma keterhitungan pertama</em> mengikuti penggunaan matematika
+      Indonesia yang telah dicatat dalam audit terminologi edisi ini.
+    </p>
+  </introduction>
+
+  <subsection xml:id="o003-c90-completion-local-bases">
+    <title>Basis lokal dan dua aksioma keterhitungan</title>
+
+    <definition xml:id="o003-c90-def-local-base">
+      <statement>
+        <p>
+          Misalkan <m>x\in X</m>. Suatu keluarga <m>\mathcal B_x</m>
+          lingkungan buka dari <m>x</m> disebut <term>basis lokal di
+          <m>x</m></term> jika untuk setiap himpunan buka <m>U</m> yang memuat
+          <m>x</m>, terdapat <m>B\in\mathcal B_x</m> dengan
+          <m>x\in B\subseteq U</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="o003-c90-def-first-second-countable">
+      <statement>
+        <p>
+          Ruang <m>X</m> disebut <term>terhitung pertama</term> jika
+          setiap titik mempunyai basis lokal terhitung. Ruang <m>X</m> disebut
+          <term>terhitung kedua</term> jika topologinya mempunyai suatu
+          basis terhitung.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="o003-c90-prop-metric-first-countable">
+      <statement>
+        <p>
+          Setiap ruang metrik terhitung pertama. Untuk titik
+          <m>x</m>, keluarga <m>\{B_{1/n}(x):n\in\mathbb Z^+\}</m> merupakan
+          basis lokal terhitung.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika <m>U</m> terbuka dan <m>x\in U</m>, terdapat
+          <m>\varepsilon&gt;0</m> dengan <m>B_\varepsilon(x)\subseteq U</m>.
+          Pilih <m>n</m> sehingga <m>1/n&lt;\varepsilon</m>. Maka
+          <m>x\in B_{1/n}(x)\subseteq B_\varepsilon(x)\subseteq U</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <proposition xml:id="o003-c90-prop-second-implies-first">
+      <statement>
+        <p>Setiap ruang terhitung kedua terhitung pertama.</p>
+      </statement>
+      <proof>
+        <p>
+          Jika <m>\mathcal B</m> basis terhitung bagi <m>X</m>, maka
+          <m>\mathcal B_x=\{B\in\mathcal B:x\in B\}</m> terhitung. Untuk
+          setiap lingkungan buka <m>U</m> dari <m>x</m>, sifat basis memberi
+          <m>B\in\mathcal B_x</m> dengan <m>B\subseteq U</m>. Jadi
+          <m>\mathcal B_x</m> merupakan basis lokal.
+        </p>
+      </proof>
+    </proposition>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-density-lindelof">
+    <title>Kepadatan, separabilitas, dan sifat Lindelöf</title>
+
+    <definition xml:id="o003-c90-def-dense-separable">
+      <statement>
+        <p>
+          Subhimpunan <m>D\subseteq X</m> disebut <term>padat</term> dalam
+          <m>X</m> jika <m>\overline D=X</m>, atau secara ekuivalen jika setiap
+          himpunan buka tak kosong beririsan dengan <m>D</m>. Ruang <m>X</m>
+          disebut <term>separabel</term> jika mempunyai subhimpunan padat yang
+          paling banyak terhitung.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="o003-c90-def-lindelof">
+      <statement>
+        <p>
+          Ruang <m>X</m> disebut <term>ruang Lindelöf</term> jika setiap
+          selimut buka bagi <m>X</m> mempunyai subselimut yang paling banyak
+          terhitung.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="o003-c90-thm-second-countable-consequences">
+      <statement>
+        <p>
+          Setiap ruang terhitung kedua bersifat separabel dan Lindelöf.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Ambil basis terhitung <m>\mathcal B=\{B_n:n\in\mathbb N\}</m> dan
+          pilih satu titik <m>x_n\in B_n</m> untuk setiap unsur basis tak
+          kosong. Himpunan <m>D=\{x_n:n\in\mathbb N\}</m> terhitung. Jika
+          <m>U</m> terbuka dan tak kosong, pilih <m>x\in U</m> dan unsur basis
+          <m>B_n</m> dengan <m>x\in B_n\subseteq U</m>. Maka
+          <m>x_n\in D\cap U</m>, sehingga <m>D</m> padat.
+        </p>
+        <p>
+          Sekarang misalkan <m>\mathcal U</m> selimut buka bagi <m>X</m>.
+          Untuk setiap <m>x\in X</m>, pilih <m>U_x\in\mathcal U</m> dan
+          <m>B_x\in\mathcal B</m> dengan
+          <m>x\in B_x\subseteq U_x</m>. Hanya paling banyak terhitung banyak
+          unsur basis berbeda yang muncul sebagai <m>B_x</m>. Untuk setiap
+          unsur basis yang muncul, pertahankan satu himpunan <m>U_x</m> yang
+          memuatnya. Keluarga terhitung yang diperoleh tetap menutupi
+          <m>X</m>, sehingga <m>X</m> Lindelöf.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="o003-c90-thm-metric-countability-equivalence">
+      <statement>
+        <p>
+          Untuk ruang metrik <m>X</m>, ketiga sifat berikut ekuivalen:
+          terhitung kedua, separabel, dan Lindelöf.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Teorema sebelumnya memberi bahwa keterhitungan kedua mengakibatkan
+          dua sifat lainnya. Andaikan <m>D</m> padat dan terhitung. Keluarga
+          semua bola <m>B_r(d)</m> dengan <m>d\in D</m> dan
+          <m>r\in\mathbb Q^+</m> terhitung. Jika <m>U</m> terbuka dan
+          <m>x\in U</m>, pilih <m>\varepsilon&gt;0</m> dengan
+          <m>B_\varepsilon(x)\subseteq U</m>. Pilih
+          <m>d\in D\cap B_{\varepsilon/3}(x)</m> dan rasional positif
+          <m>r</m> dengan
+          <m>d(x,d)&lt;r&lt;\varepsilon-d(x,d)</m>. Maka
+          <m>x\in B_r(d)\subseteq U</m>, sehingga keluarga bola tadi merupakan
+          basis terhitung.
+        </p>
+        <p>
+          Terakhir, andaikan <m>X</m> Lindelöf. Untuk setiap
+          <m>n\in\mathbb Z^+</m>, selimut
+          <m>\{B_{1/n}(x):x\in X\}</m> mempunyai subselimut terhitung; pilih
+          pusat-pusatnya sebagai <m>D_n</m>. Himpunan
+          <m>D=\bigcup_{n\ge1}D_n</m> terhitung. Setiap bola buka tak kosong
+          memuat suatu pusat dari <m>D_n</m> untuk <m>n</m> cukup besar, jadi
+          <m>D</m> padat. Dengan demikian <m>X</m> separabel.
+        </p>
+      </proof>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-inheritance-size">
+    <title>Pewarisan, citra kontinu, dan contoh-balik</title>
+
+    <theorem xml:id="o003-c90-thm-countability-inheritance">
+      <statement>
+        <p>
+          Sifat-sifat berikut berlaku.
+          <ol>
+            <li><p>Subruang dari ruang terhitung pertama juga terhitung pertama.</p></li>
+            <li><p>Subruang dari ruang terhitung kedua juga terhitung kedua.</p></li>
+            <li><p>Subruang tertutup dari ruang Lindelöf juga Lindelöf.</p></li>
+            <li><p>Citra kontinu dari ruang separabel bersifat separabel.</p></li>
+            <li><p>Citra kontinu dari ruang Lindelöf bersifat Lindelöf.</p></li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika <m>A\subseteq X</m> dan <m>\mathcal B_x</m> basis lokal di
+          <m>x\in A</m>, jejak-jejak <m>B\cap A</m> membentuk basis lokal di
+          <m>x</m> untuk topologi subruang. Demikian pula, jejak suatu basis
+          terhitung bagi <m>X</m> membentuk basis terhitung bagi <m>A</m>.
+        </p>
+        <p>
+          Jika <m>F</m> tertutup dalam ruang Lindelöf <m>X</m>, tambahkan
+          <m>X\setminus F</m> pada selimut buka relatif dari <m>F</m>. Suatu
+          subselimut terhitung bagi <m>X</m>, setelah himpunan tambahan itu
+          dibuang, menutupi <m>F</m>.
+        </p>
+        <p>
+          Jika <m>f:X\to Y</m> kontinu dan <m>D</m> padat dalam <m>X</m>, maka
+          <m>f(X)=f(\overline D)\subseteq\overline{f(D)}</m>; jadi <m>f(D)</m>
+          padat dalam <m>f(X)</m>. Jika <m>D</m> terhitung, citranya juga
+          terhitung. Untuk sifat Lindelöf, tarik suatu selimut buka bagi
+          <m>f(X)</m> kembali ke <m>X</m>, pilih subselimut terhitung, lalu
+          ambil kembali himpunan-himpunan asal yang bersesuaian.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="o003-c90-example-sorgenfrey-separable-not-second">
+      <statement>
+        <p>
+          <term>Garis Sorgenfrey</term> adalah <m>\mathbb R</m> dengan basis
+          semua interval <m>[a,b)</m>. Ruang ini separabel tetapi tidak
+          terhitung kedua. Himpunan <m>\mathbb Q</m> padat karena setiap
+          interval basis tak kosong memuat bilangan rasional. Jika
+          <m>\mathcal B</m> basis terhitung, untuk setiap <m>x\in\mathbb R</m>
+          pilih <m>B_x\in\mathcal B</m> dengan
+          <m>x\in B_x\subseteq[x,x+1)</m>. Bila <m>x&lt;y</m>, kesamaan
+          <m>B_x=B_y</m> mustahil karena <m>x\in B_y\subseteq[y,y+1)</m>.
+          Jadi pemetaan <m>x\mapsto B_x</m> injektif ke <m>\mathcal B</m>,
+          bertentangan dengan keterhitungan <m>\mathcal B</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-lindelof-not-separable">
+      <statement>
+        <p>
+          Pada himpunan tak terhitung <m>X</m>, topologi komplemen terhitung
+          bersifat Lindelöf tetapi tidak separabel. Untuk suatu selimut buka,
+          pilih satu anggota <m>U_0</m>; komplemennya terhitung, sehingga satu
+          anggota tambahan untuk setiap titik yang tersisa memberi subselimut
+          terhitung. Sebaliknya, jika <m>D</m> terhitung, himpunan buka tak
+          kosong <m>X\setminus D</m> tidak beririsan dengan <m>D</m>, sehingga
+          <m>D</m> tidak padat.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-separability-not-hereditary">
+      <statement>
+        <p>
+          Kuadrat garis Sorgenfrey separabel karena <m>\mathbb Q^2</m> padat.
+          Namun anti-diagonal
+          <m>D=\{(x,-x):x\in\mathbb R\}</m> merupakan subruang diskret tak
+          terhitung: persegi panjang basis
+          <m>[x,x+\varepsilon)\times[-x,-x+\varepsilon)</m> memotong
+          <m>D</m> hanya pada <m>(x,-x)</m>. Anti-diagonal juga tertutup, karena
+          titik di luar <m>D</m> mempunyai persegi panjang basis kecil yang
+          menjaga tanda jumlah kedua koordinat. Jadi separabilitas tidak
+          herediter. Contoh ini sekaligus tidak Lindelöf, sebab subruang
+          tertutup dari ruang Lindelöf harus Lindelöf, sedangkan ruang diskret
+          tak terhitung tidak Lindelöf.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-lindelof-not-hereditary">
+      <statement>
+        <p>
+          Misalkan <m>D</m> diskret tak terhitung dan tambahkan titik
+          <m>\infty</m>. Nyatakan semua titik <m>D</m> terisolasi, dan jadikan
+          lingkungan <m>\infty</m> semua himpunan yang memuat <m>\infty</m>
+          serta semua kecuali berhingga banyak titik <m>D</m>. Ruang yang
+          diperoleh kompak: anggota selimut yang memuat <m>\infty</m> menyisakan
+          hanya berhingga banyak titik. Akan tetapi, subruang buka <m>D</m>
+          tidak Lindelöf karena selimut oleh semua himpunan satu titik tidak
+          mempunyai subselimut terhitung. Jadi sifat Lindelöf tidak herediter.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-countability-mastery">
+    <title>Latihan Penguasaan dengan Dukungan Bertahap</title>
+
+    <exercise xml:id="o003-c90-completion-countability-ex-01">
+      <title>Basis lokal pada ruang metrik</title>
+      <statement>
+        <p>
+          Buktikan bahwa <m>\{B_{2^{-n}}(x):n\in\mathbb N\}</m> merupakan
+          basis lokal di setiap titik <m>x</m> suatu ruang metrik. Jelaskan
+          mengapa pilihan jari-jari khusus tidak penting selama jari-jari itu
+          positif dan menuju nol.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-countability-ex-01-hint">
+        <p>Bandingkan suatu jari-jari <m>\varepsilon&gt;0</m> dengan <m>2^{-n}</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-countability-ex-01-answer">
+        <p>Untuk <m>n</m> cukup besar, <m>2^{-n}&lt;\varepsilon</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-countability-ex-01-solution">
+        <p>
+          Jika <m>U</m> terbuka dan <m>x\in U</m>, pilih
+          <m>\varepsilon&gt;0</m> dengan <m>B_\varepsilon(x)\subseteq U</m>.
+          Karena <m>2^{-n}\to0</m>, ada <m>n</m> dengan
+          <m>2^{-n}&lt;\varepsilon</m>, sehingga
+          <m>x\in B_{2^{-n}}(x)\subseteq U</m>. Argumen yang sama bekerja untuk
+          setiap barisan jari-jari positif yang menuju nol.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-countability-ex-02">
+      <title>Dari basis terhitung ke himpunan padat</title>
+      <statement>
+        <p>
+          Misalkan <m>\mathcal B</m> basis terhitung bagi <m>X</m>. Bangun
+          himpunan padat terhitung secara eksplisit dan buktikan kepadatannya.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-countability-ex-02-hint">
+        <p>Pilih satu titik dari setiap unsur basis tak kosong.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-countability-ex-02-answer">
+        <p>Himpunan semua titik pilihan itu terhitung dan memotong setiap himpunan buka tak kosong.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-countability-ex-02-solution">
+        <p>
+          Tulis unsur basis tak kosong sebagai <m>B_1,B_2,\ldots</m> dan pilih
+          <m>x_n\in B_n</m>. Himpunan <m>D=\{x_n:n\ge1\}</m> terhitung. Jika
+          <m>U</m> terbuka dan tak kosong, ambil <m>x\in U</m>. Sifat basis
+          memberi suatu <m>B_n</m> dengan <m>x\in B_n\subseteq U</m>, maka
+          <m>x_n\in D\cap U</m>. Jadi setiap himpunan buka tak kosong memotong
+          <m>D</m>, sehingga <m>\overline D=X</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-countability-ex-03">
+      <title>Separabilitas memberi basis terhitung pada ruang metrik</title>
+      <statement>
+        <p>
+          Misalkan <m>D</m> padat dan terhitung dalam ruang metrik <m>X</m>.
+          Buktikan bahwa bola-bola berpusat di <m>D</m> dengan jari-jari
+          rasional positif membentuk basis bagi <m>X</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-countability-ex-03-hint">
+        <p>
+          Untuk <m>x\in U</m>, ambil bola <m>B_\varepsilon(x)\subseteq U</m>,
+          lalu pilih pusat <m>d\in D</m> sangat dekat dengan <m>x</m>.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-countability-ex-03-answer">
+        <p>
+          Pilih <m>d(x,d)&lt;\varepsilon/3</m> dan rasional
+          <m>r</m> di antara <m>d(x,d)</m> dan <m>\varepsilon-d(x,d)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-countability-ex-03-solution">
+        <p>
+          Ambil <m>x\in U</m> dengan <m>U</m> terbuka, dan pilih
+          <m>\varepsilon&gt;0</m> sehingga <m>B_\varepsilon(x)\subseteq U</m>.
+          Kepadatan memberi <m>d\in D</m> dengan
+          <m>d(x,d)&lt;\varepsilon/3</m>. Pilih rasional positif <m>r</m>
+          sehingga <m>d(x,d)&lt;r&lt;\varepsilon-d(x,d)</m>. Maka
+          <m>x\in B_r(d)</m>. Jika <m>y\in B_r(d)</m>, ketaksamaan segitiga
+          memberi <m>d(x,y)&lt;d(x,d)+r&lt;\varepsilon</m>, jadi
+          <m>B_r(d)\subseteq U</m>. Keluarga tersebut terhitung karena
+          <m>D\times\mathbb Q^+</m> terhitung.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-countability-ex-04">
+      <title>Garis Sorgenfrey</title>
+      <statement>
+        <p>
+          Buktikan bahwa garis Sorgenfrey separabel tetapi tidak
+          terhitung kedua. Jangan memakai hasil kardinalitas selain
+          ketakterhitungan <m>\mathbb R</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-countability-ex-04-hint">
+        <p>
+          Gunakan <m>\mathbb Q</m> untuk kepadatan. Jika ada basis terhitung,
+          pilih satu unsur basis <m>B_x</m> di antara <m>x</m> dan
+          <m>[x,x+1)</m> untuk setiap <m>x</m>.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-countability-ex-04-answer">
+        <p>Pemetaan <m>x\mapsto B_x</m> harus injektif, suatu kontradiksi.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-countability-ex-04-solution">
+        <p>
+          Setiap interval basis <m>[a,b)</m> yang tak kosong memuat rasional,
+          jadi <m>\mathbb Q</m> padat. Andaikan <m>\mathcal B</m> basis
+          terhitung. Untuk setiap <m>x\in\mathbb R</m>, pilih
+          <m>B_x\in\mathcal B</m> dengan
+          <m>x\in B_x\subseteq[x,x+1)</m>. Jika <m>x&lt;y</m> dan
+          <m>B_x=B_y</m>, maka <m>x\in B_y\subseteq[y,y+1)</m>, yang mustahil.
+          Jadi <m>x\mapsto B_x</m> injektif dari himpunan tak terhitung
+          <m>\mathbb R</m> ke <m>\mathcal B</m>, bertentangan dengan asumsi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-countability-ex-05">
+      <title>Subruang tertutup Lindelöf</title>
+      <statement>
+        <p>
+          Buktikan bahwa setiap subruang tertutup dari ruang Lindelöf bersifat
+          Lindelöf. Lalu gunakan anti-diagonal dalam kuadrat garis Sorgenfrey
+          untuk membuktikan bahwa kuadrat tersebut tidak Lindelöf.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-countability-ex-05-hint">
+        <p>
+          Tambahkan komplemen subruang tertutup pada selimut relatif. Untuk
+          anti-diagonal, periksa bahwa ia tertutup, diskret, dan tak terhitung.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-countability-ex-05-answer">
+        <p>
+          Ruang diskret tak terhitung tidak Lindelöf, sedangkan subruang
+          tertutup dari ruang Lindelöf harus Lindelöf.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-countability-ex-05-solution">
+        <p>
+          Misalkan <m>F</m> tertutup dalam <m>X</m> dan
+          <m>\{F\cap U_i:i\in I\}</m> selimut buka relatif bagi <m>F</m>.
+          Keluarga <m>\{U_i:i\in I\}\cup\{X\setminus F\}</m> menyelimuti
+          <m>X</m>. Pilih subselimut terhitung dan buang
+          <m>X\setminus F</m>; jejak anggota yang tersisa menutupi <m>F</m>.
+        </p>
+        <p>
+          Dalam kuadrat Sorgenfrey, anti-diagonal
+          <m>D=\{(x,-x):x\in\mathbb R\}</m> tertutup dan diskret seperti pada
+          contoh sebelumnya. Selimut <m>D</m> oleh seluruh himpunan satu titik
+          tidak mempunyai subselimut terhitung, jadi <m>D</m> tidak Lindelöf.
+          Jika kuadrat Sorgenfrey Lindelöf, subruang tertutup <m>D</m> harus
+          Lindelöf, sebuah kontradiksi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-countability-ex-06">
+      <title>Ruang kompak dengan subruang tak Lindelöf</title>
+      <statement>
+        <p>
+          Untuk diskret tak terhitung <m>D</m>, bentuk
+          <m>X=D\cup\{\infty\}</m> dengan lingkungan <m>\infty</m> yang
+          berkomplemen berhingga dalam <m>D</m>. Buktikan bahwa <m>X</m> kompak,
+          tetapi subruang buka <m>D</m> tidak Lindelöf.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-countability-ex-06-hint">
+        <p>
+          Dalam suatu selimut buka bagi <m>X</m>, mulai dengan anggota yang
+          memuat <m>\infty</m>.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-countability-ex-06-answer">
+        <p>
+          Anggota itu menyisakan hanya berhingga banyak titik; sedangkan
+          selimut titik-tunggal bagi <m>D</m> tidak mempunyai subselimut
+          terhitung.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-countability-ex-06-solution">
+        <p>
+          Ambil selimut buka <m>\mathcal U</m> bagi <m>X</m> dan pilih
+          <m>U_\infty\in\mathcal U</m> yang memuat <m>\infty</m>. Menurut
+          definisi topologi, <m>D\setminus U_\infty</m> berhingga. Pilih satu
+          anggota selimut bagi masing-masing titik yang tersisa. Bersama
+          <m>U_\infty</m>, himpunan-himpunan itu membentuk subselimut berhingga,
+          sehingga <m>X</m> kompak. Subruang <m>D</m> terbuka dan diskret.
+          Selimut <m>\{\{d\}:d\in D\}</m> tidak mempunyai subselimut terhitung
+          karena gabungan terhitung himpunan satu titik hanya terhitung,
+          sedangkan <m>D</m> tak terhitung. Jadi <m>D</m> tidak Lindelöf.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+</section>

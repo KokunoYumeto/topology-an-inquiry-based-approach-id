@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch20-mastery" xml:lang="id-ID">
+  <title>Pemeriksaan Penguasaan Bab 20</title>
+  <p>Delapan pemeriksaan ini merupakan soal pendamping asli. Semuanya memiliki solusi lengkap dan tidak menambah klaim sebagai materi sumber GVSU.</p>
+
+  <exercise xml:id="o003-c90-ch20-mastery-01">
+    <title>Membedakan basis dan topologi</title>
+    <statement><p>Berikan contoh dua elemen basis produk yang gabungannya terbuka tetapi bukan elemen basis tunggal, lalu jelaskan mengapa ini tidak melanggar definisi basis.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-01-hint"><p>Gunakan dua persegi panjang terpisah secara diagonal di <m>\R^2</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-01-answer"><p>Misalnya <m>((0,1)\times(0,1))\cup((2,3)\times(2,3))</m> terbuka tetapi bukan satu persegi panjang.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-01-solution"><p>Gabungan tersebut adalah gabungan elemen basis, sehingga terbuka menurut definisi topologi yang dibangkitkan. Ia bukan satu hasil kali karena memuat <m>(1/2,1/2)</m> dan <m>(5/2,5/2)</m> tetapi tidak memuat pasangan silang <m>(1/2,5/2)</m>. Basis tidak wajib tertutup terhadap gabungan; basis hanya harus menutupi ruang dan menyempurnakan irisan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-mastery-02">
+    <title>Membangun topologi dari subbasis</title>
+    <statement><p>Pada <m>\R^2</m>, buktikan bahwa strip <m>(a,b)\times\R</m> dan <m>\R\times(c,d)</m> membentuk subbasis topologi Euklides.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-02-hint"><p>Irisan satu strip vertikal dan satu strip horizontal adalah persegi panjang terbuka.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-02-answer"><p>Irisan berhingga strip menghasilkan semua persegi panjang basis <m>(a,b)\times(c,d)</m>, yang membangkitkan topologi Euklides.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-02-solution"><p>Setiap strip adalah prapeta interval terbuka oleh salah satu proyeksi. Irisan <m>((a,b)\times\R)\cap(\R\times(c,d))=(a,b)\times(c,d)</m>. Persegi panjang terbuka ini merupakan basis Euklides, dan irisan tambahan hanya memperkecil interval. Maka strip adalah subbasis.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-mastery-03">
+    <title>Kontinuitas fungsi bernilai produk</title>
+    <statement><p>Untuk <m>f:\R\to\R^2</m>, <m>f(t)=(t^2,\sin t)</m>, buktikan kontinuitas hanya melalui proyeksi.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-03-hint"><p>Hitung <m>\pi_1\circ f</m> dan <m>\pi_2\circ f</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-03-answer"><p>Kedua fungsi koordinat <m>t\mapsto t^2</m> dan <m>t\mapsto\sin t</m> kontinu, maka <m>f</m> kontinu.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-03-solution"><p>Komposisi pertama adalah polinomial dan komposisi kedua fungsi sinus, keduanya kontinu pada <m>\R</m>. Teorema kekontinuan menuju produk menyatakan bahwa fungsi ke produk berhingga kontinu jika dan hanya jika semua komposisi proyeksinya kontinu. Jadi <m>f</m> kontinu.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-mastery-04">
+    <title>Menurunkan sifat faktor dari produk</title>
+    <statement><p>Misalkan <m>X\times Y</m> takkosong dan Hausdorff. Buktikan bahwa <m>X</m> dan <m>Y</m> Hausdorff.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-04-hint"><p>Pilih satu titik tetap pada faktor lain dan gunakan pembenaman irisan.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-04-answer"><p>Setiap faktor homeomorfik dengan subruang <m>X\times\{y_0\}</m> atau <m>\{x_0\}\times Y</m>; subruang ruang Hausdorff bersifat Hausdorff.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-04-solution"><p>Pilih <m>y_0\in Y</m>. Peta <m>x\mapsto(x,y_0)</m> adalah homeomorfisme <m>X</m> ke subruang <m>X\times\{y_0\}</m>. Karena sifat Hausdorff diwarisi subruang, <m>X</m> Hausdorff. Pilih <m>x_0\in X</m> dan gunakan argumen simetris untuk <m>Y</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-mastery-05">
+    <title>Rumus umum batas produk</title>
+    <statement><p>Buktikan <m>\partial(A\times B)=(\partial A\times\overline B)\cup(\overline A\times\partial B)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-05-hint"><p>Gunakan <m>\partial C=\overline C\setminus\operatorname{Int}C</m> bersama rumus penutup dan interior produk.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-05-answer"><p>Substitusi <m>\overline{A\times B}=\overline A\times\overline B</m> dan <m>\operatorname{Int}(A\times B)=\operatorname{Int}A\times\operatorname{Int}B</m> memberi rumus tersebut.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-05-solution"><p>Di dalam <m>\overline A\times\overline B</m>, sebuah pasangan gagal berada pada <m>\operatorname{Int}A\times\operatorname{Int}B</m> tepat ketika koordinat pertama berada pada <m>\overline A\setminus\operatorname{Int}A=\partial A</m> atau koordinat kedua berada pada <m>\overline B\setminus\operatorname{Int}B=\partial B</m>. Hukum distributif himpunan memberi gabungan pada pernyataan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-mastery-06">
+    <title>Mendeteksi hipotesis ketakkosongan</title>
+    <statement><p>Berikan tiga implikasi tentang faktor yang gagal hanya karena produk dapat kosong, lalu tulis versi benarnya.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-06-hint"><p>Gunakan latihan tentang kekompakan, keterbukaan, dan ketertutupan.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-06-answer"><p>Kekompakan produk tidak memaksa kekompakan faktor; keterbukaan produk tidak memaksa keterbukaan faktor; dan ketertutupan produk tidak memaksa ketertutupan faktor jika salah satu faktor himpunannya kosong. Ketiganya benar dengan ketakkosongan yang sesuai.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-06-solution"><p>Ambil faktor kedua kosong untuk membuat produk kosong, sekaligus buka, tertutup, dan kompak, sementara faktor pertama dipilih tidak kompak, tidak buka sebagai subhimpunan, atau tidak tertutup. Jika produk takkosong, proyeksi kontinu-surjektif membawa kekompakan ke faktor, proyeksi buka membawa keterbukaan produk ke faktor, dan pembenaman irisan membawa ketertutupan produk ke faktor.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-mastery-07">
+    <title>Lingkungan minimal pada bidang Khalimsky</title>
+    <statement><p>Hitung <m>N(0,0)</m>, <m>N(1,1)</m>, <m>N(0,1)</m>, dan <m>N(1,0)</m>, lalu gambarkan hubungan ketetanggaannya.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-07-hint"><p>Gunakan hasil kali lingkungan minimal pada garis.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-07-answer"><p><m>N(0,0)=\{-1,0,1\}^2</m>, <m>N(1,1)=\{(1,1)\}</m>, <m>N(0,1)=\{-1,0,1\}\times\{1\}</m>, dan <m>N(1,0)=\{1\}\times\{-1,0,1\}</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-07-solution"><p>Koordinat genap memiliki lingkungan minimal tiga titik, sedangkan koordinat ganjil memiliki singleton. Mengambil hasil kali memberi blok, singleton, segmen horizontal, dan segmen vertikal secara berurutan. Dua titik berbeda bertetangga bila salah satunya berada dalam lingkungan minimal yang lain; gambar diperoleh dengan menarik sisi sesuai aturan ini.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-mastery-08">
+    <title>Proyek integratif: peta pada torus</title>
+    <statement><p>Definisikan <m>F:\R^2\to S^1\times S^1</m> dengan <m>F(s,t)=((\cos s,\sin s),(\cos t,\sin t))</m>. Buktikan <m>F</m> kontinu dan identifikasi periodenya.</p></statement>
+    <hint xml:id="o003-c90-ch20-mastery-08-hint"><p>Periksa kedua komposisi proyeksi dan perubahan <m>2\pi</m> pada masing-masing variabel.</p></hint>
+    <answer xml:id="o003-c90-ch20-mastery-08-answer"><p><m>F</m> kontinu dan memenuhi <m>F(s+2\pi k,t+2\pi\ell)=F(s,t)</m> untuk semua <m>k,\ell\in\Z</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-mastery-08-solution"><p>Komposisi proyeksi pertama adalah <m>(s,t)\mapsto(\cos s,\sin s)</m> dan yang kedua <m>(s,t)\mapsto(\cos t,\sin t)</m>; keduanya kontinu, sehingga <m>F</m> kontinu. Periodisitas sinus dan kosinus memberi identitas yang dinyatakan. Karena setiap titik lingkaran memiliki wakil sudut, <m>F</m> surjektif dan memfaktorkan melalui hasil bagi <m>\R^2/(2\pi\Z)^2</m>, model torus.</p></solution>
+  </exercise>
+</section>

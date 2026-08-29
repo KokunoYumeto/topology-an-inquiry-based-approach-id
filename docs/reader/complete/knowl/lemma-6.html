@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lema</span><span class="space"> </span><span class="codenumber">19.6</span><span class="period">.</span><span class="space"> </span><span class="title">Lemma Penempelan.</span>
+</h3>
+<div class="para logical">
+<div class="para">Misalkan <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> subhimpunan tertutup dari ruang <span class="process-math">\(X = A \cup B\text{,}\)</span> dan misalkan <span class="process-math">\(f:A \to Y\)</span> serta <span class="process-math">\(g: B \to Y\)</span> fungsi kontinu ke ruang <span class="process-math">\(Y\)</span> sedemikian sehingga <span class="process-math">\(f(x)=g(x)\)</span> untuk setiap <span class="process-math">\(x \in (A \cap B)\text{.}\)</span> Maka fungsi <span class="process-math">\(h:X \to Y\)</span> yang didefinisikan oleh</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(x) = \begin{cases}f(x) \amp \text{ jika }  x \in A \\ g(x) \amp \text{ jika }  x \in B \end{cases}
+\end{equation*}
+</div>
+<div class="para">adalah kontinu.</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Gluing_Lemma.svg" role="img" class="contained" alt="Himpunan tertutup \(A\) dan \(B\) menutupi \(X\text{;}\) fungsi kontinu \(f\) pada \(A\) dan \(g\) pada \(B\) berimpit pada irisannya sehingga mendefinisikan fungsi kontinu \(h\) pada \(X\text{.}\)"></div>
+<figcaption><span class="type">Gambar</span><span class="space"> </span><span class="codenumber">19.7<span class="period">.</span></span><span class="space"> </span>Lemma Penempelan.</figcaption></figure></article><article class="proof"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para logical">
+<div class="para">Misalkan <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> subhimpunan tertutup dari ruang <span class="process-math">\(X = A \cup B\text{,}\)</span> dan misalkan <span class="process-math">\(f:A \to Y\)</span> serta <span class="process-math">\(g: B \to Y\)</span> fungsi kontinu ke ruang <span class="process-math">\(Y\)</span> sedemikian sehingga <span class="process-math">\(f(x)=g(x)\)</span> untuk setiap <span class="process-math">\(x \in (A \cap B)\text{,}\)</span> seperti diilustrasikan dalam <a href="" class="xref" data-knowl="./knowl/F_Gluing_Lemma.html" title="Gambar 19.7">Gambar 19.7</a>. Definisikan <span class="process-math">\(h: X \to Y\)</span> dengan</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/F_Gluing_Lemma.html">
+\begin{equation*}
+h(x) = \begin{cases}f(x) \amp \text{ jika }  x \in A \\ g(x) \amp \text{ jika }  x \in B. \end{cases}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Untuk menunjukkan bahwa <span class="process-math">\(h\)</span> kontinu, misalkan <span class="process-math">\(C\)</span> subhimpunan tertutup dari <span class="process-math">\(Y\text{.}\)</span> Maka</div>
+<div class="displaymath process-math">
+\begin{align*}
+h^{-1}(C) = \{x \in X \mid h(x) \in C\} \amp = \{x \in A \mid f(x) \in C\} \cup \{x \in B \mid g(x) \in C\}\\
+\amp = f^{-1}(C) \cup g^{-1}(C)\text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Karena <span class="process-math">\(f\)</span> kontinu, <span class="process-math">\(f^{-1}(C)\)</span> tertutup dalam topologi subruang pada <span class="process-math">\(A\text{,}\)</span> dan karena <span class="process-math">\(g\)</span> kontinu, <span class="process-math">\(g^{-1}(C)\)</span> tertutup dalam topologi subruang pada <span class="process-math">\(B\text{.}\)</span> Jadi, <span class="process-math">\(f^{-1}(C) = A \cap D\)</span> dan <span class="process-math">\(g^{-1}(C) = B \cap E\)</span> untuk suatu himpunan tertutup <span class="process-math">\(D\)</span> dan <span class="process-math">\(E\)</span> dari <span class="process-math">\(X\text{.}\)</span> Fakta bahwa <span class="process-math">\(A\)</span> tertutup dalam <span class="process-math">\(X\)</span> mengakibatkan <span class="process-math">\(A \cap D\)</span> tertutup dalam <span class="process-math">\(X\text{.}\)</span> Demikian pula, fakta bahwa <span class="process-math">\(B\)</span> tertutup dalam <span class="process-math">\(X\)</span> mengakibatkan <span class="process-math">\(B \cap E\)</span> tertutup dalam <span class="process-math">\(X\text{.}\)</span> Jadi,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h^{-1}(C) = f^{-1}(C) \cup g^{-1}(C) = (A \cap D) \cup (B \cap E)
+\end{equation*}
+</div>
+<div class="para">merupakan gabungan berhingga dari himpunan-himpunan tertutup dalam <span class="process-math">\(X\text{,}\)</span> sehingga tertutup dalam <span class="process-math">\(X\text{.}\)</span> Karena <span class="process-math">\(h^{-1}(C)\)</span> tertutup untuk setiap himpunan tertutup dalam <span class="process-math">\(Y\text{,}\)</span> diperoleh bahwa <span class="process-math">\(h\)</span> kontinu.</div>
+</div></article><span class="incontext"><a href="sec_path_connect_equiv.html#lemma-6" class="internal">in-context</a></span>
+</body>
+</html>

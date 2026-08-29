@@ -1,46 +1,46 @@
 <section xml:id="sec_path_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    We defined connectedness in terms of separability by open sets.
-    There are other ways to look at connectedness.
-    For example,
-    the subset <m>(0,1)</m> is connected in <m>\R</m> because we can draw a line segment
-    (which we will call a <term>path</term>)
-    between any two points in <m>(0,1)</m> and remain in the set <m>(0,1)</m>.
-    So we might alternatively consider a topological space to be connected if there is always a path from one point in the spaced to another.
-    Although this is a new notion of connectedness,
-    we will see that path connectedness and connectedness are related.
+    Kita telah mendefinisikan keterhubungan berdasarkan dapat atau tidaknya suatu ruang dipisahkan oleh himpunan-himpunan buka.
+    Ada cara lain untuk memandang keterhubungan.
+    Sebagai contoh,
+    subhimpunan <m>(0,1)</m> terhubung dalam <m>\R</m> karena kita dapat menggambar sebuah ruas garis
+    (yang akan kita sebut <term>lintasan</term>)
+    di antara sembarang dua titik dalam <m>(0,1)</m> dan tetap berada di dalam himpunan <m>(0,1)</m>.
+    Jadi, sebagai alternatif, kita dapat menganggap suatu ruang topologi terhubung jika selalu ada lintasan dari satu titik ke titik lain dalam ruang tersebut.
+    Walaupun ini merupakan gagasan keterhubungan yang baru,
+    kita akan melihat bahwa keterhubungan lintasan dan keterhubungan saling berkaitan.
   </p>
   <p>
-    Intuitively,
-    a space is path connected if there is a path in the space between any two points in the space.
-    To formalize this idea, we need to define what we mean by a path.
-    Simply put, a path is a continuous curve between two points.
-    We can therefore define a path as a continuous function.
+    Secara intuitif,
+    suatu ruang terhubung lintasan jika terdapat lintasan di dalam ruang itu di antara sembarang dua titiknya.
+    Untuk memformalkan gagasan ini, kita perlu mendefinisikan apa yang dimaksud dengan lintasan.
+    Secara sederhana, lintasan adalah kurva kontinu di antara dua titik.
+    Oleh karena itu, kita dapat mendefinisikan lintasan sebagai fungsi kontinu.
   </p>
 
   <definition>
-  <idx><h>path</h></idx>
+  <idx><h>lintasan</h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a topological space.
-        A <term>path</term>
-        from point <m>a</m> to point <m>b</m> in <m>X</m> is a continuous function
-        <m>p: [0,1] \to X</m> such that <m>p(0) = a</m> and <m>p(1)=b</m>.
+        Misalkan <m>X</m> suatu ruang topologi.
+        Sebuah <term>lintasan</term>
+        dari titik <m>a</m> ke titik <m>b</m> dalam <m>X</m> adalah fungsi kontinu
+        <m>p: [0,1] \to X</m> sedemikian sehingga <m>p(0) = a</m> dan <m>p(1)=b</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    With the notion of path, we can now define path connectedness.
+    Dengan gagasan lintasan, sekarang kita dapat mendefinisikan keterhubungan lintasan.
   </p>
 
   <definition>
-  <idx><h>path connected</h></idx>
+  <idx><h>terhubung lintasan</h></idx>
     <statement>
       <p>
-        A subspace <m>A</m> of a topological space <m>X</m> is <term>path connected</term>
-        if, given any <m>a, b \in A</m> there is a path in <m>A</m> from <m>a</m> to <m>b</m>.
+        Subruang <m>A</m> dari ruang topologi <m>X</m> disebut <term>terhubung lintasan</term>
+        jika, untuk sembarang <m>a, b \in A</m>, terdapat lintasan di dalam <m>A</m> dari <m>a</m> ke <m>b</m>.
       </p>
     </statement>
   </definition>
@@ -50,29 +50,29 @@
       <task>
         <statement>
           <p>
-            Is <m>\R</m> with the Euclidean metric topology path connected?
-            Explain.
+            Apakah <m>\R</m> dengan topologi metrik Euklides terhubung lintasan?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Is <m>\R</m> with the finite complement topology path connected?
-            Explain.
+            Apakah <m>\R</m> dengan topologi komplemen berhingga terhubung lintasan?
+            Jelaskan.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>A = \{b,c\}</m> in <m>(X, \tau)</m> with <m>X= \{a,b,c,d,e,f\}</m> and
+            Misalkan <m>A = \{b,c\}</m> dalam <m>(X, \tau)</m> dengan <m>X= \{a,b,c,d,e,f\}</m> dan
             <me>
               \tau = \{\emptyset,\{a\}, \{c,d\}, \{a,c,d\}, \{b,c,d,e,f\}, X\}
             </me>.
-            Is <m>A</m> connected?
-            Is <m>A</m> path connected?
-            Explain.
+            Apakah <m>A</m> terhubung?
+            Apakah <m>A</m> terhubung lintasan?
+            Jelaskan.
           </p>
         </statement>
       </task>

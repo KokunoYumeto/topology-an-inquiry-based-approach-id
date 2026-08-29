@@ -1,33 +1,33 @@
 <section xml:id="sec_cut_sets">
-  <title>Cut Sets</title>
+  <title>Himpunan Pemutus</title>
   <p>
-    It can be difficult to determine if two topological spaces are homeomorphic.
-    We can sometimes use topological invariants to determine if spaces are not homeomorphic.
-    For example, if <m>X</m> is connected and <m>Y</m> is not,
-    then <m>X</m> and <m>Y</m> are not homeomorphic.
-    But just because two spaces are connected,
-    it does not automatically follow that the spaces are homeomorphic.
-    For example consider the spaces <m>(0,2)</m> and <m>[0,2)</m>.
-    Both are connected subsets of <m>\R</m>.
-    If we remove a point,
-    say 1, from the set <m>(0,2)</m> the resulting space
-    <m>(0,1) \cup (1,2)</m> is no longer connected.
-    The same result is true if we remove any point from <m>(0,2)</m>.
-    However, if we remove the point <m>0</m> from <m>[0,2)</m> the resulting space <m>(0,2)</m> is connected.
-    So the spaces <m>(0,2)</m> and <m>[0,2)</m> are fundamentally different in this respect,
-    and so are not homeomorphic.
-    Any set that we can remove from a connected set to obtain a disconnected set is called a <term>cut set</term>.
+    Menentukan apakah dua ruang topologi homeomorfik dapat menjadi hal yang sulit.
+    Kadang-kadang kita dapat menggunakan invarian topologi untuk menentukan bahwa ruang-ruang tersebut tidak homeomorfik.
+    Sebagai contoh, jika <m>X</m> terhubung dan <m>Y</m> tidak terhubung,
+    maka <m>X</m> dan <m>Y</m> tidak homeomorfik.
+    Namun, hanya karena dua ruang terhubung,
+    tidak serta-merta berarti bahwa ruang-ruang tersebut homeomorfik.
+    Sebagai contoh, perhatikan ruang <m>(0,2)</m> dan <m>[0,2)</m>.
+    Keduanya merupakan subhimpunan terhubung dari <m>\R</m>.
+    Jika kita menghapus suatu titik,
+    misalnya 1, dari himpunan <m>(0,2)</m>, ruang yang dihasilkan,
+    <m>(0,1) \cup (1,2)</m>, tidak lagi terhubung.
+    Hasil yang sama berlaku jika kita menghapus titik mana pun dari <m>(0,2)</m>.
+    Akan tetapi, jika kita menghapus titik <m>0</m> dari <m>[0,2)</m>, ruang yang dihasilkan, <m>(0,2)</m>, terhubung.
+    Jadi, ruang <m>(0,2)</m> dan <m>[0,2)</m> secara mendasar berbeda dalam hal ini,
+    dan karenanya tidak homeomorfik.
+    Setiap himpunan yang dapat kita hapus dari suatu himpunan terhubung untuk memperoleh himpunan yang tidak terhubung disebut <term>himpunan pemutus</term>.
   </p>
 
   <definition>
-  <idx><h>cut set</h></idx>
-  <idx><h>cut point</h></idx>
+  <idx><h>himpunan pemutus</h></idx>
+  <idx><h>titik pemutus</h></idx>
     <statement>
       <p>
-        A subset <m>S</m> of a connected topological space <m>X</m> is a <term>cut set</term>
-        of <m>X</m> if the set <m>X \setminus S</m> is disconnected.
-        A point <m>p</m> in a connected topological space <m>X</m> is a <term>cut point</term>
-        if <m>X \setminus \{p\}</m> is disconnected.
+        Suatu subhimpunan <m>S</m> dari ruang topologi terhubung <m>X</m> disebut <term>himpunan pemutus</term>
+        dari <m>X</m> jika himpunan <m>X \setminus S</m> tidak terhubung.
+        Suatu titik <m>p</m> dalam ruang topologi terhubung <m>X</m> disebut <term>titik pemutus</term>
+        jika <m>X \setminus \{p\}</m> tidak terhubung.
       </p>
     </statement>
   </definition>
@@ -37,25 +37,25 @@
       <task>
         <statement>
           <p>
-            The point <m>1</m> is a cut point of the space <m>(0,2)</m>.
-            In fact, every point in <m>(0,2)</m> is a cut point of <m>(0,2)</m>.
+            Titik <m>1</m> merupakan titik pemutus dari ruang <m>(0,2)</m>.
+            Bahkan, setiap titik dalam <m>(0,2)</m> merupakan titik pemutus dari <m>(0,2)</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Let <m>D = \{(x,y) \mid x^2+y^2 \leq 4\}</m> in <m>(\R^2, d_E)</m>.
-            That is, <m>D</m> is the closed disk of radius <m>2</m> in the plane.
-            The set <m>D</m> has no cut points.
-            However, if <m>S = \{(x,y) \mid x^2+y^2 = 1\}</m>,
-            then <m>D \setminus S</m> consists of two connected components:
-            the open ball <m>B((0,0),1)</m> and the annulus
-            <m>\{(x,y) \mid 1 \lt x^2+y^2 \leq 4\}</m> as illustrated in <xref ref="F_Cut_set_disk"/>.
-            So <m>S</m> is a cut set of <m>D</m>.
+            Misalkan <m>D = \{(x,y) \mid x^2+y^2 \leq 4\}</m> dalam <m>(\R^2, d_E)</m>.
+            Artinya, <m>D</m> merupakan cakram tertutup berjari-jari <m>2</m> pada bidang.
+            Himpunan <m>D</m> tidak mempunyai titik pemutus.
+            Akan tetapi, jika <m>S = \{(x,y) \mid x^2+y^2 = 1\}</m>,
+            maka <m>D \setminus S</m> terdiri atas dua komponen terhubung:
+            bola buka <m>B((0,0),1)</m> dan anulus
+            <m>\{(x,y) \mid 1 \lt x^2+y^2 \leq 4\}</m>, sebagaimana diilustrasikan dalam <xref ref="F_Cut_set_disk"/>.
+            Jadi, <m>S</m> merupakan himpunan pemutus dari <m>D</m>.
           </p>
             <figure xml:id="F_Cut_set_disk">
-              <caption>The disk <m>D</m> and cut set <m>S</m>.</caption>
+              <caption>Cakram <m>D</m> dan himpunan pemutus <m>S</m>.</caption>
               <image width="50%" source="Cut_set_disk"/>
             </figure>
           
@@ -65,64 +65,64 @@
   </example>
 
   <p>
-    Once we have a new property,
-    we then ask if that property is a topological invariant.
+    Setelah memperoleh suatu sifat baru,
+    kita kemudian menanyakan apakah sifat tersebut merupakan invarian topologi.
   </p>
 
   <theorem>
     <statement>
       <p>
-        Let <m>X</m> and <m>Y</m> be connected topological spaces and let <m>f:X \to Y</m> be a homeomorphism.
-        If <m>S \subset X</m> is a cut set,
-        then <m>f(S)</m> is a cut set of <m>Y</m>.
+        Misalkan <m>X</m> dan <m>Y</m> ruang topologi terhubung dan misalkan <m>f:X \to Y</m> suatu homeomorfisme.
+        Jika <m>S \subset X</m> merupakan himpunan pemutus,
+        maka <m>f(S)</m> merupakan himpunan pemutus dari <m>Y</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X</m> and <m>Y</m> be topological spaces with <m>f : X \to Y</m> a homeomorphism.
-      Let <m>S</m> be a cut set of <m>X</m>.
-      Let <m>U</m> and <m>V</m> form a separation of <m>X \setminus S</m>.
-      We will demonstrate that <m>f(U)</m> and <m>f(V)</m> form a separation of <m>Y \setminus f(S)</m>,
-      which will prove that <m>f(S)</m> is a cut set of <m>Y</m>.
-      Since <m>f^{-1}</m> is continuous,
-      the sets <m>f(U)</m> and <m>f(V)</m> are open sets in <m>Y</m>.
-      Next we prove that <m>(Y \setminus f(S)) \subseteq (f(U) \cup f(V))</m>.
-      Let <m>y \in Y \setminus f(S)</m>.
-      Since <m>f</m> is a surjection,
-      there exists an <m>x \in X</m> with <m>f(x) = y</m>.
-      The fact that <m>y \notin f(S)</m> means that <m>x \notin S</m>.
-      So <m>x \in (X \setminus S) \subseteq (U \cup V)</m>.
-      If <m>x \in U</m>,
-      then <m>f(x) = y \in f(U)</m> and if <m>x \in V</m>,
-      then <m>x = f(y) \in f(V)</m>.
-      So <m>(Y \setminus f(S)) \subseteq (f(U) \cup f(V))</m>.
+      Misalkan <m>X</m> dan <m>Y</m> ruang topologi dengan <m>f : X \to Y</m> suatu homeomorfisme.
+      Misalkan <m>S</m> suatu himpunan pemutus dari <m>X</m>.
+      Misalkan <m>U</m> dan <m>V</m> membentuk suatu pemisahan dari <m>X \setminus S</m>.
+      Kita akan menunjukkan bahwa <m>f(U)</m> dan <m>f(V)</m> membentuk suatu pemisahan dari <m>Y \setminus f(S)</m>,
+      yang akan membuktikan bahwa <m>f(S)</m> merupakan himpunan pemutus dari <m>Y</m>.
+      Karena <m>f^{-1}</m> kontinu,
+      himpunan <m>f(U)</m> dan <m>f(V)</m> merupakan himpunan buka dalam <m>Y</m>.
+      Selanjutnya, kita membuktikan bahwa <m>(Y \setminus f(S)) \subseteq (f(U) \cup f(V))</m>.
+      Misalkan <m>y \in Y \setminus f(S)</m>.
+      Karena <m>f</m> surjektif,
+      terdapat <m>x \in X</m> dengan <m>f(x) = y</m>.
+      Fakta bahwa <m>y \notin f(S)</m> berarti bahwa <m>x \notin S</m>.
+      Jadi <m>x \in (X \setminus S) \subseteq (U \cup V)</m>.
+      Jika <m>x \in U</m>,
+      maka <m>f(x) = y \in f(U)</m>, dan jika <m>x \in V</m>,
+      maka <m>x = f(y) \in f(V)</m>.
+      Jadi <m>(Y \setminus f(S)) \subseteq (f(U) \cup f(V))</m>.
     </p>
     <p>
-      Now we demonstrate that <m>f(U) \cap (Y \setminus f(S)) \neq \emptyset</m> and <m>f(V) \cap (Y \setminus f(S)) \neq \emptyset</m>.
-      Since <m>U</m> and <m>V</m> form a separation of <m>X \setminus S</m>,
-      we know that <m>U \cap (X \setminus S) \neq \emptyset</m> and <m>V \cap (X \setminus S) \neq \emptyset</m>.
-      Let <m>x \in U \cap (X \setminus S)</m>.
-      Then <m>x \in U</m> and <m>x \notin S</m>.
-      So <m>f(x) \in f(U)</m> and the fact that <m>f</m> is an injection implies that <m>f(x) \notin f(S)</m>.
-      Thus, <m>f(x) \in f(U) \cap (Y \setminus f(S))</m>.
-      The same argument shows that
-      <m>x \in V \cap (X \setminus S)</m> implies that <m>f(x) \in f(V) \cap (Y \setminus f(S))</m>.
-      So <m>f(U) \cap (Y \setminus f(S)) \neq \emptyset</m> and <m>f(V) \cap (Y \setminus f(S)) \neq \emptyset</m>.
+      Sekarang kita menunjukkan bahwa <m>f(U) \cap (Y \setminus f(S)) \neq \emptyset</m> dan <m>f(V) \cap (Y \setminus f(S)) \neq \emptyset</m>.
+      Karena <m>U</m> dan <m>V</m> membentuk suatu pemisahan dari <m>X \setminus S</m>,
+      kita mengetahui bahwa <m>U \cap (X \setminus S) \neq \emptyset</m> dan <m>V \cap (X \setminus S) \neq \emptyset</m>.
+      Misalkan <m>x \in U \cap (X \setminus S)</m>.
+      Maka <m>x \in U</m> dan <m>x \notin S</m>.
+      Jadi <m>f(x) \in f(U)</m>, dan fakta bahwa <m>f</m> injektif mengakibatkan <m>f(x) \notin f(S)</m>.
+      Dengan demikian, <m>f(x) \in f(U) \cap (Y \setminus f(S))</m>.
+      Argumen yang sama menunjukkan bahwa
+      <m>x \in V \cap (X \setminus S)</m> mengakibatkan <m>f(x) \in f(V) \cap (Y \setminus f(S))</m>.
+      Jadi <m>f(U) \cap (Y \setminus f(S)) \neq \emptyset</m> dan <m>f(V) \cap (Y \setminus f(S)) \neq \emptyset</m>.
     </p>
     <p>
-      Finally, we show that <m>f(U) \cap f(V) \cap (Y \setminus f(S)) = \emptyset</m>.
-      Suppose <m>y \in f(U) \cap f(V) \cap (Y \setminus f(S))</m>.
-      Let <m>x \in X</m> such that <m>f(x) = y</m>.
-      Since <m>f</m> is an injection,
-      we know that <m>f(x) \in f(U)</m> means <m>x \in U</m>. so <m>x \in U \cap V</m>.
-      The fact that <m>y \in Y \setminus f(S)</m> means that <m>y \notin f(S)</m>.
-      Thus, <m>x \notin S</m>.
-      So <m>x \in X \setminus S</m>.
-      We then have <m>x \in U \cap V \cap (X \setminus S) = \emptyset</m>.
-      It follows that <m>f(U) \cap f(V) \cap (Y \setminus f(S)) = \emptyset</m>.
-      Therefore, <m>f(U)</m> and <m>f(V)</m> form a separation of
-      <m>Y \setminus f(S)</m> and <m>f(S)</m> is a cut set of <m>Y</m>.
+      Terakhir, kita menunjukkan bahwa <m>f(U) \cap f(V) \cap (Y \setminus f(S)) = \emptyset</m>.
+      Andaikan <m>y \in f(U) \cap f(V) \cap (Y \setminus f(S))</m>.
+      Misalkan <m>x \in X</m> sedemikian sehingga <m>f(x) = y</m>.
+      Karena <m>f</m> injektif,
+      kita mengetahui bahwa <m>f(x) \in f(U)</m> berarti <m>x \in U</m>. Jadi <m>x \in U \cap V</m>.
+      Fakta bahwa <m>y \in Y \setminus f(S)</m> berarti bahwa <m>y \notin f(S)</m>.
+      Dengan demikian, <m>x \notin S</m>.
+      Jadi <m>x \in X \setminus S</m>.
+      Maka kita memperoleh <m>x \in U \cap V \cap (X \setminus S) = \emptyset</m>.
+      Diperoleh <m>f(U) \cap f(V) \cap (Y \setminus f(S)) = \emptyset</m>.
+      Oleh karena itu, <m>f(U)</m> dan <m>f(V)</m> membentuk suatu pemisahan dari
+      <m>Y \setminus f(S)</m>, dan <m>f(S)</m> merupakan himpunan pemutus dari <m>Y</m>.
     </p>
   </proof>
   </theorem>
@@ -132,22 +132,22 @@
       <task>
         <statement>
           <p>
-            Use the idea of cut sets/points to explain why the unit circle in <m>\R^2</m> is not homeomorphic to the interval <m>[0,1]</m> in <m>\R</m>.
-            Note: the unit circle is the set <m>\{(x,y) \mid x^2+y^2 = 1\}</m>.
-            Draw pictures to illustrate your explanation. (A formal proof is not necessary,
-            but you need to provide a convincing justification.)
+            Gunakan gagasan himpunan/titik pemutus untuk menjelaskan mengapa lingkaran satuan dalam <m>\R^2</m> tidak homeomorfik dengan interval <m>[0,1]</m> dalam <m>\R</m>.
+            Catatan: lingkaran satuan adalah himpunan <m>\{(x,y) \mid x^2+y^2 = 1\}</m>.
+            Buatlah gambar untuk mengilustrasikan penjelasan Anda. (Bukti formal tidak diperlukan,
+            tetapi Anda perlu memberikan alasan yang meyakinkan.)
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Consider the following subsets of <m>\R^2</m> in the subspace topology:
+            Perhatikan subhimpunan-subhimpunan berikut dari <m>\R^2</m> dengan topologi subruang:
             <me>
-              A = \{ (x,y) \mid x^2+y^2 =1\} \ \ \ \text{ and }  \ \ \ B = \{ (x,0) \mid -1 \leq x \leq 1\}
+              A = \{ (x,y) \mid x^2+y^2 =1\} \ \ \ \text{ dan }  \ \ \ B = \{ (x,0) \mid -1 \leq x \leq 1\}
             </me>.
-            Is <m>A \cup B</m> homeomorphic to <m>A</m>? (A formal proof is not necessary,
-            but you need to provide a convincing justification.)
+            Apakah <m>A \cup B</m> homeomorfik dengan <m>A</m>? (Bukti formal tidak diperlukan,
+            tetapi Anda perlu memberikan alasan yang meyakinkan.)
           </p>
         </statement>
       </task>
@@ -155,23 +155,23 @@
   </activity>
 
   <p>
-    We have seen that topological equivalence is an equivalence relation,
-    which partitions the collection of all topological spaces into disjoint homeomorphism classes.
-    Topological invariants can then help us identify the classes to which different spaces belong.
-    In general, though,
-    it can be more difficult to prove that two spaces are homeomorphic than not homeomorphic.
+    Kita telah melihat bahwa ekuivalensi topologi merupakan relasi ekuivalensi,
+    yang mempartisi koleksi semua ruang topologi menjadi kelas-kelas homeomorfisme yang saling lepas.
+    Invarian topologi kemudian dapat membantu kita mengidentifikasi kelas-kelas tempat berbagai ruang berada.
+    Namun, secara umum,
+    membuktikan bahwa dua ruang homeomorfik dapat lebih sulit daripada membuktikan bahwa keduanya tidak homeomorfik.
   </p>
   
   <activity>
     <p>
-      Consider the spaces <m>S_1 = \R</m>,
-      <m>S_2 = (0,1)</m> in <m>\R</m>,
-      <m>S_3 = [-1,1]</m> in <m>\R</m>,
-      the line segment <m>S_4</m> in <m>\R^2</m> between the points <m>(0,0)</m> and <m>(2,2)</m>,
-      the space <m>S_5</m> determined by the letter { X}, and the space <m>S_6</m> determined by the letter { Y} in <m>\R^2</m>.
-      Identify the distinct homeomorphism classes determined by these six spaces.
-      No formal proofs are necessary,
-      but you need to give convincing arguments.
+      Perhatikan ruang <m>S_1 = \R</m>,
+      <m>S_2 = (0,1)</m> dalam <m>\R</m>,
+      <m>S_3 = [-1,1]</m> dalam <m>\R</m>,
+      ruas garis <m>S_4</m> dalam <m>\R^2</m> di antara titik <m>(0,0)</m> dan <m>(2,2)</m>,
+      ruang <m>S_5</m> yang ditentukan oleh huruf { X}, dan ruang <m>S_6</m> yang ditentukan oleh huruf { Y} dalam <m>\R^2</m>.
+      Identifikasilah kelas-kelas homeomorfisme berbeda yang ditentukan oleh keenam ruang ini.
+      Bukti formal tidak diperlukan,
+      tetapi Anda perlu memberikan argumen yang meyakinkan.
     </p>
   </activity>
 </section>

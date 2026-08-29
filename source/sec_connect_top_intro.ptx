@@ -1,86 +1,85 @@
 <section xml:id="sec_connect_top_intro">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    The term
-    <q>connected</q>
-    should bring up images of something that is one piece,
-    not separated.
-    There is more than one way we can interpret the notion of connectedness in topological spaces.
-    For example,
-    we might consider a topological space to be connected if we can't separate it into disjoint pieces in any non-trivial way.
-    As another possibility,
-    we might consider a topological space to be connected if there is always a path from one point in the spaced to another,
-    provided we define what <q>path</q> means.
-    These are different notions of connectedness,
-    and we focus on the first notion in this section.
+    Istilah
+    <q>terhubung</q>
+    semestinya membangkitkan gambaran tentang sesuatu yang terdiri atas satu bagian,
+    bukan sesuatu yang terpisah.
+    Ada lebih dari satu cara untuk menafsirkan gagasan keterhubungan dalam ruang topologi.
+    Sebagai contoh,
+    kita dapat menganggap suatu ruang topologi terhubung jika ruang tersebut tidak dapat dipisahkan menjadi bagian-bagian saling lepas dengan cara taktrivial apa pun.
+    Kemungkinan lainnya,
+    kita dapat menganggap suatu ruang topologi terhubung jika selalu ada lintasan dari satu titik di ruang tersebut ke titik lainnya,
+    asalkan kita mendefinisikan apa yang dimaksud dengan <q>lintasan</q>.
+    Keduanya merupakan gagasan keterhubungan yang berbeda,
+    dan dalam bagian ini kita berfokus pada gagasan pertama.
   </p>
   <p>
-    Connectedness is an important property,
-    and one that we encounter in the calculus.
-    For example,
-    we will see in this section that the Intermediate Value Theorem relies on connected subsets of <m>\R</m>.
-    To define a connected set,
-    we will need to have a way to understand when and how a set can be separated into different pieces.
-    Since a topology is defined by open sets,
-    when we want to separate objects we will do so with open sets.
-    This is similar to the idea behind Hausdorff spaces,
-    except that we now want to know if a set can be separated in some way rather than separating points.
+    Keterhubungan merupakan sifat yang penting,
+    dan merupakan salah satu sifat yang kita jumpai dalam kalkulus.
+    Sebagai contoh,
+    dalam bagian ini kita akan melihat bahwa Teorema Nilai Antara bergantung pada subhimpunan terhubung dari <m>\R</m>.
+    Untuk mendefinisikan himpunan terhubung,
+    kita memerlukan cara untuk memahami kapan dan bagaimana suatu himpunan dapat dipisahkan menjadi bagian-bagian yang berbeda.
+    Karena suatu topologi didefinisikan oleh himpunan-himpunan buka,
+    ketika hendak memisahkan objek, kita akan melakukannya dengan himpunan buka.
+    Gagasan ini serupa dengan gagasan yang mendasari ruang Hausdorff,
+    hanya saja sekarang kita ingin mengetahui apakah suatu himpunan dapat dipisahkan dengan suatu cara, bukan memisahkan titik-titik.
   </p>
   <p>
-    As an example to motivate the definition,
-    consider the sets <m>X = (0,1) \cup (1,2)</m> and
-    <m>Y = [1,2]</m> in <m>\R</m> with the Euclidean topology.
-    Notice that we can write <m>X</m> as the union of two disjoint open sets
-    <m>X_1 = (0,1)</m> and <m>X_2 = (1,2)</m>.
-    So we shouldn't think of <m>X</m> as being connected.
-    However, if we attempt to write <m>Y</m> as a union of two subsets,
-    say <m>Y_1 = [1,1.5)</m> and <m>Y_2 = [1.5,2]</m>,
-    it is impossible for both of these subsets to be open and disjoint.
-    So <m>Y</m> is a set we should consider to be connected.
-    This is the notion of connectedness that we wish to investigate.
+    Sebagai contoh yang memotivasi definisi,
+    perhatikan himpunan <m>X = (0,1) \cup (1,2)</m> dan
+    <m>Y = [1,2]</m> di <m>\R</m> dengan topologi Euklides.
+    Perhatikan bahwa kita dapat menuliskan <m>X</m> sebagai gabungan dua himpunan buka yang saling lepas,
+    yakni <m>X_1 = (0,1)</m> dan <m>X_2 = (1,2)</m>.
+    Jadi, kita tidak seharusnya menganggap <m>X</m> terhubung.
+    Akan tetapi, jika kita mencoba menuliskan <m>Y</m> sebagai gabungan dua subhimpunan,
+    misalnya <m>Y_1 = [1,1.5)</m> dan <m>Y_2 = [1.5,2]</m>,
+    kedua subhimpunan tersebut tidak mungkin sekaligus buka dan saling lepas.
+    Jadi, <m>Y</m> adalah himpunan yang seharusnya kita anggap terhubung.
+    Inilah gagasan keterhubungan yang ingin kita selidiki.
   </p>
 
   <definition>
-  <idx><h>connected space</h></idx>
+  <idx><h>ruang terhubung</h></idx>
     <statement>
       <p>
-        A topological space <m>(X,\tau)</m> is <term>connected</term>
+        Suatu ruang topologi <m>(X,\tau)</m> disebut <term>terhubung</term>
             
-        if <m>X</m> cannot be written as the union of two disjoint,
-        nonempty,
-        open subsets.
-        A subset <m>A</m> of a topological space topological space
-        <m>(X,\tau)</m> is connected if <m>A</m> is connected in the subspace topology.
+        jika <m>X</m> tidak dapat dituliskan sebagai gabungan dua subhimpunan buka yang saling lepas
+        dan takkosong.
+        Suatu subhimpunan <m>A</m> dari ruang topologi
+        <m>(X,\tau)</m> disebut terhubung jika <m>A</m> terhubung dalam topologi subruang.
       </p>
     </statement>
   </definition>
 
   <p>
-    If a set <m>X</m> is not connected,
-    we say that <m>X</m> is disconnected.
-    If <m>X</m> is a disconnected topological space,
-    then there exist disjoint nonempty open sets <m>U</m> and <m>V</m> such that <m>X = U \cup V</m>.
+    Jika suatu himpunan <m>X</m> tidak terhubung,
+    kita mengatakan bahwa <m>X</m> terputus.
+    Jika <m>X</m> merupakan ruang topologi yang terputus,
+    maka terdapat himpunan buka takkosong <m>U</m> dan <m>V</m> yang saling lepas sedemikian sehingga <m>X = U \cup V</m>.
   </p>
 
   <exploration>
     <introduction>
     <p>
-      Can the subset <m>A</m> of the topological space <m>X</m> be written as the union of two disjoint nonempty relatively open sets?
+      Dapatkah subhimpunan <m>A</m> dari ruang topologi <m>X</m> dituliskan sebagai gabungan dua himpunan buka relatif takkosong yang saling lepas?
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            The set <m>A = \{a, b\}</m> in <m>(X, \tau)</m> with
-            <m>X = \{a, b, c, d\}</m> and <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a, b\}, X\}</m>.
+            Himpunan <m>A = \{a, b\}</m> dalam <m>(X, \tau)</m> dengan
+            <m>X = \{a, b, c, d\}</m> dan <m>\tau = \{\emptyset, \{a\}, \{b\}, \{a, b\}, X\}</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            The set <m>A = \{a, b, c\}</m> in
-            <m>(X, \tau)</m> with <m>X = \{a,b,c,d,e,f\}</m> and
+            Himpunan <m>A = \{a, b, c\}</m> dalam
+            <m>(X, \tau)</m> dengan <m>X = \{a,b,c,d,e,f\}</m> dan
             <me>
               \tau = \{\emptyset, \{a\}, \{c,d\}, \{a, c, d\}, \{b,c,d,e,f\}, X\}
             </me>.
@@ -90,7 +89,7 @@
       <task>
         <statement>
           <p>
-            The set <m>A = X</m> with <m>X = \{a,b,c,d\}</m> and
+            Himpunan <m>A = X</m> dengan <m>X = \{a,b,c,d\}</m> dan
             <me>
               \tau = \{\emptyset, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,b,c\}, \{b,c,d\}, X\}
             </me>.
@@ -100,42 +99,42 @@
       <task>
         <statement>
           <p>
-            The set <m>A = \{d, f\}</m> in
-            <m>X = \{a, b, c, d, e, f\}</m> with the discrete topology.
-            Generalize your findings.
+            Himpunan <m>A = \{d, f\}</m> dalam
+            <m>X = \{a, b, c, d, e, f\}</m> dengan topologi diskret.
+            Generalisasikan temuan Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            The set <m>A = \{a, c, d\}</m> in
-            <m>X = \{a, b, c, d, e\}</m> with the indiscrete topology.
-            Generalize your findings.
+            Himpunan <m>A = \{a, c, d\}</m> dalam
+            <m>X = \{a, b, c, d, e\}</m> dengan topologi indiskret.
+            Generalisasikan temuan Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            The set <m>A = \Z</m> in <m>X = \R</m> with the finite complement topology.
-            Generalize your findings.
+            Himpunan <m>A = \Z</m> dalam <m>X = \R</m> dengan topologi komplemen berhingga.
+            Generalisasikan temuan Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            The set <m>A = X</m> in <m>X = \{x \in \R \ \mid \ 1 \leq x \leq 2 \text{ or } 3 \lt x \lt 4\}</m> with the subspace metric topology from <m>(\R, d_E)</m>.
+            Himpunan <m>A = X</m> dalam <m>X = \{x \in \R \ \mid \ 1 \leq x \leq 2 \text{ atau } 3 \lt x \lt 4\}</m> dengan topologi metrik subruang dari <m>(\R, d_E)</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            The set <m>A = X</m> in <m>X = \left\{(x, y) \in \R^2 \ \mid \  y = \frac{1}{x} \text{ or }  y = 0\right\}</m> with open sets
+            Himpunan <m>A = X</m> dalam <m>X = \left\{(x, y) \in \R^2 \ \mid \  y = \frac{1}{x} \text{ atau }  y = 0\right\}</m> dengan himpunan-himpunan buka
             <me>
-              \tau = \{U  \cap X \ \mid \ U \text{ is open in the Euclidean Topology on }  \R^2\}
+              \tau = \{U  \cap X \ \mid \ U \text{ buka dalam topologi Euklides pada }  \R^2\}
             </me>.
           </p>
         </statement>

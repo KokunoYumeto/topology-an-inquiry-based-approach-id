@@ -1,0 +1,152 @@
+.searchresultsplaceholder article {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+}
+
+.searchbox {
+/*
+    height: 60px;
+    border: solid;
+    border-radius: 5px;
+    background-color: #eeee;
+*/
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+.ptxsearch {
+  width: 196px;
+}
+.searchbutton {
+  position: absolute;
+  right: 0;
+}
+
+.searchbutton .name {
+  display: none;
+}
+
+.searchwidget {
+/*
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: larger;
+*/
+    text-align: right;
+}
+
+.searchwidget input {
+/*
+    font-size: larger;
+*/
+}
+
+.helpbox {
+    display: none;
+}
+
+.detailed_result {
+    margin-bottom: 10px;
+}
+
+.all_results a:link {
+    text-decoration: none;
+    font-size: large;
+}
+
+.all_results a:hover {
+    background-color: lightgray;
+}
+.searchresults a:hover {
+    background-color: #eee;
+}
+
+.searchresults a {
+    text-decoration: none;
+    color: #222;
+}
+.searchresults a:hover {
+    text-decoration: underline;
+    color: #33f;
+}
+.searchresults ul li {
+    list-style-type: none;
+}
+ol.searchresults {
+    max-width: 420px;
+    padding-left: 10px;
+}
+ol.searchresults > li {
+    list-style-type: none;
+}
+.searchresults ul > li > text,
+ol.searchresults > li > text {
+    display: none;
+}
+.high_result {
+    font-weight: 700;
+}
+
+.medium_result {
+    font-weight: 500;
+}
+
+
+.low_result {
+    font-weight: 200;
+}
+.no_result {
+    font-weight: 200;
+    color: #444;
+}
+.detailed_result .no_result {
+    font-size: 90%;
+}
+
+.searchresultsplaceholder {
+    position: fixed;
+    top: 9em;
+    left: 8em;
+    padding: 0 1em 3em 1em;
+    border: 0.2em solid #009;
+    background: aliceblue;
+    z-index: 5000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 80%;
+}
+.searchterms {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 90%;
+    padding-right: 1.5em;
+}
+.closesearchresults {
+    font-size: 150%;
+    border: 2px solid grey;
+    border-radius: 0.3em;
+    padding: 0 0.3em 0.1em 0.3em;
+    margin-right: 0.1em;
+    position: sticky;
+    top: 0.2em;
+    left: 96%;
+}
+.closesearchresults:hover {
+    color: #c00;
+    background-color: #fee;
+    border-color: #f00;
+}
+.closesearchresults + h2 {
+    margin-top: -1em;
+}
+.searchempty {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .searchbox {
+        top: -30px;
+    }
+
+}

@@ -1,0 +1,88 @@
+{
+  "contact_sheet": {
+    "columns": 4,
+    "pages_per_sheet": 12,
+    "rows": 3
+  },
+  "expected_page_size_points": [
+    612.0,
+    792.0
+  ],
+  "intentional_blank_physical_pages": [
+    3
+  ],
+  "invocation_sequence": [
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/build_pretext_pdf_strict.py chapters01-20-complete-pdf --clean --expect-pdf \"output/chapters01-20-complete-pdf/chapters_01_20_complete_reader.pdf\" --source-date-epoch 1692057600 --mainmatter-physical-page 7 --rewrite-uri \"external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html\" --log \"qa/CHAPTERS01_20_COMPLETE_PDF_BUILD_RUN1.log\"",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/qa_chapters01_20_complete_pdf_pipeline.py record-run 1",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/build_pretext_pdf_strict.py chapters01-20-complete-pdf --clean --expect-pdf \"output/chapters01-20-complete-pdf/chapters_01_20_complete_reader.pdf\" --source-date-epoch 1692057600 --mainmatter-physical-page 7 --rewrite-uri \"external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html\" --log \"qa/CHAPTERS01_20_COMPLETE_PDF_BUILD_RUN2.log\"",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/qa_chapters01_20_complete_pdf_pipeline.py record-run 2",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/inspect_pdf_structure.py \"output/chapters01-20-complete-pdf/chapters_01_20_complete_reader.pdf\" --output \"qa/CHAPTERS01_20_COMPLETE_PDF_STRUCTURE.json\"",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/qa_chapters01_20_complete_pdf_pipeline.py prepare-render",
+    "pdftoppm -r 120 -png \"output/chapters01-20-complete-pdf/chapters_01_20_complete_reader.pdf\" \"tmp/pdfs/chapters01-20-complete-render/page\"",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/make_pdf_contact_sheets.py \"tmp/pdfs/chapters01-20-complete-render\" --output-dir \"tmp/pdfs/chapters01-20-complete-contact\" --columns 4 --rows 3 --thumbnail-width 280",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/build_chapters01_20_complete_pdf_visual_qa.py --build-log \"qa/CHAPTERS01_20_COMPLETE_PDF_BUILD_RUN2.log\" --renderer-label \"Poppler pdftoppm 120 dpi\"",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/qa_chapters01_20_complete_pdf_pipeline.py finalize",
+    "& \"../toolchain/pretext-1.7.5-py312/Scripts/python.exe\" scripts/qa_chapters01_20_complete_pdf_pipeline.py finalize --check"
+  ],
+  "mainmatter_physical_page": 7,
+  "minimum_extracted_characters_per_page": 500,
+  "minimum_outline_entries": 43,
+  "paths": {
+    "compact_final_receipt": "qa/CHAPTERS01_20_COMPLETE_PDF_QA.json",
+    "configuration_receipt": "qa/CHAPTERS01_20_COMPLETE_PDF_PIPELINE_CONFIG.json",
+    "contact_directory": "tmp/pdfs/chapters01-20-complete-contact",
+    "contact_pattern": "tmp/pdfs/chapters01-20-complete-contact/contact-NN.png",
+    "final_pdf": "output/chapters01-20-complete-pdf/chapters_01_20_complete_reader.pdf",
+    "render_directory": "tmp/pdfs/chapters01-20-complete-render",
+    "render_pattern": "tmp/pdfs/chapters01-20-complete-render/page-NNN.png",
+    "run_1_hash_receipt": "qa/CHAPTERS01_20_COMPLETE_PDF_RUN1_HASH.json",
+    "run_1_log": "qa/CHAPTERS01_20_COMPLETE_PDF_BUILD_RUN1.log",
+    "run_2_hash_receipt": "qa/CHAPTERS01_20_COMPLETE_PDF_RUN2_HASH.json",
+    "run_2_log": "qa/CHAPTERS01_20_COMPLETE_PDF_BUILD_RUN2.log",
+    "saved_run_1_pdf": "tmp/pdfs/chapters01-20-complete-run1.pdf",
+    "structure_receipt": "qa/CHAPTERS01_20_COMPLETE_PDF_STRUCTURE.json",
+    "visual_receipt": "qa/CHAPTERS01_20_COMPLETE_PDF_VISUAL_QA.json"
+  },
+  "pipeline_scripts": [
+    {
+      "bytes": 29444,
+      "path": "scripts/qa_chapters01_20_complete_pdf_pipeline.py",
+      "sha256": "8fc71b5e2e5301891914713eef3d3e0d00d09c6e67e0677b7f944991366b7c0d"
+    },
+    {
+      "bytes": 10051,
+      "path": "scripts/build_pretext_pdf_strict.py",
+      "sha256": "796959302f3abdbdcd14cfcbe3e79d4bd8a4018cb622c60189ed396df7b3c07b"
+    },
+    {
+      "bytes": 7586,
+      "path": "scripts/inspect_pdf_structure.py",
+      "sha256": "651690ed440b0cc034741698014c8f7da5d420e6b1801fa255932f690d6f3630"
+    },
+    {
+      "bytes": 3331,
+      "path": "scripts/build_chapters01_20_complete_pdf_visual_qa.py",
+      "sha256": "b397f796d34f79a1c290b14dd6c0bf707459352b52df873417ae0d09d4b53177"
+    },
+    {
+      "bytes": 16787,
+      "path": "scripts/build_chapter11_pdf_visual_qa.py",
+      "sha256": "f86315cee906b3c9fc8ab24454841dc79b477f9d6f0db613fe04d61d3894e271"
+    },
+    {
+      "bytes": 2510,
+      "path": "scripts/make_pdf_contact_sheets.py",
+      "sha256": "7796ec3667a3f366fba636d5b745cf27111d3e43304502230071e99ce90831df"
+    }
+  ],
+  "render_dpi": 120,
+  "renderer_label": "Poppler pdftoppm 120 dpi",
+  "schema_version": 1,
+  "source_date_epoch": 1692057600,
+  "status": "pipeline_configured_not_executed",
+  "target": "chapters01-20-complete-pdf",
+  "uri_rewrite": {
+    "source": "external/o003-epsilon-delta-lab.html",
+    "target": "https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html"
+  }
+}

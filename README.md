@@ -1,15 +1,16 @@
 # *Topologi: Pendekatan Berbasis Inkuiri* - Bahasa Indonesia
 
-Edisi Bahasa Indonesia yang sedang diproduksi dari *Topology: An Inquiry-Based
-Approach* karya Steven Schlicker, Grand Valley State University.
+Edisi Bahasa Indonesia lengkap dari *Topology: An Inquiry-Based Approach*
+karya Steven Schlicker, Grand Valley State University, beserta pendamping
+belajar mandiri dan pelengkap C90 yang ditulis terpisah.
 
-**Baca batas GitHub publik terbaru (Bab 1-17):**
+**Baca edisi lengkap:**
 
 https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/
 
-**Unduh PDF Bab 1-17 (513 halaman):**
+**Unduh PDF edisi lengkap (645 halaman):**
 
-https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-bab-01-17-id.pdf
+https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/downloads/topologi-pendekatan-berbasis-inkuiri-edisi-lengkap-id.pdf
 
 **Arsip Zenodo dalam satu riwayat versi:**
 
@@ -17,8 +18,7 @@ https://doi.org/10.5281/zenodo.22059894
 
 ## Status
 
-Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 17 dari
-20 bab:
+Edisi terverifikasi memuat seluruh 20 bab:
 
 - Bab 1, *Himpunan*;
 - Bab 2, *Fungsi*;
@@ -37,21 +37,29 @@ Produksi lengkap masih berlangsung. Batas terverifikasi terbaru memuat 17 dari
 - Bab 15, *Subruang*;
 - Bab 16, *Ruang Hasil Bagi*;
 - Bab 17, *Ruang Kompak*;
-- pendamping belajar mandiri orisinal untuk ketujuh belas bab, dengan petunjuk,
+- Bab 18, *Ruang Topologi Terhubung*;
+- Bab 19, *Ruang Terhubung Lintasan*;
+- Bab 20, *Hasil Kali Ruang Topologi*;
+- pendamping belajar mandiri orisinal untuk seluruh 20 bab, dengan petunjuk,
   jawaban, rubrik, dan solusi bertahap;
+- delapan modul pelengkap C90 orisinal tentang separasi, keterhitungan, jaring,
+  hasil kali sebarang, kekompakan lokal, metrisasi, ruang fungsi, dan penguasaan
+  terpadu, semuanya dengan solusi lengkap;
 - laboratorium epsilon-delta orisinal yang dapat digunakan secara luring untuk
   menggantikan kebergantungan aplet Bab 6 yang tidak terarsipkan; dan
 - backend modular netral-lokal untuk provenance, istilah, latihan, solusi,
   koreksi sumber, hak komponen, dan status QA.
 
-Batas Bab 1-17 telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
-audit matematika
-pendamping, dua pembangunan HTML deterministik, dua pembangunan PDF ketat,
-pemeriksaan tautan/aset, reflow desktop/seluler, interaksi petunjuk, dan
-inspeksi visual seluruh 513 halaman. Kolom baca menggunakan ukuran 960 px pada
-desktop lebar dan 600 px pada desktop ringkas/tablet, selalu terpusat di panel
-utama; versi seluler mengalir ulang tanpa luapan horizontal. Ini bukan klaim
-bahwa edisi 20 bab sudah selesai.
+Edisi lengkap telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
+audit matematika pendamping, pembangunan HTML deterministik, dua pembangunan
+PDF ketat yang identik byte demi byte, pemeriksaan tautan/aset dan penutupan
+runtime luring, reflow desktop/seluler, interaksi petunjuk, serta inspeksi
+visual seluruh 645 halaman. HTML final memuat 22.613 berkas / 89.005.572 byte
+dengan SHA-256 manifest kanonis
+`f0eae769a2bbba73ff339ce34129baaa6a2b6b93a9e30b8588ced26fdf501b52`.
+Kolom baca menggunakan ukuran 960 px pada desktop lebar dan 600 px pada
+desktop ringkas/tablet, selalu terpusat di panel utama; versi seluler mengalir
+ulang tanpa luapan horizontal.
 
 ## Sumber resmi yang dibekukan
 
@@ -85,28 +93,31 @@ institusi, atau kontributor manusia yang dipertahankan di seluruh edisi.
 - `qa/` - manifest, hash, dan kuitansi pemeriksaan;
 - `docs/` - byte pembaca publik untuk GitHub Pages.
 
-Manifest kumulatif yang mengikat batas ini adalah
-`qa/CHAPTER17_SOURCE_MANIFEST.json`; kuitansi manusia-bacanya adalah
-`qa/CHAPTER17_BUILD_QA.md`.
+Manifest sumber/backend yang mengikat edisi lengkap adalah
+`backend/complete_edition_source_backend_manifest.json`; bukti pembaca final
+ada di `qa/CHAPTER20_COMPLETE_HTML_QA.json`,
+`qa/CHAPTERS01_20_COMPLETE_PDF_QA.json`, dan
+`qa/CHAPTER20_COMPLETE_DOCS_QA.json`.
 
-## Membangun batas saat ini
+## Membangun edisi lengkap
 
 Lingkungan yang direkam memakai Python 3.12.13, PreTeXt 1.7.5,
 setuptools 75.8.0, dan MiKTeX 26.5.
 
 ```text
-pretext build chapters01-17-html --clean
-python scripts/finalize_chapter17_html.py output/chapters01-17-html --manifest qa/CHAPTER17_HTML_MANIFEST_RUN2.json
-python scripts/build_directory_manifest.py output/chapters01-17-html --glob "**/*" --label "O003/C90 Chapters 1-17 HTML" --output qa/CHAPTER17_HTML_MANIFEST.json --relative-to output/chapters01-17-html
-python scripts/build_pretext_pdf_strict.py chapters01-17-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTER17_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-17-pdf/chapters_01_17_reader.pdf --source-date-epoch 1692057600
+pretext build chapters01-20-complete-html --clean
+python scripts/finalize_and_qa_chapter20_complete_html.py
+python scripts/finalize_and_qa_chapter20_complete_html.py --check
+python scripts/build_pretext_pdf_strict.py chapters01-20-complete-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTERS01_20_COMPLETE_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-20-complete-pdf/chapters_01_20_complete_reader.pdf --source-date-epoch 1692057600
+python scripts/qa_chapters01_20_complete_pdf_pipeline.py finalize --check
 ```
 
-HTML saat ini masih memanggil beberapa dependensi runtime jarak jauh dari
-PreTeXt, Runestone, MathJax, dan penyedia font. Penutupan luring penuh tetap
-merupakan gerbang rilis edisi lengkap. PDF belum bertag; HTML adalah permukaan
-aksesibilitas utama. Sebagian font matematika PDF juga belum memiliki pemetaan
-Unicode yang lengkap, sehingga ekstraksi teks matematika dari PDF tidak selalu
-andal meskipun tampilan visualnya lolos pemeriksaan.
+Runtime MathJax, Lunr, dan PreTeXt yang diperlukan pembaca telah dipatok dan
+dibundel secara lokal; pemeriksaan penutupan luring dan privasi lulus tanpa
+referensi runtime jarak jauh. PDF belum bertag, sehingga HTML tetap menjadi
+permukaan aksesibilitas utama. Sebagian font matematika PDF juga belum memiliki
+pemetaan Unicode yang lengkap, sehingga ekstraksi teks matematika dari PDF
+tidak selalu andal meskipun tampilan visualnya lolos pemeriksaan.
 
 ## Hak dan atribusi
 

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch19-source-guides-a" xml:lang="id-ID">
+  <title>Panduan Prompt Sumber Bab 19: Lintasan dan Komponen Lintasan</title>
+  <p>Dua puluh satu panduan ini mengikuti tepat urutan prompt nonlatihan Bab 19. Kerjakan prompt utama lebih dahulu, lalu buka petunjuk, jawaban, dan solusi secara bertahap.</p>
+  <p>Uraian ini merupakan karya pendamping asli berlisensi CC BY 4.0, bukan solusi resmi GVSU, dan tidak menyiratkan dukungan penulis atau institusi sumber. Provenans model: <c>OpenAI Codex gpt-5.6-sol, Ultra</c>.</p>
+
+  <exercise xml:id="o003-c90-ch19-guide-01">
+    <title>Garis real Euklides terhubung lintasan</title>
+    <statement><p>Tentukan apakah <m>\R</m> dengan topologi Euklides terhubung lintasan, dan berikan lintasan eksplisit di antara dua titik sebarang.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-01-hint"><p>Untuk <m>a,b\in\R</m>, interpolasikan keduanya secara linear pada parameter <m>t\in[0,1]</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-01-answer"><p>Ya. Lintasan <m>p(t)=(1-t)a+tb</m> menghubungkan <m>a</m> dengan <m>b</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-01-solution"><p>Fungsi <m>p:[0,1]\to\R</m>, <m>p(t)=(1-t)a+tb</m>, kontinu sebagai fungsi polinomial. Nilai ujungnya adalah <m>p(0)=a</m> dan <m>p(1)=b</m>. Karena konstruksi ini berlaku untuk setiap pasangan <m>a,b</m>, garis real Euklides terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-02">
+    <title>Garis real bertopologi kofinit</title>
+    <statement><p>Tentukan apakah <m>\R</m> dengan topologi komplemen berhingga terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-02-hint"><p>Gunakan lintasan linear yang sama. Prapeta himpunan kofinit di bawah fungsi linear nonkonstan adalah interval parameter dikurangi berhingga banyak titik.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-02-answer"><p>Ya; <m>p(t)=(1-t)a+tb</m> kontinu dari interval Euklides ke garis real kofinit.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-02-solution"><p>Jika <m>a=b</m>, lintasan konstan kontinu. Jika <m>a\ne b</m> dan <m>U</m> buka kofinit, komplemen <m>\R\setminus U</m> berhingga. Karena <m>p</m> injektif, <m>p^{-1}(\R\setminus U)</m> berhingga dan tertutup dalam <m>[0,1]</m>; maka <m>p^{-1}(U)</m> buka. Jadi <m>p</m> kontinu dan menghubungkan pasangan titik sebarang.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-03">
+    <title>Subruang Sierpiński dua titik</title>
+    <statement><p>Dalam <m>X=\{a,b,c,d,e,f\}</m> dengan <m>\tau=\{\emptyset,\{a\},\{c,d\},\{a,c,d\},\{b,c,d,e,f\},X\}</m>, tentukan apakah <m>A=\{b,c\}</m> terhubung dan terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-03-hint"><p>Topologi subruang pada <m>A</m> adalah <m>\{\emptyset,\{c\},A\}</m>. Untuk lintasan dari <m>b</m> ke <m>c</m>, coba <m>p(0)=b</m> dan <m>p(t)=c</m> untuk <m>t&gt;0</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-03-answer"><p>Subruang <m>A</m> terhubung dan juga terhubung lintasan.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-03-solution"><p>Satu-satunya himpunan buka taktrivial dalam <m>A</m> ialah <m>\{c\}</m>, sehingga tidak ada dua himpunan buka takkosong yang saling lepas dan menutupi <m>A</m>. Jadi <m>A</m> terhubung. Definisikan <m>p(0)=b</m> dan <m>p(t)=c</m> untuk <m>t&gt;0</m>. Prapeta <m>\{c\}</m> adalah <m>(0,1]</m>, yang buka dalam <m>[0,1]</m>; maka <m>p</m> kontinu. Membalik parameter memberi lintasan dari <m>c</m> ke <m>b</m>, sedangkan lintasan konstan menangani ujung yang sama.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-04">
+    <title>Memakai definisi keterhubungan lintasan</title>
+    <statement><p>Misalkan <m>A</m> terhubung lintasan dan <m>a,b\in A</m>. Jelaskan mengapa ada fungsi kontinu <m>p:[0,1]\to A</m> dengan <m>p(0)=a</m> dan <m>p(1)=b</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-04-hint"><p>Baca kembali kuantor dalam definisi “terhubung lintasan”.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-04-answer"><p>Keberadaan <m>p</m> adalah tepat isi definisi keterhubungan lintasan untuk pasangan <m>a,b</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-04-solution"><p>Suatu subruang terhubung lintasan berarti bahwa untuk setiap dua titiknya terdapat lintasan di dalam subruang tersebut. Karena <m>a,b\in A</m>, definisi langsung menghasilkan fungsi kontinu <m>p:[0,1]\to A</m> dengan kedua nilai ujung yang diminta.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-05">
+    <title>Citra kontinu dari ruang terhubung lintasan</title>
+    <statement><p>Jika <m>f:X\to Y</m> kontinu, <m>A\subseteq X</m> terhubung lintasan, <m>f(a)=u</m>, <m>f(b)=v</m>, dan <m>p</m> lintasan dari <m>a</m> ke <m>b</m>, bangun lintasan dari <m>u</m> ke <m>v</m> dalam <m>f(A)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-05-hint"><p>Komposisikan <m>p</m> dengan <m>f</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-05-answer"><p>Ambil <m>q=f\circ p</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-05-solution"><p>Komposisi <m>q=f\circ p:[0,1]\to f(A)</m> kontinu karena <m>p</m> dan pembatasan <m>f|_A</m> kontinu. Selain itu, <m>q(0)=f(a)=u</m> dan <m>q(1)=f(b)=v</m>. Pasangan <m>u,v</m> dipilih sebarang, sehingga <m>f(A)</m> terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-06">
+    <title>Kontinuitas hasil kali lintasan</title>
+    <statement><p>Untuk lintasan <m>p</m> dari <m>a</m> ke <m>b</m> dan <m>q</m> dari <m>b</m> ke <m>c</m>, buktikan bahwa fungsi yang memakai <m>p(2t)</m> pada <m>[0,1/2]</m> dan <m>q(2t-1)</m> pada <m>[1/2,1]</m> adalah lintasan dari <m>a</m> ke <m>c</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-06-hint"><p>Kedua ruas parameter tertutup, menutupi <m>[0,1]</m>, dan rumusnya berimpit pada <m>t=1/2</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-06-answer"><p>Lemma Penempelan memberi kontinuitas karena kedua potongan bernilai <m>b</m> di titik sambung; nilai ujungnya <m>a</m> dan <m>c</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-06-solution"><p>Pada <m>A=[0,1/2]</m>, fungsi <m>t\mapsto p(2t)</m> kontinu; pada <m>B=[1/2,1]</m>, fungsi <m>t\mapsto q(2t-1)</m> kontinu. Kedua himpunan tertutup dan menutupi domain. Di irisannya, kedua rumus memberi <m>p(1)=b=q(0)</m>. Lemma Penempelan menghasilkan fungsi kontinu pada seluruh interval. Nilainya di <m>0</m> adalah <m>a</m> dan di <m>1</m> adalah <m>c</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-07">
+    <title>Refleksivitas relasi lintasan</title>
+    <statement><p>Pada ruang <m>X</m>, definisikan <m>a\sim b</m> bila ada lintasan dari <m>a</m> ke <m>b</m>. Buktikan bahwa relasi ini refleksif.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-07-hint"><p>Gunakan fungsi konstan.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-07-answer"><p>Untuk setiap <m>a</m>, lintasan konstan <m>p(t)=a</m> menunjukkan <m>a\sim a</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-07-solution"><p>Fungsi konstan <m>p:[0,1]\to X</m>, <m>p(t)=a</m>, kontinu dan memenuhi <m>p(0)=p(1)=a</m>. Jadi setiap elemen berelasi dengan dirinya sendiri, persis syarat refleksif.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-08">
+    <title>Simetri relasi lintasan</title>
+    <statement><p>Dengan relasi yang sama, buktikan bahwa <m>a\sim b</m> mengakibatkan <m>b\sim a</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-08-hint"><p>Balik parameter lintasan melalui <m>t\mapsto1-t</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-08-answer"><p>Jika <m>p</m> menghubungkan <m>a</m> ke <m>b</m>, maka <m>r(t)=p(1-t)</m> menghubungkan <m>b</m> ke <m>a</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-08-solution"><p>Pemetaan <m>t\mapsto1-t</m> kontinu, sehingga komposisinya dengan <m>p</m> kontinu. Nilai ujung <m>r(0)=p(1)=b</m> dan <m>r(1)=p(0)=a</m>. Maka relasi simetris.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-09">
+    <title>Transitivitas relasi lintasan</title>
+    <statement><p>Buktikan bahwa <m>a\sim b</m> dan <m>b\sim c</m> mengakibatkan <m>a\sim c</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-09-hint"><p>Tempelkan kedua lintasan dengan hasil kali lintasan.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-09-answer"><p>Hasil kali lintasan pertama dan kedua merupakan lintasan dari <m>a</m> ke <m>c</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-09-solution"><p>Ambil lintasan <m>p:a\leadsto b</m> dan <m>q:b\leadsto c</m>. Konstruksi pada panduan sebelumnya mendefinisikan fungsi kontinu yang mengikuti <m>p</m> selama separuh waktu pertama dan <m>q</m> selama separuh kedua. Fungsi itu berawal di <m>a</m> dan berakhir di <m>c</m>, sehingga <m>a\sim c</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-10">
+    <title>Keterhubungan ruang berhingga contoh</title>
+    <statement><p>Untuk <m>X=\{a,b,c,d\}</m> dan <m>\tau=\{\emptyset,\{b\},\{c\},\{a,b\},\{b,c\},\{a,b,c\},\{b,c,d\},X\}</m>, tentukan apakah <m>X</m> terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-10-hint"><p>Periksa apakah ada himpunan buka nontrivial yang komplemennya juga tercantum dalam <m>\tau</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-10-answer"><p>Ruang <m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-10-solution"><p>Komplemen himpunan buka nontrivial berturut-turut ialah <m>\{a,c,d\}</m>, <m>\{a,b,d\}</m>, <m>\{c,d\}</m>, <m>\{a,d\}</m>, <m>\{d\}</m>, dan <m>\{a\}</m>; tidak satu pun termasuk <m>\tau</m>. Jadi tidak ada himpunan buka-tertutup nontrivial. Karena pemisahan akan menghasilkan himpunan semacam itu, <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-11">
+    <title>Lingkungan minimal semua titik</title>
+    <statement><p>Dalam ruang berhingga pada panduan sebelumnya, hitung <m>U_x</m>, yaitu irisan semua himpunan buka yang memuat <m>x</m>, untuk setiap <m>x\in X</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-11-hint"><p>Untuk setiap titik, daftar dahulu semua anggota <m>\tau</m> yang memuatnya, lalu iris.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-11-answer"><p><m>U_a=\{a,b\}</m>, <m>U_b=\{b\}</m>, <m>U_c=\{c\}</m>, dan <m>U_d=\{b,c,d\}</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-11-solution"><p>Himpunan buka yang memuat <m>a</m> mempunyai irisan <m>\{a,b\}</m>. Karena singleton <m>\{b\}</m> dan <m>\{c\}</m> sendiri terbuka, irisan minimal di kedua titik itu masing-masing singleton. Satu-satunya himpunan buka sejati yang memuat <m>d</m> adalah <m>\{b,c,d\}</m>, selain <m>X</m>, sehingga irisannya <m>\{b,c,d\}</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-12">
+    <title>Lintasan langkah dari b ke d</title>
+    <statement><p>Dalam <m>U_d=\{b,c,d\}</m>, buktikan bahwa fungsi <m>p(t)=b</m> untuk <m>0\leq t&lt;1/2</m> dan <m>p(t)=d</m> untuk <m>1/2\leq t\leq1</m> adalah lintasan dari <m>b</m> ke <m>d</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-12-hint"><p>Topologi subruang pada <m>U_d</m> adalah <m>\{\emptyset,\{b\},\{c\},\{b,c\},U_d\}</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-12-answer"><p>Semua prapeta himpunan buka adalah <m>\emptyset</m>, <m>[0,1/2)</m>, atau <m>[0,1]</m>, sehingga terbuka dalam domain.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-12-solution"><p>Himpunan buka yang mengenai citra <m>\{b,d\}</m> memberi prapeta: himpunan yang memuat <m>b</m> tetapi tidak <m>d</m> memberi <m>[0,1/2)</m>; seluruh <m>U_d</m> memberi domain; dan himpunan yang tidak mengenai citra memberi himpunan kosong. Ketiganya buka relatif dalam <m>[0,1]</m>. Jadi <m>p</m> kontinu, dengan <m>p(0)=b</m> dan <m>p(1)=d</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-13">
+    <title>Lintasan langkah dari c ke d</title>
+    <statement><p>Dalam <m>U_d</m>, buktikan bahwa fungsi <m>p(t)=c</m> untuk <m>0\leq t&lt;1/2</m> dan <m>p(t)=d</m> untuk <m>1/2\leq t\leq1</m> adalah lintasan dari <m>c</m> ke <m>d</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-13-hint"><p>Ulangi analisis prapeta, dengan <m>\{c\}</m> menggantikan <m>\{b\}</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-13-answer"><p>Fungsi kontinu dan mempunyai nilai ujung <m>c</m> serta <m>d</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-13-solution"><p>Prapeta himpunan buka yang memuat <m>c</m> tetapi tidak <m>d</m> adalah <m>[0,1/2)</m>; prapeta <m>U_d</m> adalah seluruh domain; prapeta himpunan buka lain yang tidak mengenai <m>c</m> adalah kosong. Semua terbuka relatif. Karena nilai ujungnya tepat <m>c</m> dan <m>d</m>, fungsi tersebut adalah lintasan yang diminta.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-14">
+    <title>Keterhubungan lintasan lingkungan U_d</title>
+    <statement><p>Gunakan lintasan menuju <m>d</m> untuk membuktikan bahwa <m>U_d=\{b,c,d\}</m> terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-14-hint"><p>Balik lintasan bila perlu dan tempelkan dua lintasan melalui titik <m>d</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-14-answer"><p>Setiap dua titik dalam <m>U_d</m> dapat dihubungkan melalui <m>d</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-14-solution"><p>Sudah tersedia lintasan <m>b\leadsto d</m> dan <m>c\leadsto d</m>; lintasan konstan menangani <m>d</m>. Pembalikan memberi lintasan keluar dari <m>d</m>. Untuk titik <m>u,v\in U_d</m>, tempelkan lintasan <m>u\leadsto d</m> dengan lintasan <m>d\leadsto v</m>. Hasilnya lintasan <m>u\leadsto v</m>, sehingga <m>U_d</m> terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-15">
+    <title>Prapeta ketika x berada dalam O</title>
+    <statement><p>Dalam ruang berhingga, ambil <m>y\in U_x</m> dan fungsi langkah <m>p(t)=y</m> untuk <m>t&lt;1/2</m>, <m>p(t)=x</m> untuk <m>t\geq1/2</m>. Jika <m>O</m> buka dan <m>x\in O</m>, tentukan <m>p^{-1}(O)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-15-hint"><p>Karena <m>U_x</m> adalah irisan semua himpunan buka yang memuat <m>x</m>, setiap titik <m>y\in U_x</m> juga berada dalam <m>O</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-15-answer"><p><m>y\in O</m> dan <m>p^{-1}(O)=[0,1]</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-15-solution"><p>Himpunan <m>O</m> adalah salah satu himpunan buka yang diiris untuk membentuk <m>U_x</m>, jadi <m>U_x\subseteq O</m>. Karena <m>y\in U_x</m>, kedua nilai fungsi, <m>x</m> dan <m>y</m>, berada dalam <m>O</m>. Dengan demikian setiap parameter dipetakan ke <m>O</m>, sehingga prapetanya seluruh domain.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-16">
+    <title>Prapeta ketika hanya y berada dalam O</title>
+    <statement><p>Untuk fungsi langkah yang sama, tentukan <m>p^{-1}(O)</m> bila <m>x\notin O</m> tetapi <m>y\in O</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-16-hint"><p>Tentukan separuh parameter yang dipetakan ke <m>y</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-16-answer"><p><m>p^{-1}(O)=[0,1/2)</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-16-solution"><p>Pada <m>0\leq t&lt;1/2</m>, nilai <m>p(t)=y\in O</m>. Pada <m>1/2\leq t\leq1</m>, nilainya <m>x\notin O</m>. Jadi prapeta tepat <m>[0,1/2)</m>, yang terbuka dalam topologi subruang <m>[0,1]</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-17">
+    <title>Prapeta ketika kedua nilai di luar O</title>
+    <statement><p>Untuk fungsi langkah yang sama, tentukan <m>p^{-1}(O)</m> bila <m>x\notin O</m> dan <m>y\notin O</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-17-hint"><p>Citra <m>p</m> hanya terdiri atas <m>x</m> dan <m>y</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-17-answer"><p><m>p^{-1}(O)=\emptyset</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-17-solution"><p>Tidak ada nilai parameter yang dipetakan ke <m>O</m>, sebab kedua kemungkinan nilai fungsi berada di luar <m>O</m>. Maka prapeta kosong, yang terbuka.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-18">
+    <title>Kontinuitas lintasan langkah umum</title>
+    <statement><p>Dengan <m>y\in U_x</m>, buktikan bahwa fungsi langkah pada tiga panduan sebelumnya merupakan lintasan dari <m>y</m> ke <m>x</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-18-hint"><p>Gabungkan tiga kemungkinan prapeta untuk setiap himpunan buka <m>O</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-18-answer"><p>Prapeta setiap himpunan buka adalah <m>[0,1]</m>, <m>[0,1/2)</m>, atau <m>\emptyset</m>; semuanya buka relatif.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-18-solution"><p>Jika <m>x\in O</m>, prapeta seluruh domain. Jika <m>x\notin O</m> dan <m>y\in O</m>, prapeta <m>[0,1/2)</m>. Jika keduanya di luar <m>O</m>, prapeta kosong. Jadi <m>p</m> kontinu. Nilai <m>p(0)=y</m> dan <m>p(1)=x</m>, sehingga <m>p</m> lintasan dari <m>y</m> ke <m>x</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-19">
+    <title>Setiap lingkungan minimal terhubung lintasan</title>
+    <statement><p>Dalam ruang topologi berhingga, buktikan bahwa <m>U_x</m> terhubung lintasan untuk setiap <m>x</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-19-hint"><p>Hubungkan masing-masing dari dua titik sebarang ke <m>x</m>, balik salah satu lintasan, lalu tempelkan.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-19-answer"><p>Setiap <m>y,z\in U_x</m> dapat dihubungkan oleh lintasan <m>y\leadsto x\leadsto z</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-19-solution"><p>Panduan sebelumnya memberi lintasan dari setiap <m>y\in U_x</m> ke <m>x</m>. Untuk <m>y,z\in U_x</m>, ambil lintasan <m>y\leadsto x</m> dan balik lintasan <m>z\leadsto x</m> menjadi <m>x\leadsto z</m>. Hasil kali keduanya kontinu dan menghubungkan <m>y</m> ke <m>z</m>. Jadi <m>U_x</m> terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-20">
+    <title>Komponen lintasan berada dalam komponen</title>
+    <statement><p>Jika <m>C</m> komponen terhubung yang memuat <m>x</m> dan <m>P</m> komponen lintasan yang memuat <m>x</m>, buktikan <m>P\subseteq C</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-20-hint"><p>Ruang terhubung lintasan selalu terhubung, lalu gunakan maksimalitas komponen <m>C</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-20-answer"><p><m>P</m> terhubung dan memuat <m>x</m>, sehingga harus termuat dalam subhimpunan terhubung maksimal <m>C</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-20-solution"><p>Komponen lintasan <m>P</m> terhubung lintasan, maka terhubung. Himpunan <m>P\cup C</m> adalah gabungan dua himpunan terhubung yang beririsan di <m>x</m>, sehingga terhubung. Maksimalitas komponen <m>C</m> memaksa <m>P\cup C=C</m>, yaitu <m>P\subseteq C</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-guide-21">
+    <title>Komponen sama dengan komponen lintasan secara lokal</title>
+    <statement><p>Dalam ruang terhubung lintasan secara lokal, lanjutkan argumen sebelumnya dan buktikan bahwa komponen <m>C</m> yang memuat <m>x</m> sama dengan komponen lintasan <m>P</m> yang memuat <m>x</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-guide-21-hint"><p>Komponen lintasan ruang terhubung lintasan secara lokal bersifat buka. Jika <m>C\ne P</m>, gabungkan komponen lintasan lain yang bertemu <m>C</m> menjadi <m>Q</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-guide-21-answer"><p>Himpunan <m>P</m> dan <m>Q=C\setminus P</m> akan menjadi pemisahan dari <m>C</m>, kontradiksi. Jadi <m>P=C</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-guide-21-solution"><p>Setiap komponen lintasan dari <m>X</m> terbuka karena <m>X</m> terhubung lintasan secara lokal. Jika <m>C\ne P</m>, maka <m>Q</m>, gabungan semua komponen lintasan lain yang beririsan dengan <m>C</m>, takkosong. Komponen-komponen lintasan mempartisi <m>X</m>, jadi <m>C=P\sqcup Q</m>. Himpunan <m>P\cap C=P</m> terbuka relatif dalam <m>C</m>; <m>Q\cap C=Q</m> juga terbuka relatif sebagai gabungan komponen lintasan terbuka. Keduanya takkosong, saling lepas, dan menutupi <m>C</m>, sehingga memisahkan <m>C</m>. Ini bertentangan dengan keterhubungan komponen <m>C</m>. Maka <m>C=P</m>.</p></solution>
+  </exercise>
+</section>

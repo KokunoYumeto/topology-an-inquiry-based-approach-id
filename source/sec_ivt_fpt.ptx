@@ -1,25 +1,25 @@
 <section xml:id="sec_ivt_fpt">
-  <title>The Intermediate Value Theorem and a Fixed Point Theorem</title>
+  <title>Teorema Nilai Antara dan Teorema Titik Tetap</title>
   <p>
-    In this section we present two important consequences of connectedness.
-    The first consequence is the Intermediate Value Theorem.
-    In calculus,
-    the Intermediate Value Theorem tells us that if <m>f</m> is a continuous function on a closed interval <m>[a,b]</m>,
-    then <m>f</m> assumes all values between <m>f(a)</m> and <m>f(b)</m>.
-    This result seems straightforward if one just draws a graph of a continuous function on a closed interval.
-    But a picture is not a proof.
-    We state and then prove a more general version of the Intermediate Value Theorem.
+    Dalam bagian ini kita menyajikan dua akibat penting dari keterhubungan.
+    Akibat pertama adalah Teorema Nilai Antara.
+    Dalam kalkulus,
+    Teorema Nilai Antara menyatakan bahwa jika <m>f</m> merupakan fungsi kontinu pada interval tertutup <m>[a,b]</m>,
+    maka <m>f</m> mencapai setiap nilai di antara <m>f(a)</m> dan <m>f(b)</m>.
+    Hasil ini tampak jelas jika kita sekadar menggambar grafik fungsi kontinu pada interval tertutup.
+    Namun, gambar bukanlah bukti.
+    Kita akan menyatakan dan kemudian membuktikan versi Teorema Nilai Antara yang lebih umum.
   </p>
 
   <theorem>
-    <title>The Intermediate Value Theorem</title>
+    <title>Teorema Nilai Antara</title>
     <statement>
       <p>
-        Let <m>X</m> be a topological space and <m>A</m> a connected subset of <m>X</m>.
-        If <m>f : A \to \R</m> is a continuous function,
-        then for any <m>a,b \in A</m> and any
-        <m>y \in \R</m> between <m>f(a)</m> and <m>f(b)</m>,
-        there is a point <m>x \in A</m> such that <m>f(x) = y</m>.
+        Misalkan <m>X</m> ruang topologi dan <m>A</m> subhimpunan terhubung dari <m>X</m>.
+        Jika <m>f : A \to \R</m> merupakan fungsi kontinu,
+        maka untuk setiap <m>a,b \in A</m> dan setiap
+        <m>y \in \R</m> di antara <m>f(a)</m> dan <m>f(b)</m>,
+        terdapat titik <m>x \in A</m> sedemikian sehingga <m>f(x) = y</m>.
       </p>
     </statement>
   </theorem>
@@ -27,39 +27,39 @@
   <activity>
     <introduction>
     <p>
-      In this activity we prove the Intermediate Value Theorem.
-      Let <m>X</m> be a topological space and <m>A</m> a connected subset of <m>X</m>.
-      Assume that <m>f : A \to \R</m> is a continuous function,
-      and let <m>a,b \in A</m>.
+      Dalam aktivitas ini kita membuktikan Teorema Nilai Antara.
+      Misalkan <m>X</m> ruang topologi dan <m>A</m> subhimpunan terhubung dari <m>X</m>.
+      Andaikan <m>f : A \to \R</m> merupakan fungsi kontinu,
+      dan misalkan <m>a,b \in A</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Explain why we can assume that <m>a \neq b</m>.
+            Jelaskan mengapa kita dapat mengandaikan bahwa <m>a \neq b</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Explain what happens if <m>y = f(a)</m> or <m>y=f(b)</m>.
+            Jelaskan apa yang terjadi jika <m>y = f(a)</m> atau <m>y=f(b)</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Now assume that <m>f(a) \neq f(b)</m>.
-            Without loss of generality, assume that <m>f(a) \lt f(b)</m>.
-            Why can we say that <m>f(A)</m> is an interval?
+            Sekarang andaikan bahwa <m>f(a) \neq f(b)</m>.
+            Tanpa mengurangi keumuman, andaikan bahwa <m>f(a) \lt f(b)</m>.
+            Mengapa kita dapat mengatakan bahwa <m>f(A)</m> merupakan suatu interval?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            How does the fact that <m>f(A)</m> is an interval complete the proof?
+            Bagaimana fakta bahwa <m>f(A)</m> merupakan suatu interval menyelesaikan pembuktian?
           </p>
         </statement>
       </task>
@@ -67,58 +67,59 @@
   </activity>
 
   <p>
-    Our second consequence of connectedness involves a fixed point theorem.
-    Fixed point theorems are important in mathematics.
-    A fixed point of a function <m>f</m> is an input <m>c</m> so that <m>f(c) = c</m>.
-    There are many fixed point theorems <mdash/> one of the most well-known is the Brouwer Fixed Point Theorem that shows that every continuous function from a closed ball <m>B</m> in <m>\R^n</m> to itself must have a fixed point.
-    We can use the Intermediate Value Theorem to prove this result in <m>\R</m>.
+    Akibat kedua dari keterhubungan berkaitan dengan suatu teorema titik tetap.
+    Teorema-teorema titik tetap penting dalam matematika.
+    Titik tetap dari suatu fungsi <m>f</m> adalah masukan <m>c</m> yang memenuhi <m>f(c) = c</m>.
+    Ada banyak teorema titik tetap <mdash/> salah satu yang paling terkenal adalah Teorema Titik Tetap Brouwer, yang menunjukkan bahwa setiap fungsi kontinu dari bola tertutup <m>B</m> di <m>\R^n</m> ke dirinya sendiri pasti memiliki titik tetap.
+    Kita dapat menggunakan Teorema Nilai Antara untuk membuktikan hasil ini di <m>\R</m>.
   </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Misalkan <m>a,b \in \R</m> dengan <m>a \lt b</m>,
+        dan misalkan <m>f : [a,b] \to [a,b]</m> merupakan fungsi kontinu.
+        Maka terdapat bilangan <m>c \in [a,b]</m> sedemikian sehingga <m>f(c) = c</m>.
+      </p>
+    </statement>
+  </theorem>
 
   <activity>
     <introduction>
     <p>
-      In this activity we prove the following theorem.
+      Dalam aktivitas ini kita membuktikan teorema berikut.
     </p>
-    <theorem>
-      <statement>
-        <p>
-          Let <m>a,b \in \R</m> with <m>a \lt b</m>,
-          and let <m>f : [a,b] \to [a,b]</m> be a continuous function.
-          Then there is a number <m>c \in [a,b]</m> such that <m>f(c) = c</m>.
-        </p>
-      </statement>
-    </theorem>
     <p>
-      So let <m>a,b \in \R</m> with <m>a \lt b</m>,
-      and let <m>f : [a,b] \to [a,b]</m> be a continuous function.
+      Jadi, misalkan <m>a,b \in \R</m> dengan <m>a \lt b</m>,
+      dan misalkan <m>f : [a,b] \to [a,b]</m> merupakan fungsi kontinu.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Explain why we can assume that
-            <m>a \lt f(a)</m> and <m>f(b) \lt b</m>.
+            Jelaskan mengapa kita dapat mengandaikan bahwa
+            <m>a \lt f(a)</m> dan <m>f(b) \lt b</m>.
           </p>
         </statement>
       </task>
       <task>
         <introduction>
           <p>
-            Define <m>g : [a,b] \to \R</m> by <m>g(x) = x-f(x)</m>.
+            Definisikan <m>g : [a,b] \to \R</m> dengan <m>g(x) = x-f(x)</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Why is <m>g</m> a continuous function?
+                  Mengapa <m>g</m> merupakan fungsi kontinu?
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  What can we say about <m>g(a)</m> and <m>g(b)</m>?
-                  Use the Intermediate Value Theorem to complete the proof.
+                  Apa yang dapat kita katakan tentang <m>g(a)</m> dan <m>g(b)</m>?
+                  Gunakan Teorema Nilai Antara untuk menyelesaikan pembuktian.
                 </p>
               </statement>
             </task>
@@ -126,27 +127,27 @@
       <task>
         <introduction>
           <p>
-            Let <m>f(x) = \frac{1}{6}x^3+\frac{1}{4}x</m>.
+            Misalkan <m>f(x) = \frac{1}{6}x^3+\frac{1}{4}x</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Show that <m>f</m> maps the interval <m>[-1,2]</m> into the interval <m>[-1,2]</m>.
+                  Tunjukkan bahwa <m>f</m> memetakan interval <m>[-1,2]</m> ke dalam interval <m>[-1,2]</m>.
                   
                 </p>
               </statement>
               <hint>
                     <p>
-                      Use <xref ref="thm_max_min"/>
-                      that a continuous function from a compact topological space to <m>\R</m> assumes a maximum and minimum value.
+                      Gunakan <xref ref="thm_max_min"/>,
+                      yang menyatakan bahwa fungsi kontinu dari ruang topologi kompak ke <m>\R</m> mencapai nilai maksimum dan minimum.
                     </p>
                   </hint>
             </task>
             <task>
               <statement>
                 <p>
-                  Find all values of <m>c</m> in <m>[-1,2]</m> such that <m>f(c) = c</m>.
+                  Tentukan semua nilai <m>c</m> dalam <m>[-1,2]</m> sedemikian sehingga <m>f(c) = c</m>.
                 </p>
               </statement>
             </task>

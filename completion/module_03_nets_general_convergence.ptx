@@ -1,0 +1,445 @@
+<section xml:id="o003-c90-completion-general-convergence" xml:lang="id-ID">
+  <title>Jaring dan Kekonvergenan Umum</title>
+
+  <introduction>
+    <p>
+      Barisan cukup kuat pada ruang terhitung pertama, tetapi tidak pada
+      ruang topologi sebarang. Jaring mengganti indeks bilangan asli dengan
+      himpunan terarah sehingga setiap lingkungan dan setiap ekor dapat
+      dimodelkan tanpa hipotesis keterhitungan. Modul ini memberi
+      karakterisasi penutup, kekontinuan, dan kekompakan yang berlaku pada
+      semua ruang topologi.
+    </p>
+  </introduction>
+
+  <subsection xml:id="o003-c90-completion-directed-nets">
+    <title>Himpunan terarah, jaring, dan subjaring</title>
+
+    <definition xml:id="o003-c90-def-directed-set">
+      <statement>
+        <p>
+          <term>Himpunan terarah</term> adalah himpunan tak kosong <m>A</m>
+          dengan praurutan <m>\le</m> sedemikian sehingga untuk setiap
+          <m>a_1,a_2\in A</m> terdapat <m>a_3\in A</m> dengan
+          <m>a_1\le a_3</m> dan <m>a_2\le a_3</m>. Unsur yang lebih besar
+          dipandang sebagai indeks yang lebih akhir.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="o003-c90-def-net-eventually-frequently">
+      <statement>
+        <p>
+          <term>Jaring</term> atau <em>net</em> dalam ruang <m>X</m> adalah
+          pemetaan <m>x:A\to X</m> dari suatu himpunan terarah; nilainya ditulis
+          <m>x_a</m>. Jaring <m>(x_a)</m> <term>akhirnya</term> berada dalam
+          <m>E\subseteq X</m> jika terdapat <m>a_0</m> sehingga
+          <m>a\ge a_0</m> mengakibatkan <m>x_a\in E</m>. Jaring itu
+          <term>sering</term> berada dalam <m>E</m> jika untuk setiap
+          <m>a_0</m> terdapat <m>a\ge a_0</m> dengan <m>x_a\in E</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="o003-c90-def-net-convergence-cluster">
+      <statement>
+        <p>
+          Jaring <m>(x_a)</m> <term>konvergen</term> ke <m>x\in X</m> jika
+          jaring itu akhirnya berada dalam setiap lingkungan buka <m>x</m>.
+          Titik <m>x</m> disebut <term>titik gugus</term> dari jaring jika
+          jaring itu sering berada dalam setiap lingkungan buka <m>x</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="o003-c90-def-subnet">
+      <statement>
+        <p>
+          Misalkan <m>(x_a)_{a\in A}</m> suatu jaring. Jaring
+          <m>(y_b)_{b\in B}</m> disebut <term>subjaring</term> jika ada pemetaan
+          <m>\phi:B\to A</m> yang mempertahankan urutan dan kofinal dalam arti
+          berikut: untuk setiap <m>a_0\in A</m>, terdapat <m>b_0\in B</m>
+          sehingga <m>b\ge b_0</m> mengakibatkan
+          <m>\phi(b)\ge a_0</m>, dan <m>y_b=x_{\phi(b)}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="o003-c90-prop-cluster-subnet">
+      <statement>
+        <p>
+          Titik <m>x</m> merupakan titik gugus jaring <m>(x_a)</m> jika dan
+          hanya jika ada subjaring dari <m>(x_a)</m> yang konvergen ke <m>x</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika suatu subjaring konvergen ke <m>x</m>, kofinalitas menjamin bahwa
+          setiap lingkungan <m>x</m> ditemui setelah setiap indeks asal; jadi
+          <m>x</m> titik gugus. Sebaliknya, misalkan <m>x</m> titik gugus.
+          Ambil semua pasangan <m>(a,U)</m> dengan <m>a\in A</m>, <m>U</m>
+          lingkungan buka <m>x</m>, dan pilih indeks
+          <m>c\ge a</m> sehingga <m>x_c\in U</m>, dan bentuk semua tripel
+          <m>(a,U,c)</m> semacam itu. Tetapkan
+          <m>(a,U,c)\preceq(a',U',c')</m> bila
+          <m>a\le a'</m>, <m>U'\subseteq U</m>, dan <m>c\le c'</m>.
+          Himpunan tripel ini terarah: untuk dua tripel, pilih indeks yang
+          mendominasi kedua indeks pertama dan kedua indeks ketiga, lalu
+          gunakan sifat titik gugus pada irisan kedua lingkungan untuk memilih
+          indeks ketiga yang lebih akhir. Proyeksi
+          <m>\phi(a,U,c)=c</m> mempertahankan urutan dan kofinal. Jaring
+          <m>x_{\phi(a,U,c)}=x_c</m> akhirnya berada dalam setiap lingkungan
+          <m>x</m>, sehingga merupakan subjaring yang konvergen ke <m>x</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <remark xml:id="o003-c90-remark-subnet-not-subsequence">
+      <p>
+        Subjaring dari barisan tidak harus merupakan subbarisan biasa: himpunan
+        indeks barunya dapat berbeda dari <m>\mathbb N</m>. Kofinalitas adalah
+        syarat yang memastikan subjaring tidak menetap di bagian awal jaring.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-net-characterizations">
+    <title>Penutup dan kekontinuan melalui jaring</title>
+
+    <theorem xml:id="o003-c90-thm-net-closure">
+      <statement>
+        <p>
+          Untuk <m>E\subseteq X</m> dan <m>x\in X</m>, berlaku
+          <m>x\in\overline E</m> jika dan hanya jika ada jaring yang seluruh
+          nilainya berada dalam <m>E</m> dan konvergen ke <m>x</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika jaring dalam <m>E</m> konvergen ke <m>x</m>, setiap lingkungan
+          buka <m>x</m> memuat salah satu nilainya, maka beririsan dengan
+          <m>E</m>; jadi <m>x\in\overline E</m>. Sebaliknya, arahkan keluarga
+          lingkungan buka <m>\mathcal N(x)</m> dengan urutan balik:
+          <m>U\preceq V</m> jika <m>V\subseteq U</m>. Karena
+          <m>x\in\overline E</m>, pilih <m>x_U\in E\cap U</m> untuk setiap
+          <m>U\in\mathcal N(x)</m>. Untuk lingkungan <m>W</m>, semua indeks
+          <m>U\succeq W</m> memenuhi <m>U\subseteq W</m>, sehingga
+          <m>x_U\in W</m>. Jadi jaring tersebut konvergen ke <m>x</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="o003-c90-thm-net-continuity">
+      <statement>
+        <p>
+          Pemetaan <m>f:X\to Y</m> kontinu jika dan hanya jika untuk setiap
+          jaring <m>x_a\to x</m> dalam <m>X</m>, berlaku
+          <m>f(x_a)\to f(x)</m> dalam <m>Y</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika <m>f</m> kontinu dan <m>V</m> lingkungan buka <m>f(x)</m>, maka
+          <m>f^{-1}(V)</m> lingkungan buka <m>x</m>. Jaring <m>x_a</m> akhirnya
+          berada di dalam prapeta itu, jadi <m>f(x_a)</m> akhirnya berada dalam
+          <m>V</m>.
+        </p>
+        <p>
+          Sebaliknya, andaikan <m>f</m> tidak kontinu di <m>x</m>. Ada
+          lingkungan buka <m>V</m> dari <m>f(x)</m> sehingga
+          <m>f^{-1}(V)</m> bukan lingkungan <m>x</m>. Maka
+          <m>x\in\overline{X\setminus f^{-1}(V)}</m>. Menurut teorema penutup,
+          ada jaring <m>x_a</m> di dalam komplemen tersebut dengan
+          <m>x_a\to x</m>. Namun tidak satu pun <m>f(x_a)</m> berada dalam
+          <m>V</m>, sehingga jaring citra tidak konvergen ke <m>f(x)</m>,
+          bertentangan dengan hipotesis pelestarian jaring.
+        </p>
+      </proof>
+    </theorem>
+
+    <proposition xml:id="o003-c90-prop-first-countable-sequential">
+      <statement>
+        <p>
+          Dalam ruang terhitung pertama, penutup dapat dideteksi oleh
+          barisan: jika <m>x\in\overline E</m>, ada barisan dalam <m>E</m> yang
+          konvergen ke <m>x</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Ambil basis lokal terhitung <m>U_1,U_2,\ldots</m> di <m>x</m> dan
+          ganti dengan basis menurun
+          <m>V_n=U_1\cap\cdots\cap U_n</m>. Karena
+          <m>x\in\overline E</m>, pilih <m>x_n\in E\cap V_n</m>. Jika
+          <m>U</m> lingkungan <m>x</m>, suatu <m>U_k\subseteq U</m>; untuk
+          <m>n\ge k</m>, <m>x_n\in V_n\subseteq U_k\subseteq U</m>. Jadi
+          <m>x_n\to x</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <example xml:id="o003-c90-example-sequences-miss-closure">
+      <statement>
+        <p>
+          Misalkan <m>\omega_1</m> ordinal pertama yang tak terhitung, dan beri
+          <m>[0,\omega_1]</m> topologi urutan. Himpunan
+          <m>E=[0,\omega_1)</m> mempunyai <m>\omega_1\in\overline E</m> karena
+          setiap lingkungan ujung <m>\omega_1</m> memuat ordinal yang lebih
+          kecil. Namun tidak ada barisan dalam <m>E</m> yang konvergen ke
+          <m>\omega_1</m>. Memang, supremum dari terhitung banyak ordinal
+          terhitung masih merupakan ordinal terhitung <m>\beta&lt;\omega_1</m>;
+          lingkungan <m>(\beta,\omega_1]</m> kemudian tidak memuat satu pun
+          suku barisan. Jadi barisan tidak mendeteksi penutup pada ruang
+          topologi sebarang, sedangkan jaring selalu melakukannya.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-net-compactness">
+    <title>Kekompakan melalui jaring</title>
+
+    <theorem xml:id="o003-c90-thm-net-compactness">
+      <statement>
+        <p>
+          Ruang topologi <m>X</m> kompak jika dan hanya jika setiap jaring dalam
+          <m>X</m> mempunyai subjaring yang konvergen.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Misalkan <m>X</m> kompak dan <m>(x_a)_{a\in A}</m> suatu jaring.
+          Untuk setiap <m>a</m>, ambil penutup ekor
+          <m>F_a=\overline{\{x_b:b\ge a\}}</m>. Keluarga
+          <m>\{F_a:a\in A\}</m> mempunyai sifat irisan berhingga karena
+          keterarahan memberi satu ekor yang termuat dalam setiap kumpulan
+          berhingga ekor. Kekompakan memberi
+          <m>x\in\bigcap_{a\in A}F_a</m>. Setiap lingkungan <m>x</m> memotong
+          setiap ekor, jadi <m>x</m> titik gugus jaring. Menurut proposisi
+          subjaring, ada subjaring yang konvergen ke <m>x</m>.
+        </p>
+        <p>
+          Sebaliknya, andaikan selimut buka <m>\mathcal U</m> tidak mempunyai
+          subselimut berhingga. Arahkan himpunan semua subkeluarga berhingga
+          <m>F\subseteq\mathcal U</m> dengan inklusi, lalu pilih
+          <m>x_F\in X\setminus\bigcup F</m>. Jika jaring ini mempunyai
+          subjaring yang konvergen ke <m>x</m>, pilih
+          <m>U\in\mathcal U</m> dengan <m>x\in U</m>. Subjaring akhirnya berada
+          dalam <m>U</m>. Kofinalitas juga membuat indeks asalnya akhirnya
+          memuat keluarga berhingga <m>\{U\}</m>, sehingga nilai subjaring
+          justru berada di luar <m>U</m>. Kontradiksi ini menunjukkan bahwa
+          setiap selimut buka mempunyai subselimut berhingga.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark xml:id="o003-c90-remark-filter-equivalence">
+      <p>
+        Bahasa filter memberi formulasi yang ekuivalen tanpa mengulang teori.
+        Filter pada <m>X</m> adalah keluarga <m>\mathcal F</m> subhimpunan yang
+        tidak memuat <m>\emptyset</m>, tertutup ke atas, dan tertutup terhadap
+        irisan berhingga. Filter konvergen ke <m>x</m> jika memuat setiap
+        lingkungan <m>x</m>. Ekor suatu jaring membangkitkan filter, sedangkan
+        pasangan <m>(F,x)</m> dengan <m>F\in\mathcal F</m> dan <m>x\in F</m>
+        membentuk jaring yang merepresentasikan filter. Dengan Prinsip
+        Ultrafilter, kekompakan ekuivalen dengan pernyataan bahwa setiap
+        ultrafilter konvergen. Edisi ini memakai jaring sebagai bahasa utama
+        dan tidak menduplikasi semua pembuktian dalam notasi filter.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-net-mastery">
+    <title>Latihan Penguasaan dengan Dukungan Bertahap</title>
+
+    <exercise xml:id="o003-c90-completion-net-ex-01">
+      <title>Jaring lingkungan untuk penutup</title>
+      <statement>
+        <p>
+          Misalkan <m>x\in\overline E</m>. Arahkan keluarga lingkungan buka
+          <m>x</m> dengan urutan balik dan pilih <m>x_U\in E\cap U</m>.
+          Buktikan langsung bahwa <m>x_U\to x</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-net-ex-01-hint">
+        <p>Gunakan lingkungan sasaran itu sendiri sebagai indeks awal.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-net-ex-01-answer">
+        <p>Jika <m>U\succeq W</m>, maka <m>U\subseteq W</m> dan <m>x_U\in W</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-net-ex-01-solution">
+        <p>
+          Tetapkan lingkungan buka <m>W</m> dari <m>x</m>. Dalam urutan balik,
+          setiap indeks <m>U\succeq W</m> memenuhi <m>U\subseteq W</m>.
+          Karena <m>x_U\in U</m>, kita memperoleh <m>x_U\in W</m>. Jadi jaring
+          akhirnya berada dalam setiap lingkungan <m>W</m>, tepat definisi
+          <m>x_U\to x</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-net-ex-02">
+      <title>Jaring pada ruang metrik</title>
+      <statement>
+        <p>
+          Buktikan bahwa jaring <m>x_a</m> dalam ruang metrik konvergen ke
+          <m>x</m> jika dan hanya jika untuk setiap <m>\varepsilon&gt;0</m>,
+          akhirnya <m>d(x_a,x)&lt;\varepsilon</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-net-ex-02-hint">
+        <p>Bola-bola buka membentuk basis lokal di <m>x</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-net-ex-02-answer">
+        <p>Pernyataan adalah definisi kekonvergenan yang diuji pada basis lokal bola.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-net-ex-02-solution">
+        <p>
+          Jika <m>x_a\to x</m>, terapkan definisi pada lingkungan
+          <m>B_\varepsilon(x)</m>. Sebaliknya, misalkan syarat epsilon berlaku
+          dan <m>U</m> lingkungan buka <m>x</m>. Pilih
+          <m>\varepsilon&gt;0</m> dengan <m>B_\varepsilon(x)\subseteq U</m>.
+          Jaring akhirnya memenuhi <m>d(x_a,x)&lt;\varepsilon</m>, sehingga
+          akhirnya berada dalam <m>U</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-net-ex-03">
+      <title>Kekontinuan dan pelestarian jaring</title>
+      <statement>
+        <p>
+          Andaikan <m>f:X\to Y</m> membawa setiap jaring yang konvergen ke
+          jaring yang konvergen menuju citra limitnya. Buktikan bahwa <m>f</m>
+          kontinu.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-net-ex-03-hint">
+        <p>
+          Jika <m>f</m> tidak kontinu di <m>x</m>, bangun jaring menuju
+          <m>x</m> di luar prapeta suatu lingkungan <m>f(x)</m>.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-net-ex-03-answer">
+        <p>Gunakan karakterisasi penutup oleh jaring pada komplemen prapeta.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-net-ex-03-solution">
+        <p>
+          Jika <m>f</m> tidak kontinu di <m>x</m>, ada lingkungan buka
+          <m>V</m> dari <m>f(x)</m> sehingga <m>f^{-1}(V)</m> bukan lingkungan
+          <m>x</m>. Jadi <m>x</m> berada dalam penutup komplemennya. Pilih
+          jaring <m>x_a</m> dalam <m>X\setminus f^{-1}(V)</m> yang konvergen ke
+          <m>x</m>. Semua <m>f(x_a)</m> berada di luar <m>V</m>, sehingga jaring
+          citra tidak akhirnya berada dalam lingkungan <m>V</m> dari
+          <m>f(x)</m>. Ini bertentangan dengan hipotesis, maka <m>f</m>
+          kontinu.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-net-ex-04">
+      <title>Ordinal pertama tak terhitung</title>
+      <statement>
+        <p>
+          Dalam <m>[0,\omega_1]</m> dengan topologi urutan, buktikan bahwa
+          <m>\omega_1</m> berada dalam penutup <m>[0,\omega_1)</m>, tetapi bukan
+          limit suatu barisan dari himpunan itu. Lalu jelaskan bentuk jaring
+          yang konvergen ke <m>\omega_1</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-net-ex-04-hint">
+        <p>
+          Ambil supremum semua suku barisan. Untuk jaring, arahkan ordinal
+          terhitung dengan urutan biasa.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-net-ex-04-answer">
+        <p>
+          Jaring <m>x_\alpha=\alpha</m>, diindeks oleh
+          <m>\alpha&lt;\omega_1</m>, konvergen ke <m>\omega_1</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-net-ex-04-solution">
+        <p>
+          Setiap lingkungan <m>\omega_1</m> memuat ekor
+          <m>(\beta,\omega_1]</m> dan karena itu memotong
+          <m>[0,\omega_1)</m>. Jadi <m>\omega_1</m> berada dalam penutup.
+          Untuk barisan <m>(\alpha_n)</m> ordinal terhitung, supremum
+          <m>\beta=\sup_n\alpha_n</m> masih terhitung. Lingkungan
+          <m>(\beta,\omega_1]</m> tidak memuat satu pun <m>\alpha_n</m>, maka
+          barisan tidak konvergen ke <m>\omega_1</m>. Sebaliknya, himpunan
+          semua ordinal terhitung terarah oleh urutan biasa, dan jaring
+          <m>x_\alpha=\alpha</m> akhirnya berada dalam setiap ekor
+          <m>(\beta,\omega_1]</m>; jadi jaring itu konvergen.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-net-ex-05">
+      <title>Kekompakan dari subjaring</title>
+      <statement>
+        <p>
+          Andaikan setiap jaring dalam <m>X</m> mempunyai subjaring konvergen.
+          Buktikan langsung bahwa setiap selimut buka <m>\mathcal U</m>
+          mempunyai subselimut berhingga.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-net-ex-05-hint">
+        <p>
+          Jika tidak, indekskan titik yang belum tertutupi oleh semua
+          subkeluarga berhingga <m>F\subseteq\mathcal U</m>.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-net-ex-05-answer">
+        <p>
+          Subjaring konvergen akhirnya harus berada dalam satu anggota selimut,
+          tetapi kofinalitas memaksanya akhirnya berada di luar anggota itu.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-net-ex-05-solution">
+        <p>
+          Andaikan <m>\mathcal U</m> tidak mempunyai subselimut berhingga.
+          Arahkan subkeluarga berhingga <m>F</m> dengan inklusi, dan pilih
+          <m>x_F\notin\bigcup F</m>. Ambil subjaring
+          <m>x_{\phi(b)}</m> yang konvergen ke <m>x</m>, lalu pilih
+          <m>U\in\mathcal U</m> dengan <m>x\in U</m>. Kekonvergenan memberi
+          indeks setelah mana semua nilai subjaring berada dalam <m>U</m>.
+          Kofinalitas terhadap indeks <m>\{U\}</m> memberi indeks setelah mana
+          <m>U\in\phi(b)</m>. Namun definisi <m>x_{\phi(b)}</m> mengatakan nilai
+          itu berada di luar setiap anggota <m>\phi(b)</m>, khususnya di luar
+          <m>U</m>. Kontradiksi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-net-ex-06">
+      <title>Filter ekor suatu jaring</title>
+      <statement>
+        <p>
+          Untuk jaring <m>(x_a)_{a\in A}</m>, misalkan
+          <m>T_a=\{x_b:b\ge a\}</m>. Buktikan bahwa keluarga semua himpunan
+          yang memuat suatu <m>T_a</m> merupakan filter, dan bahwa filter itu
+          konvergen ke <m>x</m> tepat ketika jaringnya konvergen ke <m>x</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-net-ex-06-hint">
+        <p>Gunakan keterarahan untuk menempatkan satu ekor di dalam irisan dua ekor.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-net-ex-06-answer">
+        <p>Keanggotaan lingkungan dalam filter ekor tepat berarti jaring akhirnya berada di dalamnya.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-net-ex-06-solution">
+        <p>
+          Tidak ada ekor yang kosong, sehingga filter tidak memuat
+          <m>\emptyset</m>. Keluarga jelas tertutup ke atas. Jika himpunan
+          <m>E</m> memuat <m>T_a</m> dan <m>F</m> memuat <m>T_b</m>, pilih
+          <m>c\ge a,b</m>; maka <m>T_c\subseteq T_a\cap T_b\subseteq E\cap F</m>,
+          jadi irisan berada dalam filter. Terakhir, lingkungan <m>U</m> dari
+          <m>x</m> berada dalam filter tepat ketika suatu ekor
+          <m>T_a\subseteq U</m>, yakni tepat ketika jaring akhirnya berada
+          dalam <m>U</m>. Karena itu konvergensi filter dan jaring ekuivalen.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+</section>

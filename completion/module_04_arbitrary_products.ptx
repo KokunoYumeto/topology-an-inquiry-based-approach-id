@@ -1,0 +1,447 @@
+<section xml:id="o003-c90-completion-arbitrary-products" xml:lang="id-ID">
+  <title>Hasil Kali Sebarang dan Topologi Kotak</title>
+
+  <introduction>
+    <p>
+      Bab hasil kali pada teks utama membangun hasil kali berhingga. Modul ini
+      memperluas konstruksi itu ke keluarga sebarang, menjelaskan sifat
+      universal yang menentukan topologi hasil kali, membedakannya dari
+      topologi kotak, dan menyatakan Teorema Tychonoff dengan hipotesis serta
+      ketergantungan logisnya secara tepat.
+    </p>
+  </introduction>
+
+  <subsection xml:id="o003-c90-completion-product-definition">
+    <title>Topologi hasil kali dan sifat universal</title>
+
+    <definition xml:id="o003-c90-def-arbitrary-product-topology">
+      <statement>
+        <p>
+          Misalkan <m>\{X_i:i\in I\}</m> keluarga ruang topologi dan
+          <m>X=\prod_{i\in I}X_i</m>. Untuk setiap <m>i</m>, proyeksi koordinat
+          ditulis <m>\pi_i:X\to X_i</m>. <term>Topologi hasil kali</term> pada
+          <m>X</m> adalah topologi yang dibangkitkan oleh subbasis
+          <m>\{\pi_i^{-1}(U):i\in I,\ U\subseteq X_i\text{ terbuka}\}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="o003-c90-prop-product-basic-sets">
+      <statement>
+        <p>
+          Basis topologi hasil kali terdiri atas semua himpunan
+          <m>\prod_{i\in I}U_i</m> dengan setiap <m>U_i</m> terbuka dalam
+          <m>X_i</m> dan <m>U_i=X_i</m> kecuali untuk berhingga banyak indeks.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Irisan berhingga unsur subbasis mempunyai bentuk tersebut: untuk
+          koordinat yang muncul, irisankan himpunan buka terkait; untuk
+          koordinat lain gunakan seluruh faktor. Sebaliknya, setiap kotak yang
+          hanya membatasi berhingga banyak koordinat adalah irisan berhingga
+          prapeta proyeksi, sehingga terbuka.
+        </p>
+      </proof>
+    </proposition>
+
+    <theorem xml:id="o003-c90-thm-product-universal-property">
+      <statement>
+        <p>
+          Untuk ruang topologi <m>Y</m> dan pemetaan
+          <m>f:Y\to\prod_{i\in I}X_i</m>, pemetaan <m>f</m> kontinu jika dan
+          hanya jika setiap pemetaan koordinat <m>\pi_i\circ f:Y\to X_i</m>
+          kontinu.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika <m>f</m> kontinu, setiap komposisi dengan proyeksi kontinu juga
+          kontinu. Sebaliknya, andaikan semua komponen kontinu. Prapeta unsur
+          subbasis memenuhi
+          <m>f^{-1}(\pi_i^{-1}(U))=(\pi_i\circ f)^{-1}(U)</m>, yang terbuka.
+          Karena prapeta mempertahankan gabungan dan irisan berhingga,
+          prapeta setiap himpunan buka hasil kali terbuka; maka <m>f</m>
+          kontinu.
+        </p>
+      </proof>
+    </theorem>
+
+    <proposition xml:id="o003-c90-prop-product-projections">
+      <statement>
+        <p>
+          Setiap proyeksi <m>\pi_i</m> kontinu dan terbuka. Jika semua faktor
+          selain <m>X_i</m> tak kosong, proyeksi itu juga surjektif.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Kekontinuan berasal langsung dari definisi subbasis. Citra suatu
+          kotak basis di bawah <m>\pi_i</m> adalah <m>U_i</m>, sehingga terbuka;
+          karena setiap himpunan buka merupakan gabungan kotak basis, proyeksi
+          terbuka. Surjektivitas diperoleh dengan menetapkan satu titik pada
+          setiap koordinat lain.
+        </p>
+      </proof>
+    </proposition>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-box-topology">
+    <title>Topologi kotak dan divergensi tak hingga</title>
+
+    <definition xml:id="o003-c90-def-box-topology">
+      <statement>
+        <p>
+          <term>Topologi kotak</term> pada <m>\prod_{i\in I}X_i</m> mempunyai
+          basis semua kotak <m>\prod_{i\in I}U_i</m> dengan setiap <m>U_i</m>
+          terbuka, tanpa syarat bahwa hanya berhingga banyak koordinat yang
+          dibatasi. Topologi kotak selalu paling tidak sehalus topologi hasil
+          kali, dan keduanya sama bila <m>I</m> berhingga.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="o003-c90-example-box-product-divergence">
+      <statement>
+        <p>
+          Dalam <m>\mathbb R^{\mathbb N}</m>, kotak
+          <m>U=\prod_{n\ge1}(-1/n,1/n)</m> terbuka dalam topologi kotak tetapi
+          tidak dalam topologi hasil kali. Setiap lingkungan hasil kali dari
+          titik nol hanya membatasi berhingga banyak koordinat. Pilih koordinat
+          <m>k</m> yang tidak dibatasi dan ubah koordinat itu menjadi <m>1</m>;
+          titik yang diperoleh tetap dalam lingkungan hasil kali tersebut,
+          tetapi berada di luar <m>U</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-box-coordinatewise-failure">
+      <statement>
+        <p>
+          Misalkan <m>e_n\in\mathbb R^{\mathbb N}</m> bernilai <m>1</m> pada
+          koordinat <m>n</m> dan <m>0</m> pada koordinat lain. Untuk setiap
+          koordinat tetap <m>k</m>, koordinat ke-<m>k</m> dari <m>e_n</m>
+          akhirnya nol; jadi <m>e_n\to0</m> dalam topologi hasil kali. Dalam
+          topologi kotak, lingkungan
+          <m>\prod_{k\ge1}(-1/2,1/2)</m> dari nol tidak memuat satu pun
+          <m>e_n</m>, sehingga barisan tidak konvergen.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-box-universal-failure">
+      <statement>
+        <p>
+          Pemetaan diagonal <m>\Delta:\mathbb R\to\mathbb R^{\mathbb N}</m>,
+          <m>\Delta(t)=(t,t,\ldots)</m>, mempunyai semua komponen koordinat
+          kontinu. Namun sebagai pemetaan ke topologi kotak, ia tidak kontinu:
+          prapeta <m>\prod_{n\ge1}(-1/n,1/n)</m> adalah <m>\{0\}</m>. Jadi sifat
+          universal komponen-koordinat mencirikan topologi hasil kali, bukan
+          topologi kotak.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-product-preservation">
+    <title>Sifat yang dipertahankan oleh hasil kali</title>
+
+    <theorem xml:id="o003-c90-thm-product-separation">
+      <statement>
+        <p>
+          Hasil kali sebarang ruang <m>T_0</m>, ruang <m>T_1</m>, atau ruang
+          Hausdorff berturut-turut tetap <m>T_0</m>, <m>T_1</m>, atau Hausdorff.
+          Sebaliknya, bila semua faktor lain tak kosong, setiap faktor mewarisi
+          sifat tersebut dari hasil kalinya.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Dua titik hasil kali yang berbeda mempunyai koordinat berbeda
+          <m>i</m>. Himpunan buka pembeda atau pasangan lingkungan buka saling
+          lepas pada <m>X_i</m> dapat ditarik kembali melalui <m>\pi_i</m>.
+          Untuk arah sebaliknya, tetapkan titik dasar pada semua koordinat lain
+          dan identifikasikan <m>X_i</m> dengan subruang irisan yang diperoleh;
+          sifat <m>T_0</m>, <m>T_1</m>, dan Hausdorff bersifat herediter.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="o003-c90-thm-product-connected">
+      <statement>
+        <p>
+          Hasil kali sebarang keluarga ruang terhubung yang tak kosong adalah
+          terhubung.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Pilih titik dasar <m>p=(p_i)</m>. Untuk setiap himpunan berhingga
+          <m>F\subseteq I</m>, biarkan <m>Y_F</m> terdiri atas titik-titik yang
+          dapat berbeda dari <m>p</m> hanya pada koordinat dalam <m>F</m>.
+          Ruang <m>Y_F</m> homeomorfik dengan hasil kali berhingga ruang
+          terhubung, maka terhubung; semua <m>Y_F</m> memuat <m>p</m>. Jadi
+          <m>Y=\bigcup_FY_F</m> terhubung. Setiap kotak basis hasil kali hanya
+          membatasi berhingga banyak koordinat dan karena itu memotong
+          <m>Y</m>; maka <m>Y</m> padat. Penutup ruang terhubung terhubung,
+          sehingga seluruh hasil kali terhubung.
+        </p>
+      </proof>
+    </theorem>
+
+    <proposition xml:id="o003-c90-prop-countable-product-countability">
+      <statement>
+        <p>
+          Hasil kali terhitung ruang terhitung pertama juga terhitung pertama.
+          Hasil kali terhitung ruang terhitung kedua juga terhitung kedua.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Untuk basis lokal di titik <m>x=(x_n)</m>, batasi hanya koordinat
+          <m>1,\ldots,k</m> dan pilih satu unsur dari basis lokal terhitung pada
+          masing-masing koordinat. Gabungan atas semua <m>k</m> dan semua
+          pilihan berhingga tetap terhitung dan merupakan basis lokal. Dengan
+          cara yang sama, semua kotak basis yang membatasi berhingga banyak
+          koordinat dengan unsur basis terhitung dari faktor membentuk basis
+          terhitung bagi hasil kali.
+        </p>
+      </proof>
+    </proposition>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-tychonoff-theorem">
+    <title>Teorema Tychonoff dengan ruang lingkup yang tepat</title>
+
+    <theorem xml:id="o003-c90-thm-tychonoff-product">
+      <statement>
+        <p>
+          <term>Teorema Tychonoff.</term> Hasil kali sebarang keluarga ruang
+          kompak adalah kompak dalam topologi hasil kali.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Gunakan karakterisasi ultrafilter dari kekompakan. Misalkan
+          <m>\mathcal F</m> ultrafilter pada
+          <m>X=\prod_{i\in I}X_i</m>. Untuk setiap <m>i</m>, citra ultrafilter
+          melalui <m>\pi_i</m> merupakan ultrafilter pada <m>X_i</m>. Karena
+          <m>X_i</m> kompak, ultrafilter citra konvergen ke suatu
+          <m>x_i\in X_i</m>. Pilih <m>x=(x_i)_{i\in I}</m>.
+        </p>
+        <p>
+          Suatu lingkungan basis <m>U</m> dari <m>x</m> hanya membatasi
+          koordinat dalam himpunan berhingga <m>F</m>. Untuk setiap
+          <m>i\in F</m>, kekonvergenan ultrafilter citra mengatakan bahwa
+          <m>\pi_i^{-1}(U_i)</m> berada dalam <m>\mathcal F</m>. Ketertutupan
+          filter terhadap irisan berhingga memberi
+          <m>U=\bigcap_{i\in F}\pi_i^{-1}(U_i)\in\mathcal F</m>. Jadi
+          <m>\mathcal F\to x</m>, dan <m>X</m> kompak.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark xml:id="o003-c90-remark-tychonoff-scope">
+      <p>
+        Pernyataan ini berlaku untuk topologi hasil kali, bukan topologi kotak.
+        Untuk keluarga berhingga, pembuktian selimut buka dapat dilakukan tanpa
+        prinsip pilihan. Bentuk sebarang di atas memakai Prinsip Ultrafilter;
+        dalam teori himpunan ZF, Teorema Tychonoff untuk semua ruang kompak
+        ekuivalen dengan Aksioma Pilihan. Pilihan titik limit <m>x_i</m> dan
+        keberadaan ultrafilter yang diperlukan tidak disembunyikan sebagai
+        langkah elementer.
+      </p>
+    </remark>
+
+    <proposition xml:id="o003-c90-prop-compact-product-factors">
+      <statement>
+        <p>
+          Jika hasil kali tak kosong <m>\prod_iX_i</m> kompak, maka setiap
+          faktor <m>X_i</m> kompak.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Proyeksi <m>\pi_i</m> kontinu dan surjektif. Citra kontinu ruang
+          kompak adalah kompak, sehingga
+          <m>X_i=\pi_i(\prod_jX_j)</m> kompak.
+        </p>
+      </proof>
+    </proposition>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-products-mastery">
+    <title>Latihan Penguasaan dengan Dukungan Bertahap</title>
+
+    <exercise xml:id="o003-c90-completion-products-ex-01">
+      <title>Basis hasil kali sebarang</title>
+      <statement>
+        <p>
+          Buktikan bahwa irisan berhingga unsur subbasis
+          <m>\pi_i^{-1}(U)</m> tepat menghasilkan kotak yang membatasi hanya
+          berhingga banyak koordinat.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-products-ex-01-hint">
+        <p>Kelompokkan semua syarat yang menggunakan koordinat sama.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-products-ex-01-answer">
+        <p>Pada koordinat yang muncul, gunakan irisan himpunan buka; pada koordinat lain gunakan seluruh faktor.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-products-ex-01-solution">
+        <p>
+          Ambil irisan <m>\bigcap_{k=1}^n\pi_{i_k}^{-1}(U_k)</m>. Untuk setiap
+          <m>i</m> yang muncul, tetapkan <m>V_i</m> sebagai irisan semua
+          <m>U_k</m> dengan <m>i_k=i</m>; untuk indeks lain tetapkan
+          <m>V_i=X_i</m>. Maka irisan tersebut sama dengan
+          <m>\prod_iV_i</m>, dan hanya berhingga banyak <m>V_i</m> yang mungkin
+          bukan seluruh faktor. Sebaliknya, setiap kotak semacam itu adalah
+          irisan prapeta untuk koordinat yang dibatasi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-products-ex-02">
+      <title>Topologi kotak lebih halus secara ketat</title>
+      <statement>
+        <p>
+          Dalam <m>\mathbb R^{\mathbb N}</m>, buktikan bahwa
+          <m>\prod_{n\ge1}(-1/n,1/n)</m> bukan himpunan buka hasil kali.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-products-ex-02-hint">
+        <p>Setiap lingkungan basis hasil kali dari nol membiarkan suatu koordinat tanpa batasan.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-products-ex-02-answer">
+        <p>Ubah satu koordinat tak terbatas menjadi <m>1</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-products-ex-02-solution">
+        <p>
+          Andaikan kotak tersebut terbuka dalam topologi hasil kali. Maka ia
+          memuat lingkungan basis <m>B=\prod_nB_n</m> dari nol yang hanya
+          membatasi koordinat dalam suatu himpunan berhingga <m>F</m>. Pilih
+          <m>k\notin F</m>. Titik yang bernilai <m>1</m> pada koordinat
+          <m>k</m> dan nol pada koordinat lain berada dalam <m>B</m>, tetapi
+          tidak berada dalam kotak karena <m>1\notin(-1/k,1/k)</m>. Kontradiksi.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-products-ex-03">
+      <title>Sifat universal topologi hasil kali</title>
+      <statement>
+        <p>
+          Buktikan bahwa <m>f:Y\to\prod_iX_i</m> kontinu tepat ketika semua
+          komponen <m>f_i=\pi_i\circ f</m> kontinu.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-products-ex-03-hint">
+        <p>Uji prapeta pada subbasis topologi hasil kali.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-products-ex-03-answer">
+        <p><m>f^{-1}(\pi_i^{-1}(U))=f_i^{-1}(U)</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-products-ex-03-solution">
+        <p>
+          Jika <m>f</m> kontinu, komposisinya dengan setiap proyeksi kontinu.
+          Sebaliknya, jika semua <m>f_i</m> kontinu, prapeta setiap unsur
+          subbasis <m>\pi_i^{-1}(U)</m> adalah himpunan buka
+          <m>f_i^{-1}(U)</m>. Karena topologi hasil kali dibangkitkan oleh
+          subbasis ini dan prapeta mempertahankan operasi pembentuk topologi,
+          <m>f</m> kontinu.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-products-ex-04">
+      <title>Hasil kali ruang Hausdorff</title>
+      <statement>
+        <p>Buktikan bahwa hasil kali sebarang ruang Hausdorff adalah Hausdorff.</p>
+      </statement>
+      <hint xml:id="o003-c90-completion-products-ex-04-hint">
+        <p>Dua titik berbeda harus berbeda pada sedikitnya satu koordinat.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-products-ex-04-answer">
+        <p>Tarik kembali dua lingkungan buka saling lepas dari faktor pembeda.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-products-ex-04-solution">
+        <p>
+          Misalkan <m>x\ne y</m> dalam hasil kali. Pilih <m>i</m> dengan
+          <m>x_i\ne y_i</m>. Karena <m>X_i</m> Hausdorff, ada himpunan buka
+          saling lepas <m>U,V\subseteq X_i</m> dengan <m>x_i\in U</m> dan
+          <m>y_i\in V</m>. Prapeta <m>\pi_i^{-1}(U)</m> dan
+          <m>\pi_i^{-1}(V)</m> terbuka, saling lepas, dan masing-masing memuat
+          <m>x</m> serta <m>y</m>. Jadi hasil kali Hausdorff.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-products-ex-05">
+      <title>Teorema Tychonoff melalui ultrafilter</title>
+      <statement>
+        <p>
+          Lengkapi pembuktian Teorema Tychonoff: jika setiap ultrafilter citra
+          <m>\pi_i(\mathcal F)</m> konvergen ke <m>x_i</m>, buktikan bahwa
+          <m>\mathcal F</m> konvergen ke <m>x=(x_i)</m> dalam topologi hasil kali.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-products-ex-05-hint">
+        <p>Setiap lingkungan basis hanya memberi syarat pada berhingga banyak koordinat.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-products-ex-05-answer">
+        <p>Irisankan berhingga banyak prapeta lingkungan koordinat yang berada dalam filter.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-products-ex-05-solution">
+        <p>
+          Ambil lingkungan basis
+          <m>U=\bigcap_{i\in F}\pi_i^{-1}(U_i)</m> dari <m>x</m>, dengan
+          <m>F</m> berhingga dan <m>U_i</m> lingkungan <m>x_i</m>. Karena
+          ultrafilter citra konvergen ke <m>x_i</m>, himpunan
+          <m>\pi_i^{-1}(U_i)</m> berada dalam <m>\mathcal F</m> untuk setiap
+          <m>i\in F</m>. Ketertutupan filter terhadap irisan berhingga memberi
+          <m>U\in\mathcal F</m>. Setiap lingkungan <m>x</m> memuat lingkungan
+          basis semacam itu dan karena filter tertutup ke atas, setiap
+          lingkungan <m>x</m> berada dalam <m>\mathcal F</m>. Jadi
+          <m>\mathcal F\to x</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-products-ex-06">
+      <title>Kekonvergenan koordinat dan kegagalan topologi kotak</title>
+      <statement>
+        <p>
+          Buktikan bahwa jaring dalam topologi hasil kali konvergen tepat
+          ketika setiap jaring koordinat konvergen. Tunjukkan bahwa pernyataan
+          ini gagal untuk topologi kotak dengan barisan <m>(e_n)</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-products-ex-06-hint">
+        <p>
+          Gunakan sifat universal untuk arah mudah dan jumlah berhingga
+          koordinat yang dibatasi untuk arah lain.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-products-ex-06-answer">
+        <p>
+          Dalam topologi hasil kali, ambil maksimum berhingga indeks awal.
+          Dalam topologi kotak, <m>e_n</m> dihalangi satu lingkungan seragam.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-products-ex-06-solution">
+        <p>
+          Jika <m>x_a\to x</m>, kekontinuan proyeksi memberi
+          <m>\pi_i(x_a)\to x_i</m>. Sebaliknya, ambil lingkungan basis
+          <m>U</m> dari <m>x</m> yang membatasi koordinat
+          <m>i_1,\ldots,i_n</m>. Untuk setiap koordinat ada indeks awal setelah
+          mana komponen berada dalam <m>U_{i_k}</m>. Keterarahan memberi satu
+          indeks yang mendominasi semuanya, setelah mana <m>x_a\in U</m>.
+          Jadi jaring hasil kali konvergen. Untuk topologi kotak, setiap
+          koordinat tetap dari <m>e_n</m> akhirnya nol, tetapi lingkungan
+          <m>\prod_k(-1/2,1/2)</m> tidak memuat satu pun <m>e_n</m>; maka
+          konvergensi koordinat tidak cukup.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+</section>

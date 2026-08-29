@@ -1,35 +1,34 @@
 <section xml:id="sec_proj_cont_prod">
-  <title>Projections and Continuous Functions on Products</title>
+  <title>Proyeksi dan Fungsi Kontinu pada Ruang Hasil Kali</title>
   <p>
-    Given topological spaces <m>(X_1, \tau_1)</m> and <m>(X_2, \tau_2)</m>,
-    we define <m>\pi_1: X_1 \times X_2 \to X_1</m> and <m>\pi_2: X_1 \times X_2 \to X_2</m> by
-    <m>\pi_1((x,y)) = x</m> and <m>\pi_2((x,y)) = y</m>.
-    These functions <m>\pi_1</m> and <m>\pi_2</m> are the <term>projections</term>
-        <idx><h>projection functions</h></idx>
-    of <m>X_1 \times X_2</m> onto <m>X_1</m> and <m>X_2</m>,
-    respectively.
-    These projection functions can help us determine when a function <m>f</m> from a topological space <m>Y</m> to <m>X_1 \times X_2</m> is continuous.
+    Diberikan ruang-ruang topologi <m>(X_1, \tau_1)</m> dan <m>(X_2, \tau_2)</m>,
+    kita mendefinisikan <m>\pi_1: X_1 \times X_2 \to X_1</m> dan <m>\pi_2: X_1 \times X_2 \to X_2</m> dengan
+    <m>\pi_1((x,y)) = x</m> dan <m>\pi_2((x,y)) = y</m>.
+    Fungsi <m>\pi_1</m> dan <m>\pi_2</m> ini merupakan <term>proyeksi</term>
+        <idx><h>fungsi proyeksi</h></idx>
+    dari <m>X_1 \times X_2</m> masing-masing ke <m>X_1</m> dan <m>X_2</m>.
+    Fungsi-fungsi proyeksi ini dapat membantu kita menentukan kapan suatu fungsi <m>f</m> dari ruang topologi <m>Y</m> ke <m>X_1 \times X_2</m> kontinu.
   </p>
 
   <activity xml:id="act_projection_continuous">
   <introduction>
     <p>
-      Let <m>(X_1, \tau_1)</m> and
-      <m>(X_2, \tau_2)</m> be topological spaces and let <m>O_1</m> be an open set in <m>X_1</m>.
+      Misalkan <m>(X_1, \tau_1)</m> dan
+      <m>(X_2, \tau_2)</m> merupakan ruang topologi dan misalkan <m>O_1</m> himpunan buka dalam <m>X_1</m>.
     </p>
   </introduction>
       <task>
         <statement>
           <p>
-            Determine which set is <m>\pi_1^{-1}(O_1)</m>.
-            Verify your conjecture.
+            Tentukan himpunan yang sama dengan <m>\pi_1^{-1}(O_1)</m>.
+            Periksalah dugaan Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Explain why <m>\pi_1</m> is continuous.
+            Jelaskan mengapa <m>\pi_1</m> kontinu.
           </p>
         </statement>
       </task>
@@ -37,174 +36,175 @@
   </activity>
 
   <p>
-    The same argument as in <xref ref="act_projection_continuous"/>
-    shows that <m>\pi_2</m> is also a continuous function.
-    In general, if <m>X = \Pi_{i=1}^n X_{i}</m> is a finite product of topological spaces,
-    then the projection <m>\pi_{k}: X \to X_{k}</m> is a continuous function for each <m>k</m>,
-    where <m>\pi_k((x_1,x_2, \ldots, x_n)) = x_k</m>.
+    Argumen yang sama seperti dalam <xref ref="act_projection_continuous"/>
+    menunjukkan bahwa <m>\pi_2</m> juga merupakan fungsi kontinu.
+    Secara umum, jika <m>X = \Pi_{i=1}^n X_{i}</m> merupakan hasil kali berhingga ruang-ruang topologi,
+    maka proyeksi <m>\pi_{k}: X \to X_{k}</m> merupakan fungsi kontinu untuk setiap <m>k</m>,
+    dengan <m>\pi_k((x_1,x_2, \ldots, x_n)) = x_k</m>.
   </p>
   <p>
-    Let <m>O = \Pi_{i=1}^n O_i</m> be a basic open set in <m>X = \Pi_{i=1}^n X_i</m>,
-    where <m>X_i</m> is a topological space for each <m>i</m>.
-    We can extend the result of <xref ref="act_projection_continuous"/> to see that
+    Misalkan <m>O = \Pi_{i=1}^n O_i</m> merupakan himpunan buka basis dalam <m>X = \Pi_{i=1}^n X_i</m>,
+    dengan <m>X_i</m> ruang topologi untuk setiap <m>i</m>.
+    Kita dapat memperluas hasil <xref ref="act_projection_continuous"/> untuk memperoleh
     <me>
       \pi_i^{-1}(O_i) = X_1 \times X_2 \times \cdots \times X_{i-1} \times O_i \times X_{i+1} \times \cdots \times X_n
     </me>.
   </p>
   <p>
-    So
+    Jadi,
     <me>
       \Pi_{i=1}^n O_i = \bigcap_{i=1}^n \pi_i^{-1}(O_i)
     </me>.
   </p>
   <p>
-    So each basic open set is a finite intersection of sets of the form
-    <m>\pi_i^{-1}(O_i)</m> where <m>O_i</m> is open in <m>X_i</m>.
-    When this happens,
-    we call the collection of sets of the form <m>\pi_i^{-1}(O_i)</m> a
-    <term>subbasis</term> of the topology.
+    Dengan demikian, setiap himpunan buka basis merupakan irisan berhingga himpunan-himpunan berbentuk
+    <m>\pi_i^{-1}(O_i)</m>, dengan <m>O_i</m> buka dalam <m>X_i</m>.
+    Apabila hal ini terjadi,
+    kita menyebut koleksi himpunan berbentuk <m>\pi_i^{-1}(O_i)</m> sebagai
+    <term>subbasis</term> topologi tersebut.
   </p>
 
   <definition xml:id="def_subbasis">
   <idx><h>subbasis</h></idx>
-<idx><h>subbase</h></idx>
+<idx><h>subbasis</h></idx>
     <statement>
       <p>
-        Let <m>(X, \tau)</m> be a topological space.
-        A subset <m>\CS</m> of <m>\tau</m> is a <term>subbasis</term>
-        or <term>subbase</term>
-        for <m>\tau</m> if the set of all finite intersections of elements of <m>\CS</m> is a basis for <m>\tau</m>.
+        Misalkan <m>(X, \tau)</m> ruang topologi.
+        Subhimpunan <m>\CS</m> dari <m>\tau</m> merupakan <term>subbasis</term>
+        atau <term>subbasis</term>
+        bagi <m>\tau</m> jika himpunan semua irisan berhingga elemen-elemen <m>\CS</m> merupakan basis bagi <m>\tau</m>.
       </p>
     </statement>
   </definition>
 
   <p>
-    As an example,
-    since finite intersections of intervals of the form <m>(-\infty,b)</m> and
-    <m>(a, \infty)</m> give all intervals of the form <m>(a,b)</m>,
-    the collection <m>\CS = \{(-\infty,b), (a, \infty) \mid a, b \in \R\}</m> is a subbasis for the standard topology on <m>\R</m>.
-    Note that this collection itself is not a basis for the standard topology on <m>\R</m>.
-    If <m>X = \Pi_{i=1}^n X_i</m> is a product of topological space,
-    then another example of a subbasis is the collection
+    Sebagai contoh,
+    karena irisan berhingga interval berbentuk <m>(-\infty,b)</m> dan
+    <m>(a, \infty)</m> menghasilkan semua interval berbentuk <m>(a,b)</m>,
+    koleksi <m>\CS = \{(-\infty,b), (a, \infty) \mid a, b \in \R\}</m> merupakan subbasis bagi topologi standar pada <m>\R</m>.
+    Perhatikan bahwa koleksi itu sendiri bukan basis bagi topologi standar pada <m>\R</m>.
+    Jika <m>X = \Pi_{i=1}^n X_i</m> merupakan hasil kali ruang-ruang topologi,
+    contoh subbasis lainnya adalah koleksi
     <me>
-      \CS = \bigcup_{i=1}^n \{\pi_i^{-1}(O_i) \mid O_i \text{ is open in }  X_i\}
+      \CS = \bigcup_{i=1}^n \{\pi_i^{-1}(O_i) \mid O_i \text{ buka dalam }  X_i\}
     </me>.
   </p>
   <p>
-    This set is a subbasis for the product topology on <m>X</m>
-    (the verification of this is left to <xref ref="ex_subbasis"/>).
+    Himpunan ini merupakan subbasis bagi topologi hasil kali pada <m>X</m>
+    (pemeriksaannya diserahkan kepada <xref ref="ex_subbasis"/>).
   </p>
   <p>
-    <idx><h>product topology</h></idx>
-    We note here that there is another topology, called the <term>product topology</term>, on <m>X</m> with subbasis <m>S = \bigcup_{\alpha \in I} S_{\alpha}</m>, where
+    <idx><h>topologi hasil kali</h></idx>
+    Kita mencatat di sini bahwa terdapat topologi lain, yang disebut <term>topologi hasil kali</term>, pada <m>X</m> dengan subbasis <m>S = \bigcup_{\alpha \in I} S_{\alpha}</m>, dengan
     <me>
-      S_{\alpha} = \{\pi_{\alpha}^{-1}(U_{\alpha}) \mid U_{\alpha} \text{ is open in } X_{\alpha}\}
+      S_{\alpha} = \{\pi_{\alpha}^{-1}(U_{\alpha}) \mid U_{\alpha} \text{ buka dalam } X_{\alpha}\}
     </me>.
   </p>
   <p>
-    For reasons we won't go into,
-    the product topology is preferred to the box topology for infinite products
-    (many important theorems that hold for finite products will not hold for infinite products using the box topology,
-    but will hold using the product topology).
-    However, the product topology and the box topology are the same for finite products,
-    and since we won't consider infinite products here we will not worry about the distinction.
-    For our purposes we will use the terms
-    <q>box topology</q>
-    and
-    <q>product topology</q>
-    interchangeably.
+    Karena alasan yang tidak akan kita bahas,
+    topologi hasil kali lebih disukai daripada topologi kotak untuk hasil kali tak berhingga
+    (banyak teorema penting yang berlaku bagi hasil kali berhingga tidak berlaku bagi hasil kali tak berhingga dengan topologi kotak,
+    tetapi berlaku dengan topologi hasil kali).
+    Namun, topologi hasil kali dan topologi kotak sama untuk hasil kali berhingga.
+    Karena kita tidak akan membahas hasil kali tak berhingga di sini, kita tidak perlu mempersoalkan perbedaannya.
+    Untuk keperluan kita, istilah
+    <q>topologi kotak</q>
+    dan
+    <q>topologi hasil kali</q>
+    akan digunakan secara bergantian.
   </p>
   <p>
-    As we have discussed before,
-    it can often be easier to define a topology using a basis or subbasis than it is to describe all of the sets in the topology.
-    As we might expect,
-    since the continuity of a function can be determined by the inverse image of basis elements,
-    the continuity of a function can also be determined by the inverse image of subbasis elements.
+    Seperti yang telah kita bahas,
+    sering kali lebih mudah mendefinisikan topologi dengan basis atau subbasis daripada menjelaskan semua himpunan dalam topologi tersebut.
+    Sebagaimana dapat kita duga,
+    karena kekontinuan suatu fungsi dapat ditentukan melalui prapeta elemen-elemen basis,
+    kekontinuan fungsi juga dapat ditentukan melalui prapeta elemen-elemen subbasis.
   </p>
 
   <activity>
   <statement>
     <p>
-      Prove <xref ref="thm_subbasis_continuous"/>.
+      Buktikan <xref ref="thm_subbasis_continuous"/>.
     </p>
-    <theorem xml:id="thm_subbasis_continuous">
-      <statement>
-        <p>
-          Let <m>(X, \tau_X)</m> and
-          <m>(Y, \tau_Y)</m> be topological spaces,
-          let <m>\CS</m> be a subbasis for <m>\tau_Y</m>,
-          and let <m>f: X \to Y</m> be a function.
-          If <m>f^{-1}(S)</m> is open in <m>X</m> for each <m>S \in \CS</m>,
-          then <m>f</m> is continuous.
-        </p>
-      </statement>
-    </theorem>
   </statement>
   <hint>
     <p>
-      Recall that <m>f</m> is continuous if
-      <m>f^{-1}(B)</m> is open in <m>X</m> for each basic open set <m>B</m>.
+      Ingat bahwa <m>f</m> kontinu jika
+      <m>f^{-1}(B)</m> buka dalam <m>X</m> untuk setiap himpunan buka basis <m>B</m>.
     </p>
   </hint>
   </activity>
 
+  <theorem xml:id="thm_subbasis_continuous">
+    <statement>
+      <p>
+        Misalkan <m>(X, \tau_X)</m> dan
+        <m>(Y, \tau_Y)</m> merupakan ruang topologi,
+        misalkan <m>\CS</m> subbasis bagi <m>\tau_Y</m>,
+        dan misalkan <m>f: X \to Y</m> suatu fungsi.
+        Jika <m>f^{-1}(S)</m> buka dalam <m>X</m> untuk setiap <m>S \in \CS</m>,
+        maka <m>f</m> kontinu.
+      </p>
+    </statement>
+  </theorem>
+
   <p>
-    Now suppose that <m>X_1</m>, <m>X_2</m>,
-    and <m>Y</m> are topological spaces,
-    and that <m>f: Y \to X_1 \times X_2</m> is a function.
-    Then <m>\pi_1 \circ f</m> maps <m>Y</m> to <m>X_1</m> and
-    <m>\pi_2 \circ f</m> maps <m>Y</m> to <m>X_2</m>.
-    Since the composition of continuous functions is continuous,
-    we can see that if <m>f</m> is continuous so are
-    <m>\pi_1\circ f</m> and <m>\pi_2 \circ f</m>.
-    To determine if <m>f</m> is a continuous function,
-    it would be useful to know if the converse is true.
-    A key idea in the proof is the result of <xref ref="ex_inverse_composite_sets"/> that if <m>R</m>,
+    Sekarang misalkan <m>X_1</m>, <m>X_2</m>,
+    dan <m>Y</m> merupakan ruang topologi,
+    serta <m>f: Y \to X_1 \times X_2</m> suatu fungsi.
+    Maka <m>\pi_1 \circ f</m> memetakan <m>Y</m> ke <m>X_1</m> dan
+    <m>\pi_2 \circ f</m> memetakan <m>Y</m> ke <m>X_2</m>.
+    Karena komposisi fungsi-fungsi kontinu bersifat kontinu,
+    kita melihat bahwa jika <m>f</m> kontinu, maka
+    <m>\pi_1\circ f</m> dan <m>\pi_2 \circ f</m> juga kontinu.
+    Untuk menentukan apakah <m>f</m> kontinu,
+    akan berguna jika kita mengetahui apakah kebalikannya juga benar.
+    Gagasan utama dalam pembuktiannya adalah hasil <xref ref="ex_inverse_composite_sets"/>: jika <m>R</m>,
     <m>S</m>,
-    and <m>T</m> are sets, and
-    <m>g: R \to S</m> and <m>h : S \to T</m> are functions,
-    then <m>(h \circ g)^{-1}(O) = g^{-1}(h^{-1}(O)</m> for any subset <m>O</m> of <m>T</m>.
+    dan <m>T</m> merupakan himpunan, serta
+    <m>g: R \to S</m> dan <m>h : S \to T</m> merupakan fungsi,
+    maka <m>(h \circ g)^{-1}(O) = g^{-1}(h^{-1}(O))</m> untuk setiap subhimpunan <m>O</m> dari <m>T</m>.
   </p>
   <p>
-    Now we can use projections to determine when functions to product spaces are continuous.
+    Sekarang kita dapat menggunakan proyeksi untuk menentukan kapan fungsi menuju ruang hasil kali bersifat kontinu.
   </p>
 
   <theorem xml:id="thm_prod_continuity">
     <statement>
       <p>
-        Let <m>X_i</m> for <m>i</m> from <m>1</m> to <m>n</m> and <m>Y</m> be topological spaces,
-        and let <m>f: Y \to \Pi_{i=1}^n X_i</m> be a function.
-        Then <m>f</m> is continuous if and only if
-        <m>\pi_i \circ f</m> is continuous for each <m>i</m>.
+        Misalkan <m>X_i</m> untuk <m>i</m> dari <m>1</m> sampai <m>n</m> dan <m>Y</m> merupakan ruang topologi,
+        serta misalkan <m>f: Y \to \Pi_{i=1}^n X_i</m> suatu fungsi.
+        Maka <m>f</m> kontinu jika dan hanya jika
+        <m>\pi_i \circ f</m> kontinu untuk setiap <m>i</m>.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>X_i</m> for <m>i</m> from <m>1</m> to <m>n</m> and <m>Y</m> be topological spaces,
-      and let <m>f: Y \to \Pi X_i</m> be a function.
-      If <m>f</m> is continuous,
-      the facts that each <m>\pi_i</m> is continuous and that composites of continuous functions are continuous show that
-      <m>\pi_i \circ f</m> is continuous for each <m>i</m>.
+      Misalkan <m>X_i</m> untuk <m>i</m> dari <m>1</m> sampai <m>n</m> dan <m>Y</m> merupakan ruang topologi,
+      serta misalkan <m>f: Y \to \Pi X_i</m> suatu fungsi.
+      Jika <m>f</m> kontinu,
+      fakta bahwa setiap <m>\pi_i</m> kontinu dan bahwa komposisi fungsi-fungsi kontinu bersifat kontinu menunjukkan bahwa
+      <m>\pi_i \circ f</m> kontinu untuk setiap <m>i</m>.
     </p>
     <p>
-      Now suppose that <m>\pi_i \circ f</m> is continuous for each <m>i</m>.
-      Recall that
+      Sekarang misalkan <m>\pi_i \circ f</m> kontinu untuk setiap <m>i</m>.
+      Ingat bahwa
       <me>
-        \CS = \{\pi_i^{-1}(O_i) \mid O_i \text{ is open in }  X_i\}
+        \CS = \{\pi_i^{-1}(O_i) \mid O_i \text{ buka dalam }  X_i\}
       </me>
-      is a subbasis for the product topology on <m>\Pi_{i=1}^n X_i</m>.
-      To prove that <m>f</m> is continuous,
+      merupakan subbasis bagi topologi hasil kali pada <m>\Pi_{i=1}^n X_i</m>.
+      Untuk membuktikan bahwa <m>f</m> kontinu,
       <xref ref="thm_subbasis_continuous"/>
-      tells us that it is enough to show that
-      <m>f^{-1}(S)</m> is open for each <m>S</m> in <m>\CS</m>.
-      Let <m>O_i</m> be an open set in <m>X_i</m>.
-      <xref ref="ex_inverse_composite_sets"/> tells us that
+      memberi tahu kita bahwa cukup ditunjukkan
+      <m>f^{-1}(S)</m> buka untuk setiap <m>S</m> dalam <m>\CS</m>.
+      Misalkan <m>O_i</m> himpunan buka dalam <m>X_i</m>.
+      <xref ref="ex_inverse_composite_sets"/> memberi tahu kita bahwa
       <me>
         f^{-1}(\pi_i^{-1}(O_i)) = (\pi_i \circ f)^{-1}(O_i)
       </me>,
-      which is open in <m>Y</m> because <m>\pi_i \circ f</m> is continuous.
-      Therefore, <m>f</m> is continuous.
+      yang buka dalam <m>Y</m> karena <m>\pi_i \circ f</m> kontinu.
+      Oleh karena itu, <m>f</m> kontinu.
     </p>
   </proof>
   </theorem>

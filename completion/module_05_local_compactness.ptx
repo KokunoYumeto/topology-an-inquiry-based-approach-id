@@ -1,0 +1,415 @@
+<section xml:id="o003-c90-completion-local-compactness" xml:lang="id-ID">
+  <title>Kekompakan Lokal dan Kompaktifikasi Satu Titik</title>
+
+  <introduction>
+    <p>
+      Kekompakan global sering terlalu kuat untuk ruang seperti
+      <m>\mathbb R^n</m>, tetapi banyak argumen hanya memerlukan lingkungan
+      kompak di sekitar setiap titik. Kekompakan lokal menangkap keadaan itu.
+      Pada ruang Hausdorff tak kompak, semua arah menuju tak hingga kemudian
+      dapat disatukan menjadi satu titik melalui kompaktifikasi satu titik.
+    </p>
+  </introduction>
+
+  <subsection xml:id="o003-c90-completion-local-compact-definition">
+    <title>Lingkungan kompak dan penyusutan lokal</title>
+
+    <definition xml:id="o003-c90-def-compact-neighborhood">
+      <statement>
+        <p>
+          Subhimpunan <m>K\subseteq X</m> disebut
+          <term>lingkungan kompak</term> dari <m>x</m> jika <m>K</m> kompak dan
+          memuat suatu himpunan buka yang mengandung <m>x</m>. Ruang <m>X</m>
+          disebut <term>kompak lokal</term> jika setiap titik mempunyai
+          lingkungan kompak.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="o003-c90-thm-lch-shrinking">
+      <statement>
+        <p>
+          Jika <m>X</m> kompak lokal dan Hausdorff, maka untuk setiap titik
+          <m>x</m> dan lingkungan buka <m>O</m> dari <m>x</m>, terdapat himpunan
+          buka <m>V</m> dengan
+          <m>x\in V\subseteq\overline V\subseteq O</m> dan
+          <m>\overline V</m> kompak. Khususnya, setiap ruang kompak lokal
+          Hausdorff bersifat reguler.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Pilih lingkungan kompak <m>K</m> dari <m>x</m> dan himpunan buka
+          <m>U</m> dengan <m>x\in U\subseteq K</m>. Dalam ruang Hausdorff,
+          <m>K</m> tertutup dan, sebagai ruang kompak Hausdorff, bersifat
+          reguler. Himpunan <m>U\cap O</m> terbuka relatif dalam <m>K</m> dan
+          memuat <m>x</m>. Pilih himpunan buka relatif <m>W</m> dalam <m>K</m>
+          dengan <m>x\in W\subseteq\overline W^{,K}\subseteq U\cap O</m>.
+          Karena <m>W\subseteq U</m> dan <m>U</m> terbuka dalam <m>X</m>,
+          <m>W</m> dapat ditulis sebagai himpunan buka <m>V</m> dalam <m>X</m>.
+          Penutupnya dalam <m>X</m> sama dengan penutupnya dalam subruang
+          tertutup <m>K</m>, sehingga kompak dan termuat dalam <m>O</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="o003-c90-example-euclidean-locally-compact">
+      <statement>
+        <p>
+          Ruang <m>\mathbb R^n</m> kompak lokal: bola buka
+          <m>B_1(x)</m> termuat dalam bola tertutup
+          <m>\overline{B_1(x)}</m>, yang kompak menurut Teorema Heine–Borel.
+          Ruang itu tidak kompak bila <m>n\ge1</m>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-local-compact-inheritance">
+    <title>Pewarisan dan hasil kali</title>
+
+    <theorem xml:id="o003-c90-thm-local-compact-subspaces">
+      <statement>
+        <p>
+          Subruang tertutup dari ruang kompak lokal bersifat kompak lokal.
+          Subruang terbuka dari ruang kompak lokal Hausdorff juga kompak lokal
+          dan Hausdorff.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Misalkan <m>F</m> tertutup dalam <m>X</m> dan <m>x\in F</m>. Jika
+          <m>K</m> lingkungan kompak <m>x</m> dalam <m>X</m>, maka
+          <m>K\cap F</m> kompak dan memuat lingkungan relatif dari <m>x</m>;
+          jadi <m>F</m> kompak lokal.
+        </p>
+        <p>
+          Misalkan <m>U</m> terbuka dalam ruang kompak lokal Hausdorff dan
+          <m>x\in U</m>. Teorema penyusutan memberi himpunan buka <m>V</m>
+          dengan <m>x\in V\subseteq\overline V\subseteq U</m> dan
+          <m>\overline V</m> kompak. Maka <m>\overline V</m> adalah lingkungan
+          kompak <m>x</m> di dalam subruang <m>U</m>. Sifat Hausdorff bersifat
+          herediter.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="o003-c90-thm-locally-compact-product-criterion">
+      <statement>
+        <p>
+          Misalkan semua <m>X_i</m> tak kosong dan Hausdorff. Hasil kali
+          <m>\prod_{i\in I}X_i</m> kompak lokal jika dan hanya jika setiap
+          <m>X_i</m> kompak lokal dan semua kecuali berhingga banyak faktor
+          <m>X_i</m> kompak.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Untuk arah maju, pilih titik dasar pada semua faktor. Setiap faktor
+          homeomorfik dengan irisan tertutup yang membiarkan satu koordinat
+          berubah, maka merupakan subruang tertutup dari hasil kali kompak lokal
+          dan karena itu kompak lokal. Pilih lingkungan basis hasil kali
+          <m>B=\prod_iU_i</m> yang termuat dalam suatu lingkungan kompak
+          <m>K</m>. Hanya berhingga banyak <m>U_i</m> yang berbeda dari
+          <m>X_i</m>. Untuk indeks lain, proyeksi <m>K</m> memuat seluruh
+          <m>X_i</m>; karena proyeksi kontinu dari ruang kompak adalah kompak,
+          <m>X_i</m> kompak.
+        </p>
+        <p>
+          Untuk arah balik, pisahkan berhingga banyak faktor yang mungkin tidak
+          kompak dari semua faktor kompak. Hasil kali semua faktor kompak
+          adalah kompak menurut Teorema Tychonoff. Hasil kali berhingga ruang
+          kompak lokal Hausdorff bersifat kompak lokal: kalikan lingkungan
+          kompak pada setiap koordinat. Hasil kali ruang kompak lokal dengan
+          ruang kompak kembali kompak lokal, sehingga seluruh hasil kali
+          kompak lokal.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark xml:id="o003-c90-remark-local-compact-not-hereditary">
+      <p>
+        Kekompakan lokal tidak herediter untuk subruang sebarang. Sebagai
+        contoh, subruang <m>\mathbb Q\subseteq\mathbb R</m> tidak kompak lokal:
+        penutup relatif setiap lingkungan rasional memuat barisan Cauchy
+        rasional yang menuju bilangan irasional dan karena itu tidak kompak.
+    </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-one-point-compactification">
+    <title>Kompaktifikasi satu titik</title>
+
+    <definition xml:id="o003-c90-def-one-point-compactification">
+      <statement>
+        <p>
+          Misalkan <m>X</m> ruang kompak lokal Hausdorff yang tidak kompak dan
+          pilih titik baru <m>\infty\notin X</m>. Pada
+          <m>\alpha X=X\cup\{\infty\}</m>, nyatakan semua himpunan buka dalam
+          <m>X</m> tetap terbuka, dan nyatakan himpunan yang memuat
+          <m>\infty</m> terbuka tepat ketika komplemennya dalam <m>X</m>
+          kompak. Ruang <m>\alpha X</m> disebut
+          <term>kompaktifikasi satu titik</term> atau
+          <term>kompaktifikasi Alexandroff</term> dari <m>X</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="o003-c90-thm-one-point-compactification">
+      <statement>
+        <p>
+          Ruang <m>\alpha X</m> adalah ruang kompak Hausdorff, dan <m>X</m>
+          merupakan subruang terbuka padat di dalamnya.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Keluarga yang dinyatakan terbuka membentuk topologi: irisan berhingga
+          lingkungan <m>\infty</m> berkomplemen gabungan berhingga himpunan
+          kompak, sedangkan gabungan sebarang lingkungan <m>\infty</m>
+          berkomplemen irisan tertutup dari salah satu komplemen kompak dan
+          karena itu kompak. Topologi terinduksi pada <m>X</m> adalah topologi
+          semula dan <m>X</m> terbuka.
+        </p>
+        <p>
+          Untuk selimut buka <m>\alpha X</m>, pilih anggota <m>U_\infty</m>
+          yang memuat <m>\infty</m>. Komplemen
+          <m>K=\alpha X\setminus U_\infty</m> kompak dalam <m>X</m>, sehingga
+          dapat ditutupi oleh berhingga banyak anggota selimut. Bersama
+          <m>U_\infty</m>, ini memberi subselimut berhingga.
+        </p>
+        <p>
+          Dua titik dalam <m>X</m> dipisahkan oleh sifat Hausdorff <m>X</m>.
+          Untuk <m>x\in X</m> dan <m>\infty</m>, gunakan teorema penyusutan
+          untuk memilih himpunan buka <m>V</m> dengan <m>x\in V</m> dan
+          <m>\overline V</m> kompak. Himpunan <m>V</m> dan
+          <m>\alpha X\setminus\overline V</m> merupakan lingkungan buka saling
+          lepas dari <m>x</m> dan <m>\infty</m>. Jadi <m>\alpha X</m>
+          Hausdorff. Terakhir, setiap lingkungan <m>\infty</m> memotong
+          <m>X</m> karena jika tidak, komplemennya adalah seluruh <m>X</m>, yang
+          tidak kompak. Maka <m>X</m> padat.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="o003-c90-thm-one-point-compactification-unique">
+      <statement>
+        <p>
+          Jika <m>Y</m> kompak Hausdorff, <m>X</m> subruang terbuka padat dari
+          <m>Y</m>, dan <m>Y\setminus X</m> terdiri atas satu titik, maka
+          terdapat homeomorfisme <m>\alpha X\to Y</m> yang membatasi pada
+          identitas <m>X</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Kirim titik <m>\infty</m> ke satu-satunya titik <m>Y\setminus X</m>
+          dan tetapkan identitas pada <m>X</m>. Pemetaan ini bijektif. Jika
+          <m>U</m> lingkungan titik tambahan di <m>Y</m>, komplemennya tertutup
+          dalam ruang kompak, maka kompak dan termuat dalam <m>X</m>; prapeta
+          <m>U</m> karena itu terbuka dalam <m>\alpha X</m>. Kekontinuan pada
+          titik-titik <m>X</m> jelas. Bijeksi kontinu dari ruang kompak ke ruang
+          Hausdorff adalah homeomorfisme.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="o003-c90-example-one-point-compactifications">
+      <statement>
+        <p>
+          Kompaktifikasi satu titik <m>\mathbb R^n</m> homeomorfik dengan
+          bola <m>n</m>-dimensi <m>S^n</m>; titik tambahan adalah kutub yang
+          hilang pada proyeksi stereografik. Kompaktifikasi satu titik ruang
+          diskret <m>\mathbb N</m> homeomorfik dengan
+          <m>\{0\}\cup\{1/n:n\ge1\}</m>, dengan <m>\infty</m> dipetakan ke
+          <m>0</m>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-local-compact-mastery">
+    <title>Latihan Penguasaan dengan Dukungan Bertahap</title>
+
+    <exercise xml:id="o003-c90-completion-local-compact-ex-01">
+      <title>Ruang Euklides kompak lokal</title>
+      <statement>
+        <p>Buktikan bahwa <m>\mathbb R^n</m> kompak lokal tetapi tidak kompak untuk <m>n\ge1</m>.</p>
+      </statement>
+      <hint xml:id="o003-c90-completion-local-compact-ex-01-hint">
+        <p>Gunakan bola tertutup untuk sifat lokal dan selimut bola berpusat di asal untuk nonkekompakan.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-local-compact-ex-01-answer">
+        <p>Bola tertutup kompak menurut Heine–Borel; selimut <m>\{B_k(0):k\ge1\}</m> tidak mempunyai subselimut berhingga.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-local-compact-ex-01-solution">
+        <p>
+          Untuk setiap <m>x</m>, bola tertutup <m>\overline{B_1(x)}</m>
+          kompak menurut Heine–Borel dan memuat lingkungan buka <m>B_1(x)</m>,
+          jadi merupakan lingkungan kompak. Di sisi lain,
+          <m>\{B_k(0):k\in\mathbb Z^+\}</m> menyelimuti <m>\mathbb R^n</m>.
+          Gabungan berhingga keluarga bersarang ini sama dengan bola terbesar
+          dan tidak menutupi seluruh ruang. Maka <m>\mathbb R^n</m> tidak
+          kompak.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-local-compact-ex-02">
+      <title>Subruang terbuka dan tertutup</title>
+      <statement>
+        <p>
+          Buktikan bahwa subruang tertutup dari ruang kompak lokal tetap kompak
+          lokal, dan bahwa subruang terbuka dari ruang kompak lokal Hausdorff
+          tetap kompak lokal.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-local-compact-ex-02-hint">
+        <p>Irisankan lingkungan kompak dengan subruang tertutup; untuk subruang terbuka, susutkan lingkungan agar penutupnya tetap di dalam subruang.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-local-compact-ex-02-answer">
+        <p>Gunakan <m>K\cap F</m> pada kasus tertutup dan <m>\overline V\subseteq U</m> pada kasus terbuka.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-local-compact-ex-02-solution">
+        <p>
+          Jika <m>F</m> tertutup dan <m>K</m> lingkungan kompak <m>x\in F</m>,
+          maka <m>K\cap F</m> tertutup dalam <m>K</m>, sehingga kompak, dan
+          memuat lingkungan relatif <m>F</m> dari <m>x</m>. Jika <m>U</m>
+          terbuka dan <m>x\in U</m>, teorema penyusutan pada ruang Hausdorff
+          memberi <m>V</m> terbuka dengan
+          <m>x\in V\subseteq\overline V\subseteq U</m> dan
+          <m>\overline V</m> kompak. Penutup itu menjadi lingkungan kompak
+          <m>x</m> dalam <m>U</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-local-compact-ex-03">
+      <title>Topologi kompaktifikasi satu titik</title>
+      <statement>
+        <p>
+          Verifikasi langsung bahwa keluarga himpunan buka pada
+          <m>\alpha X</m> dalam definisi kompaktifikasi satu titik benar-benar
+          merupakan topologi.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-local-compact-ex-03-hint">
+        <p>Terjemahkan gabungan dan irisan himpunan yang memuat <m>\infty</m> menjadi irisan dan gabungan komplemen kompak.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-local-compact-ex-03-answer">
+        <p>Gunakan kestabilan kekompakan terhadap gabungan berhingga dan terhadap subhimpunan tertutup.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-local-compact-ex-03-solution">
+        <p>
+          Himpunan kosong dan seluruh <m>\alpha X</m> memenuhi definisi.
+          Irisan berhingga himpunan yang memuat <m>\infty</m> mempunyai
+          komplemen berupa gabungan berhingga himpunan kompak, maka kompak.
+          Untuk gabungan sebarang yang memuat <m>\infty</m>, pilih satu anggota
+          <m>U_0</m> yang memuat titik itu. Komplemen gabungan adalah irisan
+          semua komplemen dan merupakan subhimpunan tertutup dari komplemen
+          kompak <m>\alpha X\setminus U_0</m>; jadi kompak. Operasi yang hanya
+          melibatkan himpunan buka dalam <m>X</m> mengikuti topologi <m>X</m>,
+          dan kasus campuran mengikuti dua argumen yang sama.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-local-compact-ex-04">
+      <title>Kompaktifikasi satu titik ruang diskret terhitung</title>
+      <statement>
+        <p>
+          Tunjukkan bahwa kompaktifikasi satu titik <m>\mathbb N</m> diskret
+          homeomorfik dengan <m>A=\{0\}\cup\{1/n:n\ge1\}</m> dalam
+          <m>\mathbb R</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-local-compact-ex-04-hint">
+        <p>Kirim <m>n</m> ke <m>1/n</m> dan <m>\infty</m> ke <m>0</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-local-compact-ex-04-answer">
+        <p>Lingkungan <m>0</m> di <m>A</m> memuat semua kecuali berhingga banyak titik <m>1/n</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-local-compact-ex-04-solution">
+        <p>
+          Pemetaan yang diberikan bijektif. Setiap <m>1/n</m> terisolasi dalam
+          <m>A</m>, sesuai dengan keterbukaan titik <m>n</m>. Suatu lingkungan
+          relatif dari <m>0</m> memuat <m>A\cap(-\varepsilon,\varepsilon)</m>
+          dan karena itu semua kecuali berhingga banyak <m>1/n</m>. Sebaliknya,
+          setiap himpunan yang memuat <m>0</m> dan semua kecuali berhingga
+          banyak <m>1/n</m> memuat lingkungan relatif <m>0</m>. Ini tepat
+          bersesuaian dengan lingkungan <m>\infty</m> yang berkomplemen kompak;
+          pada ruang diskret, subhimpunan kompak tepat subhimpunan berhingga.
+          Jadi bijeksi tersebut homeomorfisme.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-local-compact-ex-05">
+      <title>Keunikan kompaktifikasi satu titik</title>
+      <statement>
+        <p>
+          Misalkan <m>Y</m> kompak Hausdorff, <m>X</m> terbuka padat dalam
+          <m>Y</m>, dan <m>Y\setminus X=\{p\}</m>. Buktikan bahwa perluasan
+          identitas yang mengirim <m>\infty</m> ke <m>p</m> adalah
+          homeomorfisme <m>\alpha X\to Y</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-local-compact-ex-05-hint">
+        <p>Komplemen lingkungan <m>p</m> tertutup dalam ruang kompak dan termuat dalam <m>X</m>.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-local-compact-ex-05-answer">
+        <p>Perluasan itu bijektif kontinu; gunakan teorema bijeksi kompak-ke-Hausdorff.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-local-compact-ex-05-solution">
+        <p>
+          Pemetaan perluasan jelas bijektif dan kontinu pada <m>X</m>. Jika
+          <m>U</m> lingkungan buka <m>p</m>, komplemen <m>Y\setminus U</m>
+          tertutup dalam ruang kompak, sehingga kompak; karena tidak memuat
+          <m>p</m>, komplemen itu termuat dalam <m>X</m>. Prapeta <m>U</m>
+          karena itu merupakan lingkungan <m>\infty</m> dalam
+          <m>\alpha X</m>. Jadi pemetaan kontinu di semua titik. Domainnya
+          kompak dan kodomainnya Hausdorff, maka bijeksi kontinu itu
+          homeomorfisme.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-local-compact-ex-06">
+      <title>Pemetaan proper dan titik di tak hingga</title>
+      <statement>
+        <p>
+          Misalkan <m>X,Y</m> ruang kompak lokal Hausdorff tak kompak dan
+          <m>f:X\to Y</m> kontinu. Buktikan bahwa rumus
+          <m>\bar f(\infty_X)=\infty_Y</m> memperluas <m>f</m> menjadi pemetaan
+          kontinu <m>\alpha X\to\alpha Y</m> jika dan hanya jika <m>f</m>
+          <term>proper</term>, yakni prapeta setiap subhimpunan kompak
+          <m>Y</m> kompak dalam <m>X</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-local-compact-ex-06-hint">
+        <p>Uji kekontinuan di titik tambahan pada lingkungan yang berkomplemen kompak.</p>
+      </hint>
+      <answer xml:id="o003-c90-completion-local-compact-ex-06-answer">
+        <p>Prapeta <m>\alpha Y\setminus K</m> adalah <m>\alpha X\setminus f^{-1}(K)</m>.</p>
+      </answer>
+      <solution xml:id="o003-c90-completion-local-compact-ex-06-solution">
+        <p>
+          Jika <m>f</m> proper dan <m>K\subseteq Y</m> kompak, maka
+          <m>f^{-1}(K)</m> kompak. Karena itu prapeta lingkungan
+          <m>\alpha Y\setminus K</m> dari <m>\infty_Y</m> adalah lingkungan
+          <m>\alpha X\setminus f^{-1}(K)</m> dari <m>\infty_X</m>. Jadi
+          <m>\bar f</m> kontinu di titik tambahan dan sudah kontinu pada
+          <m>X</m>.
+        </p>
+        <p>
+          Sebaliknya, andaikan <m>\bar f</m> kontinu dan <m>K\subseteq Y</m>
+          kompak. Dalam ruang Hausdorff <m>\alpha Y</m>, himpunan <m>K</m>
+          tertutup. Maka <m>\bar f^{-1}(K)</m> tertutup dalam ruang kompak
+          <m>\alpha X</m>, sehingga kompak. Himpunan ini tidak memuat
+          <m>\infty_X</m> dan sama dengan <m>f^{-1}(K)</m>, jadi <m>f</m>
+          proper.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+</section>

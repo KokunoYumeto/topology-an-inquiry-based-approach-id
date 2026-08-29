@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
+<body class="ignore-math">
+<article class="proof"><h3 class="heading"><span class="type">Bukti</span></h3>
+<div class="para logical">
+<div class="para">Misalkan <span class="process-math">\(n\)</span> bilangan bulat positif dan <span class="process-math">\(x = (x_1, x_2, \ldots,
+x_n)\text{,}\)</span> <span class="process-math">\(y=(y_1, y_2, \ldots, y_n)\)</span> berada di dalam <span class="process-math">\(\R^n\text{.}\)</span> Untuk memverifikasi <a href="" class="xref" data-knowl="./knowl/eq_SL.html" title="Equation 3.1">(3.1)</a>, cukup ditunjukkan bahwa</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SL.html">
+\begin{equation*}
+\left(\sum_{i=1}^n x_iy_i\right)^2 \leq  \left(\sum_{i=1}^n x_i^2\right) \left(\sum_{i=1}^n y_i^2\right)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Hal ini sulit dilakukan secara langsung, tetapi ada siasat yang dapat kita gunakan. Perhatikan bentuk</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum (x_i-\lambda y_i)^2\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">(Semua penjumlahan kita dipahami berlangsung dari 1 sampai <span class="process-math">\(n\text{,}\)</span> sehingga batas penjumlahan tidak akan kita tuliskan lagi sepanjang sisa pembuktian.) Sekarang</div>
+<div class="displaymath process-math">
+\begin{align}
+0 \amp  \leq \sum (x_i-\lambda y_i)^2\notag\\
+\amp = \sum \left(x_i^2 - 2\lambda x_iy_i + \lambda^2 y_i^2 \right)\notag\\
+\amp = \left( \sum y_i^2 \right)\lambda^2 - 2\left(\sum x_iy_i\right) \lambda + \left(\sum x_i^2\right)\text{.}\tag{3.2}
+\end{align}
+</div>
+</div> <div class="para logical">
+<div class="para">Untuk menafsirkan bentuk terakhir ini dengan lebih jelas, misalkan <span class="process-math">\(a=\sum y_i^2\text{,}\)</span> <span class="process-math">\(b=-2\sum x_iy_i\text{,}\)</span> dan <span class="process-math">\(c = \sum x_i^2\text{.}\)</span> Jika <span class="process-math">\(y=(0,\ldots,0)\text{,}\)</span> pertidaksamaan yang hendak dibuktikan langsung berlaku. Jadi, dalam argumen berikutnya kita dapat menganggap <span class="process-math">\(y\neq(0,\ldots,0)\text{,}\)</span> sehingga <span class="process-math">\(a\gt 0\text{.}\)</span> Pertidaksamaan yang diberikan oleh <a href="" class="xref" data-knowl="./knowl/eq_SL_1.html" title="Equation 3.2">(3.2)</a> kemudian dapat ditulis dalam bentuk</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SL_1.html">
+\begin{equation*}
+p(\lambda) = a \lambda^2 + b \lambda + c \geq 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Jadi, kita memiliki polinom kuadrat <span class="process-math">\(p(\lambda)\)</span> yang tidak pernah bernilai negatif. Hal ini menyiratkan bahwa polinom kuadrat <span class="process-math">\(p(\lambda)\)</span> memiliki paling banyak satu akar real. Rumus kuadrat memberikan akar-akar <span class="process-math">\(p(\lambda)\)</span> sebagai</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{-b \pm \sqrt{b^2-4ac}}{2a}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Jika <span class="process-math">\(b^2-4ac \gt 0\text{,}\)</span> maka <span class="process-math">\(p(\lambda)\)</span> memiliki dua akar real. Oleh karena itu, agar <span class="process-math">\(p(\lambda)\)</span> memiliki paling banyak satu akar real, harus berlaku</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 \geq b^2-4ac = 4 \left(\sum x_iy_i\right)^2 - 4\left(\sum y_i^2\right)\left(\sum x_i^2\right)
+\end{equation*}
+</div>
+<div class="para">atau</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\sum y_i^2\right)\left(\sum x_i^2\right) \geq \left(\sum x_iy_i\right)^2\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Dengan demikian, Pertidaksamaan Cauchy-Schwarz terbukti.</div></article><span class="incontext"><a href="sec_euclid_rn.html#proof-3" class="internal">in-context</a></span>
+</body>
+</html>

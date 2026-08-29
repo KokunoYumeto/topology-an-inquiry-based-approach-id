@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Kegiatan</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Buktikan teorema di atas.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="introduction">
+<div class="para logical">
+<div class="para">Salah satu penerapan menarik dari metrik Hausdorff terdapat dalam geometri fraktal. Anda mungkin mengenal objek seperti segitiga Sierpinski atau kurva Koch. Objek-objek ini merupakan limit dari barisan himpunan dalam <span class="process-math">\(\mathcal{H}(\R^2)\text{.}\)</span> Kita mengilustrasikannya dengan segitiga Sierpinski. Mulailah dengan tiga titik <span class="process-math">\(v_1\text{,}\)</span> <span class="process-math">\(v_2\text{,}\)</span> dan <span class="process-math">\(v_3\)</span> yang membentuk simpul-simpul sebuah segitiga sama sisi <span class="process-math">\(S_0\text{.}\)</span> Untuk <span class="process-math">\(i\)</span>=1,2, atau 3, misalkan <span class="process-math">\(v_i = \begin{bmatrix}a_i \\ b_i \end{bmatrix}\text{.}\)</span> Untuk <span class="process-math">\(i\)</span>=1,2, atau 3, kita mendefinisikan <span class="process-math">\(\omega_i : \R^2 \to \R^2\)</span> dengan</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/F_Sierpinski.html ./knowl/F_Sierpinski.html ./knowl/F_Sierpinski.html">
+\begin{equation*}
+\omega_i\left(\begin{bmatrix}x \\ y \end{bmatrix} \right) = \begin{bmatrix}\frac{1}{2} \amp  0 \\ 0 \amp  \frac{1}{2} \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix}  + \frac{1}{2}\begin{bmatrix}a_i \\ b_i\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Maka <span class="process-math">\(\omega_i\text{,}\)</span> ketika diterapkan pada <span class="process-math">\(S_0\text{,}\)</span> memperkecil <span class="process-math">\(S_0\)</span> dengan faktor 1/2 dan kemudian mentranslasikan citra <span class="process-math">\(S_0\)</span> sehingga simpul <span class="process-math">\(i^{\text{ ke- } }\)</span> dari <span class="process-math">\(S_0\)</span> berimpit dengan simpul ke-<span class="process-math">\(i\)</span> dari citra <span class="process-math">\(S_0\text{.}\)</span> Pemetaan semacam itu disebut <dfn class="terminology">pemetaan kontraksi</dfn> dengan <dfn class="terminology">faktor kontraksi</dfn> sebesar <span class="process-math">\(\frac{1}{2}\text{.}\)</span> Definisikan <span class="process-math">\(S_{1,i}\)</span> sebagai <span class="process-math">\(\omega_i(S_0)\text{.}\)</span> Maka <span class="process-math">\(S_{1,i}\)</span> adalah himpunan semua titik yang berada di pertengahan antara sebarang titik dalam <span class="process-math">\(S_0\)</span> dan <span class="process-math">\(v_i\text{,}\)</span> atau <span class="process-math">\(S_{1,i}\)</span> adalah sebuah segitiga yang berukuran setengah dari segitiga semula dan ditranslasikan ke simpul <span class="process-math">\(i^{\text{ ke- } }\)</span> dari segitiga semula. Misalkan <span class="process-math">\(S_1 = \bigcup_{i=1}^3 S_{1,i}\text{.}\)</span> Baik <span class="process-math">\(S_0\)</span> maupun <span class="process-math">\(S_1\)</span> ditunjukkan dalam <a href="" class="xref" data-knowl="./knowl/F_Sierpinski.html" title="Gambar 17.19">Gambar 17.19</a>. Kita dapat melanjutkan prosedur ini dengan mengganti <span class="process-math">\(S_0\)</span> dengan <span class="process-math">\(S_1\text{.}\)</span> Dengan kata lain, untuk <span class="process-math">\(i\)</span> = 1, 2, dan 3, misalkan <span class="process-math">\(S_{2,i} = \omega_i(S_1)\text{.}\)</span> Kemudian misalkan <span class="process-math">\(S_2 = \bigcup_{i=1}^3 S_{2,i}\text{.}\)</span> Gambar <span class="process-math">\(S_2\)</span> ditunjukkan dalam <a href="" class="xref" data-knowl="./knowl/F_Sierpinski.html" title="Gambar 17.19">Gambar 17.19</a>. Kita dapat melanjutkan prosedur ini, dengan mengganti <span class="process-math">\(S_{j-1}\)</span> dengan <span class="process-math">\(S_j\)</span> setiap kalinya. Gambar <span class="process-math">\(S_8\)</span> ditunjukkan dalam <a href="" class="xref" data-knowl="./knowl/F_Sierpinski.html" title="Gambar 17.19">Gambar 17.19</a>.</div>
+</div> <figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/S0.svg" role="img" class="contained" alt="Garis luar segitiga sama sisi \(S_0\text{,}\) yaitu himpunan awal dengan tiga titik sudut \(v_1\text{,}\) \(v_2\text{,}\) dan \(v_3\text{.}\)"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/S1.svg" role="img" class="contained" alt="Iterasi pertama \(S_1\text{:}\) tiga salinan \(S_0\) berskala satu per dua ditempatkan pada ketiga sudut segitiga semula, menyisakan satu celah segitiga terbalik di tengah."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><div class="para logical" id="p-2122"><div class="displaymath process-math">
+\begin{equation*}
+S_0
+\end{equation*}
+</div></div></div>
+<div class="sbspanel top" style="width:50%;"><div class="para logical" id="p-2123"><div class="displaymath process-math">
+\begin{equation*}
+S_1
+\end{equation*}
+</div></div></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/S2.svg" role="img" class="contained" alt="Iterasi kedua \(S_2\text{:}\) sembilan segitiga kecil membentuk pola bersarang dengan satu celah segitiga terbalik besar dan tiga celah yang lebih kecil."></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/S8.svg" role="img" class="contained" alt="Iterasi kedelapan \(S_8\text{:}\) pola rapat segitiga-segitiga kecil dengan celah segitiga terbalik pada berbagai skala, sebagai pendekatan visual terhadap segitiga Sierpinski."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><div class="para logical" id="p-2124"><div class="displaymath process-math">
+\begin{equation*}
+S_2
+\end{equation*}
+</div></div></div>
+<div class="sbspanel top" style="width:50%;"><div class="para logical" id="p-2125"><div class="displaymath process-math">
+\begin{equation*}
+S_8
+\end{equation*}
+</div></div></div>
+</div></div>
+<figcaption><span class="type">Gambar</span><span class="space"> </span><span class="codenumber">17.19<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(S_i\)</span> untuk <span class="process-math">\(i\)</span> sama dengan 0, 1, 2, dan 8.</figcaption></figure> <div class="para">Untuk melanjutkan proses ini, kita perlu mengambil suatu limit. Namun, <span class="process-math">\(S_i\)</span> adalah himpunan dalam <span class="process-math">\(\mathcal{H}(\R^2)\text{,}\)</span> sehingga limit tersebut diambil terhadap metrik Hausdorff.</div>
+</div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para">Asumsikan panjang sisi <span class="process-math">\(S_0\)</span> adalah <span class="process-math">\(1\text{.}\)</span> Tentukan <span class="process-math">\(h(S_0,S_1)\text{.}\)</span> Kemudian carilah <span class="process-math">\(h(S_k, S_{k+1})\)</span> untuk sebarang bilangan bulat positif <span class="process-math">\(k\text{.}\)</span>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="introduction"><div class="para">Segitiga Sierpinski akan ada jika barisan <span class="process-math">\((S_n)\)</span> konvergen ke suatu himpunan <span class="process-math">\(S\)</span> (yang akan menjadi segitiga Sierpinski). Pertanyaan mengenai kekonvergenan ini bukanlah pertanyaan yang sederhana.</div></div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(A)</span></h6>
+<div class="para">Perhatikan barisan <span class="process-math">\((a_n)\text{,}\)</span> dengan <span class="process-math">\(a_n = \left(1+\frac{1}{n}\right)^n\)</span> untuk <span class="process-math">\(n \in \Z^+\text{.}\)</span> Perhatikan bahwa setiap <span class="process-math">\(a_n\)</span> adalah bilangan rasional. Jelaskan mengapa suku-suku dalam barisan ini menjadi sedekat yang diinginkan satu sama lain, tetapi barisan tersebut tidak konvergen dalam <span class="process-math">\(\Q\text{.}\)</span> Jelaskan mengapa barisan <span class="process-math">\((a_n)\)</span> konvergen dalam <span class="process-math">\(\R\text{.}\)</span>
+</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(B)</span></h6>
+<div class="para">Suatu barisan <span class="process-math">\((x_n)\)</span> dalam ruang metrik <span class="process-math">\((X,d)\)</span> disebut <dfn class="terminology">barisan Cauchy</dfn> jika untuk setiap <span class="process-math">\(\epsilon \gt 0\)</span> terdapat <span class="process-math">\(N \in \Z^+\)</span> sedemikian sehingga <span class="process-math">\(d(x_n, x_m) \lt \epsilon\)</span> setiap kali <span class="process-math">\(n, m \geq N\text{.}\)</span> Setiap barisan konvergen merupakan barisan Cauchy. Ruang metrik <span class="process-math">\(X\)</span> dikatakan <dfn class="terminology">lengkap</dfn> jika setiap barisan Cauchy dalam <span class="process-math">\(X\)</span> konvergen ke suatu elemen dalam <span class="process-math">\(X\text{.}\)</span> Sebagai contoh, <span class="process-math">\((\R, d_E)\)</span> lengkap, sedangkan <span class="process-math">\((\Q, d_E)\)</span> tidak lengkap. Meskipun kita tidak akan membuktikannya, ruang metrik <span class="process-math">\((\mathcal{H}(\R^2), h)\)</span> lengkap. Tunjukkan bahwa barisan <span class="process-math">\((S_n)\)</span> merupakan barisan Cauchy dalam <span class="process-math">\(\mathcal{H}(\R^2)\text{.}\)</span> Limit barisan ini adalah segitiga Sierpinski yang terkenal. Gambar <span class="process-math">\(S_8\)</span> dalam <a href="" class="xref" data-knowl="./knowl/F_Sierpinski.html" title="Gambar 17.19">Gambar 17.19</a> merupakan pendekatan yang dekat terhadap segitiga Sierpinski.</div></article></article></article></article><span class="incontext"><a href="sec_fractals.html#activity-91" class="internal">in-context</a></span>
+</body>
+</html>

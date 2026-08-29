@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<!--********************************************--><!--*       Generated from PreTeXt source      *--><!--*                                          *--><!--*         https://pretextbook.org          *--><!--*                                          *--><!--********************************************--><html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ruang Fungsi dan Topologinya</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Topologi: Pendekatan Berbasis Inkuiri">
+<meta property="book:author" content="Steven Schlicker">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="external/vendor/mathjax/es5/tex-chtml.js"></script><script src="external/vendor/lunr/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="external/vendor/pretext/js/0.3/pretext_search.js"></script><link href="external/vendor/pretext/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="external/vendor/pretext/js/lib/jquery.min.js"></script><script src="external/vendor/pretext/js/lib/jquery.sticky.js"></script><script src="external/vendor/pretext/js/lib/jquery.espy.min.js"></script><script src="external/vendor/pretext/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="external/vendor/pretext/js/0.3/pretext_add_on.js?x=1"></script><script src="external/vendor/pretext/js/0.3/user_preferences.js"></script><script src="external/vendor/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="external/vendor/pretext/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="o003-c90-complete-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Edisi Lengkap Bahasa Indonesia — Dua Puluh Bab, Pendamping Belajar Mandiri, dan Pelengkap C90</span></a></h1>
+<p class="byline">Steven Schlicker</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Hasil Pencarian: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Tidak ada hasil.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Tampilkan atau sembunyikan daftar isi"><span class="icon">☰</span><span class="name">Daftar Isi</span></button><a class="index-button button" href="index-1.html" title="Indeks"><span class="name">Indeks</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Ubah preferensi pengguna"><span id="avatarbutton" class="avatarbutton name">Anda!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Pilih avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>Anda!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Keluarga font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Sesuaikan font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Ukuran</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Lebih kecil</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Lebih besar</li>
+<li>Lebar</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">lebih sempit</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">lebih lebar</li>
+<li>Ketebalan</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">lebih tipis</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">lebih tebal</li>
+<li>Jarak huruf</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">lebih rapat</li>
+<li data-val="lspace" data-change="1" tabindex="-1">lebih renggang</li>
+<li>Jarak kata</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">celah lebih kecil </li>
+<li data-val="wspace" data-change="1" tabindex="-1">celah lebih besar</li>
+<li>Jarak baris</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">lebih rapat<br>merapat</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">lebih renggang<br>merenggang</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Mode terang/gelap<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>bawaan</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>senja</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>gelap</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>tengah malam</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Penggaris baca<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>tanpa penggaris</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>garis bawah</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>garis bawah-L</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>bilah abu-abu</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>kotak terang</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>fajar</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>garis bawah fajar</li>
+<li class="moveQ">Gerakkan dengan:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>ikuti tetikus</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>panah atas/bawah — belum tersedia</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>pelacakan mata — belum tersedia</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="o003-c90-completion-metrization.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="up-button button" href="o003-c90-completion-companion.html" title="Naik"><span class="icon">^</span><span class="name">Naik</span></a><a class="next-button button" href="o003-c90-completion-integrated-mastery.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Cari" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lub}{\text{lub}}
+\newcommand{\glb}{\text{glb}}
+\newcommand{\Int}{\text{Int}}
+\newcommand{\Bdry}{\text{Bdry}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\CB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\renewcommand{\CD}{\mathcal{D}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CQ}{\mathcal{Q}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\CW}{\mathcal{W}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
+\newcommand{\la}{\left|}
+\newcommand{\ra}{\right|}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-complete-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basic_top.html" class="internal"><span class="title">Gagasan Dasar Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_intervals.html" class="internal"><span class="title">Interval</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_comp.html" class="internal"><span class="title">Gabungan, Irisan, dan Komplemen Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cart_prod.html" class="internal"><span class="title">Hasil Kali Kartesius Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_functions.html" class="internal"><span class="codenumber">2</span> <span class="title">Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_func.html" class="internal"><span class="title">Komposisi Fungsi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_inv_func.html" class="internal"><span class="title">Fungsi Invers</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fun_set.html" class="internal"><span class="title">Fungsi dan Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_card_set.html" class="internal"><span class="title">Kardinalitas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_metric_space_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space.html" class="internal"><span class="title">Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_euclid_rn.html" class="internal"><span class="title">Metrik Euklides pada <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces_apps.html" class="internal"><span class="codenumber">4</span> <span class="title">Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_met_space_app.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hamming.html" class="internal"><span class="title">Metrik Hamming</span></a></div></li>
+<li><div class="toc-item"><a href="sec_levenshtein.html" class="internal"><span class="title">Metrik Levenshtein</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_glb.html" class="internal"><span class="codenumber">5</span> <span class="title">Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_glb_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_dist_point_set.html" class="internal"><span class="title">Jarak dari Titik ke Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_continuous_functions.html" class="internal"><span class="codenumber">6</span> <span class="title">Fungsi Kontinu di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_cont_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_btwn.html" class="internal"><span class="title">Fungsi Kontinu antara Ruang-Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_cont_func.html" class="internal"><span class="title">Komposit Fungsi Kontinu</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_open_balls.html" class="internal"><span class="codenumber">7</span> <span class="title">Bola Terbuka dan Lingkungan pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_balls_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_neighborhoods.html" class="internal"><span class="title">Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_neighborhoods.html" class="internal"><span class="title">Kekontinuan dan Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_open_sets.html" class="internal"><span class="codenumber">8</span> <span class="title">Himpunan Terbuka dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets.html" class="internal"><span class="title">Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_open_sets.html" class="internal"><span class="title">Gabungan dan Irisan Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_open_sets.html" class="internal"><span class="title">Kekontinuan dan Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_interior_set.html" class="internal"><span class="title">Interior Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets_summ.html" class="internal"><span class="title">Rangkuman</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_sequences.html" class="internal"><span class="codenumber">9</span> <span class="title">Barisan di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_seq_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_cont_metric.html" class="internal"><span class="title">Barisan dan Kekontinuan dalam Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_closed_sets.html" class="internal"><span class="codenumber">10</span> <span class="title">Himpunan Tertutup di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_closed_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_sets_metric.html" class="internal"><span class="title">Himpunan Tertutup di Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_closed_sets.html" class="internal"><span class="title">Kekontinuan dan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_bound_iso_seq.html" class="internal"><span class="title">Titik Limit, Titik Batas, Titik Terasing, dan Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_closed.html" class="internal"><span class="title">Titik Limit dan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_set_closure.html" class="internal"><span class="title">Tutupan Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_limits_seq.html" class="internal"><span class="title">Himpunan Tertutup dan Limit Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_set_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_set_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_subspaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Subruang dan Hasil Kali Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sub_metric_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_closed_sub.html" class="internal"><span class="title">Himpunan Terbuka dan Tertutup di Subruang</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_metric.html" class="internal"><span class="title">Hasil Kali Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_metric_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_metric_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Kuosien, Kekompakan, Keterhubungan, Lintasan, dan Hasil Kali</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_top_space_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_exam_top.html" class="internal"><span class="title">Contoh-Contoh Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_base_top.html" class="internal"><span class="title">Basis untuk Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_top_space.html" class="internal"><span class="title">Ruang Metrik dan Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_neighborhood_top_space.html" class="internal"><span class="title">Lingkungan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_interior_set_top.html" class="internal"><span class="title">Interior Himpunan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_space_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Closed_sets_topology.html" class="internal"><span class="codenumber">13</span> <span class="title">Himpunan Tertutup dalam Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_closed_sets_top_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_inter_closed.html" class="internal"><span class="title">Gabungan dan Irisan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_points.html" class="internal"><span class="title">Titik Limit dan Barisan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_closure.html" class="internal"><span class="title">Tutupan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_set_boundary.html" class="internal"><span class="title">Batas Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_separation_ax.html" class="internal"><span class="title">Aksioma Separasi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_sets_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_sets_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_continuity_topology.html" class="internal"><span class="codenumber">14</span> <span class="title">Kekontinuan dan Homeomorfisme</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_cont_top_intro.html" class="internal"><span class="title">Pengantar</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_equiv.html" class="internal"><span class="title">Ekuivalensi Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_equiv.html" class="internal"><span class="title">Ekuivalensi Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relations.html" class="internal"><span class="title">Relasi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_invar.html" class="internal"><span class="title">Invarian Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_subspaces.html" class="internal"><span class="codenumber">15</span> <span class="title">Subruang</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sub.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_subspace_top.html" class="internal"><span class="title">Topologi Subruang</span></a></div></li>
+<li><div class="toc-item"><a href="sec_base_sub.html" class="internal"><span class="title">Basis untuk Subruang</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Compact_topology.html" class="internal"><span class="codenumber">17</span> <span class="title">Ruang Kompak</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_compact_top_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_cont.html" class="internal"><span class="title">Kekompakan dan Kekontinuan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_rn.html" class="internal"><span class="title">Subhimpunan Kompak dari <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_app.html" class="internal"><span class="title">Penerapan Kekompakan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fractals.html" class="internal"><span class="title">Penerapan Kekompakan: Fraktal</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Connected_topology.html" class="internal"><span class="codenumber">18</span> <span class="title">Ruang Terhubung</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_connect_top_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_sets.html" class="internal"><span class="title">Himpunan Terhubung</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_subset_rn.html" class="internal"><span class="title">Subhimpunan Terhubung dari <span class="process-math">\(\R\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_components.html" class="internal"><span class="title">Komponen</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cut_sets.html" class="internal"><span class="title">Himpunan Pemutus</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ivt_fpt.html" class="internal"><span class="title">Teorema Nilai Antara dan Teorema Titik Tetap</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Path_connected_topology.html" class="internal"><span class="codenumber">19</span> <span class="title">Ruang Terhubung Lintasan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_path_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_connect.html" class="internal"><span class="title">Keterhubungan Lintasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_connect_equiv.html" class="internal"><span class="title">Keterhubungan Lintasan sebagai Relasi Ekuivalensi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connectedness.html" class="internal"><span class="title">Keterhubungan Lintasan dan Keterhubungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_finite.html" class="internal"><span class="title">Keterhubungan Lintasan dan Keterhubungan dalam Ruang Topologi Berhingga</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_infinite.html" class="internal"><span class="title">Keterhubungan Lintasan dan Keterhubungan dalam Ruang Topologi Tak Hingga</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="codenumber">20</span> <span class="title">Hasil Kali Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_prod_top.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_prod_space.html" class="internal"><span class="title">Topologi pada Hasil Kali Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_exam.html" class="internal"><span class="title">Tiga Contoh</span></a></div></li>
+<li><div class="toc-item"><a href="sec_proj_cont_prod.html" class="internal"><span class="title">Proyeksi dan Fungsi Kontinu pada Ruang Hasil Kali</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prop_prod_top.html" class="internal"><span class="title">Sifat-Sifat Hasil Kali Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_app.html" class="internal"><span class="title">Penerapan Hasil Kali Ruang Topologi</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Bagian Akhir</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="o003-c90-ch01-companion.html" class="internal"><span class="codenumber">A</span> <span class="title">Pendamping Mandiri Bab 1: Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch01-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-exercise-guides.html" class="internal"><span class="title">Jawaban dan panduan sepuluh latihan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch02-companion.html" class="internal"><span class="codenumber">B</span> <span class="title">Pendamping Mandiri Bab 2: Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch02-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan tujuh belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch03-companion.html" class="internal"><span class="codenumber">C</span> <span class="title">Pendamping Mandiri Bab 3: Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch03-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan empat belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch04-companion.html" class="internal"><span class="codenumber">D</span> <span class="title">Pendamping Mandiri Bab 4: Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch04-source-task-guides.html" class="internal"><span class="title">Panduan untuk tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch04-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch05-companion.html" class="internal"><span class="codenumber">E</span> <span class="title">Pendamping Mandiri Bab 5: Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch05-intro-guides.html" class="internal"><span class="title">Panduan untuk kegiatan pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-point-set-guides.html" class="internal"><span class="title">Panduan untuk jarak titik ke himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch06-companion.html" class="internal"><span class="codenumber">F</span> <span class="title">Pendamping Mandiri Bab 6: Fungsi Kontinu pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch06-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch07-companion.html" class="internal"><span class="codenumber">G</span> <span class="title">Pendamping Mandiri Bab 7: Bola Terbuka dan Lingkungan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch07-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 7</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch08-companion.html" class="internal"><span class="codenumber">H</span> <span class="title">Pendamping Mandiri Bab 8: Himpunan Terbuka dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch08-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 8</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch09-companion.html" class="internal"><span class="codenumber">I</span> <span class="title">Pendamping Mandiri Bab 9: Barisan dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch09-source-guides.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 9</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch10-companion.html" class="internal"><span class="codenumber">J</span> <span class="title">Pendamping Mandiri Bab 10: Himpunan Tertutup dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch10-source-guides-a.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-source-guides-b.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan lanjutan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 10</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch11-companion.html" class="internal"><span class="codenumber">K</span> <span class="title">Pendamping Mandiri Bab 11: Subruang dan Hasil Kali Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch11-source-guides-a.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-source-guides-b.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan lanjutan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 11</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch12-companion.html" class="internal"><span class="codenumber">L</span> <span class="title">Pendamping Mandiri Bab 12: Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-a.html" class="internal"><span class="title">Panduan ruang topologi: definisi dan contoh awal</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-b.html" class="internal"><span class="title">Panduan topologi komplemen berhingga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-c.html" class="internal"><span class="title">Panduan basis untuk topologi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-d.html" class="internal"><span class="title">Panduan ruang topologi yang bukan ruang metrik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-e.html" class="internal"><span class="title">Panduan lingkungan dalam ruang topologi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-f.html" class="internal"><span class="title">Panduan interior dalam ruang topologi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan sumber, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan sumber, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-e.html" class="internal"><span class="title">Panduan latihan sumber, bagian kelima</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-f.html" class="internal"><span class="title">Panduan latihan sumber, bagian keenam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-g.html" class="internal"><span class="title">Panduan latihan sumber, bagian ketujuh</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 12</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch13-companion.html" class="internal"><span class="codenumber">M</span> <span class="title">Panduan Belajar Mandiri Bab 13: Himpunan Tertutup dalam Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Mengenali Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Gabungan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-c.html" class="internal"><span class="title">Panduan Belajar Mandiri: Titik Limit dan Limit Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-d.html" class="internal"><span class="title">Panduan Belajar Mandiri: Tutupan sebagai Himpunan Tertutup Terkecil</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-e.html" class="internal"><span class="title">Panduan Belajar Mandiri: Menentukan Batas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-f.html" class="internal"><span class="title">Panduan Belajar Mandiri: Aksioma Separasi dan Ruang Hausdorff</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-e.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian kelima</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-f.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian keenam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 13</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch14-companion.html" class="internal"><span class="codenumber">N</span> <span class="title">Panduan Belajar Mandiri Bab 14: Kekontinuan dan Homeomorfisme</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch14-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Pengantar Kekontinuan Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Kekontinuan dan Ekuivalensi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-source-guides-c.html" class="internal"><span class="title">Panduan Belajar Mandiri: Invarian Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-e.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian kelima</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-f.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian keenam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 14</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch15-companion.html" class="internal"><span class="codenumber">O</span> <span class="title">Panduan Belajar Mandiri Bab 15: Subruang</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch15-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Subruang dan Topologi Relatif I</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Basis Subruang dan Interval Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 15, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 15, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch17-companion.html" class="internal"><span class="codenumber">Q</span> <span class="title">Panduan Belajar Mandiri Bab 17: Ruang Kompak</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch17-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Selimut Buka dan Kekompakan Dasar</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Kekompakan dan Pemetaan Kontinu</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-source-guides-c.html" class="internal"><span class="title">Panduan Belajar Mandiri: Nilai Ekstrem, Fraktal, dan Latihan Kekompakan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 17, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-exercise-guides-d.html" class="internal"><span class="title">Panduan Latihan: Pemisahan, Kekompakan Lokal, dan Contoh Tandingan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-exercise-guides-e.html" class="internal"><span class="title">Panduan Latihan: Pernyataan Benar atau Salah tentang Kekompakan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 17: Kekompakan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch18-companion.html" class="internal"><span class="codenumber">R</span> <span class="title">Panduan Belajar Mandiri Bab 18: Ruang Topologi Terhubung</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch18-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Keterhubungan, Komponen, dan Titik Tetap</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch18-exercise-guides-a.html" class="internal"><span class="title">Panduan Latihan Bab 18 A</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch18-exercise-guides-b.html" class="internal"><span class="title">Panduan Latihan Bab 18 B</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch18-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 18: Keterhubungan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch19-companion.html" class="internal"><span class="codenumber">S</span> <span class="title">Panduan Belajar Mandiri Bab 19: Ruang Terhubung Lintasan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch19-source-guides-a.html" class="internal"><span class="title">Panduan Prompt Sumber Bab 19: Lintasan dan Komponen Lintasan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch19-exercise-guides-a.html" class="internal"><span class="title">Panduan Latihan Bab 19 A</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch19-exercise-guides-b.html" class="internal"><span class="title">Panduan Latihan Bab 19 B</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch19-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 19: Keterhubungan Lintasan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch20-self-study.html" class="internal"><span class="codenumber">T</span> <span class="title">Pendamping Belajar Mandiri Bab 20: Hasil Kali Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch20-source-guides-a.html" class="internal"><span class="title">Panduan Prompt Sumber: Topologi Hasil Kali, Contoh, dan Proyeksi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-source-guides-b.html" class="internal"><span class="title">Panduan Prompt Sumber: Sifat Produk dan Topologi Digital</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-exercise-guides-a.html" class="internal"><span class="title">Panduan Latihan Bab 20, Bagian A</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-exercise-guides-b.html" class="internal"><span class="title">Panduan Latihan Bab 20, Bagian B</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-exercise-guides-c.html" class="internal"><span class="title">Panduan Latihan Bab 20, Bagian C</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-mastery.html" class="internal"><span class="title">Pemeriksaan Penguasaan Bab 20</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-companion.html" class="internal"><span class="codenumber">U</span> <span class="title">Pelengkap C90: Topologi Himpunan-Titik untuk Belajar Mandiri</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="o003-c90-completion-separation.html" class="internal"><span class="title">Penyempurnaan Aksioma Separasi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-t0" class="internal"><span class="title">Ruang Kolmogorov dan titik yang dapat dibedakan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-specialization" class="internal"><span class="title">Praurutan spesialisasi dan kuosien Kolmogorov</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-separation-map" class="internal"><span class="title">Peta lengkap dari <span class="process-math">\(T_0\)</span> hingga <span class="process-math">\(T_4\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-separation-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-countability.html" class="internal"><span class="title">Keterhitungan, Kepadatan, dan Sifat Lindelöf</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-local-bases" class="internal"><span class="title">Basis lokal dan dua aksioma keterhitungan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-density-lindelof" class="internal"><span class="title">Kepadatan, separabilitas, dan sifat Lindelöf</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-inheritance-size" class="internal"><span class="title">Pewarisan, citra kontinu, dan contoh-balik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-countability-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-general-convergence.html" class="internal"><span class="title">Jaring dan Kekonvergenan Umum</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-directed-nets" class="internal"><span class="title">Himpunan terarah, jaring, dan subjaring</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-net-characterizations" class="internal"><span class="title">Penutup dan kekontinuan melalui jaring</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-net-compactness" class="internal"><span class="title">Kekompakan melalui jaring</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-net-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html" class="internal"><span class="title">Hasil Kali Sebarang dan Topologi Kotak</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-product-definition" class="internal"><span class="title">Topologi hasil kali dan sifat universal</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-box-topology" class="internal"><span class="title">Topologi kotak dan divergensi tak hingga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-product-preservation" class="internal"><span class="title">Sifat yang dipertahankan oleh hasil kali</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-tychonoff-theorem" class="internal"><span class="title">Teorema Tychonoff dengan ruang lingkup yang tepat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-products-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-local-compactness.html" class="internal"><span class="title">Kekompakan Lokal dan Kompaktifikasi Satu Titik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-local-compact-definition" class="internal"><span class="title">Lingkungan kompak dan penyusutan lokal</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-local-compact-inheritance" class="internal"><span class="title">Pewarisan dan hasil kali</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-one-point-compactification" class="internal"><span class="title">Kompaktifikasi satu titik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-local-compact-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-metrization.html" class="internal"><span class="title">Metrisasi: dari Pseudometrik ke Teorema Urysohn</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-pseudometrics" class="internal"><span class="title">Pseudometrik, metrik, dan kuosien nol</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-induced-topology" class="internal"><span class="title">Informasi topologis yang dipaksa oleh metrik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-equivalent-metrics" class="internal"><span class="title">Metrik ekuivalen dan gabungan pseudometrik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-urysohn" class="internal"><span class="title">Teorema Metrisasi Urysohn</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-counterexamples" class="internal"><span class="title">Mengapa hipotesis Urysohn tidak boleh diabaikan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="o003-c90-completion-function-spaces.html" class="internal"><span class="title">Ruang Fungsi dan Topologinya</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-pointwise" class="internal"><span class="title">Topologi titik demi titik sebagai topologi hasil kali</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-uniform" class="internal"><span class="title">Topologi seragam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-compact-open" class="internal"><span class="title">Topologi kompak-terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-evaluation-composition" class="internal"><span class="title">Evaluasi dan komposisi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-exponential-law" class="internal"><span class="title">Jembatan hukum eksponensial</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-arzela-ascoli" class="internal"><span class="title">Jembatan terbatas menuju Teorema Arzelà–Ascoli</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html" class="internal"><span class="title">Puncak Penguasaan Terpadu</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html#o003-c90-completion-integrated-dependency-map" class="internal"><span class="title">Peta dependensi dan penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html#o003-c90-completion-integrated-rubric" class="internal"><span class="title">Rubrik pembuktian dan contoh tandingan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html#o003-c90-completion-integrated-problems" class="internal"><span class="title">Masalah penguasaan terpadu</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-completion-function-spaces"><h2 class="heading hide-type">
+<span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Ruang Fungsi dan Topologinya</span>
+</h2>
+<section class="introduction" id="introduction-334"><div class="para" id="p-9391">Himpunan semua pemetaan kontinu <span class="process-math">\(X\to Y\)</span> sendiri dapat diperlakukan sebagai ruang topologis. Pilihan topologi pada ruang fungsi menentukan apa arti pemetaan yang dekat, keluarga pemetaan yang kontinu, dan bentuk tepat prinsip bahwa pemetaan dua variabel dapat dipandang sebagai keluarga pemetaan satu variabel. Bagian ini membedakan topologi kekonvergenan titik demi titik, topologi seragam, dan topologi kompak-terbuka, lalu menjelaskan peran kekompakan lokal dalam pemetaan evaluasi dan hukum eksponensial.</div> <div class="para" id="p-9392">Modul orisinal ini berlisensi CC BY 4.0 dan terpisah dari turunan GVSU yang diperlakukan secara konservatif sebagai CC BY-NC-SA 3.0. Modul ini bukan teks atau solusi resmi GVSU serta tidak menyatakan atau menyiratkan dukungan penulis atau institusi sumber. Provenans produksi berbantuan model: <code class="code-inline tex2jax_ignore">OpenAI Codex gpt-5.6-sol, Ultra</code>.</div></section><section class="subsection" id="o003-c90-completion-function-pointwise"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Topologi titik demi titik sebagai topologi hasil kali</span>
+</h3>
+<article class="definition definition-like" id="o003-c90-def-function-space-pointwise"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.123</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9393">Untuk ruang <span class="process-math">\(X\)</span> dan <span class="process-math">\(Y\text{,}\)</span> himpunan semua fungsi <span class="process-math">\(X\to Y\)</span> diidentifikasi dengan hasil kali <span class="process-math">\(Y^X=\prod_{x\in X}Y\text{.}\)</span> <dfn class="terminology">Topologi titik demi titik</dfn> adalah topologi hasil kali pada <span class="process-math">\(Y^X\text{.}\)</span> Jika hanya fungsi kontinu yang dipertimbangkan, tulis <span class="process-math">\(C_p(X,Y)\)</span> untuk <span class="process-math">\(C(X,Y)\)</span> dengan topologi subruang tersebut.</div></article><div class="para" id="p-9394">Untuk <span class="process-math">\(x\in X\)</span> dan <span class="process-math">\(U\subseteq Y\)</span> terbuka, tetapkan <span class="process-math">\([x,U]=\{f:f(x)\in U\}\text{.}\)</span> Himpunan-himpunan ini merupakan subbasis. Lingkungan dasar suatu fungsi hanya membatasi nilainya pada berhingga banyak titik domain.</div>
+<article class="proposition theorem-like" id="o003-c90-prop-pointwise-convergence"><h3 class="heading">
+<span class="type">Proposisi</span><span class="space"> </span><span class="codenumber">U.124</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9395">Suatu net <span class="process-math">\((f_\lambda)\)</span> dalam <span class="process-math">\(Y^X\)</span> konvergen ke <span class="process-math">\(f\)</span> dalam topologi titik demi titik jika dan hanya jika <span class="process-math">\(f_\lambda(x)\to f(x)\)</span> dalam <span class="process-math">\(Y\)</span> untuk setiap <span class="process-math">\(x\in X\text{.}\)</span> Selain itu, untuk setiap <span class="process-math">\(x\text{,}\)</span> pemetaan evaluasi tetap <span class="process-math">\(\operatorname{ev}_x(f)=f(x)\)</span> kontinu.</div></article><article class="proof" id="proof-82"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9396">Proyeksi koordinat hasil kali tepat merupakan pemetaan <span class="process-math">\(\operatorname{ev}_x\text{.}\)</span> Karakterisasi kekonvergenan net dalam hasil kali menyatakan bahwa kekonvergenan terjadi tepat bila semua proyeksi koordinat konvergen. Prapeta himpunan terbuka <span class="process-math">\(U\)</span> di bawah proyeksi itu adalah <span class="process-math">\([x,U]\text{,}\)</span> sehingga evaluasi tetap kontinu.</div></article><article class="remark remark-like" id="o003-c90-remark-joint-evaluation-pointwise"><h3 class="heading">
+<span class="type">Catatan</span><span class="space"> </span><span class="codenumber">U.125</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9397">Kekontinuan setiap evaluasi tetap tidak berarti bahwa evaluasi bersama <span class="process-math">\(\operatorname{ev}:C_p(X,Y)\times X\to Y\text{,}\)</span> <span class="process-math">\((f,x)\mapsto f(x)\text{,}\)</span> kontinu. Untuk topologi titik demi titik, lingkungan suatu fungsi tidak mengendalikan nilainya pada seluruh lingkungan titik <span class="process-math">\(x\text{.}\)</span> Kegagalan ini menjadi salah satu alasan menggunakan topologi kompak-terbuka.</div></article></section><section class="subsection" id="o003-c90-completion-function-uniform"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Topologi seragam</span>
+</h3>
+<article class="definition definition-like" id="o003-c90-def-uniform-function-topology"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.126</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9398">
+<div class="para">Jika <span class="process-math">\((Y,d)\)</span> ruang metrik, ganti <span class="process-math">\(d\)</span> dengan metrik terbatas ekuivalen <span class="process-math">\(\bar d(y,z)=\min\{1,d(y,z)\}\)</span> bila perlu, lalu definisikan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_\infty(f,g)=\sup_{x\in X}\bar d(f(x),g(x)).
+\end{equation*}
+</div>
+<div class="para">Topologi metrik ini pada <span class="process-math">\(Y^X\text{,}\)</span> dan topologi subruangnya pada <span class="process-math">\(C(X,Y)\text{,}\)</span> disebut <dfn class="terminology">topologi seragam</dfn>. Kekonvergenan terhadap <span class="process-math">\(d_\infty\)</span> tepat merupakan kekonvergenan seragam.</div>
+</div></article><article class="remark remark-like" id="o003-c90-remark-uniform-structure"><h3 class="heading">
+<span class="type">Catatan</span><span class="space"> </span><span class="codenumber">U.127</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9399">Konstruksi ini tidak bergantung pada rumus metrik tertentu bila kodomain diberi struktur seragam. Untuk entourage <span class="process-math">\(V\)</span> pada <span class="process-math">\(Y\text{,}\)</span> lingkungan seragam diagonal pada ruang fungsi terdiri atas pasangan <span class="process-math">\((f,g)\)</span> dengan <span class="process-math">\((f(x),g(x))\in V\)</span> untuk setiap <span class="process-math">\(x\text{.}\)</span> Jadi istilah “seragam” memerlukan metrik atau struktur seragam pada kodomain; topologi kodomain saja tidak selalu menentukan pilihan itu.</div></article><article class="proposition theorem-like" id="o003-c90-prop-uniform-finer-pointwise"><h3 class="heading">
+<span class="type">Proposisi</span><span class="space"> </span><span class="codenumber">U.128</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9400">Topologi seragam lebih halus daripada topologi titik demi titik. Jika <span class="process-math">\(f_\lambda\to f\)</span> secara seragam, maka <span class="process-math">\(f_\lambda(x)\to f(x)\)</span> untuk setiap <span class="process-math">\(x\text{.}\)</span>
+</div></article><article class="proof" id="proof-83"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9401">Untuk setiap <span class="process-math">\(x\text{,}\)</span> ketaksamaan <span class="process-math">\(\bar d(f_\lambda(x),f(x))\le d_\infty(f_\lambda,f)\)</span> memberi kekonvergenan koordinat. Secara topologis, bola seragam yang cukup kecil di sekitar <span class="process-math">\(f\)</span> termuat dalam setiap lingkungan dasar titik demi titik yang hanya membatasi berhingga banyak koordinat.</div></article><article class="example example-like" id="o003-c90-example-pointwise-not-uniform"><h3 class="heading">
+<span class="type">Contoh</span><span class="space"> </span><span class="codenumber">U.129</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9402">Pada <span class="process-math">\(X=\mathbb N\)</span> diskret dan <span class="process-math">\(Y=\mathbb R\text{,}\)</span> definisikan <span class="process-math">\(e_n(k)=1\)</span> bila <span class="process-math">\(k=n\)</span> dan <span class="process-math">\(e_n(k)=0\)</span> selain itu. Untuk setiap <span class="process-math">\(k\)</span> tetap, <span class="process-math">\(e_n(k)\to0\text{,}\)</span> tetapi <span class="process-math">\(d_\infty(e_n,0)=1\text{.}\)</span> Jadi topologi titik demi titik umumnya benar-benar lebih kasar daripada topologi seragam.</div></article></section><section class="subsection" id="o003-c90-completion-function-compact-open"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Topologi kompak-terbuka</span>
+</h3>
+<article class="definition definition-like" id="o003-c90-def-compact-open-topology"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.130</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9403">
+<div class="para">Untuk himpunan kompak <span class="process-math">\(K\subseteq X\)</span> dan himpunan terbuka <span class="process-math">\(U\subseteq Y\text{,}\)</span> tulis</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[K,U]=\{f\in C(X,Y):f(K)\subseteq U\}.
+\end{equation*}
+</div>
+<div class="para">
+<dfn class="terminology">Topologi kompak-terbuka</dfn> pada <span class="process-math">\(C(X,Y)\)</span> adalah topologi yang mempunyai semua <span class="process-math">\([K,U]\)</span> sebagai subbasis. Ruang yang dihasilkan ditulis <span class="process-math">\(C_k(X,Y)\text{.}\)</span>
+</div>
+</div></article><article class="proposition theorem-like" id="o003-c90-prop-compact-open-comparisons"><h3 class="heading">
+<span class="type">Proposisi</span><span class="space"> </span><span class="codenumber">U.131</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9404">Topologi kompak-terbuka lebih halus daripada topologi titik demi titik. Jika <span class="process-math">\(X\)</span> kompak Hausdorff dan <span class="process-math">\(Y\)</span> metrik, topologi kompak-terbuka pada <span class="process-math">\(C(X,Y)\)</span> sama dengan topologi seragam.</div></article><article class="proof" id="proof-84"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9405">Setiap singleton <span class="process-math">\(\{x\}\)</span> kompak dan <span class="process-math">\([\{x\},U]=[x,U]\text{,}\)</span> sehingga semua subbasis titik demi titik terbuka dalam topologi kompak-terbuka.</div> <div class="para" id="p-9406">Andaikan <span class="process-math">\(X\)</span> kompak Hausdorff. Bola seragam kecil di sekitar <span class="process-math">\(f\)</span> dapat dipilih agar termuat dalam irisan berhingga subbasis <span class="process-math">\([K_i,U_i]\)</span> yang memuat <span class="process-math">\(f\text{:}\)</span> kekompakan setiap <span class="process-math">\(f(K_i)\)</span> memberi jarak positif yang seragam dari komplemen <span class="process-math">\(U_i\)</span> setelah subbasis diperhalus dengan bola-bola metrik. Untuk arah sebaliknya, bagi setiap <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> kontinuitas <span class="process-math">\(f\)</span> memberi selimut buka <span class="process-math">\(X\)</span> oleh prapeta bola-bola berjari-jari <span class="process-math">\(\varepsilon/3\text{.}\)</span> Kekompakan Hausdorff memberi penyusutan berhingga selimut itu menjadi himpunan-himpunan kompak <span class="process-math">\(K_j\)</span> yang masih menutupi <span class="process-math">\(X\text{.}\)</span> Jika <span class="process-math">\(U_j\)</span> adalah bola berjari-jari <span class="process-math">\(2\varepsilon/3\)</span> yang sesuai, irisan <span class="process-math">\([K_j,U_j]\)</span> mengendalikan jarak seragam dari <span class="process-math">\(f\text{.}\)</span> Maka kedua topologi sama.</div></article><article class="example example-like" id="o003-c90-example-three-function-topologies"><h3 class="heading">
+<span class="type">Contoh</span><span class="space"> </span><span class="codenumber">U.132</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9407">Pada <span class="process-math">\(C(\mathbb R,\mathbb R)\text{,}\)</span> fungsi <span class="process-math">\(f_n(x)=x/n\)</span> konvergen ke nol secara seragam pada setiap subhimpunan kompak, maka konvergen dalam topologi kompak-terbuka, tetapi tidak konvergen seragam pada seluruh <span class="process-math">\(\mathbb R\text{.}\)</span> Sebaliknya, barisan tonjolan segitiga setinggi satu yang berpusat di <span class="process-math">\(1/n\text{,}\)</span> berpenyangga di <span class="process-math">\((1/n-1/n^2,1/n+1/n^2)\text{,}\)</span> dan bernilai nol di luar penyangga, konvergen titik demi titik ke nol tetapi tidak konvergen kompak-terbuka karena supremumnya pada <span class="process-math">\([0,1]\)</span> selalu satu.</div></article></section><section class="subsection" id="o003-c90-completion-function-evaluation-composition"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Evaluasi dan komposisi</span>
+</h3>
+<article class="theorem theorem-like" id="o003-c90-thm-compact-open-evaluation"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.133</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9408">
+<div class="para">Jika <span class="process-math">\(X\)</span> kompak lokal Hausdorff, maka pemetaan evaluasi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{ev}:C_k(X,Y)\times X\longrightarrow Y,
+\qquad (f,x)\longmapsto f(x)
+\end{equation*}
+</div>
+<div class="para">kontinu untuk setiap ruang <span class="process-math">\(Y\text{.}\)</span>
+</div>
+</div></article><article class="proof" id="proof-85"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9409">Ambil <span class="process-math">\((f,x)\)</span> dan himpunan buka <span class="process-math">\(U\)</span> yang memuat <span class="process-math">\(f(x)\text{.}\)</span> Karena <span class="process-math">\(f^{-1}(U)\)</span> lingkungan buka <span class="process-math">\(x\)</span> dan <span class="process-math">\(X\)</span> kompak lokal Hausdorff, pilih lingkungan buka <span class="process-math">\(V\)</span> dari <span class="process-math">\(x\)</span> dengan <span class="process-math">\(K=\overline V\)</span> kompak dan <span class="process-math">\(K\subseteq f^{-1}(U)\text{.}\)</span> Maka <span class="process-math">\(f\in[K,U]\text{,}\)</span> dan untuk setiap <span class="process-math">\(g\in[K,U]\)</span> serta <span class="process-math">\(v\in V\)</span> berlaku <span class="process-math">\(g(v)\in U\text{.}\)</span> Jadi <span class="process-math">\([K,U]\times V\)</span> dipetakan ke <span class="process-math">\(U\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="o003-c90-thm-compact-open-composition"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.134</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9410">
+<div class="para">Jika <span class="process-math">\(Y\)</span> kompak lokal Hausdorff, maka komposisi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{comp}:C_k(Y,Z)\times C_k(X,Y)\longrightarrow
+C_k(X,Z),\qquad (g,f)\longmapsto g\circ f
+\end{equation*}
+</div>
+<div class="para">kontinu.</div>
+</div></article><article class="proof" id="proof-86"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9411">Cukup periksa prapeta subbasis <span class="process-math">\([K,U]\)</span> di sekitar pasangan <span class="process-math">\((g,f)\)</span> dengan <span class="process-math">\(g(f(K))\subseteq U\text{.}\)</span> Himpunan <span class="process-math">\(f(K)\)</span> kompak dan termuat dalam himpunan buka <span class="process-math">\(g^{-1}(U)\text{.}\)</span> Dalam ruang kompak lokal Hausdorff, pilih himpunan buka <span class="process-math">\(W\)</span> dengan <span class="process-math">\(f(K)\subseteq W\subseteq\overline W=L\subseteq g^{-1}(U)\)</span> dan <span class="process-math">\(L\)</span> kompak. Maka <span class="process-math">\([L,U]\)</span> adalah lingkungan <span class="process-math">\(g\)</span> dan <span class="process-math">\([K,W]\)</span> adalah lingkungan <span class="process-math">\(f\text{.}\)</span> Untuk <span class="process-math">\((g',f')\in[L,U]\times[K,W]\text{,}\)</span> berlaku <span class="process-math">\(f'(K)\subseteq W\subseteq L\text{,}\)</span> sehingga <span class="process-math">\(g'(f'(K))\subseteq U\text{.}\)</span> Jadi produk kedua lingkungan itu dipetakan ke <span class="process-math">\([K,U]\text{.}\)</span>
+</div></article></section><section class="subsection" id="o003-c90-completion-function-exponential-law"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Jembatan hukum eksponensial</span>
+</h3>
+<article class="theorem theorem-like" id="o003-c90-thm-exponential-law-bridge"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.135</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9412">
+<div class="para">Jika <span class="process-math">\(X\)</span> kompak lokal Hausdorff, maka untuk setiap ruang <span class="process-math">\(Z,Y\)</span> terdapat korespondensi alami</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(Z\times X,Y)\cong C(Z,C_k(X,Y)).
+\end{equation*}
+</div>
+<div class="para">Korespondensi itu mengirim <span class="process-math">\(F\)</span> ke pemetaan teradjoin <span class="process-math">\(\widehat F(z)(x)=F(z,x)\text{,}\)</span> dan kebalikannya mengirim <span class="process-math">\(G\)</span> ke <span class="process-math">\(G^\vee(z,x)=G(z)(x)\text{.}\)</span>
+</div>
+</div></article><article class="proof" id="proof-87"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9413">Jika <span class="process-math">\(F\)</span> kontinu dan <span class="process-math">\([K,U]\)</span> memuat <span class="process-math">\(\widehat F(z_0)\text{,}\)</span> maka <span class="process-math">\(F(\{z_0\}\times K)\subseteq U\text{.}\)</span> Kekompakan <span class="process-math">\(K\)</span> dan lemma tabung menghasilkan lingkungan <span class="process-math">\(W\)</span> dari <span class="process-math">\(z_0\)</span> dengan <span class="process-math">\(F(W\times K)\subseteq U\text{.}\)</span> Jadi <span class="process-math">\(\widehat F^{-1}([K,U])\)</span> terbuka. Sebaliknya, jika <span class="process-math">\(G:Z\to C_k(X,Y)\)</span> kontinu, maka <span class="process-math">\(G^\vee=\operatorname{ev}\circ(G\times\operatorname{id}_X)\)</span> kontinu oleh teorema evaluasi. Kedua konstruksi jelas saling invers.</div></article><article class="remark remark-like" id="o003-c90-remark-exponential-law-scope"><h3 class="heading">
+<span class="type">Catatan</span><span class="space"> </span><span class="codenumber">U.136</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9414">Pernyataan di atas adalah korespondensi pada aras himpunan pemetaan kontinu. Untuk menyatakan bahwa pemetaan kanonik antara dua <em class="emphasis">ruang</em> fungsi merupakan homeomorfisme tanpa hipotesis tambahan, kategori ruang kompak-terbangkitkan biasanya digunakan. Pada kategori ruang topologis biasa, hipotesis kekompakan lokal pada variabel domain adalah jembatan yang mencegah klaim eksponensial terlalu luas.</div></article></section><section class="subsection" id="o003-c90-completion-function-arzela-ascoli"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Jembatan terbatas menuju Teorema Arzelà–Ascoli</span>
+</h3>
+<article class="definition definition-like" id="o003-c90-def-equicontinuity"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.137</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9415">Keluarga <span class="process-math">\(\mathcal F\subseteq C(X,Y)\)</span> antara ruang metrik disebut <dfn class="terminology">ekukontinu</dfn> jika untuk setiap <span class="process-math">\(\varepsilon&gt;0\)</span> dan setiap <span class="process-math">\(x\in X\)</span> terdapat <span class="process-math">\(\delta&gt;0\)</span> sehingga <span class="process-math">\(d_X(x,x')&lt;\delta\)</span> mengakibatkan <span class="process-math">\(d_Y(f(x),f(x'))&lt;\varepsilon\)</span> untuk semua <span class="process-math">\(f\in\mathcal F\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="o003-c90-thm-arzela-ascoli-bounded"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.138</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9416">Misalkan <span class="process-math">\(X\)</span> ruang metrik kompak. Suatu keluarga <span class="process-math">\(\mathcal F\subseteq C(X,\mathbb R)\)</span> mempunyai penutup kompak dalam topologi seragam jika dan hanya jika keluarga itu ekukontinu dan dibatasi seragam, yakni terdapat <span class="process-math">\(M\)</span> dengan <span class="process-math">\(|f(x)|\le M\)</span> untuk semua <span class="process-math">\(f\in\mathcal F\)</span> dan <span class="process-math">\(x\in X\text{.}\)</span>
+</div></article><article class="proof" id="proof-88"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9417">Untuk arah perlu, kekompakan penutup memberi keterbatasan total dalam metrik supremum. Jaring <span class="process-math">\(\varepsilon\)</span> berhingga yang terdiri atas fungsi kontinu mempunyai batas seragam bersama dan modulus kontinuitas lokal bersama; pendekatan setiap anggota keluarga oleh jaring itu memberi keterbatasan seragam dan ekukontinuitas.</div> <div class="para" id="p-9418">Untuk arah cukup, pilih untuk setiap skala <span class="process-math">\(1/n\)</span> suatu jaring berhingga pada <span class="process-math">\(X\text{.}\)</span> Keterbatasan nilai pada titik-titik jaring dan proses diagonal menghasilkan, dari setiap barisan di <span class="process-math">\(\mathcal F\text{,}\)</span> subbarisan yang konvergen pada gabungan terhitung titik-titik jaring. Ekukontinuitas meningkatkan kekonvergenan itu menjadi kekonvergenan seragam pada seluruh <span class="process-math">\(X\text{;}\)</span> limit seragam tetap kontinu. Jadi setiap barisan mempunyai subbarisan konvergen. Karena ruang fungsi bermetrik, kekompakan sekuensial setara dengan kekompakan penutup.</div></article><article class="remark remark-like" id="o003-c90-remark-arzela-ascoli-general"><h3 class="heading">
+<span class="type">Catatan</span><span class="space"> </span><span class="codenumber">U.139</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9419">Bentuk umum untuk kodomain metrik mengganti “dibatasi seragam” dengan syarat bahwa <span class="process-math">\(\{f(x):f\in\mathcal F\}\)</span> mempunyai penutup kompak untuk setiap <span class="process-math">\(x\text{.}\)</span> Modul ini memakai bentuk bernilai real agar jembatan menuju analisis tetap terbatas dan hipotesisnya eksplisit.</div></article></section><section class="subsection" id="o003-c90-completion-function-mastery"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span>
+</h3>
+<article class="exercise exercise-like" id="o003-c90-completion-function-ex-01"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-function-ex-01"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.140</span><span class="period">.</span><span class="space"> </span><span class="title">Kekonvergenan titik demi titik.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-01"><article class="exercise exercise-like"><div class="para" id="p-9420">Buktikan langsung dari basis hasil kali bahwa net <span class="process-math">\(f_\lambda:X\to Y\)</span> konvergen ke <span class="process-math">\(f\)</span> dalam <span class="process-math">\(Y^X\)</span> jika dan hanya jika <span class="process-math">\(f_\lambda(x)\to f(x)\)</span> untuk setiap <span class="process-math">\(x\in X\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-function-ex-01-hint" id="o003-c90-completion-function-ex-01-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-01-hint"><div class="hint solution-like"><div class="para" id="p-9421">Lingkungan dasar hasil kali hanya membatasi berhingga banyak koordinat.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-function-ex-01-answer" id="o003-c90-completion-function-ex-01-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-01-answer"><div class="answer solution-like"><div class="para" id="p-9422">Gunakan keterarahan untuk memilih satu indeks yang bekerja bagi semua koordinat dalam himpunan berhingga itu.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-function-ex-01-solution" id="o003-c90-completion-function-ex-01-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-01-solution"><div class="solution solution-like"><div class="para" id="p-9423">Jika net konvergen dalam hasil kali, kontinuitas proyeksi koordinat memberi kekonvergenan pada setiap titik. Sebaliknya, ambil lingkungan dasar <span class="process-math">\(N=\bigcap_{j=1}^r[x_j,U_j]\)</span> dari <span class="process-math">\(f\text{.}\)</span> Untuk setiap <span class="process-math">\(j\text{,}\)</span> kekonvergenan <span class="process-math">\(f_\lambda(x_j)\to f(x_j)\)</span> memberi indeks <span class="process-math">\(\lambda_j\)</span> setelah mana nilai berada dalam <span class="process-math">\(U_j\text{.}\)</span> Karena himpunan indeks terarah dan jumlahnya berhingga, ada indeks <span class="process-math">\(\lambda_0\)</span> yang mendominasi semuanya. Untuk <span class="process-math">\(\lambda\ge\lambda_0\text{,}\)</span> <span class="process-math">\(f_\lambda\in N\text{.}\)</span> Maka net konvergen dalam topologi hasil kali.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-function-ex-02"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-function-ex-02"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.141</span><span class="period">.</span><span class="space"> </span><span class="title">Tonjolan bergerak.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-02"><article class="exercise exercise-like"><div class="para" id="p-9424">Berikan rumus eksplisit untuk tonjolan segitiga <span class="process-math">\(b_n\)</span> pada <span class="process-math">\([0,1]\)</span> yang berpusat di <span class="process-math">\(1/n\text{,}\)</span> setinggi satu, berpenyangga selebar <span class="process-math">\(2/n^2\text{,}\)</span> lalu buktikan bahwa <span class="process-math">\(b_n\to0\)</span> titik demi titik tetapi tidak kompak-terbuka.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-function-ex-02-hint" id="o003-c90-completion-function-ex-02-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-02-hint"><div class="hint solution-like"><div class="para" id="p-9425">Gunakan <span class="process-math">\(b_n(x)=\max\{0,1-n^2|x-1/n|\}\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-function-ex-02-answer" id="o003-c90-completion-function-ex-02-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-02-answer"><div class="answer solution-like"><div class="para" id="p-9426">Setiap titik tetap akhirnya berada di luar penyangga, tetapi <span class="process-math">\(\sup_{[0,1]}b_n=1\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-function-ex-02-solution" id="o003-c90-completion-function-ex-02-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-02-solution"><div class="solution solution-like"><div class="para" id="p-9427">Rumus pada petunjuk kontinu, bernilai satu di <span class="process-math">\(1/n\text{,}\)</span> dan nol bila <span class="process-math">\(|x-1/n|\ge1/n^2\text{.}\)</span> Untuk <span class="process-math">\(x=0\text{,}\)</span> semua nilainya nol. Untuk <span class="process-math">\(x&gt;0\)</span> tetap, pusat dan seluruh penyangga akhirnya terletak di sebelah kiri <span class="process-math">\(x\text{,}\)</span> sehingga <span class="process-math">\(b_n(x)=0\)</span> untuk semua <span class="process-math">\(n\)</span> cukup besar. Jadi kekonvergenan titik demi titik berlaku. Namun domain <span class="process-math">\([0,1]\)</span> kompak dan <span class="process-math">\(b_n(1/n)=1\text{,}\)</span> sehingga jarak seragam dari nol selalu satu. Pada domain kompak, topologi kompak-terbuka sama dengan topologi seragam; maka tidak ada kekonvergenan kompak-terbuka.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-function-ex-03"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-function-ex-03"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.142</span><span class="period">.</span><span class="space"> </span><span class="title">Kompak-terbuka tidak selalu seragam.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-03"><article class="exercise exercise-like"><div class="para" id="p-9428">Tunjukkan bahwa <span class="process-math">\(f_n(x)=x/n\)</span> pada <span class="process-math">\(C(\mathbb R,\mathbb R)\)</span> konvergen ke nol dalam topologi kompak-terbuka tetapi tidak dalam topologi seragam yang dibentuk oleh <span class="process-math">\(\bar d(s,t)=\min\{1,|s-t|\}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-function-ex-03-hint" id="o003-c90-completion-function-ex-03-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-03-hint"><div class="hint solution-like"><div class="para" id="p-9429">Setiap himpunan kompak dalam <span class="process-math">\(\mathbb R\)</span> terbatas; untuk kegagalan seragam pilih <span class="process-math">\(x=n\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-function-ex-03-answer" id="o003-c90-completion-function-ex-03-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-03-answer"><div class="answer solution-like"><div class="para" id="p-9430">Pada <span class="process-math">\([-M,M]\text{,}\)</span> supremum galat paling besar <span class="process-math">\(M/n\text{,}\)</span> sedangkan supremum global terpotong selalu satu.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-function-ex-03-solution" id="o003-c90-completion-function-ex-03-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-03-solution"><div class="solution solution-like"><div class="para" id="p-9431">Jika <span class="process-math">\(K\subseteq\mathbb R\)</span> kompak, pilih <span class="process-math">\(M\)</span> dengan <span class="process-math">\(K\subseteq[-M,M]\text{.}\)</span> Maka <span class="process-math">\(\sup_{x\in K}|f_n(x)|\le M/n\to0\text{,}\)</span> yang memberi kekonvergenan seragam pada setiap kompak dan karenanya kekonvergenan kompak-terbuka. Di seluruh domain, untuk setiap <span class="process-math">\(n\)</span> pilih <span class="process-math">\(x=n\text{;}\)</span> maka <span class="process-math">\(\bar d(f_n(n),0)=1\text{.}\)</span> Jadi <span class="process-math">\(d_\infty(f_n,0)=1\)</span> untuk semua <span class="process-math">\(n\text{,}\)</span> sehingga tidak ada kekonvergenan seragam.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-function-ex-04"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-function-ex-04"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.143</span><span class="period">.</span><span class="space"> </span><span class="title">Kekontinuan evaluasi.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-04"><article class="exercise exercise-like"><div class="para" id="p-9432">Isi rincian bukti bahwa evaluasi <span class="process-math">\(C_k(X,Y)\times X\to Y\)</span> kontinu ketika <span class="process-math">\(X\)</span> kompak lokal Hausdorff.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-function-ex-04-hint" id="o003-c90-completion-function-ex-04-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-04-hint"><div class="hint solution-like"><div class="para" id="p-9433">Susutkan <span class="process-math">\(f^{-1}(U)\)</span> ke lingkungan dengan penutup kompak.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-function-ex-04-answer" id="o003-c90-completion-function-ex-04-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-04-answer"><div class="answer solution-like"><div class="para" id="p-9434">Lingkungan produk yang diperlukan adalah <span class="process-math">\([\overline V,U]\times V\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-function-ex-04-solution" id="o003-c90-completion-function-ex-04-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-04-solution"><div class="solution solution-like"><div class="para" id="p-9435">Ambil <span class="process-math">\((f,x)\)</span> dan lingkungan buka <span class="process-math">\(U\)</span> dari <span class="process-math">\(f(x)\text{.}\)</span> Himpunan <span class="process-math">\(f^{-1}(U)\)</span> terbuka dan memuat <span class="process-math">\(x\text{.}\)</span> Sifat kompak lokal Hausdorff memberi himpunan buka <span class="process-math">\(V\)</span> dengan <span class="process-math">\(x\in V\subseteq\overline V\subseteq f^{-1}(U)\)</span> dan <span class="process-math">\(\overline V\)</span> kompak. Karena itu <span class="process-math">\(f\in[\overline V,U]\text{.}\)</span> Jika <span class="process-math">\((g,v)\in[\overline V,U]\times V\text{,}\)</span> maka <span class="process-math">\(v\in\overline V\)</span> dan <span class="process-math">\(g(v)\in U\text{.}\)</span> Jadi prapeta setiap lingkungan <span class="process-math">\(U\)</span> memuat lingkungan produk dari <span class="process-math">\((f,x)\text{,}\)</span> yang membuktikan kekontinuan.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-function-ex-05"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-function-ex-05"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.144</span><span class="period">.</span><span class="space"> </span><span class="title">Pemadanan pemetaan dua variabel.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-05"><article class="exercise exercise-like"><div class="para" id="p-9436">Misalkan <span class="process-math">\(X\)</span> kompak lokal Hausdorff. Buktikan kedua arah korespondensi <span class="process-math">\(C(Z\times X,Y)\cong C(Z,C_k(X,Y))\)</span> dan periksa bahwa kedua konstruksi saling invers.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-function-ex-05-hint" id="o003-c90-completion-function-ex-05-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-05-hint"><div class="hint solution-like"><div class="para" id="p-9437">Untuk arah maju gunakan kekompakan <span class="process-math">\(K\text{;}\)</span> untuk arah balik faktorkan melalui evaluasi.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-function-ex-05-answer" id="o003-c90-completion-function-ex-05-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-05-answer"><div class="answer solution-like"><div class="para" id="p-9438">
+<span class="process-math">\(\widehat F(z)(x)=F(z,x)\)</span> dan <span class="process-math">\(G^\vee(z,x)=G(z)(x)\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-function-ex-05-solution" id="o003-c90-completion-function-ex-05-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-05-solution"><div class="solution solution-like"><div class="para" id="p-9439">Jika <span class="process-math">\(F\)</span> kontinu dan <span class="process-math">\(\widehat F(z_0)\in[K,U]\text{,}\)</span> maka <span class="process-math">\(F(\{z_0\}\times K)\subseteq U\text{.}\)</span> Untuk setiap <span class="process-math">\(x\in K\text{,}\)</span> kontinuitas memberi lingkungan produk yang dipetakan ke <span class="process-math">\(U\text{;}\)</span> pilih subpenutup berhingga atas <span class="process-math">\(K\)</span> dan irisankan lingkungan faktor <span class="process-math">\(Z\text{.}\)</span> Diperoleh lingkungan <span class="process-math">\(W\)</span> dari <span class="process-math">\(z_0\)</span> dengan <span class="process-math">\(F(W\times K)\subseteq U\text{,}\)</span> jadi <span class="process-math">\(\widehat F\)</span> kontinu. Jika <span class="process-math">\(G\)</span> kontinu, maka <span class="process-math">\(G^\vee=\operatorname{ev}\circ(G\times\operatorname{id}_X)\)</span> kontinu. Akhirnya, <span class="process-math">\((\widehat F)^\vee(z,x)=F(z,x)\)</span> dan <span class="process-math">\(\widehat{G^\vee}(z)(x)=G(z)(x)\text{,}\)</span> sehingga konstruksi itu saling invers.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-function-ex-06"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-function-ex-06"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.145</span><span class="period">.</span><span class="space"> </span><span class="title">Keluarga Lipschitz dan Arzelà–Ascoli.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-06"><article class="exercise exercise-like"><div class="para" id="p-9440">Misalkan <span class="process-math">\(X\)</span> ruang metrik kompak, <span class="process-math">\(x_0\in X\text{,}\)</span> dan <span class="process-math">\(L,M&gt;0\text{.}\)</span> Tunjukkan bahwa keluarga semua fungsi <span class="process-math">\(f:X\to\mathbb R\)</span> yang memenuhi <span class="process-math">\(|f(x)-f(y)|\le Ld(x,y)\)</span> dan <span class="process-math">\(|f(x_0)|\le M\)</span> mempunyai penutup kompak dalam topologi seragam.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-function-ex-06-hint" id="o003-c90-completion-function-ex-06-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-06-hint"><div class="hint solution-like"><div class="para" id="p-9441">Gunakan diameter <span class="process-math">\(X\)</span> untuk batas seragam dan konstanta Lipschitz untuk ekukontinuitas.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-function-ex-06-answer" id="o003-c90-completion-function-ex-06-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-06-answer"><div class="answer solution-like"><div class="para" id="p-9442">Keluarga dibatasi oleh <span class="process-math">\(M+L\operatorname{diam}(X)\)</span> dan mempunyai pilihan <span class="process-math">\(\delta=\varepsilon/L\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-function-ex-06-solution" id="o003-c90-completion-function-ex-06-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-function-ex-06-solution"><div class="solution solution-like"><div class="para" id="p-9443">Karena <span class="process-math">\(X\)</span> kompak, diameternya <span class="process-math">\(D\)</span> berhingga. Untuk setiap <span class="process-math">\(x\in X\)</span> dan setiap fungsi dalam keluarga, <span class="process-math">\(|f(x)|\le|f(x_0)|+|f(x)-f(x_0)|\le M+LD\text{.}\)</span> Jadi keluarga dibatasi seragam. Jika <span class="process-math">\(\varepsilon&gt;0\)</span> dan <span class="process-math">\(L&gt;0\text{,}\)</span> ambil <span class="process-math">\(\delta=\varepsilon/L\text{;}\)</span> maka <span class="process-math">\(d(x,y)&lt;\delta\)</span> mengakibatkan <span class="process-math">\(|f(x)-f(y)|&lt;\varepsilon\)</span> secara seragam terhadap <span class="process-math">\(f\text{.}\)</span> Keluarga itu ekukontinu. Teorema Arzelà–Ascoli memberi penutup kompak dalam metrik supremum. Jika <span class="process-math">\(L=0\text{,}\)</span> semua fungsi konstan dan kesimpulannya langsung berlaku.</div></div></div>
+</div></article></div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="o003-c90-completion-metrization.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-completion-integrated-mastery.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="external/vendor/badges/runestone.svg" alt="Runestone Academy"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="external/vendor/badges/mathjax.svg" alt="MathJax"></a>
+</div>
+</body>
+</html>

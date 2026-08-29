@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch20-source-guides-a" xml:lang="id-ID">
+  <title>Panduan Prompt Sumber: Topologi Hasil Kali, Contoh, dan Proyeksi</title>
+  <p>Enam belas panduan pertama mengikuti tepat urutan prompt nonlatihan pada pendahuluan sampai awal sifat hasil kali.</p>
+
+  <exercise xml:id="o003-c90-ch20-guide-01">
+    <title>Mendaftarkan calon persegi panjang basis</title>
+    <statement><p>Daftarkan semua hasil kali <m>U\times V</m> untuk topologi hingga yang diberikan pada <m>X=\{a,b,c\}</m> dan <m>Y=\{1,2\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-01-hint"><p>Pisahkan kasus <m>V=\emptyset</m>, <m>V=\{1\}</m>, dan <m>V=Y</m>; semua hasil kali yang memiliki faktor kosong adalah himpunan yang sama.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-01-answer"><p>Ada sebelas himpunan berbeda: <m>\emptyset</m>, lima himpunan <m>U\times\{1\}</m> untuk <m>U\in\{\{a\},\{b\},\{a,b\},\{a,c\},X\}</m>, dan lima himpunan <m>U\times Y</m> untuk lima <m>U</m> yang sama.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-01-solution"><p>Faktor kosong selalu memberi <m>\emptyset</m>. Untuk <m>V=\{1\}</m> diperoleh <m>\{(a,1)\}</m>, <m>\{(b,1)\}</m>, <m>\{(a,1),(b,1)\}</m>, <m>\{(a,1),(c,1)\}</m>, dan <m>X\times\{1\}</m>. Untuk <m>V=Y</m> diperoleh <m>\{a\}\times Y</m>, <m>\{b\}\times Y</m>, <m>\{a,b\}\times Y</m>, <m>\{a,c\}\times Y</m>, dan <m>X\times Y</m>. Kesebelasnya berbeda. <em>Rubrik:</em> jawaban tuntas menghilangkan duplikasi akibat faktor kosong dan menuliskan anggota setiap himpunan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-02">
+    <title>Gabungan persegi panjang yang bukan persegi panjang</title>
+    <statement><p>Uji apakah <m>A=\{(a,1),(a,2),(b,1)\}</m> harus terbuka dan apakah koleksi semua <m>U\times V</m> sendiri merupakan topologi.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-02-hint"><p>Tuliskan <m>A</m> sebagai gabungan dua elemen koleksi, lalu gunakan pasangan silang yang hilang untuk menguji bentuk persegi panjang.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-02-answer"><p><m>A=(\{a\}\times Y)\cup(\{b\}\times\{1\})</m>, sehingga topologi yang dibangkitkan harus memuat <m>A</m>. Namun <m>A</m> bukan satu hasil kali <m>U\times V</m>; karena itu koleksi awal tidak tertutup terhadap gabungan dan bukan topologi.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-02-solution"><p>Kedua himpunan pada gabungan berada dalam koleksi. Jika <m>A=U\times V</m>, keberadaan <m>(a,2)</m> dan <m>(b,1)</m> memaksa <m>a,b\in U</m> serta <m>1,2\in V</m>, sehingga <m>(b,2)</m> harus berada dalam <m>A</m>; kenyataannya tidak. Jadi gabungan dua elemen koleksi keluar dari koleksi. <em>Rubrik:</em> bukti harus menunjukkan sekaligus keterbukaan yang diinginkan, kegagalan bentuk hasil kali, dan kegagalan aksioma gabungan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-03">
+    <title>Topologi terkecil yang memuat calon basis</title>
+    <statement><p>Tentukan koleksi terkecil yang harus ditambahkan agar semua persegi panjang dasar membangkitkan topologi.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-03-hint"><p>Topologi yang dibangkitkan basis terdiri atas semua gabungan anggota basis, termasuk gabungan kosong.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-03-answer"><p>Ambil <m>\tau=\{\bigcup\mathcal A\mid\mathcal A\subseteq\mathcal B\}</m>, dengan <m>\mathcal B=\{U\times V:U\in\tau_X,V\in\tau_Y\}</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-03-solution"><p>Koleksi <m>\mathcal B</m> menutupi ruang dan irisan dua anggotanya kembali berbentuk hasil kali dari dua irisan buka. Karena itu semua gabungannya membentuk topologi. Setiap topologi yang memuat <m>\mathcal B</m> wajib memuat seluruh gabungan tersebut, sehingga <m>\tau</m> memang yang terkecil. <em>Rubrik:</em> jawaban harus memberi konstruksi semua gabungan dan membuktikan sifat minimalnya, bukan sekadar mengatakan “tambahkan <m>A</m>”.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-04">
+    <title>Kriteria basis untuk hasil kali</title>
+    <statement><p>Buktikan bahwa semua <m>U\times V</m>, dengan <m>U</m> dan <m>V</m> buka, merupakan basis pada <m>X\times Y</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-04-hint"><p>Periksa penutupan titik dan penyempurnaan irisan; gunakan <m>(U_1\times V_1)\cap(U_2\times V_2)=(U_1\cap U_2)\times(V_1\cap V_2)</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-04-answer"><p>Setiap titik berada dalam <m>X\times Y</m>, dan irisan dua anggota basis sendiri merupakan anggota basis yang memuat setiap titik irisannya.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-04-solution"><p>Untuk <m>(x,y)\in X\times Y</m>, persegi panjang <m>X\times Y</m> berada dalam koleksi. Jika <m>(x,y)</m> berada dalam dua persegi panjang dasar, maka ia berada dalam <m>(U_1\cap U_2)\times(V_1\cap V_2)</m>, yang buka pada tiap faktor dan termuat dalam irisan semula. Kedua aksioma basis terpenuhi. <em>Rubrik:</em> kedua aksioma basis dan identitas irisan harus dinyatakan eksplisit.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-05">
+    <title>Produk dua interval tertutup</title>
+    <statement><p>Deskripsikan <m>[1,2]\times[3,4]</m> dengan topologi hasil kali dari topologi subruang Euklides.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-05-hint"><p>Identifikasikan pasangan <m>(x,y)</m> dengan titik bidang.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-05-answer"><p>Ruangnya adalah persegi panjang tertutup <m>\{(x,y)\in\R^2:1\leq x\leq2,\ 3\leq y\leq4\}</m> dengan topologi subruang dari <m>\R^2</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-05-solution"><p>Basis hasil kali terdiri atas <m>(U\cap[1,2])\times(V\cap[3,4])</m> untuk interval buka <m>U,V\subseteq\R</m>. Ini persis basis topologi subruang persegi panjang di bidang Euklides. <em>Rubrik:</em> deskripsi geometris harus disertai identifikasi topologinya, termasuk lingkungan relatif pada tepi.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-06">
+    <title>Himpunan buka yang bukan satu persegi panjang</title>
+    <statement><p>Berikan himpunan buka pada produk dua interval yang bukan berbentuk <m>U\times V</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-06-hint"><p>Gabungkan dua persegi panjang buka relatif yang terpisah secara diagonal.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-06-answer"><p>Misalnya <m>([1,3/2)\times[3,7/2))\cup((3/2,2]\times(7/2,4])</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-06-solution"><p>Kedua persegi panjang merupakan hasil kali himpunan buka relatif, jadi gabungannya buka. Gabungan memuat satu titik pada masing-masing komponen diagonal tetapi tidak memuat kedua pasangan silang; sifat ini mustahil bagi satu hasil kali <m>U\times V</m>. <em>Rubrik:</em> contoh harus benar-benar buka relatif dan argumen “pasangan silang” harus membuktikan bahwa ia bukan satu persegi panjang.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-07">
+    <title>Silinder sebagai ruang hasil kali</title>
+    <statement><p>Visualisasikan <m>\R\times S^1</m> dan salinan <m>S^1</m> di atas beberapa titik real.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-07-hint"><p>Letakkan satu lingkaran tegak lurus sumbu real pada setiap posisi <m>x</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-07-answer"><p><m>\R\times S^1</m> adalah silinder tak berhingga; serat <m>\R_x=\{x\}\times S^1</m> merupakan lingkaran penampang pada posisi <m>x</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-07-solution"><p>Peta <m>(x,(u,v))\mapsto(x,u,v)</m> menempatkan produk sebagai <m>\{(x,u,v):u^2+v^2=1\}</m> dalam <m>\R^3</m>. Untuk <m>x=-1,0,1</m>, seratnya adalah tiga lingkaran sejajar. <em>Rubrik:</em> gambar atau uraian harus menunjukkan sumbu tak berhingga, penampang lingkaran, dan parameter kedua faktor secara terpisah.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-08">
+    <title>Himpunan buka relatif pada lingkaran</title>
+    <statement><p>Deskripsikan himpunan <m>B\cap S^1</m> ketika <m>B</m> bola buka di <m>\R^2</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-08-hint"><p>Bayangkan cakram terbuka memotong keliling lingkaran.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-08-answer"><p>Irisannya berupa busur-busur terbuka relatif pada <m>S^1</m>; ia juga dapat kosong atau seluruh lingkaran.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-08-solution"><p>Karena <m>B</m> buka di bidang, <m>B\cap S^1</m> terbuka dalam topologi subruang. Secara lokal ia terdiri atas satu atau beberapa busur yang tidak menyertakan titik ujung relatif; posisi dan jari-jari bola juga memungkinkan irisan kosong atau seluruh <m>S^1</m>. <em>Rubrik:</em> jawaban harus menyebut topologi subruang dan tidak menganggap setiap irisan selalu satu busur.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-09">
+    <title>Petak basis pada silinder</title>
+    <statement><p>Deskripsikan elemen basis <m>U\times V</m> pada <m>\R\times S^1</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-09-hint"><p>Ambil interval terbuka sepanjang sumbu dan busur terbuka sepanjang penampang.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-09-answer"><p>Elemen basis adalah pita persegi panjang melengkung: interval terbuka pada arah aksial dikali busur terbuka pada arah melingkar.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-09-solution"><p>Untuk <m>U=(a,b)</m> dan <m>V=B\cap S^1</m>, himpunan <m>U\times V</m> memuat semua penampang dengan <m>x\in(a,b)</m>, tetapi hanya bagian busur <m>V</m> dari tiap penampang. Koordinat produk menunjukkan bahwa petak-petak ini membentuk basis. <em>Rubrik:</em> uraian harus mengaitkan kedua arah geometris dengan kedua faktor.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-10">
+    <title>Torus sebagai produk dua lingkaran</title>
+    <statement><p>Visualisasikan <m>2S^1\times S^1</m> dengan lingkaran kecil tegak lurus lingkaran berjari-jari dua.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-10-hint"><p>Gerakkan satu salinan <m>S^1</m> mengelilingi faktor <m>2S^1</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-10-answer"><p>Produk tersebut adalah torus abstrak; serat di <m>(2,0)</m>, <m>(\sqrt2,\sqrt2)</m>, dan <m>(0,2)</m> adalah tiga lingkaran meridian.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-10-solution"><p>Setiap <m>p\in2S^1</m> membawa serat <m>\{p\}\times S^1</m>. Menempatkan serat tegak lurus terhadap lingkaran pertama menghasilkan permukaan donat. Secara intrinsik ruangnya adalah <m>S^1\times S^1</m>; skala faktor pertama tidak mengubah tipe homeomorfismenya. <em>Rubrik:</em> gambar harus menutup kedua arah melingkar dan menempatkan ketiga serat pada titik yang benar.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-11">
+    <title>Busur pada faktor lingkaran kecil</title>
+    <statement><p>Deskripsikan kembali irisan bola buka dengan faktor <m>S^1</m> pada model torus.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-11-hint"><p>Topologi faktor kedua tidak berubah dari contoh silinder.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-11-answer"><p>Himpunan itu adalah himpunan buka relatif pada lingkaran satuan, umumnya berupa satu atau beberapa busur terbuka.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-11-solution"><p>Faktor kedua tetap <m>S^1</m> dengan topologi subruang Euklides. Karena itu analisis irisan <m>B\cap S^1</m> sama persis seperti pada silinder: irisan tersebut terbuka relatif dan secara lokal berupa busur. <em>Rubrik:</em> jawaban harus membedakan fakta intrinsik pada faktor dari gambar torus di ruang tiga dimensi.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-12">
+    <title>Petak basis pada torus</title>
+    <statement><p>Deskripsikan hasil kali busur terbuka pada <m>2S^1</m> dan busur terbuka pada <m>S^1</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-12-hint"><p>Potong torus sepanjang kedua arah sudut di sekitar satu titik.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-12-answer"><p>Elemen basis adalah petak permukaan terbuka yang secara lokal homeomorfik dengan persegi panjang terbuka.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-12-solution"><p>Jika <m>U</m> dan <m>V</m> masing-masing busur terbuka, koordinat sudut memberi homeomorfisme lokal <m>U\times V</m> dengan hasil kali dua interval terbuka. Pada model donat, petak ini melengkung tetapi tidak membungkus penuh salah satu arah jika busurnya cukup kecil. <em>Rubrik:</em> jawaban harus mengidentifikasi kedua busur dan sifat lokal dua dimensinya.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-13">
+    <title>Prapeta oleh proyeksi pertama</title>
+    <statement><p>Hitung <m>\pi_1^{-1}(O_1)</m> untuk <m>\pi_1:X_1\times X_2\to X_1</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-13-hint"><p>Koordinat kedua tidak dibatasi oleh syarat <m>\pi_1(x_1,x_2)\in O_1</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-13-answer"><p><m>\pi_1^{-1}(O_1)=O_1\times X_2</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-13-solution"><p>Pasangan <m>(x_1,x_2)</m> berada dalam prapeta tepat ketika <m>x_1\in O_1</m>, sedangkan <m>x_2</m> boleh sembarang. Ini persis definisi <m>O_1\times X_2</m>. <em>Rubrik:</em> kesetaraan harus dibuktikan dua arah melalui keanggotaan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-14">
+    <title>Kontinuitas proyeksi</title>
+    <statement><p>Buktikan bahwa <m>\pi_1</m> kontinu.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-14-hint"><p>Gunakan hasil prapeta pada panduan sebelumnya.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-14-answer"><p>Prapeta setiap <m>O_1</m> buka adalah <m>O_1\times X_2</m>, yang merupakan himpunan buka basis.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-14-solution"><p>Untuk setiap himpunan buka <m>O_1\subseteq X_1</m>, kita memiliki <m>\pi_1^{-1}(O_1)=O_1\times X_2</m>. Kedua faktor pada ruas kanan buka, sehingga hasil kalinya buka. Kriteria prapeta bagi kekontinuan menyelesaikan bukti. <em>Rubrik:</em> bukti harus berlaku untuk setiap himpunan buka, bukan hanya elemen basis tertentu.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-15">
+    <title>Uji kekontinuan melalui subbasis</title>
+    <statement><p>Buktikan bahwa prapeta terbuka untuk setiap elemen subbasis mengakibatkan fungsi kontinu.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-15-hint"><p>Elemen basis adalah irisan berhingga elemen subbasis; himpunan buka adalah gabungan elemen basis.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-15-answer"><p>Prapeta mempertahankan irisan berhingga dan gabungan sebarang, sehingga prapeta semua himpunan buka bersifat buka.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-15-solution"><p>Jika <m>B=S_1\cap\cdots\cap S_k</m> elemen basis yang dibangkitkan subbasis, maka <m>f^{-1}(B)=\bigcap_{j=1}^k f^{-1}(S_j)</m>, suatu irisan berhingga himpunan buka. Jika <m>O=\bigcup_\alpha B_\alpha</m>, maka <m>f^{-1}(O)=\bigcup_\alpha f^{-1}(B_\alpha)</m>, juga buka. Jadi <m>f</m> kontinu. <em>Rubrik:</em> solusi harus memakai kedua tahap—subbasis ke basis dan basis ke topologi.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-16">
+    <title>Target bukti Hausdorff untuk produk</title>
+    <statement><p>Nyatakan apa yang harus dibangun untuk membuktikan <m>X\times Y</m> Hausdorff.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-16-hint"><p>Mulailah dengan dua pasangan berbeda dan tulis definisi Hausdorff.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-16-answer"><p>Untuk setiap dua titik berbeda <m>p,q\in X\times Y</m>, harus dibangun lingkungan buka <m>W_p,W_q</m> yang masing-masing memuat satu titik dan saling lepas.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-16-solution"><p>Karena basis produk terdiri atas persegi panjang, cukup mencari <m>U_1\times V_1</m> dan <m>U_2\times V_2</m> yang memuat kedua titik dan beririsan kosong. Pada langkah berikutnya, salah satu koordinat yang berbeda akan menyediakan pasangan lingkungan faktor yang saling lepas. <em>Rubrik:</em> target harus dikuantifikasi untuk pasangan titik berbeda dan memuat syarat keterbukaan, pemuatan, serta ketakberirisan.</p></solution>
+  </exercise>
+</section>

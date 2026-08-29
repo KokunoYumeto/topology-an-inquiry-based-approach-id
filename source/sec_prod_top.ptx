@@ -1,57 +1,57 @@
 <section xml:id="sec_prod_top">
-  <title>Introduction</title>
+  <title>Pendahuluan</title>
   <p>
-    In <xref ref="chap_metric_subspaces"/>
-    we saw how we can make a Cartesian product of two metric spaces into a metric space.
-    This is exactly the construction that allows us to work with the Cartesian plane <m>\R^2</m> as a metric space with the usual metric.
-    As we discussed in <xref ref="chap_top_spaces"/>,
-    every metric space is a topological space,
-    but not every topological space is metrizable.
-    So knowing how to make a product of metric spaces into a metric space still leaves open the question of how we can make the product of topological spaces into a topological space.
-    If we have two topological spaces
-    <m>(X, \tau_X)</m> and <m>(Y , \tau_Y)</m>,
-    a natural approach to this problem might be to take as the open sets in
-    <m>X \times Y</m> the sets of the form <m>U \times V</m> where
-    <m>U \in \tau_X</m> and <m>V \in \tau_Y</m>.
-    We investigate this idea in <xref ref="PA_pd_top_1"/>.
+    Dalam <xref ref="chap_metric_subspaces"/>
+    kita telah melihat cara menjadikan hasil kali Kartesius dua ruang metrik sebagai ruang metrik.
+    Konstruksi inilah yang memungkinkan kita memperlakukan bidang Kartesius <m>\R^2</m> sebagai ruang metrik dengan metrik biasa.
+    Seperti yang telah kita bahas dalam <xref ref="chap_top_spaces"/>,
+    setiap ruang metrik merupakan ruang topologi,
+    tetapi tidak setiap ruang topologi dapat dimetrikkan.
+    Jadi, pengetahuan tentang cara menjadikan hasil kali ruang-ruang metrik sebagai ruang metrik masih menyisakan pertanyaan tentang cara menjadikan hasil kali ruang-ruang topologi sebagai ruang topologi.
+    Jika kita memiliki dua ruang topologi
+    <m>(X, \tau_X)</m> dan <m>(Y , \tau_Y)</m>,
+    pendekatan yang wajar terhadap masalah ini mungkin adalah mengambil sebagai himpunan buka dalam
+    <m>X \times Y</m> semua himpunan berbentuk <m>U \times V</m>, dengan
+    <m>U \in \tau_X</m> dan <m>V \in \tau_Y</m>.
+    Kita menyelidiki gagasan ini dalam <xref ref="PA_pd_top_1"/>.
   </p>
 
   <exploration xml:id="PA_pd_top_1">
   <introduction>
     <p>
-      Let <m>X = \{a,b,c\}</m> with <m>\tau_X = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{a,c\}, X\}</m>,
-      and let <m>Y = \{1,2\}</m> with <m>\tau_Y = \{\emptyset, \{1\}, Y\}</m>.
+      Misalkan <m>X = \{a,b,c\}</m> dengan <m>\tau_X = \{\emptyset, \{a\}, \{b\}, \{a,b\}, \{a,c\}, X\}</m>,
+      dan misalkan <m>Y = \{1,2\}</m> dengan <m>\tau_Y = \{\emptyset, \{1\}, Y\}</m>.
     </p>
   </introduction>
       <task>
         <statement>
           <p>
-            Let
+            Misalkan
             <men xml:id="eq_prod_basis">
-              \CB = \{U \times V \mid U \in \tau_X \text{ and }  V \in \tau_Y\}
+              \CB = \{U \times V \mid U \in \tau_X \text{ dan }  V \in \tau_Y\}
             </men>.
-            List all of the sets in <m>\CB</m> along with their elements.
+            Tuliskan semua himpunan dalam <m>\CB</m> beserta anggota-anggotanya.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Assume that all of the sets in <m>\CB</m> are open sets in <m>X \times Y</m>.
-            Should the set <m>A = \{(a,1), (a,2), (b,1)\}</m> be an open set in <m>X \times Y</m>?
-            Is the set <m>A</m> of the form
-            <m>U \times V</m> for some open sets <m>U</m> in <m>X</m> and <m>V</m> in <m>Y</m>?
-            Explain.
-            Is <m>\CB</m> a topology on <m>X \times Y</m>?
+            Anggaplah semua himpunan dalam <m>\CB</m> merupakan himpunan buka dalam <m>X \times Y</m>.
+            Apakah himpunan <m>A = \{(a,1), (a,2), (b,1)\}</m> seharusnya merupakan himpunan buka dalam <m>X \times Y</m>?
+            Apakah himpunan <m>A</m> berbentuk
+            <m>U \times V</m> untuk suatu himpunan buka <m>U</m> dalam <m>X</m> dan <m>V</m> dalam <m>Y</m>?
+            Jelaskan.
+            Apakah <m>\CB</m> merupakan topologi pada <m>X \times Y</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            If <m>\CB</m> is not a topology on <m>X \times Y</m>,
-            what is the smallest collection of sets would we need to add to <m>\CB</m> to make a topology on <m>X \times Y</m>?
-            Explain your process.
+            Jika <m>\CB</m> bukan topologi pada <m>X \times Y</m>,
+            apakah koleksi himpunan terkecil yang perlu kita tambahkan pada <m>\CB</m> agar diperoleh suatu topologi pada <m>X \times Y</m>?
+            Jelaskan proses Anda.
           </p>
         </statement>
       </task>

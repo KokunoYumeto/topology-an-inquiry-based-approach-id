@@ -1,140 +1,141 @@
 <section xml:id="sec_path_connect_equiv">
-  <title>Path Connectedness as an Equivalence Relation</title>
+  <title>Keterhubungan Lintasan sebagai Relasi Ekuivalensi</title>
   <p>
-    We saw that we could define an equivalence relation using connected subsets of a topological space,
-    which partitions the space into a disjoint union of connected components.
-    We might expect to be able to do something similar with path connectedness.
-    The main difficulty will be transitivity.
-    As illustrated in <xref ref="F_path_transitive"/>,
-    if we have a path <m>p</m> from <m>a</m> to <m>b</m> and a path <m>q</m> from <m>b</m> to <m>c</m>,
-    it appears that we can just follow the path <m>p</m> from <m>a</m> to <m>b</m>,
-    then path <m>q</m> from <m>b</m> to <m>c</m> to have a path from <m>a</m> to <m>c</m>.
-    But there are two problems to consider:
-    how do we define this path as a function from <m>[0,1]</m> into our space,
-    and how do we know the resulting function is continuous.
-    The next lemma will help.
+    Kita telah melihat bahwa kita dapat mendefinisikan relasi ekuivalensi menggunakan subhimpunan-subhimpunan terhubung dari suatu ruang topologi,
+    yang mempartisi ruang tersebut menjadi gabungan saling lepas dari komponen-komponen terhubung.
+    Kita mungkin berharap dapat melakukan hal serupa dengan keterhubungan lintasan.
+    Kesulitan utamanya terletak pada sifat transitif.
+    Seperti diilustrasikan dalam <xref ref="F_path_transitive"/>,
+    jika kita memiliki lintasan <m>p</m> dari <m>a</m> ke <m>b</m> dan lintasan <m>q</m> dari <m>b</m> ke <m>c</m>,
+    tampaknya kita cukup mengikuti lintasan <m>p</m> dari <m>a</m> ke <m>b</m>,
+    lalu lintasan <m>q</m> dari <m>b</m> ke <m>c</m> untuk memperoleh lintasan dari <m>a</m> ke <m>c</m>.
+    Namun, ada dua masalah yang perlu dipertimbangkan:
+    bagaimana kita mendefinisikan lintasan ini sebagai fungsi dari <m>[0,1]</m> ke ruang kita,
+    dan bagaimana kita mengetahui bahwa fungsi yang dihasilkan kontinu.
+    Lemma berikut akan membantu.
   </p>
 
   <figure xml:id="F_path_transitive">
-    <caption>A path from <m>a</m> to <m>c</m>.</caption>
-    <image width="50%" source="path_transitive"/>
+    <caption>Lintasan dari <m>a</m> ke <m>c</m>.</caption>
+    <image width="50%" source="path_transitive"><description>Lintasan <m>p</m> dari <m>a</m> ke <m>b</m> diikuti lintasan <m>q</m> dari <m>b</m> ke <m>c</m>, membentuk lintasan gabungan dari <m>a</m> ke <m>c</m>.</description></image>
   </figure>
 
   <lemma>
-    <title>The Gluing Lemma</title>
-    <idx><h>Gluing Lemma</h></idx>
+    <title>Lemma Penempelan</title>
+    <idx><h>Lemma Penempelan</h></idx>
     <statement>
       <p>
 
-        Let <m>A</m> and <m>B</m> be closed subsets of a space <m>X = A \cup B</m>, and let <m>f:A \to Y</m> and <m>g: B \to Y</m> be continuous functions into a space <m>Y</m> such that <m>f(x)=g(x)</m> for all <m>x \in (A \cap B)</m>.
-        Then the function <m>h:X \to Y</m> defined by
+        Misalkan <m>A</m> dan <m>B</m> subhimpunan tertutup dari ruang <m>X = A \cup B</m>, dan misalkan <m>f:A \to Y</m> serta <m>g: B \to Y</m> fungsi kontinu ke ruang <m>Y</m> sedemikian sehingga <m>f(x)=g(x)</m> untuk setiap <m>x \in (A \cap B)</m>.
+        Maka fungsi <m>h:X \to Y</m> yang didefinisikan oleh
         <me>
-          h(x) = \begin{cases}f(x) \amp \text{ if }  x \in A \\ g(x) \amp \text{ if }  x \in B \end{cases}
+          h(x) = \begin{cases}f(x) \amp \text{ jika }  x \in A \\ g(x) \amp \text{ jika }  x \in B \end{cases}
         </me>
-        is continuous.
+        adalah kontinu.
       </p>
       <figure xml:id="F_Gluing_Lemma">
-        <caption>The Gluing Lemma.</caption>
-        <image width="50%" source="Gluing_Lemma"/>
+        <caption>Lemma Penempelan.</caption>
+        <image width="50%" source="Gluing_Lemma"><description>Himpunan tertutup <m>A</m> dan <m>B</m> menutupi <m>X</m>; fungsi kontinu <m>f</m> pada <m>A</m> dan <m>g</m> pada <m>B</m> berimpit pada irisannya sehingga mendefinisikan fungsi kontinu <m>h</m> pada <m>X</m>.</description></image>
       </figure>
     </statement>
 
   <proof>
     <p>
-      Let <m>A</m> and <m>B</m> be closed subsets of a space <m>X = A \cup B</m>,
-      and let <m>f:A \to Y</m> and
-      <m>g: B \to Y</m> be continuous functions into a space <m>Y</m> such that <m>f(x)=g(x)</m> for all
-      <m>x \in (A \cap B)</m> as illustrated in <xref ref="F_Gluing_Lemma"/>.
-      Define <m>h: X \to Y</m> by
+      Misalkan <m>A</m> dan <m>B</m> subhimpunan tertutup dari ruang <m>X = A \cup B</m>,
+      dan misalkan <m>f:A \to Y</m> serta
+      <m>g: B \to Y</m> fungsi kontinu ke ruang <m>Y</m> sedemikian sehingga <m>f(x)=g(x)</m> untuk setiap
+      <m>x \in (A \cap B)</m>, seperti diilustrasikan dalam <xref ref="F_Gluing_Lemma"/>.
+      Definisikan <m>h: X \to Y</m> dengan
       <me>
-        h(x) = \begin{cases}f(x) \amp \text{ if }  x \in A \\ g(x) \amp \text{ if }  x \in B. \end{cases}
+        h(x) = \begin{cases}f(x) \amp \text{ jika }  x \in A \\ g(x) \amp \text{ jika }  x \in B. \end{cases}
       </me>
     </p>
     <p>
-      To show that <m>h</m> is continuous,
-      let <m>C</m> be a closed subset of <m>Y</m>.
-      Then
+      Untuk menunjukkan bahwa <m>h</m> kontinu,
+      misalkan <m>C</m> subhimpunan tertutup dari <m>Y</m>.
+      Maka
       <md>
         <mrow>h^{-1}(C) = \{x \in X \mid h(x) \in C\} \amp = \{x \in A \mid f(x) \in C\} \cup \{x \in B \mid g(x) \in C\}</mrow>
         <mrow> \amp = f^{-1}(C) \cup g^{-1}(C)</mrow>
       </md>.
     </p>
     <p>
-      Since <m>f</m> is continuous,
-      <m>f^{-1}(C)</m> is closed in the subspace topology on <m>A</m> and since <m>g</m> is continuous
-      <m>g^{-1}(C)</m> is closed in the subspace topology on <m>B</m>.
-      So <m>f^{-1}(C) = A \cap D</m> and
-      <m>g^{-1}(C) = B \cap E</m> for some closed sets <m>D</m> and <m>E</m> of <m>X</m>.
-      The fact that <m>A</m> is closed in <m>X</m> implies that
-      <m>A \cap D</m> is closed in <m>X</m>.
-      Similarly, the fact that <m>B</m> is closed in <m>X</m> implies that
-      <m>B \cap E</m> is closed in <m>X</m>.
-      Thus,
+      Karena <m>f</m> kontinu,
+      <m>f^{-1}(C)</m> tertutup dalam topologi subruang pada <m>A</m>, dan karena <m>g</m> kontinu,
+      <m>g^{-1}(C)</m> tertutup dalam topologi subruang pada <m>B</m>.
+      Jadi, <m>f^{-1}(C) = A \cap D</m> dan
+      <m>g^{-1}(C) = B \cap E</m> untuk suatu himpunan tertutup <m>D</m> dan <m>E</m> dari <m>X</m>.
+      Fakta bahwa <m>A</m> tertutup dalam <m>X</m> mengakibatkan
+      <m>A \cap D</m> tertutup dalam <m>X</m>.
+      Demikian pula, fakta bahwa <m>B</m> tertutup dalam <m>X</m> mengakibatkan
+      <m>B \cap E</m> tertutup dalam <m>X</m>.
+      Jadi,
       <me>
         h^{-1}(C) = f^{-1}(C) \cup g^{-1}(C) = (A \cap D) \cup (B \cap E)
       </me>
-      is a finite union of closed sets in <m>X</m> and so is closed in <m>X</m>.
-      Since <m>h^{-1}(C)</m> is closed for every closed set in <m>Y</m>,
-      it follows that <m>h</m> is continuous.
+      merupakan gabungan berhingga dari himpunan-himpunan tertutup dalam <m>X</m>, sehingga tertutup dalam <m>X</m>.
+      Karena <m>h^{-1}(C)</m> tertutup untuk setiap himpunan tertutup dalam <m>Y</m>,
+      diperoleh bahwa <m>h</m> kontinu.
     </p>
   </proof>
   </lemma>
 
   <p>
-    We can use the Gluing Lemma to create a path from <m>a</m> to <m>c</m> given a path from <m>a</m> to <m>b</m> and a path from <m>b</m> to <m>c</m>.
+    Kita dapat menggunakan Lemma Penempelan untuk membentuk lintasan dari <m>a</m> ke <m>c</m> jika diberikan lintasan dari <m>a</m> ke <m>b</m> dan lintasan dari <m>b</m> ke <m>c</m>.
   </p>
 
   <activity>
     <p>
-      Use the Gluing Lemma to explain why the path product given in the following definition is actually a path from <m>p(0)</m> to <m>q(1)</m>.
+      Gunakan Lemma Penempelan untuk menjelaskan mengapa hasil kali lintasan dalam definisi berikut benar-benar merupakan lintasan dari <m>p(0)</m> ke <m>q(1)</m>.
     </p>
-    <definition>
-      <idx><h>path product</h></idx>
-      <statement>
-        <p>
-          Let <m>p</m> be a path from <m>a</m> to <m>b</m> and <m>q</m> a path from <m>b</m> to <m>c</m> in a space <m>X</m>.
-          The <term>path product</term>
-          <m>q*p</m> is the path in <m>X</m> defined by
-          <me>
-            (q*p)(x) = \begin{cases}p(2x) \amp \text{ for }  0 \leq x \leq \frac{1}{2} \\ q(2x-1) \amp \text{ for }  \frac{1}{2} \leq x \leq 1. \end{cases}
-          </me>
-        </p>
-      </statement>
-    </definition>
   </activity>
 
+  <definition>
+    <idx><h>hasil kali lintasan</h></idx>
+    <statement>
+      <p>
+        Misalkan <m>p</m> lintasan dari <m>a</m> ke <m>b</m> dan <m>q</m> lintasan dari <m>b</m> ke <m>c</m> dalam ruang <m>X</m>.
+        <term>Hasil kali lintasan</term>
+        <m>q*p</m> adalah lintasan dalam <m>X</m> yang didefinisikan oleh
+        <me>
+          (q*p)(x) = \begin{cases}p(2x) \amp \text{ untuk }  0 \leq x \leq \frac{1}{2} \\ q(2x-1) \amp \text{ untuk }  \frac{1}{2} \leq x \leq 1. \end{cases}
+        </me>
+      </p>
+    </statement>
+  </definition>
+
   <p>
-    Now we can show that path connectedness defines an equivalence relation on a topological space.
+    Sekarang kita dapat menunjukkan bahwa keterhubungan lintasan mendefinisikan relasi ekuivalensi pada ruang topologi.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>(X,\tau)</m> be a topological space.
-      Define a relation on <m>X</m> as follows:
+      Misalkan <m>(X,\tau)</m> ruang topologi.
+      Definisikan relasi pada <m>X</m> sebagai berikut:
       <men xml:id="eq_path_equivalence">
-        a \sim b \text{ if there is a path in }  X \text{ from }  a \text{ to }  b
+        a \sim b \text{ jika terdapat lintasan dalam }  X \text{ dari }  a \text{ ke }  b
       </men>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Explain why <m>\sim</m> is a reflexive relation.
+            Jelaskan mengapa <m>\sim</m> merupakan relasi refleksif.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Explain why <m>\sim</m> is a symmetric relation.
+            Jelaskan mengapa <m>\sim</m> merupakan relasi simetris.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Explain why <m>\sim</m> is a transitive relation.
+            Jelaskan mengapa <m>\sim</m> merupakan relasi transitif.
           </p>
         </statement>
       </task>
@@ -142,20 +143,20 @@
   </activity>
 
   <p>
-    Since <m>\sim</m> as defined in <xref ref="eq_path_equivalence"/> is an equivalence relation,
-    the relation partitions <m>X</m> into a union of disjoint equivalence classes.
-    The equivalence class of an element <m>[a]</m> is called a
-    <term>path component</term> of <m>X</m>,
-    and is the largest path connected subset of <m>X</m> that contains <m>a</m>.
+    Karena <m>\sim</m> sebagaimana didefinisikan dalam <xref ref="eq_path_equivalence"/> merupakan relasi ekuivalensi,
+    relasi tersebut mempartisi <m>X</m> menjadi gabungan kelas-kelas ekuivalensi yang saling lepas.
+    Kelas ekuivalensi suatu elemen <m>[a]</m> disebut
+    <term>komponen lintasan</term> dari <m>X</m>,
+    dan merupakan subhimpunan terhubung lintasan terbesar dari <m>X</m> yang memuat <m>a</m>.
   </p>
 
   <definition>
-    <idx><h>path component</h></idx>
+    <idx><h>komponen lintasan</h></idx>
     <statement>
       <p>
-        The <term>path component</term>
-        of an element <m>a</m> in a topological space
-        <m>(X, \tau)</m> is the largest path connected subset of <m>X</m> that contains <m>a</m>.
+        <term>Komponen lintasan</term>
+        dari elemen <m>a</m> dalam ruang topologi
+        <m>(X, \tau)</m> adalah subhimpunan terhubung lintasan terbesar dari <m>X</m> yang memuat <m>a</m>.
       </p>
     </statement>
   </definition>

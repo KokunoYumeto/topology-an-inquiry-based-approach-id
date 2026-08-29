@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch20-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan Latihan Bab 20, Bagian A</title>
+  <p>Bagian ini memuat dukungan lengkap untuk sepuluh prompt latihan pertama.</p>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-01">
+    <title>Subbasis produk pada dua ruang hingga</title>
+    <statement><p>Daftarkan semua silinder proyeksi untuk <m>Y_1=\{a,b,c\}</m> dan <m>Y_2=\{1,2\}</m>, lalu tunjukkan bahwa irisan berhingganya membangkitkan topologi hasil kali.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-01-hint"><p>Prapeta proyeksi pertama berbentuk <m>O_1\times Y_2</m>; prapeta proyeksi kedua berbentuk <m>Y_1\times O_2</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-01-answer"><p>Himpunan berbeda dalam subbasis ialah <m>\emptyset</m>, <m>Y_1\times Y_2</m>, <m>\{a\}\times Y_2</m>, <m>\{b,c\}\times Y_2</m>, dan <m>Y_1\times\{1\}</m>. Irisan satu silinder dari tiap arah memberi semua <m>O_1\times O_2</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-01-solution"><p>Dari <m>\tau_1</m> diperoleh empat prapeta, dan dari <m>\tau_2</m> tiga prapeta; himpunan kosong dan seluruh ruang muncul pada kedua daftar, sehingga ada lima yang berbeda. Untuk setiap <m>O_1\in\tau_1</m> dan <m>O_2\in\tau_2</m>, <m>(O_1\times Y_2)\cap(Y_1\times O_2)=O_1\times O_2</m>. Jadi irisan berhingga subbasis menghasilkan basis produk, dan semua gabungannya menghasilkan topologi hasil kali. <em>Rubrik:</em> daftar harus bebas duplikasi dan pembangkitan harus dibuktikan melalui irisan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-02">
+    <title>Subbasis proyeksi untuk produk berhingga</title>
+    <statement><p>Buktikan bahwa semua <m>\pi_i^{-1}(O_i)</m> membentuk subbasis pada <m>\prod_{i=1}^n X_i</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-02-hint"><p>Nyatakan satu kotak basis sebagai irisan tepat <m>n</m> silinder.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-02-answer"><p><m>\prod_{i=1}^n O_i=\bigcap_{i=1}^n\pi_i^{-1}(O_i)</m>; jadi semua kotak basis merupakan irisan berhingga subbasis.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-02-solution"><p>Keanggotaan suatu titik <m>(x_i)</m> pada ruas kiri berarti <m>x_i\in O_i</m> untuk setiap <m>i</m>, yang ekuivalen dengan keanggotaannya pada tiap prapeta di ruas kanan. Sebaliknya, irisan sebarang berhingga silinder proyeksi dapat disatukan per koordinat menjadi kotak basis, dengan faktor takdibatasi diganti <m>X_i</m>. Maka koleksi silinder adalah subbasis. <em>Rubrik:</em> bukti harus mencakup kedua arah: subbasis menghasilkan basis dan irisan subbasis tetap disempurnakan oleh basis.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-03">
+    <title>Basis interval horizontal</title>
+    <statement><p>Untuk <m>X=\R</m> Euklides dan <m>Y=\R</m> diskret, buktikan bahwa semua <m>(a,b)\times\{c\}</m> merupakan basis.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-03-hint"><p>Singleton <m>\{c\}</m> terbuka dalam faktor diskret.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-03-answer"><p>Setiap interval horizontal adalah kotak buka; setiap kotak <m>U\times V</m> merupakan gabungan interval horizontal yang termuat di dalamnya.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-03-solution"><p>Untuk <m>(x,c)\in X\times Y</m>, pilih interval <m>(a,b)\ni x</m>; maka <m>(a,b)\times\{c\}</m> memuat titik tersebut. Jika titik berada dalam dua interval horizontal, kedua koordinat keduanya harus sama dengan <m>c</m>, dan irisan interval real memuat interval terbuka lebih kecil di sekitar <m>x</m>. Kriteria basis terpenuhi. <em>Rubrik:</em> jawaban harus menggunakan sifat diskret dan memeriksa kedua aksioma basis.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-04">
+    <title>Interior dan penutup segmen horizontal</title>
+    <statement><p>Hitung interior dan penutup <m>A=[0,1)\times\{0\}</m> dalam produk Euklides-diskret.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-04-hint"><p>Gunakan <m>\operatorname{Int}(E\times F)=\operatorname{Int}E\times\operatorname{Int}F</m> dan rumus penutup produk.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-04-answer"><p><m>\operatorname{Int}A=(0,1)\times\{0\}</m> dan <m>\overline A=[0,1]\times\{0\}</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-04-solution"><p>Dalam faktor pertama, interior <m>[0,1)</m> adalah <m>(0,1)</m> dan penutupnya <m>[0,1]</m>. Dalam faktor diskret, singleton <m>\{0\}</m> sekaligus buka dan tertutup. Mengambil hasil kali memberi kedua rumus. <em>Rubrik:</em> jawaban harus menjelaskan mengapa titik <m>0</m> bukan interior tetapi tetap berada dalam penutup.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-05">
+    <title>Interior dan penutup segmen vertikal</title>
+    <statement><p>Hitung interior dan penutup <m>B=\{0\}\times[0,1)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-05-hint"><p>Faktor kedua diskret, tetapi singleton pada faktor real Euklides tidak terbuka.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-05-answer"><p><m>\operatorname{Int}B=\emptyset</m> dan <m>\overline B=B</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-05-solution"><p>Interior <m>\{0\}</m> dalam garis Euklides kosong, sedangkan penutupnya tetap <m>\{0\}</m>. Dalam faktor diskret, setiap subhimpunan—termasuk <m>[0,1)</m>—buka dan tertutup. Maka interior produk kosong dan produknya tertutup. <em>Rubrik:</em> jangan memakai penutup Euklides pada faktor kedua; topologinya diskret.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-06">
+    <title>Interior dan penutup pita persegi panjang</title>
+    <statement><p>Hitung interior dan penutup <m>C=[0,1)\times[0,1)</m> dalam produk yang sama.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-06-hint"><p>Hanya faktor pertama mengubah interior atau penutup.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-06-answer"><p><m>\operatorname{Int}C=(0,1)\times[0,1)</m> dan <m>\overline C=[0,1]\times[0,1)</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-06-solution"><p>Subhimpunan <m>[0,1)</m> pada faktor kedua bersifat buka-tertutup karena topologinya diskret. Pada faktor pertama, interior dan penutup berturut-turut <m>(0,1)</m> dan <m>[0,1]</m>. Rumus produk memberi hasil. <em>Rubrik:</em> solusi harus menyebut topologi masing-masing faktor.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-07">
+    <title>Penutup hasil kali subhimpunan</title>
+    <statement><p>Buktikan <m>\overline{A_1\times A_2}=\overline{A_1}\times\overline{A_2}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-07-hint"><p>Uji setiap lingkungan basis <m>U_1\times U_2</m> pada suatu titik.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-07-answer"><p>Lingkungan basis titik memotong <m>A_1\times A_2</m> tepat ketika kedua lingkungan faktor masing-masing memotong <m>A_1</m> dan <m>A_2</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-07-solution"><p>Jika <m>(x_1,x_2)\in\overline{A_1}\times\overline{A_2}</m>, setiap <m>U_i\ni x_i</m> memotong <m>A_i</m>; pilih <m>a_i\in U_i\cap A_i</m>, maka <m>(a_1,a_2)</m> berada dalam irisan lingkungan produk dengan <m>A_1\times A_2</m>. Sebaliknya, jika <m>x_1\notin\overline{A_1}</m>, ada lingkungan <m>U_1</m> yang menghindari <m>A_1</m>, sehingga <m>U_1\times X_2</m> menghindari produk; kasus koordinat kedua sama. <em>Rubrik:</em> kedua inklusi harus dibuktikan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-08">
+    <title>Interior hasil kali subhimpunan</title>
+    <statement><p>Buktikan inklusi <m>\operatorname{Int}(A_1\times A_2)\subseteq\operatorname{Int}(A_1)\times\operatorname{Int}(A_2)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-08-hint"><p>Jika sebuah titik interior, ada kotak basis di sekitarnya yang termuat dalam produk.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-08-answer"><p>Kotak <m>U_1\times U_2\subseteq A_1\times A_2</m> memaksa <m>U_i\subseteq A_i</m>. Bahkan berlaku kesamaan.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-08-solution"><p>Ambil <m>(x_1,x_2)</m> pada interior produk. Ada kotak buka basis <m>U_1\times U_2</m> yang memuat titik dan termuat dalam <m>A_1\times A_2</m>. Karena kotak memuat titik, kedua faktor takkosong; memilih satu titik pada faktor lain menunjukkan <m>U_1\subseteq A_1</m> dan <m>U_2\subseteq A_2</m>. Jadi <m>x_i\in\operatorname{Int}(A_i)</m>. Sebaliknya, hasil kali kedua interior adalah himpunan buka yang termuat dalam produk, sehingga sebenarnya sama. <em>Rubrik:</em> inklusi yang diminta harus terbukti; penguatan menjadi kesamaan harus dijustifikasi.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-09">
+    <title>Gabungan ganda hasil kali</title>
+    <statement><p>Buktikan bahwa gabungan semua <m>U_\alpha\times V_\beta</m> sama dengan hasil kali kedua gabungan faktor.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-09-hint"><p>Lakukan pembuktian dengan mengejar keanggotaan pasangan <m>(x,y)</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-09-answer"><p>Pasangan berada pada salah satu <m>U_\alpha\times V_\beta</m> tepat ketika koordinatnya berada pada suatu <m>U_\alpha</m> dan suatu <m>V_\beta</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-09-solution"><p><m>(x,y)</m> berada pada ruas kiri jika dan hanya jika ada <m>\alpha\in I</m> dan <m>\beta\in J</m> dengan <m>x\in U_\alpha</m> dan <m>y\in V_\beta</m>. Ini ekuivalen dengan <m>x\in\bigcup_\alpha U_\alpha</m> dan <m>y\in\bigcup_\beta V_\beta</m>, yakni keanggotaan pada ruas kanan. <em>Rubrik:</em> kedua kuantor eksistensial harus dipisahkan dengan benar.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-a-10">
+    <title>Irisan dua hasil kali</title>
+    <statement><p>Buktikan <m>(S_1\times T_1)\cap(S_2\times T_2)=(S_1\cap S_2)\times(T_1\cap T_2)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-a-10-hint"><p>Uraikan keanggotaan satu pasangan pada masing-masing ruas.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-a-10-answer"><p>Kedua ruas menyatakan sekaligus <m>x\in S_1,S_2</m> dan <m>y\in T_1,T_2</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-a-10-solution"><p><m>(x,y)</m> berada pada irisan ruas kiri tepat ketika ia berada pada kedua hasil kali, yaitu <m>x\in S_1\cap S_2</m> dan <m>y\in T_1\cap T_2</m>. Syarat terakhir tepat menyatakan keanggotaan pada hasil kali di ruas kanan. <em>Rubrik:</em> pembuktian dua arah melalui keanggotaan sudah lengkap.</p></solution>
+  </exercise>
+</section>

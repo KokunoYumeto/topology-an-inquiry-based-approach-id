@@ -1,0 +1,769 @@
+<section xml:id="o003-c90-completion-integrated-mastery" xml:lang="id-ID">
+  <title>Puncak Penguasaan Terpadu</title>
+
+  <introduction>
+    <p>
+      Modul penutup ini menguji kemampuan memilih dan menghubungkan alat,
+      bukan sekadar mengulang definisi. Dua belas masalah di bawah menyatukan
+      aksioma separasi, keterhitungan, jaring, hasil kali, kekompakan lokal,
+      metrisasi, dan topologi ruang fungsi. Setiap masalah menyediakan petunjuk,
+      jawaban ringkas, dan solusi lengkap sebagai tiga tahap pengungkapan yang
+      terpisah. Pembaca sebaiknya menulis pembuktian sendiri sebelum membuka
+      tahap berikutnya.
+    </p>
+    <p>
+      Modul orisinal ini berlisensi CC BY 4.0 dan terpisah dari turunan GVSU
+      yang diperlakukan secara konservatif sebagai CC BY-NC-SA 3.0. Modul ini
+      bukan teks, penilaian, atau solusi resmi GVSU serta tidak menyatakan atau
+      menyiratkan dukungan penulis maupun institusi sumber. Tidak ada ekspresi
+      buku lain yang disalin. Provenans produksi berbantuan model:
+      <c>OpenAI Codex gpt-5.6-sol, Ultra</c>.
+    </p>
+  </introduction>
+
+  <subsection xml:id="o003-c90-completion-integrated-dependency-map">
+    <title>Peta dependensi dan penguasaan</title>
+    <p xml:id="o003-c90-mastery-map-foundations">
+      <em>Landasan.</em> Masalah 1 dan 10 memerlukan relasi spesialisasi,
+      aksioma <m>T_0</m> sampai Hausdorff, serta pembuatan contoh tandingan.
+      Keberhasilan berarti pembaca dapat membedakan sifat titik, sifat
+      lingkungan, dan sifat fungsi kontinu yang tidak dapat dibalik begitu saja.
+    </p>
+    <p xml:id="o003-c90-mastery-map-convergence">
+      <em>Ukuran topologis dan kekonvergenan.</em> Masalah 2 dan 3 menghubungkan
+      basis lokal, keterhitungan pertama dan kedua, separabilitas, penutup, jaring,
+      dan barisan. Keberhasilan berarti pembaca tahu persis kapan barisan cukup
+      dan dapat membangun jaring dari data lingkungan ketika barisan tidak cukup.
+    </p>
+    <p xml:id="o003-c90-mastery-map-products">
+      <em>Hasil kali dan metrisasi.</em> Masalah 4 dan 5 menguji perbedaan
+      topologi hasil kali dan kotak, metrik hasil kali terhitung, Teorema
+      Tychonoff, dan kriteria kekompakan lokal hasil kali. Keberhasilan berarti
+      pembaca dapat melacak koordinat berhingga yang sungguh dikendalikan oleh
+      sebuah lingkungan.
+    </p>
+    <p xml:id="o003-c90-mastery-map-compactification">
+      <em>Kekompakan lokal dan metrisasi.</em> Masalah 6 dan 12 memadukan
+      kompaktifikasi satu titik, keterhitungan, separasi, jaring, dan ruang
+      fungsi. Keberhasilan berarti pembaca dapat mengubah sifat lokal menjadi
+      sifat ruang kompak yang diperbesar dan kembali lagi.
+    </p>
+    <p xml:id="o003-c90-mastery-map-function-spaces">
+      <em>Ruang fungsi.</em> Masalah 7 sampai 9 menghubungkan kekonvergenan
+      kompak-terbuka, ekukontinuitas, Arzelà–Ascoli, evaluasi, dan hukum
+      eksponensial. Keberhasilan berarti pembaca mampu memeriksa hipotesis pada
+      domain, kodomain, dan topologi ruang fungsi, bukan hanya menuliskan
+      notasi <m>C(X,Y)</m>.
+    </p>
+    <p xml:id="o003-c90-mastery-map-synthesis">
+      <em>Sintesis akhir.</em> Masalah 11 dan 12 meminta audit banyak sifat pada
+      satu konstruksi. Jika jawaban pada kedua masalah itu lengkap dan setiap
+      implikasi mempunyai alasan yang tepat, pembaca telah mencapai penguasaan
+      terpadu minimum untuk seluruh pelengkap C90.
+    </p>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-integrated-rubric">
+    <title>Rubrik pembuktian dan contoh tandingan</title>
+    <p xml:id="o003-c90-rubric-proof">
+      Untuk masalah pembuktian, nilai setiap bagian dengan empat unsur yang
+      bobotnya sama: (1) hipotesis dan kesimpulan dinyatakan dengan kuantor yang
+      benar; (2) teorema yang dipakai memang memenuhi semua hipotesisnya;
+      (3) konstruksi inti—misalnya basis, jaring, selimut, atau metrik—ditulis
+      eksplisit; dan (4) argumen menutup kedua arah bila klaim berbentuk
+      ekuivalensi. Skor penuh memerlukan keempat unsur; kesimpulan benar tanpa
+      konstruksi atau tanpa pemeriksaan hipotesis belum merupakan bukti penuh.
+    </p>
+    <p xml:id="o003-c90-rubric-counterexample">
+      Untuk contoh tandingan, nilai empat unsur: (1) ruang dan topologinya
+      didefinisikan tanpa ambiguitas; (2) sifat yang diinginkan dibuktikan;
+      (3) sifat yang hendak digagalkan disangkal dengan pasangan titik,
+      lingkungan, selimut, jaring, atau basis yang konkret; dan (4) contoh benar-
+      benar menolak implikasi yang dimaksud, bukan implikasi lain yang mirip.
+      Untuk proyek terbuka, sebuah klasifikasi boleh bersyarat, tetapi setiap
+      syarat tambahan harus disebutkan dan diuji pada sedikitnya satu contoh.
+    </p>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-integrated-problems">
+    <title>Masalah penguasaan terpadu</title>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-01">
+      <title>Kuosien Kolmogorov dan pemetaan ke ruang <m>T_0</m></title>
+      <statement>
+        <p>
+          Pada ruang <m>X</m>, definisikan <m>x\sim y</m> bila <m>x</m> dan
+          <m>y</m> mempunyai lingkungan buka yang sama. Buktikan bahwa
+          <m>x\sim y</m> tepat bila <m>x\le y</m> dan <m>y\le x</m> dalam
+          praurutan spesialisasi. Beri <m>X_0=X/{\sim}</m> topologi kuosien.
+          Buktikan bahwa <m>X_0</m> adalah <m>T_0</m> dan bahwa setiap fungsi
+          kontinu <m>f:X\to Y</m> ke ruang <m>T_0</m> memfaktor secara unik
+          melalui proyeksi <m>q:X\to X_0</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-01-hint">
+        <p>
+          Gunakan karakterisasi <m>x\le y</m> sebagai “setiap lingkungan buka
+          <m>x</m> memuat <m>y</m>”. Untuk faktorisasi, tunjukkan dahulu bahwa
+          fungsi kontinu ke ruang <m>T_0</m> konstan pada setiap kelas
+          ekuivalensi.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-01-answer">
+        <p>
+          Kesimetrian praurutan tepat menyatakan ketakterbedaan topologis.
+          Kelas yang berbeda dibedakan oleh himpunan buka jenuh, sehingga
+          kuosiennya <m>T_0</m>. Faktorisasi diberikan oleh
+          <m>\bar f([x])=f(x)</m> dan unik karena <m>q</m> surjektif.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-01-solution">
+        <p>
+          Andaikan <m>x\sim y</m>. Setiap lingkungan buka <m>x</m> juga
+          merupakan lingkungan <m>y</m>, maka memuat <m>y</m>; jadi
+          <m>x\le y</m>. Dengan menukar keduanya diperoleh <m>y\le x</m>.
+          Sebaliknya, jika kedua relasi itu berlaku, setiap himpunan buka yang
+          memuat salah satu titik memuat titik lain, sehingga daftar lingkungan
+          keduanya sama.
+        </p>
+        <p>
+          Jika kelas <m>[x]</m> dan <m>[y]</m> berbeda, ada himpunan buka
+          <m>U</m> yang memuat tepat salah satu dari <m>x,y</m>. Karena anggota
+          satu kelas mempunyai keanggotaan yang sama pada setiap himpunan buka,
+          <m>U</m> adalah gabungan kelas-kelas. Maka <m>q(U)</m> terbuka dalam
+          topologi kuosien dan membedakan kedua kelas; jadi <m>X_0</m> adalah
+          <m>T_0</m>.
+        </p>
+        <p>
+          Bila <m>x\sim y</m>, kekontinuan <m>f</m> membuat <m>f(x)</m> dan
+          <m>f(y)</m> mempunyai lingkungan yang sama: prapeta setiap lingkungan
+          salah satunya memuat keduanya. Karena <m>Y</m> adalah <m>T_0</m>,
+          <m>f(x)=f(y)</m>. Jadi <m>\bar f([x])=f(x)</m> terdefinisi baik.
+          Persamaan <m>f=\bar f\circ q</m> berlaku, dan sifat universal
+          topologi kuosien memberi kekontinuan <m>\bar f</m>. Surjektivitas
+          <m>q</m> memberi keunikan.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-02">
+      <title>Penutup, jaring lingkungan, dan barisan</title>
+      <statement>
+        <p>
+          Untuk <m>A\subseteq X</m> dan <m>x\in\overline A</m>, bangun jaring di
+          <m>A</m> yang konvergen ke <m>x</m>. Kemudian buktikan bahwa jika
+          <m>X</m> terhitung pertama, dapat dipilih sebuah barisan di <m>A</m>
+          yang konvergen ke <m>x</m>. Jelaskan mengapa arah kedua tidak boleh
+          dipakai tanpa hipotesis keterhitungan pertama.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-02-hint">
+        <p>
+          Arahkan himpunan semua lingkungan <m>x</m> dengan urutan pembalikan
+          inklusi dan pilih satu titik <m>a_U\in A\cap U</m>. Untuk barisan,
+          buat basis lokal menurun dari basis lokal terhitung.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-02-answer">
+        <p>
+          Jaring <m>(a_U)</m>, dengan indeks lingkungan dan lingkungan yang lebih
+          kecil dianggap lebih akhir, konvergen ke <m>x</m>. Basis lokal
+          menurun <m>V_n</m> memberi barisan <m>a_n\in A\cap V_n</m>. Pada ruang
+          umum, penutup selalu dideteksi jaring tetapi tidak selalu dideteksi
+          barisan.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-02-solution">
+        <p>
+          Misalkan <m>\mathcal N(x)</m> himpunan lingkungan <m>x</m>, dan
+          definisikan <m>U\preceq V</m> bila <m>V\subseteq U</m>. Dua lingkungan
+          mempunyai batas atas bersama berupa irisannya, sehingga himpunan
+          indeks ini terarah. Karena <m>x\in\overline A</m>, setiap
+          <m>U</m> memotong <m>A</m>; pilih <m>a_U\in A\cap U</m>. Untuk
+          lingkungan <m>W</m> dari <m>x</m>, semua indeks <m>U\succeq W</m>
+          memenuhi <m>U\subseteq W</m>, maka <m>a_U\in W</m>. Jadi jaring itu
+          konvergen ke <m>x</m>.
+        </p>
+        <p>
+          Jika <m>(B_n)</m> basis lokal terhitung, tetapkan
+          <m>V_n=B_1\cap\cdots\cap B_n</m> dan pilih
+          <m>a_n\in A\cap V_n</m>. Untuk setiap lingkungan <m>W</m>, ada
+          <m>k</m> dengan <m>B_k\subseteq W</m>; semua <m>n\ge k</m> memenuhi
+          <m>a_n\in V_n\subseteq B_k\subseteq W</m>. Maka <m>a_n\to x</m>.
+          Tanpa basis lokal terhitung, sebuah barisan hanya menguji terhitung
+          banyak tahap lingkungan. Contohnya, pada ordinal
+          <m>[0,\omega_1]</m>, titik <m>\omega_1</m> berada dalam penutup
+          <m>[0,\omega_1)</m>, tetapi tidak ada barisan ordinal terhitung yang
+          konvergen kepadanya karena supremum terhitung masih di bawah
+          <m>\omega_1</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-03">
+      <title>Garis Sorgenfrey: separabel tetapi tidak terhitung kedua</title>
+      <statement>
+        <p>
+          Beri <m>\mathbb R</m> basis interval setengah terbuka
+          <m>[a,b)</m>. Buktikan bahwa ruang ini separabel dan terhitung
+          pertama, tetapi tidak terhitung kedua. Tunjukkan pula bahwa barisan
+          <m>x_n</m> konvergen ke <m>x</m> tepat bila, untuk setiap
+          <m>\varepsilon&gt;0</m>, akhirnya
+          <m>x\le x_n&lt;x+\varepsilon</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-03-hint">
+        <p>
+          Gunakan <m>\mathbb Q</m> sebagai himpunan rapat dan
+          <m>[x,x+1/n)</m> sebagai basis lokal. Untuk menolak basis terhitung,
+          pilih bagi setiap <m>x</m> satu anggota basis yang terletak di dalam
+          <m>[x,x+1)</m> dan perhatikan titik ujung kirinya.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-03-answer">
+        <p>
+          Setiap interval basis memuat bilangan rasional, dan interval
+          <m>[x,x+1/n)</m> membentuk basis lokal. Basis global terhitung akan
+          memerlukan anggota berbeda untuk setiap titik real sebagai ujung kiri
+          minimum, suatu kemustahilan. Kriteria barisan mengikuti langsung dari
+          basis lokal tersebut.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-03-solution">
+        <p>
+          Setiap <m>[a,b)</m> takkosong memuat rasional, sehingga
+          <m>\mathbb Q</m> rapat dan ruang separabel. Untuk setiap <m>x</m>,
+          keluarga <m>[x,x+1/n)</m> merupakan basis lokal terhitung: jika
+          <m>x\in[a,b)</m>, pilih <m>n</m> dengan <m>1/n&lt;b-x</m>.
+        </p>
+        <p>
+          Andaikan <m>\mathcal B</m> basis global terhitung. Bagi setiap
+          <m>x\in\mathbb R</m>, pilih <m>B_x\in\mathcal B</m> sehingga
+          <m>x\in B_x\subseteq[x,x+1)</m>. Jika <m>x&lt;y</m>, himpunan
+          <m>B_x</m> tidak dapat sama dengan <m>B_y</m>: kesamaan akan memuat
+          <m>x</m>, sedangkan <m>B_y\subseteq[y,y+1)</m> tidak memuat
+          <m>x</m>. Jadi pemetaan <m>x\mapsto B_x</m> injektif dari himpunan
+          takterhitung ke <m>\mathcal B</m>, kontradiksi.
+        </p>
+        <p>
+          Akhirnya, <m>x_n\to x</m> tepat bila akhirnya berada dalam setiap
+          <m>[x,x+1/k)</m>. Hal itu ekuivalen dengan: untuk setiap
+          <m>\varepsilon&gt;0</m>, akhirnya
+          <m>x\le x_n&lt;x+\varepsilon</m>. Contoh ini sekaligus menunjukkan
+          bahwa separabilitas tidak memaksa keterhitungan kedua di luar kelas
+          ruang metrik.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-04">
+      <title>Hasil kali terhitung, metrik, dan topologi kotak</title>
+      <statement>
+        <p>
+          Pada <m>\mathbb R^{\mathbb N}</m>, buktikan bahwa
+          <me>d(x,y)=\sum_{n=1}^{\infty}2^{-n}\min\{1,|x_n-y_n|\}</me>
+          menginduksi topologi hasil kali. Buktikan bahwa topologi kotak lebih
+          halus secara ketat dan tidak terhitung pertama pada titik nol.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-04-hint">
+        <p>
+          Kendalikan ekor deret untuk membandingkan bola metrik dengan silinder
+          berhingga. Untuk basis lokal kotak terhitung yang diduga
+          <m>U_k=\prod_n U_{k,n}</m>, pilih radius koordinat ke-<m>k</m> yang
+          lebih kecil daripada lebar <m>U_{k,k}</m>.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-04-answer">
+        <p>
+          Bobot ekor yang dapat dibuat kecil dan kontrol berhingga koordinat
+          memberi kesamaan topologi metrik dengan topologi hasil kali. Kotak
+          <m>\prod_n(-1/n,1/n)</m> bukan lingkungan hasil kali. Diagonalisasi
+          terhadap setiap keluarga lingkungan kotak terhitung menolak basis
+          lokal terhitung.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-04-solution">
+        <p>
+          Fungsi <m>d</m> adalah metrik karena setiap suku merupakan
+          pseudometrik, deret konvergen seragam, dan <m>d(x,y)=0</m> memaksa
+          semua koordinat sama. Ambil bola <m>d</m> berjari-jari
+          <m>\varepsilon</m>. Pilih <m>N</m> sehingga
+          <m>\sum_{n&gt;N}2^{-n}&lt;\varepsilon/2</m>, lalu batasi berhingga
+          banyak koordinat pertama cukup ketat agar jumlah kepalanya kurang
+          dari <m>\varepsilon/2</m>. Silinder hasil kali yang diperoleh termuat
+          dalam bola. Sebaliknya, bagi silinder yang membatasi koordinat dalam
+          himpunan berhingga <m>F</m>, pilih bola cukup kecil sehingga setiap
+          suku berbobot untuk <m>n\in F</m> memaksa batas koordinat yang
+          ditentukan. Jadi topologinya sama.
+        </p>
+        <p>
+          Himpunan <m>W=\prod_n(-1/n,1/n)</m> terbuka kotak. Setiap lingkungan
+          hasil kali nol membiarkan semua kecuali berhingga banyak koordinat
+          bebas, maka tidak termuat dalam <m>W</m>; jadi kehalusannya ketat.
+          Andaikan <m>(U_k)</m> basis lokal kotak di nol dan, setelah
+          memperkecil, tulis <m>U_k=\prod_n(-a_{k,n},a_{k,n})</m> dengan semua
+          <m>a_{k,n}&gt;0</m>. Bentuk
+          <m>V=\prod_n(-a_{n,n}/2,a_{n,n}/2)</m>. Ini lingkungan kotak nol,
+          tetapi untuk setiap <m>k</m>, <m>U_k</m> tidak termuat dalam
+          <m>V</m> karena koordinat ke-<m>k</m>-nya lebih lebar. Kontradiksi;
+          topologi kotak tidak terhitung pertama.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-05">
+      <title>Kekompakan lokal hasil kali takberhingga</title>
+      <statement>
+        <p>
+          Misalkan semua <m>X_i</m> ruang Hausdorff takkosong. Buktikan bahwa
+          <m>\prod_{i\in I}X_i</m> kompak lokal jika dan hanya jika setiap
+          <m>X_i</m> kompak lokal dan semua kecuali berhingga banyak faktor
+          kompak. Nyatakan dengan jelas tempat penggunaan Teorema Tychonoff.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-05-hint">
+        <p>
+          Proyeksi suatu lingkungan silinder dengan penutup kompak memberi
+          kekompakan faktor yang tidak dibatasi. Untuk arah balik, pilih
+          lingkungan berpenutup kompak hanya pada berhingga banyak faktor
+          nonkompak.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-05-answer">
+        <p>
+          Penutup kompak sebuah silinder memproyeksikan surjektif ke semua
+          faktor yang tidak dibatasi, sehingga faktor-faktor itu kompak; semua
+          faktor juga mewarisi kekompakan lokal melalui proyeksi dan irisan
+          koordinat. Sebaliknya, hasil kali penutup lingkungan kompak adalah
+          kompak oleh Tychonoff.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-05-solution">
+        <p>
+          Ambil <m>x=(x_i)</m> dalam hasil kali yang kompak lokal. Ada
+          lingkungan dasar <m>U=\prod_iU_i</m> dari <m>x</m>, dengan
+          <m>U_i=X_i</m> di luar himpunan berhingga <m>F</m>, yang termuat dalam
+          suatu himpunan kompak <m>K</m>. Untuk <m>i\notin F</m>, proyeksi
+          <m>U</m> ke <m>X_i</m> adalah seluruh <m>X_i</m>; karena
+          <m>\pi_i(K)</m> kompak dan memuat <m>X_i</m>, faktor itu kompak.
+          Untuk sembarang <m>i</m>, tetapkan semua koordinat lain pada
+          <m>x_j</m>. Irisan potongan koordinat ini dengan <m>K</m> kompak
+          karena ruang Hausdorff membuat singleton tertutup, dan ia memuat
+          lingkungan <m>U_i</m> dari <m>x_i</m>. Jadi setiap faktor kompak
+          lokal.
+        </p>
+        <p>
+          Sebaliknya, andaikan faktor nonkompak hanya terdapat pada himpunan
+          berhingga <m>F</m>. Untuk <m>i\in F</m>, pilih lingkungan
+          <m>V_i</m> dari <m>x_i</m> dengan penutup kompak <m>K_i</m>. Untuk
+          <m>i\notin F</m>, ambil <m>V_i=X_i=K_i</m>, yang kompak. Silinder
+          <m>V=\prod_iV_i</m> adalah lingkungan <m>x</m> dan penutupnya termuat
+          dalam <m>\prod_iK_i</m>. Teorema Tychonoff—dan dengan demikian bentuk
+          aksioma pilihan yang dipakainya—menyatakan hasil kali semua
+          <m>K_i</m> kompak. Maka hasil kali asal kompak lokal.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-06">
+      <title>Kapan kompaktifikasi satu titik dapat dimetrisasi?</title>
+      <statement>
+        <p>
+          Misalkan <m>X</m> ruang Hausdorff kompak lokal yang tidak kompak dan
+          <m>\alpha X=X\cup\{\infty\}</m> kompaktifikasi satu titiknya.
+          Buktikan bahwa <m>\alpha X</m> dapat dimetrisasi jika dan hanya jika
+          <m>X</m> terhitung kedua. Hubungkan kedua arah dengan teorema
+          metrisasi Urysohn dan sifat subruang.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-06-hint">
+        <p>
+          Ruang kompak Hausdorff yang terhitung kedua adalah reguler dan
+          memenuhi hipotesis Urysohn. Untuk membangun basis di titik
+          <m>\infty</m>, gunakan penutupan berhingga dari anggota basis yang
+          relatif kompak.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-06-answer">
+        <p>
+          Jika <m>\alpha X</m> metrik kompak, ia terhitung kedua dan sifat itu
+          diwarisi <m>X</m>. Jika <m>X</m> terhitung kedua, basis relatif kompak
+          menghasilkan basis terhitung di <m>\infty</m>; maka
+          <m>\alpha X</m> kompak Hausdorff, terhitung kedua, dan termetrisasi
+          oleh Urysohn.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-06-solution">
+        <p>
+          Jika <m>\alpha X</m> dapat dimetrisasi, ia kompak metrik. Setiap ruang
+          kompak metrik terhitung kedua: untuk setiap <m>n</m>, ambil subselimut
+          berhingga dari bola berjari-jari <m>1/n</m>, lalu gabungkan semua
+          pusat dan radius rasional. Karena keterhitungan kedua diwarisi
+          subruang, <m>X</m> terhitung kedua.
+        </p>
+        <p>
+          Sebaliknya, ambil basis terhitung <m>\mathcal B</m> untuk <m>X</m>.
+          Kekompakan lokal dan regularitas ruang Hausdorff kompak lokal
+          memungkinkan kita memperhalusnya menjadi basis terhitung
+          <m>(V_n)</m> dengan setiap <m>\overline{V_n}</m> kompak. Semua
+          gabungan berhingga <m>K_F=\bigcup_{n\in F}\overline{V_n}</m> kompak,
+          dan komplemennya
+          <m>\{\infty\}\cup(X\setminus K_F)</m> membentuk basis terhitung di
+          <m>\infty</m>: setiap himpunan kompak <m>K\subseteq X</m> ditutupi
+          berhingga banyak <m>V_n</m>, sehingga termuat dalam suatu <m>K_F</m>.
+          Bersama <m>\mathcal B</m>, ini memberi basis terhitung untuk
+          <m>\alpha X</m>. Kompaktifikasi satu titik itu kompak Hausdorff,
+          sehingga reguler dan <m>T_1</m>. Teorema metrisasi Urysohn sekarang
+          berlaku dan memberi metrik pada <m>\alpha X</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-07">
+      <title>Kekonvergenan kompak-terbuka sebagai kekonvergenan pada kompak</title>
+      <statement>
+        <p>
+          Misalkan <m>X</m> Hausdorff dan <m>(Y,d)</m> ruang metrik. Untuk jaring
+          <m>(f_\lambda)</m> dalam <m>C(X,Y)</m>, buktikan bahwa kekonvergenan
+          kompak-terbuka ke <m>f</m> ekuivalen dengan kekonvergenan seragam pada
+          setiap subhimpunan kompak <m>K\subseteq X</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-07-hint">
+        <p>
+          Pada kompak <m>K</m>, gunakan kekompakan <m>f(K)</m> dan selimut oleh
+          bola kecil. Untuk arah yang memerlukan lingkungan kompak-terbuka,
+          susutkan selimut buka berhingga pada ruang kompak Hausdorff <m>K</m>
+          menjadi himpunan-himpunan kompak.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-07-answer">
+        <p>
+          Lingkungan seragam pada setiap kompak dapat dibandingkan dua arah
+          dengan irisan berhingga subbasis <m>[K_i,U_i]</m>. Kekompakan memberi
+          keberhinggaan dan sifat Hausdorff memberi penyusutan kompak yang
+          diperlukan.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-07-solution">
+        <p>
+          Andaikan dahulu <m>f_\lambda\to f</m> kompak-terbuka. Tetapkan kompak
+          <m>K</m> dan <m>\varepsilon&gt;0</m>. Untuk tiap <m>x\in K</m>, pilih
+          lingkungan relatif <m>W_x</m> sehingga
+          <m>f(W_x)</m> termuat dalam bola berjari-jari
+          <m>\varepsilon/3</m> di sekitar <m>f(x)</m>. Ruang <m>K</m> kompak
+          Hausdorff; susutkan subselimut berhingga menjadi kompak
+          <m>K_1,\ldots,K_n</m> yang masih menutupi <m>K</m>, dengan
+          <m>K_i\subseteq W_{x_i}</m>. Lingkungan kompak-terbuka
+          <m>\bigcap_i[K_i,B(f(x_i),2\varepsilon/3)]</m> memaksa
+          <m>d(f_\lambda(x),f(x))&lt;\varepsilon</m> untuk semua <m>x\in K</m>
+          pada akhirnya.
+        </p>
+        <p>
+          Sebaliknya, ambil lingkungan subbasis <m>[K,U]</m> yang memuat
+          <m>f</m>. Himpunan <m>f(K)</m> kompak dan termuat dalam buka
+          <m>U</m>, sehingga ada <m>\delta&gt;0</m> dengan lingkungan
+          <m>\delta</m> dari <m>f(K)</m> termuat dalam <m>U</m>. Kekonvergenan
+          seragam pada <m>K</m> memberi
+          <m>\sup_{x\in K}d(f_\lambda(x),f(x))&lt;\delta</m> pada akhirnya, maka
+          <m>f_\lambda(K)\subseteq U</m>. Irisan berhingga subbasis diperlakukan
+          serentak, jadi jaring konvergen kompak-terbuka.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-08">
+      <title>Keluarga Lipschitz dan Arzelà–Ascoli</title>
+      <statement>
+        <p>
+          Misalkan <m>(K,d)</m> ruang metrik kompak dan <m>x_0\in K</m>.
+          Tunjukkan bahwa
+          <m>\mathcal F=\{f\in C(K,\mathbb R):f(x_0)=0,\ |f(x)-f(y)|\le
+          d(x,y)\}</m> kompak dalam topologi kompak-terbuka. Jelaskan peran
+          ketertutupan, ekukontinuitas, dan kekompakan titik demi titik.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-08-hint">
+        <p>
+          Semua fungsi dibatasi seragam oleh diameter <m>K</m>. Gunakan
+          Arzelà–Ascoli untuk kekompakan relatif, lalu buktikan bahwa limit
+          seragam tetap bernilai nol di <m>x_0</m> dan tetap 1-Lipschitz.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-08-answer">
+        <p>
+          Keluarga ini ekukontinu dan nilai-nilainya pada setiap titik berada
+          dalam interval kompak. Arzelà–Ascoli memberi kekompakan relatif;
+          syarat nilai pangkal dan ketaksamaan Lipschitz tertutup terhadap limit
+          seragam, sehingga keluarga itu sendiri kompak.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-08-solution">
+        <p>
+          Untuk semua <m>f\in\mathcal F</m>, berlaku
+          <m>|f(x)|=|f(x)-f(x_0)|\le d(x,x_0)\le\operatorname{diam}K</m>.
+          Jadi bagi setiap <m>x</m>, himpunan nilai
+          <m>\{f(x):f\in\mathcal F\}</m> mempunyai penutup kompak di
+          <m>\mathbb R</m>. Selain itu, bagi <m>\varepsilon&gt;0</m>, pilihan
+          <m>\delta=\varepsilon</m> bekerja serentak untuk seluruh keluarga
+          karena semua fungsi 1-Lipschitz. Maka <m>\mathcal F</m> ekukontinu.
+        </p>
+        <p>
+          Teorema Arzelà–Ascoli memberi bahwa penutup
+          <m>\mathcal F</m> kompak dalam topologi kompak-terbuka, yang pada
+          domain kompak sama dengan topologi seragam. Jika
+          <m>f_n\to f</m> seragam dan setiap <m>f_n\in\mathcal F</m>, maka
+          <m>f(x_0)=\lim f_n(x_0)=0</m>. Untuk <m>x,y\in K</m>, ambil limit
+          pada <m>|f_n(x)-f_n(y)|\le d(x,y)</m> untuk memperoleh
+          <m>|f(x)-f(y)|\le d(x,y)</m>. Jadi <m>f\in\mathcal F</m> dan keluarga
+          itu tertutup. Penutup kompaknya sama dengan dirinya; maka
+          <m>\mathcal F</m> kompak.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-09">
+      <title>Homotopi sebagai lintasan dalam ruang fungsi</title>
+      <statement>
+        <p>
+          Misalkan <m>X</m> kompak lokal Hausdorff dan <m>Y</m> ruang topologis.
+          Buktikan bahwa fungsi kontinu <m>H:[0,1]\times X\to Y</m> menentukan
+          lintasan kontinu <m>\widehat H:[0,1]\to C_k(X,Y)</m> melalui
+          <m>\widehat H(t)(x)=H(t,x)</m>, dan sebaliknya. Identifikasi secara
+          eksplisit tempat evaluasi dan hukum eksponensial digunakan.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-09-hint">
+        <p>
+          Satu arah adalah pemetaan kurri pada hukum eksponensial
+          kompak-terbuka. Untuk arah balik, komposisikan
+          <m>\widehat H\times\operatorname{id}_X</m> dengan evaluasi kontinu.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-09-answer">
+        <p>
+          Hukum eksponensial memberi korespondensi kontinu
+          <m>C([0,1]\times X,Y)\cong C([0,1],C_k(X,Y))</m> pada tingkat yang
+          diperlukan. Kebalikannya adalah
+          <m>H=\operatorname{ev}\circ(\widehat H\times\operatorname{id}_X)</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-09-solution">
+        <p>
+          Untuk <m>H</m> kontinu, definisikan
+          <m>\widehat H(t)(x)=H(t,x)</m>. Setiap irisan <m>H_t</m> kontinu.
+          Versi kompak-terbuka hukum eksponensial, dengan variabel yang
+          dikurri yaitu <m>X</m> kompak lokal Hausdorff, menyatakan bahwa
+          pemetaan <m>H\mapsto\widehat H</m> membawa fungsi kontinu pada produk
+          ke fungsi kontinu menuju <m>C_k(X,Y)</m>. Jadi
+          <m>\widehat H</m> adalah lintasan dari <m>H_0</m> ke <m>H_1</m>.
+        </p>
+        <p>
+          Sebaliknya, jika <m>\gamma:[0,1]\to C_k(X,Y)</m> kontinu, pemetaan
+          <m>\gamma\times\operatorname{id}_X</m> dari
+          <m>[0,1]\times X</m> ke <m>C_k(X,Y)\times X</m> kontinu. Karena
+          <m>X</m> kompak lokal Hausdorff, evaluasi bersama
+          <m>\operatorname{ev}(f,x)=f(x)</m> kontinu. Komposisi
+          <m>H=\operatorname{ev}\circ(\gamma\times\operatorname{id}_X)</m>
+          kontinu dan memenuhi <m>H(t,x)=\gamma(t)(x)</m>. Kedua konstruksi
+          saling invers. Hipotesis pada <m>X</m> bukan hiasan: ia menjamin
+          kekontinuan evaluasi dan bentuk hukum eksponensial yang dipakai.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-10">
+      <title>Empat contoh tandingan separasi dan ukuran</title>
+      <statement>
+        <p>
+          Bangun dan verifikasi empat ruang berikut: ruang non-<m>T_0</m>;
+          ruang <m>T_0</m> tetapi bukan <m>T_1</m>; ruang <m>T_1</m> tetapi
+          bukan Hausdorff; dan ruang separabel tetapi bukan terhitung kedua.
+          Untuk setiap ruang, berikan saksi konkret untuk sifat yang gagal.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-10-hint">
+        <p>
+          Gunakan ruang indisret dua titik, ruang Sierpiński, topologi kofinit
+          pada himpunan takhingga, dan garis Sorgenfrey. Ikuti keempat unsur
+          rubrik contoh tandingan di atas.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-10-answer">
+        <p>
+          Keempat saksi standar tersebut memenuhi urutan yang diminta:
+          pasangan titik indisret tak terbedakan; singleton tertentu tidak
+          tertutup di Sierpiński; lingkungan kofinit selalu beririsan; dan
+          rasional rapat pada Sorgenfrey meskipun basis global terhitung tidak
+          mungkin.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-10-solution">
+        <p>
+          Pertama, pada <m>\{0,1\}</m> dengan topologi
+          <m>\{\varnothing,\{0,1\}\}</m>, kedua titik mempunyai lingkungan yang
+          sama, jadi ruang bukan <m>T_0</m>. Kedua, pada
+          <m>\{0,1\}</m> dengan topologi
+          <m>\{\varnothing,\{1\},\{0,1\}\}</m>, himpunan buka <m>\{1\}</m>
+          membedakan titik, jadi ruang <m>T_0</m>; tetapi <m>\{1\}</m> tidak
+          tertutup karena komplemennya <m>\{0\}</m> tidak terbuka, maka bukan
+          <m>T_1</m>.
+        </p>
+        <p>
+          Ketiga, pada himpunan takhingga <m>S</m>, ambil topologi kofinit.
+          Setiap singleton tertutup, jadi ruang <m>T_1</m>. Namun dua himpunan
+          buka takkosong mempunyai komplemen berhingga dan karena itu irisannya
+          tetap takkosong; dua titik tidak mempunyai lingkungan terpisah, maka
+          ruang bukan Hausdorff. Keempat, garis Sorgenfrey mempunyai basis
+          <m>[a,b)</m>. Bilangan rasional memotong setiap interval basis, jadi
+          ruang separabel. Jika ada basis terhitung, pilihan satu anggota basis
+          <m>B_x</m> dengan <m>x\in B_x\subseteq[x,x+1)</m> akan menginjeksi
+          semua bilangan real ke basis tersebut, kontradiksi. Jadi ia bukan
+          terhitung kedua.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-11">
+      <title>Kubus Tychonoff dan fungsi koordinat</title>
+      <statement>
+        <p>
+          Untuk himpunan indeks <m>I</m>, letakkan
+          <m>K=[0,1]^I</m> dengan topologi hasil kali. Buktikan bahwa <m>K</m>
+          kompak Hausdorff dan bahwa setiap proyeksi koordinat kontinu. Buktikan
+          bahwa <m>K</m> termetrisasi jika <m>I</m> terhitung, sedangkan jika
+          <m>I</m> takterhitung, <m>K</m> tidak terhitung pertama dan karena itu
+          tidak termetrisasi. Nyatakan mengapa topologi kotak mengubah jawaban.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-11-hint">
+        <p>
+          Gunakan Tychonoff dan pemisahan koordinat. Untuk menolak basis lokal
+          terhitung di titik nol ketika <m>I</m> takterhitung, gabungkan semua
+          koordinat yang dibatasi oleh anggota basis yang diduga, lalu pilih
+          satu koordinat di luar gabungan terhitung itu.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-11-answer">
+        <p>
+          Tychonoff memberi kekompakan dan proyeksi memisahkan titik, sehingga
+          kubus Hausdorff. Indeks terhitung memberi metrik deret berbobot.
+          Indeks takterhitung menolak basis lokal terhitung melalui koordinat
+          yang tidak pernah dibatasi. Dalam topologi kotak, semua koordinat
+          dapat dibatasi sekaligus dan argumen kekompakan Tychonoff tidak
+          berlaku.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-11-solution">
+        <p>
+          Setiap faktor <m>[0,1]</m> kompak Hausdorff. Teorema Tychonoff memberi
+          kekompakan hasil kali, sedangkan dua titik berbeda mempunyai
+          koordinat <m>i</m> yang berbeda dan dapat dipisahkan oleh prapeta dua
+          interval terpisah di bawah proyeksi <m>\pi_i</m>. Proyeksi kontinu
+          menurut definisi topologi hasil kali, jadi <m>K</m> Hausdorff.
+        </p>
+        <p>
+          Jika <m>I</m> berhingga atau terhitung, enumerasi koordinat dan metrik
+          deret berbobot seperti pada Masalah 4 memetrisasi <m>K</m>. Sekarang
+          andaikan <m>I</m> takterhitung dan <m>(U_n)</m> basis lokal terhitung
+          di nol. Perkecil setiap <m>U_n</m> menjadi silinder dasar
+          <m>V_n</m> yang hanya membatasi himpunan koordinat berhingga
+          <m>F_n</m>. Gabungan <m>F=\bigcup_nF_n</m> terhitung, jadi pilih
+          <m>j\in I\setminus F</m>. Lingkungan
+          <m>W=\{x:x_j&lt;1/2\}</m> memuat nol. Tidak satu pun <m>V_n</m>
+          termuat dalam <m>W</m>, karena koordinat <m>j</m> bebas. Ini
+          bertentangan dengan sifat basis lokal; maka <m>K</m> tidak terhitung
+          pertama dan tidak mungkin metrik.
+        </p>
+        <p>
+          Topologi kotak mengizinkan pembatasan semua koordinat sekaligus.
+          Untuk <m>I</m> takhingga, subruang <m>\{0,1\}^I</m> tertutup dalam
+          kubus kotak, tetapi diskret: singleton setiap titik adalah irisan
+          dengan kotak <m>\prod_iU_i</m> yang memilih lingkungan kecil dari
+          koordinat nol atau satu. Subruang ini takhingga dan mempunyai selimut
+          terbuka oleh semua singleton tanpa subselimut berhingga. Jadi kubus
+          kotak tidak kompak. Karena itu “hasil kali” pada teorema kekompakan
+          dan hukum universal harus berarti topologi hasil kali, bukan topologi
+          kotak.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-integrated-ex-12">
+      <title>Audit terpadu kompaktifikasi diskret takterhitung</title>
+      <statement>
+        <p>
+          Misalkan <m>D</m> himpunan diskret takterhitung dan
+          <m>\alpha D=D\cup\{\infty\}</m> kompaktifikasi satu titiknya.
+          Tentukan dan buktikan: aksioma separasi; kekompakan lokal dan
+          kekompakan; keterhitungan pertama dan separabilitas; metrisabilitas;
+          kriteria jaring <m>d_\lambda\to\infty</m>; serta bentuk dan topologi
+          kompak-terbuka pada <m>C(\alpha D,\{0,1\})</m>, dengan kodomain
+          diskret.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-integrated-ex-12-hint">
+        <p>
+          Lingkungan <m>\infty</m> mempunyai komplemen berhingga. Setiap titik
+          <m>d\in D</m> terisolasi. Kontinuitas ke <m>\{0,1\}</m> memaksa fungsi
+          berbeda dari nilainya di <m>\infty</m> hanya pada berhingga banyak
+          titik; karena domain kompak, topologi kompak-terbuka sama dengan
+          topologi seragam diskret.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-integrated-ex-12-answer">
+        <p>
+          Ruang <m>\alpha D</m> kompak Hausdorff dan kompak lokal, tetapi tidak
+          terhitung pertama di <m>\infty</m>, tidak separabel, dan tidak metrik.
+          Jaring menuju <m>\infty</m> tepat bila akhirnya menghindari setiap
+          himpunan berhingga. Fungsi kontinu biner adalah gangguan berhingga
+          dari fungsi konstan, dan ruang fungsi kompak-terbukanya diskret.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-integrated-ex-12-solution">
+        <p>
+          Setiap <m>d\in D</m> terbuka sebagai singleton. Dua titik di
+          <m>D</m> dipisahkan oleh singleton; titik <m>d</m> dan
+          <m>\infty</m> dipisahkan oleh <m>\{d\}</m> serta
+          <m>\alpha D\setminus\{d\}</m>. Jadi ruang Hausdorff, bahkan kompak
+          Hausdorff. Kekompakan mengikuti karena setiap selimut buka memuat
+          satu anggota yang mencakup <m>\infty</m> dan semua kecuali berhingga
+          banyak titik <m>D</m>; sisa berhingga memerlukan berhingga banyak
+          anggota. Ruang kompak selalu kompak lokal.
+        </p>
+        <p>
+          Jika ada basis lokal terhitung <m>(U_n)</m> di <m>\infty</m>, setiap
+          komplemen <m>D\setminus U_n</m> berhingga. Gabungan semua komplemen
+          itu terhitung, maka pilih <m>d\in D</m> di luarnya. Lingkungan
+          <m>\alpha D\setminus\{d\}</m> tidak memuat satu pun <m>U_n</m>,
+          kontradiksi. Jadi ruang tidak terhitung pertama dan tidak metrik.
+          Setiap himpunan rapat harus memuat semua titik terisolasi <m>D</m>;
+          karena <m>D</m> takterhitung, ruang tidak separabel.
+        </p>
+        <p>
+          Dari bentuk lingkungan <m>\infty</m>, jaring <m>(d_\lambda)</m> menuju
+          <m>\infty</m> tepat bila untuk setiap himpunan berhingga
+          <m>F\subseteq D</m>, akhirnya <m>d_\lambda\notin F</m>. Sekarang ambil
+          <m>f:\alpha D\to\{0,1\}</m>. Kekontinuan di <m>\infty</m> ekuivalen
+          dengan adanya lingkungan kofinit tempat <m>f</m> bernilai konstan
+          <m>f(\infty)</m>. Jadi <m>f</m> hanya berbeda dari konstanta itu pada
+          berhingga banyak titik <m>D</m>; syarat ini juga cukup karena semua
+          titik <m>D</m> terisolasi.
+        </p>
+        <p>
+          Domain <m>\alpha D</m> kompak dan kodomain diberi metrik diskret.
+          Karena itu topologi kompak-terbuka pada ruang fungsi sama dengan
+          topologi seragam. Dua fungsi berbeda mempunyai jarak supremum satu,
+          sehingga bola berjari-jari kurang dari satu mengisolasi setiap
+          fungsi. Maka <m>C_k(\alpha D,\{0,1\})</m> diskret. Sebaliknya,
+          topologi titik demi titik tidak diskret: lingkungan yang menguji
+          hanya berhingga banyak koordinat masih memungkinkan perubahan pada
+          satu titik lain di <m>D</m>. Audit ini menggunakan seluruh rantai
+          separasi, keterhitungan, jaring, kekompakan lokal, metrisasi, dan ruang
+          fungsi.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+</section>

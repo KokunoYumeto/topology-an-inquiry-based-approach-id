@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch19-mastery" xml:lang="id-ID">
+  <title>Uji Penguasaan Bab 19: Keterhubungan Lintasan</title>
+  <p>Delapan uji penguasaan orisinal ini mengintegrasikan konstruksi lintasan, citra kontinu, komponen lintasan, ruang berhingga, sifat lokal, penempelan, contoh limit, dan kekompakan.</p>
+  <p>Komponen terpisah ini merupakan karya asli berlisensi CC BY 4.0, bukan materi atau solusi resmi GVSU, tidak menyiratkan dukungan penulis sumber, dan tidak mengubah perlakuan konservatif CC BY-NC-SA 3.0 untuk teks utama. Provenans model: <c>OpenAI Codex gpt-5.6-sol, Ultra</c>.</p>
+
+  <exercise xml:id="o003-c90-ch19-mastery-01">
+    <title>Membangun lintasan dalam daerah berbentuk bintang</title>
+    <statement><p>Misalkan <m>A\subseteq\R^n</m> dan ada <m>c\in A</m> sehingga untuk setiap <m>x\in A</m>, seluruh ruas dari <m>x</m> ke <m>c</m> berada dalam <m>A</m>. Buktikan bahwa <m>A</m> terhubung lintasan dan berikan rumus lintasan dari <m>x</m> ke <m>y</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-01-hint"><p><em>Tahap 1.</em> Hubungkan <m>x</m> ke <m>c</m> secara linear. <em>Tahap 2.</em> Hubungkan <m>c</m> ke <m>y</m>. <em>Tahap 3.</em> Parametrisasi kedua ruas pada setengah interval.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-01-answer"><p>Lintasan dapat didefinisikan oleh <m>p(t)=(1-2t)x+2tc</m> untuk <m>t\leq1/2</m> dan <m>p(t)=(2-2t)c+(2t-1)y</m> untuk <m>t\geq1/2</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-01-solution"><p>Potongan pertama menelusuri ruas <m>[x,c]</m> dan potongan kedua ruas <m>[c,y]</m>; keduanya berada dalam <m>A</m> oleh hipotesis. Masing-masing kontinu dan keduanya bernilai <m>c</m> pada <m>t=1/2</m>, sehingga Lemma Penempelan memberi kontinuitas <m>p</m>. Karena <m>p(0)=x</m> dan <m>p(1)=y</m>, setiap pasangan titik dapat dihubungkan. Jadi <m>A</m> terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-mastery-02">
+    <title>Surjeksi kontinu dan komponen lintasan</title>
+    <statement><p>Misalkan <m>f:X\to Y</m> kontinu dan surjektif. Buktikan bahwa setiap komponen lintasan <m>P</m> dari <m>X</m> termuat dalam prapeta suatu komponen lintasan <m>Q</m> dari <m>Y</m>. Jika <m>X</m> terhubung lintasan, simpulkan bahwa <m>Y</m> terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-02-hint"><p><em>Tahap 1.</em> Citra <m>f(P)</m> terhubung lintasan. <em>Tahap 2.</em> Setiap himpunan terhubung lintasan berada dalam satu komponen lintasan. <em>Tahap 3.</em> Gunakan surjektivitas untuk kesimpulan global.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-02-answer"><p>Pilih <m>Q</m> yang memuat <m>f(P)</m>; maka <m>P\subseteq f^{-1}(Q)</m>. Bila <m>P=X</m>, surjektivitas memberi <m>Q=Y</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-02-solution"><p>Karena pembatasan <m>f|_P</m> kontinu dan <m>P</m> terhubung lintasan, <m>f(P)</m> terhubung lintasan. Pilih <m>p\in P</m> dan biarkan <m>Q=PC_Y(f(p))</m>. Semua titik <m>f(P)</m> dapat dihubungkan ke <m>f(p)</m>, sehingga <m>f(P)\subseteq Q</m> dan karenanya <m>P\subseteq f^{-1}(Q)</m>. Jika <m>X</m> terhubung lintasan, ambil <m>P=X</m>. Maka <m>f(X)\subseteq Q</m>; karena <m>f</m> surjektif, <m>Y=f(X)=Q</m>, sehingga <m>Y</m> terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-mastery-03">
+    <title>Menghitung komponen lintasan subruang silang</title>
+    <statement><p>Dalam <m>\R^2</m>, ambil <m>X=(\R\times\{0\})\cup(\{0\}\times\R)</m> dan hapus titik asal. Tentukan semua komponen lintasan dari <m>X\setminus\{(0,0)\}</m> serta buktikan jawaban Anda.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-03-hint"><p><em>Tahap 1.</em> Identifikasi empat setengah-sumbu. <em>Tahap 2.</em> Masing-masing terhubung lintasan. <em>Tahap 3.</em> Gunakan tanda koordinat dan keterhubungan citra lintasan untuk mencegah perpindahan antarsumbu tanpa melalui asal.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-03-answer"><p>Ada empat komponen lintasan: setengah-sumbu mendatar positif dan negatif serta setengah-sumbu vertikal positif dan negatif.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-03-solution"><p>Keempat setengah-sumbu terbuka itu masing-masing homeomorfik dengan <m>(0,\infty)</m>, sehingga terhubung lintasan. Andaikan sebuah lintasan menghubungkan titik pada dua setengah-sumbu berbeda. Citra lintasan terhubung dan, di dalam silang, satu-satunya titik tempat dua sumbu atau dua sisi suatu sumbu bertemu adalah asal. Secara lebih eksplisit, proyeksi koordinat yang relevan harus berubah dari nilai taknol menjadi nol, dan perpindahan ke sumbu lain memaksa kedua koordinat nol pada suatu parameter. Itu akan memasukkan asal ke citra, padahal asal telah dihapus. Maka tidak ada komponen yang lebih besar.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-mastery-04">
+    <title>Algoritme lingkungan minimal ruang berhingga</title>
+    <statement><p>Misalkan <m>X=\{1,2,3,4\}</m> dan <m>\tau=\{\emptyset,\{1\},\{1,2\},\{1,3\},\{1,2,3\},X\}</m>. Hitung semua lingkungan minimal <m>U_x</m>, tentukan komponen lintasan, dan putuskan apakah <m>X</m> terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-04-hint"><p><em>Tahap 1.</em> Iris himpunan buka yang memuat tiap titik. <em>Tahap 2.</em> Dalam ruang berhingga, setiap <m>U_x</m> terhubung lintasan. <em>Tahap 3.</em> Periksa apakah semua titik dapat terhubung melalui titik <m>1</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-04-answer"><p><m>U_1=\{1\}</m>, <m>U_2=\{1,2\}</m>, <m>U_3=\{1,3\}</m>, dan <m>U_4=X</m>. Seluruh <m>X</m> merupakan satu komponen lintasan dan karenanya terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-04-solution"><p>Singleton <m>\{1\}</m> adalah himpunan buka terkecil yang memuat <m>1</m>. Himpunan buka yang memuat <m>2</m> beririsan menjadi <m>\{1,2\}</m>; untuk <m>3</m> menjadi <m>\{1,3\}</m>. Satu-satunya himpunan buka yang memuat <m>4</m> adalah <m>X</m>, jadi <m>U_4=X</m>. Teorema ruang berhingga memberi bahwa <m>U_4=X</m> terhubung lintasan. Dengan demikian hanya ada satu komponen lintasan. Karena terhubung lintasan mengakibatkan terhubung, <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-mastery-05">
+    <title>Kriteria lokal melalui komponen lingkungan buka</title>
+    <statement><p>Buktikan ekuivalensi berikut: <m>X</m> terhubung lintasan secara lokal jika dan hanya jika setiap komponen lintasan dari setiap himpunan buka <m>O\subseteq X</m> terbuka dalam <m>X</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-05-hint"><p><em>Tahap 1.</em> Pada arah maju, letakkan lingkungan terhubung lintasan kecil di sekitar tiap titik komponen. <em>Tahap 2.</em> Pada arah balik, ambil komponen lintasan dari suatu himpunan buka di dalam lingkungan yang diberikan.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-05-answer"><p>Pada arah maju komponen adalah gabungan lingkungan buka terhubung lintasan; pada arah balik komponen lintasan yang memuat titik menjadi lingkungan buka terhubung lintasan yang diperlukan.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-05-solution"><p>Andaikan <m>X</m> lokal terhubung lintasan, <m>O</m> buka, dan <m>P</m> komponen lintasan <m>O</m>. Untuk <m>p\in P</m>, ada lingkungan buka terhubung lintasan <m>V</m> dengan <m>p\in V\subseteq O</m>. Karena <m>V</m> bertemu <m>P</m>, maksimalitas komponen memberi <m>V\subseteq P</m>. Maka setiap titik <m>P</m> mempunyai lingkungan buka dalam <m>P</m>, jadi <m>P</m> terbuka.</p><p>Sebaliknya, ambil titik <m>x</m> dan lingkungan <m>N</m>. Pilih himpunan buka <m>O</m> dengan <m>x\in O\subseteq N</m>. Komponen lintasan <m>P</m> dari <m>O</m> yang memuat <m>x</m> terbuka menurut hipotesis, terhubung lintasan menurut definisi, dan memenuhi <m>x\in P\subseteq N</m>. Jadi <m>X</m> lokal terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-mastery-06">
+    <title>Kurva sinus topolog: terhubung tetapi bukan terhubung lintasan</title>
+    <statement><p>Misalkan <m>T=\{(x,\sin(1/x)):0&lt;x\leq1\}\cup(\{0\}\times[-1,1])</m>. Jelaskan mengapa <m>T</m> terhubung dan mengapa tidak ada lintasan dari titik pada ruas vertikal ke titik pada grafik.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-06-hint"><p><em>Tahap 1.</em> Grafik adalah citra kontinu interval terhubung dan <m>T</m> adalah penutupannya. <em>Tahap 2.</em> Andaikan ada lintasan keluar dari sumbu, ambil waktu pertama saat koordinat pertama menjadi positif. <em>Tahap 3.</em> Osilasi <m>\sin(1/x)</m> menggagalkan kekontinuan koordinat kedua.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-06-answer"><p><m>T</m> terhubung sebagai penutupan grafik terhubung, tetapi bukan terhubung lintasan karena osilasi grafik dekat <m>x=0</m> tidak dapat dilalui secara kontinu dari ruas vertikal.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-06-solution"><p>Pemetaan <m>x\mapsto(x,\sin(1/x))</m> kontinu pada <m>(0,1]</m>, sehingga grafik <m>G</m> terhubung. Setiap titik <m>(0,y)</m> dengan <m>-1\leq y\leq1</m> adalah titik limit grafik, dan penutupan <m>G</m> tepat <m>T</m>. Penutupan himpunan terhubung terhubung, jadi <m>T</m> terhubung.</p><p>Andaikan lintasan <m>p(t)=(u(t),v(t))</m> berawal pada ruas vertikal dan berakhir pada grafik. Biarkan <m>t_0</m> batas terakhir dari bagian awal saat <m>u(t)=0</m>. Ada deret <m>t_n\downarrow t_0</m> dengan <m>u(t_n)&gt;0</m> dan <m>u(t_n)\to0</m>. Pada titik-titik itu <m>v(t_n)=\sin(1/u(t_n))</m>. Kekontinuan lintasan dan peralihan melalui semua nilai kecil positif memaksa nilai ini berosilasi mendekati <m>1</m> dan <m>-1</m> secara arbitrer dekat <m>t_0</m>, sehingga <m>v(t)</m> tidak mempunyai limit di <m>t_0</m>. Kontradiksi. Jadi kedua bagian berada dalam komponen lintasan berbeda.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-mastery-07">
+    <title>Menempelkan lintasan pada keluarga berhingga</title>
+    <statement><p>Misalkan <m>A_1,\ldots,A_n</m> terhubung lintasan dan <m>A_i\cap A_{i+1}\ne\emptyset</m> untuk <m>1\leq i&lt;n</m>. Buktikan bahwa <m>\bigcup_{i=1}^nA_i</m> terhubung lintasan, tanpa mengandaikan irisan semua <m>A_i</m> takkosong.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-07-hint"><p><em>Tahap 1.</em> Pilih <m>z_i\in A_i\cap A_{i+1}</m>. <em>Tahap 2.</em> Hubungkan titik awal ke <m>z_1</m>, lalu <m>z_i</m> ke <m>z_{i+1}</m>, dan akhirnya ke titik akhir. <em>Tahap 3.</em> Tempelkan berhingga banyak lintasan.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-07-answer"><p>Rantai titik irisan menyediakan rantai lintasan yang dapat direparametrisasi dan ditempelkan menjadi satu lintasan.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-07-solution"><p>Ambil <m>x\in A_r</m> dan <m>y\in A_s</m>, dengan <m>r\leq s</m> setelah menukar nama bila perlu. Pilih <m>z_i\in A_i\cap A_{i+1}</m>. Dalam <m>A_r</m> ada lintasan dari <m>x</m> ke <m>z_r</m>; dalam setiap <m>A_i</m> berikutnya ada lintasan dari <m>z_{i-1}</m> ke <m>z_i</m>; dan dalam <m>A_s</m> ada lintasan dari <m>z_{s-1}</m> ke <m>y</m>. Bagi <m>[0,1]</m> menjadi berhingga banyak subinterval tertutup, reparametrisasi lintasan-lintasan itu, lalu terapkan Lemma Penempelan berulang kali. Hasilnya lintasan dalam gabungan dari <m>x</m> ke <m>y</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-mastery-08">
+    <title>Kompak dan lokal terhubung lintasan</title>
+    <statement><p>Misalkan <m>X</m> kompak dan terhubung lintasan secara lokal. Buktikan bahwa <m>X</m> adalah gabungan saling lepas dari berhingga banyak subruang yang masing-masing terbuka, tertutup, dan terhubung lintasan. Jelaskan kapan <m>X</m> sendiri terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-mastery-08-hint"><p><em>Tahap 1.</em> Komponen lintasan terbuka. <em>Tahap 2.</em> Komplemennya adalah gabungan komponen lain, jadi juga terbuka. <em>Tahap 3.</em> Gunakan kekompakan pada selimut oleh semua komponen.</p></hint>
+    <answer xml:id="o003-c90-ch19-mastery-08-answer"><p>Komponen lintasan adalah himpunan buka-tertutup dan hanya berhingga banyak. Ruang <m>X</m> terhubung lintasan tepat bila hanya ada satu komponen.</p></answer>
+    <solution xml:id="o003-c90-ch19-mastery-08-solution"><p>Setiap komponen lintasan terbuka karena <m>X</m> lokal terhubung lintasan. Komplemen suatu komponen adalah gabungan semua komponen lain, maka terbuka; jadi setiap komponen juga tertutup. Komponen-komponen saling lepas, menutupi <m>X</m>, dan masing-masing terhubung lintasan menurut definisi. Selimut buka oleh semua komponen mempunyai subselimut berhingga karena <m>X</m> kompak. Saling lepasnya komponen berarti komponen yang tidak dipilih tidak mungkin tertutupi, sehingga sebenarnya hanya ada berhingga banyak komponen. Akhirnya, <m>X</m> terhubung lintasan jika dan hanya jika semua titik berada dalam satu kelas lintasan, yakni tepat ketika dekomposisi berhingga itu mempunyai satu bagian.</p></solution>
+  </exercise>
+</section>

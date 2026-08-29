@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch20-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan Latihan Bab 20, Bagian B</title>
+  <p>Bagian ini memuat dukungan lengkap untuk prompt latihan kesebelas sampai kedua puluh.</p>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-01">
+    <title>Hasil kali dua basis</title>
+    <statement><p>Buktikan bahwa <m>\mathcal B_X\times\mathcal B_Y=\{U\times V:U\in\mathcal B_X,V\in\mathcal B_Y\}</m> merupakan basis produk.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-01-hint"><p>Perhalus setiap kotak buka <m>O_X\times O_Y</m> pada satu titik menggunakan basis faktor.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-01-answer"><p>Untuk <m>(x,y)\in O_X\times O_Y</m>, pilih <m>U\in\mathcal B_X</m> dan <m>V\in\mathcal B_Y</m> dengan <m>x\in U\subseteq O_X</m> dan <m>y\in V\subseteq O_Y</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-01-solution"><p>Setiap titik produk dimuat oleh suatu <m>U\times V</m> karena basis faktor menutupi faktor. Jika titik berada dalam irisan <m>(U_1\times V_1)\cap(U_2\times V_2)</m>, sifat basis faktor memberi <m>U_3\ni x</m> termuat dalam <m>U_1\cap U_2</m> dan <m>V_3\ni y</m> termuat dalam <m>V_1\cap V_2</m>. Maka <m>U_3\times V_3</m> menyempurnakan irisan. <em>Rubrik:</em> kedua aksioma basis harus dibuktikan dari aksioma basis faktor.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-02">
+    <title>Produk berhingga ruang terhubung</title>
+    <statement><p>Buktikan dengan induksi bahwa hasil kali berhingga ruang terhubung bersifat terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-02-hint"><p>Gunakan teorema dua faktor pada <m>(X_1\times\cdots\times X_{n-1})\times X_n</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-02-answer"><p>Kasus satu faktor jelas; langkah induksi adalah penerapan teorema produk dua ruang terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-02-solution"><p>Untuk <m>n=1</m> pernyataan adalah hipotesis. Andaikan <m>P_{n-1}=\prod_{i=1}^{n-1}X_i</m> terhubung. Karena <m>X_n</m> terhubung, teorema dua faktor memberi <m>P_{n-1}\times X_n</m> terhubung. Homeomorfisme asosiatif kanonis mengidentifikasikannya dengan <m>\prod_{i=1}^n X_i</m>. <em>Rubrik:</em> dasar, hipotesis induksi, langkah dua faktor, dan identifikasi asosiatif harus muncul.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-03">
+    <title>Produk berhingga ruang kompak</title>
+    <statement><p>Buktikan dengan induksi bahwa hasil kali berhingga ruang kompak bersifat kompak.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-03-hint"><p>Ulangi pola induksi keterhubungan dengan teorema kekompakan dua faktor.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-03-answer"><p>Produk <m>n-1</m> faktor kompak menurut induksi; hasil kalinya dengan faktor terakhir kompak menurut teorema dua faktor.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-03-solution"><p>Kasus <m>n=1</m> langsung. Jika <m>P_{n-1}</m> kompak dan <m>X_n</m> kompak, teorema produk dua ruang kompak menunjukkan <m>P_{n-1}\times X_n</m> kompak. Melalui homeomorfisme pengelompokan ulang, ruang ini adalah produk <m>n</m> faktor. <em>Rubrik:</em> jangan menyebut Tychonoff takberhingga; teorema dua faktor dan induksi sudah cukup.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-04">
+    <title>Produk dua ruang terhubung lintasan</title>
+    <statement><p>Bangun lintasan antara dua titik sebarang pada <m>X_1\times X_2</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-04-hint"><p>Pilih lintasan pada tiap koordinat dan jalankan keduanya dengan parameter yang sama.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-04-answer"><p>Jika <m>\gamma_i</m> menghubungkan <m>x_i</m> ke <m>y_i</m>, ambil <m>\gamma(t)=(\gamma_1(t),\gamma_2(t))</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-04-solution"><p>Komposisi <m>\pi_i\circ\gamma=\gamma_i</m> kontinu untuk kedua koordinat. Kriteria kekontinuan fungsi menuju produk memberi kontinuitas <m>\gamma</m>. Nilai ujungnya <m>\gamma(0)=(x_1,x_2)</m> dan <m>\gamma(1)=(y_1,y_2)</m>. <em>Rubrik:</em> konstruksi dan alasan kontinuitas melalui proyeksi harus dicantumkan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-05">
+    <title>Produk berhingga ruang terhubung lintasan</title>
+    <statement><p>Perluas hasil dua faktor ke banyak faktor berhingga.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-05-hint"><p>Gunakan induksi atau fungsi koordinat <m>\gamma(t)=(\gamma_1(t),\ldots,\gamma_n(t))</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-05-answer"><p>Lintasan koordinat dijalankan serentak; semua komposisi proyeksinya kontinu, maka lintasan produk kontinu.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-05-solution"><p>Untuk dua titik <m>(x_i)</m> dan <m>(y_i)</m>, pilih lintasan <m>\gamma_i</m> dalam <m>X_i</m>. Definisikan <m>\gamma(t)=(\gamma_1(t),\ldots,\gamma_n(t))</m>. Setiap <m>\pi_i\circ\gamma</m> kontinu, sehingga teorema kekontinuan menuju produk berhingga memberi kontinuitas <m>\gamma</m>. Nilai ujungnya benar koordinat demi koordinat. <em>Rubrik:</em> bukti harus berlaku seragam untuk semua <m>n</m> berhingga.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-06">
+    <title>Apakah kekompakan produk memaksa kekompakan faktor?</title>
+    <statement><p>Putuskan pernyataan tanpa menambahkan hipotesis ketakkosongan yang tidak tertulis.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-06-hint"><p>Proyeksi hanya surjektif ke suatu faktor jika faktor yang lain tidak kosong.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-06-answer"><p>Pernyataan salah sebagaimana ditulis: <m>\R\times\emptyset=\emptyset</m> kompak, tetapi <m>\R</m> tidak kompak. Jika kedua faktor tidak kosong, pernyataannya benar.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-06-solution"><p>Ambil <m>X_1=\R</m> dengan topologi biasa dan <m>X_2=\emptyset</m>. Produknya kosong dan karenanya kompak, sedangkan <m>X_1</m> tidak kompak. Dengan syarat kedua faktor takkosong, masing-masing proyeksi <m>\pi_i</m> kontinu dan surjektif; citra kontinu ruang kompak kompak, sehingga kedua faktor kompak. <em>Rubrik:</em> jawaban penuh harus memberi contoh tandingan dan menjelaskan versi benar dengan hipotesis minimal.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-07">
+    <title>Proyeksi merupakan pemetaan buka</title>
+    <statement><p>Buktikan bahwa <m>\pi_i:X_1\times X_2\to X_i</m> memetakan himpunan buka ke himpunan buka.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-07-hint"><p>Mulai dari gabungan kotak basis dan hitung citra setiap kotak.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-07-answer"><p>Citra <m>U\times V</m> di bawah <m>\pi_1</m> adalah <m>U</m> jika <m>V\ne\emptyset</m> dan kosong jika <m>V=\emptyset</m>; gabungannya tetap buka.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-07-solution"><p>Tulis himpunan buka <m>O=\bigcup_\alpha(U_\alpha\times V_\alpha)</m>. Karena citra mempertahankan gabungan, <m>\pi_1(O)=\bigcup_{V_\alpha\ne\emptyset}U_\alpha</m>, yang buka dalam <m>X_1</m>. Argumen untuk <m>\pi_2</m> simetris. <em>Rubrik:</em> kasus faktor basis kosong tidak boleh diam-diam diabaikan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-08">
+    <title>Kapan topologi produk diskret?</title>
+    <statement><p>Dengan tiap faktor memiliki sedikitnya dua titik, buktikan bahwa produk diskret tepat ketika kedua faktor diskret.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-08-hint"><p>Untuk arah maju, proyeksikan singleton buka; untuk arah balik, hasil kalikan singleton faktor.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-08-answer"><p>Jika produk diskret, <m>\{(x_1,x_2)\}</m> buka dan proyeksi buka memberi <m>\{x_i\}</m> buka. Jika faktor diskret, semua singleton produk terbuka.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-08-solution"><p>Ambil sembarang <m>x_1\in X_1</m> dan pilih <m>x_2\in X_2</m>. Karena produk diskret, singleton pasangan buka; pemetaan proyeksi terbuka, jadi citranya <m>\{x_1\}</m> buka. Tukar faktor untuk memperoleh semua singleton di <m>X_2</m>. Maka faktor-faktor diskret. Sebaliknya, jika semua singleton faktor buka, setiap singleton produk adalah kotak buka; setiap himpunan adalah gabungan singleton. <em>Rubrik:</em> kedua implikasi dan penggunaan ketakkosongan harus eksplisit.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-09">
+    <title>Komplemen hasil kali subhimpunan</title>
+    <statement><p>Nilai kebenaran identitas komplemen <m>(X_1\times X_2)\setminus(A_1\times A_2)=(X_1\setminus A_1)\times(X_2\setminus A_2)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-09-hint"><p>Negasi “<m>x\in A_1</m> dan <m>y\in A_2</m>” memakai “atau”, bukan “dan”.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-09-answer"><p>Salah. Rumus yang benar adalah <m>((X_1\setminus A_1)\times X_2)\cup(X_1\times(X_2\setminus A_2))</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-09-solution"><p>Ambil <m>X_1=X_2=\{0,1\}</m> dan <m>A_1=A_2=\{0\}</m>. Titik <m>(0,1)</m> berada dalam komplemen produk, tetapi tidak berada dalam hasil kali kedua komplemen karena koordinat pertamanya masih dalam <m>A_1</m>. Hukum De Morgan memberi rumus benar pada jawaban. <em>Rubrik:</em> contoh tandingan harus diuji pada kedua ruas dan rumus benar sebaiknya dinyatakan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-b-10">
+    <title>Apakah batas produk termuat dalam produk batas?</title>
+    <statement><p>Nilai kebenaran <m>\partial(A_1\times A_2)\subseteq\partial A_1\times\partial A_2</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-b-10-hint"><p>Ambil faktor kedua seluruh ruang, yang batasnya kosong.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-b-10-answer"><p>Salah. Dalam <m>\R^2</m>, ambil <m>A_1=(0,1)</m> dan <m>A_2=\R</m>; batas produk adalah <m>\{0,1\}\times\R</m>, sedangkan produk batas kosong.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-b-10-solution"><p>Karena <m>\partial\R=\emptyset</m>, ruas kanan <m>\partial(0,1)\times\partial\R</m> kosong. Namun <m>(0,1)\times\R</m> adalah pita terbuka dan penutupnya <m>[0,1]\times\R</m>, sehingga batasnya dua garis <m>\{0,1\}\times\R</m>. <em>Rubrik:</em> contoh harus menghitung kedua batas secara eksplisit.</p></solution>
+  </exercise>
+</section>

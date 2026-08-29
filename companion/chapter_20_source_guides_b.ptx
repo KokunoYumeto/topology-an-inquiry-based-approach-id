@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch20-source-guides-b" xml:lang="id-ID">
+  <title>Panduan Prompt Sumber: Sifat Produk dan Topologi Digital</title>
+  <p>Lima belas panduan berikut menutup seluruh prompt nonlatihan Bab 20, termasuk kegiatan penerapan topologi Khalimsky.</p>
+
+  <exercise xml:id="o003-c90-ch20-guide-17">
+    <title>Memilih koordinat yang memisahkan dua titik</title>
+    <statement><p>Untuk dua titik berbeda <m>(x_1,y_1)</m> dan <m>(x_2,y_2)</m>, tentukan informasi yang diberikan sifat Hausdorff pada faktor.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-17-hint"><p>Dua pasangan berbeda berarti sekurang-kurangnya satu koordinat berbeda.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-17-answer"><p>Jika <m>x_1\ne x_2</m>, sifat Hausdorff <m>X</m> memberi lingkungan buka saling lepas bagi keduanya; jika <m>y_1\ne y_2</m>, gunakan <m>Y</m>. Salah satu kasus pasti terjadi.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-17-solution"><p>Apabila koordinat pertama berbeda, pilih <m>U_1,U_2\subseteq X</m> terbuka, <m>x_i\in U_i</m>, dan <m>U_1\cap U_2=\emptyset</m>. Persegi panjang <m>U_1\times Y</m> dan <m>U_2\times Y</m> memisahkan pasangan. Jika koordinat pertama sama, koordinat kedua wajib berbeda; pilih <m>V_1,V_2</m> di <m>Y</m> dan gunakan <m>X\times V_i</m>. <em>Rubrik:</em> bukti harus menangani kasus koordinat yang sama, bukan menganggap kedua koordinat selalu berbeda.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-18">
+    <title>Menuntaskan bukti bahwa produk Hausdorff</title>
+    <statement><p>Susun bukti lengkap bahwa hasil kali dua ruang Hausdorff bersifat Hausdorff.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-18-hint"><p>Gunakan pemisahan pada satu koordinat dan biarkan faktor lain seluruh ruang.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-18-answer"><p>Pilih koordinat yang berbeda, pisahkan nilainya dalam faktor Hausdorff, lalu ambil hasil kali lingkungan tersebut dengan seluruh faktor yang lain.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-18-solution"><p>Ambil <m>p=(x_1,y_1)\ne q=(x_2,y_2)</m>. Jika <m>x_1\ne x_2</m>, pilih buka saling lepas <m>U_1,U_2</m> pada <m>X</m>; maka <m>U_1\times Y</m> dan <m>U_2\times Y</m> buka, memuat <m>p,q</m>, dan beririsan kosong. Jika <m>x_1=x_2</m>, maka <m>y_1\ne y_2</m>; argumen yang sama dengan <m>X\times V_1</m> dan <m>X\times V_2</m> berlaku. <em>Rubrik:</em> solusi harus memuat kasus lengkap dan identitas irisan hasil kali.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-19">
+    <title>Lintasan Manhattan pada kisi bilangan bulat</title>
+    <statement><p>Bangun lintasan-4 dan lintasan-8 antara dua titik sebarang dalam <m>\Z^2</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-19-hint"><p>Ubah koordinat pertama satu satuan sampai tepat, kemudian ubah koordinat kedua.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-19-answer"><p>Barisan langkah horizontal lalu vertikal adalah lintasan-4; setiap langkah-4 juga merupakan langkah-8.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-19-solution"><p>Dari <m>(a,b)</m> menuju <m>(c,d)</m>, bergerak melalui <m>(a+\varepsilon,b),(a+2\varepsilon,b),\ldots,(c,b)</m>, dengan <m>\varepsilon</m> bertanda menuju <m>c</m>, lalu melalui <m>(c,b+\delta),\ldots,(c,d)</m>. Setiap pasangan berturutan berselisih satu pada tepat satu koordinat, jadi bertetangga-4. Ketetanggaan-4 termuat dalam ketetanggaan-8. <em>Rubrik:</em> konstruksi harus berhingga dan tetap menangani urutan koordinat yang menurun atau sama.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-20">
+    <title>Keterhubungan-4 dan keterhubungan-8 dua kurva digital</title>
+    <statement><p>Putuskan keterhubungan-4 dan keterhubungan-8 kurva <m>S_1</m> dan <m>S_2</m> pada gambar sumber.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-20-hint"><p>Telusuri titik demi titik; sambungan diagonal sah hanya untuk ketetanggaan-8.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-20-answer"><p><m>S_1</m> tidak terhubung-4 tetapi terhubung-8. <m>S_2</m> terhubung-4 dan, sebagai akibatnya, juga terhubung-8.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-20-solution"><p>Pada <m>S_1</m>, beberapa sambungan wajib dilalui secara diagonal, sehingga graf tetangga-4 terputus tetapi graf tetangga-8 memiliki satu komponen. Pada <m>S_2</m>, jalur bertangga pada gambar dapat ditelusuri seluruhnya dengan langkah horizontal atau vertikal, sehingga graf tetangga-4 terhubung; penambahan sisi diagonal tidak dapat memutusnya. <em>Rubrik:</em> jawaban harus menyertakan jejak titik atau pohon rentang pada masing-masing graf, bukan hanya empat label benar-salah.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-21">
+    <title>Menguji syarat kurva Jordan-<m>k</m></title>
+    <statement><p>Uji apakah <m>S_1</m> dan <m>S_2</m> merupakan kurva Jordan-4 atau kurva Jordan-8.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-21-hint"><p>Selain terhubung, setiap titik harus memiliki tepat dua tetangga-<m>k</m> di dalam kurva.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-21-answer"><p><m>S_1</m> merupakan kurva Jordan-8 tetapi bukan kurva Jordan-4; <m>S_2</m> merupakan kurva Jordan-4 tetapi bukan kurva Jordan-8.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-21-solution"><p>Pemeriksaan graf ketetanggaan menunjukkan bahwa pada <m>S_1</m> setiap titik memiliki derajat dua hanya dalam graf-8, sedangkan graf-4 terputus. Pada <m>S_2</m> setiap titik memiliki derajat dua dalam graf-4; ketetanggaan diagonal tambahan pada graf-8 memberi sedikitnya satu titik lebih dari dua tetangga. <em>Rubrik:</em> untuk setiap keputusan, verifikasi harus mencakup keterhubungan dan derajat tepat dua.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-22">
+    <title>Mengapa satu jenis ketetanggaan tidak cukup</title>
+    <statement><p>Jelaskan perilaku komplemen <m>S_1</m> dan <m>S_2</m> serta kebutuhan mencampur dua jenis ketetanggaan.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-22-hint"><p>Telusuri komplemen dengan jenis ketetanggaan yang sama dengan kurvanya, lalu bandingkan dengan jenis yang berlawanan.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-22-answer"><p>Komplemen kurva Jordan-8 <m>S_1</m> tetap terhubung-8, sedangkan komplemen kurva Jordan-4 <m>S_2</m> memiliki tiga komponen-4. Pemisahan menjadi tepat dua komponen diperoleh dengan memakai ketetanggaan yang berlawanan untuk komplemen.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-22-solution"><p>Diagonal memungkinkan lintasan-8 “menyelinap” melewati kurva <m>S_1</m>, sedangkan pembatasan langkah-4 di sekitar <m>S_2</m> memisahkan terlalu banyak daerah. Konvensi yang benar menyatakan: kurva Jordan-4 dengan sedikitnya lima titik memisahkan bidang menjadi dua komponen-8, dan kurva Jordan-8 memisahkannya menjadi dua komponen-4. <em>Rubrik:</em> uraian harus mengidentifikasi kegagalan kedua contoh dan pasangan ketetanggaan kurva/komplemen yang memperbaikinya.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-23">
+    <title>Titik genap tertutup pada garis digital</title>
+    <statement><p>Buktikan bahwa <m>\{n\}</m> tertutup ketika <m>n</m> genap dalam topologi garis Khalimsky.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-23-hint"><p>Tunjukkan bahwa setiap <m>m\ne n</m> memiliki elemen basis yang menghindari <m>n</m>.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-23-answer"><p>Komplemen <m>\Z\setminus\{n\}</m> terbuka: untuk <m>m</m> ganjil gunakan <m>\{m\}</m>, dan untuk <m>m</m> genap gunakan <m>B(m)=\{m-1,m,m+1\}</m>, yang tidak memuat bilangan genap lain <m>n</m>.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-23-solution"><p>Jika <m>m\ne n</m> ganjil, elemen basis <m>B(m)=\{m\}</m> termuat dalam komplemen. Jika <m>m</m> genap, selisih dua bilangan genap taknol bernilai mutlak sedikitnya dua, sedangkan <m>B(m)</m> hanya mencapai jarak satu; jadi <m>n\notin B(m)</m>. Komplemen merupakan gabungan lingkungan basis tersebut dan terbuka. <em>Rubrik:</em> kedua paritas <m>m</m> harus ditangani.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-24">
+    <title>Basis topologi Khalimsky pada bidang</title>
+    <statement><p>Turunkan empat bentuk <m>B(m,n)</m> sebagai basis hasil kali dari basis garis digital.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-24-hint"><p>Hitung <m>B(m)\times B(n)</m> untuk empat kombinasi paritas.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-24-answer"><p>Ganjil-ganjil memberi singleton; genap-genap memberi blok <m>3\times3</m>; ganjil-genap memberi tiga titik vertikal; genap-ganjil memberi tiga titik horizontal.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-24-solution"><p>Basis produk adalah semua <m>B(m)\times B(n)</m>. Jika kedua indeks ganjil, kedua faktor singleton. Jika keduanya genap, masing-masing faktor berisi tiga bilangan berturutan, sehingga produknya blok sembilan titik. Jika hanya indeks kedua genap, koordinat pertama tetap dan koordinat kedua bervariasi tiga nilai; kasus sebaliknya menghasilkan segmen horizontal. <em>Rubrik:</em> keempat rumus harus diperoleh sebagai hasil kali, bukan dihafalkan tanpa penjelasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-25">
+    <title>Mengenali lintasan digital pada tiga himpunan</title>
+    <statement><p>Tunjukkan bahwa <m>S_1</m> bukan lintasan digital, sedangkan <m>S_2</m> dan <m>S_3</m> merupakan lintasan digital.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-25-hint"><p>Urutkan titik <m>S_2</m> dan <m>S_3</m> mengelilingi kurvanya, lalu cocokkan pergantian tipe titik dengan interval Khalimsky. Pada <m>S_1</m>, periksa keterhubungan subruang.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-25-answer"><p><m>S_1</m> terdiri atas empat titik ganjil-ganjil yang terisolasi dalam subruangnya. Urutan siklik yang ditampilkan untuk <m>S_2</m> dan urutan mengelilingi delapan titik <m>S_3</m> memberi citra kontinu interval digital.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-25-solution"><p>Pada <m>S_1</m>, setiap titik memiliki lingkungan basis singleton, sehingga subruang diskret dengan lebih dari satu titik dan tidak terhubung; citra kontinu interval digital yang terhubung tidak dapat sama dengan <m>S_1</m>. Untuk <m>S_2</m>, gunakan urutan <m>(0,0),(1,-1),(2,0),(1,1)</m>; untuk <m>S_3</m>, urutkan delapan titik sepanjang tepi persegi. Pemetaan dari interval digital berurutan ke daftar tersebut kontinu karena prapeta setiap lingkungan basis adalah buka pada interval. <em>Rubrik:</em> solusi lengkap memberi argumen ketakmungkinan bagi <m>S_1</m> dan tabel urutan beserta pemeriksaan kontinuitas bagi dua himpunan lain.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-26">
+    <title>Lintasan digital berhingga terhubung</title>
+    <statement><p>Buktikan bahwa setiap lintasan digital berhingga terhubung dan putuskan apakah setiap interval digital terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-26-hint"><p>Buktikan interval digital tidak dapat dipisah dengan menelusuri pasangan bilangan berturutan, lalu gunakan citra kontinu.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-26-answer"><p>Setiap interval digital terhubung; karena lintasan digital adalah citra kontinu interval digital, setiap lintasan digital berhingga juga terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-26-solution"><p>Andaikan interval digital terpisah menjadi dua buka relatif takkosong. Sepanjang urutan bilangan bulat dari satu bagian ke bagian lain terdapat pasangan berturutan yang jatuh pada bagian berbeda. Topologi Khalimsky mengikat pasangan tersebut melalui lingkungan minimal titik genap, sehingga kedua singleton relatif tidak dapat sekaligus terbuka dan pemisahan mustahil. Citra kontinu ruang terhubung terhubung, jadi daerah hasil setiap lintasan digital berhingga terhubung. <em>Rubrik:</em> bukti harus memisahkan lemma interval dan penerapan teorema citra kontinu.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-27">
+    <title>Memeriksa <m>S_2</m> sebagai kurva Jordan digital</title>
+    <statement><p>Verifikasi definisi kurva Jordan digital bagi <m>S_2</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-27-hint"><p>Gunakan urutan siklik empat titik; setelah satu titik dibuang, tiga sisanya harus menjadi busur digital.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-27-answer"><p><m>S_2</m> berhingga, terhubung, memiliki empat titik, dan penghapusan sembarang titik memutus siklus menjadi busur digital tiga titik.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-27-solution"><p>Urutkan <m>P_1=(0,0)</m>, <m>P_2=(1,-1)</m>, <m>P_3=(2,0)</m>, dan <m>P_4=(1,1)</m>. Urutan ini membentuk lintasan digital tertutup. Jika <m>P_j</m> dibuang, tiga titik lain dapat diurutkan dari satu tetangga <m>P_j</m> ke tetangga lainnya dan homeomorfik dengan interval digital tiga titik. Maka semua syarat definisi terpenuhi. <em>Rubrik:</em> pemeriksaan harus mencakup kardinalitas, keterhubungan, dan keempat kasus penghapusan melalui simetri atau daftar eksplisit.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-28">
+    <title>Ketetanggaan melalui lingkungan minimal</title>
+    <statement><p>Buktikan bahwa titik berbeda <m>x,y</m> bertetangga tepat ketika <m>x\in N(y)</m> atau <m>y\in N(x)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-28-hint"><p>Subruang dua titik terhubung kecuali kedua singletonnya terbuka relatif.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-28-answer"><p>Jika salah satu titik berada dalam setiap lingkungan titik lain, dua singleton tidak dapat memisahkan subruang. Jika kedua keanggotaan gagal, pilih lingkungan yang saling mengecualikan dan peroleh pemisahan.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-28-solution"><p>Jika <m>x\in N(y)</m>, setiap lingkungan <m>y</m> memuat <m>x</m>; maka <m>\{y\}</m> tidak terbuka relatif pada <m>\{x,y\}</m>, sehingga subruang dua titik tidak diskret dan tidak dapat dipisah. Argumen sama berlaku jika <m>y\in N(x)</m>. Sebaliknya, jika <m>x\notin N(y)</m> dan <m>y\notin N(x)</m>, ada lingkungan <m>U\ni y</m> yang tidak memuat <m>x</m> dan <m>V\ni x</m> yang tidak memuat <m>y</m>; irisan relatifnya adalah dua singleton terbuka yang memisahkan subruang. <em>Rubrik:</em> kedua implikasi dan penggunaan definisi <m>N</m> harus eksplisit.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-29">
+    <title>Lingkungan minimal titik murni dan campuran</title>
+    <statement><p>Hitung <m>N(P)</m> pada bidang Khalimsky menurut paritas koordinat <m>P</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-29-hint"><p>Gunakan <m>N((m,n))=N(m)\times N(n)</m>, dengan <m>N(r)=\{r\}</m> untuk <m>r</m> ganjil dan <m>N(r)=\{r-1,r,r+1\}</m> untuk <m>r</m> genap.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-29-answer"><p>Ganjil-ganjil memberi singleton; genap-genap memberi blok sembilan titik; ganjil-genap memberi tiga titik vertikal; genap-ganjil memberi tiga titik horizontal.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-29-solution"><p>Irisan semua lingkungan pada produk adalah hasil kali irisan lingkungan pada faktor karena basis produk. Jadi rumus faktor langsung menghasilkan empat kasus. Titik murni mencakup dua kasus pertama, sedangkan titik campuran mencakup dua kasus terakhir. <em>Rubrik:</em> jawaban tidak boleh menyatukan semua titik murni menjadi satu bentuk; kedua paritas murni berbeda.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-30">
+    <title>Syarat karakterisasi yang dilanggar <m>S_1</m></title>
+    <statement><p>Identifikasi bagian teorema karakterisasi kurva Jordan digital yang gagal untuk <m>S_1</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-30-hint"><p>Keempat titik <m>S_1</m> semuanya ganjil-ganjil; hitung ketetanggaan di dalam subruang.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-30-answer"><p>Syarat bahwa setiap <m>P_j</m> bertetangga tepat dengan pendahulu dan penerusnya gagal: titik-titik <m>S_1</m> tidak bertetangga satu sama lain dalam topologi Khalimsky.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-30-solution"><p>Untuk titik ganjil-ganjil <m>P</m>, <m>N(P)=\{P\}</m>. Tidak ada titik lain dari <m>S_1</m> yang berada dalam <m>N(P)</m>, dan simetri memberi kegagalan arah sebaliknya. Maka setiap titik memiliki nol tetangga di <m>S_1</m>, bukan tepat dua. <em>Rubrik:</em> solusi harus mengaitkan perhitungan lingkungan minimal dengan klausa tetangga teorema.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-guide-31">
+    <title>Ketetanggaan siklik pada <m>S_2</m></title>
+    <statement><p>Verifikasi bahwa setiap titik <m>S_2</m> bertetangga tepat dengan dua tetangga sikliknya.</p></statement>
+    <hint xml:id="o003-c90-ch20-guide-31-hint"><p>Gunakan urutan <m>P_1=(0,0)</m>, <m>P_2=(1,-1)</m>, <m>P_3=(2,0)</m>, <m>P_4=(1,1)</m> dan lingkungan minimal titik genap-genap.</p></hint>
+    <answer xml:id="o003-c90-ch20-guide-31-answer"><p><m>P_2,P_4\in N(P_1)</m> tetapi <m>P_3\notin N(P_1)</m>; pola yang sama berputar di keempat titik, sehingga tepat pendahulu dan penerus yang bertetangga.</p></answer>
+    <solution xml:id="o003-c90-ch20-guide-31-solution"><p><m>N(P_1)</m> adalah blok <m>3\times3</m> berpusat di <m>(0,0)</m>, sehingga memuat <m>P_2,P_4</m> dan tidak memuat <m>P_3</m>. Demikian pula <m>N(P_3)</m> memuat <m>P_2,P_4</m> tetapi tidak <m>P_1</m>. Titik <m>P_2,P_4</m> ganjil-ganjil memiliki lingkungan minimal singleton, tetapi ketetanggaan simetris sudah dipasok oleh keanggotaan keduanya dalam lingkungan minimal <m>P_1,P_3</m>. <em>Rubrik:</em> tabel keempat titik harus menunjukkan dua tetangga dan satu bukan tetangga untuk masing-masing.</p></solution>
+  </exercise>
+</section>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<!--********************************************--><!--*       Generated from PreTeXt source      *--><!--*                                          *--><!--*         https://pretextbook.org          *--><!--*                                          *--><!--********************************************--><html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Penyempurnaan Aksioma Separasi</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Topologi: Pendekatan Berbasis Inkuiri">
+<meta property="book:author" content="Steven Schlicker">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="external/vendor/mathjax/es5/tex-chtml.js"></script><script src="external/vendor/lunr/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="external/vendor/pretext/js/0.3/pretext_search.js"></script><link href="external/vendor/pretext/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="external/vendor/pretext/js/lib/jquery.min.js"></script><script src="external/vendor/pretext/js/lib/jquery.sticky.js"></script><script src="external/vendor/pretext/js/lib/jquery.espy.min.js"></script><script src="external/vendor/pretext/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="external/vendor/pretext/js/0.3/pretext_add_on.js?x=1"></script><script src="external/vendor/pretext/js/0.3/user_preferences.js"></script><script src="external/vendor/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="external/vendor/pretext/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="external/vendor/pretext/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/o003-readable-layout.css">
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Lompat ke konten utama</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="o003-c90-complete-reader.html"><span class="title">Topologi: Pendekatan Berbasis Inkuiri:</span> <span class="subtitle">Edisi Lengkap Bahasa Indonesia — Dua Puluh Bab, Pendamping Belajar Mandiri, dan Pelengkap C90</span></a></h1>
+<p class="byline">Steven Schlicker</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Hasil Pencarian: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Tidak ada hasil.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Tampilkan atau sembunyikan daftar isi"><span class="icon">☰</span><span class="name">Daftar Isi</span></button><a class="index-button button" href="index-1.html" title="Indeks"><span class="name">Indeks</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Ubah preferensi pengguna"><span id="avatarbutton" class="avatarbutton name">Anda!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Pilih avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>Anda!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Keluarga font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Sesuaikan font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Ukuran</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Lebih kecil</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Lebih besar</li>
+<li>Lebar</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">lebih sempit</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">lebih lebar</li>
+<li>Ketebalan</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">lebih tipis</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">lebih tebal</li>
+<li>Jarak huruf</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">lebih rapat</li>
+<li data-val="lspace" data-change="1" tabindex="-1">lebih renggang</li>
+<li>Jarak kata</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">celah lebih kecil </li>
+<li data-val="wspace" data-change="1" tabindex="-1">celah lebih besar</li>
+<li>Jarak baris</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">lebih rapat<br>merapat</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">lebih renggang<br>merenggang</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Mode terang/gelap<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>bawaan</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>senja</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>gelap</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>tengah malam</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Penggaris baca<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>tanpa penggaris</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>garis bawah</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>garis bawah-L</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>bilah abu-abu</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>kotak terang</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>fajar</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>garis bawah fajar</li>
+<li class="moveQ">Gerakkan dengan:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>ikuti tetikus</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>panah atas/bawah — belum tersedia</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>pelacakan mata — belum tersedia</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="o003-c90-completion-companion.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="up-button button" href="o003-c90-completion-companion.html" title="Naik"><span class="icon">^</span><span class="name">Naik</span></a><a class="next-button button" href="o003-c90-completion-countability.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Cari" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lub}{\text{lub}}
+\newcommand{\glb}{\text{glb}}
+\newcommand{\Int}{\text{Int}}
+\newcommand{\Bdry}{\text{Bdry}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\CB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\renewcommand{\CD}{\mathcal{D}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CQ}{\mathcal{Q}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\CW}{\mathcal{W}}
+\newcommand{\ssim}{\sim}
+\newcommand{\overparen}[1]{\overset{\frown}{#1}}
+\newcommand{\la}{\left|}
+\newcommand{\ra}{\right|}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Bagian Awal</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="o003-c90-complete-edition-note.html" class="internal"><span class="title">Catatan edisi Bahasa Indonesia</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-foundations-and-metrics.html" class="internal"><span class="codenumber">I</span> <span class="title">Himpunan, Fungsi, Ruang Metrik, Keterbukaan, Ketertutupan, Barisan, Subruang, dan Hasil Kali</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basic_top.html" class="internal"><span class="title">Gagasan Dasar Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_intervals.html" class="internal"><span class="title">Interval</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_comp.html" class="internal"><span class="title">Gabungan, Irisan, dan Komplemen Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cart_prod.html" class="internal"><span class="title">Hasil Kali Kartesius Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_functions.html" class="internal"><span class="codenumber">2</span> <span class="title">Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_func.html" class="internal"><span class="title">Komposisi Fungsi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_inv_func.html" class="internal"><span class="title">Fungsi Invers</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fun_set.html" class="internal"><span class="title">Fungsi dan Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_card_set.html" class="internal"><span class="title">Kardinalitas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_metric_space_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space.html" class="internal"><span class="title">Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_euclid_rn.html" class="internal"><span class="title">Metrik Euklides pada <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_spaces_apps.html" class="internal"><span class="codenumber">4</span> <span class="title">Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_met_space_app.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hamming.html" class="internal"><span class="title">Metrik Hamming</span></a></div></li>
+<li><div class="toc-item"><a href="sec_levenshtein.html" class="internal"><span class="title">Metrik Levenshtein</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_glb.html" class="internal"><span class="codenumber">5</span> <span class="title">Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_glb_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_dist_point_set.html" class="internal"><span class="title">Jarak dari Titik ke Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_glb_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_continuous_functions.html" class="internal"><span class="codenumber">6</span> <span class="title">Fungsi Kontinu di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_cont_func_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_btwn.html" class="internal"><span class="title">Fungsi Kontinu antara Ruang-Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_comp_cont_func.html" class="internal"><span class="title">Komposit Fungsi Kontinu</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_func_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_open_balls.html" class="internal"><span class="codenumber">7</span> <span class="title">Bola Terbuka dan Lingkungan pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_balls_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_neighborhoods.html" class="internal"><span class="title">Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_neighborhoods.html" class="internal"><span class="title">Kekontinuan dan Lingkungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_balls_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_open_sets.html" class="internal"><span class="codenumber">8</span> <span class="title">Himpunan Terbuka dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_open_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets.html" class="internal"><span class="title">Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_int_open_sets.html" class="internal"><span class="title">Gabungan dan Irisan Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_open_sets.html" class="internal"><span class="title">Kekontinuan dan Himpunan Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="sec_interior_set.html" class="internal"><span class="title">Interior Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets_summ.html" class="internal"><span class="title">Rangkuman</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_sets_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_sequences.html" class="internal"><span class="codenumber">9</span> <span class="title">Barisan di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_seq_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_cont_metric.html" class="internal"><span class="title">Barisan dan Kekontinuan dalam Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_seq_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_closed_sets.html" class="internal"><span class="codenumber">10</span> <span class="title">Himpunan Tertutup di Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_closed_sets_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_sets_metric.html" class="internal"><span class="title">Himpunan Tertutup di Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_closed_sets.html" class="internal"><span class="title">Kekontinuan dan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_bound_iso_seq.html" class="internal"><span class="title">Titik Limit, Titik Batas, Titik Terasing, dan Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_closed.html" class="internal"><span class="title">Titik Limit dan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_set_closure.html" class="internal"><span class="title">Tutupan Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_limits_seq.html" class="internal"><span class="title">Himpunan Tertutup dan Limit Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_set_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_set_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_metric_subspaces.html" class="internal"><span class="codenumber">11</span> <span class="title">Subruang dan Hasil Kali Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sub_metric_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_closed_sub.html" class="internal"><span class="title">Himpunan Terbuka dan Tertutup di Subruang</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_metric.html" class="internal"><span class="title">Hasil Kali Ruang Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_metric_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_metric_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-part-topological-spaces.html" class="internal"><span class="codenumber">II</span> <span class="title">Ruang Topologi, Kekontinuan, Homeomorfisme, Subruang, Kuosien, Kekompakan, Keterhubungan, Lintasan, dan Hasil Kali</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="chap_top_spaces.html" class="internal"><span class="codenumber">12</span> <span class="title">Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_top_space_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_exam_top.html" class="internal"><span class="title">Contoh-Contoh Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_base_top.html" class="internal"><span class="title">Basis untuk Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_top_space.html" class="internal"><span class="title">Ruang Metrik dan Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_neighborhood_top_space.html" class="internal"><span class="title">Lingkungan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_interior_set_top.html" class="internal"><span class="title">Interior Himpunan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_space_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_space_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Closed_sets_topology.html" class="internal"><span class="codenumber">13</span> <span class="title">Himpunan Tertutup dalam Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_closed_sets_top_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_union_inter_closed.html" class="internal"><span class="title">Gabungan dan Irisan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="sec_limit_points.html" class="internal"><span class="title">Titik Limit dan Barisan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_closure.html" class="internal"><span class="title">Tutupan dalam Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_set_boundary.html" class="internal"><span class="title">Batas Suatu Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_separation_ax.html" class="internal"><span class="title">Aksioma Separasi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_sets_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_closed_sets_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_continuity_topology.html" class="internal"><span class="codenumber">14</span> <span class="title">Kekontinuan dan Homeomorfisme</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_cont_top_intro.html" class="internal"><span class="title">Pengantar</span></a></div></li>
+<li><div class="toc-item"><a href="sec_metric_equiv.html" class="internal"><span class="title">Ekuivalensi Metrik</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_equiv.html" class="internal"><span class="title">Ekuivalensi Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relations.html" class="internal"><span class="title">Relasi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_invar.html" class="internal"><span class="title">Invarian Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cont_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_subspaces.html" class="internal"><span class="codenumber">15</span> <span class="title">Subruang</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_sub.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_subspace_top.html" class="internal"><span class="title">Topologi Subruang</span></a></div></li>
+<li><div class="toc-item"><a href="sec_base_sub.html" class="internal"><span class="title">Basis untuk Subruang</span></a></div></li>
+<li><div class="toc-item"><a href="sec_open_int_rn.html" class="internal"><span class="title">Interval Terbuka dan <span class="process-math">\(\R\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_sub_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_quotients.html" class="internal"><span class="codenumber">16</span> <span class="title">Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_quotients.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_top.html" class="internal"><span class="title">Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotient_space.html" class="internal"><span class="title">Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_find_quotient_space.html" class="internal"><span class="title">Mengidentifikasi Ruang Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_quotients_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Compact_topology.html" class="internal"><span class="codenumber">17</span> <span class="title">Ruang Kompak</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_compact_top_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_cont.html" class="internal"><span class="title">Kekompakan dan Kekontinuan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_rn.html" class="internal"><span class="title">Subhimpunan Kompak dari <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_app.html" class="internal"><span class="title">Penerapan Kekompakan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_fractals.html" class="internal"><span class="title">Penerapan Kekompakan: Fraktal</span></a></div></li>
+<li><div class="toc-item"><a href="sec_compact_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Connected_topology.html" class="internal"><span class="codenumber">18</span> <span class="title">Ruang Terhubung</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_connect_top_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_sets.html" class="internal"><span class="title">Himpunan Terhubung</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_subset_rn.html" class="internal"><span class="title">Subhimpunan Terhubung dari <span class="process-math">\(\R\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_components.html" class="internal"><span class="title">Komponen</span></a></div></li>
+<li><div class="toc-item"><a href="sec_cut_sets.html" class="internal"><span class="title">Himpunan Pemutus</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ivt_fpt.html" class="internal"><span class="title">Teorema Nilai Antara dan Teorema Titik Tetap</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Path_connected_topology.html" class="internal"><span class="codenumber">19</span> <span class="title">Ruang Terhubung Lintasan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_path_intro.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_connect.html" class="internal"><span class="title">Keterhubungan Lintasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_connect_equiv.html" class="internal"><span class="title">Keterhubungan Lintasan sebagai Relasi Ekuivalensi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connectedness.html" class="internal"><span class="title">Keterhubungan Lintasan dan Keterhubungan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_finite.html" class="internal"><span class="title">Keterhubungan Lintasan dan Keterhubungan dalam Ruang Topologi Berhingga</span></a></div></li>
+<li><div class="toc-item"><a href="sec_connect_infinite.html" class="internal"><span class="title">Keterhubungan Lintasan dan Keterhubungan dalam Ruang Topologi Tak Hingga</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_path_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap_Product_topology.html" class="internal"><span class="codenumber">20</span> <span class="title">Hasil Kali Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_prod_top.html" class="internal"><span class="title">Pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_top_prod_space.html" class="internal"><span class="title">Topologi pada Hasil Kali Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_exam.html" class="internal"><span class="title">Tiga Contoh</span></a></div></li>
+<li><div class="toc-item"><a href="sec_proj_cont_prod.html" class="internal"><span class="title">Proyeksi dan Fungsi Kontinu pada Ruang Hasil Kali</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prop_prod_top.html" class="internal"><span class="title">Sifat-Sifat Hasil Kali Ruang Topologi</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_summ.html" class="internal"><span class="title">Ringkasan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_exer.html" class="internal"><span class="title">Latihan</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prod_top_app.html" class="internal"><span class="title">Penerapan Hasil Kali Ruang Topologi</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Bagian Akhir</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="o003-c90-ch01-companion.html" class="internal"><span class="codenumber">A</span> <span class="title">Pendamping Mandiri Bab 1: Himpunan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch01-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-exercise-guides.html" class="internal"><span class="title">Jawaban dan panduan sepuluh latihan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch01-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch02-companion.html" class="internal"><span class="codenumber">B</span> <span class="title">Pendamping Mandiri Bab 2: Fungsi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch02-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-error-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch02-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan tujuh belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch03-companion.html" class="internal"><span class="codenumber">C</span> <span class="title">Pendamping Mandiri Bab 3: Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch03-activity-checkpoints.html" class="internal"><span class="title">Pemeriksaan eksplorasi dan aktivitas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-diagnostics.html" class="internal"><span class="title">Diagnostik kesalahan ringkas</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch03-exercise-guides.html" class="internal"><span class="title">Panduan dan pembahasan empat belas latihan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch04-companion.html" class="internal"><span class="codenumber">D</span> <span class="title">Pendamping Mandiri Bab 4: Penerapan Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch04-source-task-guides.html" class="internal"><span class="title">Panduan untuk tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch04-mastery.html" class="internal"><span class="title">Uji penguasaan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch05-companion.html" class="internal"><span class="codenumber">E</span> <span class="title">Pendamping Mandiri Bab 5: Batas Bawah Terbesar</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch05-intro-guides.html" class="internal"><span class="title">Panduan untuk kegiatan pendahuluan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-point-set-guides.html" class="internal"><span class="title">Panduan untuk jarak titik ke himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch05-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch06-companion.html" class="internal"><span class="codenumber">F</span> <span class="title">Pendamping Mandiri Bab 6: Fungsi Kontinu pada Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch06-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch06-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan dan transfer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch07-companion.html" class="internal"><span class="codenumber">G</span> <span class="title">Pendamping Mandiri Bab 7: Bola Terbuka dan Lingkungan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch07-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch07-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 7</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch08-companion.html" class="internal"><span class="codenumber">H</span> <span class="title">Pendamping Mandiri Bab 8: Himpunan Terbuka dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch08-source-guides.html" class="internal"><span class="title">Panduan kegiatan sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch08-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 8</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch09-companion.html" class="internal"><span class="codenumber">I</span> <span class="title">Pendamping Mandiri Bab 9: Barisan dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch09-source-guides.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch09-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 9</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch10-companion.html" class="internal"><span class="codenumber">J</span> <span class="title">Pendamping Mandiri Bab 10: Himpunan Tertutup dalam Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch10-source-guides-a.html" class="internal"><span class="title">Panduan konsep dan tugas sumber</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-source-guides-b.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan lanjutan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch10-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 10</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch11-companion.html" class="internal"><span class="codenumber">K</span> <span class="title">Pendamping Mandiri Bab 11: Subruang dan Hasil Kali Ruang Metrik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch11-source-guides-a.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-source-guides-b.html" class="internal"><span class="title">Panduan konsep dan tugas sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan lanjutan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch11-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 11</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch12-companion.html" class="internal"><span class="codenumber">L</span> <span class="title">Pendamping Mandiri Bab 12: Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-a.html" class="internal"><span class="title">Panduan ruang topologi: definisi dan contoh awal</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-b.html" class="internal"><span class="title">Panduan topologi komplemen berhingga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-c.html" class="internal"><span class="title">Panduan basis untuk topologi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-d.html" class="internal"><span class="title">Panduan ruang topologi yang bukan ruang metrik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-e.html" class="internal"><span class="title">Panduan lingkungan dalam ruang topologi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-source-guides-f.html" class="internal"><span class="title">Panduan interior dalam ruang topologi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan sumber, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan sumber, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan sumber, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan sumber, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-e.html" class="internal"><span class="title">Panduan latihan sumber, bagian kelima</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-f.html" class="internal"><span class="title">Panduan latihan sumber, bagian keenam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-exercise-guides-g.html" class="internal"><span class="title">Panduan latihan sumber, bagian ketujuh</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch12-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 12</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch13-companion.html" class="internal"><span class="codenumber">M</span> <span class="title">Panduan Belajar Mandiri Bab 13: Himpunan Tertutup dalam Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Mengenali Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Gabungan Himpunan Tertutup</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-c.html" class="internal"><span class="title">Panduan Belajar Mandiri: Titik Limit dan Limit Barisan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-d.html" class="internal"><span class="title">Panduan Belajar Mandiri: Tutupan sebagai Himpunan Tertutup Terkecil</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-e.html" class="internal"><span class="title">Panduan Belajar Mandiri: Menentukan Batas Himpunan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-source-guides-f.html" class="internal"><span class="title">Panduan Belajar Mandiri: Aksioma Separasi dan Ruang Hausdorff</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-e.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian kelima</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-exercise-guides-f.html" class="internal"><span class="title">Panduan latihan Bab 13, bagian keenam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch13-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 13</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch14-companion.html" class="internal"><span class="codenumber">N</span> <span class="title">Panduan Belajar Mandiri Bab 14: Kekontinuan dan Homeomorfisme</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch14-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Pengantar Kekontinuan Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Kekontinuan dan Ekuivalensi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-source-guides-c.html" class="internal"><span class="title">Panduan Belajar Mandiri: Invarian Topologis</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-e.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian kelima</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-exercise-guides-f.html" class="internal"><span class="title">Panduan latihan Bab 14, bagian keenam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch14-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 14</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch15-companion.html" class="internal"><span class="codenumber">O</span> <span class="title">Panduan Belajar Mandiri Bab 15: Subruang</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch15-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Subruang dan Topologi Relatif I</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Basis Subruang dan Interval Terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 15, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 15, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch15-mastery.html" class="internal"><span class="title">Pemeriksaan penguasaan Bab 15</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch16-companion.html" class="internal"><span class="codenumber">P</span> <span class="title">Panduan Belajar Mandiri Bab 16: Ruang Kuosien</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Membangun Topologi Kuosien</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Ruang Identifikasi dan Faktorisasi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-a.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian pertama</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-c.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian ketiga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-exercise-guides-d.html" class="internal"><span class="title">Panduan latihan Bab 16, bagian keempat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch16-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 16: Ruang Kuosien</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch17-companion.html" class="internal"><span class="codenumber">Q</span> <span class="title">Panduan Belajar Mandiri Bab 17: Ruang Kompak</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch17-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Selimut Buka dan Kekompakan Dasar</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-source-guides-b.html" class="internal"><span class="title">Panduan Belajar Mandiri: Kekompakan dan Pemetaan Kontinu</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-source-guides-c.html" class="internal"><span class="title">Panduan Belajar Mandiri: Nilai Ekstrem, Fraktal, dan Latihan Kekompakan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-exercise-guides-b.html" class="internal"><span class="title">Panduan latihan Bab 17, bagian kedua</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-exercise-guides-d.html" class="internal"><span class="title">Panduan Latihan: Pemisahan, Kekompakan Lokal, dan Contoh Tandingan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-exercise-guides-e.html" class="internal"><span class="title">Panduan Latihan: Pernyataan Benar atau Salah tentang Kekompakan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch17-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 17: Kekompakan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch18-companion.html" class="internal"><span class="codenumber">R</span> <span class="title">Panduan Belajar Mandiri Bab 18: Ruang Topologi Terhubung</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch18-source-guides-a.html" class="internal"><span class="title">Panduan Belajar Mandiri: Keterhubungan, Komponen, dan Titik Tetap</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch18-exercise-guides-a.html" class="internal"><span class="title">Panduan Latihan Bab 18 A</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch18-exercise-guides-b.html" class="internal"><span class="title">Panduan Latihan Bab 18 B</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch18-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 18: Keterhubungan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch19-companion.html" class="internal"><span class="codenumber">S</span> <span class="title">Panduan Belajar Mandiri Bab 19: Ruang Terhubung Lintasan</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch19-source-guides-a.html" class="internal"><span class="title">Panduan Prompt Sumber Bab 19: Lintasan dan Komponen Lintasan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch19-exercise-guides-a.html" class="internal"><span class="title">Panduan Latihan Bab 19 A</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch19-exercise-guides-b.html" class="internal"><span class="title">Panduan Latihan Bab 19 B</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch19-mastery.html" class="internal"><span class="title">Uji Penguasaan Bab 19: Keterhubungan Lintasan</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-ch20-self-study.html" class="internal"><span class="codenumber">T</span> <span class="title">Pendamping Belajar Mandiri Bab 20: Hasil Kali Ruang Topologi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-ch20-source-guides-a.html" class="internal"><span class="title">Panduan Prompt Sumber: Topologi Hasil Kali, Contoh, dan Proyeksi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-source-guides-b.html" class="internal"><span class="title">Panduan Prompt Sumber: Sifat Produk dan Topologi Digital</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-exercise-guides-a.html" class="internal"><span class="title">Panduan Latihan Bab 20, Bagian A</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-exercise-guides-b.html" class="internal"><span class="title">Panduan Latihan Bab 20, Bagian B</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-exercise-guides-c.html" class="internal"><span class="title">Panduan Latihan Bab 20, Bagian C</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-ch20-mastery.html" class="internal"><span class="title">Pemeriksaan Penguasaan Bab 20</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-companion.html" class="internal"><span class="codenumber">U</span> <span class="title">Pelengkap C90: Topologi Himpunan-Titik untuk Belajar Mandiri</span></a></div>
+<ul class="structural">
+<li class="active">
+<div class="toc-item"><a href="o003-c90-completion-separation.html" class="internal"><span class="title">Penyempurnaan Aksioma Separasi</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-t0" class="internal"><span class="title">Ruang Kolmogorov dan titik yang dapat dibedakan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-specialization" class="internal"><span class="title">Praurutan spesialisasi dan kuosien Kolmogorov</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-separation-map" class="internal"><span class="title">Peta lengkap dari <span class="process-math">\(T_0\)</span> hingga <span class="process-math">\(T_4\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-separation.html#o003-c90-completion-separation-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-countability.html" class="internal"><span class="title">Keterhitungan, Kepadatan, dan Sifat Lindelöf</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-local-bases" class="internal"><span class="title">Basis lokal dan dua aksioma keterhitungan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-density-lindelof" class="internal"><span class="title">Kepadatan, separabilitas, dan sifat Lindelöf</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-inheritance-size" class="internal"><span class="title">Pewarisan, citra kontinu, dan contoh-balik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-countability.html#o003-c90-completion-countability-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-general-convergence.html" class="internal"><span class="title">Jaring dan Kekonvergenan Umum</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-directed-nets" class="internal"><span class="title">Himpunan terarah, jaring, dan subjaring</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-net-characterizations" class="internal"><span class="title">Penutup dan kekontinuan melalui jaring</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-net-compactness" class="internal"><span class="title">Kekompakan melalui jaring</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-general-convergence.html#o003-c90-completion-net-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html" class="internal"><span class="title">Hasil Kali Sebarang dan Topologi Kotak</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-product-definition" class="internal"><span class="title">Topologi hasil kali dan sifat universal</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-box-topology" class="internal"><span class="title">Topologi kotak dan divergensi tak hingga</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-product-preservation" class="internal"><span class="title">Sifat yang dipertahankan oleh hasil kali</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-tychonoff-theorem" class="internal"><span class="title">Teorema Tychonoff dengan ruang lingkup yang tepat</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-arbitrary-products.html#o003-c90-completion-products-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-local-compactness.html" class="internal"><span class="title">Kekompakan Lokal dan Kompaktifikasi Satu Titik</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-local-compact-definition" class="internal"><span class="title">Lingkungan kompak dan penyusutan lokal</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-local-compact-inheritance" class="internal"><span class="title">Pewarisan dan hasil kali</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-one-point-compactification" class="internal"><span class="title">Kompaktifikasi satu titik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-local-compactness.html#o003-c90-completion-local-compact-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-metrization.html" class="internal"><span class="title">Metrisasi: dari Pseudometrik ke Teorema Urysohn</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-pseudometrics" class="internal"><span class="title">Pseudometrik, metrik, dan kuosien nol</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-induced-topology" class="internal"><span class="title">Informasi topologis yang dipaksa oleh metrik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-equivalent-metrics" class="internal"><span class="title">Metrik ekuivalen dan gabungan pseudometrik</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-urysohn" class="internal"><span class="title">Teorema Metrisasi Urysohn</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-counterexamples" class="internal"><span class="title">Mengapa hipotesis Urysohn tidak boleh diabaikan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-metrization.html#o003-c90-completion-metrization-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-function-spaces.html" class="internal"><span class="title">Ruang Fungsi dan Topologinya</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-pointwise" class="internal"><span class="title">Topologi titik demi titik sebagai topologi hasil kali</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-uniform" class="internal"><span class="title">Topologi seragam</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-compact-open" class="internal"><span class="title">Topologi kompak-terbuka</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-evaluation-composition" class="internal"><span class="title">Evaluasi dan komposisi</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-exponential-law" class="internal"><span class="title">Jembatan hukum eksponensial</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-arzela-ascoli" class="internal"><span class="title">Jembatan terbatas menuju Teorema Arzelà–Ascoli</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-function-spaces.html#o003-c90-completion-function-mastery" class="internal"><span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html" class="internal"><span class="title">Puncak Penguasaan Terpadu</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html#o003-c90-completion-integrated-dependency-map" class="internal"><span class="title">Peta dependensi dan penguasaan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html#o003-c90-completion-integrated-rubric" class="internal"><span class="title">Rubrik pembuktian dan contoh tandingan</span></a></div></li>
+<li><div class="toc-item"><a href="o003-c90-completion-integrated-mastery.html#o003-c90-completion-integrated-problems" class="internal"><span class="title">Masalah penguasaan terpadu</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Indeks</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="o003-c90-completion-separation"><h2 class="heading hide-type">
+<span class="type">Bagian</span> <span class="codenumber"></span> <span class="title">Penyempurnaan Aksioma Separasi</span>
+</h2>
+<section class="introduction" id="introduction-328"><div class="para" id="p-9064">Bab tentang himpunan tertutup pada teks utama memperkenalkan ruang <span class="process-math">\(T_1\text{,}\)</span> Hausdorff (<span class="process-math">\(T_2\)</span>), <span class="process-math">\(T_3\text{,}\)</span> dan <span class="process-math">\(T_4\text{.}\)</span> Modul ini menambahkan tingkat <span class="process-math">\(T_0\text{,}\)</span> praurutan spesialisasi, kuosien Kolmogorov, dan regularitas lengkap. Modul ini juga menutup peta implikasi dengan saksi eksplisit bahwa setiap panah balik dapat gagal.</div></section><section class="subsection" id="o003-c90-completion-t0"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Ruang Kolmogorov dan titik yang dapat dibedakan</span>
+</h3>
+<article class="definition definition-like" id="o003-c90-def-t0"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9065">Ruang topologi <span class="process-math">\(X\)</span> disebut <dfn class="terminology">ruang Kolmogorov</dfn> atau <dfn class="terminology">ruang <span class="process-math">\(T_0\)</span></dfn> jika untuk setiap dua titik berbeda <span class="process-math">\(x,y\in X\text{,}\)</span> terdapat himpunan terbuka yang memuat tepat salah satu dari <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\text{.}\)</span>
+</div></article><article class="definition definition-like" id="o003-c90-def-topologically-indistinguishable"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9066">Dua titik <span class="process-math">\(x,y\in X\)</span> disebut <dfn class="terminology">tak terbedakan secara topologis</dfn> jika setiap himpunan terbuka memuat <span class="process-math">\(x\)</span> tepat ketika himpunan itu memuat <span class="process-math">\(y\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="o003-c90-prop-t0-equivalences"><h3 class="heading">
+<span class="type">Proposisi</span><span class="space"> </span><span class="codenumber">U.3</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9067">
+<div class="para">Untuk ruang topologi <span class="process-math">\(X\text{,}\)</span> pernyataan berikut ekuivalen.</div>
+<ol class="decimal">
+<li id="li-450"><div class="para" id="p-9068">
+<span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_0\text{.}\)</span>
+</div></li>
+<li id="li-451"><div class="para" id="p-9069">Tidak ada dua titik berbeda yang tak terbedakan secara topologis.</div></li>
+<li id="li-452"><div class="para" id="p-9070">Jika <span class="process-math">\(x\ne y\text{,}\)</span> maka <span class="process-math">\(\overline{\{x\}}\ne\overline{\{y\}}\text{.}\)</span>
+</div></li>
+<li id="li-453"><div class="para" id="p-9071">Jika <span class="process-math">\(x\ne y\text{,}\)</span> maka sedikitnya satu dari <span class="process-math">\(x\notin\overline{\{y\}}\)</span> atau <span class="process-math">\(y\notin\overline{\{x\}}\)</span> berlaku.</div></li>
+</ol>
+</div></article><article class="proof" id="proof-43"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9072">Pernyataan pertama dan kedua hanyalah dua cara mengucapkan definisi. Jika <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> tak terbedakan, maka untuk setiap <span class="process-math">\(z\in X\text{,}\)</span> setiap lingkungan buka <span class="process-math">\(z\)</span> memuat <span class="process-math">\(x\)</span> tepat ketika lingkungan itu memuat <span class="process-math">\(y\text{.}\)</span> Karena itu <span class="process-math">\(z\in\overline{\{x\}}\)</span> tepat ketika <span class="process-math">\(z\in\overline{\{y\}}\text{,}\)</span> sehingga kedua penutup sama.</div> <div class="para" id="p-9073">Sebaliknya, jika kedua penutup sama, maka <span class="process-math">\(x\in\overline{\{y\}}\)</span> dan <span class="process-math">\(y\in\overline{\{x\}}\text{.}\)</span> Setiap himpunan terbuka yang memuat <span class="process-math">\(x\)</span> harus memuat <span class="process-math">\(y\text{,}\)</span> dan sebaliknya; jadi kedua titik tak terbedakan. Ini membuktikan ekuivalensi tiga pernyataan pertama. Pernyataan keempat adalah bentuk negasi dari keberadaan kedua keanggotaan penutup tersebut sekaligus.</div></article><article class="example example-like" id="o003-c90-example-non-t0"><h3 class="heading">
+<span class="type">Contoh</span><span class="space"> </span><span class="codenumber">U.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9074">Jika <span class="process-math">\(X\)</span> mempunyai sedikitnya dua titik dan diberi topologi indiskret <span class="process-math">\(\{\emptyset,X\}\text{,}\)</span> setiap dua titik berbeda tak terbedakan. Jadi ruang ini bukan <span class="process-math">\(T_0\text{.}\)</span>
+</div></article><article class="example example-like" id="o003-c90-example-sierpinski"><h3 class="heading">
+<span class="type">Contoh</span><span class="space"> </span><span class="codenumber">U.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9075">Pada himpunan <span class="process-math">\(S=\{0,1\}\text{,}\)</span> ambil <span class="process-math">\(\tau=\{\emptyset,\{1\},S\}\text{.}\)</span> Himpunan buka <span class="process-math">\(\{1\}\)</span> membedakan kedua titik, sehingga <span class="process-math">\(S\)</span> bersifat <span class="process-math">\(T_0\text{.}\)</span> Akan tetapi, tidak ada himpunan buka yang memuat <span class="process-math">\(0\)</span> tanpa memuat <span class="process-math">\(1\text{.}\)</span> Jadi <span class="process-math">\(S\)</span> bukan <span class="process-math">\(T_1\text{.}\)</span> Ruang ini disebut <dfn class="terminology">ruang Sierpiński</dfn>.</div></article></section><section class="subsection" id="o003-c90-completion-specialization"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Praurutan spesialisasi dan kuosien Kolmogorov</span>
+</h3>
+<article class="definition definition-like" id="o003-c90-def-specialization-preorder"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.6</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9076">
+<div class="para">Pada ruang topologi <span class="process-math">\(X\text{,}\)</span> definisikan relasi <span class="process-math">\(\preceq\)</span> dengan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x\preceq y\quad\Longleftrightarrow\quad x\in\overline{\{y\}}.
+\end{equation*}
+</div>
+<div class="para">Secara ekuivalen, <span class="process-math">\(x\preceq y\)</span> jika setiap himpunan terbuka yang memuat <span class="process-math">\(x\)</span> juga memuat <span class="process-math">\(y\text{.}\)</span> Relasi ini disebut <dfn class="terminology">praurutan spesialisasi</dfn>. Konvensi arah ini dipertahankan secara konsisten di seluruh lampiran.</div>
+</div></article><article class="theorem theorem-like" id="o003-c90-thm-specialization-order"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9077">Praurutan spesialisasi selalu refleksif dan transitif. Semua himpunan terbuka merupakan himpunan naik terhadap <span class="process-math">\(\preceq\text{.}\)</span> Praurutan tersebut antisimetris, sehingga merupakan urutan parsial, jika dan hanya jika <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_0\text{.}\)</span>
+</div></article><article class="proof" id="proof-44"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9078">Setiap lingkungan buka <span class="process-math">\(x\)</span> memuat <span class="process-math">\(x\text{,}\)</span> sehingga <span class="process-math">\(x\preceq x\text{.}\)</span> Jika <span class="process-math">\(x\preceq y\)</span> dan <span class="process-math">\(y\preceq z\text{,}\)</span> setiap himpunan buka yang memuat <span class="process-math">\(x\)</span> memuat <span class="process-math">\(y\text{,}\)</span> lalu memuat <span class="process-math">\(z\text{;}\)</span> jadi <span class="process-math">\(x\preceq z\text{.}\)</span> Jika <span class="process-math">\(U\)</span> terbuka, <span class="process-math">\(x\in U\text{,}\)</span> dan <span class="process-math">\(x\preceq y\text{,}\)</span> definisi langsung memberi <span class="process-math">\(y\in U\text{.}\)</span>
+</div> <div class="para" id="p-9079">Relasi <span class="process-math">\(x\preceq y\)</span> dan <span class="process-math">\(y\preceq x\)</span> sekaligus berarti <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> mempunyai himpunan terbuka yang persis sama. Jadi antisimetris tepat ketika titik-titik berbeda selalu dapat dibedakan oleh suatu himpunan terbuka, yakni tepat ketika <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_0\text{.}\)</span>
+</div></article><article class="remark remark-like" id="o003-c90-remark-open-upper-not-converse"><h3 class="heading">
+<span class="type">Catatan</span><span class="space"> </span><span class="codenumber">U.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9080">Setiap himpunan buka memang naik, tetapi tidak setiap himpunan naik harus terbuka. Konvers tersebut berlaku untuk ruang Aleksandrov dan tidak boleh digunakan pada ruang topologi sebarang.</div></article><article class="theorem theorem-like" id="o003-c90-thm-kolmogorov-quotient"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9081">Definisikan <span class="process-math">\(x\sim y\)</span> ketika <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> tak terbedakan secara topologis. Beri <span class="process-math">\(X/{\sim}\)</span> topologi kuosien melalui proyeksi <span class="process-math">\(q:X\to X/{\sim}\text{.}\)</span> Maka <span class="process-math">\(X/{\sim}\)</span> bersifat <span class="process-math">\(T_0\text{.}\)</span> Selain itu, setiap pemetaan kontinu <span class="process-math">\(f:X\to Y\)</span> ke ruang <span class="process-math">\(T_0\)</span> memfaktor secara tunggal sebagai <span class="process-math">\(f=\bar f\circ q\)</span> dengan <span class="process-math">\(\bar f:X/{\sim}\to Y\)</span> kontinu.</div></article><article class="proof" id="proof-45"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9082">Relasi tak terbedakan adalah relasi ekuivalensi. Jika <span class="process-math">\([x]\ne[y]\text{,}\)</span> suatu himpunan terbuka <span class="process-math">\(U\)</span> memuat tepat salah satu dari <span class="process-math">\(x,y\text{.}\)</span> Himpunan <span class="process-math">\(U\)</span> jenuh terhadap <span class="process-math">\(\sim\text{,}\)</span> sehingga <span class="process-math">\(q^{-1}(q(U))=U\)</span> dan <span class="process-math">\(q(U)\)</span> terbuka dalam topologi kuosien. Jadi kelas <span class="process-math">\([x]\)</span> dan <span class="process-math">\([y]\)</span> dapat dibedakan, dan ruang kuosien bersifat <span class="process-math">\(T_0\text{.}\)</span>
+</div> <div class="para" id="p-9083">Jika <span class="process-math">\(x\sim y\)</span> dan <span class="process-math">\(f(x)\ne f(y)\text{,}\)</span> sifat <span class="process-math">\(T_0\)</span> pada <span class="process-math">\(Y\)</span> memberi himpunan buka yang memuat tepat salah satu dari <span class="process-math">\(f(x),f(y)\text{.}\)</span> Prapetanya membedakan <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\text{,}\)</span> suatu kontradiksi. Maka <span class="process-math">\(f\)</span> konstan pada setiap kelas, sehingga <span class="process-math">\(\bar f([x])=f(x)\)</span> terdefinisi baik dan unik. Karena <span class="process-math">\(f=\bar f\circ q\)</span> kontinu dan <span class="process-math">\(q\)</span> adalah pemetaan kuosien, <span class="process-math">\(\bar f\)</span> kontinu.</div></article></section><section class="subsection" id="o003-c90-completion-separation-map"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Peta lengkap dari <span class="process-math">\(T_0\)</span> hingga <span class="process-math">\(T_4\)</span></span>
+</h3>
+<article class="definition definition-like" id="o003-c90-def-complete-regularity"><h3 class="heading">
+<span class="type">Definisi</span><span class="space"> </span><span class="codenumber">U.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9084">Ruang <span class="process-math">\(X\)</span> disebut <dfn class="terminology">reguler lengkap</dfn> jika, untuk setiap himpunan tertutup <span class="process-math">\(F\subseteq X\)</span> dan <span class="process-math">\(x\notin F\text{,}\)</span> terdapat fungsi kontinu <span class="process-math">\(f:X\to[0,1]\)</span> dengan <span class="process-math">\(f(x)=0\)</span> dan <span class="process-math">\(f(F)=\{1\}\text{.}\)</span> Ruang reguler lengkap yang juga bersifat <span class="process-math">\(T_1\)</span> disebut <dfn class="terminology">ruang Tychonoff</dfn> atau ruang <span class="process-math">\(T_{3\frac12}\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="o003-c90-thm-separation-implication-map"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.11</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9085">
+<div class="para">Dengan konvensi definisi pada teks utama, berlaku rantai</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_4\Longrightarrow\text{Tychonoff}
+\Longrightarrow T_3\Longrightarrow T_2
+\Longrightarrow T_1\Longrightarrow T_0.
+\end{equation*}
+</div>
+</div></article><article class="proof" id="proof-46"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9086">Jika <span class="process-math">\(X\)</span> normal dan <span class="process-math">\(T_1\text{,}\)</span> Lema Urysohn memisahkan titik tertutup <span class="process-math">\(\{x\}\)</span> dari himpunan tertutup <span class="process-math">\(F\)</span> dengan fungsi kontinu ke <span class="process-math">\([0,1]\text{;}\)</span> jadi <span class="process-math">\(T_4\)</span> mengakibatkan Tychonoff. Jika fungsi <span class="process-math">\(f\)</span> memisahkan <span class="process-math">\(x\)</span> dari <span class="process-math">\(F\text{,}\)</span> maka <span class="process-math">\(f^{-1}([0,1/3))\)</span> dan <span class="process-math">\(f^{-1}((2/3,1])\)</span> merupakan lingkungan buka saling lepas bagi <span class="process-math">\(x\)</span> dan <span class="process-math">\(F\text{.}\)</span> Karena itu Tychonoff mengakibatkan <span class="process-math">\(T_3\text{.}\)</span>
+</div> <div class="para" id="p-9087">Dalam ruang <span class="process-math">\(T_3\text{,}\)</span> himpunan satu titik tertutup. Untuk <span class="process-math">\(x\ne y\text{,}\)</span> regularitas memisahkan <span class="process-math">\(x\)</span> dari <span class="process-math">\(\{y\}\text{,}\)</span> sehingga ruang itu Hausdorff. Dalam ruang Hausdorff, untuk setiap <span class="process-math">\(x\ne y\)</span> ada lingkungan <span class="process-math">\(x\)</span> yang tidak memuat <span class="process-math">\(y\text{;}\)</span> gabungan lingkungan-lingkungan tersebut menunjukkan bahwa <span class="process-math">\(X\setminus\{y\}\)</span> terbuka. Jadi setiap himpunan satu titik tertutup dan ruang itu <span class="process-math">\(T_1\text{.}\)</span> Akhirnya, definisi <span class="process-math">\(T_1\)</span> langsung memberi himpunan buka yang membedakan setiap dua titik, sehingga ruang itu <span class="process-math">\(T_0\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="o003-c90-thm-urysohn-bridge"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">U.12</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9088">
+<dfn class="terminology">Lema Urysohn.</dfn> Jika <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> merupakan himpunan tertutup saling lepas dalam ruang normal <span class="process-math">\(X\text{,}\)</span> terdapat fungsi kontinu <span class="process-math">\(f:X\to[0,1]\)</span> dengan <span class="process-math">\(f(A)=\{0\}\)</span> dan <span class="process-math">\(f(B)=\{1\}\text{.}\)</span>
+</div></article><article class="proof" id="proof-47"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9089">Normalitas ekuivalen dengan sifat berikut: jika <span class="process-math">\(F\)</span> tertutup dan <span class="process-math">\(G\)</span> terbuka dengan <span class="process-math">\(F\subseteq G\text{,}\)</span> terdapat himpunan buka <span class="process-math">\(U\)</span> sehingga <span class="process-math">\(F\subseteq U\subseteq\overline U\subseteq G\text{.}\)</span> Terapkan sifat ini secara rekursif pada bilangan diadik <span class="process-math">\(D=\{k/2^n:0\le k\le2^n\}\)</span> untuk memilih himpunan buka <span class="process-math">\(U_r\)</span> sedemikian sehingga <span class="process-math">\(A\subseteq U_0\text{,}\)</span> <span class="process-math">\(\overline{U_1}\subseteq X\setminus B\text{,}\)</span> dan <span class="process-math">\(\overline{U_r}\subseteq U_s\)</span> bila <span class="process-math">\(r&lt;s\text{.}\)</span>
+</div> <div class="para" id="p-9090">Definisikan <span class="process-math">\(f(x)=\inf\{r\in D:x\in U_r\}\text{,}\)</span> dengan nilai <span class="process-math">\(1\)</span> jika himpunan di kanan kosong. Susunan penutup di atas memberi <span class="process-math">\(f^{-1}([0,a))=\bigcup_{r&lt;a}U_r\)</span> dan <span class="process-math">\(f^{-1}((a,1])=\bigcup_{r&gt;a}(X\setminus\overline{U_r})\text{.}\)</span> Kedua jenis prapeta itu terbuka, sehingga <span class="process-math">\(f\)</span> kontinu. Konstruksi memberi nilai <span class="process-math">\(0\)</span> pada <span class="process-math">\(A\)</span> dan <span class="process-math">\(1\)</span> pada <span class="process-math">\(B\text{.}\)</span>
+</div></article><article class="example example-like" id="o003-c90-example-strictness-map"><h3 class="heading">
+<span class="type">Contoh</span><span class="space"> </span><span class="codenumber">U.13</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-9091">
+<div class="para">Setiap implikasi balik pada rantai di atas dapat gagal.</div>
+<ol class="decimal">
+<li id="li-454"><div class="para" id="p-9092">Ruang indiskret dengan sedikitnya dua titik bukan <span class="process-math">\(T_0\text{.}\)</span>
+</div></li>
+<li id="li-455"><div class="para" id="p-9093">Ruang Sierpiński bersifat <span class="process-math">\(T_0\)</span> tetapi bukan <span class="process-math">\(T_1\text{.}\)</span>
+</div></li>
+<li id="li-456"><div class="para" id="p-9094">Himpunan tak hingga dengan topologi komplemen berhingga bersifat <span class="process-math">\(T_1\)</span> tetapi bukan Hausdorff: setiap himpunan satu titik tertutup, sedangkan dua himpunan buka tak kosong selalu beririsan.</div></li>
+<li id="li-457"><div class="para" id="p-9095">Ruang <span class="process-math">\(\mathbb R_K\)</span> dari latihan contoh-balik pada Bagian <em class="emphasis">Aksioma Separasi</em> di bab himpunan tertutup bersifat Hausdorff tetapi tidak reguler, sehingga <span class="process-math">\(T_2\)</span> tidak mengakibatkan <span class="process-math">\(T_3\text{.}\)</span>
+</div></li>
+<li id="li-458"><div class="para" id="p-9096">Bidang Niemytzki yang dibangun pada bagian sumber yang sama bersifat Tychonoff, tetapi tidak normal. Karena itu bahkan Tychonoff tidak mengakibatkan <span class="process-math">\(T_4\text{.}\)</span> Secara khusus, ruang ini juga menjadi saksi bahwa <span class="process-math">\(T_3\)</span> tidak mengakibatkan <span class="process-math">\(T_4\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="proposition theorem-like" id="o003-c90-prop-k-topology-not-regular"><h3 class="heading">
+<span class="type">Proposisi</span><span class="space"> </span><span class="codenumber">U.14</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9097">Misalkan <span class="process-math">\(K=\{1/n:n\in\mathbb Z^+\}\text{,}\)</span> dan beri <span class="process-math">\(\mathbb R\)</span> basis yang terdiri atas semua interval buka biasa serta semua himpunan <span class="process-math">\((a,b)\setminus K\text{.}\)</span> Ruang <span class="process-math">\(\mathbb R_K\)</span> bersifat Hausdorff tetapi tidak reguler.</div></article><article class="proof" id="proof-48"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9098">Topologi ini lebih halus daripada topologi Euklides, jadi interval buka biasa masih dapat memisahkan dua titik; akibatnya ruang itu Hausdorff. Himpunan <span class="process-math">\(K\)</span> tertutup karena <span class="process-math">\(\mathbb R\setminus K\)</span> terbuka, dan <span class="process-math">\(0\notin K\text{.}\)</span>
+</div> <div class="para" id="p-9099">Andaikan lingkungan buka saling lepas <span class="process-math">\(U\)</span> dari <span class="process-math">\(0\)</span> dan <span class="process-math">\(V\)</span> dari <span class="process-math">\(K\)</span> ada. Untuk suatu <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> <span class="process-math">\((-\varepsilon,\varepsilon)\setminus K\subseteq U\text{.}\)</span> Pilih <span class="process-math">\(n\)</span> sehingga <span class="process-math">\(1/n&lt;\varepsilon/2\text{.}\)</span> Karena <span class="process-math">\(1/n\in V\)</span> dan setiap unsur basis yang memuat <span class="process-math">\(1/n\)</span> harus memuat suatu interval buka biasa di sekitar <span class="process-math">\(1/n\text{,}\)</span> himpunan <span class="process-math">\(V\)</span> memuat titik di <span class="process-math">\((0,\varepsilon)\setminus K\text{.}\)</span> Titik itu juga berada dalam <span class="process-math">\(U\text{,}\)</span> bertentangan dengan keterpisahan. Jadi ruang tersebut tidak reguler.</div></article><article class="proposition theorem-like" id="o003-c90-prop-niemytzki-not-normal"><h3 class="heading">
+<span class="type">Proposisi</span><span class="space"> </span><span class="codenumber">U.15</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-9100">Bidang Niemytzki bersifat Tychonoff tetapi tidak normal.</div></article><article class="proof" id="proof-49"><h3 class="heading"><span class="type">Bukti<span class="period">.</span></span></h3>
+<div class="para" id="p-9101">Basis berupa cakram Euklides yang terletak di setengah bidang atas, bersama cakram singgung yang ditambah titik singgungnya pada garis batas, memisahkan titik dan memiliki sifat penyusutan penutup: setiap lingkungan basis memuat lingkungan basis yang penutupnya termuat dalam lingkungan semula. Ruang itu Hausdorff, sehingga sifat penyusutan ini memberi regularitas. Lebih kuat lagi, fungsi jarak Euklides yang dipotong pada cakram-cakram basis memberikan pemisahan kontinu titik dari himpunan tertutup; jadi ruang itu Tychonoff.</div> <div class="para" id="p-9102">Untuk nonnormalitas, garis batas <span class="process-math">\(L\)</span> merupakan subruang tertutup, diskret, dan mempunyai kardinalitas <span class="process-math">\(\mathfrak c\text{.}\)</span> Bidang Niemytzki separabel karena titik-titik berkoordinat rasional dengan koordinat kedua positif membentuk himpunan padat terhitung. Jika ruang itu normal, setiap pemisahan <span class="process-math">\(L=A\sqcup(L\setminus A)\)</span> akan, melalui Lema Urysohn, menghasilkan fungsi kontinu yang bernilai <span class="process-math">\(0\)</span> pada <span class="process-math">\(A\)</span> dan <span class="process-math">\(1\)</span> pada komplemennya di <span class="process-math">\(L\text{.}\)</span> Dengan demikian akan ada sedikitnya <span class="process-math">\(2^{\mathfrak c}\)</span> fungsi kontinu ke <span class="process-math">\([0,1]\text{.}\)</span>
+</div> <div class="para" id="p-9103">Namun, fungsi kontinu pada ruang separabel ditentukan oleh nilainya pada suatu himpunan padat terhitung. Banyaknya barisan bilangan real hanya <span class="process-math">\(\mathfrak c\text{,}\)</span> sehingga terdapat paling banyak <span class="process-math">\(\mathfrak c\)</span> fungsi kontinu bernilai real. Ketaksamaan Cantor <span class="process-math">\(2^{\mathfrak c}&gt;\mathfrak c\)</span> menghasilkan kontradiksi. Jadi bidang Niemytzki tidak normal.</div></article></section><section class="subsection" id="o003-c90-completion-separation-mastery"><h3 class="heading hide-type">
+<span class="type">Subbagian</span> <span class="codenumber"></span> <span class="title">Latihan Penguasaan dengan Dukungan Bertahap</span>
+</h3>
+<article class="exercise exercise-like" id="o003-c90-completion-separation-ex-01"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-separation-ex-01"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.16</span><span class="period">.</span><span class="space"> </span><span class="title">Ruang Sierpiński dan praurutan spesialisasi.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-01"><article class="exercise exercise-like"><div class="para" id="p-9104">Untuk <span class="process-math">\(S=\{0,1\}\)</span> dengan <span class="process-math">\(\tau=\{\emptyset,\{1\},S\}\text{,}\)</span> tentukan semua pasangan <span class="process-math">\(x\preceq y\text{.}\)</span> Verifikasi langsung bahwa <span class="process-math">\(S\)</span> bersifat <span class="process-math">\(T_0\)</span> tetapi bukan <span class="process-math">\(T_1\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-separation-ex-01-hint" id="o003-c90-completion-separation-ex-01-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-01-hint"><div class="hint solution-like"><div class="para" id="p-9105">Daftarkan lingkungan buka setiap titik. Ingat bahwa <span class="process-math">\(x\preceq y\)</span> berarti setiap lingkungan buka <span class="process-math">\(x\)</span> memuat <span class="process-math">\(y\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-separation-ex-01-answer" id="o003-c90-completion-separation-ex-01-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-01-answer"><div class="answer solution-like"><div class="para" id="p-9106">Relasinya adalah <span class="process-math">\(0\preceq0\text{,}\)</span> <span class="process-math">\(1\preceq1\text{,}\)</span> dan <span class="process-math">\(0\preceq1\text{;}\)</span> tetapi <span class="process-math">\(1\npreceq0\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-separation-ex-01-solution" id="o003-c90-completion-separation-ex-01-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-01-solution"><div class="solution solution-like"><div class="para" id="p-9107">Satu-satunya lingkungan buka <span class="process-math">\(0\)</span> adalah <span class="process-math">\(S\text{,}\)</span> yang memuat <span class="process-math">\(1\text{;}\)</span> jadi <span class="process-math">\(0\preceq1\text{.}\)</span> Himpunan <span class="process-math">\(\{1\}\)</span> adalah lingkungan buka <span class="process-math">\(1\)</span> yang tidak memuat <span class="process-math">\(0\text{,}\)</span> sehingga <span class="process-math">\(1\npreceq0\text{.}\)</span> Refleksivitas memberi dua pasangan diagonal. Himpunan <span class="process-math">\(\{1\}\)</span> membedakan kedua titik, jadi ruang itu <span class="process-math">\(T_0\text{.}\)</span> Akan tetapi, tidak ada himpunan buka yang memuat <span class="process-math">\(0\)</span> tanpa memuat <span class="process-math">\(1\text{,}\)</span> jadi syarat <span class="process-math">\(T_1\)</span> gagal.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-separation-ex-02"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-separation-ex-02"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.17</span><span class="period">.</span><span class="space"> </span><span class="title">Penutup titik dan sifat <span class="process-math">\(T_0\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-02"><article class="exercise exercise-like"><div class="para" id="p-9108">Buktikan tanpa memakai <a href="" class="xref" data-knowl="./knowl/o003-c90-prop-t0-equivalences.html" title="Proposisi U.3">Proposisi U.3</a> bahwa ruang <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_0\)</span> jika dan hanya jika pemetaan <span class="process-math">\(x\mapsto\overline{\{x\}}\)</span> bersifat injektif.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-separation-ex-02-hint" id="o003-c90-completion-separation-ex-02-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-02-hint"><div class="hint solution-like"><div class="para" id="p-9109">Jika dua penutup sama, uji keanggotaan <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\)</span> pada kedua penutup. Untuk arah sebaliknya, terjemahkan kegagalan <span class="process-math">\(T_0\)</span> sebagai kesamaan seluruh lingkungan buka.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-separation-ex-02-answer" id="o003-c90-completion-separation-ex-02-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-02-answer"><div class="answer solution-like"><div class="para" id="p-9110">Kesamaan penutup dua titik tepat memaksa kedua titik mempunyai lingkungan buka yang sama; injektivitas karena itu ekuivalen dengan kemampuan membedakan titik-titik berbeda.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-separation-ex-02-solution" id="o003-c90-completion-separation-ex-02-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-02-solution"><div class="solution solution-like">
+<div class="para" id="p-9111">Andaikan <span class="process-math">\(\overline{\{x\}}=\overline{\{y\}}\text{.}\)</span> Karena <span class="process-math">\(x\in\overline{\{x\}}\text{,}\)</span> kita memperoleh <span class="process-math">\(x\in\overline{\{y\}}\text{;}\)</span> maka setiap lingkungan buka <span class="process-math">\(x\)</span> memuat <span class="process-math">\(y\text{.}\)</span> Dengan menukar peran titik, setiap lingkungan buka <span class="process-math">\(y\)</span> memuat <span class="process-math">\(x\text{.}\)</span> Jadi kedua titik tak terbedakan. Dalam ruang <span class="process-math">\(T_0\)</span> ini memaksa <span class="process-math">\(x=y\text{,}\)</span> sehingga pemetaan injektif.</div> <div class="para" id="p-9112">Sebaliknya, jika <span class="process-math">\(X\)</span> tidak <span class="process-math">\(T_0\text{,}\)</span> ada <span class="process-math">\(x\ne y\)</span> yang tak terbedakan. Untuk setiap <span class="process-math">\(z\text{,}\)</span> suatu lingkungan buka <span class="process-math">\(z\)</span> memuat <span class="process-math">\(x\)</span> tepat ketika memuat <span class="process-math">\(y\text{.}\)</span> Jadi <span class="process-math">\(z\in\overline{\{x\}}\)</span> tepat ketika <span class="process-math">\(z\in\overline{\{y\}}\text{,}\)</span> sehingga kedua penutup sama dan pemetaan tidak injektif.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-separation-ex-03"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-separation-ex-03"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.18</span><span class="period">.</span><span class="space"> </span><span class="title">Sifat universal kuosien Kolmogorov.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-03"><article class="exercise exercise-like"><div class="para" id="p-9113">Misalkan <span class="process-math">\(q:X\to X/{\sim}\)</span> adalah kuosien Kolmogorov. Buktikan bahwa untuk setiap ruang <span class="process-math">\(T_0\)</span> <span class="process-math">\(Y\text{,}\)</span> komposisi dengan <span class="process-math">\(q\)</span> memberi korespondensi satu-satu antara pemetaan kontinu <span class="process-math">\(X/{\sim}\to Y\)</span> dan pemetaan kontinu <span class="process-math">\(X\to Y\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-separation-ex-03-hint" id="o003-c90-completion-separation-ex-03-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-03-hint"><div class="hint solution-like"><div class="para" id="p-9114">Tunjukkan lebih dahulu bahwa pemetaan kontinu ke ruang <span class="process-math">\(T_0\)</span> harus konstan pada setiap kelas titik yang tak terbedakan.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-separation-ex-03-answer" id="o003-c90-completion-separation-ex-03-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-03-answer"><div class="answer solution-like"><div class="para" id="p-9115">Setiap <span class="process-math">\(f:X\to Y\)</span> memfaktor secara tunggal melalui <span class="process-math">\(q\text{,}\)</span> dan definisi topologi kuosien membuat faktor tersebut kontinu.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-separation-ex-03-solution" id="o003-c90-completion-separation-ex-03-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-03-solution"><div class="solution solution-like"><div class="para" id="p-9116">Jika <span class="process-math">\(x\sim y\)</span> tetapi <span class="process-math">\(f(x)\ne f(y)\text{,}\)</span> sifat <span class="process-math">\(T_0\)</span> memberi himpunan buka di <span class="process-math">\(Y\)</span> yang membedakan kedua citra. Prapetanya membedakan <span class="process-math">\(x\)</span> dan <span class="process-math">\(y\text{,}\)</span> sebuah kontradiksi. Karena itu rumus <span class="process-math">\(\bar f([x])=f(x)\)</span> terdefinisi baik. Kesetaraan <span class="process-math">\(f=\bar f\circ q\)</span> dan sifat pemetaan kuosien menunjukkan bahwa <span class="process-math">\(\bar f\)</span> kontinu. Surjektivitas <span class="process-math">\(q\)</span> menjamin keunikan. Sebaliknya, komposisi setiap pemetaan kontinu <span class="process-math">\(\bar f\)</span> dengan <span class="process-math">\(q\)</span> jelas kontinu. Kedua konstruksi saling invers.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-separation-ex-04"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-separation-ex-04"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.19</span><span class="period">.</span><span class="space"> </span><span class="title">Topologi komplemen berhingga.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-04"><article class="exercise exercise-like"><div class="para" id="p-9117">Misalkan <span class="process-math">\(X\)</span> tak hingga dan himpunan buka tak kosongnya adalah semua himpunan dengan komplemen berhingga. Buktikan bahwa <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_1\)</span> tetapi bukan Hausdorff.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-separation-ex-04-hint" id="o003-c90-completion-separation-ex-04-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-04-hint"><div class="hint solution-like"><div class="para" id="p-9118">Periksa komplemen himpunan satu titik. Untuk sifat Hausdorff, hitung komplemen dari irisan dua himpunan buka tak kosong.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-separation-ex-04-answer" id="o003-c90-completion-separation-ex-04-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-04-answer"><div class="answer solution-like"><div class="para" id="p-9119">Semua himpunan satu titik tertutup, tetapi dua himpunan buka tak kosong tidak pernah saling lepas.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-separation-ex-04-solution" id="o003-c90-completion-separation-ex-04-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-04-solution"><div class="solution solution-like"><div class="para" id="p-9120">Untuk setiap <span class="process-math">\(x\in X\text{,}\)</span> komplemen <span class="process-math">\(X\setminus\{x\}\)</span> terbuka, sehingga <span class="process-math">\(\{x\}\)</span> tertutup. Jadi <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_1\text{.}\)</span> Jika <span class="process-math">\(U,V\)</span> terbuka dan tak kosong, maka <span class="process-math">\(X\setminus(U\cap V)=(X\setminus U)\cup(X\setminus V)\)</span> berhingga. Karena <span class="process-math">\(X\)</span> tak hingga, <span class="process-math">\(U\cap V\)</span> tidak kosong. Maka tidak ada lingkungan buka saling lepas bagi dua titik berbeda, dan ruang itu bukan Hausdorff.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-separation-ex-05"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-separation-ex-05"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.20</span><span class="period">.</span><span class="space"> </span><span class="title">Dari regularitas lengkap ke regularitas.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-05"><article class="exercise exercise-like"><div class="para" id="p-9121">Misalkan <span class="process-math">\(X\)</span> reguler lengkap. Buktikan bahwa untuk setiap <span class="process-math">\(x\notin F\)</span> dengan <span class="process-math">\(F\)</span> tertutup, terdapat lingkungan buka saling lepas bagi <span class="process-math">\(x\)</span> dan <span class="process-math">\(F\text{.}\)</span> Jelaskan mengapa syarat <span class="process-math">\(T_1\)</span> tetap dicantumkan dalam definisi ruang Tychonoff.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-separation-ex-05-hint" id="o003-c90-completion-separation-ex-05-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-05-hint"><div class="hint solution-like"><div class="para" id="p-9122">Gunakan prapeta <span class="process-math">\([0,1/3)\)</span> dan <span class="process-math">\((2/3,1]\)</span> di bawah fungsi pemisah.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-separation-ex-05-answer" id="o003-c90-completion-separation-ex-05-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-05-answer"><div class="answer solution-like"><div class="para" id="p-9123">Kedua prapeta itu terbuka, saling lepas, dan masing-masing memuat <span class="process-math">\(x\)</span> serta <span class="process-math">\(F\text{.}\)</span> Regularitas lengkap sendiri tidak memaksa titik-titik tertutup, sehingga <span class="process-math">\(T_1\)</span> ditambahkan secara terpisah.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-separation-ex-05-solution" id="o003-c90-completion-separation-ex-05-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-05-solution"><div class="solution solution-like"><div class="para" id="p-9124">Pilih fungsi kontinu <span class="process-math">\(f:X\to[0,1]\)</span> dengan <span class="process-math">\(f(x)=0\)</span> dan <span class="process-math">\(f(F)=\{1\}\text{.}\)</span> Dalam topologi subruang pada <span class="process-math">\([0,1]\text{,}\)</span> kedua himpunan <span class="process-math">\([0,1/3)\)</span> dan <span class="process-math">\((2/3,1]\)</span> terbuka dan saling lepas. Prapetanya karena itu terbuka dan saling lepas; yang pertama memuat <span class="process-math">\(x\text{,}\)</span> sedangkan yang kedua memuat <span class="process-math">\(F\text{.}\)</span> Ini adalah regularitas. Ruang indiskret bersifat reguler lengkap secara trivial untuk pasangan titik dan himpunan tertutup yang tersedia, tetapi tidak <span class="process-math">\(T_1\)</span> bila memiliki lebih dari satu titik. Karena itu syarat <span class="process-math">\(T_1\)</span> tidak boleh dihilangkan dari istilah Tychonoff.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="o003-c90-completion-separation-ex-06"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-o003-c90-completion-separation-ex-06"><h3 class="heading">
+<span class="type">Pemeriksaan</span><span class="space"> </span><span class="codenumber">U.21</span><span class="period">.</span><span class="space"> </span><span class="title">Membuktikan seluruh rantai separasi.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-06"><article class="exercise exercise-like"><div class="para" id="p-9125">Buktikan secara langsung tiga implikasi <span class="process-math">\(T_3\Rightarrow T_2\text{,}\)</span> <span class="process-math">\(T_2\Rightarrow T_1\text{,}\)</span> dan <span class="process-math">\(T_1\Rightarrow T_0\text{.}\)</span> Pada setiap langkah, nyatakan tepat di mana hipotesis sebelumnya digunakan.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-o003-c90-completion-separation-ex-06-hint" id="o003-c90-completion-separation-ex-06-hint"><span class="type">Petunjuk</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-06-hint"><div class="hint solution-like"><div class="para" id="p-9126">Untuk langkah pertama, pisahkan <span class="process-math">\(x\)</span> dari himpunan tertutup <span class="process-math">\(\{y\}\text{.}\)</span> Untuk langkah kedua, tulis <span class="process-math">\(X\setminus\{y\}\)</span> sebagai gabungan lingkungan titik-titik lain.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-o003-c90-completion-separation-ex-06-answer" id="o003-c90-completion-separation-ex-06-answer"><span class="type">Jawaban</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-06-answer"><div class="answer solution-like"><div class="para" id="p-9127">Syarat <span class="process-math">\(T_1\)</span> di dalam <span class="process-math">\(T_3\)</span> membuat himpunan satu titik tertutup; sifat Hausdorff membuat komplemen setiap titik terbuka; dan sifat <span class="process-math">\(T_1\)</span> langsung memberi himpunan buka pembeda.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-o003-c90-completion-separation-ex-06-solution" id="o003-c90-completion-separation-ex-06-solution"><span class="type">Solusi</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-o003-c90-completion-separation-ex-06-solution"><div class="solution solution-like">
+<div class="para" id="p-9128">Misalkan <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_3\)</span> dan <span class="process-math">\(x\ne y\text{.}\)</span> Karena <span class="process-math">\(T_3\)</span> mencakup <span class="process-math">\(T_1\text{,}\)</span> himpunan <span class="process-math">\(\{y\}\)</span> tertutup. Regularitas memisahkan <span class="process-math">\(x\)</span> dan <span class="process-math">\(\{y\}\)</span> dengan himpunan buka saling lepas, sehingga <span class="process-math">\(X\)</span> Hausdorff.</div> <div class="para" id="p-9129">Sekarang misalkan <span class="process-math">\(X\)</span> Hausdorff dan tetapkan <span class="process-math">\(y\in X\text{.}\)</span> Untuk setiap <span class="process-math">\(x\ne y\text{,}\)</span> pilih lingkungan buka <span class="process-math">\(U_x\)</span> dari <span class="process-math">\(x\)</span> yang tidak memuat <span class="process-math">\(y\text{.}\)</span> Maka <span class="process-math">\(X\setminus\{y\}=\bigcup_{x\ne y}U_x\)</span> terbuka, sehingga <span class="process-math">\(\{y\}\)</span> tertutup dan <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_1\text{.}\)</span> Akhirnya, jika <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_1\)</span> dan <span class="process-math">\(x\ne y\text{,}\)</span> himpunan buka <span class="process-math">\(X\setminus\{y\}\)</span> memuat <span class="process-math">\(x\)</span> tetapi tidak memuat <span class="process-math">\(y\text{.}\)</span> Jadi <span class="process-math">\(X\)</span> bersifat <span class="process-math">\(T_0\text{.}\)</span>
+</div>
+</div></div>
+</div></article></div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="o003-c90-completion-companion.html" title="Sebelumnya"><span class="icon">&lt;</span><span class="name">Sebelumnya</span></a><a class="top-button button" href="#" title="Atas"><span class="icon">^</span><span class="name">Atas</span></a><a class="next-button button" href="o003-c90-completion-countability.html" title="Berikutnya"><span class="name">Berikutnya</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="external/vendor/badges/runestone.svg" alt="Runestone Academy"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="external/vendor/badges/mathjax.svg" alt="MathJax"></a>
+</div>
+</body>
+</html>

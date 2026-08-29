@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch19-exercise-guides-a" xml:lang="id-ID">
+  <title>Panduan Latihan Bab 19 A</title>
+  <p>Sepuluh entri ini mendampingi sepuluh prompt latihan pertama dalam urutan sumber. Karya pendamping asli ini berlisensi CC BY 4.0 dan bukan solusi resmi GVSU. Provenans model: <c>OpenAI Codex gpt-5.6-sol, Ultra</c>.</p>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-01">
+    <title>Lingkungan minimal yang tidak terbuka</title>
+    <statement><p>Berikan ruang topologi <m>X</m> dan <m>x\in X</m> sehingga irisan semua himpunan buka yang memuat <m>x</m> bukan himpunan buka.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-01-hint"><p>Pakai garis real biasa; irisan semua interval buka yang memuat sebuah titik hanya berisi titik itu.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-01-answer"><p>Ambil <m>X=\R</m> bertopologi Euklides dan <m>x=0</m>. Lingkungan minimalnya adalah <m>\{0\}</m>, yang tidak terbuka.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-01-solution"><p>Setiap lingkungan buka dari <m>0</m> memuat <m>0</m>, sehingga <m>0</m> berada dalam irisannya. Jika <m>y\ne0</m>, pilih interval <m>(-|y|/2,|y|/2)</m>; interval ini memuat <m>0</m> tetapi tidak <m>y</m>. Jadi irisan semua himpunan buka yang memuat <m>0</m> tepat <m>\{0\}</m>. Singleton ini tidak terbuka dalam topologi Euklides.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-02">
+    <title>Subhimpunan terhubung lintasan berada dalam satu komponen</title>
+    <statement><p>Misalkan <m>A</m> subhimpunan terhubung lintasan takkosong dari <m>X</m>. Buktikan bahwa <m>A\subseteq PC(x)</m> untuk suatu <m>x\in X</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-02-hint"><p>Pilih <m>x\in A</m> dan gunakan definisi komponen lintasan sebagai kelas semua titik yang dapat dihubungkan ke <m>x</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-02-answer"><p>Untuk sembarang <m>a\in A</m>, keterhubungan lintasan <m>A</m> memberi lintasan dari <m>x</m> ke <m>a</m>; maka <m>a\in PC(x)</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-02-solution"><p>Pilih satu titik <m>x\in A</m>. Untuk setiap <m>a\in A</m>, ada lintasan di dalam <m>A</m> dari <m>x</m> ke <m>a</m>. Komposisi lintasan itu dengan inklusi <m>A\hookrightarrow X</m> adalah lintasan dalam <m>X</m>. Jadi <m>a</m> berada dalam kelas ekuivalensi lintasan <m>PC(x)</m>. Karena <m>a</m> sebarang, <m>A\subseteq PC(x)</m>. Pernyataan sumber memakai konvensi bahwa subruang terhubung lintasan yang dibahas takkosong.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-03">
+    <title>Mencirikan ruang dengan satu komponen lintasan</title>
+    <statement><p>Buktikan bahwa <m>X</m> terhubung lintasan jika dan hanya jika <m>X=PC(x)</m> untuk suatu <m>x\in X</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-03-hint"><p>Pada satu arah pilih titik dasar. Pada arah lain, hubungkan dua titik melalui titik dasar itu.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-03-answer"><p>Ruang terhubung lintasan hanya memiliki satu kelas lintasan; sebaliknya, satu kelas lintasan membuat semua titik dapat dihubungkan.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-03-solution"><p>Jika <m>X</m> terhubung lintasan dan <m>x\in X</m>, setiap <m>y\in X</m> dapat dihubungkan ke <m>x</m>, sehingga <m>PC(x)=X</m>. Sebaliknya, andaikan <m>PC(x)=X</m>. Untuk <m>a,b\in X</m>, ada lintasan <m>a\leadsto x</m> dan <m>x\leadsto b</m>. Menempelkan keduanya memberi lintasan <m>a\leadsto b</m>. Jadi <m>X</m> terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-04">
+    <title>Gabungan keluarga terhubung lintasan yang beririsan</title>
+    <statement><p>Jika setiap <m>A_\alpha\subseteq X</m> terhubung lintasan dan <m>\bigcap_{\alpha\in I}A_\alpha\ne\emptyset</m>, buktikan bahwa <m>\bigcup_{\alpha\in I}A_\alpha</m> terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-04-hint"><p>Pilih satu titik bersama <m>z</m>. Dua titik dalam gabungan mungkin berada pada anggota keluarga yang berbeda, tetapi keduanya dapat dihubungkan ke <m>z</m>.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-04-answer"><p>Ya; lintasan dari titik pertama ke <m>z</m> dan dari <m>z</m> ke titik kedua dapat ditempelkan.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-04-solution"><p>Pilih <m>z\in\bigcap_{\alpha\in I}A_\alpha</m>. Jika <m>x,y</m> berada dalam gabungan, ada indeks <m>\alpha,\beta</m> dengan <m>x\in A_\alpha</m> dan <m>y\in A_\beta</m>. Karena <m>z</m> berada dalam kedua himpunan, terdapat lintasan dalam <m>A_\alpha</m> dari <m>x</m> ke <m>z</m> dan lintasan dalam <m>A_\beta</m> dari <m>z</m> ke <m>y</m>. Hasil kali lintasan itu berada seluruhnya dalam gabungan dan menghubungkan <m>x</m> ke <m>y</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-05">
+    <title>Keterhubungan sapu harmonik</title>
+    <statement><p>Misalkan <m>H</m> adalah gabungan ruas garis dari <m>(0,1)</m> ke <m>(1/n,0)</m> untuk <m>n\in\Z^+</m>. Buktikan bahwa <m>H</m> terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-05-hint"><p>Setiap ruas terhubung dan semua ruas mempunyai titik <m>(0,1)</m> yang sama.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-05-answer"><p><m>H</m> terhubung sebagai gabungan himpunan-himpunan terhubung dengan irisan bersama takkosong.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-05-solution"><p>Untuk tiap <m>n</m>, ruas <m>L_n</m> adalah citra kontinu <m>[0,1]</m>, maka terhubung. Semua <m>L_n</m> memuat titik puncak <m>v=(0,1)</m>, sehingga <m>\bigcap_nL_n</m> takkosong. Teorema gabungan himpunan terhubung yang mempunyai titik bersama memberi bahwa <m>H=\bigcup_nL_n</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-06">
+    <title>Keterhubungan lintasan sapu harmonik</title>
+    <statement><p>Untuk ruang <m>H</m> yang sama, buktikan bahwa <m>H</m> terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-06-hint"><p>Hubungkan setiap titik ke puncak sepanjang ruasnya sendiri.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-06-answer"><p>Setiap dua titik dapat dihubungkan melalui puncak bersama <m>(0,1)</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-06-solution"><p>Jika <m>x\in L_m</m> dan <m>y\in L_n</m>, parameterisasi bagian ruas dari <m>x</m> ke <m>v=(0,1)</m> dan bagian ruas dari <m>v</m> ke <m>y</m>. Keduanya lintasan linear yang terletak dalam <m>H</m>. Menempelkan keduanya di <m>v</m> menghasilkan lintasan dari <m>x</m> ke <m>y</m>. Jadi <m>H</m> terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-07">
+    <title>Audit keterhubungan lokal sapu harmonik</title>
+    <statement><p>Nilai klaim sumber bahwa sapu harmonik <m>H=\bigcup_{n\geq1}L_n</m> tidak terhubung secara lokal. Bedakan definisi literal ini dari sapu tertutup <m>\widehat H=H\cup(\{0\}\times[0,1])</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-07-hint"><p>Pada <m>H</m>, titik selain puncak mempunyai lingkungan kecil pada satu ruas; di puncak, irisan bola adalah bintang ruas-ruas. Pada <m>\widehat H</m>, periksa titik interior pada ruas vertikal limit.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-07-answer"><p>Secara literal klaim itu salah: <m>H</m> lokal terhubung, bahkan lokal terhubung lintasan. Klaim menjadi benar untuk <m>\widehat H</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-07-solution"><p>Jika <m>x\in H</m> bukan puncak, <m>x</m> berada pada satu ruas <m>L_n</m> dan mempunyai bola cukup kecil yang tidak bertemu ruas lain; irisannya dengan <m>H</m> berupa interval, maka terhubung lintasan. Di puncak <m>v</m>, setiap irisan <m>B(v,\varepsilon)\cap H</m> adalah gabungan potongan ruas yang semuanya memuat <m>v</m>, jadi terhubung lintasan. Maka <m>H</m> lokal terhubung lintasan.</p><p>Untuk <m>\widehat H</m>, ambil <m>z=(0,s)</m> dengan <m>0&lt;s&lt;1</m> dan bola kecil yang tidak memuat puncak. Setiap lingkungan relatif dari <m>z</m> bertemu potongan tak hingga banyak ruas <m>L_n</m>, tetapi potongan-potongan itu hanya saling terhubung melalui puncak di luar bola. Karena itu tidak ada lingkungan terhubung yang cukup kecil di <m>z</m>. Jadi versi tertutup tidak lokal terhubung. Perbedaan ini mencatat ketidakselarasan antara definisi literal dan tuntutan prompt.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-08">
+    <title>Audit keterhubungan lintasan lokal sapu harmonik</title>
+    <statement><p>Nilai klaim sumber bahwa sapu harmonik literal tidak terhubung lintasan secara lokal, dan jelaskan hasil untuk versi tertutup <m>\widehat H</m>.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-08-hint"><p>Gunakan basis lingkungan terhubung lintasan yang dibangun pada panduan sebelumnya. Untuk versi tertutup, lokal terhubung lintasan akan mengakibatkan lokal terhubung.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-08-answer"><p>Klaim literal salah: <m>H</m> lokal terhubung lintasan. Versi tertutup <m>\widehat H</m> tidak lokal terhubung lintasan.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-08-solution"><p>Pada titik bukan puncak, potongan interval kecil pada satu ruas memberi basis lingkungan buka relatif yang terhubung lintasan. Pada puncak, irisan bola kecil dengan <m>H</m> adalah bintang yang semua lengannya bertemu di puncak; dua titik dapat dihubungkan melalui puncak. Jadi <m>H</m> lokal terhubung lintasan.</p><p>Panduan sebelumnya membuktikan bahwa <m>\widehat H</m> tidak lokal terhubung pada titik interior ruas vertikal limit. Setiap ruang lokal terhubung lintasan pasti lokal terhubung, sebab himpunan terhubung lintasan terhubung. Maka <m>\widehat H</m> tidak lokal terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-09">
+    <title>Lokal terhubung lintasan tanpa terhubung lintasan global</title>
+    <statement><p>Berikan ruang yang terhubung lintasan secara lokal tetapi tidak terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-09-hint"><p>Gunakan gabungan dua interval buka yang terpisah.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-09-answer"><p>Contohnya <m>X=(0,1)\cup(2,3)</m> dengan topologi subruang dari <m>\R</m>.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-09-solution"><p>Setiap titik <m>x\in X</m> mempunyai interval buka kecil yang tetap berada dalam salah satu komponen; interval itu terhubung lintasan. Jadi <m>X</m> lokal terhubung lintasan. Akan tetapi, <m>(0,1)</m> dan <m>(2,3)</m> membentuk pemisahan dari <m>X</m>. Ruang terhubung lintasan harus terhubung, sehingga <m>X</m> tidak terhubung lintasan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch19-exer-a-10">
+    <title>Topologi K tidak terhubung lintasan</title>
+    <statement><p>Misalkan <m>K=\{1/n:n\in\Z^+\}</m> dan <m>\tau_K</m> dibangkitkan oleh interval biasa serta <m>(a,b)\setminus K</m>. Buktikan bahwa <m>(\R,\tau_K)</m> tidak terhubung lintasan.</p></statement>
+    <hint xml:id="o003-c90-ch19-exer-a-10-hint"><p>Jika ada lintasan dari bilangan negatif ke bilangan lebih dari <m>1</m>, citranya dalam topologi biasa memuat <m>[0,1]</m>. Citra lintasan kompak; gunakan bahwa <m>[0,1]</m> tertutup tetapi tidak kompak dalam topologi K.</p></hint>
+    <answer xml:id="o003-c90-ch19-exer-a-10-answer"><p>Lintasan semacam itu akan memaksa <m>[0,1]</m> kompak dalam topologi K, padahal suatu selimut buka eksplisit menunjukkan sebaliknya.</p></answer>
+    <solution xml:id="o003-c90-ch19-exer-a-10-solution"><p>Andaikan <m>p:[0,1]\to(\R,\tau_K)</m> menghubungkan <m>a&lt;0</m> ke <m>b&gt;1</m>. Karena topologi K lebih halus daripada topologi biasa, pemetaan identitas ke garis biasa kontinu; maka <m>p([0,1])</m> terhubung dalam garis biasa dan memuat <m>[0,1]</m>. Citra <m>p([0,1])</m> kompak dalam topologi K. Himpunan <m>[0,1]</m> tertutup dalam topologi K, sehingga harus kompak.</p><p>Namun <m>[0,1]</m> tidak kompak. Ambil <m>U_0=(-1,2)\setminus K</m>. Untuk setiap <m>n</m>, pilih interval biasa <m>U_n</m> yang memuat <m>1/n</m> tetapi mempunyai batas bawah positif. Keluarga <m>\{U_0,U_1,U_2,\ldots\}</m> menutupi <m>[0,1]</m>. Setiap subkeluarga berhingga hanya memuat berhingga banyak <m>U_n</m>; ada <m>1/m</m> cukup dekat ke nol yang tidak termuat di interval-interval terpilih dan juga tidak termuat dalam <m>U_0</m>. Jadi tidak ada subselimut berhingga, kontradiksi. Maka tidak ada lintasan tersebut dan ruang tidak terhubung lintasan.</p></solution>
+  </exercise>
+</section>

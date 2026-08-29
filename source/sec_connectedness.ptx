@@ -1,41 +1,41 @@
 <section xml:id="sec_connectedness">
-  <title>Path Connectedness and Connectedness</title>
+  <title>Keterhubungan Lintasan dan Keterhubungan</title>
   <p>
-    Path connectedness and connectedness are different concepts,
-    but they are related.
-    In this section we will show that any path connected space must also be connected.
-    We will see later that the converse is not true except in finite topological spaces.
+    Keterhubungan lintasan dan keterhubungan merupakan konsep yang berbeda,
+    tetapi keduanya saling berkaitan.
+    Dalam bagian ini kita akan menunjukkan bahwa setiap ruang terhubung lintasan juga harus terhubung.
+    Nanti kita akan melihat bahwa konversnya tidak benar, kecuali pada ruang topologi berhingga.
   </p>
 
   <theorem xml:id="thm_pctoc">
     <statement>
       <p>
-        If a topological space <m>X</m> is path connected,
-        then <m>X</m> is connected.
+        Jika ruang topologi <m>X</m> terhubung lintasan,
+        maka <m>X</m> terhubung.
       </p>
     </statement>
   
   <proof>
     <p>
-      Suppose that <m>X</m> is path connected.
-      Let <m>a \in X</m> and for any <m>x \in X</m> let <m>p_x</m> be a path from <m>a</m> to <m>x</m>.
-      Let <m>C_x = p_x([0,1])</m>.
-      Now <m>C_x</m> is the continuous image of the connected set <m>[0,1]</m> in <m>\R</m>,
-      so <m>C_x</m> is connected.
-      Also, <m>p_x(0) = a \in C_x</m> and <m>p_x(1) = x \in C_x</m>.
-      Thus, every set <m>C_x</m> contains <m>a</m> and so <m>\bigcap_{x \in X} C_x</m> is not empty.
-      Therefore,
+      Andaikan <m>X</m> terhubung lintasan.
+      Misalkan <m>a \in X</m> dan, untuk setiap <m>x \in X</m>, misalkan <m>p_x</m> suatu lintasan dari <m>a</m> ke <m>x</m>.
+      Misalkan <m>C_x = p_x([0,1])</m>.
+      Himpunan <m>C_x</m> merupakan citra kontinu dari himpunan terhubung <m>[0,1]</m> dalam <m>\R</m>,
+      sehingga <m>C_x</m> terhubung.
+      Selain itu, <m>p_x(0) = a \in C_x</m> dan <m>p_x(1) = x \in C_x</m>.
+      Jadi, setiap himpunan <m>C_x</m> memuat <m>a</m>, sehingga <m>\bigcap_{x \in X} C_x</m> tidak kosong.
+      Oleh karena itu,
       <me>
         C = \bigcup_{x \in X} C_x
       </me>
-      is a connected subset of <m>X</m>.
-      But every <m>x \in X</m> is in a <m>C_x</m>, so <m>C = X</m>.
-      We conclude that <m>X</m> is connected.
+      merupakan subhimpunan terhubung dari <m>X</m>.
+      Namun, setiap <m>x \in X</m> berada dalam suatu <m>C_x</m>, sehingga <m>C = X</m>.
+      Kita menyimpulkan bahwa <m>X</m> terhubung.
     </p>
   </proof>
   </theorem>
   <p>
-    In the following sections we explore the reverse implication in <xref ref="thm_pctoc"/> <mdash/> that is,
-    does connectedness imply path connectedness.
+    Dalam bagian-bagian berikutnya kita menyelidiki implikasi sebaliknya dari <xref ref="thm_pctoc"/> <mdash/> yaitu,
+    apakah keterhubungan mengakibatkan keterhubungan lintasan.
   </p>
 </section>

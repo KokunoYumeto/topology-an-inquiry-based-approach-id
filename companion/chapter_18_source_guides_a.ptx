@@ -1,0 +1,1371 @@
+<section xml:id="o003-c90-ch18-source-guides-a" xml:lang="id-ID">
+  <title>Panduan Belajar Mandiri: Keterhubungan, Komponen, dan Titik Tetap</title>
+
+  <p>
+    Empat puluh tiga panduan ini mengikuti tepat urutan prompt nonlatihan Bab
+    18. Kerjakan dahulu prompt pada bab utama, lalu buka petunjuk, jawaban,
+    dan solusi secara bertahap. Setiap pernyataan di bawah merumuskan kembali
+    persoalan sumber secara ringkas tanpa menggantikan kegiatan penemuan pada
+    bab utama.
+  </p>
+  <p>
+    Seluruh uraian pendamping ini ditulis secara mandiri sebagai komponen
+    terpisah di bawah lisensi CC BY 4.0. Komponen ini bukan materi maupun
+    solusi resmi GVSU dan tidak menyatakan dukungan penulis atau institusi
+    sumber. Identitas lisensinya tidak diratakan dengan lisensi teks utama.
+  </p>
+  <p>
+    Provenans produksi berbantuan model untuk komponen ini dicatat sebagai
+    <c>OpenAI Codex gpt-5.6-sol, Ultra</c>. Identifikasi ini tidak
+    menggantikan kredit penulis sumber, institusi, atau kontributor manusia.
+  </p>
+
+  <exercise xml:id="o003-c90-ch18-guide-01">
+    <title>Dua Titik yang Terpisah</title>
+    <statement>
+      <p>
+        Dalam <m>X=\{a,b,c,d\}</m> dengan
+        <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>, tentukan apakah
+        <m>A=\{a,b\}</m> terhubung dengan memeriksa topologi subruangnya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-01-hint">
+      <p><em>Tahap 1.</em> Iris setiap anggota <m>\tau</m> dengan <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Periksa apakah <m>\{a\}</m> dan <m>\{b\}</m> buka relatif dalam <m>A</m>.</p>
+      <p><em>Tahap 3.</em> Bandingkan gabungan dan irisan kedua singleton itu dengan <m>A</m> dan <m>\emptyset</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-01-answer">
+      <p><m>A</m> terputus; pasangan <m>\{a\},\{b\}</m> merupakan pemisahan dari <m>A</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-01-solution">
+      <p>
+        Topologi subruang pada <m>A</m> adalah
+        <me>\tau_A=\{\emptyset,\{a\},\{b\},A\}.</me>
+        Memang, <m>\{a\}=A\cap\{a\}</m> dan
+        <m>\{b\}=A\cap\{b\}</m>, sehingga keduanya buka relatif.
+      </p>
+      <p>
+        Kedua himpunan tersebut takkosong, saling lepas, dan gabungannya
+        sama dengan <m>A</m>. Jadi keduanya membentuk pemisahan, sehingga
+        <m>A</m> tidak terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-02">
+    <title>Pemisahan pada Subruang Tiga Titik</title>
+    <statement>
+      <p>
+        Untuk <m>A=\{a,b,c\}</m> dalam
+        <m>X=\{a,b,c,d,e,f\}</m> dengan
+        <me>\tau=\{\emptyset,\{a\},\{c,d\},\{a,c,d\},\{b,c,d,e,f\},X\},</me>
+        tentukan apakah <m>A</m> terhubung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-02-hint">
+      <p><em>Tahap 1.</em> Hitung irisan <m>A</m> dengan <m>\{a\}</m> dan <m>\{b,c,d,e,f\}</m>.</p>
+      <p><em>Tahap 2.</em> Periksa apakah hasil kedua irisan itu saling lepas.</p>
+      <p><em>Tahap 3.</em> Tentukan apakah gabungannya menyusun seluruh <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-02-answer">
+      <p><m>A</m> terputus, dengan pemisahan <m>\{a\}</m> dan <m>\{b,c\}</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-02-solution">
+      <p>
+        Himpunan <m>\{a\}</m> buka relatif karena sudah terbuka dalam
+        <m>X</m>. Selain itu,
+        <m>A\cap\{b,c,d,e,f\}=\{b,c\}</m>, sehingga <m>\{b,c\}</m> juga
+        buka relatif dalam <m>A</m>.
+      </p>
+      <p>
+        Kedua himpunan itu takkosong, beririsan kosong, dan
+        <m>\{a\}\cup\{b,c\}=A</m>. Karena itu <m>A</m> mempunyai pemisahan
+        dan tidak terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-03">
+    <title>Ruang Berhingga Tanpa Himpunan Buka-Tertutup Nontrivial</title>
+    <statement>
+      <p>
+        Misalkan <m>A=X=\{a,b,c,d\}</m> dan
+        <me>\tau=\{\emptyset,\{b\},\{c\},\{a,b\},\{b,c\},\{a,b,c\},\{b,c,d\},X\}.</me>
+        Putuskan apakah <m>X</m> terhubung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-03-hint">
+      <p><em>Tahap 1.</em> Jika <m>U,V</m> memisahkan <m>X</m>, maka <m>V=X\setminus U</m>.</p>
+      <p><em>Tahap 2.</em> Ambil komplemen setiap anggota nontrivial <m>\tau</m>.</p>
+      <p><em>Tahap 3.</em> Periksa apakah ada anggota nontrivial yang komplemennya juga berada dalam <m>\tau</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-03-answer">
+      <p><m>X</m> terhubung; satu-satunya himpunan yang sekaligus buka dan tertutup ialah <m>\emptyset</m> dan <m>X</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-03-solution">
+      <p>
+        Komplemen himpunan buka nontrivial berturut-turut adalah
+        <m>\{a,c,d\}</m>, <m>\{a,b,d\}</m>, <m>\{c,d\}</m>,
+        <m>\{a,d\}</m>, <m>\{d\}</m>, dan <m>\{a\}</m>. Tidak satu pun
+        tercantum dalam <m>\tau</m>.
+      </p>
+      <p>
+        Andaikan <m>X=U\cup V</m> merupakan pemisahan. Karena <m>U</m> dan
+        <m>V</m> saling lepas, <m>V=X\setminus U</m>; jadi <m>U</m> buka dan
+        tertutup serta nontrivial. Daftar di atas menunjukkan hal itu mustahil.
+        Maka <m>X</m> terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-04">
+    <title>Subhimpunan dalam Topologi Diskret</title>
+    <statement>
+      <p>
+        Tentukan keterhubungan <m>A=\{d,f\}</m> dalam ruang diskret
+        <m>X=\{a,b,c,d,e,f\}</m>, lalu generalisasikan untuk semua
+        subhimpunan ruang diskret.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-04-hint">
+      <p><em>Tahap 1.</em> Dalam topologi diskret, setiap singleton terbuka.</p>
+      <p><em>Tahap 2.</em> Pisahkan <m>A</m> menjadi dua singleton.</p>
+      <p><em>Tahap 3.</em> Untuk subhimpunan yang lebih besar, pisahkan satu titik dari semua titik sisanya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-04-answer">
+      <p><m>A</m> terputus. Dalam ruang diskret, tepat subhimpunan dengan paling banyak satu titik yang terhubung.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-04-solution">
+      <p>
+        Karena topologi diskret memuat semua subhimpunan, <m>\{d\}</m> dan
+        <m>\{f\}</m> buka, takkosong, saling lepas, dan gabungannya <m>A</m>.
+        Jadi <m>A</m> terputus.
+      </p>
+      <p>
+        Jika subhimpunan diskret <m>B</m> mempunyai sedikitnya dua titik,
+        pilih <m>b\in B</m>; pasangan <m>\{b\}</m> dan
+        <m>B\setminus\{b\}</m> memisahkan <m>B</m>. Sebaliknya, himpunan
+        kosong dan singleton tidak dapat ditulis sebagai gabungan dua
+        himpunan takkosong yang saling lepas. Jadi keduanya terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-05">
+    <title>Subhimpunan dalam Topologi Indiskret</title>
+    <statement>
+      <p>
+        Tentukan keterhubungan <m>A=\{a,c,d\}</m> dalam ruang indiskret
+        <m>X=\{a,b,c,d,e\}</m>, lalu generalisasikan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-05-hint">
+      <p><em>Tahap 1.</em> Iris dua himpunan buka <m>\emptyset</m> dan <m>X</m> dengan <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Tentukan topologi subruang pada <m>A</m>.</p>
+      <p><em>Tahap 3.</em> Tanyakan apakah dua himpunan buka relatif takkosong dapat saling lepas dan menutupi <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-05-answer">
+      <p><m>A</m> terhubung. Setiap subhimpunan ruang indiskret terhubung.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-05-solution">
+      <p>
+        Topologi subruang pada <m>A</m> adalah
+        <m>\{\emptyset,A\}</m>, sebab hanya itulah irisan <m>A</m> dengan
+        anggota topologi indiskret pada <m>X</m>. Tidak tersedia dua
+        himpunan buka relatif takkosong yang berbeda untuk membentuk pemisahan.
+      </p>
+      <p>
+        Argumen yang sama berlaku bagi setiap <m>B\subseteq X</m>:
+        topologi subruangnya adalah <m>\{\emptyset,B\}</m> jika <m>B</m>
+        takkosong. Untuk <m>B=\emptyset</m>, syarat adanya dua bagian
+        takkosong juga mustahil. Jadi semua subhimpunan terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-06">
+    <title>Bilangan Bulat dalam Topologi Komplemen Berhingga</title>
+    <statement>
+      <p>
+        Putuskan apakah <m>A=\Z</m> terhubung sebagai subruang dari
+        <m>\R</m> bertopologi komplemen berhingga, lalu klasifikasikan
+        subhimpunan terhubung secara umum.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-06-hint">
+      <p><em>Tahap 1.</em> Topologi yang terinduksi pada subhimpunan tak berhingga juga bertopologi komplemen berhingga.</p>
+      <p><em>Tahap 2.</em> Dua himpunan buka takkosong di ruang komplemen berhingga yang tak berhingga selalu beririsan.</p>
+      <p><em>Tahap 3.</em> Pada subhimpunan berhingga, tunjukkan bahwa setiap bagiannya terbuka relatif.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-06-answer">
+      <p>
+        <m>\Z</m> terhubung. Secara umum, semua subhimpunan tak berhingga,
+        singleton, dan himpunan kosong terhubung; subhimpunan berhingga dengan
+        sedikitnya dua titik terputus.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-06-solution">
+      <p>
+        Jika <m>U</m> dan <m>V</m> buka relatif takkosong dalam <m>\Z</m>,
+        komplemen keduanya di <m>\Z</m> berhingga. Maka
+        <m>\Z\setminus(U\cap V)=(\Z\setminus U)\cup(\Z\setminus V)</m>
+        berhingga, sehingga <m>U\cap V</m> tidak mungkin kosong. Jadi tidak
+        ada pemisahan dari <m>\Z</m>.
+      </p>
+      <p>
+        Bukti ini berlaku bagi setiap subhimpunan tak berhingga. Jika
+        <m>F</m> berhingga, untuk setiap <m>B\subseteq F</m> terdapat himpunan
+        buka <m>\R\setminus(F\setminus B)</m> yang irisannya dengan <m>F</m>
+        sama dengan <m>B</m>. Jadi topologi pada <m>F</m> diskret; klasifikasi
+        berhingga kemudian mengikuti hasil ruang diskret.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-07">
+    <title>Dua Interval yang Dipisahkan Celah</title>
+    <statement>
+      <p>
+        Tentukan keterhubungan
+        <m>X=[1,2]\cup(3,4)</m> dengan topologi subruang Euklides.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-07-hint">
+      <p><em>Tahap 1.</em> Pilih sebuah bilangan di dalam celah antara <m>2</m> dan <m>3</m>.</p>
+      <p><em>Tahap 2.</em> Iris <m>X</m> dengan dua sinar buka yang dipisahkan bilangan tersebut.</p>
+      <p><em>Tahap 3.</em> Verifikasi ketakosongan, ketaksalingberirisan, dan gabungannya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-07-answer">
+      <p><m>X</m> terputus; <m>[1,2]</m> dan <m>(3,4)</m> membentuk pemisahan relatif.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-07-solution">
+      <p>
+        Ambil <m>c=5/2</m>. Himpunan
+        <m>U=X\cap(-\infty,c)=[1,2]</m> dan
+        <m>V=X\cap(c,\infty)=(3,4)</m> terbuka dalam topologi subruang.
+        Keduanya takkosong dan saling lepas.
+      </p>
+      <p>
+        Setiap titik <m>X</m> berada tepat pada salah satu dari dua interval,
+        sehingga <m>X=U\cup V</m>. Maka <m>U,V</m> merupakan pemisahan dan
+        <m>X</m> tidak terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-08">
+    <title>Grafik Hiperbola dan Sumbu Mendatar</title>
+    <statement>
+      <p>
+        Misalkan
+        <m>X=\{(x,y)\in\R^2\mid y=1/x\text{ atau }y=0\}</m> dengan topologi
+        subruang Euklides. Tentukan apakah <m>X</m> terhubung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-08-hint">
+      <p><em>Tahap 1.</em> Pisahkan <m>X</m> menjadi sumbu <m>x</m> dan grafik <m>xy=1</m>.</p>
+      <p><em>Tahap 2.</em> Kedua bagian merupakan himpunan tertutup dalam <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Karena keduanya saling melengkapi di <m>X</m>, simpulkan bahwa keduanya juga buka relatif.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-08-answer">
+      <p><m>X</m> terputus; sumbu <m>x</m> dan grafik <m>y=1/x</m> membentuk pemisahan.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-08-solution">
+      <p>
+        Tuliskan <m>L=\{(x,0):x\in\R\}</m> dan
+        <m>H=\{(x,y):xy=1\}</m>. Keduanya takkosong, saling lepas, dan
+        <m>X=L\cup H</m>. Himpunan <m>L</m> tertutup di <m>\R^2</m> sebagai
+        prapeta <m>\{0\}</m> oleh fungsi kontinu <m>(x,y)\mapsto y</m>;
+        demikian pula <m>H</m> tertutup sebagai prapeta <m>\{1\}</m> oleh
+        <m>(x,y)\mapsto xy</m>.
+      </p>
+      <p>
+        Maka <m>L</m> dan <m>H</m> tertutup dalam <m>X</m>. Karena
+        <m>L=X\setminus H</m> dan <m>H=X\setminus L</m>, keduanya juga buka
+        relatif. Jadi <m>L,H</m> adalah pemisahan dari <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch18-guide-09">
+    <title>Himpunan Buka-Tertutup dalam Ruang Terhubung</title>
+    <statement>
+      <p>
+        Jika <m>X</m> terhubung dan <m>A\subseteq X</m> sekaligus buka dan
+        tertutup, tentukan kemungkinan bagi <m>A</m> dengan meninjau
+        <m>A</m> dan <m>X\setminus A</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-09-hint">
+      <p><em>Tahap 1.</em> Ketertutupan <m>A</m> membuat <m>X\setminus A</m> terbuka.</p>
+      <p><em>Tahap 2.</em> Kedua himpunan itu saling lepas dan gabungannya <m>X</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan keterhubungan untuk menentukan mana yang harus kosong.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-09-answer">
+      <p>Harus berlaku <m>A=\emptyset</m> atau <m>A=X</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-09-solution">
+      <p>
+        Karena <m>A</m> buka dan tertutup, baik <m>A</m> maupun
+        <m>X\setminus A</m> terbuka. Mereka saling lepas dan
+        <m>A\cup(X\setminus A)=X</m>. Jika keduanya takkosong, pasangan itu
+        menjadi pemisahan dari <m>X</m>, bertentangan dengan keterhubungan.
+      </p>
+      <p>
+        Jadi salah satunya kosong. Jika <m>A=\emptyset</m>, kita memperoleh
+        kemungkinan pertama; jika <m>X\setminus A=\emptyset</m>, maka
+        <m>A=X</m>. Tidak ada kemungkinan lain.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-10">
+    <title>Kebalikan Kriteria Buka-Tertutup</title>
+    <statement>
+      <p>
+        Andaikan satu-satunya subhimpunan <m>X</m> yang sekaligus buka dan
+        tertutup adalah <m>\emptyset</m> dan <m>X</m>. Buktikan bahwa
+        <m>X</m> terhubung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-10-hint">
+      <p><em>Tahap 1.</em> Andaikan sebaliknya bahwa <m>X=U\cup V</m> merupakan pemisahan.</p>
+      <p><em>Tahap 2.</em> Dari kesalinglepasan, tulis <m>U=X\setminus V</m>.</p>
+      <p><em>Tahap 3.</em> Tunjukkan bahwa <m>U</m> menjadi buka-tertutup nontrivial.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-10-answer">
+      <p>Ya. Setiap pemisahan akan menghasilkan himpunan buka-tertutup nontrivial, sehingga tidak mungkin ada.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-10-solution">
+      <p>
+        Andaikan <m>X</m> terputus. Maka ada himpunan buka takkosong
+        <m>U,V</m> yang saling lepas dan memenuhi <m>X=U\cup V</m>. Karena
+        gabungan meliputi <m>X</m> dan irisannya kosong,
+        <m>U=X\setminus V</m>.
+      </p>
+      <p>
+        Himpunan <m>V</m> terbuka, sehingga <m>U</m> tertutup; <m>U</m> juga
+        terbuka menurut asumsi pemisahan. Ketakosongan <m>U,V</m> memberi
+        <m>U\ne\emptyset</m> dan <m>U\ne X</m>. Ini bertentangan dengan
+        hipotesis. Jadi <m>X</m> terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-11">
+    <title>Karakterisasi Keterhubungan dengan Himpunan Buka-Tertutup</title>
+    <statement>
+      <p>
+        Rumuskan dan buktikan teorema yang mengarakterisasi keterhubungan
+        <m>(X,\tau)</m> melalui subhimpunan yang sekaligus buka dan tertutup.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-11-hint">
+      <p><em>Tahap 1.</em> Untuk arah maju, pasangkan himpunan buka-tertutup dengan komplemennya.</p>
+      <p><em>Tahap 2.</em> Untuk arah balik, mulai dari pemisahan hipotetis.</p>
+      <p><em>Tahap 3.</em> Dalam kedua arah, gunakan fakta bahwa dua bagian saling melengkapi.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-11-answer">
+      <p>
+        Ruang <m>X</m> terhubung jika dan hanya jika satu-satunya subhimpunan
+        yang sekaligus buka dan tertutup adalah <m>\emptyset</m> dan <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-11-solution">
+      <p>
+        Jika <m>X</m> terhubung dan <m>A</m> buka-tertutup, maka
+        <m>A</m> serta <m>X\setminus A</m> merupakan himpunan buka yang saling
+        lepas dan menutupi <m>X</m>. Keterhubungan memaksa salah satunya
+        kosong, jadi <m>A=\emptyset</m> atau <m>A=X</m>.
+      </p>
+      <p>
+        Sebaliknya, jika hanya <m>\emptyset</m> dan <m>X</m> yang
+        buka-tertutup tetapi <m>X</m> mempunyai pemisahan <m>U,V</m>, maka
+        <m>U=X\setminus V</m> sekaligus buka dan tertutup. Ketakosongan kedua
+        bagian membuat <m>U</m> nontrivial, suatu kontradiksi. Maka <m>X</m>
+        terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-12">
+    <title>Memulai Bukti Citra Kontinu</title>
+    <statement>
+      <p>
+        Misalkan <m>g:X\to Z=f(X)</m> kontinu dan surjektif, dengan <m>X</m>
+        terhubung. Untuk memulai bukti dengan kontradiksi bahwa <m>Z</m>
+        terhubung, nyatakan secara lengkap konsekuensi asumsi bahwa
+        <m>Z</m> terputus.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-12-hint">
+      <p><em>Tahap 1.</em> Buka definisi ruang terputus.</p>
+      <p><em>Tahap 2.</em> Namai kedua himpunan buka dengan <m>U</m> dan <m>V</m>.</p>
+      <p><em>Tahap 3.</em> Catat empat sifat: buka, takkosong, saling lepas, dan menutupi <m>Z</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-12-answer">
+      <p>
+        Ada himpunan buka takkosong <m>U,V\subseteq Z</m> dengan
+        <m>U\cap V=\emptyset</m> dan <m>U\cup V=Z</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-12-solution">
+      <p>
+        Asumsi bahwa <m>Z</m> tidak terhubung tepat berarti bahwa <m>Z</m>
+        mempunyai pemisahan. Jadi terdapat <m>U,V</m> yang terbuka dalam
+        topologi subruang pada <m>Z</m>, keduanya takkosong, dengan
+        <m>U\cap V=\emptyset</m> serta <m>U\cup V=Z</m>. Sifat-sifat inilah
+        yang akan ditarik kembali melalui <m>g</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-13">
+    <title>Prapeta Pemisahan Bersifat Terbuka</title>
+    <statement>
+      <p>
+        Dengan <m>R=g^{-1}(U)</m> dan <m>S=g^{-1}(V)</m>, jelaskan mengapa
+        <m>R</m> dan <m>S</m> terbuka dalam <m>X</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-13-hint">
+      <p><em>Tahap 1.</em> Ingat definisi kekontinuan melalui prapeta himpunan buka.</p>
+      <p><em>Tahap 2.</em> Gunakan bahwa <m>U</m> dan <m>V</m> terbuka dalam kodomain <m>Z</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan definisi itu secara terpisah kepada kedua himpunan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-13-answer">
+      <p>Kekontinuan <m>g</m> membuat prapeta himpunan buka terbuka, sehingga <m>R</m> dan <m>S</m> terbuka.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-13-solution">
+      <p>
+        Menurut definisi, <m>g:X\to Z</m> kontinu jika untuk setiap himpunan
+        buka <m>O\subseteq Z</m>, prapeta <m>g^{-1}(O)</m> terbuka dalam
+        <m>X</m>. Karena <m>U</m> dan <m>V</m> terbuka dalam <m>Z</m>, kita
+        langsung memperoleh <m>R=g^{-1}(U)</m> dan <m>S=g^{-1}(V)</m>
+        terbuka dalam <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-14">
+    <title>Prapeta Gabungan Menutupi Domain</title>
+    <statement>
+      <p>Buktikan bahwa <m>R\cup S=X</m> dari <m>U\cup V=Z</m> dan <m>Z=g(X)</m>.</p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-14-hint">
+      <p><em>Tahap 1.</em> Gunakan identitas <m>g^{-1}(U\cup V)=g^{-1}(U)\cup g^{-1}(V)</m>.</p>
+      <p><em>Tahap 2.</em> Ganti <m>U\cup V</m> dengan <m>Z</m>.</p>
+      <p><em>Tahap 3.</em> Karena kodomain <m>g</m> adalah <m>Z</m>, tentukan <m>g^{-1}(Z)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-14-answer">
+      <p><m>R\cup S=g^{-1}(U\cup V)=g^{-1}(Z)=X</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-14-solution">
+      <p>
+        Prapeta mempertahankan gabungan, sehingga
+        <me>R\cup S=g^{-1}(U)\cup g^{-1}(V)=g^{-1}(U\cup V).</me>
+        Karena <m>U\cup V=Z</m>, ruas kanan adalah <m>g^{-1}(Z)</m>. Setiap
+        <m>x\in X</m> dipetakan ke kodomain <m>Z</m>, jadi
+        <m>g^{-1}(Z)=X</m>. Maka <m>R\cup S=X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-15">
+    <title>Prapeta Kedua Bagian Tidak Kosong</title>
+    <statement>
+      <p>
+        Gunakan kesurjektifan <m>g:X\to Z</m> untuk membuktikan bahwa
+        <m>R=g^{-1}(U)</m> dan <m>S=g^{-1}(V)</m> takkosong.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-15-hint">
+      <p><em>Tahap 1.</em> Pilih <m>u\in U</m> dan <m>v\in V</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan surjektivitas untuk mencari prapeta masing-masing titik.</p>
+      <p><em>Tahap 3.</em> Tempatkan kedua prapeta itu dalam <m>R</m> dan <m>S</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-15-answer">
+      <p>Surjektivitas memberi <m>x_u\in R</m> dan <m>x_v\in S</m>, sehingga kedua prapeta takkosong.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-15-solution">
+      <p>
+        Karena <m>U,V</m> takkosong, pilih <m>u\in U</m> dan <m>v\in V</m>.
+        Kesurjektifan <m>g</m> menghasilkan <m>x_u,x_v\in X</m> dengan
+        <m>g(x_u)=u</m> dan <m>g(x_v)=v</m>. Maka
+        <m>x_u\in g^{-1}(U)=R</m> dan <m>x_v\in g^{-1}(V)=S</m>. Jadi
+        <m>R</m> serta <m>S</m> takkosong.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-16">
+    <title>Prapeta Kedua Bagian Saling Lepas</title>
+    <statement>
+      <p>Buktikan <m>R\cap S=\emptyset</m> dari <m>U\cap V=\emptyset</m>.</p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-16-hint">
+      <p><em>Tahap 1.</em> Gunakan identitas prapeta untuk irisan.</p>
+      <p><em>Tahap 2.</em> Ganti <m>U\cap V</m> dengan himpunan kosong.</p>
+      <p><em>Tahap 3.</em> Hitung prapeta himpunan kosong.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-16-answer">
+      <p><m>R\cap S=g^{-1}(U\cap V)=g^{-1}(\emptyset)=\emptyset</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-16-solution">
+      <p>
+        Prapeta mempertahankan irisan:
+        <me>R\cap S=g^{-1}(U)\cap g^{-1}(V)=g^{-1}(U\cap V).</me>
+        Pemisahan <m>U,V</m> memenuhi <m>U\cap V=\emptyset</m>, sedangkan
+        tidak ada titik yang dipetakan ke himpunan kosong. Karena itu
+        <m>R\cap S=g^{-1}(\emptyset)=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-17">
+    <title>Citra Kontinu Ruang Terhubung</title>
+    <statement>
+      <p>
+        Lengkapi bukti bahwa jika <m>f:X\to Y</m> kontinu dan <m>X</m>
+        terhubung, maka <m>f(X)</m> terhubung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-17-hint">
+      <p><em>Tahap 1.</em> Ganti kodomain dengan <m>Z=f(X)</m> agar pemetaan menjadi surjektif.</p>
+      <p><em>Tahap 2.</em> Tarik kembali pemisahan hipotetis <m>U,V</m> dari <m>Z</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan hasil empat langkah sebelumnya untuk memperoleh pemisahan domain.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-17-answer">
+      <p>
+        Pemisahan hipotetis dari <m>f(X)</m> akan menghasilkan pemisahan dari
+        <m>X</m> melalui prapeta, bertentangan dengan keterhubungan <m>X</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-17-solution">
+      <p>
+        Letakkan <m>Z=f(X)</m> dan pandang <m>g:X\to Z</m> dengan
+        <m>g(x)=f(x)</m>. Fungsi <m>g</m> kontinu dan surjektif. Andaikan
+        <m>Z=U\cup V</m> adalah pemisahan.
+      </p>
+      <p>
+        Prapeta <m>R=g^{-1}(U)</m> dan <m>S=g^{-1}(V)</m> terbuka karena
+        <m>g</m> kontinu; keduanya takkosong karena <m>g</m> surjektif;
+        <m>R\cup S=X</m> dan <m>R\cap S=\emptyset</m> menurut hukum prapeta.
+        Jadi <m>R,S</m> memisahkan <m>X</m>, suatu kontradiksi. Maka
+        <m>f(X)=Z</m> terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-18">
+    <title>Menyelesaikan Kriteria Pemisahan Subhimpunan</title>
+    <statement>
+      <p>
+        Misalkan <m>A\subseteq X</m> dan ada himpunan buka <m>U,V\subseteq X</m>
+        dengan <m>A\subseteq U\cup V</m>, <m>U\cap A\ne\emptyset</m>,
+        <m>V\cap A\ne\emptyset</m>, serta <m>U\cap V\cap A=\emptyset</m>.
+        Buktikan bahwa <m>A</m> terputus.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-18-hint">
+      <p><em>Tahap 1.</em> Definisikan <m>U'=U\cap A</m> dan <m>V'=V\cap A</m>.</p>
+      <p><em>Tahap 2.</em> Periksa keterbukaan relatif dan ketakosongan keduanya.</p>
+      <p><em>Tahap 3.</em> Gunakan dua syarat lainnya untuk menghitung gabungan dan irisan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-18-answer">
+      <p><m>U\cap A</m> dan <m>V\cap A</m> membentuk pemisahan dari <m>A</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-18-solution">
+      <p>
+        Karena <m>U,V</m> terbuka dalam <m>X</m>, himpunan
+        <m>U'=U\cap A</m> dan <m>V'=V\cap A</m> terbuka dalam subruang
+        <m>A</m>. Dua syarat irisan menjamin keduanya takkosong.
+      </p>
+      <p>
+        Selanjutnya,
+        <me>U'\cap V'=U\cap V\cap A=\emptyset.</me>
+        Karena <m>A\subseteq U\cup V</m>, setiap titik <m>A</m> berada dalam
+        <m>U'</m> atau <m>V'</m>, sehingga <m>U'\cup V'=A</m>. Jadi pasangan
+        itu merupakan pemisahan dan <m>A</m> terputus.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch18-guide-19">
+    <title>Mewariskan Syarat Pemisahan kepada Subhimpunan</title>
+    <statement>
+      <p>
+        Jika <m>U,V</m> memisahkan <m>A</m> dan <m>C\subseteq A</m>, buktikan
+        <m>C\subseteq U\cup V</m> serta <m>C\cap U\cap V=\emptyset</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-19-hint">
+      <p><em>Tahap 1.</em> Gunakan rantai inklusi <m>C\subseteq A\subseteq U\cup V</m>.</p>
+      <p><em>Tahap 2.</em> Tulis <m>C\cap U\cap V\subseteq A\cap U\cap V</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan syarat terakhir dalam definisi pemisahan <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-19-answer">
+      <p>Kedua kesimpulan mengikuti langsung dari <m>C\subseteq A</m> dan syarat pemisahan pada <m>A</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-19-solution">
+      <p>
+        Pemisahan <m>U,V</m> dari <m>A</m> memenuhi
+        <m>A\subseteq U\cup V</m> dan <m>A\cap U\cap V=\emptyset</m>. Karena
+        <m>C\subseteq A</m>, transitivitas inklusi memberi
+        <m>C\subseteq U\cup V</m>. Selain itu,
+        <m>C\cap U\cap V\subseteq A\cap U\cap V=\emptyset</m>, sehingga
+        <m>C\cap U\cap V=\emptyset</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-20">
+    <title>Subhimpunan Terhubung Memilih Satu Sisi</title>
+    <statement>
+      <p>
+        Dalam situasi sebelumnya, anggap <m>C</m> terhubung. Apa yang harus
+        berlaku bagi <m>U'=U\cap C</m> dan <m>V'=V\cap C</m>?
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-20-hint">
+      <p><em>Tahap 1.</em> Kedua irisan terbuka relatif dalam <m>C</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan hasil sebelumnya untuk menghitung gabungan dan irisannya.</p>
+      <p><em>Tahap 3.</em> Keterhubungan melarang keduanya takkosong sekaligus.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-20-answer">
+      <p>Salah satu dari <m>U'</m> dan <m>V'</m> harus kosong; yang lain sama dengan <m>C</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-20-solution">
+      <p>
+        Himpunan <m>U'</m> dan <m>V'</m> terbuka dalam <m>C</m>. Karena
+        <m>C\subseteq U\cup V</m>, berlaku <m>U'\cup V'=C</m>; karena
+        <m>C\cap U\cap V=\emptyset</m>, berlaku <m>U'\cap V'=\emptyset</m>.
+      </p>
+      <p>
+        Jika keduanya takkosong, mereka memisahkan <m>C</m>, bertentangan
+        dengan keterhubungan. Jadi <m>U'=\emptyset</m> atau
+        <m>V'=\emptyset</m>. Karena gabungannya <m>C</m>, bagian yang tidak
+        kosong harus sama dengan <m>C</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-21">
+    <title>Lema Subhimpunan Terhubung dan Pemisahan</title>
+    <statement>
+      <p>
+        Buktikan: jika <m>U,V</m> memisahkan <m>A\subseteq X</m> dan
+        <m>C\subseteq A</m> terhubung, maka <m>C\subseteq U</m> atau
+        <m>C\subseteq V</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-21-hint">
+      <p><em>Tahap 1.</em> Bentuk <m>U\cap C</m> dan <m>V\cap C</m>.</p>
+      <p><em>Tahap 2.</em> Tunjukkan bahwa keduanya tidak dapat sama-sama takkosong.</p>
+      <p><em>Tahap 3.</em> Terjemahkan kekosongan salah satu irisan menjadi inklusi <m>C</m> pada sisi lainnya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-21-answer">
+      <p>Keterhubungan <m>C</m> memaksa salah satu irisan <m>C\cap U</m> atau <m>C\cap V</m> kosong, sehingga seluruh <m>C</m> berada pada sisi lainnya.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-21-solution">
+      <p>
+        Karena <m>C\subseteq A\subseteq U\cup V</m>, kita mempunyai
+        <m>C=(C\cap U)\cup(C\cap V)</m>. Kedua bagian terbuka relatif dalam
+        <m>C</m>, dan
+        <m>(C\cap U)\cap(C\cap V)=C\cap U\cap V=\emptyset</m>.
+      </p>
+      <p>
+        Jika kedua bagian takkosong, mereka memisahkan <m>C</m>. Jadi salah
+        satunya kosong. Jika <m>C\cap U=\emptyset</m>, persamaan gabungan
+        memberi <m>C=C\cap V\subseteq V</m>; kasus lainnya memberi
+        <m>C\subseteq U</m>. Lema terbukti.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-22">
+    <title>Singleton pada Garis Real</title>
+    <statement>
+      <p>Tentukan apakah <m>A=\{a\}\subseteq\R</m> terhubung dan berikan alasan dari definisi.</p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-22-hint">
+      <p><em>Tahap 1.</em> Andaikan ada dua subhimpunan takkosong dari <m>A</m>.</p>
+      <p><em>Tahap 2.</em> Setiap subhimpunan takkosong dari singleton harus memuat <m>a</m>.</p>
+      <p><em>Tahap 3.</em> Periksa apakah dua subhimpunan tersebut dapat saling lepas.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-22-answer">
+      <p>Ya. Setiap singleton terhubung dalam ruang topologi apa pun.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-22-solution">
+      <p>
+        Satu-satunya subhimpunan dari <m>A=\{a\}</m> adalah
+        <m>\emptyset</m> dan <m>A</m>. Karena itu tidak mungkin ada dua
+        subhimpunan buka relatif yang keduanya takkosong dan saling lepas.
+        Jadi <m>A</m> tidak mempunyai pemisahan dan terhubung. Argumen tidak
+        menggunakan sifat khusus <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-23">
+    <title>Subhimpunan Real yang Bukan Interval</title>
+    <statement>
+      <p>
+        Misalkan <m>A\subseteq\R</m> memuat <m>a&lt;c&lt;b</m> dengan
+        <m>a,b\in A</m> tetapi <m>c\notin A</m>. Temukan pemisahan dari
+        <m>A</m> dan simpulkan keterhubungannya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-23-hint">
+      <p><em>Tahap 1.</em> Gunakan dua sinar buka yang berujung di <m>c</m>.</p>
+      <p><em>Tahap 2.</em> Iris kedua sinar dengan <m>A</m>; titik <m>a</m> dan <m>b</m> menjamin ketakosongan.</p>
+      <p><em>Tahap 3.</em> Karena <m>c\notin A</m>, periksa bahwa kedua irisan menutupi <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-23-answer">
+      <p>
+        Himpunan <m>A\cap(-\infty,c)</m> dan <m>A\cap(c,\infty)</m>
+        memisahkan <m>A</m>; jadi <m>A</m> terputus.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-23-solution">
+      <p>
+        Definisikan <m>U=(-\infty,c)</m> dan <m>V=(c,\infty)</m>. Kedua
+        himpunan terbuka dan saling lepas. Irisan <m>A\cap U</m> memuat
+        <m>a</m>, sedangkan <m>A\cap V</m> memuat <m>b</m>, jadi keduanya
+        takkosong dan terbuka relatif dalam <m>A</m>.
+      </p>
+      <p>
+        Setiap bilangan real selain <m>c</m> berada dalam <m>U\cup V</m>.
+        Karena <m>c\notin A</m>, berlaku
+        <m>A=(A\cap U)\cup(A\cap V)</m>. Maka kedua irisan tersebut adalah
+        pemisahan dari <m>A</m>, sehingga <m>A</m> terputus.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-24">
+    <title>Klasifikasi Subhimpunan Terhubung dari Garis Real</title>
+    <statement>
+      <p>Deskripsikan secara tepat semua subhimpunan terhubung dari <m>(\R,d_E)</m>.</p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-24-hint">
+      <p><em>Tahap 1.</em> Hasil sebelumnya menunjukkan bahwa himpunan terhubung harus memuat setiap titik di antara dua anggotanya.</p>
+      <p><em>Tahap 2.</em> Sifat tersebut adalah sifat pendefinisi interval.</p>
+      <p><em>Tahap 3.</em> Sertakan interval terbatas, tak terbatas, singleton, dan himpunan kosong.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-24-answer">
+      <p>Subhimpunan terhubung dari <m>\R</m> tepat interval-interval, termasuk singleton dan himpunan kosong.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-24-solution">
+      <p>
+        Jika <m>A</m> terhubung dan <m>a,b\in A</m> dengan <m>a&lt;b</m>,
+        maka setiap <m>c</m> dengan <m>a&lt;c&lt;b</m> harus berada dalam
+        <m>A</m>; jika tidak, dua sinar pada <m>c</m> memisahkan <m>A</m>.
+        Jadi <m>A</m> mempunyai sifat interval.
+      </p>
+      <p>
+        Sebaliknya, andaikan interval <m>I</m> mempunyai pemisahan <m>U,V</m>.
+        Pilih <m>u\in U</m> dan <m>v\in V</m>, dengan <m>u&lt;v</m>, dan
+        letakkan <m>s=\sup(U\cap[u,v])</m>. Sifat interval memberi
+        <m>[u,v]\subseteq I</m>. Jika <m>s\in U</m>, keterbukaan relatif
+        <m>U</m> memberi titik <m>U\cap[u,v]</m> yang lebih besar daripada
+        <m>s</m> (dan <m>s&lt;v</m> karena <m>v\in V</m>), bertentangan dengan
+        sifat batas atas. Jika <m>s\in V</m>, keterbukaan relatif <m>V</m>
+        memberi lingkungan kiri <m>s</m> yang berada dalam <m>V</m>, sedangkan
+        sifat supremum memberi titik <m>U\cap[u,v]</m> di lingkungan itu,
+        juga kontradiksi. Karena <m>s\in U\cup V=I</m>, kedua kemungkinan
+        sudah habis. Jadi setiap interval terhubung. Singleton dan himpunan
+        kosong memenuhi definisi secara langsung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-25">
+    <title>Setiap Titik Berada dalam Himpunan Terhubung</title>
+    <statement>
+      <p>Buktikan bahwa untuk setiap <m>x\in X</m>, singleton <m>\{x\}</m> terhubung.</p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-25-hint">
+      <p><em>Tahap 1.</em> Daftar semua subhimpunan singleton.</p>
+      <p><em>Tahap 2.</em> Pemisahan memerlukan dua bagian takkosong.</p>
+      <p><em>Tahap 3.</em> Dua bagian takkosong dari singleton tidak dapat saling lepas.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-25-answer">
+      <p><m>\{x\}</m> terhubung karena tidak mempunyai pemisahan.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-25-solution">
+      <p>
+        Satu-satunya subhimpunan <m>\{x\}</m> adalah <m>\emptyset</m> dan
+        <m>\{x\}</m>. Setiap subhimpunan takkosongnya sama dengan seluruh
+        singleton. Karena itu dua subhimpunan takkosong selalu beririsan di
+        <m>x</m> dan tidak mungkin membentuk pemisahan. Jadi singleton
+        terhubung, apa pun topologi pada <m>X</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-26">
+    <title>Gabungan Himpunan Terhubung dengan Irisan Bersama</title>
+    <statement>
+      <p>
+        Misalkan setiap <m>A_\alpha\subseteq X</m> terhubung dan
+        <m>\bigcap_{\alpha\in I}A_\alpha\ne\emptyset</m>. Buktikan bahwa
+        <m>A=\bigcup_{\alpha\in I}A_\alpha</m> terhubung.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-26-hint">
+      <p><em>Tahap 1.</em> Pilih <m>p</m> dalam irisan semua <m>A_\alpha</m>.</p>
+      <p><em>Tahap 2.</em> Andaikan <m>U,V</m> memisahkan <m>A</m> dan letakkan <m>p</m> pada salah satu sisi.</p>
+      <p><em>Tahap 3.</em> Setiap <m>A_\alpha</m> terhubung dan memuat <m>p</m>, sehingga seluruhnya harus memilih sisi yang sama.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-26-answer">
+      <p>Semua <m>A_\alpha</m> harus berada pada sisi pemisahan yang memuat titik irisan bersama; sisi lainnya lalu kosong.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-26-solution">
+      <p>
+        Pilih <m>p\in\bigcap_{\alpha\in I}A_\alpha</m>. Andaikan
+        <m>U,V</m> memisahkan <m>A</m>, dan tanpa mengurangi keumuman
+        <m>p\in U</m>. Untuk setiap <m>\alpha</m>, himpunan
+        <m>A_\alpha</m> terhubung dan termuat dalam <m>A</m>. Lema pemisahan
+        menyatakan <m>A_\alpha\subseteq U</m> atau
+        <m>A_\alpha\subseteq V</m>.
+      </p>
+      <p>
+        Pilihan kedua mustahil karena <m>p\in A_\alpha\cap U</m> dan
+        <m>U\cap V\cap A=\emptyset</m>. Jadi semua
+        <m>A_\alpha\subseteq U</m>, sehingga <m>A\subseteq U</m> dan
+        <m>A\cap V=\emptyset</m>. Ini bertentangan dengan ketakosongan sisi
+        <m>V</m> dari pemisahan. Maka <m>A</m> terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-27">
+    <title>Refleksivitas Relasi Komponen</title>
+    <statement>
+      <p>
+        Pada <m>X</m>, definisikan <m>x\sim y</m> jika keduanya termuat dalam
+        suatu subhimpunan terhubung yang sama. Buktikan bahwa <m>\sim</m>
+        refleksif.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-27-hint">
+      <p><em>Tahap 1.</em> Ambil sebarang <m>x\in X</m>.</p>
+      <p><em>Tahap 2.</em> Gunakan subhimpunan terhubung terkecil yang memuat <m>x</m>.</p>
+      <p><em>Tahap 3.</em> Terapkan definisi <m>\sim</m> kepada pasangan <m>(x,x)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-27-answer">
+      <p>Ya. Singleton <m>\{x\}</m> terhubung dan memuat <m>x</m> bersama dirinya sendiri, jadi <m>x\sim x</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-27-solution">
+      <p>
+        Untuk setiap <m>x\in X</m>, singleton <m>\{x\}</m> terhubung. Kedua
+        unsur dalam pasangan <m>(x,x)</m> berada dalam singleton yang sama.
+        Menurut definisi relasi, <m>x\sim x</m>. Karena <m>x</m> sebarang,
+        <m>\sim</m> refleksif.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-28">
+    <title>Simetri Relasi Komponen</title>
+    <statement>
+      <p>Buktikan bahwa relasi <m>\sim</m> yang didefinisikan melalui subhimpunan terhubung bersama bersifat simetris.</p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-28-hint">
+      <p><em>Tahap 1.</em> Andaikan <m>x\sim y</m>.</p>
+      <p><em>Tahap 2.</em> Pilih satu subhimpunan terhubung yang memuat keduanya.</p>
+      <p><em>Tahap 3.</em> Urutan menyebut <m>x</m> dan <m>y</m> tidak mengubah keanggotaan dalam himpunan itu.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-28-answer">
+      <p>Ya. Himpunan terhubung yang memuat <m>x</m> dan <m>y</m> juga memuat <m>y</m> dan <m>x</m>, jadi <m>y\sim x</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-28-solution">
+      <p>
+        Jika <m>x\sim y</m>, ada subhimpunan terhubung <m>C\subseteq X</m>
+        dengan <m>x,y\in C</m>. Pernyataan <m>x,y\in C</m> setara dengan
+        <m>y,x\in C</m>. Himpunan yang sama menyaksikan <m>y\sim x</m>.
+        Maka relasi tersebut simetris.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-29">
+    <title>Transitivitas Relasi Komponen</title>
+    <statement>
+      <p>
+        Jika <m>x\sim y</m> dan <m>y\sim z</m>, buktikan <m>x\sim z</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-29-hint">
+      <p><em>Tahap 1.</em> Pilih himpunan terhubung <m>C</m> yang memuat <m>x,y</m> dan <m>D</m> yang memuat <m>y,z</m>.</p>
+      <p><em>Tahap 2.</em> Perhatikan bahwa <m>C\cap D</m> memuat <m>y</m>.</p>
+      <p><em>Tahap 3.</em> Gunakan teorema gabungan beririsan untuk <m>C\cup D</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-29-answer">
+      <p><m>C\cup D</m> terhubung karena <m>C\cap D\ne\emptyset</m>, dan gabungan itu memuat <m>x,z</m>; jadi <m>x\sim z</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-29-solution">
+      <p>
+        Dari <m>x\sim y</m>, pilih <m>C</m> terhubung dengan
+        <m>x,y\in C</m>. Dari <m>y\sim z</m>, pilih <m>D</m> terhubung dengan
+        <m>y,z\in D</m>. Titik <m>y</m> berada dalam <m>C\cap D</m>, sehingga
+        irisannya takkosong.
+      </p>
+      <p>
+        Gabungan dua himpunan terhubung dengan irisan takkosong bersifat
+        terhubung. Maka <m>C\cup D</m> terhubung dan memuat <m>x</m> serta
+        <m>z</m>. Menurut definisi, <m>x\sim z</m>; jadi relasi transitif.
+      </p>
+    </solution>
+  </exercise>
+  <exercise xml:id="o003-c90-ch18-guide-30">
+    <title>Titik Pemutus pada Interval Buka</title>
+    <statement>
+      <p>
+        Verifikasi bahwa <m>1</m> merupakan titik pemutus dari <m>(0,2)</m>
+        dan generalisasikan kepada setiap titik interval tersebut.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-30-hint">
+      <p><em>Tahap 1.</em> Hapus <m>1</m> dan tulis ruang sisanya sebagai dua interval.</p>
+      <p><em>Tahap 2.</em> Kedua interval itu buka relatif, takkosong, dan saling lepas.</p>
+      <p><em>Tahap 3.</em> Ganti <m>1</m> dengan titik sebarang <m>c\in(0,2)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-30-answer">
+      <p>Setiap <m>c\in(0,2)</m> adalah titik pemutus karena penghapusannya menghasilkan <m>(0,c)\cup(c,2)</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-30-solution">
+      <p>
+        Untuk <m>c\in(0,2)</m>, berlaku
+        <me>(0,2)\setminus\{c\}=(0,c)\cup(c,2).</me>
+        Kedua interval di ruas kanan takkosong, saling lepas, dan terbuka
+        relatif dalam ruang yang tersisa. Karena gabungannya seluruh ruang
+        tersisa, keduanya membentuk pemisahan.
+      </p>
+      <p>
+        Jadi penghapusan setiap <m>c</m> memutus <m>(0,2)</m>. Khususnya,
+        untuk <m>c=1</m> diperoleh bagian <m>(0,1)</m> dan <m>(1,2)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-31">
+    <title>Lingkaran sebagai Himpunan Pemutus Cakram</title>
+    <statement>
+      <p>
+        Untuk cakram <m>D=\{(x,y):x^2+y^2\leq4\}</m> dan lingkaran
+        <m>S=\{(x,y):x^2+y^2=1\}</m>, jelaskan mengapa <m>D</m> tidak
+        mempunyai titik pemutus tetapi <m>S</m> merupakan himpunan pemutus.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-31-hint">
+      <p><em>Tahap 1.</em> Setelah satu titik cakram dihapus, lintasan dapat dibelokkan sedikit untuk menghindari titik itu.</p>
+      <p><em>Tahap 2.</em> Setelah <m>S</m> dihapus, bandingkan titik dengan jari-jari kurang dari <m>1</m> dan lebih dari <m>1</m>.</p>
+      <p><em>Tahap 3.</em> Fungsi jari-jari kontinu tidak dapat melintasi nilai <m>1</m> tanpa menyentuh <m>S</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-31-answer">
+      <p>
+        Cakram dikurangi satu titik tetap terhubung melalui lintasan. Sebaliknya,
+        <m>D\setminus S</m> terpisah menjadi cakram buka berjari-jari <m>1</m>
+        dan anulus dengan jari-jari antara <m>1</m> dan <m>2</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-31-solution">
+      <p>
+        Untuk dua titik dalam <m>D\setminus\{p\}</m>, ruas garis lurus di
+        antara keduanya berada dalam cakram cembung. Jika ruas itu melalui
+        <m>p</m>, pilih titik perantara kecil di dalam <m>D</m> yang tidak
+        segaris dengan keduanya dan <m>p</m>; dua ruas melalui titik perantara
+        menghindari <m>p</m>. Jadi <m>D\setminus\{p\}</m> terhubung melalui
+        lintasan untuk setiap <m>p\in D</m>.
+      </p>
+      <p>
+        Sementara itu,
+        <me>D\setminus S=\{x^2+y^2&lt;1\}\ \cup\ \{1&lt;x^2+y^2\leq4\}.</me>
+        Kedua bagian takkosong, saling lepas, dan buka relatif dalam
+        <m>D\setminus S</m>. Fungsi kontinu <m>(x,y)\mapsto x^2+y^2</m>
+        memisahkan keduanya di nilai <m>1</m>. Maka <m>S</m> adalah himpunan
+        pemutus, walaupun tidak ada singleton yang memutus <m>D</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-32">
+    <title>Lingkaran Bukan Interval Tertutup</title>
+    <statement>
+      <p>
+        Gunakan titik pemutus untuk menunjukkan bahwa lingkaran satuan
+        <m>S^1</m> tidak homeomorfik dengan <m>[0,1]</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-32-hint">
+      <p><em>Tahap 1.</em> Hapus titik interior, misalnya <m>1/2</m>, dari interval.</p>
+      <p><em>Tahap 2.</em> Hapus satu titik sebarang dari lingkaran; ruang sisanya dapat dibuka menjadi satu busur.</p>
+      <p><em>Tahap 3.</em> Homeomorfisme mempertahankan keterhubungan setelah titik yang bersesuaian dihapus.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-32-answer">
+      <p>
+        Titik <m>1/2</m> memutus <m>[0,1]</m>, sedangkan tidak ada titik yang
+        memutus <m>S^1</m>. Karena sifat ini invarian terhadap homeomorfisme,
+        kedua ruang tidak homeomorfik.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-32-solution">
+      <p>
+        Penghapusan <m>1/2</m> memberi
+        <m>[0,1/2)\cup(1/2,1]</m>, dua bagian buka relatif takkosong yang
+        saling lepas. Jadi <m>1/2</m> adalah titik pemutus interval.
+      </p>
+      <p>
+        Sebaliknya, lingkaran dikurangi satu titik homeomorfik dengan interval
+        buka, misalnya melalui parametrisasi sudut setelah memilih titik
+        yang dihapus sebagai tempat pemotongan. Maka ruang sisanya terhubung.
+        Jika ada homeomorfisme <m>h:[0,1]\to S^1</m>, pembatasannya akan
+        memberi homeomorfisme antara ruang setelah <m>1/2</m> dan
+        <m>h(1/2)</m> dihapus, yang mustahil karena satu terputus dan satu
+        terhubung.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-33">
+    <title>Lingkaran dengan Diameter Tambahan</title>
+    <statement>
+      <p>
+        Misalkan <m>A=\{(x,y):x^2+y^2=1\}</m> dan
+        <m>B=\{(x,0):-1\leq x\leq1\}</m>. Tentukan apakah <m>A\cup B</m>
+        homeomorfik dengan <m>A</m> dan berikan invarian pemutus yang meyakinkan.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-33-hint">
+      <p><em>Tahap 1.</em> Hapus dua titik <m>(-1,0)</m> dan <m>(1,0)</m> dari <m>A\cup B</m>.</p>
+      <p><em>Tahap 2.</em> Hitung komponen yang tersisa: dua busur lingkaran dan bagian dalam diameter.</p>
+      <p><em>Tahap 3.</em> Bandingkan dengan banyaknya komponen lingkaran setelah dua titik berbeda dihapus.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-33-answer">
+      <p>
+        Tidak. Menghapus kedua ujung diameter dari <m>A\cup B</m> menghasilkan
+        tiga komponen, sedangkan menghapus dua titik berbeda dari lingkaran
+        selalu menghasilkan dua komponen.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-33-solution">
+      <p>
+        Dalam <m>A\cup B</m>, hapus <m>p=(-1,0)</m> dan <m>q=(1,0)</m>.
+        Ruang tersisa terbagi menjadi busur atas, busur bawah, dan ruas terbuka
+        <m>\{(x,0):-1&lt;x&lt;1\}</m>. Ketiga bagian itu terhubung dan saling
+        terpisah, sehingga terdapat tiga komponen.
+      </p>
+      <p>
+        Pada lingkaran <m>A</m>, dua titik berbeda membagi lingkaran menjadi
+        tepat dua busur terbuka, jadi ruang tersisa mempunyai dua komponen.
+        Homeomorfisme hipotetis akan membawa pasangan <m>p,q</m> ke dua titik
+        berbeda pada <m>A</m> dan mempertahankan banyaknya komponen ruang
+        tersisa. Karena <m>3\ne2</m>, homeomorfisme itu tidak ada.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-34">
+    <title>Empat Kelas Homeomorfisme Enam Ruang</title>
+    <statement>
+      <p>
+        Kelompokkan <m>S_1=\R</m>, <m>S_2=(0,1)</m>, <m>S_3=[-1,1]</m>,
+        ruas garis <m>S_4</m> dari <m>(0,0)</m> ke <m>(2,2)</m>, serta bentuk
+        huruf <m>S_5=X</m> dan <m>S_6=Y</m> menurut kelas homeomorfismenya.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-34-hint">
+      <p><em>Tahap 1.</em> Bangun homeomorfisme antara garis dan interval buka, serta antara dua ruas tertutup.</p>
+      <p><em>Tahap 2.</em> Bandingkan apakah ada titik bukan pemutus dan berapa komponen muncul setelah titik cabang dihapus.</p>
+      <p><em>Tahap 3.</em> Pusat huruf <m>X</m> memberi empat cabang; simpul huruf <m>Y</m> memberi tiga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-34-answer">
+      <p>
+        Kelas-kelasnya adalah <m>\{S_1,S_2\}</m>, <m>\{S_3,S_4\}</m>,
+        <m>\{S_5\}</m>, dan <m>\{S_6\}</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-34-solution">
+      <p>
+        Fungsi monoton seperti <m>x\mapsto \tfrac12+\tfrac1\pi\arctan x</m>
+        memberi homeomorfisme <m>\R\cong(0,1)</m>. Parametrisasi linear
+        <m>t\mapsto(t+1,t+1)</m> memberi
+        <m>[-1,1]\cong S_4</m>. Jadi dua pasangan yang dinyatakan memang
+        membentuk kelas.
+      </p>
+      <p>
+        Garis dan interval buka mempunyai sifat bahwa setiap titik adalah
+        titik pemutus. Ruas tertutup mempunyai dua titik ujung yang bukan
+        titik pemutus, sehingga kedua kelas pertama berbeda. Pada <m>X</m>,
+        penghapusan titik pusat menghasilkan empat komponen; pada <m>Y</m>,
+        penghapusan simpul cabang menghasilkan tiga. Tidak ada ruang lain
+        dalam daftar yang mempunyai titik dengan empat atau tiga cabang.
+        Maka <m>S_5</m> dan <m>S_6</m> masing-masing membentuk kelas tersendiri.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-35">
+    <title>Kasus Dua Titik Domain yang Sama</title>
+    <statement>
+      <p>
+        Dalam bukti Teorema Nilai Antara untuk <m>a,b\in A</m>, jelaskan
+        mengapa cukup menangani kasus <m>a\ne b</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-35-hint">
+      <p><em>Tahap 1.</em> Jika <m>a=b</m>, bandingkan <m>f(a)</m> dan <m>f(b)</m>.</p>
+      <p><em>Tahap 2.</em> Tentukan semua bilangan yang berada di antara dua nilai yang sama.</p>
+      <p><em>Tahap 3.</em> Pilih langsung titik domain yang menghasilkan nilai tersebut.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-35-answer">
+      <p>Jika <m>a=b</m>, maka nilai antara yang mungkin hanya <m>y=f(a)</m>; pilih <m>x=a</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-35-solution">
+      <p>
+        Bila <m>a=b</m>, tentu <m>f(a)=f(b)</m>. Satu-satunya <m>y</m> yang
+        berada di antara dua bilangan yang sama adalah bilangan itu sendiri,
+        yakni <m>y=f(a)</m>. Titik <m>x=a\in A</m> memenuhi
+        <m>f(x)=y</m>. Jadi kasus <m>a=b</m> sudah selesai dan pembuktian
+        selanjutnya boleh mengasumsikan <m>a\ne b</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-36">
+    <title>Nilai Antara pada Salah Satu Ujung</title>
+    <statement>
+      <p>Dalam Teorema Nilai Antara, selesaikan kasus <m>y=f(a)</m> atau <m>y=f(b)</m>.</p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-36-hint">
+      <p><em>Tahap 1.</em> Jika <m>y=f(a)</m>, coba titik <m>x=a</m>.</p>
+      <p><em>Tahap 2.</em> Jika <m>y=f(b)</m>, coba titik <m>x=b</m>.</p>
+      <p><em>Tahap 3.</em> Pastikan kedua titik memang berada dalam <m>A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-36-answer">
+      <p>Pilih <m>x=a</m> pada kasus pertama dan <m>x=b</m> pada kasus kedua.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-36-solution">
+      <p>
+        Hipotesis memberi <m>a,b\in A</m>. Jika <m>y=f(a)</m>, titik
+        <m>x=a</m> memenuhi <m>f(x)=y</m>. Jika <m>y=f(b)</m>, titik
+        <m>x=b</m> memenuhi persamaan yang sama. Karena itu hanya kasus
+        <m>y</m> yang terletak ketat di antara dua nilai ujung yang masih perlu
+        dibuktikan.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-37">
+    <title>Citra Terhubung di Garis Real adalah Interval</title>
+    <statement>
+      <p>
+        Jika <m>A</m> terhubung dan <m>f:A\to\R</m> kontinu, jelaskan mengapa
+        <m>f(A)</m> merupakan interval, khususnya ketika
+        <m>f(a)&lt;f(b)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-37-hint">
+      <p><em>Tahap 1.</em> Gunakan bahwa citra kontinu himpunan terhubung tetap terhubung.</p>
+      <p><em>Tahap 2.</em> Klasifikasikan subhimpunan terhubung dari <m>\R</m>.</p>
+      <p><em>Tahap 3.</em> Catat bahwa <m>f(a),f(b)\in f(A)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-37-answer">
+      <p><m>f(A)</m> terhubung sebagai citra kontinu <m>A</m>, dan setiap subhimpunan terhubung dari <m>\R</m> adalah interval.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-37-solution">
+      <p>
+        Kekontinuan <m>f</m> dan keterhubungan <m>A</m> menyiratkan bahwa
+        <m>f(A)</m> terhubung. Klasifikasi pada garis real menyatakan bahwa
+        subhimpunan terhubung dari <m>\R</m> tepat interval-interval. Maka
+        <m>f(A)</m> adalah interval. Karena <m>a,b\in A</m>, kedua nilai
+        <m>f(a)</m> dan <m>f(b)</m> berada dalam interval tersebut.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-38">
+    <title>Menutup Bukti Teorema Nilai Antara</title>
+    <statement>
+      <p>
+        Jelaskan bagaimana sifat interval dari <m>f(A)</m> menjamin adanya
+        <m>x\in A</m> dengan <m>f(x)=y</m> untuk setiap <m>y</m> di antara
+        <m>f(a)</m> dan <m>f(b)</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-38-hint">
+      <p><em>Tahap 1.</em> Interval memuat setiap bilangan di antara dua anggotanya.</p>
+      <p><em>Tahap 2.</em> Gunakan bahwa <m>f(a),f(b)\in f(A)</m>.</p>
+      <p><em>Tahap 3.</em> Uraikan arti keanggotaan <m>y\in f(A)</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-38-answer">
+      <p>Karena <m>y\in f(A)</m>, menurut definisi citra ada <m>x\in A</m> dengan <m>f(x)=y</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-38-solution">
+      <p>
+        Himpunan <m>f(A)</m> adalah interval yang memuat <m>f(a)</m> dan
+        <m>f(b)</m>. Definisi interval memaksa setiap bilangan <m>y</m> di
+        antara kedua nilai itu juga menjadi anggota <m>f(A)</m>. Pernyataan
+        <m>y\in f(A)</m> berarti tepat bahwa terdapat <m>x\in A</m> dengan
+        <m>f(x)=y</m>. Ini menyelesaikan seluruh kasus Teorema Nilai Antara.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-39">
+    <title>Reduksi Kasus Ujung pada Teorema Titik Tetap</title>
+    <statement>
+      <p>
+        Untuk fungsi kontinu <m>f:[a,b]\to[a,b]</m>, jelaskan mengapa dalam
+        pembuktian titik tetap boleh diasumsikan
+        <m>a&lt;f(a)</m> dan <m>f(b)&lt;b</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-39-hint">
+      <p><em>Tahap 1.</em> Jika <m>f(a)=a</m> atau <m>f(b)=b</m>, titik tetap sudah ditemukan.</p>
+      <p><em>Tahap 2.</em> Karena citra berada dalam <m>[a,b]</m>, berlaku <m>f(a)\geq a</m> dan <m>f(b)\leq b</m>.</p>
+      <p><em>Tahap 3.</em> Gabungkan ketaksamaan dengan pengecualian kasus sama.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-39-answer">
+      <p>Kasus kesamaan memberi titik tetap di ujung; jika tidak, batas kodomain memperketat <m>f(a)\geq a</m> dan <m>f(b)\leq b</m> menjadi ketaksamaan ketat yang diminta.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-39-solution">
+      <p>
+        Jika <m>f(a)=a</m>, ambil <m>c=a</m>; jika <m>f(b)=b</m>, ambil
+        <m>c=b</m>. Jadi anggap kedua kesamaan gagal. Karena
+        <m>f(a),f(b)\in[a,b]</m>, kita mengetahui
+        <m>a\leq f(a)</m> dan <m>f(b)\leq b</m>. Setelah kasus kesamaan
+        disingkirkan, diperoleh <m>a&lt;f(a)</m> dan <m>f(b)&lt;b</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-40">
+    <title>Kekontinuan Fungsi Selisih</title>
+    <statement>
+      <p>
+        Jika <m>g(x)=x-f(x)</m> pada <m>[a,b]</m> dan <m>f</m> kontinu,
+        buktikan bahwa <m>g</m> kontinu.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-40-hint">
+      <p><em>Tahap 1.</em> Fungsi identitas <m>i(x)=x</m> kontinu.</p>
+      <p><em>Tahap 2.</em> Fungsi <m>-f</m> kontinu sebagai kelipatan skalar fungsi kontinu.</p>
+      <p><em>Tahap 3.</em> Jumlah dua fungsi kontinu bernilai real kontinu.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-40-answer">
+      <p><m>g=i-f</m> adalah selisih dua fungsi kontinu bernilai real, sehingga kontinu.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-40-solution">
+      <p>
+        Fungsi identitas <m>i:[a,b]\to\R</m>, <m>i(x)=x</m>, kontinu.
+        Fungsi <m>f</m> kontinu menurut hipotesis, sehingga
+        <m>-f</m> kontinu. Operasi penjumlahan di <m>\R</m> kontinu, maka
+        <m>g=i+(-f)</m> kontinu. Secara titik demi titik, rumus ini sama
+        dengan <m>g(x)=x-f(x)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-41">
+    <title>Nol Fungsi Selisih Memberi Titik Tetap</title>
+    <statement>
+      <p>
+        Dengan <m>g(x)=x-f(x)</m>, tentukan tanda <m>g(a)</m> dan
+        <m>g(b)</m>, lalu gunakan Teorema Nilai Antara untuk memperoleh titik
+        tetap <m>f</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-41-hint">
+      <p><em>Tahap 1.</em> Substitusikan ketaksamaan <m>a&lt;f(a)</m> ke <m>g(a)=a-f(a)</m>.</p>
+      <p><em>Tahap 2.</em> Substitusikan <m>f(b)&lt;b</m> ke <m>g(b)=b-f(b)</m>.</p>
+      <p><em>Tahap 3.</em> Nilai <m>0</m> terletak di antara kedua nilai fungsi kontinu <m>g</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-41-answer">
+      <p><m>g(a)&lt;0&lt;g(b)</m>; jadi ada <m>c\in[a,b]</m> dengan <m>g(c)=0</m>, ekuivalen dengan <m>f(c)=c</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-41-solution">
+      <p>
+        Dari <m>a&lt;f(a)</m> diperoleh <m>g(a)=a-f(a)&lt;0</m>. Dari
+        <m>f(b)&lt;b</m> diperoleh <m>g(b)=b-f(b)&gt;0</m>. Fungsi <m>g</m>
+        kontinu pada interval terhubung <m>[a,b]</m>.
+      </p>
+      <p>
+        Teorema Nilai Antara memberi <m>c\in[a,b]</m> dengan
+        <m>g(c)=0</m>, sebab <m>0</m> berada di antara <m>g(a)</m> dan
+        <m>g(b)</m>. Persamaan <m>0=c-f(c)</m> setara dengan
+        <m>f(c)=c</m>. Jadi <m>c</m> adalah titik tetap.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-42">
+    <title>Citra Kubik pada Interval Tertutup</title>
+    <statement>
+      <p>
+        Untuk <m>f(x)=\frac16x^3+\frac14x</m>, buktikan bahwa
+        <m>f([-1,2])\subseteq[-1,2]</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-42-hint">
+      <p><em>Tahap 1.</em> Hitung <m>f'(x)</m> dan tentukan tandanya.</p>
+      <p><em>Tahap 2.</em> Gunakan kemonotonan untuk menempatkan minimum dan maksimum pada kedua ujung interval.</p>
+      <p><em>Tahap 3.</em> Hitung <m>f(-1)</m> dan <m>f(2)</m>, lalu bandingkan dengan <m>-1</m> dan <m>2</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-42-answer">
+      <p>
+        Fungsi meningkat ketat dan
+        <m>f([-1,2])=[-5/12,11/6]\subseteq[-1,2]</m>.
+      </p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-42-solution">
+      <p>
+        Turunannya adalah
+        <me>f'(x)=\frac12x^2+\frac14&gt;0</me>
+        untuk semua <m>x\in\R</m>. Jadi <m>f</m> meningkat ketat. Pada
+        interval <m>[-1,2]</m>, minimum dicapai di <m>-1</m> dan maksimum di
+        <m>2</m>.
+      </p>
+      <p>
+        Perhitungan memberi
+        <me>f(-1)=-\frac16-\frac14=-\frac5{12},\qquad f(2)=\frac86+\frac24=\frac{11}{6}.</me>
+        Karena <m>-1&lt;-5/12</m> dan <m>11/6&lt;2</m>, setiap nilai citra berada
+        dalam <m>[-1,2]</m>. Maka <m>f</m> memang memetakan interval itu ke
+        dalam dirinya sendiri.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-guide-43">
+    <title>Titik Tetap Fungsi Kubik</title>
+    <statement>
+      <p>
+        Tentukan semua <m>c\in[-1,2]</m> yang memenuhi
+        <m>\frac16c^3+\frac14c=c</m>.
+      </p>
+    </statement>
+    <hint xml:id="o003-c90-ch18-guide-43-hint">
+      <p><em>Tahap 1.</em> Pindahkan semua suku ke satu ruas dan faktorkan <m>c</m>.</p>
+      <p><em>Tahap 2.</em> Selesaikan faktor kuadrat yang tersisa.</p>
+      <p><em>Tahap 3.</em> Uji setiap akar terhadap syarat <m>-1\leq c\leq2</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-guide-43-answer">
+      <p>Satu-satunya titik tetap dalam <m>[-1,2]</m> adalah <m>c=0</m>.</p>
+    </answer>
+    <solution xml:id="o003-c90-ch18-guide-43-solution">
+      <p>
+        Persamaan titik tetap setara dengan
+        <me>\frac16c^3+\frac14c-c=0
+        \quad\Longleftrightarrow\quad
+        \frac{c(2c^2-9)}{12}=0.</me>
+        Jadi kandidatnya <m>c=0</m> dan <m>c=\pm3/\sqrt2</m>.
+      </p>
+      <p>
+        Karena <m>3/\sqrt2&gt;2</m> dan <m>-3/\sqrt2&lt;-1</m>, kedua akar
+        nonnol berada di luar <m>[-1,2]</m>. Nilai <m>0</m> berada dalam
+        interval dan memang memenuhi <m>f(0)=0</m>. Maka hanya
+        <m>c=0</m> yang diperbolehkan.
+      </p>
+    </solution>
+  </exercise>
+</section>

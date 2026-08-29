@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch18-exercise-guides-b" xml:lang="id-ID">
+  <title>Panduan Latihan Bab 18 B</title>
+  <p>Komponen pendamping asli ini ditulis secara terpisah, bukan materi resmi GVSU, dan tidak menyiratkan dukungan penulis sumber. Komponen ini menyediakan dukungan bertahap untuk latihan keterhubungan pada urutan peta 86–128; setiap entri memuat pernyataan mandiri, petunjuk dua tahap, jawaban langsung, dan penyelesaian lengkap.</p>
+  <p>Karya asli berlisensi CC BY 4.0. Provenans model: OpenAI Codex gpt-5.6-sol, Ultra.</p>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-03">
+    <title>Satu komponen dan keterhubungan</title>
+    <statement><p>Buktikan bahwa ruang topologi <m>X</m> terhubung jika dan hanya jika <m>X</m> mempunyai tepat satu komponen terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-03-hint">
+      <p>Tahap 1: jika <m>X</m> terhubung, bandingkan <m>X</m> sendiri dengan setiap subhimpunan terhubung maksimal.</p>
+      <p>Tahap 2: untuk arah sebaliknya, sebuah pemisahan menghasilkan dua himpunan terhubung atau, lebih umum, memaksa setiap komponen berada pada salah satu sisinya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-03-answer"><p>Pernyataan benar: keterhubungan <m>X</m> ekuivalen dengan keberadaan satu-satunya komponen, yaitu <m>X</m> sendiri.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-03-solution"><p>Jika <m>X</m> terhubung, maka <m>X</m> adalah subhimpunan terhubung maksimal dari dirinya; jadi satu-satunya komponen ialah <m>X</m>. Sebaliknya, andaikan <m>X</m> tidak terhubung dan <m>X=U\sqcup V</m> suatu pemisahan. Setiap subhimpunan terhubung hanya dapat bertemu salah satu dari <m>U</m> dan <m>V</m>, sebab irisan dengan keduanya akan memisahkannya. Ambil <m>u\in U</m> dan <m>v\in V</m>. Komponen yang memuat <m>u</m> termuat dalam <m>U</m>, sedangkan komponen yang memuat <m>v</m> termuat dalam <m>V</m>; keduanya berbeda. Jadi ruang dengan tepat satu komponen harus terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-04">
+    <title>Komponen terbuka bila jumlahnya berhingga</title>
+    <statement><p>Misalkan ruang topologi <m>X</m> mempunyai berhingga banyak komponen terhubung. Buktikan bahwa setiap komponennya terbuka.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-04-hint">
+      <p>Tahap 1: gunakan fakta bahwa setiap komponen terhubung tertutup.</p>
+      <p>Tahap 2: tulis komplemen satu komponen sebagai gabungan semua komponen lainnya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-04-answer"><p>Setiap komponen terbuka, bahkan sekaligus tertutup.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-04-solution"><p>Tuliskan komponen-komponen <m>X</m> sebagai <m>C_1,\ldots,C_n</m>. Masing-masing <m>C_i</m> tertutup. Untuk suatu <m>i</m>, komponen-komponen mempartisi <m>X</m>, sehingga <m>X\setminus C_i=\bigcup_{j\ne i}C_j</m>. Gabungan di ruas kanan berhingga dan setiap sukunya tertutup, maka komplemen <m>C_i</m> tertutup. Jadi <m>C_i</m> terbuka. Karena <m>i</m> sembarang, semua komponen terbuka.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-05">
+    <title>Citra himpunan pemutus</title>
+    <statement><p>Misalkan <m>X</m> dan <m>Y</m> terhubung serta <m>f:X\to Y</m> kontinu. Apakah setiap himpunan pemutus <m>S\subseteq X</m> selalu mempunyai citra <m>f(S)</m> yang merupakan himpunan pemutus bagi <m>Y</m>? Buktikan jawaban Anda.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-05-hint">
+      <p>Tahap 1: kontinuitas tidak mensyaratkan fungsi injektif atau surjektif.</p>
+      <p>Tahap 2: gunakan fungsi konstan dari garis real ke lingkaran.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-05-answer"><p>Tidak. Fungsi konstan memberikan contoh tandingan.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-05-solution"><p>Ambil <m>X=\mathbb R</m>, <m>S=\{0\}</m>, dan <m>Y=S^1</m>. Kedua ruang terhubung, sedangkan <m>X\setminus S=(-\infty,0)\cup(0,\infty)</m> tidak terhubung, jadi <m>S</m> adalah himpunan pemutus. Tetapkan <m>f(x)=p</m> untuk suatu <m>p\in S^1</m>. Fungsi ini kontinu dan <m>f(S)=\{p\}</m>. Namun <m>S^1\setminus\{p\}</m> homeomorfik dengan <m>\mathbb R</m>, sehingga terhubung. Jadi <m>f(S)</m> bukan himpunan pemutus bagi <m>Y</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-06">
+    <title>Kelas topologi 1 pada empat titik</title>
+    <statement><p>Misalkan <m>X=\{a,b,c,d\}</m> diberi topologi diskret. Tentukan apakah <m>X</m> terhubung dan buktikan jawaban Anda.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-06-hint">
+      <p>Tahap 1: ruang tidak terhubung tepat ketika mempunyai subhimpunan sejati tak kosong yang klopen.</p>
+      <p>Tahap 2: dalam topologi diskret, periksa singleton <m>\{a\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-06-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-06-solution"><p>Dalam topologi diskret, <m>\{a\}</m> dan komplemennya <m>\{b,c,d\}</m> sama-sama buka. Keduanya tak kosong, saling lepas, dan gabungannya <m>X</m>. Jadi keduanya membentuk pemisahan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-07">
+    <title>Kelas topologi 2 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-07-hint">
+      <p>Tahap 1: cari himpunan buka sejati yang komplemennya juga buka.</p>
+      <p>Tahap 2: perhatikan bahwa setiap komplemen tak kosong dari himpunan buka sejati memuat <m>d</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-07-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-07-solution"><p>Ruang berhingga terputus tepat bila mempunyai himpunan klopen sejati tak kosong. Komplemen himpunan buka sejati yang tercantum berturut-turut adalah <m>\{b,c,d\}</m>, <m>\{a,c,d\}</m>, <m>\{a,b,d\}</m>, <m>\{c,d\}</m>, <m>\{b,d\}</m>, <m>\{a,d\}</m>, dan <m>\{d\}</m>. Tidak satu pun berada dalam <m>\tau</m>. Jadi tidak ada himpunan klopen sejati tak kosong dan <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-08">
+    <title>Kelas topologi 3 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\},\{a,b,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-08-hint">
+      <p>Tahap 1: uji apakah suatu singleton mempunyai komplemen yang tercantum dalam <m>\tau</m>.</p>
+      <p>Tahap 2: bandingkan <m>\{c\}</m> dengan <m>\{a,b,d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-08-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-08-solution"><p>Himpunan <m>\{c\}</m> dan <m>\{a,b,d\}</m> sama-sama buka menurut daftar <m>\tau</m>. Keduanya tak kosong, saling lepas, dan menutupi <m>X</m>, sehingga membentuk pemisahan. Maka <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-09">
+    <title>Kelas topologi 4 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,d\},\{a,b,c\},\{a,b,d\},\{a,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-09-hint">
+      <p>Tahap 1: gunakan kriteria himpunan klopen sejati.</p>
+      <p>Tahap 2: pasangan <m>\{b\}</m> dan <m>\{a,c,d\}</m> patut diperiksa.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-09-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-09-solution"><p>Baik <m>\{b\}</m> maupun komplemennya <m>\{a,c,d\}</m> termasuk dalam <m>\tau</m>. Pasangan ini merupakan dua himpunan buka tak kosong yang saling lepas dan menutupi <m>X</m>. Jadi <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-e-10">
+    <title>Kelas topologi 5 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-e-10-hint">
+      <p>Tahap 1: cukup periksa komplemen ketiga himpunan buka sejati.</p>
+      <p>Tahap 2: semua komplemen itu memuat paling sedikit satu dari <m>c,d</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-e-10-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-e-10-solution"><p>Komplemen <m>\{a\}</m>, <m>\{b\}</m>, dan <m>\{a,b\}</m> masing-masing ialah <m>\{b,c,d\}</m>, <m>\{a,c,d\}</m>, dan <m>\{c,d\}</m>. Tidak satu pun tercantum sebagai himpunan buka. Jadi tidak ada himpunan klopen sejati tak kosong; akibatnya <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-01">
+    <title>Kelas topologi 6 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-01-hint">
+      <p>Tahap 1: keterputusan setara dengan keberadaan himpunan buka sejati yang komplemennya buka.</p>
+      <p>Tahap 2: hitung komplemen <m>\{a\}</m>, <m>\{b\}</m>, <m>\{a,b\}</m>, dan <m>\{a,b,c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-01-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-01-solution"><p>Keempat komplemen tersebut ialah <m>\{b,c,d\}</m>, <m>\{a,c,d\}</m>, <m>\{c,d\}</m>, dan <m>\{d\}</m>. Tidak satu pun termasuk dalam <m>\tau</m>. Dengan demikian tidak ada subhimpunan klopen sejati tak kosong, sehingga <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-02">
+    <title>Kelas topologi 7 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-02-hint">
+      <p>Tahap 1: periksa apakah <m>\{b\}</m> klopen.</p>
+      <p>Tahap 2: komplemen <m>\{b\}</m> sudah muncul dalam daftar topologi.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-02-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-02-solution"><p>Himpunan <m>\{b\}</m> buka dan komplemennya <m>\{a,c,d\}</m> juga buka. Kedua himpunan itu tak kosong, saling lepas, dan menutupi <m>X</m>; jadi keduanya adalah suatu pemisahan. Maka <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-03">
+    <title>Kelas topologi 8 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,b,c\},\{a,b,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-03-hint">
+      <p>Tahap 1: daftar semua himpunan buka sejati dan uji komplemennya.</p>
+      <p>Tahap 2: komplemennya ialah <m>\{b,c,d\}</m>, <m>\{a,c,d\}</m>, <m>\{c,d\}</m>, <m>\{d\}</m>, dan <m>\{c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-03-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-03-solution"><p>Tak satu pun dari lima komplemen yang disebutkan dalam petunjuk termasuk dalam <m>\tau</m>. Jadi tidak ada himpunan buka sejati tak kosong yang juga tertutup. Karena pemisahan akan memberikan tepat himpunan semacam itu, pemisahan tidak ada dan <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-04">
+    <title>Kelas topologi 9 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-04-hint">
+      <p>Tahap 1: cari pasangan komplementer di antara himpunan buka.</p>
+      <p>Tahap 2: hitung komplemen kelima himpunan buka sejati satu per satu.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-04-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-04-solution"><p>Komplemen <m>\{a\}</m>, <m>\{b\}</m>, <m>\{a,b\}</m>, <m>\{a,c\}</m>, dan <m>\{a,b,c\}</m> berturut-turut ialah <m>\{b,c,d\}</m>, <m>\{a,c,d\}</m>, <m>\{c,d\}</m>, <m>\{b,d\}</m>, dan <m>\{d\}</m>. Semuanya tidak buka. Jadi tidak ada pemisahan dan <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-05">
+    <title>Kelas topologi 10 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},\{a,b,c\},\{a,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-05-hint">
+      <p>Tahap 1: carilah suatu singleton buka dengan komplemen yang juga buka.</p>
+      <p>Tahap 2: gunakan <m>\{b\}</m> dan <m>\{a,c,d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-05-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-05-solution"><p>Himpunan <m>\{b\}</m> serta komplemennya <m>\{a,c,d\}</m> sama-sama anggota <m>\tau</m>. Keduanya tak kosong, saling lepas, dan menutupi <m>X</m>. Jadi pasangan tersebut memisahkan <m>X</m>, sehingga ruang tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-06">
+    <title>Kelas topologi 11 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},\{a,b,c\},\{a,b,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-06-hint">
+      <p>Tahap 1: keterputusan akan menghasilkan dua anggota <m>\tau</m> yang saling berkomplemen.</p>
+      <p>Tahap 2: uji komplemen keenam himpunan buka sejati dalam daftar.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-06-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-06-solution"><p>Komplemen himpunan buka sejati yang tercantum ialah <m>\{b,c,d\}</m>, <m>\{a,c,d\}</m>, <m>\{c,d\}</m>, <m>\{b,d\}</m>, <m>\{d\}</m>, dan <m>\{c\}</m>. Tidak satu pun merupakan anggota <m>\tau</m>. Maka tidak ada himpunan klopen sejati tak kosong dan <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-07">
+    <title>Kelas topologi 12 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{c,d\},\{a,c,d\},\{b,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-07-hint">
+      <p>Tahap 1: periksa apakah salah satu singleton buka mempunyai komplemen buka.</p>
+      <p>Tahap 2: <m>\{a\}</m> dan <m>\{b,c,d\}</m> adalah pasangan komplementer.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-07-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-07-solution"><p>Himpunan <m>\{a\}</m> dan <m>\{b,c,d\}</m> termasuk dalam <m>\tau</m>. Keduanya tak kosong, saling lepas, dan gabungannya <m>X</m>. Jadi pasangan tersebut adalah pemisahan, sehingga <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-08">
+    <title>Kelas topologi 13 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-08-hint">
+      <p>Tahap 1: uji apakah setiap himpunan buka sejati gagal memiliki komplemen buka.</p>
+      <p>Tahap 2: komplemen yang mungkin ialah <m>\{b,c,d\},\{a,c,d\},\{c,d\},\{b,d\},\{b,c\},\{d\},\{c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-08-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-08-solution"><p>Daftar pada tahap kedua adalah tepat daftar komplemen semua anggota sejati tak kosong dari <m>\tau</m>. Tidak satu pun muncul dalam <m>\tau</m>. Jadi tak ada himpunan klopen sejati tak kosong, padahal setiap pemisahan akan menghasilkan himpunan demikian. Oleh sebab itu <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-09">
+    <title>Kelas topologi 14 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b\},\{a,b\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},\{a,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-09-hint">
+      <p>Tahap 1: cukup temukan satu himpunan klopen sejati tak kosong.</p>
+      <p>Tahap 2: periksa <m>\{b\}</m> beserta komplemennya.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-09-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-09-solution"><p>Himpunan <m>\{b\}</m> buka, dan komplemennya <m>\{a,c,d\}</m> juga tercantum dalam <m>\tau</m>. Kedua himpunan itu membentuk pemisahan <m>X=\{b\}\sqcup\{a,c,d\}</m>. Jadi <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-f-10">
+    <title>Kelas topologi 15 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-f-10-hint">
+      <p>Tahap 1: hanya ada satu kandidat himpunan klopen sejati tak kosong.</p>
+      <p>Tahap 2: tentukan apakah <m>X\setminus\{a\}=\{b,c,d\}</m> buka.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-f-10-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-f-10-solution"><p>Satu-satunya himpunan buka sejati tak kosong ialah <m>\{a\}</m>, tetapi komplemennya <m>\{b,c,d\}</m> tidak termasuk dalam <m>\tau</m>. Jadi <m>\{a\}</m> tidak klopen dan tidak ada kandidat lain untuk membentuk pemisahan. Maka <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-01">
+    <title>Kelas topologi 16 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-01-hint">
+      <p>Tahap 1: uji kedua himpunan buka sejati terhadap kriteria klopen.</p>
+      <p>Tahap 2: komplemennya adalah <m>\{b,c,d\}</m> dan <m>\{c,d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-01-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-01-solution"><p>Baik <m>\{b,c,d\}</m> maupun <m>\{c,d\}</m> tidak termasuk dalam <m>\tau</m>. Karena itu, tidak satu pun himpunan buka sejati tak kosong juga tertutup. Pemisahan tidak mungkin ada, sehingga <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-02">
+    <title>Kelas topologi 17 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-02-hint">
+      <p>Tahap 1: cari pasangan komplementer di antara tiga himpunan buka sejati.</p>
+      <p>Tahap 2: komplemennya masing-masing <m>\{b,c,d\}</m>, <m>\{c,d\}</m>, dan <m>\{d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-02-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-02-solution"><p>Tiga komplemen tersebut semuanya tidak berada dalam <m>\tau</m>. Dengan demikian tidak ada himpunan klopen sejati tak kosong. Kriteria klopen bagi keterputusan lalu menunjukkan bahwa <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-03">
+    <title>Kelas topologi 18 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b,c\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-03-hint">
+      <p>Tahap 1: hitung komplemen setiap himpunan buka sejati.</p>
+      <p>Tahap 2: periksa <m>\{b,c,d\}</m>, <m>\{a,d\}</m>, dan <m>\{d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-03-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-03-solution"><p>Komplemen <m>\{a\}</m>, <m>\{b,c\}</m>, dan <m>\{a,b,c\}</m> berturut-turut adalah ketiga himpunan pada petunjuk. Tidak satu pun buka. Jadi tidak ada pasangan himpunan buka tak kosong yang saling berkomplemen, sehingga tidak ada pemisahan dan <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-04">
+    <title>Kelas topologi 19 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b\},\{a,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-04-hint">
+      <p>Tahap 1: tentukan komplemen ketiga himpunan buka sejati.</p>
+      <p>Tahap 2: komplemennya ialah <m>\{b,c,d\}</m>, <m>\{c,d\}</m>, dan <m>\{b\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-04-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-04-solution"><p>Tidak satu pun dari <m>\{b,c,d\}</m>, <m>\{c,d\}</m>, atau <m>\{b\}</m> tercantum dalam <m>\tau</m>. Jadi setiap himpunan buka sejati tak kosong gagal menjadi tertutup. Karena itu pemisahan tidak ada dan <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-05">
+    <title>Kelas topologi 20 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b\},\{a,b,c\},\{a,b,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-05-hint">
+      <p>Tahap 1: keterputusan memerlukan pasangan anggota topologi yang saling berkomplemen.</p>
+      <p>Tahap 2: hitung empat komplemen: <m>\{b,c,d\},\{c,d\},\{d\},\{c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-05-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-05-solution"><p>Keempat himpunan pada petunjuk adalah komplemen semua himpunan buka sejati tak kosong, dan tidak satu pun merupakan anggota <m>\tau</m>. Jadi tak ada himpunan klopen sejati tak kosong; akibatnya <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-06">
+    <title>Kelas topologi 21 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b,c\},\{a,b,c\},\{b,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-06-hint">
+      <p>Tahap 1: uji apakah <m>\{a\}</m> tertutup sekaligus buka.</p>
+      <p>Tahap 2: komplemennya ialah <m>\{b,c,d\}</m>, yang juga tercantum dalam <m>\tau</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-06-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-06-solution"><p>Himpunan <m>\{a\}</m> dan <m>\{b,c,d\}</m> sama-sama buka, tak kosong, saling lepas, dan menutupi <m>X</m>. Maka <m>X=\{a\}\sqcup\{b,c,d\}</m> adalah suatu pemisahan, sehingga ruang tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-07">
+    <title>Kelas topologi 22 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b\},\{a,c\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-07-hint">
+      <p>Tahap 1: periksa komplemen keempat himpunan buka sejati.</p>
+      <p>Tahap 2: komplemennya ialah <m>\{b,c,d\},\{c,d\},\{b,d\},\{d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-07-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-07-solution"><p>Tak satu pun dari empat komplemen pada petunjuk berada dalam <m>\tau</m>. Karena itu tidak ada subhimpunan sejati tak kosong yang sekaligus buka dan tertutup. Kriteria klopen menunjukkan bahwa <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-08">
+    <title>Kelas topologi 23 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b\},\{a,c\},\{a,b,c\},\{a,b,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-08-hint">
+      <p>Tahap 1: cari dua anggota tak kosong topologi yang saling berkomplemen.</p>
+      <p>Tahap 2: uji komplemen <m>\{b,c,d\},\{c,d\},\{b,d\},\{d\},\{c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-08-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-08-solution"><p>Daftar pada petunjuk memuat semua komplemen himpunan buka sejati tak kosong, dan tak satu pun ada dalam <m>\tau</m>. Maka tidak tersedia pasangan buka komplementer untuk membentuk pemisahan. Jadi <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-09">
+    <title>Kelas topologi 24 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{c,d\},\{a,b\},\{a,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-09-hint">
+      <p>Tahap 1: carilah dua himpunan buka beranggota dua yang saling berkomplemen.</p>
+      <p>Tahap 2: gunakan <m>\{a,b\}</m> dan <m>\{c,d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-09-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-09-solution"><p>Baik <m>\{a,b\}</m> maupun <m>\{c,d\}</m> adalah anggota <m>\tau</m>. Keduanya tak kosong, saling lepas, dan gabungannya <m>X</m>. Jadi keduanya membentuk pemisahan dan <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-g-10">
+    <title>Kelas topologi 25 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},\{a,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-g-10-hint">
+      <p>Tahap 1: periksa komplemen setiap himpunan buka sejati.</p>
+      <p>Tahap 2: daftar komplemennya adalah <m>\{b,c,d\},\{c,d\},\{b,d\},\{b,c\},\{d\},\{c\},\{b\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-g-10-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-g-10-solution"><p>Tidak satu pun himpunan pada daftar komplemen itu termasuk dalam <m>\tau</m>. Jadi tidak ada himpunan klopen sejati tak kosong, dan karenanya tidak ada pemisahan. Dengan demikian <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-01">
+    <title>Kelas topologi 26 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-01-hint">
+      <p>Tahap 1: uji kedua himpunan buka sejati dengan kriteria klopen.</p>
+      <p>Tahap 2: komplemennya adalah <m>\{b,c,d\}</m> dan <m>\{d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-01-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-01-solution"><p>Himpunan <m>\{b,c,d\}</m> dan <m>\{d\}</m> tidak termasuk dalam <m>\tau</m>. Jadi tidak ada himpunan buka sejati tak kosong yang sekaligus tertutup. Karena pemisahan setara dengan adanya himpunan semacam itu, <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-02">
+    <title>Kelas topologi 27 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a\},\{b,c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-02-hint">
+      <p>Tahap 1: perhatikan bahwa kedua himpunan buka sejati saling berkomplemen.</p>
+      <p>Tahap 2: tulis <m>X</m> sebagai gabungan lepas <m>\{a\}</m> dan <m>\{b,c,d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-02-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-02-solution"><p>Himpunan <m>\{a\}</m> dan <m>\{b,c,d\}</m> sama-sama buka, tak kosong, dan saling lepas, serta gabungannya adalah <m>X</m>. Dengan demikian keduanya merupakan pemisahan dan <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-03">
+    <title>Kelas topologi 28 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a,b\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-03-hint">
+      <p>Tahap 1: hanya <m>\{a,b\}</m> yang dapat menjadi sisi pemisahan sejati.</p>
+      <p>Tahap 2: tentukan apakah komplemennya <m>\{c,d\}</m> buka.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-03-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-03-solution"><p>Satu-satunya himpunan buka sejati tak kosong adalah <m>\{a,b\}</m>. Komplemennya <m>\{c,d\}</m> tidak termasuk dalam <m>\tau</m>, sehingga <m>\{a,b\}</m> tidak klopen. Tidak ada pemisahan dan <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-04">
+    <title>Kelas topologi 29 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a,b\},\{c,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-04-hint">
+      <p>Tahap 1: cari dua himpunan buka sejati yang saling berkomplemen.</p>
+      <p>Tahap 2: gunakan kedua himpunan beranggota dua dalam <m>\tau</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-04-answer"><p><m>X</m> tidak terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-04-solution"><p>Himpunan <m>\{a,b\}</m> dan <m>\{c,d\}</m> terbuka, tak kosong, saling lepas, dan menutupi <m>X</m>. Pasangan ini merupakan pemisahan, jadi <m>X</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-05">
+    <title>Kelas topologi 30 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a,b\},\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-05-hint">
+      <p>Tahap 1: periksa komplemen kedua himpunan buka sejati.</p>
+      <p>Tahap 2: komplemennya adalah <m>\{c,d\}</m> dan <m>\{d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-05-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-05-solution"><p>Baik <m>\{c,d\}</m> maupun <m>\{d\}</m> tidak berada dalam <m>\tau</m>. Jadi tidak ada himpunan klopen sejati tak kosong dan tidak mungkin ada pemisahan. Maka <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-06">
+    <title>Kelas topologi 31 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a,b\},\{a,b,c\},\{a,b,d\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-06-hint">
+      <p>Tahap 1: uji apakah salah satu dari tiga himpunan buka sejati mempunyai komplemen buka.</p>
+      <p>Tahap 2: komplemennya ialah <m>\{c,d\}</m>, <m>\{d\}</m>, dan <m>\{c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-06-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-06-solution"><p>Tiga komplemen pada petunjuk semuanya tidak tercantum dalam <m>\tau</m>. Dengan demikian tidak ada subhimpunan sejati tak kosong yang klopen. Kriteria klopen untuk keterputusan menunjukkan bahwa <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-07">
+    <title>Kelas topologi 32 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi <m>\tau=\{\emptyset,\{a,b,c\},X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-07-hint">
+      <p>Tahap 1: hanya ada satu himpunan buka sejati tak kosong.</p>
+      <p>Tahap 2: komplemen <m>\{a,b,c\}</m> adalah <m>\{d\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-07-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-07-solution"><p>Himpunan <m>\{d\}</m> tidak buka, sehingga <m>\{a,b,c\}</m> bukan himpunan klopen sejati. Tidak ada kandidat lain untuk sisi pemisahan. Oleh karena itu <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-08">
+    <title>Kelas topologi 33 pada empat titik</title>
+    <statement><p>Pada <m>X=\{a,b,c,d\}</m>, tentukan keterhubungan topologi indisret <m>\tau=\{\emptyset,X\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-08-hint">
+      <p>Tahap 1: pemisahan memerlukan dua himpunan buka tak kosong.</p>
+      <p>Tahap 2: hitung banyaknya himpunan buka tak kosong dalam topologi indisret.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-08-answer"><p><m>X</m> terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-08-solution"><p>Satu-satunya himpunan buka tak kosong adalah <m>X</m> sendiri. Karena pemisahan memerlukan dua himpunan buka tak kosong yang saling lepas, tidak ada pemisahan. Jadi <m>X</m> terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-09">
+    <title>Titik pada himpunan terhubung sebagai titik limit</title>
+    <statement><p>Tentukan benar atau salah: jika <m>A</m> terhubung dalam ruang topologi <m>X</m> dan <m>|A|\geq 2</m>, maka setiap titik <m>A</m> merupakan titik limit dari <m>A</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-09-hint">
+      <p>Tahap 1: tanpa aksioma <m>T_1</m>, suatu titik pada ruang terhubung dapat terisolasi dari titik lain secara sepihak.</p>
+      <p>Tahap 2: gunakan ruang Sierpiński <m>X=\{0,1\}</m> dengan <m>\tau=\{\emptyset,\{1\},X\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-09-answer"><p>Salah.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-09-solution"><p>Ambil <m>A=X=\{0,1\}</m> dengan topologi <m>\{\emptyset,\{1\},X\}</m>. Ruang ini terhubung: satu-satunya himpunan buka sejati tak kosong ialah <m>\{1\}</m>, sedangkan komplemennya <m>\{0\}</m> tidak buka. Namun lingkungan buka <m>\{1\}</m> tidak bertemu <m>A\setminus\{1\}=\{0\}</m>. Jadi <m>1</m> bukan titik limit <m>A</m>, meskipun <m>A</m> terhubung dan mempunyai dua titik.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-h-10">
+    <title>Kekompakan tidak memaksa keterhubungan</title>
+    <statement><p>Tentukan benar atau salah: setiap subruang kompak <m>A</m> dari ruang Hausdorff terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-h-10-hint">
+      <p>Tahap 1: subhimpunan berhingga dari ruang metrik selalu kompak.</p>
+      <p>Tahap 2: pilih dua titik berbeda pada garis real.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-h-10-answer"><p>Salah.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-h-10-solution"><p>Dalam ruang Hausdorff <m>\mathbb R</m>, ambil <m>A=\{0,1\}</m>. Himpunan berhingga ini kompak. Dalam topologi subruang, <m>\{0\}=A\cap(-1/2,1/2)</m> dan <m>\{1\}=A\cap(1/2,3/2)</m> adalah himpunan buka tak kosong yang saling lepas dan menutupi <m>A</m>. Jadi <m>A</m> tidak terhubung.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-i-01">
+    <title>Keterhubungan tidak memaksa kekompakan</title>
+    <statement><p>Tentukan benar atau salah: setiap subruang terhubung <m>A</m> dari ruang Hausdorff kompak.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-i-01-hint">
+      <p>Tahap 1: interval pada garis real terhubung, tetapi tidak semuanya kompak.</p>
+      <p>Tahap 2: gunakan seluruh garis real dan suatu selimut buka tanpa subselimut berhingga.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-i-01-answer"><p>Salah.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-i-01-solution"><p>Ambil <m>A=\mathbb R</m> di dalam ruang Hausdorff <m>\mathbb R</m>. Sebagai interval, <m>A</m> terhubung. Akan tetapi, selimut buka <m>\{(-n,n):n\in\mathbb N\}</m> menutupi <m>\mathbb R</m> dan tidak mempunyai subselimut berhingga: setiap subkoleksi berhingga termuat dalam satu <m>(-N,N)</m> dan melewatkan titik di luar interval itu. Jadi <m>A</m> tidak kompak.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-i-02">
+    <title>Subhimpunan ruang diskret</title>
+    <statement><p>Tentukan benar atau salah: setiap subhimpunan dari ruang bertopologi diskret tidak terhubung.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-i-02-hint">
+      <p>Tahap 1: ingat kasus ruang dengan nol atau satu titik.</p>
+      <p>Tahap 2: pilih satu singleton sebagai subhimpunan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-i-02-answer"><p>Salah.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-i-02-solution"><p>Dalam ruang diskret tak kosong <m>X</m>, pilih <m>x\in X</m>. Subruang <m>A=\{x\}</m> tidak dapat ditulis sebagai gabungan dua himpunan tak kosong yang saling lepas, sehingga terhubung. Jadi tidak benar bahwa setiap subhimpunan ruang diskret tidak terhubung. Secara lengkap, subruang diskret terhubung tepat bila memiliki paling banyak satu titik.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-i-03">
+    <title>Komponen dua titik dalam ruang berhingga</title>
+    <statement><p>Misalkan <m>X=\{a,b,c,d\}</m> bertopologi <m>\tau=\{\emptyset,\{a\},\{a,b\},\{c\},\{d\},\{c,d\},\{a,c,d\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},X\}</m>. Tentukan benar atau salah: <m>\{a,b\}</m> merupakan komponen terhubung dari <m>X</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-i-03-hint">
+      <p>Tahap 1: hitung topologi subruang pada <m>\{a,b\}</m> dan uji keterhubungannya.</p>
+      <p>Tahap 2: periksa tiga superset sejati <m>\{a,b,c\}</m>, <m>\{a,b,d\}</m>, dan <m>X</m> untuk membuktikan kemaksimalan.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-i-03-answer"><p>Benar; <m>\{a,b\}</m> adalah komponen terhubung.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-i-03-solution"><p>Topologi subruang pada <m>\{a,b\}</m> ialah <m>\{\emptyset,\{a\},\{a,b\}\}</m>. Karena komplemen relatif <m>\{a\}</m>, yaitu <m>\{b\}</m>, tidak buka, subruang itu terhubung. Setiap superset sejati yang lebih besar tidak terhubung: <m>\{a,b,c\}</m> dipisahkan oleh <m>\{a,b\}</m> dan <m>\{c\}</m>; <m>\{a,b,d\}</m> dipisahkan oleh <m>\{a,b\}</m> dan <m>\{d\}</m>; sedangkan <m>X</m> dipisahkan oleh <m>\{a,b\}</m> dan <m>\{c,d\}</m>. Jadi <m>\{a,b\}</m> maksimal di antara subhimpunan terhubung dan merupakan sebuah komponen.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-i-04">
+    <title>Menguji pemisahan relatif</title>
+    <statement><p>Pada ruang <m>X=\{a,b,c,d\}</m> dengan <m>\tau=\{\emptyset,\{a\},\{a,b\},\{c\},\{d\},\{c,d\},\{a,c,d\},\{a,c\},\{a,d\},\{a,b,c\},\{a,b,d\},X\}</m>, tentukan benar atau salah: <m>U=\{a,c,d\}</m> dan <m>V=\{a,b,c\}</m> membentuk pemisahan bagi <m>A=\{c,d\}</m>.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-i-04-hint">
+      <p>Tahap 1: untuk memisahkan <m>A</m>, irisan <m>U\cap A</m> dan <m>V\cap A</m> harus saling lepas.</p>
+      <p>Tahap 2: hitung <m>U\cap V\cap A</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-i-04-answer"><p>Salah; kedua bagian bertumpang tindih pada <m>c</m> di dalam <m>A</m>.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-i-04-solution"><p>Memang <m>U</m> dan <m>V</m> terbuka dan <m>A\subseteq U\cup V</m>. Namun <m>U\cap A=\{c,d\}</m> dan <m>V\cap A=\{c\}</m>, sehingga <m>U\cap V\cap A=\{c\}\ne\emptyset</m>. Karena irisan relatifnya tidak saling lepas, <m>U</m> dan <m>V</m> bukan pemisahan bagi <m>A</m>.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch18-exer-i-05">
+    <title>Titik pemutus dalam topologi empat titik</title>
+    <statement><p>Misalkan <m>X=\{a,b,c,d\}</m> bertopologi <m>\tau=\{\emptyset,\{a\},\{b,c\},\{a,b,c\},X\}</m>. Tentukan benar atau salah: ruang terhubung <m>X</m> ini tidak mempunyai titik pemutus.</p></statement>
+    <hint xml:id="o003-c90-ch18-exer-i-05-hint">
+      <p>Tahap 1: hapus titik yang tidak muncul dalam satu pun himpunan buka sejati.</p>
+      <p>Tahap 2: pada <m>X\setminus\{d\}</m>, periksa pasangan <m>\{a\}</m> dan <m>\{b,c\}</m>.</p>
+    </hint>
+    <answer xml:id="o003-c90-ch18-exer-i-05-answer"><p>Salah; <m>d</m> adalah titik pemutus.</p></answer>
+    <solution xml:id="o003-c90-ch18-exer-i-05-solution"><p>Ruang <m>X</m> sendiri terhubung, sebab komplemen <m>\{a\}</m>, <m>\{b,c\}</m>, dan <m>\{a,b,c\}</m> masing-masing <m>\{b,c,d\}</m>, <m>\{a,d\}</m>, dan <m>\{d\}</m>, yang tidak buka. Setelah <m>d</m> dihapus, topologi subruang pada <m>X\setminus\{d\}=\{a,b,c\}</m> adalah <m>\{\emptyset,\{a\},\{b,c\},\{a,b,c\}\}</m>. Di sana <m>\{a\}</m> dan <m>\{b,c\}</m> membentuk pemisahan. Jadi penghapusan <m>d</m> memutus ruang, sehingga <m>d</m> adalah titik pemutus dan pernyataan tersebut salah.</p></solution>
+  </exercise>
+</section>

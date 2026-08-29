@@ -1,42 +1,42 @@
 <section xml:id="sec_connect_sets">
-  <title>Connected Sets</title>
+  <title>Himpunan Terhubung</title>
   <p>
-    As we learned in our preview activity,
-    connected sets are those sets that cannot be separated into a union of disjoint open sets.
-    Another characterization of connectedness is established in the next activity.
+    Seperti yang telah kita pelajari dalam kegiatan pratinjau,
+    himpunan terhubung adalah himpunan yang tidak dapat dipisahkan menjadi gabungan himpunan-himpunan buka yang saling lepas.
+    Karakterisasi lain dari keterhubungan akan ditetapkan dalam kegiatan berikut.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>(X, \tau)</m> be a topological space.
+      Misalkan <m>(X, \tau)</m> suatu ruang topologi.
       </p>
 
     </introduction>
       <task>
         <statement>
           <p>
-            Assume that <m>X</m> is a connected space,
-            and let <m>A</m> be a subset of <m>X</m> that is both open and closed.
-            What happens if we combine <m>A</m> and <m>X \setminus A</m>?
-            What does the fact that <m>X</m> is connected tell us about <m>A</m>?
+            Asumsikan bahwa <m>X</m> merupakan ruang terhubung,
+            dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m> yang sekaligus buka dan tertutup.
+            Apa yang terjadi jika kita menggabungkan <m>A</m> dan <m>X \setminus A</m>?
+            Apa yang dapat kita simpulkan dari fakta bahwa <m>X</m> terhubung mengenai <m>A</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Now assume that the only subsets of <m>X</m> that are both open and closed are <m>\emptyset</m> and <m>X</m>.
-            Must it follow that <m>X</m> is connected?
-            Prove your assertion.
+            Sekarang asumsikan bahwa satu-satunya subhimpunan dari <m>X</m> yang sekaligus buka dan tertutup adalah <m>\emptyset</m> dan <m>X</m>.
+            Apakah harus berlaku bahwa <m>X</m> terhubung?
+            Buktikan pernyataan Anda.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Summarize the result of this activity into a theorem of the form <q>A topological space
-            <m>(X, \tau)</m> is connected if and only if ...</q>.
+            Rangkum hasil kegiatan ini menjadi suatu teorema berbentuk <q>Suatu ruang topologi
+            <m>(X, \tau)</m> terhubung jika dan hanya jika ...</q>.
           </p>
         </statement>
       </task>
@@ -44,104 +44,104 @@
   </activity>
 
   <p>
-    A standard example of a connected topological space is the metric space <m>(\R, d_E)</m>.
+    Contoh baku ruang topologi terhubung adalah ruang metrik <m>(\R, d_E)</m>.
   </p>
 
   <theorem xml:id="thm_R_connected">
     <statement>
       <p>
-        The metric space <m>(\R, d_E)</m> is a connected topological space.
+        Ruang metrik <m>(\R, d_E)</m> merupakan ruang topologi terhubung.
       </p>
     </statement>
   
   <proof>
     <p>
-      We proceed by contradiction and assume that there are nonempty open sets <m>U</m> and <m>V</m> such that
-      <m>\R = U \cup V</m> and <m>U \cap V = \emptyset</m>.
-      Let <m>a \in U</m> and <m>b \in V</m>.
-      Since <m>U \cap V = \emptyset</m>,
-      we know that <m>a \neq b</m>.
-      Without loss of generality we can assume <m>a \lt b</m>.
-      Let <m>U' = U \cap [a,b]</m> and let <m>V' = V \cap [a,b]</m>.
-      The set <m>V'</m> is bounded below by <m>a</m>,
-      so <m>x = \inf\{v \mid v \in V'\}</m> exists.
-      Since <m>\R = U \cup V</m> it must be the case that <m>x \in U</m> or <m>x \in V</m>.
+      Kita menggunakan pembuktian dengan kontradiksi dan mengasumsikan bahwa terdapat himpunan buka takkosong <m>U</m> dan <m>V</m> sedemikian sehingga
+      <m>\R = U \cup V</m> dan <m>U \cap V = \emptyset</m>.
+      Misalkan <m>a \in U</m> dan <m>b \in V</m>.
+      Karena <m>U \cap V = \emptyset</m>,
+      kita mengetahui bahwa <m>a \neq b</m>.
+      Tanpa mengurangi keumuman, kita dapat mengasumsikan <m>a \lt b</m>.
+      Misalkan <m>U' = U \cap [a,b]</m> dan <m>V' = V \cap [a,b]</m>.
+      Himpunan <m>V'</m> dibatasi dari bawah oleh <m>a</m>,
+      sehingga <m>x = \inf\{v \mid v \in V'\}</m> ada.
+      Karena <m>\R = U \cup V</m>, harus berlaku bahwa <m>x \in U</m> atau <m>x \in V</m>.
     </p>
     <p>
-      Suppose <m>x \in U</m>.
-      The fact that <m>U</m> is an open set implies that there exists
-      <m>\epsilon \gt 0</m> such that <m>B(x, \epsilon) \subseteq U</m>.
-      But then <m>B(x, \epsilon) \cap V = \emptyset</m> and so
-      <m>d(x,v) \geq \epsilon</m> for every <m>v \in V</m>.
-      This means that <m>x+\epsilon \lt v</m> for every <m>v \in V'</m>,
-      contradicting the fact that <m>x</m> is the greatest lower bound.
-      We conclude that <m>x \notin U</m>.
+      Misalkan <m>x \in U</m>.
+      Fakta bahwa <m>U</m> merupakan himpunan buka menyiratkan bahwa terdapat
+      <m>\epsilon \gt 0</m> sedemikian sehingga <m>B(x, \epsilon) \subseteq U</m>.
+      Namun, dengan demikian <m>B(x, \epsilon) \cap V = \emptyset</m>, sehingga
+      <m>d(x,v) \geq \epsilon</m> untuk setiap <m>v \in V</m>.
+      Ini berarti bahwa <m>x+\epsilon \lt v</m> untuk setiap <m>v \in V'</m>,
+      bertentangan dengan fakta bahwa <m>x</m> merupakan batas bawah terbesar.
+      Kita menyimpulkan bahwa <m>x \notin U</m>.
     </p>
     <p>
-      It follows that <m>x \in V</m>.
-      Since <m>a \in U</m>, we know that <m>x \neq a</m>.
-      The fact that <m>V</m> is an open set tells us that there exists
-      <m>\delta \gt 0</m> such that <m>B(x, \delta) \subseteq V</m>.
-      We can choose <m>\delta</m> to ensure that <m>\delta \lt x-a</m>.
-      Since <m>x > a</m>, the interval
+      Dengan demikian, <m>x \in V</m>.
+      Karena <m>a \in U</m>, kita mengetahui bahwa <m>x \neq a</m>.
+      Fakta bahwa <m>V</m> merupakan himpunan buka memberi tahu kita bahwa terdapat
+      <m>\delta \gt 0</m> sedemikian sehingga <m>B(x, \delta) \subseteq V</m>.
+      Kita dapat memilih <m>\delta</m> agar <m>\delta \lt x-a</m>.
+      Karena <m>x > a</m>, interval
       <m>(x-\delta,
-      x)</m> is a subset of <m>V'</m>,
-      and so <m>x</m> is not a lower bound for <m>V</m>.
+      x)</m> merupakan subhimpunan dari <m>V'</m>,
+      sehingga <m>x</m> bukan batas bawah untuk <m>V</m>.
     </p>
     <p>
-      Each possibility leads to a contradiction,
-      so we conclude that the sets <m>U</m> and <m>V</m> cannot exist.
-      Therefore, <m>(\R, d_E)</m> is a connected topological space.
+      Setiap kemungkinan menghasilkan kontradiksi,
+      sehingga kita menyimpulkan bahwa himpunan <m>U</m> dan <m>V</m> tersebut tidak mungkin ada.
+      Oleh karena itu, <m>(\R, d_E)</m> merupakan ruang topologi terhubung.
     </p>
   </proof>
   </theorem>
 
   <p>
-    As you might expect, connectedness is a topological property.
+    Seperti yang mungkin Anda duga, keterhubungan merupakan sifat topologis.
   </p>
 
   <activity>
     <introduction>
     <p>
-      Let <m>(X, \tau_X)</m> and
-      <m>(Y, \tau_Y)</m> be topological spaces,
-      and let <m>f : X \to Y</m> be a continuous function.
-      Assume that <m>X</m> is a connected subset of <m>X</m>.
-      Our goal is to prove that <m>f(X)</m> is a connected subspace of <m>Y</m>.
+      Misalkan <m>(X, \tau_X)</m> dan
+      <m>(Y, \tau_Y)</m> ruang-ruang topologi,
+      dan misalkan <m>f : X \to Y</m> suatu fungsi kontinu.
+      Asumsikan bahwa <m>X</m> merupakan subhimpunan terhubung dari <m>X</m>.
+      Tujuan kita adalah membuktikan bahwa <m>f(X)</m> merupakan subruang terhubung dari <m>Y</m>.
     </p>
     <p>
-      Let <m>Z = f(X)</m> and define
-      <m>g: X \to Z</m> by <m>g(x) = f(x)</m>.
-      Then <m>g</m> is a continuous function that maps <m>X</m> onto <m>Z</m>.
-      So we consider <m>g</m> instead of <m>f</m>.
+      Misalkan <m>Z = f(X)</m> dan definisikan
+      <m>g: X \to Z</m> dengan <m>g(x) = f(x)</m>.
+      Maka <m>g</m> merupakan fungsi kontinu yang memetakan <m>X</m> pada <m>Z</m>.
+      Jadi, kita meninjau <m>g</m> sebagai pengganti <m>f</m>.
     </p>
     </introduction>
       <task>
         <statement>
           <p>
-            Assume to the contrary that <m>Z</m> is not connected.
-            What do we then assume about <m>Z</m>?
+            Untuk memperoleh kontradiksi, asumsikan bahwa <m>Z</m> tidak terhubung.
+            Apa yang kemudian kita asumsikan mengenai <m>Z</m>?
           </p>
         </statement>
       </task>
       <task>
         <introduction>
           <p>
-            Suppose that <m>U</m> and <m>V</m> are disjoint nonempty open sets in <m>Z</m> such that <m>U \cup V = Z</m>.
-            Let <m>R = g^{-1}(U)</m> and <m>S = g^{-1}(V)</m>.
+            Misalkan <m>U</m> dan <m>V</m> himpunan buka takkosong yang saling lepas dalam <m>Z</m> sedemikian sehingga <m>U \cup V = Z</m>.
+            Misalkan <m>R = g^{-1}(U)</m> dan <m>S = g^{-1}(V)</m>.
           </p>
         </introduction>
             <task>
               <statement>
                 <p>
-                  Explain why <m>R</m> and <m>S</m> are open sets in <m>X</m>.
+                  Jelaskan mengapa <m>R</m> dan <m>S</m> merupakan himpunan buka dalam <m>X</m>.
                 </p>
               </statement>
             </task>
             <task>
               <statement>
                 <p>
-                  Show that <m>R \cup S = X</m>. (Hint:
+                  Tunjukkan bahwa <m>R \cup S = X</m>. (Petunjuk:
                   <m>X = g^{-1}(Z)</m>.)
                 </p>
               </statement>
@@ -149,20 +149,20 @@
             <task>
               <statement>
                 <p>
-                  Show <m>R</m> and <m>S</m> are nonempty sets.
+                  Tunjukkan bahwa <m>R</m> dan <m>S</m> merupakan himpunan takkosong.
                   
                 </p>
               </statement>
               <hint>
                     <p>
-                      Use the fact that <m>g</m> is a surjection.
+                      Gunakan fakta bahwa <m>g</m> merupakan suatu surjeksi.
                     </p>
                   </hint>
             </task>
             <task>
               <statement>
                 <p>
-                  Now show that <m>R \cap S = \emptyset</m>. (Hint:
+                  Sekarang tunjukkan bahwa <m>R \cap S = \emptyset</m>. (Petunjuk:
                   <m>R \cap S = g^{-1}(U) \cap g^{-1}(V)</m>.)
                 </p>
               </statement>
@@ -171,84 +171,84 @@
       <task>
         <statement>
           <p>
-            Explain how we have proved the following.
+            Jelaskan bagaimana kita telah membuktikan pernyataan berikut.
           </p>
-            <theorem xml:id="thm_connected_invariant">
-              <statement>
-                <p>
-                  Let <m>(X, \tau_X)</m> and
-                  <m>(Y, \tau_Y)</m> be topological spaces,
-                  and let <m>f : X \to Y</m> be a continuous function.
-                  If <m>X</m> is connected, then <m>f(X)</m> is connected.
-                </p>
-              </statement>
-            </theorem>
-          
         </statement>
       </task>
     
   </activity>
 
+  <theorem xml:id="thm_connected_invariant">
+    <statement>
+      <p>
+        Misalkan <m>(X, \tau_X)</m> dan
+        <m>(Y, \tau_Y)</m> ruang-ruang topologi,
+        dan misalkan <m>f : X \to Y</m> suatu fungsi kontinu.
+        Jika <m>X</m> terhubung, maka <m>f(X)</m> terhubung.
+      </p>
+    </statement>
+  </theorem>
+
   <p>
-    The fact that connectedness is preserved by continuous functions means that connectedness is a property that is shared by any homeomorphic topological spaces,
-    as the next corollary indicates.
+    Fakta bahwa keterhubungan dipertahankan oleh fungsi kontinu berarti bahwa keterhubungan merupakan sifat yang dimiliki bersama oleh setiap ruang topologi yang homeomorfik,
+    sebagaimana ditunjukkan oleh akibat berikut.
   </p>
 
   <corollary>
     <statement>
       <p>
-        Let <m>(X, \tau_X)</m> and
-        <m>(Y, \tau_Y)</m> be homeomorphic topological spaces.
-        Then <m>X</m> is connected if and only if <m>Y</m> is connected.
+        Misalkan <m>(X, \tau_X)</m> dan
+        <m>(Y, \tau_Y)</m> ruang topologi yang homeomorfik.
+        Maka <m>X</m> terhubung jika dan hanya jika <m>Y</m> terhubung.
       </p>
     </statement>
   
   <proof>
     <p>
-      Let <m>(X, \tau_X)</m> and
-      <m>(Y, \tau_Y)</m> be topological spaces and let <m>f: X \to Y</m> be a homeomorphism.
-      Assume that <m>X</m> is connected.
-      Since <m>f</m> is continuous,
+      Misalkan <m>(X, \tau_X)</m> dan
+      <m>(Y, \tau_Y)</m> ruang topologi, serta misalkan <m>f: X \to Y</m> suatu homeomorfisme.
+      Asumsikan bahwa <m>X</m> terhubung.
+      Karena <m>f</m> kontinu,
       <xref ref="thm_connected_invariant"/>
-      shows that <m>f(X) = Y</m> is connected.
-      The reverse implication follows from the fact that <m>f^{-1}</m> is a homeomorphism.
+      menunjukkan bahwa <m>f(X) = Y</m> terhubung.
+      Implikasi sebaliknya mengikuti dari fakta bahwa <m>f^{-1}</m> merupakan homeomorfisme.
     </p>
   </proof>
   </corollary>
 
   <p>
-    Recall that <m>(\R,d_E)</m> is homeomorphic to the topological subspaces <m>(a,b)</m>,
+    Ingatlah bahwa <m>(\R,d_E)</m> homeomorfik dengan subruang topologi <m>(a,b)</m>,
     <m>(-\infty,
-    b)</m>, and <m>(a,\infty)</m> for any <m>a, b \in \R</m>.
-    The fact that <m>(\R, d_E)</m> is connected
+    b)</m>, dan <m>(a,\infty)</m> untuk setiap <m>a, b \in \R</m>.
+    Fakta bahwa <m>(\R, d_E)</m> terhubung
     (<xref ref="thm_R_connected"/>)
-    allows us to conclude that all open intervals are connected.
-    It would seem natural that all closed
-    (or half-closed)
-    intervals should also be connected.
-    We address this question next.
-    Before we get to this result,
-    we consider an alternate formulation of connected subsets.
+    memungkinkan kita menyimpulkan bahwa semua interval buka terhubung.
+    Tampaknya wajar jika semua interval tertutup
+    (atau setengah tertutup)
+    juga terhubung.
+    Selanjutnya kita akan membahas pertanyaan ini.
+    Sebelum sampai pada hasil tersebut,
+    kita meninjau perumusan alternatif untuk subhimpunan terhubung.
   </p>
   <p>
-    Consider the set <m>A = (-1,0) \cup (4,5)</m> in <m>\R</m>.
-    Let <m>U = (-2,3)</m> and <m>V=(2,6)</m> in <m>\R</m>.
-    Note that <m>U' = U \cap A = (-1,0)</m> and <m>V' = V \cap A = (4,5)</m>,
-    and so <m>U</m> and <m>V</m> are open sets in <m>\R</m> that separate the set <m>A</m> into two disjoint pieces.
-    We know that <m>U'</m> and <m>V'</m> are open in <m>A</m> and
-    <m>A = U' \cup V'</m> with <m>U' \cap V' = \emptyset</m>.
-    So to show that a subset of a topological space <m>X</m> is not connected,
-    this example suggests that it suffices to find nonempty open sets <m>U</m> and <m>V</m> in <m>X</m> with
-    <m>U \cap V \cap A = \emptyset</m> and <m>A \subseteq (U \cup V)</m>.
-    Note that it is not necessary to have <m>U \cap V = \emptyset</m>.
-    That this works in general is the result of the next theorem.
+    Perhatikan himpunan <m>A = (-1,0) \cup (4,5)</m> dalam <m>\R</m>.
+    Misalkan <m>U = (-2,3)</m> dan <m>V=(2,6)</m> dalam <m>\R</m>.
+    Perhatikan bahwa <m>U' = U \cap A = (-1,0)</m> dan <m>V' = V \cap A = (4,5)</m>,
+    sehingga <m>U</m> dan <m>V</m> merupakan himpunan buka dalam <m>\R</m> yang memisahkan himpunan <m>A</m> menjadi dua bagian yang saling lepas.
+    Kita mengetahui bahwa <m>U'</m> dan <m>V'</m> buka dalam <m>A</m> dan
+    <m>A = U' \cup V'</m> dengan <m>U' \cap V' = \emptyset</m>.
+    Jadi, untuk menunjukkan bahwa suatu subhimpunan dari ruang topologi <m>X</m> tidak terhubung,
+    contoh ini mengisyaratkan bahwa cukup untuk menemukan himpunan buka takkosong <m>U</m> dan <m>V</m> dalam <m>X</m> dengan
+    <m>U \cap V \cap A = \emptyset</m> dan <m>A \subseteq (U \cup V)</m>.
+    Perhatikan bahwa <m>U \cap V = \emptyset</m> tidak perlu berlaku.
+    Fakta bahwa cara ini berlaku secara umum merupakan hasil teorema berikut.
   </p>
 
   <theorem xml:id="thm_conn_subset">
     <statement>
       <p>
-        Let <m>X</m> be a topological space.
-        A subset <m>A</m> of <m>X</m> is disconnected if and only if there exist open sets <m>U</m> and <m>V</m> in <m>X</m> with
+        Misalkan <m>X</m> suatu ruang topologi.
+        Suatu subhimpunan <m>A</m> dari <m>X</m> terputus jika dan hanya jika terdapat himpunan buka <m>U</m> dan <m>V</m> dalam <m>X</m> dengan
         <ul>
           <li>
             <p>
@@ -262,7 +262,7 @@
           </li>
           <li>
             <p>
-              <m>V \cap A \neq \emptyset</m>, and
+              <m>V \cap A \neq \emptyset</m>, dan
             </p>
           </li>
           <li>
@@ -276,62 +276,62 @@
   
   <proof>
     <p>
-      Let <m>X</m> be a topological space,
-      and let <m>A</m> be a subset of <m>X</m>.
-      We first assume that <m>A</m> is disconnected and show that there are open sets <m>U</m> and <m>V</m> in <m>X</m> that satisfy the given conditions.
-      Since <m>A</m> is disconnected,
-      there are nonempty open sets <m>U'</m> and <m>V'</m> in <m>A</m> such that
-      <m>U' \cup V' = A</m> and <m>U' \cap V' = \emptyset</m>.
-      Since <m>U'</m> and <m>V'</m> are open in <m>A</m>,
-      there exist open sets <m>U</m> and <m>V</m> in <m>X</m> so that
-      <m>U' = U \cap A</m> and <m>V' = V \cap A</m>.
-      Now
+      Misalkan <m>X</m> suatu ruang topologi,
+      dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m>.
+      Pertama-tama kita mengasumsikan bahwa <m>A</m> terputus dan menunjukkan bahwa terdapat himpunan buka <m>U</m> dan <m>V</m> dalam <m>X</m> yang memenuhi syarat-syarat yang diberikan.
+      Karena <m>A</m> terputus,
+      terdapat himpunan buka takkosong <m>U'</m> dan <m>V'</m> dalam <m>A</m> sedemikian sehingga
+      <m>U' \cup V' = A</m> dan <m>U' \cap V' = \emptyset</m>.
+      Karena <m>U'</m> dan <m>V'</m> buka dalam <m>A</m>,
+      terdapat himpunan buka <m>U</m> dan <m>V</m> dalam <m>X</m> sedemikian sehingga
+      <m>U' = U \cap A</m> dan <m>V' = V \cap A</m>.
+      Sekarang
       <me>
         A = U' \cup V' = (U \cap A) \cup (V \cap A) = (U \cup V) \cap A
       </me>,
-      and so <m>A \subseteq U \cup V</m>.
-      By construction,
-      <m>U \cap A = U'</m> and <m>V \cap A = V'</m> are not empty.
-      Finally,
+      sehingga <m>A \subseteq U \cup V</m>.
+      Berdasarkan konstruksi,
+      <m>U \cap A = U'</m> dan <m>V \cap A = V'</m> tidak kosong.
+      Terakhir,
       <me>
         U \cap V \cap A = (U \cap A) \cap (V \cap A) = U' \cap V' = \emptyset
       </me>.
     </p>
     <p>
-      So we have found sets <m>U</m> and <m>V</m> that satisfy the conditions of our theorem.
+      Jadi, kita telah menemukan himpunan <m>U</m> dan <m>V</m> yang memenuhi syarat-syarat teorema kita.
     </p>
     <p>
-      The proof of the reverse implication is left to the next activity.
+      Pembuktian implikasi sebaliknya diserahkan kepada kegiatan berikut.
     </p>
   </proof>
   </theorem>
 
   <activity>
     <p>
-      Let <m>X</m> be a topological space,
-      and let <m>A</m> be a subset of <m>X</m>.
-      Assume that there exist open sets <m>U</m> and <m>V</m> in <m>X</m> with <m>A \subseteq U \cup V</m>,
+      Misalkan <m>X</m> suatu ruang topologi,
+      dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m>.
+      Asumsikan bahwa terdapat himpunan buka <m>U</m> dan <m>V</m> dalam <m>X</m> dengan <m>A \subseteq U \cup V</m>,
       <m>U \cap A \neq \emptyset</m>,
       <m>V \cap A \neq \emptyset</m>,
-      and <m>U \cap V \cap A = \emptyset</m>.
-      Prove that <m>A</m> is disconnected.
+      dan <m>U \cap V \cap A = \emptyset</m>.
+      Buktikan bahwa <m>A</m> terputus.
     </p>
   </activity>
 
   <p>
-    The conditions in <xref ref="thm_conn_subset"/>
-    provide a convenient way to show that a set is disconnected,
-    and so any pair of sets <m>U</m> and <m>V</m> that satisfy the conditions of <xref ref="thm_conn_subset"/> is given a special name.
+    Syarat-syarat dalam <xref ref="thm_conn_subset"/>
+    menyediakan cara yang mudah untuk menunjukkan bahwa suatu himpunan terputus,
+    sehingga setiap pasangan himpunan <m>U</m> dan <m>V</m> yang memenuhi syarat-syarat <xref ref="thm_conn_subset"/> diberi nama khusus.
   </p>
 
   <definition>
-    <idx><h>separation</h></idx>
+    <idx><h>pemisahan</h></idx>
     <statement>
       <p>
-        Let <m>X</m> be a topological space,
-        and let <m>A</m> be a subset of <m>X</m>.
-        A <term>separation</term>
-        of <m>A</m> is a pair of nonempty open subsets <m>U</m> and <m>V</m> of <m>X</m> such that
+        Misalkan <m>X</m> suatu ruang topologi,
+        dan misalkan <m>A</m> suatu subhimpunan dari <m>X</m>.
+        Suatu <term>pemisahan</term>
+        dari <m>A</m> adalah pasangan subhimpunan buka takkosong <m>U</m> dan <m>V</m> dari <m>X</m> sedemikian sehingga
         <ul>
           <li>
             <p>
@@ -345,7 +345,7 @@
           </li>
           <li>
             <p>
-              <m>V \cap A \neq \emptyset</m>, and
+              <m>V \cap A \neq \emptyset</m>, dan
             </p>
           </li>
           <li>
@@ -359,8 +359,8 @@
   </definition>
 
   <p>
-    If <m>X</m> is a disconnected topological space,
-    then a separation of <m>X</m> is a pair <m>U</m>,
-    <m>V</m> of disjoint nonempty open sets such that <m>U \cup V = X</m>.
+    Jika <m>X</m> merupakan ruang topologi yang terputus,
+    maka suatu pemisahan dari <m>X</m> adalah pasangan <m>U</m>,
+    <m>V</m> berupa himpunan buka takkosong yang saling lepas sedemikian sehingga <m>U \cup V = X</m>.
   </p>
 </section>

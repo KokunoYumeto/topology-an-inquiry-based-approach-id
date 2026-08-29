@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id-ID" dir="ltr" xml:lang="id-ID">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="external/o003-favicon.svg" type="image/svg+xml"></head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Untuk <span class="process-math">\(x=1\text{,}\)</span> berlaku <span class="process-math">\(f_n(1)=1\)</span> untuk semua <span class="process-math">\(n\text{.}\)</span> Jika <span class="process-math">\(x=0\text{,}\)</span> berlaku <span class="process-math">\(f_n(0)=0\text{.}\)</span> Jika <span class="process-math">\(0\lt x\lt1\text{,}\)</span> tetapkan <span class="process-math">\(r=1/x\gt1\text{.}\)</span> Pertidaksamaan Bernoulli memberi <span class="process-math">\(r^n\geq1+n(r-1)\text{,}\)</span> sehingga</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0\leq x^n=\frac1{r^n}
+\leq\frac1{1+n(r-1)}\longrightarrow0.
+\end{equation*}
+</div>
+<div class="para">Jadi limit titik demi titiknya adalah</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\begin{cases}
+0 \amp \text{jika }0\leq x\lt1,\\
+1 \amp \text{jika }x=1.
+\end{cases}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Untuk <span class="process-math">\(0\leq x\lt1\text{,}\)</span> selisihnya adalah <span class="process-math">\(|f_n(x)-f(x)|=x^n\lt1\text{,}\)</span> sedangkan pada <span class="process-math">\(x=1\)</span> selisihnya nol. Meskipun nilai <span class="process-math">\(1\)</span> tidak dicapai oleh selisih tersebut, nilai itu adalah supremumnya. Memang, jika <span class="process-math">\(0\lt c\lt1\text{,}\)</span> pilih <span class="process-math">\(x=((1+c)/2)^{1/n}\text{.}\)</span> Maka <span class="process-math">\(x\lt1\)</span> dan <span class="process-math">\(x^n=(1+c)/2\gt c\text{.}\)</span> Jadi nilai selisih dapat melampaui setiap <span class="process-math">\(c\lt1\text{,}\)</span> sementara selalu dibatasi di atas oleh <span class="process-math">\(1\text{.}\)</span> Dengan demikian,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_\infty(f_n,f)=1
+\end{equation*}
+</div>
+<div class="para">untuk setiap <span class="process-math">\(n\text{.}\)</span> Jarak ini tidak menuju nol, sehingga <span class="process-math">\((f_n)\)</span> tidak konvergen ke <span class="process-math">\(f\)</span> secara seragam.</div>
+</div> <div class="para logical">
+<div class="para">Untuk <span class="process-math">\(g_n(x)=x/n\text{,}\)</span> karena <span class="process-math">\(0\leq x\leq1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_\infty(g_n,0)
+=\sup_{x\in[0,1]}\left|\frac{x}{n}\right|
+=\frac1n\longrightarrow0.
+\end{equation*}
+</div>
+<div class="para">Jadi <span class="process-math">\(g_n\to0\)</span> dalam metrik supremum. Secara umum, jika <span class="process-math">\(d_\infty(f_n,f)\to0\)</span> dan <span class="process-math">\(x\in[0,1]\)</span> ditetapkan, maka</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|f_n(x)-f(x)|\leq
+\sup_{t\in[0,1]}|f_n(t)-f(t)|=d_\infty(f_n,f)\longrightarrow0.
+\end{equation*}
+</div>
+<div class="para">Maka <span class="process-math">\(f_n(x)\to f(x)\)</span> pada setiap titik <span class="process-math">\(x\text{.}\)</span> Contoh <span class="process-math">\(x^n\)</span> menunjukkan bahwa implikasi sebaliknya tidak berlaku.</div>
+</div>
+</div></body>
+</html>

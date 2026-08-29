@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-ch20-exercise-guides-c" xml:lang="id-ID">
+  <title>Panduan Latihan Bab 20, Bagian C</title>
+  <p>Bagian ini menutup lima prompt benar-salah terakhir dengan perhatian khusus pada faktor kosong.</p>
+
+  <exercise xml:id="o003-c90-ch20-exer-c-01">
+    <title>Produk batas termuat dalam batas produk</title>
+    <statement><p>Nilai kebenaran <m>\partial A_1\times\partial A_2\subseteq\partial(A_1\times A_2)</m>.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-c-01-hint"><p>Setiap lingkungan kotak titik pada ruas kiri harus memotong produk dan komplemennya.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-c-01-answer"><p>Benar.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-c-01-solution"><p>Ambil <m>(x_1,x_2)\in\partial A_1\times\partial A_2</m> dan lingkungan basis <m>U_1\times U_2</m>. Karena <m>x_i\in\overline{A_i}</m>, pilih <m>a_i\in U_i\cap A_i</m>; pasangan <m>(a_1,a_2)</m> memotong produk. Karena <m>x_1\in\partial A_1</m>, pilih <m>b_1\in U_1\setminus A_1</m> dan sembarang <m>u_2\in U_2</m>; pasangan <m>(b_1,u_2)</m> berada di luar produk. Jadi setiap lingkungan memotong kedua sisi. <em>Rubrik:</em> dua perpotongan lingkungan harus dibangun.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-c-02">
+    <title>Hasil kali dua himpunan buka</title>
+    <statement><p>Nilai kebenaran: jika <m>O_1,O_2</m> buka, maka <m>O_1\times O_2</m> buka dalam produk.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-c-02-hint"><p>Ini adalah bentuk elemen basis yang mendefinisikan topologi hasil kali.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-c-02-answer"><p>Benar.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-c-02-solution"><p>Menurut definisi basis produk, setiap hasil kali satu himpunan buka dari faktor pertama dan satu himpunan buka dari faktor kedua adalah elemen basis. Setiap elemen basis terbuka dalam topologi yang dibangkitkannya. <em>Rubrik:</em> alasan harus merujuk langsung pada definisi basis, bukan intuisi geometris saja.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-c-03">
+    <title>Apakah keterbukaan produk memaksa keterbukaan faktor?</title>
+    <statement><p>Nilai kebenaran: jika <m>O_1\times O_2</m> buka, maka kedua faktor buka.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-c-03-hint"><p>Periksa produk kosong sebelum memakai proyeksi buka.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-c-03-answer"><p>Salah sebagaimana ditulis. Ambil <m>O_1=\{0\}</m> dalam <m>\R</m> biasa dan <m>O_2=\emptyset</m>; produknya kosong dan buka, tetapi <m>O_1</m> tidak buka. Jika produknya takkosong, kedua faktor memang buka.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-c-03-solution"><p>Contoh pada jawaban membantah pernyataan universal. Untuk versi takkosong, <m>O_1=\pi_1(O_1\times O_2)</m> dan <m>O_2=\pi_2(O_1\times O_2)</m>. Karena proyeksi produk adalah pemetaan buka, kedua citra buka. <em>Rubrik:</em> jawaban lengkap memberi contoh tandingan dan menjelaskan tepat syarat yang memulihkan pernyataan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-c-04">
+    <title>Hasil kali dua himpunan tertutup</title>
+    <statement><p>Nilai kebenaran: jika <m>C_1,C_2</m> tertutup, maka <m>C_1\times C_2</m> tertutup.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-c-04-hint"><p>Gunakan rumus komplemen produk sebagai gabungan dua strip terbuka.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-c-04-answer"><p>Benar.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-c-04-solution"><p>Komplemennya adalah <m>((X_1\setminus C_1)\times X_2)\cup(X_1\times(X_2\setminus C_2))</m>. Kedua komplemen faktor buka, sehingga kedua strip merupakan elemen basis terbuka; gabungannya terbuka. Maka <m>C_1\times C_2</m> tertutup. <em>Rubrik:</em> rumus komplemen dan keterbukaan kedua strip harus ditunjukkan.</p></solution>
+  </exercise>
+
+  <exercise xml:id="o003-c90-ch20-exer-c-05">
+    <title>Apakah ketertutupan produk memaksa ketertutupan faktor?</title>
+    <statement><p>Nilai kebenaran: jika <m>C_1\times C_2</m> tertutup, maka kedua faktor tertutup.</p></statement>
+    <hint xml:id="o003-c90-ch20-exer-c-05-hint"><p>Sekali lagi periksa faktor kosong; untuk produk takkosong gunakan irisan dengan satu serat.</p></hint>
+    <answer xml:id="o003-c90-ch20-exer-c-05-answer"><p>Salah sebagaimana ditulis. Ambil <m>C_1=(0,1)</m> dalam <m>\R</m> dan <m>C_2=\emptyset</m>; produknya kosong dan tertutup, tetapi <m>C_1</m> tidak tertutup. Jika kedua faktor takkosong, pernyataannya benar.</p></answer>
+    <solution xml:id="o003-c90-ch20-exer-c-05-solution"><p>Contoh tandingan membuktikan kegagalan umum. Jika pilih <m>c_2\in C_2</m>, peta kontinu <m>i_1:X_1\to X_1\times X_2</m>, <m>i_1(x)=(x,c_2)</m>, memiliki prapeta <m>i_1^{-1}(C_1\times C_2)=C_1</m>; karena produk tertutup, <m>C_1</m> tertutup. Dengan memilih <m>c_1\in C_1</m> diperoleh ketertutupan <m>C_2</m>. <em>Rubrik:</em> solusi harus membedakan kasus kosong dan takkosong serta membuktikan versi benar dengan prapeta kontinu.</p></solution>
+  </exercise>
+</section>

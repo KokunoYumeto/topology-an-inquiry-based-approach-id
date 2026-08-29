@@ -1,0 +1,623 @@
+<section xml:id="o003-c90-completion-separation" xml:lang="id-ID">
+  <title>Penyempurnaan Aksioma Separasi</title>
+
+  <introduction>
+    <p>
+      Bab tentang himpunan tertutup pada teks utama memperkenalkan ruang
+      <m>T_1</m>, Hausdorff (<m>T_2</m>), <m>T_3</m>, dan <m>T_4</m>.
+      Modul ini menambahkan tingkat <m>T_0</m>, praurutan spesialisasi,
+      kuosien Kolmogorov, dan regularitas lengkap. Modul ini juga menutup peta
+      implikasi dengan saksi eksplisit bahwa setiap panah balik dapat gagal.
+    </p>
+  </introduction>
+
+  <subsection xml:id="o003-c90-completion-t0">
+    <title>Ruang Kolmogorov dan titik yang dapat dibedakan</title>
+
+    <definition xml:id="o003-c90-def-t0">
+      <statement>
+        <p>
+          Ruang topologi <m>X</m> disebut <term>ruang Kolmogorov</term> atau
+          <term>ruang <m>T_0</m></term> jika untuk setiap dua titik berbeda
+          <m>x,y\in X</m>, terdapat himpunan terbuka yang memuat tepat salah
+          satu dari <m>x</m> dan <m>y</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="o003-c90-def-topologically-indistinguishable">
+      <statement>
+        <p>
+          Dua titik <m>x,y\in X</m> disebut
+          <term>tak terbedakan secara topologis</term> jika setiap himpunan
+          terbuka memuat <m>x</m> tepat ketika himpunan itu memuat <m>y</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="o003-c90-prop-t0-equivalences">
+      <statement>
+        <p>
+          Untuk ruang topologi <m>X</m>, pernyataan berikut ekuivalen.
+          <ol>
+          <li><p><m>X</m> bersifat <m>T_0</m>.</p></li>
+          <li><p>Tidak ada dua titik berbeda yang tak terbedakan secara topologis.</p></li>
+          <li><p>Jika <m>x\ne y</m>, maka <m>\overline{\{x\}}\ne\overline{\{y\}}</m>.</p></li>
+          <li>
+            <p>
+              Jika <m>x\ne y</m>, maka sedikitnya satu dari
+              <m>x\notin\overline{\{y\}}</m> atau
+              <m>y\notin\overline{\{x\}}</m> berlaku.
+            </p>
+          </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Pernyataan pertama dan kedua hanyalah dua cara mengucapkan definisi.
+          Jika <m>x</m> dan <m>y</m> tak terbedakan, maka untuk setiap
+          <m>z\in X</m>, setiap lingkungan buka <m>z</m> memuat <m>x</m>
+          tepat ketika lingkungan itu memuat <m>y</m>. Karena itu
+          <m>z\in\overline{\{x\}}</m> tepat ketika
+          <m>z\in\overline{\{y\}}</m>, sehingga kedua penutup sama.
+        </p>
+        <p>
+          Sebaliknya, jika kedua penutup sama, maka
+          <m>x\in\overline{\{y\}}</m> dan
+          <m>y\in\overline{\{x\}}</m>. Setiap himpunan terbuka yang memuat
+          <m>x</m> harus memuat <m>y</m>, dan sebaliknya; jadi kedua titik tak
+          terbedakan. Ini membuktikan ekuivalensi tiga pernyataan pertama.
+          Pernyataan keempat adalah bentuk negasi dari keberadaan kedua
+          keanggotaan penutup tersebut sekaligus.
+        </p>
+      </proof>
+    </proposition>
+
+    <example xml:id="o003-c90-example-non-t0">
+      <statement>
+        <p>
+          Jika <m>X</m> mempunyai sedikitnya dua titik dan diberi topologi
+          indiskret <m>\{\emptyset,X\}</m>, setiap dua titik berbeda tak
+          terbedakan. Jadi ruang ini bukan <m>T_0</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-sierpinski">
+      <statement>
+        <p>
+          Pada himpunan <m>S=\{0,1\}</m>, ambil
+          <m>\tau=\{\emptyset,\{1\},S\}</m>. Himpunan buka <m>\{1\}</m>
+          membedakan kedua titik, sehingga <m>S</m> bersifat <m>T_0</m>.
+          Akan tetapi, tidak ada himpunan buka yang memuat <m>0</m> tanpa
+          memuat <m>1</m>. Jadi <m>S</m> bukan <m>T_1</m>. Ruang ini disebut
+          <term>ruang Sierpiński</term>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-specialization">
+    <title>Praurutan spesialisasi dan kuosien Kolmogorov</title>
+
+    <definition xml:id="o003-c90-def-specialization-preorder">
+      <statement>
+        <p>
+          Pada ruang topologi <m>X</m>, definisikan relasi
+          <m>\preceq</m> dengan
+          <me>x\preceq y\quad\Longleftrightarrow\quad x\in\overline{\{y\}}.</me>
+          Secara ekuivalen, <m>x\preceq y</m> jika setiap himpunan terbuka
+          yang memuat <m>x</m> juga memuat <m>y</m>. Relasi ini disebut
+          <term>praurutan spesialisasi</term>. Konvensi arah ini dipertahankan
+          secara konsisten di seluruh lampiran.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="o003-c90-thm-specialization-order">
+      <statement>
+        <p>
+          Praurutan spesialisasi selalu refleksif dan transitif. Semua himpunan
+          terbuka merupakan himpunan naik terhadap <m>\preceq</m>. Praurutan
+          tersebut antisimetris, sehingga merupakan urutan parsial, jika dan
+          hanya jika <m>X</m> bersifat <m>T_0</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Setiap lingkungan buka <m>x</m> memuat <m>x</m>, sehingga
+          <m>x\preceq x</m>. Jika <m>x\preceq y</m> dan <m>y\preceq z</m>,
+          setiap himpunan buka yang memuat <m>x</m> memuat <m>y</m>, lalu
+          memuat <m>z</m>; jadi <m>x\preceq z</m>. Jika <m>U</m> terbuka,
+          <m>x\in U</m>, dan <m>x\preceq y</m>, definisi langsung memberi
+          <m>y\in U</m>.
+        </p>
+        <p>
+          Relasi <m>x\preceq y</m> dan <m>y\preceq x</m> sekaligus berarti
+          <m>x</m> dan <m>y</m> mempunyai himpunan terbuka yang persis sama.
+          Jadi antisimetris tepat ketika titik-titik berbeda selalu dapat
+          dibedakan oleh suatu himpunan terbuka, yakni tepat ketika
+          <m>X</m> bersifat <m>T_0</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark xml:id="o003-c90-remark-open-upper-not-converse">
+      <p>
+        Setiap himpunan buka memang naik, tetapi tidak setiap himpunan naik
+        harus terbuka. Konvers tersebut berlaku untuk ruang Aleksandrov dan
+        tidak boleh digunakan pada ruang topologi sebarang.
+      </p>
+    </remark>
+
+    <theorem xml:id="o003-c90-thm-kolmogorov-quotient">
+      <statement>
+        <p>
+          Definisikan <m>x\sim y</m> ketika <m>x</m> dan <m>y</m> tak
+          terbedakan secara topologis. Beri <m>X/{\sim}</m> topologi kuosien
+          melalui proyeksi <m>q:X\to X/{\sim}</m>. Maka
+          <m>X/{\sim}</m> bersifat <m>T_0</m>. Selain itu, setiap pemetaan
+          kontinu <m>f:X\to Y</m> ke ruang <m>T_0</m> memfaktor secara tunggal
+          sebagai <m>f=\bar f\circ q</m> dengan
+          <m>\bar f:X/{\sim}\to Y</m> kontinu.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Relasi tak terbedakan adalah relasi ekuivalensi. Jika
+          <m>[x]\ne[y]</m>, suatu himpunan terbuka <m>U</m> memuat tepat salah
+          satu dari <m>x,y</m>. Himpunan <m>U</m> jenuh terhadap
+          <m>\sim</m>, sehingga <m>q^{-1}(q(U))=U</m> dan <m>q(U)</m> terbuka
+          dalam topologi kuosien. Jadi kelas <m>[x]</m> dan <m>[y]</m> dapat
+          dibedakan, dan ruang kuosien bersifat <m>T_0</m>.
+        </p>
+        <p>
+          Jika <m>x\sim y</m> dan <m>f(x)\ne f(y)</m>, sifat <m>T_0</m> pada
+          <m>Y</m> memberi himpunan buka yang memuat tepat salah satu dari
+          <m>f(x),f(y)</m>. Prapetanya membedakan <m>x</m> dan <m>y</m>, suatu
+          kontradiksi. Maka <m>f</m> konstan pada setiap kelas, sehingga
+          <m>\bar f([x])=f(x)</m> terdefinisi baik dan unik. Karena
+          <m>f=\bar f\circ q</m> kontinu dan <m>q</m> adalah pemetaan kuosien,
+          <m>\bar f</m> kontinu.
+        </p>
+      </proof>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-separation-map">
+    <title>Peta lengkap dari <m>T_0</m> hingga <m>T_4</m></title>
+
+    <definition xml:id="o003-c90-def-complete-regularity">
+      <statement>
+        <p>
+          Ruang <m>X</m> disebut <term>reguler lengkap</term> jika, untuk
+          setiap himpunan tertutup <m>F\subseteq X</m> dan
+          <m>x\notin F</m>, terdapat fungsi kontinu
+          <m>f:X\to[0,1]</m> dengan <m>f(x)=0</m> dan <m>f(F)=\{1\}</m>.
+          Ruang reguler lengkap yang juga bersifat <m>T_1</m> disebut
+          <term>ruang Tychonoff</term> atau ruang <m>T_{3\frac12}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="o003-c90-thm-separation-implication-map">
+      <statement>
+        <p>
+          Dengan konvensi definisi pada teks utama, berlaku rantai
+          <me>
+            T_4\Longrightarrow\text{Tychonoff}
+            \Longrightarrow T_3\Longrightarrow T_2
+            \Longrightarrow T_1\Longrightarrow T_0.
+          </me>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika <m>X</m> normal dan <m>T_1</m>, Lema Urysohn memisahkan titik
+          tertutup <m>\{x\}</m> dari himpunan tertutup <m>F</m> dengan fungsi
+          kontinu ke <m>[0,1]</m>; jadi <m>T_4</m> mengakibatkan Tychonoff.
+          Jika fungsi <m>f</m> memisahkan <m>x</m> dari <m>F</m>, maka
+          <m>f^{-1}([0,1/3))</m> dan <m>f^{-1}((2/3,1])</m> merupakan
+          lingkungan buka saling lepas bagi <m>x</m> dan <m>F</m>. Karena itu
+          Tychonoff mengakibatkan <m>T_3</m>.
+        </p>
+        <p>
+          Dalam ruang <m>T_3</m>, himpunan satu titik tertutup. Untuk
+          <m>x\ne y</m>, regularitas memisahkan <m>x</m> dari
+          <m>\{y\}</m>, sehingga ruang itu Hausdorff. Dalam ruang Hausdorff,
+          untuk setiap <m>x\ne y</m> ada lingkungan <m>x</m> yang tidak memuat
+          <m>y</m>; gabungan lingkungan-lingkungan tersebut menunjukkan bahwa
+          <m>X\setminus\{y\}</m> terbuka. Jadi setiap himpunan satu titik
+          tertutup dan ruang itu <m>T_1</m>. Akhirnya, definisi <m>T_1</m>
+          langsung memberi himpunan buka yang membedakan setiap dua titik,
+          sehingga ruang itu <m>T_0</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="o003-c90-thm-urysohn-bridge">
+      <statement>
+        <p>
+          <term>Lema Urysohn.</term> Jika <m>A</m> dan <m>B</m> merupakan
+          himpunan tertutup saling lepas dalam ruang normal <m>X</m>, terdapat
+          fungsi kontinu <m>f:X\to[0,1]</m> dengan <m>f(A)=\{0\}</m> dan
+          <m>f(B)=\{1\}</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Normalitas ekuivalen dengan sifat berikut: jika <m>F</m> tertutup dan
+          <m>G</m> terbuka dengan <m>F\subseteq G</m>, terdapat himpunan buka
+          <m>U</m> sehingga
+          <m>F\subseteq U\subseteq\overline U\subseteq G</m>. Terapkan sifat
+          ini secara rekursif pada bilangan diadik
+          <m>D=\{k/2^n:0\le k\le2^n\}</m> untuk memilih himpunan buka
+          <m>U_r</m> sedemikian sehingga <m>A\subseteq U_0</m>,
+          <m>\overline{U_1}\subseteq X\setminus B</m>, dan
+          <m>\overline{U_r}\subseteq U_s</m> bila <m>r&lt;s</m>.
+        </p>
+        <p>
+          Definisikan
+          <m>f(x)=\inf\{r\in D:x\in U_r\}</m>, dengan nilai <m>1</m> jika
+          himpunan di kanan kosong. Susunan penutup di atas memberi
+          <m>f^{-1}([0,a))=\bigcup_{r&lt;a}U_r</m> dan
+          <m>f^{-1}((a,1])=\bigcup_{r&gt;a}(X\setminus\overline{U_r})</m>.
+          Kedua jenis prapeta itu terbuka, sehingga <m>f</m> kontinu. Konstruksi
+          memberi nilai <m>0</m> pada <m>A</m> dan <m>1</m> pada <m>B</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="o003-c90-example-strictness-map">
+      <statement>
+        <p>
+          Setiap implikasi balik pada rantai di atas dapat gagal.
+          <ol>
+          <li>
+            <p>
+              Ruang indiskret dengan sedikitnya dua titik bukan <m>T_0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ruang Sierpiński bersifat <m>T_0</m> tetapi bukan <m>T_1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Himpunan tak hingga dengan topologi komplemen berhingga bersifat
+              <m>T_1</m> tetapi bukan Hausdorff: setiap himpunan satu titik
+              tertutup, sedangkan dua himpunan buka tak kosong selalu
+              beririsan.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ruang <m>\mathbb R_K</m> dari latihan contoh-balik pada Bagian
+              <em>Aksioma Separasi</em> di bab himpunan tertutup bersifat
+              Hausdorff tetapi tidak reguler, sehingga <m>T_2</m> tidak
+              mengakibatkan <m>T_3</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bidang Niemytzki yang dibangun pada bagian sumber yang sama
+              bersifat Tychonoff, tetapi tidak normal. Karena itu bahkan
+              Tychonoff tidak mengakibatkan <m>T_4</m>. Secara khusus, ruang
+              ini juga menjadi saksi bahwa <m>T_3</m> tidak mengakibatkan
+              <m>T_4</m>.
+            </p>
+          </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <proposition xml:id="o003-c90-prop-k-topology-not-regular">
+      <statement>
+        <p>
+          Misalkan <m>K=\{1/n:n\in\mathbb Z^+\}</m>, dan beri
+          <m>\mathbb R</m> basis yang terdiri atas semua interval buka biasa
+          serta semua himpunan <m>(a,b)\setminus K</m>. Ruang
+          <m>\mathbb R_K</m> bersifat Hausdorff tetapi tidak reguler.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Topologi ini lebih halus daripada topologi Euklides, jadi interval
+          buka biasa masih dapat memisahkan dua titik; akibatnya ruang itu
+          Hausdorff. Himpunan <m>K</m> tertutup karena
+          <m>\mathbb R\setminus K</m> terbuka, dan <m>0\notin K</m>.
+        </p>
+        <p>
+          Andaikan lingkungan buka saling lepas <m>U</m> dari <m>0</m> dan
+          <m>V</m> dari <m>K</m> ada. Untuk suatu <m>\varepsilon&gt;0</m>,
+          <m>(-\varepsilon,\varepsilon)\setminus K\subseteq U</m>. Pilih
+          <m>n</m> sehingga <m>1/n&lt;\varepsilon/2</m>. Karena <m>1/n\in V</m>
+          dan setiap unsur basis yang memuat <m>1/n</m> harus memuat suatu
+          interval buka biasa di sekitar <m>1/n</m>, himpunan <m>V</m> memuat
+          titik di <m>(0,\varepsilon)\setminus K</m>. Titik itu juga berada
+          dalam <m>U</m>, bertentangan dengan keterpisahan. Jadi ruang tersebut
+          tidak reguler.
+        </p>
+      </proof>
+    </proposition>
+
+    <proposition xml:id="o003-c90-prop-niemytzki-not-normal">
+      <statement>
+        <p>
+          Bidang Niemytzki bersifat Tychonoff tetapi tidak normal.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Basis berupa cakram Euklides yang terletak di setengah bidang atas,
+          bersama cakram singgung yang ditambah titik singgungnya pada garis
+          batas, memisahkan titik dan memiliki sifat penyusutan penutup:
+          setiap lingkungan basis memuat lingkungan basis yang penutupnya
+          termuat dalam lingkungan semula. Ruang itu Hausdorff, sehingga sifat
+          penyusutan ini memberi regularitas. Lebih kuat lagi, fungsi jarak
+          Euklides yang dipotong pada cakram-cakram basis memberikan pemisahan
+          kontinu titik dari himpunan tertutup; jadi ruang itu Tychonoff.
+        </p>
+        <p>
+          Untuk nonnormalitas, garis batas <m>L</m> merupakan subruang tertutup,
+          diskret, dan mempunyai kardinalitas <m>\mathfrak c</m>. Bidang
+          Niemytzki separabel karena titik-titik berkoordinat rasional dengan
+          koordinat kedua positif membentuk himpunan padat terhitung. Jika
+          ruang itu normal, setiap pemisahan <m>L=A\sqcup(L\setminus A)</m>
+          akan, melalui Lema Urysohn, menghasilkan fungsi kontinu yang bernilai
+          <m>0</m> pada <m>A</m> dan <m>1</m> pada komplemennya di <m>L</m>.
+          Dengan demikian akan ada sedikitnya
+          <m>2^{\mathfrak c}</m> fungsi kontinu ke <m>[0,1]</m>.
+        </p>
+        <p>
+          Namun, fungsi kontinu pada ruang separabel ditentukan oleh nilainya
+          pada suatu himpunan padat terhitung. Banyaknya barisan bilangan real
+          hanya <m>\mathfrak c</m>, sehingga terdapat paling banyak
+          <m>\mathfrak c</m> fungsi kontinu bernilai real. Ketaksamaan Cantor
+          <m>2^{\mathfrak c}&gt;\mathfrak c</m> menghasilkan kontradiksi.
+          Jadi bidang Niemytzki tidak normal.
+        </p>
+      </proof>
+    </proposition>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-separation-mastery">
+    <title>Latihan Penguasaan dengan Dukungan Bertahap</title>
+
+    <exercise xml:id="o003-c90-completion-separation-ex-01">
+      <title>Ruang Sierpiński dan praurutan spesialisasi</title>
+      <statement>
+        <p>
+          Untuk <m>S=\{0,1\}</m> dengan
+          <m>\tau=\{\emptyset,\{1\},S\}</m>, tentukan semua pasangan
+          <m>x\preceq y</m>. Verifikasi langsung bahwa <m>S</m> bersifat
+          <m>T_0</m> tetapi bukan <m>T_1</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-separation-ex-01-hint">
+        <p>
+          Daftarkan lingkungan buka setiap titik. Ingat bahwa
+          <m>x\preceq y</m> berarti setiap lingkungan buka <m>x</m> memuat
+          <m>y</m>.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-separation-ex-01-answer">
+        <p>
+          Relasinya adalah <m>0\preceq0</m>, <m>1\preceq1</m>, dan
+          <m>0\preceq1</m>; tetapi <m>1\npreceq0</m>.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-separation-ex-01-solution">
+        <p>
+          Satu-satunya lingkungan buka <m>0</m> adalah <m>S</m>, yang memuat
+          <m>1</m>; jadi <m>0\preceq1</m>. Himpunan <m>\{1\}</m> adalah
+          lingkungan buka <m>1</m> yang tidak memuat <m>0</m>, sehingga
+          <m>1\npreceq0</m>. Refleksivitas memberi dua pasangan diagonal.
+          Himpunan <m>\{1\}</m> membedakan kedua titik, jadi ruang itu
+          <m>T_0</m>. Akan tetapi, tidak ada himpunan buka yang memuat
+          <m>0</m> tanpa memuat <m>1</m>, jadi syarat <m>T_1</m> gagal.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-separation-ex-02">
+      <title>Penutup titik dan sifat <m>T_0</m></title>
+      <statement>
+        <p>
+          Buktikan tanpa memakai
+          <xref ref="o003-c90-prop-t0-equivalences"/> bahwa ruang <m>X</m>
+          bersifat <m>T_0</m> jika dan hanya jika pemetaan
+          <m>x\mapsto\overline{\{x\}}</m> bersifat injektif.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-separation-ex-02-hint">
+        <p>
+          Jika dua penutup sama, uji keanggotaan <m>x</m> dan <m>y</m> pada
+          kedua penutup. Untuk arah sebaliknya, terjemahkan kegagalan
+          <m>T_0</m> sebagai kesamaan seluruh lingkungan buka.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-separation-ex-02-answer">
+        <p>
+          Kesamaan penutup dua titik tepat memaksa kedua titik mempunyai
+          lingkungan buka yang sama; injektivitas karena itu ekuivalen dengan
+          kemampuan membedakan titik-titik berbeda.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-separation-ex-02-solution">
+        <p>
+          Andaikan <m>\overline{\{x\}}=\overline{\{y\}}</m>. Karena
+          <m>x\in\overline{\{x\}}</m>, kita memperoleh
+          <m>x\in\overline{\{y\}}</m>; maka setiap lingkungan buka <m>x</m>
+          memuat <m>y</m>. Dengan menukar peran titik, setiap lingkungan buka
+          <m>y</m> memuat <m>x</m>. Jadi kedua titik tak terbedakan. Dalam
+          ruang <m>T_0</m> ini memaksa <m>x=y</m>, sehingga pemetaan injektif.
+        </p>
+        <p>
+          Sebaliknya, jika <m>X</m> tidak <m>T_0</m>, ada <m>x\ne y</m> yang
+          tak terbedakan. Untuk setiap <m>z</m>, suatu lingkungan buka <m>z</m>
+          memuat <m>x</m> tepat ketika memuat <m>y</m>. Jadi
+          <m>z\in\overline{\{x\}}</m> tepat ketika
+          <m>z\in\overline{\{y\}}</m>, sehingga kedua penutup sama dan
+          pemetaan tidak injektif.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-separation-ex-03">
+      <title>Sifat universal kuosien Kolmogorov</title>
+      <statement>
+        <p>
+          Misalkan <m>q:X\to X/{\sim}</m> adalah kuosien Kolmogorov. Buktikan
+          bahwa untuk setiap ruang <m>T_0</m> <m>Y</m>, komposisi dengan
+          <m>q</m> memberi korespondensi satu-satu antara pemetaan kontinu
+          <m>X/{\sim}\to Y</m> dan pemetaan kontinu <m>X\to Y</m>.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-separation-ex-03-hint">
+        <p>
+          Tunjukkan lebih dahulu bahwa pemetaan kontinu ke ruang <m>T_0</m>
+          harus konstan pada setiap kelas titik yang tak terbedakan.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-separation-ex-03-answer">
+        <p>
+          Setiap <m>f:X\to Y</m> memfaktor secara tunggal melalui <m>q</m>, dan
+          definisi topologi kuosien membuat faktor tersebut kontinu.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-separation-ex-03-solution">
+        <p>
+          Jika <m>x\sim y</m> tetapi <m>f(x)\ne f(y)</m>, sifat <m>T_0</m>
+          memberi himpunan buka di <m>Y</m> yang membedakan kedua citra.
+          Prapetanya membedakan <m>x</m> dan <m>y</m>, sebuah kontradiksi.
+          Karena itu rumus <m>\bar f([x])=f(x)</m> terdefinisi baik.
+          Kesetaraan <m>f=\bar f\circ q</m> dan sifat pemetaan kuosien
+          menunjukkan bahwa <m>\bar f</m> kontinu. Surjektivitas <m>q</m>
+          menjamin keunikan. Sebaliknya, komposisi setiap pemetaan kontinu
+          <m>\bar f</m> dengan <m>q</m> jelas kontinu. Kedua konstruksi saling
+          invers.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-separation-ex-04">
+      <title>Topologi komplemen berhingga</title>
+      <statement>
+        <p>
+          Misalkan <m>X</m> tak hingga dan himpunan buka tak kosongnya adalah
+          semua himpunan dengan komplemen berhingga. Buktikan bahwa <m>X</m>
+          bersifat <m>T_1</m> tetapi bukan Hausdorff.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-separation-ex-04-hint">
+        <p>
+          Periksa komplemen himpunan satu titik. Untuk sifat Hausdorff, hitung
+          komplemen dari irisan dua himpunan buka tak kosong.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-separation-ex-04-answer">
+        <p>
+          Semua himpunan satu titik tertutup, tetapi dua himpunan buka tak
+          kosong tidak pernah saling lepas.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-separation-ex-04-solution">
+        <p>
+          Untuk setiap <m>x\in X</m>, komplemen <m>X\setminus\{x\}</m>
+          terbuka, sehingga <m>\{x\}</m> tertutup. Jadi <m>X</m> bersifat
+          <m>T_1</m>. Jika <m>U,V</m> terbuka dan tak kosong, maka
+          <m>X\setminus(U\cap V)=(X\setminus U)\cup(X\setminus V)</m>
+          berhingga. Karena <m>X</m> tak hingga, <m>U\cap V</m> tidak kosong.
+          Maka tidak ada lingkungan buka saling lepas bagi dua titik berbeda,
+          dan ruang itu bukan Hausdorff.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-separation-ex-05">
+      <title>Dari regularitas lengkap ke regularitas</title>
+      <statement>
+        <p>
+          Misalkan <m>X</m> reguler lengkap. Buktikan bahwa untuk setiap
+          <m>x\notin F</m> dengan <m>F</m> tertutup, terdapat lingkungan buka
+          saling lepas bagi <m>x</m> dan <m>F</m>. Jelaskan mengapa syarat
+          <m>T_1</m> tetap dicantumkan dalam definisi ruang Tychonoff.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-separation-ex-05-hint">
+        <p>
+          Gunakan prapeta <m>[0,1/3)</m> dan <m>(2/3,1]</m> di bawah fungsi
+          pemisah.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-separation-ex-05-answer">
+        <p>
+          Kedua prapeta itu terbuka, saling lepas, dan masing-masing memuat
+          <m>x</m> serta <m>F</m>. Regularitas lengkap sendiri tidak memaksa
+          titik-titik tertutup, sehingga <m>T_1</m> ditambahkan secara terpisah.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-separation-ex-05-solution">
+        <p>
+          Pilih fungsi kontinu <m>f:X\to[0,1]</m> dengan <m>f(x)=0</m> dan
+          <m>f(F)=\{1\}</m>. Dalam topologi subruang pada <m>[0,1]</m>, kedua
+          himpunan <m>[0,1/3)</m> dan <m>(2/3,1]</m> terbuka dan saling lepas.
+          Prapetanya karena itu terbuka dan saling lepas; yang pertama memuat
+          <m>x</m>, sedangkan yang kedua memuat <m>F</m>. Ini adalah
+          regularitas. Ruang indiskret bersifat reguler lengkap secara trivial
+          untuk pasangan titik dan himpunan tertutup yang tersedia, tetapi
+          tidak <m>T_1</m> bila memiliki lebih dari satu titik. Karena itu
+          syarat <m>T_1</m> tidak boleh dihilangkan dari istilah Tychonoff.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-separation-ex-06">
+      <title>Membuktikan seluruh rantai separasi</title>
+      <statement>
+        <p>
+          Buktikan secara langsung tiga implikasi
+          <m>T_3\Rightarrow T_2</m>, <m>T_2\Rightarrow T_1</m>, dan
+          <m>T_1\Rightarrow T_0</m>. Pada setiap langkah, nyatakan tepat di
+          mana hipotesis sebelumnya digunakan.
+        </p>
+      </statement>
+      <hint xml:id="o003-c90-completion-separation-ex-06-hint">
+        <p>
+          Untuk langkah pertama, pisahkan <m>x</m> dari himpunan tertutup
+          <m>\{y\}</m>. Untuk langkah kedua, tulis
+          <m>X\setminus\{y\}</m> sebagai gabungan lingkungan titik-titik lain.
+        </p>
+      </hint>
+      <answer xml:id="o003-c90-completion-separation-ex-06-answer">
+        <p>
+          Syarat <m>T_1</m> di dalam <m>T_3</m> membuat himpunan satu titik
+          tertutup; sifat Hausdorff membuat komplemen setiap titik terbuka; dan
+          sifat <m>T_1</m> langsung memberi himpunan buka pembeda.
+        </p>
+      </answer>
+      <solution xml:id="o003-c90-completion-separation-ex-06-solution">
+        <p>
+          Misalkan <m>X</m> bersifat <m>T_3</m> dan <m>x\ne y</m>. Karena
+          <m>T_3</m> mencakup <m>T_1</m>, himpunan <m>\{y\}</m> tertutup.
+          Regularitas memisahkan <m>x</m> dan <m>\{y\}</m> dengan himpunan buka
+          saling lepas, sehingga <m>X</m> Hausdorff.
+        </p>
+        <p>
+          Sekarang misalkan <m>X</m> Hausdorff dan tetapkan <m>y\in X</m>.
+          Untuk setiap <m>x\ne y</m>, pilih lingkungan buka <m>U_x</m> dari
+          <m>x</m> yang tidak memuat <m>y</m>. Maka
+          <m>X\setminus\{y\}=\bigcup_{x\ne y}U_x</m> terbuka, sehingga
+          <m>\{y\}</m> tertutup dan <m>X</m> bersifat <m>T_1</m>.
+          Akhirnya, jika <m>X</m> bersifat <m>T_1</m> dan <m>x\ne y</m>,
+          himpunan buka <m>X\setminus\{y\}</m> memuat <m>x</m> tetapi tidak
+          memuat <m>y</m>. Jadi <m>X</m> bersifat <m>T_0</m>.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+</section>

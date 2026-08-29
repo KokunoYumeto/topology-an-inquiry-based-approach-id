@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="o003-c90-completion-metrization" xml:lang="id-ID">
+  <title>Metrisasi: dari Pseudometrik ke Teorema Urysohn</title>
+
+  <introduction>
+    <p>
+      Topologi sering diberikan tanpa rumus jarak. Masalah metrisasi menanyakan
+      kapan himpunan-himpunan buka itu sebenarnya dapat dihasilkan oleh suatu
+      metrik. Modul ini membedakan pseudometrik dari metrik, membuktikan cara
+      keduanya menghasilkan topologi, membangun metrik ekuivalen, dan memberi
+      jalur bukti yang jujur untuk Teorema Metrisasi Urysohn.
+    </p>
+    <p>
+      Seluruh modul ini merupakan karya pendamping orisinal berlisensi CC BY
+      4.0. Modul ini bukan teks atau solusi resmi Steven Schlicker maupun Grand
+      Valley State University dan tidak menyatakan atau menyiratkan dukungan
+      mereka. Teks utama edisi tetap diperlakukan secara konservatif sebagai
+      turunan CC BY-NC-SA 3.0. Provenans produksi berbantuan model:
+      <c>OpenAI Codex gpt-5.6-sol, Ultra</c>.
+    </p>
+  </introduction>
+
+  <subsection xml:id="o003-c90-completion-metrization-pseudometrics">
+    <title>Pseudometrik, metrik, dan kuosien nol</title>
+
+    <definition xml:id="o003-c90-def-pseudometric-metric">
+      <statement>
+        <p>
+          Sebuah <term>pseudometrik</term> pada himpunan <m>X</m> adalah fungsi
+          <m>p:X\times X\to[0,\infty)</m> yang memenuhi
+          <me>p(x,x)=0,\qquad p(x,y)=p(y,x),\qquad p(x,z)\leq p(x,y)+p(y,z).</me>
+          Sebuah <term>metrik</term> adalah pseudometrik yang juga memenuhi
+          <m>p(x,y)=0\Rightarrow x=y</m>. Jadi pseudometrik mengizinkan dua
+          titik berbeda berjarak nol, sedangkan metrik memisahkan titik.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="o003-c90-def-pseudometric-topology">
+      <statement>
+        <p>
+          Untuk <m>r&gt;0</m>, bola pseudometrik berpusat di <m>x</m> adalah
+          <m>B_p(x,r)=\{y\in X:p(x,y)&lt;r\}</m>. Topologi yang diinduksi oleh
+          <m>p</m> terdiri atas semua <m>U\subseteq X</m> sedemikian sehingga
+          untuk setiap <m>x\in U</m> ada <m>r&gt;0</m> dengan
+          <m>B_p(x,r)\subseteq U</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="o003-c90-prop-pseudometric-balls-base">
+      <statement>
+        <p>Bola-bola pseudometrik membentuk basis topologi pada <m>X</m>.</p>
+      </statement>
+      <proof>
+        <p>
+          Setiap titik <m>x</m> berada dalam setiap <m>B_p(x,r)</m>. Jika
+          <m>z\in B_p(x,r)\cap B_p(y,s)</m>, pilih
+          <me>0&lt;t&lt;\min\{r-p(x,z),s-p(y,z)\}.</me>
+          Untuk <m>w\in B_p(z,t)</m>, ketaksamaan segitiga memberi
+          <m>p(x,w)&lt;r</m> dan <m>p(y,w)&lt;s</m>. Jadi
+          <m>B_p(z,t)</m> termuat dalam irisan kedua bola, tepat syarat basis.
+        </p>
+      </proof>
+    </proposition>
+
+    <theorem xml:id="o003-c90-thm-pseudometric-quotient">
+      <statement>
+        <p>
+          Definisikan <m>x\sim y</m> bila <m>p(x,y)=0</m>. Relasi ini adalah
+          relasi ekuivalensi, dan
+          <m>d([x],[y])=p(x,y)</m> mendefinisikan metrik pada kuosien
+          <m>X/{\sim}</m>. Proyeksi kuosien mengidentifikasi tepat titik-titik
+          yang tidak dapat dibedakan oleh topologi pseudometrik.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Refleksivitas dan simetri langsung. Jika <m>p(x,y)=p(y,z)=0</m>,
+          ketaksamaan segitiga memberi <m>p(x,z)=0</m>, jadi relasi transitif.
+          Jika <m>x\sim x'</m> dan <m>y\sim y'</m>, maka
+          <me>p(x,y)\leq p(x,x')+p(x',y')+p(y',y)=p(x',y'),</me>
+          dan pertukaran pasangan memberi ketaksamaan sebaliknya. Jadi rumus
+          <m>d</m> tidak bergantung pada wakil. Semua aksioma metrik diwarisi,
+          sedangkan <m>d([x],[y])=0</m> tepat ketika <m>[x]=[y]</m>.
+        </p>
+        <p>
+          Bila <m>p(x,y)=0</m>, ketaksamaan segitiga memberi
+          <m>|p(x,z)-p(y,z)|\leq p(x,y)=0</m>. Karena itu <m>x</m> dan <m>y</m>
+          berada dalam bola-bola yang sama dan mempunyai lingkungan buka yang
+          sama. Sebaliknya, jika <m>p(x,y)&gt;0</m>, bola
+          <m>B_p(x,p(x,y)/2)</m> memuat <m>x</m> tetapi tidak <m>y</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="o003-c90-example-zero-pseudometric">
+      <statement>
+        <p>
+          Pada himpunan dengan sedikitnya dua titik, fungsi <m>p(x,y)=0</m>
+          untuk semua <m>x,y</m> adalah pseudometrik dan menginduksi topologi
+          indisret. Ia bukan metrik. Kuosien nolnya terdiri atas satu titik.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-metrization-induced-topology">
+    <title>Informasi topologis yang dipaksa oleh metrik</title>
+
+    <theorem xml:id="o003-c90-thm-metric-basic-properties">
+      <statement>
+        <p>
+          Setiap ruang metrik bersifat <m>T_1</m>, Hausdorff, reguler, dan
+          terhitung pertama. Pada setiap titik <m>x</m>, keluarga
+          <m>\{B_d(x,1/n):n\geq1\}</m> adalah basis lingkungan terhitung.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Jika <m>x\ne y</m>, ambil <m>r=d(x,y)/3</m>. Bola
+          <m>B_d(x,r)</m> dan <m>B_d(y,r)</m> saling lepas, sehingga ruang
+          Hausdorff dan karenanya <m>T_1</m>. Jika <m>F</m> tertutup dan
+          <m>x\notin F</m>, komplemen <m>X\setminus F</m> terbuka, jadi ada
+          <m>r&gt;0</m> dengan <m>B_d(x,r)\cap F=\emptyset</m>. Bola
+          <m>B_d(x,r/3)</m> dan gabungan <m>\bigcup_{y\in F}B_d(y,r/3)</m>
+          memisahkan <m>x</m> dan <m>F</m>; maka ruang reguler.
+        </p>
+        <p>
+          Untuk setiap lingkungan <m>U</m> dari <m>x</m>, pilih <m>r&gt;0</m>
+          dengan <m>B_d(x,r)\subseteq U</m>, lalu pilih <m>n</m> dengan
+          <m>1/n&lt;r</m>. Ini membuktikan sifat terhitung pertama.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark xml:id="o003-c90-remark-metric-not-second-countable">
+      <p>
+        Ruang metrik tidak harus terhitung kedua. Himpunan tak terhitung dengan
+        metrik diskret adalah ruang metrik, tetapi setiap basis harus memuat
+        semua singleton dan karena itu tak terhitung. Jadi keterhitungan kedua
+        dalam Teorema Urysohn adalah hipotesis cukup yang kuat, bukan syarat
+        perlu bagi setiap ruang yang dapat dimetrisasi.
+      </p>
+    </remark>
+
+    <proposition xml:id="o003-c90-prop-epsilon-delta-topological">
+      <statement>
+        <p>
+          Untuk ruang metrik <m>(X,d)</m> dan <m>(Y,\rho)</m>, fungsi
+          <m>f:X\to Y</m> kontinu di <m>x</m> secara topologis jika dan hanya
+          jika untuk setiap <m>\varepsilon&gt;0</m> ada <m>\delta&gt;0</m>
+          sehingga <m>d(x,y)&lt;\delta</m> mengakibatkan
+          <m>\rho(f(x),f(y))&lt;\varepsilon</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Kekontinuan topologis diterapkan pada bola
+          <m>B_\rho(f(x),\varepsilon)</m> menghasilkan bola domain yang termuat
+          dalam prapetanya. Sebaliknya, syarat epsilon-delta membuat prapeta
+          setiap bola kodomain menjadi lingkungan setiap titiknya, sehingga
+          prapeta setiap himpunan buka adalah buka.
+        </p>
+      </proof>
+    </proposition>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-metrization-equivalent-metrics">
+    <title>Metrik ekuivalen dan gabungan pseudometrik</title>
+
+    <definition xml:id="o003-c90-def-equivalent-metrics">
+      <statement>
+        <p>
+          Dua metrik pada himpunan yang sama disebut
+          <term>ekuivalen secara topologis</term> jika keduanya menginduksi
+          topologi yang sama. Ini lebih lemah daripada ekuivalensi seragam:
+          topologi yang sama tidak harus memberi barisan Cauchy yang sama.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="o003-c90-thm-bounded-equivalent-metrics">
+      <statement>
+        <p>
+          Jika <m>d</m> metrik, maka
+          <m>d_1(x,y)=\min\{1,d(x,y)\}</m> dan
+          <m>d_2(x,y)=d(x,y)/(1+d(x,y))</m> adalah metrik terbatas yang
+          menginduksi topologi yang sama dengan <m>d</m>. Untuk
+          <m>0&lt;\alpha\leq1</m>, metrik <m>d^\alpha</m> juga ekuivalen dengan
+          <m>d</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Fungsi <m>t\mapsto\min\{1,t\}</m>,
+          <m>t\mapsto t/(1+t)</m>, dan <m>t\mapsto t^\alpha</m> meningkat,
+          bernilai nol tepat di nol, dan bersifat subaditif pada
+          <m>[0,\infty)</m>; jadi komposisinya dengan <m>d</m> memenuhi
+          ketaksamaan segitiga. Untuk radius kecil, bola-bolanya diperoleh dari
+          bola <m>d</m> dengan perubahan radius monoton. Misalnya, untuk
+          <m>0&lt;r&lt;1</m>,
+          <me>B_{d_2}(x,r)=B_d\left(x,\frac{r}{1-r}\right),</me>
+          sedangkan <m>B_{d^\alpha}(x,r)=B_d(x,r^{1/\alpha})</m>. Maka basis
+          lingkungannya sama.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="o003-c90-example-topological-not-uniform-equivalence">
+      <statement>
+        <p>
+          Pada <m>\R</m>, metrik biasa <m>d(x,y)=|x-y|</m> dan
+          <m>\rho(x,y)=|\arctan x-\arctan y|</m> menginduksi topologi yang sama,
+          karena <m>\arctan</m> adalah homeomorfisme ke
+          <m>( -\pi/2,\pi/2)</m>. Namun barisan <m>x_n=n</m> bukan Cauchy untuk
+          <m>d</m>, sementara <m>\arctan n</m> konvergen dan karena itu
+          <m>(x_n)</m> Cauchy untuk <m>\rho</m>. Jadi kedua metrik tidak
+          ekuivalen secara seragam.
+        </p>
+      </statement>
+    </example>
+
+    <theorem xml:id="o003-c90-thm-countable-pseudometric-sum">
+      <statement>
+        <p>
+          Misalkan <m>p_1,p_2,\ldots</m> keluarga terhitung pseudometrik pada
+          <m>X</m>. Rumus
+          <me>d(x,y)=\sum_{n=1}^{\infty}2^{-n}\min\{1,p_n(x,y)\}</me>
+          mendefinisikan pseudometrik. Ia merupakan metrik tepat ketika
+          keluarga itu memisahkan titik: untuk <m>x\ne y</m> ada <m>n</m>
+          dengan <m>p_n(x,y)&gt;0</m>. Topologi <m>d</m> sama dengan topologi
+          awal yang dibangkitkan bersama oleh semua bola <m>p_n</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Deret konvergen mutlak dan seragam karena suku ke-<m>n</m> paling
+          besar <m>2^{-n}</m>. Setiap suku adalah pseudometrik setelah
+          pemotongan, sehingga penjumlahan mempertahankan simetri dan
+          ketaksamaan segitiga. Nilai <m>d(x,y)</m> nol tepat ketika semua
+          <m>p_n(x,y)</m> nol, yang membuktikan kriteria pemisahan titik.
+        </p>
+        <p>
+          Setiap syarat <m>p_n(x,y)&lt;\varepsilon\leq1</m> dipaksa oleh
+          <m>d(x,y)&lt;2^{-n}\varepsilon</m>, jadi semua bola koordinat terbuka
+          dalam topologi <m>d</m>. Sebaliknya, untuk bola <m>d</m> berjari-jari
+          <m>\varepsilon</m>, pilih <m>N</m> sehingga
+          <m>\sum_{n&gt;N}2^{-n}&lt;\varepsilon/2</m>. Pilih batas positif pada
+          <m>p_1,\ldots,p_N</m> yang membuat jumlah bagian awal kurang dari
+          <m>\varepsilon/2</m>. Irisan berhingga bola-bola koordinat tersebut
+          termuat dalam bola <m>d</m>. Jadi kedua topologi sama.
+        </p>
+      </proof>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-metrization-urysohn">
+    <title>Teorema Metrisasi Urysohn</title>
+
+    <definition xml:id="o003-c90-def-regular-explicit-t1">
+      <statement>
+        <p>
+          Dalam modul ini, <term>reguler</term> berarti: jika <m>F</m> tertutup
+          dan <m>x\notin F</m>, maka <m>x</m> dan <m>F</m> mempunyai lingkungan
+          buka saling lepas. Syarat <m>T_1</m> dinyatakan terpisah; ia tidak
+          disisipkan ke dalam istilah “reguler”.
+        </p>
+      </statement>
+    </definition>
+
+    <lemma xml:id="o003-c90-lem-second-countable-regular-normal">
+      <statement>
+        <p>Setiap ruang reguler dan terhitung kedua adalah normal.</p>
+      </statement>
+      <proof>
+        <p>
+          Misalkan <m>A,B</m> tertutup dan saling lepas, dan
+          <m>\mathcal B=\{B_1,B_2,\ldots\}</m> basis terhitung. Regularitas
+          membuat anggota-anggota basis <m>U_n</m> dengan
+          <m>\overline{U_n}\cap B=\emptyset</m> menutupi <m>A</m>. Demikian
+          pula, anggota basis <m>V_n</m> dengan
+          <m>\overline{V_n}\cap A=\emptyset</m> menutupi <m>B</m>. Pengulangan
+          anggota bila perlu membuat kedua daftar terindeks oleh bilangan
+          positif.
+        </p>
+        <p>
+          Definisikan
+          <me>U=\bigcup_{n\geq1}\left(U_n\setminus\bigcup_{k\leq n}\overline{V_k}\right),\qquad
+          V=\bigcup_{n\geq1}\left(V_n\setminus\bigcup_{k\leq n}\overline{U_k}\right).</me>
+          Keduanya terbuka, <m>A\subseteq U</m>, dan <m>B\subseteq V</m>.
+          Jika suatu titik berada dalam suku ke-<m>n</m> dari <m>U</m> dan suku
+          ke-<m>m</m> dari <m>V</m>, maka <m>m\leq n</m> membuatnya dikeluarkan
+          oleh <m>\overline{V_m}</m>, sedangkan <m>n\leq m</m> membuatnya
+          dikeluarkan oleh <m>\overline{U_n}</m>. Keduanya mustahil, jadi
+          <m>U\cap V=\emptyset</m>. Maka <m>X</m> normal.
+        </p>
+      </proof>
+    </lemma>
+
+    <lemma xml:id="o003-c90-lem-urysohn-functions">
+      <title>Lema Urysohn</title>
+      <statement>
+        <p>
+          Dalam ruang normal <m>T_1</m>, untuk dua himpunan tertutup saling
+          lepas <m>A,B</m> terdapat fungsi kontinu <m>f:X\to[0,1]</m> dengan
+          <m>f(A)=\{0\}</m> dan <m>f(B)=\{1\}</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Normalitas memberi operasi penyusutan: jika <m>F\subseteq G</m>,
+          dengan <m>F</m> tertutup dan <m>G</m> terbuka, ada <m>U</m> terbuka
+          sehingga <m>F\subseteq U\subseteq\overline U\subseteq G</m>.
+          Terapkan operasi ini secara rekursif pada bilangan dyadik
+          <m>r\in[0,1]</m> untuk membangun himpunan buka <m>U_r</m> dengan
+          <m>A\subseteq U_0</m>, <m>\overline{U_r}\subseteq U_s</m> bila
+          <m>r&lt;s</m>, dan <m>\overline{U_r}\cap B=\emptyset</m> untuk
+          <m>r&lt;1</m>.
+        </p>
+        <p>
+          Tetapkan <m>f(x)=\inf\{r:x\in U_r\}</m>, dengan nilai <m>1</m> bila
+          himpunan indeks kosong. Hubungan penutupan bersarang menunjukkan
+          <m>f^{-1}([0,a))=\bigcup_{r&lt;a}U_r</m> dan bahwa
+          <m>f^{-1}((a,1])</m> juga buka melalui komplemen penutupan yang
+          sesuai. Prapeta subbasis interval di <m>[0,1]</m> karena itu buka,
+          sehingga <m>f</m> kontinu. Konstruksi memberi nilai nol pada
+          <m>A</m> dan satu pada <m>B</m>.
+        </p>
+      </proof>
+    </lemma>
+
+    <theorem xml:id="o003-c90-thm-urysohn-metrization">
+      <title>Teorema Metrisasi Urysohn</title>
+      <statement>
+        <p>
+          Setiap ruang <m>T_1</m> yang reguler dan terhitung kedua dapat
+          dimetrisasi.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Ambil basis terhitung <m>\mathcal B</m>. Pertimbangkan semua pasangan
+          <m>(U,V)\in\mathcal B^2</m> dengan
+          <m>\overline U\subseteq V</m>. Keluarga pasangan ini terhitung.
+          Lemma sebelumnya membuat <m>X</m> normal. Untuk setiap pasangan,
+          Lema Urysohn diterapkan pada himpunan tertutup
+          <m>\overline U</m> dan <m>X\setminus V</m>, menghasilkan fungsi
+          kontinu <m>f_{U,V}:X\to[0,1]</m> yang bernilai nol pada
+          <m>\overline U</m> dan satu di luar <m>V</m>. Daftarkan fungsi-fungsi
+          itu sebagai <m>f_1,f_2,\ldots</m>.
+        </p>
+        <p>
+          Keluarga ini memisahkan titik dan memulihkan topologi. Memang, jika
+          <m>x\ne y</m>, sifat <m>T_1</m> membuat <m>X\setminus\{y\}</m>
+          lingkungan buka dari <m>x</m>. Regularitas dan basis memberi
+          <m>x\in U</m> serta
+          <m>\overline U\subseteq V\subseteq X\setminus\{y\}</m>. Maka
+          <m>f_{U,V}(x)=0</m> dan <m>f_{U,V}(y)=1</m>. Lebih umum, jika
+          <m>O</m> buka dan <m>x\in O</m>, pilih pasangan basis dengan
+          <m>x\in U</m> dan <m>\overline U\subseteq V\subseteq O</m>.
+          Himpunan <m>f_{U,V}^{-1}([0,1))</m> adalah lingkungan buka dari
+          <m>x</m> yang termuat dalam <m>V\subseteq O</m>. Jadi topologi
+          semula adalah topologi awal keluarga <m>\{f_n\}</m>.
+        </p>
+        <p>
+          Akhirnya tetapkan
+          <me>d(x,y)=\sum_{n=1}^{\infty}2^{-n}|f_n(x)-f_n(y)|.</me>
+          Teorema jumlah pseudometrik menunjukkan bahwa <m>d</m> adalah
+          pseudometrik yang menginduksi topologi awal keluarga fungsi.
+          Pemisahan titik membuat <m>d(x,y)&gt;0</m> untuk <m>x\ne y</m>.
+          Jadi <m>d</m> adalah metrik yang menginduksi tepat topologi asli.
+        </p>
+      </proof>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-metrization-counterexamples">
+    <title>Mengapa hipotesis Urysohn tidak boleh diabaikan</title>
+
+    <example xml:id="o003-c90-example-without-t1">
+      <title>Tanpa T1: ruang indisret</title>
+      <statement>
+        <p>
+          Ruang indisret dua titik terhitung kedua dan reguler menurut definisi
+          pemisahan titik-dari-himpunan-tertutup yang tidak memasukkan
+          <m>T_1</m>: tidak ada pasangan titik dan himpunan tertutup taktrivial
+          yang harus dipisahkan. Namun ruang itu bukan <m>T_1</m>, sedangkan
+          setiap ruang metrik <m>T_1</m>; jadi ruang itu tidak dapat
+          dimetrisasi. Ia hanya dapat dipseudometrisasi oleh pseudometrik nol.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-without-regularity-k-topology">
+      <title>Tanpa regularitas: topologi K</title>
+      <statement>
+        <p>
+          Ambil <m>K=\{1/n:n\geq1\}</m> dan basis pada <m>\R</m> yang terdiri
+          atas interval biasa serta himpunan <m>(a,b)\setminus K</m>. Ruang
+          <m>\R_K</m> bersifat Hausdorff, <m>T_1</m>, dan terhitung kedua,
+          tetapi tidak reguler dan karena itu tidak dapat dimetrisasi.
+        </p>
+        <p>
+          Himpunan <m>K</m> tertutup dan <m>0\notin K</m>. Setiap lingkungan
+          basis <m>( -\varepsilon,\varepsilon)\setminus K</m> dari <m>0</m>
+          beririsan dengan setiap himpunan buka yang memuat seluruh <m>K</m>:
+          untuk <m>1/n&lt;\varepsilon</m>, lingkungan titik <m>1/n\in K</m>
+          harus memuat interval biasa di sekitarnya, dan interval itu memuat
+          titik bukan-<m>K</m> dekat <m>1/n</m>. Jadi <m>0</m> dan <m>K</m>
+          tidak dapat dipisahkan oleh lingkungan buka saling lepas.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="o003-c90-example-without-second-countability">
+      <title>Tanpa keterhitungan kedua: kubus tak terhitung</title>
+      <statement>
+        <p>
+          Untuk himpunan indeks tak terhitung <m>I</m>, kubus
+          <m>[0,1]^I</m> dengan topologi hasil kali adalah kompak Hausdorff,
+          sehingga <m>T_1</m> dan reguler, tetapi tidak dapat dimetrisasi.
+          Di titik nol, setiap lingkungan basis membatasi hanya berhingga
+          banyak koordinat. Jika ada basis lingkungan terhitung
+          <m>U_1,U_2,\ldots</m>, pilih lingkungan basis <m>B_n\subseteq U_n</m>
+          dan gabungkan semua koordinat yang dibatasi oleh <m>B_n</m>. Gabungan
+          itu terhitung, jadi ada <m>j\in I</m> di luarnya. Lingkungan
+          <m>W=\{x:x_j&lt;1/2\}</m> dari nol tidak memuat satu pun <m>B_n</m>,
+          kontradiksi. Maka ruang tidak terhitung pertama, sedangkan setiap
+          ruang metrik terhitung pertama.
+        </p>
+      </statement>
+    </example>
+
+    <remark xml:id="o003-c90-remark-hypotheses-sufficient-not-necessary">
+      <p>
+        Contoh-contoh ini menunjukkan bahwa setelah sebuah hipotesis dibuang,
+        kesimpulan metrisasi tidak lagi dijamin. Mereka tidak menyatakan bahwa
+        setiap hipotesis perlu bagi setiap ruang yang dapat dimetrisasi. Misalnya, ruang
+        diskret tak terhitung dapat dimetrisasi tetapi tidak terhitung kedua.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="o003-c90-completion-metrization-mastery">
+    <title>Latihan Penguasaan dengan Dukungan Bertahap</title>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-01">
+      <title>Kuosien pseudometrik</title>
+      <statement><p>Pada <m>\R^2</m>, definisikan <m>p((x,y),(u,v))=|x-u|</m>. Tentukan kelas jarak nol, ruang kuosien, dan metrik kuosiennya.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-01-hint"><p>Dua titik berjarak nol tepat ketika koordinat pertamanya sama.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-01-answer"><p>Kelasnya adalah garis vertikal; kuosien berkorespondensi dengan <m>\R</m> dan metriknya adalah jarak biasa.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-01-solution"><p>Persamaan <m>p((x,y),(u,v))=0</m> setara dengan <m>x=u</m>, jadi kelas <m>[(x,y)]</m> adalah <m>\{x\}\times\R</m>. Pemetaan kelas itu ke <m>x</m> bijektif dari kuosien ke <m>\R</m>. Metrik kuosien memenuhi <m>d([(x,y)],[(u,v)])=|x-u|</m>, sehingga di bawah bijeksi tersebut tepat metrik Euklides pada garis real.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-02">
+      <title>Basis bola dan sifat Hausdorff</title>
+      <statement><p>Buktikan langsung bahwa bola-bola metrik membentuk basis dan bahwa dua titik berbeda mempunyai bola terbuka saling lepas.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-02-hint"><p>Untuk titik dalam irisan dua bola, gunakan sisa radius positif. Untuk pemisahan titik, gunakan sepertiga jaraknya.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-02-answer"><p>Ketaksamaan segitiga memberi pemurnian irisan dan membuat bola berjari-jari <m>d(x,y)/3</m> saling lepas.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-02-solution"><p>Jika <m>z\in B(x,r)\cap B(y,s)</m>, pilih <m>t</m> lebih kecil dari <m>r-d(x,z)</m> dan <m>s-d(y,z)</m>. Untuk <m>w\in B(z,t)</m>, ketaksamaan segitiga menempatkan <m>w</m> dalam kedua bola, sehingga syarat basis terpenuhi. Jika <m>x\ne y</m>, tetapkan <m>r=d(x,y)/3</m>. Jika suatu <m>z</m> berada dalam kedua bola <m>B(x,r)</m> dan <m>B(y,r)</m>, maka <m>d(x,y)&lt;2r=2d(x,y)/3</m>, kontradiksi. Jadi ruang Hausdorff.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-03">
+      <title>Metrik terbatas yang ekuivalen</title>
+      <statement><p>Untuk metrik <m>d</m>, buktikan bahwa <m>\rho=d/(1+d)</m> adalah metrik dan mempunyai himpunan buka yang sama dengan <m>d</m>.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-03-hint"><p>Fungsi <m>h(t)=t/(1+t)</m> meningkat dan subaditif; untuk <m>0&lt;r&lt;1</m>, selesaikan <m>h(t)&lt;r</m>.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-03-answer"><p><m>B_\rho(x,r)=B_d(x,r/(1-r))</m> untuk <m>r&lt;1</m>, sehingga kedua basis lokal sama.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-03-solution"><p>Simetri dan pemisahan titik langsung. Untuk <m>a,b\geq0</m>, perhitungan silang menunjukkan <m>h(a+b)\leq h(a)+h(b)</m>; bersama ketaksamaan segitiga <m>d</m>, ini memberi ketaksamaan segitiga bagi <m>\rho</m>. Karena <m>h</m> meningkat dan inversnya pada <m>[0,1)</m> adalah <m>h^{-1}(r)=r/(1-r)</m>, identitas bola dalam jawaban berlaku. Bola dengan radius kurang dari satu sudah membentuk basis, jadi topologinya sama.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-04">
+      <title>Menjumlahkan pseudometrik koordinat</title>
+      <statement><p>Pada <m>X=[0,1]^{\N}</m>, ambil <m>p_n(x,y)=|x_n-y_n|</m>. Buktikan bahwa <m>d(x,y)=\sum_{n\geq1}2^{-n}p_n(x,y)</m> adalah metrik yang menginduksi topologi hasil kali.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-04-hint"><p>Koordinat memisahkan titik. Kendalikan berhingga banyak koordinat dan buat ekor deret kecil.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-04-answer"><p>Teorema jumlah pseudometrik berlaku; lingkungan hasil kali hanya membatasi berhingga banyak koordinat, persis mekanisme bagian awal dan ekor deret.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-04-solution"><p>Setiap <m>p_n</m> pseudometrik dan keluarga itu memisahkan titik, jadi jumlah berbobot adalah metrik. Bola <m>d</m> yang cukup kecil memaksa koordinat tertentu dekat karena <m>2^{-n}p_n\leq d</m>. Sebaliknya, untuk radius <m>\varepsilon</m>, pilih <m>N</m> dengan <m>\sum_{n&gt;N}2^{-n}&lt;\varepsilon/2</m>, lalu batasi koordinat pertama sampai ke-<m>N</m> sehingga jumlah awal kurang dari <m>\varepsilon/2</m>. Lingkungan silinder hasil kali itu termuat dalam bola <m>d</m>. Maka kedua topologi sama.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-05">
+      <title>Mendiagnosis topologi K</title>
+      <statement><p>Verifikasi bahwa topologi <m>K</m> pada <m>\R</m> bersifat <m>T_1</m> dan terhitung kedua tetapi tidak reguler.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-05-hint"><p>Gunakan basis berujung rasional. Untuk kegagalan regularitas, pisahkan titik <m>0</m> dari himpunan tertutup <m>K=\{1/n\}</m>.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-05-answer"><p>Topologi lebih halus dari topologi biasa, basis rasionalnya terhitung, dan setiap lingkungan <m>0</m> beririsan dengan setiap lingkungan buka <m>K</m>.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-05-solution"><p>Karena setiap interval biasa terbuka, topologi <m>K</m> lebih halus dari topologi Hausdorff biasa; maka ia Hausdorff dan <m>T_1</m>. Interval berujung rasional bersama selisihnya dengan <m>K</m> membentuk basis terhitung. Komplemen <m>K</m> terbuka, jadi <m>K</m> tertutup dan tidak memuat <m>0</m>. Setiap lingkungan <m>0</m> memuat <m>( -\varepsilon,\varepsilon)\setminus K</m>. Jika <m>V</m> terbuka dan memuat <m>K</m>, untuk <m>1/n&lt;\varepsilon</m> ruang <m>V</m> memuat interval biasa sekitar <m>1/n</m>, yang bertemu <m>( -\varepsilon,\varepsilon)\setminus K</m>. Jadi pemisahan reguler mustahil.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-06">
+      <title>Kubus tak terhitung tidak dapat dimetrisasi</title>
+      <statement><p>Untuk indeks tak terhitung <m>I</m>, buktikan bahwa <m>[0,1]^I</m> tidak terhitung pertama di titik nol dan karena itu tidak dapat dimetrisasi.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-06-hint"><p>Dari keluarga lingkungan terhitung, pilih lingkungan basis di dalam masing-masing. Semua koordinat yang dibatasi tetap hanya terhitung.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-06-answer"><p>Pilih koordinat <m>j</m> yang tidak pernah dibatasi; lingkungan <m>x_j&lt;1/2</m> tidak memuat satu pun kandidat basis.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-06-solution"><p>Andaikan <m>U_n</m> basis lingkungan terhitung di nol. Pilih lingkungan basis hasil kali <m>B_n\subseteq U_n</m>; setiap <m>B_n</m> membatasi himpunan koordinat berhingga <m>F_n</m>. Gabungan <m>F=\bigcup_nF_n</m> terhitung. Pilih <m>j\in I\setminus F</m>. Himpunan <m>W=\{x:x_j&lt;1/2\}</m> adalah lingkungan nol. Karena <m>B_n</m> tidak membatasi koordinat <m>j</m>, ia memuat titik dengan <m>x_j=1</m>, jadi <m>B_n\nsubseteq W</m> untuk semua <m>n</m>. Ini bertentangan dengan sifat basis lingkungan. Ruang metrik selalu terhitung pertama, maka kubus itu tidak dapat dimetrisasi.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-07">
+      <title>Merekonstruksi metrik Urysohn</title>
+      <statement><p>Misalkan <m>X</m> reguler, <m>T_1</m>, dan mempunyai basis terhitung. Jelaskan secara lengkap bagaimana fungsi-fungsi Urysohn menghasilkan metrik yang menginduksi topologi <m>X</m>.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-07-hint"><p>Daftarkan pasangan basis <m>\overline U\subseteq V</m>, pisahkan <m>\overline U</m> dari <m>X\setminus V</m>, lalu jumlahkan selisih koordinat dengan bobot <m>2^{-n}</m>.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-07-answer"><p>Fungsi terhitung <m>f_n:X\to[0,1]</m> memisahkan titik dan menghasilkan topologi semula; metriknya <m>d(x,y)=\sum2^{-n}|f_n(x)-f_n(y)|</m>.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-07-solution"><p>Regularitas dan basis terhitung membuat <m>X</m> normal melalui konstruksi diagonal pasangan basis. Untuk setiap pasangan basis <m>\overline U\subseteq V</m>, Lema Urysohn memberi fungsi kontinu yang nol pada <m>\overline U</m> dan satu di luar <m>V</m>. Pasangan-pasangan itu terhitung, jadi fungsi dapat didaftarkan sebagai <m>f_n</m>. Jika <m>x\ne y</m>, gunakan <m>T_1</m>, regularitas, dan basis untuk memilih <m>x\in U</m> serta <m>\overline U\subseteq V\subseteq X\setminus\{y\}</m>; koordinat terkait membedakan <m>x</m> dan <m>y</m>. Untuk setiap <m>x\in O</m> terbuka, pilih <m>x\in U</m> dan <m>\overline U\subseteq V\subseteq O</m>; prapeta <m>[0,1)</m> pada koordinat terkait adalah lingkungan <m>x</m> di dalam <m>O</m>, sehingga fungsi-fungsi memulihkan topologi. Jumlah berbobot adalah metrik karena koordinat memisahkan titik, dan teorema jumlah pseudometrik menunjukkan topologinya tepat topologi awal fungsi-fungsi itu, yaitu topologi asli <m>X</m>.</p></solution>
+    </exercise>
+
+    <exercise xml:id="o003-c90-completion-metrization-ex-08">
+      <title>Ekuivalen topologis tetapi tidak seragam</title>
+      <statement><p>Pada <m>\R</m>, bandingkan <m>d(x,y)=|x-y|</m> dan <m>\rho(x,y)=|\arctan x-\arctan y|</m>. Buktikan bahwa topologinya sama tetapi struktur Cauchy-nya berbeda.</p></statement>
+      <hint xml:id="o003-c90-completion-metrization-ex-08-hint"><p>Gunakan homeomorfisme <m>\arctan</m>. Uji barisan <m>x_n=n</m>.</p></hint>
+      <answer xml:id="o003-c90-completion-metrization-ex-08-answer"><p>Kedua metrik ekuivalen secara topologis, tetapi <m>n</m> Cauchy untuk <m>\rho</m> dan bukan Cauchy untuk <m>d</m>.</p></answer>
+      <solution xml:id="o003-c90-completion-metrization-ex-08-solution"><p>Pemetaan <m>\arctan:\R\to(-\pi/2,\pi/2)</m> adalah homeomorfisme. Metrik <m>\rho</m> adalah tarikan balik metrik Euklides melalui homeomorfisme itu, sehingga menghasilkan topologi biasa, sama dengan <m>d</m>. Barisan <m>\arctan n</m> konvergen ke <m>\pi/2</m> dalam <m>\R</m>, maka Cauchy; jadi <m>n</m> Cauchy untuk <m>\rho</m>. Namun untuk setiap <m>N</m>, ambil <m>m=N</m> dan <m>n=2N</m>; jarak <m>d(m,n)=N</m>, sehingga barisan bukan Cauchy untuk <m>d</m>. Jadi kesamaan topologi tidak menjamin ekuivalensi seragam.</p></solution>
+    </exercise>
+  </subsection>
+</section>

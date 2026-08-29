@@ -1,53 +1,53 @@
 <section xml:id="sec_prod_top_app">
-  <title>Applications of Products of Topological Spaces</title>
+  <title>Penerapan Hasil Kali Ruang Topologi</title>
   <p>
-    Computers represent information from the real world digitally.
-    That is, a computer screen consists of discrete pixels that are used to mimic the continuous information from the real world.
-    So we exist in <m>\R^3</m>,
-    but a computer screen represents information in <m>\Z^2</m> as illustrated in <xref ref="F_Digital_plane"/>.
-    It is important to be able to accurately mimic the continuous information from digital data.
-    One of the key ideas is to have a digital version of the Jordan curve theorem which states that a Jordan curve (a continuous loop that does not intersect itself) in the Euclidean plane separates the remainder of the plane into two connected components
-    (the inside and the outside of the curve).
-    Additionally, if a single point is removed from a Jordan curve,
-    the remainder of the plane becomes connected.
-    The reason a digital Jordan curve theorem is important is that it is only necessary to save the Jordan curves which determine regions,
-    along with the associated colors of the regions,
-    rather than having to save the color of every single pixel in an image.
+    Komputer merepresentasikan informasi dari dunia nyata secara digital.
+    Artinya, layar komputer tersusun atas piksel-piksel diskret yang digunakan untuk meniru informasi kontinu dari dunia nyata.
+    Jadi, kita hidup dalam <m>\R^3</m>,
+    tetapi layar komputer merepresentasikan informasi dalam <m>\Z^2</m>, seperti yang ditunjukkan dalam <xref ref="F_Digital_plane"/>.
+    Kita perlu dapat meniru informasi kontinu secara akurat dari data digital.
+    Salah satu gagasan utamanya adalah memiliki versi digital Teorema Kurva Jordan, yang menyatakan bahwa kurva Jordan (gelung kontinu yang tidak berpotongan dengan dirinya sendiri) pada bidang Euklides memisahkan sisa bidang tersebut menjadi dua komponen terhubung
+    (bagian dalam dan bagian luar kurva).
+    Selain itu, jika satu titik dibuang dari kurva Jordan,
+    sisa bidang tersebut menjadi terhubung.
+    Teorema Kurva Jordan digital penting karena kita hanya perlu menyimpan kurva-kurva Jordan yang menentukan daerah,
+    beserta warna daerah-daerah tersebut,
+    alih-alih harus menyimpan warna setiap piksel dalam sebuah citra.
   </p>
 
   <figure xml:id="F_Digital_plane">
-    <caption>Left: The digital plane. Middle: <m>4</m>-neighbors of a point. Right: <m>8</m>-neighbors of a point.</caption>
+    <caption>Kiri: bidang digital. Tengah: tetangga-<m>4</m> dari suatu titik. Kanan: tetangga-<m>8</m> dari suatu titik.</caption>
     <sidebyside width="30%">
-    <image source="digital_grid"/>
-    <image source="neighbors_4"/>
-    <image source="neighbors_8"/>
+    <image source="digital_grid"><description>Kisi persegi titik-titik bilangan bulat yang merepresentasikan bidang digital.</description></image>
+    <image source="neighbors_4"><description>Satu titik pusat disorot; empat titik yang tepat berada di atas, bawah, kiri, dan kanannya ditandai sebagai tetangga.</description></image>
+    <image source="neighbors_8"><description>Satu titik pusat disorot; delapan titik yang mengelilinginya secara horizontal, vertikal, dan diagonal ditandai sebagai tetangga.</description></image>
     </sidebyside>
   </figure>
 
   <p>
-    A natural start to building a digital topology might be to identify neighborhoods.
-    The idea of a neighborhood is to consider elements that are close to a point,
-    and in the digital world there are different ways to do this.
-    Given a point <m>(x,y)</m> in <m>\Z^2</m>,
-    the 4-neighbors of <m>(x,y)</m> are the points vertically or horizontally adjacent to <m>(x,y)</m>:
-    that is, the points <m>(x \pm 1, y)</m> and <m>(x, y \pm 1)</m>.
-    The 8-neighbors of <m>(x,y)</m> are the 4-neighbors along with the points diagonally adjacent to <m>(x,y)</m>:
-    that is, <m>(x \pm 1, y)</m>,
-    <m>(x, y \pm 1)</m>, <m>(x \pm 1, y \pm 1)</m>.
-    These neighbors are illustrated in <xref ref="F_Digital_plane"/>,
-    with the crosses indicating the neighbors of the highlighted point.
+    Langkah awal yang wajar untuk membangun topologi digital adalah mengidentifikasi lingkungan.
+    Gagasan lingkungan adalah mempertimbangkan elemen-elemen yang dekat dengan suatu titik,
+    dan dalam dunia digital terdapat beberapa cara untuk melakukannya.
+    Diberikan titik <m>(x,y)</m> dalam <m>\Z^2</m>,
+    tetangga-4 dari <m>(x,y)</m> adalah titik-titik yang bersebelahan secara vertikal atau horizontal dengan <m>(x,y)</m>,
+    yaitu titik-titik <m>(x \pm 1, y)</m> dan <m>(x, y \pm 1)</m>.
+    Tetangga-8 dari <m>(x,y)</m> adalah tetangga-4 beserta titik-titik yang bersebelahan secara diagonal dengan <m>(x,y)</m>,
+    yaitu <m>(x \pm 1, y)</m>,
+    <m>(x, y \pm 1)</m>, dan <m>(x \pm 1, y \pm 1)</m>.
+    Tetangga-tetangga ini ditunjukkan dalam <xref ref="F_Digital_plane"/>,
+    dengan tanda silang yang menunjukkan tetangga dari titik yang disorot.
   </p>
   <p>
-    In the continuous case,
-    we define a path between points to be a continuous function from <m>[0,1]</m> to the space.
-    However, we cannot have continuity in the digital world.
-    So we define paths by moving through neighbor points.
-    That is, if <m>k</m> is either <m>4</m> or <m>8</m>,
-    a <m>k</m>-path is a finite sequence <m>p_0</m>,
+    Dalam kasus kontinu,
+    kita mendefinisikan lintasan antara dua titik sebagai fungsi kontinu dari <m>[0,1]</m> ke ruang tersebut.
+    Namun, kita tidak dapat memiliki kekontinuan dengan cara yang sama dalam dunia digital.
+    Jadi, kita mendefinisikan lintasan dengan bergerak melalui titik-titik tetangga.
+    Artinya, jika <m>k</m> sama dengan <m>4</m> atau <m>8</m>,
+    lintasan-<m>k</m> adalah barisan berhingga <m>p_0</m>,
     <m>p_1</m>, <m>\ldots</m>,
-    <m>p_m</m> in <m>\Z^2</m> such that <m>p_1</m> is a <m>k</m>-neighbor of <m>p_2</m>,
-    <m>p_2</m> is a <m>k</m>-neighbor of <m>p_3</m>, <m>\ldots</m>, and
-    <m>p_{m-1}</m> is a <m>k</m>-neighbor of <m>p_m</m>.
+    <m>p_m</m> dalam <m>\Z^2</m> sedemikian sehingga <m>p_0</m> merupakan tetangga-<m>k</m> dari <m>p_1</m>,
+    <m>p_1</m> merupakan tetangga-<m>k</m> dari <m>p_2</m>, <m>\ldots</m>, dan
+    <m>p_{m-1}</m> merupakan tetangga-<m>k</m> dari <m>p_m</m>.
   </p>
 
   <activity xml:id="act_digital_graph_theory">
@@ -55,66 +55,66 @@
       <task>
         <statement>
           <p>
-            Show that there is a <m>4</m>-path connecting any two points in <m>\Z^2</m>.
-            Then explain why there is an <m>8</m>-path connecting any two points in <m>\Z^2</m>.
+            Tunjukkan bahwa terdapat lintasan-<m>4</m> yang menghubungkan sembarang dua titik dalam <m>\Z^2</m>.
+            Kemudian jelaskan mengapa terdapat lintasan-<m>8</m> yang menghubungkan sembarang dua titik dalam <m>\Z^2</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            In the continuous case,
-            every Jordan curve separates <m>\R^2</m> into two connected regions.
-            To have a similar theorem in the discrete case,
-            we need a notion of connectedness in <m>\Z^2</m>.
-            Every image is made up of a finite number of pixels,
-            and so we can think of a digital image as existing in a finite subspace of <m>\Z^2</m>.
-            Since connectedness and path connectedness are equivalent in finite topological spaces,
-            we us the idea of <m>k</m>-paths to define connectedness in <m>\Z^2</m>.
-            We say that a subset <m>S</m> of <m>\Z^2</m> is
-            <m>k-connected</m> if if any two of its points can be joined by a <m>k</m>-path in <m>S</m>.
+            Dalam kasus kontinu,
+            setiap kurva Jordan memisahkan <m>\R^2</m> menjadi dua daerah terhubung.
+            Untuk memperoleh teorema serupa dalam kasus diskret,
+            kita memerlukan konsep keterhubungan dalam <m>\Z^2</m>.
+            Setiap citra tersusun atas sejumlah berhingga piksel,
+            sehingga kita dapat menganggap citra digital berada dalam subruang berhingga dari <m>\Z^2</m>.
+            Karena keterhubungan dan keterhubungan lintasan ekuivalen dalam ruang topologi berhingga,
+            kita menggunakan gagasan lintasan-<m>k</m> untuk mendefinisikan keterhubungan dalam <m>\Z^2</m>.
+            Kita mengatakan bahwa subhimpunan <m>S</m> dari <m>\Z^2</m>
+            <m>terhubung-k</m> jika sembarang dua titiknya dapat dihubungkan oleh lintasan-<m>k</m> dalam <m>S</m>.
             <xref ref="F_Digital_curves"/>
-            show two sets (curves) in the digital plane indicated by the points that connect the line segments (examples taken from A Topological Approach to Digital Topology, T. Yung Kong, R. Kopperman,
-            and P. Meyer,
-            <pubtitle>American Mathematical Monthly</pubtitle>, 98 (1991), no. 10, 901-917).
-            Let <m>S_1</m> be the set illustrated at left in <xref ref="F_Digital_curves"/>
-            and <m>S_2</m> the set at right.
+            menunjukkan dua himpunan (kurva) pada bidang digital melalui titik-titik yang menghubungkan ruas-ruas garis (contoh diambil dari A Topological Approach to Digital Topology, T. Yung Kong, R. Kopperman,
+            dan P. Meyer,
+            <pubtitle>American Mathematical Monthly</pubtitle>, 98 (1991), no. 10, 901–917).
+            Misalkan <m>S_1</m> himpunan yang ditunjukkan di sebelah kiri dalam <xref ref="F_Digital_curves"/>
+            dan <m>S_2</m> himpunan di sebelah kanan.
           </p>
             <figure xml:id="F_Digital_curves">
-              <caption>Sets <m>S_1</m> (left) and <m>S_2</m> (right) in the digital plane.</caption>
+              <caption>Himpunan <m>S_1</m> (kiri) dan <m>S_2</m> (kanan) pada bidang digital.</caption>
               <sidebyside width="45%">
-              <image source="digital_curve_1"/>
-              <image source="digital_curve_2"/>
+              <image source="digital_curve_1"><description>Himpunan titik pada gambar kiri membentuk kurva digital tertutup pada kisi persegi dengan beberapa sambungan diagonal.</description></image>
+              <image source="digital_curve_2"><description>Himpunan titik pada gambar kanan membentuk kurva digital tertutup bertangga pada kisi persegi yang mengelilingi daerah pusat.</description></image>
               </sidebyside>
             </figure>
           <p>
-            Is <m>S_1</m> <m>4</m> connected?
-            Is <m>S_1</m> <m>8</m> connected?
-            Verify your answer.
-            Repeat with <m>S_2</m>.
+            Apakah <m>S_1</m> terhubung-<m>4</m>?
+            Apakah <m>S_1</m> terhubung-<m>8</m>?
+            Periksalah jawaban Anda.
+            Ulangi untuk <m>S_2</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            We can now define a Jordan <m>k</m>-curve to be a finite <m>k</m>-connected set which contains exactly two <m>k</m>-neighbors for each of its points.
-            Is <m>S_1</m> a Jordan <m>4</m>-curve?
-            Is <m>S_1</m> a Jordan <m>8</m>-curve?
-            Verify your answer.
-            Repeat with <m>S_2</m>.
+            Sekarang kita dapat mendefinisikan kurva Jordan-<m>k</m> sebagai himpunan berhingga terhubung-<m>k</m> yang setiap titiknya memiliki tepat dua tetangga-<m>k</m> di dalam himpunan tersebut.
+            Apakah <m>S_1</m> merupakan kurva Jordan-<m>4</m>?
+            Apakah <m>S_1</m> merupakan kurva Jordan-<m>8</m>?
+            Periksalah jawaban Anda.
+            Ulangi untuk <m>S_2</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            As usual, we define a component to be a maximal connected set.
-            Explain why <m>S_1</m> is a Jordan <m>8</m>-curve whose complement is connected and why <m>S_2</m> is a Jordan <m>4</m>-curve whose complement consists of three connected <m>4</m>-components.
-            This example shows that there is no Jordan curve theorem in digital topology using the standard notions of <m>k</m>-connectedness with <m>k</m> either <m>4</m> or <m>8</m>.
-            So neither 4-adjacency nor 8-adjacency provides an analogue of the Jordan curve theorem and it is necessary to use a combination of both.
-            That is, a Jordan <m>4</m>-curve with at least five points separates <m>\Z^2</m> into exactly two <m>8</m>-components,
-            and a Jordan <m>8</m>-curve with at least five points separates <m>\Z^2</m> into exactly two <m>4</m>-components.
+            Seperti biasa, kita mendefinisikan komponen sebagai himpunan terhubung maksimal.
+            Jelaskan mengapa <m>S_1</m> merupakan kurva Jordan-<m>8</m> yang komplemennya terhubung dan mengapa <m>S_2</m> merupakan kurva Jordan-<m>4</m> yang komplemennya terdiri atas tiga komponen-<m>4</m> terhubung.
+            Contoh ini menunjukkan bahwa tidak terdapat Teorema Kurva Jordan dalam topologi digital jika kita menggunakan konsep standar keterhubungan-<m>k</m> dengan <m>k</m> sama dengan <m>4</m> atau <m>8</m>.
+            Jadi, baik ketetanggaan-4 maupun ketetanggaan-8 tidak memberikan analog Teorema Kurva Jordan; kita perlu menggunakan kombinasi keduanya.
+            Tepatnya, kurva Jordan-<m>4</m> dengan sekurang-kurangnya lima titik memisahkan <m>\Z^2</m> menjadi tepat dua komponen-<m>8</m>,
+            dan kurva Jordan-<m>8</m> dengan sekurang-kurangnya lima titik memisahkan <m>\Z^2</m> menjadi tepat dua komponen-<m>4</m>.
           </p>
         </statement>
       </task>
@@ -122,44 +122,87 @@
   </activity>
 
   <p>
-    In <xref ref="act_digital_graph_theory"/>
-    we discussed the importance of a digital Jordan curve theorem.
-    In the next activity we describe a topology in which such a theorem exists.
+    Dalam <xref ref="act_digital_graph_theory"/>,
+    kita membahas pentingnya Teorema Kurva Jordan digital.
+    Dalam kegiatan berikut, kita menjelaskan topologi tempat teorema semacam itu berlaku.
   </p>
 
+  <p>
+    Sekarang kita ingin mendefinisikan kurva Jordan digital.
+    Langkah pertama kita adalah mendefinisikan <term>lintasan digital</term>.
+    Ingat bahwa lintasan dalam ruang topologi adalah daerah hasil suatu fungsi kontinu dari interval <m>[0,1]</m> ke ruang tersebut.
+    Jadi, kita memerlukan konsep interval digital.
+    Jika <m>z_1 \lt z_2</m> dalam <m>(\Z, \tau_1)</m>,
+    <term>interval digital</term> <m>[z_1,z_2]</m> adalah himpunan
+    <me>
+      [z_1, z_2] = \{z \in \Z \mid z_1 \leq z \leq z_2\}
+    </me>.
+  </p>
+  <p>
+    Bilangan bulat <m>z_1</m> dan <m>z_2</m> disebut <term>titik ujung</term>
+    interval digital <m>[z_1,z_2]</m>.
+  </p>
+
+  <definition>
+    <idx><h>lintasan digital</h></idx>
+    <idx><h>busur digital</h></idx>
+    <statement>
+      <p>Misalkan <m>X</m> ruang topologi.</p>
+      <p>
+        <term>Lintasan digital</term>
+        dalam <m>X</m> adalah daerah hasil suatu fungsi kontinu dari interval digital ke <m>X</m>.
+      </p>
+      <p>
+        <term>Busur digital</term>
+        dalam <m>X</m> adalah daerah hasil suatu homeomorfisme dari interval digital ke <m>X</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <idx><h>kurva Jordan digital</h></idx>
+    <statement>
+      <p>
+        <term>Kurva Jordan digital</term>
+        adalah himpunan terhubung berhingga <m>J</m> dengan <m>|J| \geq 4</m> sedemikian sehingga
+        <m>J \setminus \{j\}</m> merupakan busur digital untuk setiap <m>j \in J</m>.
+      </p>
+    </statement>
+  </definition>
+
   <activity xml:id="act_digital_Jordan_curve">
-  <idx><h>topology</h><h>Khalimsky</h></idx>
+  <idx><h>topologi</h><h>Khalimsky</h></idx>
   <introduction>
     <p>
-      Consider <m>Z</m> with the topology <m>\tau_1</m> with basis <m>\{B(n)\}</m>, where
+      Perhatikan <m>\Z</m> dengan topologi <m>\tau_1</m> yang memiliki basis <m>\{B(n)\}</m>, dengan
       <me>
-        B(n) = \begin{cases}\{n\}  \amp \text{ if \(n\) is odd } , \\ \{n-1,n,n+1\}  \amp \text{ if \(n\) is even } . \end{cases}
+        B(n) = \begin{cases}\{n\}  \amp \text{ jika \(n\) ganjil } , \\ \{n-1,n,n+1\}  \amp \text{ jika \(n\) genap } . \end{cases}
       </me>
     </p>
     <p>
-      This topology is called the <term>digital line topology</term>
-      or the <term>Khalimsky topology</term> on <m>\Z</m>.
-      Notice that all sets of the form <m>\{n\}</m> are open when <m>n</m> is odd.
+      Topologi ini disebut <term>topologi garis digital</term>
+      atau <term>topologi Khalimsky</term> pada <m>\Z</m>.
+      Perhatikan bahwa semua himpunan berbentuk <m>\{n\}</m> buka jika <m>n</m> ganjil.
     </p>
   </introduction>
   <task>
     <statement>
       <p>
-        Show that any set of the form <m>\{n\}</m> where <m>n</m> is even is closed in the digital line topology.
+        Tunjukkan bahwa setiap himpunan berbentuk <m>\{n\}</m>, dengan <m>n</m> genap, tertutup dalam topologi garis digital.
       </p>
     </statement>
   </task>
   <task>
     <statement>
       <p>
-        To define a <term>Khalimsky topology</term>
-      on <m>\Z^2</m> we use the product topology.
-      Explain why the collection of sets <m>\{B(m,n)\}</m> where
+        Untuk mendefinisikan <term>topologi Khalimsky</term>
+      pada <m>\Z^2</m>, kita menggunakan topologi hasil kali.
+      Jelaskan mengapa koleksi himpunan <m>\{B(m,n)\}</m>, dengan
       <me>
-        B(m,n) = \begin{cases}\{(m,n)\}  \amp  m \text{ and }  n \text{ odd, }  \\ \{(m-i,n-j) \mid -1 \leq i \leq 1, -1 \leq j \leq 1\} \amp m \text{ and }  n \text{ even, }  \\ \{(m,n-1), (m,n), (m,n+1)\} \amp m \text{ odd and }  n \text{ even, }  \\ \{(m-1,n), (m,n), (m+1,n)\} \amp m \text{ even and }  n \text{ odd } \end{cases}
+        B(m,n) = \begin{cases}\{(m,n)\}  \amp  m \text{ dan }  n \text{ ganjil, }  \\ \{(m-i,n-j) \mid -1 \leq i \leq 1, -1 \leq j \leq 1\} \amp m \text{ dan }  n \text{ genap, }  \\ \{(m,n-1), (m,n), (m,n+1)\} \amp m \text{ ganjil dan }  n \text{ genap, }  \\ \{(m-1,n), (m,n), (m+1,n)\} \amp m \text{ genap dan }  n \text{ ganjil } \end{cases}
       </me>
-      is a basis for the Khalimsky topology <m>\tau_2</m> on <m>\Z^2</m>.
-      (This topology was originally published by E. Khalimsky in
+      merupakan basis bagi topologi Khalimsky <m>\tau_2</m> pada <m>\Z^2</m>.
+      (Topologi ini pertama kali diterbitkan oleh E. Khalimsky dalam
       <pubtitle>Applications of connected ordered topological spaces in topology</pubtitle>, Conference of math. departments of Povolsia, 1970.)
       </p>
     </statement>
@@ -167,108 +210,50 @@
   <task>
     <statement>
       <p>
-        Now we want to define a digital Jordan curve.
-      Our first step is to define a <term>digital path</term>.
-      Recall that a path in a topological space is a homeomorphism from the interval <m>[0,1]</m> into the space.
-      So we need the concept of a digital interval.
-      If <m>z_1 \lt  z_2</m> in <m>(\Z, \tau_1)</m>,
-      the <term>digital interval</term> <m>[z_1,z_2]</m> is the set
-      <me>
-        [z_1, z_2] = \{z \in \Z \mid z_1 \leq z \leq z_2\}
-      </me>.
-      </p>
-      <p>
-        The integers <m>z_1</m> and <m>z_2</m> are called the <term>endpoints</term>
-      of the digital interval <m>[z_1,z_2]</m>.
-      </p>
-    
-    <definition>
-      <idx><h>digital path</h></idx>
-      <idx><h>digital arc</h></idx>
-      <statement>
-        <p>
-          Let <m>X</m> be a topological space.
-          <ul>
-            <li>
-              <p>
-                A <term>digital path</term>
-                in <m>X</m> is the range of a continuous function from a digital interval to <m>X</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                A <term>digital arc</term>
-                in X is the range of a homeomorphism from a digital interval to <m>X</m>.
-              </p>
-            </li>
-          </ul>
-        </p>
-      </statement>
-    </definition>
-
-    <p>
-      Let
+      Misalkan
       <md>
         <mrow>S_1 \amp = \{(1,-1), (1,1), (-1,1), (-1,-1)\},</mrow>
-        <mrow>S_2 \amp = \{(0,0), (1,-1), (2,0), (1,1)\}, \text{ and }</mrow>
+        <mrow>S_2 \amp = \{(0,0), (1,-1), (2,0), (1,1)\}, \text{ dan }</mrow>
         <mrow>S_3 \amp = \{(1,-1), (1,0), (1,1), (0,1), (-1,1), (-1,0), (-1,-1), (0,-1)\}</mrow>
       </md>.
-      Show that <m>S_1</m> is not a digital path but <m>S_2</m> and <m>S_3</m> are digital paths.
+      Tunjukkan bahwa <m>S_1</m> bukan lintasan digital, tetapi <m>S_2</m> dan <m>S_3</m> merupakan lintasan digital.
     </p>
     </statement>
   </task>
   <task>
     <statement>
       <p>
-        To produce a digital Jordan Curve Theorem,
-      we need a definition of a digital Jordan curve.
+        Untuk menghasilkan Teorema Kurva Jordan digital,
+        kita menggunakan definisi kurva Jordan digital di atas.
       </p>
-      <definition>
-        <idx><h>digital Jordan curve</h></idx>
-      <statement>
-        <p>
-          A <term>digital Jordan curve</term>
-          is a finite connected set <m>J</m> with <m>|J| \geq 4</m> such that
-          <m>J \setminus \{j\}</m> is a digital arc for each <m>j \in J</m>.
-        </p>
-        <p>
-          So every digital Jordan curve is a connected set.
-      Show that any finite digital path in <m>\Z^2</m> is a connected set.
-        </p>
-      </statement>
-    </definition>
+      <p>
+        Jadi, setiap kurva Jordan digital merupakan himpunan terhubung.
+      Tunjukkan bahwa setiap lintasan digital berhingga dalam <m>\Z^2</m> merupakan himpunan terhubung.
+      </p>
     </statement>
     <hint>
       <p>
-        Is every digital interval connected?
+        Apakah setiap interval digital terhubung?
       </p>
     </hint>
   </task>
   <task>
     <statement>
       <p>
-        The upshot of all of this is the following theorem (a proof can be found in A Topological Approach to Digital Topology, T. Yung Kong, R. Kopperman,
-      and P. Meyer,
-      <pubtitle>American Mathematical Monthly</pubtitle>, 98 (1991), no. 10, 901-917).
+        Kesimpulan pembahasan ini adalah teorema setelah kegiatan ini (pembuktiannya dapat ditemukan dalam A Topological Approach to Digital Topology, T. Yung Kong, R. Kopperman,
+      dan P. Meyer,
+      <pubtitle>American Mathematical Monthly</pubtitle>, 98 (1991), no. 10, 901–917).
       </p>
-      <theorem xml:id="thm_digital_Jordan_curve">
-      <statement>
-        <p>
-          If <m>J</m> is a digital Jordan curve in the digital plane <m>\Z^2</m>,
-          then <m>\Z^2 \setminus J</m> has exactly two components.
-        </p>
-      </statement>
-    </theorem>
     <p>
-      The two components in <xref ref="thm_digital_Jordan_curve"/>
-      split the digital plane into an infinite region
-      (the outside)
-      and a finite region
-      (the inside).
+      Dua komponen dalam <xref ref="thm_digital_Jordan_curve"/>
+      membagi bidang digital menjadi daerah tak berhingga
+      (bagian luar)
+      dan daerah berhingga
+      (bagian dalam).
     </p>
     <p>
-      Show that <m>S_2</m> is a digital Jordan curve
-      (and thus splits <m>\Z^2</m> into two connected components).
+      Tunjukkan bahwa <m>S_2</m> merupakan kurva Jordan digital
+      (dan karena itu membagi <m>\Z^2</m> menjadi dua komponen terhubung).
     </p>
     </statement>
     
@@ -276,32 +261,41 @@
 
   </activity>
 
-  <p>
-    Digital Jordan curves,
-    as described in <xref ref="act_digital_Jordan_curve"/>,
-    are important in order to have a digital Jordan curve theorem.
-    Christer O. Kiselman presents the following theorem to characterize digital Jordan curves in
-    <pubtitle>Discrete Geometry for Computer Imagery</pubtitle>, Springer-Verlag, 2000, p. 46-56.
-  </p>
-
-  <theorem xml:id="thm_digital_curve">
+  <theorem xml:id="thm_digital_Jordan_curve">
     <statement>
       <p>
-        A subset <m>J</m> of <m>\Z^2</m> equipped with the Khalimsky topology is a digital Jordan curve if and only if
-        <m>J = \{P_1, P_2, \ldots, P_m\}</m> for some even integer
-        <m>m \geq 4</m> and for all <m>j</m>,
-        <m>P_{j?1}</m> and <m>P_{j+1}</m> and no other points are adjacent to <m>P_j</m>;
-        moreover each path consisting of three consecutive points <m>P_{i?1}</m>,
-        <m>P_i</m>,
-        <m>P_{i+1}</m> turns at <m>P_i</m> by <m>45^{\circ}</m> or
-        <m>90^{\circ}</m> or not at all if <m>P_i</m> is a pure point,
-        and goes straight ahead if <m>P_i</m> is mixed.
+        Jika <m>J</m> merupakan kurva Jordan digital dalam bidang digital <m>\Z^2</m>,
+        maka <m>\Z^2 \setminus J</m> memiliki tepat dua komponen.
       </p>
     </statement>
   </theorem>
 
   <p>
-    We investigate this theorem in the next activity.
+    Kurva Jordan digital,
+    seperti yang dijelaskan dalam <xref ref="act_digital_Jordan_curve"/>,
+    penting agar kita memiliki Teorema Kurva Jordan digital.
+    Christer O. Kiselman menyajikan teorema berikut untuk mengarakterisasi kurva Jordan digital dalam
+    <pubtitle>Discrete Geometry for Computer Imagery</pubtitle>, Springer-Verlag, 2000, hlm. 46–56.
+  </p>
+
+  <theorem xml:id="thm_digital_curve">
+    <statement>
+      <p>
+        Subhimpunan <m>J</m> dari <m>\Z^2</m> yang dilengkapi topologi Khalimsky merupakan kurva Jordan digital jika dan hanya jika
+        <m>J = \{P_1, P_2, \ldots, P_m\}</m> untuk suatu bilangan bulat genap
+        <m>m \geq 4</m> dan, untuk setiap <m>j</m>,
+        <m>P_{j-1}</m> dan <m>P_{j+1}</m>, serta tidak ada titik lainnya, bertetangga dengan <m>P_j</m>;
+        selain itu, setiap lintasan yang terdiri atas tiga titik berurutan <m>P_{i-1}</m>,
+        <m>P_i</m>,
+        <m>P_{i+1}</m> berbelok di <m>P_i</m> sebesar <m>45^{\circ}</m> atau
+        <m>90^{\circ}</m>, atau tidak berbelok sama sekali jika <m>P_i</m> titik murni,
+        dan bergerak lurus jika <m>P_i</m> titik campuran.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Kita menyelidiki teorema ini dalam kegiatan berikut.
   </p>
 
   <activity>
@@ -309,43 +303,43 @@
       <task>
         <statement>
           <p>
-            We need to first define the appropriate terms.
-            Let <m>X</m> be a topological space.
-            Two points <m>x</m> and <m>y</m> in <m>X</m> are <term>adjacent</term>
-            if <m>x \neq y</m> and the set <m>\{x, y\}</m> is connected.
-            Then let <m>N(x)</m> to be the intersection of all neighborhoods of <m>x</m>.
-            Show that distinct elements <m>x</m> and <m>y</m> in a topological space <m>X</m> are adjacent if and only if
-            <m>x \in N(y)</m> or <m>y \in N(x)</m>.
+            Pertama-tama, kita perlu mendefinisikan istilah-istilah yang sesuai.
+            Misalkan <m>X</m> ruang topologi.
+            Dua titik <m>x</m> dan <m>y</m> dalam <m>X</m> disebut <term>bertetangga</term>
+            jika <m>x \neq y</m> dan himpunan <m>\{x, y\}</m> terhubung.
+            Kemudian misalkan <m>N(x)</m> merupakan irisan semua lingkungan dari <m>x</m>.
+            Tunjukkan bahwa elemen-elemen berbeda <m>x</m> dan <m>y</m> dalam ruang topologi <m>X</m> bertetangga jika dan hanya jika
+            <m>x \in N(y)</m> atau <m>y \in N(x)</m>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            A point <m>(x_1,x_2)</m> in <m>\Z^2</m> is called <term>pure</term>
-            if <m>x_1</m> and <m>x_2</m> have the same parity.
-            Otherwise, the point is <term>mixed</term>.
-            Find <m>N(P)</m> if <m>P</m> is a pure point or a mixed point.
+            Titik <m>(x_1,x_2)</m> dalam <m>\Z^2</m> disebut <term>murni</term>
+            jika <m>x_1</m> dan <m>x_2</m> memiliki paritas yang sama.
+            Jika tidak, titik tersebut disebut <term>campuran</term>.
+            Carilah <m>N(P)</m> jika <m>P</m> titik murni atau titik campuran.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            In <xref ref="act_digital_Jordan_curve"/>
-            we show that the set <m>S_1 = \{(1,-1), (1,1), (-1,1), (-1,-1)\}</m> is not a digital path and so not a digital Jordan curve.
-            Which part of <xref ref="thm_digital_curve"/> does <m>S_1</m> violate?
+            Dalam <xref ref="act_digital_Jordan_curve"/>,
+            kita menunjukkan bahwa himpunan <m>S_1 = \{(1,-1), (1,1), (-1,1), (-1,-1)\}</m> bukan lintasan digital dan karena itu bukan kurva Jordan digital.
+            Bagian mana dari <xref ref="thm_digital_curve"/> yang dilanggar oleh <m>S_1</m>?
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            In <xref ref="act_digital_Jordan_curve"/>
-            we show that the set <m>S_2 = \{(0,0), (1,-1), (2,0), (1,1)\}</m> is a digital Jordan curve.
-            Show that in <m>S_2</m>,
-            the property from <xref ref="thm_digital_curve"/>
-            that <m>x_{j-1}</m> and <m>x_{j+1}</m> and no other points are adjacent to <m>x_j</m> is satisfied for each <m>j</m>.
+            Dalam <xref ref="act_digital_Jordan_curve"/>,
+            kita menunjukkan bahwa himpunan <m>S_2 = \{(0,0), (1,-1), (2,0), (1,1)\}</m> merupakan kurva Jordan digital.
+            Tunjukkan bahwa dalam <m>S_2</m>,
+            sifat dari <xref ref="thm_digital_curve"/>
+            bahwa <m>P_{j-1}</m> dan <m>P_{j+1}</m>, serta tidak ada titik lainnya, bertetangga dengan <m>P_j</m> dipenuhi untuk setiap <m>j</m>.
           </p>
         </statement>
       </task>
