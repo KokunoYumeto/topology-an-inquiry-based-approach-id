@@ -488,6 +488,12 @@ def file_commit_url(record_id: str, key: str) -> str:
     return f"{file_url(record_id, key)}/commit"
 
 
+def public_file_url(record_id: str, key: str) -> str:
+    require(record_id.isdigit(), "public record ID is not numeric")
+    require(key in EXPECTED_ORDER, "public file key is outside the admitted package")
+    return f"{API}/records/{record_id}/files/{quote(key, safe='')}"
+
+
 def state_base(
     version: str,
     publication_date: str,
@@ -720,6 +726,16 @@ def entry_matches(entry: Mapping[str, Any], expected: Mapping[str, Any]) -> bool
     return entry.get("status") == "completed" and entry_bytes_match(entry, expected)
 
 
+def current_file_entry(session: requests.Session, draft_id: str, key: str) -> dict[str, Any]:
+    _, entry = get_json(
+        session,
+        file_url(draft_id, key),
+        label=f"draft file detail {key}",
+    )
+    require(entry is not None and entry.get("key") == key, f"draft file detail differs: {key}")
+    return entry
+
+
 def upload_files(
     session: requests.Session,
     state: dict[str, Any],
@@ -733,8 +749,9 @@ def upload_files(
     for key in EXPECTED_ORDER:
         draft = current_draft(session, draft_id)
         require(draft is not None, "bound draft disappeared during upload")
-        entry = draft_entries(draft).get(key)
-        require(isinstance(entry, dict), f"initialized file entry disappeared: {key}")
+        listed_entry = draft_entries(draft).get(key)
+        require(isinstance(listed_entry, dict), f"initialized file entry disappeared: {key}")
+        entry = current_file_entry(session, draft_id, key)
         if entry_matches(entry, identities[key]):
             uploaded[key] = copy.deepcopy(dict(identities[key]))
             save_state(state, token)
@@ -746,10 +763,8 @@ def upload_files(
             require(len(payload) == identities[key]["bytes"], f"package file changed before upload: {key}")
             mutate_json(session, "PUT", canonical_content_url, label=f"upload {key}", expected=(200,), raw=payload)
         mutate_json(session, "POST", canonical_commit_url, label=f"commit {key}", expected=(200,))
-        draft = current_draft(session, draft_id)
-        require(draft is not None, "bound draft disappeared after upload")
-        committed = draft_entries(draft).get(key)
-        require(isinstance(committed, dict) and entry_matches(committed, identities[key]), f"uploaded file identity differs: {key}")
+        committed = current_file_entry(session, draft_id, key)
+        require(entry_matches(committed, identities[key]), f"uploaded file identity differs: {key}")
         uploaded[key] = copy.deepcopy(dict(identities[key]))
         save_state(state, token)
     require(set(uploaded) == set(EXPECTED_ORDER), "not all seven files were uploaded")
@@ -776,7 +791,10 @@ def verify_draft(
     entries = draft_entries(draft)
     require(set(entries) == set(EXPECTED_ORDER), "prepublish file inventory differs")
     for key in EXPECTED_ORDER:
-        require(entry_matches(entries[key], identities[key]), f"prepublish file identity differs: {key}")
+        require(
+            entry_matches(current_file_entry(session, draft_id, key), identities[key]),
+            f"prepublish file identity differs: {key}",
+        )
     return draft
 
 
@@ -935,7 +953,14 @@ def anonymous_readback(
     entries = draft_entries(record)
     require(set(entries) == set(EXPECTED_ORDER), "public file inventory differs")
     for key in EXPECTED_ORDER:
-        require(entry_matches(entries[key], identities[key]), f"public file metadata differs: {key}")
+        require(entry_bytes_match(entries[key], identities[key]), f"public file metadata differs: {key}")
+        _, detail = get_json(
+            session,
+            public_file_url(record_id, key),
+            label=f"public file detail {key}",
+            backoff=PUBLIC_BACKOFF,
+        )
+        require(detail is not None and entry_matches(detail, identities[key]), f"public file detail differs: {key}")
 
     downloaded: dict[str, dict[str, Any]] = {}
     for key in EXPECTED_ORDER:
