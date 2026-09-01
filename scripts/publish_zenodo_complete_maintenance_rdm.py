@@ -739,15 +739,8 @@ def upload_files(
             uploaded[key] = copy.deepcopy(dict(identities[key]))
             save_state(state, token)
             continue
-        links = entry.get("links")
-        require(isinstance(links, dict), f"file entry has no links: {key}")
-        content_url = links.get("content")
-        commit_url = links.get("commit")
-        require(isinstance(content_url, str) and isinstance(commit_url, str), f"file upload links are missing: {key}")
         canonical_content_url = file_content_url(draft_id, key)
         canonical_commit_url = file_commit_url(draft_id, key)
-        require(content_url == canonical_content_url, f"file content link is not bound to the draft: {key}")
-        require(commit_url == canonical_commit_url, f"file commit link is not bound to the draft: {key}")
         if not entry_bytes_match(entry, identities[key]):
             payload = (package_dir / key).read_bytes()
             require(len(payload) == identities[key]["bytes"], f"package file changed before upload: {key}")
