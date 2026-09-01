@@ -12,8 +12,8 @@ Status: **pass**
 - Dependency-map entries: 6; rubric entries: 2.
 - Completion theory modules synthesized: [1, 2, 3, 4, 5, 6, 7].
 - XML IDs: 63 unique; xrefs: 0; unresolved: 0.
-- Manifest SHA-256: `884a5cf04c296c43c81c8552fd5f8d4df48257c8250269132aa53c97ef4b3ad8`.
-- Content QA SHA-256: `a9e0f846eff47f4198a8d1cfebba44e0945dead9699b023158ee4f32280c7de6`.
+- Manifest SHA-256: `a5e04978563bfa95df73d3b26fec6a724b3ff8e0490d5362420befefc019e368`.
+- Content QA SHA-256: `ffa3c1b67908119ac4fd1c771b3b56a28b4ff662989e653626f3f96f024f9233`.
 - Schema receipt SHA-256: `450897815cf91dc1df6ebcac687de8cad64633aea4435d8a10c29c0a45880a2b`.
 
 The bounded standalone capstone passes the pinned schema, stable-ID, staged

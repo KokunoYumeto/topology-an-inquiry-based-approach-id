@@ -619,12 +619,26 @@ def vendor_runtime(root: Path) -> int:
     # if PreTeXt later emits nested reader pages.
     def page_relative(target: str, page: Path) -> str:
         page_dir = page.parent.relative_to(root).as_posix()
-        return posixpath.relpath(target, start=page_dir or ".")
+        relative = posixpath.relpath(target, start=page_dir or ".")
+        # posixpath.relpath() strips a significant trailing slash.  These
+        # replacements are directory prefixes that are immediately followed
+        # by a generated filename, so retain the slash explicitly.
+        if target.endswith("/") and not relative.endswith("/"):
+            relative += "/"
+        return relative
 
     changed = 0
     for path in root.rglob("*.html"):
         text = path.read_text(encoding="utf-8")
         updated = text
+        # Repair output from the pre-fix finalizer deterministically.  The
+        # negative lookahead avoids changing already-correct prefixes.
+        for prefix in (
+            "external/vendor/pretext/js/0.3",
+            "external/vendor/pretext/js/lib",
+            "external/vendor/pretext/css/0.7",
+        ):
+            updated = re.sub(re.escape(prefix) + r"(?!/)", prefix + "/", updated)
         for old, new in replacements.items():
             updated = updated.replace(old, page_relative(new, path))
         # Web-font stylesheets are network-only; the local layout stylesheet

@@ -41,9 +41,9 @@ MODEL = "OpenAI Codex gpt-5.6-sol, Ultra"
 BOUNDARY = source_builder.BOUNDARY
 CONCEPT_DOI = "10.5281/zenodo.22059894"
 # The latest published record currently in the existing concept lineage is
-# 22151429.  Keep this pinned so a complete-edition release cannot accidentally
+# 22164668.  Keep this pinned so a complete-edition release cannot accidentally
 # fork from an older checkpoint or create a parallel lineage.
-PREDECESSOR_RECORD_ID = 22151429
+PREDECESSOR_RECORD_ID = 22164668
 FIXED_ZIP_TIME = (2023, 8, 15, 0, 0, 0)
 
 BASE = "topologi-pendekatan-berbasis-inkuiri-edisi-lengkap"

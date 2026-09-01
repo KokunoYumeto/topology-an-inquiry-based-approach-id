@@ -72,6 +72,8 @@ TOP_LEVEL_PATHS = (
     "repo/LICENSES.md",
     "repo/requirements.txt",
     "repo/project.ptx",
+    "repo/publication/publication.ptx",
+    "repo/generated-assets/.gitkeep",
     "repo/companion/RIGHTS.md",
     "repo/xsl/custom-latex.xsl",
     "repo/xsl/topology-style.xsl",
@@ -97,8 +99,13 @@ ESSENTIAL_SCRIPTS = (
     "repo/scripts/qa_o003_completion_modules01_02.py",
     "repo/scripts/qa_o003_completion_modules01_08_html.py",
     "repo/scripts/qa_o003_completion_modules01_08_schema.py",
+    "repo/scripts/qa_native_indonesian_terminology_pdf.py",
+    "repo/scripts/publish_zenodo_complete_maintenance.py",
     "repo/scripts/refresh_chapter20_companion_state.py",
     "repo/scripts/refresh_chapter20_source_state.py",
+    "repo/scripts/run_complete_pdf_pipeline_with_mutex.ps1",
+    "repo/scripts/seal_chapter20_complete_docs.py",
+    "repo/scripts/verify_github_terminology_maintenance.py",
 )
 PUBLIC_CONTROLS = (
     "00_control/AUTHORITY_BUILD_RIGHTS.md",
@@ -108,6 +115,7 @@ PUBLIC_CONTROLS = (
     "00_control/TERMINOLOGY.csv",
 )
 STATIC_QA = (
+    "repo/qa/NATIVE_INDONESIAN_TERMINOLOGY_QA_2026-08-31.md",
     "repo/qa/CHAPTER20_COMPANION_QA.json",
     "repo/qa/CHAPTER20_COMPANION_SCHEMA_QA.json",
     "repo/qa/CHAPTER20_SOURCE_IDENTITY_QA.json",
@@ -118,12 +126,14 @@ STATIC_QA = (
     "repo/qa/O003_COMPLETION_MODULES01_08_SCHEMA_QA.json",
 )
 FINAL_QA = (
+    "repo/qa/CHAPTERS01_20_COMPLETE_TEX_MUTEX.json",
     "repo/qa/CHAPTER20_COMPLETE_HTML_MANIFEST.json",
     "repo/qa/CHAPTER20_COMPLETE_HTML_QA.json",
     "repo/qa/CHAPTER20_COMPLETE_DOCS_MANIFEST.json",
     "repo/qa/CHAPTER20_COMPLETE_DOCS_QA.json",
     "repo/qa/CHAPTERS01_20_COMPLETE_PDF_QA.json",
     "repo/qa/CHAPTERS01_20_COMPLETE_PDF_MANUAL_VISUAL_QA.md",
+    "repo/qa/NATIVE_INDONESIAN_TERMINOLOGY_PDF_TEXT_QA.json",
 )
 
 EXCLUDED_NAME_TOKENS = (
@@ -219,6 +229,37 @@ def inventory_row(value: str, category: str) -> dict[str, Any]:
     path = inventory_disk_path(relative.as_posix())
     require(path.is_file(), f"inventory path is missing: {value}")
     return {"path": relative.as_posix(), **identity(path), "category": category}
+
+
+def final_qa_paths() -> tuple[str, ...]:
+    """Return the fixed final receipts plus the admission-bound predecessor.
+
+    Maintenance receipts are content-addressed so repeated identical sealing is
+    byte-idempotent.  The complete docs admission is therefore the authority
+    for the exact predecessor filename and identity; no ambient fixed filename
+    may be substituted.
+    """
+    admission_path = ROOT / "qa/CHAPTER20_COMPLETE_DOCS_MANIFEST.json"
+    admission = read_json(admission_path)
+    reference = admission.get("maintenance_predecessor")
+    require(isinstance(reference, dict), "complete docs admission has no maintenance predecessor binding")
+    require(
+        set(reference) == {"path", "bytes", "sha256"},
+        "complete docs maintenance predecessor binding fields differ",
+    )
+    raw_path = reference.get("path")
+    require(isinstance(raw_path, str), "complete docs maintenance predecessor path is missing")
+    relative = safe_relative(raw_path)
+    require(
+        len(relative.parts) == 2
+        and relative.parts[0] == "qa"
+        and relative.name.startswith("CHAPTER20_COMPLETE_DOCS_MAINTENANCE_PREDECESSOR.")
+        and relative.suffix == ".json",
+        "complete docs maintenance predecessor path is outside its content-addressed QA namespace",
+    )
+    disk_path = ROOT.joinpath(*relative.parts)
+    require_identity(disk_path, reference, "complete docs maintenance predecessor")
+    return (*FINAL_QA, f"repo/{relative.as_posix()}")
 
 
 def canonical_inventory_sha256(rows: Iterable[dict[str, Any]]) -> str:
@@ -550,7 +591,7 @@ def build_manifest(require_final: bool) -> dict[str, Any]:
     release_artifacts: dict[str, Any] | None = None
     if require_final:
         release_artifacts = validate_final_receipts()
-        for value in FINAL_QA:
+        for value in final_qa_paths():
             rows.append(inventory_row(value, "final_reader_qa"))
 
     paths = [str(row["path"]) for row in rows]

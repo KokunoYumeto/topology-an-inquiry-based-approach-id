@@ -18,6 +18,12 @@ https://doi.org/10.5281/zenodo.22059894
 
 ## Status
 
+Pemutakhiran terminologi 1 September 2026 membandingkan istilah edisi ini
+dengan sumber pengajaran topologi berbahasa Indonesia dari UNDIP Press dan
+Universitas Terbuka. Empat pemakaian *ruang topologis* diseragamkan menjadi
+*ruang topologi*; keputusan, batas bukti, dan istilah yang sengaja dipertahankan
+dicatat di `qa/NATIVE_INDONESIAN_TERMINOLOGY_QA_2026-08-31.md`.
+
 Edisi terverifikasi memuat seluruh 20 bab:
 
 - Bab 1, *Himpunan*;
@@ -54,9 +60,9 @@ Edisi lengkap telah melewati pemeriksaan struktur sumber, validasi RelaxNG,
 audit matematika pendamping, pembangunan HTML deterministik, dua pembangunan
 PDF ketat yang identik byte demi byte, pemeriksaan tautan/aset dan penutupan
 runtime luring, reflow desktop/seluler, interaksi petunjuk, serta inspeksi
-visual seluruh 645 halaman. HTML final memuat 22.613 berkas / 89.005.572 byte
+visual seluruh 645 halaman. HTML final memuat 22.613 berkas / 89.005.555 byte
 dengan SHA-256 manifest kanonis
-`f0eae769a2bbba73ff339ce34129baaa6a2b6b93a9e30b8588ced26fdf501b52`.
+`cefa760a525bd797a235a1cec2277fd9bc5fe4bf81e0cd12dc03c2f6fd668cb7`.
 Kolom baca menggunakan ukuran 960 px pada desktop lebar dan 600 px pada
 desktop ringkas/tablet, selalu terpusat di panel utama; versi seluler mengalir
 ulang tanpa luapan horizontal.
@@ -108,8 +114,8 @@ setuptools 75.8.0, dan MiKTeX 26.5.
 pretext build chapters01-20-complete-html --clean
 python scripts/finalize_and_qa_chapter20_complete_html.py
 python scripts/finalize_and_qa_chapter20_complete_html.py --check
-python scripts/build_pretext_pdf_strict.py chapters01-20-complete-pdf --clean --mainmatter-physical-page 7 --rewrite-uri external/o003-epsilon-delta-lab.html=https://kokunoyumeto.github.io/topology-an-inquiry-based-approach-id/external/o003-epsilon-delta-lab.html --log qa/CHAPTERS01_20_COMPLETE_PDF_BUILD_RUN2.log --expect-pdf output/chapters01-20-complete-pdf/chapters_01_20_complete_reader.pdf --source-date-epoch 1692057600
-python scripts/qa_chapters01_20_complete_pdf_pipeline.py finalize --check
+python scripts/qa_chapters01_20_complete_pdf_pipeline.py config
+pwsh -File scripts/run_complete_pdf_pipeline_with_mutex.ps1
 ```
 
 Runtime MathJax, Lunr, dan PreTeXt yang diperlukan pembaca telah dipatok dan
