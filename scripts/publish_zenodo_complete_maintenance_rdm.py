@@ -312,6 +312,7 @@ def record_payload(metadata: Mapping[str, Any], *, ordered: bool) -> dict[str, A
     files: dict[str, Any] = {"enabled": True}
     if ordered:
         files["order"] = list(EXPECTED_ORDER)
+        files["default_preview"] = legacy.PDF_NAME
     return {
         "metadata": copy.deepcopy(dict(metadata)),
         "access": {"record": "public", "files": "public"},
@@ -550,13 +551,21 @@ def load_state(
     require(state.get("phase") in PHASES, "RDM state phase differs")
     if state.get("files") != dict(identities):
         require(
-            PHASES.index(str(state.get("phase"))) <= PHASES.index("files_initialized"),
-            "RDM state package bytes differ after upload work began",
+            PHASES.index(str(state.get("phase"))) < PHASES.index("prepublish_verified"),
+            "RDM state package bytes differ after prepublication verification",
         )
-        require(not state.get("uploaded_files"), "RDM package changed after an upload")
         require(state.get("publish_request") is None and state.get("record_id") is None, "RDM package changed after publication began")
+        uploaded = state.get("uploaded_files")
+        require(isinstance(uploaded, dict), "RDM uploaded-file state is malformed")
+        state["uploaded_files"] = {
+            key: value
+            for key, value in uploaded.items()
+            if key in identities and value == identities[key]
+        }
         state["files"] = copy.deepcopy(dict(identities))
         state["package_resealed_utc"] = now_utc()
+        if PHASES.index(str(state.get("phase"))) > PHASES.index("files_initialized"):
+            state["phase"] = "files_initialized"
         state["_needs_save"] = True
     return state
 
@@ -736,6 +745,25 @@ def current_file_entry(session: requests.Session, draft_id: str, key: str) -> di
     return entry
 
 
+def reinitialize_file(session: requests.Session, draft_id: str, key: str) -> dict[str, Any]:
+    mutate_json(
+        session,
+        "DELETE",
+        file_url(draft_id, key),
+        label=f"delete superseded draft file {key}",
+        expected=(204,),
+    )
+    mutate_json(
+        session,
+        "POST",
+        f"{draft_url(draft_id)}/files",
+        label=f"reinitialize superseded draft file {key}",
+        expected=(201,),
+        payload=[{"key": key}],
+    )
+    return current_file_entry(session, draft_id, key)
+
+
 def upload_files(
     session: requests.Session,
     state: dict[str, Any],
@@ -756,6 +784,8 @@ def upload_files(
             uploaded[key] = copy.deepcopy(dict(identities[key]))
             save_state(state, token)
             continue
+        if entry.get("status") == "completed":
+            entry = reinitialize_file(session, draft_id, key)
         canonical_content_url = file_content_url(draft_id, key)
         canonical_commit_url = file_commit_url(draft_id, key)
         if not entry_bytes_match(entry, identities[key]):
@@ -787,7 +817,8 @@ def verify_draft(
     files = draft.get("files")
     require(isinstance(files, dict), "prepublish files block is missing")
     order = files.get("order")
-    require(isinstance(order, list) and tuple(order) == EXPECTED_ORDER, "prepublish file order differs or PDF is not first")
+    require(isinstance(order, list) and (not order or tuple(order) == EXPECTED_ORDER), "prepublish file order differs")
+    require(files.get("default_preview") == legacy.PDF_NAME, "prepublish default preview is not the PDF")
     entries = draft_entries(draft)
     require(set(entries) == set(EXPECTED_ORDER), "prepublish file inventory differs")
     for key in EXPECTED_ORDER:
@@ -949,7 +980,8 @@ def anonymous_readback(
     files = record.get("files")
     require(isinstance(files, dict), "public files block is missing")
     order = files.get("order")
-    require(isinstance(order, list) and tuple(order) == EXPECTED_ORDER, "public file order differs or PDF is not first")
+    require(isinstance(order, list) and (not order or tuple(order) == EXPECTED_ORDER), "public file order differs")
+    require(files.get("default_preview") == legacy.PDF_NAME, "public default preview is not the PDF")
     entries = draft_entries(record)
     require(set(entries) == set(EXPECTED_ORDER), "public file inventory differs")
     for key in EXPECTED_ORDER:
@@ -1010,7 +1042,7 @@ def receipt_payload(state: Mapping[str, Any], readback: Mapping[str, Any]) -> by
         "",
         "## Public files",
         "",
-        "The PDF is first in the public file order.",
+        "The PDF is the public default preview and the first file in this receipt/package order.",
         "",
         "| Order | Filename | Bytes | SHA-256 | Result |",
         "| ---: | --- | ---: | --- | --- |",
