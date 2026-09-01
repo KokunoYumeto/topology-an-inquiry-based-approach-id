@@ -543,7 +543,10 @@ def load_state(
     require(state.get("package_dir") == package_relative, "RDM state package path differs")
     require(state.get("phase") in PHASES, "RDM state phase differs")
     if state.get("files") != dict(identities):
-        require(state.get("phase") == "initialized", "RDM state package bytes differ after draft work began")
+        require(
+            PHASES.index(str(state.get("phase"))) <= PHASES.index("files_initialized"),
+            "RDM state package bytes differ after upload work began",
+        )
         require(not state.get("uploaded_files"), "RDM package changed after an upload")
         require(state.get("publish_request") is None and state.get("record_id") is None, "RDM package changed after publication began")
         state["files"] = copy.deepcopy(dict(identities))
@@ -690,7 +693,7 @@ def initialize_files(session: requests.Session, state: dict[str, Any], token: st
     require(draft is not None, "bound draft disappeared before file initialization")
     entries = draft_entries(draft)
     if not entries:
-        _, response = mutate_json(
+        mutate_json(
             session,
             "POST",
             f"{draft_url(draft_id)}/files",
@@ -698,9 +701,9 @@ def initialize_files(session: requests.Session, state: dict[str, Any], token: st
             expected=(201,),
             payload=[{"key": key} for key in EXPECTED_ORDER],
         )
-        require(response is not None, "file initialization response is empty")
-        entries = response.get("entries")
-        require(isinstance(entries, dict), "file initialization response has no entries")
+        draft = current_draft(session, draft_id)
+        require(draft is not None, "bound draft disappeared after file initialization")
+        entries = draft_entries(draft)
     require(set(entries) == set(EXPECTED_ORDER), "initialized file inventory differs")
     advance(state, "files_initialized", token)
 
