@@ -101,6 +101,7 @@ ESSENTIAL_SCRIPTS = (
     "repo/scripts/qa_o003_completion_modules01_08_schema.py",
     "repo/scripts/qa_native_indonesian_terminology_pdf.py",
     "repo/scripts/publish_zenodo_complete_maintenance.py",
+    "repo/scripts/publish_zenodo_complete_maintenance_rdm.py",
     "repo/scripts/refresh_chapter20_companion_state.py",
     "repo/scripts/refresh_chapter20_source_state.py",
     "repo/scripts/run_complete_pdf_pipeline_with_mutex.ps1",
