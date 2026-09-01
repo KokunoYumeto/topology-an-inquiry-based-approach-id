@@ -42,6 +42,7 @@ LICENSE_ID = "cc-by-nc-sa-3.0"
 LANGUAGE_ID = "ind"
 MODEL = "OpenAI Codex gpt-5.6-sol, Ultra"
 EXPECTED_ORDER = tuple(legacy.EXPECTED_FILENAMES)
+DRAFT_STATUSES = {"draft", "new_version_draft"}
 PHASES = (
     "initialized",
     "draft_created",
@@ -434,6 +435,41 @@ def owned_predecessor(session: requests.Session) -> dict[str, Any]:
     return rows[0]
 
 
+def latest_owned_concept_draft(session: requests.Session) -> dict[str, Any] | None:
+    _, result = get_json(
+        session,
+        f"{API}/user/records",
+        label="owned concept-draft search",
+        params={
+            "q": f'metadata.title:"{TITLE}"',
+            "allversions": "true",
+            "size": 25,
+            "sort": "newest",
+        },
+    )
+    require(result is not None, "owned concept-draft search is missing")
+    hits = result.get("hits")
+    require(isinstance(hits, dict), "owned concept-draft search has no hits object")
+    rows = hits.get("hits")
+    require(isinstance(rows, list), "owned concept-draft search hits are malformed")
+    candidates = []
+    for row in rows:
+        require(isinstance(row, dict), "owned concept-draft row is malformed")
+        parent = row.get("parent")
+        versions = row.get("versions")
+        if (
+            isinstance(parent, dict)
+            and str(parent.get("id")) == CONCEPT_ID
+            and row.get("is_published") is False
+            and row.get("status") in DRAFT_STATUSES
+            and isinstance(versions, dict)
+            and versions.get("is_latest_draft") is True
+        ):
+            candidates.append(row)
+    require(len(candidates) <= 1, "more than one latest draft exists in the concept")
+    return candidates[0] if candidates else None
+
+
 def draft_url(record_id: str) -> str:
     require(record_id.isdigit(), "draft ID is not numeric")
     return f"{API}/records/{record_id}/draft"
@@ -505,8 +541,14 @@ def load_state(
     require(state.get("operation") == "zenodo_complete_maintenance_current_rdm", "RDM state belongs to another operation")
     require(state.get("version") == version and state.get("publication_date") == publication_date, "RDM state release identity differs")
     require(state.get("package_dir") == package_relative, "RDM state package path differs")
-    require(state.get("files") == dict(identities), "RDM state package bytes differ")
     require(state.get("phase") in PHASES, "RDM state phase differs")
+    if state.get("files") != dict(identities):
+        require(state.get("phase") == "initialized", "RDM state package bytes differ after draft work began")
+        require(not state.get("uploaded_files"), "RDM package changed after an upload")
+        require(state.get("publish_request") is None and state.get("record_id") is None, "RDM package changed after publication began")
+        state["files"] = copy.deepcopy(dict(identities))
+        state["package_resealed_utc"] = now_utc()
+        state["_needs_save"] = True
     return state
 
 
@@ -548,7 +590,7 @@ def create_version(session: requests.Session, state: dict[str, Any], token: str)
 def bind_created_draft(draft: Mapping[str, Any], state: dict[str, Any], token: str) -> None:
     draft_id = str(draft.get("id"))
     require(draft_id.isdigit() and draft_id != PREDECESSOR_ID, "new-version response has no distinct numeric draft ID")
-    require(draft.get("status") == "draft" and draft.get("is_published") is False, "new-version response is not a draft")
+    require(draft.get("status") in DRAFT_STATUSES and draft.get("is_published") is False, "new-version response is not a draft")
     parent = draft.get("parent")
     require(isinstance(parent, dict) and str(parent.get("id")) == CONCEPT_ID, "new-version draft belongs to another concept")
     validate_draft_lineage(draft, draft_id)
@@ -569,6 +611,8 @@ def reconcile_create(session: requests.Session, state: dict[str, Any], token: st
     create_request = state.get("create_request")
     require(isinstance(create_request, dict) and create_request.get("status") == "intent_recorded", "new-version intent is not reconcilable")
     draft = current_draft(session, PREDECESSOR_ID)
+    if draft is None:
+        draft = latest_owned_concept_draft(session)
     require(draft is not None, "new-version request outcome is uncertain and no bound draft is visible; do not retry")
     bind_created_draft(draft, state, token)
     return draft
@@ -576,7 +620,7 @@ def reconcile_create(session: requests.Session, state: dict[str, Any], token: st
 
 def validate_draft_lineage(draft: Mapping[str, Any], draft_id: str) -> None:
     require(str(draft.get("id")) == draft_id, "draft ID differs")
-    require(draft.get("status") == "draft" and draft.get("is_published") is False, "record is not an unpublished draft")
+    require(draft.get("status") in DRAFT_STATUSES and draft.get("is_published") is False, "record is not an unpublished draft")
     parent = draft.get("parent")
     require(isinstance(parent, dict) and str(parent.get("id")) == CONCEPT_ID, "draft concept differs")
     versions = draft.get("versions")
@@ -992,6 +1036,8 @@ def main() -> int:
         anonymous = session_for(None)
         try:
             state = load_state(version, publication_date, package_relative, identities)
+            if state is not None and state.pop("_needs_save", False):
+                save_state(state, token)
             already_published = (
                 state is not None
                 and PHASES.index(str(state["phase"])) >= PHASES.index("published")
