@@ -21,7 +21,7 @@ import re
 import sys
 import time
 from typing import Any, Mapping
-from urllib.parse import quote, urlparse
+from urllib.parse import quote, urljoin, urlparse
 
 import requests
 
@@ -923,24 +923,45 @@ def anonymous_file_identity(
 ) -> dict[str, Any]:
     url = f"{API}/records/{record_id}/files/{quote(key, safe='')}/content"
     safe_url(url)
-    response = session.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=False, stream=True)
-    try:
-        require(response.status_code == 200, f"public download returned HTTP {response.status_code}: {key}")
-        sha = hashlib.sha256()
-        md5 = hashlib.md5(usedforsecurity=False)
-        total = 0
-        for chunk in response.iter_content(1024 * 1024):
-            if not chunk:
+    last_error: Exception | None = None
+    for delay in PUBLIC_BACKOFF:
+        if delay:
+            time.sleep(delay)
+        response: requests.Response | None = None
+        try:
+            response = session.get(
+                url,
+                headers={"Accept": "*/*"},
+                timeout=REQUEST_TIMEOUT,
+                allow_redirects=False,
+                stream=True,
+            )
+            if response.status_code in {502, 503, 504}:
+                last_error = RdmPublicationError(f"public download returned HTTP {response.status_code}: {key}")
                 continue
-            total += len(chunk)
-            require(total <= expected["bytes"], f"public download exceeds expected size: {key}")
-            sha.update(chunk)
-            md5.update(chunk)
-        observed = {"bytes": total, "md5": md5.hexdigest(), "sha256": sha.hexdigest()}
-        require(observed == dict(expected), f"public file bytes differ: {key}")
-        return observed
-    finally:
-        response.close()
+            require(response.status_code == 200, f"public download returned HTTP {response.status_code}: {key}")
+            sha = hashlib.sha256()
+            md5 = hashlib.md5(usedforsecurity=False)
+            total = 0
+            for chunk in response.iter_content(1024 * 1024):
+                if not chunk:
+                    continue
+                total += len(chunk)
+                require(total <= expected["bytes"], f"public download exceeds expected size: {key}")
+                sha.update(chunk)
+                md5.update(chunk)
+            observed = {"bytes": total, "md5": md5.hexdigest(), "sha256": sha.hexdigest()}
+            if total != expected["bytes"]:
+                last_error = RdmPublicationError(f"public download ended early: {key}")
+                continue
+            require(observed == dict(expected), f"public file bytes differ: {key}")
+            return observed
+        except requests.RequestException as exc:
+            last_error = exc
+        finally:
+            if response is not None:
+                response.close()
+    raise RdmPublicationError(f"public download did not complete after bounded retries: {key}: {last_error}") from last_error
 
 
 def anonymous_readback(
@@ -986,33 +1007,41 @@ def anonymous_readback(
     require(set(entries) == set(EXPECTED_ORDER), "public file inventory differs")
     for key in EXPECTED_ORDER:
         require(entry_bytes_match(entries[key], identities[key]), f"public file metadata differs: {key}")
-        _, detail = get_json(
-            session,
-            public_file_url(record_id, key),
-            label=f"public file detail {key}",
-            backoff=PUBLIC_BACKOFF,
-        )
-        require(detail is not None and entry_matches(detail, identities[key]), f"public file detail differs: {key}")
 
     downloaded: dict[str, dict[str, Any]] = {}
     for key in EXPECTED_ORDER:
         downloaded[key] = anonymous_file_identity(session, record_id, key, identities[key])
     require(next(iter(downloaded)) == legacy.PDF_NAME, "anonymous readback was not PDF-first")
 
-    latest: dict[str, Any] | None = None
+    latest_id: str | None = None
+    latest_url = f"{API}/records/{PREDECESSOR_ID}/versions/latest"
     for delay in PUBLIC_BACKOFF:
         if delay:
             time.sleep(delay)
-        _, candidate = get_json(
-            session,
-            f"{API}/records/{PREDECESSOR_ID}/versions/latest",
-            label="public latest version",
-            backoff=(0,),
-        )
-        if candidate is not None and str(candidate.get("id")) == record_id:
-            latest = candidate
+        response = session.get(latest_url, timeout=REQUEST_TIMEOUT, allow_redirects=False)
+        try:
+            if response.status_code == 200:
+                candidate = response_json(response, "public latest version")
+                latest_id = str(candidate.get("id"))
+            elif response.status_code in {301, 302, 307, 308}:
+                location = response.headers.get("Location")
+                require(isinstance(location, str) and location, "public latest-version redirect has no Location")
+                resolved = safe_url(urljoin(latest_url, location))
+                parsed = urlparse(resolved)
+                require(not parsed.query, "public latest-version redirect has a query")
+                match = re.fullmatch(r"/api/records/(\d+)", parsed.path.rstrip("/"))
+                require(match is not None, "public latest-version redirect target is malformed")
+                latest_id = match.group(1)
+            elif response.status_code in {502, 503, 504}:
+                continue
+            else:
+                raise RdmPublicationError(f"Zenodo returned HTTP {response.status_code} for public latest version")
+        finally:
+            response.close()
+        if latest_id == record_id:
             break
-    require(latest is not None, "concept latest version does not resolve to the new record")
+        latest_id = None
+    require(latest_id == record_id, "concept latest version does not resolve to the new record")
     return {
         "record_id": record_id,
         "doi": state.get("doi"),
@@ -1042,7 +1071,7 @@ def receipt_payload(state: Mapping[str, Any], readback: Mapping[str, Any]) -> by
         "",
         "## Public files",
         "",
-        "The PDF is the public default preview and the first file in this receipt/package order.",
+        "The PDF is the public default preview and the first file in this receipt's verification order.",
         "",
         "| Order | Filename | Bytes | SHA-256 | Result |",
         "| ---: | --- | ---: | --- | --- |",

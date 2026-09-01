@@ -137,7 +137,7 @@ PUBLIC_FILE_BACKOFF_SECONDS = (0, 2, 5)
 PUBLISH_RECONCILE_BACKOFF_SECONDS = (0, 1, 2, 4, 8)
 REQUEST_TIMEOUT = (30, 900)
 CONTROL_CHARACTER = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
-ABSOLUTE_PATH = re.compile(r"(?i)(?:[A-Z]:[\\/]|file://|/(?:home|Users)/)")
+ABSOLUTE_PATH = re.compile(r"(?i)(?<![A-Z0-9])(?:[A-Z]:[\\/]|file://|/(?:home|Users)/)")
 CREDENTIAL_MARKER = re.compile(
     r"(?i)(?:authorization\s*:\s*bearer|access_token\s*[=:]|zenodo_token\s*[=:])"
 )
