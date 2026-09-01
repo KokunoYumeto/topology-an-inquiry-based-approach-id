@@ -9,8 +9,8 @@
 
 ## Public branch identity
 
-Anonymous `git -c credential.helper= ls-remote` returned 
-`4162117e62ee89b5373395c79a402eadb6454e27` for `refs/heads/main`, exactly matching the 
+Anonymous `git -c credential.helper= ls-remote` returned
+`4162117e62ee89b5373395c79a402eadb6454e27` for `refs/heads/main`, exactly matching the
 expected publication commit.
 
 ## Commit-pinned raw readback
